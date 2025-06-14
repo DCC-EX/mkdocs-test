@@ -1,0 +1,1 @@
+{"config":{"lang":["en"],"separator":"[\\s\\-]+","pipeline":["stopWordFilter"]},"docs":[{"location":"","title":"DCC-EX Documentation","text":"<p>Testing MkDocs for DCC-EX documentation</p>"}]}
