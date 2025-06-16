@@ -9,11 +9,11 @@ To include your additional files, use the c++ preprocessor #include control
 in myAutomation.h to insert the file contents exactly as if you had typed them
 into myAutomation.h
 
+```cpp
+// Include my roster file
+#include "myRoster.h"
+// Include my turnout definitions
+#include "myTurnouts.h"
+// Special animation
+#include "myCowOnElectricFence.h"
 ```
-  // Include my roster file
-  #include "myRoster.h"
-  // Include my turnout definitions
-  #include "myTurnouts.h"
-  // Special animation
-  #include "myCowOnElectricFence.h"
-  ```

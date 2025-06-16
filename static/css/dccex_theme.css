@@ -1,17 +1,26 @@
 /* --- DCC-EX Light Color Scheme Overrides --- */
 [data-md-color-scheme="dccex-light"] {
+  /* Colour hue in the range [0,360] - change this variable to alter the tone */
+  /* of the theme, e.g. to make it more redish or greenish */
+  /* --md-hue: 225deg; */
+  
+  /* Primary and accent colours */
   --md-primary-fg-color:        #00353D; /* Header, active links, primary elements */
   --md-primary-fg-color--light: #031C1F; /* Slightly lighter for hover/active */
   --md-primary-fg-color--dark:  #001C20; /* Slightly darker for deeper contrast */
 
-  --md-accent-fg-color:         #009FB5; /* Accent color for links, buttons */
+  --md-accent-fg-color:         #009FB5; /* Accent colour for links, buttons */
   --md-accent-fg-color--light:  #00B6CC; /* Lighter accent for hover */
   --md-accent-fg-color--dark:   #0089A0; /* Darker accent for contrast */
 
-  /* Text colors */
+  /* Text colours */
   --md-default-fg-color:        #333333; /* Standard body text */
   --md-default-fg-color--light: #666666; /* Lighter text for secondary info */
   --md-default-fg-color--dark:  #000000; /* Darkest text for strong contrast */
+
+  /* Typeset colour shades */
+  --md-typeset-color:           var(--md-default-fg-color);
+  --md-typeset-a-color:         var(--md-default-fg-color);
 
   /* Backgrounds */
   --md-default-bg-color:        #FFFFFF; /* Main background */
@@ -19,8 +28,26 @@
   --md-default-bg-color--dark:  #F0F0F0; /* Slightly darker backgrounds */
 
   /* Code blocks */
-  --md-code-fg-color:           #333333; /* Code text color */
-  --md-code-bg-color:           #F5F5F5; /* Code block background */
+  --md-code-fg-color:           #333333; /* Code text colour */
+  --md-code-bg-color:           #E5E5E5; /* Code block background */
+
+  /* Code highlighting colour shades */
+  --md-code-hl-color:                  #444444;
+  --md-code-hl-color--light:           #222222;
+
+  /* Code highlighting syntax colour shades */
+  --md-code-hl-number-color:           #D62B2B;
+  --md-code-hl-special-color:          #CB144E;
+  --md-code-hl-function-color:         #8F46B9;
+  --md-code-hl-constant-color:         #5C52E5;
+  --md-code-hl-keyword-color:          #3B72D0;
+  --md-code-hl-string-color:           #1C7C45;
+  --md-code-hl-name-color:             var(--md-code-fg-color);
+  --md-code-hl-operator-color:         var(--md-default-fg-color--light);
+  --md-code-hl-punctuation-color:      var(--md-default-fg-color--light);
+  --md-code-hl-comment-color:          var(--md-default-fg-color--light);
+  --md-code-hl-generic-color:          var(--md-default-fg-color--light);
+  --md-code-hl-variable-color:         var(--md-default-fg-color--light);
 
   /* Admonitions (Note, Warning, etc.) */
   --md-admonition-color--note:     var(--md-primary-fg-color);
@@ -28,10 +55,18 @@
   --md-admonition-color--tip:      #4CAF50; /* Material Green */
   --md-admonition-color--warning:  #FF9800; /* Material Amber */
   --md-admonition-color--danger:   #F44336; /* Material Red */
+
+  /* Footer colour shades */
+  --md-footer-fg-color:                #FFFFFF;
+  --md-footer-bg-color:                #00353D;
 }
 
 /* --- DCC-EX Dark Color Scheme Overrides --- */
 [data-md-color-scheme="dccex-dark"] {
+  /* Colour hue in the range [0,360] - change this variable to alter the tone */
+  /* of the theme, e.g. to make it more redish or greenish */
+  /* --md-hue: 225deg; *
+  
   /* Using the bright cyan as primary for visibility on dark backgrounds */
   --md-primary-fg-color:        #009FB5;
   --md-primary-fg-color--light: #00CEF7;
@@ -42,11 +77,14 @@
   --md-accent-fg-color--light:  #33E6FF;
   --md-accent-fg-color--dark:   #00B6CC;
 
-  /* Text colors for dark mode */
+  /* Text colours for dark mode */
   --md-default-fg-color:        #F5F5F5; /* Light gray text */
   --md-default-fg-color--light: #E0E0E0; /* Slightly darker light gray */
   --md-default-fg-color--dark:  #FFFFFF; /* Pure white for strong contrast */
-  --md-typeset-color: var(--md-default-fg-color); /* Ensure tyeset colour uses default fg */
+
+  /* Typeset colour shades */
+  --md-typeset-color:           var(--md-default-fg-color);
+  --md-typeset-a-color:         var(--md-default-fg-color);
 
   /* Backgrounds for dark mode (slate-like) */
   --md-default-bg-color:        #2C2C2C; /* Main dark background */
@@ -54,8 +92,26 @@
   --md-default-bg-color--dark:  #222222; /* Slightly darker for deeper elements */
 
   /* Code blocks for dark mode */
-  --md-code-fg-color:           #E0E0E0; /* Code text color */
+  --md-code-fg-color:           #E0E0E0; /* Code text colour */
   --md-code-bg-color:           #3D3D3D; /* Code block background */
+
+  /* Code highlighting colour shades */
+  --md-code-hl-color:                  #444444;
+  --md-code-hl-color--light:           #222222;
+
+  /* Code highlighting syntax colour shades */
+  --md-code-hl-number-color:           #D62B2B;
+  --md-code-hl-special-color:          #CB144E;
+  --md-code-hl-function-color:         #8F46B9;
+  --md-code-hl-constant-color:         #5C52E5;
+  --md-code-hl-keyword-color:          #3B72D0;
+  --md-code-hl-string-color:           #1C7C45;
+  --md-code-hl-name-color:             var(--md-code-fg-color);
+  --md-code-hl-operator-color:         var(--md-default-fg-color--light);
+  --md-code-hl-punctuation-color:      var(--md-default-fg-color--light);
+  --md-code-hl-comment-color:          var(--md-default-fg-color--light);
+  --md-code-hl-generic-color:          var(--md-default-fg-color--light);
+  --md-code-hl-variable-color:         var(--md-default-fg-color--light);
 
   /* Admonitions for dark mode - adjust as needed or let Material default */
   --md-admonition-color--note:     var(--md-primary-fg-color);
@@ -63,4 +119,8 @@
   --md-admonition-color--tip:      #81C784; /* Material Green Light */
   --md-admonition-color--warning:  #FFB74D; /* Material Amber Light */
   --md-admonition-color--danger:   #E57373; /* Material Red Light */
+
+  /* Footer colour shades */
+  --md-footer-fg-color:                #FFFFFF;
+  --md-footer-bg-color:                #009FB5;
 }
