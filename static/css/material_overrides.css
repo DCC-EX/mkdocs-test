@@ -18,3 +18,13 @@
   margin-top: 1px;
   margin-bottom: 1px;
 }
+
+/* Horizontal line separator for News articles */
+.md-post--excerpt {
+  border-top: 1px solid var(--md-default-fg-color);
+}
+
+/* Continue reading highlight */
+.md-post__action a {
+  color: var(--md-accent-fg-color--dark);
+}
