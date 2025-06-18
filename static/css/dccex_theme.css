@@ -20,7 +20,7 @@
 
   /* Typeset colour shades */
   --md-typeset-color:           var(--md-default-fg-color);
-  --md-typeset-a-color:         var(--md-default-fg-color);
+  --md-typeset-a-color:         var(--md-accent-fg-color--light);
 
   /* Backgrounds */
   --md-default-bg-color:        #FFFFFF; /* Main background */
@@ -84,7 +84,7 @@
 
   /* Typeset colour shades */
   --md-typeset-color:           var(--md-default-fg-color);
-  --md-typeset-a-color:         var(--md-default-fg-color);
+  --md-typeset-a-color:         var(--md-accent-fg-color--light);
 
   /* Backgrounds for dark mode (slate-like) */
   --md-default-bg-color:        #2C2C2C; /* Main dark background */
