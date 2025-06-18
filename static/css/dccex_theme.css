@@ -124,3 +124,70 @@
   --md-footer-fg-color:                #FFFFFF;
   --md-footer-bg-color:                #009FB5;
 }
+
+/* Reduce footer navigation title font size & margins */
+.md-footer__title {
+  font-size: 16px;
+  margin-top: 1px;
+  margin-bottom: 1px;
+}
+
+/* Reduce footer navigation button margins & padding */
+.md-footer__button {
+  padding-top: 1px;
+  padding-bottom: 1px;
+  margin-top: 1px;
+  margin-bottom: 1px;
+}
+
+/* Reduce footer navigation link margins */
+.md-footer__link {
+  margin-top: 1px;
+  margin-bottom: 1px;
+}
+
+/* Horizontal line separator for News articles */
+.md-post--excerpt {
+  border-top: 1px solid var(--md-default-fg-color);
+}
+
+/* Continue reading highlight */
+.md-post__action a {
+  color: var(--md-accent-fg-color--dark);
+}
+
+/* Custom header styles */
+h1 {
+  font-family: Audiowide,Helvetica,Arial,sans-serif !important;
+  font-weight: 500 !important;
+  font-size: 180% !important;
+}
+
+h2 {
+  font-family: Roboto,Helvetica,Arial,sans-serif !important;
+  font-weight: 600 !important;
+  font-size: 160% !important;
+  color: var(--md-default-fg-color--dark);
+}
+
+h3 {
+  font-family: Roboto,Helvetica,Arial,sans-serif !important;
+  font-weight: 600 !important;
+  font-size: 140% !important;
+  font-style: italic !important;
+  color: var(--md-default-fg-color--dark);
+}
+
+h4 {
+  font-family: Roboto,Helvetica,Arial,sans-serif !important;
+  font-weight: 600 !important;
+  font-size: 120% !important;
+  color: var(--md-default-fg-color--dark);
+}
+
+h5 {
+  font-family: Roboto,Helvetica,Arial,sans-serif !important;
+  font-weight: 600 !important;
+  font-size: 100% !important;
+  color: var(--md-default-fg-color--dark);
+}
