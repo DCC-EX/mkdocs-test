@@ -24,7 +24,7 @@
     
     
       
-        <title>EX-CommandStation Booster 1 - EX-CSB1 - DCC-EX MkDocs Testing</title>
+        <title>EX-CSB1 CommandStation Booster - DCC-EX MkDocs Testing</title>
       
     
     
@@ -80,7 +80,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#ex-commandstation-booster-1-ex-csb1" class="md-skip">
+        <a href="#ex-csb1-commandstation-booster" class="md-skip">
           Skip to content
         </a>
       
@@ -113,7 +113,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              EX-CommandStation Booster 1 - EX-CSB1
+              EX-CSB1 CommandStation Booster
             
           </span>
         </div>
@@ -804,17 +804,67 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    EX-CSB1 CommandStation Booster
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
   <span class="md-ellipsis">
-    EX-CommandStation Booster 1 - EX-CSB1
+    EX-CSB1 CommandStation Booster
     
   </span>
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#features" class="md-nav__link">
+    <span class="md-ellipsis">
+      Features
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#connecting" class="md-nav__link">
+    <span class="md-ellipsis">
+      Connecting
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -1374,6 +1424,32 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#features" class="md-nav__link">
+    <span class="md-ellipsis">
+      Features
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#connecting" class="md-nav__link">
+    <span class="md-ellipsis">
+      Connecting
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1391,10 +1467,34 @@
   
 
 
-<h1 id="ex-commandstation-booster-1-ex-csb1">EX-CommandStation Booster 1 - EX-CSB1</h1>
-<p>This is the EX-CSB1 user manual page.</p>
-<p><img alt="EX-CSB1" src="../../static/images/ex-csb1/csb1_power_barrel.png" width="30%" /></p>
+<h1 id="ex-csb1-commandstation-booster">EX-CSB1 CommandStation Booster</h1>
+<p>This is the EX-CSB1 Getting Started Guide.</p>
+<h2 id="features">Features</h2>
+<p><img alt="EX-CSB1" src="../../static/images/ex-csb1/csb1_power_barrel.png" width="50%" /></p>
+<p>The DCC-EX EX-CSB1 Command Station/Booster comes ready to use out of the box and has the following features:</p>
+<ul>
+<li>Dual DCC/PWM DC outputs with up to 5A capacity – easily expandable to 4 outputs</li>
+<li>WiFi built-in – fast 802.11n capable, with Access Point and Station modes including support for connecting as many as 10 WiFi throttles (you can also connect to JMRI via WiFi, but a USB cable is often better)</li>
+<li>Single power supply for track and onboard electronics – 12-25V DC with polarity protection</li>
+<li>USB-C connector – for software upload, diagnostic monitoring, DCC-EX WebThrottle and JMRI connectivity</li>
+<li>Railsync DCC input – enables Booster or Sniffer modes, which with an EXRAIL script can be automatically engaged on receipt of a signal</li>
+<li>OLED screen – for diagnostics, status and information display</li>
+</ul>
 <p><img alt="EX-CSB1 OLED on startup" src="../../static/images/ex-csb1/oled_startup.png" width="200" /></p>
+<h2 id="connecting">Connecting</h2>
+<p><img alt="EX-CSB1 Connector Map" src="../../static/images/ex-csb1/csb1_3d_render_labelled.png" width="100%" /></p>
+<p>The DCC-EX EX-CSB1 Command Station/Booster needs the minimum following connections to be able to run trains:</p>
+<ul>
+<li><strong>Power input on the 2.1mm black barrel connector</strong> –  accepts 10-25V DC fully regulated, preferably a modern switch-mode power brick, double-insulated with good power overload protection. Minimum current capability of 4A, suggested 12-16V for Z, N or HO/OO scales, with DCC+Sound locos generally wanting 14-16V even in N scale.</li>
+<li><strong>One track connection</strong> - on either the Track Out A (topmost) or Track Out B (beside the power) connector. Note that by default, A is configured for DCC MAIN operation, and B is configured for PROG or programming track. We recommend connecting your track to the A MAIN output initially to test running of trains.</li>
+</ul>
+<p>When correctly supplied with track power, both green Power LEDs will light. If the right-most LED alone is lit, it indicates power is being supplied from the USB-C connector so software upload can proceed, but trains cannot be run.</p>
+<p>The WiFi LED will light once a WiFi network is created (Access Point mode), or once connected to an existing WiFi network (Station mode.)</p>
+<p>Other Connectors:</p>
+<ul>
+<li>Qwiic I2C connector - allows a broad range of 3.3V I2C peripherals to be easily with simple cables.</li>
+<li>Railsync connector - allows connection to Railsync or a DCC track signal for Booster and Sniffer modes when enabled with suitable software configuration.</li>
+</ul>
 
 
 
@@ -1415,7 +1515,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 17, 2025 21:40:21 UTC">June 17, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 18, 2025 08:13:40 UTC">June 18, 2025</span>
   </span>
 
     
