@@ -10,13 +10,13 @@
       
       
       
-        <link rel="canonical" href="https://dcc-ex.com/mdkocs-test/exrail/Cookbooks/Turnouts/Animated%20Turnouts/">
+        <link rel="canonical" href="https://dcc-ex.com/mdkocs-test/exrail/Cookbooks/Turnouts/Toggle-Turnouts-with-button-press/">
       
       
-        <link rel="prev" href="../../Editing%20Tricks/Using%20CALL%20and%20RETURN/">
+        <link rel="prev" href="../Facing-Turnouts/">
       
       
-        <link rel="next" href="../Defining%20DCC%20Turnouts/">
+        <link rel="next" href="../../../../reference/serial_command_basics/">
       
       
       <link rel="icon" href="../../../../static/images/logos/favicon.ico">
@@ -24,7 +24,7 @@
     
     
       
-        <title>Animated turnouts - DCC-EX MkDocs Testing</title>
+        <title>Toggle turnouts with button or sensor - DCC-EX MkDocs Testing</title>
       
     
     
@@ -78,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#animated-turnouts" class="md-skip">
+        <a href="#toggle-turnouts-with-button-or-sensor" class="md-skip">
           Skip to content
         </a>
       
@@ -111,7 +111,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Animated turnouts
+              Toggle turnouts with button or sensor
             
           </span>
         </div>
@@ -820,7 +820,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Emergency%20Stop%20button/" class="md-nav__link">
+      <a href="../../Emergency-Stop-button/" class="md-nav__link">
         
   
   
@@ -866,7 +866,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Startup%20Power%20On/" class="md-nav__link">
+      <a href="../../Startup-Power-On/" class="md-nav__link">
         
   
   
@@ -1093,19 +1093,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../Animated-Turnouts/" class="md-nav__link">
         
   
   
@@ -1116,7 +1107,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -1129,7 +1119,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Defining%20DCC%20Turnouts/" class="md-nav__link">
+      <a href="../Defining-DCC-Turnouts/" class="md-nav__link">
         
   
   
@@ -1152,7 +1142,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Defining%20pin%20turnouts/" class="md-nav__link">
+      <a href="../Defining-pin-turnouts/" class="md-nav__link">
         
   
   
@@ -1175,7 +1165,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Defining%20Servo%20Turnouts/" class="md-nav__link">
+      <a href="../Defining-Servo-Turnouts/" class="md-nav__link">
         
   
   
@@ -1198,7 +1188,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Facing%20Turnouts/" class="md-nav__link">
+      <a href="../Facing-Turnouts/" class="md-nav__link">
         
   
   
@@ -1218,10 +1208,19 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../Toggle%20Turnouts%20with%20button%20press/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -1232,6 +1231,7 @@
   
 
       </a>
+      
     </li>
   
 
@@ -1554,36 +1554,9 @@
   
 
 
-<h1 id="animated-turnouts">Animated turnouts</h1>
-<p>Switching turnouts is easy, but sometimes you want to make it more realistic by introducing signals, delays and other automations.</p>
-<p>The combination of hidden and virtual turnouts makes this easy.</p>
-<p>Lets suppose you have a turnout id 100 and to make it look realistic you need to set some signal to stop, wait for the signalman to walk accross the lever frame, throw the turnout, wait again and set another signal to green. </p>
-<p>First we need to hide the real turnout from the throttles. This is done by changing the description to the keyword HIDDEN and gining it a different id so we can refer to it later.</p>
-<div class="highlight"><pre><span></span><code><span class="w">  </span><span class="n">TURNOUTL</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="s">&quot;Coal yard exit&quot;</span><span class="p">)</span><span class="w">  </span><span class="c1">// for example</span>
-</code></pre></div>
-<p>is changed to</p>
-<div class="highlight"><pre><span></span><code><span class="w">  </span><span class="n">TURNOUTL</span><span class="p">(</span><span class="mi">1001</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="n">HIDDEN</span><span class="p">)</span><span class="w"> </span>
-</code></pre></div>
-<p>Now we can create a virtual turnout that will be seen by the throttles and specify what we want to happen when it is thrown or closed.</p>
-<div class="highlight"><pre><span></span><code><span class="w">   </span><span class="n">VIRTUAL_TURNOUT</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span><span class="s">&quot;Coal yard exit&quot;</span><span class="p">)</span>
-
-<span class="w">   </span><span class="n">ONCLOSE</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
-<span class="w">     </span><span class="n">RED</span><span class="p">(</span><span class="mi">501</span><span class="p">)</span><span class="w">  </span><span class="c1">// set approach signal</span>
-<span class="w">     </span><span class="n">RED</span><span class="p">(</span><span class="mi">505</span><span class="p">)</span><span class="w">  </span><span class="c1">// set approach signal</span>
-<span class="w">     </span><span class="n">DELAY</span><span class="p">(</span><span class="mi">4000</span><span class="p">)</span><span class="w"> </span><span class="c1">// wait for signalman to move</span>
-<span class="w">     </span><span class="n">CLOSE</span><span class="p">(</span><span class="mi">1001</span><span class="p">)</span><span class="w"> </span><span class="c1">// close the real turnout </span>
-<span class="w">     </span><span class="n">DELAY</span><span class="p">(</span><span class="mi">5000</span><span class="p">)</span>
-<span class="w">     </span><span class="n">GREEN</span><span class="p">(</span><span class="mi">501</span><span class="p">)</span><span class="w"> </span><span class="c1">// set approach signal</span>
-<span class="w">     </span><span class="n">DONE</span>
-
-<span class="w">   </span><span class="n">ONTHROW</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
-<span class="w">     </span><span class="n">RED</span><span class="p">(</span><span class="mi">501</span><span class="p">)</span><span class="w">  </span><span class="c1">// set approach signal</span>
-<span class="w">     </span><span class="n">RED</span><span class="p">(</span><span class="mi">505</span><span class="p">)</span><span class="w">  </span><span class="c1">// set approach signal</span>
-<span class="w">     </span><span class="n">DELAY</span><span class="p">(</span><span class="mi">4000</span><span class="p">)</span><span class="w"> </span><span class="c1">// wait for signalman to move</span>
-<span class="w">     </span><span class="n">THROW</span><span class="p">(</span><span class="mi">1001</span><span class="p">)</span><span class="w"> </span><span class="c1">// throw the real turnout </span>
-<span class="w">     </span><span class="n">DELAY</span><span class="p">(</span><span class="mi">5000</span><span class="p">)</span>
-<span class="w">     </span><span class="n">GREEN</span><span class="p">(</span><span class="mi">505</span><span class="p">)</span><span class="w"> </span><span class="c1">// set approach signal</span>
-<span class="w">     </span><span class="n">DONE</span>
+<h1 id="toggle-turnouts-with-button-or-sensor">Toggle turnouts with button or sensor</h1>
+<p>A turnout of any type can be toggled by a button or sensor of any type. </p>
+<div class="highlight"><pre><span></span><code><span class="n">ONBUTTON</span><span class="p">(</span><span class="mi">123</span><span class="p">)</span><span class="w"> </span><span class="n">TOGGLE_TURNOUT</span><span class="p">(</span><span class="mi">6</span><span class="p">)</span><span class="w"> </span><span class="n">DONE</span>
 </code></pre></div>
 
 
@@ -1605,7 +1578,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 18, 2025 10:48:09 UTC">June 18, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 19, 2025 00:44:57 UTC">June 19, 2025</span>
   </span>
 
     
@@ -1635,7 +1608,7 @@
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../../Editing%20Tricks/Using%20CALL%20and%20RETURN/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Using CALL and RETURN">
+          <a href="../Facing-Turnouts/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Facing turnouts">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -1645,20 +1618,20 @@
                 Previous
               </span>
               <div class="md-ellipsis">
-                Using CALL and RETURN
+                Facing turnouts
               </div>
             </div>
           </a>
         
         
           
-          <a href="../Defining%20DCC%20Turnouts/" class="md-footer__link md-footer__link--next" aria-label="Next: Defining DCC turnouts">
+          <a href="../../../../reference/serial_command_basics/" class="md-footer__link md-footer__link--next" aria-label="Next: Serial Command Basics">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Defining DCC turnouts
+                Serial Command Basics
               </div>
             </div>
             <div class="md-footer__button md-icon">
