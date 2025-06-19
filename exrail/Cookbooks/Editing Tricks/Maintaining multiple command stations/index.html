@@ -1558,7 +1558,7 @@
 <p>Maybe you have more than one command station and you wish to have slightly different EXRAIL 
 setups, perhaps because you are testing a new release on a sepaerate CPU or need to compile different scripts for different layouts.</p>
 <p>The C++ compiler pre-processor is available to select various parts of your myAutomation.h based on definitions created in your config.h or those created by defines.he which automates the detection of the CPU type of your command station. </p>
-<p>For example:
+<p>For example:</p>
 <div class="highlight"><pre><span></span><code><span class="cp">#if defined(ARDUINO_ARCH_AVR)</span>
 <span class="w">  </span><span class="c1">// on my Mega, I have signal1 on pins (30,31,32)</span>
 <span class="w">  </span><span class="n">ALIAS</span><span class="p">(</span><span class="n">mysignal1</span><span class="p">,</span><span class="mi">30</span><span class="p">)</span>
@@ -1569,15 +1569,12 @@ setups, perhaps because you are testing a new release on a sepaerate CPU or need
 <span class="w">  </span><span class="n">SIGNALH</span><span class="p">(</span><span class="n">mysignal1</span><span class="p">,</span><span class="n">mysignal1</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span><span class="n">mysignal1</span><span class="o">+</span><span class="mi">2</span><span class="p">)</span>
 <span class="w">  </span><span class="n">ONTHROW</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="n">RED</span><span class="p">(</span><span class="n">mysignal1</span><span class="p">)</span><span class="w"> </span><span class="n">DONE</span>
 <span class="w">  </span><span class="n">ONCLOSE</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="n">GREEN</span><span class="p">(</span><span class="n">mysignal1</span><span class="p">)</span><span class="w"> </span><span class="n">DONE</span>
-<span class="w">  </span><span class="err">```</span>
-
-
-<span class="n">In</span><span class="w"> </span><span class="n">addition</span><span class="p">,</span><span class="w"> </span><span class="n">each</span><span class="w"> </span><span class="n">EXRAIL</span><span class="w"> </span><span class="n">command</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="n">actually</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">preprocessor</span><span class="w"> </span><span class="n">definition</span><span class="w"> </span><span class="n">so</span><span class="w"> </span><span class="n">it</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="n">possible</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">use</span><span class="w"> </span><span class="n">an</span><span class="w"> </span><span class="err">#</span><span class="n">ifdef</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">include</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">section</span><span class="w"> </span><span class="n">that</span><span class="w"> </span><span class="n">uses</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">feature</span><span class="w"> </span><span class="n">but</span><span class="w"> </span><span class="n">only</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">code</span><span class="w"> </span><span class="n">version</span><span class="w"> </span><span class="n">has</span><span class="w"> </span><span class="n">that</span><span class="w"> </span><span class="n">feature</span><span class="w"> </span><span class="n">available</span><span class="p">.</span>
-</code></pre></div></p>
-<h1 id="ifdef-neopixel">ifdef NEOPIXEL</h1>
-<p>NEOPIXEL(2013,255,255,0)</p>
-<h1 id="endif">endif</h1>
-<p>```</p>
+</code></pre></div>
+<p>In addition, each EXRAIL command is actually a preprocessor definition so it is possible to use an #ifdef to include a section that uses a new feature but only if the code version has that feature available.</p>
+<div class="highlight"><pre><span></span><code><span class="cp">#ifdef NEOPIXEL</span>
+<span class="w">   </span><span class="n">NEOPIXEL</span><span class="p">(</span><span class="mi">2013</span><span class="p">,</span><span class="mi">255</span><span class="p">,</span><span class="mi">255</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span>
+<span class="cp">#endif   </span>
+</code></pre></div>
 <p>Note #ifdef xxx and #if defined(xxx) do the same thing.</p>
 
 
@@ -1599,7 +1596,7 @@ setups, perhaps because you are testing a new release on a sepaerate CPU or need
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 18, 2025 18:22:26 UTC">June 18, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 19, 2025 00:34:23 UTC">June 19, 2025</span>
   </span>
 
     

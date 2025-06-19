@@ -15,7 +15,7 @@
 
   /* Text colours */
   --md-default-fg-color:        #333333; /* Standard body text */
-  --md-default-fg-color--light: #666666; /* Lighter text for secondary info */
+  --md-default-fg-color--light: #007F94; /* Lighter text for secondary info */
   --md-default-fg-color--dark:  #000000; /* Darkest text for strong contrast */
 
   /* Typeset colour shades */
@@ -36,12 +36,12 @@
   --md-code-hl-color--light:           #222222;
 
   /* Code highlighting syntax colour shades */
-  --md-code-hl-number-color:           #D62B2B;
-  --md-code-hl-special-color:          #CB144E;
-  --md-code-hl-function-color:         #8F46B9;
-  --md-code-hl-constant-color:         #5C52E5;
-  --md-code-hl-keyword-color:          #3B72D0;
-  --md-code-hl-string-color:           #1C7C45;
+  --md-code-hl-number-color:           #800000;
+  --md-code-hl-special-color:          #600020;
+  --md-code-hl-function-color:         #400060;
+  --md-code-hl-constant-color:         #000080;
+  --md-code-hl-keyword-color:          #003070;
+  --md-code-hl-string-color:           #005020;
   --md-code-hl-name-color:             var(--md-code-fg-color);
   --md-code-hl-operator-color:         var(--md-default-fg-color--light);
   --md-code-hl-punctuation-color:      var(--md-default-fg-color--light);
@@ -72,6 +72,11 @@
   --md-primary-fg-color--light: #00CEF7;
   --md-primary-fg-color--dark:  #0089A0;
 
+  /* Darken header background colour */
+  .md-header {
+    background-color:         var(--md-primary-fg-color--dark);
+  }
+
   /* Accent remains a variant of cyan for consistency */
   --md-accent-fg-color:         #00CEF7;
   --md-accent-fg-color--light:  #33E6FF;
@@ -84,7 +89,7 @@
 
   /* Typeset colour shades */
   --md-typeset-color:           var(--md-default-fg-color);
-  --md-typeset-a-color:         var(--md-accent-fg-color--light);
+  --md-typeset-a-color:         var(--md-primary-fg-color);
 
   /* Backgrounds for dark mode (slate-like) */
   --md-default-bg-color:        #2C2C2C; /* Main dark background */
@@ -96,16 +101,16 @@
   --md-code-bg-color:           #3D3D3D; /* Code block background */
 
   /* Code highlighting colour shades */
-  --md-code-hl-color:                  #444444;
-  --md-code-hl-color--light:           #222222;
+  --md-code-hl-color:                  #F0F0F0;
+  --md-code-hl-color--light:           #C0C0C0;
 
   /* Code highlighting syntax colour shades */
-  --md-code-hl-number-color:           #D62B2B;
-  --md-code-hl-special-color:          #CB144E;
-  --md-code-hl-function-color:         #8F46B9;
-  --md-code-hl-constant-color:         #5C52E5;
-  --md-code-hl-keyword-color:          #3B72D0;
-  --md-code-hl-string-color:           #1C7C45;
+  --md-code-hl-number-color:           #FFC0C0;
+  --md-code-hl-special-color:          #FFD0E0;
+  --md-code-hl-function-color:         #E0C0FF;
+  --md-code-hl-constant-color:         #C0C0FF;
+  --md-code-hl-keyword-color:          #A0D0FF;
+  --md-code-hl-string-color:           #A0FFA0;
   --md-code-hl-name-color:             var(--md-code-fg-color);
   --md-code-hl-operator-color:         var(--md-default-fg-color--light);
   --md-code-hl-punctuation-color:      var(--md-default-fg-color--light);
@@ -121,8 +126,8 @@
   --md-admonition-color--danger:   #E57373; /* Material Red Light */
 
   /* Footer colour shades */
-  --md-footer-fg-color:                #FFFFFF;
-  --md-footer-bg-color:                #009FB5;
+  --md-footer-fg-color:              #FFFFFF;
+  --md-footer-bg-color:              var(--md-primary-fg-color--dark);
 }
 
 /* Reduce footer navigation title font size & margins */
