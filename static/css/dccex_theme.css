@@ -105,18 +105,18 @@
   --md-code-hl-color--light:           #C0C0C0;
 
   /* Code highlighting syntax colour shades */
-  --md-code-hl-number-color:           #FFC0C0;
-  --md-code-hl-special-color:          #FFD0E0;
-  --md-code-hl-function-color:         #E0C0FF;
+  --md-code-hl-number-color:           #B5CEA8;
+  --md-code-hl-special-color:          #CCCCCC;
+  --md-code-hl-function-color:         #DCDCAA;
   --md-code-hl-constant-color:         #C0C0FF;
-  --md-code-hl-keyword-color:          #A0D0FF;
-  --md-code-hl-string-color:           #A0FFA0;
-  --md-code-hl-name-color:             var(--md-code-fg-color);
-  --md-code-hl-operator-color:         var(--md-default-fg-color--light);
-  --md-code-hl-punctuation-color:      var(--md-default-fg-color--light);
-  --md-code-hl-comment-color:          var(--md-default-fg-color--light);
+  --md-code-hl-keyword-color:          #D09BD7;
+  --md-code-hl-string-color:           #CE9178;
+  --md-code-hl-name-color:             #4EC9B0;
+  --md-code-hl-operator-color:         #CCCCCC;
+  --md-code-hl-punctuation-color:      #E5D001;
+  --md-code-hl-comment-color:          #57a64a;
   --md-code-hl-generic-color:          var(--md-default-fg-color--light);
-  --md-code-hl-variable-color:         var(--md-default-fg-color--light);
+  --md-code-hl-variable-color:         #97d9fd;
 
   /* Admonitions for dark mode - adjust as needed or let Material default */
   --md-admonition-color--note:     var(--md-primary-fg-color);
