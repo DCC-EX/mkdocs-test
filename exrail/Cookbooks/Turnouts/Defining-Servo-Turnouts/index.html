@@ -1753,12 +1753,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../contributing/2-docs-formatting/" class="md-nav__link">
+      <a href="../../../../contributing/2-standards-formatting/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    Documentation Formatting Guide
+    Standards and Formatting Guide
     
   </span>
   
@@ -1839,15 +1839,15 @@
   
 
 
-<h1 id="defining-servo-turnouts">Defining Servo turnouts</h1>
+<h1 id="defining-servo-turnouts">Defining Servo turnouts<a class="headerlink" href="#defining-servo-turnouts" title="Permanent link">&para;</a></h1>
 <p>Servo turnouts use servos driven through a PCA9685 or EX_IOExtender. (This does not include servos driven from track connected DCC decoders. See <a href="../Defining-DCC-Turnouts/">DCC Decoders</a>)</p>
-<h2 id="important-considerations-for-servo-operation">Important considerations for servo operation</h2>
+<h2 id="important-considerations-for-servo-operation">Important considerations for servo operation<a class="headerlink" href="#important-considerations-for-servo-operation" title="Permanent link">&para;</a></h2>
 <p>Servo turnouts are driven through a PCA9685 servo control board on an EX-IOExpander. Refer to ????????</p>
 <p>Test, test, test your servo parameters prior to connecting to an actual turnout/point. If you have defined angles that exceed the physical limits of your turnout, you will likely damage it and/or the servo mechanism.</p>
 <p>Treat each servo and turnout as an individual as not all servos (or turnouts/points for that matter) are created equal. An angle that works with one servo and associated turnout will not necessarily provide the exact same result with another. Differences in servo brands, mounting methods, and even normal manufacturing tolerances will need to be factored in to the servo angles in use.</p>
 <p>The EX-Toolbox Android application provides a servo movement testing tool to help you discover the necessary values for the angles below.</p>
 <p>Use flexible wire to connect your servo arm to the turnout/point. Using a flexible connection between the turnout and the servo mechanism means if anything does go wrong such as the turnout getting jammed or an incorrect servo angle being sent, it reduces the chance of damaging the turnout or servo.</p>
-<h2 id="defining-servo-based-turnout-objects">Defining servo based turnout objects</h2>
+<h2 id="defining-servo-based-turnout-objects">Defining servo based turnout objects<a class="headerlink" href="#defining-servo-based-turnout-objects" title="Permanent link">&para;</a></h2>
 <p>Define servo based turnouts using EXRAIL.</p>
 <div class="highlight"><pre><span></span><code><span class="n">SERVO_TURNOUT</span><span class="p">(</span><span class="n">id</span><span class="p">,</span><span class="w"> </span><span class="n">vpin</span><span class="p">,</span><span class="w"> </span><span class="n">active_angle</span><span class="p">,</span><span class="w"> </span><span class="n">inactive_angle</span><span class="p">,</span><span class="w"> </span><span class="n">profile</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;description&quot;</span><span class="p">)</span>
 </code></pre></div>

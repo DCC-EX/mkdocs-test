@@ -1744,12 +1744,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../contributing/2-docs-formatting/" class="md-nav__link">
+      <a href="../../../contributing/2-standards-formatting/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    Documentation Formatting Guide
+    Standards and Formatting Guide
     
   </span>
   
@@ -1821,9 +1821,9 @@
   
 
 
-<h1 id="neopixel-support">NeoPixel support</h1>
+<h1 id="neopixel-support">NeoPixel support<a class="headerlink" href="#neopixel-support" title="Permanent link">&para;</a></h1>
 <p>The IO_NeoPixel.h driver supports the adafruit neopixel seesaw board. It turns each pixel into an individual VPIN which can be given a colour and turned on or off using the the NEOPIXEL Exrail macro. Exrail SIGNALS can also drive a single pixel signal or multiple separate pixels.</p>
-<h2 id="defining-the-hardware-driver">Defining the hardware driver</h2>
+<h2 id="defining-the-hardware-driver">Defining the hardware driver<a class="headerlink" href="#defining-the-hardware-driver" title="Permanent link">&para;</a></h2>
 <p>Add a driver definition in myAutomation.h for each adafruit I2C driver.</p>
 <div class="highlight"><pre><span></span><code><span class="w">    </span><span class="n">HAL</span><span class="p">(</span><span class="n">neoPixel</span><span class="p">,</span><span class="w"> </span><span class="n">firstVpin</span><span class="p">,</span><span class="w"> </span><span class="n">numberOfPixels</span><span class="w"> </span><span class="p">[,</span><span class="w"> </span><span class="n">mode</span><span class="w"> </span><span class="p">[,</span><span class="w"> </span><span class="n">i2caddress</span><span class="p">])</span>
 </code></pre></div>

@@ -1767,12 +1767,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../contributing/2-docs-formatting/" class="md-nav__link">
+      <a href="../contributing/2-standards-formatting/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    Documentation Formatting Guide
+    Standards and Formatting Guide
     
   </span>
   
@@ -1871,7 +1871,7 @@
   
 
 
-<h1 id="what-is-exrail">What is EXRAIL?</h1>
+<h1 id="what-is-exrail">What is EXRAIL?<a class="headerlink" href="#what-is-exrail" title="Permanent link">&para;</a></h1>
 <p>EXRAIL is an “EXtended Railroad Automation Instruction Language” used to:</p>
 <ul>
 <li>Describe your turnouts, signals etc.</li>
@@ -1883,7 +1883,7 @@
 <li>Implement mimic panels and control panels</li>
 <li>Display status information or platform announcements on OLED screens.</li>
 </ul>
-<h2 id="you-dont-need">You DON’T need:</h2>
+<h2 id="you-dont-need">You DON’T need:<a class="headerlink" href="#you-dont-need" title="Permanent link">&para;</a></h2>
 <ul>
 <li>JMRI, or any additional utilities</li>
 <li>Engine Driver, wiThrottle, or any other WiThrottle app</li>
@@ -1891,13 +1891,13 @@
 <li>Knowledge of C++ or Python/Jython programming</li>
 </ul>
 <p>Although EXRAIL has more than 100 individual commands available, it is generally easier to work from the how-to cookbook examples rather than attempt to understand every feature. It's important to understand a few principles first.</p>
-<h2 id="important-background-information">Important Background Information</h2>
+<h2 id="important-background-information">Important Background Information<a class="headerlink" href="#important-background-information" title="Permanent link">&para;</a></h2>
 <ul>
 <li>EXRAIL scripts are written into a file called myAutomation.h which you can edit with any suitable text editor. You dont need any extra tools installed on your PC that you dont already have in VSCode or the EX-Installer. </li>
 <li>When you upload the command station with the DCC-EX code, myAutomation.h is used by the compiler to configure the software and embed any sequences so that the command station can run without further assistance from your PC. If you change myAutomation.h then you must upload again.</li>
 <li>EXRAIL can run multiple sequences simultaneously so it's great for annoying Arduino programmers who find that extremly complex to do in C++.</li>
 </ul>
-<h2 id="basic-building-blocks">Basic building blocks</h2>
+<h2 id="basic-building-blocks">Basic building blocks<a class="headerlink" href="#basic-building-blocks" title="Permanent link">&para;</a></h2>
 <p>There are a few basic building blocks that will appear in the examples:</p>
 <ul>
 <li><code>SEQUENCE</code> - Simply a list of things to be done in order. These things might be to actually drive a train around, or merely to set some turnouts or flash some scene or panel lights. Actions can be made to wait for conditions to be met, like a sensor detecting a train, a button being pushed, or a period of time elapsing.
@@ -1940,7 +1940,7 @@
 <span class="w">  </span><span class="n">GREEN</span><span class="p">(</span><span class="mi">112</span><span class="p">)</span>
 <span class="w">  </span><span class="n">DONE</span>
 </code></pre></div>
-<h2 id="a-users-story">A users story</h2>
+<h2 id="a-users-story">A users story<a class="headerlink" href="#a-users-story" title="Permanent link">&para;</a></h2>
 <p>I have used C++ on Arduino’s and Python/Jython on JMRI software to build Automation sequences. I now use EXRAIL instead because:</p>
 <ul>
 <li>

@@ -16,7 +16,7 @@
         <link rel="prev" href="../../experimenting/statediagram/">
       
       
-        <link rel="next" href="../2-docs-formatting/">
+        <link rel="next" href="../2-standards-formatting/">
       
       
       <link rel="icon" href="../../static/images/logos/favicon.ico">
@@ -1809,12 +1809,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../2-docs-formatting/" class="md-nav__link">
+      <a href="../2-standards-formatting/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    Documentation Formatting Guide
+    Standards and Formatting Guide
     
   </span>
   
@@ -1955,20 +1955,21 @@
   
 
 
-<h1 id="contributing-to-documentation">Contributing to Documentation</h1>
+<h1 id="contributing-to-documentation">Contributing to Documentation<a class="headerlink" href="#contributing-to-documentation" title="Permanent link">&para;</a></h1>
 <p>This page outlines what you need in order to contribute to the documentation, along with the various markdown attributes and so forth you can use.</p>
 <p>The documentation is hosted using GitHub Pages and is written in Markdown format, using MkDocs to publish the content. We use the MkDocs Material theme to give us the framework for the look and feel of the website, along with a number of other useful plugins and extensions to enhance the content.</p>
-<h2 id="how-to-contribute">How to Contribute</h2>
+<p>**Important! Once up and running with the information on this page, please ensure you are familiar with **</p>
+<h2 id="how-to-contribute">How to Contribute<a class="headerlink" href="#how-to-contribute" title="Permanent link">&para;</a></h2>
 <p>For contributions from the general public, we recommend forking the <a href="https://github.com/DCC-EX/dcc-ex.github.io">GitHub repository</a> and submitting pull requests for the DCC-EX Documenter team to review and merge.</p>
 <p>If you wish to contribute more fully and become a part of the DCC-EX Documenter team, reach out to us via <a href="https://discord.gg/y2sB4Fp">Discord</a>. To gain access to the <a href="https://github.com/DCC-EX/dcc-ex.github.io">GitHub repository</a>, one of the DCC-EX team administrators will need to add you to the "Web" team in GitHub.</p>
-<h2 id="mkdocs-links">MkDocs Links</h2>
+<h2 id="mkdocs-links">MkDocs Links<a class="headerlink" href="#mkdocs-links" title="Permanent link">&para;</a></h2>
 <p>Here are some handy links with more info on MkDocs, the MkDocs Material theme, and the MkDocs Awesome Nav plugin we use to create the menu structure dynamically:</p>
 <ul>
 <li><a href="https://www.mkdocs.org/">MkDocs website</a></li>
 <li><a href="https://squidfunk.github.io/mkdocs-material/">MkDocs Material theme</a></li>
 <li><a href="https://lukasgeiter.github.io/mkdocs-awesome-nav/">MkDocs Awesome Nav plugin</a></li>
 </ul>
-<h2 id="what-you-need-to-install">What You Need to Install</h2>
+<h2 id="what-you-need-to-install">What You Need to Install<a class="headerlink" href="#what-you-need-to-install" title="Permanent link">&para;</a></h2>
 <p>This is the list of software you need to successfully contribute to the documentation, including being able to preview it locally:</p>
 <ul>
 <li><a href="https://code.visualstudio.com/">Visual Studio Code (VSCode)</a></li>
@@ -1979,29 +1980,29 @@
 <li>Markdown Preview Mermaid Support by Matt Bierner - enables previewing Mermaid diagrams in VSCode</li>
 <li>markdownlint by David Anson - helps keep consistent, good formatting in Markdown files (like flake8 for Python)</li>
 </ul>
-<h2 id="getting-started">Getting Started</h2>
+<h2 id="getting-started">Getting Started<a class="headerlink" href="#getting-started" title="Permanent link">&para;</a></h2>
 <p>Once you have installed VSCode and Python, you need to clone the <a href="https://github.com/DCC-EX/dcc-ex.github.io">GitHub repository</a>, set up a virtual environment, and install the MkDocs requirements.</p>
 <p>We recommend using the built-in Git functionality of VSCode to clone the repository, or you can use <a href="https://github.com/apps/desktop">GitHub Desktop</a> or command line Git, whichever you prefer. There is plenty of information generally available on that so we won't cover it here, and instead will focus on the specifics required to ready to contribute to MkDocs content.</p>
 <p>Follow the appropriate section below to setup MkDocs in Python for your operating system:</p>
-<h3 id="setup-on-macos">Setup on macOS</h3>
+<h3 id="setup-on-macos">Setup on macOS<a class="headerlink" href="#setup-on-macos" title="Permanent link">&para;</a></h3>
 <div class="highlight"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>mkdocs-test
 python<span class="w"> </span><span class="m">3</span><span class="w"> </span>-m<span class="w"> </span>venv<span class="w"> </span>venv
 <span class="nb">source</span><span class="w"> </span>venv/bin/activate
 pip<span class="w"> </span>install<span class="w"> </span>-r<span class="w"> </span>requirements.txt
 </code></pre></div>
-<h3 id="setup-on-linux">Setup on Linux</h3>
+<h3 id="setup-on-linux">Setup on Linux<a class="headerlink" href="#setup-on-linux" title="Permanent link">&para;</a></h3>
 <div class="highlight"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>mkdocs-test
 python3<span class="w"> </span>-m<span class="w"> </span>venv<span class="w"> </span>venv
 .<span class="w"> </span>./venv/bin/activate
 pip<span class="w"> </span>install<span class="w"> </span>-r<span class="w"> </span>requirements.txt
 </code></pre></div>
-<h3 id="setup-on-windows">Setup on Windows</h3>
+<h3 id="setup-on-windows">Setup on Windows<a class="headerlink" href="#setup-on-windows" title="Permanent link">&para;</a></h3>
 <div class="highlight"><pre><span></span><code><span class="go">cd mkdocs-test</span>
 <span class="go">virtualenv venv</span>
 <span class="go">venv\scripts\activate</span>
 <span class="go">pip install -r requirements.txt</span>
 </code></pre></div>
-<h2 id="previewing-and-building-mkdocs">Previewing and building MkDocs</h2>
+<h2 id="previewing-and-building-mkdocs">Previewing and building MkDocs<a class="headerlink" href="#previewing-and-building-mkdocs" title="Permanent link">&para;</a></h2>
 <p>Previewing locally is very simple:</p>
 <div class="highlight"><pre><span></span><code>mkdocs<span class="w"> </span>serve
 </code></pre></div>
@@ -2079,13 +2080,13 @@ pip<span class="w"> </span>install<span class="w"> </span>-r<span class="w"> </s
         
         
           
-          <a href="../2-docs-formatting/" class="md-footer__link md-footer__link--next" aria-label="Next: Documentation Formatting Guide">
+          <a href="../2-standards-formatting/" class="md-footer__link md-footer__link--next" aria-label="Next: Standards and Formatting Guide">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Documentation Formatting Guide
+                Standards and Formatting Guide
               </div>
             </div>
             <div class="md-footer__button md-icon">

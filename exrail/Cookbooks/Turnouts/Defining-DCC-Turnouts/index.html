@@ -1744,12 +1744,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../contributing/2-docs-formatting/" class="md-nav__link">
+      <a href="../../../../contributing/2-standards-formatting/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    Documentation Formatting Guide
+    Standards and Formatting Guide
     
   </span>
   
@@ -1821,10 +1821,10 @@
   
 
 
-<h1 id="defining-dcc-turnouts">Defining DCC turnouts</h1>
+<h1 id="defining-dcc-turnouts">Defining DCC turnouts<a class="headerlink" href="#defining-dcc-turnouts" title="Permanent link">&para;</a></h1>
 <p>DCC Turnouts operate by listening to DCC messages sent along the track by the command station.
 Each turnout has a DCC address which may be specified as a pair of values (address,subaddress) or a single value linear address. Its generally easier to think in terms of the linear address but it makes no difference whatever to the kind of DCC message sent, other than the conversion from (address,subaddress) to linear is badly thought out and inconsistent between DCC implementations due to historically/histerically ambiguous standards. </p>
-<h2 id="defining-dcc-based-turnout-objects">Defining DCC based turnout objects</h2>
+<h2 id="defining-dcc-based-turnout-objects">Defining DCC based turnout objects<a class="headerlink" href="#defining-dcc-based-turnout-objects" title="Permanent link">&para;</a></h2>
 <p>Define DCC based turnouts using EXRAIL.</p>
 <div class="highlight"><pre><span></span><code><span class="n">TURNOUTL</span><span class="p">(</span><span class="n">id</span><span class="p">,</span><span class="w"> </span><span class="n">address</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;description&quot;</span><span class="p">)</span>
 
