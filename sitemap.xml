@@ -9,15 +9,15 @@
          <lastmod>2025-06-21</lastmod>
     </url>
     <url>
-         <loc>https://dcc-ex.com/mdkocs-test/contributing/2-standards-formatting/</loc>
+         <loc>https://dcc-ex.com/mdkocs-test/contributing/2-standards/</loc>
+         <lastmod>2025-06-21</lastmod>
+    </url>
+    <url>
+         <loc>https://dcc-ex.com/mdkocs-test/contributing/3-formatting-guide/</loc>
          <lastmod>2025-06-21</lastmod>
     </url>
     <url>
          <loc>https://dcc-ex.com/mdkocs-test/contributing/9-understanding-links/</loc>
-         <lastmod>2025-06-21</lastmod>
-    </url>
-    <url>
-         <loc>https://dcc-ex.com/mdkocs-test/exfastclock/</loc>
          <lastmod>2025-06-21</lastmod>
     </url>
     <url>
@@ -45,11 +45,11 @@
          <lastmod>2025-06-21</lastmod>
     </url>
     <url>
-         <loc>https://dcc-ex.com/mdkocs-test/exrail/Cookbooks/Emergency-Stop-button/</loc>
+         <loc>https://dcc-ex.com/mdkocs-test/exrail/Cookbooks/estop-button/</loc>
          <lastmod>2025-06-21</lastmod>
     </url>
     <url>
-         <loc>https://dcc-ex.com/mdkocs-test/exrail/Cookbooks/Startup-Power-On/</loc>
+         <loc>https://dcc-ex.com/mdkocs-test/exrail/Cookbooks/flashing-signals/</loc>
          <lastmod>2025-06-21</lastmod>
     </url>
     <url>
@@ -57,19 +57,7 @@
          <lastmod>2025-06-21</lastmod>
     </url>
     <url>
-         <loc>https://dcc-ex.com/mdkocs-test/exrail/Cookbooks/Editing%20Tricks/Keeping%20EXRAIL%20commands%20in%20multiple%20files/</loc>
-         <lastmod>2025-06-21</lastmod>
-    </url>
-    <url>
-         <loc>https://dcc-ex.com/mdkocs-test/exrail/Cookbooks/Editing%20Tricks/Maintaining%20multiple%20command%20stations/</loc>
-         <lastmod>2025-06-21</lastmod>
-    </url>
-    <url>
-         <loc>https://dcc-ex.com/mdkocs-test/exrail/Cookbooks/Editing%20Tricks/Naming%20a%20sequence/</loc>
-         <lastmod>2025-06-21</lastmod>
-    </url>
-    <url>
-         <loc>https://dcc-ex.com/mdkocs-test/exrail/Cookbooks/Editing%20Tricks/Using%20CALL%20and%20RETURN/</loc>
+         <loc>https://dcc-ex.com/mdkocs-test/exrail/Cookbooks/startup-poweron/</loc>
          <lastmod>2025-06-21</lastmod>
     </url>
     <url>
@@ -77,27 +65,43 @@
          <lastmod>2025-06-21</lastmod>
     </url>
     <url>
-         <loc>https://dcc-ex.com/mdkocs-test/exrail/Cookbooks/Turnouts/Animated-Turnouts/</loc>
+         <loc>https://dcc-ex.com/mdkocs-test/exrail/Cookbooks/Editing%20Tricks/multiple-command-stations/</loc>
          <lastmod>2025-06-21</lastmod>
     </url>
     <url>
-         <loc>https://dcc-ex.com/mdkocs-test/exrail/Cookbooks/Turnouts/Defining-DCC-Turnouts/</loc>
+         <loc>https://dcc-ex.com/mdkocs-test/exrail/Cookbooks/Editing%20Tricks/multiple-files/</loc>
          <lastmod>2025-06-21</lastmod>
     </url>
     <url>
-         <loc>https://dcc-ex.com/mdkocs-test/exrail/Cookbooks/Turnouts/Defining-Servo-Turnouts/</loc>
+         <loc>https://dcc-ex.com/mdkocs-test/exrail/Cookbooks/Editing%20Tricks/naming-a-sequence/</loc>
          <lastmod>2025-06-21</lastmod>
     </url>
     <url>
-         <loc>https://dcc-ex.com/mdkocs-test/exrail/Cookbooks/Turnouts/Defining-pin-turnouts/</loc>
+         <loc>https://dcc-ex.com/mdkocs-test/exrail/Cookbooks/Editing%20Tricks/using-call-return/</loc>
          <lastmod>2025-06-21</lastmod>
     </url>
     <url>
-         <loc>https://dcc-ex.com/mdkocs-test/exrail/Cookbooks/Turnouts/Facing-Turnouts/</loc>
+         <loc>https://dcc-ex.com/mdkocs-test/exrail/Cookbooks/Turnouts/02_defining-dcc-turnouts/</loc>
          <lastmod>2025-06-21</lastmod>
     </url>
     <url>
-         <loc>https://dcc-ex.com/mdkocs-test/exrail/Cookbooks/Turnouts/Toggle-Turnouts-with-button-press/</loc>
+         <loc>https://dcc-ex.com/mdkocs-test/exrail/Cookbooks/Turnouts/03_defining-pin-turnouts/</loc>
+         <lastmod>2025-06-21</lastmod>
+    </url>
+    <url>
+         <loc>https://dcc-ex.com/mdkocs-test/exrail/Cookbooks/Turnouts/04_defining-servo-turnouts/</loc>
+         <lastmod>2025-06-21</lastmod>
+    </url>
+    <url>
+         <loc>https://dcc-ex.com/mdkocs-test/exrail/Cookbooks/Turnouts/11_facing-turnouts/</loc>
+         <lastmod>2025-06-21</lastmod>
+    </url>
+    <url>
+         <loc>https://dcc-ex.com/mdkocs-test/exrail/Cookbooks/Turnouts/12_animated-turnouts/</loc>
+         <lastmod>2025-06-21</lastmod>
+    </url>
+    <url>
+         <loc>https://dcc-ex.com/mdkocs-test/exrail/Cookbooks/Turnouts/13-toggle-with-button/</loc>
          <lastmod>2025-06-21</lastmod>
     </url>
     <url>
@@ -133,15 +137,19 @@
          <lastmod>2025-06-21</lastmod>
     </url>
     <url>
-         <loc>https://dcc-ex.com/mdkocs-test/products/ex-csb1/</loc>
+         <loc>https://dcc-ex.com/mdkocs-test/products/ex-fastclock/</loc>
          <lastmod>2025-06-21</lastmod>
     </url>
     <url>
-         <loc>https://dcc-ex.com/mdkocs-test/reference/serial_command_basics/</loc>
+         <loc>https://dcc-ex.com/mdkocs-test/products/hardware/ex-csb1/</loc>
          <lastmod>2025-06-21</lastmod>
     </url>
     <url>
-         <loc>https://dcc-ex.com/mdkocs-test/reference/serial_commands/</loc>
+         <loc>https://dcc-ex.com/mdkocs-test/reference/serial-command-basics/</loc>
+         <lastmod>2025-06-21</lastmod>
+    </url>
+    <url>
+         <loc>https://dcc-ex.com/mdkocs-test/reference/serial-commands/</loc>
          <lastmod>2025-06-21</lastmod>
     </url>
     <url>
