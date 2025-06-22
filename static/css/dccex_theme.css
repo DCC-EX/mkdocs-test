@@ -199,3 +199,8 @@ h5 {
   font-size: 100% !important;
   color: var(--md-default-fg-color--dark);
 }
+
+/* Override header topic font */
+.md-header__topic {
+  font-family: Audiowide,Helvetica,Arial,sans-serif !important;
+}
