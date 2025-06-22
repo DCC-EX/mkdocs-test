@@ -9,10 +9,10 @@ function findnow(term) {
 }
 document.addEventListener('click', function(event) {
     var link = event.target.closest('a');
-    if (link && link.getAttribute('href') && link.getAttribute('href').startsWith('/find/')) {
+    if (link && link.getAttribute('href') && link.getAttribute('href').startsWith('?')) {
         event.preventDefault();
-        // Extract the part after '/find/'
-        var rest = link.getAttribute('href').slice('/find/'.length);
+        // Extract the part after '?'
+        var rest = link.getAttribute('href').slice('?'.length);
         findnow(rest);
     }
 });
