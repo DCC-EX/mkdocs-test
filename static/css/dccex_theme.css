@@ -204,3 +204,25 @@ h5 {
 .md-header__topic {
   font-family: Audiowide,Helvetica,Arial,sans-serif !important;
 }
+
+/* Override grid card format */
+.md-typeset .grid.cards > ul > li {
+  background-color: var(--md-default-bg-color--light);
+  border: 1px solid var(--md-default-fg-color--light);
+  border-radius: 10px;
+  box-shadow: var(--md-shadow-z1);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  transition: all 0.2s ease-in-out;
+}
+
+.md-typeset .grid.cards > ul > li:hover {
+  box-shadow: var(--md-shadow-z3);
+  border: 1px solid var(--md-default-fg-color);
+  transform: translateY(-3px);
+}
+
+.md-typeset .grid.cards > ul > li hr {
+  border-bottom: 1px solid var(--md-default-fg-color--light);
+}
