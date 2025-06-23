@@ -37,94 +37,6 @@
          <lastmod>2025-06-23</lastmod>
     </url>
     <url>
-         <loc>https://dcc-ex.com/mkdocs-test/exrail/</loc>
-         <lastmod>2025-06-23</lastmod>
-    </url>
-    <url>
-         <loc>https://dcc-ex.com/mkdocs-test/exrail/Autostart/</loc>
-         <lastmod>2025-06-23</lastmod>
-    </url>
-    <url>
-         <loc>https://dcc-ex.com/mkdocs-test/exrail/Cookbooks/animation-sensors/</loc>
-         <lastmod>2025-06-23</lastmod>
-    </url>
-    <url>
-         <loc>https://dcc-ex.com/mkdocs-test/exrail/Cookbooks/estop-button/</loc>
-         <lastmod>2025-06-23</lastmod>
-    </url>
-    <url>
-         <loc>https://dcc-ex.com/mkdocs-test/exrail/Cookbooks/flashing-signals/</loc>
-         <lastmod>2025-06-23</lastmod>
-    </url>
-    <url>
-         <loc>https://dcc-ex.com/mkdocs-test/exrail/Cookbooks/roster-similar-locos/</loc>
-         <lastmod>2025-06-23</lastmod>
-    </url>
-    <url>
-         <loc>https://dcc-ex.com/mkdocs-test/exrail/Cookbooks/startup-poweron/</loc>
-         <lastmod>2025-06-23</lastmod>
-    </url>
-    <url>
-         <loc>https://dcc-ex.com/mkdocs-test/exrail/Cookbooks/timecontrol/</loc>
-         <lastmod>2025-06-23</lastmod>
-    </url>
-    <url>
-         <loc>https://dcc-ex.com/mkdocs-test/exrail/Cookbooks/Editing%20Tricks/multi-files/</loc>
-         <lastmod>2025-06-23</lastmod>
-    </url>
-    <url>
-         <loc>https://dcc-ex.com/mkdocs-test/exrail/Cookbooks/Editing%20Tricks/multiple-command-stations/</loc>
-         <lastmod>2025-06-23</lastmod>
-    </url>
-    <url>
-         <loc>https://dcc-ex.com/mkdocs-test/exrail/Cookbooks/Editing%20Tricks/multiple-files/</loc>
-         <lastmod>2025-06-23</lastmod>
-    </url>
-    <url>
-         <loc>https://dcc-ex.com/mkdocs-test/exrail/Cookbooks/Editing%20Tricks/naming-a-sequence/</loc>
-         <lastmod>2025-06-23</lastmod>
-    </url>
-    <url>
-         <loc>https://dcc-ex.com/mkdocs-test/exrail/Cookbooks/Editing%20Tricks/using-call-return/</loc>
-         <lastmod>2025-06-23</lastmod>
-    </url>
-    <url>
-         <loc>https://dcc-ex.com/mkdocs-test/exrail/Cookbooks/Turnouts/02_defining-dcc-turnouts/</loc>
-         <lastmod>2025-06-23</lastmod>
-    </url>
-    <url>
-         <loc>https://dcc-ex.com/mkdocs-test/exrail/Cookbooks/Turnouts/03_defining-pin-turnouts/</loc>
-         <lastmod>2025-06-23</lastmod>
-    </url>
-    <url>
-         <loc>https://dcc-ex.com/mkdocs-test/exrail/Cookbooks/Turnouts/04_defining-servo-turnouts/</loc>
-         <lastmod>2025-06-23</lastmod>
-    </url>
-    <url>
-         <loc>https://dcc-ex.com/mkdocs-test/exrail/Cookbooks/Turnouts/11_facing-turnouts/</loc>
-         <lastmod>2025-06-23</lastmod>
-    </url>
-    <url>
-         <loc>https://dcc-ex.com/mkdocs-test/exrail/Cookbooks/Turnouts/12_animated-turnouts/</loc>
-         <lastmod>2025-06-23</lastmod>
-    </url>
-    <url>
-         <loc>https://dcc-ex.com/mkdocs-test/exrail/Cookbooks/Turnouts/13-toggle-with-button/</loc>
-         <lastmod>2025-06-23</lastmod>
-    </url>
-    <url>
-         <loc>https://dcc-ex.com/mkdocs-test/exrail/Cookbooks/neopixels/</loc>
-         <lastmod>2025-06-23</lastmod>
-    </url>
-    <url>
-         <loc>https://dcc-ex.com/mkdocs-test/exrail/Cookbooks/neopixels/neopixels/</loc>
-         <lastmod>2025-06-23</lastmod>
-    </url>
-    <url>
-         <loc>https://dcc-ex.com/mkdocs-test/exrail/Cookbooks/neopixels/signals/</loc>
-         <lastmod>2025-06-23</lastmod>
-    </url>
-    <url>
          <loc>https://dcc-ex.com/mkdocs-test/glossary/glossary/</loc>
          <lastmod>2025-06-23</lastmod>
     </url>
@@ -157,6 +69,102 @@
          <lastmod>2025-06-23</lastmod>
     </url>
     <url>
+         <loc>https://dcc-ex.com/mkdocs-test/products/ex-commandstation/</loc>
+         <lastmod>2025-06-23</lastmod>
+    </url>
+    <url>
+         <loc>https://dcc-ex.com/mkdocs-test/products/ex-commandstation/exrail/</loc>
+         <lastmod>2025-06-23</lastmod>
+    </url>
+    <url>
+         <loc>https://dcc-ex.com/mkdocs-test/products/ex-commandstation/exrail/Autostart/</loc>
+         <lastmod>2025-06-23</lastmod>
+    </url>
+    <url>
+         <loc>https://dcc-ex.com/mkdocs-test/products/ex-commandstation/exrail/Cookbooks/animation-sensors/</loc>
+         <lastmod>2025-06-23</lastmod>
+    </url>
+    <url>
+         <loc>https://dcc-ex.com/mkdocs-test/products/ex-commandstation/exrail/Cookbooks/estop-button/</loc>
+         <lastmod>2025-06-23</lastmod>
+    </url>
+    <url>
+         <loc>https://dcc-ex.com/mkdocs-test/products/ex-commandstation/exrail/Cookbooks/flashing-signals/</loc>
+         <lastmod>2025-06-23</lastmod>
+    </url>
+    <url>
+         <loc>https://dcc-ex.com/mkdocs-test/products/ex-commandstation/exrail/Cookbooks/roster-similar-locos/</loc>
+         <lastmod>2025-06-23</lastmod>
+    </url>
+    <url>
+         <loc>https://dcc-ex.com/mkdocs-test/products/ex-commandstation/exrail/Cookbooks/startup-poweron/</loc>
+         <lastmod>2025-06-23</lastmod>
+    </url>
+    <url>
+         <loc>https://dcc-ex.com/mkdocs-test/products/ex-commandstation/exrail/Cookbooks/timecontrol/</loc>
+         <lastmod>2025-06-23</lastmod>
+    </url>
+    <url>
+         <loc>https://dcc-ex.com/mkdocs-test/products/ex-commandstation/exrail/Cookbooks/Editing%20Tricks/multi-files/</loc>
+         <lastmod>2025-06-23</lastmod>
+    </url>
+    <url>
+         <loc>https://dcc-ex.com/mkdocs-test/products/ex-commandstation/exrail/Cookbooks/Editing%20Tricks/multiple-command-stations/</loc>
+         <lastmod>2025-06-23</lastmod>
+    </url>
+    <url>
+         <loc>https://dcc-ex.com/mkdocs-test/products/ex-commandstation/exrail/Cookbooks/Editing%20Tricks/multiple-files/</loc>
+         <lastmod>2025-06-23</lastmod>
+    </url>
+    <url>
+         <loc>https://dcc-ex.com/mkdocs-test/products/ex-commandstation/exrail/Cookbooks/Editing%20Tricks/naming-a-sequence/</loc>
+         <lastmod>2025-06-23</lastmod>
+    </url>
+    <url>
+         <loc>https://dcc-ex.com/mkdocs-test/products/ex-commandstation/exrail/Cookbooks/Editing%20Tricks/using-call-return/</loc>
+         <lastmod>2025-06-23</lastmod>
+    </url>
+    <url>
+         <loc>https://dcc-ex.com/mkdocs-test/products/ex-commandstation/exrail/Cookbooks/Turnouts/02_defining-dcc-turnouts/</loc>
+         <lastmod>2025-06-23</lastmod>
+    </url>
+    <url>
+         <loc>https://dcc-ex.com/mkdocs-test/products/ex-commandstation/exrail/Cookbooks/Turnouts/03_defining-pin-turnouts/</loc>
+         <lastmod>2025-06-23</lastmod>
+    </url>
+    <url>
+         <loc>https://dcc-ex.com/mkdocs-test/products/ex-commandstation/exrail/Cookbooks/Turnouts/04_defining-servo-turnouts/</loc>
+         <lastmod>2025-06-23</lastmod>
+    </url>
+    <url>
+         <loc>https://dcc-ex.com/mkdocs-test/products/ex-commandstation/exrail/Cookbooks/Turnouts/11_facing-turnouts/</loc>
+         <lastmod>2025-06-23</lastmod>
+    </url>
+    <url>
+         <loc>https://dcc-ex.com/mkdocs-test/products/ex-commandstation/exrail/Cookbooks/Turnouts/12_animated-turnouts/</loc>
+         <lastmod>2025-06-23</lastmod>
+    </url>
+    <url>
+         <loc>https://dcc-ex.com/mkdocs-test/products/ex-commandstation/exrail/Cookbooks/Turnouts/13-toggle-with-button/</loc>
+         <lastmod>2025-06-23</lastmod>
+    </url>
+    <url>
+         <loc>https://dcc-ex.com/mkdocs-test/products/ex-commandstation/exrail/Cookbooks/neopixels/</loc>
+         <lastmod>2025-06-23</lastmod>
+    </url>
+    <url>
+         <loc>https://dcc-ex.com/mkdocs-test/products/ex-commandstation/exrail/Cookbooks/neopixels/neopixels/</loc>
+         <lastmod>2025-06-23</lastmod>
+    </url>
+    <url>
+         <loc>https://dcc-ex.com/mkdocs-test/products/ex-commandstation/exrail/Cookbooks/neopixels/signals/</loc>
+         <lastmod>2025-06-23</lastmod>
+    </url>
+    <url>
+         <loc>https://dcc-ex.com/mkdocs-test/products/ex-csb1/ex-csb1/</loc>
+         <lastmod>2025-06-23</lastmod>
+    </url>
+    <url>
          <loc>https://dcc-ex.com/mkdocs-test/products/ex-fastclock/</loc>
          <lastmod>2025-06-23</lastmod>
     </url>
@@ -174,10 +182,6 @@
     </url>
     <url>
          <loc>https://dcc-ex.com/mkdocs-test/products/ex-fastclock/04-timecontrol/</loc>
-         <lastmod>2025-06-23</lastmod>
-    </url>
-    <url>
-         <loc>https://dcc-ex.com/mkdocs-test/products/hardware/ex-csb1/</loc>
          <lastmod>2025-06-23</lastmod>
     </url>
     <url>
