@@ -1645,9 +1645,9 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#defining-dcc-based-objects" class="md-nav__link">
+  <a href="#defining-dcc-based-turnout-objects" class="md-nav__link">
     <span class="md-ellipsis">
-      Defining DCC based objects
+      Defining DCC based turnout objects
     </span>
   </a>
   
@@ -2254,8 +2254,6 @@
       
         
       
-        
-      
     
     
     
@@ -2303,29 +2301,6 @@
   
   <span class="md-ellipsis">
     Glossary of Terms
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../../../glossary/term-index/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Index of Terms
     
   </span>
   
@@ -2720,9 +2695,9 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#defining-dcc-based-objects" class="md-nav__link">
+  <a href="#defining-dcc-based-turnout-objects" class="md-nav__link">
     <span class="md-ellipsis">
-      Defining DCC based objects
+      Defining DCC based turnout objects
     </span>
   </a>
   
@@ -2748,21 +2723,9 @@
 
 
 <h1 id="defining-dcc-turnouts">Defining DCC turnouts<a class="headerlink" href="#defining-dcc-turnouts" title="Permanent link">&para;</a></h1>
-<p>DCC <a class="mkdocs-ezglossary-link"
-    id="8b3cdeb9acaf7d4f123c5c1174974f0d"
-    title="In a prototypical railway, a turnout allows a train to diverge from one track to another. In DCC-EX terms, this term also denotes a software object that can control a physical turnout on your layout. A turnout can also be referred to as a point or a switch."
-    name="dcc-ex:turnout"
-    href="../../../../../../glossary/glossary/#574dc099eadcb283f01dd8a10523e655">Turnout</a> (or a <a class="mkdocs-ezglossary-link"
-    id="1877f946f60649a2b60091ff119e06ae"
-    title="A point is another term for a ."
-    name="dcc-ex:point"
-    href="../../../../../../glossary/glossary/#525ab14337ec66cd5b7c922797014fbc">point</a>) operate by listening to DCC messages sent along the track by the command station.
+<p>DCC Turnouts (or points) operate by listening to DCC messages sent along the track by the command station.
 Each turnout has a DCC address which may be specified as a pair of values (address,subaddress) or a single value linear address. Its generally easier to think in terms of the linear address but it makes no difference whatever to the kind of DCC message sent, other than the conversion from (address,subaddress) to linear is badly thought out and inconsistent between DCC implementations due to historically/histerically ambiguous standards.</p>
-<h2 id="defining-dcc-based-objects">Defining DCC based <a class="mkdocs-ezglossary-link"
-    id="ba893d6f9828a17f4b45b8ff946e0e5a"
-    title="In a prototypical railway, a turnout allows a train to diverge from one track to another. In DCC-EX terms, this term also denotes a software object that can control a physical turnout on your layout. A turnout can also be referred to as a point or a switch."
-    name="dcc-ex:turnout"
-    href="../../../../../../glossary/glossary/#574dc099eadcb283f01dd8a10523e655">turnout</a> objects<a class="headerlink" href="#defining-dcc-based-objects" title="Permanent link">&para;</a></h2>
+<h2 id="defining-dcc-based-turnout-objects">Defining DCC based turnout objects<a class="headerlink" href="#defining-dcc-based-turnout-objects" title="Permanent link">&para;</a></h2>
 <p>Define DCC based turnouts using EXRAIL.</p>
 <div class="highlight"><pre><span></span><code><span class="n">TURNOUTL</span><span class="p">(</span><span class="n">id</span><span class="p">,</span><span class="w"> </span><span class="n">address</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;description&quot;</span><span class="p">)</span>
 
@@ -2797,7 +2760,7 @@ shortAddress,subAddress - the alternative form of the same address.</p>
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 23, 2025 22:36:41 UTC">June 23, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 24, 2025 19:18:06 UTC">June 24, 2025</span>
   </span>
 
     
