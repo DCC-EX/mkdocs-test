@@ -121,6 +121,10 @@
          <lastmod>2025-06-24</lastmod>
     </url>
     <url>
+         <loc>https://dcc-ex.com/mkdocs-test/products/ex-commandstation/exrail/Cookbooks/tca8418-keyboard/</loc>
+         <lastmod>2025-06-24</lastmod>
+    </url>
+    <url>
          <loc>https://dcc-ex.com/mkdocs-test/products/ex-commandstation/exrail/Cookbooks/timecontrol/</loc>
          <lastmod>2025-06-24</lastmod>
     </url>
@@ -185,23 +189,23 @@
          <lastmod>2025-06-24</lastmod>
     </url>
     <url>
-         <loc>https://dcc-ex.com/mkdocs-test/products/ex-fastclock/</loc>
+         <loc>https://dcc-ex.com/mkdocs-test/products/ex-fastclock/01-welcome/</loc>
          <lastmod>2025-06-24</lastmod>
     </url>
     <url>
-         <loc>https://dcc-ex.com/mkdocs-test/products/ex-fastclock/01-overview/</loc>
+         <loc>https://dcc-ex.com/mkdocs-test/products/ex-fastclock/02-overview/</loc>
          <lastmod>2025-06-24</lastmod>
     </url>
     <url>
-         <loc>https://dcc-ex.com/mkdocs-test/products/ex-fastclock/02-hardware/</loc>
+         <loc>https://dcc-ex.com/mkdocs-test/products/ex-fastclock/03-hardware/</loc>
          <lastmod>2025-06-24</lastmod>
     </url>
     <url>
-         <loc>https://dcc-ex.com/mkdocs-test/products/ex-fastclock/03-configuration/</loc>
+         <loc>https://dcc-ex.com/mkdocs-test/products/ex-fastclock/04-configuration/</loc>
          <lastmod>2025-06-24</lastmod>
     </url>
     <url>
-         <loc>https://dcc-ex.com/mkdocs-test/products/ex-fastclock/04-timecontrol/</loc>
+         <loc>https://dcc-ex.com/mkdocs-test/products/ex-fastclock/05-timecontrol/</loc>
          <lastmod>2025-06-24</lastmod>
     </url>
     <url>
@@ -210,6 +214,10 @@
     </url>
     <url>
          <loc>https://dcc-ex.com/mkdocs-test/reference/04-track-manager/</loc>
+         <lastmod>2025-06-24</lastmod>
+    </url>
+    <url>
+         <loc>https://dcc-ex.com/mkdocs-test/reference/07-command-station-arch/</loc>
          <lastmod>2025-06-24</lastmod>
     </url>
     <url>
