@@ -132,6 +132,9 @@
   /* Footer colour shades */
   --md-footer-fg-color:              #FFFFFF;
   --md-footer-bg-color:              var(--md-primary-fg-color--dark);
+
+  /* Keys extension colour */
+  --md-typeset-kbd-color: var(--md-code-bg-color);
 }
 
 /* Reduce footer navigation title font size & margins */

@@ -55,6 +55,8 @@
     
       <link rel="stylesheet" href="../../static/css/dccex_theme.css">
     
+      <link rel="stylesheet" href="../../css/open_in_new_tab.css">
+    
     <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -2853,7 +2855,8 @@
 <h1 id="contributing-to-documentation">Contributing to Documentation<a class="headerlink" href="#contributing-to-documentation" title="Permanent link">&para;</a></h1>
 <p>This page outlines what you need in order to contribute to the documentation, along with the various markdown attributes and so forth you can use.</p>
 <p>The documentation is hosted using GitHub Pages and is written in Markdown format, using MkDocs to publish the content. We use the MkDocs Material theme to give us the framework for the look and feel of the website, along with a number of other useful plugins and extensions to enhance the content.</p>
-<p>**Important! Once up and running with the information on this page, please ensure you are familiar with **</p>
+<p><strong>Important! Once up and running with the information on this page, please ensure you are familiar with general markdown syntax.</strong></p>
+<p>Refer to the <a href="https://www.markdownguide.org/">Markdown Guide</a>.</p>
 <h2 id="how-to-contribute">How to Contribute<a class="headerlink" href="#how-to-contribute" title="Permanent link">&para;</a></h2>
 <p>For contributions from the general public, we recommend forking the <a href="https://github.com/DCC-EX/dcc-ex.github.io">GitHub repository</a> and submitting pull requests for the DCC-EX Documenter team to review and merge.</p>
 <p>If you wish to contribute more fully and become a part of the DCC-EX Documenter team, reach out to us via <a href="https://discord.gg/y2sB4Fp">Discord</a>. To gain access to the <a href="https://github.com/DCC-EX/dcc-ex.github.io">GitHub repository</a>, one of the DCC-EX team administrators will need to add you to the "Web" team in GitHub.</p>
@@ -2863,8 +2866,8 @@
 <li><a href="https://www.mkdocs.org/">MkDocs website</a> - The official MkDocs documentation.</li>
 <li><a href="https://squidfunk.github.io/mkdocs-material/">MkDocs Material theme</a> - The MkDocs Material theme documentation.</li>
 <li><a href="https://lukasgeiter.github.io/mkdocs-awesome-nav/">MkDocs Awesome Nav plugin</a> - MkDocs Awesome Nav plugin is what we use for dynamic page structure.</li>
-<li><a href="https://guts.github.io/mkdocs-rss-plugin/">MkDocs RSS Plugin</a> - The MkDocs RSS Plugin publishes our DCC-EX News feed.</li>
-<li><a href="https://realtimeprojects.github.io/mkdocs-ezglossary/">MkDocs ezglossary Plugin</a> - The MkDocs ezglossary plugin enables our dynamically generated and linked glossary of terms.</li>
+<li><a href="https://guts.github.io/mkdocs-rss-plugin/">MkDocs RSS plugin</a> - The MkDocs RSS Plugin publishes our DCC-EX News feed.</li>
+<li><a href="https://github.com/JakubAndrysek/mkdocs-open-in-new-tab">MkDocs Open in New Tab plugin</a> - The Open in New Tab plugin ensures all links to external websites open in a new tab to ensure the users' browsing experience in our documentation is consistent.</li>
 </ul>
 <h2 id="what-you-need-to-install">What You Need to Install<a class="headerlink" href="#what-you-need-to-install" title="Permanent link">&para;</a></h2>
 <p>This is the list of software you need to successfully contribute to the documentation, including being able to preview it locally:</p>
@@ -2903,7 +2906,8 @@ pip<span class="w"> </span>install<span class="w"> </span>-r<span class="w"> </s
 <p>Previewing locally is very simple:</p>
 <div class="highlight"><pre><span></span><code>mkdocs<span class="w"> </span>serve
 </code></pre></div>
-<p>Navigate to the local preview in a browser at <a href="http://localhost:8000/mkdocs-test/">http://localhost:8000/mkdocs-test/</a>.</p>
+<p>Navigate to the <a href="http://localhost:8000/mkdocs-test/">local preview in a browser</a>.</p>
+<p>When finished with the local preview, stop the local server with either <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-c">C</kbd></span> (Windows/Linux) or <span class="keys"><kbd class="key-command">Cmd</kbd><span>+</span><kbd class="key-c">C</kbd></span> (macOS).</p>
 <p>Building locally is equally as simple:</p>
 <div class="highlight"><pre><span></span><code>mkdocs<span class="w"> </span>build
 </code></pre></div>
@@ -2930,7 +2934,7 @@ pip<span class="w"> </span>install<span class="w"> </span>-r<span class="w"> </s
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 22, 2025 00:32:19 UTC">June 22, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 24, 2025 22:12:01 UTC">June 24, 2025</span>
   </span>
 
     
@@ -3048,6 +3052,8 @@ pip<span class="w"> </span>install<span class="w"> </span>-r<span class="w"> </s
       <script src="../../assets/javascripts/bundle.13a4f30d.min.js"></script>
       
         <script src="../../static/scripts/search-helper.js"></script>
+      
+        <script src="../../js/open_in_new_tab.js"></script>
       
     
   </body>
