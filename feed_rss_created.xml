@@ -13,8 +13,8 @@
     <language>en</language>
 
     
-    <pubDate>Tue, 24 Jun 2025 22:13:12 -0000</pubDate>
-    <lastBuildDate>Tue, 24 Jun 2025 22:13:12 -0000</lastBuildDate>
+    <pubDate>Wed, 25 Jun 2025 00:25:52 -0000</pubDate>
+    <lastBuildDate>Wed, 25 Jun 2025 00:25:52 -0000</lastBuildDate>
     <ttl>1440</ttl>
 
     
@@ -23,7 +23,7 @@
     
     
     <image>
-      <url>static/images/logos/favicon.ico</url>
+      <url>_static/images/logos/favicon.ico</url>
       <title>DCC-EX News</title>
       <link>https://dcc-ex.com/mkdocs-test/</link>
     </image>

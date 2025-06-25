@@ -4,7 +4,7 @@
     "home_page_url": "https://dcc-ex.com/mkdocs-test/",
     "feed_url": "https://dcc-ex.com/mkdocs-test/feed_json_updated.json",
     "description": "Latest news and updates from the DCC-EX team",
-    "icon": "static/images/logos/favicon.ico",
+    "icon": "_static/images/logos/favicon.ico",
     "authors": [],
     "language": "en",
     "items": [

@@ -229,3 +229,9 @@ h5 {
 .md-typeset .grid.cards > ul > li hr {
   border-bottom: 1px solid var(--md-default-fg-color--light);
 }
+
+/* Button overrides */
+.md-typeset .md-button {
+  padding: 7px;
+  border-radius: 20px;
+}

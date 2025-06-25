@@ -22,7 +22,7 @@
         <link rel="alternate" type="application/rss+xml" title="RSS feed" href="../../feed_rss_created.xml">
         <link rel="alternate" type="application/rss+xml" title="RSS feed of updated content" href="../../feed_rss_updated.xml">
       
-      <link rel="icon" href="../../static/images/logos/favicon.ico">
+      <link rel="icon" href="../../_static/images/logos/favicon.ico">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.14">
     
     
@@ -53,7 +53,7 @@
       
     
     
-      <link rel="stylesheet" href="../../static/css/dccex_theme.css">
+      <link rel="stylesheet" href="../../_static/css/dccex_theme.css">
     
       <link rel="stylesheet" href="../../css/open_in_new_tab.css">
     
@@ -99,7 +99,7 @@
   <nav class="md-header__inner md-grid" aria-label="Header">
     <a href="../.." title="DCC-EX MkDocs Testing" class="md-header__button md-logo" aria-label="DCC-EX MkDocs Testing" data-md-component="logo">
       
-  <img src="../../static/images/logos/logo.png" alt="logo">
+  <img src="../../_static/images/logos/logo.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -437,7 +437,7 @@
   <label class="md-nav__title" for="__drawer">
     <a href="../.." title="DCC-EX MkDocs Testing" class="md-nav__button md-logo" aria-label="DCC-EX MkDocs Testing" data-md-component="logo">
       
-  <img src="../../static/images/logos/logo.png" alt="logo">
+  <img src="../../_static/images/logos/logo.png" alt="logo">
 
     </a>
     DCC-EX MkDocs Testing
@@ -2615,7 +2615,7 @@
         <li class="md-nav__item">
   <a href="#what-the-html-browser-sees-is-this" class="md-nav__link">
     <span class="md-ellipsis">
-      What the html browser sees is this....
+      What the html browser sees is this
     </span>
   </a>
   
@@ -2707,7 +2707,7 @@
         <li class="md-nav__item">
   <a href="#what-the-html-browser-sees-is-this" class="md-nav__link">
     <span class="md-ellipsis">
-      What the html browser sees is this....
+      What the html browser sees is this
     </span>
   </a>
   
@@ -2751,18 +2751,18 @@
 
 
 <h1 id="understanding-links">Understanding Links<a class="headerlink" href="#understanding-links" title="Permanent link">&para;</a></h1>
-<h2 id="what-the-html-browser-sees-is-this">What the html browser sees is this....<a class="headerlink" href="#what-the-html-browser-sees-is-this" title="Permanent link">&para;</a></h2>
+<h2 id="what-the-html-browser-sees-is-this">What the html browser sees is this<a class="headerlink" href="#what-the-html-browser-sees-is-this" title="Permanent link">&para;</a></h2>
 <p>An ABOSLUTE link in html starts with <code>/</code>  which makes the browser prepend the web server address so <code>href="/blah/blah.html"</code>  for example would link to <code>"http:://dcc-ex.com/blah/blah.html"</code> which would be BAD because  we actually wanted  <code>http:://dcc-ex.com/mkdocs-test/blah/blah.html</code> but there was no way of doing that if you didn't know the sub-directory mkdocs-test in advance and code it on all your links.</p>
-<p>To resolve this, you have to use RELATIVE hrefs, in which the link is relative to the current page.  So if you are on page   <code>blah1/blah2/blah3.html</code> and you want a link or image in  <code>static/images/stuff.jpg</code>  you have to use <code>href="../../static/images/stuff.jpg"</code></p>
+<p>To resolve this, you have to use RELATIVE hrefs, in which the link is relative to the current page.  So if you are on page   <code>blah1/blah2/blah3.html</code> and you want a link or image in  <code>_static/images/stuff.jpg</code>  you have to use <code>href="../../_static/images/stuff.jpg"</code></p>
 <p>So.. RELATIVE HTML links are the only reliable way to work, otherwise your website is borked if you install it in for example <code>http:://dcc-ex.com/newsite/</code> </p>
 <h2 id="what-the-mkdocs-author-sees">What the mkdocs author sees<a class="headerlink" href="#what-the-mkdocs-author-sees" title="Permanent link">&para;</a></h2>
 <p>In mkdocs,  the markdown to html generator  passes through RELATIVE links unchanged, this means that you can easily refer to images in the same directory as the current page by just giving the name, or get to any other directory with the appropriate number of ../ to go up the tree.  That's great until you move the current page to another directory so the relative link is no longer going to find the image or page you want.</p>
-<p>MkDocs has a solution. When you code what appears to be an absolute link like <code>/static/images/spaff.png</code> then the HTM generated will look like <code>href="../../static/images/spaff.png"</code>  with the appropriate number of <code>../</code> to walk back up the tree from the current file to the docs directory. So basically you code what looks like an ABSOLUTE link, but the html is generated with a relative link. Hooray!</p>
+<p>MkDocs has a solution. When you code what appears to be an absolute link like <code>/_static/images/spaff.png</code> then the HTM generated will look like <code>href="../../_static/images/spaff.png"</code>  with the appropriate number of <code>../</code> to walk back up the tree from the current file to the docs directory. So basically you code what looks like an ABSOLUTE link, but the html is generated with a relative link. Hooray!</p>
 <p>BUT there is one annoying little quirk...</p>
-<p>The intellisense when typing the start of a link like <code>[look here](/</code>   gives you a dropdown starting at docs  so you get <code>/docs/static/images/spaff.jpg</code>   which wont get converted so it gives <code>href="/docs/static/images/spaff.jpg"</code>  which isn't found because the <code>/docs/</code> directory level isnt copied to the website.</p>
+<p>The intellisense when typing the start of a link like <code>[look here](/</code>   gives you a dropdown starting at docs  so you get <code>/docs/_static/images/spaff.jpg</code>   which wont get converted so it gives <code>href="/docs/_static/images/spaff.jpg"</code>  which isn't found because the <code>/docs/</code> directory level isnt copied to the website.</p>
 <p>Pending a VSCode or mkDocs fix (both applied for) the only solution is to manually remove the <code>/docs</code> prefix from the link created by intellisense.</p>
 <h2 id="the-search-link">The search link<a class="headerlink" href="#the-search-link" title="Permanent link">&para;</a></h2>
-<p>The search link like <code>?turnout</code> is passed through unchanged by mkDocs but is intercepted in the browser by our own  <a href="../../static/scripts/search-helper.js">JavaSCript code</a></p>
+<p>The search link like <code>?turnout</code> is passed through unchanged by mkDocs but is intercepted in the browser by our own  <a href="../../_static/scripts/search-helper.js">JavaSCript code</a></p>
 
 
 
@@ -2783,7 +2783,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 24, 2025 19:18:06 UTC">June 24, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 24, 2025 23:32:22 UTC">June 24, 2025</span>
   </span>
 
     
@@ -2900,7 +2900,11 @@
     
       <script src="../../assets/javascripts/bundle.13a4f30d.min.js"></script>
       
-        <script src="../../static/scripts/search-helper.js"></script>
+        <script src="../../_static/scripts/search-helper.js"></script>
+      
+        <script src="../../_static/scripts/platform.js"></script>
+      
+        <script src="../../_static/scripts/ex-installer-download-helper.js"></script>
       
         <script src="../../js/open_in_new_tab.js"></script>
       

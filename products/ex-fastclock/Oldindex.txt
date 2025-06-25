@@ -24,13 +24,13 @@ The project uses only two components:
 
 The completed project is shown in the accompanying photograph:
 
-![TFT Fast Clock](/static/images/ex-fastclock/IMG_2502.jpg){ align=right }
+![TFT Fast Clock](/_static/images/ex-fastclock/IMG_2502.jpg){ align=right }
 
 The FastClock communicates with the Command Station using either I2C or Serial.  
 
 Given that the MCUFREIND style shield is a shield and uses the A4 pin as LCD_RST it is necessary to make a modification to enable the I2C communication.  This involces cutting the A4 pin and soldering a jumper from LCD_RST on the backof the TFT board to the pin that aligns with the UNO RST pin.
 
-![Modified LCD Sheild](/static/images/ex-fastclock/IMG_3538.jpg)
+![Modified LCD Sheild](/_static/images/ex-fastclock/IMG_3538.jpg)
 
 This modification allow the A4 & A5 to operate correctly as I2C and was suggested by David Prentice who wrote the MCUFRIEND.kbv library thatthis project uses.  A discussion on this modification can be found in an [Arduino forum post](https://forum.arduino.cc/t/mcufriend-kbv-library-for-uno-2-4-2-8-3-5-3-6-3-95-inch-mcufriend-shields/353100/100).
 
