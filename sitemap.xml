@@ -93,6 +93,10 @@
          <lastmod>2025-06-25</lastmod>
     </url>
     <url>
+         <loc>https://dcc-ex.com/mkdocs-test/products/ex-commandstation/exrail/Cookbooks/analog-sensors/</loc>
+         <lastmod>2025-06-25</lastmod>
+    </url>
+    <url>
          <loc>https://dcc-ex.com/mkdocs-test/products/ex-commandstation/exrail/Cookbooks/animation-sensors/</loc>
          <lastmod>2025-06-25</lastmod>
     </url>
@@ -110,6 +114,10 @@
     </url>
     <url>
          <loc>https://dcc-ex.com/mkdocs-test/products/ex-commandstation/exrail/Cookbooks/roster-similar-locos/</loc>
+         <lastmod>2025-06-25</lastmod>
+    </url>
+    <url>
+         <loc>https://dcc-ex.com/mkdocs-test/products/ex-commandstation/exrail/Cookbooks/route-button-control/</loc>
          <lastmod>2025-06-25</lastmod>
     </url>
     <url>
@@ -197,11 +205,27 @@
          <lastmod>2025-06-25</lastmod>
     </url>
     <url>
-         <loc>https://dcc-ex.com/mkdocs-test/products/ex-fastclock/04-configuration/</loc>
+         <loc>https://dcc-ex.com/mkdocs-test/products/ex-fastclock/04-calibration/</loc>
          <lastmod>2025-06-25</lastmod>
     </url>
     <url>
-         <loc>https://dcc-ex.com/mkdocs-test/products/ex-fastclock/05-timecontrol/</loc>
+         <loc>https://dcc-ex.com/mkdocs-test/products/ex-fastclock/05-installation/</loc>
+         <lastmod>2025-06-25</lastmod>
+    </url>
+    <url>
+         <loc>https://dcc-ex.com/mkdocs-test/products/ex-fastclock/06-configuration1/</loc>
+         <lastmod>2025-06-25</lastmod>
+    </url>
+    <url>
+         <loc>https://dcc-ex.com/mkdocs-test/products/ex-fastclock/07-configuration2/</loc>
+         <lastmod>2025-06-25</lastmod>
+    </url>
+    <url>
+         <loc>https://dcc-ex.com/mkdocs-test/products/ex-fastclock/10-operation/</loc>
+         <lastmod>2025-06-25</lastmod>
+    </url>
+    <url>
+         <loc>https://dcc-ex.com/mkdocs-test/products/ex-fastclock/15-timecontrol/</loc>
          <lastmod>2025-06-25</lastmod>
     </url>
     <url>
