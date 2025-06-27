@@ -63,6 +63,10 @@
   /* Footer colour shades */
   --md-footer-fg-color:                #FFFFFF;
   --md-footer-bg-color:                #00353D;
+
+  /* Shadow overrides */
+  --md-shadow-z1: 0 4px 6px rgba(0, 0, 0, 0.25);
+  --md-shadow-z3: 0 6px 16px rgba(0, 0, 0, 0.5);
 }
 
 /* --- DCC-EX Dark Color Scheme Overrides --- */
@@ -135,6 +139,10 @@
 
   /* Keys extension colour */
   --md-typeset-kbd-color: var(--md-code-bg-color);
+
+  /* Shadow overrides */
+  --md-shadow-z1: 0 4px 6px rgba(255, 255, 255, 0.25);
+  --md-shadow-z3: 0 6px 16px rgba(255, 255, 255, 0.5);
 }
 
 /* Reduce footer navigation title font size & margins */
@@ -222,7 +230,7 @@ h5 {
 
 .md-typeset .grid.cards > ul > li:hover {
   box-shadow: var(--md-shadow-z3);
-  border: 1px solid var(--md-default-fg-color);
+  border: 1px solid var(--md-primary-fg-color--dark);
   transform: translateY(-3px);
 }
 
