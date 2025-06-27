@@ -13,8 +13,8 @@
     <language>en</language>
 
     
-    <pubDate>Thu, 26 Jun 2025 02:18:31 -0000</pubDate>
-    <lastBuildDate>Thu, 26 Jun 2025 02:18:31 -0000</lastBuildDate>
+    <pubDate>Fri, 27 Jun 2025 00:53:11 -0000</pubDate>
+    <lastBuildDate>Fri, 27 Jun 2025 00:53:11 -0000</lastBuildDate>
     <ttl>1440</ttl>
 
     
@@ -30,6 +30,46 @@
     
 
     
+    
+    <item>
+      <title>Announcing the new DCCEXProtocol Arduino Library</title>
+      
+      
+        
+      <author>peteGSX</author>
+        
+      
+      
+      
+      <description>&lt;h1&gt;Announcing the new DCCEXProtocol Arduino Library&lt;/h1&gt;
+&lt;p&gt;The |DCC-EX| team are proud to announce that we&#39;ve released the very first version of our brand spanking new DCCEXProtocol Arduino Library! This has been written to make life easier for those wishing to write software for throttles or other clients that need to communicate with |EX-CS| using our native command API.&lt;/p&gt;</description>
+      <link>https://dcc-ex.com/mkdocs-test/news/2023/12/announcing-the-new-dccexprotocol-arduino-library/</link>
+      <pubDate>Fri, 27 Jun 2025 10:51:36 +0000</pubDate>
+      <source url="https://dcc-ex.com/mkdocs-test/feed_rss_updated.xml">DCC-EX News</source>
+      
+      <guid isPermaLink="true">https://dcc-ex.com/mkdocs-test/news/2023/12/announcing-the-new-dccexprotocol-arduino-library/</guid>
+      
+    </item>
+    
+    <item>
+      <title>Announcing DCCEXProtocol Library 1.2.0</title>
+      
+      
+        
+      <author>peteGSX</author>
+        
+      
+      
+      
+      <description>&lt;h1&gt;Announcing DCCEXProtocol Library 1.2.0&lt;/h1&gt;
+&lt;p&gt;We&#39;ve released the latest version of the |DCC-EXP| library version 1.2.0 today.&lt;/p&gt;</description>
+      <link>https://dcc-ex.com/mkdocs-test/news/2025/03/announcing-dccexprotocol-library-120/</link>
+      <pubDate>Fri, 27 Jun 2025 10:51:36 +0000</pubDate>
+      <source url="https://dcc-ex.com/mkdocs-test/feed_rss_updated.xml">DCC-EX News</source>
+      
+      <guid isPermaLink="true">https://dcc-ex.com/mkdocs-test/news/2025/03/announcing-dccexprotocol-library-120/</guid>
+      
+    </item>
     
     <item>
       <title>New Documentation</title>
@@ -72,26 +112,6 @@
     </item>
     
     <item>
-      <title>Announcing the new DCCEXProtocol Arduino Library!</title>
-      
-      
-        
-      <author>peteGSX</author>
-        
-      
-      
-      
-      <description>&lt;h1&gt;Announcing the new DCCEXProtocol Arduino Library!&lt;/h1&gt;
-&lt;p&gt;The |DCC-EX| team are proud to announce that we&#39;ve released the very first version of our brand spanking new DCCEXProtocol Arduino Library! This has been written to make life easier for those wishing to write software for throttles or other clients that need to communicate with |EX-CS| using our native command API.&lt;/p&gt;</description>
-      <link>https://dcc-ex.com/mkdocs-test/news/2023/12/announcing-the-new-dccexprotocol-arduino-library/</link>
-      <pubDate>Wed, 18 Jun 2025 10:04:24 +0000</pubDate>
-      <source url="https://dcc-ex.com/mkdocs-test/feed_rss_updated.xml">DCC-EX News</source>
-      
-      <guid isPermaLink="true">https://dcc-ex.com/mkdocs-test/news/2023/12/announcing-the-new-dccexprotocol-arduino-library/</guid>
-      
-    </item>
-    
-    <item>
       <title>Another new EX-Installer release</title>
       
       
@@ -108,26 +128,6 @@
       <source url="https://dcc-ex.com/mkdocs-test/feed_rss_updated.xml">DCC-EX News</source>
       
       <guid isPermaLink="true">https://dcc-ex.com/mkdocs-test/news/2024/03/another-new-ex-installer-release/</guid>
-      
-    </item>
-    
-    <item>
-      <title>Announcing DCCEXProtocol Library 1.2.0</title>
-      
-      
-        
-      <author>peteGSX</author>
-        
-      
-      
-      
-      <description>&lt;h1&gt;Announcing DCCEXProtocol Library 1.2.0&lt;/h1&gt;
-&lt;p&gt;We&#39;ve released the latest version of the |DCC-EXP| library version 1.2.0 today.&lt;/p&gt;</description>
-      <link>https://dcc-ex.com/mkdocs-test/news/2025/03/announcing-dccexprotocol-library-120/</link>
-      <pubDate>Wed, 18 Jun 2025 10:04:24 +0000</pubDate>
-      <source url="https://dcc-ex.com/mkdocs-test/feed_rss_updated.xml">DCC-EX News</source>
-      
-      <guid isPermaLink="true">https://dcc-ex.com/mkdocs-test/news/2025/03/announcing-dccexprotocol-library-120/</guid>
       
     </item>
     
