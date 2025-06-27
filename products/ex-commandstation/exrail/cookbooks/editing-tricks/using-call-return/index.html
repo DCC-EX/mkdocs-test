@@ -10,13 +10,13 @@
       
       
       
-        <link rel="canonical" href="https://dcc-ex.com/mkdocs-test/products/ex-commandstation/exrail/cookbooks/editing%20tricks/multi-files/">
+        <link rel="canonical" href="https://dcc-ex.com/mkdocs-test/products/ex-commandstation/exrail/cookbooks/editing-tricks/using-call-return/">
       
       
-        <link rel="prev" href="../../timecontrol/">
+        <link rel="prev" href="../naming-a-sequence/">
       
       
-        <link rel="next" href="../multiple-command-stations/">
+        <link rel="next" href="../../neopixels/">
       
       
         <link rel="alternate" type="application/rss+xml" title="RSS feed" href="../../../../../../feed_rss_created.xml">
@@ -27,7 +27,7 @@
     
     
       
-        <title>Multiple Files in EXRAIL - DCC-EX MkDocs Testing</title>
+        <title>Using CALL and RETURN - DCC-EX MkDocs Testing</title>
       
     
     
@@ -83,7 +83,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#multiple-files-in-exrail" class="md-skip">
+        <a href="#using-call-and-return" class="md-skip">
           Skip to content
         </a>
       
@@ -116,7 +116,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Multiple Files in EXRAIL
+              Using CALL and RETURN
             
           </span>
         </div>
@@ -1356,19 +1356,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../multi-files/" class="md-nav__link">
         
   
   
@@ -1379,7 +1370,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -1458,10 +1448,32 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../using-call-return/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Using CALL and RETURN
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -1472,6 +1484,35 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#notes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Notes
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -2627,18 +2668,31 @@
   
 
 
-<h1 id="multiple-files-in-exrail">Multiple Files in EXRAIL<a class="headerlink" href="#multiple-files-in-exrail" title="Permanent link">&para;</a></h1>
-<p>EXRAIL commands are read by the compiler only from the file myAutomation.h, the absence of a file with this name means no EXRAIL code is loaded into the command station.
-However, it is simple to partition myAutomation.h into separate files for the convenience of editing. For example myTurnouts.h, myRoster.h and so on. By ensuring all the files start with "my" it avoids issues with name clashes or Git.</p>
-<p>To include your additional files, use the c++ preprocessor #include control in myAutomation.h to insert the file contents exactly as if you had typed them into myAutomation.h</p>
-<div class="highlight"><pre><span></span><code><span class="c1">// Include my roster file</span>
-<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;myRoster.h&quot;</span>
-<span class="c1">// Include my turnout definitions</span>
-<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;myTurnouts.h&quot;</span>
-<span class="c1">// Special animation</span>
-<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;myCowOnElectricFence.h&quot;</span>
+<h1 id="using-call-and-return">Using CALL and RETURN<a class="headerlink" href="#using-call-and-return" title="Permanent link">&para;</a></h1>
+<p>Where you want to use the same sequence of commands from several places in other sequences you can avoid copying the repeated stuff by using CALL and RETURN</p>
+<div class="highlight"><pre><span></span><code><span class="n">ROUTE</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="s">&quot;Platform A to mainline&quot;</span><span class="p">)</span>
+<span class="w">  </span><span class="n">CALL</span><span class="p">(</span><span class="mi">911</span><span class="p">)</span>
+<span class="w">  </span><span class="n">THROW</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="w">  </span><span class="n">CLOSE</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<span class="w">  </span><span class="n">DONE</span>
+
+<span class="n">ROUTE</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="s">&quot;Platform B to mainline&quot;</span><span class="p">)</span>
+<span class="w">  </span><span class="n">CALL</span><span class="p">(</span><span class="mi">911</span><span class="p">)</span>
+<span class="w">  </span><span class="n">CLOSE</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="w">  </span><span class="n">CLOSE</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<span class="w">  </span><span class="n">DONE</span>
+
+<span class="n">SEQUENCE</span><span class="p">(</span><span class="mi">911</span><span class="p">)</span>
+<span class="w">  </span><span class="n">SERVO</span><span class="p">(</span><span class="mi">123</span><span class="p">,</span><span class="mi">100</span><span class="p">,</span><span class="n">Slow</span><span class="p">)</span><span class="w">  </span><span class="c1">// move the cow out of the way</span>
+<span class="w">  </span><span class="n">PLAYSOUND</span><span class="p">(</span><span class="mi">500</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span><span class="w"> </span><span class="c1">// Make it Moo</span>
+<span class="w">  </span><span class="n">DELAYRANDOM</span><span class="p">(</span><span class="mi">5000</span><span class="p">,</span><span class="mi">10000</span><span class="p">)</span><span class="w"> </span><span class="c1">// make the route wait 5 to 10 seconds</span>
+<span class="w">  </span><span class="n">RETURN</span><span class="w">      </span><span class="c1">// return to the calling sequence</span>
 </code></pre></div>
-<p>A note to hardened C++ programmers... do not be tempted to add include guards to your .h files.</p>
+<h2 id="notes">Notes<a class="headerlink" href="#notes" title="Permanent link">&para;</a></h2>
+<ul>
+<li>You can nest CALLs 4 deep.</li>
+<li>If the called sequence executes a <code>DONE</code> statement, the task is terminated and there is no return.</li>
+</ul>
 
 
 
@@ -2659,7 +2713,7 @@ However, it is simple to partition myAutomation.h into separate files for the co
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 27, 2025 19:09:12 UTC">June 27, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 27, 2025 20:41:19 UTC">June 27, 2025</span>
   </span>
 
     
@@ -2695,7 +2749,7 @@ However, it is simple to partition myAutomation.h into separate files for the co
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../../timecontrol/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Time Control">
+          <a href="../naming-a-sequence/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Naming sequences for easy commands">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -2705,20 +2759,20 @@ However, it is simple to partition myAutomation.h into separate files for the co
                 Previous
               </span>
               <div class="md-ellipsis">
-                Time Control
+                Naming sequences for easy commands
               </div>
             </div>
           </a>
         
         
           
-          <a href="../multiple-command-stations/" class="md-footer__link md-footer__link--next" aria-label="Next: Maintaining multiple command stations">
+          <a href="../../neopixels/" class="md-footer__link md-footer__link--next" aria-label="Next: NeoPixel support">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Maintaining multiple command stations
+                NeoPixel support
               </div>
             </div>
             <div class="md-footer__button md-icon">

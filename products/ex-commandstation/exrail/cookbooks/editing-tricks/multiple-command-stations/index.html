@@ -10,13 +10,13 @@
       
       
       
-        <link rel="canonical" href="https://dcc-ex.com/mkdocs-test/products/ex-commandstation/exrail/cookbooks/editing%20tricks/using-call-return/">
+        <link rel="canonical" href="https://dcc-ex.com/mkdocs-test/products/ex-commandstation/exrail/cookbooks/editing-tricks/multiple-command-stations/">
       
       
-        <link rel="prev" href="../naming-a-sequence/">
+        <link rel="prev" href="../multi-files/">
       
       
-        <link rel="next" href="../../neopixels/">
+        <link rel="next" href="../multiple-files/">
       
       
         <link rel="alternate" type="application/rss+xml" title="RSS feed" href="../../../../../../feed_rss_created.xml">
@@ -27,7 +27,7 @@
     
     
       
-        <title>Using CALL and RETURN - DCC-EX MkDocs Testing</title>
+        <title>Maintaining multiple command stations - DCC-EX MkDocs Testing</title>
       
     
     
@@ -83,7 +83,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#using-call-and-return" class="md-skip">
+        <a href="#maintaining-multiple-command-stations" class="md-skip">
           Skip to content
         </a>
       
@@ -116,7 +116,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Using CALL and RETURN
+              Maintaining multiple command stations
             
           </span>
         </div>
@@ -1379,10 +1379,19 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../multiple-command-stations/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -1393,6 +1402,7 @@
   
 
       </a>
+      
     </li>
   
 
@@ -1448,32 +1458,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    Using CALL and RETURN
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../using-call-return/" class="md-nav__link">
         
   
   
@@ -1484,35 +1472,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#notes" class="md-nav__link">
-    <span class="md-ellipsis">
-      Notes
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -2668,31 +2627,27 @@
   
 
 
-<h1 id="using-call-and-return">Using CALL and RETURN<a class="headerlink" href="#using-call-and-return" title="Permanent link">&para;</a></h1>
-<p>Where you want to use the same sequence of commands from several places in other sequences you can avoid copying the repeated stuff by using CALL and RETURN</p>
-<div class="highlight"><pre><span></span><code><span class="n">ROUTE</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="s">&quot;Platform A to mainline&quot;</span><span class="p">)</span>
-<span class="w">  </span><span class="n">CALL</span><span class="p">(</span><span class="mi">911</span><span class="p">)</span>
-<span class="w">  </span><span class="n">THROW</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
-<span class="w">  </span><span class="n">CLOSE</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-<span class="w">  </span><span class="n">DONE</span>
-
-<span class="n">ROUTE</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="s">&quot;Platform B to mainline&quot;</span><span class="p">)</span>
-<span class="w">  </span><span class="n">CALL</span><span class="p">(</span><span class="mi">911</span><span class="p">)</span>
-<span class="w">  </span><span class="n">CLOSE</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
-<span class="w">  </span><span class="n">CLOSE</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-<span class="w">  </span><span class="n">DONE</span>
-
-<span class="n">SEQUENCE</span><span class="p">(</span><span class="mi">911</span><span class="p">)</span>
-<span class="w">  </span><span class="n">SERVO</span><span class="p">(</span><span class="mi">123</span><span class="p">,</span><span class="mi">100</span><span class="p">,</span><span class="n">Slow</span><span class="p">)</span><span class="w">  </span><span class="c1">// move the cow out of the way</span>
-<span class="w">  </span><span class="n">PLAYSOUND</span><span class="p">(</span><span class="mi">500</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span><span class="w"> </span><span class="c1">// Make it Moo</span>
-<span class="w">  </span><span class="n">DELAYRANDOM</span><span class="p">(</span><span class="mi">5000</span><span class="p">,</span><span class="mi">10000</span><span class="p">)</span><span class="w"> </span><span class="c1">// make the route wait 5 to 10 seconds</span>
-<span class="w">  </span><span class="n">RETURN</span><span class="w">      </span><span class="c1">// return to the calling sequence</span>
+<h1 id="maintaining-multiple-command-stations">Maintaining multiple command stations<a class="headerlink" href="#maintaining-multiple-command-stations" title="Permanent link">&para;</a></h1>
+<p>Maybe you have more than one command station and you wish to have slightly different EXRAIL setups, perhaps because you are testing a new release on a sepaerate CPU or need to compile different scripts for different layouts.</p>
+<p>The C++ compiler pre-processor is available to select various parts of your myAutomation.h based on definitions created in your config.h or those created by defines.he which automates the detection of the CPU type of your command station.</p>
+<p>For example:</p>
+<div class="highlight"><pre><span></span><code><span class="cp">#if defined(ARDUINO_ARCH_AVR)</span>
+<span class="w">  </span><span class="c1">// on my Mega, I have signal1 on pins (30,31,32)</span>
+<span class="w">  </span><span class="n">ALIAS</span><span class="p">(</span><span class="n">mysignal1</span><span class="p">,</span><span class="mi">30</span><span class="p">)</span>
+<span class="cp">#else </span>
+<span class="w">  </span><span class="c1">// on my CSB1 or similar, I use pins 800,801,802 on an expander</span>
+<span class="w">  </span><span class="n">ALIAS</span><span class="p">(</span><span class="n">mysignal1</span><span class="p">,</span><span class="mi">800</span><span class="p">)</span>
+<span class="cp">#endif</span>
+<span class="w">  </span><span class="n">SIGNALH</span><span class="p">(</span><span class="n">mysignal1</span><span class="p">,</span><span class="n">mysignal1</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span><span class="n">mysignal1</span><span class="o">+</span><span class="mi">2</span><span class="p">)</span>
+<span class="w">  </span><span class="n">ONTHROW</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="n">RED</span><span class="p">(</span><span class="n">mysignal1</span><span class="p">)</span><span class="w"> </span><span class="n">DONE</span>
+<span class="w">  </span><span class="n">ONCLOSE</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="n">GREEN</span><span class="p">(</span><span class="n">mysignal1</span><span class="p">)</span><span class="w"> </span><span class="n">DONE</span>
 </code></pre></div>
-<h2 id="notes">Notes<a class="headerlink" href="#notes" title="Permanent link">&para;</a></h2>
-<ul>
-<li>You can nest CALLs 4 deep.</li>
-<li>If the called sequence executes a <code>DONE</code> statement, the task is terminated and there is no return.</li>
-</ul>
+<p>In addition, each EXRAIL command is actually a preprocessor definition so it is possible to use an #ifdef to include a section that uses a new feature but only if the code version has that feature available.</p>
+<div class="highlight"><pre><span></span><code><span class="cp">#ifdef NEOPIXEL</span>
+<span class="w">   </span><span class="n">NEOPIXEL</span><span class="p">(</span><span class="mi">2013</span><span class="p">,</span><span class="mi">255</span><span class="p">,</span><span class="mi">255</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span>
+<span class="cp">#endif   </span>
+</code></pre></div>
+<p>Note #ifdef xxx and #if defined(xxx) do the same thing.</p>
 
 
 
@@ -2713,7 +2668,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 27, 2025 19:09:12 UTC">June 27, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 27, 2025 20:41:19 UTC">June 27, 2025</span>
   </span>
 
     
@@ -2749,7 +2704,7 @@
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../naming-a-sequence/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Naming sequences for easy commands">
+          <a href="../multi-files/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Multiple Files in EXRAIL">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -2759,20 +2714,20 @@
                 Previous
               </span>
               <div class="md-ellipsis">
-                Naming sequences for easy commands
+                Multiple Files in EXRAIL
               </div>
             </div>
           </a>
         
         
           
-          <a href="../../neopixels/" class="md-footer__link md-footer__link--next" aria-label="Next: NeoPixel support">
+          <a href="../multiple-files/" class="md-footer__link md-footer__link--next" aria-label="Next: Keeping EXRAIL commands in multiple files">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                NeoPixel support
+                Keeping EXRAIL commands in multiple files
               </div>
             </div>
             <div class="md-footer__button md-icon">
