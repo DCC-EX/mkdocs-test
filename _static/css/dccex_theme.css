@@ -218,6 +218,7 @@ h5 {
 
 /* Override grid card format */
 .md-typeset .grid.cards > ul > li {
+  position: relative;
   background-color: var(--md-default-bg-color--light);
   border: 1px solid var(--md-default-fg-color--light);
   border-radius: 10px;
@@ -236,6 +237,22 @@ h5 {
 
 .md-typeset .grid.cards > ul > li hr {
   border-bottom: 1px solid var(--md-default-fg-color--light);
+}
+
+/* Make entire card clickable - utilises Javascript clickable-cards.js */
+.md-typeset .grid.cards > ul > li::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+}
+
+/* Hide link text on each card as the entire card is now clickable */
+.md-typeset .grid.cards > ul > li p:has(a[href]) {
+  display: none;
 }
 
 /* Button overrides */
