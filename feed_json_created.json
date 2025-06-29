@@ -54,7 +54,7 @@
             "id": "https://dcc-ex.com/mkdocs-test/news/2023/12/announcing-the-new-dccexprotocol-arduino-library/",
             "url": "https://dcc-ex.com/mkdocs-test/news/2023/12/announcing-the-new-dccexprotocol-arduino-library/",
             "title": "Announcing the new DCCEXProtocol Arduino Library",
-            "content_html": "<h1>Announcing the new DCCEXProtocol Arduino Library</h1>\n<p>The |DCC-EX| team are proud to announce that we've released the very first version of our brand spanking new DCCEXProtocol Arduino Library! This has been written to make life easier for those wishing to write software for throttles or other clients that need to communicate with |EX-CS| using our native command API.</p>",
+            "content_html": "<h1>Announcing the new DCCEXProtocol Arduino Library</h1>\n<p>The DCC-EX team are proud to announce that we've released the very first version of our brand spanking new DCCEXProtocol Arduino Library! This has been written to make life easier for those wishing to write software for throttles or other clients that need to communicate with EX-CommandStation using our native command API.</p>",
             "image": null,
             "date_published": "2023-12-07T00:00:00+00:00",
             "authors": [

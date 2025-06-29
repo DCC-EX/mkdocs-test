@@ -13,8 +13,8 @@
     <language>en</language>
 
     
-    <pubDate>Sun, 29 Jun 2025 01:29:38 -0000</pubDate>
-    <lastBuildDate>Sun, 29 Jun 2025 01:29:38 -0000</lastBuildDate>
+    <pubDate>Sun, 29 Jun 2025 22:50:59 -0000</pubDate>
+    <lastBuildDate>Sun, 29 Jun 2025 22:50:59 -0000</lastBuildDate>
     <ttl>1440</ttl>
 
     
@@ -102,7 +102,7 @@
       
       
       <description>&lt;h1&gt;Announcing the new DCCEXProtocol Arduino Library&lt;/h1&gt;
-&lt;p&gt;The |DCC-EX| team are proud to announce that we&#39;ve released the very first version of our brand spanking new DCCEXProtocol Arduino Library! This has been written to make life easier for those wishing to write software for throttles or other clients that need to communicate with |EX-CS| using our native command API.&lt;/p&gt;</description>
+&lt;p&gt;The DCC-EX team are proud to announce that we&#39;ve released the very first version of our brand spanking new DCCEXProtocol Arduino Library! This has been written to make life easier for those wishing to write software for throttles or other clients that need to communicate with EX-CommandStation using our native command API.&lt;/p&gt;</description>
       <link>https://dcc-ex.com/mkdocs-test/news/2023/12/announcing-the-new-dccexprotocol-arduino-library/</link>
       <pubDate>Thu, 07 Dec 2023 00:00:00 +0000</pubDate>
       <source url="https://dcc-ex.com/mkdocs-test/feed_rss_created.xml">DCC-EX News</source>

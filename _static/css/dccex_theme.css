@@ -203,6 +203,17 @@
   box-shadow: none;
 }
 
+/* Meta footer not transparent */
+.md-footer-meta__inner {
+  background: var(--md-footer-bg-color);
+  background-color: var(--md-footer-bg-color);
+  width: 100vw;
+  max-width: 100%;
+  margin: 0 auto;
+  padding-left: 0;
+  padding-right: 0;
+}
+
 /* Footer nav button styling */
 .md-footer__inner {
   background: transparent;
@@ -224,6 +235,11 @@
   max-width: 200px;
 }
 
+/* Move previous button away from sidebar */
+.md-footer__link--prev {
+  margin-left: 250px;
+}
+
 .md-footer__direction {
   font-size: 0.7rem;
   opacity: 0.8;
@@ -241,7 +257,7 @@
 }
 
 /* Reduce footer button sizes on small screens */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1220px) {
   /* Reduce size and padding */
   .md-footer__inner {
     padding: 8px;
@@ -256,6 +272,11 @@
     display: flex;
     align-items: center;
     justify-content: center;
+  }
+
+  /* Move previous back to left */
+  .md-footer__link--prev {
+    margin-left: 0;
   }
 
   /* Hide all text, just show arrows */
