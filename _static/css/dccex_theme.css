@@ -145,9 +145,34 @@
   --md-shadow-z3: 0 6px 16px rgba(255, 255, 255, 0.5);
 }
 
+/* Footer colour themes for each scheme */
+[data-md-color-scheme="dccex-light"] .md-footer__link {
+  background: rgba(0, 53, 61, 0.5); /* Using primary colour with opacity */
+  color: white;
+  border: 1px solid rgba(0, 53, 61, 0.2);
+}
+
+[data-md-color-scheme="dccex-light"] .md-footer__link:hover {
+  background: rgba(0, 53, 61, 1);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 53, 61, 0.4);
+}
+
+[data-md-color-scheme="dccex-dark"] .md-footer__link {
+  background: rgba(0, 159, 181, 0.5); /* Using primary colour with opacity */
+  color: white;
+  border: 1px solid rgba(0, 206, 247, 0.3);
+}
+
+[data-md-color-scheme="dccex-dark"] .md-footer__link:hover {
+  background: rgba(0, 206, 247, 1);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 206, 247, 0.4);
+}
+
 /* Reduce footer navigation title font size & margins */
 .md-footer__title {
-  font-size: 16px;
+  font-size: 14px;
   margin-top: 1px;
   margin-bottom: 1px;
 }
@@ -164,6 +189,55 @@
 .md-footer__link {
   margin-top: 1px;
   margin-bottom: 1px;
+}
+
+/* Hide default footer background and make it an overlay */
+.md-footer {
+  background: transparent;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  pointer-events: none;
+  box-shadow: none;
+}
+
+/* Footer nav button styling */
+.md-footer__inner {
+  background: transparent;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+/* Style buttons as floating elements */
+.md-footer__link {
+  border-radius: 50px;
+  padding: 2px 5px;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+  pointer-events: auto;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  max-width: 200px;
+}
+
+.md-footer__direction {
+  font-size: 0.7rem;
+  opacity: 0.8;
+  color: inherit;
+}
+
+/* Add bottom padding to page content */
+.md-content {
+  padding-bottom: 100px;
+}
+
+/* Ensure any pages set to hide the footer continue to do so */
+.md-footer__inner[hidden] {
+  display: none !important;
 }
 
 /* Horizontal line separator for News articles */
