@@ -240,6 +240,51 @@
   display: none !important;
 }
 
+/* Reduce footer button sizes on small screens */
+@media screen and (max-width: 768px) {
+  /* Reduce size and padding */
+  .md-footer__inner {
+    padding: 8px;
+  }
+
+  .md-footer__link {
+    padding: 8px 16px;
+    min-width: 50px;
+    max-width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* Hide all text, just show arrows */
+  .md-footer__title {
+    display: none;
+  }
+
+  /* Arrows visible and sized correctly */
+  .md-footer__button {
+    margin: 0;
+    padding: 0;
+  }
+
+  .md-footer__button .md-icon svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  /* Reduce content bottom padding */
+  .md-content {
+    padding-bottom: 80px;
+  }
+
+  /* Hide Discord icon to reduce footer height */
+  .md-social {
+    display: none;
+  }
+}
+
 /* Horizontal line separator for News articles */
 .md-post--excerpt {
   border-top: 1px solid var(--md-default-fg-color);
