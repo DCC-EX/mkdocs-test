@@ -362,7 +362,7 @@ h5 {
 .md-typeset .grid.cards > ul > li {
   position: relative;
   background-color: var(--md-default-bg-color--light);
-  border: 1px solid var(--md-default-fg-color--light);
+  border: 1px solid var(--md-accent-fg-color--dark);
   border-radius: 10px;
   box-shadow: var(--md-shadow-z1);
   display: flex;
@@ -373,12 +373,12 @@ h5 {
 
 .md-typeset .grid.cards > ul > li:hover {
   box-shadow: var(--md-shadow-z3);
-  border: 1px solid var(--md-primary-fg-color--dark);
+  border: 1px solid var(--md-primary-fg-color--light);
   transform: translateY(-3px);
 }
 
 .md-typeset .grid.cards > ul > li hr {
-  border-bottom: 1px solid var(--md-default-fg-color--light);
+  border-top: 1px solid var(--md-accent-fg-color--dark);
 }
 
 /* Make entire card clickable - utilises Javascript clickable-cards.js */
@@ -401,4 +401,9 @@ h5 {
 .md-typeset .md-button {
   padding: 7px;
   border-radius: 20px;
+}
+
+/* Custom card styling */
+.card-heading {
+  color: var(--md-accent-fg-color--dark);
 }
