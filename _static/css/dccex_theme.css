@@ -146,8 +146,8 @@
 }
 
 /* Footer colour themes for each scheme */
-[data-md-color-scheme="dccex-light"] .md-footer__link {
-  background: rgba(0, 53, 61, 0.5); /* Using primary colour with opacity */
+/* [data-md-color-scheme="dccex-light"] .md-footer__link {
+  background: rgba(0, 53, 61, 0.5);
   color: white;
   border: 1px solid rgba(0, 53, 61, 0.2);
 }
@@ -159,7 +159,7 @@
 }
 
 [data-md-color-scheme="dccex-dark"] .md-footer__link {
-  background: rgba(0, 159, 181, 0.5); /* Using primary colour with opacity */
+  background: rgba(0, 159, 181, 0.5);
   color: white;
   border: 1px solid rgba(0, 206, 247, 0.3);
 }
@@ -168,7 +168,7 @@
   background: rgba(0, 206, 247, 1);
   transform: translateY(-2px);
   box-shadow: 0 6px 20px rgba(0, 206, 247, 0.4);
-}
+} */
 
 /* Reduce footer navigation title font size & margins */
 .md-footer__title {
@@ -192,7 +192,7 @@
 }
 
 /* Hide default footer background and make it an overlay */
-.md-footer {
+/* .md-footer {
   background: transparent;
   position: fixed;
   bottom: 0;
@@ -201,10 +201,10 @@
   z-index: 100;
   pointer-events: none;
   box-shadow: none;
-}
+} */
 
 /* Meta footer not transparent */
-.md-footer-meta__inner {
+/* .md-footer-meta__inner {
   background: var(--md-footer-bg-color);
   background-color: var(--md-footer-bg-color);
   width: 100vw;
@@ -214,19 +214,19 @@
   padding-right: 0;
   padding-top: 0;
   padding-bottom: 0;
-}
+} */
 
 /* Footer nav button styling */
-.md-footer__inner {
+/* .md-footer__inner {
   background: transparent;
   padding: 10px;
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
-}
+} */
 
 /* Style buttons as floating elements */
-.md-footer__link {
+/* .md-footer__link {
   border-radius: 50px;
   padding: 2px 5px;
   backdrop-filter: blur(10px);
@@ -235,37 +235,37 @@
   pointer-events: auto;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
   max-width: 200px;
-}
+} */
 
 /* Move previous button away from sidebar */
-.md-footer__link--prev {
+/* .md-footer__link--prev {
   margin-left: 250px;
-}
+} */
 
-.md-footer__direction {
+/* .md-footer__direction {
   font-size: 0.7rem;
   opacity: 0.8;
   color: inherit;
-}
+} */
 
 /* Add bottom padding to page content */
-.md-content {
+/* .md-content {
   padding-bottom: 100px;
-}
+} */
 
 /* Ensure any pages set to hide the footer continue to do so */
-.md-footer__inner[hidden] {
+/* .md-footer__inner[hidden] {
   display: none !important;
-}
+} */
 
 /* Reduce footer button sizes on small screens */
 @media screen and (max-width: 1220px) {
   /* Reduce size and padding */
-  .md-footer__inner {
+  /* .md-footer__inner {
     padding: 8px;
-  }
+  } */
 
-  .md-footer__link {
+  /* .md-footer__link {
     padding: 8px 16px;
     min-width: 50px;
     max-width: 50px;
@@ -274,38 +274,38 @@
     display: flex;
     align-items: center;
     justify-content: center;
-  }
+  } */
 
   /* Move previous back to left */
-  .md-footer__link--prev {
+  /* .md-footer__link--prev {
     margin-left: 0;
-  }
+  } */
 
   /* Hide all text, just show arrows */
-  .md-footer__title {
+  /* .md-footer__title {
     display: none;
-  }
+  } */
 
   /* Arrows visible and sized correctly */
-  .md-footer__button {
+  /* .md-footer__button {
     margin: 0;
     padding: 0;
-  }
+  } */
 
-  .md-footer__button .md-icon svg {
+  /* .md-footer__button .md-icon svg {
     width: 20px;
     height: 20px;
-  }
+  } */
 
   /* Reduce content bottom padding */
-  .md-content {
+  /* .md-content {
     padding-bottom: 100px;
-  }
+  } */
 
   /* Hide Discord icon to reduce footer height */
-  .md-social {
+  /* .md-social {
     display: none;
-  }
+  } */
 }
 
 /* Horizontal line separator for News articles */
