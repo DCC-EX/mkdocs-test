@@ -145,7 +145,7 @@
   --md-shadow-z3: 0 6px 16px rgba(255, 255, 255, 0.5);
 }
 
-[data-md-color-scheme="dccex-light"] img.only-light {
+/* [data-md-color-scheme="dccex-light"] img.only-light {
   display: block;
 }
 
@@ -159,6 +159,13 @@
 
 [data-md-color-scheme="dccex-dark"] img.only-dark {
   display: block;
+} */
+
+[data-md-color-scheme="dccex-dark"] .logo-style {
+  background-color: rgba(255, 255, 255, 0.15);
+  border-radius: 0.75rem;
+  padding: 0.5rem;
+  box-shadow: 0 0 16px 12px rgba(255, 255, 255, 0.15);
 }
 
 /* Footer colour themes for each scheme */
