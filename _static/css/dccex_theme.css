@@ -145,6 +145,22 @@
   --md-shadow-z3: 0 6px 16px rgba(255, 255, 255, 0.5);
 }
 
+[data-md-color-scheme="dccex-light"] img.only-light {
+  display: block;
+}
+
+[data-md-color-scheme="dccex-light"] img.only-dark {
+  display: none;
+}
+
+[data-md-color-scheme="dccex-dark"] img.only-light {
+  display: none;
+}
+
+[data-md-color-scheme="dccex-dark"] img.only-dark {
+  display: block;
+}
+
 /* Footer colour themes for each scheme */
 /* [data-md-color-scheme="dccex-light"] .md-footer__link {
   background: rgba(0, 53, 61, 0.5);
