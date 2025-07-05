@@ -145,21 +145,25 @@
   --md-shadow-z3: 0 6px 16px rgba(255, 255, 255, 0.5);
 }
 
-/* [data-md-color-scheme="dccex-light"] img.only-light {
+/* Only show in light mode */
+[data-md-color-scheme="dccex-light"] img.only-light {
   display: block;
 }
 
+/* Never show in light mode */
 [data-md-color-scheme="dccex-light"] img.only-dark {
   display: none;
 }
 
+/* Never show in light mode */
 [data-md-color-scheme="dccex-dark"] img.only-light {
   display: none;
 }
 
+/* Only show in dark mode */
 [data-md-color-scheme="dccex-dark"] img.only-dark {
   display: block;
-} */
+}
 
 [data-md-color-scheme="dccex-dark"] .logo-style {
   background-color: rgba(255, 255, 255, 0.15);
