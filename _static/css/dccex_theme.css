@@ -200,6 +200,14 @@
   color: var(--md-accent-fg-color--dark);
 }
 
+/* News headline styling for home page grid card */
+.md-typeset li.news-headline-list {
+  font-family: Audiowide,Helvetica,Arial,sans-serif;
+  list-style: none;
+  padding-left: 0;
+  margin-left: 0 !important;
+}
+
 /* CUSTOM HEADER STYLES */
 h1 {
   font-family: Audiowide,Helvetica,Arial,sans-serif !important;
