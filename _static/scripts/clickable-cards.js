@@ -3,7 +3,7 @@
 */
 document.addEventListener('DOMContentLoaded', function() {
   // Make grid cards fully clickable
-  const cards = document.querySelectorAll('.md-typeset .grid.cards.clickable > ul > li');
+  const cards = document.querySelectorAll('.md-typeset .grid.cards > ul > li');
   
   cards.forEach(card => {
     const link = card.querySelector('a[href]');

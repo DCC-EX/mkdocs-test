@@ -145,27 +145,32 @@
   --md-shadow-z3: 0 6px 16px rgba(255, 255, 255, 0.5);
 }
 
-/* Only show image in light mode - style with { .only-light } */
+/* Only show in light mode */
 [data-md-color-scheme="dccex-light"] img.only-light {
   display: block;
 }
 
-/* Never show image in light mode - style with { .only-dark } */
+/* Never show in light mode */
 [data-md-color-scheme="dccex-light"] img.only-dark {
   display: none;
 }
 
-/* Never show image in light mode - style with { .only-light } */
+/* Never show in light mode */
 [data-md-color-scheme="dccex-dark"] img.only-light {
   display: none;
 }
 
-/* Only show image in dark mode - style with { .only-dark } */
+/* Only show in dark mode */
 [data-md-color-scheme="dccex-dark"] img.only-dark {
   display: block;
 }
 
-/* FOOTER MODIFICATIONS */
+[data-md-color-scheme="dccex-dark"] .logo-style {
+  background-color: rgba(255, 255, 255, 0.15);
+  border-radius: 0.75rem;
+  padding: 0.5rem;
+  box-shadow: 0 0 16px 12px rgba(255, 255, 255, 0.15);
+}
 
 /* Reduce footer navigation title font size & margins */
 .md-footer__title {
@@ -188,8 +193,6 @@
   margin-bottom: 1px;
 }
 
-/* DCC-EX NEWS (BLOG) MODIFICATIONS */
-
 /* Horizontal line separator for News articles */
 .md-post--excerpt {
   border-top: 1px solid var(--md-default-fg-color);
@@ -200,7 +203,7 @@
   color: var(--md-accent-fg-color--dark);
 }
 
-/* CUSTOM HEADER STYLES */
+/* Custom header styles */
 h1 {
   font-family: Audiowide,Helvetica,Arial,sans-serif !important;
   font-size: 180% !important;
@@ -240,17 +243,8 @@ h5 {
   font-family: Audiowide,Helvetica,Arial,sans-serif !important;
 }
 
-/* GRID CARD STYLING - ALL */
-
-/* Custom card styling - style with { .card-heading } */
-.card-heading {
-  color: var(--md-accent-fg-color--dark);
-}
-
-/* GRID CARD STYLING - CLICKABLE */
-
 /* Override grid card format */
-.md-typeset .grid.cards.clickable > ul > li {
+.md-typeset .grid.cards > ul > li {
   position: relative;
   background-color: var(--md-default-bg-color--light);
   border: 1px solid var(--md-accent-fg-color--dark);
@@ -262,18 +256,18 @@ h5 {
   transition: all 0.2s ease-in-out;
 }
 
-.md-typeset .grid.cards.clickable > ul > li:hover {
+.md-typeset .grid.cards > ul > li:hover {
   box-shadow: var(--md-shadow-z3);
   border: 1px solid var(--md-primary-fg-color--light);
   transform: translateY(-3px);
 }
 
-.md-typeset .grid.cards.clickable > ul > li hr {
+.md-typeset .grid.cards > ul > li hr {
   border-top: 1px solid var(--md-accent-fg-color--dark);
 }
 
 /* Make entire card clickable - utilises Javascript clickable-cards.js */
-.md-typeset .grid.cards.clickable > ul > li::after {
+.md-typeset .grid.cards > ul > li::after {
   content: '';
   position: absolute;
   top: 0;
@@ -284,63 +278,19 @@ h5 {
 }
 
 /* Hide link text on each card as the entire card is now clickable */
-.md-typeset .grid.cards.clickable > ul > li p:has(a[href]) {
+.md-typeset .grid.cards > ul > li p:has(a[href]) {
   display: none;
 }
-
-/* GRID CARD STYLING - STATIC */
-
-/* Override grid card format */
-.md-typeset .grid.cards.static > ul > li {
-  position: relative;
-  background-color: var(--md-default-bg-color--light);
-  border: 1px solid var(--md-accent-fg-color--dark);
-  border-radius: 10px;
-  box-shadow: var(--md-shadow-z1);
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-  padding: 0;
-}
-
-.md-typeset .grid.cards.static > ul > li hr {
-  border-top: 1px solid var(--md-accent-fg-color--dark);
-}
-
-.md-typeset .grid.cards.static > ul > li h2 {
-  margin: 0;
-  padding: 0 0.8rem 0;
-  background-color: var(--md-primary-fg-color);
-  color: var(--md-default-bg-color--dark);
-  font-size: 1rem !important;
-  border-top-left-radius: 9px;
-  border-top-right-radius: 9px;
-  width: 100%;
-  box-sizing: border-box;
-}
-
-.md-typeset .grid.cards.static > ul > li h2 .twemoji svg {
-  fill: var(--md-accent-fg-color--light);
-}
-
-.static-header-icon {
-  color: var(--md-code-bg-color);
-}
-
-.md-typeset .grid.cards.static > ul > li p {
-  padding: 0 0.8rem 0;
-}
-
-.md-typeset .grid.cards.static > ul > li p:last-child {
-  padding-bottom: 0.8rem;
-}
-
-/* BUTTON STYLING */
 
 /* Button overrides */
 .md-typeset .md-button {
   padding: 7px;
   border-radius: 20px;
+}
+
+/* Custom card styling */
+.card-heading {
+  color: var(--md-accent-fg-color--dark);
 }
 
 /* Back to top button overrides */
