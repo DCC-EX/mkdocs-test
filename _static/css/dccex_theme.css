@@ -165,6 +165,70 @@
   display: block;
 }
 
+/* GENERAL STYLING OVERRIDES */
+.md-main__inner {
+  margin-top: 0;
+}
+
+.md-content__inner {
+  padding-top: 0;
+}
+
+.md-typeset p {
+  line-height: 1.4;
+}
+
+/* CUSTOM HEADER STYLES */
+.md-typeset h1 {
+  font-family: Audiowide,Helvetica,Arial,sans-serif !important;
+  font-size: 180% !important;
+}
+
+.md-typeset h2 {
+  font-family: Roboto,Helvetica,Arial,sans-serif !important;
+  font-weight: 600 !important;
+  font-size: 160% !important;
+  color: var(--md-default-fg-color--dark);
+}
+
+.md-typeset h3 {
+  font-family: Roboto,Helvetica,Arial,sans-serif !important;
+  font-weight: 600 !important;
+  font-size: 140% !important;
+  font-style: italic !important;
+  color: var(--md-default-fg-color--dark);
+}
+
+.md-typeset h4 {
+  font-family: Roboto,Helvetica,Arial,sans-serif !important;
+  font-weight: 600 !important;
+  font-size: 120% !important;
+  color: var(--md-default-fg-color--dark);
+}
+
+.md-typeset h5 {
+  font-family: Roboto,Helvetica,Arial,sans-serif !important;
+  font-weight: 600 !important;
+  font-size: 100% !important;
+  color: var(--md-default-fg-color--dark);
+}
+
+/* Set spacing to other elements consistently */
+.md-typeset h1,
+.md-typeset h2,
+.md-typeset h3,
+.md-typeset h4,
+.md-typeset h5 {
+  line-height: 1.2;
+  margin-top: 0.6em;
+  margin-bottom: 0.6em;
+}
+
+/* Override header topic font */
+.md-header__topic {
+  font-family: Audiowide,Helvetica,Arial,sans-serif !important;
+}
+
 /* FOOTER MODIFICATIONS */
 
 /* Reduce footer navigation title font size & margins */
@@ -208,51 +272,16 @@
   margin-left: 0 !important;
 }
 
-/* CUSTOM HEADER STYLES */
-h1 {
-  font-family: Audiowide,Helvetica,Arial,sans-serif !important;
-  font-size: 180% !important;
-}
-
-h2 {
-  font-family: Roboto,Helvetica,Arial,sans-serif !important;
-  font-weight: 600 !important;
-  font-size: 160% !important;
-  color: var(--md-default-fg-color--dark);
-}
-
-h3 {
-  font-family: Roboto,Helvetica,Arial,sans-serif !important;
-  font-weight: 600 !important;
-  font-size: 140% !important;
-  font-style: italic !important;
-  color: var(--md-default-fg-color--dark);
-}
-
-h4 {
-  font-family: Roboto,Helvetica,Arial,sans-serif !important;
-  font-weight: 600 !important;
-  font-size: 120% !important;
-  color: var(--md-default-fg-color--dark);
-}
-
-h5 {
-  font-family: Roboto,Helvetica,Arial,sans-serif !important;
-  font-weight: 600 !important;
-  font-size: 100% !important;
-  color: var(--md-default-fg-color--dark);
-}
-
-/* Override header topic font */
-.md-header__topic {
-  font-family: Audiowide,Helvetica,Arial,sans-serif !important;
-}
-
 /* GRID CARD STYLING - ALL */
 
 /* Custom card styling - style with { .card-heading } */
 .card-heading {
   color: var(--md-accent-fg-color--dark);
+}
+
+.md-typeset .grid {
+  margin-top: 0;
+  margin-bottom: 0.4rem;
 }
 
 /* GRID CARD STYLING - CLICKABLE */
@@ -296,6 +325,79 @@ h5 {
   display: none;
 }
 
+/* Clickable card grid overrides for index.md only */
+.md-typeset .grid.main-clickable-cards-grid {
+  grid-template-columns: 1fr 1fr 1fr;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Two columns for smaller screens */
+@media screen and (max-width: 76.1875em) {
+  .md-typeset .grid.main-clickable-cards-grid {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "left-column right-column";
+  }
+
+  /* Combine two left columns into one, right column stays there */
+  .md-typeset .grid.main-clickable-cards-grid .main-grid-column-1 {
+    grid-area: left-column;
+    order: -1;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .md-typeset .grid.main-clickable-cards-grid .main-grid-column-2 {
+    grid-area: left-column;
+    order: 0;
+  }
+
+  .md-typeset .grid.main-clickable-cards-grid .main-grid-column-3 {
+    grid-area: right-column;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+/* Single column for smallest screens */
+@media screen and (max-width: 60em) {
+  .md-typeset .grid.main-clickable-cards-grid {
+    grid-template-columns: 1fr;
+    grid-template-areas: none;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  /* Reorder with right column on top */
+  .md-typeset .grid.main-clickable-cards-grid .main-grid-column-3 {
+    order: -1;
+    display: block;
+  }
+
+  .md-typeset .grid.main-clickable-cards-grid .main-grid-column-1 {
+    order: 0;
+    display: block;
+  }
+
+  .md-typeset .grid.main-clickable-cards-grid .main-grid-column-2 {
+    order: 1;
+    display: block;
+  }
+}
+
+/* Ensure cards within columns stack vertically */
+.md-typeset .grid.cards.clickable.inner-column-grid-card {
+  grid-template-columns: 1fr;
+  margin: 0;
+  padding: 0;
+}
+
+/* Add margin between the inner grid card blocks when they stack in a single column */
+.md-typeset .main-grid-column-1 .grid.cards.clickable.inner-column-card-grid + .grid.cards.clickable.inner-column-card-grid {
+    margin-top: 1.5rem; /* Add spacing between the two blocks that end up in the same logical column */
+}
+
 /* GRID CARD STYLING - STATIC */
 
 /* Override grid card format */
@@ -317,10 +419,10 @@ h5 {
 
 .md-typeset .grid.cards.static > ul > li h2 {
   margin: 0;
-  padding: 0 0.8rem 0;
+  padding: 0.2rem 0.8rem 0.2rem;
   background-color: var(--md-primary-fg-color);
   color: var(--md-default-bg-color--dark);
-  font-size: 1rem !important;
+  font-size: 0.8rem !important;
   border-top-left-radius: 9px;
   border-top-right-radius: 9px;
   width: 100%;
@@ -341,6 +443,19 @@ h5 {
 
 .md-typeset .grid.cards.static > ul > li p:last-child {
   padding-bottom: 0.8rem;
+}
+
+/* Static card grid overrides for index.md only */
+.md-typeset .grid.cards.static.home-top-row {
+  grid-template-columns: 3fr 1fr;
+
+  @media screen and (max-width: 76.1875em) {
+    grid-template-columns: 2fr 1fr;
+  }
+
+  @media screen and (max-width: 60em) {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* BUTTON STYLING */
