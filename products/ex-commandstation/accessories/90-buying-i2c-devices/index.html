@@ -10,10 +10,10 @@
       
       
       
-        <link rel="canonical" href="https://dcc-ex.com/mkdocs-test/products/ex-commandstation/accessories/accessories/">
+        <link rel="canonical" href="https://dcc-ex.com/mkdocs-test/products/ex-commandstation/accessories/90-buying-i2c-devices/">
       
       
-        <link rel="prev" href="../../testing/">
+        <link rel="prev" href="../50-connecting-servo-turnout/">
       
       
         <link rel="next" href="../../exrail/1-exrail/">
@@ -27,7 +27,7 @@
     
     
       
-        <title>Connecting Accessories - DCC-EX Documentation</title>
+        <title>Buying I2C devices - DCC-EX Documentation</title>
       
     
     
@@ -83,7 +83,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#connecting-accessories" class="md-skip">
+        <a href="#buying-i2c-devices" class="md-skip">
           Skip to content
         </a>
       
@@ -116,7 +116,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Connecting Accessories
+              Buying I2C devices
             
           </span>
         </div>
@@ -980,6 +980,14 @@
       
         
       
+        
+      
+        
+      
+        
+      
+        
+      
     
     
     
@@ -1018,6 +1026,98 @@
                 
   
   
+  
+  
+    <li class="md-nav__item">
+      <a href="../1-accessories/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Connecting Accessories
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../20-actuators/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Actuators - to make stuff happen
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../30-sensors/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Sensors
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../50-connecting-servo-turnout/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Connecting a servo turnout
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
     
   
   
@@ -1030,76 +1130,17 @@
         
       
       
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    Connecting Accessories
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
   <span class="md-ellipsis">
-    Connecting Accessories
+    Buying I2C devices
     
   </span>
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#accessory-types" class="md-nav__link">
-    <span class="md-ellipsis">
-      Accessory Types
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#voltage-differences" class="md-nav__link">
-    <span class="md-ellipsis">
-      Voltage Differences
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#what-is-i2c" class="md-nav__link">
-    <span class="md-ellipsis">
-      What is I2C?
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
       
     </li>
   
@@ -3446,28 +3487,35 @@
   
 
 
-<h1 id="connecting-accessories">Connecting Accessories<a class="headerlink" href="#connecting-accessories" title="Permanent link">&para;</a></h1>
-<p>Once you go beyond just wanting to run trains, and want to control turnouts, signals, and potentially automate other various parts of your layout, you will need to know how to connect accessories to your Command Station.</p>
-<p>This includes our other products such as EX-FastClock, EX-IOExpander, and EX-Turntable.</p>
-<h2 id="accessory-types">Accessory Types<a class="headerlink" href="#accessory-types" title="Permanent link">&para;</a></h2>
-<p>There are generally three ways accessories can be controlled by your Command Station:</p>
+<h1 id="buying-i2c-devices">Buying I2C devices<a class="headerlink" href="#buying-i2c-devices" title="Permanent link">&para;</a></h1>
+<p>There are many I2C devices available and the price/availability can vary widely depending on your location and delivery options. Where devices are very cheap, you may find quality issues and so expect a few duds. </p>
+<p>Some devices come with <a href="https://learn.adafruit.com/introducing-adafruit-stemma-qt/technical-specs">Qwiic</a> connectors which makes them easier to plug-and-play with the Qwiic connector on your EX-CSB! or EX8874 motor shield. </p>
+<p>In general the Adafruit devices below are high quality and well documented but that is usually reflected in the price.</p>
 <ul>
-<li>I2C</li>
-<li>Serial</li>
-<li>DCC accessories attached to a DCC main track output</li>
+<li>
+<p>MCP23017 provides 16 pins for mixed input or output.
+<a href="https://www.adafruit.com/product/5346#technical-details">(see details)</a> This is good for</p>
+<ul>
+<li>Up to 14 inputs from push-buttons, switches, sensors.</li>
+<li>Up to 16 outputs to LEDs and signals (which require current limiting resistors) and relays.</li>
 </ul>
-<p>Throughout these pages, we will be focusing on accessories connected via I2C only.</p>
-<p>Most devices connected via Serial are typically throttles or controllers rather than accessories.</p>
-<p>When purchasing DCC accessories, you will have received a user manual for these, so follow that for instructions on how to connect them.</p>
-<h2 id="voltage-differences">Voltage Differences<a class="headerlink" href="#voltage-differences" title="Permanent link">&para;</a></h2>
-<p>It is essential to be aware that hardware devices may operate at different voltage levels, meaning simply connecting an accessory to your Command Station may lead to damage or incorrect operation should this situation occur.</p>
-<p>The most common issue is connecting an accessory designed for 5V operation to a Command Station that operates at 3.3V, such as our EX-CSB1. This will cause damage!</p>
-<p>This voltage issue applies to both I2C and Serial connections.</p>
-<h2 id="what-is-i2c">What is I2C?<a class="headerlink" href="#what-is-i2c" title="Permanent link">&para;</a></h2>
-<p>If you want the nitty gritty of what I2C is, you can refer to the <a href="https://en.wikipedia.org/wiki/I%C2%B2C">Wikipedia article</a>, which covers more detail than we will here.</p>
-<p>To keep it simple and in the context of DCC-EX, I2C is a bus that allows multiple accessories or peripherals to be connected to your Command Station, utilising two signal lines/connections and a common ground connection. While power can be provided by your Command Station, it is recommended to have your accessories powered separately.</p>
-<p>Each I2C device must have a unique address in order to be detected and configured by the software.</p>
-<p>You will typically see these addresses in hexadecimal format, for example <code>0x40</code>.</p>
+</li>
+<li>
+<p>PCA9685 provides up to 16 outputs for servos and LEDs (PWM pins used for V+ include resistors) <a href="https://www.adafruit.com/product/815">(See details)</a></p>
+</li>
+<li>
+<p>LTC4311 resolves electronic issues when the total of I2C wiring is greater than approximately 2m or 6ft. <a href="https://www.adafruit.com/product/4756">(See details)</a></p>
+</li>
+<li>
+<p>Qwiic wires make it easy to plug these devices together.
+<a href="https://www.adafruit.com/product/4210">(See details)</a></p>
+</li>
+</ul>
+<p>TODO</p>
+<ul>
+<li>mux</li>
+<li>neopixel</li>
+</ul>
 
 
 
@@ -3488,7 +3536,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 29, 2025 00:12:17 UTC">June 29, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="July 7, 2025 10:22:58 UTC">July 7, 2025</span>
   </span>
 
     
@@ -3522,6 +3570,28 @@
 
 <footer class="md-footer">
   
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../50-connecting-servo-turnout/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Connecting a servo turnout">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Connecting a servo turnout
+              </div>
+            </div>
+          </a>
+        
+        
+      </nav>
     
   
   <div class="md-footer-meta md-typeset">

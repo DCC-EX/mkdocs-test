@@ -327,6 +327,7 @@
 
 /* Clickable card grid overrides for index.md only */
 .md-typeset .grid.main-clickable-cards-grid {
+  display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   width: 100%;
   box-sizing: border-box;
@@ -336,26 +337,22 @@
 @media screen and (max-width: 76.1875em) {
   .md-typeset .grid.main-clickable-cards-grid {
     grid-template-columns: 1fr 1fr;
-    grid-template-areas: "left-column right-column";
   }
 
   /* Combine two left columns into one, right column stays there */
   .md-typeset .grid.main-clickable-cards-grid .main-grid-column-1 {
-    grid-area: left-column;
-    order: -1;
-    display: flex;
-    flex-direction: column;
+    grid-column: 1 / span 1;
+    grid-row: 1 / span 1;
   }
 
   .md-typeset .grid.main-clickable-cards-grid .main-grid-column-2 {
-    grid-area: left-column;
-    order: 0;
+    grid-column: 1 / span 1;
+    grid-row: 2 / span 1;
   }
 
   .md-typeset .grid.main-clickable-cards-grid .main-grid-column-3 {
-    grid-area: right-column;
-    display: flex;
-    flex-direction: column;
+    grid-column: 2 / span 1;
+    grid-row: 1 / span 2;
   }
 }
 
@@ -364,25 +361,30 @@
   .md-typeset .grid.main-clickable-cards-grid {
     grid-template-columns: 1fr;
     grid-template-areas: none;
-    display: flex;
-    flex-direction: column;
+    display: grid;
     width: 100%;
+  }
+
+  /* Reset grid placement */
+  .md-typeset .grid.main-clickable-cards-grid .main-grid-column-1,
+  .md-typeset .grid.main-clickable-cards-grid .main-grid-column-2,
+  .md-typeset .grid.main-clickable-cards-grid .main-grid-column-3 {
+    grid-column: auto;
+    grid-row: auto;
+    height: auto;
   }
 
   /* Reorder with right column on top */
   .md-typeset .grid.main-clickable-cards-grid .main-grid-column-3 {
     order: -1;
-    display: block;
   }
 
   .md-typeset .grid.main-clickable-cards-grid .main-grid-column-1 {
     order: 0;
-    display: block;
   }
 
   .md-typeset .grid.main-clickable-cards-grid .main-grid-column-2 {
     order: 1;
-    display: block;
   }
 }
 
@@ -391,11 +393,6 @@
   grid-template-columns: 1fr;
   margin: 0;
   padding: 0;
-}
-
-/* Add margin between the inner grid card blocks when they stack in a single column */
-.md-typeset .main-grid-column-1 .grid.cards.clickable.inner-column-card-grid + .grid.cards.clickable.inner-column-card-grid {
-    margin-top: 1.5rem; /* Add spacing between the two blocks that end up in the same logical column */
 }
 
 /* GRID CARD STYLING - STATIC */
