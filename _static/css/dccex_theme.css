@@ -67,6 +67,10 @@
   /* Shadow overrides */
   --md-shadow-z1: 0 4px 6px rgba(0, 0, 0, 0.25);
   --md-shadow-z3: 0 6px 16px rgba(0, 0, 0, 0.5);
+
+  /* Tasklist colours */
+  --md-tasklist-unchecked-color: #E5E5E5;
+  --md-tasklist-checked-color: #009FB5;
 }
 
 /* --- DCC-EX Dark Color Scheme Overrides --- */
@@ -143,6 +147,10 @@
   /* Shadow overrides */
   --md-shadow-z1: 0 4px 6px rgba(255, 255, 255, 0.25);
   --md-shadow-z3: 0 6px 16px rgba(255, 255, 255, 0.5);
+
+  /* Tasklist colours */
+  --md-tasklist-unchecked-color: #3D3D3D;
+  --md-tasklist-checked-color: #00CEF7;
 }
 
 /* Only show image in light mode - style with { .only-light } */
@@ -466,4 +474,13 @@
 /* Back to top button overrides */
 .md-top {
   border: solid var(--md-primary-fg-color--light) 1px;
+}
+
+/* TASKLIST STYLING */
+.md-typeset .task-list-indicator::before {
+  background-color: var(--md-tasklist-unchecked-color);
+}
+
+.md-typeset [type="checkbox"]:checked + .task-list-indicator::before {
+  background-color: var(--md-tasklist-checked-color);
 }
