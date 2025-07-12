@@ -95,8 +95,8 @@
   --md-accent-fg-color--dark:   #00B6CC;
 
   /* Text colours for dark mode */
-  --md-default-fg-color:        #F5F5F5; /* Light gray text */
-  --md-default-fg-color--light: #E0E0E0; /* Slightly darker light gray */
+  --md-default-fg-color:        #DDDDDD; /* Light gray text */
+  --md-default-fg-color--light: #00B0C0; /* Subtle steel tone */
   --md-default-fg-color--dark:  #FFFFFF; /* Pure white for strong contrast */
 
   /* Typeset colour shades */
@@ -190,6 +190,7 @@
 .md-typeset h1 {
   font-family: Audiowide,Helvetica,Arial,sans-serif !important;
   font-size: 180% !important;
+  color: var(--md-default-fg-color--light);
 }
 
 .md-typeset h2 {
@@ -230,6 +231,15 @@
   line-height: 1.2;
   margin-top: 0.6em;
   margin-bottom: 0.6em;
+}
+
+/* Left border accent, underline, and letter spacing for more emphasis */
+.md-typeset h2,
+.md-typeset h3,
+.md-typeset h4,
+.md-typeset h5 {
+  border-left: 4px solid var(--md-accent-fg-color--dark);
+  padding-left: 0.5rem;
 }
 
 /* Override header topic font */
@@ -315,6 +325,7 @@
 
 .md-typeset .grid.cards.clickable > ul > li hr {
   border-top: 1px solid var(--md-accent-fg-color--dark);
+  margin: 0;
 }
 
 /* Make entire card clickable - utilises Javascript clickable-cards.js */
@@ -420,6 +431,7 @@
 
 .md-typeset .grid.cards.static > ul > li hr {
   border-top: 1px solid var(--md-accent-fg-color--dark);
+  margin: 0;
 }
 
 .md-typeset .grid.cards.static > ul > li h2 {
@@ -430,6 +442,7 @@
   font-size: 0.8rem !important;
   border-top-left-radius: 9px;
   border-top-right-radius: 9px;
+  border-left: 0;
   width: 100%;
   box-sizing: border-box;
 }
