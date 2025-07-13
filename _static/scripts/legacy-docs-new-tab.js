@@ -3,7 +3,7 @@
 */
 
 document.addEventListener("DOMContentLoaded", () => {
-  document.querySelectorAll('a[href^="https://dcc-ex.com/ex-turntable/"]').forEach(link => {
+  document.querySelectorAll('a[href^="https://dcc-ex.com/legacy-docs/"]').forEach(link => {
     link.setAttribute("target", "_blank");
     link.setAttribute("rel", "noopener");
     link.classList.add("external-link-icon");
