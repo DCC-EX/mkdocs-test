@@ -188,11 +188,56 @@
 
 /* NAVIGATION MENU STYLING */
 .md-tabs {
-  background-color: var(--md-default-bg-color--dark);
-  color: var(--md-primary-fg-color);
-  border-top: 1px solid var(--md-primary-fg-color);
-  border-bottom: 1px solid var(--md-primary-fg-color);
-  font-weight: 800;
+  overflow: visible;
+  contain: none;
+}
+
+.md-tabs__list {
+  overflow: visible;
+  contain: none;
+}
+
+.md-tabs__item {
+  margin-top: 0.2rem;
+  margin-bottom: 0.2rem;
+}
+
+.md-tabs__item--active {
+  font-weight: 700;
+  padding: 0 0.8rem 0 0.8rem;
+  border-radius: 999px; /* Pill shape */
+  transition: background-color 0.3s ease, box-shadow 0.3s ease, color 0.3s ease;
+  overflow: visible;
+  contain: none;
+  z-index: 5;
+}
+  
+/* Light mode specific styles */
+[data-md-color-scheme="dccex-light"] .md-tabs__item--active {
+  color: var(--md-default-bg-color);
+  background-color: var(--md-primary-fg-color--dark);
+  box-shadow: 
+    0 2px 8px rgba(0, 151, 63, 0.6), /* Deeper shadow using primary color */
+    0 4px 16px rgba(0, 151, 63, 0.4);
+}
+
+/* Dark mode specific styles */
+[data-md-color-scheme="dccex-dark"] .md-tabs__item--active {
+  color: var(--md-default-bg-color);
+  background-color: var(--md-primary-fg-color--dark);
+  box-shadow: 
+    0 2px 8px rgba(0, 53, 61, 0.4), /* Deeper shadow using dark mode primary */
+    0 4px 16px rgba(0, 53, 61, 0.3);
+}
+
+
+/* Ensure the link text within the active tab also gets the correct color */
+[data-md-color-scheme="dccex-light"] .md-tabs__item--active .md-tabs__link {
+  color: var(--md-default-bg-color);
+}
+
+[data-md-color-scheme="dccex-dark"] .md-tabs__item--active .md-tabs__link {
+  color: var(--md-default-bg-color);
 }
 
 /* CUSTOM HEADER STYLES */
