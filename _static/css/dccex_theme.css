@@ -497,3 +497,14 @@
 .md-typeset [type="checkbox"]:checked + .task-list-indicator::before {
   background-color: var(--md-tasklist-checked-color);
 }
+
+/* LEGACY DOCS LINK STYLING */
+
+/* Ensure links to the legacy docs indicate a new tab, see legacy-docs-new-tab.js script also */
+a.external-link-icon::after {
+  content: "↗";
+  display: inline-block;
+  margin-left: 0.2em;
+  width: 1em;
+  height: 1em;
+}
