@@ -186,11 +186,20 @@
   line-height: 1.4;
 }
 
+/* NAVIGATION MENU STYLING */
+.md-tabs {
+  background-color: var(--md-default-bg-color--dark);
+  color: var(--md-primary-fg-color);
+  border-top: 1px solid var(--md-primary-fg-color);
+  border-bottom: 1px solid var(--md-primary-fg-color);
+  font-weight: 800;
+}
+
 /* CUSTOM HEADER STYLES */
 .md-typeset h1 {
   font-family: Audiowide,Helvetica,Arial,sans-serif !important;
   font-size: 180% !important;
-  color: var(--md-default-fg-color--light);
+  color: var(--md-default-fg-color--dark);
 }
 
 .md-typeset h2 {
@@ -245,6 +254,10 @@
 /* Override header topic font */
 .md-header__topic {
   font-family: Audiowide,Helvetica,Arial,sans-serif !important;
+}
+
+.md-header__topic:first-child {
+  font-weight: inherit;
 }
 
 /* FOOTER MODIFICATIONS */
