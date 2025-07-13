@@ -73,7 +73,11 @@
          <lastmod>2025-07-13</lastmod>
     </url>
     <url>
-         <loc>https://dcc-ex.com/mkdocs-test/products/ex-commandstation/1-overview/</loc>
+         <loc>https://dcc-ex.com/mkdocs-test/products/ex-commandstation/0-overview/</loc>
+         <lastmod>2025-07-13</lastmod>
+    </url>
+    <url>
+         <loc>https://dcc-ex.com/mkdocs-test/products/ex-commandstation/1-ex-csb1/</loc>
          <lastmod>2025-07-13</lastmod>
     </url>
     <url>
@@ -234,10 +238,6 @@
     </url>
     <url>
          <loc>https://dcc-ex.com/mkdocs-test/products/ex-commandstation/trackmanager/trackmanager/</loc>
-         <lastmod>2025-07-13</lastmod>
-    </url>
-    <url>
-         <loc>https://dcc-ex.com/mkdocs-test/products/ex-csb1/1-ex-csb1/</loc>
          <lastmod>2025-07-13</lastmod>
     </url>
     <url>
