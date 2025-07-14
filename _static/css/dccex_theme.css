@@ -187,38 +187,29 @@
 }
 
 /* NAVIGATION MENU STYLING */
-.md-tabs {
-  overflow: visible;
-  contain: none;
-}
-
-.md-tabs__list {
-  overflow: visible;
-  contain: none;
-}
-
 .md-tabs__item {
   margin-top: 0.2rem;
   margin-bottom: 0.2rem;
 }
 
+.md-tabs__item:first-of-type {
+  margin-left: 0.5rem;
+}
+
 .md-tabs__item--active {
   font-weight: 700;
-  padding: 0 0.8rem 0 0.8rem;
+  padding: 0 0.8rem;
   border-radius: 999px; /* Pill shape */
   transition: background-color 0.3s ease, box-shadow 0.3s ease, color 0.3s ease;
-  overflow: visible;
-  contain: none;
-  z-index: 5;
 }
-  
+
 /* Light mode specific styles */
 [data-md-color-scheme="dccex-light"] .md-tabs__item--active {
   color: var(--md-default-bg-color);
   background-color: var(--md-primary-fg-color--dark);
   box-shadow: 
-    0 2px 8px rgba(0, 151, 63, 0.6), /* Deeper shadow using primary color */
-    0 4px 16px rgba(0, 151, 63, 0.4);
+    0 2px 8px rgba(0, 151, 151, 0.6), /* Deeper shadow using primary color */
+    0 4px 16px rgba(0, 151, 151, 0.4);
 }
 
 /* Dark mode specific styles */
@@ -226,8 +217,8 @@
   color: var(--md-default-bg-color);
   background-color: var(--md-primary-fg-color--dark);
   box-shadow: 
-    0 2px 8px rgba(0, 53, 61, 0.4), /* Deeper shadow using dark mode primary */
-    0 4px 16px rgba(0, 53, 61, 0.3);
+    0 2px 8px rgba(0, 53, 61, 0.6), /* Deeper shadow using dark mode primary */
+    0 4px 16px rgba(0, 53, 61, 0.4);
 }
 
 
