@@ -287,6 +287,12 @@
   padding-left: 0.5rem;
 }
 
+/* Set image sizes when used in headers */
+.md-typeset .header-img {
+  height: 1em;
+  vertical-align: middle;
+}
+
 /* Override header topic font */
 .md-header__topic {
   font-family: Audiowide,Helvetica,Arial,sans-serif !important;
