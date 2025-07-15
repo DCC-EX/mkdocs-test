@@ -16,7 +16,7 @@
         <link rel="prev" href="../../products/ex-turntable/ex-turntable/">
       
       
-        <link rel="next" href="../2-mega/">
+        <link rel="next" href="../20-mega-easy/">
       
       
         <link rel="alternate" type="application/rss+xml" title="RSS feed" href="../../feed_rss_created.xml">
@@ -2766,6 +2766,10 @@
       
         
       
+        
+      
+        
+      
     
     
     
@@ -2819,6 +2823,19 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Build Your Own Command Station
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -2830,6 +2847,43 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#quick-and-easy" class="md-nav__link">
+    <span class="md-ellipsis">
+      Quick and Easy
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#slightly-more-difficult" class="md-nav__link">
+    <span class="md-ellipsis">
+      Slightly more difficult
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -2843,12 +2897,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../2-mega/" class="md-nav__link">
+      <a href="../20-mega-easy/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    2 mega
+    Easy build - Arduino Mega
     
   </span>
   
@@ -2866,12 +2920,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../3-nucleo/" class="md-nav__link">
+      <a href="../21-mega-harder/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    3 nucleo
+    Alternative build with an Arduino Mega
     
   </span>
   
@@ -2889,12 +2943,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../4-esp32/" class="md-nav__link">
+      <a href="../30-nucleo/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    4 esp32
+    30 nucleo
     
   </span>
   
@@ -2912,12 +2966,58 @@
   
   
     <li class="md-nav__item">
-      <a href="../9-others/" class="md-nav__link">
+      <a href="../40-esp32/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    DIY-Other devices
+    40 esp32
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../80-installer/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    80 installer
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../90-others/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    DIY - Other devices
     
   </span>
   
@@ -3867,11 +3967,23 @@
 
 
 <h1 id="build-your-own-command-station">Build Your Own Command Station<a class="headerlink" href="#build-your-own-command-station" title="Permanent link">&para;</a></h1>
+<p>A command station consists of a processor and a shield/board to convert the low voltage digital signal from the processor into the high powered track output.</p>
 <p>DCC-EX started life on home-built command stations using Arduino UNO and Mega processors and the standard Arduino motor shield. This was attractive to users that liked to experiment and was exceptionally cheap to create. However, if you build your own, or even buy a pre-built stack from a third party, you will need to learn quite a lot more than using our plug-and-go solution the <a href="?CSB1">CSB1</a>.</p>
-<p>You will find that lots of "standards" are not at all standard, and that apparently attractive alternatives to the recommended items and totally incompatible. You may need to configure the software or even modify hardware shields. You will require a multimeter, a soldering iron and a variety of dupont wires or similar and you will probably collect a bucket-load of connectors, adapters, and gizmos that you though might be useful but don't have time to try.</p>
+<p>Of course you will also need</p>
+<ul>
+<li>a “Main” track, aka “Operations” track - most people already have this: it’s your layout! If you don't yet have this, no problem you can still test on the programming track (below).</li>
+<li>a “Programming” track, aka "PROG" or “Service” track - an isolated short section of track that you will use to program locomotives</li>
+<li>a Train - Specifically, a locomotive equipped with a DCC decoder (either a standard or sound decoder). Ideally, it should be a loco already proven to work on DCC. Otherwise, if you have a problem, you may not be able to tell if the problem is the decoder or the EX-CommandStation</li>
+</ul>
+<h2 id="quick-and-easy">Quick and Easy<a class="headerlink" href="#quick-and-easy" title="Permanent link">&para;</a></h2>
+<p>If you build our standard Mega-based Command station and use our EX-MotorShield8874  and, optionally, the EX-WiFiShield8266 which have been specifically designed to meet our requirements, then you will be up and running quickly. <a href="../20-mega-easy/">Easy Build Instructions</a> </p>
+<h2 id="slightly-more-difficult">Slightly more difficult<a class="headerlink" href="#slightly-more-difficult" title="Permanent link">&para;</a></h2>
+<p>Using other supported motor or WiFi shields requires a slightly <a href="../21-mega-harder/">more complex setup</a>.</p>
+<p>Should you select a different processor, or progress to adding accessories, you will find that lots of "standards" are not at all standard, and that apparently attractive alternatives to the recommended items are totally incompatible. You may need to configure the software or even modify hardware shields.</p>
+<p>You will require a multimeter, a soldering iron and a variety of dupont wires or similar and you will probably collect a bucket-load of connectors, adapters, and gizmos that you though might be useful but don't have time to try.</p>
 <p>In fact, TIME is the thing you will need most, and time spend building your command station is just too easy an excuse for not building your track!</p>
 <p>The following documentation pages can only take you through the basics and should you contact us for support it is well to remember that we do this for fun, we don't get paid, and we don't all have access to the same weird but cheap gizmo you found on the web with an instruction sheet in Klingon.</p>
-<p>Apart from that... it's great fun.</p>
+<p>Apart from that... it's great fun!</p>
 
 
 
@@ -3892,7 +4004,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="July 13, 2025 14:05:07 UTC">July 13, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="July 15, 2025 08:50:51 UTC">July 15, 2025</span>
   </span>
 
     
@@ -3932,13 +4044,13 @@
         
         
           
-          <a href="../2-mega/" class="md-footer__link md-footer__link--next" aria-label="Next: 2 mega">
+          <a href="../20-mega-easy/" class="md-footer__link md-footer__link--next" aria-label="Next: Easy build - Arduino Mega">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                2 mega
+                Easy build - Arduino Mega
               </div>
             </div>
             <div class="md-footer__button md-icon">

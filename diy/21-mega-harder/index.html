@@ -10,13 +10,13 @@
       
       
       
-        <link rel="canonical" href="https://dcc-ex.com/mkdocs-test/diy/4-esp32/">
+        <link rel="canonical" href="https://dcc-ex.com/mkdocs-test/diy/21-mega-harder/">
       
       
-        <link rel="prev" href="../3-nucleo/">
+        <link rel="prev" href="../20-mega-easy/">
       
       
-        <link rel="next" href="../9-others/">
+        <link rel="next" href="../30-nucleo/">
       
       
         <link rel="alternate" type="application/rss+xml" title="RSS feed" href="../../feed_rss_created.xml">
@@ -27,7 +27,7 @@
     
     
       
-        <title>4 esp32 - DCC-EX Documentation</title>
+        <title>Alternative build with an Arduino Mega - DCC-EX Documentation</title>
       
     
     
@@ -82,6 +82,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#alternative-build-with-an-arduino-mega" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -111,7 +116,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              4 esp32
+              Alternative build with an Arduino Mega
             
           </span>
         </div>
@@ -2761,6 +2766,10 @@
       
         
       
+        
+      
+        
+      
     
     
     
@@ -2828,35 +2837,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../2-mega/" class="md-nav__link">
+      <a href="../20-mega-easy/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    2 mega
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../3-nucleo/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    3 nucleo
+    Easy build - Arduino Mega
     
   </span>
   
@@ -2880,18 +2866,157 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Alternative build with an Arduino Mega
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
   <span class="md-ellipsis">
-    4 esp32
+    Alternative build with an Arduino Mega
     
   </span>
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#what-you-need" class="md-nav__link">
+    <span class="md-ellipsis">
+      What you need
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#important-notes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Important Notes
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-by-step-build" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step By Step Build
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Step By Step Build">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#prepare-your-mega" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prepare your Mega
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#optionally-mount-your-ethernet-shield" class="md-nav__link">
+    <span class="md-ellipsis">
+      Optionally mount your Ethernet Shield
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#prepare-your-motor-shield" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prepare your motor shield
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mount-the-motor-shield" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mount the motor shield
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#connect-your-track" class="md-nav__link">
+    <span class="md-ellipsis">
+      Connect your track
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#connect-your-track-power-supply" class="md-nav__link">
+    <span class="md-ellipsis">
+      Connect your track power supply
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#optionally-install-a-wifi-shield" class="md-nav__link">
+    <span class="md-ellipsis">
+      Optionally install a Wifi Shield
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#load-the-software" class="md-nav__link">
+    <span class="md-ellipsis">
+      Load the software
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -2905,12 +3030,81 @@
   
   
     <li class="md-nav__item">
-      <a href="../9-others/" class="md-nav__link">
+      <a href="../30-nucleo/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    DIY-Other devices
+    30 nucleo
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../40-esp32/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    40 esp32
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../80-installer/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    80 installer
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../90-others/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    DIY - Other devices
     
   </span>
   
@@ -3859,9 +4053,80 @@
   
 
 
-  <h1>4 esp32</h1>
-
-
+<h1 id="alternative-build-with-an-arduino-mega">Alternative build with an Arduino Mega<a class="headerlink" href="#alternative-build-with-an-arduino-mega" title="Permanent link">&para;</a></h1>
+<p>TODO This page needs pictures inserting.</p>
+<p>There are a limited number of suitable motor or WiFi shields available and each has its own quirks.</p>
+<h2 id="what-you-need">What you need<a class="headerlink" href="#what-you-need" title="Permanent link">&para;</a></h2>
+<p>To build a basic DIY Command Station you will need:</p>
+<ul>
+<li>A PC or laptop (Not A Raspberry Pi) running a reasonably recent versions of Windows, Linux or MacOS</li>
+<li>an Arduino Mega microprocessor running our free Open Source software</li>
+<li>USB cable to your PC for the processor.</li>
+<li>an Arduino standard (or others as noted in details) motor-shield to power the track.</li>
+<li>A double-insulated DC power supply with a voltage suitable for your layout/locos.</li>
+<li>An additional double-insulated DC Power supply of 5 to 8 volts suitable to drive the Arduino logic. (This may also be fed through the USB cable, and old phone charger is suitable or if you intend to use JMRI your computer will supply this power.)</li>
+<li>Optionally<ul>
+<li>a female barrel connector to match the plug on your chosen track power supply</li>
+<li>a suitable WiFi shield to use WiFi throttles (Recommended) with 2 suitable M-F Dupont wires.</li>
+<li>OR an Ethernet Shield</li>
+</ul>
+</li>
+</ul>
+<h2 id="important-notes">Important Notes<a class="headerlink" href="#important-notes" title="Permanent link">&para;</a></h2>
+<p>These instructions assume a slightly more competent user who has made the decision to trade simplicity for price. It is assumed that you are comfortable modifying devices, soldering etc. and are not going to make costly mistakes such as mixing up the power supplies.</p>
+<h2 id="step-by-step-build">Step By Step Build<a class="headerlink" href="#step-by-step-build" title="Permanent link">&para;</a></h2>
+<h3 id="prepare-your-mega">Prepare your Mega<a class="headerlink" href="#prepare-your-mega" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Use sticky tape or similar to cover the top of the USB connector on the mega. This prevents any accidental contact with the underside of the motor shield.  </li>
+</ol>
+<h3 id="optionally-mount-your-ethernet-shield">Optionally mount your Ethernet Shield<a class="headerlink" href="#optionally-mount-your-ethernet-shield" title="Permanent link">&para;</a></h3>
+<p>Note, you can't have Ethernet and WiFi running on the same command station, but you can install both shields and choose one or the other when installing the software.</p>
+<p>The standard Ethernet shields must be first in the stack as they use pins that are not passed through the headers of the motor shield. Look underneath the shield and this will become obvious. The shields also cause issues with their height, shields above may not sit level (but will still work) unless you introduce an extra row of header extenders.</p>
+<p>Non-shield Ethernet adapters have other wiring requirements. Search our help for <a href="?Ethernet">details</a>.</p>
+<h3 id="prepare-your-motor-shield">Prepare your motor shield<a class="headerlink" href="#prepare-your-motor-shield" title="Permanent link">&para;</a></h3>
+<p>FAILURE TO DO THIS CAN DESTROY YOUR MEGA.</p>
+<ol>
+<li>
+<p>You MUST prevent the shield from feeding track voltage into your Mega. This is done by cutting the VIN trace and/or removing the pin that feeds the Mega.
+TODO See pictures applicable to the various supported shields.</p>
+</li>
+<li>
+<p>Ensure shield pins are straight and correctly aligned.</p>
+</li>
+</ol>
+<h3 id="mount-the-motor-shield">Mount the motor shield<a class="headerlink" href="#mount-the-motor-shield" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Align the motor shield so that the power connectors are at the same end as the Mega power/usb connectors.</li>
+<li>Being careful to not bend any pins gently press, using a rocking motion if you need to, in order to get the motor board to seat firmly onto the Mega. Press gently until you feel you can’t put the pins in any further. Don’t force anything, there will be a visible gap.</li>
+</ol>
+<p>The board should be seated. Note the pins are longer than the headers. It is normal for you to see a few millimetres of the pins between the bottom of the motor board and the top of the headers.</p>
+<p>Check your work. Look under and through where the boards connect, make sure no pins missed the holes and got bent so that they run along the outside of the headers.</p>
+<h3 id="connect-your-track">Connect your track<a class="headerlink" href="#connect-your-track" title="Permanent link">&para;</a></h3>
+<p>Don't skip this step if you don't yet have any track because the WiFi shield will cover the connectors.
+Create fly leads with a suitable pluggable connector for later.</p>
+<p>If you only have one piece of track for testing, wire it to the PROG track plug.</p>
+<ol>
+<li>Your PROG track is wired to the B channel output.</li>
+<li>The MAIN track is wired to the A channel output.</li>
+</ol>
+<h3 id="connect-your-track-power-supply">Connect your track power supply<a class="headerlink" href="#connect-your-track-power-supply" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Wire your track power supply to the input turrets of the motor shield, observing polarity. It may be convenient to attach a short wire with a female barrel connector.</li>
+</ol>
+<h3 id="optionally-install-a-wifi-shield">Optionally install a Wifi Shield<a class="headerlink" href="#optionally-install-a-wifi-shield" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p>Make sure your Wifi shield is loaded with a suitable version of the Espressif AT command firmware. See <a href="?Espresif firmware">firmware loading instructions</a></p>
+</li>
+<li>
+<p>Prepare your WiFi shield (see supported types and notes below) by removing the pins that connect to the Mega Serial port.</p>
+</li>
+<li>Mount the WiFi shield on the motor shield.</li>
+<li>Use two male-female Dupont wires to connect the shields TX pin to the Mega RX1 pin, and the shield RX pin to the Mega TX1 pin.  </li>
+</ol>
+<p>TODO Photo. </p>
+<h3 id="load-the-software">Load the software<a class="headerlink" href="#load-the-software" title="Permanent link">&para;</a></h3>
+<p>Software loading is best done with the <a href="../80-installer/">EX-Installer</a></p>
 
 
 
@@ -3882,7 +4147,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="July 13, 2025 14:05:07 UTC">July 13, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="July 15, 2025 08:50:51 UTC">July 15, 2025</span>
   </span>
 
     
@@ -3921,7 +4186,7 @@
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../3-nucleo/" class="md-footer__link md-footer__link--prev" aria-label="Previous: 3 nucleo">
+          <a href="../20-mega-easy/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Easy build - Arduino Mega">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -3931,20 +4196,20 @@
                 Previous
               </span>
               <div class="md-ellipsis">
-                3 nucleo
+                Easy build - Arduino Mega
               </div>
             </div>
           </a>
         
         
           
-          <a href="../9-others/" class="md-footer__link md-footer__link--next" aria-label="Next: DIY-Other devices">
+          <a href="../30-nucleo/" class="md-footer__link md-footer__link--next" aria-label="Next: 30 nucleo">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                DIY-Other devices
+                30 nucleo
               </div>
             </div>
             <div class="md-footer__button md-icon">

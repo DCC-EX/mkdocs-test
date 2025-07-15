@@ -10,10 +10,10 @@
       
       
       
-        <link rel="canonical" href="https://dcc-ex.com/mkdocs-test/diy/9-others/">
+        <link rel="canonical" href="https://dcc-ex.com/mkdocs-test/diy/90-others/">
       
       
-        <link rel="prev" href="../4-esp32/">
+        <link rel="prev" href="../80-installer/">
       
       
         <link rel="next" href="../../purchasing/01-official-sellers/">
@@ -27,7 +27,7 @@
     
     
       
-        <title>DIY-Other devices - DCC-EX Documentation</title>
+        <title>DIY - Other devices - DCC-EX Documentation</title>
       
     
     
@@ -116,7 +116,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              DIY-Other devices
+              DIY - Other devices
             
           </span>
         </div>
@@ -2766,6 +2766,10 @@
       
         
       
+        
+      
+        
+      
     
     
     
@@ -2833,12 +2837,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../2-mega/" class="md-nav__link">
+      <a href="../20-mega-easy/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    2 mega
+    Easy build - Arduino Mega
     
   </span>
   
@@ -2856,12 +2860,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../3-nucleo/" class="md-nav__link">
+      <a href="../21-mega-harder/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    3 nucleo
+    Alternative build with an Arduino Mega
     
   </span>
   
@@ -2879,12 +2883,58 @@
   
   
     <li class="md-nav__item">
-      <a href="../4-esp32/" class="md-nav__link">
+      <a href="../30-nucleo/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    4 esp32
+    30 nucleo
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../40-esp32/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    40 esp32
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../80-installer/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    80 installer
     
   </span>
   
@@ -2911,17 +2961,58 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    DIY - Other devices
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
   <span class="md-ellipsis">
-    DIY-Other devices
+    DIY - Other devices
     
   </span>
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#the-following-devices-are-not-supported" class="md-nav__link">
+    <span class="md-ellipsis">
+      The following devices are NOT supported:
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -3866,21 +3957,27 @@
   
 
 
-<h1 id="diy-other-devices">DIY-Other devices<a class="headerlink" href="#diy-other-devices" title="Permanent link">&para;</a></h1>
-<p>We are unable to support you self building with devices other than those described in the earlier pages. In some cases we do know about devices that simply don't work or have so little market penetration that it is not worth the considerable effort required to develop, test and maintain software for them. </p>
-<p>DCC-EX is not a simple Arduino program, it requires precise access to the internals of each processor type.</p>
+<h1 id="diy-other-devices">DIY - Other devices<a class="headerlink" href="#diy-other-devices" title="Permanent link">&para;</a></h1>
+<p>We are unable to support you self building with devices other than those described in the earlier pages. In some cases we do know about devices that simply don't work or have so little market penetration that it is not worth the considerable effort required to develop, test and maintain software for them.</p>
+<p>DCC-EX is not a simple Arduino program, it requires precise access to the internals of each processor type. This means development time is taken and support issues rise whenever we take on a new processor.</p>
 <p>We are unable to rely on third party libraries which are generally designed to be the only thing on your Arduino and do not play well in such a demanding scenario.</p>
-<p>The following devices are NOT supported:</p>
+<h2 id="the-following-devices-are-not-supported">The following devices are NOT supported:<a class="headerlink" href="#the-following-devices-are-not-supported" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Arduino UNO and Nano. We have supported them in the past but the increase in Command Station features has oustripped their miniscule memory capabilities.</li>
 <li>Mega Wifi. Some users have had success with this but we have had approximately 50% failure rate on these devices. Its just not worth it. </li>
 <li>Arduino Giga. This has a very high cost and some strange WiFi limitations.</li>
 <li>Teensy (various models). These have been made to work in the past but without help we are unable to update or support them.</li>
 <li>ESP32. There are dozens of ESP32 versions and the vast majority of them will not be able to run DCC-EX. We can only support the explicitly recommended version.</li>
-<li>Nano Every.  Lack of demand. </li>
 <li>UNO R4 WiFi. Useless and expensive.</li>
-<li>Pi Pico</li>
+<li>Nano Every.  Not enough FLASH memory.</li>
+<li>
+<p>Pi Pico.  Lack of demand and awkward form factor for shields.</p>
+</li>
+<li>
+<p>Motor shields other than those recommended.</p>
+</li>
 </ul>
+<p>Many of these require modification or simply do not provide the features we need. Even the Arduino standard motor shield (which we do support) is not capable of the full range of the newer DCC-EX functions and requires physical modification to avoid melting your processor.</p>
 
 
 
@@ -3901,7 +3998,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="July 13, 2025 14:05:07 UTC">July 13, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="July 15, 2025 08:50:51 UTC">July 15, 2025</span>
   </span>
 
     
@@ -3940,7 +4037,7 @@
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../4-esp32/" class="md-footer__link md-footer__link--prev" aria-label="Previous: 4 esp32">
+          <a href="../80-installer/" class="md-footer__link md-footer__link--prev" aria-label="Previous: 80 installer">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -3950,7 +4047,7 @@
                 Previous
               </span>
               <div class="md-ellipsis">
-                4 esp32
+                80 installer
               </div>
             </div>
           </a>
