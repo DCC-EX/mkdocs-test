@@ -21,62 +21,6 @@
                 }
             ],
             "tags": null
-        },
-        {
-            "id": "https://dcc-ex.com/mkdocs-test/news/2025/03/announcing-dccexprotocol-library-120/",
-            "url": "https://dcc-ex.com/mkdocs-test/news/2025/03/announcing-dccexprotocol-library-120/",
-            "title": "Announcing DCCEXProtocol Library 1.2.0",
-            "content_html": "<h1>Announcing DCCEXProtocol Library 1.2.0</h1>\n<p>We've released the latest version of the |DCC-EXP| library version 1.2.0 today.</p>",
-            "image": null,
-            "date_published": "2025-03-13T00:00:00+00:00",
-            "authors": [
-                {
-                    "name": "peteGSX"
-                }
-            ],
-            "tags": null
-        },
-        {
-            "id": "https://dcc-ex.com/mkdocs-test/news/2024/03/another-new-ex-installer-release/",
-            "url": "https://dcc-ex.com/mkdocs-test/news/2024/03/another-new-ex-installer-release/",
-            "title": "Another new EX-Installer release",
-            "content_html": "<h1>Another new EX-Installer release</h1>\n<p>The |DCC-EX| team is pleased to announce another new release of |EX-I| (version 0.0.18). As always, we encourage all users to download this new version of the installer to take advantage of the bug fixes and new features available.</p>",
-            "image": null,
-            "date_published": "2024-03-07T00:00:00+00:00",
-            "authors": [
-                {
-                    "name": "peteGSX"
-                }
-            ],
-            "tags": null
-        },
-        {
-            "id": "https://dcc-ex.com/mkdocs-test/news/2023/12/announcing-the-new-dccexprotocol-arduino-library/",
-            "url": "https://dcc-ex.com/mkdocs-test/news/2023/12/announcing-the-new-dccexprotocol-arduino-library/",
-            "title": "Announcing the new DCCEXProtocol Arduino Library",
-            "content_html": "<h1>Announcing the new DCCEXProtocol Arduino Library</h1>\n<p>The DCC-EX team are proud to announce that we've released the very first version of our brand spanking new DCCEXProtocol Arduino Library! This has been written to make life easier for those wishing to write software for throttles or other clients that need to communicate with EX-CommandStation using our native command API.</p>",
-            "image": null,
-            "date_published": "2023-12-07T00:00:00+00:00",
-            "authors": [
-                {
-                    "name": "peteGSX"
-                }
-            ],
-            "tags": null
-        },
-        {
-            "id": "https://dcc-ex.com/mkdocs-test/news/2023/04/final-version-4-release-v415/",
-            "url": "https://dcc-ex.com/mkdocs-test/news/2023/04/final-version-4-release-v415/",
-            "title": "Final Version 4 Release (v4.1.5)",
-            "content_html": "<h1>Final Version 4 Release (v4.1.5)</h1>\n<p>We're excited to announce the final version 4 release of |EX-CS| before we move to version 5!</p>",
-            "image": null,
-            "date_published": "2023-04-09T00:00:00+00:00",
-            "authors": [
-                {
-                    "name": "peteGSX"
-                }
-            ],
-            "tags": null
         }
     ]
 }

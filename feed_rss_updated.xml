@@ -13,8 +13,8 @@
     <language>en</language>
 
     
-    <pubDate>Thu, 17 Jul 2025 21:23:10 -0000</pubDate>
-    <lastBuildDate>Thu, 17 Jul 2025 21:23:10 -0000</lastBuildDate>
+    <pubDate>Thu, 17 Jul 2025 21:57:44 -0000</pubDate>
+    <lastBuildDate>Thu, 17 Jul 2025 21:57:44 -0000</lastBuildDate>
     <ttl>1440</ttl>
 
     
@@ -32,46 +32,6 @@
     
     
     <item>
-      <title>Announcing the new DCCEXProtocol Arduino Library</title>
-      
-      
-        
-      <author>peteGSX</author>
-        
-      
-      
-      
-      <description>&lt;h1&gt;Announcing the new DCCEXProtocol Arduino Library&lt;/h1&gt;
-&lt;p&gt;The DCC-EX team are proud to announce that we&#39;ve released the very first version of our brand spanking new DCCEXProtocol Arduino Library! This has been written to make life easier for those wishing to write software for throttles or other clients that need to communicate with EX-CommandStation using our native command API.&lt;/p&gt;</description>
-      <link>https://dcc-ex.com/mkdocs-test/news/2023/12/announcing-the-new-dccexprotocol-arduino-library/</link>
-      <pubDate>Mon, 30 Jun 2025 05:30:38 +0000</pubDate>
-      <source url="https://dcc-ex.com/mkdocs-test/feed_rss_updated.xml">DCC-EX News</source>
-      
-      <guid isPermaLink="true">https://dcc-ex.com/mkdocs-test/news/2023/12/announcing-the-new-dccexprotocol-arduino-library/</guid>
-      
-    </item>
-    
-    <item>
-      <title>Announcing DCCEXProtocol Library 1.2.0</title>
-      
-      
-        
-      <author>peteGSX</author>
-        
-      
-      
-      
-      <description>&lt;h1&gt;Announcing DCCEXProtocol Library 1.2.0&lt;/h1&gt;
-&lt;p&gt;We&#39;ve released the latest version of the |DCC-EXP| library version 1.2.0 today.&lt;/p&gt;</description>
-      <link>https://dcc-ex.com/mkdocs-test/news/2025/03/announcing-dccexprotocol-library-120/</link>
-      <pubDate>Fri, 27 Jun 2025 10:51:36 +0000</pubDate>
-      <source url="https://dcc-ex.com/mkdocs-test/feed_rss_updated.xml">DCC-EX News</source>
-      
-      <guid isPermaLink="true">https://dcc-ex.com/mkdocs-test/news/2025/03/announcing-dccexprotocol-library-120/</guid>
-      
-    </item>
-    
-    <item>
       <title>New Documentation</title>
       
       
@@ -84,50 +44,10 @@
       <description>&lt;h1&gt;New Documentation&lt;/h1&gt;
 &lt;p&gt;We have new documentation!&lt;/p&gt;</description>
       <link>https://dcc-ex.com/mkdocs-test/news/2025/06/new-documentation/</link>
-      <pubDate>Sun, 22 Jun 2025 08:01:37 +0000</pubDate>
+      <pubDate>Fri, 18 Jul 2025 07:57:33 +0000</pubDate>
       <source url="https://dcc-ex.com/mkdocs-test/feed_rss_updated.xml">DCC-EX News</source>
       
       <guid isPermaLink="true">https://dcc-ex.com/mkdocs-test/news/2025/06/new-documentation/</guid>
-      
-    </item>
-    
-    <item>
-      <title>Final Version 4 Release (v4.1.5)</title>
-      
-      
-        
-      <author>peteGSX</author>
-        
-      
-      
-      
-      <description>&lt;h1&gt;Final Version 4 Release (v4.1.5)&lt;/h1&gt;
-&lt;p&gt;We&#39;re excited to announce the final version 4 release of |EX-CS| before we move to version 5!&lt;/p&gt;</description>
-      <link>https://dcc-ex.com/mkdocs-test/news/2023/04/final-version-4-release-v415/</link>
-      <pubDate>Wed, 18 Jun 2025 10:04:24 +0000</pubDate>
-      <source url="https://dcc-ex.com/mkdocs-test/feed_rss_updated.xml">DCC-EX News</source>
-      
-      <guid isPermaLink="true">https://dcc-ex.com/mkdocs-test/news/2023/04/final-version-4-release-v415/</guid>
-      
-    </item>
-    
-    <item>
-      <title>Another new EX-Installer release</title>
-      
-      
-        
-      <author>peteGSX</author>
-        
-      
-      
-      
-      <description>&lt;h1&gt;Another new EX-Installer release&lt;/h1&gt;
-&lt;p&gt;The |DCC-EX| team is pleased to announce another new release of |EX-I| (version 0.0.18). As always, we encourage all users to download this new version of the installer to take advantage of the bug fixes and new features available.&lt;/p&gt;</description>
-      <link>https://dcc-ex.com/mkdocs-test/news/2024/03/another-new-ex-installer-release/</link>
-      <pubDate>Wed, 18 Jun 2025 10:04:24 +0000</pubDate>
-      <source url="https://dcc-ex.com/mkdocs-test/feed_rss_updated.xml">DCC-EX News</source>
-      
-      <guid isPermaLink="true">https://dcc-ex.com/mkdocs-test/news/2024/03/another-new-ex-installer-release/</guid>
       
     </item>
     
