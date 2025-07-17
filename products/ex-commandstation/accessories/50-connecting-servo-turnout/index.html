@@ -1042,6 +1042,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#pca9685-configure-additional-boards" class="md-nav__link">
+    <span class="md-ellipsis">
+      PCA9685 Configure additional boards
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -4043,35 +4052,60 @@
 <p>You will need the following for up to 16 servos.</p>
 <ul>
 <li>Your Command Station with power supply and USB connection to your PC.</li>
-<li>A Qwiic cable</li>
-<li>A PCA9685 (preferably with Qwiic sockets)</li>
-<li>Up to 16 SG90 servos.</li>
-<li>The EX-Installer downloaded and installed on your PC.</li>
-<li>(Optionally) and Android phone with EX-Toolbox installed</li>
-<li>A servo power supply 5 or 6V DC not taken from the command station.</li>
+<li>Qwiic cable for connection to CSB1, with Qwiic or dupont connectors for connection to PCA9685.</li>
+<li>PCA9685 module</li>
+<li>Up to 16 SG90 servos</li>
+<li>EX-Installer downloaded on your PC</li>
+<li>(Optionally) Android phone with EX-Toolbox installed</li>
+<li>A servo power supply 5V 2A DC -- and not taken from the command station.</li>
 </ul>
 <h2 id="follow-the-steps-below">Follow the steps below<a class="headerlink" href="#follow-the-steps-below" title="Permanent link">&para;</a></h2>
 <ol>
-<li>Turn off power to your Command station and unplug the USB cable.</li>
-<li>Connect the Qwiic cable between the CSB1 <img alt="CSB1" src="../../../../_static/images/ex-csb1/csb1qwiic.jpg" /> (or EX8874 on a mega) <img alt="mega" src="../../../../_static/images/mega/mega-EX8874.jpg" />) and the PCA9685. </li>
-<li>Run the EX-Installer on your PC and select the cpu type, then the Serial Monitor. You should see output similar to the following where the Command Station enumerates all the I2C devices it can find.</li>
-<li>Examine the log to check that your PCA9685 has been detected and note the I2C address it was discovered at. This will typically be 0x40. If this address is 0x40 or 0x41 then the CS has defaulted this to be a PCA9685 and automatically assigned a range of 16 <a href="?VPIN">VPINs</a> to represent the 16 servo outputs.</li>
-<li>Examine the log further down and you should see. TODO CLIP where the VPINs are assigned. The following advice assumes that the address was 0x40 and the first VPIN will be 100.</li>
-<li>Plug a servo into the first output socket. DO NOT mechanically connect the servo arm to any turnout or animation as the servo may move unexpectedly and cause physical damage.</li>
-<li>Connect the additional servo power supply to the long-edge turrets on the PCA9685, observing the correct polarity. <img alt="PCA9685" src="../../../../_static/images/i2c-devices/PCA9685.jpg" /></li>
-<li>On the installers serial monitor, enter the command <code>&lt;D SERVO 100 2000&gt;</code> which should move the servo. Experiment with other positions than 2000. The usable range is approximately 100 to 4000 but varies.  </li>
+<li>Turn off power to your Command station and unplug the USB cable and power supply.</li>
+<li>Connect the Qwiic cable between the CSB1 or EX8874 and the PCA9685 module.<BR>
+ <img alt="CSB1" src="../../../../_static/images/ex-csb1/csb1qwiic.jpg" style="width: 70%" /> <BR>
+When using Mega, the I2C bus is 5V.<BR>
+Use the I2C headers, where 5V is available (IOREF/Vdd).<BR>
+ <img alt="mega" src="../../../../_static/images/i2c-devices/EX8874_i2c_header.png" style="width: 70%" /> </li>
+<li>
+<p>Run the EX-Installer on your PC and select the cpu type, then the Serial Monitor. You should see output similar to the following where the Command Station enumerates all the I2C devices it can find.
+from the startup logs using the serial monitor</p>
+<div class="highlight"><pre><span></span><code><span class="o">&lt;*</span><span class="w"> </span><span class="n">I2C</span><span class="w"> </span><span class="n">Device</span><span class="w"> </span><span class="n">found</span><span class="w"> </span><span class="n">at</span><span class="w"> </span><span class="mh">0x3C</span><span class="p">,</span><span class="w"> </span><span class="n">OLED</span><span class="w"> </span><span class="n">Display</span><span class="w"> </span><span class="k">or</span><span class="w"> </span><span class="n">HMC583L</span><span class="w"> </span><span class="n">Magnetometer</span><span class="o">?</span><span class="w"> </span><span class="o">*&gt;</span>
+<span class="o">&lt;*</span><span class="w"> </span><span class="n">I2C</span><span class="w"> </span><span class="n">Device</span><span class="w"> </span><span class="n">found</span><span class="w"> </span><span class="n">at</span><span class="w"> </span><span class="mh">0x40</span><span class="p">,</span><span class="w"> </span><span class="n">PWM</span><span class="o">?</span><span class="w"> </span><span class="o">*&gt;</span>
+<span class="p">.</span><span class="w"> </span><span class="p">.</span><span class="w"> </span><span class="p">.</span>
+<span class="k">and</span><span class="w"> </span><span class="n">then</span><span class="w"> </span><span class="n">it</span><span class="w"> </span><span class="n">shows</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">OLED</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="n">configured</span>
+<span class="o">&lt;*</span><span class="w"> </span><span class="mi">132</span><span class="n">x64</span><span class="w"> </span><span class="n">OLED</span><span class="w"> </span><span class="n">display</span><span class="w"> </span><span class="n">configured</span><span class="w"> </span><span class="n">on</span><span class="w"> </span><span class="n">I2C</span><span class="o">:</span><span class="mh">0x3c</span><span class="w"> </span><span class="o">*&gt;</span>
+
+<span class="n">send</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">command</span><span class="o">:</span><span class="w"> </span><span class="o">&lt;</span><span class="n">D</span><span class="w"> </span><span class="n">HAL</span><span class="w"> </span><span class="n">SHOW</span><span class="o">&gt;</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">see</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">vPins</span><span class="w"> </span><span class="n">configured</span>
+<span class="o">&lt;*</span><span class="w"> </span><span class="n">Arduino</span><span class="w"> </span><span class="n">Vpins</span><span class="o">:</span><span class="mi">2-39</span><span class="w"> </span><span class="o">*&gt;</span>
+<span class="o">&lt;*</span><span class="w"> </span><span class="n">PCA9685</span><span class="w"> </span><span class="n">I2C</span><span class="o">:</span><span class="mh">0x40</span><span class="w"> </span><span class="n">Configured</span><span class="w"> </span><span class="n">on</span><span class="w"> </span><span class="n">Vpins</span><span class="o">:</span><span class="mi">100-115</span><span class="w">  </span><span class="o">*&gt;</span>
+<span class="o">&lt;*</span><span class="w"> </span><span class="n">PCA9685</span><span class="w"> </span><span class="n">I2C</span><span class="o">:</span><span class="mh">0x41</span><span class="w"> </span><span class="n">Configured</span><span class="w"> </span><span class="n">on</span><span class="w"> </span><span class="n">Vpins</span><span class="o">:</span><span class="mi">116-131</span><span class="w"> </span><span class="n">OFFLINE</span><span class="w"> </span><span class="o">*&gt;</span>
+<span class="o">&lt;*</span><span class="w"> </span><span class="n">MCP23017</span><span class="w"> </span><span class="n">I2C</span><span class="o">:</span><span class="mh">0x20</span><span class="w"> </span><span class="n">Configured</span><span class="w"> </span><span class="n">on</span><span class="w"> </span><span class="n">Vpins</span><span class="o">:</span><span class="mi">164-179</span><span class="w"> </span><span class="n">OFFLINE</span><span class="w"> </span><span class="o">*&gt;</span>
+<span class="o">&lt;*</span><span class="w"> </span><span class="n">MCP23017</span><span class="w"> </span><span class="n">I2C</span><span class="o">:</span><span class="mh">0x21</span><span class="w"> </span><span class="n">Configured</span><span class="w"> </span><span class="n">on</span><span class="w"> </span><span class="n">Vpins</span><span class="o">:</span><span class="mi">180-195</span><span class="w"> </span><span class="n">OFFLINE</span><span class="w"> </span><span class="o">*&gt;</span>
+</code></pre></div>
+</li>
+<li>
+<p>Examine the log to check that your PCA9685 has been detected and note the I2C address it found. This will typically be 0x40. If this address is 0x40 or 0x41 then the CS has defaulted this to be a PCA9685 and automatically assigned a range of 16 <a href="?VPIN">VPINs</a> to represent the 16 servo outputs.</p>
+</li>
+<li>Examine the log further down and you should see where the VPINs are assigned. The following advice assumes that the address was 0x40 and the first VPIN will be 100.</li>
+<li>Plug a servo into the first output socket. DO NOT mechanically connect the servo arm to any turnout or animation as the servo may move unexpectedly and cause physical damage.  You will connect the servo arm after exercising the servo (step 8).</li>
+<li>Connect the additional servo power supply to the long-edge turrets on the PCA9685, observing the correct polarity. <img alt="PCA9685" src="../../../../_static/images/i2c-devices/PCA9685.jpg" style="width: 70%" /></li>
+<li>On the installers serial monitor, enter the command <code>&lt;D SERVO 100 200&gt;</code> which should move the servo. Experiment with other positions than 200. The usable range is approximately 102 to 490.  </li>
 <li>(Optionally) Use the EX-Toolbox Andoid app to experiment with servo angles and servo arm lengths until you have the required throw distance and angles to suit your servo mounting preferences.</li>
 </ol>
 <h2 id="define-your-turnouts">Define your Turnouts<a class="headerlink" href="#define-your-turnouts" title="Permanent link">&para;</a></h2>
 <ol>
-<li>In EX-Installer, edit myAutomation.h and define each turnout to give an id of your choice, the VPIN of the servo, the closed and open servo values you have discovered by experimentation and a suitable description to show on your throttle.</li>
-</ol>
-<p>For example</p>
-<div class="highlight"><pre><span></span><code><span class="n">SERVO_TURNOUT</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">100</span><span class="p">,</span><span class="mi">350</span><span class="p">,</span><span class="mi">720</span><span class="p">,</span><span class="s">&quot;Coal yard exit&quot;</span><span class="p">)</span>
-<span class="n">SERVO_TURNOUT</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">101</span><span class="p">,</span><span class="mi">400</span><span class="p">,</span><span class="mi">800</span><span class="p">,</span><span class="s">&quot;Branch line siding&quot;</span><span class="p">)</span>
+<li>
+<p>In EX-Installer, edit myAutomation.h and define each turnout to give an id of your choice, the VPIN of the servo, the closed and open servo values you have discovered by experimentation and a suitable decription to show on your throttle.</p>
+<div class="highlight"><pre><span></span><code><span class="c1">//SERVO_TURNOUT( turnout_id, vpin, active_angle, inactive_angle, profile [, &quot;description&quot;|HIDDEN] )</span>
+<span class="n">SERVO_TURNOUT</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">100</span><span class="p">,</span><span class="w"> </span><span class="mi">350</span><span class="p">,</span><span class="w"> </span><span class="mi">120</span><span class="p">,</span><span class="w"> </span><span class="n">Slow</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Coal yard exit&quot;</span><span class="p">)</span>
+<span class="n">SERVO_TURNOUT</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">101</span><span class="p">,</span><span class="w"> </span><span class="mi">400</span><span class="p">,</span><span class="w"> </span><span class="mi">200</span><span class="p">,</span><span class="w"> </span><span class="n">Slow</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Branch line siding&quot;</span><span class="p">)</span>
+<span class="n">SERVO_TURNOUT</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">102</span><span class="p">,</span><span class="w"> </span><span class="mi">400</span><span class="p">,</span><span class="w"> </span><span class="mi">200</span><span class="p">,</span><span class="w"> </span><span class="n">Slow</span><span class="p">,</span><span class="w"> </span><span class="n">HIDDEN</span><span class="p">)</span>
 </code></pre></div>
-<ol>
-<li>Reload the command station from the installer.</li>
+</li>
+<li>
+<p>Reload the command station from the installer.</p>
+</li>
 </ol>
 <h2 id="test-your-turnout-definitions">Test your turnout definitions<a class="headerlink" href="#test-your-turnout-definitions" title="Permanent link">&para;</a></h2>
 <ol>
@@ -4081,6 +4115,13 @@
 <h2 id="connect-your-servos-to-turnouts">Connect your servos to turnouts<a class="headerlink" href="#connect-your-servos-to-turnouts" title="Permanent link">&para;</a></h2>
 <p>There are many ways of mounting servos both above and below the baseboard using 3D printed mounts or a strip of plastic L shape. You will probably want to use microswitches to switch frog polarity or use more expensive frog juicers or EXRAIL driven relays.</p>
 <p>We recommend that whatever mechanical connection you make allows for protection of you turnout from excess servo movement.</p>
+<h2 id="pca9685-configure-additional-boards">PCA9685 Configure additional boards<a class="headerlink" href="#pca9685-configure-additional-boards" title="Permanent link">&para;</a></h2>
+<p>The first two PCA9685 are pre-defined at addresses 0x40 and 0x41, for pins 100-115 and 116-131.<BR>
+Configure additional PCA9685 in myAutomation.h.</p>
+<div class="highlight"><pre><span></span><code><span class="w">  </span><span class="n">HAL</span><span class="p">(</span><span class="n">PCA9685</span><span class="p">,</span><span class="w"> </span><span class="mi">132</span><span class="p">,</span><span class="w"> </span><span class="mi">16</span><span class="p">,</span><span class="w"> </span><span class="mh">0x42</span><span class="p">)</span>
+<span class="w">  </span><span class="n">HAL</span><span class="p">(</span><span class="n">PCA9685</span><span class="p">,</span><span class="w"> </span><span class="mi">148</span><span class="p">,</span><span class="w"> </span><span class="mi">16</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="n">I2CMux_0</span><span class="p">,</span><span class="n">SubBus_4</span><span class="p">,</span><span class="mh">0x43</span><span class="p">})</span>
+</code></pre></div>
+<p>Nucleo-144 boards do not have pre-defined PCA9685 due to pin conflicts, as pins thru 116 are reserved for the microprocessor.  All PCA9685 connected to Nucleo-144 boards require configuration in myAutomation.h.</p>
 
 
 
@@ -4101,7 +4142,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="July 13, 2025 08:16:05 UTC">July 13, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="July 17, 2025 19:46:20 UTC">July 17, 2025</span>
   </span>
 
     

@@ -4090,18 +4090,18 @@ e.g.</li>
 </ul>
 <div class="highlight"><pre><span></span><code><span class="w">  </span><span class="n">AUTOMATION</span><span class="p">(</span><span class="mi">17</span><span class="p">,</span><span class="s">&quot;Depart to Byeckaslike&quot;</span><span class="p">)</span>
 <span class="w">    </span><span class="n">FWD</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span><span class="w"> </span><span class="c1">// start slowly</span>
-<span class="w">    </span><span class="n">AT</span><span class="p">(</span><span class="mi">107</span><span class="p">)</span><span class="w"> </span><span class="c1">// when we reach sensor 107</span>
+<span class="w">    </span><span class="n">AT</span><span class="p">(</span><span class="mi">167</span><span class="p">)</span><span class="w"> </span><span class="c1">// when we reach sensor 167</span>
 <span class="w">    </span><span class="n">SPEED</span><span class="p">(</span><span class="mi">55</span><span class="p">)</span>
-<span class="w">    </span><span class="n">AT</span><span class="p">(</span><span class="mi">108</span><span class="p">)</span><span class="w"> </span><span class="c1">// approaching station</span>
+<span class="w">    </span><span class="n">AT</span><span class="p">(</span><span class="mi">168</span><span class="p">)</span><span class="w"> </span><span class="c1">// approaching station</span>
 <span class="w">    </span><span class="n">SPEED</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span><span class="w"> </span><span class="c1">// slow down</span>
-<span class="w">    </span><span class="n">AT</span><span class="p">(</span><span class="mi">109</span><span class="p">)</span><span class="w"> </span><span class="c1">// at the terminus</span>
+<span class="w">    </span><span class="n">AT</span><span class="p">(</span><span class="mi">169</span><span class="p">)</span><span class="w"> </span><span class="c1">// at the terminus</span>
 <span class="w">    </span><span class="n">ESTOP</span><span class="w"> </span><span class="c1">// stop dead</span>
 <span class="w">    </span><span class="n">DONE</span>
 </code></pre></div>
 <ul>
 <li>ON-handler - a sequence that is automatically started when some event happens. For example when a button is pressed (ONBUTTON) or a turnout is changed (ONTHROW / ONCLOSE) so you can intercept turnout/point changes to automatically adjust signals or other turnouts.</li>
 </ul>
-<div class="highlight"><pre><span></span><code><span class="n">ONBUTTON</span><span class="p">(</span><span class="mi">127</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><span class="n">ONBUTTON</span><span class="p">(</span><span class="mi">167</span><span class="p">)</span>
 <span class="w">  </span><span class="n">RED</span><span class="p">(</span><span class="mi">108</span><span class="p">)</span>
 <span class="w">  </span><span class="n">THROW</span><span class="p">(</span><span class="mi">6</span><span class="p">)</span>
 <span class="w">  </span><span class="n">GREEN</span><span class="p">(</span><span class="mi">112</span><span class="p">)</span>
@@ -4143,7 +4143,7 @@ e.g.</li>
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 25, 2025 21:23:17 UTC">June 25, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="July 17, 2025 19:46:20 UTC">July 17, 2025</span>
   </span>
 
     
