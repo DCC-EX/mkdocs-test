@@ -10,13 +10,13 @@
       
       
       
-        <link rel="canonical" href="https://dcc-ex.com/mkdocs-test/getting-started/10-downloads/">
+        <link rel="canonical" href="https://dcc-ex.com/mkdocs-test/getting-started/download-mac/">
       
       
-        <link rel="prev" href="../01-getting-started/">
+        <link rel="prev" href="../download-linux/">
       
       
-        <link rel="next" href="../../products/products/">
+        <link rel="next" href="../download-win/">
       
       
         <link rel="alternate" type="application/rss+xml" title="RSS feed" href="../../feed_rss_created.xml">
@@ -27,7 +27,7 @@
     
     
       
-        <title>Download Our Software - DCC-EX Documentation</title>
+        <title>Download and install on MacOS - DCC-EX Documentation</title>
       
     
     
@@ -83,7 +83,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#download-our-software" class="md-skip">
+        <a href="#download-and-install-on-macos" class="md-skip">
           Skip to content
         </a>
       
@@ -116,7 +116,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Download Our Software
+              Download and install on MacOS
             
           </span>
         </div>
@@ -532,6 +532,10 @@
       
         
       
+        
+      
+        
+      
     
     
     
@@ -596,6 +600,29 @@
                 
   
   
+  
+  
+    <li class="md-nav__item">
+      <a href="../download-linux/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Download and install on Linux
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
     
   
   
@@ -608,59 +635,41 @@
         
       
       
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    Download Our Software
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
   <span class="md-ellipsis">
-    Download Our Software
+    Download and install on MacOS
     
   </span>
   
 
       </a>
       
-        
+    </li>
+  
 
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+              
+            
+              
+                
   
   
   
+  
+    <li class="md-nav__item">
+      <a href="../download-win/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Download and install on Windows
     
+  </span>
   
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#ex-installer" class="md-nav__link">
-    <span class="md-ellipsis">
-      EX-Installer
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
+
+      </a>
     </li>
   
 
@@ -4264,14 +4273,17 @@
   
 
 
-<h1 id="download-our-software">Download Our Software<a class="headerlink" href="#download-our-software" title="Permanent link">&para;</a></h1>
-<h2 id="ex-installer">EX-Installer<a class="headerlink" href="#ex-installer" title="Permanent link">&para;</a></h2>
-<p>Download the latest <a class="md-button" href="#" id="download-ex-installer-link">EX-Installer</a></p>
-<p>If for some reason that link doesn't work for you, download the appropriate version:</p>
-<p><a class="md-button" href="https://github.com/DCC-EX/EX-Installer/releases/latest/download/EX-Installer-Win64.exe">Windows x64</a></p>
-<p><a class="md-button" href="https://github.com/DCC-EX/EX-Installer/releases/latest/download/EX-Installer-macOS">macOS</a></p>
-<p><a class="md-button" href="https://github.com/DCC-EX/EX-Installer/releases/latest/download/EX-Installer-Linux64">Linux x64</a></p>
-<p>Note there is no support for EX-Installer on Windows 7, nor 32 bit operating systems such as Windows x32 or RaspberryPi OS.</p>
+<h1 id="download-and-install-on-macos">Download and install on MacOS<a class="headerlink" href="#download-and-install-on-macos" title="Permanent link">&para;</a></h1>
+<p>Download from here <a class="md-button" href="https://github.com/DCC-EX/EX-Installer/releases/latest/download/EX-Installer-macOS">macOS</a></p>
+<p>Open a terminal window and navigate to the that folder that you downloaded the file to. e.g.:</p>
+<div class="highlight"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>Downloads
+</code></pre></div>
+<p>Enter the following command to tell the OS that it is an executable:</p>
+<div class="highlight"><pre><span></span><code>chmod<span class="w"> </span>+x<span class="w"> </span>EX-Installer-macOS
+</code></pre></div>
+<p>Run the installer with the following command:</p>
+<div class="highlight"><pre><span></span><code>./EX-Installer-macOS
+</code></pre></div>
 
 
 
@@ -4292,7 +4304,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="July 9, 2025 04:06:11 UTC">July 9, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="July 20, 2025 14:34:14 UTC">July 20, 2025</span>
   </span>
 
     
@@ -4335,7 +4347,7 @@
       <nav class="md-footer__inner md-grid" aria-label="Footer" hidden>
         
           
-          <a href="../01-getting-started/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Getting Started with DCC-EX">
+          <a href="../download-linux/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Download and install on Linux">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -4345,11 +4357,27 @@
                 Previous
               </span>
               <div class="md-ellipsis">
-                Getting Started with DCC-EX
+                Download and install on Linux
               </div>
             </div>
           </a>
         
+        
+          
+          <a href="../download-win/" class="md-footer__link md-footer__link--next" aria-label="Next: Download and install on Windows">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Download and install on Windows
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
         
       </nav>
     
@@ -4404,7 +4432,7 @@
       
         <script src="../../_static/scripts/platform.js"></script>
       
-        <script src="../../_static/scripts/ex-installer-download-helper.js"></script>
+        <script src="../../_static/scripts/ex-installer-run-helper.js"></script>
       
         <script src="../../_static/scripts/clickable-cards.js"></script>
       
