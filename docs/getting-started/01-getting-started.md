@@ -1,19 +1,17 @@
 # Getting Started with DCC-EX
 
-Unless you buy a Command Station Booster1 Express [CSB1](?CSB1) and use it solely as shipped with no accessories or options, you will need to download and install software to your Command Station or other products.
+The DCC-Ex Command Station Booster 1 Express (CSB1) is a fully functioning Command Station. It is installed with our multifunctional software, which allows it to be used as shipped to run model trains.
 
-This is managed by EX-Installer which is responsible for obtaining the relevant software and libraries, merging your custom configurations and mind-bending automations, locating the USB connection to your device,  compiling and downloading the result and showing the serial log from your device if required.
+There are 3 steps to operate the CSB1 as shipped. 
 
-## Warning Antivirus Software
+First, the operator must provide a DC power supply capable of providing clean power between 12 and 25 DC volts and 4 amps. The power supply connects to the CSB1 barrel jack. 
 
-You may need to turn off your antivirus software before you try to install, or you may be prompted to trust this executable.
+Second, the CSB1 must be connected securely to the track. The CSB1 track connector is labelled “A Main”. This connector is the furthest from the power supply barrel jack. 
 
-Sometimes our software gets blocked by antivirus apps. If you see any errors on the install screen, this is usually the issue.
+Third, the operator must provide a CAB/Controller/Throttle to connect to the WIFI signal provided on the CSB1. There is an alternative CAB solution using a PC application, DCCEX-WiThrottle, to cable connect to the CSB1. Additional instructions are found on the Products pages.
 
-## Installing EX-Installer
 
-[Windows x64](download-win.md){ .md-button }
-[macOS](download-mac.md){ .md-button }
-[Linux x64](download-linux.md){ .md-button }
+The DCC-EX flagship product, EX CommandStation, can manage many popular accessories (like turnouts/points, signals, sensors to monitor activities on the layout, and feature animations. To add these features, it is appropriate to install the EX-Installer software upgrade application on a local PC. Instructions for installing and using the EX-Installer are found on the Products pages. 
 
-Note there is no support for EX-Installer on Windows 7, nor 32 bit operating systems such as Windows x32 or RaspberryPi OS.
+The DCC-EX enterprise team offers a low-cost, build-it-yourself Command Station product that provides equivalent capabilities to the EX-Command Station. This product is also supported and described in detail in a later chapter.
+
