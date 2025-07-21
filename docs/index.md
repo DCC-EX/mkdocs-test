@@ -11,11 +11,14 @@ hide:
 
 - ## :material-hand-wave-outline: Welcome to DCC-EX
 
-    DCC-EX is a team of dedicated enthusiasts producing open source **DCC** and **DC** solutions to run your model trains and layout, with the mission to provide free and open source software and hardware designs that make model trains accessible and affordable to everyone.
+DCC-EX is an international social enterprise focused on providing high-quality, low-cost products and free software to the worldwide Model Railroad community.
 
-    Our easy to use software products use either our own custom hardware or off-the-shelf Arduino and similar technologies, are in use by modellers from all over the world, and are supported by numerous third party hardware and apps like JMRI, Engine Driver, WiThrottle, Rocrail, and more.
+Our premium EX-CommandStation/Booster One Express CSB1 provides a ready-to-run, cost-effective model railroad command station with installed software that is expandable to control both DCC and DC model locomotives, track accessories, lighting, and many more features.
 
-    We now have a [broad "EX"-osystem of products](/products/products.md) to enhance your entire layout including an integrated fast clock, integrated turntable controller, and I/O expansion.
+The DCC-EX team has developed and supports a broad "EX"-osystem of products that integrate with the CSB1, including an integrated fast clock, turntable controller, I/O expander, WebThrottle, DCCInspector and a diagnostic Toolbox. Our products integrate with JMRI, Rocrail, Android and IOS throttle apps.
+
+Primary product support is provided through a Discord server where the team and other users can respond quickly to questions and suggestions
+
 
 - ## :material-help-box-multiple-outline: Getting Help or Support
 
