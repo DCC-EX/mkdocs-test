@@ -1,4 +1,4 @@
-# Stuff To Do for Release
+# Release Checklist
 
 This is a list of to do items that will allow us to release this new documentation, and move the existing to a separate "legacy-docs" URL for reference only.
 
@@ -12,6 +12,8 @@ This is a list of to do items that will allow us to release this new documentati
     - [ ] EX-CSB1 RTR information - must be complete
     - [ ] Mega DIY stack page - Mega + EX8874/Arduino R3 + WiFiShield8266 only (no hardware mods, plug n play only)
 
+- [ ] ESP32 and Nucleo DIY to refer to legacy docs to start
+- [ ] All hardware pages should "next" onto the EX-Installer EX-CommandStation configuration instructions, maybe nav plugin extension, maybe JS
 - [ ] Product pages for EX-Installer, EX-CommandStation (includes EXRAIL and TrackManager), EX-CSB1, EX-Motorshield8874, and EX-WiFiShield8266
 - [ ] Better how to get help and support info
 
