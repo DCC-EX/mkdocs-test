@@ -23,6 +23,10 @@ So:
 - If specific page ordering is required, simply preface with the appropriate page number eg. "1-standards-formatting.md".
 - The page title is determined by the top level heading, see [Headings](/contributing/documentation/3-formatting-guide.md#headings).
 
+## Address all MkDocs Warnings and Errors
+
+When running locally with ``mkdocs serve``, ensure any INFO, WARNING, or ERROR level messages are dealt with prior to submitting pull requests or deploying a new version.
+
 ## Directory Structure
 
 Note firstly that we use the [MkDocs Awesome Nav plugin](https://lukasgeiter.github.io/mkdocs-awesome-nav/) to control the menu structure, which uses a ".nav.yml" file in any directory where the default needs to be overridden.

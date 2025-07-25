@@ -35,8 +35,6 @@ The most complicated part is likely to be some assembly required, no soldering o
 
     [link to ex-installer will be invisible](/products/ex-installer/0-overview.md)
 
----
-
 - ![EX-WebThrottle Logo](/_static/images/logos/product-logo-ex-webthrottle-only-light.png){ .only-light }
   ![EX-WebThrottle Logo](/_static/images/logos/product-logo-ex-webthrottle-only-dark.png){ .only-dark }
 

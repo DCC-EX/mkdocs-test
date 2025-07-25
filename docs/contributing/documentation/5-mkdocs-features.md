@@ -32,7 +32,7 @@ Adding HTML attributes to inline or block level elements can be done using [Attr
 This renders:
 
 ![Logo example small](/_static/images/logos/logo.png){ width=100px }
-![Logo example](/_static/images/logos/logo.png)
+![Logo example](/_static/images/logos/logo.png){ width=200px }
 
 ### Snippets
 
