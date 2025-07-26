@@ -137,6 +137,7 @@ markdown_extensions:
   - def_list # Enable definition/descriptions lists, required by ezglossary
   - md_in_html # Enable markdown in embedded HTML
   - pymdownx.details
+  - pymdownx.extra # markdown in div
   - pymdownx.emoji: # Enable emojis
       emoji_index: !!python/name:material.extensions.emoji.twemoji
       emoji_generator: !!python/name:material.extensions.emoji.to_svg
@@ -156,7 +157,6 @@ markdown_extensions:
       clickable_checkbox: true
   - toc: # Table of Contents extension
       permalink: true # Add a permanent link to headings
-  - pymdownx.extra # markdown in div
 
 watch:
   - includes
