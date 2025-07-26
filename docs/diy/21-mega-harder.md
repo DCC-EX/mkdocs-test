@@ -31,28 +31,23 @@ To build a basic DIY Command Station you will need:
 ### Optionally mount your Ethernet Shield
 
 Note, you can't have Ethernet and WiFi running on the same command station, but you can install both shields and choose one or the other when installing the software.
+See [Ethernet Install](23-mega-hard-ethernet.md)
 
-The standard Ethernet shields must be first in the stack as they use pins that are not passed through the headers of the motor shield. Look underneath the shield and this will become obvious. The shields also cause issues with their height, shields above may not sit level (but will still work) unless you introduce an extra row of header extenders.
-
-Non-shield Ethernet adapters have other wiring requirements. Search our help for [details](?Ethernet).
 
 ### Prepare your motor shield
 
 FAILURE TO DO THIS CAN DESTROY YOUR MEGA.
 
 1. Unless you are using an EX8874 shield, you MUST prevent the shield from feeding track voltage into your Mega. This is done by cutting the VIN trace and/or removing the pin that feeds the Mega.
-TODO See pictures applicable to the various supported shields.
+![VIN trace](/_static/images/mega-hard/mega2.png)
 
 2. Ensure shield pins are straight and correctly aligned.
 
 ### Mount the motor shield
 
-1. Align the motor shield so that the power connectors are at the same end as the Mega power/usb connectors.
-2. Being careful to not bend any pins gently press, using a rocking motion if you need to, in order to get the motor board to seat firmly onto the Mega. Press gently until you feel you can’t put the pins in any further. Don’t force anything, there will be a visible gap.
-
-The board should be seated. Note the pins are longer than the headers. It is normal for you to see a few millimetres of the pins between the bottom of the motor board and the top of the headers.
-
-Check your work. Look under and through where the boards connect, make sure no pins missed the holes and got bent so that they run along the outside of the headers.
+1. Align the motor shield so that the power connectors are at the same end as the Mega power/usb connectors. It is normal for you to see a few millimetres of the pins between the bottom of the motor board and the top of the headers.
+![Orientation](/_static/images/mega-hard/mega3.png)
+![Orientation](/_static/images/mega-hard/mega4.png)
 
 ### Connect your track
 
@@ -64,18 +59,16 @@ If you only have one piece of track for testing, wire it to the PROG track plug.
 
  1. Your PROG track is wired to the B channel output.
  2. The MAIN track is wired to the A channel output.
+![Orientation](/_static/images/mega-hard/mega5.png)
 
 ### Connect your track power supply
 
 1. Wire your track power supply to the input turrets of the motor shield, observing polarity. It is best to create short wire with a female barrel connector.
+![Orientation](/_static/images/mega-hard/mega6.png)
 
-### Optionally install a Wifi Shield
+### Optionally install a WiFi Shield
 
-1. Make sure your Wifi shield is loaded with a suitable version of the Espressif AT command firmware. See [firmware loading instructions](?Espresif firmware)
-
-2. Prepare your WiFi shield (see supported types and notes below) by removing the pins that connect to the Mega Serial port.
-3. Mount the WiFi shield on the motor shield.
-4. Use two male-female Dupont wires to connect the shields TX pin to the Mega RX1 pin, and the shield RX pin to the Mega TX1 pin.  
+See [WiFi Install](22-mega-hard-wifi.md)
 
 TODO Photo.
 
