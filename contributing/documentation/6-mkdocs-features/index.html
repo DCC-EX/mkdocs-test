@@ -10,10 +10,10 @@
       
       
       
-        <link rel="canonical" href="https://dcc-ex.com/mkdocs-test/contributing/documentation/5-mkdocs-features/">
+        <link rel="canonical" href="https://dcc-ex.com/mkdocs-test/contributing/documentation/6-mkdocs-features/">
       
       
-        <link rel="prev" href="../4-understanding-links/">
+        <link rel="prev" href="../5-logos/">
       
       
         <link rel="next" href="../10-mermaid-diagrams/">
@@ -3071,6 +3071,10 @@
       
         
       
+        
+      
+        
+      
     
     
     
@@ -3181,6 +3185,52 @@
   
   
     <li class="md-nav__item">
+      <a href="../../../diy/22-mega-hard-wifi/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Optionally install a WiFi Shield
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../diy/23-mega-hard-ethernet/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Optionally installing an Ethernet shield
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../../diy/30-nucleo/" class="md-nav__link">
         
   
@@ -3232,7 +3282,7 @@
   
   
   <span class="md-ellipsis">
-    Installing DCC-EX software
+    Installing Command Station firmware
     
   </span>
   
@@ -4130,6 +4180,8 @@
       
         
       
+        
+      
     
     
     
@@ -4260,6 +4312,29 @@
                 
   
   
+  
+  
+    <li class="md-nav__item">
+      <a href="../5-logos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Using Our Logos
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
     
   
   
@@ -4322,9 +4397,18 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#mkdocs-plugins" class="md-nav__link">
+  <a href="#dcc-ex-css-styling" class="md-nav__link">
     <span class="md-ellipsis">
-      MkDocs Plugins
+      DCC-EX CSS Styling
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dcc-ex-javascript-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      DCC-EX JavaScript Files
     </span>
   </a>
   
@@ -4339,6 +4423,15 @@
   
     <nav class="md-nav" aria-label="MkDocs Material Extensions">
       <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#admonitions-warning-danger-example-note" class="md-nav__link">
+    <span class="md-ellipsis">
+      Admonitions - Warning, Danger, Example, Note
+    </span>
+  </a>
+  
+</li>
         
           <li class="md-nav__item">
   <a href="#attribute-lists" class="md-nav__link">
@@ -4362,6 +4455,39 @@
   <a href="#icons-and-emojis" class="md-nav__link">
     <span class="md-ellipsis">
       Icons and Emojis
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mkdocs-plugins" class="md-nav__link">
+    <span class="md-ellipsis">
+      MkDocs Plugins
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="MkDocs Plugins">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dcc-ex-custom-latest-news-plugin" class="md-nav__link">
+    <span class="md-ellipsis">
+      DCC-EX Custom Latest News Plugin
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dcc-ex-custom-scoped-nav-plugin-and-custom-footerhtml" class="md-nav__link">
+    <span class="md-ellipsis">
+      DCC-EX Custom Scoped Nav Plugin and Custom footer.html
     </span>
   </a>
   
@@ -4440,34 +4566,132 @@
 
 <h1 id="working-with-mkdocs">Working with MkDocs<a class="headerlink" href="#working-with-mkdocs" title="Permanent link">&para;</a></h1>
 <p>As outlined previously, MkDocs with the MkDocs Material theme are used as the basis of our documentation, utilising markdown plus other enhanced features to give our users a good experience.</p>
+<p>Only a brief introduction to these are outlined below to set the context for their use within our documentation, aside from custom plugins we have written which are covered here.</p>
+<p>Read the full <a href="https://www.mkdocs.org/">MkDocs documentation</a> and <a href="https://squidfunk.github.io/mkdocs-material/">MkDocs Material documentation</a> for more information.</p>
 <h2 id="previewing-and-deploying-mkdocs">Previewing and Deploying MkDocs<a class="headerlink" href="#previewing-and-deploying-mkdocs" title="Permanent link">&para;</a></h2>
 <p>Don't forget when working with MkDocs, you can preview locally by running <code>mkdocs serve</code> at a command prompt or bash console, and you can manually deploy to GitHub Pages (provided you have permissions to do so) with <code>mkdocs gh-deploy</code>.</p>
-<h2 id="mkdocs-plugins">MkDocs Plugins<a class="headerlink" href="#mkdocs-plugins" title="Permanent link">&para;</a></h2>
-<p>The authoritative list of enabled plugins can be determined by the "mkdocs.yml" file.</p>
-<p><strong>Do not adjust the contents of this file without liaising with the DCC-EX Documenter team to ensure no existing functionality is broken.</strong></p>
+<h2 id="dcc-ex-css-styling">DCC-EX CSS Styling<a class="headerlink" href="#dcc-ex-css-styling" title="Permanent link">&para;</a></h2>
+<p>All customised styling for our branding and other customisations is contained in the "dccex_theme.css" file.</p>
+<p><strong>Do not adjust the contents of this file without liaising with the DCC-EX Documenter team to ensure styling is consistent with our theme.</strong></p>
+<h2 id="dcc-ex-javascript-files">DCC-EX JavaScript Files<a class="headerlink" href="#dcc-ex-javascript-files" title="Permanent link">&para;</a></h2>
+<p>There are several JavaScript files included to perform various client side functions:</p>
+<ul>
+<li>clickable-cards.js - Makes a grid card clickable using the card's HREF, works with CSS to hide the link also</li>
+<li>ex-installer-run-helper.js - Helper to hide irrelevant installer links/pages based on the detected browser's operating system</li>
+<li>legacy-docs-new-tab.js - Ensures all HREF links pointing to <code>https://dcc-ex.com/legacy-docs/</code> open in a new tab</li>
+<li>platform.js - Helper to determine the browser's operating system</li>
+<li>search-helper.js - Helper to create search links, see <a href="../4-understanding-links/#the-search-link">The search link</a></li>
+</ul>
 <h2 id="mkdocs-material-extensions">MkDocs Material Extensions<a class="headerlink" href="#mkdocs-material-extensions" title="Permanent link">&para;</a></h2>
 <p>While basic markdown is sufficient to get pages published with MkDocs and our documentation, there are certain extensions and plugins for MkDocs and the MkDocs Material theme that both improve the maintainability of our documentation, and improve the experience for our users.</p>
 <p>The authoritative list of enabled extensions can be determined by the "mkdocs.yml" file.</p>
 <p><strong>Do not adjust the contents of this file without liaising with the DCC-EX Documenter team to ensure no existing functionality is broken.</strong></p>
+<h3 id="admonitions-warning-danger-example-note">Admonitions - Warning, Danger, Example, Note<a class="headerlink" href="#admonitions-warning-danger-example-note" title="Permanent link">&para;</a></h3>
+<p>Use admonitions to create callouts for specific user attention, but <strong>please ensure these are used sparingly</strong> and only where strictly necessary. Adding general notes and using these tends to make the content too "busy", but adding a specific callout about voltage level differences is a good use case.</p>
+<p>Some examples:</p>
+<div class="highlight"><pre><span></span><code>!!! warning &quot;This is a warning&quot;
+
+    Warnings are good to call out when appropriate.
+</code></pre></div>
+<div class="admonition warning">
+<p class="admonition-title">This is a warning</p>
+<p>Warnings are good to call out when appropriate.</p>
+</div>
+<div class="highlight"><pre><span></span><code>!!! danger &quot;This is dangerous!&quot;
+
+    When dealing with things like voltage levels or power supplies, these are good to call out.
+</code></pre></div>
+<div class="admonition danger">
+<p class="admonition-title">This is dangerous!</p>
+<p>When dealing with things like voltage levels or power supplies, these are good to call out.</p>
+</div>
+<div class="highlight"><pre><span></span><code>??? example &quot;A collapsible example&quot;
+
+    Examples can be good to call out sparingly, and this one is collapsible.
+</code></pre></div>
+<details class="example">
+<summary>A collapsible example</summary>
+<p>Examples can be good to call out sparingly, and this one is collapsible.</p>
+</details>
+<div class="highlight"><pre><span></span><code>!!! note &quot;A general note&quot;
+
+    This is a general note, use very sparingly.
+</code></pre></div>
+<div class="admonition note">
+<p class="admonition-title">A general note</p>
+<p>This is a general note, use very sparingly.</p>
+</div>
 <h3 id="attribute-lists">Attribute Lists<a class="headerlink" href="#attribute-lists" title="Permanent link">&para;</a></h3>
 <p>Adding HTML attributes to inline or block level elements can be done using <a href="https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown/?h=attr#attribute-lists">Attribute Lists</a>.</p>
+<p><strong>NOTE</strong> that like all markdown syntax, there must be no spaces between the attribute list and the element it is being applied to.</p>
 <div class="highlight"><pre><span></span><code>![<span class="nt">Logo example small</span>](<span class="na">/_static/images/logos/logo.png</span>){ width=100px }
 ![<span class="nt">Logo example</span>](<span class="na">/_static/images/logos/logo.png</span>){ width=200px }
 </code></pre></div>
 <p>This renders:</p>
 <p><img alt="Logo example small" src="../../../_static/images/logos/logo.png" width="100px" />
 <img alt="Logo example" src="../../../_static/images/logos/logo.png" width="200px" /></p>
+<p>The other most common example in our documentation is to provide a specific CSS class to an element, for example our buttons are a CSS class applied to a link:</p>
+<div class="highlight"><pre><span></span><code>[<span class="nt">Windows x64</span>](<span class="na">https://github.com/DCC-EX/EX-Installer/releases/latest/download/EX-Installer-Win64.exe</span>){ .md-button }
+</code></pre></div>
+<p>Renders <a class="md-button" href="https://github.com/DCC-EX/EX-Installer/releases/latest/download/EX-Installer-Win64.exe">Windows x64</a></p>
+<p>Multiple attributes can be applied using spaces between them, don't use a comma or any other separator.</p>
+<p>For example, this logo will be 100px wide and only show in light mode (switch to dark mode to hide it):</p>
+<div class="highlight"><pre><span></span><code>![<span class="nt">Logo example</span>](<span class="na">/_static/images/logos/logo.png</span>){ width=100px .only-light }
+</code></pre></div>
+<p><img alt="Logo example" class="only-light" src="../../../_static/images/logos/logo.png" width="100px" /></p>
 <h3 id="snippets">Snippets<a class="headerlink" href="#snippets" title="Permanent link">&para;</a></h3>
 <p>To help us remove unnecessary duplication of content, we have enabled the <code>pymdownx.snippets</code> extension, which allows us to include content from a single file in other markdown files.</p>
-<div class="highlight"><pre><span></span><code>\--8&lt;-- &quot;includes/&lt;directory&gt;/&lt;filename&gt;&quot;
+<p>All files that are to be included as snippets must reside in the "includes" directory, and preferably within a subdirectory relevant to the topic.</p>
+<p><strong>NOTE:</strong> the code below includes extra back tick "`" characters at the beginning and end to prevent MkDocs rendering this as a snippet.</p>
+<div class="highlight"><pre><span></span><code><span class="sb">`--8&lt;-- &quot;includes/snippet-example/snippet-example.md&quot;`</span>
 </code></pre></div>
+<p>The text below is included from this file:</p>
+<p>This text is being included from the file <code>includes/snippet-example/snippet-example.md</code>.</p>
 <h3 id="icons-and-emojis">Icons and Emojis<a class="headerlink" href="#icons-and-emojis" title="Permanent link">&para;</a></h3>
 <p>To include an icon or emoji search for them in the <a href="https://squidfunk.github.io/mkdocs-material/reference/icons-emojis/">Icons, Emojis</a> section of the documentation.</p>
 <p>To include, simply reference them as such:</p>
 <div class="highlight"><pre><span></span><code>:thumbsup:
 </code></pre></div>
-<p>This renders:</p>
-<p><img alt="👍" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f44d.svg" title=":thumbsup:" /></p>
+<p>This renders <img alt="👍" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f44d.svg" title=":thumbsup:" /></p>
+<h2 id="mkdocs-plugins">MkDocs Plugins<a class="headerlink" href="#mkdocs-plugins" title="Permanent link">&para;</a></h2>
+<p>The authoritative list of enabled plugins can be determined by the "mkdocs.yml" file.</p>
+<p><strong>Do not adjust the contents of this file without liaising with the DCC-EX Documenter team to ensure no existing functionality is broken.</strong></p>
+<p>We have written two custom plugins for MkDocs to highlight the latest news articles and ensure the previous/next navigation buttons make sense within the context of what the user is seeing.</p>
+<p>These plugins reside within the "plugins" directory and are included in "requirements.txt" for installation by contributors.</p>
+<h3 id="dcc-ex-custom-latest-news-plugin">DCC-EX Custom Latest News Plugin<a class="headerlink" href="#dcc-ex-custom-latest-news-plugin" title="Permanent link">&para;</a></h3>
+<p>This plugin simply grabs the title of the latest news/blog articles to create an unordered list which can be used in markdown files.</p>
+<p>To include it in a file, include this text on its own line with a blank line above and below:</p>
+<div class="highlight"><pre><span></span><code><span class="k">-</span><span class="w"> </span>:material-newspaper: New Documentation
+{ .news-headline-list }
+</code></pre></div>
+<p>You may need to indent this line to suit the nesting of lists etc.</p>
+<p>This is included as a plugin in mkdocs.yml:</p>
+<div class="highlight"><pre><span></span><code><span class="nt">plugins</span><span class="p">:</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">latest-news</span>
+</code></pre></div>
+<p>By default, the latest 2 articles are included, this can be changed with:</p>
+<div class="highlight"><pre><span></span><code><span class="nt">plugins</span><span class="p">:</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">latest-news</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">count</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">3</span>
+</code></pre></div>
+<p>To customise the list styling, either create the default class "news-list" or define your own:</p>
+<div class="highlight"><pre><span></span><code><span class="nt">plugins</span><span class="p">:</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">latest-news</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">list-class</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">my-list-class</span>
+</code></pre></div>
+<p>To ensure the CSS class correctly overrides MkDocs Material classes, make it specific, eg:</p>
+<div class="highlight"><pre><span></span><code><span class="p">.</span><span class="nc">md-typeset</span><span class="w"> </span><span class="nt">li</span><span class="p">.</span><span class="nc">news-headline-list</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">font-family</span><span class="p">:</span><span class="w"> </span><span class="n">Audiowide</span><span class="p">,</span><span class="n">Helvetica</span><span class="p">,</span><span class="n">Arial</span><span class="p">,</span><span class="kc">sans-serif</span><span class="p">;</span>
+<span class="w">  </span><span class="k">list-style</span><span class="p">:</span><span class="w"> </span><span class="kc">none</span><span class="p">;</span>
+<span class="w">  </span><span class="k">padding-left</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="w">  </span><span class="k">margin-left</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="cp">!important</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<h3 id="dcc-ex-custom-scoped-nav-plugin-and-custom-footerhtml">DCC-EX Custom Scoped Nav Plugin and Custom footer.html<a class="headerlink" href="#dcc-ex-custom-scoped-nav-plugin-and-custom-footerhtml" title="Permanent link">&para;</a></h3>
+<p>This plugin is used to set the scope of the previous and next navigation buttons to the directory pages are located in.</p>
+<p>The first page in a directory will have no previous button, and the last no next button.</p>
+<p><strong>NOTE:</strong> This is calculated based on the sorting order of the page file names within the directory, and therefore custom ordering of pages using .nav.yml will cause unexpected results.</p>
+<p>To enable this customised navigation, a custom "footer.html" template has been included and can be found in "overrides/partials/footer.html". This is required in order to show/hide the previous and next arrows as determined by the plugin.</p>
 
 
 
@@ -4488,7 +4712,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="July 25, 2025 19:25:02 UTC">July 25, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="July 26, 2025 23:20:01 UTC">July 26, 2025</span>
   </span>
 
     
@@ -4527,7 +4751,7 @@
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../4-understanding-links/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Understanding Links">
+          <a href="../5-logos/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Using Our Logos">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -4537,7 +4761,7 @@
                 Previous
               </span>
               <div class="md-ellipsis">
-                Understanding Links
+                Using Our Logos
               </div>
             </div>
           </a>
