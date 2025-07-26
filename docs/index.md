@@ -31,7 +31,7 @@ hide:
 
 <div class="grid cards clickable inner-column-card-grid" markdown>
 
-- :material-list-status:{ .lg .middle } **To Do Items for Release**{ .card-heading }
+- :material-list-status:{ .lg .middle } **Release Checklist**{ .card-heading }
 
     ---
 
@@ -87,8 +87,6 @@ hide:
 
 <div class="grid cards clickable inner-column-card-grid" markdown>
 
-<!-- - ![DCC-EX News](/_static/images/logos/product-logo-news-only-light.png){ .only-light }
-  ![DCC-EX News](/_static/images/logos/product-logo-news-only-dark.png){ .only-dark } -->
 - :material-newspaper-variant-outline:{ .lg .middle } **Latest News**{ .card-heading }
 
     ---
@@ -106,8 +104,6 @@ hide:
 
     [link to downloads will be invisible](/getting-started/01-getting-started.md)
 
-<!-- - ![DCC-EX Downloads](/_static/images/logos/product-logo-download-light.png){ .only-light }
-  ![DCC-EX Downloads](/_static/images/logos/product-logo-download-dark.png){ .only-dark } -->
 - :material-download:{ .lg .middle } **Downloads**{ .card-heading }
 
     ---

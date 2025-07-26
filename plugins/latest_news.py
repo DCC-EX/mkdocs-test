@@ -5,7 +5,7 @@ These are used to create an unordered list which can be used in markdown files.
 
 To include it in a file, include this text on its own line with a blank line above and below:
 
-<! -- LATEST-NEWS -->
+<!-- LATEST-NEWS -->
 
 NOTE: You may need to indent this line to suit the nesting of lists etc.
 

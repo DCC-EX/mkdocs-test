@@ -27,6 +27,10 @@ So:
 
 When running locally with ``mkdocs serve``, ensure any INFO, WARNING, or ERROR level messages are dealt with prior to submitting pull requests or deploying a new version.
 
+!!! warning
+
+    When we release the new MkDocs based documentation, the deployment GitHub workflow will enforce ``strict`` mode, meaning any issues will generate a workflow error, preventing updates being deployed.
+
 ## Directory Structure
 
 Note firstly that we use the [MkDocs Awesome Nav plugin](https://lukasgeiter.github.io/mkdocs-awesome-nav/) to control the menu structure, which uses a ".nav.yml" file in any directory where the default needs to be overridden.
@@ -36,3 +40,5 @@ The top level directories under the "docs" directory determine the tabs or horiz
 **Do not adjust the top level directories without consulting the DCC-EX Documenter team, as these fundamentally adjust the user experience.**
 
 If a new top level directory is to be added, it needs to be added to the "/docs/.nav.yml" file in the appropriate order. Files and directories created within existing top level directories will automatically be added to the menus (see [Page Naming and Titles](#directory-naming-page-naming-and-titles) for page ordering).
+
+Also note that our custom [Scoped Nav](/contributing/documentation/6-mkdocs-features.md#dcc-ex-custom-scoped-nav-plugin-and-custom-footerhtml) plugin automatically adjusts previous/next links, so overriding page ordering in ".nav.yml" will cause issues, so please do not override page ordering in this manner, but rather use numbers as outlined in [Directory Naming, Page Naming, and Titles](#directory-naming-page-naming-and-titles).

@@ -12,8 +12,8 @@ To build a basic DIY Command Station in easy steps you will need:
 - an Arduino Mega microprocessor
 - USB cable to your PC for the processor.
 - an EX-MotorShield8874 to power the track.
-- A double-insulated DC power supply with a voltage suitable for your layout/locos. 
-- Optionally.. an EX-WiFiSheild8266 to use WiFi throttles.
+- A double-insulated DC power supply with a voltage suitable for your layout/locos.
+- Optionally.. an EX-WiFiShield8266 to use WiFi throttles.
 
 ## Step By Step Build
 
@@ -45,11 +45,9 @@ Check your work. Look under and through where the boards connect, make sure no p
 
 4. Take a second jumper wire and connect it to any one of the row of Rx pins on the WiFi Board and connect the other end to Tx1 on the mega (pin 18).![txrx](/_static/images/mega/mega6.png)
 
-
 ### Connect your power supply
 
 We recommend you label the power supply so that it does not get confused with others of different voltages you may use later. Plug in to the barrel connector on the EX8874 shield (NOT the mega).
-
 
 ### Connect to your PC
 

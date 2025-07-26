@@ -132,15 +132,18 @@ copyright: |
 
 # Markdown extensions to enhance content
 markdown_extensions:
+  - admonition
   - attr_list # Enabled setting attributes in markdown eg. image width
   - def_list # Enable definition/descriptions lists, required by ezglossary
   - md_in_html # Enable markdown in embedded HTML
+  - pymdownx.details
   - pymdownx.emoji: # Enable emojis
       emoji_index: !!python/name:material.extensions.emoji.twemoji
       emoji_generator: !!python/name:material.extensions.emoji.to_svg
   - pymdownx.inlinehilite
   - pymdownx.keys
-  - pymdownx.snippets
+  - pymdownx.snippets:
+      check_paths: true
   - pymdownx.superfences: # Enhanced code blocks
       custom_fences:
         - name: mermaid # Enable Mermaid JS diagrams

@@ -1,4 +1,4 @@
-# Testing your commnd station
+# Testing your Command Station
 
  (LOTS OF TODO in this file)
 
