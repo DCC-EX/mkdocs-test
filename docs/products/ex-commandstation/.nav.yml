@@ -2,6 +2,6 @@ nav:
   - The DCC-EX Command Station: 0-overview.md
   - EX-CSB1 CommandStation Booster: 1-ex-csb1.md
   - Testing your commnd station: testing.md
-  - TrackManager: trackmanager
+  - TrackManager: trackmanager/0-trackmanager.md
   - Accesssories: accessories
   - EXRAIL: exrail
