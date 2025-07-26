@@ -1,6 +1,11 @@
 # What is EXRAIL?
 
-EXRAIL is an “EXtended Railroad Automation Instruction Language” used to:
+EXRAIL is DCC-EX’s own high level programming language, specially written to allow you to animate and automate your layout. By combining EXRAIL and suitable accessories you can choreograph all your train movements with points/turnouts, turntable actions, signals, lights, sounds, time and more. 
+EXRAIL commands use terms like “SPEED” and “SIGNAL” which are readily understandable by users. It translates these terms in the background, into the code your Command Station needs to run them efficiently.
+Such a powerful program also demands respect and great care in how you set it up: a single lowercase letter instead of an upper case one or the mistaken omission of a comma can prevent your code from working. 
+The following ‘cookbooks’ shows you what can be achieved and guides you step by step through real life scenarios for you to try for yourself and to build your own automations. Crucially, the cookbooks include the relevant sections of EXRAIL code, written by EXRAIL’s builders, for you to copy and reuse, to make it as easy as we can to get you started. We hope you enjoy the new possibilities that EXRAIL opens up for you. 
+
+EXRAIL is our acronym for “EXtended Railroad Automation Instruction Language” used to:
 
 - Describe your turnouts, signals etc.
 - Configure your Command Station to understand the hardware and accessories you have attached.

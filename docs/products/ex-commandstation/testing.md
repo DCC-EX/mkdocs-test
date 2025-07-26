@@ -2,6 +2,19 @@
 
  (LOTS OF TODO in this file)
 
+ ## In Summary
+
+(Ian note: I have only made a start on this summary section. I hope it gives everyone a sense for what I would have loved to find in one place as a conductor.)
+We hope your Command Station works out of the box. If it doesn't, don't worry, we know a bunch of this stuff can be unfamiliar and we're here to help you get it working. This guide is your first port of call. The key steps to check first, in this order, are:
+1. Is the LED on the circuitboard showing a functioning microcontroller? (if it isn't try unplugging from power and plugging it back in again).
+2. Have you been able to assemble it all together OK or are you worried that something "doesn't look right"? Double check here: to see our reference visuals. If you're using a CSB1, then you can skip this step.
+3. Have you been able to connect your computer to the Command Station via a USB connector, and then been able to successfully load the DCC-EX software? You might have had issues finding a "com port" (see link). Possibly the installer came up with errors and now your stuck? If you are, here's the link to get that working as easily as possible: abc link (don't forget the CH340 driver issue).
+4. If you've done the above, have you been able to connect up your computer to the Command Station and get any information from it via USB? If you can't connect and get error messages about COM ports, 'no port available' or somesuch, close any other programs that may be using it. The classics are to leave either the Arduino IDE or JRMI open and then your Command Station may be connect at all! If all else fails, turn your Command Station off, turn your computer off, disconnect the USB cable, reconnect the cable and power up again.
+5. If you are brand new to the world of DCC, and have left the installer loading with our default configuration, have you connected your track power to the 'A Output/MAIN' from the controller? The other output, 'B/PROG' will not run locos forwards or backwards without more changes to your system! It is there solely to program and test the DCC decoders on your locos. Welcome to some of the differences of DCC. You can change all these settings in your Command Station but that's for later. Connect the track up to 'MAIN'.
+
+If you have tried these steps and you still can't get the Command Station to work, head over to our Discord server and chat to the community and the suppor team.
+(Ian's edits finish here - moving forward with this once I've got a bit of feedback. There may well be more common problematic steps to get started. Having these spelled-out would have made things so much more reassuring for me. I had pretty much all of them when building a MEGA-based CS)
+
 The simplest and most direct testing method is to use a serial monitor to talk directly to the USB connection of you command station. This is a fundamental aspect of the Arduino system and thus avoids issues such as wifi connections. Indeed, this is the only way to see what's going wrong if your problems are wifi related.
 
 ## Serial Monitors
