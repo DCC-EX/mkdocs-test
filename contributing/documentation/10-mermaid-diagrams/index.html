@@ -4491,13 +4491,12 @@
 <span class="s">  B ----&gt;|No| E[Yay!];</span>
 <span class="sb">```</span>
 </code></pre></div>
-<div class="highlight"><pre><span></span><code>graph LR
+<pre class="mermaid"><code>graph LR
   A[Start] --&gt; B{Error?};
   B --&gt;|Yes| C[Hmm...];
   C --&gt; D[Debug];
   D --&gt; B;
-  B ----&gt;|No| E[Yay!];
-</code></pre></div>
+  B ----&gt;|No| E[Yay!];</code></pre>
 <h2 id="sequence-diagram">Sequence Diagram<a class="headerlink" href="#sequence-diagram" title="Permanent link">&para;</a></h2>
 <div class="highlight"><pre><span></span><code>``` mermaid
 sequenceDiagram
@@ -4512,7 +4511,7 @@ sequenceDiagram
   Bob--&gt;&gt;John: Jolly good!
 ```
 </code></pre></div>
-<div class="highlight"><pre><span></span><code>sequenceDiagram
+<pre class="mermaid"><code>sequenceDiagram
   autonumber
   Alice-&gt;&gt;John: Hello John, how are you?
   loop Healthcheck
@@ -4521,8 +4520,7 @@ sequenceDiagram
   Note right of John: Rational thoughts!
   John--&gt;&gt;Alice: Great!
   John-&gt;&gt;Bob: How about you?
-  Bob--&gt;&gt;John: Jolly good!
-</code></pre></div>
+  Bob--&gt;&gt;John: Jolly good!</code></pre>
 <h2 id="state-diagram">State Diagram<a class="headerlink" href="#state-diagram" title="Permanent link">&para;</a></h2>
 <div class="highlight"><pre><span></span><code>``` mermaid
 stateDiagram-v2
@@ -4538,7 +4536,7 @@ stateDiagram-v2
     State4 --&gt; [*]
 ```
 </code></pre></div>
-<div class="highlight"><pre><span></span><code>stateDiagram-v2
+<pre class="mermaid"><code>stateDiagram-v2
   state fork_state &lt;&lt;fork&gt;&gt;
     [*] --&gt; fork_state
     fork_state --&gt; State2
@@ -4548,8 +4546,7 @@ stateDiagram-v2
     State2 --&gt; join_state
     State3 --&gt; join_state
     join_state --&gt; State4
-    State4 --&gt; [*]
-</code></pre></div>
+    State4 --&gt; [*]</code></pre>
 
 
 
