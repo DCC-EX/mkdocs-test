@@ -2,410 +2,414 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://dcc-ex.com/mkdocs-test/</loc>
-         <lastmod>2025-07-26</lastmod>
+         <lastmod>2025-07-27</lastmod>
     </url>
     <url>
          <loc>https://dcc-ex.com/mkdocs-test/contributing/0-contributing/</loc>
-         <lastmod>2025-07-26</lastmod>
+         <lastmod>2025-07-27</lastmod>
     </url>
     <url>
-         <loc>https://dcc-ex.com/mkdocs-test/contributing/99-release-todo/</loc>
-         <lastmod>2025-07-26</lastmod>
+         <loc>https://dcc-ex.com/mkdocs-test/contributing/98-user-journeys/</loc>
+         <lastmod>2025-07-27</lastmod>
+    </url>
+    <url>
+         <loc>https://dcc-ex.com/mkdocs-test/contributing/99-release-checklist/</loc>
+         <lastmod>2025-07-27</lastmod>
     </url>
     <url>
          <loc>https://dcc-ex.com/mkdocs-test/contributing/code/0-contributing-code/</loc>
-         <lastmod>2025-07-26</lastmod>
+         <lastmod>2025-07-27</lastmod>
     </url>
     <url>
          <loc>https://dcc-ex.com/mkdocs-test/contributing/documentation/0-docs/</loc>
-         <lastmod>2025-07-26</lastmod>
+         <lastmod>2025-07-27</lastmod>
     </url>
     <url>
          <loc>https://dcc-ex.com/mkdocs-test/contributing/documentation/10-mermaid-diagrams/</loc>
-         <lastmod>2025-07-26</lastmod>
+         <lastmod>2025-07-27</lastmod>
     </url>
     <url>
          <loc>https://dcc-ex.com/mkdocs-test/contributing/documentation/2-standards/</loc>
-         <lastmod>2025-07-26</lastmod>
+         <lastmod>2025-07-27</lastmod>
     </url>
     <url>
          <loc>https://dcc-ex.com/mkdocs-test/contributing/documentation/3-formatting-guide/</loc>
-         <lastmod>2025-07-26</lastmod>
+         <lastmod>2025-07-27</lastmod>
     </url>
     <url>
          <loc>https://dcc-ex.com/mkdocs-test/contributing/documentation/4-understanding-links/</loc>
-         <lastmod>2025-07-26</lastmod>
+         <lastmod>2025-07-27</lastmod>
     </url>
     <url>
          <loc>https://dcc-ex.com/mkdocs-test/contributing/documentation/5-logos/</loc>
-         <lastmod>2025-07-26</lastmod>
+         <lastmod>2025-07-27</lastmod>
     </url>
     <url>
          <loc>https://dcc-ex.com/mkdocs-test/contributing/documentation/6-mkdocs-features/</loc>
-         <lastmod>2025-07-26</lastmod>
+         <lastmod>2025-07-27</lastmod>
     </url>
     <url>
          <loc>https://dcc-ex.com/mkdocs-test/diy/1-diy/</loc>
-         <lastmod>2025-07-26</lastmod>
+         <lastmod>2025-07-27</lastmod>
     </url>
     <url>
          <loc>https://dcc-ex.com/mkdocs-test/diy/20-mega-easy/</loc>
-         <lastmod>2025-07-26</lastmod>
+         <lastmod>2025-07-27</lastmod>
     </url>
     <url>
          <loc>https://dcc-ex.com/mkdocs-test/diy/21-mega-harder/</loc>
-         <lastmod>2025-07-26</lastmod>
+         <lastmod>2025-07-27</lastmod>
     </url>
     <url>
          <loc>https://dcc-ex.com/mkdocs-test/diy/22-mega-hard-wifi/</loc>
-         <lastmod>2025-07-26</lastmod>
+         <lastmod>2025-07-27</lastmod>
     </url>
     <url>
          <loc>https://dcc-ex.com/mkdocs-test/diy/23-mega-hard-ethernet/</loc>
-         <lastmod>2025-07-26</lastmod>
+         <lastmod>2025-07-27</lastmod>
     </url>
     <url>
          <loc>https://dcc-ex.com/mkdocs-test/diy/30-nucleo/</loc>
-         <lastmod>2025-07-26</lastmod>
+         <lastmod>2025-07-27</lastmod>
     </url>
     <url>
          <loc>https://dcc-ex.com/mkdocs-test/diy/40-esp32/</loc>
-         <lastmod>2025-07-26</lastmod>
+         <lastmod>2025-07-27</lastmod>
     </url>
     <url>
          <loc>https://dcc-ex.com/mkdocs-test/diy/80-installer/</loc>
-         <lastmod>2025-07-26</lastmod>
+         <lastmod>2025-07-27</lastmod>
     </url>
     <url>
          <loc>https://dcc-ex.com/mkdocs-test/diy/90-others/</loc>
-         <lastmod>2025-07-26</lastmod>
+         <lastmod>2025-07-27</lastmod>
     </url>
     <url>
          <loc>https://dcc-ex.com/mkdocs-test/getting-started/01-getting-started/</loc>
-         <lastmod>2025-07-26</lastmod>
+         <lastmod>2025-07-27</lastmod>
     </url>
     <url>
          <loc>https://dcc-ex.com/mkdocs-test/getting-started/download-linux/</loc>
-         <lastmod>2025-07-26</lastmod>
+         <lastmod>2025-07-27</lastmod>
     </url>
     <url>
          <loc>https://dcc-ex.com/mkdocs-test/getting-started/download-mac/</loc>
-         <lastmod>2025-07-26</lastmod>
+         <lastmod>2025-07-27</lastmod>
     </url>
     <url>
          <loc>https://dcc-ex.com/mkdocs-test/getting-started/download-win/</loc>
-         <lastmod>2025-07-26</lastmod>
+         <lastmod>2025-07-27</lastmod>
     </url>
     <url>
          <loc>https://dcc-ex.com/mkdocs-test/glossary/glossary/</loc>
-         <lastmod>2025-07-26</lastmod>
+         <lastmod>2025-07-27</lastmod>
     </url>
     <url>
          <loc>https://dcc-ex.com/mkdocs-test/news/</loc>
-         <lastmod>2025-07-26</lastmod>
+         <lastmod>2025-07-27</lastmod>
     </url>
     <url>
          <loc>https://dcc-ex.com/mkdocs-test/news/2025/06/new-documentation/</loc>
-         <lastmod>2025-07-26</lastmod>
+         <lastmod>2025-07-27</lastmod>
     </url>
     <url>
          <loc>https://dcc-ex.com/mkdocs-test/products/products/</loc>
-         <lastmod>2025-07-26</lastmod>
+         <lastmod>2025-07-27</lastmod>
     </url>
     <url>
          <loc>https://dcc-ex.com/mkdocs-test/products/ex-commandstation/0-overview/</loc>
-         <lastmod>2025-07-26</lastmod>
+         <lastmod>2025-07-27</lastmod>
     </url>
     <url>
          <loc>https://dcc-ex.com/mkdocs-test/products/ex-commandstation/1-ex-csb1/</loc>
-         <lastmod>2025-07-26</lastmod>
+         <lastmod>2025-07-27</lastmod>
     </url>
     <url>
          <loc>https://dcc-ex.com/mkdocs-test/products/ex-commandstation/testing/</loc>
-         <lastmod>2025-07-26</lastmod>
+         <lastmod>2025-07-27</lastmod>
     </url>
     <url>
          <loc>https://dcc-ex.com/mkdocs-test/products/ex-commandstation/accessories/1-accessories/</loc>
-         <lastmod>2025-07-26</lastmod>
+         <lastmod>2025-07-27</lastmod>
     </url>
     <url>
          <loc>https://dcc-ex.com/mkdocs-test/products/ex-commandstation/accessories/20-actuators/</loc>
-         <lastmod>2025-07-26</lastmod>
+         <lastmod>2025-07-27</lastmod>
     </url>
     <url>
          <loc>https://dcc-ex.com/mkdocs-test/products/ex-commandstation/accessories/30-sensors/</loc>
-         <lastmod>2025-07-26</lastmod>
+         <lastmod>2025-07-27</lastmod>
     </url>
     <url>
          <loc>https://dcc-ex.com/mkdocs-test/products/ex-commandstation/accessories/50-connecting-servo-turnout/</loc>
-         <lastmod>2025-07-26</lastmod>
+         <lastmod>2025-07-27</lastmod>
     </url>
     <url>
          <loc>https://dcc-ex.com/mkdocs-test/products/ex-commandstation/accessories/60-hardware-list/</loc>
-         <lastmod>2025-07-26</lastmod>
+         <lastmod>2025-07-27</lastmod>
     </url>
     <url>
          <loc>https://dcc-ex.com/mkdocs-test/products/ex-commandstation/accessories/88-i2c-intro/</loc>
-         <lastmod>2025-07-26</lastmod>
+         <lastmod>2025-07-27</lastmod>
     </url>
     <url>
          <loc>https://dcc-ex.com/mkdocs-test/products/ex-commandstation/accessories/89-i2c-wiring/</loc>
-         <lastmod>2025-07-26</lastmod>
+         <lastmod>2025-07-27</lastmod>
     </url>
     <url>
          <loc>https://dcc-ex.com/mkdocs-test/products/ex-commandstation/accessories/90-buying-i2c-devices/</loc>
-         <lastmod>2025-07-26</lastmod>
+         <lastmod>2025-07-27</lastmod>
     </url>
     <url>
          <loc>https://dcc-ex.com/mkdocs-test/products/ex-commandstation/exrail/1-exrail/</loc>
-         <lastmod>2025-07-26</lastmod>
+         <lastmod>2025-07-27</lastmod>
     </url>
     <url>
          <loc>https://dcc-ex.com/mkdocs-test/products/ex-commandstation/exrail/2-autostart/</loc>
-         <lastmod>2025-07-26</lastmod>
+         <lastmod>2025-07-27</lastmod>
     </url>
     <url>
          <loc>https://dcc-ex.com/mkdocs-test/products/ex-commandstation/exrail/cookbooks/01-vpins/</loc>
-         <lastmod>2025-07-26</lastmod>
+         <lastmod>2025-07-27</lastmod>
     </url>
     <url>
          <loc>https://dcc-ex.com/mkdocs-test/products/ex-commandstation/exrail/cookbooks/animation-sensors/</loc>
-         <lastmod>2025-07-26</lastmod>
+         <lastmod>2025-07-27</lastmod>
     </url>
     <url>
          <loc>https://dcc-ex.com/mkdocs-test/products/ex-commandstation/exrail/cookbooks/dc-tracks/</loc>
-         <lastmod>2025-07-26</lastmod>
+         <lastmod>2025-07-27</lastmod>
     </url>
     <url>
          <loc>https://dcc-ex.com/mkdocs-test/products/ex-commandstation/exrail/cookbooks/estop-button/</loc>
-         <lastmod>2025-07-26</lastmod>
+         <lastmod>2025-07-27</lastmod>
     </url>
     <url>
          <loc>https://dcc-ex.com/mkdocs-test/products/ex-commandstation/exrail/cookbooks/flashing-signals/</loc>
-         <lastmod>2025-07-26</lastmod>
+         <lastmod>2025-07-27</lastmod>
     </url>
     <url>
          <loc>https://dcc-ex.com/mkdocs-test/products/ex-commandstation/exrail/cookbooks/roster-similar-locos/</loc>
-         <lastmod>2025-07-26</lastmod>
+         <lastmod>2025-07-27</lastmod>
     </url>
     <url>
          <loc>https://dcc-ex.com/mkdocs-test/products/ex-commandstation/exrail/cookbooks/route-button-control/</loc>
-         <lastmod>2025-07-26</lastmod>
+         <lastmod>2025-07-27</lastmod>
     </url>
     <url>
          <loc>https://dcc-ex.com/mkdocs-test/products/ex-commandstation/exrail/cookbooks/startup-poweron/</loc>
-         <lastmod>2025-07-26</lastmod>
+         <lastmod>2025-07-27</lastmod>
     </url>
     <url>
          <loc>https://dcc-ex.com/mkdocs-test/products/ex-commandstation/exrail/cookbooks/startup-set-track/</loc>
-         <lastmod>2025-07-26</lastmod>
+         <lastmod>2025-07-27</lastmod>
     </url>
     <url>
          <loc>https://dcc-ex.com/mkdocs-test/products/ex-commandstation/exrail/cookbooks/timecontrol/</loc>
-         <lastmod>2025-07-26</lastmod>
+         <lastmod>2025-07-27</lastmod>
     </url>
     <url>
          <loc>https://dcc-ex.com/mkdocs-test/products/ex-commandstation/exrail/cookbooks/advanced/5-display-locos-on-oled/</loc>
-         <lastmod>2025-07-26</lastmod>
+         <lastmod>2025-07-27</lastmod>
     </url>
     <url>
          <loc>https://dcc-ex.com/mkdocs-test/products/ex-commandstation/exrail/cookbooks/advanced/analog-sensors/</loc>
-         <lastmod>2025-07-26</lastmod>
+         <lastmod>2025-07-27</lastmod>
     </url>
     <url>
          <loc>https://dcc-ex.com/mkdocs-test/products/ex-commandstation/exrail/cookbooks/advanced/tca8418-keyboard/</loc>
-         <lastmod>2025-07-26</lastmod>
+         <lastmod>2025-07-27</lastmod>
     </url>
     <url>
          <loc>https://dcc-ex.com/mkdocs-test/products/ex-commandstation/exrail/cookbooks/driving-trains/1-basic/</loc>
-         <lastmod>2025-07-26</lastmod>
+         <lastmod>2025-07-27</lastmod>
     </url>
     <url>
          <loc>https://dcc-ex.com/mkdocs-test/products/ex-commandstation/exrail/cookbooks/driving-trains/3-functions/</loc>
-         <lastmod>2025-07-26</lastmod>
+         <lastmod>2025-07-27</lastmod>
     </url>
     <url>
          <loc>https://dcc-ex.com/mkdocs-test/products/ex-commandstation/exrail/cookbooks/driving-trains/30-automations/</loc>
-         <lastmod>2025-07-26</lastmod>
+         <lastmod>2025-07-27</lastmod>
     </url>
     <url>
          <loc>https://dcc-ex.com/mkdocs-test/products/ex-commandstation/exrail/cookbooks/driving-trains/40-simple-shuttle/</loc>
-         <lastmod>2025-07-26</lastmod>
+         <lastmod>2025-07-27</lastmod>
     </url>
     <url>
          <loc>https://dcc-ex.com/mkdocs-test/products/ex-commandstation/exrail/cookbooks/driving-trains/41-improved-shuttle/</loc>
-         <lastmod>2025-07-26</lastmod>
+         <lastmod>2025-07-27</lastmod>
     </url>
     <url>
          <loc>https://dcc-ex.com/mkdocs-test/products/ex-commandstation/exrail/cookbooks/driving-trains/45-passing-loop/</loc>
-         <lastmod>2025-07-26</lastmod>
+         <lastmod>2025-07-27</lastmod>
     </url>
     <url>
          <loc>https://dcc-ex.com/mkdocs-test/products/ex-commandstation/exrail/cookbooks/editing-tricks/multi-files/</loc>
-         <lastmod>2025-07-26</lastmod>
+         <lastmod>2025-07-27</lastmod>
     </url>
     <url>
          <loc>https://dcc-ex.com/mkdocs-test/products/ex-commandstation/exrail/cookbooks/editing-tricks/multiple-command-stations/</loc>
-         <lastmod>2025-07-26</lastmod>
+         <lastmod>2025-07-27</lastmod>
     </url>
     <url>
          <loc>https://dcc-ex.com/mkdocs-test/products/ex-commandstation/exrail/cookbooks/editing-tricks/naming-a-sequence/</loc>
-         <lastmod>2025-07-26</lastmod>
+         <lastmod>2025-07-27</lastmod>
     </url>
     <url>
          <loc>https://dcc-ex.com/mkdocs-test/products/ex-commandstation/exrail/cookbooks/editing-tricks/using-call-return/</loc>
-         <lastmod>2025-07-26</lastmod>
+         <lastmod>2025-07-27</lastmod>
     </url>
     <url>
          <loc>https://dcc-ex.com/mkdocs-test/products/ex-commandstation/exrail/cookbooks/editing-tricks/using-macros/</loc>
-         <lastmod>2025-07-26</lastmod>
+         <lastmod>2025-07-27</lastmod>
     </url>
     <url>
          <loc>https://dcc-ex.com/mkdocs-test/products/ex-commandstation/exrail/cookbooks/flags-and-latches/flags/</loc>
-         <lastmod>2025-07-26</lastmod>
+         <lastmod>2025-07-27</lastmod>
     </url>
     <url>
          <loc>https://dcc-ex.com/mkdocs-test/products/ex-commandstation/exrail/cookbooks/flags-and-latches/latches/</loc>
-         <lastmod>2025-07-26</lastmod>
+         <lastmod>2025-07-27</lastmod>
     </url>
     <url>
          <loc>https://dcc-ex.com/mkdocs-test/products/ex-commandstation/exrail/cookbooks/neopixels/</loc>
-         <lastmod>2025-07-26</lastmod>
+         <lastmod>2025-07-27</lastmod>
     </url>
     <url>
          <loc>https://dcc-ex.com/mkdocs-test/products/ex-commandstation/exrail/cookbooks/neopixels/neopixels/</loc>
-         <lastmod>2025-07-26</lastmod>
+         <lastmod>2025-07-27</lastmod>
     </url>
     <url>
          <loc>https://dcc-ex.com/mkdocs-test/products/ex-commandstation/exrail/cookbooks/neopixels/signals/</loc>
-         <lastmod>2025-07-26</lastmod>
+         <lastmod>2025-07-27</lastmod>
     </url>
     <url>
          <loc>https://dcc-ex.com/mkdocs-test/products/ex-commandstation/exrail/cookbooks/turnouts/02-defining-dcc-turnouts/</loc>
-         <lastmod>2025-07-26</lastmod>
+         <lastmod>2025-07-27</lastmod>
     </url>
     <url>
          <loc>https://dcc-ex.com/mkdocs-test/products/ex-commandstation/exrail/cookbooks/turnouts/03-defining-pin-turnouts/</loc>
-         <lastmod>2025-07-26</lastmod>
+         <lastmod>2025-07-27</lastmod>
     </url>
     <url>
          <loc>https://dcc-ex.com/mkdocs-test/products/ex-commandstation/exrail/cookbooks/turnouts/04-defining-servo-turnouts/</loc>
-         <lastmod>2025-07-26</lastmod>
+         <lastmod>2025-07-27</lastmod>
     </url>
     <url>
          <loc>https://dcc-ex.com/mkdocs-test/products/ex-commandstation/exrail/cookbooks/turnouts/11-facing-turnouts/</loc>
-         <lastmod>2025-07-26</lastmod>
+         <lastmod>2025-07-27</lastmod>
     </url>
     <url>
          <loc>https://dcc-ex.com/mkdocs-test/products/ex-commandstation/exrail/cookbooks/turnouts/12-animated-turnouts/</loc>
-         <lastmod>2025-07-26</lastmod>
+         <lastmod>2025-07-27</lastmod>
     </url>
     <url>
          <loc>https://dcc-ex.com/mkdocs-test/products/ex-commandstation/exrail/cookbooks/turnouts/13-toggle-with-button/</loc>
-         <lastmod>2025-07-26</lastmod>
+         <lastmod>2025-07-27</lastmod>
     </url>
     <url>
          <loc>https://dcc-ex.com/mkdocs-test/products/ex-commandstation/exrail/cookbooks/various-devices/duinoNodes/</loc>
-         <lastmod>2025-07-26</lastmod>
+         <lastmod>2025-07-27</lastmod>
     </url>
     <url>
          <loc>https://dcc-ex.com/mkdocs-test/products/ex-commandstation/exrail/cookbooks/various-devices/tm-1638/</loc>
-         <lastmod>2025-07-26</lastmod>
+         <lastmod>2025-07-27</lastmod>
     </url>
     <url>
          <loc>https://dcc-ex.com/mkdocs-test/products/ex-commandstation/trackmanager/0-trackmanager/</loc>
-         <lastmod>2025-07-26</lastmod>
+         <lastmod>2025-07-27</lastmod>
     </url>
     <url>
          <loc>https://dcc-ex.com/mkdocs-test/products/ex-fastclock/01-overview/</loc>
-         <lastmod>2025-07-26</lastmod>
+         <lastmod>2025-07-27</lastmod>
     </url>
     <url>
          <loc>https://dcc-ex.com/mkdocs-test/products/ex-fastclock/02-hardware/</loc>
-         <lastmod>2025-07-26</lastmod>
+         <lastmod>2025-07-27</lastmod>
     </url>
     <url>
          <loc>https://dcc-ex.com/mkdocs-test/products/ex-fastclock/04-calibration/</loc>
-         <lastmod>2025-07-26</lastmod>
+         <lastmod>2025-07-27</lastmod>
     </url>
     <url>
          <loc>https://dcc-ex.com/mkdocs-test/products/ex-fastclock/05-installation/</loc>
-         <lastmod>2025-07-26</lastmod>
+         <lastmod>2025-07-27</lastmod>
     </url>
     <url>
          <loc>https://dcc-ex.com/mkdocs-test/products/ex-fastclock/06-configuration/</loc>
-         <lastmod>2025-07-26</lastmod>
+         <lastmod>2025-07-27</lastmod>
     </url>
     <url>
          <loc>https://dcc-ex.com/mkdocs-test/products/ex-fastclock/10-operation/</loc>
-         <lastmod>2025-07-26</lastmod>
+         <lastmod>2025-07-27</lastmod>
     </url>
     <url>
          <loc>https://dcc-ex.com/mkdocs-test/products/ex-fastclock/15-timecontrol/</loc>
-         <lastmod>2025-07-26</lastmod>
+         <lastmod>2025-07-27</lastmod>
     </url>
     <url>
          <loc>https://dcc-ex.com/mkdocs-test/products/ex-installer/0-overview/</loc>
-         <lastmod>2025-07-26</lastmod>
+         <lastmod>2025-07-27</lastmod>
     </url>
     <url>
          <loc>https://dcc-ex.com/mkdocs-test/products/ex-ioexpander/ex-ioexpander/</loc>
-         <lastmod>2025-07-26</lastmod>
+         <lastmod>2025-07-27</lastmod>
     </url>
     <url>
          <loc>https://dcc-ex.com/mkdocs-test/products/ex-turntable/ex-turntable/</loc>
-         <lastmod>2025-07-26</lastmod>
+         <lastmod>2025-07-27</lastmod>
     </url>
     <url>
          <loc>https://dcc-ex.com/mkdocs-test/purchasing/01-official-sellers/</loc>
-         <lastmod>2025-07-26</lastmod>
+         <lastmod>2025-07-27</lastmod>
     </url>
     <url>
          <loc>https://dcc-ex.com/mkdocs-test/purchasing/02-third-party-sellers/</loc>
-         <lastmod>2025-07-26</lastmod>
+         <lastmod>2025-07-27</lastmod>
     </url>
     <url>
          <loc>https://dcc-ex.com/mkdocs-test/reference/01-serial-command-basics/</loc>
-         <lastmod>2025-07-26</lastmod>
+         <lastmod>2025-07-27</lastmod>
     </url>
     <url>
          <loc>https://dcc-ex.com/mkdocs-test/reference/04-track-manager/</loc>
-         <lastmod>2025-07-26</lastmod>
+         <lastmod>2025-07-27</lastmod>
     </url>
     <url>
          <loc>https://dcc-ex.com/mkdocs-test/reference/05-dc-mode-logic/</loc>
-         <lastmod>2025-07-26</lastmod>
+         <lastmod>2025-07-27</lastmod>
     </url>
     <url>
          <loc>https://dcc-ex.com/mkdocs-test/reference/05-dc-track-sync/</loc>
-         <lastmod>2025-07-26</lastmod>
+         <lastmod>2025-07-27</lastmod>
     </url>
     <url>
          <loc>https://dcc-ex.com/mkdocs-test/reference/07-command-station-arch/</loc>
-         <lastmod>2025-07-26</lastmod>
+         <lastmod>2025-07-27</lastmod>
     </url>
     <url>
          <loc>https://dcc-ex.com/mkdocs-test/reference/08-throttle-writers-guide/</loc>
-         <lastmod>2025-07-26</lastmod>
+         <lastmod>2025-07-27</lastmod>
     </url>
     <url>
          <loc>https://dcc-ex.com/mkdocs-test/reference/serial-commands/</loc>
-         <lastmod>2025-07-26</lastmod>
+         <lastmod>2025-07-27</lastmod>
     </url>
     <url>
          <loc>https://dcc-ex.com/mkdocs-test/reference/z01-Legacy%20command%20references/</loc>
-         <lastmod>2025-07-26</lastmod>
+         <lastmod>2025-07-27</lastmod>
     </url>
     <url>
          <loc>https://dcc-ex.com/mkdocs-test/support/</loc>
-         <lastmod>2025-07-26</lastmod>
+         <lastmod>2025-07-27</lastmod>
     </url>
     <url>
          <loc>https://dcc-ex.com/mkdocs-test/support/discord/</loc>
-         <lastmod>2025-07-26</lastmod>
+         <lastmod>2025-07-27</lastmod>
     </url>
     <url>
          <loc>https://dcc-ex.com/mkdocs-test/news/category/general-dcc-ex-news/</loc>
-         <lastmod>2025-07-26</lastmod>
+         <lastmod>2025-07-27</lastmod>
     </url>
 </urlset>
