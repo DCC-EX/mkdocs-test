@@ -31,13 +31,21 @@ hide:
 
 <div class="grid cards clickable inner-column-card-grid" markdown>
 
+- :fontawesome-regular-user:{ .lg .middle } **User Personas and Journeys**{ .card-heading }
+
+    ---
+
+    Go here to ensure our users can find what they need.
+
+    [link to list](/contributing/98-user-journeys.md)
+
 - :material-list-status:{ .lg .middle } **Release Checklist**{ .card-heading }
 
     ---
 
     Go here to see what is outstanding before being able to release this new doco.
 
-    [link to list](/contributing/99-release-todo.md)
+    [link to list](/contributing/99-release-checklist.md)
 
 - :material-clock-start:{ .lg .middle } **Get Started**{ .card-heading }
 

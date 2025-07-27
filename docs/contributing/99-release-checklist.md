@@ -1,5 +1,7 @@
 # Release Checklist
 
+Everything on this page supports the team being able to determine when these docs can be released.
+
 This is a list of to do items that will allow us to release this new documentation, and move the existing to a separate "legacy-docs" URL for reference only.
 
 - [ ] Conductor friendly getting started with RTR and officially supported Mega DIY stack only
