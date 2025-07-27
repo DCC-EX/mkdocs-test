@@ -21,4 +21,4 @@ This screen shows where track modes can be set with Engine Driver:
 
 TrackManager  -  [Reference document](/reference/04-track-manager.md)  
 Multi-district DC mode track sync -  [additional detail](/reference/05-dc-track-sync.md)  
-As these pages are under development, you may also want to refer to the [legacy documentation](https://dcc-ex.com/trackmanager/index.html)
+As these pages are under development, you may also want to refer to the [legacy documentation](https://dcc-ex.com/legacy-docs/trackmanager/index.html)
