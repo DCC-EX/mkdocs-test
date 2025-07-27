@@ -1,4 +1,5 @@
 # Legacy Command Reference
 
 TODO  
-<a href="https://dcc-ex.com/reference/software/index.html#software" target="_blank">Legacy site</a>
+
+[Legacy command reference](https://dcc-ex.com/legacy-docs/reference/software/index.html#software)

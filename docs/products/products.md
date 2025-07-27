@@ -42,7 +42,7 @@ The most complicated part is likely to be some assembly required, no soldering o
 
     Connect to EX‑CommandStation via the USB port of a computer.
 
-    [link to WebThrottle will be invisible](https://dcc-ex.com/ex-webthrottle/index.html#ex-webthrottle)
+    [link to WebThrottle will be invisible](https://dcc-ex.com/legacy-docs/ex-webthrottle/index.html#ex-webthrottle)
 
 - ![EX-Toolbox Logo](/_static/images/logos/product-logo-ex-toolbox-only-light.png){ .only-light }
   ![EX-Toolbox Logo](/_static/images/logos/product-logo-ex-toolbox-only-dark.png){ .only-dark }
@@ -51,7 +51,7 @@ The most complicated part is likely to be some assembly required, no soldering o
 
     An Android app full of useful tools.
 
-    [link to ex-toolbox will be invisible](https://dcc-ex.com/ex-toolbox/index.html#ex-toolbox)
+    [link to ex-toolbox will be invisible](https://dcc-ex.com/legacy-docs/ex-toolbox/index.html#ex-toolbox)
 
 </div>
 
@@ -77,7 +77,7 @@ These products are more involved to get up and running. These will require some 
 
     A dual channel, 5 amp (per channel) motor shield designed for DCC-EX.
 
-    [link to ex-8874 will be invisible](https://dcc-ex.com/reference/hardware/motorboards/ex-motor-shield-8874.html#dcc-ex-ex-motorshield8874-reva)
+    [link to ex-8874 will be invisible](https://dcc-ex.com/legacy-docs/reference/hardware/motorboards/ex-motor-shield-8874.html#dcc-ex-ex-motorshield8874-reva)
 
 - ![EX-8266 Logo](/_static/images/logos/product-logo-ex-wifishield8266-only-light.png){ .only-light }
   ![EX-8266 Logo](/_static/images/logos/product-logo-ex-wifishield8266-only-dark.png){ .only-dark }
@@ -86,7 +86,7 @@ These products are more involved to get up and running. These will require some 
 
     An ESP8266 based WiFi shield designed for DCC-EX.
 
-    [link to ex-8266 will be invisible](https://dcc-ex.com/reference/hardware/wifi-boards/makerfabs-esp8266.html#ex-wifishield-8266-recommended)
+    [link to ex-8266 will be invisible](https://dcc-ex.com/legacy-docs/reference/hardware/wifi-boards/makerfabs-esp8266.html#ex-wifishield-8266-recommended)
 
 </div>
 
@@ -130,7 +130,7 @@ These products are complicated to get up and running, likely need a good amount 
 
     A diagnostic tool to inspect DCC packets.
 
-    [link to ex-dccinspector will be invisible](https://dcc-ex.com/ex-dccinspector/index.html#ex-dccinspector)
+    [link to ex-dccinspector will be invisible](https://dcc-ex.com/legacy-docs/ex-dccinspector/index.html#ex-dccinspector)
 
 - ![EX-IOExpander Logo](/_static/images/logos/product-logo-ex-ioexpander-only-light.png){ .only-light }
   ![EX-IOExpander Logo](/_static/images/logos/product-logo-ex-ioexpander-only-dark.png){ .only-dark }
