@@ -27,7 +27,7 @@
     
     
       
-        <title>Optionally install a WiFi Shield - DCC-EX Documentation</title>
+        <title>Optionally install Wifi - DCC-EX Documentation</title>
       
     
     
@@ -83,7 +83,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#optionally-install-a-wifi-shield" class="md-skip">
+        <a href="#optionally-install-wifi" class="md-skip">
           Skip to content
         </a>
       
@@ -116,7 +116,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Optionally install a WiFi Shield
+              Optionally install Wifi
             
           </span>
         </div>
@@ -3199,17 +3199,76 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Optionally install Wifi
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
   <span class="md-ellipsis">
-    Optionally install a WiFi Shield
+    Optionally install Wifi
     
   </span>
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#ex-wifishield8266" class="md-nav__link">
+    <span class="md-ellipsis">
+      EX-WiFiShield8266
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#other-shields" class="md-nav__link">
+    <span class="md-ellipsis">
+      Other shields
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#esp-01-or-esp-01s" class="md-nav__link">
+    <span class="md-ellipsis">
+      ESP-01 or ESP-01S
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -4444,22 +4503,47 @@
   
 
 
-<h1 id="optionally-install-a-wifi-shield">Optionally install a WiFi Shield<a class="headerlink" href="#optionally-install-a-wifi-shield" title="Permanent link">&para;</a></h1>
-<p>Most Arduino ESP8266 WiFi shields, including the dodgy ones with "Shiald" and "Arbuino" spelling mistakes will work well with a DCC-EX command station but the secret to success is to:</p>
+<h1 id="optionally-install-wifi">Optionally install Wifi<a class="headerlink" href="#optionally-install-wifi" title="Permanent link">&para;</a></h1>
+<p>This page does not apply to CSB1 or other ESP32-based command stations which have WiFi built in.</p>
+<p>If you intend to use an ESP-01 development board, please skip to <a href="#esp-01-or-esp-01S">ESP01</a></p>
+<h2 id="ex-wifishield8266">EX-WiFiShield8266<a class="headerlink" href="#ex-wifishield8266" title="Permanent link">&para;</a></h2>
+<p><img align="right" alt="WiFiShield8266" src="../../_static/images/wifi/makerfabs-esp8266-wifi-shield.png" />
+We recommend you purchase an EX-WiFiShield8266 (a joint venture with Makerfabs) which has been designed to make the installation easy.</p>
+<p>You can find installation instructions here <a href="../20-mega-easy/#optionally-install-wifishield">WiFiShield8266 install</a></p>
+<div style="clear: both;"></div>
+<h2 id="other-shields">Other shields<a class="headerlink" href="#other-shields" title="Permanent link">&para;</a></h2>
+<p><img align="right" alt="wangtongze" src="../../_static/images/wifi/wangtongze_jumpered.png" /></p>
+<p>Most other Arduino ESP8266 WiFi shields, including the dodgy ones with "Shiald" and "Arbuino" spelling mistakes, will work well with a DCC-EX command station but must be modified slightly to bypass the useless design based on UNOs with one user and no USB connection. They are frequently shipped with firmware versions that do not work well with DCC-EX (latest is not always
+best!) and it's non-trivial to rectify this.</p>
+<p>In addition, the shield size overlaps the standard Arduino motor-shield terminal blocks which is a pain if you failed to follow the Command Station build suggestions at the time.</p>
 <ol>
 <li>
-<p>Ensure that the WiFi shield is physically modified to avoid it communicating over the standard Arduino Tx/Rx Serial pins.</p>
+<p>Ensure that the WiFi shield is physically modified to avoid it communicating over the standard Arduino Tx/Rx Serial pins, by removing pins 0 and 1. If it has any DIP switches, set them all off.</p>
 </li>
 <li>
-<p>Ensure that the WiFi shield is running a supported version of the Espressif AT software.</p>
+<p>Mount the shield above the command station motor shield making sure the tab end of the WiFi shield is away from the power connector end of the motor shield.</p>
 </li>
 <li>
-<p>Prepare your WiFi shield (see supported types and notes below) by removing the pins that connect to the Mega Serial port.</p>
+<p>Use two male-female Dupont wires to connect the WiFi Shield to your Command Station. (Pay Attention... we get a lot of support calls from users who have not noticed that the wires cross!)</p>
 </li>
-<li>Mount the WiFi shield on the motor shield.</li>
-<li>Use two male-female Dupont wires to connect the shields TX pin to the Mega RX1 pin, and the shield RX pin to the Mega TX1 pin.  </li>
 </ol>
-<p>TODO Photo.</p>
+<div class="highlight"><pre><span></span><code>-<span class="w"> </span>Arduino<span class="w">      </span>Shield
+-<span class="w"> </span>Rx1<span class="w">  </span>-------&gt;<span class="w"> </span>Tx
+-<span class="w"> </span>TX1<span class="w">  </span>-------&gt;<span class="w"> </span>Rx
+</code></pre></div>
+<div style="clear: both;"></div>
+<h2 id="esp-01-or-esp-01s">ESP-01 or ESP-01S<a class="headerlink" href="#esp-01-or-esp-01s" title="Permanent link">&para;</a></h2>
+<p><img align="right" alt="ESP01" src="../../_static/images/wifi/esp-01s_2.png" />
+These devices are not recommended because there are power consumption issues that may cause random Command Station brown-out failure while attempting to connect in a low WiFi signal area.  They will probably NOT work without a non-trivial firmware update.</p>
+<p>The ESP-01 should be connected with dupont wires to the Command Station with wiring as follows:</p>
+<div class="highlight"><pre><span></span><code>-<span class="w"> </span>Arduino<span class="w">      </span>ESP-01
+-<span class="w"> </span><span class="m">3</span>.3V<span class="w">  </span>-----&gt;<span class="w"> </span>Vcc
+-<span class="w"> </span><span class="m">3</span>.3V<span class="w">  </span>-----&gt;<span class="w"> </span>CH_PD
+-<span class="w"> </span>Gnd<span class="w">   </span>-----&gt;<span class="w"> </span>Gnd
+-<span class="w"> </span>Tx1<span class="w">   </span>-----&gt;<span class="w"> </span>Rx
+-<span class="w"> </span>Rx1<span class="w">   </span>-----&gt;<span class="w"> </span>Tx
+</code></pre></div>
+<p>Incorrect wiring can destroy this device.</p>
 
 
 
@@ -4480,7 +4564,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="July 26, 2025 15:01:34 UTC">July 26, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="July 27, 2025 13:36:06 UTC">July 27, 2025</span>
   </span>
 
     
