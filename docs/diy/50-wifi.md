@@ -2,7 +2,7 @@
 
 This page does not apply to CSB1 or other ESP32-based command stations which have WiFi built in.
 
-If you intend to use an ESP-01 development board, please skip to [ESP01](#esp-01-or-esp-01S)
+If you intend to use an ESP-01 development board, please skip to [ESP01](#esp-01-or-esp-01s)
 
 ## EX-WiFiShield8266
 
@@ -33,6 +33,7 @@ In addition, the shield size overlaps the standard Arduino motor-shield terminal
 ```
 
 <div style="clear: both;"></div>
+
 ## ESP-01 or ESP-01S
 
 ![ESP01](/_static/images/wifi/esp-01s_2.png){ align=right }
