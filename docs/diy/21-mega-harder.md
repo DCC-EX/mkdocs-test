@@ -41,6 +41,7 @@ FAILURE TO DO THIS CAN DESTROY YOUR MEGA.
 2. Ensure shield pins are straight and correctly aligned.
 
 <div style="clear: both;"></div>
+
 ### Mount the motor shield
 
 ![Orientation](/_static/images/mega-hard/mega4.png){ align=right }

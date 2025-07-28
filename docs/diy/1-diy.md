@@ -6,6 +6,7 @@ DCC-EX started life on home-built command stations using Arduino UNO and Mega pr
 
 Of course you will also need
 
+- a [power supply](10-power.md) appropriate you your track and locos.
 - a “Main” track, aka “Operations” track - most people already have this: it’s your layout! If you don't yet have this, no problem you can still test on the programming track (below).
 - a “Programming” track, aka "PROG" or “Service” track - an isolated short section of track that you will use to program locomotives
 - a Train - Specifically, a locomotive equipped with a DCC decoder (either a standard or sound decoder). Ideally, it should be a loco already proven to work on DCC. Otherwise, if you have a problem, you may not be able to tell if the problem is the decoder or the EX-CommandStation
