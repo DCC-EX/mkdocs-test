@@ -8,8 +8,6 @@ The volt and current requirements for your track vary according to the scale of 
 
 These recommendations are generalised, and you must check to make sure they don't exceed your loco and DCC decoder manufacturer's recommendations.
 
-TODO - voltage/amps choice table
-
 | **Scale**     | **Recommended Voltage (DC)** | **Minimum Current (Amps)** | **Notes**                                                                 |
 |---------------|------------------------------|-----------------------------|---------------------------------------------------------------------------|
 | Z (1:220)     | 10–12V                       | 2A                          | Lower voltage protects tiny motors; avoid exceeding 12V.                  |
@@ -21,7 +19,7 @@ TODO - voltage/amps choice table
 | O (1:48)      | 16–18V                       | 5–6A                        | Ensure decoder supports higher voltage; some cap at 18V.                  |
 | G (1:22.5)    | 18–22V                       | 6A+                         | Outdoor locos often need more torque and current.                         |
 
-## When using an EX8874 or CSB1
+## Using an EX8874 or CSB1
 
 The EX8874 (which is also built in to the CSB1) provides power for both the track and the Command Station. There is almost zero voltage drop between the power supply and the track.
 

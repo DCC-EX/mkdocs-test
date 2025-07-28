@@ -29,7 +29,7 @@ Using other supported motor or WiFi shields requires a slightly [more complex se
 
     Should you select a different processor, or progress to adding accessories, you will find that lots of "standards" are not at all standard, and that apparently attractive alternatives to the recommended items are totally incompatible. You may need to configure the software or even modify hardware shields.
 
-You will require a multimeter, a soldering iron, and a variety of dupont wires or similar and you will probably collect a bucket-load of connectors, adapters, and gizmos that you thought might be useful but don't have time to try.
+You will eventually require a multimeter, a soldering iron, and a variety of dupont wires or similar and you will probably collect a bucket-load of connectors, adapters, and gizmos that you thought might be useful but don't have time to try.
 
 In fact, TIME is the thing you will need most, and time spent building your command station is just too easy an excuse for not building your layout!
 
