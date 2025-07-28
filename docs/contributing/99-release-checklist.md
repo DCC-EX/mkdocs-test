@@ -42,6 +42,8 @@ This is a list of to do items that will allow us to release this new documentati
 - [ ] EXRAIL command reference from doxyGen
 - [ ] Address all TODO markers
 - [ ] Levels - decide on more generic ones: Beginner, Intermediate, Advanced
+- [ ] Revisit navigation menu bar colouring
+- [ ] Table separator colours are almost invisible
 - [ ] User journeys to guide users through the site
 
     - [ ] Brand new users no knowledge

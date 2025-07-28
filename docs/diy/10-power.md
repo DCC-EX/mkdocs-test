@@ -6,7 +6,20 @@ You will require a power supply unit to provide track power and to run the Comma
 
 The volt and current requirements for your track vary according to the scale of your locos and the number you expect to run simultaneously.
 
+These recommendations are generalised, and you must check to make sure they don't exceed your loco and DCC decoder manufacturer's recommendations.
+
 TODO - voltage/amps choice table
+
+| **Scale**     | **Recommended Voltage (DC)** | **Minimum Current (Amps)** | **Notes**                                                                 |
+|---------------|------------------------------|-----------------------------|---------------------------------------------------------------------------|
+| Z (1:220)     | 10–12V                       | 2A                          | Lower voltage protects tiny motors; avoid exceeding 12V.                  |
+| N (1:160)     | 12V                          | 3A                          | Most decoders rated for 12V max; higher voltages increase brush wear.     |
+| TT (1:120)    | 12–14V                       | 3–4A                        | Slightly more headroom than N scale.                                      |
+| HO (1:87)     | 14–15V                       | 4–5A                        | Common sweet spot for DCC; 15V is typical for DCC-EX setups.              |
+| OO (1:76)     | 15V                          | 4–5A                        | Similar to HO; check decoder specs.                                       |
+| S (1:64)      | 15–16V                       | 5A                          | Larger motors can handle more voltage.                                    |
+| O (1:48)      | 16–18V                       | 5–6A                        | Ensure decoder supports higher voltage; some cap at 18V.                  |
+| G (1:22.5)    | 18–22V                       | 6A+                         | Outdoor locos often need more torque and current.                         |
 
 ## When using an EX8874 or CSB1
 
