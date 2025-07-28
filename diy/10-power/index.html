@@ -4550,7 +4550,68 @@
 <p>You will require a power supply unit to provide track power and to run the Command Station processor.</p>
 <h2 id="volts-and-amps">Volts and Amps<a class="headerlink" href="#volts-and-amps" title="Permanent link">&para;</a></h2>
 <p>The volt and current requirements for your track vary according to the scale of your locos and the number you expect to run simultaneously.</p>
+<p>These recommendations are generalised, and you must check to make sure they don't exceed your loco and DCC decoder manufacturer's recommendations.</p>
 <p>TODO - voltage/amps choice table</p>
+<table>
+<thead>
+<tr>
+<th><strong>Scale</strong></th>
+<th><strong>Recommended Voltage (DC)</strong></th>
+<th><strong>Minimum Current (Amps)</strong></th>
+<th><strong>Notes</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Z (1:220)</td>
+<td>10–12V</td>
+<td>2A</td>
+<td>Lower voltage protects tiny motors; avoid exceeding 12V.</td>
+</tr>
+<tr>
+<td>N (1:160)</td>
+<td>12V</td>
+<td>3A</td>
+<td>Most decoders rated for 12V max; higher voltages increase brush wear.</td>
+</tr>
+<tr>
+<td>TT (1:120)</td>
+<td>12–14V</td>
+<td>3–4A</td>
+<td>Slightly more headroom than N scale.</td>
+</tr>
+<tr>
+<td>HO (1:87)</td>
+<td>14–15V</td>
+<td>4–5A</td>
+<td>Common sweet spot for DCC; 15V is typical for DCC-EX setups.</td>
+</tr>
+<tr>
+<td>OO (1:76)</td>
+<td>15V</td>
+<td>4–5A</td>
+<td>Similar to HO; check decoder specs.</td>
+</tr>
+<tr>
+<td>S (1:64)</td>
+<td>15–16V</td>
+<td>5A</td>
+<td>Larger motors can handle more voltage.</td>
+</tr>
+<tr>
+<td>O (1:48)</td>
+<td>16–18V</td>
+<td>5–6A</td>
+<td>Ensure decoder supports higher voltage; some cap at 18V.</td>
+</tr>
+<tr>
+<td>G (1:22.5)</td>
+<td>18–22V</td>
+<td>6A+</td>
+<td>Outdoor locos often need more torque and current.</td>
+</tr>
+</tbody>
+</table>
 <h2 id="when-using-an-ex8874-or-csb1">When using an EX8874 or CSB1<a class="headerlink" href="#when-using-an-ex8874-or-csb1" title="Permanent link">&para;</a></h2>
 <p>The EX8874 (which is also built in to the CSB1) provides power for both the track and the Command Station. There is almost zero voltage drop between the power supply and the track.</p>
 <p>We strongly advise purchasing a suitable power supply at the same time as the CSB or EX8874 from a vendor who understands your requirements.</p>
@@ -4596,7 +4657,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="July 28, 2025 12:06:48 UTC">July 28, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="July 28, 2025 19:38:18 UTC">July 28, 2025</span>
   </span>
 
     
