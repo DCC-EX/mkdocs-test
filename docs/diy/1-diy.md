@@ -15,7 +15,7 @@ Like any command station, you will want some kind of throttle but you can start 
 
 ## Getting the DCC-EX Software
 
-All builds will require the DCC-EX software to be configured and loaded onto the Arduino processor from your PC. This is best done using the EX-Installer and the following build instructions assume you have already downloaded and installed this by following the [getting started](/getting-started/01-getting-started.md) instructions.
+All builds will require the DCC-EX software to be configured and loaded onto the Arduino processor from your PC. This is best done using the [EX-Installer](/installer/1-installer.md)
 
 ## Quick and Easy Arduino Mega
 

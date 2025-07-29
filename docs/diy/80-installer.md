@@ -8,7 +8,7 @@ Once your initial Command Station build is operating, you will almost certainly 
 
 There are essentially two ways to handle this:
 
-- Use the [EX-Installer](81-installer.md) which guides you through the process with menus and dialogs. This is appropriate for all users.
+- Use the [EX-Installer](/installer/1-installer.md) which guides you through the process with menus and dialogs. This is appropriate for all users.
 - Use VSCode/PlatformIO which is a fully featured programmers IDE (Integrated Development Environment) which will be familiar to programmers and definitely more suited to those wishing to explore the open C++ source and potentially contribute code to our project.
 
 Methods involving downloading zip files, or use of the Arduino IDE are generally slow,  troublesome and not recommended.

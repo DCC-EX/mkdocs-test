@@ -1,19 +1,13 @@
 # Getting Started with DCC-EX
 
-Unless you buy a Command Station Booster1 Express [CSB1](?CSB1) and use it solely as shipped with no accessories or options, you will need to download and install software to your Command Station or other products.
+If you are just starting here for the first time, it's more than likely you are interested in the possibility of using a DCC-EX Command Station to run some trains.
 
-This is managed by EX-Installer which is responsible for obtaining the relevant software and libraries, merging your custom configurations and mind-bending automations, locating the USB connection to your device,  compiling and downloading the result and showing the serial log from your device if required.
+A Command Station is the electronic device that translates throttle commands, such as telling a loco to move, into electronic signals sent on the track to the loco. 
 
-## Warning Antivirus Software
+These signals are usually DCC  (Digital Command Control) which allows commands that control multiple locos on the same piece of track.
 
-You may need to turn off your antivirus software before you try to install, or you may be prompted to trust this executable.
+However, the DCC-EX Command Station is also capable of running DC (Direct Current) locos as there are millions of them still in use.
 
-Sometimes our software gets blocked by antivirus apps. If you see any errors on the install screen, this is usually the issue.
+You have the option to buy a DCC-EX Command station ready-to-run or build it yourself from cheaper parts.
 
-## Installing EX-Installer
-
-[Windows x64](download-win.md){ .md-button }
-[macOS](download-mac.md){ .md-button }
-[Linux x64](download-linux.md){ .md-button }
-
-Note there is no support for EX-Installer on Windows 7, nor 32 bit operating systems such as Windows x32 or RaspberryPi OS.
+TODO-  continue at this kind of level and add links.
