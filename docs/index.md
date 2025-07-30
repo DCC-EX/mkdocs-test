@@ -47,6 +47,14 @@ hide:
 
     [link to ready to run will be invisible](/products/ex-commandstation/1-ex-csb1.md)
 
+- :material-train:{ .lg .middle } **I just want to run my DC trains**{ .card-heading }
+
+    ---
+
+    You've just purchased your EX-CommandStation Booster1 Express (EX-CSB1) and now want to run some trains. Click this tile to go to our EX-CSB1 user manual to learn how to connect it to your layout and start running trains.
+
+    [link to ready to run will be invisible](#)
+
 </div> <!-- inner-column-card-grid -->
 
 </div> <!-- main-grid-column-1 -->

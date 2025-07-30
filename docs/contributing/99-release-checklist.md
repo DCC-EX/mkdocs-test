@@ -43,9 +43,12 @@ This is a list of to do items that will allow us to release this new documentati
 - [ ] User journeys to guide users through the site
 
     - [ ] Brand new users no knowledge
-    - [ ] Running trains?
-    - [ ] Accessories?
-    - [ ] Animation/automation?
+    - [ ] Just want to run trains
+    - [ ] Just want to run trains - DC only version
+    - [ ] Wanting to add accessories
+    - [ ] Wanting to animate/automate
+    - [ ] Large club layout
+    - [ ] Downloader
 
 ## Release QA Items
 
