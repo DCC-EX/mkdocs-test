@@ -1,9 +1,10 @@
 # The EX-Installer
 
-Unless you buy a Command Station Booster1 Express [CSB1](?CSB1) and use it solely as shipped with no accessories or options, you will need to download and install software to your Command Station or other products.
+With the exception of a Command Station Booster1 Express [CSB1](?CSB1) used solely as shipped with no accessories or options, you will need to download and install software to your Command Station or other DCC-EX products.
 
 This is managed by EX-Installer which is responsible for obtaining the relevant software and libraries, merging your custom configurations and mind-bending automations, locating the USB connection to your device,  compiling and downloading the result and showing the serial log from your device if required.
 
+Since every layout is essentially a prototype, and there are a huge variety of hardware build combinations, it is not possible to download a pre-built firmware package from the web.
 
 ## Warning Antivirus Software
 
@@ -22,5 +23,7 @@ Note there is no support for EX-Installer on Windows 7, nor 32 bit operating sys
 ## Alternatives to the EX-Installer
 
 Experienced programmers or those wishing to develop new features or products will generally find [VSCode/PlatformIO](platformio.md) a more powerful and familiar option.
+
+Methods involving downloading zip files have caused  support issues in the past, are troublesome and not recommended.
 
 Use of the Arduino IDE is discouraged and not covered in this documentation as it has far less functionality than VSCode and has limitations with respect to compiler and library options.
