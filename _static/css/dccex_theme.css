@@ -71,6 +71,9 @@
   /* Tasklist colours */
   --md-tasklist-unchecked-color: #E5E5E5;
   --md-tasklist-checked-color: #009FB5;
+
+  /* Table border colour */
+  --md-typeset-table-color: #00B6CC;
 }
 
 /* --- DCC-EX Dark Color Scheme Overrides --- */
@@ -151,6 +154,9 @@
   /* Tasklist colours */
   --md-tasklist-unchecked-color: #3D3D3D;
   --md-tasklist-checked-color: #00CEF7;
+
+  /* Table border colour */
+  --md-typeset-table-color: #0089A0;
 }
 
 /* Only show image in light mode - style with { .only-light } */
@@ -188,8 +194,13 @@
 
 /* NAVIGATION MENU STYLING */
 .md-tabs__item {
+  height: 1.5rem;
   margin-top: 0.2rem;
   margin-bottom: 0.2rem;
+}
+
+.md-tabs__link {
+  margin-top: 0.3rem;
 }
 
 .md-tabs__item:first-of-type {

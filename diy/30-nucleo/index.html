@@ -3396,6 +3396,19 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Complex Build - Nucleo
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -3407,6 +3420,43 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#nucleo-f4-boards-supported" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nucleo-F4 boards supported
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reference-nucleo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reference - Nucleo
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -4973,8 +5023,62 @@
 
 
 <h1 id="complex-build-nucleo">Complex Build - Nucleo<a class="headerlink" href="#complex-build-nucleo" title="Permanent link">&para;</a></h1>
-<p>TODO  </p>
+<p>Reasons to consider the supported Nucleo-F4 boards</p>
+<ul>
+<li>
+<p>Nucleo-144 can have up to 8 districts.<br />
+  -- DCC signals are in sync, as is the case for all of the DCC-EX command stations.<br />
+  -- DC signals can be in sync, which makes Nucleo-144 the better choice if you want 8 DC mode districts.</p>
+</li>
+<li>
+<p>Nucleo-144 - Ethernet is onboard/included with F429ZI and F439ZI<br />
+  &nbsp; &nbsp; &nbsp; &nbsp; hint:  minimal cost difference; Mikey likes it!  </p>
+</li>
+<li>
+<p>Nucleo boards are quality products.  Pricing is best when purchased from st.com or one of their distributors.<br />
+  &nbsp; &nbsp; &nbsp; &nbsp; TODO - link to distributors list</p>
+</li>
+<li>
+<p>Nucleo-64<br />
+  Why would someone go this route vs. Nucleo-144 or CSB1/ESP32-WROOM?<br />
+  -- More pins than ESP32<br />
+  -- More memory than Mega
+  -- F411RE could be used as EX-IOExpander<br />
+  -- Already have EX8874 and WiFi shield and/or want the smaller size</p>
+</li>
+</ul>
+<h2 id="nucleo-f4-boards-supported">Nucleo-F4 boards supported<a class="headerlink" href="#nucleo-f4-boards-supported" title="Permanent link">&para;</a></h2>
+<ul>
+<li>
+<p>Nucleo-144<br />
+  F429ZI / F439ZI - Ethernet included<br />
+  F446ZE<br />
+  F413ZH</p>
+</li>
+<li>
+<p>Nucleo-64<br />
+  F411RE<br />
+  F446RE</p>
+</li>
+<li>
+<p>Other notes<br />
+  -- The three Nucleo-144 boards' pin locations are quite consistent with each other.<br />
+  -- Nucleo-144 boards have the Zio headers installed - headers (top) and pins (bottom).<br />
+  &nbsp; &nbsp; Morpho headers will require installation/soldering, if you want to use them.<br />
+  &nbsp; &nbsp;<br />
+  -- Nucleo-64 boards' pin locations are less consistent.  If you are aware, it should not be an issue.<br />
+  -- Nucleo-64 boards have Arduino headers (top) and Morpho pins (top and bottom) installed.  </p>
+</li>
+</ul>
+<h2 id="reference-nucleo">Reference - Nucleo<a class="headerlink" href="#reference-nucleo" title="Permanent link">&para;</a></h2>
+<ul>
+<li>
+<p><a href="../../reference/nucleo/19-nucleo-144-pin-reference/">Nucleo information</a></p>
+</li>
+<li>
 <p><a href="https://dcc-ex.com/legacy-docs/reference/hardware/microcontrollers/stm32-nucleo.html#stmicroelectronics-nucleo-recommended">Legacy Nucleo documentation</a></p>
+</li>
+</ul>
 
 
 
@@ -4995,7 +5099,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="July 27, 2025 09:12:41 UTC">July 27, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="July 30, 2025 20:08:34 UTC">July 30, 2025</span>
   </span>
 
     
