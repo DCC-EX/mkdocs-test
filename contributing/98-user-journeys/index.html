@@ -3014,6 +3014,10 @@
       
         
       
+        
+      
+        
+      
     
     
     
@@ -3130,6 +3134,52 @@
   
   <span class="md-ellipsis">
     Download and install on Windows
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../installer/first-run/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    First Run installer
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../installer/install-cs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Installing Command Station software
     
   </span>
   
@@ -4613,26 +4663,29 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#dc-ready-to-run-users" class="md-nav__link">
+    <span class="md-ellipsis">
+      DC Ready-to-Run Users
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#existing-users-adding-accessories" class="md-nav__link">
     <span class="md-ellipsis">
       Existing Users Adding Accessories
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Existing Users Adding Accessories">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
+</li>
+      
+        <li class="md-nav__item">
   <a href="#existing-users-looking-to-automateanimate" class="md-nav__link">
     <span class="md-ellipsis">
       Existing Users Looking to Automate/Animate
     </span>
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -5025,16 +5078,23 @@
     D --&gt; E[Purchasing info];
     D --&gt; F[DIY info];</code></pre>
 <h2 id="ready-to-run-csb1">Ready-to-Run CSB1<a class="headerlink" href="#ready-to-run-csb1" title="Permanent link">&para;</a></h2>
-<p>These users just purchased their brand new shiny EX-CSB1 and want to get up and running with it ASAP.</p>
+<p>These users just purchased their brand new shiny EX-CSB1 and want to get up and running with it ASAP. They need to know how to connect it safely to their layout, how to connect a throttle (eg. EX-WebThrottle, Engine Driver), and how to power it.</p>
 <pre class="mermaid"><code>graph LR
     A[Home page] --&gt; B[Get Started or Run trains?];
     B --&gt; C[EX-CSB1 how to plug it in or user manual];
     C --&gt; D[What's next to expand?];</code></pre>
+<h2 id="dc-ready-to-run-users">DC Ready-to-Run Users<a class="headerlink" href="#dc-ready-to-run-users" title="Permanent link">&para;</a></h2>
+<p>These users are similar to the above but want to run their existing DC trains. They may have a large collection that is too expensive or difficult to convert. They also need to know how to connect it to the layout and connect throttles as well as how to power it, but they also need to understand about isolation between the track outputs and potentially PWM sync issues.</p>
+<pre class="mermaid"><code>graph LR
+    A[Home page] --&gt;B[Get Started with DC];
+    B --&gt; C[EX-CSB1 manual - plug it in];
+    C --&gt; D[DC considerations];
+    D --&gt; E[What's next to expand?];</code></pre>
 <h2 id="existing-users-adding-accessories">Existing Users Adding Accessories<a class="headerlink" href="#existing-users-adding-accessories" title="Permanent link">&para;</a></h2>
 <p>These users already have a CSB1 or DIY stack up and running and want to extend to using accessories including turnouts, signals, sensors, turntables, and so forth. They need to know how to physically connect them (I2C) and enable them in software (myAutomation.h). This will move them from Conductor into early Tinkerer territory for I2C in particular.</p>
 <pre class="mermaid"><code>graph LR
     A[Home page] --&gt; B[Adding Accessories];</code></pre>
-<h3 id="existing-users-looking-to-automateanimate">Existing Users Looking to Automate/Animate<a class="headerlink" href="#existing-users-looking-to-automateanimate" title="Permanent link">&para;</a></h3>
+<h2 id="existing-users-looking-to-automateanimate">Existing Users Looking to Automate/Animate<a class="headerlink" href="#existing-users-looking-to-automateanimate" title="Permanent link">&para;</a></h2>
 <p>These users already have a CSB1 or DIY stack up and running and may or may not have accessories as well. They want to understand how to automate and/or animate running trains and/or their layout in general. This may be as simple as a shuttle running back and forth between two stations, or a complex display running trains, controlling various layout aspects (eg. lighting, cross gates), and automating shunting or routes across different tracks. This will definitely be out of Conductor territory but is all about EXRAIL, although guidance on what hardware is required to achieve these will be required.</p>
 <pre class="mermaid"><code>graph LR
     A[Home page] --&gt; B[EXRAIL introduction];
@@ -5072,7 +5132,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="July 30, 2025 05:53:57 UTC">July 30, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="July 30, 2025 19:21:50 UTC">July 30, 2025</span>
   </span>
 
     
