@@ -31,27 +31,11 @@ hide:
 
 <div class="grid cards clickable inner-column-card-grid" markdown>
 
-- :fontawesome-regular-user:{ .lg .middle } **User Personas and Journeys**{ .card-heading }
+- :material-clock-start:{ .lg .middle } **Get started - What is DCC-EX?**{ .card-heading }
 
     ---
 
-    Go here to ensure our users can find what they need.
-
-    [link to list](/contributing/98-user-journeys.md)
-
-- :material-list-status:{ .lg .middle } **Release Checklist**{ .card-heading }
-
-    ---
-
-    Go here to see what is outstanding before being able to release this new doco.
-
-    [link to list](/contributing/99-release-checklist.md)
-
-- :material-clock-start:{ .lg .middle } **Get Started**{ .card-heading }
-
-    ---
-
-    Click this card to go to our Getting Started guide.
+    New to DCC-EX and want to know what it can do and what it's all about? Click this tile to be taken to our Getting Started page to learn more.
 
     [link to getting started will be invisible](/getting-started/01-getting-started.md)
 
@@ -59,7 +43,7 @@ hide:
 
     ---
 
-    Link to a ready-to-run page here
+    You've just purchased your EX-CommandStation Booster1 Express (EX-CSB1) and now want to run some trains. Click this tile to go to our EX-CSB1 user manual to learn how to connect it to your layout and start running trains.
 
     [link to ready to run will be invisible](/products/ex-commandstation/1-ex-csb1.md)
 
@@ -75,7 +59,7 @@ hide:
 
     ---
 
-    I want to add signals/turnouts/accessories.
+    You've got your Command Station up and running and now want to control points/turnouts, signals, and other accessories. Click this tile to be taken to our accessories guide.
 
     [link to accessories will be invisible](/products/ex-commandstation/accessories/1-accessories.md)
 
@@ -83,7 +67,7 @@ hide:
 
     ---
 
-    Get into EXRAIL
+    If you're looking to add some realism to your layout by animating various aspects, or setting up automation for a club display or to simply sit back and enjoy your trains doing their thing, click this tile to see how the built-in EXRAIL feature enables animation and automation with some relatively simple scripting (you don't need to know how to write software).
 
     [link to exrail will be invisible](/products/ex-commandstation/exrail/1-exrail.md)
 
@@ -103,15 +87,6 @@ hide:
 
     [link to news will be invisible](/news/index.md)
 
-- ![EX-Installer](/_static/images/logos/product-logo-ex-installer-only-light.png){ .only-light }
-  ![EX-Installer](/_static/images/logos/product-logo-ex-installer-only-dark.png){ .only-dark }
-
-    ---
-
-    Get EX-Installer to install our software.
-
-    [link to downloads will be invisible](/getting-started/01-getting-started.md)
-
 - :material-download:{ .lg .middle } **Downloads**{ .card-heading }
 
     ---
@@ -119,6 +94,22 @@ hide:
     Go here to get our software.
 
     [link to downloads will be invisible](/getting-started/01-getting-started.md)
+
+- :fontawesome-regular-user:{ .lg .middle } **User Personas and Journeys**{ .card-heading }
+
+    ---
+
+    Go here to ensure our users can find what they need.
+
+    [link to list](/contributing/98-user-journeys.md)
+
+- :material-list-status:{ .lg .middle } **Release Checklist**{ .card-heading }
+
+    ---
+
+    Go here to see what is outstanding before being able to release this new doco.
+
+    [link to list](/contributing/99-release-checklist.md)
 
 </div> <!-- inner-column-card-grid -->
 
