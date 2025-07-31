@@ -9,13 +9,14 @@ Reasons to consider the supported Nucleo-F4 boards
 - Nucleo-144 - Ethernet is onboard/included with F429ZI and F439ZI  
   &nbsp; &nbsp; &nbsp; &nbsp; hint:  minimal cost difference; Mikey likes it!  
 
-- Nucleo boards are quality products.  Pricing is best when purchased from st.com or one of their distributors.  
-  &nbsp; &nbsp; &nbsp; &nbsp; TODO - link to distributors list
+- Nucleo boards are quality products.  
+  -- Pricing is best when purchased from st.com or one of their distributors:  
+  &nbsp; &nbsp; Digikey, Farnell, Mouser
 
 - Nucleo-64  
   Why would someone go this route vs. Nucleo-144 or CSB1/ESP32-WROOM?  
   -- More pins than ESP32  
-  -- More memory than Mega
+  -- More memory than Mega  
   -- F411RE could be used as EX-IOExpander  
   -- Already have EX8874 and WiFi shield and/or want the smaller size
 
@@ -37,7 +38,6 @@ Reasons to consider the supported Nucleo-F4 boards
   &nbsp; &nbsp;  
   -- Nucleo-64 boards' pin locations are less consistent.  If you are aware, it should not be an issue.  
   -- Nucleo-64 boards have Arduino headers (top) and Morpho pins (top and bottom) installed.  
-
 
 ## Reference - Nucleo
 
