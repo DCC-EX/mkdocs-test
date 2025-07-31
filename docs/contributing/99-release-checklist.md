@@ -59,6 +59,10 @@ This is a list of to do items that will allow us to release this new documentati
 
 - [ ] All hardware pages should "next" onto the EX-Installer EX-CommandStation configuration instructions, maybe nav plugin extension, maybe JS
 - [ ] Relocate Self Build from a top level nav bar item
+- [ ] Redirects for key items from the previous site, and QR codes on hardware devices
+
+    - [ ] EX-CSB1 QR code
+    - [ ] EX8874 QR code
 
 ## Styling
 
