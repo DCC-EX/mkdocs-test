@@ -18,17 +18,23 @@ hide:
     - The powerful but easy EXRAIL scripting language to configure and control accessories such as turnouts, signals, lights and sounds. It can also run trains automatically!
     - Integration with [JMRI](https://www.jmri.org/) [iTrain](https://www.berros.eu/en/itrain/), [RocRail](https://wiki.rocrail.net/) if you prefer to run trains from your computer.
 
+    ---
+
     ![csb1](/_static/images/ex-csb1/csb1-small.png){ align=right}
-    The **EX-CommandStation Booster 1 Express**, otherwise known as a CSB1, can be purchased ready to run, complete with WiFi and power supply. If you have a phone, you could be running your trains in less than 5 minutes, without a computer.
-
-    If you would like to buy one, [check out our sellers](/purchasing/01-official-sellers.md)
-
+    The **EX-CommandStation Booster 1 Express**, otherwise known as a CSB1, can be purchased ready to run, complete with WiFi and power supply. If you have a phone, you could be running your trains in less than 5 minutes, without a computer.  
+    <br>
+    If you would like to buy one, [check out our sellers](/purchasing/01-official-sellers.md)  
+    <br>
     If you want to get started with a CSB1 [read the product page](/products/ex-commandstation/1-ex-csb1.md)
 
-    ![diy](/_static/images/mega/mega-small.png){ align=right}
-    Or you can enjoy [building your own](/diy/1-diy.md), staggeringly cheap, version from readily-available Arduino parts in use by modellers from all over the world. We have even designed parts to make this easy for beginners, no soldering required!
+    ---
 
+    ![diy](/_static/images/mega/mega-small.png){ align=right}
+    Or you can enjoy [building your own](/diy/1-diy.md), staggeringly cheap, version from readily-available Arduino parts in use by modellers from all over the world. We have even designed parts to make this easy for beginners, no soldering required!  
+    <br>
     Of course, we also have a wealth of information for more adventurous builders if you have the appropriate electronics skills.
+
+    ---
 
     Both systems use the same powerful software which is totally free and easy to configure and install using our own installation tool.
 
