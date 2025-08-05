@@ -2,14 +2,10 @@
 
 ## Conductor Level ![Conductor Icon](/_static/images/levels/conductor.png){ .header-img }
 
-These are our easy to use, get up and running quickly type products that do not require any specific knowledge of electronics or software.
+These are our easy to use, get up and running quickly type products. No specific knowledge of electronics or software is required to be able to use these to run your DCC trains. Some minor configuration changes will be required to run DC trains.
 
-The most complicated part is likely to be some assembly required, no soldering or modification. Out-of-the-box or close to it.
-
-<div class="grid cards clickable" markdown>
-
-- ![EX-CSB1 Logo](/_static/images/logos/product-logo-ex-csb1-only-light.png){ .only-light }
-  ![EX-CSB1 Logo](/_static/images/logos/product-logo-ex-csb1-only-dark.png){ .only-dark }
+![EX-CSB1 Logo](/_static/images/logos/product-logo-ex-csb1-only-light.png){ .only-light }
+![EX-CSB1 Logo](/_static/images/logos/product-logo-ex-csb1-only-dark.png){ .only-dark }
 
     ---
 
@@ -53,16 +49,12 @@ The most complicated part is likely to be some assembly required, no soldering o
 
     [link to ex-toolbox will be invisible](https://dcc-ex.com/legacy-docs/ex-toolbox/index.html#ex-toolbox)
 
-</div>
-
 ## Tinkerer level ![Conductor Icon](/_static/images/levels/tinkerer.png){ .header-img }
 
 These products are more involved to get up and running. These will require some software configuration and potentially some more involved assembly and possibly some basic soldering.
 
-<div class="grid cards clickable" markdown>
-
-- ![CS DIY Logo](/_static/images/logos/product-logo-ex-cs-diy-only-light.png){ .only-light }
-  ![CS DIY Logo](/_static/images/logos/product-logo-ex-cs-diy-only-dark.png){ .only-dark }
+![CS DIY Logo](/_static/images/logos/product-logo-ex-cs-diy-only-light.png){ .only-light }
+![CS DIY Logo](/_static/images/logos/product-logo-ex-cs-diy-only-dark.png){ .only-dark }
 
     ---
 
@@ -70,8 +62,8 @@ These products are more involved to get up and running. These will require some 
 
     [link to diy mega will be invisible](../diy/20-mega-easy.md)
 
-- ![EX-8874 Logo](/_static/images/logos/product-logo-ex-motorshield8874-only-light.png){ .only-light }
-  ![EX-8874 Logo](/_static/images/logos/product-logo-ex-motorshield8874-only-dark.png){ .only-dark }
+![EX-8874 Logo](/_static/images/logos/product-logo-ex-motorshield8874-only-light.png){ .only-light }
+![EX-8874 Logo](/_static/images/logos/product-logo-ex-motorshield8874-only-dark.png){ .only-dark }
 
     ---
 
@@ -88,16 +80,12 @@ These products are more involved to get up and running. These will require some 
 
     [link to ex-8266 will be invisible](https://dcc-ex.com/legacy-docs/reference/hardware/wifi-boards/makerfabs-esp8266.html#ex-wifishield-8266-recommended)
 
-</div>
-
 ## Engineer level ![Conductor Icon](/_static/images/levels/engineer.png){ .header-img }
 
 These products are complicated to get up and running, likely need a good amount of software and hardware configuration, and should be utilised by people very comfortable with electronics and/or software.
 
-<div class="grid cards clickable" markdown>
-
-- ![CS DIY Logo](/_static/images/logos/product-logo-ex-cs-diy-only-light.png){ .only-light }
-  ![CS DIY Logo](/_static/images/logos/product-logo-ex-cs-diy-only-dark.png){ .only-dark }
+![CS DIY Logo](/_static/images/logos/product-logo-ex-cs-diy-only-light.png){ .only-light }
+![CS DIY Logo](/_static/images/logos/product-logo-ex-cs-diy-only-dark.png){ .only-dark }
 
     ---
 
@@ -140,5 +128,3 @@ These products are complicated to get up and running, likely need a good amount 
     Use Arduino devices to expand I/O capability.
 
     [link to ex-ioexpander will be invisible](/products/ex-ioexpander/ex-ioexpander.md)
-
-</div>

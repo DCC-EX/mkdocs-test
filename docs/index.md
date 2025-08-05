@@ -7,7 +7,7 @@ hide:
 
 # DCC-EX Model Train Control, Animation, and Automation
 
-<div class="grid cards static home-top-row" markdown>
+<div class="grid cards static" markdown>
 
 - ## :material-hand-wave-outline: Welcome to DCC-EX
 
@@ -15,13 +15,13 @@ hide:
 
     - Wifi access, with DCC-EX unique features, from the "Gold Standard" (Jimmy..TODO LINK) [Engine Driver](https://enginedriver.mstevetodd.com/) on Android, [ThrottleCard](https://throttlecard.com/) on iOS and a wide variety of other Apps. We can even show you how to build your own throttle.
     - The ability to run DCC and DC trains from the same throttle at the same time.
-    - The powerful but easy EXRAIL scripting language to configure and control accessories such as turnouts, signals, lights and sounds. It can also run trains automatically!
-    - Integration with [JMRI](https://www.jmri.org/) [iTrain](https://www.berros.eu/en/itrain/), [RocRail](https://wiki.rocrail.net/) if you prefer to run trains from your computer.
+    - The powerful but easy [EXRAIL](/products/ex-commandstation/exrail/1-exrail.md) scripting language to configure and control accessories such as turnouts, signals, lights, and sounds. It can also run trains automatically and animate your layout!
+    - Integration with [JMRI](https://www.jmri.org/), [iTrain](https://www.berros.eu/en/itrain/), and [RocRail](https://wiki.rocrail.net/) if you prefer to run trains from your computer.
 
     ---
 
     ![csb1](/_static/images/ex-csb1/csb1-small.png){ align=right}
-    The **EX-CommandStation Booster 1 Express**, otherwise known as a CSB1, can be purchased ready to run, complete with WiFi and power supply. If you have a phone, you could be running your trains in less than 5 minutes, without a computer.  
+    The [**EX-CommandStation Booster 1 Express**](/docs/products/ex-commandstation/1-ex-csb1.md), otherwise known as a CSB1, can be purchased ready to run, complete with WiFi and power supply. If you have a phone, you could be running your trains in less than 5 minutes, without a computer.  
     <br>
     If you would like to buy one, [check out our sellers](/purchasing/01-official-sellers.md)  
     <br>
@@ -36,7 +36,7 @@ hide:
 
     ---
 
-    Both systems use the same powerful software which is totally free and easy to configure and install using our own installation tool.
+    Both systems use the same powerful [EX-CommandStation](/products/ex-commandstation/0-overview.md) software which is totally free and easy to configure and install using our installation tool.
 
     We also have a a continually evolving range of additional products to enhance your entire layout including an integrated fast clock, integrated turntable controller, and I/O expansion.
 
@@ -52,19 +52,7 @@ hide:
 
 - ## :material-help-box-multiple-outline: Who is DCC-EX
 
-    DCC-EX is world-wide team of dedicated enthusiasts producing **free** and open source **DCC** and **DC** software and hardware solutions to run your model trains and layout. Our mission to use our many decades of software and hardware experience to make model trains accessible and affordable to everyone.
-
-</div>
-
-<div class="grid cards static home-top-row" markdown>
-
-- ## :material-hand-wave-outline: Welcome to DCC-EX - old
-
-    DCC-EX is a team of dedicated enthusiasts producing open source **DCC** and **DC** solutions to run your model trains and layout, with the mission to provide free and open source software and hardware designs that make model trains accessible and affordable to everyone.
-
-    Our easy to use software products use either our own custom hardware or off-the-shelf Arduino and similar technologies, are in use by modellers from all over the world, and are supported by numerous third party hardware and apps like JMRI, Engine Driver, WiThrottle, Rocrail, and more.
-
-    We now have a [broad "EX"-osystem of products](/products/products.md) to enhance your entire layout including an integrated fast clock, integrated turntable controller, and I/O expansion.
+    DCC-EX is world-wide team of dedicated enthusiasts producing **free** and open source **DCC** and **DC** software and hardware solutions to run your model trains and layout. Our mission is to use our many decades of software and hardware experience to make model trains accessible and affordable to everyone.
 
 - ## :material-help-box-multiple-outline: Getting Help or Support
 
