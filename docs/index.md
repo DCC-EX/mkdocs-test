@@ -5,6 +5,7 @@ hide:
   - footer
   - title
 ---
+<!-- This style block is to "hide" the title, it must be defined in order for MkDocs to work correctly -->
 <style>
 .md-content__inner h1 {
   font-size: 1px !important;
