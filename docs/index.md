@@ -13,6 +13,7 @@ hide:
   padding: 0 !important;
   height: 1px !important;
   overflow: hidden;
+  color: var(--md-default-bg-color);
 }
 </style>
 
