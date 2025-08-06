@@ -3,11 +3,22 @@ hide:
   - navigation
   - toc
   - footer
+  - title
 ---
+<style>
+.md-content__inner h1 {
+  font-size: 1px !important;
+  line-height: 1px !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  height: 1px !important;
+  overflow: hidden;
+}
+</style>
 
-# DCC-EX Model Train Control, Animation, and Automation
+# Home
 
-<div class="grid cards static" markdown>
+<div class="grid cards static home-top-row" markdown>
 
 - ## :material-hand-wave-outline: Welcome to DCC-EX
 
@@ -21,7 +32,7 @@ hide:
     ---
 
     ![csb1](/_static/images/ex-csb1/csb1-small.png){ align=right}
-    The [**EX-CommandStation Booster 1 Express**](/docs/products/ex-commandstation/1-ex-csb1.md), otherwise known as a CSB1, can be purchased ready to run, complete with WiFi and power supply. If you have a phone, you could be running your trains in less than 5 minutes, without a computer.  
+    The [**EX-CommandStation Booster 1 Express**](/products/ex-commandstation/1-ex-csb1.md), otherwise known as a CSB1, can be purchased ready to run, complete with WiFi and power supply. If you have a phone, you could be running your trains in less than 5 minutes, without a computer.  
     <br>
     If you would like to buy one, [check out our sellers](/purchasing/01-official-sellers.md)  
     <br>
@@ -40,7 +51,11 @@ hide:
 
     We also have a a continually evolving range of additional products to enhance your entire layout including an integrated fast clock, integrated turntable controller, and I/O expansion.
 
-- ## :material-help-box-multiple-outline: This Website
+- ## :material-help-box-multiple-outline: Who is DCC-EX
+
+    DCC-EX is world-wide team of dedicated enthusiasts producing **free** and open source **DCC** and **DC** software and hardware solutions to run your model trains and layout. Our mission is to use our many decades of software and hardware experience to make model trains accessible and affordable to everyone.
+
+    ---
 
     This website contains a vast amount of information, ranging from how to run your first train to how to automate a large exhibition layout.
 
@@ -50,9 +65,9 @@ hide:
 
     There is a light/dark mode button beside the search bar.
 
-- ## :material-help-box-multiple-outline: Who is DCC-EX
+</div>
 
-    DCC-EX is world-wide team of dedicated enthusiasts producing **free** and open source **DCC** and **DC** software and hardware solutions to run your model trains and layout. Our mission is to use our many decades of software and hardware experience to make model trains accessible and affordable to everyone.
+<div class="grid cards static home-top-row" markdown>
 
 - ## :material-help-box-multiple-outline: Getting Help or Support
 
