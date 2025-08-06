@@ -188,9 +188,11 @@
   padding-top: 0;
 }
 
-/* .md-typeset p {
-  line-height: 1.5;
-} */
+/* Horizontal line */
+.md-typeset hr {
+  border-bottom: 1px solid var(--md-accent-fg-color--dark);
+  margin: 1.5em 5em;
+}
 
 /* NAVIGATION MENU STYLING */
 .md-tabs__item {
@@ -390,7 +392,7 @@
 }
 
 .md-typeset .grid.cards.clickable > ul > li hr {
-  border-top: 1px solid var(--md-accent-fg-color--dark);
+  border-bottom: 1px solid var(--md-accent-fg-color--dark);
   margin: 0;
 }
 
@@ -496,7 +498,7 @@
 }
 
 .md-typeset .grid.cards.static > ul > li hr {
-  border-top: 1px solid var(--md-accent-fg-color--dark);
+  border-bottom: 1px solid var(--md-accent-fg-color--dark);
   margin: 0;
 }
 
