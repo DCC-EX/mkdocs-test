@@ -1,6 +1,5 @@
 nav:
   - Home: index.md
-  - Getting Started: getting-started
   - Products: products
   - Installer: installer
   - Self Build: diy
@@ -8,6 +7,5 @@ nav:
   - News: news
   - Support: support
   - Reference : reference
-  - Glossary: glossary
   - Contributing: contributing
   

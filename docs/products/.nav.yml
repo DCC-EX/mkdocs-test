@@ -1,5 +1,6 @@
 nav:
-  - Product List: products.md
+  - Product List: 00-products.md
+  - Getting Started: 01-getting-started.md
   - EX-Installer: ex-installer
   - EX-CommandStation: ex-commandstation
   - EX-FastClock: ex-fastclock

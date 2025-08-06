@@ -50,6 +50,8 @@ This is a list of to do items that will allow us to release this new documentati
     - [ ] Large club layout
     - [ ] Downloader
 
+- [ ] Add donation info
+
 ## Release QA Items
 
 - [ ] Proof-reading all pages but not by original author
