@@ -89,14 +89,6 @@
          <lastmod>2025-08-06</lastmod>
     </url>
     <url>
-         <loc>https://dcc-ex.com/mkdocs-test/getting-started/01-getting-started/</loc>
-         <lastmod>2025-08-06</lastmod>
-    </url>
-    <url>
-         <loc>https://dcc-ex.com/mkdocs-test/glossary/glossary/</loc>
-         <lastmod>2025-08-06</lastmod>
-    </url>
-    <url>
          <loc>https://dcc-ex.com/mkdocs-test/installer/1-installer/</loc>
          <lastmod>2025-08-06</lastmod>
     </url>
@@ -133,7 +125,11 @@
          <lastmod>2025-08-06</lastmod>
     </url>
     <url>
-         <loc>https://dcc-ex.com/mkdocs-test/products/products/</loc>
+         <loc>https://dcc-ex.com/mkdocs-test/products/00-products/</loc>
+         <lastmod>2025-08-06</lastmod>
+    </url>
+    <url>
+         <loc>https://dcc-ex.com/mkdocs-test/products/01-getting-started/</loc>
          <lastmod>2025-08-06</lastmod>
     </url>
     <url>
@@ -410,6 +406,10 @@
     </url>
     <url>
          <loc>https://dcc-ex.com/mkdocs-test/reference/08-throttle-writers-guide/</loc>
+         <lastmod>2025-08-06</lastmod>
+    </url>
+    <url>
+         <loc>https://dcc-ex.com/mkdocs-test/reference/glossary/</loc>
          <lastmod>2025-08-06</lastmod>
     </url>
     <url>
