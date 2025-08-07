@@ -118,17 +118,17 @@ For example, this logo will be 100px wide and only show in light mode (switch to
 
 To help us remove unnecessary duplication of content, we have enabled the ``pymdownx.snippets`` extension, which allows us to include content from a single file in other markdown files.
 
-All files that are to be included as snippets must reside in the "includes" directory, and preferably within a subdirectory relevant to the topic.
+All files that are to be included as snippets must reside in the "snippets" directory, and preferably within a subdirectory relevant to the topic.
 
 **NOTE:** the code below includes extra back tick "`" characters at the beginning and end to prevent MkDocs rendering this as a snippet.
 
 ```markdown
-`--8<-- "includes/snippet-example/snippet-example.md"`
+`--8<-- "snippets/snippet-example/snippet-example.md"`
 ```
 
 The text below is included from this file:
 
---8<-- "includes/snippet-example/snippet-example.md"
+--8<-- "snippets/snippet-example/snippet-example.md"
 
 ### Icons and Emojis
 
