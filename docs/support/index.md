@@ -8,14 +8,28 @@ Please note that the DCC-EX team are all volunteers and are distributed globally
 
 This is why we strongly recommend Discord as the best source of support, because there is a global community of over 4,000 users, some of whom may be able to help before a DCC-EX team member is online.
 
-## Discord Recommended
+## Information required for support queries
 
-[Discord](https://discord.gg/y2sB4Fp)
+When requesting support for any of our products, there is some critical information you must provide in order for us to be able to help you. As volunteers, our time is limited and therefore the more information you can provide up front, the quicker we can help you resolve any issues rather than spend valuable time repeating requests for missing information.
 
-## GitHub second best
+This is the information typically required:
+
+- The product and version
+- The exact hardware in use
+- Upload serial/console logs
+- Upload all configuration files for the software in use
+- Detail any troubleshooting steps you have already performed
+
+## Discord (recommended)
+
+Our strongly recommended support option is our [Discord server](/support/discord.md) server where you can interact directly with the DCC-EX team as well as a global community of over 4,400 users, meaning issues are usually resolved quite quickly in comparison with the other options.
+
+## GitHub
 
 GitHub product links here
 
-## Email support not recommended
+## Email (not recommended)
 
-Limited who can respond, please don't!
+While email support is available for those who have no other way to obtain support, there is only one team member with access to reply to your queries, and therefore this is a slow process and is not recommended.
+
+If necessary, you can email us at support@dcc-ex.com.
