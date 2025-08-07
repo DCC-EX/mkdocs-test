@@ -6,8 +6,8 @@ It is aimed to be easy to use, and also supports getting help and support by pro
 
 ## Installing
 
---8<-- "includes/ex-installer/installing.md"
+--8<-- "snippets/ex-installer/installing.md"
 
 ## Using Device Monitor
 
---8<-- "includes/ex-installer/device-monitor.md"
+--8<-- "snippets/ex-installer/device-monitor.md"

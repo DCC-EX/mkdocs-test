@@ -159,7 +159,7 @@ markdown_extensions:
       permalink: true # Add a permanent link to headings
 
 watch:
-  - includes
+  - snippets
 
 # List of other extensions to experiment with
   # - admonition # For callouts (Note, Warning, Tip, etc.)

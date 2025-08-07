@@ -17,6 +17,10 @@ So:
 - If something does need elaboration, link to a relevant reference.
 - Don't document things generally available on the Internet, eg. we don't document MkDocs or the Material theme as there is good documentation available, we only document the context of our use cases.
 
+## Do Not Duplicate Content
+
+**DO NOT CREATE DUPLICATE CONTENT** as this increases the maintenance burden significantly but, more importantly, makes it difficult for users when content appears slightly differently in two different places or even contradicts itself. When needing to repeat information in more than one place, take advantage of the [MkDocs Snippets](/contributing/documentation/6-mkdocs-features.md#snippets) feature. This allows you to include the same markdown content in multiple places.
+
 ## Directory Naming, Page Naming, and Titles
 
 - All directory and page names must be in lower case and use "-" instead of spaces.
