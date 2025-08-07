@@ -33,7 +33,7 @@ hide:
 
     ---
 
-    ![csb1](/_static/images/ex-csb1/csb1-small.png){ align=right}
+     [![csb1](/_static/images/ex-csb1/csb1-small.png){ align=right }](/products/ex-commandstation/1-ex-csb1.md)
     The [**EX-CommandStation Booster 1 Express**](/products/ex-commandstation/1-ex-csb1.md), otherwise known as a CSB1, can be purchased ready to run, complete with WiFi and power supply. If you have a phone, you could be running your trains in less than 5 minutes, without a computer.  
     <br>
     If you would like to buy one, [check out our sellers](/purchasing/01-official-sellers.md)  
@@ -42,7 +42,7 @@ hide:
 
     ---
 
-    ![diy](/_static/images/mega/mega-small.png){ align=right}
+    [![diy](/_static/images/mega/mega-small.png){ align=right}](/diy/1-diy.md)
     Or you can enjoy [building your own](/diy/1-diy.md), staggeringly cheap, version from readily-available Arduino parts in use by modellers from all over the world. We have even designed parts to make this easy for beginners, no soldering required!  
     <br>
     Of course, we also have a wealth of information for more adventurous builders if you have the appropriate electronics skills.
