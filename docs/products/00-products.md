@@ -25,17 +25,6 @@ You can learn more about the software in the [EX-CommandStation documentation](/
 
 ---
 
-### EX-Installer
-
-![EX-Installer Logo](/_static/images/logos/product-logo-ex-installer-only-light.png){ .only-light width=400px }
-![EX-Installer Logo](/_static/images/logos/product-logo-ex-installer-only-dark.png){ .only-dark width=400px }
-
-This software is written to allow you to easily configure and install our EX-CommandStation, EX-IOExpander, and EX-Turntable products.
-
-To download and install, refer to the [EX-Installer documentation](/products/ex-installer/0-overview.md).
-
----
-
 ### EX-WebThrottle
 
 ![EX-WebThrottle Logo](/_static/images/logos/product-logo-ex-webthrottle-only-light.png){ .only-light width=400px }
