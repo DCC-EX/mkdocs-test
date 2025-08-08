@@ -136,7 +136,12 @@ markdown_extensions:
   - attr_list # Enabled setting attributes in markdown eg. image width
   - def_list # Enable definition/descriptions lists, required by ezglossary
   - md_in_html # Enable markdown in embedded HTML
+  - pymdownx.betterem # Improved detection for emphasis in text
+  - pymdownx.blocks.caption # Enable captions for images, tables, and code blocks
   - pymdownx.details
+  - pymdownx.caret # Enable sub/superscript
+  - pymdownx.tilde # Enable strikethrough
+  - pymdownx.mark # Enable highlight
   - pymdownx.extra # markdown in div
   - pymdownx.emoji: # Enable emojis
       emoji_index: !!python/name:material.extensions.emoji.twemoji

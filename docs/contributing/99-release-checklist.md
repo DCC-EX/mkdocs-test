@@ -55,7 +55,7 @@ This is a list of to do items that will allow us to release this new documentati
 ## Release QA Items
 
 - [ ] Proof-reading all pages but not by original author
-- [ ] Address all TODO markers
+- [ ] Address all ==TODO== markers
 
 ## Menu and Page Structure
 

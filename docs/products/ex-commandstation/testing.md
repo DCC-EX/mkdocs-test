@@ -1,6 +1,6 @@
 # Testing your Command Station
 
- (LOTS OF TODO in this file)
+ (LOTS OF ==TODO== in this file)
 
 The simplest and most direct testing method is to use a serial monitor to talk directly to the USB connection of you command station. This is a fundamental aspect of the Arduino system and thus avoids issues such as wifi connections. Indeed, this is the only way to see what's going wrong if your problems are wifi related.
 
@@ -11,12 +11,12 @@ There are several serial monitors available:
 --8<-- "snippets/ex-installer/device-monitor.md"
 
 - Built in to the [EX-Installer](?EX-Installer)
-    ??? TODO EX INSTALLER showing serial log
+    ??? ==TODO== EX INSTALLER showing serial log
 - Built in to VSCode is you are using that as an IDE.
 - Built in to the Arduino IDE (We do not recommend that for development)
 - Built in to the EX-WebThrottle
 - Built in to JMRI or other train control software.
-(TODO.. above provide links to individual side-pages showing how to get at the serial monitor in each case)
+(==TODO==.. above provide links to individual side-pages showing how to get at the serial monitor in each case)
 
 Whichever you use, please ensure the baud rate is set to 115200 so that it matches that used by the command station. (Installer anf WebThrottle do this automatically)
 
@@ -34,7 +34,7 @@ Commands are entered as shown, complete with the `< >` markers. Case is importan
 <s>
 ```
 
-TODO... pic
+==TODO==... pic
 
 ### Turn on track power
 

@@ -2,7 +2,7 @@
 
 You will be presented with the Welcome screen…
 
-TODO- pic1
+==TODO==- pic1
 
 This screen provides some basic information about the process of loading the Software. The font may be very small on a high quality screen so use the "tools sizing" menu to find a better zoom factor. 
 

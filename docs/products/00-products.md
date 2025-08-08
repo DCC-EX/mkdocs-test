@@ -45,7 +45,7 @@ For Android phone users, this is an extremely useful tool to help with configuri
 
 You can download it here [![app store](/_static/images/ex-toolbox/download.png)](https://play.google.com/store/apps/details?id=dcc_ex.ex_toolbox)
 
-TODO ... Refer to the [EX-Toolbox documentation](https://dcc-ex.com/legacy-docs/ex-toolbox/index.html#ex-toolbox) for how to install and use it.
+==TODO== ... Refer to the [EX-Toolbox documentation](https://dcc-ex.com/legacy-docs/ex-toolbox/index.html#ex-toolbox) for how to install and use it.
 
 ---
 

@@ -541,7 +541,7 @@ Send DCC accessory command
 
 ```<a address subaddress activate onoff>```
 
-Send DCC accessory command with onoff control (TODO.. numbers) 
+Send DCC accessory command with onoff control (==TODO==.. numbers) 
 
 
 ```<a linearaddress activate>```

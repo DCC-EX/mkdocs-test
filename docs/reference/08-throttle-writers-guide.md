@@ -46,7 +46,7 @@ Also note that turnouts marked in EXRAIL with the HIDDEN keyword instead of a "d
    Thus an Automation expects a start command with a cab id
    e.g. ``</START 13 3>``
 
-Routes and Automations can also have their current status and caption altered dynamically by EXRAIL (docs TODO)
+Routes and Automations can also have their current status and caption altered dynamically by EXRAIL (docs ==TODO==)
 
 ## Roster Information
 
@@ -77,7 +77,7 @@ Obtaining throttle status.
 
 ``<c>``
 
-## doc TODO
+## doc ==TODO==
 
 - Route status
 - Momentum

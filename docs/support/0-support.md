@@ -26,7 +26,7 @@ This is the information typically required:
 
 ## Discord (recommended)
 
-Our strongly recommended support option is our [Discord server](/support/discord.md) server where you can interact directly with the DCC-EX team as well as a global community of over 4,400 users, meaning issues are usually resolved quite quickly in comparison with the other options.
+Our strongly recommended support option is our [Discord server](/support/1-discord.md) server where you can interact directly with the DCC-EX team as well as a global community of over 4,400 users, meaning issues are usually resolved quite quickly in comparison with the other options.
 
 ## GitHub
 

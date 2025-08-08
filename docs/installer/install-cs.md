@@ -7,7 +7,7 @@ To proceed, click the Select your device button.
 ## Device selection
 
 ![device selection](/_static/images/ex-installer/select-device.png)
-TODO swap image for one showing CSB1
+==TODO== swap image for one showing CSB1
 
 A scan for devices will start automatically. Usually the installer is able to work out the details automatically.
 
@@ -105,7 +105,7 @@ Do not select without Engineer level knowledge.
 
 The default has Track A and DCC MAIN  and Track B as a PROG track.
 This is an advanced option and should only be used do not need to alter this unless you are running multiple motor shields or wish to operate only in DC.
-TODO - put back the options...
+==TODO== - put back the options...
 
 ### Advanced configuration (Optional)
 
