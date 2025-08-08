@@ -43,7 +43,9 @@ To access it, refer to the [EX-WebThrottle documentation](https://dcc-ex.com/leg
 
 For Android phone users, this is an extremely useful tool to help with configuring various aspects of your trains, command station, and accessories.
 
-Refer to the [EX-Toolbox documentation](https://dcc-ex.com/legacy-docs/ex-toolbox/index.html#ex-toolbox) for how to install and use it.
+You can download it here [![app store](/_static/images/ex-toolbox/download.png)](https://play.google.com/store/apps/details?id=dcc_ex.ex_toolbox)
+
+TODO ... Refer to the [EX-Toolbox documentation](https://dcc-ex.com/legacy-docs/ex-toolbox/index.html#ex-toolbox) for how to install and use it.
 
 ---
 

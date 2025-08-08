@@ -63,8 +63,10 @@ This is a list of to do items that will allow us to release this new documentati
 - [ ] Relocate Self Build from a top level nav bar item
 - [ ] Redirects for key items from the previous site, and QR codes on hardware devices
 
-    - [ ] EX-CSB1 QR code
-    - [ ] EX8874 QR code
+    - [x] EX-CSB1 QR code
+    - [x] EX8874 QR code
+    - [x] show QR codes for Toolbox, and ED.
+    - [ ] and any other recommended throttle apps.
 
 ## Styling
 
