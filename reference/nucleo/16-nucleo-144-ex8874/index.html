@@ -365,7 +365,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../support/" class="md-tabs__link">
+        <a href="../../../support/0-support/" class="md-tabs__link">
           
   
   
@@ -3681,8 +3681,6 @@
     
       
         
-          
-        
       
         
       
@@ -3700,9 +3698,8 @@
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
         
           
-          <div class="md-nav__link md-nav__container">
-            <a href="../../../support/" class="md-nav__link ">
-              
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
   
   
   <span class="md-ellipsis">
@@ -3711,14 +3708,8 @@
   </span>
   
 
-            </a>
-            
-              
-              <label class="md-nav__link " for="__nav_7" id="__nav_7_label" tabindex="0">
-                <span class="md-nav__icon md-icon"></span>
-              </label>
-            
-          </div>
+            <span class="md-nav__icon md-icon"></span>
+          </label>
         
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_7">
@@ -3728,6 +3719,27 @@
           <ul class="md-nav__list" data-md-scrollfix>
             
               
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../support/0-support/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Help and Support
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
             
               
                 
@@ -3736,7 +3748,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../support/discord/" class="md-nav__link">
+      <a href="../../../support/1-discord/" class="md-nav__link">
         
   
   
@@ -5029,10 +5041,12 @@
 One EX8874 motor shield would use the standard motor define EX8874_SHIELD, and update the solder pads to use D5 and D6.  </p>
 <p>&nbsp; &nbsp; &nbsp; &nbsp; <img alt="EX8874 Nucleo-144 pins" src="../../../_static/images/nucleo/ex8874-nucleo-144.png" style="width: 70%" /> &nbsp; &nbsp; &nbsp; &nbsp; <img alt="EX8874 Nucleo-144 track B" src="../../../_static/images/nucleo/ex8874-nucleo144-pins-track-b.png" style="width: 20%" /></p>
 <h3 id="stacked-ex8874-motor-shields-on-f429zi-f439zi">Stacked EX8874 motor shields on F429ZI F439ZI<a class="headerlink" href="#stacked-ex8874-motor-shields-on-f429zi-f439zi" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Cut two traces to disable VIN on the stacked shield. &nbsp; <a href="../../hardware/motorboards/ex-8874/#steps-to-stack">Link to Hardware EX8874 page</a></li>
+</ul>
 <p>&nbsp; &nbsp; &nbsp; &nbsp; <img align="right" alt="Stacked EX8874 Nucleo-144" src="../../../_static/images/nucleo/ex8874x2-nucleo-144.png" style="width: 50%" /></p>
 <ul>
-<li>Stacked EX8874 motor shields require a custom motor define.<br />
-  Review and select the pins to fill the blanks in the table.</li>
+<li>Review where jumpers will be required, due to pin conflict/function/availability.</li>
 </ul>
 <p>&nbsp; &nbsp; &nbsp; &nbsp; <img align="right" alt="Stacked EX8874 Nucleo-144" src="../../../_static/images/nucleo/ex8874-f439zi-stacked-pins.png" style="width: 50%" /></p>
 <ul>
@@ -5052,8 +5066,13 @@ One EX8874 motor shield would use the standard motor define EX8874_SHIELD, and u
 </code></pre></div>
 <h2 id="ex8874-f413zh-f446ze">EX8874 - F413ZH F446ZE<a class="headerlink" href="#ex8874-f413zh-f446ze" title="Permanent link">&para;</a></h2>
 <ul>
-<li>D11 can be used as there is no Ethernet conflict.<br />
-Brake and Fault pin updates as shown for F429ZI F439ZI.</li>
+<li>
+<p>Cut two traces to disable VIN on the stacked shield. &nbsp; <a href="../../hardware/motorboards/ex-8874/#steps-to-stack">Link to Hardware EX8874 page</a></p>
+</li>
+<li>
+<p>D11 can be used as there is no Ethernet conflict.<br />
+Brake and Fault pin updates as shown for F429ZI F439ZI.</p>
+</li>
 </ul>
 <p>TODO - update MotorDrivers.h for D8</p>
 <ul>
@@ -5101,7 +5120,7 @@ Brake and Fault pin updates as shown for F429ZI F439ZI.</li>
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="August 7, 2025 17:21:54 UTC">August 7, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="August 7, 2025 23:24:28 UTC">August 7, 2025</span>
   </span>
 
     
