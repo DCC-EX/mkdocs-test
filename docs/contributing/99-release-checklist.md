@@ -60,7 +60,11 @@ This is a list of to do items that will allow us to release this new documentati
 ## Menu and Page Structure
 
 - [ ] All hardware pages should "next" onto the EX-Installer EX-CommandStation configuration instructions, maybe nav plugin extension, maybe JS
-- [ ] Relocate Self Build from a top level nav bar item
+- [ ] If DIY on tap nav menu, RTR must be their too, choose:
+
+    - [ ] Both DIY and RTR on nav menu
+    - [ ] Move both under products menu
+
 - [ ] Redirects for key items from the previous site, and QR codes on hardware devices
 
     - [x] EX-CSB1 QR code

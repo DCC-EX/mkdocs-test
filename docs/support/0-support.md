@@ -20,6 +20,10 @@ This is the information typically required:
 - Upload all configuration files for the software in use
 - Detail any troubleshooting steps you have already performed
 
+### Get startup logs
+
+--8<-- "snippets/ex-installer/startup-logs.md"
+
 ## Discord (recommended)
 
 Our strongly recommended support option is our [Discord server](/support/discord.md) server where you can interact directly with the DCC-EX team as well as a global community of over 4,400 users, meaning issues are usually resolved quite quickly in comparison with the other options.
@@ -32,4 +36,4 @@ GitHub product links here
 
 While email support is available for those who have no other way to obtain support, there is only one team member with access to reply to your queries, and therefore this is a slow process and is not recommended.
 
-If necessary, you can email us at support@dcc-ex.com.
+If necessary, you can email us at <support@dcc-ex.com>.
