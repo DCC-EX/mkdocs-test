@@ -21,7 +21,7 @@ This is a list of to do items that will allow us to release this new documentati
 - [ ] Product pages for EX-Installer, EX-CommandStation (includes EXRAIL and TrackManager), EX-CSB1, EX-Motorshield8874, and EX-WiFiShield8266
 - [ ] Better how to get help and support info
 
-    - [ ] How to use Discord, code snippets, upload files, raise a ticket
+    - [x] How to use Discord, code snippets, upload files, raise a ticket
     - [ ] What are the logs/file required, how to get them
 
 - [ ] EX-CommandStation troubleshooting steps

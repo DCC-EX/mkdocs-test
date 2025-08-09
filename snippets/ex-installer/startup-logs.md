@@ -1,1 +1,3 @@
-==How to get startup logs from device monitor here.==
+==TODO==
+
+Instructions required here to obtain the startup logs from EX-Installer.

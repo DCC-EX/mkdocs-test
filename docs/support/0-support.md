@@ -20,20 +20,30 @@ This is the information typically required:
 - Upload all configuration files for the software in use
 - Detail any troubleshooting steps you have already performed
 
+### Product and Version
+
+```console
+<s>
+```
+
 ### Get startup logs
 
 --8<-- "snippets/ex-installer/startup-logs.md"
 
 ## Discord (recommended)
 
-Our strongly recommended support option is our [Discord server](/support/1-discord.md) server where you can interact directly with the DCC-EX team as well as a global community of over 4,400 users, meaning issues are usually resolved quite quickly in comparison with the other options.
+Our strongly recommended support option is the DCC-EX Discord server, where you can interact directly with the DCC-EX team as well as a global community of over 4,400 users. Issues are usually resolved quite quickly in comparison with the other options, and you can also interact with the community in real-time.
+
+Please refer to our [Discord page](/support/1-discord.md) which outlines how to join our Discord server, interact with the community, and how to raise support tickets.
 
 ## GitHub
 
-GitHub product links here
+If you are an existing GitHub user, you can also get support via GitHub which is particularly useful for bug reports. While all the DCC-EX team members have GitHub accounts and can respond, this is typically not as quick as getting support via our recommended Discord server option.
+
+Please refer to our [GitHub page](/support/2-github.md) on the various repositories you can raise issues in.
 
 ## Email (not recommended)
 
-While email support is available for those who have no other way to obtain support, there is only one team member with access to reply to your queries, and therefore this is a slow process and is not recommended.
+While email support is available for those who have no other way to obtain support, there is only one team member with access to reply to your queries, and therefore ***this is a slow process and is not recommended.***
 
 If necessary, you can email us at <support@dcc-ex.com>.
