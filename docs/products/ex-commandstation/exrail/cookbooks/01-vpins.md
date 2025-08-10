@@ -1,3 +1,8 @@
+---
+search:
+  boost: 4
+---
+
 # Virtual Bitmap device pins (VPINs)
 
 A VPIN is an Arduino pin number that has been extended to include pins on external devices or expanders.
