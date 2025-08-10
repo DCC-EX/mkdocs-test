@@ -24,3 +24,8 @@ Run the installer with the following command:
 ```bash
 ./EX-Installer-macOS
 ```
+
+On later macOS versions, go to Privacy & Security in System Settings, and scroll down to Allow applicaitons downloaded from "App Store and identified developers" and then when EX-Installer is blocked, click "Allow Anyway"
+
+![Privacy & Security](/_static/images/ex-installer/macOS-privacy-and-security.png){ align=left }
+
