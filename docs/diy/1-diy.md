@@ -2,9 +2,19 @@
 
 A command station consists of a processor and a shield/board to convert the low voltage digital signal from the processor into the high powered track output.
 
-DCC-EX started life on home-built command stations using Arduino UNO and Mega processors and the standard Arduino motor shield. This was attractive to users that liked to experiment and was exceptionally cheap to create. However, if you build your own, or even buy a pre-built stack from a third party, you will need to learn quite a lot more than using our plug-and-go solution the [Command Station Booster 1 Express (CSB1)](?CSB1).
+DCC-EX started life on home-built command stations using Arduino UNO and Mega processors and the standard Arduino motor shield. This was attractive to users that liked to experiment and was exceptionally cheap to create.
 
-Of course you will also need
+***However, if you build your own, or even buy a pre-built stack from a third party***, you will need to learn quite a lot more than using our plug-and-go solution the [Command Station Booster 1 Express (CSB1)](?CSB1).
+
+!!! warning "Buyer beware!"
+
+    There are many different brands and clones of various different microprocessors, shields/boards, and power supplies on the market, particularly when using marketplaces such as AliExpress and Amazon. Sometimes the prices on these marketplaces seem too good to be true for a genuine item, and usually they are and you will end up with a clone or inferior product, potentially with quality, reliability, and compatibility issues.
+
+    When reading through these self-build options, we endeavour to be as clear as we can on the specific options we recommend, but we cannot possibly tell you all the options of where to purchase reliably, so you must take care when purchasing that you are buying the correct component. If in doubt, ask via our [Discord server](/support/1-discord.md) for a second opinion before spending your money.
+    
+    Further, should you select a different processor, or progress to adding accessories, you will find that lots of "standards" are not at all standard, and that apparently attractive alternatives to the recommended items are totally incompatible. You may need to configure the software or even modify hardware shields.
+
+In addition to the command station components, you will also need
 
 - a [power supply](10-power.md) appropriate you your track and locos.
 - a “Main” track, aka “Operations” track - most people already have this: it’s your layout! If you don't yet have this, no problem you can still test on the programming track (below).
@@ -24,10 +34,6 @@ If you build our standard Mega-based Command station and use our EX-MotorShield8
 ## Slightly more difficult Mega
 
 Using other supported motor or WiFi shields requires a slightly [more complex setup](21-mega-harder.md).
-
-!!! warning "Buyer beware!"
-
-    Should you select a different processor, or progress to adding accessories, you will find that lots of "standards" are not at all standard, and that apparently attractive alternatives to the recommended items are totally incompatible. You may need to configure the software or even modify hardware shields.
 
 You will eventually require a multimeter, a soldering iron, and a variety of dupont wires or similar and you will probably collect a bucket-load of connectors, adapters, and gizmos that you thought might be useful but don't have time to try.
 

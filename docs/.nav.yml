@@ -1,9 +1,9 @@
 nav:
   - Home: index.md
   - Products: products
-  - Installer: installer
-  - Self Build: diy
   - Purchasing: purchasing
+  - Installing: installer
+  - Self Build: diy
   - News: news
   - Support: support
   - Reference : reference
