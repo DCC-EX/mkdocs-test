@@ -9,7 +9,7 @@ DO NOT USE ANY OTHER SHIELD TYPE WITHOUT FIRST CHECKING OUR DETAILED INSTRUCTION
 To build a basic DIY Command Station in easy steps you will need:
 
 - A PC or laptop (Not A Raspberry Pi) running a reasonably recent versions of Windows, Linux or MacOS
-- an Arduino Mega microprocessor
+- an Arduino Mega microprocessor or Elegoo clone.
 - USB cable to your PC for the processor.
 - an EX-MotorShield8874 to power the track.
 - A double-insulated DC [power supply](/diy/10-power.md) with a voltage suitable for your layout/locos.
@@ -21,9 +21,9 @@ To build a basic DIY Command Station in easy steps you will need:
 
 1. Use sticky tape or similar to cover up the barrel connector on the Mega. (Power to the processor will be provided by the EX8874 shield and you don't want accidents.)
 
-2. Use sticky tape or similar to cover the top of the USB connector on the mega. This prevents any accidental contact with the underside of the motor shield.  
+2. Use sticky tape or similar to cover the top of the USB connector on the mega. This prevents any accidental contact with the underside of the motor shield. ![connectors](/_static/images/mega/mega1.png)
 
-![connectors](/_static/images/mega/mega1.png)
+3. Mount your mega on  3d printed tray, a piece of plastic card or wood to make sure that the underside solder points are insulated. Placing your Command station down on a tool, coin or even your track can short the pins and, in some cases, damage the board.
 
 ### Mount the EX8874 shield
 
