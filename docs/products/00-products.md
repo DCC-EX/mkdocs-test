@@ -81,7 +81,7 @@ A dual channel, 5 amp (per channel) motor shield designed specifically for DCC-E
 
 Assembly is required to add this to an Arduino Mega along with software configuration.
 
-Refer to the [EX-MotorShield8874 page](https://dcc-ex.com/legacy-docs/reference/hardware/motorboards/ex-motor-shield-8874.html#dcc-ex-ex-motorshield8874-reva) for more information.
+Refer to the [EX-MotorShield8874 page](/products/ex-motorshield8874/ex-motorshield8874.md) for more information.
 
 ---
 
@@ -94,7 +94,7 @@ A WiFi shield designed specifically for DCC-EX in an Arduino shield format.
 
 Assembly is required to add this to an Arduino Mega along with software configuration.
 
-Refer to the [EX-WiFiShield8266 page](https://dcc-ex.com/legacy-docs/reference/hardware/wifi-boards/makerfabs-esp8266.html#ex-wifishield-8266-recommended) for more information.
+Refer to the [EX-WiFiShield8266 page](/products/ex-wifishield8266/ex-wifishield8266.md) for more information.
 
 ---
 
