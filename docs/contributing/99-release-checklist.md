@@ -6,7 +6,7 @@ This is a list of to do items that will allow us to release this new documentati
 
 ## Content
 
-- [ ] Conductor friendly getting started with RTR and officially supported Mega DIY stack only
+- Conductor friendly getting started with RTR and officially supported Mega DIY stack only:
 
     - [ ] General getting started page
     - [ ] General EX-CommandStation page
@@ -16,15 +16,24 @@ This is a list of to do items that will allow us to release this new documentati
     - [ ] EX-CSB1 RTR information - must be complete
     - [ ] Mega DIY stack page - Mega + EX8874/Arduino R3 + WiFiShield8266 only (no hardware mods, plug n play only)
 
-- [ ] ESP32 and Nucleo DIY to refer to legacy docs to start
+- Advanced DIY stacks:
 
-- [ ] Product pages for EX-Installer, EX-CommandStation (includes EXRAIL and TrackManager), EX-CSB1, EX-Motorshield8874, and EX-WiFiShield8266
-- [ ] Better how to get help and support info
+    - [ ] ESP32
+    - [ ] Nucleo
+
+- Product pages for:
+
+    - [ ] CommandStation (includes EXRAIL and TrackManager)
+    - [ ] EX-CSB1
+    - [ ] EX-Motorshield8874
+    - [ ] EX-WiFiShield8266
+
+- Better how to get help and support info:
 
     - [x] How to use Discord, code snippets, upload files, raise a ticket
     - [ ] What are the logs/file required, how to get them
 
-- [ ] EX-CommandStation troubleshooting steps
+- EX-CommandStation troubleshooting steps:
 
     - [ ] USB issues - drivers, cables, ports, permissions, other programs open
     - [ ] WiFi/serial interfering
@@ -32,15 +41,20 @@ This is a list of to do items that will allow us to release this new documentati
     - [ ] EX-Installer common issues
     - [ ] Not seeing roster/routes/turnouts in throttles/JMRI
 
-- [ ] I2C more accessible information
+- I2C more accessible information:
 
+    - [ ] As close to "out-of-the-box" as we can get device list (Adafruit, Qwiic, etc.)
     - [ ] Wiring/pullups/distance in layman's terms
     - [ ] Default device addresses and how to disable
     - [ ] Troubleshooting steps
 
-- [ ] Purchasing information for hardware
+- Purchasing information for hardware:
+
+    - [ ] Official DCC-EX reseller stores
+    - [ ] Recommended third-party suppliers
+
 - [ ] EXRAIL command reference from doxyGen
-- [ ] User journeys to guide users through the site
+- User journeys to guide users through the site:
 
     - [ ] Brand new users no knowledge
     - [ ] Just want to run trains
@@ -55,17 +69,17 @@ This is a list of to do items that will allow us to release this new documentati
 ## Release QA Items
 
 - [ ] Proof-reading all pages but not by original author
-- [ ] Address all ==TODO== markers
+- [ ] Address all ==TODO== markers [search for ==TODO==](?TODO)
 
 ## Menu and Page Structure
 
 - [ ] All hardware pages should "next" onto the EX-Installer EX-CommandStation configuration instructions, maybe nav plugin extension, maybe JS
-- [ ] If DIY on tap nav menu, RTR must be their too, choose:
+- If DIY on tap nav menu, RTR must be their too, choose:
 
-    - [ ] Both DIY and RTR on nav menu
-    - [ ] Move both under products menu
+    - [x] Both DIY and RTR on nav menu
+    - [ ] ~~Move both under products menu~~
 
-- [ ] Redirects for key items from the previous site, and QR codes on hardware devices
+- Redirects for key items from the previous site, and QR codes on hardware devices
 
     - [x] EX-CSB1 QR code
     - [x] EX8874 QR code
@@ -75,7 +89,7 @@ This is a list of to do items that will allow us to release this new documentati
 ## Styling
 
 - [ ] Revisit navigation menu bar colouring
-- [ ] Table separator colours are almost invisible
+- [x] Table separator colours are almost invisible
 
 ## Team Info
 
@@ -90,4 +104,4 @@ This is a list of to do items that will allow us to release this new documentati
     - [x] Icons/emojis
     - [x] Snippets
 
-- [ ] About Us page - combine with contributing or separate?
+- [x] About Us page

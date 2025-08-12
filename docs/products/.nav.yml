@@ -2,6 +2,8 @@ nav:
   - Product List: 00-products.md
   - Getting Started: 01-getting-started.md
   - EX-CommandStation: ex-commandstation
+  - EX-MotorShield8874: ex-motorshield8874
+  - EX-WiFiShield8266: ex-wifishield8266
   - EX-FastClock: ex-fastclock
   - EX-IOExpander: ex-ioexpander
   - EX-Turntable: ex-turntable

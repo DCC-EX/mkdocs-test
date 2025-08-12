@@ -42,6 +42,12 @@ If you are an existing GitHub user, you can also get support via GitHub which is
 
 Please refer to our [GitHub page](/support/2-github.md) on the various repositories you can raise issues in.
 
+## TrainBoard
+
+If you're a member of the TrainBoard forum, there is a [DCC++ Forum](https://www.trainboard.com/highball/index.php?forums/dcc.177/) you can post in for help. Yes, it is still called DCC++.
+
+Note that this isn't the busiest forum and only a few of the DCC-EX team are members of TrainBoard, so resolution of issues may be slow. There are other members of the forum that may try to assist though.
+
 ## Email (not recommended)
 
 While email support is available for those who have no other way to obtain support, there is only one team member with access to reply to your queries, and therefore ***this is a slow process and is not recommended.***

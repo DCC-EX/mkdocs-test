@@ -51,11 +51,13 @@ hide:
 
     Both systems use the same powerful [EX-CommandStation](/products/ex-commandstation/0-overview.md) software which is totally free and easy to configure and install using our installation tool.
 
-    We also have a a continually evolving range of additional products to enhance your entire layout including an integrated fast clock, integrated turntable controller, and I/O expansion.
+    We also have a a continually evolving range of additional [products](/products/00-products.md) to enhance your entire layout including an integrated fast clock, integrated turntable controller, and I/O expansion.
 
 - ## :material-help-box-multiple-outline: Who is DCC-EX
 
     DCC-EX is world-wide team of dedicated enthusiasts producing **free** and open source **DCC** and **DC** software and hardware solutions to run your model trains and layout. Our mission is to use our many decades of software and hardware experience to make model trains accessible and affordable to everyone.
+    
+    You can learn more on our [About Us](/about/about.md) page.
 
     ---
 

@@ -26,7 +26,7 @@ In most cases, connecting a serial monitor causes the Command station to restart
 
 ## Simple testing commands (Main track)
 
-Commands are entered as shown, complete with the `< >` markers. Case is important because `<T` is a compl;etely different command to `<t`
+Commands are entered as shown, complete with the `< >` markers. Case is important because `<T` is a completely different command to `<t`
 
 ### Check communication and version
 
