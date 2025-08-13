@@ -42,5 +42,5 @@ In England serving the UK
 
 ### In Australia serving AU, NZ, and APAC
 
-- [Millennium Engineering Pty Ltd](https://www.milleng.com.au>)
+- [Millennium Engineering Pty Ltd](https://www.milleng.com.au/)
 - [Buckambool Model Trains](https://bmodeltrains.com/product-category/dcc-ex-command-stations/)
