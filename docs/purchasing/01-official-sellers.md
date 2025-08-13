@@ -12,7 +12,7 @@ The dealers listed on this page work with the DCC-EX team to ensure these device
 
 ## Supplier/Reseller List
 
-![USA Flag](/_static/images/icons/flag_us_small.png){ align=left width=48px }
+![USA Flag](/_static/images/icons/flag_us_small.png){ align=left }
 
 ### In the United States serving USA, Canada, & Mexico
 
@@ -25,7 +25,7 @@ The dealers listed on this page work with the DCC-EX team to ensure these device
 
 In England serving the UK
 
-- [Chesterfield Model Making and Miniature Electronics](https://chesterfield-models.co.uk/product-category/dcc-ex/)
+- [Chesterfield Model Making and Miniature Electronics](https://chesterfield-models.co.uk/product-category/dcc-ex/) - Chesterfield also sells cases for DIY builds
 - [ACI Model Railways](https://acimodelrailways.co.uk/)
 
 ---
@@ -38,7 +38,7 @@ In England serving the UK
 
 ---
 
-![Australian Flag](/_static/images/icons/flag_australia_small.png){ align=left height=5px }
+![Australian Flag](/_static/images/icons/flag_australia_small.png){ align=left }
 
 ### In Australia serving AU, NZ, and APAC
 
