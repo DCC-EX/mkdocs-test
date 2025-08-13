@@ -8,8 +8,8 @@
 
 - There is a significant voltage drop when using L298 motor drivers. (see table below)  
 
-- Cut the VIN trace or bend the VIN pin on L298 shields.  
-  VIN from L298 motor shields should not be used to power the microprocessor board.
+- VIN from L298 motor shields should not be used to power the microprocessor board.  
+  Cut the VIN trace or bend the VIN pin on L298 shields.  
   
 ## Genuine Arduino R3
 

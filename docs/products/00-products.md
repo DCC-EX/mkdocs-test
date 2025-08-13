@@ -10,14 +10,14 @@ These are our easy to use, get up and running quickly type products. You don't n
 
 Note that you may need to install some software on your computer to take advantage of some of these, but our documentation will walk you through that process.
 
-![csb1](/_static/images/ex-csb1/csb1-small.png){ align=right}
+![csb1](/_static/images/ex-csb1/csb1-small.png){: style="width: 30%" align=right}
 
 ### EX-CommandStation Booster 1 Express
 
 ![EX-CommandStation Logo](/_static/images/logos/product-logo-ex-commandstation-only-light.png){ .only-light width=400px }
 ![EX-CommandStation Logo](/_static/images/logos/product-logo-ex-commandstation-only-dark.png){ .only-dark width=400px }
-![EX-CSB1 Logo](/_static/images/logos/product-logo-ex-csb1-only-light.png){ .only-light width=400px }
-![EX-CSB1 Logo](/_static/images/logos/product-logo-ex-csb1-only-dark.png){ .only-dark width=400px }
+[![EX-CSB1 Logo](/_static/images/logos/product-logo-ex-csb1-only-light.png){ .only-light width=400px }
+![EX-CSB1 Logo](/_static/images/logos/product-logo-ex-csb1-only-dark.png){ .only-dark width=400px }](/products/ex-commandstation/1-ex-csb1.md)
 
 A ready-to-run, all in one Command Station and Booster with built-in WiFi preloaded with our flagship train control and layout animation and automation software. For more information on this and how to purchase, head over to the [EX-CSB1 product page](/products/ex-commandstation/1-ex-csb1.md)
 
@@ -27,8 +27,8 @@ You can learn more about the software in the [EX-CommandStation documentation](/
 
 ### EX-WebThrottle
 
-![EX-WebThrottle Logo](/_static/images/logos/product-logo-ex-webthrottle-only-light.png){ .only-light width=400px }
-![EX-WebThrottle Logo](/_static/images/logos/product-logo-ex-webthrottle-only-dark.png){ .only-dark width=400px }
+[![EX-WebThrottle Logo](/_static/images/logos/product-logo-ex-webthrottle-only-light.png){ .only-light width=400px }
+![EX-WebThrottle Logo](/_static/images/logos/product-logo-ex-webthrottle-only-dark.png){ .only-dark width=400px }](https://dcc-ex.com/legacy-docs/ex-webthrottle/index.html#ex-webthrottle)
 
 This is the easiest way to validate you've connected your command station correctly to your track. Just load it up in your Chromium based web browser (Edge, Chrome, Opera) after connecting your command station to your computer and you can run your trains with it.
 
@@ -55,14 +55,14 @@ These products are more involved to get up and running, and aren't just plug in 
 
 You will need to perform some assembly and configure and install some software to take advantage of these ones, but you won't need to solder anything.
 
-![diy](/_static/images/mega/mega-small.png){ align=right}
+![diy](/_static/images/mega/mega-small.png){: style="width: 30%" align=right}
 
 ### EX-CommandStation Recommended Self Build Option (DIY)
 
 ![EX-CommandStation Logo](/_static/images/logos/product-logo-ex-commandstation-only-light.png){ .only-light width=400px }
 ![EX-CommandStation Logo](/_static/images/logos/product-logo-ex-commandstation-only-dark.png){ .only-dark width=400px }
-![CS DIY Logo](/_static/images/logos/product-logo-ex-cs-diy-only-light.png){ .only-light width=400px }
-![CS DIY Logo](/_static/images/logos/product-logo-ex-cs-diy-only-dark.png){ .only-dark width=400px }
+[![CS DIY Logo](/_static/images/logos/product-logo-ex-cs-diy-only-light.png){ .only-light width=400px }
+![CS DIY Logo](/_static/images/logos/product-logo-ex-cs-diy-only-dark.png){ .only-dark width=400px }](/diy/20-mega-easy.md)
 
 A supported DIY stack for EX-CommandStation using an Arduino Mega + EX-MotorShield8874 (or Arduino R3 Motor Shield) + EX-WiFiShield8266 (optional).
 
@@ -74,8 +74,8 @@ Refer to the [Easy build Arduino Mega page](/diy/20-mega-easy.md) for informatio
 
 ### EX-MotorShield8874
 
-![EX-8874 Logo](/_static/images/logos/product-logo-ex-motorshield8874-only-light.png){ .only-light width=400px }
-![EX-8874 Logo](/_static/images/logos/product-logo-ex-motorshield8874-only-dark.png){ .only-dark width=400px }
+[![EX-8874 Logo](/_static/images/logos/product-logo-ex-motorshield8874-only-light.png){ .only-light width=400px }
+![EX-8874 Logo](/_static/images/logos/product-logo-ex-motorshield8874-only-dark.png){ .only-dark width=400px }](/products/ex-motorshield8874/ex-motorshield8874.md)
 
 A dual channel, 5 amp (per channel) motor shield designed specifically for DCC-EX in an Arduino shield format.
 
@@ -87,8 +87,8 @@ Refer to the [EX-MotorShield8874 page](/products/ex-motorshield8874/ex-motorshie
 
 ### EX-WiFiShield8266
 
-![EX-8266 Logo](/_static/images/logos/product-logo-ex-wifishield8266-only-light.png){ .only-light width=400px }
-![EX-8266 Logo](/_static/images/logos/product-logo-ex-wifishield8266-only-dark.png){ .only-dark width=400px }
+[![EX-8266 Logo](/_static/images/logos/product-logo-ex-wifishield8266-only-light.png){ .only-light width=400px }
+![EX-8266 Logo](/_static/images/logos/product-logo-ex-wifishield8266-only-dark.png){ .only-dark width=400px }](/products/ex-wifishield8266/ex-wifishield8266.md)
 
 A WiFi shield designed specifically for DCC-EX in an Arduino shield format.
 
@@ -110,8 +110,8 @@ If you are new to DCC-EX and/or electronics in general, we do not recommend you 
 
 ![EX-CommandStation Logo](/_static/images/logos/product-logo-ex-commandstation-only-light.png){ .only-light width=400px }
 ![EX-CommandStation Logo](/_static/images/logos/product-logo-ex-commandstation-only-dark.png){ .only-dark width=400px }
-![CS DIY Logo](/_static/images/logos/product-logo-ex-cs-diy-only-light.png){ .only-light width=400px }
-![CS DIY Logo](/_static/images/logos/product-logo-ex-cs-diy-only-dark.png){ .only-dark width=400px }
+[![CS DIY Logo](/_static/images/logos/product-logo-ex-cs-diy-only-light.png){ .only-light width=400px }
+![CS DIY Logo](/_static/images/logos/product-logo-ex-cs-diy-only-dark.png){ .only-dark width=400px }](/diy/1-diy.md)
 
 A more complex DIY stack for EX-CommandStation using Espressif ESP32 or STMicroelectronics Nucleo microcontrollers. Some modifications may be required depending on the device chosen, and there are various nuances to be aware of when assembling and configuring these DIY options.
 
@@ -123,8 +123,8 @@ Refer to the [EX-CommandStation DIY Pages](/diy/1-diy.md) for information on wha
 
 ### EX-FastClock
 
-![EX-FastClock Logo](/_static/images/logos/product-logo-ex-fastclock-only-light.png){ .only-light width=400px }
-![EX-FastClock Logo](/_static/images/logos/product-logo-ex-fastclock-only-dark.png){ .only-dark width=400px }
+[![EX-FastClock Logo](/_static/images/logos/product-logo-ex-fastclock-only-light.png){ .only-light width=400px }
+![EX-FastClock Logo](/_static/images/logos/product-logo-ex-fastclock-only-dark.png){ .only-dark width=400px }](/products/ex-fastclock/01-overview.md)
 
 An integrated fast clock for your layout.
 
@@ -136,8 +136,8 @@ Refer to the [EX-FastClock documentation](/products/ex-fastclock/01-overview.md)
 
 ### EX-Turntable
 
-![EX-Turntable Logo](/_static/images/logos/product-logo-ex-turntable-only-light.png){ .only-light width=400px }
-![EX-Turntable Logo](/_static/images/logos/product-logo-ex-turntable-only-dark.png){ .only-dark width=400px }
+[![EX-Turntable Logo](/_static/images/logos/product-logo-ex-turntable-only-light.png){ .only-light width=400px }
+![EX-Turntable Logo](/_static/images/logos/product-logo-ex-turntable-only-dark.png){ .only-dark width=400px }](/products/ex-turntable/ex-turntable.md)
 
 An integrated turntable/traverser controller using a stepper motor.
 
@@ -149,8 +149,8 @@ Refer to the [EX-Turntable documentation](/products/ex-turntable/ex-turntable.md
 
 ### EX-DCCInspector
 
-![EX-DCCInspector Logo](/_static/images/logos/product-logo-ex-dccinspector-only-light.png){ .only-light width=400px }
-![EX-DCCInspector Logo](/_static/images/logos/product-logo-ex-dccinspector-only-dark.png){ .only-dark width=400px }
+[![EX-DCCInspector Logo](/_static/images/logos/product-logo-ex-dccinspector-only-light.png){ .only-light width=400px }
+![EX-DCCInspector Logo](/_static/images/logos/product-logo-ex-dccinspector-only-dark.png){ .only-dark width=400px }](https://dcc-ex.com/legacy-docs/ex-dccinspector/index.html#ex-dccinspector)
 
 A diagnostic tool to inspect DCC packets.
 
@@ -162,8 +162,8 @@ Refer to the [EX-DCCInspector documentation](https://dcc-ex.com/legacy-docs/ex-d
 
 ### EX-IOExpander
 
-![EX-IOExpander Logo](/_static/images/logos/product-logo-ex-ioexpander-only-light.png){ .only-light width=400px }
-![EX-IOExpander Logo](/_static/images/logos/product-logo-ex-ioexpander-only-dark.png){ .only-dark width=400px }
+[![EX-IOExpander Logo](/_static/images/logos/product-logo-ex-ioexpander-only-light.png){ .only-light width=400px }
+![EX-IOExpander Logo](/_static/images/logos/product-logo-ex-ioexpander-only-dark.png){ .only-dark width=400px }](/products/ex-ioexpander/ex-ioexpander.md)
 
 Driven by a shortage of I2C connected I/O expansion devices, EX-IOExpander allows you to use various Arduino devices to expand the I/O capabilities of your command station.
 
