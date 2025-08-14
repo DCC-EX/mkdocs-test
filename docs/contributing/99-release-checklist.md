@@ -86,10 +86,13 @@ This is a list of to do items that will allow us to release this new documentati
     - [x] show QR codes for Toolbox, and ED.
     - [ ] and any other recommended throttle apps.
 
+- [ ] Page numbers should be double digits (leading 0)
+
 ## Styling
 
 - [ ] Revisit navigation menu bar colouring
 - [x] Table separator colours are almost invisible
+- [ ] Validate all colours are accessible friendly (reports links might be difficult to read)
 
 ## Team Info
 
