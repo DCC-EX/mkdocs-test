@@ -108,3 +108,10 @@ This is a list of to do items that will allow us to release this new documentati
     - [x] Snippets
 
 - [x] About Us page
+
+## Release To Do
+
+- [ ] GitHub workflow to build these docs on push/merge
+- [ ] GitHub workflow must use strict mode to error on all warnings and errors
+- [ ] News article on existing site ahead of release
+- [ ] News article with this release
