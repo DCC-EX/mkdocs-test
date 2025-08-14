@@ -1,5 +1,6 @@
 # IDE files
 .vscode
+.idea
 
 # Python environments
 venv
