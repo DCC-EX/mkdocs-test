@@ -8,7 +8,7 @@ This page briefly outlines each of our products, the experience level you need t
 
 These are our easy to use, get up and running quickly type products. You don't need to pick up a soldering iron or write any software, just plug them in and go!
 
-Note that you may need to install some software on your computer to take advantage of some of these, but our documentation will walk you through that process.
+**NOTE:** You may need to install some software on your computer to take advantage of some of these, but our documentation will walk you through that process.
 
 ![csb1](/_static/images/ex-csb1/csb1-small.png){: style="width: 30%" align=right}
 
@@ -19,7 +19,9 @@ Note that you may need to install some software on your computer to take advanta
 [![EX-CSB1 Logo](/_static/images/logos/product-logo-ex-csb1-only-light.png){ .only-light width=400px }
 ![EX-CSB1 Logo](/_static/images/logos/product-logo-ex-csb1-only-dark.png){ .only-dark width=400px }](/products/ex-commandstation/1-ex-csb1.md)
 
-A ready-to-run, all in one Command Station and Booster with built-in WiFi preloaded with our flagship train control and layout animation and automation software. For more information on this and how to purchase, head over to the [EX-CSB1 product page](/products/ex-commandstation/1-ex-csb1.md)
+A ready-to-run, all in one Command Station and Booster with built-in WiFi preloaded with our flagship train control, layout animation and automation software. 
+
+For more information on this and how to purchase, head over to the [EX-CSB1 product page](/products/ex-commandstation/1-ex-csb1.md)
 
 You can learn more about the software in the [EX-CommandStation documentation](/products/ex-commandstation/0-overview.md).
 
@@ -43,7 +45,8 @@ To access it, refer to the [EX-WebThrottle documentation](https://dcc-ex.com/leg
 
 For Android phone users, this is an extremely useful tool to help with configuring various aspects of your trains, command station, and accessories.
 
-You can download it here [![app store](/_static/images/ex-toolbox/download.png)](https://play.google.com/store/apps/details?id=dcc_ex.ex_toolbox)
+You can download it here
+[![app store](/_static/images/ex-toolbox/download.png)](https://play.google.com/store/apps/details?id=dcc_ex.ex_toolbox)
 
 ==TODO== ... Refer to the [EX-Toolbox documentation](https://dcc-ex.com/legacy-docs/ex-toolbox/index.html#ex-toolbox) for how to install and use it.
 

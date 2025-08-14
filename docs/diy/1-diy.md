@@ -4,7 +4,7 @@ A command station consists of a processor and a shield/board to convert the low 
 
 DCC-EX started life on home-built command stations using Arduino UNO and Mega processors and the standard Arduino motor shield. This was attractive to users that liked to experiment and was exceptionally cheap to create.
 
-***However, if you build your own, or even buy a pre-built stack from a third party***, you will need to learn quite a lot more than using our plug-and-go solution the [Command Station Booster 1 Express (CSB1)](?CSB1).
+***However, if you build your own, or even buy a pre-built stack from a third party***, you will need to learn quite a lot more than using our plug-and-go solution the [Command Station Booster 1 Express (CSB1)](/products/ex-commandstation/1-ex-csb1.md).
 
 !!! warning "Buyer beware!"
 

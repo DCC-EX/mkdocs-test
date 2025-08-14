@@ -3,6 +3,8 @@ hide:
   - footer
 ---
 
+==TODO== - Add screenshots.
+
 # Download and install on Linux
 
 Download from here [Linux x64](https://github.com/DCC-EX/EX-Installer/releases/latest/download/EX-Installer-Linux64){ .md-button }

@@ -10,7 +10,7 @@ Since every layout is essentially a prototype, and there are a huge variety of h
 
 You may need to turn off your antivirus software before you try to install, or you may be prompted to trust this executable.
 
-Sometimes our software gets blocked by antivirus apps. If you see any errors on the install screen, this is usually the issue.
+Sometimes our software gets blocked by antivirus applications. If you see any errors on the install screen, this is usually the issue.
 
 ## Installing EX-Installer
 
@@ -18,7 +18,7 @@ Sometimes our software gets blocked by antivirus apps. If you see any errors on 
 [macOS](download-mac.md){ .md-button }
 [Linux x64](download-linux.md){ .md-button }
 
-Note there is no support for EX-Installer on Windows 7, nor 32 bit operating systems such as Windows x32 or RaspberryPi OS.
+**NOTE:** There is no support for EX-Installer on Windows 7, nor 32 bit operating systems such as Windows x32 or RaspberryPi OS.
 
 ## Alternatives to the EX-Installer
 
