@@ -50,8 +50,8 @@ This is a list of to do items that will allow us to release this new documentati
 
 - Purchasing information for hardware:
 
-    - [ ] Official DCC-EX reseller stores
-    - [ ] Recommended third-party suppliers
+    - [x] Official DCC-EX reseller stores
+    - [x] Recommended third-party suppliers
 
 - [ ] EXRAIL command reference from doxyGen
 - User journeys to guide users through the site:
