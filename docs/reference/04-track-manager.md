@@ -6,7 +6,7 @@ What follows is for advanced users interested in managing power districts and/or
 
 ## What is the Track Manager
 
-Track Manger (TM from now on) is an integral part of the command statoon software that is responsible for:
+Track Manger (TM from now on) is an integral part of the command station software that is responsible for:
 
 - Managing track power state.
 - Monitoring track overloads and shorts.
@@ -28,7 +28,7 @@ Unlike the older version of DCC-EX, where the shield channel A was always the DC
 
 With such flexibility comes responsibility... the potential for making mistakes means taking extra care with your configuration!
 
-**NOTE** TM does NOT use "zero stretching" to control your DC motor. Instead, it uses true Pulse Width Modulation (PWM) to efficiently run your loco using the same method a decoder uses to control a DCC loco's motor. DC locos can even run better on TM than they can on a normal analog throttle, especially at low speed, since it is always applying the full track voltage, albeit in pulses of varying duration.
+**NOTE:** TM does NOT use "zero stretching" to control your DC motor. Instead, it uses true Pulse Width Modulation (PWM) to efficiently run your loco using the same method a decoder uses to control a DCC loco's motor. DC locos can even run better on TM than they can on a normal analog throttle, especially at low speed, since it is always applying the full track voltage, albeit in pulses of varying duration.
 
 ## Using the Track Manager (DCC)
 
@@ -56,18 +56,18 @@ Bear in mind that a track may actually be only connected to DCC accessories such
 Note that when setting a track to PROG or OFF, its power is switched off automatically. (The PROG track manages power on an as-needed basis under normal circumstances.
 When setting a track to MAIN (or DC, DCX see later) the power is applied according to the most recent `<1>` or `<0>` command as being the most compatible with previous versions.
 
-## using the Track Manager (DC)
+## Using the Track Manager (DC)
 
 TM allows any or all of your tracks to be individually selected as a DC track which responds to throttle commands on any given loco address. So for example if track A is set to DC address 55, then any throttle commands to loco 55 will be transmitted as DC onto track A and thus a DC loco can be driven along that track. almost exactly as if it was DCC.
-Your throttle (JMRI, EX-Webthrottle, Withrottle, Engine Driver etc etc) do not know or care that this is a DC loco so nothing needs to change.
+Your throttle (JMRI, EX-Webthrottle, Withrottle, Engine Driver etc.) do not know or care that this is a DC loco so nothing needs to change.
 
 For a simple Command Station setup to run just two DC tracks instead of DCC, you only need to assign DC addresses to tracks A and B. If you want DCC on track A and DC on track B, you just need to set track B to a suitable DC address.
 
 The command to set a track to a DC address is as follows
 
-- `<=t DC a>` Sets track t (A..H) to use loco address a. e.g. <=A DC 3>
+- `<=t DC a>` Sets track t (A..H) to use loco address, example <=A DC 3>
 
-A simple 2 separate loop DC track, wired the traditional way in opposite directions, may be set like this to use loco addresses 1 and 2.  
+A simple two separate loop DC track, wired the traditional way in opposite directions, may be set like this to use loco addresses 1 and 2.  
 
 ```console
 <=A DC 1>
@@ -93,7 +93,7 @@ Its perfectly OK to cross between DC tracks by setting them to the same loco add
 Each track requires hardware to control it
 
 - Power on/off
-- Polarity (direction, signal etc)
+- Polarity (direction, signal etc.)
 - Brake (shorts tracks together)
 - Current (analog reading)
 
@@ -103,22 +103,23 @@ You will also need to consider the implications of differing electronic implemen
 
 The easiest way to consider the wiring is to treat each track individually (either as a separate driver or as half of a shield).
 
-You will require,for each track, on the Arduino:
+You will require, for each track, on the Arduino:
 
 - A GPIO pin (or a HAL vpin perhaps on an I2C extender, code TBA!!!) to switch power.
 - A GPIO pin to switch the signal direction
-- A GPIO pin with PWM capability to switch the Brake (you may omit this if you dont want any DC capability)
-- Optionally An Analog pin to read the current (unless your hardware cant do that, perhaps its just feeding a booster)
-- Optionally a GPIO fault pin if thats how your hardware works. (NOT recommended as you're going to run out of pins)
+- A GPIO pin with PWM capability to switch the Brake (you may omit this if you don't want any DC capability)
+- (Optional) An Analog pin to read the current (unless your hardware cant do that, perhaps its just feeding a booster)
+- (Optional) A GPIO fault pin if that's how your hardware works. (NOT recommended as you're going to run out of pins)
 
 IF you have no more than 3 tracks and you can arrange for the signal pins to be one of 11,12,13 on a Mega, THEN there is a slight advantage internally and the waveform will be super-sharp.
 
-**Hardware that has two signal pins still needs some code though!!!!!!!!**
+**IMPORTANT:** Hardware that has two signal pins still needs some code though
 
 ## Configuring the Software
 
-Configuring the software to provide more tracks is a simple extension of the existing method of customising the #define of MOTOR_SHIELD_TYPE in config.h
-Since there can be no standard setup of your wiring and hardware choices, it will be necessary to create your custom built MOTOR_SHIELD_TYPE in the manner described in MotorDrivers.h and simply continue to add more `new MotorDriver(` definitions to the list, providing all the pin numbers and electronic limits for each track. (or even shorten the list to 1)
+Configuring the software to provide more tracks is a simple extension of the existing method of customising the #define of MOTOR_SHIELD_TYPE in config.h.
+
+Since there can be no standard setup of your wiring and hardware choices, it will be necessary to create your custom-built MOTOR_SHIELD_TYPE in the manner described in MotorDrivers.h and simply continue to add more `new MotorDriver(` definitions to the list, providing all the pin numbers and electronic limits for each track [or even shorten the list to 1] )
 
 ## Using EXRAIL to control Track Manager
 

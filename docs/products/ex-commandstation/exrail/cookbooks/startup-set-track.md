@@ -22,4 +22,4 @@ AUTOSTART
 
 Other track modes require the `SET_POWER` command, for each track.  
      &nbsp; &nbsp; [Example: Set a track to DC](./dc-tracks.md)  
-     &nbsp; &nbsp; &nbsp; &nbsp; Note the use of the `SET_LOCO` command for DC mode tracks.
+     &nbsp; &nbsp; &nbsp; &nbsp; **NOTE:** The use of the `SET_LOCO` command for DC mode tracks.

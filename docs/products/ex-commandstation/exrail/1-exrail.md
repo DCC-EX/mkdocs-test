@@ -41,17 +41,17 @@ e.g.
     DONE   // sequence completed
 ```
 
-- ```ROUTE``` - A special type of SEQUENCE that is made visible to a throttle with a readable name so the user can press a button to get the sequence executed. This might be best used to set a series of turnouts and signals to create a route through the layout. For example
+- ```ROUTE``` – A special type of SEQUENCE that is made visible to a throttle with a readable name so the user can press a button to get the sequence executed. This might be best used to set a series of turnouts and signals to create a route through the layout. For example
 
 ```cpp
-  ROUTE(1,"Platform A to mainline")
+  ROUTE(1,"Platform A to Mainline")
     THROW(27) // set turnouts
     CLOSE(6)
     GREEN(101) // change departure signal
     DONE 
 ```
 
-- ```AUTOMATION``` - A special type of SEQUENCE that is made visible to a throttle so that a user can hand over a loco and let EXRAIL drive the train away, following each step listed in the sequence. For example, a user could manually drive a train into a station and press a handoff button in the throttle to run an AUTOMATION to take it on a journey around the layout.
+- ```AUTOMATION``` – A special type of SEQUENCE that is made visible to a throttle so that a user can hand over a loco and let EXRAIL drive the train away, following each step listed in the sequence. For example, a user could manually drive a train into a station and press a handoff button in the throttle to run an AUTOMATION to take it on a journey around the layout.
 
 ```cpp
   AUTOMATION(17,"Depart to Byeckaslike")
@@ -65,7 +65,7 @@ e.g.
     DONE
 ```
 
-- ON-handler - a sequence that is automatically started when some event happens. For example when a button is pressed (ONBUTTON) or a turnout is changed (ONTHROW / ONCLOSE) so you can intercept turnout/point changes to automatically adjust signals or other turnouts.
+- ON-[HANDLER] – a sequence that is automatically started when some event happens. For example when a button is pressed (ONBUTTON) or a turnout is changed (ONTHROW / ONCLOSE) so you can intercept turnout/point changes to automatically adjust signals or other turnouts.
 
 ```cpp
 ONBUTTON(167)
@@ -85,4 +85,4 @@ I have used C++ on Arduino’s and Python/Jython on JMRI software to build Autom
 
 - I can create Automations, Routes, & Sequence scripts With EXRAIL on the Command Station and still access them from JMRI PanelPro and DecoderPro GUI buttons with a simple sendDCCmessage.py script pointer that passes them to the EXRAIL scripts on the Command Station, so I don’t have to rewrite the script in Jython/Python.
 
-- EXRAIL is ten times easier to learn and use and is more flexible then the other methods.
+- EXRAIL is ten times easier to learn and use and is more flexible than the other methods.
