@@ -1,9 +1,10 @@
 # Throttle Writers Guide (doc incomplete)
+==TODO==
 
-The commonly used speed, function, loco programming and diagnostic commands are discussed elsewhere with users in mind. However there are a large number of commands designed only to be used by other programs such as JMRI, Engine Driver or other throttles specifically aimed at the DCC-EX protocol. (ie not WiThrottle)
+The commonly used speed, function, loco programming and diagnostic commands are discussed elsewhere with users in mind. However, there are a large number of commands designed only to be used by other programs such as JMRI, Engine Driver or other throttles specifically aimed at the DCC-EX protocol. (not WiThrottle)
 
-many commands that have been implemented to assist throttle authors to obtain information from the Command Station in order to implement turnout, route/automation and roster features.
-Some of these commands are deliberately milti-stage requests to avoid timing and blocking issues caused by massive transmissions (e.g. a full list of turnouts with descriptions) that can cause Command Sation issues.
+Many commands that have been implemented to assist throttle authors to obtain information from the Command Station in order to implement turnout, route/automation and roster features.
+Some of these commands are deliberately milti-stage requests to avoid timing and blocking issues caused by massive transmissions (e.g. a full list of turnouts with descriptions) that can cause Command Station issues.
 
 Broadcast replies are also designed so that a throttle can maintain loco speed and function states, turnout poisitions and route states.
 
@@ -20,9 +21,9 @@ e.g. response ``<jT 17 T "Coal yard exit">`` or ``<jT 17 C "Coal yard exit">``
 or ``<jT 17 C "">`` indicating turnout description not given.
 or ``<jT 17 X>`` indicating turnout unknown (or possibly hidden.)
 
-Note: It is still the throttles responsibility to monitor the status broadcasts.
-There is no intention of providing a command that indicates the turnout list has been updated since the throttle started.
-Also note that turnouts marked in EXRAIL with the HIDDEN keyword instead of a "description" will NOT show up in these commands.
+**NOTE:** It is still the throttles responsibility to monitor the status broadcasts. There is no intention of providing a command that indicates the turnout list has been updated since the throttle started.
+
+**NOTE:** Turnouts marked in EXRAIL with the HIDDEN keyword instead of a "description" will NOT show up in these commands.
 
 ## Automations/Routes
 
@@ -37,13 +38,13 @@ Also note that turnouts marked in EXRAIL with the HIDDEN keyword instead of a "d
  or  ``<jA 13 A "description">`` for an automation.
  or ``<jA 13 X>`` for id not found
 
- Whats the difference:
+ What's the difference:
 
-   A Route is just a call to an EXRAIL ROUTE, traditionally to set some turnouts or signals but can be used to perform any kind of EXRAIL function... but its not expecting to know the loco.  
-   Thus a route can be triggered by sending in for example ``</START 13>``.
+   A Route is just a call to an EXRAIL ROUTE, traditionally to set some turnouts or signals but can be used to perform any kind of EXRAIL function... but its not expecting to know the loco. 
+   Thus, a route can be triggered by sending in for example ``</START 13>``.
 
    An Automation is a handoff of the last accessed loco id to an EXRAIL AUTOMATION which would typically drive the loco away.
-   Thus an Automation expects a start command with a cab id
+   Thus, an Automation expects a start command with a cab id
    e.g. ``</START 13 3>``
 
 Routes and Automations can also have their current status and caption altered dynamically by EXRAIL (docs ==TODO==)
@@ -63,9 +64,10 @@ Obtaining throttle status.
 
 ``<t cabid>``  Requests a deliberate update on the cab speed/functions in the same format as the cab broadcast.
     ``<l cabid slot speedbyte functionMap>``
-    Note that a slot of -1 indicates that the cab is not in the reminders table and this comand will not reserve a slot until such time as the cab is throttled.
 
-## COMMANDS TO AVOID
+**NOTE:** A slot of -1 indicates that the cab is not in the reminders table and this command will not reserve a slot until such time as the cab is throttled.
+
+## COMMANDS TO AVOID ==TODO==
 
 ``<f cab func1 func2>``     Use ``<F cab function 1/0>``
 

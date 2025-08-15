@@ -9,7 +9,7 @@ This is the EX-CSB1 Getting Started Guide.
 The DCC-EX EX-CSB1 Command Station/Booster comes ready to use out of the box and has the following features:
 
 - **Dual DCC/PWM DC outputs with up to 5A capacity** – easily expandable to 4 outputs
-- **WiFi built-in** – fast 802.11n capable, with Access Point and Station modes including support for connecting as many as 10 WiFi throttles (you can also connect to JMRI via WiFi, but a USB cable is often better)
+- **Wi-Fi built-in** – fast 802.11n capable, with Access Point and Station modes including support for connecting as many as 10 Wi-Fi throttles (you can also connect to JMRI via Wi-Fi, but a USB cable is often better)
 - **Single power supply for track and onboard electronics** – 12-25V DC with polarity protection
 - **USB-C connector** – for software upload, diagnostic monitoring, DCC-EX WebThrottle and JMRI connectivity
 - **Railsync DCC input** – enables Booster or Sniffer modes, which with an EXRAIL script can be automatically engaged on receipt of a signal
@@ -28,7 +28,7 @@ The DCC-EX EX-CSB1 Command Station/Booster needs the minimum following connectio
 
 When correctly supplied with track power, both green Power LEDs will light. If the right-most LED alone is lit, it indicates power is being supplied from the USB-C connector so software upload can proceed, but trains cannot be run.
 
-The WiFi LED will light once a WiFi network is created (Access Point mode), or once connected to an existing WiFi network (Station mode.)
+The Wi-Fi LED will light once a Wi-Fi network is created (Access Point mode), or once connected to an existing Wi-Fi network (Station mode.)
 
 Other Connectors:
 
