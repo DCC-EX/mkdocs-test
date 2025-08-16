@@ -23,6 +23,8 @@ So:
 
 ## Directory Naming, Page Naming, and Titles
 
+With the exception of the home page and the DCC-EX News page, **do not use "index.md"**, but rather name pages according to their primary message. Using "index.md" adjusts the rendering of pages when navigating through the menus, and the team has preferenced the navigation experience using numbers pages over having an initial index page.
+
 - All directory and page names must be in lower case and use "-" instead of spaces.
 - Page ordering is ideally set by a two digit number, so preface with the appropriate page number eg. "01-standards-formatting.md".
 - The page title is determined by the top level heading, see [Headings](/contributing/documentation/03-formatting-guide.md#headings).
