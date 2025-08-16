@@ -4,11 +4,11 @@ The DCC-EX Team has several projects and sub teams where you can help donate you
 
 ## Documentation
 
-This [documentation](documentation/0-docs.md) is written in MkDocs so a knowledge of HTML, CSS or Javascript is not necessary.
+This [documentation](documentation/00-docs.md) is written in MkDocs so a knowledge of HTML, CSS or Javascript is not necessary.
 
 ## Development
 
-We use C++, Python, HTML/CSS/Javascript, Android, and even make up our own languages. If you like dealing with code, there's something for all. See [here for how to contribute code](code/0-contributing-code.md).
+We use C++, Python, HTML/CSS/Javascript, Android, and even make up our own languages. If you like dealing with code, there's something for all. See [here for how to contribute code](code/00-contributing-code.md).
 
 ## Web Support
 

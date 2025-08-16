@@ -53,7 +53,7 @@ Assuming you know the loco address is 3, the following commands may be useful:
 
 `<t 3 50 1>`  Move loco 3 speed 50 forward.
 
-`<t 3 20 0>`  Move loco 3 speed 20 referse.
+`<t 3 20 0>`  Move loco 3 speed 20 reverse.
 
 `<t 3 0 1>`  Stop loco 3 (decoder may stop loco realistically)
 

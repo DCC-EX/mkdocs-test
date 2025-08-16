@@ -25,16 +25,16 @@ Results in: [Link to this section](#page-and-section-links)
 ### Document Links
 
 ```markdown
-[Link to Contributing to Documentation Page](/contributing/documentation/0-docs.md)
+[Link to Contributing to Documentation Page](/contributing/documentation/00-docs.md)
 ```
 
-Results in: [Link to Contributing to Documentation Page](/contributing/documentation/0-docs.md)
+Results in: [Link to Contributing to Documentation Page](/contributing/documentation/00-docs.md)
 
 ```markdown
-[Link to How to Contribute Section](/contributing/documentation/0-docs.md#how-to-contribute)
+[Link to How to Contribute Section](/contributing/documentation/00-docs.md#how-to-contribute)
 ```
 
-Results in: [Link to How to Contribute Section](/contributing/documentation/0-docs.md#how-to-contribute)
+Results in: [Link to How to Contribute Section](/contributing/documentation/00-docs.md#how-to-contribute)
 
 Note: when typing a link in VSCode, the intellisense dropdown will help you complete the link by following the path from the project directory. This creates links that start with "/docs" (for example "/docs/contributing/1-contribute-docs.md" ). These links will not work unless you manually delete the /docs prefix.  Its a pain but we have raised a PR for VScode and mkDocs on this.
 

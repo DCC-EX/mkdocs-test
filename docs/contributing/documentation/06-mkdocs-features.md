@@ -24,7 +24,7 @@ There are several JavaScript files included to perform various client side funct
 - ex-installer-run-helper.js - Helper to hide irrelevant installer links/pages based on the detected browser's operating system
 - legacy-docs-new-tab.js - Ensures all HREF links pointing to `https://dcc-ex.com/legacy-docs/` open in a new tab
 - platform.js - Helper to determine the browser's operating system
-- search-helper.js - Helper to create search links, see [The search link](/contributing/documentation/4-understanding-links.md#the-search-link)
+- search-helper.js - Helper to create search links, see [The search link](/contributing/documentation/04-understanding-links.md#the-search-link)
 
 ## MkDocs Material Extensions
 

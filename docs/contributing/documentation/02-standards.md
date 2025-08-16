@@ -19,13 +19,13 @@ So:
 
 ## Do Not Duplicate Content
 
-**DO NOT CREATE DUPLICATE CONTENT** as this increases the maintenance burden significantly but, more importantly, makes it difficult for users when content appears slightly differently in two different places or even contradicts itself. When needing to repeat information in more than one place, take advantage of the [MkDocs Snippets](/contributing/documentation/6-mkdocs-features.md#snippets) feature. This allows you to include the same markdown content in multiple places.
+**DO NOT CREATE DUPLICATE CONTENT** as this increases the maintenance burden significantly but, more importantly, makes it difficult for users when content appears slightly differently in two different places or even contradicts itself. When needing to repeat information in more than one place, take advantage of the [MkDocs Snippets](/contributing/documentation/06-mkdocs-features.md#snippets) feature. This allows you to include the same markdown content in multiple places.
 
 ## Directory Naming, Page Naming, and Titles
 
 - All directory and page names must be in lower case and use "-" instead of spaces.
 - If specific page ordering is required, simply preface with the appropriate page number eg. "1-standards-formatting.md".
-- The page title is determined by the top level heading, see [Headings](/contributing/documentation/3-formatting-guide.md#headings).
+- The page title is determined by the top level heading, see [Headings](/contributing/documentation/03-formatting-guide.md#headings).
 
 ## Address all MkDocs Warnings and Errors
 
@@ -45,4 +45,4 @@ The top level directories under the "docs" directory determine the tabs or horiz
 
 If a new top level directory is to be added, it needs to be added to the "/docs/.nav.yml" file in the appropriate order. Files and directories created within existing top level directories will automatically be added to the menus (see [Page Naming and Titles](#directory-naming-page-naming-and-titles) for page ordering).
 
-Also note that our custom [Scoped Nav](/contributing/documentation/6-mkdocs-features.md#dcc-ex-custom-scoped-nav-plugin-and-custom-footerhtml) plugin automatically adjusts previous/next links, so overriding page ordering in ".nav.yml" will cause issues, so please do not override page ordering in this manner, but rather use numbers as outlined in [Directory Naming, Page Naming, and Titles](#directory-naming-page-naming-and-titles).
+Also note that our custom [Scoped Nav](/contributing/documentation/06-mkdocs-features.md#dcc-ex-custom-scoped-nav-plugin-and-custom-footerhtml) plugin automatically adjusts previous/next links, so overriding page ordering in ".nav.yml" will cause issues, so please do not override page ordering in this manner, but rather use numbers as outlined in [Directory Naming, Page Naming, and Titles](#directory-naming-page-naming-and-titles).
