@@ -1,5 +1,13 @@
 # Third Party Products and Sellers
 
+![Australian Flag](/_static/images/icons/flag_australia_small.png){ align=left }
+
+## Rosscoe
+
+One of our very active Discord users Rosscoe offers various different accessory products, both DCC and I2C.
+
+Visit the [Rosscoe Shop](https://rosscoe.com/shop/) to see what's on offer.
+
 ![US Flag](/_static/images/icons/flag_us_small.png){ align=left }
 
 ## David Yale

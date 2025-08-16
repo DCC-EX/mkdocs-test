@@ -1,6 +1,6 @@
 # I2C – An Introduction
 
-Model trains come alive when we add points(turnouts), signals, sensors, lights, sounds and more. DCC-EX comes ready-equipped with the capability to add many such devices. In the hands of users experienced in electronics, DCC-EX can support hundreds of such devices using a connection system called I2C “I Squared C” which is built-into your Command Station. While I2C is very powerful, it is not a consumer plug and play set up. If you have not used it before and are not experienced in electronics, you will need to teach yourself some new skills – which can be fun and which also creates its own challenges.
+Model trains come alive when we add points (turnouts), signals, sensors, lights, sounds and more. DCC-EX comes ready-equipped with the capability to add many such devices. In the hands of users experienced in electronics, DCC-EX can support hundreds of such devices using a connection system called I2C “I Squared C” which is built-into your Command Station. While I2C is very powerful, it is not a consumer plug and play set up. If you have not used it before and are not experienced in electronics, you will need to teach yourself some new skills – which can be fun and which also creates its own challenges.
 
 To help Conductors to get up the learning curve, we have 3 proven and essential building blocks that will get you there as smoothly as possible. We ask new users to closely follow all 3 of these, as otherwise our volunteer support teams get overwhelmed with support requests as the success of the DCC-EX venture grows.
 
