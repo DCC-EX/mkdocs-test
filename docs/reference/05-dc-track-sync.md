@@ -26,7 +26,7 @@ timers/pins defined for DC mode on Mega 2560
 
 **Nucleo-F4**  
 - Tracks with the same PWM frequency and throttle or speed will be in sync when updated code is used.  
-- Frequency updates will impact all tracks using the same timer.
+- Frequency updates will impact all tracks using the same timer.  
 - Timers 1-4, 9, 13 have been tested for use with Nucleo-F4.  Those timers should not be used for other purposes.  
 - Further discussion on the Discord server may be helpful to gain an understanding of the issues.
 
