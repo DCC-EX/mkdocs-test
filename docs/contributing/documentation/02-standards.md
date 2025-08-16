@@ -24,7 +24,7 @@ So:
 ## Directory Naming, Page Naming, and Titles
 
 - All directory and page names must be in lower case and use "-" instead of spaces.
-- If specific page ordering is required, simply preface with the appropriate page number eg. "1-standards-formatting.md".
+- Page ordering is ideally set by a two digit number, so preface with the appropriate page number eg. "01-standards-formatting.md".
 - The page title is determined by the top level heading, see [Headings](/contributing/documentation/03-formatting-guide.md#headings).
 
 ## Address all MkDocs Warnings and Errors
