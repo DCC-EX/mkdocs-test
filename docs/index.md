@@ -26,25 +26,20 @@ hide:
 
     Our [Command Station](/products/01-getting-started.md) is highly regarded as one of the best you can get and has many unique features that are specifically designed to bring control and fun to your hobby.
 
-    - Wi-fi access, with DCC-EX unique features, from the "Gold Standard" (Jimmy..==TODO== LINK) [Engine Driver](https://enginedriver.mstevetodd.com/) on Android, [ThrottleCard](https://throttlecard.com/) on iOS and a wide variety of other Apps. We can even show you how to build your own throttle.
+    - Wi-fi access, with DCC-EX unique features, [Engine Driver](https://enginedriver.mstevetodd.com/) on Android, [ThrottleCard](https://throttlecard.com/) on iOS and a wide variety of other Apps. We can even show you how to build your own throttle.
     - The ability to run DCC and DC trains from the same throttle at the same time.
     - The powerful but easy [EXRAIL](/products/ex-commandstation/exrail/1-exrail.md) scripting language to configure and control accessories such as turnouts, signals, lights, and sounds. It can also run trains automatically and animate your layout!
     - Integration with [JMRI](https://www.jmri.org/), [iTrain](https://www.berros.eu/en/itrain/), and [RocRail](https://wiki.rocrail.net/) if you prefer to run trains from your computer.
 
     ---
-
      [![csb1](/_static/images/ex-csb1/csb1-small.png){ align=right }](/products/ex-commandstation/1-ex-csb1.md)
     The [**EX-CommandStation Booster 1 Express**](/products/ex-commandstation/1-ex-csb1.md), otherwise known as a CSB1, can be purchased ready to run, complete with WiFi and power supply. If you have a phone, you could be running your trains in less than 5 minutes, without a computer.  
-    <br>
     If you would like to buy one, [check out our sellers](/purchasing/01-official-sellers.md)  
-    <br>
     If you want to get started with a CSB1 [read the product page](/products/ex-commandstation/1-ex-csb1.md)
 
     ---
-
     [![diy](/_static/images/mega/mega-small.png){ align=right}](/diy/1-diy.md)
-    Or you can enjoy [building your own](/diy/1-diy.md), staggeringly cheap, version from readily-available Arduino parts in use by modellers from all over the world. We have even designed parts to make this easy for beginners, no soldering required!  
-    <br>
+    Or you can enjoy [building your own](/diy/1-diy.md), staggeringly cheap, version from readily-available Arduino parts in use by modellers from all over the world. We have even designed parts to make this easy for beginners, no soldering required. 
     Of course, we also have a wealth of information for more adventurous builders if you have the appropriate electronics skills.
 
     ---
