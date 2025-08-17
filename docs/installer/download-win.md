@@ -3,7 +3,7 @@ hide:
   - footer
 ---
 
-# Download and install on Windows
+### Download and install on Windows
 
 - Download from here [Windows x64](https://github.com/DCC-EX/EX-Installer/releases/latest/download/EX-Installer-Win64.exe){ .md-button }
 - Open the downloads folder where your browser has saved the EX-Installer-Win64.exe and execute it.

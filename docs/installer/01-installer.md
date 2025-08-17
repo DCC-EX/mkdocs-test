@@ -1,4 +1,4 @@
-# The EX-Installer
+# EX-Installer
 
 With the exception of a Command Station Booster1 Express [CSB1](?CSB1) used solely as shipped with no accessories or options, you will need to download and install software to your Command Station or other DCC-EX products.
 
@@ -12,13 +12,13 @@ You may need to turn off your antivirus software before you try to install, or y
 
 Sometimes our software gets blocked by antivirus applications. If you see any errors on the installation screen, this is usually the issue.
 
-## Installing EX-Installer
+## Download EX-Installer
 
-[Windows x64](92-download-win.md){ .md-button }
-[macOS](91-download-mac.md){ .md-button }
-[Linux x64](90-download-linux.md){ .md-button }
+[Windows x64](download-win.md){ .md-button }
+[macOS](download-mac.md){ .md-button }
+[Linux x64](download-linux.md){ .md-button }
 
-**NOTE:** There is no support for EX-Installer on Windows 7, nor 32 bit operating systems such as Windows x32 or RaspberryPi OS.
+**NOTE:** There is no support for EX-Installer on Windows 7, nor 32-bit operating systems such as Windows x32 or RaspberryPi OS.
 
 ## Alternatives to the EX-Installer
 

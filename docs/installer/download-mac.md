@@ -3,7 +3,7 @@ hide:
   - footer
 ---
 
-# Download and install on MacOS
+### Download and install on MacOS
 
 Download from here [macOS](https://github.com/DCC-EX/EX-Installer/releases/latest/download/EX-Installer-macOS){ .md-button }
 

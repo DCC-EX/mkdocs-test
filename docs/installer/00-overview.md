@@ -1,4 +1,4 @@
-# EX-Installer
+# Using EX-Installer
 
 We highly recommend using EX-Installer to configure and install EX-CommandStation, EX-IOExpander, and EX-Turntable.
 
