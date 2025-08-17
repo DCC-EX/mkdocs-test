@@ -4469,6 +4469,19 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    ACEBOTT + EX8874
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -4480,6 +4493,100 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#acebott-esp32-max-v10" class="md-nav__link">
+    <span class="md-ellipsis">
+      ACEBOTT ESP32 Max v1.0
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#acebott-vs-wemos-r1-d32" class="md-nav__link">
+    <span class="md-ellipsis">
+      ACEBOTT vs. WeMos R1 D32
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ioref-voltage" class="md-nav__link">
+    <span class="md-ellipsis">
+      IOREF voltage
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#one-ex8874" class="md-nav__link">
+    <span class="md-ellipsis">
+      One EX8874
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="One EX8874">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#single-ex8874-checklist" class="md-nav__link">
+    <span class="md-ellipsis">
+      Single EX8874 Checklist
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#stacked-ex8874" class="md-nav__link">
+    <span class="md-ellipsis">
+      Stacked EX8874
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Stacked EX8874">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#stacked-ex8874-checklist" class="md-nav__link">
+    <span class="md-ellipsis">
+      Stacked EX8874 Checklist
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -5409,25 +5516,18 @@
 
 
 <h1 id="acebott-ex8874">ACEBOTT + EX8874<a class="headerlink" href="#acebott-ex8874" title="Permanent link">&para;</a></h1>
-<h1 id="beta-testing-esp32-wroom-32">Beta-testing ESP32-WROOM-32<a class="headerlink" href="#beta-testing-esp32-wroom-32" title="Permanent link">&para;</a></h1>
-<p><img align="right" alt="ACEBOTT ESP32" src="../../../_static/images/esp32/esp32-acebott.png" style="width: 50%" /></p>
-<h2 id="acebott-esp32-max-v10">ACEBOTT &nbsp;ESP32 &nbsp;Max v1.0<a class="headerlink" href="#acebott-esp32-max-v10" title="Permanent link">&para;</a></h2>
+<div class="admonition note">
+<p class="admonition-title">ACEBOTT Beta Testing</p>
+<p>Please note that the ACEBOTT boards are currently in Beta testing, so this information may change at any time. If using these boards, we highly recommend joining our <a href="../../../support/01-discord/">Discord server</a> and request access to the <code>#beta-testing</code> channel.</p>
+</div>
+<p><img align="right" alt="ACEBOTT ESP32" src="../../../_static/images/esp32/esp32-acebott.png" width="40%" /></p>
+<h2 id="acebott-esp32-max-v10">ACEBOTT ESP32 Max v1.0<a class="headerlink" href="#acebott-esp32-max-v10" title="Permanent link">&para;</a></h2>
 <ul>
-<li>
-<p>Limited testing has been done with this board.  </p>
-</li>
-<li>
-<p>Please report any anomalies when using the pins in the suggested custom motor defines.</p>
-</li>
-<li>
-<p>A custom motor define is required when using the ACEBOTT ESP32 board, as the pins are in different locations vs. the WeMos ESP32.</p>
-</li>
-<li>
-<p>There is another version of the ACEBOTT ESP32 which has not been tested.  ACEBOTT focus is on STEM education kits and robotics; uncertain if their quality is better than the WeMos boards, but recent prices are comparable.</p>
-</li>
-<li>
-<p>Do not be fooled by the 5V pin on the I2C header block; there is no onboard level shifting.</p>
-</li>
+<li>Limited testing has been done with this board.</li>
+<li>Please report any anomalies when using the pins in the suggested custom motor defines.</li>
+<li>A custom motor define is required when using the ACEBOTT ESP32 board, as the pins are in different locations vs. the WeMos ESP32.</li>
+<li>There is another version of the ACEBOTT ESP32 which has not been tested.  ACEBOTT focus is on STEM education kits and robotics; uncertain if their quality is better than the WeMos boards, but recent prices are comparable.</li>
+<li>Do not be fooled by the 5V pin on the I2C header block; there is no onboard level shifting.</li>
 </ul>
 <h2 id="acebott-vs-wemos-r1-d32">ACEBOTT vs. WeMos R1 D32<a class="headerlink" href="#acebott-vs-wemos-r1-d32" title="Permanent link">&para;</a></h2>
 <ul>
@@ -5436,32 +5536,20 @@
 <li>Pin locations A0, A1 can be used for current sensing.  </li>
 <li>Default pins can be used on EX8874.  </li>
 </ul>
-<p><img align="right" alt="ACEBOTT IOREF" src="../../../_static/images/esp32/esp32-acebott-ioref.png" style="width: 10%" />
-<img align="right" alt="EX8874 IOREF" src="../../../_static/images/esp32/ioref-override.png" style="width: 25%" /></p>
+<p><img align="right" alt="ACEBOTT IOREF" src="../../../_static/images/esp32/esp32-acebott-ioref.png" width="10%" />
+<img align="right" alt="EX8874 IOREF" src="../../../_static/images/esp32/ioref-override.png" width="25%" /></p>
 <h2 id="ioref-voltage">IOREF voltage<a class="headerlink" href="#ioref-voltage" title="Permanent link">&para;</a></h2>
 <ul>
-<li>
-<p>The IOREF pin location has the 5V pin.  If the pin on the EX8874 is bent, the IOREF could be jumpered to 3V3 pin on the EX8874.</p>
-</li>
-<li>
-<p>The preferable work-around to the incorrect 5V pin is to modify the EX8874, using the <strong>3V3 IOREF Override</strong> solder pad on the EX8874.  &nbsp;If voltage is not correct, the ADC inputs will receive up to 5V when the IOREF pin is 5V.</p>
-</li>
-<li>
-<p>When using the 3V3 IOREF Override, bend the IOREF pin or confirm that the trace connecting the pin is completely cut.  </p>
-</li>
+<li>The IOREF pin location has the 5V pin.  If the pin on the EX8874 is bent, the IOREF could be jumpered to 3V3 pin on the EX8874.</li>
+<li>The preferable work-around to the incorrect 5V pin is to modify the EX8874, using the <strong>3V3 IOREF Override</strong> solder pad on the EX8874. If voltage is not correct, the ADC inputs will receive up to 5V when the IOREF pin is 5V.</li>
+<li>When using the 3V3 IOREF Override, bend the IOREF pin or confirm that the trace connecting the pin is completely cut.</li>
 </ul>
 <hr />
 <h2 id="one-ex8874">One EX8874<a class="headerlink" href="#one-ex8874" title="Permanent link">&para;</a></h2>
 <ul>
-<li>
-<p>ACEBOTT ESP32 motor defines are not included in MotorDrivers.h  </p>
-</li>
-<li>
-<p>Do not edit MotorDrivers.h; a custom motor define should be added in config.h  </p>
-</li>
-<li>
-<p>Note how the ESP32 GPIO pin numbers are used, and the Arduino pin locations are shown/commented.</p>
-</li>
+<li>ACEBOTT ESP32 motor defines are not included in MotorDrivers.h</li>
+<li>Do not edit MotorDrivers.h; a custom motor define should be added in config.h</li>
+<li>Note how the ESP32 GPIO pin numbers are used, and the Arduino pin locations are shown/commented.</li>
 </ul>
 <div class="highlight"><pre><span></span><code><span class="w">  </span><span class="cp">#define EX8874_ACEBOTT_ESP32 F(&quot;EX8874_ACEBOTT_ESP32&quot;), \  </span>
 <span class="w">    </span><span class="k">new</span><span class="w"> </span><span class="n">MotorDriver</span><span class="p">(</span><span class="mi">26</span><span class="cm">/* 3*/</span><span class="p">,</span><span class="w"> </span><span class="mi">16</span><span class="cm">/*12*/</span><span class="p">,</span><span class="w"> </span><span class="n">UNUSED_PIN</span><span class="p">,</span><span class="w"> </span><span class="mi">19</span><span class="cm">/*9*/</span><span class="p">,</span><span class="w"> </span><span class="mi">32</span><span class="cm">/*A0*/</span><span class="p">,</span><span class="w"> </span><span class="mf">1.52</span><span class="p">,</span><span class="w"> </span><span class="mi">5000</span><span class="p">,</span><span class="w"> </span><span class="mi">36</span><span class="cm">/*A4*/</span><span class="p">),</span><span class="w"> </span><span class="err">\</span><span class="w">  </span>
@@ -5471,32 +5559,28 @@
 <ul>
 <li>When one EX8874 motor shield is used with ACEBOTT ESP32 Max v1.0, the default EX8874 pins are used.</li>
 </ul>
-<p>&nbsp; &nbsp; &nbsp; &nbsp; <img alt="ACEBOTT table" src="../../../_static/images/esp32/acebott-ex8874-x1b.png" style="width: 80%" /></p>
-<ul>
-<li><strong>Checklist</strong><br />
-&#45; Cover the barrel connector on ACEBOTT ESP32, as VIN power will be provided by EX8874<br />
-&#45; IOREF Override set to 3v3<br />
-&#45; Add the custom motor define - 4 lines in config.h  </li>
+<p><img alt="ACEBOTT table" src="../../../_static/images/esp32/acebott-ex8874-x1b.png" width="80%" /></p>
+<h3 id="single-ex8874-checklist">Single EX8874 Checklist<a class="headerlink" href="#single-ex8874-checklist" title="Permanent link">&para;</a></h3>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> Cover the barrel connector on ACEBOTT ESP32, as VIN power will be provided by EX8874  </li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> IOREF Override set to 3v3  </li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> Add the custom motor define - 4 lines in config.h  </li>
 </ul>
 <hr />
 <h2 id="stacked-ex8874">Stacked EX8874<a class="headerlink" href="#stacked-ex8874" title="Permanent link">&para;</a></h2>
 <ul>
+<li>Reminder: No modifications are needed when installing EX8874 for 4 track outputs on EX-CSB1.</li>
+<li><strong>IOREF:</strong> The IOREF override is also needed for the top shield.</li>
 <li>
-<p>Reminder:  &nbsp;No modifications are needed when installing EX8874 for 4 track outputs on EX-CSB1....  </p>
+<p><strong>VIN:</strong> Refer to instructions on <a href="../../hardware/motorboards/ex-8874/?h=#steps-to-stack">cutting the VIN trace and disabling the regulator</a> for the top shield.</p>
 </li>
 <li>
-<p><strong>IOREF:</strong> &nbsp;The IOREF override is also needed for the top shield.</p>
-</li>
-<li>
-<p><strong>VIN:</strong> &nbsp;Refer to instructions on <a href="../../hardware/motorboards/ex-8874/?h=#steps-to-stack">cutting the VIN trace and disabling the regulator</a> for the top shield.  </p>
-</li>
-<li>
-<p>Stacking motor shields on ACEBOTT ESP32 requires<br />
-a. use of solder pad for 8 alternate pins<br />
+<p>Stacking motor shields on ACEBOTT ESP32 requires</p>
+<p>a. use of solder pad for 8 alternate pins<br />
 b. for Fault pins, bend A4 and A5 pins and jumper to the GPIO headers  </p>
 </li>
 </ul>
-<p>&nbsp; &nbsp; &nbsp; &nbsp; <img alt="ACEBOTT table" src="../../../_static/images/esp32/acebott-ex8874-x2b.png" style="width: 80%" /></p>
+<p><img alt="ACEBOTT table" src="../../../_static/images/esp32/acebott-ex8874-x2b.png" width="80%" /></p>
 <ul>
 <li>A custom motor define will be needed in config.h</li>
 </ul>
@@ -5507,14 +5591,14 @@ b. for Fault pins, bend A4 and A5 pins and jumper to the GPIO headers  </p>
 <span class="w">    </span><span class="k">new</span><span class="w"> </span><span class="n">MotorDriver</span><span class="p">(</span><span class="mi">14</span><span class="cm">/* 5*/</span><span class="p">,</span><span class="w"> </span><span class="mi">25</span><span class="cm">/* 4*/</span><span class="p">,</span><span class="w"> </span><span class="n">UNUSED_PIN</span><span class="p">,</span><span class="w"> </span><span class="mi">13</span><span class="cm">/*6*/</span><span class="p">,</span><span class="w"> </span><span class="mi">35</span><span class="cm">/*A5*/</span><span class="p">,</span><span class="w"> </span><span class="mf">1.52</span><span class="p">,</span><span class="w"> </span><span class="mi">5000</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="w"> </span><span class="cm">/*A5*/</span><span class="p">)</span><span class="w">  </span>
 <span class="w">  </span><span class="cp">#define MOTOR_SHIELD_TYPE EX8874X2_ACEBOTT_ESP32</span>
 </code></pre></div>
-<ul>
-<li><strong>Checklist</strong><br />
-&#45; Cover the barrel connector on WeMos R1 D32, as VIN power will be provided by one EX8874<br />
-&#45; IOREF Override set to 3v3 on both EX8874 boards<br />
-&#45; VIN trace cut and regulator disabled on top EX8874<br />
-&#45; Alternate pins enabled via solder pads<br />
-&#45; Jumpers added for GPIO 2 and 4<br />
-&#45; Add the custom motor define - 6 lines in config.h  </li>
+<h3 id="stacked-ex8874-checklist">Stacked EX8874 Checklist<a class="headerlink" href="#stacked-ex8874-checklist" title="Permanent link">&para;</a></h3>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> Cover the barrel connector on WeMos R1 D32, as VIN power will be provided by one EX8874  </li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> IOREF Override set to 3v3 on both EX8874 boards  </li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> VIN trace cut and regulator disabled on top EX8874  </li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> Alternate pins enabled via solder pads  </li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> Jumpers added for GPIO 2 and 4  </li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> Add the custom motor define - 6 lines in config.h  </li>
 </ul>
 <p><mark>TODO</mark></p>
 
@@ -5537,7 +5621,7 @@ b. for Fault pins, bend A4 and A5 pins and jumper to the GPIO headers  </p>
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="August 17, 2025 17:20:13 UTC">August 17, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="August 17, 2025 19:28:51 UTC">August 17, 2025</span>
   </span>
 
     
