@@ -1,6 +1,6 @@
 nav:
-  - The DCC-EX Command Station: 0-overview.md
-  - EX-CSB1 CommandStation Booster: 1-ex-csb1.md
+  - The DCC-EX Command Station: 00-overview.md
+  - EX-CSB1 CommandStation Booster: 01-ex-csb1.md
   - Testing your command station: 10-testing.md
   - TrackManager: trackmanager
   - Accesssories: accessories

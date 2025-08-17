@@ -17,13 +17,13 @@ These are our easy to use, get up and running quickly type products. You don't n
 ![EX-CommandStation Logo](/_static/images/logos/product-logo-ex-commandstation-only-light.png){ .only-light width=400px }
 ![EX-CommandStation Logo](/_static/images/logos/product-logo-ex-commandstation-only-dark.png){ .only-dark width=400px }
 [![EX-CSB1 Logo](/_static/images/logos/product-logo-ex-csb1-only-light.png){ .only-light width=400px }
-![EX-CSB1 Logo](/_static/images/logos/product-logo-ex-csb1-only-dark.png){ .only-dark width=400px }](/products/ex-commandstation/1-ex-csb1.md)
+![EX-CSB1 Logo](/_static/images/logos/product-logo-ex-csb1-only-dark.png){ .only-dark width=400px }](/products/ex-commandstation/01-ex-csb1.md)
 
 A ready-to-run, all in one Command Station and Booster with built-in WiFi preloaded with our flagship train control, layout animation and automation software. 
 
-For more information on this and how to purchase, head over to the [EX-CSB1 product page](/products/ex-commandstation/1-ex-csb1.md)
+For more information on this and how to purchase, head over to the [EX-CSB1 product page](/products/ex-commandstation/01-ex-csb1.md)
 
-You can learn more about the software in the [EX-CommandStation documentation](/products/ex-commandstation/0-overview.md).
+You can learn more about the software in the [EX-CommandStation documentation](/products/ex-commandstation/00-overview.md).
 
 ---
 
@@ -78,26 +78,26 @@ Refer to the [Easy build Arduino Mega page](/diy/20-mega-easy.md) for informatio
 ### EX-MotorShield8874
 
 [![EX-8874 Logo](/_static/images/logos/product-logo-ex-motorshield8874-only-light.png){ .only-light width=400px }
-![EX-8874 Logo](/_static/images/logos/product-logo-ex-motorshield8874-only-dark.png){ .only-dark width=400px }](/products/ex-motorshield8874/ex-motorshield8874.md)
+![EX-8874 Logo](/_static/images/logos/product-logo-ex-motorshield8874-only-dark.png){ .only-dark width=400px }](/products/ex-motorshield8874/00-ex-motorshield8874.md)
 
 A dual channel, 5 amp (per channel) motor shield designed specifically for DCC-EX in an Arduino shield format.
 
 Assembly is required to add this to an Arduino Mega along with software configuration.
 
-Refer to the [EX-MotorShield8874 page](/products/ex-motorshield8874/ex-motorshield8874.md) for more information.
+Refer to the [EX-MotorShield8874 page](/products/ex-motorshield8874/00-ex-motorshield8874.md) for more information.
 
 ---
 
 ### EX-WiFiShield8266
 
 [![EX-8266 Logo](/_static/images/logos/product-logo-ex-wifishield8266-only-light.png){ .only-light width=400px }
-![EX-8266 Logo](/_static/images/logos/product-logo-ex-wifishield8266-only-dark.png){ .only-dark width=400px }](/products/ex-wifishield8266/ex-wifishield8266.md)
+![EX-8266 Logo](/_static/images/logos/product-logo-ex-wifishield8266-only-dark.png){ .only-dark width=400px }](/products/ex-wifishield8266/00-ex-wifishield8266.md)
 
 A WiFi shield designed specifically for DCC-EX in an Arduino shield format.
 
 Assembly is required to add this to an Arduino Mega along with software configuration.
 
-Refer to the [EX-WiFiShield8266 page](/products/ex-wifishield8266/ex-wifishield8266.md) for more information.
+Refer to the [EX-WiFiShield8266 page](/products/ex-wifishield8266/00-ex-wifishield8266.md) for more information.
 
 ---
 
@@ -114,13 +114,13 @@ If you are new to DCC-EX and/or electronics in general, we do not recommend you 
 ![EX-CommandStation Logo](/_static/images/logos/product-logo-ex-commandstation-only-light.png){ .only-light width=400px }
 ![EX-CommandStation Logo](/_static/images/logos/product-logo-ex-commandstation-only-dark.png){ .only-dark width=400px }
 [![CS DIY Logo](/_static/images/logos/product-logo-ex-cs-diy-only-light.png){ .only-light width=400px }
-![CS DIY Logo](/_static/images/logos/product-logo-ex-cs-diy-only-dark.png){ .only-dark width=400px }](/diy/1-diy.md)
+![CS DIY Logo](/_static/images/logos/product-logo-ex-cs-diy-only-dark.png){ .only-dark width=400px }](/diy/00-diy.md)
 
 A more complex DIY stack for EX-CommandStation using Espressif ESP32 or STMicroelectronics Nucleo microcontrollers. Some modifications may be required depending on the device chosen, and there are various nuances to be aware of when assembling and configuring these DIY options.
 
 You will need to need to be careful when configuring and installing software on these devices also.
 
-Refer to the [EX-CommandStation DIY Pages](/diy/1-diy.md) for information on what options are available and supported.
+Refer to the [EX-CommandStation DIY Pages](/diy/00-diy.md) for information on what options are available and supported.
 
 ---
 
@@ -140,13 +140,13 @@ Refer to the [EX-FastClock documentation](/products/ex-fastclock/01-overview.md)
 ### EX-Turntable
 
 [![EX-Turntable Logo](/_static/images/logos/product-logo-ex-turntable-only-light.png){ .only-light width=400px }
-![EX-Turntable Logo](/_static/images/logos/product-logo-ex-turntable-only-dark.png){ .only-dark width=400px }](/products/ex-turntable/ex-turntable.md)
+![EX-Turntable Logo](/_static/images/logos/product-logo-ex-turntable-only-dark.png){ .only-dark width=400px }](/products/ex-turntable/00-ex-turntable.md)
 
 An integrated turntable/traverser controller using a stepper motor.
 
 The software and integration side of EX-Turntable is reasonably straight forward, however the mechanics of getting a turntable operational with a stepper motor and the required sensors to control the location of the turntable accurately is quite involved.
 
-Refer to the [EX-Turntable documentation](/products/ex-turntable/ex-turntable.md) for what's required and how to get up and running.
+Refer to the [EX-Turntable documentation](/products/ex-turntable/00-ex-turntable.md) for what's required and how to get up and running.
 
 ---
 
@@ -166,10 +166,10 @@ Refer to the [EX-DCCInspector documentation](https://dcc-ex.com/legacy-docs/ex-d
 ### EX-IOExpander
 
 [![EX-IOExpander Logo](/_static/images/logos/product-logo-ex-ioexpander-only-light.png){ .only-light width=400px }
-![EX-IOExpander Logo](/_static/images/logos/product-logo-ex-ioexpander-only-dark.png){ .only-dark width=400px }](/products/ex-ioexpander/ex-ioexpander.md)
+![EX-IOExpander Logo](/_static/images/logos/product-logo-ex-ioexpander-only-dark.png){ .only-dark width=400px }](/products/ex-ioexpander/00-ex-ioexpander.md)
 
 Driven by a shortage of I2C connected I/O expansion devices, EX-IOExpander allows you to use various Arduino devices to expand the I/O capabilities of your command station.
 
 However, this does mean you will need to understand I2C connectivity and will likely need some more complex assembly and/or soldering to use this on your layout.
 
-Refer to the [EX-IOExpander documentation](/products/ex-ioexpander/ex-ioexpander.md) for more information.
+Refer to the [EX-IOExpander documentation](/products/ex-ioexpander/00-ex-ioexpander.md) for more information.

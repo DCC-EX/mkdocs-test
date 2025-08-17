@@ -8,7 +8,7 @@ The generated logos are exported in PNG format with a transparent background, an
 
 ## Light and Dark Theme
 
-Due to most logos using a transparent background, there are typically both a light and dark version of each logo available, and a CSS class is required to display the correct one using an [attribute](/contributing/documentation/6-mkdocs-features.md#attribute-lists).
+Due to most logos using a transparent background, there are typically both a light and dark version of each logo available, and a CSS class is required to display the correct one using an [attribute](/contributing/documentation/06-mkdocs-features.md#attribute-lists).
 
 If a logo has a solid background (for example our main DCC-EX logo), this is not required.
 
@@ -56,7 +56,7 @@ EX-CommandStation product only logo:
 
 As you can see by the examples above, the logo sizes can be quite intrusive if use unconstrained.
 
-If sizing needs to be constrained, use an additional [attribute](/contributing/documentation/6-mkdocs-features.md#attribute-lists) to set the width only (do not set height):
+If sizing needs to be constrained, use an additional [attribute](/contributing/documentation/06-mkdocs-features.md#attribute-lists) to set the width only (do not set height):
 
 ```markdown
 ![EX-CommandStation Logo](/_static/images/logos/product-logo-ex-commandstation-only-light.png){ .only-light width=400px }
