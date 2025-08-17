@@ -30,7 +30,7 @@ To make full use of EX-FastClock**, you will need a basic understanding of EX-RA
 
 The EX-FastClock integration includes:
 
-- A ready made Arduino program for an Arduino Uno based Fast Clock
+- A ready-made Arduino program for an Arduino Uno based Fast Clock
 - Support for Serial connection
 - |I2C| device driver
 - EX-RAIL automation support

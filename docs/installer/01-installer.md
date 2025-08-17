@@ -10,7 +10,7 @@ Since every layout is essentially a prototype, and there are a huge variety of h
 
 You may need to turn off your antivirus software before you try to install, or you may be prompted to trust this executable.
 
-Sometimes our software gets blocked by antivirus applications. If you see any errors on the install screen, this is usually the issue.
+Sometimes our software gets blocked by antivirus applications. If you see any errors on the installation screen, this is usually the issue.
 
 ## Installing EX-Installer
 

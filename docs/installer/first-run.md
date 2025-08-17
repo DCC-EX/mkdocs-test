@@ -2,15 +2,13 @@
 
 You will be presented with the Welcome screen…
 
-==TODO==- pic1
+![welcome](/_static/images/ex-installer/welcome.png)
 
 This screen provides some basic information about the process of loading the Software. The font may be very small on a high quality screen so use the "tools sizing" menu to find a better zoom factor. 
 
 To proceed, click the Manage Arduino CLI button.
 
-b. ‘Manage Arduino CLI’ screen
-EX-Installer - Manage CLI
-Fig 182: EX-Installer - Manage CLI screen
+![device first_run](/_static/images/ex-installer/first-run.png)
 
 This screen allows you to install or update the Arduino Command Line Interface (CLI).
 
