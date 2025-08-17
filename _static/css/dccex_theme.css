@@ -550,6 +550,8 @@
 .md-typeset .md-button {
   padding: 7px;
   border-radius: 20px;
+  width: 150px;
+  text-align: center;
 }
 
 /* Back to top button overrides */
