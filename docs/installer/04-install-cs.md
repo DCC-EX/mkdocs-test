@@ -1,6 +1,6 @@
 # Installing Command Station Software
 
-This assumes you have read and done the EX-Installer installation, know how to execute it and have done the [CLI download and optional ESP32 steps](first-run.md) to make sure you have the necessary build processor and run time libraries for your Command Station.
+This assumes you have read and done the EX-Installer installation, know how to execute it and have done the [CLI download and optional ESP32 steps](02-first-run.md) to make sure you have the necessary build processor and run time libraries for your Command Station.
 
 To proceed, click the Select your device button.
 
@@ -57,22 +57,22 @@ If you have installed and optional OLED or LED display, enable [I have a display
 
 ### Optional Wi-fi
 
-If you are using a CSB1 or other board with integrated Wi-Fi, or have installed and optional Wi-Fi board you need to enable the `I have WiFi`.
+If you are using a CSB1 or other board with integrated Wi-Fi, or have installed and optional Wi-Fi board you need to enable the `I have Wi-Fi`.
 This enables the "Wi-fi Options" button where you can configure the Wi-Fi.
 
-### WiFi Access Point mode
+### Wi-Fi Access Point mode
 
 ![wifi AP](/_static/images/ex-installer/wifi-ap.png)
 
-In Access Point mode, you command station runs a completely isolated Wi-Fi Network. This is most useful if your layout is away from the house, or you transport your layout frequently, or do not want to give guests access to your home WiFi. WiFi phones or tablets will need to connect their WiFi to the Access Point and will lose access to your home WiFi. 
+In Access Point mode, you command station runs a completely isolated Wi-Fi Network. This is most useful if your layout is away from the house, or you transport your layout frequently, or do not want to give guests access to your home Wi-Fi. Wi-Fi phones or tablets will need to connect their Wi-Fi to the Access Point and will lose access to your home Wi-Fi. 
 Wi-Fi Password is optional.
 If this field is left blank the password will default to ‘PASS_xxxxxx’ where ‘xxxxxx’ will be the same as the SSID name that will be automatically configured.
 If possible, choose a channel that is unused (or least used) by other Wi-Fi networks around your location.
-There are numerous phone apps that can help you determine which channels are being used by other networks. For Android, ‘Wifi Analyzer’ is one that works. For iOS ‘Netspot’ is suitable (you don’t need to purchase WiPry device they mention).
+There are numerous phone apps that can help you determine which channels are being used by other networks. For Android, ‘Wi-fi Analyzer’ is one that works. For iOS ‘Netspot’ is suitable (you don’t need to purchase WiPry device they mention).
 
 Wi-Fi Channel can be any value from 1-11.
 
-#### WiFi Station mode
+#### Wi-Fi Station mode
 
 ![wifi station](/_static/images/ex-installer/wifi-station.png)
 

@@ -14,15 +14,15 @@ Sometimes our software gets blocked by antivirus applications. If you see any er
 
 ## Installing EX-Installer
 
-[Windows x64](download-win.md){ .md-button }
-[macOS](download-mac.md){ .md-button }
-[Linux x64](download-linux.md){ .md-button }
+[Windows x64](92-download-win.md){ .md-button }
+[macOS](91-download-mac.md){ .md-button }
+[Linux x64](90-download-linux.md){ .md-button }
 
 **NOTE:** There is no support for EX-Installer on Windows 7, nor 32 bit operating systems such as Windows x32 or RaspberryPi OS.
 
 ## Alternatives to the EX-Installer
 
-Experienced programmers or those wishing to develop new features or products will generally find [VSCode/PlatformIO](platformio.md) a more powerful and familiar option.
+Experienced programmers or those wishing to develop new features or products will generally find [VSCode/PlatformIO](05-platformio.md) a more powerful and familiar option.
 
 Methods involving downloading zip files have caused  support issues in the past, are troublesome and not recommended.
 
