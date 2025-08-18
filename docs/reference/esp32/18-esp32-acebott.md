@@ -2,7 +2,7 @@
 
 !!! note "ACEBOTT Beta Testing"
 
-    Please note that the ACEBOTT boards are currently in Beta testing, so this information may change at any time. If using these boards, we highly recommend joining our [Discord server](/support/01-discord.md) and request access to the `#beta-testing` channel.
+    Please note that the ACEBOTT board is currently in Beta testing, so this information may change at any time. If using this board, we highly recommend joining our [Discord server](/support/01-discord.md) and request access to the `#beta-testing` channel.
 
 ![ACEBOTT ESP32](/_static/images/esp32/esp32-acebott.png){ width=40% align=right }
 
@@ -45,9 +45,9 @@
   #define MOTOR_SHIELD_TYPE EX8874_ACEBOTT_ESP32
 ```
 
-- When one EX8874 motor shield is used with ACEBOTT ESP32 Max v1.0, the default EX8874 pins are used.
-
-![ACEBOTT table](/_static/images/esp32/acebott-ex8874-x1b.png){ width=80% }
+- When one EX8874 motor shield is used with ACEBOTT ESP32 Max v1.0, the default EX8874 pins are used.  
+  
+&nbsp; &nbsp; &nbsp; &nbsp;![ACEBOTT table](/_static/images/esp32/acebott-ex8874-x1b.png){ width=80% }
 
 ### Single EX8874 Checklist
 
@@ -63,12 +63,11 @@
 - **IOREF:** The IOREF override is also needed for the top shield.
 - **VIN:** Refer to instructions on [cutting the VIN trace and disabling the regulator](/reference/hardware/motorboards/ex-8874.md/?h=#steps-to-stack) for the top shield.
 
-- Stacking motor shields on ACEBOTT ESP32 requires
-
+- Stacking motor shields on ACEBOTT ESP32 requires  
     a. use of solder pad for 8 alternate pins  
     b. for Fault pins, bend A4 and A5 pins and jumper to the GPIO headers  
 
-![ACEBOTT table](/_static/images/esp32/acebott-ex8874-x2b.png){ width=80% }
+&nbsp; &nbsp; &nbsp; &nbsp;![ACEBOTT table](/_static/images/esp32/acebott-ex8874-x2b.png){ width=80% }
 
 - A custom motor define will be needed in config.h
 
