@@ -3204,6 +3204,8 @@
       
         
       
+        
+      
     
     
     
@@ -3250,7 +3252,7 @@
   
   
   <span class="md-ellipsis">
-    EX-Installer
+    Using EX-Installer
     
   </span>
   
@@ -3273,7 +3275,99 @@
   
   
   <span class="md-ellipsis">
-    The EX-Installer
+    EX-Installer
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../installer/02-first-run/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    First Run installer
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../installer/03-select-product/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Select Product to Install
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../installer/04-install-cs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Installing Command Station Software
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../installer/05-platformio/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Advanced Users - VSCode/PlatformIO
     
   </span>
   
@@ -3319,7 +3413,7 @@
   
   
   <span class="md-ellipsis">
-    Download and install on MacOS
+    Download mac
     
   </span>
   
@@ -3342,76 +3436,7 @@
   
   
   <span class="md-ellipsis">
-    Download and install on Windows
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../installer/first-run/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    First Run installer
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../installer/install-cs/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Installing Command Station Software
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../installer/platformio/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Advanced Users - VSCode/PlatformIO
+    Download win
     
   </span>
   
@@ -4254,7 +4279,7 @@
   
   
   <span class="md-ellipsis">
-    Serial Commands
+    DCC Command Station Protocol
     
   </span>
   
@@ -4402,6 +4427,8 @@
       
         
       
+        
+      
     
     
     
@@ -4472,6 +4499,29 @@
   
   <span class="md-ellipsis">
     ACEBOTT + EX8874
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/esp32/22-esp32-l298-shield/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ESP32 + L298 Shields
     
   </span>
   
@@ -5411,19 +5461,19 @@
 </li>
 <li>
 <p>ESP32-WROOM-32 advantages<br />
-  -- Built-in WiFi<br />
-  -- Memory<br />
-  -- Sniffer/Booster capable (with additional optocoupler circuit)  </p>
+  - Built-in WiFi<br />
+  - Memory<br />
+  - Sniffer/Booster capable (with additional optocoupler circuit)  </p>
 </li>
 <li>
 <p>ESP32-WROOM-32 is more complex than using the Arduino Mega<br />
-  -- GPIO pin numbers are used (vs. Arduino style pin location numbers)<br />
-  -- ESP32 pins are not 5V tolerant<br />
-  -- I2C bus is 3.3V<br />
-  -- Soldering is required to modify the WeMos D1 R32/ESPDUINO-32 board<br />
-  -- Modifications are required for motor shields to protect ADC input pins<br />
-  -- ADC input range begins at 0.15V<br />
-  -- ESP32 Espressif boards package version 2.0.17 is required</p>
+  - GPIO pin numbers are used (vs. Arduino style pin location numbers)<br />
+  - ESP32 pins are not 5V tolerant<br />
+  - I2C bus is 3.3V<br />
+  - Soldering is required to modify the WeMos D1 R32/ESPDUINO-32 board<br />
+  - Modifications are required for motor shields to protect ADC input pins<br />
+  - ADC input range begins at 0.15V<br />
+  - ESP32 Espressif boards package version 2.0.17 is required</p>
 </li>
 </ul>
 <h1 id="ex-commandstation-esp32-wroom-32">EX-CommandStation - ESP32-WROOM-32<a class="headerlink" href="#ex-commandstation-esp32-wroom-32" title="Permanent link">&para;</a></h1>
@@ -5439,9 +5489,9 @@
 </li>
 <li>
 <p>WeMos D1 R32 boards have some obvious hardware errors:<br />
-  -- Pullup voltage to the IO0 pin is too high (4.2v instead of 3.3-3.8v) which leads to unreliable WiFi.<br />
-  -- IOREF pin does not output 3v3, but instead breaches the UNO R3 specification and outputs 5V.<br />
-  -- A0 and A1 pins cannot be used for ADC input when WiFi is used.</p>
+  - Pullup voltage to the IO0 pin is too high (4.2v instead of 3.3-3.8v) which leads to unreliable WiFi.<br />
+  - IOREF pin does not output 3v3, but instead breaches the UNO R3 specification and outputs 5V.<br />
+  - A0 and A1 pins cannot be used for ADC input when WiFi is used.</p>
 </li>
 <li>
 <p>There are other ESP32-WROOM-32 boards with the Uno form factor which might work, but these will require a custom motor define when there are differences in GPIO pin locations.</p>
@@ -5461,9 +5511,14 @@
 </li>
 </ul>
 <h2 id="reference-esp32">Reference ESP32<a class="headerlink" href="#reference-esp32" title="Permanent link">&para;</a></h2>
+<ul>
+<li>
 <p>Assembly and other information: &nbsp;<a href="../../reference/esp32/16-esp32-ex8874/">Reference - ESP32</a></p>
-<p><mark>TODO</mark> update above link</p>
+</li>
+<li>
 <p><a href="https://dcc-ex.com/legacy-docs/reference/hardware/microcontrollers/esp32.html#esp32-recommended">Legacy ESP32 documentation</a></p>
+</li>
+</ul>
 
 
 
@@ -5484,7 +5539,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="August 16, 2025 19:16:47 UTC">August 16, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="August 18, 2025 06:03:32 UTC">August 18, 2025</span>
   </span>
 
     
