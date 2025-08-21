@@ -6,12 +6,12 @@ The following code, added to myAutomation.h like any other EXRAIL code, gives a 
 
 ```cpp
 STEALTH_GLOBAL(
-  void  void myFilter(Print * stream, byte & opcode, byte & paramCount, int16_t p[]) {
+  void myFilter(Print * stream, byte & opcode, byte & paramCount, int16_t p[]) {
     (void)stream;
     // use command <U locoid> to display name from roster
     if (opcode == 'U' && paramCount == 1) {
       auto locoId=p[0];
-      auto name=RMFT2::getLocoName(locoId);
+      auto name=RMFT2::getRosterName(locoId);
       if (!name) return; // caller will <X> this
       opcode=0; // caller can now ignore this
       StringFormatter::lcd(0, F("Loco %d name %S"), locoId, name);
