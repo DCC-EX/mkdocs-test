@@ -1,13 +1,18 @@
 # EX-CSB1 Technical Reference
 
-- schematic pdf
+- [Link to EX-CSB1 Schematic](/_static/images/schematics/csb1-schematic.pdf)
 
-- arduino headers
+- Arduino headers  
+  ![EX-CSB1 headers](/_static/images/ex-csb1/csb1-arduino-headers.png){ width=60%}
 
-- using Serial2
+- I2C headers  
+  ![EX-CSB1 I2C headers](/_static/images/ex-csb1/i2c-headers-csb1.png){ width=60%}
+
+- How to utilize Serial2
 
 - other
 
-- Difference in current sensing vs ES8874
+- Difference in current sensing vs EX8874
 
-
+  ==TODO==
+  
