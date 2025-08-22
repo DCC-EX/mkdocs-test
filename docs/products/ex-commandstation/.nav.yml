@@ -1,6 +1,7 @@
 nav:
   - The DCC-EX Command Station: 00-overview.md
   - EX-CSB1 CommandStation Booster: 01-ex-csb1.md
+  - Build time config.h: 05-config-h.md
   - Testing your command station: 10-testing.md
   - TrackManager: trackmanager
   - Accesssories: accessories
