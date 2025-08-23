@@ -35,7 +35,7 @@ I2C modules, such as PCA9685, MCP23017 and LCD will generally have 10k pullups. 
 Add/remove pullups to result in 2.5-3.0 mA.  
 With LTC4311 the need to adjust resistance may be less important, unless resistance is too low.  
 
-![I2C Resistance](/_static/images/i2c-devices/i2c-pullup-resistance.png){ width=70% }
+![I2C Resistance](/_static/images/i2c-devices/i2c-pullup-resistance167.png){ width=70% }
 
 ## Wiring pattern for lower capacitance
 
