@@ -1183,6 +1183,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#power-sources" class="md-nav__link">
+    <span class="md-ellipsis">
+      Power sources
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -2582,6 +2591,8 @@
       
         
       
+        
+      
     
     
     
@@ -2652,6 +2663,29 @@
   
   <span class="md-ellipsis">
     TM1638 Buttons, leds and 7 segment display
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../exrail/cookbooks/various-devices/trainbrains/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Trainbrains Devices
     
   </span>
   
@@ -5924,10 +5958,10 @@
 <p>I2C expansion modules provide accessory pins, but I2C wiring requires a lot of attention to detail.</p>
 <h2 id="i2c-concepts">I2C concepts<a class="headerlink" href="#i2c-concepts" title="Permanent link">&para;</a></h2>
 <ul>
-<li>Keep I2C wiring short</li>
-<li>Use Qwiic cables</li>
-<li>Know the combined resistance of connected I2C modules</li>
-<li>Avoid using excess power from the microprocessor's power source</li>
+<li>Keep I2C wiring short.</li>
+<li>Use Qwiic cables.</li>
+<li>Know the combined resistance of connected I2C modules.</li>
+<li>Avoid using excess power from the microprocessor's power source.  Separate power sources can avoid degrading the I2C bus by low voltage spikes/sags or overloading the source.</li>
 </ul>
 <h2 id="i2c-bus-voltage">I2C bus voltage<a class="headerlink" href="#i2c-bus-voltage" title="Permanent link">&para;</a></h2>
 <ul>
@@ -5935,9 +5969,11 @@
 <li>Mega 2560 is 5V; CSB1, ESP32-WROOM, Nucleo-F4 are 3.3V.</li>
 </ul>
 <h2 id="qwiicstemma-qt">Qwiic/STEMMA QT<a class="headerlink" href="#qwiicstemma-qt" title="Permanent link">&para;</a></h2>
+<p><img align="right" alt=" Qwiic " src="../../../../_static/images/i2c-devices/i2c-qwiic-wiring-pattern.png" width="40%" /></p>
 <ul>
 <li>Qwiic a.k.a. STEMMA QT - connectors and wiring are designed for 3.3V.</li>
 <li>When using a Mega:  the Qwiic connector on EX8874 the power pin is 3.3V, but the SDA SCL pins have pullups to 5V. For most cases, use the I2C headers on the EX8874 when using a Mega.</li>
+<li>Qwiic wiring pattern is used for the <a href="https://learn.adafruit.com/introducing-adafruit-stemma-qt/technical-specs#stemma-4-pin-i2c-both-standard-and-stemma-qt-3035230">Adafruit STEMMA QT / Qwiic connectors</a> - and is different from the <a href="./#wiring-pattern-for-lower-capacitance">NXP pattern <em>below</em></a>.</li>
 </ul>
 <h2 id="i2c-wire-length">I2C wire length</strong><a class="headerlink" href="#i2c-wire-length" title="Permanent link">&para;</a></h2>
 <ul>
@@ -5950,14 +5986,20 @@
 <li>If resistance is too low, the uC will be unable to overcome it.</li>
 </ul>
 <p>This table shows the parallel resistance values with multiple I2C modules.<br />
-Note that Mega has 10k onboard; EX-CSB1 has 5.1k; others are weak or disabled.<br />
-I2C modules, such as PCA9685, MCP23017 and LCD will generally have 10k pullups. OLED may have none.<br />
-Add/remove pullups to result in 2.5-3.0 mA.<br />
-With LTC4311 the need to adjust resistance may be less important, unless resistance is too low.  </p>
+- Note that Mega has 10k onboard; EX-CSB1 has 5.1k; others are weak or disabled.<br />
+- I2C modules, such as PCA9685 and MCP23017, will generally have 10k pullups. LCD and OLED displays may have 4.7k or 10k.<br />
+- Add/remove pullups to result in 2.5-3.0 mA.<br />
+- With LTC4311 the need to adjust resistance may be less important, unless resistance is too low.  </p>
 <p><img alt="I2C Resistance" src="../../../../_static/images/i2c-devices/i2c-pullup-resistance167.png" width="70%" /></p>
 <h2 id="wiring-pattern-for-lower-capacitance">Wiring pattern for lower capacitance<a class="headerlink" href="#wiring-pattern-for-lower-capacitance" title="Permanent link">&para;</a></h2>
 <p><a href="https://www.nxp.com/docs/en/user-guide/UM10204.pdf">https://www.nxp.com/docs/en/user-guide/UM10204.pdf</a>  </p>
 <p><img alt="I2C Wiring Pattern" src="../../../../_static/images/i2c-devices/i2c-wiring-pattern.jpg" width="70%" /></p>
+<h2 id="power-sources">Power sources<a class="headerlink" href="#power-sources" title="Permanent link">&para;</a></h2>
+<ul>
+<li>A separate power source for the VCC pin of the I2C bus avoids potential voltage spikes/sags and noise into the power circuit of the microprocessor, and should make the I2C accessory bus more resilient.  </li>
+<li>Additional/separate power source is required for the +5V servo power on the PCA9685 module.  </li>
+<li>When using separate power sources, there is potential for a ground loop.  <mark>TODO</mark> </li>
+</ul>
 
 
 
@@ -5978,7 +6020,7 @@ With LTC4311 the need to adjust resistance may be less important, unless resista
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="August 23, 2025 05:38:38 UTC">August 23, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="August 26, 2025 19:40:04 UTC">August 26, 2025</span>
   </span>
 
     
