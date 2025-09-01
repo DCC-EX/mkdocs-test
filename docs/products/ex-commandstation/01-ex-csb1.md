@@ -34,3 +34,9 @@ Other Connectors:
 
 - **Qwiic I2C connector** – allows a broad range of 3.3V I2C peripherals to be easily with simple cables.
 - **Railsync connector** – allows connection to Railsync or a DCC track signal for Booster and Sniffer modes when enabled with suitable software configuration.
+
+## Booster mode
+
+When configured correctly, connecting a Railsync or DCC signal to the Railsync connector will enable your EX-CSB1 to operate as a booster.
+
+Refer to the [EX-CSB1 in DCC Booster Mode](/products/ex-commandstation/trackmanager/01-booster.md) page for information on how to configure the software to enable this.
