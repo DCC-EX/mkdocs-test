@@ -6071,22 +6071,9 @@ for example:</p>
 <span class="cp">#define MOTOR_SHIELD_TYPE MY_SHIELD</span>
 </code></pre></div>
 <p>refer to MotorDrivers.h for details of parameter meanings. Do NOT attempt to alter MotorDrivers.h or you will face versioning difficulties.</p>
-<p>NOTE: Before connecting these boards and selecting one in this software
-check the quick install guides! Some of these boards require a voltage
-generating resistor on the current sense pin of the device. Failure to select
-the correct resistor could damage the sense pin on your Arduino or destroy
-the device.</p>
+<p>NOTE: Before connecting these boards and selecting one in this software check the quick install guides! Some of these boards require a voltage generating resistor on the current sense pin of the device. Failure to select the correct resistor could damage the sense pin on your Arduino or destroy the device.</p>
 <h3 id="motor-shield-max-current">Motor shield max current<a class="headerlink" href="#motor-shield-max-current" title="Permanent link">&para;</a></h3>
-<p>If you want to restrict the maximum current LOWER than what your
-motor shield can provide, you can do that here. For example if you
-have a motor shield that can provide 5A and your power supply can
-only provide 2.5A then you should restrict the maximum current to
-2.25A (90% of 2.5A) so that DCC-EX shuts off the track before
-your PS does shut DCC-EX. MAX_CURRENT is in mA so for this example
-it would be 2250, adjust the number according to your PS. If your
-PS has a higher rating than your motor shield you do not need this.
-You can use this as well if you are cautious and your trains do not
-need full current.</p>
+<p>If you want to restrict the maximum current LOWER than what your motor shield can provide, you can do that here. For example if you have a motor shield that can provide 5A and your power supply can only provide 2.5A then you should restrict the maximum current to 2.25A (90% of 2.5A) so that DCC-EX shuts off the track before your PS does shut DCC-EX. MAX_CURRENT is in mA so for this example it would be 2250, adjust the number according to your PS. If your PS has a higher rating than your motor shield you do not need this. You can use this as well if you are cautious and your trains do not need full current.</p>
 <div class="highlight"><pre><span></span><code><span class="cp">#define MAX_CURRENT 2250</span>
 </code></pre></div>
 <h2 id="tcpip-advanced-settings">TCP/IP Advanced settings<a class="headerlink" href="#tcpip-advanced-settings" title="Permanent link">&para;</a></h2>
@@ -6096,17 +6083,13 @@ need full current.</p>
 <div class="highlight"><pre><span></span><code><span class="cp">#define IP_PORT 2560</span>
 </code></pre></div>
 <ul>
-<li>DONT_TOUCH_WIFI_CONF means WIFI config will be done with
-the &lt;+&gt; commands and this sketch will not change anything over
-AT commands and the other WIFI_* defines do not have any effect.</li>
+<li>DONT_TOUCH_WIFI_CONF means WIFI config will be done with the <code>&lt;+&gt;</code> commands and this sketch will not change anything over AT commands and the other WIFI_* defines do not have any effect.</li>
 </ul>
 <div class="highlight"><pre><span></span><code><span class="cp">#define ENABLE_WIFI true</span>
 <span class="cp">#define DONT_TOUCH_WIFI_CONF</span>
 </code></pre></div>
 <ul>
-<li>WIFI_HOSTNAME: The default is "dccex" but you can change this if you have more than one
-CS on you home router to make them show up with different names on the network.
-Host names starting with "dccex" are more readily found by WiFi throttles.</li>
+<li>WIFI_HOSTNAME: The default is "dccex" but you can change this if you have more than one CS on you home router to make them show up with different names on the network. Host names starting with "dccex" are more readily found by WiFi throttles.</li>
 </ul>
 <div class="highlight"><pre><span></span><code><span class="cp">#define WIFI_HOSTNAME &quot;dccex-csb1&quot;</span>
 </code></pre></div>
@@ -6116,18 +6099,15 @@ Host names starting with "dccex" are more readily found by WiFi throttles.</li>
 <div class="highlight"><pre><span></span><code><span class="cp">#define IP_ADDRESS { 192, 168, 1, 200 }</span>
 </code></pre></div>
 <ul>
-<li>MAX_NUM_TCP_CLIENTS: If you on STM32 Ethernet (and only there) want more than
- 9 (<em>) TCP clients, change this number to for example 20 here *</em>AND** in
- STM32lwiopts.h and follow the instructions in STM32lwiopts.h</li>
-</ul>
+<li>
+<p>MAX_NUM_TCP_CLIENTS: If you on STM32 Ethernet (and only there) want more than  9 (<em>) TCP clients, change this number to for example 20 here *</em>AND** in  STM32lwiopts.h and follow the instructions in STM32lwiopts.h</p>
 <p>(*) It would be 10 if there would not be a bug in LwIP by STM32duino.</p>
+</li>
+</ul>
 <div class="highlight"><pre><span></span><code><span class="cp">#define MAX_NUM_TCP_CLIENTS 20</span>
 </code></pre></div>
 <h2 id="lcdoled-support">LCD/OLED support<a class="headerlink" href="#lcdoled-support" title="Permanent link">&para;</a></h2>
-<p>In order to avoid wasting memory the current scroll buffer is limited
-to 8 lines.  Some users wishing to display additional information
-such as TrackManager power states have requested additional rows aware
-of the warning that this will take extra RAM.  if you wish to include additional rows</p>
+<p>In order to avoid wasting memory the current scroll buffer is limited to 8 lines.  Some users wishing to display additional information such as TrackManager power states have requested additional rows aware of the warning that this will take extra RAM. If you wish to include additional rows:</p>
 <div class="highlight"><pre><span></span><code><span class="cp">#define MAX_CHARACTER_ROWS 12</span>
 </code></pre></div>
 <h2 id="disable-eeprom">Disable EEPROM<a class="headerlink" href="#disable-eeprom" title="Permanent link">&para;</a></h2>
@@ -6140,56 +6120,30 @@ You are advised to turn this off to save memory.</p>
 <div class="highlight"><pre><span></span><code><span class="w"> </span><span class="cp">#define DISABLE_PROG</span>
 </code></pre></div>
 <h2 id="redefine-dcc-boundary-between-short-and-long-loco-addresses">Redefine DCC boundary between SHORT and LONG loco addresses<a class="headerlink" href="#redefine-dcc-boundary-between-short-and-long-loco-addresses" title="Permanent link">&para;</a></h2>
-<p>According to NMRA the last short address is 127 and the first long address is 128.
-There are manufacturers which have another view.
-Lenz CS, for example, have considered addresses long from 100. If
- you want to change to that mode, do</p>
+<p>According to NMRA the last short address is 127 and the first long address is 128. There are manufacturers which have another view. Lenz CS, for example, have considered addresses long from 100. If you want to change to that mode, do:</p>
 <div class="highlight"><pre><span></span><code><span class="cp">#define HIGHEST_SHORT_ADDR 99</span>
 </code></pre></div>
 <p>If you want to run all your locos addressed long format, you could even do</p>
 <div class="highlight"><pre><span></span><code><span class="cp">#define HIGHEST_SHORT_ADDR 0</span>
 </code></pre></div>
-<p>DCC-EX does not support to use the same address, for example 100(long) and 100(short) at the same time, there must be a border.</p>
+<p>DCC-EX does not support using the same address, for example 100(long) and 100(short) at the same time, therefore there must be a border.</p>
 <h2 id="redefine-locomotive-state-table-size">Redefine locomotive state table size<a class="headerlink" href="#redefine-locomotive-state-table-size" title="Permanent link">&para;</a></h2>
-<p>This is the maximum number of locos that can be controlled at the same time.
-This defaults to 50 (8 on a UNO/NANO).
-If you have enough free memory you can increase this to a maximum of 255.
-If you are short of memory (typically a Mega with WiFi and lots of accessories)
-you can decrease it  to a minimum of 2.</p>
+<p>This is the maximum number of locos that can be controlled at the same time. This defaults to 50 (8 on a UNO/NANO). If you have enough free memory you can increase this to a maximum of 255. If you are short of memory (typically a Mega with WiFi and lots of accessories) you can decrease it  to a minimum of 2.</p>
 <div class="highlight"><pre><span></span><code><span class="cp">#define MAX_LOCOS 100</span>
 </code></pre></div>
 <h2 id="define-turnouts-and-accessories-to-follow-norm-rcn-213">Define TURNOUTS and ACCESSORIES to follow norm RCN-213<a class="headerlink" href="#define-turnouts-and-accessories-to-follow-norm-rcn-213" title="Permanent link">&para;</a></h2>
-<p>According to norm RCN-213 a DCC packet with a 1 is closed-straight
-and one with a 0 is thrown-diverging.  In DCC++ Classic, and in previous
-versions of DCC++EX, a turnout throw command was implemented in the packet as
-'1' and a close command as '0'. The #define below makes the states
-match with the norm.  But we don't want to cause havoc on existent layouts,
-so we define this only for new installations. If you don't want this,
-don't add it to your config.h.</p>
+<p>According to norm RCN-213 a DCC packet with a 1 is closed-straight and one with a 0 is thrown-diverging.  In DCC++ Classic, and in previous versions of DCC++EX, a turnout throw command was implemented in the packet as '1' and a close command as '0'. The #define below makes the states match with the norm.  But we don't want to cause havoc on existent layouts, so we define this only for new installations. If you don't want this, don't add it to your config.h.</p>
 <div class="highlight"><pre><span></span><code><span class="cp">#define DCC_TURNOUTS_RCN_213</span>
 </code></pre></div>
-<p>By default, the driver which defines a DCC accessory decoder
-does send out the same state change on the DCC packet as it
-receives. This means a VPIN state=1 sends D=1 (close turnout
-or signal green) in the DCC packet. This can be reversed if
-necessary.</p>
+<p>By default, the driver which defines a DCC accessory decoder does send out the same state change on the DCC packet as it receives. This means a VPIN state=1 sends D=1 (close turnout or signal green) in the DCC packet. This can be reversed if necessary.</p>
 <div class="highlight"><pre><span></span><code><span class="cp">#define HAL_ACCESSORY_COMMAND_REVERSE</span>
 </code></pre></div>
-<p>If you have issues with that the direction of the accessory commands is
-reversed (for example when converting from another CS to DCC-EX) then
-you can use this to reverse the sense of all accessory commands sent
-over DCC-EX. This #define likewise inverts the behaviour of the <a> command
-for triggering DCC Accessory Decoders, so that <a addr subaddr 0> generates a
-DCC packet with D=1 (close turnout) and <a addr subaddr 1> generates D=0
-(throw turnout).</p>
+<p>If you have issues with that the direction of the accessory commands is reversed (for example when converting from another CS to DCC-EX) then you can use this to reverse the sense of all accessory commands sent over DCC-EX. This #define likewise inverts the behaviour of the <code>&lt;a&gt;</code> command for triggering DCC Accessory Decoders, so that <code>&lt;a addr subaddr 0&gt;</code> generates a DCC packet with D=1 (close turnout) and <code>&lt;a addr subaddr 1&gt;</code> generates D=0 (throw turnout).</p>
 <div class="highlight"><pre><span></span><code><span class="cp">#define DCC_ACCESSORY_COMMAND_REVERSE</span>
 </code></pre></div>
 <h2 id="handling-multiple-serial-throttles">Handling multiple serial throttles<a class="headerlink" href="#handling-multiple-serial-throttles" title="Permanent link">&para;</a></h2>
-<p>The command station always operates with the default Serial port.
-Diagnostics are only emitted on the default serial port and not broadcast.
-Other serial throttles may be added to the Serial1...Serial6 ports which may or may not exist on your CPU. (Mega has 3, CSB1 has 1, and STM32 have up to 6.)</p>
-<p>To monitor a throttle on one or more serial ports, supply a #define for each serial port required.</p>
-<p>NOTE: DO NOT define here the WiFi shield serial port or your Wifi will not work.</p>
+<p>The command station always operates with the default Serial port. Diagnostics are only emitted on the default serial port and not broadcast. Other serial throttles may be added to the Serial1...Serial6 ports which may or may not exist on your CPU (Mega has 3, CSB1 has 1, and STM32 have up to 6.). To monitor a throttle on one or more serial ports, supply a #define for each serial port required.</p>
+<p><strong>NOTE: DO NOT define here the WiFi shield serial port or your Wifi will not work.</strong></p>
 <div class="highlight"><pre><span></span><code><span class="c1">// SERIAL1 in use by Wifi</span>
 <span class="cp">#define SERIAL2_COMMANDS</span>
 <span class="cp">#define SERIAL3_COMMANDS</span>
@@ -6198,19 +6152,13 @@ Other serial throttles may be added to the Serial1...Serial6 ports which may or 
 <span class="cp">#define SERIAL6_COMMANDS</span>
 </code></pre></div>
 <h2 id="bluetooth-serial-on-esp32">Bluetooth serial ON ESP32<a class="headerlink" href="#bluetooth-serial-on-esp32" title="Permanent link">&para;</a></h2>
-<p>On ESP32 you have the possibility to use the builtin BT serial to connect to
-the CS.</p>
-<p>The CS shows up as a pairable BT Classic device. Name is "DCCEX-hexnumber".
-BT is as an additional serial port, debug messages are still sent over USB,
-not BT serial.</p>
+<p>On ESP32 you have the possibility to use the builtin BT serial to connect to the CS.</p>
+<p>The CS shows up as a pairable BT Classic device. Name is "DCCEX-hexnumber". BT is as an additional serial port, debug messages are still sent over USB, not BT serial.</p>
 <p>If you enable this there are some implications:</p>
 <ol>
 <li>WiFi will sleep more (as WiFi and BT share the radio). So WiFi performance may suffer</li>
-<li>The app will be bigger that 1.2MB, so the default partition scheme will not
-    work any more. You need to choose a partition scheme with 2MB (or bigger).
-    For example "NO OTA (2MB APP, 2MB SPIFFS)" in the Arduino IDE.</li>
-<li>There is no securuity (PIN) implemented. Everyone in radio range can pair
-    with your CS.</li>
+<li>The app will be bigger that 1.2MB, so the default partition scheme will not work any more. You need to choose a partition scheme with 2MB (or bigger). For example "NO OTA (2MB APP, 2MB SPIFFS)" in the Arduino IDE.</li>
+<li>There is no securuity (PIN) implemented. Everyone in radio range can pair with your CS.</li>
 </ol>
 <div class="highlight"><pre><span></span><code><span class="cp">#define SERIAL_BT_COMMANDS</span>
 </code></pre></div>
@@ -6230,18 +6178,14 @@ not BT serial.</p>
 <div class="highlight"><pre><span></span><code><span class="cp">#define WIFI_LED 33</span>
 </code></pre></div>
 <h2 id="sabertooth">SABERTOOTH<a class="headerlink" href="#sabertooth" title="Permanent link">&para;</a></h2>
-<p>This is a very special option and only useful if you happen to have a
-Sabertooth motor controller from Dimension Engineering configured to
-take commands from and ESP32 via serial at 9600 baud from GPIO17 (TX)
-and GPIO16 (RX, currently unused).</p>
-<p>The number defined is the DCC address for which speed controls are sent
-to the sabertooth controller <em>as_well</em>. Default: Undefined.</p>
+<p>This is a very special option and only useful if you happen to have a Sabertooth motor controller from Dimension Engineering configured to take commands from and ESP32 via serial at 9600 baud from GPIO17 (TX) and GPIO16 (RX, currently unused).</p>
+<p>The number defined is the DCC address for which speed controls are sent to the sabertooth controller <em>as_well</em>. Default: Undefined.</p>
 <div class="highlight"><pre><span></span><code><span class="cp">#define SABERTOOTH 1</span>
 </code></pre></div>
 <h2 id="tuning-for-deprecated-unonano">Tuning for deprecated UNO/NANO<a class="headerlink" href="#tuning-for-deprecated-unonano" title="Permanent link">&para;</a></h2>
 <p>By default VDPY and DIAGs are disabled on a Uno/Nano to reduce PROGMEM and RAM requirements.</p>
 <p>They can be re-enebled if you have space by the commands.</p>
-<p>It is also possible to save RAM using the MAX_LOCOS setting less than tghe default 8.</p>
+<p>It is also possible to save RAM using the MAX_LOCOS setting less than the default 8.</p>
 <div class="highlight"><pre><span></span><code><span class="cp">#define ENABLE_VDPY</span>
 <span class="cp">#define ENABLE_DIAG</span>
 <span class="cp">#define MAX_LOCOS 4</span>
@@ -6266,7 +6210,7 @@ to the sabertooth controller <em>as_well</em>. Default: Undefined.</p>
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="August 24, 2025 11:39:38 UTC">August 24, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="September 2, 2025 19:23:07 UTC">September 2, 2025</span>
   </span>
 
     
