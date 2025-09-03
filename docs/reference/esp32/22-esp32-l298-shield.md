@@ -7,7 +7,7 @@
 - **IOREF voltage**  
     - The IOREF pin on the ESP32 Uno form factor boards is 5V -- and not correct for a 3.3V microprocessor.  
     - To avoid damaging the ESP32’s analog inputs, correct the IOREF voltage by bending the IOREF pin on the L298 motor shield, and use a jumper to connect the 3.3V pin to IOREF on the motor shield itself.  
-    - On the Genuino Arduino Motor Shield R3, the IOREF voltage is used as the supply voltage on the LMV358 op-amp and provides a waterfall effect for the Schottky diodes on the A2, A3 pins of the motor shield.
+    - On the Genuino Arduino Motor Shield R3, the IOREF voltage is used as the supply voltage on the LMV358 op-amp and provides a spillway effect for the Schottky diodes on the A2, A3 pins of the motor shield.
 
 - **Current sensing**  
     - For current sensing bend or cut the A0 and A1 pins.  
@@ -22,7 +22,7 @@
 - **IOREF voltage**  
     - The IOREF pin on the ESP32 Uno form factor boards is 5V -- and not correct for a 3.3V microprocessor.  
     - Correct the IOREF voltage by bending the IOREF pin on the L298 motor shield, then
-      IOREF will can be connected to the 3.3V pin to provide a waterfall effect for the Schottky diodes on the A2, A3 pins of the motor shield.
+      IOREF will can be connected to the 3.3V pin to provide a spillway effect for the Schottky diodes on the A2, A3 pins of the motor shield.
 
 - **Current sensing**  
     - Some clone shields have current sense circuits and can be used with Mega without modifications.  
