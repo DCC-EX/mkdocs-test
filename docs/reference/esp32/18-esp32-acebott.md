@@ -53,6 +53,7 @@
 
 - [ ] Cover the barrel connector on ACEBOTT ESP32, as VIN power will be provided by EX8874  
 - [ ] IOREF Override set to 3v3  
+- [ ] Confirm that IOREF pin is bent or trace is cut  
 - [ ] Add the custom motor define - 4 lines in config.h  
 
 ---
@@ -84,6 +85,7 @@
 
 - [ ] Cover the barrel connector on WeMos R1 D32, as VIN power will be provided by one EX8874  
 - [ ] IOREF Override set to 3v3 on both EX8874 boards  
+- [ ] Confirm that IOREF pin is bent or trace is cut
 - [ ] VIN trace cut and regulator disabled on top EX8874  
 - [ ] Alternate pins enabled via solder pads  
 - [ ] Jumpers added for GPIO 2 and 4  
