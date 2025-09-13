@@ -5159,12 +5159,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../../nucleo/03-nucleo-firmware/" class="md-nav__link">
+      <a href="../../nucleo/03-nucleo-drivers/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    Nucleo - STLink Firmware
+    Nucleo - USB Drivers
     
   </span>
   
@@ -5182,12 +5182,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../../nucleo/04-nucleo-drivers/" class="md-nav__link">
+      <a href="../../nucleo/04-nucleo-firmware/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    Nucleo - USB Drivers
+    Nucleo - STLink Firmware
     
   </span>
   
@@ -5991,16 +5991,16 @@ The information below may help explain how to overcome some of the complexities 
 <h2 id="wifi-reliability">WiFi reliability<a class="headerlink" href="#wifi-reliability" title="Permanent link">&para;</a></h2>
 <p><img align="right" alt="WeMos R1 D32 IOREF" src="../../../_static/images/esp32/wemos-ioref-label.png" width="20%" /></p>
 <ul>
-<li>Solder a 250 to 330 ohms resistor, GPIO_0 to 3.3V, for reliable WiFi when using the WeMos D1 R32 ESP32duino.</li>
+<li>Solder a 250 to 330 ohms resistor, GPIO_0 to 3.3V, for reliable WiFi when using the WeMos D1 R32 ESP32duino.<br />
+<img alt="WeMos R1 D32 resistor" src="../../../_static/images/esp32/resistor-io0.png" width="40%" /></li>
 </ul>
-<p><img alt="WeMos R1 D32 resistor" src="../../../_static/images/esp32/resistor-io0.png" width="40%" /></p>
 <h2 id="ioref-voltage">IOREF voltage<a class="headerlink" href="#ioref-voltage" title="Permanent link">&para;</a></h2>
 <ul>
 <li>
 <p>Do not confuse adding the resistor to correct high voltage on GPIO_0 with the need to work around the incorrect voltage of the IOREF pin.</p>
 </li>
 <li>
-<p>From top to bottom the pins are: IO0, 5V (incorrect -- so not Arduino UNO R3 compliant), RESET, 3.3V, 5V, GND, GND, VIN as seen here:  </p>
+<p>From top to bottom the pins are: IO0, 5V (incorrect -- IOREF should be 3.3V -- so not Arduino UNO R3 compliant), RESET, 3.3V, 5V, GND, GND, VIN as seen here:  </p>
 </li>
 </ul>
 <p><img align="right" alt="EX8874 IOREF" src="../../../_static/images/esp32/ioref-override.png" width="25%" /></p>
@@ -6047,10 +6047,11 @@ One EX8874 motor shield would use the motor define EX8874_SHIELD, and update the
 <h3 id="single-ex8874-checklist">Single EX8874 Checklist<a class="headerlink" href="#single-ex8874-checklist" title="Permanent link">&para;</a></h3>
 <ul class="task-list">
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> Cover the barrel connector on WeMos R1 D32, as VIN power will be provided by EX8874</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> Add resistor for WiFi reliability</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> Add resistor for WiFi reliability - GPIO_0 to 3v3</li>
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> IOREF Override set to 3v3</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> Confirm that IOREF pin is bent or trace is cut</li>
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> Alternate pins enabled via solder pads</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> <code>#define MOTOR_SHIELD_TYPE EX8874_SHIELD</code> on one line in config.h.</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> <code>#define MOTOR_SHIELD_TYPE EX8874_SHIELD</code> on one line in config.h</li>
 </ul>
 <hr />
 <h2 id="stacked-ex8874">Stacked EX8874<a class="headerlink" href="#stacked-ex8874" title="Permanent link">&para;</a></h2>
@@ -6085,6 +6086,7 @@ One EX8874 motor shield would use the motor define EX8874_SHIELD, and update the
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> Cover the barrel connector on WeMos R1 D32, as VIN power will be provided by one EX8874  </li>
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> Add resistor for WiFi reliability  </li>
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> IOREF Override set to 3v3 on both EX8874 boards  </li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> Confirm that IOREF pin is bent or trace is cut  </li>
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> VIN trace cut and regulator disabled on top EX8874  </li>
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> Alternate pins enabled via solder pads  </li>
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> Complex wiring added  </li>
@@ -6112,7 +6114,7 @@ One EX8874 motor shield would use the motor define EX8874_SHIELD, and update the
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="August 18, 2025 06:03:32 UTC">August 18, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="September 4, 2025 19:55:15 UTC">September 4, 2025</span>
   </span>
 
     

@@ -10,10 +10,10 @@
       
       
       
-        <link rel="canonical" href="https://dcc-ex.com/mkdocs-test/reference/nucleo/04-nucleo-drivers/">
+        <link rel="canonical" href="https://dcc-ex.com/mkdocs-test/reference/nucleo/04-nucleo-firmware/">
       
       
-        <link rel="prev" href="../03-nucleo-firmware/">
+        <link rel="prev" href="../03-nucleo-drivers/">
       
       
         <link rel="next" href="../05-nucleo-debug/">
@@ -27,7 +27,7 @@
     
     
       
-        <title>Nucleo - USB Drivers - DCC-EX Model Train Control, Animation, and Automation</title>
+        <title>Nucleo - STLink Firmware - DCC-EX Model Train Control, Animation, and Automation</title>
       
     
     
@@ -83,7 +83,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#nucleo-usb-drivers" class="md-skip">
+        <a href="#nucleo-stlink-firmware" class="md-skip">
           Skip to content
         </a>
       
@@ -116,7 +116,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Nucleo - USB Drivers
+              Nucleo - STLink Firmware
             
           </span>
         </div>
@@ -5051,12 +5051,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../03-nucleo-firmware/" class="md-nav__link">
+      <a href="../03-nucleo-drivers/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    Nucleo - STLink Firmware
+    Nucleo - USB Drivers
     
   </span>
   
@@ -5083,17 +5083,58 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Nucleo - STLink Firmware
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
   <span class="md-ellipsis">
-    Nucleo - USB Drivers
+    Nucleo - STLink Firmware
     
   </span>
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#upgrade-the-debugger-firmware" class="md-nav__link">
+    <span class="md-ellipsis">
+      Upgrade the debugger firmware
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -5886,8 +5927,47 @@
   
 
 
-<h1 id="nucleo-usb-drivers">Nucleo - USB Drivers<a class="headerlink" href="#nucleo-usb-drivers" title="Permanent link">&para;</a></h1>
-<p>when/if it is needed</p>
+<h1 id="nucleo-stlink-firmware">Nucleo - STLink Firmware<a class="headerlink" href="#nucleo-stlink-firmware" title="Permanent link">&para;</a></h1>
+<h2 id="upgrade-the-debugger-firmware">Upgrade the debugger firmware<a class="headerlink" href="#upgrade-the-debugger-firmware" title="Permanent link">&para;</a></h2>
+<ul>
+<li>
+<p>All Nucleos come with a built-in debugger interface, which is the portion of the PCB at the top near the USB connector. This is of great advantage during development as it helps us track down issues more readily. It does however mean that device drivers are needed for Windows (7, 10 and 11 supported), and that the debugger firmware may need upgrading. See notes below.</p>
+</li>
+<li>
+<p>During testing, it was noted with certain USB chipsets on Windows 11 that serial responses via the USB debugger port would stop being received by the Serial Monitor, even though the device continued to operate normally. The recommendation to resolve this issue is to upgrade the debugger firmware.</p>
+</li>
+<li>
+<p>We recommend you upgrade the debugger firmware regardless if you experience this issue or not, and regardless of whether you use Windows, Linux or MacOS. Instructions for Linux and MacOS can be found on the web but rely on using the Java app in the AllPlatforms folder.</p>
+</li>
+<li>
+<p>You need to ensure your NUCLEO device is plugged in to a USB port prior to commencing the upgrade.</p>
+</li>
+<li>
+<p><a href="https://www.st.com/en/development-tools/stsw-link007.html">Download stsw-link007-v3-16-9.zip or later from st.com </a></p>
+</li>
+<li>
+<p>You will need to navigate through the “en.stsw-link007_v3-16-9” folder down to the “Windows” folder, which contains an executable “ST-LinkUpgrade.exe” to upgrade the firmware on the NUCLEO devices.<br />
+<img alt="download and extracted folders" src="../../../_static/images/nucleo/stlink-driver-install.png" width="40%" /></p>
+</li>
+<li>
+<p>Double click this file to run it, which should present the upgrade window.<br />
+<img alt="download and extracted folders" src="../../../_static/images/nucleo/stlink-driver-install2.png" width="40%" /></p>
+</li>
+<li>
+<p>Clicking the “Device Connect” button will attempt to connect to your NUCLEO device and display the currently installed firmware version, along with the version it will attempt to upgrade to.<br />
+<img alt="download and extracted folders" src="../../../_static/images/nucleo/stlink-driver-install2.png" width="40%" /></p>
+</li>
+<li>
+<p>Providing your NUCLEO device has been detected and is running an older version of the firmware, click “Yes &gt;&gt;&gt;&gt;” to proceed with the upgrade.</p>
+</li>
+<li>
+<p>Hopefully you will see the “Upgrade is successful” pop up appear when complete.<br />
+<img alt="download and extracted folders" src="../../../_static/images/nucleo/stlink-driver-install3.png" width="40%" /></p>
+</li>
+<li>
+<p>At this point, after clicking “OK” the software should display the new version of the firmware that has been applied to your device.</p>
+</li>
+</ul>
 
 
 
@@ -5908,7 +5988,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="July 30, 2025 06:48:00 UTC">July 30, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="September 3, 2025 23:49:42 UTC">September 3, 2025</span>
   </span>
 
     
@@ -5951,7 +6031,7 @@
       <nav class="md-footer__inner md-grid" aria-label="Footer" hidden>
         
           
-          <a href="../03-nucleo-firmware/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Nucleo - STLink Firmware">
+          <a href="../03-nucleo-drivers/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Nucleo - USB Drivers">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -5961,7 +6041,7 @@
                 Previous
               </span>
               <div class="md-ellipsis">
-                Nucleo - STLink Firmware
+                Nucleo - USB Drivers
               </div>
             </div>
           </a>
