@@ -64,7 +64,7 @@ This is a list of to do items that will allow us to release this new documentati
     - [ ] Large club layout
     - [ ] Downloader
 
-- [ ] Add donation info
+- [x] Add donation info
 
 ## Release QA Items
 
