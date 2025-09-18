@@ -8,6 +8,8 @@ These options should be coded in the file `config.h` which will be automatically
 
 ## Non-standard Motor Shields
 
+See also:[Motor Shield basic config.h](/products/ex-commandstation/05-config-h.md#motor-shield-definition-mandatory)
+
 Further pre-defined shield names can be found in the code file MotorDrivers.h although their presence there does not necessarily mean that we can provide support for issues.
 
 In extreme cases, it is possible to craft your own definition
@@ -69,7 +71,12 @@ If you want to restrict the maximum current LOWER than what your motor shield ca
 
 ## LCD/OLED support
 
-In order to avoid wasting memory the current scroll buffer is limited to 8 lines.  Some users wishing to display additional information such as TrackManager power states have requested additional rows aware of the warning that this will take extra RAM. If you wish to include additional rows:
+See also:[LCD/OLED basic config.h](/products/ex-commandstation/05-config-h.md#lcdoled-support)
+
+In order to avoid wasting memory the current scroll buffer is limited
+to 8 lines.  Some users wishing to display additional information
+such as TrackManager power states have requested additional rows aware
+of the warning that this will take extra RAM.  if you wish to include additional rows
 
 ```cpp
 #define MAX_CHARACTER_ROWS 12
@@ -211,8 +218,7 @@ The number defined is the DCC address for which speed controls are sent to the s
 
 By default VDPY and DIAGs are disabled on a Uno/Nano to reduce PROGMEM and RAM requirements.
 
-They can be re-enebled if you have space by the commands.
-
+They can be re-enabled if you have space by the commands below.
 It is also possible to save RAM using the MAX_LOCOS setting less than the default 8.
 
 ```cpp

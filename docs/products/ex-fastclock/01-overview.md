@@ -4,6 +4,8 @@ Welcome to the home of EX-FastClock, a fully integrated Fast Clock for EX-Comman
 
 EX-FastClock is a standalone adjustable speed clock built using an additional Arduino Uno microcontroller and a plug-in shield type TFT touch screen.  The commands built into the DCC_EX Command Station make it possible to also integrate an existing microcontroller based fast clock.
 
+Note: if you only want a real-time clock to make things happen at certain times of day, then the [DS1307](?DS1307) is a simpler/cheaper alternative.
+
 ## Background
 
 This project is based on a project originally written by Jim Gifford (Hallet Cove Southern) in June 2017.  This project used a 32 x 8 LED matrix to display the time and was controlled by a number of pushbuttons.
