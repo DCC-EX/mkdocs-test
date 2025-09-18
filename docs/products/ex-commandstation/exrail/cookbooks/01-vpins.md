@@ -39,7 +39,7 @@ Pin values can be changed with basic digital pin commands common to all VPINs.  
 
 `SET(181,5)` or `RESET(181,5)`  sets/resets a range of pins (181..185 in this case).
 
-`BLINK(180,250,750)` sets pin 201 blinking for 250mS on and 750mS off. Blinking is stopped by a SET or RESET of the pin.
+`BLINK(180,250,750)` sets pin 180 blinking for 250mS on and 750mS off. Blinking is stopped by a SET or RESET of the pin.
 
 Serial commands can set HIGH/LOW values to VPINs using `<z 180> <z -180>` as for any digital output.
 
@@ -60,6 +60,6 @@ ONBUTTON(202)
    DONE
 ```
 
-`ONSENSOR(200)` triggers when a sensor changes state. This is less useful.
+`ONSENSOR(200)` triggers when a sensor changes state. This is less useful and you need to use `IF(200)` to see what state the sensor has changed to.
 
 Other more advanced commands are available, see cookbooks.
