@@ -5,21 +5,23 @@ The EX-CSB1 can be configured as a DCC Booster.  As a booster it can take input 
 To configure the EX-CSB1 as a DCC Booster, you will need to install the EX-CommandStation software on it with the addition of the following commands to the ``myAutomation.h`` file:
 
 ```c++
-AUTOSTART
-  SET_TRACK(A,"BOOST")
-  SET_TRACK(B,"BOOST")
+ONRAILSYNCON
+  SET_TRACK(A, BOOST)
+  SET_POWER(A, ON)
+  PRINT("RAILSYNC ON TRACK A BOOST")
+  SET_TRACK(B, BOOST)
+  SET_POWER(B, ON)
+  PRINT("RAILSYNC ON TRACK B BOOST")
   DONE
-```
 
-If you are using an EX-CSB1 with an EX-MotorShield8874 as your booster you will need to add the following commands to the myAutomation.h file:
-
-```c++
-AUTOSTART
-  SET_TRACK(A,"BOOST")
-  SET_TRACK(B,"BOOST")
-  SET_TRACK(C,"BOOST")
-  SET_TRACK(D,"BOOST")
+ONRAILSYNCOFF
+  SET_TRACK(A, MAIN)
+  SET_TRACK(B, MAIN)
+  PRINT("RAILSYNC OFF")
   DONE
+
+    // If you are using an EX-CSB1 with an EX-MotorShield8874 as your booster,
+    // add the commands for tracks C and D to the myAutomation.h file.
 ```
 
 You also need to add these two lines to the ``config.h`` file:
