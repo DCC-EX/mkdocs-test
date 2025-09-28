@@ -31,7 +31,7 @@
 
 - USB can be used for power, but accessory power will be limited.  
 
-- Caution:  If VIN jumpers is not set to use USB - and - USB is connected prior to EX8874 being powered, expect enumeration issues and reduced power.  
+- Caution:  If VIN jumper is not set to use USB - and - USB is connected prior to EX8874 being powered, expect enumeration issues and reduced power.  
 
 - Refer to st.com user manuals  
   &nbsp;  &nbsp; [UM1974 Nucleo-144](https://www.st.com/resource/en/user_manual/um1974-stm32-nucleo144-boards-mb1137-stmicroelectronics.pdf)  
