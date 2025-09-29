@@ -8,7 +8,7 @@
 &nbsp; &nbsp; &nbsp; &nbsp; ![EX8874 Nucleo-144 pins](/_static/images/nucleo/f429zi-left-cn8-cn9.jpg){: style="width: 80%"}  
 &nbsp; &nbsp; &nbsp; &nbsp; ![EX8874 Nucleo-144 pins](/_static/images/nucleo/f429zi-right-cn7-cn10.jpg){: style="width: 80%"}
 
-- Links to st.com for each Nucleo-144 and the UM1234 pdf  
+- Links to st.com for each Nucleo-144 and the UM1974 pdf  
   [https://os.mbed.com/platforms/ST-Nucleo-F429ZI/](https://os.mbed.com/platforms/ST-Nucleo-F429ZI/)  
   [https://os.mbed.com/platforms/ST-Nucleo-F446ZE/](https://os.mbed.com/platforms/ST-Nucleo-F446ZE/)  
   [https://os.mbed.com/platforms/ST-Nucleo-F413ZH/](https://os.mbed.com/platforms/ST-Nucleo-F413ZH/)  

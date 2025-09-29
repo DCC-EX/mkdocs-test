@@ -1,4 +1,4 @@
-# Nucleo 64 - WiFi
+# Nucleo 64 - WiFi and Pins
 
 ## MakerFabs WiFi shield
 
@@ -45,3 +45,15 @@
 
 - Pin diagram for Nucleo-64 boards  
   ![Nucleo 64 serial pins](/_static/images/nucleo/f411re-f446re-pins.png){: style="width: 80%"}  
+
+- Links to st.com for each Nucleo-64 and the UM1724 pdf  
+  [https://os.mbed.com/platforms/ST-Nucleo-F411RE/](https://os.mbed.com/platforms/ST-Nucleo-F411RE/)  
+  [https://os.mbed.com/platforms/ST-Nucleo-F446RE/](https://os.mbed.com/platforms/ST-Nucleo-F446RE/)  
+  [UM1724 Nucleo-64](https://www.st.com/resource/en/user_manual/um1724-stm32-nucleo64-boards-mb1136-stmicroelectronics.pdf)  
+  [UM1974 Nucleo-144](https://www.st.com/resource/en/user_manual/um1974-stm32-nucleo144-boards-mb1137-stmicroelectronics.pdf)
+
+- Location of variant files  
+  C:\Users\username\\.platformio\packages\framework-arduinoststm32\variants\STM32F4xx\F411R(C-E)T  
+  C:\Users\username\\.platformio\packages\framework-arduinoststm32\variants\STM32F4xx\F446R(C-E)T  
+  C:\Users\username\AppData\Local\Arduino15\packages\STMicroelectronics\hardware\stm32\2.9.0\variants\STM32F4xx\F411R(C-E)T  
+  C:\Users\username\AppData\Local\Arduino15\packages\STMicroelectronics\hardware\stm32\2.9.0\variants\STM32F4xx\F446R(C-E)T
