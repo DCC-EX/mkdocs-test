@@ -941,6 +941,8 @@
       
         
       
+        
+      
     
     
     
@@ -1154,6 +1156,82 @@
   
 
       </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3_6_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_3_6_9" id="__nav_2_3_6_9_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    40 various devices
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_2_3_6_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3_6_9">
+            <span class="md-nav__icon md-icon"></span>
+            40 various devices
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../products/ex-commandstation/accessories/40-various-devices/DS1307/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    DS1307 Real Time clock chip
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -5288,6 +5366,10 @@
       
         
       
+        
+      
+        
+      
     
     
     
@@ -5398,12 +5480,58 @@
   
   
     <li class="md-nav__item">
-      <a href="../nucleo/15-nucleo-144-power/" class="md-nav__link">
+      <a href="../nucleo/08-nucleo-power/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     Nucleo - Power
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../nucleo/11-nucleo-64-ex8874/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Nucleo 64 - EX8874
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../nucleo/12-nucleo-64-wifi/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Nucleo 64 - WiFi and Pins
     
   </span>
   
@@ -6159,6 +6287,7 @@
 <p>The following additional settings are for special cases and are not normally created automatically by the EX-Installer.</p>
 <p>These options should be coded in the file <code>config.h</code> which will be automatically included in the compilation process.</p>
 <h2 id="non-standard-motor-shields">Non-standard Motor Shields<a class="headerlink" href="#non-standard-motor-shields" title="Permanent link">&para;</a></h2>
+<p>See also:<a href="../../products/ex-commandstation/05-config-h/#motor-shield-definition-mandatory">Motor Shield basic config.h</a></p>
 <p>Further pre-defined shield names can be found in the code file MotorDrivers.h although their presence there does not necessarily mean that we can provide support for issues.</p>
 <p>In extreme cases, it is possible to craft your own definition
 for example:</p>
@@ -6204,7 +6333,11 @@ for example:</p>
 <div class="highlight"><pre><span></span><code><span class="cp">#define MAX_NUM_TCP_CLIENTS 20</span>
 </code></pre></div>
 <h2 id="lcdoled-support">LCD/OLED support<a class="headerlink" href="#lcdoled-support" title="Permanent link">&para;</a></h2>
-<p>In order to avoid wasting memory the current scroll buffer is limited to 8 lines.  Some users wishing to display additional information such as TrackManager power states have requested additional rows aware of the warning that this will take extra RAM. If you wish to include additional rows:</p>
+<p>See also:<a href="../../products/ex-commandstation/05-config-h/#lcdoled-support">LCD/OLED basic config.h</a></p>
+<p>In order to avoid wasting memory the current scroll buffer is limited
+to 8 lines.  Some users wishing to display additional information
+such as TrackManager power states have requested additional rows aware
+of the warning that this will take extra RAM.  if you wish to include additional rows</p>
 <div class="highlight"><pre><span></span><code><span class="cp">#define MAX_CHARACTER_ROWS 12</span>
 </code></pre></div>
 <h2 id="disable-eeprom">Disable EEPROM<a class="headerlink" href="#disable-eeprom" title="Permanent link">&para;</a></h2>
@@ -6281,8 +6414,8 @@ You are advised to turn this off to save memory.</p>
 </code></pre></div>
 <h2 id="tuning-for-deprecated-unonano">Tuning for deprecated UNO/NANO<a class="headerlink" href="#tuning-for-deprecated-unonano" title="Permanent link">&para;</a></h2>
 <p>By default VDPY and DIAGs are disabled on a Uno/Nano to reduce PROGMEM and RAM requirements.</p>
-<p>They can be re-enebled if you have space by the commands.</p>
-<p>It is also possible to save RAM using the MAX_LOCOS setting less than the default 8.</p>
+<p>They can be re-enabled if you have space by the commands below.
+It is also possible to save RAM using the MAX_LOCOS setting less than the default 8.</p>
 <div class="highlight"><pre><span></span><code><span class="cp">#define ENABLE_VDPY</span>
 <span class="cp">#define ENABLE_DIAG</span>
 <span class="cp">#define MAX_LOCOS 4</span>
@@ -6307,7 +6440,7 @@ You are advised to turn this off to save memory.</p>
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="September 2, 2025 19:23:07 UTC">September 2, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="September 18, 2025 12:58:29 UTC">September 18, 2025</span>
   </span>
 
     

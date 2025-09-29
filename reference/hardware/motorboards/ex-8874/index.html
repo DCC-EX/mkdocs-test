@@ -941,6 +941,8 @@
       
         
       
+        
+      
     
     
     
@@ -1154,6 +1156,82 @@
   
 
       </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3_6_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_3_6_9" id="__nav_2_3_6_9_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    40 various devices
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_2_3_6_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3_6_9">
+            <span class="md-nav__icon md-icon"></span>
+            40 various devices
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../products/ex-commandstation/accessories/40-various-devices/DS1307/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    DS1307 Real Time clock chip
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -5229,6 +5307,10 @@
       
         
       
+        
+      
+        
+      
     
     
     
@@ -5339,12 +5421,58 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../nucleo/15-nucleo-144-power/" class="md-nav__link">
+      <a href="../../../nucleo/08-nucleo-power/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     Nucleo - Power
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../nucleo/11-nucleo-64-ex8874/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Nucleo 64 - EX8874
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../nucleo/12-nucleo-64-wifi/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Nucleo 64 - WiFi and Pins
     
   </span>
   
@@ -6151,14 +6279,17 @@
 </ul>
 <p><img alt="vreg pad" src="../../../../_static/images/ex8874/vreg_enable_pad.png" /></p>
 <ul>
-<li>Cut the jumper pads for both Driver A and Driver B</li>
+<li>Cut the jumper pads for both Driver A and Driver B, except for the Fault pins.</li>
 </ul>
-<p><img alt="before" src="../../../../_static/images/ex8874/pin_assignment_pads_before.png" /></p>
+<p><img alt="before" src="../../../../_static/images/ex8874/pin-assignment-pads-before2.png" /></p>
 <ul>
 <li>Solder bridge the right hand ALT pads but <strong>NOT the FAULT pins</strong></li>
 </ul>
-<p><img alt="after" src="../../../../_static/images/ex8874/pin_assignment_pads_after.png" /></p>
-<p>The reason we did not solder the FAULT pins to their righthand ALT pads is that this would connect the FAULT pins to D0/D1 on the Arduino R3 headers which is not ideal because D0/D1 typically carry the serial port. You can of course bend those pins out if you wish to use them, and simply jumper them that way. Please refer to the self-build instructions for your processor type. </p>
+<p><img alt="after" src="../../../../_static/images/ex8874/pin-assignment-pads-after2.png" /></p>
+<p>The reason we did not solder the FAULT pins to their righthand ALT pads is that this would connect the FAULT pins to D0/D1 on the Arduino R3 headers which is not ideal because D0/D1 typically carry the serial port. You can of course bend those pins out if you wish to use them, and simply jumper them that way. Please refer to the self-build instructions for your processor type.</p>
+<p>Leaving the Fault pins on A4, A5 facilitates bending and jumpering them to nearby pins, such as<br />
+A6, A7 on Arduino Mega<br />
+PC2, PC3 on Nucleo-64</p>
 <p>After hardware installation, you will need to re-run the EX-Installer to configure the Command Station code to recognize the new board and allow you to control the third and fourth tracks.</p>
 
 
@@ -6180,7 +6311,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="August 16, 2025 20:15:20 UTC">August 16, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="September 28, 2025 23:27:11 UTC">September 28, 2025</span>
   </span>
 
     
