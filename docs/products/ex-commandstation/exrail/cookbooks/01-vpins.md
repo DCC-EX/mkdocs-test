@@ -63,3 +63,7 @@ ONBUTTON(202)
 `ONSENSOR(200)` triggers when a sensor changes state. This is less useful and you need to use `IF(200)` to see what state the sensor has changed to.
 
 Other more advanced commands are available, see cookbooks.
+
+## Using INPUT/OUTPUT VPINs
+
+Bitmap pins are software flags with no actual hardware implementation. They can be used as INPUT and OUTPUT and thus can be used as flags between EXRAIL processes.  See [Bitmaps](/products/ex-commandstation/exrail/cookbooks/flags-and-latches/flags.md)

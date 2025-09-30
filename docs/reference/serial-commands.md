@@ -85,12 +85,14 @@ Complete reference guide for serial commands used with DCC command stations.
 | `<W cv value ignore1 ignore2>` | Write CV value on PROG track | Legacy format | ⚠️ Deprecated |
 | `<R cv>` | Read CV | `cv`: CV number | Active |
 | `<R>` | Read driveable loco ID | None | Active |
+| `<R LOCOID>` | Read loco ID (ignoring consist) | None | Active |
+| `<R CONSIST>` | Read consist ID | None | Active |
 | `<R cv ignore1 ignore2>` | Read CV value on PROG track | Legacy format | ⚠️ Deprecated |
 | `<V cv value>` | Fast read CV with expected value | `cv`: CV number, `value`: Expected value | Active |
 | `<V cv bit bitvalue>` | Fast read bit with expected value | `cv`: CV, `bit`: Bit position, `bitvalue`: Expected | Active |
 | `<B cv bit bitvalue>` | Write CV bit | `cv`: CV number, `bit`: Bit position, `bitvalue`: Value | Active |
 | `<w loco cv value>` | POM write CV on main track | `loco`: ID, `cv`: CV number, `value`: Value | Active |
-| `<r loco cv>` | POM read CV on main track | `loco`: ID, `cv`: CV number | Active |
+| `<r loco cv>` | POM read CV on main track | `loco`: ID, `cv`: CV number | Railcom dependent |
 | `<b loco cv bit bitvalue>` | POM write CV bit on main track | `loco`: ID, `cv`: CV, `bit`: Position, `bitvalue`: Value | Active |
 
 ## DCC Accessory Commands
