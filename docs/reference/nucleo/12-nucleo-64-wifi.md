@@ -12,7 +12,7 @@
 ## Serial pins
 
 - Specific pins are defined for the Nucleo-64 boards.  
-  This shows how 3 serial ports are defined for some Nucleo-144 boards; two are polled to see if WiFi is connected.
+  This shows how 2 serial ports are defined for each Nucleo-64 board; both ports are polled to see if WiFi is connected.
 
 ```cpp
   #if defined(ARDUINO_NUCLEO_F401RE)  
