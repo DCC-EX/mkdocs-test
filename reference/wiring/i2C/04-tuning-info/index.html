@@ -27,7 +27,7 @@
     
     
       
-        <title>I2C Tuning Summary - DCC-EX Model Train Control, Animation, and Automation</title>
+        <title>A Tinkerer's guide to tuning a standard mode (100kHz) i2c bus: - DCC-EX Model Train Control, Animation, and Automation</title>
       
     
     
@@ -83,7 +83,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#i2c-tuning-summary" class="md-skip">
+        <a href="#a-tinkerers-guide-to-tuning-a-standard-mode-100khz-i2c-bus" class="md-skip">
           Skip to content
         </a>
       
@@ -116,7 +116,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              I2C Tuning Summary
+              A Tinkerer's guide to tuning a standard mode (100kHz) i2c bus:
             
           </span>
         </div>
@@ -5571,17 +5571,76 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    A Tinkerer's guide to tuning a standard mode (100kHz) i2c bus:
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
   <span class="md-ellipsis">
-    I2C Tuning Summary
+    A Tinkerer's guide to tuning a standard mode (100kHz) i2c bus:
     
   </span>
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#guiding-principles" class="md-nav__link">
+    <span class="md-ellipsis">
+      Guiding Principles
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#measurement-in-situ" class="md-nav__link">
+    <span class="md-ellipsis">
+      Measurement in situ
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      Examples
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -6138,89 +6197,81 @@
   
 
 
-<h1 id="i2c-tuning-summary">I2C Tuning Summary<a class="headerlink" href="#i2c-tuning-summary" title="Permanent link">&para;</a></h1>
-<p>This is an introductory guide for tinkerers, which may help many to quickly get an overview of the main points and hopefully can be followed by most with a few minutes effort.</p>
-<h1 id="guide-to-tuning-a-standard-mode-100khz-i2c-bus">Guide to tuning a standard mode (100kHz) I2C bus:<a class="headerlink" href="#guide-to-tuning-a-standard-mode-100khz-i2c-bus" title="Permanent link">&para;</a></h1>
+<h1 id="a-tinkerers-guide-to-tuning-a-standard-mode-100khz-i2c-bus">A Tinkerer's guide to tuning a standard mode (100kHz) i2c bus:<a class="headerlink" href="#a-tinkerers-guide-to-tuning-a-standard-mode-100khz-i2c-bus" title="Permanent link">&para;</a></h1>
+<h2 id="guiding-principles">Guiding Principles<a class="headerlink" href="#guiding-principles" title="Permanent link">&para;</a></h2>
 <ol>
 <li>
-<p>The two signal lines (SCL &amp; SDA) EACH require a resistor to pull them to a logic high voltage and a device output pin to pull them low.<br />
-    All devices on an I2C bus segment must use the correct voltage level.<br />
-    i.e. 5V (or 3.3V) supply voltage to all pull-up resistors (typically 10k ohms included on each I2C device).</p>
+<p><strong>The two signal lines (SCL &amp; SDA) EACH require a resistor to pull them to a logic high voltage and a device output pin to pull them low.</strong><br />
+  All devices on an i2c bus segment should use the same voltage level. (exception: passive level-shifers)<br />
+  i.e. 5V (or 3.3V) supply voltage to all pull-up resistors (typically 10k ohms each).</p>
 </li>
 <li>
-<p>Do NOT mix incompatible 3.3V and 5V devices on a segment (without a passive level-shifter).<br />
-    The segment (or sub-bus) is the full wire length from extremities, passing through some devices - end-to-end (e.g. PCA9685), but NOT through a multiplexer (mux) or bus buffers. (A mux or level shifter can interface different sub-buses/segments).</p>
+<p><strong>Do NOT mix incompatible 3.3V and 5V devices on a segment (without a passive level-shifter).</strong><br />
+  The segment(or sub-bus) is the full wire length  from extremities passing through some devices end-to-end (e.g. PCA9685) but NOT through a multiplexer(mux) or bus  buffers (A mux or level shifter can interface different sub-buses/segments).</p>
 </li>
 <li>
-<p>Connected devices may, or may not, have a (weak) pullup resistor (pair) on them, typically 10k ohms.<br />
-    We need to add up the number of 10k (pairs) of resistors to see if we need to add/remove some.  (Alternatively, see NOTE below about measuring this in situ.)</p>
+<p><strong>We need to add up the number of 10k (pairs) of resistors to see if we need to add/remove some.</strong><br />
+  Connected devices may, or may not, have a (weak) pullup resistor (pair) on them, typically 10k ohms.<br />
+  (alternatively, see NOTE below about measuring this number in situ)</p>
 </li>
 <li>
-<p>The pull-up has to be neither too strong (output pins can't pull it down) nor too weak (resistor can't pull
-it up fast enough).</p>
+<p><strong>The pull-up has to be neither too strong (output pins can't pull it down) nor too weak.</strong><br />
+  (resistor can't pull it up enough)</p>
 </li>
 <li>
-<p>The MAXIMUM number (of 10k ohm pullups) that the (SCL or SDA) output pin can pull down is about 6 (9 on a 3.3V bus), so we MAY have to disconnect some pullups (jumpers?) or use a mux.</p>
+<p><strong>The MAXIMUM number (of 10k ohm) that the (SCL or SDA) output pin can pull down is about 6 (5V bus)</strong><br />
+  (max 9 on a 3.3V bus) so we MAY have to disconnect some pullups (jumpers?) or use a MUX.</p>
 </li>
 <li>
-<p>Some devices may not have any pullups, and other devices may EFFECTIVELY have 2 or 3 (4.7k Endpoint = 2x10k)</p>
+<p><strong>Some devices may not have any pullups, and other devices may EFFECTIVELY have 2&nbsp;or&nbsp;3.</strong><br />
+  (e.g 4.7k Endpoint pullup = 2x10k)</p>
 </li>
 <li>
-<p>The load the resistors have to drive depends on the NUMBER OF DEVICES and the total LENGTH of the segment
-wire/cable (passing through some devices) between bus segment ends.</p>
+<p><strong>The load the resistors have to drive depends on the NUMBER OF DEVICES and the total segment LENGTH.</strong><br />
+  (The full segment wire/cable length, passing through some devices, between the bus segment extremities.)</p>
 </li>
 <li>
-<p>The required minimum NUMBER(P) of 10k pullups on SCL must not be less than (number of devices(D) on bus +
-length(L feet) divided by 3. i.e. P = (D + L)/3   This ensures the signal can rise quickly to a good high level.</p>
+<p><strong>The MINIMUM required NUMBER(P) of 10k pullups on SCL must not be less than...</strong><br />
+  (number of devices(D) on bus + length(L feet)) all divided by 3.<br />
+  &nbsp; &nbsp; i.e.&nbsp;<strong>min.&nbsp;P&nbsp;=&nbsp;(D&nbsp;+&nbsp;L)/3</strong><br />
+  This ensures the signal can rise quickly to a good high level.<br />
+  Adding spare pullups, up to max.(6/9), is recommended and gives better length &amp; noise margins.</p>
 </li>
 <li>
-<p>Inversely, allowable max LENGTH(ft) = number of pullups(P) x 3 - number of devices(D) i.e. L = Px3 - D.<br />
-    The practical length varies somewhat with cable type (twisted pair, ribbon, dupont, etc.) so limit your
-segment length, say 2/3 of max., to avoid errors and timeouts.</p>
+<p><strong>Inversely, MAXIMUM LENGTH(L ft) must not exceed..</strong><br />
+  number of pullups(P) x 3 - number of devices(D)<br />
+  &nbsp; &nbsp; i.e.&nbsp;<strong>max.&nbsp;L&nbsp;=&nbsp;Px3&nbsp;-&nbsp;D</strong><br />
+  The practical length varies somewhat with cable type (twisted pair, ribbon, dupont, etc.) so limit your segment length below 2/3 of max., to avoid errors and timeouts.</p>
 </li>
 <li>
-<p>If number of available pullups is too low, extra pullups (max 6 @10cents each)(or a LTC4311, $10) may be
-added for length, BUT if number of pullups is TOO HIGH the only quick fix is to remove/cut jumpers/unsolder some pullups.<br />
-    &nbsp;<br />
-    NOTE:  If unsure of the effective number of active pullup resistors(10k), it is possible, after ALL POWER OFF
-    FOR SEVERAL MINUTES, to use an ohm meter to measure the net resistance between the SCL line (or SDA) to the
-    pullup supply rail (Vcc).  Divide 10k by the resistance for the effective number of pullups.<br />
-    (e.g. if it measures 2500 ohms, there are effectively 4 pullups in the circuit)<br />
-    (Do not use any diode test function or continuity test function on the meter, just basic resistance range.)</p>
+<p><strong>If number of available pullups is too low, extra pullups (max 6 @10cents each)(or a LTC4311, $10) may be added for length &amp; noise margins, up to the limit, BUT..</strong><br />
+  if number of pullups is TOO HIGH the only quick fix is to remove/cut jumpers/unsolder some pullups.</p>
 </li>
 </ol>
-<h2 id="examples">EXAMPLES:<a class="headerlink" href="#examples" title="Permanent link">&para;</a></h2>
-<pre><code>[for length(L), pullup count(P) &amp; device count(D)]
-</code></pre>
-<p>A. Mega bus:   3 Devices: Mega(10k), 1x MCP23017(10k) and one sparkfun Endpoint (with jumpers cut; no pullups)<br />
-         &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; max length L = P x 3 - D = 2x3-3 = 3ft (safe 2ft)</p>
-<p>B. Mega bus:   7 Devices: Mega(10k), 3x MCP23017(10k), 2x PCA9685(10k) &amp; Endpoint(4k7)<br />
-         &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Pullups P = 8 (8x10k) too high!  Can cut Endpoint jumpers to remove 2. Then...<br />
-         &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; max length L = P x 3 - D = 6x3-7 = 11ft (safe 7ft)</p>
-<p>C. MUX sub-bus:4 Devices: Mux (no 10k) and 3x MCP23017(10k each)<br />
-         &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; max length L = P x 3 - D = 3x3-4 = 5ft (safe 3.5ft)</p>
-<p>D. MUX sub-bus:2 Devices: Mux (no 10k) and a single PCA9685(10k)<br />
-         &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; max length L = P x 3 - D = 1x3-2 = 1ft (safe 8inch)</p>
-<p>E. Remote bus: 3 Devices: Endpoint (4k7=2x10k) and 2x esp32 slaves(no k)<br />
-         &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; max length L = P x 3 - D = 2x3-3 = 3ft (safe 2ft)</p>
-<p>F. Remote bus: 3 Devices+extras: Endpoint (4k7=2x10k), 2x esp32 and EXTRA 4k7(2x10k)<br />
-         &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; max length L = P x 3 - D = 4x3-3 = 9ft (safe 6ft)</p>
-<p>G. To achieve 400kHz fast-mode use Px1.5 e.g. example F. (with 4 effective pullups)<br />
-         &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; max length L = P x 1.5 - D = 4x1.5 - 3 = 3ft (safe 2ft)</p>
-<ul>
-<li>
-<p>In all cases, to increase workable length or speed, add pullups towards the max. number, or add one LTC4311 I2C Accelerator, provided P is not over the max. allowed pullup count.  </p>
-</li>
-<li>
-<p>LTC4311 detects a rising edge and injects a strong, current-limited pull-up current to quickly charge the bus capacitance. This actively accelerates the rise time, producing a cleaner, faster signal without compromising the signal's ability to be pulled low.</p>
-</li>
-<li>
-<p><strong>Note:</strong> LTC4311 to be placed at the head of the chain, not the tail.</p>
-</li>
-<li>
-<p>If you decide you need extra pullups for length, it is a good idea to be generous and add "spare" pullups (i.e. use a lower value resistor) while keeping within the max count(6/9), as this will give extra safety margins and noise immunity at no extra cost.</p>
-</li>
-</ul>
+<h2 id="measurement-in-situ">Measurement in situ<a class="headerlink" href="#measurement-in-situ" title="Permanent link">&para;</a></h2>
+<p><strong>Note:  If unsure of the effective number of active pullup resistors(10k), it is possible, after ALL POWER OFF FOR SEVERAL MINUTES, to use an ohm meter to measure the net resistance between the SCL line (or SDA) to the pullup supply rail (Vcc).</strong><br />
+<strong>Divide 10k (10000) by the resistance for the effective number of pullups.</strong><br />
+&nbsp; (e.g. if measure 2500ohm then effectively 4 pullups currently on the bus)<br />
+&nbsp; (Do not use any diode test function or continuity test function on the meter, just basic resistance range.)</p>
+<h2 id="examples">Examples<a class="headerlink" href="#examples" title="Permanent link">&para;</a></h2>
+<p><strong>A. Mega bus</strong>   4 Devices: Mega(10k), display(10k), PCA9685(10k) and a sparkfun Endpoint(4k7=2x10k)<br />
+    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; max length L = P x 3 - D = 5x3 - 4 = 11ft (safe 7ft)</p>
+<p><strong>B. Mega bus:</strong>   7 Devices: Mega(10k), 2x PCA9685(10k), 3x MCP23017(10k), &amp; Endpoint(4k7=2x10k)<br />
+    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Pullup count P = 8 (8x10k) too high!  Can cut Endpoint jumpers to remove 2. Then...<br />
+    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; max length L = P x 3 - D = 6x3 - 7 = 11ft (safe 7ft)</p>
+<p><strong>C. MUX sub-bus:</strong> 2 Devices: Mux (no P) and a single PCA9685(10k)<br />
+    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; max length L = P x 3 - D = 1x3 - 2 = 1ft (safe 0.66ft) (use extra pullup for more length)<br />
+    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; max length L = P x 3 - D = 2x3 - 2 = 4ft (safe 2.7ft)  (includes an extra 1x10k(pair) on end)</p>
+<p><strong>D. MUX sub-bus:</strong> 5 Devices: Mux (no P) 2xPCA9685(10k) &amp; 2xMCP23017(10k)<br />
+    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; max length L = P x 3 - D = 4x3 - 5 = 7ft (safe 4ft)    (add 1 or 2 extra P for 5ft)</p>
+<p><strong>E. Remote bus:</strong> 3 Devices: 1x Endpoint(4k7=2x10k), 1x MCP23017(10k) &amp; 1x PCA9685(10k)<br />
+    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; max length L = P x 3 - D = 4x3 - 3 = 9ft (safe 6ft)</p>
+<p><strong>F. Remote bus:</strong> 3 Devices+extras: Endpoint (4k7=2x10k), 2xESP32(no P) with EXTRA 4k7(=2x10k)<br />
+    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; max length L = P x 3 - D = 4x3 - 3 = 9ft (safe 6ft)</p>
+<p><strong>G. To achieve 400kHz fast-mode</strong> use Px1.5 e.g. example F. (with 4 effective pullups)<br />
+    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; max length L = P x 1.5 - D = 4x1.5 - 3 = 3ft (safe 2ft)</p>
+<p><strong>In all cases, to increase workable length, noise margin or speed, add pullups towards the max. number, OR add one LTC4311 I2C active pullup at the CS end, provided P is not over the max. allowed pullup count.</strong>  With an LTC4311, max pullups(6/9) are NOT recommended.  A limit of 3P is advised, especially with MCP23017's.</p>
+<p><img alt="I2C Examples" src="../../../../_static/images/i2c-devices/i2c-devices-example01.png" /></p>
 
 
 
@@ -6241,7 +6292,7 @@ added for length, BUT if number of pullups is TOO HIGH the only quick fix is to 
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="August 22, 2025 21:36:44 UTC">August 22, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="October 12, 2025 04:48:08 UTC">October 12, 2025</span>
   </span>
 
     
