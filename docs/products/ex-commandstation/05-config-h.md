@@ -78,6 +78,12 @@ Host names starting with "dccex" are more readily found by WiFi throttles.
 #define WIFI_HOSTNAME "dccex-csb1"
 ```
 
+In some environments you may want to hide the SSID from phones scanning for access points. If you do hide the SSID, it is still possible to connect by entering the SSID manually on the phone/tablet.
+
+```cpp
+#define WIFI_HIDE_SSID
+```
+
 ## Ethernet settings
 
 It is not valid to enable Ethernet and WiFi at the same time.
