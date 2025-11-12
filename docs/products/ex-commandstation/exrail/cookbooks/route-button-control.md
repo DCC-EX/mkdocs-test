@@ -17,67 +17,43 @@ In this case we want a way of setting a light on or off.
 ## Simple light switch route
 
  This example just has the logic to switch a light on/off with the "Set" button.
- It uses a [Bitmap flag](/products/ex-commandstation/exrail/cookbooks/flags-and-latches/flags.md) to remember whether the light is on or off. Note that the light and flag will default to off.
-
- A flag or range of flags in created like this:
-
-```cpp
-HAL(Bitmap,800,16)
-```
-
-That creates flags 800..815, we only need one here but if you need more, its better to crete a bank of flags in one go rather than lots of individual flags.
+ It uses the route state to remember whether the light is on or off. Note that the 
+ route state will default to inactive and the light will default to off.
 
 ```cpp
 ROUTE(600,"Shed lights")
-  IF(800)  // is the light on? 
-     RESET(120)  // lights off
-     RESET(800)
+  IFROUTE_ACTIVE(600)  // is the light on? 
+    RESET(120)        // lights off
+    ROUTE_INACTIVE(600)
   ELSE  // light is off 
-     SET(120)  // lights on
-     SET(800)
+    SET(120)  // lights on
+    ROUTE_ACTIVE(600)
   ENDIF
-  DONE
+DONE
 ```
 
 ## Changing button captions
 
 The same logic includes changing the button caption from "Set" to "Turn On" or "Turn Off".
+The AUTOSTART section is to make sure the caption is set correctly at startup.
 
 ```cpp
 ROUTE(600,"Shed lights")
-  IF(800)  // is the light on? 
-     RESET(120)  // lights off
-     RESET(800)
-     ROUTE_CAPTION(600,"Turn on") // change button caption
+  IFROUTE_ACTIVE(600)  // is the light on? 
+    RESET(120)        // lights off
+    ROUTE_INACTIVE(600)
+    ROUTE_CAPTION(600,"Turn on") // change button caption
   ELSE  // light is off 
-     SET(120)  // lights on
-     SET(800)
-     ROUTE_CAPTION(600,"Turn off") // change button caption
+    SET(120)  // lights on
+    ROUTE_ACTIVE(600)
+    ROUTE_CAPTION(600,"Turn off") // change button caption
   ENDIF
-  DONE
+DONE
 
 AUTOSTART
-  ROUTE_CAPTION(600,"Turn On") // start with lights off (pin and flag will default off)
-  DONE
+  ROUTE_CAPTION(600,"Turn on") // set button caption default at startup
+DONE
 
-```
-
-## Changed button active/inactive appearance
-
-This example make the "set" button appear active (highlighted) or inactive
-
-```cpp
-ROUTE(600,"Shed lights")
-  IF(800)  // is the light on? 
-     RESET(120)  // lights off
-     RESET(800)
-     ROUTE_INACTIVE(600) // change button state to inactive
-  ELSE  // light is off 
-     SET(120)  // lights on
-     SET(800)
-     ROUTE_ACTIVE(600) // button appears highlighted as active
-  ENDIF
-  DONE
 ```
 
 ## Two separate routes example
@@ -102,3 +78,18 @@ AUTOSTART
     ROUTE_HIDDEN(601)  // shed lights are off already
   DONE
 ```
+
+EXRAIL hs the full set of route setting and testing commands which should be self explanitory once the above simple examples have been understood. Each route can only be in one of the 4 states. 
+
+```cpp
+IFROUTE_INACTIVE(route_id)
+IFROUTE_ACTIVE(route_id)
+IFROUTE_HIDDEN(route_id)
+IFROUTE_DISABLED(route_id)
+
+ROUTE_INACTIVE(route_id)
+ROUTE_ACTIVE(route_id)
+ROUTE_HIDDEN(route_id)
+ROUTE_DISABLED(route_id)
+```
+
