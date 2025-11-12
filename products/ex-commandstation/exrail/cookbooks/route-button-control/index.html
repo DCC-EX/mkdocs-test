@@ -1639,15 +1639,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#changed-button-activeinactive-appearance" class="md-nav__link">
-    <span class="md-ellipsis">
-      Changed button active/inactive appearance
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#two-separate-routes-example" class="md-nav__link">
     <span class="md-ellipsis">
       Two separate routes example
@@ -6243,52 +6234,36 @@
 In this case we want a way of setting a light on or off.</p>
 <h2 id="simple-light-switch-route">Simple light switch route<a class="headerlink" href="#simple-light-switch-route" title="Permanent link">&para;</a></h2>
 <p>This example just has the logic to switch a light on/off with the "Set" button.
- It uses a <a href="../flags-and-latches/flags/">Bitmap flag</a> to remember whether the light is on or off. Note that the light and flag will default to off.</p>
-<p>A flag or range of flags in created like this:</p>
-<div class="highlight"><pre><span></span><code><span class="n">HAL</span><span class="p">(</span><span class="n">Bitmap</span><span class="p">,</span><span class="mi">800</span><span class="p">,</span><span class="mi">16</span><span class="p">)</span>
-</code></pre></div>
-<p>That creates flags 800..815, we only need one here but if you need more, its better to crete a bank of flags in one go rather than lots of individual flags.</p>
+ It uses the route state to remember whether the light is on or off. Note that the 
+ route state will default to inactive and the light will default to off.</p>
 <div class="highlight"><pre><span></span><code><span class="n">ROUTE</span><span class="p">(</span><span class="mi">600</span><span class="p">,</span><span class="s">&quot;Shed lights&quot;</span><span class="p">)</span>
-<span class="w">  </span><span class="n">IF</span><span class="p">(</span><span class="mi">800</span><span class="p">)</span><span class="w">  </span><span class="c1">// is the light on? </span>
-<span class="w">     </span><span class="n">RESET</span><span class="p">(</span><span class="mi">120</span><span class="p">)</span><span class="w">  </span><span class="c1">// lights off</span>
-<span class="w">     </span><span class="n">RESET</span><span class="p">(</span><span class="mi">800</span><span class="p">)</span>
+<span class="w">  </span><span class="n">IFROUTE_ACTIVE</span><span class="p">(</span><span class="mi">600</span><span class="p">)</span><span class="w">  </span><span class="c1">// is the light on? </span>
+<span class="w">    </span><span class="n">RESET</span><span class="p">(</span><span class="mi">120</span><span class="p">)</span><span class="w">        </span><span class="c1">// lights off</span>
+<span class="w">    </span><span class="n">ROUTE_INACTIVE</span><span class="p">(</span><span class="mi">600</span><span class="p">)</span>
 <span class="w">  </span><span class="n">ELSE</span><span class="w">  </span><span class="c1">// light is off </span>
-<span class="w">     </span><span class="n">SET</span><span class="p">(</span><span class="mi">120</span><span class="p">)</span><span class="w">  </span><span class="c1">// lights on</span>
-<span class="w">     </span><span class="n">SET</span><span class="p">(</span><span class="mi">800</span><span class="p">)</span>
+<span class="w">    </span><span class="n">SET</span><span class="p">(</span><span class="mi">120</span><span class="p">)</span><span class="w">  </span><span class="c1">// lights on</span>
+<span class="w">    </span><span class="n">ROUTE_ACTIVE</span><span class="p">(</span><span class="mi">600</span><span class="p">)</span>
 <span class="w">  </span><span class="n">ENDIF</span>
-<span class="w">  </span><span class="n">DONE</span>
+<span class="n">DONE</span>
 </code></pre></div>
 <h2 id="changing-button-captions">Changing button captions<a class="headerlink" href="#changing-button-captions" title="Permanent link">&para;</a></h2>
-<p>The same logic includes changing the button caption from "Set" to "Turn On" or "Turn Off".</p>
+<p>The same logic includes changing the button caption from "Set" to "Turn On" or "Turn Off".
+The AUTOSTART section is to make sure the caption is set correctly at startup.</p>
 <div class="highlight"><pre><span></span><code><span class="n">ROUTE</span><span class="p">(</span><span class="mi">600</span><span class="p">,</span><span class="s">&quot;Shed lights&quot;</span><span class="p">)</span>
-<span class="w">  </span><span class="n">IF</span><span class="p">(</span><span class="mi">800</span><span class="p">)</span><span class="w">  </span><span class="c1">// is the light on? </span>
-<span class="w">     </span><span class="n">RESET</span><span class="p">(</span><span class="mi">120</span><span class="p">)</span><span class="w">  </span><span class="c1">// lights off</span>
-<span class="w">     </span><span class="n">RESET</span><span class="p">(</span><span class="mi">800</span><span class="p">)</span>
-<span class="w">     </span><span class="n">ROUTE_CAPTION</span><span class="p">(</span><span class="mi">600</span><span class="p">,</span><span class="s">&quot;Turn on&quot;</span><span class="p">)</span><span class="w"> </span><span class="c1">// change button caption</span>
+<span class="w">  </span><span class="n">IFROUTE_ACTIVE</span><span class="p">(</span><span class="mi">600</span><span class="p">)</span><span class="w">  </span><span class="c1">// is the light on? </span>
+<span class="w">    </span><span class="n">RESET</span><span class="p">(</span><span class="mi">120</span><span class="p">)</span><span class="w">        </span><span class="c1">// lights off</span>
+<span class="w">    </span><span class="n">ROUTE_INACTIVE</span><span class="p">(</span><span class="mi">600</span><span class="p">)</span>
+<span class="w">    </span><span class="n">ROUTE_CAPTION</span><span class="p">(</span><span class="mi">600</span><span class="p">,</span><span class="s">&quot;Turn on&quot;</span><span class="p">)</span><span class="w"> </span><span class="c1">// change button caption</span>
 <span class="w">  </span><span class="n">ELSE</span><span class="w">  </span><span class="c1">// light is off </span>
-<span class="w">     </span><span class="n">SET</span><span class="p">(</span><span class="mi">120</span><span class="p">)</span><span class="w">  </span><span class="c1">// lights on</span>
-<span class="w">     </span><span class="n">SET</span><span class="p">(</span><span class="mi">800</span><span class="p">)</span>
-<span class="w">     </span><span class="n">ROUTE_CAPTION</span><span class="p">(</span><span class="mi">600</span><span class="p">,</span><span class="s">&quot;Turn off&quot;</span><span class="p">)</span><span class="w"> </span><span class="c1">// change button caption</span>
+<span class="w">    </span><span class="n">SET</span><span class="p">(</span><span class="mi">120</span><span class="p">)</span><span class="w">  </span><span class="c1">// lights on</span>
+<span class="w">    </span><span class="n">ROUTE_ACTIVE</span><span class="p">(</span><span class="mi">600</span><span class="p">)</span>
+<span class="w">    </span><span class="n">ROUTE_CAPTION</span><span class="p">(</span><span class="mi">600</span><span class="p">,</span><span class="s">&quot;Turn off&quot;</span><span class="p">)</span><span class="w"> </span><span class="c1">// change button caption</span>
 <span class="w">  </span><span class="n">ENDIF</span>
-<span class="w">  </span><span class="n">DONE</span>
+<span class="n">DONE</span>
 
 <span class="n">AUTOSTART</span>
-<span class="w">  </span><span class="n">ROUTE_CAPTION</span><span class="p">(</span><span class="mi">600</span><span class="p">,</span><span class="s">&quot;Turn On&quot;</span><span class="p">)</span><span class="w"> </span><span class="c1">// start with lights off (pin and flag will default off)</span>
-<span class="w">  </span><span class="n">DONE</span>
-</code></pre></div>
-<h2 id="changed-button-activeinactive-appearance">Changed button active/inactive appearance<a class="headerlink" href="#changed-button-activeinactive-appearance" title="Permanent link">&para;</a></h2>
-<p>This example make the "set" button appear active (highlighted) or inactive</p>
-<div class="highlight"><pre><span></span><code><span class="n">ROUTE</span><span class="p">(</span><span class="mi">600</span><span class="p">,</span><span class="s">&quot;Shed lights&quot;</span><span class="p">)</span>
-<span class="w">  </span><span class="n">IF</span><span class="p">(</span><span class="mi">800</span><span class="p">)</span><span class="w">  </span><span class="c1">// is the light on? </span>
-<span class="w">     </span><span class="n">RESET</span><span class="p">(</span><span class="mi">120</span><span class="p">)</span><span class="w">  </span><span class="c1">// lights off</span>
-<span class="w">     </span><span class="n">RESET</span><span class="p">(</span><span class="mi">800</span><span class="p">)</span>
-<span class="w">     </span><span class="n">ROUTE_INACTIVE</span><span class="p">(</span><span class="mi">600</span><span class="p">)</span><span class="w"> </span><span class="c1">// change button state to inactive</span>
-<span class="w">  </span><span class="n">ELSE</span><span class="w">  </span><span class="c1">// light is off </span>
-<span class="w">     </span><span class="n">SET</span><span class="p">(</span><span class="mi">120</span><span class="p">)</span><span class="w">  </span><span class="c1">// lights on</span>
-<span class="w">     </span><span class="n">SET</span><span class="p">(</span><span class="mi">800</span><span class="p">)</span>
-<span class="w">     </span><span class="n">ROUTE_ACTIVE</span><span class="p">(</span><span class="mi">600</span><span class="p">)</span><span class="w"> </span><span class="c1">// button appears highlighted as active</span>
-<span class="w">  </span><span class="n">ENDIF</span>
-<span class="w">  </span><span class="n">DONE</span>
+<span class="w">  </span><span class="n">ROUTE_CAPTION</span><span class="p">(</span><span class="mi">600</span><span class="p">,</span><span class="s">&quot;Turn on&quot;</span><span class="p">)</span><span class="w"> </span><span class="c1">// set button caption default at startup</span>
+<span class="n">DONE</span>
 </code></pre></div>
 <h2 id="two-separate-routes-example">Two separate routes example<a class="headerlink" href="#two-separate-routes-example" title="Permanent link">&para;</a></h2>
 <p>This example has two "routes" to control lights, but only one of them will be visible at a time so we dont need a flag.
@@ -6308,6 +6283,17 @@ Each route will have the default "Set" button.</p>
 <span class="n">AUTOSTART</span>
 <span class="w">    </span><span class="n">ROUTE_HIDDEN</span><span class="p">(</span><span class="mi">601</span><span class="p">)</span><span class="w">  </span><span class="c1">// shed lights are off already</span>
 <span class="w">  </span><span class="n">DONE</span>
+</code></pre></div>
+<p>EXRAIL hs the full set of route setting and testing commands which should be self explanitory once the above simple examples have been understood. Each route can only be in one of the 4 states. </p>
+<div class="highlight"><pre><span></span><code><span class="n">IFROUTE_INACTIVE</span><span class="p">(</span><span class="n">route_id</span><span class="p">)</span>
+<span class="n">IFROUTE_ACTIVE</span><span class="p">(</span><span class="n">route_id</span><span class="p">)</span>
+<span class="n">IFROUTE_HIDDEN</span><span class="p">(</span><span class="n">route_id</span><span class="p">)</span>
+<span class="n">IFROUTE_DISABLED</span><span class="p">(</span><span class="n">route_id</span><span class="p">)</span>
+
+<span class="n">ROUTE_INACTIVE</span><span class="p">(</span><span class="n">route_id</span><span class="p">)</span>
+<span class="n">ROUTE_ACTIVE</span><span class="p">(</span><span class="n">route_id</span><span class="p">)</span>
+<span class="n">ROUTE_HIDDEN</span><span class="p">(</span><span class="n">route_id</span><span class="p">)</span>
+<span class="n">ROUTE_DISABLED</span><span class="p">(</span><span class="n">route_id</span><span class="p">)</span>
 </code></pre></div>
 
 
