@@ -17,8 +17,8 @@ In this case we want a way of setting a light on or off.
 ## Simple light switch route
 
  This example just has the logic to switch a light on/off with the "Set" button.
- It uses the route state to remember whether the light is on or off. Note that the 
- route state will default to inactive and the light will default to off.
+ It uses the route state to remember whether the light is on or off.
+ Note that the route state will default to inactive and the light will default to off.
 
 ```cpp
 ROUTE(600,"Shed lights")
@@ -79,7 +79,7 @@ AUTOSTART
   DONE
 ```
 
-EXRAIL hs the full set of route setting and testing commands which should be self explanitory once the above simple examples have been understood. Each route can only be in one of the 4 states. 
+EXRAIL hs the full set of route setting and testing commands which should be self explanitory once the above simple examples have been understood. Each route can only be in one of the 4 states.
 
 ```cpp
 IFROUTE_INACTIVE(route_id)
@@ -92,4 +92,3 @@ ROUTE_ACTIVE(route_id)
 ROUTE_HIDDEN(route_id)
 ROUTE_DISABLED(route_id)
 ```
-
