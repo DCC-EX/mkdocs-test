@@ -76,6 +76,7 @@ If we assume that:
 
 ```cpp
 ROUTE(1,"Start Dogbath-Catflap")
+FREEALL   // Clear any reserves left over from previous running 
 RESERVE(1) // loco is already at Dogbath
 RESERVE(3) // loco is already at Catflap
 SENDLOCO(3,100) // start loco 3 running the sequence from Dogbath
@@ -93,6 +94,7 @@ Note that EXRAIL is running a separate task for each loco.
 
 ```cpp
 ROUTE(1,"Start Dogbath-Catflap")
+FREEALL   // Make sure all reserves are cleared 
 RESERVE(1) 
 RESERVE(3)
 SENDLOCO(3,100) 
