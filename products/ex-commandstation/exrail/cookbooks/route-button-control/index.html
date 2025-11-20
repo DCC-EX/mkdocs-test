@@ -1742,6 +1742,8 @@
       
         
       
+        
+      
     
     
     
@@ -1852,6 +1854,29 @@
   
   
     <li class="md-nav__item">
+      <a href="../advanced/passing-locos-between-sequences/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Passing locos between sequences
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../advanced/tca8418-keyboard/" class="md-nav__link">
         
   
@@ -1884,6 +1909,8 @@
   
     
     
+      
+        
       
         
       
@@ -2059,6 +2086,29 @@
   
   <span class="md-ellipsis">
     Passing loop shuttle
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../driving-trains/46-save-restore/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Saving and Restoring speeds
     
   </span>
   
@@ -6234,8 +6284,8 @@
 In this case we want a way of setting a light on or off.</p>
 <h2 id="simple-light-switch-route">Simple light switch route<a class="headerlink" href="#simple-light-switch-route" title="Permanent link">&para;</a></h2>
 <p>This example just has the logic to switch a light on/off with the "Set" button.
- It uses the route state to remember whether the light is on or off. Note that the 
- route state will default to inactive and the light will default to off.</p>
+ It uses the route state to remember whether the light is on or off.
+ Note that the route state will default to inactive and the light will default to off.</p>
 <div class="highlight"><pre><span></span><code><span class="n">ROUTE</span><span class="p">(</span><span class="mi">600</span><span class="p">,</span><span class="s">&quot;Shed lights&quot;</span><span class="p">)</span>
 <span class="w">  </span><span class="n">IFROUTE_ACTIVE</span><span class="p">(</span><span class="mi">600</span><span class="p">)</span><span class="w">  </span><span class="c1">// is the light on? </span>
 <span class="w">    </span><span class="n">RESET</span><span class="p">(</span><span class="mi">120</span><span class="p">)</span><span class="w">        </span><span class="c1">// lights off</span>
@@ -6284,7 +6334,7 @@ Each route will have the default "Set" button.</p>
 <span class="w">    </span><span class="n">ROUTE_HIDDEN</span><span class="p">(</span><span class="mi">601</span><span class="p">)</span><span class="w">  </span><span class="c1">// shed lights are off already</span>
 <span class="w">  </span><span class="n">DONE</span>
 </code></pre></div>
-<p>EXRAIL hs the full set of route setting and testing commands which should be self explanitory once the above simple examples have been understood. Each route can only be in one of the 4 states. </p>
+<p>EXRAIL hs the full set of route setting and testing commands which should be self explanitory once the above simple examples have been understood. Each route can only be in one of the 4 states.</p>
 <div class="highlight"><pre><span></span><code><span class="n">IFROUTE_INACTIVE</span><span class="p">(</span><span class="n">route_id</span><span class="p">)</span>
 <span class="n">IFROUTE_ACTIVE</span><span class="p">(</span><span class="n">route_id</span><span class="p">)</span>
 <span class="n">IFROUTE_HIDDEN</span><span class="p">(</span><span class="n">route_id</span><span class="p">)</span>
@@ -6315,7 +6365,7 @@ Each route will have the default "Set" button.</p>
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="July 20, 2025 01:15:25 UTC">July 20, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="November 18, 2025 13:05:53 UTC">November 18, 2025</span>
   </span>
 
     

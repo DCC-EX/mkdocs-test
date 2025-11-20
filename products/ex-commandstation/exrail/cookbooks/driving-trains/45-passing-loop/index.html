@@ -16,7 +16,7 @@
         <link rel="prev" href="../41-improved-shuttle/">
       
       
-        <link rel="next" href="../../editing-tricks/multi-files/">
+        <link rel="next" href="../46-save-restore/">
       
       
         <link rel="alternate" type="application/rss+xml" title="RSS feed" href="../../../../../../feed_rss_created.xml">
@@ -1673,6 +1673,8 @@
       
         
       
+        
+      
     
     
     
@@ -1783,6 +1785,29 @@
   
   
     <li class="md-nav__item">
+      <a href="../../advanced/passing-locos-between-sequences/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Passing locos between sequences
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../advanced/tca8418-keyboard/" class="md-nav__link">
         
   
@@ -1817,6 +1842,8 @@
   
     
     
+      
+        
       
         
       
@@ -2084,6 +2111,29 @@
   
 </nav>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../46-save-restore/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Saving and Restoring speeds
+    
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -6297,6 +6347,7 @@
 </ul>
 <p>Then we can create a ROUTE that will appear on your throttle and start the sequences.</p>
 <div class="highlight"><pre><span></span><code><span class="n">ROUTE</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="s">&quot;Start Dogbath-Catflap&quot;</span><span class="p">)</span>
+<span class="n">FREEALL</span><span class="w">   </span><span class="c1">// Clear any reserves left over from previous running </span>
 <span class="n">RESERVE</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="c1">// loco is already at Dogbath</span>
 <span class="n">RESERVE</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span><span class="w"> </span><span class="c1">// loco is already at Catflap</span>
 <span class="n">SENDLOCO</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">100</span><span class="p">)</span><span class="w"> </span><span class="c1">// start loco 3 running the sequence from Dogbath</span>
@@ -6308,6 +6359,7 @@
 <p>The INVERT_DIRECTION command tells EXRAIL to invert the FWD/REV commands for the current loco in the current task. Rather than duplicate both sequences with different direction commands, or litter them with IFLOCO checks, we can alter the startup to apply this invert to the task running loco 4 before starting at Catflap.</p>
 <p>Note that EXRAIL is running a separate task for each loco.</p>
 <div class="highlight"><pre><span></span><code><span class="n">ROUTE</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="s">&quot;Start Dogbath-Catflap&quot;</span><span class="p">)</span>
+<span class="n">FREEALL</span><span class="w">   </span><span class="c1">// Make sure all reserves are cleared </span>
 <span class="n">RESERVE</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="w"> </span>
 <span class="n">RESERVE</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
 <span class="n">SENDLOCO</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">100</span><span class="p">)</span><span class="w"> </span>
@@ -6341,7 +6393,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="July 18, 2025 09:04:27 UTC">July 18, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="November 18, 2025 13:03:41 UTC">November 18, 2025</span>
   </span>
 
     
@@ -6395,6 +6447,22 @@
             </div>
           </a>
         
+        
+          
+          <a href="../46-save-restore/" class="md-footer__link md-footer__link--next" aria-label="Next: Saving and Restoring speeds">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Saving and Restoring speeds
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
         
       </nav>
     

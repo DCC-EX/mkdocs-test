@@ -10,13 +10,13 @@
       
       
       
-        <link rel="canonical" href="https://dcc-ex.com/mkdocs-test/products/ex-commandstation/exrail/cookbooks/advanced/analog-sensors/">
+        <link rel="canonical" href="https://dcc-ex.com/mkdocs-test/products/ex-commandstation/exrail/cookbooks/advanced/passing-locos-between-sequences/">
       
       
-        <link rel="prev" href="../5-display-locos-on-oled/">
+        <link rel="prev" href="../command-filter/">
       
       
-        <link rel="next" href="../command-filter/">
+        <link rel="next" href="../tca8418-keyboard/">
       
       
         <link rel="alternate" type="application/rss+xml" title="RSS feed" href="../../../../../../feed_rss_created.xml">
@@ -27,7 +27,7 @@
     
     
       
-        <title>Analog sensors - DCC-EX Model Train Control, Animation, and Automation</title>
+        <title>Passing locos between sequences - DCC-EX Model Train Control, Animation, and Automation</title>
       
     
     
@@ -83,7 +83,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#analog-sensors" class="md-skip">
+        <a href="#passing-locos-between-sequences" class="md-skip">
           Skip to content
         </a>
       
@@ -116,7 +116,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Analog sensors
+              Passing locos between sequences
             
           </span>
         </div>
@@ -1738,19 +1738,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../analog-sensors/" class="md-nav__link">
         
   
   
@@ -1761,7 +1752,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -1794,10 +1784,32 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../passing-locos-between-sequences/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Passing locos between sequences
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -1808,6 +1820,62 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#startsequence_id" class="md-nav__link">
+    <span class="md-ellipsis">
+      START(sequence_id)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sendlocoloco_idsequence_id" class="md-nav__link">
+    <span class="md-ellipsis">
+      SENDLOCO(loco_id,sequence_id)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#start_sendsequence_id" class="md-nav__link">
+    <span class="md-ellipsis">
+      START_SEND(sequence_id)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#start_sharedsequence_id" class="md-nav__link">
+    <span class="md-ellipsis">
+      START_SHARED(sequence_id)
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -6213,23 +6281,16 @@
   
 
 
-<h1 id="analog-sensors">Analog sensors<a class="headerlink" href="#analog-sensors" title="Permanent link">&para;</a></h1>
-<p>Sensors that read analog values are comparatively rare for model railway use but are sometimes used to detect a binary state depending on the current detected by a sensor.</p>
-<p><a href="https://www.ti.com/product/ADS1113">ADS1113</a> and <a href="https://www.ti.com/product/ADS1113">ADS1114</a> are restricted to 1 input.  <a href="https://www.ti.com/product/ADS1115">ADS1115</a> has 4 way multiplexer which allows any of four input pins to be read by its ADC.</p>
-<p>The ADS111x is set up so that the maximum input voltage of 5V (when Vss=5V) gives a reading of 32767*(5.0/6.144) = 26666.</p>
-<p>A device like the above is defined in EXRAIL by</p>
-<div class="highlight"><pre><span></span><code><span class="n">HAL</span><span class="p">(</span><span class="n">ADS1113</span><span class="p">,</span><span class="mi">300</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mh">0x48</span><span class="p">);</span><span class="w">  </span><span class="c1">// single-input ADS1113 on vpin 300</span>
-<span class="c1">// or</span>
-<span class="n">HAL</span><span class="p">(</span><span class="n">ADS1115</span><span class="p">,</span><span class="mi">300</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mh">0x48</span><span class="p">);</span><span class="w">  </span><span class="c1">// four-input ADS1115 on pins 300..303</span>
-</code></pre></div>
-<p>To monitor a vpin like this for a binary decision</p>
-<div class="highlight"><pre><span></span><code><span class="n">AUTOSTART</span><span class="w"> </span><span class="n">SEQUENCE</span><span class="p">(</span><span class="mi">99</span><span class="p">)</span>
-<span class="n">ATGTE</span><span class="p">(</span><span class="mi">300</span><span class="p">,</span><span class="mi">1000</span><span class="p">)</span><span class="w"> </span><span class="c1">// wait intil vpin 300 reaches 1000 or greater</span>
-<span class="p">...</span><span class="w"> </span><span class="k">do</span><span class="w"> </span><span class="n">something</span>
-<span class="n">ATGTE</span><span class="p">(</span><span class="mi">300</span><span class="p">,</span><span class="mi">950</span><span class="p">)</span><span class="w"> </span><span class="c1">// wait until it drops back below 950</span>
-<span class="p">..</span><span class="w"> </span><span class="k">do</span><span class="w"> </span><span class="n">something</span><span class="w"> </span><span class="k">else</span>
-<span class="n">FOLLOW</span><span class="p">(</span><span class="mi">99</span><span class="p">)</span><span class="w"> </span><span class="c1">// continue monitoring</span>
-</code></pre></div>
+<h1 id="passing-locos-between-sequences">Passing locos between sequences<a class="headerlink" href="#passing-locos-between-sequences" title="Permanent link">&para;</a></h1>
+<p>Each of the methods below involves creating a new Exrail task that will run in parallel with the current task. The difference is in how the locoid information is passed to the new sequence.</p>
+<h2 id="startsequence_id">START(sequence_id)<a class="headerlink" href="#startsequence_id" title="Permanent link">&para;</a></h2>
+<p>Start a new task with no loco attached.</p>
+<h2 id="sendlocoloco_idsequence_id">SENDLOCO(loco_id,sequence_id)<a class="headerlink" href="#sendlocoloco_idsequence_id" title="Permanent link">&para;</a></h2>
+<p>Start a new task with the given loco id</p>
+<h2 id="start_sendsequence_id">START_SEND(sequence_id)<a class="headerlink" href="#start_sendsequence_id" title="Permanent link">&para;</a></h2>
+<p>Hands over the current loco to the new task. The current task is no longer connected to this loco.</p>
+<h2 id="start_sharedsequence_id">START_SHARED(sequence_id)<a class="headerlink" href="#start_sharedsequence_id" title="Permanent link">&para;</a></h2>
+<p>Shares the loco with the new task. For example the new task may flash the loco lights to a disco beat while the original task continues to drive the loco.</p>
 
 
 
@@ -6250,7 +6311,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="July 17, 2025 10:43:02 UTC">July 17, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="November 18, 2025 13:03:41 UTC">November 18, 2025</span>
   </span>
 
     
@@ -6289,7 +6350,7 @@
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../5-display-locos-on-oled/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Display Loco speeds on OLED (Advanced)">
+          <a href="../command-filter/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Command Filters">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -6299,20 +6360,20 @@
                 Previous
               </span>
               <div class="md-ellipsis">
-                Display Loco speeds on OLED (Advanced)
+                Command Filters
               </div>
             </div>
           </a>
         
         
           
-          <a href="../command-filter/" class="md-footer__link md-footer__link--next" aria-label="Next: Command Filters">
+          <a href="../tca8418-keyboard/" class="md-footer__link md-footer__link--next" aria-label="Next: TCA8418 keyboard scanner">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Command Filters
+                TCA8418 keyboard scanner
               </div>
             </div>
             <div class="md-footer__button md-icon">
