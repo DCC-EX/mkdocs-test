@@ -6323,17 +6323,17 @@
 
 
 <h1 id="random-selection">Random selection<a class="headerlink" href="#random-selection" title="Permanent link">&para;</a></h1>
-<p>EXRAIL provides a number of randomizing functions that make it easy to create more interesting automations that behave in unpredictable ways. This may be as simple as a random delay time at a station, choosing a different route to follow or selecting a train from a fiddle yard.</p>
+<p>EXRAIL provides a number of randomising functions that make it easy to create more interesting automations that behave in unpredictable ways. This may be as simple as a random delay time at a station, choosing a different route to follow or selecting a train from a fiddle yard.</p>
 <p>Some layout builders have used this to create non-train animations such as flickering camp fires, welding flashes and crane movements.</p>
 <h2 id="random-time-delay">Random time delay<a class="headerlink" href="#random-time-delay" title="Permanent link">&para;</a></h2>
-<p>The <code>DELAYRANDOM(mindelay,maxdelay)</code> delays a radom time between two millisecond values, for example between 5 and 10 seconds use</p>
+<p>The <code>DELAYRANDOM(mindelay,maxdelay)</code> delays a random time between two millisecond values, for example between 5 and 10 seconds use</p>
 <div class="highlight"><pre><span></span><code><span class="n">DELAYRANDOM</span><span class="p">(</span><span class="mi">5000</span><span class="p">,</span><span class="mi">10000</span><span class="p">)</span>
 </code></pre></div>
 <h2 id="random-choice-on-a-given-percentage">Random choice on a given percentage<a class="headerlink" href="#random-choice-on-a-given-percentage" title="Permanent link">&para;</a></h2>
 <p>The <code>IFRANDOM(percent)</code> command will return true a given percentage of the time.</p>
 <h2 id="random-selection-of-a-path-to-follow">Random selection of a path to follow<a class="headerlink" href="#random-selection-of-a-path-to-follow" title="Permanent link">&para;</a></h2>
-<p>The <code>RANDOM_FOLLOW(sequence1,sequence2.....)</code> command will randomly choose between sequences with equal probablility. Since this will always <code>FOLLOW</code> one of the specified sequences, this will never return to the next command.</p>
-<p>The <code>RANDOM_CALL(sequence1,sequence2.....)</code> command will randomly choose between sequences with equal probablility and since they are CALLed they should <code>RETURN</code> and processing continues at the statement after <code>RANDOM_CALL</code>.</p>
+<p>The <code>RANDOM_FOLLOW(sequence1,sequence2.....)</code> command will randomly choose between sequences with equal probability. Since this will always <code>FOLLOW</code> one of the specified sequences, this will never return to the next command.</p>
+<p>The <code>RANDOM_CALL(sequence1,sequence2.....)</code> command will randomly choose between sequences with equal probability and since they are CALLed they should <code>RETURN</code> and processing continues at the statement after <code>RANDOM_CALL</code>.</p>
 <p>Up to 8 sequences can be passed to these commands. If you need more than 8 just let us know and it can be extended but it's not as simple as changing a single number because the C++ pre-processor does not have macro parameter enumeration.</p>
 
 
@@ -6355,7 +6355,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="November 23, 2025 12:41:05 UTC">November 23, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="November 23, 2025 22:40:41 UTC">November 23, 2025</span>
   </span>
 
     
