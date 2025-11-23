@@ -113,7 +113,8 @@
   --md-default-bg-color--dark:  #222222; /* Slightly darker for deeper elements */
 
   /* Code blocks for dark mode */
-  --md-code-fg-color:           #E0E0E0; /* Code text colour */
+  /* --md-code-fg-color:           #E0E0E0; Code text colour */
+  --md-code-fg-color:           var(--md-code-hl-name-color);
   --md-code-bg-color:           #3D3D3D; /* Code block background */
 
   /* Code highlighting colour shades */
