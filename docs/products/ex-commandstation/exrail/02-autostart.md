@@ -7,7 +7,7 @@ When the command station starts:
 
 Where VPINS are mapped to external expanders (such as an MCP23017), the HAL driver will pass on the relevant commands to the expander.
 
-- EXRAIL will then automatically start tasks at any point in the myAutomation.h file where and AUTOSTART command is found. There may be several, they will all run simultaneously and in no particular priority.
+- EXRAIL will then automatically start tasks at any point in the myAutomation.h file where an AUTOSTART command is found. There may be several, they will all run simultaneously and in no particular priority.
 
 To create commands that will automatically run at startup:
 
