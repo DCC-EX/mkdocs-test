@@ -3493,6 +3493,19 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    EX-SensorCAM
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -3504,6 +3517,94 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    <span class="md-ellipsis">
+      Introduction
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hardware" class="md-nav__link">
+    <span class="md-ellipsis">
+      Hardware
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Hardware">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#base-processor-module" class="md-nav__link">
+    <span class="md-ellipsis">
+      Base Processor Module
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#camera-module" class="md-nav__link">
+    <span class="md-ellipsis">
+      Camera Module
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#software-requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      Software requirements
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#documentation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Documentation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#outline-of-install-process" class="md-nav__link">
+    <span class="md-ellipsis">
+      Outline of install process
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -6411,7 +6512,51 @@
 
 
 <h1 id="ex-sensorcam">EX-SensorCAM<a class="headerlink" href="#ex-sensorcam" title="Permanent link">&para;</a></h1>
-<p>This is a cool project using ESP32 based camera devices to provide up to 80 visual sensors for your layout.</p>
+<p>Video Based Multi Channel Position Sensing Camera.</p>
+<h2 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">&para;</a></h2>
+<p>This single camera is capable of replacing up to 80 detectors/sensors on a model railroad along with their extensive wiring.
+As it is a cheap device, on large railroads, several cameras can be used for adequate coverage.
+It can detect, and be used to control, train movements without any trackside sensors at all.
+Used in conjunction with an i2c bus to a DCC-EX Command Station, the options through X-RAIL automation seem unlimited.
+It does not include loco or rolling stock identification.</p>
+<h2 id="hardware">Hardware<a class="headerlink" href="#hardware" title="Permanent link">&para;</a></h2>
+<h3 id="base-processor-module">Base Processor Module<a class="headerlink" href="#base-processor-module" title="Permanent link">&para;</a></h3>
+<p>The Camera is a standard ESP32-CAM with an ESP32-CAM-MB (CH-340G based) to add USB capability and, in it's simplest form, a PCA9515A i2c interface module.
+To connect the sensorCAM to i2c, some limited soldering is required to connect the PCA9515A (5 wires) to the USB MB on the CAM.
+An advanced proto-daughter board is preferable to the PCA9515, to include long i2c buffering (up to 30metres), an isolated power supply, and indicator LEDs.
+A cheap commercial aerial may be useful in marginal WiFi situations.</p>
+<h3 id="camera-module">Camera Module<a class="headerlink" href="#camera-module" title="Permanent link">&para;</a></h3>
+<p>The sensorCAM uses the 32bit ESP32-S microcontroller with an OV2640 camera module.<br />
+It is fitted with a 4Mbyte PSRAM for image storage and a built in WiFi aerial.
+It also has 3Mb of available program storage, EPROM memory for parameters, and 327kbytes of dynamic memory. </p>
+<h2 id="software-requirements">Software requirements<a class="headerlink" href="#software-requirements" title="Permanent link">&para;</a></h2>
+<p>The Arduino IDE is recommended for the sensorCAM and, if used, the connected EX-Command Station DCC-EX-CS software with EX-RAIL.
+The ESP32-CAM has an Arduino library of software that is needed to enable the camera image manipulation and the WiFi imaging of the railroad.
+In addition, the Processing 4 application is highly desired to enable railroad images to be captured and sensor positions to be located and seen, as the Arduino IDE cannot give visual feedback.</p>
+<p>You can download it from <a href="https://processing.org/">the website</a></p>
+<p>The webserver WiFi images are not a substitute for the Processing 4 utility, as sensorCAM cannot "sense" in webserver mode.
+Specific SensorCAM files are provided for each of the above apps.</p>
+<p>NOTE: For enhanced versions, rather than "main/master" branch, use a recent "devel" version of Command Station (5.2.88+) and "devel" branch of sensorCAM (3.10+)</p>
+<h2 id="documentation">Documentation<a class="headerlink" href="#documentation" title="Permanent link">&para;</a></h2>
+<p>The sensorCAM is a complex device needing some in depth understanding to achieve its full potential.
+A 30 page manual is provided to assist with this process.</p>
+<p>If you want clarification or wish to discuss the implementation please contact me on Discord (@Barryd) or at bcdaniel2@optusnet.com.au and I will attempt to address your issues. I welcome your feedback.</p>
+<h2 id="outline-of-install-process">Outline of install process<a class="headerlink" href="#outline-of-install-process" title="Permanent link">&para;</a></h2>
+<ol>
+<li>Acquire ESP32-CAM and MB/FTDI</li>
+<li>install Arduino IDE with the ESP32 libraries (includes a WiFi CAM example)</li>
+<li>Load the CAM with the WiFi example and test.</li>
+<li>Install the sensorCAM.ino software and configure.</li>
+<li>Test the basic sensorCAM functions to confirm functional install</li>
+<li>Load Processing 4 app. and sensorCAM.pde code</li>
+<li>Use the Processing 4 app to replace the Arduino Monitor.  Familiarise and test</li>
+<li>Create test sensors and test detection with moving targets</li>
+<li>Setup the CAM viewing the model railroad and test a virtual sensor with moving rolling stock.</li>
+<li>Optimise parameters for best performance.</li>
+<li>Connect CAM to an i2c interface (e.g. PCA9515A or better)</li>
+<li>Depending on system, integrate sensorCAM into Command Station using appropriate code.</li>
+</ol>
+<p>For a detailed 12 step guide refer to then <a href="../01-installation-guide/">Installation Guide</a>.</p>
 
 
 
@@ -6432,7 +6577,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="December 1, 2025 21:38:40 UTC">December 1, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="December 1, 2025 22:33:11 UTC">December 1, 2025</span>
   </span>
 
     
