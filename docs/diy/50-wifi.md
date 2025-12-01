@@ -15,8 +15,7 @@ You can find installation instructions here [WiFiShield8266 install](/diy/20-meg
 ## Other shields
 ![wangtongze](/_static/images/wifi/wangtongze_jumpered.png){ align=right }
 
-Most other Arduino ESP8266 Wi-Fi shields, including the dodgy ones with "Shiald" and "Arbuino" spelling mistakes, will work well with a DCC-EX command station but must be modified slightly to bypass the useless design based on UNOs with one user and no USB connection. They are frequently shipped with firmware versions that do not work well with DCC-EX (latest is not always
-best!) and it's non-trivial to rectify this.
+Most other Arduino ESP8266 Wi-Fi shields, including the dodgy ones with "Shiald" and "Arbuino" spelling mistakes, will work well with a DCC-EX command station but must be modified slightly to bypass the useless design based on UNOs with one user and no USB connection. They are frequently shipped with firmware versions that do not work well with DCC-EX (latest is not always best!) and it's non-trivial to rectify this.
 
 In addition, the shield size overlaps the standard Arduino motor-shield terminal blocks which is a pain if you failed to follow the Command Station build suggestions at the time.
 
