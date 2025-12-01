@@ -173,3 +173,11 @@ Driven by a shortage of I2C connected I/O expansion devices, EX-IOExpander allow
 However, this does mean you will need to understand I2C connectivity and will likely need some more complex assembly and/or soldering to use this on your layout.
 
 Refer to the [EX-IOExpander documentation](/products/ex-ioexpander/00-ex-ioexpander.md) for more information.
+
+---
+
+### EX-SensorCAM
+
+Provides up to 80 sensors for your layout using an ESP32 based camera solution.
+
+Refer to the [EX-SensorCAM documentation](/products/ex-sensorcam/00-ex-sensorcam.md) for more information.
