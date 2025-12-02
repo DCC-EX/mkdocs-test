@@ -7,7 +7,7 @@ The standard Ethernet shields must be first in the stack as they use pins that a
 ## Arduino Network Shield 2
 
 ![Arduino Shield](/_static/images/ethernet/arduino_ethernet_shield_2.png){ align=right }
-There have been different revisions for the Arduino Network Shields, the main difference is the version of the WiFi chip on the board. The “2” board uses the Wiznet W5500, other versions used the older W5100 chip. The only supported chip currently is the W5500, but the other boards may work as well. The W5500 can handle 8 simultaneous socket connections while the W5100 can only handle 4.
+There have been different revisions for the Arduino Network Shields, the main difference is the version of the Wiznet chip on the board. The “2” board uses the Wiznet W5500, other versions used the older W5100 chip. The only supported chip currently is the W5500, but the other boards may work as well. The W5500 can handle 8 simultaneous socket connections while the W5100 can only handle 4.
 
 This board also has an SDCard capability but it can't be used in the  EX‑CommandStation due to timing limitations.
 
