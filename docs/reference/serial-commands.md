@@ -47,6 +47,14 @@ Complete reference guide for serial commands used with DCC command stations.
 | `<f loco byte1>` | Set loco function group | `loco`: ID, `byte1`: Function byte | ⚠️ Deprecated |
 | `<f loco group byte2>` | Set loco function group | `loco`: ID, `group`: Group ID, `byte2`: Function byte | ⚠️ Deprecated |
 
+## Consist Control
+
+| Command | Description | Parameters | Status |
+|---------|-------------|------------|--------|
+| `<^>` | Show all consists |   | Active |
+| `<^ loco1 loco2 ... >` | Create Consist | `loco`: ID, negative for reversed loco | Active |
+| `<^ loco1>` | Deletes consist | `loco1`: ID | Active |
+
 ## Turnout Control
 
 | Command | Description | Parameters |
