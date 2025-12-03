@@ -1,13 +1,13 @@
 # EX-SensorCAM
 
-Video Based Multi Channel Position Sensing Camera.
+EX-SensorCAM is a video based multi-channel position sensing camera.
 
 ## Introduction
 
-This single camera is capable of replacing up to 80 detectors/sensors on a model railroad along with their extensive wiring.
-As it is a cheap device, on large railroads, several cameras can be used for adequate coverage.
-It can detect, and be used to control, train movements without any trackside sensors at all.
-Used in conjunction with an i2c bus to a DCC-EX Command Station, the options through X-RAIL automation seem unlimited.
+This single camera is capable of replacing up to 80 detectors/sensors on a model railroad along with their extensive wiring. As it is a cheap device, on large railroads, several cameras can be used for adequate coverage. It can detect, and be used to control, train movements without any trackside sensors at all.
+
+Used in conjunction with an I2C bus to a DCC-EX Command Station, the options through X-RAIL automation seem unlimited.
+
 It does not include loco or rolling stock identification.
 
 ## Hardware
