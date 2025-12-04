@@ -147,6 +147,16 @@ see WITHROTTLE
 - msg  Quoted message
 
 ```cpp
+BUILD_CONSIST(loco_id)
+```
+
+
+```cpp
+BREAK_CONSIST
+```
+
+
+```cpp
 CALL(sequence_id)
 ```
 
