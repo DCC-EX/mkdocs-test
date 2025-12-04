@@ -27,7 +27,7 @@ It also has 3Mb of available program storage, EPROM memory for parameters, and 3
 
 ## Software requirements
 
-The Arduino IDE is recommended for the sensorCAM and, if used, the connected EX-Command Station DCC-EX-CS software with EX-RAIL.
+The Arduino IDE is recommended for the sensorCAM and, if used, the connected EX-Command Station DCC-EX-CS software (5.4.16+) with EX-RAIL.
 The ESP32-CAM has an Arduino library of software that is needed to enable the camera image manipulation and the WiFi imaging of the railroad.
 In addition, the Processing 4 application is highly desired to enable railroad images to be captured and sensor positions to be located and seen, as the Arduino IDE cannot give visual feedback.
 
@@ -36,7 +36,7 @@ You can download it from [the website](https://processing.org/)
 The webserver WiFi images are not a substitute for the Processing 4 utility, as sensorCAM cannot "sense" in webserver mode.
 Specific SensorCAM files are provided for each of the above apps.
 
-NOTE: For enhanced versions, rather than "main/master" branch, use a recent "devel" version of Command Station (5.2.88+) and "devel" branch of sensorCAM (3.10+)
+NOTE: For enhanced versions, rather than "main/master" branch, use a recent "devel" version of Command Station (5.5.40+) and "devel" branch of sensorCAM (3.20+)
 
 ## Documentation
 
