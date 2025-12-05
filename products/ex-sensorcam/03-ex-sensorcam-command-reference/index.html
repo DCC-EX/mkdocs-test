@@ -6512,74 +6512,74 @@
 
 <h1 id="native-ex-sensorcam-command-list">Native EX-SensorCAM Command List<a class="headerlink" href="#native-ex-sensorcam-command-list" title="Permanent link">&para;</a></h1>
 <h2 id="conventions-used-on-this-page">Conventions used on this page<a class="headerlink" href="#conventions-used-on-this-page" title="Permanent link">&para;</a></h2>
-<p><code>, space</code>   Equivalent parameter separators.  CS must use space character
-<code>%%</code>&nbsp; &nbsp; &nbsp; &nbsp; Represents a Sensor's bank/sensor two digit identifier (digits 0-7 only)
-<code>rr  xx</code> Represent the row and column position of sensor (range 1-236 &amp; 316 only)
-<code>#</code>&nbsp; &nbsp;  &nbsp; Represents a single decimal digit (0-9)
-<code>$</code>&nbsp; &nbsp;  &nbsp; Represents a single alpha-numeric character (A-Z or 0-9 as relevant to command)
-<code>[ ]</code> Indicates enclosed parameter is optional.  Do NOT type brackets into commands
-<code>&lt; &gt;</code> Encloses native CS command and MUST be typed to define CS command</p>
+<p><code>, space</code>   Equivalent parameter separators.  CS must use space character<br />
+<code>%%</code> &nbsp; &nbsp; &nbsp; Represents a Sensor's bank/sensor two digit identifier (digits 0-7 only)<br />
+<code>rr xx</code>&nbsp; Represent the row and column position of sensor (range 1-236 &amp; 316 only)<br />
+<code>#</code> &nbsp; &nbsp; &nbsp; &nbsp; Represents a single decimal digit (0-9)<br />
+<code>$</code> &nbsp; &nbsp; &nbsp; &nbsp; Represents a single alpha-numeric character (A-Z or 0-9 as relevant to command)<br />
+<code>[ ]</code> &nbsp;  &nbsp; Indicates enclosed parameter is optional.  Do NOT type brackets into commands<br />
+<code>&lt; &gt;</code> &nbsp;  &nbsp; Encloses native CS command and MUST be typed to define CS command  </p>
 <h2 id="native-cam-usb-cs-cmd-formats">Native cam USB &amp; CS cmd formats<a class="headerlink" href="#native-cam-usb-cs-cmd-formats" title="Permanent link">&para;</a></h2>
-<p>a%%[,rr,xx] <code>&lt;Na %%[ rr xx]&gt;</code> <strong>enAble Sensor and refresh reference</strong>
+<p>a%%[,rr,xx] <code>&lt;Na %%[ rr xx]&gt;</code> <strong>enAble Sensor and refresh reference</strong><br />
  &nbsp; &nbsp; &nbsp; &nbsp; <em>Response:</em> Sensor will respond to changing image. rr,xx set as new coordinates  </p>
-<p>b#[,$] &nbsp; <code>&lt;Nb #&gt;</code> <strong>Bank occupancy status [&amp; Brightness S/F]</strong>
+<p>b#[,$] &nbsp; <code>&lt;Nb #&gt;</code> <strong>Bank occupancy status [&amp; Brightness S/F]</strong><br />
  &nbsp; &nbsp; &nbsp; &nbsp; <em>Response:</em> Trip status of 8 sensors in a single byte (8 bits) (hex &amp; binary)</p>
-<p>c$$$$ <code>&lt; n/a &gt;</code> <strong>Camera re-Calibration and re-reference Sensors</strong>
+<p>c$$$$ &nbsp; <code>&lt;n/a&gt;</code> <strong>Camera re-Calibration and re-reference Sensors</strong><br />
  &nbsp; &nbsp; &nbsp; &nbsp; <em>Response:</em> Severe changes to camera settings.  Refer to manuals before use!  </p>
-<p>d%%[#] <code>&lt; n/a &gt;</code> <strong>Difference Score for Sensor [# repeats]</strong>
+<p>d%%[#] <code>&lt;n/a&gt;</code> <strong>Difference Score for Sensor [# repeats]</strong><br />
  &nbsp; &nbsp; &nbsp; &nbsp; <em>Response:</em> Prints colour diff score, brightness score and sum of both</p>
-<p>e &nbsp; &nbsp; &nbsp; &nbsp; <code>&lt;Ne&gt;</code>&nbsp; &nbsp; &nbsp; <strong>EPROM - save sensorCAM config. to EPROM</strong>
+<p>e &nbsp; &nbsp; &nbsp; &nbsp; <code>&lt;Ne&gt;</code>&nbsp; &nbsp; &nbsp; <strong>EPROM - save sensorCAM config. to EPROM</strong><br />
  &nbsp; &nbsp; &nbsp; &nbsp; <em>Response:</em>: Records parameters in EPROM to be restored upon next Reset</p>
-<p>f%% &nbsp; <code>&lt;Nf %%&gt;</code>  <strong>Frame print. Full 16x3 byte pixel values</strong>
+<p>f%% &nbsp; <code>&lt;Nf %%&gt;</code>  <strong>Frame print. Full 16x3 byte pixel values</strong><br />
  &nbsp; &nbsp; &nbsp; &nbsp; <em>Response:</em> Tabulates 4x4 (RGB) pixels for current and reference sensor images</p>
-<p>g &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; <code>&lt;Ng&gt;</code> <strong>Get Camera Global Config. Status (to USB)</strong>
+<p>g &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; <code>&lt;Ng&gt;</code> &nbsp; <strong>Get Camera Global Config. Status (to USB)</strong><br />
  &nbsp; &nbsp; &nbsp; &nbsp; <em>Response:</em> Lists 14 different parameters of the ov2640 "Calibration" settings</p>
-<p>h$[,#] &nbsp; <code>&lt;Nh $ #&gt;</code> <strong>Help cmd.(debug for devel)</strong>
+<p>h$[,#] <code>&lt;Nh $ #&gt;</code> <strong>Help cmd.(debug for devel)</strong><br />
  &nbsp; &nbsp; &nbsp; &nbsp; <em>Response:</em> Debug. h alone lists options. h7,# pauses scroll if bank # trips</p>
-<p>i%%[,$$ ] <code>&lt;Ni %%[ $$]&gt;</code> <strong>Info. on Sensor state and configuration</strong>
+<p>i%%[,$$ ] <code>&lt;Ni %%[ $$]&gt;</code> <strong>Info. on Sensor state and configuration</strong><br />
  &nbsp; &nbsp; &nbsp; &nbsp; <em>Response:</em> prints sensor state and full definition.  Can add a "twin" sensor S$$</p>
-<p>j$,#  &nbsp; &nbsp; &nbsp; <code>&lt;Nj $ #&gt;</code> <strong>adJust ov2640 global parameters &amp; list <Ng></strong>
+<p>j$,# &nbsp; &nbsp; <code>&lt;Nj $ #&gt;</code> <strong>adJust ov2640 global parameters &amp; list <Ng></strong><br />
  &nbsp; &nbsp; &nbsp; &nbsp; <em>Response:</em> Sets a single parameter($) for ov2640. j alone lists options for $</p>
-<p>k%%,rr,xx <code>&lt; n/a &gt;</code> <strong>locate a basic sensor at row rr, column xx</strong>
+<p>k%%,rr,xx<code>&lt;n/a&gt;</code> <strong>locate a basic sensor at row rr, column xx</strong><br />
  &nbsp; &nbsp; &nbsp; &nbsp; <em>Response:</em> Defines sensor at rr,xx but DOES NOT enable or reference/refresh it</p>
-<p>l%% &nbsp; &nbsp; &nbsp; &nbsp; <code>&lt;Nl %%&gt;</code> <strong>(Lima) Latch sensor on (occupied=1)</strong>
+<p>l%% &nbsp; &nbsp; &nbsp; <code>&lt;Nl %%&gt;</code> <strong>(Lima) Latch sensor on (occupied=1)</strong><br />
  &nbsp; &nbsp; &nbsp; &nbsp; <em>Response:</em> Sensor latched at 1 until cleared by zerO command or enAble command</p>
-<p>m$[,%%] &nbsp;<code>&lt;Nm $[ %%]&gt;</code> <strong>Min2trip frames setting [MaxSensor setting]</strong> 
+<p>m$[,%%] &nbsp;<code>&lt;Nm $[ %%]&gt;</code> <strong>Min2trip frames setting [MaxSensor setting]</strong> <br />
  &nbsp; &nbsp; &nbsp; &nbsp; <em>Response:</em> Sets min/max parameters.  m0,%% leaves min2trip unchanged</p>
-<p>n$[,%%] &nbsp;<code>&lt;Nn $[ %%]&gt;</code> <strong>Number for bank trip LED indicator. [minSensor]</strong>
+<p>n$[,%%] &nbsp;<code>&lt;Nn $[ %%]&gt;</code> <strong>Number for bank trip LED indicator. [minSensor]</strong><br />
  &nbsp; &nbsp; &nbsp; &nbsp; <em>Response:</em> Sets programmable LED to indicates when bank Number $ is tripped</p>
-<p>o%% &nbsp; &nbsp; &nbsp; <code>&lt;No %%&gt;</code> <strong>(Oscar) turn sensor Off (un-occupied=0)</strong>
+<p>o%% &nbsp; &nbsp; <code>&lt;No %%&gt;</code> <strong>(Oscar) turn sensor Off (un-occupied=0)</strong><br />
  &nbsp; &nbsp; &nbsp; &nbsp; <em>Response:</em> Sensor disabled, set 0 until Latched on, or enabled using a%% or r%%</p>
-<p>p# &nbsp; &nbsp; &nbsp; <code>&lt;Np #&gt;</code> <strong>Position table for a bank of sensors</strong>
+<p>p# &nbsp; &nbsp; &nbsp; <code>&lt;Np #&gt;</code> <strong>Position table for a bank of sensors</strong><br />
  &nbsp; &nbsp; &nbsp; &nbsp; <em>Response:</em> Prints positions for enAbled sensors of bank #. &nbsp; p%% also similar</p>
-<p>q# &nbsp; &nbsp; &nbsp; <code>&lt;Nq #&gt;</code> <strong>Query enAbled state of sensors in bank</strong>
+<p>q# &nbsp; &nbsp; &nbsp; <code>&lt;Nq #&gt;</code> <strong>Query enAbled state of sensors in bank</strong><br />
  &nbsp; &nbsp; &nbsp; &nbsp; <em>Response:</em> Prints enabled state of all 8 sensors (1/0).  Use q9 for ALL banks</p>
-<p>r%%[,0] &nbsp;<code>&lt;Nr %%[ 0]&gt;</code> <strong>Refresh reference image for sensor</strong>
+<p>r%% &nbsp; &nbsp; <code>&lt;Nr %%&gt;</code> <strong>Refresh reference image for sensor</strong><br />
  &nbsp; &nbsp; &nbsp; &nbsp; *<em>Response:</em> enAbles sensor and captures a new reference image.  Use r00 for ALL</p>
-<p>s%% &nbsp; &nbsp; &nbsp; <code>&lt; n/a &gt;</code> <strong>Scan video to define a new Sensor position (deprocate?)</strong>
+<p>s%% &nbsp; &nbsp; &nbsp; <code>&lt;n/a&gt;</code> <strong>Scan video to define a new Sensor position (deprocate?)</strong><br />
  &nbsp; &nbsp; &nbsp; &nbsp; <em>Response:</em> Scan for brightest spot and position sensor there. (superseeded)</p>
-<p>t##[,%%] <code>&lt;Nt ##[ %%]&gt;</code> <strong>Theshold setting (33-99) global [pvtThreshold for S%%]</strong>
- &nbsp; &nbsp; &nbsp; &nbsp; <em>Response:</em> Sets new threshold, global [ pvtThreshold] (t99 lists pvtThresholds)
+<p>t##[,%%] <code>&lt;Nt ##[ %%]&gt;</code> <strong>Theshold setting (33-99) global [pvtThreshold for S%%]</strong><br />
+ &nbsp; &nbsp; &nbsp; &nbsp; <em>Response:</em> Sets new threshold, global [ pvtThreshold] (t99 lists pvtThresholds)<br />
  &nbsp; &nbsp; &nbsp; &nbsp; For ## of (2-30), print ## rows of scroll data.  t1 toggles scroll</p>
-<p>t1,%% &nbsp; &nbsp; <code>&lt;Nt 1 %%&gt;</code> <strong>Trash pvtThresholds for S%% bank</strong>  <br />
+<p>t1,%% <code>&lt;Nt 1 %%&gt;</code> <strong>Trash pvtThresholds for S%% bank</strong><br />
  &nbsp; &nbsp; &nbsp; &nbsp; <em>Response:</em> clears 1 bank of 8 pvtThresholds.  t1,99 clears ALL banks </p>
-<p>u%% &nbsp; &nbsp; <code>&lt;Nu %%&gt;</code> &nbsp;<strong>Un-define Sensor</strong>
+<p>u%% &nbsp; <code>&lt;Nu %%&gt;</code> <strong>Un-define Sensor</strong><br />
  &nbsp; &nbsp; &nbsp; &nbsp; <em>Response:</em> Resets sensor coordinates to 0,0</p>
-<p>v[#] &nbsp; &nbsp; <code>&lt;Nv %%&gt;</code> <strong>Version [or Video wifi SSID #]</strong>
+<p>v[#]&nbsp; &nbsp; <code>&lt;Nv %%&gt;</code> <strong>Version [or Video wifi SSID #]</strong><br />
  &nbsp; &nbsp; &nbsp; &nbsp; <em>Response:</em> Displays EX-SensorCAM version info OR v# starts preset SSID wifi link</p>
-<p>w &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<code>&lt;Nw&gt;</code> &nbsp; &nbsp; <strong>Wait for command</strong>
+<p>w&nbsp; &nbsp; &nbsp; &nbsp; <code>&lt;Nw&gt;</code> &nbsp; &nbsp; <strong>Wait for command</strong><br />
  &nbsp; &nbsp; &nbsp; &nbsp; <em>Response:</em> Cam suspends image capture and scrolling and waits for a CR</p>
-<p>x y z &nbsp; <code>&lt; n/a &gt;</code> <strong>Reserved commands for image transfer management</strong>
+<p>x y z &nbsp; <code>&lt;n/a&gt;</code> <strong>Reserved commands for image transfer management</strong><br />
  &nbsp; &nbsp; &nbsp; &nbsp; <em>Response:</em> Sends binary data to USB port for Processing4 (X Y Z) image delivery</p>
-<p>n/a &nbsp; &nbsp; &nbsp; &nbsp;<code>&lt;N&gt;</code> &nbsp; <strong>Current CAM selection and availability (CS only)</strong>
+<p>n/a &nbsp; &nbsp; &nbsp; &nbsp;<code>&lt;N&gt;</code> &nbsp; <strong>Current CAM selection and availability (CS only)</strong><br />
  &nbsp; &nbsp; &nbsp; &nbsp; <em>Response:</em> Shows the currently selected CAM and the options available </p>
-<p>n/a &nbsp; &nbsp; <code>&lt;NC ###&gt;</code> <strong>CAM selection</strong>
+<p>n/a <code>&lt;NC ###&gt;</code> <strong>CAM selection</strong><br />
  &nbsp; &nbsp; &nbsp; &nbsp; <em>Response:</em> Switches commands to the CAM at vpin ### or CAM number (1-4)</p>
-<p>n/a &nbsp; &nbsp; <code>&lt;NQ&gt;</code> <strong>Query state of all Sensors</strong>
+<p>n/a &nbsp; &nbsp; <code>&lt;NQ&gt;</code> <strong>Query state of all Sensors</strong><br />
  &nbsp; &nbsp; &nbsp; &nbsp; <em>Response:</em> Tabulation of all sensor tripped states in banks of 8</p>
-<p>F &nbsp; &nbsp; &nbsp; &nbsp; <code>&lt;NF&gt;</code> <strong>Forces immediate CAM reset</strong>
+<p>F &nbsp; &nbsp; &nbsp; &nbsp; <code>&lt;NF&gt;</code> <strong>Forces immediate CAM reset</strong><br />
  &nbsp; &nbsp; &nbsp; &nbsp; <em>Response:</em> Reset into EX-SensorCAM mode, exting any WiFi mode</p>
-<p>R &nbsp; &nbsp; &nbsp;<code>&lt;n/a&gt;</code> <strong>Reset EX-SensorCAM &nbsp; (CS <NR> gives equivalent of <Nr 00>)</strong>
+<p>R &nbsp; &nbsp; &nbsp; <code>&lt;n/a&gt;</code> <strong>Reset EX-SensorCAM &nbsp; (CS <NR> gives equivalent of <Nr 00>)</strong><br />
  &nbsp; &nbsp; &nbsp; &nbsp; <em>Response:</em> Reset into EX-SensorCAM mode, exting any WiFi mode </p>
 <p><strong>NOTE:  The EX-SensorCAM USB input will also accept most CS formatted commands.</strong></p>
 
@@ -6602,7 +6602,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="December 4, 2025 22:03:47 UTC">December 4, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="December 5, 2025 01:57:16 UTC">December 5, 2025</span>
   </span>
 
     
