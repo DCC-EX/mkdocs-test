@@ -2,9 +2,9 @@
 
 ## Conventions used on this page
 
-`, space`	Equivalent parameter separators.  CS must use space character
-`%%`&nbsp; &nbsp; &nbsp; &nbsp; Represents a Sensor's bank/sensor two digit identifier (digits 0-7 only)
-`rr  xx ` Represent the row and column position of sensor (range 1-236 & 316 only)
+`, space`	Equivalent parameter separators.  CS must use space character  
+`%%`&nbsp; &nbsp; &nbsp; &nbsp; Represents a Sensor's bank/sensor two digit identifier (digits 0-7 only)  
+`rr  xx ` Represent the row and column position of sensor (range 1-236 & 316 only)  
 `#`&nbsp; &nbsp;  &nbsp; Represents a single decimal digit (0-9)
 `$`&nbsp; &nbsp;  &nbsp; Represents a single alpha-numeric character (A-Z or 0-9 as relevant to command)
 `[ ]` Indicates enclosed parameter is optional.  Do NOT type brackets into commands
