@@ -63,22 +63,20 @@ Note: With the MB board there is a push button (IO0) that replaces the FTDI prog
 
 **Step4. Install the sensorCAM**
 
-- 1. For v5.4.xx, Download the software zip to your PC from <https://github.com/DCC-EX/EX-SensorCAM>
-
-For a "devel" version, rather than "main", select the later "devel" software (for CS v5.5.15 or higher)
-
-- 1. Right click the zip and click Extract all. Browse to your Arduino sketches folder e.g. _Documents/Arduino_
-  - Click Extract, creating new folder e.g. _Documents/Arduino/EX-SensorCAM-main_
-  - Rename _EX-SensorCAM-main_ to _sensorCAM_
-
-The essential files for now are shown below. Other files may be used in later install steps.
+ &nbsp; 4.1 &nbsp; For v5.4.xx, Download the software zip to your PC from <https://github.com/DCC-EX/EX-SensorCAM>  
+ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; For a "devel" version, rather than "main", select the later "devel" software (for CS v5.5.15 or higher)  
+ &nbsp; 4.2 &nbsp;  Right click the zip and click Extract all. Browse to your Arduino sketches folder e.g. _Documents/Arduino_  
+ &nbsp; 4.3 &nbsp;  Click Extract, creating new folder e.g. _Documents/Arduino/EX-SensorCAM-main_  
+ &nbsp; 4.4 &nbsp;  Rename *EX-SensorCAM-main* to *sensorCAM*
+The essential files for now are shown below. Other files may be used in later install steps.  
 
 ![Edit configCAM.h](/_static/images/ex-sensorcam/edit-configcam.png)
 
-- 1. Using the _configCAM.example.h_ as a guide, create and edit a _configCAM.h_ to reflect your WiFi network name and password. Then with the correct com port and board selected, compile the _sensorCAM.ino_ sketch. If all is well, load it into the CAM (replacing the ESP32 WiFi example)
+ &nbsp; 4.5 &nbsp;  Using the _configCAM.example.h_ as a guide, create and edit a _configCAM.h_ to reflect your WiFi network name and password.  
+  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Then with the correct com port and board selected, compile the _sensorCAM.ino_ sketch.  
+  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; If all is well, load it into the CAM (replacing the ESP32 WiFi example)
 
-**Note:** It may be necessary to use the MB IO0 button (or GPIO0 link) to get the CAM into upload mode.
-
+**Note:** It may be necessary to use the MB IO0 button (or GPIO0 link) to get the CAM into upload mode.  
 **(refer back to video and/or Appendix below)**
 
 ![Edit configCAM.h 2](/_static/images/ex-sensorcam/edit-configcam-2.png)
@@ -95,7 +93,7 @@ After about 15 seconds you can enter the '**w**' (wait) command into the monitor
 
 ![Test sensorCAM 1](/_static/images/ex-sensorcam/test-sensorcam-1.png)
 
-At this time a NEW CAM will have NO sensors set and is a clean slate needing meaningful configuration data. There may be a default sensor(S00) mid field (120,160). If all is well, this would be a good time to familiarize oneself with some commands starting with **k10,50,80** to DEFINE your first sensor, followed by **i10** to read info. on the new sensor S10 coordinates (50,80). Try **a10** to enable sensor 10, quickly followed by **w** to "wait" scrolling of new sensor values. '**t1**' can be used to toggle ON/OFF the scrolling status data.
+At this time a NEW CAM will have NO sensors set and is a clean slate needing meaningful configuration data. There may be a default sensor(S00) mid field (120,160). If all is well, this would be a good time to familiarize oneself with some commands starting with **k10,50,80** to DEFINE your first sensor, followed by **i10** to read info. on the new sensor S10 coordinates (50,80). Try **a10** to enable sensor 10, quickly followed by **w** to "wait" scrolling of new sensor values. **t1** can be used to toggle ON/OFF the scrolling status data.
 
 ![Test Sensor A10](/_static/images/ex-sensorcam/test-sensor-a10.png)
 
@@ -117,25 +115,19 @@ Note: There are other (easier) ways to position new sensors. The coordinate meth
 
 The Arduino monitor is not "visual". The Processing 4 software enables one to see what the CAM sees and permits one to place sensors visually. Close down the Arduino IDE to free up the sensorCAM USB com port.
 
-Download the "processing-4.3-windows-r64.zip" file from <https://processing.org>
-
-Highlight the zip file and "Extract all" files to a suitable Destination directory (process4 say)
-
-Locate and make a shortcut to the processing-4.3/processing.exe file on the desktop.
-
-Make a sensorCAM folder in process4 & Copy the _sensorCAM.pde_ file into a _process4/sensorCAM_ directory
-
-Click the shortcut thereby opening Processing4
-
-Click the GetStarted box on the Welcome window
-
-Click file-open, select _sensorCAM.pde_ and open.
+- Download the "processing-4.3-windows-r64.zip" file from <https://processing.org>
+- Highlight the zip file and "Extract all" files to a suitable Destination directory (process4 say)
+- Locate and make a shortcut to the processing-4.3/processing.exe file on the desktop.
+- Make a sensorCAM folder in process4 & Copy the _sensorCAM.pde_ file into a _process4/sensorCAM_ directory.
+- Click the shortcut thereby opening Processing4
+- Click the GetStarted box on the Welcome window
+- Click file-open, select _sensorCAM.pde_ and open.
 
 ![Processing Welcome](/_static/images/ex-sensorcam/processing-welcome.png)
 
 ![Processing Open sensorCAM](/_static/images/ex-sensorcam/processing-open-sensorcam.png)
 
-Click the (left) circular run button to produce the test pattern shown below
+- Click the (left) circular run button to produce the test pattern shown below
 
 ![Processing Run](/_static/images/ex-sensorcam/processing-run.png)
 
@@ -143,11 +135,11 @@ Click the (left) circular run button to produce the test pattern shown below
 
 **N.B. You may need to edit** _int comNo=1;_ if this is an inappropriate port. (see note below)
 
-Reposition and resize the Console window and test pattern to look like that below, wide enough to avoid line wrap-around. The Cmd: line space will be the text entry line to be used for the CAM commands previously used with Arduino monitor. The broad black Console space replaces the sensorCAM monitor display and the test pattern window is for image display and sensor positioning.
+- Reposition and resize the Console window and test pattern to look like that below, wide enough to avoid line wrap-around. The Cmd: line space will be the text entry line to be used for the CAM commands previously used with Arduino monitor. The broad black Console space replaces the sensorCAM monitor display and the test pattern window is for image display and sensor positioning.
 
-Note the first lines of Console output. Choosing the first \[0\] COM port is the default. Should you have 2 (or more) COM ports listed, you may have to edit line 15: **_int comNo=0;_** to reflect your port the sensorCAM is attached to in the list (e.g. \[1\] as in image below). (Mac's typically show the port as /dev/cu.usbserial-xx)
+**Note** the first lines of Console output. Choosing the first \[0\] COM port is the default. Should you have 2 (or more) COM ports listed, you may have to edit line 15: **_int comNo=0;_** to reflect your port the sensorCAM is attached to in the list (e.g. \[1\] as in image below). (Mac's typically show the port as /dev/cu.usbserial-xx)
 
-If the sensorCAM reboots and runs, enter cmd: **w Enter** or **ver Enter** which will suspend any scrolling and print the sensorCAM version. Use the scroll bar to view the top/bottom of the Console window. Note that you may have to click the mouse cursor on the Cmd: window before typing commands.
+- If the sensorCAM reboots and runs, enter cmd: **w Enter** or **ver Enter** which will suspend any scrolling and print the sensorCAM version. Use the scroll bar to view the top/bottom of the Console window. Note that you may have to click the mouse cursor on the Cmd: window before typing commands.
 
 **Note** the dark blue round icon on the taskbar will bring the image to the front should it vanish behind the Console window. The white round button to the right of "Run" will "Stop" the **sensorCAM.pde** program.
 
@@ -161,11 +153,11 @@ Optionally, the file Users/\[Barry\]/AppData/Roaming/Processing/preferences.txt 
 
 **Step 7. Use the Processing 4 App to replace the Arduino monitor.**
 
-The processing app. can communicate the same commands to the sensorCAM as used in Step 5 above.
+- The processing app. can communicate the same commands to the sensorCAM as used in Step 5 above.
 
-Proceed to verify the sensorCAM commands are generally working as before with Arduino IDE.
+- Proceed to verify the sensorCAM commands are generally working as before with Arduino IDE.
 
-New commands can now be explored to see still images from the CAM and to see location of defined sensors as small squares. Enter the command '**Y**' at the Cmd: line and wait 15 seconds for a full image to appear. Remember the sensors after rebooting will be those last stored in EPROM, not last defined.
+- New commands can now be explored to see still images from the CAM and to see location of defined sensors as small squares. Enter the command '**Y**' at the Cmd: line and wait 15 seconds for a full image to appear. Remember the sensors after rebooting will be those last stored in EPROM, not last defined.
 
 To explore the imaging functions (W, X, Y, Z) in depth refer to the sensorCAM manual Chapter 6.
 
@@ -203,7 +195,7 @@ The CAM can be connected to a "Control Station" via i2c using appropriate host c
 
 If you are wanting to integrate with a CS, we assume you have installed EX-CS previously. If not, refer to the DCC-EX website for details. The following guide assumes you have a working v5.4.x CS in place.
 
-**12.1** The EX-SensorCAM repository has an EX-CS directory. These files normally reside with the _CommandStation-EX.ino_ beside the other standard CS files. They are a guide to what is needed in the existing files in the _CommandStation-EX._ino directory. The user generally needs to EDIT existing files rather than copy these. The **_CamParser.cpp_** and **_IO_EXSensorCAM.h_** drivers already included in CS v5.4.x should be adequate for a "Production/master" CS installation, so do NOT copy these files from folder EX-CS unless they represent a known recommended upgrade to the integrated functions. It is advisable to make backups of any file you do need to edit in installing sensorCAM (12.2-12.5 below).
+**12.1** The EX-SensorCAM repository has an EX-CS directory. These files normally reside with the _CommandStation-EX.ino_ beside the other standard CS files. They are a guide to what is needed in the existing files in the _CommandStation-EX._ino directory. The user generally needs to EDIT existing files rather than copy these. The **_CamParser.cpp_** and **_IO_EXSensorCAM.h_** drivers already included in CS v5.4.16+ should be adequate for a "Production/master" CS installation, so do NOT copy these files from folder EX-CS unless they represent a known recommended upgrade to the integrated functions. It is advisable to make backups of any file you do need to edit in installing sensorCAM (12.2-12.5 below).
 
 ![Driver Files](/_static/images/ex-sensorcam/driver-files.png)
 
@@ -241,7 +233,8 @@ With CAM flashing, try &lt;N m&gt;, &lt;N i 11&gt; and &lt;N t 46&gt; to confirm
 
 ![Confirm Functionality](/_static/images/ex-sensorcam/confirm-functionality.png)
 
-**12.8 Powering up the CS and CAM(s) can be problematical. The bootup interactions are affected by the following: a) ALL devices on an i2c bus should be powered for i2c communications to be reliable.**
+**12.8** Powering up the CS and CAM(s) can be problematical. The bootup interactions are affected by the following:  
+**a) ALL devices on an i2c bus should be powered for i2c communications to be reliable.**
 
 **b) Full sensorCAM boot-up calls MyWire.begin() which FAILS if a) is incomplete.**
 
