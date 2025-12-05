@@ -3,12 +3,12 @@
 ## Conventions used on this page
 
 `, space`	Equivalent parameter separators.  CS must use space character  
-`%%`&nbsp; &nbsp; &nbsp; &nbsp; Represents a Sensor's bank/sensor two digit identifier (digits 0-7 only)  
-`rr xx` Represent the row and column position of sensor (range 1-236 & 316 only)  
-`#` &nbsp; &nbsp; &nbsp;  &nbsp; Represents a single decimal digit (0-9)  
-`$` &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Represents a single alpha-numeric character (A-Z or 0-9 as relevant to command)  
-`[ ]` &nbsp; Indicates enclosed parameter is optional.  Do NOT type brackets into commands  
-`< >` &nbsp; Encloses native CS command and MUST be typed to define CS command  
+`%%` &nbsp; &nbsp; &nbsp; Represents a Sensor's bank/sensor two digit identifier (digits 0-7 only)  
+`rr xx`&nbsp; Represent the row and column position of sensor (range 1-236 & 316 only)  
+`#` &nbsp; &nbsp; &nbsp; &nbsp; Represents a single decimal digit (0-9)  
+`$` &nbsp; &nbsp; &nbsp; &nbsp; Represents a single alpha-numeric character (A-Z or 0-9 as relevant to command)  
+`[ ]` &nbsp;  &nbsp; Indicates enclosed parameter is optional.  Do NOT type brackets into commands  
+`< >` &nbsp;  &nbsp; Encloses native CS command and MUST be typed to define CS command  
 
 ## Native cam USB & CS cmd formats
 
@@ -18,10 +18,10 @@ a%%[,rr,xx] `<Na %%[ rr xx]>` **enAble Sensor and refresh reference**
 b#[,$] &nbsp; `<Nb #>` **Bank occupancy status [& Brightness S/F]**  
  &nbsp; &nbsp; &nbsp; &nbsp; *Response:* Trip status of 8 sensors in a single byte (8 bits) (hex & binary)
 
-c$$$$ `< n/a >` **Camera re-Calibration and re-reference Sensors**  
+c$$$$ ` <n/a> ` **Camera re-Calibration and re-reference Sensors**  
  &nbsp; &nbsp; &nbsp; &nbsp; *Response:* Severe changes to camera settings.  Refer to manuals before use!  
 
-d%%[#] `< n/a >` **Difference Score for Sensor [# repeats]**  
+d%%[#] `<n/a>` **Difference Score for Sensor [# repeats]**  
  &nbsp; &nbsp; &nbsp; &nbsp; *Response:* Prints colour diff score, brightness score and sum of both
 
 e &nbsp; &nbsp; &nbsp; &nbsp; `<Ne>`&nbsp; &nbsp; &nbsp; **EPROM - save sensorCAM config. to EPROM**  
