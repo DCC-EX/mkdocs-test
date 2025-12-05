@@ -97,7 +97,7 @@ n/a `<NC ###>`&nbsp; **CAM selection**
 n/a&nbsp; &nbsp; &nbsp; `<NQ>`&nbsp; &nbsp;**Query state of all Sensors**  
  &nbsp; &nbsp; &nbsp; &nbsp; *Response:* Tabulation of all sensor tripped states in banks of 8
 
-n/a &nbsp; &nbsp; &nbsp; `<NF>`&nbsp; &nbsp; **Forces immediate CAM reset**  
+F&nbsp; &nbsp; &nbsp; &nbsp; `<NF>`&nbsp; &nbsp; **Forces immediate CAM reset**  
  &nbsp; &nbsp; &nbsp; &nbsp; *Response:* Reset into EX-SensorCAM mode, exting any WiFi mode
 
 R &nbsp; &nbsp; &nbsp; &nbsp; `<n/a>`&nbsp; **Reset EX-SensorCAM &nbsp; (CS <NR> gives equivalent of <Nr 00>)**  
