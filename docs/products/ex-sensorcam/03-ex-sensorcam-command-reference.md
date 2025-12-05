@@ -94,10 +94,10 @@ n/a &nbsp; &nbsp; &nbsp; &nbsp;`<N>`&nbsp; &nbsp; **Current CAM selection and av
 n/a `<NC ###>`&nbsp; **CAM selection**  
  &nbsp; &nbsp; &nbsp; &nbsp; *Response:* Switches commands to the CAM at vpin ### or CAM number (1-4)
 
-n/a &nbsp; &nbsp; `<NQ>`&nbsp; **Query state of all Sensors**  
+n/a&nbsp; &nbsp; &nbsp; `<NQ>`&nbsp; &nbsp;**Query state of all Sensors**  
  &nbsp; &nbsp; &nbsp; &nbsp; *Response:* Tabulation of all sensor tripped states in banks of 8
 
-n/a &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; `<NF> &nbsp; **Forces immediate CAM reset**  
+n/a &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; `<NF>` &nbsp; **Forces immediate CAM reset**  
  &nbsp; &nbsp; &nbsp; &nbsp; *Response:* Reset into EX-SensorCAM mode, exting any WiFi mode
 
 R &nbsp; &nbsp; &nbsp; &nbsp; `<n/a>`&nbsp; **Reset EX-SensorCAM &nbsp; (CS <NR> gives equivalent of <Nr 00>)**  
