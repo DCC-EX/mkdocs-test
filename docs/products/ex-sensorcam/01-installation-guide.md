@@ -2,7 +2,7 @@
 
 EX-SensorCAM is an advanced concept foreign to most model railroaders and consequently deals with many unfamiliar issues. It also calls on multiple software applications to address them. The initial software setup for an inexperienced tinkerer is consequently involved and needing perseverance. The Arduino IDE, the ESP32 libraries, the Processing 4 App, the EX-Command Station and EXRAIL (if used) combine to create a unique system supporting the sensorCAM's own software. Any prior knowledge of these will vastly expedite the installation.
 
-**Outline:**
+### **Outline:**
 
 This installation process is divided into 12 steps outlined below. It is recommended that it be treated as a learning exercise and that testing of progress occur after each major step. For example, familiarization with Arduino IDE should be developed before moving to the ESP32 example, and then familiarize with the ESP32-CAM WiFi example before moving on to the sensorCAM loading.
 
@@ -29,13 +29,13 @@ The chapters of the full manual may be referred to where additional detail is so
 
 See [Drivers for the CH340](https://learn.sparkfun.com/tutorials/how-to-install-ch340-drivers/all) for detailed instructions.
 
-**Step 1. ESP-32 CAM**
+### **Step 1. ESP-32 CAM**
 
 To understand the animal, watch the video at [ESP32 CAM - 10 Dollar Camera for IoT Projects - YouTube](https://www.youtube.com/watch?v=visj0KE5VtY)
 
 Be aware that you need a USB adapter and the ESP32-CAM-MB is preferred as it avoids hazards associated with a "wired" FTDI power where errors can easily result in CAM destruction. Programming is also easier. Acquire a CAM from your favourite source. Also be prepared for defective product so a spare CAM may be worthwhile. I have had 2 faulty ov2640 modules. ESP32-CAM version 1.9 is preferred (has GND/Reset pin) Purchasing ESP32-CAM-MB as a pair (MB & CAM) is safest. Purchasing two pairs is insurance. Alternatively consider a new compatible ESP32-WROVER-CAM with simpler wiring (see Appendix & sensorCAMmanual)
 
-**Step 2. Install the Arduino IDE**
+### **Step 2. Install the Arduino IDE**
 
 If you are not already familiar with this IDE (Integrated Development Environment), rather than go into details that are already covered in great detail on the Arduino web page, just follow the instructions in the following link [Arduino IDE Guide](https://www.arduino.cc/en/Guide) and then return here.
 
@@ -47,7 +47,7 @@ If you are new to ESP32, the board manager for ESP32 must be loaded. This is exp
 
 OR follow the instructions on the [official Espressif guide](https://espressif-docs.readthedocs-hosted.com/projects/arduino-esp32/en/latest/installing.html#installing-using-arduino-ide). again selecting version 2.0.17 to install.
 
-**Step 3. Load and test the ESP32-CAM example**
+### **Step 3. Load and test the ESP32-CAM example**
 
 Select the tools - board manager and the AI thinker ESP32 CAM. Then run the example as per YouTube at **9:30 minutes** in. Run the ESP32 - camera - webserver example. Note: wifi uses 2.4GHz NOT a 5GHz wifi.
 
@@ -61,7 +61,7 @@ Note: With the MB board there is a push button (IO0) that replaces the FTDI prog
 
 ![Arduino IDE Open Example Sketch](/_static/images/ex-sensorcam/arduino-ide-example.png)
 
-**Step4. Install the sensorCAM**
+### **Step4. Install the sensorCAM**
 
  &nbsp; 4.1 &nbsp; For v5.4.xx, Download the software zip to your PC from <https://github.com/DCC-EX/EX-SensorCAM>  
  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; For a "devel" version, rather than "main", select the later "devel" software (for CS v5.5.15 or higher)  
@@ -85,7 +85,7 @@ The essential files for now are shown below. Other files may be used in later in
 
 ![Arduino IDE Upload Test](/_static/images/ex-sensorcam/arduino-ide-upload-test.png)
 
-**Step 5. Test the basic sensorCAM functions**
+### **Step 5. Test the basic sensorCAM functions**
 
 The sensorCAM has a suite of command codes with which you will need familiarity. Refer to the manual summary Appendix A or Chapter 5 (Configuration) for more detailed description. For now, open the Arduino monitor and the initialization procedure should scroll out. It requires that the monitor is set for "115200 baud" and "NewLine" (CR is unacceptable).
 
@@ -111,7 +111,7 @@ Note: There are other (easier) ways to position new sensors. The coordinate meth
 
 ![Test a i](/_static/images/ex-sensorcam/test-a-i.png)
 
-**Step 6. Load Processing 4**
+### **Step 6. Load Processing 4**
 
 The Arduino monitor is not "visual". The Processing 4 software enables one to see what the CAM sees and permits one to place sensors visually. Close down the Arduino IDE to free up the sensorCAM USB com port.
 
@@ -151,7 +151,7 @@ Optionally, the file Users/\[Barry\]/AppData/Roaming/Processing/preferences.txt 
 
 ![Processing Preferences](/_static/images/ex-sensorcam/processing-preferences.png)
 
-**Step 7. Use the Processing 4 App to replace the Arduino monitor.**
+### **Step 7. Use the Processing 4 App to replace the Arduino monitor.**
 
 - The processing app. can communicate the same commands to the sensorCAM as used in Step 5 above.
 
@@ -163,7 +163,7 @@ To explore the imaging functions (W, X, Y, Z) in depth refer to the sensorCAM ma
 
 ![Processing Image Capture](/_static/images/ex-sensorcam/processing-image-capture.png)
 
-**Step 8. Create test sensors and test detection with moving targets**
+### **Step 8. Create test sensors and test detection with moving targets**
 
 Create some test sensors using Processing 4 by typing Cmd: **a31** (no Enter!) and following with a click on the image previously obtained as above. The command line will be completed with the cursor coordinates. Follow up with an **Enter** to define a new sensor S31. Verify the new sensor with a '**p3**' command and SEE the new sensor with a new '**Y**' command. Later versions "box" the new sensor automatically.
 
@@ -175,21 +175,21 @@ It is advisable to define a "reference" sensor S00 that will NOT be obstructed. 
 
 (see Manual section 8.4). S00 is reserved and displayed separately at the left of the scrolling status table.
 
-**Step 9. Setup the CAM viewing a railroad and test a virtual sensor with moving rolling stock.**
+### **Step 9. Setup the CAM viewing a railroad and test a virtual sensor with moving rolling stock.**
 
 The CAM must be rigidly mounted, in a "convenient" location for testing at this stage. It may be limited by your cabling reach with USB control. Later, with buffered I2C and power, the sensorCAM may be able to be located more optimally.
 
 The Manual Chapter 5 covers many points of relevance to getting satisfactory detection. Review this chapter and test topics for clarification. Good familiarity leads to success. Initial tests should be with good contrast between track and rolling stock. Refine parameters later to handle more difficult targets.
 
-**Step 10. Optimise parameters for best performance.**
+### **Step 10. Optimise parameters for best performance.**
 
 Initially by trial & error users will learn the significance of parameters. This is an Alpha release and consequently the default settings may not be best. Refer sensorCAM manual Appendix B.
 
-**Step 11. Connect CAM to an i2c interface (e.g. PCA9515A or better)**
+### **Step 11. Connect CAM to an i2c interface (e.g. PCA9515A or better)**
 
 The quickest and simplest method is to fit a PCA9515A to the ESP32-CAM-MB. Refer to the manual Chapter 3, the pictures in the manual (Figure 7 and Appendix F). Level shifting (3.3V to 5V) for a Mega is the primary function of the PCA9515A. Adjust voltages if not 5V compliant (e.g. ESP32 Command Station). It has 10k pull-up resistors but extra may be needed. If distance is an issue, as the PCA9515A is limited to about 3metres, either an LTC4311A enhancer or a buffered i2c solution will be needed. The manual Ch. 7 & Appendix F describes the PCA9515A used, but the Sparkfun differential Endpoint is also recommended.
 
-**Step 12. Depending on system, integrate sensorCAM into Command Station using appropriate code.**
+### **Step 12. Depending on system, integrate sensorCAM into Command Station using appropriate code.**
 
 The CAM can be connected to a "Control Station" via i2c using appropriate host code (typically C++). It has been successfully interfaced to two different (Arduino Mega) systems but most focus has been on the DCC-EX-Command Station (CS). The sensorCAM can be connected to a CS and interrogated using EXRAIL.
 
@@ -233,12 +233,13 @@ With CAM flashing, try &lt;N m&gt;, &lt;N i 11&gt; and &lt;N t 46&gt; to confirm
 
 ![Confirm Functionality](/_static/images/ex-sensorcam/confirm-functionality.png)
 
-**12.8** Powering up the CS and CAM(s) can be problematical. The bootup interactions are affected by the following:  
-**a) ALL devices on an i2c bus should be powered for i2c communications to be reliable.**
+**12.8** Powering up the CS and CAM(s) can be problematical. The bootup interactions are affected by the following:
 
-**b) Full sensorCAM boot-up calls MyWire.begin() which FAILS if a) is incomplete.**
+> **a) ALL devices on an i2c bus should be powered for i2c communications to be reliable.**
 
-**c) CS bootup executes driver EXSensorCAM::create(); which FAILS if b) is unsuccessful.**
+> **b) Full sensorCAM boot-up calls MyWire.begin() which FAILS if a) is incomplete.**
+
+> **c) CS bootup executes driver EXSensorCAM::create(); which FAILS if b) is unsuccessful.**
 
 **To avoid a race between b) and c) the CS has a STARTUP_DELAY 5000 (5sec.) to allow b) time to boot. Rebooting a sensorCAM AFTER 5 seconds (b) can break the connection the CS had established, and so it may need to be followed by a reboot of CS (c).**
 
@@ -252,35 +253,35 @@ Refer to the sensorCAM manual Appendix H for further tips regarding sensorCAM wi
 
 **12.10** To manage MULTIPLE sensorCAMs, it is advisable to follow a convention to avoid errors, as follows:
 
-a) Choose a sequential address range (e.g. 0x11,0x12,0x13,0x14) for CAM1 CAM2 .. CAM4 respectively, and preferably a simple sequential base_vPin series (e.g. 500,600,700 say). Then using Arduino IDE…
+> a) Choose a sequential address range (e.g. 0x11,0x12,0x13,0x14) for CAM1 CAM2 .. CAM4 respectively, and preferably a simple sequential base_vPin series (e.g. 500,600,700 say). Then using Arduino IDE…
 
-b) For each CAM# in turn, open _sensorCAM.ino_ & edit **configCAM.h** (e.g. _#define I2C_DEV_ADDR 0x12_ ) AND edit **sensorCAM.ino** _#define BCDver 320_ (e.g. change 320 to 12320). THEN File>SaveAs sensorCAM320.12 Upload to CAM# (CAM2). This saves distinct identifiable versions for each one of your multiple CAMs. The 'v' command will identify which CAM is which. (works best for 0x11-17 only)
+> b) For each CAM# in turn, open _sensorCAM.ino_ & edit **configCAM.h** (e.g. _#define I2C_DEV_ADDR 0x12_ ) AND edit **sensorCAM.ino** _#define BCDver 320_ (e.g. change 320 to 12320). THEN File>SaveAs sensorCAM320.12 Upload to CAM# (CAM2). This saves distinct identifiable versions for each one of your multiple CAMs. The 'v' command will identify which CAM is which. (works best for 0x11-17 only)
 
-This fudge makes management of multiple sensorCAMs less error prone ('v' will show version as 12.3.20).
+> This fudge makes management of multiple sensorCAMs less error prone ('v' will show version as 12.3.20).
 
-c) In CS **myAutomation.h** create sequential drivers for CAM,CAM2, .. (starting with CAM 0x11) (e.g. then
+> c) In CS **myAutomation.h** create sequential drivers for CAM,CAM2, .. (starting with CAM 0x11) (e.g. then
 
-**HAL(**_EXSensorCAM, SENSORCAM2_VPIN, 80, 0x12); if needed, repeat for 0x13 & 14._
+> **HAL(**_EXSensorCAM, SENSORCAM2_VPIN, 80, 0x12); if needed, repeat for 0x13 & 14._
 
-d) In CS **config.h,** define CAM2, CAM3 & CAM4 as for CAM in **config.h** (e.g.
+> d) In CS **config.h,** define CAM2, CAM3 & CAM4 as for CAM in **config.h** (e.g.
 
-_#define SENSORCAM2_VPIN 600_
+> _#define SENSORCAM2_VPIN 600_
 
-_#define CAM2 SENSORCAM2_VPIN+_
+> _#define CAM2 SENSORCAM2_VPIN+_
 
-e) edit CS **MySetup.h** to display all required sensors in each CAM. e.g. for CAM2 (2bs from base vpin 600)
+> e) edit CS **MySetup.h** to display all required sensors in each CAM. e.g. for CAM2 (2bs from base vpin 600)
 
-_for(uint16_t b=1; b<=4;b++) for(uint16_t s=0;s<8;s++) Sensor::create(200+b\*10+s,600+b\*8+s,1);_
+> for(uint16_t b=1; b<=4;b++) for(uint16_t s=0;s<8;s++) Sensor::create(200+b\*10+s,600+b\*8+s,1);_
 
-**_N.B. This consumes RAM, so unnecessary sensors my cause a MEGA to run out of memory. If memory is limited, only "create" (JMRI) sensors that you want to see switching/tripping on the CS monitor._**
+> **_N.B. This consumes RAM, so unnecessary sensors my cause a MEGA to run out of memory. If memory is limited, only "create" (JMRI) sensors that you want to see switching/tripping on the CS monitor._**
 
-**_&lt;D RAM&gt; shows remaining free memory. The Command Station cannot run with near 0 free RAM._**
+> **_&lt;D RAM&gt; shows remaining free memory. The Command Station cannot run with near 0 free RAM._**
 
-f) Once loaded and booted, make use of the CamParser switch-cam commands by adding an \[optional\] cam # to bs numbers (e.g. &lt;N&gt; &lt;Ni 112&gt; &lt;Np 201&gt; &lt;NV 300&gt; &lt;NC vpin&gt;. &lt;N&gt; shows current CAM (vPin).
+> f) Once loaded and booted, make use of the CamParser switch-cam commands by adding an \[optional\] cam # to bs numbers (e.g. &lt;N&gt; &lt;Ni 112&gt; &lt;Np 201&gt; &lt;NV 300&gt; &lt;NC vpin&gt;. &lt;N&gt; shows current CAM (vPin).
 
-g) In EXRAIL scripts, select CAM# by using ID format (CAM# 0%%) e.g. AT(CAM2 012) for sensor S(2)12.
+> g) In EXRAIL scripts, select CAM# by using ID format (CAM# 0%%) e.g. AT(CAM2 012) for sensor S(2)12.
 
-**APPENDIX ESP32-CAM pinout reference (CAM version v1.6) & WROVER-CAM**
+###**APPENDIX ESP32-CAM pinout reference (CAM version v1.6) & WROVER-CAM**
 
 ![ESP32 CAM 1.6 Pinout](/_static/images/ex-sensorcam/esp32-cam-1-6-pinout.png)
 
