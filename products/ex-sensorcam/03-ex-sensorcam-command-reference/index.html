@@ -6544,42 +6544,42 @@
  &nbsp; &nbsp; &nbsp; &nbsp; <em>Response:</em> Defines sensor at rr,xx but DOES NOT enable or reference/refresh it</p>
 <p>l%% &nbsp; &nbsp; &nbsp; <code>&lt;Nl %%&gt;</code> <strong>(Lima) Latch sensor on (occupied=1)</strong><br />
  &nbsp; &nbsp; &nbsp; &nbsp; <em>Response:</em> Sensor latched at 1 until cleared by zerO command or enAble command</p>
-<p>m$[,%%] &nbsp;<code>&lt;Nm $[ %%]&gt;</code> <strong>Min2trip frames setting [MaxSensor setting]</strong> <br />
+<p>m$[,%%] <code>&lt;Nm $[ %%]&gt;</code> <strong>Min2trip frames setting [MaxSensor setting]</strong> <br />
  &nbsp; &nbsp; &nbsp; &nbsp; <em>Response:</em> Sets min/max parameters.  m0,%% leaves min2trip unchanged</p>
-<p>n$[,%%] &nbsp;<code>&lt;Nn $[ %%]&gt;</code> <strong>Number for bank trip LED indicator. [minSensor]</strong><br />
+<p>n$[,%%] <code>&lt;Nn $[ %%]&gt;</code> <strong>Number for bank trip LED indicator. [minSensor]</strong><br />
  &nbsp; &nbsp; &nbsp; &nbsp; <em>Response:</em> Sets programmable LED to indicates when bank Number $ is tripped</p>
-<p>o%% &nbsp; &nbsp; <code>&lt;No %%&gt;</code> <strong>(Oscar) turn sensor Off (un-occupied=0)</strong><br />
+<p>o%%&nbsp; &nbsp; <code>&lt;No %%&gt;</code> <strong>(Oscar) turn sensor Off (un-occupied=0)</strong><br />
  &nbsp; &nbsp; &nbsp; &nbsp; <em>Response:</em> Sensor disabled, set 0 until Latched on, or enabled using a%% or r%%</p>
-<p>p# &nbsp; &nbsp; &nbsp; <code>&lt;Np #&gt;</code> <strong>Position table for a bank of sensors</strong><br />
+<p>p# &nbsp; &nbsp; &nbsp; <code>&lt;Np #&gt;</code> &nbsp; <strong>Position table for a bank of sensors</strong><br />
  &nbsp; &nbsp; &nbsp; &nbsp; <em>Response:</em> Prints positions for enAbled sensors of bank #. &nbsp; p%% also similar</p>
-<p>q# &nbsp; &nbsp; &nbsp; <code>&lt;Nq #&gt;</code> <strong>Query enAbled state of sensors in bank</strong><br />
+<p>q# &nbsp; &nbsp; &nbsp; <code>&lt;Nq #&gt;</code> &nbsp; <strong>Query enAbled state of sensors in bank</strong><br />
  &nbsp; &nbsp; &nbsp; &nbsp; <em>Response:</em> Prints enabled state of all 8 sensors (1/0).  Use q9 for ALL banks</p>
 <p>r%% &nbsp; &nbsp; <code>&lt;Nr %%&gt;</code> <strong>Refresh reference image for sensor</strong><br />
  &nbsp; &nbsp; &nbsp; &nbsp; *<em>Response:</em> enAbles sensor and captures a new reference image.  Use r00 for ALL</p>
-<p>s%% &nbsp; &nbsp; &nbsp; <code>&lt;n/a&gt;</code> <strong>Scan video to define a new Sensor position (deprocate?)</strong><br />
+<p>s%% &nbsp; &nbsp; &nbsp; <code>&lt;n/a&gt;</code>&nbsp; <strong>Scan video to define a new Sensor position (deprocate?)</strong><br />
  &nbsp; &nbsp; &nbsp; &nbsp; <em>Response:</em> Scan for brightest spot and position sensor there. (superseeded)</p>
 <p>t##[,%%] <code>&lt;Nt ##[ %%]&gt;</code> <strong>Theshold setting (33-99) global [pvtThreshold for S%%]</strong><br />
  &nbsp; &nbsp; &nbsp; &nbsp; <em>Response:</em> Sets new threshold, global [ pvtThreshold] (t99 lists pvtThresholds)<br />
- &nbsp; &nbsp; &nbsp; &nbsp; For ## of (2-30), print ## rows of scroll data.  t1 toggles scroll</p>
+ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; For ## of (2-30), print ## data rows.  t00,%% clears a pvtT.  t1 toggles scroll</p>
 <p>t1,%% <code>&lt;Nt 1 %%&gt;</code> <strong>Trash pvtThresholds for S%% bank</strong><br />
  &nbsp; &nbsp; &nbsp; &nbsp; <em>Response:</em> clears 1 bank of 8 pvtThresholds.  t1,99 clears ALL banks </p>
 <p>u%% &nbsp; <code>&lt;Nu %%&gt;</code> <strong>Un-define Sensor</strong><br />
  &nbsp; &nbsp; &nbsp; &nbsp; <em>Response:</em> Resets sensor coordinates to 0,0</p>
-<p>v[#]&nbsp; &nbsp; <code>&lt;Nv %%&gt;</code> <strong>Version [or Video wifi SSID #]</strong><br />
+<p>v[#] &nbsp; <code>&lt;Nv[ #]&gt;</code> <strong>Version [or Video wifi SSID #]</strong><br />
  &nbsp; &nbsp; &nbsp; &nbsp; <em>Response:</em> Displays EX-SensorCAM version info OR v# starts preset SSID wifi link</p>
-<p>w&nbsp; &nbsp; &nbsp; &nbsp; <code>&lt;Nw&gt;</code> &nbsp; &nbsp; <strong>Wait for command</strong><br />
+<p>w &nbsp; &nbsp; &nbsp; &nbsp; <code>&lt;Nw&gt;</code> &nbsp; &nbsp; <strong>Wait for command</strong><br />
  &nbsp; &nbsp; &nbsp; &nbsp; <em>Response:</em> Cam suspends image capture and scrolling and waits for a CR</p>
-<p>x y z &nbsp; <code>&lt;n/a&gt;</code> <strong>Reserved commands for image transfer management</strong><br />
+<p>x y z &nbsp; &nbsp; <code>&lt;n/a&gt;</code> &nbsp;<strong>Reserved commands for image transfer management</strong><br />
  &nbsp; &nbsp; &nbsp; &nbsp; <em>Response:</em> Sends binary data to USB port for Processing4 (X Y Z) image delivery</p>
-<p>n/a &nbsp; &nbsp; &nbsp; &nbsp;<code>&lt;N&gt;</code> &nbsp; <strong>Current CAM selection and availability (CS only)</strong><br />
+<p>n/a &nbsp; &nbsp; &nbsp; &nbsp;<code>&lt;N&gt;</code>&nbsp; &nbsp; <strong>Current CAM selection and availability (CS only)</strong><br />
  &nbsp; &nbsp; &nbsp; &nbsp; <em>Response:</em> Shows the currently selected CAM and the options available </p>
-<p>n/a <code>&lt;NC ###&gt;</code> <strong>CAM selection</strong><br />
+<p>n/a <code>&lt;NC ###&gt;</code>&nbsp; <strong>CAM selection</strong><br />
  &nbsp; &nbsp; &nbsp; &nbsp; <em>Response:</em> Switches commands to the CAM at vpin ### or CAM number (1-4)</p>
-<p>n/a &nbsp; &nbsp; <code>&lt;NQ&gt;</code> <strong>Query state of all Sensors</strong><br />
+<p>n/a&nbsp; &nbsp; &nbsp; <code>&lt;NQ&gt;</code>&nbsp; &nbsp;<strong>Query state of all Sensors</strong><br />
  &nbsp; &nbsp; &nbsp; &nbsp; <em>Response:</em> Tabulation of all sensor tripped states in banks of 8</p>
-<p>F &nbsp; &nbsp; &nbsp; &nbsp; <code>&lt;NF&gt;</code> <strong>Forces immediate CAM reset</strong><br />
+<p>F &nbsp; &nbsp; &nbsp; &nbsp; <code>&lt;NF&gt;</code> &nbsp; <strong>Forces immediate CAM reset</strong><br />
  &nbsp; &nbsp; &nbsp; &nbsp; <em>Response:</em> Reset into EX-SensorCAM mode, exting any WiFi mode</p>
-<p>R &nbsp; &nbsp; &nbsp; <code>&lt;n/a&gt;</code> <strong>Reset EX-SensorCAM &nbsp; (CS <NR> gives equivalent of <Nr 00>)</strong><br />
+<p>R &nbsp; &nbsp; &nbsp; &nbsp; <code>&lt;n/a&gt;</code>&nbsp; <strong>Reset EX-SensorCAM &nbsp; (CS <NR> gives equivalent of <Nr 00>)</strong><br />
  &nbsp; &nbsp; &nbsp; &nbsp; <em>Response:</em> Reset into EX-SensorCAM mode, exting any WiFi mode </p>
 <p><strong>NOTE:  The EX-SensorCAM USB input will also accept most CS formatted commands.</strong></p>
 
@@ -6602,7 +6602,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="December 5, 2025 01:57:16 UTC">December 5, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="December 5, 2025 02:57:20 UTC">December 5, 2025</span>
   </span>
 
     
