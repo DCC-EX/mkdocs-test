@@ -57,10 +57,10 @@ n$[,%%] `<Nn $[ %%]>` **Number for bank trip LED indicator. [minSensor]**
 o%% &nbsp; &nbsp; `<No %%>` **(Oscar) turn sensor Off (un-occupied=0)**  
  &nbsp; &nbsp; &nbsp; &nbsp; *Response:* Sensor disabled, set 0 until Latched on, or enabled using a%% or r%%
 
-p# &nbsp; &nbsp; &nbsp; `<Np #>`&nbsp; **Position table for a bank of sensors**  
+p# &nbsp; &nbsp; &nbsp; `<Np #>` &nbsp; **Position table for a bank of sensors**  
  &nbsp; &nbsp; &nbsp; &nbsp; *Response:* Prints positions for enAbled sensors of bank #. &nbsp; p%% also similar
 
-q# &nbsp; &nbsp; &nbsp; `<Nq #>`&nbsp; **Query enAbled state of sensors in bank**  
+q# &nbsp; &nbsp; &nbsp; `<Nq #>` &nbsp; **Query enAbled state of sensors in bank**  
  &nbsp; &nbsp; &nbsp; &nbsp; *Response:* Prints enabled state of all 8 sensors (1/0).  Use q9 for ALL banks
 
 r%% &nbsp; &nbsp; `<Nr %%>` **Refresh reference image for sensor**  
@@ -97,7 +97,7 @@ n/a `<NC ###>`&nbsp; **CAM selection**
 n/a&nbsp; &nbsp; &nbsp; `<NQ>`&nbsp; &nbsp;**Query state of all Sensors**  
  &nbsp; &nbsp; &nbsp; &nbsp; *Response:* Tabulation of all sensor tripped states in banks of 8
 
-n/a &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; `<NF>` &nbsp; **Forces immediate CAM reset**  
+n/a &nbsp; &nbsp; &nbsp; &nbsp; `<NF>` &nbsp; **Forces immediate CAM reset**  
  &nbsp; &nbsp; &nbsp; &nbsp; *Response:* Reset into EX-SensorCAM mode, exting any WiFi mode
 
 R &nbsp; &nbsp; &nbsp; &nbsp; `<n/a>`&nbsp; **Reset EX-SensorCAM &nbsp; (CS <NR> gives equivalent of <Nr 00>)**  
