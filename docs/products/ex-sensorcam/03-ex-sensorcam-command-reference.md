@@ -64,7 +64,7 @@ q# &nbsp; &nbsp; &nbsp; `<Nq #>` &nbsp; **Query enAbled state of sensors in bank
  &nbsp; &nbsp; &nbsp; &nbsp; *Response:* Prints enabled state of all 8 sensors (1/0).  Use q9 for ALL banks
 
 r%% &nbsp; &nbsp; `<Nr %%>` **Refresh reference image for sensor**  
- &nbsp; &nbsp; &nbsp; &nbsp; **Response:* enAbles sensor and captures a new reference image.  Use r00 for ALL
+ &nbsp; &nbsp; &nbsp; &nbsp; *Response:* enAbles sensor and captures a new reference image.  Use r00 for ALL
 
 s%%&nbsp; &nbsp; &nbsp; `<n/a>` &nbsp; **Scan video to define a new Sensor position (deprocate?)**  
  &nbsp; &nbsp; &nbsp; &nbsp; *Response:* Scan for brightest spot (LED) and position sensor there. (superseeded)
