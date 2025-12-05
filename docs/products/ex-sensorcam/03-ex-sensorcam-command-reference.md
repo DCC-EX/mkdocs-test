@@ -4,11 +4,11 @@
 
 `, space`	Equivalent parameter separators.  CS must use space character  
 `%%`&nbsp; &nbsp; &nbsp; &nbsp; Represents a Sensor's bank/sensor two digit identifier (digits 0-7 only)  
-`rr  xx ` Represent the row and column position of sensor (range 1-236 & 316 only)  
-`#`&nbsp; &nbsp;  &nbsp; Represents a single decimal digit (0-9)  
-`$`&nbsp; &nbsp;  &nbsp; Represents a single alpha-numeric character (A-Z or 0-9 as relevant to command)  
-`[ ]` Indicates enclosed parameter is optional.  Do NOT type brackets into commands  
-`< >` Encloses native CS command and MUST be typed to define CS command  
+`rr xx` Represent the row and column position of sensor (range 1-236 & 316 only)  
+`#` &nbsp; &nbsp; &nbsp;  &nbsp; Represents a single decimal digit (0-9)  
+`$` &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Represents a single alpha-numeric character (A-Z or 0-9 as relevant to command)  
+`[ ]` &nbsp; Indicates enclosed parameter is optional.  Do NOT type brackets into commands  
+`< >` &nbsp; Encloses native CS command and MUST be typed to define CS command  
 
 ## Native cam USB & CS cmd formats
 
@@ -30,7 +30,7 @@ e &nbsp; &nbsp; &nbsp; &nbsp; `<Ne>`&nbsp; &nbsp; &nbsp; **EPROM - save sensorCA
 f%% &nbsp; `<Nf %%>`  **Frame print. Full 16x3 byte pixel values**  
  &nbsp; &nbsp; &nbsp; &nbsp; *Response:* Tabulates 4x4 (RGB) pixels for current and reference sensor images
 
-g &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; `<Ng>` **Get Camera Global Config. Status (to USB)**
+g &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; `<Ng>` **Get Camera Global Config. Status (to USB)**  
  &nbsp; &nbsp; &nbsp; &nbsp; *Response:* Lists 14 different parameters of the ov2640 "Calibration" settings
 
 h$[,#] &nbsp; `<Nh $ #>` **Help cmd.(debug for devel)**  
@@ -70,7 +70,7 @@ s%% &nbsp; &nbsp; &nbsp; `< n/a >` **Scan video to define a new Sensor position 
  &nbsp; &nbsp; &nbsp; &nbsp; *Response:* Scan for brightest spot and position sensor there. (superseeded)
 
 t##[,%%] `<Nt ##[ %%]>` **Theshold setting (33-99) global [pvtThreshold for S%%]**  
- &nbsp; &nbsp; &nbsp; &nbsp; *Response:* Sets new threshold, global [ pvtThreshold] (t99 lists pvtThresholds)
+ &nbsp; &nbsp; &nbsp; &nbsp; *Response:* Sets new threshold, global [ pvtThreshold] (t99 lists pvtThresholds)  
  &nbsp; &nbsp; &nbsp; &nbsp; For ## of (2-30), print ## rows of scroll data.  t1 toggles scroll
 
 t1,%% &nbsp; &nbsp; `<Nt 1 %%>` **Trash pvtThresholds for S%% bank**  
