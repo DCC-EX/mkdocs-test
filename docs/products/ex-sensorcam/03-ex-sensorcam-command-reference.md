@@ -24,10 +24,10 @@ c$$$$ &nbsp; `<n/a>` **Camera re-Calibration and re-reference Sensors**
 d%%[#] `<n/a>` **Difference Score for Sensor [# repeats]**  
  &nbsp; &nbsp; &nbsp; &nbsp; *Response:* Prints colour diff score, brightness score and sum of both
 
-e &nbsp; &nbsp; &nbsp; &nbsp; `<Ne>`&nbsp; &nbsp; &nbsp; **EPROM - save sensorCAM config. to EPROM**  
+e&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; `<Ne>` &nbsp; &nbsp; **EPROM - save sensorCAM config. to EPROM**  
  &nbsp; &nbsp; &nbsp; &nbsp; *Response:*: Records parameters in EPROM to be restored upon next Reset
 
-f%% &nbsp; `<Nf %%>`  **Frame print. Full 16x3 byte pixel values**  
+f%% &nbsp; `<Nf %%>`  **Frame print. Full 16x3 byte Sensor pixel values**  
  &nbsp; &nbsp; &nbsp; &nbsp; *Response:* Tabulates 4x4 (RGB) pixels for current and reference sensor images
 
 g &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; `<Ng>` &nbsp; **Get Camera Global Config. Status (to USB)**  
@@ -45,9 +45,9 @@ j$,# &nbsp; &nbsp; `<Nj $ #>` **adJust ov2640 global parameters & list <Ng>**
 k%%,rr,xx`<n/a>` **locate a basic sensor at row rr, column xx**  
  &nbsp; &nbsp; &nbsp; &nbsp; *Response:* Defines sensor at rr,xx but DOES NOT enable or reference/refresh it
 
-l%% &nbsp; &nbsp; &nbsp; `<Nl %%>` **(Lima) Latch sensor on (occupied=1)**  
- &nbsp; &nbsp; &nbsp; &nbsp; *Response:* Sensor latched at 1 until cleared by zerO command or enAble command
-
+l%% &nbsp; &nbsp; `<Nl %%>` **(Lima) Latch sensor on (occupied=1)**  
+ &nbsp; &nbsp; &nbsp; &nbsp; *Response:* Sensor disabled, & set 1 until cleared by zerO command, a%% or r%%  cmd.
+ 
 m$[,%%] `<Nm $[ %%]>` **Min2trip frames setting [MaxSensor setting]**   
  &nbsp; &nbsp; &nbsp; &nbsp; *Response:* Sets min/max parameters.  m0,%% leaves min2trip unchanged
 
@@ -55,7 +55,7 @@ n$[,%%] `<Nn $[ %%]>` **Number for bank trip LED indicator. [minSensor]**
  &nbsp; &nbsp; &nbsp; &nbsp; *Response:* Sets programmable LED to indicates when bank Number $ is tripped
 
 o%%&nbsp; &nbsp; `<No %%>` **(Oscar) turn sensor Off (un-occupied=0)**  
- &nbsp; &nbsp; &nbsp; &nbsp; *Response:* Sensor disabled, set 0 until Latched on, or enabled using a%% or r%%
+ &nbsp; &nbsp; &nbsp; &nbsp; *Response:* Sensor disabled, & set 0 until Latched on, or enabled using a%% or r%%
 
 p# &nbsp; &nbsp; &nbsp; `<Np #>` &nbsp; **Position table for a bank of sensors**  
  &nbsp; &nbsp; &nbsp; &nbsp; *Response:* Prints positions for enAbled sensors of bank #. &nbsp; p%% also similar
@@ -66,15 +66,15 @@ q# &nbsp; &nbsp; &nbsp; `<Nq #>` &nbsp; **Query enAbled state of sensors in bank
 r%% &nbsp; &nbsp; `<Nr %%>` **Refresh reference image for sensor**  
  &nbsp; &nbsp; &nbsp; &nbsp; **Response:* enAbles sensor and captures a new reference image.  Use r00 for ALL
 
-s%% &nbsp; &nbsp; &nbsp; `<n/a>`&nbsp; **Scan video to define a new Sensor position (deprocate?)**  
- &nbsp; &nbsp; &nbsp; &nbsp; *Response:* Scan for brightest spot and position sensor there. (superseeded)
+s%%&nbsp; &nbsp; &nbsp; `<n/a>` &nbsp; **Scan video to define a new Sensor position (deprocate?)**  
+ &nbsp; &nbsp; &nbsp; &nbsp; *Response:* Scan for brightest spot (LED) and position sensor there. (superseeded)
 
-t##[,%%] `<Nt ##[ %%]>` **Theshold setting (33-99) global [pvtThreshold for S%%]**  
+t##[,%%] `<Nt ##[ %%]>` **Theshold setting (33-98) global [pvtThreshold for S%%]**  
  &nbsp; &nbsp; &nbsp; &nbsp; *Response:* Sets new threshold, global [ pvtThreshold] (t99 lists pvtThresholds)  
- &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; For ## of (2-30), print ## data rows.  t00,%% clears a pvtT.  t1 toggles scroll
+ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; For ## of (2-31), print ## data rows. &nbsp; t00,%% clears a pvtThreshold
 
-t1,%% `<Nt 1 %%>` **Trash pvtThresholds for S%% bank**  
- &nbsp; &nbsp; &nbsp; &nbsp; *Response:* clears 1 bank of 8 pvtThresholds.  t1,99 clears ALL banks 
+t1[,%%] `<Nt 1[ %%]>` **Toggle data scroll on/off. &nbsp; [or Trash pvtThresholds for S%% bank]**  
+ &nbsp; &nbsp; &nbsp; &nbsp; *Response:* clears 1 bank of 8 pvtThresholds. &nbsp; t1,99 clears ALL pvtThresholds 
 
 u%% &nbsp; `<Nu %%>` **Un-define Sensor**  
  &nbsp; &nbsp; &nbsp; &nbsp; *Response:* Resets sensor coordinates to 0,0
@@ -82,7 +82,7 @@ u%% &nbsp; `<Nu %%>` **Un-define Sensor**
 v[#] &nbsp; `<Nv[ #]>` **Version [or Video wifi SSID #]**  
  &nbsp; &nbsp; &nbsp; &nbsp; *Response:* Displays EX-SensorCAM version info OR v# starts preset SSID wifi link
 
-w &nbsp; &nbsp; &nbsp; &nbsp; `<Nw>` &nbsp; &nbsp; **Wait for command**  
+w &nbsp; &nbsp; &nbsp; &nbsp; `<Nw>` &nbsp; &nbsp; **Wait for command. &nbsp; NOTE: alternative t1 cmd. action**  
  &nbsp; &nbsp; &nbsp; &nbsp; *Response:* Cam suspends image capture and scrolling and waits for a CR
 
 x y z &nbsp; &nbsp; `<n/a>` &nbsp;**Reserved commands for image transfer management**  
@@ -102,5 +102,13 @@ F &nbsp; &nbsp; &nbsp; &nbsp; `<NF>` &nbsp; **Forces immediate CAM reset**
 
 R &nbsp; &nbsp; &nbsp; &nbsp; `<n/a>`&nbsp; **Reset EX-SensorCAM &nbsp; (CS <NR> gives equivalent of <Nr 00>)**  
  &nbsp; &nbsp; &nbsp; &nbsp; *Response:* Reset into EX-SensorCAM mode, exting any WiFi mode 
+
+& &nbsp; &nbsp; &nbsp; &nbsp; `<n/a>`&nbsp; **Print statistics since last '&' cmd.**  
+ &nbsp; &nbsp; &nbsp; &nbsp; *Response:* USB histogram of trips and potential trips of 1-3 frames
+ 
++#,$&nbsp; &nbsp; `<n/a>`&nbsp; **Add offset of # pixels in $ direction to ALL enabled Sensors**  
+ &nbsp; &nbsp; &nbsp; &nbsp; *Response:* Move ALL pixels by # places in direction specified (N-NW) for realignments
+
+ / &nbsp; \  &nbsp; @ &nbsp; &nbsp; **Commands for lines and trip symbol - refer to manual**  
 
 **NOTE:  The EX-SensorCAM USB input will also accept most CS formatted commands.**
