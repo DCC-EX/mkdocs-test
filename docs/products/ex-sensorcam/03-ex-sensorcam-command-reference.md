@@ -71,7 +71,7 @@ s%% &nbsp; &nbsp; &nbsp; `<n/a>`&nbsp; **Scan video to define a new Sensor posit
 
 t##[,%%] `<Nt ##[ %%]>` **Theshold setting (33-99) global [pvtThreshold for S%%]**  
  &nbsp; &nbsp; &nbsp; &nbsp; *Response:* Sets new threshold, global [ pvtThreshold] (t99 lists pvtThresholds)  
- &nbsp; &nbsp; &nbsp; &nbsp; For ## of (2-30), print ## rows of scroll data.  t1 toggles scroll
+ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; For ## of (2-30), print ## data rows.  t00,%% clears a pvtT.  t1 toggles scroll
 
 t1,%% `<Nt 1 %%>` **Trash pvtThresholds for S%% bank**  
  &nbsp; &nbsp; &nbsp; &nbsp; *Response:* clears 1 bank of 8 pvtThresholds.  t1,99 clears ALL banks 
@@ -97,7 +97,7 @@ n/a `<NC ###>`&nbsp; **CAM selection**
 n/a&nbsp; &nbsp; &nbsp; `<NQ>`&nbsp; &nbsp;**Query state of all Sensors**  
  &nbsp; &nbsp; &nbsp; &nbsp; *Response:* Tabulation of all sensor tripped states in banks of 8
 
-F&nbsp; &nbsp; &nbsp; &nbsp; `<NF>`&nbsp; &nbsp; **Forces immediate CAM reset**  
+F &nbsp; &nbsp; &nbsp; &nbsp; `<NF>` &nbsp; **Forces immediate CAM reset**  
  &nbsp; &nbsp; &nbsp; &nbsp; *Response:* Reset into EX-SensorCAM mode, exting any WiFi mode
 
 R &nbsp; &nbsp; &nbsp; &nbsp; `<n/a>`&nbsp; **Reset EX-SensorCAM &nbsp; (CS <NR> gives equivalent of <Nr 00>)**  
