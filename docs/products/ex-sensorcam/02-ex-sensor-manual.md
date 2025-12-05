@@ -64,11 +64,11 @@ The sensorCAM takes 10 frames per second in RGB565 format at QVGA resolution of 
 
 ![ESP32 Wrover CAM Photo](/_static/images/ex-sensorcam/esp32-wrover-cam-photo.png)
 
-Note: While this manual primarily talks about the ESP32-CAM-MB, there is a similar tested alternative in the newer ESP32 WROVER CAM single board option. For some further preliminary details refer to Section 7 Wiring, Figure 6.
+**Note:** While this manual primarily talks about the ESP32-CAM-MB, there is a similar tested alternative in the newer **ESP32 WROVER CAM** single board option. For some further preliminary details refer to Section 7 Wiring, Figure 6.
 
 Dealing with video images involves complexities not normally associated with model railroading sensors. The sensorCAM is a complex device with a number of commands explicitly for setup and evaluation. In addition to these,several“output” commands can be used by a host to interrogate the“virtual sensor” output states. The initial setup can be somewhat involved and requires familiarity with most of the 25 commands discussed below.
 
-The sensorCAM has two mutually exclusive modes of operation; the sensorCAM mode and the webCAM mode. The webCAM mode is essentially as described in the on-line tutorials. Use that mode only for education and curiosity.Invoke webCAM video mode by issuing the v1(or v2) sensorCAM command to get a webCAM URL(e.g.192.168.0.64)
+The sensorCAM has two ***mutually exclusive modes*** of operation; the sensorCAM mode and the webCAM mode. The webCAM mode is essentially as described in the on-line tutorials. Use that mode only for education and curiosity.Invoke webCAM video mode by issuing the v1(or v2) sensorCAM command to get a webCAM URL(e.g.192.168.0.64)
 
 The ESP32-CAM does not have a USB port so you will need an FTDI interface or MB. We prefer the ESP32-CAM-MB(MotherBoard) interface which plugs directly behind the CAM. Check“The Workshop” You tube videos on-line for guidance. The MB is far simpler to use(needing no jumpers or cables) than a separate FTDI used in the videos.
 
@@ -98,15 +98,13 @@ To control a railway, the railway needs a microcontroller based management syste
 
 The lens system on the cam comes in(std)66deg., 120 and 160deg. field of view. One can get longer ribbon versions and even 850nm(IR) versions to experiment with. These versions may be sourced independently of the ESP32-CAM.A wider coverage is possible with a 75-120deg(fish eye) lens, if needing to accommodate a lower ceiling height.
 
-### $$\text{ 2. ESP32-CAM}$$
+### 2. ESP32-CAM
 
 The heart of the sensorCAM is the ESP32-CAM module containing an ov2640 camera sensor and a 32bit ESP32-S microprocessor. The sensorCAM software/sketch is loaded into the ESP32 using the Arduino IDE over a USB port with settings newline/115200 baud. Follow the above guidelines and run the camera example first, to get a demo webserver and CAM operational with a simple coloured test image. Experiment with settings to"get a feel" for the parameter effects which need optimization. The CAM has a considerable number of video related on-screen settings.Alternative ov2640 CAM Modules can be obtained with various viewing angles(66,75,120,130deg) if std.(66?) is too low. A“fish eye” lens(120deg.) will give barrel distortion, but the sensorCAM should still function acceptably.
 
 ![ESP32 CAM Example Sketch](/_static/images/ex-sensorcam/esp32-cam-example-sketch.png)
 
-Figure 1.
-
-webCAM mode
+**Figure 1. &nbsp; webCAM mode**
 
  Figure 1. is an example of the standard webCAM browser presentation. It is a very useful mode for alignment and as a training aid in investigating the effects of the many video adjustments possible, but does not allow placement of sensors as sensorCAM mode can't be simultaneously enabled.
 
@@ -122,11 +120,7 @@ Due to the slowness of the ESP32\& wifi, the"live stream" is slow and a webCAM d
 
 ![ESP32 CAM Example Capture Sample](/_static/images/ex-sensorcam/esp32-cam-example-capture-sample.png)
 
-Figure 2
-
-$$
-\text{Initial sensorCAM settings}
-$$
+**Figure 2 &nbsp; Initial sensorCAM settings**
 
 After the sensorCAM has booted up, it reads frames for 9 seconds before automatically doing a reference grab for all defined sensors(the r00 command). ver320 by default sets the CAM configuration to those below. When sensorCAM is running, a user may tweak these settings via a USB monitor'c' or'j' commands if required.Bri=0, Con=1, Sat=2, AWB=1, AWBg=1, AEC=1, AECd=1, AEL=1, AGC=1, AGg=9;(initial settings of'c' parameters)
 
@@ -138,7 +132,7 @@ To run the sensorCAM.ino, it will be necessary to configure the Arduino IDE for 
 
 The ESP32-CAM can take rgb565 frames at 13/second. However it is a 3 step process; image sensing, processing and storing. It will then take further cycles to assess the state of the 80 virtual sensors in the frame(another two cycles)A total of 5 cycles places a significant limit on the sensorCAM speed of response time(up to 0.5 seconds at 10 frames/second). A fast HO loco can travel 160mm@100kph, so this latency might need to be accommodated in planning virtual sensor locations.
 
-### $$\text{ 3. Physical Installation}$$
+### 3. Physical Installation
 
 For testing purposes you will need a computer with a spare USB port and the Arduino IDE software installed. The PROCESSING 4 software is also advisable as it gives a more reliable and convenient image for setup. A long powered USB cable(5m?) may be an advantage as the sensorCAM may be some distance from the PC. For a final installation the sensorCAM would be connected via a cat5/6 cable carrying power and a differential i2c bus(of up to 30m) to a microcontroller, Command Station or similar. Some different practical solutions are explored in Appendix F.
 
@@ -146,7 +140,7 @@ For a test hookup between a USB powered sensorCAM and a Command Station(mega) wi
 
 ![ESP32 CAM with PCA9515A and LTC4311](/_static/images/ex-sensorcam/esp32-cam-pca9515a-ltc4311.png)
 
-Figure 3 CAM with 3.3 to 5V i2c interface and optional LTC4311“terminator” for greater reach
+**Figure 3 &nbsp; CAM with 3.3 to 5V i2c interface and optional LTC4311“terminator” for greater reach**
 
  The sensorCAM is preferably placed above and square-on to a section of layout at a height of 1 to 1.8m above the surface. 1.2m gives a max. coverage of approximately 1.2x0.9m with the standard lens. Another arrangement with several advantages is to place the CAM near the surface so as to view the surface via some good mirror tiles placed on the ceiling, positioned to ensure coverage of the desired sensor locations. This may increase coverage, especially if multiple mirrors are at slight angles. The mirror arrangement with benchtop level mount allows for wider coverage with low ceilings, and also places the CAM in a more accessible spot for wiring and maintenance. Mirror tiles do not need to be perfectly flat, some image distortion is acceptable, but they must be stable. Oblique camera angles may also be used to advantage, but sensor location and tripping point may be compromised somewhat.
 
@@ -162,7 +156,7 @@ With regards lighting, fluoroescent or LED lighting normally flickers at twice m
 
 ![Test Image with Light Banding](/_static/images/ex-sensorcam/test-image-light-banding.png)
 
-Figure 4 Test image showing fluorescent or LED light banding.
+**Figure 4 &nbsp; Test image showing fluorescent or LED light banding**
 
 ### 4. Notation\& Help commands
 
@@ -170,13 +164,11 @@ Figure 4 Test image showing fluorescent or LED light banding.
 
 The notation used in the reference material uses symbols according to the following convention:
 
-%used to designate a digit as part of a bank/sensor designator in bsNo style. i.e. 0/2, b/s or%/% or%%#used to designate a digit as part of a decimal number as in### for a 3 digit decimal number.
-
-$used to designate a single alphanumeric character(0-9 or A-Z) depending on context.
-
-S Capital S may be used to refer to a specific sensor such as S02 for example. Designation format: S\%%
-
-[]Square brackets may be used to indicate optional command arguments(don't include[] in command).
+%&nbsp; &nbsp; &nbsp; used to designate a digit as part of a bank/sensor designator in bsNo style. i.e. 0/2, b/s or %/% or %%  
+\# &nbsp; &nbsp; &nbsp; used to designate a digit as part of a decimal number as in ### for a 3 digit decimal number.  
+$ &nbsp; &nbsp; &nbsp; used to designate a single alphanumeric character(0-9 or A-Z) depending on context.  
+S &nbsp; &nbsp; &nbsp; Capital S may be used to refer to a specific sensor such as S02 for example. Designation format: S\%%  
+[ ] &nbsp; &nbsp; Square brackets may be used to indicate optional command arguments(don't include[] in command).
 
 Sensor'bsNo." number consists of two digits preferably written separated by a'/' as in 1/2 but in commands this is reduced to 12 as in command i12. Command'i' has the form i%% indicating it requires a 2-digit bsNo. As 49 is an invalid bsNo.(s range is 0-7), i49 is invalid. Some commands require a DECIMAL number and are expressed as having form t## for example. t49 is therefore a valid command. The'm' command takes the form"m$,##" requiring a single digit and a 2-digit decimal number. For more details on commands see APPENDIX A.
 
