@@ -667,11 +667,11 @@ e.g. **<Ni 2%%><Nr&nbsp;2%%>** also **<Nm 200><Nf 212><Nt 243>**
 | <N s %%>    | <Ns 12>  | s12 | **Scan** image for brightest spot and set bsNo to center that pixel. |
 | <N t ## [%%]> | <N t 43 12> | t43,12 | **Threshold** displayed, sets global threshold (32-98), [sets a pvtThreshold] |
 | <N t ##>    | <N t 10> | t10 | Tabulate ## (2-31) rows of scroll data similar to CAM scroll
-| <N t # [%%]> |  <Nt 1>   | t1 | Trash pvtThresholds. **<Nt 0 %%>** individually, **<Nt 1 %%>** for bank, **<Nt&nbsp;99>** trashes ALL pvtThresholds,  **<Nt&nbsp;1>** toggles scroll. |
+| <N t # [%%]> |  <Nt 1>   | t1 | Trash pvtThresholds. **<Nt 0 %%>** individually, **<Nt 1 %%>** for bank, **<Nt&nbsp;99>** trashes ALL pvtThresholds,  **<Nt&nbsp;1>** toggles scroll on/off. |
 | <N u %%>  | <Nu 12>  | u12 | **Undefine** and disable sensor bsNo(erase coordinates). **<Nu 99>** for ALL |
 | <N v [#]> | <N v 1> | v1  |  **Video** mode(0-2) invoke webCAM with v 1, or alt webCAM with v 2. **v** for **version** |
 | <N&nbsp;w>     | \<Nw>    | w   | **Wait**. Stop/start CAM imaging(flash), status sensing& streaming. |
-| <N ### # # | <N&nbsp;711&nbsp;75&nbsp;85> | a13,75,85 | Note: This uses the **vpin** for a sensor, NOT id/bsNo.(ref. Appendix E). |
+| <N ### ## ## | <N&nbsp;711&nbsp;75&nbsp;85> | a13,75,85 | Note: This uses the **vpin** for a sensor, NOT id/bsNo.(ref. Appendix E). |
 
 > **Notes:** The'i' cmd prints bsNo(bsn) where bsn/vPin offsets range from(7)00 to(7)79(e.g. baseVpin address 700).  
 > Some commands return previous(old) values then update sensorCAM. Use \<Nm> to confirm change.  
@@ -683,29 +683,30 @@ e.g. **<Ni 2%%><Nr&nbsp;2%%>** also **<Nm 200><Nf 212><Nt 243>**
 
 ### Linear Sensor Commands
 
-To enable an intrusion detection"curtain" or a linear"siding" or"spur" occupancy detector, a variation on the standard 4x4 pixel sensor was introduced with sensorCAM version 3.07. These sensors can detect the presence of any wagon/coach/loco obstructing any part of a(potentially curved) siding. Unlike conventional electrical occupancy detectors, it requires no extensive axle replacement on all rolling stock or complex IR or other style detectors and wiring.
+To enable an intrusion detection "curtain" or a linear "siding" or "spur" occupancy detector, a variation on the standard 4x4 pixel sensor was introduced with sensorCAM version 3.07. These sensors can detect the presence of any wagon/coach/loco obstructing any part of a (potentially curved) siding. Unlike conventional electrical occupancy detectors, it requires no extensive axle replacement on all rolling stock or complex IR or other style detectors and wiring.
 
-The“linear” detector consists of a series of spot sensors utilizing multiple sensors in one bank and normally ending with the last sensor in the bank(i.e. S%7). The four spots of one S%% are spaced at an even multiple of pixels from 0 to 15 sloping to right or left. Spacing of deltaX and deltaR are specified as integers from 0 to 63 giving a theoretical maximum length of 63 x 1.41 x 8 pixels(710pixels). The sensorCAM resolution is 240x320 only, so shorter spacing is normal and gives a better result. One may also use up fewer std. Sensors(max 8/bank) to cover the required distance.
+The “linear” detector consists of a series of spot sensors utilizing multiple sensors in one bank and normally ending with the last sensor in the bank (i.e. S%7). The four spots of one S%% are spaced at an even multiple of pixels from 0 to 15 sloping to right or left. Spacing of deltaX and deltaR are specified as integers from 0 to 63 giving a theoretical maximum length of 63 x 1.41 x 8 pixels(710 pixels). The sensorCAM resolution is 240x320 only, so shorter spacing is normal and gives a practical result. One may also use up fewer std. Sensorsn(max 8/bank) to cover the required distance.
 
 ![Linear Sensor Example](/_static/images/ex-sensorcam/linear-sensor-example.png)
 
-After creating a line, a refresh(Y) of the Processing4 image should show a series of standard sensors placed on every fourth spot(e.g. S34-S37). Interpolate between top left sensor quadrants for visual line alignment. v312+ shows the(orange) spots between Sensors.
+After creating a line, a refresh(**Y**) of the Processing4 image should show a series of standard sensors placed on every fourth spot (e.g. S34-S37). Interpolate between top left sensor quadrants for visual line alignment. v312+ shows the(orange) spots between Sensors.
 
-To create a"curved" intrusion curtain line, one can start at the top with a straight line and then change the slope(\)) on each successive S%% checking the image after each adjustment. Alternatively place up to 8 std. consecutive sensors and then convert each in turn to a joining line using\%% repeatedly.
+To create a "curved" intrusion curtain line, one can start at the top with a straight line and then change the slope(\) on each successive S%% checking the image after each adjustment. Alternatively place up to 8 std. consecutive sensors and then convert each in turn to a joining line using \\%% repeatedly.
 
-While individual sensor segments can be read by the Command Station in the usual way, a line sensor should be read/tested as a bank. The sensorCAM(b) command shows a byte value dependent on all sensors in the bank in bits 7-0. The“value” of a bank will rise if sensors set the bits such that, for the example above, the value will exceed 16(2^4) if any sensor in the range S34-S37 is tripped. The EX-RAIL commands, such as IFGTE(CAM 034, 16), will respond to the tripping of the line sensor.
+While individual sensor segments can be read by the Command Station in the usual way, a line sensor should normally be read/tested as a bank. The sensorCAM **b**) command shows a byte value dependent on all sensors in the bank in bits 7-0. The “value” of a bank will rise if sensors set the bits such that, for the example above, the value will exceed 16 (2^4) if any sensor in the range S34-S37 is tripped. The EX-RAIL commands, such as **IFGTE(CAM 034, 16)**, will respond to the tripping of the line sensor.
 
-The line sensors may require an individual pvtThreshold rather than Threshold as their sensitivity will differ. The line sensor can have a pvtThreshold PROVIDED it is only stored in the last sensor(e.g. S37). If a pvtThreshold is set(under 99) in the last sensor, it trims the line by 3 steps restoring the(S%7) sensor to a normal square(4x4). Remember to store(EPROM) the new line sensor with the(e) command.
+The line sensors may require an individual pvtThreshold rather than Threshold as their sensitivity will differ. The line sensor can have a _pvtThreshold_ PROVIDED it is only stored in the last sensor(e.g. S37). If a _pvtThreshold_ is set(under 99) in the last sensor, it trims the line by 3 steps restoring the(S%7) sensor to a normal (4x4) square. Remember to save(EPROM) the new line sensor with the(**e**) command.
 
 If precision less than 1deg is needed, consider a tiny CAM rotation to help fiddle yard alignments(say).
 
-While setup without an advanced GUI is fiddly, most situations can be handled. The following examples may help visualize the requirements. Note: To get good image updates make sure the CAM has flashed before the new Y cmd. One sure way to do this is to issue the t2 command for two new frames.
+While setup without an advanced GUI is fiddly, most situations can be handled. The following examples may help visualize the requirements.  
+Note: To get good image updates make sure the CAM has flashed before the new Y cmd. One sure way to do this is to issue the t2 command for two new frames.
 
-Straight line sensors(S33 to S37\& S40 to S47) were created by positioning end Sensors& using\%%,\%%End Sensors were initially placed using a%% followed by a click on the image& Enter and then issuing the'\'cmd.(e.g.\40,47) to automatically interpolate for the nearest straight line. These lines can go upward
+Straight line sensors(S33 to S37 \& S40 to S47) were created by positioning end Sensors & using **\\%%,%%** End Sensors were initially placed using **a%%** followed by a click on the image and Enter and then issuing the '**\\**'cmd. (e.g. **\\40,47**) to automatically interpolate for the nearest straight line. These lines can go upward.
 
- Curved sensor banks can be constructed from a series of prepositioned standard 4x4 sensors and then converting them individually using\%% to join two consecutive sensor positions as was done for bank 2(S21-S27) in this example. Place the cursor fingertip exactly where you want a linear point as the point is placed in the top left corner of the Sensor box.
+Curved sensor banks can be constructed from a series of prepositioned standard 4x4 sensors and then converting them individually using **\\%%** to join two consecutive sensor positions as was done for bank 2 (S21-S27) in this example. Place the cursor fingertip exactly where you want a linear point as the point is placed in the top left corner of the Sensor box.
 
-Line sensors, developed for visitor intrusion curtains, are currently automatically bent if needed to avoid crossing the bottom edge or placing sensors very close to the edge where they have been found to be particularly noise sensitive. In the image below, line sensor generated from/40,15,15 has hit the edge.
+Line sensors, developed for visitor intrusion curtains, are currently automatically bent if needed to avoid crossing the bottom edge or placing sensors very close to the edge where they have been found to be particularly noise sensitive. In the image below, line sensor generated from **/40,15,15** has hit the edge.
 
 ![Line Sensor Image](/_static/images/ex-sensorcam/line-sensor-image.png)
 
