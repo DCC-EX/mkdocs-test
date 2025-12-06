@@ -635,73 +635,50 @@ In the situation where sensors may be tripping undesirably, there is a range of 
 
 ### Filtered/parsed DCC EX-CS sensorCAM commands
 
-The file _myFilter.cpp_ or _CamParser.cpp_ has been added to the CS specifically tailored to provide a mechanism for the CS to send commands more easily than by using the clumsy diagnostic command style <D ANOUT vpin parm1 parm2>. Native CAM command format is <N c [parm1] [parm2]> where command character 'c' can be any of those listed below. Generally, to effect changes in sensorCAM, the CAM must be in the run mode (flashing).
+The file _myFilter.cpp_ or _CamParser.cpp_ has been added to the CS specifically tailored to provide a mechanism for the CS to send commands more easily than by using the clumsy diagnostic command style **<D \ANOUT vpin parm1 parm2>**. Native CAM command format is **<N c [parm1] [parm2]>** where command character 'c' can be any of those listed below. Generally, to effect changes in sensorCAM, the CAM must be in the run mode (flashing).
 
-The base vpin address defaults to 700 but one can use the _#define SENSORCAM_VPIN ###_ for another value (in _config.h_). With 2 to 4 CAM's, use <N C vpin0> when a switch is needed. The CAM# may also be placed, if defined in _config.h_, prefixing the sensor bsNo. e.g. **<Ni 2%%><Nr 2%%>** also **<Nm 200><Nf 212><Nt 243>**
+The base vpin address defaults to 700 but one can use the _#define SENSORCAM_VPIN ###_ for another value (in _config.h_). With 2 to 4 CAM's, use **<N \C vpin0>** when a switch is needed. The CAM# may also be placed, if defined in _config.h_, prefixing the sensor bsNo.  
+e.g. **<Ni 2%%><Nr 2%%>** also **<Nm 200><Nf 212><Nt 243>**
 
 ### User command Example
 
 
 | Command | Example | Equivalent| sensorCAM command command and action (only some notifies CS) |
 | --- | --- | --- | --- |
-| <N \C vpin>   | CAMERA HEIGHT: | (mm) | 800 |
-| \<N C vpin> | <NC 600> |Set base | CAM vpin for following commands. <NC #> selects CAM # (1-4)     | 
-| <N a %%>  | <Na 12 > | a12 | enAble sensor S%%(bsNo) |
-| <N b bank#> | <Nb 1> | b1  | Bank sensor states(all 8).(used by IFGTE() ATLT() e.g. to locate loco) |
-| <N \e>    | <Ne>      | e    | EPROM write any changed settings to sensorCAM EPROM.|
-| <N f %%> | <N f 12> | f12 | Frame image pixel data for Sensor_ref[] and sensor666[](RGB bytes)|
+| <N \C vpin> | <NC 600> |Set base | **CAM** vpin for following commands. <NC #> selects CAM # (1-4)     | 
+| <N a %%>  | <Na 12 > | a12 | **enAble** sensor S%%(bsNo) |
+| <N a%% row col> | <Na 12 32 43> | a12,32,43> | **enAble** & also set new coordinates for sensor bsNo& refresh | 
+| <N b bank#> | <Nb 1> | b1  | **Bank** sensor states(all 8).(used by IFGTE() ATLT() e.g. to locate loco) |
+| <N \e>    | <Ne>     | e   |**EPROM** write any changed settings to sensorCAM EPROM.|
+| <N f %%>  | <Nf 12> | f12 | **Frame image** pixel data for Sensor_ref[] and sensor666[](RGB bytes) |
+| <N \F>    | <NF>    | F   | **Forced reboot**, restoring sensorCAM sensor mode& EPROM defaults |
+| <N \g>    | <Ng>    | g   | **Get** status ov2640 camera module settings(on sensorCAM monitor) |
+| <N h%%>   | <Nh     | h30 | set _maxSensors_ to limit display to below sensor S%%. Also **Help** (0-9) |
+| <N i [%%]> | <Ni 12> | i12 | **Information** on sensor bsNo state, position & twin(0=None)
+| <N i %%[ $$] | <Ni 12> | i12,02 | **Info.** & sets new twin sensor(S$$) for "second-opinion" on S%%. | 
+| <N j $ #> | <Nj B 2 | jB2 | **adJust** ov2640 parameters($)(Brightness, Contrast etc)(values 0-2 only) |
+| <N l %%>  | <Nl 12  | l12 | (lima) **Latch** output state of sensor bsNo to 1 & disable |
+| <N m $ [%%] | <Nm 3 20> | m3,20 | **Min/max** _min2trip_(1-4) frames [maxSensors] Show parameter status data |
+| <N n$ [%%]> | <Nn 1 10> | n1,10 | set **nLED**= bank $ [and _minSensors_=%% to limit display range] $<Nn v> verifies |
+| <N o %%>  | <No 12> | o12 | (oscar) **Zero** output state of sensor bsNo. Reset to 0& disable. |
+| <N p %%>  | <Np 1>  | p1  | **Positions**(r,x) of all enabled sensors in bank are listed. |
+| <N q #>   | <Nq 1>   | q1  | **Query bank**# enabled states of sensors[0 indicates sensor disabled] |
+| <N r [%%]> | <Nr 12> | r12 | **Refresh Reference** image for sensor S%%(bsNo)(default ALL=r00). |
+| <N s %%>  | <Ns 12>  | s12 | **Scan** image for brightest spot and set bsNo to center that pixel. |
+| <N t ## [%%]> | <N t 43 12> | t43,12 | **Threshold** displayed, sends new threshold (32-98), [sets a pvtThreshold] |
+| <N t ## [%%]> | <N t 10> | t10 | Tabulate ## (2-31) rows of scroll data similar to CAM scroll
+| <N t # [%%]> |  <Nt 1>   | t1 | Trash pvtThresholds. <Nt 0 %%> for individual, Nt 1 [%%] for a bank, <Nt 1> toggles scroll. |
+| <N u %%>  | <Nu 12>  | u12 | **Undefine** and disable sensor bsNo(erase coordinates). **<Nu 99>** for ALL |
+| <N v [#]> | <N v 1> | v1  |  Video mode(0-2) invoke webCAM with v 1, or alt webCAM with v 2. **v** version |
+| <N&nbsp;w>     | <Nw>    | w   | Wait. Stop/start CAM imaging(flash), status sensing& streaming.
 
- $<N g>$ <N g>
+t##[,%%] <Nt ##[ %%]> Theshold setting (33-99) global [pvtThreshold for S%%]
+        Response: Sets new threshold, global [ pvtThreshold] (t99 lists pvtThresholds)
+            For ## of (2-30), print ## data rows. t00,%% clears a pvtT. t1 toggles scroll
 
-F Forced reboot, restoring sensorCAM sensor mode& EPROM defaults.g Get status ov2640 camera module settings(on sensorCAM monitor).
+t1,%% <Nt 1 %%> Trash pvtThresholds for S%% bank
+        Response: clears 1 bank of 8 pvtThresholds. t1,99 clears ALL banks
 
-<N h%%>
-
-h30 set maxSensors to limit display to below sensor S%%. Also Help(0-9).
-
-<Nj$#><NjB
-
- jB2 adJust ov2640 parameters($)(Brightness, Contrast etc)(values 0-2 only)
-
-<N|%%>
-
-l12(lima) Set(latch) output state of sensor bsNo to 1& disable.
-
-<N o%%><N o 12>
-
-o12(oscar) Zero output state of sensor bsNo. Reset to 0& disable.
-
-<N p%%>
-
-p1 Positions(r,x) of all enabled sensors in bank are listed.
-
-<N q bank#><N q
-
- q1 Query bank# enabled states of sensors[0 indicates sensor disabled]
-
-<Nr[%%]>
-
-r12 Refresh Reference image for sensor S%%(bsNo)(default ALL=r00).
-
-<N s%%><N s 
-
-s12 Scan image for brightest spot and set bsNo to center that pixel.
-
-<N u%%><N u 12
-
-u12 Undefine& disable sensor bsNo(erase coordinates).<Nu 99> for ALL
-
-<N v[alt]><N v2>
-
-v2 Video mode(0-2) invoke webCAM with v 1, or alt webCAM with v 2.
-
-<N w>
-
-w Wait. Stop/start CAM imaging(flash), status sensing& streaming.
-
-<N a%% row col>
-
-a12,201,302 enAble& also set new coordinates for sensor bsNo& refresh a12,201,302 using vpin directly, set new coordinates for sensor bsNo.
 
 <N 710 201 302>Note: This uses the vpin for a sensor, NOT id/bsNo.(ref. Appendix E).
 
@@ -709,23 +686,23 @@ Note: The'i' cmd prints bsNo(bsn). bsn/vPin offsets range from(7)00 to(7)79(e.g.
 
 Additional verbose commands with sensorCAM feedback to CS console(i.e. more than ACK OK):
 
-<N[m#00]><N><N 
+
 
 Lists current& alt. defined CAM baseVpins.[m#%%] switches to cam#Query to CS console, full set of bank sensor occupied states in 8 bit format ver Returns Version of sensorCAM.ino and IO_EXSensorCAM.h driver
 
  $<N i[\%\%]>$ <Ni12>i12 CS display Information on sensor bsNo state, position& twin(0=None)
 
-*<Ni\%[twin]><Ni 12 02> i12,02 Info sets new twin sensor(S02) to set up"second-opinion" on S%%.
 
-*<N m$[%%]><N m 320>m3,20 set min2trip(1-4) frames[& maxSensors] Show parameter status data
+*<N m$[%%]>
 
-*<N n$[\%\%]><N n 110>$$n 1,10$$set  $n LED=$  bank  $\$  [\& minSensors\) to limit display range]  $<Nn v>$  verifies.
+*
 
-*<N t[newt  $[\%\%]]>$  <N t 43> t 43 CS displays old threshold, sends new threshold,\& shows sensor states and diff score on CS, similar to CAM scrolling format.  $[\%\%]$  for a pvtThreshold.<Nt 0%%> to cancel.
-
+*
 <N t\#\#> for\#\#<31 causes\#\# repeats of't' command(scrolling data).<N t 1> toggles CAM scrolling.
 
 * These commands return previous(old) values rather than changed values. Use<Nm> to confirm change.Note: Space after  $<N$  is optional, as is capitalization of command. e.g.<N t 42>=<NT 42>,<N r 00>=<NR>Multiple CAM selections can be achieved by config.h entry and use of[\#] prefix on param1 e.g.<N i 212>For these to work fully, need latest CamParser.cpp, CS driver(IO-EXSensorCAM.h)\& sensorCAM.ino
+
+## APPENDIX D
 
 ### Linear Sensor Commands
 
