@@ -642,7 +642,7 @@ e.g. **<Ni 2%%><Nr&nbsp;2%%>** also **<Nm 200><Nf 212><Nt 243>**
 
 ### User commands
 
-| Command | Example | Equivalent| sensorCAM command and action (only some notifies CS) |
+| Command | Example | Equivalent| sensorCAM command and action (some commands only return "ACK OK" to CS) |
 | --- | --- | --- | --- |
 | \<N> | \<N> | n/a | Lists current& alt. defined CAM baseVpins.    |
 | <N \C vpin> | <NC 600> |Set base | **CAM** vpin for following commands. <NC #> selects CAM # (1-4)     | 
@@ -670,6 +670,7 @@ e.g. **<Ni 2%%><Nr&nbsp;2%%>** also **<Nm 200><Nf 212><Nt 243>**
 | <N t # [%%]> |  <Nt 1>   | t1 | Trash pvtThresholds. **<Nt 0 %%>** individually, **<Nt 1 %%>** for bank, **<Nt&nbsp;99>** trashes ALL pvtThresholds,  **<Nt&nbsp;1>** toggles scroll on/off. |
 | <N u %%>  | <Nu 12>  | u12 | **Undefine** and disable sensor bsNo(erase coordinates). **<Nu 99>** for ALL |
 | <N v [#]> | <N v 1> | v1  |  **Video** mode(0-2) invoke webCAM with v 1, or alt webCAM with v 2. **v** for **version** |
+| x &nbsp; y &nbsp; z |    |     | Reserved for binary export for Processing 4 images |
 | <N&nbsp;w>     | \<Nw>    | w   | **Wait**. Stop/start CAM imaging(flash), status sensing& streaming. |
 | <N ### ## ## | <N&nbsp;711&nbsp;75&nbsp;85> | a13,75,85 | Note: This uses the **vpin** for a sensor, NOT id/bsNo.(ref. Appendix E). |
 
