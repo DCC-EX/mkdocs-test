@@ -408,7 +408,8 @@ Stable good lighting is needed.  Gross Lighting changes will have two effects, n
 
 ## 9. Methodology of operation
 
-9.1 Overview: The sensorCAM monitors up to 80 small square images (virtual sensors) each consisting of 16 pixels(4x4) the coordinates of which relate to the row/column of the top left pixel. The top left pixel of the QVGA(240x320) image is an r,c coordinate of 0,0. Sensors with coordinate 0,0 are considered "undefined". Sensors are electrically "noisy", so much effort was applied to avoid noise trips.
+### 9.1 Overview: 
+The sensorCAM monitors up to 80 small square images (virtual sensors) each consisting of 16 pixels(4x4) the coordinates of which relate to the row/column of the top left pixel. The top left pixel of the QVGA(240x320) image is an r,c coordinate of 0,0. Sensors with coordinate 0,0 are considered "undefined". Sensors are electrically "noisy", so much effort was applied to avoid noise trips.
 
 After boot-up, every virtual sensor is imaged and a Sensor_ref[] recorded. This is a ONE frame grab as a first guess.  All sensors should preferably be **un-occupied at boot up**. If not, the user will have to manually take reference grabs at an appropriate time using the '**r%%**' commands. The'**r%%**' also triggers an IMMEDIATE start of a 3.2sec average Ref for S%%.'**r00**' triggers a 1 frame reference refresh for ALL sensors but also starts the auto reference process, as does **r%%**. The latest version, at boot-up, commences regular averaged reference updates assuming all unoccupied.  If an "occupied" state occurs during the averaging, the averaged ref. is rejected.
 
@@ -423,30 +424,28 @@ As the sensor image suffers from excessive noise at low light levels, another av
 The sensor size can be padded out(enlarged) with dummy pixels using *#define SEN_SIZE 2* in file configCAM.h
 
 ### 9.2 Algorithm description
-
-
-
-g/b b/r in each quadrant. These ratios are compared to that of the reference image for changes. The process in more detail is as follows:
+The algorithm fo r bpd is weighted heavily owards colour changes rather than brightness.  This reduces the sensitivity to mains frequency flicker and drifting light intensity (e.g. daylight).  The algorithm for comparing colours is somewhat complex and may well be improved in later versions.  THe focus of detection is changing colours as opposed to changing brightness.  To this end each sensor (4x4) is divided into four quadrants of rgb colour.  The colour brightness factor is removed by an algorithm computing the colour ratios r/g g/b b/r in each quadrant. These ratios are compared to that of the reference image for changes. The process in more detail is as follows:
 
 Each sensor is split into 4 quadrants(quad), each quad has 4 pixels of 3 colours(48 x 6-bit bytes in total)
 
-The sum of all 12 bytes(4*3) in a quad is found as a quad brightness(4off) and the sum(4) of each colour(rgb) for each quad is found giving a total of 12 colour sums(3 colours* 4 quads) plus 4 brightness values
+The sum of all 12 bytes(4\*3) in a quad is found as a quad brightness (4off) and the sum (4) of each colour (rgb) for each quad is found giving a total of 12 colour sums (3 colours \* 4 quads) plus 4 brightness values.
 
- Within each quad,3 colour ratios are calculated for Red/green green/blue blue/red(largest(*32) divided by smallest(any 0 changed to 1) to give 12 colour ratios, each>=32(32 if identical)(placed in array Cratio[12])
+ Within each quad, 3 colour ratios are calculated for Red/green green/blue blue/red(largest(*32) divided by smallest(any 0 changed to 1) to give 12 colour ratios, each>=32 (32 if identical) (placed in array _Cratio[12]_)
 
-Compare the values in Cratio[12] with the reference array(precomputed from Sensor_ref[]) and find the maximum“Xratio” between the two sets of 12“Cratios” using the same formula(giving Xratios of 32 to 2016)
+Compare the values in _Cratio[12]_ with the reference array (precomputed from _Sensor_ref[]_) and find the maximum “_Xratio_” between the two sets of 12 “_Cratios_” using the same formula (giving _Xratios_ of 32 to 2016)
 
-Set maxDiff to the largest ratio for a sensor from the 12“Xratios”
+Set _maxDiff_ to the largest ratio for a sensor from the 12 “_Xratios_”
 
-A brightness score is similarly calculated between the full ref. brightness and that for the current sensor using formula 16*bright/Sen_Brightness_Ref[bsn]-16. It is scaled to give a value from 0 upwards. With brightSF=2, a score of 2 represents about 7% brighter so is relatively insensitive. Code uses int so,<=6% difference gives a 0 score.
+A brightness score is similarly calculated between the full ref. brightness and that for the current sensor using formula 16\*_bright_/_Sen_Brightness_Ref[bsn]_-16. It is scaled to give a value from 0 upwards. With _brightSF_=2, a score of 2 represents about 7% brighter so is relatively insensitive. Code uses int so <=6% difference gives a 0 score.
 
-The“diff” score(bpd) comprises of(bright*brightSF+maxDiff)(>=32) and is weighted towards colour difference+small brightness component(of 2 for 7% change)
+The “diff” score(_bpd_) comprises of (_bright_\*_brightSF+maxDiff_)(>=32) and is weighted towards colour difference+small brightness component(of 2 for 7% change)
 
-The diff(bpd) is compared to threshold for a decision on trip state. If greater than threshold, several additional checks are made including requiring 2 consecutive frames to exceed threshold, averaging pixels over two frames,and possibly confirmation from a twin sensor. These contribute to an additional response time delay(+100mSec).Furthermore the reference image is normally based on a 32 frame average pixel to eliminate any“noise” in the sensor reference itself.
+The diff(bpd) is compared to threshold for a decision on trip state. If greater than _threshold_, several additional checks are made including requiring 2 consecutive frames to exceed _threshold_, averaging pixels over two frames, and possibly confirmation from a twin sensor. These contribute to an additional response time delay (+100mSec).Furthermore the reference image is normally based on a 32 frame average pixel to eliminate any “noise” in the sensor reference itself.
 
-9.3 Program Summary: Once the sensorCAM parameters and environmental conditions are set, the sensorCAM will run continuously, looping once per 100mSec. Each loop takes the following steps:
+### 9.3 Program Summary
+Once the sensorCAM parameters and environmental conditions are set, the sensorCAM will run continuously, looping once per 100mSec. Each loop takes the following steps:
 
-1.//****IF IN MYWEBSERVER MODE, JUST MONITOR SERIAL PORTS FOR RESET(R or F)
+1.//****IF IN MYWEBSERVER MODE, JUST MONITOR SERIAL PORTS FOR RESET (**R** or **F**)
 
 2.//****CALCULATE AND PRINT LOOP TIME-& IF CALLED FOR, UPDATE NEW CAMERA SETTINGS
 
