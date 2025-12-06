@@ -471,57 +471,54 @@ Once the sensorCAM parameters and environmental conditions are set, the sensorCA
 
 17.//****CHECK FOR USB COMMAND INPUT- PROCESS ANY COMMAND
 
-### APPENDIX A
+## APPENDIX A
 
 ### ESP32 sensorCAM Command Summary
-
 rev 1SEP25
+#### Introduction
+Up to 10 banks (0-9) of sensors. Each bank can have up to 8 enabled sensors (0-7). Bank/sensor (%%) up to'97'.  Array _Sensor\[n]_ holds coordinates(rx) of sensor n. Offsets are _long int_. Array uses 88+320 bytes(10*8*4) EEPROM.  Sensors are grouped into banks(b) of individuals(s). e.g. bsNo 6/7 identifies bank 6, sensor 7.(n=8*6+7=55=067) Sensors are undefined if coordinates(rx) are set to 00. They are disabled if _SensorActive\[n]_ is set to false.  
+If a sensor detects differences, then any output LED (_pLED qLED_) assigned to the associated Bank of sensors should turn ON.  
+On reset (power-up), reference grabs are taken for all defined (in EEPROM) sensors, and then enables them.
+To define a sensor, use'**a**' command,  Processing4, or (outdated method) a bright LED on the desired spot and dim lighting with a "scan" (**s%%**). Save in EEPROM(**e**). SensorCAM uses RGB565 image format which is incompatible with JPG, so auto reboots between SensorCAM or webCAM modes.
 
-Can have 10 banks(0-9) of sensors. Each bank can have up to 8 enabled sensors(0-7). Bank/sensor(%%) up to'97'.Array Sensor[n] holds coordinates(rx) of sensor n. Offsets are long int. Array uses 88+320 bytes(10*8*4) EEPROM.Sensors are grouped into banks(b) of individuals(s). e.g. bsNo 6/7 identifies bank 6 individual 7.(n=8*6+7=55=067)Sensors are undefined if coordinates(rx) are set to 00. They are disabled if SensorActive[n] is set to false.
+#### Commands below are received over the USB or i2c interfaces.__
 
-If a sensor detects differences, then any output LED assigned to the associated Bank of sensors should turn ON.
+**a%%[, rr, xx]** **enAble** _Sensor[%%]_ & refresh _Sensor_ref[%%]_, _cRatios_ etc. 4x4 from image in latest frame. **(Note 20.)**
 
-On reset(power-up), reference grabs are taken for all defined(in EEPROM) sensors, and then enables them.
+**b#\[,$]** **Bank** # sensors. Show which sensors OCCUPIED(in bits 7-0).(1=occ.)(b#$ sets _brightSF_)
 
-To define a sensor, use'a' command, Processing4, or a bright LED on the desired spot and dim lighting and a"scan"(s). Save in EEPROM(e). SensorCAM uses RGB565 image format which is incompatible with JPG, so Reboots between Sensor or WiFi modes.
+**c$$$$*** *re**Calibrate** camera CCD occasionally and grab new references for all enabled sensors(Beware of doing this while any sensors are occupied! NB.Obstructed sensors will later need an **r%%**! Check all bank LEDS are off AND check all sensors are unoccupied before recalibrate. Can set AWB AEC AGC CB through $$$$ e.g. c0110  
+Also able to change default setting for Brightness, Contrast & Saturation with extra digits e.g. c$$$$012
 
-### Commands below are received over the USB or i2c interfaces.
+**d%%[#]** **\*Difference** score in colour& brightness between Ref& actual image. Show# grabs.
 
- $a\%\%[, rr, xx]$  enAble Sensor  $[\%\%]$  & refresh Sensor_ref  $[\%\%]$  , cRatios etc. 4x4from image in latest frame.(Note 20.)
+**e** &nbsp; &nbsp; **EPROM** save of any new Sensor offset positions, pvtThresholds, new twins and 5 default parameter settings.
 
-b\#[,$] Bank\# sensors. Show which sensors OCCUPIED(in bits 7-0).(1=occ.)(b\#$ sets brightSF)
+**f\%\%** **\* Frame** buffer sample display. Print latest bytes in _Sensor_ref[\%\%]_ &\d  Sensor  $[\%\%]$  positions.
 
-c$$$$*reCalibrate camera CCD occasionally and grab new references for all enabled sensors(Beware of doing this while any sensors are occupied! NB.Obstructed sensors will later need an r%%! Check all bank LEDS are off AND check all sensors are unoccupied before recalibrate. Can set AWB AEC AGC CB through$$$$ e.g. c0110 Also able to change default setting for Brightness, Contrast\& Saturation with extra digits e.g. c$$$$012
+**g** &nbsp; **\* Get** Camera Status. Displays most current settings available in webcam window (both sensor\& video mode).
 
-d%%[#]*Difference score in colour& brightness between Ref& actual image. Show# grabs.
+**h$[,\#]**  **\* Help(debug)** output.  **h9**  to set all OFF,  **h0**  turn ON detailed USB output.'h7,#"Waits" scroll on bank# trip.
 
-e EPROM save of any new Sensor offset positions, new twins& 5 default parameter settings.
+**i%%[,$$]**  **Info.** on S%%.  Status(enabled/occupied), position(r,x), any twin(S$$), pvtThreshold & brightness
 
- $f\%\%$  * Frame buffer sample display. Print latest bytes in Sensor_ref  $[\%\%]\&$  Sensor  $[\%\%]$  positions.
+**j$#**  **\* adJust** camera setting $ to value # and display most settings(as for '**g**'). '**j**' alone lists the options for $\#
 
-g* Get Camera Status. Displays most current settings available in webcam window.(both sensor\& video mode)
+**k%%,rrr,xxx** set **coordinates** of Sensor S$$ to row: rrr & column: xxx. Follow with  **r%%**. Verify values with  **p$** 
 
- $h$[,\#]*$  Help(debug) output.  $h 9$  to set all OFF,  $h 0$  turn ON detailed USB output.'h7,#"Waits" scroll on bank# trip.
+ **l%%** (Lima) **Latch** sensor S%% to on(1 = occupied(LED lit) & also set _SensorActive[%%]_ false to disable sensing.
 
- $i\%\%[,\$  []\) ,  $\$  []\) ,
+**m$[,%%]** **\*Minimum** $(2) sequential frames over _Threshold_ to trigger/trip sensor. Shows list of parameters. **(Note 14)**
 
-j$\#* adJust camera setting$ to value# and display most settings(as for'g')'j' alone lists the options for$\#
+ **n#[,%%]**   **nLED** bank Number assigned to the programmable status nLED. Optional  $n 10,\%\%$  to set  $\min$  Sensors.
 
- $k\%\%$  ,rrr,xxx* set coordinates of Sensor  $S\%\%$  to row: rrr\& column: xxx. Follow with  $r\%\%$  . Verify values with  $p$$ 
+**o%%**  (Oscar) force **Off** sensor%% (0=UN-occupied(LED off) Also set _SensorActive[##]_ false to disable updating.
 
- $l\%\%$ (Lima) Latch sensor%% to on(1= occupied(LED lit)& also set SensorActive[%%] false to disable sensing.
+**p$** **\*Position Pointe**r table info for banks 0 to  $\$  giving DEFINED sensor r/ x\) positions.  $p\%\%$  shorter.
 
- $m$[,\%\%]$  *Minimum$(2) of sequential frames>Threshold to trigger/trip sensor. Shows list of parameters.(Note 14)
+**q$** **\* Query** bank$, to show which sensors ENABLED(in bits 7-0). 1=enabled. **q9** gives ALL banks
 
- $n\#[,\%\%]$  nLED bank Number assigned to the programmable status nLED. Optional  $n 10,\%\%$  to set  $\min$  Sensors.
-
- $0\%\%$ (Oscar)Force sensor%% off(0=UN-occupied(LED off)& also set SensorActive[\#\#] false to disable updating.
-
-p$* Position Pointer table info for banks 0 to  $\$  giving DEFINED sensor r/ x\) positions.  $p\%\%$  shorter.
-
-q$* Query bank$, to show which sensors ENABLED(in bits 7-0). 1=enabled. q9 gives ALL
-
- $r\%\%[,0]$  Refresh Average Sensor_Ref[\#\#](lf defined), enable\& calc. cRatios etc. r%%,0 refreshes block  $S\% 0$  to  $S\%\%$ 
+**r\%\%[,0]**  **Refresh** Average Sensor_Ref[\#\#](lf defined), enable\& calc. cRatios etc. r%%,0 refreshes block  $S\% 0$  to  $S\%\%$ 
 
 r00 Refresh Average Refs etc. for ALL defined sensors. Ignores enable[]. Sensor[00] reserved for brightness ref.
 
