@@ -302,16 +302,16 @@ It is desirable to place sensors where they generate a“mottled” image of pix
 
 
 
-| OV2640 CAM(std lens) | OV2640 CAM(std lens) | OV2640 CAM(std lens) | 50 | deg view |  |  |  |  |  |  |  |  |
+| OV2640 | CAM(std lens) | field of view | 60 deg |  |  |  |  |  |  |  |  |  |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| CAMERA DISTANCE: | CAMERA DISTANCE: | (mm) | 800 | 800 | 1000 | 1000 | 1200 | 1200 | 1500 | 1500 | 1800 | 1800 |
-| pixel size | QVGA | (mm) | 2.18 | 2.18 | 2.73 | 2.73 | 3.27 | 3.27 | 4.09 | 4.09 | 4.91 | 4.91 |
-| SEN_SIZE: |  |  | 0 | 2 | 0 | 2 | 0 | 2 | 0 | 2 | 0 | 2 |
-| Sensor Size | Sensor Size | (pixels) | 4x4 |  $6\times 6$  | 4x4 | 6x6 | 4x4 |  $6\times 6$  | 4x4 |  $6\times 6$  | 4x4 |  $6\times 6$  |
-|  | ratio:gauge/sensor | ratio:gauge/sensor |  |  |  |  |  |  |  |  |  |  |
+|     | CAMERA HEIGHT: | (mm) | 800 | 800 | 1000 | 1000 | 1200 | 1200 | 1500 | 1500 | 1800 | 1800 |
+| QVGA | pixel size | (mm) | 2.18 | 2.18 | 2.73 | 2.73 | 3.27 | 3.27 | 4.09 | 4.09 | 4.91 | 4.91 |
+|  | SEN_SIZE: | setting | 0 | 2 | 0 | 2 | 0 | 2 | 0 | 2 | 0 | 2 |
+|  | Sensor Size | (pixels) | 4x4 |  $6\times 6$  | 4x4 | 6x6 | 4x4 |  $6\times 6$  | 4x4 |  $6\times 6$  | 4x4 |  $6\times 6$  |
+|  | ratio:gauge/sensor |  |  |  |  |  |  |  |  |  |  |  |
 |  |  |  |  |  |  |  |  |  |  |  |  |  |
 | scale | sleeper | std gauge |  |  |  |  |  |  |  |  |  |  |
-| 1:43. | 5 | 32 | 3.7 | 2.4 | 2.9 | 2.0 | 2.4 | 1.6 | 2.0 | 1.3 | 1.6 | 1.1 |
+| O  1:43 | 5 | 32 | 3.7 | 2.4 | 2.9 | 2.0 | 2.4 | 1.6 | 2.0 | 1.3 | 1.6 | 1.1 |
 | HO 1:87 | 2.5 | 16.5 | 1.9 | 1.3 | 1.5 | 1.0 | 1.3 | 0.8 | 1.0 | 0.7 | 0.8 | 0.6 |
 | TT 1:120 | 1.8 | 12 | 1.4 | 0.9 | 1.1 | 0.7 | 0.9 | 0.6 | 0.7 | 0.5 | 0.6 | 0.4 |
 | N 1:160 | 1.3 | 9 | 1.0 | 0.7 | 0.8 | 0.6 | 0.7 | 0.5 | 0.6 | 0.4 | 0.5 | 0.3 |
@@ -319,15 +319,12 @@ It is desirable to place sensors where they generate a“mottled” image of pix
 
 Table 1. Comparison of sensor sizes and track features:Ratio of gauge/sensor dimension
 
-6 PROCESSING4 monitor/console
+### 6 PROCESSING4 monitor/console
 
 ![Processing4 Console with Image](/_static/images/ex-sensorcam/processing4-console-image.png)
 
- Figure 5
-
-Processing 4 Console and image window
-
- Note: Sub-optimum‘c’ settings caused green tint.
+**Figure 5 &nbsp; Processing 4 Console and image window**  
+ &nbsp; Note: Sub-optimum‘c’ settings caused green tint.
 
 The Processing application displays the image using sensorCAM settings, and also shows colour coded sensors. As previously stated, the PROCESSING4 application is a crude USB monitor that enables the user to control and configure the sensorCAM with the additional benefit of being able to invoke a display of the image. All the sensorCAM commands can be used. At 115200 baud, a full RGB565 image takes 13 seconds, but it is often convenient to reduce this by prescribing a smaller image segment of limited rows and/or columns(e.g.Y120 for half of a 240 row screen). The Processing 4 application can be downloaded from this URL:https://processing.org
 
@@ -341,19 +338,19 @@ The image will have enabled(bs) sensors boxed& identified by a(resistor) colour 
 
 ### PROCESSING4 command summary:
 
-W###will limit the image to\#\#\# rows wide/high(1-240)- default 240
+**W###** &nbsp; will limit the image to\#\#\# rows wide/high(1-240)- default 240
 
-X\#\##will start the image from column###(0-319)-default 0-uses the sensorCAM'x' command.
+**X###** &nbsp; will start the image from column###(0-319)-default 0-uses the sensorCAM'x' command.
 
-Y###will initiate an image download starting at row###(0-239)-default 0-uses the sensorCAM's'y' cmd.
+**Y###** &nbsp; will initiate an image download starting at row###(0-239)-default 0-uses the sensorCAM's'y' cmd.
 
-Z###will limit the image to### columns(1-320)- default 320-uses the sensorCAM'z' command.
+**Z###** &nbsp; will limit the image to### columns(1-320)- default 320-uses the sensorCAM'z' command.
 
-H will flip/mirror subsequent images horizontally(x).(Note: reverses bsNo sensor colour code to s-b!)
+**H** &nbsp; will flip/mirror subsequent images horizontally(x).(Note: reverses bsNo sensor colour code to s-b!)
 
-V will flip/mirror subsequent images vertically(y).(V+ H effectively rotates image 180 degrees)
+**V** &nbsp; will flip/mirror subsequent images vertically(y).(V+ H effectively rotates image 180 degrees)
 
-R will cause a firmware reset of the sensorCAM via the DTR line of the FTDI interface. CAM will enter a wait mode for confirmation. Reset can be aborted with command'aw'(Abort&Wait). Ctrl-R Resets CAM instantly.
+**R** &nbsp; will cause a firmware reset of the sensorCAM via the DTR line of the FTDI interface. CAM will enter a wait mode for confirmation. Reset can be aborted with command'aw'(Abort&Wait). Ctrl-R Resets CAM instantly.
 
 ### NOTE:
 
