@@ -54,14 +54,6 @@ The sensorCAM takes 10 frames per second in RGB565 format at QVGA resolution of 
 
 2PCS ESP32-CAM-MB, Aideepen ESP32-CAM W BT Board ESP32-CAM-MB Micro USB to Serial Port CH-340G with OV2640 2MP Camera Module Dual Mode
 
- Visit the Aideepen Store
-
-4.1★★★★408 ratings| 33 answered questions
-
- Amazon's Choice Overall Pick
-
--27%$1899
-
 ![ESP32 Wrover CAM Photo](/_static/images/ex-sensorcam/esp32-wrover-cam-photo.png)
 
 **Note:** While this manual primarily talks about the ESP32-CAM-MB, there is a similar tested alternative in the newer **ESP32 WROVER CAM** single board option. For some further preliminary details refer to Section 7 Wiring, Figure 6.
