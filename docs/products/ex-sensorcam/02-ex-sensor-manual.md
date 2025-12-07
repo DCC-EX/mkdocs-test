@@ -799,24 +799,25 @@ The 2x Endpoints require about  10mA  each. All options can be adapted for use w
 
 ### APPENDIX G
 
-### I2C sensorCAM commands& PROTOCOL.
+### I2C sensorCAM commands & PROTOCOL.
 
-With version 3.00 of IO_EXSensorCAM.h CS driver, commands and parameters are sent to the CAM as a short string of binary bytes to be interpreted by sensorCAM. Return data(if it is applicable) is also in compact byte format as below.
+With version 3.00 of IO_EXSensorCAM.h CS driver, commands and parameters are sent to the CAM as a short string of binary bytes to be interpreted by sensorCAM. Return data (if it is applicable) is also in compact byte format as below.  Other commands respond with "ACK OK".
 
-The sensorCAM sends packets of data to the i2c bus master upon request. The data sent is dependent on the last command received as that command prepares a packet in anticipation of a bus Request. Only nine commands can affect the return packet format. They will contain the relevant ASCII command character in the first(header) byte, followed by data.These are listed below.
+The sensorCAM sends packets of data to the i2c bus master upon request. The data sent is dependent on the last command received as that command prepares a packet in anticipation of a bus Request. Only nine commands can affect the return packet format. They will contain the relevant ASCII command character in the first (header) byte, followed by data. These are listed below.
 
 **1.** Bank cmd '**b$**': The bank command will set the Request packet to the following $+2 bytes
 
-| 0x62('b') | SensorBankStat[$] | SensorBankStat[$-1] | .... SensorBankStat[0] | i2cparity |
-| --- | --- | --- | --- | --- |
-
-**2.** Difference score '**d%%#** '(Diff+bright): The Diff command will set the Request packet to the following 5 bytes
-
-| 0x64('d')| 0## | dMaxDiff+dBright | dMaxDiff | dMaxDiff |
+| 0x62('b') | SensorBankStat[$] | SensorBankStat[$-1] | .... SensorBankStat[0] | _i2cparity_ |
 | --- | --- | --- | --- | --- |
 
 
-**3.** Frame data'**f%%**': Creates four packets containing 4 rows of 4 pixel values in RGB666 format of Ref and Actual pixels Total 16x2 pixels. Each pixel has three 6bit colour bytes for a total of (3+3x4x2) 27 bytes per packet
+**2.** Difference score '**d%%#**' (Diff+bright): The Diff command will set the Request packet to the following 5 bytes
+
+| 0x64('d')| 0## | dMaxDiff+dBright | dMaxDiff | dBright |
+| --- | --- | --- | --- | --- |
+
+
+**3.** Frame data '**f%%**': Creates four packets containing 4 rows of 4 pixel values in RGB666 format of Ref and Actual pixels Total 16x2 pixels. Each pixel has three 6bit colour bytes for a total of (3+3x4x2) 27 bytes per packet
 
 | 0x66('f') | 0%% | 0x00(row) | RefPix0Red | RefPix0Green | RefPix0Blue | RefPix1Red | .... ActPix3Green | ActPix3Blue |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -825,28 +826,27 @@ The sensorCAM sends packets of data to the i2c bus master upon request. The data
 | 0x66('f') | 0%% | 0x03(row) | RefPixCRed | RefPixCGreen | RefPixCBlue | RefPixDRec | … ActPixFGreen | ActPixFBlue |
 
 
-**4.** Individual Info.'**i%%,%%**': The Info command will set the Request packet to the following 8 bytes. twin=00 for NO twin.
+**4.** sensor Information. '**i%%,%%**': The Info command will set the Request packet to the following 8 bytes. twin=00 for NO twin.
 
 | 0x69('i') | 0%% | SensorStat | SensorActive | columnL | columnH | row | twin## |
 | --- | --- | --- | --- | --- | --- | --- | --- |
 
 
-5.Min/max cmd'm$,##':(also n$,##) Returns 7 byte Request packet data as below for additional feedback to operator.
+**5.** Min/max cmd '**m$,##**': (also **n$,##**) Returns 7 byte Request packet data as below for additional feedback to operator.
 
 | 0x70('m') | min2flip | minSensors | maxSensors | nLED | threshold | TWOIMAGE_MAXBS |
 | --- | --- | --- | --- | --- | --- | --- |
-0x70('m') min2flip minSensors maxSensors nLED threshold TWOIMAGE_MAXBS
 
 
-**6.** Position Pointer'**p$**': This sends sensor coordinates for bank$. i.e. $/0, $/1, to $/7 (only if defined) Up to 25 bytes.
+**6.** Position Pointer '**p$**': This sends sensor coordinates for bank$. i.e.  <span>$/0</span>, <span>$/1</span>, to <span>$/7</span> (only if defined) Up to 25 bytes.
 
-| 0x70('p') | H+bsn for $/0 | $/0 row | $/0 column | H+bsn for $/1 row | $/1 row | H+bsn for $/7 | $/7 row | $/7 column | i2cparity |
+| 0x70('p') | H+bsn for&nbsp;$/0 | $/0 row | $/0 column | H+bsn for $/1 row | $/1 row | H+bsn for&nbsp;$/7 | $/7 row | $/7 column | i2cparity |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 
 > **Note:** if column(0-319) exceeds 255, a high bit H(=0x80) is added to the bsn byte for that triplet.
 
 
-**7.** Query enabled'**q$**': This will set up the Request packet of enabled status' in the following $+2 bytes
+**7.** Query enabled '**q$**': This will set up the Request packet of enabled status' in the following $+2 bytes
 
 | 0x71('q') | '$' | SensorActiveBlk[$] | SensorActiveBlk[$-1] | .... SensorActiveBlk[0] |
 | --- | --- | --- | --- | --- |
@@ -854,11 +854,28 @@ The sensorCAM sends packets of data to the i2c bus master upon request. The data
 
 **8.** Threshold '**t##**': Threshold command will set the Request packet to the following byte sequence of enabled sensors. 
 
+| 0x74('t') |  0x## | T+bpd S00 &nbsp; data | $2^{nd}$ t+0xbsn (sensor No) | $2^{nd}$ T+bpd data | $3^{rd}$&nbsp;t+0xbsn | $3^{rd}$ T+bpd data | ... t+Last bsn | T+bpd byte | 0x50 |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 
-0x 74\left({}^{\prime} t^{\prime}\right)\quad 0\times\#\#\quad T+bpd\quad data\quad S 00\quad 2^{nd} t+0\times bsn\quad(\text{ sensor No})\quad 2^{nd} T+bpd\quad data\quad 3^{rd} t+0\times bsn\quad 3^{rd} T+bpd\quad data$$t+Last bsn T+bpd byte  $0\times 50\quad 0\times 
-0x50 == 80 = end of data packet(an invalid bsn!).  Maximum of 15 enabled sensors in 32 byte packet.Data bytes contain"bpd" diff scores(0-127) for enabled sensors with MSB(T) set 1 if tripped. MSB(t) of bsn set if the bpd> threshold. Byte[0] contains ASCII't' and Byte[1] will contain the last(old) setting of threshold.
+> **Note:** 0x50 == 80 = end of data packet (an invalid bsn!).  Maximum of 15 enabled sensors in 32 byte packet. Data bytes contain "bpd" diff scores(0-127) for enabled sensors with MSB(T) set 1 if tripped. MSB(t) of bsn set if the bpd > _threshold_. Byte[0] contains ASCII 't' and Byte[1] will contain the last (old) setting of _threshold_.
 
-9.Row image'y\#\#\#': This sends up to  $320\times 2$  byte RGB565 pixels of row\#\#\# to USB console for image reconstruction.
+
+**9.** Row image '**y###**': This sends up to  320x2byte RGB565 pixels of row ### to USB console for image reconstruction.
+
+| 0x79('y') | '#' |'#' |'#' | 0x78('x') | 'x' | 'x' | 'x' | 0x7A('z') | 'z' | 'z' | 'z' | 0x3A(':') |
+ --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | 
+ 
+> (x & z values in ASCII bytes. ':' starts 9 byte header) 
+
+| 0x79('y') | 0x##(row) | 0x78('x') | 0x## (column/2 | 0x7A('z') | 0x## (zlength/2 | chksumL | chksumH | 0x3A(':') |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+
+> (2 RGB565 bytes/pixel with no NUL characers. Even column start)
+
+| $1^{st}$ data byte | $2^{nd}$ data byte | $3^{rd}$ data byte | ... t+Last bsn | T+bpd byte | 0x50 |
+| --- | --- | --- | --- | --- | --- |
+
+
 
 ![Console Image Reconstruction](/_static/images/ex-sensorcam/console-image-reconstruction.png)
 
@@ -868,115 +885,110 @@ The sensorCAM sends packets of data to the i2c bus master upon request. The data
 
 ### 1. Sensor/vpin Numbering
 
-The numbering of sensors can be consecutive by vPin, which is the common practice with multi-pin peripherals(e.g. PCA9685 16-channel Servo driver and MCP23017 16-channel GPIO Expander). Sequential vPin numbers within a device is hardware enforced, but this loses some of the advantages available by a more meaningful ID notation. Such ID's are available for jmri use and so can also be used for sensorCAM.Use of IDs, as suggested below, can remove any need to program with vPin numbers.
+The numbering of sensors can be consecutive by vPin, which is the common practice with multi-pin peripherals (e.g. PCA9685 16-channel Servo driver and MCP23017 16-channel GPIO Expander). Sequential vPin numbers within a device is hardware enforced, but this loses some of the advantages available by a more meaningful ID notation. Such ID's are available for jmri use and so can also be used for sensorCAM. Use of IDs, as suggested below, can remove any need to program with vPin numbers.
 
-For any peripheral device, the vPin is needed for commands(e.g.700+5), but, if predefined(e.g. in config.h), alphanumeric names such as CAM or CAM2 or ESSEX can be used in place of the base vPin to identify the camera. Then commands for CAM pin 5 become: e.g. AT(CAM+5) or AT(ESSEX+05)
+For any peripheral device, the vPin is needed for commands (e.g.700+5), but, if predefined (e.g. in config.h), alphanumeric names such as CAM or CAM2 or ESSEX can be used in place of the base vPin to identify the camera. Then commands for CAM pin 5 become: e.g. AT(CAM+05) or AT(ESSEX+05)
+> e.g.  
+> #define SENSORCAM_VPIN &nbsp; 700 &nbsp; &nbsp; //place in config.h or myAutomation.h or mysetup.h  
+> #define CAM &nbsp; SENSORCAM_VPIN+ &nbsp; &nbsp; //in config.h or myAutomation.h or mysetup.h  
+> 
+> Valid EXRAIL commands: AFTER(CAM 5)AT(SENSORCAM_VPIN+7)IFGTE(CAM 010, 2)  
+>  
+> To avoid frequent“CAM” in scripts, an alias can be assigned e.g. ALIAS(ESSEX_P1, CAM+0x10)
 
-e.g.#define SENSORCAM_VPIN 700//place in config.h or myAutomation.h or mysetup.h#define CAM SENSORCAM_VPIN+//in config.h or myAutomation.h or mysetup.h
+With each sensorCAM having up to 80 sensors, it is desirable to test groups of (1 to 8) sensors with a single EXRAIL test using the **IFGTE()** or **IFLE()** commands. To do this, the sensors are logically arranged in “banks” of (consecutive) vpins. The logical grouping available can be written in the form “bs” or b/s where b can have bank values of 0-9 (10 banks) and s values 0-7 (8 sensors). **IFGTE** and **IFLT** read a whole bank“value”. Native CAM commands can also be issued e.g. **PARSE(“<N b 4>”)** for bank 4.
 
- Valid EXRAIL commands: AFTER(CAM 5)AT(SENSORCAM_VPIN+7)IFGTE(CAM 010, 2)
+EXRAIL can accept “b/s” numbering (e.g. 047) if we add the leading 0. e.g. vpin= **SENSORCAM_VPIN+ 047** e.g. **IFGTE(CAM 047,1)** provided values are defined for **SENSORCAM_VPIN** & **CAM**(as above).
 
-To avoid frequent“CAM” in scripts, an alias can be assigned e.g. ALIAS(ESSEX_P1, CAM+0x10)
+**(N.B.“CAM” includes the ‘+’)** Using this method there is no need to remember assigned vPin values!
 
-With each sensorCAM having up to 80 sensors, it is desirable to test groups of(1 to 8) sensors with a single EXRAIL test using the IFGTE() or IFLE() commands. To do this, the sensors are logically arranged in“banks” of(consecutive) vpins. The logical grouping available can be written in the form“bs” or b/s where b can have bank values of 0-9(10 banks) and s values 0-7(8 sensors). IFGTE and IFLT read a whole bank“value”. Native CAM commands can also be issued e.g. PARSE(“<N b 4>”) for bank 4.
-
-EXRAIL can accept“b/s” numbering(e.g. 47) if we add a leading 0. e.g. vpin= SENSORCAM_VPIN+ 047 e.g. IFGTE(CAM 047,1) provided values are defined for SENSORCAM_VPIN\& CAM(as above).
-
-(N.B.“CAM” includes the‘+’) Using this method there is no need to remember assigned vPin values!
-
-Example 1: For the approach to a signal, several sensors may be deployed(say S13 to S17) with S17 last at the signal. As a train approaches the signal, the(bank)“value” of the tripping sensors will increase.This can be used to control the loco speed for a smooth and precise stop at a platform say. Commands IFGTE(CAM 013,8) SPEED(40)... IFGTE(CAM 013,16) SPEED(30) etc. can be used to control the loco approach speed with some precision. Finally, at the signal(S17), IFGTE(CAM 013,128) STOP
+**Example 1:** For the approach to a signal, several sensors may be deployed (say S13 to S17) with S17 last at the signal. As a train approaches the signal, the (bank) “value” of the tripping sensors will increase.This can be used to control the loco speed for a smooth and precise stop at a platform say.  
+Commands **IFGTE(CAM 013,8) SPEED(40)**... **IFGTE(CAM 013,16)** **SPEED(30)** etc. can be used to control the loco approach speed with some precision.  
+Finally, at the signal(S17), **IFGTE(CAM 013,128) STOP**
 
  Aliases could also be defined and used for station/bank or line sensors.e.g.IFGTE(TRENTHAM, 0x80)
 
-Example 2: The CAM can have up to 10 occupation/line detectors. If two“linear” line sensors are needed, and we have bank 1 allocated(S10-S17), the following 16 vPins could be assigned to 2 banks of linear sensors. We can use(bs#) ID of 20 to 27 for first linear sensor(bank2) and 30-37 of bank3. The Command Station can easily handle banks of 8, using an ID based format of(CAM 020) and(CAM 030).The“bank” or b/s notation requires the leading‘0’ on the bs No. for automatic vpin calculation. The linear segments at S21 to S27 may also be tested individually and a common bank threshold can be set if needed.e.g.IFGTE(CAM 020,1)...// bank occupied, or IFGTE(CAM 024,16)//2nd half occupied.
+**Example 2:** The CAM can have up to 10 occupation/line detectors. If two“linear” line sensors are needed, and we have bank 1 allocated (S10-S17), the following 16 vPins could be assigned to 2 banks of linear sensors. We can use (bs#) ID of 20 to 27 for first linear sensor(bank2) and 30-37 of bank3. The Command Station can easily handle banks of 8, using an ID based format of (CAM 020) and (CAM 030). The“bank” or b/s notation requires the leading ‘0’ on the bsNo. for automatic vpin calculation. The linear segments at S21 to S27 may also be tested individually and a common bank threshold can be set if needed. e.g. **IFGTE(CAM 020,1)**...// bank occupied, or **IFGTE(CAM 024,16)** &nbsp; //2nd half occupied.
 
-Note: With‘0’ notation, unless you understand the issue, avoid using bank 8& 9 as mistakes may arise.(08# must be expressed as 010# and 09# as 011# for correct outcome)
+Note: With ‘0%%’ notation, unless you understand the issue, avoid using bank 8 & 9 as mistakes may arise.(08# must be expressed as 010# and 09# as 011# for correct outcome)
 
 ### 2. Multiple Cams
 
-Multiple sensorCAMs can be easily handled if CAM2, CAM3 etc are defined along the lines of CAM above, so IF(CAM2 012) tests a different sensor to IF(CAM3 012), provided SENSORCAM2_ VPIN etc. are defined. Using CS native commands, e.g.<Ni 212> and<Ni 312>, can also access S12 on different CAMs.The#define SENSORCAM_VPIN\#\## is essential for cam1. Do NOT change to SENSORCAM1_VPIN. You may use SENSORCAM2_VPIN and SENSORCAM3_VPIN with CAM2 and CAM3 in config.h
+Multiple sensorCAMs can be easily handled if CAM2, CAM3 etc are defined along the lines of CAM above, so **IF(CAM2 012)** tests a different sensor to **IF(CAM3 012)**, provided **SENSORCAM2_ VPIN** etc. are defined. Using CS native commands, e.g.**<Ni 212>** and **<Ni 312>**, can also access **S12** on different CAMs. **The #define SENSORCAM_VPIN ###** is essential for cam1. Do NOT insert a 1 in to **SENSORCAM_VPIN**. You may use **SENSORCAM2_VPIN** and **SENSORCAM3_VPIN** with **CAM2** and **CAM3** in _config.h_
 
-### APPENDIX I
+## APPENDIX I
 
-### Configuring EX-CS to connect to sensorCAM as an EXIO device.
+### Configuring EX-CS to connect to sensorCAM as an EX-IO device.
 
-A number of parameters and files may need to be changed or included to get the EX Command Station to respond appropriately to the sensorCAM. The(CS) modifications are to be placed in the directory containing CommandStation-EX.ino BEFORE final compilation and upload to the CS(Mega). Some further changes to vpins& addresses may be required to avoid conflicts with previously installed EX-CS devices.
+A number of parameters and files may need to be changed or included to get the EX Command Station to respond appropriately to the sensorCAM. The (CS) modifications are to be placed in the directory containing CommandStation-EX.ino BEFORE final compilation and upload to the CS(Mega). Some further changes to vpins and i2c addresses may be required to avoid conflicts with previously installed EX-CS devices.
 
 Refer to the sensorCAM Installation Guide for more detail on the EX-CS installation procedure.
 
-### File edits to configure EX-CS for sensorCAM:(refer to the latest InstallationGuide for details)
+### File edits to configure EX-CS for sensorCAM: (refer to the latest InstallationGuide for details)
 
-configCAM.h// adjust ADDR SSID& PWD if required before uploading sensorCAM.ino
+#### configCAM.h // adjust _ADDR, SSID_ & _PWD_ if required before uploading _sensorCAM.ino_
+```
+#define WIFI_SSID"xxxxxxxxx" &nbsp; //insert your#1 WiFi network nane here(2.5GHz)
+#define WIFI_PWD"xxxxxxxxx"        //"your network password"
+#define TWOIMAGE_MAXBS 030 &nbsp; //slower& more reliable averaging if below S30.(<097)  
+#define I2C_DEV_ADDR 0x11 &nbsp; //17==0x11 for BCD layout so can use existing Mega Master  
+#define SUPPLY 10 &nbsp; &nbsp; //local mains frequency dependent(currently just use 10)
+#define BAUD 115200 &nbsp; //any slower will degrade image transfer speed  
+#define SEN_SIZE 0  &nbsp; //0 gives standard 4x4 pixels
+```
+### CommandStation(CS)    //following files all in CommandStation-EX.ino folder.folder.
 
-#define WIFI_SSID"xxxxxxxxx"//insert your#1 WiFi network nane here(2.5GHz)#define WIFI_PWD"xxxxxxxxx"//"your network password"
+#### IO_EXSensorCAM.h     // driver for sensorCM to be used with CamParser.cpp`
+```// CamParser.cpp and CamParser.h are included in CommandStation-EX versions 5.4.0+```
 
-#define TWOIMAGE_MAXBS 030//slower& more reliable averaging if below S30.(<097)#define I2C_DEV_ADDR 0x11//17==0x11 for BCD layout so can use existing Mega Master#define SUPPLY 10//local mains frequency dependent(currently just use 10)#define BAUD 115200//any slower will degrade image transfer speed#define SEN_SIZE 0//0 gives standard 4x4 pixels
-
- CommandStation(CS)//following files all in CommandStation-EX.ino folder.folder.
-
-IO_EXSensorCAM.h// driver for sensorCM to be used with CamParser.cpp// CamParser.cpp and CamParser.h are included in CommandStation-EX versions 5.4.0+
-
-config.h//standard should do for single CAM at Vpin 700& address 0x11#define SENSORCAM VPIN 700//defines a suitable virtual vPin for the FIRST sensorCAM#define CAM SENSORCAM VPIN+//alias to replace vpins in EXRAIL e.g. AT(CAM 021) i.e.S21
-
-#define SENSORCAM2_VPIN 620//only if a second CAM has been created in myHal.cpp#define CAM2 SENSORCAM2_VPIN+
-
-myHal.cpp(preferred: use HAL() in myAutomation.h as per Installation Guide)#include"IO_EXSensorCAM.h"// sensorCAM driver for CS
-
- void halSetup(){
-
-//add in the following two lines minimum.
-
-EXSensorCAM::create(700, 80, 0x11);//max 80 digital(0 Analogue) Vpins to 779.
-
-// or EXSensorCAM::create(SENSORCAM_VPIN, 80, 0x11);//#define.._VPIN(s) in config.h.
-
-//using<80 sensors(fewer banks) may save vPin& RAM use.
-
-EXSensorCAM::create(620, 80, 0x12);//can use multiple CAMs if needed e.g.@620
-
-mySetup.h// a second CAM may use vpins 620 to 699 range if no conflicts I2CManager.setClock(100000);//to slow i2c bus clock rate(or.forceClock(100000);)
-
-SETUP("<Z 100 7000>");// set as output for now(used for<D ANOUT>\&<N> cmds)
-
+#### config.h             //standard should do for single CAM at Vpin 700& address 0x11
+```#define SENSORCAM VPIN 700     //defines a suitable virtual vPin for the FIRST sensorCAM
+#define CAM SENSORCAM VPIN+       //alias to replace vpins in EXRAIL e.g. AT(CAM 021) i.e.S21
+#define SENSORCAM2_VPIN 620       //only if a second CAM has been created in myHal.cpp
+#define CAM2 SENSORCAM2_VPIN+     //ditto
+``` 
+#### myHal.cpp            //(preferred: use HAL() in myAutomation.h as per Installation Guide)
+```#include"IO_EXSensorCAM.h"  // sensorCAM driver for CS
+void halSetup(){               //add in the following two lines minimum.
+      EXSensorCAM::create(700, 80, 0x11); //max 80 digital(0 Analogue) Vpins to 779.
+// or EXSensorCAM::create(SENSORCAM_VPIN, 80, 0x11);   //#define.._VPIN(s) in config.h.
+            // using < 80 sensors(fewer banks) may save vPin & RAM use.
+      EXSensorCAM::create(620, 80, 0x12);  //can use multiple CAMs if needed e.g.@620
+```
+#### mySetup.h  // a second CAM may use vpins 620 to 699 range if no conflicts 
+```
+I2CManager.setClock(100000);   //to slow i2c bus clock rate (or .forceClock(100000);)
+SETUP("<Z 100 7000>");     // set as output for now(used for<D ANOUT>\&<N> cmds)
 // start of up to 80 sesnsors numbered bsNo's 000 to 097(0/0 to 9/7)
-
-SETUP("<S 100 7000>");// first sensor(S00) at SENSORCAM VPINO 700 by default
-
- SETUP("<S 101 701 0>");//
-
+SETUP("<S 100 7000>");     // first sensor(S00) at SENSORCAM VPINO 700 by default
+SETUP("<S 101 701 0>");    //
 SETUP("<S 102702 0>");
-
 //setup as many as you want. You can add later manually with CS native<S> cmds.
-
 SETUP("<S 107707 0>");
-
-SETUP("<S 110708 0>");//note recommended id is 1%%(b/s) format, vpin is DEC.
-
+SETUP("<S 110708 0>");     //note recommended id is 1%%(b/s) format, vpin is DEC.
 // etc.
-
 //SETUP("<S 196 778 0>");
+//SETUP("<S 197 779 0>");    //maximum sensor id for number "1" sensorCAM.
+//          vPin 700 also used by sensorCAM Native commands<N>(Appendix C)
+//SETUP("<S 200 620 0>");    //e.g. for a second sensorCAM at SENSORCAM2_VPIN0 620
+//to setup bulk sensors(e.g. 210 to 297 for a cam at vpin 620+) can include C++ code here so..
+//for(uint16_t b=1; b<=9;b++) for(uint16_t s=0;s<8;s++) Sensor::create(200+b*10+s,620+b*8+s,1);
+```
+## APPENDIX J
 
-//maximum sensor id for sensorCAM number"1".
-
-//vPin 700 also used by sensorCAM Native commands<N>(Appendix C)
-
-//SETUP("<S 200 620 0>");//e.g. for a second sensorCAM at SENSORCAM2_VPIN0 620//to setup bulk sensors(e.g. 210 to 297 for a cam at vpin 620+) can include C++ code here so..//for(uint16_t b=1; b<=9;b++) for(uint16_t s=0;s<8;s++) Sensor::create(200+b*10+s,620+b*8+s,1);
-
-### APPENDIX J
-
-### ESP32-CAM pinout reference(CAM version v1.6)
+### ESP32-CAM pinout reference (CAM version v1.6)
 
 ![ESP32 CAM Pinout Reference](/_static/images/ex-sensorcam/esp32-cam-pinout-reference.png)
 
-N.B. CAM v1.6 has 4x jumpers(cam side) near U0R/U0T pins\& CAM v1.9 has 6x jumpers(including RST)
+N.B. CAM v1.6 has 4x jumpers (cam side) near U0R/U0T pins & CAM v1.9 has 6x jumpers (including RST)
 
-In board version v1.9, the"GND" pin adjacent GPIO1/U0T is used for RESET(GND/R) to ESP32-CAM and MUST NOT be tied to GND or CAM will remain in RESET mode. CHIP version shows at start of upload, e.g.
+In board version v1.9, the "GND" pin adjacent GPIO1/U0T is used for RESET(GND/R) to ESP32-CAM and MUST NOT be tied to GND or CAM will remain in RESET mode. CHIP version shows at start of upload, e.g.
 
 ![ESP32 CAM Chip Version](/_static/images/ex-sensorcam/esp32-cam-chip-version.png)
 
-The esp32-CAM-MB obtained with extra headers uses a small CH340N IC unlike the 16 pin package used on the"regular" MB devices(micro-B). The wider MB(headers) also has an issue in that it does NOT have a reset pin because the RST/GND socket is PERMANENTLY connected to GND which will hold CAM v1.9 in permanent Reset.
+The esp32-CAM-MB obtained with extra headers uses a small CH340N IC unlike the 16 pin package used on the "regular" MB devices (micro-B). The wider MB (headers) also has an issue in that it does NOT have a reset pin because the RST/GND socket is PERMANENTLY connected to GND which will hold CAM v1.9 in permanent Reset.
 
-Headers(for v1.6):
+Headers (for v1.6):
 
 ![ESP32 CAM MB USB-C](/_static/images/ex-sensorcam/esp32-cam-mb-usb-c.png)
 
@@ -984,51 +996,58 @@ USB Type micro-B:
 
 ![ESP32 CAM MB CH340](/_static/images/ex-sensorcam/esp32-cam-mb-ch340.png)
 
-So-without butchery, can only use the v1.6 CAM's on this board, and even then will have to hold the IO0 button in(grounding it) on reset until upload is progressing. As a workaround for v1.9, it may be possible to carefully slice off this MB GND socket completely. View the Camera side of the ESP32-CAM to distinguish the CAM boards.
+So-without butchery, can only use the v1.6 CAM's on this board, and even then will have to hold the IO0 button in (grounding it) on reset until upload is progressing. As a workaround for v1.9, it may be possible to carefully slice off this MB GND socket completely. View the Camera side of the ESP32-CAM to distinguish the CAM boards.
 
-Identification: ESP32-CAM v1.6 has 4x jumpers beside UOR/UOT pins and v1.9 has 6x jumpers(inc. Reset).
+**Identification:** ESP32-CAM v1.6 has 4x jumpers beside UOR/UOT pins and v1.9 has 6x jumpers (inc. Reset).
 
-Using v1.6 with no RTS/DTR reset, users will have to boot up holding IO0 button in to get into programming mode.MB boards are sold mostly without headers and can come with either Type-C or micro-B in either size, 1 or 2 button.
+Using v1.6 with no RTS/DTR reset, users will have to boot up holding IO0 button in to get into programming mode. MB boards are sold mostly without headers and can come with either Type-C or micro-B in either size, 1 or 2 button.
 
 ### 1 Note on i2c clock frequency
 
-The newer drivers default to an i2c bus frequency of 100,000 Hz. With caution, this may be increased somewhat(e.g.200000) if the i2c bus is well tuned and all attached devices can handle higher frequencies.To set a higher frequency for example, place the following in mySetup.h or myHal.cpp I2Cmanager.forceClock(200000);//place after void halSetup(){
+The newer sensorCAM drivers default to an i2c bus frequency of 100,000 Hz. With caution, this may be increased somewhat (e.g. 200000) if the i2c bus is well tuned and all attached devices can handle higher frequencies. To set a higher frequency, for example, place the following in mySetup.h or myHal.cpp I2Cmanager.forceClock(200000); //place after void halSetup(){
 
 ### 2. Notes on 40-pin WROVER CAM and 38-pin breakout board
 
 Potentially simplest commercially available hookup for 40 pin WROVER-CAM:
 
-Software configuration: add#define CAMERA_MODEL_WROVER_KIT to configCAM.h
+Software configuration: add #define CAMERA_MODEL_WROVER_KIT to bottom of configCAM.h
 
-2x“Spare”(USB end) Vcc and GND pins not used with the 38 pin breakout board shown.
+2x“Spare”(USB end) Vcc and GND pins not used with the 38 pin breakout board shown. (remove?)
 
-Adding 1.0uF capacitor to reset(EN) pin ensures more reliable power-on reset.
+Adding 1.0uF capacitor between reset (EN) pin and gnd ensures more reliable power-on reset.
 
 Add a super-bright green LED and 330R from 3.3V to GPIO14 for programmable LED indicator.
 
-There is no white“flash” LED but, in sensorCAM mode, the on-board blue LED flashes instead.
+There is no white “flash” LED but, in sensorCAM mode, the on-board blue LED flashes instead. (GPIO2)
 
 The breakout board USB connectors are for an optional 5V power source ONLY. No comm's.
 
 Limit Vin barrel jack to 7-10V max to avoid destruction of the 1117C 5V regulator.(Vne= 16V)
 
-The endpoint shown should be powered with 3.3V from the CS end(NOT 5V), and 9V on GRNW/GRN Note: WROVER-CAM does not have a fitted external antenna socket like the ESP32-CAM.
+The CS endpoint shown should be powered with 3.3V from the CS end (NOT 5V), and 9V on GRNW/GRN  
+Note: WROVER-CAM does not have a fitted external antenna socket like the ESP32-CAM.
 
 ![ESP32 Wrover CAM with Sparkfun Endpoint](/_static/images/ex-sensorcam/esp32-wrover-sparkfun-endpoint.png)
 
-For a limited reach, perhaps using a LTC4311“terminator” at the CS to boost signal rise tiles and range, the cheaper PCA9515A may be used with the Wrover-CAM connected as below.
+For a limited reach, perhaps using a LTC4311 terminator/buffer at the CS to boost signal rise times and range, the cheaper PCA9515A may be used with the Wrover-CAM connected as below.  The cable to the CAM can be up to 2m long using twisted pairs (cat5?).
 
 ![ESP32 Wrover CAM with PCA9515A](/_static/images/ex-sensorcam/esp32-wrover-pca9515a.png)
 
-### 3. Note on enhanced't' command for handling/clearing pvtThresholds(version v319+):
+### 3. Note on enhanced 't' command for handling/clearing pvtThresholds (version v319+):
 
-t0,%% will cancel a pvtThreshold on S%% as always.(edited)t1,%% will cancel ALL pvtThresholds in bank% e.g.t1,30 t1,99 will cancel ALL pvtThresholds in the sensorCAM(i.e.S00 to S97)t99 will list ALL pvtThresholds in the sensorCAM by bank#(10 banks)(edited)t1 will toggle SCROLL ON/OFF as always. The'e' command is needed to make changes"permanent"
+**t0,%%** will cancel a _pvtThreshold_ on S%% as always.  
+**t1,%%** will cancel ALL pvtThresholds in bank% e.g.t1,30  
+**t1,99** will cancel ALL pvtThresholds in the sensorCAM(i.e.S00 to S97)  
+**t99** will list ALL pvtThresholds in the sensorCAM by bank#(10 banks)  
+**t1** will toggle SCROLL ON/OFF as always. The'**e**' command is needed to make changes"permanent"
 
-Version v319 also accepts minSensors up to maxSensors-1(edited)m#,%% will set maxSensors to%%. e.g.m10,30 sets maxSensors=030(leaving min2trip unchanged as does m0,30)(edited)n#,%% will set minSensors to%%. e.g. n10,27 sets minSensors=027 leaving nLED unchanged. n0,27 would set nLED to 0)
+Version v319 also accepts minSensors up to maxSensors-1  
+**m#,%%** will set maxSensors to%%. e.g. m10,30 sets maxSensors=030 (leaving min2trip unchanged as does m0,30)  
+**n#,%%** will set minSensors to%%. e.g. n10,27 sets minSensors=027 leaving nLED unchanged. n0,27 would set nLED to 0)
 
 ### 4. Notes on CS drivers v308& v309)
 
-Driver version v308 is intended for use with Prod versions 5.4.6 to 5.4.16. DCC-EX CS Prod. Versions 5.4.16+ incorporate v308 by default. v308 will not work with CS devel 5.5.15+. For CS devel versions look to v309(default). Both these drivers MUST be used with sensorCAM version v320+ as earlier versions will not be recognized.
+Driver version v308 is intended for use with Prod versions 5.4.6 to 5.4.16. DCC-EX CS Prod. Versions 5.4.16+ incorporate v308 by default. v308 will not work with CS devel 5.5.15+. For CS devel versions look to v309 (default). Both these drivers MUST be used with sensorCAM version v320+ as earlier versions will not be recognized.
 
 ### ADDITIONAL RANDOM NOTES:
 
@@ -1068,13 +1087,13 @@ $$
 
 ● upgrade to ESP32-CAM V1.9
 
-looks like V1.6 is the same as V1.9, really?
+looks like V1.6 is the same as V1.9, really?   -  The jumper difference is not obvious here
 
 ![ESP32 Cam with Capacitor](/_static/images/ex-sensorcam/esp32-cam-with-capacitor.png)
 
-Spec sheet: Typical applications include a 22uF cap between AMS1117 3v3 reg ADJ/GND pin and Vout, not on CAM but can be added as above for"better" performance.(hopefully less noise?). Also shows 10uF on 5Vin
+Spec sheet: Typical applications include a 22uF cap between AMS1117 3v3 reg ADJ/GND pin and Vout, not on CAM but can be added as above for "better" performance.(hopefully less noise?). Also shows 10uF on 5Vin
 
- There is a range of ov2640 cam modules available with ESP32 or independently sold. The"IR" option would be an interesting experiment and might open up new possibilities, but monochrome IR images harder to spot intrusions.The usual ov2640 is  $66^{\circ}$  , but  $120^{\circ}$  fish-eye covers more, at the expense of detail.  $120^{\circ}$  better for low ceilings??
+There is a range of ov2640 cam modules available with ESP32 or independently sold. The"IR" option would be an interesting experiment and might open up new possibilities, but monochrome IR images harder to spot intrusions. The usual ov2640 is  $66^{\circ}$  , but  $120^{\circ}$  fish-eye covers more, at the expense of detail.  $120^{\circ}$  better for low ceilings??
 
 Web offers range of lenses including"850nm night vision" which probably is OV2640 sans IR filter?(IR>700nm)
 
