@@ -815,6 +815,7 @@ The sensorCAM sends packets of data to the i2c bus master upon request. The data
 | 0x64('d')| 0## | dMaxDiff+dBright | dMaxDiff | dMaxDiff |
 | --- | --- | --- | --- | --- |
 
+
 **3.** Frame data'**f%%**': Creates four packets containing 4 rows of 4 pixel values in RGB666 format of Ref and Actual pixels Total 16x2 pixels. Each pixel has three 6bit colour bytes for a total of (3+3x4x2) 27 bytes per packet
 
 | 0x66('f') | 0%% | 0x00(row) | RefPix0Red | RefPix0Green | RefPix0Blue | RefPix1Red | .... ActPix3Green | ActPix3Blue |
@@ -823,11 +824,12 @@ The sensorCAM sends packets of data to the i2c bus master upon request. The data
 | 0x66 'f' | 0%% | 0x02(row) | RefPix8Red | RefPix8Green | RefPix8Blue | RefPix9Red | .... ActPixBGreen | ActPixBBlue |
 | 0x66('f') | 0%% | 0x03(row) | RefPixCRed | RefPixCGreen | RefPixCBlue | RefPixDRec | … ActPixFGreen | ActPixFBlue |
 
+
 **4.** Individual Info.'**i%%,%%**': The Info command will set the Request packet to the following 8 bytes. twin=00 for NO twin.
 
 | 0x69('i') | 0%% | SensorStat | SensorActive | columnL | columnH | row | twin## |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-0x69('i') 0%% SensorStat SensorActive columnL columnH row twin##
+
 
 5.Min/max cmd'm$,##':(also n$,##) Returns 7 byte Request packet data as below for additional feedback to operator.
 
@@ -835,23 +837,26 @@ The sensorCAM sends packets of data to the i2c bus master upon request. The data
 | --- | --- | --- | --- | --- | --- | --- |
 0x70('m') min2flip minSensors maxSensors nLED threshold TWOIMAGE_MAXBS
 
-**6.** Position Pointer'**p$**': This sends sensor coordinates for bank$. i.e.$/0,$/1, to$/7(only if defined) Up to 25 bytes.
+
+**6.** Position Pointer'**p$**': This sends sensor coordinates for bank$. i.e. $/0, $/1, to $/7 (only if defined) Up to 25 bytes.
 
 | 0x70('p') | H+bsn for $/0 | $/0 row | $/0 column | H+bsn for $/1 row | $/1 row | H+bsn for $/7 | $/7 row | $/7 column | i2cparity |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 
-> **Note:**
-$$\begin{array}{l}0\times 70\left({}^{\prime} p^{\prime}\right)\\ H+\text{bsn for}\\ (/ 0\\ )/ 0\text{ row}\\ (/ 0 column\\ H+\text{bsn for}\\ )
-( i2cparity 
-> Note: if column(0-319) exceeds 255, a high bit H(=0x80) is added to the bsn byte for that triplet.
+> **Note:** if column(0-319) exceeds 255, a high bit H(=0x80) is added to the bsn byte for that triplet.
+
 
 **7.** Query enabled'**q$**': This will set up the Request packet of enabled status' in the following $+2 bytes
 
 | 0x71('q') | '$' | SensorActiveBlk[$] | SensorActiveBlk[$-1] | .... SensorActiveBlk[0] |
 | --- | --- | --- | --- | --- |
-0x71('q') '$' SensorActiveBlk[$] SensorActiveBlk[$-1].... SensorActiveBlk[0]
 
-8.Threshold't\#\#': Threshold command will set the Request packet to the following byte sequence of enabled sensors.$$0\times 74\left({}^{\prime} t^{\prime}\right)\quad 0\times\#\#\quad T+bpd\quad data\quad S 00\quad 2^{nd} t+0\times bsn\quad(\text{ sensor No})\quad 2^{nd} T+bpd\quad data\quad 3^{rd} t+0\times bsn\quad 3^{rd} T+bpd\quad data$$t+Last bsn T+bpd byte  $0\times 50\quad 0\times 50== 80=$  end of data packet(an invalid bsn!). Maximum of 15 enabled sensors in 32 byte packet.Data bytes contain"bpd" diff scores(0-127) for enabled sensors with MSB(T) set 1 if tripped. MSB(t) of bsn set if the bpd> threshold. Byte[0] contains ASCII't' and Byte[1] will contain the last(old) setting of threshold.
+
+**8.** Threshold '**t##**': Threshold command will set the Request packet to the following byte sequence of enabled sensors. 
+
+
+0x 74\left({}^{\prime} t^{\prime}\right)\quad 0\times\#\#\quad T+bpd\quad data\quad S 00\quad 2^{nd} t+0\times bsn\quad(\text{ sensor No})\quad 2^{nd} T+bpd\quad data\quad 3^{rd} t+0\times bsn\quad 3^{rd} T+bpd\quad data$$t+Last bsn T+bpd byte  $0\times 50\quad 0\times 
+0x50 == 80 = end of data packet(an invalid bsn!).  Maximum of 15 enabled sensors in 32 byte packet.Data bytes contain"bpd" diff scores(0-127) for enabled sensors with MSB(T) set 1 if tripped. MSB(t) of bsn set if the bpd> threshold. Byte[0] contains ASCII't' and Byte[1] will contain the last(old) setting of threshold.
 
 9.Row image'y\#\#\#': This sends up to  $320\times 2$  byte RGB565 pixels of row\#\#\# to USB console for image reconstruction.
 
