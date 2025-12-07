@@ -102,7 +102,7 @@ The heart of the sensorCAM is the ESP32-CAM module containing an ov2640 camera s
 
 Brightness,Contrast,Saturation,AutoWhiteBalance(AWB),AWBgain,AutomaticExposureCtl(AEC),AECdsp,AELevel,AutomaticGainCtl(AGC), AGGainCeiling and more can be adjusted. The QVGA startup settings of sensorCAM are:
 
-Bri=0,Con=1,Sat=2,AWB=1,AWBg=1,AEC=1,AECd=1,AEL=1,AGC=1,AGg=9;(initial settings of'c' parameters)
+Bri=0,Con=1,Sat=2,AWB=1,AWBg=1,AEC=1,AECd=1,AEL=1,AGC=1,AGg=9;(initial settings of 'c' parameters)
 
 These can be changed after the CAM images are stable. C++ variables AWB9 and AGC9 may be set to 0 after 9 seconds in code. Find them and change in the sensorCAM.ino file if required.
 
