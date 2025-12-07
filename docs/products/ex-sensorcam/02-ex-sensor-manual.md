@@ -670,9 +670,9 @@ e.g. **<Ni 2%%><Nr&nbsp;2%%>** also **<Nm 200><Nf 212><Nt 243>**
 | <N t # [%%]> |  <Nt 1>   | t1 | Trash pvtThresholds. **<Nt 0 %%>** individually, **<Nt 1 %%>** for bank, **<Nt&nbsp;99>** trashes ALL pvtThresholds,  **<Nt&nbsp;1>** toggles scroll on/off. |
 | <N u %%>  | <Nu 12>  | u12 | **Undefine** and disable sensor bsNo(erase coordinates). **<Nu 99>** for ALL |
 | <N v [#]> | <N v 1> | v1  |  **Video** mode(0-2) invoke webCAM with v 1, or alt webCAM with v 2. **v** for **version** |
-| x &nbsp; y &nbsp; z |    |     | Reserved for binary export for Processing 4 images |
 | <N&nbsp;w>     | \<Nw>    | w   | **Wait**. Stop/start CAM imaging(flash), status sensing& streaming. |
-| <N ### ## ## | <N&nbsp;711&nbsp;75&nbsp;85> | a13,75,85 | Note: This uses the **vpin** for a sensor, NOT id/bsNo.(ref. Appendix E). |
+| x &nbsp; y &nbsp; z |    |     | Reserved for binary export for Processing 4 images |
+| <N ### ## ## | <N&nbsp;711&nbsp;75&nbsp;85> | a13,75,85 | Note: This uses the **vpin** for a sensor, NOT id/bsNo.(ref. **Appendix E**). |
 
 > **Notes:** The'i' cmd prints bsNo(bsn) where bsn/vPin offsets range from(7)00 to(7)79(e.g. baseVpin address 700).  
 > Some commands return previous(old) values then update sensorCAM. Use \<Nm> to confirm change.  
@@ -713,87 +713,55 @@ Line sensors, developed for visitor intrusion curtains, are currently automatica
 
 ![Line Sensor Console Output](/_static/images/ex-sensorcam/line-sensor-console-output.png)
 
-### APPENDIX E
+## APPENDIX E
 
-### $$\text{Tabulation of Recommended DCC-EX-CS id's for sensorCAM}$$
+### Tabulation of Recommended DCC-EX-CS ID's for sensorCAM
 
-The id consists of CAM number\#-bank-sensor or\#bs. Each bank(0-9) contains 8 sensors(0-7)$$\text{ ID is the CAM number}\#\times 100+\text{ bsNo skipping id's ending in} 8\text{ or} 9.$$
+**Table B** below shows the colour code used to identify sensors on the Processing 4 track image.  
+For example, sensor S12 has a bsNo 1/2 for which the colours are Brown/Red (seen on sensor box edges).  
+For CAM number 1, the full CS sensor S12 ID is 112 when used in CS native <N> commands such as **<N i 112>** 
+The use of the CAM # can be optional.  If only one CAM is installed (or selected), **<Ni 12>** is sufficient.
+For EXRAIL it can be tested so: **AT(CAM 012)** where the vpin is invisibly calculated as (700+012).
+**N.B.** The use of the '0' after CAM is essential in EXRAIL.  
+The colour code is the standard resistor value colour code for 0-9.
 
-$$
-\text{ vPin is the base/first vPin number(e.g.700)+ DEC(bsn)number in table below}
-$$
+Under normal circumstances if the CS has been configured as per the installation instructions, there is no need to refer to the vpin of any Sensor.  They are all relative to the baseVpin of the CAM.
 
+The full ID consists of CAM number #-bank-sensor or #bs. Each bank(0-9) contains 8 sensors(0-7)  
+vPin is the (CAM number # baseVpin) + 0bs,  bsNo skips id's ending in 8 or 9.  (e.g. 700 + 012 = 710)
+vPin is the base/first vPin number (e.g. 700) + DEC(bsn)number in the conversion table below.
+ 
+![Sensor Code Conversions](/_static/images/ex-sensorcam/sensor-code-conversions.png)
 
+**Table E &nbsp; &nbsp; Reference Sensor ID to colour code conversion table**
 
-| EX-CS |  |  |  |  |  |  |  |  |  | EX-CS |  |  |  |  |  |  |  |  |  |  |  | EX-CS |  |  |  |  |  |  |  |  |  |  |  |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| CAM No 1 |  |  | bsn | (vPin) |  |  | COLO | UR | CODE | CAM No 1. |  |  |  |  | (vPin) |  |  | COLC | JR | R CDDE |  | CAM No 1. |  |  |  | bsn | (vPin) |  |  | co |  $\|O\|$  JR |  $\|O\|$  JR | CODE |
-| ID |  | bsNo. | OCT | DEC |  | HIX | bat | k/ | en. | ID |  | )sN). | D | bsn OCT | DEC | HEK |  | ba |  |  | n. | ID |  | bsNo. |  | OCT | DEC |  | HEX | t |   |   | en. |
-|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
-| 100 |  | 0/0 | 00 | 0 |  | 0x0 |  |  |  | 130 |  | 3/0 |  | 030 | 24 |  | 0x 18 | $$\begin{align*}&\frac{\partial}{\partial}\\ &\frac{\partial}{\partial}\\ &\frac{\partial}{\partial}\\ &\frac{\partial}{\partial}\\ &\frac{\partial}{\partial}\\ &\frac{\partial}{\partial}\\ &\frac{\partial}{\partial}\\ &\frac{\partial}{\partial}\\ &\frac{\partial}{\partial}\\ &\frac{\partial}{\partial}\\ &\frac{\partial}{\partial}\\ &\frac{\partial}{\partial}\\ &\frac{\partial}{\partial}\\ &\frac{\partial}{\partial}\\ &\frac{\partial}{\partial}\\ &\frac{\partial}{\partial}\\ &\frac{\partial}{\partial}\\ &\frac{\partial}{\partial}\\ &\frac{\partial}{\partial}\\ &\frac{\partial}{\partial}\\ &\frac{\partial}{\partial}\\ &\frac{\partial}{\partial}\\ &\frac{\partial}{\partial}\\ &\frac{\partial}{\partial}\\ &\frac{\partial}\\ &\frac{\partial}{\partial}\\ &\frac{\partial}\\ &\frac{\partial}{\partial}\\ &\frac{\partial}\\ &\frac{\partial}{\partial}\\ &\frac{\partial}\\ &\frac{\partial}{\partial}\\ &\frac{\partial}\\ &\frac{\partial}\\ &\frac{\partial}{\partial}\\ &\frac{\partial}\\ &\frac{\partial}{\partial}\\ &\frac{\partial}\\ &\frac{\partial}{\partial}\\ &\frac{\partial}\\ &\frac{\partial}{\partial}\\ &\frac{\partial}\\ &\frac{\partial}{\partial}\\ &\frac{\partial}\\ &\frac{\partial}{\partial}\\ &\frac{\partial}\\ &\frac{\partial}\\ &\frac{\partial}{\partial}\\ &\frac{\partial}\\ &\frac{\partial}{\partial}\\ &\frac{\partial}\\ &\frac{\partial}\\ &\frac{\partial}\\ &\frac{\partial}{\partial}\\ &\frac{\partial}\\ &\frac{\partial}\\ &\frac{\partial}{\partial}\\ &\frac{\partial}\\ &\frac{\partial}\\ &\frac{\partial}{\partial}\\ &\frac{\partial}\\ &\frac{\partial}\\ &\frac{\partial}{\partial}\\ &\frac{\partial}{\partial}\\ &\frac{\partial}\\ &\frac{\partial}{\partial}\\ &\frac{\partial}\\ &\frac{\partial}{\partial}\\ &\frac{\partial}\\ &\frac{\partial}{\partial}\\ &\frac{\partial}\\ &\frac{\partial}{\partial}\\ &\frac{\partial}\\ &\frac{\partial}{\partial}\\ &\frac{\partial}\\ &\frac{\partial}{\partial}\\ &\frac{\partial}\\ &\frac{\partial}{\partial}\\ &\frac{\partial}\\ &\frac{\partial}{\partial}\\ &\frac{\partial}\\ &\frac{\partial}\\ &\frac{\partial}{\partial}\\ &\frac{\partial}\\ &\frac{\partial}{\partial}\\ &\frac{\partial}\\ &\frac{\partial}{\partial}\\ &\frac{\partial}\\ &\frac{\partial}{\partial}\\ &\frac{\partial}\\ &\frac{\partial}\\ &\frac{\partial}{\partial}\\ &\frac{\partial}\\ &\frac{\partial}{\partial}\\ &\frac{\partial}\\ &\frac{\partial}\\ &\frac{\partial}{\partial}\\ &\frac{\partial}\\ &\frac{\partial}\\ &\frac{\partial}\\ &\frac{\partial}{\partial}\\ &\frac{\partial}\\ &\frac{\partial}\\ &\frac{\partial}{\partial}\\ &\frac{\partial}\\ &\frac{\partial}\\ &\frac{\partial}{\partial}\\ &\frac{\partial}\\ &\frac{\partial}{\partial}\\ &\frac{\partial}\\ &\frac{\partial}{\partial}\\ &\frac{\partial}\\ &\frac{\partial}\\ &\frac{\partial}{\partial}\\ &\frac{\partial}\\ &\frac{\partial}{\partial}\\ &\frac{\partial}\\ &\frac{\partial}\\ &\frac{\partial}{\partial}\\ &\frac{\partial}\\ &\frac{\partial}\\ &\frac{\partial}{\partial}\\ &\frac{\partial}\\ &\frac{\partial}\\ &\frac{\partial}{\partial}\\ &\frac{\partial}\\ &\frac{\partial}{\partial}\\ &\frac{\partial}{\partial}\\ &\frac{\partial}\\ &\frac{\partial}{\partial}\\ &\frac{\partial}\\ &\frac{\partial}{$$ |  |  |  | 160 |  | 6/0 |  | 0 60 | 48 |  | 0x 30 |  |  |  |  |
-| 101 |  | 0/1 | 0 1 | 1 | 0x | 1 |  |  |  | 131 |  | 3/1 |  | 0 31 | 25 | 0x | 19 | $$\begin{align*}&\frac{1}{2}\\ $$ |  |  |  | 161 |  | 6/1 |  | 0 61 | 49 | 0x | 31 |  |  |  |  |
-|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
-| 102 |  | 0/2 | 0 2 | 2 |  | 0x2 |  |  |  | 132 |  | 3/2 |  | 0 32 | 26 | 0x | 1A |  |  |  |  | 162 |  | 6/2 |  | 0 62 | 50 | 0x | 32 |  | bl |  |  |
-| 103 |  | 0/3 | 0 3 | 3 |  | 0x3 |  |  |  | 133 |  | 3/3 |  | 0 33 | 27 | 0x | 1B |  |  |  |  | 163 |  | 6/3 |  | 0 63 | 51 | 0x | 33 |  | bl |  | or |
-|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
-| 104 |  | 0/4 | 0 4 | 4 | 0x4 |  |  |  | yw | 134 |  | 3/4 |  | 034 | 28 | 0x1C |  |  |  |  | W | 164 |  | 6/4 |  | 0 64 | 52 | 0x | 34 |  | bI | bI | VW |
-|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
-| 105 |  | 0/5 | 0 5 | 5 |  | 0x5 |  |  | gn | 135 |  | 3/5 |  | 035 | 29 | 0x | 1D |  |  |  |  | 165 |  | 6/5 |  | 0 65 | 53 | 0x | 35 |  | bl |  | an |
-| 106 |  | 0/6 | 0 | 6 |  | 0x6 |  |  | bl | 136 |  | 3/5 |  | 0 36 | 30 | 0x | 1E |  |  |  |  | 166 |  | 6/6 |  | 0 66 | 54 | 0x | 36 |  | bI |  | b |
-|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
-| 107 |  | 0/7 | 0 | 7 | 0x7 |  |  |  | vi | 137 |  | 3/7 |  | 0 37 | 31 |  | 0x 1F |  |  |  |  | 167 |  | 6/7 |  | 0 67 | 55 |  | 0x 37 |  | b |  | vi |
-| 110 |  | 1/0 | 010 | 8 |  | 0x8 |  |  |  | 140 |  | 4/0 |  | 040 | 32 | 0x | 20 |  |  |  |  | 170 |  | 7/0 |  | 0 70 | 56 | 0x | x 38 |  | vi |  |  |
-| 111 |  | 1/1 | 0 11 | 9 | 0x9 |  |  |  | br | 141 |  | 4/1 |  | 041 | 33 | 0x | 21 |  |  |  |  | 171 |  | 7/1 |  | 0 71 | 57 | 0x | 39 |  | vi |  | br |
-| 112 |  | 1/2 | 0 12 | 10 |  |  |  |  |  | 142 |  |  |  | 042 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
-|  |  |  |  |  | 0x | A |  |  |  |  |  | 4/2 |  |  | 34 |  | 0x 22 |  |  |  |  | 172 |  | 7/2 |  | 0 72 | 58 | 0x | 3A |  | vi |  | rd |
-| 113 |  | 1/3 | 0 13 | 11 |  | 0x B |  |  | 0 | 143 |  | 4/3 |  | 0 43 | 35 | 0x | 23 |  |  |  |  | 173 |  | 7/3 |  | 0 73 | 59 | 0x | 3B |  | vi |  | or |
-| 114 |  | 1/4 | 0 14 | 12 |  | 0x C |  |  | yw | 144 |  | 4/$ |  | 0 44 | 36 | 0x | 24 |  |  |  | y | 174 |  | 7/4 |  | 0 74 | 60 | 0x | 3C |  | vi |  | VW |
-|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
-| 115 |  | 1/5 | 0 15 | 13 | 0x | D |  |  | gn | 145 |  | 4/5 |  | 0 45 | 37 | 0x | 25 |  |  | R |  | 175 |  | 7/5 |  | 0 75 | 61 | 0x | 3D |  | vi |  |  $\overline{\text{R}}$  |
-| 116 |  | 1/6 | 0 16 | 14 |  | 0xE | b |  | bI | 146 |  | 4/5 |  | 0 46 | 38 | 0x | 26 |  |  |  |  | 176 |  | 7/6 |  | 0 76 | 62 | 0x | 3E |  | vi |  | bI |
-|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
-| 117 |  | 1/7 | 017 | 15 |  | 0x F |  |  | vi | 147 |  | 4/7 |  | 0 47 | 39 | 0x | 27 |  |  |  |  | 177 |  | 7/7 |  | 0 77 | 63 | 0x | 3F |  | vi |  | vi |
-| 120 |  | 2/0 | 020 | 16 |  | 0x10 |  |  |  | 150 |  | 5/) |  | 050 | 40 | 0x | 28 | R |  |  |  | 180 |  | 8/0 |  | 0100 | 64 | 0x | 40 |  | $$\begin{align*}&\pi\\ $$ |  |  |
-| 121 |  | 2/1 | 021 | 17 |  | 0x 11 |  |  | br | 151 |  | 5/L |  | 051 | 41 | 0x | 29 | R |  |  |  | 181 |  | 8/1 |  | 01 01 | 65 | 0x | 41 |  | $$\begin{array}{l}\\ \\ \\ \\ \end{array}$$ |  | or |
-|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
-| 122 |  | 2/2 | 0 22 | 18 | 0x | 12 | rd |  | rd | 152 |  | 5/2 |  | 0 52 | 42 | 0x | 2A | R |  |  | I | 182 |  | 8/2 |  | 01 02 | 66 | 0x | 42 |  |  |  | rd |
-| 123 |  | 2/3 | 023 | 19 |  | 0x13 |  |  | or | 153 |  | 5/3 |  | 0 53 | 43 | 0x | 2B | R |  |  |  | 183 |  | 8/3 |  | 01 03 | 67 | 0x | 43 |  |  |  |  |
-|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
-| 124 |  | 2/4 | 0 24 | 20 | 0x | 14 |  |  | VW | 154 |  | 5/$ |  | 0 54 | 44 |  | 0x 2C | R |  |  | ¥ | 184 |  | 8/4 |  | 01 04 | 68 | 0x | 44 |  | $$\frac{\pi}{4}$$ |  |  |
-| 125 |  | 2/5 | 0 25 | 21 | 0x | 15 | rd |  | gn | 155 |  | 5/5 |  | 0 55 | 45 | 0x | 2D |  |  | R |  | 185 |  | 8/5 |  | 01 05 | 69 | 0x | 45 |  | $$\begin{array}{l}\\ \\ \\ \\ \end{array}$$ |  |  |
-|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | R |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
-| 126 |  | 2/6 | 0 26 | 22 |  | 0x16 |  |  | bl | 156 |  | 5/5 |  | 0 56 | 46 | 0x | 2E | R |  |  | I | 186 |  | 8/6 |  | 01 06 | 70 | 0x | 46 |  |  |  |  |
-| 127 |  | 2/7 | 0 27 | 23 |  | 0x 17 |  |  | vi | 157 |  | 5/7 |  | 0 57 | 47 |  | 0x 2F | R |  |  |  | 187 |  | 8/7 |  | 01 07 | 71 | 0x | 47 |  |  |  | vi |
-|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
-|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 190 etc. to 197 |  | 9/09/7 |  | 0110 0117 | 7279 |  | 0x480x4F |  |  |  |  |
+## APPENDIX F
 
-### Hardware Interface Notes.(including PCA9515A& Sparkfun Endpoints)
+### Hardware Interface Notes (including PCA9515A& Sparkfun Endpoints)
 
-Note: This Appendix focuses on the ESP32-CAM-MB implementation, but as an alternative, consider the newer ESP32 WROVER-CAM and breakout board, as mentioned in Section 7, Figure 6 for a simpler implementation.
+> **Note:** This Appendix focuses on the **ESP32-CAM-MB** implementation, but as an alternative, consider the newer ESP32 WROVER-CAM and breakout board, as mentioned in **Section 7**, **Figure 6** for a simpler implementation.
 
-The CAM drives GPIO pins with 3.3V logic. This may well be incompatible with the master l2C signals at 5V. It is essential that appropriate voltage level shifting and buffering is used where necessary. Unbuffered I2C is limited in range but a cheap P82B715 bus extender gives up to 30m of I2C capability. A Sparkfun differential i2c driver/endpoint may be used to achieve long lengths and voltage shifting(3.5v to 5v). The prototype Sensor CAM was mounted on a“perf” board that holds two bank trip LEDs, power LED, I2C buffer, a number of required pull-up resistors, capacitors and a voltage regulator so that it can operate and be powered over a single 5m CAT5 cable for greater convenience. A 3m USB connection need only be used for setup and diagnosis. The prototype board plugs into the socket of ESP32-CAM-MB USB adaptor(with 5V pin cut off) but can also use other FTDI interfaces.
+The ESP32 CAM drives GPIO pins with 3.3V logic. This may well be incompatible with the master l2C signals at 5V. It is essential that appropriate voltage level shifting and buffering is used where necessary. Unbuffered I2C is limited in range but a cheap P82B715 bus extender gives up to 30m of I2C capability. A Sparkfun differential i2c driver/endpoint may also be used to achieve long lengths and voltage shifting (3.5v to 5v) if needed. The prototype Sensor CAM was mounted on a “perf” board that holds two bank trip LEDs, power LED, I2C buffer, a number of required pull-up resistors, capacitors and a voltage regulator so that it can operate and be powered over a single 5m CAT5 cable for greater convenience. A 3m USB connection need only be used for setup and diagnosis. The prototype board plugs into the socket of ESP32-CAM-MB USB adaptor (with 5V pin cut off) but can also use other FTDI interfaces.
 
-The CAM prototype can be Reset remotely by software or by cycling the power supply. It can be placed in program mode by a logic signal(GPIO0) over the CAT5 cable if needed, and similarly placed in WebServer mode(GPIO14) or Sensor mode remotely independent of I2C master. The GPIO0& 14 pins may be isolated from CAT5 cable with MOSFETS. The CAM MUST be rigidly mounted as it's response to any image vibration can trip sensors.It is best not moved after sensor location programming as precise realignment could be tedious. It is, however,advisable to make guides or jig arrangement to at least be able to remove(for maintenance) and return with minimal misalignment to cover the same field of view. The LED method of placing/positioning sensors may be necessary if a long USB cable is impractical. A 5m buffered USB cable might be advantageous. Even so,programming or imaging over a long USB cable may never be satisfactory.
+The CAM prototype can be Reset remotely by software or by cycling the power supply. It can be placed in program mode by a logic signal (GPIO0) over the CAT5 cable if needed, and similarly placed in WebServer mode (GPIO14) or Sensor mode remotely independent of I2C master. The GPIO0 & 14 pins may be isolated from CAT5 cable with MOSFETS. The CAM MUST be rigidly mounted as it's response to any image vibration can trip sensors.It is best not moved after sensor location programming as precise realignment could be tedious. It is, however,advisable to make guides or jig arrangement to at least be able to remove(for maintenance) and return with minimal misalignment to cover the same field of view. The LED method of placing/positioning sensors may be necessary if a long USB cable is impractical. A 5m buffered USB cable might be advantageous. Even so,programming or imaging over a long USB cable may never be satisfactory.
 
-One PCA9515A based module offers a simpler, but limited, interface to an i2c bus the use of will act as a level changer(3.3V to 5V) and can connect to a SHORT i2c bus(max 3m). You may use 2mm foam adhesive tape to mount a PCA9515A on the back of an ESP32-CAM-MB and solder on the 5 jumper wires directly as shown below.If the i2c length is near or just over the limit, an optional LTC4311 extender can be attached to boost the signal.This option relies on 5V USB power so needs a dedicated(permanent) USB cable connection.
+One PCA9515A based module offers a simpler, but limited, interface to an i2c bus the use of will act as a level changer (3.3V to 5V) and can connect to a SHORT i2c bus (max 3m). You may use 2mm foam adhesive tape to mount a PCA9515A on the back of an ESP32-CAM-MB and solder on the 5 jumper wires directly as shown below.If the i2c length is near or just over the limit, an optional LTC4311 extender can be attached to boost the signal. As shown, this option relies on 5V USB power so needs a dedicated(permanent) USB cable connection.  A local 5v buck converter can be added beside the CAM for a better supply. You can also extend a cable between the PCA9515 buffer and CAM (2m).
 
-A programmable nLED& 330ohm resistor may be attached to the PCA9515A from 3.3V VCC to GPIO14.
+A programmable nLED and 330ohm resistor may be attached to the PCA9515A from 3.3V VCC to GPIO14 to aid testing.
 
 ![ESP32 CAM MB with PCA9515A and LTC4311](/_static/images/ex-sensorcam/esp32-cam-mb-with-pca9515a-ltc4311.png)
 
-Alternatively, The Sparkfun endpoint is perhaps the best overall solution at this stage for driving one(or more) sensorCAMs. It provides greater lengths of cable without extending the Command Station i2c local bus. The endpoints are used in pairs, connected by a long(<100m) differential pair cat5 cable providing power and communications. It can provide buffering, level shifting and power, but care is needed at the CS end to avoid over-voltage damage. It is suggested, with a 5V CS, that the Endpoint pullup jumpers at the CS end be cut for safety. The sensorCAM Endpoint default pullups are needed for the 3.3V CAM i2c bus.The CS Endpoint requires 3.3V power(from the CS) and a separate(7 to 9V) DC supply for the Buck\& CAM.
+Alternatively, The Sparkfun endpoint is perhaps the best overall solution at this stage for driving one (or more) sensorCAMs. It provides greater lengths of cable without extending the Command Station i2c local bus. The endpoints are used in pairs, connected by a long (<100m) differential pair cat5 cable providing power and communications. It can provide buffering, level shifting and power, but care is needed at the CS end to avoid over-voltage damage. It is suggested, with a 5V CS, that the Endpoint pullup jumpers at the CS end be cut for safety. The sensorCAM Endpoint default pullups are needed for the 3.3V CAM i2c bus.The CS Endpoint requires 3.3V power(from the CS) and a separate (7 to 9V) DC supply for the Buck & CAM.
 
-Typical device applications(with BUCK 5V inverters):
+Typical device applications (with BUCK 5V inverters):
 
 ![Typical Mega with ESP32 CAM](/_static/images/ex-sensorcam/typical-mega-esp32-cam.png)
 
-$$
-\text{Sparkfun endpoints(requires a matching sparkfun endpoint at CS)(CS interface option B):}
-$$
+Sparkfun endpoints(requires a matching sparkfun endpoint at CS)(CS interface option B)
 
 ![Typical Application with Buck Converter](/_static/images/ex-sensorcam/typical-application-buck-converter.png)
 
-(Dual optional) CAM wiring with Endpoints\& 5V Buck reg. powered over GRN-GRNW(Vin) with Vin(>7V)
+(Dual optional) CAM wiring with Endpoints and 5V Buck reg. powered over GRN-GRNW(Vin) with Vin(>7V)
 
 ![Optional Dual CAM Wiring](/_static/images/ex-sensorcam/optional-dual-cam-wiring.png)
 
@@ -807,25 +775,25 @@ NOTE: Take care to cut copper strips appropriately!
 
 ![Dual CAM Header Wiring](/_static/images/ex-sensorcam/dual-cam-header-wiring.png)
 
-There are three basic variations below for connecting the Endpoints to the CS. The choice depends on the current system being extended. Options A\& B apply to a 5Volt I2C bus on a 5V CS with or without existing I2C accessory connections, while Option C is the simplest connection to a 3.3Volt CS i2c bus.
+There are three basic variations below for connecting the Endpoints to the CS. The choice depends on the current system being extended. Options A & B apply to a 5Volt I2C bus on a 5V CS with or without existing I2C accessory connections, while Option C is the simplest connection to a 3.3Volt CS i2c bus.
 
-The  $2 x$  Endpoints require about  $10 m A$  each. All options can be adapted for use with a mux if necessary.The choice between A and B depends on the power supplies available. If the CS Endpoint is to be tapped into a"remote" 5V i2c bus location, a CS 3.3V supply may not be available, only a 5V I2C supply. Option B removes one 10k pullup resistor pair from the bus to avoid inappropriate pull-up voltage(3.3V).
+The 2x Endpoints require about  10mA  each. All options can be adapted for use with a mux if necessary. The choice between A and B depends on the power supplies available. If the CS Endpoint is to be tapped into a "remote" 5V i2c bus location, a CS 3.3V supply may not be available, only a 5V I2C supply. Option B removes one 10k pullup resistor pair from the bus to avoid inappropriate pull-up voltage(3.3V).
 
-Option A: CUT CAM endpoint jumper 0-1 and supply 5V and 3.3V from the CS. Option A connections results in a 5V i2c interface to 3.3V differential cable for 5V microprocessor based CS(e.g. Mega).
+**Option A:** CUT CAM endpoint jumper 0-1 and supply 5V and 3.3V from the CS. Option A connections results in a 5V i2c interface to 3.3V differential cable for 5V microprocessor based CS (e.g. Mega).
 
-Option B: may be used if the CS 3V3 regulator is more convenient. CUT two CS Endpoint I2C jumpers to disconnect the on-board I2C pullup 10k resistors and 3v3 from the bus. This adds load to the i2c bus data so may need extra pullups to 5V. This does function but is not recommended.
+**Option B:** may be used if the CS 3V3 regulator is more convenient. CUT two CS Endpoint I2C jumpers to disconnect the on-board I2C pullup 10k resistors and 3v3 from the bus. This adds load to the i2c bus data so may need extra pullups to 5V. This does function but is not recommended.
 
-Option C: used with newer(32bit) MPU's& uses 3V3 throughout. No Endpoint jumpers need to be cut.Whichever option is used, the user should consider if the I2C bus needs to be tuned differently. For very short extra cable length to the Endpoint and only one extra device count on an I2C bus under 1m in length, tuning may be unnecessary. In marginal conditions consider returning as per DCC-EX recommendations.
+**Option C:** used with newer (32bit) MPU's (e.g. CSB1) & uses 3V3 throughout. No Endpoint jumpers need to be cut. Whichever option is used, the user should consider if the I2C bus needs to be tuned differently. For very short extra cable length to the Endpoint and only one extra device count on an I2C bus under 1m in length, tuning may be unnecessary. In marginal conditions consider returning as per DCC-EX recommendations.
 
-A FOR 3.3V Differential drive 5V CS I2C BUS
+**A FOR 3.3V Differential drive 5V CS I2C BUS**
 
 ![Differential Drive 5V CS](/_static/images/ex-sensorcam/differential-drive-5v-cs.png)
 
- B FOR 3.3V Differential drive 5V CS I2C BUS
+**B FOR 3.3V Differential drive 5V CS I2C BUS**
 
 ![Differential Drive 3.3V CS](/_static/images/ex-sensorcam/differential-drive-3v3-cs.png)
 
- C FOR 3.3V Differential drive 3.3V CS I2C BUS
+**C FOR 3.3V Differential drive 3.3V CS I2C BUS**
 
 ![Differential Drive 3.3V Only CS](/_static/images/ex-sensorcam/differential-drive-3v3-only-cs.png)
 
@@ -837,17 +805,17 @@ With version 3.00 of IO_EXSensorCAM.h CS driver, commands and parameters are sen
 
 The sensorCAM sends packets of data to the i2c bus master upon request. The data sent is dependent on the last command received as that command prepares a packet in anticipation of a bus Request. Only nine commands can affect the return packet format. They will contain the relevant ASCII command character in the first(header) byte, followed by data.These are listed below.
 
-1.Bank cmd'b$': The bank command will set the Request packet to the following$+2 bytes
+**1.** Bank cmd '**b$**': The bank command will set the Request packet to the following $+2 bytes
 
-0x62('b')SensorBankStat[$]SensorBankStat[$-1]SensorBankStat[0]i2cparity
+| 0x62('b') | SensorBankStat[$] | SensorBankStat[$-1] | .... SensorBankStat[0] | i2cparity |
+| --- | --- | --- | --- | --- |
 
-2.Difference score'd%%#'(Diff+bright): The Diff command will set the Request packet to the following 5 bytes
+**2.** Difference score '**d%%#** '(Diff+bright): The Diff command will set the Request packet to the following 5 bytes
 
-0x64('d')0##dMaxDiff+dBright dMaxDiff dBright
+| 0x64('d')| 0## | dMaxDiff+dBright | dMaxDiff | dMaxDiff |
+| --- | --- | --- | --- | --- |
 
-3.Frame data'f%%': Creates four packets containing 4 rows of 4 pixel values in RGB666 format of Ref and Actual pixels Total 16x2 pixels. Each pixel has three 6bit colour bytes for a total of(3+3x4x2) 27 bytes per packet
-
-
+**3.** Frame data'**f%%**': Creates four packets containing 4 rows of 4 pixel values in RGB666 format of Ref and Actual pixels Total 16x2 pixels. Each pixel has three 6bit colour bytes for a total of (3+3x4x2) 27 bytes per packet
 
 | 0x66('f') | 0%% | 0x00(row) | RefPix0Red | RefPix0Green | RefPix0Blue | RefPix1Red | .... ActPix3Green | ActPix3Blue |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -855,25 +823,41 @@ The sensorCAM sends packets of data to the i2c bus master upon request. The data
 | 0x66 'f' | 0%% | 0x02(row) | RefPix8Red | RefPix8Green | RefPix8Blue | RefPix9Red | .... ActPixBGreen | ActPixBBlue |
 | 0x66('f') | 0%% | 0x03(row) | RefPixCRed | RefPixCGreen | RefPixCBlue | RefPixDRec | … ActPixFGreen | ActPixFBlue |
 
-4.Individual Info.'i%%,%%': The Info command will set the Request packet to the following 8 bytes. twin=00 for NO twin.
+**4.** Individual Info.'**i%%,%%**': The Info command will set the Request packet to the following 8 bytes. twin=00 for NO twin.
 
-0x69('i')0%%SensorStat SensorActive columnL columnH row twin##
+| 0x69('i') | 0%% | SensorStat | SensorActive | columnL | columnH | row | twin## |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+0x69('i') 0%% SensorStat SensorActive columnL columnH row twin##
 
 5.Min/max cmd'm$,##':(also n$,##) Returns 7 byte Request packet data as below for additional feedback to operator.
 
-0x70('m')min2flip minSensors maxSensors nLED threshold TWOIMAGE_MAXBS
+| 0x70('m') | min2flip | minSensors | maxSensors | nLED | threshold | TWOIMAGE_MAXBS |
+| --- | --- | --- | --- | --- | --- | --- |
+0x70('m') min2flip minSensors maxSensors nLED threshold TWOIMAGE_MAXBS
 
-6.Position Pointer'p$': This sends sensor coordinates for bank$.i.e.$/0,$/1, to$/7(only if defined) Up to 25 bytes.$$\begin{array}{l}0\times 70\left({}^{\prime} p^{\prime}\right)\\ H+\text{bsn for}\\ (/ 0\\ )/ 0\text{ row}\\ (/ 0 column\\ H+\text{bsn for}\\ )/ 1\\ (/ 0\\ )/ 1\\ (/ 0\\ )/ 1\\ (/ 0\\ )/ 1\\ (/ 0\\ )/ 1\\ (/ 0\\ )/ 1\\ (/ 0\\ )/ 1\\ (/ 0\\ )/ 1\\ (/ 0\\ )/ 1\\ (/ 0\\ )/ 1\\ (/ 0\\ )/ 1\\ (/ 0\\ )/ 1\\ (/ 0\\ )/ 1\\ (/ 0\\ )/ 1\\ (/ 0\\ )/ 1\\ (/ 0\\ )/ 1\\ (/ 0\\ )/ 1\\ (/ 0\\ )/ 1\\ (/ 0\\ )/ 1\\ (/ 0\\ )/ 1\\ (/ 0\\ )/ 1\\ (/ 0\\ )/ 1\\ (/ 0\\ )/ 1\\ (/ 0\\ )/ 1\\ (/ 0\\ )/ 1\\ (/ 0\\ )/ 1\\ (/ 0\\ )/ 1\\ (/ 0\\ )/ 1\\ (/ 0\\ )/ 1\\ (/ 0\\ )/ 1\\ (/ 0\\ )/ 1\\ (/ 0\\ )/ 1\\ (/ 0\\ )/ 1\\ (/ 0\\ )/ 1\\ (/ 0\\ )/ 1\\ (/ 0\\ )/ 1\\ (/ 0\\ )/ 1\\ (/ 0\\ )/ 1\\ (/ 0\\ )/ 1\\ (/ 0\\ )/ 1\\ (/ 0\\ )/ 1\\ (/ 0\\ )/ 1\\ (/ 0\\ )/ 1\\ (/ 0\\ )/ 1\\ (/ 0\\ )/ 1\\ (/ 0\\ )/ 1\\ (/ 0\\ )/ 1\\ (/ 0\\ )/ 1\\ (/ 0\\ )/ 1\\ (/ 0\\ )/ 1\\ (/ 0\\ )/ 1\\ (/ 0\\ )/ 1\\ (/ 0\\ )/ 1\\ (/ 0\\ )/ 1\\ (/ 0\\ )/ 1\\ )/ 1\\ (/ 0\\ )/ 1\\ (/ 0\\ )/ 1\\ (/ 0\\ )/ 1\\ (/ 0\\ )/ 1\\ (/ 0\\ )/ 1\\ (/ 0\\ )/ 1\\ (/ 0\\ )/ 1\\ (/ 0\\ )/ 1\\ (/ 0\\ )/ 1\\ (/ 0\\ )/ 1\\ (/ 0\\ )/ 1\\ (/ 0\\ )/ 1\\ (/ 0\\ )/ 1\\ (/ 0\\ )/ 1\\ (/ 0\\ )/ 1\\ (/ 0\\ )/ 1\\ (/ 0\\ )/ 1\\ (/ 0\\ )/ 1\\ (/ 0\\ )/ 1\\ (/ 0\\ )/ 1\\ (/ 0\\ )/ 1\\ (/ 0\\ )/ 1\\ (/ 0\\ )/ 1\\ (/ 0\\ )/ 1\\ (/ 0\\ )/ 1\\ (/ 0\\ )/ 1\\ (/ 0\\ )/ 1\\ (/ 0\\ )/ 1\\ (/ 0\\ )/ 1\\ (/ 0\\ )/ 1\\ (/ 0\\ )/ 1\\ (/ 0\\ )/ 1\\ (/ 0\\ )/ 1\\ (/ 0\\ )/ 1\\ (/ 0\\ )/ 1\\ (/ 0\\ )/ 1\\ (/ 0\\ )/ 1\\ (/ 0\\ )/ 1\\ (/ 0\\ )/ 1\\ (/ 0\\ )/ 1\\ (/ 0\\ )/ 1\\ (/ 0\\ )/ 1\\ (/ 0\\ )/ 1\\ (/ 0\\ )/ 1\\ (/ 0\\ )/ 1\\ (/ 0\\ )/ 1\\ (/ 0\\ )/ 1\\ (/ 0\\ )/ 1\\ (/ 0\\ )/ 1\\ (/ 0\\ )/ 1\\ (/ 0\\ )/ 1\\ (/ 0\\ )/ 1\\ (/ 0\\ )/ 1\\ (/ 0\\ )/ 1\\ (/ 0\\ )/ 1\\ (/ 0\\ )/ 1\\ (/ 0\\ )/ 1\\ (/ 0\\ )/ 1\\ (/ 0\\ )/ 1\\ (/ 0\\ )/ 1\\ (/ 0\\ )/ 1\\ (/ 0\\ )/ 1\\ (/ 0\\ )/ 1\\ (/ 0\\ )/ 1\\ )/ 1\\ )/ 1\\ )/$$i2cparity Note: if column(0-319) exceeds 255, a high bit H(=0x80) is added to the bsn byte for that triplet.
+**6.** Position Pointer'**p$**': This sends sensor coordinates for bank$. i.e.$/0,$/1, to$/7(only if defined) Up to 25 bytes.
 
-7.Query enabled'q$': This will set up the Request packet of enabled status' in the following$+2 bytes
+| 0x70('p') | H+bsn for $/0 | $/0 row | $/0 column | H+bsn for $/1 row | $/1 row | H+bsn for $/7 | $/7 row | $/7 column | i2cparity |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 
-0x71('q')'$' SensorActiveBlk[$] SensorActiveBlk[$-1].... SensorActiveBlk[0]
+> **Note:**
+$$\begin{array}{l}0\times 70\left({}^{\prime} p^{\prime}\right)\\ H+\text{bsn for}\\ (/ 0\\ )/ 0\text{ row}\\ (/ 0 column\\ H+\text{bsn for}\\ )
+( i2cparity 
+> Note: if column(0-319) exceeds 255, a high bit H(=0x80) is added to the bsn byte for that triplet.
+
+**7.** Query enabled'**q$**': This will set up the Request packet of enabled status' in the following $+2 bytes
+
+| 0x71('q') | '$' | SensorActiveBlk[$] | SensorActiveBlk[$-1] | .... SensorActiveBlk[0] |
+| --- | --- | --- | --- | --- |
+0x71('q') '$' SensorActiveBlk[$] SensorActiveBlk[$-1].... SensorActiveBlk[0]
 
 8.Threshold't\#\#': Threshold command will set the Request packet to the following byte sequence of enabled sensors.$$0\times 74\left({}^{\prime} t^{\prime}\right)\quad 0\times\#\#\quad T+bpd\quad data\quad S 00\quad 2^{nd} t+0\times bsn\quad(\text{ sensor No})\quad 2^{nd} T+bpd\quad data\quad 3^{rd} t+0\times bsn\quad 3^{rd} T+bpd\quad data$$t+Last bsn T+bpd byte  $0\times 50\quad 0\times 50== 80=$  end of data packet(an invalid bsn!). Maximum of 15 enabled sensors in 32 byte packet.Data bytes contain"bpd" diff scores(0-127) for enabled sensors with MSB(T) set 1 if tripped. MSB(t) of bsn set if the bpd> threshold. Byte[0] contains ASCII't' and Byte[1] will contain the last(old) setting of threshold.
 
 9.Row image'y\#\#\#': This sends up to  $320\times 2$  byte RGB565 pixels of row\#\#\# to USB console for image reconstruction.
 
 ![Console Image Reconstruction](/_static/images/ex-sensorcam/console-image-reconstruction.png)
+
+## APPENDIX H
 
 ### Notes on use of EX-RAIL with sensorCAM
 
