@@ -53,14 +53,14 @@
 | s%% | **`<Ns %%>`** | **Scan video to define a new Sensor position (superseeded)**  
 |     |    | Scan for brightest spot (LED) and position sensor there. 
 | t##[,%%] | **`<Nt ##[ %%]>`**  | **Theshold setting (33-98) global [pvtThreshold for S%%]**  
-|     |    | Sets new threshold, global [ pvtThreshold] (t99 lists pvtThresholds)  
-|     |    | For ## of (2-31), print ## data rows. &nbsp; t00,%% clears a pvtThreshold
+|     |    | Sets new global threshold, [or a  pvtThreshold] (t99 lists pvtThresholds)  
+|     |    | For ## of (2-31), print ## data rows. &nbsp; (t00,%% clears a pvtThreshold)
 | t1[,%%]  | **`<Nt 1[ %%]>`**  | **Toggle data scroll on/off. &nbsp; [or Trash pvtThresholds for S%% bank]**  
-|     |    | clears 1 bank of 8 pvtThresholds. &nbsp; t1,99 clears ALL pvtThresholds 
+|     |    | clears 1 bank of 8 pvtThresholds. &nbsp; (t1,99 clears ALL pvtThresholds) 
 | u%% | **`<Nu %%>`**  | **Un-define Sensor**  
 |     |    | Resets sensor coordinates to 0,0
 | v[#] | **`<Nv[ #]>`**  | **Version [or Video wifi SSID #]**  
-|     |    | Displays EX-SensorCAM version info OR v# starts preset SSID wifi link
+|     |    | Displays EX-SensorCAM version info OR v# starts preset SSID webCAM
 | w  | **`<Nw>`**  | **Wait for command. &nbsp; NOTE: alternative t1 cmd. action**  
 |     |    | Cam suspends image capture and scrolling and waits for a CR
 | x &nbsp; y &nbsp; z  | `<n/a>`  | **Reserved commands for image transfer management**  
