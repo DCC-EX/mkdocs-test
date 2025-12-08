@@ -26,21 +26,21 @@ A. ESP32 sensorCAM Command Summary 17
 
 B. Check List for Optimising Sensor Resonse 19
 
-C. Filtered/parsed DCC EX-CS commands.20
+C. Filtered/parsed DCC EX-CS commands 20
 
 D. Linear Sensor Commands 21
 
 E. Tabulation of Recommended DCC-EX-CS id's for sensorCAM 23
 
-F. Hardware Interface Notes.(including PCA9515A& SF Endpoints)24
+F. Hardware Interface Notes.(including PCA9515A& SF Endpoints) 24
 
 G. I2C sensorCAM commands& PROTOCOL 28
 
 H. Notes on use of EX-Rail with SensorCAM 29
 
-I. Configuring EX-CS to connect to sensorCAM as an EXIO device.30
+I. Configuring EX-CS to connect to sensorCAM as an EXIO device 30
 
-J. ESP32-CAM pinout reference(CAM version v1.6& 1.9)31
+J. ESP32-CAM pinout reference(CAM version v1.6& 1.9) 31
 
 Addenda 32
 
