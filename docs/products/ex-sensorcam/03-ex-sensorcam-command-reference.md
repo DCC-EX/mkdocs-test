@@ -18,9 +18,9 @@
 |     |    | Sensor will respond to changing image. rr,xx set as new coordinates  
 | b#[,$] | **`<Nb #>`**| **Bank occupancy status [& Brightness S/F]**  
 |    |    | Trip status of 8 sensors in a single byte (8 bits) (hex & binary)
-| c$$$$ | **`<n/a>`** | **Camera re-Calibration and re-reference Sensors**  
+| c$$$$ | `<n/a>` | **Camera re-Calibration and re-reference Sensors**  
 |     |    | Severe changes to camera settings.  Refer to manuals before use!  
-| d%%[#]  | **`<n/a>`**  | **Difference Score for Sensor [# repeats]**  
+| d%%[#]  | `<n/a>`  | **Difference Score for Sensor [# repeats]**  
 |     |    | Prints colour diff score, brightness score and sum of both
 | e   | **`<Ne>`**  | **EPROM - save sensorCAM config. to EPROM**  
 |     |    | Records parameters in EPROM to be restored upon next Reset
@@ -50,7 +50,7 @@
 |     |    | Prints enabled state of all 8 sensors (1/0).  Use q9 for ALL banks
 | r%% | **`<Nr %%>`** | **Refresh reference image for sensor**  
 |     |    | enAbles sensor and captures a new reference image.  Use r00 for ALL
-| s%% | `<n/a>` | **Scan video to define a new Sensor position (superseeded)**  
+| s%% | **`<Ns %%>`** | **Scan video to define a new Sensor position (superseeded)**  
 |     |    | Scan for brightest spot (LED) and position sensor there. 
 | t##[,%%] | **`<Nt ##[ %%]>`**  | **Theshold setting (33-98) global [pvtThreshold for S%%]**  
 |     |    | Sets new threshold, global [ pvtThreshold] (t99 lists pvtThresholds)  
