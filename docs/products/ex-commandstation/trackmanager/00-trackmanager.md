@@ -19,6 +19,6 @@ This screen shows where track modes can be set with Engine Driver:
 
 **NOTE:** &nbsp; DC output is only available with specific hardware requirements.
 
-TrackManager  -  [reference document](/reference/04-track-manager.md)  
-Multi-district DC mode track sync -  [additional detail](/reference/05-dc-track-sync.md)  
+TrackManager  -  [reference document](/reference/trackmanager/00-trackmanager.md)  
+Multi-district DC mode track sync -  [additional detail](/reference/trackmanager/03-dc-track-sync.md)  
 As these pages are under development, you may also want to refer to the [legacy documentation](https://dcc-ex.com/legacy-docs/trackmanager/index.html)

@@ -1,4 +1,4 @@
-﻿# DCC Command Station Protocol
+﻿# DCC-EX Command Protocol
 
 ==TODO== Review tables and commands
 

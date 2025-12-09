@@ -5,6 +5,7 @@ search:
   exclude: true
 ---
 ==TODO==
+
 # Glossary of Terms
 
 These are common terms used throughout our documentation.

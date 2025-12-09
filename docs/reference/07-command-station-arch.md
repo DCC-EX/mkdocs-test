@@ -2,7 +2,7 @@
 
 ==TODO==
 
-![Code structure](./07-command-station-arch.svg)
+![Code structure](/_static/images/ex-commandstation/command-station-arch.svg)
 
 This diagram is old but basically ok. Needs editing to
 

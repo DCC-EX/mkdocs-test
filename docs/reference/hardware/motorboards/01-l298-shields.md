@@ -4,7 +4,7 @@
 
 - DC mode uses the brake pin for the PWM signal.  
 
-- Arduino and clone L298 shields use the XNOR gate to provide the inverted signal for DCC, but this does not provide low side brake in both directions for DC mode -- an issue for a reversing loop. [DC mode logic gate circuits](/reference/05-dc-mode-logic.md)
+- Arduino and clone L298 shields use the XNOR gate to provide the inverted signal for DCC, but this does not provide low side brake in both directions for DC mode -- an issue for a reversing loop. [DC mode logic gate circuits](/reference/trackmanager/02-dc-mode-logic.md)
 
 - There is a significant voltage drop when using L298 motor drivers. (see table below)  
 
