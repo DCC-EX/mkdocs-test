@@ -821,68 +821,6 @@ With version 3.00 of IO_EXSensorCAM.h CS driver, commands and parameters are sen
 
 The sensorCAM sends packets of data to the i2c bus master upon request. The data sent is dependent on the last command received as that command prepares a packet in anticipation of a bus Request. Only nine commands can affect the return packet format. They will contain the relevant ASCII command character in the first (header) byte, followed by data. These are listed below.
 
-**1.** Bank cmd '**b$**': The bank command will set the Request packet to the following $+2 bytes
-
-| 0x62('b') | SensorBankStat[$] | SensorBankStat[$-1] | .... SensorBankStat[0] | _i2cparity_ |
-| --- | --- | --- | --- | --- |
-
-**2.** Difference score '**d%%#**' (Diff+bright): The Diff command will set the Request packet to the following 5 bytes
-
-| 0x64('d')| 0## | dMaxDiff+dBright | dMaxDiff | dBright |
-| --- | --- | --- | --- | --- |
-
-**3.** Frame data '**f%%**': Creates four packets containing 4 rows of 4 pixel values in RGB666 format of Ref and Actual pixels Total 16x2 pixels. Each pixel has three 6bit colour bytes for a total of (3+3x4x2) 27 bytes per packet
-
-| 0x66('f') | 0%% | 0x00(row) | RefPix0Red | RefPix0Green | RefPix0Blue | RefPix1Red | .... ActPix3Green | ActPix3Blue |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| 0x66('f') | 0%% | 0x01(row) | RefPix4Red | RefPix4Green | RefPix4Blue | RefPix5Red | .... ActPix7Green | ActPix7Blue |
-| 0x66 'f' | 0%% | 0x02(row) | RefPix8Red | RefPix8Green | RefPix8Blue | RefPix9Red | .... ActPixBGreen | ActPixBBlue |
-| 0x66('f') | 0%% | 0x03(row) | RefPixCRed | RefPixCGreen | RefPixCBlue | RefPixDRec | … ActPixFGreen | ActPixFBlue |
-
-**4.** sensor Information. '**i%%,%%**': The Info command will set the Request packet to the following 8 bytes. twin=00 for NO twin.
-
-| 0x69('i') | 0%% | SensorStat | SensorActive | columnL | columnH | row | twin## |
-| --- | --- | --- | --- | --- | --- | --- | --- |
-
-**5.** Min/max cmd '**m$,##**': (also **n$,##**) Returns 7 byte Request packet data as below for additional feedback to operator.
-
-| 0x70('m') | min2flip | minSensors | maxSensors | nLED | threshold | TWOIMAGE_MAXBS |
-| --- | --- | --- | --- | --- | --- | --- |
-
-**6.** Position Pointer '**p$**': This sends sensor coordinates for bank$. i.e.  <span>$/0</span>, <span>$/1</span>, to <span>$/7</span> (only if defined) Up to 25 bytes.
-
-| 0x70('p') | H+bsn for&nbsp;$/0 | $/0 row | $/0 column | H+bsn for $/1 row | $/1 row | H+bsn for&nbsp;$/7 | $/7 row | $/7 column | i2cparity |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-
-> **Note:** if column(0-319) exceeds 255, a high bit H(=0x80) is added to the bsn byte for that triplet.
-
-**7.** Query enabled '**q$**': This will set up the Request packet of enabled status' in the following $+2 bytes
-
-| 0x71('q') | '$' | SensorActiveBlk[$] | SensorActiveBlk[$-1] | .... SensorActiveBlk[0] |
-| --- | --- | --- | --- | --- |
-
-**8.** Threshold '**t##**': Threshold command will set the Request packet to the following byte sequence of enabled sensors. 
-
-| 0x74('t') |  0x## | T+bpd S00 &nbsp; data | $2^{nd}$ t+0xbsn (sensor No) | $2^{nd}$ T+bpd data | $3^{rd}$&nbsp;t+0xbsn | $3^{rd}$ T+bpd data | ... t+Last bsn | T+bpd byte | 0x50 |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-
-> **Note:** 0x50 == 80 = end of data packet (an invalid bsn!).  Maximum of 15 enabled sensors in 32 byte packet. Data bytes contain "bpd" diff scores(0-127) for enabled sensors with MSB(T) set 1 if tripped. MSB(t) of bsn set if the bpd > _threshold_. Byte[0] contains ASCII 't' and Byte[1] will contain the last (old) setting of _threshold_.
-
-**9.** Row image '**y###**': This sends up to  320x2byte RGB565 pixels of row ### to USB console for image reconstruction.
-
-| 0x79('y') | '#' |'#' |'#' | 0x78('x') | 'x' | 'x' | 'x' | 0x7A('z') | 'z' | 'z' | 'z' | 0x3A(':') |
- --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | 
-
-> (x & z values in ASCII bytes. ':' starts 9 byte header)
-
-| 0x79('y') | 0x##(row) | 0x78('x') | 0x## (column/2 | 0x7A('z') | 0x## (zlength/2 | chksumL | chksumH | 0x3A(':') |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- |
-
-> (2 RGB565 bytes/pixel with no NUL characers. Even column start)
-
-| $1^{st}$ data byte | $2^{nd}$ data byte | $3^{rd}$ data byte | ... t+Last bsn | T+bpd byte | 0x50 |
-| --- | --- | --- | --- | --- | --- |
-
 ![Console Image Reconstruction](/_static/images/ex-sensorcam/console-image-reconstruction.png)
 
 ## APPENDIX H
