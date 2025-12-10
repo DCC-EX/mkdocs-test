@@ -3,7 +3,7 @@
 /^[[:space:]]*#define/ {
     line = $0
     sub(/^[[:space:]]*#define[[:space:]]*/ , "" , line)
-    print "\n```cpp\n" line "\n```\n"
+    print "\n## " line "\n\n"
     next
 }
 
