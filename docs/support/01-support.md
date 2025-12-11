@@ -40,7 +40,7 @@ Please refer to our [Discord page](/support/05-discord.md) which outlines how to
 
 If you are an existing GitHub user, you can also get support via GitHub which is particularly useful for bug reports. While all the DCC-EX team members have GitHub accounts and can respond, this is typically not as quick as getting support via our recommended Discord server option.
 
-Please refer to our [GitHub page](/support/02-github.md) on the various repositories you can raise issues in.
+Please refer to our [GitHub page](/support/10-github.md) on the various repositories you can raise issues in.
 
 ## TrainBoard
 
