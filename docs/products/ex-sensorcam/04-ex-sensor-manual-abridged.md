@@ -120,13 +120,13 @@ For a test hookup between a USB powered sensorCAM and a Command Station(mega) wi
 
 Lighting is critical for reliable operation. Theoretically, the lighting should be steady. Both LED flood and Fluorescent lighting might degrade results due to the flickering levels of illumination at 100/120 Hz. Use quality LED lights. The light fittings should not be visible in the camera's field of view. A uniform level of lighting is the objective, with a minimum influence from fluctuating daylight, fans and cloud shadows through windows. Some experimentation may be needed to avoid local“glare”. Images may show white test panels to have several drifting horizontal dull bands produced between cycles of the mains supply(Figure 4). Bright lighting is desirable(good quality LEDS?) to enhance colour differentiation. Check for flicker by taking a“slo-mo” video on a cell phone. Fluoro's are bad!
 
-The mount needs to be rigid to avoid vibration which can trip sensors due to small image movements. It also needs to have a suitable route for a(cat5) cable for its own power supply and the necessary i2c communications. The length of this cable needs to be considered if the railway's i2c network is otherwise long. The prototype CAM has been fitted with i2c buffers and used on a 20m buffered 5 Volt i2c Cat5 bus, but the quick connection above(using PCA9515A) is for short lengths only(i2c under 3m). Up to 7m may be achieved using 2k pull-up resistance and one LTC4311“terminator” to enhance signal rise time. Benchtop mounting with mirrors minimizes this length issue. A very good alternative for longer cables is the Sparkfun differential Endpoint system.
+The mount needs to be rigid to avoid vibration which can trip sensors due to small image movements. It also needs to have a suitable route for a (cat5) cable for its own power supply and the necessary i2c communications. The length of this cable needs to be considered if the railway's i2c network is otherwise long. The prototype CAM has been fitted with i2c buffers and used on a 20m buffered 5 Volt i2c Cat5 bus, but the quick connection above (using PCA9515A) is for short lengths only (i2c under 3m). Up to 7m may be achieved using 2k pull-up resistance and one LTC4311 “terminator” to enhance signal rise time. Benchtop mounting with mirrors may minimize this length issue. A very good alternative for longer cables is the Sparkfun differential Endpoint system.
 
-Most reliable results may be obtained with light grey coloured ballast and dark sleepers. If results are inadequate,light green(grass?) or yellow"reflectors" between the rails may relieve any problem.(recommended in fiddle yards)If lighting throws shadows beside rolling stock, the shadows can be used advantageously by good sensor placement.
+Most reliable results may be obtained with light grey coloured ballast and dark sleepers. If results are inadequate,light green (grass?) or yellow "reflectors" between the rails may relieve any problem (recommended in fiddle yards). If lighting throws shadows beside rolling stock, the shadows may be used advantageously by good sensor placement.
 
-For initial configuration, access to the sensorCAM's USB port is important. Loading computer code over a long USB cable is problematic, but monitoring and tweaking settings may be done with a reduced BAUD rate or a(5m?)buffered USB cable at 115200 BAUD. A benchtop mounting with mirror would help here.
+For initial configuration, access to the sensorCAM's USB port is important. Loading computer code over a long USB cable is problematic, but monitoring and tweaking settings may be done with a reduced BAUD rate or a (5m?) buffered USB cable at 115200 BAUD. A benchtop mounting with mirror might help here.
 
-With regards lighting, fluoroescent or LED lighting normally flickers at twice mains frequency so it pulses at 100 or 120Hz. This is normally tolerable, but it can be seen in a sensorCAM image on a uniformly white test panel as below(Figure 5). In 100mSec there could be up to 10 bands in one image. SensorCAM tries to synchronise with the mains frequency, but if it fails the faint bands will drift across the sensors and potentially trip them in the worst case scenario. Set the threshold high enough to avoid such trips. Figure 4 shows an example of bad 100Hz banding.
+With regards lighting, fluoroescent or LED lighting normally flickers at twice mains frequency so it pulses at 100 or 120Hz. This is normally tolerable, but it can be seen in a sensorCAM image on a uniformly white test panel as below(Figure 5). In 100mSec there could be up to 10 bands in one image. SensorCAM needs to synchronise with the mains frequency, but if it fails the faint bands will drift across the sensors and potentially trip them in the worst case scenario. Set the threshold high enough to avoid such trips or (better) change lighting. Figure 4 shows an example of bad 100Hz banding.
 
 ![Test Image with Light Banding](/_static/images/ex-sensorcam/test-image-light-banding.png)
 
@@ -150,7 +150,7 @@ Where bsNo.'s are printed, they can take several equivalent forms depending on c
 
 Some diagnostic output (e.g. **f%%**) may resort to another numbering system  (i.e.HEXADECIMAL) for compactness, but for normal usage this notation can generally be avoided. Just be aware of the context in which numbers are being used.
 
-Where words are in *italics*, these are the actual names used in the C++ programs for sensorCAM. Consequently they may seem cryptic, but their function is hopefully clear. NOTE: sensorCAM Code may use "active" & "enabled" interchangeably.
+Where words are in *italics*, these are the actual names used in the C++ programs for sensorCAM. Consequently they may seem cryptic, but their function is hopefully clear. 
 
 ### 4.2 Help commands
 
@@ -161,20 +161,6 @@ h &nbsp; &nbsp; &nbsp; &nbsp; shows current settings for help, maxSensors and br
 h%% &nbsp; sets maxSensors to%% for%% from 10 to 97(m0,%% is better alternative)
 
 h- &nbsp; &nbsp; &nbsp; turns OFF all debug options. h-# turns off individual debug values(5-9 only).
-
-h0 &nbsp; &nbsp; &nbsp; some detailed debug values for each sensor including the algorithms colour Cratios, Xratios etc.
-
-h1 &nbsp; &nbsp; &nbsp; outputs timing measurements for parts of code
-
-h2 &nbsp; &nbsp; &nbsp; more general debug including brightness numbers
-
-h3 &nbsp; &nbsp; &nbsp; outputs i2c related info(if communicating)
-
-h4 &nbsp; &nbsp; &nbsp; produces some auto-reference refresh info
-
-h5 &nbsp; &nbsp; &nbsp; spare
-
-h6 &nbsp; &nbsp; &nbsp; Outputs a text message whenever ALL enabled sensor references are refreshed.
 
 **h7[,#] &nbsp; causes the program to suspend any new data streaming upon any trip of the bank 1 sensors, allowing inspection of sensor data by using commands like f%%, & , etc. &nbsp; h7,# changes default(1) to bank #**
 
