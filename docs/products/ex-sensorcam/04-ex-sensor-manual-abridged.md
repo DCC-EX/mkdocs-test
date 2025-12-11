@@ -182,35 +182,35 @@ h8 &nbsp; &nbsp; &nbsp; This causes up to 30 i2c commands from CS to be echoed t
 
 ## 5. Configuration
 
-### 5.1 Plan an intial sensor numbering strategy (bigger picture)
+### 5.1 Plan a grand sensor numbering strategy
 
-The first step is to decide a sensor distribution strategy & numbering system. A sensorCAM has 10 banks(0-9) of eight(0-7) individual sensors available(total 80). Each **bank** can be tested as a whole to see if ANY sensors tripped or NO sensors tripped. Also placing a string of sensors in a row, for example along a platform, can indicate train position with the binary bank value increasing as the train approaches a signal as it crosses sensors 0 through 7.(see **Figure 5** for examples) Sensors are generally referred to with a two digit bank/sensor designation (their bsNo.) e.g Sensor 68 and 69 are therefore invalid bs numbers, 97 is valid. Use one bank for a platform (set of 8 sensors). Sensor S00 is reserved as a brightness reference sensor. Sensor S06 is also RESERVED for now. It is suggested that user's Sensors start with bank 1, i.e. S10 (vPin #08), S11 & upwards, with related sensors in their own bank. They do NOT need to be sequential (Follow the installation Guide for full details). **With the recommended definitions set up, the user does not need to remember or refer to vPins for sensorCAM sensors at all - just use the S%% idntifier.**
+The first step is to decide a sensor distribution strategy & numbering strategy. A sensorCAM has 10 banks (0-9) of eight (0-7) individual sensors available (total 80). Each **bank** can be tested as a whole to see if ANY sensors tripped or NO sensors tripped. Also placing a string of sensors in a row, for example along a platform, can indicate train position with the binary bank value increasing as the train approaches a signal as it crosses sensors 0 through 7. (see **Figure 5** for examples) Sensors are generally referred to with a two digit bank/sensor designation (their bsNo.) e.g Sensor 68 and 69 are therefore invalid bs numbers, 97 is valid. Use one bank for a platform (set of 8 sensors). Sensor S00 is reserved as a brightness reference sensor. Sensor S06 is also RESERVED for now. It is suggested that user's Sensors start with bank 1, i.e. S10, S11 & upwards, with related sensors in their own bank. They do NOT need to be sequential (Follow the installation Guide for full details). **With the recommended definitions set up, the user does not need to remember or refer to vPins for sensorCAM sensors at all - just use the S%% idntifier.**
 
-For an EX-Command Station(CS), the 80 sensors will have vPin numbers ranging from #00 to #79(DECIMAL) and mapped to 80 b/s id's(S00 to S97). Users can use, for example, **AT(CAM 0%%)** in EXRAIL commands where a vPin ID is called for. For the technically minded, vPin=BasePin+b*8+s. For further details on adopted notation, refer to section 4.1.
+For an EX-Command Station (CS), the 80 sensors will have vPin numbers ranging from #00 to #79 (DECIMAL) and mapped to 80 b/s id's(S00 to S97). Users can use, for example, **AT(CAM 0%%)** in EXRAIL commands where a vPin ID is called for. For the technically minded, vPin=BasePin+b*8+s. For further details on adopted notation, refer to section **4.1.**
 
 ### 5.2 Preset the wifi SSID and password
 
-Before uploading the software into CAM check that it has the appropriate WiFi definitions for your railway WIFI_SSID & SHEDWIFIPWD and perhaps for your test area ALTWIFI_SSID& ALTWIFI_PWD are in your **configCAM.h**
+Before uploading the software into CAM check that it has the appropriate WiFi definitions for your railway WIFI_SSID & SHEDWIFIPWD and perhaps for your test area ALTWIFI_SSID & ALTWIFI_PWD are in your **configCAM.h**
 
 ### 5.3  Adjust other configCAM.h settings
 
- &nbsp; &nbsp; &nbsp; a) If you want to use “larger” sensors, Place#define SEN_SIZE 2(1-7) in your configCAM.h(ver169+)  
- &nbsp; &nbsp; &nbsp; b) If i2c address 0x11 is in use, change to 0x12(or 0x13) i.e. I2C_DEV_ADDR 0x11 in your configCAM.h  
- &nbsp; &nbsp; &nbsp; c) The first TWOIMAGE_MAXBS sensors use 2 consecutive image averaging to suppress noise spikes. If you want to set a different range to use this feature, change configCAM.h from the default(030) before upload.
+ &nbsp; &nbsp; a) If you want to use “larger” sensors, Place _#define SEN_SIZE 2_ (0-7) in your _configCAM.h_ (ver319+)  
+ &nbsp; &nbsp; b) If i2c address 0x11 is in use, change to 0x12 (or 0x13) i.e. _I2C_DEV_ADDR 0x11_ in your _configCAM.h_  
+ &nbsp; &nbsp; c) The first _TWOIMAGE_MAXBS_ sensors use 2 consecutive image averaging to suppress noise spikes. If you want to set a different range to use this feature, change _configCAM.h_ from the default(030) before upload.
 
 ### 5.4 Load sensorCAM software 
 
-Follow you-tube to pre-configure the Arduino IDE for ESP32. IF using an FTDI interface take EXTREME care not to connect 5V to the 3.3V CAM supply pin as this destroys CAMs. Using this IDE, load the software into sensorCAM with it unmounted. Then mount the CAM in a suitable place for tests. A long USB cable is problematical.
+Follow you-tube to pre-configure the Arduino IDE for ESP32. If not using the MB and resorting to an FTDI interface, take EXTREME care not to connect 5V to the 3.3V CAM supply pin as this destroys CAMs. Using this IDE, load the software into sensorCAM with it unmounted. Then mount the CAM in a suitable place for tests. A long USB cable is problematical.
 
 ### 5.5 Establish a monitor screen to sensorCAM
 
-Establish a USB connected monitor(e.g. Arduino IDE monitor, or PROCESSING4 monitor, preferably at 115200 baud. The PROCESSING 4 monitor coded for the sensorCAM has the advantage of displaying the CAM's railroad image(or selected part thereof), all-be-it rather slowly!). Because of the many changeable CAM parameters, the WiFi link(webCAM) is not a reliable indicator of the sensorCAM image quality. It may be better or worse. The PC(using Arduino IDE) is only able to show images via WiFi, but because the sensorCAM runs on RGB565 format it cannot send WiFi(jpeg) images without rebooting into WiFi/jpg webCAM mode(under which it cannot read sensors!). The reboot/display/reboot cycle for WiFi webCAM is also tediously time consuming.
+Establish a USB connected monitor (e.g. Arduino IDE monitor, or PROCESSING4 monitor, preferably at 115200 baud. The PROCESSING 4 monitor coded for the sensorCAM has the advantage of displaying the CAM's railroad image (or selected part thereof), all-be-it rather slowly!). Because of the many changeable CAM parameters, the WiFi link (webCAM) is not a reliable indicator of the sensorCAM image quality. It may be better or worse. The PC(using Arduino IDE) is only able to show images via WiFi, but because the sensorCAM runs on RGB565 format it cannot send WiFi (jpeg) images without rebooting into WiFi/jpg webCAM mode(under which it cannot read sensors!). The reboot/display/reboot cycle for WiFi webCAM is also tediously time consuming.
 
 The sensorCAM takes some time to boot and establish sensing mode. The white flash LED starts flashing on every frame after about 10 seconds and data flows to the USB terminal. A period of averaging ensues with“good” sensing by about 30 seconds. This flow of data(and sensing!) can be suspended with the‘w’ wait command. Some commands(including a blank line entry) will subsequently restart the sensing camera and sensor output. The CAM may crash if it is left waiting for input for over 30 minutes. Reference images would also be long out of date.
 
 ### 5.6 Verify wifi webCAM operation
 
-The CAM can be switched to WiFi video mode with the'v1' command. 'v2' can select your alternate WiFi network. ('v' will give sensorCAM software version). 'v1' (or'v2') will reboot and load WiFi mode connecting to the network selected, and providing a URL e.g. http://192.168.0.xx that can be used to connect with a browser. An image, like **Figure 1** above, should be seen with controls for experimenting with Brightness etc. This image is educational but not necessarily a good indication of the sensorCAM (sensor mode) image because of the unpredictable parameter effects. To see a more reliable image run the PROCESSING 4 *SensorCAM.pde* monitor instead of Arduino IDE monitor (refer **Section 6.**). To exit video mode, try the monitor command 'R'(or'F') If this software reset fails, try manually rebooting the sensorCAM(power OFF/ON or via the on-board black push-button using a non-metallic tool!
+The CAM can be switched to WiFi video mode with the '**v1**' command. '**v2**' can select your alternate WiFi network. ('**v**' will give sensorCAM software version). '**v1**' (or'**v2**') will reboot and load WiFi mode connecting to the network selected, and providing a URL e.g. http://192.168.0.xx that can be used to connect with a browser. An image, like **Figure 1** above, should be seen with controls for experimenting with Brightness etc. This image is educational and useful for camera alignment, but not necessarily a good indication of the sensorCAM (sensor mode) image because of the unpredictable parameter effects. To see a more reliable image run the PROCESSING 4 *SensorCAM.pde* monitor instead of Arduino IDE monitor (refer **Section 6.**). To exit video mode, try the monitor command '**R**' (or'**F**') If this software reset fails, try manually rebooting the sensorCAM (power OFF/ON or via the on-board black push-button using a non-metallic tool!
 
 ### 5.7 Familiarise with sensorCAM command set.
 
@@ -218,19 +218,19 @@ Proceeding with the steps below, before mounting the camera over the railroad, i
 
 ### 5.8 Sensor placement
 
-Setting up the CAM first requires locating sensors. When deciding on sensor location, be aware that the sensor response is slow compared to conventional sensors. Allowing for 500mSec delay, which at 100kph equates to 150mm of travel(in HO), may influence sensor placement. Best performance is obtained if the sensors are not within 20 rows/columns of an image edge. Remember to save to EPROM with the‘e’ command once satisfied.Virtual sensor location can be set up in several ways. Option D is preferred.
+Setting up the CAM first requires locating sensors. When deciding on sensor location, be aware that the sensor response is slow compared to conventional sensors. Allowing for 500mSec delay, which at 100kph equates to 150mm of travel (in HO), may influence sensor placement. Best performance is obtained if the sensors are not within 20 rows/columns of an image edge. Remember to save to EPROM with the ‘e’ command once satisfied.Virtual sensor location can be set up in several ways. Option **d.** is preferred.
 
 **a.** &nbsp; Automatic loading from EPROM on bootup. This is only applicable after an initial sensor set has been established and command'e' used to save them to EPROM.
 
-**b.** &nbsp; The bright LED method: Place a bright LED at the required location and reduce room lighting if needed.Issue an's%%' command(e.g.s00 for an off-track reference sensor) and wait for the CAM to scan and locate the LED and setup sensor coordinates. Remove the LED, restore lighting, and perform an‘r%%’ for new reference images.
+**b.** &nbsp; The bright LED method: Place a bright LED at the required location and reduce room lighting if needed.Issue an '**s%%**' command(e.g.s00 for an off-track reference sensor) and wait for the CAM to scan and locate the LED and setup sensor coordinates. Remove the LED, restore lighting, and perform an ‘**r%%**’ for new reference images.
 
-**c.** &nbsp; Issue a ‘**k%%,rrr,xxx**’ command to place sensor%% at CAM pixel position xxx(column) and row rrr(y). This method is most useful for "tweaking" coordinates if you want to adjust the result of the LED method(the CAM has 240 rows/lines of 320 pixels each, numbered from 0). Use the‘**i%%**’ command for status of sensor.NOTE: Use ‘**k**' to set up test sensors initially, but delay setting final positions until Processing 4 installed and enhanced ‘**k**’ and ‘**a**’ available. The alternate advanced‘a’ command does 3 commands in one(i.e. k, a & r).
+**c.** &nbsp; Issue a ‘**k%%,rrr,xxx**’ command to place sensor%% at CAM pixel position xxx(column) and row rrr(y). This method is most useful for "tweaking" coordinates if you want to adjust the result of the LED method (the CAM has 240 rows/lines of 320 pixels each, numbered from 0). Use the ‘**i%%**’ command for status of sensor.NOTE: Use ‘**k**' to set up test sensors initially, but delay setting final positions until Processing 4 installed and enhanced ‘**k**’ and ‘**a**’ available. The alternate advanced ‘**a**’ command does 3 commands in one(i.e. k, a & r).
 
 **d.** &nbsp; Running Processing 4, an image can be downloaded, a bsNo. nominated by typing k%% (or a%%) and the mouse click on the image appends coordinates to k%%. Press Enter if the command is complete and correct.Similarly, the enhanced version of'a%%' sets position, enables, and records a reference all in one command.
 
 ### 5.9 Sensor status and save
 
-Once a sensor has been located, the'p$' command can show/tabulate all defined positions up to bank$. To enable a sensor use the '**a%%**' command. This will enable AND record a new reference image for the sensor. It will then be included in the screen “data dump”. Only “enable” sensors when UN-occupied, or do an **r%%** later when the sensor is empty. Also, remember to do an '**e**' command when you want to save positions in EPROM for next time.
+Once a sensor has been located, the 'p$' command can show/tabulate all defined positions up to bank$. To enable a sensor use the '**a%%**' command. This will enable AND record a new reference image for the sensor. It will then be included in the screen “data dump”. Only “enable” sensors when UN-occupied, or do an **r%%** later when the sensor is empty. Also, remember to do an '**e**' command when you want to save positions in EPROM for next time.
 
 ### 5.10 Set a Sensor Threshold
 
@@ -238,19 +238,19 @@ A threshold needs to be set to define the level of difference in image required 
 
 ### 5.11 Limit printout to manageable range
 
-It is desirable to set (using 'm') a *maxSensors* parameter (e.g. 030) to limit diagnostic printouts to a manageable screen width, and especially important to set the *min2flip* parameter which helps filter out noise trips. However *min2flip* slows the response to valid trips by 100mSec (frame rate) per extra count. Suggest settings of 2(default) or 3. e.g.'m3,30' say. Note: *maxSensors* (pulled from EPROM) limits the following....
+It is desirable to set (using '**m**') a *maxSensors* parameter (e.g. 030) to limit diagnostic printouts to a manageable screen width, and especially important to set the *min2flip* parameter which helps filter out noise trips. However *min2flip* slows the response to valid trips by 100mSec (frame rate) per extra count. Suggest settings of 2(default) or 3. e.g.'**m3,30**' say. Note: *maxSensors* (pulled from EPROM) limits the following....
 
-**a.** the data stream for console/monitor, limited to enabled sensors below maxSensors(and above minSensors)
+**a.** the data stream for console/monitor, limited to enabled sensors below _maxSensors_ (and above _minSensors_)
 
-**b.** histogram printout, to enabled sensors below maxSensors(see statistics command‘&’)
+**b.** histogram printout, to enabled sensors below _maxSensors_ (see statistics command ‘**&**’)
 
-**c.** the boxlt() sensor boxes seen on Processing 4 images, for enabled sensors below maxSensors
+**c.** the _boxlt()_ sensor boxes seen on Processing 4 images, for enabled sensors below _maxSensors_
 
-**d.** i2c buffer data for't' record, to bsn's below maxSensors(and above minSensors)(sent to Command Station)The cmd't' acts as a flag to prepare a packet of i2c data that the CS can reconstitute as per the USB ASCII data stream.
+**d.** i2c buffer data for 't' record, to bsn's below _maxSensors_ (and above _minSensors_)(sent to Command Station) The cmd '**t**' acts as a flag to prepare a packet of i2c data that the CS can reconstitute as per the USB ASCII data stream/scroll.
 
 ### 5.12 LED bank trip indicator & EPROM
 
-If you want a LED bank occupancy indicator on the CAM, use the '**n$**' command to cause a bank occupied LED to show (default Bank 2). *nLED, min2flip, maxSensors* and *threshold* can be saved to EPROM, along with sensor positions and twins(see **15.** below) with the '**e**' command. *minSensors* is not currently saved in EPROM (set by'n')
+If you want a LED bank occupancy indicator on the CAM, use the '**n$**' command to cause a bank occupied LED to show (default Bank 2). *nLED, min2flip, maxSensors* and *threshold* can be saved to EPROM, along with sensor positions and twins (see **5.15** below) with the '**e**' command. *minSensors* is not currently saved in EPROM (set by'n')
 
 ### 5.13 Sensor reference image refreshing
 
@@ -259,7 +259,7 @@ If the sensor remains unoccupied, it updates the reference, compensating for slo
 
 ### 5.14 Scrolling data interpretation
 
-The scrolling data dump displays “SUS” (suspend) if auto updates are off. It also displays *threshold*(T), *min2trip*(M), the bank assigned to the on-board LED (N), S00 reference diff. score, as well as the S00 reference brightness(R) and its current actual brightness(A) and other enabled sensors. ‘A’ is the Actual latest sum of the 48 bytes of a sensor image (max 3024) and should be between 1200 and 2500 ideally. Following a reference refresh (**r**), for an unoccupied image, the (noisy) diff scores should be 32-37. If references are being updated, a note will appear at the right hand side of the data dump in the form of “**Ref 0%%**” to indicate that a new reference for an UNOCCUPIED sensor has occurred. This dump allows for performance monitoring during commissioning.  
+The scrolling data dump displays “SUS” (suspend) if auto updates are off. It also displays *threshold*(T), *min2trip*(M), the bank assigned to the on-board LED(N), S00 reference diff. score, as well as the S00 reference brightness(R) and its current actual brightness(A), a brightness loading(B) and other enabled sensors. ‘A’ is the Actual latest sum of the 48 bytes of a sensor image (max 3024) and should be between 1200 and 2500 ideally. Following a reference refresh (**r**), for an unoccupied image, the (noisy) diff scores should be 32-37. If references are being updated, a note will appear at the right hand side of the data dump in the form of “**Ref 0%%**” to indicate that a new reference for an UNOCCUPIED sensor has occurred. This dump allows for performance monitoring during commissioning.  
 :**oo46##** indicates tripped sensor (## = occupied) sensor are shown by default with a central diff score and "##".  
 :**?-46-?** indicate an above threshold image potentially occupied (waiting for *min2trip*), whereas   
 :**oo47?T** indicates suspected occupied but no confirmation from Twin (see **5.15**).
@@ -272,13 +272,13 @@ If necessary, another option can be tried to address "noise" trips if all else f
 
 ### 5.16 Other diagnostic commands
 
-There are other commands that can be used to optimise the CAM performance by trial-and-error. These include Frame(**f**),GetCAMsettings(**g**),adJustCAMsettings(**j**),and Statistics(**&**) & Calibrate(**c**))(not recommended).If the scene contrast is inadequate, a lighter reflector between the tracks is a cure particularly in fiddle yards(e.g. light green grass).
+There are other commands that can be used to optimise the CAM performance by trial-and-error. These include Frame(**f**), GetCAMsettings(**g**), adJustCAMsettings(**j**),  Statistics(**&**) & Calibrate (**c**))(not recommended).If the scene contrast is inadequate, a lighter reflector between the tracks is a cure particularly in fiddle yards (e.g. light green grass).
 
-Explore and familiarize: Operational output commands will give the sensor states and include Individual(i), Bank(b),Diff(d), Position(p),& Query enabled(q). Other input sensor commands include Zero(o), One(l), Enable(a),Undefine(u)& the define coordinate(k) command. Zero '**o**'(oscar) and One '**l**'(lima) preset and disable sensors.
+Explore and familiarize: Operational output commands will give the sensor states and include Individual (**i**), Bank (**b**),Diff (**d**), Position (**p**), & Query enabled (**q**). Other input sensor commands include Zero(**o**), One(**l**), Enable(**a**),Undefine(**u**)& the define coordinate(**k**) command. Zero '**o**' (oscar) and One '**l**' (lima) preset ****and disable** sensors.
 
-NOTE: Historically the term “activate” has been used in the CAM program rather than “enable”. In the context of sensorCAM, activated means“enabled” rather than output “1” as typically may be used in EX-CS sensor documentation. This manual has been rewritten to use the "enabled" terminology, but names and references in the actual program still use the original terminology, so interpret “activated”, in a sensorCAM context, as “enabled”. Sensor output is referred to as "tripped"(1/occupied) or"untripped" (0/unoccupied).
+NOTE: Historically the term “activate” has been used in the CAM program rather than “enable”. In the context of sensorCAM, activated means “enabled” rather than output “1” as typically may be used in EX-CS sensor documentation. This manual has been rewritten to use the "enabled" terminology, but names and references in the actual program still use the original terminology, so interpret “activated”, in a sensorCAM context, as “enabled”. Sensor output is referred to as "tripped" (1/occupied) or "untripped" (0/unoccupied).
 
-Test image with Fluorescent or LED lighting - note three faint dull stripes across white test panel in **Figure 5** below. Strong banding is also evident in **Figure 4**. Horizontal stripe position varies frame-to-frame as not effectively synchronized with mains yet.  
+Test image with Fluorescent or LED lighting - note three faint dull stripes across white test panel in **Figure 5** below. Strong banding is also evident in **Figure 4**. Horizontal stripe position varies frame-to-frame as not effectively synchronized with mains yet.  Good quality LED lights don't flicker. 
 (**Figure 5** image was obtained using **V, H** & **Y60** Processing4 commands)
 
 The mains supply synchronization is currently inadequate (ESP32-CAM limitation) so drifting illumination bands will add a little to the "noise" seen by the sensors. The significance of this may need evaluation by experiment.
@@ -287,9 +287,9 @@ The mains supply synchronization is currently inadequate (ESP32-CAM limitation) 
 
 Two additional features have been added which may resolve lingering issues. Individual thresholds can be set to override the "global" threshold set with '**t##**'. The command '**t##,%%**' will set a *pvtThreshold* for sensor S%% replacing the “global” (t##) value. It can be removed with the '**t00,%%**' command. This way a higher threshold can be set on a “noisy” sensor.  While an increased *pvtThreshold* may reduce its sensitivity, it has no effect on the other sensors. ‘**t1,%%**’ will cancel all pvtThresholds in one bank, while ‘**t1,99**’ cancels ALL pvtThresholds in the CAM.
 
-The second feature enables the size of the sensor to be increased. This is done by inserting spare pixels in a cross(+) through the 4x4 sensor moving 4 pixels out to each of the corners of a larger footprint. The parameter SEN_SIZE(default 0) adds from 1 to 9 rows of spare pixels. This parameter is set in **configCAM.h** and may, for example, allow a sensor to be placed so as to register a greater variation in pixel values. A uniform 16 identical pixels is less effective than ones capturing various colours/shades. If it can include a shadow of a passing loco/wagon, then the “diff” can be stronger and a more positive trip attained. A footprint size increase affects ALL sensors.
+The second feature enables the size of the sensor to be increased. This is done by inserting spare pixels in a cross(+) through the 4x4 sensor moving 4 pixels out to each of the corners of a larger footprint. The parameter SEN_SIZE (default 0) adds from 1 to 9 rows of spare pixels. This parameter is set in **configCAM.h** and may, for example, allow a sensor to be placed so as to register a greater variation in pixel values. A uniform 16 identical pixels is less effective than ones capturing various colours/shades. If it can include a shadow of a passing loco/wagon, then the “diff” can be stronger and a more positive trip attained. A footprint size increase does affects ALL sensors.
 
-It is desirable to place sensors where they generate a “mottled” image of pixels rather than a uniform colour which makes distinguishing grey roofs against plain grey track hard. Pixel size is therefore relevant. It is helpful if the pixels are the width of sleepers so they can be distinguished. If they can't then try an offset sensor that sees track bed and trackside grass/shadows say. **Table 1** indicates pixel/sensor sizes relative to sleepers and track gauge. It shows that sleeper detection is limited with the ov2640 QVGA(240x320) resolution. Future sensorCAM variants may do better.  An angled camera (less than 30degrees) could benefit from a glimpse of the side of the loco/coach/wagon and increase the field of view, but parallax issues may arise.
+It is desirable to place sensors where they generate a “mottled” image of pixels rather than a uniform colour which makes distinguishing grey roofs against plain grey track hard. Pixel size is therefore relevant. It is helpful if the pixels are the width of sleepers so they can be distinguished. If they can't, then try an offset sensor that sees track bed and trackside grass/shadows say. **Table 1** indicates pixel/sensor sizes relative to sleepers and track gauge. It shows that sleeper detection is limited with the ov2640 QVGA(240x320) resolution. Future sensorCAM variants may do better.  An angled camera (less than 30degrees) could benefit from a glimpse of the side of the loco/coach/wagon and increase the field of view, but parallax issues may arise.
 
 | OV2640  | CAM(std.  lens) | field of&nbsp;view | 54 deg |  |  |  |  |  |  |  |  |  |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -319,8 +319,8 @@ It is desirable to place sensors where they generate a “mottled” image of pi
 The Processing application displays the image using sensorCAM settings, and also shows colour coded sensors. As previously stated, the PROCESSING4 application is a crude USB monitor that enables the user to control and configure the sensorCAM with the additional benefit of being able to invoke a display of the image. All the sensorCAM commands can be used. At 115200 baud, a full RGB565 image takes 13 seconds, but it is often convenient to reduce this by prescribing a smaller image segment of limited rows and/or columns(e.g. **Y120** for lower half of a 240 row screen).  
 The Processing 4 application can be [downloaded from here](https://processing.org)
 
-The SensorCAM.pde code assumes the USB port for the sensorCAM is the lowest (comNo=0;) on the list displayed on startup. Should this not be the case, for example if another USB is being used to simultaneously run an IDE to a Command Station, then the *comNo=0;* code line of the sensorCAM.pde will need to be increased to, for example, *int comNo=1;*  
-You may also increase the image display window size by editing the *final int SF=2;* line to *=3;* or *=4;* on high res. screens.
+The SensorCAM.pde code assumes the USB port for the sensorCAM is the lowest (comNo=0;) on the list displayed on startup. Should this not be the case, for example if another USB is being used to simultaneously run an IDE to a Command Station, then the *int comNo=0;* code line (line 15?) of the sensorCAM.pde will need to be increased to, for example, *int comNo=1;*  
+You may also increase the image display window size factor by editing the next *final int SF=2;* line to *=3;* or *=4;* on high res. screens.
 
 Both Processing 4.2 and 4.3 have been tested successfully.
 
@@ -346,7 +346,7 @@ The image will have enabled sensors (b/s) boxed and identified by a (resistor) c
 
 **R** &nbsp; will cause a firmware reset of the sensorCAM via the DTR line of the FTDI interface. CAM will enter a wait mode for confirmation. Reset can be aborted with command'aw'(Abort&Wait). Ctrl-R Resets CAM instantly.
 
-#### NOTE
+> **NOTE**
 
 1. The above commands ARE CASE SENSITIVE. They are recognized by Processing 4 as non-sensorCAM commands and processed in the monitor/PC. Commands **X, Y** & **Z** in turn automatically issue related sensorCAM commands **x, y** & **z** respectively, with appropriate parameters. The '**y**' command is used repeatedly, once for each new image line(row). The '**y**' command suspends sensorCAM immaging, holding a single “frozen” frame until a terminating command is received. To resume normal operation at the end of command '**Y**', the double-y command '**yy**' is automatically sent. However, if the user enters a'**y**' by error (e.g. wanting upper case '**Y**'), the monitor may show a binary string of data (verbose mode) and a manually entered '**yy**' is needed to recover. Typing lower case **x** or **z** may also negate any previous **X** or **Z** settings.
 
