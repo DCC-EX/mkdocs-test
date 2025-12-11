@@ -492,9 +492,9 @@ Also able to change default setting for Brightness, Contrast & Saturation with e
 ### Startup Notes:
 
 1. Normal power up reset will initiate Sensor mode, as will the'R' command, and uses EPROM data settings.  
-2. Sensor mode startup flashes white LED at 10Hz after~10 seconds, and exhibits a"flicker" at~20 seconds.  
-3. Requested(v1) WebServer mode reset will flash LED at~3seconds and again(brighter) at~8 seconds.  
-4. After the 8 second flash the Webserver will be operational at web address 192.168.0.xx(xx from display)  
+2. Sensor mode startup flashes white LED at 10Hz after \~10 seconds, and exhibits a"flicker" at ~20 seconds.  
+3. Requested (v1) WebServer mode reset will flash LED at  ~3seconds and again (brighter) at ~8 seconds.  
+4. After the 8 second flash the Webserver will be operational at web address 192.168.0.xx (xx from display)  
 5. If the OV2640 camera or WiFi fails to initialize, the CAM resets and may restart/revert into Sensor mode!  
 6. If USB FTDI/MB is removed or not connected to PC, then WebServer may fail/reboot. Power issue?  
 
@@ -503,24 +503,24 @@ Also able to change default setting for Brightness, Contrast & Saturation with e
 **1.** The same commands are valid from an I2C Master Arduino, but there are some variations.
 
 **2.** The commands with asterisks normally pause CAM execution so the operator can read USB output on a monitor screen. The same commands from I2C DO NOT wait for a new line, with the exception of'w'.  
-**3.** Commands b,d,i,m,p,q&t can return data to the I2C master Arduino(Mega). This data is delivered if the master calls a Wire.requestFrom(addr,#); following the command, from the slave CAM address 17(0x11).  
+**3.** Commands b,d,i,m,p,q&t can return data to the I2C master Arduino(Mega). This data is delivered if the master calls a _Wire.requestFrom(addr,#)_; following the command, from the slave CAM address 17(0x11).  
 **4.** The I2C data returned(after header byte) is in binary bytes and in a format depending on the last command.  
-**5.** Header byte[0] is the ASCII command character(b,d.i,m,p,q,or t) or an error code(OxFE) if no valid data.  
-**6.** If the error code is generated, it is followed by the last received(inappropriate) command string.  
+**5.** Header byte[0] is the ASCII command character (b,d.i,m,p,q,or t) or an error code(OxFE) if no valid data.  
+**6.** If the error code is generated, it is followed by the last received (inappropriate) command string.  
 **7.** b$ cmd returns$+1 sensor status bytes for bank$,$-1 etc. down to bank 0.'b' defaults to'b9'(all).  
 **8.** d%% cmd returns 4 data bytes with binary values for bsn, maxDiff+bright, maxDiff& bright in that order.  
 **9.** i%% cmd returns 2 data bytes: byte[1]= bsn and byte[2]=0 if unoccupied or 1(true) if occupied.(+ more)  
-**10.** p$ cmd returns Byte[0]header+ count+ 3 data bytes per enabled(bank$) sensor+ parity(max 27 bytes).  
+**10.** p$ cmd returns Byte[0] header + count +3 data bytes per enabled (bank$) sensor+ parity (max 27 bytes).  
 **11.** q$ cmd returns$+1 bank sensor enabled status bytes for bank$,$-1 etc. down to bank 0.'q' defaults to'q1'  
 **12.** s%% Scan looks for a bright LED on a dimmer background. The LED should be placed on the desired sensor position. This old method of placing sensors is not recommended. The Scan command is to be deprecated.  
-**13.** t##[,%%] cmd. initially sends CS the old threshold value(i.e. BEFORE change in the case of t##). Also returns sensor scores(bpd) in 2-byte pairs with MSB set so: bsn(+0x80 if undecided)& bpd(+0x80 if OCCUPIED).Byte[0]header;[1]threshold;[2]S00bpd;[3]bsn;[4]bpd;[5]bsn;[6]bpd etc. Ends with bsn=80(max 15 enabled)  
-**14.** m$,%% sets maxSensors to%%(USB or i2c)(as can h%%(%%<98)). m0,1%% sets minSensors. Data sent to screen is bound between min and maxSensors. Extra parameter status bytes added to i2c bus for display.  
-**15.** The‘‘character is just a null cmd. Used before R, d& t to prevent BCD Mega itself pre-interpreting them.  
-**16.** N.B.: The ESP32-CAM uses old ESP32 which has I2C limitations. It has a“pipeline” for returning data which results in a delay in response. i.e. the first request after a command will return OLD data. A SECOND request should return the desired data described above. A third or fourth request may return updated data.  
-**17.** Some commands take time to complete, as command processing can only happen once per 100mSeconds(i.e. the frame rate of the CAM). The I2C master should allow for latency in response where necessary.  
+**13.** t##[,%%] cmd. initially sends CS the old threshold value (i.e. BEFORE change in the case of t##). Also returns sensor scores(bpd) in 2-byte pairs with MSB set so: bsn(+0x80 if undecided) & bpd(+0x80 if OCCUPIED). Byte[0]header;[1]threshold;[2]S00bpd;[3]bsn;[4]bpd;[5]bsn;[6]bpd etc. Ends with bsn=80 (max 15 enabled)  
+**14.** m$,%% sets maxSensors to %% (USB or i2c) (as can h%% (%%<98)). m0,1%% sets minSensors. Data sent to screen is bound between min and maxSensors. Extra parameter status bytes added to i2c bus for display.  
+**15.** The ‘‘ character is just a null cmd. Used before R, d & t to prevent BCD Mega itself pre-interpreting them.  
+**16.** N.B.: The ESP32-CAM uses old ESP32 which has I2C limitations. It has a “pipeline” for returning data which results in a delay in response. i.e. the first request after a command will return OLD data. A SECOND request should return the desired data described above. A third or fourth request may return updated data.  
+**17.** Some commands take time to complete, as command processing can only happen once per 100mSeconds (i.e. the frame rate of the CAM). The I2C master should allow for latency in response where necessary.  
 **18.** Data requested over i2c may have a parity byte appended, and a check byte in byte[31].  
-**19.** NOTE Automatic updating of ref image of unoccupied sensors now starts after last SUS(suspend) indicator.  
-**20.**  $a\%\%,$  rrr,xxx performs extended'create sensor' equivalent to  $k\%\%,$  rrr,xxx+  $a\%\%+$  r%\% for new sensor  $\%\%$  
+**19.** NOTE Automatic updating of ref image of unoccupied sensors now starts after last SUS (suspend) indicator.  
+**20.**  $a%%,$  rrr,xxx performs extended'create sensor' equivalent to  $k%%,$  rrr,xxx+  $a%%+$  r%% for new sensor  $%%$  
 **21.** Connection to DCC-EX Command Station has cmd. variations. See APPENDIX C for revised command detail.
 
 ## APPENDIX B
@@ -529,35 +529,35 @@ Also able to change default setting for Brightness, Contrast & Saturation with e
 
 In the situation where sensors may be tripping undesirably, there is a range of adjustments that can be made to find a satisfactory operating point. Some have disadvantages that need to be considered and compromises may be necessary.
 
-**1.** First step is to refresh the sensor reference image. Try Cmd:**r00**, or **r%%** for a single sensor. This may be necessary after any disturbance to the environment such as changed lighting.
+**1.** First step is to refresh the sensor reference image. Try Cmd: **r00**, or **r%%** for a single sensor. This may be necessary after any disturbance to the environment such as changed lighting.
 
-**2.** Check the "Diff" scores on the scrolling display. After a refresh they should be in the range 32-37 for normal operation. If occasional trips occur, one remedy is to increase the threshold with Cmd:**t46** say. Increasing the threshold reduces the sensitivity to low contrast objects (e.g. black over brown) If unoccupied Diff scores are consistently 32-35, reduce threshold for greater sensitivity.
+**2.** Check the "Diff" scores on the scrolling display. After a refresh they should be in the range 32-37 for normal operation. If occasional trips occur, one remedy is to increase the threshold with Cmd: **t46** say. Increasing the threshold reduces the sensitivity to low contrast objects (e.g. black over brown) If unoccupied Diff scores are consistently 32-35, reduce threshold for greater sensitivity.
 
-**3.** Is the lighting adequate? **Steady** muted daylight is ideal. Beware of rotating fans and other moving shadows(clouds?)(Note: may need to consider extreme case of mains induced ripple from 50/60Hz LED/fluoro lighting-to be discussed later) Brighter stable lighting means reduced "noise".
+**3.** Is the lighting adequate? **Steady** muted daylight is ideal. Beware of rotating fans and other moving shadows (clouds?) (Note: may need to consider extreme case of mains induced ripple from 50/60Hz LED/fluoro lighting-to be discussed later) Brighter stable lighting means reduced "noise".
 
 **4.** Sensitivity to electrical "noise" can be reduced by increasing the "_min2trip_" parameter to 3 consecutive frames using Cmd: **m3** (default is m2). However this increases response time by 100mS.
 
-**5.** You can create a "Twin" sensor for a "second opinion" by placing a Second Sensor S$$ on the track adjacent to the primary sensor S%% (3-4 pixels away) by using the Cmd: **a$$,123,234** selecting the position from that of the primary sensor (obtained from Cmd: **i%%**) To avoid increasing response time, use a twin bsNo LOWER than the primary sensor (possibly in a “reserved” bank, perhaps a matching bsNo in that bank). This twin S$$ can be assigned to the primary sensor S%% with the Cmd:**i%%,$$** The primary sensor will not trip unless the twin agrees. This suppresses pixel noise spikes.
+**5.** You can create a "Twin" sensor for a "second opinion" by placing a Second Sensor S$$ on the track adjacent to the primary sensor S%% (3-4 pixels away) by using the Cmd: **a$$,123,234** selecting the position from that of the primary sensor (obtained from Cmd: **i%%**) To avoid increasing response time, use a twin bsNo LOWER than the primary sensor (possibly in a “reserved” bank, perhaps a matching bsNo in that bank). This twin S$$ can be assigned to the primary sensor S%% with the Cmd: **i%%,$$** The primary sensor will not trip unless the twin agrees. This suppresses pixel noise spikes.
 
-**6.** Check that there isn't anything elsewhere in the field of view that is moving and could trigger the auto exposure in the camera. e.g. spectators near the edge of the field of view.(It is possible to change camera ov2640 module settings with'**j**' and'**c**' commands, but this can be a frustrating experience and needs considerable practice as some settings interact and can be order dependent)
+**6.** Check that there isn't anything elsewhere in the field of view that is moving and could trigger the auto exposure in the camera. e.g. spectators near the edge of the field of view.(It is possible to change camera ov2640 module settings with '**j**' and '**c**' commands, but this can be a frustrating experience and needs considerable practice as some settings interact and can be order dependent)
 
-**7.** Make sure you do a refresh/record reference(**r**) after any changes or the benefit will be obscured.
+**7.** Make sure you do a refresh/record reference (**r**) after any changes or the benefit will be obscured.
 
-**8.** Is the camera steady? No vibration or movement since the last reference images(**r**)?
+**8.** Is the camera steady? No vibration or movement since the last reference images (**r**)?
 
 **9.** There is a 2-frame (experimental) averaging applied to low bank sensors (currently 0-2) This can be extended to cover all banks, if desired by increasing CAM parameter _TWOIMAGE_MAXBS_ above 3/0
 
 **10.** There has been poorer behavior observed with sensors placed near the edge of the frame. They seem to experience more electrical noise than mid-frame sensors and may need extra attention.
 
-**11.** A statistics function can be obtained to see how bad spurious tripping is. The'**&**' cmd gives a table of stats accumulated since the previous'**&**' command. May be useful. HINT: You can compare two or more sensors with different settings on the same spot. Accumulate data with no genuine trips.
+**11.** A statistics function can be obtained to see how bad spurious tripping is. The '**&**' cmd gives a table of stats accumulated since the previous '**&**' command. May be useful. HINT: You can compare two or more sensors with different settings on the same spot. Accumulate data with no genuine trips.
 
 **12.** Consider whether a pixel may be faulty or unduly noisy. Try another nearby sensor position.
 
 **13.** If necessary, enhance the brightness of the Sensor location with light colour or a small reflector.
 
-**14.** It is possible to set private thresholds on individual sensors if other solutions inadequate.(**t##,%%**)
+**14.** It is possible to set private thresholds on individual sensors if other solutions inadequate. (**t##,%%**)
 
-**15.** Consider adjusting _brightSF_($) if colour contrast is generally poor(**b#,$**) default 3, try 4-5.
+**15.** Consider adjusting _brightSF_($) if colour contrast is generally poor (**b#,$**) default 3, try 1-5.
 
 **16.** In some situations, repositioning sensor slightly to include loco shadow will give extra sensitivity.
 
@@ -581,10 +581,10 @@ e.g. **<Ni 2%%><Nr&nbsp;2%%>** also **<Nm 200><Nf 212><Nt 243>**
 | **<N a %%>**  | <Na 12 > | a12 | **enAble** sensor S%% (bsNo) |
 | **<N&nbsp;a%%&nbsp;row&nbsp;col>** | <Na&nbsp;12&nbsp;32&nbsp;43> | a12,32,43 | **enAble** & also set new coordinates for sensor bsNo& refresh | 
 | **<N b bank#>** | <Nb 1> | b1  | **Bank** sensor states(all 8).(used by IFGTE() ATLT() e.g. to locate loco) |
-| **<N \e>**     | \<Ne>     | e   |**EPROM** write any changed settings to sensorCAM EPROM.|
+| **\<N e>**     | \<Ne>     | e   |**EPROM** write any changed settings to sensorCAM EPROM.|
 | **<N f %%>**   | <Nf 12> | f12 | **Frame image** pixel data for Sensor_ref[] and sensor666[] (RGB bytes) |
-| **<N \F>**     | \<NF>    | F   | **Forced reboot**, restoring sensorCAM sensor mode& EPROM defaults |
-| **<N \g>**     | \<Ng>    | g   | **Get** status ov2640 camera module settings(on sensorCAM monitor) |
+| **\<N F>**     | \<NF>    | F   | **Forced reboot**, restoring sensorCAM sensor mode& EPROM defaults |
+| **\<N g>**     | \<Ng>    | g   | **Get** status ov2640 camera module settings(on sensorCAM monitor) |
 | **<N h%%>**    | <Nh     | h30 | set _maxSensors_ to limit display to below sensor S%%. Also **Help** (0-9) |
 | **<N i [%%]>** | <Ni 12> | i12 | **Information** on sensor bsNo state, position & twin (0=No twin)
 | **<N i %%[ $$]** | <Ni 12> | i12,02 | **Info.** & sets new twin sensor(S$$) for "second-opinion" on S%%. | 
@@ -642,9 +642,9 @@ vPin is the base/first vPin number (e.g. 700) + DEC(bsn)number in the conversion
 
 The ESP32 CAM drives GPIO pins with 3.3V logic. This may well be incompatible with the master l2C signals at 5V. It is essential that appropriate voltage level shifting and buffering is used where necessary. Unbuffered I2C is limited in range but a cheap P82B715 bus extender gives up to 30m of I2C capability. A Sparkfun differential i2c driver/endpoint may also be used to achieve long lengths and voltage shifting (3.5v to 5v) if needed. The prototype Sensor CAM was mounted on a “perf” board that holds two bank trip LEDs, power LED, I2C buffer, a number of required pull-up resistors, capacitors and a voltage regulator so that it can operate and be powered over a single 5m CAT5 cable for greater convenience. A 3m USB connection need only be used for setup and diagnosis. The prototype board plugs into the socket of ESP32-CAM-MB USB adaptor (with 5V pin cut off) but can also use other FTDI interfaces.
 
-The CAM prototype can be Reset remotely by software or by cycling the power supply. It can be placed in program mode by a logic signal (GPIO0) over the CAT5 cable if needed, and similarly placed in WebServer mode (GPIO14) or Sensor mode remotely independent of I2C master. The GPIO0 & 14 pins may be isolated from CAT5 cable with MOSFETS. The CAM MUST be rigidly mounted as it's response to any image vibration can trip sensors.It is best not moved after sensor location programming as precise realignment could be tedious. It is, however,advisable to make guides or jig arrangement to at least be able to remove(for maintenance) and return with minimal misalignment to cover the same field of view. The LED method of placing/positioning sensors may be necessary if a long USB cable is impractical. A 5m buffered USB cable might be advantageous. Even so,programming or imaging over a long USB cable may never be satisfactory.
+The CAM prototype can be Reset remotely by software or by cycling the power supply. It can be placed in program mode by a logic signal (GPIO0) over the CAT5 cable if needed, and similarly placed in WebServer mode (GPIO14) or Sensor mode remotely independent of I2C master. The GPIO0 & 14 pins may be isolated from CAT5 cable with MOSFETS. The CAM MUST be rigidly mounted as it's response to any image vibration can trip sensors. It is best not moved after sensor location programming as precise realignment could be tedious. It is, however, advisable to make guides or jig arrangement to at least be able to remove (for maintenance) and return with minimal misalignment to cover the same field of view. The LED method of placing/positioning sensors may be necessary if a long USB cable is impractical. A 5m buffered USB cable might be advantageous. Even so,programming or imaging over a long USB cable may not be satisfactory.
 
-One PCA9515A based module offers a simpler, but limited, interface to an i2c bus the use of will act as a level changer (3.3V to 5V) and can connect to a SHORT i2c bus (max 3m). You may use 2mm foam adhesive tape to mount a PCA9515A on the back of an ESP32-CAM-MB and solder on the 5 jumper wires directly as shown below.If the i2c length is near or just over the limit, an optional LTC4311 extender can be attached to boost the signal. As shown, this option relies on 5V USB power so needs a dedicated(permanent) USB cable connection.  A local 5v buck converter can be added beside the CAM for a better supply. You can also extend a cable between the PCA9515 buffer and CAM (2m).
+One PCA9515A based module offers a simpler, but limited, interface to an i2c bus the use of will act as a level changer (3.3V to 5V) and can connect to a SHORT i2c bus (max 3m). You may use 2mm foam adhesive tape to mount a PCA9515A on the back of an ESP32-CAM-MB and solder on the 5 jumper wires directly as shown below.If the i2c length is near or just over the limit, an optional LTC4311 extender can be attached to boost the signal. As shown, this option relies on 5V USB power so needs a dedicated (permanent) USB cable connection.  A local 5v buck converter can be added beside the CAM for a better supply. You can also extend a cable between the PCA9515 buffer and CAM (2m).
 
 A programmable nLED and 330ohm resistor may be attached to the PCA9515A from 3.3V VCC to GPIO14 to aid testing.
 
@@ -662,7 +662,7 @@ Sparkfun endpoints(requires a matching sparkfun endpoint at CS)(CS interface opt
 
 (Dual optional) CAM wiring with Endpoints and 5V Buck reg. powered over GRN-GRNW(Vin) with Vin(>7V)
 
-There are three basic variations below for connecting the Endpoints to the CS. The choice depends on the current system being extended. Options A & B apply to a 5Volt I2C bus on a 5V CS with or without existing I2C accessory connections, while Option C is the simplest connection to a 3.3Volt CS i2c bus.
+There are three basic variations below for connecting the Endpoints to the CS. The choice depends on the current system being extended. Options A & B(not recommended) apply to a 5Volt I2C bus on a 5V CS with or without existing I2C accessory connections, while Option C is the simplest connection to a 3.3Volt CS (e.g. CSB1) i2c bus.
 
 The 2x Endpoints require about  10mA  each. All options can be adapted for use with a mux if necessary. The choice between A and B depends on the power supplies available. If the CS Endpoint is to be tapped into a "remote" 5V i2c bus location, a CS 3.3V supply may not be available, only a 5V I2C supply. Option B (not recommended) removes one 10k pullup resistor pair from the bus to avoid inappropriate pull-up voltage(3.3V).
 
@@ -686,7 +686,7 @@ The 2x Endpoints require about  10mA  each. All options can be adapted for use w
 
 The numbering of sensors can be consecutive by vPin, which is the common practice with multi-pin peripherals (e.g. PCA9685 16-channel Servo driver and MCP23017 16-channel GPIO Expander). Sequential vPin numbers within a device is hardware enforced, but this loses some of the advantages available by a more meaningful ID notation. Such ID's are available for jmri use and so can also be used for sensorCAM. Use of IDs, as suggested below, can remove any need to program with vPin numbers.
 
-For any peripheral device, the vPin is needed for commands (e.g.700+5), but, if predefined (e.g. in config.h), alphanumeric names such as CAM or CAM2 or ESSEX can be used in place of the base vPin to identify the camera. Then commands for CAM pin 5 become: e.g. AT(CAM+05) or AT(ESSEX+05)
+For any peripheral device, the vPin is needed for commands (e.g.700+5), but, if predefined (e.g. in config.h), alphanumeric names such as CAM or CAM2 or ESSEX can be used in place of the base vPin to identify the camera. Then commands for CAM pin 5 become: e.g. AT(CAM 05) or AT(ESSEX 05)
 
 ```c++
  e.g.  
@@ -704,15 +704,15 @@ EXRAIL can accept “b/s” numbering (e.g. 047) if we add the leading 0. e.g. v
 
 **(N.B. “CAM” includes the ‘+’)** Using this method there is no need to remember assigned vPin values!
 
-**Example 1:** For the approach to a signal, several sensors may be deployed (say S13 to S17) with S17 last at the signal. As a train approaches the signal, the (bank) “value” of the tripping sensors will increase.This can be used to control the loco speed for a smooth and precise stop at a platform say.  
+**Example 1:** For the approach to a signal, several sensors may be deployed (say S13 to S17) with S17 last at the signal. As a train approaches the signal, the (bank) “value” of the tripping sensors will increase. This can be used to control the loco speed for a smooth and precise stop at a platform for example.  
 Commands **IFGTE(CAM 013,8) SPEED(40)**... **IFGTE(CAM 013,16)** **SPEED(30)** etc. can be used to control the loco approach speed with some precision.  
 Finally, at the signal(S17), **IFGTE(CAM 013,128) STOP**
 
  Aliases could also be defined and used for station/bank or line sensors. e.g.IFGTE(TRENTHAM, 0x80)
 
-**Example 2:** The CAM can have up to 10 occupation/line detectors. If two“linear” line sensors are needed, and we have bank 1 allocated (S10-S17), the following 16 vPins could be assigned to 2 banks of linear sensors. We can use (bs#) ID of 20 to 27 for first linear sensor(bank2) and 30-37 of bank3. The Command Station can easily handle banks of 8, using an ID based format of (CAM 020) and (CAM 030). The“bank” or b/s notation requires the leading ‘0’ on the bsNo. for automatic vpin calculation. The linear segments at S21 to S27 may also be tested individually and a common bank threshold can be set if needed. e.g. **IFGTE(CAM 020,1)**...// bank occupied, or **IFGTE(CAM 024,16)** &nbsp; //2nd half occupied.
+**Example 2:** The CAM can have up to 10 occupation/line detectors. If two“linear” line sensors are needed, and we have bank 1 allocated (S10-S17), the following 16 vPins could be assigned to 2 banks of linear sensors. We can use (bs#) ID of 20 to 27 for first linear sensor (bank2) and 30-37 of bank3. The Command Station can easily handle banks of 8, using an ID based format of (CAM 020) and (CAM 030). The “bank” or b/s notation requires the leading ‘0’ on the bsNo. for automatic vpin calculation. The linear segments at S21 to S27 may also be tested individually and a common bank threshold can be set if needed. e.g. **IFGTE(CAM 020,1)**...// bank occupied, or **IFGTE(CAM 024,16)** &nbsp; //2nd half occupied.
 
-Note: With ‘0%%’ notation, unless you understand the issue, avoid using bank 8 & 9 as mistakes may arise.(08# must be expressed as 010# and 09# as 011# for correct outcome)
+Note: With ‘0%%’ notation, unless you understand the issue, avoid using bank 8 & 9 as mistakes may arise. (08# must be expressed as 010# and 09# as 011# for correct outcome)
 
 ### 2. Multiple Cams
 
@@ -726,21 +726,7 @@ Multiple sensorCAMs can be easily handled if CAM2, CAM3 etc are defined along th
 
 N.B. CAM v1.6 has 4x jumpers (cam side) near U0R/U0T pins & CAM v1.9 has 6x jumpers (including RST)
 
-In board version v1.9, the "GND" pin adjacent GPIO1/U0T is used for RESET(GND/R) to ESP32-CAM and MUST NOT be tied to GND or CAM will remain in RESET mode. CHIP version shows at start of upload, e.g.
-
-![ESP32 CAM Chip Version](/_static/images/ex-sensorcam/esp32-cam-chip-version.png)
-
-The esp32-CAM-MB obtained with extra headers uses a small CH340N IC unlike the 16 pin package used on the "regular" MB devices (micro-B). The wider MB (headers) also has an issue in that it does NOT have a reset pin because the RST/GND socket is PERMANENTLY connected to GND which will hold CAM v1.9 in permanent Reset.
-
-Headers (for v1.6):
-
-![ESP32 CAM MB USB-C](/_static/images/ex-sensorcam/esp32-cam-mb-usb-c.png)
-
-USB Type micro-B:
-
-![ESP32 CAM MB CH340](/_static/images/ex-sensorcam/esp32-cam-mb-ch340.png)
-
-So-without butchery, can only use the v1.6 CAM's on this board, and even then will have to hold the IO0 button in (grounding it) on reset until upload is progressing. As a workaround for v1.9, it may be possible to carefully slice off this MB GND socket completely. View the Camera side of the ESP32-CAM to distinguish the CAM boards.
+In board version v1.9, the "GND" pin adjacent GPIO1/U0T is used for RESET(GND/R) to ESP32-CAM and MUST NOT be tied to GND or CAM will remain in RESET mode.
 
 **Identification:** ESP32-CAM v1.6 has 4x jumpers beside UOR/UOT pins and v1.9 has 6x jumpers (inc. Reset).
 
@@ -748,7 +734,7 @@ Using v1.6 with no RTS/DTR reset, users will have to boot up holding IO0 button 
 
 ### 1 Note on i2c clock frequency
 
-The newer sensorCAM drivers default to an i2c bus frequency of 100,000 Hz. With caution, this may be increased somewhat (e.g. 200000) if the i2c bus is well tuned and all attached devices can handle higher frequencies. To set a higher frequency, for example, place the following in mySetup.h or myHal.cpp I2Cmanager.forceClock(200000); //place after void halSetup(){
+The newer sensorCAM drivers default to an i2c bus frequency of 100,000 Hz. With caution, this may be increased somewhat (e.g. 200000) if the i2c bus is well tuned and all attached devices can handle higher frequencies. To set a higher frequency, for example, place the following in mySetup.h or myHal.cpp I2Cmanager.forceClock(200000); //place after void halSetup()
 
 ### 2. Notes on 40-pin WROVER CAM and 38-pin breakout board
 
@@ -756,7 +742,7 @@ Potentially simplest commercially available hookup for 40 pin WROVER-CAM:
 
 Software configuration: add #define CAMERA_MODEL_WROVER_KIT to bottom of configCAM.h
 
-2x“Spare”(USB end) Vcc and GND pins not used with the 38 pin breakout board shown. (remove?)
+2x“Spare” (USB end) Vcc and GND pins not used with the 38 pin breakout board shown. (remove?)
 
 Adding 1.0uF capacitor between reset (EN) pin and gnd ensures more reliable power-on reset.
 
@@ -766,14 +752,14 @@ There is no white “flash” LED but, in sensorCAM mode, the on-board blue LED 
 
 The breakout board USB connectors are for an optional 5V power source ONLY. No comm's.
 
-Limit Vin barrel jack to 7-10V max to avoid destruction of the 1117C 5V regulator.(Vne= 16V)
+Limit Vin barrel jack to 7-10V max to avoid destruction of the 1117C 5V regulator. (Vne= 16V)
 
 The CS endpoint shown should be powered with 3.3V from the CS end (NOT 5V), and 9V on GRNW/GRN  
 Note: WROVER-CAM does not have a fitted external antenna socket like the ESP32-CAM.
 
 ![ESP32 Wrover CAM with Sparkfun Endpoint](/_static/images/ex-sensorcam/esp32-wrover-sparkfun-endpoint.png)
 
-For a limited reach, perhaps using a LTC4311 terminator/buffer at the CS to boost signal rise times and range, the cheaper PCA9515A may be used with the Wrover-CAM connected as below.  The cable to the CAM can be up to 2m long using twisted pairs (cat5?).
+For a limited reach, perhaps using a LTC4311 terminator/buffer at the CS to boost signal rise times and range, the cheaper PCA9515A may be used with the Wrover-CAM connected as below.  The wires from PCA9515A to the CAM can be up to 2m long (with extra pullups) using twisted pairs (cat5?).
 
 ![ESP32 Wrover CAM with PCA9515A](/_static/images/ex-sensorcam/esp32-wrover-pca9515a.png)
 
@@ -789,10 +775,6 @@ Version v319 also accepts minSensors up to maxSensors-1
 **m#,%%** will set maxSensors to%%. e.g. m10,30 sets maxSensors=030 (leaving min2trip unchanged as does m0,30)  
 **n#,%%** will set minSensors to%%. e.g. n10,27 sets minSensors=027 leaving nLED unchanged. n0,27 would set nLED to 0)
 
-### 4. Notes on CS drivers v308& v309)
-
-Driver version v308 is intended for use with Prod versions 5.4.6 to 5.4.16. DCC-EX CS Prod. Versions 5.4.16+ incorporate v308 by default. v308 will not work with CS devel 5.5.15+. For CS devel versions look to v309 (default). Both these drivers MUST be used with sensorCAM version v320+ as earlier versions will not be recognized.
-
 ### ADDITIONAL RANDOM NOTES:
 
 ALL FOLLOWING IMAGES ARE FOR GENERAL INFORMATION ONLY& NOT DIRECTLY REFERENCED IN THE FULL MANUAL ABOVE
@@ -807,56 +789,8 @@ ALL FOLLOWING IMAGES ARE FOR GENERAL INFORMATION ONLY& NOT DIRECTLY REFERENCED I
 
 ![ESP32 CAM Closeup 4](/_static/images/ex-sensorcam/esp32-cam-closeup-4.png)
 
-Antenna solder jumper adjustment
-
-![ESP32 CAM External Antenna](/_static/images/ex-sensorcam/esp32-cam-external-antenna.png)
-
-![ESP32 CAM Closeup 5](/_static/images/ex-sensorcam/esp32-cam-closeup-5.png)
-
-![Xiaolaba File LIst](/_static/images/ex-sensorcam/xiaolaba-file-list.png)
-
-xiaolaba Update README.md
-
-$$
-4fe66d3\cdot 2\text{ years ago}
-$$
-
-### ESP32-CAM_V1.6_V1.9_MB
-
-● ESP32-CAM-MB, base module design, schematic
-
-● ESP32-CAM V1.6 modification to uses external RESET pin and the auto download
-
-● ESP32-CAM V1.6 modification, more stable
-
-● upgrade to ESP32-CAM V1.9
-
-looks like V1.6 is the same as V1.9, really?   -  The jumper difference is not obvious here
-
 ![ESP32 Cam with Capacitor](/_static/images/ex-sensorcam/esp32-cam-with-capacitor.png)
 
-Spec sheet: Typical applications include a 22uF cap between AMS1117 3v3 reg ADJ/GND pin and Vout, not on CAM but can be added as above for "better" performance.(hopefully less noise?). Also shows 10uF on 5Vin
-
-There is a range of ov2640 cam modules available with ESP32 or independently sold. The"IR" option would be an interesting experiment and might open up new possibilities, but monochrome IR images harder to spot intrusions. The usual ov2640 is  $66^{\circ}$  , but  $120^{\circ}$  fish-eye covers more, at the expense of detail.  $120^{\circ}$  better for low ceilings??
-
-Web offers range of lenses including"850nm night vision" which probably is OV2640 sans IR filter?(IR>700nm)
-
-Long(75mm) and short(21mm) ribbon ov2640, angles 66(std?),100,120,160deg lens,650nm or 850nm(night vision), opt. antenna for marginal wifi. NONE, other than standard 66deg OV2640, are currently recommended.
-
-![OV2640 Example 1](/_static/images/ex-sensorcam/ov2640-example-1.png)
-
-![OV2640 Example 2](/_static/images/ex-sensorcam/ov2640-example-2.png)
-
-![OV2640 Example 3](/_static/images/ex-sensorcam/ov2640-example-3.png)
-
-### AU$28.59 Elk AU$24.59,≥3 stuks Getoonde prijs voor belasting Extra 2% korting
-
-### ESP32 CAM Cameramodulekit 2,4 GHz WiFi Bluetooth 8 MB PSRAM OV2640 Cameramodule 120 66 160 graden 850 nm Nachtzicht 2 MP
-
-![OV2640 Example 4](/_static/images/ex-sensorcam/ov2640-example-4.png)
-
 ### Acceptable alt. WROVER CAM
-
-1 December 2025
 
 ![ESP32 Wrover CAM](/_static/images/ex-sensorcam/esp32-wrover-cam.png)
