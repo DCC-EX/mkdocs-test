@@ -1,7 +1,6 @@
 ﻿
 ## ACTIVATE(addr,subaddr)
 
-
 Send DCC Accessory Activate packet (gate on then off)
 
 - addr DCC short address of accessory
@@ -9,13 +8,11 @@ Send DCC Accessory Activate packet (gate on then off)
 
 ## ACTIVATEL(linearaddr)
 
-
 Send DCC Accessory Activate packet (gate on then off)
 
 - linearaddr DCC linear address of accessory
 
 ## AFTER(vpin,timer...)
-
 
 Wait for sensor activated, then decativated for given time
 
@@ -24,13 +21,11 @@ Wait for sensor activated, then decativated for given time
 
 ## AFTEROVERLOAD(track_id)
 
-
 Wait for overload to be resolved
 
 - track_id A..H
 
 ## ALIAS(name,value...)
-
 
 defines a named numeric value.
 
@@ -39,7 +34,6 @@ defines a named numeric value.
 
 ## AMBER(signal_id)
 
-
 Sets a signal to amber state
 
 see ONAMBER
@@ -47,16 +41,14 @@ see ONAMBER
 
 ## ANOUT(vpin,value,param1,param2)
 
-
 Writes to the HAL analog output interface of a device driver.
 
-- vpin Virtual pin number of device 
+- vpin Virtual pin number of device
 - value basic analog value
-- param1 device dependent 
+- param1 device dependent
 - param2 device dependent
 
 ## AT(vpin)
-
 
 Wait until a sensor becomes active
 
@@ -64,42 +56,37 @@ Wait until a sensor becomes active
 
 ## ASPECT(address,value)
 
-
 Sends a DCC aspect value to an accessory address. May also change status of a signal defined using this aspect.
 
-- address Linear DCC address of device 
+- address Linear DCC address of device
 - value Aspect value (Device dependent)
 
 ## ATGTE(vpin,value)
 
-
 Wait for analog sensor to be greater than given value
 
-- vpin Analog pin number 
+- vpin Analog pin number
 - value integer value to compare against
 
-## ATLT(vpin,value) 
-
+## ATLT(vpin,value)
 
 Wait for analog sensor value to be less than given value
 
-- vpin Analog pin number 
+- vpin Analog pin number
 - value integer value to compare against
 
 ## ATTIMEOUT(vpin,timeout_ms)
 
-
 Wait for sensor active, with timeout. Use IFTIMEOUT to determine whether the AT was satisfied.
 
-see IFTIMEOUT  
+see IFTIMEOUT
 
-- vpin Sensor pin number 
+- vpin Sensor pin number
 - timeout_ms Millseconds to wait before timeout
 
 ## AUTOMATION(sequence_id,description)
 
-
-Defines starting point of a sequence that will be shown as an Automation by 
+Defines starting point of a sequence that will be shown as an Automation by
 
 the throttles. Automations are started by the throttle handing over a loco id to be driven.
 
@@ -108,12 +95,10 @@ the throttles. Automations are started by the throttle handing over a loco id to
 
 ## AUTOSTART
 
-
 A new task will be created starting from this point at Command Station startup
 
 
 ## BLINK(vpin,onDuty,offDuty)
-
 
 Starts a blinking process for a vpin (typically a LED). Stop blink with SET or RESET.
 
@@ -122,7 +107,6 @@ Starts a blinking process for a vpin (typically a LED). Stop blink with SET or R
 - offDuty Milliseconds with LED off
 
 ## BROADCAST(msg)
-
 
 Send raw message text to all throttles using the DCC-EX protocol
 
@@ -133,13 +117,10 @@ see WITHROTTLE
 ## BUILD_CONSIST(loco_id)
 
 
-
 ## BREAK_CONSIST
 
 
-
 ## CALL(sequence_id)
-
 
 transfer control to another sequence with expectation to return
 
@@ -149,25 +130,21 @@ see RETURN
 
 ## CLEAR_STASH(stash_id)
 
-
-Clears loco value stored in stash  
+Clears loco value stored in stash
 
 - stash_id which stash to clear.
 
 ## CLEAR_ALL_STASH
-
 
 Clears all stashed loco values
 
 
 ## CLEAR_ANY_STASH
 
-
 Clears loco value from all stash entries
 
 
 ## CLOSE(turnout_id)
-
 
 Close turnout by id
 
@@ -175,7 +152,6 @@ see THROW
 
 
 ## CONFIGURE_SERVO(vpin,pos1,pos2,profile)
-
 
 setup servo movement parameters for non-turnout
 
@@ -186,7 +162,6 @@ setup servo movement parameters for non-turnout
 
 ## DCC_SIGNAL(signal_id,addr,subaddr)
 
-
 Define a DCC accessory signal with short address
 
 - signal_id Id used for all signal manipulation commands
@@ -195,49 +170,42 @@ Define a DCC accessory signal with short address
 
 ## DCCX_SIGNAL(signal_id,redAspect,amberAspect,greenAspect)
 
-
 Dfeine advanced DCC accessory signal with aspects
 
 - signal_id DCC Linear address AND Id used for all signal manipulation commands
 
 ## DCC_TURNTABLE(turntable_id,home,description...)
 
-
-defines a Turntable device 
+defines a Turntable device
 
 - homeAngle the angle of the home position, valid angles are 0 - 3600
 - description... Quoted text description of turntable
 
 ## DEACTIVATE(addr,subaddr)
 
-
-Sends DCC Deactivate packet (gate on, gate off) 
+Sends DCC Deactivate packet (gate on, gate off)
 
 - addr DCC accessory address
 - subaddr DCC accessory subaddress
 
 ## DEACTIVATEL(addr)
 
-
-Sends DCC Deactivate packet (gate on, gate off) 
+Sends DCC Deactivate packet (gate on, gate off)
 
 - addr DCC Linear accessory address
 
 ## DELAY(delay_ms)
 
-
-Waits for given milliseconds delay (This is not blocking) 
+Waits for given milliseconds delay (This is not blocking)
 
 - delay_mS Delay time in milliseconds
 
 ## DELAYMINS(delay_minutes)
 
-
 Waits for given minutes delay (This is not blocking)
 
 
 ## DELAYRANDOM(mindelay,maxdelay)
-
 
 Waits for random delay between min and max milliseconds (This is not blocking)
 
@@ -246,18 +214,15 @@ Waits for random delay between min and max milliseconds (This is not blocking)
 
 ## DONE
 
-
 Stops task loco (if any) and terminates current task
 
 
 ## DRIVE(analogpin)
 
-
 RESERVED do not use
 
 
 ## ELSE
-
 
 introduces alternate processing path after any kind of IF
 
@@ -266,16 +231,14 @@ see IF
 
 ## ENDEXRAIL
 
-
 obsolete.. no longer needed. Does nothing.
 
 
-## ENDIF  
-
+## ENDIF
 
 determines end of IF(any type)  block.
 
-IF something ENDIF, or    
+IF something ENDIF, or
 
 IF something ELSE something ENDIF
 
@@ -284,7 +247,6 @@ see IF
 
 ## ENDTASK
 
-
 same as DONE
 
 see DONE
@@ -292,24 +254,20 @@ see DONE
 
 ## ESTOP
 
-
 Performs emergency stop on current task loco
 
 
 ## ESTOPALL
-
 
 Performs emergency stop on all locos
 
 
 ## EXRAIL
 
-
 obsolete.. no longer needed. Does nothing.
 
 
 ## EXTT_TURNTABLE(id,vpin,home,description...)
-
 
 This statement will create the EXΓÇæTurntable turntable/traverser object only, so you will need a separate HAL() statement for an EXΓÇæTurntable device driver.
 
@@ -318,15 +276,13 @@ This statement will create the EXΓÇæTurntable turntable/traverser object only
 
 ## FADE(vpin,value,ms)
 
-
 Modifies analog value slowly taking a given time
 
-- vpin Servo virtual pin number 
+- vpin Servo virtual pin number
 - value new target value
 - ms time to reach value
 
 ## FOFF(func)
-
 
 Turns off current loco function
 
@@ -335,12 +291,10 @@ see FON
 
 ## FOLLOW(sequence_id)
 
-
 Task processing follows given route or sequence (Effectively a GoTo)
 
 
 ## FON(func)
-
 
 Turn on current loco function
 
@@ -349,14 +303,12 @@ see FOFF
 
 ## FORGET
 
-
 Removes current loco from task and DCC reminders table.
 
 
 ## FREE(token_id)
 
-
-Frees logical token 
+Frees logical token
 
 see RESERVE
 
@@ -364,20 +316,17 @@ see RESERVE
 
 ## FREEALL
 
-
-Frees all logical tokens 
+Frees all logical tokens
 
 see RESERVE
 
 
 ## FTOGGLE(func)
 
-
 Toggles function for current loco
 
 
 ## FWD(speed)
-
 
 Instructs current loco to set DCC speed
 
@@ -385,12 +334,10 @@ Instructs current loco to set DCC speed
 
 ## GREEN(signal_id)
 
-
-Sets signal to green state 
+Sets signal to green state
 
 
 ## HAL(haltype,params...)
-
 
 Defines VPIN mapping for specific hardware drivers
 
@@ -399,12 +346,10 @@ Defines VPIN mapping for specific hardware drivers
 
 ## HAL_IGNORE_DEFAULTS
 
-
 System will ignore default HAL device mappings
 
 
 ## IF(vpin)
-
 
 Checks sensor state, If false jumps to matching nested ELSE or ENDIF
 
@@ -412,14 +357,12 @@ Checks sensor state, If false jumps to matching nested ELSE or ENDIF
 
 ## IFAMBER(signal_id)
 
-
-Checks if signal is in AMBER state. 
+Checks if signal is in AMBER state.
 
 see IF
 
 
 ## IFCLOSED(turnout_id)
-
 
 Checks if given turnout is in close state
 
@@ -428,14 +371,12 @@ see IF
 
 ## IFGREEN(signal_id)
 
-
 Checks if given signal is in GREEN state
 
 see IF
 
 
 ## IFGTE(vpin,value)
-
 
 Checks if analog vpin sensor >= value
 
@@ -444,7 +385,6 @@ see IF
 
 ## IFLOCO(loco_id)
 
-
 Checks if current task loco = loco_id
 
 see IF
@@ -452,15 +392,13 @@ see IF
 
 ## IFLT(vpin,value)
 
-
 Checks if analog sensor < value
 
 see IF
 
-- vpin  Analog vpin of sensor 
+- vpin  Analog vpin of sensor
 
 ## IFNOT(vpin)
-
 
 Inverse of IF
 
@@ -469,14 +407,12 @@ see IF
 
 ## IFRANDOM(percent)
 
-
 randomly satisfield IF at given percent probability
 
 see IF
 
 
 ## IFRED(signal_id)
-
 
 Checks if given signal is in RED state
 
@@ -485,14 +421,12 @@ see IF
 
 ## IFSTASH(stash_id)
 
-
 Checks if given stash entry has a non zero value
 
 see IF
 
 
 ## IFSTASHED_HERE(stash_id)
-
 
 Checks if given stash entry has the current loco
 
@@ -501,7 +435,6 @@ see IF
 
 ## IFTHROWN(turnout_id)
 
-
 Checks if given turnout is in THROWN state
 
 see IF
@@ -509,14 +442,12 @@ see IF
 
 ## IFRESERVE(token_id)
 
-
-Attempts to reserve token and if satisfiled the token remains reserved. 
+Attempts to reserve token and if satisfiled the token remains reserved.
 
 see IF RESERVE FREE
 
 
 ## IFTIMEOUT
-
 
 Checks TIMEOUT state after an AT/AFTER request with timeout value.
 
@@ -525,7 +456,6 @@ see IF AT AFTER
 
 ## IFTTPOSITION(turntable_id,position)
 
-
 Checks if Turntable is in given position
 
 see IF
@@ -533,15 +463,13 @@ see IF
 
 ## IFRE(vpin,value)
 
+Checks external rotary encoder value
 
-Checks external rotary encoder value 
-
-- vpin of device driver for rotary encoder  
+- vpin of device driver for rotary encoder
 
 ## IFBITMAP_ALL(vpin,mask)
 
-
-briaf Checks if (vpin pseudo-analog value & mask) == mask.
+Checks if (vpin pseudo-analog value & mask) == mask.
 
 see IF
 
@@ -549,8 +477,7 @@ see IF
 
 ## IFBITMAP_ANY(vpin,mask)
 
-
-briaf Checks if vpin pseudo-analog value & mask is non zero
+Checks if vpin pseudo-analog value & mask is non zero
 
 see IF
 
@@ -558,44 +485,38 @@ see IF
 
 ## IFROUTE_ACTIVE(sequence_id)
 
-
-briaf Checks if route is active
+Checks if route is active
 
 see IF
 
 
 ## IFROUTE_INACTIVE(sequence_id)
 
-
-briaf Checks if route is inactive
+Checks if route is inactive
 
 see IF
 
 
 ## IFROUTE_HIDDEN(sequence_id)
 
-
-briaf Checks if route is hidden
+Checks if route is hidden
 
 see IF
 
 
 ## IFROUTE_DISABLED(sequence_id)
 
-
-briaf Checks if route is disabled
+Checks if route is disabled
 
 see IF
 
 
 ## INVERT_DIRECTION
 
-
 Marks current task so that FWD and REV commands are inverted.
 
 
 ## JMRI_SENSOR(vpin,count...)
-
 
 Defines multiple JMRI `<s>` type sensor feedback definitions each with id matching vpin and INPUT_PULLUP
 
@@ -604,7 +525,6 @@ Defines multiple JMRI `<s>` type sensor feedback definitions each with id matchi
 
 ## JMRI_SENSOR_NOPULLUP(vpin,count...)
 
-
 Defines multiple JMRI `<s>` type sensor feedback definitions each with id matching vpin
 
 - vpin first vpin number
@@ -612,18 +532,15 @@ Defines multiple JMRI `<s>` type sensor feedback definitions each with id matchi
 
 ## JOIN
 
-
 Switches PROG track to receive MAIN track DCC packets. (Drive on PROG track)
 
 
 ## KILLALL
 
-
 Tertminates all running EXRAIL tasks
 
 
 ## LATCH(vpin)
-
 
 Make all AT/AFTER/IF see vpin as HIGH without checking hardware
 
@@ -631,51 +548,44 @@ Make all AT/AFTER/IF see vpin as HIGH without checking hardware
 
 ## LCC(eventid)
 
-
-Issue event to LCC 
+Issue event to LCC
 
 
 ## LCCX(senderid,eventid)
 
-
-Issue LCC event while impersonating another sender 
+Issue LCC event while impersonating another sender
 
 
 ## LCD(row,msg)
 
-
 Write message on row of default configured LCD/OLED
 
-see SCREEN 
+see SCREEN
 
 - msg Quoted text
 
 ## MOMENTUM(accel,decel...)
 
+sets momentum in mS per DCC 127 step for curent loco.
 
-sets momentum in mS per DCC 127 step for curent loco. 
-
-- accel Acceleration momentum  
+- accel Acceleration momentum
 - decel... Braking momantum. (=Acceleration if not given)
 
 ## SCREEN(display,row,msg)
 
-
-Send message to external display hadlers 
+Send message to external display hadlers
 
 - display number, 0=local display, others are handled by external
-displays which may have different display numbers on different devices. 
+displays which may have different display numbers on different devices.
 
 - msg Quoted text
 
 ## LCN(msg)
 
-
 Reserved for LCN communication. Refer to their documentation.
 
 
 ## MESSAGE(msg)
-
 
 Send a human readable message to all throttle users
 
@@ -683,79 +593,68 @@ Send a human readable message to all throttle users
 
 ## MOVETT(turntable_id,steps,activity)
 
-
 Move Turntable to specific position
 
 see ROTATE
 
-- steps position to move to 
+- steps position to move to
 - activity see ROTATE
 
 ## NEOPIXEL(vpin,r,g,b,count...)
 
-
 Set a NEOPIXEL vpin to a given red/green/blue colour
 
 - vpin VPIN of a pixel
-- r red component 0-255 
+- r red component 0-255
 - g green component 0-255
 - b blue component 0-255
 - count... Number of consecutive pixels to set, Default 1.
 
 ## NEOPIXEL_SIGNAL(vpin,redcolour,ambercolour,greencolour)
 
-
 Define a signal that uses a single multi colour pixel
 
-see NEORGB 
+see NEORGB
 
-- vpin unique signal_id 
+- vpin unique signal_id
 - redcolour  RGB colour use NEORGB(red,green,blue) to create values.
 
 ## ACON(eventid)
-
 
 Send MERG CBUS ACON to Adapter
 
 
 ## ACOF(eventid)
 
-
 Send MERG CBUS ACOF to Adapter
 
 
 ## ONACON(eventid)
-
 
 Start task here when ACON for event receied from MERG CBUS
 
 
 ## ONACOF(eventid)
 
-
 Start task here when ACOF for event receied from MERG CBUS
 
 
 ## ONACTIVATE(addr,subaddr)
-
 
 Start task here when DCC Activate sent for short address
 
 
 ## ONACTIVATEL(linear)
 
-
 Start task here when DCC Activate sent for linear address
 
 
 ## ONAMBER(signal_id)
 
-
 Start task here when signal set to AMBER state
 
 
 ## ONBLOCKENTER(block_id)
-
 
 Start task here when a loco enters a railcom block
 
@@ -763,13 +662,11 @@ Start task here when a loco enters a railcom block
 
 ## ONBLOCKEXIT(block_id)
 
-
 Start task here when a loco leaves a railcom block
 
 - block_id vpin associated to block by HAL(I2CRailcom..)
 
 ## ONTIME(minute_in_day)
-
 
 Start task here when fastclock matches
 
@@ -777,18 +674,15 @@ Start task here when fastclock matches
 
 ## ONCLOCKTIME(hours,mins)
 
-
 Start task here when fastclock matches time
 
 
 ## ONCLOCKMINS(mins)
 
-
-Start task here hourly when fastclock minutes matches 
+Start task here hourly when fastclock minutes matches
 
 
 ## ONOVERLOAD(track_id)
-
 
 Start task here when given track goes into overload
 
@@ -796,90 +690,75 @@ Start task here when given track goes into overload
 
 ## ONRAILSYNCON
 
-
 Start task here when the railsync (booster) input port get a valid DCC signal
 
 
 ## ONRAILSYNCOFF
-
 
 Start task here when the railsync (booster) input port does not get a valid DCC signal any more
 
 
 ## ONDEACTIVATE(addr,subaddr)
 
-
 Start task here when DCC deactivate packet sent
 
 
-## ONDEACTIVATEL(linear) 
-
+## ONDEACTIVATEL(linear)
 
 Start task here when DCC deactivate sent to linear address
 
 
 ## ONCLOSE(turnout_id)
 
-
 Start task here when turnout closed
 
 
 ## ONLCC(sender,event)
-
 
 Start task here when LCC event arrives from sender
 
 
 ## ONGREEN(signal_id)
 
-
-Start task here when signal set to GREEN state 
+Start task here when signal set to GREEN state
 
 
 ## ONRED(signal_id)
 
-
-Start task here when signal set to RED state 
+Start task here when signal set to RED state
 
 
 ## ONROTATE(turntable_id)
-
 
 Start task here when turntable is rotated
 
 
 ## ONTHROW(turnout_id)
 
-
 Start task here when turnout is Thrown
 
 
 ## ONCHANGE(vpin)
 
-
-Rotary encoder change starts task here (This is obscurely different from ONSENSOR which will be merged in a later release.) 
+Rotary encoder change starts task here (This is obscurely different from ONSENSOR which will be merged in a later release.)
 
 
 ## ONSENSOR(vpin)
-
 
 Start task here when sensor changes state (debounced)
 
 
 ## ONBITMAP(vpin)
 
-
 Start task here when bitmap sensor changes state (debounced)
 
 
 ## ONBUTTON(vpin)
 
-
-Start task here when sensor changes HIGH to LOW. 
+Start task here when sensor changes HIGH to LOW.
 
 
 ## PAUSE
-
 
 Pauses all EXRAIL tasks except the curremnt one.
 
@@ -888,27 +767,23 @@ Other tasks ESTOP their locos until RESUME issued
 
 ## PIN_TURNOUT(id,vpin,description...)
 
-
 Defines a turnout which operates on a signle pin
 
 - description... Quoted text (shown to throttles) or HIDDEN
 
 ## PRINT(msg)
 
-
-prints diagnostic message on USB serial 
+prints diagnostic message on USB serial
 
 - msg Quoted text
 
 ## PARSE(msg)
-
 
 Executes `<>` command as if entered from serial
 
 - msg Quoted text, preferably including `<>`
 
 ## PICKUP_STASH(stash_id)
-
 
 see STASH
 
@@ -918,24 +793,20 @@ Loads stashed value into current task loco
 
 ## POM(cv,value)
 
-
-Write value to cv on current tasks loco (Program on Main) 
+Write value to cv on current tasks loco (Program on Main)
 
 
 ## POWEROFF
-
 
 Powers off all tracks
 
 
 ## POWERON
 
-
 Powers ON all tracks
 
 
 ## RANDOM_CALL(sequence_id...)
-
 
 CALL to another sequence randomly chosen from list
 
@@ -945,7 +816,6 @@ see CALL
 
 ## RANDOM_FOLLOW(sequence_id...)
 
-
 jump to another sequence randomly chosen from list
 
 see FOLLOW
@@ -954,24 +824,20 @@ see FOLLOW
 
 ## READ_LOCO
 
-
 Reads loco Id from prog track and sets currenmt task loco id.
 
 
 ## RED(signal_id)
 
-
-sets signal to RED state 
+sets signal to RED state
 
 
 ## RESERVE(token_id)
-
 
 Waits for token for block. If not available immediately, current task loco is stopped.
 
 
 ## RESET(vpin,count...)
-
 
 Sets output pin LOW
 
@@ -981,30 +847,26 @@ see SET
 
 ## RESTORE_SPEED
 
-
-Resumes locos saved speed 
+Resumes locos saved speed
 
 see SAVE_SPEED
 
 
 ## RESUME
 
-
-Resumes PAUSEd tasks 
+Resumes PAUSEd tasks
 
 see PAUSE
 
 
 ## RETURN
 
-
-Returns to CALL 
+Returns to CALL
 
 see CALL
 
 
 ## REV(speed)
-
 
 Issues DCC speed packet for current loco in reverse.
 
@@ -1013,7 +875,6 @@ see FWD
 - speed  (0..127, 1=ESTOP)
 
 ## ROTATE(turntable_id,position,activity)
-
 
 Rotates an EX-Turntable to a given position
 
@@ -1041,12 +902,10 @@ Rotates an EX-Turntable to a given position
 
 ## ROTATE_DCC(turntable_id,position_id)
 
-
 Rotates turntable to a given position using DCC commands
 
 
 ## ROSTER(cab,name,funcmap...)
-
 
 Describes a loco roster entry visible to throttles
 
@@ -1056,13 +915,11 @@ Describes a loco roster entry visible to throttles
 
 ## ROUTE(sequence_id,description)
 
-
 DEfines starting point of a sequence that will appear as a route on throttle buttons.
 
 - description Quoted text, throttle button capotion.
 
 ## ROUTE_ACTIVE(sequence_id)
-
 
 Tells throttle to display the route button as active
 
@@ -1070,13 +927,11 @@ Tells throttle to display the route button as active
 
 ## ROUTE_INACTIVE(sequence_id)
 
-
 Tells throttle to display the route button as inactive
 
 - sequence_id of ROUTE/AUTOMATION
 
 ## ROUTE_HIDDEN(sequence_id)
-
 
 Tells throttle to hide the route button
 
@@ -1084,38 +939,33 @@ Tells throttle to hide the route button
 
 ## ROUTE_DISABLED(sequence_id)
 
-
 Tells throttle to display the route button as disabled
 
 - sequence_id of ROUTE/AUTOMATION
 
 ## ROUTE_CAPTION(sequence_id,caption)
 
-
 Tells throttle to change thr route button caption
 
-- sequence_id of ROUTE/AUTOMATION 
+- sequence_id of ROUTE/AUTOMATION
 
 ## SAVE_SPEED
 
-
-Resumes locos saved speed 
+Resumes locos saved speed
 
 see RESTORE_SPEED
 
 
 ## SENDLOCO(cab,sequence_id)
 
+Start a new task to drive the loco
 
-Start a new task to drive the loco 
-
-- cab loco to be driven 
+- cab loco to be driven
 - route sequence_id of route, automation or sequence to drive
 
 ## SEQUENCE(sequence_id)
 
-
-Provides a unique label than can be used to call, follow or start. 
+Provides a unique label than can be used to call, follow or start.
 
 see CALL
 
@@ -1126,13 +976,11 @@ see START
 
 ## SERIAL(msg)
 
-
 Write direct to Serial output
 
 - msg Quoted text
 
 ## SERIAL1(msg)
-
 
 Write direct to Serial1 output
 
@@ -1140,13 +988,11 @@ Write direct to Serial1 output
 
 ## SERIAL2(msg)
 
-
 Write direct to Serial2 output
 
 - msg Quoted text
 
 ## SERIAL3(msg)
-
 
 Write direct to Serial3 output
 
@@ -1154,13 +1000,11 @@ Write direct to Serial3 output
 
 ## SERIAL4(msg)
 
-
 Write direct to Serial4 output
 
 - msg Quoted text
 
 ## SERIAL5(msg)
-
 
 Write direct to Serial5 output
 
@@ -1168,45 +1012,40 @@ Write direct to Serial5 output
 
 ## SERIAL6(msg)
 
-
 Write direct to Serial6 output
 
 - msg Quoted text
 
 ## SERVO(vpin,position,profile)
 
-
 Move servo to given position
 
 - vpin of servo
-- position  servo position (values are hardware dependent) 
+- position  servo position (values are hardware dependent)
 - profile movement profile (Instant, Fast, Medium, Slow, Bounce)
 
 ## SERVO2(vpin,position,duration)
 
-
-Move servo to given position taking time 
+Move servo to given position taking time
 
 - vpin of servo
-- position  servo position (values are hardware dependent) 
+- position  servo position (values are hardware dependent)
 - duration mS
 
 ## SERVO_SIGNAL(vpin,redpos,amberpos,greenpos)
 
-
 Dedfine a servo based signal with 3 servo positions
 
 - vpin of servo, acts as signal_id
-- redpos servo position (values are hardware dependent) 
+- redpos servo position (values are hardware dependent)
 - amberpos servo position (values are hardware dependent)
 - greenpos servo position (values are hardware dependent)
 
 ## SERVO_TURNOUT(turnout_id,vpin,activeAngle,inactiveAngle,profile,description...)
 
-
 Define a servo driven turnout
 
-- turnout_id used by THROW/CLOSE 
+- turnout_id used by THROW/CLOSE
 - vpin for servo
 - activeAngle servo position (values are hardware dependent)
 - inactiveAngle servo position (values are hardware dependent)
@@ -1215,15 +1054,13 @@ Define a servo driven turnout
 
 ## SET(vpin,count...)
 
-
 Set pin HIGH
 
-see RESET  
+see RESET
 
 - count...  Number of sequential vpins to set. Default 1.
 
 ## SET_TRACK(track,mode)
-
 
 Set output track type
 
@@ -1232,7 +1069,6 @@ Set output track type
 
 ## SET_POWER(track,onoff)
 
-
 Set track power mode
 
 - track A..H
@@ -1240,35 +1076,30 @@ Set track power mode
 
 ## SETLOCO(loco)
 
-
 Sets the loco being handled by the current task
 
 
 ## SETFREQ(freq)
 
-
-Sets the DC track PWM frequency 
+Sets the DC track PWM frequency
 
 - freq Frequency is default 0, or 1..3
 
 ## SIGNAL(redpin,amberpin,greenpin)
 
+Define a Signal with LOW=on leds
 
-Define a Signal with LOW=on leds 
-
-see SIGNALH  
+see SIGNALH
 
 - redpin vpin for RED state, also acts as signal_id
 
 ## SIGNALH(redpin,amberpin,greenpin)
 
-
-define a signal with HIGH=ON leds 
+define a signal with HIGH=ON leds
 
 - redpin vpin for RED state, also acts as signal_id
 
 ## SPEED(speed)
-
 
 Changes current tasks loco speed without changing direction
 
@@ -1276,24 +1107,20 @@ Changes current tasks loco speed without changing direction
 
 ## START(sequence_id)
 
-
 Starts a new task at the given route/animation/sequence
 
 
 ## START_SHARED(sequence_id)
-
 
 Starts a new task at the given route/animation/sequence an share current loco with it
 
 
 ## START_SEND(sequence_id)
 
-
 Starts a new task at the given route/animation/sequence an send current loco to it. Remove loco from current task.
 
 
 ## STASH(stash_id)
-
 
 saves cuttent tasks loco id in the stash array
 
@@ -1301,13 +1128,11 @@ saves cuttent tasks loco id in the stash array
 
 ## STEALTH(code...)
 
-
 Allows for embedding raw C++ code in context of current task.
 
 - code... c++ code to be executed. This requires intimate understanding of the product acrhitecture.
 
 ## STEALTH_GLOBAL(code...)
-
 
 Allows for embedding raw c++ code out of context.
 
@@ -1315,12 +1140,10 @@ Allows for embedding raw c++ code out of context.
 
 ## STOP
 
-
 Same as SPEED(0)
 
 
 ## THROW(turnout_id)
-
 
 Throws given turnout
 
@@ -1329,43 +1152,38 @@ see CLOSE
 
 ## TOGGLE_TURNOUT(turnout_id)
 
-
 Toggles given turnout
 
 
 ## TT_ADDPOSITION(turntable_id,position_id,value,angle,description...)
 
-
 Defines a turntable track position
 
 - position_id each position is given an id
-- address DCC accessory address 
+- address DCC accessory address
 - angle Used only for throttles that may draw a visual representation of the turntable
 - description... quoted text or HIDDEN
 
 ## TURNOUT(turnout_id,addr,subaddr,description...)
 
-
 Defines a DCC accessory turnout with legacy address
 
-- turnout_id to be used in THROW/CLOSE etc  
+- turnout_id to be used in THROW/CLOSE etc
 - addr DCC accessory address
 - subaddr DCC accessory subaddress
 - description... Quoted text or HIDDEN, appears on throttle buttons
 
 ## TURNOUTL(tirnout_id,addr,description...)
 
-
 Defines a DCC accessory turnout with inear address
 
 see TURNOUT
 
-- turnout_id to be used in THROW/CLOSE etc  
+- turnout_id to be used in THROW/CLOSE etc
 - addr DCC accessory linear address
 - description... Quoted text or HIDDEN, appears on throttle buttons
 
 ## UNJOIN
-
 
 Disconnects PROG track from MAIN
 
@@ -1374,15 +1192,13 @@ see JOIN
 
 ## UNLATCH(vpin)
 
-
 removes latched on flag
 
-see LATCH 
+see LATCH
 
 - vpin (limited to 0..255)
 
 ## VIRTUAL_SIGNAL(signal_id)
-
 
 Defines a virtual (no hardware) signal, use ONhandlers to simulate hardware
 
@@ -1390,7 +1206,6 @@ see SIGNAL ONRED ONAMBER ONGREEN
 
 
 ## VIRTUAL_TURNOUT(id,description...)
-
 
 Defines a virtual (no hardware) turnout, use ONhandlers to simulate hardware
 
@@ -1400,25 +1215,21 @@ see TURNOUT ONCLOSE ONTHROW
 
 ## BITMAP_AND(vpin1,mask)
 
-
 Performs a bitwise AND operation on the given vpin analog value and mask.
 
 - mask Binary mask to be ANDed with vpin1 value
 
 ## BITMAP_INC(vpin)
 
-
 Increments poesudo analog value by 1
 
 
 ## BITMAP_DEC(vpin)
 
-
 Decrements poesudo analog value by 1  (to zero)
 
 
 ## BITMAP_OR(vpin1,mask)
-
 
 Performs a bitwise OR operation on the given vpin analog value and mask.
 
@@ -1426,25 +1237,21 @@ Performs a bitwise OR operation on the given vpin analog value and mask.
 
 ## BITMAP_XOR(vpin1,mask)
 
-
 Performs a bitwise XOR operation on the given vpin analog value and mask.
 
 - mask Binary mask to be XORed with vpin1 value
 
 ## WAITFOR(pin)
 
-
 Waits for completion of servo movement
 
 
 ## WAITFORTT(turntable_id)
 
-
 waits for completion of turntable movement
 
 
 ## VIRTUAL_SIGNAL(signal_id)
-
 
 Defines a virtual (no hardware) signal, use ONhandlers to simulate hardware
 
@@ -1453,38 +1260,32 @@ see SIGNAL
 
 ## WAIT_WHILE_RED(signal_id)
 
-
 Keeps loco at speed 0 while signal is RED
 
 
 ## WITHROTTLE(msg)
 
-
-Broadcasts a string in Withrottle protocol format to all throttles using this protocol. 
+Broadcasts a string in Withrottle protocol format to all throttles using this protocol.
 
 - msg quoted string
 
 ## XFOFF(cab,func)
 
-
-Turns function off for given loco 
+Turns function off for given loco
 
 - func function number
 
 ## XFON(cab,func)
-
 
 Turns function ON for given loco
 
 
 ## XFTOGGLE(cab,func)
 
-
 Toggles function state for given loco
 
 
 ## XFWD(cab,speed)
-
 
 Sends DCC speed to loco in forward direction
 
@@ -1492,13 +1293,11 @@ Sends DCC speed to loco in forward direction
 
 ## XREV(cab,speed)
 
-
 Sends DCC speed to loco in reverse direction
 
 - speed (0..127, 1=ESTOP)
 
 ## XPOM(cab,cv,value)
-
 
 Sends DCC speed to loco in reverse direction
 
@@ -1508,8 +1307,7 @@ Sends DCC speed to loco in reverse direction
 
 ## XRESTORE_SPEED(cab)
 
-
-Resumes locos saved speed 
+Resumes locos saved speed
 
 - cab loco id
 see XSAVE_SPEED
@@ -1517,8 +1315,7 @@ see XSAVE_SPEED
 
 ## XSAVE_SPEED(cab)
 
-
-Resumes locos saved speed 
+Resumes locos saved speed
 
 - cab loco id
 see XRESTORE_SPEED
