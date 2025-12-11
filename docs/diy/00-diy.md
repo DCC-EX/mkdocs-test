@@ -10,7 +10,7 @@ DCC-EX started life on home-built command stations using Arduino UNO and Mega pr
 
     There are many different brands and clones of various different microprocessors, shields/boards, and power supplies on the market, particularly when using marketplaces such as AliExpress and Amazon. Sometimes the prices on these marketplaces seem too good to be true for a genuine item, and usually they are and you will end up with a clone or inferior product, potentially with quality, reliability, and compatibility issues.
 
-    When reading through these self-build options, we endeavour to be as clear as we can on the specific options we recommend, but we cannot possibly tell you all the options of where to purchase reliably, so you must take care when purchasing that you are buying the correct component. If in doubt, ask via our [Discord server](/support/01-discord.md) for a second opinion before spending your money.
+    When reading through these self-build options, we endeavour to be as clear as we can on the specific options we recommend, but we cannot possibly tell you all the options of where to purchase reliably, so you must take care when purchasing that you are buying the correct component. If in doubt, ask via our [Discord server](/support/05-discord.md) for a second opinion before spending your money.
     
     Further, should you select a different processor, or progress to adding accessories, you will find that lots of "standards" are not at all standard, and that apparently attractive alternatives to the recommended items are totally incompatible. You may need to configure the software or even modify hardware shields.
 

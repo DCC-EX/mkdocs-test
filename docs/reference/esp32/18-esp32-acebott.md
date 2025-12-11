@@ -2,7 +2,7 @@
 
 !!! note "ACEBOTT Beta Testing"
 
-    Please note that the ACEBOTT board is currently in Beta testing, so this information may change at any time. If using this board, we highly recommend joining our [Discord server](/support/01-discord.md) and request access to the `#beta-testing` channel.
+    Please note that the ACEBOTT board is currently in Beta testing, so this information may change at any time. If using this board, we highly recommend joining our [Discord server](/support/05-discord.md) and request access to the `#beta-testing` channel.
 
 ![ACEBOTT ESP32](/_static/images/esp32/esp32-acebott.png){ width=40% align=right }
 
