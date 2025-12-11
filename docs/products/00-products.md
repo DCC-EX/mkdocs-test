@@ -178,6 +178,9 @@ Refer to the [EX-IOExpander documentation](/products/ex-ioexpander/00-ex-ioexpan
 
 ### EX-SensorCAM
 
+[![EX-SensorCAM Light Logo](/_static/images/logos/product-logo-ex-sensorcam-only-light.png){ .only-light width=400px }
+![EX-SensorCAM Dark Logo](/_static/images/logos/product-logo-ex-sensorcam-only-dark.png){ .only-dark width=400px }](/products/ex-sensorcam/00-ex-sensorcam.md)
+
 Provides up to 80 sensors for your layout using an ESP32 based camera solution.
 
 Refer to the [EX-SensorCAM documentation](/products/ex-sensorcam/00-ex-sensorcam.md) for more information.
