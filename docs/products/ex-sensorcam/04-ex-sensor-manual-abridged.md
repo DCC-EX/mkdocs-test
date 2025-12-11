@@ -373,6 +373,8 @@ The ESP32-WROVER-DEV board is a good alternative to the ESP32-CAM-MB.The slightl
 
 ![ESP32 Wrover CAM with Sparkfun Endpoint](/_static/images/ex-sensorcam/esp32-wrover-sparkfun-endpoint.png)
 
+![ESP32 Wrover CAM with PCA9515A](/_static/images/ex-sensorcam/esp32-wrover-pca9515a.png)
+
 **Figure 6 &nbsp; ESP32 WROVER-CAM& interface**
 
 ![ESP32 CAM MB with PCA9515A](/_static/images/ex-sensorcam/esp32-cam-mb-pca9515a.png)
