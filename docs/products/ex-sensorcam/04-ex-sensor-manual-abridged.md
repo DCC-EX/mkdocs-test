@@ -328,46 +328,48 @@ The sensorCAM Processing 4 monitor accepts commands **W, X, Y** & **Z** which al
 **NOTE: Do not flip image before creating new sensors as cursor coordinates don't flip!**
 
 The image will have enabled sensors (b/s) boxed and identified by a (resistor) colour code. Left bar is bank# and right bar is sensor#. Combined, they give the bsNo. If two sensors have the same coordinates, the colour code will be for the highest bsNo. **N.B.** Only sensors below maxSensors will be boxed. Note the ‘**H**’ command will REVERSE the coding from b/s to s/b.  
-(The resistor code std. is 0:black 1:brown 2:red 3:orange 4:yellow 5:green 6:blue 7:violet 8:grey 9:white)
+(The resistor colour code is 0:black 1=brown 2=red 3=orange 4=yellow 5=green 6=blue 7=violet 8=grey 9=white)
 
 #### PROCESSING4 command summary:
 
 **W###** &nbsp; will limit the image to\#\#\# rows wide/high(1-240) - default 240
 
-**X###** &nbsp; will start the image from column ###(0-319)-default 0-uses the sensorCAM'x' command.
+**X###** &nbsp; will start the image from column ###(0-319) - default 0-uses the sensorCAM'x' command.
 
-**Y###** &nbsp; will initiate an image download starting at row ###(0-239)-default 0-uses the sensorCAM's'y' cmd.
+**Y###** &nbsp; will initiate an image download starting at row ### (0-239)-default 0-uses the sensorCAM 'y' cmd.
 
-**Z###** &nbsp; will limit the image to ### columns(1-320)- default 320-uses the sensorCAM'z' command.
+**Z###** &nbsp; will limit the image to ### columns (1-320)- default 320-uses the sensorCAM 'z' command.
 
-**H** &nbsp; will flip/mirror subsequent images horizontally(x).(Note: reverses bsNo sensor colour code to s-b!)
+**H** &nbsp; will flip/mirror subsequent images horizontally. (**Note:** reverses bsNo sensor colour code to sb!)
 
-**V** &nbsp; will flip/mirror subsequent images vertically(y).(V+ H effectively rotates image 180 degrees)
+**V** &nbsp; will flip/mirror subsequent images vertically. (V + H effectively rotates image 180 degrees)
 
 **R** &nbsp; will cause a firmware reset of the sensorCAM via the DTR line of the FTDI interface. CAM will enter a wait mode for confirmation. Reset can be aborted with command'aw'(Abort&Wait). Ctrl-R Resets CAM instantly.
 
 #### NOTE
 
-1. The above commands ARE CASE SENSITIVE. They are recognized by Processing 4 as non-sensorCAM commands and processed in the monitor/PC. Commands **X, Y** & **Z** in turn automatically issue related sensorCAM commands **x, y** & **z** respectively, with appropriate parameters. The '**y**' command is used repeatedly, once for each new image line(row). The '**y**' command suspends sensorCAM immaging, holding a single “frozen” frame until a terminating command is received. To resume normal operation at the end of command '**Y**', the double-y command '**yy**' is automatically sent. However, if the user enters a'**y**' by error(rather than upper case '**Y**'), the monitor may show a binary string of data(verbose mode) and a manually entered '**yy**' is needed to recover. Typing lower case **x** or **z** may also negate any previous **X** or **Z** settings.
+1. The above commands ARE CASE SENSITIVE. They are recognized by Processing 4 as non-sensorCAM commands and processed in the monitor/PC. Commands **X, Y** & **Z** in turn automatically issue related sensorCAM commands **x, y** & **z** respectively, with appropriate parameters. The '**y**' command is used repeatedly, once for each new image line(row). The '**y**' command suspends sensorCAM immaging, holding a single “frozen” frame until a terminating command is received. To resume normal operation at the end of command '**Y**', the double-y command '**yy**' is automatically sent. However, if the user enters a'**y**' by error (e.g. wanting upper case '**Y**'), the monitor may show a binary string of data (verbose mode) and a manually entered '**yy**' is needed to recover. Typing lower case **x** or **z** may also negate any previous **X** or **Z** settings.
 
-2. If you use **H** to mirror, the colour coding for boxed sensor number(bs) has to be read right to left.
+2. If you use **H** to mirror, the colour coding for boxed sensor number (bsNo.) has to be read right to left.
 
 3. **Ctrl-E** and **Ctrl-N** enable/disable echo of commands, as typed, to the monitor/log file. It can replace the user's focus on the CAM image Cmd: window. **YO** helpfully toggles the verbose mode. The command **Y** images from row 0 by default.
 
 ## 7 Wiring Requirements
 
-Refer to **Figure 7** and **Appendix F** for alternate solutions for connecting sensorCAM to an i2c bus for remote control. For initial testing, the basic ESP32-CAM and ESP32-CAM-MB(CH340 based USB Mother Board) could be sufficient.
+Refer to **Figure 7** and **Appendix F** for alternate solutions for connecting sensorCAM to an i2c bus for remote control. For initial testing, the basic ESP32-CAM and ESP32-CAM-MB(CH340 based USB Mother Board) could be sufficient.  Take care to use level shifting  if using a 5V mega. 
 
 The recommended hardware interface to a CS is currently the **Sparkfun Endpoint** system which permits the i2c bus to be run over long standard Cat5 twisted pair cable, which can also carry the required raw power supply. The Sparkfun Endpoints are used **in pairs** and can cater for voltage shifting between 5V Command Stations(e.g. Mega) and 3.3V sensorCAM as required. For the very simplest off-the-shelf arrangement, an ESP32-WROVER-DEV CAM with a cheap ESP32 breakout board including regulator can be linked to an Endpoint with 4 Dupont wires for a working CAM system on the end of a cat5 cable of considerable length as indicated in **Figure 6**, needing only a remote, preferably electrically isolated(floating),9-12Vdc 0.5A power supply and a matching endpoint on a Command Station.  For a cheaper solution, use the PCA9515 with dupont jumpers for a limited (2m?) reach with either esp32-CAM or Wrover-CAM.  
 **Note:** The Sparkfun Endpoint may also need a jumper cut or joined for i2c bus voltage level matching to the Command Station.  
 
-The SensorCAM software has been almost exclusively tested on the ESP32-CAM-MB as seen in **Figure 7**. The original prototype was fitted with some enhancements that may not be needed for the user's application, such as an external antenna and extra LED indicators. NOTE that an Antenna attachment to the ESP32-CAM requires a solder link adjustment on the CAM (refer you-tube CAM tutorials) but most wi-fi works with the on-board antenna. However, at least one “super bright” LED (the "programmable nLED") is recommended for convenience to visually indicate when a sensor is “tripped”, connected between 3.3V via a resistor(~470R) to GPIO14.
+The SensorCAM software has been almost exclusively tested on the ESP32-CAM-MB as seen in **Figure 7**. The original prototype was fitted with some enhancements that may not be needed for the user's application, such as an external antenna and extra LED indicators. NOTE that an Antenna attachment to the ESP32-CAM requires a solder link adjustment on the CAM (refer you-tube CAM tutorials) but most wi-fi works with the on-board antenna. However, at least one “super bright” LED (the "programmable nLED") is recommended for convenience to visually indicate when a sensor is “tripped”, connected between 3.3V via a resistor (~470R) to GPIO14.
 
 For testing beyond that available via a USB cable, the most basic interface to a short i2c cable to a Command Station (Mega) is based on the PCA9515 level shifter shown in **Figure 7**. This is limited in range and may require tuning of the i2c bus for best performance. See **Appendix F** for a more capable Sparkfun Endpoint configuration using a separate 5V switching regulator, at a small increase in cost, reliability and effort.  The connection cable between PCA9515 and **CAM** may be up to 2m long for extra reach. 
 
 The ESP32-CAM reset button, remotely mounted, may be difficult to access. To reset the device, two options need to be available. These can be via software command, either from the attached USB monitor, or i2c connected Command Station, or via a power supply induced reboot. A switch at the (“wall-wart”) 9V supply is recommended independent of the CS supply. The USB connection is needed to set up the sensors initially and view images, but should be able to be disconnected once setup testing is complete.  Some esp32's need a 1uF on the reset pin.
 
 The ESP32-WROVER-DEV board is a good alternative to the ESP32-CAM-MB.The slightly bigger CAM will be a little more convenient with the ESP32S 38P Expansion board. This 38 pin expansion board with 5V regulator is described in the video below **BUT IGNORE PRESENTERS DESCRIPTION OF HIS FAULTY 5V REGULATOR AT THE END**
+
+https://www.youtube.com/watch?v=AP_CX-SFPAQ
 
 **Note:** Care is needed as the WROVER CAM has 40 pins (not 38) but the spare end Gnd and Vcc can remain disconnected (cut off?).
 
@@ -386,21 +388,21 @@ The ESP32-WROVER-DEV board is a good alternative to the ESP32-CAM-MB.The slightl
 
 ### 8.1 Intro
 
-The operation of the railway depends on a Control Station that polls the sensorCAM for sensor states.This might be a dedicated Arduino Mega 2560 for example. It might be a Command Station running DCC-EX and EXRAIL software, or your own personal device& code. If the sensorCAM is powered up with default settings(from EPROM), or adjusted by the user at the start, the program need only talk to sensorCAM over an i2c bus using the commands a,b,i,I& o for example, or it may be more sophisticated, providing a channel from a Control Station console to the sensorCAM to enable all configuration commands via the i2c bus.
+The operation of the railway depends on a Control Station that polls the sensorCAM for sensor states.This might be a dedicated Arduino Mega 2560 for example. It might be a Command Station running DCC-EX and EXRAIL software, or your own personal device & code. If the sensorCAM is powered up with default settings (from EPROM), or adjusted by the user at the start, the program need only talk to sensorCAM over an i2c bus using the commands a,b,i,I & o for example, or it may be more sophisticated, providing a channel from a Control Station console to the sensorCAM to enable all configuration commands via the i2c bus.
 
-The i2c bus is running at 100kHz on the prototype software. It has not been tested at any higher speed yet. It is running fine over a 20m long i2c bus to the master microcontroller(mpu or Mega).
+The i2c bus is running at 100kHz on the prototype software. It has not been tested at any higher speed yet. It is running fine over a 20m long i2c bus to the master microcontroller (CSB1 or Mega).
 
 ### 8.2   DCC-EX Command Station
 
-Setting up a DCC-EX Command Station, should you have one, requires configuration details placed in files config.h and mySetup.h along with a driver IO_EXSensorCAM.h and myAutomation.h. These must go in the directory containing file CommandStation-EX.ino. The IO_EXSensorCAM.h driver is based on the modified IO_EXIOExpander.h code. Refer to APPENDIX H for installation details. EXSensorCAM.h code mirrors the i,I,o,t& m commands, while the EXIODPUP command may serve as the enable function(a). EXIOExpander.h codes don't have the“control& setup” sensorCAM functions otherwise available from a USB console so additional functionality was added using the DCC-EX sensorCAM native command<N>(if using the newest CamParser.cpp).
+Setting up a DCC-EX Command Station, should you have one, requires configuration details placed in files config.h and mySetup.h along with a driver IO_EXSensorCAM.h and myAutomation.h. These must go in the directory containing file CommandStation-EX.ino. The IO_EXSensorCAM.h driver is based on the modified IO_EXIOExpander.h code. Refer to APPENDIX H for installation details. EXSensorCAM.h code mirrors the i, I, o, t & m commands, while the EXIODPUP command may serve as the enable function (a). EXIOExpander.h codes don't have the “control & setup” sensorCAM functions otherwise available from a USB console so additional functionality was added using the DCC-EX sensorCAM native command <N> (if using the newest _CamParser.cpp_).
 
 ### 8.3 Non-DCC-EX system
 
-Proprietary Master:  If writing raw code for another Command Station, you will need details on the protocol used by sensorCAM on the i2c bus, and code to interpret the bus bytes and reconstitute text for the console. Two such prototype examples exists. V155 of sensorCAM incorporates a subset of the DCC-EX IOexpander codes so that EXRAIL can use sensorCAM without further modification. V301& later mostly use ASCII code characters.
+Proprietary Master:  If writing raw code for another Command Station, you will need details on the protocol used by sensorCAM on the i2c bus, and code to interpret the bus bytes and reconstitute text for the console. Two such prototype examples exists.  V155 of sensorCAM incorporates a subset of the DCC-EX IOexpander codes so that EXRAIL can use sensorCAM without further modification.  V301& later mostly use ASCII code characters.
 
 ### 8.4 Monitor Lighting
 
-Stable good lighting is needed.  Gross Lighting changes will have two effects, namely cause trips of most sensors and stop automatic reference refreshes, it may be wise to include monitoring for this eventuality by detecting and setting an “alarm” state. The reference sensor(S00) is automatically re-referenced every 6.4 seconds so will indicate a fault-trip for a maximum of 6.4 seconds. All other sensors will continue to indicate a trip until the user resets the references with an r00 (having checked all unoccupied). Setting up a second "reference" sensor (say S01) that would NOT get reset automatically and would stay tripped as a more enduring fault indicator could be helpful. You could reserve entire bank 0 for this purpose or use the'nO' command to set the programmable pLED to light up if there is any enduring trip on bank 0.  Consider using the "qLED" GPIO2.   By default BLKOLED was set to GPIO2 LED, with BLK1LED to BLK3LED all set to GPIO33 LED. PLED is set to GPIO14
+Stable good lighting is needed.  Gross Lighting changes will have two effects, namely cause trips of most sensors and stop automatic reference refreshes, it may be wise to include monitoring for this eventuality by detecting and setting an “alarm” state. The reference sensor (S00) is automatically re-referenced every 6.4 seconds so will indicate a fault-trip for a maximum of 6.4 seconds. All other sensors will continue to indicate a trip until the user resets the references with an r00 (having checked all unoccupied). Setting up a second "reference" sensor (say S01) that would NOT get reset automatically and would stay tripped as a more enduring fault indicator could be helpful. You could reserve entire bank 0 for this purpose or use the 'nO' command to set the programmable pLED to light up if there is any enduring trip on bank 0.  Consider using the "qLED" GPIO2.   By default BLKOLED was set to GPIO2 LED, with BLK1LED to BLK3LED all set to GPIO33 LED. PLED uses GPIO14
 
 ## APPENDIX A
 
