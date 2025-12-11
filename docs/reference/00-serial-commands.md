@@ -160,7 +160,7 @@ Complete reference guide for serial commands used with DCC command stations.
 | `<I id EXTT vpin home>` | Create an EXTT turntable | `id`: ID, `vpin`: Pin, `home`: Home position |
 | `<I id ADD position value angle>` | Add turntable position | `id`: ID, `position`: Position, `value`: Value, `angle`: Angle |
 
-## JSON Commands
+## Throttle Information Commands
 
 | Command | Description | Parameters |
 |---------|-------------|------------|
