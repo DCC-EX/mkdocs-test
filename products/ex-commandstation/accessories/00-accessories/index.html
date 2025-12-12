@@ -27,7 +27,7 @@
     
     
       
-        <title>Connecting Accessories - DCC-EX Model Train Control, Animation, and Automation</title>
+        <title>Overview - What are Accessories? - DCC-EX Model Train Control, Animation, and Automation</title>
       
     
     
@@ -83,7 +83,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#connecting-accessories" class="md-skip">
+        <a href="#overview-what-are-accessories" class="md-skip">
           Skip to content
         </a>
       
@@ -116,7 +116,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Connecting Accessories
+              Overview - What are Accessories?
             
           </span>
         </div>
@@ -1005,7 +1005,7 @@
   
   
   <span class="md-ellipsis">
-    Connecting Accessories
+    Overview - What are Accessories?
     
   </span>
   
@@ -1018,7 +1018,7 @@
   
   
   <span class="md-ellipsis">
-    Connecting Accessories
+    Overview - What are Accessories?
     
   </span>
   
@@ -1050,18 +1050,18 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#voltage-differences" class="md-nav__link">
+  <a href="#connecting-accessories" class="md-nav__link">
     <span class="md-ellipsis">
-      Voltage Differences
+      Connecting Accessories
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#what-is-i2c" class="md-nav__link">
+  <a href="#voltage-differences" class="md-nav__link">
     <span class="md-ellipsis">
-      What is I2C?
+      Voltage Differences
     </span>
   </a>
   
@@ -6599,17 +6599,42 @@
   
 
 
-<h1 id="connecting-accessories">Connecting Accessories<a class="headerlink" href="#connecting-accessories" title="Permanent link">&para;</a></h1>
-<p>Once you go beyond just wanting to run trains, and want to control turnouts, signals, and potentially automate other various parts of your layout, you will need to know how to connect accessories to your Command Station.</p>
-<p>This includes our other products such as EX-FastClock, EX-IOExpander, EX-SensorCAM, and EX-Turntable.</p>
+<h1 id="overview-what-are-accessories">Overview - What are Accessories?<a class="headerlink" href="#overview-what-are-accessories" title="Permanent link">&para;</a></h1>
+<p>Once you go beyond just wanting to run trains, and want to control turnouts (points), signals, turntables, and potentially automate other parts of your layout, you will need to know how to connect accessories to your Command Station.</p>
+<p>Within the DCC-EX ecosystem, an accessory is anything you can connect to or control from your EX-CommandStation which also includes our other products such as EX-FastClock, EX-IOExpander, EX-SensorCAM, and EX-Turntable.</p>
 <h2 id="accessory-types">Accessory Types<a class="headerlink" href="#accessory-types" title="Permanent link">&para;</a></h2>
+<p>Accessories are broadly divided into two categories:</p>
+<ul>
+<li>
+<p>Outputs:</p>
+<ul>
+<li>Turnouts or points</li>
+<li>Signals</li>
+<li>Turntables</li>
+<li>Lighting</li>
+<li>Servos</li>
+</ul>
+</li>
+<li>
+<p>Inputs:</p>
+<ul>
+<li>Sensors</li>
+<li>Push buttons</li>
+<li>Keypads</li>
+<li>Rotary encoders</li>
+<li>Clocks</li>
+</ul>
+</li>
+</ul>
+<p>Note that we consider throttles/controllers differently to accessories, so these are not covered in this section. See our <a href="../../../../throttles/00-throttles/">Throttles</a> section instead.</p>
+<h2 id="connecting-accessories">Connecting Accessories<a class="headerlink" href="#connecting-accessories" title="Permanent link">&para;</a></h2>
 <p>There are generally three ways accessories can be connected to and controlled by your Command Station:</p>
 <ul>
 <li>I2C</li>
 <li>Serial</li>
 <li>DCC accessories attached to a DCC main track output</li>
 </ul>
-<p>Throughout these pages, we will be focusing on accessories connected via I2C only.</p>
+<p>Throughout these pages, we will primarily be focusing on accessories connected via I2C.</p>
 <p>Most devices connected via Serial are typically throttles or controllers rather than accessories.</p>
 <p>When purchasing DCC accessories, you will have received a user manual for these, so follow that for instructions on how to connect them.</p>
 <h2 id="voltage-differences">Voltage Differences<a class="headerlink" href="#voltage-differences" title="Permanent link">&para;</a></h2>
@@ -6619,11 +6644,6 @@
 <p>This applies to any peripheral device connected directly to your Command Station via either serial or I2C interfaces.</p>
 <p>The most common issue is connecting an accessory designed for 5V operation to a Command Station that operates at 3.3V, such as our EX-CSB1. This will cause damage!</p>
 </div>
-<h2 id="what-is-i2c">What is I2C?<a class="headerlink" href="#what-is-i2c" title="Permanent link">&para;</a></h2>
-<p>If you want the nitty gritty of what I2C is, you can refer to the <a href="https://en.wikipedia.org/wiki/I%C2%B2C">Wikipedia article</a>, which covers more detail than we will here.</p>
-<p>To keep it simple and in the context of DCC-EX, I2C is a bus that allows multiple accessories or peripherals to be connected to your Command Station, utilising two signal lines/connections and a common ground connection. While power can be provided by your Command Station, it is recommended to have your accessories powered separately.</p>
-<p>Each I2C device must have a unique address in order to be detected and configured by the software.</p>
-<p>You will typically see these addresses in hexadecimal format, for example <code>0x40</code>.</p>
 
 
 
@@ -6644,7 +6664,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="December 12, 2025 01:04:41 UTC">December 12, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="December 12, 2025 05:38:41 UTC">December 12, 2025</span>
   </span>
 
     
