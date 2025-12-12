@@ -27,7 +27,7 @@
     
     
       
-        <title>EX-SensorCAM Manual - DCC-EX Model Train Control, Animation, and Automation</title>
+        <title>EX-SensorCAM Abridged Manual - DCC-EX Model Train Control, Animation, and Automation</title>
       
     
     
@@ -83,7 +83,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#ex-sensorcam-manual" class="md-skip">
+        <a href="#ex-sensorcam-abridged-manual" class="md-skip">
           Skip to content
         </a>
       
@@ -116,7 +116,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              EX-SensorCAM Manual
+              EX-SensorCAM Abridged Manual
             
           </span>
         </div>
@@ -946,8 +946,6 @@
       
         
       
-        
-      
     
     
     
@@ -1127,29 +1125,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ex-commandstation/accessories/89-i2c-wiring/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    I2C Wiring
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../ex-commandstation/accessories/90-buying-i2c-devices/" class="md-nav__link">
         
   
@@ -1188,15 +1163,15 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3_6_9" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3_6_8" >
         
           
-          <label class="md-nav__link" for="__nav_2_3_6_9" id="__nav_2_3_6_9_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_2_3_6_8" id="__nav_2_3_6_8_label" tabindex="0">
             
   
   
   <span class="md-ellipsis">
-    40 various devices
+    Various devices
     
   </span>
   
@@ -1204,10 +1179,10 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_2_3_6_9_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_2_3_6_9">
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_2_3_6_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3_6_8">
             <span class="md-nav__icon md-icon"></span>
-            40 various devices
+            Various devices
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -1218,7 +1193,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ex-commandstation/accessories/40-various-devices/00-ds1307/" class="md-nav__link">
+      <a href="../../ex-commandstation/accessories/various-devices/00-ds1307/" class="md-nav__link">
         
   
   
@@ -3619,7 +3594,7 @@
   
   
   <span class="md-ellipsis">
-    EX-SensorCAM Manual
+    EX-SensorCAM Abridged Manual
     
   </span>
   
@@ -3632,7 +3607,7 @@
   
   
   <span class="md-ellipsis">
-    EX-SensorCAM Manual
+    EX-SensorCAM Abridged Manual
     
   </span>
   
@@ -6601,6 +6576,8 @@
       
         
       
+        
+      
     
     
     
@@ -6642,12 +6619,35 @@
   
   
     <li class="md-nav__item">
+      <a href="../../../reference/wiring/i2C/00-i2c-wiring/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    I2C Wiring for the Tinkerer
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../../reference/wiring/i2C/04-tuning-info/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    A Tinkerer's guide to tuning a standard mode (100kHz) i2c bus:
+    Tuning an I2C Bus for the Engineer
     
   </span>
   
@@ -7206,7 +7206,7 @@
   
 
 
-<h1 id="ex-sensorcam-manual">EX-SensorCAM Manual<a class="headerlink" href="#ex-sensorcam-manual" title="Permanent link">&para;</a></h1>
+<h1 id="ex-sensorcam-abridged-manual">EX-SensorCAM Abridged Manual<a class="headerlink" href="#ex-sensorcam-abridged-manual" title="Permanent link">&para;</a></h1>
 <h2 id="contents">CONTENTS<a class="headerlink" href="#contents" title="Permanent link">&para;</a></h2>
 <ol>
 <li>
@@ -7260,56 +7260,52 @@
 <p>The sensorCAM software is uploaded to the ESP32-CAM using the Arduino IDE. The sensorCAM has been programmed with two modes of operation; a webCAM mode (as in the on-line tutorial) and a sensorCAM mode. The limited power of an ESP32 prevents both functioning at the same time. Consequently, to see an image of the railway while sensorCAM is operational requires a third application (Processing 4.3) to retrieve a still image from the CAM over the USB cable to a computer. The Processing 4 <em>sensorCAM.pde</em> app replaces the Arduino IDE and IDE monitor retaining the sensorCAM command set and offering a (slow) image capture capability over USB cable. Processing 4 allows virtual sensors to be placed interactively on an image of the railway with a simple mouse click.</p>
 <p>In addition to the USB interface, you are likely to need a daughter board “carrier” or prototyping board to connect to the real world (power, indicators, control wires, and i2c.) Further details are given below. However to test the sensorCAM functions, one only needs the CAM and a USB interface, with power from the PC's USB port.</p>
 <p>To control a railway, the railway needs a microcontroller based management system. This typically could be an Arduino Mega (or CSB1) based system running software such as the DCC-EX CommandStation and EX-RAIL automation application. The EX Command Station(CS) includes a sensorCAM specific driver as detailed later.</p>
-<p>The lens system on the cam comes in (std) 66deg., 120 and 160deg. field of view. One can get longer ribbon versions and even 850nm(IR) versions to experiment with. These versions may be sourced independently of the ESP32-CAM.  A wider coverage is possible with a 75-120deg(fish eye) lens, if needing to accommodate a lower ceiling height but are a last resort.</p>
+<p>The lens system on the cam comes in (std) 66deg., 120 and 160deg. field of view. One can get longer ribbon versions and even 850nm(IR) versions to experiment with. These versions may be sourced independently of the ESP32-CAM.  A wider coverage is possible with a 75-120deg (fish eye) lens, if needing to accommodate a lower ceiling height but are a last resort.</p>
 <h2 id="2-esp32-cam">2. ESP32-CAM<a class="headerlink" href="#2-esp32-cam" title="Permanent link">&para;</a></h2>
-<p>The heart of the sensorCAM is the ESP32 CAM module with an ov2640 camera sensor and a 32bit ESP32-S microprocessor. The sensorCAM software/sketch is loaded into the ESP32 using the Arduino IDE over a USB port with settings newline/115200 baud. Follow the above guidelines and run the camera example first, to get a demo webserver and CAM operational with a simple coloured test image. Experiment with settings to "get a feel" for the parameter effects which need optimization. The CAM has a considerable number of video related on-screen settings. Alternative ov2640 CAM Modules can be obtained with various viewing angles(66,75,120,130deg) if std.(66?) is too low. A“fish eye” lens(120deg.) will give barrel distortion, but the sensorCAM should still function acceptably.  The standard ov2640 can see some Infra Red light which may be utilised to see an IR LED as a beam-break sensor.</p>
+<p>The heart of the sensorCAM is the ESP32 CAM module with an ov2640 camera sensor and a 32bit ESP32-S microprocessor. The sensorCAM software/sketch is loaded into the ESP32 using the Arduino IDE over a USB port with settings newline/115200 baud. Follow the above guidelines and run the camera example first, to get a demo webserver and CAM operational with a simple coloured test image. Experiment with settings to "get a feel" for the parameter effects which need optimization. The CAM has a considerable number of video related on-screen settings. Alternative ov2640 CAM Modules can be obtained with various viewing angles (66,75,120,130deg) if std.(66?) is too low. A“fish eye” lens(120deg.) will give barrel distortion and small features, but the sensorCAM may still function acceptably.  The standard ov2640 can see some Infra Red light which may be utilised to see a bright IR LED as a beam-break sensor.</p>
 <p><img alt="ESP32 CAM Example Sketch" src="../../../_static/images/ex-sensorcam/esp32-cam-example-sketch.png" /></p>
 <p><strong>Figure 1. &nbsp; webCAM mode</strong></p>
 <p>Figure 1. is an example of the standard webCAM browser presentation. It is a very useful mode for alignment and as a training aid in investigating the effects of the many video adjustments possible, but does not allow placement of sensors as sensorCAM mode can't be simultaneously enabled.</p>
-<p>Brightness, Contrast, Saturation, AutoWhiteBalance(AWB), AWBgain, AutomaticExposureCtl(AEC), AECdsp, AELevel, AutomaticGainCtl(AGC), AGGainCeiling and more can be adjusted. The QVGA startup settings of sensorCAM are:</p>
-<p>Bri=0,Con=1,Sat=2,AWB=1,AWBg=1,AEC=1,AECd=1,AEL=1,AGC=1,AGg=9;(initial settings of 'c' parameters)</p>
-<p>These can be changed after the CAM images are stable, but the default values should be adequate.</p>
-<p>If you “Start Stream”, parameter changes will seem almost immediate. But with“stills”,after changing a variable,you may have to click“Get Still” 3 times to clear the pipeline and get a changed image. In Stream mode, close observation will reveal changing whole image brightness/colour for several seconds after image disturbance (e.g. a hand in front of CAM) as the auto adjustments “correct” the image. These types of changes can trip the sensorCAM even if the obstruction does not block the virtual sensor. Consequently after power-up, the sensorCAM may stabilize and then turn off some auto adjustments in the first 15 seconds. Changing environment lighting may result in a need to use a “recalibrate” command, for example perhaps after sunset or turning on extra lighting.</p>
+<p>Brightness, Contrast, Saturation, AutoWhiteBalance(AWB), AWBgain, AutomaticExposureCtl(AEC), AECdsp, AELevel, AutomaticGainCtl(AGC), AGGainCeiling and more can be adjusted.  The sensorCAM uses QVGA but VGA is better in webCAM mode. These settings can be changed after the CAM images are stable, but the default values should be adequate.</p>
+<p>If you “Start Stream”, parameter changes will seem almost immediate. But with “stills”, after changing a variable, you may have to click “Get Still” 3 times to clear the pipeline and get a changed image. In Stream mode, close observation will reveal changing whole image brightness/colour for several seconds after image disturbance (e.g. a hand in front of CAM) as the auto adjustments “correct” the image. These types of changes can trip the sensorCAM even if the obstruction does not block the virtual sensor. Consequently after power-up, the sensorCAM may stabilize and then turn off some auto adjustments in the first 15 seconds. Changing environment lighting may result in a need to use a “recalibrate” command, for example perhaps after sunset or turning on extra lighting.</p>
 <p>Due to the slowness of the ESP32 &amp; wifi, the "live stream" is slow and a webCAM delay in response will be observed. This may be a little quicker for the sensorCAM sensing mode. The delay is inevitable in webCAM WiFi mode.</p>
 <p><img alt="ESP32 CAM Example Capture Sample" src="../../../_static/images/ex-sensorcam/esp32-cam-example-capture-sample.png" /></p>
 <p><strong>Figure 2 &nbsp; Initial sensorCAM settings</strong></p>
-<p>After the sensorCAM has booted up, it reads frames for 9 seconds before automatically doing a reference grab for all defined sensors (the r00 command). ver.320 by default sets the CAM configuration to those below. When sensorCAM is running, a user may tweak these settings via a USB monitor'c' or'j' commands if required.Bri=0, Con=1, Sat=2, AWB=1, AWBg=1, AEC=1, AECd=1, AEL=1, AGC=1, AGg=9;(initial settings of'c' parameters)</p>
+<p>After the sensorCAM has booted up, it reads frames for 9 seconds before automatically doing a reference grab for all defined sensors (the r00 command). </p>
 <p>The ESP32-CAM has an Infra-Red(IR) filter to enhance colour response. The sensorCAM relies on strong colour contrast(saturation) to detect changes. Low lighting levels and poor contrast degrades performance.</p>
-<p>To run the sensorCAM.ino, it will be necessary to configure the Arduino IDE for the ESP32 as covered in the above you-tube tutorial links. Load and run the demonstration. For the sensorCAM, you will require new files in a directory such as Arduino/sensorCAM as shown below. Create and edit configCAM.h from the example. The ESP32-CAM uses the “Al Thinker ESP32-CAM” found under Tools:Board:ESP32 (select Tools&gt; Board: ESP32:“ESP32 Wrover Module" for WROVER-CAM). Select Partition Scheme: Huge APP. Check the correct Port is selected, compile sensorCAM.ino, and upload to the CAM before opening the Arduino monitor.</p>
-<p><img alt="Arduino IDE Files" src="../../../_static/images/ex-sensorcam/arduino-ide-files.png" /></p>
-<p>The ESP32-CAM can take rgb565 frames at 13/second. However it is a 3 step process; image sensing, processing and storing. It will then take further cycles to assess the state of the 80 virtual sensors in the frame(another two cycles)A total of 5 cycles places a significant limit on the sensorCAM speed of response time(up to 0.5 seconds at 10 frames/second). A fast HO loco can travel 160mm@100kph, so this latency might need to be accommodated in planning virtual sensor locations.</p>
+<p>To run the sensorCAM.ino, it will be necessary to configure the Arduino IDE for the ESP32 as covered in the above you-tube tutorial links. Load and run the demonstration. For the sensorCAM, you will require new files as described in the sensorCAM installation Guide. </p>
+<p>The ESP32-CAM can take rgb565 frames at 13/second. However it is a 3 step process; image sensing, processing and storing. It will then take further cycles to assess the state of the 80 virtual sensors in the frame(another two cycles) A total of 5 cycles places a significant limit on the sensorCAM speed of response time (up to 0.5 seconds at 10 frames/second). A fast HO loco can travel 160mm @ 100kph, so this latency might need to be accommodated in planning virtual sensor locations.</p>
 <h2 id="3-physical-installation">3. Physical Installation<a class="headerlink" href="#3-physical-installation" title="Permanent link">&para;</a></h2>
-<p>For testing purposes you will need a computer with a spare USB port and the Arduino IDE software installed. The PROCESSING 4 software is also advisable as it gives a more reliable and convenient image for setup. A long powered USB cable(5m?) may be an advantage as the sensorCAM may be some distance from the PC. For a final installation the sensorCAM would be connected via a cat5/6 cable carrying power and a differential i2c bus(of up to 30m) to a microcontroller, Command Station or similar. Some different practical solutions are explored in Appendix F.</p>
+<p>For testing purposes you will need a computer with a spare USB port and the Arduino IDE software installed. The PROCESSING 4 software is also advisable as it gives a more reliable and convenient image for setup. A long powered USB cable (5m?) may be an advantage as the sensorCAM may be some distance from the PC. For a final installation the sensorCAM would be connected via a cat5/6 cable carrying power and a differential i2c bus (of up to 30m) to a Command Station or similar. Some different practical wiring solutions are explored in Appendix F.</p>
 <p>For a test hookup between a USB powered sensorCAM and a Command Station(mega) with a short existing i2c bus,provided the total length is under say 3 meters, a simple, cheap arrangement could be tried using a PCA9515A buffer and level shifter. It requires soldering 5 wires to the underside of the MB USB interface. This improvisation is not an ideal“universal” arrangement. The PCA9515A is mounted on 1/16” thick double-sided adhesive foam mounting tape. The CAM on i2c bus is best used theoretically with the USB computer running on battery power alone(unplugged) to absolutely avoid ground loops and associated electrical noise, but will probably function OK anyway.</p>
 <p><img alt="ESP32 CAM with PCA9515A and LTC4311" src="../../../_static/images/ex-sensorcam/esp32-cam-pca9515a-ltc4311.png" /></p>
 <p><strong>Figure 3 &nbsp; CAM with 3.3 to 5V i2c interface and optional LTC4311 “terminator” for greater reach</strong></p>
-<p>The sensorCAM is preferably placed above and square-on to a section of layout at a height of 1 to 1.8m above the surface. 1.2m gives a max. coverage of approximately 1.2x0.9m with the standard lens. Tilting the CAM by up to 30 egrees can increase the layout coverage by up to 50%. Another arrangement with several advantages is to place the CAM near the surface so as to view the surface via some good mirror tiles placed on the ceiling, positioned to ensure coverage of the desired sensor locations. This may increase coverage, especially if multiple mirrors are at slight angles. The mirror arrangement with benchtop level mount allows for wider coverage with low ceilings, and also places the CAM in a more accessible spot for wiring and maintenance. Mirror tiles do not need to be perfectly flat, some image distortion is acceptable, but they must be stable. Oblique camera angles may also be used to advantage, but sensor location and tripping point may be compromised somewhat.</p>
-<p>Lighting is critical for reliable operation. Theoretically, the lighting should be steady. Both LED flood and Fluorescent lighting might degrade results due to the flickering levels of illumination at 100/120 Hz. Use quality LED lights. The light fittings should not be visible in the camera's field of view. A uniform level of lighting is the objective, with a minimum influence from fluctuating daylight, fans and cloud shadows through windows. Some experimentation may be needed to avoid local “glare”. Images may show white test panels to have several drifting horizontal dull bands produced between cycles of the mains supply (Figure 4). Bright lighting is desirable (good quality LEDS) to enhance colour differentiation. Check your lighting for flicker by taking a “slo-mo” test video on a cell phone. Fluoro's are bad!</p>
-<p>The mount needs to be rigid to avoid vibration which can trip sensors due to small image movements. It also needs to have a suitable route for a (cat5) cable for its own power supply and the necessary i2c communications. The length of this cable needs to be considered if the railway's i2c network is otherwise long. The prototype CAM has been fitted with i2c buffers and used on a 20m buffered 5 Volt i2c Cat5 bus, but the quick connection above (using PCA9515A) is for short lengths only (i2c under 3m). Up to 7m may be achieved using 2k pull-up resistance and one LTC4311 “terminator” to enhance signal rise time.  A very good alternative for longer cables is the Sparkfun differential Endpoint system.</p>
-<p>Most reliable results may be obtained with light grey coloured ballast and darker sleepers. If results are inadequate,light green (grass?) or yellow "reflectors" between the rails may relieve any problem (recommended in fiddle yards). If lighting throws shadows beside rolling stock, the shadows may be used advantageously by good sensor placement.</p>
-<p>For initial configuration, access to the sensorCAM's USB port is important. Loading computer code over a long USB cable is problematic, but monitoring and tweaking settings may be done with a reduced BAUD rate or a (5m?) buffered USB cable at 115200 BAUD. A benchtop mounting with mirror might help here.</p>
-<p>With regards lighting, fluoroescent or LED lighting normally flickers at twice mains frequency so it pulses at 100 or 120Hz. This is normally tolerable, but it can be seen in a sensorCAM image on a uniformly white test panel as below (Figure 5). In 100mSec there could be up to 10 bands in one image. SensorCAM needs to synchronise with the mains frequency, but if it fails the faint bands will drift across the sensors and potentially trip them in the worst case scenario. Set the threshold high enough to avoid such trips or (better) change lighting. Figure 4 shows an example of bad 100Hz banding.</p>
+<p>The sensorCAM is preferably placed above and square-on to a section of layout at a height of 1 to 1.8m above the surface. 1.2m gives a max. coverage of approximately 1.2x0.9m with the standard lens. Tilting the CAM by up to 30 degrees can increase the layout coverage by up to 50%. Another arrangement with several advantages is to place the CAM near the surface so as to view the surface via some good mirror tiles placed on the ceiling, positioned to ensure coverage of the desired sensor locations. This may increase coverage, especially if multiple mirrors are at slight angles. The mirror arrangement with benchtop level mount allows for wider coverage with low ceilings, and also places the CAM in a more accessible spot for wiring and maintenance. Mirror tiles do not need to be perfectly flat, some image distortion is acceptable, but they must be stable. Oblique camera angles may also be used to advantage, but sensor location and tripping point may be compromised somewhat.</p>
+<p>Lighting is critical for reliable operation. The lighting should be steady. Both LED flood and Fluorescent lighting might degrade results due to the flickering levels of illumination at 100/120 Hz. Use quality LED lights. The light fittings should not be visible in the camera's field of view. A uniform level of lighting is the objective, with a minimum influence from fluctuating daylight, fans and cloud shadows through windows. Some experimentation may be needed to avoid local “glare”.  Images may show white test panels to have several drifting horizontal dull bands produced between cycles of the mains supply (Figure 4). Bright lighting is desirable (good quality LEDS) to enhance colour differentiation. Check your lighting for flicker by taking a “slo-mo” test video on a cell phone. Fluoro's are bad!</p>
+<p>The mount needs to be rigid to avoid vibration which can trip sensors due to small image movements. It also needs to have a suitable route for a (cat5) cable for its own power supply and the necessary i2c communications. The length of this cable needs to be considered if the railway's i2c network is otherwise long. The quick connection above (using PCA9515A) is for short lengths only (i2c under 3m). Up to 7m may be achieved using 2k pull-up resistance and one LTC4311 “terminator” to enhance signal rise time.  The recommended alternative for longer cables is the Sparkfun differential Endpoint system.  Power needs to be regulated near the remote sensorCAM if not using a short USB cable.</p>
+<p>Most reliable results may be obtained with light grey coloured ballast and darker sleepers. If results are inadequate, light green (grass?) or yellow "reflectors" between the rails may relieve any problem (recommended in fiddle yards). If lighting throws shadows beside senssed rolling stock, the shadows may be used advantageously by good sensor placement.</p>
+<p>For initial configuration, access to the sensorCAM's USB port is important. Loading computer code over a long USB cable is problematic, but monitoring and tweaking settings may be done with a reduced BAUD rate or a (5m?) buffered USB cable at 115200 BAUD.</p>
+<p>With regards lighting, fluoroescent or LED lighting normally flickers at twice mains frequency so it pulses at 100 or 120Hz. Tolerable to humans, but it can be seen in a sensorCAM image on a uniformly white test panel as below (Figure 5). In 100mSec there could be up to 10 bands in one image. SensorCAM needs to synchronise with the mains frequency, but if it fails the faint bands will drift across the sensors and potentially trip them in the worst case scenario. Set the threshold high enough to avoid such trips or (better) change lighting. Figure 4 shows an example of bad 100Hz banding.</p>
 <p><img alt="Test Image with Light Banding" src="../../../_static/images/ex-sensorcam/test-image-light-banding.png" /></p>
 <p><strong>Figure 4 &nbsp; Test image showing fluorescent or LED light banding</strong></p>
 <h2 id="4-notation-help-commands">4. Notation\&amp; Help commands<a class="headerlink" href="#4-notation-help-commands" title="Permanent link">&para;</a></h2>
 <h3 id="41-notation">4.1 Notation<a class="headerlink" href="#41-notation" title="Permanent link">&para;</a></h3>
 <p>The notation used in the reference material uses symbols according to the following convention:</p>
-<p>%&nbsp; &nbsp; &nbsp; used to designate a digit as part of a bank/sensor designator in bsNo style. i.e. 0/2, b/s or %/% or %%<br />
-# &nbsp; &nbsp; &nbsp; used to designate a digit as part of a decimal number as in ### for a 3 digit decimal number.<br />
-$ &nbsp; &nbsp; &nbsp; used to designate a single alphanumeric character(0-9 or A-Z) depending on context.<br />
-S &nbsp; &nbsp; &nbsp; Capital S may be used to refer to a specific sensor such as S02 for example. Designation format: S\%%<br />
-[ ] &nbsp; &nbsp;&nbsp; Square brackets may be used to indicate optional command arguments(don't include[] in command).</p>
+<p><strong>%</strong>&nbsp; &nbsp; &nbsp; used to designate a digit as part of a bank/sensor designator in bsNo style. i.e. 0/2, b/s or %/% or %%<br />
+<strong>#</strong> &nbsp; &nbsp; &nbsp; used to designate a digit as part of a decimal number as in ### for a 3 digit decimal number.<br />
+<strong>$</strong> &nbsp; &nbsp; &nbsp; used to designate a single alphanumeric character(0-9 or A-Z) depending on context.<br />
+<strong>S</strong> &nbsp; &nbsp; &nbsp; Capital S may be used to refer to a specific sensor such as S02 for example. Designation format: S\%%<br />
+<strong>[ ]</strong> &nbsp; &nbsp;&nbsp; Square brackets may be used to indicate optional command arguments(don't include[] in command).</p>
 <p>Sensor "bsNo." number consists of two digits preferably written separated by a '/' as in 1/2 but in commands this is reduced to 12 as in command <strong>i12</strong>. Command 'i' has the form <strong>i%%</strong> indicating it requires a 2-digit bsNo. As 49 is an invalid bsNo.(s range is 0-7), i49 is invalid. Some commands require a DECIMAL number and are expressed as having form <strong>t##</strong> for example. <strong>t49</strong> is therefore a valid command. The 'm' command takes the form <strong>m$,##</strong> requiring a single digit and a 2-digit decimal number. For more details on commands see <strong>APPENDIX A</strong>.</p>
-<p>Where bsNo.'s are printed, they can take several equivalent forms depending on context. Where possible they are printed as %/% e.g. 2/3. However an equivalent form is 023. Any printed sensor number starting with a '0' can be treated as equivalent to the '/' form so 023 == 2/3 == bank 2 sensor 3. The 0%% form is in fact the "OCTAL" format of bsNo. (Note: OCTAL for 8/7 is 0107 &amp; 9/5 = 0115. Keeping usage to banks ranging from 0 to 7 avoids any confusion).</p>
+<p>Where bsNo.'s are printed, they can take several equivalent forms depending on context. Where possible they are printed as %/% e.g. 2/3. However an equivalent form is 023. Any printed sensor number starting with a '0' can be treated as equivalent to the '/' form so 023 == 2/3 == bank 2 sensor 3. The 0%% form is in fact the "OCTAL" format of bsNo. (Note: 087 and 097 are invalid. Keeping usage to banks ranging from 0 to 7 avoids any confusion).</p>
 <p>Some diagnostic output (e.g. <strong>f%%</strong>) may resort to another numbering system  (i.e.HEXADECIMAL) for compactness, but for normal usage this notation can generally be avoided. Just be aware of the context in which numbers are being used.</p>
 <p>Where words are in <em>italics</em>, these are the actual names used in the C++ programs for sensorCAM. Consequently they may seem cryptic, but their function is hopefully clear. </p>
 <h3 id="42-help-commands">4.2 Help commands<a class="headerlink" href="#42-help-commands" title="Permanent link">&para;</a></h3>
 <p>As the sensorCAM is still under development, the sketch still has numerous debugging options and a couple may be useful in understanding and optimizing the device. The help command has the form'h#' where the digit# turns ON a debug output. The following h# output options might be useful, particularly h7, i.e. a triggered wait(w):</p>
-<p>h &nbsp; &nbsp; &nbsp; &nbsp; shows current settings for help, maxSensors and brightSF</p>
-<p>h%% &nbsp; sets maxSensors to%% for%% from 10 to 97(m0,%% is better alternative)</p>
-<p>h- &nbsp; &nbsp; &nbsp; turns OFF all debug options. h-# turns off individual debug values(5-9 only).</p>
+<p><strong>h</strong> &nbsp; &nbsp; &nbsp; &nbsp; shows current settings for help, <em>maxSensors</em> and <em>brightSF</em></p>
+<p><strong>h%%</strong> &nbsp; sets <em>maxSensors</em> to%% for%% from 10 to 97(m0,%% is better alternative)</p>
+<p><strong>h-</strong> &nbsp; &nbsp; &nbsp; turns OFF all debug options. h-# turns off individual debug values(5-9 only).</p>
 <p><strong>h7[,#] &nbsp; causes the program to suspend any new data streaming upon any trip of the bank 1 sensors, allowing inspection of sensor data by using commands like f%%, &amp; , etc. &nbsp; h7,# changes default(1) to bank #</strong></p>
-<p>h8 &nbsp; &nbsp; &nbsp; This causes up to 30 i2c commands from CS to be echoed to the wait screen e.g. EOE#E7E2E2E2E4E4E4 E6 is not echoed because of its 50/sec frequency the pattern would be E4E6E6E6E6E4E6E6...</p>
 <h2 id="5-configuration">5. Configuration<a class="headerlink" href="#5-configuration" title="Permanent link">&para;</a></h2>
 <h3 id="51-plan-a-grand-sensor-numbering-strategy">5.1 Plan a grand sensor numbering strategy<a class="headerlink" href="#51-plan-a-grand-sensor-numbering-strategy" title="Permanent link">&para;</a></h3>
 <p>The first step is to decide a sensor distribution strategy &amp; numbering strategy. A sensorCAM has 10 banks (0-9) of eight (0-7) individual sensors available (total 80). Each <strong>bank</strong> can be tested as a whole to see if ANY sensors tripped or NO sensors tripped. Also placing a string of sensors in a row, for example along a platform, can indicate train position with the binary bank value increasing as the train approaches a signal as it crosses sensors 0 through 7. (see <strong>Figure 5</strong> for examples) Sensors are generally referred to with a two digit bank/sensor designation (their bsNo.) e.g Sensor 68 and 69 are therefore invalid bs numbers, 97 is valid. Use one bank for a platform (set of 8 sensors). Sensor S00 is reserved as a brightness reference sensor. Sensor S06 is also RESERVED for now. It is suggested that user's Sensors start with bank 1, i.e. S10, S11 &amp; upwards, with related sensors in their own bank. They do NOT need to be sequential (Follow the installation Guide for full details). <strong>With the recommended definitions set up, the user does not need to remember or refer to vPins for sensorCAM sensors at all - just use the S%% idntifier.</strong></p>
@@ -8069,7 +8065,7 @@ Note: WROVER-CAM does not have a fitted external antenna socket like the ESP32-C
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="December 11, 2025 09:56:32 UTC">December 11, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="December 12, 2025 00:10:17 UTC">December 12, 2025</span>
   </span>
 
     
