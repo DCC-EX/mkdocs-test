@@ -1,5 +1,17 @@
 # I2C – An Introduction
 
+## What is I2C?
+
+If you want the nitty gritty of what I2C is, you can refer to the [Wikipedia article](https://en.wikipedia.org/wiki/I%C2%B2C), which covers more detail than we will here.
+
+To keep it simple and in the context of DCC-EX, I2C is a bus that allows multiple accessories or peripherals to be connected to your Command Station, utilising two signal lines/connections and a common ground connection. While power can be provided by your Command Station, it is recommended to have your accessories powered separately.
+
+Each I2C device must have a unique address in order to be detected and configured by the software.
+
+You will typically see these addresses in hexadecimal format, for example ``0x40``.
+
+## How does it help?
+
 Model trains come alive when we add points (turnouts), signals, sensors, lights, sounds and more. DCC-EX comes ready-equipped with the capability to add many such devices. In the hands of users experienced in electronics, DCC-EX can support hundreds of such devices using a connection system called I2C “I Squared C” which is built-into your Command Station. While I2C is very powerful, it is not a consumer plug and play set up. If you have not used it before and are not experienced in electronics, you will need to teach yourself some new skills – which can be fun and which also creates its own challenges.
 
 To help Conductors to get up the learning curve, we have 3 proven and essential building blocks that will get you there as smoothly as possible. We ask new users to closely follow all 3 of these, as otherwise our volunteer support teams get overwhelmed with support requests as the success of the DCC-EX venture grows.
