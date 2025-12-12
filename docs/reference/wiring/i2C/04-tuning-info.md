@@ -1,7 +1,8 @@
 
-# A Tinkerer's guide to tuning a standard mode (100kHz) i2c bus:
+# Tuning an I2C Bus for the Engineer
 
 ## Guiding Principles
+
 1. **The two signal lines (SCL & SDA) EACH require a resistor to pull them to a logic high voltage and a device output pin to pull them low.**  
   All devices on an i2c bus segment should use the same voltage level. (exception: passive level-shifers)  
   i.e. 5V (or 3.3V) supply voltage to all pull-up resistors (typically 10k ohms each).

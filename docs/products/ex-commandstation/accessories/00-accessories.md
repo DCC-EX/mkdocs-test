@@ -2,11 +2,11 @@
 
 Once you go beyond just wanting to run trains, and want to control turnouts, signals, and potentially automate other various parts of your layout, you will need to know how to connect accessories to your Command Station.
 
-This includes our other products such as EX-FastClock, EX-IOExpander, and EX-Turntable.
+This includes our other products such as EX-FastClock, EX-IOExpander, EX-SensorCAM, and EX-Turntable.
 
 ## Accessory Types
 
-There are generally three ways accessories can be controlled by your Command Station:
+There are generally three ways accessories can be connected to and controlled by your Command Station:
 
 - I2C
 - Serial
@@ -20,11 +20,13 @@ When purchasing DCC accessories, you will have received a user manual for these,
 
 ## Voltage Differences
 
-It is essential to be aware that hardware devices may operate at different voltage levels, meaning simply connecting an accessory to your Command Station may lead to damage or incorrect operation should this situation occur.
+!!! danger
 
-The most common issue is connecting an accessory designed for 5V operation to a Command Station that operates at 3.3V, such as our EX-CSB1. This will cause damage!
+    It is essential to be aware that hardware devices may operate at different voltage levels, meaning simply connecting an accessory to your Command Station may lead to damage or incorrect operation should this situation occur.
 
-This voltage issue applies to both I2C and Serial connections.
+    This applies to any peripheral device connected directly to your Command Station via either serial or I2C interfaces.
+
+    The most common issue is connecting an accessory designed for 5V operation to a Command Station that operates at 3.3V, such as our EX-CSB1. This will cause damage!
 
 ## What is I2C?
 
