@@ -44,9 +44,9 @@ The sensorCAM takes 10 frames per second in RGB565 format at QVGA resolution of 
 
 ![ESP32 CAM with MB](/_static/images/ex-sensorcam/esp32-cam-with-mb.png)
 
-2PCS ESP32-CAM-MB, ESP32-CAM Board, ESP32-CAM-MB Micro USB to Serial Port CH-340G with OV2640 2MP Camera Module 4MB PSRAM
+2PCS ESP32-CAM-MB, ESP32-CAM Board, Micro USB to Serial Port CH-340G with OV2640 2MP Camera Module 4MB PSRAM
 
-![ESP32 Wrover CAM Photo](/_static/images/ex-sensorcam/esp32-wrover-cam-photo.png)
+![ESP32 Wrover CAM](/_static/images/ex-sensorcam/esp32-wrover-cam.png)
 
 **Note:** While this manual primarily talks about the ESP32-CAM-MB, there is a similar tested alternative in the newer **ESP32 WROVER-CAM** single board option. For some further preliminary details refer to Section 7 Wiring, Figure 6.  THe software is identical for both CAMs.
 
@@ -104,7 +104,7 @@ The ESP32-CAM can take rgb565 frames at 13/second. However it is a 3 step proces
 
 For testing purposes you will need a computer with a spare USB port and the Arduino IDE software installed. The PROCESSING 4 software is also advisable as it gives a more reliable and convenient image for setup. A long powered USB cable (5m?) may be an advantage as the sensorCAM may be some distance from the PC. For a final installation the sensorCAM would be connected via a cat5/6 cable carrying power and a differential i2c bus (of up to 30m) to a Command Station or similar. Some different practical wiring solutions are explored in Appendix F.
 
-For a test hookup between a USB powered sensorCAM and a Command Station(mega) with a short existing i2c bus, provided the total length is under say 3 meters, a simple, cheap arrangement could be tried using a PCA9515A as buffer and level shifter if needed. The CAM on i2c bus is best used theoretically with the USB computer running on battery power alone (unplugged) to absolutely avoid ground loops and associated electrical noise, but will probably function OK anyway.
+For a test hookup between a USB powered sensorCAM and a Command Station(mega) with a short existing i2c bus, provided the total length is under say 3 meters, a simple, cheap arrangement could be tried using a PCA9515A as both buffer and level shifter if needed. The CAM on i2c bus is best used theoretically with the USB computer running on battery power alone (unplugged) to absolutely avoid ground loops and associated electrical noise, but will probably function OK anyway.
 
 ![ESP32 CAM with PCA9515A and LTC4311](/_static/images/ex-sensorcam/esp32-cam-pca9515a-ltc4311.png)
 
@@ -288,8 +288,6 @@ The ESP32-CAM reset button, remotely mounted on CAM, may be difficult to access.
 **Note:** Care is needed as the WROVER CAM has 40 pins (not 38) but the spare end Gnd and Vcc can remain disconnected (cut off?).
 
 ![ESP32 Wrover CAM with Sparkfun Endpoint](/_static/images/ex-sensorcam/esp32-wrover-sparkfun-endpoint.png)
-
-![ESP32 Wrover CAM with PCA9515A](/_static/images/ex-sensorcam/esp32-wrover-pca9515a.png)
 
 **Figure 6 &nbsp; ESP32 WROVER-CAM& interface**
 
@@ -552,35 +550,35 @@ vPin is the base/first vPin number (e.g. 700) + DEC(bsn)number in the conversion
 
 ## APPENDIX F
 
-### Hardware Interface Notes (including PCA9515A& Sparkfun Endpoints)
+### Hardware Interface Notes (including PCA9515A & Sparkfun Endpoints)
 
-> **Note:** This Appendix focuses on the **ESP32-CAM-MB** implementation, but as an alternative, consider the newer ESP32 WROVER-CAM and breakout board, as mentioned in **Section 7**, **Figure 6** for a simpler implementation.
+> **Note:** This Appendix originally focused on the **ESP32-CAM-MB** implementation, but for that information now refer to the full sensorCAM Manual.
+> The in information below pertains mostly to the newer WROVER-CAM, as mentioned in **Section 7**, **Figure 6** for a simpler implementation.
 
-The ESP32 CAM drives GPIO pins with 3.3V logic. This may well be incompatible with the master l2C signals at 5V. It is essential that appropriate voltage level shifting and buffering is used where necessary. Unbuffered I2C is limited in range but a cheap P82B715 bus extender gives up to 30m of I2C capability. A Sparkfun differential i2c driver/endpoint may also be used to achieve long lengths and voltage shifting (3.5v to 5v) if needed. The prototype Sensor CAM was mounted on a “perf” board that holds two bank trip LEDs, power LED, I2C buffer, a number of required pull-up resistors, capacitors and a voltage regulator so that it can operate and be powered over a single 5m CAT5 cable for greater convenience. A 3m USB connection need only be used for setup and diagnosis. The prototype board plugs into the socket of ESP32-CAM-MB USB adaptor (with 5V pin cut off) but can also use other FTDI interfaces.
+The ESP32 CAM drives GPIO pins with 3.3V logic. This may well be incompatible with the master l2C signals at 5V. It is essential that appropriate voltage level shifting and buffering is used where necessary. Unbuffered I2C is limited in range but a Sparkfun differential i2c driver/endpoint may also be used to achieve long lengths and voltage shifting (3.5v to 5v) if needed. 
 
-The CAM prototype can be Reset remotely by software or by cycling the power supply. It can be placed in program mode by a logic signal (GPIO0) over the CAT5 cable if needed, and similarly placed in WebServer mode (GPIO14) or Sensor mode remotely independent of I2C master. The GPIO0 & 14 pins may be isolated from CAT5 cable with MOSFETS. The CAM MUST be rigidly mounted as it's response to any image vibration can trip sensors. It is best not moved after sensor location programming as precise realignment could be tedious. It is, however, advisable to make guides or jig arrangement to at least be able to remove (for maintenance) and return with minimal misalignment to cover the same field of view. The LED method of placing/positioning sensors may be necessary if a long USB cable is impractical. A 5m buffered USB cable might be advantageous. Even so,programming or imaging over a long USB cable may not be satisfactory.
+The sensorCAM can be Reset remotely by software or by cycling the power supply. The CAM MUST be rigidly mounted as it's response to any image vibration can trip sensors. It is best not moved after sensor location programming as precise realignment could be tedious. It is, however, advisable to make guides or jig arrangement to at least be able to remove (for maintenance) and return with minimal misalignment to cover the same field of view. The LED method of placing/positioning sensors may be necessary if a long USB cable is impractical. A 5m buffered USB cable might be advantageous. Even so, programming or imaging over a long USB cable may not be satisfactory.
 
-One PCA9515A based module offers a simpler, but limited, interface to an i2c bus the use of will act as a level changer (3.3V to 5V) and can connect to a SHORT i2c bus (max 3m). You may use 2mm foam adhesive tape to mount a PCA9515A on the back of an ESP32-CAM-MB and solder on the 5 jumper wires directly as shown below.If the i2c length is near or just over the limit, an optional LTC4311 extender can be attached to boost the signal. As shown, this option relies on 5V USB power so needs a dedicated (permanent) USB cable connection.  A local 5v buck converter can be added beside the CAM for a better supply. You can also extend a cable between the PCA9515 buffer and CAM (2m).
+The PCA9515A based module offers a simpler, but limited, interface to an i2c bus the use of will act as a level changer (3.3V to 5V) and can connect to a SHORT i2c bus (max 2-3m). If the i2c length is near or just over the limit, an optional LTC4311 extender can be attached to boost the signal. As indicated, this option relies on 5V USB power so needs a dedicated (permanent) USB cable connection.  A local 5v buck converter can be used beside the CAM for a better supply.  This is included on the Wrover breakout board. You could also extend a cable between the PCA9515 buffer and CAM (1m).
 
-A programmable nLED and 330ohm resistor may be attached to the PCA9515A from 3.3V VCC to GPIO14 to aid testing.
+A programmable nLED and 330ohm resistor may be attached between 3.3V VCC to GPIO14 to aid testing.
 
-![ESP32 CAM MB with PCA9515A and LTC4311](/_static/images/ex-sensorcam/esp32-cam-mb-with-pca9515a-ltc4311.png)
 
-Alternatively, The Sparkfun endpoint is perhaps the best overall solution at this stage for driving one (or more) sensorCAMs. It provides greater lengths of cable without extending the Command Station i2c local bus. The endpoints are used in pairs, connected by a long (<100m) differential pair cat5 cable providing power and communications. It can provide buffering, level shifting and power, but care is needed at the CS end to avoid over-voltage damage. It is suggested, with a 5V CS, that the Endpoint pullup jumpers at the CS end be cut for safety. The sensorCAM Endpoint default pullups are needed for the 3.3V CAM i2c bus.The CS Endpoint requires 3.3V power(from the CS) and a separate (7 to 9V) DC supply for the Buck & CAM.
+The Sparkfun endpoint is perhaps the best overall solution at this stage for driving one (or more) sensorCAMs. It provides greater lengths of cable without extending the Command Station i2c local bus. The endpoints are used in pairs, connected by a long (<100m) differential pair cat5 cable providing power and communications. It can provide buffering, level shifting and power, but care is needed at the CS end to avoid over-voltage damage. It is suggested, with a 5V CS, that the Endpoint pullup 0-1 jumpers at the CS end be cut for safety. The sensorCAM Endpoint default pullups are needed for the 3.3V CAM i2c bus. The CS Endpoint requires 3.3V power(from the CS) and a separate (7 to 9V) DC supply for the Regulator & CAM.
 
 Typical device applications (with BUCK 5V inverters):
 
 ![Typical Mega with ESP32 CAM](/_static/images/ex-sensorcam/typical-mega-esp32-cam.png)
 
-Sparkfun endpoints(requires a matching sparkfun endpoint at CS)(CS interface option B)
+Sparkfun endpoints(requires a matching sparkfun endpoint at CS)
 
-![Typical Application with Buck Converter](/_static/images/ex-sensorcam/typical-application-buck-converter.png)
+![ESP32 Wrover CAM with Sparkfun Endpoint](/_static/images/ex-sensorcam/esp32-wrover-sparkfun-endpoint.png)
 
-(Dual optional) CAM wiring with Endpoints and 5V Buck reg. powered over GRN-GRNW(Vin) with Vin(>7V)
+Recommended CAM wiring is with Endpoints and 5V dedicated regulator with power over GRN-GRNW(Vin) (CAT 5) with Vin(7-9V) from an ungrounded 0.5A DC supply (wall-wart/plug pack).
 
-There are three basic variations below for connecting the Endpoints to the CS. The choice depends on the current system being extended. Options A & B(not recommended) apply to a 5Volt I2C bus on a 5V CS with or without existing I2C accessory connections, while Option C is the simplest connection to a 3.3Volt CS (e.g. CSB1) i2c bus.
+There are two basic variations below for connecting the Endpoints to the CS. The choice depends on the current system being extended. Options A applies to a 5V CS(Mega) with or without other existing I2C accessory connections, while Option C is the simplest connection to a 3.3Volt CS (e.g. CSB1) i2c bus.  The i2c bus should be "tuned" to include the CAM load before the CAM is attached.  The Endpoint has a pair of 4k7 pullups that may be disconnected by jumper cuts.  Refer to Tinkerers Guide to Tuning documentation on i2c.
 
-The 2x Endpoints require about  10mA  each. All options can be adapted for use with a mux if necessary. The choice between A and B depends on the power supplies available. If the CS Endpoint is to be tapped into a "remote" 5V i2c bus location, a CS 3.3V supply may not be available, only a 5V I2C supply. Option B (not recommended) removes one 10k pullup resistor pair from the bus to avoid inappropriate pull-up voltage(3.3V).
+The 2x Endpoints require about  10mA  each from the 3.3V PS. All options can be adapted for use with a mux if necessary. 
 
 **Option A:** CUT CAM endpoint jumper 0-1 and supply 5V and 3.3V from the CS. Option A connections results in a 5V i2c interface to 3.3V differential cable for 5V microprocessor based CS (e.g. Mega).
 
@@ -670,26 +668,10 @@ The breakout board USB connectors are for an optional 5V power source ONLY. No c
 
 Limit Vin barrel jack to 7-10V max to avoid destruction of the 1117C 5V regulator. (Vne= 16V)
 
-The CS endpoint shown should be powered with 3.3V from the CS end (NOT 5V), and 9V on GRNW/GRN  
-Note: WROVER-CAM does not have a fitted external antenna socket like the ESP32-CAM.
-
-![ESP32 Wrover CAM with Sparkfun Endpoint](/_static/images/ex-sensorcam/esp32-wrover-sparkfun-endpoint.png)
-
 For a limited reach, perhaps using a LTC4311 terminator/buffer at the CS to boost signal rise times and range, the cheaper PCA9515A may be used with the Wrover-CAM connected as below.  The wires from PCA9515A to the CAM can be up to 2m long (with extra pullups) using twisted pairs (cat5?).
 
 ![ESP32 Wrover CAM with PCA9515A](/_static/images/ex-sensorcam/esp32-wrover-pca9515a.png)
 
-### 3. Note on enhanced 't' command for handling/clearing pvtThresholds (version v319+):
-
-**t0,%%** will cancel a _pvtThreshold_ on S%% as always.  
-**t1,%%** will cancel ALL pvtThresholds in bank% e.g.t1,30  
-**t1,99** will cancel ALL pvtThresholds in the sensorCAM(i.e.S00 to S97)  
-**t99** will list ALL pvtThresholds in the sensorCAM by bank#(10 banks)  
-**t1** will toggle SCROLL ON/OFF as always. The'**e**' command is needed to make changes"permanent"
-
-Version v319 also accepts minSensors up to maxSensors-1  
-**m#,%%** will set maxSensors to%%. e.g. m10,30 sets maxSensors=030 (leaving min2trip unchanged as does m0,30)  
-**n#,%%** will set minSensors to%%. e.g. n10,27 sets minSensors=027 leaving nLED unchanged. n0,27 would set nLED to 0)
 
 ### ADDITIONAL RANDOM NOTES:
 
@@ -705,8 +687,3 @@ ALL FOLLOWING IMAGES ARE FOR GENERAL INFORMATION ONLY& NOT DIRECTLY REFERENCED I
 
 ![ESP32 CAM Closeup 4](/_static/images/ex-sensorcam/esp32-cam-closeup-4.png)
 
-![ESP32 Cam with Capacitor](/_static/images/ex-sensorcam/esp32-cam-with-capacitor.png)
-
-### Acceptable alt. WROVER CAM
-
-![ESP32 Wrover CAM](/_static/images/ex-sensorcam/esp32-wrover-cam.png)
