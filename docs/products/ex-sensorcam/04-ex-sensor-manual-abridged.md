@@ -475,7 +475,9 @@ In the situation where sensors may be tripping undesirably, there is a range of 
 
 **16.** In some situations, repositioning sensor slightly to include loco shadow will give extra sensitivity.
 
-**17.** Last but not least, consider repositioning CAM for better oblique view angle giving more contrast for better detection, catching sides of coaches/wagons, shadows and some trackside references.
+**17.** Consider repositioning CAM for better oblique view angle giving more contrast for better detection, catching sides of coaches/wagons, shadows and some trackside references.
+
+**18** Consider a beam break enhancement by placing an IR led between rails at the sensor position (power from DCC track?)
 
 ## APPENDIX C
 
@@ -488,7 +490,7 @@ e.g. **<Ni 2%%><Nr&nbsp;2%%>** also **<Nm 200><Nf 212><Nt 243>**
 
 ### User commands
 
-| Command | Example | Equivalent| sensorCAM command and action (some commands only return "ACK OK" to CS) |
+| Command | Example | Equivalent| sensorCAM command & action (some commands only return "ACK OK" to CS) |
 | --- | --- | --- | --- |
 | **\<N>** | \<N> | n/a | Lists current& alt. defined CAM baseVpins.    |
 | **<N \C vpin>** | <NC 600> |Set base | **CAM** vpin for following commands. <NC #> selects CAM # (1-4)     | 
@@ -504,19 +506,19 @@ e.g. **<Ni 2%%><Nr&nbsp;2%%>** also **<Nm 200><Nf 212><Nt 243>**
 | **<N i %%[ $$]** | <Ni 12> | i12,02 | **Info.** & sets new twin sensor(S$$) for "second-opinion" on S%%. | 
 | **<N j $ #>**  | <Nj B 2 | jB2 | **adJust** ov2640 parameters($)(Brightness, Contrast etc)(values 0-2 only) |
 | **<N l %%>**   | <Nl 12  | l12 | (lima) **Latch** output state of sensor bsNo to 1 & disable |
-| **<N m $ [%%]** | <Nm 3 20> | m3,20 | **Min/max** _min2trip_(1-4) frames [maxSensors] Show parameter status data |
+| **<N m $ [%%]** | <Nm 3 20> | m3,20 | **Min/max** _min2trip_(1-4) frames [_maxSensors_] Show parameter status data |
 | **<N n$ [%%]>** | <Nn 1 10> | n1,10 | set **nLED**= bank $ [and _minSensors_=%% to limit display range] $<Nn v> verifies |
 | **<N o %%>**   | <No 12> | o12 | (oscar) **Zero** output state of sensor bsNo. Reset to 0& disable. |
 | **<N p %%>**   | <Np 1>  | p1  | **Positions**(r,x) of all enabled sensors in bank are listed. |
 | **<N q #>**    | <Nq 1>   | q1  | **Query bank**# enabled states of sensors[0 indicates sensor disabled] |
 | **<N r [%%]>**  | <Nr 12> | r12 | **Refresh Reference** image for sensor S%%(bsNo)(default ALL=r00). |
 | **<N s %%>**    | <Ns 12>  | s12 | **Scan** image for brightest spot and set bsNo to center that pixel. |
-| **<N t ## [%%]>** | <N t 43 12> | t43,12 | **Threshold** displayed, sets global threshold (32-98), [sets a pvtThreshold] |
+| **<N t ## [%%]>** | <N t 43 12> | t43,12 | **Threshold** displayed, sets global threshold (32-98), [sets a _pvtThreshold_] |
 | **<N t ##>**    | <N t 10> | t10 | Tabulate ## (2-31) rows of scroll data similar to CAM scroll
 | **<N t # [%%]>** |  <Nt 1>   | t1 | Trash pvtThresholds. **<Nt 0 %%>** individually, **<Nt 1 %%>** for bank, **<Nt&nbsp;99>** trashes ALL pvtThresholds,  **<Nt&nbsp;1>** toggles scroll on/off. |
 | **<N u %%>**  | <Nu 12>  | u12 | **Undefine** and disable sensor bsNo(erase coordinates). **<Nu 99>** for ALL |
-| **<N v [#]>** | <N v 1> | v1  |  **Video** mode(0-2) invoke webCAM with v 1, or alt webCAM with v 2. **v** for **version** |
-| **<N&nbsp;w>**     | \<Nw>    | w   | **Wait**. Stop/start CAM imaging(flash), status sensing& streaming. |
+| **<N v [#]>** | <N v 1> | v1  |  **Video** mode(1-2) invoke webCAM, or alt webCAM with v 2. **v** for **version** |
+| **<N&nbsp;w>**     | \<Nw>    | w   | **Wait**. Stop/start CAM imaging (flash), status sensing & streaming. |
 | **x &nbsp; y &nbsp; z** |    |     | Reserved for binary export for Processing 4 images |
 | **<N ### ## ##>** | <N&nbsp;711&nbsp;75&nbsp;85> | a13,75,85 | Note: This uses the **vpin** for a sensor, NOT id/bsNo.(ref. **Appendix E**). |
 
