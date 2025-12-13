@@ -511,9 +511,7 @@
   
 
 
-  
-
-<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
     <a href="../../.." title="DCC-EX Model Train Control, Animation, and Automation" class="md-nav__button md-logo" aria-label="DCC-EX Model Train Control, Animation, and Automation" data-md-component="logo">
       
@@ -6684,6 +6682,158 @@
               </div>
             
             
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#outline" class="md-nav__link">
+    <span class="md-ellipsis">
+      Outline:
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-1-esp-32-cam" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 1. ESP-32 CAM
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-2-install-the-arduino-ide" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 2. Install the Arduino IDE
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-3-load-and-test-the-esp32-cam-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 3. Load and test the ESP32-CAM example
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step4-install-the-sensorcam" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step4. Install the sensorCAM
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-5-test-the-basic-sensorcam-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 5. Test the basic sensorCAM functions
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-6-load-processing-4" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 6. Load Processing 4
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-7-use-the-processing-4-app-to-replace-the-arduino-monitor" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 7. Use the Processing 4 App to replace the Arduino monitor.
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-8-create-test-sensors-and-test-detection-with-moving-targets" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 8. Create test sensors and test detection with moving targets
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-9-setup-the-cam-viewing-a-railroad-and-test-a-virtual-sensor-with-moving-rolling-stock" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 9. Setup the CAM viewing a railroad and test a virtual sensor with moving rolling stock.
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-10-optimise-parameters-for-best-performance" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 10. Optimise parameters for best performance.
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-11-connect-cam-to-an-i2c-interface-eg-pca9515a-or-better" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 11. Connect CAM to an i2c interface (e.g. PCA9515A or better)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-12-depending-on-system-integrate-sensorcam-into-command-station-using-appropriate-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 12. Depending on system, integrate sensorCAM into Command Station using appropriate code.
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#appendix-esp32-cam-pinout-reference-cam-version-v16-wrover-cam" class="md-nav__link">
+    <span class="md-ellipsis">
+      APPENDIX ESP32-CAM pinout reference (CAM version v1.6) &amp; WROVER-CAM
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
           
           
             <div class="md-content" data-md-component="content">
@@ -7036,10 +7186,12 @@ The essential files for now are shown below. Other files may be used in later in
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
+      <div class="md-progress" data-md-component="progress" role="progressbar"></div>
+    
     
     
       
-      <script id="__config" type="application/json">{"base": "../../..", "features": ["content.code.select", "content.code.copy", "content.code.annotate", "content.tooltips", "header.autohide", "navigation.footer", "navigation.tabs", "navigation.top", "navigation.tracking", "navigation.indexes", "search.highlight", "search.share", "search.suggest", "toc.follow", "toc.integrate"], "search": "../../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"base": "../../..", "features": ["content.code.select", "content.code.copy", "content.code.annotate", "content.tooltips", "header.autohide", "navigation.footer", "navigation.path", "navigation.tabs", "navigation.top", "navigation.tracking", "navigation.indexes", "navigation.instant", "navigation.instant.progress", "search.highlight", "search.share", "search.suggest", "toc.follow"], "search": "../../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
       <script src="../../../assets/javascripts/bundle.13a4f30d.min.js"></script>

@@ -511,9 +511,7 @@
   
 
 
-  
-
-<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
     <a href="../../.." title="DCC-EX Model Train Control, Animation, and Automation" class="md-nav__button md-logo" aria-label="DCC-EX Model Train Control, Animation, and Automation" data-md-component="logo">
       
@@ -7422,6 +7420,896 @@
               </div>
             
             
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#contents" class="md-nav__link">
+    <span class="md-ellipsis">
+      CONTENTS
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#appendix" class="md-nav__link">
+    <span class="md-ellipsis">
+      Appendix
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Overview
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-esp32-cam" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. ESP32-CAM
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-physical-installation" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Physical Installation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-notation-help-commands" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Notation\&amp; Help commands
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Notation\&amp; Help commands">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-notation" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.1 Notation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-help-commands" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.2 Help commands
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Configuration
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Configuration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51-plan-an-intial-sensor-numbering-strategy-bigger-picture" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.1 Plan an intial sensor numbering strategy (bigger picture)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52-preset-the-wifi-ssid-and-password" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.2 Preset the wifi SSID and password
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#53-adjust-other-configcamh-settings" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.3 Adjust other configCAM.h settings
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#54-load-sensorcam-software" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.4 Load sensorCAM software
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#55-establish-a-monitor-screen-to-sensorcam" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.5 Establish a monitor screen to sensorCAM
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#56-verify-wifi-webcam-operation" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.6 Verify wifi webCAM operation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#57-familiarise-with-sensorcam-command-set" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.7 Familiarise with sensorCAM command set.
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#58-sensor-placement" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.8 Sensor placement
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#59-sensor-status-and-save" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.9 Sensor status and save
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#510-set-a-sensor-threshold" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.10 Set a Sensor Threshold
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#511-limit-printout-to-manageable-range" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.11 Limit printout to manageable range
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#512-led-bank-trip-indicator-eprom" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.12 LED bank trip indicator &amp; EPROM
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#513-sensor-reference-image-refreshing" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.13 Sensor reference image refreshing
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#514-scrolling-data-interpretation" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.14 Scrolling data interpretation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#515-second-opinions-twin" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.15 Second opinions (Twin)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#516-other-diagnostic-commands" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.16 Other diagnostic commands
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#517-pvtthresholds-sensor-size" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.17 pvtThresholds &amp; sensor size
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-processing4-monitorconsole" class="md-nav__link">
+    <span class="md-ellipsis">
+      6 PROCESSING4 monitor/console
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6 PROCESSING4 monitor/console">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#processing4-command-summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      PROCESSING4 command summary:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#note" class="md-nav__link">
+    <span class="md-ellipsis">
+      NOTE
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-wiring-requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      7 Wiring Requirements
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-communication-and-host-operation" class="md-nav__link">
+    <span class="md-ellipsis">
+      8 Communication and Host Operation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="8 Communication and Host Operation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#81-intro" class="md-nav__link">
+    <span class="md-ellipsis">
+      8.1 Intro
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#82-dcc-ex-command-station" class="md-nav__link">
+    <span class="md-ellipsis">
+      8.2 DCC-EX Command Station
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#83-non-dcc-ex-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      8.3 Non-DCC-EX system
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#84-monitor-lighting" class="md-nav__link">
+    <span class="md-ellipsis">
+      8.4 Monitor Lighting
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-methodology-of-operation" class="md-nav__link">
+    <span class="md-ellipsis">
+      9. Methodology of operation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="9. Methodology of operation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#91-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      9.1 Overview
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#92-algorithm-description" class="md-nav__link">
+    <span class="md-ellipsis">
+      9.2 Algorithm description
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#93-program-summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      9.3 Program Summary
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#appendix-a" class="md-nav__link">
+    <span class="md-ellipsis">
+      APPENDIX A
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="APPENDIX A">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#esp32-sensorcam-command-summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      ESP32 sensorCAM Command Summary
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="ESP32 sensorCAM Command Summary">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    <span class="md-ellipsis">
+      Introduction
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#commands-below-are-received-over-the-usb-or-i2c-interfaces__" class="md-nav__link">
+    <span class="md-ellipsis">
+      Commands below are received over the USB or i2c interfaces.__
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#startup-notes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Startup Notes:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#i2c-command-notesex-cs-may-exhibit-small-variations-reduced-cmd-functionality-depending-on-driver" class="md-nav__link">
+    <span class="md-ellipsis">
+      I2C command Notes:(EX-CS may exhibit small variations&amp; reduced cmd functionality depending on driver)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#appendix-b" class="md-nav__link">
+    <span class="md-ellipsis">
+      APPENDIX B
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="APPENDIX B">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#check-list-for-optimising-sensor-response" class="md-nav__link">
+    <span class="md-ellipsis">
+      Check List for Optimising Sensor Response
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#appendix-c" class="md-nav__link">
+    <span class="md-ellipsis">
+      APPENDIX C
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="APPENDIX C">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#parsed-dcc-ex-cs-sensorcam-commands" class="md-nav__link">
+    <span class="md-ellipsis">
+      Parsed DCC EX-CS sensorCAM commands
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#user-commands" class="md-nav__link">
+    <span class="md-ellipsis">
+      User commands
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#appendix-d" class="md-nav__link">
+    <span class="md-ellipsis">
+      APPENDIX D
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="APPENDIX D">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#linear-sensor-commands" class="md-nav__link">
+    <span class="md-ellipsis">
+      Linear Sensor Commands
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#appendix-e" class="md-nav__link">
+    <span class="md-ellipsis">
+      APPENDIX E
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="APPENDIX E">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tabulation-of-recommended-dcc-ex-cs-ids-for-sensorcam" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tabulation of Recommended DCC-EX-CS ID's for sensorCAM
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#appendix-f" class="md-nav__link">
+    <span class="md-ellipsis">
+      APPENDIX F
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="APPENDIX F">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#hardware-interface-notes-including-pca9515a-sparkfun-endpoints" class="md-nav__link">
+    <span class="md-ellipsis">
+      Hardware Interface Notes (including PCA9515A&amp; Sparkfun Endpoints)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Hardware Interface Notes (including PCA9515A&amp; Sparkfun Endpoints)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-for-33v-differential-drive-5v-cs-i2c-bus" class="md-nav__link">
+    <span class="md-ellipsis">
+      A FOR 3.3V Differential drive 5V CS I2C BUS
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#b-for-33v-differential-drive-5v-cs-i2c-bus" class="md-nav__link">
+    <span class="md-ellipsis">
+      B FOR 3.3V Differential drive 5V CS I2C BUS
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#c-for-33v-differential-drive-33v-cs-i2c-bus" class="md-nav__link">
+    <span class="md-ellipsis">
+      C FOR 3.3V Differential drive 3.3V CS I2C BUS
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#appendix-g" class="md-nav__link">
+    <span class="md-ellipsis">
+      APPENDIX G
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#i2c-sensorcam-commands-protocol" class="md-nav__link">
+    <span class="md-ellipsis">
+      I2C sensorCAM commands &amp; PROTOCOL
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#appendix-h" class="md-nav__link">
+    <span class="md-ellipsis">
+      APPENDIX H
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="APPENDIX H">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#notes-on-use-of-ex-rail-with-sensorcam" class="md-nav__link">
+    <span class="md-ellipsis">
+      Notes on use of EX-RAIL with sensorCAM
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1-sensorvpin-numbering" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Sensor/vpin Numbering
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-multiple-cams" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Multiple Cams
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#appendix-i" class="md-nav__link">
+    <span class="md-ellipsis">
+      APPENDIX I
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="APPENDIX I">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configuring-ex-cs-to-connect-to-sensorcam-as-an-ex-io-device" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuring EX-CS to connect to sensorCAM as an EX-IO device.
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#file-edits-to-configure-ex-cs-for-sensorcam-refer-to-the-latest-installationguide-for-details" class="md-nav__link">
+    <span class="md-ellipsis">
+      File edits to configure EX-CS for sensorCAM: (refer to the latest InstallationGuide for details)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="File edits to configure EX-CS for sensorCAM: (refer to the latest InstallationGuide for details)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configcamh-adjust-addr-ssid-pwd-if-required-before-uploading-sensorcamino" class="md-nav__link">
+    <span class="md-ellipsis">
+      configCAM.h // adjust ADDR, SSID &amp; PWD if required before uploading sensorCAM.ino
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#commandstationcs-following-files-all-in-commandstation-exino-folderfolder" class="md-nav__link">
+    <span class="md-ellipsis">
+      CommandStation(CS) //following files all in CommandStation-EX.ino folder.folder
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="CommandStation(CS) //following files all in CommandStation-EX.ino folder.folder">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#io_exsensorcamh-driver-for-sensorcm-to-be-used-with-camparsercpp" class="md-nav__link">
+    <span class="md-ellipsis">
+      IO_EXSensorCAM.h // driver for sensorCM to be used with CamParser.cpp`
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configh-standard-should-do-for-single-cam-at-vpin-700-address-0x11" class="md-nav__link">
+    <span class="md-ellipsis">
+      config.h //standard should do for single CAM at Vpin 700&amp; address 0x11
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#myhalcpp-preferred-use-hal-in-myautomationh-as-per-installation-guide" class="md-nav__link">
+    <span class="md-ellipsis">
+      myHal.cpp //(preferred: use HAL() in myAutomation.h as per Installation Guide)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#appendix-j" class="md-nav__link">
+    <span class="md-ellipsis">
+      APPENDIX J
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="APPENDIX J">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#esp32-cam-pinout-reference-cam-version-v16" class="md-nav__link">
+    <span class="md-ellipsis">
+      ESP32-CAM pinout reference (CAM version v1.6)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1-note-on-i2c-clock-frequency" class="md-nav__link">
+    <span class="md-ellipsis">
+      1 Note on i2c clock frequency
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-notes-on-40-pin-wrover-cam-and-38-pin-breakout-board" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Notes on 40-pin WROVER CAM and 38-pin breakout board
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-note-on-enhanced-t-command-for-handlingclearing-pvtthresholds-version-v319" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Note on enhanced 't' command for handling/clearing pvtThresholds (version v319+):
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-notes-on-cs-drivers-v308-v309" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Notes on CS drivers v308&amp; v309)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#additional-random-notes" class="md-nav__link">
+    <span class="md-ellipsis">
+      ADDITIONAL RANDOM NOTES:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#esp32-cam_v16_v19_mb" class="md-nav__link">
+    <span class="md-ellipsis">
+      ESP32-CAM_V1.6_V1.9_MB
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#au2859-elk-au24593-stuks-getoonde-prijs-voor-belasting-extra-2-korting" class="md-nav__link">
+    <span class="md-ellipsis">
+      AU$28.59 Elk AU$24.59,≥3 stuks Getoonde prijs voor belasting Extra 2% korting
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#esp32-cam-cameramodulekit-24-ghz-wifi-bluetooth-8-mb-psram-ov2640-cameramodule-120-66-160-graden-850-nm-nachtzicht-2-mp" class="md-nav__link">
+    <span class="md-ellipsis">
+      ESP32 CAM Cameramodulekit 2,4 GHz WiFi Bluetooth 8 MB PSRAM OV2640 Cameramodule 120 66 160 graden 850 nm Nachtzicht 2 MP
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#acceptable-alt-wrover-cam" class="md-nav__link">
+    <span class="md-ellipsis">
+      Acceptable alt. WROVER CAM
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
           
           
             <div class="md-content" data-md-component="content">
@@ -8571,10 +9459,12 @@ $$</p>
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
+      <div class="md-progress" data-md-component="progress" role="progressbar"></div>
+    
     
     
       
-      <script id="__config" type="application/json">{"base": "../../..", "features": ["content.code.select", "content.code.copy", "content.code.annotate", "content.tooltips", "header.autohide", "navigation.footer", "navigation.tabs", "navigation.top", "navigation.tracking", "navigation.indexes", "search.highlight", "search.share", "search.suggest", "toc.follow", "toc.integrate"], "search": "../../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"base": "../../..", "features": ["content.code.select", "content.code.copy", "content.code.annotate", "content.tooltips", "header.autohide", "navigation.footer", "navigation.path", "navigation.tabs", "navigation.top", "navigation.tracking", "navigation.indexes", "navigation.instant", "navigation.instant.progress", "search.highlight", "search.share", "search.suggest", "toc.follow"], "search": "../../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
       <script src="../../../assets/javascripts/bundle.13a4f30d.min.js"></script>
