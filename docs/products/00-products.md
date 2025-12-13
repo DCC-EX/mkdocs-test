@@ -1,3 +1,8 @@
+---
+hide:
+  - toc
+---
+
 # DCC-EX Product Overview
 
 The DCC-EX team has designed and released various different open source products aimed at making model trains accessible to more people.
