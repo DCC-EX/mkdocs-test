@@ -402,13 +402,13 @@ Also able to change default setting for Brightness, Contrast & Saturation with e
 ### Startup Notes:
 
 1. Normal power up reset will initiate Sensor mode, as will the'R' command, and uses EPROM data settings.  
-2. Sensor mode startup flashes white LED at 10Hz after \~10 seconds, and exhibits a"flicker" at ~20 seconds.  
+2. Sensor mode startup flashes white LED at 10Hz after \~10 seconds, and exhibits a "flicker" at ~20 seconds.  
 3. Requested (v1) WebServer mode reset will flash LED at  ~3seconds and again (brighter) at ~8 seconds.  
-4. After the 8 second flash the Webserver will be operational at web address 192.168.0.xx (xx from display)  
-5. If the OV2640 camera or WiFi fails to initialize, the CAM resets and may restart/revert into Sensor mode!  
+4. After the 8 second flash the Webserver will be operational at web address 192.168.0.xx (xx from display).  
+5. If the OV2640 camera or WiFi fails to initialize, the CAM resets and may restart/revert into Sensor mode.  
 6. If USB FTDI/MB is removed or not connected to PC, then WebServer may fail/reboot. Power issue?  
 
-### I2C command Notes:(EX-CS may exhibit small variations& reduced cmd functionality depending on driver)
+### I2C command Notes:(EX-CS may exhibit small variations & reduced cmd functionality depending on driver)
 
 **1.** The same commands are valid from an I2C Master Arduino, but there are some variations.
 
@@ -417,12 +417,12 @@ Also able to change default setting for Brightness, Contrast & Saturation with e
 **4.** The I2C data returned(after header byte) is in binary bytes and in a format depending on the last command.  
 **5.** Header byte[0] is the ASCII command character (b,d.i,m,p,q,or t) or an error code(OxFE) if no valid data.  
 **6.** If the error code is generated, it is followed by the last received (inappropriate) command string.  
-**7.** b$ cmd returns$+1 sensor status bytes for bank$,$-1 etc. down to bank 0.'b' defaults to'b9'(all).  
-**8.** d%% cmd returns 4 data bytes with binary values for bsn, maxDiff+bright, maxDiff& bright in that order.  
+**7.** b$ cmd returns$+1 sensor status bytes for bank$,$-1 etc. down to bank 0. 'b' defaults to 'b9'(all).  
+**8.** d%% cmd returns 4 data bytes with binary values for bsn, maxDiff+bright, maxDiff \& bright in that order.  
 **9.** i%% cmd returns 2 data bytes: byte[1]= bsn and byte[2]=0 if unoccupied or 1(true) if occupied.(+ more)  
 **10.** p$ cmd returns Byte[0] header + count +3 data bytes per enabled (bank$) sensor+ parity (max 27 bytes).  
-**11.** q$ cmd returns$+1 bank sensor enabled status bytes for bank$,$-1 etc. down to bank 0.'q' defaults to'q1'  
-**12.** s%% Scan looks for a bright LED on a dimmer background. The LED should be placed on the desired sensor position. This old method of placing sensors is not recommended. The Scan command is to be deprecated.  
+**11.** q$ cmd returns$+1 bank sensor enabled status bytes for bank$,$-1 etc. down to bank 0. 'q' defaults to 'q1'  
+**12.** s%% Scan looks for a bright LED on a dimmer background. The LED should be placed on the desired sensor position. This old method of placing sensors is not recommended. The Scan command may be be deprecated.  
 **13.** t##[,%%] cmd. initially sends CS the old threshold value (i.e. BEFORE change in the case of t##). Also returns sensor scores(bpd) in 2-byte pairs with MSB set so: bsn(+0x80 if undecided) & bpd(+0x80 if OCCUPIED). Byte[0]header;[1]threshold;[2]S00bpd;[3]bsn;[4]bpd;[5]bsn;[6]bpd etc. Ends with bsn=80 (max 15 enabled)  
 **14.** m$,%% sets maxSensors to %% (USB or i2c) (as can h%% (%%<98)). m0,1%% sets minSensors. Data sent to screen is bound between min and maxSensors. Extra parameter status bytes added to i2c bus for display.  
 **15.** The ‘‘ character is just a null cmd. Used before R, d & t to prevent BCD Mega itself pre-interpreting them.  
@@ -430,7 +430,7 @@ Also able to change default setting for Brightness, Contrast & Saturation with e
 **17.** Some commands take time to complete, as command processing can only happen once per 100mSeconds (i.e. the frame rate of the CAM). The I2C master should allow for latency in response where necessary.  
 **18.** Data requested over i2c may have a parity byte appended, and a check byte in byte[31].  
 **19.** NOTE Automatic updating of ref image of unoccupied sensors now starts after last SUS (suspend) indicator.  
-**20.**  $a%%,$  rrr,xxx performs extended'create sensor' equivalent to  $k%%,$  rrr,xxx+  $a%%+$  r%% for new sensor  $%%$  
+**20.** **a%%,rrr,xxx** performs extended 'create sensor' equivalent to  **k%%,rrr,xxx + a%% + r%%** for new sensor %%  
 **21.** Connection to DCC-EX Command Station has cmd. variations. See APPENDIX C for revised command detail.
 
 ## APPENDIX B
@@ -479,7 +479,7 @@ In the situation where sensors may be tripping undesirably, there is a range of 
 
 ### Parsed DCC EX-CS sensorCAM commands
 
-The file _CamParser.cpp_ has been added to the CS specifically tailored to provide a mechanism for the CS to send commands more easily than by using the clumsy diagnostic command style **<D&nbsp;\ANOUT&nbsp;vpin&nbsp;parm1&nbsp;parm2>**. The CS Native CAM command format is **<N&nbsp;c&nbsp;[parm1]&nbsp;[parm2]>** where command character '**c**' can be any of those listed below. Generally, to effect changes in sensorCAM, the CAM must be in the run mode (flashing).
+The file _CamParser.cpp_ has been added to the CS specifically tailored to provide a mechanism for the CS to send commands more easily than by using the clumsy diagnostic command style **\<D&nbsp;\ANOUT&nbsp;vpin&nbsp;parm1&nbsp;parm2>**. The CS Native CAM command format is **\<N&nbsp;c&nbsp;[parm1]&nbsp;[parm2]>** where command character '**c**' can be any of those listed below. Generally, to effect changes in sensorCAM, the CAM must be in the run mode (flashing).
 
 The base vpin address defaults to 700 but one can use the _#define SENSORCAM_VPIN ###_ for another value (in _config.h_). With 2 to 4 CAM's, use **<N&nbsp;\C&nbsp;vpin0>** when a switch is needed. The CAM# may also be placed, if defined in _config.h_, prefixing the sensor bsNo.  
 e.g. **<Ni 2%%><Nr&nbsp;2%%>** also **<Nm 200><Nf 212><Nt 243>**
