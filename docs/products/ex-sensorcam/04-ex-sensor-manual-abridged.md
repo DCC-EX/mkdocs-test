@@ -227,7 +227,7 @@ The scrolling data dump displays “SUS” (suspend) if auto updates are off. It
 :**?-46-?** indicate an above threshold image **potentially occupied**** (waiting for *min2trip*). 
 :**oo47?T** indicates **suspected occupied** but no confirmation from Twin (see **5.15**).
 
-### 6 PROCESSING4 monitor/console
+## 6 PROCESSING4 monitor/console
 
 ![Processing4 Console with Image](/_static/images/ex-sensorcam/processing4-console-image.png)
 
