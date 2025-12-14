@@ -318,7 +318,7 @@ rev 1DEC25
 
 #### Introduction
 
-Up to 10 banks (0-9) of sensors. Each bank can have up to 8 enabled sensors (0-7). Bank/sensor (%%) up to'97'.  Array _Sensor\[n]_ holds coordinates(rx) of sensor n.  Sensors are grouped into banks(b) of sensors(s). e.g. bsNo 6/7 identifies bank 6, sensor 7.(n=8*6+7=55=067) Sensors are undefined if coordinates(rx) are set to 00. They are disabled if `_SensorActive\[n]_` is set to false.  
+Up to 10 banks (0-9) of sensors. Each bank can have up to 8 enabled sensors (0-7). Bank/sensor (%%) up to '97'.  Array _Sensor\[n]_ holds coordinates(rx) of sensor n.  Sensors are grouped into banks(b) of sensors(s). e.g. bsNo 6/7 identifies bank 6, sensor 7 (n=8*6+7=55=067). Sensors are undefined if coordinates(rx) are set to 00. They are disabled if `_SensorActive\[n]_` is set to false.  
 If a sensor detects differences, then any output LED (e.g. _pLED qLED_) assigned to the associated Bank of sensors should turn ON.  
 On reset (power-up), reference grabs are taken for all defined (in EEPROM) sensors, and then enables them.
 To define a sensor, use '**a**' command,  Processing4, or (outdated method) a bright LED on the desired spot and dim lighting with a "scan" (**s%%**). Save in EEPROM (**e**). SensorCAM uses RGB565 image format which is incompatible with JPG, so auto reboots between SensorCAM or webCAM modes occurs.
@@ -329,7 +329,7 @@ To define a sensor, use '**a**' command,  Processing4, or (outdated method) a br
 
 **b#\[,$]**&nbsp; &nbsp; **Bank** # sensors. Show which sensors OCCUPIED(in bits 7-0).(1=occ.)(**b#,$** sets _brightSF_ to $)
 
-**c$$$$**&nbsp; &nbsp; *re**Calibrate** camera CCD occasionally and grab new references for all enabled sensors(Beware of doing this while any sensors are occupied) **N.B.** Obstructed sensors will later need an **r%%**. Check all bank LEDS are off AND check all sensors are unoccupied before recalibrate. Can set AWB AEC AGC CB through $$$$ e.g. c0110  
+**c$$$$**&nbsp; &nbsp; **reCalibrate** camera CCD occasionally and grab new references for all enabled sensors(Beware of doing this while any sensors are occupied) **N.B.** Obstructed sensors will later need an **r%%**. Check all bank LEDS are off AND check all sensors are unoccupied before recalibrate. Can set AWB AEC AGC CB through $$$$ e.g. c0110  
 Also able to change default setting for Brightness, Contrast & Saturation with extra digits e.g. c$$$$012
 
 **d%%[#]**&nbsp; **\*Difference** score in colour& brightness between Ref & actual image. Show # grabs.
@@ -602,15 +602,15 @@ For any peripheral device, the vPin is needed for commands (e.g.700+5), but, if 
 
 ```c++
  e.g.  
- #define SENSORCAM_VPIN &nbsp; 700 &nbsp; &nbsp; //place in config.h or myAutomation.h or mysetup.h  
- #define CAM &nbsp; SENSORCAM_VPIN+ &nbsp; &nbsp; //in config.h or myAutomation.h or mysetup.h  
+ #define SENSORCAM_VPIN 700    //place in config.h or myAutomation.h or mysetup.h  
+ #define CAM  SENSORCAM_VPIN+  //in config.h or myAutomation.h or mysetup.h  
 
- Valid EXRAIL commands: AFTER(CAM 5)AT(SENSORCAM_VPIN+7)IFGTE(CAM 010, 2)  
+ Valid EXRAIL commands: AFTER(CAM 5)  AT(SENSORCAM_VPIN+7)  IFGTE(CAM 010, 2)  
 
- To avoid frequent“CAM” in scripts, an alias can be assigned e.g. ALIAS(ESSEX_P1, CAM+0x10)
+ To avoid frequent “CAM” in scripts, an alias can be assigned e.g. ALIAS(ESSEX_P1, CAM+0x10)
 ```
 
-With each sensorCAM having up to 80 sensors, it is desirable to test groups of (1 to 8) sensors with a single EXRAIL test using the **IFGTE()** or **IFLE()** commands. To do this, the sensors are logically arranged in “banks” of (consecutive) vpins. The logical grouping available can be written in the form “bs” or b/s where b can have bank values of 0-9 (10 banks) and s values 0-7 (8 sensors). **IFGTE** and **IFLT** read a whole bank“value”. Native CAM commands can also be issued e.g. **PARSE(“<N b 4>”)** for bank 4.
+With each sensorCAM having up to 80 sensors, it is desirable to test groups of (1 to 8) sensors with a single EXRAIL test using the **IFGTE()** or **IFLE()** commands. To do this, the sensors are logically arranged in “banks” of (consecutive) vpins. The logical grouping available can be written in the form “bs” or b/s where b can have bank values of 0-9 (10 banks) and s values 0-7 (8 sensors). **IFGTE** and **IFLT** read a whole bank "value". Native CAM commands can also be issued e.g. **PARSE("<N b 4>")** for bank 4.
 
 EXRAIL can accept “b/s” numbering (e.g. 047) if we add the leading 0. e.g. vpin= **SENSORCAM_VPIN+ 047** e.g. **IFGTE(CAM 047,1)** provided values are defined for **SENSORCAM_VPIN** & **CAM**(as above).
 
@@ -622,7 +622,7 @@ Finally, at the signal(S17), **IFGTE(CAM 013,128) STOP**
 
  Aliases could also be defined and used for station/bank or line sensors. e.g.IFGTE(TRENTHAM, 0x80)
 
-**Example 2:** The CAM can have up to 10 occupation/line detectors. If two“linear” line sensors are needed, and we have bank 1 allocated (S10-S17), the following 16 vPins could be assigned to 2 banks of linear sensors. We can use (bs#) ID of 20 to 27 for first linear sensor (bank2) and 30-37 of bank3. The Command Station can easily handle banks of 8, using an ID based format of (CAM 020) and (CAM 030). The “bank” or b/s notation requires the leading ‘0’ on the bsNo. for automatic vpin calculation. The linear segments at S21 to S27 may also be tested individually and a common bank threshold can be set if needed. e.g. **IFGTE(CAM 020,1)**...// bank occupied, or **IFGTE(CAM 024,16)** &nbsp; //2nd half occupied.
+**Example 2:** The CAM can have up to 10 occupation/line detectors. If two "linear" line sensors are needed, and we have bank 1 allocated (S10-S17), the following 16 vPins could be assigned to 2 banks of linear sensors. We can use (bs#) ID of 20 to 27 for first linear sensor (bank2) and 30-37 of bank3. The Command Station can easily handle banks of 8, using an ID based format of (CAM 020) and (CAM 030). The "bank" or b/s notation requires the leading ‘0’ on the bsNo. for automatic vpin calculation. The linear segments at S21 to S27 may also be tested individually and a common bank threshold can be set if needed. e.g. **IFGTE(CAM 020,1)**...// bank occupied, or **IFGTE(CAM 024,16)** &nbsp; //2nd half occupied.
 
 Note: With ‘0%%’ notation, unless you understand the issue, avoid using bank 8 & 9 as mistakes may arise. (08# must be expressed as 010# and 09# as 011# for correct outcome)
 
