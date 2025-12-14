@@ -224,7 +224,7 @@ If the sensor remains unoccupied, it updates the reference, compensating for slo
 
 The scrolling data dump displays “SUS” (suspend) if auto updates are off. It also displays *threshold*(T), *min2trip*(M), the bank assigned to the on-board _nLED_(N), S00 reference diff. score, as well as the S00 reference brightness(R) and its current actual brightness(A), a brightness scale factor(B) and other enabled sensors. ‘A’ is the Actual latest sum of the 48 bytes of a sensor image (max 3024) and should be between 1200 and 2500 ideally. Following a reference refresh (**r**), for an unoccupied image, the (noisy) diff. scores should be 32-37. If references are being updated, a note will appear at the right hand side of the data dump in the form of “**Ref 0%%**” to indicate that a new reference for an UNOCCUPIED sensor has occurred. This dump allows for performance monitoring during commissioning.  
 :**oo46##** indicates tripped sensor (## = **occupied**) sensor are shown by default with a central diff score.  
-:**?-46-?** indicate an above threshold image **potentially occupied**** (waiting for *min2trip*). 
+:**?-46-?** indicate an above threshold image **potentially occupied**** (waiting for *min2trip*).  
 :**oo47?T** indicates **suspected occupied** but no confirmation from Twin (see **5.15**).
 
 ## 6 PROCESSING4 monitor/console
