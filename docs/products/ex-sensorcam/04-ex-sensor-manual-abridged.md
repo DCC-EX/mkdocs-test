@@ -635,17 +635,7 @@ Multiple sensorCAMs can be easily handled if CAM2, CAM3 etc are defined along th
 
 ## APPENDIX J
 
-### ESP32-CAM pinout (v1.6) and WROVER-CAM notes.
-
-![ESP32 CAM Pinout Reference](/_static/images/ex-sensorcam/esp32-cam-pinout-reference.png)
-
-N.B. CAM v1.6 has 4x jumpers (cam side) near U0R/U0T pins & CAM v1.9 has 6x jumpers (including RST)
-
-In board version v1.9, the "GND" pin adjacent GPIO1/U0T is used for RESET(GND/R) to ESP32-CAM and MUST NOT be tied to GND or CAM will remain in RESET mode.
-
-**Identification:** ESP32-CAM v1.6 has 4x jumpers beside UOR/UOT pins and v1.9 has 6x jumpers (inc. Reset).
-
-Using v1.6 with no RTS/DTR reset, users will have to boot up holding IO0 button in to get into programming mode. MB boards are sold mostly without headers and can come with either Type-C or micro-B in either size, 1 or 2 button.
+### WROVER-CAM notes.
 
 ### 1 Note on i2c clock frequency
 
