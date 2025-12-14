@@ -554,7 +554,7 @@ vPin is the base/first vPin number (e.g. 700) + DEC(bsn)number in the conversion
 ### Hardware Interface Notes (including PCA9515A & Sparkfun Endpoints)
 
 > **Note:** This Appendix originally focused on the **ESP32-CAM-MB** implementation, but for that information now refer to the full sensorCAM Manual.
-> The in information below pertains mostly to the newer WROVER-CAM, as mentioned in **Section 7**, **Figure 6** for a simpler implementation.
+> The information below pertains mostly to the newer WROVER-CAM, as mentioned in **Section 7**, **Figure 6** for a simpler implementation.
 
 The ESP32 CAM drives GPIO pins with 3.3V logic. This may well be incompatible with the master l2C signals at 5V. It is essential that appropriate voltage level shifting and buffering is used where necessary. Unbuffered I2C is limited in range but a Sparkfun differential i2c driver/endpoint may also be used to achieve long lengths and voltage shifting (3.5v to 5v) if needed. 
 
