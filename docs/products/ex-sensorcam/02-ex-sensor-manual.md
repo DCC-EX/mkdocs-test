@@ -835,10 +835,10 @@ For any peripheral device, the vPin is needed for commands (e.g.700+5), but, if 
 
 ```c++
 > e.g.  
-> #define SENSORCAM_VPIN &nbsp; 700 &nbsp; &nbsp; //place in config.h or myAutomation.h or mysetup.h  
-> #define CAM &nbsp; SENSORCAM_VPIN+ &nbsp; &nbsp; //in config.h or myAutomation.h or mysetup.h  
+> #define SENSORCAM_VPIN 700          //place in config.h or myAutomation.h or mysetup.h  
+> #define CAM &nbsp; SENSORCAM_VPIN+  //in config.h or myAutomation.h or mysetup.h  
 >
-> Valid EXRAIL commands: AFTER(CAM 5)AT(SENSORCAM_VPIN+7)IFGTE(CAM 010, 2)  
+> Valid EXRAIL commands: AFTER(CAM 5)  AT(SENSORCAM_VPIN+7)  IFGTE(CAM 010, 2)  
 >
 > To avoid frequent“CAM” in scripts, an alias can be assigned e.g. ALIAS(ESSEX_P1, CAM+0x10)
 ```
@@ -876,13 +876,13 @@ Refer to the sensorCAM Installation Guide for more detail on the EX-CS installat
 #### configCAM.h // adjust _ADDR, SSID_ & _PWD_ if required before uploading _sensorCAM.ino_
 
 ```c++
-#define WIFI_SSID "xxxxxxxxx" &nbsp; //insert your#1 WiFi network nane here(2.5GHz)
-#define WIFI_PWD "xxxxxxxxx"        //"your network password"
-#define TWOIMAGE_MAXBS 030 &nbsp; //slower& more reliable averaging if below S30.(<097)  
-#define I2C_DEV_ADDR 0x11 &nbsp; //17==0x11 for BCD layout so can use existing Mega Master  
-#define SUPPLY 10 &nbsp; &nbsp; //local mains frequency dependent(currently just use 10)
-#define BAUD 115200 &nbsp; //any slower will degrade image transfer speed  
-#define SEN_SIZE 0  &nbsp; //0 gives standard 4x4 pixels
+#define WIFI_SSID "xxxxxxxxx"   //insert your#1 WiFi network nane here(2.5GHz)
+#define WIFI_PWD "xxxxxxxxx"   //"your network password"
+#define TWOIMAGE_MAXBS 030    //slower& more reliable averaging if below S30.(<097)  
+#define I2C_DEV_ADDR 0x11    //17==0x11 for BCD layout so can use existing Mega Master  
+#define SUPPLY 10           //local mains frequency dependent(currently just use 10)
+#define BAUD 115200        //any slower will degrade image transfer speed  
+#define SEN_SIZE 0        //0 gives standard 4x4 pixels
 ```
 
 ### CommandStation(CS)    //following files all in CommandStation-EX.ino folder.folder
