@@ -326,7 +326,7 @@ If a sensor detects differences, then any output LED (e.g. _pLED qLED_) assigned
 On reset (power-up), reference grabs are taken for all defined (in EEPROM) sensors, and then enables them.
 To define a sensor, use '**a**' command,  Processing4, or (outdated method) a bright LED on the desired spot and dim lighting with a "scan" (**s%%**). Save in EEPROM (**e**). SensorCAM uses RGB565 image format which is incompatible with JPG, so auto reboots between SensorCAM or webCAM modes occurs.
 
-#### Commands below are received over the USB or i2c interfaces.__
+#### Serial Command USB format  
 
 **a%%[, rr, xx]** **enAble** _Sensor[%%]_ & refresh _Sensor_ref[%%]_, _cRatios_ etc. 4x4 from image in latest frame. **(Note 20.)**
 
@@ -411,7 +411,8 @@ Also able to change default setting for Brightness, Contrast & Saturation with e
 5. If the OV2640 camera or WiFi fails to initialize, the CAM resets and may restart/revert into Sensor mode.  
 6. If USB FTDI/MB is removed or not connected to PC, then WebServer may fail/reboot. Power issue?  
 
-### I2C command Notes:  
+### I2C command Notes:
+
 **(EX-CS may exhibit small variations & reduced cmd functionality refer APPENDIX C)**
 
 **1.** The same commands are valid from an I2C Master Arduino, but there are some variations.  
@@ -529,7 +530,7 @@ e.g. **<Ni 2%%\> <Nr&nbsp;2%%\>** also **<Nm 200\> <Nf 212\> <Nt 243\>**
 
 ## APPENDIX E
 
-### Tabulation of Recommended DCC-EX-CS ID's for sensorCAM
+### Tabulated DCC-EX-CS ID's for sensorCAM
 
 **Table B** below shows the colour code used to identify sensors on the Processing 4 track image.  
 For example, sensor S12 has a bsNo 1/2 for which the colours are Brown/Red (seen on sensor box edges).  
@@ -551,7 +552,7 @@ vPin is the base/first vPin number (e.g. 700) + DEC(bsn)number in the conversion
 
 ## APPENDIX F
 
-### Hardware Interface Notes (including PCA9515A & Sparkfun Endpoints)
+### Hardware Interface (PCA9515A & Endpoints)
 
 > **Note:** This Appendix originally focused on the **ESP32-CAM-MB** implementation, but for that information now refer to the full sensorCAM Manual.
 > The information below pertains mostly to the newer WROVER-CAM, as mentioned in **Section 7**, **Figure 6** for a simpler implementation.
