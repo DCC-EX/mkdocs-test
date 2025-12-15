@@ -178,7 +178,7 @@ If you enable this there are some implications:
 
 On ESP32 you have the possibility to define a pin as booster input
 
-Arduino pin D2 is GPIO 26 is Booster Input on ESPDuino32
+Arduino pin D2 is GPIO 26 is Booster Input on ESPDuino-32
 
 ```cpp
 #define BOOSTER_INPUT 26
@@ -192,7 +192,7 @@ GPIO 32 is Booster Input on EX-CSB1
 
 ## ESP32 LED Wifi Indicator
 
-GPIO 2 on ESPduino32
+GPIO 2 on ESPDuino-32
 
 ```cpp
 #define WIFI_LED 2

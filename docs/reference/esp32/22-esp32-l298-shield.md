@@ -48,7 +48,7 @@
         new MotorDriver(23/*11*/, 18/*13*/, UNUSED_PIN, 12/*8*/, 34/*A3*/, 0.70, 1500, UNUSED_PIN)  
     ```
 
-&nbsp; &nbsp; &nbsp; &nbsp;![L298 WeMos R1 D32 table](/_static/images/esp32/esp32duino-l298-x1b.png){: style="width: 80%"}
+![L298 WeMos R1 D32 table](/_static/images/esp32/espduino-32-l298-x1b.png){: style="width: 80%"}
 
 ---
 
@@ -63,4 +63,4 @@
     #define MOTOR_SHIELD_TYPE L298_ACEBOTT_ESP32
     ```
 
-&nbsp; &nbsp; &nbsp; &nbsp;![L298 ACEBOTT table](/_static/images/esp32/acebott-l298-x1b.png){: style="width: 80%"}
+![L298 ACEBOTT table](/_static/images/esp32/acebott-l298-x1b.png){: style="width: 80%"}
