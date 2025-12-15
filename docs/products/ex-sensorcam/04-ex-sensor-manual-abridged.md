@@ -411,10 +411,10 @@ Also able to change default setting for Brightness, Contrast & Saturation with e
 5. If the OV2640 camera or WiFi fails to initialize, the CAM resets and may restart/revert into Sensor mode.  
 6. If USB FTDI/MB is removed or not connected to PC, then WebServer may fail/reboot. Power issue?  
 
-### I2C command Notes:(EX-CS may exhibit small variations & reduced cmd functionality depending on driver)
+### I2C command Notes:  
+**(EX-CS may exhibit small variations & reduced cmd functionality refer APPENDIX C)**
 
-**1.** The same commands are valid from an I2C Master Arduino, but there are some variations.
-
+**1.** The same commands are valid from an I2C Master Arduino, but there are some variations.  
 **2.** The commands with asterisks normally pause CAM execution so the operator can read USB output on a monitor screen. The same commands from I2C DO NOT wait for a new line, with the exception of'w'.  
 **3.** Commands b,d,i,m,p,q&t can return data to the I2C master Arduino(Mega). This data is delivered if the master calls a _Wire.requestFrom(addr,#)_; following the command, from the slave CAM address 17(0x11).  
 **4.** The I2C data returned(after header byte) is in binary bytes and in a format depending on the last command.  
