@@ -6734,34 +6734,23 @@
 
 <h1 id="wemos-d1-r32-ex8874">WeMos D1 R32 + EX8874<a class="headerlink" href="#wemos-d1-r32-ex8874" title="Permanent link">&para;</a></h1>
 <p>Refer to <a href="../../../diy/40-esp32/">Complex Build - ESP32</a> for a general overview.<br />
-The information below may help explain how to overcome some of the complexities when using the<br />
-<strong>WeMos D1 R32 ESP32</strong>.</p>
+The information below may help explain how to overcome some of the complexities when using the  </p>
 <h2 id="wifi-reliability">WiFi reliability<a class="headerlink" href="#wifi-reliability" title="Permanent link">&para;</a></h2>
 <p><img align="right" alt="WeMos R1 D32 IOREF" src="../../../_static/images/esp32/wemos-ioref-label.png" width="20%" /></p>
 <ul>
-<li>Solder a 250 to 330 ohms resistor, GPIO_0 to 3.3V, for reliable WiFi when using the WeMos D1 R32 ESP32duino.<br />
-<img alt="WeMos R1 D32 resistor" src="../../../_static/images/esp32/resistor-io0.png" width="40%" /></li>
+<li>Solder a 250 to 330 ohms resistor, GPIO_0 to 3.3V, for reliable WiFi when using the WeMos D1 R32 ESPDuino-32.
+  <img alt="WeMos R1 D32 resistor" src="../../../_static/images/esp32/resistor-io0.png" width="40%" /></li>
 </ul>
 <h2 id="ioref-voltage">IOREF voltage<a class="headerlink" href="#ioref-voltage" title="Permanent link">&para;</a></h2>
 <ul>
-<li>
-<p>Do not confuse adding the resistor to correct high voltage on GPIO_0 with the need to work around the incorrect voltage of the IOREF pin.</p>
-</li>
-<li>
-<p>From top to bottom the pins are: IO0, 5V (incorrect -- IOREF should be 3.3V -- so not Arduino UNO R3 compliant), RESET, 3.3V, 5V, GND, GND, VIN as seen here:  </p>
-</li>
+<li>Do not confuse adding the resistor to correct high voltage on GPIO_0 with the need to work around the incorrect voltage of the IOREF pin.</li>
+<li>From top to bottom the pins are: IO0, 5V (incorrect - <strong>IOREF should be 3.3V</strong> - so not Arduino Uno R3 compliant), RESET, 3.3V, 5V, GND, GND, VIN as seen here:  </li>
 </ul>
 <p><img align="right" alt="EX8874 IOREF" src="../../../_static/images/esp32/ioref-override.png" width="25%" /></p>
 <ul>
-<li>
-<p>Note that some ESP32duino boards may not have the IOREF pin location labelled.  Measure the voltage if in doubt.  </p>
-</li>
-<li>
-<p>As the IOREF pin on the WeMos D1 R32 is 5V, modify the EX8874 using the <strong>3V3 IOREF Override</strong> solder pad on the EX8874. If this is not done, the ADC inputs will receive up to 5V when the IOREF pin is 5V.</p>
-</li>
-<li>
-<p>Bend the IOREF pin or confirm that the trace connecting the pin is completely cut.  </p>
-</li>
+<li>Note that some ESPDuino-32 boards may not have the IOREF pin location labelled. Measure the voltage if in doubt.  </li>
+<li>As the IOREF pin on the WeMos D1 R32 is 5V, modify the EX8874 using the <strong>3V3 IOREF Override</strong> solder pad on the EX8874. If this is not done, the ADC inputs will receive up to 5V when the IOREF pin is 5V.</li>
+<li>Bend the IOREF pin or confirm that the trace connecting the pin is completely cut.  </li>
 </ul>
 <hr />
 <h2 id="one-ex8874">One EX8874<a class="headerlink" href="#one-ex8874" title="Permanent link">&para;</a></h2>
@@ -6784,14 +6773,14 @@ The information below may help explain how to overcome some of the complexities 
 </code></pre></div>
 <ul>
 <li>STANDARD_MOTOR_SHIELD and EX8874_SHIELD are pre-defined for use with ESP32 in MotorDrivers.h</li>
-<li>Do not edit MotorDrivers.h; a custom motor define would be added in config.h</li>
+<li><strong>Do not edit MotorDrivers.h</strong>; a custom motor define must be added in your config.h only</li>
 <li>Note how the ESP32 GPIO pin numbers are used, and the Arduino pin locations are shown/commented.</li>
 </ul>
-<p>Alternate pins A2 and A3 are required for the WeMos D1 R32 / ESP32duino.<br />
-One EX8874 motor shield would use the motor define EX8874_SHIELD, and update the solder pads to use A2 and A3.</p>
-<p>&nbsp; &nbsp; &nbsp; &nbsp;<img alt="EX8874 WeMos R1 D32 pins" src="../../../_static/images/esp32/esp32duino-ex8874-x1.png" width="70%" /></p>
-<p>When one EX8874 motor shield is used with WeMos R1 D32 ESP32duino, the alternate current sense pins are used as the A0 and A1 pin locations cannot be used as ADC input when WiFi is enabled.</p>
-<p>&nbsp; &nbsp; &nbsp; &nbsp;<img alt="EX8874 WeMos R1 D32 table" src="../../../_static/images/esp32/esp32duino-ex8874-x1b.png" width="80%" /></p>
+<p>Alternate pins A2 and A3 are required for the WeMos D1 R32 / ESPDuino-32.</p>
+<p>One EX8874 motor shield would use the motor define EX8874_SHIELD, and update the solder pads to use A2 and A3.</p>
+<p><img alt="EX8874 WeMos R1 D32 pins" src="../../../_static/images/esp32/espduino-32-ex8874-x1.png" width="70%" /></p>
+<p>When one EX8874 motor shield is used with WeMos R1 D32 ESPDuino-32, the alternate current sense pins are used as the A0 and A1 pin locations cannot be used as ADC input when WiFi is enabled.</p>
+<p><img alt="EX8874 WeMos R1 D32 table" src="../../../_static/images/esp32/espduino-32-ex8874-x1b.png" width="80%" /></p>
 <h3 id="single-ex8874-checklist">Single EX8874 Checklist<a class="headerlink" href="#single-ex8874-checklist" title="Permanent link">&para;</a></h3>
 <ul class="task-list">
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> Cover the barrel connector on WeMos R1 D32, as VIN power will be provided by EX8874</li>
@@ -6804,21 +6793,12 @@ One EX8874 motor shield would use the motor define EX8874_SHIELD, and update the
 <hr />
 <h2 id="stacked-ex8874">Stacked EX8874<a class="headerlink" href="#stacked-ex8874" title="Permanent link">&para;</a></h2>
 <ul>
-<li>
-<p>Reminder: No modifications are needed when installing EX8874 for 4 track outputs on EX-CSB1.</p>
-</li>
-<li>
-<p><strong>IOREF:</strong> The IOREF override is also needed for the top shield.</p>
-</li>
-<li>
-<p><strong>VIN:</strong> Refer to instructions on <a href="../../../products/ex-motorshield8874/00-ex-motorshield8874/#steps-to-stack">cutting the VIN trace and disabling the regulator</a> for the top shield.</p>
-</li>
-<li>
-<p>Stacking motor shields on WeMos D1 R32 ESP32duino requires a combination of solder pads and complex wiring.
-  Note the location of GPIO pins 15 and 33 (image above), where wires or right-angle header pins will need to be installed on the WeMos R1 D32 ESP32duino.</p>
-</li>
+<li><strong>IOREF:</strong> The IOREF override is also needed for the top shield.</li>
+<li><strong>VIN:</strong> Refer to instructions on <a href="../../../products/ex-motorshield8874/00-ex-motorshield8874/#steps-to-stack">cutting the VIN trace and disabling the regulator</a> for the top shield.</li>
+<li>Stacking motor shields on WeMos D1 R32 ESPDuino-32 requires a combination of solder pads and complex wiring.
+  Note the location of GPIO pins 15 and 33 (image above), where wires or right-angle header pins will need to be installed on the WeMos R1 D32 ESPDuino-32.</li>
 </ul>
-<p>&nbsp; &nbsp; &nbsp; &nbsp;<img alt="EX8874 WeMos R1 D32 table" src="../../../_static/images/esp32/esp32duino-ex8874-x2b.png" style="width: 80%" /></p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp;<img alt="EX8874 WeMos R1 D32 table" src="../../../_static/images/esp32/espduino-32-ex8874-x2b.png" style="width: 80%" /></p>
 <ul>
 <li>A custom motor define will be needed in config.h</li>
 </ul>
@@ -6862,7 +6842,7 @@ One EX8874 motor shield would use the motor define EX8874_SHIELD, and update the
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="December 11, 2025 11:12:25 UTC">December 11, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="December 15, 2025 22:58:31 UTC">December 15, 2025</span>
   </span>
 
     
