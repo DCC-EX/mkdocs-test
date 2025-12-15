@@ -321,7 +321,7 @@ rev 1DEC25
 
 #### Introduction
 
-Up to 10 banks (0-9) of sensors. Each bank can have up to 8 enabled sensors (0-7). Bank/sensor (%%) up to '97'.  Array _Sensor\[n]_ holds coordinates(rx) of sensor n.  Sensors are grouped into banks(b) of sensors(s). e.g. bsNo 6/7 identifies bank 6, sensor 7 (n=8*6+7=55=067). Sensors are undefined if coordinates(rx) are set to 00. They are disabled if `_SensorActive\[n]_` is set to false.  
+Up to 10 banks (0-9) of sensors. Each bank can have up to 8 enabled sensors (0-7). Bank/sensor (%%) up to '97'.  Array _Sensor\[n]_ holds coordinates(rx) of sensor n.  Sensors are grouped into banks(b) of sensors(s). e.g. bsNo 6/7 identifies bank 6, sensor 7 (n=8x6+7=55=067). Sensors are undefined if coordinates(rx) are set to 00. They are disabled if _SensorActive\[n\]_ is set to false.  
 If a sensor detects differences, then any output LED (e.g. _pLED qLED_) assigned to the associated Bank of sensors should turn ON.  
 On reset (power-up), reference grabs are taken for all defined (in EEPROM) sensors, and then enables them.
 To define a sensor, use '**a**' command,  Processing4, or (outdated method) a bright LED on the desired spot and dim lighting with a "scan" (**s%%**). Save in EEPROM (**e**). SensorCAM uses RGB565 image format which is incompatible with JPG, so auto reboots between SensorCAM or webCAM modes occurs.
@@ -500,7 +500,7 @@ e.g. **<Ni 2%%\> <Nr&nbsp;2%%\>** also **<Nm 200\> <Nf 212\> <Nt 243\>**
 | **<N f %%\>**   | <Nf 12\> | f12 | **Frame image** pixel data for Sensor_ref[] and sensor666[] (RGB bytes) |
 | **<N F\>**     | <NF\>    | F   | **Forced reboot**, restoring sensorCAM sensor mode& EPROM defaults |
 | **<N g\>**     | <Ng\>    | g   | **Get** status ov2640 camera module settings(on sensorCAM monitor) |
-| **<N h%%\>**    | <Nh\>    | h30 | set _maxSensors_ to limit display to below sensor S%%. Also **Help** (0-9) |
+| **<N h %%\>**    | <Nh 30\>    | h30 | set _maxSensors_ to limit display to below sensor S%%. Also **Help** (0-9) |
 | **<N i [%%]\>** | <Ni 12\> | i12 | **Information** on sensor bsNo state, position & twin (0=No twin)
 | **<N i %%[ $$]\>** | <Ni 12\> | i12,02 | **Info.** & sets new twin sensor(S$$) for "second-opinion" on S%%. | 
 | **<N j $ #\>**  | <Nj B 2\> | jB2 | **adJust** ov2640 parameters($)(Brightness, Contrast etc)(values 0-2 only) |
