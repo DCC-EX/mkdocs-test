@@ -492,7 +492,7 @@ rev 1SEP25
 
 #### Introduction
 
-Up to 10 banks (0-9) of sensors. Each bank can have up to 8 enabled sensors (0-7). Bank/sensor (%%) up to'97'.  Array _Sensor\[n]_ holds coordinates(rx) of sensor n. Offsets are _long int_. Array uses 88+320 bytes(10*8*4) EEPROM.  Sensors are grouped into banks(b) of individuals(s). e.g. bsNo 6/7 identifies bank 6, sensor 7.(n=8*6+7=55=067) Sensors are undefined if coordinates(rx) are set to 00. They are disabled if `SensorActive\[n]` is set to false.  
+Up to 10 banks (0-9) of sensors. Each bank can have up to 8 enabled sensors (0-7). Bank/sensor (%%) up to'97'.  Array _Sensor\[n]_ holds coordinates(rx) of sensor n. Offsets are _long int_. Array uses 88+320 bytes(10*8*4) EEPROM.  Sensors are grouped into banks(b) of individuals(s). e.g. bsNo 6/7 identifies bank 6, sensor 7.(n=8x6+7=55=067) Sensors are undefined if coordinates(rx) are set to 00. They are disabled if `SensorActive\[n]` is set to false.  
 If a sensor detects differences, then any output LED (_pLED qLED_) assigned to the associated Bank of sensors should turn ON.  
 On reset (power-up), reference grabs are taken for all defined (in EEPROM) sensors, and then enables them.
 To define a sensor, use'**a**' command,  Processing4, or (outdated method) a bright LED on the desired spot and dim lighting with a "scan" (**s%%**). Save in EEPROM(**e**). SensorCAM uses RGB565 image format which is incompatible with JPG, so auto reboots between SensorCAM or webCAM modes.
@@ -582,10 +582,10 @@ Also able to change default setting for Brightness, Contrast & Saturation with e
 5. If the OV2640 camera or WiFi fails to initialize, the CAM resets and may restart/revert into Sensor mode!  
 6. If USB FTDI/MB is removed or not connected to PC, then WebServer may fail/reboot. Power issue?  
 
-### I2C command Notes:(EX-CS may exhibit small variations& reduced cmd functionality depending on driver)
+### I2C command Notes:
+**(EX-CS may exhibit small variations & reduced cmd functionality. see Appendix C)**
 
-**1.** The same commands are valid from an I2C Master Arduino, but there are some variations.
-
+**1.** The same commands are valid from an I2C Master Arduino, but there are some variations.  
 **2.** The commands with asterisks normally pause CAM execution so the operator can read USB output on a monitor screen. The same commands from I2C DO NOT wait for a new line, with the exception of'w'.  
 **3.** Commands b,d,i,m,p,q&t can return data to the I2C master Arduino(Mega). This data is delivered if the master calls a Wire.requestFrom(addr,#); following the command, from the slave CAM address 17(0x11).  
 **4.** The I2C data returned(after header byte) is in binary bytes and in a format depending on the last command.  
@@ -843,7 +843,7 @@ For any peripheral device, the vPin is needed for commands (e.g.700+5), but, if 
 > To avoid frequent“CAM” in scripts, an alias can be assigned e.g. ALIAS(ESSEX_P1, CAM+0x10)
 ```
 
-With each sensorCAM having up to 80 sensors, it is desirable to test groups of (1 to 8) sensors with a single EXRAIL test using the **IFGTE()** or **IFLE()** commands. To do this, the sensors are logically arranged in “banks” of (consecutive) vpins. The logical grouping available can be written in the form “bs” or b/s where b can have bank values of 0-9 (10 banks) and s values 0-7 (8 sensors). **IFGTE** and **IFLT** read a whole bank“value”. Native CAM commands can also be issued e.g. **PARSE(“<N b 4>”)** for bank 4.
+With each sensorCAM having up to 80 sensors, it is desirable to test groups of (1 to 8) sensors with a single EXRAIL test using the **IFGTE()** or **IFLE()** commands. To do this, the sensors are logically arranged in “banks” of (consecutive) vpins. The logical grouping available can be written in the form “bs” or b/s where b can have bank values of 0-9 (10 banks) and s values 0-7 (8 sensors). **IFGTE** and **IFLT** read a whole bank "value". Native CAM commands can also be issued e.g. **PARSE(“<N b 4>”)** for bank 4.
 
 EXRAIL can accept “b/s” numbering (e.g. 047) if we add the leading 0. e.g. vpin= **SENSORCAM_VPIN+ 047** e.g. **IFGTE(CAM 047,1)** provided values are defined for **SENSORCAM_VPIN** & **CAM**(as above).
 
@@ -855,7 +855,7 @@ Finally, at the signal(S17), **IFGTE(CAM 013,128) STOP**
 
  Aliases could also be defined and used for station/bank or line sensors.e.g.IFGTE(TRENTHAM, 0x80)
 
-**Example 2:** The CAM can have up to 10 occupation/line detectors. If two“linear” line sensors are needed, and we have bank 1 allocated (S10-S17), the following 16 vPins could be assigned to 2 banks of linear sensors. We can use (bs#) ID of 20 to 27 for first linear sensor(bank2) and 30-37 of bank3. The Command Station can easily handle banks of 8, using an ID based format of (CAM 020) and (CAM 030). The“bank” or b/s notation requires the leading ‘0’ on the bsNo. for automatic vpin calculation. The linear segments at S21 to S27 may also be tested individually and a common bank threshold can be set if needed. e.g. **IFGTE(CAM 020,1)**...// bank occupied, or **IFGTE(CAM 024,16)** &nbsp; //2nd half occupied.
+**Example 2:** The CAM can have up to 10 occupation/line detectors. If two "linear" line sensors are needed, and we have bank 1 allocated (S10-S17), the following 16 vPins could be assigned to 2 banks of linear sensors. We can use (bs#) ID of 20 to 27 for first linear sensor(bank2) and 30-37 of bank3. The Command Station can easily handle banks of 8, using an ID based format of (CAM 020) and (CAM 030). The "bank" or b/s notation requires the leading '0' on the bsNo. for automatic vpin calculation. The linear segments at S21 to S27 may also be tested individually and a common bank threshold can be set if needed. e.g. **IFGTE(CAM 020,1)**...// bank occupied, or **IFGTE(CAM 024,16)** &nbsp; //2nd half occupied.
 
 Note: With ‘0%%’ notation, unless you understand the issue, avoid using bank 8 & 9 as mistakes may arise.(08# must be expressed as 010# and 09# as 011# for correct outcome)
 
@@ -876,8 +876,8 @@ Refer to the sensorCAM Installation Guide for more detail on the EX-CS installat
 #### configCAM.h // adjust _ADDR, SSID_ & _PWD_ if required before uploading _sensorCAM.ino_
 
 ```c++
-#define WIFI_SSID"xxxxxxxxx" &nbsp; //insert your#1 WiFi network nane here(2.5GHz)
-#define WIFI_PWD"xxxxxxxxx"        //"your network password"
+#define WIFI_SSID "xxxxxxxxx" &nbsp; //insert your#1 WiFi network nane here(2.5GHz)
+#define WIFI_PWD "xxxxxxxxx"        //"your network password"
 #define TWOIMAGE_MAXBS 030 &nbsp; //slower& more reliable averaging if below S30.(<097)  
 #define I2C_DEV_ADDR 0x11 &nbsp; //17==0x11 for BCD layout so can use existing Mega Master  
 #define SUPPLY 10 &nbsp; &nbsp; //local mains frequency dependent(currently just use 10)
