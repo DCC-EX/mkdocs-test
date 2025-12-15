@@ -613,7 +613,7 @@ For any peripheral device, the vPin is needed for commands (e.g.700+5), but, if 
  To avoid frequent “CAM” in scripts, an alias can be assigned e.g. ALIAS(ESSEX_P1, CAM+0x10)
 ```
 
-With each sensorCAM having up to 80 sensors, it is desirable to test groups of (1 to 8) sensors with a single EXRAIL test using the **IFGTE()** or **IFLE()** commands. To do this, the sensors are logically arranged in “banks” of (consecutive) vpins. The logical grouping available can be written in the form “bs” or b/s where b can have bank values of 0-9 (10 banks) and s values 0-7 (8 sensors). **IFGTE** and **IFLT** read a whole bank "value". Native CAM commands can also be issued e.g. **PARSE("<N b 4>")** for bank 4.
+With each sensorCAM having up to 80 sensors, it is desirable to test groups of (1 to 8) sensors with a single EXRAIL test using the **IFGTE()** or **IFLE()** commands. To do this, the sensors are logically arranged in “banks” of (consecutive) vpins. The logical grouping available can be written in the form “bs” or b/s where b can have bank values of 0-9 (10 banks) and s values 0-7 (8 sensors). **IFGTE** and **IFLT** read a whole bank "value". Native CAM commands can also be issued e.g. **PARSE("<N b 4\>")** for bank 4.
 
 EXRAIL can accept “b/s” numbering (e.g. 047) if we add the leading 0. e.g. vpin= **SENSORCAM_VPIN+ 047** e.g. **IFGTE(CAM 047,1)** provided values are defined for **SENSORCAM_VPIN** & **CAM**(as above).
 
