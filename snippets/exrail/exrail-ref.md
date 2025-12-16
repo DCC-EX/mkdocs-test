@@ -14,10 +14,10 @@ Send DCC Accessory Activate packet (gate on then off)
 
 ## AFTER(vpin,timer...)
 
-Wait for sensor activated, then decativated for given time
+Wait for sensor activated, then deactivated for given time
 
 - vpin Virtual Pin number of sensor
-- timer... optional wait in mS, default 500
+- timer... optional wait in ms, default 500
 
 ## AFTEROVERLOAD(track_id)
 
@@ -82,7 +82,7 @@ Wait for sensor active, with timeout. Use IFTIMEOUT to determine whether the AT 
 see IFTIMEOUT
 
 - vpin Sensor pin number
-- timeout_ms Millseconds to wait before timeout
+- timeout_ms Milliseconds to wait before timeout
 
 ## AUTOMATION(sequence_id,description)
 
@@ -116,8 +116,13 @@ see WITHROTTLE
 
 ## BUILD_CONSIST(loco_id)
 
+Adds a loco to follow the current loco in a consist
+
+- loco_id may be negative to indicate loco facing backwards
 
 ## BREAK_CONSIST
+
+Breaks up any consist involving the current loco
 
 
 ## CALL(sequence_id)
@@ -153,7 +158,7 @@ see THROW
 
 ## CONFIGURE_SERVO(vpin,pos1,pos2,profile)
 
-setup servo movement parameters for non-turnout
+Set up servo movement parameters for non-turnout
 
 - vpin must refer to a servo capable pin
 - pos1 SET position of servo
@@ -170,7 +175,7 @@ Define a DCC accessory signal with short address
 
 ## DCCX_SIGNAL(signal_id,redAspect,amberAspect,greenAspect)
 
-Dfeine advanced DCC accessory signal with aspects
+Define advanced DCC accessory signal with aspects
 
 - signal_id DCC Linear address AND Id used for all signal manipulation commands
 
@@ -209,8 +214,8 @@ Waits for given minutes delay (This is not blocking)
 
 Waits for random delay between min and max milliseconds (This is not blocking)
 
-- mindelay minumum delay in mS
-- maxdelay maximum delay in mS
+- mindelay minimum delay in ms
+- maxdelay maximum delay in ms
 
 ## DONE
 
@@ -269,7 +274,7 @@ obsolete.. no longer needed. Does nothing.
 
 ## EXTT_TURNTABLE(id,vpin,home,description...)
 
-This statement will create the EXΓÇæTurntable turntable/traverser object only, so you will need a separate HAL() statement for an EXΓÇæTurntable device driver.
+Defines the EXΓÇæTurntable turntable/traverser object only, so you will need a separate HAL() statement for an EXΓÇæTurntable device driver.
 
 - homeAngle  the angle of the home position, valid angles are 0 - 3600
 - quoted description...
@@ -407,7 +412,7 @@ see IF
 
 ## IFRANDOM(percent)
 
-randomly satisfield IF at given percent probability
+randomly satisfied IF at given percent probability
 
 see IF
 
@@ -421,7 +426,7 @@ see IF
 
 ## IFSTASH(stash_id)
 
-Checks if given stash entry has a non zero value
+Checks if given stash entry has a non-zero value
 
 see IF
 
@@ -477,7 +482,7 @@ see IF
 
 ## IFBITMAP_ANY(vpin,mask)
 
-Checks if vpin pseudo-analog value & mask is non zero
+Checks if vpin pseudo-analog value & mask is non-zero
 
 see IF
 
@@ -521,14 +526,14 @@ Marks current task so that FWD and REV commands are inverted.
 Defines multiple JMRI `<s>` type sensor feedback definitions each with id matching vpin and INPUT_PULLUP
 
 - vpin first vpin number
-- count... Number of consecutine VPINS for which to create JMRI sensor feedbacks. Default 1.
+- count... Number of consecutive VPINS for which to create JMRI sensor feedbacks. Default 1.
 
 ## JMRI_SENSOR_NOPULLUP(vpin,count...)
 
 Defines multiple JMRI `<s>` type sensor feedback definitions each with id matching vpin
 
 - vpin first vpin number
-- count... Number of consecutine VPINS for which to create JMRI sensor feedbacks. Default 1.
+- count... Number of consecutive VPINS for which to create JMRI sensor feedbacks. Default 1.
 
 ## JOIN
 
@@ -537,7 +542,7 @@ Switches PROG track to receive MAIN track DCC packets. (Drive on PROG track)
 
 ## KILLALL
 
-Tertminates all running EXRAIL tasks
+Terminates all running EXRAIL tasks
 
 
 ## LATCH(vpin)
@@ -566,14 +571,14 @@ see SCREEN
 
 ## MOMENTUM(accel,decel...)
 
-sets momentum in mS per DCC 127 step for curent loco.
+sets momentum in ms per DCC 127 step for current loco.
 
 - accel Acceleration momentum
-- decel... Braking momantum. (=Acceleration if not given)
+- decel... Braking momentum. (=Acceleration if not given)
 
 ## SCREEN(display,row,msg)
 
-Send message to external display hadlers
+Send message to external display handlers
 
 - display number, 0=local display, others are handled by external
 displays which may have different display numbers on different devices.
@@ -631,12 +636,12 @@ Send MERG CBUS ACOF to Adapter
 
 ## ONACON(eventid)
 
-Start task here when ACON for event receied from MERG CBUS
+Start task here when ACON for event received from MERG CBUS
 
 
 ## ONACOF(eventid)
 
-Start task here when ACOF for event receied from MERG CBUS
+Start task here when ACOF for event received from MERG CBUS
 
 
 ## ONACTIVATE(addr,subaddr)
@@ -760,14 +765,14 @@ Start task here when sensor changes HIGH to LOW.
 
 ## PAUSE
 
-Pauses all EXRAIL tasks except the curremnt one.
+Pauses all EXRAIL tasks except the current one.
 
 Other tasks ESTOP their locos until RESUME issued
 
 
 ## PIN_TURNOUT(id,vpin,description...)
 
-Defines a turnout which operates on a signle pin
+Defines a turnout which operates on a single pin
 
 - description... Quoted text (shown to throttles) or HIDDEN
 
@@ -915,9 +920,9 @@ Describes a loco roster entry visible to throttles
 
 ## ROUTE(sequence_id,description)
 
-DEfines starting point of a sequence that will appear as a route on throttle buttons.
+Defines starting point of a sequence that will appear as a route on throttle buttons.
 
-- description Quoted text, throttle button capotion.
+- description Quoted text, throttle button caption.
 
 ## ROUTE_ACTIVE(sequence_id)
 
@@ -965,7 +970,7 @@ Start a new task to drive the loco
 
 ## SEQUENCE(sequence_id)
 
-Provides a unique label than can be used to call, follow or start.
+Provides a unique label that can be used to call, follow or start.
 
 see CALL
 
@@ -1112,17 +1117,17 @@ Starts a new task at the given route/animation/sequence
 
 ## START_SHARED(sequence_id)
 
-Starts a new task at the given route/animation/sequence an share current loco with it
+Starts a new task at the given route/animation/sequence and share current loco with it
 
 
 ## START_SEND(sequence_id)
 
-Starts a new task at the given route/animation/sequence an send current loco to it. Remove loco from current task.
+Starts a new task at the given route/animation/sequence and send current loco to it. Remove loco from current task.
 
 
 ## STASH(stash_id)
 
-saves cuttent tasks loco id in the stash array
+saves current task's loco id in the stash array
 
 - stash_id  position in stash array to save loco id
 
@@ -1130,13 +1135,13 @@ saves cuttent tasks loco id in the stash array
 
 Allows for embedding raw C++ code in context of current task.
 
-- code... c++ code to be executed. This requires intimate understanding of the product acrhitecture.
+- code... c++ code to be executed. This requires intimate understanding of the product architecture.
 
 ## STEALTH_GLOBAL(code...)
 
 Allows for embedding raw c++ code out of context.
 
-- code...  c++ code to be defined. This requires intimate understanding of the product acrhitecture.
+- code...  c++ code to be defined. This requires intimate understanding of the product architecture.
 
 ## STOP
 
@@ -1173,9 +1178,9 @@ Defines a DCC accessory turnout with legacy address
 - subaddr DCC accessory subaddress
 - description... Quoted text or HIDDEN, appears on throttle buttons
 
-## TURNOUTL(tirnout_id,addr,description...)
+## TURNOUTL(turnout_id,addr,description...)
 
-Defines a DCC accessory turnout with inear address
+Defines a DCC accessory turnout with linear address
 
 see TURNOUT
 
@@ -1221,12 +1226,12 @@ Performs a bitwise AND operation on the given vpin analog value and mask.
 
 ## BITMAP_INC(vpin)
 
-Increments poesudo analog value by 1
+Increments pseudo analog value by 1
 
 
 ## BITMAP_DEC(vpin)
 
-Decrements poesudo analog value by 1  (to zero)
+Decrements pseudo analog value by 1  (to zero)
 
 
 ## BITMAP_OR(vpin1,mask)
