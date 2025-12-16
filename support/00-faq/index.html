@@ -4642,6 +4642,19 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Frequently Answered Questions
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -4653,6 +4666,52 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#controlling-and-running-trains" class="md-nav__link">
+    <span class="md-ellipsis">
+      Controlling and Running Trains
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#programming-and-reading-dcc-decoders" class="md-nav__link">
+    <span class="md-ellipsis">
+      Programming and reading DCC decoders
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#throttle-apps-and-software" class="md-nav__link">
+    <span class="md-ellipsis">
+      Throttle apps and software
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -6535,6 +6594,41 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#controlling-and-running-trains" class="md-nav__link">
+    <span class="md-ellipsis">
+      Controlling and Running Trains
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#programming-and-reading-dcc-decoders" class="md-nav__link">
+    <span class="md-ellipsis">
+      Programming and reading DCC decoders
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#throttle-apps-and-software" class="md-nav__link">
+    <span class="md-ellipsis">
+      Throttle apps and software
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -6555,6 +6649,43 @@
 <h1 id="frequently-answered-questions">Frequently Answered Questions<a class="headerlink" href="#frequently-answered-questions" title="Permanent link">&para;</a></h1>
 <p>This page contains a summary of answers that are frequently asked and answered in support tickets and on our Discord server.</p>
 <p>We encourage our users to reference this ahead of requesting support as there's a good chance your question has been answered many times before!</p>
+<h2 id="controlling-and-running-trains">Controlling and Running Trains<a class="headerlink" href="#controlling-and-running-trains" title="Permanent link">&para;</a></h2>
+<ul>
+<li>
+<p>Why isn't my train responding to my throttle commands?</p>
+<ul>
+<li>A loco must be on a DCC <strong>MAIN</strong> track to respond to throttle commands, this is typically output A on an EX-CSB1, EX8874 shield, or Arduino R3 motor shield</li>
+<li>The DCC <strong>MAIN</strong> track must be powered on either via your throttle software or <code>&lt;1&gt;</code> in the serial console</li>
+<li>If your DCC loco has been configured for a consist, you must control it from the consist address, not the loco address</li>
+</ul>
+</li>
+</ul>
+<h2 id="programming-and-reading-dcc-decoders">Programming and reading DCC decoders<a class="headerlink" href="#programming-and-reading-dcc-decoders" title="Permanent link">&para;</a></h2>
+<ul>
+<li>
+<p>How do I change the DCC address of my loco?</p>
+<ul>
+<li>Place the loco on the programming track and issue <code>&lt;W address&gt;</code></li>
+</ul>
+</li>
+<li>
+<p>Why does programming my decoder result in an error (eg. a JMRI 308 error)?</p>
+<ul>
+<li>Must be on prog track</li>
+<li><code>&lt;D ACK ON&gt;</code> for diagnostic info</li>
+</ul>
+</li>
+</ul>
+<h2 id="throttle-apps-and-software">Throttle apps and software<a class="headerlink" href="#throttle-apps-and-software" title="Permanent link">&para;</a></h2>
+<ul>
+<li>
+<p>I'm using the free WiThrottle Lite app on iOS, how can I turn track power on?</p>
+<ul>
+<li>You can't turn track power on with the free WiThrottle Lite app for iOS, you must turn it on via the serial console with <code>&lt;1&gt;</code></li>
+<li>Alternatively, you can enable the <code>Start with power on</code> option in EX-Installer</li>
+</ul>
+</li>
+</ul>
 
 
 
@@ -6575,7 +6706,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="December 11, 2025 21:38:16 UTC">December 11, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="December 16, 2025 00:37:29 UTC">December 16, 2025</span>
   </span>
 
     
