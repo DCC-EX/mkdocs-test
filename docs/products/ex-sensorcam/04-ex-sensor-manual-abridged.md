@@ -394,17 +394,17 @@ Also able to change default setting for Brightness, Contrast & Saturation with e
 
 **&** &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;  **statistics** histogram on trips and potential trips since last '**&**', then reset counters and start another sample process. The table gives number of single highs, double highs etc. and totals for No. of frames/run time
 
-**@##** &nbsp; &nbsp; &nbsp;  \*set the "occupied" symbol in the scroll to ASCII character\##. Default is 35('#') Arduino IDE **@12** is bolder!
+**@##** &nbsp; &nbsp; &nbsp;  \*set the "occupied" symbol in the scroll to ASCII character \##. Default is 35("#") Arduino IDE **@12** is bolder!
 
 **+\#,$** &nbsp; &nbsp; &nbsp; *add offset(\# pixels) in $ direction to re-centre sensors after physical drift in CAM alignment. $(0-7) for N-NW
 
  &nbsp; &nbsp; &nbsp; * These commands typically for diagnostic/setup use only. They wait for a line feed or command to resume.
 
-```Note: The value of"bs"(80 sensors 0-79dec) is printed in several formats. For data entry, bsNo format ( %% e.g. 47) is bank/sensor, so bsn=8*4+7=39dec.(vpin). S47 may be printed as(char) 47, 4/7, (octal) 047,(or hex 0x27) depending on context. Debug output likely uses OCT(or HEX). Note: OCT 0107=8/7, 0117=9/7.```
+```Note: The value of "bs"(80 sensors 0-79dec) is printed in several formats. For data entry, bsNo format %% (e.g. 47) is bank/sensor, so bsn=8*4+7=39dec.(vpin). S47 may be printed as(char) 47, 4/7, (octal) 047,(or hex 0x27) depending on context. Debug output likely uses OCT(or HEX). Note: OCT 0107=8/7, 0117=9/7.```
 
 ### Startup Notes:
 
-1. Normal power up reset will initiate Sensor mode, as will the'R' command, and uses EPROM data settings.  
+1. Normal power up reset will initiate Sensor mode, as will the 'R' command, and uses EPROM data settings.  
 2. Sensor mode startup flashes white LED at 10Hz after \~10 seconds, and exhibits a "flicker" at ~20 seconds.  
 3. Requested (v1) WebServer mode reset will flash LED at  ~3seconds and again (brighter) at ~8 seconds.  
 4. After the 8 second flash the Webserver will be operational at web address 192.168.0.xx (xx from display).  
@@ -416,16 +416,16 @@ Also able to change default setting for Brightness, Contrast & Saturation with e
 **(EX-CS may exhibit small variations & reduced cmd functionality refer APPENDIX C)**
 
 **1.** The same commands are valid from an I2C Master Arduino, but there are some variations.  
-**2.** The commands with asterisks normally pause CAM execution so the operator can read USB output on a monitor screen. The same commands from I2C DO NOT wait for a new line, with the exception of'w'.  
+**2.** The commands with asterisks normally pause CAM execution so the operator can read USB output on a monitor screen. The same commands from I2C DO NOT wait for a new line, with the exception of 'w'.  
 **3.** Commands b,d,i,m,p,q&t can return data to the I2C master Arduino(Mega). This data is delivered if the master calls a _Wire.requestFrom(addr,#)_; following the command, from the slave CAM address 17(0x11).  
 **4.** The I2C data returned(after header byte) is in binary bytes and in a format depending on the last command.  
 **5.** Header byte[0] is the ASCII command character (b,d.i,m,p,q,or t) or an error code(OxFE) if no valid data.  
 **6.** If the error code is generated, it is followed by the last received (inappropriate) command string.  
 **7.** b$ cmd returns$+1 sensor status bytes for bank$,$-1 etc. down to bank 0. 'b' defaults to 'b9'(all).  
-**8.** d%% cmd returns 4 data bytes with binary values for bsn, maxDiff+bright, maxDiff \& bright in that order.  
+**8.** d%% cmd returns 4 data bytes with binary values for bsn, maxDiff+bright, maxDiff & bright in that order.  
 **9.** i%% cmd returns 2 data bytes: byte[1]= bsn and byte[2]=0 if unoccupied or 1(true) if occupied.(+ more)  
 **10.** p$ cmd returns Byte[0] header + count +3 data bytes per enabled (bank$) sensor+ parity (max 27 bytes).  
-**11.** q$ cmd returns$+1 bank sensor enabled status bytes for bank$,$-1 etc. down to bank 0. 'q' defaults to 'q1'  
+**11.** q$ cmd returns $+1 bank sensor enabled status bytes for bank$,$-1 etc. down to bank 0. 'q' defaults to 'q1'  
 **12.** s%% Scan looks for a bright LED on a dimmer background. The LED should be placed on the desired sensor position. This old method of placing sensors is not recommended. The Scan command may be be deprecated.  
 **13.** t##[,%%] cmd. initially sends CS the old threshold value (i.e. BEFORE change in the case of t##). Also returns sensor scores(bpd) in 2-byte pairs with MSB set so: bsn(+0x80 if undecided) & bpd(+0x80 if OCCUPIED). Byte[0]header;[1]threshold;[2]S00bpd;[3]bsn;[4]bpd;[5]bsn;[6]bpd etc. Ends with bsn=80 (max 15 enabled)  
 **14.** m$,%% sets maxSensors to %% (USB or i2c) (as can h%% (%%<98)). m0,1%% sets minSensors. Data sent to screen is bound between min and maxSensors. Extra parameter status bytes added to i2c bus for display.  
@@ -485,36 +485,36 @@ In the situation where sensors may be tripping undesirably, there is a range of 
 
 The file _CamParser.cpp_ has been added to the CS specifically tailored to provide a mechanism for the CS to send commands more easily than by using the clumsy diagnostic command style **\<D&nbsp; ANOUT&nbsp;vpin&nbsp;parm1&nbsp;parm2\>**. The CS Native CAM command format is **<N&nbsp;c&nbsp;[parm1]&nbsp;[parm2]\>** where command character '**c**' can be any of those listed below. Generally, to effect changes in sensorCAM, the CAM must be in the run mode (flashing).
 
-The base vpin address defaults to 700 but one can use the _#define SENSORCAM_VPIN ###_ for another value (in _config.h_). With 2 to 4 CAM's, use **<N&nbsp;C&nbsp;vpin0\>** when a switch is needed. The CAM# may also be placed, if defined in _config.h_, prefixing the sensor bsNo.  
+The base vpin address defaults to 700 but one can use the _#define SENSORCAM_VPIN ###_ for another value (in _config.h_). With 2 to 4 CAM's, use **<N&nbsp;C&nbsp;#\>** (1-4) when a switch is needed. The CAM# may also be placed, if defined in _config.h_, prefixing the sensor bsNo.  
 e.g. **<Ni 2%%\> <Nr&nbsp;2%%\>** also **<Nm 200\> <Nf 212\> <Nt 243\>**
 
 ### User commands
 
 | Command | Example | Equivalent| sensorCAM command & action (some commands only return "ACK OK" to CS) |
 | --- | --- | --- | --- |
-| **<N\>** | <N\> | n/a | Lists current& alt. defined CAM baseVpins.    |
-| **<N C vpin\>** | <NC 600\> |Set base | **CAM** vpin for following commands. <NC #\> selects CAM # (1-4)     | 
-| **<N a %%\>**  | <Na 12\> | a12 | **enAble** sensor S%% (bsNo) |
+| **<N\>** | <N\> | n/a | Lists current & alt. defined CAM baseVpins.    |
+| **<N C ###\>** | <NC 600\> | n/a | **CAM** base vpin(>99) for following commands OR <NC #\> selects CAM # (1-4)  | 
+| **<N a %%\>**  | <Na 12\> | a12 | **enAble** sensor S%% (bsNo). |
 | **<N&nbsp;a%%&nbsp;row&nbsp;col\>** | <Na&nbsp;12&nbsp;32&nbsp;43\> | a12,32,43 | **enAble** & also set new coordinates for sensor bsNo & refresh | 
-| **<N b bank#\>** | <Nb 1\> | b1  | **Bank** sensor states(all 8).(used by IFGTE() ATLT() e.g. to locate loco) |
+| **<N b bank#\>** | <Nb 1\> | b1  | **Bank** sensor states(all 8).(used by IFGTE() ATLT() e.g. to locate loco). |
 | **<N e\>**     | <Ne\>     | e   |**EPROM** write any changed settings to sensorCAM EPROM.|
-| **<N f %%\>**   | <Nf 12\> | f12 | **Frame image** pixel data for Sensor_ref[] and sensor666[] (RGB bytes) |
-| **<N F\>**     | <NF\>    | F   | **Forced reboot**, restoring sensorCAM sensor mode& EPROM defaults |
-| **<N g\>**     | <Ng\>    | g   | **Get** status ov2640 camera module settings(on sensorCAM monitor) |
+| **<N f %%\>**   | <Nf 12\> | f12 | **Frame image** pixel data for Sensor_ref[%%] and sensor666[%%] (RGB bytes). |
+| **<N F\>**     | <NF\>    | F   | **Forced reboot**, restoring sensorCAM sensor mode & EPROM defaults. |
+| **<N g\>**     | <Ng\>    | g   | **Get** status ov2640 camera module settings (on sensorCAM monitor). |
 | **<N h %%\>**    | <Nh 30\>    | h30 | set _maxSensors_ to limit display to below sensor S%%. Also **Help** (0-9) |
-| **<N i [%%]\>** | <Ni 12\> | i12 | **Information** on sensor bsNo state, position & twin (0=No twin)
-| **<N i %%[ $$]\>** | <Ni 12\> | i12,02 | **Info.** & sets new twin sensor(S$$) for "second-opinion" on S%%. | 
-| **<N j $ #\>**  | <Nj B 2\> | jB2 | **adJust** ov2640 parameters($)(Brightness, Contrast etc)(values 0-2 only) |
-| **<N l %%\>**   | <Nl 12\>  | l12 | (lima) **Latch** output state of sensor bsNo to 1 & disable |
-| **<N m $ [%%]\>** | <Nm 3 20\> | m3,20 | **Min/max** _min2trip_(1-4) frames [_maxSensors_] Show parameter status data |
-| **<N n$ [%%]\>** | <Nn 1 10\> | n1,10 | set **nLED**= bank $ [and _minSensors_=%% to limit display range] $<Nn v\> verifies |
-| **<N o %%\>**   | <No 12\> | o12 | (oscar) **Zero** output state of sensor bsNo. Reset to 0& disable. |
+| **<N i %%\>** | <Ni 12\> | i12 | **Information** on sensor bsNo state, position & twin (0=No twin).
+| **<N i %%[ $$]\>** | <Ni 12\> | i12,02 | **Info.** & assigns new twin sensor(S$$) for "second-opinion" on S%%. | 
+| **<N j $ #\>**  | <Nj B 2\> | jB2 | **adJust** ov2640 parameters($)(Brightness, Contrast etc)(values 0-2 only). |
+| **<N l %%\>**   | <Nl 12\>  | l12 | (lima) **Latch** output state of sensor bsNo to 1 & disable. |
+| **<N m $ [%%]\>** | <Nm 3 20\> | m3,20 | **Min/max** _min2trip_(1-4) frames [_maxSensors_] Show parameter status data. |
+| **<N n$ [%%]\>** | <Nn 1 10\> | n1,10 | set **nLED**= bank $ [and _minSensors_=%% to limit display range] <Nn v\> verifies. |
+| **<N o %%\>**   | <No 12\> | o12 | (oscar) **Zero** output state of sensor bsNo. Reset to 0 & disable. |
 | **<N p %%\>**   | <Np 1\>  | p1  | **Positions**(r,x) of all enabled sensors in bank are listed. |
-| **<N q #\>**    | <Nq 1\>   | q1  | **Query bank**# enabled states of sensors[0 indicates sensor disabled] |
-| **<N r [%%]\>**  | <Nr 12\> | r12 | **Refresh Reference** image for sensor S%%(bsNo)(default ALL=r00). |
-| **<N s %%\>**    | <Ns 12\>  | s12 | **Scan** image for brightest spot and set bsNo to center that pixel. |
-| **<N t ## [%%]\>** | <N t 43 12\> | t43,12 | **Threshold** displayed, sets global threshold (32-98), [sets a _pvtThreshold_] |
-| **<N t ##\>**    | <N t 10\> | t10 | Tabulate ## (2-31) rows of scroll data similar to CAM scroll
+| **<N q #\>**    | <Nq 1\>   | q1  | **Query bank**# enabled states of sensors (0 indicates sensor disabled). |
+| **<N r [%%]\>**  | <Nr 12\> | r12 | **Refresh Reference** image for sensor S%% (default ALL=r00). |
+| **<N s %%\>**    | <Ns 12\>  | s12 | **Scan** image for brightest spot and set S%% to center that pixel. |
+| **<N t ## [%%]\>** | <N t 43 12\> | t43,12 | **Threshold** displayed, sets global threshold (32-98) [sets a _pvtThreshold_]. |
+| **<N t ##\>**    | <N t 10\> | t10 | Tabulate ## (2-31) rows of scroll data similar to CAM scroll.
 | **<N t # [%%]\>** |  <Nt 1\>   | t1 | Trash pvtThresholds. **<Nt 0 %%\>** individually, **<Nt 1 %%\>** for bank, **<Nt&nbsp;99\>** trashes ALL pvtThresholds,  **<Nt&nbsp;1\>** toggles scroll on/off. |
 | **<N u %%\>**  | <Nu 12\>  | u12 | **Undefine** and disable sensor bsNo(erase coordinates). **<Nu 99\>** for ALL |
 | **<N v [#]\>** | <N v 1\> | v1  |  **Video** mode(1-2) invoke webCAM, or alt webCAM with v 2. **v** for **version** |
@@ -544,7 +544,7 @@ Under normal circumstances if the CS has been configured as per the installation
 
 The full ID consists of CAM number #-bank-sensor or #bs. Each bank(0-9) contains 8 sensors(0-7)  
 vPin is the (CAM number # baseVpin) + 0bs,  bsNo skips id's ending in 8 or 9.  (e.g. 700 + 012 = 710)
-vPin is the base/first vPin number (e.g. 700) + DEC(bsn)number in the conversion table below.
+vPin is the base/first vPin number (e.g. 700) + DEC.number(_bsn_) in the conversion table below.
  
 ![Sensor Code Conversions](/_static/images/ex-sensorcam/sensor-code-conversions.png)
 
@@ -586,11 +586,11 @@ The 2x Endpoints require about  10mA  each from the 3.3V PS. All options can be 
 
 **Option C:** used with newer (32bit) MPU's (e.g. CSB1) & uses 3V3 throughout. No Endpoint jumpers need to be cut. Whichever option is used, the user should consider if the I2C bus needs to be tuned differently. For very short extra cable length to the Endpoint and only one extra device count on an I2C bus under 1m in length, tuning may be unnecessary. In marginal conditions consider returning as per DCC-EX recommendations.
 
-#### A FOR 3.3V Differential drive 5V CS I2C BUS
+#### A. &nbsp FOR 3.3V Differential drive 5V CS I2C BUS
 
 ![Differential Drive 5V CS](/_static/images/ex-sensorcam/differential-drive-5v-cs.png)
 
-#### C FOR 3.3V Differential drive 3.3V CS I2C BUS
+#### C. &nbsp; FOR 3.3V Differential drive 3.3V CS I2C BUS
 
 ![Differential Drive 3.3V Only CS](/_static/images/ex-sensorcam/differential-drive-3v3-only-cs.png)
 
