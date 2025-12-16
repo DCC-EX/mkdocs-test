@@ -340,6 +340,23 @@
   margin-bottom: 1px;
 }
 
+/* Reduce copyright size/padding */
+.md-copyright {
+  font-size: 0.5rem;
+  padding: 0;
+}
+
+/* Reduce Discord/social padding */
+.md-social {
+  padding: 0;
+}
+
+@media screen and (min-width: 45em) {
+  .md-social {
+    padding: 0;
+  }
+}
+
 /* DCC-EX NEWS (BLOG) MODIFICATIONS */
 
 /* Horizontal line separator for News articles */

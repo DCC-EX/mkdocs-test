@@ -1171,7 +1171,7 @@
   
   
   <span class="md-ellipsis">
-    Various devices
+    40 various devices
     
   </span>
   
@@ -1182,7 +1182,7 @@
         <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_2_3_6_8_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2_3_6_8">
             <span class="md-nav__icon md-icon"></span>
-            Various devices
+            40 various devices
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -1193,7 +1193,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../accessories/various-devices/00-ds1307/" class="md-nav__link">
+      <a href="../../accessories/40-various-devices/30-ds1307/" class="md-nav__link">
         
   
   
@@ -3001,9 +3001,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#turnoutltirnout_idaddrdescription" class="md-nav__link">
+  <a href="#turnoutlturnout_idaddrdescription" class="md-nav__link">
     <span class="md-ellipsis">
-      TURNOUTL(tirnout_id,addr,description...)
+      TURNOUTL(turnout_id,addr,description...)
     </span>
   </a>
   
@@ -5454,7 +5454,7 @@
   
   
   <span class="md-ellipsis">
-    EX-SensorCAM Abridged Manual
+    04 ex sensor manual abridged
     
   </span>
   
@@ -6511,7 +6511,7 @@
   
   
   <span class="md-ellipsis">
-    Frequently Answered Questions
+    Frequently Answered Questions (FAQ)
     
   </span>
   
@@ -10025,9 +10025,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#turnoutltirnout_idaddrdescription" class="md-nav__link">
+  <a href="#turnoutlturnout_idaddrdescription" class="md-nav__link">
     <span class="md-ellipsis">
-      TURNOUTL(tirnout_id,addr,description...)
+      TURNOUTL(turnout_id,addr,description...)
     </span>
   </a>
   
@@ -10266,10 +10266,10 @@ In many cases the parameters are self explanitory, for example a speed (which wi
 <li>linearaddr DCC linear address of accessory</li>
 </ul>
 <h2 id="aftervpintimer">AFTER(vpin,timer...)<a class="headerlink" href="#aftervpintimer" title="Permanent link">&para;</a></h2>
-<p>Wait for sensor activated, then decativated for given time</p>
+<p>Wait for sensor activated, then deactivated for given time</p>
 <ul>
 <li>vpin Virtual Pin number of sensor</li>
-<li>timer... optional wait in mS, default 500</li>
+<li>timer... optional wait in ms, default 500</li>
 </ul>
 <h2 id="afteroverloadtrack_id">AFTEROVERLOAD(track_id)<a class="headerlink" href="#afteroverloadtrack_id" title="Permanent link">&para;</a></h2>
 <p>Wait for overload to be resolved</p>
@@ -10321,7 +10321,7 @@ In many cases the parameters are self explanitory, for example a speed (which wi
 <p>see IFTIMEOUT</p>
 <ul>
 <li>vpin Sensor pin number</li>
-<li>timeout_ms Millseconds to wait before timeout</li>
+<li>timeout_ms Milliseconds to wait before timeout</li>
 </ul>
 <h2 id="automationsequence_iddescription">AUTOMATION(sequence_id,description)<a class="headerlink" href="#automationsequence_iddescription" title="Permanent link">&para;</a></h2>
 <p>Defines starting point of a sequence that will be shown as an Automation by</p>
@@ -10346,7 +10346,12 @@ In many cases the parameters are self explanitory, for example a speed (which wi
 <li>msg  Quoted message</li>
 </ul>
 <h2 id="build_consistloco_id">BUILD_CONSIST(loco_id)<a class="headerlink" href="#build_consistloco_id" title="Permanent link">&para;</a></h2>
+<p>Adds a loco to follow the current loco in a consist</p>
+<ul>
+<li>loco_id may be negative to indicate loco facing backwards</li>
+</ul>
 <h2 id="break_consist">BREAK_CONSIST<a class="headerlink" href="#break_consist" title="Permanent link">&para;</a></h2>
+<p>Breaks up any consist involving the current loco</p>
 <h2 id="callsequence_id">CALL(sequence_id)<a class="headerlink" href="#callsequence_id" title="Permanent link">&para;</a></h2>
 <p>transfer control to another sequence with expectation to return</p>
 <p>see RETURN</p>
@@ -10366,7 +10371,7 @@ In many cases the parameters are self explanitory, for example a speed (which wi
 <p>Close turnout by id</p>
 <p>see THROW</p>
 <h2 id="configure_servovpinpos1pos2profile">CONFIGURE_SERVO(vpin,pos1,pos2,profile)<a class="headerlink" href="#configure_servovpinpos1pos2profile" title="Permanent link">&para;</a></h2>
-<p>setup servo movement parameters for non-turnout</p>
+<p>Set up servo movement parameters for non-turnout</p>
 <ul>
 <li>vpin must refer to a servo capable pin</li>
 <li>pos1 SET position of servo</li>
@@ -10381,7 +10386,7 @@ In many cases the parameters are self explanitory, for example a speed (which wi
 <li>subaddr DCC subaddress</li>
 </ul>
 <h2 id="dccx_signalsignal_idredaspectamberaspectgreenaspect">DCCX_SIGNAL(signal_id,redAspect,amberAspect,greenAspect)<a class="headerlink" href="#dccx_signalsignal_idredaspectamberaspectgreenaspect" title="Permanent link">&para;</a></h2>
-<p>Dfeine advanced DCC accessory signal with aspects</p>
+<p>Define advanced DCC accessory signal with aspects</p>
 <ul>
 <li>signal_id DCC Linear address AND Id used for all signal manipulation commands</li>
 </ul>
@@ -10412,8 +10417,8 @@ In many cases the parameters are self explanitory, for example a speed (which wi
 <h2 id="delayrandommindelaymaxdelay">DELAYRANDOM(mindelay,maxdelay)<a class="headerlink" href="#delayrandommindelaymaxdelay" title="Permanent link">&para;</a></h2>
 <p>Waits for random delay between min and max milliseconds (This is not blocking)</p>
 <ul>
-<li>mindelay minumum delay in mS</li>
-<li>maxdelay maximum delay in mS</li>
+<li>mindelay minimum delay in ms</li>
+<li>maxdelay maximum delay in ms</li>
 </ul>
 <h2 id="done">DONE<a class="headerlink" href="#done" title="Permanent link">&para;</a></h2>
 <p>Stops task loco (if any) and terminates current task</p>
@@ -10439,7 +10444,7 @@ In many cases the parameters are self explanitory, for example a speed (which wi
 <h2 id="exrail">EXRAIL<a class="headerlink" href="#exrail" title="Permanent link">&para;</a></h2>
 <p>obsolete.. no longer needed. Does nothing.</p>
 <h2 id="extt_turntableidvpinhomedescription">EXTT_TURNTABLE(id,vpin,home,description...)<a class="headerlink" href="#extt_turntableidvpinhomedescription" title="Permanent link">&para;</a></h2>
-<p>This statement will create the EXΓÇæTurntable turntable/traverser object only, so you will need a separate HAL() statement for an EXΓÇæTurntable device driver.</p>
+<p>Defines the EXΓÇæTurntable turntable/traverser object only, so you will need a separate HAL() statement for an EXΓÇæTurntable device driver.</p>
 <ul>
 <li>homeAngle  the angle of the home position, valid angles are 0 - 3600</li>
 <li>quoted description...</li>
@@ -10517,13 +10522,13 @@ In many cases the parameters are self explanitory, for example a speed (which wi
 <p>Inverse of IF</p>
 <p>see IF</p>
 <h2 id="ifrandompercent">IFRANDOM(percent)<a class="headerlink" href="#ifrandompercent" title="Permanent link">&para;</a></h2>
-<p>randomly satisfield IF at given percent probability</p>
+<p>randomly satisfied IF at given percent probability</p>
 <p>see IF</p>
 <h2 id="ifredsignal_id">IFRED(signal_id)<a class="headerlink" href="#ifredsignal_id" title="Permanent link">&para;</a></h2>
 <p>Checks if given signal is in RED state</p>
 <p>see IF</p>
 <h2 id="ifstashstash_id">IFSTASH(stash_id)<a class="headerlink" href="#ifstashstash_id" title="Permanent link">&para;</a></h2>
-<p>Checks if given stash entry has a non zero value</p>
+<p>Checks if given stash entry has a non-zero value</p>
 <p>see IF</p>
 <h2 id="ifstashed_herestash_id">IFSTASHED_HERE(stash_id)<a class="headerlink" href="#ifstashed_herestash_id" title="Permanent link">&para;</a></h2>
 <p>Checks if given stash entry has the current loco</p>
@@ -10552,7 +10557,7 @@ In many cases the parameters are self explanitory, for example a speed (which wi
 <li>mask Binary mask applied to vpin value</li>
 </ul>
 <h2 id="ifbitmap_anyvpinmask">IFBITMAP_ANY(vpin,mask)<a class="headerlink" href="#ifbitmap_anyvpinmask" title="Permanent link">&para;</a></h2>
-<p>Checks if vpin pseudo-analog value &amp; mask is non zero</p>
+<p>Checks if vpin pseudo-analog value &amp; mask is non-zero</p>
 <p>see IF</p>
 <ul>
 <li>mask Binary mask applied to vpin value</li>
@@ -10575,18 +10580,18 @@ In many cases the parameters are self explanitory, for example a speed (which wi
 <p>Defines multiple JMRI <code>&lt;s&gt;</code> type sensor feedback definitions each with id matching vpin and INPUT_PULLUP</p>
 <ul>
 <li>vpin first vpin number</li>
-<li>count... Number of consecutine VPINS for which to create JMRI sensor feedbacks. Default 1.</li>
+<li>count... Number of consecutive VPINS for which to create JMRI sensor feedbacks. Default 1.</li>
 </ul>
 <h2 id="jmri_sensor_nopullupvpincount">JMRI_SENSOR_NOPULLUP(vpin,count...)<a class="headerlink" href="#jmri_sensor_nopullupvpincount" title="Permanent link">&para;</a></h2>
 <p>Defines multiple JMRI <code>&lt;s&gt;</code> type sensor feedback definitions each with id matching vpin</p>
 <ul>
 <li>vpin first vpin number</li>
-<li>count... Number of consecutine VPINS for which to create JMRI sensor feedbacks. Default 1.</li>
+<li>count... Number of consecutive VPINS for which to create JMRI sensor feedbacks. Default 1.</li>
 </ul>
 <h2 id="join">JOIN<a class="headerlink" href="#join" title="Permanent link">&para;</a></h2>
 <p>Switches PROG track to receive MAIN track DCC packets. (Drive on PROG track)</p>
 <h2 id="killall">KILLALL<a class="headerlink" href="#killall" title="Permanent link">&para;</a></h2>
-<p>Tertminates all running EXRAIL tasks</p>
+<p>Terminates all running EXRAIL tasks</p>
 <h2 id="latchvpin">LATCH(vpin)<a class="headerlink" href="#latchvpin" title="Permanent link">&para;</a></h2>
 <p>Make all AT/AFTER/IF see vpin as HIGH without checking hardware</p>
 <ul>
@@ -10603,13 +10608,13 @@ In many cases the parameters are self explanitory, for example a speed (which wi
 <li>msg Quoted text</li>
 </ul>
 <h2 id="momentumacceldecel">MOMENTUM(accel,decel...)<a class="headerlink" href="#momentumacceldecel" title="Permanent link">&para;</a></h2>
-<p>sets momentum in mS per DCC 127 step for curent loco.</p>
+<p>sets momentum in ms per DCC 127 step for current loco.</p>
 <ul>
 <li>accel Acceleration momentum</li>
-<li>decel... Braking momantum. (=Acceleration if not given)</li>
+<li>decel... Braking momentum. (=Acceleration if not given)</li>
 </ul>
 <h2 id="screendisplayrowmsg">SCREEN(display,row,msg)<a class="headerlink" href="#screendisplayrowmsg" title="Permanent link">&para;</a></h2>
-<p>Send message to external display hadlers</p>
+<p>Send message to external display handlers</p>
 <ul>
 <li>
 <p>display number, 0=local display, others are handled by external
@@ -10654,9 +10659,9 @@ displays which may have different display numbers on different devices.</p>
 <h2 id="acofeventid">ACOF(eventid)<a class="headerlink" href="#acofeventid" title="Permanent link">&para;</a></h2>
 <p>Send MERG CBUS ACOF to Adapter</p>
 <h2 id="onaconeventid">ONACON(eventid)<a class="headerlink" href="#onaconeventid" title="Permanent link">&para;</a></h2>
-<p>Start task here when ACON for event receied from MERG CBUS</p>
+<p>Start task here when ACON for event received from MERG CBUS</p>
 <h2 id="onacofeventid">ONACOF(eventid)<a class="headerlink" href="#onacofeventid" title="Permanent link">&para;</a></h2>
-<p>Start task here when ACOF for event receied from MERG CBUS</p>
+<p>Start task here when ACOF for event received from MERG CBUS</p>
 <h2 id="onactivateaddrsubaddr">ONACTIVATE(addr,subaddr)<a class="headerlink" href="#onactivateaddrsubaddr" title="Permanent link">&para;</a></h2>
 <p>Start task here when DCC Activate sent for short address</p>
 <h2 id="onactivatellinear">ONACTIVATEL(linear)<a class="headerlink" href="#onactivatellinear" title="Permanent link">&para;</a></h2>
@@ -10716,10 +10721,10 @@ displays which may have different display numbers on different devices.</p>
 <h2 id="onbuttonvpin">ONBUTTON(vpin)<a class="headerlink" href="#onbuttonvpin" title="Permanent link">&para;</a></h2>
 <p>Start task here when sensor changes HIGH to LOW.</p>
 <h2 id="pause">PAUSE<a class="headerlink" href="#pause" title="Permanent link">&para;</a></h2>
-<p>Pauses all EXRAIL tasks except the curremnt one.</p>
+<p>Pauses all EXRAIL tasks except the current one.</p>
 <p>Other tasks ESTOP their locos until RESUME issued</p>
 <h2 id="pin_turnoutidvpindescription">PIN_TURNOUT(id,vpin,description...)<a class="headerlink" href="#pin_turnoutidvpindescription" title="Permanent link">&para;</a></h2>
-<p>Defines a turnout which operates on a signle pin</p>
+<p>Defines a turnout which operates on a single pin</p>
 <ul>
 <li>description... Quoted text (shown to throttles) or HIDDEN</li>
 </ul>
@@ -10829,9 +10834,9 @@ displays which may have different display numbers on different devices.</p>
 <li>funcmap... Quoted text, optional list of function names separated by / character with momentary function names prefixed with an *.</li>
 </ul>
 <h2 id="routesequence_iddescription">ROUTE(sequence_id,description)<a class="headerlink" href="#routesequence_iddescription" title="Permanent link">&para;</a></h2>
-<p>DEfines starting point of a sequence that will appear as a route on throttle buttons.</p>
+<p>Defines starting point of a sequence that will appear as a route on throttle buttons.</p>
 <ul>
-<li>description Quoted text, throttle button capotion.</li>
+<li>description Quoted text, throttle button caption.</li>
 </ul>
 <h2 id="route_activesequence_id">ROUTE_ACTIVE(sequence_id)<a class="headerlink" href="#route_activesequence_id" title="Permanent link">&para;</a></h2>
 <p>Tells throttle to display the route button as active</p>
@@ -10868,7 +10873,7 @@ displays which may have different display numbers on different devices.</p>
 <li>route sequence_id of route, automation or sequence to drive</li>
 </ul>
 <h2 id="sequencesequence_id">SEQUENCE(sequence_id)<a class="headerlink" href="#sequencesequence_id" title="Permanent link">&para;</a></h2>
-<p>Provides a unique label than can be used to call, follow or start.</p>
+<p>Provides a unique label that can be used to call, follow or start.</p>
 <p>see CALL</p>
 <p>see FOLLOW</p>
 <p>see START</p>
@@ -10983,23 +10988,23 @@ displays which may have different display numbers on different devices.</p>
 <h2 id="startsequence_id">START(sequence_id)<a class="headerlink" href="#startsequence_id" title="Permanent link">&para;</a></h2>
 <p>Starts a new task at the given route/animation/sequence</p>
 <h2 id="start_sharedsequence_id">START_SHARED(sequence_id)<a class="headerlink" href="#start_sharedsequence_id" title="Permanent link">&para;</a></h2>
-<p>Starts a new task at the given route/animation/sequence an share current loco with it</p>
+<p>Starts a new task at the given route/animation/sequence and share current loco with it</p>
 <h2 id="start_sendsequence_id">START_SEND(sequence_id)<a class="headerlink" href="#start_sendsequence_id" title="Permanent link">&para;</a></h2>
-<p>Starts a new task at the given route/animation/sequence an send current loco to it. Remove loco from current task.</p>
+<p>Starts a new task at the given route/animation/sequence and send current loco to it. Remove loco from current task.</p>
 <h2 id="stashstash_id">STASH(stash_id)<a class="headerlink" href="#stashstash_id" title="Permanent link">&para;</a></h2>
-<p>saves cuttent tasks loco id in the stash array</p>
+<p>saves current task's loco id in the stash array</p>
 <ul>
 <li>stash_id  position in stash array to save loco id</li>
 </ul>
 <h2 id="stealthcode">STEALTH(code...)<a class="headerlink" href="#stealthcode" title="Permanent link">&para;</a></h2>
 <p>Allows for embedding raw C++ code in context of current task.</p>
 <ul>
-<li>code... c++ code to be executed. This requires intimate understanding of the product acrhitecture.</li>
+<li>code... c++ code to be executed. This requires intimate understanding of the product architecture.</li>
 </ul>
 <h2 id="stealth_globalcode">STEALTH_GLOBAL(code...)<a class="headerlink" href="#stealth_globalcode" title="Permanent link">&para;</a></h2>
 <p>Allows for embedding raw c++ code out of context.</p>
 <ul>
-<li>code...  c++ code to be defined. This requires intimate understanding of the product acrhitecture.</li>
+<li>code...  c++ code to be defined. This requires intimate understanding of the product architecture.</li>
 </ul>
 <h2 id="stop">STOP<a class="headerlink" href="#stop" title="Permanent link">&para;</a></h2>
 <p>Same as SPEED(0)</p>
@@ -11024,8 +11029,8 @@ displays which may have different display numbers on different devices.</p>
 <li>subaddr DCC accessory subaddress</li>
 <li>description... Quoted text or HIDDEN, appears on throttle buttons</li>
 </ul>
-<h2 id="turnoutltirnout_idaddrdescription">TURNOUTL(tirnout_id,addr,description...)<a class="headerlink" href="#turnoutltirnout_idaddrdescription" title="Permanent link">&para;</a></h2>
-<p>Defines a DCC accessory turnout with inear address</p>
+<h2 id="turnoutlturnout_idaddrdescription">TURNOUTL(turnout_id,addr,description...)<a class="headerlink" href="#turnoutlturnout_idaddrdescription" title="Permanent link">&para;</a></h2>
+<p>Defines a DCC accessory turnout with linear address</p>
 <p>see TURNOUT</p>
 <ul>
 <li>turnout_id to be used in THROW/CLOSE etc</li>
@@ -11056,9 +11061,9 @@ displays which may have different display numbers on different devices.</p>
 <li>mask Binary mask to be ANDed with vpin1 value</li>
 </ul>
 <h2 id="bitmap_incvpin">BITMAP_INC(vpin)<a class="headerlink" href="#bitmap_incvpin" title="Permanent link">&para;</a></h2>
-<p>Increments poesudo analog value by 1</p>
+<p>Increments pseudo analog value by 1</p>
 <h2 id="bitmap_decvpin">BITMAP_DEC(vpin)<a class="headerlink" href="#bitmap_decvpin" title="Permanent link">&para;</a></h2>
-<p>Decrements poesudo analog value by 1  (to zero)</p>
+<p>Decrements pseudo analog value by 1  (to zero)</p>
 <h2 id="bitmap_orvpin1mask">BITMAP_OR(vpin1,mask)<a class="headerlink" href="#bitmap_orvpin1mask" title="Permanent link">&para;</a></h2>
 <p>Performs a bitwise OR operation on the given vpin analog value and mask.</p>
 <ul>

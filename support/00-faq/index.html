@@ -27,7 +27,7 @@
     
     
       
-        <title>Frequently Answered Questions - DCC-EX Model Train Control, Animation, and Automation</title>
+        <title>Frequently Answered Questions (FAQ) - DCC-EX Model Train Control, Animation, and Automation</title>
       
     
     
@@ -83,7 +83,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#frequently-answered-questions" class="md-skip">
+        <a href="#frequently-answered-questions-faq" class="md-skip">
           Skip to content
         </a>
       
@@ -116,7 +116,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Frequently Answered Questions
+              Frequently Answered Questions (FAQ)
             
           </span>
         </div>
@@ -1164,7 +1164,7 @@
   
   
   <span class="md-ellipsis">
-    Various devices
+    40 various devices
     
   </span>
   
@@ -1175,7 +1175,7 @@
         <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_2_3_6_8_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2_3_6_8">
             <span class="md-nav__icon md-icon"></span>
-            Various devices
+            40 various devices
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -1186,7 +1186,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../products/ex-commandstation/accessories/various-devices/00-ds1307/" class="md-nav__link">
+      <a href="../../products/ex-commandstation/accessories/40-various-devices/30-ds1307/" class="md-nav__link">
         
   
   
@@ -3576,7 +3576,7 @@
   
   
   <span class="md-ellipsis">
-    EX-SensorCAM Abridged Manual
+    04 ex sensor manual abridged
     
   </span>
   
@@ -4647,7 +4647,7 @@
   
   
   <span class="md-ellipsis">
-    Frequently Answered Questions
+    Frequently Answered Questions (FAQ)
     
   </span>
   
@@ -4660,7 +4660,7 @@
   
   
   <span class="md-ellipsis">
-    Frequently Answered Questions
+    Frequently Answered Questions (FAQ)
     
   </span>
   
@@ -4704,6 +4704,33 @@
   <a href="#throttle-apps-and-software" class="md-nav__link">
     <span class="md-ellipsis">
       Throttle apps and software
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#my-csb1-oled-display-isnt-working-or-looks-wrong" class="md-nav__link">
+    <span class="md-ellipsis">
+      My CSB1 OLED display isnt working or looks "wrong"
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#why-do-i-get-fault-pin-warnings" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why do I get FAULT pin warnings
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#why-do-my-i2c-connections-fail" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why do my I2C connections fail
     </span>
   </a>
   
@@ -6627,6 +6654,33 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#my-csb1-oled-display-isnt-working-or-looks-wrong" class="md-nav__link">
+    <span class="md-ellipsis">
+      My CSB1 OLED display isnt working or looks "wrong"
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#why-do-i-get-fault-pin-warnings" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why do I get FAULT pin warnings
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#why-do-my-i2c-connections-fail" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why do my I2C connections fail
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -6646,7 +6700,7 @@
   
 
 
-<h1 id="frequently-answered-questions">Frequently Answered Questions<a class="headerlink" href="#frequently-answered-questions" title="Permanent link">&para;</a></h1>
+<h1 id="frequently-answered-questions-faq">Frequently Answered Questions  (FAQ)<a class="headerlink" href="#frequently-answered-questions-faq" title="Permanent link">&para;</a></h1>
 <p>This page contains a summary of answers that are frequently asked and answered in support tickets and on our Discord server.</p>
 <p>We encourage our users to reference this ahead of requesting support as there's a good chance your question has been answered many times before!</p>
 <h2 id="controlling-and-running-trains">Controlling and Running Trains<a class="headerlink" href="#controlling-and-running-trains" title="Permanent link">&para;</a></h2>
@@ -6656,7 +6710,7 @@
 <ul>
 <li>A loco must be on a DCC <strong>MAIN</strong> track to respond to throttle commands, this is typically output A on an EX-CSB1, EX8874 shield, or Arduino R3 motor shield</li>
 <li>The DCC <strong>MAIN</strong> track must be powered on either via your throttle software or <code>&lt;1&gt;</code> in the serial console</li>
-<li>If your DCC loco has been configured for a consist, you must control it from the consist address, not the loco address</li>
+<li>If your DCC loco has been configured for a consist, you must control it from the consist address, not the loco address. The lights can be switched on/off at the loco address but the loco will not move unless you use the consist address.</li>
 </ul>
 </li>
 </ul>
@@ -6665,14 +6719,15 @@
 <li>
 <p>How do I change the DCC address of my loco?</p>
 <ul>
-<li>Place the loco on the programming track and issue <code>&lt;W address&gt;</code></li>
+<li>Place the loco on the programming track and issue <code>&lt;W address&gt;</code> or use the programming screen in Engine Driver.</li>
 </ul>
 </li>
 <li>
 <p>Why does programming my decoder result in an error (eg. a JMRI 308 error)?</p>
 <ul>
-<li>Must be on prog track</li>
-<li><code>&lt;D ACK ON&gt;</code> for diagnostic info</li>
+<li>Loco must be on prog track</li>
+<li>Dirty track, wheels or pickups</li>
+<li>Issue the <code>&lt;D ACK ON&gt;</code> and repeat the programming, copy resulting diagnostic trace to support (or learn to read it yourself)</li>
 </ul>
 </li>
 </ul>
@@ -6685,6 +6740,32 @@
 <li>Alternatively, you can enable the <code>Start with power on</code> option in EX-Installer</li>
 </ul>
 </li>
+</ul>
+<h2 id="my-csb1-oled-display-isnt-working-or-looks-wrong">My CSB1 OLED display isnt working or looks "wrong"<a class="headerlink" href="#my-csb1-oled-display-isnt-working-or-looks-wrong" title="Permanent link">&para;</a></h2>
+<ul>
+<li>The CSB1 is shipped with whichever OLED display is available and although they look alike, they have different internals. The EX-Installer provides a dropdown list, if yours doesnt work, try selecting the other option.</li>
+</ul>
+<h2 id="why-do-i-get-fault-pin-warnings">Why do I get FAULT pin warnings<a class="headerlink" href="#why-do-i-get-fault-pin-warnings" title="Permanent link">&para;</a></h2>
+<ul>
+<li>
+<p>You may have a short on your layout. Most common causes are</p>
+<ul>
+<li>Loco driven into turnout set for the other track</li>
+<li>Screwdriver or other tools left lying on layout</li>
+</ul>
+</li>
+<li>
+<p>You forgot to switch on the track power supply</p>
+</li>
+<li>When switched on, there is an inrush of power to the loco decoders which temporarily exceeds the current limits. This is automatically fixed and the state should revers to NORMAL within a second or so.</li>
+</ul>
+<h2 id="why-do-my-i2c-connections-fail">Why do my I2C connections fail<a class="headerlink" href="#why-do-my-i2c-connections-fail" title="Permanent link">&para;</a></h2>
+<p>This can be complex but</p>
+<ul>
+<li>At startup, the Command Station lists all the I2C devices it can see... If yours is not in that list there is nothing that you can change or configure in the software to make it work.</li>
+<li>Do not twist the SCL and SDA wires together</li>
+<li>Avoid running SCL/SD in parallel with the track power (or track)</li>
+<li>Refer to <a href="../../reference/wiring/i2C/00-i2c-wiring/">I2C Wiring</a></li>
 </ul>
 
 
@@ -6706,7 +6787,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="December 16, 2025 00:37:29 UTC">December 16, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="December 16, 2025 11:31:14 UTC">December 16, 2025</span>
   </span>
 
     
