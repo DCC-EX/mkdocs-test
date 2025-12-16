@@ -2,37 +2,37 @@
 
 ## CONTENTS
 
-1. Overview 1
+1. Overview
 
-2. ESP32-CAM 3
+2. ESP32-CAM
 
-3. Physical Installation 5
+3. Physical Installation
 
-4. Notation& Help commands 7
+4. Notation& Help commands
 
-5. Configuration 8
+5. Configuration
 
-6. PROCESSING4 monitor/console 11
+6. PROCESSING4 monitor/console
 
-7. Wiring Requirements 13
+7. Wiring Requirements
 
-8. Communication and Host Operation 14
+8. Host Communication
 
 ## Appendix
 
-A. ESP32 sensorCAM Command Summary 17
+A. ESP32 sensorCAM Command Summary
 
-B. Check List for Optimising Sensor Resonse 19
+B. Check List for Optimising Sensor Resonse
 
-C. Filtered/parsed DCC EX-CS commands 20
+C. Parsed DCC EX-CS sensorCAM commands
 
-E. Tabulation of Recommended DCC-EX-CS id's for sensorCAM 23
+E. Tabulated DCC-EX-CS id's for sensorCAM
 
-F. Hardware Interface Notes.(including PCA9515A & SF Endpoints) 24
+F. Hardware Interface (PCA9515A & Endpoints)
 
-H. Notes on use of EX-Rail with SensorCAM 29
+H. Notes on use of EX-Rail with SensorCAM
 
-J. ESP32-CAM pinout (v1.6) and WROVER-CAM notes 31
+J. WROVER-CAM notes
 
 Addenda 32
 
@@ -61,13 +61,15 @@ The ESPRESSIF guide will show how to install the Arduino-ESP32 support.
 
 [Installing Arduino-ESP32 2.0.6 documentation (readthedocs-hosted.com)](https://espressif-docs.readthedocs-hosted.com/projects/arduino-esp32/en/latest/installing.html#installing-using-arduino-ide)
 
-A tutorial on setting up the ESP32 on Arduino IDE is available on YouTube called [ESP32 CAM-10 Dollar Camera for IoT Projects](https://www.bing.com/videos/search?q=ESP32+CAM+-+10+Dollar+Camera+for+loT+Projects+-+YouTube&view=detail&mid=77BF6363644D71DF685B77BF6363644D71DF685B&FORM=VIRE)
+A tutorial on setting up the ESP32 on Arduino IDE is available on YouTube  
+
+[ESP32 CAM-10 Dollar Camera for IoT Projects](https://www.bing.com/videos/search?q=ESP32+CAM+-+10+Dollar+Camera+for+loT+Projects+-+YouTube&view=detail&mid=77BF6363644D71DF685B77BF6363644D71DF685B&FORM=VIRE)
 
 [Introduction to ESP32- Getting Started](https://www.youtube.com/watch?v=xPINTk3VLQ)
 
 The sensorCAM software is uploaded to the ESP32-CAM using the Arduino IDE. The sensorCAM has been programmed with two modes of operation; a webCAM mode (as in the on-line tutorial) and a sensorCAM mode. The limited power of an ESP32 prevents both functioning at the same time. Consequently, to see an image of the railway while sensorCAM is operational requires a third application (Processing 4.3) to retrieve a still image from the CAM over the USB cable to a computer. The Processing 4 _sensorCAM.pde_ app replaces the Arduino IDE and IDE monitor retaining the sensorCAM command set and offering a (slow) image capture capability over USB cable. Processing 4 allows virtual sensors to be placed interactively on an image of the railway with a simple mouse click.
 
-In addition to the USB interface, you are likely to need a daughter board “carrier” or prototyping board to connect to the real world (power, indicators, control wires, and i2c.) Further details are given below. However to test the sensorCAM functions, one only needs the CAM and a USB interface, with power from the PC's USB port.
+In addition to the USB interface, you may need a daughter board, “perf” board or prototyping board to connect to the real world (power, indicators, control wires, and i2c.) Further details are given below. However to test the sensorCAM functions, one only needs the CAM and a USB interface, with power from the PC's USB port.  The Wrover Cam minimises this need.
 
 To control a railway, the railway needs a microcontroller based management system. This typically could be an Arduino Mega (or CSB1) based system running software such as the DCC-EX CommandStation and EX-RAIL automation application. The EX Command Station(CS) includes a sensorCAM specific driver as detailed later.
 
@@ -149,7 +151,7 @@ Where words are in *italics*, these are the actual names used in the C++ program
 
 The first step is to decide a sensor distribution strategy & numbering strategy (not set in stone) . A sensorCAM has 10 banks (0-9) of eight (0-7) individual sensors available (total 80). Each **bank** can be tested as a whole to see if ANY sensors tripped or NO sensors tripped. Also placing a string of sensors in a row, for example along a platform, can indicate train position with the binary bank value increasing as the train approaches a signal as it crosses sensors 0 through 7. (see **Figure 5** for examples) Sensors are generally referred to with a two digit bank/sensor designation (their bsNo.) e.g. Sensor 68 and 69 are therefore invalid bs numbers, 97 is valid. Use one bank for a platform (set of 8 sensors). Sensor **S00** is reserved as a brightness reference sensor. Sensor **S06** is also RESERVED for now. It is suggested that user's Sensors start with bank 1, i.e. S10, S11 & upwards, with related sensors in their own bank. They do NOT need to be sequential (Follow the installation Guide for full details). **With the recommended definitions set up, the user does not need to remember or refer to vPins for sensorCAM sensors at all - just use the S%% identifier.**
 
-For an EX-Command Station (CS), the 80 sensors will have vPin numbers ranging from #00 to #79 (DECIMAL) and mapped to 80 b/s id's(S00 to S97). Users can use, for example, **AT(CAM 0%%)** in EXRAIL commands where a vPin ID is called for.  For the technically minded, CS invisibly calculates vPin=BasePin+b*8+s. 
+For an EX-Command Station (CS), the 80 sensors will have vPin numbers ranging from #00 to #79 (DECIMAL) and mapped to 80 b/s id's(S00 to S97). Users can use, for example, **AT(CAM 0%%)** in EXRAIL commands where a vPin ID is called for.  For the technically minded, CS invisibly calculates vPin=BasePin+bx8+s. 
 
 ### 5.2 Preset the wifi SSID and password
 
@@ -223,7 +225,7 @@ If the sensor remains unoccupied, it updates the reference, compensating for slo
 ### 5.14 Scrolling data interpretation
 
 The scrolling data dump displays “SUS” (suspend) if auto updates are off. It also displays *threshold*(T), *min2trip*(M), the bank assigned to the on-board _nLED_(N), S00 reference diff. score, as well as the S00 reference brightness(R) and its current actual brightness(A), a brightness scale factor(B) and other enabled sensors. ‘A’ is the Actual latest sum of the 48 bytes of a sensor image (max 3024) and should be between 1200 and 2500 ideally. Following a reference refresh (**r**), for an unoccupied image, the (noisy) diff. scores should be 32-37. If references are being updated, a note will appear at the right hand side of the data dump in the form of “**Ref 0%%**” to indicate that a new reference for an UNOCCUPIED sensor has occurred. This dump allows for performance monitoring during commissioning.  
-:**oo46##** indicates tripped sensor (## = **occupied**) sensor are shown by default with a central diff score.  
+:**oo46##** indicates tripped sensor (## = **occupied**) sensor are shown by default with a central diff score (32-99).  
 :**?-46-?** indicate an above threshold image **potentially occupied**** (waiting for *min2trip*).  
 :**oo47?T** indicates **suspected occupied** but no confirmation from Twin (see **5.15**).
 
@@ -265,7 +267,7 @@ The image will have enabled sensors (b/s) boxed and identified by a (resistor) c
 
 > **NOTE**
 
-1. The above commands ARE CASE SENSITIVE. They are recognized by Processing 4 as non-sensorCAM commands and processed in the monitor/PC. Commands **X, Y** & **Z** in turn automatically issue related sensorCAM commands **x, y** & **z** respectively, with appropriate parameters.  The '**Y**' command suspends sensorCAM immaging, holding a single “frozen” frame until a terminating command is received. 
+1. The above commands ARE CASE SENSITIVE. They are recognized by Processing 4 as non-sensorCAM commands and processed in the monitor/PC. Commands **X, Y** & **Z** in turn automatically issue related sensorCAM commands **x, y** & **z** respectively, with appropriate parameters.  The '**Y**' command suspends sensorCAM immaging, holding a single “frozen” frame until a terminating command ('yy') is received. 
 
 2. If you use **H** to mirror, the colour coding for boxed sensor number (bsNo.) has to be read right to left.  Do NOT click on image to create sensors if image has been flipped.
 
@@ -278,9 +280,9 @@ Refer to **Figure 6** and **Appendix F** for alternate solutions for connecting 
 The recommended hardware interface to a CS is currently the **Sparkfun Endpoint** system (**Figure 6.** & **APPENDIX&nbsp;F**) which permits the i2c bus to be run over long standard Cat5 twisted pair cable.  It can also carry the required raw power supply. The Sparkfun Endpoints are used **in pairs** and can cater for voltage shifting between 5V Command Stations  (e.g. Mega) and 3.3V sensorCAM as required. For the very simplest off-the-shelf arrangement, an ESP32-WROVER-DEV CAM with a cheap ESP32 breakout board (including regulator) can be linked to an Endpoint with 4 Dupont wires for a working CAM system on the end of a cat5 cable of considerable length as indicated in **Figure 6** & **APPENDIX&nbsp;F**, needing only a remote, preferably electrically isolated(floating), 7-10Vdc 0.5A power supply and a matching endpoint on a Command Station.  For a cheaper solution, use the PCA9515A with dupont jumpers for a limited (2m?) reach with either esp32-CAM or Wrover-CAM powered via USB.  
 **Note:** The Sparkfun Endpoint may also need a jumper cut or joined for i2c bus voltage level matching to the Command Station.  
 
-The ESP32-WROVER-DEV board is a good alternative to the original ESP32-CAM-MB. The slightly bigger CAM will be a little more convenient with the ESP32S 38P Expansion board. This 38 pin expansion board with 5V regulator is described in the video below **BUT IGNORE PRESENTERS DESCRIPTION OF HIS FAULTY 5V REGULATOR AT THE END**
+The ESP32-WROVER-DEV board is a good alternative to the original ESP32-CAM-MB. The slightly bigger CAM will be a little more convenient with the ESP32S Expansion board. This 38 pin expansion board with 5V regulator is poorly described in the video below **BUT IGNORE PRESENTERS DESCRIPTION OF HIS FAULTY 5V REGULATOR past the 5minute mark**.  With NO Wrover, verify the regulator gives 5V from 9V at the barrel jack and remove power before inserting or removing the Wrover.  For want of a better video...
 
-https://www.youtube.com/watch?v=AP_CX-SFPAQ
+[ESP32S 38P/V4/ Expansion board](https://www.youtube.com/watch?v=AP_CX-SFPAQ)
 
 The SensorCAM software has been almost exclusively tested on the ESP32-CAM-MB as seen in **Figure 7**. The original prototype was fitted with some enhancements that may not be needed for the user's application.  However, at least one “super bright” LED (the "programmable nLED") is recommended for convenience to visually indicate when a sensor is “tripped”, connected between 3.3V via a resistor (~470R) to GPIO14.
 
@@ -301,9 +303,9 @@ The ESP32-CAM reset button, remotely mounted on CAM, may be difficult to access.
 
 ### 8.1 Introduction
 
-The operation of the railway depends on a Control Station that polls the sensorCAM for sensor states. This might be a dedicated Arduino Mega 2560 for example. It might be a Command Station running DCC-EX and EXRAIL software, or your own personal device & code. If the sensorCAM is powered up with default settings (from EPROM), or adjusted by the user at the start, the program need only talk to sensorCAM over an i2c bus using the commands a,b,i,l & o for example, or it may be more sophisticated, providing a command channel from a Control Station console/monitor to the sensorCAM to enable most configuration commands via the i2c bus.
+The operation of the railway depends on a Control Station that polls the sensorCAM for sensor states. This might be a dedicated Arduino Mega 2560 for example. It might be a CSB1 Command Station running DCC-EX and EXRAIL software. If the sensorCAM is powered up with default settings (from EPROM), or adjusted by the user at the start, the program need only talk to sensorCAM over an i2c bus using the commands a,b,i,l & o for example, or it may be more sophisticated, providing a command channel from a Control Station console/monitor to the sensorCAM to enable most configuration commands via the i2c bus.
 
-The i2c bus is running at 100kHz on the prototype software. It has not been tested at any higher speed yet. It is running fine over a 20m long i2c bus to the master microcontroller (CSB1 or Mega).
+The i2c bus is running at 100kHz on the prototype software. It has not been tested at any higher speed yet. It has been running fine over a 10m long i2c bus to the master microcontroller (CSB1, Mega or others).
 
 ### 8.2   DCC-EX Command Station
 
@@ -332,14 +334,14 @@ To define a sensor, use '**a**' command,  Processing4, or (outdated method) a br
 
 **b#\[,$]**&nbsp; &nbsp; **Bank** # sensors. Show which sensors OCCUPIED(in bits 7-0).(1=occ.)(**b#,$** sets _brightSF_ to $)
 
-**c$$$$**&nbsp; &nbsp; **reCalibrate** camera CCD occasionally and grab new references for all enabled sensors(Beware of doing this while any sensors are occupied) **N.B.** Obstructed sensors will later need an **r%%**. Check all bank LEDS are off AND check all sensors are unoccupied before recalibrate. Can set AWB AEC AGC CB through $$$$ e.g. c0110  
+**c$$$$**&nbsp; &nbsp; **reCalibrate** camera CCD occasionally and grab new references for all enabled sensors(Beware of doing this while any sensors are occupied) **N.B.** Obstructed sensors will later need an **r%%**. Check all bank LEDs are off AND check all sensors are unoccupied before recalibrate. Can set AWB AEC AGC CB through $$$$ e.g. c0110  
 Also able to change default setting for Brightness, Contrast & Saturation with extra digits e.g. c$$$$012
 
 **d%%[#]**&nbsp; **\*Difference** score in colour& brightness between Ref & actual image. Show # grabs.
 
 **e**&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; **EPROM** save of any new Sensor offset positions, pvtThresholds, new twins and 5 default parameter settings.
 
-**f%%**&nbsp; &nbsp; &nbsp; **\*Frame** buffer sample display. Print latest bytes in _Sensor_ref[%%]_ & Sensor S[%%] positions.
+**f%%**&nbsp; &nbsp; &nbsp; **\*Frame** buffer sample display. Print latest bytes in _Sensor_ref[%%]_ & Sensor S%% positions.
 
 **g**&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; **\*Get** Camera Status. Displays most current settings available in webcam window (both sensor & video mode).
 
@@ -369,7 +371,7 @@ Also able to change default setting for Brightness, Contrast & Saturation with e
 
 **s%%** &nbsp; &nbsp; &nbsp; **\*Scan** for new location for sensor  S%%(00-97). If found, records location in _Sensor[0%%]_. **(Note 12)**
 
-**t##[,%%]** **Threshold** level##(31-98 only) set as default. **t\#\#,%%** sets the pvtThreshold for sensor %%. (**t0,%%** to clear)
+**t##[,%%]** **Threshold** level##(31-98 only) set as default. [**t\#\#,%%** sets the pvtThreshold for sensor %%]. (**t0,%%** to clear)
 
 **t##** &nbsp; &nbsp; &nbsp; &nbsp; **Tabulates** \#\#(2-30 only) rows of scroll data (continuous scroll toggled off) **Note:** **t1** alone toggles scroll on/off.
 
@@ -421,20 +423,20 @@ Also able to change default setting for Brightness, Contrast & Saturation with e
 **4.** The I2C data returned(after header byte) is in binary bytes and in a format depending on the last command.  
 **5.** Header byte[0] is the ASCII command character (b,d.i,m,p,q,or t) or an error code(OxFE) if no valid data.  
 **6.** If the error code is generated, it is followed by the last received (inappropriate) command string.  
-**7.** b$ cmd returns$+1 sensor status bytes for bank$,$-1 etc. down to bank 0. 'b' defaults to 'b9'(all).  
-**8.** d%% cmd returns 4 data bytes with binary values for bsn, maxDiff+bright, maxDiff & bright in that order.  
-**9.** i%% cmd returns 2 data bytes: byte[1]= bsn and byte[2]=0 if unoccupied or 1(true) if occupied.(+ more)  
-**10.** p$ cmd returns Byte[0] header + count +3 data bytes per enabled (bank$) sensor+ parity (max 27 bytes).  
+**7.** b$ cmd returns $+1 sensor status bytes for bank$,$-1 etc. down to bank 0. 'b' defaults to 'b9'(all).  
+**8.** d%% cmd returns 4 data bytes with binary values for _bsn_, _maxDiff_+_bright_, _maxDiff_ & _bright_ in that order.  
+**9.** i%% cmd returns 2 data bytes: byte[1]= _bsn_ and byte[2]=0 if unoccupied or 1(true) if occupied. (+ more)  
+**10.** p$ cmd returns Byte[0] header + count +3 data bytes per enabled (bank$) sensor + parity (max 27 bytes).  
 **11.** q$ cmd returns $+1 bank sensor enabled status bytes for bank$,$-1 etc. down to bank 0. 'q' defaults to 'q1'  
-**12.** s%% Scan looks for a bright LED on a dimmer background. The LED should be placed on the desired sensor position. This old method of placing sensors is not recommended. The Scan command may be be deprecated.  
-**13.** t##[,%%] cmd. initially sends CS the old threshold value (i.e. BEFORE change in the case of t##). Also returns sensor scores(bpd) in 2-byte pairs with MSB set so: bsn(+0x80 if undecided) & bpd(+0x80 if OCCUPIED). Byte[0]header;[1]threshold;[2]S00bpd;[3]bsn;[4]bpd;[5]bsn;[6]bpd etc. Ends with bsn=80 (max 15 enabled)  
-**14.** m$,%% sets maxSensors to %% (USB or i2c) (as can h%% (%%<98)). m0,1%% sets minSensors. Data sent to screen is bound between min and maxSensors. Extra parameter status bytes added to i2c bus for display.  
-**15.** The ‘‘ character is just a null cmd. Used before R, d & t to prevent BCD Mega itself pre-interpreting them.  
-**16.** N.B.: The ESP32-CAM uses old ESP32 which has I2C limitations. It has a “pipeline” for returning data which results in a delay in response. i.e. the first request after a command will return OLD data. A SECOND request should return the desired data described above. A third or fourth request may return updated data.  
-**17.** Some commands take time to complete, as command processing can only happen once per 100mSeconds (i.e. the frame rate of the CAM). The I2C master should allow for latency in response where necessary.  
+**12.** s%% Scan looks for a bright LED on a dimmer background. The LED should be placed on the desired sensor position. This old method of placing sensors is not recommended. The Scan command is the last resort when USB is unavailable.  
+**13.** t##[,%%] cmd. initially sends CS the old _threshold_ value (i.e. BEFORE change in the case of t##). Also returns sensor scores(_bpd_) in 2-byte pairs with MSB set so: _bsn_(+0x80 if undecided) & _bpd_(+0x80 if OCCUPIED). Byte[0]header;[1]threshold;[2]S00bpd;[3]bsn;[4]bpd;[5]bsn;[6]bpd etc. Ends with bsn=80 (max 15 enabled)  
+**14.** m$,%% sets _maxSensors_ to %% (USB or i2c) (as can h%% (%%<98)). m0,1%% sets _minSensors_. Data sent to screen is bound between min and maxSensors. Extra parameter status bytes added to i2c bus for display.  
+**15.** The " character is just a null cmd. Used before R, d & t to prevent BCD Mega itself pre-interpreting them.  
+**16.** N.B.: The ESP32-CAM uses old ESP32S which has I2C limitations. It has a “pipeline” for returning data which results in a delay in response. i.e. the first request after a command will return OLD data. A SECOND request should return the desired data described above. A third or fourth request may return updated data.  
+**17.** Some commands take time to complete, as command processing can only happen once per 100mSeconds (i.e. the frame rate of the CAM). The I2C master should allow for latency in response where necessary. Place a DELAY(400) between all PARSE("<N....>") EXRAIL commands. 
 **18.** Data requested over i2c may have a parity byte appended, and a check byte in byte[31].  
 **19.** NOTE Automatic updating of ref image of unoccupied sensors now starts after last SUS (suspend) indicator.  
-**20.** **a%%,rrr,xxx** performs extended 'create sensor' equivalent to  **k%%,rrr,xxx + a%% + r%%** for new sensor %%  
+**20.** **a%%,rrr,xxx** performs extended 'create sensor' equivalent to  **k%%,rrr,xxx + a%% + r%%** for new sensor S%%  
 **21.** Connection to DCC-EX Command Station has cmd. variations. See APPENDIX C for revised command detail.
 
 ## APPENDIX B
@@ -632,7 +634,7 @@ Note: With ‘0%%’ notation, unless you understand the issue, avoid using bank
 
 ### 2. Multiple Cams
 
-Multiple sensorCAMs can be easily handled if CAM2, CAM3 etc are defined along the lines of CAM above, so **IF(CAM2 012)** tests a different sensor to **IF(CAM3 012)**, provided **SENSORCAM2_ VPIN** etc. are defined. Using CS native commands, e.g. **<Ni 212>** and **<Ni 312>**, can also access **S12** on different CAMs. **The #define SENSORCAM_VPIN ###** is essential for cam1. Do NOT insert a 1 in to **SENSORCAM_VPIN**. You may use **SENSORCAM2_VPIN** and **SENSORCAM3_VPIN** with **CAM2** and **CAM3** in _config.h_
+Multiple sensorCAMs can be easily handled if CAM2, CAM3 etc are defined along the lines of CAM above, so **IF(CAM2 012)** tests a different sensor to **IF(CAM3 012)**, provided **SENSORCAM2_ VPIN** etc. are defined. Using CS native commands, e.g. **<Ni 212\>** and **<Ni 312\>**, can also access **S12** on different CAMs. **The #define SENSORCAM_VPIN ###** is essential for cam1. Do NOT insert a 1 in to **SENSORCAM_VPIN**. You may use **SENSORCAM2_VPIN** and **SENSORCAM3_VPIN** with **CAM2** and **CAM3** in _config.h_
 
 ## APPENDIX J
 
