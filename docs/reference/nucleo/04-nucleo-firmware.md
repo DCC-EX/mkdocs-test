@@ -1,3 +1,8 @@
+---
+hide:
+  - toc
+---
+
 # Nucleo - STLink Firmware
 
 ## Upgrade the debugger firmware

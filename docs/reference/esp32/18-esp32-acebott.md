@@ -1,3 +1,8 @@
+---
+hide:
+  - toc
+---
+
 # ACEBOTT + EX8874
 
 !!! note "ACEBOTT Beta Testing"

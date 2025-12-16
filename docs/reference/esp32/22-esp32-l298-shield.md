@@ -1,3 +1,8 @@
+---
+hide:
+  - toc
+---
+
 #  ESP32 + L298 Shields
 
 ![Genuino Arduino R3](/_static/images/esp32/espduino-32-motor-shield-fritzing.png){ width=40% align=right }

@@ -1,3 +1,8 @@
+---
+hide:
+  - toc
+---
+
 # Nucleo 64 - WiFi and Pins
 
 ## MakerFabs WiFi shield

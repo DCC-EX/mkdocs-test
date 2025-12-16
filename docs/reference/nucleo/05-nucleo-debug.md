@@ -1,3 +1,8 @@
+---
+hide:
+  - toc
+---
+
 # Nucleo - Debug
 
 One of the features of the Nucleo-F4 boards is their included debug facility.
