@@ -1,4 +1,4 @@
-# EX-SensorCAM Abridged Manual
+ # EX-SensorCAM Abridged Manual
 
 ## CONTENTS
 
@@ -345,45 +345,45 @@ Also able to change default setting for Brightness, Contrast & Saturation with e
 
 **h$[,\#]** &nbsp; &nbsp; **\*Help(debug)** output.  **h9**  to turn all OFF,  **h0**  turn ON detailed USB output. '**h7,#**' "Waits" scroll on a bank# trip.
 
-**i%%[,$$]** &nbsp;**Info.** on S%%.  Status(enabled/occupied), position(r,x), any twin(S$$), pvtThreshold & brightness
+**i%%[,$$]** &nbsp;**Info.** on S%%.  Status(enabled/occupied), position(r,x), any twin(S$$), pvtThreshold & brightness.
 
-**j$#** &nbsp; &nbsp; &nbsp; &nbsp; **\*adJust** camera setting $ to value # and display most settings(as for '**g**'). '**j**' alone lists the options for $#
+**j$#** &nbsp; &nbsp; &nbsp; &nbsp; **\*adJust** camera setting $ to value # and display most settings (as for '**g**'). '**j**' alone lists options for $#.
 
-**k%%,rrr,xxx** \*set **coordinates** of Sensor S$$ to row: rrr & column: xxx. Follow with  **r%%**. Verify values with **p$** 
+**k%%,rrr,xxx** \*set **coordinates** of Sensor S$$ to row: rrr & column: xxx. Follow with  **r%%**. Verify values with **p$**. 
 
- **l%%** &nbsp; &nbsp; &nbsp; (Lima) **Latch** sensor S%% to on(1 = occupied(LED lit) & also set _SensorActive[%%]_ false to disable sensing.
+**l%%** &nbsp; &nbsp; &nbsp; (Lima) **Latch** sensor S%% to on(1 = occupied(LED lit) & also set _SensorActive[%%]_ false to disable sensing.
 
-**m$[,%%]** **\*Minimum** $(2) sequential frames over _Threshold_ to trigger/trip sensor. Shows list of parameters. **(Note 14)**
+**m$[,%%]** **\*Minimum** $(1-4) sequential frames over _Threshold_ to trigger/trip sensor. Shows list of parameters. **(Note 14)**
 
- **n#[,%%]** &nbsp; **nLED** bank Number assigned to the programmable status nLED. Optional  **n10,%%**  to set *minSensors*.
+**n#[,%%]** &nbsp; **nLED** bank Number assigned to the programmable status _nLED_. Optional  **n10,%%**  to set *minSensors*.
 
-**o%%**  (Oscar) force **Off** sensor%% (0=UN-occupied(LED off) Also set _SensorActive[##]_ false to disable updating.
+**o%%** &nbsp; &nbsp; &nbsp; (Oscar) force **Off** sensor%% (0=UN-occupied, LED off) Also set _SensorActive[##]_ false to disable updating.
 
-**p$**&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; **\*Position Pointe**r table info for banks 0 to  $\$  giving DEFINED sensor r/ x\) positions.  p%% shorter.
+**p$**&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; **\*Position Pointe**r table info for banks 0 to $ giving DEFINED sensor r/ x\) positions.  p%% shorter.
 
-**q$**&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; **\*Query** bank$, to show which sensors ENABLED(in bits 7-0). 1=enabled. **q9** gives ALL banks
+**q$**&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; **\*Query** bank$, to show which sensors ENABLED(in bits 7-0). 1=enabled. **q9** gives ALL banks.
 
-**r%%[,0]** &nbsp;**Refresh** Average _Sensor_Ref[##]_ (if defined), enable & calc. cRatios etc. **r%%,0** refreshes block  S%0  to  S%% 
+**r%%[,0]** &nbsp;**Refresh** Average _Sensor_Ref[##]_ (if defined), enable & calc. cRatios etc. **r%%,0** refreshes block S%0 to S%%. 
 
 **r00** &nbsp; &nbsp; &nbsp; &nbsp; **Refresh** Average Refs etc. for ALL defined sensors. Ignores enable[]. Sensor[00] reserved for brightness ref.
 
-**s%%** &nbsp; &nbsp; &nbsp; **\*Scan** for new location for sensor  S%%(00-97). If found, records location in _Sensor[0%%]_. Note 12
+**s%%** &nbsp; &nbsp; &nbsp; **\*Scan** for new location for sensor  S%%(00-97). If found, records location in _Sensor[0%%]_. **(Note 12)**
 
 **t##[,%%]** **Threshold** level##(31-98 only) set as default. **t\#\#,%%** sets the pvtThreshold for sensor %%. (**t0,%%** to clear)
 
 **t##** &nbsp; &nbsp; &nbsp; &nbsp; **Tabulates** \#\#(2-30 only) rows of scroll data (continuous scroll toggled off) **Note:** **t1** alone toggles scroll on/off.
 
-**t1,%%**  &nbsp; &nbsp; clear 1 entire bank of _pvtThresholds_. Use **t1,99** to clear ALL banks (0-9). **Note:** **t99** lists all _pvtThresholds_
+**t1,%%**  &nbsp; &nbsp; Trash 1 entire bank of _pvtThresholds_. Use **t1,99** to clear ALL banks (0-9). **Note:** **t99** lists all _pvtThresholds_
 
- **u%%** &nbsp; &nbsp; &nbsp; **\*Un-define**/remove sensor %%  (Sensor S%%=0 & set DISABLED) **u99** for ALL. Cmd '**e**' will erase from EPROM.
+ **u%%** &nbsp; &nbsp; &nbsp; **\*Un-define**/remove sensor %%  (Sensor S%%=0 & set DISABLED) **u99** for ALL. '**e**' will erase from EPROM.
 
-**v[1|2]**&nbsp; &nbsp; &nbsp; **Video** mode. Causes reboot as a webserver. "**v2**" will connect to  2nd (alt.) router ssid.(**v** or **v0** for version)
+**v[1|2]**&nbsp; &nbsp; &nbsp; **Video** mode. Causes reboot as a webserver. '**v2**' will connect to  2nd (alt.) router ssid.(**v** or **v0** for version)
 
 **w**&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; **\*Wait** for new command line (\\n) before resuming sensing (handy to freeze display data scroll - see **t1** toggle)
 
 **x###** &nbsp; &nbsp; &nbsp; \*selects first pixel column(0-319) & **z###** selects image width (### columns(1-320)) for imaging.
 
-**y###** &nbsp; &nbsp; &nbsp; \*selects first row for image and initiates a binary data dump for that row (header + #*2 bytes) using rgb565.  
+**y###** &nbsp; &nbsp; &nbsp; \*selects first row for image and initiates a binary data dump for that row (header + #x2 bytes) using rgb565.  
   &nbsp; &nbsp; &nbsp; &nbsp; This command starts a process that must, after a series of 'y' commands, end with a terminator of 'yy'.
 
 **R** & **F**&nbsp; &nbsp; &nbsp; ***Reset** commands- will Reset CAM and initiate the Sensor mode. Both will Finish the WebServer('**v**') mode.
