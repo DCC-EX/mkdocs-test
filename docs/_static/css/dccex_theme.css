@@ -357,6 +357,11 @@
   }
 }
 
+/* Prevent Discord/social from wrapping under copyright */
+.md-footer-meta__inner {
+  flex-wrap: nowrap;
+}
+
 /* DCC-EX NEWS (BLOG) MODIFICATIONS */
 
 /* Horizontal line separator for News articles */
