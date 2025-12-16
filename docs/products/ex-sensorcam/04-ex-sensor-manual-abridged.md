@@ -1,4 +1,4 @@
- # EX-SensorCAM Abridged Manual
+# EX-SensorCAM Abridged Manual
 
 ## CONTENTS
 
