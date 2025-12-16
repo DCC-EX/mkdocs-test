@@ -1,3 +1,8 @@
+---
+hide:
+  - toc
+---
+
 # EX-CSB1 Technical Reference
 
 - [Link to EX-CSB1 Schematic](/_static/images/schematics/csb1-schematic.pdf)

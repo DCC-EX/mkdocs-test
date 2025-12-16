@@ -1,3 +1,8 @@
+---
+hide:
+  - toc
+---
+
 # Nucleo - Power
 
 ## VIN from EX8874  

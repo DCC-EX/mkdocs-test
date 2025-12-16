@@ -1,3 +1,8 @@
+---
+hide:
+  - toc
+---
+
 # Nucleo 144 - Pins
 
 ## Pin diagrams

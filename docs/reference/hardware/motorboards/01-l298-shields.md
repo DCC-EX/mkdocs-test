@@ -1,3 +1,8 @@
+---
+hide:
+  - toc
+---
+
 # L298P & L298HN Shields
 
 - DCC mode requires motor boards/shields where the switching frequency is capable of 10kHz on each output wire.

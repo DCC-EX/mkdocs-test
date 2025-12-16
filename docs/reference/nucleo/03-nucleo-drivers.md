@@ -1,3 +1,8 @@
+---
+hide:
+  - toc
+---
+
 # Nucleo - USB Drivers
 
 # Required for Windows
