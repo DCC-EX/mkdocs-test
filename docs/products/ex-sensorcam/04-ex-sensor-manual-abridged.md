@@ -677,7 +677,4 @@ ALL FOLLOWING IMAGES ARE FOR GENERAL INFORMATION ONLY& NOT DIRECTLY REFERENCED I
 
 ![ESP32 CAM Closeup 2](/_static/images/ex-sensorcam/esp32-cam-closeup-2.png)
 
-![ESP32 CAM Closeup 3](/_static/images/ex-sensorcam/esp32-cam-closeup-3.png)
-
-![ESP32 CAM Closeup 4](/_static/images/ex-sensorcam/esp32-cam-closeup-4.png)
 
