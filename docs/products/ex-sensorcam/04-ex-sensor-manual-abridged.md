@@ -371,11 +371,11 @@ Also able to change default setting for Brightness, Contrast & Saturation with e
 
 **s%%** &nbsp; &nbsp; &nbsp; **\*Scan** for new location for sensor  S%%(00-97). If found, records location in _Sensor[0%%]_. **(Note 12)**
 
-**t##[,%%]** **Threshold** level##(31-98 only) set as default. [**t\#\#,%%** sets the pvtThreshold for sensor %%]. (**t0,%%** to clear)
+**t##[,%%]** **Threshold** level##(31-98 only) set as default. [**t\#\#,%%** sets the _pvtThreshold_ for sensor %% (**t0,%%** to clear)]
 
 **t##** &nbsp; &nbsp; &nbsp; &nbsp; **Tabulates** \#\#(2-30 only) rows of scroll data (continuous scroll toggled off) **Note:** **t1** alone toggles scroll on/off.
 
-**t1,%%**  &nbsp; &nbsp; Trash 1 entire bank of _pvtThresholds_. Use **t1,99** to clear ALL banks (0-9). **Note:** **t99** lists all _pvtThresholds_
+**t1,%%**  &nbsp; &nbsp; **Trash** 1 entire bank of _pvtThresholds_. Use **t1,99** to clear ALL banks (0-9). **Note:** **t99** lists all _pvtThresholds_
 
  **u%%** &nbsp; &nbsp; &nbsp; **\*Un-define**/remove sensor %%  (Sensor S%%=0 & set DISABLED) **u99** for ALL. '**e**' will erase from EPROM.
 
@@ -508,16 +508,18 @@ e.g. **<Ni 2%%\> <Nr&nbsp;2%%\>** also **<Nm 200\> <Nf 212\> <Nt 243\>**
 | **<N i %%[ $$]\>** | <Ni 12\> | i12,02 | **Info.** & assigns new twin sensor(S$$) for "second-opinion" on S%%. | 
 | **<N j $ #\>**  | <Nj B 2\> | jB2 | **adJust** ov2640 parameters($)(Brightness, Contrast etc)(values 0-2 only). |
 | **<N l %%\>**   | <Nl 12\>  | l12 | (lima) **Latch** output state of sensor bsNo to 1 & disable. |
-| **<N m $ [%%]\>** | <Nm 3 20\> | m3,20 | **Min/max** _min2trip_(1-4) frames [_maxSensors_] Show parameter status data. |
+| **<N m $ [%%]\>** | <Nm 3 20\> | m3,20 | **Min/max** _min2trip_(1-4) frames [_maxSensors_] **<NM\> shows CAM parameters** |
 | **<N n$ [%%]\>** | <Nn 1 10\> | n1,10 | set **nLED**= bank $ [and _minSensors_=%% to limit display range] <Nn v\> verifies. |
 | **<N o %%\>**   | <No 12\> | o12 | (oscar) **Zero** output state of sensor bsNo. Reset to 0 & disable. |
 | **<N p %%\>**   | <Np 1\>  | p1  | **Positions**(r,x) of all enabled sensors in bank are listed. |
 | **<N q #\>**    | <Nq 1\>   | q1  | **Query bank**# enabled states of sensors (0 indicates sensor disabled). |
-| **<N r [%%]\>**  | <Nr 12\> | r12 | **Refresh Reference** image for sensor S%% (default ALL=r00). |
-| **<N s %%\>**    | <Ns 12\>  | s12 | **Scan** image for brightest spot and set S%% to center that pixel. |
-| **<N t ## [%%]\>** | <N t 43 12\> | t43,12 | **Threshold** displayed, sets global threshold (32-98) [sets a _pvtThreshold_]. |
-| **<N t ##\>**    | <N t 10\> | t10 | Tabulate ## (2-31) rows of scroll data similar to CAM scroll.
-| **<N t # [%%]\>** |  <Nt 1\>   | t1 | Trash pvtThresholds. **<Nt 0 %%\>** individually, **<Nt 1 %%\>** for bank, **<Nt&nbsp;99\>** trashes ALL pvtThresholds,  **<Nt&nbsp;1\>** toggles scroll on/off. |
+| **<N Q\>**      | <NQ\>     | n/a | **Query** state of all sensorCAM Sensors
+| **<N r [%%]\>** | <Nr 12\>  | r12 | **Refresh Reference** image for sensor S%% (default ALL=r00). |
+| **<N s %%\>**   | <Ns 12\>  | s12 | **Scan** image for brightest spot and set S%% to center that pixel. |
+| **<N t ## [%%]\>** | <Nt 43 12\> | t43,12 | **Threshold** displayed, sets global _threshold_ (32-98) [sets a _pvtThreshold_]. |
+| **<N t ##\>**    | <Nt 10\> | t10 | **Tabulate** ## (2-31) rows of scroll data similar to CAM scroll.
+| **<N t # %%\>** | <Nt 0 12\> | t0,12 | **Trash** pvtThresholds. **<Nt 0 %%\>** individually, **<Nt 1 %%\>** for bank, **<Nt&nbsp;1&nbsp;99\>** trashes ALL pvtThresholds.  **<Nt&nbsp;99\>** lists ALL pvtThresholds. |
+| **<N t 1\>** | <Nt 1\>   | t1 | **toggles** scroll on/off. |
 | **<N u %%\>**  | <Nu 12\>  | u12 | **Undefine** and disable sensor bsNo(erase coordinates). **<Nu 99\>** for ALL |
 | **<N v [#]\>** | <N v 1\> | v1  |  **Video** mode(1-2) invoke webCAM, or alt webCAM with v 2. **v** for **version** |
 | **<N&nbsp;w\>**     | <Nw\>    | w   | **Wait**. Stop/start CAM imaging (flash), status sensing & streaming. |
