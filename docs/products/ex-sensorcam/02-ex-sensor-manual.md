@@ -2,47 +2,47 @@
 
 ## CONTENTS
 
-1. Overview 1
+1. Overview
 
-2. ESP32-CAM 3
+2. ESP32-CAM
 
-3. Physical Installation 5
+3. Physical Installation
 
-4. Notation& Help commands 7
+4. Notation& Help commands
 
-5. Configuration 8
+5. Configuration
 
-6. PROCESSING4 monitor/console 11
+6. PROCESSING4 monitor/console
 
-7. Wiring Requirements 13
+7. Wiring Requirements
 
-8. Communication and Host Operation 14
+8. Communication and Host Operation
 
-9. Methodology of operation 15
+9. Methodology of operation
 
 ## Appendix
 
-A. ESP32 sensorCAM Command Summary 17
+A. ESP32 sensorCAM Command Summary
 
-B. Check List for Optimising Sensor Resonse 19
+B. Check List for Optimising Sensor Resonse
 
-C. Filtered/parsed DCC EX-CS commands 20
+C. Filtered/parsed DCC EX-CS commands
 
-D. Linear Sensor Commands 21
+D. Linear Sensor Commands
 
-E. Tabulation of Recommended DCC-EX-CS id's for sensorCAM 23
+E. Tabulation of Recommended DCC-EX-CS id's for sensorCAM
 
-F. Hardware Interface Notes.(including PCA9515A& SF Endpoints) 24
+F. Hardware Interface Notes.(including PCA9515A& SF Endpoints)
 
-G. I2C sensorCAM commands& PROTOCOL 28
+G. I2C sensorCAM commands& PROTOCOL
 
-H. Notes on use of EX-Rail with SensorCAM 29
+H. Notes on use of EX-Rail with SensorCAM
 
-I. Configuring EX-CS to connect to sensorCAM as an EXIO device 30
+I. Configuring EX-CS to connect to sensorCAM as an EXIO device
 
-J. ESP32-CAM pinout reference(CAM version v1.6& 1.9) 31
+J. ESP32-CAM pinout reference(CAM version v1.6& 1.9)
 
-Addenda 32
+**Addenda**
 
 ## 1. Overview
 
@@ -108,7 +108,7 @@ After the sensorCAM has booted up, it reads frames for 9 seconds before automati
 
 The ESP32-CAM has an Infra-Red(IR) filter to enhance colour response. The sensorCAM relies on strong colour contrast(saturation) to detect changes. Low lighting levels and poor contrast degrades performance.
 
-To run the sensorCAM.ino, it will be necessary to configure the Arduino IDE for the ESP32 as covered in the above you-tube tutorial links. Load and run the demonstration. For the sensorCAM, you will require new files in a directory such as Arduino/sensorCAM as shown below. Create and edit configCAM.h from the example. The ESP32-CAM uses the“Al Thinker ESP32-CAM” found under Tools:Board:ESP32(select Tools> Board: ESP32:“ESP32 Wrover Module" for WROVER-CAM). Select Partition Scheme: Huge APP. Check the correct Port is selected, compile sensorCAM.ino, and upload to the CAM before opening the Arduino monitor.
+To run the sensorCAM.ino, it will be necessary to configure the Arduino IDE for the ESP32 as covered in the above you-tube tutorial links. Load and run the demonstration. For the sensorCAM, you will require new files in a directory such as Arduino/sensorCAM as shown below. Create and edit configCAM.h from the example. The ESP32-CAM uses the“Al Thinker ESP32-CAM” found under Tools:Board:ESP32(select Tools\> Board: ESP32:“ESP32 Wrover Module" for WROVER-CAM). Select Partition Scheme: Huge APP. Check the correct Port is selected, compile sensorCAM.ino, and upload to the CAM before opening the Arduino monitor.
 
 ![Arduino IDE Files](/_static/images/ex-sensorcam/arduino-ide-files.png)
 
@@ -398,7 +398,7 @@ The i2c bus is running at 100kHz on the prototype software. It has not been test
 
 ### 8.2   DCC-EX Command Station
 
-Setting up a DCC-EX Command Station, should you have one, requires configuration details placed in files config.h and mySetup.h along with a driver IO_EXSensorCAM.h and myAutomation.h. These must go in the directory containing file CommandStation-EX.ino. The IO_EXSensorCAM.h driver is based on the modified IO_EXIOExpander.h code. Refer to APPENDIX H for installation details. EXSensorCAM.h code mirrors the i,I,o,t& m commands, while the EXIODPUP command may serve as the enable function(a). EXIOExpander.h codes don't have the“control& setup” sensorCAM functions otherwise available from a USB console so additional functionality was added using the DCC-EX sensorCAM native command<N>(if using the newest CamParser.cpp).
+Setting up a DCC-EX Command Station, should you have one, requires configuration details placed in files config.h and mySetup.h along with a driver IO_EXSensorCAM.h and myAutomation.h. These must go in the directory containing file CommandStation-EX.ino. The IO_EXSensorCAM.h driver is based on the modified IO_EXIOExpander.h code. Refer to APPENDIX H for installation details. EXSensorCAM.h code mirrors the i,I,o,t& m commands, while the EXIODPUP command may serve as the enable function(a). EXIOExpander.h codes don't have the“control& setup” sensorCAM functions otherwise available from a USB console so additional functionality was added using the DCC-EX sensorCAM native command<N\>(if using the newest CamParser.cpp).
 
 ### 8.3 Non-DCC-EX system
 
@@ -434,7 +434,7 @@ Each sensor is split into 4 quadrants(quad), each quad has 4 pixels of 3 colours
 
 The sum of all 12 bytes(4\*3) in a quad is found as a quad brightness (4off) and the sum (4) of each colour (rgb) for each quad is found giving a total of 12 colour sums (3 colours \* 4 quads) plus 4 brightness values.
 
- Within each quad, 3 colour ratios are calculated for Red/green green/blue blue/red(largest(*32) divided by smallest(any 0 changed to 1) to give 12 colour ratios, each>=32 (32 if identical) (placed in array _Cratio[12]_)
+ Within each quad, 3 colour ratios are calculated for Red/green green/blue blue/red(largest(*32) divided by smallest(any 0 changed to 1) to give 12 colour ratios, each\>=32 (32 if identical) (placed in array _Cratio[12]_)
 
 Compare the values in _Cratio[12]_ with the reference array (precomputed from _Sensor_ref[]_) and find the maximum “_Xratio_” between the two sets of 12 “_Cratios_” using the same formula (giving _Xratios_ of 32 to 2016)
 
@@ -442,7 +442,7 @@ Set _maxDiff_ to the largest ratio for a sensor from the 12 “_Xratios_”
 
 A brightness score is similarly calculated between the full ref. brightness and that for the current sensor using formula 16\*_bright_/_Sen_Brightness_Ref[bsn]_-16. It is scaled to give a value from 0 upwards. With _brightSF_=2, a score of 2 represents about 7% brighter so is relatively insensitive. Code uses int so <=6% difference gives a 0 score.
 
-The “diff” score(_bpd_) comprises of (_bright_\*_brightSF+maxDiff_)(>=32) and is weighted towards colour difference+small brightness component(of 2 for 7% change)
+The “diff” score(_bpd_) comprises of (_bright_\*_brightSF+maxDiff_)(\>=32) and is weighted towards colour difference+small brightness component(of 2 for 7% change)
 
 The diff(bpd) is compared to threshold for a decision on trip state. If greater than _threshold_, several additional checks are made including requiring 2 consecutive frames to exceed _threshold_, averaging pixels over two frames, and possibly confirmation from a twin sensor. These contribute to an additional response time delay (+100mSec).Furthermore the reference image is normally based on a 32 frame average pixel to eliminate any “noise” in the sensor reference itself.
 
@@ -735,8 +735,8 @@ Line sensors, developed for visitor intrusion curtains, are currently automatica
 
 **Table B** below shows the colour code used to identify sensors on the Processing 4 track image.  
 For example, sensor S12 has a bsNo 1/2 for which the colours are Brown/Red (seen on sensor box edges).  
-For CAM number 1, the full CS sensor S12 ID is 112 when used in CS native <N> commands such as **<N i 112>** 
-The use of the CAM # can be optional.  If only one CAM is installed (or selected), **<Ni 12>** is sufficient.
+For CAM number 1, the full CS sensor S12 ID is 112 when used in CS native <N\> commands such as **<N i 112\>** 
+The use of the CAM # can be optional.  If only one CAM is installed (or selected), **<Ni 12\>** is sufficient.
 For EXRAIL it can be tested so: **AT(CAM 012)** where the vpin is invisibly calculated as (700+012).
 **N.B.** The use of the '0' after CAM is essential in EXRAIL.  
 The colour code is the standard resistor value colour code for 0-9.
@@ -777,7 +777,7 @@ Sparkfun endpoints(requires a matching sparkfun endpoint at CS)(CS interface opt
 
 ![Typical Application with Buck Converter](/_static/images/ex-sensorcam/typical-application-buck-converter.png)
 
-(Dual optional) CAM wiring with Endpoints and 5V Buck reg. powered over GRN-GRNW(Vin) with Vin(>7V)
+(Dual optional) CAM wiring with Endpoints and 5V Buck reg. powered over GRN-GRNW(Vin) with Vin(\>7V)
 
 ![Optional Dual CAM Wiring](/_static/images/ex-sensorcam/optional-dual-cam-wiring.png)
 
@@ -843,7 +843,7 @@ For any peripheral device, the vPin is needed for commands (e.g.700+5), but, if 
 > To avoid frequent“CAM” in scripts, an alias can be assigned e.g. ALIAS(ESSEX_P1, CAM+0x10)
 ```
 
-With each sensorCAM having up to 80 sensors, it is desirable to test groups of (1 to 8) sensors with a single EXRAIL test using the **IFGTE()** or **IFLE()** commands. To do this, the sensors are logically arranged in “banks” of (consecutive) vpins. The logical grouping available can be written in the form “bs” or b/s where b can have bank values of 0-9 (10 banks) and s values 0-7 (8 sensors). **IFGTE** and **IFLT** read a whole bank "value". Native CAM commands can also be issued e.g. **PARSE(“<N b 4>”)** for bank 4.
+With each sensorCAM having up to 80 sensors, it is desirable to test groups of (1 to 8) sensors with a single EXRAIL test using the **IFGTE()** or **IFLE()** commands. To do this, the sensors are logically arranged in “banks” of (consecutive) vpins. The logical grouping available can be written in the form “bs” or b/s where b can have bank values of 0-9 (10 banks) and s values 0-7 (8 sensors). **IFGTE** and **IFLT** read a whole bank "value". Native CAM commands can also be issued e.g. **PARSE(“<N b 4\>”)** for bank 4.
 
 EXRAIL can accept “b/s” numbering (e.g. 047) if we add the leading 0. e.g. vpin= **SENSORCAM_VPIN+ 047** e.g. **IFGTE(CAM 047,1)** provided values are defined for **SENSORCAM_VPIN** & **CAM**(as above).
 
@@ -861,7 +861,7 @@ Note: With ‘0%%’ notation, unless you understand the issue, avoid using bank
 
 ### 2. Multiple Cams
 
-Multiple sensorCAMs can be easily handled if CAM2, CAM3 etc are defined along the lines of CAM above, so **IF(CAM2 012)** tests a different sensor to **IF(CAM3 012)**, provided **SENSORCAM2_ VPIN** etc. are defined. Using CS native commands, e.g.**<Ni 212>** and **<Ni 312>**, can also access **S12** on different CAMs. **The #define SENSORCAM_VPIN ###** is essential for cam1. Do NOT insert a 1 in to **SENSORCAM_VPIN**. You may use **SENSORCAM2_VPIN** and **SENSORCAM3_VPIN** with **CAM2** and **CAM3** in _config.h_
+Multiple sensorCAMs can be easily handled if CAM2, CAM3 etc are defined along the lines of CAM above, so **IF(CAM2 012)** tests a different sensor to **IF(CAM3 012)**, provided **SENSORCAM2_ VPIN** etc. are defined. Using CS native commands, e.g.**<Ni 212\>** and **<Ni 312\>**, can also access **S12** on different CAMs. **The #define SENSORCAM_VPIN ###** is essential for cam1. Do NOT insert a 1 in to **SENSORCAM_VPIN**. You may use **SENSORCAM2_VPIN** and **SENSORCAM3_VPIN** with **CAM2** and **CAM3** in _config.h_
 
 ## APPENDIX I
 
@@ -914,19 +914,19 @@ void halSetup(){               //add in the following two lines minimum.
 
 ```c++
 I2CManager.setClock(100000);   //to slow i2c bus clock rate (or .forceClock(100000);)
-SETUP("<Z 100 7000>");     // set as output for now(used for<D ANOUT>\&<N> cmds)
+SETUP("<Z 100 7000\>");     // set as output for now(used for<D ANOUT>\&<N\> cmds)
 // start of up to 80 sesnsors numbered bsNo's 000 to 097(0/0 to 9/7)
-SETUP("<S 100 7000>");     // first sensor(S00) at SENSORCAM VPINO 700 by default
-SETUP("<S 101 701 0>");    //
-SETUP("<S 102702 0>");
-//setup as many as you want. You can add later manually with CS native<S> cmds.
-SETUP("<S 107707 0>");
-SETUP("<S 110708 0>");     //note recommended id is 1%%(b/s) format, vpin is DEC.
+SETUP("<S 100 7000\>");     // first sensor(S00) at SENSORCAM VPINO 700 by default
+SETUP("<S 101 701 0\>");    //
+SETUP("<S 102702 0\>");
+//setup as many as you want. You can add later manually with CS native<S\> cmds.
+SETUP("<S 107707 0\>");
+SETUP("<S 110708 0\>");     //note recommended id is 1%%(b/s) format, vpin is DEC.
 // etc.
-//SETUP("<S 196 778 0>");
-//SETUP("<S 197 779 0>");    //maximum sensor id for number "1" sensorCAM.
-//          vPin 700 also used by sensorCAM Native commands<N>(Appendix C)
-//SETUP("<S 200 620 0>");    //e.g. for a second sensorCAM at SENSORCAM2_VPIN0 620
+//SETUP("<S 196 778 0\>");
+//SETUP("<S 197 779 0\>");    //maximum sensor id for number "1" sensorCAM.
+//          vPin 700 also used by sensorCAM Native commands<N\>(Appendix C)
+//SETUP("<S 200 620 0\>");    //e.g. for a second sensorCAM at SENSORCAM2_VPIN0 620
 //to setup bulk sensors(e.g. 210 to 297 for a cam at vpin 620+) can include C++ code here so..
 //for(uint16_t b=1; b<=9;b++) for(uint16_t s=0;s<8;s++) Sensor::create(200+b*10+s,620+b*8+s,1);
 ```
@@ -1052,7 +1052,7 @@ Spec sheet: Typical applications include a 22uF cap between AMS1117 3v3 reg ADJ/
 
 There is a range of ov2640 cam modules available with ESP32 or independently sold. The"IR" option would be an interesting experiment and might open up new possibilities, but monochrome IR images harder to spot intrusions. The usual ov2640 is  $66^{\circ}$  , but  $120^{\circ}$  fish-eye covers more, at the expense of detail.  $120^{\circ}$  better for low ceilings??
 
-Web offers range of lenses including"850nm night vision" which probably is OV2640 sans IR filter?(IR>700nm)
+Web offers range of lenses including"850nm night vision" which probably is OV2640 sans IR filter?(IR\>700nm)
 
 Long(75mm) and short(21mm) ribbon ov2640, angles 66(std?),100,120,160deg lens,650nm or 850nm(night vision), opt. antenna for marginal wifi. NONE, other than standard 66deg OV2640, are currently recommended.
 
