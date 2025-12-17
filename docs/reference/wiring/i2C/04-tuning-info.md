@@ -40,6 +40,8 @@
 10. **If number of available pullups is too low, extra pullups (max 6 @10cents each)(or a LTC4311, $10) may be added for length & noise margins, up to the limit, BUT..**  
   if number of pullups is TOO HIGH the only quick fix is to remove/cut jumpers/unsolder some pullups.
 
+11. **If using the newer 3.3V technology and a mosfet based "passive" level shifter**, be aware that both sides of the shifter are the same segment.  So add up the pullups on the 3.3V side and add 1.5 times the count on the 5V side for a **total not to exceed 9.**  In-situ measurements are for one side only.
+
 ## Measurement in situ
 
 **Note:  If unsure of the effective number of active pullup resistors(10k), it is possible, after ALL POWER OFF FOR SEVERAL MINUTES, to use an ohm meter to measure the net resistance between the SCL line (or SDA) to the pullup supply rail (Vcc).**  
@@ -72,6 +74,12 @@
 **G. To achieve 400kHz fast-mode** use Px1.5 e.g. example F. (with 4 effective pullups)  
     &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; max length L = P x 1.5 - D = 4x1.5 - 3 = 3ft (safe 2ft)
 
-**In all cases, to increase workable length, noise margin or speed, add pullups towards the max. number, OR add one LTC4311 I2C active pullup at the CS end, provided P is not over the max. allowed pullup count.**  With an LTC4311, max pullups(6/9) are NOT recommended.  A limit of 3P is advised, especially with MCP23017's.
+**H. passive Level Shifter:** 5 devices: (3.3V) Display(4.7k)-(10k)shifter & (5V 3dev.) shifter(10k)-MCP23017(10k)-mux  
+ &nbsp; &nbsp; conservatively,  
+ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; (3.3V side) max L = Px3-D = 3x3-2 = 7ft (safe 4ft)  
+ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; (5V side) &nbsp; max L = Px3-D =  2x3-3 = 3ft (safe 2ft)
+
+**In all cases, to increase workable length, noise margin or speed, add pullups towards the max. number, OR add one LTC4311 I2C active pullup at the CS end, provided P is not over the max. allowed pullup count.**  With an LTC4311, max pullups(6/9) are NOT recommended.  A limit of 3P is advised, especially with MCP23017's.  
+**Note:** An LTC4311 is ineffective through a level shifter.
 
 ![I2C Examples](/_static/images/i2c-devices/i2c-devices-example01.png)
