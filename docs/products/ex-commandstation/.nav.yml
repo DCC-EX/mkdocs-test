@@ -4,5 +4,6 @@ nav:
   - Build time config.h: 05-config-h.md
   - Testing your command station: 10-testing.md
   - TrackManager: trackmanager
+  - Loco Programming: loco-programming
   - Accesssories: accessories
   - EXRAIL: exrail
