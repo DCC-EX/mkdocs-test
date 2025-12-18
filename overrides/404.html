@@ -1,0 +1,30 @@
+ {% extends "main.html" %} 
+ 
+ <!-- Content --> 
+ {% block content %} 
+   <h1>404 - Sorry, Page not found.</h1>
+   <p>It seems the page you are looking for does not exist or has been moved.</p>
+   <p>The powerful search feature above might help you find what you are looking for.</p>
+   <p>This page may be on the old website <a id="oldlink"> click here</a></p>
+    
+<script>
+    // Try to find the page on the old website
+    // Replace these values with your old website URL (+ prefix if any)
+    var OLD_WEBSITE_URL = 'https://dcc-ex.com';
+    
+    // Get the current requested path
+    var requestedPath = window.location.pathname;
+
+    // if requestedPath starts with mkdocs-test/, remove it for old site URL construction
+    var prefixToRemove = '/mkdocs-test';
+    if (requestedPath.startsWith(prefixToRemove)) {
+       requestedPath = requestedPath.slice(prefixToRemove.length);
+    }
+
+       // Optional: Try to redirect to old site with same path
+       var oldSiteUrl = OLD_WEBSITE_URL + requestedPath;
+       document.getElementById('oldlink').setAttribute('href', oldSiteUrl);
+       </script>
+
+
+ {% endblock %}
