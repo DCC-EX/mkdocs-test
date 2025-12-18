@@ -5,26 +5,84 @@
    <h1>404 - Sorry, Page not found.</h1>
    <p>It seems the page you are looking for does not exist or has been moved.</p>
    <p>The powerful search feature above might help you find what you are looking for.</p>
-   <p>This page may be on the old website <a id="oldlink"> click here</a></p>
-    
+   <p id="old-site-area">Checking the old site for this page…</p>
+
 <script>
-    // Try to find the page on the old website
-    // Replace these values with your old website URL (+ prefix if any)
-    var OLD_WEBSITE_URL = 'https://dcc-ex.com';
-    
-    // Get the current requested path
-    var requestedPath = window.location.pathname;
+   // Try to find the page on the old website and auto-redirect if found.
+   // Configure this to your old site base URL (no trailing slash).
+   var OLD_WEBSITE_URL = 'https://dcc-ex.com';
 
-    // if requestedPath starts with mkdocs-test/, remove it for old site URL construction
-    var prefixToRemove = '/mkdocs-test';
-    if (requestedPath.startsWith(prefixToRemove)) {
-       requestedPath = requestedPath.slice(prefixToRemove.length);
-    }
+   // Build the candidate URL on the old site
+   var requestedPath = window.location.pathname || '/';
+   // If your site was served from a subpath, adjust/remove this prefix as needed
+   var prefixToRemove = '/mkdocs-test';
+   if (requestedPath.startsWith(prefixToRemove)) {
+      requestedPath = requestedPath.slice(prefixToRemove.length) || '/';
+   }
+   var candidateUrl = OLD_WEBSITE_URL + requestedPath;
 
-       // Optional: Try to redirect to old site with same path
-       var oldSiteUrl = OLD_WEBSITE_URL + requestedPath;
-       document.getElementById('oldlink').setAttribute('href', oldSiteUrl);
-       </script>
+   // Utility: check URL availability with HEAD and timeout
+   function checkUrlExists(url, timeoutMs) {
+      timeoutMs = timeoutMs || 3000;
+      try {
+         var controller = new AbortController();
+         var signal = controller.signal;
+      } catch (e) {
+         // AbortController not supported
+         var signal = undefined;
+      }
+      var timeout = setTimeout(function() { if (controller) controller.abort(); }, timeoutMs);
+
+      return fetch(url, { method: 'HEAD', mode: 'cors', cache: 'no-cache', signal: signal })
+         .then(function(resp) {
+            clearTimeout(timeout);
+            return resp && (resp.status >= 200 && resp.status < 400);
+         })
+         .catch(function() {
+            // Could be network error, CORS block, or timeout — treat as unavailable
+            return false;
+         });
+   }
+
+   function showOldLinkAndRedirect(url) {
+      var area = document.getElementById('old-site-area');
+      area.innerHTML = '<strong>This page exists on the old website — redirecting now...</strong> '
+         + '<a href="' + url + '" rel="noopener">' + url + '</a>';
+      // Short delay so user sees the message and can cancel (if they want)
+      setTimeout(function() { window.location.replace(url); }, 1000);
+   }
+
+   function showNoOldLink() {
+      var area = document.getElementById('old-site-area');
+      area.innerHTML = 'This page was not found on the old website. <a href="' + OLD_WEBSITE_URL + '">Visit the old site home</a>';
+   }
+
+   function showUnreachable() {
+      var area = document.getElementById('old-site-area');
+      area.textContent = 'Could not check the old site (network/CORS). You can try: ' + OLD_WEBSITE_URL;
+   }
+
+   // Run the check and update the UI. If the old site allows CORS for HEAD, we'll redirect.
+   (function() {
+      // First try the exact path on the old site
+      checkUrlExists(candidateUrl, 3000).then(function(found) {
+         if (found) {
+            showOldLinkAndRedirect(candidateUrl);
+            return;
+         }
+
+         // If exact path not found, try the old site's homepage as fallback (informational)
+         checkUrlExists(OLD_WEBSITE_URL, 2000).then(function(homeFound) {
+            if (homeFound) {
+               showNoOldLink();
+            } else {
+               // If we couldn't reach the old site (CORS/network), show non-clickable fallback
+               showUnreachable();
+            }
+         });
+      });
+   })();
+</script>
 
 
  {% endblock %}
