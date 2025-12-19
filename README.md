@@ -60,7 +60,7 @@ Now you should have a prompt that starts with "(venv)"
 
 ``` bash
 pip3 install -r requirements.txt
-
+pull_exrail.sh
 ```
 
 Windows:
@@ -69,6 +69,7 @@ Windows:
 virtualenv venv
 venv\scripts\activate
 pip install -r requirements.txt
+pull_exrail.ps1
 ```
 
 ## Previewing and building MkDocs
