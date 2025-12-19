@@ -12,12 +12,11 @@ jobs:
       - name: install
         run: |
           cd mkdocs-test
-	  mkdir venv
-	  python3 -m venv venv
-	  . ./venv/bin/activate
-	  pip3 install -r requirements.txt
-	  mkdir -p snippets/exrail
-	  curl -s https://raw.githubusercontent.com/DCC-EX/CommandStation-EX/refs/heads/devel/EXRAIL2MacroBase.h | awk -f pull-exrail.awk > snippets/exrail/exrail-ref.md
-	  mkdocs build
-	  
+          mkdir venv
+          python3 -m venv venv
+          . ./venv/bin/activate
+          pip3 install -r requirements.txt
+          mkdir -p snippets/exrail
+          curl -s https://raw.githubusercontent.com/DCC-EX/CommandStation-EX/refs/heads/devel/EXRAIL2MacroBase.h | awk -f pull-exrail.awk > snippets/exrail/exrail-ref.md
+          mkdocs build
   
