@@ -18,9 +18,12 @@ jobs:
       - name: Generated documentation from source
         run: |
           mkdir -p snippets/exrail
-          curl -s https://raw.githubusercontent.com/DCC-EX/CommandStation-EX/refs/heads/devel/EXRAIL2MacroBase.h | awk -f pull-exrail.awk > snippets/exrail/exrail-ref.md
-          echo -n "Command list genrated " >> snippets/exrail/exrail-ref.md
-          date >> snippets/exrail/exrail-ref.md
+          SOURCE=devel/EXRAIL2MacroBase.h
+          BASENNAME=$(basename "$SOURCE" .h)
+          TARGET=snippets/exrail/"$BASENAME".md
+          curl -s https://raw.githubusercontent.com/DCC-EX/CommandStation-EX/refs/heads/$SOURCE | awk -f pull-exrail.awk > "$TARGET"
+          echo -n "Autogenerater from $SOURCE at " >> "$TARGET"
+          date >> "$TARGET"
       - name: Build docu site
         run: |
           . ./venv/bin/activate
