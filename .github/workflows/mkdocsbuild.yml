@@ -19,7 +19,7 @@ jobs:
         run: |
           mkdir -p snippets/exrail
           SOURCE=devel/EXRAIL2MacroBase.h
-          BASENNAME=$(basename "$SOURCE" .h)
+          BASENAME=$(basename "$SOURCE" .h)
           TARGET=snippets/exrail/"$BASENAME".md
           curl -s https://raw.githubusercontent.com/DCC-EX/CommandStation-EX/refs/heads/$SOURCE | awk -f pull-exrail.awk > "$TARGET"
           echo -n "Autogenerater from $SOURCE at " >> "$TARGET"
