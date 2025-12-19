@@ -285,7 +285,7 @@ Refer to the sensorCAM manual Appendix H for further tips regarding sensorCAM wi
 
 ![ESP32 CAM 1.6 Pinout](/_static/images/ex-sensorcam/esp32-cam-1-6-pinout.png)
 
-![ESP32 CAM 1.6 Pinout](/_static/images/ex-sensorcam/esp32-cam-1-6-image.png)
+![ESP32 CAM MB v1.6 vs v1.9](/_static/images/ex-sensorcam/esp32-cam-mb-16-19.png)
 
 **N.B. CAM v1.6 has 4x jumpers (cam side) near U0R/U0T pins & CAM v1.9 has 6x jumpers (including RST)**
 
@@ -299,11 +299,6 @@ Refer to the sensorCAM manual Appendix H for further tips regarding sensorCAM wi
 
 ![ESP32 Cam MB CH340](/_static/images/ex-sensorcam/esp32-cam-mb-ch340.png)
 
-![ESP32 Cam with OV2640](/_static/images/ex-sensorcam/esp32-cam-ov2640.png)
-
-![ESP32 Cam](/_static/images/ex-sensorcam/esp32-cam.png)
-
-**USB Type C** **USB Type micro-B** **V1.6 (NO RST)** **V1.9 (RST)**
 
 So - without butchery, one can only use the v1.6 CAM's on this board ☹, and even then will have to hold the IO0 button in (grounding it) on reset until upload is progressing. As a workaround for v1.9, it may be possible to slice off this MB GND socket completely. View the Camera side of the ESP32-CAM to distinguish the boards.
 
