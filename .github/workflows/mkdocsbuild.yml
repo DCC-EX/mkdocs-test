@@ -9,13 +9,23 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
-      - name: install
+      - name: Install python requirements
         run: |
           mkdir venv
           python3 -m venv venv
           . ./venv/bin/activate
           pip3 install -r requirements.txt
+      - name: Generated documentation from source
+        run: |
           mkdir -p snippets/exrail
           curl -s https://raw.githubusercontent.com/DCC-EX/CommandStation-EX/refs/heads/devel/EXRAIL2MacroBase.h | awk -f pull-exrail.awk > snippets/exrail/exrail-ref.md
+      - name: Build docu site
+        run: |
           mkdocs build
-  
+      - name: Deploy
+        if: github.event_name == 'push' && github.ref == 'refs/heads/master'
+        uses: oprypin/push-to-gh-pages@v3
+        with:
+          publish_dir: site
+          commit_message: ${{ github.event.head_commit.message }}
+          token: ${{ secrets.GITHUB_TOKEN }}
