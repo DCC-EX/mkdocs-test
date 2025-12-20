@@ -297,14 +297,11 @@ Refer to the sensorCAM manual Appendix H for further tips regarding sensorCAM wi
 
 ![ESP32 Cam MB USB-C](/_static/images/ex-sensorcam/esp32-cam-mb-usb-c.png)
 
-![ESP32 Cam MB CH340](/_static/images/ex-sensorcam/esp32-cam-mb-ch340.png)
-
-
 So - without butchery, one can only use the v1.6 CAM's on this board ☹, and even then will have to hold the IO0 button in (grounding it) on reset until upload is progressing. As a workaround for v1.9, it may be possible to slice off this MB GND socket completely. View the Camera side of the ESP32-CAM to distinguish the boards.
 
 **Identification: ESP32-**CAM v1.6 has 4x jumpers beside UOR/UOT pins and v1.9 has 6x jumpers (inc. Reset).
 
-Using v1.6 with no RTS/DTR reset, users will have to boot up holding IO0 button in to get into programming mode.
+Using v1.6 with no RTS/DTR reset, users may have to boot up holding IO0 button in to get into programming mode.
 
 **ESP32-WROVER-DEV or FREENOVE ESP32-WROVER-CAM board with 4Mb PSRAM is an acceptable single board substitute for the ESP32-CAM-MB combo. Both use the ov2640 camera. Version v316 of sensorCAM incorporated minor adjustments to cater for the WROVER pinout differences. The WROVER may be about twice the cost of the ESP32-CAM-MB (without tarrifs), but, if you have one, it is simpler and may be better quality.**
 
