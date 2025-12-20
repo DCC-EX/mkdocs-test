@@ -323,8 +323,6 @@ Using v1.6 with no RTS/DTR reset, users may have to boot up holding IO0 button i
 
  ![ESP32 Wrover CAM](/_static/images/ex-sensorcam/esp32-wrover-cam.png)
 
- ![ESP32 Wrover CAM with Expansion](/_static/images/ex-sensorcam/esp32-wrover-with-expansion.png)
-
  ![ESP32 Wrover CAM Expansion](/_static/images/ex-sensorcam/esp32-wrover-cam-expansion.png)
 
 **The WROVER based sensorCAM, using an ESP32S 38-pin Expansion board and Sparkfun Endpoint, offers the simplest hardware and interconnect shown below. It is a good alternative to the ESP32-CAM-MB based options. Search for WROVER in the sensorCAM manual (v3.18) for additional details on this recommended hardware. N.B. the 2 USB ports on expander are 5V power only, without any comms.**
