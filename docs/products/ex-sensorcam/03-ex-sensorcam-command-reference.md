@@ -46,7 +46,7 @@
 | **R**  | `<n/a>` | **Reset EX-SensorCAM &nbsp; (CS <NR> gives equivalent of <Nr 00>)**<br>Reset into EX-SensorCAM mode, exting any WiFi mode 
 | **&** | `<n/a>` | **Print statistics since last '&' cmd.**<br>USB histogram of trips and potential trips of 1-3 frames
 | **+#,$** | `<n/a>` | **Add offset of # pixels in $ direction to ALL enabled Sensors**<br>realign ALL sensors by # pixels in direction specified (N-NW) 
-| **\ &nbsp; / &nbsp; \@** |   | **Commands for lines and trip symbol - refer to manual**  
+| **\\ &nbsp; / &nbsp; @** |   | **Commands for lines and trip symbol - refer to manual**  
 
 
 **NOTE:  The EX-SensorCAM USB input will also accept most CS formatted commands.**
