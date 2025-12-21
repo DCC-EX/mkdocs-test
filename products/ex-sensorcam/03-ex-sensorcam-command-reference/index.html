@@ -6830,327 +6830,162 @@
 <tr>
 <td><strong>a%%[,rr,xx]</strong></td>
 <td><strong><code>&lt;Na %%[ rr xx]&gt;</code></strong></td>
-<td style="text-align: left;"><strong>enAble Sensor and refresh reference</strong></td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-<td style="text-align: left;">Sensor will respond to changing image. rr,xx set as new coordinates</td>
+<td style="text-align: left;"><strong>enAble Sensor and refresh reference</strong><br> Sensor will respond to changing image. rr,xx set as new coordinates</td>
 </tr>
 <tr>
 <td><strong>b#[,$]</strong></td>
 <td><strong><code>&lt;Nb #&gt;</code></strong></td>
-<td style="text-align: left;"><strong>Bank occupancy status [&amp; Brightness S/F]</strong></td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-<td style="text-align: left;">Trip status of 8 sensors in a single byte (8 bits) (hex &amp; binary)</td>
+<td style="text-align: left;"><strong>Bank occupancy status [&amp; Brightness ScaleFactor $]</strong><br>Trip status of 8 sensors in a single byte (8 bits) (hex &amp; binary)</td>
 </tr>
 <tr>
 <td><strong>c$$$$</strong></td>
 <td><code>&lt;n/a&gt;</code></td>
-<td style="text-align: left;"><strong>Camera re-Calibration and re-reference Sensors</strong></td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-<td style="text-align: left;">Severe changes to camera settings.  Refer to manuals before use!</td>
+<td style="text-align: left;"><strong>Camera re-Calibration and re-reference Sensors</strong><br>Severe changes to camera settings.  Refer to manuals before use!</td>
 </tr>
 <tr>
 <td><strong>d%%[#]</strong></td>
 <td><code>&lt;n/a&gt;</code></td>
-<td style="text-align: left;"><strong>Difference Score for Sensor [# repeats]</strong></td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-<td style="text-align: left;">Prints colour diff score, brightness score and sum of both</td>
+<td style="text-align: left;"><strong>Difference Score for Sensor [# repeats]</strong><br>Prints colour diff score, brightness score and sum of both</td>
 </tr>
 <tr>
 <td><strong>e</strong></td>
 <td><strong><code>&lt;Ne&gt;</code></strong></td>
-<td style="text-align: left;"><strong>EPROM - save sensorCAM config. to EPROM</strong></td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-<td style="text-align: left;">Records parameters in EPROM to be restored upon next Reset</td>
+<td style="text-align: left;"><strong>EPROM - save sensorCAM config. to EPROM</strong><br>Records parameters in EPROM to be restored upon next Reset</td>
 </tr>
 <tr>
 <td><strong>f%%</strong></td>
 <td><strong><code>&lt;Nf %%&gt;</code></strong></td>
-<td style="text-align: left;"><strong>Frame print. Full 16x3 byte Sensor pixel values</strong></td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-<td style="text-align: left;">Tabulates 4x4 (RGB) pixels for current and reference sensor images</td>
+<td style="text-align: left;"><strong>Frame print. Full 16x3 byte Sensor pixel values</strong><br>Tabulates 4x4 (RGB) pixels for current and reference sensor images</td>
 </tr>
 <tr>
 <td><strong>g</strong></td>
 <td><strong><code>&lt;Ng&gt;</code></strong></td>
-<td style="text-align: left;"><strong>Get Camera Global Config. Status (to USB)</strong></td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-<td style="text-align: left;">Lists 14 different parameters of the ov2640 "Calibration" settings</td>
+<td style="text-align: left;"><strong>Get Camera Global Config. Status (to USB)</strong><br>Lists 14 different parameters of the ov2640 "Calibration" settings</td>
 </tr>
 <tr>
 <td><strong>h$[,#]</strong></td>
 <td><strong><code>&lt;Nh $ #&gt;</code></strong></td>
-<td style="text-align: left;"><strong>Help cmd.(debug for devel)</strong></td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-<td style="text-align: left;">Debug. h alone lists options. h7,# pauses scroll if bank # trips</td>
+<td style="text-align: left;"><strong>Help cmd.(debug for devel)</strong><br>Debug. h alone lists options. h7,# pauses scroll if bank # trips</td>
 </tr>
 <tr>
 <td><strong>i%%[,$$]</strong></td>
 <td><strong><code>&lt;Ni %%[ $$]&gt;</code></strong></td>
-<td style="text-align: left;"><strong>Info. on Sensor state and configuration</strong></td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-<td style="text-align: left;">prints sensor state &amp; full definition.  Can add a "twin" sensor S$$</td>
+<td style="text-align: left;"><strong>Info. on Sensor state and configuration</strong><br>prints sensor state &amp; full definition. [add a "twin" sensor S$$]</td>
 </tr>
 <tr>
 <td><strong>j$,#</strong></td>
 <td><strong><code>&lt;Nj $ #&gt;</code></strong></td>
-<td style="text-align: left;"><strong>adJust ov2640 global parameters &amp; list <Ng></strong></td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-<td style="text-align: left;">Sets a single parameter($) for ov2640. j alone lists options for $</td>
+<td style="text-align: left;"><strong>adJust ov2640 global parameters &amp; list <Ng></strong><br>Sets a single parameter($) for ov2640. j alone lists options for $</td>
 </tr>
 <tr>
 <td><strong>k%%,rr,xx</strong></td>
 <td><code>&lt;n/a&gt;</code></td>
-<td style="text-align: left;"><strong>locate a basic sensor at row rr, column xx</strong></td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-<td style="text-align: left;">Defines sensor at rr,xx but DOES NOT enable or reference/refresh it</td>
+<td style="text-align: left;"><strong>locate a basic sensor at row rr, column xx</strong><br>Defines sensor at rr,xx but DOES NOT enable or reference/refresh it</td>
 </tr>
 <tr>
 <td><strong>l%%</strong></td>
 <td><strong><code>&lt;Nl %%&gt;</code></strong></td>
-<td style="text-align: left;"><strong>(Lima) Latch sensor on (occupied=1)</strong></td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-<td style="text-align: left;">Sensor disabled, &amp; set 1 until a%%, r%% or cleared by o%%</td>
+<td style="text-align: left;"><strong>(Lima) Latch sensor on (occupied=1)</strong><br>Sensor disabled, &amp; set 1 until a%%, r%% or cleared by o%%</td>
 </tr>
 <tr>
 <td><strong>m$[,%%]</strong></td>
 <td><strong><code>&lt;Nm $[ %%]&gt;</code></strong></td>
-<td style="text-align: left;"><strong>Min2trip frames setting [MaxSensor setting]</strong></td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-<td style="text-align: left;">Sets min/max parameters.  m0,%% leaves min2trip unchanged</td>
+<td style="text-align: left;"><strong>Min2trip frames setting [MaxSensor setting]</strong><br>Sets min/max parameters.  m0,%% leaves min2trip unchanged</td>
 </tr>
 <tr>
 <td><strong>n$[,%%]</strong></td>
 <td><strong><code>&lt;Nn $[ %%]&gt;</code></strong></td>
-<td style="text-align: left;"><strong>Number for bank trip LED indicator. [minSensor]</strong></td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-<td style="text-align: left;">Sets programmable LED to indicates when bank Number $ is tripped</td>
+<td style="text-align: left;"><strong>Number for bank trip LED indicator. [minSensor]</strong><br>Sets programmable LED to indicates when bank Number $ is tripped</td>
 </tr>
 <tr>
 <td><strong>o%%</strong></td>
 <td><strong><code>&lt;No %%&gt;</code></strong></td>
-<td style="text-align: left;"><strong>(Oscar) turn sensor Off (un-occupied=0)</strong></td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-<td style="text-align: left;">Sensor disabled, &amp; set 0 until Latched or enabled using a%% or r%%</td>
+<td style="text-align: left;"><strong>(Oscar) turn sensor Off (un-occupied=0)</strong><br>Sensor disabled, &amp; set 0 until Latched or enabled using a%% or r%%</td>
 </tr>
 <tr>
 <td><strong>p#</strong></td>
 <td><strong><code>&lt;Np #&gt;</code></strong></td>
-<td style="text-align: left;"><strong>Position table for a bank of sensors</strong></td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-<td style="text-align: left;">Prints positions for enAbled sensors of bank #. &nbsp; p%% similar</td>
+<td style="text-align: left;"><strong>Position table for a bank of sensors</strong><br>Prints positions for enAbled sensors of bank #. &nbsp; p%% similar</td>
 </tr>
 <tr>
 <td><strong>q#</strong></td>
 <td><strong><code>&lt;Nq #&gt;</code></strong></td>
-<td style="text-align: left;"><strong>Query enAbled state of sensors in bank</strong></td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-<td style="text-align: left;">Prints enabled state of all 8 sensors (1/0).  Use q9 for ALL banks</td>
+<td style="text-align: left;"><strong>Query enAbled state of sensors in bank</strong><br>Prints enabled state of all 8 sensors (1/0).  Use q9 for ALL banks</td>
 </tr>
 <tr>
 <td><strong>r%%</strong></td>
 <td><strong><code>&lt;Nr %%&gt;</code></strong></td>
-<td style="text-align: left;"><strong>Refresh reference image for sensor</strong></td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-<td style="text-align: left;">enAbles sensor and captures a new reference image.  Use r00 for ALL</td>
+<td style="text-align: left;"><strong>Refresh reference image for sensor</strong><br>enAbles sensor and captures a new reference image.  Use r00 for ALL</td>
 </tr>
 <tr>
 <td><strong>s%%</strong></td>
 <td><strong><code>&lt;Ns %%&gt;</code></strong></td>
-<td style="text-align: left;"><strong>Scan video to define a new Sensor position (superseeded)</strong></td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-<td style="text-align: left;">Scan for brightest spot (LED) and position sensor there.</td>
+<td style="text-align: left;"><strong>Scan video to define a new Sensor position (superseeded)</strong><br>Scan for brightest spot (LED) and position sensor there.</td>
 </tr>
 <tr>
 <td><strong>t##[,%%]</strong></td>
 <td><strong><code>&lt;Nt ##[ %%]&gt;</code></strong></td>
-<td style="text-align: left;"><strong>Theshold setting (33-98) global [pvtThreshold for S%%]</strong></td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-<td style="text-align: left;">Sets new global threshold, [or a  pvtThreshold] (t99 lists pvtThresholds)</td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-<td style="text-align: left;">For ## of (2-31), print ## data rows. &nbsp; (t00,%% clears a pvtThreshold)</td>
+<td style="text-align: left;"><strong>Theshold setting (32-98) global [pvtThreshold for S%%]</strong><br>Sets new global threshold, [or a  pvtThreshold] (t99 lists pvtThresholds)<br>For ## of (2-31), print ## data rows. &nbsp; (t00,%% clears a pvtThreshold)</td>
 </tr>
 <tr>
 <td><strong>t1[,%%]</strong></td>
 <td><strong><code>&lt;Nt 1[ %%]&gt;</code></strong></td>
-<td style="text-align: left;"><strong>Toggle data scroll on/off. &nbsp; [or Trash pvtThresholds for S%% bank]</strong></td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-<td style="text-align: left;">clears 1 bank of 8 pvtThresholds. &nbsp; (t1,99 clears ALL pvtThresholds)</td>
+<td style="text-align: left;"><strong>Toggle data scroll on/off. &nbsp; [or Trash pvtThresholds for S%% bank]</strong><br>clears 1 bank of 8 pvtThresholds. &nbsp; (t1,99 clears ALL pvtThresholds)</td>
 </tr>
 <tr>
 <td><strong>u%%</strong></td>
 <td><strong><code>&lt;Nu %%&gt;</code></strong></td>
-<td style="text-align: left;"><strong>Un-define Sensor</strong></td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-<td style="text-align: left;">Resets sensor coordinates to 0,0</td>
+<td style="text-align: left;"><strong>Un-define Sensor</strong><br>Resets sensor coordinates to 0,0</td>
 </tr>
 <tr>
 <td><strong>v[#]</strong></td>
 <td><strong><code>&lt;Nv[ #]&gt;</code></strong></td>
-<td style="text-align: left;"><strong>Version [or Video webCAM SSID #]</strong></td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-<td style="text-align: left;">Displays EX-SensorCAM version info OR v# starts preset SSID webCAM</td>
+<td style="text-align: left;"><strong>Version [or Video webCAM SSID #]</strong><br>Displays EX-SensorCAM version info OR v# starts preset SSID webCAM</td>
 </tr>
 <tr>
 <td><strong>w</strong></td>
 <td><strong><code>&lt;Nw&gt;</code></strong></td>
-<td style="text-align: left;"><strong>Wait for command. &nbsp; NOTE: alternative t1 cmd. action</strong></td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-<td style="text-align: left;">Cam suspends image capture and scrolling and waits for a CR</td>
+<td style="text-align: left;"><strong>Wait for command. &nbsp; (NOTE: 't1' alternative action)</strong><br>Cam suspends image capture and scrolling and waits for an 'Enter'</td>
 </tr>
 <tr>
 <td><strong>x &nbsp; y &nbsp; z</strong></td>
 <td><code>&lt;n/a&gt;</code></td>
-<td style="text-align: left;"><strong>Reserved commands for image transfer management</strong></td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-<td style="text-align: left;">Sends binary data to USB port for Processing4 (X Y Z) image delivery</td>
+<td style="text-align: left;"><strong>Reserved commands for image transfer management</strong><br>Sends binary data to USB port for Processing4 (X Y Z) image delivery</td>
 </tr>
 <tr>
 <td>n/a</td>
 <td><strong><code>&lt;N&gt;</code></strong></td>
-<td style="text-align: left;"><strong>Current CAM selection and availability (CS only)</strong></td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-<td style="text-align: left;">Shows the currently selected CAM and the options available</td>
+<td style="text-align: left;"><strong>Current CAM selection and availability (CS only)</strong><br>Shows the currently selected CAM and the options available</td>
 </tr>
 <tr>
 <td>n/a</td>
 <td><strong><code>&lt;NC ###&gt;</code></strong></td>
-<td style="text-align: left;"><strong>CAM selection</strong></td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-<td style="text-align: left;">Switches commands to the CAM at vpin ### or CAM number (1-4)</td>
+<td style="text-align: left;"><strong>CAM selection</strong><br>Switches commands to the CAM at vpin ### or CAM number #(1-4)</td>
 </tr>
 <tr>
 <td>n/a</td>
 <td><strong><code>&lt;NQ&gt;</code></strong></td>
-<td style="text-align: left;"><strong>Query state of all Sensors</strong></td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-<td style="text-align: left;">Tabulation of all sensor tripped states in banks of 8</td>
+<td style="text-align: left;"><strong>Query state of all Sensors</strong><br>Tabulation of all sensor tripped states in banks of 8</td>
 </tr>
 <tr>
 <td><strong>F</strong></td>
 <td><strong><code>&lt;NF&gt;</code></strong></td>
-<td style="text-align: left;"><strong>Forces immediate CAM reset</strong></td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-<td style="text-align: left;">Reset into EX-SensorCAM mode, exting any webCAM/WiFi mode</td>
+<td style="text-align: left;"><strong>Forces immediate CAM reset</strong><br>Reset into EX-SensorCAM mode, exting any webCAM/WiFi mode</td>
 </tr>
 <tr>
 <td><strong>R</strong></td>
 <td><code>&lt;n/a&gt;</code></td>
-<td style="text-align: left;"><strong>Reset EX-SensorCAM &nbsp; (CS <NR> gives equivalent of <Nr 00>)</strong></td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-<td style="text-align: left;">Reset into EX-SensorCAM mode, exting any WiFi mode</td>
+<td style="text-align: left;"><strong>Reset EX-SensorCAM &nbsp; (CS <NR> gives equivalent of <Nr 00>)</strong><br>Reset into EX-SensorCAM mode, exting any WiFi mode</td>
 </tr>
 <tr>
 <td><strong>&amp;</strong></td>
 <td><code>&lt;n/a&gt;</code></td>
-<td style="text-align: left;"><strong>Print statistics since last '&amp;' cmd.</strong></td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-<td style="text-align: left;">USB histogram of trips and potential trips of 1-3 frames</td>
+<td style="text-align: left;"><strong>Print statistics since last '&amp;' cmd.</strong><br>USB histogram of trips and potential trips of 1-3 frames</td>
 </tr>
 <tr>
 <td><strong>+#,$</strong></td>
 <td><code>&lt;n/a&gt;</code></td>
-<td style="text-align: left;"><strong>Add offset of # pixels in $ direction to ALL enabled Sensors</strong></td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-<td style="text-align: left;">realign ALL sensors by # pixels in direction specified (N-NW)</td>
+<td style="text-align: left;"><strong>Add offset of # pixels in $ direction to ALL enabled Sensors</strong><br>realign ALL sensors by # pixels in direction specified (N-NW)</td>
 </tr>
 <tr>
 <td><strong> &nbsp; / &nbsp; \@</strong></td>
@@ -7180,7 +7015,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="December 21, 2025 04:43:15 UTC">December 21, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="December 21, 2025 05:29:05 UTC">December 21, 2025</span>
   </span>
 
     
