@@ -320,7 +320,7 @@ It is desirable to place sensors where they generate a "mottled" image of pixels
 
 **Table 1. Comparison of sensor sizes and track features**  Ratio of gauge/sensor dimension
 
-### 6 PROCESSING4 monitor/console
+## 6 PROCESSING4 monitor/console
 
 ![Processing4 Console with Image](/_static/images/ex-sensorcam/processing4-console-image.png)
 
