@@ -8,7 +8,7 @@
 
 3. Physical Installation
 
-4. Notation& Help commands
+4. Notation & Help commands
 
 5. Configuration
 
@@ -142,7 +142,7 @@ With regards lighting, fluoroescent or LED lighting normally flickers at twice m
 
 **Figure 4 &nbsp; Test image showing fluorescent or LED light banding**
 
-## 4. Notation\& Help commands
+## 4. Notation & Help commands
 
 ### 4.1 Notation
 
