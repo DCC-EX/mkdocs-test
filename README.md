@@ -67,9 +67,9 @@ Windows:
 
 ```console
 virtualenv venv
-venv\scripts\activate
+venv/scripts/activate.ps1
 pip install -r requirements.txt
-pull_exrail.ps1
+./pull_exrail.ps1
 ```
 
 ## Previewing and building MkDocs
