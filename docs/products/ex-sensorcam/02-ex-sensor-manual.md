@@ -1,4 +1,4 @@
-# EX-SensorCAM Manual
+# EX-SensorCAM Manual &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; v3.19
 
 ## CONTENTS
 
@@ -308,7 +308,7 @@ It is desirable to place sensors where they generate a "mottled" image of pixels
 |     | app. image width | (mm) | 810  | 810  |  1016 | 1016 | 1220 | 1220 | 1525 | 1525 | 1830 | 1830 |
 | QVGA | pixel size | (mm) | 2.18 | 2.18 | 2.73 | 2.73 | 3.27 | 3.27 | 4.09 | 4.09 | 4.91 | 4.91 |
 |  | SEN_SIZE: | setting | 0 | 2 | 0 | 2 | 0 | 2 | 0 | 2 | 0 | 2 |
-|  | Sensor Size | (pixels) | 4x4 |  $6\times 6$  | 4x4 | 6x6 | 4x4 |  $6\times 6$  | 4x4 |  $6\times 6$  | 4x4 |  $6\times 6$  |
+|  | Sensor Size | (pixels) | 4x4 |  6x6  | 4x4 | 6x6 | 4x4 |  6x6  | 4x4 |  6x6  | 4x4 |  6x6  |
 |  | ratio:gauge/sensor |  |  |  |  |  |  |  |  |  |  |  |
 |  |  |  |  |  |  |  |  |  |  |  |  |  |
 | scale | sleeper | std gauge |  |  |  |  |  |  |  |  |  |  |
@@ -489,7 +489,7 @@ Once the sensorCAM parameters and environmental conditions are set, the sensorCA
 
 ### ESP32 sensorCAM Command Summary
 
-rev 1SEP25
+rev 1DEC25
 
 #### Introduction
 
@@ -721,7 +721,7 @@ If precision less than 1 degree is needed, consider a tiny CAM rotation to help 
 While setup without an advanced GUI is fiddly, most situations can be handled. The following examples may help visualize the requirements.  
 **Note:** To get good image updates make sure the CAM has flashed before the new Y cmd. One sure way to do this is to issue the t2 command for two new frames.
 
-Straight line sensors (S33 to S37 \& S40 to S47) were created by positioning end Sensors & using **\\%%,%%** End Sensors were initially placed using **a%%** followed by a click on the image and Enter and then issuing the '**\\**'cmd. (e.g. **\\40,47**) to automatically interpolate for the nearest straight line. These lines can go upward.
+Straight line sensors (S33 to S37 & S40 to S47) were created by positioning end Sensors & using **\\%%,%%** End Sensors were initially placed using **a%%** followed by a click on the image and Enter and then issuing the '**\\**' cmd. (e.g. **\\40,47**) to automatically interpolate for the nearest straight line. These lines can go upward.
 
 Curved sensor banks can be constructed from a series of prepositioned standard 4x4 sensors and then converting them individually using '**\\%%**' to join two consecutive sensor positions as was done for bank 2 (S21-S27) in this example. Place the cursor fingertip exactly where you want a linear point as the point is placed in the top left corner of the Sensor box.
 
