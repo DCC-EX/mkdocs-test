@@ -27,7 +27,7 @@
     
     
       
-        <title>EX-SensorCAM Manual - DCC-EX Model Train Control, Animation, and Automation</title>
+        <title>EX-SensorCAM Manual                             v3.19 - DCC-EX Model Train Control, Animation, and Automation</title>
       
     
     
@@ -83,7 +83,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#ex-sensorcam-manual" class="md-skip">
+        <a href="#ex-sensorcam-manual-v319" class="md-skip">
           Skip to content
         </a>
       
@@ -116,7 +116,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              EX-SensorCAM Manual
+              EX-SensorCAM Manual &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; v3.19
             
           </span>
         </div>
@@ -3724,7 +3724,7 @@
   
   
   <span class="md-ellipsis">
-    EX-SensorCAM Manual
+    EX-SensorCAM Manual &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; v3.19
     
   </span>
   
@@ -3737,7 +3737,7 @@
   
   
   <span class="md-ellipsis">
-    EX-SensorCAM Manual
+    EX-SensorCAM Manual &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; v3.19
     
   </span>
   
@@ -8500,7 +8500,7 @@
   
 
 
-<h1 id="ex-sensorcam-manual">EX-SensorCAM Manual<a class="headerlink" href="#ex-sensorcam-manual" title="Permanent link">&para;</a></h1>
+<h1 id="ex-sensorcam-manual-v319">EX-SensorCAM Manual &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; v3.19<a class="headerlink" href="#ex-sensorcam-manual-v319" title="Permanent link">&para;</a></h1>
 <h2 id="contents">CONTENTS<a class="headerlink" href="#contents" title="Permanent link">&para;</a></h2>
 <ol>
 <li>
@@ -8763,15 +8763,15 @@ If the sensor remains unoccupied, it updates the reference, compensating for slo
 <td>Sensor Size</td>
 <td>(pixels)</td>
 <td>4x4</td>
-<td>$6\times 6$</td>
+<td>6x6</td>
 <td>4x4</td>
 <td>6x6</td>
 <td>4x4</td>
-<td>$6\times 6$</td>
+<td>6x6</td>
 <td>4x4</td>
-<td>$6\times 6$</td>
+<td>6x6</td>
 <td>4x4</td>
-<td>$6\times 6$</td>
+<td>6x6</td>
 </tr>
 <tr>
 <td></td>
@@ -8993,7 +8993,7 @@ e.g.(with <strong>t45</strong>) <strong>12:--38--* 13:?-46-?* 14:oo50##* 15:?-53
 <p>17.//<em>*</em>*CHECK FOR USB COMMAND INPUT- PROCESS ANY COMMAND</p>
 <h2 id="appendix-a">APPENDIX A<a class="headerlink" href="#appendix-a" title="Permanent link">&para;</a></h2>
 <h3 id="esp32-sensorcam-command-summary">ESP32 sensorCAM Command Summary<a class="headerlink" href="#esp32-sensorcam-command-summary" title="Permanent link">&para;</a></h3>
-<p>rev 1SEP25</p>
+<p>rev 1DEC25</p>
 <h4 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">&para;</a></h4>
 <p>Up to 10 banks (0-9) of sensors. Each bank can have up to 8 enabled sensors (0-7). Bank/sensor (%%) up to'97'.  Array <em>Sensor[n]</em> holds coordinates(rx) of sensor n. Offsets are <em>long int</em>. Array uses 88+320 bytes(10<em>8</em>4) EEPROM.  Sensors are grouped into banks(b) of individuals(s). e.g. bsNo 6/7 identifies bank 6, sensor 7.(n=8x6+7=55=067) Sensors are undefined if coordinates(rx) are set to 00. They are disabled if <code>SensorActive\[n]</code> is set to false.<br />
 If a sensor detects differences, then any output LED (<em>pLED qLED</em>) assigned to the associated Bank of sensors should turn ON.<br />
@@ -9306,7 +9306,7 @@ For commands to work fully, need latest <em>CamParser.cpp</em>, CS driver(<em>IO
 <p>If precision less than 1 degree is needed, consider a tiny CAM rotation to help alignments(e.g. fiddle yard).</p>
 <p>While setup without an advanced GUI is fiddly, most situations can be handled. The following examples may help visualize the requirements.<br />
 <strong>Note:</strong> To get good image updates make sure the CAM has flashed before the new Y cmd. One sure way to do this is to issue the t2 command for two new frames.</p>
-<p>Straight line sensors (S33 to S37 \&amp; S40 to S47) were created by positioning end Sensors &amp; using <strong>\%%,%%</strong> End Sensors were initially placed using <strong>a%%</strong> followed by a click on the image and Enter and then issuing the '<strong>\</strong>'cmd. (e.g. <strong>\40,47</strong>) to automatically interpolate for the nearest straight line. These lines can go upward.</p>
+<p>Straight line sensors (S33 to S37 &amp; S40 to S47) were created by positioning end Sensors &amp; using <strong>\%%,%%</strong> End Sensors were initially placed using <strong>a%%</strong> followed by a click on the image and Enter and then issuing the '<strong>\</strong>' cmd. (e.g. <strong>\40,47</strong>) to automatically interpolate for the nearest straight line. These lines can go upward.</p>
 <p>Curved sensor banks can be constructed from a series of prepositioned standard 4x4 sensors and then converting them individually using '<strong>\%%</strong>' to join two consecutive sensor positions as was done for bank 2 (S21-S27) in this example. Place the cursor fingertip exactly where you want a linear point as the point is placed in the top left corner of the Sensor box.</p>
 <p>Line sensors, developed for visitor intrusion curtains, are currently automatically bent if needed to avoid crossing the bottom edge or placing sensors very close to the edge where they have been found to be particularly noise sensitive. In the image below, line sensor generated from '<strong>/40,15,15</strong>' has hit the edge.</p>
 <p><img alt="Line Sensor Image" src="../../../_static/images/ex-sensorcam/line-sensor-image.png" /></p>
@@ -9533,7 +9533,7 @@ $$</p>
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="December 21, 2025 06:17:15 UTC">December 21, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="December 22, 2025 05:43:39 UTC">December 22, 2025</span>
   </span>
 
     
