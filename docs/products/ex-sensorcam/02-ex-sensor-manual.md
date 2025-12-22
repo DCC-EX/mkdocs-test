@@ -1,5 +1,5 @@
-# EX-SensorCAM Manual &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; v3.19
-
+# EX-SensorCAM Manual  
+  
 ## CONTENTS
 
 1. Overview
