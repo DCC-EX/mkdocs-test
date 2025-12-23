@@ -4,7 +4,7 @@ Who is behind all this? And will they ever face justice? Who knows, but the foll
 
 First, a special thanks to Gregg E. Berman, who had the original idea for a model railroad Command Station using an Arduino Uno and a Motor Driver.
 
-If you wish to get in touch with the team, try our [Discord server](/support/05-discord.md) as the first preference, and you can also find some of the team on the [DCC++ Forum](https://www.trainboard.com/highball/index.php?forums/dcc.177/) on TrainBoard.
+If you wish to get in touch with the team, try our [Discord server](/support/discord.md) as the first preference, and you can also find some of the team on the [DCC++ Forum](https://www.trainboard.com/highball/index.php?forums/dcc.177/) on TrainBoard.
 
 ## A Brief History of DCC-EX
 

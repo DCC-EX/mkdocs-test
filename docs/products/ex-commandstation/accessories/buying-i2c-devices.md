@@ -25,4 +25,4 @@ In general, the Adafruit devices below are high quality and well documented but 
 
 Rosscoe supplies I2c devices with QWiic sockets and additional power feeds which makes wiring much easier.
 
-The Rosscoe Shop is linked from our [Third Party Products and Sellers](/purchasing/02-third-party-sellers.md#rosscoe) page.
+The Rosscoe Shop is linked from our [Third Party Products and Sellers](/purchasing/third-party-sellers.md#rosscoe) page.

@@ -39,4 +39,4 @@ Other Connectors:
 
 When configured correctly, connecting a Railsync or DCC signal to the Railsync connector will enable your EX-CSB1 to operate as a booster.
 
-Refer to the [EX-CSB1 in DCC Booster Mode](/products/ex-commandstation/trackmanager/01-booster.md) page for information on how to configure the software to enable this.
+Refer to the [EX-CSB1 in DCC Booster Mode](/products/ex-commandstation/trackmanager/booster.md) page for information on how to configure the software to enable this.

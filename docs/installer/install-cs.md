@@ -1,6 +1,6 @@
 # Installing Command Station Software
 
-This assumes you have read and done the EX-Installer installation, know how to execute it and have done the [CLI download and optional ESP32 steps](02-first-run.md) to make sure you have the necessary build processor and run time libraries for your Command Station.
+This assumes you have read and done the EX-Installer installation, know how to execute it and have done the [CLI download and optional ESP32 steps](first-run.md) to make sure you have the necessary build processor and run time libraries for your Command Station.
 
 To proceed, click the Select your device button.
 

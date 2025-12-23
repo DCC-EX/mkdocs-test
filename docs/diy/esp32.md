@@ -1,6 +1,6 @@
 # Complex Build - ESP32
 
-ESP32-WROOM-32 was selected as the microprocessor for the EX-CSB1. Although folks are encouraged to use the [EX-CSB1](/products/ex-commandstation/01-ex-csb1.md), the information on this page should assist in building an ESP32-based DCC-EX command station.
+ESP32-WROOM-32 was selected as the microprocessor for the EX-CSB1. Although folks are encouraged to use the [EX-CSB1](/products/ex-commandstation/ex-csb1.md), the information on this page should assist in building an ESP32-based DCC-EX command station.
 
 !!! warning "ESP32 Wroom Only!"
 
@@ -47,5 +47,5 @@ ESP32-WROOM-32 was selected as the microprocessor for the EX-CSB1. Although folk
 
 ## Reference ESP32
 
-- Assembly and other information: [Reference - ESP32](/reference/esp32/16-esp32-ex8874.md)
+- Assembly and other information: [Reference - ESP32](/reference/esp32/esp32-ex8874.md)
 - [Legacy ESP32 documentation](https://dcc-ex.com/legacy-docs/reference/hardware/microcontrollers/esp32.html#esp32-recommended)

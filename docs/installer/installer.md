@@ -22,7 +22,7 @@ Sometimes our software gets blocked by antivirus applications. If you see any er
 
 ## Alternatives to the EX-Installer
 
-Experienced programmers or those wishing to develop new features or products will generally find [VSCode/PlatformIO](05-platformio.md) a more powerful and familiar option.
+Experienced programmers or those wishing to develop new features or products will generally find [VSCode/PlatformIO](platformio.md) a more powerful and familiar option.
 
 Methods involving downloading zip files have caused  support issues in the past, are troublesome and not recommended.
 

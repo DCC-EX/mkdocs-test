@@ -52,4 +52,4 @@ This can be complex but
 - At startup, the Command Station lists all the I2C devices it can see... If yours is not in that list there is nothing that you can change or configure in the software to make it work.
 - Do not twist the SCL and SDA wires together
 - Avoid running SCL/SD in parallel with the track power (or track)
-- Refer to [I2C Wiring](/reference/wiring/i2C/00-i2c-wiring.md)
+- Refer to [I2C Wiring](/reference/wiring/i2C/i2c-wiring.md)

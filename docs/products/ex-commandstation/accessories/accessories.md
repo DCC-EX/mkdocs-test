@@ -24,7 +24,7 @@ Accessories are broadly divided into two categories:
     - Rotary encoders
     - Clocks
 
-Note that we consider throttles/controllers differently to accessories, so these are not covered in this section. See our [Throttles](/throttles/00-throttles.md) section instead.
+Note that we consider throttles/controllers differently to accessories, so these are not covered in this section. See our [Throttles](/throttles/throttles.md) section instead.
 
 ## Connecting Accessories
 

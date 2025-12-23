@@ -13,7 +13,7 @@ Dogbath                                                  Catflap
 
 ## Speed changes
 
-Using the [previous](40-simple-shuttle.md) example.
+Using the [previous](simple-shuttle.md) example.
 
 ```cpp
 AUTOMATION(123,"Dogbath to Catflap shuttle")
