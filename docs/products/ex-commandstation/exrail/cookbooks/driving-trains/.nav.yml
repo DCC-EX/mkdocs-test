@@ -1,0 +1,11 @@
+nav:
+  - Basic: basic.md
+  - Functions: functions.md
+  - Automations: automations.md
+  - Simple Shuttle: simple-shuttle.md
+  - Improved Shuttle: improved-shuttle.md
+  - Passing Loop: passing-loop.md
+  - Save Restore: save-restore.md
+  - Random Selection: random-selection.md
+  - Consists: consists.md
+  - Advanced: advanced.md
