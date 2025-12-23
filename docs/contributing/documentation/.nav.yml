@@ -6,3 +6,4 @@ nav:
   - Using Our Logos: logos.md
   - Working With MkDocs: mkdocs-features.md
   - Mermaid Diagrams: mermaid-diagrams.md
+  - "*"

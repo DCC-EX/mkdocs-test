@@ -5,3 +5,4 @@ nav:
   - Select Product: select-product.md
   - Install Cs: install-cs.md
   - Platformio: platformio.md
+  - "*"

@@ -1,9 +1,10 @@
 nav:
-  - The DCC-EX Command Station: 00-overview.md
-  - EX-CSB1 CommandStation Booster: 01-ex-csb1.md
-  - Build time config.h: 05-config-h.md
-  - Testing your command station: 10-testing.md
+  - The DCC-EX Command Station: overview.md
+  - EX-CSB1 CommandStation Booster: ex-csb1.md
+  - Build time config.h: config-h.md
+  - Testing your command station: testing.md
   - TrackManager: trackmanager
   - Loco Programming: loco-programming
   - Accesssories: accessories
   - EXRAIL: exrail
+  - "*"
