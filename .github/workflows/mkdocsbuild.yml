@@ -21,7 +21,7 @@ jobs:
       - name: Build docu site
         run: |
           . ./venv/bin/activate
-          mkdocs build
+          mkdocs build --strict
       - name: Deploy
         if: github.event_name == 'push' && github.ref == 'refs/heads/main'
         uses: oprypin/push-to-gh-pages@v3
