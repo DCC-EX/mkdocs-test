@@ -25,16 +25,16 @@ Results in: [Link to this section](#page-and-section-links)
 ### Document Links
 
 ```markdown
-[Link to Contributing to Documentation Page](/contributing/documentation/00-docs.md)
+[Link to Contributing to Documentation Page](/contributing/documentation/docs.md)
 ```
 
-Results in: [Link to Contributing to Documentation Page](/contributing/documentation/00-docs.md)
+Results in: [Link to Contributing to Documentation Page](/contributing/documentation/docs.md)
 
 ```markdown
-[Link to How to Contribute Section](/contributing/documentation/00-docs.md#how-to-contribute)
+[Link to How to Contribute Section](/contributing/documentation/docs.md#how-to-contribute)
 ```
 
-Results in: [Link to How to Contribute Section](/contributing/documentation/00-docs.md#how-to-contribute)
+Results in: [Link to How to Contribute Section](/contributing/documentation/docs.md#how-to-contribute)
 
 Note: when typing a link in VSCode, the intellisense dropdown will help you complete the link by following the path from the project directory. This creates links that start with "/docs" (for example "/docs/contributing/1-contribute-docs.md" ). These links will not work unless you manually delete the /docs prefix.  Its a pain but we have raised a PR for VScode and mkDocs on this.
 
@@ -48,7 +48,7 @@ Results in: [Link to Google Search](https://www.google.com)
 
 ## Search Links
 
-We have added a link feature to directly invoke the mkDocs powerful search dialog. This is particularly useful when you wish to refer to imformation that may be spread over several places and possibly not yet written.
+We have added a link feature to directly invoke the MkDocs powerful search dialog. This is particularly useful when you wish to refer to information that may be spread over several places and possibly not yet written.
 
 ```markdown
  [Find out about PCA9685 servo controllers](?PCA9685)

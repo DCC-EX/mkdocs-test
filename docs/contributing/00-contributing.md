@@ -4,7 +4,7 @@ The DCC-EX Team has several projects and sub teams where you can help donate you
 
 ## Documentation
 
-This [documentation](documentation/00-docs.md) is written in MkDocs so a knowledge of HTML, CSS or Javascript is not necessary.
+This [documentation](documentation/docs.md) is written in MkDocs so a knowledge of HTML, CSS or Javascript is not necessary.
 
 ## Development
 
