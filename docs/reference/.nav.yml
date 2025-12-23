@@ -1,0 +1,8 @@
+nav:
+  - Serial Commands: serial-commands.md
+  - Serial Command Basics: serial-command-basics.md
+  - Advanced Config H: advanced-config-h.md
+  - Command Station Arch: command-station-arch.md
+  - Throttle Writers Guide: throttle-writers-guide.md
+  - Glossary: glossary.md
+  - Legacy Command Reference: legacy-command-reference.md

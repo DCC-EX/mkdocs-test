@@ -1,0 +1,8 @@
+nav:
+  - Accessories: accessories.md
+  - Actuators: actuators.md
+  - Sensors: sensors.md
+  - Connecting Servo Turnout: connecting-servo-turnout.md
+  - Hardware List: hardware-list.md
+  - I2C Intro: i2c-intro.md
+  - Buying I2C Devices: buying-i2c-devices.md

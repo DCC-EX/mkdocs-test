@@ -1,0 +1,11 @@
+nav:
+  - Diy: diy.md
+  - Power: power.md
+  - Mega Easy: mega-easy.md
+  - Mega Harder: mega-harder.md
+  - Nucleo: nucleo.md
+  - Esp32: esp32.md
+  - Wifi: wifi.md
+  - Ethernet: ethernet.md
+  - Installer: installer.md
+  - Others: others.md

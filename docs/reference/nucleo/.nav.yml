@@ -1,0 +1,10 @@
+nav:
+  - Nucleo Drivers: nucleo-drivers.md
+  - Nucleo Firmware: nucleo-firmware.md
+  - Nucleo Debug: nucleo-debug.md
+  - Nucleo Power: nucleo-power.md
+  - Nucleo 64 Ex8874: nucleo-64-ex8874.md
+  - Nucleo 64 Wifi: nucleo-64-wifi.md
+  - Nucleo 144 Ex8874: nucleo-144-ex8874.md
+  - Nucleo 144 Wifi: nucleo-144-wifi.md
+  - Nucleo 144 Pin Reference: nucleo-144-pin-reference.md

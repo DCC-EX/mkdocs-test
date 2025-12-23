@@ -1,0 +1,7 @@
+nav:
+  - Overview: overview.md
+  - Installer: installer.md
+  - First Run: first-run.md
+  - Select Product: select-product.md
+  - Install Cs: install-cs.md
+  - Platformio: platformio.md
