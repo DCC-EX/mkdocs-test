@@ -1,7 +1,6 @@
 nav:
-  - Ex Sensorcam: ex-sensorcam.md
+  - EX-SensorCAM: ex-sensorcam.md
   - Installation Guide: installation-guide.md
-  - Ex Sensor Manual: ex-sensor-manual.md
-  - Ex Sensorcam Command Reference: ex-sensorcam-command-reference.md
-  - Ex Sensor Manual Abridged: ex-sensor-manual-abridged.md
-  - "*"
+  - User Manual: ex-sensor-manual.md
+  - Command Reference: ex-sensorcam-command-reference.md
+  - Manual Abridged: ex-sensor-manual-abridged.md

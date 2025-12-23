@@ -25,7 +25,7 @@ One EX8874 motor shield would use the standard motor define EX8874_SHIELD, and u
 ## Stacked EX8874 motor shields on F429ZI F439ZI
 
 - When using two EX8874 motor shields, the VIN on one shield can be used to power the Nucleo-144.  
-  Cut two traces to disable VIN on the stacked/second shield. &nbsp; [Link to Hardware EX8874 page](/products/ex-motorshield8874/00-ex-motorshield8874.md/#steps-to-stack)
+  Cut two traces to disable VIN on the stacked/second shield. &nbsp; [Link to Hardware EX8874 page](/products/ex-motorshield8874/ex-motorshield8874.md/#steps-to-stack)
 
  &nbsp; &nbsp; &nbsp; &nbsp; ![Stacked EX8874 Nucleo-144](/_static/images/nucleo/ex8874x2-nucleo-144.png){: style="width: 50%" align=right}
 
@@ -51,7 +51,7 @@ One EX8874 motor shield would use the standard motor define EX8874_SHIELD, and u
 ## EX8874 - F413ZH F446ZE
 
 - If using two EX8874 motor shields, the VIN on one shield can be used to power the Nucleo-144.  
-  Cut two traces to disable VIN on the stacked/second shield. &nbsp; [Link to Hardware EX8874 page](/products/ex-motorshield8874/00-ex-motorshield8874.md/#steps-to-stack)
+  Cut two traces to disable VIN on the stacked/second shield. &nbsp; [Link to Hardware EX8874 page](/products/ex-motorshield8874/ex-motorshield8874.md/#steps-to-stack)
 
 - D11 can be used as there is no Ethernet conflict.  
 Brake and Fault pin updates as shown for F429ZI F439ZI.

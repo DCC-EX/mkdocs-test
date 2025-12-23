@@ -67,7 +67,7 @@ hide:
 
 - Reminder: No modifications are needed when installing EX8874 for 4 track outputs on EX-CSB1.
 - **IOREF:** The IOREF override is also needed for the top shield.
-- **VIN:** Refer to instructions on [cutting the VIN trace and disabling the regulator](/products/ex-motorshield8874/00-ex-motorshield8874.md/#steps-to-stack) for the top shield.
+- **VIN:** Refer to instructions on [cutting the VIN trace and disabling the regulator](/products/ex-motorshield8874/ex-motorshield8874.md/#steps-to-stack) for the top shield.
 
 - Stacking motor shields on ACEBOTT ESP32 requires  
     a. use of solder pad for 8 alternate pins  
