@@ -21,7 +21,7 @@ hide:
 ### Stacked EX8874 motor shields on F411RE F446RE
 
 - When using two EX8874 motor shields, the VIN on one shield can be used to power the Nucleo-144.  
-  Cut two traces to disable VIN on the stacked/second shield. &nbsp; [Link to Hardware EX8874 page](/products/ex-motorshield8874/00-ex-motorshield8874.md/#steps-to-stack)  
+  Cut two traces to disable VIN on the stacked/second shield. &nbsp; [Link to Hardware EX8874 page](/products/ex-motorshield8874/ex-motorshield8874.md/#steps-to-stack)  
 &nbsp; &nbsp; &nbsp; &nbsp; ![Stacked EX8874 Nucleo-144](/_static/images/nucleo/ex8874-f411re-f446re-stacked-pins.png){: style="width: 55%" align=right}
 
 - Tracks A and B can use the default pins as they would if only one shield was used.  

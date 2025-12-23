@@ -6,4 +6,9 @@ nav:
   - Throttle Writers Guide: throttle-writers-guide.md
   - Glossary: glossary.md
   - Legacy Command Reference: legacy-command-reference.md
-  - "*"
+  - EX-CSB1: ex-csb1
+  - ESP32: esp32
+  - Nucleo: nucleo
+  - Hardware: hardware
+  - TrackManager: trackmanager
+  - Wiring: wiring
