@@ -86,7 +86,7 @@ When finished with the local preview, stop the local server with either ++ctrl+c
 Building locally is equally as simple:
 
 ```bash
-mkdocs build
+mkdocs build --strict
 ```
 
 MkDocs also has a feature to deploy to GitHub pages without using a workflow:
