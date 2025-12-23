@@ -1,0 +1,5 @@
+nav:
+  - TrackManager: trackmanager.md
+  - DC Mode Frequency: dc-mode-frequency.md
+  - DC Mode Logic: dc-mode-logic.md
+  - DC Track Sync: dc-track-sync.md
