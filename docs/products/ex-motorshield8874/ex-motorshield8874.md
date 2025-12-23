@@ -30,13 +30,13 @@ EX‑MotorShield8874 is specifically designed for use with DCC-EX Command Statio
 
 ## Purchase
 
-The EX‑MotorShield8874 is available from many [suppliers](/purchasing/01-official-sellers.md).
+The EX‑MotorShield8874 is available from many [suppliers](/purchasing/official-sellers.md).
 
 ## Licensing
 
 The EX‑MotorShield8874 was created through the gracious support and design facilities of [Semify](https://www.semify-eda.com/), who, along with DCC-EX, license it to manufacturers. The hardware design has been made open source for individual users and the schematics are available on the DCC-EX GitHub repository.
 
-For quantities of 10 or less per annum, you may utilise a PCB manufacturing and assembly service such as JLCPCB without licensing fees. A donation to DCC-EX would be appreciated, so click the [donate](/contributing/00-contributing.md) button. The production files are available on the DCC-EX GitHub.
+For quantities of 10 or less per annum, you may utilise a PCB manufacturing and assembly service such as JLCPCB without licensing fees. A donation to DCC-EX would be appreciated, so click the [donate](/contributing/contributing.md) button. The production files are available on the DCC-EX GitHub.
 
 Entrepreneurs wanting to use the design to offer commercial quantities to their local communities should contact Semify (service @ semify-eda.com) to arrange a bulk purchase or DCC-EX (support @ dcc-ex.com) for a license to manufacture. Licensing includes donating a royalty to DCC-EX per board sold.
 

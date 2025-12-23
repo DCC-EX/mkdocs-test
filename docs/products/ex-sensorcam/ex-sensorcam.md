@@ -61,4 +61,4 @@ If you want clarification or wish to discuss the implementation please contact t
 11. Connect CAM to an i2c interface (e.g. PCA9515A or better).
 12. Depending on system, integrate sensorCAM into Command Station using appropriate code.
 
-For a detailed 12 step guide refer to the [Installation Guide](/products/ex-sensorcam/01-installation-guide.md).
+For a detailed 12 step guide refer to the [Installation Guide](/products/ex-sensorcam/installation-guide.md).

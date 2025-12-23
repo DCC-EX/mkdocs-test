@@ -54,4 +54,4 @@ The voltage between the rails results in the engine's direction.
  &nbsp; &nbsp; &nbsp; &nbsp; Example with voltages at 25% throttle.  
  &nbsp; &nbsp; &nbsp; &nbsp; ![TrackManager ED](/_static/images/trackmanager/low-side-brake.png){: style="width: 70%"}  
 
-Additional detail  -  [DC mode - Logic Gate Circuit](./02-dc-mode-logic.md)  
+Additional detail  -  [DC mode - Logic Gate Circuit](./dc-mode-logic.md)  

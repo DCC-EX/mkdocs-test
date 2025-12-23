@@ -34,13 +34,13 @@ This is the information typically required:
 
 Our strongly recommended support option is the DCC-EX Discord server, where you can interact directly with the DCC-EX team as well as a global community of over 4,400 users. Issues are usually resolved quite quickly in comparison with the other options, and you can also interact with the community in real-time.
 
-Please refer to our [Discord page](/support/05-discord.md) which outlines how to join our Discord server, interact with the community, and how to raise support tickets.
+Please refer to our [Discord page](/support/discord.md) which outlines how to join our Discord server, interact with the community, and how to raise support tickets.
 
 ## GitHub
 
 If you are an existing GitHub user, you can also get support via GitHub which is particularly useful for bug reports. While all the DCC-EX team members have GitHub accounts and can respond, this is typically not as quick as getting support via our recommended Discord server option.
 
-Please refer to our [GitHub page](/support/10-github.md) on the various repositories you can raise issues in.
+Please refer to our [GitHub page](/support/github.md) on the various repositories you can raise issues in.
 
 ## TrainBoard
 

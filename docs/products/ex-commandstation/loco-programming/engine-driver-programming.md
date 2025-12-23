@@ -26,4 +26,4 @@ Optionally, you can use the ‘NRMA CVs’ pulldown to select a common CV from a
 
 ## If things dont work
 
-The best way to diagnose problems is to use a serial monito and the underlying commands. See [Diagnostics](/products/ex-commandstation/loco-programming/10-serial-programming.md#diagnostics-when-things-dont-work)
+The best way to diagnose problems is to use a serial monito and the underlying commands. See [Diagnostics](/products/ex-commandstation/loco-programming/serial-programming.md#diagnostics-when-things-dont-work)

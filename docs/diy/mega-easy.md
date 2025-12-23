@@ -11,9 +11,9 @@ To build a basic DIY Command Station in easy steps you will need:
 - A PC or laptop (Not a Raspberry Pi) running a reasonably recent versions of Windows, Linux or macOS
 - an Arduino Mega microprocessor or Elegoo clone.
 - USB cable to your PC for the processor.
-- an [EX-MotorShield8874](/products/ex-motorshield8874/00-ex-motorshield8874.md) to power the track.
-- A double-insulated DC [power supply](/diy/10-power.md) with a voltage suitable for your layout/locos.
-- (Optional) [EX-WiFiShield8266](/products/ex-wifishield8266/00-ex-wifishield8266.md) to use Wi-Fi throttles.
+- an [EX-MotorShield8874](/products/ex-motorshield8874/ex-motorshield8874.md) to power the track.
+- A double-insulated DC [power supply](/diy/power.md) with a voltage suitable for your layout/locos.
+- (Optional) [EX-WiFiShield8266](/products/ex-wifishield8266/ex-wifishield8266.md) to use Wi-Fi throttles.
 
 ## Step-by-Step Build
 
@@ -67,4 +67,4 @@ The EX8874 track connectors unplug for easy access.
 
 Congratulations, you have built a DIY command station the easy way. But you still have to load the software.
 
-For simplicity, software loading is best done with the [EX-Installer](80-installer.md)
+For simplicity, software loading is best done with the [EX-Installer](installer.md)

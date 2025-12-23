@@ -33,4 +33,4 @@ ROUTE(78,"Cross from outer to inner")
   DONE
 ```
 
-See also the [facing turnouts](/products/ex-commandstation/exrail/cookbooks/turnouts/11-facing-turnouts.md) cookbook.
+See also the [facing turnouts](/products/ex-commandstation/exrail/cookbooks/turnouts/facing-turnouts.md) cookbook.

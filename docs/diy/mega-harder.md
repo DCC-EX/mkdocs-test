@@ -28,7 +28,7 @@ To build a basic DIY Command Station you will need:
 ### Optionally mount your Ethernet Shield
 
 Note, you can't have Ethernet and WiFi running on the same command station, but you can install both shields and choose one or the other when installing the software.
-See [Ethernet Install](51-ethernet.md)
+See [Ethernet Install](ethernet.md)
 
 ### Prepare your motor shield
 
@@ -70,8 +70,8 @@ Wire your track power supply to the input turrets of the motor shield, observing
 <div style="clear: both;"></div>
 ### Optionally install a WiFi Shield
 
-See [WiFi Install](50-wifi.md)
+See [WiFi Install](wifi.md)
 
 ### Load the software
 
-Software loading is best done with the [EX-Installer](80-installer.md)
+Software loading is best done with the [EX-Installer](installer.md)

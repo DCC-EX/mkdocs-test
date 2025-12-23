@@ -1,6 +1,6 @@
 # Advanced config.h settings for Command Station build
 
-The basic Motor Shield, WiFi and Ethernet settings are covered in detail in [basic config.h](/products/ex-commandstation/05-config-h.md)
+The basic Motor Shield, WiFi and Ethernet settings are covered in detail in [basic config.h](/products/ex-commandstation/config-h.md)
 
 The following additional settings are for special cases and are not normally created automatically by the EX-Installer.
 
@@ -8,7 +8,7 @@ These options should be coded in the file `config.h` which will be automatically
 
 ## Non-standard Motor Shields
 
-See also:[Motor Shield basic config.h](/products/ex-commandstation/05-config-h.md#motor-shield-definition-mandatory)
+See also:[Motor Shield basic config.h](/products/ex-commandstation/config-h.md#motor-shield-definition-mandatory)
 
 Further pre-defined shield names can be found in the code file MotorDrivers.h although their presence there does not necessarily mean that we can provide support for issues.
 
@@ -71,7 +71,7 @@ If you want to restrict the maximum current LOWER than what your motor shield ca
 
 ## LCD/OLED support
 
-See also:[LCD/OLED basic config.h](/products/ex-commandstation/05-config-h.md#lcdoled-support)
+See also:[LCD/OLED basic config.h](/products/ex-commandstation/config-h.md#lcdoled-support)
 
 In order to avoid wasting memory the current scroll buffer is limited
 to 8 lines.  Some users wishing to display additional information

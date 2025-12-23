@@ -9,7 +9,7 @@ If you intend to use an ESP-01 development board, please skip to [ESP01](#esp-01
 ![WiFiShield8266](/_static/images/wifi/makerfabs-esp8266-wifi-shield.png){ align=right }
 We recommend you purchase an EX-WiFiShield8266 (a joint venture with Makerfabs) which has been designed to make the installation easy.
 
-You can find installation instructions here [WiFiShield8266 install](/diy/20-mega-easy.md#optionally-install-wifishield)
+You can find installation instructions here [WiFiShield8266 install](/diy/mega-easy.md#optionally-install-wifishield)
 
 <div style="clear: both;"></div>
 ## Other shields
