@@ -14,7 +14,7 @@ The config.h file comes pre-configured to use the clock in standalone mode.  No 
 
 ## Serial Mode
 
-To communicatein Serial mode it is necessary to edit the config.h file and uncomment the following line:
+To communicate in Serial mode it is necessary to edit the config.h file and uncomment the following line:
 
 ```cpp
 //#define SEND_VIA_SERIAL true
@@ -31,11 +31,11 @@ To operate in I2C mode edit the config.h file and uncomment the following lines:
 //#define SEND_VIA_I2C true
 ```
 
-In this mode the CS will poll the FastClock to obtain the time.  It is necessary to set the same I2C address here as used in the myHal.cpp file within the CS.  This is set to a default of 0x55 (decimal 85) but can be set to some other value if this conflicts with othere I2C devices on your setup.
+In this mode the CS will poll the FastClock to obtain the time.  It is necessary to set the same I2C address here as used in the myHal.cpp file within the CS.  This is set to a default of 0x55 (decimal 85) but can be set to some other value if this conflicts with other I2C devices on your setup.
 
 ## Screen Header
 
-By default the top of the clock screen displays the name of my own layout.  To inset your layout name then change the following line.
+By default the top of the clock screen displays the name of my own layout.  To insert your layout name change the following line.
 
 ```cpp
 char header[HDDR_SIZE] = {"Nantyderry Junction"};
@@ -52,7 +52,7 @@ const int TS_LEFT=899,TS_RT=122,TS_TOP=100,TS_BOT=898;
 
 ## Configure existing clock
 
-If you already have a FastCLock there are a number of couple of configuration options which allow you to connect your own clock to a  Command Station.
+If you already have a FastClock there are a number of couple of configuration options which allow you to connect your own clock to a  Command Station.
 
 The various configuration options are outlined below
 
@@ -63,7 +63,7 @@ The various configuration options are outlined below
 Connecting via Serial is the simplest option if available.  
 
 - Run a dupont cable from the TX pin on the arduino to a RX pin on the EX-CommandStation.  It is not usually necessary to run a cable from RX to the TX on the EX-CommandStation as  the FastClock is not receiving data back.
-- Find the Serial defines in the config.h file (or copy config.example.h to config.h if you dont have one), locate the following lines:
+- Find the Serial defines in the config.h file (or copy config.example.h to config.h if you don't have one), locate the following lines:
 
 ```cpp
 //#define SERIAL1_COMMANDS
@@ -158,4 +158,4 @@ void TransmitTime() {
 
 - The CommandStation-EX will now poll the FastClock to request the time.  The frequency at which it does so is influenced by the clock speed (i.e. on a slow clock speed it polls less often).
 
-Now that you know how to connect your existing FastCLock, click the "next" button see how you use EX-FastClock.  
+Now that you know how to connect your existing FastClock, click the "next" button see how you use EX-FastClock.

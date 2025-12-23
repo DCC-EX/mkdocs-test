@@ -2,7 +2,7 @@
 
 Welcome to the home of EX-FastClock, a fully integrated Fast Clock for EX-CommandStation.
 
-EX-FastClock is a standalone adjustable speed clock built using an additional Arduino Uno microcontroller and a plug-in shield type TFT touch screen.  The commands built into the DCC_EX Command Station make it possible to also integrate an existing microcontroller based fast clock.
+EX-FastClock is a standalone adjustable speed clock built using an additional Arduino Uno microcontroller and a plug-in shield type TFT touch screen.  The commands built into the DCC-EX Command Station make it possible to also integrate an existing microcontroller based fast clock.
 
 Note: if you only want a real-time clock to make things happen at certain times of day, then the [DS1307](?DS1307) is a simpler/cheaper alternative.
 
@@ -26,7 +26,7 @@ Each time the time changes the EX-CommandStation looks for a time change event a
 
 EX-FastClock allows the FastClock device to connect to the EX-CommandStation via either Serial Communications or I2C.  Even though EX-FastClock provides the code for an Uno based Clock it should be possible for tinkerer level users to add the relevant code if they already have a working clock that they wish to integrate to EX-CommandStation.
 
-To make full use of EX-FastClock**, you will need a basic understanding of EX-RAIL automation, but we'll share the details and some examples to help with this.
+To make full use of EX-FastClock, you will need a basic understanding of EX-RAIL automation, but we'll share the details and some examples to help with this.
 
 **NOTE**: EX-FastClock is in public Beta testing, and as such, we encourage regular feedback on the success or otherwise of both the software and documentation. Please reach out via any of our support methods and help us get EX-FastClock as easy to use and reliable as possible.
 
@@ -41,9 +41,9 @@ The EX-FastClock integration includes:
 
 ## Credit where credit is due
 
-*The EX-FastClock is based on a project originally written by Jim Gifford (Hallet Cove Southern) in June 2017. That project used a 32 x 8 LED matrix to display the time and was controlled by a number of pushbuttons. You can see [Jim's Original Project here](https://www.hallettcovesouthern.com/track-plan-design-info/arduino-projects/fast-clock/).
+The EX-FastClock is based on a project originally written by Jim Gifford (Hallet Cove Southern) in June 2017. That project used a 32 x 8 LED matrix to display the time and was controlled by a number of pushbuttons. You can see [Jim's Original Project here](https://www.hallettcovesouthern.com/track-plan-design-info/arduino-projects/fast-clock/).
 
-- MCUFRIEND.kbv credit: This library was written by David Prentice and has become the De-Facto standard for the shield based TFT screens used in this project. This library inherits from the Adafruit GFX library.
+- MCUFRIEND_kbv credit: This library was written by David Prentice and has become the de facto standard for the shield based TFT screens used in this project. This library inherits from the Adafruit GFX library.
 - Adafruit for the Adafruit GFX Library.
 
 ## Next Steps
