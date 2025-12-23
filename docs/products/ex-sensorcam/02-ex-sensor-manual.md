@@ -376,7 +376,7 @@ For testing beyond that available via a USB cable, the most basic interface to a
 
 The ESP32-WROVER-DEV board is a good alternative to the ESP32-CAM-MB. The slightly bigger CAM will be a little more convenient with the ESP32S 38P Expansion board. This 38 pin expansion board with 5V regulator is described in the video below. **IGNORE PRESENTERS DESCRIPTION OF HIS FAULTY 5V REGULATOR past the 5minute mark**. With NO Wrover, verify the regulator gives 5V from 9V at the barrel jack and remove power before inserting or removing the Wrover. For want of a better video...
 
-ESP32S 38P/V4/Expansion board
+[ESP32S 38P/V4/ Expansion board](https://www.youtube.com/watch?v=AP_CX-SFPAQ)
 
 The SensorCAM software has been almost exclusively tested on the ESP32-CAM-MB as seen in Figure 7. The original prototype was fitted with some enhancements that may not be needed for the user's application. However, at least one “super bright” LED (the "programmable nLED") is recommended for convenience to visually indicate when a sensor is “tripped”, connected between 3.3V via a resistor (~470R) to GPIO14.
 
@@ -402,29 +402,29 @@ The operation of the railway depends on a Control Station that polls the sensorC
 The i2c bus is running at 100kHz on the prototype software. It has not been tested at any higher speed yet. It is running fine over a 20m long i2c bus to the master microcontroller(mpu or Mega).
 
 ### 8.2   DCC-EX Command Station
-
-Setting up a DCC-EX Command Station, should you have one, requires configuration details placed in files config.h and mySetup.h along with a driver IO_EXSensorCAM.h and myAutomation.h. These must go in the directory containing file CommandStation-EX.ino. The IO_EXSensorCAM.h driver is based on the modified IO_EXIOExpander.h code. Refer to APPENDIX H for installation details. EXSensorCAM.h code mirrors the i,I,o,t& m commands, while the EXIODPUP command may serve as the enable function(a). EXIOExpander.h codes don't have the“control& setup” sensorCAM functions otherwise available from a USB console so additional functionality was added using the DCC-EX sensorCAM native command<N\>(if using the newest CamParser.cpp).
+****
+Setting up a DCC-EX Command Station, should you have one, requires configuration details placed in files config.h and mySetup.h along with a driver IO_EXSensorCAM.h and myAutomation.h. These must go in the directory containing file CommandStation-EX.ino. The IO_EXSensorCAM.h driver is based on the modified IO_EXIOExpander.h code. Refer to **APPENDIX H** for installation details. _EXSensorCAM.h_ code mirrors the i,I,o,t & m commands, while the EXIODPUP command may serve as the enable function(a). EXIOExpander.h codes don't have the "control & setup" sensorCAM functions otherwise available from a USB console so additional functionality was added using the DCC-EX sensorCAM native command<N\>(if using the newest CamParser.cpp).
 
 ### 8.3 Non-DCC-EX system
 
-Proprietary Master:  If writing raw code for another Command Station, you will need details on the protocol used by sensorCAM on the i2c bus, and code to interpret the bus bytes and reconstitute text for the console. Two such prototype examples exists. V155 of sensorCAM incorporates a subset of the DCC-EX IOexpander codes so that EXRAIL can use sensorCAM without further modification. V301& later mostly use ASCII code characters.
+Proprietary Master:  If writing raw code for another Command Station, you will need details on the protocol used by sensorCAM on the i2c bus, and code to interpret the bus bytes and reconstitute text for the console. Two such prototype examples exists. V155 of sensorCAM incorporates a subset of the DCC-EX IOexpander codes so that EXRAIL can use sensorCAM without further modification. V301 & later mostly use ASCII code characters.
 
 ### 8.4 Monitor Lighting
 
-Stable good lighting is needed.  Gross Lighting changes will have two effects, namely cause trips of most sensors and stop automatic reference refreshes, it may be wise to include monitoring for this eventuality by detecting and setting an “alarm” state. The reference sensor(S00) is automatically re-referenced every 6.4 seconds so will indicate a fault-trip for a maximum of 6.4 seconds. All other sensors will continue to indicate a trip until the user resets the references with an r00 (having checked all unoccupied). Setting up a second "reference" sensor (say S01) that would NOT get reset automatically and would stay tripped as a more enduring fault indicator could be helpful. You could reserve entire bank 0 for this purpose or use the'nO' command to set the programmable pLED to light up if there is any enduring trip on bank 0.  Consider using the "qLED" GPIO2.   By default BLKOLED was set to GPIO2 LED, with BLK1LED to BLK3LED all set to GPIO33 LED. PLED is set to GPIO14
+Stable good lighting is needed.  Gross Lighting changes will have two effects, namely cause trips of most sensors and stop automatic reference refreshes, it may be wise to include monitoring for this eventuality by detecting and setting an "alarm" state. The reference sensor(S00) is automatically re-referenced every 6.4 seconds so will indicate a fault-trip for a maximum of 6.4 seconds. All other sensors will continue to indicate a trip until the user resets the references with an r00 (having checked all unoccupied). Setting up a second "reference" sensor (say S01) that would NOT get reset automatically and would stay tripped as a more enduring fault indicator could be helpful. You could reserve entire bank 0 for this purpose or use the '**nO**' command to set the programmable pLED to light up if there is any enduring trip on bank 0.  Consider using the "_qLED_" GPIO2.   By default _BLKOLED_ was set to GPIO2 LED, with _BLK1LED_ to _BLK3LED_ all set to GPIO33 LED. _PLED_ is set to GPIO14.
 
 ## 9. Methodology of operation
-
+__
 ### 9.1 Overview
 
 The sensorCAM monitors up to 80 small square images (virtual sensors) each consisting of 16 pixels (4x4) the coordinates of which relate to the row/column of the top left pixel. The top left pixel of the QVGA (240x320) image is an r,c coordinate of 0,0. Sensors with coordinate 0,0 are considered "undefined". Sensors are electrically "noisy", so much effort was applied to avoid noise trips.
 
-After boot-up, every virtual sensor is imaged and a Sensor_ref[ ] recorded. This is a ONE frame grab as a first guess.  All sensors should preferably be **un-occupied at boot up**. If not, the user will have to manually take reference grabs at an appropriate time using the '**r%%**' commands. The '**r%%**' also triggers an IMMEDIATE start of a 3.2sec average Ref for S%%. '**r00**' triggers a 1 frame reference refresh for ALL sensors but also starts the auto reference process, as does **r%%**. The latest version, at boot-up, commences regular averaged reference updates assuming all unoccupied.  If an "occupied" state occurs during the averaging, the averaged ref. is rejected.
+After boot-up, every virtual sensor is imaged and a _Sensor_ref[ ]_ recorded. This is a ONE frame grab as a first guess.  All sensors should preferably be **un-occupied at boot up**. If not, the user will have to manually take reference grabs at an appropriate time using the '**r%%**' commands. The '**r%%**' also triggers an IMMEDIATE start of a 3.2sec average Ref for S%%. '**r00**' triggers a 1 frame reference refresh for ALL sensors but also starts the auto reference process, as does **r%%**. The latest version, at boot-up, commences regular averaged reference updates assuming all unoccupied.  If an "occupied" state occurs during the averaging, the averaged ref. is rejected.
 
 Every 100mSec the sensor pixels are decoded from the RGB565 QVGA image(2-byte) into RGB666 3-byte format and compared with the reference sensor image (in *Sensor_ref[]*) for changes. To allow for drifting light intensity, *Sensor_ref[]* needs to be periodically updated. The automatic updates occur for each enabled sensor(0/1 through 9/7 sequentially, each using a 32 sample average (in ~3.5 seconds) and replacing the old Sensor_ref[] provided there were no "trips" of the sensor during the sample period (3.5sec.). Hence updates occur only when sensor is UNoccupied, and only once every Nx3.5sec.(N being the number of enabled sensors). The brightness sensor(S00) is updated independently every 6.4 seconds with a 64 sample average. Each update is flagged to the monitor as it occurs(as "**Ref 0%%**"  ). It is inadvisable to leave a sensor occupied for long periods if best reliability is desired. If a sensor is occupied for long periods of drifting illumination, the ref can become out-of-date to an extent that the sensor can remain PERMANENTLY "occupied". Manual re-referencing (**r%%**) would become necessary.  EXRAIL code may accomplish this.
 
-To detect a "trip" of a sensor, an algorithm evaluates a "difference" score between _Sensor666[]_ and *Sensor_ref[]*. The (_bpd_) score is a brightness plus colour-diff sum. This (_bpd_) score is compared with the _threshold_ ('**t##**') value. If it exceeds _threshold_, a flag is set and if after _min2trip_ frames it remains set, then the Sensor "trips". It will then fall back (untrip) if _min2trip_ frames go below _threshold_. _min2trip_ is set to 2 by default as 3 will give an extra +100mS delayed response. The monitor data stream (scroll) includes the bsNo.%%, potential for trip **?-** , the *bpd* score, or actual trip **oo__##**. If a twin (see below) inhibits trip, it indicates this with **?T**. Minimum _bpd_ is 32(identical).  
-e.g.(with **t45**) **12:--38--\* 13:?-46-?\* 14:oo50##\* 15:?-53?T\* 16:--35--\*** Only S14 has tripped.
+To detect a "trip" of a sensor, an algorithm evaluates a "difference" score between _Sensor666[]_ and *Sensor_ref[]*. The (_bpd_) score is a brightness plus colour-diff sum. This (_bpd_) score is compared with the _threshold_ ('**t##**') value. If it exceeds _threshold_, a flag is set and if after _min2trip_ frames it remains set, then the Sensor "trips". It will then fall back (untrip) if _min2trip_ frames go below _threshold_. _min2trip_ is set to 2 by default as 3 will give an extra +100mS delayed response. The monitor data stream (scroll) includes the bsNo.%%, potential for trip **?-** , the *bpd* score, or actual trip **oo__##**. If a twin (see below) inhibits trip, it indicates this with **?T**. Minimum _bpd_ score is 32 (identical).  
+e.g. (using **t45**) &nbsp; &nbsp; **12:--38--\* 13:?-46-?\* 14:oo50##\* 15:?-53?T\* 16:--35--\*** &nbsp; &nbsp; Only S14 has tripped.
 
 A "second opinion" may be used to maintain a quick "trip" with greater reliability. This involves setting up a second "twin" sensor adjacent to the primary sensor. The primary sensor will only trip if the secondary sensor agrees (e.g. example for S15 above). The '**i%%,$$**' command nominates a twin sensor (S$$) for sensor S%%. The (non-S00) twin should have a lower bsNo. than the primary to avoid extra delay, as they are evaluated in ascending bsNo. order.
 
@@ -448,9 +448,9 @@ Set _maxDiff_ to the largest ratio for a sensor from the 12 "_Xratios_"
 
 A brightness score is similarly calculated between the full ref. brightness and that for the current sensor using formula 16x _bright_/_Sen_Brightness_Ref[bsn]_-16. It is scaled to give a value from 0 upwards. With _brightSF_ =2, a score of 2 represents about 7% brighter so is relatively insensitive. Code uses int so <=6% difference gives a 0 score.
 
-The “diff” score(_bpd_) comprises of (_bright_x_brightSF+maxDiff_) (\>=32) and is weighted towards colour difference+small brightness component (of 2 for 7% change).
+The "diff" score(_bpd_) comprises of (_bright_x_brightSF+maxDiff_) (\>=32) and is weighted towards colour difference+small brightness component (of 2 for 7% change).
 
-The diff(bpd) is compared to threshold for a decision on trip state. If greater than _threshold_, several additional checks are made including requiring 2 consecutive frames to exceed _threshold_, averaging pixels over two frames, and possibly confirmation from a twin sensor. These contribute to an additional response time delay (+100mSec).Furthermore the reference image is normally based on a 32 frame average pixel to eliminate any “noise” in the sensor reference itself.
+The diff (_bpd_) is compared to _threshold_ for a decision on trip state. If greater than _threshold_, several additional checks are made including requiring 2 (_min2trip_) consecutive frames to exceed _threshold_, averaging pixels over two frames, and possibly confirmation from a twin sensor. These contribute to an additional response time delay (+100mSec).Furthermore the reference image is normally based on a 32 frame average pixel to eliminate any “noise” in the sensor reference itself.
 
 ### 9.3 Program Summary
 
@@ -498,70 +498,70 @@ rev 1DEC25
 
 #### Introduction
 
-Up to 10 banks (0-9) of sensors. Each bank can have up to 8 enabled sensors (0-7). Bank/sensor (%%) up to'97'.  Array _Sensor\[n]_ holds coordinates(rx) of sensor n. Offsets are _long int_. Array uses 88+320 bytes(10*8*4) EEPROM.  Sensors are grouped into banks(b) of individuals(s). e.g. bsNo 6/7 identifies bank 6, sensor 7.(n=8x6+7=55=067) Sensors are undefined if coordinates(rx) are set to 00. They are disabled if `SensorActive\[n]` is set to false.  
-If a sensor detects differences, then any output LED (_pLED qLED_) assigned to the associated Bank of sensors should turn ON.  
+Holds up to 10 banks (0-9) of sensors. Each bank can have up to 8 enabled sensors (0-7). Bank/sensor (%%) up to '97'.  Array _Sensor\[n]_ holds coordinates(rx) of sensor n.  Sensors are grouped into banks(b) of sensors(s). e.g. bsNo 6/7 identifies bank 6, sensor 7 (n=8x6+7=55=067). Sensors are undefined if coordinates(rx) are set to 00. They are disabled if _SensorActive\[n\]_ is set to false.  
+If a sensor detects differences, then any output LED (e.g. _pLED, qLED_) assigned to the associated Bank of sensors should turn ON.  
 On reset (power-up), reference grabs are taken for all defined (in EEPROM) sensors, and then enables them.
-To define a sensor, use'**a**' command,  Processing4, or (outdated method) a bright LED on the desired spot and dim lighting with a "scan" (**s%%**). Save in EEPROM(**e**). SensorCAM uses RGB565 image format which is incompatible with JPG, so auto reboots between SensorCAM or webCAM modes.
+To define a sensor, use '**a**' command,  Processing4, or (outdated method) a bright LED on the desired spot and dim lighting with a "scan" (**s%%**). Save in EEPROM (**e**). SensorCAM uses RGB565 image format which is incompatible with JPG, so auto reboots between SensorCAM or webCAM modes occurs.
 
-#### Commands below are received over the USB or i2c interfaces.__
+#### Serial Command USB format  
 
 **a%%[, rr, xx]** **enAble** _Sensor[%%]_ & refresh _Sensor_ref[%%]_, _cRatios_ etc. 4x4 from image in latest frame. **(Note 20.)**
 
-**b#\[,$]**&nbsp; &nbsp; **Bank** # sensors. Show which sensors OCCUPIED(in bits 7-0).(1=occ.)(b#$ sets _brightSF_)
+**b#\[,$]**&nbsp; &nbsp; **Bank** # sensors. Show which sensors OCCUPIED(in bits 7-0).(1=occ.)(**b#,$** sets _brightSF_ to $)
 
-**c$$$$**&nbsp; &nbsp; *re**Calibrate** camera CCD occasionally and grab new references for all enabled sensors(Beware of doing this while any sensors are occupied! NB.Obstructed sensors will later need an **r%%**! Check all bank LEDs are off AND check all sensors are unoccupied before recalibrate. Can set AWB AEC AGC CB through $$$$ e.g. c0110  
+**c$$$$**&nbsp; &nbsp; **reCalibrate** camera CCD occasionally and grab new references for all enabled sensors(Beware of doing this while any sensors are occupied) **N.B.** Obstructed sensors will later need an **r%%**. Check all bank LEDs are off AND check all sensors are unoccupied before recalibrate. Can set AWB AEC AGC CB through $$$$ e.g. c0110  
 Also able to change default setting for Brightness, Contrast & Saturation with extra digits e.g. c$$$$012
 
-**d%%[#]**&nbsp; **\*Difference** score in colour& brightness between Ref& actual image. Show# grabs.
+**d%%[#]**&nbsp; **\*Difference** score in colour& brightness between Ref & actual image. Show # grabs.
 
 **e**&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; **EPROM** save of any new Sensor offset positions, pvtThresholds, new twins and 5 default parameter settings.
 
-**f\%\%**&nbsp; &nbsp; &nbsp; **\*Frame** buffer sample display. Print latest bytes in _Sensor_ref[%%]_ & Sensor S%% positions.
+**f%%**&nbsp; &nbsp; &nbsp; **\*Frame** buffer sample display. Print latest bytes in _Sensor_ref[%%]_ & Sensor S%% positions.
 
-**g**&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; **\*Get** Camera Status. Displays most current settings available in webcam window (both sensor\& video mode).
+**g**&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; **\*Get** Camera Status. Displays most current settings available in webcam window (both sensor & video mode).
 
-**h$[,\#]** &nbsp; &nbsp; **\*Help(debug)** output.  **h9**  to set all OFF,  **h0**  turn ON detailed USB output.'h7,#"Waits" scroll on bank# trip.
+**h$[,\#]** &nbsp; &nbsp; **\*Help(debug)** output.  **h9**  to turn all OFF,  **h0**  turn ON detailed USB output. '**h7,#**' "Waits" scroll on a bank# trip.
 
 **i%%[,$$]** &nbsp;**Info.** on S%%.  Status(enabled/occupied), position(r,x), any twin(S$$), pvtThreshold & brightness.
 
-**j$#** &nbsp; &nbsp; &nbsp; &nbsp; **\*adJust** camera setting $ to value # and display most settings(as for '**g**'). '**j**' alone lists the options for $\#.
+**j$#** &nbsp; &nbsp; &nbsp; &nbsp; **\*adJust** camera setting $ to value # and display most settings (as for '**g**'). '**j**' alone lists options for $#.
 
-**k%%,rrr,xxx** \*set **coordinates** of Sensor S$$ to row: rrr & column: xxx. Follow with  **r%%**. Verify values with  **p$**. 
+**k%%,rrr,xxx** \*set **coordinates** of Sensor S$$ to row: rrr & column: xxx. Follow with  **r%%**. Verify values with **p$**. 
 
- **l%%** &nbsp; &nbsp; &nbsp; (Lima) **Latch** sensor S%% to on(1 = occupied(LED lit) & also set _SensorActive[%%]_ false to disable sensing.
+**l%%** &nbsp; &nbsp; &nbsp; (Lima) **Latch** sensor S%% to on(1 = occupied(LED lit) & also set _SensorActive[%%]_ false to disable sensing.
 
 **m$[,%%]** **\*Minimum** $(1-4) sequential frames over _Threshold_ to trigger/trip sensor. Shows list of parameters. **(Note 14)**
 
- **n#[,%%]**   **nLED** bank Number assigned to the programmable status _nLED_. Optional  n10,%%  to set _minSensors_.
+**n#[,%%]** &nbsp; **nLED** bank Number assigned to the programmable status _nLED_. Optional  **n10,%%**  to set *minSensors*.
 
-**o%%** &nbsp; &nbsp; &nbsp; (Oscar) force **Off** sensor%% (0=UN-occupied(LED off) Also set _SensorActive[##]_ false to disable updating.
+**o%%** &nbsp; &nbsp; &nbsp; (Oscar) force **Off** sensor%% (0=UN-occupied, LED off) Also set _SensorActive[##]_ false to disable updating.
 
-**p$**&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; **\*Position Pointe**r table info for banks 0 to  $$  giving DEFINED sensor r/ x\) positions.  p%%  shorter.
+**p$**&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; **\*Position Pointe**r table info for banks 0 to $ giving DEFINED sensor r/ x\) positions.  p%% shorter.
 
 **q$**&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; **\*Query** bank$, to show which sensors ENABLED(in bits 7-0). 1=enabled. **q9** gives ALL banks.
 
-**r\%\%[,0]** &nbsp;**Refresh** Average Sensor_Ref[\#\#] (if defined), enable\& calc. cRatios etc. r%%,0 refreshes block S%0 to S%%. 
+**r%%[,0]** &nbsp;**Refresh** Average _Sensor_Ref[##]_ (if defined), enable & calc. cRatios etc. **r%%,0** refreshes block S%0 to S%%. 
 
 **r00** &nbsp; &nbsp; &nbsp; &nbsp; **Refresh** Average Refs etc. for ALL defined sensors. Ignores enable[]. Sensor[00] reserved for brightness ref.
 
-**s%%** &nbsp; &nbsp; &nbsp; **\*Scan** for new location for sensor  $\%\%(00-97)$  . If found, records location in _Sensor[0%%]_  **(Note 12)**
+**s%%** &nbsp; &nbsp; &nbsp; **\*Scan** for new location for sensor  S%%(00-97). If found, records location in _Sensor[0%%]_. **(Note 12)**
 
-**t##[,%%]** **Threshold** level##(31-98 only) set as default. [**t##,%%** sets the pvtThreshold for sensor%%. (**t0,%%** to clear)]
+**t##[,%%]** **Threshold** level##(31-98 only) set as default. [**t\#\#,%%** sets the _pvtThreshold_ for sensor %% (**t0,%%** to clear)]
 
-**t##** &nbsp; &nbsp; &nbsp; &nbsp; **Triggers**\#\#(2-30 only) rows of scroll data(continuous scroll toggled off) Note: t1 alone toggles scroll on/off.
+**t##** &nbsp; &nbsp; &nbsp; &nbsp; **Tabulates** \#\#(2-30 only) rows of scroll data (continuous scroll toggled off) **Note:** **t1** alone toggles scroll on/off.
 
-**t1,%%**  &nbsp; &nbsp; Trash 1 entire bank of _pvtThresholds_. Use **t1,99** to clear ALL banks(0-9). Note: **t99** lists all _pvtThresholds_
+**t1,%%**  &nbsp; &nbsp; **Trash** 1 entire bank of _pvtThresholds_. Use **t1,99** to clear ALL banks (0-9). **Note:** **t99** lists all _pvtThresholds_
 
- **u%%** &nbsp; &nbsp; &nbsp; **Un-define**/remove sensor %%  (Sensor S%%=0 & set DISABLED) **u99** for ALL. ('**e**' will erase from EPROM.)
+ **u%%** &nbsp; &nbsp; &nbsp; **\*Un-define**/remove sensor %%  (Sensor S%%=0 & set DISABLED) **u99** for ALL. '**e**' will erase from EPROM.
 
-**v[1|2]**&nbsp; &nbsp; &nbsp; **Video** mode. Causes reboot as a webserver. 'v2' will connect to 2nd (alt.) router ssid.(v or v0 for version)  
+**v[1|2]**&nbsp; &nbsp; &nbsp; **Video** mode. Causes reboot as a webserver. '**v2**' will connect to  2nd (alt.) router ssid.(**v** or **v0** for version)
 
-**w**&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; **\*Wait** for new command line(\\n) before resuming loop()(handy to stop display data scrolling- see **t1** toggle)
+**w**&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; **\*Wait** for new command line (\\n) before resuming sensing (handy to freeze display data scroll - see **t1** toggle)
 
-**x###** &nbsp; &nbsp; &nbsp; \*selects first pixel column(0-319) & **z###** selects image width(### columns(1-320)) for imaging.
+**x###** &nbsp; &nbsp; &nbsp; \*selects first pixel column(0-319) & **z###** selects image width (### columns(1-320)) for imaging.
 
 **y###** &nbsp; &nbsp; &nbsp; \*selects first row for image and initiates a binary data dump for that row (header + #x2 bytes) using rgb565.  
- &nbsp; &nbsp; &nbsp; &nbsp; This command starts a process that must, after a series of 'y' commands, end with a terminator of 'yy'.
+  &nbsp; &nbsp; &nbsp; &nbsp; This command starts a process that must, after a series of 'y' commands, end with a terminator of 'yy'.
 
 **R** & **F**&nbsp; &nbsp; &nbsp; ***Reset** commands- will Reset CAM and initiate the Sensor mode. Both will Finish the WebServer('**v**') mode.
 
@@ -569,9 +569,9 @@ Also able to change default setting for Brightness, Contrast & Saturation with e
 
 **/%,#,$** &nbsp; &nbsp;  Convert bank to linear sensor starting with S$$ as for '\\' but line will slope "down-left" (-deltaX).
 
-**&** &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;  **statistics** histogram on trips and potential trips since last '**&**', then reset counters and start another sample process. The table gives number of single highs, double highs etc. and totals for No. of frames/run time.
+**&** &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;  **statistics** histogram on trips and potential trips since last '**&**', then reset counters and start another sample process. The table gives number of single highs, double highs etc. and totals for No. of frames/run time
 
-**@##** &nbsp; &nbsp; &nbsp;  \*set the "occupied" symbol in the scroll to ASCII character \##. Default is 35('#') Arduino IDE **@12** is bolder!
+**@##** &nbsp; &nbsp; &nbsp;  \*set the "occupied" symbol in the scroll to ASCII character \##. Default is 35("#") Arduino IDE **@12** is bolder!
 
 **+\#,$** &nbsp; &nbsp; &nbsp; *add offset(\# pixels) in $ direction to re-centre sensors after physical drift in CAM alignment. $(0-7) for N-NW
 
@@ -581,36 +581,38 @@ Also able to change default setting for Brightness, Contrast & Saturation with e
 
 ### Startup Notes:
 
-1. Normal power up reset will initiate Sensor mode, as will the 'R' command, and uses EPROM data settings.  
-2. Sensor mode startup flashes white LED at 10Hz after~10 seconds, and exhibits a"flicker" at~20 seconds.  
-3. Requested(v1) WebServer mode reset will flash LED at~3seconds and again(brighter) at~8 seconds.  
-4. After the 8 second flash the Webserver will be operational at web address 192.168.0.xx(xx from display)  
-5. If the OV2640 camera or WiFi fails to initialize, the CAM resets and may restart/revert into Sensor mode!  
-6. If USB FTDI/MB is removed or not connected to PC, then WebServer may fail/reboot. Power issue?  
+1. Normal power up reset will initiate Sensor mode, as will the 'R' command, and uses EPROM data settings.
+2. Sensor mode startup flashes white LED at 10Hz after ~10 seconds, and exhibits a "flicker" at ~20 seconds.
+3. Requested (v1) WebServer mode reset will flash LED at ~3seconds and again (brighter) at ~8 seconds.
+4. After the 8 second flash the Webserver will be operational at web address 192.168.0.xx (xx from display).
+5. If the OV2640 camera or WiFi fails to initialize, the CAM resets and may restart/revert into Sensor mode.
+6. If USB FTDI/MB is removed or not connected to PC, then WebServer may fail/reboot. Power issue?
 
 ### I2C command Notes:
-**(EX-CS may exhibit small variations & reduced cmd functionality. see Appendix C)**
+(EX-CS may exhibit small variations & reduced cmd functionality refer APPENDIX C)
+
+**(EX-CS may exhibit small variations & reduced cmd functionality refer APPENDIX C)**
 
 **1.** The same commands are valid from an I2C Master Arduino, but there are some variations.  
 **2.** The commands with asterisks normally pause CAM execution so the operator can read USB output on a monitor screen. The same commands from I2C DO NOT wait for a new line, with the exception of 'w'.  
-**3.** Commands b,d,i,m,p,q&t can return data to the I2C master Arduino(Mega). This data is delivered if the master calls a Wire.requestFrom(addr,#); following the command, from the slave CAM address 17(0x11).  
+**3.** Commands b,d,i,m,p,q&t can return data to the I2C master Arduino(Mega). This data is delivered if the master calls a _Wire.requestFrom(addr,#)_; following the command, from the slave CAM address 17(0x11).  
 **4.** The I2C data returned(after header byte) is in binary bytes and in a format depending on the last command.  
-**5.** Header byte[0] is the ASCII command character(b,d.i,m,p,q,or t) or an error code(OxFE) if no valid data.  
-**6.** If the error code is generated, it is followed by the last received(inappropriate) command string.  
-**7.** b$ cmd returns $+1 sensor status bytes for bank$,$-1 etc. down to bank 0.'b' defaults to'b9'(all).  
-**8.** d%% cmd returns 4 data bytes with binary values for bsn, maxDiff+bright, maxDiff & bright in that order.  
-**9.** i%% cmd returns 2 data bytes: byte[1]= bsn and byte[2]=0 if unoccupied or 1(true) if occupied.(+ more)  
-**10.** p$ cmd returns Byte[0]header+ count+ 3 data bytes per enabled(bank$) sensor+ parity(max 27 bytes).  
-**11.** q$ cmd returns $+1 bank sensor enabled status bytes for bank$,$-1 etc. down to bank 0.'q' defaults to'q1'  
-**12.** s%% Scan looks for a bright LED on a dimmer background. The LED should be placed on the desired sensor position. This old method of placing sensors is not recommended. The Scan command is to be deprecated.  
-**13.** t##[,%%] cmd. initially sends CS the old threshold value(i.e. BEFORE change in the case of t##). Also returns sensor scores(bpd) in 2-byte pairs with MSB set so: bsn(+0x80 if undecided)& bpd(+0x80 if OCCUPIED).Byte[0]header;[1]threshold;[2]S00bpd;[3]bsn;[4]bpd;[5]bsn;[6]bpd etc. Ends with bsn=80(max 15 enabled)  
-**14.** m$,%% sets maxSensors to%%(USB or i2c)(as can h%%(%%<98)). m0,1%% sets minSensors. Data sent to screen is bound between min and maxSensors. Extra parameter status bytes added to i2c bus for display.  
-**15.** The‘‘character is just a null cmd. Used before R, d& t to prevent BCD Mega itself pre-interpreting them.  
-**16.** N.B.: The ESP32-CAM uses old ESP32 which has I2C limitations. It has a“pipeline” for returning data which results in a delay in response. i.e. the first request after a command will return OLD data. A SECOND request should return the desired data described above. A third or fourth request may return updated data.  
-**17.** Some commands take time to complete, as command processing can only happen once per 100mSeconds(i.e. the frame rate of the CAM). The I2C master should allow for latency in response where necessary. Place a DELAY(400) between all PARSE("...") EXRAIL commands.  
+**5.** Header byte[0] is the ASCII command character (b,d.i,m,p,q or t) or an error code(OxFE) if no valid data.  
+**6.** If the error code is generated, it is followed by the last received (inappropriate) command string.  
+**7.** b$ cmd returns $+1 sensor status bytes for bank$,$-1 etc. down to bank 0. 'b' defaults to 'b9'(all).  
+**8.** d%% cmd returns 4 data bytes with binary values for _bsn_, _maxDiff_+_bright_, _maxDiff_ & _bright_ in that order.  
+**9.** i%% cmd returns 2 data bytes: byte[1]= _bsn_ and byte[2]=0 if unoccupied or 1(true) if occupied. (+ more)  
+**10.** p$ cmd returns Byte[0] header + count +3 data bytes per enabled (bank$) sensor + parity (max 27 bytes).  
+**11.** q$ cmd returns $+1 bank sensor enabled status bytes for bank$,$-1 etc. down to bank 0. 'q' defaults to 'q1'  
+**12.** s%% Scan looks for a bright LED on a dimmer background. The LED should be placed on the desired sensor position. This old method of placing sensors is not recommended. The Scan command is the last resort when USB is unavailable.  
+**13.** t##[,%%] cmd. initially sends CS the old _threshold_ value (i.e. BEFORE change in the case of t##). Also returns sensor scores(_bpd_) in 2-byte pairs with MSB set so: _bsn_(+0x80 if undecided) & _bpd_(+0x80 if OCCUPIED). Byte[0]header;[1]threshold;[2]S00bpd;[3]bsn;[4]bpd;[5]bsn;[6]bpd etc. Ends with bsn=80 (max 15 enabled)  
+**14.** m$,%% sets _maxSensors_ to %% (USB or i2c) (as can h%% (%%<98)). m0,1%% sets _minSensors_. Data sent to screen is bound between min and maxSensors. Extra parameter status bytes added to i2c bus for display.  
+**15.** The " character is just a null cmd. Used before R, d & t to prevent BCD Mega itself pre-interpreting them.  
+**16.** N.B.: The ESP32-CAM uses old ESP32S which has I2C limitations. It has a “pipeline” for returning data which results in a delay in response. i.e. the first request after a command will return OLD data. A SECOND request should return the desired data described above. A third or fourth request may return updated data.  
+**17.** Some commands take time to complete, as command processing can only happen once per 100mSeconds (i.e. the frame rate of the CAM). The I2C master should allow for latency in response where necessary. Place a DELAY(400) between all PARSE("<N....>") EXRAIL commands. 
 **18.** Data requested over i2c may have a parity byte appended, and a check byte in byte[31].  
-**19.** NOTE Automatic updating of ref image of unoccupied sensors now starts after last SUS(suspend) indicator.  
-**20.**  $a\%\%,$  rrr,xxx performs extended'create sensor' equivalent to  $k\%\%,$  rrr,xxx+  $a\%\%+$  r%\% for new sensor  $\%\%$  
+**19.** NOTE Automatic updating of ref image of unoccupied sensors now starts after last SUS (suspend) indicator.  
+**20.** **a%%,rrr,xxx** performs extended 'create sensor' equivalent to  **k%%,rrr,xxx + a%% + r%%** for new sensor S%%  
 **21.** Connection to DCC-EX Command Station has cmd. variations. See APPENDIX C for revised command detail.
 
 ## APPENDIX B
@@ -619,39 +621,41 @@ Also able to change default setting for Brightness, Contrast & Saturation with e
 
 In the situation where sensors may be tripping undesirably, there is a range of adjustments that can be made to find a satisfactory operating point. Some have disadvantages that need to be considered and compromises may be necessary.
 
-**1.** First step is to refresh the sensor reference image. Try Cmd:**r00**, or **r%%** for a single sensor. This may be necessary after any disturbance to the environment such as changed lighting.
+**1.** First step is to refresh the sensor reference image. Try Cmd: **r00**, or **r%%** for a single sensor. This may be necessary after any disturbance to the environment such as changed lighting.
 
-**2.** Check the "Diff" scores on the scrolling display. After a refresh they should be in the range 32-37 for normal operation. If occasional trips occur, one remedy is to increase the threshold with Cmd:**t46** say. Increasing the threshold reduces the sensitivity to low contrast objects (e.g. black over brown) If unoccupied Diff scores are consistently 32-35, reduce threshold for greater sensitivity.
+**2.** Check the "Diff" scores on the scrolling display. After a refresh they should be in the range 32-37 for normal operation. If occasional trips occur, one remedy is to increase the threshold with Cmd: **t46** say. Increasing the threshold reduces the sensitivity to low contrast objects (e.g. black over brown) If unoccupied Diff scores are consistently 32-35, reduce threshold for greater sensitivity.
 
-**3.** Is the lighting adequate? **Steady** muted daylight is ideal. Beware of rotating fans and other moving shadows(clouds?)(Note: may need to consider extreme case of mains induced ripple from 50/60Hz LED/fluoro lighting-to be discussed later) Brighter stable lighting means reduced "noise".
+**3.** Is the lighting adequate? **Steady** muted daylight is ideal. Beware of rotating fans and other moving shadows (clouds?) (Note: may need to consider extreme case of mains induced ripple from 50/60Hz LED/fluoro lighting-to be discussed later) Brighter stable lighting means reduced "noise".
 
 **4.** Sensitivity to electrical "noise" can be reduced by increasing the "_min2trip_" parameter to 3 consecutive frames using Cmd: **m3** (default is m2). However this increases response time by 100mS.
 
-**5.** You can create a "Twin" sensor for a "second opinion" by placing a Second Sensor S$$ on the track adjacent to the primary sensor S%% (3-4 pixels away) by using the Cmd: **a$$,123,234** selecting the position from that of the primary sensor (obtained from Cmd: **i%%**) To avoid increasing response time, use a twin bsNo LOWER than the primary sensor (possibly in a “reserved” bank, perhaps a matching bsNo in that bank). This twin S$$ can be assigned to the primary sensor S%% with the Cmd:**i%%,$$** The primary sensor will not trip unless the twin agrees. This suppresses pixel noise spikes.
+**5.** You can create a "Twin" sensor for a "second opinion" by placing a Second Sensor S$$ on the track adjacent to the primary sensor S%% (3-4 pixels away) by using the Cmd: **a$$,123,234** selecting the position from that of the primary sensor (obtained from Cmd: **i%%**) To avoid increasing response time, use a twin bsNo LOWER than the primary sensor (possibly in a “reserved” bank, perhaps a matching bsNo in that bank). This twin S$$ can be assigned to the primary sensor S%% with the Cmd: **i%%,$$** The primary sensor will not trip unless the twin agrees. This suppresses pixel noise spikes.
 
-**6.** Check that there isn't anything elsewhere in the field of view that is moving and could trigger the auto exposure in the camera. e.g. spectators near the edge of the field of view.(It is possible to change camera ov2640 module settings with'**j**' and'**c**' commands, but this can be a frustrating experience and needs considerable practice as some settings interact and can be order dependent)
+**6.** Check that there isn't anything elsewhere in the field of view that is moving and could trigger the auto exposure in the camera. e.g. spectators near the edge of the field of view.(It is possible to change camera ov2640 module settings with '**j**' and '**c**' commands, but this can be a frustrating experience and needs considerable practice as some settings interact and can be order dependent)
 
-**7.** Make sure you do a refresh/record reference(**r**) after any changes or the benefit will be obscured.
+**7.** Make sure you do a refresh/record reference (**r**) after any changes or the benefit will be obscured.
 
-**8.** Is the camera steady? No vibration or movement since the last reference images(**r**)?
+**8.** Is the camera steady? No vibration or movement since the last reference images (**r**)?
 
 **9.** There is a 2-frame (experimental) averaging applied to low bank sensors (currently 0-2) This can be extended to cover all banks, if desired by increasing CAM parameter _TWOIMAGE_MAXBS_ above 3/0
 
 **10.** There has been poorer behavior observed with sensors placed near the edge of the frame. They seem to experience more electrical noise than mid-frame sensors and may need extra attention.
 
-**11.** A statistics function can be obtained to see how bad spurious tripping is. The'**&**' cmd gives a table of stats accumulated since the previous'**&**' command. May be useful. HINT: You can compare two or more sensors with different settings on the same spot. Accumulate data with no genuine trips.
+**11.** A statistics function can be obtained to see how bad spurious tripping is. The '**&**' cmd gives a table of stats accumulated since the previous '**&**' command. May be useful. HINT: You can compare two or more sensors with different settings on the same spot. Accumulate data with no genuine trips.
 
 **12.** Consider whether a pixel may be faulty or unduly noisy. Try another nearby sensor position.
 
 **13.** If necessary, enhance the brightness of the Sensor location with light colour or a small reflector.
 
-**14.** It is possible to set private thresholds on individual sensors if other solutions inadequate.(**t##,%%**)
+**14.** It is possible to set private thresholds on individual sensors if other solutions inadequate. (**t##,%%**)
 
-**15.** Consider adjusting _brightSF_($) if colour contrast is generally poor(**b#,$**) default 3, try 4-5.
+**15.** Consider adjusting _brightSF_($) if colour contrast is generally poor (**b#,$**) default 3, try 1-5.
 
 **16.** In some situations, repositioning sensor slightly to include loco shadow will give extra sensitivity.
 
-**17.** Last but not least, consider repositioning CAM for better oblique view angle giving more contrast for better detection, catching sides of coaches/wagons, shadows and some trackside references.
+**17.** Consider repositioning CAM for better oblique view angle giving more contrast for better detection, catching sides of coaches/wagons, shadows and some trackside references.
+
+**18** Consider a beam break enhancement by placing an IR led between rails at the sensor position (power from DCC track?)
 
 ## APPENDIX C
 
@@ -661,37 +665,38 @@ In the situation where sensors may be tripping undesirably, there is a range of 
 The file _CamParser.cpp_ has been added to the CS specifically tailored to provide a mechanism for the CS to send commands more easily than by using the clumsy diagnostic command style **\<D&nbsp; ANOUT&nbsp;vpin&nbsp;parm1&nbsp;parm2\>**. The CS Native CAM command format is **<N&nbsp;c&nbsp;[parm1]&nbsp;[parm2]\>** where command character '**c**' can be any of those listed below. Generally, to effect changes in sensorCAM, the CAM must be in the run mode (flashing).
 
 The base vpin address defaults to 700 but one can use the _#define SENSORCAM_VPIN ###_ for another value (in _config.h_). With 2 to 4 CAM's, use **<N&nbsp;C&nbsp;#\>** (1-4) when a switch is needed. The CAM# may also be placed, if defined in _config.h_, prefixing the sensor bsNo.  
-e.g. **<Ni 2%%\> <Nr 2%%\>** also **<Nm 200\> <Nf 212\> <Nt 243\>**
+e.g. **<Ni 2%%\> <Nr&nbsp;2%%\>** also **<Nm 200\> <Nf 212\> <Nt 243\>**
 
 ### User commands
 
 | Command | Example | Equivalent| sensorCAM command & action (some commands only return "ACK OK" to CS) |
 | --- | --- | --- | --- |
 | **<N\>** | <N\> | n/a | Lists current & alt. defined CAM baseVpins.    |
-| **<N C ###\>** | <NC 600\> |Set base | **CAM** base vpin(>99) for following commands OR  <NC #\> selects CAM # (1-4)     | 
-| **<N a %%\>**  | <Na 12\> | a12 | **enAble** sensor S%% (bsNo) |
+| **<N C ###\>** | <NC 600\> | n/a | **CAM** base vpin(>99) for following commands OR <NC #\> selects CAM # (1-4)  | 
+| **<N a %%\>**  | <Na 12\> | a12 | **enAble** sensor S%% (bsNo). |
 | **<N&nbsp;a%%&nbsp;row&nbsp;col\>** | <Na&nbsp;12&nbsp;32&nbsp;43\> | a12,32,43 | **enAble** & also set new coordinates for sensor bsNo & refresh | 
-| **<N b bank#\>** | <Nb 1\> | b1  | **Bank** sensor states(all 8).(used by IFGTE() ATLT() e.g. to locate loco) |
+| **<N b bank#\>** | <Nb 1\> | b1  | **Bank** sensor states(all 8).(used by IFGTE() ATLT() e.g. to locate loco). |
 | **<N e\>**     | <Ne\>     | e   |**EPROM** write any changed settings to sensorCAM EPROM.|
-| **<N f %%\>**   | <Nf 12\> | f12 | **Frame image** pixel data for Sensor_ref[%%] and sensor666[%%] (RGB bytes) |
-| **<N F\>**     | <NF\>    | F   | **Forced reboot**, restoring sensorCAM sensor mode & EPROM defaults |
-| **<N g\>**     | <Ng\>    | g   | **Get** status ov2640 camera module settings(on sensorCAM monitor) |
-| **<N h%%\>**    | <Nh\>    | h30 | set _maxSensors_ to limit display to below sensor S%%. Also **Help** (0-9) |
-| **<N i %%\>** | <Ni 12\> | i12 | **Information** on sensor bsNo state, position & twin (0=No twin)
-| **<N i %%[ _$$]\>** | <Ni 12\> | i12,02 | **Info.** & assigns new twin sensor(S$$) for "second-opinion" on S%%. | 
-| **<N j $ #\>**  | <Nj B 2\> | jB2 | **adJust** ov2640 parameters($)(Brightness, Contrast etc)(values 0-2 only) |
-| **<N l %%\>**   | <Nl 12\>  | l12 | (lima) **Latch** output state of sensor bsNo to 1 & disable |
-| **<N m $ [%%]\>** | <Nm 3 20\> | m3,20 | **Min/max** _min2trip_(1-4) frames [_maxSensors_] Show parameter status data |
-| **<N n $ [%%]\>** | <Nn 1 10\> | n1,10 | set **nLED**= bank $ [_minSensors_= %% to limit display range] <Nn v\> verifies |
+| **<N f %%\>**   | <Nf 12\> | f12 | **Frame image** pixel data for Sensor_ref[%%] and sensor666[%%] (RGB bytes). |
+| **<N F\>**     | <NF\>    | F   | **Forced reboot**, restoring sensorCAM sensor mode & EPROM defaults. |
+| **<N g\>**     | <Ng\>    | g   | **Get** status ov2640 camera module settings (on sensorCAM monitor). |
+| **<N h %%\>**    | <Nh 30\>    | h30 | set _maxSensors_ to limit display to below sensor S%%. Also **Help** (0-9) |
+| **<N i %%\>** | <Ni 12\> | i12 | **Information** on sensor bsNo state, position & twin (0=No twin).
+| **<N i %%[ $$]\>** | <Ni 12\> | i12,02 | **Info.** & assigns new twin sensor(S$$) for "second-opinion" on S%%. | 
+| **<N j $ #\>**  | <Nj B 2\> | jB2 | **adJust** ov2640 parameters($)(Brightness, Contrast etc)(values 0-2 only). |
+| **<N l %%\>**   | <Nl 12\>  | l12 | (lima) **Latch** output state of sensor bsNo to 1 & disable. |
+| **<N m $ [%%]\>** | <Nm 3 20\> | m3,20 | **Min/max** _min2trip_(1-4) frames [_maxSensors_] **<NM\> shows CAM parameters** |
+| **<N n$ [%%]\>** | <Nn 1 10\> | n1,10 | set **nLED**= bank $ [and _minSensors_=%% to limit display range] <Nn v\> verifies. |
 | **<N o %%\>**   | <No 12\> | o12 | (oscar) **Zero** output state of sensor bsNo. Reset to 0 & disable. |
 | **<N p %%\>**   | <Np 1\>  | p1  | **Positions**(r,x) of all enabled sensors in bank are listed. |
-| **<N q #\>**    | <Nq 1\>   | q1  | **Query bank**# enabled states of sensors (0 indicates sensor disabled) |
-| **<N Q\>**       | <NQ\>     | n/a | **Query** state of all sensorCAM Sensors |
-| **<N r [%%]\>**  | <Nr 12\> | r12 | **Refresh Reference** image for sensor S%%(bsNo) (default ALL=r00). |
-| **<N s %%\>**    | <Ns 12\>  | s12 | **Scan** image for brightest spot and set bsNo to center that pixel. |
-| **<N t ## [%%]\>** | <N t 43 12\> | t43,12 | **Threshold** displayed, sets global threshold (32-98), [sets a _pvtThreshold_] |
-| **<N t ##\>**    | <N t 10\> | t10 | Tabulate ## (2-31) rows of scroll data similar to CAM scroll
-| **<N t # [%%]\>** |  <Nt 1\>   | t1 | Trash pvtThresholds. **<Nt 0 %%\>** individually, **<Nt 1 %%\>** for bank, **<Nt&nbsp;99\>** trashes ALL pvtThresholds,  **<Nt&nbsp;1\>** toggles scroll on/off. |
+| **<N q #\>**    | <Nq 1\>   | q1  | **Query bank**# enabled states of sensors (0 indicates sensor disabled). |
+| **<N Q\>**      | <NQ\>     | n/a | **Query** state of all sensorCAM Sensors
+| **<N r [%%]\>** | <Nr 12\>  | r12 | **Refresh Reference** image for sensor S%% (default ALL=r00). |
+| **<N s %%\>**   | <Ns 12\>  | s12 | **Scan** image for brightest spot and set S%% to center that pixel. |
+| **<N t ## [%%]\>** | <Nt 43 12\> | t43,12 | **Threshold** displayed, sets global _threshold_ (32-98) [sets a _pvtThreshold_]. |
+| **<N t ##\>**    | <Nt 10\> | t10 | **Tabulate** ## (2-31) rows of scroll data similar to CAM scroll.
+| **<N t # %%\>** | <Nt 0 12\> | t0,12 | **Trash** pvtThresholds. **<Nt 0 %%\>** individually, **<Nt 1 %%\>** for bank, **<Nt&nbsp;1&nbsp;99\>** trashes ALL pvtThresholds.  **<Nt&nbsp;99\>** lists ALL pvtThresholds. |
+| **<N t 1\>** | <Nt 1\>   | t1 | **toggles** scroll on/off. |
 | **<N u %%\>**  | <Nu 12\>  | u12 | **Undefine** and disable sensor bsNo(erase coordinates). **<Nu 99\>** for ALL |
 | **<N v [#]\>** | <N v 1\> | v1  |  **Video** mode(1-2) invoke webCAM, or alt webCAM with v 2. **v** for **version** |
 | **<N&nbsp;w\>**     | <Nw\>    | w   | **Wait**. Stop/start CAM imaging (flash), status sensing & streaming. |
@@ -701,7 +706,9 @@ e.g. **<Ni 2%%\> <Nr 2%%\>** also **<Nm 200\> <Nf 212\> <Nt 243\>**
 > **Notes:** The'i' cmd prints bsNo(bsn) where bsn/vPin offsets range from(7)00 to(7)79(e.g. baseVpin address 700).  
 > Some commands return previous(old) values then update sensorCAM. Use <Nm\> to confirm change.  
 > Space after <N is optional, as is capitalization of command. e.g.<N t 42\>=<NT 42\>,<N r 00\>=<NR\>
+> Multiple CAM selections can be achieved by config.h entry and use of a prefix on param1 e.g.<N i 212\> for CAM 2
 > For commands to work fully, need latest _CamParser.cpp_, CS driver(_IO-EXSensorCAM.h_) & _sensorCAM.ino_
+
 
 ## APPENDIX D
 
@@ -717,14 +724,14 @@ After creating a line, a refresh (**Y**) of the Processing4 image should show a 
 
 To create a "curved" intrusion curtain line, one can start at the top with a straight line and then change the slope(\) on each successive S%% checking the image after each adjustment. Alternatively place up to 8 std. consecutive sensors and then convert each in turn to a joining line using \\%% repeatedly.
 
-While individual sensor segments can be read by the Command Station in the usual way, a line sensor should normally be read/tested as a bank. The sensorCAM **b**) command shows a byte value dependent on all sensors in the bank in bits 7-0. The “value” of a bank will rise if sensors set the bits such that, for the example above, the value will exceed 16 (2^4) if any sensor in the range S34-S37 is tripped. The EX-RAIL commands, such as **IFGTE(CAM 034, 16)**, will respond to the tripping of the line sensor.
+While individual sensor segments can be read by the Command Station in the usual way, a line sensor should normally be read/tested as a bank. The sensorCAM '**b**' command shows a byte value dependent on all sensors in the bank in bits 7-0. The "value" of a bank will rise if sensors set the bits such that, for the example above, the value will exceed 16 (2^4) if any sensor in the range S34-S37 is tripped. The EX-RAIL commands, such as **IFGTE(CAM 034, 16)**, will respond to the tripping of the line sensor.
 
-The line sensors may require an individual _pvtThreshold_ rather than _Threshold_ as their sensitivity will differ. The line sensor can have a _pvtThreshold_ PROVIDED it is only stored in the last sensor(e.g. S37). If a _pvtThreshold_ is set(under 99) in the last sensor, it trims the line by 3 steps restoring the(S%7) sensor to a normal (4x4) square. Remember to save(EPROM) the new line sensor with the ('**e**') command.
+The line sensors may require an individual _pvtThreshold_ rather than _Threshold_ as their sensitivity will differ. The line sensor can have a _pvtThreshold_ PROVIDED it is only stored in the last sensor (e.g. S37). If a _pvtThreshold_ is set (under 99) in the last sensor, it trims the line by 3 steps restoring the (S%7) sensor to a normal (4x4) square. Remember to save (to EPROM) the new line sensor with the '**e**' command.
 
-If precision less than 1 degree is needed, consider a tiny CAM rotation to help alignments(e.g. fiddle yard).
+If precision less than 1 degree is needed, consider a tiny CAM rotation to help alignments (e.g. fiddle yard).
 
 While setup without an advanced GUI is fiddly, most situations can be handled. The following examples may help visualize the requirements.  
-**Note:** To get good image updates make sure the CAM has flashed before the new Y cmd. One sure way to do this is to issue the t2 command for two new frames.
+**Note:** To get good image updates make sure the CAM has flashed before the new Y cmd. One sure way to do this is to issue the '**t2**' command for two new frames.
 
 Straight line sensors (S33 to S37 & S40 to S47) were created by positioning end Sensors & using **\\%%,%%** End Sensors were initially placed using **a%%** followed by a click on the image and Enter and then issuing the '**\\**' cmd. (e.g. **\\40,47**) to automatically interpolate for the nearest straight line. These lines can go upward.
 
@@ -764,17 +771,17 @@ vPin is the base/first vPin number (e.g. 700) + DEC(_bsn_)number in the conversi
 
 > **Note:** This Appendix focuses on the **ESP32-CAM-MB** implementation, but as an alternative, consider the newer ESP32 WROVER-CAM and breakout board, as mentioned in **Section 7**, **Figure 6** for a simpler implementation.
 
-The ESP32 CAM drives GPIO pins with 3.3V logic. This may well be incompatible with the master l2C signals at 5V. It is essential that appropriate voltage level shifting and buffering is used where necessary. Unbuffered I2C is limited in range but a cheap P82B715 bus extender gives up to 30m of I2C capability. A Sparkfun differential i2c driver/endpoint may also be used to achieve long lengths and voltage shifting (3.5v to 5v) if needed. The prototype Sensor CAM was mounted on a “perf” board that holds two bank trip LEDs, power LED, I2C buffer, a number of required pull-up resistors, capacitors and a voltage regulator so that it can operate and be powered over a single 5m CAT5 cable for greater convenience. A 3m USB connection need only be used for setup and diagnosis. The prototype board plugs into the socket of ESP32-CAM-MB USB adaptor (with 5V pin cut off) but can also use other FTDI interfaces.
+The ESP32 CAM drives GPIO pins with 3.3V logic. This may well be incompatible with the master l2C signals at 5V. It is essential that appropriate voltage level shifting and buffering is used where necessary. Unbuffered I2C is limited in range but a Sparkfun differential i2c driver/endpoint may also be used to achieve long lengths and voltage shifting (3.5v to 5v) if needed.
 
-The CAM prototype can be Reset remotely by software or by cycling the power supply. It can be placed in program mode by a logic signal (GPIO0) over the CAT5 cable if needed, and similarly placed in WebServer mode (GPIO14) or Sensor mode remotely independent of I2C master. The GPIO0 & 14 pins may be isolated from CAT5 cable with MOSFETS. The CAM MUST be rigidly mounted as it's response to any image vibration can trip sensors.It is best not moved after sensor location programming as precise realignment could be tedious. It is, however,advisable to make guides or jig arrangement to at least be able to remove(for maintenance) and return with minimal misalignment to cover the same field of view. The LED method of placing/positioning sensors may be necessary if a long USB cable is impractical. A 5m buffered USB cable might be advantageous. Even so,programming or imaging over a long USB cable may never be satisfactory.
+The sensorCAM can be Reset remotely by software or by cycling the power supply. The CAM MUST be rigidly mounted as its response to any image vibration can trip sensors. It is best not moved after sensor location programming as precise realignment could be tedious. It is, however, advisable to make guides or jig arrangement to at least be able to remove (for maintenance) and return with minimal misalignment to cover the same field of view. The LED method of placing/positioning sensors may be necessary if a long USB cable is impractical. A 5m buffered USB cable might be advantageous. Even so, programming or imaging over a very long USB cable may not be satisfactory.
 
-One PCA9515A based module offers a simpler, but limited, interface to an i2c bus the use of will act as a level changer (3.3V to 5V) and can connect to a SHORT i2c bus (max 3m). You may use 2mm foam adhesive tape to mount a PCA9515A on the back of an ESP32-CAM-MB and solder on the 5 jumper wires directly as shown below.If the i2c length is near or just over the limit, an optional LTC4311 extender can be attached to boost the signal. As shown, this option relies on 5V USB power so needs a dedicated(permanent) USB cable connection.  A local 5v buck converter can be added beside the CAM for a better supply. You can also extend a cable between the PCA9515 buffer and CAM (2m).
+The PCA9515A based module offers a simpler, but limited, interface to an i2c bus the use of will act as a level changer (3.3V to 5V) and can connect to a SHORT i2c bus (max 2-3m). You may use 2mm foam adhesive tape to mount a PCA9515A on the back of an ESP32-CAM-MB and solder on the 5 jumper wires directly as shown below. If the i2c length is near or just over the limit, an optional LTC4311 extender can be attached to boost the signal. As indicated, this option relies on 5V USB power so needs a dedicated (permanent) USB cable connection.  A local 5v buck converter can be used beside the CAM for a better supply.  This is included on the Wrover breakout board. You could also extend a cable between the PCA9515 buffer and CAM (1m).
 
-A programmable nLED and 330ohm resistor may be attached to the PCA9515A from 3.3V VCC to GPIO14 to aid testing.
+A programmable nLED and 330ohm resistor may be attached to the PCA9515A from 3.3V VCC to GPIO14 to aid testing.  Also useful on a Wrover CAM if on that path.
 
 ![ESP32 CAM MB with PCA9515A and LTC4311](/_static/images/ex-sensorcam/esp32-cam-mb-with-pca9515a-ltc4311.png)
 
-Alternatively, The Sparkfun endpoint is perhaps the best overall solution at this stage for driving one (or more) sensorCAMs. It provides greater lengths of cable without extending the Command Station i2c local bus. The endpoints are used in pairs, connected by a long (<100m) differential pair cat5 cable providing power and communications. It can provide buffering, level shifting and power, but care is needed at the CS end to avoid over-voltage damage. It is suggested, with a 5V CS, that the Endpoint pullup jumpers at the CS end be cut for safety. The sensorCAM Endpoint default pullups are needed for the 3.3V CAM i2c bus.The CS Endpoint requires 3.3V power(from the CS) and a separate (7 to 9V) DC supply for the Buck & CAM.
+Alternatively, The Sparkfun endpoint is perhaps the best overall solution at this stage for driving one (or more) sensorCAMs. It provides greater lengths of cable without extending the Command Station i2c local bus. The endpoints are used in pairs, connected by a long (<100m) differential pair cat5 cable providing power and communications. It can provide buffering, level shifting and power, but care is needed at the CS end to avoid over-voltage damage. It is suggested, with a 5V CS, that the Endpoint pullup jumpers at the CS end be cut for safety. The sensorCAM Endpoint default pullups are needed for the 3.3V CAM i2c bus. The CS Endpoint requires 3.3V power(from the CS) and a separate (7 to 9V) DC supply for the Buck & CAM.
 
 Typical device applications (with BUCK 5V inverters):
 
@@ -841,30 +848,30 @@ The numbering of sensors can be consecutive by vPin, which is the common practic
 For any peripheral device, the vPin is needed for commands (e.g.700+5), but, if predefined (e.g. in config.h), alphanumeric names such as CAM or CAM2 or ESSEX can be used in place of the base vPin to identify the camera. Then commands for CAM pin 5 become: e.g. AT(CAM+05) or AT(ESSEX+05)
 
 ```c++
-> e.g.  
-> #define SENSORCAM_VPIN 700          //place in config.h or myAutomation.h or mysetup.h  
-> #define CAM &nbsp; SENSORCAM_VPIN+  //in config.h or myAutomation.h or mysetup.h  
->
-> Valid EXRAIL commands: AFTER(CAM 5)  AT(SENSORCAM_VPIN+7)  IFGTE(CAM 010, 2)  
->
-> To avoid frequent“CAM” in scripts, an alias can be assigned e.g. ALIAS(ESSEX_P1, CAM+0x10)
+ e.g.  
+ #define SENSORCAM_VPIN 700    //place in config.h or myAutomation.h or mysetup.h  
+ #define CAM  SENSORCAM_VPIN+  //in config.h or myAutomation.h or mysetup.h  
+
+ Valid EXRAIL commands: AFTER(CAM 5)  AT(SENSORCAM_VPIN+7)  IFGTE(CAM 010, 2)  
+
+ To avoid frequent “CAM” in scripts, an alias can be assigned e.g. ALIAS(ESSEX_P1, CAM+0x10)
 ```
 
-With each sensorCAM having up to 80 sensors, it is desirable to test groups of (1 to 8) sensors with a single EXRAIL test using the **IFGTE()** or **IFLE()** commands. To do this, the sensors are logically arranged in “banks” of (consecutive) vpins. The logical grouping available can be written in the form “bs” or b/s where b can have bank values of 0-9 (10 banks) and s values 0-7 (8 sensors). **IFGTE** and **IFLT** read a whole bank "value". Native CAM commands can also be issued e.g. **PARSE(“<N b 4\>”)** for bank 4.
+With each sensorCAM having up to 80 sensors, it is desirable to test groups of (1 to 8) sensors with a single EXRAIL test using the **IFGTE()** or **IFLE()** commands. To do this, the sensors are logically arranged in "banks" of (consecutive) vpins. The logical grouping available can be written in the form "bs" or b/s where b can have bank values of 0-9 (10 banks) and s values 0-7 (8 sensors). **IFGTE** and **IFLT** read a whole bank "value". Native CAM commands can also be issued e.g. **PARSE(“<N b 4\>”)** for bank 4.  However consecutive PARSE() commands should be separated by a **PAUSE(400)** to give the CAM time to complete its action.
 
-EXRAIL can accept “b/s” numbering (e.g. 047) if we add the leading 0. e.g. vpin= **SENSORCAM_VPIN+ 047** e.g. **IFGTE(CAM 047,1)** provided values are defined for **SENSORCAM_VPIN** & **CAM**(as above).
+EXRAIL can accept "b/s" numbering (e.g. 047) if we add the leading 0. e.g. vpin= **SENSORCAM_VPIN+ 047** so use **IFGTE(CAM 047,1)** provided values are defined for **SENSORCAM_VPIN** & **CAM**(as above).
 
-**(N.B.“CAM” includes the ‘+’)** Using this method there is no need to remember assigned vPin values!
+**(N.B. "CAM" includes the '+')** Using this method there is no need to remember assigned vPin values!
 
-**Example 1:** For the approach to a signal, several sensors may be deployed (say S13 to S17) with S17 last at the signal. As a train approaches the signal, the (bank) “value” of the tripping sensors will increase.This can be used to control the loco speed for a smooth and precise stop at a platform say.  
+**Example 1:** For the approach to a signal, several sensors may be deployed (say S13 to S17) with S17 last at the signal. As a train approaches the signal, the (bank) "value" of the tripping sensors will increase. This can be used to control the loco speed for a smooth and precise stop at a platform, for example.  
 Commands **IFGTE(CAM 013,8) SPEED(40)**... **IFGTE(CAM 013,16)** **SPEED(30)** etc. can be used to control the loco approach speed with some precision.  
 Finally, at the signal(S17), **IFGTE(CAM 013,128) STOP**
 
- Aliases could also be defined and used for station/bank or line sensors.e.g.IFGTE(TRENTHAM, 0x80)
+ Aliases could also be defined and used for station/bank or line sensors.e.g. IFGTE(TRENTHAM, 0x80)
 
 **Example 2:** The CAM can have up to 10 occupation/line detectors. If two "linear" line sensors are needed, and we have bank 1 allocated (S10-S17), the following 16 vPins could be assigned to 2 banks of linear sensors. We can use (bs#) ID of 20 to 27 for first linear sensor(bank2) and 30-37 of bank3. The Command Station can easily handle banks of 8, using an ID based format of (CAM 020) and (CAM 030). The "bank" or b/s notation requires the leading '0' on the bsNo. for automatic vpin calculation. The linear segments at S21 to S27 may also be tested individually and a common bank threshold can be set if needed. e.g. **IFGTE(CAM 020,1)**...// bank occupied, or **IFGTE(CAM 024,16)** &nbsp; //2nd half occupied.
 
-Note: With ‘0%%’ notation, unless you understand the issue, avoid using bank 8 & 9 as mistakes may arise.(08# must be expressed as 010# and 09# as 011# for correct outcome)
+Note: With '0%%' notation, unless you understand the issue, avoid using bank 8 & 9 as mistakes may arise. (08# must be expressed as 010# and 09# as 011# for correct outcome)
 
 ### 2. Multiple Cams
 
@@ -958,10 +965,6 @@ Headers (for v1.6):
 
 ![ESP32 CAM MB USB-C](/_static/images/ex-sensorcam/esp32-cam-mb-usb-c.png)
 
-USB Type micro-B:
-
-![ESP32 CAM MB CH340](/_static/images/ex-sensorcam/esp32-cam-mb-ch340.png)
-
 So-without butchery, can only use the v1.6 CAM's on this board, and even then will have to hold the IO0 button in (grounding it) on reset until upload is progressing. As a workaround for v1.9, it may be possible to carefully slice off this MB GND socket completely. View the Camera side of the ESP32-CAM to distinguish the CAM boards.
 
 **Identification:** ESP32-CAM v1.6 has 4x jumpers beside UOR/UOT pins and v1.9 has 6x jumpers (inc. Reset).
@@ -970,25 +973,25 @@ Using v1.6 with no RTS/DTR reset, users will have to boot up holding IO0 button 
 
 ### 1 Note on i2c clock frequency
 
-The newer sensorCAM drivers default to an i2c bus frequency of 100,000 Hz. With caution, this may be increased somewhat (e.g. 200000) if the i2c bus is well tuned and all attached devices can handle higher frequencies. To set a higher frequency, for example, place the following in mySetup.h or myHal.cpp I2Cmanager.forceClock(200000); //place after void halSetup(){
+The newer sensorCAM drivers default to an i2c bus frequency of 100,000 Hz. With caution, this may be increased somewhat (e.g. 200000) if the i2c bus is well tuned and all attached devices can handle higher frequencies. To set a higher frequency, for example, place the following in _mySetup.h_ or_ myHal.cpp_ _I2Cmanager.forceClock(200000);_ //place after _void halSetup(){_ 
 
 ### 2. Notes on 40-pin WROVER CAM and 38-pin breakout board
 
 Potentially simplest commercially available hookup for 40 pin WROVER-CAM:
 
-Software configuration: add #define CAMERA_MODEL_WROVER_KIT to bottom of configCAM.h
+Software configuration: add _#define CAMERA_MODEL_WROVER_KIT_ to bottom of _configCAM.h_
 
-2x“Spare”(USB end) Vcc and GND pins not used with the 38 pin breakout board shown. (remove?)
+2x "Spare" (USB end) Vcc and GND pins not used with the 38 pin breakout board shown. (remove?)
 
 Adding 1.0uF capacitor between reset (EN) pin and gnd ensures more reliable power-on reset.
 
 Add a super-bright green LED and 330R from 3.3V to GPIO14 for programmable LED indicator.
 
-There is no white “flash” LED but, in sensorCAM mode, the on-board blue LED flashes instead. (GPIO2)
+There is no white "flash" LED but, in sensorCAM mode, the on-board blue LED flashes instead. (GPIO2)
 
 The breakout board USB connectors are for an optional 5V power source ONLY. No comm's.
 
-Limit Vin barrel jack to 7-10V max to avoid destruction of the 1117C 5V regulator.(Vne= 16V)
+Limit Vin barrel jack to 7-10V max to avoid destruction of the 1117C 5V regulator (Vne = 16V).
 
 The CS endpoint shown should be powered with 3.3V from the CS end (NOT 5V), and 9V on GRNW/GRN  
 Note: WROVER-CAM does not have a fitted external antenna socket like the ESP32-CAM.
@@ -1007,17 +1010,17 @@ For a limited reach, perhaps using a LTC4311 terminator/buffer at the CS to boos
 **t99** will list ALL pvtThresholds in the sensorCAM by bank#(10 banks)  
 **t1** will toggle SCROLL ON/OFF as always. The'**e**' command is needed to make changes"permanent"
 
-Version v319 also accepts minSensors up to maxSensors-1  
-**m#,%%** will set maxSensors to%%. e.g. m10,30 sets maxSensors=030 (leaving min2trip unchanged as does m0,30)  
-**n#,%%** will set minSensors to%%. e.g. n10,27 sets minSensors=027 leaving nLED unchanged. n0,27 would set nLED to 0)
+Version v319 also accepts _minSensors_ up to _maxSensors_-1  
+**m#,%%** will set _maxSensors_ to%%. e.g. m10,30 sets _maxSensors_=030 (leaving _min2trip_ unchanged as does m0,30)  
+**n#,%%** will set _minSensors_ to%%. e.g. n10,27 sets _minSensors_=027 leaving _nLED_ unchanged. **n0,27** would set _nLED_ to 0)
 
-### 4. Notes on CS drivers v308& v309)
+### 4. Notes on CS drivers v308 & v309)
 
 Driver version v308 is intended for use with Prod versions 5.4.6 to 5.4.16. DCC-EX CS Prod. Versions 5.4.16+ incorporate v308 by default. v308 will not work with CS devel 5.5.15+. For CS devel versions look to v309 (default). Both these drivers MUST be used with sensorCAM version v320+ as earlier versions will not be recognized.
 
 ### ADDITIONAL RANDOM NOTES:
 
-ALL FOLLOWING IMAGES ARE FOR GENERAL INFORMATION ONLY& NOT DIRECTLY REFERENCED IN THE FULL MANUAL ABOVE
+ALL FOLLOWING IMAGES ARE FOR GENERAL INFORMATION ONLY & NOT DIRECTLY REFERENCED IN THE FULL MANUAL ABOVE
 
 ![ESP32 CAM MB v1.6 vs v1.9](/_static/images/ex-sensorcam/esp32-cam-mb-16-19.png)
 
