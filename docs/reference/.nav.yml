@@ -6,3 +6,4 @@ nav:
   - Throttle Writers Guide: throttle-writers-guide.md
   - Glossary: glossary.md
   - Legacy Command Reference: legacy-command-reference.md
+  - "*"

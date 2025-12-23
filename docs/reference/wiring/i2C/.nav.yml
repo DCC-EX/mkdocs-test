@@ -1,3 +1,4 @@
 nav:
   - I2C Wiring: i2c-wiring.md
   - Tuning Info: tuning-info.md
+  - "*"

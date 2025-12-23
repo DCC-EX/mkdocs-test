@@ -2,3 +2,4 @@ nav:
   - Exrail: exrail.md
   - Autostart: autostart.md
   - Command List: command-list.md
+  - "*"

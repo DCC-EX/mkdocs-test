@@ -1,3 +1,4 @@
 nav:
   - Trackmanager: trackmanager.md
   - Booster: booster.md
+  - "*"
