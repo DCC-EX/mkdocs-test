@@ -8,7 +8,7 @@ This [documentation](documentation/00-docs.md) is written in MkDocs so a knowled
 
 ## Development
 
-We use C++, Python, HTML/CSS/Javascript, Android, and even make up our own languages. If you like dealing with code, there's something for all. See [here for how to contribute code](code/00-contributing-code.md).
+We use C++, Python, HTML/CSS/Javascript, Java (for Android), and even make up our own languages. If you like dealing with code, there's something for all. See [here for how to contribute code](code/00-contributing-code.md).
 
 ## Web Support
 
