@@ -1,4 +1,4 @@
 nav:
-  - ESP32 EX8874: esp32-ex8874.md
-  - ESP32 Acebott: esp32-acebott.md
-  - ESP32 L298 Shield: esp32-l298-shield.md
+  - WeMos D1 R32 + EX8874: esp32-ex8874.md
+  - Acebott + EX8874: esp32-acebott.md
+  - ESP32 + L298 Shields: esp32-l298-shield.md
