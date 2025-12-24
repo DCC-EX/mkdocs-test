@@ -54,6 +54,7 @@ theme:
 # Extra CSS attributes for colour scheme etc.
 extra_css:
   - _static/css/dccex_theme.css
+  - _static/css/home.css
 
 # Extra JavaScript
 extra_javascript:
