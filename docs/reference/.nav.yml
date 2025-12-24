@@ -1,11 +1,11 @@
 nav:
+  - Glossary of Terms: glossary.md
   - DCC-EX Command Protocol: serial-commands.md
   - Serial Command Basics: serial-command-basics.md
-  - Advanced config.h for Command Station build: advanced-config-h.md
+  - Advanced config.h Options: advanced-config-h.md
   - TrackManager: trackmanager
   - Command Station Internal Architecture: command-station-arch.md
   - Throttle Writers Guide: throttle-writers-guide.md
-  - Glossary: glossary.md
   - Legacy Command Reference: legacy-command-reference.md
   - EX-CSB1: ex-csb1
   - ESP32: esp32
