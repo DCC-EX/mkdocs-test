@@ -6167,11 +6167,35 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#directory-structure" class="md-nav__link">
+  <a href="#directory-structure-and-navigation" class="md-nav__link">
     <span class="md-ellipsis">
-      Directory Structure
+      Directory Structure and Navigation
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="Directory Structure and Navigation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#managing-navigation-files-navyml" class="md-nav__link">
+    <span class="md-ellipsis">
+      Managing Navigation files ".nav.yml"
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#managing-previous-and-next-buttons" class="md-nav__link">
+    <span class="md-ellipsis">
+      Managing Previous and Next Buttons
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -6377,11 +6401,35 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#directory-structure" class="md-nav__link">
+  <a href="#directory-structure-and-navigation" class="md-nav__link">
     <span class="md-ellipsis">
-      Directory Structure
+      Directory Structure and Navigation
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="Directory Structure and Navigation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#managing-navigation-files-navyml" class="md-nav__link">
+    <span class="md-ellipsis">
+      Managing Navigation files ".nav.yml"
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#managing-previous-and-next-buttons" class="md-nav__link">
+    <span class="md-ellipsis">
+      Managing Previous and Next Buttons
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -6409,7 +6457,7 @@
 <p>We try to keep as few mandatory standards as possible, but these items must be adhered to in order for our documentation to be maintainable.</p>
 <h2 id="general-content">General Content<a class="headerlink" href="#general-content" title="Permanent link">&para;</a></h2>
 <p>When creating content, remember to keep the target user in mind at all times, with a strong preference to Conductor level users. A significant (and growing) proportion of our user base do not understand software, nor a lot of electronics or embedded systems. Use terminology they are likely understand.</p>
-<p>Most importantly, <strong>keep pages concise, to the point, and avoid excess words or waffle</strong>. Not only does this make the key messages hard to read, but maintaining lengthy pages that are a wall of text becomes onerous, daunting, and reduces the likelihood of keeping our documentation current.</p>
+<p>Most importantly, <strong>keep pages concise, to the point, and avoid excess words or waffle</strong>. Not only does this make the key messages clear and easy to read for our users, but maintaining lengthy pages that are a wall of text becomes onerous, daunting, and reduces the likelihood of keeping our documentation current.</p>
 <p>So:</p>
 <ul>
 <li>Brevity is good, keep topics to the concise point (eg. Conductors don't care about DCC waveforms, they care about running a train).</li>
@@ -6420,10 +6468,10 @@
 <h2 id="do-not-duplicate-content">Do Not Duplicate Content<a class="headerlink" href="#do-not-duplicate-content" title="Permanent link">&para;</a></h2>
 <p><strong>DO NOT CREATE DUPLICATE CONTENT</strong> as this increases the maintenance burden significantly but, more importantly, makes it difficult for users when content appears slightly differently in two different places or even contradicts itself. When needing to repeat information in more than one place, take advantage of the <a href="../mkdocs-features/#snippets">MkDocs Snippets</a> feature. This allows you to include the same markdown content in multiple places.</p>
 <h2 id="directory-naming-page-naming-and-titles">Directory Naming, Page Naming, and Titles<a class="headerlink" href="#directory-naming-page-naming-and-titles" title="Permanent link">&para;</a></h2>
-<p>With the exception of the home page and the DCC-EX News page, <strong>do not use "index.md"</strong>, but rather name pages according to their primary message. Using "index.md" adjusts the rendering of pages when navigating through the menus, and the team has a preference for the navigation experience using numbers pages over having an initial index page.</p>
+<p>With the exception of the home page and the DCC-EX News page, <strong>do not use "index.md"</strong>, but rather name pages according to their primary message. Using "index.md" adjusts the rendering of pages when navigating through the menus, and the team has a preference for the navigation experience using the benefits of the <a href="https://lukasgeiter.github.io/mkdocs-awesome-nav/">MkDocs Awesome Nav plugin</a> over having an initial index page.</p>
 <ul>
 <li>All directory and page names must be in lower case and use "-" instead of spaces.</li>
-<li>Page ordering is ideally set by a two digit number, so preface with the appropriate page number eg. "01-standards-formatting.md".</li>
+<li>Page ordering is determined by the Awesome Nav ".nav.yml" file, see <a href="./#directory-structure-and-navigation">Directory Structure</a>.</li>
 <li>The page title is determined by the top level heading, see <a href="../formatting-guide/#headings">Headings</a>.</li>
 </ul>
 <h2 id="address-all-mkdocs-warnings-and-errors">Address all MkDocs Warnings and Errors<a class="headerlink" href="#address-all-mkdocs-warnings-and-errors" title="Permanent link">&para;</a></h2>
@@ -6432,12 +6480,29 @@
 <p class="admonition-title">Warning</p>
 <p>When we release the new MkDocs based documentation, the deployment GitHub workflow will enforce <code>strict</code> mode, meaning any issues will generate a workflow error, preventing updates being deployed.</p>
 </div>
-<h2 id="directory-structure">Directory Structure<a class="headerlink" href="#directory-structure" title="Permanent link">&para;</a></h2>
+<h2 id="directory-structure-and-navigation">Directory Structure and Navigation<a class="headerlink" href="#directory-structure-and-navigation" title="Permanent link">&para;</a></h2>
 <p>Note firstly that we use the <a href="https://lukasgeiter.github.io/mkdocs-awesome-nav/">MkDocs Awesome Nav plugin</a> to control the menu structure, which uses a ".nav.yml" file in any directory where the default needs to be overridden.</p>
 <p>The top level directories under the "docs" directory determine the tabs or horizontal menu items on the header bar, with the subsequent directories and files in each of these determining the menu on the left pane.</p>
 <p><strong>Do not adjust the top level directories without consulting the DCC-EX Documenter team, as these fundamentally adjust the user experience.</strong></p>
 <p>If a new top level directory is to be added, it needs to be added to the "/docs/.nav.yml" file in the appropriate order. Files and directories created within existing top level directories will automatically be added to the menus (see <a href="#directory-naming-page-naming-and-titles">Page Naming and Titles</a> for page ordering).</p>
-<p>Also note that our custom <a href="../mkdocs-features/#dcc-ex-custom-scoped-nav-plugin-and-custom-footerhtml">Scoped Nav</a> plugin automatically adjusts previous/next links, so overriding page ordering in ".nav.yml" will cause issues, so please do not override page ordering in this manner, but rather use numbers as outlined in <a href="#directory-naming-page-naming-and-titles">Directory Naming, Page Naming, and Titles</a>.</p>
+<h3 id="managing-navigation-files-navyml">Managing Navigation files ".nav.yml"<a class="headerlink" href="#managing-navigation-files-navyml" title="Permanent link">&para;</a></h3>
+<p>When the default sort order or structure of a directory is not presenting as desired, a ".nav.yml" file can be created to determine sort order and navigation contents according to how the navigation structure is desired.</p>
+<p>This is part of the MkDocs Awesome Nav plugin and all options are outlined on the <a href="https://lukasgeiter.github.io/mkdocs-awesome-nav/features/nav/">Features</a> page.</p>
+<p>If the directory you're creating a new Markdown file in has no ".nav.yml" file, the default sort order will be used, meaning you must preview the changes to ensure the end result is as desired.</p>
+<p>If there is an existing ".nav.yml" file, simply add the new file in the correct order to the file.</p>
+<p><strong>Be sure to review the build output</strong> for information and warnings regarding pages. If the page you are creating has not been added, you will receive an <em>informational</em> message that it exists, but is not in the navigation tree. If you have added it incorrectly to the ".nav.yml" file, you will receive a <em>warning</em> message that an entry has been defined that does not exist.</p>
+<p>A typical ".nav.yml" file should look like this:</p>
+<div class="highlight"><pre><span></span><code><span class="nt">nav</span><span class="p">:</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">Contributing to Documentation</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">docs.md</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">Documentation Standards</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">standards.md</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">Formatting Guide</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">formatting-guide.md</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">Understanding Links</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">understanding-links.md</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">Using Our Logos</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">logos.md</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">Working With MkDocs</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mkdocs-features.md</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">Mermaid Diagrams</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mermaid-diagrams.md</span>
+</code></pre></div>
+<h3 id="managing-previous-and-next-buttons">Managing Previous and Next Buttons<a class="headerlink" href="#managing-previous-and-next-buttons" title="Permanent link">&para;</a></h3>
+<p>Our custom <a href="../mkdocs-features/#dcc-ex-custom-scoped-nav-plugin-and-custom-footerhtml">Scoped Nav</a> plugin automatically adjusts previous/next links to ensure that the previous and next buttons don't prompt a user to navigate automatically into irrelevant content.</p>
 
 
 
@@ -6458,7 +6523,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="December 23, 2025 04:42:15 UTC">December 23, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="December 24, 2025 04:55:04 UTC">December 24, 2025</span>
   </span>
 
     
