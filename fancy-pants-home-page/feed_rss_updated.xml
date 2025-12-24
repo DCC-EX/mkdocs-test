@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    
+    <title>DCC-EX News</title>
+    <description>Latest news and updates from the DCC-EX team</description>
+    <link>https://dcc-ex.com/mkdocs-test/</link>
+    <atom:link href="https://dcc-ex.com/mkdocs-test/feed_rss_updated.xml" rel="self" type="application/rss+xml" />
+
+    
+    
+    <docs>https://github.com/DCC-EX/mkdocs-test</docs>
+    <language>en</language>
+
+    
+    <pubDate>Wed, 24 Dec 2025 00:44:34 -0000</pubDate>
+    <lastBuildDate>Wed, 24 Dec 2025 00:44:34 -0000</lastBuildDate>
+    <ttl>1440</ttl>
+
+    
+    <generator>MkDocs RSS plugin - v1.17.3</generator>
+
+    
+    
+    <image>
+      <url>_static/images/logos/favicon.ico</url>
+      <title>DCC-EX News</title>
+      <link>https://dcc-ex.com/mkdocs-test/</link>
+    </image>
+    
+
+    
+    
+    <item>
+      <title>New Documentation</title>
+      
+      
+        
+      <author>peteGSX</author>
+        
+      
+      
+      
+      <description>&lt;h1&gt;New Documentation&lt;/h1&gt;
+&lt;p&gt;We have new documentation!&lt;/p&gt;</description>
+      <link>https://dcc-ex.com/mkdocs-test/news/2025/06/new-documentation/</link>
+      <pubDate>Wed, 24 Dec 2025 00:44:07 +0000</pubDate>
+      <source url="https://dcc-ex.com/mkdocs-test/feed_rss_updated.xml">DCC-EX News</source>
+      
+      <guid isPermaLink="true">https://dcc-ex.com/mkdocs-test/news/2025/06/new-documentation/</guid>
+      
+    </item>
+    
+  </channel>
+</rss>
