@@ -34,7 +34,7 @@ theme:
     - navigation.tabs # Top level navigation on header for tabs
     - navigation.top # Show back to top button when scrolling up
     - navigation.tracking # Auto update URL in address bar
-    - navigation.indexes # Enable section indexes
+    # - navigation.indexes # Enable section indexes
     - navigation.instant
     - navigation.instant.progress
     - search.highlight # Highlight search results
