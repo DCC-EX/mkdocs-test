@@ -799,6 +799,24 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#reversing-loops" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reversing Loops
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#more-blocks" class="md-nav__link">
+    <span class="md-ellipsis">
+      More blocks
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1604,7 +1622,7 @@
   
   
   <span class="md-ellipsis">
-    Set a track to DC
+    DC Track Control
     
   </span>
   
@@ -6372,6 +6390,24 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#reversing-loops" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reversing Loops
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#more-blocks" class="md-nav__link">
+    <span class="md-ellipsis">
+      More blocks
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -6395,17 +6431,19 @@
 <p>Using a DCC-EX Command Station to run a DC layout provides a number of advantages over conventional DC systems.</p>
 <ul>
 <li>All Wifi and connected throttles will operate the same for DC and DCC</li>
-<li>Momentum can be defined for acceleration and braking.</li>
-<li>Multiple DC blocks can be independently controlled and reconfigured to allow crossing between blocks and polarity reversal.</li>
-<li>EXRAIL automation can be used to run trains, create routes, switch block relays, control signals, manage reversing loops etcetera.</li>
-<li>PWM Frequency can be adjusted to suit your locos and/or reduce noise.</li>
+<li>Momentum can be defined for acceleration and braking</li>
+<li>Multiple DC blocks can be independently controlled and reconfigured to allow crossing between blocks and polarity reversal</li>
+<li>EXRAIL automation can be used to run trains, create routes, switch block relays, control signals, manage reversing loops etcetera</li>
+<li>PWM Frequency can be adjusted to suit your locos and/or reduce noise with a touch of the F29-F31 keys</li>
+<li>It is possible to run parts of the layout with DC and other parts with DCC at the same time (But do not leave a DC loco on a track configured for DCC)</li>
 </ul>
 <h2 id="basic-funtionality">Basic funtionality<a class="headerlink" href="#basic-funtionality" title="Permanent link">&para;</a></h2>
-<p>The command station has Track Manager commands that can change each track output to DC with appropriate polarity.  By associating a numeric locoid with each track output the command station accepts incoming DCC throttle commands (Or EXRAIL automation commands) for that locoid and converts it to a DC output on every track output with the same locoid. </p>
-<p>The throttles or EXRAIL are unaware that they are driving a DC track and so any DCC Throttle such as Engine Driver that can talk to DCC-EX will work for DC.</p>
+<p>The command station has Track Manager commands that can change each track output to DC with appropriate polarity.  By associating a numeric locoid (1..10239 the same range as DCC) with each track output the command station accepts incoming DCC throttle commands (Or EXRAIL automation commands) for that locoid and converts it to a DC output on every track output with the same locoid.</p>
+<p>The throttles or EXRAIL are unaware that they are driving a DC track and so any DCC Throttle such as Engine Driver that can talk to DCC-EX will work for DC. In effect, in DC mode, the throttle drives the track compared with DCC mode where the throttle drives the loco.</p>
 <p>Although the CSB-1 can be switched to DC operation by commands from the throttle (Engine Driver has a Track Manager panel to help do this) it is generally easier, for a fully DC layout, to configure it so that it starts up in the desired mode.</p>
+<p>Warning: The sometimes-suggested technique of using a DCC decoder to output to a DC track instead of a motor is NOT RECOMMENDED as most decoders are not tolerant of a short between the motor outputs. This means a common track short could destroy an expensive decoder.</p>
 <h2 id="configuring-default-outputs">Configuring Default Outputs<a class="headerlink" href="#configuring-default-outputs" title="Permanent link">&para;</a></h2>
-<p>The same configuration method for DCC-EX Command Station is to use EXRAIL to define things like: </p>
+<p>The normal configuration method for DCC-EX Command Station is to use EXRAIL to define things like:</p>
 <ul>
 <li>What turnouts or signals you have and how they are electronically driven</li>
 <li>What happens at startup</li>
@@ -6413,24 +6451,25 @@
 <li>What automations can a throttle send a loco along</li>
 <li>Buttons and lights on a mimic panel</li>
 </ul>
-<p>all of which apply equally to DC operation, plus: </p>
+<p>all of which apply equally to DC operation, plus:</p>
 <ul>
 <li>How track blocks are set for DC and which locoid thay are mapped to</li>
 </ul>
-<p>To start this you need to follow the <a href="/docs/installer/overview.md">Installer process described here</a> and create an AUTOSTART section in your myAutomation.h file to set the track manager options suitable for your layout:</p>
+<p>To start this you need to follow the <a href="../../../installer/overview/">Installer process described here</a> and create an AUTOSTART section in your myAutomation.h file to set the track manager options suitable for your layout:</p>
 <div class="highlight"><pre><span></span><code><span class="n">AUTOSTART</span><span class="w"> </span>
 <span class="w">   </span><span class="n">SETLOCO</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
 <span class="w">   </span><span class="n">SET_TRACK</span><span class="p">(</span><span class="n">A</span><span class="p">,</span><span class="n">DC</span><span class="p">)</span>
+<span class="w">   </span><span class="n">SET_POWER</span><span class="p">(</span><span class="n">A</span><span class="p">,</span><span class="n">ON</span><span class="p">)</span>
 <span class="w">   </span><span class="n">SETLOCO</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
 <span class="w">   </span><span class="n">SET_TRACK</span><span class="p">(</span><span class="n">B</span><span class="p">,</span><span class="n">DC</span><span class="p">)</span>
-<span class="w">   </span><span class="n">POWERON</span>
+<span class="w">   </span><span class="n">SET_POWER</span><span class="p">(</span><span class="n">C</span><span class="p">,</span><span class="n">ON</span><span class="p">)</span>
 <span class="w">   </span><span class="n">DONE</span>
 </code></pre></div>
-<p>This sequence will run as the command station starts up it will </p>
+<p>This sequence will run as the command station starts up it will</p>
 <ul>
 <li>associate locoid 1 with track A and switch it to DC.</li>
 <li>associate locoid 2 with track B and switch it to DC.</li>
-<li>turn track power on. No power will be seen on the track until a throttle is used, but unless you POWERON the track will never receive power.</li>
+<li>turn track power on. No power will be seen on the track until a throttle is used, but unless you SET_POWER ON the track will never receive power.</li>
 </ul>
 <p>Where the command station has 4 or more track outputs, you can also setup tracks C to H as appropriate.</p>
 <h2 id="switching-between-tracks">Switching between tracks<a class="headerlink" href="#switching-between-tracks" title="Permanent link">&para;</a></h2>
@@ -6440,25 +6479,37 @@
 <div class="highlight"><pre><span></span><code><span class="n">ROUTE</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span><span class="s">&quot;Drive from outer to inner loop&quot;</span><span class="p">)</span>
 <span class="w">  </span><span class="n">SETLOCO</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
 <span class="w">  </span><span class="n">SET_TRACK</span><span class="p">(</span><span class="n">B</span><span class="p">,</span><span class="n">DCX</span><span class="p">)</span><span class="w">  </span><span class="c1">// reverse polarity on track B and treat as loco 1</span>
+<span class="w">  </span><span class="n">SET_POWER</span><span class="p">(</span><span class="n">B</span><span class="p">,</span><span class="n">ON</span><span class="p">)</span>
 <span class="w">  </span><span class="n">THROW</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span><span class="w"> </span><span class="n">THROW</span><span class="p">(</span><span class="mi">101</span><span class="p">)</span><span class="w"> </span><span class="c1">// throw the turnouts that join the tracks</span>
 <span class="w">  </span><span class="n">DONE</span>
 
 <span class="n">ROUTE</span><span class="p">(</span><span class="mi">21</span><span class="p">,</span><span class="s">&quot;Drive from inner to outer loop&quot;</span><span class="p">)</span>
 <span class="w">  </span><span class="n">SETLOCO</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
 <span class="w">  </span><span class="n">SET_TRACK</span><span class="p">(</span><span class="n">A</span><span class="p">,</span><span class="n">DCX</span><span class="p">)</span><span class="w">  </span><span class="c1">// reverse polarity on track B and treat as loco 1</span>
+<span class="w">  </span><span class="n">SET_POWER</span><span class="p">(</span><span class="n">A</span><span class="p">,</span><span class="n">ON</span><span class="p">)</span>
 <span class="w">  </span><span class="n">THROW</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span><span class="w"> </span><span class="n">THROW</span><span class="p">(</span><span class="mi">101</span><span class="p">)</span><span class="w"> </span><span class="c1">// throw the turnouts that join the tracks</span>
 <span class="w">  </span><span class="n">DONE</span>
 
 <span class="n">ROUTE</span><span class="p">(</span><span class="mi">99</span><span class="p">,</span><span class="s">&quot;Restore tracks to normal&quot;</span><span class="p">)</span>
 <span class="w">  </span><span class="n">CLOSE</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span><span class="w"> </span><span class="n">CLOSE</span><span class="p">(</span><span class="mi">101</span><span class="p">)</span><span class="w">  </span><span class="c1">// close the turnouts  </span>
 <span class="w">  </span><span class="n">SETLOCO</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
-<span class="w">  </span><span class="n">SET_TRACK</span><span class="p">(</span><span class="n">A</span><span class="p">,</span><span class="n">DC</span><span class="p">)</span><span class="w">  </span>
+<span class="w">  </span><span class="n">SET_TRACK</span><span class="p">(</span><span class="n">A</span><span class="p">,</span><span class="n">DC</span><span class="p">)</span>
+<span class="w">  </span><span class="n">SET_POWER</span><span class="p">(</span><span class="n">A</span><span class="p">,</span><span class="n">ON</span><span class="p">)</span>
+
 <span class="w">  </span><span class="n">SETLOCO</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
 <span class="w">  </span><span class="n">SET_TRACK</span><span class="p">(</span><span class="n">B</span><span class="p">,</span><span class="n">DC</span><span class="p">)</span>
+<span class="w">  </span><span class="n">SET_POWER</span><span class="p">(</span><span class="n">B</span><span class="p">,</span><span class="n">ON</span><span class="p">)</span>
 <span class="w">  </span><span class="n">DONE</span>
 </code></pre></div>
 <p>Notice that when you apply ROUTE(12), you are now driving on both tracks with the same loco id 1. Throttles attempting to drive loco id 2 will be ignored.</p>
 <p>As you get more advanced, the routes can be programmed to happen automatically or contain additional items such as signals, sounds, mimic panel control and so on.</p>
+<h2 id="reversing-loops">Reversing Loops<a class="headerlink" href="#reversing-loops" title="Permanent link">&para;</a></h2>
+<p>In contrast to DCC, a DC reversing loop must have the polarity to correctly represent the direction of the loco. Thus the loop part will require the polarity to control the direction of the train around the loop.
+while the train is in the loop, the main track leading into the loop must be switched to allow the train to exit the loop and continue back along the track without reversing the locomotive.
+There is no automatic polarity reversing for DC layouts, this must be programmed using EXRAIL to suit the topology of your layout.</p>
+<h2 id="more-blocks">More blocks<a class="headerlink" href="#more-blocks" title="Permanent link">&para;</a></h2>
+<p>The separate track outouts supplied by the Command Station represent the number of separate throttle ids that may be operating. Like any large DC layout, the switching of throttle outputs to multiple other blocks can still take place using mechanical switches or relays which can be controlled by suitable EXRAIL sequences. Power routing turnouts operate as normal but may be awkward if you are building a new layout with tyhe intention of running DCC later.</p>
+<p>If you have several throttles operating the same locoid, they will automatically synchronise with each other.</p>
 
 
 
@@ -6479,7 +6530,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="December 26, 2025 10:50:28 UTC">December 26, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="December 26, 2025 22:28:46 UTC">December 26, 2025</span>
   </span>
 
     

@@ -27,7 +27,7 @@
     
     
       
-        <title>Set a track to DC - DCC-EX Model Train Control, Animation, and Automation</title>
+        <title>DC Track Control - DCC-EX Model Train Control, Animation, and Automation</title>
       
     
     
@@ -83,7 +83,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#set-a-track-to-dc" class="md-skip">
+        <a href="#dc-track-control" class="md-skip">
           Skip to content
         </a>
       
@@ -116,7 +116,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Set a track to DC
+              DC Track Control
             
           </span>
         </div>
@@ -1548,7 +1548,7 @@
   
   
   <span class="md-ellipsis">
-    Set a track to DC
+    DC Track Control
     
   </span>
   
@@ -6301,33 +6301,8 @@
   
 
 
-<h1 id="set-a-track-to-dc">Set a track to DC<a class="headerlink" href="#set-a-track-to-dc" title="Permanent link">&para;</a></h1>
-<p>The command</p>
-<ul>
-<li><code>SET_TRACK(t,mode)</code> is used to change the way a track is used.<br />
-<code>SET_POWER(t, ON)</code>  - track is OFF following mode change.</li>
-</ul>
-<p>Using a ROUTE or other sequence, you can set a track to the correct DC polarity and specify the loco address that the throttle will use to drive the loco on that track.</p>
-<p>(The throttle doesn't need to know that you are using DC.)</p>
-<div class="highlight"><pre><span></span><code><span class="w"> </span><span class="n">ROUTE</span><span class="p">(</span><span class="mi">77</span><span class="p">,</span><span class="s">&quot;Set track A to DC for loco 123&quot;</span><span class="p">)</span>
-<span class="w">   </span><span class="n">SETLOCO</span><span class="p">(</span><span class="mi">123</span><span class="p">)</span>
-<span class="w">   </span><span class="n">SET_TRACK</span><span class="p">(</span><span class="n">A</span><span class="p">,</span><span class="n">DC</span><span class="p">)</span>
-<span class="w">   </span><span class="n">SET_POWER</span><span class="p">(</span><span class="n">A</span><span class="p">,</span><span class="n">ON</span><span class="p">)</span>
-<span class="w">   </span><span class="n">DONE</span>
-</code></pre></div>
-<p>Modes DC or DCX are only different in that the polarity is reversed. This will be important if you have, for example, a double track mainline which is normally wired in opposite polarity so that 'forward' is clockwise on one track and anticlockwise on the other.
-To drive over a junction between the two, the 'to' track must be switched in polarity to match the 'from' track.</p>
-<p>For example:</p>
-<div class="highlight"><pre><span></span><code><span class="n">ROUTE</span><span class="p">(</span><span class="mi">78</span><span class="p">,</span><span class="s">&quot;Cross from outer to inner&quot;</span><span class="p">)</span>
-<span class="w">  </span><span class="n">SETLOCO</span><span class="p">(</span><span class="mi">123</span><span class="p">)</span>
-<span class="w">  </span><span class="n">SET_TRACK</span><span class="p">(</span><span class="n">A</span><span class="p">,</span><span class="n">DC</span><span class="p">)</span>
-<span class="w">  </span><span class="n">SET_TRACK</span><span class="p">(</span><span class="n">B</span><span class="p">,</span><span class="n">DCX</span><span class="p">)</span>
-<span class="w">  </span><span class="n">SET_POWER</span><span class="p">(</span><span class="n">A</span><span class="p">,</span><span class="n">ON</span><span class="p">)</span>
-<span class="w">  </span><span class="n">SET_POWER</span><span class="p">(</span><span class="n">B</span><span class="p">,</span><span class="n">ON</span><span class="p">)</span>
-<span class="w">  </span><span class="n">THROW</span><span class="p">(</span><span class="mi">6</span><span class="p">)</span><span class="w"> </span><span class="c1">// throw the crossover turnout(s)</span>
-<span class="w">  </span><span class="n">DONE</span>
-</code></pre></div>
-<p>See also the <a href="../turnouts/facing-turnouts/">facing turnouts</a> cookbook.</p>
+<h1 id="dc-track-control">DC Track Control<a class="headerlink" href="#dc-track-control" title="Permanent link">&para;</a></h1>
+<p>Refer to <a href="../../../dc-running/">Running a DC layout</a></p>
 
 
 
@@ -6348,7 +6323,7 @@ To drive over a junction between the two, the 'to' track must be switched in pol
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="December 23, 2025 20:33:33 UTC">December 23, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="December 26, 2025 22:28:46 UTC">December 26, 2025</span>
   </span>
 
     
