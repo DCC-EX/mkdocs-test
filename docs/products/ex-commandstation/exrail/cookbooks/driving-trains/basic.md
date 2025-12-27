@@ -2,7 +2,7 @@
 
 EXRAIL contains a number of basic commands to drive locos and control their functions such as lights and sounds.
 
-Its important to understand that EXRAIL has "tasks". A task may be driving loco 3 using sequence(555) while another task is driving loco 7 using a the same or a different sequence. That is why the driving commands below do not refer to the loco address, they take the address from the task executing the sequence. 
+Its important to understand that EXRAIL has "tasks". A task may be driving loco 3 using sequence(555) while another task is driving loco 7 using a the same or a different sequence. That is why the driving commands below do not refer to the loco address, they take the address from the task executing the sequence.
 
 The loco associated with a task can be set with a `SETLOCO(locoid)` executed within the task, or it can be automatically assigned from a throttle using a hand-off to an [AUTOMATION](?AUTOMATION).
 

@@ -32,7 +32,7 @@ A signal that has normal AMBER and flashing AMBER could be done by creating a ne
         AMBER(signal) \
         BLINK(signal+1,500,500)
 
-SIGNAL(130,131,132) 
+SIGNALH(130,131,132) 
 
 // then where necessary you can 
 AMBER(130)   // set signal to AMBER

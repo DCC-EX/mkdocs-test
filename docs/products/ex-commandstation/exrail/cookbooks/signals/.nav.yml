@@ -1,0 +1,7 @@
+nav:
+  - Signal basics: index.md
+  - LED signals: led-signals.md
+  - Neopixel signals: ../neopixels/signals.md
+  - Flashing Signals: flashing-signals.md
+  - Semaphore signals: semaphore-signals.md
+  - DCC Signals: dcc-signals.md
