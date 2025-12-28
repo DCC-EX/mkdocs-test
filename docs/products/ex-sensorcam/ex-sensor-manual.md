@@ -890,8 +890,8 @@ Refer to the sensorCAM Installation Guide for more detail on the EX-CS installat
 (refer to the latest InstallationGuide for details)
 
  adjust _ADDR, SSID_ & _PWD_ and other parameters if required before uploading _sensorCAM.ino_
- 
- ```c++
+
+```c++
 #define WIFI_SSID "xxxxxxxxx"   //insert your#1 WiFi network nane here(2.5GHz)
 #define WIFI_PWD "xxxxxxxxx"   //"your network password"
 #define TWOIMAGE_MAXBS 030    //slower& more reliable averaging if below S30.(<097)  
