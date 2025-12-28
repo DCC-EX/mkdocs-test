@@ -827,7 +827,7 @@ The 2x Endpoints require about  10mA  each. All options can be adapted for use w
 
 ![Differential Drive 3.3V Only CS](/_static/images/ex-sensorcam/differential-drive-3v3-only-cs.png)
 
-### APPENDIX G
+## APPENDIX G
 
 ### I2C command PROTOCOL
 
@@ -879,7 +879,7 @@ Multiple sensorCAMs can be easily handled if CAM2, CAM3 etc are defined along th
 
 ## APPENDIX I
 
-### Configuring CAM & EX-CS
+### Configuring CAM and EX-CS
 
 A number of parameters and files may need to be changed or included to get the EX Command Station to respond appropriately to the sensorCAM. The (CS) modifications are to be placed in the directory containing CommandStation-EX.ino BEFORE final compilation and upload to the CS(Mega). Some further changes to vpins and i2c addresses may be required to avoid conflicts with previously installed EX-CS devices.
 
@@ -890,6 +890,7 @@ Refer to the sensorCAM Installation Guide for more detail on the EX-CS installat
 (refer to the latest InstallationGuide for details)
 
  adjust _ADDR, SSID_ & _PWD_ and other parameters if required before uploading _sensorCAM.ino_
+ 
  ```c++
 #define WIFI_SSID "xxxxxxxxx"   //insert your#1 WiFi network nane here(2.5GHz)
 #define WIFI_PWD "xxxxxxxxx"   //"your network password"
@@ -898,7 +899,7 @@ Refer to the sensorCAM Installation Guide for more detail on the EX-CS installat
 #define SUPPLY 10           //local mains frequency dependent(currently just use 10)
 #define BAUD 115200        //any slower will degrade image transfer speed  
 #define SEN_SIZE 0        //0 gives standard 4x4 pixels
- ```
+```
 
 ### CommandStation(CS)    
 
