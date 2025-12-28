@@ -8171,7 +8171,7 @@
 <p><img alt="ESP32 CAM with MB" src="../../../_static/images/ex-sensorcam/esp32-cam-with-mb.png" /></p>
 <p>2PCS ESP32-CAM-MB, Aideepen ESP32-CAM W BT Board ESP32-CAM-MB Micro USB to Serial Port CH-340G with OV2640 2MP Camera Module Dual Mode</p>
 <p><img alt="ESP32 Wrover CAM Photo" src="../../../_static/images/ex-sensorcam/esp32-wrover-cam-photo.png" /></p>
-<p><strong>Note:</strong> While this manual primarily talks about the ESP32-CAM-MB, there is a similar tested alternative in the newer <strong>ESP32 WROVER CAM</strong> single board option. For some further preliminary details refer to Section 7 Wiring, <strong>Figure 6</strong>. The software is identical for both CAMs.</p>
+<p><strong>Note:</strong> While this manual primarily talks about the ESP32-CAM-MB, there is a similar tested and <strong>recommended</strong> alternative in the newer <strong>ESP32 WROVER CAM</strong> single board option requiring simpler wiring with the 38P expander board. For some further preliminary details refer to Section 7 Wiring, <strong>Figure 6</strong>. The software is identical for both CAMs.</p>
 <p>Dealing with video images involves complexities not normally associated with model railroading sensors. The sensorCAM is a complex device with a number of commands explicitly for setup and evaluation. In addition to these, several "output" commands can be used by a host to interrogate the "virtual sensor" output states. The initial setup can be somewhat involved and requires familiarity with most of the 25 commands discussed below.</p>
 <p>The sensorCAM has two <strong><em>mutually exclusive modes</em></strong> of operation; the sensorCAM mode and the webCAM mode. The webCAM mode is essentially as described in the on-line tutorials. Use that mode only for education and curiosity. Invoke webCAM video mode by issuing the <strong>v1</strong> (or <strong>v2</strong>) sensorCAM command to get a webCAM URL(e.g.192.168.0.64)</p>
 <p>The ESP32-CAM does not have a USB port so you will need an FTDI interface or MB. We prefer the ESP32-CAM-MB (MotherBoard) interface which plugs directly behind the CAM. Check "The Workshop" You tube videos on-line for guidance. The MB is far simpler to use (needing no jumpers or cables) than a separate FTDI used in the videos.</p>
@@ -8631,7 +8631,7 @@ To define a sensor, use '<strong>a</strong>' command,  Processing4, or (outdated
 <p><strong>b#[,$]</strong>&nbsp; &nbsp; <strong>Bank</strong> # sensors. Show which sensors OCCUPIED(in bits 7-0).(1=occ.)(<strong>b#,$</strong> sets <em>brightSF</em> to $)</p>
 <p><strong>c$$$$</strong>&nbsp; &nbsp; <strong>reCalibrate</strong> camera CCD occasionally and grab new references for all enabled sensors(Beware of doing this while any sensors are occupied) <strong>N.B.</strong> Obstructed sensors will later need an <strong>r%%</strong>. Check all bank LEDs are off AND check all sensors are unoccupied before recalibrate. Can set AWB AEC AGC CB through $$$$ e.g. c0110<br />
 Also able to change default setting for Brightness, Contrast &amp; Saturation with extra digits e.g. c$$$$012</p>
-<p><strong>d%%[#]</strong>&nbsp; <strong>*Difference</strong> score in colour&amp; brightness between Ref &amp; actual image. Show # grabs.</p>
+<p><strong>d%%[,#]</strong>&nbsp; <strong>*Difference</strong> score in colour&amp; brightness between Ref &amp; actual image. Show # grabs.</p>
 <p><strong>e</strong>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <strong>EPROM</strong> save of any new Sensor offset positions, pvtThresholds, new twins and 5 default parameter settings.</p>
 <p><strong>f%%</strong>&nbsp; &nbsp; &nbsp; <strong>*Frame</strong> buffer sample display. Print latest bytes in <em>Sensor_ref[%%]</em> &amp; Sensor S%% positions.</p>
 <p><strong>g</strong>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <strong>*Get</strong> Camera Status. Displays most current settings available in webcam window (both sensor &amp; video mode).</p>
@@ -9102,7 +9102,7 @@ SETUP(&quot;&lt;S 110708 0\&gt;&quot;);     //note recommended id is 1%%(b/s) fo
 <p>The CS endpoint shown should be powered with 3.3V from the CS end (NOT 5V), and 9V on GRNW/GRN<br />
 Note: WROVER-CAM does not have a fitted external antenna socket like the ESP32-CAM.</p>
 <p><img alt="ESP32 Wrover CAM with Sparkfun Endpoint" src="../../../_static/images/ex-sensorcam/esp32-wrover-sparkfun-endpoint.png" /></p>
-<p>For a limited reach, perhaps using a LTC4311 terminator/buffer at the CS to boost signal rise times and range, the cheaper PCA9515A may be used with the Wrover-CAM connected as below.  The cable to the CAM can be up to 2m long using twisted pairs (cat5?).</p>
+<p>For a limited reach, perhaps using a LTC4311 terminator/buffer at the CS to boost signal rise times and range, the cheaper PCA9515A may be used with the Wrover-CAM connected as shown.  The cable to the CAM can be up to 2m long using twisted pairs (cat5?) but may need tuning with extra pullup resistors.</p>
 <h3 id="3-enhanced-t-cmd-for-pvtthresholds">3. Enhanced 't' cmd for pvtThresholds<a class="headerlink" href="#3-enhanced-t-cmd-for-pvtthresholds" title="Permanent link">&para;</a></h3>
 <p><strong>t0,%%</strong> will cancel a <em>pvtThreshold</em> on S%% as always.<br />
 <strong>t1,%%</strong> will cancel ALL pvtThresholds in bank% e.g.t1,30<br />
@@ -9162,7 +9162,7 @@ Note: WROVER-CAM does not have a fitted external antenna socket like the ESP32-C
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="December 28, 2025 20:41:21 UTC">December 28, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="December 28, 2025 22:19:04 UTC">December 28, 2025</span>
   </span>
 
     
