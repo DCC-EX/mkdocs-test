@@ -1,5 +1,5 @@
 nav:
-  - Exrail: exrail.md
+  - What is EXRAIL?: exrail.md
   - Vpins: vpins.md
   - Command List: command-list.md
-  - "*"
+  - Cookbooks: cookbooks
