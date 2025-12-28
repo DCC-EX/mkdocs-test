@@ -4091,14 +4091,20 @@
   
 </li>
         
-          <li class="md-nav__item">
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#appendix-g" class="md-nav__link">
     <span class="md-ellipsis">
       APPENDIX G
     </span>
   </a>
   
-</li>
+    <nav class="md-nav" aria-label="APPENDIX G">
+      <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#i2c-command-protocol" class="md-nav__link">
@@ -4167,9 +4173,9 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#configuring-cam-ex-cs" class="md-nav__link">
+  <a href="#configuring-cam-and-ex-cs" class="md-nav__link">
     <span class="md-ellipsis">
-      Configuring CAM &amp; EX-CS
+      Configuring CAM and EX-CS
     </span>
   </a>
   
@@ -7558,14 +7564,20 @@
   
 </li>
         
-          <li class="md-nav__item">
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#appendix-g" class="md-nav__link">
     <span class="md-ellipsis">
       APPENDIX G
     </span>
   </a>
   
-</li>
+    <nav class="md-nav" aria-label="APPENDIX G">
+      <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#i2c-command-protocol" class="md-nav__link">
@@ -7634,9 +7646,9 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#configuring-cam-ex-cs" class="md-nav__link">
+  <a href="#configuring-cam-and-ex-cs" class="md-nav__link">
     <span class="md-ellipsis">
-      Configuring CAM &amp; EX-CS
+      Configuring CAM and EX-CS
     </span>
   </a>
   
@@ -8548,7 +8560,7 @@ vPin is the base/first vPin number (e.g. 700) + DEC(<em>bsn</em>)number in the c
 <p><img alt="Differential Drive 3.3V CS" src="../../../_static/images/ex-sensorcam/differential-drive-3v3-cs.png" /></p>
 <h4 id="c-for-33v-differential-drive-33v-cs-i2c-bus">C FOR 3.3V Differential drive 3.3V CS I2C BUS<a class="headerlink" href="#c-for-33v-differential-drive-33v-cs-i2c-bus" title="Permanent link">&para;</a></h4>
 <p><img alt="Differential Drive 3.3V Only CS" src="../../../_static/images/ex-sensorcam/differential-drive-3v3-only-cs.png" /></p>
-<h3 id="appendix-g">APPENDIX G<a class="headerlink" href="#appendix-g" title="Permanent link">&para;</a></h3>
+<h2 id="appendix-g">APPENDIX G<a class="headerlink" href="#appendix-g" title="Permanent link">&para;</a></h2>
 <h3 id="i2c-command-protocol">I2C command PROTOCOL<a class="headerlink" href="#i2c-command-protocol" title="Permanent link">&para;</a></h3>
 <p>With version 3.00 of IO_EXSensorCAM.h CS driver, commands and parameters are sent to the CAM as a short string of binary bytes to be interpreted by sensorCAM. Return data (if it is applicable) is also in compact byte format as below.  Other commands respond with "ACK OK".</p>
 <p>The sensorCAM sends packets of data to the i2c bus master upon request. The data sent is dependent on the last command received as that command prepares a packet in anticipation of a bus Request. Only nine commands can affect the return packet format. They will contain the relevant ASCII command character in the first (header) byte, followed by data. These are listed below.</p>
@@ -8578,13 +8590,13 @@ Finally, at the signal(S17), <strong>IFGTE(CAM 013,128) STOP</strong></p>
 <h3 id="2-multiple-cams">2. Multiple Cams<a class="headerlink" href="#2-multiple-cams" title="Permanent link">&para;</a></h3>
 <p>Multiple sensorCAMs can be easily handled if CAM2, CAM3 etc are defined along the lines of CAM above, so <strong>IF(CAM2 012)</strong> tests a different sensor to <strong>IF(CAM3 012)</strong>, provided <strong>SENSORCAM2_ VPIN</strong> etc. are defined. Using CS native commands, e.g. <strong>&lt;Ni 212&gt;</strong> and <strong>&lt;Ni 312&gt;</strong>, can also access <strong>S12</strong> on different CAMs. <strong>The #define SENSORCAM_VPIN ###</strong> is essential for cam1. Do NOT insert a 1 in to <strong>SENSORCAM_VPIN</strong>. You may use <strong>SENSORCAM2_VPIN</strong> and <strong>SENSORCAM3_VPIN</strong> with <strong>CAM2</strong> and <strong>CAM3</strong> in <em>config.h</em></p>
 <h2 id="appendix-i">APPENDIX I<a class="headerlink" href="#appendix-i" title="Permanent link">&para;</a></h2>
-<h3 id="configuring-cam-ex-cs">Configuring CAM &amp; EX-CS<a class="headerlink" href="#configuring-cam-ex-cs" title="Permanent link">&para;</a></h3>
+<h3 id="configuring-cam-and-ex-cs">Configuring CAM and EX-CS<a class="headerlink" href="#configuring-cam-and-ex-cs" title="Permanent link">&para;</a></h3>
 <p>A number of parameters and files may need to be changed or included to get the EX Command Station to respond appropriately to the sensorCAM. The (CS) modifications are to be placed in the directory containing CommandStation-EX.ino BEFORE final compilation and upload to the CS(Mega). Some further changes to vpins and i2c addresses may be required to avoid conflicts with previously installed EX-CS devices.</p>
 <p>Refer to the sensorCAM Installation Guide for more detail on the EX-CS installation procedure.</p>
 <h3 id="file-edits-configcamh">File edits: configCAM.h<a class="headerlink" href="#file-edits-configcamh" title="Permanent link">&para;</a></h3>
 <p>(refer to the latest InstallationGuide for details)</p>
-<p>adjust <em>ADDR, SSID</em> &amp; <em>PWD</em> and other parameters if required before uploading <em>sensorCAM.ino</em>
- ```c++</p>
+<p>adjust <em>ADDR, SSID</em> &amp; <em>PWD</em> and other parameters if required before uploading <em>sensorCAM.ino</em></p>
+<p>```c++</p>
 <h1 id="define-wifi_ssid-xxxxxxxxx-insert-your1-wifi-network-nane-here25ghz">define WIFI_SSID "xxxxxxxxx"   //insert your#1 WiFi network nane here(2.5GHz)<a class="headerlink" href="#define-wifi_ssid-xxxxxxxxx-insert-your1-wifi-network-nane-here25ghz" title="Permanent link">&para;</a></h1>
 <h1 id="define-wifi_pwd-xxxxxxxxx-your-network-password">define WIFI_PWD "xxxxxxxxx"   //"your network password"<a class="headerlink" href="#define-wifi_pwd-xxxxxxxxx-your-network-password" title="Permanent link">&para;</a></h1>
 <h1 id="define-twoimage_maxbs-030-slower-more-reliable-averaging-if-below-s30097">define TWOIMAGE_MAXBS 030    //slower&amp; more reliable averaging if below S30.(&lt;097)<a class="headerlink" href="#define-twoimage_maxbs-030-slower-more-reliable-averaging-if-below-s30097" title="Permanent link">&para;</a></h1>
@@ -8592,16 +8604,21 @@ Finally, at the signal(S17), <strong>IFGTE(CAM 013,128) STOP</strong></p>
 <h1 id="define-supply-10-local-mains-frequency-dependentcurrently-just-use-10">define SUPPLY 10           //local mains frequency dependent(currently just use 10)<a class="headerlink" href="#define-supply-10-local-mains-frequency-dependentcurrently-just-use-10" title="Permanent link">&para;</a></h1>
 <h1 id="define-baud-115200-any-slower-will-degrade-image-transfer-speed">define BAUD 115200        //any slower will degrade image transfer speed<a class="headerlink" href="#define-baud-115200-any-slower-will-degrade-image-transfer-speed" title="Permanent link">&para;</a></h1>
 <h1 id="define-sen_size-0-0-gives-standard-4x4-pixels">define SEN_SIZE 0        //0 gives standard 4x4 pixels<a class="headerlink" href="#define-sen_size-0-0-gives-standard-4x4-pixels" title="Permanent link">&para;</a></h1>
-<p>```</p>
-<h3 id="commandstationcs">CommandStation(CS)<a class="headerlink" href="#commandstationcs" title="Permanent link">&para;</a></h3>
-<p>following files all in CommandStation-EX.ino folder or separate folder for installer.</p>
-<p><strong>IO_EXSensorCAM.h</strong>   </p>
-<p>CamParser.h, CamParser.cpp &amp; EX-SensorCAM.h (v3.08) are now included in CommandStation-EX versions 5.4.0+ by default. Different versions (driver v3.09) are included in CS devel 5.5.40+)</p>
-<p><strong>config.h</strong>             //standard should do for single CAM at Vpin 700&amp; address 0x11</p>
-<div class="highlight"><pre><span></span><code><span class="cp">#define SENSORCAM VPIN 700     </span><span class="c1">//defines a suitable virtual vPin for the FIRST sensorCAM</span>
-<span class="cp">#define CAM SENSORCAM VPIN+       </span><span class="c1">//alias to replace vpins in EXRAIL e.g. AT(CAM 021) i.e.S21</span>
-<span class="cp">#define SENSORCAM2_VPIN 620       </span><span class="c1">//only if a second CAM has been created in myHal.cpp</span>
-<span class="cp">#define CAM2 SENSORCAM2_VPIN+     </span><span class="c1">//ditto</span>
+<div class="highlight"><pre><span></span><code>### CommandStation(CS)    
+
+following files all in CommandStation-EX.ino folder or separate folder for installer.
+
+**IO_EXSensorCAM.h**   
+
+CamParser.h, CamParser.cpp &amp; EX-SensorCAM.h (v3.08) are now included in CommandStation-EX versions 5.4.0+ by default. Different versions (driver v3.09) are included in CS devel 5.5.40+)
+
+**config.h**             //standard should do for single CAM at Vpin 700&amp; address 0x11
+
+```c++
+#define SENSORCAM VPIN 700     //defines a suitable virtual vPin for the FIRST sensorCAM
+#define CAM SENSORCAM VPIN+       //alias to replace vpins in EXRAIL e.g. AT(CAM 021) i.e.S21
+#define SENSORCAM2_VPIN 620       //only if a second CAM has been created in myHal.cpp
+#define CAM2 SENSORCAM2_VPIN+     //ditto
 </code></pre></div>
 <p><strong>myHal.cpp</strong>            //(preferred: use HAL() in myAutomation.h as per Installation Guide)</p>
 <p>```#include"IO_EXSensorCAM.h"  // sensorCAM driver for CS
@@ -8716,7 +8733,7 @@ Note: WROVER-CAM does not have a fitted external antenna socket like the ESP32-C
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="December 28, 2025 06:00:01 UTC">December 28, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="December 28, 2025 06:20:01 UTC">December 28, 2025</span>
   </span>
 
     
