@@ -56,7 +56,7 @@ The sensorCAM takes 10 frames per second in RGB565 format at QVGA resolution of 
 
 ![ESP32 Wrover CAM Photo](/_static/images/ex-sensorcam/esp32-wrover-cam-photo.png)
 
-**Note:** While this manual primarily talks about the ESP32-CAM-MB, there is a similar tested alternative in the newer **ESP32 WROVER CAM** single board option. For some further preliminary details refer to Section 7 Wiring, **Figure 6**. The software is identical for both CAMs.
+**Note:** While this manual primarily talks about the ESP32-CAM-MB, there is a similar tested and **recommended** alternative in the newer **ESP32 WROVER CAM** single board option requiring simpler wiring with the 38P expander board. For some further preliminary details refer to Section 7 Wiring, **Figure 6**. The software is identical for both CAMs.
 
 Dealing with video images involves complexities not normally associated with model railroading sensors. The sensorCAM is a complex device with a number of commands explicitly for setup and evaluation. In addition to these, several "output" commands can be used by a host to interrogate the "virtual sensor" output states. The initial setup can be somewhat involved and requires familiarity with most of the 25 commands discussed below.
 
@@ -512,7 +512,7 @@ To define a sensor, use '**a**' command,  Processing4, or (outdated method) a br
 **c$$$$**&nbsp; &nbsp; **reCalibrate** camera CCD occasionally and grab new references for all enabled sensors(Beware of doing this while any sensors are occupied) **N.B.** Obstructed sensors will later need an **r%%**. Check all bank LEDs are off AND check all sensors are unoccupied before recalibrate. Can set AWB AEC AGC CB through $$$$ e.g. c0110  
 Also able to change default setting for Brightness, Contrast & Saturation with extra digits e.g. c$$$$012
 
-**d%%[#]**&nbsp; **\*Difference** score in colour& brightness between Ref & actual image. Show # grabs.
+**d%%[,#]**&nbsp; **\*Difference** score in colour& brightness between Ref & actual image. Show # grabs.
 
 **e**&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; **EPROM** save of any new Sensor offset positions, pvtThresholds, new twins and 5 default parameter settings.
 
@@ -1000,7 +1000,7 @@ Note: WROVER-CAM does not have a fitted external antenna socket like the ESP32-C
 
 ![ESP32 Wrover CAM with Sparkfun Endpoint](/_static/images/ex-sensorcam/esp32-wrover-sparkfun-endpoint.png)
 
-For a limited reach, perhaps using a LTC4311 terminator/buffer at the CS to boost signal rise times and range, the cheaper PCA9515A may be used with the Wrover-CAM connected as below.  The cable to the CAM can be up to 2m long using twisted pairs (cat5?).
+For a limited reach, perhaps using a LTC4311 terminator/buffer at the CS to boost signal rise times and range, the cheaper PCA9515A may be used with the Wrover-CAM connected as shown.  The cable to the CAM can be up to 2m long using twisted pairs (cat5?) but may need tuning with extra pullup resistors.
 
 ### 3. Enhanced 't' cmd for pvtThresholds
 
