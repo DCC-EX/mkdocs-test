@@ -414,7 +414,7 @@ Proprietary Master:  If writing raw code for another Command Station, you will n
 Stable good lighting is needed.  Gross Lighting changes will have two effects, namely cause trips of most sensors and stop automatic reference refreshes, it may be wise to include monitoring for this eventuality by detecting and setting an "alarm" state. The reference sensor(S00) is automatically re-referenced every 6.4 seconds so will indicate a fault-trip for a maximum of 6.4 seconds. All other sensors will continue to indicate a trip until the user resets the references with an r00 (having checked all unoccupied). Setting up a second "reference" sensor (say S01) that would NOT get reset automatically and would stay tripped as a more enduring fault indicator could be helpful. You could reserve entire bank 0 for this purpose or use the '**nO**' command to set the programmable pLED to light up if there is any enduring trip on bank 0.  Consider using the "_qLED_" GPIO2.   By default _BLKOLED_ was set to GPIO2 LED, with _BLK1LED_ to _BLK3LED_ all set to GPIO33 LED. _PLED_ is set to GPIO14.
 
 ## 9. Methodology of operation
-__
+
 ### 9.1 Overview
 
 The sensorCAM monitors up to 80 small square images (virtual sensors) each consisting of 16 pixels (4x4) the coordinates of which relate to the row/column of the top left pixel. The top left pixel of the QVGA (240x320) image is an r,c coordinate of 0,0. Sensors with coordinate 0,0 are considered "undefined". Sensors are electrically "noisy", so much effort was applied to avoid noise trips.
@@ -492,18 +492,18 @@ Once the sensorCAM parameters and environmental conditions are set, the sensorCA
 
 ## APPENDIX A
 
-### ESP32 sensorCAM Command Summary
+### CAM Command Summary
 
 rev 1DEC25
 
-#### Introduction
+**Introduction**
 
 Holds up to 10 banks (0-9) of sensors. Each bank can have up to 8 enabled sensors (0-7). Bank/sensor (%%) up to '97'.  Array _Sensor\[n]_ holds coordinates(rx) of sensor n.  Sensors are grouped into banks(b) of sensors(s). e.g. bsNo 6/7 identifies bank 6, sensor 7 (n=8x6+7=55=067). Sensors are undefined if coordinates(rx) are set to 00. They are disabled if _SensorActive\[n\]_ is set to false.  
 If a sensor detects differences, then any output LED (e.g. _pLED, qLED_) assigned to the associated Bank of sensors should turn ON.  
 On reset (power-up), reference grabs are taken for all defined (in EEPROM) sensors, and then enables them.
 To define a sensor, use '**a**' command,  Processing4, or (outdated method) a bright LED on the desired spot and dim lighting with a "scan" (**s%%**). Save in EEPROM (**e**). SensorCAM uses RGB565 image format which is incompatible with JPG, so auto reboots between SensorCAM or webCAM modes occurs.
 
-#### Serial Command USB format  
+**Serial Command USB format**  
 
 **a%%[, rr, xx]** **enAble** _Sensor[%%]_ & refresh _Sensor_ref[%%]_, _cRatios_ etc. 4x4 from image in latest frame. **(Note 20.)**
 
@@ -660,7 +660,7 @@ In the situation where sensors may be tripping undesirably, there is a range of 
 ## APPENDIX C
 
 
-### Parsed DCC EX-CS sensorCAM commands
+### DCC-EX CS CAM commands
 
 The file _CamParser.cpp_ has been added to the CS specifically tailored to provide a mechanism for the CS to send commands more easily than by using the clumsy diagnostic command style **\<D&nbsp; ANOUT&nbsp;vpin&nbsp;parm1&nbsp;parm2\>**. The CS Native CAM command format is **<N&nbsp;c&nbsp;[parm1]&nbsp;[parm2]\>** where command character '**c**' can be any of those listed below. Generally, to effect changes in sensorCAM, the CAM must be in the run mode (flashing).
 
@@ -827,9 +827,9 @@ The 2x Endpoints require about  10mA  each. All options can be adapted for use w
 
 ![Differential Drive 3.3V Only CS](/_static/images/ex-sensorcam/differential-drive-3v3-only-cs.png)
 
-### APPENDIX G
+## APPENDIX G
 
-### I2C sensorCAM commands & PROTOCOL
+### I2C command PROTOCOL
 
 With version 3.00 of IO_EXSensorCAM.h CS driver, commands and parameters are sent to the CAM as a short string of binary bytes to be interpreted by sensorCAM. Return data (if it is applicable) is also in compact byte format as below.  Other commands respond with "ACK OK".
 
@@ -839,7 +839,7 @@ The sensorCAM sends packets of data to the i2c bus master upon request. The data
 
 ## APPENDIX H
 
-### Notes on use of EX-RAIL with sensorCAM
+### Notes on use with EX-RAIL
 
 ### 1. Sensor/vpin Numbering
 
@@ -879,17 +879,17 @@ Multiple sensorCAMs can be easily handled if CAM2, CAM3 etc are defined along th
 
 ## APPENDIX I
 
-### Configuring EX-CS to connect to sensorCAM
+### Configuring CAM and EX-CS
 
 A number of parameters and files may need to be changed or included to get the EX Command Station to respond appropriately to the sensorCAM. The (CS) modifications are to be placed in the directory containing CommandStation-EX.ino BEFORE final compilation and upload to the CS(Mega). Some further changes to vpins and i2c addresses may be required to avoid conflicts with previously installed EX-CS devices.
 
 Refer to the sensorCAM Installation Guide for more detail on the EX-CS installation procedure.
 
-### File edits to configure EX-CS for sensorCAM:  
+### File edits: configCAM.h   
 
 (refer to the latest InstallationGuide for details)
 
-#### configCAM.h // adjust _ADDR, SSID_ & _PWD_ if required before uploading _sensorCAM.ino_
+ adjust _ADDR, SSID_ & _PWD_ and other parameters if required before uploading _sensorCAM.ino_
 
 ```c++
 #define WIFI_SSID "xxxxxxxxx"   //insert your#1 WiFi network nane here(2.5GHz)
@@ -901,13 +901,15 @@ Refer to the sensorCAM Installation Guide for more detail on the EX-CS installat
 #define SEN_SIZE 0        //0 gives standard 4x4 pixels
 ```
 
-### CommandStation(CS)    //following files all in CommandStation-EX.ino folder.folder
+### CommandStation(CS)    
 
-#### IO_EXSensorCAM.h     // driver for sensorCM to be used with CamParser.cpp`
+following files all in CommandStation-EX.ino folder or separate folder for installer.
 
-```// CamParser.cpp and CamParser.h are included in CommandStation-EX versions 5.4.0+```
+**IO_EXSensorCAM.h**   
 
-#### config.h             //standard should do for single CAM at Vpin 700& address 0x11
+CamParser.h, CamParser.cpp & EX-SensorCAM.h (v3.08) are now included in CommandStation-EX versions 5.4.0+ by default. Different versions (driver v3.09) are included in CS devel 5.5.40+)
+
+**config.h**             //standard should do for single CAM at Vpin 700& address 0x11
 
 ```c++
 #define SENSORCAM VPIN 700     //defines a suitable virtual vPin for the FIRST sensorCAM
@@ -916,7 +918,7 @@ Refer to the sensorCAM Installation Guide for more detail on the EX-CS installat
 #define CAM2 SENSORCAM2_VPIN+     //ditto
 ```
 
-#### myHal.cpp            //(preferred: use HAL() in myAutomation.h as per Installation Guide)
+**myHal.cpp**            //(preferred: use HAL() in myAutomation.h as per Installation Guide)
 
 ```#include"IO_EXSensorCAM.h"  // sensorCAM driver for CS
 void halSetup(){               //add in the following two lines minimum.
@@ -926,7 +928,7 @@ void halSetup(){               //add in the following two lines minimum.
       EXSensorCAM::create(620, 80, 0x12);  //can use multiple CAMs if needed e.g.@620
 ```
 
-#### mySetup.h  // a second CAM may use vpins 620 to 699 range if no conflicts 
+**mySetup.h**  // a second CAM may use vpins 620 to 699 range if no conflicts 
 
 ```c++
 I2CManager.setClock(100000);   //to slow i2c bus clock rate (or .forceClock(100000);)
@@ -975,7 +977,7 @@ Using v1.6 with no RTS/DTR reset, users will have to boot up holding IO0 button 
 
 The newer sensorCAM drivers default to an i2c bus frequency of 100,000 Hz. With caution, this may be increased somewhat (e.g. 200000) if the i2c bus is well tuned and all attached devices can handle higher frequencies. To set a higher frequency, for example, place the following in _mySetup.h_ or_ myHal.cpp_ _I2Cmanager.forceClock(200000);_ //place after _void halSetup(){_ 
 
-### 2. Notes on 40-pin WROVER CAM and 38-pin breakout board
+### 2. 40-pin WROVER CAM with 38P breakout board
 
 Potentially simplest commercially available hookup for 40 pin WROVER-CAM:
 
@@ -1000,9 +1002,7 @@ Note: WROVER-CAM does not have a fitted external antenna socket like the ESP32-C
 
 For a limited reach, perhaps using a LTC4311 terminator/buffer at the CS to boost signal rise times and range, the cheaper PCA9515A may be used with the Wrover-CAM connected as below.  The cable to the CAM can be up to 2m long using twisted pairs (cat5?).
 
-![ESP32 Wrover CAM with PCA9515A](/_static/images/ex-sensorcam/esp32-wrover-pca9515a.png)
-
-### 3. Note on enhanced 't' command for handling/clearing pvtThresholds (version v319+):
+### 3. Enhanced 't' cmd for pvtThresholds
 
 **t0,%%** will cancel a _pvtThreshold_ on S%% as always.  
 **t1,%%** will cancel ALL pvtThresholds in bank% e.g.t1,30  
@@ -1014,13 +1014,13 @@ Version v319 also accepts _minSensors_ up to _maxSensors_-1
 **m#,%%** will set _maxSensors_ to%%. e.g. m10,30 sets _maxSensors_=030 (leaving _min2trip_ unchanged as does m0,30)  
 **n#,%%** will set _minSensors_ to%%. e.g. n10,27 sets _minSensors_=027 leaving _nLED_ unchanged. **n0,27** would set _nLED_ to 0)
 
-### 4. Notes on CS drivers v308 & v309)
+### 4. CS drivers v308 & v309
 
 Driver version v308 is intended for use with Prod versions 5.4.6 to 5.4.16. DCC-EX CS Prod. Versions 5.4.16+ incorporate v308 by default. v308 will not work with CS devel 5.5.15+. For CS devel versions look to v309 (default). Both these drivers MUST be used with sensorCAM version v320+ as earlier versions will not be recognized.
 
-### ADDITIONAL RANDOM NOTES:
+## ADDITIONAL RANDOM NOTES:
 
-ALL FOLLOWING IMAGES ARE FOR GENERAL INFORMATION ONLY & NOT DIRECTLY REFERENCED IN THE FULL MANUAL ABOVE
+**ALL FOLLOWING IMAGES ARE FOR GENERAL INFORMATION ONLY & NOT DIRECTLY REFERENCED IN THE FULL MANUAL ABOVE**
 
 ![ESP32 CAM MB v1.6 vs v1.9](/_static/images/ex-sensorcam/esp32-cam-mb-16-19.png)
 
@@ -1036,12 +1036,6 @@ Antenna solder jumper adjustment
 
 ![Xiaolaba File LIst](/_static/images/ex-sensorcam/xiaolaba-file-list.png)
 
-xiaolaba Update README.md
-
-$$
-4fe66d3\cdot 2\text{ years ago}
-$$
-
 ### ESP32-CAM_V1.6_V1.9_MB
 
 ● ESP32-CAM-MB, base module design, schematic
@@ -1052,15 +1046,15 @@ $$
 
 ● upgrade to ESP32-CAM V1.9
 
-looks like V1.6 is the same as V1.9, really?   -  The jumper difference is not obvious here
+looks like V1.6 is the same as V1.9, really? - The jumper difference is on ov2640 side.
 
 ![ESP32 Cam with Capacitor](/_static/images/ex-sensorcam/esp32-cam-with-capacitor.png)
 
 Spec sheet: Typical applications include a 22uF cap between AMS1117 3v3 reg ADJ/GND pin and Vout, not on CAM but can be added as above for "better" performance.(hopefully less noise?). Also shows 10uF on 5Vin
 
-There is a range of ov2640 cam modules available with ESP32 or independently sold. The"IR" option would be an interesting experiment and might open up new possibilities, but monochrome IR images harder to spot intrusions. The usual ov2640 is  $66^{\circ}$  , but  $120^{\circ}$  fish-eye covers more, at the expense of detail.  $120^{\circ}$  better for low ceilings??
+There is a range of ov2640 cam modules available with ESP32 or independently sold. The"IR" option would be an interesting experiment and might open up new possibilities, but monochrome IR images harder to spot intrusions. The usual ov2640 is  66deg., but  120deg fish-eye covers more, at the expense of detail.  100deg might be better for low ceilings depending on situation.
 
-Web offers range of lenses including"850nm night vision" which probably is OV2640 sans IR filter?(IR\>700nm)
+Web offers range of lenses including "850nm night vision" which probably is OV2640 sans IR filter? (IR\>700nm)
 
 Long(75mm) and short(21mm) ribbon ov2640, angles 66(std?),100,120,160deg lens,650nm or 850nm(night vision), opt. antenna for marginal wifi. NONE, other than standard 66deg OV2640, are currently recommended.
 
@@ -1070,14 +1064,12 @@ Long(75mm) and short(21mm) ribbon ov2640, angles 66(std?),100,120,160deg lens,65
 
 ![OV2640 Example 3](/_static/images/ex-sensorcam/ov2640-example-3.png)
 
-### AU$28.59 Elk AU$24.59,≥3 stuks Getoonde prijs voor belasting Extra 2% korting
+### ESP32 CAM 8MB PSRAM
 
-### ESP32 CAM Cameramodulekit 2,4 GHz WiFi Bluetooth 8 MB PSRAM OV2640 Cameramodule 120 66 160 graden 850 nm Nachtzicht 2 MP
+Cameramodulekit 2,4 GHz WiFi Bluetooth 8 MB PSRAM OV2640 Cameramodule 120 66 160 graden 850 nm Nachtzicht 2 MP
 
 ![OV2640 Example 4](/_static/images/ex-sensorcam/ov2640-example-4.png)
 
 ### Acceptable alt. WROVER CAM
-
-1 December 2025
 
 ![ESP32 Wrover CAM](/_static/images/ex-sensorcam/esp32-wrover-cam.png)
