@@ -1,6 +1,6 @@
 # NeoPixel support
 
-The IO_NeoPixel.h driver supports the adafruit neopixel seesaw board. It turns each pixel into an individual VPIN which can be given a colour and turned on or off using the the NEOPIXEL EXRAIL macro. EXRAIL SIGNALS can also drive a single pixel signal or multiple separate pixels.
+The IO_NeoPixel.h driver supports the adafruit neopixel seesaw board. It turns each pixel into an individual VPIN which can be given a colour and turned on or off using the the NEOPIXEL EXRAIL macro. EXRAIL SIGNALS can also drive a single pixel signal or multiple separate pixels [See Neopixel Signals](/products/ex-commandstation/exrail/cookbooks/signals/neopixel-signals.md).
 
 ## Defining the hardware driver
 

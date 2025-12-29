@@ -2,7 +2,7 @@
 
 These devices are available from [trainbrains.eu](https://trainbrains.eu) and operate over I2C.
 
-They auto-detect the device type so it is only necessary to provide HAL statements in myAutomation.h to identify that the device on the given address is a Trainbrains device and the number of VPINs that will be reserved for it by DCC-EX. 
+They auto-detect the device type so it is only necessary to provide HAL statements in myAutomation.h to identify that the device on the given address is a Trainbrains device and the number of VPINs that will be reserved for it by DCC-EX.
 
 ## Turnout drivers (solenoid and servo)
 
@@ -43,13 +43,13 @@ NEOPIXEL_SIGNAL(702,0xFF0000,0xFF6400,0x00FF00)
 
 Signal values can be manually tested using the <o> command like this
 
-```
+```cpp
 <o vpin lamps flashes state>
 ```
 
-To have a disco party, try 
+To have a disco party, try
 
-```
+```cpp
 <o 702 255 255 1>
 ```
 
