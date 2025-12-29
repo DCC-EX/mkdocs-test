@@ -2408,29 +2408,6 @@
 
               
             
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../neopixels/signals/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Neopixel signals
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
           </ul>
         </nav>
       
@@ -2533,7 +2510,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../neopixels/signals/" class="md-nav__link">
+      <a href="../../signals/neopixel-signals/" class="md-nav__link">
         
   
   
@@ -6612,7 +6589,7 @@
 
 <h1 id="trainbrains-devices">Trainbrains Devices<a class="headerlink" href="#trainbrains-devices" title="Permanent link">&para;</a></h1>
 <p>These devices are available from <a href="https://trainbrains.eu">trainbrains.eu</a> and operate over I2C.</p>
-<p>They auto-detect the device type so it is only necessary to provide HAL statements in myAutomation.h to identify that the device on the given address is a Trainbrains device and the number of VPINs that will be reserved for it by DCC-EX. </p>
+<p>They auto-detect the device type so it is only necessary to provide HAL statements in myAutomation.h to identify that the device on the given address is a Trainbrains device and the number of VPINs that will be reserved for it by DCC-EX.</p>
 <h2 id="turnout-drivers-solenoid-and-servo">Turnout drivers (solenoid and servo)<a class="headerlink" href="#turnout-drivers-solenoid-and-servo" title="Permanent link">&para;</a></h2>
 <p>Use the HAL statement to identify the device I2C address and create PIN_TURNOUT definitions so that DCC-EX sees the vpins as turnouts.</p>
 <div class="highlight"><pre><span></span><code><span class="n">HAL</span><span class="p">(</span><span class="n">Trainbrains</span><span class="p">,</span><span class="mi">700</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mh">0x14</span><span class="p">)</span>
@@ -6641,10 +6618,10 @@ This isn't going to work if the devivce at I2C address 0x15 is not a Trainbrains
 <span class="n">NEOPIXEL_SIGNAL</span><span class="p">(</span><span class="mi">702</span><span class="p">,</span><span class="mh">0xFF0000</span><span class="p">,</span><span class="mh">0xFF6400</span><span class="p">,</span><span class="mh">0x00FF00</span><span class="p">)</span>
 </code></pre></div>
 <p>Signal values can be manually tested using the <o> command like this</p>
-<div class="highlight"><pre><span></span><code>&lt;o vpin lamps flashes state&gt;
+<div class="highlight"><pre><span></span><code><span class="o">&lt;</span><span class="n">o</span><span class="w"> </span><span class="n">vpin</span><span class="w"> </span><span class="n">lamps</span><span class="w"> </span><span class="n">flashes</span><span class="w"> </span><span class="n">state</span><span class="o">&gt;</span>
 </code></pre></div>
-<p>To have a disco party, try </p>
-<div class="highlight"><pre><span></span><code>&lt;o 702 255 255 1&gt;
+<p>To have a disco party, try</p>
+<div class="highlight"><pre><span></span><code><span class="o">&lt;</span><span class="n">o</span><span class="w"> </span><span class="mi">702</span><span class="w"> </span><span class="mi">255</span><span class="w"> </span><span class="mi">255</span><span class="w"> </span><span class="mi">1</span><span class="o">&gt;</span>
 </code></pre></div>
 <p>For more than 3 signal aspects (other than RED/AMBER/GREEN) it is suggested that you create macros that will set the signal to the nearest equivalent RED/AMBER/GREEN and then overwrite the aspect with a NEOPIXEL command. In this way the IFRED/ONRED etc features will still work but the actual lamp display could be anything.</p>
 <div class="highlight"><pre><span></span><code><span class="cp">#define SHUNT(x) \</span>
@@ -6676,7 +6653,7 @@ This isn't going to work if the devivce at I2C address 0x15 is not a Trainbrains
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="December 28, 2025 22:19:04 UTC">December 28, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="December 29, 2025 12:44:14 UTC">December 29, 2025</span>
   </span>
 
     
