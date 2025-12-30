@@ -129,6 +129,7 @@ plugins:
   - latest-news: # Enable including the latest news excerpts in markdown
       count: 3
       list-class: news-headline-list
+  - glightbox
 
 # Copyright info
 copyright: |

@@ -2,7 +2,9 @@
 
 At some point you will likely need to get some help or support for our products, and the available methods are outlined on this page.
 
-**NOTE** For users of hardware products purchased from resellers, in the event of a hardware issue please contact the reseller in the first instance. Each reseller is responsible for supporting the hardware they sell.
+!!! note "If you purchased hardware from a reseller"
+
+    For users of hardware products purchased from resellers, in the event of a hardware issue please contact the reseller in the first instance. Each reseller is responsible for supporting the hardware they sell.
 
 Please note that the DCC-EX team are all volunteers and are distributed globally, so while we endeavour to help as much and as quickly as we can, all support is provided on a best-effort basis only, and there will be times where no team members are available.
 
@@ -10,25 +12,58 @@ This is why we strongly recommend Discord as the best source of support, because
 
 ## Information required for support queries
 
-When requesting support for any of our products, there is some critical information you must provide in order for us to be able to help you. As volunteers, our time is limited and therefore the more information you can provide up front, the quicker we can help you resolve any issues rather than spend valuable time repeating requests for missing information.
+When requesting support for any of our products, there is some critical information you must provide in order for us to be able to help you. The more information you provide up front, the quicker we can help resolve the issue.
 
 This is the information typically required:
 
 - The product and version
 - The exact hardware in use
-- Upload serial/console logs
-- Upload all configuration files for the software in use
+- Serial console logs
+- All configuration files for the software in use
 - Detail any troubleshooting steps you have already performed
+- If applicable/possible, clear (not blurry) and detailed photos typically help
 
-### Product and Version
+Below we outline how to obtain each of these items, and it is easiest if you use EX-Installer's Device Monitor to connect to the serial console.
 
-```console
-<s>
-```
+### Using EX-Installer Device Monitor
 
-### Get startup logs
+--8<-- "snippets/ex-installer/device-monitor.md"
+
+### Product and version
+
+The command `<s>` will show the current status of EX-CommandStation which includes the platform, motorshield definition, and software version. For convenience, the EX-Installer Device monitor highlights this information as shown in the screen shot.
+
+![EX-CommandStation version](/_static/images/support/ex-commandstation-show-version.png){ width=50% }
+
+### Exact hardware in use
+
+For users of the EX-CSB1, we simply need to know which reseller you purchased from, and if it was supplied with an additional EX8874 motorshield and/or a display.
+
+For DIY users, we need to know the brand and model of all devices in use.
+
+It's not helpful to simply say "Mega with standard shield", but rather "Elegoo Mega with genuine Arduino R3 motorshield powered by a 15V DC power supply".
+
+If you're using something a little out of the ordinary, a link to the purchase page will also help.
+
+### Serial console logs
+
+Serial console logs can also be referred to as "startup logs", and using EX-Installer's Device Monitor is the simplest method to obtain these.
 
 --8<-- "snippets/ex-installer/startup-logs.md"
+
+Once you have saved the serial console logs, you can upload them in Discord using the "Upload a file" option when clicking the `+` button.
+
+![Discord upload](/_static/images/discord/discord-upload.png){ width=25% }
+
+### Configuration files
+
+The easiest way to obtain your configuration files is again using EX-Installer.
+
+--8<-- "snippets/ex-installer/backup-config-files.md"
+
+As per uploading your serial console logs above, you can use the "Upload a file" option with the `+` button in Discord.
+
+![Discord upload](/_static/images/discord/discord-upload.png){ width=25% }
 
 ## Discord (recommended)
 

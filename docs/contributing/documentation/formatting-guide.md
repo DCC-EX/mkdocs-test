@@ -100,6 +100,52 @@ Following are how to define the lower level headings with a demo of each.
 ##### Heading Level 5
 ```
 
+## Images
+
+Insert images using standard markdown formatting:
+
+```markdown
+![Image example 1](/_static/images/logos/logo.png)
+```
+
+![Image example 1](/_static/images/logos/logo.png)
+
+To make inserting images more flexible, you can use the features of [MkDocs Material theme](https://squidfunk.github.io/mkdocs-material/reference/images/) to adjust alignment, sizing, and using different images for light and dark modes.
+
+30% width:
+
+```markdown
+![Image example 1](/_static/images/logos/logo.png){ width=30% }
+```
+
+![Image example 1](/_static/images/logos/logo.png){ width=30% }
+
+Left alignment:
+
+![Image example 1](/_static/images/logos/logo.png){ align=left width=30% }
+
+```markdown
+![Image example 1](/_static/images/logos/logo.png){ align=left width=30% }
+```
+
+Right alignment:
+
+![Image example 1](/_static/images/logos/logo.png){ align=right width=30% }
+
+```markdown
+![Image example 1](/_static/images/logos/logo.png){ align=right width=30% }
+```
+
+EX-CommandStation logo for light and dark modes:
+
+```markdown
+![EX-CommandStation Logo](/_static/images/logos/product-logo-ex-commandstation-only-light.png){ .only-light width=400px }
+![EX-CommandStation Logo](/_static/images/logos/product-logo-ex-commandstation-only-dark.png){ .only-dark width=400px }
+```
+
+![EX-CommandStation Logo](/_static/images/logos/product-logo-ex-commandstation-only-light.png){ .only-light width=400px }
+![EX-CommandStation Logo](/_static/images/logos/product-logo-ex-commandstation-only-dark.png){ .only-dark width=400px }
+
 ## Glossary Terms and Linking
 
 Glossary plugins seem to be either very complicated to implement, or don't yield the results we're looking for. Instead, we have opted for a simple DIY glossary to define the terms, and provide a search link to enable users to find where they have been used in the documentation.
