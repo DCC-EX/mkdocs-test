@@ -14,4 +14,4 @@ If you are selecting the same location as you have previously used, you will rec
 
     It is important that you do not attempt to store these files in any directory managed by EX-Installer. If you attempt to store the files there, you will receive an error that the files could not be copied.
 
-    EX-Installer manages all files in your user home directory, typically "C:\Users\<username>\ex-installer" on Windows, and "/home/<username>/ex-installer" on Linux and macOS.
+    EX-Installer manages all files in your user home directory, typically "C:\Users\\<username\>\ex-installer" on Windows, and "/home/<username\>/ex-installer" on Linux and macOS.
