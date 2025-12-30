@@ -18,10 +18,14 @@ This is the information typically required:
 
 - The product and version
 - The exact hardware in use
+- All error messages and error codes
 - Serial console logs
+- EX-Installer logs
 - All configuration files for the software in use
 - Detail any troubleshooting steps you have already performed
-- If applicable/possible, clear (not blurry) and detailed photos typically help
+- If applicable/possible, clear (not blurry) and detailed photos of hardware connections typically help
+
+_**Please! Do not take photos of your computer screen when sharing logs and error codes as they are always unreadable and do not help us help you.**_
 
 Below we outline how to obtain each of these items, and it is easiest if you use EX-Installer's Device Monitor to connect to the serial console.
 
@@ -44,6 +48,10 @@ For DIY users, we need to know the brand and model of all devices in use.
 It's not helpful to simply say "Mega with standard shield", but rather "Elegoo Mega with genuine Arduino R3 motorshield powered by a 15V DC power supply".
 
 If you're using something a little out of the ordinary, a link to the purchase page will also help.
+
+### All error messages and error codes
+
+
 
 ### Serial console logs
 
