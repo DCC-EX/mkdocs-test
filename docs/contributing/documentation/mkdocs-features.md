@@ -130,6 +130,10 @@ The text below is included from this file:
 
 --8<-- "snippets/snippet-example/snippet-example.md"
 
+!!! important "Check all contexts when editing snippets"
+
+    It's important when editing snippets that you revise all contexts in which a snippet is used before and after editing to ensure it still makes sense. Use ++ctrl+f++ to search for all instances of the snippet eg. "snippets/snippet-example/snippet-example.md".
+
 ### Icons and Emojis
 
 To include an icon or emoji search for them in the [Icons, Emojis](https://squidfunk.github.io/mkdocs-material/reference/icons-emojis/) section of the documentation.

@@ -23,3 +23,4 @@ These are the common repositories you can create issues in:
 - [DCCEXProtocol](https://github.com/DCC-EX/DCCEXProtocol/issues)
 - [EX-Turntable](https://github.com/DCC-EX/EX-Turntable/issues)
 - [EX-IOExpander](https://github.com/DCC-EX/EX-IOExpander/issues)
+- [EX-SensorCAM](https://github.com/DCC-EX/EX-SensorCAM/issues)

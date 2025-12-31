@@ -55,8 +55,6 @@ If you're using something a little out of the ordinary, a link to the purchase p
 
 ### Serial console logs
 
-Serial console logs can also be referred to as "startup logs", and using EX-Installer's Device Monitor is the simplest method to obtain these.
-
 --8<-- "snippets/ex-installer/startup-logs.md"
 
 Once you have saved the serial console logs, you can upload them in Discord using the "Upload a file" option when clicking the `+` button.
@@ -65,15 +63,13 @@ Once you have saved the serial console logs, you can upload them in Discord usin
 
 ### Configuration files
 
-The easiest way to obtain your configuration files is again using EX-Installer.
-
 --8<-- "snippets/ex-installer/backup-config-files.md"
 
 As per uploading your serial console logs above, you can use the "Upload a file" option with the `+` button in Discord.
 
 ![Discord upload](/_static/images/discord/discord-upload.png){ width=25% }
 
-## Discord (recommended)
+## Discord (Strongly recommended)
 
 Our strongly recommended support option is the DCC-EX Discord server, where you can interact directly with the DCC-EX team as well as a global community of over 4,400 users. Issues are usually resolved quite quickly in comparison with the other options, and you can also interact with the community in real-time.
 
@@ -91,8 +87,8 @@ If you're a member of the TrainBoard forum, there is a [DCC++ Forum](https://www
 
 Note that this isn't the busiest forum and only a few of the DCC-EX team are members of TrainBoard, so resolution of issues may be slow. There are other members of the forum that may try to assist though.
 
-## Email (not recommended)
+## Email (NOT recommended)
 
-While email support is available for those who have no other way to obtain support, there is only one team member with access to reply to your queries, and therefore ***this is a slow process and is not recommended.***
+While email support is available for those who have no other way to obtain support, there is only one team member with access to reply to your queries, and therefore _**this is a slow process and is not recommended.**_
 
 If necessary, you can email us at <support@dcc-ex.com>.

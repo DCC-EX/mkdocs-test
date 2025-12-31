@@ -1,5 +1,6 @@
 nav:
   - Frequently Answered Questions: faq.md
   - Help and Support: support.md
-  - Discord: discord.md
-  - Github: github.md
+  - Support Options:
+    - Discord (recommended): discord.md
+    - Github: github.md

@@ -1,6 +1,6 @@
-You can easily save the serial console logs (also referred to as startup logs) by clicking the `Save Log` button.
+You can easily save the serial console logs (also referred to as startup logs) by clicking the `Save Log` button in Device Monitor.
 
-![Save logs](/_static/images/ex-installer/save-logs.png){ width=50% }
+![Save logs](/_static/images/ex-installer/device-monitor-save-log.png){ width=50% }
 
 You can manually type the location where you wish to save the logs, or use the `Browse` button to select a folder, for example your desktop:
 

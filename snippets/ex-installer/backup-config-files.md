@@ -10,6 +10,8 @@ Once selected, click the `Backup files` button to save them to the selected loca
 
 If you are selecting the same location as you have previously used, you will receive a warning that you are about to overwrite existing configuration files. You can either continue and overwrite them, or select a different location to retain the existing files.
 
+![Overwrite backup config files](/_static/images/ex-installer/backup-overwrite.png){ width=50% }
+
 !!! warning
 
     It is important that you do not attempt to store these files in any directory managed by EX-Installer. If you attempt to store the files there, you will receive an error that the files could not be copied.
