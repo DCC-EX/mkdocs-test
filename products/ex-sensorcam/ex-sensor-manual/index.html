@@ -8209,7 +8209,6 @@ Bri=0, Con=1, Sat=2, AWB=1, AWBg=1, AEC=1, AECd=1, AEL=1, AGC=1, AGg=9; &nbsp; (
 <p>As the sensorCAM is still under development, the sketch still has numerous debugging options and a couple may be useful in understanding and optimizing the device. The help command has the form 'h#' where the digit# turns ON a debug output. The following h# output options might be useful, particularly h7, i.e. a triggered wait (<strong>w</strong>):</p>
 <p><strong>h</strong> &nbsp; &nbsp; &nbsp; &nbsp; shows current settings for help, maxSensors and brightSF</p>
 <p><strong>h%%</strong> &nbsp; sets maxSensors to%% for%% from 10 to 97 (<strong>m0,%%</strong> is better alternative)</p>
-<p><strong>h-</strong> &nbsp; &nbsp; &nbsp; turns OFF all debug options. h-# turns off individual debug values(5-9 only).</p>
 <p><strong>h0</strong> &nbsp; &nbsp; &nbsp; some detailed debug values for each sensor including the algorithms colour Cratios, Xratios etc.</p>
 <p><strong>h1</strong> &nbsp; &nbsp; &nbsp; outputs timing measurements for parts of code</p>
 <p><strong>h2</strong> &nbsp; &nbsp; &nbsp; more general debug including brightness numbers</p>
@@ -8219,6 +8218,7 @@ Bri=0, Con=1, Sat=2, AWB=1, AWBg=1, AEC=1, AECd=1, AEL=1, AGC=1, AGg=9; &nbsp; (
 <p><strong>h6</strong> &nbsp; &nbsp; &nbsp; Outputs a text message whenever ALL enabled sensor references are refreshed.</p>
 <p><strong>h7[,#] &nbsp; causes the program to suspend any new data streaming upon any trip of the bank 1 sensors, allowing inspection of sensor data by using commands like f%%, &amp; , etc. &nbsp; h7,# changes default(1) to bank #</strong></p>
 <p><strong>h8</strong> &nbsp; &nbsp; &nbsp; This causes up to 30 i2c commands from CS to be echoed to the wait screen e.g. EOE#E7E2E2E2E4E4E4 E6 is not echoed because of its 50/sec frequency the pattern would be E4E6E6E6E6E4E6E6...</p>
+<p><strong>h9</strong> &nbsp; &nbsp; &nbsp; turns OFF all debug options.</p>
 <h2 id="5-configuration">5. Configuration<a class="headerlink" href="#5-configuration" title="Permanent link">&para;</a></h2>
 <h3 id="51-plan-a-grand-sensor-numbering-strategy">5.1 Plan a grand sensor numbering strategy<a class="headerlink" href="#51-plan-a-grand-sensor-numbering-strategy" title="Permanent link">&para;</a></h3>
 <p>The first step is to decide a sensor distribution strategy &amp; numbering strategy (not set in stone). A sensorCAM has 10 banks (0-9) of eight (0-7) individual sensors available (total 80). Each <strong>bank</strong> can be tested as a whole to see if ANY sensors tripped or NO sensors tripped. Also placing a string of sensors in a row, for example along a platform, can indicate train position with the binary bank value increasing as the train approaches a signal as it crosses sensors 0 through 7 (see <strong>Figure 5</strong> for examples). Sensors are generally referred to with a two digit bank/sensor designation (their bsNo.) e.g Sensor 68 and 69 are therefore invalid bs numbers, 97 is valid. Use one bank for a platform (set of 8 sensors). Sensor S00 is reserved as a brightness reference sensor. Sensor S06 is also RESERVED for now. It is suggested that user's Sensors start with bank 1, i.e. S10 (vPin #08), S11 &amp; upwards, with related sensors in their own bank. They do NOT need to be sequential (Follow the installation Guide for full details). <strong>With the recommended definitions set up, the user does not need to remember or refer to vPins for sensorCAM sensors at all - just use the S%% idntifier.</strong></p>
@@ -9139,7 +9139,7 @@ Note: WROVER-CAM does not have a fitted external antenna socket like the ESP32-C
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="December 31, 2025 06:55:41 UTC">December 31, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="January 1, 2026 06:03:53 UTC">January 1, 2026</span>
   </span>
 
     
