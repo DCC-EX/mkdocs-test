@@ -171,8 +171,6 @@ As the sensorCAM is still under development, the sketch still has numerous debug
 
 **h%%** &nbsp; sets maxSensors to%% for%% from 10 to 97 (**m0,%%** is better alternative)
 
-**h-** &nbsp; &nbsp; &nbsp; turns OFF all debug options. h-# turns off individual debug values(5-9 only).
-
 **h0** &nbsp; &nbsp; &nbsp; some detailed debug values for each sensor including the algorithms colour Cratios, Xratios etc.
 
 **h1** &nbsp; &nbsp; &nbsp; outputs timing measurements for parts of code
@@ -190,6 +188,8 @@ As the sensorCAM is still under development, the sketch still has numerous debug
 **h7[,#] &nbsp; causes the program to suspend any new data streaming upon any trip of the bank 1 sensors, allowing inspection of sensor data by using commands like f%%, & , etc. &nbsp; h7,# changes default(1) to bank #**
 
 **h8** &nbsp; &nbsp; &nbsp; This causes up to 30 i2c commands from CS to be echoed to the wait screen e.g. EOE#E7E2E2E2E4E4E4 E6 is not echoed because of its 50/sec frequency the pattern would be E4E6E6E6E6E4E6E6...
+
+**h9** &nbsp; &nbsp; &nbsp; turns OFF all debug options.
 
 ## 5. Configuration
 
