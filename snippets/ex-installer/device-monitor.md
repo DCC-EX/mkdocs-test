@@ -4,7 +4,7 @@ You can access Device Monitor from the "Select your device" page after choosing 
 
 ![Select your device - open device monitor](/_static/images/ex-installer/select-device-open-device-monitor.png){ width=50% }
 
-Additionally, once you have successfully loaded the software onto your device, you can access Device Monitor on the load page:
+Alternatively, once you have successfully loaded the software onto your device, you can access Device Monitor on the "Load" page:
 
 ![Load software - open device monitor](/_static/images/ex-installer/load-open-device-monitor.png){ width=50% }
 

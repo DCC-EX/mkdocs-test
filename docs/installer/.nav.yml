@@ -1,8 +1,12 @@
 nav:
-  - Using EX-Installer: overview.md
-  - Installer: installer.md
-  - First Run: first-run.md
-  - Select Product: select-product.md
-  - Install Cs: install-cs.md
-  - Advanced Users - PlatformIO: platformio.md
-  - "*"
+  - Installing Our Software: overview.md
+  - EX-Installer:
+    - Installing: installer.md
+    - Downloading:
+      - Windows: download-win.md
+      - macOS: download-mac.md
+      - Linux: download-linux.md
+    - First Run: first-run.md
+    - Select Product: select-product.md
+    - Load EX-CommandStation: install-cs.md
+  - Advanced Users: platformio.md

@@ -18,7 +18,7 @@ There are several serial monitors available:
 - Built in to JMRI or other train control software.
 (==TODO==.. above provide links to individual side-pages showing how to get at the serial monitor in each case)
 
-Whichever you use, please ensure the baud rate is set to 115200 so that it matches that used by the command station. (Installer anf WebThrottle do this automatically)
+Whichever you use, please ensure the baud rate is set to 115200 so that it matches that used by the command station. (Installer and WebThrottle do this automatically)
 
 Its important to note that only one program on your PC can be connected to the Command Station USB. It is a common cause of error messages if you try and open a serial monitor when one of the other programs is still running.
 
