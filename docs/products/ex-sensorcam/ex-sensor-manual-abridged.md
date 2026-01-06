@@ -292,7 +292,7 @@ The ESP32-CAM reset button, remotely mounted on CAM, may be difficult to access.
 
 ![ESP32 Wrover CAM with Sparkfun Endpoint](/_static/images/ex-sensorcam/esp32-wrover-sparkfun-endpoint.png)
 
-**Figure 6 &nbsp; ESP32 WROVER-CAM& interface**
+**Figure 6 &nbsp; ESP32 WROVER-CAM and interface**
 
 ![ESP32 CAM MB with PCA9515A](/_static/images/ex-sensorcam/esp32-cam-mb-pca9515a.png)
 
@@ -590,7 +590,7 @@ The 2x Endpoints require about  10mA  each from the 3.3V PS. All options can be 
 
 **Option C:** used with newer (32bit) MPU's (e.g. CSB1) & uses 3V3 throughout. No Endpoint jumpers need to be cut. Whichever option is used, the user should consider if the I2C bus needs to be tuned differently. For very short extra cable length to the Endpoint and only one extra device count on an I2C bus under 1m in length, tuning may be unnecessary. In marginal conditions consider returning as per DCC-EX recommendations.
 
-#### A. &nbsp FOR 3.3V Differential drive 5V CS I2C BUS
+#### A. &nbsp; FOR 3.3V Differential drive 5V CS I2C BUS
 
 ![Differential Drive 5V CS](/_static/images/ex-sensorcam/differential-drive-5v-cs.png)
 
