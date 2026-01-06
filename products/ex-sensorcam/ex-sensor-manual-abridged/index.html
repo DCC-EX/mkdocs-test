@@ -4194,9 +4194,9 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#a-nbsp-for-33v-differential-drive-5v-cs-i2c-bus" class="md-nav__link">
+  <a href="#a-for-33v-differential-drive-5v-cs-i2c-bus" class="md-nav__link">
     <span class="md-ellipsis">
-      A. &amp;nbsp FOR 3.3V Differential drive 5V CS I2C BUS
+      A. &nbsp; FOR 3.3V Differential drive 5V CS I2C BUS
     </span>
   </a>
   
@@ -7504,9 +7504,9 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#a-nbsp-for-33v-differential-drive-5v-cs-i2c-bus" class="md-nav__link">
+  <a href="#a-for-33v-differential-drive-5v-cs-i2c-bus" class="md-nav__link">
     <span class="md-ellipsis">
-      A. &amp;nbsp FOR 3.3V Differential drive 5V CS I2C BUS
+      A. &nbsp; FOR 3.3V Differential drive 5V CS I2C BUS
     </span>
   </a>
   
@@ -7827,7 +7827,7 @@ You may also increase the image display window size factor by editing the next <
 <p>The ESP32-CAM reset button, remotely mounted on CAM, may be difficult to access. To reset the device, two options need to be available. These can be via software command, either from the attached USB monitor, or i2c connected Command Station, or via a power supply induced reboot. A switch at the (“wall-wart”) 9V supply is recommended independent of the CS supply. The USB connection is needed to set up the sensors initially and view images, but should be able to be disconnected once setup testing is complete.  Some esp32's may need a 1uF or 2.2uF on the reset pin for reliable reset.</p>
 <p><strong>Note:</strong> Care is needed as the WROVER CAM has 40 pins (not 38) but the spare end Gnd and Vcc can remain disconnected (cut off?).</p>
 <p><img alt="ESP32 Wrover CAM with Sparkfun Endpoint" src="../../../_static/images/ex-sensorcam/esp32-wrover-sparkfun-endpoint.png" /></p>
-<p><strong>Figure 6 &nbsp; ESP32 WROVER-CAM&amp; interface</strong></p>
+<p><strong>Figure 6 &nbsp; ESP32 WROVER-CAM and interface</strong></p>
 <p><img alt="ESP32 CAM MB with PCA9515A" src="../../../_static/images/ex-sensorcam/esp32-cam-mb-pca9515a.png" /></p>
 <p><strong>Figure 7 &nbsp; PCA9515A 3.3V to 5V i2c interface improvisation compared to a full feature prototype solution</strong><br />
  &nbsp; Note: for 3.3V microprocessors (e.g. CSB1) ensure Vcc1 is connected to 3.3V (Vcc0) not 5V.</p>
@@ -8185,7 +8185,7 @@ The information below pertains mostly to the newer WROVER-CAM, as mentioned in <
 <p>The 2x Endpoints require about  10mA  each from the 3.3V PS. All options can be adapted for use with a mux if necessary. </p>
 <p><strong>Option A:</strong> CUT CAM endpoint jumper 0-1 and supply 5V and 3.3V from the CS. Option A connections results in a 5V i2c interface to 3.3V differential cable for 5V microprocessor based CS (e.g. Mega).</p>
 <p><strong>Option C:</strong> used with newer (32bit) MPU's (e.g. CSB1) &amp; uses 3V3 throughout. No Endpoint jumpers need to be cut. Whichever option is used, the user should consider if the I2C bus needs to be tuned differently. For very short extra cable length to the Endpoint and only one extra device count on an I2C bus under 1m in length, tuning may be unnecessary. In marginal conditions consider returning as per DCC-EX recommendations.</p>
-<h4 id="a-nbsp-for-33v-differential-drive-5v-cs-i2c-bus">A. &amp;nbsp FOR 3.3V Differential drive 5V CS I2C BUS<a class="headerlink" href="#a-nbsp-for-33v-differential-drive-5v-cs-i2c-bus" title="Permanent link">&para;</a></h4>
+<h4 id="a-for-33v-differential-drive-5v-cs-i2c-bus">A. &nbsp; FOR 3.3V Differential drive 5V CS I2C BUS<a class="headerlink" href="#a-for-33v-differential-drive-5v-cs-i2c-bus" title="Permanent link">&para;</a></h4>
 <p><img alt="Differential Drive 5V CS" src="../../../_static/images/ex-sensorcam/differential-drive-5v-cs.png" /></p>
 <h4 id="c-for-33v-differential-drive-33v-cs-i2c-bus">C. &nbsp; FOR 3.3V Differential drive 3.3V CS I2C BUS<a class="headerlink" href="#c-for-33v-differential-drive-33v-cs-i2c-bus" title="Permanent link">&para;</a></h4>
 <p><img alt="Differential Drive 3.3V Only CS" src="../../../_static/images/ex-sensorcam/differential-drive-3v3-only-cs.png" /></p>
@@ -8253,7 +8253,7 @@ Finally, at the signal(S17), <strong>IFGTE(CAM 013,128) STOP</strong></p>
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="January 6, 2026 05:11:58 UTC">January 6, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="January 6, 2026 05:25:18 UTC">January 6, 2026</span>
   </span>
 
     
