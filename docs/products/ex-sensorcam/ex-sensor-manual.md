@@ -386,7 +386,7 @@ The ESP32-CAM reset button, remotely mounted on CAM, may be difficult to access.
 
 ![ESP32 Wrover CAM with Sparkfun Endpoint](/_static/images/ex-sensorcam/esp32-wrover-sparkfun-endpoint.png)
 
-**Figure 6 &nbsp; ESP32 WROVER-CAM & interface**
+**Figure 6 &nbsp; ESP32 WROVER-CAM and interface**
 
 ![ESP32 CAM MB with PCA9515A](/_static/images/ex-sensorcam/esp32-cam-mb-pca9515a.png)
 
@@ -703,8 +703,8 @@ e.g. **<Ni 2%%\> <Nr&nbsp;2%%\>** also **<Nm 200\> <Nf 212\> <Nt 243\>**
 | **x &nbsp; y &nbsp; z** |    |     | Reserved for binary export for Processing 4 images |
 | **<N ### ## ##\>** | <N&nbsp;711&nbsp;75&nbsp;85\> | a13,75,85 | Note: This uses the **vpin** for a sensor, NOT id/bsNo.(ref. **Appendix E**). |
 
-> **Notes:** The'i' cmd prints bsNo(bsn) where bsn/vPin offsets range from(7)00 to(7)79(e.g. baseVpin address 700).  
-> Some commands return previous(old) values then update sensorCAM. Use <Nm\> to confirm change.  
+> **Notes:** The 'i' cmd prints bsNo(bsn) where bsn/vPin offsets range from (7)00 to (7)79 (e.g. baseVpin address 700).  
+> Some commands return previous (old) values then update sensorCAM. Use <Nm\> to confirm change.  
 > Space after <N is optional, as is capitalization of command. e.g.<N t 42\>=<NT 42\>,<N r 00\>=<NR\>
 > Multiple CAM selections can be achieved by config.h entry and use of a prefix on param1 e.g.<N i 212\> for CAM 2
 > For commands to work fully, need latest _CamParser.cpp_, CS driver(_IO-EXSensorCAM.h_) & _sensorCAM.ino_
