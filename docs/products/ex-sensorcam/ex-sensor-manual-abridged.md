@@ -34,7 +34,7 @@ H. Notes on use of EX-Rail with SensorCAM
 
 J. WROVER-CAM notes
 
-Addenda 32
+Addenda
 
 ## 1. Overview
 
