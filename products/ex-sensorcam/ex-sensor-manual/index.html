@@ -8541,7 +8541,7 @@ You may also increase the image display window size by editing the <em>final int
 <p>The ESP32-CAM reset button, remotely mounted on CAM, may be difficult to access. To reset the device, two options need to be available. These can be via software command, either from the attached USB monitor, or i2c connected Command Station, or via a power supply induced reboot. A switch at the (“wall-wart”) 9V supply is recommended independent of the CS supply. The USB connection is needed to set up the sensors initially and view images, but should be able to be disconnected once setup testing is complete. Some esp32's may need a 1uF on the reset pin for reliable reset.</p>
 <p><strong>Note:</strong> Care is needed as the WROVER CAM has 40 pins (not 38) but the spare end Gnd and Vcc can remain disconnected (cut off?).</p>
 <p><img alt="ESP32 Wrover CAM with Sparkfun Endpoint" src="../../../_static/images/ex-sensorcam/esp32-wrover-sparkfun-endpoint.png" /></p>
-<p><strong>Figure 6 &nbsp; ESP32 WROVER-CAM &amp; interface</strong></p>
+<p><strong>Figure 6 &nbsp; ESP32 WROVER-CAM and interface</strong></p>
 <p><img alt="ESP32 CAM MB with PCA9515A" src="../../../_static/images/ex-sensorcam/esp32-cam-mb-pca9515a.png" /></p>
 <p><strong>Figure 7 &nbsp; PCA9515A 3.3V to 5V i2c interface improvisation compared to a full feature prototype solution</strong><br />
  &nbsp; Note: for 3.3V microprocessors (e.g. CSB1) ensure Vcc1 is connected to 3.3V (Vcc0) not 5V.</p>
@@ -8901,8 +8901,8 @@ e.g. <strong>&lt;Ni 2%%&gt; &lt;Nr&nbsp;2%%&gt;</strong> also <strong>&lt;Nm 200
 </tbody>
 </table>
 <blockquote>
-<p><strong>Notes:</strong> The'i' cmd prints bsNo(bsn) where bsn/vPin offsets range from(7)00 to(7)79(e.g. baseVpin address 700).<br />
-Some commands return previous(old) values then update sensorCAM. Use &lt;Nm&gt; to confirm change.<br />
+<p><strong>Notes:</strong> The 'i' cmd prints bsNo(bsn) where bsn/vPin offsets range from (7)00 to (7)79 (e.g. baseVpin address 700).<br />
+Some commands return previous (old) values then update sensorCAM. Use &lt;Nm&gt; to confirm change.<br />
 Space after &lt;N is optional, as is capitalization of command. e.g.&lt;N t 42&gt;=&lt;NT 42&gt;,&lt;N r 00&gt;=&lt;NR&gt;
 Multiple CAM selections can be achieved by config.h entry and use of a prefix on param1 e.g.&lt;N i 212&gt; for CAM 2
 For commands to work fully, need latest <em>CamParser.cpp</em>, CS driver(<em>IO-EXSensorCAM.h</em>) &amp; <em>sensorCAM.ino</em></p>
@@ -9139,7 +9139,7 @@ Note: WROVER-CAM does not have a fitted external antenna socket like the ESP32-C
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="January 6, 2026 05:25:18 UTC">January 6, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="January 6, 2026 05:46:49 UTC">January 6, 2026</span>
   </span>
 
     
