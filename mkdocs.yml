@@ -18,7 +18,7 @@ theme:
   name: material
   custom_dir: overrides
   favicon: _static/images/logos/favicon.ico
-  logo: _static/images/logos/logo.png
+  logo: _static/images/logos/logo_with_border.png
   language: en
   icon:
     repo: fontawesome/brands/github
