@@ -34,7 +34,6 @@ Audio files may be renamed from ‘my favourite song.mp3’ to ‘001My favourit
 
 The (current) exception is an audio file that is to be played continuously with the DF_REPEATPLAY command, as there is no DFPlayer REPEAT command to play a specific audio file in a specific folder. Therefor it is recommended to store the audio file that needs to be played continuously in the root folder and name it ‘001.mp3’.
 
-
 ## Providing sound files
 
 the DFPlayer has a strange behaviour when the audio files are stored in the root directory. It does not look at the file name for example 001.mp3 to play file 001.mp3, but will play the 1st file that has been copied on the microSD card when it receives the command to play file 1. To solve this issue, a directory structure must be in place.
@@ -53,8 +52,10 @@ There is a <y> command that is specifically designed for easy testing and contro
 
 - `<y vpin PLAY track [volume]>` Plays given track number and specified (or default) volume
 - `<y vpin REPEAT track [volume]>` Plays track repeatedly
-- `<y vpin FOLDER folder>` Switches future play commands to a different folder
+- `<y vpin PAUSE >` Pauses playing
+- `<y vpin RESUME>` Resumes playing
 - `<y vpin STOP>` Stops playing
+- `<y vpin FOLDER folder>` Switches future play commands to a different folder
 - `<y vpin VOL volume>` Changes default play volume (Does not affect currently playing track)
 - `<y vpin EQ eq>` Changes sound equalisation
 - `<y vpin RESET>` Resets the DFPlayer

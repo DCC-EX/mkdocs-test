@@ -22,6 +22,15 @@ PLAY_REPEAT(3500,4,20) // repeat plays file 2 at volume 20
 PLAY_TRACK(3501,3)    // repeat plays file 3 on a different DFplayer at default volume
 ```
 
+## Pause and Resume (PLAY_PAUSE, PLAY_RESUME)
+
+Playing may be paused and resumed 
+
+```cpp
+PLAY_PAUSE(3500) // pause playing
+PLAY_RESUME(3500) // resume playing
+```
+
 ## Changing default volume (PLAY_VOLUME)
 
 To change the default volume (0-30). 
@@ -48,10 +57,10 @@ PLAY_FOLDER(3500,2) // change folder to 2
 
 ### Set the Equalizer proile (PLAY_EQ)
 
-The profiles available are DF_NORMAL, DF_POP, DF_ROCK, DF_JAZZ, DF_CLASSIS, DF_BASS
+The profiles available are NORMAL, POP, ROCK, JAZZ, CLASSCS, BASS
 
 ```cpp
-PLAY_EQ(3500,DF_BASS) // Bring the Noise!
+PLAY_EQ(3500,BASS) // Bring the Noise!
 ```
 
 ### Reset the player (PLAY_RESET)

@@ -160,6 +160,20 @@ Complete reference guide for serial commands used with DCC command stations.
 | `<I id EXTT vpin home>` | Create an EXTT turntable | `id`: ID, `vpin`: Pin, `home`: Home position |
 | `<I id ADD position value angle>` | Add turntable position | `id`: ID, `position`: Position, `value`: Value, `angle`: Angle |
 
+## Sound Control
+
+| Command | Description |
+|---------|-------------|
+| `<y vpin PLAY track [volume]>` | Play track |
+| `<y vpin REPEAT track [volume]>` | Play track repeat |
+| `<y vpin STOP>` | Stop playing |
+| `<y vpin PAUSE>` | Pause playing |
+| `<y vpin RESUME>` | Resume playing |
+| `<y vpin FOLDER folder>` | Set folder to play from |
+| `<y vpin VOLUME vol>` | Set default volume 0..30 |
+| `<y vpin EQ type>` | Set EQ type NORMAL, POP, ROCK, JAZZ, CLASSCS, BASS |
+| `<y vpin RESET>` | Reset player |
+
 ## Throttle Information Commands
 
 | Command | Description | Parameters |
