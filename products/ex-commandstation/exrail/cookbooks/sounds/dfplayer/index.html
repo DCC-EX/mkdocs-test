@@ -2830,6 +2830,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#pause-and-resume-play_pause-play_resume" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pause and Resume (PLAY_PAUSE, PLAY_RESUME)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#changing-default-volume-play_volume" class="md-nav__link">
     <span class="md-ellipsis">
       Changing default volume (PLAY_VOLUME)
@@ -6774,6 +6783,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#pause-and-resume-play_pause-play_resume" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pause and Resume (PLAY_PAUSE, PLAY_RESUME)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#changing-default-volume-play_volume" class="md-nav__link">
     <span class="md-ellipsis">
       Changing default volume (PLAY_VOLUME)
@@ -6856,6 +6874,11 @@
 <div class="highlight"><pre><span></span><code><span class="n">PLAY_REPEAT</span><span class="p">(</span><span class="mi">3500</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">20</span><span class="p">)</span><span class="w"> </span><span class="c1">// repeat plays file 2 at volume 20</span>
 <span class="n">PLAY_TRACK</span><span class="p">(</span><span class="mi">3501</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span><span class="w">    </span><span class="c1">// repeat plays file 3 on a different DFplayer at default volume</span>
 </code></pre></div>
+<h2 id="pause-and-resume-play_pause-play_resume">Pause and Resume (PLAY_PAUSE, PLAY_RESUME)<a class="headerlink" href="#pause-and-resume-play_pause-play_resume" title="Permanent link">&para;</a></h2>
+<p>Playing may be paused and resumed </p>
+<div class="highlight"><pre><span></span><code><span class="n">PLAY_PAUSE</span><span class="p">(</span><span class="mi">3500</span><span class="p">)</span><span class="w"> </span><span class="c1">// pause playing</span>
+<span class="n">PLAY_RESUME</span><span class="p">(</span><span class="mi">3500</span><span class="p">)</span><span class="w"> </span><span class="c1">// resume playing</span>
+</code></pre></div>
 <h2 id="changing-default-volume-play_volume">Changing default volume (PLAY_VOLUME)<a class="headerlink" href="#changing-default-volume-play_volume" title="Permanent link">&para;</a></h2>
 <p>To change the default volume (0-30). </p>
 <div class="highlight"><pre><span></span><code><span class="n">PLAY_VOLUME</span><span class="p">(</span><span class="mi">3500</span><span class="p">,</span><span class="mi">15</span><span class="p">)</span><span class="w"> </span><span class="c1">// change defualt volume to 15</span>
@@ -6869,8 +6892,8 @@
 <div class="highlight"><pre><span></span><code><span class="n">PLAY_FOLDER</span><span class="p">(</span><span class="mi">3500</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span><span class="w"> </span><span class="c1">// change folder to 2</span>
 </code></pre></div>
 <h3 id="set-the-equalizer-proile-play_eq">Set the Equalizer proile (PLAY_EQ)<a class="headerlink" href="#set-the-equalizer-proile-play_eq" title="Permanent link">&para;</a></h3>
-<p>The profiles available are DF_NORMAL, DF_POP, DF_ROCK, DF_JAZZ, DF_CLASSIS, DF_BASS</p>
-<div class="highlight"><pre><span></span><code><span class="n">PLAY_EQ</span><span class="p">(</span><span class="mi">3500</span><span class="p">,</span><span class="n">DF_BASS</span><span class="p">)</span><span class="w"> </span><span class="c1">// Bring the Noise!</span>
+<p>The profiles available are NORMAL, POP, ROCK, JAZZ, CLASSCS, BASS</p>
+<div class="highlight"><pre><span></span><code><span class="n">PLAY_EQ</span><span class="p">(</span><span class="mi">3500</span><span class="p">,</span><span class="n">BASS</span><span class="p">)</span><span class="w"> </span><span class="c1">// Bring the Noise!</span>
 </code></pre></div>
 <h3 id="reset-the-player-play_reset">Reset the player (PLAY_RESET)<a class="headerlink" href="#reset-the-player-play_reset" title="Permanent link">&para;</a></h3>
 <p>When you reset the DFPLayer module. Add a <code>DELAY(1000)</code> command after the reset to give the DFPlayer time to complete the reset. The volume level is also reset to the default of 30, you may want to add a command to set the volume to a desired level.</p>
@@ -6898,7 +6921,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="January 13, 2026 12:43:45 UTC">January 13, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="January 18, 2026 20:51:11 UTC">January 18, 2026</span>
   </span>
 
     
