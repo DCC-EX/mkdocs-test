@@ -10,6 +10,8 @@ Complete reference guide for serial commands used with DCC command stations.
 |---------|-------------|------------|
 | `<#>` | Request number of simultaneously supported locos | None |
 | `<!>` | Emergency stop all locos | None |
+| `<!P>` | Emergency stop and PAUSE loco movement | None |
+| `<!R>` | Resume after `<!P>` | None |
 | `<s>` | Command station status | None |
 | `<E>` | Store EEPROM | None |
 | `<e>` | Clear EEPROM | None |
