@@ -1,6 +1,7 @@
 # Emergency stop button
 
-An emergency stop is a way of stopping all locos immediately. DCC locos often have sustainers that are there to allow the loco to move over short sections of dirty track or insulated turnout frogs. Because of these sustainers, turning off the track power is not a reliable way of stopping trains, those with sustainers may continue moving for serveral metres/yards.  
+An emergency stop is a way of stopping all locos immediately. DCC locos often have sustainers that are there to allow the loco to move over short sections of dirty track or insulated turnout frogs. Because of these sustainers, turning off the track power is not a reliable way of stopping trains, those with sustainers may continue moving for serveral metres/yards.
+To stop a loco immediately, the powewr must remain on and we must send it a particular DCC packet and the decoder will know to stop.  
 
 ## ESTOPALL
 
@@ -15,11 +16,11 @@ ONBUTTON(173) ESTOPALL DONE
 However, ESTOPALL does have disadvantages:
 
 - Nothing prevents a throttle or EXRAIL script sending in a speed command a fraction of a second later
-- Users can thriottle up, but an EXRAIL script may be stuck waiting for a loco to arrive somewhere and with no way of restarting it
+- Users can throttle up when they are ready, but an EXRAIL script may be stuck waiting for a loco to arrive somewhere and with no way of restarting it.
 
 ## ESTOP_PAUSE
 
-The ESTOP_PAUSE command can be used to stop all traffic and block all train movement. Perfect for things like pausing all traffic after a derailment. 
+The ESTOP_PAUSE command can be used to stop all traffic and block all train movement. Perfect for things like pausing all traffic after a derailment.
 
 ```cpp
 ONBUTTON(173) ESTOP_PAUSE DONE
@@ -37,6 +38,8 @@ ESTOP_RESUME is used to restart the locos at their previous speed, or at the spe
 ```cpp
 ONBUTTON(174) ESTOP_RESUME DONE
 ```
+
+## Advanced scenarios
 
 Of course you may wish to enhance the control by adding flashing lights, sounds or other effects.
 
@@ -56,7 +59,7 @@ ONBUTTON(174)
   DONE
 ```
 
-In advanced cases you may prefer that the system is locked but movement does not restart automatically when the resume is issued. This can be achieved by performing an ESTOPALL immediately before resuming. This forces all locos to have a current speed of 0 before releaseing the speed reminders onto the track.
+In some cases you may prefer that the system is locked but movement does not restart automatically when the resume is issued. This can be achieved by performing an ESTOPALL immediately before resuming. This forces all locos to have a current speed of 0 before releaseing the speed reminders onto the track.
 
 ```cpp
 ONBUTTON(174) 
@@ -64,6 +67,20 @@ ONBUTTON(174)
   ESTOP_RESUME 
   DONE
 ```
+
+You may have a situation, like a lifting gate on your layout, where you need to prevent movement when the Command Station is started with the gate open.
+
+This example runs at startup and will check the gate switch on pin 174 to block all movement if it is open.
+
+```cpp
+AUTOSTART 
+  IF(174) 
+    ESTOP_PAUSE
+    ENDIF
+  DONE
+```
+
+## ESTOP serial commands
 
 For convenience thare are also serial commands that have the same function:
 
