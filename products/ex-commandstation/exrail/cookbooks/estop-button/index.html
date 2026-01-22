@@ -1728,6 +1728,24 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#advanced-scenarios" class="md-nav__link">
+    <span class="md-ellipsis">
+      Advanced scenarios
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#estop-serial-commands" class="md-nav__link">
+    <span class="md-ellipsis">
+      ESTOP serial commands
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -6756,6 +6774,24 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#advanced-scenarios" class="md-nav__link">
+    <span class="md-ellipsis">
+      Advanced scenarios
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#estop-serial-commands" class="md-nav__link">
+    <span class="md-ellipsis">
+      ESTOP serial commands
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -6776,7 +6812,8 @@
 
 
 <h1 id="emergency-stop-button">Emergency stop button<a class="headerlink" href="#emergency-stop-button" title="Permanent link">&para;</a></h1>
-<p>An emergency stop is a way of stopping all locos immediately. DCC locos often have sustainers that are there to allow the loco to move over short sections of dirty track or insulated turnout frogs. Because of these sustainers, turning off the track power is not a reliable way of stopping trains, those with sustainers may continue moving for serveral metres/yards.  </p>
+<p>An emergency stop is a way of stopping all locos immediately. DCC locos often have sustainers that are there to allow the loco to move over short sections of dirty track or insulated turnout frogs. Because of these sustainers, turning off the track power is not a reliable way of stopping trains, those with sustainers may continue moving for serveral metres/yards.
+To stop a loco immediately, the powewr must remain on and we must send it a particular DCC packet and the decoder will know to stop.  </p>
 <h2 id="estopall">ESTOPALL<a class="headerlink" href="#estopall" title="Permanent link">&para;</a></h2>
 <p>The ESTOPALL command will stop all locos and inform all throttles.
 In this example, ONBUTTON(173) will start a sequence at this point when a button on vpin 173 is pressed.
@@ -6786,10 +6823,10 @@ The DONE command completes/terminates the process started by ONBUTTON.</p>
 <p>However, ESTOPALL does have disadvantages:</p>
 <ul>
 <li>Nothing prevents a throttle or EXRAIL script sending in a speed command a fraction of a second later</li>
-<li>Users can thriottle up, but an EXRAIL script may be stuck waiting for a loco to arrive somewhere and with no way of restarting it</li>
+<li>Users can throttle up when they are ready, but an EXRAIL script may be stuck waiting for a loco to arrive somewhere and with no way of restarting it.</li>
 </ul>
 <h2 id="estop_pause">ESTOP_PAUSE<a class="headerlink" href="#estop_pause" title="Permanent link">&para;</a></h2>
-<p>The ESTOP_PAUSE command can be used to stop all traffic and block all train movement. Perfect for things like pausing all traffic after a derailment. </p>
+<p>The ESTOP_PAUSE command can be used to stop all traffic and block all train movement. Perfect for things like pausing all traffic after a derailment.</p>
 <div class="highlight"><pre><span></span><code><span class="n">ONBUTTON</span><span class="p">(</span><span class="mi">173</span><span class="p">)</span><span class="w"> </span><span class="n">ESTOP_PAUSE</span><span class="w"> </span><span class="n">DONE</span>
 </code></pre></div>
 <p>When paused:</p>
@@ -6801,6 +6838,7 @@ The DONE command completes/terminates the process started by ONBUTTON.</p>
 <p>ESTOP_RESUME is used to restart the locos at their previous speed, or at the speed that was modified during the pause.</p>
 <div class="highlight"><pre><span></span><code><span class="n">ONBUTTON</span><span class="p">(</span><span class="mi">174</span><span class="p">)</span><span class="w"> </span><span class="n">ESTOP_RESUME</span><span class="w"> </span><span class="n">DONE</span>
 </code></pre></div>
+<h2 id="advanced-scenarios">Advanced scenarios<a class="headerlink" href="#advanced-scenarios" title="Permanent link">&para;</a></h2>
 <p>Of course you may wish to enhance the control by adding flashing lights, sounds or other effects.</p>
 <div class="highlight"><pre><span></span><code><span class="n">ONBUTTON</span><span class="p">(</span><span class="mi">173</span><span class="p">)</span><span class="w"> </span>
 <span class="w">  </span><span class="n">ESTOP_PAUSE</span><span class="w"> </span>
@@ -6816,12 +6854,21 @@ The DONE command completes/terminates the process started by ONBUTTON.</p>
 <span class="w">  </span><span class="n">ESTOP_RESUME</span><span class="w"> </span>
 <span class="w">  </span><span class="n">DONE</span>
 </code></pre></div>
-<p>In advanced cases you may prefer that the system is locked but movement does not restart automatically when the resume is issued. This can be achieved by performing an ESTOPALL immediately before resuming. This forces all locos to have a current speed of 0 before releaseing the speed reminders onto the track.</p>
+<p>In some cases you may prefer that the system is locked but movement does not restart automatically when the resume is issued. This can be achieved by performing an ESTOPALL immediately before resuming. This forces all locos to have a current speed of 0 before releaseing the speed reminders onto the track.</p>
 <div class="highlight"><pre><span></span><code><span class="n">ONBUTTON</span><span class="p">(</span><span class="mi">174</span><span class="p">)</span><span class="w"> </span>
 <span class="w">  </span><span class="n">ESTOPALL</span>
 <span class="w">  </span><span class="n">ESTOP_RESUME</span><span class="w"> </span>
 <span class="w">  </span><span class="n">DONE</span>
 </code></pre></div>
+<p>You may have a situation, like a lifting gate on your layout, where you need to prevent movement when the Command Station is started with the gate open.</p>
+<p>This example runs at startup and will check the gate switch on pin 174 to block all movement if it is open.</p>
+<div class="highlight"><pre><span></span><code><span class="n">AUTOSTART</span><span class="w"> </span>
+<span class="w">  </span><span class="n">IF</span><span class="p">(</span><span class="mi">174</span><span class="p">)</span><span class="w"> </span>
+<span class="w">    </span><span class="n">ESTOP_PAUSE</span>
+<span class="w">    </span><span class="n">ENDIF</span>
+<span class="w">  </span><span class="n">DONE</span>
+</code></pre></div>
+<h2 id="estop-serial-commands">ESTOP serial commands<a class="headerlink" href="#estop-serial-commands" title="Permanent link">&para;</a></h2>
 <p>For convenience thare are also serial commands that have the same function:</p>
 <ul>
 <li><code>&lt;!&gt;</code> equivalent to ESTOPALL</li>
@@ -6848,7 +6895,7 @@ The DONE command completes/terminates the process started by ONBUTTON.</p>
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="January 21, 2026 15:34:41 UTC">January 21, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="January 22, 2026 12:06:48 UTC">January 22, 2026</span>
   </span>
 
     
