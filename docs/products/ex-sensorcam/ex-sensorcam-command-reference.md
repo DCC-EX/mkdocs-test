@@ -18,12 +18,12 @@
 | **b#[,$]** | **`<Nb #>`**| **Bank occupancy status [& Brightness ScaleFactor $]**<br>Trip status of 8 sensors in a single byte (8 bits) (hex & binary)
 | **c$$$$** | `<n/a>` | **Camera re-Calibration and re-reference Sensors**<br>Severe changes to camera settings.  Refer to manuals before use!  
 | **d%%[#]**  | `<n/a>`  | **Difference Score for Sensor [# repeats]**<br>Prints colour diff score, brightness score and sum of both
-| **e**   | **`<Ne>`**  | **EPROM - save sensorCAM config. to EPROM**<br>Records parameters in EPROM to be restored upon next Reset
+| **e**   | **`<Ne>`**  | **EPROM - save sensorCAM configuration to EPROM**<br>Records parameters in EPROM to be restored upon next Reset
 | **f%%**  | **`<Nf %%>`**  | **Frame print. Full 16x3 byte Sensor pixel values**<br>Tabulates 4x4 (RGB) pixels for current and reference sensor images
 | **g**   | **`<Ng>`**  | **Get Camera Global Config. Status (to USB)**<br>Lists 14 different parameters of the ov2640 "Calibration" settings
 | **h$[,#]**  | **`<Nh $ #>`**  | **Help cmd.(debug for devel)**<br>Debug. h alone lists options. h7,# pauses scroll if bank # trips
 | **i%%[,$$]**  | **`<Ni %%[ $$]>`**  | **Info. on Sensor state and configuration**<br>prints sensor state & full definition. [add a "twin" sensor S$$]
-| **j$,#** | **`<Nj $ #>`**  | **adJust ov2640 global parameters & list <Ng>**<br>Sets a single parameter($) for ov2640. j alone lists options for $
+| **j$,#** | **`<Nj $ #>`**  | **adJust ov2640 global parameters & lists 'g' status**<br>Sets a single parameter(\$) for ov2640. &nbsp; j alone, lists options
 | **k%%,rr,xx**  | `<n/a>`  | **locate a basic sensor at row rr, column xx**<br>Defines sensor at rr,xx but DOES NOT enable or reference/refresh it
 | **l%%** | **`<Nl %%>`** | **(Lima) Latch sensor on (occupied=1)**<br>Sensor disabled, & set 1 until a%%, r%% or cleared by o%%
 | **m$[,%%]**  | **`<Nm $[ %%]>`**  | **Min2trip frames setting [MaxSensor setting]**<br>Sets min/max parameters.  m0,%% leaves min2trip unchanged
@@ -36,14 +36,14 @@
 | **t##[,%%]** | **`<Nt ##[ %%]>`**  | **Theshold setting (32-98) global [pvtThreshold for S%%]**<br>Sets new global threshold, [or a  pvtThreshold] (t99 lists pvtThresholds)<br>For ## of (2-31), print ## data rows. &nbsp; (t00,%% clears a pvtThreshold)
 | **t1[,%%]**  | **`<Nt 1[ %%]>`**  | **Toggle data scroll on/off. &nbsp; [or Trash pvtThresholds for S%% bank]**<br>clears 1 bank of 8 pvtThresholds. &nbsp; (t1,99 clears ALL pvtThresholds)
 | **u%%** | **`<Nu %%>`**  | **Un-define Sensor**<br>Resets sensor coordinates to 0,0
-| **v[#]** | **`<Nv[ #]>`**  | **Version [or Video webCAM SSID #]**<br>Displays EX-SensorCAM version info OR v# starts preset SSID webCAM
+| **v[#]** | **`<Nv[ #]>`**  | **Version [or Video webCAM SSID #]**<br>Displays EX-SensorCAM version info [v# starts SSID # webCAM]
 | **w**  | **`<Nw>`**  | **Wait for command. &nbsp; (NOTE: 't1' alternative action)**<br>Cam suspends image capture and scrolling and waits for an 'Enter'
 | **x &nbsp; y &nbsp; z**  | `<n/a>`  | **Reserved commands for image transfer management**<br>Sends binary data to USB port for Processing4 (X Y Z) image delivery
 | n/a  | **`<N>`** | **Current CAM selection and availability (CS only)**<br>Shows the currently selected CAM and the options available 
 | n/a | **`<NC ###>`**  | **CAM selection**<br>Switches commands to the CAM at vpin ### or CAM number #(1-4)
 | n/a  | **`<NQ>`**  | **Query state of all Sensors**<br>Tabulation of all sensor tripped states in banks of 8
 | **F**  | **`<NF>`**  |  **Forces immediate CAM reset**<br>Reset into EX-SensorCAM mode, exting any webCAM/WiFi mode
-| **R**  | `<n/a>` | **Reset EX-SensorCAM &nbsp; (CS <NR> gives equivalent of <Nr 00>)**<br>Reset into EX-SensorCAM mode, exting any WiFi mode 
+| **R**  | `<n/a>` | **Reset EX-SensorCAM &nbsp; (CS \<NR> gives equivalent of <Nr 00\>)**<br>Reset into EX-SensorCAM mode, exting any WiFi mode 
 | **&** | `<n/a>` | **Print statistics since last '&' cmd.**<br>USB histogram of trips and potential trips of 1-3 frames
 | **+#,$** | `<n/a>` | **Add offset of # pixels in $ direction to ALL enabled Sensors**<br>realign ALL sensors by # pixels in direction specified (N-NW) 
 | **\\ &nbsp; / &nbsp; @** |   | **Commands for lines and trip symbol - refer to manual**  
