@@ -3222,6 +3222,52 @@
   
   
     <li class="md-nav__item">
+      <a href="../various-devices/multiplexors/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    I2C Multiplexors
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../various-devices/pca955x/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    MCP23017, PCA955x and TCA955x devices
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../various-devices/tca8418-keyboard/" class="md-nav__link">
         
   
@@ -3274,6 +3320,29 @@
   
   <span class="md-ellipsis">
     Trainbrains Devices
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../various-devices/xl9535/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    XL9535 Relay Board
     
   </span>
   
@@ -6742,7 +6811,8 @@
 
 
 <h1 id="neopixel-support">NeoPixel support<a class="headerlink" href="#neopixel-support" title="Permanent link">&para;</a></h1>
-<p>The IO_NeoPixel.h driver supports the adafruit neopixel seesaw board. It turns each pixel into an individual VPIN which can be given a colour and turned on or off using the the NEOPIXEL EXRAIL macro. EXRAIL SIGNALS can also drive a single pixel signal or multiple separate pixels <a href="../signals/neopixel-signals/">See Neopixel Signals</a>.</p>
+<p>The IO_NeoPixel.h driver supports the <a href="https://learn.adafruit.com/adafruit-neodriver-i2c-to-neopixel-driver">Adafruit NeoDriver - I2C to NeoPixel Driver</a></p>
+<p>The driver turns each pixel into an individual VPIN which can be given a colour and turned on or off using the the NEOPIXEL EXRAIL macro. EXRAIL SIGNALS can also drive a single pixel signal or multiple separate pixels <a href="../signals/neopixel-signals/">See Neopixel Signals</a>.</p>
 <h2 id="defining-the-hardware-driver">Defining the hardware driver<a class="headerlink" href="#defining-the-hardware-driver" title="Permanent link">&para;</a></h2>
 <p>Add a driver definition in myAutomation.h for each adafruit I2C driver.</p>
 <div class="highlight"><pre><span></span><code><span class="w">    </span><span class="n">HAL</span><span class="p">(</span><span class="n">neoPixel</span><span class="p">,</span><span class="w"> </span><span class="n">firstVpin</span><span class="p">,</span><span class="w"> </span><span class="n">numberOfPixels</span><span class="w"> </span><span class="p">[,</span><span class="w"> </span><span class="n">mode</span><span class="w"> </span><span class="p">[,</span><span class="w"> </span><span class="n">i2caddress</span><span class="p">])</span>
@@ -6756,6 +6826,7 @@
 <div class="highlight"><pre><span></span><code><span class="w">    </span><span class="n">HAL</span><span class="p">(</span><span class="n">NeoPixel</span><span class="p">,</span><span class="mi">1020</span><span class="p">,</span><span class="mi">20</span><span class="p">,</span><span class="n">NEO_GRB</span><span class="p">,</span><span class="mh">0x61</span><span class="p">)</span>
 </code></pre></div>
 <p>This is a NeoPixel driver on i2c address 0x61.</p>
+<p>For devices behind multiplexors see <a href="../various-devices/multiplexors/">multiplexors</a></p>
 
 
 
@@ -6776,7 +6847,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="January 23, 2026 08:21:17 UTC">January 23, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="January 29, 2026 14:56:48 UTC">January 29, 2026</span>
   </span>
 
     

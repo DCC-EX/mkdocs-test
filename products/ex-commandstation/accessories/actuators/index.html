@@ -3227,6 +3227,52 @@
   
   
     <li class="md-nav__item">
+      <a href="../../exrail/cookbooks/various-devices/multiplexors/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    I2C Multiplexors
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../exrail/cookbooks/various-devices/pca955x/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    MCP23017, PCA955x and TCA955x devices
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../exrail/cookbooks/various-devices/tca8418-keyboard/" class="md-nav__link">
         
   
@@ -3279,6 +3325,29 @@
   
   <span class="md-ellipsis">
     Trainbrains Devices
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../exrail/cookbooks/various-devices/xl9535/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    XL9535 Relay Board
     
   </span>
   
@@ -6766,6 +6835,7 @@
 <li>NeoPixel output used for advanced lighting, mimic panels, signals etc.</li>
 <li>Sound players</li>
 <li>Turntable control systems</li>
+<li>Relay boards</li>
 </ul>
 <h2 id="servo-actuators">Servo actuators<a class="headerlink" href="#servo-actuators" title="Permanent link">&para;</a></h2>
 <p>Servo actuators generally use a <a href="?PCA9685">PCA9685</a> device which can connect up to 16 Servos or LEDs over a single I2C connection. This device also acts to provide servo movement power separately from the movement control signal.</p>
@@ -6777,10 +6847,11 @@
 <li>Control animation servos directly, such as crossing gates or shed doors.</li>
 </ul>
 <h2 id="digital-actuators">Digital actuators<a class="headerlink" href="#digital-actuators" title="Permanent link">&para;</a></h2>
-<p>Digital outputs are generally connected via an <a href="?MCP23017">MCP23017</a> device which offers up to 16 output pins on a single I2C connection.</p>
+<p>Digital outputs are generally connected via an <a href="?MCP23017">MCP23017</a> device which offers up to 16 output pins on a single I2C connection.
+PCA9554, TCA9554, PCA9555, TCA9555 devices opereate in the same way as long as the relevant driver is used.</p>
 <p>EXRAIL is used to</p>
 <ul>
-<li>Define the MCP23017 connection and its address so that each output can be given a unique <a href="?VPIN">VPIN</a> to control it.</li>
+<li>Define the MCP23017 (or other driver) connection and its address so that each output can be given a unique <a href="?VPIN">VPIN</a> to control it.</li>
 <li>Set or reset the pin output when appropriate</li>
 </ul>
 
@@ -6803,7 +6874,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="January 23, 2026 08:21:17 UTC">January 23, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="January 29, 2026 14:56:48 UTC">January 29, 2026</span>
   </span>
 
     
