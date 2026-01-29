@@ -10,6 +10,7 @@ Other actuator types include:
 - NeoPixel output used for advanced lighting, mimic panels, signals etc.
 - Sound players
 - Turntable control systems
+- Relay boards
 
 ## Servo actuators
 
@@ -25,8 +26,9 @@ Servo actuators generally use a [PCA9685](?PCA9685) device which can connect up 
 ## Digital actuators
 
 Digital outputs are generally connected via an [MCP23017](?MCP23017) device which offers up to 16 output pins on a single I2C connection.
+PCA9554, TCA9554, PCA9555, TCA9555 devices opereate in the same way as long as the relevant driver is used.
 
 EXRAIL is used to
 
-- Define the MCP23017 connection and its address so that each output can be given a unique [VPIN](?VPIN) to control it.
+- Define the MCP23017 (or other driver) connection and its address so that each output can be given a unique [VPIN](?VPIN) to control it.
 - Set or reset the pin output when appropriate
