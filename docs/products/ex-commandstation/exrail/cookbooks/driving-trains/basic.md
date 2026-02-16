@@ -13,6 +13,9 @@ All driving speeds are in the range 0 to 127 where 0 is a normal stop (where a l
 - `SPEED(speed)` alters the loc speed without changing the direction.
 - `STOP` is the same as SPEED(0)
 - `ESTOP` is the same as SPEED(1)
+- `SPEEDUP(by)` increases speed (adds by value to speed)
+- `SLOWDOWN(by)` decreases speed (subtracts byvalue)
+- `SPEED_REL(percent)` changes speed to a percentage (1..500) of current speed
 
 Bear in mind that FWD(0) and REV(0) are not quite the same thing as it will affect the loco lights (if the loco has direction changing lights fitted) and may involve sound effects if the loco simulates the driver changing the reversing gear.
 

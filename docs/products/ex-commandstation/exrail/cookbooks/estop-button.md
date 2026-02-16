@@ -87,3 +87,4 @@ For convenience thare are also serial commands that have the same function:
 - `<!>` equivalent to ESTOPALL
 - `<!P>` equivalent to ESTOP_PAUSE
 - `<!R>` equivalent to ESTOP_RESUME
+- `<!Q>` used by throttles to request the esop status (When a throttle starts up, it will not have seen any previous status broadcast messages)
