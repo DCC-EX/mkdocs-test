@@ -169,6 +169,7 @@ markdown_extensions:
 
 watch:
   - snippets
+  - docs
 
 # List of other extensions to experiment with
   # - admonition # For callouts (Note, Warning, Tip, etc.)

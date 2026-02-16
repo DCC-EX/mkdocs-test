@@ -22,7 +22,7 @@ Although the devices are summarised here, you should refer to EXRAIL cookbooks f
 * [MCP23017](?MCP23017) I/O 16 bit pin expander
 * [NeoPixel](?NeoPixel) Adafruit NeoPixel driver
 * [PCA9554](?PCA9554) / [TCA9554](?TCA9554) 8 bit pin expander
-* [PCA9555](?PCA9555)  16 bit pin expander
+* [PCA9555](?PCA9555) / [TCA9555](?TCA9555) 16 bit pin expander
 * [PCA9685](?PCA9685) 16 pin servo controller
 * [PCF8574](?PCF8574) I/O expander
 * [PCF8575](?PCF8575) I/O expander
@@ -32,8 +32,4 @@ Although the devices are summarised here, you should refer to EXRAIL cookbooks f
 * [TouchKeypad](?TouchKeypad) capacitative touch-pad based on the TTP229-B
 * [Trainbrains](?Trainbrains) see [trainbrains.eu](https://trainbrains.eu) 
 * [VL53LOX](?VL53LOX) time-of-flight
-
-
-
-
-
+* [XL95535](?XL95535) Multi-relay device

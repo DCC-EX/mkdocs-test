@@ -1,0 +1,5 @@
+nav:
+  - DFPlayer Sounds: dfplayer.md
+  - Serial connect: serial-dfplayer.md
+  - I2C commect: i2c-dfplayer.md
+

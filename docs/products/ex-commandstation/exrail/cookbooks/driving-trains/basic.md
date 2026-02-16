@@ -2,7 +2,7 @@
 
 EXRAIL contains a number of basic commands to drive locos and control their functions such as lights and sounds.
 
-Its important to understand that EXRAIL has "tasks". A task may be driving loco 3 using sequence(555) while another task is driving loco 7 using a the same or a different sequence. That is why the driving commands below do not refer to the loco address, they take the address from the task executing the sequence. 
+Its important to understand that EXRAIL has "tasks". A task may be driving loco 3 using sequence(555) while another task is driving loco 7 using a the same or a different sequence. That is why the driving commands below do not refer to the loco address, they take the address from the task executing the sequence.
 
 The loco associated with a task can be set with a `SETLOCO(locoid)` executed within the task, or it can be automatically assigned from a throttle using a hand-off to an [AUTOMATION](?AUTOMATION).
 
@@ -13,6 +13,9 @@ All driving speeds are in the range 0 to 127 where 0 is a normal stop (where a l
 - `SPEED(speed)` alters the loc speed without changing the direction.
 - `STOP` is the same as SPEED(0)
 - `ESTOP` is the same as SPEED(1)
+- `SPEEDUP(by)` increases speed (adds by value to speed)
+- `SLOWDOWN(by)` decreases speed (subtracts byvalue)
+- `SPEED_REL(percent)` changes speed to a percentage (1..500) of current speed
 
 Bear in mind that FWD(0) and REV(0) are not quite the same thing as it will affect the loco lights (if the loco has direction changing lights fitted) and may involve sound effects if the loco simulates the driver changing the reversing gear.
 

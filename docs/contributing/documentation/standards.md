@@ -72,6 +72,22 @@ nav:
   - Mermaid Diagrams: mermaid-diagrams.md
 ```
 
+**Note on relative paths in .nav.yml**: At the time of writing, there seems to be an undocumented bug related to MkDocs and/or the MkDocs Awesome Nav plugin that means you cannot use upwards level relative links within the ".nav.yml" file.
+
+So, this will not work:
+
+```yaml
+nav:
+  - A relative up link: ../relative/page.md
+```
+
+You must instead use an absolute path for this:
+
+```yaml
+nav:
+  - A relative up link: parent/relative/page.md
+```
+
 ### Managing Previous and Next Buttons
 
 Our custom [Scoped Nav](/contributing/documentation/mkdocs-features.md#dcc-ex-custom-scoped-nav-plugin-and-custom-footerhtml) plugin automatically adjusts previous/next links to ensure that the previous and next buttons don't prompt a user to navigate automatically into irrelevant content.

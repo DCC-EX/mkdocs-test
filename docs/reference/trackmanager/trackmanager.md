@@ -49,7 +49,7 @@ In a default setup this will normally return
 - `<=t PROG>` Sets track t (A..H) to be the one and only PROG track. Any previous PROG track is turned off.
 - `<=t OFF>` turns off the track t. It will not power on with `<1>` because it will not know what signal to send.
 
-In an all-DCC environment it is unlikely that you will need to do anything other than setting any additional tracks (C...H) as DCC in your `myAutomation.h` file.  [Example:  Startup - Define Tracks](/products/ex-commandstation/exrail/cookbooks/startup-set-track.md)
+In an all-DCC environment it is unlikely that you will need to do anything other than setting any additional tracks (C...H) as DCC in your `myAutomation.h` file.  [Example:  Startup - Define Tracks](/products/ex-commandstation/dc-running.md)
 
 Bear in mind that a track may actually be only connected to DCC accessories such as signals and turnouts... your layout, your choice.
 

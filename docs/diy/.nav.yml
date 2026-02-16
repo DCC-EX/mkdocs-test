@@ -1,11 +1,11 @@
 nav:
-  - Diy: diy.md
-  - Power: power.md
-  - Mega Easy: mega-easy.md
-  - Mega Harder: mega-harder.md
-  - Nucleo: nucleo.md
-  - Esp32: esp32.md
-  - Wifi: wifi.md
-  - Ethernet: ethernet.md
-  - Installer: installer.md
-  - Others: others.md
+  - Build Your Own: diy.md
+  - Selecting a Power Supply: power.md
+  - Easy Build - Arduino Mega: mega-easy.md
+  - Harder Build - Arduino Mega: mega-harder.md
+  - Complex Build - Nucleo: nucleo.md
+  - Complex Build - ESP32: esp32.md
+  - Optional WiFi: wifi.md
+  - Optional Ethernet: ethernet.md
+  - Installing Software: installer.md
+  - Other Devices: others.md

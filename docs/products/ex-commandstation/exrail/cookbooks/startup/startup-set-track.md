@@ -1,8 +1,9 @@
 # Startup - Define Tracks
 
 By default the Command station will start with  
-&nbsp; &nbsp; Track A - `MAIN`  
-&nbsp; &nbsp; Track B - `PROG`
+
+- Track A - `MAIN`  
+-  Track B - `PROG`
 
 These lines can be added to myAutomation.h to define tracks as needed.
 
@@ -21,5 +22,5 @@ AUTOSTART
 `POWERON` will set MAIN tracks ON.  
 
 Other track modes require the `SET_POWER` command, for each track.  
-     &nbsp; &nbsp; [Example: Set a track to DC](./dc-tracks.md)  
-     &nbsp; &nbsp; &nbsp; &nbsp; **NOTE:** The use of the `SET_LOCO` command for DC mode tracks.
+
+For DC mode operation, please see [DC Running](/products/ex-commandstation/dc-running.md)

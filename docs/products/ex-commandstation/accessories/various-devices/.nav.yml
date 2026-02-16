@@ -1,2 +1,3 @@
 nav:
+  - DFPlayer: dfplayer
   - DS1307: ds1307.md

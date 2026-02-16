@@ -1,0 +1,5 @@
+nav:
+  - Automatic start: autostart.md
+  - Power : startup-poweron.md
+  - Track state: startup-set-track.md
+  

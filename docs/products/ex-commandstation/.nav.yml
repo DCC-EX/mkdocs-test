@@ -1,8 +1,9 @@
 nav:
   - The DCC-EX Command Station: overview.md
   - EX-CSB1 CommandStation Booster: ex-csb1.md
-  - Build time config.h: config-h.md
-  - Testing your command station: testing.md
+  - Running a DC layout: dc-running.md
+  - Configuration (config.h): config-h.md
+  - Testing your Command Station: testing.md
   - TrackManager: trackmanager
   - Loco Programming: loco-programming
   - Accesssories: accessories

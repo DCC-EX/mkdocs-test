@@ -1,6 +1,7 @@
 # Programming using Serial commands
 
-Serial commands are entered on a [serial monitor](?Serial Montor).
+Serial commands are entered on a [serial monitor](?Serial)
+
 This gives you direct access to the underlying DCC-EX features to access the programming track.
 
 All other programming methods through throttles, toolbox or DecoderPro use this interface.
