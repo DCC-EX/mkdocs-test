@@ -10,7 +10,13 @@
 
 ## Connecting to your Command Station
 
-Please remember that to connect to a Wifi device running in AP mode, you must switch your phone or tablet Wifi to the correct access point.
+Please remember that to connect to a Wifi EX-CommandStation on the correct WiFi network.
+
+* If you are running your EX-Commandstation in Access Point (AP) mode, you must switch your phone or tablet Wifi to the access point / Wifi network/SSID that the EX-CommandStation has created.
+
+* If you are running your EX-Commandstation in Station mode, you must switch your phone or tablet Wifi to your hopke access point / Wifi network/SSID. that same one that the EX-CommandStation is connected to.
+
+## Starting EX-Toolbox 
 
 Other than the very first time you start **EX‑Toolbox**, when the app opens you will be shown the 'Connection' screen.
 ![connecting](/_static/images/ex-toolbox/connect.png)
@@ -27,10 +33,12 @@ There are three ways you can select a EX‑CommandStation to connect to:
 - ``Recent servers`` <br/>
   If the server does not appear in the recent list try one of the other two methods. Your server not appearing in the recent list is not necessarily a problem and there can be a number of reasons why.
 
-## Important
+***Notes***
 
-**EX‑Toolbox** can only connect directly to an EX‑CommandStation or JMRI's 'DCC++ over TCP Server', however JMRI, the EX‑CommandStation and other devices and apps can, or do, advertise as "WiThrottle"”" mDNS services. EX-Toolbox cannot determine which are actually direct connections to an EX‑CommandStation or JMRI's 'DCC++ over TCP Server'.
+- *Important!* **EX‑Toolbox** can only connect directly to an EX‑CommandStation or JMRI's 'DCC++ over TCP Server', however JMRI, the EX‑CommandStation and other devices and apps can, or do, advertise as "WiThrottle" mDNS services. EX-Toolbox cannot determine which are actually direct connections to an EX‑CommandStation or JMRI's 'DCC++ over TCP Server'.
 
-If you only ever connect to one EX‑CommandStation you can effectively bypass this screen by setting the 'Auto-Connect to WiThrottle Server?' preference.
+- If you only ever connect to one EX‑CommandStation you can effectively bypass this screen by setting the 'Auto-Connect to WiThrottle Server?' preference.
 
-- Follow the [User Guide](user-guide.md)
+----
+
+Follow the [User Guide](user-guide.md)

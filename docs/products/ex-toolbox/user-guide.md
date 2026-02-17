@@ -150,7 +150,7 @@ Adjust the decoder momentum (Acceleration/Deceleration) and Kick Start as needed
 
 If you have more locos to match, repeat from *step 2*.
 
-Notes:
+***Notes:***
 
 - By default, the ``+`` and ``-`` buttons change the CV values by 1. You can change this step amount by editing the 'Step' field. <br/>
   e.g. When I start on a loco, I normally have the Step at 10. When it gets closer to a match I change the step to 1.
@@ -224,6 +224,8 @@ Loco Status allows you to watch changes to all locos being controlled by the com
 
 </div>
 
+<div style="clear: both;"></div>
+
 ## Track Manager
 
 <div class="result" markdown>
@@ -242,7 +244,7 @@ Each channel can be one of:
 
 Select the value you want for the channels and click ``Set``.
 
-Notes:
+***Notes:***
 
 - If you select ``DC`` or ``DCX`` you must select a DCC address for the channel before pressing Set. What ever address you select, selecting that address on your throttle (e.g. Engine Driver) will result in the DC locomotive on the track connected to that channel to respond.
 
@@ -287,6 +289,8 @@ The Watch button is generally not needed, but will force **EX‑Toolbox** to che
 
 </div>
 
+<div style="clear: both;"></div>
+
 ## Current Meter
 
 <div class="result" markdown>
@@ -307,6 +311,42 @@ You can manually stop the readings with the Stop button.
 You can manually restart the readings with the Start button. This will also clear the 'Highest' values.
 
 </div>
+
+<div style="clear: both;"></div>
+
+## Roster
+
+<div class="result" markdown>
+![menu](/_static/images/ex-toolbox/roster.png){align="right" width="200px"}
+
+The 'Roster' screen will show you the current roster on your EX‑CommandStation.
+
+Clicking on any individual loco in the roster will show you the details of that roster entry (the Loco's functions).
+
+![menu](/_static/images/ex-toolbox/roster_individual_loco.png){width="200px"}
+
+</div>
+
+<div style="clear: both;"></div>
+
+## Neopixel Setup
+
+<div class="result" markdown>
+![menu](/_static/images/ex-toolbox/neopixel.png){align="right" width="200px"}
+
+The 'Neopixel' screen will allow you to experiment with any neopixels configured on your EX‑CommandStation.
+
+Enter:
+
+- the ``Vpin`` of the Neopixel device
+- the ``count`` - The number of neopixels connected
+
+You can then adjust the colours (RGB values) of the neopixels with the sliders
+
+
+</div>
+
+<div style="clear: both;"></div>
 
 ## Power
 

@@ -12,14 +12,14 @@ It can't normally connect to a EX‑CommandStation though USB, however there som
 
 ## Features
 
-- CV Programming in the programming track (Service Mode)
-- CV Programming in the main track (Operation Mode)
-- Servo motor testing and adjustment
-- Sensor testing
-- Current Meter
-- Track Manager
-- Loco status (all active locos)
-- Assist with Loco Speed Matching
-- Speedometer (requires two sensors on the EX‑CommandStation)
-- Roster list
-- NeoPixel Setup
+- [CV Programming in the programming track (Service Mode)](user-guide.md#cv-programming-service-mode)
+- [CV Programming in the main track (Operation Mode)](user-guide.md#cv-programming-operation-mode)
+- [Servo motor testing and adjustment](user-guide.md#servo-motor-testing-and-adjustment)
+- [Sensor testing](user-guide.md#sensor-testing)
+- [Current Meter](user-guide.md#current-meter)
+- [Track Manager](user-guide.md#track-manager)
+- [Loco status (all active locos)](user-guide.md#loco-status)
+- Assist with [Loco Speed Matching](user-guide.md#speed-matching)
+- [Speedometer](user-guide.md#speedometer) (requires two sensors on the EX‑CommandStation)
+- [Roster list](user-guide.md#roster)
+- [NeoPixel Setup](user-guide.md#neopixel-setup)

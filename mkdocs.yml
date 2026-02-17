@@ -171,6 +171,9 @@ watch:
   - snippets
   - docs
 
+not_in_nav:
+  'products/ex-toolbox/connect_wifi_throttle_via_usb.md'
+
 # List of other extensions to experiment with
   # - admonition # For callouts (Note, Warning, Tip, etc.)
   # - attr_list # For adding attributes to Markdown elements (e.g., for custom styles)
