@@ -9,8 +9,8 @@ Various screens can be accessed via the dropdown menu or by swiping left and rig
 
 DCC Decoder CV programming is available:
 
-- on the Programming track (PROG) - Service Mode
-- on the main line (MAIN) - Operation mode / Ops Mode
+- on the Programming track (PROG) - Service Mode.
+- on the main line (MAIN) - Operation mode / Ops Mode.
 
 By default **EX‑Toolbox** shows the Service Mode options. To switch to Operation Mode, select "Program on Main (Operation Mode)" on the drop down list at the top of the screen.
 
@@ -259,15 +259,15 @@ Select the value you want for the channels and click ``Set``.
 
 The 'Servo Motor Test' screen will allow you to test and fine tune the settings needed for configuring servo motors attached to the EX‑CommandStation. This is intended to be temporary. To permanently configure a servo motor you will need to record the values and include the in the configuration of your EX‑CommandStation.
 
-- Make sure your servo is NOT physically connected to anything that could be damaged if you move the serve too far
+- Make sure your servo is NOT physically connected to anything that could be damaged if you move the serve too far.
 
-- Enter the VPin of the servo motor you want adjustment
+- Enter the VPin of the servo motor you want adjustment.
 
-- Enter any known starting values for Close, Mid, Throw
+- Enter any known starting values for Close, Mid, Throw.
 
 - Test the 'Close', 'Mid', 'Throw' positions by pressing the appropriate button. The servo will move to that position.
 
-- Fine adjust any of the three positions by using the + or - buttons <br/>
+- Fine adjust any of the three positions by using the + or - buttons. <br/>
   The servo will gradually move.
 
 - when you are happy, record the three values
@@ -300,9 +300,9 @@ The 'Current Status' screen will show you the current values for up to eight cha
 
 For each channel the following is shown:
 
-- the up-to-date value in Milliamps
-- the highest value seen recently in Milliamps
-- the maximum value able to be supplied by the moto shield in Milliamps
+- the up-to-date value in Milliamps.
+- the highest value seen recently in Milliamps.
+- the maximum value able to be supplied by the moto shield in Milliamps.
 
 The readings start as soon as you open the screen and are paused as soon as you exit the screen. The readings are taken every three seconds.
 
@@ -338,8 +338,8 @@ The 'Neopixel' screen will allow you to experiment with any neopixels configured
 
 Enter:
 
-- the ``Vpin`` of the Neopixel device
-- the ``count`` - The number of neopixels connected
+- the ``Vpin`` of the Neopixel device.
+- the ``count`` - The number of neopixels connected.
 
 You can then adjust the colours (RGB values) of the neopixels with the sliders
 
@@ -355,8 +355,8 @@ You can then adjust the colours (RGB values) of the neopixels with the sliders
 
 There are two ways to turn the Track Power on/off:
 
-- Power Screen - accessed from the menu
-- Power Action Bar button - needs to be enabled in the preferences
+- Power Screen - accessed from the menu.
+- Power Action Bar button - needs to be enabled in the preferences.
 
 The Power Screen can be accessed from the ``Menu ‣ Power``. This will open the Power Screen where there is a simple button that to turn the power on or off. Use the Close button or Android's Back button to return to the CV-Programming Screen.
 
@@ -392,26 +392,26 @@ Optionally enable the preference to include the timestamp on each line of the lo
 To record a log file in **EX‑Toolbox**….
 
 - Start **EX‑Toolbox**.
-- From the menu, select `View Log`
-- Click Start recording to a file
-- Click `Close`
+- From the menu, select `View Log`.
+- Click Start recording to a file.
+- Click `Close`.
 
 Attempt whatever is causing the problem a few times
 
-- Exit **EX‑Toolbox**
+- Exit **EX‑Toolbox**.
 
-- Connect a USB cable to your device/phone and PC
+- Connect a USB cable to your device/phone and PC.
 
 - Allow access if the device/phone asks. <br/>
-  In some versions of Android you may also need to change the connection type on the device/phone from 'charging' to 'file transfer'
+  In some versions of Android you may also need to change the connection type on the device/phone from 'charging' to 'file transfer'.
 
-- Open a file manager and find the connected device/phone
+- Open a file manager and find the connected device/phone.
 
-- Browse down to the folder …Internal shared storage/Android/data/dcc_ex.ex_toolbox/files
+- Browse down to the folder …Internal shared ``storage/Android/data/dcc_ex.ex_toolbox/files``.
 
-- Find the most recent file that looks like ``logcatxxxxxxxxxxxxx.txt`` e.g. logcat1699833098998.txt
+- Find the most recent file that looks like ``logcatxxxxxxxxxxxxx.txt``. e.g. logcat1699833098998.txt
 
-- Attach that file to a message in discord using the ``+`` button on the row of the message content
+- Attach that file to a message in discord using the ``+`` button on the row of the message content.
 
 </div>
 
@@ -421,10 +421,10 @@ Attempt whatever is causing the problem a few times
 
 This screen displays
 
-- Information about **EX‑Toolbox**
+- Information about **EX‑Toolbox**.
 
-- Information about the EX‑CommandStation it is currently connected to (if any)
+- Information about the EX‑CommandStation it is currently connected to (if any).
 
-- A page of basic information about **EX‑Toolbox**
+- A page of basic information about **EX‑Toolbox**.
 
 </div>

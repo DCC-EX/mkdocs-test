@@ -43,7 +43,8 @@ Please remember that to connect to a Wifi EX-CommandStation on the correct WiFi 
 ## Starting EX-Toolbox 
 
 Other than the very first time you start **EX‑Toolbox**, when the app opens you will be shown the 'Connection' screen.
-![connecting](/_static/images/ex-toolbox/connect.png)
+
+![connecting](/_static/images/ex-toolbox/connect.png){width="200px"}
 
 There are three ways you can select a EX‑CommandStation to connect to:
 
