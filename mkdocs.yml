@@ -166,13 +166,14 @@ markdown_extensions:
       clickable_checkbox: true
   - toc: # Table of Contents extension
       permalink: true # Add a permanent link to headings
+  - footnotes # Standard footnotes
 
 watch:
   - snippets
   - docs
 
 not_in_nav:
-  'products/ex-toolbox/connect_wifi_throttle_via_usb.md'
+  '**/*_not_in_nav.md'
 
 # List of other extensions to experiment with
   # - admonition # For callouts (Note, Warning, Tip, etc.)

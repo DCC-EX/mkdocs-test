@@ -30,7 +30,7 @@ Disadvantages include:
 
 - Has advertisements
 
-Follow the instructions on their [site](https://www.bluestacks.com/)  to install BlueStacks, then get the appropriate .apk to install the throttle app you want. e.g. The Engine Driver .apk is available from the [EX-Toolbox Github page](https://github.com/DCC-EX/EX-Toolbox/tree/master/EX_Toolbox/apks). 
+Follow the instructions on their [site](https://www.bluestacks.com/)  to install BlueStacks, then get the appropriate .apk to install the throttle app you want. e.g. The Engine Driver .apk is available from the [EX-Toolbox Github page](https://github.com/DCC-EX/EX-Toolbox/tree/master/EX_Toolbox/apks).
 
 ## Connecting to your Command Station
 
@@ -40,11 +40,11 @@ Please remember that to connect to a Wifi EX-CommandStation on the correct WiFi 
 
 * If you are running your EX-Commandstation in Station mode, you must switch your phone or tablet Wifi to your hopke access point / Wifi network/SSID. that same one that the EX-CommandStation is connected to.
 
-## Starting EX-Toolbox 
+## Starting EX-Toolbox
 
 Other than the very first time you start **EX‑Toolbox**, when the app opens you will be shown the 'Connection' screen.
 
-![connecting](/_static/images/ex-toolbox/connect.png){width="200px"}
+![connecting](../../_static/images/ex-toolbox/connect.png){width="200px"}
 
 There are three ways you can select a EX‑CommandStation to connect to:
 
