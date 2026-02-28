@@ -1861,6 +1861,29 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../products/ex-commandstation/exrail/cookbooks/advanced/speed-test/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Building a speed test track
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -7035,10 +7058,10 @@
 
 
 <h1 id="throttle-writers-guide-doc-incomplete">Throttle Writers Guide (doc incomplete)<a class="headerlink" href="#throttle-writers-guide-doc-incomplete" title="Permanent link">&para;</a></h1>
-<p><mark>TODO</mark></p>
+<p>You are strongly advised to make use of the DCCEXProtocol library</p>
 <p>The commonly used speed, function, loco programming and diagnostic commands are discussed elsewhere with users in mind. However, there are a large number of commands designed only to be used by other programs such as JMRI, Engine Driver or other throttles specifically aimed at the DCC-EX protocol. (not WiThrottle)</p>
 <p>Many commands that have been implemented to assist throttle authors to obtain information from the Command Station in order to implement turnout, route/automation and roster features.
-Some of these commands are deliberately milti-stage requests to avoid timing and blocking issues caused by massive transmissions (e.g. a full list of turnouts with descriptions) that can cause Command Station issues.</p>
+Some of these commands are deliberately multi-stage requests to avoid timing and blocking issues caused by massive transmissions (e.g. a full list of turnouts with descriptions) that can cause Command Station issues.</p>
 <p>Broadcast replies are also designed so that a throttle can maintain loco speed and function states, turnout poisitions and route states.</p>
 <h2 id="turnouts">Turnouts<a class="headerlink" href="#turnouts" title="Permanent link">&para;</a></h2>
 <p>The conventional turnout definition commands and the <code>&lt;H&gt;</code> responses do not contain information about the turnout description which may have been provided in an EXRAIL script. A turnout description is much more user friendly than T123 and having a list helps the throttle UI build a suitable set of buttons.</p>
@@ -7125,7 +7148,7 @@ where the brake value defaults to the accelerating value.</p>
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="February 28, 2026 09:18:18 UTC">February 28, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="February 28, 2026 12:50:07 UTC">February 28, 2026</span>
   </span>
 
     

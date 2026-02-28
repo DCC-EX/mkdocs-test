@@ -1861,6 +1861,29 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../products/ex-commandstation/exrail/cookbooks/advanced/speed-test/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Building a speed test track
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -7228,6 +7251,11 @@ for example:</p>
 <div class="highlight"><pre><span></span><code><span class="cp">#define WIFI_HOSTNAME &quot;dccex-csb1&quot;</span>
 </code></pre></div>
 <ul>
+<li>ETHERNET_HOSTNAME: The default is "dccex" but you can change this if you have more than one CS on you home router to make them show up with different names on the network. Host names starting with "dccex" are more readily found by WiFi throttles.</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="cp">#define ETHERNET_HOSTNAME &quot;dccex-csb1&quot;</span>
+</code></pre></div>
+<ul>
 <li>Ethernet IP_ADDRESS can be set but it is preferable to omit this and have the router assign an address using DHCP.</li>
 </ul>
 <div class="highlight"><pre><span></span><code><span class="cp">#define IP_ADDRESS { 192, 168, 1, 200 }</span>
@@ -7250,7 +7278,7 @@ of the warning that this will take extra RAM.  if you wish to include additional
 </code></pre></div>
 <h2 id="disable-eeprom">Disable EEPROM<a class="headerlink" href="#disable-eeprom" title="Permanent link">&para;</a></h2>
 <p>The EEPROM feature is only there for backward support of deprecated methods of turnout, sensor and output creation inherited from DCC++.
-You are advised to turn this off to save memory.</p>
+You are advised to turn this off to save memory. It is automatically turned of on devices that do not support this.</p>
 <div class="highlight"><pre><span></span><code><span class="w"> </span><span class="cp">#define DISABLE_EEPROM</span>
 </code></pre></div>
 <h2 id="disable-prog">Disable PROG<a class="headerlink" href="#disable-prog" title="Permanent link">&para;</a></h2>
@@ -7266,7 +7294,7 @@ You are advised to turn this off to save memory.</p>
 </code></pre></div>
 <p>DCC-EX does not support using the same address, for example 100(long) and 100(short) at the same time, therefore there must be a border.</p>
 <h2 id="redefine-locomotive-state-table-size">Redefine locomotive state table size<a class="headerlink" href="#redefine-locomotive-state-table-size" title="Permanent link">&para;</a></h2>
-<p>This is the maximum number of locos that can be controlled at the same time. This defaults to 50 (8 on a UNO/NANO). If you have enough free memory you can increase this to a maximum of 255. If you are short of memory (typically a Mega with WiFi and lots of accessories) you can decrease it  to a minimum of 2.</p>
+<p>This is the maximum number of locos that can be controlled at the same time. This defaults to 50 (8 on a UNO/NANO). If you have enough free memory you can increase this to a maximum of 255. If you are short of memory (typically a Mega with WiFi and lots of accessories) you can decrease it  to a minimum of 2. RAM is only used for locos that have been throttled since the Command Station was started so you cannot save RAM by setting this.  </p>
 <div class="highlight"><pre><span></span><code><span class="cp">#define MAX_LOCOS 100</span>
 </code></pre></div>
 <h2 id="define-turnouts-and-accessories-to-follow-norm-rcn-213">Define TURNOUTS and ACCESSORIES to follow norm RCN-213<a class="headerlink" href="#define-turnouts-and-accessories-to-follow-norm-rcn-213" title="Permanent link">&para;</a></h2>
@@ -7322,8 +7350,7 @@ You are advised to turn this off to save memory.</p>
 </code></pre></div>
 <h2 id="tuning-for-deprecated-unonano">Tuning for deprecated UNO/NANO<a class="headerlink" href="#tuning-for-deprecated-unonano" title="Permanent link">&para;</a></h2>
 <p>By default VDPY and DIAGs are disabled on a Uno/Nano to reduce PROGMEM and RAM requirements.</p>
-<p>They can be re-enabled if you have space by the commands below.
-It is also possible to save RAM using the MAX_LOCOS setting less than the default 8.</p>
+<p>They can be re-enabled if you have space by the commands below.</p>
 <div class="highlight"><pre><span></span><code><span class="cp">#define ENABLE_VDPY</span>
 <span class="cp">#define ENABLE_DIAG</span>
 <span class="cp">#define MAX_LOCOS 4</span>
@@ -7348,7 +7375,7 @@ It is also possible to save RAM using the MAX_LOCOS setting less than the defaul
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="February 28, 2026 09:18:18 UTC">February 28, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="February 28, 2026 12:50:07 UTC">February 28, 2026</span>
   </span>
 
     
