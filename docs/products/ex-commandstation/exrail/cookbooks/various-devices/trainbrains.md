@@ -21,7 +21,7 @@ This isn't going to work if the devivce at I2C address 0x15 is not a Trainbrains
 
 The signal controller only has one VPIN but may have hundreds of different combinations of lamps, blinking and state. This can be handled by pretending it is a NEOPIXEL signal and setting the Red channel to the lamp combination, the Blue channel to the blinking combination and the Green channel to the signal state. (Refer to Trainbrains documentation for details)
 
-For example: (This is taken from the NEOPIXEL definitions, TODO we can replace this with a suitable alias. Just replace the colour values with the lamps,blink,state values. )
+For example: (This is taken from the NEOPIXEL definitions, we can replace this with a suitable alias. Just replace the colour values with the lamps,blink,state values. )
 
 ```cpp
 HAL(Trainbrains,720,1,0x15)

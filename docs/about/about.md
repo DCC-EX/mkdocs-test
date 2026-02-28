@@ -56,6 +56,7 @@ The DCC-EX team is a worldwide group of enthusiasts who volunteer their time to 
 
 - Developers
 
+    - Peter Akers - South East QLD, Australia (flash62au)
     - Looking for volunteers!
 
 ### EX-IOExpander
@@ -129,7 +130,7 @@ The DCC-EX team is a worldwide group of enthusiasts who volunteer their time to 
 - Travis Farmer - Farmington Maine, USA (travis_farmer)
 - Henk Kruisbrink - UK (Henkk)
 
-## Related Software - Friends of DCC\-EX
+## Related Software - Friends of DCC-EX
 
 Making sure this software works well with |EX-CS|
 

@@ -1,8 +1,13 @@
-﻿# DCC-EX Command Protocol
-
-==TODO== Review tables and commands
+﻿# DCC-EX Command Protocol Reference
 
 Complete reference guide for serial commands used with DCC command stations.
+
+How to understand the syntax:
+
+- The first symbol after the `<` character is the opcode. It's case sensitive so `<F` is not the sdame as `<f`.
+- parameters in UPPER CASE (eg LIMIT) are keywords and form part of the command. Keywords are not case sensitive.
+- parameters in lower case (eg speed) are values you must supply
+- parameters in [square brackets] are optional (e.g. [volume]). Do not include the brackets in your command.
 
 ## System Commands
 

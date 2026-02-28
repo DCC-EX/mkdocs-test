@@ -2,7 +2,7 @@
 
  (LOTS OF ==TODO== in this file)
 
-The simplest and most direct testing method is to use a serial monitor to talk directly to the USB connection of you command station. This is a fundamental aspect of the Arduino system and thus avoids issues such as wifi connections. Indeed, this is the only way to see what's going wrong if your problems are wifi related.
+The simplest and most direct testing method is to use a serial monitor to talk directly to the USB connection of you command station. This is a fundamental aspect of the Arduino system and thus avoids issues such as wifi connections. Indeed, this is the only way to see what's going wrong if your problems are wifi or Etrhernet related.
 
 ## Serial Monitors
 
@@ -10,8 +10,6 @@ There are several serial monitors available:
 
 --8<-- "snippets/ex-installer/device-monitor.md"
 
-- Built in to the [EX-Installer](?EX-Installer)
-    ??? ==TODO== EX INSTALLER showing serial log
 - Built in to VSCode is you are using that as an IDE.
 - Built in to the Arduino IDE (We do not recommend that for development)
 - Built in to the EX-WebThrottle

@@ -55,6 +55,12 @@ If you want to restrict the maximum current LOWER than what your motor shield ca
 #define WIFI_HOSTNAME "dccex-csb1"
 ```
 
+- ETHERNET_HOSTNAME: The default is "dccex" but you can change this if you have more than one CS on you home router to make them show up with different names on the network. Host names starting with "dccex" are more readily found by WiFi throttles.
+
+```cpp
+#define ETHERNET_HOSTNAME "dccex-csb1"
+```
+
 - Ethernet IP_ADDRESS can be set but it is preferable to omit this and have the router assign an address using DHCP.
 
 ```cpp
@@ -85,7 +91,7 @@ of the warning that this will take extra RAM.  if you wish to include additional
 ## Disable EEPROM
 
 The EEPROM feature is only there for backward support of deprecated methods of turnout, sensor and output creation inherited from DCC++.
-You are advised to turn this off to save memory.
+You are advised to turn this off to save memory. It is automatically turned of on devices that do not support this.
 
 ```cpp
  #define DISABLE_EEPROM
@@ -117,7 +123,7 @@ DCC-EX does not support using the same address, for example 100(long) and 100(sh
 
 ## Redefine locomotive state table size
 
-This is the maximum number of locos that can be controlled at the same time. This defaults to 50 (8 on a UNO/NANO). If you have enough free memory you can increase this to a maximum of 255. If you are short of memory (typically a Mega with WiFi and lots of accessories) you can decrease it  to a minimum of 2.
+This is the maximum number of locos that can be controlled at the same time. This defaults to 50 (8 on a UNO/NANO). If you have enough free memory you can increase this to a maximum of 255. If you are short of memory (typically a Mega with WiFi and lots of accessories) you can decrease it  to a minimum of 2. RAM is only used for locos that have been throttled since the Command Station was started so you cannot save RAM by setting this.  
 
 ```cpp
 #define MAX_LOCOS 100
@@ -219,7 +225,6 @@ The number defined is the DCC address for which speed controls are sent to the s
 By default VDPY and DIAGs are disabled on a Uno/Nano to reduce PROGMEM and RAM requirements.
 
 They can be re-enabled if you have space by the commands below.
-It is also possible to save RAM using the MAX_LOCOS setting less than the default 8.
 
 ```cpp
 #define ENABLE_VDPY

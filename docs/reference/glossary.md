@@ -2,7 +2,6 @@
 search:
   exclude: true
 ---
-==TODO==
 
 # Glossary of Terms
 

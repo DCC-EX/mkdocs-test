@@ -1,3 +1,3 @@
-# Programming wit EX-Toolbox
+# Programming with EX-Toolbox
 
-[TODO] toolbox generally. 
+Refer to the [Toolbox User Guide](/products/ex-toolbox/user-guide.md)

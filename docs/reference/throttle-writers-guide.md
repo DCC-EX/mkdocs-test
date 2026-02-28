@@ -1,11 +1,11 @@
 # Throttle Writers Guide (doc incomplete)
 
-==TODO==
+You are strongly advised to make use of the DCCEXProtocol library
 
 The commonly used speed, function, loco programming and diagnostic commands are discussed elsewhere with users in mind. However, there are a large number of commands designed only to be used by other programs such as JMRI, Engine Driver or other throttles specifically aimed at the DCC-EX protocol. (not WiThrottle)
 
 Many commands that have been implemented to assist throttle authors to obtain information from the Command Station in order to implement turnout, route/automation and roster features.
-Some of these commands are deliberately milti-stage requests to avoid timing and blocking issues caused by massive transmissions (e.g. a full list of turnouts with descriptions) that can cause Command Station issues.
+Some of these commands are deliberately multi-stage requests to avoid timing and blocking issues caused by massive transmissions (e.g. a full list of turnouts with descriptions) that can cause Command Station issues.
 
 Broadcast replies are also designed so that a throttle can maintain loco speed and function states, turnout poisitions and route states.
 
