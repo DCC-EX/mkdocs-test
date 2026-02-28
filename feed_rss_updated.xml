@@ -13,8 +13,8 @@
     <language>en</language>
 
     
-    <pubDate>Mon, 16 Feb 2026 08:20:34 -0000</pubDate>
-    <lastBuildDate>Mon, 16 Feb 2026 08:20:34 -0000</lastBuildDate>
+    <pubDate>Sat, 28 Feb 2026 09:18:48 -0000</pubDate>
+    <lastBuildDate>Sat, 28 Feb 2026 09:18:48 -0000</lastBuildDate>
     <ttl>1440</ttl>
 
     
@@ -44,7 +44,7 @@
       <description>&lt;h1&gt;New Documentation&lt;/h1&gt;
 &lt;p&gt;We have new documentation!&lt;/p&gt;</description>
       <link>https://dcc-ex.com/mkdocs-test/news/2025/06/new-documentation/</link>
-      <pubDate>Mon, 16 Feb 2026 08:19:12 +0000</pubDate>
+      <pubDate>Sat, 28 Feb 2026 09:18:18 +0000</pubDate>
       <source url="https://dcc-ex.com/mkdocs-test/feed_rss_updated.xml">DCC-EX News</source>
       
       <guid isPermaLink="true">https://dcc-ex.com/mkdocs-test/news/2025/06/new-documentation/</guid>
