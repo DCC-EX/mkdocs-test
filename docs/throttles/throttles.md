@@ -59,7 +59,7 @@ See also: Arduino/ESP32 DCC-EX Native command library - [DCCEXProtocol](https://
 
 ### Personal Computers
 
-- [EX-WebThrottle](../../products/ex-webthrottle/ex-webthrottle.md) (Windows, MacOS, Linux) *recommended*
+- [EX-WebThrottle](../products/ex-webthrottle/ex-webthrottle.md) (Windows, MacOS, Linux) *recommended*
 - DigiTrainsPro ([Android](https://play.google.com/store/apps/details?id=digitrainspro.digitrainspro.hu&hl=en_US&gl=US), [iOS](https://apps.apple.com/us/app/digitrainspro/id1481937310), [Windows](https://www.microsoft.com/en-us/p/digitrainspro/9p3kl60r0c5q?rtc=1&activetab=pivot:overviewtab)) *- Requires JMRI*
 - [Java Model Railroad Interface (JMRI)](https://www.jmri.org/) (Windows, MacOS, Linux)
 - [Railroad Automation](https://www.perecli.com/rrauto/) *- Requires IoTT Red Hat*
@@ -79,7 +79,7 @@ A **EX-CommandStation** can use a number of different technologies to communicat
 
 ### DCC-EX Native Commands
 
-- [EX-WebThrottle](../../products/ex-webthrottle/ex-webthrottle.md) (Windows, MacOS, Linux) *recommended*
+- [EX-WebThrottle](../products/ex-webthrottle/ex-webthrottle.md) (Windows, MacOS, Linux) *recommended*
 - [Engine Driver](./engine-driver.md) (Andriod) *recommended*
 - [DCCpp CAB](http://lamaquetade.infotronikblog.com/dccppcab/dccppcab_index.html) (Android)
 - DCC-EX CAB ([iOS](https://apps.apple.com/us/app/dcc-ex-cab/id6695754417) and [Android](https://play.google.com/store/apps/details?id=com.gothicmaestro.dccexcab))
@@ -119,7 +119,7 @@ See also: Arduino/ESP32 DCC-EX Native command library - [DCCEXProtocol](https://
 
 ### USB Based Throttles
 
-- [EX-WebThrottle](../../products/ex-webthrottle/ex-webthrottle.md) (Windows, MacOS, Linux) *recommended*
+- [EX-WebThrottle](../products/ex-webthrottle/ex-webthrottle.md) (Windows, MacOS, Linux) *recommended*
 - [myBluePillThrottle](https://github.com/n1ksn/dcc-ex-bluepill-throttle-7) (Physical DIY)
 
 <div style="padding-left: 30px;" markdown="1">
