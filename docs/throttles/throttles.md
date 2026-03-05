@@ -8,12 +8,12 @@ The following are lisst of the Throttle apps and devices that are know to work w
 
 ### Web Browser (Windows, OSX, Linux)
 
-- EX-Web-Throttle (Web Browser) *recommended*
+- [EX-WebThrottle](../products/ex-webthrottle/ex-webthrottle.md) (Windows, MacOS, Linux) *recommended*
 
 ### Android (Phones and Tablets)
 
-- [Engine Driver](./engine-driver.md) (Andriod) *recommended*
-- [Cab Engineer: DCC Throttle](https://www.alfray.com/trains/cab_app.html) (Andriod)
+- [Engine Driver](./engine-driver.md) (Android) *recommended*
+- [Cab Engineer: DCC Throttle](https://www.alfray.com/trains/cab_app.html) (Android)
 - [DCC++ Throttle](https://aleksandr.ru/my/dccppthrottle) (Android)
 - [DCCpp CAB (android)](http://lamaquetade.infotronikblog.com/dccppcab/dccppcab_index.html)
 - DigiTrainsPro (Android, iOS, Windows) *- Requires JMRI*
@@ -27,11 +27,11 @@ Note: The Android throttle apps listed above can be made to made to run on Windo
 
 ### Apple iOS (Phones and Tablets)
 
+- [Throttle Card](./throttlecard.md) (MacOS, iOS)
 - DigiTrainsPro ([Android](https://play.google.com/store/apps/details?id=digitrainspro.digitrainspro.hu&hl=en_US&gl=US), [iOS](https://apps.apple.com/us/app/digitrainspro/id1481937310), [Windows](https://www.microsoft.com/en-us/p/digitrainspro/9p3kl60r0c5q?rtc=1&activetab=pivot:overviewtab)) *- Requires JMRI*
 - [Locontrol](https://apps.apple.com/us/app/locontrol-dcc-controller/id1473757920) (iOS)
 - [SRCP Client](https://www.io-expert.com/) (iOS)
 - [Train Driver](https://apps.apple.com/au/app/train-driver/id1558334503) (iOS)
-- [Throttle Card](./throttlecard.md) (MacOS, iOS) *- Requires WiThrottle server*
 - [TrainNavigator](https://apps.apple.com/sk/app/trainnavigator/id6738654983) (iOS)
 - DCC-EX CAB ([iOS](https://apps.apple.com/us/app/dcc-ex-cab/id6695754417) and [Android](https://play.google.com/store/apps/details?id=com.gothicmaestro.dccexcab))
 - [Train Throttle](https://drewhoffman.net/trainthrottle/) (Windows, iOS)
@@ -60,11 +60,11 @@ See also: Arduino/ESP32 DCC-EX Native command library - [DCCEXProtocol](https://
 ### Personal Computers
 
 - [EX-WebThrottle](../products/ex-webthrottle/ex-webthrottle.md) (Windows, MacOS, Linux) *recommended*
+- [Throttle Card](./throttlecard.md) (MacOS, iOS)
 - DigiTrainsPro ([Android](https://play.google.com/store/apps/details?id=digitrainspro.digitrainspro.hu&hl=en_US&gl=US), [iOS](https://apps.apple.com/us/app/digitrainspro/id1481937310), [Windows](https://www.microsoft.com/en-us/p/digitrainspro/9p3kl60r0c5q?rtc=1&activetab=pivot:overviewtab)) *- Requires JMRI*
 - [Java Model Railroad Interface (JMRI)](https://www.jmri.org/) (Windows, MacOS, Linux)
 - [Railroad Automation](https://www.perecli.com/rrauto/) *- Requires IoTT Red Hat*
 - [Train Throttle](https://drewhoffman.net/trainthrottle/) (Windows, iOS)
-- [Throttle Card](./throttlecard.md) (MacOS, iOS) *- Requires WiThrottle server*
 
 ----
 
@@ -80,7 +80,8 @@ A **EX-CommandStation** can use a number of different technologies to communicat
 ### DCC-EX Native Commands
 
 - [EX-WebThrottle](../products/ex-webthrottle/ex-webthrottle.md) (Windows, MacOS, Linux) *recommended*
-- [Engine Driver](./engine-driver.md) (Andriod) *recommended*
+- [Engine Driver](./engine-driver.md) (Android) *recommended*
+- [Throttle Card](./throttlecard.md) (MacOS, iOS)
 - [DCCpp CAB](http://lamaquetade.infotronikblog.com/dccppcab/dccppcab_index.html) (Android)
 - DCC-EX CAB ([iOS](https://apps.apple.com/us/app/dcc-ex-cab/id6695754417) and [Android](https://play.google.com/store/apps/details?id=com.gothicmaestro.dccexcab))
 - [DCC++ Throttle](https://aleksandr.ru/my/dccppthrottle) (Android)
@@ -100,14 +101,14 @@ See also: Arduino/ESP32 DCC-EX Native command library - [DCCEXProtocol](https://
 
 ### WiThrottle Protocol Based Throttles
 
-- [Engine Driver](./engine-driver.md) (Andriod) *recommended*
+- [Engine Driver](./engine-driver.md) (Android) *recommended*
+- [Throttle Card](./throttlecard.md) (MacOS, iOS)
 - [Cab Engineer: DCC Throttle](https://www.alfray.com/trains/cab_app.html) (Android)
 - [Locontrol](https://apps.apple.com/us/app/locontrol-dcc-controller/id1473757920) (iOS)
 - WiThrottle Cab ([iOS](https://apps.apple.com/us/app/withrottle-cab/id6746695618) and [Android](https://play.google.com/store/apps/details?id=com.gothicmaestro.withrottlecab))
 - [WiThrottle](https://www.withrottle.com/) (iOS)
 - [SRCP Client](https://www.io-expert.com/) (iOS)
 - [Train Driver](https://apps.apple.com/au/app/train-driver/id1558334503) (iOS)
-- [Throttle Card](./throttlecard.md) (MacOS, iOS) *- Requires WiThrottle server*
 - [Elgato Stream Deck](https://github.com/daniep01/companion-module-dcc-ex-commandstation) (Physical Semi-DIY)
 - [HandCab](https://github.com/1fatgmc/HandCab/tree/main) (Physical DIY)
 - [ESU Mobile Control Pro](https://www.esu.eu/en/products/digital-control/mobile-control-pro/) (Physical Commerical)
