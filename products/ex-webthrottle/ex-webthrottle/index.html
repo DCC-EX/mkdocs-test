@@ -7396,7 +7396,7 @@
 
 
 <h1 id="ex-webthrottle-overview">EX-WebThrottle - Overview<a class="headerlink" href="#ex-webthrottle-overview" title="Permanent link">&para;</a></h1>
-<p>TODO:  Add screenshots</p>
+<p>TODO: Split into seperate pages for overview plus installing and using</p>
 <p><a href="https://DCC-EX.github.io/WebThrottle-EX&gt;">Run Ex-WebThrottle Now</a></p>
 <p><strong>EX‑WebThrottle</strong> is a throttle (controller) that can connect to the <strong>EX-CommandStation</strong> directly through the USB port of a computer</p>
 <p>For a video on how to install and use <strong>EX-WebThrottle</strong> <a href="https://youtu.be/BkgsEOjxWaU?si=Sm9e4o_jp4FXqFO3">see here</a>.</p>
@@ -7426,6 +7426,7 @@
 <p>This will install all the files to run locally on your machine. You won't need an internet connection to run the software. Just download the latest zip file from the link below and extract it to any folder you have run permission on. Then click on the index.html file to launch the throttle in your browser. Create a shortcut to it on your desktop so you can launch it more easily.</p>
 <p><a href="https://github.com/DCC-EX/WebThrottle-EX/releases&gt;">Download</a></p>
 <hr />
+<p><img align="right" alt="EX-WebThrottle - Menu" src="../../../_static/images/ex-webthrottle/menu.png" width="30%" /></p>
 <h2 id="operation">Operation<a class="headerlink" href="#operation" title="Permanent link">&para;</a></h2>
 <p><strong>EX-WebThrottle</strong> has five pages which you can switch between using the hamburger menu button (three horizontal bars) on the top left of the screen, or direct icon buttons at the top of the screen.</p>
 <ul>
@@ -7439,21 +7440,26 @@
 </ul>
 <hr />
 <h2 id="throttle">Throttle<a class="headerlink" href="#throttle" title="Permanent link">&para;</a></h2>
+<p><img align="right" alt="EX-WebThrottle" src="../../../_static/images/ex-webthrottle/ex-webthrottle.png" width="40%" /></p>
 <p>To use the program to connect to your <strong>EX-CommandStation</strong> leave the <code>Serial</code> dropdown as is.</p>
 <p>(See the section below if you wish to use the "emulator mode". )</p>
+<p><img alt="EX-WebThrottle - Connect button" src="../../../_static/images/ex-webthrottle/connect-button.png" width="50%" /></p>
 <p>Next, click on the <code>Connect EX-CS</code> button.</p>
 <p>When using the serial connection, if the program finds any compatible devices, it will open a popup a window showing you a selection. It may show a line at the top such as "Arduino Mega 2560 (COM3)". Your com port may vary. Click on your board to select it and then click the <code>Connect EX-CS</code> button.</p>
 <p>You should then be connected to the <strong>EX-CommandStation</strong> and should see the response from the Command Station in the log textbox of the debug console at the bottom of the throttle window. Make sure your debug console is open. If it isn't, use the <code>Debug Console</code> slider button in the lower lower right to open it.</p>
 <p>When the command station is ready to use you should see <code>[i] EX-CommandStation is READY</code> appear in the log.</p>
 <p>Now you are ready to run trains! Place your loco on the track and click the <code>Power</code> slider button to turn on power to your track (if not already on). You should see LEDs on your Motor Driver and an indication that your loco has power.</p>
 <p>.. note:: Make sure you place the loco on the <em>MAIN</em> track, <strong>not</strong> the PROG track. Check your wiring. On an  Motor Driver, Motor Output "A" should connect to your MAIN track and "B" to the PROGRAM track.</p>
+<p><img align="right" alt="EX-WebThrottle" src="../../../_static/images/ex-webthrottle/loco-id.png" width="50%" /></p>
 <p>Next go to the <code>Loco ID</code> textbox and enter the DCC Address of your loco and press the <code>Acquire</code> (right arrow in a circle) button. </p>
 <p>You should now have full control over your loco.</p>
+<p><img align="right" alt="EX-WebThrottle - Speed and Direction" src="../../../_static/images/ex-webthrottle/speed-and-direction-controls.png" width="40%" /></p>
 <p>In the throttle control area, to the left of the function buttons, are vertical controls to control direction. The up arrow selects forward, the square button is stop and the down arrow is reverse.</p>
 <p>All the function buttons should be working, so you can play with the headlight, horn and bell and any other function assigned to a function button. The commands being sent to the Command Station and its responses will display in the log window if it is open</p>
 <p>The circular control or vertical slider (chosen by the throttle select slider) can be moved by clicking and holding down the mouse button and dragging, clicking at a spot where you want the throttle to move, or clicking the <code>+</code> and <code>-</code> buttons.</p>
 <hr />
 <h3 id="issuing-direct-commands">Issuing Direct Commands<a class="headerlink" href="#issuing-direct-commands" title="Permanent link">&para;</a></h3>
+<p><img align="right" alt="EX-WebThrottle - Direct commands" src="../../../_static/images/ex-webthrottle/direct-commands.png" width="50%" /></p>
 <p>Once you are connected, you can also send commands directly to the <strong>EX-CommandStation</strong>.</p>
 <p>e.g. You can send the <code>&lt;s&gt;</code> command in the "direct command" textbox to get status information from your Command Station. To do this just enter <code>s</code> (without the quotes) and press the <code>Send</code> button. |BR| You should see <code>&lt;iDCC-EX...&gt;</code> returned in the log window with your version, type of Arduino, type of motor driver, and some other information.</p>
 <p>You can send any DCC-EX Native command in this way.</p>
@@ -7463,14 +7469,17 @@
 <p><em>Note: Not all Command Station functions are fully supported in the emulator. This means that although the software works, not all the responses will be shown in the debug console.</em></p>
 <hr />
 <h2 id="routesautomation">Routes/Automation<a class="headerlink" href="#routesautomation" title="Permanent link">&para;</a></h2>
+<p><img align="right" alt="EX-WebThrottle - Routes/Automation" src="../../../_static/images/ex-webthrottle/routes-automation.png" width="40%" /></p>
 <p>Once connected to a <strong>EX-CommandStation</strong>, The <strong>Routes/Automation</strong> page allows you to activate any of the Routes or Automations that have been stored in your <strong>EX-CommandStation</strong>, if any.</p>
 <p>Clicking the <code>Set</code> button on a Route/Automation will activate it.</p>
 <hr />
 <h2 id="turnoutspoints">Turnouts/Points<a class="headerlink" href="#turnoutspoints" title="Permanent link">&para;</a></h2>
+<p><img align="right" alt="EX-WebThrottle - Turnouts/Points" src="../../../_static/images/ex-webthrottle/turnouts.png" width="40%" /></p>
 <p>Once connected to a <strong>EX-CommandStation</strong>, The <strong>Turnouts/Points</strong> page allows you to throw or close any of the Turnouts/Points that have been stored in your <strong>EX-CommandStation</strong>, if any.</p>
 <p>Clicking either the <code>Throw</code> or <code>Close</code> buttons on a Turnout/Point will change it.</p>
 <hr />
 <h2 id="cv-programmer">CV Programmer<a class="headerlink" href="#cv-programmer" title="Permanent link">&para;</a></h2>
+<p><img align="right" alt="EX-WebThrottle - CV Programmer" src="../../../_static/images/ex-webthrottle/cv-programmer.png" width="40%" /></p>
 <p>The <strong>CV Programmer</strong> page allows you to read and write CVs (including the DCC address) from/to a decoder on the PROG Track.</p>
 <p>Note you must first connect to the <strong>EX-CommandStation</strong> from the <strong>Throttle</strong> page before you can use these features.</p>
 <h3 id="decoder-address">Decoder Address<a class="headerlink" href="#decoder-address" title="Permanent link">&para;</a></h3>
@@ -7504,6 +7513,7 @@
 <li>Theme</li>
 <li>Speed controller</li>
 </ul>
+<p><img align="right" alt="EX-WebThrottle - Settings - Speed Controller" src="../../../_static/images/ex-webthrottle/settings-speed-controller.png" width="40%" /></p>
 <p><strong>Theme</strong> Allows you change the appearance of the <strong>EX-WebThrottle</strong> screen to one of these options:</p>
 <ul>
 <li>Simple</li>
@@ -7547,7 +7557,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="March 5, 2026 03:00:24 UTC">March 5, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="March 5, 2026 04:05:31 UTC">March 5, 2026</span>
   </span>
 
     
