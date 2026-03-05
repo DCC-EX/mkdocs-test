@@ -1,7 +1,6 @@
+![Engine Driver](../_static/images/engine-driver/engine_driver_logo.png){: align="right" width="80px"}
+
 # Engine Driver
-
-
-![Android](../_static/images/os/icon_android.png){: width="50px"} ![Engine Driver](../_static/images/engine-driver/engine_driver_logo.png){: width="50px"}
 
 **Engine Driver** (ED) is an Android App that uses the *WiThrottle Protocol* *or* the *DCC-EX Native Commands* to connect directly to the **EX-CommandStation** via WiFi. It can also connect to the JMRI WiThrottle Server via WiFi using the *WiThrottle Protocol*.
 

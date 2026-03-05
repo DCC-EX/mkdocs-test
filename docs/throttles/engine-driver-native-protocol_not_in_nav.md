@@ -1,6 +1,6 @@
-# Engine Driver - Features when using the Native Protocol
+![Engine Driver](../_static/images/engine-driver/engine_driver_logo.png){: align="right" width="80px"}
 
-[Engine Driver](../_static/images/engine-driver/engine_driver_logo.png){: width="50px"}
+# Engine Driver - Features when using the Native Protocol
 
 By default, **Engine Driver** (ED) uses the *WiThrottle Protocol* to talk to all types of Command Station.
 

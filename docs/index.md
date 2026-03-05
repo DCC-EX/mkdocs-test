@@ -48,7 +48,7 @@ hide:
 
     We also have a a continually evolving range of additional [products](/products/products.md) to enhance your entire layout including an integrated fast clock, integrated turntable controller, and I/O expansion.
 
-- ## :material-help-box-multiple-outline: Who is DCC-EX
+- ## :material-help-box-multiple-outline: What is DCC-EX
 
     DCC-EX is world-wide team of dedicated enthusiasts producing **free** and open source **DCC** and **DC** software and hardware solutions to run your model trains and layout. Our mission is to use our many decades of software and hardware experience to make model trains accessible and affordable to everyone.
     

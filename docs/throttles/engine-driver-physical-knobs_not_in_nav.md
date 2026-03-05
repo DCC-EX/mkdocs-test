@@ -1,3 +1,5 @@
+![Engine Driver](../_static/images/engine-driver/engine_driver_logo.png){: align="right" width="80px"}
+
 # Engine Driver - Adding a Physical Dial/Knob
 
 While it is easy to use a BlueTooth gamepad with the **Engine Driver** app that doesn't allow for for a dial or slider.
