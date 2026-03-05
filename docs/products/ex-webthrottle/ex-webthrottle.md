@@ -2,7 +2,7 @@
 
 TODO: Split into seperate pages for overview plus installing and using
 
-[Run Ex-WebThrottle Now](https://DCC-EX.github.io/WebThrottle-EX>)
+[Run Ex-WebThrottle Now](https://dcc-ex.com/WebThrottle-EX/)
 
 **EX‑WebThrottle** is a throttle (controller) that can connect to the **EX-CommandStation** directly through the USB port of a computer
 
