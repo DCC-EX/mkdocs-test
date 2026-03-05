@@ -83,7 +83,7 @@ The DCC-EX team is a worldwide group of enthusiasts who volunteer their time to 
 
     - Barry Daniel- Gold Coast, Australia (BarryD)
 
-### DCCEXProtocol
+### DCCEXProtocol (Arduino library)
 
 - Developers
 
