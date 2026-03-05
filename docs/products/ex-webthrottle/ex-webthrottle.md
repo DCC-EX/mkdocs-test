@@ -1,6 +1,6 @@
 # EX-WebThrottle - Overview
 
-TODO:  Add screenshots
+TODO: Split into seperate pages for overview plus installing and using
 
 [Run Ex-WebThrottle Now](https://DCC-EX.github.io/WebThrottle-EX>)
 
@@ -50,6 +50,8 @@ This will install all the files to run locally on your machine. You won't need a
 
 ----
 
+![EX-WebThrottle - Menu](../../_static/images/ex-webthrottle/menu.png){: align=right width=30%}
+
 ## Operation
 
 **EX-WebThrottle** has five pages which you can switch between using the hamburger menu button (three horizontal bars) on the top left of the screen, or direct icon buttons at the top of the screen.
@@ -66,9 +68,13 @@ This will install all the files to run locally on your machine. You won't need a
 
 ## Throttle
 
+![EX-WebThrottle](../../_static/images/ex-webthrottle/ex-webthrottle.png){: align=right width=40%}
+
 To use the program to connect to your **EX-CommandStation** leave the ``Serial`` dropdown as is.
 
 (See the section below if you wish to use the "emulator mode". )
+
+![EX-WebThrottle - Connect button](../../_static/images/ex-webthrottle/connect-button.png){: width=50%}
 
 Next, click on the ``Connect EX-CS`` button.
 
@@ -82,9 +88,13 @@ Now you are ready to run trains! Place your loco on the track and click the `Pow
 
 .. note:: Make sure you place the loco on the *MAIN* track, **not** the PROG track. Check your wiring. On an  Motor Driver, Motor Output "A" should connect to your MAIN track and "B" to the PROGRAM track.
 
+![EX-WebThrottle](../../_static/images/ex-webthrottle/loco-id.png){: align=right width=50%}
+
 Next go to the `Loco ID` textbox and enter the DCC Address of your loco and press the ``Acquire`` (right arrow in a circle) button. 
 
 You should now have full control over your loco.
+
+![EX-WebThrottle - Speed and Direction](../../_static/images/ex-webthrottle/speed-and-direction-controls.png){: align=right width=40%}
 
 In the throttle control area, to the left of the function buttons, are vertical controls to control direction. The up arrow selects forward, the square button is stop and the down arrow is reverse.
 
@@ -95,6 +105,8 @@ The circular control or vertical slider (chosen by the throttle select slider) c
 ----
 
 ### Issuing Direct Commands
+
+![EX-WebThrottle - Direct commands](../../_static/images/ex-webthrottle/direct-commands.png){: align=right width=50%}
 
 Once you are connected, you can also send commands directly to the **EX-CommandStation**.
 
@@ -114,6 +126,8 @@ To use the program in to emulate an **EX-CommandStation**, without actually conn
 
 ## Routes/Automation
 
+![EX-WebThrottle - Routes/Automation](../../_static/images/ex-webthrottle/routes-automation.png){: align=right width=40%}
+
 Once connected to a **EX-CommandStation**, The **Routes/Automation** page allows you to activate any of the Routes or Automations that have been stored in your **EX-CommandStation**, if any.
 
 Clicking the `Set` button on a Route/Automation will activate it.
@@ -122,6 +136,8 @@ Clicking the `Set` button on a Route/Automation will activate it.
 
 ## Turnouts/Points
 
+![EX-WebThrottle - Turnouts/Points](../../_static/images/ex-webthrottle/turnouts.png){: align=right width=40%}
+
 Once connected to a **EX-CommandStation**, The **Turnouts/Points** page allows you to throw or close any of the Turnouts/Points that have been stored in your **EX-CommandStation**, if any.
 
 Clicking either the `Throw` or `Close` buttons on a Turnout/Point will change it.
@@ -129,6 +145,8 @@ Clicking either the `Throw` or `Close` buttons on a Turnout/Point will change it
 ----
 
 ## CV Programmer
+
+![EX-WebThrottle - CV Programmer](../../_static/images/ex-webthrottle/cv-programmer.png){: align=right width=40%}
 
 The **CV Programmer** page allows you to read and write CVs (including the DCC address) from/to a decoder on the PROG Track.
 
@@ -184,6 +202,8 @@ The **Settings page** allows you to manage aspects of the **EX-CommandStation** 
 
 * Theme
 * Speed controller
+
+![EX-WebThrottle - Settings - Speed Controller](../../_static/images//ex-webthrottle/settings-speed-controller.png){: align=right width=40% }
 
 **Theme** Allows you change the appearance of the **EX-WebThrottle** screen to one of these options:
 
