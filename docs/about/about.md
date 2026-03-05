@@ -83,7 +83,7 @@ The DCC-EX team is a worldwide group of enthusiasts who volunteer their time to 
 
     - Barry Daniel- Gold Coast, Australia (BarryD)
 
-### DCCEXProtocol
+### DCCEXProtocol (Arduino library)
 
 - Developers
 
@@ -134,11 +134,11 @@ The DCC-EX team is a worldwide group of enthusiasts who volunteer their time to 
 
 Making sure this software works well with |EX-CS|
 
-- JMRI
+- [Java Model Railroad Interface (JMRI)](https://www.jmri.org/)
   
     - M Steve Todd - USA (MSteveTodd)
 
-- Engine Driver (ED)
+- [Engine Driver (ED)](https://github.com/DCC-EX/mkdocs-test)
   
     - M Steve Todd - USA (MSteveTodd)
     - Peter Akers - South East QLD, Australia (flash62au)

@@ -1,7 +1,6 @@
+![Engine Driver](../_static/images/engine-driver/engine_driver_logo.png){: align="right" width="80px"}
+
 # Engine Driver
-
-
-![Android](../_static/images/os/icon_android.png){: width="50px"} ![Engine Driver](../_static/images/engine-driver/engine_driver_logo.png){: width="50px"}
 
 **Engine Driver** (ED) is an Android App that uses the *WiThrottle Protocol* *or* the *DCC-EX Native Commands* to connect directly to the **EX-CommandStation** via WiFi. It can also connect to the JMRI WiThrottle Server via WiFi using the *WiThrottle Protocol*.
 
@@ -32,7 +31,7 @@ Extensive help is available at the [Engine Driver Home](https://flash62au.github
 * 'Roster Server' download Engine ID's & function keys from the Command Station
 * 'Virtual Engine Sounds' {Bell, Horn, Short Horn, Mute} for motor only decoders, on first two throttles
 * Able to use inexpensive Bluetooth gamepads for tactile control
-* Multiple theme, colours and throttle layout options 
+* Multiple theme, colours and throttle layout options
 
 ## EX-CommandStation Specific or Advantageous Features
 
@@ -90,19 +89,19 @@ More information is available on the [Engine Driver](https://enginedriver.msteve
 
 It is possible to easily add a rotary dial (knob) to **Engine Driver**.  see [Adding a Physical Dial/Knob to Engine Driver](engine-driver-physical-knobs_not_in_nav.md) for more information.
 
-## Recording a log file in EngineDriver
+## Recording a log file in Engine Driver
 
 If you are having difficulties with Engine Driver connecting to an **EX-CommandStation** it is very helpful if you can provide the support team with a log file of when the problem occurs.
 
-To record a log file in EngineDriver:
+To record a log file in Engine Driver:
 
-1. Start ED.
+1. Start Engine Driver
 1. From the menu, select ``View Log``
 1. Click :guilabel:`Start recording to a file`
 1. Click :guilabel:`Close`
 1. Attempt whatever is causing the problem a few times
 1. Exit ED
-1. Connect a USB cable to your phone and PC 
+1. Connect a USB cable to your phone and PC
 1. Allow access if the phone asks.
 1. In some versions of Android you may also need to change the connection type on the phone from 'charging' to 'file transfer'
 1. Open a file manager and find the connected phone
