@@ -1,6 +1,6 @@
 # Throttles and Other Controllers
 
-The following are lisst of the Throttle apps and devices that are know to work with **EX-Commandstations**.  There may be others.
+The following are lists of the Throttle apps and devices that are known to work with **EX-Commandstations**.  There may be others.
 
 ----
 
