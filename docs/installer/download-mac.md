@@ -29,3 +29,12 @@ On later macOS versions, go to Privacy & Security in System Settings, and scroll
 
 ![Privacy & Security](/_static/images/ex-installer/macOS-privacy-and-security.png){ align=left }
 
+On Apple Silicon Macs (M1, M2, Neo etc.), you may need to install Apple's Rosetta software in order to run version 0.20 or earlier of EX-Installer. 
+
+Install Apple's Rosetta with the following command:
+
+```bash
+softwareupdate --install-rosetta
+```
+
+Then retry running EX-Installer. Note that the Rosetta translation means that EX-Installer will take a good long while to start. Please be patient!
