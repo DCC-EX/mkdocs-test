@@ -2195,36 +2195,36 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#all-locos-have-the-same-address" class="md-nav__link">
+  <a href="#1-all-locos-have-the-same-address" class="md-nav__link">
     <span class="md-ellipsis">
-      All locos have the same address
+      1. All locos have the same address
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#decoder-consist" class="md-nav__link">
+  <a href="#2-decoder-consist" class="md-nav__link">
     <span class="md-ellipsis">
-      Decoder consist
+      2. Decoder consist
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#throttle-consist-not-possible-for-exrail" class="md-nav__link">
+  <a href="#3-throttle-consist-not-possible-for-exrail" class="md-nav__link">
     <span class="md-ellipsis">
-      Throttle Consist (NOT POSSIBLE for EXRAIL)
+      3. Throttle Consist (NOT POSSIBLE for EXRAIL)
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#command-station-consists" class="md-nav__link">
+  <a href="#4-command-station-consists" class="md-nav__link">
     <span class="md-ellipsis">
-      Command Station consists
+      4. Command Station consists
     </span>
   </a>
   
@@ -2236,9 +2236,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#consisting-with-exrail" class="md-nav__link">
+  <a href="#command-station-consists-with-exrail" class="md-nav__link">
     <span class="md-ellipsis">
-      Consisting with EXRAIL
+      Command Station consists with EXRAIL
     </span>
   </a>
   
@@ -7057,36 +7057,36 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#all-locos-have-the-same-address" class="md-nav__link">
+  <a href="#1-all-locos-have-the-same-address" class="md-nav__link">
     <span class="md-ellipsis">
-      All locos have the same address
+      1. All locos have the same address
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#decoder-consist" class="md-nav__link">
+  <a href="#2-decoder-consist" class="md-nav__link">
     <span class="md-ellipsis">
-      Decoder consist
+      2. Decoder consist
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#throttle-consist-not-possible-for-exrail" class="md-nav__link">
+  <a href="#3-throttle-consist-not-possible-for-exrail" class="md-nav__link">
     <span class="md-ellipsis">
-      Throttle Consist (NOT POSSIBLE for EXRAIL)
+      3. Throttle Consist (NOT POSSIBLE for EXRAIL)
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#command-station-consists" class="md-nav__link">
+  <a href="#4-command-station-consists" class="md-nav__link">
     <span class="md-ellipsis">
-      Command Station consists
+      4. Command Station consists
     </span>
   </a>
   
@@ -7098,9 +7098,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#consisting-with-exrail" class="md-nav__link">
+  <a href="#command-station-consists-with-exrail" class="md-nav__link">
     <span class="md-ellipsis">
-      Consisting with EXRAIL
+      Command Station consists with EXRAIL
     </span>
   </a>
   
@@ -7129,17 +7129,20 @@
 <p>A "Consist" refers to multiple locos driving one train. This requires the locos to follow the same throttle commands.</p>
 <h2 id="consist-types">Consist Types<a class="headerlink" href="#consist-types" title="Permanent link">&para;</a></h2>
 <p>There are four types of consist:</p>
-<h3 id="all-locos-have-the-same-address">All locos have the same address<a class="headerlink" href="#all-locos-have-the-same-address" title="Permanent link">&para;</a></h3>
-<p>This involves programming the loco addresses individually. All functions will be read by all locos in the consist. Addresses can be easily programmed on the PROG track with the <code>&lt;W locoid&gt;</code> command. Disadvantages, visitors or club members domt like having their CVs changed.</p>
-<h3 id="decoder-consist">Decoder consist<a class="headerlink" href="#decoder-consist" title="Permanent link">&para;</a></h3>
+<h3 id="1-all-locos-have-the-same-address">1. All locos have the same address<a class="headerlink" href="#1-all-locos-have-the-same-address" title="Permanent link">&para;</a></h3>
+<p>This involves programming the loco addresses individually. All functions will be read by all locos in the consist. Addresses can be easily programmed on the PROG track with the <code>&lt;W locoid&gt;</code> command.</p>
+<p>Disadvantages, visitors or club members domt like having their CVs changed. Functions sent to the address will affect all locos, which is often wrong for lighting rules etc.</p>
+<h3 id="2-decoder-consist">2. Decoder consist<a class="headerlink" href="#2-decoder-consist" title="Permanent link">&para;</a></h3>
 <p>The decoders have CVs (19 and 20) to give an address to which they will all respond. Their normal address is not altered. This consist address may be programmed into each loco with the PROG track <code>&lt;W CONSIST id [REVERSE]&gt;</code> command or main track <code>&lt;w locoid CONSIST consistid [REVERSE]&gt;</code>. Disadvantages as above for CV changes.</p>
-<h3 id="throttle-consist-not-possible-for-exrail">Throttle Consist (NOT POSSIBLE for EXRAIL)<a class="headerlink" href="#throttle-consist-not-possible-for-exrail" title="Permanent link">&para;</a></h3>
+<h3 id="3-throttle-consist-not-possible-for-exrail">3. Throttle Consist (NOT POSSIBLE for EXRAIL)<a class="headerlink" href="#3-throttle-consist-not-possible-for-exrail" title="Permanent link">&para;</a></h3>
 <p>The locos are unchanged and the throttle sends individual speed command to each loco.
-Disadvantages are that only the throttle knows about the relationship between the locos and that information can't easily be shared with other throttles, so another throttle may command one of the locos differently and cause mayhem. EXRAIL drives on one loco id so cannot drive this kind of consist.</p>
-<h3 id="command-station-consists">Command Station consists<a class="headerlink" href="#command-station-consists" title="Permanent link">&para;</a></h3>
-<p>The command station knows the locos that are in the consist. Any speed commands to the lead loco are transmitted to all following locos. No CVs are modified and any throttle, including EXRAIL  can drive the lead loco or send function commands to the followers.</p>
-<p>Throttle commands sent to the following locos are ignored but throttles will still see the correct lead loco speed changes.</p>
-<h2 id="consisting-with-exrail">Consisting with EXRAIL<a class="headerlink" href="#consisting-with-exrail" title="Permanent link">&para;</a></h2>
+Disadvantages are that only the throttle knows about the relationship between the locos and that information can't easily be shared with other throttles, so another throttle may command one of the locos differently and cause mayhem. EXRAIL drives on one loco id so cannot drive this kind of consist. Which loco gets which functions may be configured at the throttle but are unknown to the command station.</p>
+<h3 id="4-command-station-consists">4. Command Station consists<a class="headerlink" href="#4-command-station-consists" title="Permanent link">&para;</a></h3>
+<p>The command station knows the locos that are in the consist. Any speed commands to the lead loco are transmitted to all following locos. No CVs are modified and any throttle, including EXRAIL  can drive the lead loco or send function commands to the followers, but functions sent to the lead loco are not shared with the other locos, as there is no guarantee that "horn" on one loco isnt "halt and catch fire" on another.  </p>
+<p>Throttle commands sent to the following locos are ignored but the command station broadcasts lead loco throttle changes for each loco.</p>
+<p>These consists can be built with
+ <a href="../../../../../../reference/serial-commands/#consist-control">commands</a> or EXRAIL.</p>
+<h2 id="command-station-consists-with-exrail">Command Station consists with EXRAIL<a class="headerlink" href="#command-station-consists-with-exrail" title="Permanent link">&para;</a></h2>
 <p>Command Station consists can be built up with EXRAIL commands:</p>
 <p><code>BUILD_CONSIST(newloco)</code>  adds the new loco to follow the existing task loco. Specifying newloco as negative means the loco is facing the opposite way to the rest of the consist.</p>
 <p>For example:</p>
@@ -7149,6 +7152,7 @@ Disadvantages are that only the throttle knows about the relationship between th
 <span class="n">BUILD_CONSIST</span><span class="p">(</span><span class="mi">-99</span><span class="p">)</span><span class="w"> </span><span class="c1">// adds loco 99 facing backwards</span>
 <span class="n">FWD</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span><span class="w"> </span><span class="c1">// all 4 locos set off together </span>
 </code></pre></div>
+<p>EXRAIL can also break up a consist with the <code>BREAK_CONSIST</code> command which will break up any consist that includes the current loco.</p>
 
 
 
@@ -7169,7 +7173,7 @@ Disadvantages are that only the throttle knows about the relationship between th
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="March 14, 2026 08:26:09 UTC">March 14, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="March 25, 2026 13:47:03 UTC">March 25, 2026</span>
   </span>
 
     
