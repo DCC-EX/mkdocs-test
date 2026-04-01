@@ -6969,12 +6969,12 @@
 <p>When you have turnouts that face each other, its awkward for the throttle user to have to manually switch both to match each other. By treating the crossover as a single turnout, control is simplified and incorrect combinations are prevented.</p>
 <p>To do this, we need to hide one of the turnouts from the user, and make sure that throwing/closing the visible turnout automatically throws/closes the other turnout.</p>
 <p>All turnout definitions in EXRAIL allow for a text description to be shown to the user throttle. The HIDDEN keyword, used instead of a turnout description prevents it being visible to the throttle or JMRI/iTrain etc.</p>
-<p>```cpp
-TURNOUTL(1,101,"Cross inner to outer")
-TURNOUTL(2,102,HIDDEN)</p>
-<p>ONTHROW(1) THROW(2) DONE
-ONCLOSE(1) CLOSE(2) DONE
-```</p>
+<div class="highlight"><pre><span></span><code><span class="n">TURNOUTL</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">101</span><span class="p">,</span><span class="s">&quot;Cross inner to outer&quot;</span><span class="p">)</span>
+<span class="n">TURNOUTL</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">102</span><span class="p">,</span><span class="n">HIDDEN</span><span class="p">)</span>
+
+<span class="n">ONTHROW</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="n">THROW</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="w"> </span><span class="n">DONE</span>
+<span class="n">ONCLOSE</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="n">CLOSE</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="w"> </span><span class="n">DONE</span>
+</code></pre></div>
 
 
 
@@ -6995,7 +6995,7 @@ ONCLOSE(1) CLOSE(2) DONE
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="March 31, 2026 21:08:07 UTC">March 31, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="December 23, 2025 20:20:47 UTC">December 23, 2025</span>
   </span>
 
     

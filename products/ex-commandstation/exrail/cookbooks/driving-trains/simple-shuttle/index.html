@@ -7043,26 +7043,26 @@
 
 <h1 id="simple-shuttle">Simple shuttle<a class="headerlink" href="#simple-shuttle" title="Permanent link">&para;</a></h1>
 <p>Imagine we have a track like this with sensors 164 and 165 at each end.</p>
-<p><code>cpp
-Dogbath                                                  Catflap
-||============================================================||
-  |                                                          |
- 164                                                        165</code></p>
+<div class="highlight"><pre><span></span><code><span class="n">Dogbath</span><span class="w">                                                  </span><span class="n">Catflap</span>
+<span class="o">||============================================================||</span>
+<span class="w">  </span><span class="o">|</span><span class="w">                                                          </span><span class="o">|</span>
+<span class="w"> </span><span class="mi">164</span><span class="w">                                                        </span><span class="mi">165</span>
+</code></pre></div>
 <h2 id="sensor-positioning">Sensor positioning<a class="headerlink" href="#sensor-positioning" title="Permanent link">&para;</a></h2>
 <p>This illustrates an important aspect of EXRAIL driving. The sequence is only interested in one sensor at a time, there is no case for logic that says "Oh wait! Sensor 164 has been hit, how do I know which loco it was and which way it was going... and was it the loco that hit it or the end of the reversing train.."</p>
 <p>If you are using magnet-operated sensors that only detect the loco, you must adjust the sensor positions to take into account the length of the train when it is reversing. In this case, moving the sensors at the Dogbath end by one train length towards Catflap.</p>
 <h2 id="creating-the-basic-automation">Creating the basic AUTOMATION<a class="headerlink" href="#creating-the-basic-automation" title="Permanent link">&para;</a></h2>
 <p>Create an automation like this. The automation id needs to be unique amongst all AUTOMATION, ROUTE or SEQUENCE definitions.  </p>
-<p><code>cpp
-AUTOMATION(123,"Dogbath to Catflap shuttle")
-  FWD(40) // Set off from Dogbath
-  AT(165) // wait until we get to Catflap stopping point 
-  STOP // and then stop
-  DELAYRANDOM(15000,20000) // wait for driver to have a smoke 
-  REV(40) // reverse back 
-  AT(164) STOP // At Dogbath 
-  DELAYRANDOM(5000,10000) // wait 5 to 10 seconds 
-  FOLLOW(123) // and follow the sequence again</code></p>
+<div class="highlight"><pre><span></span><code><span class="n">AUTOMATION</span><span class="p">(</span><span class="mi">123</span><span class="p">,</span><span class="s">&quot;Dogbath to Catflap shuttle&quot;</span><span class="p">)</span>
+<span class="w">  </span><span class="n">FWD</span><span class="p">(</span><span class="mi">40</span><span class="p">)</span><span class="w"> </span><span class="c1">// Set off from Dogbath</span>
+<span class="w">  </span><span class="n">AT</span><span class="p">(</span><span class="mi">165</span><span class="p">)</span><span class="w"> </span><span class="c1">// wait until we get to Catflap stopping point </span>
+<span class="w">  </span><span class="n">STOP</span><span class="w"> </span><span class="c1">// and then stop</span>
+<span class="w">  </span><span class="n">DELAYRANDOM</span><span class="p">(</span><span class="mi">15000</span><span class="p">,</span><span class="mi">20000</span><span class="p">)</span><span class="w"> </span><span class="c1">// wait for driver to have a smoke </span>
+<span class="w">  </span><span class="n">REV</span><span class="p">(</span><span class="mi">40</span><span class="p">)</span><span class="w"> </span><span class="c1">// reverse back </span>
+<span class="w">  </span><span class="n">AT</span><span class="p">(</span><span class="mi">164</span><span class="p">)</span><span class="w"> </span><span class="n">STOP</span><span class="w"> </span><span class="c1">// At Dogbath </span>
+<span class="w">  </span><span class="n">DELAYRANDOM</span><span class="p">(</span><span class="mi">5000</span><span class="p">,</span><span class="mi">10000</span><span class="p">)</span><span class="w"> </span><span class="c1">// wait 5 to 10 seconds </span>
+<span class="w">  </span><span class="n">FOLLOW</span><span class="p">(</span><span class="mi">123</span><span class="p">)</span><span class="w"> </span><span class="c1">// and follow the sequence again</span>
+</code></pre></div>
 <p>First drive your train to Dogbath, with the front facing Catflap. Select the automation from your throttle and the train should start after a random wait.</p>
 <p>It should be pretty obvious what this does and where the sensors need to be to give a reasonable stopping point, but this may depend on inertia settings in your loco decoder or command station setup.</p>
 <p>The AT command pauses the driving task until the sensor is activated.</p>
@@ -7088,7 +7088,7 @@ AUTOMATION(123,"Dogbath to Catflap shuttle")
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="March 31, 2026 21:08:07 UTC">March 31, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="December 23, 2025 20:20:47 UTC">December 23, 2025</span>
   </span>
 
     
