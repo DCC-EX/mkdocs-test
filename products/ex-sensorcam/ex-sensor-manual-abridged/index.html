@@ -8666,14 +8666,13 @@ The information below pertains mostly to the newer WROVER-CAM, as mentioned in <
 <h3 id="1-sensorvpin-numbering">1. Sensor/vpin Numbering<a class="headerlink" href="#1-sensorvpin-numbering" title="Permanent link">&para;</a></h3>
 <p>The numbering of sensors can be consecutive by vPin, which is the common practice with multi-pin peripherals (e.g. PCA9685 16-channel Servo driver and MCP23017 16-channel GPIO Expander). Sequential vPin numbers within a device is hardware enforced, but this loses some of the advantages available by a more meaningful ID notation. Such ID's are available for jmri use and so can also be used for sensorCAM. Use of IDs, as suggested below, can remove any need to program with vPin numbers.</p>
 <p>For any peripheral device, the vPin is needed for commands (e.g.700+5), but, if predefined (e.g. in config.h), alphanumeric names such as CAM or CAM2 or ESSEX can be used in place of the base vPin to identify the camera. Then commands for CAM pin 5 become: e.g. AT(CAM 05) or AT(ESSEX 05)</p>
-<div class="highlight"><pre><span></span><code><span class="w"> </span><span class="n">e</span><span class="p">.</span><span class="n">g</span><span class="p">.</span><span class="w">  </span>
-<span class="w"> </span><span class="cp">#define SENSORCAM_VPIN 700    </span><span class="c1">//place in config.h or myAutomation.h or mysetup.h  </span>
-<span class="w"> </span><span class="cp">#define CAM  SENSORCAM_VPIN+  </span><span class="c1">//in config.h or myAutomation.h or mysetup.h  </span>
-
-<span class="w"> </span><span class="n">Valid</span><span class="w"> </span><span class="n">EXRAIL</span><span class="w"> </span><span class="n">commands</span><span class="o">:</span><span class="w"> </span><span class="n">AFTER</span><span class="p">(</span><span class="n">CAM</span><span class="w"> </span><span class="mi">5</span><span class="p">)</span><span class="w">  </span><span class="n">AT</span><span class="p">(</span><span class="n">SENSORCAM_VPIN</span><span class="o">+</span><span class="mi">7</span><span class="p">)</span><span class="w">  </span><span class="n">IFGTE</span><span class="p">(</span><span class="n">CAM</span><span class="w"> </span><span class="mo">010</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">)</span><span class="w">  </span>
-
-<span class="w"> </span><span class="n">To</span><span class="w"> </span><span class="n">avoid</span><span class="w"> </span><span class="n">frequent</span><span class="w"> </span><span class="err">“</span><span class="n">CAM</span><span class="err">”</span><span class="w"> </span><span class="n">in</span><span class="w"> </span><span class="n">scripts</span><span class="p">,</span><span class="w"> </span><span class="n">an</span><span class="w"> </span><span class="n">alias</span><span class="w"> </span><span class="n">can</span><span class="w"> </span><span class="n">be</span><span class="w"> </span><span class="n">assigned</span><span class="w"> </span><span class="n">e</span><span class="p">.</span><span class="n">g</span><span class="p">.</span><span class="w"> </span><span class="n">ALIAS</span><span class="p">(</span><span class="n">ESSEX_P1</span><span class="p">,</span><span class="w"> </span><span class="n">CAM</span><span class="o">+</span><span class="mh">0x10</span><span class="p">)</span>
-</code></pre></div>
+<p>```c++
+ e.g.<br />
+ #define SENSORCAM_VPIN 700    //place in config.h or myAutomation.h or mysetup.h<br />
+ #define CAM  SENSORCAM_VPIN+  //in config.h or myAutomation.h or mysetup.h  </p>
+<p>Valid EXRAIL commands: AFTER(CAM 5)  AT(SENSORCAM_VPIN+7)  IFGTE(CAM 010, 2)  </p>
+<p>To avoid frequent “CAM” in scripts, an alias can be assigned e.g. ALIAS(ESSEX_P1, CAM+0x10)
+```</p>
 <p>With each sensorCAM having up to 80 sensors, it is desirable to test groups of (1 to 8) sensors with a single EXRAIL test using the <strong>IFGTE()</strong> or <strong>IFLE()</strong> commands. To do this, the sensors are logically arranged in “banks” of (consecutive) vpins. The logical grouping available can be written in the form “bs” or b/s where b can have bank values of 0-9 (10 banks) and s values 0-7 (8 sensors). <strong>IFGTE</strong> and <strong>IFLT</strong> read a whole bank "value". Native CAM commands can also be issued e.g. <strong>PARSE("&lt;N b 4&gt;")</strong> for bank 4.</p>
 <p>EXRAIL can accept “b/s” numbering (e.g. 047) if we add the leading 0. e.g. vpin= <strong>SENSORCAM_VPIN+ 047</strong> e.g. <strong>IFGTE(CAM 047,1)</strong> provided values are defined for <strong>SENSORCAM_VPIN</strong> &amp; <strong>CAM</strong>(as above).</p>
 <p><strong>(N.B. “CAM” includes the ‘+’)</strong> Using this method there is no need to remember assigned vPin values!</p>
@@ -8725,7 +8724,7 @@ Finally, at the signal(S17), <strong>IFGTE(CAM 013,128) STOP</strong></p>
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="January 6, 2026 05:25:18 UTC">January 6, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="April 10, 2026 20:59:38 UTC">April 10, 2026</span>
   </span>
 
     
