@@ -6969,20 +6969,20 @@
 <p>DCC Turnouts (or points) operate by listening to DCC messages sent along the track by the command station.
 Each turnout has a DCC address which may be specified as a pair of values (address,subaddress) or a single value linear address. Its generally easier to think in terms of the linear address but it makes no difference whatever to the kind of DCC message sent, other than the conversion from (address,subaddress) to linear is badly thought out and inconsistent between DCC implementations due to historically/histerically ambiguous standards.</p>
 <p>Define DCC based turnouts using EXRAIL.</p>
-<p>```cpp
-TURNOUTL(id, address, "description")</p>
-<p>TURNOUT(id, shortAddress, subAddress, "description")
-```</p>
+<div class="highlight"><pre><span></span><code><span class="n">TURNOUTL</span><span class="p">(</span><span class="n">id</span><span class="p">,</span><span class="w"> </span><span class="n">address</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;description&quot;</span><span class="p">)</span>
+
+<span class="n">TURNOUT</span><span class="p">(</span><span class="n">id</span><span class="p">,</span><span class="w"> </span><span class="n">shortAddress</span><span class="p">,</span><span class="w"> </span><span class="n">subAddress</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;description&quot;</span><span class="p">)</span>
+</code></pre></div>
 <p>id = Unique turnout ID within the CommandStation. All other turnout commands will refer to this turnout by this id.</p>
 <p>address- the DCC address that the turnout decoder is listening to
   or
 shortAddress,subAddress - the alternative form of the same address.</p>
 <p>description = A human-friendly description of the turnout that will appear in WiThrottle apps and Engine Driver. Note that this must be enclosed in quotes <code>""</code>. In some cases the HIDDEN keyword can be used here to prevent the turnout being visible to the throttles.</p>
 <p>For example:</p>
-<p><code>cpp
-TURNOUTL(123,55,"Up the junction")
-TURNOUT(124,12,3,"Down the mine")
-TURNOUTL(125,56,HIDDEN) // not visible to throttles</code></p>
+<div class="highlight"><pre><span></span><code><span class="n">TURNOUTL</span><span class="p">(</span><span class="mi">123</span><span class="p">,</span><span class="mi">55</span><span class="p">,</span><span class="s">&quot;Up the junction&quot;</span><span class="p">)</span>
+<span class="n">TURNOUT</span><span class="p">(</span><span class="mi">124</span><span class="p">,</span><span class="mi">12</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="s">&quot;Down the mine&quot;</span><span class="p">)</span>
+<span class="n">TURNOUTL</span><span class="p">(</span><span class="mi">125</span><span class="p">,</span><span class="mi">56</span><span class="p">,</span><span class="n">HIDDEN</span><span class="p">)</span><span class="w"> </span><span class="c1">// not visible to throttles</span>
+</code></pre></div>
 
 
 
@@ -7003,7 +7003,7 @@ TURNOUTL(125,56,HIDDEN) // not visible to throttles</code></p>
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="April 10, 2026 20:59:38 UTC">April 10, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="December 23, 2025 20:20:47 UTC">December 23, 2025</span>
   </span>
 
     
