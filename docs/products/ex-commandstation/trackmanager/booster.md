@@ -1,8 +1,8 @@
 # EX-CSB1 in DCC Booster Mode
 
-The EX-CSB1 can be configured as a DCC Booster.  As a booster it can take input from any DCC Command Station, not just an EX-CommandStation, to provide additional two power districts to your layout.  With the addition of an EX-MotorShield8874, it can provide up to 4 power districts.
+The EX-CSB1 can be configured as a DCC Booster.  As a booster it can take input from any DCC Command Station, not just an EX-CommandStation, to provide two additional power districts to your layout.  With the addition of an EX-MotorShield8874, it can provide up to 4 power districts.
 
-To configure the EX-CSB1 as a DCC Booster, you will need to install the EX-CommandStation software on it with the addition of the following commands to the ``myAutomation.h`` file:
+To configure the EX-CSB1 as a DCC Booster, you will need to install the EX-CommandStation software on it with the addition of the following commands in the ``myAutomation.h`` file:
 
 ```c++
 AUTOSTART
@@ -15,21 +15,26 @@ AUTOSTART
   PRINT("Waiting for RAILSYNC")
   DONE
 
+//   BOOSTER_INPUT pin requires define in config.h
 ONRAILSYNCON
+  RESERVE(111)
   SET_TRACK(A, BOOST)
   SET_POWER(A, ON)
   PRINT("RAILSYNC ON TRACK A BOOST")
   SET_TRACK(B, BOOST)
   SET_POWER(B, ON)
+  FREE(111)
   PRINT("RAILSYNC ON TRACK B BOOST")
   LCD(4, "BOOSTER A B ON")
   DONE
 
 ONRAILSYNCOFF
+  RESERVE(111)
   SET_TRACK(A, MAIN)
   SET_TRACK(B, MAIN)
   SET_POWER(A, OFF)
   SET_POWER(B, OFF)
+  FREE(111)
   LCD(4, "BOOSTER OFF")
   PRINT("RAILSYNC OFF")
   DONE
