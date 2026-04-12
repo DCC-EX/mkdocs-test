@@ -3,6 +3,8 @@ nav:
   - EX-CSB1 CommandStation Booster: ex-csb1.md
   - Running a DC layout: dc-running.md
   - Configuration (config.h): config-h.md
+  - WiFi Configuration (CSB1 or ESP32): config-wifi-esp32.md
+  - WiFi Configuration (Wifi Shield): config-wifi-shield.md
   - Testing your Command Station: testing.md
   - TrackManager: trackmanager
   - Loco Programming: loco-programming

@@ -233,7 +233,11 @@ How to understand the syntax:
 | `<C RAILCOM ON>` | Enable Railcom cutout | None |
 | `<C RAILCOM OFF>` | Disable Railcom cutout | None |
 | `<C RAILCOM DEBUG>` | Enable Railcom cutout for scope testing | None |
-| `<C WIFI "ssid" "password">` | Reconfigure stored WiFi credentials | `ssid`: Network name, `password`: Password |
+| `<C WIFI "ssid" "password">` | Reconfigure stored STA WiFi credentials | `ssid`: Network name, `password`: Password |
+| `<C WIFI AP "ssid" "password" [channel]>` | Reconfigure stored WiFi AP | `ssid`: Network name, `password`: Password |
+| `<C WIFI HIDDENAP "ssid" "password" [channel]>` | Reconfigure stored WiFi AP | `ssid`: Network name, `password`: Password |
+| `<C WIFI DEFAULT>` | Set WiFi to default |  |
+| `<C WIFI ON/OFF>` | Set WiFi on/off name|  |
 
 ## Diagnostic Commands
 
@@ -255,6 +259,7 @@ How to understand the syntax:
 | `<D RAILCOM OFF>` | Disable Railcom diagnostics | None |
 | `<D WIFI ON>` | Enable WiFi diagnostics | None |
 | `<D WIFI OFF>` | Disable WiFi diagnostics | None |
+| `<D WIFI SHOW>` | Shows WiFi settings | None |
 | `<D ETHERNET ON>` | Enable Ethernet diagnostics | None |
 | `<D ETHERNET OFF>` | Disable Ethernet diagnostics | None |
 | `<D WIT ON>` | Enable Withrottle diagnostics | None |
