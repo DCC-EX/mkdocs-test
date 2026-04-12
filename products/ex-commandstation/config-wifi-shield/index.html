@@ -850,6 +850,24 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#setup-ap-access-point-default-mode" class="md-nav__link">
+    <span class="md-ellipsis">
+      Setup AP (Access Point) default mode
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setup-ap-access-point-advanced-mode" class="md-nav__link">
+    <span class="md-ellipsis">
+      Setup AP (Access Point) advanced mode
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -7044,6 +7062,24 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#setup-ap-access-point-default-mode" class="md-nav__link">
+    <span class="md-ellipsis">
+      Setup AP (Access Point) default mode
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setup-ap-access-point-advanced-mode" class="md-nav__link">
+    <span class="md-ellipsis">
+      Setup AP (Access Point) advanced mode
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -7070,26 +7106,23 @@
 <li>STA (Station mode) means the command station connects to your WiFi router and appears as a device on that network. If the WiFI is configured for STA mode, but fails to connect to your router, it will fall back to AP mode in much the same way as smart plugs, lights etc.</li>
 </ul>
 <h2 id="setup-sta-station-mode">Setup STA (Station) mode<a class="headerlink" href="#setup-sta-station-mode" title="Permanent link">&para;</a></h2>
-<p>```cpp</p>
-<h1 id="define-enable_wifi-true">define ENABLE_WIFI true<a class="headerlink" href="#define-enable_wifi-true" title="Permanent link">&para;</a></h1>
-<h1 id="define-wifi_ssid-deadbudgie">define WIFI_SSID "deadBudgie"<a class="headerlink" href="#define-wifi_ssid-deadbudgie" title="Permanent link">&para;</a></h1>
-<h1 id="define-wifi_password-myhovvercraftisfullofeels">define WIFI_PASSWORD "myHovvercraftIsFullOfEels"<a class="headerlink" href="#define-wifi_password-myhovvercraftisfullofeels" title="Permanent link">&para;</a></h1>
-<p>```</p>
+<div class="highlight"><pre><span></span><code><span class="cp">#define ENABLE_WIFI true</span>
+<span class="cp">#define WIFI_SSID &quot;deadBudgie&quot;</span>
+<span class="cp">#define WIFI_PASSWORD &quot;myHovvercraftIsFullOfEels&quot;</span>
+</code></pre></div>
 <h2 id="setup-ap-access-point-default-mode">Setup AP (Access Point) default mode<a class="headerlink" href="#setup-ap-access-point-default-mode" title="Permanent link">&para;</a></h2>
-<p>```cpp</p>
-<h1 id="define-enable_wifi-true_1">define ENABLE_WIFI true<a class="headerlink" href="#define-enable_wifi-true_1" title="Permanent link">&para;</a></h1>
-<p>```</p>
+<div class="highlight"><pre><span></span><code><span class="cp">#define ENABLE_WIFI true</span>
+</code></pre></div>
 <p>The WiFi chip will first try to connect to the previously
 configured network and if that fails fall back to Access Point mode.</p>
 <p>The SSID of the AP will be automatically set to <code>DCCEX_*</code> where the <code>*</code> part is taken from an internal device number (for example <code>DCCEX_12b7c</code>) to try and avoid duplications. The password will be set to <code>PASS_*</code> where the <code>*</code> part matches the generated SSID name.</p>
 <h2 id="setup-ap-access-point-advanced-mode">Setup AP (Access Point) advanced mode<a class="headerlink" href="#setup-ap-access-point-advanced-mode" title="Permanent link">&para;</a></h2>
-<p>```cpp</p>
-<h1 id="define-enable_wifi-true_2">define ENABLE_WIFI true<a class="headerlink" href="#define-enable_wifi-true_2" title="Permanent link">&para;</a></h1>
-<h1 id="define-wifi_force_ap-true">define WIFI_FORCE_AP true<a class="headerlink" href="#define-wifi_force_ap-true" title="Permanent link">&para;</a></h1>
-<h1 id="define-wifi_ssid-mycsb1">define WIFI_SSID "MyCSB1"<a class="headerlink" href="#define-wifi_ssid-mycsb1" title="Permanent link">&para;</a></h1>
-<h1 id="define-wifi_password-dont-tell-him-pike">define WIFI_PASSWORD "Don't tell him Pike!"<a class="headerlink" href="#define-wifi_password-dont-tell-him-pike" title="Permanent link">&para;</a></h1>
-<h1 id="define-wifi_channel-1">define WIFI_CHANNEL 1<a class="headerlink" href="#define-wifi_channel-1" title="Permanent link">&para;</a></h1>
-<p>```</p>
+<div class="highlight"><pre><span></span><code><span class="cp">#define ENABLE_WIFI true</span>
+<span class="cp">#define WIFI_FORCE_AP true</span>
+<span class="cp">#define WIFI_SSID &quot;MyCSB1&quot;</span>
+<span class="cp">#define WIFI_PASSWORD &quot;Don&#39;t tell him Pike!&quot;</span>
+<span class="cp">#define WIFI_CHANNEL 1</span>
+</code></pre></div>
 <p>The AP mode password must be at least 8 characters long.</p>
 <p>The default channel is set to "1". Use a phone WiFi analyser app to see which channels are relatively quiet in your area. If you need to use an
 alternate channel (we recommend using only 1,6, or 11) you may change it here.</p>
@@ -7098,13 +7131,11 @@ alternate channel (we recommend using only 1,6, or 11) you may change it here.</
 CS on you home router to make them show up with different names on the network.
 Host names starting with "dccex" are more readily found by WiFi throttles.</li>
 </ul>
-<p>```cpp</p>
-<h1 id="define-wifi_hostname-dccex-csb1">define WIFI_HOSTNAME "dccex-csb1"<a class="headerlink" href="#define-wifi_hostname-dccex-csb1" title="Permanent link">&para;</a></h1>
-<p>```</p>
+<div class="highlight"><pre><span></span><code><span class="cp">#define WIFI_HOSTNAME &quot;dccex-csb1&quot;</span>
+</code></pre></div>
 <p>In some environments you may want to hide the SSID from phones scanning for access points. If you do hide the SSID, it is still possible to connect by entering the SSID manually on the phone/tablet.</p>
-<p>```cpp</p>
-<h1 id="define-wifi_hide_ssid">define WIFI_HIDE_SSID<a class="headerlink" href="#define-wifi_hide_ssid" title="Permanent link">&para;</a></h1>
-<p>```</p>
+<div class="highlight"><pre><span></span><code><span class="cp">#define WIFI_HIDE_SSID</span>
+</code></pre></div>
 
 
 
