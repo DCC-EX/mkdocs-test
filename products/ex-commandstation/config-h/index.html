@@ -804,6 +804,51 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#wifi-settings" class="md-nav__link">
+    <span class="md-ellipsis">
+      WiFi settings
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ethernet-settings" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ethernet settings
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lcdoled-support" class="md-nav__link">
+    <span class="md-ellipsis">
+      LCD/OLED support
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#disable-eeprom" class="md-nav__link">
+    <span class="md-ellipsis">
+      Disable EEPROM
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#delayed-startup" class="md-nav__link">
+    <span class="md-ellipsis">
+      Delayed startup
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -7044,6 +7089,51 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#wifi-settings" class="md-nav__link">
+    <span class="md-ellipsis">
+      WiFi settings
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ethernet-settings" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ethernet settings
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lcdoled-support" class="md-nav__link">
+    <span class="md-ellipsis">
+      LCD/OLED support
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#disable-eeprom" class="md-nav__link">
+    <span class="md-ellipsis">
+      Disable EEPROM
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#delayed-startup" class="md-nav__link">
+    <span class="md-ellipsis">
+      Delayed startup
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -7069,9 +7159,8 @@
 <p>If you are using the EX-Installer, the important options will be automatically managed and configured. There are several more advanced options covered in the <a href="../../../reference/advanced-config-h/">config.h advanced</a> but these should not trouble the vast majority of users.</p>
 <p>These options should be coded in the file <code>config.h</code> which will be automatically included in the compilation process.</p>
 <h2 id="motor-shield-definition-mandatory">Motor shield definition (Mandatory)<a class="headerlink" href="#motor-shield-definition-mandatory" title="Permanent link">&para;</a></h2>
-<p>```cpp</p>
-<h1 id="define-motor_shield_type-typename">define MOTOR_SHIELD_TYPE typeName<a class="headerlink" href="#define-motor_shield_type-typename" title="Permanent link">&para;</a></h1>
-<p>```</p>
+<div class="highlight"><pre><span></span><code><span class="cp">#define MOTOR_SHIELD_TYPE typeName</span>
+</code></pre></div>
 <p>The motor shield definition tells the code how many tracks your command station has and which pins are used to talk to the motor shield(s).
 It also describes the electrical characteristics of the current sensing and the current limits to be applied to each track.</p>
 <p>There are a number of pre-defined motor shield typeNames available of which the most common are:</p>
@@ -7090,53 +7179,47 @@ It also describes the electrical characteristics of the current sensing and the 
 <p><a href="../config-wifi-shield/">WiFi setup for WiFi shield</a></p>
 <h2 id="ethernet-settings">Ethernet settings<a class="headerlink" href="#ethernet-settings" title="Permanent link">&para;</a></h2>
 <p>It is not valid to enable Ethernet and WiFi at the same time.</p>
-<p>```cpp</p>
-<h1 id="define-enable_ethernet-true">define ENABLE_ETHERNET true<a class="headerlink" href="#define-enable_ethernet-true" title="Permanent link">&para;</a></h1>
-<p>```</p>
+<div class="highlight"><pre><span></span><code><span class="cp">#define ENABLE_ETHERNET true</span>
+</code></pre></div>
 <h2 id="lcdoled-support">LCD/OLED support<a class="headerlink" href="#lcdoled-support" title="Permanent link">&para;</a></h2>
 <p>The LCD feature requires an I2C enabled LCD screen using a Hitachi HD44780
 controller and a commonly available PCF8574 based I2C 'backpack'.
 To define LCD_DRIVER for I2C address 0x27, 16 cols, 2 rows</p>
-<p>```cpp</p>
-<h1 id="define-lcd_driver-0x27162">define LCD_DRIVER  0x27,16,2<a class="headerlink" href="#define-lcd_driver-0x27162" title="Permanent link">&para;</a></h1>
-<p>```</p>
+<div class="highlight"><pre><span></span><code><span class="cp">#define LCD_DRIVER  0x27,16,2</span>
+</code></pre></div>
 <p>For an OLED display define OLED_DRIVER [address,]width,height in pixels (address auto detected if not supplied)</p>
 <p>128x32 or 128x64 I2C SSD1306-based devices are supported.
 Use 132,64 for a SH1106-based I2C device with a 132x64 display.</p>
 <p>For example</p>
-<p>```cpp</p>
-<h1 id="define-oled_driver-13264">define OLED_DRIVER 132,64<a class="headerlink" href="#define-oled_driver-13264" title="Permanent link">&para;</a></h1>
-<p>```</p>
+<div class="highlight"><pre><span></span><code><span class="cp">#define OLED_DRIVER 132,64</span>
+</code></pre></div>
 <p>OR</p>
-<p>```cpp</p>
-<h1 id="define-oled_driver-0x3c13264">define OLED_DRIVER 0x3c,132,64<a class="headerlink" href="#define-oled_driver-0x3c13264" title="Permanent link">&para;</a></h1>
-<p>```</p>
+<div class="highlight"><pre><span></span><code><span class="cp">#define OLED_DRIVER 0x3c,132,64</span>
+</code></pre></div>
 <p>Define scroll mode as 0, 1 or 2</p>
 <ul>
 <li>0 is scroll continuous (fill screen if possible),</li>
 <li>1 is by page (alternate between pages),</li>
 <li>2 is by row (move up 1 row at a time).</li>
 </ul>
-<p>```cpp</p>
-<h1 id="define-scrollmode-1">define SCROLLMODE 1<a class="headerlink" href="#define-scrollmode-1" title="Permanent link">&para;</a></h1>
-<p>```</p>
+<div class="highlight"><pre><span></span><code><span class="cp">#define SCROLLMODE 1</span>
+</code></pre></div>
 <p>In order to avoid wasting memory the current scroll buffer is limited
 to 8 lines.  Some users wishing to display additional information
 such as TrackManager power states have requested additional rows aware
 of the warning that this will take extra RAM.  if you wish to include additional rows</p>
-<p>```cpp</p>
-<h1 id="define-max_character_rows-12">define MAX_CHARACTER_ROWS 12<a class="headerlink" href="#define-max_character_rows-12" title="Permanent link">&para;</a></h1>
-<p>```</p>
+<div class="highlight"><pre><span></span><code><span class="cp">#define MAX_CHARACTER_ROWS 12</span>
+</code></pre></div>
 <h2 id="disable-eeprom">Disable EEPROM<a class="headerlink" href="#disable-eeprom" title="Permanent link">&para;</a></h2>
 <p>The EEPROM feature is only there for backward support of deprecated methods of turnout, sensor and output creation inherited from DCC++.
 You are advised to turn this off to save memory.</p>
-<p><code>cpp
- #define DISABLE_EEPROM</code></p>
+<div class="highlight"><pre><span></span><code><span class="w"> </span><span class="cp">#define DISABLE_EEPROM</span>
+</code></pre></div>
 <h2 id="delayed-startup">Delayed startup<a class="headerlink" href="#delayed-startup" title="Permanent link">&para;</a></h2>
 <p>Some newer 32bit microcontrollers boot very quickly, so powering on I2C and other peripheral devices at the same time may result in the CommandStation booting too quickly to detect them.</p>
 <p>To work around this, set STARTUP_DELAY to a value in milliseconds that works for your environment.</p>
-<p><code>cpp
- #define STARTUP_DELAY 3000</code></p>
+<div class="highlight"><pre><span></span><code><span class="w"> </span><span class="cp">#define STARTUP_DELAY 3000</span>
+</code></pre></div>
 
 
 
@@ -7157,7 +7240,7 @@ You are advised to turn this off to save memory.</p>
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="April 13, 2026 01:30:41 UTC">April 13, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="April 12, 2026 18:29:22 UTC">April 12, 2026</span>
   </span>
 
     

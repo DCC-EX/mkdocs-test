@@ -7097,8 +7097,8 @@
 <p>Use flexible wire to connect your servo arm to the turnout/point. Using a flexible connection between the turnout and the servo mechanism means if anything does go wrong such as the turnout getting jammed or an incorrect servo angle being sent, it reduces the chance of damaging the turnout or servo.</p>
 <h2 id="defining-servo-based-turnout-objects">Defining servo based turnout objects<a class="headerlink" href="#defining-servo-based-turnout-objects" title="Permanent link">&para;</a></h2>
 <p>Define servo based turnouts using EXRAIL.</p>
-<p><code>cpp
-SERVO_TURNOUT(id, vpin, active_angle, inactive_angle, profile, "description")</code></p>
+<div class="highlight"><pre><span></span><code><span class="n">SERVO_TURNOUT</span><span class="p">(</span><span class="n">id</span><span class="p">,</span><span class="w"> </span><span class="n">vpin</span><span class="p">,</span><span class="w"> </span><span class="n">active_angle</span><span class="p">,</span><span class="w"> </span><span class="n">inactive_angle</span><span class="p">,</span><span class="w"> </span><span class="n">profile</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;description&quot;</span><span class="p">)</span>
+</code></pre></div>
 <p>id = Unique turnout ID within the CommandStation. All other turnout commands will refer to this turnout by this id.</p>
 <p>pin = The ID of the pin the servo is connected to, which would typically be the VPin ID of the PCA9685 controller board.</p>
 <p>active_angle = The angle to which the servo will move when the turnout is thrown (This is a value passed to the servo drtiver, it is not in degrees).</p>
@@ -7106,8 +7106,8 @@ SERVO_TURNOUT(id, vpin, active_angle, inactive_angle, profile, "description")</c
 <p>profile = The speed at which a turnout will move: Instant, Fast, Medium, Slow.</p>
 <p>description = A human-friendly description of the turnout that will appear in WiThrottle apps and Engine Driver. Note that this must be enclosed in quotes “”. In some cases the HIDDEN keyword can be used here to prevent the turnout being visible to the throttles.</p>
 <p>An example definition for a servo connected to the second control pins of the first PCA9685 connected to the CommandStation, using the slow profile for prototypical operation:</p>
-<p><code>cpp
-SERVO_TURNOUT(200, 101, 450, 110, Slow, "Coal yard exit")</code></p>
+<div class="highlight"><pre><span></span><code><span class="n">SERVO_TURNOUT</span><span class="p">(</span><span class="mi">200</span><span class="p">,</span><span class="w"> </span><span class="mi">101</span><span class="p">,</span><span class="w"> </span><span class="mi">450</span><span class="p">,</span><span class="w"> </span><span class="mi">110</span><span class="p">,</span><span class="w"> </span><span class="n">Slow</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Coal yard exit&quot;</span><span class="p">)</span>
+</code></pre></div>
 
 
 
@@ -7128,7 +7128,7 @@ SERVO_TURNOUT(200, 101, 450, 110, Slow, "Coal yard exit")</code></p>
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="April 13, 2026 01:30:41 UTC">April 13, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="December 23, 2025 20:33:33 UTC">December 23, 2025</span>
   </span>
 
     
