@@ -7115,24 +7115,24 @@
 <p>The TM1638 board provides a very cheap way of implementing 8 buttons, 8 leds and an 8 digit 7segment display in a package requiring just 5 Dupont wires (vcc, gnd + 3 GPIO pins) from the command station without soldering.</p>
 <p>This is ideal for prototyping and testing, simulating sensors and signals, displaying states etc. For a built layout, this could provide a control for things that are not particularly suited to throttle 'route' buttons, perhaps lineside automations or fiddle yard lane selection.  </p>
 <p>The board is defined in EXRAIL using HAL(TM1638,firstVpin,clk,dio,stb)</p>
-<p><code>cpp
-HAL(TM1638,500,29,31,33)</code></p>
+<div class="highlight"><pre><span></span><code><span class="n">HAL</span><span class="p">(</span><span class="n">TM1638</span><span class="p">,</span><span class="mi">500</span><span class="p">,</span><span class="mi">29</span><span class="p">,</span><span class="mi">31</span><span class="p">,</span><span class="mi">33</span><span class="p">)</span>
+</code></pre></div>
 <p>Creates VPINs 500-507 And describes the VPINs used to connect the clk,dio,stb pins on the TM1638 board.</p>
 <p>Setting each of the VPINs will control the associated LED (using for example SET, RESET or BLINK in EXRAIL or `<z 500> <z -501>  from a command).</p>
 <p>Unlike most pins, you can also read the same pin number and get the button state, using EXRAIL IF/AT/ONBUTTON etc.</p>
 <p>All the following examples assume you are using VPIN 500 as the first, leftmost,  led/button on the TM1638 board.</p>
 <h2 id="using-buttons-and-leds">Using buttons and LEDs<a class="headerlink" href="#using-buttons-and-leds" title="Permanent link">&para;</a></h2>
-<p><code>cpp
-ONBUTTON(500)  // when button 500 is pressed 
-  SET(500)     // light the first led
-  BLINK(501,500,500) // blink the second led
-  DELAY(2000)
-  RESET(500) RESET(501)  // turn leds off
-  DONE</code></p>
+<div class="highlight"><pre><span></span><code><span class="n">ONBUTTON</span><span class="p">(</span><span class="mi">500</span><span class="p">)</span><span class="w">  </span><span class="c1">// when button 500 is pressed </span>
+<span class="w">  </span><span class="n">SET</span><span class="p">(</span><span class="mi">500</span><span class="p">)</span><span class="w">     </span><span class="c1">// light the first led</span>
+<span class="w">  </span><span class="n">BLINK</span><span class="p">(</span><span class="mi">501</span><span class="p">,</span><span class="mi">500</span><span class="p">,</span><span class="mi">500</span><span class="p">)</span><span class="w"> </span><span class="c1">// blink the second led</span>
+<span class="w">  </span><span class="n">DELAY</span><span class="p">(</span><span class="mi">2000</span><span class="p">)</span>
+<span class="w">  </span><span class="n">RESET</span><span class="p">(</span><span class="mi">500</span><span class="p">)</span><span class="w"> </span><span class="n">RESET</span><span class="p">(</span><span class="mi">501</span><span class="p">)</span><span class="w">  </span><span class="c1">// turn leds off</span>
+<span class="w">  </span><span class="n">DONE</span>
+</code></pre></div>
 <h2 id="using-the-7-segment-display">Using the 7 Segment display<a class="headerlink" href="#using-the-7-segment-display" title="Permanent link">&para;</a></h2>
 <p>The 8 digit display can be treated as 8 separate digits (left most being the same VPIN as the leftmost button and led) or be written to in sections of any length. Writing uses the existing analogue interface to the common HAL but is awkward to use directly.  To make this easier from EXRAIL, a SEG7 macro provides a remapping to the <a href="?ANOUT">ANOUT</a> facility that makes more sense.</p>
-<p><code>cpp
-SEG7(vpin,value,format)</code></p>
+<div class="highlight"><pre><span></span><code><span class="n">SEG7</span><span class="p">(</span><span class="n">vpin</span><span class="p">,</span><span class="n">value</span><span class="p">,</span><span class="n">format</span><span class="p">)</span>
+</code></pre></div>
 <p>The vpin determines which digit to start writing at.
 The value can be a 32bit unsigned integer but is interpreted differently according to the format.</p>
 <p>Format values:</p>
@@ -7143,23 +7143,23 @@ The value can be a 32bit unsigned integer but is interpreted differently accordi
 There is a <a href="https://jetpackacademy.com/wp-content/uploads/2018/06/TM1638_cheat_sheet_download.pdf">useful description here:</a></li>
 </ul>
 <p>Examples:</p>
-<p><code>cpp
-SEG7(500,3,4)           // writes 0003 to first 4 digits of the display
-SEG7(504,0xcafe,4X)     // writes CAFE to the last 4 digits
-SEG7(500,0xdeadbeef,8X) // writes dEAdbEEF to all 8 digits.</code></p>
+<div class="highlight"><pre><span></span><code><span class="n">SEG7</span><span class="p">(</span><span class="mi">500</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">)</span><span class="w">           </span><span class="c1">// writes 0003 to first 4 digits of the display</span>
+<span class="n">SEG7</span><span class="p">(</span><span class="mi">504</span><span class="p">,</span><span class="mh">0xcafe</span><span class="p">,</span><span class="mi">4</span><span class="n">X</span><span class="p">)</span><span class="w">     </span><span class="c1">// writes CAFE to the last 4 digits</span>
+<span class="n">SEG7</span><span class="p">(</span><span class="mi">500</span><span class="p">,</span><span class="mh">0xdeadbeef</span><span class="p">,</span><span class="mi">8</span><span class="n">X</span><span class="p">)</span><span class="w"> </span><span class="c1">// writes dEAdbEEF to all 8 digits. </span>
+</code></pre></div>
 <p>Writing raw segment patters requires knowledge of the bit pattern to segment relationship:</p>
-<p><code>cpp
-    == 0 ==
-   5|     | 1
-    == 6 ==
-  4 |     | 2
-    == 3 == 7    (7 is decimal point)</code></p>
+<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="o">==</span>
+<span class="w">   </span><span class="mi">5</span><span class="o">|</span><span class="w">     </span><span class="o">|</span><span class="w"> </span><span class="mi">1</span>
+<span class="w">    </span><span class="o">==</span><span class="w"> </span><span class="mi">6</span><span class="w"> </span><span class="o">==</span>
+<span class="w">  </span><span class="mi">4</span><span class="w"> </span><span class="o">|</span><span class="w">     </span><span class="o">|</span><span class="w"> </span><span class="mi">2</span>
+<span class="w">    </span><span class="o">==</span><span class="w"> </span><span class="mi">3</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">7</span><span class="w">    </span><span class="p">(</span><span class="mi">7</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="n">decimal</span><span class="w"> </span><span class="n">point</span><span class="p">)</span><span class="w">  </span>
+</code></pre></div>
 <p>Thus Letter A is segments  6 5 4 2 1 0, represented in binary (zero bit is on right) as 0b01110111 or 0x77.</p>
 <p>This is not easy to do my hand and thus a new string type suffix <code>_s7</code> has been introduced to make simple text messages. Note that the HAL interface only has width for 32 bits which is only 4 symbols so writing 8 digits requires two calls.</p>
-<p><code>cpp
-SEG7(500,"Hell"_s7,4R) SEG7(504,"o"_s7,4R)
-DELAY(1000)
-SEG7(500,"Worl"_s7,4R) SEG7(504,"d"_s7,4R)</code></p>
+<div class="highlight"><pre><span></span><code><span class="n">SEG7</span><span class="p">(</span><span class="mi">500</span><span class="p">,</span><span class="s">&quot;Hell&quot;</span><span class="n">_s7</span><span class="p">,</span><span class="mi">4</span><span class="n">R</span><span class="p">)</span><span class="w"> </span><span class="n">SEG7</span><span class="p">(</span><span class="mi">504</span><span class="p">,</span><span class="s">&quot;o&quot;</span><span class="n">_s7</span><span class="p">,</span><span class="mi">4</span><span class="n">R</span><span class="p">)</span>
+<span class="n">DELAY</span><span class="p">(</span><span class="mi">1000</span><span class="p">)</span>
+<span class="n">SEG7</span><span class="p">(</span><span class="mi">500</span><span class="p">,</span><span class="s">&quot;Worl&quot;</span><span class="n">_s7</span><span class="p">,</span><span class="mi">4</span><span class="n">R</span><span class="p">)</span><span class="w"> </span><span class="n">SEG7</span><span class="p">(</span><span class="mi">504</span><span class="p">,</span><span class="s">&quot;d&quot;</span><span class="n">_s7</span><span class="p">,</span><span class="mi">4</span><span class="n">R</span><span class="p">)</span>
+</code></pre></div>
 <p>Note that some letters like k,m,v,x do not have particularly readable 7-segment representation.</p>
 <p>Credit to <a href="https://github.com/dvarrel/TM1638">https://github.com/dvarrel/TM1638</a> for the basic formulae.</p>
 
@@ -7182,7 +7182,7 @@ SEG7(500,"Worl"_s7,4R) SEG7(504,"d"_s7,4R)</code></p>
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="April 27, 2026 04:01:11 UTC">April 27, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="July 19, 2025 22:45:43 UTC">July 19, 2025</span>
   </span>
 
     

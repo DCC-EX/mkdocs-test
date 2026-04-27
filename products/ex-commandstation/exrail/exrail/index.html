@@ -7174,43 +7174,43 @@
 <li><code>SEQUENCE</code> - Simply a list of things to be done in order. These things might be to actually drive a train around, or merely to set some turnouts or flash some scene or panel lights. Actions can be made to wait for conditions to be met, like a sensor detecting a train, a button being pushed, or a period of time elapsing.
 e.g.</li>
 </ul>
-<p><code>cpp
-  SEQUENCE(27) // Close crossing gates
-    BLINK(100,500,500) // start flasher
-    DELAY(4000)
-    SERVO(200,30,Slow) // move barrier
-    DONE   // sequence completed</code></p>
+<div class="highlight"><pre><span></span><code><span class="w">  </span><span class="n">SEQUENCE</span><span class="p">(</span><span class="mi">27</span><span class="p">)</span><span class="w"> </span><span class="c1">// Close crossing gates</span>
+<span class="w">    </span><span class="n">BLINK</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span><span class="mi">500</span><span class="p">,</span><span class="mi">500</span><span class="p">)</span><span class="w"> </span><span class="c1">// start flasher</span>
+<span class="w">    </span><span class="n">DELAY</span><span class="p">(</span><span class="mi">4000</span><span class="p">)</span>
+<span class="w">    </span><span class="n">SERVO</span><span class="p">(</span><span class="mi">200</span><span class="p">,</span><span class="mi">30</span><span class="p">,</span><span class="n">Slow</span><span class="p">)</span><span class="w"> </span><span class="c1">// move barrier</span>
+<span class="w">    </span><span class="n">DONE</span><span class="w">   </span><span class="c1">// sequence completed</span>
+</code></pre></div>
 <ul>
 <li><code>ROUTE</code> – A special type of SEQUENCE that is made visible to a throttle with a readable name so the user can press a button to get the sequence executed. This might be best used to set a series of turnouts and signals to create a route through the layout. For example</li>
 </ul>
-<p><code>cpp
-  ROUTE(1,"Platform A to Mainline")
-    THROW(27) // set turnouts
-    CLOSE(6)
-    GREEN(101) // change departure signal
-    DONE</code></p>
+<div class="highlight"><pre><span></span><code><span class="w">  </span><span class="n">ROUTE</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="s">&quot;Platform A to Mainline&quot;</span><span class="p">)</span>
+<span class="w">    </span><span class="n">THROW</span><span class="p">(</span><span class="mi">27</span><span class="p">)</span><span class="w"> </span><span class="c1">// set turnouts</span>
+<span class="w">    </span><span class="n">CLOSE</span><span class="p">(</span><span class="mi">6</span><span class="p">)</span>
+<span class="w">    </span><span class="n">GREEN</span><span class="p">(</span><span class="mi">101</span><span class="p">)</span><span class="w"> </span><span class="c1">// change departure signal</span>
+<span class="w">    </span><span class="n">DONE</span><span class="w"> </span>
+</code></pre></div>
 <ul>
 <li><code>AUTOMATION</code> – A special type of SEQUENCE that is made visible to a throttle so that a user can hand over a loco and let EXRAIL drive the train away, following each step listed in the sequence. For example, a user could manually drive a train into a station and press a handoff button in the throttle to run an AUTOMATION to take it on a journey around the layout.</li>
 </ul>
-<p><code>cpp
-  AUTOMATION(17,"Depart to Byeckaslike")
-    FWD(20) // start slowly
-    AT(167) // when we reach sensor 167
-    SPEED(55)
-    AT(168) // approaching station
-    SPEED(10) // slow down
-    AT(169) // at the terminus
-    ESTOP // stop dead
-    DONE</code></p>
+<div class="highlight"><pre><span></span><code><span class="w">  </span><span class="n">AUTOMATION</span><span class="p">(</span><span class="mi">17</span><span class="p">,</span><span class="s">&quot;Depart to Byeckaslike&quot;</span><span class="p">)</span>
+<span class="w">    </span><span class="n">FWD</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span><span class="w"> </span><span class="c1">// start slowly</span>
+<span class="w">    </span><span class="n">AT</span><span class="p">(</span><span class="mi">167</span><span class="p">)</span><span class="w"> </span><span class="c1">// when we reach sensor 167</span>
+<span class="w">    </span><span class="n">SPEED</span><span class="p">(</span><span class="mi">55</span><span class="p">)</span>
+<span class="w">    </span><span class="n">AT</span><span class="p">(</span><span class="mi">168</span><span class="p">)</span><span class="w"> </span><span class="c1">// approaching station</span>
+<span class="w">    </span><span class="n">SPEED</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span><span class="w"> </span><span class="c1">// slow down</span>
+<span class="w">    </span><span class="n">AT</span><span class="p">(</span><span class="mi">169</span><span class="p">)</span><span class="w"> </span><span class="c1">// at the terminus</span>
+<span class="w">    </span><span class="n">ESTOP</span><span class="w"> </span><span class="c1">// stop dead</span>
+<span class="w">    </span><span class="n">DONE</span>
+</code></pre></div>
 <ul>
 <li>ON-[HANDLER] – a sequence that is automatically started when some event happens. For example when a button is pressed (ONBUTTON) or a turnout is changed (ONTHROW / ONCLOSE) so you can intercept turnout/point changes to automatically adjust signals or other turnouts.</li>
 </ul>
-<p><code>cpp
-ONBUTTON(167)
-  RED(108)
-  THROW(6)
-  GREEN(112)
-  DONE</code></p>
+<div class="highlight"><pre><span></span><code><span class="n">ONBUTTON</span><span class="p">(</span><span class="mi">167</span><span class="p">)</span>
+<span class="w">  </span><span class="n">RED</span><span class="p">(</span><span class="mi">108</span><span class="p">)</span>
+<span class="w">  </span><span class="n">THROW</span><span class="p">(</span><span class="mi">6</span><span class="p">)</span>
+<span class="w">  </span><span class="n">GREEN</span><span class="p">(</span><span class="mi">112</span><span class="p">)</span>
+<span class="w">  </span><span class="n">DONE</span>
+</code></pre></div>
 <h2 id="a-users-story">A users story<a class="headerlink" href="#a-users-story" title="Permanent link">&para;</a></h2>
 <p>I have used C++ on Arduino’s and Python/Jython on JMRI software to build Automation sequences. I now use EXRAIL instead because:</p>
 <ul>
@@ -7247,7 +7247,7 @@ ONBUTTON(167)
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="April 27, 2026 04:01:11 UTC">April 27, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="December 23, 2025 20:20:47 UTC">December 23, 2025</span>
   </span>
 
     

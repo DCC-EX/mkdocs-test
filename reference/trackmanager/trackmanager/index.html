@@ -7261,9 +7261,9 @@
 <li><code>&lt;=&gt;</code>  lists the current track settings.</li>
 </ul>
 <p>In a default setup this will normally return</p>
-<p><code>console
-&lt;=A MAIN&gt;
-&lt;=B PROG&gt;</code></p>
+<div class="highlight"><pre><span></span><code><span class="go">&lt;=A MAIN&gt;</span>
+<span class="go">&lt;=B PROG&gt;</span>
+</code></pre></div>
 <ul>
 <li><code>&lt;=t MAIN&gt;</code>  sets track t (A..H) to use the DCC main track.   For example <code>&lt;=C MAIN&gt;</code> sets track C. All tracks that are set to DCC will receive the same DCC signal waveform.</li>
 <li><code>&lt;=t PROG&gt;</code> Sets track t (A..H) to be the one and only PROG track. Any previous PROG track is turned off.</li>
@@ -7282,9 +7282,9 @@ Your throttle (JMRI, EX-Webthrottle, Withrottle, Engine Driver etc.) do not know
 <li><code>&lt;=t DC a&gt;</code> Sets track t (A..H) to use loco address, example &lt;=A DC 3&gt;</li>
 </ul>
 <p>A simple two separate loop DC track, wired the traditional way in opposite directions, may be set like this to use loco addresses 1 and 2.  </p>
-<p><code>console
-&lt;=A DC 1&gt;
-&lt;=B DC 2&gt;</code></p>
+<div class="highlight"><pre><span></span><code><span class="go">&lt;=A DC 1&gt;</span>
+<span class="go">&lt;=B DC 2&gt;</span>
+</code></pre></div>
 <h3 id="crossing-between-dc-tracks">Crossing between DC tracks<a class="headerlink" href="#crossing-between-dc-tracks" title="Permanent link">&para;</a></h3>
 <p>There are some slightly mind-bending issues to be addressed, especially if you want to be able to cross between two separate DC tracks or use your layout in DCC or DC mode. This is because the control of DC loco direction is relative to the TRACK and not the LOCO. (you turn a DC loco round on the track and it continues in the same geographical direction. You turn a DCC loco around and it continues to go forwards or backwards in the opposite geographical direction.)</p>
 <p>Generally DC tracks are wired so that two mainline tracks are in opposite direction which makes operation easy BUT crossovers between tracks will cause shorts unless you have very complex switching arrangements.
@@ -7333,12 +7333,12 @@ This is generally incompatible with DCC wiring which expects to be able to cross
 </ul>
 <p>DC/DCX are designed so that you can be automating a DCC loco, drive it onto a separate track and switch to DC without having to know the cab address. (e.g AUTOMATION)
 If however you are just running a ROUTE you can always do something like this:</p>
-<p><code>cpp
- ROUTE(77,"Set track G to DC 123")
-   SETLOCO(123)
-   SET_TRACK(G,DC)
-   SET_POWER(G,ON)
-   DONE</code></p>
+<div class="highlight"><pre><span></span><code><span class="w"> </span><span class="n">ROUTE</span><span class="p">(</span><span class="mi">77</span><span class="p">,</span><span class="s">&quot;Set track G to DC 123&quot;</span><span class="p">)</span>
+<span class="w">   </span><span class="n">SETLOCO</span><span class="p">(</span><span class="mi">123</span><span class="p">)</span>
+<span class="w">   </span><span class="n">SET_TRACK</span><span class="p">(</span><span class="n">G</span><span class="p">,</span><span class="n">DC</span><span class="p">)</span>
+<span class="w">   </span><span class="n">SET_POWER</span><span class="p">(</span><span class="n">G</span><span class="p">,</span><span class="n">ON</span><span class="p">)</span>
+<span class="w">   </span><span class="n">DONE</span>
+</code></pre></div>
 <h2 id="where-and-how-for-the-code">Where and How for the Code<a class="headerlink" href="#where-and-how-for-the-code" title="Permanent link">&para;</a></h2>
 <p>The TM code is primarily in TrackManager.cpp which is responsible for coordinating the track settings and commands.</p>
 <p>Each individual track is handled by an instance of MotorDriver created from the <code>MOTOR_SHIELD_TYPE</code> definition in config.h</p>
@@ -7363,7 +7363,7 @@ If however you are just running a ROUTE you can always do something like this:</
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="April 27, 2026 04:01:11 UTC">April 27, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="December 27, 2025 12:49:07 UTC">December 27, 2025</span>
   </span>
 
     

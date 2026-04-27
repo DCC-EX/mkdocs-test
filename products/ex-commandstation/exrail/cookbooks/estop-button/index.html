@@ -7169,8 +7169,8 @@ To stop a loco immediately, the powewr must remain on and we must send it a part
 <p>The ESTOPALL command will stop all locos and inform all throttles.
 In this example, ONBUTTON(173) will start a sequence at this point when a button on vpin 173 is pressed.
 The DONE command completes/terminates the process started by ONBUTTON.</p>
-<p><code>cpp
-ONBUTTON(173) ESTOPALL DONE</code></p>
+<div class="highlight"><pre><span></span><code><span class="n">ONBUTTON</span><span class="p">(</span><span class="mi">173</span><span class="p">)</span><span class="w"> </span><span class="n">ESTOPALL</span><span class="w"> </span><span class="n">DONE</span>
+</code></pre></div>
 <p>However, ESTOPALL does have disadvantages:</p>
 <ul>
 <li>Nothing prevents a throttle or EXRAIL script sending in a speed command a fraction of a second later</li>
@@ -7178,8 +7178,8 @@ ONBUTTON(173) ESTOPALL DONE</code></p>
 </ul>
 <h2 id="estop_pause">ESTOP_PAUSE<a class="headerlink" href="#estop_pause" title="Permanent link">&para;</a></h2>
 <p>The ESTOP_PAUSE command can be used to stop all traffic and block all train movement. Perfect for things like pausing all traffic after a derailment.</p>
-<p><code>cpp
-ONBUTTON(173) ESTOP_PAUSE DONE</code></p>
+<div class="highlight"><pre><span></span><code><span class="n">ONBUTTON</span><span class="p">(</span><span class="mi">173</span><span class="p">)</span><span class="w"> </span><span class="n">ESTOP_PAUSE</span><span class="w"> </span><span class="n">DONE</span>
+</code></pre></div>
 <p>When paused:</p>
 <ul>
 <li>the speed of each loco at the time of the pause is not forgotten</li>
@@ -7187,38 +7187,38 @@ ONBUTTON(173) ESTOP_PAUSE DONE</code></p>
 </ul>
 <h2 id="estop_resume">ESTOP_RESUME<a class="headerlink" href="#estop_resume" title="Permanent link">&para;</a></h2>
 <p>ESTOP_RESUME is used to restart the locos at their previous speed, or at the speed that was modified during the pause.</p>
-<p><code>cpp
-ONBUTTON(174) ESTOP_RESUME DONE</code></p>
+<div class="highlight"><pre><span></span><code><span class="n">ONBUTTON</span><span class="p">(</span><span class="mi">174</span><span class="p">)</span><span class="w"> </span><span class="n">ESTOP_RESUME</span><span class="w"> </span><span class="n">DONE</span>
+</code></pre></div>
 <h2 id="advanced-scenarios">Advanced scenarios<a class="headerlink" href="#advanced-scenarios" title="Permanent link">&para;</a></h2>
 <p>Of course you may wish to enhance the control by adding flashing lights, sounds or other effects.</p>
-<p>```cpp
-ONBUTTON(173) 
-  ESTOP_PAUSE 
-  BLINK(180,250,250)
-  PLAY_SOUND(8000,6) // "Don't Panic"
-  DONE</p>
-<p>ONBUTTON(174) 
-  PLAY_SOUND(8000,7) // "Stand clear of the layout, resuming"
-  DELAY(2000)
-  RESET(180) 
-  DELAY(1000)
-  ESTOP_RESUME 
-  DONE
-```</p>
+<div class="highlight"><pre><span></span><code><span class="n">ONBUTTON</span><span class="p">(</span><span class="mi">173</span><span class="p">)</span><span class="w"> </span>
+<span class="w">  </span><span class="n">ESTOP_PAUSE</span><span class="w"> </span>
+<span class="w">  </span><span class="n">BLINK</span><span class="p">(</span><span class="mi">180</span><span class="p">,</span><span class="mi">250</span><span class="p">,</span><span class="mi">250</span><span class="p">)</span>
+<span class="w">  </span><span class="n">PLAY_SOUND</span><span class="p">(</span><span class="mi">8000</span><span class="p">,</span><span class="mi">6</span><span class="p">)</span><span class="w"> </span><span class="c1">// &quot;Don&#39;t Panic&quot;</span>
+<span class="w">  </span><span class="n">DONE</span>
+
+<span class="n">ONBUTTON</span><span class="p">(</span><span class="mi">174</span><span class="p">)</span><span class="w"> </span>
+<span class="w">  </span><span class="n">PLAY_SOUND</span><span class="p">(</span><span class="mi">8000</span><span class="p">,</span><span class="mi">7</span><span class="p">)</span><span class="w"> </span><span class="c1">// &quot;Stand clear of the layout, resuming&quot;</span>
+<span class="w">  </span><span class="n">DELAY</span><span class="p">(</span><span class="mi">2000</span><span class="p">)</span>
+<span class="w">  </span><span class="n">RESET</span><span class="p">(</span><span class="mi">180</span><span class="p">)</span><span class="w"> </span>
+<span class="w">  </span><span class="n">DELAY</span><span class="p">(</span><span class="mi">1000</span><span class="p">)</span>
+<span class="w">  </span><span class="n">ESTOP_RESUME</span><span class="w"> </span>
+<span class="w">  </span><span class="n">DONE</span>
+</code></pre></div>
 <p>In some cases you may prefer that the system is locked but movement does not restart automatically when the resume is issued. This can be achieved by performing an ESTOPALL immediately before resuming. This forces all locos to have a current speed of 0 before releaseing the speed reminders onto the track.</p>
-<p><code>cpp
-ONBUTTON(174) 
-  ESTOPALL
-  ESTOP_RESUME 
-  DONE</code></p>
+<div class="highlight"><pre><span></span><code><span class="n">ONBUTTON</span><span class="p">(</span><span class="mi">174</span><span class="p">)</span><span class="w"> </span>
+<span class="w">  </span><span class="n">ESTOPALL</span>
+<span class="w">  </span><span class="n">ESTOP_RESUME</span><span class="w"> </span>
+<span class="w">  </span><span class="n">DONE</span>
+</code></pre></div>
 <p>You may have a situation, like a lifting gate on your layout, where you need to prevent movement when the Command Station is started with the gate open.</p>
 <p>This example runs at startup and will check the gate switch on pin 174 to block all movement if it is open.</p>
-<p><code>cpp
-AUTOSTART 
-  IF(174) 
-    ESTOP_PAUSE
-    ENDIF
-  DONE</code></p>
+<div class="highlight"><pre><span></span><code><span class="n">AUTOSTART</span><span class="w"> </span>
+<span class="w">  </span><span class="n">IF</span><span class="p">(</span><span class="mi">174</span><span class="p">)</span><span class="w"> </span>
+<span class="w">    </span><span class="n">ESTOP_PAUSE</span>
+<span class="w">    </span><span class="n">ENDIF</span>
+<span class="w">  </span><span class="n">DONE</span>
+</code></pre></div>
 <h2 id="estop-serial-commands">ESTOP serial commands<a class="headerlink" href="#estop-serial-commands" title="Permanent link">&para;</a></h2>
 <p>For convenience thare are also serial commands that have the same function:</p>
 <ul>
@@ -7247,7 +7247,7 @@ AUTOSTART
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="April 27, 2026 04:01:11 UTC">April 27, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="February 16, 2026 08:19:12 UTC">February 16, 2026</span>
   </span>
 
     
