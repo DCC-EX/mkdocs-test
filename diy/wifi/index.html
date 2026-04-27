@@ -1843,6 +1843,29 @@
   
   
     <li class="md-nav__item">
+      <a href="../../products/ex-commandstation/exrail/cookbooks/advanced/display-track-status/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Display Track Status
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../products/ex-commandstation/exrail/cookbooks/advanced/analog-sensors/" class="md-nav__link">
         
   
@@ -7120,23 +7143,23 @@ We recommend you purchase an EX-WiFiShield8266 (a joint venture with Makerfabs) 
 <p>Use two male-female Dupont wires to connect the WiFi Shield to your Command Station. (Pay Attention... we get a lot of support calls from users who have not noticed that the wires cross!)</p>
 </li>
 </ol>
-<div class="highlight"><pre><span></span><code>-<span class="w"> </span>Arduino<span class="w">      </span>Shield
--<span class="w"> </span>Rx1<span class="w">  </span>-------&gt;<span class="w"> </span>Tx
--<span class="w"> </span>TX1<span class="w">  </span>-------&gt;<span class="w"> </span>Rx
-</code></pre></div>
+<p><code>bash
+- Arduino      Shield
+- Rx1  -------&gt; Tx
+- TX1  -------&gt; Rx</code></p>
 <div style="clear: both;"></div>
 
 <h2 id="esp-01-or-esp-01s">ESP-01 or ESP-01S<a class="headerlink" href="#esp-01-or-esp-01s" title="Permanent link">&para;</a></h2>
 <p><img align="right" alt="ESP01" src="../../_static/images/wifi/esp-01s_2.png" />
 These devices are not recommended because there are power consumption issues that may cause random Command Station brown-out failure while attempting to connect in a low WiFi signal area.  They will probably NOT work without a non-trivial firmware update.</p>
 <p>The ESP-01 should be connected with dupont wires to the Command Station with wiring as follows:</p>
-<div class="highlight"><pre><span></span><code>-<span class="w"> </span>Arduino<span class="w">      </span>ESP-01
--<span class="w"> </span><span class="m">3</span>.3V<span class="w">  </span>-----&gt;<span class="w"> </span>Vcc
--<span class="w"> </span><span class="m">3</span>.3V<span class="w">  </span>-----&gt;<span class="w"> </span>CH_PD
--<span class="w"> </span>Gnd<span class="w">   </span>-----&gt;<span class="w"> </span>Gnd
--<span class="w"> </span>Tx1<span class="w">   </span>-----&gt;<span class="w"> </span>Rx
--<span class="w"> </span>Rx1<span class="w">   </span>-----&gt;<span class="w"> </span>Tx
-</code></pre></div>
+<p><code>bash
+- Arduino      ESP-01
+- 3.3V  -----&gt; Vcc
+- 3.3V  -----&gt; CH_PD
+- Gnd   -----&gt; Gnd
+- Tx1   -----&gt; Rx
+- Rx1   -----&gt; Tx</code></p>
 <p>Incorrect wiring can destroy this device.</p>
 
 
@@ -7158,7 +7181,7 @@ These devices are not recommended because there are power consumption issues tha
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="December 23, 2025 20:33:33 UTC">December 23, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="April 27, 2026 04:01:11 UTC">April 27, 2026</span>
   </span>
 
     
