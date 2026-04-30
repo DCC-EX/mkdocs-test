@@ -7183,19 +7183,19 @@ Use the I2C headers, where 5V is available (IOREF/Vdd).<BR>
 <li>
 <p>Run the EX-Installer on your PC and select the cpu type, then the Serial Monitor. You should see output similar to the following where the Command Station enumerates all the I2C devices it can find.
 from the startup logs using the serial monitor</p>
-<div class="highlight"><pre><span></span><code><span class="o">&lt;*</span><span class="w"> </span><span class="n">I2C</span><span class="w"> </span><span class="n">Device</span><span class="w"> </span><span class="n">found</span><span class="w"> </span><span class="n">at</span><span class="w"> </span><span class="mh">0x3C</span><span class="p">,</span><span class="w"> </span><span class="n">OLED</span><span class="w"> </span><span class="n">Display</span><span class="w"> </span><span class="k">or</span><span class="w"> </span><span class="n">HMC583L</span><span class="w"> </span><span class="n">Magnetometer</span><span class="o">?</span><span class="w"> </span><span class="o">*&gt;</span>
-<span class="o">&lt;*</span><span class="w"> </span><span class="n">I2C</span><span class="w"> </span><span class="n">Device</span><span class="w"> </span><span class="n">found</span><span class="w"> </span><span class="n">at</span><span class="w"> </span><span class="mh">0x40</span><span class="p">,</span><span class="w"> </span><span class="n">PWM</span><span class="o">?</span><span class="w"> </span><span class="o">*&gt;</span>
-<span class="p">.</span><span class="w"> </span><span class="p">.</span><span class="w"> </span><span class="p">.</span>
-<span class="k">and</span><span class="w"> </span><span class="n">then</span><span class="w"> </span><span class="n">it</span><span class="w"> </span><span class="n">shows</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">OLED</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="n">configured</span>
-<span class="o">&lt;*</span><span class="w"> </span><span class="mi">132</span><span class="n">x64</span><span class="w"> </span><span class="n">OLED</span><span class="w"> </span><span class="n">display</span><span class="w"> </span><span class="n">configured</span><span class="w"> </span><span class="n">on</span><span class="w"> </span><span class="n">I2C</span><span class="o">:</span><span class="mh">0x3c</span><span class="w"> </span><span class="o">*&gt;</span>
-
-<span class="n">send</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">command</span><span class="o">:</span><span class="w"> </span><span class="o">&lt;</span><span class="n">D</span><span class="w"> </span><span class="n">HAL</span><span class="w"> </span><span class="n">SHOW</span><span class="o">&gt;</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">see</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">vPins</span><span class="w"> </span><span class="n">configured</span>
-<span class="o">&lt;*</span><span class="w"> </span><span class="n">Arduino</span><span class="w"> </span><span class="n">Vpins</span><span class="o">:</span><span class="mi">2-39</span><span class="w"> </span><span class="o">*&gt;</span>
-<span class="o">&lt;*</span><span class="w"> </span><span class="n">PCA9685</span><span class="w"> </span><span class="n">I2C</span><span class="o">:</span><span class="mh">0x40</span><span class="w"> </span><span class="n">Configured</span><span class="w"> </span><span class="n">on</span><span class="w"> </span><span class="n">Vpins</span><span class="o">:</span><span class="mi">100-115</span><span class="w">  </span><span class="o">*&gt;</span>
-<span class="o">&lt;*</span><span class="w"> </span><span class="n">PCA9685</span><span class="w"> </span><span class="n">I2C</span><span class="o">:</span><span class="mh">0x41</span><span class="w"> </span><span class="n">Configured</span><span class="w"> </span><span class="n">on</span><span class="w"> </span><span class="n">Vpins</span><span class="o">:</span><span class="mi">116-131</span><span class="w"> </span><span class="n">OFFLINE</span><span class="w"> </span><span class="o">*&gt;</span>
-<span class="o">&lt;*</span><span class="w"> </span><span class="n">MCP23017</span><span class="w"> </span><span class="n">I2C</span><span class="o">:</span><span class="mh">0x20</span><span class="w"> </span><span class="n">Configured</span><span class="w"> </span><span class="n">on</span><span class="w"> </span><span class="n">Vpins</span><span class="o">:</span><span class="mi">164-179</span><span class="w"> </span><span class="n">OFFLINE</span><span class="w"> </span><span class="o">*&gt;</span>
-<span class="o">&lt;*</span><span class="w"> </span><span class="n">MCP23017</span><span class="w"> </span><span class="n">I2C</span><span class="o">:</span><span class="mh">0x21</span><span class="w"> </span><span class="n">Configured</span><span class="w"> </span><span class="n">on</span><span class="w"> </span><span class="n">Vpins</span><span class="o">:</span><span class="mi">180-195</span><span class="w"> </span><span class="n">OFFLINE</span><span class="w"> </span><span class="o">*&gt;</span>
-</code></pre></div>
+<p>```cpp
+&lt;* I2C Device found at 0x3C, OLED Display or HMC583L Magnetometer? <em>&gt;
+&lt;</em> I2C Device found at 0x40, PWM? <em>&gt;
+. . .
+and then it shows the OLED is configured
+&lt;</em> 132x64 OLED display configured on I2C:0x3c *&gt;</p>
+<p>send the command: <D HAL SHOW> to see the vPins configured
+&lt;* Arduino Vpins:2-39 <em>&gt;
+&lt;</em> PCA9685 I2C:0x40 Configured on Vpins:100-115  <em>&gt;
+&lt;</em> PCA9685 I2C:0x41 Configured on Vpins:116-131 OFFLINE <em>&gt;
+&lt;</em> MCP23017 I2C:0x20 Configured on Vpins:164-179 OFFLINE <em>&gt;
+&lt;</em> MCP23017 I2C:0x21 Configured on Vpins:180-195 OFFLINE *&gt;
+```</p>
 </li>
 <li>
 <p>Examine the log to check that your PCA9685 has been detected and note the I2C address it found. This will typically be 0x40. If this address is 0x40 or 0x41 then the CS has defaulted this to be a PCA9685 and automatically assigned a range of 16 <a href="?VPIN">VPINs</a> to represent the 16 servo outputs.</p>
@@ -7210,11 +7210,11 @@ from the startup logs using the serial monitor</p>
 <ol>
 <li>
 <p>In EX-Installer, edit myAutomation.h and define each turnout to give an id of your choice, the VPIN of the servo, the closed and open servo values you have discovered by experimentation and a suitable decription to show on your throttle.</p>
-<div class="highlight"><pre><span></span><code><span class="c1">//SERVO_TURNOUT( turnout_id, vpin, active_angle, inactive_angle, profile [, &quot;description&quot;|HIDDEN] )</span>
-<span class="n">SERVO_TURNOUT</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">100</span><span class="p">,</span><span class="w"> </span><span class="mi">350</span><span class="p">,</span><span class="w"> </span><span class="mi">120</span><span class="p">,</span><span class="w"> </span><span class="n">Slow</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Coal yard exit&quot;</span><span class="p">)</span>
-<span class="n">SERVO_TURNOUT</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">101</span><span class="p">,</span><span class="w"> </span><span class="mi">400</span><span class="p">,</span><span class="w"> </span><span class="mi">200</span><span class="p">,</span><span class="w"> </span><span class="n">Slow</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Branch line siding&quot;</span><span class="p">)</span>
-<span class="n">SERVO_TURNOUT</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">102</span><span class="p">,</span><span class="w"> </span><span class="mi">400</span><span class="p">,</span><span class="w"> </span><span class="mi">200</span><span class="p">,</span><span class="w"> </span><span class="n">Slow</span><span class="p">,</span><span class="w"> </span><span class="n">HIDDEN</span><span class="p">)</span>
-</code></pre></div>
+<p><code>cpp
+ //SERVO_TURNOUT( turnout_id, vpin, active_angle, inactive_angle, profile [, "description"|HIDDEN] )
+ SERVO_TURNOUT(1, 100, 350, 120, Slow, "Coal yard exit")
+ SERVO_TURNOUT(2, 101, 400, 200, Slow, "Branch line siding")
+ SERVO_TURNOUT(3, 102, 400, 200, Slow, HIDDEN)</code></p>
 </li>
 <li>
 <p>Reload the command station from the installer.</p>
@@ -7231,9 +7231,9 @@ from the startup logs using the serial monitor</p>
 <h2 id="pca9685-configure-additional-boards">PCA9685 Configure additional boards<a class="headerlink" href="#pca9685-configure-additional-boards" title="Permanent link">&para;</a></h2>
 <p>The first two PCA9685 are pre-defined at addresses 0x40 and 0x41, for pins 100-115 and 116-131.<BR>
 Configure additional PCA9685 in myAutomation.h.</p>
-<div class="highlight"><pre><span></span><code><span class="w">  </span><span class="n">HAL</span><span class="p">(</span><span class="n">PCA9685</span><span class="p">,</span><span class="w"> </span><span class="mi">132</span><span class="p">,</span><span class="w"> </span><span class="mi">16</span><span class="p">,</span><span class="w"> </span><span class="mh">0x42</span><span class="p">)</span>
-<span class="w">  </span><span class="n">HAL</span><span class="p">(</span><span class="n">PCA9685</span><span class="p">,</span><span class="w"> </span><span class="mi">148</span><span class="p">,</span><span class="w"> </span><span class="mi">16</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="n">I2CMux_0</span><span class="p">,</span><span class="n">SubBus_4</span><span class="p">,</span><span class="mh">0x43</span><span class="p">})</span>
-</code></pre></div>
+<p><code>cpp
+  HAL(PCA9685, 132, 16, 0x42)
+  HAL(PCA9685, 148, 16, {I2CMux_0,SubBus_4,0x43})</code></p>
 <p>Nucleo-144 boards do not have pre-defined PCA9685 due to pin conflicts, as pins thru 116 are reserved for the microprocessor.  All PCA9685 connected to Nucleo-144 boards require configuration in myAutomation.h.</p>
 
 
@@ -7255,7 +7255,7 @@ Configure additional PCA9685 in myAutomation.h.</p>
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="December 23, 2025 20:20:47 UTC">December 23, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="April 30, 2026 00:03:03 UTC">April 30, 2026</span>
   </span>
 
     

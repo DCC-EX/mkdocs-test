@@ -7037,67 +7037,67 @@
 <h1 id="display-track-status-on-oled">Display Track Status on OLED<a class="headerlink" href="#display-track-status-on-oled" title="Permanent link">&para;</a></h1>
 <p><img alt="Track Status Display" src="../../../../../../_static/images/ex-csb1/track-status-display.png" /></p>
 <p>To display track status, add a line in myAutomation.h
-<div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;myTrackStatus.example.h&quot;</span>
-</code></pre></div></p>
+```cpp</p>
+<h1 id="include-mytrackstatusexampleh">include "myTrackStatus.example.h"<a class="headerlink" href="#include-mytrackstatusexampleh" title="Permanent link">&para;</a></h1>
+<p>```</p>
 <p>If using Mega, a line will be needed in config.h to allocate memory for additional lines on the first display.<br />
-<div class="highlight"><pre><span></span><code><span class="cp">#define MAX_CHARACTER_ROWS 17</span>
-</code></pre></div></p>
+```cpp</p>
+<h1 id="define-max_character_rows-17">define MAX_CHARACTER_ROWS 17<a class="headerlink" href="#define-max_character_rows-17" title="Permanent link">&para;</a></h1>
+<p>```</p>
 <p>9 plus number of tracks; 17 for 8 tracks.
 CSB1, ESP32-WROOM and Nucleo-F4 have this setting as default.</p>
 <p>In addition to displaying track status, myTrackStatus.example.h will update the second line on the display, to show the motor shield type after 10 seconds.</p>
 <p>myTrackStatus.example.h can be used by adding the <code>#include</code> line in myAutomation.h, or you can copy/rename the file in your backup folder and customize it so that the information is displayed on a different screen.</p>
-<div class="highlight"><pre><span></span><code>// myAutomation.h - as used in the above example
-
-#include &quot;myTrackStatus.example.h&quot;
-
-AUTOSTART
+<p>```
+// myAutomation.h - as used in the above example</p>
+<h1 id="include-mytrackstatusexampleh_1">include "myTrackStatus.example.h"<a class="headerlink" href="#include-mytrackstatusexampleh_1" title="Permanent link">&para;</a></h1>
+<p>AUTOSTART
 SET_TRACK(A,MAIN)
 SET_TRACK(B,PROG)
 POWEROFF         // power command follows change in track mode
   DELAYMINS(2)   // do not change defaults for 2 minutes
-  SCREEN(0, 0, &quot;&quot;)    // clear two static rows
-  SCREEN(0, 1, &quot;&quot;)    // to avoid scrolling
+  SCREEN(0, 0, "")    // clear two static rows
+  SCREEN(0, 1, "")    // to avoid scrolling
 DONE
-</code></pre></div>
+```</p>
 <p>Contents of the example file -- suggested for review/reference on how various EXRAIL commands have been used.
-<div class="highlight"><pre><span></span><code><span class="c1">// myTrackStatus.example.h</span>
-
-<span class="c1">// Reporting power status and mA for each track on the LCD</span>
-<span class="n">HAL</span><span class="p">(</span><span class="n">Bitmap</span><span class="p">,</span><span class="mi">8236</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="c1">// create flag 8236</span>
-<span class="n">AUTOSTART</span><span class="w"> </span><span class="n">DELAY</span><span class="p">(</span><span class="mi">5000</span><span class="p">)</span><span class="w"> </span>
-<span class="w"> </span><span class="n">ROUTE</span><span class="p">(</span><span class="s">&quot;TRACKSTATUS&quot;</span><span class="n">_hk</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Resume/Pause JL Display&quot;</span><span class="p">)</span>
-<span class="w">  </span><span class="n">IF</span><span class="p">(</span><span class="mi">8236</span><span class="p">)</span><span class="w"> </span>
-<span class="w">    </span><span class="n">RESET</span><span class="p">(</span><span class="mi">8236</span><span class="p">)</span>
-<span class="w">     </span><span class="n">ROUTE_CAPTION</span><span class="p">(</span><span class="s">&quot;TRACKSTATUS&quot;</span><span class="n">_hk</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Paused&quot;</span><span class="p">)</span><span class="w"> </span><span class="n">ROUTE_INACTIVE</span><span class="p">(</span><span class="s">&quot;TRACKSTATUS&quot;</span><span class="n">_hk</span><span class="p">)</span>
-<span class="w">      </span><span class="n">SCREEN</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">8</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Track status paused&quot;</span><span class="p">)</span>
-<span class="w">      </span><span class="n">SCREEN</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">9</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;&quot;</span><span class="p">)</span>
-<span class="w">      </span><span class="n">SCREEN</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;&quot;</span><span class="p">)</span><span class="w">   </span><span class="c1">// several blank lines as needed</span>
-<span class="w">      </span><span class="n">SCREEN</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">11</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;&quot;</span><span class="p">)</span>
-<span class="w">      </span><span class="n">SCREEN</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">12</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;&quot;</span><span class="p">)</span>
-<span class="w">      </span><span class="n">SCREEN</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">13</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;&quot;</span><span class="p">)</span>
-<span class="w">      </span><span class="n">SCREEN</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">14</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;&quot;</span><span class="p">)</span>
-<span class="w">      </span><span class="n">SCREEN</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">15</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;&quot;</span><span class="p">)</span>
-<span class="w">      </span><span class="n">SCREEN</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">16</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;&quot;</span><span class="p">)</span>
-<span class="w">      </span><span class="n">PRINT</span><span class="p">(</span><span class="s">&quot;to pause/resume: &lt;/START TRACKSTATUS&gt; </span><span class="se">\n</span><span class="s">&quot;</span><span class="p">)</span>
-<span class="w">    </span><span class="n">DONE</span><span class="w"> </span><span class="n">ENDIF</span>
-<span class="w">  </span><span class="n">SET</span><span class="p">(</span><span class="mi">8236</span><span class="p">)</span><span class="w"> </span>
-<span class="w">   </span><span class="n">ROUTE_CAPTION</span><span class="p">(</span><span class="s">&quot;TRACKSTATUS&quot;</span><span class="n">_hk</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Running&quot;</span><span class="p">)</span><span class="w"> </span><span class="n">ROUTE_ACTIVE</span><span class="p">(</span><span class="s">&quot;TRACKSTATUS&quot;</span><span class="n">_hk</span><span class="p">)</span>
-<span class="w">    </span><span class="n">PRINT</span><span class="p">(</span><span class="s">&quot;Resume JL Display&quot;</span><span class="p">)</span>
-<span class="w">   </span><span class="n">FOLLOW</span><span class="p">(</span><span class="s">&quot;PAUSETRACKSTATUS&quot;</span><span class="n">_hk</span><span class="p">)</span>
-<span class="w">  </span><span class="n">SEQUENCE</span><span class="p">(</span><span class="s">&quot;PAUSETRACKSTATUS&quot;</span><span class="n">_hk</span><span class="p">)</span>
-<span class="w">   </span><span class="n">PARSE</span><span class="p">(</span><span class="s">&quot;&lt;JL 0 8&gt;&quot;</span><span class="p">)</span><span class="w">  </span><span class="c1">// screen 0  start on line 8</span>
-<span class="w">    </span><span class="n">PRINT</span><span class="p">(</span><span class="s">&quot;to pause/resume: &lt;/START TRACKSTATUS&gt; </span><span class="se">\n</span><span class="s">&quot;</span><span class="p">)</span>
-<span class="w">    </span><span class="n">DELAY</span><span class="p">(</span><span class="mi">3000</span><span class="p">)</span>
-<span class="w">  </span><span class="n">IF</span><span class="p">(</span><span class="mi">8236</span><span class="p">)</span><span class="w"> </span><span class="n">FOLLOW</span><span class="p">(</span><span class="s">&quot;PAUSETRACKSTATUS&quot;</span><span class="n">_hk</span><span class="p">)</span><span class="w"> </span><span class="n">ENDIF</span>
-<span class="w">  </span><span class="n">DONE</span>
-<span class="c1">// ************ End OLED JL Display Track mA Amperage ************** //</span>
-
-<span class="c1">// Display motor shield after 10 seconds</span>
-<span class="n">AUTOSTART</span>
-<span class="w">  </span><span class="n">DELAY</span><span class="p">(</span><span class="mi">10000</span><span class="p">)</span>
-<span class="w">  </span><span class="n">STEALTH</span><span class="p">(</span><span class="n">StringFormatter</span><span class="o">::</span><span class="n">lcd</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">F</span><span class="p">(</span><span class="s">&quot;MS: %S&quot;</span><span class="p">),</span><span class="w"> </span><span class="n">DCC</span><span class="o">::</span><span class="n">getMotorShieldName</span><span class="p">());)</span>
-<span class="n">DONE</span>
-</code></pre></div></p>
+```cpp
+// myTrackStatus.example.h</p>
+<p>// Reporting power status and mA for each track on the LCD
+HAL(Bitmap,8236,1) // create flag 8236
+AUTOSTART DELAY(5000) 
+ ROUTE("TRACKSTATUS"_hk, "Resume/Pause JL Display")
+  IF(8236) 
+    RESET(8236)
+     ROUTE_CAPTION("TRACKSTATUS"_hk, "Paused") ROUTE_INACTIVE("TRACKSTATUS"_hk)
+      SCREEN(0, 8, "Track status paused")
+      SCREEN(0, 9, "")
+      SCREEN(0,10, "")   // several blank lines as needed
+      SCREEN(0,11, "")
+      SCREEN(0,12, "")
+      SCREEN(0,13, "")
+      SCREEN(0,14, "")
+      SCREEN(0,15, "")
+      SCREEN(0,16, "")
+      PRINT("to pause/resume: </START TRACKSTATUS> \n")
+    DONE ENDIF
+  SET(8236) 
+   ROUTE_CAPTION("TRACKSTATUS"_hk, "Running") ROUTE_ACTIVE("TRACKSTATUS"_hk)
+    PRINT("Resume JL Display")
+   FOLLOW("PAUSETRACKSTATUS"_hk)
+  SEQUENCE("PAUSETRACKSTATUS"_hk)
+   PARSE("<JL 0 8>")  // screen 0  start on line 8
+    PRINT("to pause/resume: </START TRACKSTATUS> \n")
+    DELAY(3000)
+  IF(8236) FOLLOW("PAUSETRACKSTATUS"_hk) ENDIF
+  DONE
+// ************ End OLED JL Display Track mA Amperage ************** //</p>
+<p>// Display motor shield after 10 seconds
+AUTOSTART
+  DELAY(10000)
+  STEALTH(StringFormatter::lcd(1, F("MS: %S"), DCC::getMotorShieldName());)
+DONE
+```</p>
 
 
 
@@ -7118,7 +7118,7 @@ DONE
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="April 27, 2026 03:55:55 UTC">April 27, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="April 30, 2026 00:03:03 UTC">April 30, 2026</span>
   </span>
 
     
