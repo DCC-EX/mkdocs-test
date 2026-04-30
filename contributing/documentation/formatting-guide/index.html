@@ -6965,6 +6965,69 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Headings">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#heading-level-3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Heading Level 3
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Heading Level 3">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#heading-level-4" class="md-nav__link">
+    <span class="md-ellipsis">
+      Heading Level 4
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Heading Level 4">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#heading-level-5" class="md-nav__link">
+    <span class="md-ellipsis">
+      Heading Level 5
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#glossary-terms-and-linking" class="md-nav__link">
+    <span class="md-ellipsis">
+      Glossary Terms and Linking
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#code-blocks" class="md-nav__link">
+    <span class="md-ellipsis">
+      Code blocks
+    </span>
+  </a>
+  
 </li>
       
     </ul>
@@ -7167,6 +7230,69 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Headings">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#heading-level-3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Heading Level 3
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Heading Level 3">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#heading-level-4" class="md-nav__link">
+    <span class="md-ellipsis">
+      Heading Level 4
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Heading Level 4">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#heading-level-5" class="md-nav__link">
+    <span class="md-ellipsis">
+      Heading Level 5
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#glossary-terms-and-linking" class="md-nav__link">
+    <span class="md-ellipsis">
+      Glossary Terms and Linking
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#code-blocks" class="md-nav__link">
+    <span class="md-ellipsis">
+      Code blocks
+    </span>
+  </a>
+  
 </li>
       
     </ul>
@@ -7200,181 +7326,186 @@
 <p>All internal links to other pages and sections should be relative to the docs directory. We have enabled a setting to ensure links are correctly converted to the correct html href, and enable permalinks for headings to support this.</p>
 <h3 id="section-links">Section Links<a class="headerlink" href="#section-links" title="Permanent link">&para;</a></h3>
 <p>Links to sections on the same page should just use the permalink section heading name:</p>
-<p><code>markdown
-[Link to this section](#page-and-section-links)</code></p>
+<div class="highlight"><pre><span></span><code>[<span class="nt">Link to this section</span>](<span class="na">#page-and-section-links</span>)
+</code></pre></div>
 <p>Results in: <a href="#page-and-section-links">Link to this section</a></p>
 <h3 id="document-links">Document Links<a class="headerlink" href="#document-links" title="Permanent link">&para;</a></h3>
-<p><code>markdown
-[Link to Contributing to Documentation Page](/contributing/documentation/docs.md)</code></p>
+<div class="highlight"><pre><span></span><code>[<span class="nt">Link to Contributing to Documentation Page</span>](<span class="na">/contributing/documentation/docs.md</span>)
+</code></pre></div>
 <p>Results in: <a href="../docs/">Link to Contributing to Documentation Page</a></p>
-<p><code>markdown
-[Link to How to Contribute Section](/contributing/documentation/docs.md#how-to-contribute)</code></p>
+<div class="highlight"><pre><span></span><code>[<span class="nt">Link to How to Contribute Section</span>](<span class="na">/contributing/documentation/docs.md#how-to-contribute</span>)
+</code></pre></div>
 <p>Results in: <a href="../docs/#how-to-contribute">Link to How to Contribute Section</a></p>
 <p>Note: when typing a link in VSCode, the intellisense dropdown will help you complete the link by following the path from the project directory. This creates links that start with "/docs" (for example "/docs/contributing/1-contribute-docs.md" ). These links will not work unless you manually delete the /docs prefix.  Its a pain but we have raised a PR for VScode and mkDocs on this.</p>
 <h3 id="external-links">External Links<a class="headerlink" href="#external-links" title="Permanent link">&para;</a></h3>
-<p><code>markdown
-[Link to Google Search](https://www.google.com)</code></p>
+<div class="highlight"><pre><span></span><code>[<span class="nt">Link to Google Search</span>](<span class="na">https://www.google.com</span>)
+</code></pre></div>
 <p>Results in: <a href="https://www.google.com">Link to Google Search</a></p>
 <h2 id="search-links">Search Links<a class="headerlink" href="#search-links" title="Permanent link">&para;</a></h2>
 <p>We have added a link feature to directly invoke the MkDocs powerful search dialog. This is particularly useful when you wish to refer to information that may be spread over several places and possibly not yet written.</p>
-<p><code>markdown
- [Find out about PCA9685 servo controllers](?PCA9685)</code></p>
+<div class="highlight"><pre><span></span><code> [<span class="nt">Find out about PCA9685 servo controllers</span>](<span class="na">?PCA9685</span>)
+</code></pre></div>
 <p><a href="?PCA9685">Find out about PCA9685 servo controllers</a></p>
 <p>Multi word searches are also accepted</p>
-<p><code>markdown
- [hidden turnouts](?hidden turnout)</code></p>
+<div class="highlight"><pre><span></span><code> [<span class="nt">hidden turnouts</span>](<span class="na">?hidden turnout</span>)
+</code></pre></div>
 <p><a href="?hidden turnout">hidden turnouts</a></p>
 <h2 id="headings">Headings<a class="headerlink" href="#headings" title="Permanent link">&para;</a></h2>
 <p>Headings are simply defined by one or more leading <code>#</code>, noting you can only have one top level heading on a page, which is the page title.</p>
 <p>The top level heading defines how the page appears in menus, so for this page this is the top level heading:</p>
-<p>```markdown</p>
-<h1 id="standards-and-formatting-guide">Standards and Formatting Guide<a class="headerlink" href="#standards-and-formatting-guide" title="Permanent link">&para;</a></h1>
-<p>```</p>
+<div class="highlight"><pre><span></span><code><span class="gh"># Standards and Formatting Guide</span>
+</code></pre></div>
 <p>Further, this general section on "Headings" is a second level heading:</p>
-<p>```markdown</p>
-<h2 id="headings_1">Headings<a class="headerlink" href="#headings_1" title="Permanent link">&para;</a></h2>
-<p>```</p>
+<div class="highlight"><pre><span></span><code><span class="gu">## Headings</span>
+</code></pre></div>
 <p>Following are how to define the lower level headings with a demo of each.</p>
 <h3 id="heading-level-3">Heading Level 3<a class="headerlink" href="#heading-level-3" title="Permanent link">&para;</a></h3>
-<p>```markdown</p>
-<h3 id="heading-level-3_1">Heading Level 3<a class="headerlink" href="#heading-level-3_1" title="Permanent link">&para;</a></h3>
-<p>```</p>
+<div class="highlight"><pre><span></span><code><span class="gu">### Heading Level 3</span>
+</code></pre></div>
 <h4 id="heading-level-4">Heading Level 4<a class="headerlink" href="#heading-level-4" title="Permanent link">&para;</a></h4>
-<p>```markdown</p>
-<h4 id="heading-level-4_1">Heading Level 4<a class="headerlink" href="#heading-level-4_1" title="Permanent link">&para;</a></h4>
-<p>```</p>
+<div class="highlight"><pre><span></span><code><span class="gu">#### Heading Level 4</span>
+</code></pre></div>
 <h5 id="heading-level-5">Heading Level 5<a class="headerlink" href="#heading-level-5" title="Permanent link">&para;</a></h5>
-<p>```markdown</p>
-<h5 id="heading-level-5_1">Heading Level 5<a class="headerlink" href="#heading-level-5_1" title="Permanent link">&para;</a></h5>
-<p>```</p>
+<div class="highlight"><pre><span></span><code><span class="gu">##### Heading Level 5</span>
+</code></pre></div>
 <h2 id="glossary-terms-and-linking">Glossary Terms and Linking<a class="headerlink" href="#glossary-terms-and-linking" title="Permanent link">&para;</a></h2>
 <p>Glossary plugins seem to be either very complicated to implement, or don't yield the results we're looking for. Instead, we have opted for a simple DIY glossary to define the terms, and provide a search link to enable users to find where they have been used in the documentation.</p>
 <p>To add a term to the glossary, use the search URL syntax and a second level heading:</p>
-<p>```markdown</p>
-<h2 id="term"><a href="?term">Term</a><a class="headerlink" href="#term" title="Permanent link">&para;</a></h2>
-<p>This is a new term being added to the glossary.
-```</p>
+<div class="highlight"><pre><span></span><code><span class="gu">## [Term](?term)</span>
+
+This is a new term being added to the glossary.
+</code></pre></div>
 <h2 id="code-blocks">Code blocks<a class="headerlink" href="#code-blocks" title="Permanent link">&para;</a></h2>
 <p>When including code blocks, be sure to include an appropriate language for syntax highlighting, and use triple backtick "`" characters to surround the code for highlighting.</p>
 <p>For example:</p>
-<p><code>`cpp</code>cpp
-TURNOUTL(id, address, "description")</p>
-<p>TURNOUT(id, shortAddress, subAddress, "description")
-```
-````</p>
+<div class="highlight"><pre><span></span><code><span class="err">```</span><span class="n">cpp</span>
+<span class="n">TURNOUTL</span><span class="p">(</span><span class="n">id</span><span class="p">,</span><span class="w"> </span><span class="n">address</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;description&quot;</span><span class="p">)</span>
+
+<span class="n">TURNOUT</span><span class="p">(</span><span class="n">id</span><span class="p">,</span><span class="w"> </span><span class="n">shortAddress</span><span class="p">,</span><span class="w"> </span><span class="n">subAddress</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;description&quot;</span><span class="p">)</span>
+<span class="err">```</span>
+</code></pre></div>
 <p>Will render as:</p>
-<p>```cpp
-TURNOUTL(id, address, "description")</p>
-<p>TURNOUT(id, shortAddress, subAddress, "description")
-```</p>
+<div class="highlight"><pre><span></span><code><span class="n">TURNOUTL</span><span class="p">(</span><span class="n">id</span><span class="p">,</span><span class="w"> </span><span class="n">address</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;description&quot;</span><span class="p">)</span>
+
+<span class="n">TURNOUT</span><span class="p">(</span><span class="n">id</span><span class="p">,</span><span class="w"> </span><span class="n">shortAddress</span><span class="p">,</span><span class="w"> </span><span class="n">subAddress</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;description&quot;</span><span class="p">)</span>
+</code></pre></div>
 <p>For EXRAIL and general configuration file code blocks (eg. config.h, myAutomation.h), "cpp" is as good as any, and for any others use an appropriate language specifier.</p>
 <p>If appropriate, line numbers can also be displayed by appending <code>linenums="X"</code> to the language, where "X" is the starting line number:</p>
-<p><code>`cpp</code>cpp linenums="20"
-TURNOUTL(id, address, "description")</p>
-<p>TURNOUT(id, shortAddress, subAddress, "description")
-```
-````</p>
+<div class="highlight"><pre><span></span><code><span class="err">```</span><span class="n">cpp</span><span class="w"> </span><span class="n">linenums</span><span class="o">=</span><span class="s">&quot;20&quot;</span>
+<span class="n">TURNOUTL</span><span class="p">(</span><span class="n">id</span><span class="p">,</span><span class="w"> </span><span class="n">address</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;description&quot;</span><span class="p">)</span>
+
+<span class="n">TURNOUT</span><span class="p">(</span><span class="n">id</span><span class="p">,</span><span class="w"> </span><span class="n">shortAddress</span><span class="p">,</span><span class="w"> </span><span class="n">subAddress</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;description&quot;</span><span class="p">)</span>
+<span class="err">```</span>
+</code></pre></div>
 <p>Will render as:</p>
-<p>```cpp linenums="20"
-TURNOUTL(id, address, "description")</p>
-<p>TURNOUT(id, shortAddress, subAddress, "description")
-```</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">TURNOUTL</span><span class="p">(</span><span class="n">id</span><span class="p">,</span><span class="w"> </span><span class="n">address</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;description&quot;</span><span class="p">)</span>
+
+<span class="n">TURNOUT</span><span class="p">(</span><span class="n">id</span><span class="p">,</span><span class="w"> </span><span class="n">shortAddress</span><span class="p">,</span><span class="w"> </span><span class="n">subAddress</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;description&quot;</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
 <p>This is a nonsense C++ code block generated by Gemini to demonstrate the full syntax highlighting:</p>
-<p>```cpp</p>
-<h1 id="include-standard-io-library">include <iostream>  // Standard I/O library<a class="headerlink" href="#include-standard-io-library" title="Permanent link">&para;</a></h1>
-<h1 id="include-for-dynamic-arrays">include <vector>    // For dynamic arrays<a class="headerlink" href="#include-for-dynamic-arrays" title="Permanent link">&para;</a></h1>
-<h1 id="include-for-string-manipulation">include <string>    // For string manipulation<a class="headerlink" href="#include-for-string-manipulation" title="Permanent link">&para;</a></h1>
-<h1 id="include-for-key-value-pairs">include <map>       // For key-value pairs<a class="headerlink" href="#include-for-key-value-pairs" title="Permanent link">&para;</a></h1>
-<p>// A simple namespace to organize code
-namespace MyLibrary {</p>
-<p>const double PI_VALUE = 3.1415926535; // A global constant</p>
-<p>/**
- * @brief Represents a generic item with properties.
- * This is a multi-line comment to test comment colors.
- */
-class GenericItem {
-private:
-    std::string itemName;
-    int itemId;
-    double itemPrice;
-    bool isAvailable;</p>
-<p>public:
-    // Constructor with default values
-    GenericItem(const std::string&amp; name = "Default Item", int id = 0, double price = 0.0, bool available = true)
-        : itemName(name), itemId(id), itemPrice(price), isAvailable(available) {}</p>
-<pre><code>// Member function to display item details
-void displayDetails() const {
-    std::cout &lt;&lt; "Item Name: " &lt;&lt; itemName &lt;&lt; std::endl;
-    std::cout &lt;&lt; "Item ID: " &lt;&lt; itemId &lt;&lt; std::endl;
-    std::cout &lt;&lt; "Price: $" &lt;&lt; itemPrice &lt;&lt; std::endl;
-    std::cout &lt;&lt; "Available: " &lt;&lt; (isAvailable ? "Yes" : "No") &lt;&lt; std::endl;
-}
+<div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span><span class="c1">  // Standard I/O library</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;vector&gt;</span><span class="c1">    // For dynamic arrays</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;string&gt;</span><span class="c1">    // For string manipulation</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;map&gt;</span><span class="c1">       // For key-value pairs</span>
 
-// Getter for itemPrice
-double getPrice() const {
-    return itemPrice;
-}
+<span class="c1">// A simple namespace to organize code</span>
+<span class="k">namespace</span><span class="w"> </span><span class="nn">MyLibrary</span><span class="w"> </span><span class="p">{</span>
 
-// Setter for itemPrice (with a simple check)
-void setPrice(double newPrice) {
-    if (newPrice &gt;= 0.0) {
-        this-&gt;itemPrice = newPrice;
-    } else {
-        std::cerr &lt;&lt; "Warning: Price cannot be negative." &lt;&lt; std::endl;
-    }
-}
-</code></pre>
-<p>}; // Don't forget the semicolon after class definition!</p>
-<p>// Template function to find the maximum of two values
-template <typename T>
-T findMax(T a, T b) {
-    return (a &gt; b) ? a : b; // Ternary operator test
-}</p>
-<p>} // end namespace MyLibrary</p>
-<p>// Main function - entry point of the program
-int main() {
-    using namespace MyLibrary; // Use MyLibrary namespace</p>
-<pre><code>// Create instances of GenericItem
-GenericItem item1("Laptop", 101, 1200.50, true);
-GenericItem* item2 = new GenericItem("Mouse", 202, 25.99, false); // Using 'new'
+<span class="k">const</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">PI_VALUE</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">3.1415926535</span><span class="p">;</span><span class="w"> </span><span class="c1">// A global constant</span>
 
-// Display details using a loop
-std::vector&lt;GenericItem&gt; inventory;
-inventory.push_back(item1);
-inventory.push_back(*item2);
+<span class="cm">/**</span>
+<span class="cm"> * @brief Represents a generic item with properties.</span>
+<span class="cm"> * This is a multi-line comment to test comment colors.</span>
+<span class="cm"> */</span>
+<span class="k">class</span><span class="w"> </span><span class="nc">GenericItem</span><span class="w"> </span><span class="p">{</span>
+<span class="k">private</span><span class="o">:</span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">itemName</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">itemId</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">itemPrice</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">bool</span><span class="w"> </span><span class="n">isAvailable</span><span class="p">;</span>
 
-std::cout &lt;&lt; "--- Inventory Details ---" &lt;&lt; std::endl;
-for (const auto&amp; item : inventory) { // Range-based for loop
-    item.displayDetails();
-    std::cout &lt;&lt; "-------------------------" &lt;&lt; std::endl;
-}
+<span class="k">public</span><span class="o">:</span>
+<span class="w">    </span><span class="c1">// Constructor with default values</span>
+<span class="w">    </span><span class="n">GenericItem</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Default Item&quot;</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">price</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="kt">bool</span><span class="w"> </span><span class="n">available</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">true</span><span class="p">)</span>
+<span class="w">        </span><span class="o">:</span><span class="w"> </span><span class="n">itemName</span><span class="p">(</span><span class="n">name</span><span class="p">),</span><span class="w"> </span><span class="n">itemId</span><span class="p">(</span><span class="n">id</span><span class="p">),</span><span class="w"> </span><span class="n">itemPrice</span><span class="p">(</span><span class="n">price</span><span class="p">),</span><span class="w"> </span><span class="n">isAvailable</span><span class="p">(</span><span class="n">available</span><span class="p">)</span><span class="w"> </span><span class="p">{}</span>
 
-// Test the template function
-int maxInt = findMax(10, 20);
-double maxDouble = findMax(PI_VALUE, item2-&gt;getPrice()); // Accessing member via pointer
+<span class="w">    </span><span class="c1">// Member function to display item details</span>
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="n">displayDetails</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Item Name: &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">itemName</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+<span class="w">        </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Item ID: &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">itemId</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+<span class="w">        </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Price: $&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">itemPrice</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+<span class="w">        </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Available: &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="p">(</span><span class="n">isAvailable</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="s">&quot;Yes&quot;</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="s">&quot;No&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
 
-std::cout &lt;&lt; "Maximum integer: " &lt;&lt; maxInt &lt;&lt; std::endl;
-std::cout &lt;&lt; "Maximum double: " &lt;&lt; maxDouble &lt;&lt; std::endl;
+<span class="w">    </span><span class="c1">// Getter for itemPrice</span>
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">getPrice</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">itemPrice</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
 
-// Exception handling test
-try {
-    if (item1.getPrice() &lt; 1.0) {
-        throw "Price too low!"; // Throwing a string literal
-    }
-    item1.setPrice(1500.00); // Change price
-} catch (const char* msg) { // Catching a C-style string
-    std::cerr &lt;&lt; "Error: " &lt;&lt; msg &lt;&lt; std::endl;
-}
+<span class="w">    </span><span class="c1">// Setter for itemPrice (with a simple check)</span>
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="n">setPrice</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">newPrice</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">newPrice</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mf">0.0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">itemPrice</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">newPrice</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">std</span><span class="o">::</span><span class="n">cerr</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Warning: Price cannot be negative.&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">};</span><span class="w"> </span><span class="c1">// Don&#39;t forget the semicolon after class definition!</span>
 
-// Clean up dynamic memory
-delete item2; // Using 'delete'
-item2 = nullptr; // Best practice to nullify pointer after delete
+<span class="c1">// Template function to find the maximum of two values</span>
+<span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="k">typename</span><span class="w"> </span><span class="nc">T</span><span class="o">&gt;</span>
+<span class="n">T</span><span class="w"> </span><span class="n">findMax</span><span class="p">(</span><span class="n">T</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="n">T</span><span class="w"> </span><span class="n">b</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="p">(</span><span class="n">a</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">b</span><span class="p">)</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">b</span><span class="p">;</span><span class="w"> </span><span class="c1">// Ternary operator test</span>
+<span class="p">}</span>
 
-// Return 0 for successful execution (integer literal)
-return 0;
-</code></pre>
-<p>}
-```</p>
+<span class="p">}</span><span class="w"> </span><span class="c1">// end namespace MyLibrary</span>
+
+<span class="c1">// Main function - entry point of the program</span>
+<span class="kt">int</span><span class="w"> </span><span class="n">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">using</span><span class="w"> </span><span class="k">namespace</span><span class="w"> </span><span class="nn">MyLibrary</span><span class="p">;</span><span class="w"> </span><span class="c1">// Use MyLibrary namespace</span>
+
+<span class="w">    </span><span class="c1">// Create instances of GenericItem</span>
+<span class="w">    </span><span class="n">GenericItem</span><span class="w"> </span><span class="n">item1</span><span class="p">(</span><span class="s">&quot;Laptop&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">101</span><span class="p">,</span><span class="w"> </span><span class="mf">1200.50</span><span class="p">,</span><span class="w"> </span><span class="nb">true</span><span class="p">);</span>
+<span class="w">    </span><span class="n">GenericItem</span><span class="o">*</span><span class="w"> </span><span class="n">item2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">GenericItem</span><span class="p">(</span><span class="s">&quot;Mouse&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">202</span><span class="p">,</span><span class="w"> </span><span class="mf">25.99</span><span class="p">,</span><span class="w"> </span><span class="nb">false</span><span class="p">);</span><span class="w"> </span><span class="c1">// Using &#39;new&#39;</span>
+
+<span class="w">    </span><span class="c1">// Display details using a loop</span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">GenericItem</span><span class="o">&gt;</span><span class="w"> </span><span class="n">inventory</span><span class="p">;</span>
+<span class="w">    </span><span class="n">inventory</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">item1</span><span class="p">);</span>
+<span class="w">    </span><span class="n">inventory</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="o">*</span><span class="n">item2</span><span class="p">);</span>
+
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;--- Inventory Details ---&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="k">auto</span><span class="o">&amp;</span><span class="w"> </span><span class="n">item</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">inventory</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="c1">// Range-based for loop</span>
+<span class="w">        </span><span class="n">item</span><span class="p">.</span><span class="n">displayDetails</span><span class="p">();</span>
+<span class="w">        </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;-------------------------&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="c1">// Test the template function</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">maxInt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">findMax</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="mi">20</span><span class="p">);</span>
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">maxDouble</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">findMax</span><span class="p">(</span><span class="n">PI_VALUE</span><span class="p">,</span><span class="w"> </span><span class="n">item2</span><span class="o">-&gt;</span><span class="n">getPrice</span><span class="p">());</span><span class="w"> </span><span class="c1">// Accessing member via pointer</span>
+
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Maximum integer: &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">maxInt</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Maximum double: &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">maxDouble</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+
+<span class="w">    </span><span class="c1">// Exception handling test</span>
+<span class="w">    </span><span class="k">try</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">item1</span><span class="p">.</span><span class="n">getPrice</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mf">1.0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="k">throw</span><span class="w"> </span><span class="s">&quot;Price too low!&quot;</span><span class="p">;</span><span class="w"> </span><span class="c1">// Throwing a string literal</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">        </span><span class="n">item1</span><span class="p">.</span><span class="n">setPrice</span><span class="p">(</span><span class="mf">1500.00</span><span class="p">);</span><span class="w"> </span><span class="c1">// Change price</span>
+<span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="o">*</span><span class="w"> </span><span class="n">msg</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="c1">// Catching a C-style string</span>
+<span class="w">        </span><span class="n">std</span><span class="o">::</span><span class="n">cerr</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Error: &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">msg</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="c1">// Clean up dynamic memory</span>
+<span class="w">    </span><span class="k">delete</span><span class="w"> </span><span class="n">item2</span><span class="p">;</span><span class="w"> </span><span class="c1">// Using &#39;delete&#39;</span>
+<span class="w">    </span><span class="n">item2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">nullptr</span><span class="p">;</span><span class="w"> </span><span class="c1">// Best practice to nullify pointer after delete</span>
+
+<span class="w">    </span><span class="c1">// Return 0 for successful execution (integer literal)</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
 
 
 
@@ -7395,7 +7526,7 @@ return 0;
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="April 30, 2026 00:03:03 UTC">April 30, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="December 23, 2025 04:42:15 UTC">December 23, 2025</span>
   </span>
 
     

@@ -7040,17 +7040,17 @@
 <p>When the command dtstion starts, it scans the i2c network for all devices it can find, including those behid one or more multiplexors. Although the list can only guess the device type (there is no automatic device recognition, nor rigid standards that associate addresses with device types) it will give the fully qualified I2C address of each device and it is this that must be copied to the HAL device definition.</p>
 <p>First step is to run the Command Station software without the drivers and note what addresses the I2C scan comes up with. This is especially important when using devices behind a multiplexor as the I2C address must include the multiplexor channel path.
 The scan will look something like this:</p>
-<p><code>text
-&lt;* License GPLv3 fsf.org (c) dcc-ex.com &gt;
+<div class="highlight"><pre><span></span><code>&lt;* License GPLv3 fsf.org (c) dcc-ex.com &gt;
 &lt; I2C Device found at 0x71, I2C Mux? &gt;
-&lt; I2C Device found at {I2CMux_1,SubBus_7,0x20}, GPIO Expander? &gt;</code></p>
+&lt; I2C Device found at {I2CMux_1,SubBus_7,0x20}, GPIO Expander? &gt;
+</code></pre></div>
 <p>So the HAL definition will copy the {mux} information exactly as the I2C address. </p>
-<p>```cpp
-// This would be a example vpins 160-175 on address 0x20  (no Mux)
-HAL(MCP23017,160,16,0x20)</p>
-<p>// Same device with address 0x20 but beyond a multiplexor
-HAL(MCP23017,160,16,{I2CMux_1,SubBus_7,0x20})
-```</p>
+<div class="highlight"><pre><span></span><code><span class="c1">// This would be a example vpins 160-175 on address 0x20  (no Mux)</span>
+<span class="n">HAL</span><span class="p">(</span><span class="n">MCP23017</span><span class="p">,</span><span class="mi">160</span><span class="p">,</span><span class="mi">16</span><span class="p">,</span><span class="mh">0x20</span><span class="p">)</span>
+
+<span class="c1">// Same device with address 0x20 but beyond a multiplexor</span>
+<span class="n">HAL</span><span class="p">(</span><span class="n">MCP23017</span><span class="p">,</span><span class="mi">160</span><span class="p">,</span><span class="mi">16</span><span class="p">,{</span><span class="n">I2CMux_1</span><span class="p">,</span><span class="n">SubBus_7</span><span class="p">,</span><span class="mh">0x20</span><span class="p">})</span>
+</code></pre></div>
 <p>IMPORTANT: You can't have two devices with address 0x20 (for example) where one is behind the multiplexor and the other is not... that can't be made to work.
 So if you have two devices with the same address thay must BOTH be behind separate multiplexor channels.</p>
 <p>You can have multiple multiplexors, but each must have a separate address.
@@ -7075,7 +7075,7 @@ You cant have a multiplexor behind another multiplexor.</p>
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="April 30, 2026 00:03:03 UTC">April 30, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="January 29, 2026 14:56:48 UTC">January 29, 2026</span>
   </span>
 
     

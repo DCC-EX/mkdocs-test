@@ -7042,33 +7042,34 @@
 </ul>
 <p>Bear in mind that a single multicolour neopixel used above might be physically a multi-colour LED (as in a searchlight signal), or 3 individual LEDS wired to a single <a href="?ws2812">neopixel chip</a> (as in a 2 or 3 lamp signal).  </p>
 <p>For separate pixels, the colours should be established at startup and a normal SIGNALH macro used.</p>
-<p><code>cpp
-AUTOSTART 
-  SIGNALH(1010,1011,1012)
-  NEOPIXEL(1010,255,0,0)       
-  NEOPIXEL(1011,128,128,0)
-  NEOPIXEL(1012,0,255,0)
-  RED(1010)  // force signal state otherwise all 3 lights will be on
-  DONE</code></p>
+<div class="highlight"><pre><span></span><code><span class="n">AUTOSTART</span><span class="w"> </span>
+<span class="w">  </span><span class="n">SIGNALH</span><span class="p">(</span><span class="mi">1010</span><span class="p">,</span><span class="mi">1011</span><span class="p">,</span><span class="mi">1012</span><span class="p">)</span>
+<span class="w">  </span><span class="n">NEOPIXEL</span><span class="p">(</span><span class="mi">1010</span><span class="p">,</span><span class="mi">255</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span><span class="w">       </span>
+<span class="w">  </span><span class="n">NEOPIXEL</span><span class="p">(</span><span class="mi">1011</span><span class="p">,</span><span class="mi">128</span><span class="p">,</span><span class="mi">128</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span>
+<span class="w">  </span><span class="n">NEOPIXEL</span><span class="p">(</span><span class="mi">1012</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">255</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span>
+<span class="w">  </span><span class="n">RED</span><span class="p">(</span><span class="mi">1010</span><span class="p">)</span><span class="w">  </span><span class="c1">// force signal state otherwise all 3 lights will be on</span>
+<span class="w">  </span><span class="n">DONE</span>
+</code></pre></div>
 <p>For signals with 1 neopixel, the NEOPIXEL_SIGNAL macro will create a signal on one vpin with three separate colours</p>
-<p><code>cpp
-NEOPIXEL_SIGNAL(vpin,redfx,amberfx,greenfx)</code></p>
+<div class="highlight"><pre><span></span><code><span class="n">NEOPIXEL_SIGNAL</span><span class="p">(</span><span class="n">vpin</span><span class="p">,</span><span class="n">redfx</span><span class="p">,</span><span class="n">amberfx</span><span class="p">,</span><span class="n">greenfx</span><span class="p">)</span>
+</code></pre></div>
 <p>redfx,amberfx,greenfx = colour values</p>
 <p>The fx values above can be created by the NeoRGB macro so a bright red would be <code>NeoRGB(255,0,0)</code>  bright green <code>NeoRGB(0,255,0)</code> and amber something like <code>NeoRGB(255,100,0)</code>.
 NeoRGB creates a single int32_t value so it can be used in several ways as convenient (but can't be used in an ALIAS command).</p>
-<p>```cpp
-// create 1-lamp signal with NeoRGB colours
-NEOPIXEL_SIGNAL(1000,NeoRGB(255,0,0),NeoRGB(255,100,0),NeoRGB(0,255,0))</p>
-<p>// Create 1-lamp signal with named colours.
-// This is better if you have multiple signals.
-// (Note: ALIAS is not suitable due to word length defaults) </p>
-<h1 id="define-redlamp-neorgb25500">define REDLAMP NeoRGB(255,0,0)<a class="headerlink" href="#define-redlamp-neorgb25500" title="Permanent link">&para;</a></h1>
-<h1 id="define-amberlamp-neorgb2551000">define AMBERLAMP NeoRGB(255,100,0)<a class="headerlink" href="#define-amberlamp-neorgb2551000" title="Permanent link">&para;</a></h1>
-<h1 id="define-greenlamp-neorgb02550">define GREENLAMP NeoRGB(0,255,0)<a class="headerlink" href="#define-greenlamp-neorgb02550" title="Permanent link">&para;</a></h1>
-<p>NEOPIXEL_SIGNAL(1001,REDLAMP,AMBERLAMP,GREENLAMP)</p>
-<p>// Create 1-lamp signal with web type RGB colours 
-NEOPIXEL_SIGNAL(1002,0xFF0000,0xFF6400,0x00FF00)
-```</p>
+<div class="highlight"><pre><span></span><code><span class="c1">// create 1-lamp signal with NeoRGB colours</span>
+<span class="n">NEOPIXEL_SIGNAL</span><span class="p">(</span><span class="mi">1000</span><span class="p">,</span><span class="n">NeoRGB</span><span class="p">(</span><span class="mi">255</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">),</span><span class="n">NeoRGB</span><span class="p">(</span><span class="mi">255</span><span class="p">,</span><span class="mi">100</span><span class="p">,</span><span class="mi">0</span><span class="p">),</span><span class="n">NeoRGB</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">255</span><span class="p">,</span><span class="mi">0</span><span class="p">))</span>
+
+<span class="c1">// Create 1-lamp signal with named colours.</span>
+<span class="c1">// This is better if you have multiple signals.</span>
+<span class="c1">// (Note: ALIAS is not suitable due to word length defaults) </span>
+<span class="cp">#define REDLAMP NeoRGB(255,0,0)</span>
+<span class="cp">#define AMBERLAMP NeoRGB(255,100,0)</span>
+<span class="cp">#define GREENLAMP NeoRGB(0,255,0)</span>
+<span class="n">NEOPIXEL_SIGNAL</span><span class="p">(</span><span class="mi">1001</span><span class="p">,</span><span class="n">REDLAMP</span><span class="p">,</span><span class="n">AMBERLAMP</span><span class="p">,</span><span class="n">GREENLAMP</span><span class="p">)</span>
+
+<span class="c1">// Create 1-lamp signal with web type RGB colours </span>
+<span class="n">NEOPIXEL_SIGNAL</span><span class="p">(</span><span class="mi">1002</span><span class="p">,</span><span class="mh">0xFF0000</span><span class="p">,</span><span class="mh">0xFF6400</span><span class="p">,</span><span class="mh">0x00FF00</span><span class="p">)</span>
+</code></pre></div>
 
 
 
@@ -7089,7 +7090,7 @@ NEOPIXEL_SIGNAL(1002,0xFF0000,0xFF6400,0x00FF00)
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="April 30, 2026 00:03:03 UTC">April 30, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="December 29, 2025 12:39:38 UTC">December 29, 2025</span>
   </span>
 
     
