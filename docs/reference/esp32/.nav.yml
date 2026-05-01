@@ -1,4 +1,5 @@
 nav:
   - WeMos D1 R32 + EX8874: esp32-ex8874.md
   - Acebott + EX8874: esp32-acebott.md
+  - Keyestudio + EX8874: esp32-keyestudio.md
   - ESP32 + L298 Shields: esp32-l298-shield.md
