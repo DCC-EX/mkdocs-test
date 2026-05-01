@@ -77,7 +77,7 @@ MotorDriver(int16_t power_pin, byte signal_pin, byte signal_pin2, int16_t brake_
 
 - When one EX8874 motor shield is used with Keyestudio IOT ESP32 PLUS Development Board, the default EX8874 pins are used.  
 
-|output|CS|PWM/Enable|DIR/Signal|Brake|Fault|Notes|
+|output|Current<br/>Sense|PWM<br/>Enable|DIR<br/>Signal|Brake|Fault|Notes|
 |:--:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
 |A|32 pA0|25 p3|19 p12|9 p9|36 pA4||
 |B|33 pA1|23 p11|18 p13|8 p8|39 pA8||
