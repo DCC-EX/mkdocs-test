@@ -63,16 +63,20 @@ Note:
 
 Add the following lines to your `config.h` and remove any existing `#define MOTOR_SHIELD_TYPE ...` line.
 
-```
+```c++
+
   #define EX8874_KEYES_ESP32 F("EX8874_KEYES_ESP32"),\
     new MotorDriver(25/* 3*/, 19/*12*/, UNUSED_PIN, 13/*9*/, 32/*A0*/, 1.52, 5000, 36 /*A4*/), \
     new MotorDriver(23/*11*/, 18/*13*/, UNUSED_PIN, 12/*8*/, 33/*A1*/, 1.52, 5000, 39 /*A5*/)
-    #define MOTOR_SHIELD_TYPE EX8874_KEYES_ESP32
-```
+  #define MOTOR_SHIELD_TYPE EX8874_KEYES_ESP32
 
 ```
-MotorDriver(int16_t power_pin, byte signal_pin, byte signal_pin2, int16_t brake_pin, 
-                byte current_pin, float senseFactor, unsigned int tripMilliamps, int16_t fault_pin);
+
+```c++
+
+  MotorDriver(int16_t power_pin, byte signal_pin, byte signal_pin2, int16_t brake_pin, 
+  byte current_pin, float senseFactor, unsigned int tripMilliamps, int16_t fault_pin);
+
 ```
 
 - When one EX8874 motor shield is used with Keyestudio IOT ESP32 PLUS Development Board, the default EX8874 pins are used.  
