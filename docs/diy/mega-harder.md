@@ -13,7 +13,9 @@ To build a basic DIY Command Station you will need:
 - USB cable to your PC for the processor.
 - an Arduino standard (or others as noted in details) motor-shield to power the track.
 - A double-insulated DC power supply with a voltage suitable for your layout/locos.
-- An additional double-insulated DC Power supply of 5 to 8 volts suitable to drive the Arduino logic. (This may also be fed through the USB cable, and old phone charger is suitable or if you intend to use JMRI your computer will supply this power.)
+- An additional double-insulated DC Power supply is needed to drive the Arduino logic.  
+  7 to 9 volts, using the barrel connector, is recommended when using a WiFi shield.  
+  5 volts will not work for the barrel connector, but could be connected via USB cable.
 - Optionally
     - a female barrel connector to match the plug on your chosen track power supply
     - a suitable WiFi shield to use WiFi throttles (Recommended) with 2 suitable M-F Dupont wires.
@@ -44,7 +46,7 @@ FAILURE TO DO THIS CAN DESTROY YOUR MEGA.
 
 ### Mount the motor shield
 
-![Orientation](/_static/images/mega-hard/mega4.png){ align=right }
+![Orientation](/_static/images/mega-hard/mega4.png){: style="width: 70%"  align=right }
 
 Align the motor shield so that the power connectors are at the same end as the Mega power/USB connectors. It is normal for you to see a few millimetres of the pins between the bottom of the motor board and the top of the headers.
 

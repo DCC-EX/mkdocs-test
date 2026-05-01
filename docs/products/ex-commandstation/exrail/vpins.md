@@ -45,9 +45,11 @@ Serial commands can set HIGH/LOW values to VPINs using `<z 180> <z -180>` as for
 
 ## Using INPUT VPINs
 
-`IF(200)` tests if pin value is HIGH.
+Bear in mind that buttons (connected between a pin and ground) and most sensors are considered "active" when the associated hardware pin is LOW.
 
-`ONBUTTON(200)` triggers when a pin goes HIGH. This is most useful for push buttons connected between the pin and ground. This causes a new EXRAIL task to start and switch bounce will be ignored until the task completes.
+`IF(200)` tests if pin is active.
+
+`ONBUTTON(200)` triggers when a pin is SET or goes active. This causes a new EXRAIL task to start and switch bounce will be ignored until the task completes.
 
 For example:
 

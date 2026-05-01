@@ -36,7 +36,7 @@ Detecting the first increment from 0 to 1 can be done with `ONBUTTON(1013)` and 
 
 Analog values may be set into the virtual pins and tested using the existing analog value commands and exrail macros.
 `<z vpin value>`  `<D ANIN vpin>` etc.
-and in EXRAIL `ANOUT(vpin,value,0,0)`
+and in EXRAIL `BITMAP_SET(vpin,value)` which is the same as `ANOUT(vpin,value,0,0)`
 
 ## Use as binary flag groups (advanced)
 
@@ -49,6 +49,7 @@ Virtual pins (and others that respond to an analog read in order to provide bit 
 
 ### Modifying bitmap values
 
+`BITMAP_SET(vpin,value)` sets bitmap value.
 `BITMAP_AND(vpin,mask)` performs a bitwise AND operation.
 `BITMAP_OR(vpin,mask)`  performs a bitwise OR operation
 `BITMAP_XOR(vpin,mask)` performs a bitwise EXCLUSIVE OR (which is basically a toggle).
