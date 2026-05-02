@@ -166,6 +166,8 @@ markdown_extensions:
       clickable_checkbox: true
   - toc: # Table of Contents extension
       permalink: true # Add a permanent link to headings
+  - pymdownx.highlight:
+      pygments_lang_class: true
   - footnotes # Standard footnotes
 
 watch:
