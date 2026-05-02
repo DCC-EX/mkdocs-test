@@ -7,9 +7,12 @@ hide:
 
 ![Keyestudio ESP32](/_static/images/esp32/keyestudio-iot-esp32-plus.png){ width=30% align=right }
 
+!!! note "Keyestudio ESP32 Beta Testing"
+
+    Please note that the Keyestudio ESP32 board is currently in Beta testing, so this information may change at any time. If using this board, we highly recommend joining our [Discord server](/support/discord.md) and request access to the `#beta-testing` channel.
+
 ## Keyestudio IOT ESP32 PLUS Development Board
 
-- Limited testing has been done with this board.
 - Please report any anomalies when using the pins in the suggested custom motor defines.
 - A custom motor define is required when using the **Keyestudio IOT ESP32 PLUS Development board**, as the pins are in different locations *VS* the WeMos ESP32.
 - Do not be fooled by the `V` pin on the I²C header block as it is 5V, and there is no onboard level shifting of the SDA SCL pins.
@@ -29,7 +32,7 @@ The IOREF pin is labeled a `5V` on the board.
 
 The IOREF voltage will not be correct for this board combination.
 
-<span style="color:red">Warning:</span> The ADC inputs will receive up to 5V when the IOREF pin is 5V which will damage the board and likely destroy it. ***As such it is vital that the modifications below are made.***
+<span style="color:red">Warning:</span> Without modification the ADC inputs will receive up to 5V when the IOREF pin is 5V which will damage the board and likely destroy it. ***As such it is vital that the modifications below are made.***
 
 - Option A: The preferable work-around to the incorrect 5V pin is to modify the EX8874, using the `3V3 IOREF Override` solder pad on the EX8874.
 
