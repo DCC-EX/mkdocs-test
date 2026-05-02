@@ -81,9 +81,13 @@ Add the following lines to your `config.h` and remove any existing `#define MOTO
 - **IOREF:** The IOREF override is also needed for the top shield. See the [Incorrect IOREF voltage page](ioref-incorrect-voltage-fix.md) for details.
 - **VIN:** Refer to instructions on [cutting the VIN trace and disabling the regulator](/products/ex-motorshield8874/ex-motorshield8874.md/#steps-to-stack) for the top shield.
 
-- Stacking motor shields on Keystudio ESP32 requires  
-    a. use of solder pad for 8 alternate pins  
-    b. \^ for Fault pins, the pins on the ESP32 board labeled `io2` and `io4` will need to be bent about 90 degrees so that jumpers can be put on them.  `io2` will need to be jumpered to `A4` on the EX8874. `io4` will need to be jumpered to `A5` on the EX8874.
+![ACEBOTT IOREF](/_static/images/esp32/keyestudio-ex-8874-stacked-pads.png){ width=12% align=right }
+
+- Stacking motor shields on Keystudio ESP32 requires:
+
+      a. Use of solder pad for 8 alternate pins
+      
+      b. \^ for Fault pins, the pins on the ESP32 board labeled `io2` and `io4` will need to be bent about 90 degrees so that jumpers can be put on them.  `io2` will need to be jumpered to `A4` on the EX8874. `io4` will need to be jumpered to `A5` on the EX8874.
 
 First EX8874
 

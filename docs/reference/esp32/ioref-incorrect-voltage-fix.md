@@ -20,12 +20,11 @@ Reminder: These modifications are *not* needed when installing a single EX8874 o
 
 ----
 
-![EX8874 IOREF](/_static/images/esp32/esp32-keyestudio-bent-pin.png){ width=25% align=right }
-
-![EX8874 IOREF](/_static/images/esp32/ioref-override.png){ width=25% align=right }
-
-
 ## Option A - 3V3 IOREF Override pad changes (Recommended)
+
+![EX8874 IOREF](/_static/images/esp32/esp32-keyestudio-bent-pin.png){ width=25% }
+
+![EX8874 IOREF](/_static/images/esp32/ioref-override.png){ width=22% }
 
 - The prefered work-around for the incorrect `IOREF`/`5V` pin is to modify the EX8874, using the **3V3 IOREF Override** solder pad on the EX8874.
 - When using the 3V3 IOREF Override:
@@ -43,13 +42,13 @@ Double check that that you have it correct by checking wth a multimeter on the E
 
 ----
 
-![EX8874 IOREF](/_static/images/esp32/ioref-to-3v3-jumper.png){ width=20% align=right }
-
-![EX8874 IOREF](/_static/images/esp32/esp32-keyestudio-bent-pin.png){ width=15% align=right }
-
 ## Option B - bend + Jumper (Acceptable solution)
 
-This option does not require soldering.
+![EX8874 IOREF](/_static/images/esp32/ioref-to-3v3-jumper.png){ width=15%}
+
+![EX8874 IOREF](/_static/images/esp32/esp32-keyestudio-bent-pin.png){ width=25%}
+
+*This option does not require soldering.*
 
 - Locate the IOREF pin. (and many clone board it will be labed `5V`) and bend the corresponding pin on the EX8874 is bent ou
 - Jumper to `3V3` pin to the `IOREF` pin on the EX8874.
