@@ -118,13 +118,13 @@ When including code blocks, be sure to include an appropriate language for synta
 
 For example:
 
+````cpp
 ```cpp
-    ```cpp
-    TURNOUTL(id, address, "description")
+TURNOUTL(id, address, "description")
 
-    TURNOUT(id, shortAddress, subAddress, "description")
-    ```
+TURNOUT(id, shortAddress, subAddress, "description")
 ```
+````
 
 Will render as:
 
@@ -138,13 +138,13 @@ For EXRAIL and general configuration file code blocks (eg. config.h, myAutomatio
 
 If appropriate, line numbers can also be displayed by appending ``linenums="X"`` to the language, where "X" is the starting line number:
 
-```cpp
-    ```cpp linenums="20"
-    TURNOUTL(id, address, "description")
+````cpp
+```cpp linenums="20"
+TURNOUTL(id, address, "description")
 
-    TURNOUT(id, shortAddress, subAddress, "description")
-    ```
+TURNOUT(id, shortAddress, subAddress, "description")
 ```
+````
 
 Will render as:
 
