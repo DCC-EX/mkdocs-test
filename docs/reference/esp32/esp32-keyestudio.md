@@ -71,7 +71,7 @@ hide:
 - **IOREF:** The IOREF override is also needed for the top shield.
 - **VIN:** Refer to instructions on [cutting the VIN trace and disabling the regulator](/products/ex-motorshield8874/ex-motorshield8874.md/#steps-to-stack) for the top shield.
 
-- Stacking motor shields on Keystudio ESP32 requires  
+- Stacking motor shields on Keyestudio ESP32 requires  
     a. use of solder pad for 8 alternate pins  
     b. for Fault pins, bend A4 and A5 pins and jumper to the GPIO headers  
 
