@@ -52,7 +52,7 @@ Note:
 
 Add the following lines to your `config.h` and remove any existing `#define MOTOR_SHIELD_TYPE ...` line.
 
-```cpp
+```
   #define EX8874_KEYES_ESP32 F("EX8874_KEYES_ESP32"),\
     new MotorDriver(25/* 3*/, 19/*12*/, UNUSED_PIN, 13/*9*/, 32/*A0*/, 1.52, 5000, 36 /*A4*/), \
     new MotorDriver(23/*11*/, 18/*13*/, UNUSED_PIN, 12/*8*/, 33/*A1*/, 1.52, 5000, 39 /*A5*/)
@@ -105,7 +105,7 @@ Second EX8874
 
 - A custom motor define will be needed in `config.h`
 
-```cpp
+```
   #define EX8874X2_KEYES_ESP32 F("EX8874X2_KEYES_ESP32"), \  
     new MotorDriver(25/* 3*/, 19/*12*/, UNUSED_PIN, 13/*9*/, 32/*A0*/, 1.52, 5000, 36/*A4*/), \  
     new MotorDriver(23/*11*/, 18/*13*/, UNUSED_PIN, 12/*8*/, 33/*A1*/, 1.52, 5000, 39/*A5*/), \  
