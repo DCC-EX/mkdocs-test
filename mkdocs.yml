@@ -154,6 +154,10 @@ markdown_extensions:
   - pymdownx.keys
   - pymdownx.snippets:
       check_paths: true
+  - pymdownx.highlight: # For syntax highlighting of code
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
   - pymdownx.superfences: # Enhanced code blocks
       custom_fences:
         - name: mermaid # Enable Mermaid JS diagrams
@@ -166,8 +170,6 @@ markdown_extensions:
       clickable_checkbox: true
   - toc: # Table of Contents extension
       permalink: true # Add a permanent link to headings
-  - pymdownx.highlight:
-      pygments_lang_class: true
   - footnotes # Standard footnotes
 
 watch:
