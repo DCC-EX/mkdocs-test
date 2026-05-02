@@ -34,9 +34,9 @@ The IOREF voltage will not be correct for this board combination.
 
 <span style="color:red">Warning:</span> Without modification the ADC inputs will receive up to 5V when the IOREF pin is 5V which will damage the board and likely destroy it. ***As such it is vital that the modifications below are made.***
 
-- Option A: The preferable work-around to the incorrect 5V pin is to modify the EX8874, using the `3V3 IOREF Override` solder pad on the EX8874.
+- Option A: The prefered work-around to the incorrect 5V pin is to modify the EX8874, using the `3V3 IOREF Override` solder pad on the EX8874.
 
-- Option B: The `IOREF` pin location has the 5V pin.  The pin on the EX8874 can be bent out, and the `IOREF` should be jumpered to `3V3` pin on the EX8874.
+- Option B: The `IOREF` pin location has the 5V pin.  An acceptable workaround is for the pin on the EX8874 to be bent out, and the `IOREF` to be jumpered to `3V3` pin on the EX8874.
 
 See the [Incorrect IOREF voltage page](ioref-incorrect-voltage-fix.md) for details on how to correct the IOREF voltage for this board combination.
 
@@ -59,11 +59,6 @@ Add the following lines to your `config.h` and remove any existing `#define MOTO
     #define MOTOR_SHIELD_TYPE EX8874_KEYES_ESP32
 ```
 
-```cpp
-  MotorDriver(int16_t power_pin, byte signal_pin, byte signal_pin2, int16_t brake_pin, 
-    byte current_pin, float senseFactor, unsigned int tripMilliamps, int16_t fault_pin);
-```
-
 - When one EX8874 motor shield is used with Keyestudio IOT ESP32 PLUS Development Board, the default EX8874 pins are used.  
 
 |output|Current<br/>Sense|PWM<br/>Enable|DIR<br/>Signal|Brake|Fault|Notes|
@@ -82,13 +77,13 @@ Add the following lines to your `config.h` and remove any existing `#define MOTO
 
 ## Stacked EX8874
 
-- Reminder: No modifications are needed when installing EX8874 for 4 track outputs on EX-CSB1.
+- Reminder: No modifications are needed when stacking an EX8874 on an EX-CSB1 for 4 track outputs.
 - **IOREF:** The IOREF override is also needed for the top shield. See the [Incorrect IOREF voltage page](ioref-incorrect-voltage-fix.md) for details.
 - **VIN:** Refer to instructions on [cutting the VIN trace and disabling the regulator](/products/ex-motorshield8874/ex-motorshield8874.md/#steps-to-stack) for the top shield.
 
 - Stacking motor shields on Keystudio ESP32 requires  
     a. use of solder pad for 8 alternate pins  
-    b. for Fault pins, bend A4 and A5 pins and jumper to the GPIO headers  
+    b. \^ for Fault pins, the pins on the ESP32 board labeled `io2` and `io4` will need to be bent about 90 degrees so that jumpers can be put on them.  `io2` will need to be jumpered to `A4` on the EX8874. `io4` will need to be jumpered to `A5` on the EX8874.
 
 First EX8874
 
@@ -101,8 +96,8 @@ Second EX8874
 
 |output|Current<br/>Sense|PWM<br/>Enable|DIR<br/>Signal|Brake|Fault|Notes|
 |:--:|:-----:|:-----:|:-----:|:-----:|:-----:|:-------------:|
-|C|34 pA2|26 p2|5 p10|14 p7|<span style="color:red">2 pA4</span>|use alternates for 8 pins|
-|D|35 pA3|16 p5|17 p4|27 p6|<span style="color:red">4 pA5</span>|<span style="color:red">Bend A4,A5; odd jumpers</span>|
+|C|34 pA2|26 p2|5 p10|14 p7|<span style="color:green">2 </span><span style="color:red">pA4</span>|use alternates for 8 pins|
+|D|35 pA3|16 p5|17 p4|27 p6|<span style="color:green">4 </span><span style="color:red">pA5</span>|\^ <span style="color:red">Bend</span> & <span style="color:green">jumper</span>. See notes|
 
 - A custom motor define will be needed in `config.h`
 

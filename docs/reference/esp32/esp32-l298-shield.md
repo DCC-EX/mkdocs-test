@@ -69,3 +69,18 @@ hide:
     ```
 
 ![L298 ACEBOTT table](/_static/images/esp32/acebott-l298-x1b.png){: style="width: 80%"}
+
+---
+
+- **Motor define - Keyestudio ESP32 + L298 shield** 
+    - Even though the Keyestudio A0, A1 pins locations are available, using the A2, A3 pins facilitates the voltage divider circuit along with the benefit of the Schottky diodes.  
+    - A custom motor define will be needed in config.h  
+
+    ```cpp
+    #define L298_KEYES_ESP32 F("L298_KEYES_ESP32"), \  
+        new MotorDriver(25/* 3*/, 19/*12*/, UNUSED_PIN, 13/*9*/, 34/*A2*/, 0.70, 1500, UNUSED_PIN), \  
+        new MotorDriver(23/*11*/, 18/*13*/, UNUSED_PIN, 12/*8*/, 35/*A3*/, 0.70, 1500, UNUSED_PIN)  
+    #define MOTOR_SHIELD_TYPE L298_KEYES_ESP32
+    ```
+
+![L298 Keyestudio table](/_static/images/esp32/keyestudio-l298-x1b.png){: style="width: 80%"}
