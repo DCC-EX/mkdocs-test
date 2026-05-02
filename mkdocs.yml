@@ -167,7 +167,11 @@ markdown_extensions:
   - toc: # Table of Contents extension
       permalink: true # Add a permanent link to headings
   - footnotes # Standard footnotes
-
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+      
 watch:
   - snippets
   - docs
