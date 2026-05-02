@@ -38,7 +38,7 @@ The IOREF voltage will not be correct for this board combination.
 
 - Option B: The `IOREF` pin location has the 5V pin.  An acceptable workaround is for the pin on the EX8874 to be bent out, and the `IOREF` to be jumpered to `3V3` pin on the EX8874.
 
-See the [Incorrect IOREF voltage page](ioref-incorrect-voltage-fix.md) for details on how to correct the IOREF voltage for this board combination.
+See the [Incorrect IOREF voltage page](ioref-incorrect-voltage-fix_not_in_nav.md) for details on how to correct the IOREF voltage for this board combination.
 
 ---
 
@@ -52,12 +52,10 @@ Note:
 
 Add the following lines to your `config.h` and remove any existing `#define MOTOR_SHIELD_TYPE ...` line.
 
-```cpp
-  #define EX8874_KEYES_ESP32 F("EX8874_KEYES_ESP32"),\
-    new MotorDriver(25/* 3*/, 19/*12*/, UNUSED_PIN, 13/*9*/, 32/*A0*/, 1.52, 5000, 36 /*A4*/), \
-    new MotorDriver(23/*11*/, 18/*13*/, UNUSED_PIN, 12/*8*/, 33/*A1*/, 1.52, 5000, 39 /*A5*/)
-    #define MOTOR_SHIELD_TYPE EX8874_KEYES_ESP32
-```
+`#define EX8874_KEYES_ESP32 F("EX8874_KEYES_ESP32"),\` <br/>
+`  new MotorDriver(25/* 3*/, 19/*12*/, UNUSED_PIN, 13/*9*/, 32/*A0*/, 1.52, 5000, 36 /*A4*/), \` <br/>
+`  new MotorDriver(23/*11*/, 18/*13*/, UNUSED_PIN, 12/*8*/, 33/*A1*/, 1.52, 5000, 39 /*A5*/)` <br/>
+`#define MOTOR_SHIELD_TYPE EX8874_KEYES_ESP32`
 
 - When one EX8874 motor shield is used with Keyestudio IOT ESP32 PLUS Development Board, the default EX8874 pins are used.  
 
@@ -78,7 +76,7 @@ Add the following lines to your `config.h` and remove any existing `#define MOTO
 ## Stacked EX8874
 
 - Reminder: No modifications are needed when stacking an EX8874 on an EX-CSB1 for 4 track outputs.
-- **IOREF:** The IOREF override is also needed for the top shield. See the [Incorrect IOREF voltage page](ioref-incorrect-voltage-fix.md) for details.
+- **IOREF:** The IOREF override is also needed for the top shield. See the [Incorrect IOREF voltage page](ioref-incorrect-voltage-fix_not_in_nav.md) for details.
 - **VIN:** Refer to instructions on [cutting the VIN trace and disabling the regulator](/products/ex-motorshield8874/ex-motorshield8874.md/#steps-to-stack) for the top shield.
 
 ![ACEBOTT IOREF](/_static/images/esp32/keyestudio-ex-8874-stacked-pads.png){ width=12% align=right }
@@ -105,14 +103,13 @@ Second EX8874
 
 - A custom motor define will be needed in `config.h`
 
-```cpp
-  #define EX8874X2_KEYES_ESP32 F("EX8874X2_KEYES_ESP32"), \  
-    new MotorDriver(25/* 3*/, 19/*12*/, UNUSED_PIN, 13/*9*/, 32/*A0*/, 1.52, 5000, 36/*A4*/), \  
-    new MotorDriver(23/*11*/, 18/*13*/, UNUSED_PIN, 12/*8*/, 33/*A1*/, 1.52, 5000, 39/*A5*/), \  
-    new MotorDriver(26/* 2*/,  5/*10*/, UNUSED_PIN, 14/*7*/, 34/*A4*/, 1.52, 5000, 2 /*A4*/), \  
-    new MotorDriver(16/* 5*/, 17/* 4*/, UNUSED_PIN, 27/*6*/, 35/*A5*/, 1.52, 5000, 4 /*A5*/)  
-  #define MOTOR_SHIELD_TYPE EX8874X2_KEYES_ESP32
-```
+
+`#define EX8874X2_KEYES_ESP32 F("EX8874X2_KEYES_ESP32"), \` <br/>
+`  new MotorDriver(25/* 3*/, 19/*12*/, UNUSED_PIN, 13/*9*/, 32/*A0*/, 1.52, 5000, 36/*A4*/), \` <br/>
+`  new MotorDriver(23/*11*/, 18/*13*/, UNUSED_PIN, 12/*8*/, 33/*A1*/, 1.52, 5000, 39/*A5*/), \` <br/>
+`  new MotorDriver(26/* 2*/,  5/*10*/, UNUSED_PIN, 14/*7*/, 34/*A4*/, 1.52, 5000, 2 /*A4*/), \` <br/> 
+`  new MotorDriver(16/* 5*/, 17/* 4*/, UNUSED_PIN, 27/*6*/, 35/*A5*/, 1.52, 5000, 4 /*A5*/)` <br/>
+`#define MOTOR_SHIELD_TYPE EX8874X2_KEYES_ESP32` <br/>
 
 ### Stacked EX8874 Checklist
 
