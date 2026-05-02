@@ -11,45 +11,31 @@ hide:
 
 - Limited testing has been done with this board.
 - Please report any anomalies when using the pins in the suggested custom motor defines.
-- A custom motor define is required when using the Keyestudio IOT ESP32 PLUS Development board, as the pins are in different locations vs. the WeMos ESP32.
+- A custom motor define is required when using the **Keyestudio IOT ESP32 PLUS Development board**, as the pins are in different locations *VS* the WeMos ESP32.
+- Do not be fooled by the `V` pin on the I²C header block as it is 5V, and there is no onboard level shifting of the SDA SCL pins.
 
-## Keyestudio IOT ESP32 PLUS Development Board *vs* WeMos R1 D32
+## Keyestudio IOT ESP32 PLUS Development Board *VS* WeMos R1 D32
 
-- Fewer modifications are required.  
+- Fewer modifications may be required.  
 - WiFi does not need the resistor.  
 - Pin locations A0, A1 can be used for current sensing.  
 - The default pins can be used on EX8874.  
 
 ## Incorrect IOREF voltage
 
-The IOREF GPOI is labeled a `5V` on the board.
+The IOREF pin is labeled a `5V` on the board.
 
 ![ACEBOTT IOREF](/_static/images/esp32/esp32-keyestudio-ioref.png){ width=15% }
 
-The IOREF voltage will not be correct. The ADC inputs will receive up to 5V when the IOREF pin is 5V wich will damage the board and likely destroy it.  As such it is vital that the modifications below are made.
+The IOREF voltage will not be correct for this board combination.
 
-![EX8874 IOREF](/_static/images/esp32/esp32-keyestudio-bent-pin.png){ width=25% align=right }
+<span style="color:red">Warning:</span> The ADC inputs will receive up to 5V when the IOREF pin is 5V which will damage the board and likely destroy it. ***As such it is vital that the modifications below are made.***
 
-![EX8874 IOREF](/_static/images/esp32/ioref-override.png){ width=25% align=right }
+- Option A: The preferable work-around to the incorrect 5V pin is to modify the EX8874, using the `3V3 IOREF Override` solder pad on the EX8874.
 
-### Option A (Recommended)
+- Option B: The `IOREF` pin location has the 5V pin.  The pin on the EX8874 can be bent out, and the `IOREF` should be jumpered to `3V3` pin on the EX8874.
 
-- The prefered work-around for the incorrect 5V pin is to modify the EX8874, using the **3V3 IOREF Override** solder pad on the EX8874.
-- When using the 3V3 IOREF Override:
-
-    1. Bend the IOREF pin out, *or*
-    2. Confirm that the trace connecting the 5v pad is completely cut. (The red line in the image.) Scratch it with a blade till there is no contact between the two pads and check with a multimeter. Then solder from the center pad to the 3.3v pad.
-    3. or both the above to be really sure
-
-Double check that that you have it correct by checking wth a multimeter on the EX8874 before you connect it to the ES32:
-
-- There should be an open circuit between the IOREF GPIO and the GND pin on the I2C pins
-- There should be an open circuit between the other 5v GPIO (beside the two GND GPIOs) and the Vdd pin on the I2C pins
-- There should be a closed circuit between the 3.3v GPIO and the Vdd pin on the I2C pins
-
-### Option B (not recommneded)
-
-- The IOREF pin location is the 5V GPIO pin.  If the pin on the EX8874 is bent out, the IOREF could be jumpered to 3V3 pin on the EX8874.
+See the [Incorrect IOREF voltage page](ioref-incorrect-voltage-fix.md) for details on how to correct the IOREF voltage for this board combination.
 
 ---
 
@@ -57,7 +43,7 @@ Double check that that you have it correct by checking wth a multimeter on the E
 
 Note:
 
-- Keyestudio IOT ESP32 PLUS Development Board motor defines are not included in `MotorDrivers.h`
+- *Keyestudio IOT ESP32 PLUS Development Board motor* defines are not included in `MotorDrivers.h`
 - Do not edit `MotorDrivers.h`; a custom motor define should be added in `config.h`
 - Note how the ESP32 GPIO pin numbers are used, and the Arduino pin locations are shown/commented.
 
@@ -92,5 +78,48 @@ Add the following lines to your `config.h` and remove any existing `#define MOTO
 ---
 
 ## Stacked EX8874
+
+- Reminder: No modifications are needed when installing EX8874 for 4 track outputs on EX-CSB1.
+- **IOREF:** The IOREF override is also needed for the top shield. See the [Incorrect IOREF voltage page](ioref-incorrect-voltage-fix.md) for details.
+- **VIN:** Refer to instructions on [cutting the VIN trace and disabling the regulator](/products/ex-motorshield8874/ex-motorshield8874.md/#steps-to-stack) for the top shield.
+
+- Stacking motor shields on Keystudio ESP32 requires  
+    a. use of solder pad for 8 alternate pins  
+    b. for Fault pins, bend A4 and A5 pins and jumper to the GPIO headers  
+
+First EX8874
+
+|output|Current<br/>Sense|PWM<br/>Enable|DIR<br/>Signal|Brake|Fault|Notes|
+|:--:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
+|A|32 pA0|25 p3|19 p12|9 p9|36 pA4|Default pins|
+|B|33 pA1|23 p11|18 p13|8 p8|39 pA8||
+
+Second EX8874
+
+|output|Current<br/>Sense|PWM<br/>Enable|DIR<br/>Signal|Brake|Fault|Notes|
+|:--:|:-----:|:-----:|:-----:|:-----:|:-----:|:-------------:|
+|C|34 pA2|26 p2|5 p10|14 p7|<span style="color:red">2 pA4</span>|use alternates for 8 pins|
+|D|35 pA3|16 p5|17 p4|27 p6|<span style="color:red">4 pA5</span>|<span style="color:red">Bend A4,A5; odd jumpers</span>|
+
+- A custom motor define will be needed in `config.h`
+
+```cpp
+  #define EX8874X2_KEYES_ESP32 F("EX8874X2_KEYES_ESP32"), \  
+    new MotorDriver(25/* 3*/, 19/*12*/, UNUSED_PIN, 13/*9*/, 32/*A0*/, 1.52, 5000, 36/*A4*/), \  
+    new MotorDriver(23/*11*/, 18/*13*/, UNUSED_PIN, 12/*8*/, 33/*A1*/, 1.52, 5000, 39/*A5*/), \  
+    new MotorDriver(26/* 2*/,  5/*10*/, UNUSED_PIN, 14/*7*/, 34/*A4*/, 1.52, 5000, 2 /*A4*/), \  
+    new MotorDriver(16/* 5*/, 17/* 4*/, UNUSED_PIN, 27/*6*/, 35/*A5*/, 1.52, 5000, 4 /*A5*/)  
+  #define MOTOR_SHIELD_TYPE EX8874X2_KEYES_ESP32
+```
+
+### Stacked EX8874 Checklist
+
+- [ ] Cover the barrel connector on Keyestudio IOT ESP32 PLUS Development Board, as VIN power will be provided by one EX8874  
+- [ ] IOREF Override set to 3v3 on both EX8874 boards  
+- [ ] Confirm that IOREF pin is bent or trace is cut
+- [ ] VIN trace cut and regulator disabled on top EX8874  
+- [ ] Alternate pins enabled via solder pads  
+- [ ] Jumpers added for GPIO 2 and 4  
+- [ ] Add the custom motor define - 6 lines in config.h  
 
 ==TODO==
