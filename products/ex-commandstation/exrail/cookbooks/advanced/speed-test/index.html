@@ -7059,40 +7059,38 @@
 
 <h1 id="building-a-speed-test-track">Building a speed test track<a class="headerlink" href="#building-a-speed-test-track" title="Permanent link">&para;</a></h1>
 <p>It is possible, using the STEALTH facility to create a speed test track that can create a table of DCC speed vs time between sensors. This can then be copied to a streadsheed for analysis.</p>
-<div class="highlight"><pre><span></span><code><span class="c1">// Speedometer example</span>
-<span class="c1">// Track is =TS1===TS2===TS3= timing between S2 and S3.</span>
-
-<span class="n">ALIAS</span><span class="p">(</span><span class="n">TS1</span><span class="p">,</span><span class="mi">181</span><span class="p">)</span><span class="w"> </span><span class="n">ALIAS</span><span class="p">(</span><span class="n">TS2</span><span class="p">,</span><span class="mi">182</span><span class="p">)</span><span class="w"> </span><span class="n">ALIAS</span><span class="p">(</span><span class="n">TS3</span><span class="p">,</span><span class="mi">183</span><span class="p">)</span>
-<span class="n">STEALTH_GLOBAL</span><span class="p">(</span>
-<span class="w">  </span><span class="n">byte</span><span class="w"> </span><span class="n">testStartSpeed</span><span class="o">=</span><span class="mi">2</span><span class="p">;</span>
-<span class="w">  </span><span class="n">byte</span><span class="w"> </span><span class="n">testEndSpeed</span><span class="o">=</span><span class="mi">100</span><span class="p">;</span>
-<span class="w">  </span><span class="n">byte</span><span class="w"> </span><span class="n">testStep</span><span class="o">=</span><span class="mi">10</span><span class="p">;</span>
-<span class="w">  </span><span class="n">byte</span><span class="w"> </span><span class="n">testSpeed</span><span class="p">;</span>
-<span class="w">  </span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">long</span><span class="w"> </span><span class="n">testStartTime</span><span class="p">;</span>
-<span class="p">)</span>
-
-<span class="n">AUTOMATION</span><span class="p">(</span><span class="mi">9000</span><span class="p">,</span><span class="s">&quot;Run Speed Test&quot;</span><span class="p">)</span><span class="w"> </span><span class="c1">// speed test setup</span>
-<span class="w">  </span><span class="n">STEALTH</span><span class="p">(</span><span class="n">testSpeed</span><span class="o">=</span><span class="n">testStartSpeed</span><span class="p">;)</span>
-<span class="w">  </span><span class="n">PRINT</span><span class="p">(</span><span class="s">&quot;Starting speed test&quot;</span><span class="p">)</span>
-<span class="w">  </span><span class="n">REV</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span><span class="w"> </span><span class="c1">// reverse loco to start point</span>
-
-<span class="n">SEQUENCE</span><span class="p">(</span><span class="mi">9001</span><span class="p">)</span>
-<span class="w">  </span><span class="c1">// make sure loco is at start point</span>
-<span class="w">  </span><span class="n">AT</span><span class="p">(</span><span class="n">TS1</span><span class="p">)</span><span class="w"> </span><span class="n">ESTOP</span>
-<span class="w">  </span><span class="c1">// drive loco fwd at testSpeed </span>
-<span class="w">  </span><span class="n">STEALTH</span><span class="p">(</span><span class="n">DCC</span><span class="o">::</span><span class="n">setThrottle</span><span class="p">(</span><span class="n">loco</span><span class="p">,</span><span class="n">testSpeed</span><span class="p">,</span><span class="nb">true</span><span class="p">);)</span>
-<span class="w">  </span><span class="c1">// At timing-start sensor(s2) record time</span>
-<span class="w">  </span><span class="n">AT</span><span class="p">(</span><span class="n">TS2</span><span class="p">)</span><span class="w"> </span><span class="n">STEALTH</span><span class="p">(</span><span class="n">testStartTime</span><span class="o">=</span><span class="n">millis</span><span class="p">();)</span>
-<span class="w"> </span><span class="c1">// at timing-end sensor(s3) stop and calculate and print speed</span>
-<span class="w"> </span><span class="n">AT</span><span class="p">(</span><span class="n">TS3</span><span class="p">)</span><span class="w"> </span><span class="n">ESTOP</span><span class="w"> </span><span class="n">STEALTH</span><span class="p">(</span>
-<span class="w">    </span><span class="n">StringFormatter</span><span class="o">::</span><span class="n">send</span><span class="p">(</span><span class="o">&amp;</span><span class="n">USB_SERIAL</span><span class="p">,</span><span class="w"> </span>
-<span class="w">       </span><span class="n">F</span><span class="p">(</span><span class="s">&quot;Speed %d Time %l</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">),</span><span class="w"> </span><span class="n">testSpeed</span><span class="p">,</span><span class="w"> </span><span class="n">millis</span><span class="p">()</span><span class="o">-</span><span class="n">testStartTime</span><span class="p">);</span>
-<span class="w">    </span><span class="n">testSpeed</span><span class="o">+=</span><span class="n">testStep</span><span class="p">;</span>
-<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">testSpeed</span><span class="o">&gt;</span><span class="n">testEndSpeed</span><span class="p">)</span><span class="w"> </span><span class="n">kill</span><span class="p">();</span><span class="w"> </span><span class="c1">// test complete =DONE</span>
-<span class="w">    </span><span class="p">)</span>
-<span class="c1">// Reverse back to start, and test again</span>
-<span class="n">REV</span><span class="p">(</span><span class="mi">127</span><span class="p">)</span><span class="w"> </span><span class="n">FOLLOW</span><span class="p">(</span><span class="mi">9001</span><span class="p">)</span>
-</code></pre></div>
+<p>```cpp
+// Speedometer example
+// Track is =TS1===TS2===TS3= timing between S2 and S3.</p>
+<p>ALIAS(TS1,181) ALIAS(TS2,182) ALIAS(TS3,183)
+STEALTH_GLOBAL(
+  byte testStartSpeed=2;
+  byte testEndSpeed=100;
+  byte testStep=10;
+  byte testSpeed;
+  unsigned long testStartTime;
+)</p>
+<p>AUTOMATION(9000,"Run Speed Test") // speed test setup
+  STEALTH(testSpeed=testStartSpeed;)
+  PRINT("Starting speed test")
+  REV(20) // reverse loco to start point</p>
+<p>SEQUENCE(9001)
+  // make sure loco is at start point
+  AT(TS1) ESTOP
+  // drive loco fwd at testSpeed 
+  STEALTH(DCC::setThrottle(loco,testSpeed,true);)
+  // At timing-start sensor(s2) record time
+  AT(TS2) STEALTH(testStartTime=millis();)
+ // at timing-end sensor(s3) stop and calculate and print speed
+ AT(TS3) ESTOP STEALTH(
+    StringFormatter::send(&amp;USB_SERIAL, 
+       F("Speed %d Time %l\n"), testSpeed, millis()-testStartTime);
+    testSpeed+=testStep;
+    if (testSpeed&gt;testEndSpeed) kill(); // test complete =DONE
+    )
+// Reverse back to start, and test again
+REV(127) FOLLOW(9001)
+```</p>
 
 
 
@@ -7113,7 +7111,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="February 28, 2026 12:50:03 UTC">February 28, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="May 2, 2026 09:06:05 UTC">May 2, 2026</span>
   </span>
 
     

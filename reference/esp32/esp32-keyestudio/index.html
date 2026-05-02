@@ -83,7 +83,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#keyestudio-ex8874" class="md-skip">
+        <a href="#keyestudio-iot-esp32-plus-development-board-ex8874" class="md-skip">
           Skip to content
         </a>
       
@@ -5997,9 +5997,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#keyestudio-iot-esp32-plus-vs-wemos-r1-d32" class="md-nav__link">
+  <a href="#keyestudio-iot-esp32-plus-development-board-vs-wemos-r1-d32" class="md-nav__link">
     <span class="md-ellipsis">
-      Keyestudio IOT ESP32 PLUS vs. WeMos R1 D32
+      Keyestudio IOT ESP32 PLUS Development Board VS WeMos R1 D32
     </span>
   </a>
   
@@ -7161,9 +7161,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#keyestudio-iot-esp32-plus-vs-wemos-r1-d32" class="md-nav__link">
+  <a href="#keyestudio-iot-esp32-plus-development-board-vs-wemos-r1-d32" class="md-nav__link">
     <span class="md-ellipsis">
-      Keyestudio IOT ESP32 PLUS vs. WeMos R1 D32
+      Keyestudio IOT ESP32 PLUS Development Board VS WeMos R1 D32
     </span>
   </a>
   
@@ -7247,85 +7247,189 @@
   
 
 
-<h1 id="keyestudio-ex8874">Keyestudio + EX8874<a class="headerlink" href="#keyestudio-ex8874" title="Permanent link">&para;</a></h1>
+<h1 id="keyestudio-iot-esp32-plus-development-board-ex8874">Keyestudio IOT ESP32 PLUS Development Board <em>+</em> EX8874<a class="headerlink" href="#keyestudio-iot-esp32-plus-development-board-ex8874" title="Permanent link">&para;</a></h1>
+<p><img align="right" alt="Keyestudio ESP32" src="../../../_static/images/esp32/keyestudio-iot-esp32-plus.png" width="30%" /></p>
 <div class="admonition note">
 <p class="admonition-title">Keyestudio ESP32 Beta Testing</p>
 <p>Please note that the Keyestudio ESP32 board is currently in Beta testing, so this information may change at any time. If using this board, we highly recommend joining our <a href="../../../support/discord/">Discord server</a> and request access to the <code>#beta-testing</code> channel.</p>
 </div>
-<p><img align="right" alt="Keyestudio ESP32" src="../../../_static/images/esp32/keyestudio-iot-esp32-plus.png" width="30%" /></p>
 <h2 id="keyestudio-iot-esp32-plus-development-board">Keyestudio IOT ESP32 PLUS Development Board<a class="headerlink" href="#keyestudio-iot-esp32-plus-development-board" title="Permanent link">&para;</a></h2>
 <ul>
-<li>Limited testing has been done with this board.</li>
 <li>Please report any anomalies when using the pins in the suggested custom motor defines.</li>
-<li>A custom motor define is required when using the Keyestudio ESP32 board, as the pins are in different locations vs. the WeMos ESP32.</li>
-<li>Do not be fooled by the V pin on the I2C header block as it is 5V, and there is no onboard level shifting of the SDA SCL pins.</li>
+<li>A custom motor define is required when using the <strong>Keyestudio IOT ESP32 PLUS Development board</strong>, as the pins are in different locations <em>VS</em> the WeMos ESP32.</li>
+<li>Do not be fooled by the <code>V</code> pin on the I²C header block as it is 5V, and there is no onboard level shifting of the SDA SCL pins.</li>
 </ul>
-<h2 id="keyestudio-iot-esp32-plus-vs-wemos-r1-d32">Keyestudio IOT ESP32 PLUS vs. WeMos R1 D32<a class="headerlink" href="#keyestudio-iot-esp32-plus-vs-wemos-r1-d32" title="Permanent link">&para;</a></h2>
+<h2 id="keyestudio-iot-esp32-plus-development-board-vs-wemos-r1-d32">Keyestudio IOT ESP32 PLUS Development Board <em>VS</em> WeMos R1 D32<a class="headerlink" href="#keyestudio-iot-esp32-plus-development-board-vs-wemos-r1-d32" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Fewer modifications may be required.  </li>
 <li>WiFi does not need the resistor.  </li>
 <li>Pin locations A0, A1 can be used for current sensing.  </li>
-<li>Default pins can be used on EX8874.  </li>
+<li>The default pins can be used on EX8874.  </li>
 </ul>
-<p><img align="right" alt="Keyestudio IOREF" src="../../../_static/images/esp32/esp32-keyestudio-bent-pin.png" width="20%" />
-<img align="right" alt="Keyestudio IOREF" src="../../../_static/images/esp32/esp32-keyestudio-ioref.png" width="15%" /></p>
 <h2 id="incorrect-ioref-voltage">Incorrect IOREF voltage<a class="headerlink" href="#incorrect-ioref-voltage" title="Permanent link">&para;</a></h2>
+<p>The IOREF pin is labeled a <code>5V</code> on the board.</p>
+<p><img alt="ACEBOTT IOREF" src="../../../_static/images/esp32/esp32-keyestudio-ioref.png" width="15%" /></p>
+<p>The IOREF voltage will not be correct for this board combination.</p>
+<p><span style="color:red">Warning:</span> Without modification the ADC inputs will receive up to 5V when the IOREF pin is 5V which will damage the board and likely destroy it. <strong><em>As such it is vital that the modifications below are made.</em></strong></p>
 <ul>
-<li>The IOREF pin location has the 5V pin.  If the pin on the EX8874 is bent, the IOREF could be jumpered to 3V3 pin on the EX8874.</li>
-<li>The preferable work-around to the incorrect 5V pin is to modify the EX8874, using the <strong>3V3 IOREF Override</strong> solder pad on the EX8874. If voltage is not correct, the ADC inputs will receive up to 5V when the IOREF pin is 5V.</li>
+<li>
+<p>Option A: The prefered work-around to the incorrect 5V pin is to modify the EX8874, using the <code>3V3 IOREF Override</code> solder pad on the EX8874.</p>
+</li>
+<li>
+<p>Option B: The <code>IOREF</code> pin location has the 5V pin.  An acceptable workaround is for the pin on the EX8874 to be bent out, and the <code>IOREF</code> to be jumpered to <code>3V3</code> pin on the EX8874.</p>
+</li>
 </ul>
-<p><img align="right" alt="EX8874 IOREF" src="../../../_static/images/esp32/ioref-override.png" width="30%" /></p>
-<ul>
-<li>When using the 3V3 IOREF Override, bend the IOREF pin or confirm that the trace connecting the pin is completely cut.</li>
-</ul>
+<p>See the <a href="../ioref-incorrect-voltage-fix/">Incorrect IOREF voltage page</a> for details on how to correct the IOREF voltage for this board combination.</p>
 <hr />
 <h2 id="one-ex8874">One EX8874<a class="headerlink" href="#one-ex8874" title="Permanent link">&para;</a></h2>
+<p>Note:</p>
 <ul>
-<li>Keyestudio ESP32 motor defines are not included in MotorDrivers.h</li>
-<li>Do not edit MotorDrivers.h; a custom motor define should be added in config.h</li>
+<li><em>Keyestudio IOT ESP32 PLUS Development Board motor</em> defines are not included in <code>MotorDrivers.h</code></li>
+<li>Do not edit <code>MotorDrivers.h</code>; a custom motor define should be added in <code>config.h</code></li>
 <li>Note how the ESP32 GPIO pin numbers are used, and the Arduino pin locations are shown/commented.</li>
 </ul>
-<div class="highlight"><pre><span></span><code><span class="w">  </span><span class="cp">#define EX8874_KEYES_ESP32 F(&quot;EX8874_KEYES_ESP32&quot;),\  </span>
-<span class="w">    </span><span class="k">new</span><span class="w"> </span><span class="n">MotorDriver</span><span class="p">(</span><span class="mi">25</span><span class="cm">/* 3*/</span><span class="p">,</span><span class="w"> </span><span class="mi">19</span><span class="cm">/*12*/</span><span class="p">,</span><span class="w"> </span><span class="n">UNUSED_PIN</span><span class="p">,</span><span class="w"> </span><span class="mi">13</span><span class="cm">/*9*/</span><span class="p">,</span><span class="w"> </span><span class="mi">32</span><span class="cm">/*A0*/</span><span class="p">,</span><span class="w"> </span><span class="mf">1.52</span><span class="p">,</span><span class="w"> </span><span class="mi">5000</span><span class="p">,</span><span class="w"> </span><span class="mi">36</span><span class="w"> </span><span class="cm">/*A4*/</span><span class="p">),</span><span class="w"> </span><span class="err">\</span><span class="w">  </span>
-<span class="w">    </span><span class="k">new</span><span class="w"> </span><span class="n">MotorDriver</span><span class="p">(</span><span class="mi">23</span><span class="cm">/*11*/</span><span class="p">,</span><span class="w"> </span><span class="mi">18</span><span class="cm">/*13*/</span><span class="p">,</span><span class="w"> </span><span class="n">UNUSED_PIN</span><span class="p">,</span><span class="w"> </span><span class="mi">12</span><span class="cm">/*8*/</span><span class="p">,</span><span class="w"> </span><span class="mi">33</span><span class="cm">/*A1*/</span><span class="p">,</span><span class="w"> </span><span class="mf">1.52</span><span class="p">,</span><span class="w"> </span><span class="mi">5000</span><span class="p">,</span><span class="w"> </span><span class="mi">39</span><span class="w"> </span><span class="cm">/*A5*/</span><span class="p">)</span><span class="w">  </span>
-<span class="w">  </span><span class="cp">#define MOTOR_SHIELD_TYPE EX8874_KEYES_ESP32</span>
-</code></pre></div>
+<p>Add the following lines to your <code>config.h</code> and remove any existing <code>#define MOTOR_SHIELD_TYPE ...</code> line.</p>
+<p><code>cpp
+  #define EX8874_KEYES_ESP32 F("EX8874_KEYES_ESP32"),\
+    new MotorDriver(25/* 3*/, 19/*12*/, UNUSED_PIN, 13/*9*/, 32/*A0*/, 1.52, 5000, 36 /*A4*/), \
+    new MotorDriver(23/*11*/, 18/*13*/, UNUSED_PIN, 12/*8*/, 33/*A1*/, 1.52, 5000, 39 /*A5*/)
+    #define MOTOR_SHIELD_TYPE EX8874_KEYES_ESP32</code></p>
 <ul>
-<li>When one EX8874 motor shield is used with Keyestudio IOT ESP32 PLUS, the default EX8874 pins are used.  </li>
+<li>When one EX8874 motor shield is used with Keyestudio IOT ESP32 PLUS Development Board, the default EX8874 pins are used.  </li>
 </ul>
-<p>&nbsp; &nbsp; &nbsp; &nbsp;<img alt="Keyestudio table" src="../../../_static/images/esp32/keyestudio-ex8874-x1b.png" width="80%" /></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">output</th>
+<th style="text-align: center;">Current<br/>Sense</th>
+<th style="text-align: center;">PWM<br/>Enable</th>
+<th style="text-align: center;">DIR<br/>Signal</th>
+<th style="text-align: center;">Brake</th>
+<th style="text-align: center;">Fault</th>
+<th style="text-align: center;">Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">A</td>
+<td style="text-align: center;">32 pA0</td>
+<td style="text-align: center;">25 p3</td>
+<td style="text-align: center;">19 p12</td>
+<td style="text-align: center;">9 p9</td>
+<td style="text-align: center;">36 pA4</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">B</td>
+<td style="text-align: center;">33 pA1</td>
+<td style="text-align: center;">23 p11</td>
+<td style="text-align: center;">18 p13</td>
+<td style="text-align: center;">8 p8</td>
+<td style="text-align: center;">39 pA8</td>
+<td style="text-align: center;"></td>
+</tr>
+</tbody>
+</table>
 <h3 id="single-ex8874-checklist">Single EX8874 Checklist<a class="headerlink" href="#single-ex8874-checklist" title="Permanent link">&para;</a></h3>
 <ul class="task-list">
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> Cover the barrel connector on Keyestudio IOT ESP32 PLUS Development Board, as VIN power will be provided by EX8874  </li>
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> IOREF Override set to 3v3  </li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> Confirm that IOREF pin is bent or trace is cut  </li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> Add the custom motor define - 4 lines in config.h  </li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> Confirm that IOREF pin is bent <em>or</em> trace is cut <em>or</em> both</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> Add the custom motor define - 4 lines in <code>config.h</code></li>
 </ul>
 <hr />
 <h2 id="stacked-ex8874">Stacked EX8874<a class="headerlink" href="#stacked-ex8874" title="Permanent link">&para;</a></h2>
 <ul>
-<li>Reminder: No modifications are needed when installing EX8874 for 4 track outputs on EX-CSB1.</li>
-<li><strong>IOREF:</strong> The IOREF override is also needed for the top shield.</li>
-<li>
-<p><strong>VIN:</strong> Refer to instructions on <a href="../../../products/ex-motorshield8874/ex-motorshield8874/#steps-to-stack">cutting the VIN trace and disabling the regulator</a> for the top shield.</p>
-</li>
-<li>
-<p>Stacking motor shields on Keyestudio ESP32 requires<br />
-    a. use of solder pad for 8 alternate pins<br />
-    b. for Fault pins, bend A4 and A5 pins and jumper to the GPIO headers  </p>
-</li>
+<li>Reminder: No modifications are needed when stacking an EX8874 on an EX-CSB1 for 4 track outputs.</li>
+<li><strong>IOREF:</strong> The IOREF override is also needed for the top shield. See the <a href="../ioref-incorrect-voltage-fix/">Incorrect IOREF voltage page</a> for details.</li>
+<li><strong>VIN:</strong> Refer to instructions on <a href="../../../products/ex-motorshield8874/ex-motorshield8874/#steps-to-stack">cutting the VIN trace and disabling the regulator</a> for the top shield.</li>
 </ul>
-<p>&nbsp; &nbsp; &nbsp; &nbsp;<img alt="Keyestudio table" src="../../../_static/images/esp32/keyestudio-ex8874-x2b.png" width="80%" /></p>
+<p><img align="right" alt="ACEBOTT IOREF" src="../../../_static/images/esp32/keyestudio-ex-8874-stacked-pads.png" width="12%" /></p>
 <ul>
-<li>A custom motor define will be needed in config.h</li>
+<li>
+<p>Stacking motor shields on Keystudio ESP32 requires:</p>
+<p>a. Use of solder pad for 8 alternate pins</p>
+<p>b. ^ for Fault pins, the pins on the ESP32 board labeled <code>io2</code> and <code>io4</code> will need to be bent about 90 degrees so that jumpers can be put on them.  <code>io2</code> will need to be jumpered to <code>A4</code> on the EX8874. <code>io4</code> will need to be jumpered to <code>A5</code> on the EX8874.</p>
+</li>
 </ul>
-<div class="highlight"><pre><span></span><code><span class="w">  </span><span class="cp">#define EX8874X2_KEYES_ESP32 F(&quot;EX8874X2_KEYES_ESP32&quot;), \  </span>
-<span class="w">    </span><span class="k">new</span><span class="w"> </span><span class="n">MotorDriver</span><span class="p">(</span><span class="mi">25</span><span class="cm">/* 3*/</span><span class="p">,</span><span class="w"> </span><span class="mi">19</span><span class="cm">/*12*/</span><span class="p">,</span><span class="w"> </span><span class="n">UNUSED_PIN</span><span class="p">,</span><span class="w"> </span><span class="mi">13</span><span class="cm">/*9*/</span><span class="p">,</span><span class="w"> </span><span class="mi">32</span><span class="cm">/*A0*/</span><span class="p">,</span><span class="w"> </span><span class="mf">1.52</span><span class="p">,</span><span class="w"> </span><span class="mi">5000</span><span class="p">,</span><span class="w"> </span><span class="mi">36</span><span class="cm">/*A4*/</span><span class="p">),</span><span class="w"> </span><span class="err">\</span><span class="w">  </span>
-<span class="w">    </span><span class="k">new</span><span class="w"> </span><span class="n">MotorDriver</span><span class="p">(</span><span class="mi">23</span><span class="cm">/*11*/</span><span class="p">,</span><span class="w"> </span><span class="mi">18</span><span class="cm">/*13*/</span><span class="p">,</span><span class="w"> </span><span class="n">UNUSED_PIN</span><span class="p">,</span><span class="w"> </span><span class="mi">12</span><span class="cm">/*8*/</span><span class="p">,</span><span class="w"> </span><span class="mi">33</span><span class="cm">/*A1*/</span><span class="p">,</span><span class="w"> </span><span class="mf">1.52</span><span class="p">,</span><span class="w"> </span><span class="mi">5000</span><span class="p">,</span><span class="w"> </span><span class="mi">39</span><span class="cm">/*A5*/</span><span class="p">),</span><span class="w"> </span><span class="err">\</span><span class="w">  </span>
-<span class="w">    </span><span class="k">new</span><span class="w"> </span><span class="n">MotorDriver</span><span class="p">(</span><span class="mi">26</span><span class="cm">/* 2*/</span><span class="p">,</span><span class="w">  </span><span class="mi">5</span><span class="cm">/*10*/</span><span class="p">,</span><span class="w"> </span><span class="n">UNUSED_PIN</span><span class="p">,</span><span class="w"> </span><span class="mi">14</span><span class="cm">/*7*/</span><span class="p">,</span><span class="w"> </span><span class="mi">34</span><span class="cm">/*A4*/</span><span class="p">,</span><span class="w"> </span><span class="mf">1.52</span><span class="p">,</span><span class="w"> </span><span class="mi">5000</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="cm">/*A4*/</span><span class="p">),</span><span class="w"> </span><span class="err">\</span><span class="w">  </span>
-<span class="w">    </span><span class="k">new</span><span class="w"> </span><span class="n">MotorDriver</span><span class="p">(</span><span class="mi">16</span><span class="cm">/* 5*/</span><span class="p">,</span><span class="w"> </span><span class="mi">17</span><span class="cm">/* 4*/</span><span class="p">,</span><span class="w"> </span><span class="n">UNUSED_PIN</span><span class="p">,</span><span class="w"> </span><span class="mi">27</span><span class="cm">/*6*/</span><span class="p">,</span><span class="w"> </span><span class="mi">35</span><span class="cm">/*A5*/</span><span class="p">,</span><span class="w"> </span><span class="mf">1.52</span><span class="p">,</span><span class="w"> </span><span class="mi">5000</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="w"> </span><span class="cm">/*A5*/</span><span class="p">)</span><span class="w">  </span>
-<span class="w">  </span><span class="cp">#define MOTOR_SHIELD_TYPE EX8874X2_KEYES_ESP32</span>
-</code></pre></div>
+<p>First EX8874</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">output</th>
+<th style="text-align: center;">Current<br/>Sense</th>
+<th style="text-align: center;">PWM<br/>Enable</th>
+<th style="text-align: center;">DIR<br/>Signal</th>
+<th style="text-align: center;">Brake</th>
+<th style="text-align: center;">Fault</th>
+<th style="text-align: center;">Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">A</td>
+<td style="text-align: center;">32 pA0</td>
+<td style="text-align: center;">25 p3</td>
+<td style="text-align: center;">19 p12</td>
+<td style="text-align: center;">9 p9</td>
+<td style="text-align: center;">36 pA4</td>
+<td style="text-align: center;">Default pins</td>
+</tr>
+<tr>
+<td style="text-align: center;">B</td>
+<td style="text-align: center;">33 pA1</td>
+<td style="text-align: center;">23 p11</td>
+<td style="text-align: center;">18 p13</td>
+<td style="text-align: center;">8 p8</td>
+<td style="text-align: center;">39 pA8</td>
+<td style="text-align: center;"></td>
+</tr>
+</tbody>
+</table>
+<p>Second EX8874</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">output</th>
+<th style="text-align: center;">Current<br/>Sense</th>
+<th style="text-align: center;">PWM<br/>Enable</th>
+<th style="text-align: center;">DIR<br/>Signal</th>
+<th style="text-align: center;">Brake</th>
+<th style="text-align: center;">Fault</th>
+<th style="text-align: center;">Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">C</td>
+<td style="text-align: center;">34 pA2</td>
+<td style="text-align: center;">26 p2</td>
+<td style="text-align: center;">5 p10</td>
+<td style="text-align: center;">14 p7</td>
+<td style="text-align: center;"><span style="color:green">2 </span><span style="color:red">pA4</span></td>
+<td style="text-align: center;">use alternates for 8 pins</td>
+</tr>
+<tr>
+<td style="text-align: center;">D</td>
+<td style="text-align: center;">35 pA3</td>
+<td style="text-align: center;">16 p5</td>
+<td style="text-align: center;">17 p4</td>
+<td style="text-align: center;">27 p6</td>
+<td style="text-align: center;"><span style="color:green">4 </span><span style="color:red">pA5</span></td>
+<td style="text-align: center;">^ <span style="color:red">Bend</span> &amp; <span style="color:green">jumper</span>. See notes</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>A custom motor define will be needed in <code>config.h</code></li>
+</ul>
+<p><code>cpp
+  #define EX8874X2_KEYES_ESP32 F("EX8874X2_KEYES_ESP32"), \  
+    new MotorDriver(25/* 3*/, 19/*12*/, UNUSED_PIN, 13/*9*/, 32/*A0*/, 1.52, 5000, 36/*A4*/), \  
+    new MotorDriver(23/*11*/, 18/*13*/, UNUSED_PIN, 12/*8*/, 33/*A1*/, 1.52, 5000, 39/*A5*/), \  
+    new MotorDriver(26/* 2*/,  5/*10*/, UNUSED_PIN, 14/*7*/, 34/*A4*/, 1.52, 5000, 2 /*A4*/), \  
+    new MotorDriver(16/* 5*/, 17/* 4*/, UNUSED_PIN, 27/*6*/, 35/*A5*/, 1.52, 5000, 4 /*A5*/)  
+  #define MOTOR_SHIELD_TYPE EX8874X2_KEYES_ESP32</code></p>
 <h3 id="stacked-ex8874-checklist">Stacked EX8874 Checklist<a class="headerlink" href="#stacked-ex8874-checklist" title="Permanent link">&para;</a></h3>
 <ul class="task-list">
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> Cover the barrel connector on Keyestudio IOT ESP32 PLUS Development Board, as VIN power will be provided by one EX8874  </li>
@@ -7357,7 +7461,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="May 2, 2026 01:31:05 UTC">May 2, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="May 2, 2026 09:06:05 UTC">May 2, 2026</span>
   </span>
 
     
