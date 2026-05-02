@@ -58,7 +58,7 @@ Brake and Fault pin updates as shown for F429ZI F439ZI.
 
 ==TODO== - update MotorDrivers.h for D8
 
-- This motor define can be used with E8874 and F413ZH F446RE  
+- This motor define can be used with E8874 and F413ZH F446ZE  
   \- alternate Brake pin is used for Track B  
   \- presently a custom motor define is needed in config.h
 
