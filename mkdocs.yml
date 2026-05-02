@@ -176,10 +176,6 @@ watch:
   - snippets
   - docs
 
-theme:
-  features:
-    - content.code.copy
-
 not_in_nav:
   '**/*_not_in_nav.md'
 
