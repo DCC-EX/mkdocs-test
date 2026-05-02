@@ -38,7 +38,7 @@ The IOREF voltage will not be correct for this board combination.
 
 - Option B: The `IOREF` pin location has the 5V pin.  An acceptable workaround is for the pin on the EX8874 to be bent out, and the `IOREF` to be jumpered to `3V3` pin on the EX8874.
 
-See the [Incorrect IOREF voltage page](ioref-incorrect-voltage-fix.md) for details on how to correct the IOREF voltage for this board combination.
+See the [Incorrect IOREF voltage page](ioref-incorrect-voltage-fix_not_in_nav.md) for details on how to correct the IOREF voltage for this board combination.
 
 ---
 
