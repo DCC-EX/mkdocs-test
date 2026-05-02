@@ -154,11 +154,11 @@ markdown_extensions:
   - pymdownx.keys
   - pymdownx.snippets:
       check_paths: true
-  # - pymdownx.superfences: # Enhanced code blocks
-  #     custom_fences:
-  #       - name: mermaid # Enable Mermaid JS diagrams
-  #         class: mermaid
-  #         format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.superfences: # Enhanced code blocks
+      custom_fences:
+        - name: mermaid # Enable Mermaid JS diagrams
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
   - pymdownx.tabbed:
       alternate_style: true
   - pymdownx.tasklist: # Task list with checkbox capability
@@ -167,10 +167,6 @@ markdown_extensions:
   - toc: # Table of Contents extension
       permalink: true # Add a permanent link to headings
   - footnotes # Standard footnotes
-  - pymdownx.highlight: # For syntax highlighting of code
-      anchor_linenums: true
-      line_spans: __span
-      pygments_lang_class: true
 
 watch:
   - snippets
