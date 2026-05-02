@@ -7230,43 +7230,43 @@
 <p>The commands below are stored on the ESP32 (except for the TEMP command). Please be aware that if you issue a command to change the WiFi settings from a WiFi device, this will mean you lose connection and need to reconnect before continuing.</p>
 <p>Its is recommended that you don't do this while running trains.</p>
 <h2 id="changing-to-station-mode-ie-your-home-router">Changing to Station Mode (ie your home router)<a class="headerlink" href="#changing-to-station-mode-ie-your-home-router" title="Permanent link">&para;</a></h2>
-<p><code>cpp
-&lt;C WIFI "routerSSID" "routerPassword"&gt;</code></p>
+<div class="highlight"><pre><span></span><code><span class="o">&lt;</span><span class="n">C</span><span class="w"> </span><span class="n">WIFI</span><span class="w"> </span><span class="s">&quot;routerSSID&quot;</span><span class="w"> </span><span class="s">&quot;routerPassword&quot;</span><span class="o">&gt;</span>
+</code></pre></div>
 <p>The command station will attempt this connection immediately, and on each rerstart. If it fails to connect, it will revert to AP mode.</p>
 <h2 id="changing-the-access-point-defaults">Changing the Access Point defaults<a class="headerlink" href="#changing-the-access-point-defaults" title="Permanent link">&para;</a></h2>
 <p>To give the Access point a known name and a password that will not be revealed on the OLED use the command:</p>
-<p><code>cpp
-&lt;C WIFI AP "MyCSB1" "SpamWonderfulSpam"&gt;</code></p>
+<div class="highlight"><pre><span></span><code><span class="o">&lt;</span><span class="n">C</span><span class="w"> </span><span class="n">WIFI</span><span class="w"> </span><span class="n">AP</span><span class="w"> </span><span class="s">&quot;MyCSB1&quot;</span><span class="w"> </span><span class="s">&quot;SpamWonderfulSpam&quot;</span><span class="o">&gt;</span>
+</code></pre></div>
 <p>The AP mode password must be at least 8 characters long.</p>
 <p>The default channel is set to "11". Use a phone WiFi analyser app to see which channels are relatively quiet in your area. If you need to use an
 alternate channel (we recommend using only 1,6, or 11) you may change it here.</p>
-<p><code>cpp
-&lt;C WIFI AP "MyCSB1" "SpamWonderfulSpam" 6&gt;</code></p>
+<div class="highlight"><pre><span></span><code><span class="o">&lt;</span><span class="n">C</span><span class="w"> </span><span class="n">WIFI</span><span class="w"> </span><span class="n">AP</span><span class="w"> </span><span class="s">&quot;MyCSB1&quot;</span><span class="w"> </span><span class="s">&quot;SpamWonderfulSpam&quot;</span><span class="w"> </span><span class="mi">6</span><span class="o">&gt;</span>
+</code></pre></div>
 <p>In some environments you may want to hide the SSID from phones scanning for access points. If you do hide the SSID, it is still possible to connect by entering the SSID manually on the phone/tablet.</p>
-<p><code>cpp
-&lt;C WIFI HIDDENAP "MyCSB1" "SpamWonderfulSpam" 6&gt;</code></p>
+<div class="highlight"><pre><span></span><code><span class="o">&lt;</span><span class="n">C</span><span class="w"> </span><span class="n">WIFI</span><span class="w"> </span><span class="n">HIDDENAP</span><span class="w"> </span><span class="s">&quot;MyCSB1&quot;</span><span class="w"> </span><span class="s">&quot;SpamWonderfulSpam&quot;</span><span class="w"> </span><span class="mi">6</span><span class="o">&gt;</span>
+</code></pre></div>
 <h2 id="configuring-the-host-name">Configuring the Host Name<a class="headerlink" href="#configuring-the-host-name" title="Permanent link">&para;</a></h2>
 <p>The default is "DCCEX" but you can change this if you have more than one CS on you home router to make them show up with different names on the network.
 Host names starting with "DCCEX" are more readily found by WiFi throttles.</p>
-<p><code>cpp
-&lt;C WIFI HOSTNAME "DCCEX-MYCSB1"&gt;</code></p>
+<div class="highlight"><pre><span></span><code><span class="o">&lt;</span><span class="n">C</span><span class="w"> </span><span class="n">WIFI</span><span class="w"> </span><span class="n">HOSTNAME</span><span class="w"> </span><span class="s">&quot;DCCEX-MYCSB1&quot;</span><span class="o">&gt;</span>
+</code></pre></div>
 <h2 id="turning-wifi-onoff">Turning WiFi On/Off<a class="headerlink" href="#turning-wifi-onoff" title="Permanent link">&para;</a></h2>
-<p><code>cpp
-&lt;C WIFI OFF&gt;
-or
-&lt;C WIFI ON&gt;</code></p>
+<div class="highlight"><pre><span></span><code><span class="o">&lt;</span><span class="n">C</span><span class="w"> </span><span class="n">WIFI</span><span class="w"> </span><span class="n">OFF</span><span class="o">&gt;</span>
+<span class="k">or</span>
+<span class="o">&lt;</span><span class="n">C</span><span class="w"> </span><span class="n">WIFI</span><span class="w"> </span><span class="n">ON</span><span class="o">&gt;</span>
+</code></pre></div>
 <p>WARNING If you switch WiFi OFF you will only be able to switch it on again over the USB serial connection.</p>
 <h2 id="clearing-wifi-settings">Clearing WiFi settings<a class="headerlink" href="#clearing-wifi-settings" title="Permanent link">&para;</a></h2>
-<p><code>cpp
-&lt;C WIFI DEFAULT&gt;</code></p>
+<div class="highlight"><pre><span></span><code><span class="o">&lt;</span><span class="n">C</span><span class="w"> </span><span class="n">WIFI</span><span class="w"> </span><span class="n">DEFAULT</span><span class="o">&gt;</span>
+</code></pre></div>
 <p>WiFi will revert to the internally generated ssid and password.</p>
 <h2 id="visiting-another-router">Visiting another router<a class="headerlink" href="#visiting-another-router" title="Permanent link">&para;</a></h2>
 <p>Should you wish to visit a friend and temporarily connect to their home network you can use the TEMP setting that will be checked first but only until the ESP32 is powered off. After that it will revert to your regular settings.</p>
-<p><code>cpp
-&lt;C WIFI TEMP "fredsRouter" "Wilmer!!"&gt;</code></p>
+<div class="highlight"><pre><span></span><code><span class="o">&lt;</span><span class="n">C</span><span class="w"> </span><span class="n">WIFI</span><span class="w"> </span><span class="n">TEMP</span><span class="w"> </span><span class="s">&quot;fredsRouter&quot;</span><span class="w"> </span><span class="s">&quot;Wilmer!!&quot;</span><span class="o">&gt;</span>
+</code></pre></div>
 <h2 id="displaying-wifi-settings">Displaying WiFi settings<a class="headerlink" href="#displaying-wifi-settings" title="Permanent link">&para;</a></h2>
-<p><code>cpp
-&lt;D WIFI SHOW&gt;</code></p>
+<div class="highlight"><pre><span></span><code><span class="o">&lt;</span><span class="n">D</span><span class="w"> </span><span class="n">WIFI</span><span class="w"> </span><span class="n">SHOW</span><span class="o">&gt;</span>
+</code></pre></div>
 
 
 
@@ -7287,7 +7287,7 @@ or
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="May 2, 2026 10:58:30 UTC">May 2, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="April 12, 2026 18:29:22 UTC">April 12, 2026</span>
   </span>
 
     
