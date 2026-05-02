@@ -155,8 +155,6 @@ markdown_extensions:
   - pymdownx.snippets:
       check_paths: true
   - pymdownx.highlight: # For syntax highlighting of code
-      anchor_linenums: true
-      line_spans: __span
       pygments_lang_class: true
   - pymdownx.superfences: # Enhanced code blocks
       custom_fences:
