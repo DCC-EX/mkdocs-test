@@ -52,10 +52,12 @@ Note:
 
 Add the following lines to your `config.h` and remove any existing `#define MOTOR_SHIELD_TYPE ...` line.
 
-`#define EX8874_KEYES_ESP32 F("EX8874_KEYES_ESP32"),\` <br/>
-`  new MotorDriver(25/* 3*/, 19/*12*/, UNUSED_PIN, 13/*9*/, 32/*A0*/, 1.52, 5000, 36 /*A4*/), \` <br/>
-`  new MotorDriver(23/*11*/, 18/*13*/, UNUSED_PIN, 12/*8*/, 33/*A1*/, 1.52, 5000, 39 /*A5*/)` <br/>
-`#define MOTOR_SHIELD_TYPE EX8874_KEYES_ESP32`
+```cpp
+#define EX8874_KEYES_ESP32 F("EX8874_KEYES_ESP32"),\
+  new MotorDriver(25/* 3*/, 19/*12*/, UNUSED_PIN, 13/*9*/, 32/*A0*/, 1.52, 5000, 36 /*A4*/), \
+  new MotorDriver(23/*11*/, 18/*13*/, UNUSED_PIN, 12/*8*/, 33/*A1*/, 1.52, 5000, 39 /*A5*/)
+#define MOTOR_SHIELD_TYPE EX8874_KEYES_ESP32
+```
 
 - When one EX8874 motor shield is used with Keyestudio IOT ESP32 PLUS Development Board, the default EX8874 pins are used.  
 
@@ -79,22 +81,26 @@ Add the following lines to your `config.h` and remove any existing `#define MOTO
 - **IOREF:** The IOREF override is also needed for the top shield. See the [Incorrect IOREF voltage page](ioref-incorrect-voltage-fix_not_in_nav.md) for details.
 - **VIN:** Refer to instructions on [cutting the VIN trace and disabling the regulator](/products/ex-motorshield8874/ex-motorshield8874.md/#steps-to-stack) for the top shield.
 
-![ACEBOTT IOREF](/_static/images/esp32/keyestudio-ex-8874-stacked-pads.png){ width=12% align=right }
+- Stacking (2) motor shields on Keystudio ESP32 requires ***additional*** modification of the second/top shield:
 
-- Stacking motor shields on Keystudio ESP32 requires:
+      a. Cut the regulator to VIN pin on the top of the PCB
 
-      a. Use of solder pad for 8 alternate pins
-      
-      b. \^ for Fault pins, the pins on the ESP32 board labeled `io2` and `io4` will need to be bent about 90 degrees so that jumpers can be put on them.  `io2` will need to be jumpered to `A4` on the EX8874. `io4` will need to be jumpered to `A5` on the EX8874.
+      b. Cut the “Regulator Enable” trace on the bottom of the board
 
-First EX8874
+      b. Use of solder pad for 8 alternate pins (not the fault pins)
+            
+      c. \^ for Fault pins, the pins on the ESP32 board labeled `io2` and `io4` will need to be bent about 90 degrees so that jumpers can be put on them.  `io2` will need to be jumpered to `A4` on the EX8874. `io4` will need to be jumpered to `A5` on the EX8874.
+
+See the [Stacking two motor shields on the EX8874 page](../../products/ex-motorshield8874/ex-motorshield8874.md#steps-to-stack) for details on how to alter the board for this combination.
+
+### First EX8874
 
 |output|Current<br/>Sense|PWM<br/>Enable|DIR<br/>Signal|Brake|Fault|Notes|
 |:--:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
 |A|32 pA0|25 p3|19 p12|9 p9|36 pA4|Default pins|
 |B|33 pA1|23 p11|18 p13|8 p8|39 pA8||
 
-Second EX8874
+### Second EX8874
 
 |output|Current<br/>Sense|PWM<br/>Enable|DIR<br/>Signal|Brake|Fault|Notes|
 |:--:|:-----:|:-----:|:-----:|:-----:|:-----:|:-------------:|
@@ -103,13 +109,14 @@ Second EX8874
 
 - A custom motor define will be needed in `config.h`
 
-
-`#define EX8874X2_KEYES_ESP32 F("EX8874X2_KEYES_ESP32"), \` <br/>
-`  new MotorDriver(25/* 3*/, 19/*12*/, UNUSED_PIN, 13/*9*/, 32/*A0*/, 1.52, 5000, 36/*A4*/), \` <br/>
-`  new MotorDriver(23/*11*/, 18/*13*/, UNUSED_PIN, 12/*8*/, 33/*A1*/, 1.52, 5000, 39/*A5*/), \` <br/>
-`  new MotorDriver(26/* 2*/,  5/*10*/, UNUSED_PIN, 14/*7*/, 34/*A4*/, 1.52, 5000, 2 /*A4*/), \` <br/> 
-`  new MotorDriver(16/* 5*/, 17/* 4*/, UNUSED_PIN, 27/*6*/, 35/*A5*/, 1.52, 5000, 4 /*A5*/)` <br/>
-`#define MOTOR_SHIELD_TYPE EX8874X2_KEYES_ESP32` <br/>
+```cpp
+#define EX8874X2_KEYES_ESP32 F("EX8874X2_KEYES_ESP32"), \
+  new MotorDriver(25/* 3*/, 19/*12*/, UNUSED_PIN, 13/*9*/, 32/*A0*/, 1.52, 5000, 36/*A4*/), \
+  new MotorDriver(23/*11*/, 18/*13*/, UNUSED_PIN, 12/*8*/, 33/*A1*/, 1.52, 5000, 39/*A5*/), \
+  new MotorDriver(26/* 2*/,  5/*10*/, UNUSED_PIN, 14/*7*/, 34/*A4*/, 1.52, 5000, 2 /*A4*/), \ 
+  new MotorDriver(16/* 5*/, 17/* 4*/, UNUSED_PIN, 27/*6*/, 35/*A5*/, 1.52, 5000, 4 /*A5*/)`
+#define MOTOR_SHIELD_TYPE EX8874X2_KEYES_ESP32`
+```
 
 ### Stacked EX8874 Checklist
 
