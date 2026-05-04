@@ -7060,20 +7060,20 @@
 <h1 id="command-filters">Command Filters<a class="headerlink" href="#command-filters" title="Permanent link">&para;</a></h1>
 <p>A command filter intercepts <code>&lt; &gt;</code> type commands from throttles or the serial monitor and can be used to override, block or modify existing commands and implement completely new commands.</p>
 <p>The following code, added to myAutomation.h like any other EXRAIL code, gives a basic example.</p>
-<div class="highlight"><pre><span></span><code><span class="n">STEALTH_GLOBAL</span><span class="p">(</span>
-<span class="w">  </span><span class="kt">void</span><span class="w"> </span><span class="n">myFilter</span><span class="p">(</span><span class="n">Print</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">stream</span><span class="p">,</span><span class="w"> </span><span class="n">byte</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">opcode</span><span class="p">,</span><span class="w"> </span><span class="n">byte</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">paramCount</span><span class="p">,</span><span class="w"> </span><span class="kt">int16_t</span><span class="w"> </span><span class="n">p</span><span class="p">[])</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">stream</span><span class="p">;</span>
-<span class="w">    </span><span class="c1">// use command &lt;U locoid&gt; to display name from roster</span>
-<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">opcode</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="sc">&#39;U&#39;</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">paramCount</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">      </span><span class="k">auto</span><span class="w"> </span><span class="n">locoId</span><span class="o">=</span><span class="n">p</span><span class="p">[</span><span class="mi">0</span><span class="p">];</span>
-<span class="w">      </span><span class="k">auto</span><span class="w"> </span><span class="n">name</span><span class="o">=</span><span class="n">RMFT2</span><span class="o">::</span><span class="n">getRosterName</span><span class="p">(</span><span class="n">locoId</span><span class="p">);</span>
-<span class="w">      </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">name</span><span class="p">)</span><span class="w"> </span><span class="k">return</span><span class="p">;</span><span class="w"> </span><span class="c1">// caller will &lt;X&gt; this</span>
-<span class="w">      </span><span class="n">opcode</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="c1">// caller can now ignore this</span>
-<span class="w">      </span><span class="n">StringFormatter</span><span class="o">::</span><span class="n">lcd</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="n">F</span><span class="p">(</span><span class="s">&quot;Loco %d name %S&quot;</span><span class="p">),</span><span class="w"> </span><span class="n">locoId</span><span class="p">,</span><span class="w"> </span><span class="n">name</span><span class="p">);</span>
-<span class="w">    </span><span class="p">}</span>
-<span class="w">  </span><span class="p">}</span>
-<span class="p">)</span>
-</code></pre></div>
+<p><code>cpp
+STEALTH_GLOBAL(
+  void myFilter(Print * stream, byte &amp; opcode, byte &amp; paramCount, int16_t p[]) {
+    (void)stream;
+    // use command &lt;U locoid&gt; to display name from roster
+    if (opcode == 'U' &amp;&amp; paramCount == 1) {
+      auto locoId=p[0];
+      auto name=RMFT2::getRosterName(locoId);
+      if (!name) return; // caller will &lt;X&gt; this
+      opcode=0; // caller can now ignore this
+      StringFormatter::lcd(0, F("Loco %d name %S"), locoId, name);
+    }
+  }
+)</code></p>
 <ul>
 <li>All <code>&lt;&gt;</code> commands will be broken into an opcode and numeric parameters before being passed to myFilter.</li>
 <li>You can only have one myFilter function but it can filter multiple commands by inspecting the opcode.</li>
@@ -7083,8 +7083,8 @@
 <li>Although this is a conventional c++ function, the use of STEALTH_GLOBAL in EXRAIL avoids the need to #include a vast array of weird and wonderful API and memory management definitions.</li>
 <li>To recognize keyword parameters (e.g <code>&lt;1 MAIN&gt;</code>) you would test using the _hk suffix like this</li>
 </ul>
-<div class="highlight"><pre><span></span><code><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">opcode</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="sc">&#39;1&#39;</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">paramCount</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">p</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s">&quot;MAIN&quot;</span><span class="n">_hk</span><span class="p">)</span><span class="w"> </span>
-</code></pre></div>
+<p><code>cpp
+ if (opcode == '1' &amp;&amp; paramCount == 1 &amp;&amp; p[0] == "MAIN"_hk)</code></p>
 
 
 
@@ -7105,7 +7105,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="August 21, 2025 21:16:58 UTC">August 21, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="May 4, 2026 01:57:55 UTC">May 4, 2026</span>
   </span>
 
     
