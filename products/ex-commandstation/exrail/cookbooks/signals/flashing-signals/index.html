@@ -7135,30 +7135,31 @@
 
 <h1 id="signals-with-flashing">Signals with flashing<a class="headerlink" href="#signals-with-flashing" title="Permanent link">&para;</a></h1>
 <p>Flashing is achieved with the command</p>
-<p><code>cpp
-BLINK(vpin, onMs, offMs)</code></p>
+<div class="highlight"><pre><span></span><code><span class="n">BLINK</span><span class="p">(</span><span class="n">vpin</span><span class="p">,</span><span class="w"> </span><span class="n">onMs</span><span class="p">,</span><span class="w"> </span><span class="n">offMs</span><span class="p">)</span>
+</code></pre></div>
 <p>which will start a vpin blinking until such time as it is SET, RESET or set by a signal operation such as RED, AMBER, GREEN.</p>
 <p>BLINK returns immediately, the blinking is autonomous.</p>
 <h2 id="always-blink-amber">Always blink AMBER<a class="headerlink" href="#always-blink-amber" title="Permanent link">&para;</a></h2>
 <p>A signal that always blinks amber could be done like this:</p>
-<p><code>cpp
-SIGNALH(130,131,132)
-ONAMBER(130) BLINK(131,500,500) 
-DONE</code></p>
+<div class="highlight"><pre><span></span><code><span class="n">SIGNALH</span><span class="p">(</span><span class="mi">130</span><span class="p">,</span><span class="mi">131</span><span class="p">,</span><span class="mi">132</span><span class="p">)</span>
+<span class="n">ONAMBER</span><span class="p">(</span><span class="mi">130</span><span class="p">)</span><span class="w"> </span><span class="n">BLINK</span><span class="p">(</span><span class="mi">131</span><span class="p">,</span><span class="mi">500</span><span class="p">,</span><span class="mi">500</span><span class="p">)</span><span class="w"> </span>
+<span class="n">DONE</span>
+</code></pre></div>
 <p>The RED or GREEN calls will turn off the amber pin and that will stop the blink automatically.</p>
 <h2 id="amber-and-flashing-amber">Amber and Flashing Amber<a class="headerlink" href="#amber-and-flashing-amber" title="Permanent link">&para;</a></h2>
 <p>A signal that has normal AMBER and flashing AMBER could be done by creating a new macro to implement a FLAMBER(signalid) command</p>
-<p>```cpp
-// create a new command
-#define FLAMBER(signal) \
-        AMBER(signal) \
-        BLINK(signal+1,500,500)</p>
-<p>SIGNALH(130,131,132) </p>
-<p>// then where necessary you can 
-AMBER(130)   // set signal to AMBER
-// or 
-FLAMBER(130) // set signal to flashing amber
-```</p>
+<div class="highlight"><pre><span></span><code><span class="c1">// create a new command</span>
+<span class="cp">#define FLAMBER(signal) \</span>
+<span class="cp">        AMBER(signal) \</span>
+<span class="cp">        BLINK(signal+1,500,500)</span>
+
+<span class="n">SIGNALH</span><span class="p">(</span><span class="mi">130</span><span class="p">,</span><span class="mi">131</span><span class="p">,</span><span class="mi">132</span><span class="p">)</span><span class="w"> </span>
+
+<span class="c1">// then where necessary you can </span>
+<span class="n">AMBER</span><span class="p">(</span><span class="mi">130</span><span class="p">)</span><span class="w">   </span><span class="c1">// set signal to AMBER</span>
+<span class="c1">// or </span>
+<span class="n">FLAMBER</span><span class="p">(</span><span class="mi">130</span><span class="p">)</span><span class="w"> </span><span class="c1">// set signal to flashing amber</span>
+</code></pre></div>
 <p>(Caution: this assumes that the amber pin is redpin+1 in the SIGNAL or SIGNALH definition)</p>
 
 
@@ -7180,7 +7181,7 @@ FLAMBER(130) // set signal to flashing amber
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="May 4, 2026 01:57:55 UTC">May 4, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="December 27, 2025 12:49:07 UTC">December 27, 2025</span>
   </span>
 
     
