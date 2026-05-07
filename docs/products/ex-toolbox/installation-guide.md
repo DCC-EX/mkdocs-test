@@ -53,7 +53,7 @@ There are three ways you can select a EX‑CommandStation to connect to:
   The port will normally be 2560.
 
 - ``Discovered Servers`` <br/>
-  If the server you want to connect to is in the list, simply click on it and you will be taken to the 'CV-Programming' screen.
+  If the server you want to connect to is in the list, simply click on it and you will be taken to the 'CV-Programming' screen. This includes via a direct USB connection.
 
 - ``Recent servers`` <br/>
   If the server does not appear in the recent list try one of the other two methods. Your server not appearing in the recent list is not necessarily a problem and there can be a number of reasons why.
@@ -63,6 +63,8 @@ There are three ways you can select a EX‑CommandStation to connect to:
 - *Important!* **EX‑Toolbox** can only connect directly to an EX‑CommandStation or JMRI's 'DCC++ over TCP Server', however JMRI, the EX‑CommandStation and other devices and apps can, or do, advertise as "WiThrottle" mDNS services. EX-Toolbox cannot determine which are actually direct connections to an EX‑CommandStation or JMRI's 'DCC++ over TCP Server'.
 
 - If you only ever connect to one EX‑CommandStation you can effectively bypass this screen by setting the 'Auto-Connect to WiThrottle Server?' preference.
+
+- *Direct USB connection*<br/><br/>As of Version 0.1.35, the discovered server list will also include an entry `DCC-EX-USB-OTG` if you have a EX-Commandstation connected directly to your phone or tablet using a USB on-the-go (OTG) cable.<br/><br/>The direct USB connection is only supported on Android devices that support USB on-the-go (OTG).<br/><br/>In general USB-C to the USB-C cables are automatically OTG, but if you are using a USB-C to USB-A cable, you will need to check that the cable supports OTG.  If it doesn't, the `DCC-EX-USB-OTG` entry won't appear in the discovered server list.
 
 ----
 
