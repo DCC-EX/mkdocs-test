@@ -70,7 +70,7 @@ Add the following lines to your `config.h` and remove any existing `#define MOTO
 
 - [ ] Cover the barrel connector on Keyestudio IOT ESP32 PLUS Development Board, as VIN power will be provided by EX8874  
 - [ ] IOREF Override set to 3v3  
-- [ ] Confirm that IOREF pin is bent *or* trace is cut *or* both
+- [ ] IOREF pin is bent *or* trace is cut *or* both
 - [ ] Add the custom motor define - 4 lines in `config.h`
 
 ---
@@ -89,7 +89,12 @@ Add the following lines to your `config.h` and remove any existing `#define MOTO
 
       b. Use of solder pad for 8 alternate pins (not the fault pins)
             
-      c. \^ for Fault pins, the pins on the ESP32 board labeled `io2` and `io4` will need to be bent about 90 degrees so that jumpers can be put on them.  `io2` will need to be jumpered to `A4` on the EX8874. `io4` will need to be jumpered to `A5` on the EX8874.
+      c. For Fault pins, bend the A4 and A5 pins on the top motor shield, so that they do not contact the lower shield
+
+      d. \^ Also for Fault pins, `io2` will need to be jumpered to `A4` on the EX8874. `io4` will need to be jumpered to `A5` on the EX8874. <br/>      
+      To do so, the pins on the ESP32 board labeled `io2` and `io4` will need either; need to be bent about 90 degrees so that jumpers can be put on them, or have modified jumper cables with the plastic ends removed and covered with heat shrink. 
+         
+          
 
 See the [Stacking two motor shields on the EX8874 page](../../products/ex-motorshield8874/ex-motorshield8874.md#steps-to-stack) for details on how to alter the board for this combination.
 
@@ -121,11 +126,12 @@ See the [Stacking two motor shields on the EX8874 page](../../products/ex-motors
 ### Stacked EX8874 Checklist
 
 - [ ] Cover the barrel connector on Keyestudio IOT ESP32 PLUS Development Board, as VIN power will be provided by one EX8874  
-- [ ] IOREF Override set to 3v3 on both EX8874 boards  
-- [ ] Confirm that IOREF pin is bent or trace is cut
-- [ ] VIN trace cut and regulator disabled on top EX8874  
-- [ ] Alternate pins enabled via solder pads  
-- [ ] Jumpers added for GPIO 2 and 4  
+- [ ] IOREF Override set to 3v3 on **both** EX8874 boards
+- [ ] IOREF pin is bent out *or* trace is cut on **both** EX8874 boards
+- [ ] VIN trace cut and regulator disabled on **top** EX8874  
+- [ ] Alternate pins enabled via solder pads on to **top** EX8874
+- [ ] A4 and A5 pins on the **top** EX8874 bent out
+- [ ] Jumpers added from GPIO 2 and 4 to A4 and A5 on **top** EX8874
 - [ ] Add the custom motor define - 6 lines in config.h  
 
 ==TODO==
