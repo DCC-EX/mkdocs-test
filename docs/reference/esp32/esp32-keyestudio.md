@@ -91,10 +91,9 @@ Add the following lines to your `config.h` and remove any existing `#define MOTO
             
       c. For Fault pins, bend the A4 and A5 pins on the top motor shield, so that they do not contact the lower shield
 
-      d. \^ Also for Fault pins, `io2` will need to be jumpered to `A4` on the EX8874. `io4` will need to be jumpered to `A5` on the EX8874. <br/>      
-      To do so, the pins on the ESP32 board labeled `io2` and `io4` will need either; need to be bent about 90 degrees so that jumpers can be put on them, or have modified jumper cables with the plastic ends removed and covered with heat shrink. 
-         
-          
+      d. \^ Also for Fault pins, `io2` will need to be jumpered to `A4` on the EX8874. `io4` will need to be jumpered to `A5` on the EX8874. To do so, to avoid fouling with the EX8874, the pins on the ESP32 board labeled `io2` and `io4` will either; need to be bent about 90 degrees so that jumpers can be put on them, or use modified jumper cables with the plastic ends removed, bent and covered with heat shrink. 
+
+![Bent jumper](/_static/images/esp32/esp32-keyestudio-bent-jumper.png){ width=15% align=center }
 
 See the [Stacking two motor shields on the EX8874 page](../../products/ex-motorshield8874/ex-motorshield8874.md#steps-to-stack) for details on how to alter the board for this combination.
 
