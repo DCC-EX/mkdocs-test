@@ -83,11 +83,14 @@ Add the following lines to your `config.h` and remove any existing `#define MOTO
 
 - Stacking (2) motor shields on Keystudio ESP32 requires ***additional*** modification of the second/top shield:
 
-    * Cut the regulator to VIN pin on the top of the PCB
-    * Cut the “Regulator Enable” trace on the bottom of the board
-    * Use of solder pad for 8 alternate pins (not the fault pins)
-    * For Fault pins, bend the A4 and A5 pins on the top motor shield, so that they do not contact the lower shield
-    * \^ Also for Fault pins, `io2` will need to be jumpered to `A4` on the EX8874. `io4` will need to be jumpered to `A5` on the EX8874. To do so, to avoid fouling with the EX8874, the pins on the ESP32 board labeled `io2` and `io4` will either; need to be bent about 90 degrees so that jumpers can be put on them, or use modified jumper cables with the plastic ends removed, bent and covered with heat shrink. 
+    - Cut the regulator to VIN pin on the top of the PCB
+    - Cut the “Regulator Enable” trace on the bottom of the board
+    - Use of solder pad for 8 alternate pins (not the fault pins)
+    - For Fault pins, bend the A4 and A5 pins on the top motor shield, so that they do not contact the lower shield
+    - \^ Also for Fault pins, `io2` will need to be jumpered to `A4` on the EX8874. `io4` will need to be jumpered to `A5` on the EX8874.<br/>To do so, to avoid fouling with the EX8874, the pins on the ESP32 board labeled `io2` and `io4` will either;
+
+        - need to be bent about 90 degrees so that jumpers can be put on them, or
+        - use modified jumper cables with the plastic ends removed, bent and covered with heat shrink.
 
   ![Bent jumper](/_static/images/esp32/esp32-keyestudio-bent-jumper.png){ width=15% }
 
