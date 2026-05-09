@@ -1,6 +1,7 @@
 nav:
   - Glossary of Terms: glossary.md
   - DCC-EX Command Protocol: serial-commands.md
+  - EXRAIL Command List: exrail-command-reference.md
   - Serial Command Basics: serial-command-basics.md
   - Advanced config.h Options: advanced-config-h.md
   - TrackManager: trackmanager

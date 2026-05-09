@@ -26,13 +26,13 @@ hide:
 
 ## Incorrect IOREF voltage
 
-The IOREF pin is labeled a `5V` on the board.
+![ACEBOTT IOREF](/_static/images/esp32/esp32-keyestudio-ioref.png){ width=15% align=left }
 
-![ACEBOTT IOREF](/_static/images/esp32/esp32-keyestudio-ioref.png){ width=15% }
+The pin in the IOREF location is 5V and labeled `5V` on the board.
 
-The IOREF voltage will not be correct for this board combination.
+EX8874 requires IOREF voltage at 3.3V when used with ESP32 or other 3.3V microprocessors.
 
-<span style="color:red">Warning:</span> Without modification the ADC inputs will receive up to 5V when the IOREF pin is 5V which will damage the board and likely destroy it. ***As such it is vital that the modifications below are made.***
+<span style="color:red">Warning:</span> Without modification the ADC inputs and I2C pins will receive up to 5V when the IOREF pin is 5V which will damage the ESP32 board and likely destroy it. ***As such it is vital that the modifications below are made.***
 
 - Option A: The prefered work-around to the incorrect 5V pin is to modify the EX8874, using the `3V3 IOREF Override` solder pad on the EX8874.
 
@@ -53,18 +53,18 @@ Note:
 Add the following lines to your `config.h` and remove any existing `#define MOTOR_SHIELD_TYPE ...` line.
 
 ```cpp
-#define EX8874_KEYES_ESP32 F("EX8874_KEYES_ESP32"),\
-  new MotorDriver(25/* 3*/, 19/*12*/, UNUSED_PIN, 13/*9*/, 32/*A0*/, 1.52, 5000, 36 /*A4*/), \
-  new MotorDriver(23/*11*/, 18/*13*/, UNUSED_PIN, 12/*8*/, 33/*A1*/, 1.52, 5000, 39 /*A5*/)
-#define MOTOR_SHIELD_TYPE EX8874_KEYES_ESP32
+  #define EX8874_KEYES_ESP32 F("EX8874_KEYES_ESP32"), \  
+    new MotorDriver(25/* 3*/, 19/*12*/, UNUSED_PIN, 13/*9*/, 32/*A0*/, 1.52, 5000, 36 /*A4*/), \  
+    new MotorDriver(23/*11*/, 18/*13*/, UNUSED_PIN, 12/*8*/, 33/*A1*/, 1.52, 5000, 39 /*A5*/)  
+  #define MOTOR_SHIELD_TYPE EX8874_KEYES_ESP32
 ```
 
 - When one EX8874 motor shield is used with Keyestudio IOT ESP32 PLUS Development Board, the default EX8874 pins are used.  
 
-|output|Current<br/>Sense|PWM<br/>Enable|DIR<br/>Signal|Brake|Fault|Notes|
+|<br/>output|Current<br/>Sense|*PWM*<br/>Enable|*DIR*<br/>Signal|<br/>Brake|<br/>Fault|<br/>Notes|
 |:--:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
-|A|32 pA0|25 p3|19 p12|9 p9|36 pA4||
-|B|33 pA1|23 p11|18 p13|8 p8|39 pA8||
+|A|32 pA0|25 p3|19 p12|13 p9|36 pA4|Default pins|
+|B|33 pA1|23 p11|18 p13|12 p8|39 pA5||
 
 ### Single EX8874 Checklist
 
@@ -107,27 +107,27 @@ See the [Stacking two motor shields on the EX8874 page](../../products/ex-motors
 
 ### First EX8874
 
-|output|Current<br/>Sense|PWM<br/>Enable|DIR<br/>Signal|Brake|Fault|Notes|
+|<br/>output|Current<br/>Sense|*PWM*<br/>Enable|*DIR*<br/>Signal|<br/>Brake|<br/>Fault|<br/>Notes|
 |:--:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
-|A|32 pA0|25 p3|19 p12|9 p9|36 pA4|Default pins|
-|B|33 pA1|23 p11|18 p13|8 p8|39 pA8||
+|A|32 pA0|25 p3|19 p12|13 p9|36 pA4|Default pins|
+|B|33 pA1|23 p11|18 p13|12 p8|39 pA5||
 
 ### Second EX8874
 
-|output|Current<br/>Sense|PWM<br/>Enable|DIR<br/>Signal|Brake|Fault|Notes|
+|<br/>output|Current<br/>Sense|*PWM*<br/>Enable|*DIR*<br/>Signal|<br/>Brake|<br/><span style="color:red">Fault|<br/>Notes|
 |:--:|:-----:|:-----:|:-----:|:-----:|:-----:|:-------------:|
-|C|34 pA2|26 p2|5 p10|14 p7|<span style="color:green">2 </span><span style="color:red">pA4</span>|use alternates for 8 pins|
-|D|35 pA3|16 p5|17 p4|27 p6|<span style="color:green">4 </span><span style="color:red">pA5</span>|\^ <span style="color:red">Bend</span> & <span style="color:green">jumper</span>. See notes|
+|C|34 pA2|26 p2|5 p10|14 p7|<span style="color:red">2 </span><span style="color:red">pA4</span>|use alternates for 8 pins|
+|D|35 pA3|16 p5|17 p4|27 p6|<span style="color:red">4 </span><span style="color:red">pA5</span>|<span style="color:red">Bend</span> & <span style="color:red">jumper</span>. See notes|
 
 - A custom motor define will be needed in `config.h`
 
 ```cpp
-#define EX8874X2_KEYES_ESP32 F("EX8874X2_KEYES_ESP32"), \
-  new MotorDriver(25/* 3*/, 19/*12*/, UNUSED_PIN, 13/*9*/, 32/*A0*/, 1.52, 5000, 36/*A4*/), \
-  new MotorDriver(23/*11*/, 18/*13*/, UNUSED_PIN, 12/*8*/, 33/*A1*/, 1.52, 5000, 39/*A5*/), \
-  new MotorDriver(26/* 2*/,  5/*10*/, UNUSED_PIN, 14/*7*/, 34/*A4*/, 1.52, 5000, 2 /*A4*/), \ 
-  new MotorDriver(16/* 5*/, 17/* 4*/, UNUSED_PIN, 27/*6*/, 35/*A5*/, 1.52, 5000, 4 /*A5*/)`
-#define MOTOR_SHIELD_TYPE EX8874X2_KEYES_ESP32`
+  #define EX8874X2_KEYES_ESP32 F("EX8874X2_KEYES_ESP32"), \  
+    new MotorDriver(25/* 3*/, 19/*12*/, UNUSED_PIN, 13/*9*/, 32/*A0*/, 1.52, 5000, 36/*A4*/), \  
+    new MotorDriver(23/*11*/, 18/*13*/, UNUSED_PIN, 12/*8*/, 33/*A1*/, 1.52, 5000, 39/*A5*/), \  
+    new MotorDriver(26/* 2*/,  5/*10*/, UNUSED_PIN, 14/*7*/, 34/*A4*/, 1.52, 5000, 2 /*A4*/), \ 
+    new MotorDriver(16/* 5*/, 17/* 4*/, UNUSED_PIN, 27/*6*/, 35/*A5*/, 1.52, 5000, 4 /*A5*/)  
+  #define MOTOR_SHIELD_TYPE EX8874X2_KEYES_ESP32
 ```
 
 ### Stacked EX8874 Checklist
