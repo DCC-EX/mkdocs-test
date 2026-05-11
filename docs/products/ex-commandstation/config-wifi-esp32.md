@@ -1,6 +1,6 @@
 # WiFi configuration (CSB1 or ESP32 ONLY)
 
-PLEASE NOTE: config.h options for WiFi configuration from previous versions afre now ignored by CSB1 or ESP32 command stations.
+PLEASE NOTE: config.h options for WiFi configuration from previous versions are now ignored by CSB1 or ESP32 command stations.
 
 WiFi has two operating modes:
 

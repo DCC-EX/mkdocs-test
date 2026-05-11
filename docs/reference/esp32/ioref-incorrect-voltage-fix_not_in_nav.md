@@ -51,4 +51,4 @@ Double check that that you have it correct by checking wth a multimeter on the E
 *This option does not require soldering.*
 
 - Locate the IOREF pin. (On many clone boards it will be labeled `5V`) and bend the corresponding pin on the EX8874 out.
-- Add a Jjumper from the `3V3` pin to the `IOREF` pin on the EX8874.
+- Add a jumper from the `3V3` pin to the `IOREF` pin on the EX8874.
