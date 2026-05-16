@@ -1,4 +1,4 @@
-# Wifi configuration (Not CSB1 or ESP32) 
+# Wifi configuration (Not CSB1 or ESP32)
 
 WiFi has two operating modes:
 

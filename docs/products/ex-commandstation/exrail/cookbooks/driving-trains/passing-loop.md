@@ -56,7 +56,7 @@ SEQUENCE(101)  // Catflap to Dogbath (loco in reverse)
   AT(164)    // when we get to Dogbath
   STOP
   FREE(4)    // we are not in loop
-  FOLLOW(101) // now follow the Dogbath-Catflap sequence 
+  FOLLOW(100) // now follow the Dogbath-Catflap sequence 
 ```
 
 Notice that you don't drive into an area of the track without first reserving the corresponding block, and you must remember to free it once you have safely left. Also the script above assumes that a train can cause the turnout to change quickly enough if it reaches a sensor in the loop and doesn't need to stop, this can be alleviated if you throw/close the turnout behind you as you reach your loop sensor so that the other train does not need to worry about any slow turnout movement.
