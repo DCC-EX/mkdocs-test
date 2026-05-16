@@ -43,7 +43,7 @@ jobs:
           css = css_path.read_text(encoding="utf-8")
 
           # Ensure the first rendered code block is still multiline in generated HTML.
-          match = re.search(r'<div class="highlight"><pre><span></span><code>(.*?)</code></pre></div>', html, re.DOTALL)
+          match = re.search(r'<div class="language-\w+ highlight"><pre><span></span><code>(.*?)</code></pre></div>', html, re.DOTALL)
           if not match:
               print("Could not locate a rendered fenced code block in passing-loop page")
               sys.exit(1)
