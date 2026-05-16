@@ -154,6 +154,9 @@ markdown_extensions:
   - pymdownx.keys
   - pymdownx.snippets:
       check_paths: true
+  - pymdownx.highlight: # Syntax highlighting of code
+      anchor_linenums: false
+      pygments_lang_class: true
   - pymdownx.superfences: # Enhanced code blocks
       custom_fences:
         - name: mermaid # Enable Mermaid JS diagrams
