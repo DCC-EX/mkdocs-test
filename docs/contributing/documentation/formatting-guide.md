@@ -118,7 +118,7 @@ When including code blocks, be sure to include an appropriate language for synta
 
 For example:
 
-````text
+````markdown
 ```cpp
 TURNOUTL(id, address, "description")
 
@@ -138,7 +138,7 @@ For EXRAIL and general configuration file code blocks (eg. config.h, myAutomatio
 
 If appropriate, line numbers can also be displayed by appending ``linenums="X"`` to the language, where "X" is the starting line number:
 
-````text
+````markdown
 ```cpp linenums="20"
 TURNOUTL(id, address, "description")
 
