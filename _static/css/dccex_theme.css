@@ -182,6 +182,13 @@
 }
 
 /* GENERAL STYLING OVERRIDES */
+.md-typeset pre,
+.md-typeset pre code,
+.md-typeset .highlight pre,
+.md-typeset .highlight pre code {
+  white-space: pre !important;
+}
+
 .md-main__inner {
   margin-top: 0;
 }
