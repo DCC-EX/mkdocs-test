@@ -46,7 +46,7 @@ Double check that that you have it correct by checking wth a multimeter on the E
 
 ![EX8874 IOREF](/_static/images/esp32/ioref-to-3v3-jumper.png){ width=15%}
 
-![EX8874 IOREF](/_static/images/esp32/esp32-keyestudio-bent-pin.png){ width=25%}
+![EX8874 IOREF](/_static/images/esp32/ioref-to-3v3-jumper2.png){ width=50%}
 
 *This option does not require soldering.*
 
