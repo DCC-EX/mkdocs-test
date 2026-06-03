@@ -18,6 +18,7 @@ jobs:
       - name: Generated documentation from source
         run: |
           . pull_exrail.sh
+          . pull_cmdref.sh
       - name: Build docu site
         run: |
           . ./venv/bin/activate
