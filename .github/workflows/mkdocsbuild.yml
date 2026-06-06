@@ -9,6 +9,8 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
       - name: Install python requirements
         run: |
           mkdir venv
@@ -17,7 +19,12 @@ jobs:
           pip3 install -r requirements.txt
       - name: Generated documentation from source
         run: |
-          . pull_exrail.sh
+          echo "::group::EXRAIL2MacroBase"
+          bash pull_docu_from_source.sh devel/EXRAIL2MacroBase.h exrail
+          echo "::endgroup::"
+          echo "::group::DCCEXCommands"
+          bash pull_docu_from_source.sh devel/DCCEXCommands.h cmdref
+          echo "::endgroup::"
       - name: Build docu site
         run: |
           . ./venv/bin/activate
@@ -71,5 +78,5 @@ jobs:
         with:
           publish_dir: site
           commit_message: ${{ github.event.head_commit.message }}
-          token: ${{ secrets.GITHUB_TOKEN }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
           keep_files: true

@@ -1,3 +1,2 @@
 
-awk -f pull_cmdref.awk ../CommandStation-EX/DCCEXCommands.h | out-file -encoding UTF8 docs/reference/serial_commands.md
-
+awk -f pull-cmdref.awk ..\CommandStation-EX\DCCEXCommands.h | out-file -encoding UTF8 -FilePath snippets/DCCEXCommands.md
