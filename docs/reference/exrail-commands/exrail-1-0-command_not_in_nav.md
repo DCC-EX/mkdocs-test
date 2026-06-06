@@ -12,14 +12,17 @@ tags:
 
 # ``<onOff [track]>`` - Turn power on or off to all or specific tracks
 
+
 Also allows joining the MAIN and PROG tracks together.
 
-## Parameters
+## Command
 
-* **onOff:** one of 
+* **onOff:** one of
 
     * 1 = on
     * 0 = off
+
+## Parameters
 
 * **track:** one of
 
