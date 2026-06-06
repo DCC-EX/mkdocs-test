@@ -19,8 +19,8 @@ jobs:
           pip3 install -r requirements.txt
       - name: Generated documentation from source
         run: |
-          echo "::group::Run pull_exrail.sh"
-          bash -x pull_exrail.sh
+          echo "::group::EXRAIL2MacroNBase"
+          bash pull_docu_from_source.sh devel/EXRAIL2MacroBase.h
           echo "::endgroup::"
           echo "::group::DCCEXCommands"
           bash pull_docu_from_source.sh devel/DCCEXCommands.h
