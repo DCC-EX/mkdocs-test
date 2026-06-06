@@ -23,7 +23,7 @@ jobs:
           bash -x pull_exrail.sh
           echo "::endgroup::"
           echo "::group::DCCEXCommands"
-          bash pull_docu_from_source devel/DCCEXCommands.h
+          bash pull_docu_from_source.sh devel/DCCEXCommands.h
           echo "::endgroup::"
       - name: Build docu site
         run: |
