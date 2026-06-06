@@ -40,7 +40,7 @@ Also allows joining the MAIN and PROG tracks together.
     * G = Track G
     * H = Track H
 
-* *Response*
+## *Response*
 
     The following is not a direct response, but rather a broadcast that will be triggered as a result of any power state changes.
 
