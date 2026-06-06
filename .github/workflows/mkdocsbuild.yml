@@ -20,10 +20,10 @@ jobs:
       - name: Generated documentation from source
         run: |
           echo "::group::EXRAIL2MacroNBase"
-          bash pull_docu_from_source.sh devel/EXRAIL2MacroBase.h
+          bash pull_docu_from_source.sh devel/EXRAIL2MacroBase.h exrail
           echo "::endgroup::"
           echo "::group::DCCEXCommands"
-          bash pull_docu_from_source.sh devel/DCCEXCommands.h
+          bash pull_docu_from_source.sh devel/DCCEXCommands.h cmdref
           echo "::endgroup::"
       - name: Build docu site
         run: |

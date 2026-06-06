@@ -2,13 +2,14 @@
 
 set -x
 SOURCE="$1"
+AWKNAME="$2"
 BASENAME=$(basename "$SOURCE" .h)
 TDIR="snippets"
 TARGET="$TDIR/$BASENAME".md
 
 # generate page
 mkdir -p "$TDIR"
-curl -s https://raw.githubusercontent.com/DCC-EX/CommandStation-EX/refs/heads/$SOURCE | awk -f pull-cmdref.awk > "$TARGET"
+curl -s https://raw.githubusercontent.com/DCC-EX/CommandStation-EX/refs/heads/$SOURCE | awk -f "pull-${AWKNAME}.awk" > "$TARGET"
 
 # make footer
 cat <<EOF >> "$TARGET"
