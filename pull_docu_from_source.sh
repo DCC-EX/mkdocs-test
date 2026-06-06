@@ -1,7 +1,7 @@
 #!/bin/bash
 
 set -x
-SOURCE=devel/DCCEXCommands.h
+SOURCE="$1"
 BASENAME=$(basename "$SOURCE" .h)
 TDIR="snippets"
 TARGET="$TDIR/$BASENAME".md

@@ -22,8 +22,8 @@ jobs:
           echo "::group::Run pull_exrail.sh"
           bash -x pull_exrail.sh
           echo "::endgroup::"
-          echo "::group::Run pull_cmdref.sh"
-          bash -x pull_cmdref.sh
+          echo "::group::DCCEXCommands"
+          bash pull_docu_from_source devel/DCCEXCommands.h
           echo "::endgroup::"
       - name: Build docu site
         run: |
