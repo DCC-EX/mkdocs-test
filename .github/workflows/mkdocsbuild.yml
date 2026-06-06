@@ -74,5 +74,5 @@ jobs:
         with:
           publish_dir: site
           commit_message: ${{ github.event.head_commit.message }}
-          token: ${{ secrets.GITHUB_TOKEN }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
           keep_files: true
