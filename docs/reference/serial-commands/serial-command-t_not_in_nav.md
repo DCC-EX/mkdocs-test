@@ -18,7 +18,7 @@ Serial command to request information about a loco or set its speed and directio
 
 * **loco:** *Required* <br/> Loco to request information about a loco or set its speed and direction
 
-* blank or **tSpeed** and **direction**
+* blank or **tSpeed** plus **direction**
     * if blank = Request a deliberate update on the loco speed/functions
     * if **tSpeed** and **direction** are supplied
         * **tSpeed** = ``0``-``127`` or ``-1`` for Emergency Stop
@@ -30,11 +30,7 @@ Serial command to request information about a loco or set its speed and directio
 
 The following are not a direct response, but rather a broadcast that will be triggered as a result of any track manager changes.
 
-``<response>``
-
-* **paramater:** explanation of the parameter
-
- <l «loco» «reg» «speedByte» «functMap»>
+``<l «loco» «reg» «speedByte» «functMap»>``
 
     * **loco** = DCC Address of the decoder/loco. The short (1-127) or long (128-10293) address of the engine decoder (this has to be already programmed in the decoder)
     * **reg** not used. We no longer use this but need something here for compatibility with legacy systems. Enter any single digit. > * **speedbyte**:** Speed in DCC speedstep format

@@ -17,8 +17,8 @@ Serial command to turn power on or off to all or specific tracks.  Also allows j
 
 ## Command
 
-* **1** on<br/>
-* **0** off<br/>
+* ``1`` = on<br/>or
+* ``0`` = off
 
 ## Parameters
 
@@ -35,7 +35,7 @@ Serial command to turn power on or off to all or specific tracks.  Also allows j
 
 The following is not a direct response, but rather a broadcast that will be triggered as a result of any power state changes.
 
-* ``<p«OnOFF» «track»>``
+* ``<p«onOFF» «track»>``
 
     * ``p`` = the 'message identifer'
     * **onOff** = one of: ``1`` = On or ``0`` = off
