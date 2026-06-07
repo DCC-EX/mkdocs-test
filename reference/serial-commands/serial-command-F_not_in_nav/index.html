@@ -10,7 +10,7 @@
       
       
       
-        <link rel="canonical" href="https://dcc-ex.com/mkdocs-test/reference/esp32/ioref-incorrect-voltage-fix_not_in_nav/">
+        <link rel="canonical" href="https://dcc-ex.com/mkdocs-test/reference/serial-commands/serial-command-F_not_in_nav/">
       
       
       
@@ -23,7 +23,7 @@
     
     
       
-        <title>Incorrect IOREF voltage for 3.3v Microcontrollers - DCC-EX Model Train Control, Animation, and Automation</title>
+        <title><F «loco» [«function» «state»]|[DCCFREQ «freqValue»]>- Set decoder functions or set PWM frequency - DCC-EX Model Train Control, Animation, and Automation</title>
       
     
     
@@ -79,7 +79,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#incorrect-ioref-voltage-for-33v-microcontrollers" class="md-skip">
+        <a href="#f-loco-function-statedccfreq-freqvalue-set-decoder-functions-or-set-pwm-frequency" class="md-skip">
           Skip to content
         </a>
       
@@ -112,7 +112,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Incorrect IOREF voltage for 3.3v Microcontrollers
+              &lt;F «loco» [«function» «state»]|[DCCFREQ «freqValue»]&gt;- Set decoder functions or set PWM frequency
             
           </span>
         </div>
@@ -5510,7 +5510,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../serial-commands/" class="md-nav__link">
+      <a href="../" class="md-nav__link">
         
   
   
@@ -5948,7 +5948,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../esp32-ex8874/" class="md-nav__link">
+      <a href="../../esp32/esp32-ex8874/" class="md-nav__link">
         
   
   
@@ -5971,7 +5971,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../esp32-acebott/" class="md-nav__link">
+      <a href="../../esp32/esp32-acebott/" class="md-nav__link">
         
   
   
@@ -5994,7 +5994,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../esp32-keyestudio/" class="md-nav__link">
+      <a href="../../esp32/esp32-keyestudio/" class="md-nav__link">
         
   
   
@@ -6017,7 +6017,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../esp32-l298-shield/" class="md-nav__link">
+      <a href="../../esp32/esp32-l298-shield/" class="md-nav__link">
         
   
   
@@ -7072,7 +7072,7 @@
               
                 
               
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" hidden>
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
@@ -7091,20 +7091,71 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#option-a-3v3-ioref-override-pad-changes-recommended" class="md-nav__link">
+  <a href="#command" class="md-nav__link">
     <span class="md-ellipsis">
-      Option A - 3V3 IOREF Override pad changes (Recommended)
+      Command
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#option-b-bend-jumper-acceptable-solution" class="md-nav__link">
+  <a href="#parameters" class="md-nav__link">
     <span class="md-ellipsis">
-      Option B - bend + Jumper (Acceptable solution)
+      Parameters
     </span>
   </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#response" class="md-nav__link">
+    <span class="md-ellipsis">
+      Response
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#notes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Notes
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      Examples
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Examples">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#examples-commands" class="md-nav__link">
+    <span class="md-ellipsis">
+      Examples Commands
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-responses" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example Responses:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -7129,49 +7180,74 @@
   
 
 
-<h1 id="incorrect-ioref-voltage-for-33v-microcontrollers">Incorrect IOREF voltage for 3.3v Microcontrollers<a class="headerlink" href="#incorrect-ioref-voltage-for-33v-microcontrollers" title="Permanent link">&para;</a></h1>
-<p><img alt="ACEBOTT IOREF" src="../../../_static/images/esp32/esp32-keyestudio-ioref.png" width="15%" /></p>
-<p>For the 3.3v microcontrollers such as the ESP32 board, if the IOREF voltage is not be correct the ADC inputs will receive up to 5V when the IOREF pin is 5V which will damage the board and likely destroy it.  </p>
-<p><strong><em>As such it is vital that the modifications below are made.</em></strong></p>
-<p>There are two options for correcting this issue, explained in detail below:</p>
+<h1 id="f-loco-function-statedccfreq-freqvalue-set-decoder-functions-or-set-pwm-frequency"><code>&lt;F «loco» [«function» «state»]|[DCCFREQ «freqValue»]&gt;</code><br/>- Set decoder functions or set PWM frequency<a class="headerlink" href="#f-loco-function-statedccfreq-freqvalue-set-decoder-functions-or-set-pwm-frequency" title="Permanent link">&para;</a></h1>
+<p>Serial command to Turn loco decoder functions ON or OFF or set the DC PWN frequency of the track.</p>
+<h2 id="command">Command<a class="headerlink" href="#command" title="Permanent link">&para;</a></h2>
 <ul>
-<li>Option A - 3V3 IOREF Override pad changes on the EX8874</li>
-<li>Option B - Bend the IOREF pin + Jumper the 3v3 pin the IOREF on the EX8874</li>
+<li><code>F</code></li>
 </ul>
-<p>Reminder: These modifications are <em>not</em> needed when installing a single EX8874 on an EX-CSB1.</p>
+<h2 id="parameters">Parameters<a class="headerlink" href="#parameters" title="Permanent link">&para;</a></h2>
+<ul>
+<li>
+<p><strong>loco:</strong> <em>Required</em><br/> Loco to set the function or PWM frequency</p>
+<ul>
+<li><code>option</code> = explanation of option</li>
+<li>...</li>
+</ul>
+</li>
+<li>
+<p><strong>function</strong> plus <strong>state</strong> or <strong>DCCFREQ</strong> plus <strong>direction</strong></p>
+<ul>
+<li><strong>function</strong> plus <strong>state</strong> set the function<ul>
+<li>*<em>function</em> = function to set. <code>0</code>-<code>68</code> (Support for the RCN-212 Functions)</li>
+<li><strong>state</strong> = one of:<ul>
+<li><code>1</code> = on</li>
+<li><code>0</code> = off</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>if <strong>DCCFREQ</strong> plus <strong>«freqValue»</strong> are supplied<ul>
+<li><strong>«freqValue»</strong> = one of:<ul>
+<li><mark>TODO</mark> = Mid frequency - 490Hz</li>
+<li><mark>TODO</mark> = High frequency - 3400Hz</li>
+<li><mark>TODO</mark> = Supersonic - 62500Hz</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="response"><em>Response</em><a class="headerlink" href="#response" title="Permanent link">&para;</a></h2>
+<p>The following are not a direct response, but rather a broadcast that will be triggered as a result of any track manager changes.</p>
+<p><code>&lt;l «loco» «reg» «speedByte» «functMap»&gt;</code></p>
+<div class="language-text highlight"><pre><span></span><code>* **loco** = DCC Address of the decoder/loco. The short (1-127) or long (128-10293) address of the engine decoder (this has to be already programmed in the decoder)
+* **reg** not used. We no longer use this but need something here for compatibility with legacy systems. Enter any single digit. &gt; * **speedbyte**:** Speed in DCC speedstep format
+    * reverse - ``2``-``127`` = speed ``1``-``126``, ``0`` = stop, ``1`` = Emergency Stop
+    * forward - ``130``-``255`` = speed ``1``-``126``, ``128`` = stop, ``129`` = Emergency Stop
+* **FunctMap** individual function states represented by the bits in a byte
+</code></pre></div>
+<h2 id="notes"><em>Notes</em><a class="headerlink" href="#notes" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Setting requests are transmitted directly to mobile loco decoder.</li>
+<li>Current state of loco functions (as known by commands issued since power on) is stored by the CommandStation - All functions within a group get set all at once per NMRA DCC standards.</li>
+<li>The command station knows about the previous settings in the same group and will not, for example, unset F2 because you change F1. If, however, you have never set F2, then changing F1 WILL unset F2</li>
+<li><code>&lt;f «loco» «byte1»&gt;</code> is a depricated version of the command. It is not documented here.</li>
+<li><code>&lt;f «loco» «group» «byte2»&gt;</code> is a depricated version of the command. It is not documented here.</li>
+</ul>
 <hr />
-<h2 id="option-a-3v3-ioref-override-pad-changes-recommended">Option A - 3V3 IOREF Override pad changes (Recommended)<a class="headerlink" href="#option-a-3v3-ioref-override-pad-changes-recommended" title="Permanent link">&para;</a></h2>
-<p><img alt="EX8874 IOREF" src="../../../_static/images/esp32/esp32-keyestudio-bent-pin.png" width="25%" /></p>
-<p><img alt="EX8874 IOREF" src="../../../_static/images/esp32/ioref-override.png" width="22%" /></p>
+<h2 id="examples"><em>Examples</em><a class="headerlink" href="#examples" title="Permanent link">&para;</a></h2>
+<p><a href="?_F">Also search for !</a></p>
+<h3 id="examples-commands"><em>Examples Commands</em><a class="headerlink" href="#examples-commands" title="Permanent link">&para;</a></h3>
 <ul>
-<li>The prefered work-around for the incorrect <code>IOREF</code>/<code>5V</code> pin is to modify the EX8874, using the <strong>3V3 IOREF Override</strong> solder pad on the EX8874.</li>
-<li>
-<p>When using the 3V3 IOREF Override:</p>
-<ol>
-<li>
-<p>Bend the IOREF pin out, <br/> <em>or</em></p>
-</li>
-<li>
-<p>Confirm that the trace connecting the 5v pad is completely cut. (The red line in the image.) Scratch it with a blade till there is no contact between the two pads and check with a multimeter. Then solder from the center pad to the 3.3v pad. <br/> <em>or</em></p>
-</li>
-<li>Both the above, to be really sure</li>
-</ol>
-</li>
+<li><code>&lt;F 3 0 1&gt;</code> Turns the headlight ON for CAB (loco address) 3</li>
+<li><code>&lt;F 126 0 0&gt;</code> Turns the headlight OFF for CAB 126</li>
+<li><code>&lt;F 1330 1 1&gt;</code> Turns the horn ON for CAB 1330</li>
 </ul>
-<p>Double check that that you have it correct by checking wth a multimeter on the EX8874 before you connect it to the ES32:</p>
-<ul class="task-list">
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> There should be an open circuit between the IOREF pin and the GND pin on the I2C pins</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> There should be an open circuit between the other <code>5v</code> pin (beside the two GND pins) and the <code>Vdd</code> pin on the I²C pins</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> There should be a closed circuit between the <code>3.3v</code> pin and the Vdd pin on the I2C pins</li>
-</ul>
-<hr />
-<h2 id="option-b-bend-jumper-acceptable-solution">Option B - bend + Jumper (Acceptable solution)<a class="headerlink" href="#option-b-bend-jumper-acceptable-solution" title="Permanent link">&para;</a></h2>
-<p><img alt="EX8874 IOREF" src="../../../_static/images/esp32/ioref-to-3v3-jumper.png" width="15%" /></p>
-<p><img alt="EX8874 IOREF" src="../../../_static/images/esp32/ioref-to-3v3-jumper2.png" width="50%" /></p>
-<p><em>This option does not require soldering.</em></p>
+<h3 id="example-responses"><em>Example Responses:</em><a class="headerlink" href="#example-responses" title="Permanent link">&para;</a></h3>
 <ul>
-<li>Locate the IOREF pin. (On many clone boards it will be labeled <code>5V</code>) and bend the corresponding pin on the EX8874 out.</li>
-<li>Add a jumper from the <code>3V3</code> pin to the <code>IOREF</code> pin on the EX8874.</li>
+<li><mark>TODO</mark></li>
 </ul>
 
 
@@ -7193,7 +7269,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 2, 2026 23:07:27 UTC">June 2, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 7, 2026 05:48:45 UTC">June 7, 2026</span>
   </span>
 
     
