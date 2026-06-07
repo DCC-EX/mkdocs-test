@@ -1,64 +1,60 @@
 ---
 tags:
-  - _:e:
-  - _:e:_track_MAIN
-  - _:e:_track_MAIN_INV
-  - _:e:_track_MAIN_AUTO
-  - _:e:_track_PROG
-  - _:e:_track_OFF
-  - _:e:_track_NONE
-  - _:e:_track_EXT
-  - _:e:_track_AUTO
-  - _:e:_track_INV
-  - _:e:_track_DC_loco
-  - _:e:_track_DC_INV_loco
-  - _:e:_track_DC_X_loco
+  - _1_
+  - _1_MAIN
+  - _1_PROG
+  - _1_JOIN
+  - _1_track
+  - _0_MAIN
+  - _0_PROG
+  - _0_track
 ---
 
-# ``<= [«trackletter» «mode»] [«id»]>`` - Request or Configure Track Manager
+# ``<«onOff» «track»>`` - Turn track power on or off
 
 Serial command to turn power on or off to all or specific tracks.  Also allows joining the MAIN and PROG tracks together.
 
 ## Command
 
-* **=**
+* **onOff:** one of
+
+    * 1 = on
+    * 0 = off
 
 ## Parameters
 
-* **trackletter:** *optional*
+* **track:** one of
 
-    * blank = Request the current Track Manager configuration
-    * ``A`` through ``H`` representing one of the outputs of the/a |motor shield|.
+    * blank = Both Main and Programming Tracks (All tracks)
+    * MAIN = Main track
+    * PROG = Programming Track
+    * JOIN = Join the Main and Programming tracks temporarily <br/>Note: While ``<1 JOIN>`` is valid, ``<0 JOIN>`` is not.
 
-* **mode:** *required if track letter supplied.* One of:
-
-    * ``MAIN``
-    * ``MAIN_INV``
-    * ``MAIN_AUTO`` <BR/> Deprecated alias of ``AUTO`` but only when preceeded by a sperate ``MAIN`` command.
-    * ``PROG``
-    * ``DC``
-    * ``DC_INV`` = DC reversed polarity
-    * ``DCX`` = DC reversed polarity (same as DC_INV) <br/>With special alias of ``DCX`` for ``DC_INV``
-    * ``NONE``
-
-* **id:** the cab (loco) ID. *Required when specifying DC or DC_INV / DCX*
+    * A = Track A
+    * B = Track B
+    * C = Track C
+    * D = Track D
+    * E = Track E
+    * F = Track F
+    * G = Track G
+    * H = Track H
 
 ## *Response*
 
-The following are not a direct response, but rather a broadcast that will be triggered as a result of any track manager changes.
+The following is not a direct response, but rather a broadcast that will be triggered as a result of any power state changes.
 
-(for each track/channel that has changed) ``<= trackletter state cab>``
-
-* **trackletter:** A-H |BR|
-* **state:** 'PROG', 'MAIN', 'MAIN_INV', 'MAIN A', 'DC', 'DCX', 'NONE' |BR|
-* **cab:** cab(loco) equivalent to a fake DCC Address for DC and DCX onl
+* ``<p«OnOFF» «track»>``
 
 ## *Notes*
 
-* Whenever a track's mode is changed, track power is automatically turned off on that track.
-* Since only one channel can be PROG, changing a second channel to PROG, will force the other to ``NONE``
-* The response to ``DC_INV`` is ``DCX``
-* The response to ``DCC_MAIN`` is ``MAIN A``
+* The use of the JOIN function allows the DCC signal for the MAIN track to also be sent to the PROG track. This allows the prog track to act as a siding (or similar) in the main layout even though it is isolated electrically and connected to the programming track output.
+  
+    However, it is important that the prog track wiring be in the same phase as the main track i.e. when the left rail is high on MAIN, it is also high on PROG. You may have to swap the wires to your prog track to make this work.
+  
+* If you drive onto a programming track that is "joined" and enter a programming command, the track will automatically switch to a programming track. If you use a compatible Throttle, you can then send the join command again and drive off the track onto the rest of your layout!
+
+    * In some split motor shield hardware configurations JOIN will not be able to work.
+    * While ``<1 JOIN>`` is valid, ``<0 JOIN>`` is not.
 
 ----
 
@@ -66,8 +62,12 @@ The following are not a direct response, but rather a broadcast that will be tri
 
 ### *Examples Commands*
 
-TBA
+  * all tracks off: ``<0>``
+  * all tracks on ``<1>``
+  * join: ``<1 JOIN>``
 
 ### *Example Responses:*
 
-TBA
+  * all tracks off: ``<p0>``
+  * all tracks on ``<p1>``
+  * join: ``<p1 JOIN>``
