@@ -49,6 +49,7 @@ The following are not a direct response, but rather a broadcast that will be tri
 
 (for each track/channel) <br/>``<= [«trackletter» «state»] [«cab»]>``
 
+* ``=`` = the 'message identifer'
 * **trackletter:** ``A``-``H``
 * **state:** ``PROG``, ``MAIN``, ``MAIN_INV``, ``MAIN A``, ``DC``, ``DCX``, ``NONE``
 * **id:** cab(loco) equivalent to a fake DCC Address for DC and DCX only
