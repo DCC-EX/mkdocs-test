@@ -115,7 +115,7 @@
   /* Code blocks for dark mode */
   /* --md-code-fg-color:           #E0E0E0; Code text colour */
   --md-code-fg-color:           var(--md-code-hl-name-color);
-  --md-code-bg-color:           #2c2c2c; /* Code block background */
+  --md-code-bg-color:           #0c0c0c; /* Code block background */
 
   /* Code highlighting colour shades */
   --md-code-hl-color:                  #F0F0F0;
