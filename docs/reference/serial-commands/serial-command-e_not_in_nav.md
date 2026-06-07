@@ -15,7 +15,7 @@ tags:
   - _:e:_track_DC_X_loco
 ---
 
-# ``<= [«trackletter» «mode»] [«id»]>``<br/> Request or Configure Track Manager
+# ``<= [«trackletter» «mode»] [«id»]>``<br/> Request or Configure Track Manager <span style="display:none;">_:e:</span>
 
 Serial command to turn power on or off to all or specific tracks.  Also allows joining the MAIN and PROG tracks together.
 
