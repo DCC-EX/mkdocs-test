@@ -11,7 +11,7 @@ For the 3.3v microcontrollers such as the ESP32 board, if the IOREF voltage is n
 
 ***As such it is vital that the modifications below are made.***
 
-Thear are two options for correcting this issue, explained in detail below:
+There are two options for correcting this issue, explained in detail below:
 
 - Option A - 3V3 IOREF Override pad changes on the EX8874
 - Option B - Bend the IOREF pin + Jumper the 3v3 pin the IOREF on the EX8874
@@ -46,7 +46,7 @@ Double check that that you have it correct by checking wth a multimeter on the E
 
 ![EX8874 IOREF](/_static/images/esp32/ioref-to-3v3-jumper.png){ width=15%}
 
-![EX8874 IOREF](/_static/images/esp32/esp32-keyestudio-bent-pin.png){ width=25%}
+![EX8874 IOREF](/_static/images/esp32/ioref-to-3v3-jumper2.png){ width=50%}
 
 *This option does not require soldering.*
 

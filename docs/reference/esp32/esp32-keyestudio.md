@@ -141,4 +141,3 @@ See the [Stacking two motor shields on the EX8874 page](../../products/ex-motors
 - [ ] Jumpers added from GPIO 2 and 4 to A4 and A5 on **top** EX8874
 - [ ] Add the custom motor define - 6 lines in config.h  
 
-==TODO==

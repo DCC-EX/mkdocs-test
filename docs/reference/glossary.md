@@ -42,3 +42,17 @@ The term pullup within the context of DCC-EX is commonly used when discussing in
 The term pulldown within the context of DCC-EX is commonly used when discussing inputs or sensors along with other topics such as I2C cabling. This is an electronics focused term, typically referring to the use of a resistor to ensure an input/sensor or I2C line is pulled down or held to ground or 0V.
 
 You will also see search results for using a pulldown menu, but that is a different context!
+
+## WiThrottle
+
+1. Trademark owned by Brett Hoffman
+2. Proprietary iOS app developed by Brett Hoffman.
+
+## WiThrottle Protocol
+
+A proprietary protocol developed by Brett Hoffman
+
+## WiThrottle Server
+
+A piece of software that listens and acts on WiThrottle commands
+EX‑CommandStation contains a WiThrottle Server, as does JMRI
