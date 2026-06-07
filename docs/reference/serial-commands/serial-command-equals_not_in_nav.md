@@ -25,12 +25,12 @@ Serial command to request infomation about the mode of all tracks or alter the m
 
 ## Parameters
 
-* **trackletter:** *optional*
+* **trackletter** *optional*
 
     * blank = Request the current Track Manager configuration
     * ``A`` through ``H`` representing one of the outputs of the/a motor shield.
 
-* **mode:** *required if track letter supplied.* One of:
+* **mode** *required if track letter supplied.* One of:
 
     * ``MAIN``
     * ``MAIN_INV``
@@ -41,7 +41,7 @@ Serial command to request infomation about the mode of all tracks or alter the m
     * ``DCX`` = DC reversed polarity (same as DC_INV) <br/>With special alias of ``DCX`` for ``DC_INV``
     * ``NONE``
 
-* **id:** the cab (loco) ID. *Required when specifying DC or DC_INV / DCX*
+* **id** the cab (loco) ID. *Required when specifying DC or DC_INV / DCX*
 
 ## *Response*
 

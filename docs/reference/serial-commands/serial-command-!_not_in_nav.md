@@ -17,7 +17,7 @@ Serial command to Emergency stop all locos, pause all locos, or query the pause 
 
 ## Parameters
 
-* **pauseType:** *optional*
+* **pauseType** *optional*
 
     * ``P`` = ESTOP pause the layout
     * ``R`` = ESTOP resume paused layout

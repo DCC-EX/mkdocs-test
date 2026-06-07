@@ -14,7 +14,7 @@ Serial command to request roster info.
 
 ## Parameters
 
-* **id:** *optional* <br/>unique id and/or DCC address of the Loco/s in the roster
+* **id** *optional* <br/>unique id and/or DCC address of the Loco/s in the roster
 
 ## *Response*
 
