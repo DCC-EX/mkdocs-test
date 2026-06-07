@@ -22,7 +22,7 @@ Serial command to turn power on or off to all or specific tracks.  Also allows j
 
 ## Parameters
 
-* **track:** one of
+* **track** one of
 
     * blank = Both Main and Programming Tracks (All tracks)
     * ``MAIN`` = Main track
