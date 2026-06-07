@@ -1,6 +1,7 @@
 ---
 tags:
   - _:e:
+  - _:e:_
   - _:e:_track_MAIN
   - _:e:_track_MAIN_INV
   - _:e:_track_MAIN_AUTO
@@ -15,9 +16,9 @@ tags:
   - _:e:_track_DC_X_loco
 ---
 
-# ``<= [«trackletter» «mode»] [«id»]>``<br/> Request or Configure Track Manager <span style="display:none;">_:e:</span>
+# ``<= [«trackletter» «mode»] [«id»]>``<br/> Request or Configure Track Manager <span style="display:none;">_:e: _:e:_track_MAIN</span>
 
-Serial command to turn power on or off to all or specific tracks.  Also allows joining the MAIN and PROG tracks together.
+Serial command to request infomation about the mode of all tracks or alter the mode of a track.
 
 ## Command
 
