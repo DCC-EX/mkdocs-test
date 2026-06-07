@@ -12,9 +12,7 @@ tags:
 
 # ``<onOff [track]>`` - Turn track power on or off
 
-Serial command to turn power on or off to all or specific tracks
-
-Also allows joining the MAIN and PROG tracks together.
+Serial command to turn power on or off to all or specific tracks.  Also allows joining the MAIN and PROG tracks together.
 
 ## Command
 
@@ -27,9 +25,9 @@ Also allows joining the MAIN and PROG tracks together.
 
 * **track:** one of
 
-    * blank = Both Main and Programming Tracks 
-    * MAIN = Main track 
-    * PROG = Programming Track 
+    * blank = Both Main and Programming Tracks (All tracks)
+    * MAIN = Main track
+    * PROG = Programming Track
     * JOIN = Join the Main and Programming tracks temporarily <br/>Note: While ``<1 JOIN>`` is valid, ``<0 JOIN>`` is not.
 
     * A = Track A
@@ -45,9 +43,9 @@ Also allows joining the MAIN and PROG tracks together.
 
     The following is not a direct response, but rather a broadcast that will be triggered as a result of any power state changes.
 
-    * ``<pOnOFF [track]>``
+    * ``<p[OnOFF] [track]>``
 
-# *Notes*
+## *Notes*
 
 * The use of the JOIN function allows the DCC signal for the MAIN track to also be sent to the PROG track. This allows the prog track to act as a siding (or similar) in the main layout even though it is isolated electrically and connected to the programming track output.
   
@@ -60,14 +58,16 @@ Also allows joining the MAIN and PROG tracks together.
 
 ----
 
-# *Examples*
+## *Examples*
 
-## *Examples Commands*
+### *Examples Commands*
+
   * all tracks off: ``<0>``
   * all tracks on ``<1>``
   * join: ``<1 JOIN>``
 
-## *Example Responses:*
+### *Example Responses:*
+
   * all tracks off: ``<p0>``
   * all tracks on ``<p1>``
   * join: ``<p1 JOIN>``
