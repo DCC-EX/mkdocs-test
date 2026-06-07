@@ -12,7 +12,7 @@ tags:
 
 # ``<onOff [track]>`` - Turn track power on or off
 
-EXRAIL command to turn power on or off to all or specific tracks
+Serial command to turn power on or off to all or specific tracks
 
 Also allows joining the MAIN and PROG tracks together.
 
