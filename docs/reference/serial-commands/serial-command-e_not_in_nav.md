@@ -1,22 +1,21 @@
 ---
 tags:
-  - _:e:
-  - _:e:_
-  - _:e:_track_MAIN
-  - _:e:_track_MAIN_INV
-  - _:e:_track_MAIN_AUTO
-  - _:e:_track_PROG
-  - _:e:_track_OFF
-  - _:e:_track_NONE
-  - _:e:_track_EXT
-  - _:e:_track_AUTO
-  - _:e:_track_INV
-  - _:e:_track_DC_loco
-  - _:e:_track_DC_INV_loco
-  - _:e:_track_DC_X_loco
+  - _equals
+  - _equals_track_MAIN
+  - _equals_track_MAIN_INV
+  - _equals_track_MAIN_AUTO
+  - _equals_track_PROG
+  - _equals_track_OFF
+  - _equals_track_NONE
+  - _equals_track_EXT
+  - _equals_track_AUTO
+  - _equals_track_INV
+  - _equals_track_DC_loco
+  - _equals_track_DC_INV_loco
+  - _equals_track_DC_X_loco
 ---
 
-# ``<= [«trackletter» «mode»] [«id»]>``<br/> Request or Configure Track Manager <span style="display:none;">_:e: _:e:_track_MAIN</span>
+# ``<= [«trackletter» «mode»] [«id»]>``<br/> Request or Configure Track Manager <span style="display:none;">_equals _equals_track_MAIN</span>
 
 Serial command to request infomation about the mode of all tracks or alter the mode of a track.
 
@@ -65,6 +64,8 @@ The following are not a direct response, but rather a broadcast that will be tri
 ----
 
 ## *Examples*
+
+[Also search for !](?_equals)
 
 ### *Examples Commands*
 

@@ -42,6 +42,8 @@ Response to ``<j R «id»>``:
 
 ## *Examples*
 
+[Also search for !](?_J_R)
+
 ### *Examples Commands*
 
 * ``<J R>`` request list of locos in the roster

@@ -11,16 +11,14 @@ tags:
   - _0_track
 ---
 
-# ``<«onOff» «track»>``<br/> Turn track power on or off
+# ``<«1|0» «track»>``<br/> Turn track power on or off
 
 Serial command to turn power on or off to all or specific tracks.  Also allows joining the MAIN and PROG tracks together.
 
 ## Command
 
-* **onOff:** one of
-
-    * ``1`` = on
-    * ``0`` = off
+* **1** on<br/>
+* **0** off<br/>
 
 ## Parameters
 
@@ -57,6 +55,8 @@ The following is not a direct response, but rather a broadcast that will be trig
 ----
 
 ## *Examples*
+
+[Also search for !](?_1) or [search for !](?_0)
 
 ### *Examples Commands*
 
