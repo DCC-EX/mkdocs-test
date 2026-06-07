@@ -21,7 +21,7 @@ Serial command to turn power on or off to all or specific tracks.  Also allows j
 
 ## Command
 
-* **=**
+* ``=``
 
 ## Parameters
 
@@ -47,16 +47,16 @@ Serial command to turn power on or off to all or specific tracks.  Also allows j
 
 The following are not a direct response, but rather a broadcast that will be triggered as a result of any track manager changes.
 
-(for each track/channel that has changed) ``<= trackletter state cab>``
+(for each track/channel) <br/>``<= [«trackletter» «state»] [«cab»]>``
 
 * **trackletter:** ``A``-``H``
 * **state:** ``PROG``, ``MAIN``, ``MAIN_INV``, ``MAIN A``, ``DC``, ``DCX``, ``NONE``
-* **id:** cab(loco) equivalent to a fake DCC Address for DC and DCX onl
+* **id:** cab(loco) equivalent to a fake DCC Address for DC and DCX only
 
 ## *Notes*
 
 * Whenever a track's mode is changed, track power is automatically turned off on that track.
-* Since only one channel can be PROG, changing a second channel to PROG, will force the other to ``NONE``
+* Since only one channel can be ``PROG``, changing a second channel to ``PROG``, will force the other to ``NONE``
 * The response to ``DC_INV`` is ``DCX``
 * The response to ``DCC_MAIN`` is ``MAIN A``
 
@@ -66,8 +66,12 @@ The following are not a direct response, but rather a broadcast that will be tri
 
 ### *Examples Commands*
 
-TBA
+* Request track status ``<=>``
+* Set track A to DC with address 10 ``<= A 10>``
+* TBA
 
 ### *Example Responses:*
 
-TBA
+* Response to track status for a default EX-CommandStation<br/> ``<= A MAIN>``<br/>``<= B PROG>``
+* Response to setting track *A* to *DC* with address 10 ``<= A 10>``<br/>``<= B PROG>``
+* TBA
