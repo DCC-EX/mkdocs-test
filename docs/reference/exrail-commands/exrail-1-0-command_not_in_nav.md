@@ -10,8 +10,9 @@ tags:
   - _0_track
 ---
 
-# ``<onOff [track]>`` - Turn power on or off to all or specific tracks
+# ``<onOff [track]>`` - Turn track power on or off
 
+EXRAIL command to turn power on or off to all or specific tracks
 
 Also allows joining the MAIN and PROG tracks together.
 
