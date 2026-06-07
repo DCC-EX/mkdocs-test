@@ -41,9 +41,9 @@ Serial command to turn power on or off to all or specific tracks.  Also allows j
 
 ## *Response*
 
-    The following is not a direct response, but rather a broadcast that will be triggered as a result of any power state changes.
+The following is not a direct response, but rather a broadcast that will be triggered as a result of any power state changes.
 
-    * ``<p«OnOFF» «track»>``
+* ``<p«OnOFF» «track»>``
 
 ## *Notes*
 
