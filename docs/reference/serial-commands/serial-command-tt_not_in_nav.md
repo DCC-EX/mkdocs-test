@@ -23,10 +23,11 @@ Serial command to define or manage Turnouts/Points.
 ## Command
 
 * ``T``
+* ``J T``
 
-Command Variations
+### Command Variations
 
-### Defining and deleting Turnouts/Points
+#### Defining and deleting Turnouts/Points
 
 * ``<T «id» DCC «addr» «subadd»>`` Create DCC turnout/point
 * ``<T «id» DCC «»>`` Create DCC turnout/point
@@ -34,14 +35,13 @@ Command Variations
 * ``<T «id» VPIN «vpin»>`` Create pin turnout/point
 * ``<T «id»>`` Delete turnout/point
 
-### Managing Turnouts/Points
+#### Managing Turnouts/Points
 
 * ``<T>`` List all turnouts/points<br/> Equivalent to ``<J T>``
 * ``<J T>`` List all turnouts/points<br/> Equivalent to ``<T>``
 * ``<T «id» X>`` List turnout/point details<br/> Equivalent to ``<J T «id»>``
 * ``<J T «id»>`` List turnout/point details<br/> Equivalent to ``<T «id» X>``
 * ``<T «id» «state»>`` Throw/Close turnout/point
-* ``<T «id» «value»>`` Close (value=0) ot Throw turnout/point
 
 ## Parameters
 
@@ -52,19 +52,18 @@ Command Variations
 * **vpin** vpin to which the servo is attached
 * **closedValue** the PWM value corresponding to the servo position for CLOSED state, normally in the range ``102`` to ``490``
 * **thrownValue** the PWM value corresponding to the servo position for THROWN state, normally in the range ``102`` to ``490``
-* **value**
 * **state** one of
     * ``1`` = Throw
     * ``T`` = Throw  (not seen in responses)
     * ``0`` = Close
     * ``C`` = Close  (not seen in responses)
-    * ``X`` = eXamine  (not seen in responses)
-* **profile**  one of
-    • ``0`` = Instant
-    • ``1`` = Fast (0.5 sec)
-    • ``2`` = Medium (1 sec)
-    • ``3`` = Slow (2 sec)
-    • ``4`` = Bounce (subject to revision)
+    * ``X`` = eXamine. Equivalent to using ``<J T «id»>``
+* **Profile** one of:
+    * ``Instant``
+    * ``Fast``
+    * ``Medium``
+    * ``Slow``
+    * ``Bounce``
 
 ## *Response*
 
@@ -78,15 +77,18 @@ The following are not a direct response, but rather a broadcast that will be tri
 * ``<T «id» VPIN «vpin»>``
 * ``<T «id»>``
 
-There is no response.
+The response will be:
+
+* (successful): ``<O>``
+* (fail): ``<X>``
 
 **For** ``<T>`` and ``<J T>`` **the response/broadcast is:**
 
 Repeated for each defined Turnout/Point:
 
-* Response: ``<H «id» «state»>``
-* Response (fail): N/A
-* Response (no defined turnouts/points): ``X``
+* (successful): ``<H «id» «state»>``
+* (fail): N/A
+* (no defined turnouts/points): ``X``
     * **id** - The numeric ID (0-32767) of the turnout/point to control.
     * **state:** one of
         * 1 = Thrown,
@@ -100,6 +102,12 @@ Repeated for each defined Turnout/Point:
 * (LCN): ``<H «id» LCN «state»>``
 * (fail/no such turnout/point): ``<X>``
     * **id** - The numeric ID (0-32767) of the turnout/point to control.
+    * **profile**  one of
+        * ``0`` = Instant
+        * ``1`` = Fast (0.5 sec)
+        * ``2`` = Medium (1 sec)
+        * ``3`` = Slow (2 sec)
+        * ``4`` = Bounce (subject to revision)
     * **state** one of
         * ``1`` = Thrown,
         * ``0`` = Closed
@@ -114,22 +122,20 @@ Repeated for each defined Turnout/Point:
         * ``0`` = Closed
 * (fail): ``<X>``
 
-**For** ``<T «id» «value»>`` **the response/broadcast is:**
-
-==TODO==
-
 **For** ``<T «id»>`` **the response/broadcast is:**
 
-* *Response:*
-  Successful: ``<O>``
-  Fail: ``<X>``  (Id does not exist)
+The response will be:
+
+* (successful): ``<O>``
+* (fail): ``<X>``  (Id does not exist)
     * **id** - The numeric ID (0-32767) of the turnout/point to control.
 
 ## *Notes*
 
-* *Servos are not supported on the minimal HAL (Uno or Nano target).*
+* *Servos are not supported on the minimal HAL (Uno or Nano target).*<br/><br/>
 * The active and inactive positions are defined in terms of the PWM parameter (0-4095 corresponds to 0-100% PWM). The limits for an SG90 servo are about 102 to 490. The standard range of 1ms to 2ms pulses correspond to values 205 to 409.
-Profile defines the speed and style of movement: 0=Instant, 1=Fast (0.5 sec), 2=Medium (1 sec), 3=Slow (2 sec) and 4=Bounce (subject to revision).
+Profile defines the speed and style of movement: 0=Instant, 1=Fast (0.5 sec), 2=Medium (1 sec), 3=Slow (2 sec) and 4=Bounce (subject to revision).<br/><br/>
+* vpin is the pin number of the output to be controlled by the turnout/point object. <br/>For Arduino output pins, this is the same as the digital pin number. For servo outputs and I/O expanders, it is the pin number defined for the HAL device (if present), for example 100-115 for servos attached to the first PCA9685 Servo Controller module, 116-131 for the second PCA9685 module, 164-179 for pins on the first MCP23017 GPIO expander module, and 180-195 for the second MCP23017 module.<br/><br/>
 * ``<T «id» «vpin «closedValue» «thrownValue>`` is a depricated version of the command. It is not documented here.
 * ``<T «id» «addr» «subadd»>`` is a depricated version of the command. It is not documented here.
 
@@ -143,7 +149,7 @@ Profile defines the speed and style of movement: 0=Instant, 1=Fast (0.5 sec), 2=
 
 * *Example:* ``<T 23 DCC 5 0>``
 
-    *Example:* You have a turnout/point on your main line going to warehouse industry. The turnout/point is controlled by an accessory decoder with a address of 123 and is wired to output 3. You want it to have the ID of 10. You would send the following command to the CommandStation: ``<T 10 DCC 123 3>``
+    *Example:* You have a turnout/point on your main line going to warehouse industry. The turnout/point is controlled by an accessory decoder with a address of 123 and is wired to output 3. You want it to have the ID of 10. You would send the following command to the CommandStation: <br/>``<T 10 DCC 123 3>``
 
     This Command means:
 

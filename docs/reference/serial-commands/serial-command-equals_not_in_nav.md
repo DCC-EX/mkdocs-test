@@ -1,5 +1,6 @@
 ---
 tags:
+  - _=
   - _equals
   - _equals_track_MAIN
   - _equals_track_MAIN_INV
