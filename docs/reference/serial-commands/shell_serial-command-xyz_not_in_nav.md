@@ -5,7 +5,7 @@ tags:
 
 # ``<cmd «required parameter» [«optional parameter»]>``<br/>- Short command decription
 
-Serial command to turn power on or off to all or specific tracks.  Also allows joining the MAIN and PROG tracks together.
+Serial command to ...
 
 ## Command
 

@@ -1,13 +1,13 @@
 ---
 tags:
-  - _!_
+  - _!
   - _!_P
   - _!_R
   - _!_Q
   - _!_Q
 ---
 
-# ``<! [«pauseType»]>``<br/>- Emergence Stop or Pause
+# ``<! [«pauseType»]>``<br/> Emergence Stop or Pause
 
 Serial command to Emergency stop all locos, pause all locos, or query the pause status.
 
