@@ -6,7 +6,7 @@ tags:
 
 # ``<J R [«id»]>``<br/>- Request Roster info
 
-Serial command to turn power on or off to all or specific tracks.  Also allows joining the MAIN and PROG tracks together.
+Serial command to request roster info.
 
 ## Command
 
@@ -14,7 +14,7 @@ Serial command to turn power on or off to all or specific tracks.  Also allows j
 
 ## Parameters
 
-* **id:** *optional* <br/>unique id of the Cab/s (Loco/s) in the roster
+* **id:** *optional* <br/>unique id and/or DCC address of the Loco/s in the roster
 
 ## *Response*
 
@@ -23,14 +23,14 @@ Response to ``<j R>``:
 ``<jR [«id1» «id2» «id3» ...]>``
 
 * ``jR`` = the 'message identifer'
-* **id1..n:** unique id of each Loco/s in the roster
+* **id1..n:** unique id and/or DCC address of each Loco in the roster
 
 Response to ``<j R «id»>``:
 
 ``<jR «id» ""|"desc" ""|"funct0/funct1/funct2/.../funct31">``
 
 * ``jR`` = the 'message identifer'
-* **id1..n:** = unique id of a Loco in the roster
+* **id1..n:** = unique id and/or DCC address of a Loco in the roster
 * **desc** = in quotes, empty or the description of the loco
 * **funct0..31** = in quotes, empty or the Label for each function 0-31 for the loco
 
