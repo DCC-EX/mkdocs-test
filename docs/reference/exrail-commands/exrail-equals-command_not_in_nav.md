@@ -28,7 +28,7 @@ Serial command to turn power on or off to all or specific tracks.  Also allows j
 * **trackletter:** *optional*
 
     * blank = Request the current Track Manager configuration
-    * ``A`` through ``H`` representing one of the outputs of the/a |motor shield|.
+    * ``A`` through ``H`` representing one of the outputs of the/a motor shield.
 
 * **mode:** *required if track letter supplied.* One of:
 
@@ -49,9 +49,9 @@ The following are not a direct response, but rather a broadcast that will be tri
 
 (for each track/channel that has changed) ``<= trackletter state cab>``
 
-* **trackletter:** A-H |BR|
-* **state:** 'PROG', 'MAIN', 'MAIN_INV', 'MAIN A', 'DC', 'DCX', 'NONE' |BR|
-* **cab:** cab(loco) equivalent to a fake DCC Address for DC and DCX onl
+* **trackletter:** ``A``-``H``
+* **state:** ``PROG``, ``MAIN``, ``MAIN_INV``, ``MAIN A``, ``DC``, ``DCX``, ``NONE``
+* **id:** cab(loco) equivalent to a fake DCC Address for DC and DCX onl
 
 ## *Notes*
 

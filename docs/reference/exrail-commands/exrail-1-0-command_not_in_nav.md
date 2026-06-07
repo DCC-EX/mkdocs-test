@@ -18,32 +18,29 @@ Serial command to turn power on or off to all or specific tracks.  Also allows j
 
 * **onOff:** one of
 
-    * 1 = on
-    * 0 = off
+    * ``1`` = on
+    * ``0`` = off
 
 ## Parameters
 
 * **track:** one of
 
     * blank = Both Main and Programming Tracks (All tracks)
-    * MAIN = Main track
-    * PROG = Programming Track
-    * JOIN = Join the Main and Programming tracks temporarily <br/>Note: While ``<1 JOIN>`` is valid, ``<0 JOIN>`` is not.
+    * ``MAIN`` = Main track
+    * ``PROG`` = Programming Track
+    * ``JOIN`` = Join the Main and Programming tracks temporarily <br/>Note: While ``<1 JOIN>`` is valid, ``<0 JOIN>`` is not.
 
-    * A = Track A
-    * B = Track B
-    * C = Track C
-    * D = Track D
-    * E = Track E
-    * F = Track F
-    * G = Track G
-    * H = Track H
+    * ``A`` through ``H`` representing one of the outputs of the/a motor shield.
 
 ## *Response*
 
 The following is not a direct response, but rather a broadcast that will be triggered as a result of any power state changes.
 
 * ``<p«OnOFF» «track»>``
+
+    * ``p`` = the 'message identifer'
+    * **onOff** = one of: ``1`` = On or ``0`` = off
+    * **track** = balnk = all tracks <br/> or one of ``A`` through ``H`` representing one of the outputs of the/a motor shield.
 
 ## *Notes*
 
@@ -62,12 +59,12 @@ The following is not a direct response, but rather a broadcast that will be trig
 
 ### *Examples Commands*
 
-  * all tracks off: ``<0>``
-  * all tracks on ``<1>``
-  * join: ``<1 JOIN>``
+* all tracks off: ``<0>``
+* all tracks on ``<1>``
+* join: ``<1 JOIN>``
 
 ### *Example Responses:*
 
-  * all tracks off: ``<p0>``
-  * all tracks on ``<p1>``
-  * join: ``<p1 JOIN>``
+* all tracks off: ``<p0>``
+* all tracks on ``<p1>``
+* join: ``<p1 JOIN>``
