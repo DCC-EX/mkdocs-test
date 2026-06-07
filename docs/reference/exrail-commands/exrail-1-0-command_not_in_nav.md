@@ -10,7 +10,7 @@ tags:
   - _0_track
 ---
 
-# ``<onOff [track]>`` - Turn track power on or off
+# ``<«onOff» «track»>`` - Turn track power on or off
 
 Serial command to turn power on or off to all or specific tracks.  Also allows joining the MAIN and PROG tracks together.
 
@@ -43,7 +43,7 @@ Serial command to turn power on or off to all or specific tracks.  Also allows j
 
     The following is not a direct response, but rather a broadcast that will be triggered as a result of any power state changes.
 
-    * ``<p[OnOFF] [track]>``
+    * ``<p«OnOFF» «track»>``
 
 ## *Notes*
 
