@@ -10,7 +10,7 @@
       
       
       
-        <link rel="canonical" href="https://dcc-ex.com/mkdocs-test/reference/serial-commands/serial-command-t_not_in_nav/">
+        <link rel="canonical" href="https://dcc-ex.com/mkdocs-test/reference/serial-commands/serial-command-jj-rr_not_in_nav/">
       
       
       
@@ -23,7 +23,7 @@
     
     
       
-        <title><t «loco» [«tSpeed» «direction»]> Request or set loco status - DCC-EX Model Train Control, Animation, and Automation</title>
+        <title><J R [«id»]> Request Roster info - DCC-EX Model Train Control, Animation, and Automation</title>
       
     
     
@@ -79,7 +79,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#t-loco-tspeed-direction-request-or-set-loco-status" class="md-skip">
+        <a href="#j-r-id-request-roster-info" class="md-skip">
           Skip to content
         </a>
       
@@ -112,7 +112,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              &lt;t «loco» [«tSpeed» «direction»]&gt; Request or set loco status
+              &lt;J R [«id»]&gt; Request Roster info
             
           </span>
         </div>
@@ -7180,61 +7180,47 @@
   
 
 
-<h1 id="t-loco-tspeed-direction-request-or-set-loco-status"><code>&lt;t «loco» [«tSpeed» «direction»]&gt;</code><br/> Request or set loco status<a class="headerlink" href="#t-loco-tspeed-direction-request-or-set-loco-status" title="Permanent link">&para;</a></h1>
-<p>Serial command to request information about a loco or set its speed and direction</p>
+<h1 id="j-r-id-request-roster-info"><code>&lt;J R [«id»]&gt;</code><br/> Request Roster info<a class="headerlink" href="#j-r-id-request-roster-info" title="Permanent link">&para;</a></h1>
+<p>Serial command to request roster info.</p>
 <h2 id="command">Command<a class="headerlink" href="#command" title="Permanent link">&para;</a></h2>
 <ul>
-<li><code>t</code></li>
+<li><code>J R</code></li>
 </ul>
 <h2 id="parameters">Parameters<a class="headerlink" href="#parameters" title="Permanent link">&para;</a></h2>
 <ul>
-<li>
-<p><strong>loco</strong> <em>Required</em> <br/> Loco to request information about a loco or set its speed and direction</p>
-</li>
-<li>
-<p>blank or <strong>tSpeed</strong> plus <strong>direction</strong></p>
-<ul>
-<li>if blank = Request a deliberate update on the loco speed/functions</li>
-<li>if <strong>tSpeed</strong> and <strong>direction</strong> are supplied<ul>
-<li><strong>tSpeed</strong> = <code>0</code>-<code>127</code> or <code>-1</code> for Emergency Stop</li>
-<li><strong>direction</strong> = one of:<ul>
-<li><code>1</code> = forward</li>
-<li><code>0</code> = reverse</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
+<li><strong>id</strong> <em>optional</em> <br/>unique id and/or DCC address of the Loco/s in the roster</li>
 </ul>
 <h2 id="response"><em>Response</em><a class="headerlink" href="#response" title="Permanent link">&para;</a></h2>
-<p>The following are not a direct response, but rather a broadcast that will be triggered as a result of any track manager changes.</p>
-<p><code>&lt;l «loco» «reg» «speedByte» «functMap»&gt;</code></p>
+<p>Response to <code>&lt;j R&gt;</code>:</p>
+<p><code>&lt;jR [«id1» «id2» «id3» ...]&gt;</code></p>
 <ul>
-<li><strong>loco</strong> = DCC Address of the decoder/loco. The short (1-127) or long (128-10293) address of the engine decoder (this has to be already programmed in the decoder)</li>
-<li><strong>reg</strong> not used. We no longer use this but need something here for compatibility with legacy systems. Enter any single digit. &gt; * <strong>speedbyte</strong>:** Speed in DCC speedstep format<ul>
-<li>reverse - <code>2</code>-<code>127</code> = speed <code>1</code>-<code>126</code>, <code>0</code> = stop, <code>1</code> = Emergency Stop</li>
-<li>forward - <code>130</code>-<code>255</code> = speed <code>1</code>-<code>126</code>, <code>128</code> = stop, <code>129</code> = Emergency Stop</li>
+<li><code>jR</code> = the 'message identifer'</li>
+<li><strong>id1..n:</strong> unique id and/or DCC address of each Loco in the roster</li>
 </ul>
-</li>
-<li><strong>FunctMap</strong> individual function states represented by the bits in a byte</li>
+<p>Response to <code>&lt;j R «id»&gt;</code>:</p>
+<p><code>&lt;jR «id» ""|"desc" ""|"funct0/funct1/funct2/.../funct31"&gt;</code></p>
+<ul>
+<li><code>jR</code> = the 'message identifer'</li>
+<li><strong>id1..n:</strong> = unique id and/or DCC address of a Loco in the roster</li>
+<li><strong>desc</strong> = in quotes, empty or the description of the loco</li>
+<li><strong>funct0..31</strong> = in quotes, empty or the Label for each function 0-31 for the loco</li>
 </ul>
 <h2 id="notes"><em>Notes</em><a class="headerlink" href="#notes" title="Permanent link">&para;</a></h2>
 <ul>
-<li>The speedbyte value is different to the speed sent, as it is an encoded (1,7 bits) byte.</li>
-<li>This starts a reminder process for any external updates to the loco's status.
-<code>&lt;t «reg» «loco» «speed» «direction»&gt;</code> is a depricated version of the command. It is not documented here.</li>
+<li>Function labels starting with an asterix (*) should be treated as montentary. Those without should be treated as latching.</li>
 </ul>
 <hr />
 <h2 id="examples"><em>Examples</em><a class="headerlink" href="#examples" title="Permanent link">&para;</a></h2>
-<p><a href="?_T">Also search for !</a></p>
+<p><a href="?_J_R">Also search for !</a></p>
 <h3 id="examples-commands"><em>Examples Commands</em><a class="headerlink" href="#examples-commands" title="Permanent link">&para;</a></h3>
 <ul>
-<li><mark>TODO</mark></li>
+<li><code>&lt;J R&gt;</code> request list of locos in the roster</li>
+<li><code>&lt;J R 100&gt;</code> request the details of loco with an id of <code>100</code></li>
 </ul>
 <h3 id="example-responses"><em>Example Responses:</em><a class="headerlink" href="#example-responses" title="Permanent link">&para;</a></h3>
 <ul>
-<li><mark>TODO</mark></li>
+<li><code>&lt;jR 100 201 203 1005&gt;</code> a list of locos in the roster</li>
+<li><code>&lt;jR 100, "Class 37 Loram Livery", "Lights/WarmEngineStart/Brake/*Single-Horn/*Double-Horn/Light Engine Mode/Coasting/Speed Lock/Sound Fade OutIn/Flange Squeal//*Buffer Up/*Coupling/STATIONARY-Guard's Whistle MOVING-Detonators/Wagon Snatching &amp; Buffering/High Intensity Light-On/Red Tail Lights On Both Ends Non di/Marker Lights On Both Ends Non di/Cab Light On-No.1 End Fan/Cab Light On-No.2 End non fan/No.1 End Dir Lights Off/No.2 End Dir Lights Off/Compressor/Windscreen Wipers/Engine Room"&gt;</code> details of loco <code>100</code> from the roster</li>
 </ul>
 
 
