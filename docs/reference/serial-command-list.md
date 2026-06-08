@@ -1,4 +1,13 @@
-﻿# Serial Command List
+﻿<style>
+  h3 {
+    margin-bottom: 0 !important;
+  }
+  p {
+    margin-top: 0 !important;
+  }
+</style>
+
+# Serial Command List
 
 The following list is dynamically built from the CommandStation-EX code. It contains all the serial commands with brief definitions.
 In many cases the parameters are self explanitory, for example a speed (which will always be a DCC compatible 0..127 where 0=stop and 1=emergency stop)
