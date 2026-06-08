@@ -143,7 +143,7 @@ Profile defines the speed and style of movement: 0=Instant, 1=Fast (0.5 sec), 2=
 
 ## *Examples*
 
-[Also search for !](?_!)
+[Also search for 'T'](?_T)
 
 ### *Examples Commands*
 

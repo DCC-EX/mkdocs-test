@@ -55,7 +55,7 @@ The following is not a direct response, but rather a broadcast that will be trig
 
 ## *Examples*
 
-[Also search for !](?_1) or [search for !](?_0)
+[Also search for `!`](?_1) or [search for !](?_0)
 
 ### *Examples Commands*
 
