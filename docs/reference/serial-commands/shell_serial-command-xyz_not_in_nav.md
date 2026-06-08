@@ -3,7 +3,7 @@ tags:
   - 
 ---
 
-# ``<cmd «required parameter» [«optional parameter»]>``<br/>- Short command decription
+# ``<cmd «required parameter» [«optional parameter»]>`` <br/> Short command decription
 
 Serial command to ...
 
@@ -13,8 +13,10 @@ Serial command to ...
 
 ## Parameters
 
-* **paramater:** *Required*|*optional*
+* **paramater**: *Required*|*optional* description
 
+* **paramater**: *Required*|*optional* description - one of:
+    * ``option`` = explanation of option
     * ``option`` = explanation of option
     * ...
 
@@ -26,7 +28,12 @@ The following are not a direct response, but rather a broadcast that will be tri
 
 ``<response>``
 
-* **paramater:** explanation of the parameter
+* **paramater**: explanation of the parameter
+
+* **paramater**: explanation of the parameter - one of:
+    * ``option`` = explanation of option
+    * ``option`` = explanation of option
+    * ...
 
 ## *Notes*
 
@@ -40,8 +47,12 @@ The following are not a direct response, but rather a broadcast that will be tri
 
 ### *Examples Commands*
 
+* purpose: ``<command>``
+* purpose: <br/>``<command>``
 * ...
 
 ### *Example Responses:*
 
+* purpose: ``<command>``
+* purpose: <br/>``<command>``
 * ...

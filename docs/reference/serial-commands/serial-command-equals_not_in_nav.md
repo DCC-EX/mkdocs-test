@@ -16,7 +16,7 @@ tags:
   - _equals_track_DC_X_loco
 ---
 
-# ``<= [«trackletter» «mode»] [«id»]>``<br/> Request or Configure Track Manager <span style="display:none;">(_equals)</span>
+# ``<= [«trackletter» «mode»] [«id»]>`` <br/>Request or Configure Track Manager <span style="display:none;">(_equals)</span>
 
 Serial command to request infomation about the mode of all tracks or alter the mode of a track.
 
@@ -26,7 +26,7 @@ Serial command to request infomation about the mode of all tracks or alter the m
 
 ## Parameters
 
-* **trackletter** *optional*
+* **trackletter** *optional* - one of:
 
     * blank = Request the current Track Manager configuration
     * ``A`` through ``H`` representing one of the outputs of the/a motor shield.
@@ -51,9 +51,9 @@ The following are not a direct response, but rather a broadcast that will be tri
 (for each track/channel) <br/>``<= [«trackletter» «state»] [«cab»]>``
 
 * ``=`` = the 'message identifer'
-* **trackletter:** ``A``-``H``
-* **state:** ``PROG``, ``MAIN``, ``MAIN_INV``, ``MAIN A``, ``DC``, ``DCX``, ``NONE``
-* **id:** cab(loco) equivalent to a fake DCC Address for DC and DCX only
+* **trackletter**: ``A``-``H``
+* **state**: ``PROG``, ``MAIN``, ``MAIN_INV``, ``MAIN A``, ``DC``, ``DCX``, ``NONE``
+* **id**: cab(loco) equivalent to a fake DCC Address for DC and DCX only
 
 ## *Notes*
 

@@ -6,7 +6,7 @@ tags:
   - _f_loco_group_byte2
 ---
 
-# ``<F «loco» [«function» «state»]|[DCCFREQ «freqValue»]>``<br/>- Set decoder functions or set PWM frequency
+# ``<F «loco» [«function» «state»]|[DCCFREQ «freqValue»]>`` <br/>Set decoder functions or set PWM frequency
 
 Serial command to Turn loco decoder functions ON or OFF or set the DC PWN frequency of the track.
 
@@ -18,17 +18,16 @@ Serial command to Turn loco decoder functions ON or OFF or set the DC PWN freque
 
 * **loco** *Required*<br/> Loco to set the function or PWM frequency
 
-* **function** plus **state** or **DCCFREQ** plus **direction**
-    * **function** plus **state** set the function
-        * **function* = function to set. ``0``-``68`` (Support for the RCN-212 Functions)
-        * **state** = one of:
-            * ``1`` = on
-            * ``0`` = off
-    * if **DCCFREQ** plus **«freqValue»** are supplied
-        * **«freqValue»** = one of:
-            * ==TODO== = Mid frequency - 490Hz
-            * ==TODO== = High frequency - 3400Hz
-            * ==TODO== = Supersonic - 62500Hz
+* If **function** plus **state** are supplied - To set the function on or off
+    * **function*: Function to set. ``0``-``68`` (Support for the RCN-212 Functions)
+    * **state** - one of:
+        * ``1`` = on
+        * ``0`` = off
+* If **DCCFREQ** plus **«freqValue»** are supplied - to set the PWM frequency
+    * **«freqValue»** = one of:
+        * ==TODO== = Mid frequency - 490Hz
+        * ==TODO== = High frequency - 3400Hz
+        * ==TODO== = Supersonic - 62500Hz
 
 ## *Response*
 

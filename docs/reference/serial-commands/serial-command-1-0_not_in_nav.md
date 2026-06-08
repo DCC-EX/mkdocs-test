@@ -11,7 +11,7 @@ tags:
   - _0_track
 ---
 
-# ``<1|0 «track»>``<br/> Turn track power on or off
+# ``<1|0 «track»>`` <br/>Turn track power on or off
 
 Serial command to turn power on or off to all or specific tracks.  Also allows joining the MAIN and PROG tracks together.
 
@@ -22,13 +22,12 @@ Serial command to turn power on or off to all or specific tracks.  Also allows j
 
 ## Parameters
 
-* **track** one of
+* **track** - one of:
 
     * blank = Both Main and Programming Tracks (All tracks)
     * ``MAIN`` = Main track
     * ``PROG`` = Programming Track
     * ``JOIN`` = Join the Main and Programming tracks temporarily <br/>Note: While ``<1 JOIN>`` is valid, ``<0 JOIN>`` is not.
-
     * ``A`` through ``H`` representing one of the outputs of the/a motor shield.
 
 ## *Response*
