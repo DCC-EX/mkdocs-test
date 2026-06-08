@@ -295,7 +295,7 @@
 .md-typeset h3,
 .md-typeset h4,
 .md-typeset h5 {
-  /* line-height: 1.4; */
+  line-height: 1.2;
   margin-top: 0.6em;
   margin-bottom: 0.6em;
 }
