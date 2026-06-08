@@ -2,8 +2,9 @@
   h3 {
     margin-bottom: 0 !important;
   }
-  p {
-    margin-top: 0 !important;
+  h3 + p {
+    margin-top: 2px !important;
+    padding-left: 1em !important;
   }
 </style>
 
