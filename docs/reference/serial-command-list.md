@@ -1,9 +1,9 @@
 ﻿<style>
-  h3 {
+  .md-typeset h3, .md-typeset a, .md-typeset a code {
     margin-bottom: 0 !important;
     font-style: normal !important;
   }
-  h3 + p {
+  .md-typeset h3 + p {
     margin-top: 2px !important;
     padding-left: 1em !important;
   }
