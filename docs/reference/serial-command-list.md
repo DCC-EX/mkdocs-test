@@ -3,6 +3,7 @@
     margin-bottom: 0 !important;
   }
   h3 + p {
+    font-style: normal !important;
     margin-top: 2px !important;
     padding-left: 1em !important;
   }
