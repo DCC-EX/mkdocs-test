@@ -27,14 +27,14 @@ See the [WiFi Configuration for version 5.7.0+](https://dcc-ex.com/ex-commandsta
 
 ### Command Variations
 
-* ``<C WIFI AP "«ssid»" "«password»" [«channel»]>`` set Wifi to Access Point mode (AP) with given ssid and password
-* ``<C WIFI DEFAULT>`` set Wifi to default credentials
-* ``<C WIFI HIDDENAP "«ssid»" "«password»" [«channel»]>`` set Wifi to Access Point mode (AP) with given ssid and password, but not advertised
-* ``<C WIFI HOSTNAME "«hostname»">`` set Wifi hostname
-* ``<C WIFI OFF>`` Disable Wifi
-* ``<C WIFI ON>`` Enable Wifi
 * ``<C WIFI "«ssid»" "«password»">`` set Wifi ssid and password - Station Mode (STA)
 * ``<C WIFI TEMP "«ssid»" "«password»">`` set Wifi ssid and password temporarily - Station Mode (STA)
+* ``<C WIFI AP "«ssid»" "«password»" [«channel»]>`` set Wifi to Access Point mode (AP) with given ssid and password
+* ``<C WIFI HIDDENAP "«ssid»" "«password»" [«channel»]>`` set Wifi to Access Point mode (AP) with given ssid and password, but not advertised
+* ``<C WIFI HOSTNAME "«hostname»">`` set Wifi hostname
+* ``<C WIFI DEFAULT>`` set Wifi to default credentials
+* ``<C WIFI OFF>`` Disable Wifi
+* ``<C WIFI ON>`` Enable Wifi
 
 ## Parameters
 
