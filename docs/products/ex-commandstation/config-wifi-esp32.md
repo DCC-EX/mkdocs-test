@@ -12,9 +12,11 @@ tags:
     - _C_WIFI_TEMP_ssid_password
 ---
 
-# WiFi configuration (CSB1 or ESP32 ONLY)
+# WiFi configuration (EX-CSB1 or ESP32 ONLY. Version 5.7.0+ ONLY)
 
-PLEASE NOTE: config.h options for WiFi configuration from previous versions are now ignored by CSB1 or ESP32 command stations.
+PLEASE NOTE: config.h options for WiFi configuration from versions prior to 5.7.0 are now ignored by CSB1 or ESP32 command stations.
+
+## Operating Modes
 
 WiFi has two operating modes:
 
