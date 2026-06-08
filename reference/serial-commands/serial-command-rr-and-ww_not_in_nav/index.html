@@ -10,7 +10,7 @@
       
       
       
-        <link rel="canonical" href="https://dcc-ex.com/mkdocs-test/reference/serial-commands/serial-command-1-0_not_in_nav/">
+        <link rel="canonical" href="https://dcc-ex.com/mkdocs-test/reference/serial-commands/serial-command-rr-and-ww_not_in_nav/">
       
       
       
@@ -23,7 +23,7 @@
     
     
       
-        <title><1|0 «track»> Turn track power on or off - DCC-EX Model Train Control, Animation, and Automation</title>
+        <title><R [«cv»|LOCOID|CONSIST]> <r «loco» «cv»> <W [«loco»]|[«cv» «value»]|[«loco» «cv» «bitValue» «bit»]|[CONSIST «loco» [REVERSE]]> <V [«cv» «value»]|[«cv» «bit» «bitValue»]> <B «cv» «bit» «bitValue»> <b «loco» «cv» «bit» «bitValue»> Read and write CVs - DCC-EX Model Train Control, Animation, and Automation</title>
       
     
     
@@ -79,7 +79,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#10-track-turn-track-power-on-or-off" class="md-skip">
+        <a href="#r-cvlocoidconsist-r-loco-cv-w-lococv-valueloco-cv-bitvalue-bitconsist-loco-reverse-v-cv-valuecv-bit-bitvalue-b-cv-bit-bitvalue-b-loco-cv-bit-bitvalue-read-and-write-cvs" class="md-skip">
           Skip to content
         </a>
       
@@ -112,7 +112,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              &lt;1|0 «track»&gt; Turn track power on or off
+              &lt;R [«cv»|LOCOID|CONSIST]&gt; &lt;r «loco» «cv»&gt; &lt;W [«loco»]|[«cv» «value»]|[«loco» «cv» «bitValue» «bit»]|[CONSIST «loco» [REVERSE]]&gt; &lt;V [«cv» «value»]|[«cv» «bit» «bitValue»]&gt; &lt;B «cv» «bit» «bitValue»&gt; &lt;b «loco» «cv» «bit» «bitValue»&gt; Read and write CVs
             
           </span>
         </div>
@@ -7091,11 +7091,50 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#command" class="md-nav__link">
+  <a href="#commands" class="md-nav__link">
     <span class="md-ellipsis">
-      Command
+      Commands
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="Commands">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#command-variations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Command Variations
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Command Variations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#reading-cvs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reading CVs
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#writing-cvs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Writing CVs
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -7114,6 +7153,30 @@
       Response
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="Response">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#reading-cvs-responses" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reading CVs - Responses
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#writing-cvs-responses" class="md-nav__link">
+    <span class="md-ellipsis">
+      Writing CVs - Responses
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -7180,66 +7243,220 @@
   
 
 
-<h1 id="10-track-turn-track-power-on-or-off"><code>&lt;1|0 «track»&gt;</code> <br/>Turn track power on or off<a class="headerlink" href="#10-track-turn-track-power-on-or-off" title="Permanent link">&para;</a></h1>
-<p>Serial command to turn power on or off to all or specific tracks.  Also allows joining the MAIN and PROG tracks together.</p>
-<h2 id="command">Command<a class="headerlink" href="#command" title="Permanent link">&para;</a></h2>
+<h1 id="r-cvlocoidconsist-r-loco-cv-w-lococv-valueloco-cv-bitvalue-bitconsist-loco-reverse-v-cv-valuecv-bit-bitvalue-b-cv-bit-bitvalue-b-loco-cv-bit-bitvalue-read-and-write-cvs"><code>&lt;R [«cv»|LOCOID|CONSIST]&gt;</code> <br/><code>&lt;r «loco» «cv»&gt;</code> <br/><code>&lt;W [«loco»]|[«cv» «value»]|[«loco» «cv» «bitValue» «bit»]|[CONSIST «loco» [REVERSE]]&gt;</code> <br/><code>&lt;V [«cv» «value»]|[«cv» «bit» «bitValue»]&gt;</code> <br/><code>&lt;B «cv» «bit» «bitValue»&gt;</code> <br/><code>&lt;b «loco» «cv» «bit» «bitValue»&gt;</code> <br/>Read and write CVs<a class="headerlink" href="#r-cvlocoidconsist-r-loco-cv-w-lococv-valueloco-cv-bitvalue-bitconsist-loco-reverse-v-cv-valuecv-bit-bitvalue-b-cv-bit-bitvalue-b-loco-cv-bit-bitvalue-read-and-write-cvs" title="Permanent link">&para;</a></h1>
+<p>Serial command to Read and write CVs on the PROG track (Service mode) or on the MAIN track (PoM).</p>
+<h2 id="commands">Commands<a class="headerlink" href="#commands" title="Permanent link">&para;</a></h2>
 <ul>
-<li><code>1</code> = on<br/>or</li>
-<li><code>0</code> = off</li>
+<li><code>R</code> <br/></li>
+<li><code>r</code> <br/></li>
+<li><code>W</code> <br/></li>
+<li><code>w</code> <br/></li>
+<li><code>V</code> <br/></li>
+<li><code>B</code> <br/></li>
+<li><code>b</code></li>
+</ul>
+<h3 id="command-variations">Command Variations<a class="headerlink" href="#command-variations" title="Permanent link">&para;</a></h3>
+<h4 id="reading-cvs">Reading CVs<a class="headerlink" href="#reading-cvs" title="Permanent link">&para;</a></h4>
+<ul>
+<li><code>&lt;R&gt;</code> Read driveable loco id (may be long, short or consist)</li>
+<li><code>&lt;R «cv»&gt;</code> Read cv</li>
+<li><code>&lt;R LOCOID&gt;</code> read loco id (ignoring consist) on PROG track</li>
+<li><code>&lt;R CONSIST&gt;</code> read consist id on PROG track</li>
+<li><code>&lt;r «loco» «cv»&gt;</code> PoM read cv on MAIN track - <span style="color:red">Requires RailCom</span></li>
+<li><code>&lt;V «cv» bit «bitValue»&gt;</code> Fast read bit with expected value</li>
+<li><code>&lt;V «cv» «value»&gt;</code> Fast read cv with expected value</li>
+</ul>
+<h4 id="writing-cvs">Writing CVs<a class="headerlink" href="#writing-cvs" title="Permanent link">&para;</a></h4>
+<ul>
+<li><code>&lt;W «loco»&gt;</code> Write loco address on PROG track</li>
+<li><code>&lt;W CONSIST «loco»&gt;</code> write consist address on PROG track</li>
+<li><code>&lt;W CONSIST «loco» REVERSE&gt;</code> Write consist address and reverse flag on PROG track</li>
+<li><code>&lt;W «cv» «value»&gt;</code> Write cv value on PROG track</li>
+<li><code>&lt;W «cv» «bitValue» «bit»&gt;</code> Write cv bit on prog track</li>
+<li><code>&lt;w «loco» «cv» «value»&gt;</code> PoM write cv on MAIN track</li>
+<li><code>&lt;B «cv» «bitValue» «bit»&gt;</code> Write cv bit</li>
+<li><code>&lt;b «loco» «cv» «bitValue» «bit»&gt;</code> PoM write cv bit on MAIN track</li>
 </ul>
 <h2 id="parameters">Parameters<a class="headerlink" href="#parameters" title="Permanent link">&para;</a></h2>
 <ul>
-<li>
-<p><strong>track</strong> - one of:</p>
-<ul>
-<li>blank = Both Main and Programming Tracks (All tracks)</li>
-<li><code>MAIN</code> = Main track</li>
-<li><code>PROG</code> = Programming Track</li>
-<li><code>JOIN</code> = Join the Main and Programming tracks temporarily <br/>Note: While <code>&lt;1 JOIN&gt;</code> is valid, <code>&lt;0 JOIN&gt;</code> is not.</li>
-<li><code>A</code> through <code>H</code> representing one of the outputs of the/a motor shield.</li>
+<li><strong>loco</strong>: DCC address to read or change. <br/>This can be a long or short address.  See note below.</li>
+<li><strong>cv</strong>: CV to read or change <br/>
+Avoid writing CV1, CV17 &amp; CV18 directly. Use the <code>&lt;W «loco»&gt;</code> command instead.</li>
+<li><strong>value</strong>: value to read or change the CV to</li>
+<li><strong>bit</strong>:  cv bit to read or change</li>
+<li><strong>bitValue</strong>: value to read or change the bit to - one of:<ul>
+<li><code>1</code></li>
+<li><code>0</code></li>
 </ul>
 </li>
 </ul>
 <h2 id="response"><em>Response</em><a class="headerlink" href="#response" title="Permanent link">&para;</a></h2>
-<p>The following is not a direct response, but rather a broadcast that will be triggered as a result of any power state changes.</p>
+<h3 id="reading-cvs-responses">Reading CVs - Responses<a class="headerlink" href="#reading-cvs-responses" title="Permanent link">&para;</a></h3>
+<p><strong>Response to</strong> <code>&lt;R&gt;</code>:</p>
 <ul>
-<li>
-<p><code>&lt;p«onOFF» «track»&gt;</code></p>
-<ul>
-<li><code>p</code> = the 'message identifer'</li>
-<li><strong>onOff</strong> = one of: <code>1</code> = On or <code>0</code> = off</li>
-<li><strong>track</strong> = balnk = all tracks <br/> or one of <code>A</code> through <code>H</code> representing one of the outputs of the/a motor shield.</li>
+<li><code>&lt;r «address»&gt;</code><ul>
+<li><code>r</code>: response/broadcast identifier</li>
+<li><strong>address</strong> - one of:<ul>
+<li>If the loco is in a consist (CV19), the address returned by will be the consist address.</li>
+<li>If not in a consist (CV19) DCC Address of the decoder/loco. The short (1-127) or long (128-10293) address of the engine decoder</li>
+<li><code>-1</code> = failed read</li>
 </ul>
 </li>
 </ul>
+</li>
+</ul>
+<p><strong>Response to</strong> <code>&lt;R LOCOID&gt;</code>:</p>
+<ul>
+<li><code>&lt;r LOCOID «address»&gt;</code><ul>
+<li><code>r</code>: response/broadcast identifier</li>
+<li><strong>address</strong> - one of:<ul>
+<li>DCC Address of the decoder/loco. The short (1-127) or long (128-10293) address of the engine decoder</li>
+<li><code>-1</code> = failed read</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p><strong>Response to</strong> <code>&lt;R CONSIST&gt;</code>:</p>
+<ul>
+<li><code>&lt;r CONSIST «address»&gt;</code><ul>
+<li><code>r</code>: response/broadcast identifier</li>
+<li><strong>address</strong> - one of:<ul>
+<li>If the loco is in a consist (CV19), the address returned by will be the consist address.</li>
+<li><code>-1</code> = failed read or not in a consist</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p><strong>Response to</strong> <code>&lt;R «cv»&gt;</code>:</p>
+<ul>
+<li><code>&lt;r «cv» «value»&gt;</code><ul>
+<li><code>r</code>: response/broadcast identifier</li>
+<li><strong>cv</strong>: the cv read</li>
+<li><strong>value</strong> - one of:<ul>
+<li>the value of the CV read</li>
+<li><code>-1</code> = failed read</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p><strong>Response to</strong> <code>&lt;V «cv» «value»&gt;</code>:</p>
+<ul>
+<li><code>&lt;v «cv» «value»&gt;</code><ul>
+<li><code>v</code>: response/broadcast identifier</li>
+<li><strong>cv</strong>: the cv read</li>
+<li><strong>value</strong> - one of:<ul>
+<li>the value of the CV read</li>
+<li><code>-1</code> = failed read</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p><strong>Response to</strong> <code>&lt;V «cv» «bit» «bitValue»&gt;</code>:</p>
+<ul>
+<li><code>&lt;v «cv» «bit» «bitValue»&gt;</code><ul>
+<li><code>v</code>: response/broadcast identifier</li>
+<li><strong>cv</strong>: the cv read</li>
+<li><strong>bit</strong>: the bit read</li>
+<li><strong>bitValue</strong> - one of:<ul>
+<li><code>1</code></li>
+<li><code>0</code></li>
+<li><code>-1</code> = failed read</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p><strong>Response to</strong> <code>&lt;r «loco» «cv»&gt;</code></p>
+<p><mark>TODO</mark></p>
+<h3 id="writing-cvs-responses">Writing CVs - Responses<a class="headerlink" href="#writing-cvs-responses" title="Permanent link">&para;</a></h3>
+<p>*<em>Response to</em> <code>&lt;W «loco»&gt;</code>:</p>
+<ul>
+<li><code>&lt;w «address»&gt;</code><ul>
+<li><code>w</code>: response/broadcast identifier</li>
+<li><strong>address</strong> - one of:<ul>
+<li>DCC Address of the decoder/loco. The short (1-127) or long (128-10293) address of the engine decoder</li>
+<li><code>-1</code> = failed read</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>*<em>Response to</em> <code>&lt;W CONSIST «loco»&gt;</code>:</p>
+<p><mark>TODO</mark></p>
+<p>*<em>Response to</em> <code>&lt;W CONSIST «loco» REVERSE&gt;</code>:</p>
+<p><mark>TODO</mark></p>
+<p>*<em>Response to</em> <code>&lt;W «cv» «value»&gt;</code>:</p>
+<ul>
+<li><code>&lt;w «cv» «value»&gt;</code><ul>
+<li><code>w</code>: response/broadcast identifier</li>
+<li><strong>cv</strong>: the cv written</li>
+<li><strong>value</strong> - one of:<ul>
+<li>the value of the CV written/read</li>
+<li><code>-1</code> = failed read</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>*<em>Response to</em> <code>&lt;W «cv» «bitValue» «bit»&gt;</code>:</p>
+<p><mark>TODO</mark></p>
+<p>*<em>Response to</em> <code>&lt;w «loco» «cv» «value»&gt;</code>:</p>
+<p>no response.</p>
+<p>*<em>Response to</em> <code>&lt;B «cv» «bitValue» «bit»&gt;</code>:</p>
+<ul>
+<li><code>&lt;w «cv» «value»&gt;</code><ul>
+<li><code>w</code>: response/broadcast identifier</li>
+<li><strong>cv</strong>: the cv written</li>
+<li><strong>bit</strong>: the bit written</li>
+<li><strong>biValue</strong> - one of:<ul>
+<li>the value of the bit written/read <code>0</code>|<code>1</code></li>
+<li><code>-1</code> = failed read</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>*<em>Response to</em> <code>&lt;b «loco» «cv» «bitValue» «bit»&gt;</code>:</p>
+<p><mark>TODO</mark></p>
 <h2 id="notes"><em>Notes</em><a class="headerlink" href="#notes" title="Permanent link">&para;</a></h2>
 <ul>
 <li>
-<p>The use of the JOIN function allows the DCC signal for the MAIN track to also be sent to the PROG track. This allows the prog track to act as a siding (or similar) in the main layout even though it is isolated electrically and connected to the programming track output.</p>
-<p>However, it is important that the prog track wiring be in the same phase as the main track i.e. when the left rail is high on MAIN, it is also high on PROG. You may have to swap the wires to your prog track to make this work.</p>
-</li>
-<li>
-<p>If you drive onto a programming track that is "joined" and enter a programming command, the track will automatically switch to a programming track. If you use a compatible Throttle, you can then send the join command again and drive off the track onto the rest of your layout!</p>
+<p><code>&lt;W «address»&gt;</code> will write a short arddress (CV1) or long address (CV17 plus CV18) depending on the value entered.  It will also adjust CV29 automatically depending on whist address type is required.</p>
 <ul>
-<li>In some split motor shield hardware configurations JOIN will not be able to work.</li>
-<li>While <code>&lt;1 JOIN&gt;</code> is valid, <code>&lt;0 JOIN&gt;</code> is not.</li>
+<li><code>1</code>-<code>127</code> will be a short address</li>
+<li><code>128</code>-<code>10293</code> will be along address</li>
 </ul>
+<p>Also note that addresses above <code>9999</code> cannont be used by <em>some</em> other command station brands. So if you plan to take your loco to other layouts it is recommended that you avoid the <code>1000</code>-<code>10293</code> (inclusive) range.
+* IMPORTANT: If the loco is in a consist (CV19), the address returned by <code>&lt;R&gt;</code> will be the consist address, not the decoder address. To always get the decoder address, use <code>&lt;R LOCOID&gt;</code> instead.
+* When combined with the <code>&lt;D ACK ON&gt;</code> Command, the <code>&lt;R&gt;</code> Command (with or without parameters) can be used for diagnostics, for example when you get a <code>-1</code> response.
+* By design, for safety reasons, the NMRA specification prevents locos from responding to throttle or function commands while on the service track. A loco WILL NOT MOVE on the service track! Don’t let the little ‘jumps’ you may see when you are programming a CV confuse you. The loco pulses the motor to give a jump in current that we read as an ‘ACK’ (acknowledgment), that causes some locos to stutter ahead slightly every time you read or write a CV.
+* the <code>&lt;V ..&gt;</code> commands are designed to offer faster verification of the value held in a CV and can be used instead of the <code>&lt;R&gt;</code> commands. Instead of reading a bit value, it compares the bit to an expected value. It will attempt to verify the value first, an if it is successful, will return the value as if it was simply 'read'. If the verify fails, it will perform a read bit command and return the value read.
+* <code>&lt;R cv callbacknum callbacksub&gt;</code> (Deprecated) read cv value on PROG track. Do not use. Not explained here
+* <code>&lt;W cv value callbacknum callbacksub&gt;</code> (Deprecated) Write cv value on PROG track. Do not use. Not explained here.
+* <code>&lt;B cv bit value callbacknum callbacksub&gt;</code> (Deprecated) Do not use. Not explained here.</p>
 </li>
 </ul>
 <hr />
 <h2 id="examples"><em>Examples</em><a class="headerlink" href="#examples" title="Permanent link">&para;</a></h2>
-<p><a href="?_1">Also search for !</a> or <a href="?_0">search for !</a></p>
+<p><a href="?_R">Also search for !</a> or <a href="?_W">search for !</a></p>
 <h3 id="examples-commands"><em>Examples Commands</em><a class="headerlink" href="#examples-commands" title="Permanent link">&para;</a></h3>
 <ul>
-<li>all tracks off: <code>&lt;0&gt;</code></li>
-<li>all tracks on <code>&lt;1&gt;</code></li>
-<li>join: <code>&lt;1 JOIN&gt;</code></li>
+<li>Read loco address on PROG track: <code>&lt;R&gt;</code></li>
+<li>Read cv 4 on PROG track: <code>&lt;R 4&gt;</code></li>
+<li>Read loco actual DCC address on PROG track: <code>&lt;R LOCOID&gt;</code></li>
+<li>Read loco consist (CV19) address on PROG track: <code>&lt;R CONSIST&gt;</code></li>
+<li><mark>TODO</mark></li>
 </ul>
 <h3 id="example-responses"><em>Example Responses:</em><a class="headerlink" href="#example-responses" title="Permanent link">&para;</a></h3>
 <ul>
-<li>all tracks off: <code>&lt;p0&gt;</code></li>
-<li>all tracks on <code>&lt;p1&gt;</code></li>
-<li>join: <code>&lt;p1 JOIN&gt;</code></li>
+<li>read address on PROG track (successful): <code>&lt;r 3&gt;</code></li>
+<li>read address on PROG track (fail): <code>&lt;r -1&gt;</code></li>
+<li>read CV 4 on PROG track (successful): <code>&lt;r 4 1&gt;</code></li>
+<li><mark>TODO</mark></li>
 </ul>
 
 
@@ -7261,7 +7478,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 8, 2026 01:04:50 UTC">June 8, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 8, 2026 01:40:31 UTC">June 8, 2026</span>
   </span>
 
     

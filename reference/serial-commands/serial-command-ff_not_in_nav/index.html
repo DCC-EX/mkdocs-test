@@ -23,7 +23,7 @@
     
     
       
-        <title><F «loco» [«function» «state»]|[DCCFREQ «freqValue»]>- Set decoder functions or set PWM frequency - DCC-EX Model Train Control, Animation, and Automation</title>
+        <title><F «loco» [«function» «state»]|[DCCFREQ «freqValue»]> Set decoder functions or set PWM frequency - DCC-EX Model Train Control, Animation, and Automation</title>
       
     
     
@@ -112,7 +112,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              &lt;F «loco» [«function» «state»]|[DCCFREQ «freqValue»]&gt;- Set decoder functions or set PWM frequency
+              &lt;F «loco» [«function» «state»]|[DCCFREQ «freqValue»]&gt; Set decoder functions or set PWM frequency
             
           </span>
         </div>
@@ -7180,7 +7180,7 @@
   
 
 
-<h1 id="f-loco-function-statedccfreq-freqvalue-set-decoder-functions-or-set-pwm-frequency"><code>&lt;F «loco» [«function» «state»]|[DCCFREQ «freqValue»]&gt;</code><br/>- Set decoder functions or set PWM frequency<a class="headerlink" href="#f-loco-function-statedccfreq-freqvalue-set-decoder-functions-or-set-pwm-frequency" title="Permanent link">&para;</a></h1>
+<h1 id="f-loco-function-statedccfreq-freqvalue-set-decoder-functions-or-set-pwm-frequency"><code>&lt;F «loco» [«function» «state»]|[DCCFREQ «freqValue»]&gt;</code> <br/>Set decoder functions or set PWM frequency<a class="headerlink" href="#f-loco-function-statedccfreq-freqvalue-set-decoder-functions-or-set-pwm-frequency" title="Permanent link">&para;</a></h1>
 <p>Serial command to Turn loco decoder functions ON or OFF or set the DC PWN frequency of the track.</p>
 <h2 id="command">Command<a class="headerlink" href="#command" title="Permanent link">&para;</a></h2>
 <ul>
@@ -7192,24 +7192,21 @@
 <p><strong>loco</strong> <em>Required</em><br/> Loco to set the function or PWM frequency</p>
 </li>
 <li>
-<p><strong>function</strong> plus <strong>state</strong> or <strong>DCCFREQ</strong> plus <strong>direction</strong></p>
+<p>If <strong>function</strong> plus <strong>state</strong> are supplied - To set the function on or off</p>
 <ul>
-<li><strong>function</strong> plus <strong>state</strong> set the function<ul>
-<li>*<em>function</em> = function to set. <code>0</code>-<code>68</code> (Support for the RCN-212 Functions)</li>
-<li><strong>state</strong> = one of:<ul>
+<li>*<em>function</em>: Function to set. <code>0</code>-<code>68</code> (Support for the RCN-212 Functions)</li>
+<li><strong>state</strong> - one of:<ul>
 <li><code>1</code> = on</li>
 <li><code>0</code> = off</li>
 </ul>
 </li>
 </ul>
 </li>
-<li>if <strong>DCCFREQ</strong> plus <strong>«freqValue»</strong> are supplied<ul>
+<li>If <strong>DCCFREQ</strong> plus <strong>«freqValue»</strong> are supplied - to set the PWM frequency<ul>
 <li><strong>«freqValue»</strong> = one of:<ul>
 <li><mark>TODO</mark> = Mid frequency - 490Hz</li>
 <li><mark>TODO</mark> = High frequency - 3400Hz</li>
 <li><mark>TODO</mark> = Supersonic - 62500Hz</li>
-</ul>
-</li>
 </ul>
 </li>
 </ul>
@@ -7268,7 +7265,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 7, 2026 22:52:05 UTC">June 7, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 8, 2026 01:04:50 UTC">June 8, 2026</span>
   </span>
 
     
