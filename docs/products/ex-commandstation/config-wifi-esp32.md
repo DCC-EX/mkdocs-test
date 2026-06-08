@@ -1,3 +1,17 @@
+---
+tags:
+    - _C_WIFI_AP_ssid_password_channel
+    - _C_WIFI_AP_ssid_password
+    - _C_WIFI_DEFAULT
+    - _C_WIFI_HIDDENAP_ssid_password_channel
+    - _C_WIFI_HIDDENAP_ssid_password
+    - _C_WIFI_HOSTNAME_hostname
+    - _C_WIFI_OFF
+    - _C_WIFI_ON
+    - _C_WIFI_ssid_password
+    - _C_WIFI_TEMP_ssid_password
+---
+
 # WiFi configuration (CSB1 or ESP32 ONLY)
 
 PLEASE NOTE: config.h options for WiFi configuration from previous versions are now ignored by CSB1 or ESP32 command stations.
