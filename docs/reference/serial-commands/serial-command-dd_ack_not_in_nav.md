@@ -61,7 +61,7 @@ N/A
 
 [Also search for `D ACK`](?_D_ACK)
 
-### *Examples Commands*
+### *Example Commands*
 
 ==TODO==
 

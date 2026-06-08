@@ -197,7 +197,7 @@ no response.
 
 [Also search for 'R'](?_R) or [search for 'W'](?_W)
 
-### *Examples Commands*
+### *Example Commands*
 
 * Read loco address on PROG track: ``<R>``
 * Read cv 4 on PROG track: ``<R 4>``

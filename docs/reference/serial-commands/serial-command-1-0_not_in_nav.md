@@ -57,7 +57,7 @@ The following is not a direct response, but rather a broadcast that will be trig
 
 [Also search for `!`](?_1) or [search for !](?_0)
 
-### *Examples Commands*
+### *Example Commands*
 
 * all tracks off: ``<0>``
 * all tracks on ``<1>``

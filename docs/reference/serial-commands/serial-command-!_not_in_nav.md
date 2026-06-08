@@ -50,7 +50,7 @@ For ``<! Q>``<br/>
 
 [Also search for '!'](?_!)
 
-### *Examples Commands*
+### *Example Commands*
 
 * ``<!>``  ESTOP all locos
 * ``<! P>`` Pause all locos

@@ -49,7 +49,7 @@ The following are not a direct response, but rather a broadcast that will be tri
 
 [Also search for 'F'](?_F)
 
-### *Examples Commands*
+### *Example Commands*
 
 * ``<F 3 0 1>`` Turns the headlight ON for CAB (loco address) 3
 * ``<F 126 0 0>`` Turns the headlight OFF for CAB 126
