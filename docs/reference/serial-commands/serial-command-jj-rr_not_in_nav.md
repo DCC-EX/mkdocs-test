@@ -4,7 +4,7 @@ tags:
   - _J_R_id
 ---
 
-# ``<J R [«id»]>``<br/> Request Roster info
+# ``<J R [«id»]>`` <br/>Request Roster info
 
 Serial command to request roster info.
 
@@ -14,18 +14,18 @@ Serial command to request roster info.
 
 ## Parameters
 
-* **id** *optional* <br/>unique id and/or DCC address of the Loco/s in the roster
+* **id**: *optional* <br/>unique id and/or DCC address of the Loco/s in the roster
 
 ## *Response*
 
-Response to ``<j R>``:
+**Response to** ``<j R>``:
 
 ``<jR [«id1» «id2» «id3» ...]>``
 
 * ``jR`` = the 'message identifer'
 * **id1..n:** unique id and/or DCC address of each Loco in the roster
 
-Response to ``<j R «id»>``:
+**Response to** ``<j R «id»>``:
 
 ``<jR «id» ""|"desc" ""|"funct0/funct1/funct2/.../funct31">``
 
@@ -46,10 +46,10 @@ Response to ``<j R «id»>``:
 
 ### *Examples Commands*
 
-* ``<J R>`` request list of locos in the roster
-* ``<J R 100>`` request the details of loco with an id of ``100``
+* request list of locos in the roster: ``<J R>``
+* request the details of loco with an id of 100: ``<J R 100>`` 
 
 ### *Example Responses:*
 
-* ``<jR 100 201 203 1005>`` a list of locos in the roster
-* ``<jR 100, "Class 37 Loram Livery", "Lights/WarmEngineStart/Brake/*Single-Horn/*Double-Horn/Light Engine Mode/Coasting/Speed Lock/Sound Fade OutIn/Flange Squeal//*Buffer Up/*Coupling/STATIONARY-Guard's Whistle MOVING-Detonators/Wagon Snatching & Buffering/High Intensity Light-On/Red Tail Lights On Both Ends Non di/Marker Lights On Both Ends Non di/Cab Light On-No.1 End Fan/Cab Light On-No.2 End non fan/No.1 End Dir Lights Off/No.2 End Dir Lights Off/Compressor/Windscreen Wipers/Engine Room">`` details of loco ``100`` from the roster
+* a list of locos in the roster: <br/>``<jR 100 201 203 1005>`` 
+* details of loco ``100`` from the roster: <br/>``<jR 100, "Class 37 Loram Livery", "Lights/WarmEngineStart/Brake/*Single-Horn/*Double-Horn/Light Engine Mode/Coasting/Speed Lock/Sound Fade OutIn/Flange Squeal//*Buffer Up/*Coupling/STATIONARY-Guard's Whistle MOVING-Detonators/Wagon Snatching & Buffering/High Intensity Light-On/Red Tail Lights On Both Ends Non di/Marker Lights On Both Ends Non di/Cab Light On-No.1 End Fan/Cab Light On-No.2 End non fan/No.1 End Dir Lights Off/No.2 End Dir Lights Off/Compressor/Windscreen Wipers/Engine Room">`` 

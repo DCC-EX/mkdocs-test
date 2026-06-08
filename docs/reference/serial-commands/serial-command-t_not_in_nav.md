@@ -6,7 +6,7 @@ tags:
   - 
 ---
 
-# ``<t «loco» [«tSpeed» «direction»]>``<br/> Request or set loco status
+# ``<t «loco» [«tSpeed» «direction»]>`` <br/>Request or set loco status
 
 Serial command to request information about a loco or set its speed and direction
 
@@ -21,8 +21,8 @@ Serial command to request information about a loco or set its speed and directio
 * blank or **tSpeed** plus **direction**
     * if blank = Request a deliberate update on the loco speed/functions
     * if **tSpeed** and **direction** are supplied
-        * **tSpeed** = ``0``-``127`` or ``-1`` for Emergency Stop
-        * **direction** = one of:
+        * **tSpeed**: ``0``-``127`` or ``-1`` for Emergency Stop
+        * **direction** - one of:
             * ``1`` = forward
             * ``0`` = reverse
 
