@@ -68,7 +68,7 @@ The following are not a direct response, but rather a broadcast that will be tri
 
 [Also search for '='](?_equals)
 
-### *Examples Commands*
+### *Example Commands*
 
 * Request track status ``<=>``
 * Set track A to DC with address 10 ``<= A 10>``

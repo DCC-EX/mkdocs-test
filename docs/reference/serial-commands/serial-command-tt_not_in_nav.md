@@ -145,7 +145,7 @@ Profile defines the speed and style of movement: 0=Instant, 1=Fast (0.5 sec), 2=
 
 [Also search for 'T'](?_T)
 
-### *Examples Commands*
+### *Example Commands*
 
 * *Example:* ``<T 23 DCC 5 0>``
 
