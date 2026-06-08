@@ -1,3 +1,17 @@
+---
+tags:
+  - _J_T
+  - _J_T_id
+  - _J_A
+  - _J_A_id
+  - _J_R
+  - _J_R_id
+  - _m_LINEAR
+  - _m_loco_accelerating_braking
+  - _m_loco_momentum
+  - _m_POWER
+---
+
 # Throttle Writers Guide (doc incomplete)
 
 You are strongly advised to make use of the DCCEXProtocol library
