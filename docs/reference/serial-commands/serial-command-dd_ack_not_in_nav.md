@@ -24,16 +24,18 @@ Serial commands to modify the system PROG track settings.
 
 * ``<D ACK LIMIT «value»>`` Set ACK detection limit mA
 * ``<D ACK MAX «value» MS>`` Set ACK maximum duration mS
-* ``<D ACK MAX «value»>`` Set ACK maximum duration uS
+* ``<D ACK MAX «value»>`` Set ACK maximum duration µS
 * ``<D ACK MIN «value» MS>`` Set ACK minimum duration mS
-* ``<D ACK MIN «value»>`` Set ACK minimum duration uS
+* ``<D ACK MIN «value»>`` Set ACK minimum duration µS
 * ``<D ACK ON|OFF>`` Enable/Disable PROG track diagnostics
 * ``<D ACK RETRY «value»>`` Set ACK retry count
 * ``<C PROGBOOST>`` Configute PROG track boost
 
 ## Parameters
 
-* **value**: value to set. For time base commands values are in µS unless the parameter ``MS`` is added, in which case the value will be in ms.
+* **value**: value to set. 
+
+    For time base commands values are in microseconds (µS) unless the parameter ``MS`` is added, in which case the value will be in milliseconds (ms).
 
 ## *Response*
 
@@ -66,3 +68,18 @@ N/A
 ### *Example Responses:*
 
 ==TODO==
+
+----
+
+## *Hints and Tips*
+
+### **Hornby HM7000 decoders**
+
+The HM7000's DCC implementation has a bug in that the ACK response to a DCC CV read from the decoder on the programming track is far, far too long. So much so, the DCC-EX developers added a feature to cater specifically for the HM7000.
+
+* Make sure the loco is on the PROG output which is typically channel B on the EX-CommandStation.
+* Bring up a serial console to the EX-CommandStation, or use the command entry features in EX-Toolbox, EX-WebThrottle or Engine Driver.
+* Type and send ``<D ACK MAX 20000>``
+* Then try reading the decoder. <br/>Either from the console with <R>, <br/>or with the appropriate buttons in EX-Toolbox, EX-WebThrottle or Engine Driver, <br/>to watch for a response.
+
+If this isn't working, then ``<D ACK ON>`` will enable diagnostic output from the CSB1 to show what the <R> is doing.
