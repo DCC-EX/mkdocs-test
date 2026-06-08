@@ -48,7 +48,7 @@ For ``<! Q>``<br/>
 
 ## *Examples*
 
-[Also search for !](?_!)
+[Also search for '!'](?_!)
 
 ### *Examples Commands*
 

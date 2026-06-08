@@ -42,7 +42,7 @@ Serial command to request roster info.
 
 ## *Examples*
 
-[Also search for !](?_J_R)
+[Also search for 'J R'](?_J_R)
 
 ### *Examples Commands*
 

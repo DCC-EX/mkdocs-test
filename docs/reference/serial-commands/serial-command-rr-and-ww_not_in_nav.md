@@ -195,7 +195,7 @@ no response.
 
 ## *Examples*
 
-[Also search for !](?_R) or [search for !](?_W)
+[Also search for 'R'](?_R) or [search for 'W'](?_W)
 
 ### *Examples Commands*
 

@@ -43,7 +43,7 @@ The following are not a direct response, but rather a broadcast that will be tri
 
 ## *Examples*
 
-[Also search for !](?_!)
+[Also search for 'xxx'](?_xxx)
 
 ### *Examples Commands*
 
