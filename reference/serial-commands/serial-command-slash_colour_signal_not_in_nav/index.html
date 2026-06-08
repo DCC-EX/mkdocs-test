@@ -10,7 +10,7 @@
       
       
       
-        <link rel="canonical" href="https://dcc-ex.com/mkdocs-test/reference/serial-commands/serial-command-ff_not_in_nav/">
+        <link rel="canonical" href="https://dcc-ex.com/mkdocs-test/reference/serial-commands/serial-command-slash_colour_signal_not_in_nav/">
       
       
       
@@ -23,7 +23,7 @@
     
     
       
-        <title><F «loco» [«function» «state»]|[DCCFREQ «freqValue»]> Set decoder functions or set PWM frequency - DCC-EX Model Train Control, Animation, and Automation</title>
+        <title></ «colour» «signal»> Set signal colour - DCC-EX Model Train Control, Animation, and Automation</title>
       
     
     
@@ -79,7 +79,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#f-loco-function-statedccfreq-freqvalue-set-decoder-functions-or-set-pwm-frequency" class="md-skip">
+        <a href="#colour-signal-set-signal-colour" class="md-skip">
           Skip to content
         </a>
       
@@ -112,7 +112,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              &lt;F «loco» [«function» «state»]|[DCCFREQ «freqValue»]&gt; Set decoder functions or set PWM frequency
+              &lt;/ «colour» «signal»&gt; Set signal colour
             
           </span>
         </div>
@@ -7180,72 +7180,42 @@
   
 
 
-<h1 id="f-loco-function-statedccfreq-freqvalue-set-decoder-functions-or-set-pwm-frequency"><code>&lt;F «loco» [«function» «state»]|[DCCFREQ «freqValue»]&gt;</code> <br/>Set decoder functions or set PWM frequency<a class="headerlink" href="#f-loco-function-statedccfreq-freqvalue-set-decoder-functions-or-set-pwm-frequency" title="Permanent link">&para;</a></h1>
-<p>Serial command to Turn loco decoder functions ON or OFF or set the DC PWN frequency of the track.</p>
+<h1 id="colour-signal-set-signal-colour"><code>&lt;/ «colour» «signal»&gt;</code> <br/> Set signal colour<a class="headerlink" href="#colour-signal-set-signal-colour" title="Permanent link">&para;</a></h1>
+<p>Serial command to set the colour of a signal.</p>
 <h2 id="command">Command<a class="headerlink" href="#command" title="Permanent link">&para;</a></h2>
 <ul>
-<li><code>F</code></li>
+<li><code>/</code></li>
 </ul>
 <h2 id="parameters">Parameters<a class="headerlink" href="#parameters" title="Permanent link">&para;</a></h2>
 <ul>
 <li>
-<p><strong>loco</strong> <em>Required</em><br/> Loco to set the function or PWM frequency</p>
+<p><strong>colour</strong>: <em>Required</em> colour to set - one of:</p>
+<ul>
+<li><code>RED</code></li>
+<li><code>AMBER</code></li>
+<li><code>GREEN</code></li>
+<li>...</li>
+</ul>
 </li>
 <li>
-<p>If <strong>function</strong> plus <strong>state</strong> are supplied - To set the function on or off</p>
-<ul>
-<li>*<em>function</em>: Function to set. <code>0</code>-<code>68</code> (Support for the RCN-212 Functions)</li>
-<li><strong>state</strong> - one of:<ul>
-<li><code>1</code> = on</li>
-<li><code>0</code> = off</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>If <strong>DCCFREQ</strong> plus <strong>«freqValue»</strong> are supplied - to set the PWM frequency<ul>
-<li><strong>«freqValue»</strong> = one of:<ul>
-<li><mark>TODO</mark> = Mid frequency - 490Hz</li>
-<li><mark>TODO</mark> = High frequency - 3400Hz</li>
-<li><mark>TODO</mark> = Supersonic - 62500Hz</li>
-</ul>
-</li>
-</ul>
+<p><strong>signal</strong>: <em>Required</em> defined <strong>red</strong> Vpin of the signal to control</p>
 </li>
 </ul>
 <h2 id="response"><em>Response</em><a class="headerlink" href="#response" title="Permanent link">&para;</a></h2>
-<p>The following are not a direct response, but rather a broadcast that will be triggered as a result of any track manager changes.</p>
-<p><code>&lt;l «loco» «reg» «speedByte» «functMap»&gt;</code></p>
-<ul>
-<li><strong>loco</strong> = DCC Address of the decoder/loco. The short (1-127) or long (128-10293) address of the engine decoder (this has to be already programmed in the decoder)</li>
-<li><strong>reg</strong> not used. We no longer use this but need something here for compatibility with legacy systems. Enter any single digit.</li>
-<li><strong>speedbyte</strong>:** Speed in DCC speedstep format<ul>
-<li>reverse - <code>2</code>-<code>127</code> = speed <code>1</code>-<code>126</code>, <code>0</code> = stop, <code>1</code> = Emergency Stop</li>
-<li>forward - <code>130</code>-<code>255</code> = speed <code>1</code>-<code>126</code>, <code>128</code> = stop, <code>129</code> = Emergency Stop</li>
-</ul>
-</li>
-<li><strong>FunctMap</strong> individual function states represented by the bits in a byte</li>
-</ul>
+<p>N/A</p>
 <h2 id="notes"><em>Notes</em><a class="headerlink" href="#notes" title="Permanent link">&para;</a></h2>
 <ul>
-<li>Setting requests are transmitted directly to mobile loco decoder.</li>
-<li>Current state of loco functions (as known by commands issued since power on) is stored by the CommandStation - All functions within a group get set all at once per NMRA DCC standards.</li>
-<li>The command station knows about the previous settings in the same group and will not, for example, unset F2 because you change F1. If, however, you have never set F2, then changing F1 WILL unset F2</li>
-<li><code>&lt;f «loco» «byte1»&gt;</code> is a depricated version of the command. It is not documented here.</li>
-<li><code>&lt;f «loco» «group» «byte2»&gt;</code> is a depricated version of the command. It is not documented here.</li>
+<li>regardless of the colour you wish to set, the <strong>signal</strong> parameter is always the Vpin of the <em>red</em> LED.</li>
 </ul>
 <hr />
 <h2 id="examples"><em>Examples</em><a class="headerlink" href="#examples" title="Permanent link">&para;</a></h2>
-<p><a href="?_F">Also search for 'F'</a></p>
+<p><a href="?_signals">Also search for 'Signals'</a></p>
 <h3 id="example-commands"><em>Example Commands</em><a class="headerlink" href="#example-commands" title="Permanent link">&para;</a></h3>
-<ul>
-<li><code>&lt;F 3 0 1&gt;</code> Turns the headlight ON for CAB (loco address) 3</li>
-<li><code>&lt;F 126 0 0&gt;</code> Turns the headlight OFF for CAB 126</li>
-<li><code>&lt;F 1330 1 1&gt;</code> Turns the horn ON for CAB 1330</li>
-</ul>
-<h3 id="example-responses"><em>Example Responses:</em><a class="headerlink" href="#example-responses" title="Permanent link">&para;</a></h3>
 <ul>
 <li><mark>TODO</mark></li>
 </ul>
+<h3 id="example-responses"><em>Example Responses:</em><a class="headerlink" href="#example-responses" title="Permanent link">&para;</a></h3>
+<p>N/A</p>
 
 
 

@@ -10,7 +10,7 @@
       
       
       
-        <link rel="canonical" href="https://dcc-ex.com/mkdocs-test/reference/serial-commands/serial-command-ff_not_in_nav/">
+        <link rel="canonical" href="https://dcc-ex.com/mkdocs-test/reference/serial-commands/serial-command-cc-wifi_not_in_nav/">
       
       
       
@@ -23,7 +23,7 @@
     
     
       
-        <title><F «loco» [«function» «state»]|[DCCFREQ «freqValue»]> Set decoder functions or set PWM frequency - DCC-EX Model Train Control, Animation, and Automation</title>
+        <title><C WIFI ON|OFF|AP|HIDDENAP|TEMP|DEFAULT|HOSTNAME [«various parameters»]> Setup the WiFi - DCC-EX Model Train Control, Animation, and Automation</title>
       
     
     
@@ -79,7 +79,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#f-loco-function-statedccfreq-freqvalue-set-decoder-functions-or-set-pwm-frequency" class="md-skip">
+        <a href="#c-wifi-onoffaphiddenaptempdefaulthostname-various-parameters-setup-the-wifi" class="md-skip">
           Skip to content
         </a>
       
@@ -112,7 +112,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              &lt;F «loco» [«function» «state»]|[DCCFREQ «freqValue»]&gt; Set decoder functions or set PWM frequency
+              &lt;C WIFI ON|OFF|AP|HIDDENAP|TEMP|DEFAULT|HOSTNAME [«various parameters»]&gt; Setup the WiFi
             
           </span>
         </div>
@@ -7097,6 +7097,21 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Command">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#command-variations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Command Variations
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -7180,72 +7195,70 @@
   
 
 
-<h1 id="f-loco-function-statedccfreq-freqvalue-set-decoder-functions-or-set-pwm-frequency"><code>&lt;F «loco» [«function» «state»]|[DCCFREQ «freqValue»]&gt;</code> <br/>Set decoder functions or set PWM frequency<a class="headerlink" href="#f-loco-function-statedccfreq-freqvalue-set-decoder-functions-or-set-pwm-frequency" title="Permanent link">&para;</a></h1>
-<p>Serial command to Turn loco decoder functions ON or OFF or set the DC PWN frequency of the track.</p>
+<h1 id="c-wifi-onoffaphiddenaptempdefaulthostname-various-parameters-setup-the-wifi"><small><code>&lt;C WIFI ON|OFF|AP|HIDDENAP|TEMP|DEFAULT|HOSTNAME [«various parameters»]&gt;</code></small> <br/> Setup the WiFi<a class="headerlink" href="#c-wifi-onoffaphiddenaptempdefaulthostname-various-parameters-setup-the-wifi" title="Permanent link">&para;</a></h1>
+<p>Serial command to setup the WiFi on the EX-Command Stations.
+<span style="color:red">For EX-CSB1 and ESP32 based command stations only. Version 5.7.0 or later only.</span></p>
+<p>See <a href="../../../products/ex-commandstation/config-wifi-esp32/">WiFi configuration</a> for more infomation on these commands.</p>
+<p>See the <a href="https://dcc-ex.com/ex-commandstation/advanced-setup/supported-wifi/wifi-config_v5_7.html">WiFi Configuration for version 5.7.0+</a> page on the old web site for detailed instructions on how, and why, to change these settings using EX-WebThrottle or EX-Toolbox.</p>
 <h2 id="command">Command<a class="headerlink" href="#command" title="Permanent link">&para;</a></h2>
 <ul>
-<li><code>F</code></li>
+<li><code>/ WIFI</code></li>
+</ul>
+<h3 id="command-variations">Command Variations<a class="headerlink" href="#command-variations" title="Permanent link">&para;</a></h3>
+<ul>
+<li><code>&lt;C WIFI "«ssid»" "«password»"&gt;</code> set Wifi ssid and password - Station Mode (STA)</li>
+<li><code>&lt;C WIFI TEMP "«ssid»" "«password»"&gt;</code> set Wifi ssid and password temporarily - Station Mode (STA)</li>
+<li><code>&lt;C WIFI AP "«ssid»" "«password»" [«channel»]&gt;</code> set Wifi to Access Point mode (AP) with given ssid and password</li>
+<li><code>&lt;C WIFI HIDDENAP "«ssid»" "«password»" [«channel»]&gt;</code> set Wifi to Access Point mode (AP) with given ssid and password, but not advertised</li>
+<li><code>&lt;C WIFI HOSTNAME "«hostname»"&gt;</code> set Wifi hostname</li>
+<li><code>&lt;C WIFI DEFAULT&gt;</code> set Wifi to default credentials</li>
+<li><code>&lt;C WIFI OFF&gt;</code> Disable Wifi</li>
+<li><code>&lt;C WIFI ON&gt;</code> Enable Wifi</li>
 </ul>
 <h2 id="parameters">Parameters<a class="headerlink" href="#parameters" title="Permanent link">&para;</a></h2>
 <ul>
 <li>
-<p><strong>loco</strong> <em>Required</em><br/> Loco to set the function or PWM frequency</p>
+<p><strong>ssid</strong>: ssid to set the command station to use (AP) or connect to (STA). Must be in quotes.</p>
+<p>Recommend that you avoid space characters in the ssid.</p>
 </li>
 <li>
-<p>If <strong>function</strong> plus <strong>state</strong> are supplied - To set the function on or off</p>
-<ul>
-<li>*<em>function</em>: Function to set. <code>0</code>-<code>68</code> (Support for the RCN-212 Functions)</li>
-<li><strong>state</strong> - one of:<ul>
-<li><code>1</code> = on</li>
-<li><code>0</code> = off</li>
-</ul>
+<p><strong>password</strong>: password to set the commandstation to use (AP) or to use when connecting to an existing ssid (STA) Must be in quotes.</p>
+<p>Passwords must be at least 8 characters long.</p>
 </li>
-</ul>
+<li>
+<p><strong>channel</strong>: <em>optional</em> - channel to set the commandstation to use <code>1</code>-<code>11</code> (AP only)</p>
+<p>The default channel is set to <code>11</code>. If you need to use an alternate channel (we recommend using only <code>1</code>,<code>6</code>, or <code>11</code>) you may change it with the command</p>
 </li>
-<li>If <strong>DCCFREQ</strong> plus <strong>«freqValue»</strong> are supplied - to set the PWM frequency<ul>
-<li><strong>«freqValue»</strong> = one of:<ul>
-<li><mark>TODO</mark> = Mid frequency - 490Hz</li>
-<li><mark>TODO</mark> = High frequency - 3400Hz</li>
-<li><mark>TODO</mark> = Supersonic - 62500Hz</li>
-</ul>
-</li>
-</ul>
+<li>
+<p><strong>hostname</strong>: the name that appears in your Throttle app, once you have connected to the appropriate network (ssid) for the Command Station.</p>
 </li>
 </ul>
 <h2 id="response"><em>Response</em><a class="headerlink" href="#response" title="Permanent link">&para;</a></h2>
-<p>The following are not a direct response, but rather a broadcast that will be triggered as a result of any track manager changes.</p>
-<p><code>&lt;l «loco» «reg» «speedByte» «functMap»&gt;</code></p>
-<ul>
-<li><strong>loco</strong> = DCC Address of the decoder/loco. The short (1-127) or long (128-10293) address of the engine decoder (this has to be already programmed in the decoder)</li>
-<li><strong>reg</strong> not used. We no longer use this but need something here for compatibility with legacy systems. Enter any single digit.</li>
-<li><strong>speedbyte</strong>:** Speed in DCC speedstep format<ul>
-<li>reverse - <code>2</code>-<code>127</code> = speed <code>1</code>-<code>126</code>, <code>0</code> = stop, <code>1</code> = Emergency Stop</li>
-<li>forward - <code>130</code>-<code>255</code> = speed <code>1</code>-<code>126</code>, <code>128</code> = stop, <code>129</code> = Emergency Stop</li>
-</ul>
-</li>
-<li><strong>FunctMap</strong> individual function states represented by the bits in a byte</li>
-</ul>
+<p>N/A. The command station will restart.</p>
 <h2 id="notes"><em>Notes</em><a class="headerlink" href="#notes" title="Permanent link">&para;</a></h2>
 <ul>
-<li>Setting requests are transmitted directly to mobile loco decoder.</li>
-<li>Current state of loco functions (as known by commands issued since power on) is stored by the CommandStation - All functions within a group get set all at once per NMRA DCC standards.</li>
-<li>The command station knows about the previous settings in the same group and will not, for example, unset F2 because you change F1. If, however, you have never set F2, then changing F1 WILL unset F2</li>
-<li><code>&lt;f «loco» «byte1»&gt;</code> is a depricated version of the command. It is not documented here.</li>
-<li><code>&lt;f «loco» «group» «byte2»&gt;</code> is a depricated version of the command. It is not documented here.</li>
+<li>In every case above, the Command Station will restart to apply the new settings. You will need to reconnect to the Command Station with whatever interface you are using.</li>
+<li>Only Station (STA) mode and the HOSTNAME can be changed over WiFi.</li>
+<li>Access Point (AP) mode changes require a serial/USB connection. This is a security feature. If you could change AP mode settings over WiFi, then anyone who could connect to the Command Station’s WiFi network could change the AP settings and potentially lock you out of your Command Station. By requiring a USB connection for AP mode changes, we ensure that only someone with physical access to the Command Station can modify these critical settings.</li>
+<li>
+<p>Hidden AP mode: If enabled, the Command Station’s WiFi network will not be visible in the list of available networks on devices. This can enhance security by making it less obvious to potential attackers, but it also means that users will need to manually enter the network name (SSID) to connect.</p>
+<p>Note that this does not provide any performance advantages.</p>
+</li>
+<li>
+<p>Temporary STA mode: If enabled, the Command Station will start in Station mode and connect to an existing Wifi network. But will forget this setting the next time the EX‑CommandStation is restarted.</p>
+<p>This may be useful if visiting a location with a different WiFi network which you would like to connect to without changing the permanent WiFi settings on the Command Station.</p>
+</li>
 </ul>
 <hr />
 <h2 id="examples"><em>Examples</em><a class="headerlink" href="#examples" title="Permanent link">&para;</a></h2>
-<p><a href="?_F">Also search for 'F'</a></p>
+<p><a href="?_wifi">Also search for 'WiFi'</a></p>
 <h3 id="example-commands"><em>Example Commands</em><a class="headerlink" href="#example-commands" title="Permanent link">&para;</a></h3>
 <ul>
-<li><code>&lt;F 3 0 1&gt;</code> Turns the headlight ON for CAB (loco address) 3</li>
-<li><code>&lt;F 126 0 0&gt;</code> Turns the headlight OFF for CAB 126</li>
-<li><code>&lt;F 1330 1 1&gt;</code> Turns the horn ON for CAB 1330</li>
+<li>See <a href="../../../products/ex-commandstation/config-wifi-esp32/">WiFi configuration</a></li>
+<li>See <a href="https://dcc-ex.com/ex-commandstation/advanced-setup/supported-wifi/wifi-config_v5_7.html">WiFi Configuration for version 5.7.0+</a></li>
 </ul>
 <h3 id="example-responses"><em>Example Responses:</em><a class="headerlink" href="#example-responses" title="Permanent link">&para;</a></h3>
-<ul>
-<li><mark>TODO</mark></li>
-</ul>
+<p>N/A</p>
 
 
 
@@ -7266,7 +7279,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 8, 2026 23:17:43 UTC">June 8, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 8, 2026 23:55:47 UTC">June 8, 2026</span>
   </span>
 
     
