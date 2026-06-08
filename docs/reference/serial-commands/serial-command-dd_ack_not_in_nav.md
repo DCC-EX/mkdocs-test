@@ -11,7 +11,7 @@ tags:
     - _D_ACK_RETRY_value
 ---
 
-# ``<D ACK LIMT|MAX|MIN|OFF|ON [«vlaue» [MS]]>`` <br/>``<C PROGBOOST>`` <br/>Modify System PROG track settings
+# ``<D ACK LIMT|MAX|MIN|OFF|ON [«value» [MS]]>`` <br/>``<C PROGBOOST>`` <br/>Modify System PROG track settings
 
 Serial commands to modify the system PROG track settings.
 
@@ -43,9 +43,11 @@ N/A
 
 * The Ack current limit is set according to the DCC standard(s) of 60mA. Most decoders send a quick back and forth current pulse to the motor to generate this ACK. However, some modern motors (N and Z scales) may not be able to draw that amount of current. You can adjust down this limit. Or, if for some reasons your acks seem to be too “trigger happy” you can make it less sensitive by raising this limit.
 * The NMRA specifies that the ACK pulse duration should be 6 milliseconds, which is 6000 microseconds (µS), give or take 1000 µS. That means the minimum pulse duration is 5000 µS and the maximum is 7000 µS. There are many poorly designed decoders in existence so DCC-EX extends this range from 4000 to 8500 µS. If you have any decoders that still do not function within this range, you can adjust the ACK MIN and ACK MAX parameters.
+
 * When reading/writing CVs, the program will try again upon failure. The default is ``<D ACK RETRY 2>``, which means 3 attempts before a failure is reported. Each of the unsuccessful attempts is reported in the Serial Monitor or JMRI monitor log. The last unsuccessful attempt remains on the display if in use. To reset the running total, send the command manually: ``<D ACK RETRY 2>``.
 
     When combined with the ``<D ACK ON>`` Command, the ``<R>`` Command (with or without parameters) can be used for diagnostics, for example when you get a “-1” response. (See Diagnosing Issues** for more help)
+
 * By default, the programming track has a current limit enabled of 250mA, so any programming activities requiring more than this value will cause power to the programming track to be cut for 100ms. Run this command to override this if programming decoders trigger current limiting on the programming track.
 
     When the programming track is switched on with ``<1>`` or ``<1 PROG>`` it will normally be restricted to 250mA according to NMRA standards. Some loco decoders require more than this, especially sound versions. ``<C PROGBOOST>`` temporarily removes this limit to allow the decoder to use more power. The normal limit will be re-imposed when the programming track is switched off with ``<0>`` or ``<0 PROG>`` or the Command Station is reset.
