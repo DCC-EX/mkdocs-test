@@ -21,7 +21,7 @@ tags:
 
 Serial command to Read and write CVs on the PROG track (Service mode) or on the MAIN track (PoM).
 
-## Command
+## Commands
 
 * ``R`` <br/>
 * ``r`` <br/>
@@ -39,7 +39,7 @@ Serial command to Read and write CVs on the PROG track (Service mode) or on the 
 * ``<R «cv»>`` Read cv
 * ``<R LOCOID>`` read loco id (ignoring consist) on PROG track
 * ``<R CONSIST>`` read consist id on PROG track
-* ``<r «loco» «cv»>`` POM read cv on main track - <span style="color:red">Requires RailCom</span>
+* ``<r «loco» «cv»>`` PoM read cv on MAIN track - <span style="color:red">Requires RailCom</span>
 * ``<V «cv» bit «bitValue»>`` Fast read bit with expected value
 * ``<V «cv» «value»>`` Fast read cv with expected value
 
@@ -50,14 +50,15 @@ Serial command to Read and write CVs on the PROG track (Service mode) or on the 
 * ``<W CONSIST «loco» REVERSE>`` Write consist address and reverse flag on PROG track
 * ``<W «cv» «value»>`` Write cv value on PROG track
 * ``<W «cv» «bitValue» «bit»>`` Write cv bit on prog track
-* ``<w «loco» «cv» «value»>`` POM write cv on main track
+* ``<w «loco» «cv» «value»>`` PoM write cv on MAIN track
 * ``<B «cv» «bitValue» «bit»>`` Write cv bit
-* ``<b «loco» «cv» «bitValue» «bit»>`` POM write cv bit on main track
+* ``<b «loco» «cv» «bitValue» «bit»>`` PoM write cv bit on MAIN track
 
 ## Parameters
 
-* **loco**: DCC address to read or change. This can be a long or short address.
-* **cv**: CV to read or change
+* **loco**: DCC address to read or change. <br/>This can be a long or short address.  See note below.
+* **cv**: CV to read or change <br/>
+Avoid writing CV1, CV17 & CV18 directly. Use the ``<W «loco»>`` command instead.
 * **value**: value to read or change the CV to
 * **bit**:  cv bit to read or change
 * **bitValue**: value to read or change the bit to - one of:
@@ -177,9 +178,14 @@ no response.
 
 ## *Notes*
 
-* IMPORTANT: If the loco is in a consist (CV19), the address returned by ``<R>`` will be the consist address, not the decoder address.
-* By design, for safety reasons, the NMRA specification prevents locos from responding to throttle or function commands while on the service track. A loco WILL NOT MOVE on the service track! Don’t let the little ‘jumps’ you may see when you are programming a CV confuse you. The loco pulses the motor to give a jump in current that we read as an ‘ACK’ (acknowledgment), that causes some locos to stutter ahead slightly every time you read or write a CV.
+* ``<W «address»>`` will write a short arddress (CV1) or long address (CV17 plus CV18) depending on the value entered.  It will also adjust CV29 automatically depending on whist address type is required.
+    * ``1``-``127`` will be a short address
+    * ``128``-``10293`` will be along address
+
+    Also note that addresses above ``9999`` cannont be used by *some* other command station brands. So if you plan to take your loco to other layouts it is recommended that you avoid the ``1000``-``10293`` (inclusive) range.
+* IMPORTANT: If the loco is in a consist (CV19), the address returned by ``<R>`` will be the consist address, not the decoder address. To always get the decoder address, use ``<R LOCOID>`` instead.
 * When combined with the ``<D ACK ON>`` Command, the ``<R>`` Command (with or without parameters) can be used for diagnostics, for example when you get a ``-1`` response.
+* By design, for safety reasons, the NMRA specification prevents locos from responding to throttle or function commands while on the service track. A loco WILL NOT MOVE on the service track! Don’t let the little ‘jumps’ you may see when you are programming a CV confuse you. The loco pulses the motor to give a jump in current that we read as an ‘ACK’ (acknowledgment), that causes some locos to stutter ahead slightly every time you read or write a CV.
 * the ``<V ..>`` commands are designed to offer faster verification of the value held in a CV and can be used instead of the ``<R>`` commands. Instead of reading a bit value, it compares the bit to an expected value. It will attempt to verify the value first, an if it is successful, will return the value as if it was simply 'read'. If the verify fails, it will perform a read bit command and return the value read.
 * ``<R cv callbacknum callbacksub>`` (Deprecated) read cv value on PROG track. Do not use. Not explained here
 * ``<W cv value callbacknum callbacksub>`` (Deprecated) Write cv value on PROG track. Do not use. Not explained here.
