@@ -3,7 +3,7 @@ tags:
   - 
 ---
 
-# ``<cmd «required parameter» [«optional parameter»]>`` <br/> Short command decription
+# <small>``<cmd «required parameter» [«optional parameter»]>``</small> <br/> Short command decription
 
 Serial command to ...
 

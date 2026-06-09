@@ -4,7 +4,7 @@ tags:
   - _J_R_id
 ---
 
-# ``<J R [«id»]>`` <br/>Request Roster info
+# <small>``<J R [«id»]>``</small> <br/>Request Roster info
 
 Serial command to request roster info.
 

@@ -11,7 +11,7 @@ tags:
     - _D_ACK_RETRY_value
 ---
 
-# ``<D ACK LIMT|MAX|MIN|OFF|ON [«value» [MS]]>`` <br/>``<C PROGBOOST>`` <br/>Modify System PROG track settings
+# <small>``<D ACK LIMIT|MAX|MIN|OFF|ON [«value» [MS]]>`` <br/>``<C PROGBOOST>``</small> <br/>Modify System PROG track settings
 
 Serial commands to modify the system PROG track settings.
 

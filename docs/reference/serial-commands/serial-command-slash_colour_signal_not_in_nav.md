@@ -5,7 +5,7 @@ tags:
   - _/_green_signal
 ---
 
-# ``</ «colour» «signal»>`` <br/> Set signal colour
+# <small>``</ «colour» «signal»>``</small> <br/> Set signal colour
 
 Serial command to set the colour of a signal.
 

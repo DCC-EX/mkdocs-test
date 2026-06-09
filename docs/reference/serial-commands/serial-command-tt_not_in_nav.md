@@ -16,7 +16,7 @@ tags:
   - _J_T_id
 ---
 
-# ``<T [«id»] [«various parameters»]>`` + <br/> ``<J T [«id»]>`` <br/>Define or manage Turnouts/Points
+# <small>``<T [«id»] [«various parameters»]>`` + <br/> ``<J T [«id»]>``</small> <br/>Define or manage Turnouts/Points
 
 Serial command to define or manage Turnouts/Points.
 
