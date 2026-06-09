@@ -3,6 +3,12 @@ tags:
   - 
 ---
 
+<style>
+  .md-typeset h1 {
+    line-height: 1.1 !important;
+  }
+</style>
+
 # <small>``<cmd «required parameter» [«optional parameter»]>``</small> <br/> Short command decription
 
 Serial command to ...

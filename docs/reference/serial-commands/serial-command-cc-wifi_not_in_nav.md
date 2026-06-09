@@ -14,7 +14,7 @@ tags:
 
 # <small>``<C WIFI ON|OFF|AP|HIDDENAP|TEMP|DEFAULT|HOSTNAME [«various parameters»]>``</small> <br/> Setup the WiFi
 
-Serial command to setup the WiFi on the EX-Command Stations.
+Serial commands to setup the WiFi on the EX-Command Stations.
 <span style="color:red">For EX-CSB1 and ESP32 based command stations only. Version 5.7.0 or later only.</span>
 
 ## Command

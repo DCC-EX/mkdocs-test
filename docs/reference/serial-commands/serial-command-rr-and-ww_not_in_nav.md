@@ -25,7 +25,7 @@ tags:
 
 # <small>``<R [«cv»|LOCOID|CONSIST]>`` <br/>``<r «loco» «cv»>`` <br/>``<W [«loco»]|[«cv» «value»]|[«loco» «cv» «bitValue» «bit»]|[CONSIST «loco» [REVERSE]]>`` <br/>``<V [«cv» «value»]|[«cv» «bit» «bitValue»]>`` <br/>``<B «cv» «bit» «bitValue»>`` <br/>``<b «loco» «cv» «bit» «bitValue»>``</small> <br/>Read and write CVs
 
-Serial command to Read and write CVs on the PROG track (Service mode) or on the MAIN track (PoM).
+Serial commands to Read and write CVs on the PROG track (Service mode) or on the MAIN track (PoM).
 
 ## Commands
 
@@ -189,12 +189,19 @@ no response.
     * ``128``-``10293`` will be along address
 
     Also note that addresses above ``9999`` cannont be used by *some* other command station brands. So if you plan to take your loco to other layouts it is recommended that you avoid the ``1000``-``10293`` (inclusive) range.
+
 * IMPORTANT: If the loco is in a consist (CV19), the address returned by ``<R>`` will be the consist address, not the decoder address. To always get the decoder address, use ``<R LOCOID>`` instead.
+
 * When combined with the ``<D ACK ON>`` Command, the ``<R>`` Command (with or without parameters) can be used for diagnostics, for example when you get a ``-1`` response.
+
 * By design, for safety reasons, the NMRA specification prevents locos from responding to throttle or function commands while on the service track. A loco WILL NOT MOVE on the service track! Don’t let the little ‘jumps’ you may see when you are programming a CV confuse you. The loco pulses the motor to give a jump in current that we read as an ‘ACK’ (acknowledgment), that causes some locos to stutter ahead slightly every time you read or write a CV.
+
 * the ``<V ..>`` commands are designed to offer faster verification of the value held in a CV and can be used instead of the ``<R>`` commands. Instead of reading a bit value, it compares the bit to an expected value. It will attempt to verify the value first, an if it is successful, will return the value as if it was simply 'read'. If the verify fails, it will perform a read bit command and return the value read.
+
 * ``<R cv callbacknum callbacksub>`` (Deprecated) read cv value on PROG track. Do not use. Not explained here
+
 * ``<W cv value callbacknum callbacksub>`` (Deprecated) Write cv value on PROG track. Do not use. Not explained here.
+
 * ``<B cv bit value callbacknum callbacksub>`` (Deprecated) Do not use. Not explained here.
 
 ----
