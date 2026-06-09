@@ -29,13 +29,13 @@ Serial command to Turn loco decoder functions ON or OFF or set the DC PWN freque
         * ==TODO== = High frequency - 3400Hz
         * ==TODO== = Supersonic - 62500Hz
 
-## *Response*
+## Response
 
 The following are not a direct response, but rather a broadcast that will be triggered as a result of any track manager changes.
 
 --8<-- "snippets/serial-commands/broadcast_l.md"
 
-## *Notes*
+## Notes
 
 * Setting requests are transmitted directly to mobile loco decoder.
 * Current state of loco functions (as known by commands issued since power on) is stored by the CommandStation - All functions within a group get set all at once per NMRA DCC standards.
@@ -45,16 +45,16 @@ The following are not a direct response, but rather a broadcast that will be tri
 
 ----
 
-## *Examples*
+## Examples
 
 [Also search for 'F'](?_F)
 
-### *Example Commands*
+### Example Commands
 
 * ``<F 3 0 1>`` Turns the headlight ON for CAB (loco address) 3
 * ``<F 126 0 0>`` Turns the headlight OFF for CAB 126
 * ``<F 1330 1 1>`` Turns the horn ON for CAB 1330
 
-### *Example Responses:*
+### Example Responses
 
 * ==TODO==

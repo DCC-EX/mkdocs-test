@@ -23,7 +23,7 @@ Serial command to Emergency stop all locos, pause all locos, or query the pause 
     * ``R`` = ESTOP resume paused layout
     * ``Q`` = query the ESTOP paused status
 
-## *Response*
+## Response
 
 The following are not a direct response, but rather a broadcast that will be triggered as a result of any track manager changes.
 
@@ -40,22 +40,22 @@ For ``<! R>``<br/>
 For ``<! Q>``<br/>
 ``<!PAUSED>`` or ``<!RESUMED>`` depending on the current status
 
-## *Notes*
+## Notes
 
 * any throttle apps and devices using the WiThrottle protocol will receive alterts with the pause is activated or deactivated
 
 ----
 
-## *Examples*
+## Examples
 
 [Also search for '!'](?_!)
 
-### *Example Commands*
+### Example Commands
 
 * ``<!>``  ESTOP all locos
 * ``<! P>`` Pause all locos
 
-### *Example Responses:*
+### Example Responses
 
 * TBA
 

@@ -28,7 +28,7 @@ Serial command to ...
 
 * ...
 
-## *Response*
+## Response
 
 The following are not a direct response, but rather a broadcast that will be triggered as a result of any track manager changes.
 
@@ -41,13 +41,13 @@ The following are not a direct response, but rather a broadcast that will be tri
     * ``option`` = explanation of option
     * ...
 
-## *Notes*
+## Notes
 
 * ...
 
 ----
 
-## *Examples*
+## Examples
 
 [Also search for 'xxx'](?_xxx)
 

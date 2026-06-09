@@ -71,7 +71,7 @@ Avoid writing CV1, CV17 & CV18 directly. Use the ``<W «loco»>`` command instea
     * ``1``
     * ``0``
 
-## *Response*
+## Response
 
 ### Reading CVs - Responses
 
@@ -135,7 +135,7 @@ Avoid writing CV1, CV17 & CV18 directly. Use the ``<W «loco»>`` command instea
 
 ### Writing CVs - Responses
 
-**Response to* ``<W «loco»>``:
+**Response to** ``<W «loco»>``:
 
 * ``<w «address»>``
     * ``w``: response/broadcast identifier
@@ -143,15 +143,15 @@ Avoid writing CV1, CV17 & CV18 directly. Use the ``<W «loco»>`` command instea
         * DCC Address of the decoder/loco. The short (1-127) or long (128-10293) address of the engine decoder
         * ``-1`` = failed read
 
-**Response to* ``<W CONSIST «loco»>``:
+**Response to** ``<W CONSIST «loco»>``:
 
 ==TODO==
 
-**Response to* ``<W CONSIST «loco» REVERSE>``:
+**Response to** ``<W CONSIST «loco» REVERSE>``:
 
 ==TODO==
 
-**Response to* ``<W «cv» «value»>``:
+**Response to** ``<W «cv» «value»>``:
 
 * ``<w «cv» «value»>``
     * ``w``: response/broadcast identifier
@@ -160,15 +160,15 @@ Avoid writing CV1, CV17 & CV18 directly. Use the ``<W «loco»>`` command instea
         * the value of the CV written/read
         * ``-1`` = failed read
 
-**Response to* ``<W «cv» «bitValue» «bit»>``:
+**Response to** ``<W «cv» «bitValue» «bit»>``:
 
 ==TODO==
 
-**Response to* ``<w «loco» «cv» «value»>``:
+**Response to** ``<w «loco» «cv» «value»>``:
 
 no response.
 
-**Response to* ``<B «cv» «bitValue» «bit»>``:
+**Response to** ``<B «cv» «bitValue» «bit»>``:
 
 * ``<w «cv» «value»>``
     * ``w``: response/broadcast identifier
@@ -178,11 +178,11 @@ no response.
         * the value of the bit written/read ``0``|``1``
         * ``-1`` = failed read
 
-**Response to* ``<b «loco» «cv» «bitValue» «bit»>``:
+**Response to** ``<b «loco» «cv» «bitValue» «bit»>``:
 
 ==TODO==
 
-## *Notes*
+## Notes
 
 * ``<W «address»>`` will write a short arddress (CV1) or long address (CV17 plus CV18) depending on the value entered.  It will also adjust CV29 automatically depending on whist address type is required.
     * ``1``-``127`` will be a short address
@@ -206,11 +206,11 @@ no response.
 
 ----
 
-## *Examples*
+## Examples
 
 [Also search for 'R'](?_R) or [search for 'W'](?_W)
 
-### *Example Commands*
+### Example Commands
 
 * Read loco address on PROG track: ``<R>``
 * Read cv 4 on PROG track: ``<R 4>``
@@ -218,7 +218,7 @@ no response.
 * Read loco consist (CV19) address on PROG track: ``<R CONSIST>``
 * ==TODO==
 
-### *Example Responses:*
+### Example Responses
 
 * read address on PROG track (successful): ``<r 3>``
 * read address on PROG track (fail): ``<r -1>``

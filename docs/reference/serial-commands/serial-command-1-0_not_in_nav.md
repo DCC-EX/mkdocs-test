@@ -30,7 +30,7 @@ Serial command to turn power on or off to all or specific tracks.  Also allows j
     * ``JOIN`` = Join the Main and Programming tracks temporarily <br/>Note: While ``<1 JOIN>`` is valid, ``<0 JOIN>`` is not.
     * ``A`` through ``H`` representing one of the outputs of the/a motor shield.
 
-## *Response*
+## Response
 
 The following is not a direct response, but rather a broadcast that will be triggered as a result of any power state changes.
 
@@ -40,7 +40,7 @@ The following is not a direct response, but rather a broadcast that will be trig
     * **onOff** = one of: ``1`` = On or ``0`` = off
     * **track** = balnk = all tracks <br/> or one of ``A`` through ``H`` representing one of the outputs of the/a motor shield.
 
-## *Notes*
+## Notes
 
 * The use of the JOIN function allows the DCC signal for the MAIN track to also be sent to the PROG track. This allows the prog track to act as a siding (or similar) in the main layout even though it is isolated electrically and connected to the programming track output.
   
@@ -53,17 +53,17 @@ The following is not a direct response, but rather a broadcast that will be trig
 
 ----
 
-## *Examples*
+## Examples
 
 [Also search for `!`](?_1) or [search for !](?_0)
 
-### *Example Commands*
+### Example Commands
 
 * all tracks off: ``<0>``
 * all tracks on ``<1>``
 * join: ``<1 JOIN>``
 
-### *Example Responses:*
+### Example Responses
 
 * all tracks off: ``<p0>``
 * all tracks on ``<p1>``

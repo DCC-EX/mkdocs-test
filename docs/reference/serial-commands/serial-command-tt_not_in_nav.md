@@ -65,7 +65,7 @@ Serial commands to define or manage Turnouts/Points.
     * ``Slow``
     * ``Bounce``
 
-## *Response*
+## Response
 
 The following are not a direct response, but rather a broadcast that will be triggered as a result of any track manager changes.
 
@@ -130,7 +130,7 @@ The response will be:
 * (fail): ``<X>``  (Id does not exist)
     * **id**: The numeric ID (0-32767) of the turnout/point to control.
 
-## *Notes*
+## Notes
 
 * *Servos are not supported on the minimal HAL (Uno or Nano target).*<br/><br/>
 * The active and inactive positions are defined in terms of the PWM parameter (0-4095 corresponds to 0-100% PWM). The limits for an SG90 servo are about 102 to 490. The standard range of 1ms to 2ms pulses correspond to values 205 to 409.
@@ -141,11 +141,11 @@ Profile defines the speed and style of movement: 0=Instant, 1=Fast (0.5 sec), 2=
 
 ----
 
-## *Examples*
+## Examples
 
 [Also search for 'T'](?_T)
 
-### *Example Commands*
+### Example Commands
 
 * *Example:* ``<T 23 DCC 5 0>``
 
@@ -163,6 +163,6 @@ Profile defines the speed and style of movement: 0=Instant, 1=Fast (0.5 sec), 2=
 * *Example:* ``<T 25 VPIN 30>`` defines a turnout/point that operates Arduino digital output pin D30.
 * *Example:* ``<T 26 VPIN 164>`` defines a turnout/point that operates the first pin on the first MCP23017 GPIO expander (if present).
 
-### *Example Responses:*
+### Example Responses
 
 * ==TODO==

@@ -52,11 +52,11 @@ See the [WiFi Configuration for version 5.7.0+](https://dcc-ex.com/ex-commandsta
 
 * **hostname**: the name that appears in your Throttle app, once you have connected to the appropriate network (ssid) for the Command Station.
 
-## *Response*
+## Response
 
 N/A. The command station will restart.
 
-## *Notes*
+## Notes
 
 * In every case above, the Command Station will restart to apply the new settings. You will need to reconnect to the Command Station with whatever interface you are using.
 * Only Station (STA) mode and the HOSTNAME can be changed over WiFi.
@@ -71,15 +71,15 @@ N/A. The command station will restart.
 
 ----
 
-## *Examples*
+## Examples
 
 [Also search for 'WiFi'](?_wifi)
 
-### *Example Commands*
+### Example Commands
 
 * See [WiFi configuration](../../products/ex-commandstation/config-wifi-esp32.md)
 * See [WiFi Configuration for version 5.7.0+](https://dcc-ex.com/ex-commandstation/advanced-setup/supported-wifi/wifi-config_v5_7.html)
 
-### *Example Responses:*
+### Example Responses
 
 N/A
