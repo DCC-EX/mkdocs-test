@@ -7211,7 +7211,7 @@
           <li class="md-nav__item">
   <a href="#example-responses" class="md-nav__link">
     <span class="md-ellipsis">
-      Example Responses:
+      Example Responses
     </span>
   </a>
   
@@ -7250,7 +7250,7 @@
 </style>
 
 <h1 id="r-cvlocoidconsist-r-loco-cv-w-lococv-valueloco-cv-bitvalue-bitconsist-loco-reverse-v-cv-valuecv-bit-bitvalue-b-cv-bit-bitvalue-b-loco-cv-bit-bitvalue-read-and-write-cvs"><small><code>&lt;R [«cv»|LOCOID|CONSIST]&gt;</code> <br/><code>&lt;r «loco» «cv»&gt;</code> <br/><code>&lt;W [«loco»]|[«cv» «value»]|[«loco» «cv» «bitValue» «bit»]|[CONSIST «loco» [REVERSE]]&gt;</code> <br/><code>&lt;V [«cv» «value»]|[«cv» «bit» «bitValue»]&gt;</code> <br/><code>&lt;B «cv» «bit» «bitValue»&gt;</code> <br/><code>&lt;b «loco» «cv» «bit» «bitValue»&gt;</code></small> <br/>Read and write CVs<a class="headerlink" href="#r-cvlocoidconsist-r-loco-cv-w-lococv-valueloco-cv-bitvalue-bitconsist-loco-reverse-v-cv-valuecv-bit-bitvalue-b-cv-bit-bitvalue-b-loco-cv-bit-bitvalue-read-and-write-cvs" title="Permanent link">&para;</a></h1>
-<p>Serial command to Read and write CVs on the PROG track (Service mode) or on the MAIN track (PoM).</p>
+<p>Serial commands to Read and write CVs on the PROG track (Service mode) or on the MAIN track (PoM).</p>
 <h2 id="commands">Commands<a class="headerlink" href="#commands" title="Permanent link">&para;</a></h2>
 <ul>
 <li><code>R</code> <br/></li>
@@ -7296,7 +7296,7 @@ Avoid writing CV1, CV17 &amp; CV18 directly. Use the <code>&lt;W «loco»&gt;</c
 </ul>
 </li>
 </ul>
-<h2 id="response"><em>Response</em><a class="headerlink" href="#response" title="Permanent link">&para;</a></h2>
+<h2 id="response">Response<a class="headerlink" href="#response" title="Permanent link">&para;</a></h2>
 <h3 id="reading-cvs-responses">Reading CVs - Responses<a class="headerlink" href="#reading-cvs-responses" title="Permanent link">&para;</a></h3>
 <p><strong>Response to</strong> <code>&lt;R&gt;</code>:</p>
 <ul>
@@ -7379,7 +7379,7 @@ Avoid writing CV1, CV17 &amp; CV18 directly. Use the <code>&lt;W «loco»&gt;</c
 <p><strong>Response to</strong> <code>&lt;r «loco» «cv»&gt;</code></p>
 <p><mark>TODO</mark></p>
 <h3 id="writing-cvs-responses">Writing CVs - Responses<a class="headerlink" href="#writing-cvs-responses" title="Permanent link">&para;</a></h3>
-<p>*<em>Response to</em> <code>&lt;W «loco»&gt;</code>:</p>
+<p><strong>Response to</strong> <code>&lt;W «loco»&gt;</code>:</p>
 <ul>
 <li><code>&lt;w «address»&gt;</code><ul>
 <li><code>w</code>: response/broadcast identifier</li>
@@ -7391,11 +7391,11 @@ Avoid writing CV1, CV17 &amp; CV18 directly. Use the <code>&lt;W «loco»&gt;</c
 </ul>
 </li>
 </ul>
-<p>*<em>Response to</em> <code>&lt;W CONSIST «loco»&gt;</code>:</p>
+<p><strong>Response to</strong> <code>&lt;W CONSIST «loco»&gt;</code>:</p>
 <p><mark>TODO</mark></p>
-<p>*<em>Response to</em> <code>&lt;W CONSIST «loco» REVERSE&gt;</code>:</p>
+<p><strong>Response to</strong> <code>&lt;W CONSIST «loco» REVERSE&gt;</code>:</p>
 <p><mark>TODO</mark></p>
-<p>*<em>Response to</em> <code>&lt;W «cv» «value»&gt;</code>:</p>
+<p><strong>Response to</strong> <code>&lt;W «cv» «value»&gt;</code>:</p>
 <ul>
 <li><code>&lt;w «cv» «value»&gt;</code><ul>
 <li><code>w</code>: response/broadcast identifier</li>
@@ -7408,11 +7408,11 @@ Avoid writing CV1, CV17 &amp; CV18 directly. Use the <code>&lt;W «loco»&gt;</c
 </ul>
 </li>
 </ul>
-<p>*<em>Response to</em> <code>&lt;W «cv» «bitValue» «bit»&gt;</code>:</p>
+<p><strong>Response to</strong> <code>&lt;W «cv» «bitValue» «bit»&gt;</code>:</p>
 <p><mark>TODO</mark></p>
-<p>*<em>Response to</em> <code>&lt;w «loco» «cv» «value»&gt;</code>:</p>
+<p><strong>Response to</strong> <code>&lt;w «loco» «cv» «value»&gt;</code>:</p>
 <p>no response.</p>
-<p>*<em>Response to</em> <code>&lt;B «cv» «bitValue» «bit»&gt;</code>:</p>
+<p><strong>Response to</strong> <code>&lt;B «cv» «bitValue» «bit»&gt;</code>:</p>
 <ul>
 <li><code>&lt;w «cv» «value»&gt;</code><ul>
 <li><code>w</code>: response/broadcast identifier</li>
@@ -7426,9 +7426,9 @@ Avoid writing CV1, CV17 &amp; CV18 directly. Use the <code>&lt;W «loco»&gt;</c
 </ul>
 </li>
 </ul>
-<p>*<em>Response to</em> <code>&lt;b «loco» «cv» «bitValue» «bit»&gt;</code>:</p>
+<p><strong>Response to</strong> <code>&lt;b «loco» «cv» «bitValue» «bit»&gt;</code>:</p>
 <p><mark>TODO</mark></p>
-<h2 id="notes"><em>Notes</em><a class="headerlink" href="#notes" title="Permanent link">&para;</a></h2>
+<h2 id="notes">Notes<a class="headerlink" href="#notes" title="Permanent link">&para;</a></h2>
 <ul>
 <li>
 <p><code>&lt;W «address»&gt;</code> will write a short arddress (CV1) or long address (CV17 plus CV18) depending on the value entered.  It will also adjust CV29 automatically depending on whist address type is required.</p>
@@ -7436,20 +7436,34 @@ Avoid writing CV1, CV17 &amp; CV18 directly. Use the <code>&lt;W «loco»&gt;</c
 <li><code>1</code>-<code>127</code> will be a short address</li>
 <li><code>128</code>-<code>10293</code> will be along address</li>
 </ul>
-<p>Also note that addresses above <code>9999</code> cannont be used by <em>some</em> other command station brands. So if you plan to take your loco to other layouts it is recommended that you avoid the <code>1000</code>-<code>10293</code> (inclusive) range.
-* IMPORTANT: If the loco is in a consist (CV19), the address returned by <code>&lt;R&gt;</code> will be the consist address, not the decoder address. To always get the decoder address, use <code>&lt;R LOCOID&gt;</code> instead.
-* When combined with the <code>&lt;D ACK ON&gt;</code> Command, the <code>&lt;R&gt;</code> Command (with or without parameters) can be used for diagnostics, for example when you get a <code>-1</code> response.
-* By design, for safety reasons, the NMRA specification prevents locos from responding to throttle or function commands while on the service track. A loco WILL NOT MOVE on the service track! Don’t let the little ‘jumps’ you may see when you are programming a CV confuse you. The loco pulses the motor to give a jump in current that we read as an ‘ACK’ (acknowledgment), that causes some locos to stutter ahead slightly every time you read or write a CV.
-* the <code>&lt;V ..&gt;</code> commands are designed to offer faster verification of the value held in a CV and can be used instead of the <code>&lt;R&gt;</code> commands. Instead of reading a bit value, it compares the bit to an expected value. It will attempt to verify the value first, an if it is successful, will return the value as if it was simply 'read'. If the verify fails, it will perform a read bit command and return the value read.
-* <code>&lt;R cv callbacknum callbacksub&gt;</code> (Deprecated) read cv value on PROG track. Do not use. Not explained here
-* <code>&lt;W cv value callbacknum callbacksub&gt;</code> (Deprecated) Write cv value on PROG track. Do not use. Not explained here.
-* <code>&lt;B cv bit value callbacknum callbacksub&gt;</code> (Deprecated) Do not use. Not explained here.</p>
+<p>Also note that addresses above <code>9999</code> cannont be used by <em>some</em> other command station brands. So if you plan to take your loco to other layouts it is recommended that you avoid the <code>1000</code>-<code>10293</code> (inclusive) range.</p>
+</li>
+<li>
+<p>IMPORTANT: If the loco is in a consist (CV19), the address returned by <code>&lt;R&gt;</code> will be the consist address, not the decoder address. To always get the decoder address, use <code>&lt;R LOCOID&gt;</code> instead.</p>
+</li>
+<li>
+<p>When combined with the <code>&lt;D ACK ON&gt;</code> Command, the <code>&lt;R&gt;</code> Command (with or without parameters) can be used for diagnostics, for example when you get a <code>-1</code> response.</p>
+</li>
+<li>
+<p>By design, for safety reasons, the NMRA specification prevents locos from responding to throttle or function commands while on the service track. A loco WILL NOT MOVE on the service track! Don’t let the little ‘jumps’ you may see when you are programming a CV confuse you. The loco pulses the motor to give a jump in current that we read as an ‘ACK’ (acknowledgment), that causes some locos to stutter ahead slightly every time you read or write a CV.</p>
+</li>
+<li>
+<p>the <code>&lt;V ..&gt;</code> commands are designed to offer faster verification of the value held in a CV and can be used instead of the <code>&lt;R&gt;</code> commands. Instead of reading a bit value, it compares the bit to an expected value. It will attempt to verify the value first, an if it is successful, will return the value as if it was simply 'read'. If the verify fails, it will perform a read bit command and return the value read.</p>
+</li>
+<li>
+<p><code>&lt;R cv callbacknum callbacksub&gt;</code> (Deprecated) read cv value on PROG track. Do not use. Not explained here</p>
+</li>
+<li>
+<p><code>&lt;W cv value callbacknum callbacksub&gt;</code> (Deprecated) Write cv value on PROG track. Do not use. Not explained here.</p>
+</li>
+<li>
+<p><code>&lt;B cv bit value callbacknum callbacksub&gt;</code> (Deprecated) Do not use. Not explained here.</p>
 </li>
 </ul>
 <hr />
-<h2 id="examples"><em>Examples</em><a class="headerlink" href="#examples" title="Permanent link">&para;</a></h2>
+<h2 id="examples">Examples<a class="headerlink" href="#examples" title="Permanent link">&para;</a></h2>
 <p><a href="?_R">Also search for 'R'</a> or <a href="?_W">search for 'W'</a></p>
-<h3 id="example-commands"><em>Example Commands</em><a class="headerlink" href="#example-commands" title="Permanent link">&para;</a></h3>
+<h3 id="example-commands">Example Commands<a class="headerlink" href="#example-commands" title="Permanent link">&para;</a></h3>
 <ul>
 <li>Read loco address on PROG track: <code>&lt;R&gt;</code></li>
 <li>Read cv 4 on PROG track: <code>&lt;R 4&gt;</code></li>
@@ -7457,7 +7471,7 @@ Avoid writing CV1, CV17 &amp; CV18 directly. Use the <code>&lt;W «loco»&gt;</c
 <li>Read loco consist (CV19) address on PROG track: <code>&lt;R CONSIST&gt;</code></li>
 <li><mark>TODO</mark></li>
 </ul>
-<h3 id="example-responses"><em>Example Responses:</em><a class="headerlink" href="#example-responses" title="Permanent link">&para;</a></h3>
+<h3 id="example-responses">Example Responses<a class="headerlink" href="#example-responses" title="Permanent link">&para;</a></h3>
 <ul>
 <li>read address on PROG track (successful): <code>&lt;r 3&gt;</code></li>
 <li>read address on PROG track (fail): <code>&lt;r -1&gt;</code></li>
@@ -7484,7 +7498,7 @@ Avoid writing CV1, CV17 &amp; CV18 directly. Use the <code>&lt;W «loco»&gt;</c
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 9, 2026 00:54:05 UTC">June 9, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 9, 2026 09:20:56 UTC">June 9, 2026</span>
   </span>
 
     
