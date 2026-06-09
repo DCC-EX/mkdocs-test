@@ -46,7 +46,7 @@ tags:
 | **v[#]** | **`<Nv[ #]>`**  | **Version [or Video webCAM SSID #]**<br>Displays EX-SensorCAM version info [v# starts SSID # webCAM]
 | **w**  | **`<Nw>`**  | **Wait for command. &nbsp; (NOTE: 't1' alternative action)**<br>Cam suspends image capture and scrolling and waits for an 'Enter'
 | **x &nbsp; y &nbsp; z**  | `<n/a>`  | **Reserved commands for image transfer management**<br>Sends binary data to USB port for Processing4 (X Y Z) image delivery
-| n/a  | **`<N>`** | **Current CAM selection and availability (CS only)**<br>Shows the currently selected CAM and the options available 
+| n/a  | **`<N>`** | **Current CAM selection and availability (CS only)**<br>Shows the currently selected CAM No. and the options available 
 | n/a | **`<NC ###>`**  | **CAM selection**<br>Switches commands to the CAM at vpin ### or CAM number #(1-4)
 | n/a  | **`<NQ>`**  | **Query state of all Sensors**<br>Tabulation of all sensor tripped states in banks of 8
 | **F**  | **`<NF>`**  |  **Forces immediate CAM reset**<br>Reset into EX-SensorCAM mode, exting any webCAM/WiFi mode
