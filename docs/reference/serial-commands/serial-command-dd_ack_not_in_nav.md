@@ -37,11 +37,11 @@ Serial commands to modify the system PROG track settings.
 
     For time base commands values are in microseconds (µS) unless the parameter ``MS`` is added, in which case the value will be in milliseconds (ms).
 
-## *Response*
+## Response
 
 N/A
 
-## *Notes*
+## Notes
 
 * The Ack current limit is set according to the DCC standard(s) of 60mA. Most decoders send a quick back and forth current pulse to the motor to generate this ACK. However, some modern motors (N and Z scales) may not be able to draw that amount of current. You can adjust down this limit. Or, if for some reasons your acks seem to be too “trigger happy” you can make it less sensitive by raising this limit.
 
@@ -57,15 +57,15 @@ N/A
 
 ----
 
-## *Examples*
+## Examples
 
 [Also search for `D ACK`](?_D_ACK)
 
-### *Example Commands*
+### Example Commands
 
 ==TODO==
 
-### *Example Responses:*
+### Example Responses
 
 ==TODO==
 

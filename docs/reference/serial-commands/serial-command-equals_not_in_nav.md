@@ -44,7 +44,7 @@ Serial command to request infomation about the mode of all tracks or alter the m
 
 * **id** the cab (loco) ID. *Required when specifying DC or DC_INV / DCX*
 
-## *Response*
+## Response
 
 The following are not a direct response, but rather a broadcast that will be triggered as a result of any track manager changes.
 
@@ -55,7 +55,7 @@ The following are not a direct response, but rather a broadcast that will be tri
 * **state**: ``PROG``, ``MAIN``, ``MAIN_INV``, ``MAIN A``, ``DC``, ``DCX``, ``NONE``
 * **id**: cab(loco) equivalent to a fake DCC Address for DC and DCX only
 
-## *Notes*
+## Notes
 
 * Whenever a track's mode is changed, track power is automatically turned off on that track.
 * Since only one channel can be ``PROG``, changing a second channel to ``PROG``, will force the other to ``NONE``
@@ -64,17 +64,17 @@ The following are not a direct response, but rather a broadcast that will be tri
 
 ----
 
-## *Examples*
+## Examples
 
 [Also search for '='](?_equals)
 
-### *Example Commands*
+### Example Commands
 
 * Request track status ``<=>``
 * Set track A to DC with address 10 ``<= A 10>``
 * TBA
 
-### *Example Responses:*
+### Example Responses
 
 * Response/broadcast to track status for a default EX-CommandStation<br/> ``<= A MAIN>``<br/>``<= B PROG>``
 * Response/broadcast to setting track *A* to *DC* with address 10<BR/>``<= A 10>``<br/>``<= B PROG>``<br/>``<p1 A>``<br/>``<p0 B>``

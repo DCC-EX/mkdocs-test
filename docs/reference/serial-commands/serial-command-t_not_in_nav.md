@@ -26,13 +26,13 @@ Serial command to request information about a loco or set its speed and directio
             * ``1`` = forward
             * ``0`` = reverse
 
-## *Response*
+## Response
 
 The following are not a direct response, but rather a broadcast that will be triggered as a result of any track manager changes.
 
 --8<-- "snippets/serial-commands/broadcast_l.md"
 
-## *Notes*
+## Notes
 
 * The speedbyte value is different to the speed sent, as it is an encoded (1,7 bits) byte.
 * This starts a reminder process for any external updates to the loco's status.
@@ -40,14 +40,14 @@ The following are not a direct response, but rather a broadcast that will be tri
 
 ----
 
-## *Examples*
+## Examples
 
 [Also search for 'T'](?_T)
 
-### *Example Commands*
+### Example Commands
 
 * ==TODO==
 
-### *Example Responses:*
+### Example Responses
 
 * ==TODO==

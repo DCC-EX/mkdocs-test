@@ -262,7 +262,7 @@
 
 .md-typeset h2 {
   font-family: Roboto,Helvetica,Arial,sans-serif !important;
-  font-weight: 600 !important;
+  font-weight: 800 !important;
   font-size: 140% !important;
   color: var(--md-default-fg-color--dark);
 }
@@ -277,15 +277,16 @@
 
 .md-typeset h4 {
   font-family: Roboto,Helvetica,Arial,sans-serif !important;
-  font-weight: 600 !important;
+  font-weight: 500 !important;
   font-size: 110% !important;
   color: var(--md-default-fg-color--dark);
 }
 
 .md-typeset h5 {
   font-family: Roboto,Helvetica,Arial,sans-serif !important;
-  font-weight: 600 !important;
+  font-weight: 400 !important;
   font-size: 100% !important;
+  font-style: italic !important;
   color: var(--md-default-fg-color--dark);
 }
 

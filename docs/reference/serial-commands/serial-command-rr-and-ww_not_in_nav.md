@@ -25,7 +25,7 @@ tags:
 
 # <small>``<R [«cv»|LOCOID|CONSIST]>`` <br/>``<r «loco» «cv»>`` <br/>``<W [«loco»]|[«cv» «value»]|[«loco» «cv» «bitValue» «bit»]|[CONSIST «loco» [REVERSE]]>`` <br/>``<V [«cv» «value»]|[«cv» «bit» «bitValue»]>`` <br/>``<B «cv» «bit» «bitValue»>`` <br/>``<b «loco» «cv» «bit» «bitValue»>``</small> <br/>Read and write CVs
 
-Serial command to Read and write CVs on the PROG track (Service mode) or on the MAIN track (PoM).
+Serial commands to Read and write CVs on the PROG track (Service mode) or on the MAIN track (PoM).
 
 ## Commands
 
@@ -71,7 +71,7 @@ Avoid writing CV1, CV17 & CV18 directly. Use the ``<W «loco»>`` command instea
     * ``1``
     * ``0``
 
-## *Response*
+## Response
 
 ### Reading CVs - Responses
 
@@ -135,7 +135,7 @@ Avoid writing CV1, CV17 & CV18 directly. Use the ``<W «loco»>`` command instea
 
 ### Writing CVs - Responses
 
-**Response to* ``<W «loco»>``:
+**Response to** ``<W «loco»>``:
 
 * ``<w «address»>``
     * ``w``: response/broadcast identifier
@@ -143,15 +143,15 @@ Avoid writing CV1, CV17 & CV18 directly. Use the ``<W «loco»>`` command instea
         * DCC Address of the decoder/loco. The short (1-127) or long (128-10293) address of the engine decoder
         * ``-1`` = failed read
 
-**Response to* ``<W CONSIST «loco»>``:
+**Response to** ``<W CONSIST «loco»>``:
 
 ==TODO==
 
-**Response to* ``<W CONSIST «loco» REVERSE>``:
+**Response to** ``<W CONSIST «loco» REVERSE>``:
 
 ==TODO==
 
-**Response to* ``<W «cv» «value»>``:
+**Response to** ``<W «cv» «value»>``:
 
 * ``<w «cv» «value»>``
     * ``w``: response/broadcast identifier
@@ -160,15 +160,15 @@ Avoid writing CV1, CV17 & CV18 directly. Use the ``<W «loco»>`` command instea
         * the value of the CV written/read
         * ``-1`` = failed read
 
-**Response to* ``<W «cv» «bitValue» «bit»>``:
+**Response to** ``<W «cv» «bitValue» «bit»>``:
 
 ==TODO==
 
-**Response to* ``<w «loco» «cv» «value»>``:
+**Response to** ``<w «loco» «cv» «value»>``:
 
 no response.
 
-**Response to* ``<B «cv» «bitValue» «bit»>``:
+**Response to** ``<B «cv» «bitValue» «bit»>``:
 
 * ``<w «cv» «value»>``
     * ``w``: response/broadcast identifier
@@ -178,32 +178,39 @@ no response.
         * the value of the bit written/read ``0``|``1``
         * ``-1`` = failed read
 
-**Response to* ``<b «loco» «cv» «bitValue» «bit»>``:
+**Response to** ``<b «loco» «cv» «bitValue» «bit»>``:
 
 ==TODO==
 
-## *Notes*
+## Notes
 
 * ``<W «address»>`` will write a short arddress (CV1) or long address (CV17 plus CV18) depending on the value entered.  It will also adjust CV29 automatically depending on whist address type is required.
     * ``1``-``127`` will be a short address
     * ``128``-``10293`` will be along address
 
     Also note that addresses above ``9999`` cannont be used by *some* other command station brands. So if you plan to take your loco to other layouts it is recommended that you avoid the ``1000``-``10293`` (inclusive) range.
+
 * IMPORTANT: If the loco is in a consist (CV19), the address returned by ``<R>`` will be the consist address, not the decoder address. To always get the decoder address, use ``<R LOCOID>`` instead.
+
 * When combined with the ``<D ACK ON>`` Command, the ``<R>`` Command (with or without parameters) can be used for diagnostics, for example when you get a ``-1`` response.
+
 * By design, for safety reasons, the NMRA specification prevents locos from responding to throttle or function commands while on the service track. A loco WILL NOT MOVE on the service track! Don’t let the little ‘jumps’ you may see when you are programming a CV confuse you. The loco pulses the motor to give a jump in current that we read as an ‘ACK’ (acknowledgment), that causes some locos to stutter ahead slightly every time you read or write a CV.
+
 * the ``<V ..>`` commands are designed to offer faster verification of the value held in a CV and can be used instead of the ``<R>`` commands. Instead of reading a bit value, it compares the bit to an expected value. It will attempt to verify the value first, an if it is successful, will return the value as if it was simply 'read'. If the verify fails, it will perform a read bit command and return the value read.
+
 * ``<R cv callbacknum callbacksub>`` (Deprecated) read cv value on PROG track. Do not use. Not explained here
+
 * ``<W cv value callbacknum callbacksub>`` (Deprecated) Write cv value on PROG track. Do not use. Not explained here.
+
 * ``<B cv bit value callbacknum callbacksub>`` (Deprecated) Do not use. Not explained here.
 
 ----
 
-## *Examples*
+## Examples
 
 [Also search for 'R'](?_R) or [search for 'W'](?_W)
 
-### *Example Commands*
+### Example Commands
 
 * Read loco address on PROG track: ``<R>``
 * Read cv 4 on PROG track: ``<R 4>``
@@ -211,7 +218,7 @@ no response.
 * Read loco consist (CV19) address on PROG track: ``<R CONSIST>``
 * ==TODO==
 
-### *Example Responses:*
+### Example Responses
 
 * read address on PROG track (successful): ``<r 3>``
 * read address on PROG track (fail): ``<r -1>``
