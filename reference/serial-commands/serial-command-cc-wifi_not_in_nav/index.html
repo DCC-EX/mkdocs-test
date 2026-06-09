@@ -7198,8 +7198,6 @@
 <h1 id="c-wifi-onoffaphiddenaptempdefaulthostname-various-parameters-setup-the-wifi"><small><code>&lt;C WIFI ON|OFF|AP|HIDDENAP|TEMP|DEFAULT|HOSTNAME [«various parameters»]&gt;</code></small> <br/> Setup the WiFi<a class="headerlink" href="#c-wifi-onoffaphiddenaptempdefaulthostname-various-parameters-setup-the-wifi" title="Permanent link">&para;</a></h1>
 <p>Serial command to setup the WiFi on the EX-Command Stations.
 <span style="color:red">For EX-CSB1 and ESP32 based command stations only. Version 5.7.0 or later only.</span></p>
-<p>See <a href="../../../products/ex-commandstation/config-wifi-esp32/">WiFi configuration</a> for more infomation on these commands.</p>
-<p>See the <a href="https://dcc-ex.com/ex-commandstation/advanced-setup/supported-wifi/wifi-config_v5_7.html">WiFi Configuration for version 5.7.0+</a> page on the old web site for detailed instructions on how, and why, to change these settings using EX-WebThrottle or EX-Toolbox.</p>
 <h2 id="command">Command<a class="headerlink" href="#command" title="Permanent link">&para;</a></h2>
 <ul>
 <li><code>/ WIFI</code></li>
@@ -7209,16 +7207,18 @@
 <li><code>&lt;C WIFI "«ssid»" "«password»"&gt;</code> set Wifi ssid and password - Station Mode (STA)</li>
 <li><code>&lt;C WIFI TEMP "«ssid»" "«password»"&gt;</code> set Wifi ssid and password temporarily - Station Mode (STA)</li>
 <li><code>&lt;C WIFI AP "«ssid»" "«password»" [«channel»]&gt;</code> set Wifi to Access Point mode (AP) with given ssid and password</li>
-<li><code>&lt;C WIFI HIDDENAP "«ssid»" "«password»" [«channel»]&gt;</code> set Wifi to Access Point mode (AP) with given ssid and password, but not advertised</li>
+<li><code>&lt;C WIFI HIDDENAP "«ssid»" "«password»" [«channel»]&gt;</code> set Wifi to Access Point mode (AP) with given ssid and password, but not advertised (hidden)</li>
 <li><code>&lt;C WIFI HOSTNAME "«hostname»"&gt;</code> set Wifi hostname</li>
 <li><code>&lt;C WIFI DEFAULT&gt;</code> set Wifi to default credentials</li>
 <li><code>&lt;C WIFI OFF&gt;</code> Disable Wifi</li>
 <li><code>&lt;C WIFI ON&gt;</code> Enable Wifi</li>
 </ul>
+<p>See <a href="../../../products/ex-commandstation/config-wifi-esp32/">WiFi configuration</a> for more infomation on these commands.</p>
+<p>See the <a href="https://dcc-ex.com/ex-commandstation/advanced-setup/supported-wifi/wifi-config_v5_7.html">WiFi Configuration for version 5.7.0+</a> page on the old web site for detailed instructions on how, and why, to change these settings using EX-WebThrottle or EX-Toolbox.</p>
 <h2 id="parameters">Parameters<a class="headerlink" href="#parameters" title="Permanent link">&para;</a></h2>
 <ul>
 <li>
-<p><strong>ssid</strong>: ssid to set the command station to use (AP) or connect to (STA). Must be in quotes.</p>
+<p><strong>ssid</strong>: ssid (network name) to set the command station to use (AP) or connect to (STA). Must be in quotes.</p>
 <p>Recommend that you avoid space characters in the ssid.</p>
 </li>
 <li>
@@ -7279,7 +7279,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 8, 2026 23:55:47 UTC">June 8, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 9, 2026 00:15:46 UTC">June 9, 2026</span>
   </span>
 
     
