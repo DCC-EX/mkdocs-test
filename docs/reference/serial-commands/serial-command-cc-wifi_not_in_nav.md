@@ -17,10 +17,6 @@ tags:
 Serial command to setup the WiFi on the EX-Command Stations.
 <span style="color:red">For EX-CSB1 and ESP32 based command stations only. Version 5.7.0 or later only.</span>
 
-See [WiFi configuration](../../products/ex-commandstation/config-wifi-esp32.md) for more infomation on these commands.
-
-See the [WiFi Configuration for version 5.7.0+](https://dcc-ex.com/ex-commandstation/advanced-setup/supported-wifi/wifi-config_v5_7.html) page on the old web site for detailed instructions on how, and why, to change these settings using EX-WebThrottle or EX-Toolbox.
-
 ## Command
 
 * ``/ WIFI``
@@ -30,15 +26,19 @@ See the [WiFi Configuration for version 5.7.0+](https://dcc-ex.com/ex-commandsta
 * ``<C WIFI "«ssid»" "«password»">`` set Wifi ssid and password - Station Mode (STA)
 * ``<C WIFI TEMP "«ssid»" "«password»">`` set Wifi ssid and password temporarily - Station Mode (STA)
 * ``<C WIFI AP "«ssid»" "«password»" [«channel»]>`` set Wifi to Access Point mode (AP) with given ssid and password
-* ``<C WIFI HIDDENAP "«ssid»" "«password»" [«channel»]>`` set Wifi to Access Point mode (AP) with given ssid and password, but not advertised
+* ``<C WIFI HIDDENAP "«ssid»" "«password»" [«channel»]>`` set Wifi to Access Point mode (AP) with given ssid and password, but not advertised (hidden)
 * ``<C WIFI HOSTNAME "«hostname»">`` set Wifi hostname
 * ``<C WIFI DEFAULT>`` set Wifi to default credentials
 * ``<C WIFI OFF>`` Disable Wifi
 * ``<C WIFI ON>`` Enable Wifi
 
+See [WiFi configuration](../../products/ex-commandstation/config-wifi-esp32.md) for more infomation on these commands.
+
+See the [WiFi Configuration for version 5.7.0+](https://dcc-ex.com/ex-commandstation/advanced-setup/supported-wifi/wifi-config_v5_7.html) page on the old web site for detailed instructions on how, and why, to change these settings using EX-WebThrottle or EX-Toolbox.
+
 ## Parameters
 
-* **ssid**: ssid to set the command station to use (AP) or connect to (STA). Must be in quotes.
+* **ssid**: ssid (network name) to set the command station to use (AP) or connect to (STA). Must be in quotes.
 
     Recommend that you avoid space characters in the ssid.
 

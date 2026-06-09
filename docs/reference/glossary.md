@@ -16,6 +16,14 @@ If you wish to see where a term is used, click the term name to search for it.
 In Access Point (AP) mode, the tiny ESP-WiFi chip acts as a very basic WiFi server and provides a small IP network for your throttle or for your computer running JMRI with the WiThrottle Server enabled. It acts much like your router does to let things connect directly to it (currently up to four connections).
 Using the Command Station in AP mode allows you to have a separate network so you can keep your layout network separate from your home network.
 
+## Base Station, Command Station, DCC Command Station, DCC Base Station
+
+See [https://dccwiki.com/Command_Station](https://dccwiki.com/Command_Station)
+
+## Consist[^1], Multiple Unit[^2]
+
+Multiple locos hauling a single train. See [https://dccwiki.com/Multiple_Unit_Consisting](https://dccwiki.com/Multiple_Unit_Consisting)
+
 ## DCC++ Commands, ``<DCC++>``, DCC++ Protocol, DCC++ API
 
 Old name for the DCC-EX Serial Command / DCC-EX Native Commands / DCC-EX Native Protocol.
@@ -46,6 +54,12 @@ You will also see search results for using a pulldown menu, but that is a differ
 
 A roster is a list of locomotives that are known in advance by the command station so that DCC addresses, name, and functions can be used by throttles to configure buttons etc.  
 
+## SSID
+
+[Search for SSID](?ssid)
+
+An SSID (Service Set Identifier) is the technical term for your WiFi network's name. It is the identifier your router broadcasts so nearby devices (like phones and laptops) can find and connect to the right network.
+
 ## Station (STA) Mode
 
 [Search for Station Mode](?station mode)
@@ -54,7 +68,7 @@ Station Mode allows you to connect the Command Station to your existing home net
 The Command Station becomes a Station or Client rather than an Access Point.
 That means instead of being a host that manages the IP of the smartphone that runs your Throttle, it becomes a station that connects to your existing network just like any of the other computers or devices connected to your network. The Throttle then connects to the Command Station by finding its IP address on the network.
 
-## Turnout (Point/Switch)
+## Turnout[^1] (Point[^2]/Switch)
 
 [Search for turnout](?turnout)
 
@@ -81,3 +95,8 @@ A proprietary protocol developed by Brett Hoffman
 
 A piece of software that listens and acts on WiThrottle commands
 EX‑CommandStation contains a WiThrottle Server, as does JMRI
+
+----
+
+[^1]: Term primariarly used in North American railroading.
+[^2]: Term used in most of the English speaking world other than North America. (British/United Kingdom origin)
