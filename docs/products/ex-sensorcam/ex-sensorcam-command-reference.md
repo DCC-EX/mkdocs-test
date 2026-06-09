@@ -1,3 +1,10 @@
+---
+tags:
+  - _N_
+  - _N_Q
+  - _N_cmd_value
+---
+
 # Native EX-SensorCAM Command List
 
 ## Conventions used on this page
