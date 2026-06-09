@@ -16,7 +16,7 @@ tags:
   - _equals_track_DC_X_loco
 ---
 
-# ``<= [«trackletter» «mode»] [«id»]>`` <br/>Request or Configure Track Manager <span style="display:none;">(_equals)</span>
+# <small>``<= [«trackletter» «mode»] [«id»]>``</small> <br/>Request or Configure Track Manager <span style="display:none;">(_equals)</span>
 
 Serial command to request infomation about the mode of all tracks or alter the mode of a track.
 

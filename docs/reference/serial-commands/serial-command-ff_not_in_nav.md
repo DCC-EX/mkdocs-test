@@ -6,7 +6,7 @@ tags:
   - _f_loco_group_byte2
 ---
 
-# ``<F «loco» [«function» «state»]|[DCCFREQ «freqValue»]>`` <br/>Set decoder functions or set PWM frequency
+# <small>``<F «loco» [«function» «state»]|[DCCFREQ «freqValue»]>``</small> <br/>Set decoder functions or set PWM frequency
 
 Serial command to Turn loco decoder functions ON or OFF or set the DC PWN frequency of the track.
 

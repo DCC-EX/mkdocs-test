@@ -6,7 +6,7 @@ tags:
   - 
 ---
 
-# ``<t «loco» [«tSpeed» «direction»]>`` <br/>Request or set loco status
+# <small>``<t «loco» [«tSpeed» «direction»]>``</small> <br/>Request or set loco status
 
 Serial command to request information about a loco or set its speed and direction
 
