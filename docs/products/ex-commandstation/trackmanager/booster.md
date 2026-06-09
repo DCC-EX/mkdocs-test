@@ -2,6 +2,8 @@
 
 The EX-CSB1 can be configured as a DCC Booster.  As a booster it can take input from any DCC Command Station, not just an EX-CommandStation, to provide two additional power districts to your layout.  With the addition of an EX-MotorShield8874, it can provide up to 4 power districts.
 
+## Configuring the EX-CSB1 as a DCC Booster
+
 To configure the EX-CSB1 as a DCC Booster, you will need to install the EX-CommandStation software on it with the addition of the following commands in the ``myAutomation.h`` file:
 
 ```c++

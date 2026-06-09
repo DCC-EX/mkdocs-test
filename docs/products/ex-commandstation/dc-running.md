@@ -1,6 +1,17 @@
+---
+tags:
+  - _equals_track_DC_loco
+  - _equals_track_DC_INV_loco
+  - _equals_track_DC_X_loco
+---
+
 # Running a Legacy DC layout
 
-Using a DCC-EX Command Station to run a DC layout provides a number of advantages over conventional DC systems.
+No additional hardware is required for DC (PWM) track assignments. A single EX‑CommandStation is the only hardware needed for full functionality to run a DC Layout just as easily as a DCC layout.
+
+## Advantages of using a EX-CommandStation to run a DC layout
+
+Using an DCC-EX EX-CommandStation to run a DC layout provides a number of advantages over conventional DC systems.
 
 - All Wifi and wired connected throttles will operate the same for DC and DCC locos using Cab road numbers 'loco addresses' from 1 to 10239.
 - Using this range of Cab locoid addresses you can assign any DC district/track any locoid to run in that DC district, i.e # 2.
