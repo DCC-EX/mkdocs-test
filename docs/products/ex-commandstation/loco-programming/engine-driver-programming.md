@@ -1,8 +1,8 @@
 # Programming with Engine Driver
 
-See the [Engine Driver documentaion web site](https://enginedriver.mstevetodd.com/operation/dcc-ex-native-protocol.html#gsc.tab=0) for more detailed infomation.
+The Engine Driver Android app is capable of reading and writing CVs from your phone or tablet.
 
-These features are only available when the [DCC-EX Native Protocol preference](https://enginedriver.mstevetodd.com/operation/dcc-ex-native-protocol.html#how-to-enable-the-dcc-ex-native-protocol) is enabled. The WiThrottle protocol does not include programming.
+## Accessing the DCC-EX page
 
 Touching either the DCC-EX Menu item or the button will open the "DCC-EX" screen.
 
@@ -25,6 +25,12 @@ To read a CV, enter the CV number into the 'CV' field, and click the Read button
 To write a new CV value, enter the CV number into the 'CV' field, enter the new value in the 'Value' field and click Write
 
 Optionally, you can use the 'NRMA CVs' pulldown to select a common CV from a list. This just enters the appropriate CV number in the 'CV' field.
+
+## More Information
+
+See the [Engine Driver documentaion web site](https://enginedriver.mstevetodd.com/operation/dcc-ex-native-protocol.html#gsc.tab=0) for more detailed infomation.
+
+These features are only available when the [DCC-EX Native Protocol preference](https://enginedriver.mstevetodd.com/operation/dcc-ex-native-protocol.html#how-to-enable-the-dcc-ex-native-protocol) is enabled. The WiThrottle protocol does not include programming.
 
 ## If things dont work
 
