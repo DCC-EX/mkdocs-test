@@ -32,6 +32,7 @@ theme:
     - navigation.path
     # - navigation.sections
     - navigation.tabs # Top level navigation on header for tabs
+    # - navigation.tabs.sticky # Make the tabs navigation sticky when scrolling
     - navigation.top # Show back to top button when scrolling up
     - navigation.tracking # Auto update URL in address bar
     # - navigation.indexes # Enable section indexes

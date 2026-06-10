@@ -15,13 +15,13 @@ tags:
 
 # Throttle Writers Guide (doc incomplete)
 
-This page is a brief set of note to help people write/create their own software or physical/hardware throttle/controllers to use the DCC-EX EX-CommandStations.
+This page is a brief set of notes to help people write/create their own software or physical/hardware throttle/controllers to use the DCC-EX EX-CommandStations.
 
 The EX-CommandStation can communicate with either Native/Serial Protocol or the WiThrottle protocol.  Only the Native/Serial Protocol is discussed here. If you wish to use the WiThrottle protocol see the [JMRI Web Site](https://www.jmri.org/help/en/package/jmri/jmrit/withrottle/Protocol.shtml) for more information.
 
 ## General
 
-If you are creating a physical throttle using an ESP32 microprocessor, you are strongly advised to make use of the [DCCEXProtocol library](https://github.com/DCC-EX/DCCEXProtocol).
+If you are creating a physical throttle using an ESP32 microcontroller, you are strongly advised to make use of the [DCCEXProtocol library](https://github.com/DCC-EX/DCCEXProtocol).
 
 The commonly used speed, function, loco programming and diagnostic commands are discussed elsewhere with users in mind. However, there are a large number of commands designed only to be used by other programs such as JMRI, Engine Driver or other throttles specifically aimed at the DCC-EX Native/Serial Protocol. (not WiThrottle)
 
@@ -81,22 +81,60 @@ Obtaining throttle status.
 
 ==TODO==
 
-## Turnouts
+### Momentum
 
-The conventional turnout definition commands and the ``<H>`` responses do not contain information about the turnout description which may have been provided in an EXRAIL script. A turnout description is much more user friendly than T123 and having a list helps the throttle UI build a suitable set of buttons.
+The command station can apply momentum to throttle movements in the same way that a standards compliant DCC decoder can be set to do. This momentum can be defaulted system wide and overridden on individual locos. It does not use or alter the loco CV values and so it also works when driving DC locos.
+The momentum is applied regardless of the throttle type used (or even EXRAIL).
 
-``<JT>`` command returns a list of turnout ids. The throttle should be uninterested in the turnout technology used but needs to know the ids it can throw/close and monitor the current state.
+Momentum is specified in mS / throttle_step.
+
+There is a new command `<m loco accelerating [brake]>`
+where the brake value defaults to the accelerating value.
+
+For example:
+`<m 3 0>`   sets loco 3 to no momentum.
+`<m 3 21>`   sets loco 3 to 21 mS/step.
+`<m 3 21 42>`   sets loco 3 to 21 mS/step accelerating and 42 mS/step when decelerating.
+
+`<m 0 21>`  sets the default momentum to 21mS/Step for all current and future locos that have not been specifically set.
+`<m 3 -1>`   sets loco 3 to track the default momentum value.
+
+EXRAIL
+  A new macro `MOMENTUM(accel [, decel])` sets the momentum value of the current tasks loco ot the global default if loco=0.
+
+Note: Setting Momentum 7,14,21 etc is similar in effect to setting a decoder CV03/CV04 to 1,2,3.
+
+As an additional option, the momentum calculation is based on the difference in throttle setting and actual speed. For example, the time taken to reach speed 50 from a standing start would be less if the throttle were set to speed 100, thus increasing the acceleration.
+
+`<m LINEAR>` - acceleration is uniform up to selected throttle speed.
+`<m POWER>`  - acceleration depends on difference between loco speed and selected throttle speed.
+
+----
+
+## Turnouts/Points
+
+The conventional turnout/point definition commands and the ``<H>`` responses do not contain information about the turnout/point description which may have been provided in an EXRAIL script. A turnout/point description is much more user friendly than T123 and having a list helps the throttle UI build a suitable set of buttons.
+
+``<JT>`` command returns a list of turnout/point ids. The throttle should be uninterested in the turnout/point technology used but needs to know the ids it can throw/close and monitor the current state.
 e.g.  response ``<jT 1 17 22 19>``
 
-``<JT 17>`` requests info on turnout 17.
+``<JT 17>`` requests info on turnout/point 17.
 e.g. response ``<jT 17 T "Coal yard exit">`` or ``<jT 17 C "Coal yard exit">``
 (T=thrown, C=closed)
-or ``<jT 17 C "">`` indicating turnout description not given.
-or ``<jT 17 X>`` indicating turnout unknown (or possibly hidden.)
+or ``<jT 17 C "">`` indicating turnout/point description not given.
+or ``<jT 17 X>`` indicating turnout/point unknown (or possibly hidden.)
 
-**NOTE:** It is still the throttles responsibility to monitor the status broadcasts. There is no intention of providing a command that indicates the turnout list has been updated since the throttle started.
+**NOTE:** It is still the throttles responsibility to monitor the status broadcasts. There is no intention of providing a command that indicates the turnout/point list has been updated since the throttle started.
 
-**NOTE:** Turnouts marked in EXRAIL with the HIDDEN keyword instead of a "description" will NOT show up in these commands.
+**NOTE:** Turnouts/Points marked in EXRAIL with the HIDDEN keyword instead of a "description" will NOT show up in these commands.
+
+----
+
+## DCC Accessories
+
+==TODO==
+
+----
 
 ## Automations/Routes
 
@@ -122,6 +160,12 @@ or ``<jT 17 X>`` indicating turnout unknown (or possibly hidden.)
 
 Routes and Automations can also have their current status and caption altered dynamically by EXRAIL (docs ==TODO==)
 
+### Route Status
+
+==TODO==
+
+----
+
 ## COMMANDS TO AVOID ==TODO==
 
 ``<f cab func1 func2>``     Use ``<F cab function 1/0>``
@@ -134,34 +178,14 @@ Routes and Automations can also have their current status and caption altered dy
 
 ``<c>``
 
-## Momentum
+----
 
-The command station can apply momentum to throttle movements in the same way that a standards compliant DCC decoder can be set to do. This momentum can be defaulted system wide and overridden on individual locos. It does not use or alter the loco CV values and so it also works when driving DC locos.
-The momentum is applied regardless of the throttle type used (or even EXRAIL).
+## Gauges
 
-Momentum is specified in mS / throttle_step.
+==TODO==
 
-There is a new command `<m loco accelerating [brake]>`
-where the brake value defaults to the accelerating value.
+----
 
-For example: 
-`<m 3 0>`   sets loco 3 to no momentum.
-`<m 3 21>`   sets loco 3 to 21 mS/step.
-`<m 3 21 42>`   sets loco 3 to 21 mS/step accelerating and 42 mS/step when decelerating.
+## TCP vs UDP
 
-`<m 0 21>`  sets the default momentum to 21mS/Step for all current and future locos that have not been specifically set.
-`<m 3 -1>`   sets loco 3 to track the default momentum value.
-
-EXRAIL
-  A new macro `MOMENTUM(accel [, decel])` sets the momentum value of the current tasks loco ot the global default if loco=0. 
-
-Note: Setting Momentum 7,14,21 etc is similar in effect to setting a decoder CV03/CV04 to 1,2,3.
-
-As an additional option, the momentum calculation is based on the difference in throttle setting and actual speed. For example, the time taken to reach speed 50 from a standing start would be less if the throttle were set to speed 100, thus increasing the acceleration.
-
-`<m LINEAR>` - acceleration is uniform up to selected throttle speed.
-`<m POWER>`  - acceleration depends on difference between loco speed and selected throttle speed.
-
-## TODO- Route Status
-
-## TODO - Gauges
+==TODO==

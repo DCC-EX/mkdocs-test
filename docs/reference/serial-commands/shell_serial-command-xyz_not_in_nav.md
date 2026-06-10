@@ -13,9 +13,13 @@ tags:
 
 Serial command to ...
 
-## Command
+## Command(s)
 
 * ``cmd``
+
+### Command Variations
+
+* ``<cmd «required parameter» [«optional parameter»]>``
 
 ## Parameters
 
@@ -49,15 +53,15 @@ The following are not a direct response, but rather a broadcast that will be tri
 
 ## Examples
 
-[Also search for 'xxx'](?_xxx)
+[Also search for 'xxx'](?_xxx) or [search for 'xxx'](?_xxx)
 
-### *Examples Commands*
+### *Example Commands*
 
 * purpose: ``<command>``
 * purpose: <br/>``<command>``
 * ==TODO==
 
-### *Exampl Responses:*
+### *Example Responses:*
 
 * purpose: ``<command>``
 * purpose: <br/>``<command>``
