@@ -1,5 +1,6 @@
 ---
 tags:
+  - _T
   - _J_T
   - _J_T_id
   - _J_A
@@ -14,14 +15,71 @@ tags:
 
 # Throttle Writers Guide (doc incomplete)
 
-You are strongly advised to make use of the DCCEXProtocol library
+This page is a brief set of note to help people write/create their own software or physical/hardware throttle/controllers to use the DCC-EX EX-CommandStations.
 
-The commonly used speed, function, loco programming and diagnostic commands are discussed elsewhere with users in mind. However, there are a large number of commands designed only to be used by other programs such as JMRI, Engine Driver or other throttles specifically aimed at the DCC-EX protocol. (not WiThrottle)
+The EX-CommandStation can communicate with either Native/Serial Protocol or the WiThrottle protocol.  Only the Native/Serial Protocol is discussed here. If you wish to use the WiThrottle protocol see the [JMRI Web Site](https://www.jmri.org/help/en/package/jmri/jmrit/withrottle/Protocol.shtml) for more information.
+
+## General
+
+If you are creating a physical throttle using an ESP32 microprocessor, you are strongly advised to make use of the [DCCEXProtocol library](https://github.com/DCC-EX/DCCEXProtocol).
+
+The commonly used speed, function, loco programming and diagnostic commands are discussed elsewhere with users in mind. However, there are a large number of commands designed only to be used by other programs such as JMRI, Engine Driver or other throttles specifically aimed at the DCC-EX Native/Serial Protocol. (not WiThrottle)
 
 Many commands that have been implemented to assist throttle authors to obtain information from the Command Station in order to implement turnout, route/automation and roster features.
 Some of these commands are deliberately multi-stage requests to avoid timing and blocking issues caused by massive transmissions (e.g. a full list of turnouts with descriptions) that can cause Command Station issues.
 
 Broadcast replies are also designed so that a throttle can maintain loco speed and function states, turnout poisitions and route states.
+
+## Considerations for throttle developers
+
+For anyone developing a throttle or controller application, these considerations should be taken into account:
+
+* Refer to the [DCC-EX Native/Serial Commands List](./serial-command-list.md)
+* A throttle/controller MUST accept and ignore anything it does not understand
+* Track power state has three possible states: On, Off, and Unknown
+* There is no concept of a throttle ‘acquiring’ a loco.
+Simply, commands for a loco are sent to the Command Station, and the Command Station ‘broadcasts’ the status of any/every loco to every throttle any time a change is made to a loco.
+* There is no concept of the throttle disconnecting from the Command Station.
+
+## Key Throttle/Controller Commands
+
+Key throttle/controller specific commands are summarised here, refer below for elaboration on the details with examples. Refer to the [DCC-EX Native/Serial Commands List](./serial-command-list.md) for a complete list, or [search for the 'T'](?_T) or ['J R'](?_J_R) commands.
+
+| Command | Response | Description |
+| -------------------------------- | -------------------------------- | --------------------- |
+| ``<t loco tSpeed dir>`` | ``<l loco slot speedbyte functionMap>`` (Broadcast) | Sets a cab (loco) speed[^1] and direction. (See below for the response) |
+| ``<t loco>`` | ``<l loco slot speedbyte functionMap>`` (Broadcast) | Requests a deliberate update of cab (loco) speed[^1]/functions |
+| ``<F loco funct state>`` | ``<l loco slot speedbyte functionMap>`` (Broadcast) | Turns cab (loco) decoder functions ON and OFF (See below for the response.) |
+| ``<JT>`` | ``<jT id1 id2 id3 ...>`` | Returns the defined turnout IDs |
+| ``<JT id>`` | ``<jT id state "[description]">`` | Returns the ID, state, and description of the specified turnout ID |
+| ``<JA>`` | ``<jA id1 id2 id3 ...>`` | Returns the defined automation and route IDs |
+| ``<JA id>`` | ``<jA id type "[description]">`` | Returns the ID, type (A=automation or R=route), and description of the specified automation/route ID |
+| ``<JR>`` | ``<jR id1 id2 id3 ...>`` | Returns the defined roster entry IDs |
+| ``<JR id>`` | ``<jR id "description" "function1/function2/function3/...">`` | Returns the ID, description, and function map of the specified roster entry ID |
+
+[^1]: *tSpeed* VS *speed* VS *speedByte* <br/>**tSpeed** = 0-127 or -1 for Emergency Stop <br/>**speedByte** = <br/>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; reverse - 2-127 = speed 1-126, 0 = stop, 1 = Emergency Stop <br/>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; forward - 130-255 = speed 1-126, 128 = stop, 129 = Emergency Stop <br/>**speed** is the same as **speedByte**
+
+## Roster Information
+
+The ``<JR>`` command requests a list of cab ids from the roster.
+e.g. responding ``<jR 3 200 6336>``
+or <jR> for none.
+
+Each Roster entry had a name and function map obtained by:
+``<JR 200>``  reply like ``<jR 200 "Thomas" "whistle/*bell/squeal/panic">``
+
+Refer to EXRAIL ROSTER command for function map format.
+
+Obtaining throttle status.
+
+``<t loco>``  Requests a deliberate update on the cab speed/functions in the same format as the cab broadcast.
+    ``<l loco slot speedbyte functionMap>``
+
+**NOTE:** A slot of -1 indicates that the cab is not in the reminders table and this command will not reserve a slot until such time as the cab is throttled.
+
+## Controlling Locos
+
+==TODO==
 
 ## Turnouts
 
@@ -64,24 +122,6 @@ or ``<jT 17 X>`` indicating turnout unknown (or possibly hidden.)
 
 Routes and Automations can also have their current status and caption altered dynamically by EXRAIL (docs ==TODO==)
 
-## Roster Information
-
-The ``<JR>`` command requests a list of cab ids from the roster.
-e.g. responding ``<jR 3 200 6336>``
-or <jR> for none.
-
-Each Roster entry had a name and function map obtained by:
-``<JR 200>``  reply like ``<jR 200 "Thomas" "whistle/*bell/squeal/panic">``
-
-Refer to EXRAIL ROSTER command for function map format.
-
-Obtaining throttle status.
-
-``<t cabid>``  Requests a deliberate update on the cab speed/functions in the same format as the cab broadcast.
-    ``<l cabid slot speedbyte functionMap>``
-
-**NOTE:** A slot of -1 indicates that the cab is not in the reminders table and this command will not reserve a slot until such time as the cab is throttled.
-
 ## COMMANDS TO AVOID ==TODO==
 
 ``<f cab func1 func2>``     Use ``<F cab function 1/0>``
@@ -101,7 +141,7 @@ The momentum is applied regardless of the throttle type used (or even EXRAIL).
 
 Momentum is specified in mS / throttle_step.
 
-There is a new command `<m cabid accelerating [brake]>`
+There is a new command `<m loco accelerating [brake]>`
 where the brake value defaults to the accelerating value.
 
 For example: 
