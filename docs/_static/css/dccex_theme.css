@@ -319,7 +319,7 @@
   font-size: 80% !important;
 }
 /* Search results body text colour */
-.md-search-result .md-typeset p {
+.md-search-result .md-typeset {
   color: var(--md-default-fg-color) !important;
 }
 
