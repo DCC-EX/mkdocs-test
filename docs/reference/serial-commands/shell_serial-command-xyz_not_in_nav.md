@@ -3,19 +3,17 @@ tags:
   - 
 ---
 
-<style>
-  .md-typeset h1 {
-    line-height: 1.1 !important;
-  }
-</style>
-
 # <small>``<cmd «required parameter» [«optional parameter»]>``</small> <br/> Short command decription
 
 Serial command to ...
 
-## Command
+## Command(s)
 
 * ``cmd``
+
+### Command Variations
+
+* ``<cmd «required parameter» [«optional parameter»]>``
 
 ## Parameters
 
@@ -49,16 +47,23 @@ The following are not a direct response, but rather a broadcast that will be tri
 
 ## Examples
 
-[Also search for 'xxx'](?_xxx)
+[Also search for 'xxx'](?_xxx) or [search for 'xxx'](?_xxx)
 
-### *Examples Commands*
+### *Example Commands*
+
+* purpose: ``<command>``
+* purpose: <br/>``<command>``
+* ==TODO==
+
+### *Example Responses:*
 
 * purpose: ``<command>``
 * purpose: <br/>``<command>``
 * ==TODO==
 
-### *Exampl Responses:*
 
-* purpose: ``<command>``
-* purpose: <br/>``<command>``
-* ==TODO==
+<style>
+  .md-typeset h1 {
+    line-height: 1.1 !important;
+  }
+</style>

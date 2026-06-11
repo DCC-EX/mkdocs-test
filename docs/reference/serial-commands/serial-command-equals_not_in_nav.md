@@ -79,3 +79,9 @@ The following are not a direct response, but rather a broadcast that will be tri
 * Response/broadcast to track status for a default EX-CommandStation<br/> ``<= A MAIN>``<br/>``<= B PROG>``
 * Response/broadcast to setting track *A* to *DC* with address 10<BR/>``<= A 10>``<br/>``<= B PROG>``<br/>``<p1 A>``<br/>``<p0 B>``
 * TBA
+
+<style>
+  .md-typeset h1 {
+    line-height: 1.1 !important;
+  }
+</style>

@@ -17,12 +17,6 @@ tags:
     - _b_loco_cv_bit_bitvalue
 ---
 
-<style>
-  .md-typeset h1 {
-    line-height: 1.1 !important;
-  }
-</style>
-
 # <small>``<R [«cv»|LOCOID|CONSIST]>`` <br/>``<r «loco» «cv»>`` <br/>``<W [«loco»]|[«cv» «value»]|[«loco» «cv» «bitValue» «bit»]|[CONSIST «loco» [REVERSE]]>`` <br/>``<V [«cv» «value»]|[«cv» «bit» «bitValue»]>`` <br/>``<B «cv» «bit» «bitValue»>`` <br/>``<b «loco» «cv» «bit» «bitValue»>``</small> <br/>Read and write CVs
 
 Serial commands to Read and write CVs on the PROG track (Service mode) or on the MAIN track (PoM).
@@ -224,3 +218,9 @@ no response.
 * read address on PROG track (fail): ``<r -1>``
 * read CV 4 on PROG track (successful): ``<r 4 1>``
 * ==TODO==
+
+<style>
+  .md-typeset h1 {
+    line-height: 1.1 !important;
+  }
+</style>
