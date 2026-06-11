@@ -1,11 +1,11 @@
 ---
 tags:
-    - _s
-    - _#
-    - _C_RESET
-    - _D_RESET
-    - _J_I
-    - _c 
+  - _s
+  - _#
+  - _C_RESET
+  - _D_RESET
+  - _J_I
+  - _c 
 ---
 
 <style>

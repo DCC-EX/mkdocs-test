@@ -1,14 +1,14 @@
 ---
 tags:
-    - _J_A_id
-    - _J_A
-    - _/
-    - _/_START_loco_route
-    - _/_START_route
-    - _/_PAUSE
-    - _/_RESUME
-    - _/_KILL_ALL
-    - _/_KILL_id 
+  - _J_A_id
+  - _J_A
+  - _/
+  - _/_START_loco_route
+  - _/_START_route
+  - _/_PAUSE
+  - _/_RESUME
+  - _/_KILL_ALL
+  - _/_KILL_id 
 ---
 
 <style>
@@ -17,7 +17,7 @@ tags:
   }
 </style>
 
-# <small>``<J A [«id»]>`` <br/>``</ [START|PAUSE|RESUME|KILL] [«various parameter»]>``</small> <br/> List, Start or Stop Automations/Sequences
+# <small>``<J A [«id»]>``</small> <br/><small>``</ [START|PAUSE|RESUME|KILL] [«various parameters»]>``</small> <br/> List, Start or Stop Automations/Sequences
 
 Serial commands to list, start, pause or stop automations/sequences including routes and animations.
 
@@ -35,11 +35,11 @@ Serial commands to list, start, pause or stop automations/sequences including ro
 * ``<J A>`` List all automations/routes
 * ``<J A «id»>`` list automation details
 * ``</ START [«loco»] «route»>`` Start a sequence, or an automation with a loco
-* ``</ PAUSE>`` pause all tasks
-* ``</ RESUME>`` Resume all tasks
+* ``</ PAUSE>`` Pause all EXRAIL tasks
+* ``</ RESUME>`` Resume all EXRAIL tasks
 * ``</ KILL ALL>`` Kill all EXRAIL tasks
 * ``</ KILL «taskId»>`` Kill specific EXRAIL tasks
-* ``</>`` Stream EXRAIL status
+* ``<`` ``/`` ``>`` Stream EXRAIL status
 
 ## Parameters
 
@@ -67,7 +67,7 @@ Serial commands to list, start, pause or stop automations/sequences including ro
 
 (fail - is not defined): ``<jA id X>``
 
-**Response for** ``</ START ...>``, ``</ PAUSE>``, ``</ RESUME>``, ``</ KILL ...>``
+**Response for** ``</ START ...>``, ``</ PAUSE>``, ``</ RESUME>``, ``</ KILL ...>``, ``<`` ``/`` ``>``
 
 N/A
 
