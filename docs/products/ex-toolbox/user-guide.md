@@ -1,6 +1,10 @@
 # EX-Toolbox User Guide
 
-Various screens can be accessed via the dropdown menu or by swiping left and right.
+**EX-Toolbox** has a number of capabilities, spread out across a different pages/screens.
+
+The various screens can be accessed via the dropdown menu (&#9776;) or by swiping left and right.  Toolbar buttons can optional be enabled in the preferences to allow for quick access to screens that you use often.
+
+----
 
 ## CV Programming
 
@@ -10,7 +14,7 @@ Various screens can be accessed via the dropdown menu or by swiping left and rig
 DCC Decoder CV programming is available:
 
 - on the Programming track (PROG) - Service Mode.
-- on the main line (MAIN) - Operation mode / Ops Mode.
+- on the main line (MAIN) - Operation mode / Ops Mode / Programming on the Main (PoM).
 
 By default **EX‑Toolbox** shows the Service Mode options. To switch to Operation Mode, select "Program on Main (Operation Mode)" on the drop down list at the top of the screen.
 
@@ -29,28 +33,30 @@ You do not need to know the DCC Address of the decoder being changed, as all dec
 
 Track power is managed automatically by the Command Station.
 
-Do not be temped to manipulate decoder addresses by reading or writing individual CVs, this is very complicated and may require as many as 6 Cvs to be understood.
+Do not be temped to manipulate decoder addresses by reading or writing individual CVs, this is very complicated and may require as many as 6 Cvs to be understood.  i.e. Avoid Avoid writing CV1, CV17 & CV18 directly. Use the Write Address feature instead.
 
 On this screen you can:
 
-- read the decoder's DCC Address. (this reads multiple CVs to obtain the driveable address, which may be a consist) <br/>
-  Click the Read button on the DCC Address row.
+- Read the decoder's DCC Address. (this reads multiple CVs to obtain the driveable address, which may be a consist) <br/>
+  Click the `Read` button on the DCC Address row.
 
-- write a new DCC Address to the decoder. (This writes multiple CVs to automatically manage long and short addresses.) <br/>
-  Enter the address and click the Write button on the DCC Address row.
+  Note that when you read an address, **EX-Toolbox** will inform you whether or not the decoder is also in an advanced consist (CV19).  If the loco is in an advanced consist (CV19) it will not respond to *running*/MAIN track commands to the decoder address.
 
-- read a CV value from the decoder <br/>
-  Enter the CV number and click the Read button on the CV row.
+- Write a new DCC Address to the decoder. (This writes multiple CVs to automatically manage long and short addresses.) <br/>
+  Enter the address and click the `Write` button on the DCC Address row.
 
-- write a CV value to the decoder <br/>
-  Enter the CV number, enter the value and click the Write button on the CV row.
+- Read a CV value from the decoder <br/>
+  Enter the CV number and click the `Read` button on the CV row.
 
-- select from a list of named, common CVs <br/>
+- Write a CV value to the decoder <br/>
+  Enter the CV number, enter the value and click the `Write` button on the CV row.
+
+- Select from a list of named, common CVs <br/>
   If you select a 'common CV value' it will enter the CV number into the field. From there follow the instructions above for reading or writing the CV.
 
-- issue <> commands to the EX‑CommandStation
+- Issue [DCC-EX Serial commands](/reference/serial-command-list.md) (``<>``) to the EX‑CommandStation
 
-## CV Programming (Operation Mode)
+### CV Programming (Operation Mode)
 
 <div class="result" markdown>
 ![menu](/_static/images/ex-toolbox/cv_programmer_ops_mode.png){align="right" width="200px"}
@@ -63,19 +69,21 @@ To use Operation Mode CV Programming you must know the DCC Address of the decode
 
 On this screen you can:
 
-- write a CV value to the decoder <br/>
+- Write a CV value to the decoder <br/>
   Enter the DCC Address of the decoder, enter the CV number, enter the value and click the Write button on the CV row.
 
-- select from a list of named, common CVs <br/>
+- Select from a list of named, common CVs <br/>
   If you select a 'common CV value' it will enter the CV number into the field. From there follow the instructions above for writing the CV.
 
-- issue <> commands to the EX‑CommandStation
+- Issue [DCC-EX Serial commands](/reference/serial-command-list.md) (``<>``) to the EX‑CommandStation
 
 </div>
 
-## Issuing <> Commands
+----
 
-On several of the screens in **EX‑Toolbox** you can issue native DCC-EX ``<>`` commands to your EX‑CommandStation.
+## Issuing DCC-EX Serial Commands (`<>`)
+
+On several of the screens in **EX‑Toolbox** you can issue native DCC-EX Serial ``<>`` commands to your EX‑CommandStation.
 
 Enter the command you want to send, and click ``Send``.
 
@@ -83,7 +91,9 @@ The command you send, and any responses from the command station will be shown b
 
 If you select a 'common command value' it will enter the command the field. From there follow the instructions above for issuing the command.
 
-You can use the Next and Prior buttons to retrieve previously issued commands.
+You can use the `Next` and `Prior` buttons to retrieve previously issued commands.
+
+----
 
 ## Speed Matching
 
@@ -165,6 +175,8 @@ If you have more locos to match, repeat from *step 2*.
 
 </div>
 
+----
+
 ## Speedometer
 
 <div class="result" markdown>
@@ -173,14 +185,15 @@ If you have more locos to match, repeat from *step 2*.
 
 The Speedometer allows you to calulate the scale speed of a loco as it passes two defined sensors. The sensors can be of any type, but must be configured in your EX‑CommandStation and be a known (any) distance apart.
 
-- Define you sensors in the EX‑CommandStation configuration, and note their numbers. <br/>
+- Define you sensors in the EX‑CommandStation configuration, and note their numbers.
+
   You will need to make them monitored for updates by adding JMRI_SENSOR commands in myAutomation.h, or by using the command input screen to enter `<S vpin vpin 1>` commands for each sensor.
   e.g.
 
   ```cpp
   JMRI_SENSOR(160,2)  // pins 160 and 161
   or 
-  JMRI_SENSOR(160) JMR_SENSOR(161)
+  JMRI_SENSOR(160) JMRI_SENSOR(161)
   ```
 
   or Enter commands:
@@ -190,7 +203,7 @@ The Speedometer allows you to calulate the scale speed of a loco as it passes tw
   <S 161 161 1>
   ```
 
-  When you run with either of these methods, the sensors will emit `<Q 160>` or `<q 160>` messags which the Toolbox will recognize.
+  When you run with either of these methods, the sensors will emit `<Q 160>` or `<q 160>` messags which **EX-Toolbox** will recognize.
 
 ### Speedometer Instructions
 
@@ -206,13 +219,15 @@ The Speedometer allows you to calulate the scale speed of a loco as it passes tw
 
 1. The Speedometer will display the speed as the loco after it passes the second sensor.
 
-The speed and times will automatically reset after 10 seconds, but you can overide this by clicking the Start button. Or you can change the delay period. 
+The speed and times will automatically reset after 10 seconds, but you can overide this by clicking the Start button. Or you can change the delay period.
 
 To check the speed in the opposite direction, simply reverse the sensor numbers, using the Swap button.
 
 The Speedometer will remember the last used sensors and distance between sessions.
 
 </div>
+
+----
 
 ## Loco Status
 
@@ -226,12 +241,14 @@ Loco Status allows you to watch changes to all locos being controlled by the com
 
 <div style="clear: both;"></div>
 
+----
+
 ## Track Manager
 
 <div class="result" markdown>
 ![menu](/_static/images/ex-toolbox/track_manager.png){align="right" width="200px"}
 
-Track Manager allow you to change up to 8 channels (depending on the Motor Driver you are using)
+Track Manager allows you to change up to 8 channels (depending on the Motor Driver(s) you are using)
 
 Each channel can be one of:
 
@@ -252,7 +269,9 @@ Select the value you want for the channels and click ``Set``.
 
 </div>
 
-## Servo motor testing and adjustment
+----
+
+## Servo Motor Testing and Adjustment
 
 <div class="result" markdown>
 ![menu](/_static/images/ex-toolbox/servos.png){align="right" width="200px"}
@@ -276,6 +295,8 @@ The 'Servo Motor Test' screen will allow you to test and fine tune the settings 
 
 </div>
 
+----
+
 ## Sensor testing
 
 <div class="result" markdown>
@@ -290,6 +311,8 @@ The Watch button is generally not needed, but will force **EX‑Toolbox** to che
 </div>
 
 <div style="clear: both;"></div>
+
+----
 
 ## Current Meter
 
@@ -314,6 +337,8 @@ You can manually restart the readings with the Start button. This will also clea
 
 <div style="clear: both;"></div>
 
+----
+
 ## Roster
 
 <div class="result" markdown>
@@ -328,6 +353,8 @@ Clicking on any individual loco in the roster will show you the details of that 
 </div>
 
 <div style="clear: both;"></div>
+
+----
 
 ## Neopixel Setup
 
@@ -348,6 +375,8 @@ You can then adjust the colours (RGB values) of the neopixels with the sliders
 
 <div style="clear: both;"></div>
 
+----
+
 ## Power
 
 <div class="result" markdown>
@@ -366,6 +395,8 @@ Note, you can also optionally enable the Power Button on the Action bar in the p
 
 </div>
 
+----
+
 ## Preferences
 
 <div class="result" markdown>
@@ -373,12 +404,14 @@ Most configuration options are found in the Preferences which is accessed via th
 
 </div>
 
+----
+
 ## View log
 
 <div class="result" markdown>
 Accessed from any of the main screens via Menu ‣ View Log.
 
-This screen allows you to view the internal EX-Toolbox log of events. (referend to as 'logcat').
+This screen allows you to view the internal **EX‑Toolbox** log of events. (referend to as 'logcat').
 
 The option to Start recording to file creates a user-accessible file that can be sent to the **EX‑Toolbox** app developers to assist you in resolving a problem.
 
@@ -414,6 +447,8 @@ Attempt whatever is causing the problem a few times
 - Attach that file to a message in discord using the ``+`` button on the row of the message content.
 
 </div>
+
+----
 
 ## About
 

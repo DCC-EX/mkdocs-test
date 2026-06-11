@@ -1,4 +1,4 @@
-# Serial Command Basics
+# DCC-EX Serial Command Basics
 
 - Serial commands are accepted as input from the USB serial connection or a TCP/IP connection.
 - Commands have a single case dependent character opcode and optionaly parameters.
@@ -8,3 +8,9 @@
 - Commands entered like ```<JA>``` are actually read as ```<J A>```, so ```<Ja>``` is also acceptible.
 - Commands that produce diagnostic information (which is intended for human reading rather than code) only write to the USB Serial output.
 - Commands that cause state changes (such as loco speeds, turnout position) cause broadcasts to all serial connections and, where appropriate, WiThrottle protocol connections.
+
+## Notes
+
+*DCC-EX Serial Commands* are also refered to as *Native DCC-EX Commands/Protocol* or *DCC-EX Native Commands/Protocol*.
+
+Refer to the [WiThrottle VS Native Serial Protocol](withrottle-vs-native-protocol_not_in_nav.md) page for information on the differences to the Withrottle protocol/commands.
