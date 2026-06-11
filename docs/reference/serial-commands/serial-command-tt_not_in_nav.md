@@ -166,3 +166,9 @@ Profile defines the speed and style of movement: 0=Instant, 1=Fast (0.5 sec), 2=
 ### Example Responses
 
 * ==TODO==
+
+<style>
+  .md-typeset h1 {
+    line-height: 1.1 !important;
+  }
+</style>

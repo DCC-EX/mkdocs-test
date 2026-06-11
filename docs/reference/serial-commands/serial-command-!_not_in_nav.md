@@ -59,3 +59,8 @@ For ``<! Q>``<br/>
 
 * TBA
 
+<style>
+  .md-typeset h1 {
+    line-height: 1.1 !important;
+  }
+</style>

@@ -88,3 +88,9 @@ N/A
 ### *Example Responses:*
 
 * ==TODO==
+
+<style>
+  .md-typeset h1 {
+    line-height: 1.1 !important;
+  }
+</style>

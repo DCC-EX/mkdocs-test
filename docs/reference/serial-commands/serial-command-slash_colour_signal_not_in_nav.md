@@ -44,3 +44,9 @@ N/A
 ### Example Responses
 
 N/A
+
+<style>
+  .md-typeset h1 {
+    line-height: 1.1 !important;
+  }
+</style>

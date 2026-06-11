@@ -68,3 +68,9 @@ The following is not a direct response, but rather a broadcast that will be trig
 * all tracks off: ``<p0>``
 * all tracks on ``<p1>``
 * join: ``<p1 JOIN>``
+
+<style>
+  .md-typeset h1 {
+    line-height: 1.1 !important;
+  }
+</style>

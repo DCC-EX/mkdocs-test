@@ -218,3 +218,9 @@ no response.
 * read address on PROG track (fail): ``<r -1>``
 * read CV 4 on PROG track (successful): ``<r 4 1>``
 * ==TODO==
+
+<style>
+  .md-typeset h1 {
+    line-height: 1.1 !important;
+  }
+</style>
