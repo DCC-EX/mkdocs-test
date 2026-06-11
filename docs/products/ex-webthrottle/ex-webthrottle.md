@@ -2,12 +2,11 @@
 
 TODO: Split into seperate pages for overview plus installing and using
 
-[Run Ex-WebThrottle Now](https://dcc-ex.com/WebThrottle-EX/)
+[Run EX&#8209;WebThrottle Now](https://dcc-ex.com/WebThrottle-EX/){ .md-button .md-button--primary }
 
 **EX‑WebThrottle** is a throttle (controller) that can connect to the **EX-CommandStation** directly through the USB port of a computer
 
 For a video on how to install and use **EX-WebThrottle** [see here](https://youtu.be/BkgsEOjxWaU?si=Sm9e4o_jp4FXqFO3).
-
 
 ## What you need to run EX-WebThrottle
 
@@ -36,7 +35,7 @@ You have an option for how you would like to run **EX-WebThrottle**, from the cl
 
 Just click the 'Run Ex-WebThrottle Now' button below and you will load a web page from our server that will run the web throttle on your computer. You can connect it to the **EX-CommandStation** or just run it in emulator mode where you don't have to have any hardware. Please read the requirements above for what you need in order to run **EX-CommandStation** in your browser. If you want to remember the link to run the throttle, it is [https://dcc-ex.github.io/WebThrottle-EX](https://dcc-ex.github.io/WebThrottle-EX).
 
-[Run Ex-WebThrottle Now](https://DCC-EX.github.io/WebThrottle-EX)
+[Run EX&#8209;WebThrottle Now](https://dcc-ex.com/WebThrottle-EX/){ .md-button .md-button--primary }
 
 ## Download
 
@@ -174,7 +173,7 @@ You can use the ``Common CVs`` drop list to select a CV. The approprate value wi
 
 The **Locomotives** page allows you store a 'roster' of locomotives.  This is stored in the individual PC/computer, and cannot be accessed by any other computer, unless exported and imported into that computer.  The 'roster' cannot be accessed by any mobile device (phone app).
 
-*Note: Use of this is not recommended as it may not be available in the new version of EX-WebThrottle when it is developed.*
+<span style="color:red">*Note: Use of this is not recommended as it may not be available in the new version of EX-WebThrottle when it is developed.*</span>
 
 *Note: This is very different to the roster that can be stored in the **EX-CommandStation** itself*
 
@@ -184,7 +183,7 @@ The **Locomotives** page allows you store a 'roster' of locomotives.  This is st
 
 The **Function Maps** page allows you store collections of Function Maps.  This is stored in the individual PC/computer, and cannot be accessed by any other computer, unless exported and imported into that computer.  The 'functions maps' cannot be accessed by any mobile device (phone app).
 
-*Note: Use of this is not recommended as it may not be available in the new version of EX-WebThrottle when it is developed.*
+<span style="color:red">*Note: Use of this is not recommended as it may not be available in the new version of EX-WebThrottle when it is developed.*</span>
 
 *Note: This is very different to the functions stored with roster entries that can be stored in the **EX-CommandStation** itself.*
 
@@ -219,7 +218,7 @@ The **Settings page** allows you to manage aspects of the **EX-CommandStation** 
 
 ### Storage
 
-*Note: Use of this is not recommended as it may not be available in the new version when it is developed.*
+<span style="color:red">*Note: Use of this is not recommended as it may not be available in the new version when it is developed.*</span>
 
 * Export App data
 * Import App data
