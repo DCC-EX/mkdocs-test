@@ -1,13 +1,26 @@
 ---
 tags:
-  - 
+    - _I
+    - _I_id_ADD_position_value_angle
+    - _I_id_DCC_home
+    - _I_id_EXTT_vpin_home
+    - _I_id_position_activity
+    - _I_id_position
+    - _I_id
+    - _D_TT_vpin_steps_activity
+    - _D_TT_vpin_steps
+    - _J_O_id
+    - _J_O
+    - _J_P_id
 ---
 
 # <small>``<I [«id»] [«various parameter»]>``</small> <br/><small>``<D TT «vpin» «steps» [«activity]>``</small> <br/><small>``<J O [«id»]>``</small> &nbsp; <small>``<J P «id»>``</small><br/>Manage Turntables
 
 Serial commands to manage Turntables.
 
-The Turntable/Traverser commands provide a more flexible and functional way of operating turntables/traversers. These require that the turntable/traverser be pre-defined through the <I ...> commands, described below.
+The Turntable/Traverser commands provide a more flexible and functional way of operating turntables/traversers. These require that the turntable/traverser be pre-defined through the ``<I ...>`` commands, described below.
+
+Also refer to the [legacy EX-Turntable documentation](https://dcc-ex.com/legacy-docs/ex-turntable/index.html).
 
 ## Commands
 
