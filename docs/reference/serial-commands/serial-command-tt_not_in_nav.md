@@ -20,14 +20,9 @@ tags:
 
 Serial commands to define or manage Turnouts/Points.
 
-## Command
+## Commands
 
-* ``T``
-* ``J T``
-
-### Command Variations
-
-#### Defining and deleting Turnouts/Points
+### Defining and deleting Turnouts/Points
 
 * ``<T «id» DCC «addr» «subadd»>`` Create DCC turnout/point
 * ``<T «id» DCC «»>`` Create DCC turnout/point
@@ -35,7 +30,7 @@ Serial commands to define or manage Turnouts/Points.
 * ``<T «id» VPIN «vpin»>`` Create pin turnout/point
 * ``<T «id»>`` Delete turnout/point
 
-#### Managing Turnouts/Points
+### Managing Turnouts/Points
 
 * ``<T>`` List all turnouts/points. Equivalent to ``<J T>``
 * ``<J T>`` List all turnouts/points. Equivalent to ``<T>``

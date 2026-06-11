@@ -12,15 +12,7 @@ tags:
 
 Serial commands to query or reset the EX-CommandStation
 
-## Command(s)
-
-* ``s``
-* ``#``
-* ``C RESET``
-* ``D RESET``
-* ``c``
-
-### Command Variations
+## Commands
 
 * ``<s>`` Request the command station status
 * ``<#>`` Request the number of simultaneously supported locos

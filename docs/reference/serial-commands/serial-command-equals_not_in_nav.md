@@ -18,17 +18,17 @@ tags:
 
 # <small>``<= [«trackletter» «mode»] [«id»]>``</small> <br/>Request or Configure Track Manager <span style="display:none;">(_equals)</span>
 
-Serial command to request infomation about the mode of all tracks or alter the mode of a track.
+Serial command to request infomation about the modes of all tracks or alter the mode of a specific track.
 
-## Command
+## Commands
 
-* ``=``
+* ``<=>`` Request the current Track Manager configuration
+* ``<= [«trackletter» «mode»] [«id»]>`` set a specifc track to a mode
 
 ## Parameters
 
 * **trackletter** *optional* - one of:
 
-    * blank = Request the current Track Manager configuration
     * ``A`` through ``H`` representing one of the outputs of the/a motor shield.
 
 * **mode** *required if track letter supplied.* One of:

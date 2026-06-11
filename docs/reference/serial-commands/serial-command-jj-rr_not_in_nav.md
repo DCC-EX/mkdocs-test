@@ -8,9 +8,10 @@ tags:
 
 Serial command to request roster info.
 
-## Command
+## Commands
 
-* ``J R``
+* ``<J R>`` Request the list of all roster ids
+* ``<J R [«id»]>`` Request the detailed info on a sepecific roster id
 
 ## Parameters
 

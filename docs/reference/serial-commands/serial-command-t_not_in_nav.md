@@ -8,23 +8,20 @@ tags:
 
 # <small>``<t «loco» [«tSpeed» «direction»]>``</small> <br/>Request or set loco status
 
-Serial command to request information about a loco or set its speed and direction
+Serial commands to request information about a loco or set its speed and direction
 
-## Command
+## Commands
 
-* ``t``
+* ``<t «loco»>`` Request a deliberate update on the loco speed/functions
+* ``<t «loco» [«tSpeed» «direction»]>`` Set a loco's speed and direction
 
 ## Parameters
 
 * **loco** *Required* <br/> Loco to request information about a loco or set its speed and direction
-
-* blank or **tSpeed** plus **direction**
-    * if blank = Request a deliberate update on the loco speed/functions
-    * if **tSpeed** and **direction** are supplied
-        * **tSpeed**: ``0``-``127`` or ``-1`` for Emergency Stop
-        * **direction** - one of:
-            * ``1`` = forward
-            * ``0`` = reverse
+* **tSpeed**: ``0``-``127`` or ``-1`` for Emergency Stop
+* **direction** - one of:
+    * ``1`` = forward
+    * ``0`` = reverse
 
 ## Response
 

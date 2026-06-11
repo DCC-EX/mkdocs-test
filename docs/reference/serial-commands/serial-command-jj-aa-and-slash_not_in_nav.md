@@ -17,15 +17,6 @@ Serial commands to list, start, pause or stop automations/sequences including ro
 
 ## Commands
 
-* ``J A``
-* ``/``
-* ``/ START``
-* ``/ PAUSE``
-* ``/ RESUME``
-* ``/ KILL``
-
-### Command Variations
-
 * ``<J A>`` List all automations/routes
 * ``<J A «id»>`` list automation details
 * ``</ START [«loco»] «route»>`` Start a sequence, or an automation with a loco
