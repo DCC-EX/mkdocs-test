@@ -9,10 +9,6 @@ Serial command to ...
 
 ## Command(s)
 
-* ``cmd``
-
-### Command Variations
-
 * ``<cmd «required parameter» [«optional parameter»]>``
 
 ## Parameters

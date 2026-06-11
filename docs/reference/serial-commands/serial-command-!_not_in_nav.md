@@ -7,13 +7,14 @@ tags:
   - _!_Q
 ---
 
-# ``<! [«pauseType»]>`` <br/>Emergence Stop or Pause
+# ``<! [P|Q|R]>`` <br/>Emergence Stop or Pause
 
-Serial command to Emergency stop all locos, pause all locos, or query the pause status.
+Serial command to Emergency Stop all locos, pause all locos, or query the Estop pause status.
 
-## Command
+## Commands
 
-* ``!``
+* ``<!>`` ESTOP all locos
+* ``<! [«pauseType»]>`` ESTOP pause or query pause
 
 ## Parameters
 

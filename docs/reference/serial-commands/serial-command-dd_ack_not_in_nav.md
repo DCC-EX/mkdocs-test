@@ -13,14 +13,9 @@ tags:
 
 # <small>``<D ACK LIMIT|MAX|MIN|OFF|ON [«value» [MS]]>`` <br/>``<C PROGBOOST>``</small> <br/>Modify System PROG track settings
 
-Serial commands to modify the system PROG track settings.
+Serial commands to modify the system PROG track settings. Used primarily to help read and write decoders that not fully DCC complient.
 
 ## Commands
-
-* ``D ACK``
-* ``C PROGBOOST``
-
-### Command Variations
 
 * ``<D ACK LIMIT «value»>`` Set ACK detection limit mA
 * ``<D ACK MAX «value» MS>`` Set ACK maximum duration mS

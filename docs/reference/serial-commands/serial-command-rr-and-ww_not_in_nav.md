@@ -19,39 +19,31 @@ tags:
 
 # <small>``<R [«cv»|LOCOID|CONSIST]>`` <br/>``<r «loco» «cv»>`` <br/>``<W [«loco»]|[«cv» «value»]|[«loco» «cv» «bitValue» «bit»]|[CONSIST «loco» [REVERSE]]>`` <br/>``<V [«cv» «value»]|[«cv» «bit» «bitValue»]>`` <br/>``<B «cv» «bit» «bitValue»>`` <br/>``<b «loco» «cv» «bit» «bitValue»>``</small> <br/>Read and write CVs
 
-Serial commands to Read and write CVs on the PROG track (Service mode) or on the MAIN track (PoM).
+Serial commands to read and write CVs on the PROG track (Service mode) or on the MAIN track (PoM). This includes reading and writing the decoder DCC Address.
+
+It does not include reading or writing to DCC accessory decoders.
 
 ## Commands
 
-* ``R`` <br/>
-* ``r`` <br/>
-* ``W`` <br/>
-* ``w`` <br/>
-* ``V`` <br/>
-* ``B`` <br/>
-* ``b``
+### Reading CVs
 
-### Command Variations
-
-#### Reading CVs
-
-* ``<R>`` Read driveable loco id (may be long, short or consist)
-* ``<R «cv»>`` Read cv
-* ``<R LOCOID>`` read loco id (ignoring consist) on PROG track
-* ``<R CONSIST>`` read consist id on PROG track
+* ``<R>`` Read the driveable loco id on PROG track. <br/>The response may be the long address, short address or consist address. 
+* ``<R «cv»>`` Read a cv on PROG track
+* ``<R LOCOID>`` Read the loco id (ignoring the consist address) on the PROG track
+* ``<R CONSIST>`` Read the consist id on PROG track
 * ``<r «loco» «cv»>`` PoM read cv on MAIN track - <span style="color:red">Requires RailCom</span>
 * ``<V «cv» bit «bitValue»>`` Fast read bit with expected value
 * ``<V «cv» «value»>`` Fast read cv with expected value
 
-#### Writing CVs
+### Writing CVs
 
 * ``<W «loco»>`` Write loco address on PROG track
 * ``<W CONSIST «loco»>`` write consist address on PROG track
 * ``<W CONSIST «loco» REVERSE>`` Write consist address and reverse flag on PROG track
 * ``<W «cv» «value»>`` Write cv value on PROG track
-* ``<W «cv» «bitValue» «bit»>`` Write cv bit on prog track
+* ``<W «cv» «bitValue» «bit»>`` Write cv bit on PROG track
 * ``<w «loco» «cv» «value»>`` PoM write cv on MAIN track
-* ``<B «cv» «bitValue» «bit»>`` Write cv bit
+* ``<B «cv» «bitValue» «bit»>`` Write cv bit on PROG track
 * ``<b «loco» «cv» «bitValue» «bit»>`` PoM write cv bit on MAIN track
 
 ## Parameters
@@ -75,7 +67,7 @@ Avoid writing CV1, CV17 & CV18 directly. Use the ``<W «loco»>`` command instea
     * ``r``: response/broadcast identifier
     * **address** - one of:
         * If the loco is in a consist (CV19), the address returned by will be the consist address.
-        * If not in a consist (CV19) DCC Address of the decoder/loco. The short (1-127) or long (128-10293) address of the engine decoder
+        * If not in a consist (CV19) DCC Address of the decoder/loco. The short (``1``-``127``) or long (``128``-``10293``) address of the engine decoder
         * ``-1`` = failed read
 
 **Response to** ``<R LOCOID>``:
@@ -83,7 +75,7 @@ Avoid writing CV1, CV17 & CV18 directly. Use the ``<W «loco»>`` command instea
 * ``<r LOCOID «address»>``
     * ``r``: response/broadcast identifier
     * **address** - one of:
-        * DCC Address of the decoder/loco. The short (1-127) or long (128-10293) address of the engine decoder
+        * DCC Address of the decoder/loco. The short (``1``-``127``) or long (``128``-``10293``) address of the engine decoder
         * ``-1`` = failed read
 
 **Response to** ``<R CONSIST>``:
@@ -178,9 +170,9 @@ no response.
 
 ## Notes
 
-* ``<W «address»>`` will write a short arddress (CV1) or long address (CV17 plus CV18) depending on the value entered.  It will also adjust CV29 automatically depending on what address type is required.
+* ``<W «address»>`` will write a short address (CV1) or long address (CV17 plus CV18) depending on the value entered.  It will also adjust CV29 automatically depending on what address type is required.
     * ``1``-``127`` will be a short address
-    * ``128``-``10293`` will be along address
+    * ``128``-``10293`` will be a long address
 
     Note that addresses above ``9999`` cannot be used by *some* other brands of command station. So if you plan to take your loco to other layouts it is recommended that you avoid the ``10000``-``10293`` (inclusive) range.
 

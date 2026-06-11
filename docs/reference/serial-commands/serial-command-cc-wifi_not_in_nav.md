@@ -17,11 +17,7 @@ tags:
 Serial commands to setup the WiFi on the EX-Command Stations.
 <span style="color:red">For EX-CSB1 and ESP32 based command stations only. Version 5.7.0 or later only.</span>
 
-## Command
-
-* ``/ WIFI``
-
-### Command Variations
+## Commands
 
 * ``<C WIFI "«ssid»" "«password»">`` set Wifi ssid and password - Station Mode (STA)
 * ``<C WIFI TEMP "«ssid»" "«password»">`` set Wifi ssid and password temporarily - Station Mode (STA)
@@ -29,8 +25,7 @@ Serial commands to setup the WiFi on the EX-Command Stations.
 * ``<C WIFI HIDDENAP "«ssid»" "«password»" [«channel»]>`` set Wifi to Access Point mode (AP) with given ssid and password, but not advertised (hidden)
 * ``<C WIFI HOSTNAME "«hostname»">`` set Wifi hostname
 * ``<C WIFI DEFAULT>`` set Wifi to default credentials
-* ``<C WIFI OFF>`` Disable Wifi
-* ``<C WIFI ON>`` Enable Wifi
+* ``<C WIFI ON|OFF>`` Enable/Disable Wifi
 
 See [WiFi configuration](../../products/ex-commandstation/config-wifi-esp32.md) for more infomation on these commands.
 

@@ -7,11 +7,11 @@ tags:
 
 # <small>``</ «colour» «signal»>``</small> <br/> Set signal colour
 
-Serial commands to set the colour of a signal.
+Serial command to set the colour of a signal.
 
 ## Command
 
-* ``/``
+* ``</ «colour» «signal»>``
 
 ## Parameters
 

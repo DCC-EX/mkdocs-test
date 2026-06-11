@@ -8,11 +8,12 @@ tags:
 
 # <small>``<F «loco» [«function» «state»]|[DCCFREQ «freqValue»]>``</small> <br/>Set decoder functions or set PWM frequency
 
-Serial command to Turn loco decoder functions ON or OFF or set the DC PWN frequency of the track.
+Serial command to turn loco decoder functions ON or OFF or set the DC PWN frequency of the track.
 
-## Command
+## Commands
 
-* ``F``
+* ``<F «loco» [«function» «state»]>`` set the function on or off
+* ``<F «loco» [DCCFREQ «freqValue»]>`` set the PWM frequency
 
 ## Parameters
 
