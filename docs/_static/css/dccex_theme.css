@@ -312,10 +312,10 @@
 
 /* Reduce h1 size in search results for better balance */
 .md-search-result .md-typeset h1 {
-  font-size: 150% !important;
+  font-size: 160% !important;
 }
 .md-search-result .md-typeset h1 code {
-  font-size: 110% !important;
+  font-size: 80% !important;
 }
 
 /* Set image sizes when used in headers */
