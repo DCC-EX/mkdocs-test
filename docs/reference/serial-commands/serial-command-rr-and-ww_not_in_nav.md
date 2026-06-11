@@ -178,19 +178,19 @@ no response.
 
 ## Notes
 
-* ``<W «address»>`` will write a short arddress (CV1) or long address (CV17 plus CV18) depending on the value entered.  It will also adjust CV29 automatically depending on whist address type is required.
+* ``<W «address»>`` will write a short arddress (CV1) or long address (CV17 plus CV18) depending on the value entered.  It will also adjust CV29 automatically depending on what address type is required.
     * ``1``-``127`` will be a short address
     * ``128``-``10293`` will be along address
 
-    Also note that addresses above ``9999`` cannont be used by *some* other command station brands. So if you plan to take your loco to other layouts it is recommended that you avoid the ``1000``-``10293`` (inclusive) range.
+    Note that addresses above ``9999`` cannot be used by *some* other brands of command station. So if you plan to take your loco to other layouts it is recommended that you avoid the ``10000``-``10293`` (inclusive) range.
 
-* IMPORTANT: If the loco is in a consist (CV19), the address returned by ``<R>`` will be the consist address, not the decoder address. To always get the decoder address, use ``<R LOCOID>`` instead.
+* **IMPORTANT:** If the loco is in a consist (CV19), the address returned by ``<R>`` will be the consist address, not the decoder address. To always get the decoder address, use ``<R LOCOID>`` instead.
 
 * When combined with the ``<D ACK ON>`` Command, the ``<R>`` Command (with or without parameters) can be used for diagnostics, for example when you get a ``-1`` response.
 
 * By design, for safety reasons, the NMRA specification prevents locos from responding to throttle or function commands while on the service track. A loco WILL NOT MOVE on the service track! Don’t let the little ‘jumps’ you may see when you are programming a CV confuse you. The loco pulses the motor to give a jump in current that we read as an ‘ACK’ (acknowledgment), that causes some locos to stutter ahead slightly every time you read or write a CV.
 
-* the ``<V ..>`` commands are designed to offer faster verification of the value held in a CV and can be used instead of the ``<R>`` commands. Instead of reading a bit value, it compares the bit to an expected value. It will attempt to verify the value first, an if it is successful, will return the value as if it was simply 'read'. If the verify fails, it will perform a read bit command and return the value read.
+* The ``<V ..>`` commands are designed to offer faster verification of the value held in a CV and can be used instead of the ``<R>`` commands. Instead of reading a bit value, it compares the bit to an expected value. It will attempt to verify the value first, an if it is successful, will return the value as if it was simply 'read'. If the verify fails, it will perform a read bit command and return the value read.
 
 * ``<R cv callbacknum callbacksub>`` (Deprecated) read cv value on PROG track. Do not use. Not explained here
 
