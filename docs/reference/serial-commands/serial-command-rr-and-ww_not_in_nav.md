@@ -19,7 +19,7 @@ tags:
 
 # <small>``<R [«cv»|LOCOID|CONSIST]>`` <br/>``<r «loco» «cv»>`` <br/>``<W [«loco»]|[«cv» «value»]|[«loco» «cv» «bitValue» «bit»]|[CONSIST «loco» [REVERSE]]>`` <br/>``<V [«cv» «value»]|[«cv» «bit» «bitValue»]>`` <br/>``<B «cv» «bit» «bitValue»>`` <br/>``<b «loco» «cv» «bit» «bitValue»>``</small> <br/>Read and write CVs
 
-Serial commands to read and write CVs on the PROG track (Service mode) or on the MAIN track (PoM). This included reading and Writing the decoder DCC Address.
+Serial commands to read and write CVs on the PROG track (Service mode) or on the MAIN track (PoM). This includes reading and writing the decoder DCC Address.
 
 It does not include reading or writing to DCC accessory decoders.
 
@@ -27,10 +27,10 @@ It does not include reading or writing to DCC accessory decoders.
 
 ### Reading CVs
 
-* ``<R>`` Read driveable loco id (may be long, short or consist)
-* ``<R «cv»>`` Read cv
-* ``<R LOCOID>`` read loco id (ignoring consist) on PROG track
-* ``<R CONSIST>`` read consist id on PROG track
+* ``<R>`` Read the driveable loco id on PROG track. <br/>The response may be the long address, short address or consist address. 
+* ``<R «cv»>`` Read a cv on PROG track
+* ``<R LOCOID>`` Read the loco id (ignoring the consist address) on the PROG track
+* ``<R CONSIST>`` Read the consist id on PROG track
 * ``<r «loco» «cv»>`` PoM read cv on MAIN track - <span style="color:red">Requires RailCom</span>
 * ``<V «cv» bit «bitValue»>`` Fast read bit with expected value
 * ``<V «cv» «value»>`` Fast read cv with expected value
@@ -41,9 +41,9 @@ It does not include reading or writing to DCC accessory decoders.
 * ``<W CONSIST «loco»>`` write consist address on PROG track
 * ``<W CONSIST «loco» REVERSE>`` Write consist address and reverse flag on PROG track
 * ``<W «cv» «value»>`` Write cv value on PROG track
-* ``<W «cv» «bitValue» «bit»>`` Write cv bit on prog track
+* ``<W «cv» «bitValue» «bit»>`` Write cv bit on PROG track
 * ``<w «loco» «cv» «value»>`` PoM write cv on MAIN track
-* ``<B «cv» «bitValue» «bit»>`` Write cv bit
+* ``<B «cv» «bitValue» «bit»>`` Write cv bit on PROG track
 * ``<b «loco» «cv» «bitValue» «bit»>`` PoM write cv bit on MAIN track
 
 ## Parameters
