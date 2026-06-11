@@ -16,6 +16,10 @@ So:
 - Avoid jargon where possible.
 - If something does need elaboration, link to a relevant reference.
 - Don't document things generally available on the Internet, eg. we don't document MkDocs or the Material theme as there is good documentation available, we only document the context of our use cases.
+- It is extremely important *for the search results to work correctly* to:
+    - Ensure sure the page title is the first item on the page (after any tags).  If it is not the file name will appear in the search results, not the title.
+    - Ensure that the block of text between the page title and the next heading (of any sort) is relatively short. Ideally no more than a few paragraphs. This is what what will appear in the search results.
+    - Ensure that you DO NOT use tables or complex formatting in the first block of text (between the page title and the next heading) as this will be scrambled in the search results.
 
 ## Do Not Duplicate Content
 

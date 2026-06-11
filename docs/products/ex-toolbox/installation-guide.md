@@ -38,7 +38,7 @@ Please remember that to connect to a Wifi EX-CommandStation on the correct WiFi 
 
 * If you are running your EX-Commandstation in Access Point (AP) mode, you must switch your phone or tablet Wifi to the access point / Wifi network/SSID that the EX-CommandStation has created.
 
-* If you are running your EX-Commandstation in Station mode, you must switch your phone or tablet Wifi to your hopke access point / Wifi network/SSID. that same one that the EX-CommandStation is connected to.
+* If you are running your EX-Commandstation in Station mode, you must switch your phone or tablet Wifi to your home access point / Wifi network/SSID. that same one that the EX-CommandStation is connected to.
 
 ## Starting EX-Toolbox
 
