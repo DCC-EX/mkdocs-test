@@ -1,11 +1,14 @@
 # Using JMRI DecoderPro
 
+Decoder-Pro is a component of [JMRI](https://www.jmri.org/).
+
 While it is possible to use the DCC-EX API to program decoders, the recommended course of action , for anything beyond the simple examples, is to use JMRI DecoderPro for this as it provides a comprehensive yet relatively simple to use interface for all your programming needs.
 
 In addition, DecoderPro includes code to use advanced DCC-EX functions to significantly improve speed compared with most Command Stations.
   
 For a quick introduction, refer to [JMRI DecoderPro](https://www.jmri.org/help/en/html/apps/DecoderPro/index.shtml)
 
+## Making Changes
 
 To make changes to your decoder settings, select the loco you wish to program, then click the Program button to launch the programming dialog.
 

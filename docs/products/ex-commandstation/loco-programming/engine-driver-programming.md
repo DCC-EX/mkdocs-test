@@ -1,6 +1,6 @@
 # Programming with Engine Driver
 
-The Engine Driver Android app is capable of reading and writing CVs from your phone or tablet.
+The [Engine Driver Android app](https://play.google.com/store/apps/details?id=jmri.enginedriver) is capable of reading and writing CVs from your phone or tablet.
 
 ## Accessing the DCC-EX page
 
