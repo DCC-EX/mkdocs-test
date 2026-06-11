@@ -7101,16 +7101,6 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#command-variations" class="md-nav__link">
-    <span class="md-ellipsis">
-      Command Variations
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Command Variations">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
   <a href="#reading-cvs" class="md-nav__link">
     <span class="md-ellipsis">
       Reading CVs
@@ -7125,11 +7115,6 @@
       Writing CVs
     </span>
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
         
@@ -7244,37 +7229,28 @@
 
 
 <h1 id="r-cvlocoidconsist-r-loco-cv-w-lococv-valueloco-cv-bitvalue-bitconsist-loco-reverse-v-cv-valuecv-bit-bitvalue-b-cv-bit-bitvalue-b-loco-cv-bit-bitvalue-read-and-write-cvs"><small><code>&lt;R [«cv»|LOCOID|CONSIST]&gt;</code> <br/><code>&lt;r «loco» «cv»&gt;</code> <br/><code>&lt;W [«loco»]|[«cv» «value»]|[«loco» «cv» «bitValue» «bit»]|[CONSIST «loco» [REVERSE]]&gt;</code> <br/><code>&lt;V [«cv» «value»]|[«cv» «bit» «bitValue»]&gt;</code> <br/><code>&lt;B «cv» «bit» «bitValue»&gt;</code> <br/><code>&lt;b «loco» «cv» «bit» «bitValue»&gt;</code></small> <br/>Read and write CVs<a class="headerlink" href="#r-cvlocoidconsist-r-loco-cv-w-lococv-valueloco-cv-bitvalue-bitconsist-loco-reverse-v-cv-valuecv-bit-bitvalue-b-cv-bit-bitvalue-b-loco-cv-bit-bitvalue-read-and-write-cvs" title="Permanent link">&para;</a></h1>
-<p>Serial commands to Read and write CVs on the PROG track (Service mode) or on the MAIN track (PoM).</p>
+<p>Serial commands to read and write CVs on the PROG track (Service mode) or on the MAIN track (PoM). This includes reading and writing the decoder DCC Address.</p>
+<p>It does not include reading or writing to DCC accessory decoders.</p>
 <h2 id="commands">Commands<a class="headerlink" href="#commands" title="Permanent link">&para;</a></h2>
+<h3 id="reading-cvs">Reading CVs<a class="headerlink" href="#reading-cvs" title="Permanent link">&para;</a></h3>
 <ul>
-<li><code>R</code> <br/></li>
-<li><code>r</code> <br/></li>
-<li><code>W</code> <br/></li>
-<li><code>w</code> <br/></li>
-<li><code>V</code> <br/></li>
-<li><code>B</code> <br/></li>
-<li><code>b</code></li>
-</ul>
-<h3 id="command-variations">Command Variations<a class="headerlink" href="#command-variations" title="Permanent link">&para;</a></h3>
-<h4 id="reading-cvs">Reading CVs<a class="headerlink" href="#reading-cvs" title="Permanent link">&para;</a></h4>
-<ul>
-<li><code>&lt;R&gt;</code> Read driveable loco id (may be long, short or consist)</li>
-<li><code>&lt;R «cv»&gt;</code> Read cv</li>
-<li><code>&lt;R LOCOID&gt;</code> read loco id (ignoring consist) on PROG track</li>
-<li><code>&lt;R CONSIST&gt;</code> read consist id on PROG track</li>
+<li><code>&lt;R&gt;</code> Read the driveable loco id on PROG track. <br/>The response may be the long address, short address or consist address. </li>
+<li><code>&lt;R «cv»&gt;</code> Read a cv on PROG track</li>
+<li><code>&lt;R LOCOID&gt;</code> Read the loco id (ignoring the consist address) on the PROG track</li>
+<li><code>&lt;R CONSIST&gt;</code> Read the consist id on PROG track</li>
 <li><code>&lt;r «loco» «cv»&gt;</code> PoM read cv on MAIN track - <span style="color:red">Requires RailCom</span></li>
 <li><code>&lt;V «cv» bit «bitValue»&gt;</code> Fast read bit with expected value</li>
 <li><code>&lt;V «cv» «value»&gt;</code> Fast read cv with expected value</li>
 </ul>
-<h4 id="writing-cvs">Writing CVs<a class="headerlink" href="#writing-cvs" title="Permanent link">&para;</a></h4>
+<h3 id="writing-cvs">Writing CVs<a class="headerlink" href="#writing-cvs" title="Permanent link">&para;</a></h3>
 <ul>
 <li><code>&lt;W «loco»&gt;</code> Write loco address on PROG track</li>
 <li><code>&lt;W CONSIST «loco»&gt;</code> write consist address on PROG track</li>
 <li><code>&lt;W CONSIST «loco» REVERSE&gt;</code> Write consist address and reverse flag on PROG track</li>
 <li><code>&lt;W «cv» «value»&gt;</code> Write cv value on PROG track</li>
-<li><code>&lt;W «cv» «bitValue» «bit»&gt;</code> Write cv bit on prog track</li>
+<li><code>&lt;W «cv» «bitValue» «bit»&gt;</code> Write cv bit on PROG track</li>
 <li><code>&lt;w «loco» «cv» «value»&gt;</code> PoM write cv on MAIN track</li>
-<li><code>&lt;B «cv» «bitValue» «bit»&gt;</code> Write cv bit</li>
+<li><code>&lt;B «cv» «bitValue» «bit»&gt;</code> Write cv bit on PROG track</li>
 <li><code>&lt;b «loco» «cv» «bitValue» «bit»&gt;</code> PoM write cv bit on MAIN track</li>
 </ul>
 <h2 id="parameters">Parameters<a class="headerlink" href="#parameters" title="Permanent link">&para;</a></h2>
@@ -7298,7 +7274,7 @@ Avoid writing CV1, CV17 &amp; CV18 directly. Use the <code>&lt;W «loco»&gt;</c
 <li><code>r</code>: response/broadcast identifier</li>
 <li><strong>address</strong> - one of:<ul>
 <li>If the loco is in a consist (CV19), the address returned by will be the consist address.</li>
-<li>If not in a consist (CV19) DCC Address of the decoder/loco. The short (1-127) or long (128-10293) address of the engine decoder</li>
+<li>If not in a consist (CV19) DCC Address of the decoder/loco. The short (<code>1</code>-<code>127</code>) or long (<code>128</code>-<code>10293</code>) address of the engine decoder</li>
 <li><code>-1</code> = failed read</li>
 </ul>
 </li>
@@ -7310,7 +7286,7 @@ Avoid writing CV1, CV17 &amp; CV18 directly. Use the <code>&lt;W «loco»&gt;</c
 <li><code>&lt;r LOCOID «address»&gt;</code><ul>
 <li><code>r</code>: response/broadcast identifier</li>
 <li><strong>address</strong> - one of:<ul>
-<li>DCC Address of the decoder/loco. The short (1-127) or long (128-10293) address of the engine decoder</li>
+<li>DCC Address of the decoder/loco. The short (<code>1</code>-<code>127</code>) or long (<code>128</code>-<code>10293</code>) address of the engine decoder</li>
 <li><code>-1</code> = failed read</li>
 </ul>
 </li>
@@ -7425,10 +7401,10 @@ Avoid writing CV1, CV17 &amp; CV18 directly. Use the <code>&lt;W «loco»&gt;</c
 <h2 id="notes">Notes<a class="headerlink" href="#notes" title="Permanent link">&para;</a></h2>
 <ul>
 <li>
-<p><code>&lt;W «address»&gt;</code> will write a short arddress (CV1) or long address (CV17 plus CV18) depending on the value entered.  It will also adjust CV29 automatically depending on what address type is required.</p>
+<p><code>&lt;W «address»&gt;</code> will write a short address (CV1) or long address (CV17 plus CV18) depending on the value entered.  It will also adjust CV29 automatically depending on what address type is required.</p>
 <ul>
 <li><code>1</code>-<code>127</code> will be a short address</li>
-<li><code>128</code>-<code>10293</code> will be along address</li>
+<li><code>128</code>-<code>10293</code> will be a long address</li>
 </ul>
 <p>Note that addresses above <code>9999</code> cannot be used by <em>some</em> other brands of command station. So if you plan to take your loco to other layouts it is recommended that you avoid the <code>10000</code>-<code>10293</code> (inclusive) range.</p>
 </li>
@@ -7497,7 +7473,7 @@ Avoid writing CV1, CV17 &amp; CV18 directly. Use the <code>&lt;W «loco»&gt;</c
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 11, 2026 00:30:05 UTC">June 11, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 11, 2026 01:30:36 UTC">June 11, 2026</span>
   </span>
 
     

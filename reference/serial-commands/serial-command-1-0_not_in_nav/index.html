@@ -23,7 +23,7 @@
     
     
       
-        <title><1|0 «track»> Turn track power on or off - DCC-EX Model Train Control, Animation, and Automation</title>
+        <title><1|0 [«track»]> Turn track power on or off - DCC-EX Model Train Control, Animation, and Automation</title>
       
     
     
@@ -112,7 +112,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              &lt;1|0 «track»&gt; Turn track power on or off
+              &lt;1|0 [«track»]&gt; Turn track power on or off
             
           </span>
         </div>
@@ -7091,9 +7091,9 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#command" class="md-nav__link">
+  <a href="#commands" class="md-nav__link">
     <span class="md-ellipsis">
-      Command
+      Commands
     </span>
   </a>
   
@@ -7180,19 +7180,18 @@
   
 
 
-<h1 id="10-track-turn-track-power-on-or-off"><code>&lt;1|0 «track»&gt;</code> <br/>Turn track power on or off<a class="headerlink" href="#10-track-turn-track-power-on-or-off" title="Permanent link">&para;</a></h1>
+<h1 id="10-track-turn-track-power-on-or-off"><code>&lt;1|0 [«track»]&gt;</code> <br/>Turn track power on or off<a class="headerlink" href="#10-track-turn-track-power-on-or-off" title="Permanent link">&para;</a></h1>
 <p>Serial command to turn power on or off to all or specific tracks.  Also allows joining the MAIN and PROG tracks together.</p>
-<h2 id="command">Command<a class="headerlink" href="#command" title="Permanent link">&para;</a></h2>
+<h2 id="commands">Commands<a class="headerlink" href="#commands" title="Permanent link">&para;</a></h2>
 <ul>
-<li><code>1</code> = on<br/>or</li>
-<li><code>0</code> = off</li>
+<li><code>&lt;1&gt;</code> = Turn on both Main and Programming Tracks (All tracks)</li>
+<li><code>&lt;1 [«track»]&gt;</code> = Turn specific tracks on</li>
+<li><code>&lt;1&gt;</code> = Turn off both Main and Programming Tracks (All tracks)</li>
+<li><code>&lt;0 [«track»]&gt;</code> = Turn specific tracks off</li>
 </ul>
 <h2 id="parameters">Parameters<a class="headerlink" href="#parameters" title="Permanent link">&para;</a></h2>
 <ul>
-<li>
-<p><strong>track</strong> - one of:</p>
-<ul>
-<li>blank = Both Main and Programming Tracks (All tracks)</li>
+<li><strong>track</strong> <em>optional</em> - one of:<ul>
 <li><code>MAIN</code> = Main track</li>
 <li><code>PROG</code> = Programming Track</li>
 <li><code>JOIN</code> = Join the Main and Programming tracks temporarily <br/>Note: While <code>&lt;1 JOIN&gt;</code> is valid, <code>&lt;0 JOIN&gt;</code> is not.</li>
@@ -7266,7 +7265,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 11, 2026 00:15:51 UTC">June 11, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 11, 2026 01:23:05 UTC">June 11, 2026</span>
   </span>
 
     
