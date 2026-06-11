@@ -11,12 +11,6 @@ tags:
   - _/_KILL_id 
 ---
 
-<style>
-  .md-typeset h1 {
-    line-height: 1.1 !important;
-  }
-</style>
-
 # <small>``<J A [«id»]>``</small> <br/><small>``</ [START|PAUSE|RESUME|KILL] [«various parameters»]>``</small> <br/> List, Start or Stop Automations/Sequences
 
 Serial commands to list, start, pause or stop automations/sequences including routes and animations.
@@ -88,3 +82,10 @@ N/A
 ### *Example Responses:*
 
 * ==TODO==
+
+
+<style>
+  .md-typeset h1 {
+    line-height: 1.1 !important;
+  }
+</style>

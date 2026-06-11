@@ -8,12 +8,6 @@ tags:
   - _c 
 ---
 
-<style>
-  .md-typeset h1 {
-    line-height: 1.1 !important;
-  }
-</style>
-
 # <small>``<s>`` &nbsp; ``<#>`` <br/> ``<C RESET>`` ``<D RESET>`` </small> <br/> Query or Reset the Command Station
 
 Serial commands to query or reset the EX-CommandStation
