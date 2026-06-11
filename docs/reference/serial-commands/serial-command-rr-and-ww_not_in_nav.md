@@ -67,7 +67,7 @@ Avoid writing CV1, CV17 & CV18 directly. Use the ``<W «loco»>`` command instea
     * ``r``: response/broadcast identifier
     * **address** - one of:
         * If the loco is in a consist (CV19), the address returned by will be the consist address.
-        * If not in a consist (CV19) DCC Address of the decoder/loco. The short (``1-``127``) or long (``128``-``10293``) address of the engine decoder
+        * If not in a consist (CV19) DCC Address of the decoder/loco. The short (``1``-``127``) or long (``128``-``10293``) address of the engine decoder
         * ``-1`` = failed read
 
 **Response to** ``<R LOCOID>``:
