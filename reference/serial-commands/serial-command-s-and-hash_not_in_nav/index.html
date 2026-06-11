@@ -10,7 +10,7 @@
       
       
       
-        <link rel="canonical" href="https://dcc-ex.com/mkdocs-test/reference/serial-commands/serial-command-t_not_in_nav/">
+        <link rel="canonical" href="https://dcc-ex.com/mkdocs-test/reference/serial-commands/serial-command-s-and-hash_not_in_nav/">
       
       
       
@@ -23,7 +23,7 @@
     
     
       
-        <title><t «loco» [«tSpeed» «direction»]> Request or set loco status - DCC-EX Model Train Control, Animation, and Automation</title>
+        <title><s>   <#> <C RESET> <D RESET> Query or Reset the Command Station - DCC-EX Model Train Control, Animation, and Automation</title>
       
     
     
@@ -79,7 +79,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#t-loco-tspeed-direction-request-or-set-loco-status" class="md-skip">
+        <a href="#s-c-reset-d-reset-query-or-reset-the-command-station" class="md-skip">
           Skip to content
         </a>
       
@@ -112,7 +112,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              &lt;t «loco» [«tSpeed» «direction»]&gt; Request or set loco status
+              &lt;s&gt; &nbsp; &lt;#&gt; &lt;C RESET&gt; &lt;D RESET&gt; Query or Reset the Command Station
             
           </span>
         </div>
@@ -7091,11 +7091,26 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#command" class="md-nav__link">
+  <a href="#commands" class="md-nav__link">
     <span class="md-ellipsis">
-      Command
+      Command(s)
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="Command(s)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#command-variations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Command Variations
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -7148,7 +7163,7 @@
           <li class="md-nav__item">
   <a href="#example-responses" class="md-nav__link">
     <span class="md-ellipsis">
-      Example Responses
+      Example Responses:
     </span>
   </a>
   
@@ -7180,60 +7195,73 @@
   
 
 
-<h1 id="t-loco-tspeed-direction-request-or-set-loco-status"><small><code>&lt;t «loco» [«tSpeed» «direction»]&gt;</code></small> <br/>Request or set loco status<a class="headerlink" href="#t-loco-tspeed-direction-request-or-set-loco-status" title="Permanent link">&para;</a></h1>
-<p>Serial command to request information about a loco or set its speed and direction</p>
-<h2 id="command">Command<a class="headerlink" href="#command" title="Permanent link">&para;</a></h2>
+<h1 id="s-c-reset-d-reset-query-or-reset-the-command-station"><small><code>&lt;s&gt;</code> &nbsp; <code>&lt;#&gt;</code> <br/> <code>&lt;C RESET&gt;</code> <code>&lt;D RESET&gt;</code> </small> <br/> Query or Reset the Command Station<a class="headerlink" href="#s-c-reset-d-reset-query-or-reset-the-command-station" title="Permanent link">&para;</a></h1>
+<p>Serial commands to query or reset the EX-CommandStation</p>
+<h2 id="commands">Command(s)<a class="headerlink" href="#commands" title="Permanent link">&para;</a></h2>
 <ul>
-<li><code>t</code></li>
+<li><code>s</code></li>
+<li><code>#</code></li>
+<li><code>C RESET</code></li>
+<li><code>D RESET</code></li>
+<li><code>c</code></li>
+</ul>
+<h3 id="command-variations">Command Variations<a class="headerlink" href="#command-variations" title="Permanent link">&para;</a></h3>
+<ul>
+<li><code>&lt;s&gt;</code> Request the command station status</li>
+<li><code>&lt;#&gt;</code> Request the number of simultaneously supported locos</li>
+<li><code>&lt;C RESET&gt;</code> Reset and restart command station</li>
+<li><code>&lt;D RESET&gt;</code> Reset and restart command station</li>
+<li><code>&lt;J I&gt;</code> Report currents</li>
+<li><code>&lt;c&gt;</code> (Deprecated) Report main track currect </li>
 </ul>
 <h2 id="parameters">Parameters<a class="headerlink" href="#parameters" title="Permanent link">&para;</a></h2>
-<ul>
-<li>
-<p><strong>loco</strong> <em>Required</em> <br/> Loco to request information about a loco or set its speed and direction</p>
-</li>
-<li>
-<p>blank or <strong>tSpeed</strong> plus <strong>direction</strong></p>
-<ul>
-<li>if blank = Request a deliberate update on the loco speed/functions</li>
-<li>if <strong>tSpeed</strong> and <strong>direction</strong> are supplied<ul>
-<li><strong>tSpeed</strong>: <code>0</code>-<code>127</code> or <code>-1</code> for Emergency Stop</li>
-<li><strong>direction</strong> - one of:<ul>
-<li><code>1</code> = forward</li>
-<li><code>0</code> = reverse</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
+<p>N/A</p>
 <h2 id="response">Response<a class="headerlink" href="#response" title="Permanent link">&para;</a></h2>
-<p>The following are not a direct response, but rather a broadcast that will be triggered as a result of any track manager changes.</p>
-<p><code>&lt;l «loco» «reg» «speedByte» «functMap»&gt;</code></p>
+<p><strong>Response</strong> to <code>&lt;s&gt;</code></p>
+<p><code>&lt;iDCCEX version / microprocessorType / MotorControllerType / buildNumber&gt;</code> <br/> plus (repeated for each defined Turnout/Point): <code>&lt;H id state&gt;</code></p>
 <ul>
-<li><strong>loco</strong> = DCC Address of the decoder/loco. The short (1-127) or long (128-10293) address of the engine decoder (this has to be already programmed in the decoder)</li>
-<li><strong>reg</strong> not used. We no longer use this but need something here for compatibility with legacy systems. Enter any single digit.</li>
-<li><strong>speedbyte</strong>:** Speed in DCC speedstep format<ul>
-<li>reverse - <code>2</code>-<code>127</code> = speed <code>1</code>-<code>126</code>, <code>0</code> = stop, <code>1</code> = Emergency Stop</li>
-<li>forward - <code>130</code>-<code>255</code> = speed <code>1</code>-<code>126</code>, <code>128</code> = stop, <code>129</code> = Emergency Stop</li>
+<li>**version: Command Station version</li>
+<li><strong>microprocessorType</strong>: microprocessor type (e.g. MEGA)</li>
+<li><strong>MotorControllerType</strong>: Motor Driver type (e.g. STANDARD_MOTOR_SHIELD)</li>
+<li><strong>buildNumber</strong>: Command Station build number</li>
+<li><strong>id</strong>: unique identifier for the Turnout/Point</li>
+<li><strong>state</strong>: one of:<ul>
+<li><code>1</code> = thrown</li>
+<li><code>0</code> = Closed</li>
 </ul>
 </li>
-<li><strong>FunctMap</strong> individual function states represented by the bits in a byte</li>
+</ul>
+<p><strong>Response</strong> to <code>&lt;J I&gt;</code></p>
+<p><mark>TODO</mark></p>
+<p><strong>Response</strong> to <code>&lt;c&gt;</code></p>
+<p><code>&lt;c "CurrentMAIN" current C "Milli" "0" max_ma "1" trip_ma&gt;</code></p>
+<ul>
+<li><strong>CurrentMAIN</strong>: Static text for software like JMRI (in quotes)</li>
+<li><strong>current</strong>: Current in MilliAmps</li>
+<li><strong>C</strong>: Designator to signify this is a current meter (V would be for voltage)</li>
+<li>**Milli: Unit of measure for external software with a meter like JMRI (Milli, Kilo, etc.) (in quotes)</li>
+<li><strong>0</strong>: numbered parameter for external software (1,2,3, etc.) (in quotes)</li>
+<li><strong>max_ma</strong>: The maximum current handling of the Motor Driver in MilliAmps</li>
+<li><strong>1</strong>: number parameter for external software (we use 2 parameters here, 0 and 1) (in quotes)</li>
+<li><strong>trip_ma</strong> - The overcurrent limit that will trip the software circuit breaker in mA</li>
+</ul>
+<p><strong>response to</strong> <code>&lt;#&gt;</code></p>
+<p><code>&lt;# noCabs&gt;</code></p>
+<ul>
+<li><strong>noCabs</strong>: maximum number of Cabs(Locos) supported by the command station</li>
 </ul>
 <h2 id="notes">Notes<a class="headerlink" href="#notes" title="Permanent link">&para;</a></h2>
 <ul>
-<li>The speedbyte value is different to the speed sent, as it is an encoded (1,7 bits) byte.</li>
-<li>This starts a reminder process for any external updates to the loco's status.
-<code>&lt;t «reg» «loco» «speed» «direction»&gt;</code> is a depricated version of the command. It is not documented here.</li>
+<li><mark>TODO</mark></li>
 </ul>
 <hr />
 <h2 id="examples">Examples<a class="headerlink" href="#examples" title="Permanent link">&para;</a></h2>
-<p><a href="?_T">Also search for 'T'</a></p>
-<h3 id="example-commands">Example Commands<a class="headerlink" href="#example-commands" title="Permanent link">&para;</a></h3>
+<p><a href="?_s">Also search for 's'</a> or <a href="?_d">search for 'D'</a> or <a href="?_d">search for 'J I'</a></p>
+<h3 id="example-commands"><em>Example Commands</em><a class="headerlink" href="#example-commands" title="Permanent link">&para;</a></h3>
 <ul>
 <li><mark>TODO</mark></li>
 </ul>
-<h3 id="example-responses">Example Responses<a class="headerlink" href="#example-responses" title="Permanent link">&para;</a></h3>
+<h3 id="example-responses"><em>Example Responses:</em><a class="headerlink" href="#example-responses" title="Permanent link">&para;</a></h3>
 <ul>
 <li><mark>TODO</mark></li>
 </ul>

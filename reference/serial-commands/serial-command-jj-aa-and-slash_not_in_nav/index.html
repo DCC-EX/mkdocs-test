@@ -10,7 +10,7 @@
       
       
       
-        <link rel="canonical" href="https://dcc-ex.com/mkdocs-test/reference/serial-commands/serial-command-t_not_in_nav/">
+        <link rel="canonical" href="https://dcc-ex.com/mkdocs-test/reference/serial-commands/serial-command-jj-aa-and-slash_not_in_nav/">
       
       
       
@@ -23,7 +23,7 @@
     
     
       
-        <title><t «loco» [«tSpeed» «direction»]> Request or set loco status - DCC-EX Model Train Control, Animation, and Automation</title>
+        <title><J A [«id»]> </ [START|PAUSE|RESUME|KILL] [«various parameters»]> List, Start or Stop Automations/Sequences - DCC-EX Model Train Control, Animation, and Automation</title>
       
     
     
@@ -79,7 +79,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#t-loco-tspeed-direction-request-or-set-loco-status" class="md-skip">
+        <a href="#j-a-id-startpauseresumekill-various-parameters-list-start-or-stop-automationssequences" class="md-skip">
           Skip to content
         </a>
       
@@ -112,7 +112,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              &lt;t «loco» [«tSpeed» «direction»]&gt; Request or set loco status
+              &lt;J A [«id»]&gt; &lt;/ [START|PAUSE|RESUME|KILL] [«various parameters»]&gt; List, Start or Stop Automations/Sequences
             
           </span>
         </div>
@@ -7091,11 +7091,26 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#command" class="md-nav__link">
+  <a href="#commands" class="md-nav__link">
     <span class="md-ellipsis">
-      Command
+      Commands
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="Commands">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#command-variations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Command Variations
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -7109,9 +7124,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#response" class="md-nav__link">
+  <a href="#responses" class="md-nav__link">
     <span class="md-ellipsis">
-      Response
+      Responses
     </span>
   </a>
   
@@ -7148,7 +7163,7 @@
           <li class="md-nav__item">
   <a href="#example-responses" class="md-nav__link">
     <span class="md-ellipsis">
-      Example Responses
+      Example Responses:
     </span>
   </a>
   
@@ -7180,60 +7195,66 @@
   
 
 
-<h1 id="t-loco-tspeed-direction-request-or-set-loco-status"><small><code>&lt;t «loco» [«tSpeed» «direction»]&gt;</code></small> <br/>Request or set loco status<a class="headerlink" href="#t-loco-tspeed-direction-request-or-set-loco-status" title="Permanent link">&para;</a></h1>
-<p>Serial command to request information about a loco or set its speed and direction</p>
-<h2 id="command">Command<a class="headerlink" href="#command" title="Permanent link">&para;</a></h2>
+<h1 id="j-a-id-startpauseresumekill-various-parameters-list-start-or-stop-automationssequences"><small><code>&lt;J A [«id»]&gt;</code></small> <br/><small><code>&lt;/ [START|PAUSE|RESUME|KILL] [«various parameters»]&gt;</code></small> <br/> List, Start or Stop Automations/Sequences<a class="headerlink" href="#j-a-id-startpauseresumekill-various-parameters-list-start-or-stop-automationssequences" title="Permanent link">&para;</a></h1>
+<p>Serial commands to list, start, pause or stop automations/sequences including routes and animations.</p>
+<h2 id="commands">Commands<a class="headerlink" href="#commands" title="Permanent link">&para;</a></h2>
 <ul>
-<li><code>t</code></li>
+<li><code>J A</code></li>
+<li><code>/</code></li>
+<li><code>/ START</code></li>
+<li><code>/ PAUSE</code></li>
+<li><code>/ RESUME</code></li>
+<li><code>/ KILL</code></li>
+</ul>
+<h3 id="command-variations">Command Variations<a class="headerlink" href="#command-variations" title="Permanent link">&para;</a></h3>
+<ul>
+<li><code>&lt;J A&gt;</code> List all automations/routes</li>
+<li><code>&lt;J A «id»&gt;</code> list automation details</li>
+<li><code>&lt;/ START [«loco»] «route»&gt;</code> Start a sequence, or an automation with a loco</li>
+<li><code>&lt;/ PAUSE&gt;</code> Pause all EXRAIL tasks</li>
+<li><code>&lt;/ RESUME&gt;</code> Resume all EXRAIL tasks</li>
+<li><code>&lt;/ KILL ALL&gt;</code> Kill all EXRAIL tasks</li>
+<li><code>&lt;/ KILL «taskId»&gt;</code> Kill specific EXRAIL tasks</li>
+<li><code>&lt;</code> <code>/</code> <code>&gt;</code> Stream EXRAIL status</li>
 </ul>
 <h2 id="parameters">Parameters<a class="headerlink" href="#parameters" title="Permanent link">&para;</a></h2>
 <ul>
-<li>
-<p><strong>loco</strong> <em>Required</em> <br/> Loco to request information about a loco or set its speed and direction</p>
-</li>
-<li>
-<p>blank or <strong>tSpeed</strong> plus <strong>direction</strong></p>
+<li><strong>id</strong> &amp; <strong>taskId</strong>: id of the automation/sequence</li>
+<li><strong>loco</strong>: <em>optional</em> DCC address of the loco to be used by the automation. <br/> not relevant to routes and automations.</li>
+<li><strong>route</strong>: automation/sequence (includeing routes and animations) to start or kill.</li>
+</ul>
+<h2 id="responses">Responses<a class="headerlink" href="#responses" title="Permanent link">&para;</a></h2>
+<p><strong>Response for</strong> <code>&lt;J A&gt;</code></p>
+<p>(Successful) <code>&lt;jA [id0 id1 id2 ..]&gt;</code></p>
 <ul>
-<li>if blank = Request a deliberate update on the loco speed/functions</li>
-<li>if <strong>tSpeed</strong> and <strong>direction</strong> are supplied<ul>
-<li><strong>tSpeed</strong>: <code>0</code>-<code>127</code> or <code>-1</code> for Emergency Stop</li>
-<li><strong>direction</strong> - one of:<ul>
-<li><code>1</code> = forward</li>
-<li><code>0</code> = reverse</li>
+<li><strong>id?</strong>: identifier of the Route/Automation(s)</li>
 </ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<h2 id="response">Response<a class="headerlink" href="#response" title="Permanent link">&para;</a></h2>
-<p>The following are not a direct response, but rather a broadcast that will be triggered as a result of any track manager changes.</p>
-<p><code>&lt;l «loco» «reg» «speedByte» «functMap»&gt;</code></p>
+<p><strong>Response for</strong> <code>&lt;J «id»&gt;</code></p>
+<p>(Successful) <code>&lt;jA id X|type |"desc"&gt;</code></p>
 <ul>
-<li><strong>loco</strong> = DCC Address of the decoder/loco. The short (1-127) or long (128-10293) address of the engine decoder (this has to be already programmed in the decoder)</li>
-<li><strong>reg</strong> not used. We no longer use this but need something here for compatibility with legacy systems. Enter any single digit.</li>
-<li><strong>speedbyte</strong>:** Speed in DCC speedstep format<ul>
-<li>reverse - <code>2</code>-<code>127</code> = speed <code>1</code>-<code>126</code>, <code>0</code> = stop, <code>1</code> = Emergency Stop</li>
-<li>forward - <code>130</code>-<code>255</code> = speed <code>1</code>-<code>126</code>, <code>128</code> = stop, <code>129</code> = Emergency Stop</li>
+<li><strong>id</strong>: identifier of the Route/Automation</li>
+<li><strong>type</strong>: one of<ul>
+<li><code>R</code> = Route</li>
+<li><code>A</code> = Automation</li>
 </ul>
 </li>
-<li><strong>FunctMap</strong> individual function states represented by the bits in a byte</li>
+<li><strong>desc</strong>: Textual description of the route/automation always surrounded in quotes (")</li>
 </ul>
+<p>(fail - is not defined): <code>&lt;jA id X&gt;</code></p>
+<p><strong>Response for</strong> <code>&lt;/ START ...&gt;</code>, <code>&lt;/ PAUSE&gt;</code>, <code>&lt;/ RESUME&gt;</code>, <code>&lt;/ KILL ...&gt;</code>, <code>&lt;</code> <code>/</code> <code>&gt;</code></p>
+<p>N/A</p>
 <h2 id="notes">Notes<a class="headerlink" href="#notes" title="Permanent link">&para;</a></h2>
-<ul>
-<li>The speedbyte value is different to the speed sent, as it is an encoded (1,7 bits) byte.</li>
-<li>This starts a reminder process for any external updates to the loco's status.
-<code>&lt;t «reg» «loco» «speed» «direction»&gt;</code> is a depricated version of the command. It is not documented here.</li>
-</ul>
-<hr />
-<h2 id="examples">Examples<a class="headerlink" href="#examples" title="Permanent link">&para;</a></h2>
-<p><a href="?_T">Also search for 'T'</a></p>
-<h3 id="example-commands">Example Commands<a class="headerlink" href="#example-commands" title="Permanent link">&para;</a></h3>
 <ul>
 <li><mark>TODO</mark></li>
 </ul>
-<h3 id="example-responses">Example Responses<a class="headerlink" href="#example-responses" title="Permanent link">&para;</a></h3>
+<hr />
+<h2 id="examples">Examples<a class="headerlink" href="#examples" title="Permanent link">&para;</a></h2>
+<p><a href="?_J_">Also search for 'J A'</a> or <a href="?_/">search for '/'</a></p>
+<h3 id="example-commands"><em>Example Commands</em><a class="headerlink" href="#example-commands" title="Permanent link">&para;</a></h3>
+<ul>
+<li><mark>TODO</mark></li>
+</ul>
+<h3 id="example-responses"><em>Example Responses:</em><a class="headerlink" href="#example-responses" title="Permanent link">&para;</a></h3>
 <ul>
 <li><mark>TODO</mark></li>
 </ul>
