@@ -27,7 +27,7 @@
   --md-typeset-a-color:         var(--md-accent-fg-color--dark);
 
   /* Backgrounds */
-  --md-default-bg-color:        #F0F0F0; /* Main background */
+  --md-default-bg-color:        #FBFBFB; /* Main background */
   --md-default-bg-color--light: #FFFFFF; /* Subtle background for blocks */
   --md-default-bg-color--dark:  #E0E0E0; /* Slightly darker backgrounds */
 
