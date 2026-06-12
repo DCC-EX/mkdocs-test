@@ -131,6 +131,8 @@ Also see: Connect WiFi Throttle via USB
 
 - DigiTrainsPro ([Android](https://play.google.com/store/apps/details?id=digitrainspro.digitrainspro.hu&hl=en_US&gl=US), [iOS](https://apps.apple.com/us/app/digitrainspro/id1481937310), [Windows](https://www.microsoft.com/en-us/p/digitrainspro/9p3kl60r0c5q?rtc=1&activetab=pivot:overviewtab)) *- Requires JMRI*
 
+----
+
 ## Comparison Table
 
 <style>
@@ -141,13 +143,14 @@ Also see: Connect WiFi Throttle via USB
     padding-left: 2px !important;
     padding-right: 2px !important;
     line-height: 110% !important;
+    font-family: 'Roboto Condensed', sans-serif !important;
  }
 .md-typeset table tr th:first-child,
 .md-typeset table tr td:first-child {
     position: sticky;
     left: 0;
     z-index: 1; /* Keeps the column on top of the scrolling content */
-    background: var(--md-accent-fg-color--light);
+    background: var(--md-typeset-table-color);
 }
 
 </style>
