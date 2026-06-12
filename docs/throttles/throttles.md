@@ -136,6 +136,8 @@ Also see: Connect WiFi Throttle via USB
 ## Comparison Table
 
 <style>
+ .md-typeset__scrollwrap th:first-child,
+ .md-typeset__scrollwrap td:first-child,
  .md-typeset table td,  .md-typeset table th {
     font-size: smaller !important;
     padding-top: 2px !important;
@@ -145,8 +147,11 @@ Also see: Connect WiFi Throttle via USB
     line-height: 110% !important;
     font-family: 'Roboto Condensed', sans-serif !important;
  }
-.md-typeset table tr th:first-child,
-.md-typeset table tr td:first-child {
+
+ .md-typeset__scrollwrap th:first-child,
+ .md-typeset__scrollwrap td:first-child,
+ .md-typeset table tr th:first-child,
+ .md-typeset table tr td:first-child {
     position: sticky;
     left: 0;
     z-index: 1; /* Keeps the column on top of the scrolling content */
