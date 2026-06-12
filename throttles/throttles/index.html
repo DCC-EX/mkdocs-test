@@ -7571,7 +7571,30 @@
 <hr />
 <h2 id="comparison-table">Comparison Table<a class="headerlink" href="#comparison-table" title="Permanent link">&para;</a></h2>
 <style>
- .md-typeset table td,  .md-typeset table th {
+.md-typeset .md-typeset__scrollwrap {
+    overflow-x: auto !important;
+    overflow-y: visible !important;
+}
+
+.md-typeset__scrollwrap table {
+    display: table !important;
+    width: 100% !important;
+    border-collapse: separate !important;
+    border-spacing: 0 !important;
+}
+
+.md-typeset__scrollwrap th:first-child,
+.md-typeset__scrollwrap td:first-child,
+.md-typeset table tr th:first-child,
+.md-typeset table tr td:first-child {
+    position: sticky;
+    left: 0;
+    z-index: 3; /* Keeps the column on top of the scrolling content */
+    background: var(--md-default-bg-color--light);
+}
+
+.md-typeset table td,  
+.md-typeset table th {
     font-size: smaller !important;
     padding-top: 2px !important;
     padding-bottom: 2px !important;
@@ -7580,14 +7603,6 @@
     line-height: 110% !important;
     font-family: 'Roboto Condensed', sans-serif !important;
  }
-.md-typeset table tr th:first-child,
-.md-typeset table tr td:first-child {
-    position: sticky;
-    left: 0;
-    z-index: 1; /* Keeps the column on top of the scrolling content */
-    background: var(--md-default-bg-color--light);
-}
-
 </style>
 
 <table>
@@ -7599,13 +7614,13 @@
 <th>Protocol</th>
 <th>UI</th>
 <th>Also <br/> Requires</th>
-<th>P <br/> h <br/> y <br/> s <br/> i <br/> c <br/> a <br/> l</th>
-<th>A <br/> n <br/> d <br/> r <br/> o <br/> i <br/> d <br/></th>
-<th>i <br/> O <br/> S</th>
-<th>W <br/> i <br/> n</th>
-<th>M <br/> a <br/> c <br/> O <br/> S</th>
-<th>L <br/> i <br/> n <br/> u <br/> x</th>
-<th>CV <br/> Pro- <br/> gram- <br/> ming</th>
+<th style="text-align: center;">Physical<br/>Device</th>
+<th style="text-align: center;">Android</th>
+<th style="text-align: center;">iOS</th>
+<th style="text-align: center;">Windows</th>
+<th style="text-align: center;">MacOS</th>
+<th style="text-align: center;">Linux</th>
+<th style="text-align: center;">CV <br/>Programming</th>
 </tr>
 </thead>
 <tbody>
@@ -7616,13 +7631,13 @@
 <td>Native / WiT</td>
 <td>Web</td>
 <td>-</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-<td>X</td>
-<td>X</td>
-<td>X</td>
-<td>X</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;">X</td>
 </tr>
 <tr>
 <td><a href="https://www.jmri.org/">JMRI</a></td>
@@ -7631,13 +7646,13 @@
 <td>Native</td>
 <td>App &amp; Web</td>
 <td>JMRI<sup id="fnref:3"><a class="footnote-ref" href="#fn:3">3</a></sup> on PC/RPi</td>
-<td>-</td>
-<td>Web</td>
-<td>Web</td>
-<td>X</td>
-<td>X</td>
-<td>X</td>
-<td>X</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">Web</td>
+<td style="text-align: center;">Web</td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;">X</td>
 </tr>
 <tr>
 <td><a href="https://www.perecli.com/rrauto/">Railroad Automation</a></td>
@@ -7646,13 +7661,13 @@
 <td>LocoNet</td>
 <td>Web</td>
 <td>IoTT Red hat</td>
-<td>-</td>
-<td>Web</td>
-<td>Web</td>
-<td>X</td>
-<td>X</td>
-<td>X</td>
-<td>-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">Web</td>
+<td style="text-align: center;">Web</td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;">-</td>
 </tr>
 <tr>
 <td><a href="../engine-driver/">Engine Driver</a></td>
@@ -7661,13 +7676,13 @@
 <td>Native / Wit</td>
 <td>App</td>
 <td>-</td>
-<td>-</td>
-<td>X</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-<td>X <sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup></td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">X <sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup></td>
 </tr>
 <tr>
 <td><a href="https://www.alfray.com/trains/cab_app.html">Cab Engineer: DCC Throttle</a></td>
@@ -7676,13 +7691,13 @@
 <td>Native</td>
 <td>App</td>
 <td>-</td>
-<td>-</td>
-<td>X</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
 </tr>
 <tr>
 <td><a href="https://aleksandr.ru/my/dccppthrottle">DCC++ Throttle</a></td>
@@ -7691,13 +7706,13 @@
 <td>Native</td>
 <td>App</td>
 <td>-</td>
-<td>-</td>
-<td>X</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-<td>X</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">X</td>
 </tr>
 <tr>
 <td><a href="https://aleksandr.ru/my/dccppthrottle">DCC++ Throttle</a></td>
@@ -7706,13 +7721,13 @@
 <td>Native</td>
 <td>App</td>
 <td>-</td>
-<td>-</td>
-<td>X</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-<td>X</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">X</td>
 </tr>
 <tr>
 <td><a href="https://play.google.com/store/apps/details?id=net.rt2c.rtdrivedcc">RtDrive DCC-EX</a></td>
@@ -7721,13 +7736,13 @@
 <td>Native</td>
 <td>App</td>
 <td>-</td>
-<td>-</td>
-<td>X</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-<td>X</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">X</td>
 </tr>
 <tr>
 <td><a href="https://play.google.com/store/apps/details?id=digitrainspro.digitrainspro.hu">DigiTrainsPro</a></td>
@@ -7736,13 +7751,13 @@
 <td>JMRI Web</td>
 <td>App</td>
 <td>JMRI on PC/RPi</td>
-<td>-</td>
-<td>X</td>
-<td>X</td>
-<td>X</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
 </tr>
 <tr>
 <td><a href="https://apps.apple.com/us/app/locontrol-dcc-controller/id1473757920">Locontrol</a></td>
@@ -7751,13 +7766,13 @@
 <td>WiT</td>
 <td>App</td>
 <td>-</td>
-<td>-</td>
-<td>-</td>
-<td>X</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
 </tr>
 <tr>
 <td><a href="https://www.io-expert.com/srcpclientios/index.html">SRCP Client</a></td>
@@ -7766,13 +7781,13 @@
 <td>Native</td>
 <td>App</td>
 <td>-</td>
-<td>-</td>
-<td>-</td>
-<td>X</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
 </tr>
 <tr>
 <td><a href="https://throttlecard.com/">ThrottleCard</a></td>
@@ -7781,13 +7796,13 @@
 <td>Native / WiT</td>
 <td>App</td>
 <td>-</td>
-<td>-</td>
-<td>-</td>
-<td>X</td>
-<td>-</td>
-<td>X</td>
-<td>-</td>
-<td>X</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">X</td>
 </tr>
 <tr>
 <td><a href="https://signalcab.com/">Signal Cab</a></td>
@@ -7796,13 +7811,13 @@
 <td>Native / WiT</td>
 <td>App</td>
 <td>-</td>
-<td>-</td>
-<td>-</td>
-<td>X</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-<td>X</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">X</td>
 </tr>
 <tr>
 <td><a href="https://drewhoffman.net/trainthrottle/">Train Throttle</a></td>
@@ -7811,13 +7826,13 @@
 <td>WiT</td>
 <td>App</td>
 <td>-</td>
-<td>-</td>
-<td>-</td>
-<td>X</td>
-<td>X</td>
-<td>X</td>
-<td>-</td>
-<td>-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
 </tr>
 <tr>
 <td><a href="https://apps.apple.com/sk/app/trainnavigator/id6738654983">TrainNavigator</a></td>
@@ -7826,13 +7841,13 @@
 <td>Native</td>
 <td>App</td>
 <td>-</td>
-<td>-</td>
-<td>-</td>
-<td>X</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
 </tr>
 <tr>
 <td><a href="https://www.withrottle.com/">WiThrottle</a></td>
@@ -7841,13 +7856,13 @@
 <td>WiT</td>
 <td>App</td>
 <td>-</td>
-<td>-</td>
-<td>-</td>
-<td>X</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
 </tr>
 <tr>
 <td><a href="https://apps.apple.com/us/app/dcc-ex-cab/id6695754417?uo=2">DCC-EX CAB</a></td>
@@ -7856,13 +7871,13 @@
 <td>Native</td>
 <td>App</td>
 <td>-</td>
-<td>-</td>
-<td>X</td>
-<td>X</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-<td>X</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">X</td>
 </tr>
 <tr>
 <td><a href="https://apps.apple.com/us/app/dcc-commander/id6498150761">DCC Commander</a></td>
@@ -7871,13 +7886,13 @@
 <td>Native</td>
 <td>App</td>
 <td>-</td>
-<td>-</td>
-<td>-</td>
-<td>X</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-<td>X</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">X</td>
 </tr>
 <tr>
 <td><a href="https://play.google.com/store/apps/details?id=com.gothicmaestro.withrottlecab">WiThrottle Cab</a></td>
@@ -7886,13 +7901,13 @@
 <td>Native</td>
 <td>App</td>
 <td>-</td>
-<td>-</td>
-<td>X</td>
-<td>X</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
 </tr>
 <tr>
 <td><a href="https://github.com/flash62au/DccExController">DccExController</a></td>
@@ -7901,13 +7916,13 @@
 <td>Native</td>
 <td>Device</td>
 <td>DIY</td>
-<td>X</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
 </tr>
 <tr>
 <td><a href="https://petegsx-projects.github.io/simple-throttle/index.html">DCC-EX Simple Throttle</a></td>
@@ -7916,13 +7931,13 @@
 <td>Native</td>
 <td>Device</td>
 <td>DIY</td>
-<td>X</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
 </tr>
 <tr>
 <td><a href="https://github.com/daniep01/companion-module-dcc-ex-commandstation">Elgato Stream Deck</a></td>
@@ -7931,13 +7946,13 @@
 <td>Native</td>
 <td>Device</td>
 <td>PC/RPi</td>
-<td>X</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
 </tr>
 <tr>
 <td><a href="https://github.com/DCC-EX/EX-T3-WiFi?tab=readme-ov-file">EX-T3-WiFi</a></td>
@@ -7946,13 +7961,13 @@
 <td>Native</td>
 <td>Device</td>
 <td>DIY</td>
-<td>X</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
 </tr>
 <tr>
 <td><a href="https://github.com/1fatgmc/HandCab/tree/main">HandCab</a></td>
@@ -7961,13 +7976,13 @@
 <td>WiT</td>
 <td>Device</td>
 <td>DIY</td>
-<td>X</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
 </tr>
 <tr>
 <td><a href="https://lokstoredigital.jimdoweb.com/lodi-con/">LoDi-Con WiFi Throttle</a></td>
@@ -7976,13 +7991,13 @@
 <td>WiT</td>
 <td>Device</td>
 <td>-</td>
-<td>X</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
 </tr>
 <tr>
 <td><a href="https://camelthorn.cloud/miniThrottle/miniIntro.php">miniThrottle</a></td>
@@ -7991,13 +8006,13 @@
 <td>Native</td>
 <td>Device</td>
 <td>DIY</td>
-<td>X</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
 </tr>
 <tr>
 <td><a href="https://github.com/n1ksn/dcc-ex-bluepill-throttle-7">myBluePillThrottle7</a></td>
@@ -8006,13 +8021,13 @@
 <td>Native</td>
 <td>Device</td>
 <td>DIY</td>
-<td>X</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
 </tr>
 <tr>
 <td><a href="https://github.com/flash62au/WiTcontroller">WiTcontroller</a></td>
@@ -8021,13 +8036,13 @@
 <td>WiT</td>
 <td>Device</td>
 <td>DIY</td>
-<td>X</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
 </tr>
 <tr>
 <td><a href="https://newheiko.github.io/wiFred/documentation/docu_en.html">wiFred</a></td>
@@ -8036,13 +8051,13 @@
 <td>WiT</td>
 <td>Device</td>
 <td>DIY</td>
-<td>X</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
 </tr>
 <tr>
 <td><a href="https://tcsdcc.com/uwt-50">TCS UWT-50</a> &amp; <a href="https://www.tcsdcc.com/uwt-100">UWT-100</a></td>
@@ -8051,13 +8066,13 @@
 <td>WiT</td>
 <td>Device</td>
 <td>-</td>
-<td>X</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
 </tr>
 <tr>
 <td><a href="https://www.esu.eu/en/products/digital-control/mobile-control-pro/">ESU Mobile Control Pro</a></td>
@@ -8066,13 +8081,13 @@
 <td>WiT / Native</td>
 <td>Device</td>
 <td>-</td>
-<td>X</td>
-<td>?<sup id="fnref:7"><a class="footnote-ref" href="#fn:7">7</a></sup></td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-<td>X</td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;">?<sup id="fnref:7"><a class="footnote-ref" href="#fn:7">7</a></sup></td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">X</td>
 </tr>
 <tr>
 <td>LocoNet-Compatible Throttles</td>
@@ -8081,13 +8096,13 @@
 <td>LocoNet</td>
 <td>Device</td>
 <td>IoTT Red hat</td>
-<td>X</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
 </tr>
 </tbody>
 </table>
@@ -8155,7 +8170,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 12, 2026 12:27:01 UTC">June 12, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 12, 2026 22:22:49 UTC">June 12, 2026</span>
   </span>
 
     
