@@ -142,6 +142,14 @@ Also see: Connect WiFi Throttle via USB
     padding-right: 2px !important;
     line-height: 110% !important;
  }
+.md-typeset table tr th:first-child,
+.md-typeset table tr td:first-child {
+    position: sticky;
+    left: 0;
+    z-index: 1; /* Keeps the column on top of the scrolling content */
+    background: var(--md-accent-fg-color--light);
+}
+
 </style>
 
 | Name                            | Licence         | Interface         | Protocol     | UI         | Also <br/> Requires         | P <br/> h <br/> y <br/> s <br/> i <br/> c <br/> a <br/> l | A <br/> n <br/> d <br/> r <br/> o <br/> i <br/> d <br/> | i <br/> O <br/> S | W <br/> i <br/> n | M <br/> a <br/> c <br/> O <br/> S | L <br/> i <br/> n <br/> u <br/> x | CV <br/> Pro- <br/> gram- <br/> ming |
@@ -198,9 +206,9 @@ Also see: Connect WiFi Throttle via USB
 - DIY = Do it Yourself. Requires you to buy components and 'build' the device.
 
 [^1]: CV programming is only available in Engine Driver when connected using the DCC-EX Native protocol.
-[^2]: Note: The Android throttle apps listed above can be made to made to run on Windows PCs. See :doc:`Running Android apps on Microsoft Windows <software/android-apps-on-windows>`.
+[^2]: Note: The Android throttle apps listed above can be made to made to run on Windows PCs.
 [^3]: JMRI is a suite of applications.  This table only refers the Web based throttle component of JMRI.  To use the Web throttle you will need to be running the JMRI suite of applications on a PC (Windows, OSX or Linux) or RPi. e.g. **Decoder Pro** or **Panel Pro**.
-[^4]: Connecting JMRI to an EX-CommandStation over WiFi works, but is not recommended and is not supported 
+[^4]: Connecting JMRI to an EX-CommandStation over WiFi works, but is not recommended and is not supported.
 [^5]: Free version is functionally limited. (No track power control, only one throttle and no consists/MUs.)
 [^6]: Free version is advertisement supported and time limited.
-[^7]: ESU Mobile Control Pro is an Android device with additional hardware, so can also run the :doc:`Engine Driver <software/engine-driver>` app. As such it can use the DCC-EX Native protocol when connected to a DCC-EX Command Station. It uses the WiThrottle protocol when connected to a WiThrottle server. When using Engine Driver and the Native Protocol it is capable of CV programming.
+[^7]: ESU Mobile Control Pro is an Android device with additional hardware, so can also run the Engine Driver app. As such it can use the DCC-EX Native protocol when connected to a DCC-EX Command Station. It uses the WiThrottle protocol when connected to a WiThrottle server. When using Engine Driver and the Native Protocol it is capable of CV programming.
