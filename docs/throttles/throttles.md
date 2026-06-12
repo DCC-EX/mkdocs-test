@@ -136,9 +136,30 @@ Also see: Connect WiFi Throttle via USB
 ## Comparison Table
 
 <style>
- .md-typeset__scrollwrap th:first-child,
- .md-typeset__scrollwrap td:first-child,
- .md-typeset table td,  .md-typeset table th {
+.md-typeset .md-typeset__scrollwrap {
+    overflow-x: auto !important;
+    overflow-y: visible !important;
+}
+
+.md-typeset__scrollwrap table {
+    display: table !important;
+    width: 100% !important;
+    border-collapse: separate !important;
+    border-spacing: 0 !important;
+}
+
+.md-typeset__scrollwrap th:first-child,
+.md-typeset__scrollwrap td:first-child,
+.md-typeset table tr th:first-child,
+.md-typeset table tr td:first-child {
+    position: sticky;
+    left: 0;
+    z-index: 3; /* Keeps the column on top of the scrolling content */
+    background: var(--md-default-bg-color--light);
+}
+
+.md-typeset table td,  
+.md-typeset table th {
     font-size: smaller !important;
     padding-top: 2px !important;
     padding-bottom: 2px !important;
@@ -147,17 +168,6 @@ Also see: Connect WiFi Throttle via USB
     line-height: 110% !important;
     font-family: 'Roboto Condensed', sans-serif !important;
  }
-
- .md-typeset__scrollwrap th:first-child,
- .md-typeset__scrollwrap td:first-child,
- .md-typeset table tr th:first-child,
- .md-typeset table tr td:first-child {
-    position: sticky;
-    left: 0;
-    z-index: 1; /* Keeps the column on top of the scrolling content */
-    background: var(--md-default-bg-color--light);
-}
-
 </style>
 
 
