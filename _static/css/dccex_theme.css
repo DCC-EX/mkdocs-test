@@ -27,9 +27,9 @@
   --md-typeset-a-color:         var(--md-accent-fg-color--dark);
 
   /* Backgrounds */
-  --md-default-bg-color:        #FFFFFF; /* Main background */
-  --md-default-bg-color--light: #FAFAFA; /* Subtle background for blocks */
-  --md-default-bg-color--dark:  #F0F0F0; /* Slightly darker backgrounds */
+  --md-default-bg-color:        #FBFBFB; /* Main background */
+  --md-default-bg-color--light: #FFFFFF; /* Subtle background for blocks */
+  --md-default-bg-color--dark:  #E0E0E0; /* Slightly darker backgrounds */
 
   /* Code blocks */
   --md-code-fg-color:           #121212; /* Code text colour */
@@ -74,6 +74,11 @@
 
   /* Table border colour */
   --md-typeset-table-color: #00B6CC;
+
+  /* Darken header background colour */
+  .md-header {
+    background-color:         var(--md-accent-fg-color--dark);
+  }
 }
 
 /* --- DCC-EX Dark Color Scheme Overrides --- */
