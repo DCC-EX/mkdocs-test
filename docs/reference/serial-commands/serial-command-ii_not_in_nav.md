@@ -14,7 +14,7 @@ tags:
     - _J_P_id
 ---
 
-# <small>``<I [«id»] [«various parameter»]>``</small> <br/><small>``<D TT «vpin» «steps» [«activity]>``</small> <br/><small>``<J O [«id»]>``</small> &nbsp; <small>``<J P «id»>``</small><br/>Manage Turntables
+# <small>``<I [«id»] [«various parameters»]>``</small> <br/><small>``<D TT «vpin» «steps» [«activity]>``</small> <br/><small>``<J O [«id»]>``</small> &nbsp; <small>``<J P «id»>``</small><br/>Manage Turntables
 
 Serial commands to manage Turntables.
 
@@ -31,8 +31,8 @@ Also refer to the [legacy EX-Turntable documentation](https://dcc-ex.com/legacy-
 * ``<I «id» «position» «activity»>`` Rotate an EXTT turntable
 * ``<I «id» «position»>`` Rotate a DCC turntable
 * ``<I «id»>`` Broadcast turntable type and current position
-* ``<D TT «vpin» «steps» «activity»> Test turntable
-* ``<D TT «vpin» «steps»> Test turntable
+* ``<D TT «vpin» «steps» «activity»>`` Test turntable
+* ``<D TT «vpin» «steps»>`` Test turntable
 * ``<J O>`` List turntable IDs
 * ``<J O «id»>`` List turntable state
 * ``<J P «id»>`` list turntable positions
