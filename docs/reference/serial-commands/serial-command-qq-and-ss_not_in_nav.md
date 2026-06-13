@@ -25,14 +25,14 @@ Serial commands to create and manage sensors
     * ``1`` = Use pull-up resistor ACTIVE=LOW
     * ``0``= don’t use pull-up resistor ACTIVE=HIGH
 
-## Response
+## Responses
 
-**Response for** ``<Q>``
+### Response for ``<Q>``
 
 (successful) Repeated for each inactive defined sensor: ``<q «id»>``<br/>
 (fail): N/A
 
-**Response for** ``<S>``
+### Response for ``<S>``
 
 (successful) Repeated for each inactive defined sensor: ``<Q «id» «vpin» «pullup»>``<br/>
 (fail): ``X``
@@ -43,12 +43,12 @@ Serial commands to create and manage sensors
     * ``1`` = Use pull-up resistor ACTIVE=LOW
     * ``0``= don’t use pull-up resistor ACTIVE=HIGH
 
-**Response for** ``<S «id» «vpin» «pullup»>``
+### Response for ``<S «id» «vpin» «pullup»>``
 
 (Successful): ``<O>``<br/>
 (Fail): ``<X>`` (e.g. out of memory)
 
-**Response for** ``<S «id»>``
+### Response for ``<S «id»>``
 
 (Successful): ``<O>``<br/>
 (Fail): ``<X>`` (e.g. ID does not exist)

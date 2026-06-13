@@ -64,6 +64,8 @@ Serial commands to define or manage Turnouts/Points.
 
 The following are not a direct response, but rather a broadcast that will be triggered as a result of any track manager changes.
 
+### Response for ``<T «id» ...>``
+
 **For the following commands:**
 
 * ``<T «id» DCC «addr» «subaddr»>``
@@ -77,7 +79,9 @@ The response will be:
 * (successful): ``<O>``
 * (fail): ``<X>``
 
-**For** ``<T>`` and ``<J T>`` **the response/broadcast is:**
+### Response for ``<T>`` and ``<J T>``
+
+**the response/broadcast is:**
 
 Repeated for each defined Turnout/Point:
 
@@ -89,7 +93,9 @@ Repeated for each defined Turnout/Point:
         * 1 = Thrown,
         * 0 = Closed
 
-**For** ``<T «id» X>`` and ``<J T «id»>`` **the response/broadcast is:**
+### Response for  ``<T «id» X>`` and ``<J T «id»>``
+
+**the response/broadcast is:**
 
 * (DCC Accessories): ``<H «id» DCC «addr» «subaddr» «state»>``
 * (Servos): ``<H «id» SERVO «vpin» «thrownValue» «closedValue» «profile» «state»>``
@@ -108,7 +114,9 @@ Repeated for each defined Turnout/Point:
         * ``0`` = Closed
 * (fail): ``<X>``
 
-**For** ``<T «id» «state»>`` **the response/broadcast is:**
+### Response for  ``<T «id» «state»>``
+
+**the response/broadcast is:**
 
 * (successful): ``<H «id» «state»>``
     * **id**: The numeric ID (0-32767) of the turnout/point to control.
@@ -117,7 +125,9 @@ Repeated for each defined Turnout/Point:
         * ``0`` = Closed
 * (fail): ``<X>``
 
-**For** ``<T «id»>`` **the response/broadcast is:**
+### Response for ``<T «id»>``
+
+**the response/broadcast is:**
 
 The response will be:
 

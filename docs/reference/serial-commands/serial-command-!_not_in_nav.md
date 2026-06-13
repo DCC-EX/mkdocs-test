@@ -28,17 +28,22 @@ Serial command to Emergency Stop all locos, pause all locos, or query the Estop 
 
 The following are not a direct response, but rather a broadcast that will be triggered as a result of any track manager changes.
 
-For ``<!>``: <br/>Repeated for each loco in the reminders list <br/> ``<l «loco» «reg» «speedByte» «functMap»>``
+### Response for  ``<!>``
+
+Repeated for each loco in the reminders list <br/> ``<l «loco» «reg» «speedByte» «functMap»>``
 
 * see the ``<t .. >`` command for information opn this response
 
-For ``<! P>``<br/>
+### Response for ``<! P>``
+
 ``<!PAUSED>``
 
-For ``<! R>``<br/>
+### Response for ``<! R>``
+
 ``<!RESUMED>``
 
-For ``<! Q>``<br/>
+### Response for ``<! Q>``
+
 ``<!PAUSED>`` or ``<!RESUMED>`` depending on the current status
 
 ## Notes

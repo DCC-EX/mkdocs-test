@@ -34,13 +34,13 @@ Serial commands to list, start, pause or stop automations/sequences including ro
 
 ## Responses
 
-**Response for** ``<J A>``
+### Response for ``<J A>``
 
 (Successful) ``<jA [id0 id1 id2 ..]>``
 
 * **id?**: identifier of the Route/Automation(s)
 
-**Response for** ``<J «id»>``
+### Response for ``<J «id»>``
 
 (Successful) ``<jA id X|type |"desc">``
 
@@ -52,7 +52,7 @@ Serial commands to list, start, pause or stop automations/sequences including ro
 
 (fail - is not defined): ``<jA id X>``
 
-**Response for** ``</ START ...>``, ``</ PAUSE>``, ``</ RESUME>``, ``</ KILL ...>``, ``<`` ``/`` ``>``
+### Response for ``</ START ...>``, ``</ PAUSE>``, ``</ RESUME>``, ``</ KILL ...>``, ``<`` ``/`` ``>``
 
 N/A
 
