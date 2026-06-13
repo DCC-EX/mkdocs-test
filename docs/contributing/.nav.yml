@@ -1,5 +1,7 @@
 nav:
-  - Contributing: contributing.md
+  - How You Can Contribute: contributing.md
   - User Journeys: user-journeys.md
   - Release Checklist: release-checklist.md
-  - "*"
+  - Contributing Code: code/contributing-code.md
+  - Contributing Documentation: documentation
+  

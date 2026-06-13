@@ -1,6 +1,8 @@
 # Throttles and Other Controllers
 
-The following are lists of the Throttle apps and devices that are known to work with **EX-Commandstations**.  There may be others.
+Any app or device that can use the WiThrottle Protocol or the DCC-EX Native/Serial Protocol should be able to connect to an **EX-CommandStation** to control you trains.
+
+The following are lists of the Throttle/Controller apps and devices that are known to work with **EX-CommandStations**.  There may be others.
 
 ----
 
@@ -70,14 +72,16 @@ See also: Arduino/ESP32 DCC-EX Native command library - [DCCEXProtocol](https://
 
 ## Throttles - By Communication technology
 
-A **EX-CommandStation** can use a number of different technologies to communicate with a throttle. While each technology has advantages and disadvantages, none is substantially better than the others.
+A **EX-CommandStation** can use different technologies to communicate with a throttle. While each technology has advantages and disadvantages, none is substantially better than the others for simply running locos.
+
+However the DCC-EX Native/Serial commands provive a significant numnber of extra capabilities including CV Programming, though not all apps and devices that use the Serial Commands make use of these features
 
 ### General
 
-- WiThrottle Server, Web Server, DCC-EX Native Commands Explained
-- Connect WiFi Throttle via USB
+- [WiThrottle Server, DCC-EX Native Commands Explained](/reference/withrottle-vs-native-protocol_not_in_nav.md)
+- Connect WiFi Throttle via USB ==TODO==
 
-### DCC-EX Native Commands
+### DCC-EX Native/Serial Commands
 
 - [EX-WebThrottle](../products/ex-webthrottle/ex-webthrottle.md) (Windows, MacOS, Linux) *recommended*
 - [Engine Driver](./engine-driver.md) (Android) *recommended*
