@@ -19,15 +19,15 @@ Serial commands to query or reset the EX-CommandStation
 * ``<C RESET>`` Reset and restart command station
 * ``<D RESET>`` Reset and restart command station
 * ``<J I>`` Report currents
-* ``<c>`` (Deprecated) Report main track currect 
+* ``<c>`` (Deprecated) Report main track currect
 
 ## Parameters
 
 N/A
 
-## Response
+## Responses
 
-**Response** to ``<s>``
+### Response for ``<s>``
 
  ``<iDCCEX version / microprocessorType / MotorControllerType / buildNumber>`` <br/> plus (repeated for each defined Turnout/Point): ``<H id state>``
 
@@ -40,11 +40,11 @@ N/A
     * ``1`` = thrown
     * ``0`` = Closed
 
-**Response** to ``<J I>``
+### Response for ``<J I>``
 
 ==TODO==
 
-**Response** to ``<c>``
+### Response for ``<c>``
 
 ``<c "CurrentMAIN" current C "Milli" "0" max_ma "1" trip_ma>``
 
@@ -57,7 +57,7 @@ N/A
 * **1**: number parameter for external software (we use 2 parameters here, 0 and 1) (in quotes)
 * **trip_ma** - The overcurrent limit that will trip the software circuit breaker in mA
 
-**response to** ``<#>``
+### Response for ``<#>``
 
 ``<# noCabs>``
 

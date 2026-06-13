@@ -35,6 +35,8 @@ The following are not a direct response, but rather a broadcast that will be tri
     * ``option`` = explanation of option
     * ...
 
+### Response for ``<cmd>``
+
 ## Notes
 
 * ...

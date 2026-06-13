@@ -57,11 +57,11 @@ Avoid writing CV1, CV17 & CV18 directly. Use the ``<W «loco»>`` command instea
     * ``1``
     * ``0``
 
-## Response
+## Responses
 
 ### Reading CVs - Responses
 
-**Response to** ``<R>``:
+### Response for ``<R>``
 
 * ``<r «address»>``
     * ``r``: response/broadcast identifier
@@ -70,7 +70,7 @@ Avoid writing CV1, CV17 & CV18 directly. Use the ``<W «loco»>`` command instea
         * If not in a consist (CV19) DCC Address of the decoder/loco. The short (``1``-``127``) or long (``128``-``10293``) address of the engine decoder
         * ``-1`` = failed read
 
-**Response to** ``<R LOCOID>``:
+### Response for ``<R LOCOID>``
 
 * ``<r LOCOID «address»>``
     * ``r``: response/broadcast identifier
@@ -78,7 +78,7 @@ Avoid writing CV1, CV17 & CV18 directly. Use the ``<W «loco»>`` command instea
         * DCC Address of the decoder/loco. The short (``1``-``127``) or long (``128``-``10293``) address of the engine decoder
         * ``-1`` = failed read
 
-**Response to** ``<R CONSIST>``:
+### Response for ``<R CONSIST>``
 
 * ``<r CONSIST «address»>``
     * ``r``: response/broadcast identifier
@@ -86,7 +86,7 @@ Avoid writing CV1, CV17 & CV18 directly. Use the ``<W «loco»>`` command instea
         * If the loco is in a consist (CV19), the address returned by will be the consist address.
         * ``-1`` = failed read or not in a consist
 
-**Response to** ``<R «cv»>``:
+### Response for ``<R «cv»>``
 
 * ``<r «cv» «value»>``
     * ``r``: response/broadcast identifier
@@ -95,7 +95,7 @@ Avoid writing CV1, CV17 & CV18 directly. Use the ``<W «loco»>`` command instea
         * the value of the CV read
         * ``-1`` = failed read
 
-**Response to** ``<V «cv» «value»>``:
+### Response for ``<V «cv» «value»>``
 
 * ``<v «cv» «value»>``
     * ``v``: response/broadcast identifier
@@ -104,7 +104,7 @@ Avoid writing CV1, CV17 & CV18 directly. Use the ``<W «loco»>`` command instea
         * the value of the CV read
         * ``-1`` = failed read
 
-**Response to** ``<V «cv» «bit» «bitValue»>``:
+### Response for ``<V «cv» «bit» «bitValue»>``
 
 * ``<v «cv» «bit» «bitValue»>``
     * ``v``: response/broadcast identifier
@@ -115,13 +115,13 @@ Avoid writing CV1, CV17 & CV18 directly. Use the ``<W «loco»>`` command instea
         * ``0``
         * ``-1`` = failed read
 
-**Response to** ``<r «loco» «cv»>``
+### Response for ``<r «loco» «cv»>``
 
 ==TODO==
 
 ### Writing CVs - Responses
 
-**Response to** ``<W «loco»>``:
+### Response for ``<W «loco»>``
 
 * ``<w «address»>``
     * ``w``: response/broadcast identifier
@@ -129,15 +129,15 @@ Avoid writing CV1, CV17 & CV18 directly. Use the ``<W «loco»>`` command instea
         * DCC Address of the decoder/loco. The short (1-127) or long (128-10293) address of the engine decoder
         * ``-1`` = failed read
 
-**Response to** ``<W CONSIST «loco»>``:
+### Response for ``<W CONSIST «loco»>``
 
 ==TODO==
 
-**Response to** ``<W CONSIST «loco» REVERSE>``:
+### Response for ``<W CONSIST «loco» REVERSE>``
 
 ==TODO==
 
-**Response to** ``<W «cv» «value»>``:
+### Response for ``<W «cv» «value»>``
 
 * ``<w «cv» «value»>``
     * ``w``: response/broadcast identifier
@@ -146,15 +146,15 @@ Avoid writing CV1, CV17 & CV18 directly. Use the ``<W «loco»>`` command instea
         * the value of the CV written/read
         * ``-1`` = failed read
 
-**Response to** ``<W «cv» «bitValue» «bit»>``:
+### Response for ``<W «cv» «bitValue» «bit»>``
 
 ==TODO==
 
-**Response to** ``<w «loco» «cv» «value»>``:
+### Response for ``<w «loco» «cv» «value»>``
 
 no response.
 
-**Response to** ``<B «cv» «bitValue» «bit»>``:
+### Response for ``<B «cv» «bitValue» «bit»>``
 
 * ``<w «cv» «value»>``
     * ``w``: response/broadcast identifier
@@ -164,7 +164,7 @@ no response.
         * the value of the bit written/read ``0``|``1``
         * ``-1`` = failed read
 
-**Response to** ``<b «loco» «cv» «bitValue» «bit»>``:
+### Response for ``<b «loco» «cv» «bitValue» «bit»>``
 
 ==TODO==
 

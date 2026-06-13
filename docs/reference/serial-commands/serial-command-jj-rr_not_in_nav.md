@@ -17,16 +17,16 @@ Serial command to request roster info.
 
 * **id**: *optional* <br/>unique id and/or DCC address of the Loco/s in the roster
 
-## Response
+## Responses
 
-**Response to** ``<j R>``:
+### Response for ``<j R>``
 
 ``<jR [«id1» «id2» «id3» ...]>``
 
 * ``jR`` = the 'message identifer'
 * **id1..n:** unique id and/or DCC address of each Loco in the roster
 
-**Response to** ``<j R «id»>``:
+### Response for ``<j R «id»>``
 
 ``<jR «id» ""|"desc" ""|"funct0/funct1/funct2/.../funct31">``
 

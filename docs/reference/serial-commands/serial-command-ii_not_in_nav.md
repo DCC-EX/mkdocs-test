@@ -45,9 +45,9 @@ Also refer to the [legacy EX-Turntable documentation](https://dcc-ex.com/legacy-
 * **angle**: The angle from home for the position (0 - 3600 to allow for partial angles)
 * **activity**: The activity for EX-Turntable to perform (refer EX-Turntable activity reference)
 
-## Response
+## Responses
 
-**response to** ``<I>``
+### Response for ``<I>``
 
 (If any turntables defined) Repeated for each defined Turtable/traverser
 ``<I «id» «position» >`` <br/>
@@ -56,7 +56,7 @@ Also refer to the [legacy EX-Turntable documentation](https://dcc-ex.com/legacy-
 * **id**: The numeric ID (1-32767) of the turntable
 * **position**: The current position of the turntable
 
-**response to** ``<I «id»>``
+### Response for ``<I «id»>``
 
 (If any turntables defined) Repeated for each defined Turtable/traverser
 ``<I «id» «position» >`` <br/>
@@ -65,7 +65,7 @@ Also refer to the [legacy EX-Turntable documentation](https://dcc-ex.com/legacy-
 * **id**: The numeric ID (1-32767) of the turntable
 * **position**: The current position of the turntable
 
-**response to** ``<I «id» «position»>`` or  ``<I «id» «activity»>``
+### Response for ``<I «id» «position»>`` or  ``<I «id» «activity»>``
 
 ``<I «id» «position» «moving»>``
 
@@ -79,14 +79,14 @@ Also refer to the [legacy EX-Turntable documentation](https://dcc-ex.com/legacy-
     * ``0`` (no feedback can be returned from a DCC turntable), or
     * blank = command failed
 
-**response to** ``<J O>``
+### Response for ``<J O>``
 
 (has defined Turnouts/Points) ``<jO «id1» «id2» «id3» ...>`` <br/>
 (has no defined Turnouts/Points) ``<jO>``
 
 * **id?**: unique id of the turntable(s)/traverser(s)
 
-**response to** ``<J O «id»>``
+### Response for ``<J O «id»>``
 
 Response (id is defined): ``<jO «id» «type «position» «position_count» ["«desc»"]>``
 Response (id not defined): ``<jO «id» X>``
@@ -108,7 +108,7 @@ Response (id not defined): ``<jO «id» X>``
 
   Note: The turntable or traverser information does not include the list of defined positions, and this must be requested separated as outlined in the following section.
 
-**response to** ``<J P «id»>``
+### Response for ``<J P «id»>``
 
 (id is defined): ``<jO «id» «index» «angle» ["«desc»"]>``
 (id not defined): ``<jO «id» X>``
@@ -124,7 +124,7 @@ Response (id not defined): ``<jO «id» X>``
     * desc = description of the position (including surrounding quotes)
     * blank = unknown or hidden id
 
-**response to** ``<I «id» ADD «position» «value» «angle»>``, ``<I «id» DCC «home»>``,
+### Response for ``<I «id» ADD «position» «value» «angle»>``, ``<I «id» DCC «home»>``,
 ``<I «id» EXTT «vpin» «home»>``
 
 (Successful): ``<I>`` <br/>
