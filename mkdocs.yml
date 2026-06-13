@@ -130,6 +130,9 @@ plugins:
   - latest-news: # Enable including the latest news excerpts in markdown
       count: 3
       list-class: news-headline-list
+  - toc-md:
+      toc_page_title: "Site Table of Contents"
+      output_path: "toc_not_in_nav.md"  # This creates docs/toc.md automatically
 
 # Copyright info
 copyright: |
@@ -171,9 +174,7 @@ markdown_extensions:
   - toc: # Table of Contents extension
       permalink: true # Add a permanent link to headings
   - footnotes # Standard footnotes
-  - toc-md:
-      toc_page_title: "Site Table of Contents"
-      output_path: "toc_not_in_nav.md"  # This creates docs/toc.md automatically
+
 
 watch:
   - snippets
