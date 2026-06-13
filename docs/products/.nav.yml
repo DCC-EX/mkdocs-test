@@ -2,12 +2,12 @@ nav:
   - Product List: products.md
   - Getting Started: getting-started.md
   - EX-CommandStation: ex-commandstation
-  - EX-MotorShield8874: ex-motorshield8874
-  - EX-WiFiShield8266: ex-wifishield8266
+  - EX-MotorShield8874: ex-motorshield8874/ex-motorshield8874.md
+  - EX-WiFiShield8266: ex-wifishield8266/ex-wifishield8266.md
   - EX-FastClock: ex-fastclock
-  - EX-IOExpander: ex-ioexpander
-  - EX-Turntable: ex-turntable
+  - EX-IOExpander: ex-ioexpander/ex-ioexpander.md
+  - EX-Turntable: ex-turntable/ex-turntable.md
   - EX-SensorCAM: ex-sensorcam
   - EX-Toolbox: ex-toolbox
-  - EX-WebThrottle: ex-webthrottle
+  - EX-WebThrottle: ex-webthrottle/ex-webthrottle.md
   
