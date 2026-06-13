@@ -21,19 +21,19 @@ The DFPlayer device can be used to play pre-recorded sounds from an onboard SD-c
 
 See the [DFPlayer page](/products/ex-commandstation/accessories/various-devices/dfplayer/dfplayer.md) for more information.
 
-## Command(s)
+## Commands
 
-* ``<y «vpin» EQ «eq»>`` Set sound EQ
 * ``<y «vpin» FOLDER «folder»>`` Switch to sound track folder
-* ``<y «vpin» PAUSE>`` Pause sound
-* ``<y «vpin» PLAY «tracknumber» «volume»>`` Play sound track with volume
 * ``<y «vpin» PLAY «tracknumber»>`` Play sound track with default volume
-* ``<y «vpin» REPEAT «tracknumber» «volume»>`` Repeat sound track with volume
+* ``<y «vpin» PLAY «tracknumber» «volume»>`` Play sound track with volume
 * ``<y «vpin» REPEAT «tracknumber»>`` Repeat sound track with default volume
-* ``<y «vpin» RESET>`` Reset sound module
-* ``<y «vpin» RESUME>`` Resume sound
+* ``<y «vpin» REPEAT «tracknumber» «volume»>`` Repeat sound track with volume
+* ``<y «vpin» PAUSE>`` Pause playing sound
+* ``<y «vpin» RESUME>`` Resume playing sound
 * ``<y «vpin» STOP>`` Stop playing sound
-* ``<y «vpin» VOL «volume»>`` Set sound volume
+* ``<y «vpin» VOL «volume»>`` Set default volume
+* ``<y «vpin» EQ «eq»>`` Set sound EQ
+* ``<y «vpin» RESET>`` Reset sound module
 
 ## Parameters
 
@@ -49,7 +49,7 @@ See the [DFPlayer page](/products/ex-commandstation/accessories/various-devices/
 * **tracknumber**: track/file on the SD Card to play
 * **volume**: Volume to play the track at (``0``-``30``)
 
-## Response
+## Responses
 
 ==TODO==
 
