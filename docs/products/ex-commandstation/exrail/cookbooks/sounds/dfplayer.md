@@ -57,7 +57,7 @@ PLAY_FOLDER(3500,2) // change folder to 2
 
 ### Set the Equalizer proile (PLAY_EQ)
 
-The profiles available are NORMAL, POP, ROCK, JAZZ, CLASSCS, BASS
+The profiles available are NORMAL, POP, ROCK, JAZZ, CLASSIC, BASS
 
 ```cpp
 PLAY_EQ(3500,BASS) // Bring the Noise!

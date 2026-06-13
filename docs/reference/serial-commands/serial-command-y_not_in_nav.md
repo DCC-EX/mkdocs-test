@@ -38,10 +38,16 @@ See the [DFPlayer page](/products/ex-commandstation/accessories/various-devices/
 ## Parameters
 
 * **vpin**: *Required* vpin of the DFPlayer
-* **eq**: ==TODO==
+* **eq**: Equalizer profile. one of:
+    * ``NORMAL``
+    * ``POP``
+    * ``ROCK``
+    * ``JAZZ``
+    * ``CLASSIC``
+    * ``BASS``
 * **folder**: folder on the SD Card to switch to / play from
 * **tracknumber**: track/file on the SD Card to play
-* **volume**: ==TODO==
+* **volume**: Volume to play the track at (``0``-``30``)
 
 ## Response
 
