@@ -134,7 +134,7 @@ plugins:
       toc_page_title: "Site Table of Contents"
       output_path: "toc_not_in_nav.md"  # This creates docs/toc.md automatically
 #      header_level: 1
-#      ignore_page_pattern: .*_not_in_nav.md
+      ignore_page_pattern: .serial-command-list.md
 
 # Copyright info
 copyright: |
