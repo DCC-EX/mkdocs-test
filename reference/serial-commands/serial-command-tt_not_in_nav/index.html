@@ -7139,6 +7139,57 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Response">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#response-for-t-id" class="md-nav__link">
+    <span class="md-ellipsis">
+      Response for &lt;T «id» ...&gt;
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#response-for-t-and-j-t" class="md-nav__link">
+    <span class="md-ellipsis">
+      Response for &lt;T&gt; and &lt;J T&gt;
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#response-for-t-id-x-and-j-t-id" class="md-nav__link">
+    <span class="md-ellipsis">
+      Response for &lt;T «id» X&gt; and &lt;J T «id»&gt;
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#response-for-t-id-state" class="md-nav__link">
+    <span class="md-ellipsis">
+      Response for &lt;T «id» «state»&gt;
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#response-for-t-id_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Response for &lt;T «id»&gt;
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -7251,6 +7302,7 @@
 </ul>
 <h2 id="response">Response<a class="headerlink" href="#response" title="Permanent link">&para;</a></h2>
 <p>The following are not a direct response, but rather a broadcast that will be triggered as a result of any track manager changes.</p>
+<h3 id="response-for-t-id">Response for <code>&lt;T «id» ...&gt;</code><a class="headerlink" href="#response-for-t-id" title="Permanent link">&para;</a></h3>
 <p><strong>For the following commands:</strong></p>
 <ul>
 <li><code>&lt;T «id» DCC «addr» «subaddr»&gt;</code></li>
@@ -7264,7 +7316,8 @@
 <li>(successful): <code>&lt;O&gt;</code></li>
 <li>(fail): <code>&lt;X&gt;</code></li>
 </ul>
-<p><strong>For</strong> <code>&lt;T&gt;</code> and <code>&lt;J T&gt;</code> <strong>the response/broadcast is:</strong></p>
+<h3 id="response-for-t-and-j-t">Response for <code>&lt;T&gt;</code> and <code>&lt;J T&gt;</code><a class="headerlink" href="#response-for-t-and-j-t" title="Permanent link">&para;</a></h3>
+<p><strong>the response/broadcast is:</strong></p>
 <p>Repeated for each defined Turnout/Point:</p>
 <ul>
 <li>(successful): <code>&lt;H «id» «state»&gt;</code></li>
@@ -7279,7 +7332,8 @@
 </ul>
 </li>
 </ul>
-<p><strong>For</strong> <code>&lt;T «id» X&gt;</code> and <code>&lt;J T «id»&gt;</code> <strong>the response/broadcast is:</strong></p>
+<h3 id="response-for-t-id-x-and-j-t-id">Response for  <code>&lt;T «id» X&gt;</code> and <code>&lt;J T «id»&gt;</code><a class="headerlink" href="#response-for-t-id-x-and-j-t-id" title="Permanent link">&para;</a></h3>
+<p><strong>the response/broadcast is:</strong></p>
 <ul>
 <li>(DCC Accessories): <code>&lt;H «id» DCC «addr» «subaddr» «state»&gt;</code></li>
 <li>(Servos): <code>&lt;H «id» SERVO «vpin» «thrownValue» «closedValue» «profile» «state»&gt;</code></li>
@@ -7304,7 +7358,8 @@
 </li>
 <li>(fail): <code>&lt;X&gt;</code></li>
 </ul>
-<p><strong>For</strong> <code>&lt;T «id» «state»&gt;</code> <strong>the response/broadcast is:</strong></p>
+<h3 id="response-for-t-id-state">Response for  <code>&lt;T «id» «state»&gt;</code><a class="headerlink" href="#response-for-t-id-state" title="Permanent link">&para;</a></h3>
+<p><strong>the response/broadcast is:</strong></p>
 <ul>
 <li>(successful): <code>&lt;H «id» «state»&gt;</code><ul>
 <li><strong>id</strong>: The numeric ID (0-32767) of the turnout/point to control.</li>
@@ -7317,7 +7372,8 @@
 </li>
 <li>(fail): <code>&lt;X&gt;</code></li>
 </ul>
-<p><strong>For</strong> <code>&lt;T «id»&gt;</code> <strong>the response/broadcast is:</strong></p>
+<h3 id="response-for-t-id_1">Response for <code>&lt;T «id»&gt;</code><a class="headerlink" href="#response-for-t-id_1" title="Permanent link">&para;</a></h3>
+<p><strong>the response/broadcast is:</strong></p>
 <p>The response will be:</p>
 <ul>
 <li>(successful): <code>&lt;O&gt;</code></li>
@@ -7387,7 +7443,7 @@ Profile defines the speed and style of movement: 0=Instant, 1=Fast (0.5 sec), 2=
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 11, 2026 01:23:05 UTC">June 11, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 13, 2026 00:55:22 UTC">June 13, 2026</span>
   </span>
 
     

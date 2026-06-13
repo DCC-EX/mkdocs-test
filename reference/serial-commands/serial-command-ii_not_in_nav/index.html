@@ -7109,11 +7109,80 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#response" class="md-nav__link">
+  <a href="#responses" class="md-nav__link">
     <span class="md-ellipsis">
-      Response
+      Responses
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="Responses">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#response-for-i" class="md-nav__link">
+    <span class="md-ellipsis">
+      Response for &lt;I&gt;
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#response-for-i-id" class="md-nav__link">
+    <span class="md-ellipsis">
+      Response for &lt;I «id»&gt;
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#response-for-i-id-position-or-i-id-activity" class="md-nav__link">
+    <span class="md-ellipsis">
+      Response for &lt;I «id» «position»&gt; or &lt;I «id» «activity»&gt;
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#response-for-j-o" class="md-nav__link">
+    <span class="md-ellipsis">
+      Response for &lt;J O&gt;
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#response-for-j-o-id" class="md-nav__link">
+    <span class="md-ellipsis">
+      Response for &lt;J O «id»&gt;
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#response-for-j-p-id" class="md-nav__link">
+    <span class="md-ellipsis">
+      Response for &lt;J P «id»&gt;
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#response-for-i-id-add-position-value-angle-i-id-dcc-home" class="md-nav__link">
+    <span class="md-ellipsis">
+      Response for &lt;I «id» ADD «position» «value» «angle»&gt;, &lt;I «id» DCC «home»&gt;,
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -7207,8 +7276,8 @@
 <li><strong>angle</strong>: The angle from home for the position (0 - 3600 to allow for partial angles)</li>
 <li><strong>activity</strong>: The activity for EX-Turntable to perform (refer EX-Turntable activity reference)</li>
 </ul>
-<h2 id="response">Response<a class="headerlink" href="#response" title="Permanent link">&para;</a></h2>
-<p><strong>response to</strong> <code>&lt;I&gt;</code></p>
+<h2 id="responses">Responses<a class="headerlink" href="#responses" title="Permanent link">&para;</a></h2>
+<h3 id="response-for-i">Response for <code>&lt;I&gt;</code><a class="headerlink" href="#response-for-i" title="Permanent link">&para;</a></h3>
 <p>(If any turntables defined) Repeated for each defined Turtable/traverser
 <code>&lt;I «id» «position» &gt;</code> <br/>
 (If no defined turntables/traversers): <code>X</code></p>
@@ -7216,7 +7285,7 @@
 <li><strong>id</strong>: The numeric ID (1-32767) of the turntable</li>
 <li><strong>position</strong>: The current position of the turntable</li>
 </ul>
-<p><strong>response to</strong> <code>&lt;I «id»&gt;</code></p>
+<h3 id="response-for-i-id">Response for <code>&lt;I «id»&gt;</code><a class="headerlink" href="#response-for-i-id" title="Permanent link">&para;</a></h3>
 <p>(If any turntables defined) Repeated for each defined Turtable/traverser
 <code>&lt;I «id» «position» &gt;</code> <br/>
 (If id not defined): <code>X</code></p>
@@ -7224,7 +7293,7 @@
 <li><strong>id</strong>: The numeric ID (1-32767) of the turntable</li>
 <li><strong>position</strong>: The current position of the turntable</li>
 </ul>
-<p><strong>response to</strong> <code>&lt;I «id» «position»&gt;</code> or  <code>&lt;I «id» «activity»&gt;</code></p>
+<h3 id="response-for-i-id-position-or-i-id-activity">Response for <code>&lt;I «id» «position»&gt;</code> or  <code>&lt;I «id» «activity»&gt;</code><a class="headerlink" href="#response-for-i-id-position-or-i-id-activity" title="Permanent link">&para;</a></h3>
 <p><code>&lt;I «id» «position» «moving»&gt;</code></p>
 <ul>
 <li><strong>id</strong>: one of<ul>
@@ -7243,13 +7312,13 @@
 </ul>
 </li>
 </ul>
-<p><strong>response to</strong> <code>&lt;J O&gt;</code></p>
+<h3 id="response-for-j-o">Response for <code>&lt;J O&gt;</code><a class="headerlink" href="#response-for-j-o" title="Permanent link">&para;</a></h3>
 <p>(has defined Turnouts/Points) <code>&lt;jO «id1» «id2» «id3» ...&gt;</code> <br/>
 (has no defined Turnouts/Points) <code>&lt;jO&gt;</code></p>
 <ul>
 <li><strong>id?</strong>: unique id of the turntable(s)/traverser(s)</li>
 </ul>
-<p><strong>response to</strong> <code>&lt;J O «id»&gt;</code></p>
+<h3 id="response-for-j-o-id">Response for <code>&lt;J O «id»&gt;</code><a class="headerlink" href="#response-for-j-o-id" title="Permanent link">&para;</a></h3>
 <p>Response (id is defined): <code>&lt;jO «id» «type «position» «position_count» ["«desc»"]&gt;</code>
 Response (id not defined): <code>&lt;jO «id» X&gt;</code></p>
 <ul>
@@ -7277,7 +7346,7 @@ Response (id not defined): <code>&lt;jO «id» X&gt;</code></p>
 </li>
 </ul>
 <p>Note: The turntable or traverser information does not include the list of defined positions, and this must be requested separated as outlined in the following section.</p>
-<p><strong>response to</strong> <code>&lt;J P «id»&gt;</code></p>
+<h3 id="response-for-j-p-id">Response for <code>&lt;J P «id»&gt;</code><a class="headerlink" href="#response-for-j-p-id" title="Permanent link">&para;</a></h3>
 <p>(id is defined): <code>&lt;jO «id» «index» «angle» ["«desc»"]&gt;</code>
 (id not defined): <code>&lt;jO «id» X&gt;</code></p>
 <ul>
@@ -7298,8 +7367,8 @@ Response (id not defined): <code>&lt;jO «id» X&gt;</code></p>
 </ul>
 </li>
 </ul>
-<p><strong>response to</strong> <code>&lt;I «id» ADD «position» «value» «angle»&gt;</code>, <code>&lt;I «id» DCC «home»&gt;</code>,
-<code>&lt;I «id» EXTT «vpin» «home»&gt;</code></p>
+<h3 id="response-for-i-id-add-position-value-angle-i-id-dcc-home">Response for <code>&lt;I «id» ADD «position» «value» «angle»&gt;</code>, <code>&lt;I «id» DCC «home»&gt;</code>,<a class="headerlink" href="#response-for-i-id-add-position-value-angle-i-id-dcc-home" title="Permanent link">&para;</a></h3>
+<p><code>&lt;I «id» EXTT «vpin» «home»&gt;</code></p>
 <p>(Successful): <code>&lt;I&gt;</code> <br/>
 (Fail): <code>&lt;X&gt;</code></p>
 <h2 id="notes">Notes<a class="headerlink" href="#notes" title="Permanent link">&para;</a></h2>
@@ -7370,7 +7439,7 @@ Response (id not defined): <code>&lt;jO «id» X&gt;</code></p>
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 12, 2026 00:09:25 UTC">June 12, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 13, 2026 00:55:22 UTC">June 13, 2026</span>
   </span>
 
     

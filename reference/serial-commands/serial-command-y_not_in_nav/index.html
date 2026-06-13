@@ -10,7 +10,7 @@
       
       
       
-        <link rel="canonical" href="https://dcc-ex.com/mkdocs-test/reference/serial-commands/serial-command-%21_not_in_nav/">
+        <link rel="canonical" href="https://dcc-ex.com/mkdocs-test/reference/serial-commands/serial-command-y_not_in_nav/">
       
       
       
@@ -23,7 +23,7 @@
     
     
       
-        <title><! [P|Q|R]> Emergence Stop or Pause - DCC-EX Model Train Control, Animation, and Automation</title>
+        <title><y «vpin» EQ|FOLDER|PAUSE|PLAY|REPEAT|RESET|RESUME|STOP|VOL [«various parameters»]> Play DF Player sounds - DCC-EX Model Train Control, Animation, and Automation</title>
       
     
     
@@ -79,7 +79,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#pqr-emergence-stop-or-pause" class="md-skip">
+        <a href="#y-vpin-eqfolderpauseplayrepeatresetresumestopvol-various-parameters-play-df-player-sounds" class="md-skip">
           Skip to content
         </a>
       
@@ -112,7 +112,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              &lt;! [P|Q|R]&gt; Emergence Stop or Pause
+              &lt;y «vpin» EQ|FOLDER|PAUSE|PLAY|REPEAT|RESET|RESUME|STOP|VOL [«various parameters»]&gt; Play DF Player sounds
             
           </span>
         </div>
@@ -7093,7 +7093,7 @@
         <li class="md-nav__item">
   <a href="#commands" class="md-nav__link">
     <span class="md-ellipsis">
-      Commands
+      Command(s)
     </span>
   </a>
   
@@ -7114,48 +7114,6 @@
       Response
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="Response">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#response-for" class="md-nav__link">
-    <span class="md-ellipsis">
-      Response for &lt;!&gt;
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#response-for-p" class="md-nav__link">
-    <span class="md-ellipsis">
-      Response for &lt;! P&gt;
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#response-for-r" class="md-nav__link">
-    <span class="md-ellipsis">
-      Response for &lt;! R&gt;
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#response-for-q" class="md-nav__link">
-    <span class="md-ellipsis">
-      Response for &lt;! Q&gt;
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -7190,7 +7148,7 @@
           <li class="md-nav__item">
   <a href="#example-responses" class="md-nav__link">
     <span class="md-ellipsis">
-      Example Responses
+      Example Responses:
     </span>
   </a>
   
@@ -7222,52 +7180,56 @@
   
 
 
-<h1 id="pqr-emergence-stop-or-pause"><code>&lt;! [P|Q|R]&gt;</code> <br/>Emergence Stop or Pause<a class="headerlink" href="#pqr-emergence-stop-or-pause" title="Permanent link">&para;</a></h1>
-<p>Serial command to Emergency Stop all locos, pause all locos, or query the Estop pause status.</p>
-<h2 id="commands">Commands<a class="headerlink" href="#commands" title="Permanent link">&para;</a></h2>
+<h1 id="y-vpin-eqfolderpauseplayrepeatresetresumestopvol-various-parameters-play-df-player-sounds"><small><code>&lt;y «vpin» EQ|FOLDER|PAUSE|PLAY|REPEAT|RESET|RESUME|STOP|VOL [«various parameters»]&gt;</code></small> <br/> Play DF Player sounds<a class="headerlink" href="#y-vpin-eqfolderpauseplayrepeatresetresumestopvol-various-parameters-play-df-player-sounds" title="Permanent link">&para;</a></h1>
+<p>Serial commands to play sounds on a DFPlayer.</p>
+<p>The DFPlayer device can be used to play pre-recorded sounds from an onboard SD-card.</p>
+<p>See the <a href="../../../products/ex-commandstation/accessories/various-devices/dfplayer/dfplayer/">DFPlayer page</a> for more information.</p>
+<h2 id="commands">Command(s)<a class="headerlink" href="#commands" title="Permanent link">&para;</a></h2>
 <ul>
-<li><code>&lt;!&gt;</code> ESTOP all locos</li>
-<li><code>&lt;! [«pauseType»]&gt;</code> ESTOP pause or query pause</li>
+<li><code>&lt;y «vpin» EQ «eq»&gt;</code> Set sound EQ</li>
+<li><code>&lt;y «vpin» FOLDER «folder»&gt;</code> Switch to sound track folder</li>
+<li><code>&lt;y «vpin» PAUSE&gt;</code> Pause sound</li>
+<li><code>&lt;y «vpin» PLAY «tracknumber» «volume»&gt;</code> Play sound track with volume</li>
+<li><code>&lt;y «vpin» PLAY «tracknumber»&gt;</code> Play sound track with default volume</li>
+<li><code>&lt;y «vpin» REPEAT «tracknumber» «volume»&gt;</code> Repeat sound track with volume</li>
+<li><code>&lt;y «vpin» REPEAT «tracknumber»&gt;</code> Repeat sound track with default volume</li>
+<li><code>&lt;y «vpin» RESET&gt;</code> Reset sound module</li>
+<li><code>&lt;y «vpin» RESUME&gt;</code> Resume sound</li>
+<li><code>&lt;y «vpin» STOP&gt;</code> Stop playing sound</li>
+<li><code>&lt;y «vpin» VOL «volume»&gt;</code> Set sound volume</li>
 </ul>
 <h2 id="parameters">Parameters<a class="headerlink" href="#parameters" title="Permanent link">&para;</a></h2>
 <ul>
-<li>
-<p><strong>pauseType</strong> <em>optional</em> - one of:</p>
-<ul>
-<li><code>P</code> = ESTOP pause the layout</li>
-<li><code>R</code> = ESTOP resume paused layout</li>
-<li><code>Q</code> = query the ESTOP paused status</li>
+<li><strong>vpin</strong>: <em>Required</em> vpin of the DFPlayer</li>
+<li><strong>eq</strong>: Equalizer profile. one of:<ul>
+<li><code>NORMAL</code></li>
+<li><code>POP</code></li>
+<li><code>ROCK</code></li>
+<li><code>JAZZ</code></li>
+<li><code>CLASSIC</code></li>
+<li><code>BASS</code></li>
 </ul>
 </li>
+<li><strong>folder</strong>: folder on the SD Card to switch to / play from</li>
+<li><strong>tracknumber</strong>: track/file on the SD Card to play</li>
+<li><strong>volume</strong>: Volume to play the track at (<code>0</code>-<code>30</code>)</li>
 </ul>
 <h2 id="response">Response<a class="headerlink" href="#response" title="Permanent link">&para;</a></h2>
-<p>The following are not a direct response, but rather a broadcast that will be triggered as a result of any track manager changes.</p>
-<h3 id="response-for">Response for  <code>&lt;!&gt;</code><a class="headerlink" href="#response-for" title="Permanent link">&para;</a></h3>
-<p>Repeated for each loco in the reminders list <br/> <code>&lt;l «loco» «reg» «speedByte» «functMap»&gt;</code></p>
-<ul>
-<li>see the <code>&lt;t .. &gt;</code> command for information opn this response</li>
-</ul>
-<h3 id="response-for-p">Response for <code>&lt;! P&gt;</code><a class="headerlink" href="#response-for-p" title="Permanent link">&para;</a></h3>
-<p><code>&lt;!PAUSED&gt;</code></p>
-<h3 id="response-for-r">Response for <code>&lt;! R&gt;</code><a class="headerlink" href="#response-for-r" title="Permanent link">&para;</a></h3>
-<p><code>&lt;!RESUMED&gt;</code></p>
-<h3 id="response-for-q">Response for <code>&lt;! Q&gt;</code><a class="headerlink" href="#response-for-q" title="Permanent link">&para;</a></h3>
-<p><code>&lt;!PAUSED&gt;</code> or <code>&lt;!RESUMED&gt;</code> depending on the current status</p>
+<p><mark>TODO</mark></p>
 <h2 id="notes">Notes<a class="headerlink" href="#notes" title="Permanent link">&para;</a></h2>
 <ul>
-<li>any throttle apps and devices using the WiThrottle protocol will receive alterts with the pause is activated or deactivated</li>
+<li>See the <a href="../../../products/ex-commandstation/accessories/various-devices/dfplayer/dfplayer/">DFPlayer page</a> for more information.</li>
 </ul>
 <hr />
 <h2 id="examples">Examples<a class="headerlink" href="#examples" title="Permanent link">&para;</a></h2>
-<p><a href="?_!">Also search for '!'</a></p>
-<h3 id="example-commands">Example Commands<a class="headerlink" href="#example-commands" title="Permanent link">&para;</a></h3>
+<p><a href="?DFPLayer">Also search for 'DFPlayer'</a> or <a href="?sounds">search for 'sounds'</a></p>
+<h3 id="example-commands"><em>Example Commands</em><a class="headerlink" href="#example-commands" title="Permanent link">&para;</a></h3>
 <ul>
-<li><code>&lt;!&gt;</code>  ESTOP all locos</li>
-<li><code>&lt;! P&gt;</code> Pause all locos</li>
+<li><mark>TODO</mark></li>
 </ul>
-<h3 id="example-responses">Example Responses<a class="headerlink" href="#example-responses" title="Permanent link">&para;</a></h3>
+<h3 id="example-responses"><em>Example Responses:</em><a class="headerlink" href="#example-responses" title="Permanent link">&para;</a></h3>
 <ul>
-<li>TBA</li>
+<li><mark>TODO</mark></li>
 </ul>
 <style>
   .md-typeset h1 {
@@ -7294,7 +7256,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 13, 2026 00:55:22 UTC">June 13, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 13, 2026 01:27:13 UTC">June 13, 2026</span>
   </span>
 
     

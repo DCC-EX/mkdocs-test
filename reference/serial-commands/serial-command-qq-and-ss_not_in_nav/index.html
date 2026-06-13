@@ -10,7 +10,7 @@
       
       
       
-        <link rel="canonical" href="https://dcc-ex.com/mkdocs-test/reference/serial-commands/serial-command-%21_not_in_nav/">
+        <link rel="canonical" href="https://dcc-ex.com/mkdocs-test/reference/serial-commands/serial-command-qq-and-ss_not_in_nav/">
       
       
       
@@ -23,7 +23,7 @@
     
     
       
-        <title><! [P|Q|R]> Emergence Stop or Pause - DCC-EX Model Train Control, Animation, and Automation</title>
+        <title><Q>   <S «id» [«vpin» «pullup»>] Manage Sensors - DCC-EX Model Train Control, Animation, and Automation</title>
       
     
     
@@ -79,7 +79,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#pqr-emergence-stop-or-pause" class="md-skip">
+        <a href="#q-s-id-vpin-pullup-manage-sensors" class="md-skip">
           Skip to content
         </a>
       
@@ -112,7 +112,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              &lt;! [P|Q|R]&gt; Emergence Stop or Pause
+              &lt;Q&gt; &nbsp; &lt;S «id» [«vpin» «pullup»&gt;] Manage Sensors
             
           </span>
         </div>
@@ -7109,46 +7109,46 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#response" class="md-nav__link">
+  <a href="#responses" class="md-nav__link">
     <span class="md-ellipsis">
-      Response
+      Responses
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Response">
+    <nav class="md-nav" aria-label="Responses">
       <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#response-for" class="md-nav__link">
-    <span class="md-ellipsis">
-      Response for &lt;!&gt;
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#response-for-p" class="md-nav__link">
-    <span class="md-ellipsis">
-      Response for &lt;! P&gt;
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#response-for-r" class="md-nav__link">
-    <span class="md-ellipsis">
-      Response for &lt;! R&gt;
-    </span>
-  </a>
-  
-</li>
         
           <li class="md-nav__item">
   <a href="#response-for-q" class="md-nav__link">
     <span class="md-ellipsis">
-      Response for &lt;! Q&gt;
+      Response for &lt;Q&gt;
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#response-for-s" class="md-nav__link">
+    <span class="md-ellipsis">
+      Response for &lt;S&gt;
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#response-for-s-id-vpin-pullup" class="md-nav__link">
+    <span class="md-ellipsis">
+      Response for &lt;S «id» «vpin» «pullup»&gt;
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#response-for-s-id" class="md-nav__link">
+    <span class="md-ellipsis">
+      Response for &lt;S «id»&gt;
     </span>
   </a>
   
@@ -7190,7 +7190,7 @@
           <li class="md-nav__item">
   <a href="#example-responses" class="md-nav__link">
     <span class="md-ellipsis">
-      Example Responses
+      Example Responses:
     </span>
   </a>
   
@@ -7222,52 +7222,84 @@
   
 
 
-<h1 id="pqr-emergence-stop-or-pause"><code>&lt;! [P|Q|R]&gt;</code> <br/>Emergence Stop or Pause<a class="headerlink" href="#pqr-emergence-stop-or-pause" title="Permanent link">&para;</a></h1>
-<p>Serial command to Emergency Stop all locos, pause all locos, or query the Estop pause status.</p>
+<h1 id="q-s-id-vpin-pullup-manage-sensors"><small><code>&lt;Q&gt;</code></small> &nbsp; <small><code>&lt;S «id» [«vpin» «pullup»&gt;]</code></small> <br/>Manage Sensors<a class="headerlink" href="#q-s-id-vpin-pullup-manage-sensors" title="Permanent link">&para;</a></h1>
+<p>Serial commands to create and manage sensors</p>
 <h2 id="commands">Commands<a class="headerlink" href="#commands" title="Permanent link">&para;</a></h2>
 <ul>
-<li><code>&lt;!&gt;</code> ESTOP all locos</li>
-<li><code>&lt;! [«pauseType»]&gt;</code> ESTOP pause or query pause</li>
+<li><code>&lt;Q&gt;</code> List all sensors</li>
+<li><code>&lt;S&gt;</code> List sensors</li>
+<li><code>&lt;S «id» «vpin» «pullup»&gt;</code> Create Sensor</li>
+<li><code>&lt;S «id»&gt;</code> Delete sensor</li>
 </ul>
 <h2 id="parameters">Parameters<a class="headerlink" href="#parameters" title="Permanent link">&para;</a></h2>
 <ul>
-<li>
-<p><strong>pauseType</strong> <em>optional</em> - one of:</p>
-<ul>
-<li><code>P</code> = ESTOP pause the layout</li>
-<li><code>R</code> = ESTOP resume paused layout</li>
-<li><code>Q</code> = query the ESTOP paused status</li>
+<li><strong>id</strong>: identifier of the Sensor. (0-32767)</li>
+<li><strong>vpin</strong>: pin number of the input to be controlled by the sensor object</li>
+<li><strong>pullup</strong>: one of:<ul>
+<li><code>1</code> = Use pull-up resistor ACTIVE=LOW</li>
+<li><code>0</code>= don’t use pull-up resistor ACTIVE=HIGH</li>
 </ul>
 </li>
 </ul>
-<h2 id="response">Response<a class="headerlink" href="#response" title="Permanent link">&para;</a></h2>
-<p>The following are not a direct response, but rather a broadcast that will be triggered as a result of any track manager changes.</p>
-<h3 id="response-for">Response for  <code>&lt;!&gt;</code><a class="headerlink" href="#response-for" title="Permanent link">&para;</a></h3>
-<p>Repeated for each loco in the reminders list <br/> <code>&lt;l «loco» «reg» «speedByte» «functMap»&gt;</code></p>
+<h2 id="responses">Responses<a class="headerlink" href="#responses" title="Permanent link">&para;</a></h2>
+<h3 id="response-for-q">Response for <code>&lt;Q&gt;</code><a class="headerlink" href="#response-for-q" title="Permanent link">&para;</a></h3>
+<p>(successful) Repeated for each inactive defined sensor: <code>&lt;q «id»&gt;</code><br/>
+(fail): N/A</p>
+<h3 id="response-for-s">Response for <code>&lt;S&gt;</code><a class="headerlink" href="#response-for-s" title="Permanent link">&para;</a></h3>
+<p>(successful) Repeated for each inactive defined sensor: <code>&lt;Q «id» «vpin» «pullup»&gt;</code><br/>
+(fail): <code>X</code></p>
 <ul>
-<li>see the <code>&lt;t .. &gt;</code> command for information opn this response</li>
+<li><strong>id</strong>: identifier of the Sensor. (0-32767)</li>
+<li><strong>vpin</strong>: pin number of the input to be controlled by the sensor object</li>
+<li><strong>pullup</strong>: one of:<ul>
+<li><code>1</code> = Use pull-up resistor ACTIVE=LOW</li>
+<li><code>0</code>= don’t use pull-up resistor ACTIVE=HIGH</li>
 </ul>
-<h3 id="response-for-p">Response for <code>&lt;! P&gt;</code><a class="headerlink" href="#response-for-p" title="Permanent link">&para;</a></h3>
-<p><code>&lt;!PAUSED&gt;</code></p>
-<h3 id="response-for-r">Response for <code>&lt;! R&gt;</code><a class="headerlink" href="#response-for-r" title="Permanent link">&para;</a></h3>
-<p><code>&lt;!RESUMED&gt;</code></p>
-<h3 id="response-for-q">Response for <code>&lt;! Q&gt;</code><a class="headerlink" href="#response-for-q" title="Permanent link">&para;</a></h3>
-<p><code>&lt;!PAUSED&gt;</code> or <code>&lt;!RESUMED&gt;</code> depending on the current status</p>
+</li>
+</ul>
+<h3 id="response-for-s-id-vpin-pullup">Response for <code>&lt;S «id» «vpin» «pullup»&gt;</code><a class="headerlink" href="#response-for-s-id-vpin-pullup" title="Permanent link">&para;</a></h3>
+<p>(Successful): <code>&lt;O&gt;</code><br/>
+(Fail): <code>&lt;X&gt;</code> (e.g. out of memory)</p>
+<h3 id="response-for-s-id">Response for <code>&lt;S «id»&gt;</code><a class="headerlink" href="#response-for-s-id" title="Permanent link">&para;</a></h3>
+<p>(Successful): <code>&lt;O&gt;</code><br/>
+(Fail): <code>&lt;X&gt;</code> (e.g. ID does not exist)</p>
 <h2 id="notes">Notes<a class="headerlink" href="#notes" title="Permanent link">&para;</a></h2>
 <ul>
-<li>any throttle apps and devices using the WiThrottle protocol will receive alterts with the pause is activated or deactivated</li>
+<li>
+<p>EX‑CommandStation supports Sensor inputs that can be connected to any Arduino Pin not in use by this program, as well as pins on external I/O expanders and other devices. Physical sensors can be of any type (infrared, magnetic, mechanical…). They may be configured to pull-up or not. When configured for pull-up, the input is connected (within the CS) to +5V via a resistor. This sort of input is suited to sensors that have two wires - a switch or relay contacts, or a device with an 'open collector'’' or '‘'open drain'’' output. Some sensors may be sensitive to the pull-up resistor and not operate as expected - in this case you can turn off the pull-up. <br/> <br/>
+The sensor is considered INACTIVE when at +5V potential, and ACTIVE when the pin is pulled down to 0V. <br/> <br/>
+To ensure proper voltage levels, some part of the Sensor circuitry MUST be tied back to the same ground as used by the Arduino. <br/> <br/>
+The Sensor code utilises debouncing logic to eliminate contact ‘bounce’ generated by mechanical switches on transitions. This avoids the need to create smoothing circuitry for each sensor. You may need to change the parameters in Sensor.cpp through trial and error for your specific sensors, but the default parameters protect against contact bounces for up to 20 milliseconds, which should be adequate for almost all mechanical switches and all electronic sensors. <br/> <br/>
+To monitor one or more Arduino pins for sensor triggers, first define/edit/delete sensor definitions using one of the variations of the <code>&lt;S&gt;</code> command.</p>
+</li>
+<li>
+<p><strong>Arduino Mega only (not EX-CSB1 or ESP32):</strong> Once all sensors have been properly defined, you can use the <code>&lt;E&gt;</code> command to store their definitions to EEPROM. If you later make edits/additions/deletions to the sensor definitions, you must invoke the <code>&lt;E&gt;</code> command if you want those new definitions updated in the EEPROM. You can also clear everything (turnouts, sensors, and outputs) stored in the EEPROM by invoking the <code>&lt;e&gt;</code>command. (There is NO UN-Delete)</p>
+</li>
+<li>
+<p>All sensors defined as per above are repeatedly and sequentially checked within the main loop of this sketch. If a Sensor Pin is found to have transitioned from one state to another, one of the following serial messages are generated:</p>
+<ul>
+<li>
+<p><code>&lt;Q id&gt;</code> - for transition of Sensor ID from INACTIVE state to ACTIVE state (i.e. the sensor is triggered)</p>
+</li>
+<li>
+<p><code>&lt;q id&gt;</code> - for transition of Sensor ID from ACTIVE state to INACTIVE state (i.e. the sensor is no longer triggered)</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Depending on whether the physical sensor is acting as an 'event-trigger' or a 'detection-sensor', you may decide to ignore the <code>&lt;q id&gt;` return and only react to</code><Q id>`` triggers.</p>
+</li>
 </ul>
 <hr />
 <h2 id="examples">Examples<a class="headerlink" href="#examples" title="Permanent link">&para;</a></h2>
-<p><a href="?_!">Also search for '!'</a></p>
-<h3 id="example-commands">Example Commands<a class="headerlink" href="#example-commands" title="Permanent link">&para;</a></h3>
+<p><a href="?_/_latch">Also search for '/ latch'</a> or <a href="?_/_unlatch">search for '/ unlatch'</a></p>
+<h3 id="example-commands"><em>Example Commands</em><a class="headerlink" href="#example-commands" title="Permanent link">&para;</a></h3>
 <ul>
-<li><code>&lt;!&gt;</code>  ESTOP all locos</li>
-<li><code>&lt;! P&gt;</code> Pause all locos</li>
+<li><mark>TODO</mark></li>
 </ul>
-<h3 id="example-responses">Example Responses<a class="headerlink" href="#example-responses" title="Permanent link">&para;</a></h3>
+<h3 id="example-responses"><em>Example Responses:</em><a class="headerlink" href="#example-responses" title="Permanent link">&para;</a></h3>
 <ul>
-<li>TBA</li>
+<li><mark>TODO</mark></li>
 </ul>
 <style>
   .md-typeset h1 {
@@ -7294,7 +7326,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 13, 2026 00:55:22 UTC">June 13, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 13, 2026 01:18:52 UTC">June 13, 2026</span>
   </span>
 
     
