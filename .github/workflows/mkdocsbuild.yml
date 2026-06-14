@@ -1,7 +1,6 @@
 name: mkdocs-build
 
 on: push
-    workflow_dispatch
 
 jobs:
   mkdocsbuild:
