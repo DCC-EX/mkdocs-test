@@ -97,7 +97,7 @@ hide:
 ### [Bit management](products/ex-commandstation/loco-programming/serial-programming.md#bit-management)
 ### [Diagnostics when things don't work](products/ex-commandstation/loco-programming/serial-programming.md#diagnostics-when-things-dont-work)
 ### [ACK detector tuning parameters](products/ex-commandstation/loco-programming/serial-programming.md#ack-detector-tuning-parameters)
-## [Programming with EX-Toolbox](products/ex-commandstation/loco-programming/webthrottle-programming.md#programming-with-ex-toolbox)
+## [Programming with EX-WebThrottle](products/ex-commandstation/loco-programming/webthrottle-programming.md#programming-with-ex-webthrottle)
 ## [Programming with Engine Driver](products/ex-commandstation/loco-programming/engine-driver-programming.md#programming-with-engine-driver)
 ### [Accessing the DCC-EX page](products/ex-commandstation/loco-programming/engine-driver-programming.md#accessing-the-dcc-ex-page)
 ### [Read loco address](products/ex-commandstation/loco-programming/engine-driver-programming.md#read-loco-address)
