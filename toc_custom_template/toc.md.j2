@@ -1,0 +1,28 @@
+{{data.toc_output_comment}}
+
+# {{data.page_title}}
+<style>
+.md-typeset h3, .md-typeset h4, .md-typeset h5 {
+    border-left: 0px transparent;
+    padding-left: 1rem;
+}
+</style>
+
+**Using custom template from `toc_custom_template` directory**  
+
+{% if data.page_description %}
+{{data.page_description}}
+{% endif %}
+
+{% for header in data.toc_headers: %}
+{% if header.level <= 3 %}
+{{header.get_text_as_md_header()}}
+{% else %}
+{{header.get_text_as_md_ul_item()}}
+{% endif %}
+{% if header.has_description() %}
+{{header.description}}
+
+{% endif %}
+{% endfor %}
+

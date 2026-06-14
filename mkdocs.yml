@@ -136,6 +136,8 @@ plugins:
       overwrite: always
       ignore_page_pattern: .*command-list.md
       remove_navigation_page_pattern: .*command-list.md
+      template_dir_path: toc_custom_template
+      header_level: 2
 
 # Copyright info
 copyright: |
