@@ -22,6 +22,9 @@ hide:
     margin-bottom: 6px !important;
     font-size: 100% !important;
 }
+.md-typeset h3 a, .md-typeset h4 a, .md-typeset h5 a {
+    color: var(--md-default-fg-color);        
+}
 .md-typeset h2 {
     margin-bottom: 6px !important;
     font-size: 110% !important;
