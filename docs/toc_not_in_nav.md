@@ -1,5 +1,6 @@
 ---
 hide:
+  - navigation
   - toc
 ---
 <!-- ====================== TOC ====================== -->
@@ -339,6 +340,7 @@ hide:
 ### [APPENDIX H](products/ex-sensorcam/ex-sensor-manual.md#appendix-h)
 ### [APPENDIX I](products/ex-sensorcam/ex-sensor-manual.md#appendix-i)
 ### [APPENDIX J](products/ex-sensorcam/ex-sensor-manual.md#appendix-j)
+### [APPENDIX K](products/ex-sensorcam/ex-sensor-manual.md#appendix-k)
 ### [ADDITIONAL RANDOM NOTES:](products/ex-sensorcam/ex-sensor-manual.md#additional-random-notes)
 ## [Native EX-SensorCAM Command List](products/ex-sensorcam/ex-sensorcam-command-reference.md#native-ex-sensorcam-command-list)
 ### [Conventions used on this page](products/ex-sensorcam/ex-sensorcam-command-reference.md#conventions-used-on-this-page)
