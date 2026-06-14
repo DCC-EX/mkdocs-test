@@ -1021,9 +1021,9 @@ Version v319 also accepts _minSensors_ up to _maxSensors_-1
 Driver version v308 is intended for use with Prod versions 5.4.6 to 5.4.16. DCC-EX CS Prod. Versions 5.4.16+ incorporate v308 by default. v308 will not work with CS devel 5.5.15+. For CS devel versions look to v309 (default). Both these drivers MUST be used with sensorCAM version v320+ as earlier versions will not be recognized.
 
 
-##APPENDIX K 
+## APPENDIX K 
                    
-###OV2640 Lens options and geometry   
+### OV2640 Lens options and geometry   
               
 Since this project was initiated, the ov2640 has become available with a greater variety of camera lens attachments.
  
