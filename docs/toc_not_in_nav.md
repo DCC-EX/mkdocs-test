@@ -9,6 +9,18 @@
 .md-typeset h3, .md-typeset h4, .md-typeset h5 {
     border-left: 0px transparent;
     padding-left: 1rem;
+    font-size: smaller !important;
+    padding-top: 2px !important;
+    padding-bottom: 2px !important;
+    padding-right: 2px !important;
+    line-height: 110% !important;
+    margin-top: 0px !important;
+    margin-bottom: 6px !important;
+    font-size: 100% !important;
+}
+.md-typeset h2 {
+    margin-bottom: 0px !important;
+    font-size: 110% !important;
 }
 </style>
 
