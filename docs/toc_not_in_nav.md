@@ -1,6 +1,5 @@
 ---
 hide:
-  - navigation
   - toc
 ---
 <!-- ====================== TOC ====================== -->
@@ -31,7 +30,7 @@ hide:
     font-size: 110% !important;
 }
 </style>
-**Using custom template from `toc_custom_template` directory**  
+<!-- **Using custom template from `toc_custom_template` directory**  -->
 
 
 ## [Home](index.md#home)
