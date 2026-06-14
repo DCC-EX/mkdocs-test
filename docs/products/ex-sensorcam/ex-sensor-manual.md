@@ -1,4 +1,6 @@
 # EX-SensorCAM Manual  
+
+For use with ov2640 camera module in esp32-CAM-MB and variants
   
 ## CONTENTS
 
@@ -41,6 +43,8 @@ H. Notes on use of EX-Rail with SensorCAM
 I. Configuring EX-CS to connect to sensorCAM as an EXIO device
 
 J. WROVER & ESP32-CAM notes
+
+K. OV2640 Lens options and geometry
 
 **Addenda**
 
@@ -302,21 +306,21 @@ The second feature enables the size of the sensor to be increased. This is done 
 
 It is desirable to place sensors where they generate a "mottled" image of pixels rather than a uniform colour which makes distinguishing grey roofs against plain grey track hard. Pixel size is therefore relevant. It is helpful if the pixels are the width of sleepers so they can be distinguished. If they can't then try an offset sensor that sees track bed and trackside grass/shadows say. **Table 1** indicates pixel/sensor sizes relative to sleepers and track gauge. It shows that sleeper detection is limited with the ov2640 QVGA (240x320) resolution. Future sensorCAM variants may do better.  An angled camera (less than 30degrees) could benefit from a glimpse of the side of the loco/coach/wagon and increase the field of view, but parallax issues may arise.
 
-| OV2640  | CAM(std.  lens) | field of&nbsp;view | 54 deg |  |  |  |  |  |  |  |  |  |
+| OV2640  | CAM(std.  lens) | field of&nbsp;view | 54 deg | | | | | | | | | |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-|     | CAMERA HEIGHT: | (mm) | 800 | 800 | 1000 | 1000 | 1200 | 1200 | 1500 | 1500 | 1800 | 1800 |
-|     | app. image width | (mm) | 810  | 810  |  1016 | 1016 | 1220 | 1220 | 1525 | 1525 | 1830 | 1830 |
+| | CAMERA HEIGHT: | (mm) | 800 | 800 | 1000 | 1000 | 1200 | 1200 | 1500 | 1500 | 1800 | 1800 |
+| | app. image width | (mm) | 810  | 810  |  1016 | 1016 | 1220 | 1220 | 1525 | 1525 | 1830 | 1830 |
 | QVGA | pixel size | (mm) | 2.18 | 2.18 | 2.73 | 2.73 | 3.27 | 3.27 | 4.09 | 4.09 | 4.91 | 4.91 |
-|  | SEN_SIZE: | setting | 0 | 2 | 0 | 2 | 0 | 2 | 0 | 2 | 0 | 2 |
-|  | Sensor Size | (pixels) | 4x4 |  6x6  | 4x4 | 6x6 | 4x4 |  6x6  | 4x4 |  6x6  | 4x4 |  6x6  |
-|  | ratio:gauge/sensor |  |  |  |  |  |  |  |  |  |  |  |
-|  |  |  |  |  |  |  |  |  |  |  |  |  |
-| scale | sleeper | std gauge |  |  |  |  |  |  |  |  |  |  |
+| | SEN_SIZE: | setting | 0 | 2 | 0 | 2 | 0 | 2 | 0 | 2 | 0 | 2 |
+| | Sensor Size | (pixels) | 4x4 | 6x6 | 4x4 | 6x6 | 4x4 | 6x6 | 4x4 | 6x6 | 4x4 | 6x6 |
+| | ratio:gauge/sensor | | | | | | | | | | | |
+| | | | | | | | | | | | | |
+| scale | sleeper | std gauge | | | | | | | | | | |
 | O  1:43 | 5 | 32 | 3.7 | 2.4 | 2.9 | 2.0 | 2.4 | 1.6 | 2.0 | 1.3 | 1.6 | 1.1 |
 | HO 1:87 | 2.5 | 16.5 | 1.9 | 1.3 | 1.5 | 1.0 | 1.3 | 0.8 | 1.0 | 0.7 | 0.8 | 0.6 |
 | TT&nbsp;1:120 | 1.8 | 12 | 1.4 | 0.9 | 1.1 | 0.7 | 0.9 | 0.6 | 0.7 | 0.5 | 0.6 | 0.4 |
 | N 1:160 | 1.3 | 9 | 1.0 | 0.7 | 0.8 | 0.6 | 0.7 | 0.5 | 0.6 | 0.4 | 0.5 | 0.3 |
-|  | (mm) | (mm) |  |  |  |  |  |  |  |  |  |  |
+| | (mm) | (mm) | | | | | | | | | | |
 
 **Table 1. Comparison of sensor sizes and track features**  Ratio of gauge/sensor dimension
 
@@ -659,7 +663,6 @@ In the situation where sensors may be tripping undesirably, there is a range of 
 
 ## APPENDIX C
 
-
 ### DCC-EX CS CAM commands
 
 The file _CamParser.cpp_ has been added to the CS specifically tailored to provide a mechanism for the CS to send commands more easily than by using the clumsy diagnostic command style **\<D&nbsp; ANOUT&nbsp;vpin&nbsp;parm1&nbsp;parm2\>**. The CS Native CAM command format is **<N&nbsp;c&nbsp;[parm1]&nbsp;[parm2]\>** where command character '**c**' can be any of those listed below. Generally, to effect changes in sensorCAM, the CAM must be in the run mode (flashing).
@@ -671,36 +674,36 @@ e.g. **<Ni 2%%\> <Nr&nbsp;2%%\>** also **<Nm 200\> <Nf 212\> <Nt 243\>**
 
 | Command | Example | Equivalent| sensorCAM command & action (some commands only return "ACK OK" to CS) |
 | --- | --- | --- | --- |
-| **<N\>** | <N\> | n/a | Lists current & alt. defined CAM baseVpins.    |
-| **<N C ###\>** | <NC 600\> | n/a | **CAM** base vpin(>99) for following commands OR <NC #\> selects CAM # (1-4)  | 
-| **<N a %%\>**  | <Na 12\> | a12 | **enAble** sensor S%% (bsNo). |
-| **<N&nbsp;a%%&nbsp;row&nbsp;col\>** | <Na&nbsp;12&nbsp;32&nbsp;43\> | a12,32,43 | **enAble** & also set new coordinates for sensor bsNo & refresh | 
-| **<N b bank#\>** | <Nb 1\> | b1  | **Bank** sensor states(all 8).(used by IFGTE() ATLT() e.g. to locate loco). |
-| **<N e\>**     | <Ne\>     | e   |**EPROM** write any changed settings to sensorCAM EPROM.|
-| **<N f %%\>**   | <Nf 12\> | f12 | **Frame image** pixel data for Sensor_ref[%%] and sensor666[%%] (RGB bytes). |
-| **<N F\>**     | <NF\>    | F   | **Forced reboot**, restoring sensorCAM sensor mode & EPROM defaults. |
-| **<N g\>**     | <Ng\>    | g   | **Get** status ov2640 camera module settings (on sensorCAM monitor). |
-| **<N h %%\>**    | <Nh 30\>    | h30 | set _maxSensors_ to limit display to below sensor S%%. Also **Help** (0-9) |
-| **<N i %%\>** | <Ni 12\> | i12 | **Information** on sensor bsNo state, position & twin (0=No twin).
-| **<N i %%[ $$]\>** | <Ni 12\> | i12,02 | **Info.** & assigns new twin sensor(S$$) for "second-opinion" on S%%. | 
-| **<N j $ #\>**  | <Nj B 2\> | jB2 | **adJust** ov2640 parameters($)(Brightness, Contrast etc)(values 0-2 only). |
-| **<N l %%\>**   | <Nl 12\>  | l12 | (lima) **Latch** output state of sensor bsNo to 1 & disable. |
+| **<N\>** | <N\> | n/a | Lists current & alt. defined CAM baseVpins. |
+| **<N C ###\>** | <NC 600\> | n/a | **CAM** base vpin(>99) for following commands OR <NC #\> selects CAM # (1-4) |
+| **<N a %%\>** | <Na 12\> | a12 | **enAble** sensor S%% (bsNo). |
+| **<N&nbsp;a%%&nbsp;row&nbsp;col\>** | <Na&nbsp;12&nbsp;32&nbsp;43\> | a12,32,43 | **enAble** & also set new coordinates for sensor bsNo & refresh |
+| **<N b bank#\>** | <Nb 1\> | b1 | **Bank** sensor states(all 8).(used by IFGTE() ATLT() e.g. to locate loco). |
+| **<N e\>** | <Ne\> | e |**EPROM** write any changed settings to sensorCAM EPROM. |
+| **<N f %%\>** | <Nf 12\> | f12 | **Frame image** pixel data for Sensor_ref[%%] and sensor666[%%] (RGB bytes). |
+| **<N F\>** | <NF\> | F | **Forced reboot**, restoring sensorCAM sensor mode & EPROM defaults. |
+| **<N g\>** | <Ng\> | g | **Get** status ov2640 camera module settings (on sensorCAM monitor). |
+| **<N h %%\>** | <Nh 30\> | h30 | set _maxSensors_ to limit display to below sensor S%%. Also **Help** (0-9) |
+| **<N i %%\>** | <Ni 12\> | i12 | **Information** on sensor bsNo state, position & twin (0=No twin). |
+| **<N i %%[ $$]\>** | <Ni 12\> | i12,02 | **Info.** & assigns new twin sensor(S$$) for "second-opinion" on S%%. |
+| **<N j $ #\>** | <Nj B 2\> | jB2 | **adJust** ov2640 parameters($)(Brightness, Contrast etc)(values 0-2 only). |
+| **<N l %%\>** | <Nl 12\> | l12 | (lima) **Latch** output state of sensor bsNo to 1 & disable. |
 | **<N m $ [%%]\>** | <Nm 3 20\> | m3,20 | **Min/max** _min2trip_(1-4) frames [_maxSensors_] **<NM\> shows CAM parameters** |
 | **<N n$ [%%]\>** | <Nn 1 10\> | n1,10 | set **nLED**= bank $ [and _minSensors_=%% to limit display range] <Nn v\> verifies. |
-| **<N o %%\>**   | <No 12\> | o12 | (oscar) **Zero** output state of sensor bsNo. Reset to 0 & disable. |
-| **<N p %%\>**   | <Np 1\>  | p1  | **Positions**(r,x) of all enabled sensors in bank are listed. |
-| **<N q #\>**    | <Nq 1\>   | q1  | **Query bank**# enabled states of sensors (0 indicates sensor disabled). |
-| **<N Q\>**      | <NQ\>     | n/a | **Query** state of all sensorCAM Sensors
-| **<N r [%%]\>** | <Nr 12\>  | r12 | **Refresh Reference** image for sensor S%% (default ALL=r00). |
-| **<N s %%\>**   | <Ns 12\>  | s12 | **Scan** image for brightest spot and set S%% to center that pixel. |
+| **<N o %%\>** | <No 12\> | o12 | (oscar) **Zero** output state of sensor bsNo. Reset to 0 & disable. |
+| **<N p %%\>** | <Np 1\> | p1 | **Positions**(r,x) of all enabled sensors in bank are listed. |
+| **<N q #\>** | <Nq 1\> | q1 | **Query bank**# enabled states of sensors (0 indicates sensor disabled). |
+| **<N Q\>** | <NQ\> | n/a | **Query** state of all sensorCAM Sensors |
+| **<N r [%%]\>** | <Nr 12\> | r12 | **Refresh Reference** image for sensor S%% (default ALL=r00). |
+| **<N s %%\>** | <Ns 12\> | s12 | **Scan** image for brightest spot and set S%% to center that pixel. |
 | **<N t ## [%%]\>** | <Nt 43 12\> | t43,12 | **Threshold** displayed, sets global _threshold_ (32-98) [sets a _pvtThreshold_]. |
-| **<N t ##\>**    | <Nt 10\> | t10 | **Tabulate** ## (2-31) rows of scroll data similar to CAM scroll.
+| **<N t ##\>** | <Nt 10\> | t10 | **Tabulate** ## (2-31) rows of scroll data similar to CAM scroll. |
 | **<N t # %%\>** | <Nt 0 12\> | t0,12 | **Trash** pvtThresholds. **<Nt 0 %%\>** individually, **<Nt 1 %%\>** for bank, **<Nt&nbsp;1&nbsp;99\>** trashes ALL pvtThresholds.  **<Nt&nbsp;99\>** lists ALL pvtThresholds. |
-| **<N t 1\>** | <Nt 1\>   | t1 | **toggles** scroll on/off. |
-| **<N u %%\>**  | <Nu 12\>  | u12 | **Undefine** and disable sensor bsNo(erase coordinates). **<Nu 99\>** for ALL |
-| **<N v [#]\>** | <N v 1\> | v1  |  **Video** mode(1-2) invoke webCAM, or alt webCAM with v 2. **v** for **version** |
-| **<N&nbsp;w\>**     | <Nw\>    | w   | **Wait**. Stop/start CAM imaging (flash), status sensing & streaming. |
-| **x &nbsp; y &nbsp; z** |    |     | Reserved for binary export for Processing 4 images |
+| **<N t 1\>** | <Nt 1\> | t1 | **toggles** scroll on/off. |
+| **<N u %%\>** | <Nu 12\> | u12 | **Undefine** and disable sensor bsNo(erase coordinates). **<Nu 99\>** for ALL |
+| **<N v [#]\>** | <N v 1\> | v1 |  **Video** mode(1-2) invoke webCAM, or alt webCAM with v 2. **v** for **version** |
+| **<N&nbsp;w\>** | <Nw\> | w | **Wait**. Stop/start CAM imaging (flash), status sensing & streaming. |
+| **x &nbsp; y &nbsp; z** | | | Reserved for binary export for Processing 4 images |
 | **<N ### ## ##\>** | <N&nbsp;711&nbsp;75&nbsp;85\> | a13,75,85 | Note: This uses the **vpin** for a sensor, NOT id/bsNo.(ref. **Appendix E**). |
 
 > **Notes:** The 'i' cmd prints bsNo(bsn) where bsn/vPin offsets range from (7)00 to (7)79 (e.g. baseVpin address 700).  
@@ -708,7 +711,6 @@ e.g. **<Ni 2%%\> <Nr&nbsp;2%%\>** also **<Nm 200\> <Nf 212\> <Nt 243\>**
 > Space after <N is optional, as is capitalization of command. e.g.<N t 42\>=<NT 42\>,<N r 00\>=<NR\>
 > Multiple CAM selections can be achieved by config.h entry and use of a prefix on param1 e.g.<N i 212\> for CAM 2
 > For commands to work fully, need latest _CamParser.cpp_, CS driver(_IO-EXSensorCAM.h_) & _sensorCAM.ino_
-
 
 ## APPENDIX D
 
@@ -1017,6 +1019,25 @@ Version v319 also accepts _minSensors_ up to _maxSensors_-1
 ### 4. CS drivers v308 & v309
 
 Driver version v308 is intended for use with Prod versions 5.4.6 to 5.4.16. DCC-EX CS Prod. Versions 5.4.16+ incorporate v308 by default. v308 will not work with CS devel 5.5.15+. For CS devel versions look to v309 (default). Both these drivers MUST be used with sensorCAM version v320+ as earlier versions will not be recognized.
+
+
+## APPENDIX K 
+                   
+### OV2640 Lens options and geometry   
+              
+Since this project was initiated, the ov2640 has become available with a greater variety of camera lens attachments.
+ 
+Measurements finally taken of the "Field Of View" of some of the more interesting offerings are below. The standard ov2640 comes with a lens with a nominal 66 degree FOV. In reality images never quite achieved this, giving a lesser field of view, hence needing a higher mounting. The ideal seemed to be about 80-90 degrees, but the cam's were offered with 66, 75, 120 160 and 200 mostly. A true 120° FOV vertically mounted CAM would give small features and a flat 30 degree view of the edge of the FOV which is generally too flat to give good sensorCAM results.
+ 
+Having measured a few and discovered the truth of the matter in that the "rating" is likely the characteristic of the lens alone, not applicable when mounted on a small ov2640 sensor. The measurements reveal that the "66" lens gives a FOV of only 54° max.; adjustable 75 -> 50.1° (less than the 66); the fixed 120 -> 86.9°; adjustable 120 -> 75.3°. Larger "160" lens was untested as likely to give too small a track image and flat angle at edge. Needs to be confirmed. 
+
+These measurements put the fixed 120° ov2640 in a very usable position. The large "adjustable" offerings are not needed as a focus at "infinity" covers the normal sensorCAM range. The adjustable lenses are unnecessarily bulky and costly as well.  Close-up mounting is of little use, and that is where the adjustable focus lenses would be useful. Lenses come in "rectilinear" and "fisheye" style. The "rectilinear" tested above give less distortion and are preferred for sensorCAM. The following diagram helps envisage the relative coverage and includes examples of tilted camera of 30° for the "66" and 15° for the "120". These tilts are probably approaching the maximum tilt that is likely to be satisfactory as, at greater tilt, the extremity of images become small and again start to be viewed at a very flat angle.
+
+Length of track indicated in FOV will be proportional to camera height which could be increased from 1m up to 2m doubling the coverage. The take-away result is that, if the "66" standard lens is restrictive, consider the fixed "120" for about 50% greater coverage but smaller image features. Other sizes are probably unsuitable. Do not expect the FOV to match the nominal specification. Higher FOV may introduce unwanted side effects and give poorer outcome.
+
+All FOV angles are "Horizontal HFOV" angles (practical Engineering convention), i.e. relative to the long image dimension.  A slightly larger DFOV is often quoted based on diagonal image dimension (25% greater on 4:3 image).  The DFOV is still below, but closer to, the nominal 66 or 120 lens spec's on those tested.
+
+![ov2640 FOV](/_static/images/ex-sensorcam/ov2640-FOV.png)
 
 ## ADDITIONAL RANDOM NOTES:
 

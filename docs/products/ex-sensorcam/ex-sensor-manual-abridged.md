@@ -1,5 +1,7 @@
 # EX-SensorCAM Abridged Manual
 
+Including ESP32-WROVER-CAM and ESP32-WROOM-S3 CAM's
+
 ## CONTENTS
 
 1. Overview
@@ -494,36 +496,36 @@ e.g. **<Ni 2%%\> <Nr&nbsp;2%%\>** also **<Nm 200\> <Nf 212\> <Nt 243\>**
 
 | Command | Example | Equivalent| sensorCAM command & action (some commands only return "ACK OK" to CS) |
 | --- | --- | --- | --- |
-| **<N\>** | <N\> | n/a | Lists current & alt. defined CAM baseVpins.    |
-| **<N C ###\>** | <NC 600\> | n/a | **CAM** base vpin(>99) for following commands OR <NC #\> selects CAM # (1-4)  | 
-| **<N a %%\>**  | <Na 12\> | a12 | **enAble** sensor S%% (bsNo). |
-| **<N&nbsp;a%%&nbsp;row&nbsp;col\>** | <Na&nbsp;12&nbsp;32&nbsp;43\> | a12,32,43 | **enAble** & also set new coordinates for sensor bsNo & refresh | 
-| **<N b bank#\>** | <Nb 1\> | b1  | **Bank** sensor states(all 8).(used by IFGTE() ATLT() e.g. to locate loco). |
-| **<N e\>**     | <Ne\>     | e   |**EPROM** write any changed settings to sensorCAM EPROM.|
-| **<N f %%\>**   | <Nf 12\> | f12 | **Frame image** pixel data for Sensor_ref[%%] and sensor666[%%] (RGB bytes). |
-| **<N F\>**     | <NF\>    | F   | **Forced reboot**, restoring sensorCAM sensor mode & EPROM defaults. |
-| **<N g\>**     | <Ng\>    | g   | **Get** status ov2640 camera module settings (on sensorCAM monitor). |
-| **<N h %%\>**    | <Nh 30\>    | h30 | set _maxSensors_ to limit display to below sensor S%%. Also **Help** (0-9) |
-| **<N i %%\>** | <Ni 12\> | i12 | **Information** on sensor bsNo state, position & twin (0=No twin).
+| **<N\>** | <N\> | n/a | Lists current & alt. defined CAM baseVpins. |
+| **<N C ###\>** | <NC 600\> | n/a | **CAM** base vpin(>99) for following commands OR <NC #\> selects CAM # (1-4) |
+| **<N a %%\>** | <Na 12\> | a12 | **enAble** sensor S%% (bsNo). |
+| **<N&nbsp;a%%&nbsp;row&nbsp;col\>** | <Na&nbsp;12&nbsp;32&nbsp;43\> | a12,32,43 | **enAble** & also set new coordinates for sensor bsNo & refresh |
+| **<N b bank#\>** | <Nb 1\> | b1 | **Bank** sensor states(all 8).(used by IFGTE() ATLT() e.g. to locate loco). |
+| **<N e\>** | <Ne\> | e |**EPROM** write any changed settings to sensorCAM EPROM. |
+| **<N f %%\>** | <Nf 12\> | f12 | **Frame image** pixel data for Sensor_ref[%%] and sensor666[%%] (RGB bytes). |
+| **<N F\>** | <NF\> | F | **Forced reboot**, restoring sensorCAM sensor mode & EPROM defaults. |
+| **<N g\>** | <Ng\> | g | **Get** status ov2640 camera module settings (on sensorCAM monitor). |
+| **<N h %%\>** | <Nh 30\> | h30 | set _maxSensors_ to limit display to below sensor S%%. Also **Help** (0-9) |
+| **<N i %%\>** | <Ni 12\> | i12 | **Information** on sensor bsNo state, position & twin (0=No twin). |
 | **<N i %%[ $$]\>** | <Ni 12\> | i12,02 | **Info.** & assigns new twin sensor(S$$) for "second-opinion" on S%%. | 
-| **<N j $ #\>**  | <Nj B 2\> | jB2 | **adJust** ov2640 parameters($)(Brightness, Contrast etc)(values 0-2 only). |
-| **<N l %%\>**   | <Nl 12\>  | l12 | (lima) **Latch** output state of sensor bsNo to 1 & disable. |
+| **<N j $ #\>** | <Nj B 2\> | jB2 | **adJust** ov2640 parameters($)(Brightness, Contrast etc)(values 0-2 only). |
+| **<N l %%\>** | <Nl 12\> | l12 | (lima) **Latch** output state of sensor bsNo to 1 & disable. |
 | **<N m $ [%%]\>** | <Nm 3 20\> | m3,20 | **Min/max** _min2trip_(1-4) frames [_maxSensors_] **<NM\> shows CAM parameters** |
 | **<N n$ [%%]\>** | <Nn 1 10\> | n1,10 | set **nLED**= bank $ [and _minSensors_=%% to limit display range] <Nn v\> verifies. |
-| **<N o %%\>**   | <No 12\> | o12 | (oscar) **Zero** output state of sensor bsNo. Reset to 0 & disable. |
-| **<N p %%\>**   | <Np 1\>  | p1  | **Positions**(r,x) of all enabled sensors in bank are listed. |
-| **<N q #\>**    | <Nq 1\>   | q1  | **Query bank**# enabled states of sensors (0 indicates sensor disabled). |
-| **<N Q\>**      | <NQ\>     | n/a | **Query** state of all sensorCAM Sensors
-| **<N r [%%]\>** | <Nr 12\>  | r12 | **Refresh Reference** image for sensor S%% (default ALL=r00). |
-| **<N s %%\>**   | <Ns 12\>  | s12 | **Scan** image for brightest spot and set S%% to center that pixel. |
+| **<N o %%\>** | <No 12\> | o12 | (oscar) **Zero** output state of sensor bsNo. Reset to 0 & disable. |
+| **<N p %%\>** | <Np 1\> | p1 | **Positions**(r,x) of all enabled sensors in bank are listed. |
+| **<N q #\>** | <Nq 1\> | q1 | **Query bank**# enabled states of sensors (0 indicates sensor disabled). |
+| **<N Q\>** | <NQ\> | n/a | **Query** state of all sensorCAM Sensors |
+| **<N r [%%]\>** | <Nr 12\> | r12 | **Refresh Reference** image for sensor S%% (default ALL=r00). |
+| **<N s %%\>** | <Ns 12\> | s12 | **Scan** image for brightest spot and set S%% to center that pixel. |
 | **<N t ## [%%]\>** | <Nt 43 12\> | t43,12 | **Threshold** displayed, sets global _threshold_ (32-98) [sets a _pvtThreshold_]. |
-| **<N t ##\>**    | <Nt 10\> | t10 | **Tabulate** ## (2-31) rows of scroll data similar to CAM scroll.
+| **<N t ##\>** | <Nt 10\> | t10 | **Tabulate** ## (2-31) rows of scroll data similar to CAM scroll. |
 | **<N t # %%\>** | <Nt 0 12\> | t0,12 | **Trash** pvtThresholds. **<Nt 0 %%\>** individually, **<Nt 1 %%\>** for bank, **<Nt&nbsp;1&nbsp;99\>** trashes ALL pvtThresholds.  **<Nt&nbsp;99\>** lists ALL pvtThresholds. |
-| **<N t 1\>** | <Nt 1\>   | t1 | **toggles** scroll on/off. |
-| **<N u %%\>**  | <Nu 12\>  | u12 | **Undefine** and disable sensor bsNo(erase coordinates). **<Nu 99\>** for ALL |
-| **<N v [#]\>** | <N v 1\> | v1  |  **Video** mode(1-2) invoke webCAM, or alt webCAM with v 2. **v** for **version** |
-| **<N&nbsp;w\>**     | <Nw\>    | w   | **Wait**. Stop/start CAM imaging (flash), status sensing & streaming. |
-| **x &nbsp; y &nbsp; z** |    |     | Reserved for binary export for Processing 4 images |
+| **<N t 1\>** | <Nt 1\> | t1 | **toggles** scroll on/off. |
+| **<N u %%\>** | <Nu 12\> | u12 | **Undefine** and disable sensor bsNo(erase coordinates). **<Nu 99\>** for ALL |
+| **<N v [#]\>** | <N v 1\> | v1 |  **Video** mode(1-2) invoke webCAM, or alt webCAM with v 2. **v** for **version** |
+| **<N&nbsp;w\>** | <Nw\> | w | **Wait**. Stop/start CAM imaging (flash), status sensing & streaming. |
+| **x &nbsp; y &nbsp; z** | | | Reserved for binary export for Processing 4 images |
 | **<N ### ## ##\>** | <N&nbsp;711&nbsp;75&nbsp;85\> | a13,75,85 | Note: This uses the **vpin** for a sensor, NOT id/bsNo.(ref. **Appendix E**). |
 
 > **Notes:** The'i' cmd prints bsNo(bsn) where bsn/vPin offsets range from(7)00 to(7)79(e.g. baseVpin address 700).  
