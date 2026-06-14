@@ -1,6 +1,6 @@
 # DFPlayer Sound player
 
-The DFPlayer device van be used to play pre-recorded sounds from an onboard SD-card.
+The DFPlayer device an be used to play pre-recorded sounds from an onboard SD-card.
 
 ## Suggested uses
 
@@ -45,17 +45,3 @@ Best practice is to compile an audio catalogue and store files in different fold
 Files in WAV format are also supported, but take up more space, audio files in MP3 format are recommended.
 
 The EXRAIL cookbooks provide several worked example sound scenarios.
-
-## Testing DFPlayer
-
-There is a <y> command that is specifically designed for easy testing and control from the serial monitor. Every command is directed towards the previously defined vpin.
-
-- `<y vpin PLAY track [volume]>` Plays given track number and specified (or default) volume
-- `<y vpin REPEAT track [volume]>` Plays track repeatedly
-- `<y vpin PAUSE >` Pauses playing
-- `<y vpin RESUME>` Resumes playing
-- `<y vpin STOP>` Stops playing
-- `<y vpin FOLDER folder>` Switches future play commands to a different folder
-- `<y vpin VOL volume>` Changes default play volume (Does not affect currently playing track)
-- `<y vpin EQ eq>` Changes sound equalisation
-- `<y vpin RESET>` Resets the DFPlayer

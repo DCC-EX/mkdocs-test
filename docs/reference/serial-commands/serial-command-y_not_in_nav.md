@@ -15,11 +15,11 @@ tags:
 
 # <small>``<y «vpin» EQ|FOLDER|PAUSE|PLAY|REPEAT|RESET|RESUME|STOP|VOL [«various parameters»]>``</small> <br/> Play DF Player sounds
 
-Serial commands to play sounds on a DFPlayer.
+Serial commands to play sounds on a DFPlayer or UDPAudio device.
 
-The DFPlayer device can be used to play pre-recorded sounds from an onboard SD-card.
+Theese devices can be used to play pre-recorded sounds from an onboard SD-card.
 
-See the [DFPlayer page](/products/ex-commandstation/accessories/various-devices/dfplayer/dfplayer.md) for more information.
+See the [Sounds page](/products/ex-commandstation/accessories/various-devices/sounds/sounds.md) for more information.
 
 ## Commands
 
@@ -55,7 +55,7 @@ See the [DFPlayer page](/products/ex-commandstation/accessories/various-devices/
 
 ## Notes
 
-* See the [DFPlayer page](/products/ex-commandstation/accessories/various-devices/dfplayer/dfplayer.md) for more information.
+* See the [DFPlayer page](/products/ex-commandstation/accessories/various-devices/sounds/dfplayer.md) for more information.
 
 ----
 

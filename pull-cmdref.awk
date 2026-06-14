@@ -28,6 +28,5 @@
     line = $0
     sub(/^[[:space:]]*\/\/\/[[:space:]]*/ , "" , line)
     print line
-    print ""
     next
 }
