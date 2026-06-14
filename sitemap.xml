@@ -213,15 +213,23 @@
          <lastmod>2026-06-14</lastmod>
     </url>
     <url>
-         <loc>https://dcc-ex.com/mkdocs-test/products/ex-commandstation/accessories/various-devices/dfplayer/dfplayer/</loc>
+         <loc>https://dcc-ex.com/mkdocs-test/products/ex-commandstation/accessories/various-devices/sounds/dfplayer/</loc>
          <lastmod>2026-06-14</lastmod>
     </url>
     <url>
-         <loc>https://dcc-ex.com/mkdocs-test/products/ex-commandstation/accessories/various-devices/dfplayer/i2c-dfplayer/</loc>
+         <loc>https://dcc-ex.com/mkdocs-test/products/ex-commandstation/accessories/various-devices/sounds/i2c-dfplayer/</loc>
          <lastmod>2026-06-14</lastmod>
     </url>
     <url>
-         <loc>https://dcc-ex.com/mkdocs-test/products/ex-commandstation/accessories/various-devices/dfplayer/serial-dfplayer/</loc>
+         <loc>https://dcc-ex.com/mkdocs-test/products/ex-commandstation/accessories/various-devices/sounds/serial-dfplayer/</loc>
+         <lastmod>2026-06-14</lastmod>
+    </url>
+    <url>
+         <loc>https://dcc-ex.com/mkdocs-test/products/ex-commandstation/accessories/various-devices/sounds/sounds/</loc>
+         <lastmod>2026-06-14</lastmod>
+    </url>
+    <url>
+         <loc>https://dcc-ex.com/mkdocs-test/products/ex-commandstation/accessories/various-devices/sounds/udpaudio/</loc>
          <lastmod>2026-06-14</lastmod>
     </url>
     <url>
@@ -389,7 +397,7 @@
          <lastmod>2026-06-14</lastmod>
     </url>
     <url>
-         <loc>https://dcc-ex.com/mkdocs-test/products/ex-commandstation/exrail/cookbooks/sounds/dfplayer/</loc>
+         <loc>https://dcc-ex.com/mkdocs-test/products/ex-commandstation/exrail/cookbooks/sounds/sounds/</loc>
          <lastmod>2026-06-14</lastmod>
     </url>
     <url>
