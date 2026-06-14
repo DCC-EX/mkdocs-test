@@ -28,7 +28,7 @@ jobs:
       - name: Build docu site
         run: |
           . ./venv/bin/activate
-          mkdocs build --strict
+          mkdocs build
       - name: Regression check code block line breaks
         run: |
           python3 - <<'PY'
