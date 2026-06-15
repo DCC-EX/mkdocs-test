@@ -13,7 +13,8 @@ def on_nav(nav: Navigation, config, files) -> Navigation:
 "    line-height: 100%;\n" +
 "}\n" +
 "li a {\n" +
-"    font-weight: 300;\n" +
+"    font-weight: 500;\n" +
+"    font-size: 90%;\n" +
 "}\n" +
 "</style>\n\n"]
 

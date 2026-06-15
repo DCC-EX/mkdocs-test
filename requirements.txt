@@ -8,7 +8,7 @@ pymdown-extensions==10.15
 python-frontmatter==1.1.0
 setuptools==80.9.0
 Pygments==2.19.1
-mkdocs-toc-md==0.0.10
+# mkdocs-toc-md==0.0.10
 # mkdocs-awesome-pages-plugin==2.9.3
 # mkdocs-gen-files==0.6.1
 # properdocs==1.6.7

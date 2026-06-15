@@ -7,7 +7,8 @@ li {
     line-height: 100%;
 }
 li a {
-    font-weight: 300;
+    font-weight: 500;
+    font-size: 90%;
 }
 </style>
 
