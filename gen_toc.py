@@ -1,4 +1,5 @@
 import os
+import re
 from mkdocs.structure.nav import Navigation, Section, Page
 
 def on_nav(nav: Navigation, config, files) -> Navigation:
@@ -14,10 +15,26 @@ def on_nav(nav: Navigation, config, files) -> Navigation:
 "}\n" +
 "li a {\n" +
 "    font-weight: 500;\n" +
-"    font-size: 90%;\n" +
+"    font-size: 85%;\n" +
 "}\n" +
 "</style>\n\n"]
 
+    # Helper function to find the first H1 in a markdown file
+    def get_h1_title(file_path):
+        if not os.path.exists(file_path):
+            return None
+        try:
+            with open(file_path, "r", encoding="utf-8") as f:
+                for line in f:
+                    # Strip whitespace and check if it starts with a single '#'
+                    cleaned = line.strip()
+                    if cleaned.startswith("#") and not cleaned.startswith("##"):
+                        # Extract the text and remove any trailing '#' or spaces
+                        h1_text = cleaned.lstrip("#").strip()
+                        return h1_text
+        except Exception:
+            pass
+        return None
 
     # Define a recursive loop to travel through awesome-nav's compiled classes
     def parse_nav_object(nav_item, depth=0):
@@ -43,13 +60,25 @@ def on_nav(nav: Navigation, config, files) -> Navigation:
                 return
                 
             # awesome-nav automatically resolves the cleanest title 
-            # (checks front-matter, file name, or custom nav overrides)
             title = nav_item.title or "Untitled"
             
             # Extract standard, web-safe relative URLs for proper rendering links
             url_path = nav_item.file.src_path
             
-            toc_lines.append(f"{indent}- [{title}]({url_path})")
+            # Look up the actual H1 heading inside the file
+            full_file_path = os.path.join(docs_dir, url_path)
+            h1_heading = get_h1_title(full_file_path)
+            
+            # Append H1 title if it exists and differs from the nav link title
+            if h1_heading and h1_heading.lower() != title.lower():
+                if title != "Untitled":
+                    display_title = f"{title} — *{h1_heading}*"
+                else:
+                    display_title = f"*{h1_heading}*"
+            else:
+                display_title = title
+
+            toc_lines.append(f"{indent}- [{display_title}]({url_path})")
 
     # Cycle sequentially through awesome-nav's resolved root order
     for item in nav.items:
