@@ -6,14 +6,14 @@ If you intend to use an ESP-01 development board, please skip to [ESP01](#esp-01
 
 ## EX-WiFiShield8266
 
-![WiFiShield8266](/_static/images/wifi/makerfabs-esp8266-wifi-shield.png){ align=right }
+![WiFiShield8266](/_static/images/wifi/makerfabs-esp8266-wifi-shield.png){ align=right width=400px}
 We recommend you purchase an EX-WiFiShield8266 (a joint venture with Makerfabs) which has been designed to make the installation easy.
 
 You can find installation instructions here [WiFiShield8266 install](/diy/mega-easy.md#optionally-install-wifishield)
 
 <div style="clear: both;"></div>
 ## Other shields
-![wangtongze](/_static/images/wifi/wangtongze_jumpered.png){ align=right }
+![wangtongze](/_static/images/wifi/wangtongze_jumpered.png){ align=right width=400px}
 
 Most other Arduino ESP8266 Wi-Fi shields, including the dodgy ones with "Shiald" and "Arbuino" spelling mistakes, will work well with a DCC-EX command station but must be modified slightly to bypass the useless design based on UNOs with one user and no USB connection. They are frequently shipped with firmware versions that do not work well with DCC-EX (latest is not always best!) and it's non-trivial to rectify this.
 

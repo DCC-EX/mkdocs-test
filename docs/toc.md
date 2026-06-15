@@ -15,7 +15,7 @@ li a {
 
 - [Home](index.md)
 - **Products**
-    - [DCC-EX Product Overview <small>(Product List)</small>](products\products.md)
+    - [DCC-EX Product Overview <small>(Product Overview)</small>](products\products.md)
     - [Getting Started with DCC-EX <small>(Getting Started)</small>](products\getting-started.md)
     - **EX-CommandStation**
         - [The DCC-EX Command Station](products\ex-commandstation\overview.md)
