@@ -72,9 +72,11 @@ def on_nav(nav: Navigation, config, files) -> Navigation:
             # Append H1 title if it exists and differs from the nav link title
             if h1_heading and h1_heading.lower() != title.lower():
                 if title != "Untitled":
-                    display_title = f"{title} — *{h1_heading}*"
+                    # display_title = f"{title} — *{h1_heading}*"
+                    display_title = f"{h1_heading} <small>({title})</small>"
                 else:
-                    display_title = f"*{h1_heading}*"
+                    # display_title = f"*{h1_heading}*"
+                    display_title = f"{h1_heading}"
             else:
                 display_title = title
 
