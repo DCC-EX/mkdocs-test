@@ -86,6 +86,22 @@ def on_nav(nav: Navigation, config, files) -> Navigation:
     for item in nav.items:
         parse_nav_object(item)
         
+    # Add a separate section for files that are intentionally not in nav
+    non_nav_files = []
+    for root, _, filenames in os.walk(docs_dir):
+        for filename in filenames:
+            if filename.endswith("_not_in_nav.md"):
+                file_path = os.path.join(root, filename)
+                rel_path = os.path.relpath(file_path, docs_dir).replace(os.path.sep, "/")
+                non_nav_files.append(rel_path)
+
+    if non_nav_files:
+        toc_lines.append("\n## Files Not In Navigation\n")
+        for rel_path in sorted(non_nav_files):
+            full_file_path = os.path.join(docs_dir, rel_path)
+            title = get_h1_title(full_file_path) or os.path.basename(rel_path)
+            toc_lines.append(f"- [{title}]({rel_path})")
+
     # Physically save the table of contents 
     with open(toc_path, "w", encoding="utf-8") as f:
         f.write("\n".join(toc_lines))
