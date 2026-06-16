@@ -217,7 +217,7 @@ Also see: Connect WiFi Throttle via USB
 - Free/Paid = Both Free and Paid versions are available. The free version usually has limited features.
 - Open Source = Designs and Source code are available to view, modify and build your own. <br/> However the hardware to build it is not free. |BRxa|
 - Native = Uses the DCC-EX Native protocol/commands.
-- Protocol - See the [WitThrottle VS Native Serial Protocol](/reference/withrottle-vs-native-protocol_not_in_nav.md) page.
+- Protocol - See the [WiThrottle VS Native Serial Protocol](/reference/withrottle-vs-native-protocol_not_in_nav.md) page.
 - WiT = Uses the WiThrottle protocol.
 - Web = Requires the use of a Web Browser.
 - Physical = A dedicated separate physical device. Not an app running on a standard smart device.
@@ -234,3 +234,5 @@ Also see: Connect WiFi Throttle via USB
 [^5]: Free version is functionally limited. (No track power control, only one throttle and no consists/MUs.)
 [^6]: Free version is advertisement supported and time limited.
 [^7]: ESU Mobile Control Pro is an Android device with additional hardware, so can also run the Engine Driver app. As such it can use the DCC-EX Native protocol when connected to a *DCC-EX EX-CommandStation**. It uses the WiThrottle protocol when connected to a WiThrottle server. When using Engine Driver and the Native Protocol it is capable of CV programming.
+
+--8<-- "snippets/abbr.md"

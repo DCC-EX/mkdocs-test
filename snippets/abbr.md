@@ -7,5 +7,8 @@
 *[PROG]: Programming Track / Service Mode
 *[MAIN]: Main Track / Ops Mode
 *[RGB]: Red - Green - Blue
+
 *[VPIN]: an Arduino pin number that has been extended to include pins on external devices or expanders
 *[vpin]: an Arduino pin number that has been extended to include pins on external devices or expanders
+
+*[EX-CSB1]: EX-CommandStation/Booster 1
