@@ -79,9 +79,9 @@ Next, click on the ``Connect EX-CS`` button.
 
 When using the serial connection, if the program finds any compatible devices, it will open a popup a window showing you a selection. It may show a line at the top such as "Arduino Mega 2560 (COM3)". Your com port may vary. Click on your board to select it and then click the ``Connect EX-CS`` button.
 
-You should then be connected to the **EX-CommandStation** and should see the response from the Command Station in the log textbox of the debug console at the bottom of the throttle window. Make sure your debug console is open. If it isn't, use the `Debug Console` slider button in the lower lower right to open it.
+You should then be connected to the **EX-CommandStation** and should see the response from the **EX-CommandStation** in the log textbox of the debug console at the bottom of the throttle window. Make sure your debug console is open. If it isn't, use the `Debug Console` slider button in the lower lower right to open it.
 
-When the command station is ready to use you should see ``[i] EX-CommandStation is READY`` appear in the log.
+When the **EX-CommandStation** is ready to use you should see ``[i] EX-CommandStation is READY`` appear in the log.
 
 Now you are ready to run trains! Place your loco on the track and click the `Power` slider button to turn on power to your track (if not already on). You should see LEDs on your Motor Driver and an indication that your loco has power.
 
@@ -97,7 +97,7 @@ You should now have full control over your loco.
 
 In the throttle control area, to the left of the function buttons, are vertical controls to control direction. The up arrow selects forward, the square button is stop and the down arrow is reverse.
 
-All the function buttons should be working, so you can play with the headlight, horn and bell and any other function assigned to a function button. The commands being sent to the Command Station and its responses will display in the log window if it is open
+All the function buttons should be working, so you can play with the headlight, horn and bell and any other function assigned to a function button. The commands being sent to the **EX-CommandStation** and its responses will display in the log window if it is open
 
 The circular control or vertical slider (chosen by the throttle select slider) can be moved by clicking and holding down the mouse button and dragging, clicking at a spot where you want the throttle to move, or clicking the ``+`` and ``-`` buttons.
 
@@ -109,7 +109,7 @@ The circular control or vertical slider (chosen by the throttle select slider) c
 
 Once you are connected, you can also send commands directly to the **EX-CommandStation**.
 
-e.g. You can send the ``<s>`` command in the "direct command" textbox to get status information from your Command Station. To do this just enter ``s`` (without the quotes) and press the `Send` button. |BR| You should see ``<iDCC-EX...>`` returned in the log window with your version, type of Arduino, type of motor driver, and some other information.
+e.g. You can send the ``<s>`` command in the "direct command" textbox to get status information from your **EX-CommandStation**. To do this just enter ``s`` (without the quotes) and press the `Send` button. |BR| You should see ``<iDCC-EX...>`` returned in the log window with your version, type of Arduino, type of motor driver, and some other information.
 
 You can send any DCC-EX Native command in this way.
 
@@ -119,7 +119,7 @@ You can send any DCC-EX Native command in this way.
 
 To use the program in to emulate an **EX-CommandStation**, without actually connecting to a real one, click on the ``Serial`` dropdown button and select ``Emulator`` to run in emulator mode, then follow to instructions above from ``Connect``.
 
-*Note: Not all Command Station functions are fully supported in the emulator. This means that although the software works, not all the responses will be shown in the debug console.*
+*Note: Not all EX-CommandStation functions are fully supported in the emulator. This means that although the software works, not all the responses will be shown in the debug console.*
 
 ----
 

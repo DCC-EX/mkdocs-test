@@ -1,6 +1,6 @@
 # Startup power
 
-By default the Command station will start with the track power OFF.
+By default the **EX-CommandStation** will start with the track power OFF.
 
 This can be inconvenient if you are using the free version of the WiThrottle app from the Apple store which does not have a power button.
 

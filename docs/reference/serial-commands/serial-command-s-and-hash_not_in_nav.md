@@ -8,16 +8,16 @@ tags:
   - _c 
 ---
 
-# <small>``<s>`` &nbsp; ``<#>`` <br/> ``<C RESET>`` ``<D RESET>`` </small> <br/> Query or Reset the Command Station
+# <small>``<s>`` &nbsp; ``<#>`` <br/> ``<C RESET>`` ``<D RESET>`` </small> <br/> Query or Reset the EX-CommandStation
 
 Serial commands to query or reset the EX-CommandStation
 
 ## Commands
 
-* ``<s>`` Request the command station status
+* ``<s>`` Request the **EX-CommandStation** status
 * ``<#>`` Request the number of simultaneously supported locos
-* ``<C RESET>`` Reset and restart command station
-* ``<D RESET>`` Reset and restart command station
+* ``<C RESET>`` Reset and restart **EX-CommandStation**
+* ``<D RESET>`` Reset and restart **EX-CommandStation**
 * ``<J I>`` Report currents
 * ``<c>`` (Deprecated) Report main track currect
 
@@ -31,10 +31,10 @@ N/A
 
  ``<iDCCEX version / microprocessorType / MotorControllerType / buildNumber>`` <br/> plus (repeated for each defined Turnout/Point): ``<H id state>``
 
-* **version: Command Station version
+* **version: **EX-CommandStation** version
 * **microprocessorType**: microprocessor type (e.g. MEGA)
 * **MotorControllerType**: Motor Driver type (e.g. STANDARD_MOTOR_SHIELD)
-* **buildNumber**: Command Station build number
+* **buildNumber**: **EX-CommandStation** build number
 * **id**: unique identifier for the Turnout/Point
 * **state**: one of:
     * ``1`` = thrown
@@ -61,7 +61,7 @@ N/A
 
 ``<# noCabs>``
 
-* **noCabs**: maximum number of Cabs(Locos) supported by the command station
+* **noCabs**: maximum number of Cabs(Locos) supported by the **EX-CommandStation**
 
 ## Notes
 

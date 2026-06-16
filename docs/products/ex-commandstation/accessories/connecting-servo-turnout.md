@@ -4,23 +4,23 @@ The details below assume you are using an EX-CSB1 command station or a DIY stati
 
 You will need the following for up to 16 servos.
 
-- Your Command Station with power supply and USB connection to your PC.
+- Your **EX-CommandStation** with power supply and USB connection to your PC.
 - Qwiic cable for connection to CSB1, with Qwiic or dupont connectors for connection to PCA9685.
 - PCA9685 module
 - Up to 16 SG90 servos
 - EX-Installer downloaded on your PC
 - (Optionally) Android phone with EX-Toolbox installed
-- A servo power supply 5V 2A DC -- and not taken from the command station.
+- A servo power supply 5V 2A DC -- and not taken from the **EX-CommandStation**.
 
 ## Follow the steps below
 
-1. Turn off power to your Command station and unplug the USB cable and power supply.
+1. Turn off power to your **EX-CommandStation** and unplug the USB cable and power supply.
 2. Connect the Qwiic cable between the CSB1 or EX8874 and the PCA9685 module.<BR>
  ![CSB1](/_static/images/ex-csb1/csb1qwiic.jpg){: style="width: 70%"} <BR>
 When using Mega, the I2C bus is 5V.<BR>
 Use the I2C headers, where 5V is available (IOREF/Vdd).<BR>
  ![mega](/_static/images/i2c-devices/EX8874_i2c_header.png){: style="width: 70%"} 
-3. Run the EX-Installer on your PC and select the cpu type, then the Serial Monitor. You should see output similar to the following where the Command Station enumerates all the I2C devices it can find.
+3. Run the EX-Installer on your PC and select the cpu type, then the Serial Monitor. You should see output similar to the following where the **EX-CommandStation** enumerates all the I2C devices it can find.
 from the startup logs using the serial monitor
 
     ```cpp
@@ -56,7 +56,7 @@ from the startup logs using the serial monitor
      SERVO_TURNOUT(3, 102, 400, 200, Slow, HIDDEN)
      ```
 
-02. Reload the command station from the installer.
+02. Reload the **EX-CommandStation** from the installer.
 
 ## Test your turnout/point definitions
 

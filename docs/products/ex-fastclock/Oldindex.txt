@@ -26,7 +26,7 @@ The completed project is shown in the accompanying photograph:
 
 ![TFT Fast Clock](/_static/images/ex-fastclock/IMG_2502.jpg){ align=right }
 
-The FastClock communicates with the Command Station using either I2C or Serial.  
+The FastClock communicates with the **EX-CommandStation** using either I2C or Serial.  
 
 Given that the MCUFREIND style shield is a shield and uses the A4 pin as LCD_RST it is necessary to make a modification to enable the I2C communication.  This involces cutting the A4 pin and soldering a jumper from LCD_RST on the backof the TFT board to the pin that aligns with the UNO RST pin.
 

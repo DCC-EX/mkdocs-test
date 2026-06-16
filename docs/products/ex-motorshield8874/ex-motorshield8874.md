@@ -42,21 +42,21 @@ Entrepreneurs wanting to use the design to offer commercial quantities to their 
 
 ## Assembly with EX-MotorShield8874
 
-The shield stacks onto a CSB1 without modification. The CSB1 firmware must be configured with the EX-Installer to recognise the additional two tracks. 
+The shield stacks onto a CSB1 without modification. The CSB1 firmware must be configured with the EX-Installer to recognise the additional two tracks.
 
-For self-built command station, please consult the relevant build instructions.
+For self-built **EX-CommandStations**, please consult the relevant build instructions.
 
 **DO NOT** connect power to BOTH the EX-MotorShield8874 barrel jack and the underlying Arduino motherboard via its DC barrel jack as you may damage your Arduino and/or EX-MotorShield8874.
 
 ## Engineering notes
 
-The **EX‑MotorShield8874** DC barrel jack is the only power source required to power both the tracks and the EX‑CommandStation into which it is plugged into. It supplies carefully regulated 7.2V DC power to the underlying Arduino R3 compatible motherboard via the VIN pin. This voltage is safely regulated down from the track power input to ensure Command Station motherboards will stay cool and work well. There is no need to power the Command Station via its barrel jack, or USB power. It is safe, however, to connect the USB cable as it will not create a conflict.
+The **EX‑MotorShield8874** DC barrel jack is the only power source required to power both the tracks and the EX‑CommandStation into which it is plugged into. It supplies carefully regulated 7.2V DC power to the underlying Arduino R3 compatible motherboard via the VIN pin. This voltage is safely regulated down from the track power input to ensure **EX-CommandStation** motherboards will stay cool and work well. There is no need to power the **EX-CommandStation** via its barrel jack, or USB power. It is safe, however, to connect the USB cable as it will not create a conflict.
 
 Applying a voltage above what a decoder was designed for, may permanently damage it, because the **EX‑MotorShield8874** does not drop voltage like the standard L298 based motor shields take care over track voltage selection.
 
-**NOTE:** The **EX‑MotorShield8874** can supply up to 5A of track power per channel, a power supply of more than 10A peak capacity is required to run both channels at full peak current and have power left for the Command Station. A power supply that is unable to provide the current at which the software detects a short-circuit will not be safe as the Command Station will not be able to detect the short.
+**NOTE:** The **EX‑MotorShield8874** can supply up to 5A of track power per channel, a power supply of more than 10A peak capacity is required to run both channels at full peak current and have power left for the **EX-CommandStation**. A power supply that is unable to provide the current at which the software detects a short-circuit will not be safe as the **EX-CommandStation** will not be able to detect the short.
 
-If the track power supply is not plugged in, the Command Station will report track faults.
+If the track power supply is not plugged in, the **EX-CommandStation** will report track faults.
 
 ## Stacking two motor shields
 
@@ -92,4 +92,4 @@ Leaving the Fault pins on A4, A5 facilitates bending and jumpering them to nearb
 A6, A7 on Arduino Mega  
 PC2, PC3 on Nucleo-64
 
-After hardware installation, you will need to re-run the [EX-Installer](../../installer/overview.md) to configure the Command Station code to recognize the new board and allow you to control the third and fourth tracks.
+After hardware installation, you will need to re-run the [EX-Installer](../../installer/overview.md) to configure the **EX-CommandStation** code to recognize the new board and allow you to control the third and fourth tracks.

@@ -14,7 +14,7 @@ DCC-EX provides some tricks to switch tracks in software, perhaps because you on
 
 Simple programming usually involves detecting or changing the DCC address of a loco. More advanced programming, especially involving sound locos can be very complex and varies from decoder to decoder, even when they are made by the same manufacturer.
 
-The EX_Command station provides the underlying technology to read and write individual decoder settings (called CVs) plus some higher-level functions to simplify this process for common problems like reading or writing a loco address which involves many reads or writes.
+The **EX-CommandStation** provides the underlying technology to read and write individual decoder settings (called CVs) plus some higher-level functions to simplify this process for common problems like reading or writing a loco address which involves many reads or writes.
 
 ## Programming using Serial input commands
 

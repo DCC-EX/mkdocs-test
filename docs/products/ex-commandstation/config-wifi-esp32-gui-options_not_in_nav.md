@@ -30,21 +30,21 @@ From version 5.7.0, you must configure the WiFi settings through one of the foll
 
 WiFi on the **EX-CommandStation** has two possible operating modes:
 
-* **Access point (AP) mode** means the Command Station acts as its own private WiFi network so throttle devices must connect first to the Command Station's own WiFi network.
+* **Access point (AP) mode** means the **EX-CommandStation** acts as its own private WiFi network so throttle devices must connect first to the **EX-CommandStation**'s own WiFi network.
 
-* **Station (STA) mode** means the command station connects to your WiFi router and appears as a device on that network. If the WiFi is configured for STA mode, but fails to connect to your router, it will fall back to AP mode in much the same way as smart plugs, lights etc.
+* **Station (STA) mode** means the **EX-CommandStation** connects to your WiFi router and appears as a device on that network. If the WiFi is configured for STA mode, but fails to connect to your router, it will fall back to AP mode in much the same way as smart plugs, lights etc.
 
 There are some additional settings that are not modes but effect the wifi connection:
 
 * **Channel**: If you need to use an alternate channel in Access Point mode (we recommend using only 1,6, or 11) you may change it.
 
-* **Hidden AP mode**: If enabled, the Command Station's WiFi network will not be visible in the list of available networks on devices. This can enhance security by making it less obvious to potential attackers, but it also means that users will need to manually enter the network name (SSID) to connect.<br/><br/>
+* **Hidden AP mode**: If enabled, the **EX-CommandStation**'s WiFi network will not be visible in the list of available networks on devices. This can enhance security by making it less obvious to potential attackers, but it also means that users will need to manually enter the network name (SSID) to connect.<br/><br/>
 Note that this does not provide any performance advantages.
 
-* **Temporary STA mode**: If enabled, the Command Station will start in Station mode and connect to an existing Wifi network. But will forget this setting the next time the **EX-CommandStation** is restarted.<br/><br/>
-This may be useful if visiting a location with a different WiFi network which you would like to connect to without changing the permanent WiFi settings on the Command Station.
+* **Temporary STA mode**: If enabled, the **EX-CommandStation** will start in Station mode and connect to an existing Wifi network. But will forget this setting the next time the **EX-CommandStation** is restarted.<br/><br/>
+This may be useful if visiting a location with a different WiFi network which you would like to connect to without changing the permanent WiFi settings on the **EX-CommandStation**.
 
-* The **HOSTNAME** setting allows you to set the name that appears in your Throttle app, once you have connected to the appropriate network for the Command Station.
+* The **HOSTNAME** setting allows you to set the name that appears in your Throttle app, once you have connected to the appropriate network for the **EX-CommandStation**.
 
 ----
 
@@ -55,7 +55,7 @@ There are significant limitations to be aware of when configuring WiFi settings 
 Only **Station (STA) mode** and the **HOSTNAME** can be changed over WiFi.
 
 **Access Point (AP)** mode changes require a serial/USB connection. 
-This is a security feature.  If you could change AP mode settings over WiFi, then anyone who could connect to the Command Station's WiFi network could change the AP settings and potentially lock you out of your Command Station. By requiring a USB connection for AP mode changes, we ensure that only someone with physical access to the Command Station can modify these critical settings.
+This is a security feature.  If you could change AP mode settings over WiFi, then anyone who could connect to the **EX-CommandStation**'s WiFi network could change the AP settings and potentially lock you out of your **EX-CommandStation**. By requiring a USB connection for AP mode changes, we ensure that only someone with physical access to the **EX-CommandStation** can modify these critical settings.
 
 ----
 
@@ -67,23 +67,23 @@ This is a security feature.  If you could change AP mode settings over WiFi, the
 
 2. Go to the ``Wifi Setup`` page from the menu or the toolbar buttons.
 
-    * To set the **Access Point (AP) mode**, enter the SSID and password for the Command Station's WiFi network and click the `Set Access Point` button. You can optional set a channel for the AP mode, but it is not required, and generally not recommended.<br/><br/>
-    The Command Station will restart and create its own WiFi network with the specified SSID and password.<br/><br/>
-    To set the **Station (STA) mode**, enter the SSID and password for your existing WiFi network (eg your home router) and click the `Set Station Mode` button. The Command Station will attempt to connect to the specified WiFi network. If the connection is successful, it will operate in Station mode. If the connection fails, it will revert to Access Point mode.
+    * To set the **Access Point (AP) mode**, enter the SSID and password for the **EX-CommandStation**'s WiFi network and click the `Set Access Point` button. You can optional set a channel for the AP mode, but it is not required, and generally not recommended.<br/><br/>
+    The **EX-CommandStation** will restart and create its own WiFi network with the specified SSID and password.<br/><br/>
+    To set the **Station (STA) mode**, enter the SSID and password for your existing WiFi network (eg your home router) and click the `Set Station Mode` button. The **EX-CommandStation** will attempt to connect to the specified WiFi network. If the connection is successful, it will operate in Station mode. If the connection fails, it will revert to Access Point mode.
 
-    * To set the **Temporary Station (STA) mode**, enter the SSID and password for your existing WiFi network and click the `Set Temporary Station Mode` button. The Command Station will attempt to connect to the specified WiFi network.<br/><br/>
+    * To set the **Temporary Station (STA) mode**, enter the SSID and password for your existing WiFi network and click the `Set Temporary Station Mode` button. The **EX-CommandStation** will attempt to connect to the specified WiFi network.<br/><br/>
     If the connection is successful, it will operate in Station mode. If the connection fails, it will revert to Access Point mode.
 
-    * To set the **Hostname**, enter the desired hostname and click the `Set Hostname` button. The Command Station will update its hostname, which will be visible in your Throttle app when connected to the appropriate network.<br>/<br/>
+    * To set the **Hostname**, enter the desired hostname and click the `Set Hostname` button. The **EX-CommandStation** will update its hostname, which will be visible in your Throttle app when connected to the appropriate network.<br>/<br/>
     This is useful if you have more than one **EX-CommandStation** on your network to make them show up with different names.
 
 #### Resetting the Wifi settings
 
-The `Reset WiFi Settings` button on the WiFi Setup page will reset all WiFi settings to their default values. This will cause the Command Station to restart and create its own WiFi network in Access Point mode with the default SSID and password.
+The `Reset WiFi Settings` button on the WiFi Setup page will reset all WiFi settings to their default values. This will cause the **EX-CommandStation** to restart and create its own WiFi network in Access Point mode with the default SSID and password.
 
 #### notes (EX-WebThrotttle)
 
-* In every case above, the Command Station will restart to apply the new settings. You will need to reconnect to the Command Station in the **EX-WebThrottle** interface.
+* In every case above, the **EX-CommandStation** will restart to apply the new settings. You will need to reconnect to the **EX-CommandStation** in the **EX-WebThrottle** interface.
 
 ----
 
@@ -99,7 +99,7 @@ The `Reset WiFi Settings` button on the WiFi Setup page will reset all WiFi sett
 
 * Only **Station (STA) mode** and the **HOSTNAME** can be changed over WiFi. **Access Point (AP) mode** changes require a USB connection.
 
-* In every case above, the Command Station will restart to apply the new settings. You will need to reconnect to the Command Station in the **EX-Toolbox** interface.
+* In every case above, the **EX-CommandStation** will restart to apply the new settings. You will need to reconnect to the **EX-CommandStation** in the **EX-Toolbox** interface.
 
 ----
 
@@ -111,7 +111,7 @@ Also see [WiFi configuration (CSB1 or ESP32 ONLY. V5.7.0+ ONLY)](config-wifi-esp
 
 ### notes (EX-Installer, Arduino IDE, VSC, throttle apps)
 
-* In every case below, the Command Station will restart to apply the new settings. You will need to reconnect to the Command Station in the app's interface.
+* In every case below, the **EX-CommandStation** will restart to apply the new settings. You will need to reconnect to the **EX-CommandStation** in the app's interface.
 
 ### Changing to Station Mode
 
@@ -123,7 +123,7 @@ i.e. your home router.  You will need to issue the command:
 
 e.g. Sets the STA mode to connect to a router with SSID "routerSSID" and password.
 
-The command station will attempt to connect to this network immediately, and on each rerstart. If it fails to connect, it will revert to AP mode.
+The **EX-CommandStation** will attempt to connect to this network immediately, and on each rerstart. If it fails to connect, it will revert to AP mode.
 
 ### Changing the Access Point settings
 
@@ -143,7 +143,7 @@ The default channel is set to "11". If you need to use an alternate channel (we 
    <C WIFI AP "MyCSB1" "SpamWonderfulSpam" 6>
 ```
 
-Use a phone WiFi analyser app to see which channels are relatively quiet in your area. 
+Use a phone WiFi analyser app to see which channels are relatively quiet in your area.
 
 ### Hidden Access Point mode
 

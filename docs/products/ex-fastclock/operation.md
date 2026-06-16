@@ -11,6 +11,6 @@ The clock will start in a paused state and will display the speed rate factor (d
 5. **T-** - Pressing this key will pause the clock and deduct 15 minutes from the time.
 6. **Rate** - Pressing this key will increase the speed factor to the next level.  The speed factor will cycle around the seven speed settings of 1, 2, 4, 6,, 8, 12 & 30.
 
-In Serial Mode, at startup the initial clock time will be sent to the Command Station but when in a paused state no further time commands are sent until the START button is pressed.
+In Serial Mode, at startup the initial clock time will be sent to the **EX-CommandStation** but when in a paused state no further time commands are sent until the START button is pressed.
 
-In I2C mode the Command Station polls the FastClock at intervals.
+In I2C mode the **EX-CommandStation** polls the FastClock at intervals.

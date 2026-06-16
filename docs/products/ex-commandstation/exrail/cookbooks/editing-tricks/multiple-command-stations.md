@@ -1,8 +1,8 @@
-# Maintaining multiple command stations
+# Maintaining multiple EX-CommandStations
 
-Maybe you have more than one command station and you wish to have slightly different EXRAIL setups, perhaps because you are testing a new release on a separate CPU or need to compile different scripts for different layouts.
+Maybe you have more than one **EX-CommandStation** and you wish to have slightly different EXRAIL setups, perhaps because you are testing a new release on a separate CPU or need to compile different scripts for different layouts.
 
-The C++ compiler pre-processor is available to select various parts of your myAutomation.h based on definitions created in your config.h or those created by defines.he which automates the detection of the CPU type of your command station.
+The C++ compiler pre-processor is available to select various parts of your myAutomation.h based on definitions created in your config.h or those created by defines.he which automates the detection of the CPU type of your **EX-CommandStation**.
 
 For example:
 

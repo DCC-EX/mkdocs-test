@@ -1,6 +1,6 @@
 # Things that happen at startup
 
-When the command station starts:
+When the **EX-CommandStation** starts:
 
 - Definitions of HAL drivers, Turnouts and Signals will take place first regardless of where they are found in the myAutomation.h file.
 - EXRAIL will run through all its sequences to detect any VPIN that has been used for input, perhaps by an AT, AFTER, ONBUTTON, ONSENSOR etc. These pins are then set to the Arduino INPUT_PULLUP mode. This is necessary so that EXRAIL can actually read the input pins.

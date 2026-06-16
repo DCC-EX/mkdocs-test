@@ -38,8 +38,8 @@ For anyone developing a throttle or controller application, these considerations
 * A throttle/controller MUST accept and ignore anything it does not understand
 * Track power state has three possible states: On, Off, and Unknown
 * There is no concept of a throttle ‘acquiring’ a loco.
-Simply, commands for a loco are sent to the Command Station, and the Command Station ‘broadcasts’ the status of any/every loco to every throttle any time a change is made to a loco.
-* There is no concept of the throttle disconnecting from the Command Station.
+Simply, commands for a loco are sent to the **EX-CommandStation**, and the **EX-CommandStation** 'broadcasts' the status of any/every loco to every throttle any time a change is made to a loco.
+* There is no concept of the throttle disconnecting from the **EX-CommandStation**.
 
 ## Key Throttle/Controller Commands
 
@@ -83,7 +83,7 @@ Obtaining throttle status.
 
 ### Momentum
 
-The command station can apply momentum to throttle movements in the same way that a standards compliant DCC decoder can be set to do. This momentum can be defaulted system wide and overridden on individual locos. It does not use or alter the loco CV values and so it also works when driving DC locos.
+The **EX-CommandStation** can apply momentum to throttle movements in the same way that a standards compliant DCC decoder can be set to do. This momentum can be defaulted system wide and overridden on individual locos. It does not use or alter the loco CV values and so it also works when driving DC locos.
 The momentum is applied regardless of the throttle type used (or even EXRAIL).
 
 Momentum is specified in mS / throttle_step.

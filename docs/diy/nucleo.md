@@ -3,7 +3,7 @@
 Reasons to consider the supported Nucleo-F4 boards
 
 - Nucleo-144 can have up to 8 districts.  
-  \- DCC signals are in sync, as is the case for all of the DCC-EX command stations.  
+  \- DCC signals are in sync, as is the case for all of the **DCC-EX EX-CommandStations**.  
   \- DC signals can be in sync, which makes Nucleo-144 the better choice if you want 8 DC mode districts.
 
 - Nucleo-144 - Ethernet is onboard/included with F429ZI and F439ZI  

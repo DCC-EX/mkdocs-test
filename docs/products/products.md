@@ -19,12 +19,12 @@ These are our easy to use, get up and running quickly type products. You don't n
 
 ### EX-CommandStation Booster 1 Express
 
-![EX-CommandStation Logo](/_static/images/logos/product-logo-ex-commandstation-only-light.png){ .only-light width=400px }
-![EX-CommandStation Logo](/_static/images/logos/product-logo-ex-commandstation-only-dark.png){ .only-dark width=400px }
+[![EX-CommandStation Logo](/_static/images/logos/product-logo-ex-commandstation-only-light.png){ .only-light width=400px }
+![EX-CommandStation Logo](/_static/images/logos/product-logo-ex-commandstation-only-dark.png){ .only-dark width=400px }](/products/ex-commandstation/overview.md)
 [![EX-CSB1 Logo](/_static/images/logos/product-logo-ex-csb1-only-light.png){ .only-light width=400px }
 ![EX-CSB1 Logo](/_static/images/logos/product-logo-ex-csb1-only-dark.png){ .only-dark width=400px }](/products/ex-commandstation/ex-csb1.md)
 
-A ready-to-run, all in one Command Station and Booster with built-in WiFi preloaded with our flagship train control, layout animation and automation software. 
+A ready-to-run, all in one Command Station and Booster with built-in WiFi preloaded with our flagship train control, layout animation and automation software.
 
 For more information on this and how to purchase, head over to the [EX-CSB1 product page](/products/ex-commandstation/ex-csb1.md)
 
@@ -35,9 +35,9 @@ You can learn more about the software in the [EX-CommandStation documentation](/
 ### EX-WebThrottle
 
 [![EX-WebThrottle Logo](/_static/images/logos/product-logo-ex-webthrottle-only-light.png){ .only-light width=400px }
-![EX-WebThrottle Logo](/_static/images/logos/product-logo-ex-webthrottle-only-dark.png){ .only-dark width=400px }](https://dcc-ex.com/legacy-docs/ex-webthrottle/index.html#ex-webthrottle)
+![EX-WebThrottle Logo](/_static/images/logos/product-logo-ex-webthrottle-only-dark.png){ .only-dark width=400px }](/products/ex-webthrottle/ex-webthrottle.md)
 
-This is the easiest way to validate you've connected your command station correctly to your track. Just load it up in your Chromium based web browser (Edge, Chrome, Opera) after connecting your command station to your computer and you can run your trains with it.
+This is the easiest way to validate you've connected your **EX-CommandStation** correctly to your track. Just load it up in your Chromium based web browser (Edge, Chrome, Opera) after connecting your **EX-CommandStation** to your computer and you can run your trains with it.
 
 To access it, refer to the [EX-WebThrottle documentation](https://dcc-ex.com/legacy-docs/ex-webthrottle/index.html#ex-webthrottle).
 
@@ -45,8 +45,8 @@ To access it, refer to the [EX-WebThrottle documentation](https://dcc-ex.com/leg
 
 ### EX-Toolbox
 
-![EX-Toolbox Logo](/_static/images/logos/product-logo-ex-toolbox-only-light.png){ .only-light width=400px }
-![EX-Toolbox Logo](/_static/images/logos/product-logo-ex-toolbox-only-dark.png){ .only-dark width=400px }
+[![EX-Toolbox Logo](/_static/images/logos/product-logo-ex-toolbox-only-light.png){ .only-light width=400px }
+![EX-Toolbox Logo](/_static/images/logos/product-logo-ex-toolbox-only-dark.png){ .only-dark width=400px }](/products/ex-toolbox/ex-toolbox.md)
 
 For Android phone users, this is an extremely useful tool to help with configuring various aspects of your trains, command station, and accessories.
 
@@ -67,8 +67,8 @@ You will need to perform some assembly and configure and install some software t
 
 ### EX-CommandStation Recommended Self Build Option (DIY)
 
-![EX-CommandStation Logo](/_static/images/logos/product-logo-ex-commandstation-only-light.png){ .only-light width=400px }
-![EX-CommandStation Logo](/_static/images/logos/product-logo-ex-commandstation-only-dark.png){ .only-dark width=400px }
+[![EX-CommandStation Logo](/_static/images/logos/product-logo-ex-commandstation-only-light.png){ .only-light width=400px }
+![EX-CommandStation Logo](/_static/images/logos/product-logo-ex-commandstation-only-dark.png){ .only-dark width=400px }](/diy/mega-easy.md)
 [![CS DIY Logo](/_static/images/logos/product-logo-ex-cs-diy-only-light.png){ .only-light width=400px }
 ![CS DIY Logo](/_static/images/logos/product-logo-ex-cs-diy-only-dark.png){ .only-dark width=400px }](/diy/mega-easy.md)
 
@@ -173,7 +173,7 @@ Refer to the [EX-DCCInspector documentation](https://dcc-ex.com/legacy-docs/ex-d
 [![EX-IOExpander Logo](/_static/images/logos/product-logo-ex-ioexpander-only-light.png){ .only-light width=400px }
 ![EX-IOExpander Logo](/_static/images/logos/product-logo-ex-ioexpander-only-dark.png){ .only-dark width=400px }](/products/ex-ioexpander/ex-ioexpander.md)
 
-Driven by a shortage of I2C connected I/O expansion devices, EX-IOExpander allows you to use various Arduino devices to expand the I/O capabilities of your command station.
+Driven by a shortage of I2C connected I/O expansion devices, **EX-IOExpander** allows you to use various Arduino devices to expand the I/O capabilities of your **EX-CommandStation**.
 
 However, this does mean you will need to understand I2C connectivity and will likely need some more complex assembly and/or soldering to use this on your layout.
 

@@ -18,7 +18,7 @@ tags:
 
 # TrackManager
 
-TrackManager is what lets you dynamically configure the outputs of your Command Station as either:
+TrackManager is what lets you dynamically configure the outputs of your **EX-CommandStation** as either:
 
 - Main DCC track output
 - Programming DCC track output

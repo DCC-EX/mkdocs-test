@@ -19,18 +19,18 @@ Disadvantages, visitors or club members domt like having their CVs changed. Func
 ### 3. Throttle Consist (NOT POSSIBLE for EXRAIL)
 
 The locos are unchanged and the throttle sends individual speed command to each loco.
-Disadvantages are that only the throttle knows about the relationship between the locos and that information can't easily be shared with other throttles, so another throttle may command one of the locos differently and cause mayhem. EXRAIL drives on one loco id so cannot drive this kind of consist. Which loco gets which functions may be configured at the throttle but are unknown to the command station.
+Disadvantages are that only the throttle knows about the relationship between the locos and that information can't easily be shared with other throttles, so another throttle may command one of the locos differently and cause mayhem. EXRAIL drives on one loco id so cannot drive this kind of consist. Which loco gets which functions may be configured at the throttle but are unknown to the **EX-CommandStation**.
 
-### 4. Command Station consists
+### 4. EX-CommandStation consists
 
-The command station knows the locos that are in the consist. Any speed commands to the lead loco are transmitted to all following locos. No CVs are modified and any throttle, including EXRAIL  can drive the lead loco or send function commands to the followers, but functions sent to the lead loco are not shared with the other locos, as there is no guarantee that "horn" on one loco isnt "halt and catch fire" on another.  
+The **EX-CommandStation** knows the locos that are in the consist. Any speed commands to the lead loco are transmitted to all following locos. No CVs are modified and any throttle, including EXRAIL  can drive the lead loco or send function commands to the followers, but functions sent to the lead loco are not shared with the other locos, as there is no guarantee that "horn" on one loco isnt "halt and catch fire" on another.  
 
-Throttle commands sent to the following locos are ignored but the command station broadcasts lead loco throttle changes for each loco.
+Throttle commands sent to the following locos are ignored but the **EX-CommandStation** broadcasts lead loco throttle changes for each loco.
 
 These consists can be built with
  [commands](/reference/serial-commands.md/#consist-control) or EXRAIL.
 
-## Command Station consists with EXRAIL
+## EX-CommandStation consists with EXRAIL
 
 Command Station consists can be built up with EXRAIL commands:
 

@@ -76,7 +76,7 @@ ONBUTTON(174)
   DONE
 ```
 
-You may have a situation, like a lifting gate on your layout, where you need to prevent movement when the Command Station is started with the gate open.
+You may have a situation, like a lifting gate on your layout, where you need to prevent movement when the **EX-CommandStation** is started with the gate open.
 
 This example runs at startup and will check the gate switch on pin 174 to block all movement if it is open.
 

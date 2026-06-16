@@ -6,7 +6,7 @@ Multiplexors are handled automatically by dcc-ex and all drivers for i2c devivce
 
 When the command dtstion starts, it scans the i2c network for all devices it can find, including those behid one or more multiplexors. Although the list can only guess the device type (there is no automatic device recognition, nor rigid standards that associate addresses with device types) it will give the fully qualified I2C address of each device and it is this that must be copied to the HAL device definition.
 
-First step is to run the Command Station software without the drivers and note what addresses the I2C scan comes up with. This is especially important when using devices behind a multiplexor as the I2C address must include the multiplexor channel path.
+First step is to run the **EX-CommandStation** software without the drivers and note what addresses the I2C scan comes up with. This is especially important when using devices behind a multiplexor as the I2C address must include the multiplexor channel path.
 The scan will look something like this:
 
 ```text

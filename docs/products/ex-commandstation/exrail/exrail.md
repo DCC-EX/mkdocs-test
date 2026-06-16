@@ -3,7 +3,7 @@
 EXRAIL is an “EXtended Railroad Automation Instruction Language” used to:
 
 - Describe your turnouts/points, signals etc.
-- Configure your Command Station to understand the hardware and accessories you have attached.
+- Configure your **EX-CommandStation** to understand the hardware and accessories you have attached.
 - Handle what to do when things happen (e.g. a button is pressed)
 - Create automated route settings through your layout
 - Move things, make sounds, flash lights
@@ -23,7 +23,7 @@ Although EXRAIL has more than 100 individual commands available, it is generally
 ## Important Background Information
 
 - EXRAIL scripts are written into a file called myAutomation.h which you can edit with any suitable text editor. You don't need any extra tools installed on your PC that you don't already have in VSCode or the EX-Installer.
-- When you upload the command station with the DCC-EX code, myAutomation.h is used by the compiler to configure the software and embed any sequences so that the command station can run without further assistance from your PC. If you change myAutomation.h then you must upload again.
+- When you upload the **EX-CommandStation** with the DCC-EX code, myAutomation.h is used by the compiler to configure the software and embed any sequences so that the **EX-CommandStation** can run without further assistance from your PC. If you change myAutomation.h then you must upload again.
 - EXRAIL can run multiple sequences simultaneously so it's great for annoying Arduino programmers who find that extremely complex to do in C++.
 
 ## Basic building blocks
@@ -81,8 +81,8 @@ I have used C++ on Arduino’s and Python/Jython on JMRI software to build Autom
 
 - It’s significantly easier and more flexible than the other two options.
 
-- I reduce the number of Uno and Nano accessory boards needed to do the same tasks on the layout by using the DCC-EX Command Station and embedded EXRAIL instead.
+- I reduce the number of Uno and Nano accessory boards needed to do the same tasks on the layout by using the **DCC-EX EX-CommandStation** and embedded EXRAIL instead.
 
-- I can create Automations, Routes, & Sequence scripts With EXRAIL on the Command Station and still access them from JMRI PanelPro and DecoderPro GUI buttons with a simple sendDCCmessage.py script pointer that passes them to the EXRAIL scripts on the Command Station, so I don’t have to rewrite the script in Jython/Python.
+- I can create Automations, Routes, & Sequence scripts With EXRAIL on the **EX-CommandStation** and still access them from JMRI PanelPro and DecoderPro GUI buttons with a simple sendDCCmessage.py script pointer that passes them to the EXRAIL scripts on the **EX-CommandStation**, so I don’t have to rewrite the script in Jython/Python.
 
 - EXRAIL is ten times easier to learn and use and is more flexible than the other methods.

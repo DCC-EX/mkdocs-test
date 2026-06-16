@@ -52,7 +52,7 @@ const int TS_LEFT=899,TS_RT=122,TS_TOP=100,TS_BOT=898;
 
 ## Configure existing clock
 
-If you already have a FastCLock there are a number of couple of configuration options which allow you to connect your own clock to a  Command Station.
+If you already have a FastCLock there are a number of couple of configuration options which allow you to connect your own clock to an **EX-CommandStation**.
 
 The various configuration options are outlined below
 
@@ -104,9 +104,9 @@ SendTime(HH, MM, clockSpeed);
 
 ### Connecting via I2C
 
-Connecting via I2C involves a HAL driver file to the Command Station as well as adding some code to the existing FastClock code.  Follow the following steps:
+Connecting via I2C involves a HAL driver file to the **EX-CommandStation** as well as adding some code to the existing FastClock code.  Follow the following steps:
 
-- In the  Command Station code copy the file myHal.cpp_example.txt to myHal.cpp.
+- In the **EX-CommandStation** code copy the file myHal.cpp_example.txt to myHal.cpp.
 - Edit the file myHal.cpp and uncomment the following line near the beginning of the file
 
 ```cpp
@@ -121,7 +121,7 @@ Connecting via I2C involves a HAL driver file to the Command Station as well as 
   
   0x55 (decimal 85) is the default address but needs to match that in the FastClock code (see below).
   
-- Using Dupont connectors connect SDA/SCL/Gnd on the clock to SDA/SCL/Gnd on the  Command Station
+- Using Dupont connectors connect SDA/SCL/Gnd on the clock to SDA/SCL/Gnd on the **EX-CommandStation**.
   
 - Include the following code in your FastClock code:
 

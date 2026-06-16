@@ -52,14 +52,14 @@ You also need to add these two lines to the ``config.h`` file:
 #define BOOSTER_INPUT 32
 ```
 
-You will then need to connect a ``MAIN`` output from your command station to the Railsync connector on the EX-CSB1 Booster.  The EX-CSB1 Booster will then provide power to the rails on the A and B outputs.  If you are using an EX-MotorShield8874, it will also provide power to the rails on the C and D outputs.
+You will then need to connect a ``MAIN`` output from your **EX-CommandStation** to the Railsync connector on the EX-CSB1 Booster.  The **EX-CSB1 Booster** will then provide power to the rails on the A and B outputs.  If you are using an **EX-MotorShield8874**, it will also provide power to the rails on the C and D outputs.
 
 If you are using an EX-CSB1 as your Command Station, it is recommended that you use one of the outputs as the dedicated output to the EX-CSB1 Booster. If you use the output to the booster, as well as to a block of track, a short or overload on that block will cause the EX-CSB1 Booster to also kill power to all of its outputs.
 
 !!! note "Output configuration options"
 
-    The outputs can be configured as:
+The outputs can be configured as:
 
-    - ``BOOST`` - Booster mode
-    - ``BOOST_INV`` - Booster mode inverted
-    - ``BOOST_AUTO`` - Booster mode + Auto-reverser mode
+- ``BOOST`` - Booster mode
+- ``BOOST_INV`` - Booster mode inverted
+- ``BOOST_AUTO`` - Booster mode + Auto-reverser mode

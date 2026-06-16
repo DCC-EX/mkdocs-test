@@ -33,7 +33,7 @@ All builds will require the DCC-EX software to be configured and loaded onto the
 
 ## Quick and Easy Arduino Mega
 
-If you build our standard Mega-based Command station and use our [EX-MotorShield8874](../products/ex-motorshield8874/ex-motorshield8874.md)  and, optionally, the [EX-WiFiShield8266](../products/ex-wifishield8266/ex-wifishield8266.md) which have been specifically designed to meet our requirements, then you will be up and running quickly. [Easy Build Instructions](mega-easy.md)
+If you build our standard Mega-based **EX-CommandStation** and use our [EX-MotorShield8874](../products/ex-motorshield8874/ex-motorshield8874.md)  and, optionally, the [EX-WiFiShield8266](../products/ex-wifishield8266/ex-wifishield8266.md) which have been specifically designed to meet our requirements, then you will be up and running quickly. [Easy Build Instructions](mega-easy.md)
 
 ## Slightly more difficult Mega
 
@@ -41,7 +41,7 @@ Using other supported motor or WiFi shields requires a slightly [more complex se
 
 You will eventually require a multimeter, a soldering iron, and a variety of dupont wires or similar and you will probably collect a bucket-load of connectors, adapters, and gizmos that you thought might be useful but don't have time to try.
 
-In fact, TIME is the thing you will need most, and time spent building your command station is just too easy an excuse for not building your layout!
+In fact, TIME is the thing you will need most, and time spent building your **EX-CommandStation** is just too easy an excuse for not building your layout!
 
 The following documentation pages can only take you through the basics and should you contact us for support it is well to remember that we do this for fun, we don't get paid, and we don't all have access to the same weird but cheap gizmo you found on the web with an instruction sheet in Klingon.
 

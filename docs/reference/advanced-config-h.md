@@ -1,4 +1,4 @@
-# Advanced config.h settings for Command Station build
+# Advanced config.h settings for EX-CommandStation build
 
 The basic Motor Shield, WiFi and Ethernet settings are covered in detail in [basic config.h](/products/ex-commandstation/config-h.md)
 
@@ -151,7 +151,7 @@ If you have issues with that the direction of the accessory commands is reversed
 
 ## Handling multiple serial throttles
 
-The command station always operates with the default Serial port. Diagnostics are only emitted on the default serial port and not broadcast. Other serial throttles may be added to the Serial1...Serial6 ports which may or may not exist on your CPU (Mega has 3, CSB1 has 1, and STM32 have up to 6.). To monitor a throttle on one or more serial ports, supply a #define for each serial port required.
+The **EX-CommandStation** always operates with the default Serial port. Diagnostics are only emitted on the default serial port and not broadcast. Other serial throttles may be added to the Serial1...Serial6 ports which may or may not exist on your CPU (Mega has 3, CSB1 has 1, and STM32 have up to 6.). To monitor a throttle on one or more serial ports, supply a #define for each serial port required.
 
 **NOTE: DO NOT define here the WiFi shield serial port or your Wifi will not work.**
 

@@ -30,9 +30,9 @@ EXRAIL makes this stuff easy.... 😁  but you have to start with the right pers
 
 ## Defining sensors
 
-EXRAIL is used to describe how the sensor devices are wired to the command station (usually via I2C) and what [VPIN](?VPIN) is to be assigned to each sensor
+EXRAIL is used to describe how the sensor devices are wired to the **EX-CommandStation** (usually via I2C) and what [VPIN](?VPIN) is to be assigned to each sensor
 
-The most common method of connecting sensor devices to your command station is through an [MCP23017](?MCP23017) device which offers up to 14 input pins (or 16 output pins, or a mix of both) through a single I2C connection. For more inputs you can add more MCP23017 devices to the I2C chain.
+The most common method of connecting sensor devices to your **EX-CommandStation** is through an [MCP23017](?MCP23017) device which offers up to 14 input pins (or 16 output pins, or a mix of both) through a single I2C connection. For more inputs you can add more MCP23017 devices to the I2C chain.
 
 The [EX-IOExpander](?IOExpander) can be used to connect multiple sensors over a single I2C connection depending on the microprocessor used to build it.
 

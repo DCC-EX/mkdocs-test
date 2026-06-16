@@ -70,7 +70,7 @@ Following that:
 
 - Check with a meter that you get power to the PROG track.
 
-Issue the command ```<D ACK ON>```, this will enable the output of detailed diagnostic information of what the Command station is doing when it runs programming commands.
+Issue the command ```<D ACK ON>```, this will enable the output of detailed diagnostic information of what the **EX-CommandStation** is doing when it runs programming commands.
 
 Then try the command ```<R 8>``` , this should attempt to read CV 8 (the Decoder manufacturer id). You will get a long diagnostic trace. If the final response is negatine (eg ```<r 8 -1>```) then copy the entire diagnostic trace to a support ticket and we can help. (Experienced users will soon learn to read the trace)
 

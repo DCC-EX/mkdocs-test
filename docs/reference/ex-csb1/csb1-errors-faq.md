@@ -34,7 +34,7 @@ An initial fault report at power-on is not an issue.
 Some - 600mA or less - overcurrent reporting on the programming track is not unusual.  This is due to lack of precision of the ESP32-WROOM ADC, and the 250mA trip current for the programming track when not reading/writing CVs.
 
 There is a command `<C PROGBOOST>` to override the 250mA limit.  Do not use it unless you are comfortable that your loco/decoder does not have issues (which 250mA is designed to protect).  
-Note that `<C PROGBOOST>` remains in effect until the command station is restarted.
+Note that `<C PROGBOOST>` remains in effect until the **EX-CommandStation** is restarted.
 
 ## WiFi
 

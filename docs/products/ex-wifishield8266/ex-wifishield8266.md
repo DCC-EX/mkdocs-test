@@ -8,7 +8,7 @@ The new v1.1 WiFi shield is a joint DCC-EX and Makerfabs project. It comes alrea
 
 The EX-WiFiShield 8266 is a cost-effective and highly integrated UART-WiFi module for DCC-EX and general IoT applications. It comes in a standard Arduino Uno shield format and uses ULP technology (Ultra Low Power).
 
-This WiFi Shield is based on ESP-12F, which is a newer version of the proven ESP8266 chip. With this Shield, you can connect your Command Station to your network, or have it operate as a stand alone Access Point to connect directly from your phone, tablet, laptop, or WiFi hardware throttle.
+This WiFi Shield is based on ESP-12F, which is a newer version of the proven ESP8266 chip. With this Shield, you can connect your **EX-CommandStation** to your network, or have it operate as a stand alone Access Point to connect directly from your phone, tablet, laptop, or WiFi hardware throttle.
 
 ## Features
 

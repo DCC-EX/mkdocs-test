@@ -1,6 +1,6 @@
 # Selecting a power supply
 
-You will require a power supply unit to provide track power and to run the Command Station processor.
+You will require a power supply unit to provide track power and to run the **EX-CommandStation** processor.
 
 ## Volts and Amps
 
@@ -21,7 +21,7 @@ These recommendations are generalised, and you must check to make sure they don'
 
 ## Using an EX8874 or CSB1
 
-The EX8874 (which is also built in to the CSB1) provides power for both the track and the Command Station. There is almost zero voltage drop between the power supply and the track.
+The EX8874 (which is also built into the CSB1) provides power for both the track and the **EX-CommandStation**. There is almost zero voltage drop between the power supply and the track.
 
 We strongly advise purchasing a suitable power supply at the same time as the CSB or EX8874 from a vendor who understands your requirements.
 
@@ -30,7 +30,7 @@ We strongly advise purchasing a suitable power supply at the same time as the CS
 Should you have the temerity to choose a motor-shield other than the EX8874:
 
 - you must allow for the voltage drop within your chosen shield.
-- you must provide separate power for the Command Station processor, most easily via the USB socket. A standard phone charger, or a connection to a computer, will be adequate. Other options are significantly more complex.
+- you must provide separate power for the **EX-CommandStation** processor, most easily via the USB socket. A standard phone charger, or a connection to a computer, will be adequate. Other options are significantly more complex.
 - you may not be protected from reverse-polarity mistakes.
 
 ## What to look for

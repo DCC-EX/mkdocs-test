@@ -225,9 +225,9 @@ How to understand the syntax:
 ## Configuration Commands
 
 | Command | Description | Parameters |
-|---------|-------------|------------|
+| ------- | ----------- | ---------- |
 | `<C PROGBOOST>` | Configure PROG track boost | None |
-| `<C RESET>` | Reset and restart command station | None |
+| `<C RESET>` | Reset and restart **EX-CommandStation** | None |
 | `<C SPEED28>` | Set all DCC speed commands as 28 step | None |
 | `<C SPEED128>` | Set all DCC speed commands to 128 step (default) | None |
 | `<C RAILCOM ON>` | Enable Railcom cutout | None |
