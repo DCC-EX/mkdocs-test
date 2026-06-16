@@ -1,6 +1,6 @@
 # Actuators - to make stuff happen
 
-Actuators are devices that you can add to make things happen under the control of the Command station. For example throwing a turnout, setting a signal or switching lights. There are basically two types of actuator that will commonly be used:
+Actuators are devices that you can add to make things happen under the control of the **EX-CommandStation**. For example throwing a turnout, setting a signal or switching lights. There are basically two types of actuator that will commonly be used:
 
 - PWM output used for Servo movement of turnouts/points, semaphore signals, crossing gates, fancy animations and LED fading.
 - Digital output (On/Off) mostly used for LEDs, relays and some turnout/point types.

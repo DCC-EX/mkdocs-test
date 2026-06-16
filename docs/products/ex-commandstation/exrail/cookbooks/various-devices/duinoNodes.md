@@ -1,6 +1,6 @@
 # Lew's Duino Gear boards
 
-CAUTION: these boards require several GPIO pins on the Command Station and are therefore unsuitable for use with a CSB1 which has all available pins essentially reserved for track management.
+CAUTION: these boards require several GPIO pins on the **EX-CommandStation** and are therefore unsuitable for use with a **EX-CSB1** which has all available pins essentially reserved for track management.
 
 ## DNIN8 8 Input board
 

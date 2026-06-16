@@ -31,7 +31,7 @@ Service Mode CV Programming allows you to both Read (if the decoder/loco support
 
 You do not need to know the DCC Address of the decoder being changed, as all decoders/locos currently on the programming track will have the CV changed at the same time.
 
-Track power is managed automatically by the Command Station.
+Track power is managed automatically by the **EX-CommandStation**.
 
 Do not be temped to manipulate decoder addresses by reading or writing individual CVs, this is very complicated and may require as many as 6 Cvs to be understood.  i.e. Avoid Avoid writing CV1, CV17 & CV18 directly. Use the Write Address feature instead.
 
@@ -87,7 +87,7 @@ On several of the screens in **EX‑Toolbox** you can issue native DCC-EX Serial
 
 Enter the command you want to send, and click ``Send``.
 
-The command you send, and any responses from the command station will be shown below.
+The command you send, and any responses from the **EX-CommandStation** will be shown below.
 
 If you select a 'common command value' it will enter the command the field. From there follow the instructions above for issuing the command.
 
@@ -235,7 +235,7 @@ The Speedometer will remember the last used sensors and distance between session
 
 ![menu](/_static/images/ex-toolbox/loco_status.png){align="right" width="200px"}
 
-Loco Status allows you to watch changes to all locos being controlled by the command station.
+Loco Status page allows you to watch changes to all locos being controlled by the **EX-CommandStation**.
 
 </div>
 
@@ -248,7 +248,7 @@ Loco Status allows you to watch changes to all locos being controlled by the com
 <div class="result" markdown>
 ![menu](/_static/images/ex-toolbox/track_manager.png){align="right" width="200px"}
 
-Track Manager allows you to change up to 8 channels (depending on the Motor Driver(s) you are using)
+Track Manager page allows you to change up to 8 channels (depending on the Motor Driver(s) you are using)
 
 Each channel can be one of:
 

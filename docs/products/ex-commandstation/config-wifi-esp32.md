@@ -16,9 +16,9 @@ tags:
 
 This page is exclusively for users of **EX-CommandStation** version 5.7.0 and later. Version 5.7.0 is currently in the experimental / development (DEVEL) phase and is not recommended for general users.
 
-<span style="color:red;">The ``config.h`` options for WiFi configuration from EX-CommandStation versions prior to 5.7.0 are now ignored by the EX-CSB1 or ESP32 command stations.</span>
+<span style="color:red;">The ``config.h`` options for WiFi configuration from EX-CommandStation versions prior to 5.7.0 are now ignored by the EX-CSB1 or ESP32 **EX-CommandStation**.</span>
 
-If you are using an **EX-CSB1**, ESP32 based EX-CommandStation and are are using the latest DEVEL versions of the  EX-CommandStation code (versions from 5.7.0),</span> the ``config.h`` options for WiFi configuration are ignored by CSB1 or ESP32 command stations. Instead you must use the instructions on this page.
+If you are using an **EX-CSB1**, ESP32 based EX-CommandStation and are are using the latest DEVEL versions of the  EX-CommandStation code (versions from 5.7.0),</span> the ``config.h`` options for WiFi configuration are ignored by CSB1 or ESP32 **EX-CommandStation**. Instead you must use the instructions on this page.
 
 Also see the [WiFi Configuration for version 5.7.0+ - Graphical User Interface Options](config-wifi-esp32-gui-options_not_in_nav.md) for detailed instructions on how, and why, to change these settings using EX-WebThrottle or EX-Toolbox.
 
@@ -26,7 +26,7 @@ Also see the [WiFi Configuration for version 5.7.0+ - Graphical User Interface O
 
 WiFi has two operating modes:
 
-- **AP** (Access point) means the **EX-CommandStation** acts as its own private WiFi network so throttle devices must connect first to the Command Station WiFi network.
+- **AP** (Access point) means the **EX-CommandStation** acts as its own private WiFi network so throttle devices must connect first to the **EX-CommandStation** WiFi network.
 - **STA** (Station mode) means the **EX-CommandStation** connects to your existing WiFi router and appears as a device on that network. If the WiFi is configured for STA mode, but fails to connect to your router, it will fall back to AP mode in much the same way as smart plugs, lights etc.
 
 As shipped, or without prior configuration, the ESP32 WiFi default to operate in AP mode with an ssid/Password combination generated from the internal chip (mac) address. The ssid and password will be shown on the oLED display (typically something like "DCCEX_123abc"[^1] and "PASS_123abc") so you can connect you phone or tablet immediately and start running.
@@ -47,7 +47,7 @@ Its is recommended that you don't do this while running trains.
 <C WIFI "routerSSID" "routerPassword">
 ```
 
-The command station will attempt this connection immediately, and on each rerstart. If it fails to connect, it will revert to AP mode.
+The **EX-CommandStation** will attempt this connection immediately, and on each rerstart. If it fails to connect, it will revert to AP mode.
 
 ## Changing the Access Point defaults
 

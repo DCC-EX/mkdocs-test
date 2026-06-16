@@ -233,4 +233,4 @@ Also see: Connect WiFi Throttle via USB
 [^4]: Connecting JMRI to an EX-CommandStation over WiFi works, but is not recommended and is not supported.
 [^5]: Free version is functionally limited. (No track power control, only one throttle and no consists/MUs.)
 [^6]: Free version is advertisement supported and time limited.
-[^7]: ESU Mobile Control Pro is an Android device with additional hardware, so can also run the Engine Driver app. As such it can use the DCC-EX Native protocol when connected to a DCC-EX Command Station. It uses the WiThrottle protocol when connected to a WiThrottle server. When using Engine Driver and the Native Protocol it is capable of CV programming.
+[^7]: ESU Mobile Control Pro is an Android device with additional hardware, so can also run the Engine Driver app. As such it can use the DCC-EX Native protocol when connected to a *DCC-EX EX-CommandStation**. It uses the WiThrottle protocol when connected to a WiThrottle server. When using Engine Driver and the Native Protocol it is capable of CV programming.

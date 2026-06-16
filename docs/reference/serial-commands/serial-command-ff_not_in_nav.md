@@ -40,7 +40,7 @@ The following are not a direct response, but rather a broadcast that will be tri
 
 * Setting requests are transmitted directly to mobile loco decoder.
 * Current state of loco functions (as known by commands issued since power on) is stored by the CommandStation - All functions within a group get set all at once per NMRA DCC standards.
-* The command station knows about the previous settings in the same group and will not, for example, unset F2 because you change F1. If, however, you have never set F2, then changing F1 WILL unset F2
+* The **EX-CommandStation** knows about the previous settings in the same group and will not, for example, unset F2 because you change F1. If, however, you have never set F2, then changing F1 WILL unset F2
 * ``<f «loco» «byte1»>`` is a depricated version of the command. It is not documented here.
 * ``<f «loco» «group» «byte2»>`` is a depricated version of the command. It is not documented here.
 

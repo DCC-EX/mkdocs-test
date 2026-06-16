@@ -13,7 +13,7 @@ The vast majority of VPINs are either output (e.g. LEDs and servos) or input (e.
 
 ## Creating virtual pins
 
-Virtual pins are normally defined by specifying the Hardware Driver that is used to connect to an external device. There is no way for the command station to know for sure what devices are connected so it must be told. This is done by including HAL commands in myAutomation.h which configure the device.
+Virtual pins are normally defined by specifying the Hardware Driver that is used to connect to an external device. There is no way for the **EX-CommandStation** to know for sure what devices are connected so it must be told. This is done by including HAL commands in myAutomation.h which configure the device.
 
 For Example
 

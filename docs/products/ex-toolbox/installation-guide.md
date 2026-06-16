@@ -32,7 +32,7 @@ Disadvantages include:
 
 Follow the instructions on their [site](https://www.bluestacks.com/)  to install BlueStacks, then get the appropriate .apk to install the throttle app you want. e.g. The Engine Driver .apk is available from the [EX-Toolbox Github page](https://github.com/DCC-EX/EX-Toolbox/tree/master/EX_Toolbox/apks).
 
-## Connecting to your Command Station
+## Connecting to your EX-CommandStation
 
 Please remember that to connect to a Wifi EX-CommandStation on the correct WiFi network.
 
@@ -49,7 +49,7 @@ Other than the very first time you start **EX‑Toolbox**, when the app opens yo
 There are three ways you can select a EX‑CommandStation to connect to:
 
 - ``IP Address and Port`` <br/>
-  To find your EX-CommandStation's IP address and Port refer you original setup or, if you have a OLED screen on your command station the details will be displayed on it.
+  To find your EX-CommandStation's IP address and Port refer you original setup or, if you have a OLED screen on your **EX-CommandStation** the details will be displayed on it.
   The port will normally be 2560.
 
 - ``Discovered Servers`` <br/>

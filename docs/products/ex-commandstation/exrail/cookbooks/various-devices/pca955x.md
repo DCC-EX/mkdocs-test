@@ -24,7 +24,7 @@ In addition, it is not necessary to define each pin as input or output as EXRAIL
 
 These devices are defined by using HAL statements in your EXRAIL script (myAutomation.h or its included files).
 
-First step is to run the Command Station software without the drivers and note what addresses the I2C scan comes up with.
+First step is to run the **EX-CommandStation** software without the drivers and note what addresses the I2C scan comes up with.
 
 ```text
 <* License GPLv3 fsf.org (c) dcc-ex.com >

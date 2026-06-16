@@ -1,6 +1,6 @@
-# Installing Command Station Software
+# Installing EX-CommandStation Software
 
-This assumes you have read and done the EX-Installer installation, know how to execute it and have done the [CLI download and optional ESP32 steps](first-run.md) to make sure you have the necessary build processor and run time libraries for your Command Station.
+This assumes you have read and done the EX-Installer installation, know how to execute it and have done the [CLI download and optional ESP32 steps](first-run.md) to make sure you have the necessary build processor and run time libraries for your **EX-CommandStation**.
 
 To proceed, click the Select your device button.
 
@@ -64,7 +64,7 @@ This enables the "Wi-fi Options" button where you can configure the Wi-Fi.
 
 ![wifi AP](/_static/images/ex-installer/wifi-ap.png)
 
-In Access Point mode, you command station runs a completely isolated Wi-Fi Network. This is most useful if your layout is away from the house, or you transport your layout frequently, or do not want to give guests access to your home Wi-Fi. Wi-Fi phones or tablets will need to connect their Wi-Fi to the Access Point and will lose access to your home Wi-Fi. 
+In Access Point mode, your **EX-CommandStation** runs a completely isolated Wi-Fi Network. This is most useful if your layout is away from the house, or you transport your layout frequently, or do not want to give guests access to your home Wi-Fi. Wi-Fi phones or tablets will need to connect their Wi-Fi to the Access Point and will lose access to your home Wi-Fi. 
 Wi-Fi Password is optional.
 If this field is left blank the password will default to ‘PASS_xxxxxx’ where ‘xxxxxx’ will be the same as the SSID name that will be automatically configured.
 If possible, choose a channel that is unused (or least used) by other Wi-Fi networks around your location.

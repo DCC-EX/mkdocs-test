@@ -6,7 +6,7 @@ There are a limited number of suitable motor or WiFi shields available and each 
 
 ## What you need
 
-To build a basic DIY Command Station you will need:
+To build a basic DIY **EX-CommandStation** you will need:
 
 - A PC or laptop (Not A Raspberry Pi) running a reasonably recent versions of Windows, Linux or MacOS
 - an Arduino Mega microprocessor running our free Open Source software
@@ -29,7 +29,7 @@ To build a basic DIY Command Station you will need:
 
 ### Optionally mount your Ethernet Shield
 
-Note, you can't have Ethernet and WiFi running on the same command station, but you can install both shields and choose one or the other when installing the software.
+Note, you can't have Ethernet and WiFi running on the same **EX-CommandStation**, but you can install both shields and choose one or the other when installing the software.
 See [Ethernet Install](ethernet.md)
 
 ### Prepare your motor shield
@@ -56,7 +56,7 @@ Align the motor shield so that the power connectors are at the same end as the M
 ![Orientation](/_static/images/mega-hard/mega5.png){ align=right }
 Don't skip this step if you don't yet have any track because the WiFi shield will cover the connectors.
 
-It's best to create fly leads with a suitable pluggable connectors for later. It makes it much easier to detach your command station from your layout when you need to fiddle with it or throw it against the wall out of sheer frustration.
+It's best to create fly leads with a suitable pluggable connectors for later. It makes it much easier to detach your **EX-CommandStation** from your layout when you need to fiddle with it or throw it against the wall out of sheer frustration.
 
 If you only have one piece of track for testing, wire it to the PROG track plug.
 

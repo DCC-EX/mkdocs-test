@@ -1,6 +1,6 @@
 # EX-Toolbox - Overview
 
-**EX‑Toolbox** is a free, open source, Android app to help setup and configure your **EX‑CommandStation**. It is intended for setup, configuration, debugging your Command Station rather than continuous use.
+**EX‑Toolbox** is a free, open source, Android app to help setup and configure your **EX‑CommandStation**. It is intended for setup, configuration, debugging your **EX-CommandStation** rather than continuous use.
 
 It is designed to function if your **EX‑CommandStation** is configured with WiFi (either Access Point mode or Station mode) or Ethernet. However:
 

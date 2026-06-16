@@ -48,7 +48,7 @@ N/A
 
 * By default, the programming track has a current limit enabled of 250mA, so any programming activities requiring more than this value will cause power to the programming track to be cut for 100ms. Run the ``C PROGBOOST>`` command to override this if programming decoders trigger current limiting on the programming track.
 
-    When the programming track is switched on with ``<1>`` or ``<1 PROG>`` it will normally be restricted to 250mA according to NMRA standards. Some loco decoders require more than this, especially sound versions. ``<C PROGBOOST>`` temporarily removes this limit to allow the decoder to use more power. The normal limit will be re-imposed when the programming track is switched off with ``<0>`` or ``<0 PROG>`` or the Command Station is reset.
+    When the programming track is switched on with ``<1>`` or ``<1 PROG>`` it will normally be restricted to 250mA according to NMRA standards. Some loco decoders require more than this, especially sound versions. ``<C PROGBOOST>`` temporarily removes this limit to allow the decoder to use more power. The normal limit will be re-imposed when the programming track is switched off with ``<0>`` or ``<0 PROG>`` or the **EX-CommandStation** is reset.
 
 ----
 

@@ -12,7 +12,7 @@ or (to provide more information)
 
 ``socat -d -d -d TCP4-LISTEN:2560 /dev/ttyUSB0,b115200,raw,echo=0``
 
-Note: Change 'dev/ttyUSB0' to the appropriate USB port that the command station is connected to.
+Note: Change 'dev/ttyUSB0' to the appropriate USB port that the **EX-CommandStation** is connected to.
 
 ### Using *socat* in Microsoft Windows:
 
@@ -30,7 +30,7 @@ i.e. 'COM12' in the Windows Device Manager becomes '/dev/ttyS11'
 SerialToIPGUI
 
 * start SerialToIPGUI
-* Select the correct COM port for the command station
+* Select the correct COM port for the **EX-CommandStation**
 * Enter the port of '2560' 
 * Click ``Start``
 

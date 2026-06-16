@@ -12,7 +12,7 @@ li a {
 }
 </style>
 
-## Index Pages
+## Indexed Pages
 
 
 - [Home](index.md)
@@ -20,13 +20,13 @@ li a {
     - [DCC-EX Product Overview <small>(Product Overview)</small>](products\products.md)
     - [Getting Started with DCC-EX <small>(Getting Started)</small>](products\getting-started.md)
     - **EX-CommandStation**
-        - [The DCC-EX Command Station](products\ex-commandstation\overview.md)
-        - [EX-CSB1 CommandStation Booster](products\ex-commandstation\ex-csb1.md)
+        - [The DCC-EX EX-CommandStation <small>(EX-CommandStation)</small>](products\ex-commandstation\overview.md)
+        - [EX-CSB1 CommandStation Booster <small>(EX-CSB1 Command Station Booster)</small>](products\ex-commandstation\ex-csb1.md)
         - [Running a Legacy DC layout <small>(Running a DC layout)</small>](products\ex-commandstation\dc-running.md)
         - [Build configuration (config.h) <small>(Configuration (config.h))</small>](products\ex-commandstation\config-h.md)
         - [Wifi configuration <br/><small>(Excluding EX-CSB1 or ESP32 v5.7.0+)</small> <small>(Configure WiFi (Wifi Shield))</small>](products\ex-commandstation\config-wifi-shield.md)
         - [WiFi configuration <br/><small>(EX-CSB1 or ESP32 ONLY. v5.7.0+ ONLY)</small> <small>(Configure WiFi (CSB1 & ESP32 v5.7.0+))</small>](products\ex-commandstation\config-wifi-esp32.md)
-        - [Testing your Command Station](products\ex-commandstation\testing.md)
+        - [Testing your EX-CommandStation](products\ex-commandstation\testing.md)
         - **TrackManager**
             - [TrackManager](products\ex-commandstation\trackmanager\trackmanager.md)
             - [EX-CSB1 in DCC Booster Mode <small>(Booster)</small>](products\ex-commandstation\trackmanager\booster.md)
@@ -37,13 +37,13 @@ li a {
             - [Programming with Engine Driver <small>(Engine Driver Programming)</small>](products\ex-commandstation\loco-programming\engine-driver-programming.md)
             - [Programming with EX-Toolbox <small>(Toolbox Programming)</small>](products\ex-commandstation\loco-programming\toolbox-programming.md)
             - [Using JMRI DecoderPro <small>(Decoderpro)</small>](products\ex-commandstation\loco-programming\decoderpro.md)
-        - **Accesssories**
+        - **Accessories**
             - [Overview - What are Accessories? <small>(Accessories)</small>](products\ex-commandstation\accessories\accessories.md)
             - [Actuators - to make stuff happen <small>(Actuators)</small>](products\ex-commandstation\accessories\actuators.md)
             - [Sensors](products\ex-commandstation\accessories\sensors.md)
             - [Connecting a servo turnout/point <small>(Servo Turnouts/Points)</small>](products\ex-commandstation\accessories\connecting-servo-turnout.md)
             - [Hardware device list <small>(Hardware List)</small>](products\ex-commandstation\accessories\hardware-list.md)
-            - [I2C – An Introduction <small>(I2C Intro)</small>](products\ex-commandstation\accessories\i2c-intro.md)
+            - [I2C (I<sup>2</sup>C) – An Introduction <small>(I2C Intro)</small>](products\ex-commandstation\accessories\i2c-intro.md)
             - [Buying I2C Devices](products\ex-commandstation\accessories\buying-i2c-devices.md)
             - **Various Devices**
                 - **Sounds**
@@ -84,7 +84,7 @@ li a {
                     - [Controlling trains and decoders directly <small>(Advanced)</small>](products\ex-commandstation\exrail\cookbooks\driving-trains\advanced.md)
                 - **Editing tricks**
                     - [Multiple Files in EXRAIL](products\ex-commandstation\exrail\cookbooks\editing-tricks\multi-files.md)
-                    - [Maintaining multiple command stations](products\ex-commandstation\exrail\cookbooks\editing-tricks\multiple-command-stations.md)
+                    - [Maintaining multiple EX-CommandStations](products\ex-commandstation\exrail\cookbooks\editing-tricks\multiple-command-stations.md)
                     - [Naming sequences for easy commands](products\ex-commandstation\exrail\cookbooks\editing-tricks\naming-a-sequence.md)
                     - [Using CALL and RETURN](products\ex-commandstation\exrail\cookbooks\editing-tricks\using-call-return.md)
                     - [Using C++ Macros](products\ex-commandstation\exrail\cookbooks\editing-tricks\using-macros.md)
@@ -155,7 +155,7 @@ li a {
     - [EX-Installer <small>(Installer)</small>](installer\installer.md)
     - [First Run installer <small>(First Run)</small>](installer\first-run.md)
     - [Select Product to Install <small>(Select Product)</small>](installer\select-product.md)
-    - [Installing Command Station Software <small>(Install Cs)</small>](installer\install-cs.md)
+    - [Installing EX-CommandStation Software <small>(Install Cs)</small>](installer\install-cs.md)
     - [Advanced Users - VSCode/PlatformIO <small>(Advanced Users - PlatformIO)</small>](installer\platformio.md)
     - [Download linux](installer\download-linux.md)
     - [Download mac](installer\download-mac.md)
@@ -169,7 +169,7 @@ li a {
     - [Complex Build - ESP32](diy\esp32.md)
     - [Optionally install Wifi <small>(Optional WiFi)</small>](diy\wifi.md)
     - [Optionally install Ethernet <small>(Optional Ethernet)</small>](diy\ethernet.md)
-    - [Installing Command Station firmware <small>(Installing Software)</small>](diy\installer.md)
+    - [Installing EX-CommandStation firmware <small>(Installing Software)</small>](diy\installer.md)
     - [DIY - Other devices <small>(Other Devices)</small>](diy\others.md)
 - **Throttles**
     - [Throttles and Other Controllers <small>(Throttle Lists)</small>](throttles\throttles.md)
@@ -191,7 +191,7 @@ li a {
     - [DCC-EX Serial Command List <small>(DCC-EX Command List)</small>](reference\serial-command-list.md)
     - [DCC-EX Command Protocol](reference\serial-commands.md)
     - [EXRAIL Command List](reference\exrail-command-reference.md)
-    - [Advanced config.h settings for Command Station build <small>(Advanced config.h Options)</small>](reference\advanced-config-h.md)
+    - [Advanced config.h settings for EX-CommandStation build <small>(Advanced config.h Options)</small>](reference\advanced-config-h.md)
     - **TrackManager**
         - [Track Manager <small>(TrackManager)</small>](reference\trackmanager\trackmanager.md)
         - [DC Mode - PWM Frequency <small>(DC Mode Frequency)</small>](reference\trackmanager\dc-mode-frequency.md)
@@ -261,7 +261,7 @@ li a {
 - [<small>``<J R [«id»]>``</small> <br/>Request Roster info](reference/serial-commands/serial-command-jj-rr_not_in_nav.md)
 - [<small>``<Q>``</small> &nbsp; <small>``<S «id» [«vpin» «pullup»>]``</small> <br/>Manage Sensors](reference/serial-commands/serial-command-qq-and-ss_not_in_nav.md)
 - [<small>``<R [«cv»|LOCOID|CONSIST]>`` <br/>``<r «loco» «cv»>`` <br/>``<W [«loco»]|[«cv» «value»]|[«loco» «cv» «bitValue» «bit»]|[CONSIST «loco» [REVERSE]]>`` <br/>``<V [«cv» «value»]|[«cv» «bit» «bitValue»]>`` <br/>``<B «cv» «bit» «bitValue»>`` <br/>``<b «loco» «cv» «bit» «bitValue»>``</small> <br/>Read and write CVs](reference/serial-commands/serial-command-rr-and-ww_not_in_nav.md)
-- [<small>``<s>`` &nbsp; ``<#>`` <br/> ``<C RESET>`` ``<D RESET>`` </small> <br/> Query or Reset the Command Station](reference/serial-commands/serial-command-s-and-hash_not_in_nav.md)
+- [<small>``<s>`` &nbsp; ``<#>`` <br/> ``<C RESET>`` ``<D RESET>`` </small> <br/> Query or Reset the EX-CommandStation](reference/serial-commands/serial-command-s-and-hash_not_in_nav.md)
 - [<small>``</ «colour» «signal»>``</small> <br/> Set signal colour](reference/serial-commands/serial-command-slash_colour_signal_not_in_nav.md)
 - [<small>``<t «loco» [«tSpeed» «direction»]>``</small> <br/>Request or set loco status](reference/serial-commands/serial-command-t_not_in_nav.md)
 - [<small>``<T [«id»] [«various parameters»]>`` <br/> ``<J T [«id»]>``</small> <br/>Define or manage Turnouts/Points](reference/serial-commands/serial-command-tt_not_in_nav.md)

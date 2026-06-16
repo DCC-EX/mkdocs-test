@@ -14,7 +14,7 @@ These options should be coded in the file `config.h` which will be automatically
 #define MOTOR_SHIELD_TYPE typeName
 ```
 
-The motor shield definition tells the code how many tracks your command station has and which pins are used to talk to the motor shield(s).
+The motor shield definition tells the code how many tracks your **EX-CommandStation** has and which pins are used to talk to the motor shield(s).
 It also describes the electrical characteristics of the current sensing and the current limits to be applied to each track.
 
 There are a number of pre-defined motor shield typeNames available of which the most common are:
@@ -29,9 +29,9 @@ Further pre-defined shield names can be found in the code file MotorDrivers.h al
 
 ## WiFi settings
 
-Ignore this if you do not have WiFi on your command station or choose to avoid it.
+Ignore this if you do not have WiFi on your **EX-CommandStation** or choose to avoid it.
 
-The CSB1 and other ESP32-based command stations use a completely different method to define WiFi settings. This is to allow WiFi configuration without having to reinstall the software.
+The CSB1 and other ESP32-based **EX-CommandStation** use a completely different method to define WiFi settings. This is to allow WiFi configuration without having to reinstall the software.
 
 [WiFi setup for CSB1 or ESP32](/products/ex-commandstation/config-wifi-esp32.md)
 

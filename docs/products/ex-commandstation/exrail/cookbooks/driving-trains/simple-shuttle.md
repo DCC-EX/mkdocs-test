@@ -33,7 +33,7 @@ AUTOMATION(123,"Dogbath to Catflap shuttle")
 
 First drive your train to Dogbath, with the front facing Catflap. Select the automation from your throttle and the train should start after a random wait.
 
-It should be pretty obvious what this does and where the sensors need to be to give a reasonable stopping point, but this may depend on inertia settings in your loco decoder or command station setup.
+It should be pretty obvious what this does and where the sensors need to be to give a reasonable stopping point, but this may depend on inertia settings in your loco decoder or **EX-CommandStation** setup.
 
 The AT command pauses the driving task until the sensor is activated.
 
