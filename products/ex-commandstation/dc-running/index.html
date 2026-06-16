@@ -1350,7 +1350,7 @@
   
   
   <span class="md-ellipsis">
-    Connecting Servo Turnout
+    Servo Turnouts/Points
     
   </span>
   
@@ -3236,7 +3236,7 @@
   
   
   <span class="md-ellipsis">
-    Defining Dcc Turnouts
+    Defining Dcc Turnouts/Points
     
   </span>
   
@@ -3259,7 +3259,7 @@
   
   
   <span class="md-ellipsis">
-    Defining Pin Turnouts
+    Defining Pin Turnouts/Points
     
   </span>
   
@@ -3282,7 +3282,7 @@
   
   
   <span class="md-ellipsis">
-    Defining Servo Turnouts
+    Defining Servo Turnouts/Points
     
   </span>
   
@@ -3305,7 +3305,7 @@
   
   
   <span class="md-ellipsis">
-    Facing Turnouts
+    Facing Turnouts/Points
     
   </span>
   
@@ -3328,7 +3328,7 @@
   
   
   <span class="md-ellipsis">
-    Animated Turnouts
+    Animated Turnouts/Points
     
   </span>
   
@@ -7115,7 +7115,7 @@
 <li>All Wifi and wired connected throttles will operate the same for DC and DCC locos using Cab road numbers 'loco addresses' from 1 to 10239.</li>
 <li>Using this range of Cab locoid addresses you can assign any DC district/track any locoid to run in that DC district, i.e # 2.</li>
 <li>Multiple DC Districts (maximum four on EX-CSB1 &amp; maximum eight on Mega2560 system) can be independently controlled and reconfigured to allow crossing between districts and polarity reversal.</li>
-<li>Any DC District can be further subdivided into smaller blocks and energized or powerd via turnout points and or SPDT switches If desired, i.e. staging or fiddle yard..  </li>
+<li>Any DC District can be further subdivided into smaller blocks and energized or powered via turnouts/points and or SPDT switches If desired, i.e. staging or fiddle yard..  </li>
 <li>Momentum of a loco can be defined in number of seconds of travel for acceleration and braking distances.</li>
 <li>EXRAIL automation can be used to run trains, create routes, switch block relays, control signals, control accessory special effects, manage reversing loops, etcetera.</li>
 <li>Pulse Width Modulation PWM 'Frequency' can be adjusted to suit your locos and/or reduce DC noise with a touch of the throttles function F29-F31 button.</li>
@@ -7133,7 +7133,7 @@
 <ul>
 <li>What type of Districts/tracks do I want to use DC, DCC or both</li>
 <li>What are the locoids or Cab# defined in the Roster for throttles to see and use.</li>
-<li>What turnouts or signals you have and how they are electronically driven</li>
+<li>What turnouts/points or signals you have and how they are electronically driven</li>
 <li>What happens at startup</li>
 <li>What routes can a throttle set</li>
 <li>What automations can a throttle send a loco along</li>
@@ -7163,24 +7163,24 @@
 <p>Where the command station has 4 or more district/track outputs, you can also setup tracks C to D as appropriate using locoid or cab addresses 1 .. 10239.</p>
 <h2 id="switching-between-tracks">Switching between tracks<a class="headerlink" href="#switching-between-tracks" title="Permanent link">&para;</a></h2>
 <p>In a simple DC double-track oval, the tracks are wired in opposite directions so that driving "forward" is in opposite directions on each oval.</p>
-<p>If you introduce turnouts that allow a train to cross from one track to another, it is necessary to switch the polarity of the "to" track to match that of the "from" track, switch the turnouts and associate the "to" track with the same locoid as the "from" track so that the throttle user can simply drive across the join.</p>
+<p>If you introduce turnouts/points that allow a train to cross from one track to another, it is necessary to switch the polarity of the "to" track to match that of the "from" track, switch the turnouts/points and associate the "to" track with the same locoid as the "from" track so that the throttle user can simply drive across the join.</p>
 <p>EXRAIL ROUTEs (they go in the same file as the configuration setup above) are ideal for this and can be activated from throttle buttons. For example, we assume the outer loop is track A locoid 1 and the inner Track B locoid 2.</p>
 <div class="language-cpp highlight"><pre><span></span><code><span class="n">ROUTE</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span><span class="s">&quot;Drive from outer to inner loop&quot;</span><span class="p">)</span>
 <span class="w">  </span><span class="n">SETLOCO</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
 <span class="w">  </span><span class="n">SET_TRACK</span><span class="p">(</span><span class="n">B</span><span class="p">,</span><span class="n">DCX</span><span class="p">)</span><span class="w">  </span><span class="c1">// reverse polarity on track B and treat as loco 1</span>
 <span class="w">  </span><span class="n">SET_POWER</span><span class="p">(</span><span class="n">B</span><span class="p">,</span><span class="n">ON</span><span class="p">)</span>
-<span class="w">  </span><span class="n">THROW</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span><span class="w"> </span><span class="n">THROW</span><span class="p">(</span><span class="mi">101</span><span class="p">)</span><span class="w"> </span><span class="c1">// throw the turnouts that join the tracks</span>
+<span class="w">  </span><span class="n">THROW</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span><span class="w"> </span><span class="n">THROW</span><span class="p">(</span><span class="mi">101</span><span class="p">)</span><span class="w"> </span><span class="c1">// throw the turnouts/points that join the tracks</span>
 <span class="w">  </span><span class="n">DONE</span>
 
 <span class="n">ROUTE</span><span class="p">(</span><span class="mi">21</span><span class="p">,</span><span class="s">&quot;Drive from inner to outer loop&quot;</span><span class="p">)</span>
 <span class="w">  </span><span class="n">SETLOCO</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
 <span class="w">  </span><span class="n">SET_TRACK</span><span class="p">(</span><span class="n">A</span><span class="p">,</span><span class="n">DCX</span><span class="p">)</span><span class="w">  </span><span class="c1">// reverse polarity on track B and treat as loco 1</span>
 <span class="w">  </span><span class="n">SET_POWER</span><span class="p">(</span><span class="n">A</span><span class="p">,</span><span class="n">ON</span><span class="p">)</span>
-<span class="w">  </span><span class="n">THROW</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span><span class="w"> </span><span class="n">THROW</span><span class="p">(</span><span class="mi">101</span><span class="p">)</span><span class="w"> </span><span class="c1">// throw the turnouts that join the tracks</span>
+<span class="w">  </span><span class="n">THROW</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span><span class="w"> </span><span class="n">THROW</span><span class="p">(</span><span class="mi">101</span><span class="p">)</span><span class="w"> </span><span class="c1">// throw the turnouts/points that join the tracks</span>
 <span class="w">  </span><span class="n">DONE</span>
 
 <span class="n">ROUTE</span><span class="p">(</span><span class="mi">99</span><span class="p">,</span><span class="s">&quot;Restore tracks to normal&quot;</span><span class="p">)</span>
-<span class="w">  </span><span class="n">CLOSE</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span><span class="w"> </span><span class="n">CLOSE</span><span class="p">(</span><span class="mi">101</span><span class="p">)</span><span class="w">  </span><span class="c1">// close the turnouts  </span>
+<span class="w">  </span><span class="n">CLOSE</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span><span class="w"> </span><span class="n">CLOSE</span><span class="p">(</span><span class="mi">101</span><span class="p">)</span><span class="w">  </span><span class="c1">// close the turnouts/points  </span>
 <span class="w">  </span><span class="n">SETLOCO</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
 <span class="w">  </span><span class="n">SET_TRACK</span><span class="p">(</span><span class="n">A</span><span class="p">,</span><span class="n">DC</span><span class="p">)</span>
 <span class="w">  </span><span class="n">SET_POWER</span><span class="p">(</span><span class="n">A</span><span class="p">,</span><span class="n">ON</span><span class="p">)</span>
@@ -7197,7 +7197,7 @@
 while the train is in the loop, the main track leading into the loop must be switched to allow the train to exit the loop and continue back along the track without reversing the locomotive.
 There is no automatic polarity reversing for DC layouts, this must be programmed using EXRAIL track mode DCX using SET_TRACK (B, DCX) to suit the topology of your layout.</p>
 <h2 id="more-blocks">More blocks<a class="headerlink" href="#more-blocks" title="Permanent link">&para;</a></h2>
-<p>The separate track outouts supplied by the Command Station represent the number of separate throttle ids that may be operating. Like any large DC layout, the switching of throttle outputs to multiple other blocks can still take place using mechanical switches or relays which can be controlled by suitable EXRAIL sequences. Power routing turnouts operate as normal but may be awkward if you are building a new layout with tyhe intention of running DCC later.</p>
+<p>The separate track outouts supplied by the Command Station represent the number of separate throttle ids that may be operating. Like any large DC layout, the switching of throttle outputs to multiple other blocks can still take place using mechanical switches or relays which can be controlled by suitable EXRAIL sequences. Power routing turnouts/points operate as normal but may be awkward if you are building a new layout with tyhe intention of running DCC later.</p>
 <p>If you have several throttles operating the same locoid, they will automatically synchronise with each other.</p>
 
 
@@ -7219,7 +7219,7 @@ There is no automatic polarity reversing for DC layouts, this must be programmed
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 15, 2026 11:40:40 UTC">June 15, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 16, 2026 03:51:19 UTC">June 16, 2026</span>
   </span>
 
     

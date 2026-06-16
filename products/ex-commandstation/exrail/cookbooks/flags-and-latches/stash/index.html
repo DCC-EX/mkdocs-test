@@ -1254,7 +1254,7 @@
   
   
   <span class="md-ellipsis">
-    Connecting Servo Turnout
+    Servo Turnouts/Points
     
   </span>
   
@@ -3156,7 +3156,7 @@
   
   
   <span class="md-ellipsis">
-    Defining Dcc Turnouts
+    Defining Dcc Turnouts/Points
     
   </span>
   
@@ -3179,7 +3179,7 @@
   
   
   <span class="md-ellipsis">
-    Defining Pin Turnouts
+    Defining Pin Turnouts/Points
     
   </span>
   
@@ -3202,7 +3202,7 @@
   
   
   <span class="md-ellipsis">
-    Defining Servo Turnouts
+    Defining Servo Turnouts/Points
     
   </span>
   
@@ -3225,7 +3225,7 @@
   
   
   <span class="md-ellipsis">
-    Facing Turnouts
+    Facing Turnouts/Points
     
   </span>
   
@@ -3248,7 +3248,7 @@
   
   
   <span class="md-ellipsis">
-    Animated Turnouts
+    Animated Turnouts/Points
     
   </span>
   
@@ -6980,13 +6980,13 @@
 </thead>
 <tbody>
 <tr>
-<td>STASH(s)</td>
-<td><code>&lt;JM s locoid&gt;</code></td>
+<td>STASH(stashId)</td>
+<td><code>&lt;JM stashId locoId&gt;</code></td>
 <td>Save the current loco id in the stash array element s.</td>
 </tr>
 <tr>
-<td>CLEAR_STASH(s)</td>
-<td><code>&lt;JM s 0&gt;</code></td>
+<td>CLEAR_STASH(stashId)</td>
+<td><code>&lt;JM stashId 0&gt;</code></td>
 <td>Sets stash array element s to zero.</td>
 </tr>
 <tr>
@@ -6996,38 +6996,38 @@
 </tr>
 <tr>
 <td>CLEAR_ANY_STASH</td>
-<td><code>&lt;JM CLEAR ANY locoid&gt;</code></td>
+<td><code>&lt;JM CLEAR ANY locoId&gt;</code></td>
 <td>removes current loco from all stash elements</td>
 </tr>
 <tr>
-<td>PICKUP_STASH(s)</td>
+<td>PICKUP_STASH(stashId)</td>
 <td>N/A</td>
 <td>sets current loco to stash element s</td>
 </tr>
 <tr>
-<td>IFSTASH(s)</td>
+<td>IFSTASH(stashId)</td>
 <td>N/A</td>
-<td>True if stash element s is not zero</td>
+<td>True if stash element stashId is not zero</td>
 </tr>
 <tr>
-<td>IFSTASHED_HERE(s)</td>
+<td>IFSTASHED_HERE(stashId)</td>
 <td>N/A</td>
-<td>True if stash element s contains the current tasks loco</td>
+<td>True if stash element stashId contains the current tasks loco</td>
 </tr>
 <tr>
 <td>N/A</td>
 <td><code>&lt;JM&gt;</code></td>
-<td>query all stashes (returns <code>&lt;jM s loco&gt;</code> where loco is not zero)</td>
+<td>query all stashes (returns <code>&lt;jM stashId loco&gt;</code> where loco is not zero)</td>
 </tr>
 <tr>
 <td>N/A</td>
-<td><code>&lt;JM stash&gt;</code></td>
-<td>Query loco in stash (returns <code>&lt;jM s loco&gt;</code>)</td>
+<td><code>&lt;JM stashId&gt;</code></td>
+<td>Query loco in stash (returns <code>&lt;jM stashId loco&gt;</code>)</td>
 </tr>
 </tbody>
 </table>
 <p>Notes: An automatic parking script can run through the various tracks and find one which has no stashed loco, then set the route and drive into the track. Once stopped, the locoid can be stashed against that track.</p>
-<p>If the operator wants to drive away a loco manually by loco id, an automation can search the tracks for that stashed loco id using IFSTASHED_HERE(trackid) so it can set the turnouts to exit the yard from that track.</p>
+<p>If the operator wants to drive away a loco manually by loco id, an automation can search the tracks for that stashed loco id using IFSTASHED_HERE(trackid) so it can set the turnouts/points to exit the yard from that track.</p>
 
 
 
@@ -7048,7 +7048,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="September 30, 2025 11:11:49 UTC">September 30, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 16, 2026 03:51:19 UTC">June 16, 2026</span>
   </span>
 
     

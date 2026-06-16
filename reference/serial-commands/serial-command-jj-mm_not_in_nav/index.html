@@ -10,7 +10,7 @@
       
       
       
-        <link rel="canonical" href="https://dcc-ex.com/mkdocs-test/reference/serial-commands/serial-command-jj-aa-and-slash_not_in_nav/">
+        <link rel="canonical" href="https://dcc-ex.com/mkdocs-test/reference/serial-commands/serial-command-jj-mm_not_in_nav/">
       
       
       
@@ -23,7 +23,7 @@
     
     
       
-        <title><J A [«id»]> </ [START|PAUSE|RESUME|KILL] [«various parameters»]> List, Start or Stop Automations/Sequences - DCC-EX Model Train Control, Animation, and Automation</title>
+        <title><J M [«various parameters»]> Manage Stash Values - DCC-EX Model Train Control, Animation, and Automation</title>
       
     
     
@@ -79,7 +79,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#j-a-id-startpauseresumekill-various-parameters-list-start-or-stop-automationssequences" class="md-skip">
+        <a href="#j-m-various-parameters-manage-stash-values" class="md-skip">
           Skip to content
         </a>
       
@@ -112,7 +112,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              &lt;J A [«id»]&gt; &lt;/ [START|PAUSE|RESUME|KILL] [«various parameters»]&gt; List, Start or Stop Automations/Sequences
+              &lt;J M [«various parameters»]&gt; Manage Stash Values
             
           </span>
         </div>
@@ -6932,7 +6932,7 @@
         <li class="md-nav__item">
   <a href="#commands" class="md-nav__link">
     <span class="md-ellipsis">
-      Commands
+      Command(s)
     </span>
   </a>
   
@@ -6948,37 +6948,28 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#responses" class="md-nav__link">
+  <a href="#response" class="md-nav__link">
     <span class="md-ellipsis">
-      Responses
+      Response
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Responses">
+    <nav class="md-nav" aria-label="Response">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#response-for-j-a" class="md-nav__link">
+  <a href="#response-for-j-m-stashid" class="md-nav__link">
     <span class="md-ellipsis">
-      Response for &lt;J A&gt;
+      Response for &lt;J M «stashId»&gt;
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#response-for-j-id" class="md-nav__link">
+  <a href="#response-for-j-m" class="md-nav__link">
     <span class="md-ellipsis">
-      Response for &lt;J «id»&gt;
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#response-for-start-pause-resume-kill" class="md-nav__link">
-    <span class="md-ellipsis">
-      Response for &lt;/ START ...&gt;, &lt;/ PAUSE&gt;, &lt;/ RESUME&gt;, &lt;/ KILL ...&gt;, &lt; / &gt;
+      Response for &lt;J M&gt;
     </span>
   </a>
   
@@ -7052,52 +7043,44 @@
   
 
 
-<h1 id="j-a-id-startpauseresumekill-various-parameters-list-start-or-stop-automationssequences"><small><code>&lt;J A [«id»]&gt;</code></small> <br/><small><code>&lt;/ [START|PAUSE|RESUME|KILL] [«various parameters»]&gt;</code></small> <br/> List, Start or Stop Automations/Sequences<a class="headerlink" href="#j-a-id-startpauseresumekill-various-parameters-list-start-or-stop-automationssequences" title="Permanent link">&para;</a></h1>
-<p>Serial commands to list, start, pause or stop automations/sequences including routes and animations.</p>
-<h2 id="commands">Commands<a class="headerlink" href="#commands" title="Permanent link">&para;</a></h2>
+<h1 id="j-m-various-parameters-manage-stash-values"><small><code>&lt;J M [«various parameters»]&gt;</code></small> <br/> Manage Stash Values<a class="headerlink" href="#j-m-various-parameters-manage-stash-values" title="Permanent link">&para;</a></h1>
+<p>Serial command to manage Stash values.</p>
+<h2 id="commands">Command(s)<a class="headerlink" href="#commands" title="Permanent link">&para;</a></h2>
 <ul>
-<li><code>&lt;J A&gt;</code> List all automations/routes</li>
-<li><code>&lt;J A «id»&gt;</code> list automation details</li>
-<li><code>&lt;/ START [«loco»] «route»&gt;</code> Start a sequence, or an automation with a loco</li>
-<li><code>&lt;/ PAUSE&gt;</code> Pause all EXRAIL tasks</li>
-<li><code>&lt;/ RESUME&gt;</code> Resume all EXRAIL tasks</li>
-<li><code>&lt;/ KILL ALL&gt;</code> Kill all EXRAIL tasks</li>
-<li><code>&lt;/ KILL «taskId»&gt;</code> Kill specific EXRAIL tasks</li>
-<li><code>&lt;</code> <code>/</code> <code>&gt;</code> Stream EXRAIL status</li>
+<li><code>&lt;J M&gt;</code> List stash values</li>
+<li><code>&lt;J M CLEAR ALL&gt;</code> Clear all stash values</li>
+<li><code>&lt;J M CLEAR ANY «locoId»&gt;</code> Clear all stash entries that contain * locoId</li>
+<li><code>&lt;J M CLEAR «stashId»&gt;</code> Clear given stash</li>
+<li><code>&lt;J M «stashId»&gt;</code> Get stash value</li>
+<li><code>&lt;J M «stashId» «locoId»&gt;</code> Stash the specified loco in the numbered stash</li>
 </ul>
 <h2 id="parameters">Parameters<a class="headerlink" href="#parameters" title="Permanent link">&para;</a></h2>
 <ul>
-<li><strong>id</strong> &amp; <strong>taskId</strong>: id of the automation/sequence</li>
-<li><strong>loco</strong>: <em>optional</em> DCC address of the loco to be used by the automation. <br/> not relevant to routes and automations.</li>
-<li><strong>route</strong>: automation/sequence (includeing routes and animations) to start or kill.</li>
+<li><strong>locoId</strong>: loco Id to set or clear</li>
+<li><strong>StashId</strong>: Id of the stash to set, clear or get (<code>0</code> - <mark>TODO</mark>)</li>
 </ul>
-<h2 id="responses">Responses<a class="headerlink" href="#responses" title="Permanent link">&para;</a></h2>
-<h3 id="response-for-j-a">Response for <code>&lt;J A&gt;</code><a class="headerlink" href="#response-for-j-a" title="Permanent link">&para;</a></h3>
-<p>(Successful) <code>&lt;jA [id0 id1 id2 ..]&gt;</code></p>
+<h2 id="response">Response<a class="headerlink" href="#response" title="Permanent link">&para;</a></h2>
+<h3 id="response-for-j-m-stashid">Response for <code>&lt;J M «stashId»&gt;</code><a class="headerlink" href="#response-for-j-m-stashid" title="Permanent link">&para;</a></h3>
+<p><code>&lt;jM «stashId» «loco»&gt;</code></p>
 <ul>
-<li><strong>id?</strong>: identifier of the Route/Automation(s)</li>
+<li><strong>StashId</strong>: Id of the stash</li>
+<li><strong>locoId</strong>: loco Id in that stash</li>
 </ul>
-<h3 id="response-for-j-id">Response for <code>&lt;J «id»&gt;</code><a class="headerlink" href="#response-for-j-id" title="Permanent link">&para;</a></h3>
-<p>(Successful) <code>&lt;jA id X|type |"desc"&gt;</code></p>
+<h3 id="response-for-j-m">Response for <code>&lt;J M&gt;</code><a class="headerlink" href="#response-for-j-m" title="Permanent link">&para;</a></h3>
+<p>Repeated for each defined Stash where loco is not zero:</p>
+<p><code>&lt;jM «stashId» «loco»&gt;</code></p>
 <ul>
-<li><strong>id</strong>: identifier of the Route/Automation</li>
-<li><strong>type</strong>: one of<ul>
-<li><code>R</code> = Route</li>
-<li><code>A</code> = Automation</li>
+<li><strong>StashId</strong>: Id of the stash</li>
+<li><strong>locoId</strong>: loco Id in that stash</li>
 </ul>
-</li>
-<li><strong>desc</strong>: Textual description of the route/automation always surrounded in quotes (")</li>
-</ul>
-<p>(fail - is not defined): <code>&lt;jA id X&gt;</code></p>
-<h3 id="response-for-start-pause-resume-kill">Response for <code>&lt;/ START ...&gt;</code>, <code>&lt;/ PAUSE&gt;</code>, <code>&lt;/ RESUME&gt;</code>, <code>&lt;/ KILL ...&gt;</code>, <code>&lt;</code> <code>/</code> <code>&gt;</code><a class="headerlink" href="#response-for-start-pause-resume-kill" title="Permanent link">&para;</a></h3>
-<p>N/A</p>
 <h2 id="notes">Notes<a class="headerlink" href="#notes" title="Permanent link">&para;</a></h2>
 <ul>
-<li><mark>TODO</mark></li>
+<li>A negative locoId value may be stashed to indicate that the loco will operate with inverted direction.</li>
 </ul>
 <hr />
 <h2 id="examples">Examples<a class="headerlink" href="#examples" title="Permanent link">&para;</a></h2>
-<p><a href="?_J_">Also search for 'J A'</a> or <a href="?_/">search for '/'</a></p>
+<!-- [Also search for 'xxx'](?_xxx) or [search for 'xxx'](?_xxx) -->
+
 <h3 id="example-commands"><em>Example Commands</em><a class="headerlink" href="#example-commands" title="Permanent link">&para;</a></h3>
 <ul>
 <li><mark>TODO</mark></li>
@@ -7131,7 +7114,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 13, 2026 00:55:22 UTC">June 13, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 16, 2026 02:35:31 UTC">June 16, 2026</span>
   </span>
 
     

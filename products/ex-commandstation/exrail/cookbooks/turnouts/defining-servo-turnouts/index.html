@@ -27,7 +27,7 @@
     
     
       
-        <title>Defining Servo Turnouts - DCC-EX Model Train Control, Animation, and Automation</title>
+        <title>Defining Servo Turnouts/Points - DCC-EX Model Train Control, Animation, and Automation</title>
       
     
     
@@ -83,7 +83,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#defining-servo-turnouts" class="md-skip">
+        <a href="#defining-servo-turnoutspoints" class="md-skip">
           Skip to content
         </a>
       
@@ -116,7 +116,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Defining Servo Turnouts
+              Defining Servo Turnouts/Points
             
           </span>
         </div>
@@ -1254,7 +1254,7 @@
   
   
   <span class="md-ellipsis">
-    Connecting Servo Turnout
+    Servo Turnouts/Points
     
   </span>
   
@@ -3146,7 +3146,7 @@
   
   
   <span class="md-ellipsis">
-    Defining Dcc Turnouts
+    Defining Dcc Turnouts/Points
     
   </span>
   
@@ -3169,7 +3169,7 @@
   
   
   <span class="md-ellipsis">
-    Defining Pin Turnouts
+    Defining Pin Turnouts/Points
     
   </span>
   
@@ -3201,7 +3201,7 @@
   
   
   <span class="md-ellipsis">
-    Defining Servo Turnouts
+    Defining Servo Turnouts/Points
     
   </span>
   
@@ -3214,7 +3214,7 @@
   
   
   <span class="md-ellipsis">
-    Defining Servo Turnouts
+    Defining Servo Turnouts/Points
     
   </span>
   
@@ -3246,9 +3246,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#defining-servo-based-turnout-objects" class="md-nav__link">
+  <a href="#defining-servo-based-turnoutpoint-objects" class="md-nav__link">
     <span class="md-ellipsis">
-      Defining servo based turnout objects
+      Defining servo based turnout/point objects
     </span>
   </a>
   
@@ -3275,7 +3275,7 @@
   
   
   <span class="md-ellipsis">
-    Facing Turnouts
+    Facing Turnouts/Points
     
   </span>
   
@@ -3298,7 +3298,7 @@
   
   
   <span class="md-ellipsis">
-    Animated Turnouts
+    Animated Turnouts/Points
     
   </span>
   
@@ -7014,9 +7014,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#defining-servo-based-turnout-objects" class="md-nav__link">
+  <a href="#defining-servo-based-turnoutpoint-objects" class="md-nav__link">
     <span class="md-ellipsis">
-      Defining servo based turnout objects
+      Defining servo based turnout/point objects
     </span>
   </a>
   
@@ -7041,24 +7041,24 @@
   
 
 
-<h1 id="defining-servo-turnouts">Defining Servo turnouts<a class="headerlink" href="#defining-servo-turnouts" title="Permanent link">&para;</a></h1>
+<h1 id="defining-servo-turnoutspoints">Defining Servo Turnouts/Points<a class="headerlink" href="#defining-servo-turnoutspoints" title="Permanent link">&para;</a></h1>
 <p>(This does not include servos driven from track connected DCC decoders. See <a href="../defining-dcc-turnouts/">DCC Decoders</a>)</p>
 <h2 id="important-considerations-for-servo-operation">Important considerations for servo operation<a class="headerlink" href="#important-considerations-for-servo-operation" title="Permanent link">&para;</a></h2>
-<p>Servo turnouts are driven through a <a href="?PCA9685">PCA9685</a> servo control board or an <a href="?ioexpander">EX-IOExpander</a>.</p>
-<p>Test, test, test your servo parameters prior to connecting to an actual turnout/point. If you have defined angles that exceed the physical limits of your turnout, you will likely damage it and/or the servo mechanism.</p>
-<p>Treat each servo and turnout as an individual as not all servos (or turnouts/points for that matter) are created equal. An angle that works with one servo and associated turnout will not necessarily provide the exact same result with another. Differences in servo brands, mounting methods, and even normal manufacturing tolerances will need to be factored in to the servo angles in use.</p>
+<p>Servo turnouts/points are driven through a <a href="?PCA9685">PCA9685</a> servo control board or an <a href="?ioexpander">EX-IOExpander</a>.</p>
+<p>Test, test, test your servo parameters prior to connecting to an actual turnout/point. If you have defined angles that exceed the physical limits of your turnout/point, you will likely damage it and/or the servo mechanism.</p>
+<p>Treat each servo and turnout/point as an individual as not all servos (or turnouts/points for that matter) are created equal. An angle that works with one servo and associated turnout/point will not necessarily provide the exact same result with another. Differences in servo brands, mounting methods, and even normal manufacturing tolerances will need to be factored in to the servo angles in use.</p>
 <p>The EX-Toolbox Android application provides a servo movement testing tool to help you discover the necessary values for the angles below.</p>
-<p>Use flexible wire to connect your servo arm to the turnout/point. Using a flexible connection between the turnout and the servo mechanism means if anything does go wrong such as the turnout getting jammed or an incorrect servo angle being sent, it reduces the chance of damaging the turnout or servo.</p>
-<h2 id="defining-servo-based-turnout-objects">Defining servo based turnout objects<a class="headerlink" href="#defining-servo-based-turnout-objects" title="Permanent link">&para;</a></h2>
-<p>Define servo based turnouts using EXRAIL.</p>
+<p>Use flexible wire to connect your servo arm to the turnout/point. Using a flexible connection between the turnout/point and the servo mechanism means if anything does go wrong such as the turnout/point getting jammed or an incorrect servo angle being sent, it reduces the chance of damaging the turnout/point or servo.</p>
+<h2 id="defining-servo-based-turnoutpoint-objects">Defining servo based turnout/point objects<a class="headerlink" href="#defining-servo-based-turnoutpoint-objects" title="Permanent link">&para;</a></h2>
+<p>Define servo based turnouts/points using EXRAIL.</p>
 <div class="language-cpp highlight"><pre><span></span><code><span class="n">SERVO_TURNOUT</span><span class="p">(</span><span class="n">id</span><span class="p">,</span><span class="w"> </span><span class="n">vpin</span><span class="p">,</span><span class="w"> </span><span class="n">active_angle</span><span class="p">,</span><span class="w"> </span><span class="n">inactive_angle</span><span class="p">,</span><span class="w"> </span><span class="n">profile</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;description&quot;</span><span class="p">)</span>
 </code></pre></div>
-<p>id = Unique turnout ID within the CommandStation. All other turnout commands will refer to this turnout by this id.</p>
+<p>id = Unique turnout/point ID within the CommandStation. All other turnout commands will refer to this turnout/point by this id.</p>
 <p>pin = The ID of the pin the servo is connected to, which would typically be the VPin ID of the PCA9685 controller board.</p>
-<p>active_angle = The angle to which the servo will move when the turnout is thrown (This is a value passed to the servo drtiver, it is not in degrees).</p>
-<p>inactive_angle = The angle to which the servo will move when the turnout is closed.</p>
-<p>profile = The speed at which a turnout will move: Instant, Fast, Medium, Slow.</p>
-<p>description = A human-friendly description of the turnout that will appear in WiThrottle apps and Engine Driver. Note that this must be enclosed in quotes “”. In some cases the HIDDEN keyword can be used here to prevent the turnout being visible to the throttles.</p>
+<p>active_angle = The angle to which the servo will move when the turnout/point is thrown (This is a value passed to the servo drtiver, it is not in degrees).</p>
+<p>inactive_angle = The angle to which the servo will move when the turnout/point is closed.</p>
+<p>profile = The speed at which a turnout/point will move: Instant, Fast, Medium, Slow.</p>
+<p>description = A human-friendly description of the turnout/point that will appear in WiThrottle apps and Engine Driver. Note that this must be enclosed in quotes “”. In some cases the HIDDEN keyword can be used here to prevent the turnout/point being visible to the throttles.</p>
 <p>An example definition for a servo connected to the second control pins of the first PCA9685 connected to the CommandStation, using the slow profile for prototypical operation:</p>
 <div class="language-cpp highlight"><pre><span></span><code><span class="n">SERVO_TURNOUT</span><span class="p">(</span><span class="mi">200</span><span class="p">,</span><span class="w"> </span><span class="mi">101</span><span class="p">,</span><span class="w"> </span><span class="mi">450</span><span class="p">,</span><span class="w"> </span><span class="mi">110</span><span class="p">,</span><span class="w"> </span><span class="n">Slow</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Coal yard exit&quot;</span><span class="p">)</span>
 </code></pre></div>
@@ -7082,7 +7082,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="December 23, 2025 20:33:33 UTC">December 23, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 16, 2026 03:51:19 UTC">June 16, 2026</span>
   </span>
 
     
@@ -7121,7 +7121,7 @@
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../defining-pin-turnouts/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Defining Pin Turnouts">
+          <a href="../defining-pin-turnouts/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Defining Pin Turnouts/Points">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -7131,20 +7131,20 @@
                 Previous
               </span>
               <div class="md-ellipsis">
-                Defining Pin Turnouts
+                Defining Pin Turnouts/Points
               </div>
             </div>
           </a>
         
         
           
-          <a href="../facing-turnouts/" class="md-footer__link md-footer__link--next" aria-label="Next: Facing Turnouts">
+          <a href="../facing-turnouts/" class="md-footer__link md-footer__link--next" aria-label="Next: Facing Turnouts/Points">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Facing Turnouts
+                Facing Turnouts/Points
               </div>
             </div>
             <div class="md-footer__button md-icon">

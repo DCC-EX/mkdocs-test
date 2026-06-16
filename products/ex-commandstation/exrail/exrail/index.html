@@ -1254,7 +1254,7 @@
   
   
   <span class="md-ellipsis">
-    Connecting Servo Turnout
+    Servo Turnouts/Points
     
   </span>
   
@@ -3220,7 +3220,7 @@
   
   
   <span class="md-ellipsis">
-    Defining Dcc Turnouts
+    Defining Dcc Turnouts/Points
     
   </span>
   
@@ -3243,7 +3243,7 @@
   
   
   <span class="md-ellipsis">
-    Defining Pin Turnouts
+    Defining Pin Turnouts/Points
     
   </span>
   
@@ -3266,7 +3266,7 @@
   
   
   <span class="md-ellipsis">
-    Defining Servo Turnouts
+    Defining Servo Turnouts/Points
     
   </span>
   
@@ -3289,7 +3289,7 @@
   
   
   <span class="md-ellipsis">
-    Facing Turnouts
+    Facing Turnouts/Points
     
   </span>
   
@@ -3312,7 +3312,7 @@
   
   
   <span class="md-ellipsis">
-    Animated Turnouts
+    Animated Turnouts/Points
     
   </span>
   
@@ -7076,7 +7076,7 @@
 <h1 id="what-is-exrail">What is EXRAIL?<a class="headerlink" href="#what-is-exrail" title="Permanent link">&para;</a></h1>
 <p>EXRAIL is an “EXtended Railroad Automation Instruction Language” used to:</p>
 <ul>
-<li>Describe your turnouts, signals etc.</li>
+<li>Describe your turnouts/points, signals etc.</li>
 <li>Configure your Command Station to understand the hardware and accessories you have attached.</li>
 <li>Handle what to do when things happen (e.g. a button is pressed)</li>
 <li>Create automated route settings through your layout</li>
@@ -7102,7 +7102,7 @@
 <h2 id="basic-building-blocks">Basic building blocks<a class="headerlink" href="#basic-building-blocks" title="Permanent link">&para;</a></h2>
 <p>There are a few basic building blocks that will appear in the examples:</p>
 <ul>
-<li><code>SEQUENCE</code> - Simply a list of things to be done in order. These things might be to actually drive a train around, or merely to set some turnouts or flash some scene or panel lights. Actions can be made to wait for conditions to be met, like a sensor detecting a train, a button being pushed, or a period of time elapsing.
+<li><code>SEQUENCE</code> - Simply a list of things to be done in order. These things might be to actually drive a train around, or merely to set some turnouts/points or flash some scene or panel lights. Actions can be made to wait for conditions to be met, like a sensor detecting a train, a button being pushed, or a period of time elapsing.
 e.g.</li>
 </ul>
 <div class="language-cpp highlight"><pre><span></span><code><span class="w">  </span><span class="n">SEQUENCE</span><span class="p">(</span><span class="mi">27</span><span class="p">)</span><span class="w"> </span><span class="c1">// Close crossing gates</span>
@@ -7112,10 +7112,10 @@ e.g.</li>
 <span class="w">    </span><span class="n">DONE</span><span class="w">   </span><span class="c1">// sequence completed</span>
 </code></pre></div>
 <ul>
-<li><code>ROUTE</code> – A special type of SEQUENCE that is made visible to a throttle with a readable name so the user can press a button to get the sequence executed. This might be best used to set a series of turnouts and signals to create a route through the layout. For example</li>
+<li><code>ROUTE</code> – A special type of SEQUENCE that is made visible to a throttle with a readable name so the user can press a button to get the sequence executed. This might be best used to set a series of turnouts/points and signals to create a route through the layout. For example</li>
 </ul>
 <div class="language-cpp highlight"><pre><span></span><code><span class="w">  </span><span class="n">ROUTE</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="s">&quot;Platform A to Mainline&quot;</span><span class="p">)</span>
-<span class="w">    </span><span class="n">THROW</span><span class="p">(</span><span class="mi">27</span><span class="p">)</span><span class="w"> </span><span class="c1">// set turnouts</span>
+<span class="w">    </span><span class="n">THROW</span><span class="p">(</span><span class="mi">27</span><span class="p">)</span><span class="w"> </span><span class="c1">// set turnouts/points</span>
 <span class="w">    </span><span class="n">CLOSE</span><span class="p">(</span><span class="mi">6</span><span class="p">)</span>
 <span class="w">    </span><span class="n">GREEN</span><span class="p">(</span><span class="mi">101</span><span class="p">)</span><span class="w"> </span><span class="c1">// change departure signal</span>
 <span class="w">    </span><span class="n">DONE</span><span class="w"> </span>
@@ -7178,7 +7178,7 @@ e.g.</li>
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="December 23, 2025 20:20:47 UTC">December 23, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 16, 2026 03:51:19 UTC">June 16, 2026</span>
   </span>
 
     

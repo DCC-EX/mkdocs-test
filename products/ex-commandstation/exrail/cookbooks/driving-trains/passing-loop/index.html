@@ -1254,7 +1254,7 @@
   
   
   <span class="md-ellipsis">
-    Connecting Servo Turnout
+    Servo Turnouts/Points
     
   </span>
   
@@ -3233,7 +3233,7 @@
   
   
   <span class="md-ellipsis">
-    Defining Dcc Turnouts
+    Defining Dcc Turnouts/Points
     
   </span>
   
@@ -3256,7 +3256,7 @@
   
   
   <span class="md-ellipsis">
-    Defining Pin Turnouts
+    Defining Pin Turnouts/Points
     
   </span>
   
@@ -3279,7 +3279,7 @@
   
   
   <span class="md-ellipsis">
-    Defining Servo Turnouts
+    Defining Servo Turnouts/Points
     
   </span>
   
@@ -3302,7 +3302,7 @@
   
   
   <span class="md-ellipsis">
-    Facing Turnouts
+    Facing Turnouts/Points
     
   </span>
   
@@ -3325,7 +3325,7 @@
   
   
   <span class="md-ellipsis">
-    Animated Turnouts
+    Animated Turnouts/Points
     
   </span>
   
@@ -7113,12 +7113,12 @@
 <div class="language-cpp highlight"><pre><span></span><code><span class="n">SEQUENCE</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span><span class="w"> </span>
 <span class="w">  </span><span class="n">DELAYRANDOM</span><span class="p">(</span><span class="mi">5000</span><span class="p">,</span><span class="mi">10000</span><span class="p">)</span>
 <span class="w">  </span><span class="n">RESERVE</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="w"> </span><span class="c1">// will wait with loco stopped until block 2 is available.</span>
-<span class="w">  </span><span class="n">THROW</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="w">   </span><span class="c1">// set the turnout so we will enter the loop correctly</span>
+<span class="w">  </span><span class="n">THROW</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="w">   </span><span class="c1">// set the turnout/point so we will enter the loop correctly</span>
 <span class="w">  </span><span class="n">FWD</span><span class="p">(</span><span class="mi">40</span><span class="p">)</span><span class="w">    </span><span class="c1">// move off</span>
 <span class="w">  </span><span class="n">AT</span><span class="p">(</span><span class="mi">167</span><span class="p">)</span><span class="w">    </span><span class="c1">// we are in the West&gt;East loop</span>
 <span class="w">  </span><span class="n">FREE</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="w">    </span><span class="c1">// we are no longer in block 1</span>
 <span class="w">  </span><span class="n">RESERVE</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span><span class="w"> </span><span class="c1">// This will stop loco if 3 not yet free, and wait.</span>
-<span class="w">  </span><span class="n">CLOSE</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="w">   </span><span class="c1">// set turnout to exit loop</span>
+<span class="w">  </span><span class="n">CLOSE</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="w">   </span><span class="c1">// set turnout/point to exit loop</span>
 <span class="w">  </span><span class="n">FWD</span><span class="p">(</span><span class="mi">40</span><span class="p">)</span><span class="w">    </span><span class="c1">// must resume speed if we were stopped.</span>
 <span class="w">  </span><span class="n">AT</span><span class="p">(</span><span class="mi">165</span><span class="p">)</span><span class="w">    </span><span class="c1">// when we get to Catflap</span>
 <span class="w">  </span><span class="n">STOP</span>
@@ -7129,20 +7129,20 @@
 <div class="language-cpp highlight"><pre><span></span><code><span class="n">SEQUENCE</span><span class="p">(</span><span class="mi">101</span><span class="p">)</span><span class="w">  </span><span class="c1">// Catflap to Dogbath (loco in reverse)</span>
 <span class="w">  </span><span class="n">DELAYRANDOM</span><span class="p">(</span><span class="mi">5000</span><span class="p">,</span><span class="mi">10000</span><span class="p">)</span>
 <span class="w">  </span><span class="n">RESERVE</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span><span class="w"> </span><span class="c1">// will wait with loco stopped and until block 4 is available.</span>
-<span class="w">  </span><span class="n">THROW</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="w">   </span><span class="c1">// set the turnout so we will enter the loop correctly</span>
+<span class="w">  </span><span class="n">THROW</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="w">   </span><span class="c1">// set the turnout/point so we will enter the loop correctly</span>
 <span class="w">  </span><span class="n">REV</span><span class="p">(</span><span class="mi">40</span><span class="p">)</span><span class="w">    </span><span class="c1">// move off backwards </span>
 <span class="w">  </span><span class="n">AT</span><span class="p">(</span><span class="mi">166</span><span class="p">)</span><span class="w">    </span><span class="c1">// we are in the E-&gt;W loop</span>
 <span class="w">  </span><span class="n">FREE</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span><span class="w">    </span><span class="c1">// we are no longer in block 3</span>
 <span class="w">  </span><span class="n">RESERVE</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="c1">// This will stop loco if 3 not yet free, and wait.</span>
-<span class="w">  </span><span class="n">CLOSE</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="w">   </span><span class="c1">// set turnout to exit loop</span>
+<span class="w">  </span><span class="n">CLOSE</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="w">   </span><span class="c1">// set turnout/point to exit loop</span>
 <span class="w">  </span><span class="n">REV</span><span class="p">(</span><span class="mi">40</span><span class="p">)</span><span class="w">    </span><span class="c1">// must resume speed if we were stopped.</span>
 <span class="w">  </span><span class="n">AT</span><span class="p">(</span><span class="mi">164</span><span class="p">)</span><span class="w">    </span><span class="c1">// when we get to Dogbath</span>
 <span class="w">  </span><span class="n">STOP</span>
 <span class="w">  </span><span class="n">FREE</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span><span class="w">    </span><span class="c1">// we are not in loop</span>
 <span class="w">  </span><span class="n">FOLLOW</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span><span class="w"> </span><span class="c1">// now follow the Dogbath-Catflap sequence </span>
 </code></pre></div>
-<p>Notice that you don't drive into an area of the track without first reserving the corresponding block, and you must remember to free it once you have safely left. Also the script above assumes that a train can cause the turnout to change quickly enough if it reaches a sensor in the loop and doesn't need to stop, this can be alleviated if you throw/close the turnout behind you as you reach your loop sensor so that the other train does not need to worry about any slow turnout movement.</p>
-<p>Please bear in mind that your turnout geometry may be different. The diagram is for two right-hand turnouts, you may have used a left/right pair so modify the THROW/CLOSE statements above to suit.</p>
+<p>Notice that you don't drive into an area of the track without first reserving the corresponding block, and you must remember to free it once you have safely left. Also the script above assumes that a train can cause the turnout/point to change quickly enough if it reaches a sensor in the loop and doesn't need to stop, this can be alleviated if you throw/close the turnout/point behind you as you reach your loop sensor so that the other train does not need to worry about any slow turnout/point movement.</p>
+<p>Please bear in mind that your turnout/point geometry may be different. The diagram is for two right-hand turnouts/points, you may have used a left/right pair so modify the THROW/CLOSE statements above to suit.</p>
 <h2 id="starting-the-shuttle">Starting the shuttle<a class="headerlink" href="#starting-the-shuttle" title="Permanent link">&para;</a></h2>
 <p>We have the issue that one train is starting from the far end, and we have to establish the train positions, directions, initial reserved status and where in the sequence they must start.</p>
 <p>If we assume that:</p>
@@ -7198,7 +7198,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="May 16, 2026 08:28:32 UTC">May 16, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 16, 2026 03:51:19 UTC">June 16, 2026</span>
   </span>
 
     

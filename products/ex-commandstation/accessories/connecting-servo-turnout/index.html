@@ -27,7 +27,7 @@
     
     
       
-        <title>Connecting Servo Turnout - DCC-EX Model Train Control, Animation, and Automation</title>
+        <title>Servo Turnouts/Points - DCC-EX Model Train Control, Animation, and Automation</title>
       
     
     
@@ -83,7 +83,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#connecting-a-servo-turnout" class="md-skip">
+        <a href="#connecting-a-servo-turnoutpoint" class="md-skip">
           Skip to content
         </a>
       
@@ -116,7 +116,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Connecting Servo Turnout
+              Servo Turnouts/Points
             
           </span>
         </div>
@@ -1265,7 +1265,7 @@
   
   
   <span class="md-ellipsis">
-    Connecting Servo Turnout
+    Servo Turnouts/Points
     
   </span>
   
@@ -1278,7 +1278,7 @@
   
   
   <span class="md-ellipsis">
-    Connecting Servo Turnout
+    Servo Turnouts/Points
     
   </span>
   
@@ -1310,27 +1310,27 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#define-your-turnouts" class="md-nav__link">
+  <a href="#define-your-turnoutspoints" class="md-nav__link">
     <span class="md-ellipsis">
-      Define your Turnouts
+      Define your turnouts/points
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#test-your-turnout-definitions" class="md-nav__link">
+  <a href="#test-your-turnoutpoint-definitions" class="md-nav__link">
     <span class="md-ellipsis">
-      Test your turnout definitions
+      Test your turnout/point definitions
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#connect-your-servos-to-turnouts" class="md-nav__link">
+  <a href="#connect-your-servos-to-turnoutspoints" class="md-nav__link">
     <span class="md-ellipsis">
-      Connect your servos to turnouts
+      Connect your servos to turnouts/points
     </span>
   </a>
   
@@ -3229,7 +3229,7 @@
   
   
   <span class="md-ellipsis">
-    Defining Dcc Turnouts
+    Defining Dcc Turnouts/Points
     
   </span>
   
@@ -3252,7 +3252,7 @@
   
   
   <span class="md-ellipsis">
-    Defining Pin Turnouts
+    Defining Pin Turnouts/Points
     
   </span>
   
@@ -3275,7 +3275,7 @@
   
   
   <span class="md-ellipsis">
-    Defining Servo Turnouts
+    Defining Servo Turnouts/Points
     
   </span>
   
@@ -3298,7 +3298,7 @@
   
   
   <span class="md-ellipsis">
-    Facing Turnouts
+    Facing Turnouts/Points
     
   </span>
   
@@ -3321,7 +3321,7 @@
   
   
   <span class="md-ellipsis">
-    Animated Turnouts
+    Animated Turnouts/Points
     
   </span>
   
@@ -7037,27 +7037,27 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#define-your-turnouts" class="md-nav__link">
+  <a href="#define-your-turnoutspoints" class="md-nav__link">
     <span class="md-ellipsis">
-      Define your Turnouts
+      Define your turnouts/points
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#test-your-turnout-definitions" class="md-nav__link">
+  <a href="#test-your-turnoutpoint-definitions" class="md-nav__link">
     <span class="md-ellipsis">
-      Test your turnout definitions
+      Test your turnout/point definitions
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#connect-your-servos-to-turnouts" class="md-nav__link">
+  <a href="#connect-your-servos-to-turnoutspoints" class="md-nav__link">
     <span class="md-ellipsis">
-      Connect your servos to turnouts
+      Connect your servos to turnouts/points
     </span>
   </a>
   
@@ -7091,7 +7091,7 @@
   
 
 
-<h1 id="connecting-a-servo-turnout">Connecting a servo turnout<a class="headerlink" href="#connecting-a-servo-turnout" title="Permanent link">&para;</a></h1>
+<h1 id="connecting-a-servo-turnoutpoint">Connecting a servo turnout/point<a class="headerlink" href="#connecting-a-servo-turnoutpoint" title="Permanent link">&para;</a></h1>
 <p>The details below assume you are using an EX-CSB1 command station or a DIY station with an EX8874 motor shield and Wifi connection. Otherwise the steps are the same but the wiring is trickier without the Qwiic sockets and testing requires command input.</p>
 <p>You will need the following for up to 16 servos.</p>
 <ul>
@@ -7132,15 +7132,15 @@ from the startup logs using the serial monitor</p>
 <p>Examine the log to check that your PCA9685 has been detected and note the I2C address it found. This will typically be 0x40. If this address is 0x40 or 0x41 then the CS has defaulted this to be a PCA9685 and automatically assigned a range of 16 <a href="?VPIN">VPINs</a> to represent the 16 servo outputs.</p>
 </li>
 <li>Examine the log further down and you should see where the VPINs are assigned. The following advice assumes that the address was 0x40 and the first VPIN will be 100.</li>
-<li>Plug a servo into the first output socket. DO NOT mechanically connect the servo arm to any turnout or animation as the servo may move unexpectedly and cause physical damage.  You will connect the servo arm after exercising the servo (step 8).</li>
+<li>Plug a servo into the first output socket. DO NOT mechanically connect the servo arm to any turnout/point or animation as the servo may move unexpectedly and cause physical damage.  You will connect the servo arm after exercising the servo (step 8).</li>
 <li>Connect the additional servo power supply to the long-edge turrets on the PCA9685, observing the correct polarity. <img alt="PCA9685" src="../../../../_static/images/i2c-devices/PCA9685.jpg" style="width: 70%" /></li>
 <li>On the installers serial monitor, enter the command <code>&lt;D SERVO 100 200&gt;</code> which should move the servo. Experiment with other positions than 200. The usable range is approximately 102 to 490.  </li>
 <li>(Optionally) Use the EX-Toolbox Andoid app to experiment with servo angles and servo arm lengths until you have the required throw distance and angles to suit your servo mounting preferences.</li>
 </ol>
-<h2 id="define-your-turnouts">Define your Turnouts<a class="headerlink" href="#define-your-turnouts" title="Permanent link">&para;</a></h2>
+<h2 id="define-your-turnoutspoints">Define your turnouts/points<a class="headerlink" href="#define-your-turnoutspoints" title="Permanent link">&para;</a></h2>
 <ol>
 <li>
-<p>In EX-Installer, edit myAutomation.h and define each turnout to give an id of your choice, the VPIN of the servo, the closed and open servo values you have discovered by experimentation and a suitable decription to show on your throttle.</p>
+<p>In EX-Installer, edit myAutomation.h and define each turnout/point to give an id of your choice, the VPIN of the servo, the closed and open servo values you have discovered by experimentation and a suitable decription to show on your throttle.</p>
 <div class="language-cpp highlight"><pre><span></span><code><span class="c1">//SERVO_TURNOUT( turnout_id, vpin, active_angle, inactive_angle, profile [, &quot;description&quot;|HIDDEN] )</span>
 <span class="n">SERVO_TURNOUT</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">100</span><span class="p">,</span><span class="w"> </span><span class="mi">350</span><span class="p">,</span><span class="w"> </span><span class="mi">120</span><span class="p">,</span><span class="w"> </span><span class="n">Slow</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Coal yard exit&quot;</span><span class="p">)</span>
 <span class="n">SERVO_TURNOUT</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">101</span><span class="p">,</span><span class="w"> </span><span class="mi">400</span><span class="p">,</span><span class="w"> </span><span class="mi">200</span><span class="p">,</span><span class="w"> </span><span class="n">Slow</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Branch line siding&quot;</span><span class="p">)</span>
@@ -7151,14 +7151,14 @@ from the startup logs using the serial monitor</p>
 <p>Reload the command station from the installer.</p>
 </li>
 </ol>
-<h2 id="test-your-turnout-definitions">Test your turnout definitions<a class="headerlink" href="#test-your-turnout-definitions" title="Permanent link">&para;</a></h2>
+<h2 id="test-your-turnoutpoint-definitions">Test your turnout/point definitions<a class="headerlink" href="#test-your-turnoutpoint-definitions" title="Permanent link">&para;</a></h2>
 <ol>
-<li>Using the serial monitor as before, enter the commands <code>&lt;T 1 T&gt;</code> to throw turnout 1, <code>&lt;T 2 C&gt;</code> to close turnout 2 and so on.</li>
-<li>With your Wifi throttle (Typically Engine Driver) navigate to the turnouts page where you will see the two turnouts listed. From there you can throw or close them as required.</li>
+<li>Using the serial monitor as before, enter the commands <code>&lt;T 1 T&gt;</code> to throw turnout/point 1, <code>&lt;T 2 C&gt;</code> to close turnout/point 2 and so on.</li>
+<li>With your Wifi throttle (Typically Engine Driver) navigate to the turnouts/points page where you will see the two turnouts/points listed. From there you can throw or close them as required.</li>
 </ol>
-<h2 id="connect-your-servos-to-turnouts">Connect your servos to turnouts<a class="headerlink" href="#connect-your-servos-to-turnouts" title="Permanent link">&para;</a></h2>
+<h2 id="connect-your-servos-to-turnoutspoints">Connect your servos to turnouts/points<a class="headerlink" href="#connect-your-servos-to-turnoutspoints" title="Permanent link">&para;</a></h2>
 <p>There are many ways of mounting servos both above and below the baseboard using 3D printed mounts or a strip of plastic L shape. You will probably want to use microswitches to switch frog polarity or use more expensive frog juicers or EXRAIL driven relays.</p>
-<p>We recommend that whatever mechanical connection you make allows for protection of you turnout from excess servo movement.</p>
+<p>We recommend that whatever mechanical connection you make allows for protection of your turnout/point from excess servo movement.</p>
 <h2 id="pca9685-configure-additional-boards">PCA9685 Configure additional boards<a class="headerlink" href="#pca9685-configure-additional-boards" title="Permanent link">&para;</a></h2>
 <p>The first two PCA9685 are pre-defined at addresses 0x40 and 0x41, for pins 100-115 and 116-131.<BR>
 Configure additional PCA9685 in myAutomation.h.</p>
@@ -7186,7 +7186,7 @@ Configure additional PCA9685 in myAutomation.h.</p>
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="December 23, 2025 20:20:47 UTC">December 23, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 16, 2026 03:51:19 UTC">June 16, 2026</span>
   </span>
 
     
