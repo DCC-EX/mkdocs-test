@@ -16,7 +16,7 @@ Using an **DCC-EX EX-CommandStation** to run a DC layout provides a number of ad
 - All Wifi and wired connected throttles will operate the same for DC and DCC locos using Cab road numbers 'loco addresses' from 1 to 10239.
 - Using this range of Cab locoid addresses you can assign any DC district/track any locoid to run in that DC district, i.e # 2.
 - Multiple DC Districts (maximum four on EX-CSB1 & maximum eight on Mega2560 system) can be independently controlled and reconfigured to allow crossing between districts and polarity reversal.
-- Any DC District can be further subdivided into smaller blocks and energized or powerd via turnout points and or SPDT switches If desired, i.e. staging or fiddle yard..  
+- Any DC District can be further subdivided into smaller blocks and energized or powered via turnouts/points and or SPDT switches If desired, i.e. staging or fiddle yard..  
 - Momentum of a loco can be defined in number of seconds of travel for acceleration and braking distances.
 - EXRAIL automation can be used to run trains, create routes, switch block relays, control signals, control accessory special effects, manage reversing loops, etcetera.
 - Pulse Width Modulation PWM 'Frequency' can be adjusted to suit your locos and/or reduce DC noise with a touch of the throttles function F29-F31 button.
@@ -40,7 +40,7 @@ The normal configuration method for **DCC-EX EX-CommandStation** is to use EXRAI
 
 - What type of Districts/tracks do I want to use DC, DCC or both
 - What are the locoids or Cab# defined in the Roster for throttles to see and use.
-- What turnouts or signals you have and how they are electronically driven
+- What turnouts/points or signals you have and how they are electronically driven
 - What happens at startup
 - What routes can a throttle set
 - What automations can a throttle send a loco along
@@ -77,7 +77,7 @@ Where the command station has 4 or more district/track outputs, you can also set
 
 In a simple DC double-track oval, the tracks are wired in opposite directions so that driving "forward" is in opposite directions on each oval.
 
-If you introduce turnouts that allow a train to cross from one track to another, it is necessary to switch the polarity of the "to" track to match that of the "from" track, switch the turnouts and associate the "to" track with the same locoid as the "from" track so that the throttle user can simply drive across the join.
+If you introduce turnouts/points that allow a train to cross from one track to another, it is necessary to switch the polarity of the "to" track to match that of the "from" track, switch the turnouts/points and associate the "to" track with the same locoid as the "from" track so that the throttle user can simply drive across the join.
 
 EXRAIL ROUTEs (they go in the same file as the configuration setup above) are ideal for this and can be activated from throttle buttons. For example, we assume the outer loop is track A locoid 1 and the inner Track B locoid 2.
 
@@ -86,18 +86,18 @@ ROUTE(12,"Drive from outer to inner loop")
   SETLOCO(1)
   SET_TRACK(B,DCX)  // reverse polarity on track B and treat as loco 1
   SET_POWER(B,ON)
-  THROW(100) THROW(101) // throw the turnouts that join the tracks
+  THROW(100) THROW(101) // throw the turnouts/points that join the tracks
   DONE
   
 ROUTE(21,"Drive from inner to outer loop")
   SETLOCO(2)
   SET_TRACK(A,DCX)  // reverse polarity on track B and treat as loco 1
   SET_POWER(A,ON)
-  THROW(100) THROW(101) // throw the turnouts that join the tracks
+  THROW(100) THROW(101) // throw the turnouts/points that join the tracks
   DONE
   
 ROUTE(99,"Restore tracks to normal")
-  CLOSE(100) CLOSE(101)  // close the turnouts  
+  CLOSE(100) CLOSE(101)  // close the turnouts/points  
   SETLOCO(1)
   SET_TRACK(A,DC)
   SET_POWER(A,ON)
@@ -120,6 +120,6 @@ There is no automatic polarity reversing for DC layouts, this must be programmed
 
 ## More blocks
 
-The separate track outouts supplied by the Command Station represent the number of separate throttle ids that may be operating. Like any large DC layout, the switching of throttle outputs to multiple other blocks can still take place using mechanical switches or relays which can be controlled by suitable EXRAIL sequences. Power routing turnouts operate as normal but may be awkward if you are building a new layout with tyhe intention of running DCC later.
+The separate track outouts supplied by the Command Station represent the number of separate throttle ids that may be operating. Like any large DC layout, the switching of throttle outputs to multiple other blocks can still take place using mechanical switches or relays which can be controlled by suitable EXRAIL sequences. Power routing turnouts/points operate as normal but may be awkward if you are building a new layout with tyhe intention of running DCC later.
 
 If you have several throttles operating the same locoid, they will automatically synchronise with each other.

@@ -31,4 +31,4 @@ The following Stash  commands are available:
 
 Notes: An automatic parking script can run through the various tracks and find one which has no stashed loco, then set the route and drive into the track. Once stopped, the locoid can be stashed against that track.
 
-If the operator wants to drive away a loco manually by loco id, an automation can search the tracks for that stashed loco id using IFSTASHED_HERE(trackid) so it can set the turnouts to exit the yard from that track.
+If the operator wants to drive away a loco manually by loco id, an automation can search the tracks for that stashed loco id using IFSTASHED_HERE(trackid) so it can set the turnouts/points to exit the yard from that track.

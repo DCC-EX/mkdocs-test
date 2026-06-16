@@ -28,7 +28,7 @@ hide:
 
     - Wi-fi access, with DCC-EX unique features, [Engine Driver](https://enginedriver.mstevetodd.com/) on Android, [ThrottleCard](https://throttlecard.com/) on iOS and a wide variety of other Apps. We can even show you how to build your own throttle.
     - The ability to run DCC and DC trains from the same throttle at the same time.
-    - The powerful but easy [EXRAIL](/products/ex-commandstation/exrail/exrail.md) scripting language to configure and control accessories such as turnouts, signals, lights, and sounds. It can also run trains automatically and animate your layout!
+    - The powerful but easy [EXRAIL](/products/ex-commandstation/exrail/exrail.md) scripting language to configure and control accessories such as turnouts/points, signals, lights, and sounds. It can also run trains automatically and animate your layout!
     - Integration with [JMRI](https://www.jmri.org/), [iTrain](https://www.berros.eu/en/itrain/), and [RocRail](https://wiki.rocrail.net/) if you prefer to run trains from your computer.
 
     ---

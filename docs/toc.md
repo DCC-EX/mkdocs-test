@@ -41,7 +41,7 @@ li a {
             - <a href="products\ex-commandstation\accessories\accessories.md" data-tooltip="Accessory Types&#10;Connecting Accessories&#10;Voltage Differences">Overview - What are Accessories? <small>(Accessories)</small></a>
             - <a href="products\ex-commandstation\accessories\actuators.md" data-tooltip="Servo actuators&#10;Digital actuators">Actuators - to make stuff happen <small>(Actuators)</small></a>
             - <a href="products\ex-commandstation\accessories\sensors.md" data-tooltip="Track/Layout sensors for automation&#10;Defining sensors">Sensors</a>
-            - <a href="products\ex-commandstation\accessories\connecting-servo-turnout.md" data-tooltip="Follow the steps below&#10;Define your Turnouts&#10;Test your turnout definitions&#10;Connect your servos to turnouts&#10;PCA9685 Configure additional boards">Connecting a servo turnout <small>(Connecting Servo Turnout)</small></a>
+            - <a href="products\ex-commandstation\accessories\connecting-servo-turnout.md" data-tooltip="Follow the steps below&#10;Define your turnouts/points&#10;Test your turnout/point definitions&#10;Connect your servos to turnouts/points&#10;PCA9685 Configure additional boards">Connecting a servo turnout/point <small>(Servo Turnouts/Points)</small></a>
             - <a href="products\ex-commandstation\accessories\hardware-list.md">Hardware device list <small>(Hardware List)</small></a>
             - <a href="products\ex-commandstation\accessories\i2c-intro.md" data-tooltip="What is I2C?&#10;How does it help?">I2C – An Introduction <small>(I2C Intro)</small></a>
             - <a href="products\ex-commandstation\accessories\buying-i2c-devices.md" data-tooltip="Rosscoe Trains">Buying I2C Devices</a>
@@ -109,19 +109,19 @@ li a {
                     - <a href="products\ex-commandstation\exrail\cookbooks\startup\startup-poweron.md">Startup power <small>(Power)</small></a>
                     - <a href="products\ex-commandstation\exrail\cookbooks\startup\startup-set-track.md">Startup - Define Tracks <small>(Track state)</small></a>
                 - **Turnouts**
-                    - <a href="products\ex-commandstation\exrail\cookbooks\turnouts\defining-dcc-turnouts.md">Defining Dcc Turnouts</a>
-                    - <a href="products\ex-commandstation\exrail\cookbooks\turnouts\defining-pin-turnouts.md">Defining Pin Turnouts</a>
-                    - <a href="products\ex-commandstation\exrail\cookbooks\turnouts\defining-servo-turnouts.md" data-tooltip="Important considerations for servo operation&#10;Defining servo based turnout objects">Defining Servo Turnouts</a>
-                    - <a href="products\ex-commandstation\exrail\cookbooks\turnouts\facing-turnouts.md">Facing Turnouts</a>
-                    - <a href="products\ex-commandstation\exrail\cookbooks\turnouts\animated-turnouts.md">Animated Turnouts</a>
-                    - <a href="products\ex-commandstation\exrail\cookbooks\turnouts\toggle-with-button.md">Toggle turnouts with button or sensor <small>(Toggle With Button)</small></a>
+                    - <a href="products\ex-commandstation\exrail\cookbooks\turnouts\defining-dcc-turnouts.md">Defining Dcc Turnouts/Points</a>
+                    - <a href="products\ex-commandstation\exrail\cookbooks\turnouts\defining-pin-turnouts.md">Defining Pin Turnouts/Points</a>
+                    - <a href="products\ex-commandstation\exrail\cookbooks\turnouts\defining-servo-turnouts.md" data-tooltip="Important considerations for servo operation&#10;Defining servo based turnout/point objects">Defining Servo Turnouts/Points</a>
+                    - <a href="products\ex-commandstation\exrail\cookbooks\turnouts\facing-turnouts.md">Facing Turnouts/Points</a>
+                    - <a href="products\ex-commandstation\exrail\cookbooks\turnouts\animated-turnouts.md">Animated Turnouts/Points</a>
+                    - <a href="products\ex-commandstation\exrail\cookbooks\turnouts\toggle-with-button.md">Toggle Turnouts/Points With Button or Sensor <small>(Toggle With Button)</small></a>
                 - **Various devices**
                     - <a href="products\ex-commandstation\exrail\cookbooks\various-devices\duinoNodes.md" data-tooltip="DNIN8 8 Input board&#10;DNIN8K 8 Input board&#10;DNOU8 8 Output board">Lew's Duino Gear boards</a>
                     - <a href="products\ex-commandstation\exrail\cookbooks\various-devices\multiplexors.md">I2C Multiplexors</a>
                     - <a href="products\ex-commandstation\exrail\cookbooks\various-devices\pca955x.md" data-tooltip="Device variations&#10;Defining devices">MCP23017, PCA955x and TCA955x devices</a>
                     - <a href="products\ex-commandstation\exrail\cookbooks\various-devices\tca8418-keyboard.md">TCA8418 keyboard scanner</a>
                     - <a href="products\ex-commandstation\exrail\cookbooks\various-devices\tm-1638.md" data-tooltip="Using buttons and LEDs&#10;Using the 7 Segment display">TM1638 Buttons, leds and 7 segment display</a>
-                    - <a href="products\ex-commandstation\exrail\cookbooks\various-devices\trainbrains.md" data-tooltip="Turnout drivers (solenoid and servo)&#10;Signal controller&#10;Sensors">Trainbrains Devices</a>
+                    - <a href="products\ex-commandstation\exrail\cookbooks\various-devices\trainbrains.md" data-tooltip="Turnout/Point drivers (solenoid and servo)&#10;Signal controller&#10;Sensors">Trainbrains Devices</a>
                     - <a href="products\ex-commandstation\exrail\cookbooks\various-devices\xl9535.md">XL9535 Relay Board</a>
     - <a href="products\ex-motorshield8874\ex-motorshield8874.md" data-tooltip="Features&#10;Why did we make it&#10;Purchase&#10;Licensing&#10;Assembly with EX-MotorShield8874&#10;Engineering notes&#10;Stacking two motor shields">EX‑MotorShield8874 <small>(EX-MotorShield8874)</small></a>
     - <a href="products\ex-wifishield8266\ex-wifishield8266.md" data-tooltip="Overview&#10;Features&#10;Purchase&#10;Assembly">EX-WiFiShield 8266 <small>(EX-WiFiShield8266)</small></a>
@@ -189,7 +189,7 @@ li a {
     - <a href="reference\glossary.md" data-tooltip="Access Point (AP) Mode&#10;Base Station, Command Station, DCC Command Station, DCC Base Station&#10;Consist[^1], Multiple Unit[^2]&#10;DCC++ Commands, ``&lt;DCC++&gt;``, DCC++ Protocol, DCC++ API&#10;DCC-EX Serial Commands, DCC-EX Native Commands, DCC-EX Native Protocol, DCC-EX Native API&#10;Pullup&#10;Pulldown&#10;Roster&#10;SSID&#10;Station (STA) Mode&#10;Turnout[^1] (Point[^2]/Switch)&#10;VPIN&#10;WiThrottle&#10;WiThrottle Protocol&#10;WiThrottle Server">Glossary of Terms</a>
     - <a href="reference\serial-command-basics.md" data-tooltip="Notes">DCC-EX Serial Command Basics <small>(Serial Command Basics)</small></a>
     - <a href="reference\serial-command-list.md">DCC-EX Serial Command List <small>(DCC-EX Command List)</small></a>
-    - <a href="reference\serial-commands.md" data-tooltip="System Commands&#10;Power Control&#10;Locomotive Control&#10;Function Control&#10;Consist Control&#10;Turnout Control&#10;Sensor Control&#10;CV Programming&#10;DCC Accessory Commands&#10;Momentum Control&#10;Output Control&#10;Pin Control&#10;NeoPixel Control&#10;Turntable Control&#10;Sound Control&#10;Throttle Information Commands&#10;Track Manager&#10;Configuration Commands&#10;Diagnostic Commands&#10;Raw DCC Packets">DCC-EX Command Protocol</a>
+    - <a href="reference\serial-commands.md" data-tooltip="System Commands&#10;Power Control&#10;Locomotive Control&#10;Function Control&#10;Consist Control&#10;Turnout/Point Control&#10;Sensor Control&#10;CV Programming&#10;DCC Accessory Commands&#10;Momentum Control&#10;Output Control&#10;Pin Control&#10;NeoPixel Control&#10;Turntable Control&#10;Sound Control&#10;Throttle Information Commands&#10;Track Manager&#10;Configuration Commands&#10;Diagnostic Commands&#10;Raw DCC Packets">DCC-EX Command Protocol</a>
     - <a href="reference\exrail-command-reference.md">EXRAIL Command List</a>
     - <a href="reference\advanced-config-h.md" data-tooltip="Non-standard Motor Shields&#10;TCP/IP Advanced settings&#10;LCD/OLED support&#10;Disable EEPROM&#10;Disable PROG&#10;Redefine DCC boundary between SHORT and LONG loco addresses&#10;Redefine locomotive state table size&#10;Define TURNOUTS and ACCESSORIES to follow norm RCN-213&#10;Handling multiple serial throttles&#10;Bluetooth serial ON ESP32&#10;Booster input pin on ESP32 CS&#10;ESP32 LED Wifi Indicator&#10;SABERTOOTH&#10;Tuning for deprecated UNO/NANO">Advanced config.h settings for Command Station build <small>(Advanced config.h Options)</small></a>
     - **TrackManager**

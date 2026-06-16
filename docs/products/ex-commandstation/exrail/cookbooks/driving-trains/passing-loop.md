@@ -27,12 +27,12 @@ So, the sequence starting from Dogbath, going to Catflap will look like this:
 SEQUENCE(100) 
   DELAYRANDOM(5000,10000)
   RESERVE(2) // will wait with loco stopped until block 2 is available.
-  THROW(1)   // set the turnout so we will enter the loop correctly
+  THROW(1)   // set the turnout/point so we will enter the loop correctly
   FWD(40)    // move off
   AT(167)    // we are in the West>East loop
   FREE(1)    // we are no longer in block 1
   RESERVE(3) // This will stop loco if 3 not yet free, and wait.
-  CLOSE(2)   // set turnout to exit loop
+  CLOSE(2)   // set turnout/point to exit loop
   FWD(40)    // must resume speed if we were stopped.
   AT(165)    // when we get to Catflap
   STOP
@@ -46,12 +46,12 @@ And the Catflap to Dogbath sequence will be a similar logic but in reverse and w
 SEQUENCE(101)  // Catflap to Dogbath (loco in reverse)
   DELAYRANDOM(5000,10000)
   RESERVE(4) // will wait with loco stopped and until block 4 is available.
-  THROW(2)   // set the turnout so we will enter the loop correctly
+  THROW(2)   // set the turnout/point so we will enter the loop correctly
   REV(40)    // move off backwards 
   AT(166)    // we are in the E->W loop
   FREE(3)    // we are no longer in block 3
   RESERVE(1) // This will stop loco if 3 not yet free, and wait.
-  CLOSE(1)   // set turnout to exit loop
+  CLOSE(1)   // set turnout/point to exit loop
   REV(40)    // must resume speed if we were stopped.
   AT(164)    // when we get to Dogbath
   STOP
@@ -59,9 +59,9 @@ SEQUENCE(101)  // Catflap to Dogbath (loco in reverse)
   FOLLOW(100) // now follow the Dogbath-Catflap sequence 
 ```
 
-Notice that you don't drive into an area of the track without first reserving the corresponding block, and you must remember to free it once you have safely left. Also the script above assumes that a train can cause the turnout to change quickly enough if it reaches a sensor in the loop and doesn't need to stop, this can be alleviated if you throw/close the turnout behind you as you reach your loop sensor so that the other train does not need to worry about any slow turnout movement.
+Notice that you don't drive into an area of the track without first reserving the corresponding block, and you must remember to free it once you have safely left. Also the script above assumes that a train can cause the turnout/point to change quickly enough if it reaches a sensor in the loop and doesn't need to stop, this can be alleviated if you throw/close the turnout/point behind you as you reach your loop sensor so that the other train does not need to worry about any slow turnout/point movement.
 
-Please bear in mind that your turnout geometry may be different. The diagram is for two right-hand turnouts, you may have used a left/right pair so modify the THROW/CLOSE statements above to suit.
+Please bear in mind that your turnout/point geometry may be different. The diagram is for two right-hand turnouts/points, you may have used a left/right pair so modify the THROW/CLOSE statements above to suit.
 
 ## Starting the shuttle
 

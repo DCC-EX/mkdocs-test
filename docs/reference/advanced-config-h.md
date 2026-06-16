@@ -90,7 +90,7 @@ of the warning that this will take extra RAM.  if you wish to include additional
 
 ## Disable EEPROM
 
-The EEPROM feature is only there for backward support of deprecated methods of turnout, sensor and output creation inherited from DCC++.
+The EEPROM feature is only there for backward support of deprecated methods of turnout/point, sensor and output creation inherited from DCC++.
 You are advised to turn this off to save memory. It is automatically turned of on devices that do not support this.
 
 ```cpp
@@ -131,19 +131,19 @@ This is the maximum number of locos that can be controlled at the same time. Thi
 
 ## Define TURNOUTS and ACCESSORIES to follow norm RCN-213
 
-According to norm RCN-213 a DCC packet with a 1 is closed-straight and one with a 0 is thrown-diverging.  In DCC++ Classic, and in previous versions of DCC++EX, a turnout throw command was implemented in the packet as '1' and a close command as '0'. The #define below makes the states match with the norm.  But we don't want to cause havoc on existent layouts, so we define this only for new installations. If you don't want this, don't add it to your config.h.
+According to norm RCN-213 a DCC packet with a 1 is closed-straight and one with a 0 is thrown-diverging.  In DCC++ Classic, and in previous versions of DCC++EX, a turnout/point throw command was implemented in the packet as '1' and a close command as '0'. The #define below makes the states match with the norm.  But we don't want to cause havoc on existent layouts, so we define this only for new installations. If you don't want this, don't add it to your config.h.
 
 ```cpp
 #define DCC_TURNOUTS_RCN_213
 ```
 
-By default, the driver which defines a DCC accessory decoder does send out the same state change on the DCC packet as it receives. This means a VPIN state=1 sends D=1 (close turnout or signal green) in the DCC packet. This can be reversed if necessary.
+By default, the driver which defines a DCC accessory decoder does send out the same state change on the DCC packet as it receives. This means a VPIN state=1 sends D=1 (close turnout/point or signal green) in the DCC packet. This can be reversed if necessary.
 
 ```cpp
 #define HAL_ACCESSORY_COMMAND_REVERSE
 ```
 
-If you have issues with that the direction of the accessory commands is reversed (for example when converting from another CS to DCC-EX) then you can use this to reverse the sense of all accessory commands sent over DCC-EX. This #define likewise inverts the behaviour of the `<a>` command for triggering DCC Accessory Decoders, so that `<a addr subaddr 0>` generates a DCC packet with D=1 (close turnout) and `<a addr subaddr 1>` generates D=0 (throw turnout).
+If you have issues with that the direction of the accessory commands is reversed (for example when converting from another CS to DCC-EX) then you can use this to reverse the sense of all accessory commands sent over DCC-EX. This #define likewise inverts the behaviour of the `<a>` command for triggering DCC Accessory Decoders, so that `<a addr subaddr 0>` generates a DCC packet with D=1 (close turnout/point) and `<a addr subaddr 1>` generates D=0 (throw turnout/point).
 
 ```cpp
 #define DCC_ACCESSORY_COMMAND_REVERSE
