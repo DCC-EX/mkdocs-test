@@ -701,7 +701,7 @@
   
   
   <span class="md-ellipsis">
-    The DCC-EX Command Station
+    EX-CommandStation
     
   </span>
   
@@ -724,7 +724,7 @@
   
   
   <span class="md-ellipsis">
-    EX-CSB1 CommandStation Booster
+    EX-CSB1 Command Station/Booster
     
   </span>
   
@@ -935,7 +935,7 @@
   
   
   <span class="md-ellipsis">
-    Testing your Command Station
+    Testing your EX-CommandStation
     
   </span>
   
@@ -1254,7 +1254,7 @@
   
   
   <span class="md-ellipsis">
-    Accesssories
+    Accessories
     
   </span>
   
@@ -1265,7 +1265,7 @@
         <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_3_10_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2_3_10">
             <span class="md-nav__icon md-icon"></span>
-            Accesssories
+            Accessories
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -2505,7 +2505,7 @@
   
   
   <span class="md-ellipsis">
-    Maintaining multiple command stations
+    Maintaining multiple EX-CommandStations
     
   </span>
   
@@ -7124,7 +7124,7 @@
 <li>Note: Each Power District section must have 'dual insulated rail joiners' between each track section that connect and travel between one districts to another.</li>
 </ul>
 <h2 id="basic-functionality">Basic functionality<a class="headerlink" href="#basic-functionality" title="Permanent link">&para;</a></h2>
-<p>The <strong>DCC-EX EX-CommandStation</strong> has TrackManager commands that can change each district/track output to DC with appropriate polarity.  By associating a numeric road number as locoid (1..10239 the same range as DCC) with each district/track output the command station accepts incoming DCC throttle commands (Or EXRAIL automation commands) for that locoid and converts it to a DC output on every district/track output with the same locoid.</p>
+<p>The <strong>DCC-EX EX-CommandStation</strong> has TrackManager commands that can change each district/track output to DC with appropriate polarity.  By associating a numeric road number as locoid (1..10239 the same range as DCC) with each district/track output the <strong>EX-CommandStation</strong> accepts incoming DCC throttle commands (Or EXRAIL automation commands) for that locoid and converts it to a DC output on every district/track output with the same locoid.</p>
 <p>The throttles or EXRAIL are unaware that they are driving a DC districts/tracks and so any DCC Throttle such as Engine Driver that can talk to DCC-EX will work for DC. In effect, in DC mode, the throttle drives the track compared with DCC mode where the throttle drives the loco.</p>
 <p>Although the EX-CSB1 can be switched to DC operation by commands from the throttle (Engine Driver has a Track Manager panel to help do this) it is generally easier, for a fully DC layout, to configure it so that it starts up in the desired mode of DC Districts.</p>
 <p>Warning: The sometimes-alternate suggested technique of using a DCC decoder to output directly to a DC track instead internally to the loco motor is NOT RECOMMENDED as most decoders are not tolerant of a short between the motor outputs. This means a common track short could damage an expensive decoder.</p>
@@ -7154,13 +7154,13 @@
 <span class="w">   </span><span class="n">SET_POWER</span><span class="p">(</span><span class="n">B</span><span class="p">,</span><span class="n">ON</span><span class="p">)</span>
 <span class="w">   </span><span class="n">DONE</span>
 </code></pre></div>
-<p>This sequence will run as the command station starts up it will</p>
+<p>This sequence will run as the <strong>EX-CommandStation</strong> starts up it will:</p>
 <ul>
 <li>associate locoid 1 with district track A and switch it to DC.</li>
 <li>associate locoid 2 with district track B and switch it to DC.</li>
 <li>turn track power on. No power will be seen on the tracks until a throttle is used, but unless you SET_POWER ON the track will never receive power.</li>
 </ul>
-<p>Where the command station has 4 or more district/track outputs, you can also setup tracks C to D as appropriate using locoid or cab addresses 1 .. 10239.</p>
+<p>Where the <strong>EX-CommandStation</strong> has 4 or more district/track outputs, you can also setup tracks C to D as appropriate using locoid or cab addresses 1 .. 10239.</p>
 <h2 id="switching-between-tracks">Switching between tracks<a class="headerlink" href="#switching-between-tracks" title="Permanent link">&para;</a></h2>
 <p>In a simple DC double-track oval, the tracks are wired in opposite directions so that driving "forward" is in opposite directions on each oval.</p>
 <p>If you introduce turnouts/points that allow a train to cross from one track to another, it is necessary to switch the polarity of the "to" track to match that of the "from" track, switch the turnouts/points and associate the "to" track with the same locoid as the "from" track so that the throttle user can simply drive across the join.</p>
@@ -7197,7 +7197,7 @@
 while the train is in the loop, the main track leading into the loop must be switched to allow the train to exit the loop and continue back along the track without reversing the locomotive.
 There is no automatic polarity reversing for DC layouts, this must be programmed using EXRAIL track mode DCX using SET_TRACK (B, DCX) to suit the topology of your layout.</p>
 <h2 id="more-blocks">More blocks<a class="headerlink" href="#more-blocks" title="Permanent link">&para;</a></h2>
-<p>The separate track outouts supplied by the Command Station represent the number of separate throttle ids that may be operating. Like any large DC layout, the switching of throttle outputs to multiple other blocks can still take place using mechanical switches or relays which can be controlled by suitable EXRAIL sequences. Power routing turnouts/points operate as normal but may be awkward if you are building a new layout with tyhe intention of running DCC later.</p>
+<p>The separate track outouts supplied by the <strong>EX-CommandStation</strong> represent the number of separate throttle ids that may be operating. Like any large DC layout, the switching of throttle outputs to multiple other blocks can still take place using mechanical switches or relays which can be controlled by suitable EXRAIL sequences. Power routing turnouts/points operate as normal but may be awkward if you are building a new layout with tyhe intention of running DCC later.</p>
 <p>If you have several throttles operating the same locoid, they will automatically synchronise with each other.</p>
 
 
@@ -7219,7 +7219,7 @@ There is no automatic polarity reversing for DC layouts, this must be programmed
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 16, 2026 03:51:19 UTC">June 16, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 16, 2026 06:08:27 UTC">June 16, 2026</span>
   </span>
 
     
@@ -7258,7 +7258,7 @@ There is no automatic polarity reversing for DC layouts, this must be programmed
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../ex-csb1/" class="md-footer__link md-footer__link--prev" aria-label="Previous: EX-CSB1 CommandStation Booster">
+          <a href="../ex-csb1/" class="md-footer__link md-footer__link--prev" aria-label="Previous: EX-CSB1 Command Station/Booster">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -7268,7 +7268,7 @@ There is no automatic polarity reversing for DC layouts, this must be programmed
                 Previous
               </span>
               <div class="md-ellipsis">
-                EX-CSB1 CommandStation Booster
+                EX-CSB1 Command Station/Booster
               </div>
             </div>
           </a>

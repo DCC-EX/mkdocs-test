@@ -699,7 +699,7 @@
   
   
   <span class="md-ellipsis">
-    The DCC-EX Command Station
+    EX-CommandStation
     
   </span>
   
@@ -722,7 +722,7 @@
   
   
   <span class="md-ellipsis">
-    EX-CSB1 CommandStation Booster
+    EX-CSB1 Command Station/Booster
     
   </span>
   
@@ -837,7 +837,7 @@
   
   
   <span class="md-ellipsis">
-    Testing your Command Station
+    Testing your EX-CommandStation
     
   </span>
   
@@ -1156,7 +1156,7 @@
   
   
   <span class="md-ellipsis">
-    Accesssories
+    Accessories
     
   </span>
   
@@ -1167,7 +1167,7 @@
         <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_3_10_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2_3_10">
             <span class="md-nav__icon md-icon"></span>
-            Accesssories
+            Accessories
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -2407,7 +2407,7 @@
   
   
   <span class="md-ellipsis">
-    Maintaining multiple command stations
+    Maintaining multiple EX-CommandStations
     
   </span>
   
@@ -7184,14 +7184,14 @@
 <p>For quantities of 10 or less per annum, you may utilise a PCB manufacturing and assembly service such as JLCPCB without licensing fees. A donation to DCC-EX would be appreciated, so click the <a href="../../../contributing/contributing/">donate</a> button. The production files are available on the DCC-EX GitHub.</p>
 <p>Entrepreneurs wanting to use the design to offer commercial quantities to their local communities should contact Semify (service @ semify-eda.com) to arrange a bulk purchase or DCC-EX (support @ dcc-ex.com) for a license to manufacture. Licensing includes donating a royalty to DCC-EX per board sold.</p>
 <h2 id="assembly-with-ex-motorshield8874">Assembly with EX-MotorShield8874<a class="headerlink" href="#assembly-with-ex-motorshield8874" title="Permanent link">&para;</a></h2>
-<p>The shield stacks onto a CSB1 without modification. The CSB1 firmware must be configured with the EX-Installer to recognise the additional two tracks. </p>
-<p>For self-built command station, please consult the relevant build instructions.</p>
+<p>The shield stacks onto a CSB1 without modification. The CSB1 firmware must be configured with the EX-Installer to recognise the additional two tracks.</p>
+<p>For self-built <strong>EX-CommandStations</strong>, please consult the relevant build instructions.</p>
 <p><strong>DO NOT</strong> connect power to BOTH the EX-MotorShield8874 barrel jack and the underlying Arduino motherboard via its DC barrel jack as you may damage your Arduino and/or EX-MotorShield8874.</p>
 <h2 id="engineering-notes">Engineering notes<a class="headerlink" href="#engineering-notes" title="Permanent link">&para;</a></h2>
-<p>The <strong>EX‑MotorShield8874</strong> DC barrel jack is the only power source required to power both the tracks and the EX‑CommandStation into which it is plugged into. It supplies carefully regulated 7.2V DC power to the underlying Arduino R3 compatible motherboard via the VIN pin. This voltage is safely regulated down from the track power input to ensure Command Station motherboards will stay cool and work well. There is no need to power the Command Station via its barrel jack, or USB power. It is safe, however, to connect the USB cable as it will not create a conflict.</p>
+<p>The <strong>EX‑MotorShield8874</strong> DC barrel jack is the only power source required to power both the tracks and the EX‑CommandStation into which it is plugged into. It supplies carefully regulated 7.2V DC power to the underlying Arduino R3 compatible motherboard via the VIN pin. This voltage is safely regulated down from the track power input to ensure <strong>EX-CommandStation</strong> motherboards will stay cool and work well. There is no need to power the <strong>EX-CommandStation</strong> via its barrel jack, or USB power. It is safe, however, to connect the USB cable as it will not create a conflict.</p>
 <p>Applying a voltage above what a decoder was designed for, may permanently damage it, because the <strong>EX‑MotorShield8874</strong> does not drop voltage like the standard L298 based motor shields take care over track voltage selection.</p>
-<p><strong>NOTE:</strong> The <strong>EX‑MotorShield8874</strong> can supply up to 5A of track power per channel, a power supply of more than 10A peak capacity is required to run both channels at full peak current and have power left for the Command Station. A power supply that is unable to provide the current at which the software detects a short-circuit will not be safe as the Command Station will not be able to detect the short.</p>
-<p>If the track power supply is not plugged in, the Command Station will report track faults.</p>
+<p><strong>NOTE:</strong> The <strong>EX‑MotorShield8874</strong> can supply up to 5A of track power per channel, a power supply of more than 10A peak capacity is required to run both channels at full peak current and have power left for the <strong>EX-CommandStation</strong>. A power supply that is unable to provide the current at which the software detects a short-circuit will not be safe as the <strong>EX-CommandStation</strong> will not be able to detect the short.</p>
+<p>If the track power supply is not plugged in, the <strong>EX-CommandStation</strong> will report track faults.</p>
 <h2 id="stacking-two-motor-shields">Stacking two motor shields<a class="headerlink" href="#stacking-two-motor-shields" title="Permanent link">&para;</a></h2>
 <p>Stacking an EX-8874 and another motor shield type is <strong>not recommended</strong>. There are complex pin conflicts and software configuration requirements.</p>
 <p>The <strong>CSB1</strong> can only have a single <strong>EX8874</strong> stacked on it, unmodified. There are insufficient pins available on the internal ESP32 processor to handle more.</p>
@@ -7220,7 +7220,7 @@
 <p>Leaving the Fault pins on A4, A5 facilitates bending and jumpering them to nearby pins, such as<br />
 A6, A7 on Arduino Mega<br />
 PC2, PC3 on Nucleo-64</p>
-<p>After hardware installation, you will need to re-run the <a href="../../../installer/overview/">EX-Installer</a> to configure the Command Station code to recognize the new board and allow you to control the third and fourth tracks.</p>
+<p>After hardware installation, you will need to re-run the <a href="../../../installer/overview/">EX-Installer</a> to configure the <strong>EX-CommandStation</strong> code to recognize the new board and allow you to control the third and fourth tracks.</p>
 
 
 
@@ -7241,7 +7241,7 @@ PC2, PC3 on Nucleo-64</p>
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 15, 2026 11:40:40 UTC">June 15, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 16, 2026 06:08:27 UTC">June 16, 2026</span>
   </span>
 
     

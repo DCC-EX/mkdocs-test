@@ -701,7 +701,7 @@
   
   
   <span class="md-ellipsis">
-    The DCC-EX Command Station
+    EX-CommandStation
     
   </span>
   
@@ -724,7 +724,7 @@
   
   
   <span class="md-ellipsis">
-    EX-CSB1 CommandStation Booster
+    EX-CSB1 Command Station/Booster
     
   </span>
   
@@ -839,7 +839,7 @@
   
   
   <span class="md-ellipsis">
-    Testing your Command Station
+    Testing your EX-CommandStation
     
   </span>
   
@@ -1160,7 +1160,7 @@
   
   
   <span class="md-ellipsis">
-    Accesssories
+    Accessories
     
   </span>
   
@@ -1171,7 +1171,7 @@
         <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_3_10_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2_3_10">
             <span class="md-nav__icon md-icon"></span>
-            Accesssories
+            Accessories
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -2498,7 +2498,7 @@
   
   
   <span class="md-ellipsis">
-    Maintaining multiple command stations
+    Maintaining multiple EX-CommandStations
     
   </span>
   
@@ -7095,24 +7095,24 @@
 <p>The details below assume you are using an EX-CSB1 command station or a DIY station with an EX8874 motor shield and Wifi connection. Otherwise the steps are the same but the wiring is trickier without the Qwiic sockets and testing requires command input.</p>
 <p>You will need the following for up to 16 servos.</p>
 <ul>
-<li>Your Command Station with power supply and USB connection to your PC.</li>
+<li>Your <strong>EX-CommandStation</strong> with power supply and USB connection to your PC.</li>
 <li>Qwiic cable for connection to CSB1, with Qwiic or dupont connectors for connection to PCA9685.</li>
 <li>PCA9685 module</li>
 <li>Up to 16 SG90 servos</li>
 <li>EX-Installer downloaded on your PC</li>
 <li>(Optionally) Android phone with EX-Toolbox installed</li>
-<li>A servo power supply 5V 2A DC -- and not taken from the command station.</li>
+<li>A servo power supply 5V 2A DC -- and not taken from the <strong>EX-CommandStation</strong>.</li>
 </ul>
 <h2 id="follow-the-steps-below">Follow the steps below<a class="headerlink" href="#follow-the-steps-below" title="Permanent link">&para;</a></h2>
 <ol>
-<li>Turn off power to your Command station and unplug the USB cable and power supply.</li>
+<li>Turn off power to your <strong>EX-CommandStation</strong> and unplug the USB cable and power supply.</li>
 <li>Connect the Qwiic cable between the CSB1 or EX8874 and the PCA9685 module.<BR>
  <img alt="CSB1" src="../../../../_static/images/ex-csb1/csb1qwiic.jpg" style="width: 70%" /> <BR>
 When using Mega, the I2C bus is 5V.<BR>
 Use the I2C headers, where 5V is available (IOREF/Vdd).<BR>
  <img alt="mega" src="../../../../_static/images/i2c-devices/EX8874_i2c_header.png" style="width: 70%" /> </li>
 <li>
-<p>Run the EX-Installer on your PC and select the cpu type, then the Serial Monitor. You should see output similar to the following where the Command Station enumerates all the I2C devices it can find.
+<p>Run the EX-Installer on your PC and select the cpu type, then the Serial Monitor. You should see output similar to the following where the <strong>EX-CommandStation</strong> enumerates all the I2C devices it can find.
 from the startup logs using the serial monitor</p>
 <div class="language-cpp highlight"><pre><span></span><code><span class="o">&lt;*</span><span class="w"> </span><span class="n">I2C</span><span class="w"> </span><span class="n">Device</span><span class="w"> </span><span class="n">found</span><span class="w"> </span><span class="n">at</span><span class="w"> </span><span class="mh">0x3C</span><span class="p">,</span><span class="w"> </span><span class="n">OLED</span><span class="w"> </span><span class="n">Display</span><span class="w"> </span><span class="k">or</span><span class="w"> </span><span class="n">HMC583L</span><span class="w"> </span><span class="n">Magnetometer</span><span class="o">?</span><span class="w"> </span><span class="o">*&gt;</span>
 <span class="o">&lt;*</span><span class="w"> </span><span class="n">I2C</span><span class="w"> </span><span class="n">Device</span><span class="w"> </span><span class="n">found</span><span class="w"> </span><span class="n">at</span><span class="w"> </span><span class="mh">0x40</span><span class="p">,</span><span class="w"> </span><span class="n">PWM</span><span class="o">?</span><span class="w"> </span><span class="o">*&gt;</span>
@@ -7148,7 +7148,7 @@ from the startup logs using the serial monitor</p>
 </code></pre></div>
 </li>
 <li>
-<p>Reload the command station from the installer.</p>
+<p>Reload the <strong>EX-CommandStation</strong> from the installer.</p>
 </li>
 </ol>
 <h2 id="test-your-turnoutpoint-definitions">Test your turnout/point definitions<a class="headerlink" href="#test-your-turnoutpoint-definitions" title="Permanent link">&para;</a></h2>
@@ -7186,7 +7186,7 @@ Configure additional PCA9685 in myAutomation.h.</p>
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 16, 2026 03:51:19 UTC">June 16, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 16, 2026 06:08:27 UTC">June 16, 2026</span>
   </span>
 
     

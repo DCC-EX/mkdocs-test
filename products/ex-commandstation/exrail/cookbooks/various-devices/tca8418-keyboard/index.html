@@ -701,7 +701,7 @@
   
   
   <span class="md-ellipsis">
-    The DCC-EX Command Station
+    EX-CommandStation
     
   </span>
   
@@ -724,7 +724,7 @@
   
   
   <span class="md-ellipsis">
-    EX-CSB1 CommandStation Booster
+    EX-CSB1 Command Station/Booster
     
   </span>
   
@@ -839,7 +839,7 @@
   
   
   <span class="md-ellipsis">
-    Testing your Command Station
+    Testing your EX-CommandStation
     
   </span>
   
@@ -1158,7 +1158,7 @@
   
   
   <span class="md-ellipsis">
-    Accesssories
+    Accessories
     
   </span>
   
@@ -1169,7 +1169,7 @@
         <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_3_10_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2_3_10">
             <span class="md-nav__icon md-icon"></span>
-            Accesssories
+            Accessories
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -2413,7 +2413,7 @@
   
   
   <span class="md-ellipsis">
-    Maintaining multiple command stations
+    Maintaining multiple EX-CommandStations
     
   </span>
   
@@ -6967,7 +6967,7 @@
 
 <h1 id="tca8418-keyboard-scanner">TCA8418 keyboard scanner<a class="headerlink" href="#tca8418-keyboard-scanner" title="Permanent link">&para;</a></h1>
 <p>The TCA8418 IC from Texas Instruments is a low cost and very capable GPIO and keyboard scanner. Used as a keyboard scanner, it has 8 rows of 10 columns of IO pins which allow encoding of up to 80 buttons. The IC is available on an Adafruit board with Qwiic I2C interconnect called the <a href="https://www.adafruit.com/product/4918">Adafruit TCA8418 Keypad Matrix and GPIO Expander Breakout</a>.</p>
-<p>The great advantage of this IC is that the keyboard scanning is done continuously, and it has a 10-element event queue, so even if you don't get to the interrupt immediately, keypress and release events will be held for you. Since it's I2C its very easy to use with any DCC-EX command station.</p>
+<p>The great advantage of this IC is that the keyboard scanning is done continuously, and it has a 10-element event queue, so even if you don't get to the interrupt immediately, keypress and release events will be held for you. Since it's I2C its very easy to use with any <strong>DCC-EX EX-CommandStation</strong>.</p>
 <p>The TCA8418 driver presently configures the IC in the full 8x10 keyboard scanning mode, and then maps each key down/key up event to the state of a single vpin for extremely easy use from within EX-RAIL and JMRI as each key looks like an individual sensor.</p>
 <p>This is ideal for mimic panels where you may need a lot of buttons, but with this board you can use just 18 wires to handle as many as 80 buttons.</p>
 <p>By adding a simple HAL statement to myAutomation.h it creates between 1 and 80 buttons it will report back.</p>
@@ -7016,7 +7016,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="January 29, 2026 14:56:48 UTC">January 29, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 16, 2026 06:08:27 UTC">June 16, 2026</span>
   </span>
 
     

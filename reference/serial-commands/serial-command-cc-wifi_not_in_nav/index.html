@@ -690,7 +690,7 @@
   
   
   <span class="md-ellipsis">
-    The DCC-EX Command Station
+    EX-CommandStation
     
   </span>
   
@@ -713,7 +713,7 @@
   
   
   <span class="md-ellipsis">
-    EX-CSB1 CommandStation Booster
+    EX-CSB1 Command Station/Booster
     
   </span>
   
@@ -828,7 +828,7 @@
   
   
   <span class="md-ellipsis">
-    Testing your Command Station
+    Testing your EX-CommandStation
     
   </span>
   
@@ -1147,7 +1147,7 @@
   
   
   <span class="md-ellipsis">
-    Accesssories
+    Accessories
     
   </span>
   
@@ -1158,7 +1158,7 @@
         <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_3_10_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2_3_10">
             <span class="md-nav__icon md-icon"></span>
-            Accesssories
+            Accessories
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -2398,7 +2398,7 @@
   
   
   <span class="md-ellipsis">
-    Maintaining multiple command stations
+    Maintaining multiple EX-CommandStations
     
   </span>
   
@@ -7020,8 +7020,8 @@
 
 
 <h1 id="c-wifi-onoffaphiddenaptempdefaulthostname-various-parameters-setup-the-wifi"><small><code>&lt;C WIFI ON|OFF|AP|HIDDENAP|TEMP|DEFAULT|HOSTNAME [«various parameters»]&gt;</code></small> <br/> Setup the WiFi<a class="headerlink" href="#c-wifi-onoffaphiddenaptempdefaulthostname-various-parameters-setup-the-wifi" title="Permanent link">&para;</a></h1>
-<p>Serial commands to setup the WiFi on the EX-Command Stations.
-<span style="color:red">For EX-CSB1 and ESP32 based command stations only. Version 5.7.0 or later only.</span></p>
+<p>Serial commands to setup the WiFi on the <strong>EX-CommandStations</strong>.
+<span style="color:red">For EX-CSB1 and ESP32 based <strong>EX-CommandStations</strong> only. Version 5.7.0 or later only.</span></p>
 <h2 id="commands">Commands<a class="headerlink" href="#commands" title="Permanent link">&para;</a></h2>
 <ul>
 <li><code>&lt;C WIFI "«ssid»" "«password»"&gt;</code> set WiFi ssid and password - Station Mode (STA)</li>
@@ -7037,7 +7037,7 @@
 <h2 id="parameters">Parameters<a class="headerlink" href="#parameters" title="Permanent link">&para;</a></h2>
 <ul>
 <li>
-<p><strong>ssid</strong>: ssid (network name) to set the command station to use (AP) or connect to (STA). Must be in quotes.</p>
+<p><strong>ssid</strong>: ssid (network name) to set the <strong>EX-CommandStation</strong> to use (AP) or connect to (STA). Must be in quotes.</p>
 <p>Recommend that you avoid space characters in the ssid.</p>
 </li>
 <li>
@@ -7049,23 +7049,23 @@
 <p>The default channel is set to <code>11</code>. If you need to use an alternate channel (we recommend using only <code>1</code>,<code>6</code>, or <code>11</code>) you may change it with the command</p>
 </li>
 <li>
-<p><strong>hostname</strong>: the name that appears in your Throttle app, once you have connected to the appropriate network (ssid) for the Command Station.</p>
+<p><strong>hostname</strong>: the name that appears in your Throttle app, once you have connected to the appropriate network (ssid) for the <strong>EX-CommandStation</strong>.</p>
 </li>
 </ul>
 <h2 id="response">Response<a class="headerlink" href="#response" title="Permanent link">&para;</a></h2>
-<p>N/A. The command station will restart.</p>
+<p>N/A. The <strong>EX-CommandStation</strong> will restart.</p>
 <h2 id="notes">Notes<a class="headerlink" href="#notes" title="Permanent link">&para;</a></h2>
 <ul>
-<li>In every case above, the Command Station will restart to apply the new settings. You will need to reconnect to the Command Station with whatever interface you are using.</li>
+<li>In every case above, the <strong>EX-CommandStation</strong> will restart to apply the new settings. You will need to reconnect to the <strong>EX-CommandStation</strong> with whatever interface you are using.</li>
 <li>Only Station (STA) mode and the HOSTNAME can be changed over WiFi.</li>
-<li>Access Point (AP) mode changes require a serial/USB connection. This is a security feature. If you could change AP mode settings over WiFi, then anyone who could connect to the Command Station’s WiFi network could change the AP settings and potentially lock you out of your Command Station. By requiring a USB connection for AP mode changes, we ensure that only someone with physical access to the Command Station can modify these critical settings.</li>
+<li>Access Point (AP) mode changes require a serial/USB connection. This is a security feature. If you could change AP mode settings over WiFi, then anyone who could connect to the <strong>EX-CommandStation's</strong> WiFi network could change the AP settings and potentially lock you out of your <strong>EX-CommandStation</strong>. By requiring a USB connection for AP mode changes, we ensure that only someone with physical access to the <strong>EX-CommandStation</strong> can modify these critical settings.</li>
 <li>
-<p>Hidden AP mode: If enabled, the Command Station’s WiFi network will not be visible in the list of available networks on devices. This can enhance security by making it less obvious to potential attackers, but it also means that users will need to manually enter the network name (SSID) to connect.</p>
+<p>Hidden AP mode: If enabled, the <strong>EX-CommandStation's</strong> WiFi network will not be visible in the list of available networks on devices. This can enhance security by making it less obvious to potential attackers, but it also means that users will need to manually enter the network name (SSID) to connect.</p>
 <p>Note that this does not provide any performance advantages.</p>
 </li>
 <li>
-<p>Temporary STA mode: If enabled, the Command Station will start in Station mode and connect to an existing WiFi network. But will forget this setting the next time the EX‑CommandStation is restarted.</p>
-<p>This may be useful if visiting a location with a different WiFi network which you would like to connect to without changing the permanent WiFi settings on the Command Station.</p>
+<p>Temporary STA mode: If enabled, the <strong>EX-CommandStation</strong> will start in Station mode and connect to an existing WiFi network. But will forget this setting the next time the EX‑CommandStation is restarted.</p>
+<p>This may be useful if visiting a location with a different WiFi network which you would like to connect to without changing the permanent WiFi settings on the <strong>EX-CommandStation</strong>.</p>
 </li>
 </ul>
 <hr />
@@ -7103,7 +7103,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 16, 2026 01:25:06 UTC">June 16, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 16, 2026 06:08:27 UTC">June 16, 2026</span>
   </span>
 
     

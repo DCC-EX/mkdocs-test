@@ -699,7 +699,7 @@
   
   
   <span class="md-ellipsis">
-    The DCC-EX Command Station
+    EX-CommandStation
     
   </span>
   
@@ -722,7 +722,7 @@
   
   
   <span class="md-ellipsis">
-    EX-CSB1 CommandStation Booster
+    EX-CSB1 Command Station/Booster
     
   </span>
   
@@ -837,7 +837,7 @@
   
   
   <span class="md-ellipsis">
-    Testing your Command Station
+    Testing your EX-CommandStation
     
   </span>
   
@@ -1156,7 +1156,7 @@
   
   
   <span class="md-ellipsis">
-    Accesssories
+    Accessories
     
   </span>
   
@@ -1167,7 +1167,7 @@
         <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_3_10_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2_3_10">
             <span class="md-nav__icon md-icon"></span>
-            Accesssories
+            Accessories
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -2407,7 +2407,7 @@
   
   
   <span class="md-ellipsis">
-    Maintaining multiple command stations
+    Maintaining multiple EX-CommandStations
     
   </span>
   
@@ -7444,8 +7444,8 @@
 <p><img alt="EX-WebThrottle - Connect button" src="../../../_static/images/ex-webthrottle/connect-button.png" width="50%" /></p>
 <p>Next, click on the <code>Connect EX-CS</code> button.</p>
 <p>When using the serial connection, if the program finds any compatible devices, it will open a popup a window showing you a selection. It may show a line at the top such as "Arduino Mega 2560 (COM3)". Your com port may vary. Click on your board to select it and then click the <code>Connect EX-CS</code> button.</p>
-<p>You should then be connected to the <strong>EX-CommandStation</strong> and should see the response from the Command Station in the log textbox of the debug console at the bottom of the throttle window. Make sure your debug console is open. If it isn't, use the <code>Debug Console</code> slider button in the lower lower right to open it.</p>
-<p>When the command station is ready to use you should see <code>[i] EX-CommandStation is READY</code> appear in the log.</p>
+<p>You should then be connected to the <strong>EX-CommandStation</strong> and should see the response from the <strong>EX-CommandStation</strong> in the log textbox of the debug console at the bottom of the throttle window. Make sure your debug console is open. If it isn't, use the <code>Debug Console</code> slider button in the lower lower right to open it.</p>
+<p>When the <strong>EX-CommandStation</strong> is ready to use you should see <code>[i] EX-CommandStation is READY</code> appear in the log.</p>
 <p>Now you are ready to run trains! Place your loco on the track and click the <code>Power</code> slider button to turn on power to your track (if not already on). You should see LEDs on your Motor Driver and an indication that your loco has power.</p>
 <p>.. note:: Make sure you place the loco on the <em>MAIN</em> track, <strong>not</strong> the PROG track. Check your wiring. On an  Motor Driver, Motor Output "A" should connect to your MAIN track and "B" to the PROGRAM track.</p>
 <p><img align="right" alt="EX-WebThrottle" src="../../../_static/images/ex-webthrottle/loco-id.png" width="50%" /></p>
@@ -7453,18 +7453,18 @@
 <p>You should now have full control over your loco.</p>
 <p><img align="right" alt="EX-WebThrottle - Speed and Direction" src="../../../_static/images/ex-webthrottle/speed-and-direction-controls.png" width="40%" /></p>
 <p>In the throttle control area, to the left of the function buttons, are vertical controls to control direction. The up arrow selects forward, the square button is stop and the down arrow is reverse.</p>
-<p>All the function buttons should be working, so you can play with the headlight, horn and bell and any other function assigned to a function button. The commands being sent to the Command Station and its responses will display in the log window if it is open</p>
+<p>All the function buttons should be working, so you can play with the headlight, horn and bell and any other function assigned to a function button. The commands being sent to the <strong>EX-CommandStation</strong> and its responses will display in the log window if it is open</p>
 <p>The circular control or vertical slider (chosen by the throttle select slider) can be moved by clicking and holding down the mouse button and dragging, clicking at a spot where you want the throttle to move, or clicking the <code>+</code> and <code>-</code> buttons.</p>
 <hr />
 <h3 id="issuing-direct-commands">Issuing Direct Commands<a class="headerlink" href="#issuing-direct-commands" title="Permanent link">&para;</a></h3>
 <p><img align="right" alt="EX-WebThrottle - Direct commands" src="../../../_static/images/ex-webthrottle/direct-commands.png" width="50%" /></p>
 <p>Once you are connected, you can also send commands directly to the <strong>EX-CommandStation</strong>.</p>
-<p>e.g. You can send the <code>&lt;s&gt;</code> command in the "direct command" textbox to get status information from your Command Station. To do this just enter <code>s</code> (without the quotes) and press the <code>Send</code> button. |BR| You should see <code>&lt;iDCC-EX...&gt;</code> returned in the log window with your version, type of Arduino, type of motor driver, and some other information.</p>
+<p>e.g. You can send the <code>&lt;s&gt;</code> command in the "direct command" textbox to get status information from your <strong>EX-CommandStation</strong>. To do this just enter <code>s</code> (without the quotes) and press the <code>Send</code> button. |BR| You should see <code>&lt;iDCC-EX...&gt;</code> returned in the log window with your version, type of Arduino, type of motor driver, and some other information.</p>
 <p>You can send any DCC-EX Native command in this way.</p>
 <hr />
 <h3 id="emulator">Emulator<a class="headerlink" href="#emulator" title="Permanent link">&para;</a></h3>
 <p>To use the program in to emulate an <strong>EX-CommandStation</strong>, without actually connecting to a real one, click on the <code>Serial</code> dropdown button and select <code>Emulator</code> to run in emulator mode, then follow to instructions above from <code>Connect</code>.</p>
-<p><em>Note: Not all Command Station functions are fully supported in the emulator. This means that although the software works, not all the responses will be shown in the debug console.</em></p>
+<p><em>Note: Not all EX-CommandStation functions are fully supported in the emulator. This means that although the software works, not all the responses will be shown in the debug console.</em></p>
 <hr />
 <h2 id="routesautomation">Routes/Automation<a class="headerlink" href="#routesautomation" title="Permanent link">&para;</a></h2>
 <p><img align="right" alt="EX-WebThrottle - Routes/Automation" src="../../../_static/images/ex-webthrottle/routes-automation.png" width="40%" /></p>
@@ -7555,7 +7555,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 13, 2026 04:51:11 UTC">June 13, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 16, 2026 06:08:27 UTC">June 16, 2026</span>
   </span>
 
     

@@ -27,7 +27,7 @@
     
     
       
-        <title>Testing your Command Station - DCC-EX Model Train Control, Animation, and Automation</title>
+        <title>Testing your EX-CommandStation - DCC-EX Model Train Control, Animation, and Automation</title>
       
     
     
@@ -83,7 +83,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#testing-your-command-station" class="md-skip">
+        <a href="#testing-your-ex-commandstation" class="md-skip">
           Skip to content
         </a>
       
@@ -116,7 +116,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Testing your Command Station
+              Testing your EX-CommandStation
             
           </span>
         </div>
@@ -701,7 +701,7 @@
   
   
   <span class="md-ellipsis">
-    The DCC-EX Command Station
+    EX-CommandStation
     
   </span>
   
@@ -724,7 +724,7 @@
   
   
   <span class="md-ellipsis">
-    EX-CSB1 CommandStation Booster
+    EX-CSB1 Command Station/Booster
     
   </span>
   
@@ -848,7 +848,7 @@
   
   
   <span class="md-ellipsis">
-    Testing your Command Station
+    Testing your EX-CommandStation
     
   </span>
   
@@ -861,7 +861,7 @@
   
   
   <span class="md-ellipsis">
-    Testing your Command Station
+    Testing your EX-CommandStation
     
   </span>
   
@@ -1269,7 +1269,7 @@
   
   
   <span class="md-ellipsis">
-    Accesssories
+    Accessories
     
   </span>
   
@@ -1280,7 +1280,7 @@
         <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_3_10_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2_3_10">
             <span class="md-nav__icon md-icon"></span>
-            Accesssories
+            Accessories
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -2520,7 +2520,7 @@
   
   
   <span class="md-ellipsis">
-    Maintaining multiple command stations
+    Maintaining multiple EX-CommandStations
     
   </span>
   
@@ -7137,9 +7137,9 @@
   
 
 
-<h1 id="testing-your-command-station">Testing your Command Station<a class="headerlink" href="#testing-your-command-station" title="Permanent link">&para;</a></h1>
+<h1 id="testing-your-ex-commandstation">Testing your EX-CommandStation<a class="headerlink" href="#testing-your-ex-commandstation" title="Permanent link">&para;</a></h1>
 <p>(LOTS OF <mark>TODO</mark> in this file)</p>
-<p>The simplest and most direct testing method is to use a serial monitor to talk directly to the USB connection of you command station. This is a fundamental aspect of the Arduino system and thus avoids issues such as wifi connections. Indeed, this is the only way to see what's going wrong if your problems are wifi or Etrhernet related.</p>
+<p>The simplest and most direct testing method is to use a serial monitor to talk directly to the USB connection of your <strong>EX-CommandStation</strong>. This is a fundamental aspect of the Arduino system and thus avoids issues such as wifi connections. Indeed, this is the only way to see what's going wrong if your problems are wifi or Etrhernet related.</p>
 <h2 id="serial-monitors">Serial Monitors<a class="headerlink" href="#serial-monitors" title="Permanent link">&para;</a></h2>
 <p>There are several serial monitors available:</p>
 <p>Instructions on using Device Monitor.</p>
@@ -7152,9 +7152,9 @@
 <li>Built in to JMRI or other train control software.
 (<mark>TODO</mark>.. above provide links to individual side-pages showing how to get at the serial monitor in each case)</li>
 </ul>
-<p>Whichever you use, please ensure the baud rate is set to 115200 so that it matches that used by the command station. (Installer anf WebThrottle do this automatically)</p>
-<p>Its important to note that only one program on your PC can be connected to the Command Station USB. It is a common cause of error messages if you try and open a serial monitor when one of the other programs is still running.</p>
-<p>In most cases, connecting a serial monitor causes the Command station to restart.</p>
+<p>Whichever you use, please ensure the baud rate is set to 115200 so that it matches that used by the <strong>EX-CommandStation</strong>. (Installer anf WebThrottle do this automatically)</p>
+<p>Its important to note that only one program on your PC can be connected to the <strong>EX-CommandStation</strong> via USB. It is a common cause of error messages if you try and open a serial monitor when one of the other programs is still running.</p>
+<p>In most cases, connecting a serial monitor causes the <strong>EX-CommandStation</strong> to restart.</p>
 <h2 id="simple-testing-commands-main-track">Simple testing commands (Main track)<a class="headerlink" href="#simple-testing-commands-main-track" title="Permanent link">&para;</a></h2>
 <p>Commands are entered as shown, complete with the <code>&lt; &gt;</code> markers. Case is important because <code>&lt;T</code> is a completely different command to <code>&lt;t</code></p>
 <h3 id="check-communication-and-version">Check communication and version<a class="headerlink" href="#check-communication-and-version" title="Permanent link">&para;</a></h3>
@@ -7178,7 +7178,7 @@ If you don't know the loco address, then you can find out using the <a href="../
 <p><code>&lt;F 3 0 0&gt;</code>   Turn off loco 3 function 0</p>
 <h2 id="things-to-remember">Things to remember<a class="headerlink" href="#things-to-remember" title="Permanent link">&para;</a></h2>
 <p>The commands <code>&lt;t</code> and <code>&lt;F</code> will normally reply with a <code>&lt;l</code> response when something about a loco is changed. This response is designed for throttles to share information and not generally for human reading.</p>
-<p>A response of <code>&lt;X&gt;</code> indicates the command was not understood by the command station, so check your typing as <code>&lt;T</code> and <code>&lt;f</code> are not the same as <code>&lt;t</code> and <code>&lt;F</code>.</p>
+<p>A response of <code>&lt;X&gt;</code> indicates the command was not understood by the <strong>EX-CommandStation</strong>, so check your typing as <code>&lt;T</code> and <code>&lt;f</code> are not the same as <code>&lt;t</code> and <code>&lt;F</code>.</p>
 <p>DCC generally has no way of knowing whether the loco exists, is listening or has dirty wheels. If you get no movement the first thing to do is check the track is clean.</p>
 
 
@@ -7200,7 +7200,7 @@ If you don't know the loco address, then you can find out using the <a href="../
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="February 28, 2026 12:50:03 UTC">February 28, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 16, 2026 06:08:27 UTC">June 16, 2026</span>
   </span>
 
     
