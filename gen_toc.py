@@ -96,7 +96,7 @@ def on_nav(nav: Navigation, config, files) -> Navigation:
                 non_nav_files.append(rel_path)
 
     if non_nav_files:
-        toc_lines.append("\n## Files Not In Navigation\n")
+        toc_lines.append("\n## Pages Not In Navigation\n")
         for rel_path in sorted(non_nav_files):
             full_file_path = os.path.join(docs_dir, rel_path)
             title = get_h1_title(full_file_path) or os.path.basename(rel_path)

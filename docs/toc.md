@@ -241,7 +241,7 @@ li a {
         - [Working With MkDocs](contributing\documentation\mkdocs-features.md)
         - [Mermaid Diagrams](contributing\documentation\mermaid-diagrams.md)
 
-## Files Not In Navigation
+## Pages Not In Navigation
 
 - [WiFi Configuration for version 5.7.0+ <br/><small>Graphical User Interface Options</small>](products/ex-commandstation/config-wifi-esp32-gui-options_not_in_nav.md)
 - [Connecting WiFi Throttles via USB](products/ex-toolbox/connect_wifi_throttle_via_usb_not_in_nav.md)
@@ -249,11 +249,13 @@ li a {
 - [``<! [P|Q|R]>`` <br/>Emergence Stop or Pause](reference/serial-commands/serial-command-!_not_in_nav.md)
 - [``<1|0 [«track»]>`` <br/>Turn track power on or off](reference/serial-commands/serial-command-1-0_not_in_nav.md)
 - [<small>``<C WIFI ON|OFF|AP|HIDDENAP|TEMP|DEFAULT|HOSTNAME [«various parameters»]>``</small> <br/> Setup the WiFi](reference/serial-commands/serial-command-cc-wifi_not_in_nav.md)
+- [<small>``<D WIFI ON|OFF|SHOW>``</small> <br/> WiFi diagnostics](reference/serial-commands/serial-command-dd-wifi_not_in_nav.md)
 - [<small>``<D ACK LIMIT|MAX|MIN|OFF|ON [«value» [MS]]>`` <br/>``<C PROGBOOST>``</small> <br/>Modify System PROG track settings](reference/serial-commands/serial-command-dd_ack_not_in_nav.md)
 - [<small>``<= [«trackletter» «mode»] [«id»]>``</small> <br/>Request or Configure Track Manager <span style="display:none;">(_equals)</span>](reference/serial-commands/serial-command-equals_not_in_nav.md)
 - [<small>``<F «loco» [«function» «state»]|[DCCFREQ «freqValue»]>``</small> <br/>Set decoder functions or set PWM frequency](reference/serial-commands/serial-command-ff_not_in_nav.md)
 - [<small>``<I [«id»] [«various parameters»]>``</small> <br/><small>``<D TT «vpin» «steps» [«activity]>``</small> <br/><small>``<J O [«id»]>``</small> &nbsp; <small>``<J P «id»>``</small><br/>Manage Turntables](reference/serial-commands/serial-command-ii_not_in_nav.md)
 - [<small>``<J A [«id»]>``</small> <br/><small>``</ [START|PAUSE|RESUME|KILL] [«various parameters»]>``</small> <br/> List, Start or Stop Automations/Sequences](reference/serial-commands/serial-command-jj-aa-and-slash_not_in_nav.md)
+- [<small>``<J M [«various parameters»]>``</small> <br/> Manage Stash Values](reference/serial-commands/serial-command-jj-mm_not_in_nav.md)
 - [<small>``<J R [«id»]>``</small> <br/>Request Roster info](reference/serial-commands/serial-command-jj-rr_not_in_nav.md)
 - [<small>``<Q>``</small> &nbsp; <small>``<S «id» [«vpin» «pullup»>]``</small> <br/>Manage Sensors](reference/serial-commands/serial-command-qq-and-ss_not_in_nav.md)
 - [<small>``<R [«cv»|LOCOID|CONSIST]>`` <br/>``<r «loco» «cv»>`` <br/>``<W [«loco»]|[«cv» «value»]|[«loco» «cv» «bitValue» «bit»]|[CONSIST «loco» [REVERSE]]>`` <br/>``<V [«cv» «value»]|[«cv» «bit» «bitValue»]>`` <br/>``<B «cv» «bit» «bitValue»>`` <br/>``<b «loco» «cv» «bit» «bitValue»>``</small> <br/>Read and write CVs](reference/serial-commands/serial-command-rr-and-ww_not_in_nav.md)
