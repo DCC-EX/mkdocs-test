@@ -1,5 +1,6 @@
 import os
 import re
+import html
 from mkdocs.structure.nav import Navigation, Section, Page
 
 def on_nav(nav: Navigation, config, files) -> Navigation:
@@ -11,13 +12,14 @@ def on_nav(nav: Navigation, config, files) -> Navigation:
 "li {\n" +
 "    margin: 0px;\n" +
 "    border: 0px;\n" +
-"    line-height: 100%;\n" +
+"    line-height: 90%;\n" +
 "}\n" +
 "li a {\n" +
 "    font-weight: 500;\n" +
 "    font-size: 85%;\n" +
 "}\n" +
-"</style>\n\n"]
+"</style>\n\n" +
+"## Indexed Pages\n\n"]
 
     # Helper function to find the first H1 in a markdown file
     def get_h1_title(file_path):
@@ -35,6 +37,32 @@ def on_nav(nav: Navigation, config, files) -> Navigation:
         except Exception:
             pass
         return None
+
+    # Helper to collect all top-level H2 headings (## Heading) from a markdown file
+    def get_h2_headings(file_path):
+        headings = []
+        if not os.path.exists(file_path):
+            return headings
+        try:
+            with open(file_path, "r", encoding="utf-8") as f:
+                for line in f:
+                    cleaned = line.strip()
+                    # Match H2 but not H3+ (i.e., starts with '##' but not '###')
+                    if cleaned.startswith("##") and not cleaned.startswith("###"):
+                        h2_text = cleaned.lstrip("#").strip()
+                        # Remove Markdown image syntax: ![alt](url)
+                        h2_text = re.sub(r'!\[.*?\]\(.*?\)', '', h2_text)
+                        # Remove HTML <img ...> tags
+                        h2_text = re.sub(r'<img[^>]*>', '', h2_text)
+                        # Remove template braces like {{ ... }} and single { ... }
+                        h2_text = re.sub(r'\{\{.*?\}\}', '', h2_text)
+                        h2_text = re.sub(r'\{[^}]*\}', '', h2_text)
+                        h2_text = h2_text.strip()
+                        if h2_text:
+                            headings.append(h2_text)
+        except Exception:
+            pass
+        return headings
 
     # Define a recursive loop to travel through awesome-nav's compiled classes
     def parse_nav_object(nav_item, depth=0):
@@ -80,7 +108,16 @@ def on_nav(nav: Navigation, config, files) -> Navigation:
             else:
                 display_title = title
 
-            toc_lines.append(f"{indent}- [{display_title}]({url_path})")
+            # Gather H2 headings to use as hover text (title attribute)
+            h2s = get_h2_headings(full_file_path)
+            if h2s:
+                # Join H2s with newlines, escape HTML and replace newlines with '&#10;' for reliable tooltip line breaks
+                tooltip = html.escape("\n".join(h2s)).replace("\n", "&#10;")
+                link_html = f'<a href="{url_path}" title="{tooltip}">{display_title}</a>'
+            else:
+                link_html = f'<a href="{url_path}">{display_title}</a>'
+
+            toc_lines.append(f"{indent}- {link_html}")
 
     # Cycle sequentially through awesome-nav's resolved root order
     for item in nav.items:
@@ -100,7 +137,13 @@ def on_nav(nav: Navigation, config, files) -> Navigation:
         for rel_path in sorted(non_nav_files):
             full_file_path = os.path.join(docs_dir, rel_path)
             title = get_h1_title(full_file_path) or os.path.basename(rel_path)
-            toc_lines.append(f"- [{title}]({rel_path})")
+            h2s = get_h2_headings(full_file_path)
+            if h2s:
+                tooltip = html.escape("\n".join(h2s)).replace("\n", "&#10;")
+                link_html = f'<a href="{rel_path}" title="{tooltip}">{title}</a>'
+            else:
+                link_html = f'<a href="{rel_path}">{title}</a>'
+            toc_lines.append(f"- {link_html}")
 
     # Physically save the table of contents 
     with open(toc_path, "w", encoding="utf-8") as f:
