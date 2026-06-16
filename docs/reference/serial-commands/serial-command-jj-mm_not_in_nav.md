@@ -46,7 +46,7 @@ Repeated for each defined Stash where loco is not zero:
 
 ## Notes
 
-* ==TODO==
+* A negative locoId value may be stashed to indicate that the loco will operate with inverted direction.
 
 ----
 
