@@ -11,7 +11,7 @@ Essentially, there is no automatic hardware type detection so it is necessary fo
 
 Once the driver and its information have been correctly defined, the pins on the device are addressed purely by VPIN number in the same way as any other Arduino pin. This significantly simplifies any code that has to set or test the pins.
 
-In addition, it is not necessary to define each pin as input or output as EXRAIL will work this out automatically and configure the device. However, youy can't use the same pin for output and input. 
+In addition, it is not necessary to define each pin as input or output as **EXRAIL** will work this out automatically and configure the device. However, youy can't use the same pin for output and input. 
 
 ## Device variations
 
@@ -22,7 +22,7 @@ In addition, it is not necessary to define each pin as input or output as EXRAIL
 
 ## Defining devices
 
-These devices are defined by using HAL statements in your EXRAIL script (myAutomation.h or its included files).
+These devices are defined by using HAL statements in your **EXRAIL** script (myAutomation.h or its included files).
 
 First step is to run the **EX-CommandStation** software without the drivers and note what addresses the I2C scan comes up with.
 

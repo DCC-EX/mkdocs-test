@@ -17,7 +17,7 @@ Note that a negative locoid may be stashed to indicate that the loco will operat
 
 The following Stash  commands are available:
 
- | EXRAIL command | Serial protocol | function |
+ | **EXRAIL** command | Serial protocol | function |
  | -------------- | -------------------------- | -------- |
  | STASH(stashId) | `<JM stashId locoId>` | Save the current loco id in the stash array element s. |
  | CLEAR_STASH(stashId) | `<JM stashId 0>` | Sets stash array element s to zero. |  

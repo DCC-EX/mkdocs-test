@@ -39,13 +39,13 @@ A total of 16 I2C addresses can be selected. The number of serial controllers ca
 
 ## Configuring in myAutomation.h
 
-The I2C connected DFplayer is defined in EXRAIL using the HAL command
+The I2C connected DFplayer is defined in **EXRAIL** using the HAL command
 
 ```cpp
 HAL(DFPlayer,firstVpin,numVpins,i2cAddress)
 ```
 
-- firstVpin is First virtual pin that EXRAIL can control to play a sound, or sent a command
+- firstVpin is First virtual pin that **EXRAIL** can control to play a sound, or sent a command
 - numVpins=1 indicates only one DFPLayer attached at UART channel 0,
 numpins=2 indicates two DFPlayers attached, the second player will have a vipin of firstVpin+1.
 - i2cAddress is the connected i2cAddress of the UART device

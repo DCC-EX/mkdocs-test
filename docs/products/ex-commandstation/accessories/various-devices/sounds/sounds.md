@@ -20,7 +20,7 @@ There are two sound devices supported.
 - [DFPlayer devices](dfplayer.md)
 - [UDPAudio devives](udpaudio.md)
 
-These have very different electronic characteristics but are operated by the same set of commands and EXRAIL funtions designed for simple sound control.
+These have very different electronic characteristics but are operated by the same set of commands and **EXRAIL** funtions designed for simple sound control.
 Refer to the relevant page for device specific details.
 
 ## Sound Commands

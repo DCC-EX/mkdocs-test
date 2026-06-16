@@ -134,7 +134,7 @@ TURNOUTL(id, address, "description")
 TURNOUT(id, shortAddress, subAddress, "description")
 ```
 
-For EXRAIL and general configuration file code blocks (eg. config.h, myAutomation.h), "cpp" is as good as any, and for any others use an appropriate language specifier.
+For **EXRAIL** and general configuration file code blocks (eg. config.h, myAutomation.h), "cpp" is as good as any, and for any others use an appropriate language specifier.
 
 If appropriate, line numbers can also be displayed by appending ``linenums="X"`` to the language, where "X" is the starting line number:
 

@@ -1,6 +1,6 @@
 # Maintaining multiple EX-CommandStations
 
-Maybe you have more than one **EX-CommandStation** and you wish to have slightly different EXRAIL setups, perhaps because you are testing a new release on a separate CPU or need to compile different scripts for different layouts.
+Maybe you have more than one **EX-CommandStation** and you wish to have slightly different **EXRAIL** setups, perhaps because you are testing a new release on a separate CPU or need to compile different scripts for different layouts.
 
 The C++ compiler pre-processor is available to select various parts of your myAutomation.h based on definitions created in your config.h or those created by defines.he which automates the detection of the CPU type of your **EX-CommandStation**.
 
@@ -19,7 +19,7 @@ For example:
   ONCLOSE(1) GREEN(mysignal1) DONE
 ```
 
-In addition, each EXRAIL command is actually a preprocessor definition so it is possible to use an #ifdef to include a section that uses a new feature but only if the code version has that feature available.
+In addition, each **EXRAIL** command is actually a preprocessor definition so it is possible to use an #ifdef to include a section that uses a new feature but only if the code version has that feature available.
 
 ```cpp
 #ifdef NEOPIXEL

@@ -20,8 +20,8 @@ li a {
     - [DCC-EX Product Overview <small>(Product Overview)</small>](products\products.md)
     - [Getting Started with DCC-EX <small>(Getting Started)</small>](products\getting-started.md)
     - **EX-CommandStation**
-        - [The DCC-EX EX-CommandStation <small>(EX-CommandStation)</small>](products\ex-commandstation\overview.md)
-        - [EX-CSB1 CommandStation Booster <small>(EX-CSB1 Command Station Booster)</small>](products\ex-commandstation\ex-csb1.md)
+        - [The DCC-EX EX-CommandStation - Overview <small>(EX-CommandStation)</small>](products\ex-commandstation\overview.md)
+        - [EX-CSB1 CommandStation Booster <small>(EX-CSB1 Command Station/Booster)</small>](products\ex-commandstation\ex-csb1.md)
         - [Running a Legacy DC layout <small>(Running a DC layout)</small>](products\ex-commandstation\dc-running.md)
         - [Build configuration (config.h) <small>(Configuration (config.h))</small>](products\ex-commandstation\config-h.md)
         - [Wifi configuration <br/><small>(Excluding EX-CSB1 or ESP32 v5.7.0+)</small> <small>(Configure WiFi (Wifi Shield))</small>](products\ex-commandstation\config-wifi-shield.md)
@@ -56,7 +56,7 @@ li a {
         - **EXRAIL**
             - [What is EXRAIL?](products\ex-commandstation\exrail\exrail.md)
             - [Virtual Bitmap device pins (VPINs) <small>(Vpins)</small>](products\ex-commandstation\exrail\vpins.md)
-            - [EXRAIL Full Command List <small>(Command List)</small>](products\ex-commandstation\exrail\command-list.md)
+            - [**EXRAIL** Full Command List <small>(Command List)</small>](products\ex-commandstation\exrail\command-list.md)
             - **Cookbooks**
                 - [Buttons and Switches](products\ex-commandstation\exrail\cookbooks\animation-sensors.md)
                 - [DC Track Control](products\ex-commandstation\exrail\cookbooks\dc-tracks.md)
@@ -83,7 +83,7 @@ li a {
                     - [Consists](products\ex-commandstation\exrail\cookbooks\driving-trains\consists.md)
                     - [Controlling trains and decoders directly <small>(Advanced)</small>](products\ex-commandstation\exrail\cookbooks\driving-trains\advanced.md)
                 - **Editing tricks**
-                    - [Multiple Files in EXRAIL](products\ex-commandstation\exrail\cookbooks\editing-tricks\multi-files.md)
+                    - [Multiple Files in **EXRAIL**](products\ex-commandstation\exrail\cookbooks\editing-tricks\multi-files.md)
                     - [Maintaining multiple EX-CommandStations](products\ex-commandstation\exrail\cookbooks\editing-tricks\multiple-command-stations.md)
                     - [Naming sequences for easy commands](products\ex-commandstation\exrail\cookbooks\editing-tricks\naming-a-sequence.md)
                     - [Using CALL and RETURN](products\ex-commandstation\exrail\cookbooks\editing-tricks\using-call-return.md)
@@ -125,6 +125,11 @@ li a {
                     - [XL9535 Relay Board](products\ex-commandstation\exrail\cookbooks\various-devices\xl9535.md)
     - [EX‑MotorShield8874 <small>(EX-MotorShield8874)</small>](products\ex-motorshield8874\ex-motorshield8874.md)
     - [EX-WiFiShield 8266 <small>(EX-WiFiShield8266)</small>](products\ex-wifishield8266\ex-wifishield8266.md)
+    - [EX-WebThrottle - Overview <small>(EX-WebThrottle)</small>](products\ex-webthrottle\ex-webthrottle.md)
+    - **EX-Toolbox**
+        - [EX-Toolbox - Overview <small>(EX-Toolbox)</small>](products\ex-toolbox\ex-toolbox.md)
+        - [Installing EX-Toolbox <small>(Installation Guide)</small>](products\ex-toolbox\installation-guide.md)
+        - [EX-Toolbox User Guide <small>(User Manual)</small>](products\ex-toolbox\user-guide.md)
     - **EX-FastClock**
         - [EX-FastClock <small>(Overview)</small>](products\ex-fastclock\overview.md)
         - [Hardware](products\ex-fastclock\hardware.md)
@@ -141,11 +146,6 @@ li a {
         - [EX-SensorCAM Manual <small>(User Manual)</small>](products\ex-sensorcam\ex-sensor-manual.md)
         - [Native EX-SensorCAM Command List <small>(Command Reference)</small>](products\ex-sensorcam\ex-sensorcam-command-reference.md)
         - [EX-SensorCAM Abridged Manual <small>(Manual Abridged)</small>](products\ex-sensorcam\ex-sensor-manual-abridged.md)
-    - **EX-Toolbox**
-        - [EX-Toolbox - Overview <small>(EX-Toolbox)</small>](products\ex-toolbox\ex-toolbox.md)
-        - [Installing EX-Toolbox <small>(Installation Guide)</small>](products\ex-toolbox\installation-guide.md)
-        - [EX-Toolbox User Guide <small>(User Manual)</small>](products\ex-toolbox\user-guide.md)
-    - [EX-WebThrottle - Overview <small>(EX-WebThrottle)</small>](products\ex-webthrottle\ex-webthrottle.md)
 - **Purchase**
     - [Official DCC-EX Suppliers <small>(Official Sellers)</small>](purchasing\official-sellers.md)
     - [Third Party Products and Sellers <small>(Third Party Sellers)</small>](purchasing\third-party-sellers.md)

@@ -38,7 +38,7 @@ DONE
 
 ## myTrackStatus.h
 
-Contents of the example file -- suggested for review/reference on how various EXRAIL commands have been used.
+Contents of the example file -- suggested for review/reference on how various **EXRAIL** commands have been used.
 ```cpp
 // myTrackStatus.example.h
 

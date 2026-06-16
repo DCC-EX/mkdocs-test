@@ -21,6 +21,44 @@ So:
     - Ensure that the block of text between the page title and the next heading (of any sort) is relatively short. Ideally no more than a few paragraphs. This is what what will appear in the search results.
     - Ensure that you DO NOT use tables or complex formatting in the first block of text (between the page title and the next heading) as this will be scrambled in the search results.
 
+- Bold any product names. Hyperlink them to the appropriate page where practical.
+    - i.e. use '\*\*EX-CommandStation\*\*' not 'EX-CommandStation'
+- Don't abbreviate product names.
+    - e.g. use '**EX-CSB1**' not 'CSB1'
+- Avoid abbreviations that would not be easily recognised by 'Conductors'.
+    - In particular *don't* use 'CS'.  Use the full name 'Command Station' or, more commonly, 'EX-CommandStation'
+    - *Don't* use 'AP'.  Use 'Access Point' or 'Access Point Mode' or 'Access Point Mode (AP)'
+    - *Don't* use 'STA'.  Use 'Station' or 'Station Mode' or 'Station Mode (STA)'
+    - *Limit the use of* using 'RTR' or 'R2R'.  Use 'ready-to-run' or 'ready-to-run (RTR)'
+    - Limit the use of- using 'DIY'.  Use 'do-it-yourself' or 'do-it-yourself (DIY)'
+
+- Keep headings short.  If it fills the page it is too long.
+- Keep sentences short.  Break them up where ever possible.
+- Keep paragraphs short.  Break them up where practical.
+- Keep paragraphs on the same topic. If the topic changes start a new paragraph.
+- Do not start any page for a Conductor or Tinkerer with a technical explanation.  Put technical explanations at the end of the page, or preferably in a separate dedicated page.  Make it clear the the technical explanation is not required reading (unless it is).
+- If you have a number of sections that describe options; present them in list them first, before the sections, with an explanation as to why they are optional.  (i.e. a bullet list with hyperlinks to the headings.)
+- Where possible, avoid starting a section with a negative point of view.  i.e. Talk about the positives of what you are discussing first, before you delve into the negative or problematic aspects. <br/>e.g. Don't start with "... This is not for Conductors...", instead say "..This page is for Tinkerers ... Conductors should...".
+- Use British/Australian/New Zealand/Canadian/Indian (pretty much every country except the USA) spelling e.g. 'colour' not 'color'. <br/>(Primarily because it is used in more English speaking countries)
+- Preferred Terms:
+    - Use **'EX-CommandStation'** not 'Command Station' when refering to something that is specific to the DCC-EX product.
+    - Where logical to do so, use **"Motor Driver"**, in preference to 'Motor Shield'.  Do not use 'Motor Board' or 'Motorboard'.
+    - In general use **'train'** or **'loco'** instead of 'locomotive' or 'engine'
+    - Use **'Smart Phone'** instead of 'Cell Phone' (US only term) or 'Mobile Phone' (just about everywhere else)
+    - Use **Throttle** or **Throttle (controller)** instead of 'controller' or 'controller (throttle)'
+
+- Use railroad/railway terminology that is understandable by all English-speaking people. <br/><br/>Where there are clear differences from USA to non-US terminology use both with a slash between and use the US version first. e.g. turnouts/points, consists/multiple units, switching/shunting.  (Only because the US term appears in apps like JMRI and in **EXRAIL**.)
+- For dates, use **dd-mmm-yyyy** or **yyyy-mm-dd** to avoid confusion with the way dates are uniquely written in the USA. <br/> e.g. 2-Mar-2022 or 2022-3-2, not 2-3-2022
+- No full stop at the end of a numbered or unnumbered list unless the points are most points are multi-sentence.
+- Numbered lists should generally only be used if they are describing a specific sequence, or the numbering is important to the text.
+- Use second person (you and your; not I, me, my) language
+- A string of nouns should be generally be sequenced in alphabetic order, unless it makes more sense within the context to display them in some other sequence.
+- Double quotes (") should only be used for quoting text from people, documents or web sites.
+- Don't use curly quotes ``‘ ’ “ ”``.
+- No quotes around 'Also See' type references.
+- Avoid '(above)' or '(below)' in text.  Use hyperlinks instead.
+- ``==TODO==`` means that it is still a work-in-process and needs to be updated.  It must be followed by descriptive text describing the issue to be fixed.  If you want to to show in the page you will need add a separate line.
+
 ## Do Not Duplicate Content
 
 **DO NOT CREATE DUPLICATE CONTENT** as this increases the maintenance burden significantly but, more importantly, makes it difficult for users when content appears slightly differently in two different places or even contradicts itself. When needing to repeat information in more than one place, take advantage of the [MkDocs Snippets](/contributing/documentation/mkdocs-features.md#snippets) feature. This allows you to include the same markdown content in multiple places.

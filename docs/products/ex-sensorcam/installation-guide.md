@@ -1,8 +1,8 @@
 # Installation Guide
 
-EX-SensorCAM is an advanced concept foreign to most model railroaders and consequently deals with many unfamiliar issues. It also calls on multiple software applications to address them. The initial software setup for an inexperienced tinkerer is consequently involved and needing perseverance. The Arduino IDE, the ESP32 libraries, the Processing 4 App, the EX-Command Station and EXRAIL (if used) combine to create a unique system supporting the sensorCAM's own software. Any prior knowledge of these will vastly expedite the installation.
+EX-SensorCAM is an advanced concept foreign to most model railroaders and consequently deals with many unfamiliar issues. It also calls on multiple software applications to address them. The initial software setup for an inexperienced tinkerer is consequently involved and needing perseverance. The Arduino IDE, the ESP32 libraries, the Processing 4 App, the EX-Command Station and **EXRAIL** (if used) combine to create a unique system supporting the sensorCAM's own software. Any prior knowledge of these will vastly expedite the installation.
 
-### **Outline:**
+### **Outline**
 
 This installation process is divided into 12 steps outlined below. It is recommended that it be treated as a learning exercise and that testing of progress occur after each major step. For example, familiarization with Arduino IDE should be developed before moving to the ESP32 example, and then familiarize with the ESP32-CAM WiFi example before moving on to the sensorCAM loading.
 
@@ -279,7 +279,7 @@ Refer to the sensorCAM manual Appendix H for further tips regarding sensorCAM wi
 
 > f) Once loaded and booted, make use of the CamParser switch-cam commands by adding an \[optional\] cam # to bs numbers (e.g. &lt;N&gt; &lt;Ni 112&gt; &lt;Np 201&gt; &lt;NV 300&gt; &lt;NC vpin&gt;. &lt;N&gt; shows current CAM (vPin).
 
-> g) In EXRAIL scripts, select CAM# by using ID format (CAM# 0%%) e.g. AT(CAM2 012) for sensor S(2)12.
+> g) In **EXRAIL** scripts, select CAM# by using ID format (CAM# 0%%) e.g. AT(CAM2 012) for sensor S(2)12.
 
 ###**APPENDIX ESP32-CAM pinout reference (CAM version v1.6) & WROVER-CAM**
 

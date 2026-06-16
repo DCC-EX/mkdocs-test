@@ -1,6 +1,6 @@
 # Roster for Similar Sound Locos
 
-The ROSTER command in EXRAIL can be tedious if you have several sound locos with the same function settings. Using a preprocessor definition saves typing.
+The ROSTER command in **EXRAIL** can be tedious if you have several sound locos with the same function settings. Using a preprocessor definition saves typing.
 
 ```cpp
 ROSTER(1201,"Red class 99","light/*horn/flash/bang/wallop/squeal/honk") 

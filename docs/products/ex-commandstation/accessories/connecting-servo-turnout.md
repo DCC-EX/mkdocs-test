@@ -65,7 +65,7 @@ from the startup logs using the serial monitor
 
 ## Connect your servos to turnouts/points
 
-There are many ways of mounting servos both above and below the baseboard using 3D printed mounts or a strip of plastic L shape. You will probably want to use microswitches to switch frog polarity or use more expensive frog juicers or EXRAIL driven relays.
+There are many ways of mounting servos both above and below the baseboard using 3D printed mounts or a strip of plastic L shape. You will probably want to use microswitches to switch frog polarity or use more expensive frog juicers or **EXRAIL** driven relays.
 
 We recommend that whatever mechanical connection you make allows for protection of your turnout/point from excess servo movement.
 

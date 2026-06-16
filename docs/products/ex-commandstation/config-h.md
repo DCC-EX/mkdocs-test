@@ -2,7 +2,7 @@
 
 During compilation and build, there are a number of settings that control the way the code is constructed and important features are configured.
 
-Most configuration takes place using EXRAIL in the `myAutomation.h` file, but some things just need setting before that.
+Most configuration takes place using **EXRAIL** in the `myAutomation.h` file, but some things just need setting before that.
 
 If you are using the [EX-Installer](../../installer/overview.md), the important options will be automatically managed and configured. There are several more advanced options covered in the [config.h advanced](/reference/advanced-config-h.md) but these should not trouble the vast majority of users.
 

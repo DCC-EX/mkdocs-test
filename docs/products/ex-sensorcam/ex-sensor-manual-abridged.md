@@ -153,7 +153,7 @@ Where words are in *italics*, these are the actual names used in the C++ program
 
 The first step is to decide a sensor distribution strategy & numbering strategy (not set in stone) . A sensorCAM has 10 banks (0-9) of eight (0-7) individual sensors available (total 80). Each **bank** can be tested as a whole to see if ANY sensors tripped or NO sensors tripped. Also placing a string of sensors in a row, for example along a platform, can indicate train position with the binary bank value increasing as the train approaches a signal as it crosses sensors 0 through 7. (see **Figure 5** for examples) Sensors are generally referred to with a two digit bank/sensor designation (their bsNo.) e.g. Sensor 68 and 69 are therefore invalid bs numbers, 97 is valid. Use one bank for a platform (set of 8 sensors). Sensor **S00** is reserved as a brightness reference sensor. Sensor **S06** is also RESERVED for now. It is suggested that user's Sensors start with bank 1, i.e. S10, S11 & upwards, with related sensors in their own bank. They do NOT need to be sequential (Follow the installation Guide for full details). **With the recommended definitions set up, the user does not need to remember or refer to vPins for sensorCAM sensors at all - just use the S%% identifier.**
 
-For an EX-Command Station (CS), the 80 sensors will have vPin numbers ranging from #00 to #79 (DECIMAL) and mapped to 80 b/s id's(S00 to S97). Users can use, for example, **AT(CAM 0%%)** in EXRAIL commands where a vPin ID is called for.  For the technically minded, CS invisibly calculates vPin=BasePin+bx8+s. 
+For an EX-Command Station (CS), the 80 sensors will have vPin numbers ranging from #00 to #79 (DECIMAL) and mapped to 80 b/s id's(S00 to S97). Users can use, for example, **AT(CAM 0%%)** in **EXRAIL** commands where a vPin ID is called for.  For the technically minded, CS invisibly calculates vPin=BasePin+bx8+s. 
 
 ### 5.2 Preset the wifi SSID and password
 
@@ -305,7 +305,7 @@ The ESP32-CAM reset button, remotely mounted on CAM, may be difficult to access.
 
 ### 8.1 Introduction
 
-The operation of the railway depends on a Control Station that polls the sensorCAM for sensor states. This might be a dedicated Arduino Mega 2560 for example. It might be a CSB1 Command Station running DCC-EX and EXRAIL software. If the sensorCAM is powered up with default settings (from EPROM), or adjusted by the user at the start, the program need only talk to sensorCAM over an i2c bus using the commands a,b,i,l & o for example, or it may be more sophisticated, providing a command channel from a Control Station monitor to the sensorCAM to enable most configuration commands via the i2c bus.
+The operation of the railway depends on a Control Station that polls the sensorCAM for sensor states. This might be a dedicated Arduino Mega 2560 for example. It might be a CSB1 Command Station running DCC-EX and **EXRAIL** software. If the sensorCAM is powered up with default settings (from EPROM), or adjusted by the user at the start, the program need only talk to sensorCAM over an i2c bus using the commands a,b,i,l & o for example, or it may be more sophisticated, providing a command channel from a Control Station monitor to the sensorCAM to enable most configuration commands via the i2c bus.
 
 The i2c bus is running at 100kHz on the prototype software. It has not been tested at any higher speed yet. It has been running fine over a 10m long i2c bus to the master microcontroller (CSB1, Mega or others).
 
@@ -435,7 +435,7 @@ Also able to change default setting for Brightness, Contrast & Saturation with e
 **14.** m$,%% sets _maxSensors_ to %% (USB or i2c) (as can h%% (%%<98)). m0,1%% sets _minSensors_. Data sent to screen is bound between min and maxSensors. Extra parameter status bytes added to i2c bus for display.  
 **15.** The " character is just a null cmd. Used before R, d & t to prevent BCD Mega itself pre-interpreting them.  
 **16.** N.B.: The ESP32-CAM uses old ESP32S which has I2C limitations. It has a “pipeline” for returning data which results in a delay in response. i.e. the first request after a command will return OLD data. A SECOND request should return the desired data described above. A third or fourth request may return updated data.  
-**17.** Some commands take time to complete, as command processing can only happen once per 100mSeconds (i.e. the frame rate of the CAM). The I2C master should allow for latency in response where necessary. Place a DELAY(400) between all PARSE("<N....>") EXRAIL commands. 
+**17.** Some commands take time to complete, as command processing can only happen once per 100mSeconds (i.e. the frame rate of the CAM). The I2C master should allow for latency in response where necessary. Place a DELAY(400) between all PARSE("<N....>") **EXRAIL** commands. 
 **18.** Data requested over i2c may have a parity byte appended, and a check byte in byte[31].  
 **19.** NOTE Automatic updating of ref image of unoccupied sensors now starts after last SUS (suspend) indicator.  
 **20.** **a%%,rrr,xxx** performs extended 'create sensor' equivalent to  **k%%,rrr,xxx + a%% + r%%** for new sensor S%%  
@@ -542,7 +542,7 @@ e.g. **<Ni 2%%\> <Nr&nbsp;2%%\>** also **<Nm 200\> <Nf 212\> <Nt 243\>**
 For example, sensor S12 has a bsNo 1/2 for which the colours are Brown/Red (seen on sensor box edges).  
 For CAM number 1, the full CS sensor S12 ID is 112 when used in CS native <N\> commands such as **<N i 112\>** 
 The use of the CAM # can be optional.  If only one CAM is installed (or selected), **<Ni 12\>** is sufficient.
-For EXRAIL it can be tested so: **AT(CAM 012)** where the vpin is invisibly calculated as (700+012).
+For **EXRAIL** it can be tested so: **AT(CAM 012)** where the vpin is invisibly calculated as (700+012).
 **N.B.** The use of the '0' after CAM is essential in EXRAIL.  
 The colour code is the standard resistor value colour code for 0-9.
 
@@ -615,12 +615,12 @@ For any peripheral device, the vPin is needed for commands (e.g.700+5), but, if 
  #define SENSORCAM_VPIN 700    //place in config.h or myAutomation.h or mysetup.h  
  #define CAM  SENSORCAM_VPIN+  //in config.h or myAutomation.h or mysetup.h  
 
- Valid EXRAIL commands: AFTER(CAM 5)  AT(SENSORCAM_VPIN+7)  IFGTE(CAM 010, 2)  
+ Valid **EXRAIL** commands: AFTER(CAM 5)  AT(SENSORCAM_VPIN+7)  IFGTE(CAM 010, 2)  
 
  To avoid frequent “CAM” in scripts, an alias can be assigned e.g. ALIAS(ESSEX_P1, CAM+0x10)
 ```
 
-With each sensorCAM having up to 80 sensors, it is desirable to test groups of (1 to 8) sensors with a single EXRAIL test using the **IFGTE()** or **IFLE()** commands. To do this, the sensors are logically arranged in “banks” of (consecutive) vpins. The logical grouping available can be written in the form “bs” or b/s where b can have bank values of 0-9 (10 banks) and s values 0-7 (8 sensors). **IFGTE** and **IFLT** read a whole bank "value". Native CAM commands can also be issued e.g. **PARSE("<N b 4\>")** for bank 4.
+With each sensorCAM having up to 80 sensors, it is desirable to test groups of (1 to 8) sensors with a single **EXRAIL** test using the **IFGTE()** or **IFLE()** commands. To do this, the sensors are logically arranged in “banks” of (consecutive) vpins. The logical grouping available can be written in the form “bs” or b/s where b can have bank values of 0-9 (10 banks) and s values 0-7 (8 sensors). **IFGTE** and **IFLT** read a whole bank "value". Native CAM commands can also be issued e.g. **PARSE("<N b 4\>")** for bank 4.
 
 EXRAIL can accept “b/s” numbering (e.g. 047) if we add the leading 0. e.g. vpin= **SENSORCAM_VPIN+ 047** e.g. **IFGTE(CAM 047,1)** provided values are defined for **SENSORCAM_VPIN** & **CAM**(as above).
 

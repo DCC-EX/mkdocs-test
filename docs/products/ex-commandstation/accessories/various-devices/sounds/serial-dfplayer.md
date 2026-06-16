@@ -1,6 +1,6 @@
 # Serial connected DFPlayer
 
-A serial connected DFPlayer is defined in EXRAIL (myAutomation.h) using the HAL command
+A serial connected DFPlayer is defined in **EXRAIL** (myAutomation.h) using the HAL command
 
 ```cpp
 HAL(DFPlayer,vpin,serial)
