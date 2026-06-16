@@ -1,6 +1,6 @@
 # EX‑MotorShield8874
 
-Designed in conjunction with the DCC-EX development team, the EX‑MotorShield8874 is extremely simple to use with all current and future generations of EX‑CommandStation hardware.
+Designed in conjunction with the DCC-EX development team, the **EX‑MotorShield8874** is extremely simple to use with all current and future generations of EX‑CommandStation hardware.
 
 This board is the new standard by which we compare other boards.
 
@@ -26,15 +26,15 @@ The boards 5V and 3V friendly design makes it suitable for a broad range of Ardu
 
 ## Why did we make it
 
-EX‑MotorShield8874 is specifically designed for use with DCC-EX Command Station for controlling model railroads, but can also be used as generally better replacement for Arduino Motor Shield R3 in any device that needs to control a motor. We needed higher current capacity to power more motors/trains and have little to no voltage drop due to advanced MOSFET driver technology.
+**EX‑MotorShield8874** is specifically designed for use with **DCC-EX EX-CommandStation**s for controlling model railroads, but can also be used as generally better replacement for Arduino Motor Shield R3 in any device that needs to control a motor. We needed higher current capacity to power more motors/trains and have little to no voltage drop due to advanced MOSFET driver technology.
 
 ## Purchase
 
-The EX‑MotorShield8874 is available from many [suppliers](/purchasing/official-sellers.md).
+The **EX‑MotorShield8874** is available from many [suppliers](/purchasing/official-sellers.md).
 
 ## Licensing
 
-The EX‑MotorShield8874 was created through the gracious support and design facilities of [Semify](https://www.semify-eda.com/), who, along with DCC-EX, license it to manufacturers. The hardware design has been made open source for individual users and the schematics are available on the DCC-EX GitHub repository.
+The **EX‑MotorShield8874** was created through the gracious support and design facilities of [Semify](https://www.semify-eda.com/), who, along with DCC-EX, license it to manufacturers. The hardware design has been made open source for individual users and the schematics are available on the DCC-EX GitHub repository.
 
 For quantities of 10 or less per annum, you may utilise a PCB manufacturing and assembly service such as JLCPCB without licensing fees. A donation to DCC-EX would be appreciated, so click the [donate](/contributing/contributing.md) button. The production files are available on the DCC-EX GitHub.
 
@@ -50,11 +50,11 @@ For self-built command station, please consult the relevant build instructions.
 
 ## Engineering notes
 
-The EX-MotorShield8874 DC barrel jack is the only power source required to power both the tracks and the EX‑CommandStation into which it is plugged into. It supplies carefully regulated 7.2V DC power to the underlying Arduino R3 compatible motherboard via the VIN pin. This voltage is safely regulated down from the track power input to ensure Command Station motherboards will stay cool and work well. There is no need to power the Command Station via its barrel jack, or USB power. It is safe, however, to connect the USB cable as it will not create a conflict.
+The **EX‑MotorShield8874** DC barrel jack is the only power source required to power both the tracks and the EX‑CommandStation into which it is plugged into. It supplies carefully regulated 7.2V DC power to the underlying Arduino R3 compatible motherboard via the VIN pin. This voltage is safely regulated down from the track power input to ensure Command Station motherboards will stay cool and work well. There is no need to power the Command Station via its barrel jack, or USB power. It is safe, however, to connect the USB cable as it will not create a conflict.
 
-Applying a voltage above what a decoder was designed for, may permanently damage it, because the EX-MotorShield8874 does not drop voltage like the standard L298 based motor shields take care over track voltage selection.
+Applying a voltage above what a decoder was designed for, may permanently damage it, because the **EX‑MotorShield8874** does not drop voltage like the standard L298 based motor shields take care over track voltage selection.
 
-**NOTE:** The EX-MotorShield8874 can supply up to 5A of track power per channel, a power supply of more than 10A peak capacity is required to run both channels at full peak current and have power left for the Command Station. A power supply that is unable to provide the current at which the software detects a short-circuit will not be safe as the Command Station will not be able to detect the short.
+**NOTE:** The **EX‑MotorShield8874** can supply up to 5A of track power per channel, a power supply of more than 10A peak capacity is required to run both channels at full peak current and have power left for the Command Station. A power supply that is unable to provide the current at which the software detects a short-circuit will not be safe as the Command Station will not be able to detect the short.
 
 If the track power supply is not plugged in, the Command Station will report track faults.
 
@@ -62,13 +62,13 @@ If the track power supply is not plugged in, the Command Station will report tra
 
 Stacking an EX-8874 and another motor shield type is **not recommended**. There are complex pin conflicts and software configuration requirements.
 
-The CSB1 can only have a single EX8874 stacked on it, unmodified. There are insufficient pins available on the internal ESP32 processor to handle more.
+The **CSB1** can only have a single **EX8874** stacked on it, unmodified. There are insufficient pins available on the internal ESP32 processor to handle more.
 
 ### Steps to Stack
 
-- Leave the first EX-MotorShield8874 in the stack entirely unmodified. 
+- Leave the first **EX‑MotorShield8874** in the stack entirely unmodified.
 
-**NOTE:** If you are using an Ethernet shield, it must be the very first board in the stack, with the unmodified EX-MotorShield8874 next immediately on top of that. Test this first before proceeding to modifying the second EX-MotorShield8874 and adding it on.
+**NOTE:** If you are using an Ethernet shield, it must be the very first board in the stack, with the unmodified **EX‑MotorShield8874** next immediately on top of that. Test this first before proceeding to modifying the second **EX‑MotorShield8874** and adding it on.
 
 - **You must CUT the regulator to VIN pin** on the top of the PCB which is not labelled on the original version, but has been labelled on later versions
 
@@ -92,4 +92,4 @@ Leaving the Fault pins on A4, A5 facilitates bending and jumpering them to nearb
 A6, A7 on Arduino Mega  
 PC2, PC3 on Nucleo-64
 
-After hardware installation, you will need to re-run the EX-Installer to configure the Command Station code to recognize the new board and allow you to control the third and fourth tracks.
+After hardware installation, you will need to re-run the [EX-Installer](../../installer/overview.md) to configure the Command Station code to recognize the new board and allow you to control the third and fourth tracks.

@@ -130,14 +130,9 @@ plugins:
   - latest-news: # Enable including the latest news excerpts in markdown
       count: 3
       list-class: news-headline-list
-  - toc-md:
-      toc_page_title: "Site Table of Contents"
-      output_path: "toc_not_in_nav.md"  # This creates docs/toc.md automatically
-      overwrite: always
-      ignore_page_pattern: .*command-list.md|toc_not_in_nav.md
-      remove_navigation_page_pattern: .*command-list.md|toc_not_in_nav.md
-      template_dir_path: toc_custom_template
-      header_level: 2
+
+hooks:
+    - gen_toc.py
 
 # Copyright info
 copyright: |

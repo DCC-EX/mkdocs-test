@@ -7,11 +7,11 @@ tags:
 
 # Running a Legacy DC layout
 
-No additional hardware is required for DC (PWM) track assignments. A single EX‑CommandStation is the only hardware needed for full functionality to run a DC Layout just as easily as a DCC layout.
+No additional hardware is required for DC (PWM) track assignments. A single **EX‑CommandStation** is the only hardware needed for full functionality to run a DC Layout just as easily as a DCC layout.
 
 ## Advantages of using a EX-CommandStation to run a DC layout
 
-Using an DCC-EX EX-CommandStation to run a DC layout provides a number of advantages over conventional DC systems.
+Using an **DCC-EX EX-CommandStation** to run a DC layout provides a number of advantages over conventional DC systems.
 
 - All Wifi and wired connected throttles will operate the same for DC and DCC locos using Cab road numbers 'loco addresses' from 1 to 10239.
 - Using this range of Cab locoid addresses you can assign any DC district/track any locoid to run in that DC district, i.e # 2.
@@ -26,7 +26,7 @@ Using an DCC-EX EX-CommandStation to run a DC layout provides a number of advant
 
 ## Basic functionality
 
-The DCC-EX command station has TrackManager commands that can change each district/track output to DC with appropriate polarity.  By associating a numeric road number as locoid (1..10239 the same range as DCC) with each district/track output the command station accepts incoming DCC throttle commands (Or EXRAIL automation commands) for that locoid and converts it to a DC output on every district/track output with the same locoid.
+The **DCC-EX EX-CommandStation** has TrackManager commands that can change each district/track output to DC with appropriate polarity.  By associating a numeric road number as locoid (1..10239 the same range as DCC) with each district/track output the command station accepts incoming DCC throttle commands (Or EXRAIL automation commands) for that locoid and converts it to a DC output on every district/track output with the same locoid.
 
 The throttles or EXRAIL are unaware that they are driving a DC districts/tracks and so any DCC Throttle such as Engine Driver that can talk to DCC-EX will work for DC. In effect, in DC mode, the throttle drives the track compared with DCC mode where the throttle drives the loco.
 
@@ -36,7 +36,7 @@ Warning: The sometimes-alternate suggested technique of using a DCC decoder to o
 
 ## Configuring Default Outputs
 
-The normal configuration method for DCC-EX Command Station is to use EXRAIL to define things like:
+The normal configuration method for **DCC-EX EX-CommandStation** is to use EXRAIL to define things like:
 
 - What type of Districts/tracks do I want to use DC, DCC or both
 - What are the locoids or Cab# defined in the Roster for throttles to see and use.
@@ -46,7 +46,7 @@ The normal configuration method for DCC-EX Command Station is to use EXRAIL to d
 - What automations can a throttle send a loco along
 - Buttons and lights on a mimic panel
 
-all of which apply equally to DC operation, plus:
+All of which apply equally to DC operation, plus:
 
 - How track Districts are set for DC and which locoid addresses they are mapped to
 

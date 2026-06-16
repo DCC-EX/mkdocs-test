@@ -2,9 +2,9 @@
 
 During compilation and build, there are a number of settings that control the way the code is constructed and important features are configured.
 
-Most configuration takes place in EXRAIL but some things just need setting before that.
+Most configuration takes place using EXRAIL in the `myAutomation.h` file, but some things just need setting before that.
 
-If you are using the EX-Installer, the important options will be automatically managed and configured. There are several more advanced options covered in the [config.h advanced](/reference/advanced-config-h.md) but these should not trouble the vast majority of users.
+If you are using the [EX-Installer](../../installer/overview.md), the important options will be automatically managed and configured. There are several more advanced options covered in the [config.h advanced](/reference/advanced-config-h.md) but these should not trouble the vast majority of users.
 
 These options should be coded in the file `config.h` which will be automatically included in the compilation process.
 
@@ -82,10 +82,9 @@ Define scroll mode as 0, 1 or 2
 #define SCROLLMODE 1
 ```
 
-In order to avoid wasting memory the current scroll buffer is limited
-to 8 lines.  Some users wishing to display additional information
-such as TrackManager power states have requested additional rows aware
-of the warning that this will take extra RAM.  if you wish to include additional rows
+In order to avoid wasting memory the current scroll buffer is limited to 8 lines.  Some users wishing to display additional information such as TrackManager power states have requested additional rows aware of the warning that this will take extra RAM.  
+
+If you wish to include additional rows:
 
 ```cpp
 #define MAX_CHARACTER_ROWS 12
@@ -94,6 +93,7 @@ of the warning that this will take extra RAM.  if you wish to include additional
 ## Disable EEPROM
 
 The EEPROM feature is only there for backward support of deprecated methods of turnout, sensor and output creation inherited from DCC++.
+
 You are advised to turn this off to save memory.
 
 ```cpp

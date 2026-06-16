@@ -19,17 +19,17 @@ Serial commands to setup the WiFi on the EX-Command Stations.
 
 ## Commands
 
-* ``<C WIFI "«ssid»" "«password»">`` set Wifi ssid and password - Station Mode (STA)
-* ``<C WIFI TEMP "«ssid»" "«password»">`` set Wifi ssid and password temporarily - Station Mode (STA)
-* ``<C WIFI AP "«ssid»" "«password»" [«channel»]>`` set Wifi to Access Point mode (AP) with given ssid and password
-* ``<C WIFI HIDDENAP "«ssid»" "«password»" [«channel»]>`` set Wifi to Access Point mode (AP) with given ssid and password, but not advertised (hidden)
-* ``<C WIFI HOSTNAME "«hostname»">`` set Wifi hostname
-* ``<C WIFI DEFAULT>`` set Wifi to default credentials
-* ``<C WIFI ON|OFF>`` Enable/Disable Wifi
+* ``<C WIFI "«ssid»" "«password»">`` set WiFi ssid and password - Station Mode (STA)
+* ``<C WIFI TEMP "«ssid»" "«password»">`` set WiFi ssid and password temporarily - Station Mode (STA)
+* ``<C WIFI AP "«ssid»" "«password»" [«channel»]>`` set WiFi to Access Point mode (AP) with given ssid and password
+* ``<C WIFI HIDDENAP "«ssid»" "«password»" [«channel»]>`` set WiFi to Access Point mode (AP) with given ssid and password, but not advertised (hidden)
+* ``<C WIFI HOSTNAME "«hostname»">`` set WiFi hostname
+* ``<C WIFI DEFAULT>`` set WiFi to default credentials
+* ``<C WIFI ON|OFF>`` Enable/Disable WiFi
 
 See [WiFi configuration](../../products/ex-commandstation/config-wifi-esp32.md) for more infomation on these commands.
 
-See the [WiFi Configuration for version 5.7.0+](https://dcc-ex.com/ex-commandstation/advanced-setup/supported-wifi/wifi-config_v5_7.html) page on the old web site for detailed instructions on how, and why, to change these settings using EX-WebThrottle or EX-Toolbox.
+Also see the [WiFi Configuration for version 5.7.0+ - Graphical User Interface Options](../../products/ex-commandstation/config-wifi-esp32-gui-options_not_in_nav.md) for detailed instructions on how, and why, to change these settings using EX-WebThrottle or EX-Toolbox.
 
 ## Parameters
 
@@ -60,7 +60,7 @@ N/A. The command station will restart.
 
     Note that this does not provide any performance advantages.
 
-* Temporary STA mode: If enabled, the Command Station will start in Station mode and connect to an existing Wifi network. But will forget this setting the next time the EX‑CommandStation is restarted.
+* Temporary STA mode: If enabled, the Command Station will start in Station mode and connect to an existing WiFi network. But will forget this setting the next time the EX‑CommandStation is restarted.
 
     This may be useful if visiting a location with a different WiFi network which you would like to connect to without changing the permanent WiFi settings on the Command Station.
 
