@@ -13,10 +13,10 @@
         <link rel="canonical" href="https://dcc-ex.com/mkdocs-test/products/ex-commandstation/config-wifi-esp32/">
       
       
-        <link rel="prev" href="../config-h/">
+        <link rel="prev" href="../config-wifi-shield/">
       
       
-        <link rel="next" href="../config-wifi-shield/">
+        <link rel="next" href="../testing/">
       
       
         <link rel="alternate" type="application/rss+xml" title="RSS feed" href="../../../feed_rss_created.xml">
@@ -27,7 +27,7 @@
     
     
       
-        <title>WiFi Configuration (CSB1 or ESP32) - DCC-EX Model Train Control, Animation, and Automation</title>
+        <title>Configure WiFi (CSB1 & ESP32 v5.7.0+) - DCC-EX Model Train Control, Animation, and Automation</title>
       
     
     
@@ -83,7 +83,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#wifi-configuration-ex-csb1-or-esp32-only-version-570-only" class="md-skip">
+        <a href="#wifi-configuration-ex-csb1-or-esp32-only-v570-only" class="md-skip">
           Skip to content
         </a>
       
@@ -116,7 +116,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              WiFi Configuration (CSB1 or ESP32)
+              Configure WiFi (CSB1 & ESP32 v5.7.0+)
             
           </span>
         </div>
@@ -475,13 +475,13 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../../toc_not_in_nav/" class="md-tabs__link">
+      <a href="../../../toc/" class="md-tabs__link">
         
   
   
     
   
-  Contents
+  ToC
 
       </a>
     </li>
@@ -612,7 +612,7 @@
   
   
   <span class="md-ellipsis">
-    Product List
+    Product Overview
     
   </span>
   
@@ -785,6 +785,29 @@
                 
   
   
+  
+  
+    <li class="md-nav__item">
+      <a href="../config-wifi-shield/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Configure WiFi (Wifi Shield)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
     
   
   
@@ -802,7 +825,7 @@
   
   
   <span class="md-ellipsis">
-    WiFi Configuration (CSB1 or ESP32)
+    Configure WiFi (CSB1 & ESP32 v5.7.0+)
     
   </span>
   
@@ -815,7 +838,7 @@
   
   
   <span class="md-ellipsis">
-    WiFi Configuration (CSB1 or ESP32)
+    Configure WiFi (CSB1 & ESP32 v5.7.0+)
     
   </span>
   
@@ -913,29 +936,6 @@
   
 </nav>
       
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../config-wifi-shield/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    WiFi Configuration (Wifi Shield)
-    
-  </span>
-  
-
-      </a>
     </li>
   
 
@@ -7011,12 +7011,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../toc_not_in_nav/" class="md-nav__link">
+      <a href="../../../toc/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    Contents
+    ToC
     
   </span>
   
@@ -7143,15 +7143,19 @@
   
 
 
-<h1 id="wifi-configuration-ex-csb1-or-esp32-only-version-570-only">WiFi configuration (EX-CSB1 or ESP32 ONLY. Version 5.7.0+ ONLY)<a class="headerlink" href="#wifi-configuration-ex-csb1-or-esp32-only-version-570-only" title="Permanent link">&para;</a></h1>
-<p>PLEASE NOTE: config.h options for WiFi configuration from versions prior to 5.7.0 are now ignored by CSB1 or ESP32 command stations.</p>
+<h1 id="wifi-configuration-ex-csb1-or-esp32-only-v570-only">WiFi configuration <br/><small>(EX-CSB1 or ESP32 ONLY. v5.7.0+ ONLY)</small><a class="headerlink" href="#wifi-configuration-ex-csb1-or-esp32-only-v570-only" title="Permanent link">&para;</a></h1>
+<p>This page is exclusively for users of <strong>EX-CommandStation</strong> version 5.7.0 and later. Version 5.7.0 is currently in the experimental / development (DEVEL) phase and is not recommended for general users.</p>
+<p><span style="color:red;">The <code>config.h</code> options for WiFi configuration from EX-CommandStation versions prior to 5.7.0 are now ignored by the EX-CSB1 or ESP32 command stations.</span></p>
+<p>If you are using an <strong>EX-CSB1</strong>, ESP32 based EX-CommandStation and are are using the latest DEVEL versions of the  EX-CommandStation code (versions from 5.7.0),</span> the <code>config.h</code> options for WiFi configuration are ignored by CSB1 or ESP32 command stations. Instead you must use the instructions on this page.</p>
+<p>Also see the <a href="../config-wifi-esp32-gui-options_not_in_nav/">WiFi Configuration for version 5.7.0+ - Graphical User Interface Options</a> for detailed instructions on how, and why, to change these settings using EX-WebThrottle or EX-Toolbox.</p>
 <h2 id="operating-modes">Operating Modes<a class="headerlink" href="#operating-modes" title="Permanent link">&para;</a></h2>
 <p>WiFi has two operating modes:</p>
 <ul>
-<li>AP (Access point) means the Command station acts as its own private WiFi network so throttle devices must connect first to the Command Station WiFi network.</li>
-<li>STA (Station mode) means the command station connects to your WiFi router and appears as a device on that network. If the WiFi is configured for STA mode, but fails to connect to your router, it will fall back to AP mode in much the same way as smart plugs, lights etc.</li>
+<li><strong>AP</strong> (Access point) means the <strong>EX-CommandStation</strong> acts as its own private WiFi network so throttle devices must connect first to the Command Station WiFi network.</li>
+<li><strong>STA</strong> (Station mode) means the <strong>EX-CommandStation</strong> connects to your existing WiFi router and appears as a device on that network. If the WiFi is configured for STA mode, but fails to connect to your router, it will fall back to AP mode in much the same way as smart plugs, lights etc.</li>
 </ul>
-<p>As shipped, or without prior configuration, the ESP32 WiFi default to operate in AP mode with an ssid/Password combination generated from the internal chip (mac) address. The ssid and password will be shown on the oled display (typically "DCCEX_123abc" and "PASS_123abc") so you can connect you phone or tablet immediately and start running.</p>
+<p>As shipped, or without prior configuration, the ESP32 WiFi default to operate in AP mode with an ssid/Password combination generated from the internal chip (mac) address. The ssid and password will be shown on the oLED display (typically something like "DCCEX_123abc"<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup> and "PASS_123abc") so you can connect you phone or tablet immediately and start running.
+d</p>
 <p>Later, you may wish to reset the connection to use your home router as this avoids the need to reconnect your normal phone WiFi before using a throttle.</p>
 <p>WiFi configuration changes are made by running commands from the USB serial (IDE, PaltformIO, EXWebThrottle) or from a connected WiFi throttle such as Engine Driver or EXToolbox.</p>
 <p>The commands below are stored on the ESP32 (except for the TEMP command). Please be aware that if you issue a command to change the WiFi settings from a WiFi device, this will mean you lose connection and need to reconnect before continuing.</p>
@@ -7194,6 +7198,14 @@ Host names starting with "DCCEX" are more readily found by WiFi throttles.</p>
 <h2 id="displaying-wifi-settings">Displaying WiFi settings<a class="headerlink" href="#displaying-wifi-settings" title="Permanent link">&para;</a></h2>
 <div class="language-cpp highlight"><pre><span></span><code><span class="o">&lt;</span><span class="n">D</span><span class="w"> </span><span class="n">WIFI</span><span class="w"> </span><span class="n">SHOW</span><span class="o">&gt;</span>
 </code></pre></div>
+<div class="footnote">
+<hr />
+<ol>
+<li id="fn:1">
+<p>Where `123abc`` will be the last 6 digits of the mac address of the wifi board on the device. As such it will be unique for every EX-CommandStation.&#160;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+</ol>
+</div>
 
 
 
@@ -7214,7 +7226,7 @@ Host names starting with "DCCEX" are more readily found by WiFi throttles.</p>
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 8, 2026 23:42:33 UTC">June 8, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 16, 2026 01:25:06 UTC">June 16, 2026</span>
   </span>
 
     
@@ -7253,7 +7265,7 @@ Host names starting with "DCCEX" are more readily found by WiFi throttles.</p>
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../config-h/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Configuration (config.h)">
+          <a href="../config-wifi-shield/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Configure WiFi (Wifi Shield)">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -7263,20 +7275,20 @@ Host names starting with "DCCEX" are more readily found by WiFi throttles.</p>
                 Previous
               </span>
               <div class="md-ellipsis">
-                Configuration (config.h)
+                Configure WiFi (Wifi Shield)
               </div>
             </div>
           </a>
         
         
           
-          <a href="../config-wifi-shield/" class="md-footer__link md-footer__link--next" aria-label="Next: WiFi Configuration (Wifi Shield)">
+          <a href="../testing/" class="md-footer__link md-footer__link--next" aria-label="Next: Testing your Command Station">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                WiFi Configuration (Wifi Shield)
+                Testing your Command Station
               </div>
             </div>
             <div class="md-footer__button md-icon">
