@@ -26,11 +26,11 @@ Automation in DCC-EX is much simpler if you forget the "Oh, a train is approachi
 It's much simpler to think "Im proceeding along track 4 in a westerly direction and when I get to the footbridge I must look ahead at signal x and start braking, then carry on to the coal yard and stop at the buffers."
 Position sensors are ideal for this kind of thing, block occupancy just doesnt cut it.
 
-EXRAIL makes this stuff easy.... 😁  but you have to start with the right perspective.
+**EXRAIL** makes this stuff easy.... 😁  but you have to start with the right perspective.
 
 ## Defining sensors
 
-EXRAIL is used to describe how the sensor devices are wired to the **EX-CommandStation** (usually via I2C) and what [VPIN](?VPIN) is to be assigned to each sensor
+**EXRAIL** is used to describe how the sensor devices are wired to the **EX-CommandStation** (usually via I2C) and what [VPIN](?VPIN) is to be assigned to each sensor
 
 The most common method of connecting sensor devices to your **EX-CommandStation** is through an [MCP23017](?MCP23017) device which offers up to 14 input pins (or 16 output pins, or a mix of both) through a single I2C connection. For more inputs you can add more MCP23017 devices to the I2C chain.
 

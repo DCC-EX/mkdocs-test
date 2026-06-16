@@ -49,11 +49,11 @@ graph LR
 
 ## Existing Users Looking to Automate/Animate
 
-These users already have a CSB1 or DIY stack up and running and may or may not have accessories as well. They want to understand how to automate and/or animate running trains and/or their layout in general. This may be as simple as a shuttle running back and forth between two stations, or a complex display running trains, controlling various layout aspects (eg. lighting, cross gates), and automating shunting or routes across different tracks. This will definitely be out of Conductor territory but is all about EXRAIL, although guidance on what hardware is required to achieve these will be required.
+These users already have a CSB1 or DIY stack up and running and may or may not have accessories as well. They want to understand how to automate and/or animate running trains and/or their layout in general. This may be as simple as a shuttle running back and forth between two stations, or a complex display running trains, controlling various layout aspects (eg. lighting, cross gates), and automating shunting or routes across different tracks. This will definitely be out of Conductor territory but is all about **EXRAIL**, although guidance on what hardware is required to achieve these will be required.
 
 ```mermaid
 graph LR
-    A[Home page] --> B[EXRAIL introduction];
+    A[Home page] --> B[**EXRAIL** introduction];
     B --> C[Accessory options];
     B --> D[EXRAIL cookbook];
     B --> E[EXRAIL reference];

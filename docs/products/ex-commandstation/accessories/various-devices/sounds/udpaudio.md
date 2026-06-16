@@ -7,7 +7,7 @@ UDPAudio is a HAL driver that enables UDP network audio control for Waveshare ES
 | Feature | Status | Description |  
 | --------- | -------- | ------------- |  
 | UDP broadcast control | ✅ | Send commands to all nodes simultaneously |  
-| WAITFOR support | ✅ | Blocks EXRAIL until audio completes |  
+| WAITFOR support | ✅ | Blocks **EXRAIL** until audio completes |  
 | Folder selection | ✅ | Switch between `/trains/`, `/music/`, `/soundfx/`, `/other/` |  
 | Volume control | ✅ | 0-30 DCC-EX scale (mapped to 0-100 on node) |  
 | Pause/Resume | ✅ | Pause and resume playback |  
@@ -83,7 +83,7 @@ Format:`<A vpin track volume opcode folder>`
 
 ### Opcode Mapping
 
-| OPCODE | EXRAIL Command | Notes |  
+| OPCODE | **EXRAIL** Command | Notes |  
 | -------- | ---------------- | ------- |  
 | 15 | `PLAY_TRACK` | Plays specified track |  
 | 14 | `PLAY_PAUSE` | Pauses playback |  
@@ -97,7 +97,7 @@ Format:`<A vpin track volume opcode folder>`
 
 `<z vpin >` (busy) or `<z -vpin>` (idle)
 
-This feedback enables WAITFOR and IF statements in EXRAIL.
+This feedback enables WAITFOR and IF statements in **EXRAIL**.
 
 ## VPIN Allocation
 

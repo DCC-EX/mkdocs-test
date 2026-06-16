@@ -68,7 +68,7 @@ or <jR> for none.
 Each Roster entry had a name and function map obtained by:
 ``<JR 200>``  reply like ``<jR 200 "Thomas" "whistle/*bell/squeal/panic">``
 
-Refer to EXRAIL ROSTER command for function map format.
+Refer to **EXRAIL** ROSTER command for function map format.
 
 Obtaining throttle status.
 
@@ -84,7 +84,7 @@ Obtaining throttle status.
 ### Momentum
 
 The **EX-CommandStation** can apply momentum to throttle movements in the same way that a standards compliant DCC decoder can be set to do. This momentum can be defaulted system wide and overridden on individual locos. It does not use or alter the loco CV values and so it also works when driving DC locos.
-The momentum is applied regardless of the throttle type used (or even EXRAIL).
+The momentum is applied regardless of the throttle type used (or even **EXRAIL**).
 
 Momentum is specified in mS / throttle_step.
 
@@ -99,7 +99,7 @@ For example:
 `<m 0 21>`  sets the default momentum to 21mS/Step for all current and future locos that have not been specifically set.
 `<m 3 -1>`   sets loco 3 to track the default momentum value.
 
-EXRAIL
+**EXRAIL**
   A new macro `MOMENTUM(accel [, decel])` sets the momentum value of the current tasks loco ot the global default if loco=0.
 
 Note: Setting Momentum 7,14,21 etc is similar in effect to setting a decoder CV03/CV04 to 1,2,3.
@@ -113,7 +113,7 @@ As an additional option, the momentum calculation is based on the difference in 
 
 ## Turnouts/Points
 
-The conventional turnout/point definition commands and the ``<H>`` responses do not contain information about the turnout/point description which may have been provided in an EXRAIL script. A turnout/point description is much more user friendly than T123 and having a list helps the throttle UI build a suitable set of buttons.
+The conventional turnout/point definition commands and the ``<H>`` responses do not contain information about the turnout/point description which may have been provided in an **EXRAIL** script. A turnout/point description is much more user friendly than T123 and having a list helps the throttle UI build a suitable set of buttons.
 
 ``<JT>`` command returns a list of turnout/point ids. The throttle should be uninterested in the turnout/point technology used but needs to know the ids it can throw/close and monitor the current state.
 e.g.  response ``<jT 1 17 22 19>``
@@ -126,7 +126,7 @@ or ``<jT 17 X>`` indicating turnout/point unknown (or possibly hidden.)
 
 **NOTE:** It is still the throttles responsibility to monitor the status broadcasts. There is no intention of providing a command that indicates the turnout/point list has been updated since the throttle started.
 
-**NOTE:** Turnouts/Points marked in EXRAIL with the HIDDEN keyword instead of a "description" will NOT show up in these commands.
+**NOTE:** Turnouts/Points marked in **EXRAIL** with the HIDDEN keyword instead of a "description" will NOT show up in these commands.
 
 ----
 
@@ -138,7 +138,7 @@ or ``<jT 17 X>`` indicating turnout/point unknown (or possibly hidden.)
 
 ## Automations/Routes
 
- A throttle need to know which EXRAIL Automations and Routes it can show the user.
+ A throttle need to know which **EXRAIL** Automations and Routes it can show the user.
 
  ``<JA>`` Returns a list of Automations/Routes
  e.g. ``<jA 13 16 23>``
@@ -151,14 +151,14 @@ or ``<jT 17 X>`` indicating turnout/point unknown (or possibly hidden.)
 
  What's the difference:
 
-   A Route is just a call to an EXRAIL ROUTE, traditionally to set some turnouts or signals but can be used to perform any kind of EXRAIL function... but its not expecting to know the loco.
+   A Route is just a call to an **EXRAIL** ROUTE, traditionally to set some turnouts or signals but can be used to perform any kind of **EXRAIL** function... but its not expecting to know the loco.
    Thus, a route can be triggered by sending in for example ``</START 13>``.
 
-   An Automation is a handoff of the last accessed loco id to an EXRAIL AUTOMATION which would typically drive the loco away.
+   An Automation is a handoff of the last accessed loco id to an **EXRAIL** AUTOMATION which would typically drive the loco away.
    Thus, an Automation expects a start command with a cab id
    e.g. ``</START 13 3>``
 
-Routes and Automations can also have their current status and caption altered dynamically by EXRAIL (docs ==TODO==)
+Routes and Automations can also have their current status and caption altered dynamically by **EXRAIL** (docs ==TODO==)
 
 ### Route Status
 

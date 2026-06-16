@@ -14,15 +14,15 @@ This project is based on a project originally written by Jim Gifford (Hallet Cov
 
 I felt that this project was ripe for an update and decided to convert Jim's code to operate using a cheap TFT/LCD touch screen to run on my own layout. This project is the result.  Much of the code has been rewritten into smaller functions with additional features added, but the time clock calculations are the originals.
 
-This project has now been extended to add the capability of integrating the clock to the **DCC-EX EX-CommandStation** and more specifically the EXRAIL automation feature which now allows time based control. This feature is optional and can be controlled by the config.h file.
+This project has now been extended to add the capability of integrating the clock to the **DCC-EX EX-CommandStation** and more specifically the **EXRAIL** automation feature which now allows time based control. This feature is optional and can be controlled by the config.h file.
 
 ## What is EX-FastClock?
 
-EX-FastClock is a standalone microprocessor based fast adjustable speed clock, using an additional Arduino Uno in conjunction with a shield based TFT touchscreen. Features have been added to EX-CommandStation to allow the clock to integrate to the EX-CommandStation and control EXRAIL based on time events.
+EX-FastClock is a standalone microprocessor based fast adjustable speed clock, using an additional Arduino Uno in conjunction with a shield based TFT touchscreen. Features have been added to EX-CommandStation to allow the clock to integrate to the EX-CommandStation and control **EXRAIL** based on time events.
 
 ![EX-FastClock](/_static/images/ex-fastclock/Fastclock.png){ align=right }
 
-Each time the time changes the EX-CommandStation looks for a time change event and if it finds a match it executes the commands recorded for that event as defined in the EXRAIL myAutomation.h file.  Additionally the EX-CommandStation will issue a time broadcast so that other devices such as clock repeaters can capture the time.  Also where WiThrottle devices are connected a WiThrottle broadcast is made which means that connected devices such as Engine Driver can display the time.
+Each time the time changes the EX-CommandStation looks for a time change event and if it finds a match it executes the commands recorded for that event as defined in the **EXRAIL** myAutomation.h file.  Additionally the EX-CommandStation will issue a time broadcast so that other devices such as clock repeaters can capture the time.  Also where WiThrottle devices are connected a WiThrottle broadcast is made which means that connected devices such as Engine Driver can display the time.
 
 EX-FastClock allows the FastClock device to connect to the EX-CommandStation via either Serial Communications or I2C.  Even though EX-FastClock provides the code for an Uno based Clock it should be possible for tinkerer level users to add the relevant code if they already have a working clock that they wish to integrate to EX-CommandStation.
 

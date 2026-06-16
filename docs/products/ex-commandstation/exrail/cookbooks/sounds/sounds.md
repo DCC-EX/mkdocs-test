@@ -1,10 +1,10 @@
 # Controlling Sounds in EXRAIL
 
-There are multiple `PLAY_` commands in EXRAIL is used to control sound. The first parameter is always the VPIN of the device, the meaning of the argumants depend on the command.
+There are multiple `PLAY_` commands in **EXRAIL** is used to control sound. The first parameter is always the VPIN of the device, the meaning of the argumants depend on the command.
 
-Note: Timing and race conditions may occur with multiple EXRAIL tasks sending commands to the same DFPlayer/UDPAudio to the extent that commands could be overwritten before they are executed or not executed in the desired order, possibly leaving the sound module in an unknown state or causing a timeout.
+Note: Timing and race conditions may occur with multiple **EXRAIL** tasks sending commands to the same DFPlayer/UDPAudio to the extent that commands could be overwritten before they are executed or not executed in the desired order, possibly leaving the sound module in an unknown state or causing a timeout.
 
-There are only minor differences between sound devices but the EXRAIL commands generally hide these.
+There are only minor differences between sound devices but the **EXRAIL** commands generally hide these.
 More details for [DFPlayer](?DFPLayer) and [UDPAudio](?UDPAudio)
 
 ## Playing a sound (PLAY_TRACK, PLAY_REPEAT)
@@ -78,7 +78,7 @@ PLAY_VOLUME_(3500,15) // set more sensible volume 15
 
 ## Using WAITFOR
 
-Your EXRAIL script can wait until a sound has completed. This example 
+Your **EXRAIL** script can wait until a sound has completed. This example 
 
 ```cpp
 // this example uses a pre-assigned ALIAS for the  VPIN. 

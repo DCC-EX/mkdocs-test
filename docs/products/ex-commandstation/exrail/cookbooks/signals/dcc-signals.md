@@ -24,4 +24,4 @@ This kind of signal can be defined as follows
 DCCX_SIGNAL(666,1,18,2)
 ```
 
- where 666 is the DCC linear address and the signal_id used for EXRAIL commands, the 1,18,2 represents the choice of aspects the signal supports to represent the red, amber and green states.
+ where 666 is the DCC linear address and the signal_id used for **EXRAIL** commands, the 1,18,2 represents the choice of aspects the signal supports to represent the red, amber and green states.

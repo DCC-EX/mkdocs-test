@@ -35,7 +35,7 @@ Extensive help is available at the [Engine Driver Home](https://enginedriver.mst
 
 ## EX-CommandStation Specific or Advantageous Features
 
-* DCC-EX EXRAIL Automation {Handoff}, Route {Set} and EXRAIL Command function buttons
+* DCC-EX **EXRAIL** Automation {Handoff}, Route {Set} and **EXRAIL** Command function buttons
 * Able to select local images for roster locos
 * New 'Request Loco ID' & 'Drive Away' feature from a Program track onto Mainline track with **EX-CommandStation**
 

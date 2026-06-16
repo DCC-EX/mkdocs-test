@@ -15,7 +15,7 @@ Dogbath ||====[1]=====\====[4]===<<=========\
 
 ## Block Reservations
 
-In EXRAIL we operate multiple trains at the same time and coordinate them with block reservations which is an entirely virtual concept but similar to early era real train operations where a driver must obtain a token from the signalman before proceeding into a particular block. In this example, we don't care which train enters the loop first or how it affects the other train. We define (in our minds) the block numbers which are shown in `[x]` above. There is no need for track breaks or other electronics, just the sensors so a train driver can say "When I get to the buffers.. STOP!"
+In **EXRAIL** we operate multiple trains at the same time and coordinate them with block reservations which is an entirely virtual concept but similar to early era real train operations where a driver must obtain a token from the signalman before proceeding into a particular block. In this example, we don't care which train enters the loop first or how it affects the other train. We define (in our minds) the block numbers which are shown in `[x]` above. There is no need for track breaks or other electronics, just the sensors so a train driver can say "When I get to the buffers.. STOP!"
 
 For example, a train leaving Dogbath is already occupying `[1]` but it must reserve `[2]` before departing in case the other train has been stopped in `[2]` by a cow on the line. Similarly it cant leave `[2]` before the other train has cleared `[3]`.
 
@@ -88,9 +88,9 @@ DONE
 
 If your two trains start facing each other from opposite ends of the loop, you must allow for this change otherwise the train starting at Catflap will be told to reverse when leaving, this is embarrassing to say the least.
 
-The INVERT_DIRECTION command tells EXRAIL to invert the FWD/REV commands for the current loco in the current task. Rather than duplicate both sequences with different direction commands, or litter them with IFLOCO checks, we can alter the startup to apply this invert to the task running loco 4 before starting at Catflap.
+The INVERT_DIRECTION command tells **EXRAIL** to invert the FWD/REV commands for the current loco in the current task. Rather than duplicate both sequences with different direction commands, or litter them with IFLOCO checks, we can alter the startup to apply this invert to the task running loco 4 before starting at Catflap.
 
-Note that EXRAIL is running a separate task for each loco.
+Note that **EXRAIL** is running a separate task for each loco.
 
 ```cpp
 ROUTE(1,"Start Dogbath-Catflap")

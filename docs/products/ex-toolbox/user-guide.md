@@ -302,7 +302,7 @@ The 'Servo Motor Test' screen will allow you to test and fine tune the settings 
 <div class="result" markdown>
 ![menu](/_static/images/ex-toolbox/sensors.png){align="right" width="200px"}
 
-The 'Sensor Test' screen will allow you to test any sensors configured in your EX‑CommandStation, but only if they have been (temporarily) defined using [JMRI_SENSOR](?JMRI_SENSOR) in EXRAIL, or the `<S vpin vpin 1>` command.
+The 'Sensor Test' screen will allow you to test any sensors configured in your EX‑CommandStation, but only if they have been (temporarily) defined using [JMRI_SENSOR](?JMRI_SENSOR) in **EXRAIL**, or the `<S vpin vpin 1>` command.
 
 When the screen opens the first 100 sensors found will be shown. Activity on the sensors will be shown on the screen. Scroll down to if needed.
 

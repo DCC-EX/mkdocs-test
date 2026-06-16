@@ -4,7 +4,7 @@ When you have turnouts that face each other, its awkward for the throttle user t
 
 To do this, we need to hide one of the turnouts/points from the user, and make sure that throwing/closing the visible turnout/point automatically throws/closes the other turnout/point.
 
-All turnout/point definitions in EXRAIL allow for a text description to be shown to the user throttle. The HIDDEN keyword, used instead of a turnout/point description prevents it being visible to the throttle or JMRI/iTrain etc.
+All turnout/point definitions in **EXRAIL** allow for a text description to be shown to the user throttle. The HIDDEN keyword, used instead of a turnout/point description prevents it being visible to the throttle or JMRI/iTrain etc.
 
 ```cpp
 TURNOUTL(1,101,"Cross inner to outer")

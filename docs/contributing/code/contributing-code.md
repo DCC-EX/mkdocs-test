@@ -24,7 +24,7 @@ You may ask if you can use the Arduino IDE, Visual Studio, or even a text editor
 
 We have adopted the Google style guidelines. In particular please make sure to adhere to these standards:
 
-1. All header files should have ``#define`` guards to prevent multiple inclusion. (EXCEPT .h files containing EXRAIL scripts!)
+1. All header files should have ``#define`` guards to prevent multiple inclusion. (EXCEPT .h files containing **EXRAIL** scripts!)
 2. Use Unix style line endings
 3. We indent using two spaces (soft tabs)
 4. Braces

@@ -2,7 +2,7 @@
 
 The following hardware devices, available from various sources, have support code built in to the **EX-CommandStation**. Some are commonly used in the electronics and Arduino market, others are specifically designed for model railway use.
 
-Although the devices are summarised here, you should refer to EXRAIL cookbooks for examples of how to use these, or refer to the appropriate source code, normally found in a file called IO_something.h (e.g. IO_PCA9685.h)
+Although the devices are summarised here, you should refer to **EXRAIL** cookbooks for examples of how to use these, or refer to the appropriate source code, normally found in a file called IO_something.h (e.g. IO_PCA9685.h)
 
 * [ADS111x](?ADS111x) I2C-connected analogue input
 * [DCCAccessoryDecoder](?DCCAccessoryDecoder) creates VPINs to drive DCC connected accessory decoders

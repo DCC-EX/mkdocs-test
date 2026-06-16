@@ -25,7 +25,7 @@ The DCC-EX Command Station code is layered to reduce overall complexity and impr
     - recognizes commands and calls appropriate internal APIs
 
 - Exrail (EXRAIL*.h)
-    - provides EXRAIL language functions
+    - provides **EXRAIL** language functions
     - acts as single point of contact for almost every user-specific configuration
     - implements multi-tasking virtual machine to execute exrail scripts
 

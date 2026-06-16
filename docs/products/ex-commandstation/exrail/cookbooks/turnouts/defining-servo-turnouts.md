@@ -16,7 +16,7 @@ Use flexible wire to connect your servo arm to the turnout/point. Using a flexib
 
 ## Defining servo based turnout/point objects
 
-Define servo based turnouts/points using EXRAIL.
+Define servo based turnouts/points using **EXRAIL**.
 
 ```cpp
 SERVO_TURNOUT(id, vpin, active_angle, inactive_angle, profile, "description")

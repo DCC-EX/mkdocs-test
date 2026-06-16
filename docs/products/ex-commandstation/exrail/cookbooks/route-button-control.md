@@ -1,6 +1,6 @@
 # Route button control
 
-Route buttons appear on the throttle and can be controlled from EXRAIL to hide, disable or recaption the button. Everything here applies equally to AUTOMATIONs.
+Route buttons appear on the throttle and can be controlled from **EXRAIL** to hide, disable or recaption the button. Everything here applies equally to AUTOMATIONs.
 
 If a route button can be in one of 4 states:
   
@@ -9,7 +9,7 @@ If a route button can be in one of 4 states:
 - Disabled (you can't press this)
 - Hidden (the entire route is not visible on the throttle)
 
-This allows EXRAIL to prevent multiple conflicting routes to be set, or to replace the default "Set" button with open/close, start/stop, yes/no, on/off or whatever makes most sense in context.
+This allows **EXRAIL** to prevent multiple conflicting routes to be set, or to replace the default "Set" button with open/close, start/stop, yes/no, on/off or whatever makes most sense in context.
 
 Here are examples of solving the same problem but with different user experiences.
 In this case we want a way of setting a light on or off.
@@ -79,7 +79,7 @@ AUTOSTART
   DONE
 ```
 
-EXRAIL hs the full set of route setting and testing commands which should be self explanitory once the above simple examples have been understood. Each route can only be in one of the 4 states.
+**EXRAIL** hs the full set of route setting and testing commands which should be self explanitory once the above simple examples have been understood. Each route can only be in one of the 4 states.
 
 ```cpp
 IFROUTE_INACTIVE(route_id)

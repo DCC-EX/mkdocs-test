@@ -40,8 +40,8 @@ the DFPlayer has a strange behaviour when the audio files are stored in the root
 
 The DFLayer implementation require a directory named 01 to 99, and should contain all the audio files named 001.mp3 to 255.mp3. The format `001<sound title>.mp3` is also supported.
 
-Best practice is to compile an audio catalogue and store files in different folders, for example each folder is for a different category. It makes it easy to write EXRAIL scripts to control sound when each DFPLayer has the same sound catalogue on its microSD card. We have created an example sound catalogue, royalty free, full attribution document and open source to get you started.
+Best practice is to compile an audio catalogue and store files in different folders, for example each folder is for a different category. It makes it easy to write **EXRAIL** scripts to control sound when each DFPLayer has the same sound catalogue on its microSD card. We have created an example sound catalogue, royalty free, full attribution document and open source to get you started.
 
 Files in WAV format are also supported, but take up more space, audio files in MP3 format are recommended.
 
-The EXRAIL cookbooks provide several worked example sound scenarios.
+The **EXRAIL** cookbooks provide several worked example sound scenarios.

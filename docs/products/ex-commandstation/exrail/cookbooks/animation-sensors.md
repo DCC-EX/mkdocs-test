@@ -34,7 +34,7 @@ ONSENSOR(176)
   DONE
 ```
 
-Note: Switches are not suitable for controlling turnouts/points because the **EX-CommandStation** can't reach out a finger and change the switch position when the turnout/point is changed from a throttle or some other EXRAIL script. (Unless of course, you are into animating a servo to do just that!)
+Note: Switches are not suitable for controlling turnouts/points because the **EX-CommandStation** can't reach out a finger and change the switch position when the turnout/point is changed from a throttle or some other **EXRAIL** script. (Unless of course, you are into animating a servo to do just that!)
 
 You can toggle a turnout/point with a single button
 

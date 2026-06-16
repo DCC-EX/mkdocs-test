@@ -23,8 +23,8 @@ ONBUTTON(173) ESTOPALL DONE
 
 However, ESTOPALL does have disadvantages:
 
-- Nothing prevents a throttle or EXRAIL script sending in a speed command a fraction of a second later
-- Users can throttle up when they are ready, but an EXRAIL script may be stuck waiting for a loco to arrive somewhere and with no way of restarting it.
+- Nothing prevents a throttle or **EXRAIL** script sending in a speed command a fraction of a second later
+- Users can throttle up when they are ready, but an **EXRAIL** script may be stuck waiting for a loco to arrive somewhere and with no way of restarting it.
 
 ## ESTOP_PAUSE
 

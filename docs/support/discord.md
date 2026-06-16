@@ -83,7 +83,7 @@ If you can't see channels which seem relevant or of interest to you, you can cus
 Here are some examples of commonly used channels, and there are plenty more:
 
 - ``#support-and-issues__ex-commandstation`` - Use this channel for general EX-CommandStation conversations and help
-- ``#exrail`` - Use this channel for general EXRAIL conversations and help
+- ``#exrail`` - Use this channel for general **EXRAIL** conversations and help
 - ``#tack-manager`` - Use this channel for general TrackManager conversations and help
 - ``#accessories`` - Use this channel for topics such as PCA9685 servo controllers and servos, MCP23017 I/O expansion boards, and other accessories
 - ``#sensors``

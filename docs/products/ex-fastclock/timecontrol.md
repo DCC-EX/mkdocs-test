@@ -3,7 +3,7 @@
 
 ## EXRAIL Commands
 
-Commands have been included in EXRAIL allow events to be controlled by the clock.  The new commands are:
+Commands have been included in **EXRAIL** allow events to be controlled by the clock.  The new commands are:
 
 ```cpp
 ONCLOCKTIME( hour, mins)
