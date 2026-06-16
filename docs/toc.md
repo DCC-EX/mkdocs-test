@@ -22,8 +22,8 @@ li a {
         - [EX-CSB1 CommandStation Booster](products\ex-commandstation\ex-csb1.md)
         - [Running a Legacy DC layout <small>(Running a DC layout)</small>](products\ex-commandstation\dc-running.md)
         - [Build configuration (config.h) <small>(Configuration (config.h))</small>](products\ex-commandstation\config-h.md)
-        - [WiFi configuration (EX-CSB1 or ESP32 ONLY. Version 5.7.0+ ONLY) <small>(WiFi Configuration (CSB1 or ESP32))</small>](products\ex-commandstation\config-wifi-esp32.md)
-        - [Wifi configuration (Not CSB1 or ESP32) <small>(WiFi Configuration (Wifi Shield))</small>](products\ex-commandstation\config-wifi-shield.md)
+        - [Wifi configuration <br/><small>(Excluding EX-CSB1 or ESP32 v5.7.0+)</small> <small>(Configure WiFi (Wifi Shield))</small>](products\ex-commandstation\config-wifi-shield.md)
+        - [WiFi configuration <br/><small>(EX-CSB1 or ESP32 ONLY. v5.7.0+ ONLY)</small> <small>(Configure WiFi (CSB1 & ESP32 v5.7.0+))</small>](products\ex-commandstation\config-wifi-esp32.md)
         - [Testing your Command Station](products\ex-commandstation\testing.md)
         - **TrackManager**
             - [TrackManager](products\ex-commandstation\trackmanager\trackmanager.md)
@@ -243,6 +243,7 @@ li a {
 
 ## Files Not In Navigation
 
+- [WiFi Configuration for version 5.7.0+ <br/><small>Graphical User Interface Options</small>](products/ex-commandstation/config-wifi-esp32-gui-options_not_in_nav.md)
 - [Connecting WiFi Throttles via USB](products/ex-toolbox/connect_wifi_throttle_via_usb_not_in_nav.md)
 - [Incorrect IOREF voltage for 3.3v Microcontrollers](reference/esp32/ioref-incorrect-voltage-fix_not_in_nav.md)
 - [``<! [P|Q|R]>`` <br/>Emergence Stop or Pause](reference/serial-commands/serial-command-!_not_in_nav.md)
