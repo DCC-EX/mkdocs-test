@@ -12,7 +12,7 @@ This project is based on a project originally written by Jim Gifford (Hallet Cov
 I felt that this project was ripe for an update and decided to convert Jim's code to operate using a cheap TFT/LCD touch screen to run on my own layout. This project is the result.  Much of the code has been rewritten into smaller functions with additional features added, but the time clock calculations are the originals.
 
 This project has now been extended to add the capability of integrating the clock to the DCC-EX 
-Command Station and more specifically the EXRAIL automation feature which now allows time based 
+Command Station and more specifically the **EXRAIL** automation feature which now allows time based 
 control. This feature is optional and can be controlled by the config.h file.
 
 ## Hardware
