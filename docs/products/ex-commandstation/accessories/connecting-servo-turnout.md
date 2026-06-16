@@ -1,4 +1,4 @@
-# Connecting a servo turnout
+# Connecting a servo turnout/point
 
 The details below assume you are using an EX-CSB1 command station or a DIY station with an EX8874 motor shield and Wifi connection. Otherwise the steps are the same but the wiring is trickier without the Qwiic sockets and testing requires command input.
 
@@ -40,14 +40,14 @@ from the startup logs using the serial monitor
 
 4. Examine the log to check that your PCA9685 has been detected and note the I2C address it found. This will typically be 0x40. If this address is 0x40 or 0x41 then the CS has defaulted this to be a PCA9685 and automatically assigned a range of 16 [VPINs](?VPIN) to represent the 16 servo outputs.
 5. Examine the log further down and you should see where the VPINs are assigned. The following advice assumes that the address was 0x40 and the first VPIN will be 100.
-6. Plug a servo into the first output socket. DO NOT mechanically connect the servo arm to any turnout or animation as the servo may move unexpectedly and cause physical damage.  You will connect the servo arm after exercising the servo (step 8).
+6. Plug a servo into the first output socket. DO NOT mechanically connect the servo arm to any turnout/point or animation as the servo may move unexpectedly and cause physical damage.  You will connect the servo arm after exercising the servo (step 8).
 7. Connect the additional servo power supply to the long-edge turrets on the PCA9685, observing the correct polarity. ![PCA9685](/_static/images/i2c-devices/PCA9685.jpg){: style="width: 70%"}
 8. On the installers serial monitor, enter the command ```<D SERVO 100 200>``` which should move the servo. Experiment with other positions than 200. The usable range is approximately 102 to 490.  
 9. (Optionally) Use the EX-Toolbox Andoid app to experiment with servo angles and servo arm lengths until you have the required throw distance and angles to suit your servo mounting preferences.
 
-## Define your Turnouts
+## Define your turnouts/points
 
-01. In EX-Installer, edit myAutomation.h and define each turnout to give an id of your choice, the VPIN of the servo, the closed and open servo values you have discovered by experimentation and a suitable decription to show on your throttle.
+01. In EX-Installer, edit myAutomation.h and define each turnout/point to give an id of your choice, the VPIN of the servo, the closed and open servo values you have discovered by experimentation and a suitable decription to show on your throttle.
 
      ```cpp
      //SERVO_TURNOUT( turnout_id, vpin, active_angle, inactive_angle, profile [, "description"|HIDDEN] )
@@ -58,16 +58,16 @@ from the startup logs using the serial monitor
 
 02. Reload the command station from the installer.
 
-## Test your turnout definitions
+## Test your turnout/point definitions
 
-1. Using the serial monitor as before, enter the commands ```<T 1 T>``` to throw turnout 1, ```<T 2 C>``` to close turnout 2 and so on.
-2. With your Wifi throttle (Typically Engine Driver) navigate to the turnouts page where you will see the two turnouts listed. From there you can throw or close them as required.
+1. Using the serial monitor as before, enter the commands ```<T 1 T>``` to throw turnout/point 1, ```<T 2 C>``` to close turnout/point 2 and so on.
+2. With your Wifi throttle (Typically Engine Driver) navigate to the turnouts/points page where you will see the two turnouts/points listed. From there you can throw or close them as required.
 
-## Connect your servos to turnouts
+## Connect your servos to turnouts/points
 
 There are many ways of mounting servos both above and below the baseboard using 3D printed mounts or a strip of plastic L shape. You will probably want to use microswitches to switch frog polarity or use more expensive frog juicers or EXRAIL driven relays.
 
-We recommend that whatever mechanical connection you make allows for protection of you turnout from excess servo movement.
+We recommend that whatever mechanical connection you make allows for protection of your turnout/point from excess servo movement.
 
 ## PCA9685 Configure additional boards
 

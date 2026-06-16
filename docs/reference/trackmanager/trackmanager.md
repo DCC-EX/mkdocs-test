@@ -51,7 +51,7 @@ In a default setup this will normally return
 
 In an all-DCC environment it is unlikely that you will need to do anything other than setting any additional tracks (C...H) as DCC in your `myAutomation.h` file.  [Example:  Startup - Define Tracks](/products/ex-commandstation/dc-running.md)
 
-Bear in mind that a track may actually be only connected to DCC accessories such as signals and turnouts... your layout, your choice.
+Bear in mind that a track may actually be only connected to DCC accessories such as signals and turnouts/points... your layout, your choice.
 
 Note that when setting a track to PROG or OFF, its power is switched off automatically. (The PROG track manages power on an as-needed basis under normal circumstances.
 When setting a track to MAIN (or DC, DCX see later) the power is applied according to the most recent `<1>` or `<0>` command as being the most compatible with previous versions.

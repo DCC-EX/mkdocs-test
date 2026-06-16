@@ -8,7 +8,7 @@ To include your additional files, use the c++ preprocessor #include control in m
 ```cpp
 // Include my roster file
 #include "myRoster.h"
-// Include my turnout definitions
+// Include my turnout/point definitions
 #include "myTurnouts.h"
 // Special animation
 #include "myCowOnElectricFence.h"

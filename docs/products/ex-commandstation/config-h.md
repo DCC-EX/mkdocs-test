@@ -92,7 +92,7 @@ If you wish to include additional rows:
 
 ## Disable EEPROM
 
-The EEPROM feature is only there for backward support of deprecated methods of turnout, sensor and output creation inherited from DCC++.
+The EEPROM feature is only there for backward support of deprecated methods of turnout/point, sensor and output creation inherited from DCC++.
 
 You are advised to turn this off to save memory.
 

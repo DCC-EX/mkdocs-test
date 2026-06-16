@@ -25,10 +25,10 @@ If you are creating a physical throttle using an ESP32 microcontroller, you are 
 
 The commonly used speed, function, loco programming and diagnostic commands are discussed elsewhere with users in mind. However, there are a large number of commands designed only to be used by other programs such as JMRI, Engine Driver or other throttles specifically aimed at the DCC-EX Native/Serial Protocol. (not WiThrottle)
 
-Many commands that have been implemented to assist throttle authors to obtain information from the Command Station in order to implement turnout, route/automation and roster features.
-Some of these commands are deliberately multi-stage requests to avoid timing and blocking issues caused by massive transmissions (e.g. a full list of turnouts with descriptions) that can cause Command Station issues.
+Many commands that have been implemented to assist throttle authors to obtain information from the Command Station in order to implement turnout/point, route/automation and roster features.
+Some of these commands are deliberately multi-stage requests to avoid timing and blocking issues caused by massive transmissions (e.g. a full list of turnouts/points with descriptions) that can cause Command Station issues.
 
-Broadcast replies are also designed so that a throttle can maintain loco speed and function states, turnout poisitions and route states.
+Broadcast replies are also designed so that a throttle can maintain loco speed and function states, turnout/point poisitions and route states.
 
 ## Considerations for throttle developers
 
@@ -50,8 +50,8 @@ Key throttle/controller specific commands are summarised here, refer below for e
 | ``<t loco tSpeed dir>`` | ``<l loco slot speedbyte functionMap>`` (Broadcast) | Sets a cab (loco) speed[^1] and direction. (See below for the response) |
 | ``<t loco>`` | ``<l loco slot speedbyte functionMap>`` (Broadcast) | Requests a deliberate update of cab (loco) speed[^1]/functions |
 | ``<F loco funct state>`` | ``<l loco slot speedbyte functionMap>`` (Broadcast) | Turns cab (loco) decoder functions ON and OFF (See below for the response.) |
-| ``<JT>`` | ``<jT id1 id2 id3 ...>`` | Returns the defined turnout IDs |
-| ``<JT id>`` | ``<jT id state "[description]">`` | Returns the ID, state, and description of the specified turnout ID |
+| ``<JT>`` | ``<jT id1 id2 id3 ...>`` | Returns the defined turnout/point IDs |
+| ``<JT id>`` | ``<jT id state "[description]">`` | Returns the ID, state, and description of the specified turnout/point ID |
 | ``<JA>`` | ``<jA id1 id2 id3 ...>`` | Returns the defined automation and route IDs |
 | ``<JA id>`` | ``<jA id type "[description]">`` | Returns the ID, type (A=automation or R=route), and description of the specified automation/route ID |
 | ``<JR>`` | ``<jR id1 id2 id3 ...>`` | Returns the defined roster entry IDs |

@@ -26,7 +26,7 @@ Extensive help is available at the [Engine Driver Home](https://enginedriver.mst
 * Speed and direction control
 * Up to 31 DCC functions
 * Create and edit consists (software-defined)
-* Control layout power, turnouts, routes, and access JMRI web panels and windows
+* Control layout power, turnouts/points, routes, and access JMRI web panels and windows
 * 'Discover Server' Detect, Select & Connect to WiFi enabled Command Stations
 * 'Roster Server' download Engine ID's & function keys from the Command Station
 * 'Virtual Engine Sounds' {Bell, Horn, Short Horn, Mute} for motor only decoders, on first two throttles

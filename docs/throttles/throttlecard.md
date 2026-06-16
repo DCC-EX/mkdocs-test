@@ -14,7 +14,7 @@ You can find it in the App Store: [ThrottleCard](https://apps.apple.com/app/appl
 * Easily create consists on the fly right from within the app
 * Automatic command station discovery
 * Comprehensive locomotive function control
-* Full turnout control
+* Full turnout/point control
 * Haptic Feedback for intuitive responsiveness and operation
 * Mirror-Mode mode for comfortable operation in either hand
 * Multiple classic railroad-inspired themes

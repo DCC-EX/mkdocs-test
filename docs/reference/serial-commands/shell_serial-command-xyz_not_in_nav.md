@@ -13,9 +13,9 @@ Serial command to ...
 
 ## Parameters
 
-* **paramater**: *Required*|*optional* description
+* **parameter**: *Required*|*optional* description
 
-* **paramater**: *Required*|*optional* description - one of:
+* **parameter**: *Required*|*optional* description - one of:
     * ``option`` = explanation of option
     * ``option`` = explanation of option
     * ...
@@ -28,9 +28,9 @@ The following are not a direct response, but rather a broadcast that will be tri
 
 ``<response>``
 
-* **paramater**: explanation of the parameter
+* **parameter**: explanation of the parameter
 
-* **paramater**: explanation of the parameter - one of:
+* **parameter**: explanation of the parameter - one of:
     * ``option`` = explanation of option
     * ``option`` = explanation of option
     * ...

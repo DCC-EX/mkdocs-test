@@ -2,7 +2,7 @@
 
 EXRAIL is an “EXtended Railroad Automation Instruction Language” used to:
 
-- Describe your turnouts, signals etc.
+- Describe your turnouts/points, signals etc.
 - Configure your Command Station to understand the hardware and accessories you have attached.
 - Handle what to do when things happen (e.g. a button is pressed)
 - Create automated route settings through your layout
@@ -30,7 +30,7 @@ Although EXRAIL has more than 100 individual commands available, it is generally
 
 There are a few basic building blocks that will appear in the examples:
 
-- ```SEQUENCE``` - Simply a list of things to be done in order. These things might be to actually drive a train around, or merely to set some turnouts or flash some scene or panel lights. Actions can be made to wait for conditions to be met, like a sensor detecting a train, a button being pushed, or a period of time elapsing.
+- ```SEQUENCE``` - Simply a list of things to be done in order. These things might be to actually drive a train around, or merely to set some turnouts/points or flash some scene or panel lights. Actions can be made to wait for conditions to be met, like a sensor detecting a train, a button being pushed, or a period of time elapsing.
 e.g.
 
 ```cpp
@@ -41,11 +41,11 @@ e.g.
     DONE   // sequence completed
 ```
 
-- ```ROUTE``` – A special type of SEQUENCE that is made visible to a throttle with a readable name so the user can press a button to get the sequence executed. This might be best used to set a series of turnouts and signals to create a route through the layout. For example
+- ```ROUTE``` – A special type of SEQUENCE that is made visible to a throttle with a readable name so the user can press a button to get the sequence executed. This might be best used to set a series of turnouts/points and signals to create a route through the layout. For example
 
 ```cpp
   ROUTE(1,"Platform A to Mainline")
-    THROW(27) // set turnouts
+    THROW(27) // set turnouts/points
     CLOSE(6)
     GREEN(101) // change departure signal
     DONE 

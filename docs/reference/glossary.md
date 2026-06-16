@@ -72,9 +72,9 @@ That means instead of being a host that manages the IP of the smartphone that ru
 
 [Search for turnout](?turnout)
 
-In a prototypical railway, a turnout allows a train to diverge from one track to another. In DCC-EX terms, this term also denotes a software object that can control a physical turnout on your layout. A turnout can also be referred to as a point or a switch.
+In a prototypical railway, a turnout/point allows a train to diverge from one track to another. In DCC-EX terms, this term also denotes a software object that can control a physical turnout/point on your layout. A turnout/point can also be referred to as a point or a switch.
 
-Depending on your region, turnouts are also commonly referred to as points or switches.
+Depending on your region, turnouts/points are also commonly referred to as points or switches.
 
 ## VPIN
 

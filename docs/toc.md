@@ -12,6 +12,8 @@ li a {
 }
 </style>
 
+## Index Pages
+
 
 - [Home](index.md)
 - **Products**
@@ -39,7 +41,7 @@ li a {
             - [Overview - What are Accessories? <small>(Accessories)</small>](products\ex-commandstation\accessories\accessories.md)
             - [Actuators - to make stuff happen <small>(Actuators)</small>](products\ex-commandstation\accessories\actuators.md)
             - [Sensors](products\ex-commandstation\accessories\sensors.md)
-            - [Connecting a servo turnout <small>(Connecting Servo Turnout)</small>](products\ex-commandstation\accessories\connecting-servo-turnout.md)
+            - [Connecting a servo turnout/point <small>(Servo Turnouts/Points)</small>](products\ex-commandstation\accessories\connecting-servo-turnout.md)
             - [Hardware device list <small>(Hardware List)</small>](products\ex-commandstation\accessories\hardware-list.md)
             - [I2C – An Introduction <small>(I2C Intro)</small>](products\ex-commandstation\accessories\i2c-intro.md)
             - [Buying I2C Devices](products\ex-commandstation\accessories\buying-i2c-devices.md)
@@ -107,12 +109,12 @@ li a {
                     - [Startup power <small>(Power)</small>](products\ex-commandstation\exrail\cookbooks\startup\startup-poweron.md)
                     - [Startup - Define Tracks <small>(Track state)</small>](products\ex-commandstation\exrail\cookbooks\startup\startup-set-track.md)
                 - **Turnouts**
-                    - [Defining Dcc Turnouts](products\ex-commandstation\exrail\cookbooks\turnouts\defining-dcc-turnouts.md)
-                    - [Defining Pin Turnouts](products\ex-commandstation\exrail\cookbooks\turnouts\defining-pin-turnouts.md)
-                    - [Defining Servo Turnouts](products\ex-commandstation\exrail\cookbooks\turnouts\defining-servo-turnouts.md)
-                    - [Facing Turnouts](products\ex-commandstation\exrail\cookbooks\turnouts\facing-turnouts.md)
-                    - [Animated Turnouts](products\ex-commandstation\exrail\cookbooks\turnouts\animated-turnouts.md)
-                    - [Toggle turnouts with button or sensor <small>(Toggle With Button)</small>](products\ex-commandstation\exrail\cookbooks\turnouts\toggle-with-button.md)
+                    - [Defining Dcc Turnouts/Points](products\ex-commandstation\exrail\cookbooks\turnouts\defining-dcc-turnouts.md)
+                    - [Defining Pin Turnouts/Points](products\ex-commandstation\exrail\cookbooks\turnouts\defining-pin-turnouts.md)
+                    - [Defining Servo Turnouts/Points](products\ex-commandstation\exrail\cookbooks\turnouts\defining-servo-turnouts.md)
+                    - [Facing Turnouts/Points](products\ex-commandstation\exrail\cookbooks\turnouts\facing-turnouts.md)
+                    - [Animated Turnouts/Points](products\ex-commandstation\exrail\cookbooks\turnouts\animated-turnouts.md)
+                    - [Toggle Turnouts/Points With Button or Sensor <small>(Toggle With Button)</small>](products\ex-commandstation\exrail\cookbooks\turnouts\toggle-with-button.md)
                 - **Various devices**
                     - [Lew's Duino Gear boards](products\ex-commandstation\exrail\cookbooks\various-devices\duinoNodes.md)
                     - [I2C Multiplexors](products\ex-commandstation\exrail\cookbooks\various-devices\multiplexors.md)
@@ -249,11 +251,13 @@ li a {
 - [``<! [P|Q|R]>`` <br/>Emergence Stop or Pause](reference/serial-commands/serial-command-!_not_in_nav.md)
 - [``<1|0 [«track»]>`` <br/>Turn track power on or off](reference/serial-commands/serial-command-1-0_not_in_nav.md)
 - [<small>``<C WIFI ON|OFF|AP|HIDDENAP|TEMP|DEFAULT|HOSTNAME [«various parameters»]>``</small> <br/> Setup the WiFi](reference/serial-commands/serial-command-cc-wifi_not_in_nav.md)
+- [<small>``<D WIFI ON|OFF|SHOW>``</small> <br/> WiFi diagnostics](reference/serial-commands/serial-command-dd-wifi_not_in_nav.md)
 - [<small>``<D ACK LIMIT|MAX|MIN|OFF|ON [«value» [MS]]>`` <br/>``<C PROGBOOST>``</small> <br/>Modify System PROG track settings](reference/serial-commands/serial-command-dd_ack_not_in_nav.md)
 - [<small>``<= [«trackletter» «mode»] [«id»]>``</small> <br/>Request or Configure Track Manager <span style="display:none;">(_equals)</span>](reference/serial-commands/serial-command-equals_not_in_nav.md)
 - [<small>``<F «loco» [«function» «state»]|[DCCFREQ «freqValue»]>``</small> <br/>Set decoder functions or set PWM frequency](reference/serial-commands/serial-command-ff_not_in_nav.md)
 - [<small>``<I [«id»] [«various parameters»]>``</small> <br/><small>``<D TT «vpin» «steps» [«activity]>``</small> <br/><small>``<J O [«id»]>``</small> &nbsp; <small>``<J P «id»>``</small><br/>Manage Turntables](reference/serial-commands/serial-command-ii_not_in_nav.md)
 - [<small>``<J A [«id»]>``</small> <br/><small>``</ [START|PAUSE|RESUME|KILL] [«various parameters»]>``</small> <br/> List, Start or Stop Automations/Sequences](reference/serial-commands/serial-command-jj-aa-and-slash_not_in_nav.md)
+- [<small>``<J M [«various parameters»]>``</small> <br/> Manage Stash Values](reference/serial-commands/serial-command-jj-mm_not_in_nav.md)
 - [<small>``<J R [«id»]>``</small> <br/>Request Roster info](reference/serial-commands/serial-command-jj-rr_not_in_nav.md)
 - [<small>``<Q>``</small> &nbsp; <small>``<S «id» [«vpin» «pullup»>]``</small> <br/>Manage Sensors](reference/serial-commands/serial-command-qq-and-ss_not_in_nav.md)
 - [<small>``<R [«cv»|LOCOID|CONSIST]>`` <br/>``<r «loco» «cv»>`` <br/>``<W [«loco»]|[«cv» «value»]|[«loco» «cv» «bitValue» «bit»]|[CONSIST «loco» [REVERSE]]>`` <br/>``<V [«cv» «value»]|[«cv» «bit» «bitValue»]>`` <br/>``<B «cv» «bit» «bitValue»>`` <br/>``<b «loco» «cv» «bit» «bitValue»>``</small> <br/>Read and write CVs](reference/serial-commands/serial-command-rr-and-ww_not_in_nav.md)

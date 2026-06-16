@@ -39,7 +39,7 @@ We encourage our users to reference this ahead of requesting support as there's 
 
 - You may have a short on your layout. Most common causes are
   
-    - Loco driven into turnout set for the other track
+    - Loco driven into turnout/point set for the other track
     - Screwdriver or other tools left lying on layout
 
 - You forgot to switch on the track power supply

@@ -40,7 +40,7 @@ graph LR
 
 ## Existing Users Adding Accessories
 
-These users already have a CSB1 or DIY stack up and running and want to extend to using accessories including turnouts, signals, sensors, turntables, and so forth. They need to know how to physically connect them (I2C) and enable them in software (myAutomation.h). This will move them from Conductor into early Tinkerer territory for I2C in particular.
+These users already have a CSB1 or DIY stack up and running and want to extend to using accessories including turnouts/points, signals, sensors, turntables, and so forth. They need to know how to physically connect them (I2C) and enable them in software (myAutomation.h). This will move them from Conductor into early Tinkerer territory for I2C in particular.
 
 ```mermaid
 graph LR

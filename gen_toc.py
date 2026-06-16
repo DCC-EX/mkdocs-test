@@ -17,7 +17,8 @@ def on_nav(nav: Navigation, config, files) -> Navigation:
 "    font-weight: 500;\n" +
 "    font-size: 85%;\n" +
 "}\n" +
-"</style>\n\n"]
+"</style>\n\n" +
+"## Index Pages\n\n"]
 
     # Helper function to find the first H1 in a markdown file
     def get_h1_title(file_path):
