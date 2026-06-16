@@ -63,6 +63,7 @@ extra_javascript:
   - _static/scripts/ex-installer-run-helper.js
   - _static/scripts/clickable-cards.js
   - _static/scripts/legacy-docs-new-tab.js
+  - _static/scripts/tooltip-decode.js
 
 extra:
   social:

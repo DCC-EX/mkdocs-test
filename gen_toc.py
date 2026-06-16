@@ -108,12 +108,12 @@ def on_nav(nav: Navigation, config, files) -> Navigation:
             else:
                 display_title = title
 
-            # Gather H2 headings to use as hover text (title attribute)
+            # Gather H2 headings to use as hover text (data-tooltip attribute)
             h2s = get_h2_headings(full_file_path)
             if h2s:
                 # Join H2s with newlines, escape HTML and replace newlines with '&#10;' for reliable tooltip line breaks
                 tooltip = html.escape("\n".join(h2s)).replace("\n", "&#10;")
-                link_html = f'<a href="{url_path}" title="{tooltip}">{display_title}</a>'
+                link_html = f'<a href="{url_path}" data-tooltip="{tooltip}">{display_title}</a>'
             else:
                 link_html = f'<a href="{url_path}">{display_title}</a>'
 
@@ -140,7 +140,7 @@ def on_nav(nav: Navigation, config, files) -> Navigation:
             h2s = get_h2_headings(full_file_path)
             if h2s:
                 tooltip = html.escape("\n".join(h2s)).replace("\n", "&#10;")
-                link_html = f'<a href="{rel_path}" title="{tooltip}">{title}</a>'
+                link_html = f'<a href="{rel_path}" data-tooltip="{tooltip}">{title}</a>'
             else:
                 link_html = f'<a href="{rel_path}">{title}</a>'
             toc_lines.append(f"- {link_html}")

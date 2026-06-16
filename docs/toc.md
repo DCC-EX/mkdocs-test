@@ -17,93 +17,93 @@ li a {
 
 - <a href="index.md">Home</a>
 - **Products**
-    - <a href="products\products.md" title="Conductor Level&#10;Tinkerer level&#10;Engineer level">DCC-EX Product Overview <small>(Product Overview)</small></a>
+    - <a href="products\products.md" data-tooltip="Conductor Level&#10;Tinkerer level&#10;Engineer level">DCC-EX Product Overview <small>(Product Overview)</small></a>
     - <a href="products\getting-started.md">Getting Started with DCC-EX <small>(Getting Started)</small></a>
     - **EX-CommandStation**
         - <a href="products\ex-commandstation\overview.md">The DCC-EX Command Station</a>
-        - <a href="products\ex-commandstation\ex-csb1.md" title="Features&#10;Connecting&#10;Booster mode">EX-CSB1 CommandStation Booster</a>
-        - <a href="products\ex-commandstation\dc-running.md" title="Advantages of using a EX-CommandStation to run a DC layout&#10;Basic functionality&#10;Configuring Default Outputs&#10;Switching between tracks&#10;Reversing Loops&#10;More blocks">Running a Legacy DC layout <small>(Running a DC layout)</small></a>
-        - <a href="products\ex-commandstation\config-h.md" title="Motor shield definition (Mandatory)&#10;WiFi settings&#10;Ethernet settings&#10;LCD/OLED support&#10;Disable EEPROM&#10;Delayed startup">Build configuration (config.h) <small>(Configuration (config.h))</small></a>
-        - <a href="products\ex-commandstation\config-wifi-shield.md" title="Operating Modes&#10;Setup STA (Station) mode&#10;Setup AP (Access Point) default mode&#10;Setup AP (Access Point) advanced mode">Wifi configuration <br/><small>(Excluding EX-CSB1 or ESP32 v5.7.0+)</small> <small>(Configure WiFi (Wifi Shield))</small></a>
-        - <a href="products\ex-commandstation\config-wifi-esp32.md" title="Operating Modes&#10;Changing to Station Mode (ie your home router)&#10;Changing the Access Point defaults&#10;Configuring the Host Name&#10;Turning WiFi On/Off&#10;Clearing WiFi settings&#10;Visiting another router&#10;Displaying WiFi settings">WiFi configuration <br/><small>(EX-CSB1 or ESP32 ONLY. v5.7.0+ ONLY)</small> <small>(Configure WiFi (CSB1 & ESP32 v5.7.0+))</small></a>
-        - <a href="products\ex-commandstation\testing.md" title="Serial Monitors&#10;Simple testing commands (Main track)&#10;Things to remember">Testing your Command Station</a>
+        - <a href="products\ex-commandstation\ex-csb1.md" data-tooltip="Features&#10;Connecting&#10;Booster mode">EX-CSB1 CommandStation Booster</a>
+        - <a href="products\ex-commandstation\dc-running.md" data-tooltip="Advantages of using a EX-CommandStation to run a DC layout&#10;Basic functionality&#10;Configuring Default Outputs&#10;Switching between tracks&#10;Reversing Loops&#10;More blocks">Running a Legacy DC layout <small>(Running a DC layout)</small></a>
+        - <a href="products\ex-commandstation\config-h.md" data-tooltip="Motor shield definition (Mandatory)&#10;WiFi settings&#10;Ethernet settings&#10;LCD/OLED support&#10;Disable EEPROM&#10;Delayed startup">Build configuration (config.h) <small>(Configuration (config.h))</small></a>
+        - <a href="products\ex-commandstation\config-wifi-shield.md" data-tooltip="Operating Modes&#10;Setup STA (Station) mode&#10;Setup AP (Access Point) default mode&#10;Setup AP (Access Point) advanced mode">Wifi configuration <br/><small>(Excluding EX-CSB1 or ESP32 v5.7.0+)</small> <small>(Configure WiFi (Wifi Shield))</small></a>
+        - <a href="products\ex-commandstation\config-wifi-esp32.md" data-tooltip="Operating Modes&#10;Changing to Station Mode (ie your home router)&#10;Changing the Access Point defaults&#10;Configuring the Host Name&#10;Turning WiFi On/Off&#10;Clearing WiFi settings&#10;Visiting another router&#10;Displaying WiFi settings">WiFi configuration <br/><small>(EX-CSB1 or ESP32 ONLY. v5.7.0+ ONLY)</small> <small>(Configure WiFi (CSB1 & ESP32 v5.7.0+))</small></a>
+        - <a href="products\ex-commandstation\testing.md" data-tooltip="Serial Monitors&#10;Simple testing commands (Main track)&#10;Things to remember">Testing your Command Station</a>
         - **TrackManager**
-            - <a href="products\ex-commandstation\trackmanager\trackmanager.md" title="Defaults&#10;myAutomation.h&#10;Engine Driver&#10;Notes">TrackManager</a>
-            - <a href="products\ex-commandstation\trackmanager\booster.md" title="Configuring the EX-CSB1 as a DCC Booster">EX-CSB1 in DCC Booster Mode <small>(Booster)</small></a>
+            - <a href="products\ex-commandstation\trackmanager\trackmanager.md" data-tooltip="Defaults&#10;myAutomation.h&#10;Engine Driver&#10;Notes">TrackManager</a>
+            - <a href="products\ex-commandstation\trackmanager\booster.md" data-tooltip="Configuring the EX-CSB1 as a DCC Booster">EX-CSB1 in DCC Booster Mode <small>(Booster)</small></a>
         - **Loco Programming**
-            - <a href="products\ex-commandstation\loco-programming\programming.md" title="The PROG track&#10;Reading/Writing decoder settings&#10;Programming using Serial input commands&#10;Programming using Engine Driver&#10;Programming using EX-Toolbox&#10;Programming with JMRI DecoderPro">Programming DCC locos <small>(Programming)</small></a>
-            - <a href="products\ex-commandstation\loco-programming\serial-programming.md" title="Reading a loco id&#10;Setting a loco id&#10;Reading a CV value&#10;Setting a CV value&#10;DCC Consists&#10;Bit management&#10;Diagnostics when things don&#x27;t work&#10;ACK detector tuning parameters">Programming using Serial commands <small>(Serial Programming)</small></a>
+            - <a href="products\ex-commandstation\loco-programming\programming.md" data-tooltip="The PROG track&#10;Reading/Writing decoder settings&#10;Programming using Serial input commands&#10;Programming using Engine Driver&#10;Programming using EX-Toolbox&#10;Programming with JMRI DecoderPro">Programming DCC locos <small>(Programming)</small></a>
+            - <a href="products\ex-commandstation\loco-programming\serial-programming.md" data-tooltip="Reading a loco id&#10;Setting a loco id&#10;Reading a CV value&#10;Setting a CV value&#10;DCC Consists&#10;Bit management&#10;Diagnostics when things don&#x27;t work&#10;ACK detector tuning parameters">Programming using Serial commands <small>(Serial Programming)</small></a>
             - <a href="products\ex-commandstation\loco-programming\webthrottle-programming.md">Programming with EX-WebThrottle <small>(EX-WebThrottle Programming)</small></a>
-            - <a href="products\ex-commandstation\loco-programming\engine-driver-programming.md" title="Accessing the DCC-EX page&#10;Read loco address&#10;Write loco address&#10;Read and write CVs of decoders on the Programming Track&#10;More Information&#10;If things dont work">Programming with Engine Driver <small>(Engine Driver Programming)</small></a>
+            - <a href="products\ex-commandstation\loco-programming\engine-driver-programming.md" data-tooltip="Accessing the DCC-EX page&#10;Read loco address&#10;Write loco address&#10;Read and write CVs of decoders on the Programming Track&#10;More Information&#10;If things dont work">Programming with Engine Driver <small>(Engine Driver Programming)</small></a>
             - <a href="products\ex-commandstation\loco-programming\toolbox-programming.md">Programming with EX-Toolbox <small>(Toolbox Programming)</small></a>
-            - <a href="products\ex-commandstation\loco-programming\decoderpro.md" title="Making Changes">Using JMRI DecoderPro <small>(Decoderpro)</small></a>
+            - <a href="products\ex-commandstation\loco-programming\decoderpro.md" data-tooltip="Making Changes">Using JMRI DecoderPro <small>(Decoderpro)</small></a>
         - **Accesssories**
-            - <a href="products\ex-commandstation\accessories\accessories.md" title="Accessory Types&#10;Connecting Accessories&#10;Voltage Differences">Overview - What are Accessories? <small>(Accessories)</small></a>
-            - <a href="products\ex-commandstation\accessories\actuators.md" title="Servo actuators&#10;Digital actuators">Actuators - to make stuff happen <small>(Actuators)</small></a>
-            - <a href="products\ex-commandstation\accessories\sensors.md" title="Track/Layout sensors for automation&#10;Defining sensors">Sensors</a>
-            - <a href="products\ex-commandstation\accessories\connecting-servo-turnout.md" title="Follow the steps below&#10;Define your Turnouts&#10;Test your turnout definitions&#10;Connect your servos to turnouts&#10;PCA9685 Configure additional boards">Connecting a servo turnout <small>(Connecting Servo Turnout)</small></a>
+            - <a href="products\ex-commandstation\accessories\accessories.md" data-tooltip="Accessory Types&#10;Connecting Accessories&#10;Voltage Differences">Overview - What are Accessories? <small>(Accessories)</small></a>
+            - <a href="products\ex-commandstation\accessories\actuators.md" data-tooltip="Servo actuators&#10;Digital actuators">Actuators - to make stuff happen <small>(Actuators)</small></a>
+            - <a href="products\ex-commandstation\accessories\sensors.md" data-tooltip="Track/Layout sensors for automation&#10;Defining sensors">Sensors</a>
+            - <a href="products\ex-commandstation\accessories\connecting-servo-turnout.md" data-tooltip="Follow the steps below&#10;Define your Turnouts&#10;Test your turnout definitions&#10;Connect your servos to turnouts&#10;PCA9685 Configure additional boards">Connecting a servo turnout <small>(Connecting Servo Turnout)</small></a>
             - <a href="products\ex-commandstation\accessories\hardware-list.md">Hardware device list <small>(Hardware List)</small></a>
-            - <a href="products\ex-commandstation\accessories\i2c-intro.md" title="What is I2C?&#10;How does it help?">I2C – An Introduction <small>(I2C Intro)</small></a>
-            - <a href="products\ex-commandstation\accessories\buying-i2c-devices.md" title="Rosscoe Trains">Buying I2C Devices</a>
+            - <a href="products\ex-commandstation\accessories\i2c-intro.md" data-tooltip="What is I2C?&#10;How does it help?">I2C – An Introduction <small>(I2C Intro)</small></a>
+            - <a href="products\ex-commandstation\accessories\buying-i2c-devices.md" data-tooltip="Rosscoe Trains">Buying I2C Devices</a>
             - **Various Devices**
                 - **Sounds**
-                    - <a href="products\ex-commandstation\accessories\various-devices\sounds\sounds.md" title="Sound Commands&#10;Sound in EXRAIL">Sounds</a>
-                    - <a href="products\ex-commandstation\accessories\various-devices\sounds\dfplayer.md" title="Suggested uses&#10;Hardware connection&#10;Audio file storage and naming convention&#10;Providing sound files">DFPlayer Sound player <small>(DFPlayer)</small></a>
-                    - <a href="products\ex-commandstation\accessories\various-devices\sounds\serial-dfplayer.md" title="CSB1 and ESP32 Serial connections">Serial connected DFPlayer <small>(Serial DFPlayer)</small></a>
-                    - <a href="products\ex-commandstation\accessories\various-devices\sounds\i2c-dfplayer.md" title="SC16IS750 - SC16IS752 Breakout board hookup&#10;I2C address selection&#10;Configuring in myAutomation.h">I2C Connected DFPlayer <small>(I2C DFPlayer)</small></a>
-                    - <a href="products\ex-commandstation\accessories\various-devices\sounds\udpaudio.md" title="Features&#10;Installation&#10;Playing sounds&#10;WaveShare implementation details&#10;Internal Imnplementation Details UDP Protocol&#10;VPIN Allocation&#10;Network Requirements&#10;Troubleshooting">UDP Audio Driver for DCC-EX <small>(WaveShare)</small></a>
+                    - <a href="products\ex-commandstation\accessories\various-devices\sounds\sounds.md" data-tooltip="Sound Commands&#10;Sound in EXRAIL">Sounds</a>
+                    - <a href="products\ex-commandstation\accessories\various-devices\sounds\dfplayer.md" data-tooltip="Suggested uses&#10;Hardware connection&#10;Audio file storage and naming convention&#10;Providing sound files">DFPlayer Sound player <small>(DFPlayer)</small></a>
+                    - <a href="products\ex-commandstation\accessories\various-devices\sounds\serial-dfplayer.md" data-tooltip="CSB1 and ESP32 Serial connections">Serial connected DFPlayer <small>(Serial DFPlayer)</small></a>
+                    - <a href="products\ex-commandstation\accessories\various-devices\sounds\i2c-dfplayer.md" data-tooltip="SC16IS750 - SC16IS752 Breakout board hookup&#10;I2C address selection&#10;Configuring in myAutomation.h">I2C Connected DFPlayer <small>(I2C DFPlayer)</small></a>
+                    - <a href="products\ex-commandstation\accessories\various-devices\sounds\udpaudio.md" data-tooltip="Features&#10;Installation&#10;Playing sounds&#10;WaveShare implementation details&#10;Internal Imnplementation Details UDP Protocol&#10;VPIN Allocation&#10;Network Requirements&#10;Troubleshooting">UDP Audio Driver for DCC-EX <small>(WaveShare)</small></a>
                 - <a href="products\ex-commandstation\accessories\various-devices\ds1307.md">DS1307 Real Time clock chip <small>(DS1307)</small></a>
         - **EXRAIL**
-            - <a href="products\ex-commandstation\exrail\exrail.md" title="You DON’T need&#10;Important Background Information&#10;Basic building blocks&#10;A users story">What is EXRAIL?</a>
-            - <a href="products\ex-commandstation\exrail\vpins.md" title="Creating virtual pins&#10;Using OUTPUT VPINS&#10;Using INPUT VPINs&#10;Using INPUT/OUTPUT VPINs">Virtual Bitmap device pins (VPINs) <small>(Vpins)</small></a>
+            - <a href="products\ex-commandstation\exrail\exrail.md" data-tooltip="You DON’T need&#10;Important Background Information&#10;Basic building blocks&#10;A users story">What is EXRAIL?</a>
+            - <a href="products\ex-commandstation\exrail\vpins.md" data-tooltip="Creating virtual pins&#10;Using OUTPUT VPINS&#10;Using INPUT VPINs&#10;Using INPUT/OUTPUT VPINs">Virtual Bitmap device pins (VPINs) <small>(Vpins)</small></a>
             - <a href="products\ex-commandstation\exrail\command-list.md">EXRAIL Full Command List <small>(Command List)</small></a>
             - **Cookbooks**
-                - <a href="products\ex-commandstation\exrail\cookbooks\animation-sensors.md" title="Detecting a button press&#10;Detecting a switch change">Buttons and Switches</a>
+                - <a href="products\ex-commandstation\exrail\cookbooks\animation-sensors.md" data-tooltip="Detecting a button press&#10;Detecting a switch change">Buttons and Switches</a>
                 - <a href="products\ex-commandstation\exrail\cookbooks\dc-tracks.md">DC Track Control</a>
-                - <a href="products\ex-commandstation\exrail\cookbooks\estop-button.md" title="ESTOPALL&#10;ESTOP_PAUSE&#10;ESTOP_RESUME&#10;Advanced scenarios&#10;ESTOP serial commands">Emergency stop button</a>
+                - <a href="products\ex-commandstation\exrail\cookbooks\estop-button.md" data-tooltip="ESTOPALL&#10;ESTOP_PAUSE&#10;ESTOP_RESUME&#10;Advanced scenarios&#10;ESTOP serial commands">Emergency stop button</a>
                 - <a href="products\ex-commandstation\exrail\cookbooks\roster-similar-locos.md">Roster for Similar Sound Locos</a>
-                - <a href="products\ex-commandstation\exrail\cookbooks\route-button-control.md" title="Simple light switch route&#10;Changing button captions&#10;Two separate routes example">Route button control</a>
-                - <a href="products\ex-commandstation\exrail\cookbooks\timecontrol.md" title="Time Command&#10;Repeating Time events&#10;Testing Timed Sequences">Time Control</a>
+                - <a href="products\ex-commandstation\exrail\cookbooks\route-button-control.md" data-tooltip="Simple light switch route&#10;Changing button captions&#10;Two separate routes example">Route button control</a>
+                - <a href="products\ex-commandstation\exrail\cookbooks\timecontrol.md" data-tooltip="Time Command&#10;Repeating Time events&#10;Testing Timed Sequences">Time Control</a>
                 - **Advanced**
                     - <a href="products\ex-commandstation\exrail\cookbooks\advanced\display-locos-on-oled.md">Display Loco speeds on OLED (Advanced) <small>(Display Locos On Oled)</small></a>
-                    - <a href="products\ex-commandstation\exrail\cookbooks\advanced\display-track-status.md" title="myAutomation.h&#10;myTrackStatus.h&#10;Lines displayed">Display Track Status on OLED <small>(Display Track Status)</small></a>
+                    - <a href="products\ex-commandstation\exrail\cookbooks\advanced\display-track-status.md" data-tooltip="myAutomation.h&#10;myTrackStatus.h&#10;Lines displayed">Display Track Status on OLED <small>(Display Track Status)</small></a>
                     - <a href="products\ex-commandstation\exrail\cookbooks\advanced\analog-sensors.md">Analog sensors</a>
                     - <a href="products\ex-commandstation\exrail\cookbooks\advanced\command-filter.md">Command Filters</a>
-                    - <a href="products\ex-commandstation\exrail\cookbooks\advanced\passing-locos-between-sequences.md" title="START(sequence_id)&#10;SENDLOCO(loco_id,sequence_id)&#10;START_SEND(sequence_id)&#10;START_SHARED(sequence_id)">Passing locos between sequences</a>
+                    - <a href="products\ex-commandstation\exrail\cookbooks\advanced\passing-locos-between-sequences.md" data-tooltip="START(sequence_id)&#10;SENDLOCO(loco_id,sequence_id)&#10;START_SEND(sequence_id)&#10;START_SHARED(sequence_id)">Passing locos between sequences</a>
                     - <a href="products\ex-commandstation\exrail\cookbooks\advanced\speed-test.md">Building a speed test track</a>
                 - **Driving trains**
                     - <a href="products\ex-commandstation\exrail\cookbooks\driving-trains\basic.md">Basic driving functions <small>(Basic)</small></a>
                     - <a href="products\ex-commandstation\exrail\cookbooks\driving-trains\functions.md">Loco Functions <small>(Functions)</small></a>
                     - <a href="products\ex-commandstation\exrail\cookbooks\driving-trains\automations.md">Automations</a>
-                    - <a href="products\ex-commandstation\exrail\cookbooks\driving-trains\simple-shuttle.md" title="Sensor positioning&#10;Creating the basic AUTOMATION">Simple Shuttle</a>
-                    - <a href="products\ex-commandstation\exrail\cookbooks\driving-trains\improved-shuttle.md" title="Speed changes&#10;Sounds and lights&#10;Signals">Improved Shuttle</a>
-                    - <a href="products\ex-commandstation\exrail\cookbooks\driving-trains\passing-loop.md" title="Block Reservations&#10;Basic passing-loop logic&#10;Starting the shuttle&#10;Handling facing trains&#10;Advanced Extras">Passing loop shuttle <small>(Passing Loop)</small></a>
+                    - <a href="products\ex-commandstation\exrail\cookbooks\driving-trains\simple-shuttle.md" data-tooltip="Sensor positioning&#10;Creating the basic AUTOMATION">Simple Shuttle</a>
+                    - <a href="products\ex-commandstation\exrail\cookbooks\driving-trains\improved-shuttle.md" data-tooltip="Speed changes&#10;Sounds and lights&#10;Signals">Improved Shuttle</a>
+                    - <a href="products\ex-commandstation\exrail\cookbooks\driving-trains\passing-loop.md" data-tooltip="Block Reservations&#10;Basic passing-loop logic&#10;Starting the shuttle&#10;Handling facing trains&#10;Advanced Extras">Passing loop shuttle <small>(Passing Loop)</small></a>
                     - <a href="products\ex-commandstation\exrail\cookbooks\driving-trains\save-restore.md">Saving and Restoring speeds <small>(Save Restore)</small></a>
-                    - <a href="products\ex-commandstation\exrail\cookbooks\driving-trains\random-selection.md" title="Random time delay&#10;Random choice on a given percentage&#10;Random selection of a path to follow">Random Selection</a>
-                    - <a href="products\ex-commandstation\exrail\cookbooks\driving-trains\consists.md" title="Consist Types&#10;Command Station consists with EXRAIL">Consists</a>
+                    - <a href="products\ex-commandstation\exrail\cookbooks\driving-trains\random-selection.md" data-tooltip="Random time delay&#10;Random choice on a given percentage&#10;Random selection of a path to follow">Random Selection</a>
+                    - <a href="products\ex-commandstation\exrail\cookbooks\driving-trains\consists.md" data-tooltip="Consist Types&#10;Command Station consists with EXRAIL">Consists</a>
                     - <a href="products\ex-commandstation\exrail\cookbooks\driving-trains\advanced.md">Controlling trains and decoders directly <small>(Advanced)</small></a>
                 - **Editing tricks**
                     - <a href="products\ex-commandstation\exrail\cookbooks\editing-tricks\multi-files.md">Multiple Files in EXRAIL</a>
                     - <a href="products\ex-commandstation\exrail\cookbooks\editing-tricks\multiple-command-stations.md">Maintaining multiple command stations</a>
                     - <a href="products\ex-commandstation\exrail\cookbooks\editing-tricks\naming-a-sequence.md">Naming sequences for easy commands</a>
-                    - <a href="products\ex-commandstation\exrail\cookbooks\editing-tricks\using-call-return.md" title="Notes">Using CALL and RETURN</a>
+                    - <a href="products\ex-commandstation\exrail\cookbooks\editing-tricks\using-call-return.md" data-tooltip="Notes">Using CALL and RETURN</a>
                     - <a href="products\ex-commandstation\exrail\cookbooks\editing-tricks\using-macros.md">Using C++ Macros</a>
                 - **Flags and latches**
-                    - <a href="products\ex-commandstation\exrail\cookbooks\flags-and-latches\flags.md" title="Creating virtual pins&#10;Use as flags&#10;Use as counters&#10;Use as analogue values (advanced)&#10;Use as binary flag groups (advanced)">Flags, Counters and Bitmaps</a>
+                    - <a href="products\ex-commandstation\exrail\cookbooks\flags-and-latches\flags.md" data-tooltip="Creating virtual pins&#10;Use as flags&#10;Use as counters&#10;Use as analogue values (advanced)&#10;Use as binary flag groups (advanced)">Flags, Counters and Bitmaps</a>
                     - <a href="products\ex-commandstation\exrail\cookbooks\flags-and-latches\latches.md">Latches</a>
                     - <a href="products\ex-commandstation\exrail\cookbooks\flags-and-latches\stash.md">Using STASH to remember where locos are parked</a>
                 - **Neopixels**
-                    - <a href="products\ex-commandstation\exrail\cookbooks\neopixels\index.md" title="Defining the hardware driver">NeoPixel support</a>
+                    - <a href="products\ex-commandstation\exrail\cookbooks\neopixels\index.md" data-tooltip="Defining the hardware driver">NeoPixel support</a>
                     - <a href="products\ex-commandstation\exrail\cookbooks\neopixels\neopixels.md">Setting neopixels</a>
                 - **Signals**
                     - <a href="products\ex-commandstation\exrail\cookbooks\signals\index.md">Signal basics</a>
                     - <a href="products\ex-commandstation\exrail\cookbooks\signals\led-signals.md">LED signals</a>
                     - <a href="products\ex-commandstation\exrail\cookbooks\signals\neopixel-signals.md">Neopixel signals</a>
-                    - <a href="products\ex-commandstation\exrail\cookbooks\signals\flashing-signals.md" title="Always blink AMBER&#10;Amber and Flashing Amber">Signals with flashing <small>(Flashing Signals)</small></a>
+                    - <a href="products\ex-commandstation\exrail\cookbooks\signals\flashing-signals.md" data-tooltip="Always blink AMBER&#10;Amber and Flashing Amber">Signals with flashing <small>(Flashing Signals)</small></a>
                     - <a href="products\ex-commandstation\exrail\cookbooks\signals\semaphore-signals.md">Semaphore (servo) Signals <small>(Semaphore signals)</small></a>
-                    - <a href="products\ex-commandstation\exrail\cookbooks\signals\dcc-signals.md" title="Common signals&#10;Advanced aspect signals">DCC Signals</a>
+                    - <a href="products\ex-commandstation\exrail\cookbooks\signals\dcc-signals.md" data-tooltip="Common signals&#10;Advanced aspect signals">DCC Signals</a>
                 - **Sounds**
-                    - <a href="products\ex-commandstation\exrail\cookbooks\sounds\sounds.md" title="Playing a sound (PLAY_TRACK, PLAY_REPEAT)&#10;Pause and Resume (PLAY_PAUSE, PLAY_RESUME)&#10;Changing default volume (PLAY_VOLUME)&#10;Stop playing (PLAY_STOP)&#10;Changing current folder (PLAY_FOLDER)&#10;Using WAITFOR&#10;Example EXRAIL Routes">Controlling Sounds in EXRAIL</a>
+                    - <a href="products\ex-commandstation\exrail\cookbooks\sounds\sounds.md" data-tooltip="Playing a sound (PLAY_TRACK, PLAY_REPEAT)&#10;Pause and Resume (PLAY_PAUSE, PLAY_RESUME)&#10;Changing default volume (PLAY_VOLUME)&#10;Stop playing (PLAY_STOP)&#10;Changing current folder (PLAY_FOLDER)&#10;Using WAITFOR&#10;Example EXRAIL Routes">Controlling Sounds in EXRAIL</a>
                 - **Startup**
                     - <a href="products\ex-commandstation\exrail\cookbooks\startup\autostart.md">Things that happen at startup <small>(Automatic start)</small></a>
                     - <a href="products\ex-commandstation\exrail\cookbooks\startup\startup-poweron.md">Startup power <small>(Power)</small></a>
@@ -111,163 +111,163 @@ li a {
                 - **Turnouts**
                     - <a href="products\ex-commandstation\exrail\cookbooks\turnouts\defining-dcc-turnouts.md">Defining Dcc Turnouts</a>
                     - <a href="products\ex-commandstation\exrail\cookbooks\turnouts\defining-pin-turnouts.md">Defining Pin Turnouts</a>
-                    - <a href="products\ex-commandstation\exrail\cookbooks\turnouts\defining-servo-turnouts.md" title="Important considerations for servo operation&#10;Defining servo based turnout objects">Defining Servo Turnouts</a>
+                    - <a href="products\ex-commandstation\exrail\cookbooks\turnouts\defining-servo-turnouts.md" data-tooltip="Important considerations for servo operation&#10;Defining servo based turnout objects">Defining Servo Turnouts</a>
                     - <a href="products\ex-commandstation\exrail\cookbooks\turnouts\facing-turnouts.md">Facing Turnouts</a>
                     - <a href="products\ex-commandstation\exrail\cookbooks\turnouts\animated-turnouts.md">Animated Turnouts</a>
                     - <a href="products\ex-commandstation\exrail\cookbooks\turnouts\toggle-with-button.md">Toggle turnouts with button or sensor <small>(Toggle With Button)</small></a>
                 - **Various devices**
-                    - <a href="products\ex-commandstation\exrail\cookbooks\various-devices\duinoNodes.md" title="DNIN8 8 Input board&#10;DNIN8K 8 Input board&#10;DNOU8 8 Output board">Lew's Duino Gear boards</a>
+                    - <a href="products\ex-commandstation\exrail\cookbooks\various-devices\duinoNodes.md" data-tooltip="DNIN8 8 Input board&#10;DNIN8K 8 Input board&#10;DNOU8 8 Output board">Lew's Duino Gear boards</a>
                     - <a href="products\ex-commandstation\exrail\cookbooks\various-devices\multiplexors.md">I2C Multiplexors</a>
-                    - <a href="products\ex-commandstation\exrail\cookbooks\various-devices\pca955x.md" title="Device variations&#10;Defining devices">MCP23017, PCA955x and TCA955x devices</a>
+                    - <a href="products\ex-commandstation\exrail\cookbooks\various-devices\pca955x.md" data-tooltip="Device variations&#10;Defining devices">MCP23017, PCA955x and TCA955x devices</a>
                     - <a href="products\ex-commandstation\exrail\cookbooks\various-devices\tca8418-keyboard.md">TCA8418 keyboard scanner</a>
-                    - <a href="products\ex-commandstation\exrail\cookbooks\various-devices\tm-1638.md" title="Using buttons and LEDs&#10;Using the 7 Segment display">TM1638 Buttons, leds and 7 segment display</a>
-                    - <a href="products\ex-commandstation\exrail\cookbooks\various-devices\trainbrains.md" title="Turnout drivers (solenoid and servo)&#10;Signal controller&#10;Sensors">Trainbrains Devices</a>
+                    - <a href="products\ex-commandstation\exrail\cookbooks\various-devices\tm-1638.md" data-tooltip="Using buttons and LEDs&#10;Using the 7 Segment display">TM1638 Buttons, leds and 7 segment display</a>
+                    - <a href="products\ex-commandstation\exrail\cookbooks\various-devices\trainbrains.md" data-tooltip="Turnout drivers (solenoid and servo)&#10;Signal controller&#10;Sensors">Trainbrains Devices</a>
                     - <a href="products\ex-commandstation\exrail\cookbooks\various-devices\xl9535.md">XL9535 Relay Board</a>
-    - <a href="products\ex-motorshield8874\ex-motorshield8874.md" title="Features&#10;Why did we make it&#10;Purchase&#10;Licensing&#10;Assembly with EX-MotorShield8874&#10;Engineering notes&#10;Stacking two motor shields">EX‑MotorShield8874 <small>(EX-MotorShield8874)</small></a>
-    - <a href="products\ex-wifishield8266\ex-wifishield8266.md" title="Overview&#10;Features&#10;Purchase&#10;Assembly">EX-WiFiShield 8266 <small>(EX-WiFiShield8266)</small></a>
+    - <a href="products\ex-motorshield8874\ex-motorshield8874.md" data-tooltip="Features&#10;Why did we make it&#10;Purchase&#10;Licensing&#10;Assembly with EX-MotorShield8874&#10;Engineering notes&#10;Stacking two motor shields">EX‑MotorShield8874 <small>(EX-MotorShield8874)</small></a>
+    - <a href="products\ex-wifishield8266\ex-wifishield8266.md" data-tooltip="Overview&#10;Features&#10;Purchase&#10;Assembly">EX-WiFiShield 8266 <small>(EX-WiFiShield8266)</small></a>
     - **EX-FastClock**
-        - <a href="products\ex-fastclock\overview.md" title="Background&#10;What is EX-FastClock?&#10;Credit where credit is due&#10;Next Steps">EX-FastClock <small>(Overview)</small></a>
-        - <a href="products\ex-fastclock\hardware.md" title="What you need for EX-FastClock">Hardware</a>
+        - <a href="products\ex-fastclock\overview.md" data-tooltip="Background&#10;What is EX-FastClock?&#10;Credit where credit is due&#10;Next Steps">EX-FastClock <small>(Overview)</small></a>
+        - <a href="products\ex-fastclock\hardware.md" data-tooltip="What you need for EX-FastClock">Hardware</a>
         - <a href="products\ex-fastclock\calibration.md">Calibration</a>
-        - <a href="products\ex-fastclock\installation.md" title="Libraries">Installation</a>
-        - <a href="products\ex-fastclock\configuration.md" title="Standalone use&#10;Serial Mode&#10;I2C mode&#10;Screen Header&#10;Configure existing clock&#10;Connecting your own FastClock">Configuration</a>
+        - <a href="products\ex-fastclock\installation.md" data-tooltip="Libraries">Installation</a>
+        - <a href="products\ex-fastclock\configuration.md" data-tooltip="Standalone use&#10;Serial Mode&#10;I2C mode&#10;Screen Header&#10;Configure existing clock&#10;Connecting your own FastClock">Configuration</a>
         - <a href="products\ex-fastclock\operation.md">Operation</a>
-        - <a href="products\ex-fastclock\timecontrol.md" title="EXRAIL Commands&#10;Testing Timed Sequences">Time Control</a>
+        - <a href="products\ex-fastclock\timecontrol.md" data-tooltip="EXRAIL Commands&#10;Testing Timed Sequences">Time Control</a>
     - <a href="products\ex-ioexpander\ex-ioexpander.md">EX-IOExpander</a>
     - <a href="products\ex-turntable\ex-turntable.md">EX-Turntable</a>
     - **EX-SensorCAM**
-        - <a href="products\ex-sensorcam\ex-sensorcam.md" title="Introduction&#10;Hardware&#10;Software requirements&#10;Documentation&#10;Outline of install process">EX-SensorCAM</a>
+        - <a href="products\ex-sensorcam\ex-sensorcam.md" data-tooltip="Introduction&#10;Hardware&#10;Software requirements&#10;Documentation&#10;Outline of install process">EX-SensorCAM</a>
         - <a href="products\ex-sensorcam\installation-guide.md">Installation Guide</a>
-        - <a href="products\ex-sensorcam\ex-sensor-manual.md" title="CONTENTS&#10;Appendix&#10;1. Overview&#10;2. ESP32-CAM&#10;3. Physical Installation&#10;4. Notation &amp; Help commands&#10;5. Configuration&#10;6 PROCESSING4 monitor/console&#10;7 Wiring Requirements&#10;8 Host Communication&#10;9. Methodology of operation&#10;APPENDIX A&#10;APPENDIX B&#10;APPENDIX C&#10;APPENDIX D&#10;APPENDIX E&#10;APPENDIX F&#10;APPENDIX G&#10;APPENDIX H&#10;APPENDIX I&#10;APPENDIX J&#10;APPENDIX K&#10;ADDITIONAL RANDOM NOTES:">EX-SensorCAM Manual <small>(User Manual)</small></a>
-        - <a href="products\ex-sensorcam\ex-sensorcam-command-reference.md" title="Conventions used on this page&#10;Native cam USB &amp; CS cmd formats">Native EX-SensorCAM Command List <small>(Command Reference)</small></a>
-        - <a href="products\ex-sensorcam\ex-sensor-manual-abridged.md" title="CONTENTS&#10;Appendix&#10;1. Overview&#10;2. ESP32/WROVER-CAM&#10;3. Physical Installation&#10;4. Notation&#10;5. Configuration&#10;6 PROCESSING4 monitor/console&#10;7 Wiring Requirements&#10;8 Host Communication&#10;APPENDIX A&#10;APPENDIX B&#10;APPENDIX C&#10;APPENDIX E&#10;APPENDIX F&#10;APPENDIX H&#10;APPENDIX J">EX-SensorCAM Abridged Manual <small>(Manual Abridged)</small></a>
+        - <a href="products\ex-sensorcam\ex-sensor-manual.md" data-tooltip="CONTENTS&#10;Appendix&#10;1. Overview&#10;2. ESP32-CAM&#10;3. Physical Installation&#10;4. Notation &amp; Help commands&#10;5. Configuration&#10;6 PROCESSING4 monitor/console&#10;7 Wiring Requirements&#10;8 Host Communication&#10;9. Methodology of operation&#10;APPENDIX A&#10;APPENDIX B&#10;APPENDIX C&#10;APPENDIX D&#10;APPENDIX E&#10;APPENDIX F&#10;APPENDIX G&#10;APPENDIX H&#10;APPENDIX I&#10;APPENDIX J&#10;APPENDIX K&#10;ADDITIONAL RANDOM NOTES:">EX-SensorCAM Manual <small>(User Manual)</small></a>
+        - <a href="products\ex-sensorcam\ex-sensorcam-command-reference.md" data-tooltip="Conventions used on this page&#10;Native cam USB &amp; CS cmd formats">Native EX-SensorCAM Command List <small>(Command Reference)</small></a>
+        - <a href="products\ex-sensorcam\ex-sensor-manual-abridged.md" data-tooltip="CONTENTS&#10;Appendix&#10;1. Overview&#10;2. ESP32/WROVER-CAM&#10;3. Physical Installation&#10;4. Notation&#10;5. Configuration&#10;6 PROCESSING4 monitor/console&#10;7 Wiring Requirements&#10;8 Host Communication&#10;APPENDIX A&#10;APPENDIX B&#10;APPENDIX C&#10;APPENDIX E&#10;APPENDIX F&#10;APPENDIX H&#10;APPENDIX J">EX-SensorCAM Abridged Manual <small>(Manual Abridged)</small></a>
     - **EX-Toolbox**
-        - <a href="products\ex-toolbox\ex-toolbox.md" title="Features">EX-Toolbox - Overview <small>(EX-Toolbox)</small></a>
-        - <a href="products\ex-toolbox\installation-guide.md" title="Installing EX-Toolbox on an Android phone or tablet&#10;Installing EX-Toolbox on MS Windows &amp; macOS&#10;Connecting to your Command Station&#10;Starting EX-Toolbox">Installing EX-Toolbox <small>(Installation Guide)</small></a>
-        - <a href="products\ex-toolbox\user-guide.md" title="CV Programming&#10;Issuing DCC-EX Serial Commands (`&lt;&gt;`)&#10;Speed Matching&#10;Speedometer&#10;Loco Status&#10;Track Manager&#10;Servo Motor Testing and Adjustment&#10;Sensor testing&#10;Current Meter&#10;Roster&#10;Neopixel Setup&#10;Power&#10;Preferences&#10;View log&#10;About">EX-Toolbox User Guide <small>(User Manual)</small></a>
-    - <a href="products\ex-webthrottle\ex-webthrottle.md" title="What you need to run EX-WebThrottle&#10;Getting started&#10;Run or Install EX-WebThrottle&#10;Run it now (Run from the cloud)&#10;Download&#10;Operation&#10;Throttle&#10;Routes/Automation&#10;Turnouts/Points&#10;CV Programmer&#10;Locomotives&#10;Function Maps&#10;Settings&#10;App">EX-WebThrottle - Overview <small>(EX-WebThrottle)</small></a>
+        - <a href="products\ex-toolbox\ex-toolbox.md" data-tooltip="Features">EX-Toolbox - Overview <small>(EX-Toolbox)</small></a>
+        - <a href="products\ex-toolbox\installation-guide.md" data-tooltip="Installing EX-Toolbox on an Android phone or tablet&#10;Installing EX-Toolbox on MS Windows &amp; macOS&#10;Connecting to your Command Station&#10;Starting EX-Toolbox">Installing EX-Toolbox <small>(Installation Guide)</small></a>
+        - <a href="products\ex-toolbox\user-guide.md" data-tooltip="CV Programming&#10;Issuing DCC-EX Serial Commands (`&lt;&gt;`)&#10;Speed Matching&#10;Speedometer&#10;Loco Status&#10;Track Manager&#10;Servo Motor Testing and Adjustment&#10;Sensor testing&#10;Current Meter&#10;Roster&#10;Neopixel Setup&#10;Power&#10;Preferences&#10;View log&#10;About">EX-Toolbox User Guide <small>(User Manual)</small></a>
+    - <a href="products\ex-webthrottle\ex-webthrottle.md" data-tooltip="What you need to run EX-WebThrottle&#10;Getting started&#10;Run or Install EX-WebThrottle&#10;Run it now (Run from the cloud)&#10;Download&#10;Operation&#10;Throttle&#10;Routes/Automation&#10;Turnouts/Points&#10;CV Programmer&#10;Locomotives&#10;Function Maps&#10;Settings&#10;App">EX-WebThrottle - Overview <small>(EX-WebThrottle)</small></a>
 - **Purchase**
     - <a href="purchasing\official-sellers.md">Official DCC-EX Suppliers <small>(Official Sellers)</small></a>
-    - <a href="purchasing\third-party-sellers.md" title="Rosscoe&#10;David Yale&#10;Command Station Rack (The Mac Rack)&#10;Sumner&#x27;s Mega Dual Configuration Case (3D Print)&#10;Hans Tanner&#x27;s ioTT cube case system (3D Print)&#10;Nebbish&#x27;s Arduino Mega case for DCC-EX (3D Print)">Third Party Products and Sellers <small>(Third Party Sellers)</small></a>
+    - <a href="purchasing\third-party-sellers.md" data-tooltip="Rosscoe&#10;David Yale&#10;Command Station Rack (The Mac Rack)&#10;Sumner&#x27;s Mega Dual Configuration Case (3D Print)&#10;Hans Tanner&#x27;s ioTT cube case system (3D Print)&#10;Nebbish&#x27;s Arduino Mega case for DCC-EX (3D Print)">Third Party Products and Sellers <small>(Third Party Sellers)</small></a>
     - <a href="purchasing\merchandise.md">DCC-EX Merchandise <small>(Merchandise)</small></a>
 - **Install**
-    - <a href="installer\overview.md" title="Installing&#10;Using Device Monitor">Using EX-Installer</a>
-    - <a href="installer\installer.md" title="Warning Antivirus Software&#10;Download EX-Installer&#10;Alternatives to the EX-Installer">EX-Installer <small>(Installer)</small></a>
+    - <a href="installer\overview.md" data-tooltip="Installing&#10;Using Device Monitor">Using EX-Installer</a>
+    - <a href="installer\installer.md" data-tooltip="Warning Antivirus Software&#10;Download EX-Installer&#10;Alternatives to the EX-Installer">EX-Installer <small>(Installer)</small></a>
     - <a href="installer\first-run.md">First Run installer <small>(First Run)</small></a>
     - <a href="installer\select-product.md">Select Product to Install <small>(Select Product)</small></a>
-    - <a href="installer\install-cs.md" title="Device Selection&#10;Version Selection&#10;Configuration&#10;Other options&#10;Compile and Load&#10;Backup&#10;Device Monitor&#10;Stored Configuration Files">Installing Command Station Software <small>(Install Cs)</small></a>
+    - <a href="installer\install-cs.md" data-tooltip="Device Selection&#10;Version Selection&#10;Configuration&#10;Other options&#10;Compile and Load&#10;Backup&#10;Device Monitor&#10;Stored Configuration Files">Installing Command Station Software <small>(Install Cs)</small></a>
     - <a href="installer\platformio.md">Advanced Users - VSCode/PlatformIO <small>(Advanced Users - PlatformIO)</small></a>
     - <a href="installer\download-linux.md">Download linux</a>
     - <a href="installer\download-mac.md">Download mac</a>
     - <a href="installer\download-win.md">Download win</a>
 - **Self Build**
-    - <a href="diy\diy.md" title="Before You Start&#10;Components&#10;Getting the DCC-EX Software&#10;Quick and Easy Arduino Mega&#10;Slightly more difficult Mega">Build Your Own Command Station <small>(Build Your Own)</small></a>
-    - <a href="diy\power.md" title="Volts and Amps&#10;Using an EX8874 or CSB1&#10;Other motor shields&#10;What to look for&#10;SAFETY WARNING">Selecting a Power Supply</a>
-    - <a href="diy\mega-easy.md" title="What you need&#10;Step-by-Step Build">Easy Build - Arduino Mega</a>
-    - <a href="diy\mega-harder.md" title="What you need&#10;Step By Step Build">Alternative build - Arduino Mega <small>(Harder Build - Arduino Mega)</small></a>
-    - <a href="diy\nucleo.md" title="Nucleo-F4 boards supported&#10;Reference - Nucleo">Complex Build - Nucleo</a>
-    - <a href="diy\esp32.md" title="Advantages of the ESP32&#10;WeMos D1 R32&#10;ESP32-WROOM-32 Development boards&#10;Reference ESP32">Complex Build - ESP32</a>
-    - <a href="diy\wifi.md" title="EX-WiFiShield8266&#10;Other shields&#10;ESP-01 or ESP-01S">Optionally install Wifi <small>(Optional WiFi)</small></a>
-    - <a href="diy\ethernet.md" title="Arduino Network Shield 2&#10;Wiznet WIZ850IO&#10;Sunfounder Ethernet Shield">Optionally install Ethernet <small>(Optional Ethernet)</small></a>
+    - <a href="diy\diy.md" data-tooltip="Before You Start&#10;Components&#10;Getting the DCC-EX Software&#10;Quick and Easy Arduino Mega&#10;Slightly more difficult Mega">Build Your Own Command Station <small>(Build Your Own)</small></a>
+    - <a href="diy\power.md" data-tooltip="Volts and Amps&#10;Using an EX8874 or CSB1&#10;Other motor shields&#10;What to look for&#10;SAFETY WARNING">Selecting a Power Supply</a>
+    - <a href="diy\mega-easy.md" data-tooltip="What you need&#10;Step-by-Step Build">Easy Build - Arduino Mega</a>
+    - <a href="diy\mega-harder.md" data-tooltip="What you need&#10;Step By Step Build">Alternative build - Arduino Mega <small>(Harder Build - Arduino Mega)</small></a>
+    - <a href="diy\nucleo.md" data-tooltip="Nucleo-F4 boards supported&#10;Reference - Nucleo">Complex Build - Nucleo</a>
+    - <a href="diy\esp32.md" data-tooltip="Advantages of the ESP32&#10;WeMos D1 R32&#10;ESP32-WROOM-32 Development boards&#10;Reference ESP32">Complex Build - ESP32</a>
+    - <a href="diy\wifi.md" data-tooltip="EX-WiFiShield8266&#10;Other shields&#10;ESP-01 or ESP-01S">Optionally install Wifi <small>(Optional WiFi)</small></a>
+    - <a href="diy\ethernet.md" data-tooltip="Arduino Network Shield 2&#10;Wiznet WIZ850IO&#10;Sunfounder Ethernet Shield">Optionally install Ethernet <small>(Optional Ethernet)</small></a>
     - <a href="diy\installer.md">Installing Command Station firmware <small>(Installing Software)</small></a>
-    - <a href="diy\others.md" title="The following devices are NOT supported:">DIY - Other devices <small>(Other Devices)</small></a>
+    - <a href="diy\others.md" data-tooltip="The following devices are NOT supported:">DIY - Other devices <small>(Other Devices)</small></a>
 - **Throttles**
-    - <a href="throttles\throttles.md" title="Throttles - By Client Technology&#10;Throttles - By Communication technology&#10;Comparison Table">Throttles and Other Controllers <small>(Throttle Lists)</small></a>
+    - <a href="throttles\throttles.md" data-tooltip="Throttles - By Client Technology&#10;Throttles - By Communication technology&#10;Comparison Table">Throttles and Other Controllers <small>(Throttle Lists)</small></a>
     - <a href="throttles\ex-webthrottle.md">EX-WebThrottle</a>
-    - <a href="throttles\engine-driver.md" title="Platforms&#10;Standard Features (all WiThrottle servers)&#10;EX-CommandStation Specific or Advantageous Features&#10;EX-CommandStation Specific Features - when using the DCC-EX Native Protocol&#10;Screenshots&#10;Operation&#10;Using a Bluetooth Gamepad Controller&#10;Adding a Physical Dial (Knob)&#10;Recording a log file in Engine Driver">Engine Driver</a>
-    - <a href="throttles\throttlecard.md" title="Features">ThrottleCard</a>
+    - <a href="throttles\engine-driver.md" data-tooltip="Platforms&#10;Standard Features (all WiThrottle servers)&#10;EX-CommandStation Specific or Advantageous Features&#10;EX-CommandStation Specific Features - when using the DCC-EX Native Protocol&#10;Screenshots&#10;Operation&#10;Using a Bluetooth Gamepad Controller&#10;Adding a Physical Dial (Knob)&#10;Recording a log file in Engine Driver">Engine Driver</a>
+    - <a href="throttles\throttlecard.md" data-tooltip="Features">ThrottleCard</a>
 - **News**
-    - <a href="news\index.md" title="Get this in your RSS feed">DCC-EX News</a>
+    - <a href="news\index.md" data-tooltip="Get this in your RSS feed">DCC-EX News</a>
 - **Support**
-    - <a href="support\faq.md" title="Controlling and Running Trains&#10;Programming and reading DCC decoders&#10;Throttle apps and software&#10;My CSB1 OLED display isnt working or looks &quot;wrong&quot;&#10;Why do I get FAULT pin warnings&#10;Why do my I2C connections fail">Frequently Answered Questions  (FAQ) <small>(Frequently Answered Questions)</small></a>
-    - <a href="support\support.md" title="Information required for support queries&#10;Discord (recommended)&#10;GitHub&#10;TrainBoard&#10;Email (not recommended)">Help and Support <small>(Getting Support)</small></a>
-    - <a href="support\discord.md" title="Joining and Using Discord&#10;Sharing Code and Configuration Snippets&#10;Discord Channels&#10;Opening a Support Ticket">The DCC-EX Discord Server <small>(Discord)</small></a>
+    - <a href="support\faq.md" data-tooltip="Controlling and Running Trains&#10;Programming and reading DCC decoders&#10;Throttle apps and software&#10;My CSB1 OLED display isnt working or looks &quot;wrong&quot;&#10;Why do I get FAULT pin warnings&#10;Why do my I2C connections fail">Frequently Answered Questions  (FAQ) <small>(Frequently Answered Questions)</small></a>
+    - <a href="support\support.md" data-tooltip="Information required for support queries&#10;Discord (recommended)&#10;GitHub&#10;TrainBoard&#10;Email (not recommended)">Help and Support <small>(Getting Support)</small></a>
+    - <a href="support\discord.md" data-tooltip="Joining and Using Discord&#10;Sharing Code and Configuration Snippets&#10;Discord Channels&#10;Opening a Support Ticket">The DCC-EX Discord Server <small>(Discord)</small></a>
     - <a href="support\github.md">Raising GitHub Issues <small>(Github)</small></a>
 - **Donate**
-    - <a href="donations\donations.md" title="How We Use Donations&#10;Donation Options">Donations</a>
+    - <a href="donations\donations.md" data-tooltip="How We Use Donations&#10;Donation Options">Donations</a>
 - **Reference**
-    - <a href="reference\glossary.md" title="Access Point (AP) Mode&#10;Base Station, Command Station, DCC Command Station, DCC Base Station&#10;Consist[^1], Multiple Unit[^2]&#10;DCC++ Commands, ``&lt;DCC++&gt;``, DCC++ Protocol, DCC++ API&#10;DCC-EX Serial Commands, DCC-EX Native Commands, DCC-EX Native Protocol, DCC-EX Native API&#10;Pullup&#10;Pulldown&#10;Roster&#10;SSID&#10;Station (STA) Mode&#10;Turnout[^1] (Point[^2]/Switch)&#10;VPIN&#10;WiThrottle&#10;WiThrottle Protocol&#10;WiThrottle Server">Glossary of Terms</a>
-    - <a href="reference\serial-command-basics.md" title="Notes">DCC-EX Serial Command Basics <small>(Serial Command Basics)</small></a>
+    - <a href="reference\glossary.md" data-tooltip="Access Point (AP) Mode&#10;Base Station, Command Station, DCC Command Station, DCC Base Station&#10;Consist[^1], Multiple Unit[^2]&#10;DCC++ Commands, ``&lt;DCC++&gt;``, DCC++ Protocol, DCC++ API&#10;DCC-EX Serial Commands, DCC-EX Native Commands, DCC-EX Native Protocol, DCC-EX Native API&#10;Pullup&#10;Pulldown&#10;Roster&#10;SSID&#10;Station (STA) Mode&#10;Turnout[^1] (Point[^2]/Switch)&#10;VPIN&#10;WiThrottle&#10;WiThrottle Protocol&#10;WiThrottle Server">Glossary of Terms</a>
+    - <a href="reference\serial-command-basics.md" data-tooltip="Notes">DCC-EX Serial Command Basics <small>(Serial Command Basics)</small></a>
     - <a href="reference\serial-command-list.md">DCC-EX Serial Command List <small>(DCC-EX Command List)</small></a>
-    - <a href="reference\serial-commands.md" title="System Commands&#10;Power Control&#10;Locomotive Control&#10;Function Control&#10;Consist Control&#10;Turnout Control&#10;Sensor Control&#10;CV Programming&#10;DCC Accessory Commands&#10;Momentum Control&#10;Output Control&#10;Pin Control&#10;NeoPixel Control&#10;Turntable Control&#10;Sound Control&#10;Throttle Information Commands&#10;Track Manager&#10;Configuration Commands&#10;Diagnostic Commands&#10;Raw DCC Packets">DCC-EX Command Protocol</a>
+    - <a href="reference\serial-commands.md" data-tooltip="System Commands&#10;Power Control&#10;Locomotive Control&#10;Function Control&#10;Consist Control&#10;Turnout Control&#10;Sensor Control&#10;CV Programming&#10;DCC Accessory Commands&#10;Momentum Control&#10;Output Control&#10;Pin Control&#10;NeoPixel Control&#10;Turntable Control&#10;Sound Control&#10;Throttle Information Commands&#10;Track Manager&#10;Configuration Commands&#10;Diagnostic Commands&#10;Raw DCC Packets">DCC-EX Command Protocol</a>
     - <a href="reference\exrail-command-reference.md">EXRAIL Command List</a>
-    - <a href="reference\advanced-config-h.md" title="Non-standard Motor Shields&#10;TCP/IP Advanced settings&#10;LCD/OLED support&#10;Disable EEPROM&#10;Disable PROG&#10;Redefine DCC boundary between SHORT and LONG loco addresses&#10;Redefine locomotive state table size&#10;Define TURNOUTS and ACCESSORIES to follow norm RCN-213&#10;Handling multiple serial throttles&#10;Bluetooth serial ON ESP32&#10;Booster input pin on ESP32 CS&#10;ESP32 LED Wifi Indicator&#10;SABERTOOTH&#10;Tuning for deprecated UNO/NANO">Advanced config.h settings for Command Station build <small>(Advanced config.h Options)</small></a>
+    - <a href="reference\advanced-config-h.md" data-tooltip="Non-standard Motor Shields&#10;TCP/IP Advanced settings&#10;LCD/OLED support&#10;Disable EEPROM&#10;Disable PROG&#10;Redefine DCC boundary between SHORT and LONG loco addresses&#10;Redefine locomotive state table size&#10;Define TURNOUTS and ACCESSORIES to follow norm RCN-213&#10;Handling multiple serial throttles&#10;Bluetooth serial ON ESP32&#10;Booster input pin on ESP32 CS&#10;ESP32 LED Wifi Indicator&#10;SABERTOOTH&#10;Tuning for deprecated UNO/NANO">Advanced config.h settings for Command Station build <small>(Advanced config.h Options)</small></a>
     - **TrackManager**
-        - <a href="reference\trackmanager\trackmanager.md" title="What is the Track Manager&#10;Using the Track Manager (DCC)&#10;Using the Track Manager (DC)&#10;Connecting Hardware&#10;Configuring the Software&#10;Using EXRAIL to control Track Manager&#10;Where and How for the Code">Track Manager <small>(TrackManager)</small></a>
+        - <a href="reference\trackmanager\trackmanager.md" data-tooltip="What is the Track Manager&#10;Using the Track Manager (DCC)&#10;Using the Track Manager (DC)&#10;Connecting Hardware&#10;Configuring the Software&#10;Using EXRAIL to control Track Manager&#10;Where and How for the Code">Track Manager <small>(TrackManager)</small></a>
         - <a href="reference\trackmanager\dc-mode-frequency.md">DC Mode - PWM Frequency <small>(DC Mode Frequency)</small></a>
         - <a href="reference\trackmanager\dc-mode-logic.md">DC Mode - Logic Gate Circuits <small>(DC Mode Logic)</small></a>
-        - <a href="reference\trackmanager\dc-track-sync.md" title="Timers / Brake Pins&#10;Hardware considerations">DC Mode Track Sync <small>(DC Track Sync)</small></a>
+        - <a href="reference\trackmanager\dc-track-sync.md" data-tooltip="Timers / Brake Pins&#10;Hardware considerations">DC Mode Track Sync <small>(DC Track Sync)</small></a>
     - <a href="reference\hal-device-templates.md">HAL Device Templates <small>(HAL Device Configuration)</small></a>
     - <a href="reference\command-station-arch.md">Command Station Internal Architecture</a>
-    - <a href="reference\throttle-writers-guide.md" title="General&#10;Considerations for throttle developers&#10;Key Throttle/Controller Commands&#10;Roster Information&#10;Controlling Locos&#10;Turnouts/Points&#10;DCC Accessories&#10;Automations/Routes&#10;COMMANDS TO AVOID ==TODO==&#10;Gauges&#10;TCP vs UDP">Throttle Writers Guide (doc incomplete) <small>(Throttle Writers Guide)</small></a>
+    - <a href="reference\throttle-writers-guide.md" data-tooltip="General&#10;Considerations for throttle developers&#10;Key Throttle/Controller Commands&#10;Roster Information&#10;Controlling Locos&#10;Turnouts/Points&#10;DCC Accessories&#10;Automations/Routes&#10;COMMANDS TO AVOID ==TODO==&#10;Gauges&#10;TCP vs UDP">Throttle Writers Guide (doc incomplete) <small>(Throttle Writers Guide)</small></a>
     - <a href="reference\legacy-command-reference.md">Legacy Command Reference</a>
     - **EX-CSB1**
-        - <a href="reference\ex-csb1\csb1-errors-faq.md" title="CH340 USB Drivers&#10;Track voltage&#10;OLED&#10;Power supply&#10;Fault reporting&#10;Overcurrent reporting&#10;WiFi&#10;Discord">EX-CSB1 FAQ</a>
+        - <a href="reference\ex-csb1\csb1-errors-faq.md" data-tooltip="CH340 USB Drivers&#10;Track voltage&#10;OLED&#10;Power supply&#10;Fault reporting&#10;Overcurrent reporting&#10;WiFi&#10;Discord">EX-CSB1 FAQ</a>
         - <a href="reference\ex-csb1\csb1-technical.md">EX-CSB1 Technical Reference</a>
     - **ESP32**
-        - <a href="reference\esp32\esp32-ex8874.md" title="WiFi reliability&#10;IOREF voltage&#10;One EX8874&#10;Stacked EX8874">WeMos D1 R32 + EX8874</a>
-        - <a href="reference\esp32\esp32-acebott.md" title="ACEBOTT ESP32 Max v1.0&#10;ACEBOTT vs. WeMos R1 D32&#10;IOREF voltage&#10;One EX8874&#10;Stacked EX8874">Acebott + EX8874</a>
-        - <a href="reference\esp32\esp32-keyestudio.md" title="Keyestudio IOT ESP32 PLUS Development Board&#10;Keyestudio IOT ESP32 PLUS Development Board *VS* WeMos R1 D32&#10;Incorrect IOREF voltage&#10;One EX8874&#10;Stacked EX8874">Keyestudio IOT ESP32 PLUS Development Board *+* EX8874 <small>(Keyestudio + EX8874)</small></a>
-        - <a href="reference\esp32\esp32-l298-shield.md" title="Genuine Arduino Motor Shield R3&#10;Clone Motor Shields">ESP32 + L298 Shields</a>
+        - <a href="reference\esp32\esp32-ex8874.md" data-tooltip="WiFi reliability&#10;IOREF voltage&#10;One EX8874&#10;Stacked EX8874">WeMos D1 R32 + EX8874</a>
+        - <a href="reference\esp32\esp32-acebott.md" data-tooltip="ACEBOTT ESP32 Max v1.0&#10;ACEBOTT vs. WeMos R1 D32&#10;IOREF voltage&#10;One EX8874&#10;Stacked EX8874">Acebott + EX8874</a>
+        - <a href="reference\esp32\esp32-keyestudio.md" data-tooltip="Keyestudio IOT ESP32 PLUS Development Board&#10;Keyestudio IOT ESP32 PLUS Development Board *VS* WeMos R1 D32&#10;Incorrect IOREF voltage&#10;One EX8874&#10;Stacked EX8874">Keyestudio IOT ESP32 PLUS Development Board *+* EX8874 <small>(Keyestudio + EX8874)</small></a>
+        - <a href="reference\esp32\esp32-l298-shield.md" data-tooltip="Genuine Arduino Motor Shield R3&#10;Clone Motor Shields">ESP32 + L298 Shields</a>
     - **Nucleo**
         - <a href="reference\nucleo\nucleo-drivers.md">Nucleo - USB Drivers</a>
-        - <a href="reference\nucleo\nucleo-firmware.md" title="Upgrade the debugger firmware">Nucleo - STLink Firmware</a>
+        - <a href="reference\nucleo\nucleo-firmware.md" data-tooltip="Upgrade the debugger firmware">Nucleo - STLink Firmware</a>
         - <a href="reference\nucleo\nucleo-debug.md">Nucleo - Debug</a>
-        - <a href="reference\nucleo\nucleo-power.md" title="VIN from EX8874&#10;VIN voltage&#10;USB">Nucleo - Power</a>
+        - <a href="reference\nucleo\nucleo-power.md" data-tooltip="VIN from EX8874&#10;VIN voltage&#10;USB">Nucleo - Power</a>
         - <a href="reference\nucleo\nucleo-64-ex8874.md">Nucleo 64 - EX8874</a>
-        - <a href="reference\nucleo\nucleo-64-wifi.md" title="MakerFabs WiFi shield&#10;Serial pins&#10;Pin diagram">Nucleo 64 - WiFi and Pins</a>
-        - <a href="reference\nucleo\nucleo-144-ex8874.md" title="Stacked EX8874 motor shields on F429ZI F439ZI&#10;EX8874 - F413ZH F446ZE">Nucleo 144 - EX8874</a>
-        - <a href="reference\nucleo\nucleo-144-wifi.md" title="MakerFabs WiFi shield&#10;Serial pins&#10;Pin diagram">Nucleo 144 - WiFi</a>
-        - <a href="reference\nucleo\nucleo-144-pin-reference.md" title="Pin diagrams&#10;8 District PCB">Nucleo 144 - Pins</a>
+        - <a href="reference\nucleo\nucleo-64-wifi.md" data-tooltip="MakerFabs WiFi shield&#10;Serial pins&#10;Pin diagram">Nucleo 64 - WiFi and Pins</a>
+        - <a href="reference\nucleo\nucleo-144-ex8874.md" data-tooltip="Stacked EX8874 motor shields on F429ZI F439ZI&#10;EX8874 - F413ZH F446ZE">Nucleo 144 - EX8874</a>
+        - <a href="reference\nucleo\nucleo-144-wifi.md" data-tooltip="MakerFabs WiFi shield&#10;Serial pins&#10;Pin diagram">Nucleo 144 - WiFi</a>
+        - <a href="reference\nucleo\nucleo-144-pin-reference.md" data-tooltip="Pin diagrams&#10;8 District PCB">Nucleo 144 - Pins</a>
     - **Other Hardware**
         - **Motorboards**
-            - <a href="reference\hardware\motorboards\l298-shields.md" title="Genuine Arduino R3&#10;Clone shields&#10;Voltage drop">L298P & L298HN Shields <small>(L298 Shields)</small></a>
+            - <a href="reference\hardware\motorboards\l298-shields.md" data-tooltip="Genuine Arduino R3&#10;Clone shields&#10;Voltage drop">L298P & L298HN Shields <small>(L298 Shields)</small></a>
             - <a href="reference\hardware\motorboards\schematics.md">Schematics</a>
     - **Wiring**
         - **i2C**
-            - <a href="reference\wiring\i2C\i2c-wiring.md" title="I2C concepts&#10;I2C bus voltage&#10;Qwiic/STEMMA QT&#10;I2C wire length&lt;/strong&gt;&#10;Combined parallel resistance&#10;Wiring pattern for lower capacitance&#10;Power sources">I2C Wiring for the Tinkerer <small>(I2C Wiring)</small></a>
-            - <a href="reference\wiring\i2C\tuning-info.md" title="Guiding Principles&#10;Measurement in situ&#10;Examples">Tuning an I2C Bus for the Engineer <small>(Tuning Information)</small></a>
+            - <a href="reference\wiring\i2C\i2c-wiring.md" data-tooltip="I2C concepts&#10;I2C bus voltage&#10;Qwiic/STEMMA QT&#10;I2C wire length&lt;/strong&gt;&#10;Combined parallel resistance&#10;Wiring pattern for lower capacitance&#10;Power sources">I2C Wiring for the Tinkerer <small>(I2C Wiring)</small></a>
+            - <a href="reference\wiring\i2C\tuning-info.md" data-tooltip="Guiding Principles&#10;Measurement in situ&#10;Examples">Tuning an I2C Bus for the Engineer <small>(Tuning Information)</small></a>
 - **About Us**
-    - <a href="about\about.md" title="A Brief History of DCC-EX&#10;The DCC-EX Team&#10;Related Software - Friends of DCC-EX">About the DCC-EX Project <small>(About)</small></a>
+    - <a href="about\about.md" data-tooltip="A Brief History of DCC-EX&#10;The DCC-EX Team&#10;Related Software - Friends of DCC-EX">About the DCC-EX Project <small>(About)</small></a>
 - **Contribute**
-    - <a href="contributing\contributing.md" title="Documentation&#10;Development&#10;Web Support&#10;Organisation/Coordination&#10;Code of Conduct">How Can I Contribute? <small>(How You Can Contribute)</small></a>
-    - <a href="contributing\user-journeys.md" title="New to DCC-EX&#10;Ready-to-Run CSB1&#10;DC Ready-to-Run Users&#10;Existing Users Adding Accessories&#10;Existing Users Looking to Automate/Animate&#10;Large Club Layout&#10;Downloader">User Personas and Journeys - Front Page Tiles <small>(User Journeys)</small></a>
-    - <a href="contributing\release-checklist.md" title="Content&#10;Release QA Items&#10;Menu and Page Structure&#10;Styling&#10;Team Info&#10;Release To Do">Release Checklist</a>
-    - <a href="contributing\code\contributing-code.md" title="Development Environment&#10;Coding Style Guidelines&#10;Using the Repository&#10;Pull Request Process">Contributing to the public domain code <small>(Contributing Code)</small></a>
+    - <a href="contributing\contributing.md" data-tooltip="Documentation&#10;Development&#10;Web Support&#10;Organisation/Coordination&#10;Code of Conduct">How Can I Contribute? <small>(How You Can Contribute)</small></a>
+    - <a href="contributing\user-journeys.md" data-tooltip="New to DCC-EX&#10;Ready-to-Run CSB1&#10;DC Ready-to-Run Users&#10;Existing Users Adding Accessories&#10;Existing Users Looking to Automate/Animate&#10;Large Club Layout&#10;Downloader">User Personas and Journeys - Front Page Tiles <small>(User Journeys)</small></a>
+    - <a href="contributing\release-checklist.md" data-tooltip="Content&#10;Release QA Items&#10;Menu and Page Structure&#10;Styling&#10;Team Info&#10;Release To Do">Release Checklist</a>
+    - <a href="contributing\code\contributing-code.md" data-tooltip="Development Environment&#10;Coding Style Guidelines&#10;Using the Repository&#10;Pull Request Process">Contributing to the public domain code <small>(Contributing Code)</small></a>
     - **Contributing Documentation**
-        - <a href="contributing\documentation\docs.md" title="How to Contribute&#10;MkDocs Links&#10;What You Need to Install&#10;Getting Started&#10;Previewing and building MkDocs">Contributing to Documentation</a>
-        - <a href="contributing\documentation\standards.md" title="General Content&#10;Do Not Duplicate Content&#10;Directory Naming, Page Naming, and Titles&#10;Address all MkDocs Warnings and Errors&#10;Directory Structure and Navigation">Documentation Standards</a>
-        - <a href="contributing\documentation\formatting-guide.md" title="Page and Section Links&#10;Search Links&#10;Headings&#10;Headings&#10;Glossary Terms and Linking&#10;[Term](?term)&#10;Code blocks">Formatting Guide</a>
-        - <a href="contributing\documentation\understanding-links.md" title="What the html browser sees is this&#10;What the mkdocs author sees&#10;The search link">Understanding Links</a>
-        - <a href="contributing\documentation\logos.md" title="Light and Dark Theme&#10;Branded and Non-Branded Product Logos&#10;Logo Sizing">Using Our Logos</a>
-        - <a href="contributing\documentation\mkdocs-features.md" title="Previewing and Deploying MkDocs&#10;DCC-EX CSS Styling&#10;DCC-EX JavaScript Files&#10;MkDocs Material Extensions&#10;MkDocs Plugins">Working With MkDocs</a>
-        - <a href="contributing\documentation\mermaid-diagrams.md" title="Flowchart&#10;Sequence Diagram&#10;State Diagram">Mermaid Diagrams</a>
+        - <a href="contributing\documentation\docs.md" data-tooltip="How to Contribute&#10;MkDocs Links&#10;What You Need to Install&#10;Getting Started&#10;Previewing and building MkDocs">Contributing to Documentation</a>
+        - <a href="contributing\documentation\standards.md" data-tooltip="General Content&#10;Do Not Duplicate Content&#10;Directory Naming, Page Naming, and Titles&#10;Address all MkDocs Warnings and Errors&#10;Directory Structure and Navigation">Documentation Standards</a>
+        - <a href="contributing\documentation\formatting-guide.md" data-tooltip="Page and Section Links&#10;Search Links&#10;Headings&#10;Headings&#10;Glossary Terms and Linking&#10;[Term](?term)&#10;Code blocks">Formatting Guide</a>
+        - <a href="contributing\documentation\understanding-links.md" data-tooltip="What the html browser sees is this&#10;What the mkdocs author sees&#10;The search link">Understanding Links</a>
+        - <a href="contributing\documentation\logos.md" data-tooltip="Light and Dark Theme&#10;Branded and Non-Branded Product Logos&#10;Logo Sizing">Using Our Logos</a>
+        - <a href="contributing\documentation\mkdocs-features.md" data-tooltip="Previewing and Deploying MkDocs&#10;DCC-EX CSS Styling&#10;DCC-EX JavaScript Files&#10;MkDocs Material Extensions&#10;MkDocs Plugins">Working With MkDocs</a>
+        - <a href="contributing\documentation\mermaid-diagrams.md" data-tooltip="Flowchart&#10;Sequence Diagram&#10;State Diagram">Mermaid Diagrams</a>
 
 ## Pages Not In Navigation
 
-- <a href="products/ex-commandstation/config-wifi-esp32-gui-options_not_in_nav.md" title="Background&#10;The WiFi different modes&#10;Configuring with USB vs WiFi - Limitations of WiFi&#10;Changing the settings&#10;Using EX-Installer, Arduino IDE, VSC, throttle apps">WiFi Configuration for version 5.7.0+ <br/><small>Graphical User Interface Options</small></a>
-- <a href="products/ex-toolbox/connect_wifi_throttle_via_usb_not_in_nav.md" title="Using&#10;Downloads&#10;Troubleshooting (Windows socat)">Connecting WiFi Throttles via USB</a>
-- <a href="reference/esp32/ioref-incorrect-voltage-fix_not_in_nav.md" title="Option A - 3V3 IOREF Override pad changes (Recommended)&#10;Option B - bend + Jumper (Acceptable solution)">Incorrect IOREF voltage for 3.3v Microcontrollers</a>
-- <a href="reference/serial-commands/serial-command-!_not_in_nav.md" title="Commands&#10;Parameters&#10;Response&#10;Notes&#10;Examples">``<! [P|Q|R]>`` <br/>Emergence Stop or Pause</a>
-- <a href="reference/serial-commands/serial-command-1-0_not_in_nav.md" title="Commands&#10;Parameters&#10;Response&#10;Notes&#10;Examples">``<1|0 [«track»]>`` <br/>Turn track power on or off</a>
-- <a href="reference/serial-commands/serial-command-cc-wifi_not_in_nav.md" title="Commands&#10;Parameters&#10;Response&#10;Notes&#10;Examples"><small>``<C WIFI ON|OFF|AP|HIDDENAP|TEMP|DEFAULT|HOSTNAME [«various parameters»]>``</small> <br/> Setup the WiFi</a>
-- <a href="reference/serial-commands/serial-command-dd-wifi_not_in_nav.md" title="Command(s)&#10;Response&#10;Notes&#10;Examples"><small>``<D WIFI ON|OFF|SHOW>``</small> <br/> WiFi diagnostics</a>
-- <a href="reference/serial-commands/serial-command-dd_ack_not_in_nav.md" title="Commands&#10;Parameters&#10;Response&#10;Notes&#10;Examples&#10;*Hints and Tips*"><small>``<D ACK LIMIT|MAX|MIN|OFF|ON [«value» [MS]]>`` <br/>``<C PROGBOOST>``</small> <br/>Modify System PROG track settings</a>
-- <a href="reference/serial-commands/serial-command-equals_not_in_nav.md" title="Commands&#10;Parameters&#10;Response&#10;Notes&#10;Examples"><small>``<= [«trackletter» «mode»] [«id»]>``</small> <br/>Request or Configure Track Manager <span style="display:none;">(_equals)</span></a>
-- <a href="reference/serial-commands/serial-command-ff_not_in_nav.md" title="Commands&#10;Parameters&#10;Response&#10;Notes&#10;Examples"><small>``<F «loco» [«function» «state»]|[DCCFREQ «freqValue»]>``</small> <br/>Set decoder functions or set PWM frequency</a>
-- <a href="reference/serial-commands/serial-command-ii_not_in_nav.md" title="Commands&#10;Parameters&#10;Responses&#10;Notes&#10;Examples"><small>``<I [«id»] [«various parameters»]>``</small> <br/><small>``<D TT «vpin» «steps» [«activity]>``</small> <br/><small>``<J O [«id»]>``</small> &nbsp; <small>``<J P «id»>``</small><br/>Manage Turntables</a>
-- <a href="reference/serial-commands/serial-command-jj-aa-and-slash_not_in_nav.md" title="Commands&#10;Parameters&#10;Responses&#10;Notes&#10;Examples"><small>``<J A [«id»]>``</small> <br/><small>``</ [START|PAUSE|RESUME|KILL] [«various parameters»]>``</small> <br/> List, Start or Stop Automations/Sequences</a>
-- <a href="reference/serial-commands/serial-command-jj-mm_not_in_nav.md" title="Command(s)&#10;Parameters&#10;Response&#10;Notes&#10;Examples"><small>``<J M [«various parameters»]>``</small> <br/> Manage Stash Values</a>
-- <a href="reference/serial-commands/serial-command-jj-rr_not_in_nav.md" title="Commands&#10;Parameters&#10;Responses&#10;Notes&#10;Examples"><small>``<J R [«id»]>``</small> <br/>Request Roster info</a>
-- <a href="reference/serial-commands/serial-command-qq-and-ss_not_in_nav.md" title="Commands&#10;Parameters&#10;Responses&#10;Notes&#10;Examples"><small>``<Q>``</small> &nbsp; <small>``<S «id» [«vpin» «pullup»>]``</small> <br/>Manage Sensors</a>
-- <a href="reference/serial-commands/serial-command-rr-and-ww_not_in_nav.md" title="Commands&#10;Parameters&#10;Responses&#10;Notes&#10;Examples"><small>``<R [«cv»|LOCOID|CONSIST]>`` <br/>``<r «loco» «cv»>`` <br/>``<W [«loco»]|[«cv» «value»]|[«loco» «cv» «bitValue» «bit»]|[CONSIST «loco» [REVERSE]]>`` <br/>``<V [«cv» «value»]|[«cv» «bit» «bitValue»]>`` <br/>``<B «cv» «bit» «bitValue»>`` <br/>``<b «loco» «cv» «bit» «bitValue»>``</small> <br/>Read and write CVs</a>
-- <a href="reference/serial-commands/serial-command-s-and-hash_not_in_nav.md" title="Commands&#10;Parameters&#10;Responses&#10;Notes&#10;Examples"><small>``<s>`` &nbsp; ``<#>`` <br/> ``<C RESET>`` ``<D RESET>`` </small> <br/> Query or Reset the Command Station</a>
-- <a href="reference/serial-commands/serial-command-slash_colour_signal_not_in_nav.md" title="Command&#10;Parameters&#10;Response&#10;Notes&#10;Examples"><small>``</ «colour» «signal»>``</small> <br/> Set signal colour</a>
-- <a href="reference/serial-commands/serial-command-t_not_in_nav.md" title="Commands&#10;Parameters&#10;Response&#10;Notes&#10;Examples"><small>``<t «loco» [«tSpeed» «direction»]>``</small> <br/>Request or set loco status</a>
-- <a href="reference/serial-commands/serial-command-tt_not_in_nav.md" title="Commands&#10;Parameters&#10;Response&#10;Notes&#10;Examples"><small>``<T [«id»] [«various parameters»]>`` <br/> ``<J T [«id»]>``</small> <br/>Define or manage Turnouts/Points</a>
-- <a href="reference/serial-commands/serial-command-y_not_in_nav.md" title="Commands&#10;Parameters&#10;Responses&#10;Notes&#10;Examples"><small>``<y «vpin» EQ|FOLDER|PAUSE|PLAY|REPEAT|RESET|RESUME|STOP|VOL [«various parameters»]>``</small> <br/> Play DF Player sounds</a>
-- <a href="reference/serial-commands/shell_serial-command-xyz_not_in_nav.md" title="Command(s)&#10;Parameters&#10;Response&#10;Notes&#10;Examples"><small>``<cmd «required parameter» [«optional parameter»]>``</small> <br/> Short command decription</a>
-- <a href="reference/withrottle-vs-native-protocol_not_in_nav.md" title="WiThrottle&#10;DCC-EX Native protocol / commands&#10;Which Should You Use?">WiThrottle Protocol VS DCC-EX Native/Serial Commands</a>
-- <a href="throttles/android-apps-on-windows-and-ios_not_in_nav.md" title="BlueStacks">Android apps on Windows & macOS</a>
-- <a href="throttles/engine-driver-native-protocol_not_in_nav.md" title="Specific Features - when using the DCC-EX Native Protocol&#10;How to enable the *DCC-EX Native Protocol*&#10;Using the DCC-EX Native Features">Engine Driver - Features when using the Native Protocol</a>
+- <a href="products/ex-commandstation/config-wifi-esp32-gui-options_not_in_nav.md" data-tooltip="Background&#10;The WiFi different modes&#10;Configuring with USB vs WiFi - Limitations of WiFi&#10;Changing the settings&#10;Using EX-Installer, Arduino IDE, VSC, throttle apps">WiFi Configuration for version 5.7.0+ <br/><small>Graphical User Interface Options</small></a>
+- <a href="products/ex-toolbox/connect_wifi_throttle_via_usb_not_in_nav.md" data-tooltip="Using&#10;Downloads&#10;Troubleshooting (Windows socat)">Connecting WiFi Throttles via USB</a>
+- <a href="reference/esp32/ioref-incorrect-voltage-fix_not_in_nav.md" data-tooltip="Option A - 3V3 IOREF Override pad changes (Recommended)&#10;Option B - bend + Jumper (Acceptable solution)">Incorrect IOREF voltage for 3.3v Microcontrollers</a>
+- <a href="reference/serial-commands/serial-command-!_not_in_nav.md" data-tooltip="Commands&#10;Parameters&#10;Response&#10;Notes&#10;Examples">``<! [P|Q|R]>`` <br/>Emergence Stop or Pause</a>
+- <a href="reference/serial-commands/serial-command-1-0_not_in_nav.md" data-tooltip="Commands&#10;Parameters&#10;Response&#10;Notes&#10;Examples">``<1|0 [«track»]>`` <br/>Turn track power on or off</a>
+- <a href="reference/serial-commands/serial-command-cc-wifi_not_in_nav.md" data-tooltip="Commands&#10;Parameters&#10;Response&#10;Notes&#10;Examples"><small>``<C WIFI ON|OFF|AP|HIDDENAP|TEMP|DEFAULT|HOSTNAME [«various parameters»]>``</small> <br/> Setup the WiFi</a>
+- <a href="reference/serial-commands/serial-command-dd-wifi_not_in_nav.md" data-tooltip="Command(s)&#10;Response&#10;Notes&#10;Examples"><small>``<D WIFI ON|OFF|SHOW>``</small> <br/> WiFi diagnostics</a>
+- <a href="reference/serial-commands/serial-command-dd_ack_not_in_nav.md" data-tooltip="Commands&#10;Parameters&#10;Response&#10;Notes&#10;Examples&#10;*Hints and Tips*"><small>``<D ACK LIMIT|MAX|MIN|OFF|ON [«value» [MS]]>`` <br/>``<C PROGBOOST>``</small> <br/>Modify System PROG track settings</a>
+- <a href="reference/serial-commands/serial-command-equals_not_in_nav.md" data-tooltip="Commands&#10;Parameters&#10;Response&#10;Notes&#10;Examples"><small>``<= [«trackletter» «mode»] [«id»]>``</small> <br/>Request or Configure Track Manager <span style="display:none;">(_equals)</span></a>
+- <a href="reference/serial-commands/serial-command-ff_not_in_nav.md" data-tooltip="Commands&#10;Parameters&#10;Response&#10;Notes&#10;Examples"><small>``<F «loco» [«function» «state»]|[DCCFREQ «freqValue»]>``</small> <br/>Set decoder functions or set PWM frequency</a>
+- <a href="reference/serial-commands/serial-command-ii_not_in_nav.md" data-tooltip="Commands&#10;Parameters&#10;Responses&#10;Notes&#10;Examples"><small>``<I [«id»] [«various parameters»]>``</small> <br/><small>``<D TT «vpin» «steps» [«activity]>``</small> <br/><small>``<J O [«id»]>``</small> &nbsp; <small>``<J P «id»>``</small><br/>Manage Turntables</a>
+- <a href="reference/serial-commands/serial-command-jj-aa-and-slash_not_in_nav.md" data-tooltip="Commands&#10;Parameters&#10;Responses&#10;Notes&#10;Examples"><small>``<J A [«id»]>``</small> <br/><small>``</ [START|PAUSE|RESUME|KILL] [«various parameters»]>``</small> <br/> List, Start or Stop Automations/Sequences</a>
+- <a href="reference/serial-commands/serial-command-jj-mm_not_in_nav.md" data-tooltip="Command(s)&#10;Parameters&#10;Response&#10;Notes&#10;Examples"><small>``<J M [«various parameters»]>``</small> <br/> Manage Stash Values</a>
+- <a href="reference/serial-commands/serial-command-jj-rr_not_in_nav.md" data-tooltip="Commands&#10;Parameters&#10;Responses&#10;Notes&#10;Examples"><small>``<J R [«id»]>``</small> <br/>Request Roster info</a>
+- <a href="reference/serial-commands/serial-command-qq-and-ss_not_in_nav.md" data-tooltip="Commands&#10;Parameters&#10;Responses&#10;Notes&#10;Examples"><small>``<Q>``</small> &nbsp; <small>``<S «id» [«vpin» «pullup»>]``</small> <br/>Manage Sensors</a>
+- <a href="reference/serial-commands/serial-command-rr-and-ww_not_in_nav.md" data-tooltip="Commands&#10;Parameters&#10;Responses&#10;Notes&#10;Examples"><small>``<R [«cv»|LOCOID|CONSIST]>`` <br/>``<r «loco» «cv»>`` <br/>``<W [«loco»]|[«cv» «value»]|[«loco» «cv» «bitValue» «bit»]|[CONSIST «loco» [REVERSE]]>`` <br/>``<V [«cv» «value»]|[«cv» «bit» «bitValue»]>`` <br/>``<B «cv» «bit» «bitValue»>`` <br/>``<b «loco» «cv» «bit» «bitValue»>``</small> <br/>Read and write CVs</a>
+- <a href="reference/serial-commands/serial-command-s-and-hash_not_in_nav.md" data-tooltip="Commands&#10;Parameters&#10;Responses&#10;Notes&#10;Examples"><small>``<s>`` &nbsp; ``<#>`` <br/> ``<C RESET>`` ``<D RESET>`` </small> <br/> Query or Reset the Command Station</a>
+- <a href="reference/serial-commands/serial-command-slash_colour_signal_not_in_nav.md" data-tooltip="Command&#10;Parameters&#10;Response&#10;Notes&#10;Examples"><small>``</ «colour» «signal»>``</small> <br/> Set signal colour</a>
+- <a href="reference/serial-commands/serial-command-t_not_in_nav.md" data-tooltip="Commands&#10;Parameters&#10;Response&#10;Notes&#10;Examples"><small>``<t «loco» [«tSpeed» «direction»]>``</small> <br/>Request or set loco status</a>
+- <a href="reference/serial-commands/serial-command-tt_not_in_nav.md" data-tooltip="Commands&#10;Parameters&#10;Response&#10;Notes&#10;Examples"><small>``<T [«id»] [«various parameters»]>`` <br/> ``<J T [«id»]>``</small> <br/>Define or manage Turnouts/Points</a>
+- <a href="reference/serial-commands/serial-command-y_not_in_nav.md" data-tooltip="Commands&#10;Parameters&#10;Responses&#10;Notes&#10;Examples"><small>``<y «vpin» EQ|FOLDER|PAUSE|PLAY|REPEAT|RESET|RESUME|STOP|VOL [«various parameters»]>``</small> <br/> Play DF Player sounds</a>
+- <a href="reference/serial-commands/shell_serial-command-xyz_not_in_nav.md" data-tooltip="Command(s)&#10;Parameters&#10;Response&#10;Notes&#10;Examples"><small>``<cmd «required parameter» [«optional parameter»]>``</small> <br/> Short command decription</a>
+- <a href="reference/withrottle-vs-native-protocol_not_in_nav.md" data-tooltip="WiThrottle&#10;DCC-EX Native protocol / commands&#10;Which Should You Use?">WiThrottle Protocol VS DCC-EX Native/Serial Commands</a>
+- <a href="throttles/android-apps-on-windows-and-ios_not_in_nav.md" data-tooltip="BlueStacks">Android apps on Windows & macOS</a>
+- <a href="throttles/engine-driver-native-protocol_not_in_nav.md" data-tooltip="Specific Features - when using the DCC-EX Native Protocol&#10;How to enable the *DCC-EX Native Protocol*&#10;Using the DCC-EX Native Features">Engine Driver - Features when using the Native Protocol</a>
 - <a href="throttles/engine-driver-physical-knobs_not_in_nav.md">Engine Driver - Adding a Physical Dial/Knob</a>
