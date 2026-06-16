@@ -108,3 +108,5 @@ To record a log file in Engine Driver:
 1. Browse down to the folder ``...\Internal shared storage\Android\data\jmri.enginedriver\files``
 1. Find the most resent file that looks like ``logcatxxxxxxxxxxxxx.txt``     e.g. logcat1699833098998.txt
 1. Attach that file to a message here in discord using the paperclip button on the toolbar above the message content
+
+--8<-- "snippets/abbr.md"

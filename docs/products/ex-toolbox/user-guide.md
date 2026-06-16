@@ -8,7 +8,6 @@ The various screens can be accessed via the dropdown menu (&#9776;) or by swipin
 
 ## CV Programming
 
-<div class="result" markdown>
 ![menu](/_static/images/ex-toolbox/cv_programmer_menu.png){align="right" width="200px"}
 
 DCC Decoder CV programming is available:
@@ -18,11 +17,8 @@ DCC Decoder CV programming is available:
 
 By default **EX‑Toolbox** shows the Service Mode options. To switch to Operation Mode, select "Program on Main (Operation Mode)" on the drop down list at the top of the screen.
 
-</div>
-
 ### CV Programming (Service Mode)
 
-<div class="result" markdown>
 ![menu](/_static/images/ex-toolbox/cv_programmer.png){align="right" width="200px"}
 
 Service Mode CV Programming is available form the 'CV Programming' screen, when 'Programming Track (ServiceMode)' is selected in the drop down list at the top of the screen.
@@ -58,7 +54,6 @@ On this screen you can:
 
 ### CV Programming (Operation Mode)
 
-<div class="result" markdown>
 ![menu](/_static/images/ex-toolbox/cv_programmer_ops_mode.png){align="right" width="200px"}
 
 Operation Mode CV Programming is available from the 'CV Programming' screen, when 'Program on Main (Operation Mode)' is selected in the drop down list at the top of the screen.
@@ -77,8 +72,6 @@ On this screen you can:
 
 - Issue [DCC-EX Serial commands](/reference/serial-command-list.md) (``<>``) to the EX‑CommandStation
 
-</div>
-
 ----
 
 ## Issuing DCC-EX Serial Commands (`<>`)
@@ -96,8 +89,6 @@ You can use the `Next` and `Prior` buttons to retrieve previously issued command
 ----
 
 ## Speed Matching
-
-<div class="result" markdown>
 
 ![menu](/_static/images/ex-toolbox/speed_matching.png){align="right" width="200px"}
 
@@ -173,13 +164,9 @@ If you have more locos to match, repeat from *step 2*.
 
 - The low speed test uses a speed setting of 5 (0-126). If your locos don't start moving at that setting it would be advisable to adjust Low speed setting and/or the Kick Start of the 'Master' first.
 
-</div>
-
 ----
 
 ## Speedometer
-
-<div class="result" markdown>
 
 ![menu](/_static/images/ex-toolbox/speedometer.png){align="right" width="200px"}
 
@@ -225,19 +212,13 @@ To check the speed in the opposite direction, simply reverse the sensor numbers,
 
 The Speedometer will remember the last used sensors and distance between sessions.
 
-</div>
-
 ----
 
 ## Loco Status
 
-<div class="result" markdown>
-
 ![menu](/_static/images/ex-toolbox/loco_status.png){align="right" width="200px"}
 
 Loco Status page allows you to watch changes to all locos being controlled by the **EX-CommandStation**.
-
-</div>
 
 <div style="clear: both;"></div>
 
@@ -245,7 +226,6 @@ Loco Status page allows you to watch changes to all locos being controlled by th
 
 ## Track Manager
 
-<div class="result" markdown>
 ![menu](/_static/images/ex-toolbox/track_manager.png){align="right" width="200px"}
 
 Track Manager page allows you to change up to 8 channels (depending on the Motor Driver(s) you are using)
@@ -267,13 +247,10 @@ Select the value you want for the channels and click ``Set``.
 
 - Only one channel can be ``PROG``. If you select more that one, one will turned OFF.
 
-</div>
-
 ----
 
 ## Servo Motor Testing and Adjustment
 
-<div class="result" markdown>
 ![menu](/_static/images/ex-toolbox/servos.png){align="right" width="200px"}
 
 The 'Servo Motor Test' screen will allow you to test and fine tune the settings needed for configuring servo motors attached to the EX‑CommandStation. This is intended to be temporary. To permanently configure a servo motor you will need to record the values and include the in the configuration of your EX‑CommandStation.
@@ -293,13 +270,10 @@ The 'Servo Motor Test' screen will allow you to test and fine tune the settings 
 
 **EX‑Toolbox** remembers the servos that you have changed (up to 10) in this and previous sessions, and you can select one of the previous servos from the drop down list. **EX‑Toolbox** will restore the last settings you used for the selected servo to the main fields.
 
-</div>
-
 ----
 
 ## Sensor testing
 
-<div class="result" markdown>
 ![menu](/_static/images/ex-toolbox/sensors.png){align="right" width="200px"}
 
 The 'Sensor Test' screen will allow you to test any sensors configured in your EX‑CommandStation, but only if they have been (temporarily) defined using [JMRI_SENSOR](?JMRI_SENSOR) in **EXRAIL**, or the `<S vpin vpin 1>` command.
@@ -308,15 +282,12 @@ When the screen opens the first 100 sensors found will be shown. Activity on the
 
 The Watch button is generally not needed, but will force **EX‑Toolbox** to check the available sensors on the EX‑CommandStation again.
 
-</div>
-
 <div style="clear: both;"></div>
 
 ----
 
 ## Current Meter
 
-<div class="result" markdown>
 ![menu](/_static/images/ex-toolbox/currents.png){align="right" width="200px"}
 
 The 'Current Status' screen will show you the current values for up to eight channels on the motor driver on your EX‑CommandStation.
@@ -333,15 +304,12 @@ You can manually stop the readings with the Stop button.
 
 You can manually restart the readings with the Start button. This will also clear the 'Highest' values.
 
-</div>
-
 <div style="clear: both;"></div>
 
 ----
 
 ## Roster
 
-<div class="result" markdown>
 ![menu](/_static/images/ex-toolbox/roster.png){align="right" width="200px"}
 
 The 'Roster' screen will show you the current roster on your EX‑CommandStation.
@@ -350,15 +318,12 @@ Clicking on any individual loco in the roster will show you the details of that 
 
 ![menu](/_static/images/ex-toolbox/roster_individual_loco.png){width="200px"}
 
-</div>
-
 <div style="clear: both;"></div>
 
 ----
 
 ## Neopixel Setup
 
-<div class="result" markdown>
 ![menu](/_static/images/ex-toolbox/neopixel.png){align="right" width="200px"}
 
 The 'Neopixel' screen will allow you to experiment with any neopixels configured on your EX‑CommandStation.
@@ -370,16 +335,12 @@ Enter:
 
 You can then adjust the colours (RGB values) of the neopixels with the sliders
 
-
-</div>
-
 <div style="clear: both;"></div>
 
 ----
 
 ## Power
 
-<div class="result" markdown>
 ![menu](/_static/images/ex-toolbox/power.png){align="right" width="200px"}
 
 There are two ways to turn the Track Power on/off:
@@ -393,22 +354,16 @@ If the Power Action Bar button is enabled, simply click on it to turn track powe
 
 Note, you can also optionally enable the Power Button on the Action bar in the preferences.
 
-</div>
-
 ----
 
 ## Preferences
 
-<div class="result" markdown>
 Most configuration options are found in the Preferences which is accessed via the overflow menu which is normally three dots (⁞) or three bars (≡).
-
-</div>
 
 ----
 
 ## View log
 
-<div class="result" markdown>
 Accessed from any of the main screens via Menu ‣ View Log.
 
 This screen allows you to view the internal **EX‑Toolbox** log of events. (referend to as 'logcat').
@@ -446,13 +401,9 @@ Attempt whatever is causing the problem a few times
 
 - Attach that file to a message in discord using the ``+`` button on the row of the message content.
 
-</div>
-
 ----
 
 ## About
-
-<div class="result" markdown>
 
 This screen displays
 
@@ -462,4 +413,4 @@ This screen displays
 
 - A page of basic information about **EX‑Toolbox**.
 
-</div>
+--8<-- "snippets/abbr.md"

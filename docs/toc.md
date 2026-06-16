@@ -229,6 +229,7 @@ li a {
             - [Tuning an I2C Bus for the Engineer <small>(Tuning Information)</small>](reference\wiring\i2C\tuning-info.md)
 - **About Us**
     - [About the DCC-EX Project <small>(About)</small>](about\about.md)
+    - [DCC++ VS DCC-EX? - Project History <small>(History)</small>](about\history.md)
 - **Contribute**
     - [How Can I Contribute? <small>(How You Can Contribute)</small>](contributing\contributing.md)
     - [User Personas and Journeys - Front Page Tiles <small>(User Journeys)</small>](contributing\user-journeys.md)

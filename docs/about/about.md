@@ -8,7 +8,7 @@ If you wish to get in touch with the team, try our [Discord server](/support/dis
 
 ## A Brief History of DCC-EX
 
-==TODO==
+See the [History page](history.md).
 
 ## The DCC-EX Team
 
@@ -132,7 +132,7 @@ The DCC-EX team is a worldwide group of enthusiasts who volunteer their time to 
 
 ## Related Software - Friends of DCC-EX
 
-Making sure this software works well with |EX-CS|
+Making sure this software works well with the **EX-CommandStation**
 
 - [Java Model Railroad Interface (JMRI)](https://www.jmri.org/)
   
