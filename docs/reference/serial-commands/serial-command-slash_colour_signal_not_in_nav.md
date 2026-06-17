@@ -39,11 +39,13 @@ N/A
 
 ### Example Commands
 
-* ==TODO==
+* ==TODO== Example Commands
 
 ### Example Responses
 
 N/A
+
+--8<-- "snippets/abbr.md"
 
 <style>
   .md-typeset h1 {

@@ -1,21 +1,21 @@
 # Connecting a servo turnout/point
 
-The details below assume you are using an EX-CSB1 command station or a DIY station with an EX8874 motor shield and Wifi connection. Otherwise the steps are the same but the wiring is trickier without the Qwiic sockets and testing requires command input.
+The details below assume you are using an **EX-CSB1** command station or a DIY station with an EX8874 motor shield and WiFi connection. Otherwise the steps are the same but the wiring is trickier without the Qwiic sockets and testing requires command input.
 
 You will need the following for up to 16 servos.
 
 - Your **EX-CommandStation** with power supply and USB connection to your PC.
-- Qwiic cable for connection to CSB1, with Qwiic or dupont connectors for connection to PCA9685.
+- Qwiic cable for connection to **EX-CSB1**, with Qwiic or dupont connectors for connection to PCA9685.
 - PCA9685 module
 - Up to 16 SG90 servos
 - EX-Installer downloaded on your PC
-- (Optionally) Android phone with EX-Toolbox installed
+- (Optionally) Android phone with **EX-Toolbox** installed
 - A servo power supply 5V 2A DC -- and not taken from the **EX-CommandStation**.
 
 ## Follow the steps below
 
 1. Turn off power to your **EX-CommandStation** and unplug the USB cable and power supply.
-2. Connect the Qwiic cable between the CSB1 or EX8874 and the PCA9685 module.<BR>
+2. Connect the Qwiic cable between the *EX-CSB1** or EX8874 and the PCA9685 module.<BR>
  ![CSB1](/_static/images/ex-csb1/csb1qwiic.jpg){: style="width: 70%"} <BR>
 When using Mega, the I2C bus is 5V.<BR>
 Use the I2C headers, where 5V is available (IOREF/Vdd).<BR>
@@ -43,7 +43,7 @@ from the startup logs using the serial monitor
 6. Plug a servo into the first output socket. DO NOT mechanically connect the servo arm to any turnout/point or animation as the servo may move unexpectedly and cause physical damage.  You will connect the servo arm after exercising the servo (step 8).
 7. Connect the additional servo power supply to the long-edge turrets on the PCA9685, observing the correct polarity. ![PCA9685](/_static/images/i2c-devices/PCA9685.jpg){: style="width: 70%"}
 8. On the installers serial monitor, enter the command ```<D SERVO 100 200>``` which should move the servo. Experiment with other positions than 200. The usable range is approximately 102 to 490.  
-9. (Optionally) Use the EX-Toolbox Andoid app to experiment with servo angles and servo arm lengths until you have the required throw distance and angles to suit your servo mounting preferences.
+9. (Optionally) Use the **EX-Toolbox** Andoid app to experiment with servo angles and servo arm lengths until you have the required throw distance and angles to suit your servo mounting preferences.
 
 ## Define your turnouts/points
 

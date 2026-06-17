@@ -7,7 +7,7 @@ tags:
   - _!_Q
 ---
 
-# ``<! [P|Q|R]>`` <br/>Emergence Stop or Pause
+# ``<! [P|Q|R]>`` <br/>Emergency Stop (ESTOP) or Pause
 
 Serial command to Emergency Stop all locos, pause all locos, or query the Estop pause status.
 
@@ -64,6 +64,8 @@ Repeated for each loco in the reminders list <br/> ``<l «loco» «reg» «speed
 ### Example Responses
 
 * TBA
+
+--8<-- "snippets/abbr.md"
 
 <style>
   .md-typeset h1 {

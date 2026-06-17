@@ -19,9 +19,9 @@ These recommendations are generalised, and you must check to make sure they don'
 | O (1:48)      | 16–18V                       | 5–6A                        | Ensure decoder supports higher voltage; some cap at 18V.                  |
 | G (1:22.5)    | 18–22V                       | 6A+                         | Outdoor locos often need more torque and current.                         |
 
-## Using an EX8874 or CSB1
+## Using an EX8874 or EX-CSB1
 
-The EX8874 (which is also built into the CSB1) provides power for both the track and the **EX-CommandStation**. There is almost zero voltage drop between the power supply and the track.
+The EX8874 (which is also built into the EX-CSB1) provides power for both the track and the **EX-CommandStation**. There is almost zero voltage drop between the power supply and the track.
 
 We strongly advise purchasing a suitable power supply at the same time as the CSB or EX8874 from a vendor who understands your requirements.
 

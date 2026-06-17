@@ -19,7 +19,7 @@ Serial commands to activate or dactivate accessory decoders.
 
 ## Parameters
 
-* **address**: *Required* accessory DCC decoder adress to activate or deactivate
+* **address**: *Required* accessory DCC decoder address to activate or deactivate
 * **subAddr**:  accessory DCC decoder sub-address to activate or deactivate
 * **activate**:  - one of:
     * ``0`` = deactivate
@@ -66,6 +66,8 @@ Here is a spreadsheet in .XLSX format to help you: [Stationary Decoder Address T
 ### *Example Responses:*
 
 * ==TODO== Example Responses
+
+--8<-- "snippets/abbr.md"
 
 <style>
   .md-typeset h1 {

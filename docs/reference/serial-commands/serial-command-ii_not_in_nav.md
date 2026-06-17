@@ -124,8 +124,7 @@ Response (id not defined): ``<jO «id» X>``
     * desc = description of the position (including surrounding quotes)
     * blank = unknown or hidden id
 
-### Response for ``<I «id» ADD «position» «value» «angle»>``, ``<I «id» DCC «home»>``,
-``<I «id» EXTT «vpin» «home»>``
+### Response for ``<I «id» ADD «position» «value» «angle»>``, ``<I «id» DCC «home»>``, ``<I «id» EXTT «vpin» «home»>``
 
 (Successful): ``<I>`` <br/>
 (Fail): ``<X>``
@@ -175,7 +174,9 @@ Example: This example defines an EX-Turntable device, with 3 positions:
 
 ### *Example Responses:*
 
-* ==TODO==
+* ==TODO== Example Responses
+
+--8<-- "snippets/abbr.md"
 
 <style>
   .md-typeset h1 {

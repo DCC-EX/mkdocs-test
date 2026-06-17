@@ -45,7 +45,7 @@ And if needing an Interrupt pin to speed up operations:
 HAL(TCA8418, 300, 80, 0x34, 21)
 ```
 
-*This is not for CSB1 which has no spare pins for interrupts.*
+*This is not for *EX-CSB1** which has no spare pins for interrupts.*
 
 Note that using an interrupt pin speeds up button press acquisition considerably (less than a millisecond vs 10-100), but even with interrupts enabled the code presently checks every 100ms in case the interrupt pin becomes disconnected. Use any available Arduino pin for interrupt monitoring.
 

@@ -51,7 +51,7 @@ See the [Sounds page](/products/ex-commandstation/accessories/various-devices/so
 
 ## Responses
 
-==TODO==
+==TODO== Responses
 
 ## Notes
 
@@ -65,11 +65,13 @@ See the [Sounds page](/products/ex-commandstation/accessories/various-devices/so
 
 ### *Example Commands*
 
-* ==TODO==
+* ==TODO== Example Commands
 
 ### *Example Responses:*
 
-* ==TODO==
+* ==TODO== Example Responses
+
+--8<-- "snippets/abbr.md"
 
 <style>
   .md-typeset h1 {

@@ -12,7 +12,7 @@ For Example:
 HAL(DFPlayer,3500,Serial2)  // Use tx2/rx2 Arduino Serial2
 ```
 
-## CSB1 and ESP32 Serial connections
+## EX-CSB1 and ESP32 Serial connections
 
 Note that the ESP32/CSB1 does not by default have a configured Serial2 so it is necessary to provide the spare pins to be used for the setup.
 

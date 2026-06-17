@@ -31,9 +31,9 @@ We encourage our users to reference this ahead of requesting support as there's 
     - You can't turn track power on with the free WiThrottle Lite app for iOS, you must turn it on via the serial console with `<1>`
     - Alternatively, you can enable the `Start with power on` option in EX-Installer
 
-## My CSB1 OLED display isnt working or looks "wrong"
+## My *EX-CSB1** OLED display isnt working or looks "wrong"
 
-- The CSB1 is shipped with whichever OLED display is available and although they look alike, they have different internals. The EX-Installer provides a dropdown list, if yours doesnt work, try selecting the other option.
+- The *EX-CSB1** is shipped with whichever OLED display is available and although they look alike, they have different internals. The EX-Installer provides a dropdown list, if yours doesnt work, try selecting the other option.
 
 ## Why do I get FAULT pin warnings
 

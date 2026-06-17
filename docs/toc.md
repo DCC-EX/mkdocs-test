@@ -5,6 +5,7 @@ li {
     margin: 0px;
     border: 0px;
     line-height: 100%;
+    margin-bottom: 4px !important;
 }
 li a {
     font-weight: 500;
@@ -21,10 +22,10 @@ li a {
     - [Getting Started with DCC-EX <small>(Getting Started)</small>](products\getting-started.md)
     - **EX-CommandStation**
         - [The DCC-EX EX-CommandStation - Overview <small>(EX-CommandStation)</small>](products\ex-commandstation\overview.md)
-        - [EX-CSB1 CommandStation Booster <small>(EX-CSB1 Command Station/Booster)</small>](products\ex-commandstation\ex-csb1.md)
+        - [**EX-CSB1** CommandStation Booster <small>(EX-CSB1 Command Station/Booster)</small>](products\ex-commandstation\ex-csb1.md)
         - [Running a Legacy DC layout <small>(Running a DC layout)</small>](products\ex-commandstation\dc-running.md)
         - [Build configuration (config.h) <small>(Configuration (config.h))</small>](products\ex-commandstation\config-h.md)
-        - [Wifi configuration <br/><small>(Excluding EX-CSB1 or ESP32 v5.7.0+)</small> <small>(Configure WiFi (Wifi Shield))</small>](products\ex-commandstation\config-wifi-shield.md)
+        - [Wifi configuration <br/><small>(Excluding **EX-CSB1** or ESP32 v5.7.0+)</small> <small>(Configure WiFi (Wifi Shield))</small>](products\ex-commandstation\config-wifi-shield.md)
         - [WiFi configuration <br/><small>(EX-CSB1 or ESP32 ONLY. v5.7.0+ ONLY)</small> <small>(Configure WiFi (CSB1 & ESP32 v5.7.0+))</small>](products\ex-commandstation\config-wifi-esp32.md)
         - [Testing your EX-CommandStation](products\ex-commandstation\testing.md)
         - **TrackManager**
@@ -43,8 +44,8 @@ li a {
             - [Sensors](products\ex-commandstation\accessories\sensors.md)
             - [Connecting a servo turnout/point <small>(Servo Turnouts/Points)</small>](products\ex-commandstation\accessories\connecting-servo-turnout.md)
             - [Hardware device list <small>(Hardware List)</small>](products\ex-commandstation\accessories\hardware-list.md)
-            - [I2C (I<sup>2</sup>C) – An Introduction <small>(I2C Intro)</small>](products\ex-commandstation\accessories\i2c-intro.md)
-            - [Buying I2C Devices](products\ex-commandstation\accessories\buying-i2c-devices.md)
+            - [I2C (I<sup>2</sup>C) – An Introduction <small>(I2C (I<sup>2</sup>C) Intro)</small>](products\ex-commandstation\accessories\i2c-intro.md)
+            - [Buying I2C (I<sup>2</sup>C) Devices](products\ex-commandstation\accessories\buying-i2c-devices.md)
             - **Various Devices**
                 - **Sounds**
                     - [Sounds](products\ex-commandstation\accessories\various-devices\sounds\sounds.md)
@@ -244,15 +245,15 @@ li a {
         - [Working With MkDocs](contributing\documentation\mkdocs-features.md)
         - [Mermaid Diagrams](contributing\documentation\mermaid-diagrams.md)
 
-## Files Not In Navigation
+## Pages Not In Navigation
 
 - [WiFi Configuration for version 5.7.0+ <br/><small>Graphical User Interface Options</small>](products/ex-commandstation/config-wifi-esp32-gui-options_not_in_nav.md)
 - [Connecting WiFi Throttles via USB](products/ex-toolbox/connect_wifi_throttle_via_usb_not_in_nav.md)
 - [Incorrect IOREF voltage for 3.3v Microcontrollers](reference/esp32/ioref-incorrect-voltage-fix_not_in_nav.md)
-- [``<! [P|Q|R]>`` <br/>Emergence Stop or Pause](reference/serial-commands/serial-command-!_not_in_nav.md)
+- [``<! [P|Q|R]>`` <br/>Emergency Stop (ESTOP) or Pause](reference/serial-commands/serial-command-!_not_in_nav.md)
 - [``<1|0 [«track»]>`` <br/>Turn track power on or off](reference/serial-commands/serial-command-1-0_not_in_nav.md)
-- [<small>``<A «address» «value»>``</small> <br/><small>``<a «address» [«subAddr»]|[«activate» [onOff]]>``</small> <br/> Instruct Accessory Decoders](reference/serial-commands/serial-command-aa-and-a_not_in_nav.md)
-- [<small>``<C WIFI ON|OFF|AP|HIDDENAP|TEMP|DEFAULT|HOSTNAME [«various parameters»]>``</small> <br/> Setup the WiFi](reference/serial-commands/serial-command-cc-wifi_not_in_nav.md)
+- [<small>``<A «address» «value»>``</small> <br/><small>``<a «address» [«subAddr»]|[«activate» [«onOff»]]>``</small> <br/>Instruct Accessory Decoders](reference/serial-commands/serial-command-aa-and-a_not_in_nav.md)
+- [<small>``<C WIFI ON|OFF|AP|HIDDENAP|TEMP|DEFAULT|HOSTNAME [«various parameters»]>``</small> <br/> Setup WiFi (EX-CSB1 & ESP32, v5.7.0 ONLY)](reference/serial-commands/serial-command-cc-wifi_not_in_nav.md)
 - [<small>``<D WIFI ON|OFF|SHOW>``</small> <br/> WiFi diagnostics](reference/serial-commands/serial-command-dd-wifi_not_in_nav.md)
 - [<small>``<D ACK LIMIT|MAX|MIN|OFF|ON [«value» [MS]]>`` <br/>``<C PROGBOOST>``</small> <br/>Modify System PROG track settings](reference/serial-commands/serial-command-dd_ack_not_in_nav.md)
 - [<small>``<= [«trackletter» «mode»] [«id»]>``</small> <br/>Request or Configure Track Manager <span style="display:none;">(_equals)</span>](reference/serial-commands/serial-command-equals_not_in_nav.md)
@@ -261,6 +262,7 @@ li a {
 - [<small>``<J A [«id»]>``</small> <br/><small>``</ [START|PAUSE|RESUME|KILL] [«various parameters»]>``</small> <br/> List, Start or Stop Automations/Sequences](reference/serial-commands/serial-command-jj-aa-and-slash_not_in_nav.md)
 - [<small>``<J M [«various parameters»]>``</small> <br/> Manage Stash Values](reference/serial-commands/serial-command-jj-mm_not_in_nav.md)
 - [<small>``<J R [«id»]>``</small> <br/>Request Roster info](reference/serial-commands/serial-command-jj-rr_not_in_nav.md)
+- [<small>``<o «vpin» [«count»]|[«r» «g» «b» [«count»]]>``</small> <br/> Set Neopixels](reference/serial-commands/serial-command-o_not_in_nav.md)
 - [<small>``<Q>``</small> &nbsp; <small>``<S «id» [«vpin» «pullup»>]``</small> <br/>Manage Sensors](reference/serial-commands/serial-command-qq-and-ss_not_in_nav.md)
 - [<small>``<R [«cv»|LOCOID|CONSIST]>`` <br/>``<r «loco» «cv»>`` <br/>``<W [«loco»]|[«cv» «value»]|[«loco» «cv» «bitValue» «bit»]|[CONSIST «loco» [REVERSE]]>`` <br/>``<V [«cv» «value»]|[«cv» «bit» «bitValue»]>`` <br/>``<B «cv» «bit» «bitValue»>`` <br/>``<b «loco» «cv» «bit» «bitValue»>``</small> <br/>Read and write CVs](reference/serial-commands/serial-command-rr-and-ww_not_in_nav.md)
 - [<small>``<s>`` &nbsp; ``<#>`` <br/> ``<C RESET>`` ``<D RESET>`` </small> <br/> Query or Reset the EX-CommandStation](reference/serial-commands/serial-command-s-and-hash_not_in_nav.md)
@@ -268,6 +270,7 @@ li a {
 - [<small>``<t «loco» [«tSpeed» «direction»]>``</small> <br/>Request or set loco status](reference/serial-commands/serial-command-t_not_in_nav.md)
 - [<small>``<T [«id»] [«various parameters»]>`` <br/> ``<J T [«id»]>``</small> <br/>Define or manage Turnouts/Points](reference/serial-commands/serial-command-tt_not_in_nav.md)
 - [<small>``<y «vpin» EQ|FOLDER|PAUSE|PLAY|REPEAT|RESET|RESUME|STOP|VOL [«various parameters»]>``</small> <br/> Play DF Player sounds](reference/serial-commands/serial-command-y_not_in_nav.md)
+- [<small>``<Z [«id» [«pin» «iFlag»]|«active»]]>``</small> <br/><small>``<z [«signedVpin»]|[«vpin» «analogue» [[«profile»] [«duration»]]]>``</small> <br/>Manage pin/vpin outputs](reference/serial-commands/serial-command-zz-and-z_not_in_nav.md)
 - [<small>``<cmd «required parameter» [«optional parameter»]>``</small> <br/> Short command decription](reference/serial-commands/shell_serial-command-xyz_not_in_nav.md)
 - [WiThrottle Protocol VS DCC-EX Native/Serial Commands](reference/withrottle-vs-native-protocol_not_in_nav.md)
 - [Android apps on Windows & macOS](throttles/android-apps-on-windows-and-ios_not_in_nav.md)

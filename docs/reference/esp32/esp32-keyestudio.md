@@ -77,7 +77,7 @@ Add the following lines to your `config.h` and remove any existing `#define MOTO
 
 ## Stacked EX8874
 
-- Reminder: No modifications are needed when stacking an EX8874 on an EX-CSB1 for 4 track outputs.
+- Reminder: No modifications are needed when stacking an EX8874 on an **EX-CSB1** for 4 track outputs.
 - **IOREF:** The IOREF override is also needed for the top shield. See the [Incorrect IOREF voltage page](ioref-incorrect-voltage-fix_not_in_nav.md) for details.
 - **VIN:** Refer to instructions on [cutting the VIN trace and disabling the regulator](/products/ex-motorshield8874/ex-motorshield8874.md/#steps-to-stack) for the top EX8874. (See Option 1 below.)
 

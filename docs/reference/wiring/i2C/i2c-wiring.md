@@ -12,7 +12,7 @@ I2C expansion modules provide accessory pins, but I2C wiring requires a lot of a
 ## I2C bus voltage
 
 - I2C bus voltage is determined by the voltage used for the pullups on the SDA and SCL pins, which should not exceed the voltage of the microprocessor.
-- Mega 2560 is 5V; CSB1, ESP32-WROOM, Nucleo-F4 are 3.3V.
+- Mega 2560 is 5V; **EX-CSB1**, ESP32-WROOM, Nucleo-F4 are 3.3V.
 
 ## Qwiic/STEMMA QT
 
@@ -34,7 +34,7 @@ I2C expansion modules provide accessory pins, but I2C wiring requires a lot of a
 
 This table shows the parallel resistance values with multiple I2C modules:
 
-- Note that Mega has 10k onboard; EX-CSB1 has 5.1k; others are weak or disabled.  
+- Note that Mega has 10k onboard; **EX-CSB1** has 5.1k; others are weak or disabled.  
 - I2C modules, such as PCA9685 and MCP23017, will generally have 10k pullups. LCD and OLED displays may have 4.7k or 10k.  
 - Add/remove pullups to result in 2.5-3.0 mA.  
 - With LTC4311 the need to adjust resistance may be less important, unless resistance is too low.  

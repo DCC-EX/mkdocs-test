@@ -57,7 +57,7 @@ If you have installed and optional OLED or LED display, enable [I have a display
 
 ### Optional Wi-fi
 
-If you are using a CSB1 or other board with integrated Wi-Fi, or have installed and optional Wi-Fi board you need to enable the `I have Wi-Fi`.
+If you are using an *EX-CSB1** or other board with integrated Wi-Fi, or have installed and optional Wi-Fi board you need to enable the `I have Wi-Fi`.
 This enables the "Wi-fi Options" button where you can configure the Wi-Fi.
 
 ### Wi-Fi Access Point mode

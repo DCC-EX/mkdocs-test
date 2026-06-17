@@ -117,7 +117,7 @@ Half the wins we should be able to get here actually have nothing to do with MkD
 
 Instead of trying to cater for every possible custom tinkerer/engineer option on the planet, we need to start with the RTR user front and centre, and use that as the basis for the structure.
 
-So, we should focus on getting the CSB1 process in there first, and the latest EX-Installer updates.
+So, we should focus on getting the *EX-CSB1** process in there first, and the latest EX-Installer updates.
 
 The drive for MkDocs (or something simpler than RST) is that it just uses Markdown, which is a lot simpler for people to come to grips with, and if you don't want to run MkDocs locally, you can at least preview Markdown in VSCode directly, you just won't see it in the context of the website.
 
