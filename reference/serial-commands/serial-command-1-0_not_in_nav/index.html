@@ -1289,7 +1289,7 @@
   
   
   <span class="md-ellipsis">
-    I2C Intro
+    I2C (I<sup>2</sup>C) Intro
     
   </span>
   
@@ -1312,7 +1312,7 @@
   
   
   <span class="md-ellipsis">
-    Buying I2C Devices
+    Buying I2C (I<sup>2</sup>C) Devices
     
   </span>
   
@@ -7043,7 +7043,7 @@
 
 
 <h1 id="10-track-turn-track-power-on-or-off"><code>&lt;1|0 [«track»]&gt;</code> <br/>Turn track power on or off<a class="headerlink" href="#10-track-turn-track-power-on-or-off" title="Permanent link">&para;</a></h1>
-<p>Serial command to turn power on or off to all or specific tracks.  Also allows joining the MAIN and PROG tracks together.</p>
+<p>Serial command to turn power on or off to all or specific tracks.  Also allows joining the <abbr title="Main Track / Ops Mode">MAIN</abbr> and <abbr title="Programming Track / Service Mode">PROG</abbr> tracks together.</p>
 <h2 id="commands">Commands<a class="headerlink" href="#commands" title="Permanent link">&para;</a></h2>
 <ul>
 <li><code>&lt;1&gt;</code> = Turn on both Main and Programming Tracks (All tracks)</li>
@@ -7076,8 +7076,8 @@
 <h2 id="notes">Notes<a class="headerlink" href="#notes" title="Permanent link">&para;</a></h2>
 <ul>
 <li>
-<p>The use of the JOIN function allows the DCC signal for the MAIN track to also be sent to the PROG track. This allows the prog track to act as a siding (or similar) in the main layout even though it is isolated electrically and connected to the programming track output.</p>
-<p>However, it is important that the prog track wiring be in the same phase as the main track i.e. when the left rail is high on MAIN, it is also high on PROG. You may have to swap the wires to your prog track to make this work.</p>
+<p>The use of the JOIN function allows the DCC signal for the <abbr title="Main Track / Ops Mode">MAIN</abbr> track to also be sent to the <abbr title="Programming Track / Service Mode">PROG</abbr> track. This allows the prog track to act as a siding (or similar) in the main layout even though it is isolated electrically and connected to the programming track output.</p>
+<p>However, it is important that the prog track wiring be in the same phase as the main track i.e. when the left rail is high on <abbr title="Main Track / Ops Mode">MAIN</abbr>, it is also high on <abbr title="Programming Track / Service Mode">PROG</abbr>. You may have to swap the wires to your prog track to make this work.</p>
 </li>
 <li>
 <p>If you drive onto a programming track that is "joined" and enter a programming command, the track will automatically switch to a programming track. If you use a compatible Throttle, you can then send the join command again and drive off the track onto the rest of your layout!</p>
@@ -7102,6 +7102,8 @@
 <li>all tracks on <code>&lt;p1&gt;</code></li>
 <li>join: <code>&lt;p1 JOIN&gt;</code></li>
 </ul>
+<!-- These are case sensitive -->
+
 <style>
   .md-typeset h1 {
     line-height: 1.1 !important;
@@ -7127,7 +7129,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 11, 2026 01:23:05 UTC">June 11, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 17, 2026 05:47:42 UTC">June 17, 2026</span>
   </span>
 
     

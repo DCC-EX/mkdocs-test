@@ -1389,7 +1389,7 @@
   
   
   <span class="md-ellipsis">
-    I2C Intro
+    I2C (I<sup>2</sup>C) Intro
     
   </span>
   
@@ -1412,7 +1412,7 @@
   
   
   <span class="md-ellipsis">
-    Buying I2C Devices
+    Buying I2C (I<sup>2</sup>C) Devices
     
   </span>
   
@@ -7115,21 +7115,21 @@
 
 
 <h1 id="connecting-a-servo-turnoutpoint">Connecting a servo turnout/point<a class="headerlink" href="#connecting-a-servo-turnoutpoint" title="Permanent link">&para;</a></h1>
-<p>The details below assume you are using an EX-CSB1 command station or a DIY station with an EX8874 motor shield and Wifi connection. Otherwise the steps are the same but the wiring is trickier without the Qwiic sockets and testing requires command input.</p>
+<p>The details below assume you are using an <strong>EX-CSB1</strong> command station or a DIY station with an EX8874 motor shield and WiFi connection. Otherwise the steps are the same but the wiring is trickier without the Qwiic sockets and testing requires command input.</p>
 <p>You will need the following for up to 16 servos.</p>
 <ul>
 <li>Your <strong>EX-CommandStation</strong> with power supply and USB connection to your PC.</li>
-<li>Qwiic cable for connection to CSB1, with Qwiic or dupont connectors for connection to PCA9685.</li>
+<li>Qwiic cable for connection to <strong>EX-CSB1</strong>, with Qwiic or dupont connectors for connection to PCA9685.</li>
 <li>PCA9685 module</li>
 <li>Up to 16 SG90 servos</li>
 <li>EX-Installer downloaded on your PC</li>
-<li>(Optionally) Android phone with EX-Toolbox installed</li>
+<li>(Optionally) Android phone with <strong>EX-Toolbox</strong> installed</li>
 <li>A servo power supply 5V 2A DC -- and not taken from the <strong>EX-CommandStation</strong>.</li>
 </ul>
 <h2 id="follow-the-steps-below">Follow the steps below<a class="headerlink" href="#follow-the-steps-below" title="Permanent link">&para;</a></h2>
 <ol>
 <li>Turn off power to your <strong>EX-CommandStation</strong> and unplug the USB cable and power supply.</li>
-<li>Connect the Qwiic cable between the CSB1 or EX8874 and the PCA9685 module.<BR>
+<li>Connect the Qwiic cable between the <em>EX-CSB1</em>* or EX8874 and the PCA9685 module.<BR>
  <img alt="CSB1" src="../../../../_static/images/ex-csb1/csb1qwiic.jpg" style="width: 70%" /> <BR>
 When using Mega, the I2C bus is 5V.<BR>
 Use the I2C headers, where 5V is available (IOREF/Vdd).<BR>
@@ -7158,7 +7158,7 @@ from the startup logs using the serial monitor</p>
 <li>Plug a servo into the first output socket. DO NOT mechanically connect the servo arm to any turnout/point or animation as the servo may move unexpectedly and cause physical damage.  You will connect the servo arm after exercising the servo (step 8).</li>
 <li>Connect the additional servo power supply to the long-edge turrets on the PCA9685, observing the correct polarity. <img alt="PCA9685" src="../../../../_static/images/i2c-devices/PCA9685.jpg" style="width: 70%" /></li>
 <li>On the installers serial monitor, enter the command <code>&lt;D SERVO 100 200&gt;</code> which should move the servo. Experiment with other positions than 200. The usable range is approximately 102 to 490.  </li>
-<li>(Optionally) Use the EX-Toolbox Andoid app to experiment with servo angles and servo arm lengths until you have the required throw distance and angles to suit your servo mounting preferences.</li>
+<li>(Optionally) Use the <strong>EX-Toolbox</strong> Andoid app to experiment with servo angles and servo arm lengths until you have the required throw distance and angles to suit your servo mounting preferences.</li>
 </ol>
 <h2 id="define-your-turnoutspoints">Define your turnouts/points<a class="headerlink" href="#define-your-turnoutspoints" title="Permanent link">&para;</a></h2>
 <ol>
@@ -7209,7 +7209,7 @@ Configure additional PCA9685 in myAutomation.h.</p>
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 16, 2026 11:01:09 UTC">June 16, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 17, 2026 03:16:04 UTC">June 17, 2026</span>
   </span>
 
     

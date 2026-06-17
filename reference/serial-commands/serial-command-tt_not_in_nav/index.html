@@ -1289,7 +1289,7 @@
   
   
   <span class="md-ellipsis">
-    I2C Intro
+    I2C (I<sup>2</sup>C) Intro
     
   </span>
   
@@ -1312,7 +1312,7 @@
   
   
   <span class="md-ellipsis">
-    Buying I2C Devices
+    Buying I2C (I<sup>2</sup>C) Devices
     
   </span>
   
@@ -7142,7 +7142,7 @@
 <li><strong>addr</strong>: Address. Ranges from <code>0</code> to <code>511</code></li>
 <li><strong>subAddr</strong>: Sub-address. Ranges from <code>0</code> to <code>3</code></li>
 <li><strong>linearAddr</strong>: ranges from <code>1</code> (address 1/subaddress 0) to <code>2044</code> (address 511/subaddress 3).</li>
-<li><strong>vpin</strong>: Vpin to which the servo is attached</li>
+<li><strong><abbr title="an Arduino pin number that has been extended to include pins on external devices or expanders">vpin</abbr></strong>: Vpin to which the servo is attached</li>
 <li><strong>closedValue</strong>: the PWM value corresponding to the servo position for CLOSED state, normally in the range <code>102</code> to <code>490</code></li>
 <li><strong>thrownValue</strong>: the PWM value corresponding to the servo position for THROWN state, normally in the range <code>102</code> to <code>490</code></li>
 <li><strong>state</strong> - one of:<ul>
@@ -7199,7 +7199,7 @@
 <ul>
 <li>(DCC Accessories): <code>&lt;H «id» DCC «addr» «subaddr» «state»&gt;</code></li>
 <li>(Servos): <code>&lt;H «id» SERVO «vpin» «thrownValue» «closedValue» «profile» «state»&gt;</code></li>
-<li>(VPIN): <code>&lt;H «id» VPIN «vpin» «state»&gt;</code></li>
+<li>(<abbr title="an Arduino pin number that has been extended to include pins on external devices or expanders">VPIN</abbr>): <code>&lt;H «id» VPIN «vpin» «state»&gt;</code></li>
 <li>(LCN): <code>&lt;H «id» LCN «state»&gt;</code></li>
 <li>(fail/no such turnout/point): <code>&lt;X&gt;</code><ul>
 <li><strong>id</strong>: The numeric ID (0-32767) of the turnout/point to control.</li>
@@ -7249,7 +7249,7 @@
 <li><em>Servos are not supported on the minimal HAL (Uno or Nano target).</em><br/><br/></li>
 <li>The active and inactive positions are defined in terms of the PWM parameter (0-4095 corresponds to 0-100% PWM). The limits for an SG90 servo are about 102 to 490. The standard range of 1ms to 2ms pulses correspond to values 205 to 409.
 Profile defines the speed and style of movement: 0=Instant, 1=Fast (0.5 sec), 2=Medium (1 sec), 3=Slow (2 sec) and 4=Bounce (subject to revision).</li>
-<li>vpin is the pin number of the output to be controlled by the turnout/point object. <br/>For Arduino output pins, this is the same as the digital pin number. For servo outputs and I/O expanders, it is the pin number defined for the HAL device (if present), for example 100-115 for servos attached to the first PCA9685 Servo Controller module, 116-131 for the second PCA9685 module, 164-179 for pins on the first MCP23017 GPIO expander module, and 180-195 for the second MCP23017 module.</li>
+<li><abbr title="an Arduino pin number that has been extended to include pins on external devices or expanders">vpin</abbr> is the pin number of the output to be controlled by the turnout/point object. <br/>For Arduino output pins, this is the same as the digital pin number. For servo outputs and I/O expanders, it is the pin number defined for the HAL device (if present), for example 100-115 for servos attached to the first PCA9685 Servo Controller module, 116-131 for the second PCA9685 module, 164-179 for pins on the first MCP23017 GPIO expander module, and 180-195 for the second MCP23017 module.</li>
 <li><code>&lt;T «id» «vpin «closedValue» «thrownValue&gt;</code> is a depricated version of the command. It is not documented here.</li>
 <li><code>&lt;T «id» «addr» «subadd»&gt;</code> is a depricated version of the command. It is not documented here.</li>
 </ul>
@@ -7278,8 +7278,10 @@ Profile defines the speed and style of movement: 0=Instant, 1=Fast (0.5 sec), 2=
 </ul>
 <h3 id="example-responses">Example Responses<a class="headerlink" href="#example-responses" title="Permanent link">&para;</a></h3>
 <ul>
-<li><mark>TODO</mark></li>
+<li><mark>TODO</mark> Example Responses</li>
 </ul>
+<!-- These are case sensitive -->
+
 <style>
   .md-typeset h1 {
     line-height: 1.1 !important;
@@ -7305,7 +7307,7 @@ Profile defines the speed and style of movement: 0=Instant, 1=Fast (0.5 sec), 2=
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 17, 2026 00:11:39 UTC">June 17, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 17, 2026 05:47:42 UTC">June 17, 2026</span>
   </span>
 
     

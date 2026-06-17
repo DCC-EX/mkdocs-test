@@ -1289,7 +1289,7 @@
   
   
   <span class="md-ellipsis">
-    I2C Intro
+    I2C (I<sup>2</sup>C) Intro
     
   </span>
   
@@ -1312,7 +1312,7 @@
   
   
   <span class="md-ellipsis">
-    Buying I2C Devices
+    Buying I2C (I<sup>2</sup>C) Devices
     
   </span>
   
@@ -7096,7 +7096,7 @@
 <h2 id="parameters">Parameters<a class="headerlink" href="#parameters" title="Permanent link">&para;</a></h2>
 <ul>
 <li><strong>id</strong>: identifier of the Sensor. (0-32767)</li>
-<li><strong>vpin</strong>: pin number of the input to be controlled by the sensor object</li>
+<li><strong><abbr title="an Arduino pin number that has been extended to include pins on external devices or expanders">vpin</abbr></strong>: pin number of the input to be controlled by the sensor object</li>
 <li><strong>pullup</strong>: one of:<ul>
 <li><code>1</code> = Use pull-up resistor ACTIVE=LOW</li>
 <li><code>0</code>= don’t use pull-up resistor ACTIVE=HIGH</li>
@@ -7112,7 +7112,7 @@
 (fail): <code>X</code></p>
 <ul>
 <li><strong>id</strong>: identifier of the Sensor. (0-32767)</li>
-<li><strong>vpin</strong>: pin number of the input to be controlled by the sensor object</li>
+<li><strong><abbr title="an Arduino pin number that has been extended to include pins on external devices or expanders">vpin</abbr></strong>: pin number of the input to be controlled by the sensor object</li>
 <li><strong>pullup</strong>: one of:<ul>
 <li><code>1</code> = Use pull-up resistor ACTIVE=LOW</li>
 <li><code>0</code>= don’t use pull-up resistor ACTIVE=HIGH</li>
@@ -7135,7 +7135,7 @@ The Sensor code utilises debouncing logic to eliminate contact ‘bounce’ gene
 To monitor one or more Arduino pins for sensor triggers, first define/edit/delete sensor definitions using one of the variations of the <code>&lt;S&gt;</code> command.</p>
 </li>
 <li>
-<p><strong>Arduino Mega only (not EX-CSB1 or ESP32):</strong> Once all sensors have been properly defined, you can use the <code>&lt;E&gt;</code> command to store their definitions to EEPROM. If you later make edits/additions/deletions to the sensor definitions, you must invoke the <code>&lt;E&gt;</code> command if you want those new definitions updated in the EEPROM. You can also clear everything (turnouts, sensors, and outputs) stored in the EEPROM by invoking the <code>&lt;e&gt;</code>command. (There is NO UN-Delete)</p>
+<p><strong>Arduino Mega only (not **<abbr title="EX-CommandStation/Booster 1">EX-CSB1</abbr></strong> or ESP32):** Once all sensors have been properly defined, you can use the <code>&lt;E&gt;</code> command to store their definitions to <abbr title="Electrically Erasable Programmable Read-Only Memory. Available on the Arduino Mega ONLY">EEPROM</abbr>. If you later make edits/additions/deletions to the sensor definitions, you must invoke the <code>&lt;E&gt;</code> command if you want those new definitions updated in the <abbr title="Electrically Erasable Programmable Read-Only Memory. Available on the Arduino Mega ONLY">EEPROM</abbr>. You can also clear everything (turnouts, sensors, and outputs) stored in the <abbr title="Electrically Erasable Programmable Read-Only Memory. Available on the Arduino Mega ONLY">EEPROM</abbr> by invoking the <code>&lt;e&gt;</code>command. (There is NO UN-Delete)</p>
 </li>
 <li>
 <p>All sensors defined as per above are repeatedly and sequentially checked within the main loop of this sketch. If a Sensor Pin is found to have transitioned from one state to another, one of the following serial messages are generated:</p>
@@ -7157,12 +7157,14 @@ To monitor one or more Arduino pins for sensor triggers, first define/edit/delet
 <p><a href="?_/_latch">Also search for '/ latch'</a> or <a href="?_/_unlatch">search for '/ unlatch'</a></p>
 <h3 id="example-commands"><em>Example Commands</em><a class="headerlink" href="#example-commands" title="Permanent link">&para;</a></h3>
 <ul>
-<li><mark>TODO</mark></li>
+<li><mark>TODO</mark> Example Commands</li>
 </ul>
 <h3 id="example-responses"><em>Example Responses:</em><a class="headerlink" href="#example-responses" title="Permanent link">&para;</a></h3>
 <ul>
-<li><mark>TODO</mark></li>
+<li><mark>TODO</mark> Example Responses</li>
 </ul>
+<!-- These are case sensitive -->
+
 <style>
   .md-typeset h1 {
     line-height: 1.1 !important;
@@ -7188,7 +7190,7 @@ To monitor one or more Arduino pins for sensor triggers, first define/edit/delet
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 13, 2026 01:18:52 UTC">June 13, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 17, 2026 05:47:42 UTC">June 17, 2026</span>
   </span>
 
     

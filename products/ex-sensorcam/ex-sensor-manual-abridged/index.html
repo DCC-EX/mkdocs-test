@@ -1298,7 +1298,7 @@
   
   
   <span class="md-ellipsis">
-    I2C Intro
+    I2C (I<sup>2</sup>C) Intro
     
   </span>
   
@@ -1321,7 +1321,7 @@
   
   
   <span class="md-ellipsis">
-    Buying I2C Devices
+    Buying I2C (I<sup>2</sup>C) Devices
     
   </span>
   
@@ -8194,7 +8194,7 @@
 <p><a href="https://www.youtube.com/watch?v=xPINTk3VLQ">Introduction to ESP32- Getting Started</a></p>
 <p>The sensorCAM software is uploaded to the ESP32-CAM using the Arduino IDE. The sensorCAM has been programmed with two modes of operation; a webCAM mode (as in the on-line tutorial) and a sensorCAM mode. The limited power of an ESP32 prevents both functioning at the same time. Consequently, to see an image of the railway while sensorCAM is operational requires a third application (Processing 4.3) to retrieve a still image from the CAM over the USB cable to a computer. The Processing 4 <em>sensorCAM.pde</em> app replaces the Arduino IDE and IDE monitor retaining the sensorCAM command set and offering a (slow) image capture capability over USB cable. Processing 4 allows virtual sensors to be placed interactively on an image of the railway with a simple mouse click.</p>
 <p>In addition to the USB interface, you may need a daughter board, "perf" board or prototyping board to connect to the real world (power, indicators, control wires, and i2c.) Further details are given below. However to test the sensorCAM functions, one only needs the CAM and a USB interface, with power from the PC's USB port.  The Wrover Cam minimises this need.</p>
-<p>To control a railway, the railway needs a microcontroller based management system. This typically could be an Arduino Mega (or CSB1) based system running software such as the DCC-EX CommandStation and EX-RAIL automation application. The EX Command Station(CS) includes a sensorCAM specific driver as detailed later.</p>
+<p>To control a railway, the railway needs a microcontroller based management system. This typically could be an Arduino Mega (or <strong>EX-CSB1</strong>) based system running software such as the DCC-EX CommandStation and EX-RAIL automation application. The EX Command Station(CS) includes a sensorCAM specific driver as detailed later.</p>
 <h2 id="2-esp32wrover-cam">2. ESP32/WROVER-CAM<a class="headerlink" href="#2-esp32wrover-cam" title="Permanent link">&para;</a></h2>
 <p>The heart of the sensorCAM is the ESP32 CAM module with an ov2640 camera sensor and a 32bit ESP32-S microprocessor. The sensorCAM software/sketch is loaded into the ESP32 using the Arduino IDE over a USB port with settings newline/115200 baud. Follow the above guidelines and run the camera example first, to get a demo webserver and CAM operational with a simple coloured test image. Experiment with settings to "get a feel" for the parameter effects. The CAM has a considerable number of video related on-screen settings. The standard ov2640 can see some Infra Red light which may be utilised to see a bright IR LED as a beam-break sensor.</p>
 <p><img alt="ESP32 CAM Example Sketch" src="../../../_static/images/ex-sensorcam/esp32-cam-example-sketch.png" /></p>
@@ -8326,10 +8326,10 @@ You may also increase the image display window size factor by editing the next <
 <p><strong>Figure 6 &nbsp; ESP32 WROVER-CAM and interface</strong></p>
 <p><img alt="ESP32 CAM MB with PCA9515A" src="../../../_static/images/ex-sensorcam/esp32-cam-mb-pca9515a.png" /></p>
 <p><strong>Figure 7 &nbsp; PCA9515A 3.3V to 5V i2c interface improvisation compared to a full feature prototype solution</strong><br />
- &nbsp; Note: for 3.3V microprocessors (e.g. CSB1) ensure Vcc1 is connected to 3.3V (Vcc0) not 5V.</p>
+ &nbsp; Note: for 3.3V microprocessors (e.g. <strong>EX-CSB1</strong>) ensure Vcc1 is connected to 3.3V (Vcc0) not 5V.</p>
 <h2 id="8-host-communication">8 Host Communication<a class="headerlink" href="#8-host-communication" title="Permanent link">&para;</a></h2>
 <h3 id="81-introduction">8.1 Introduction<a class="headerlink" href="#81-introduction" title="Permanent link">&para;</a></h3>
-<p>The operation of the railway depends on a Control Station that polls the sensorCAM for sensor states. This might be a dedicated Arduino Mega 2560 for example. It might be a CSB1 Command Station running DCC-EX and <strong>EXRAIL</strong> software. If the sensorCAM is powered up with default settings (from EPROM), or adjusted by the user at the start, the program need only talk to sensorCAM over an i2c bus using the commands a,b,i,l &amp; o for example, or it may be more sophisticated, providing a command channel from a Control Station monitor to the sensorCAM to enable most configuration commands via the i2c bus.</p>
+<p>The operation of the railway depends on a Control Station that polls the sensorCAM for sensor states. This might be a dedicated Arduino Mega 2560 for example. It might be an <em>EX-CSB1</em>* Command Station running DCC-EX and <strong>EXRAIL</strong> software. If the sensorCAM is powered up with default settings (from EPROM), or adjusted by the user at the start, the program need only talk to sensorCAM over an i2c bus using the commands a,b,i,l &amp; o for example, or it may be more sophisticated, providing a command channel from a Control Station monitor to the sensorCAM to enable most configuration commands via the i2c bus.</p>
 <p>The i2c bus is running at 100kHz on the prototype software. It has not been tested at any higher speed yet. It has been running fine over a 10m long i2c bus to the master microcontroller (CSB1, Mega or others).</p>
 <h3 id="82-dcc-ex-command-station">8.2   DCC-EX Command Station<a class="headerlink" href="#82-dcc-ex-command-station" title="Permanent link">&para;</a></h3>
 <p>Setting up a DCC-EX Command Station, should you have one, requires configuration details placed in files <em>config.h</em> and <em>mySetup.h</em> along with a driver <em>IO_EXSensorCAM.h</em> and <em>myAutomation.h</em>. These must go in the directory containing file CommandStation-EX.ino. Refer to <strong>APPENDIX H</strong> for installation details.  <em>EXSensorCAM.h</em> code mirrors the sensorCAM command set with a few exceptions.  Imaging and graphic placement is not available.  Functionality was added using the DCC-EX sensorCAM native command &lt;N&gt; format. </p>
@@ -8677,10 +8677,10 @@ The information below pertains mostly to the newer WROVER-CAM, as mentioned in <
 <p>Sparkfun endpoints(requires a matching sparkfun endpoint at CS)</p>
 <p><img alt="ESP32 Wrover CAM with Sparkfun Endpoint" src="../../../_static/images/ex-sensorcam/esp32-wrover-sparkfun-endpoint.png" /></p>
 <p>Recommended CAM wiring is with Endpoints and 5V dedicated regulator with power over GRN-GRNW(Vin) (CAT 5) with Vin(7-9V) from an ungrounded 0.5A DC supply (wall-wart/plug pack).</p>
-<p>There are two basic variations below for connecting the Endpoints to the CS. The choice depends on the current system being extended. Options A applies to a 5V CS(Mega) with or without other existing I2C accessory connections, while Option C is the simplest connection to a 3.3Volt CS (e.g. CSB1) i2c bus.  The i2c bus should be "tuned" to include the CAM load before the CAM is attached.  The Endpoint has a pair of 4k7 pullups that may be disconnected by jumper cuts.  Refer to Tinkerers Guide to Tuning documentation on i2c.</p>
+<p>There are two basic variations below for connecting the Endpoints to the CS. The choice depends on the current system being extended. Options A applies to a 5V CS(Mega) with or without other existing I2C accessory connections, while Option C is the simplest connection to a 3.3Volt CS (e.g. <strong>EX-CSB1</strong>) i2c bus.  The i2c bus should be "tuned" to include the CAM load before the CAM is attached.  The Endpoint has a pair of 4k7 pullups that may be disconnected by jumper cuts.  Refer to Tinkerers Guide to Tuning documentation on i2c.</p>
 <p>The 2x Endpoints require about  10mA  each from the 3.3V PS. All options can be adapted for use with a mux if necessary. </p>
 <p><strong>Option A:</strong> CUT CAM endpoint jumper 0-1 and supply 5V and 3.3V from the CS. Option A connections results in a 5V i2c interface to 3.3V differential cable for 5V microprocessor based CS (e.g. Mega).</p>
-<p><strong>Option C:</strong> used with newer (32bit) MPU's (e.g. CSB1) &amp; uses 3V3 throughout. No Endpoint jumpers need to be cut. Whichever option is used, the user should consider if the I2C bus needs to be tuned differently. For very short extra cable length to the Endpoint and only one extra device count on an I2C bus under 1m in length, tuning may be unnecessary. In marginal conditions consider returning as per DCC-EX recommendations.</p>
+<p><strong>Option C:</strong> used with newer (32bit) MPU's (e.g. <strong>EX-CSB1</strong>) &amp; uses 3V3 throughout. No Endpoint jumpers need to be cut. Whichever option is used, the user should consider if the I2C bus needs to be tuned differently. For very short extra cable length to the Endpoint and only one extra device count on an I2C bus under 1m in length, tuning may be unnecessary. In marginal conditions consider returning as per DCC-EX recommendations.</p>
 <h4 id="a-for-33v-differential-drive-5v-cs-i2c-bus">A. &nbsp; FOR 3.3V Differential drive 5V CS I2C BUS<a class="headerlink" href="#a-for-33v-differential-drive-5v-cs-i2c-bus" title="Permanent link">&para;</a></h4>
 <p><img alt="Differential Drive 5V CS" src="../../../_static/images/ex-sensorcam/differential-drive-5v-cs.png" /></p>
 <h4 id="c-for-33v-differential-drive-33v-cs-i2c-bus">C. &nbsp; FOR 3.3V Differential drive 3.3V CS I2C BUS<a class="headerlink" href="#c-for-33v-differential-drive-33v-cs-i2c-bus" title="Permanent link">&para;</a></h4>
@@ -8749,7 +8749,7 @@ Finally, at the signal(S17), <strong>IFGTE(CAM 013,128) STOP</strong></p>
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 16, 2026 11:01:09 UTC">June 16, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 17, 2026 03:16:04 UTC">June 17, 2026</span>
   </span>
 
     
