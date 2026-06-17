@@ -2,10 +2,10 @@
 tags:
   - _J_M
   - _J_M_CLEAR_ALL
-  - _J_M_CLEAR_ANY_locoId
-  - _J_M_CLEAR_stash_id
-  - _J_M_stash_id
-  - _J_M_stashId_locoId
+  - _J_M_CLEAR_ANY_loco
+  - _J_M_CLEAR_stashId
+  - _J_M_stashId
+  - _J_M_stashId_loco
 ---
 
 # <small>``<J M [«various parameters»]>``</small> <br/> Manage Stash Values

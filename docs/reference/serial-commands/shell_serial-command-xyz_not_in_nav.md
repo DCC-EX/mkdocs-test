@@ -51,14 +51,13 @@ The following are not a direct response, but rather a broadcast that will be tri
 
 * purpose: ``<command>``
 * purpose: <br/>``<command>``
-* ==TODO==
+* ==TODO== Example Commands
 
 ### *Example Responses:*
 
 * purpose: ``<command>``
 * purpose: <br/>``<command>``
-* ==TODO==
-
+* ==TODO== Example Responses
 
 <style>
   .md-typeset h1 {

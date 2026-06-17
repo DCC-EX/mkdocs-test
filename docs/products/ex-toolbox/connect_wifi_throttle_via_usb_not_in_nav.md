@@ -48,8 +48,8 @@ important: This 'trick' only supports a single connection at a time.  So it is i
 
 ## Downloads
 
-* *SerialToIPGUI*  - https://sourceforge.net/projects/serialtoip/ |EXTERNAL-LINK|
-* *socat* for windows requires downloading the 'cgywin' and installing the optional 'socat' package when you install - https://www.cygwin.com/ |EXTERNAL-LINK|
+* *SerialToIPGUI*  - [https://sourceforge.net/projects/serialtoip/](https://sourceforge.net/projects/serialtoip/)
+* *socat* for windows requires downloading the 'cgywin' and installing the optional 'socat' package when you install - [https://www.cygwin.com/](https://www.cygwin.com/)
 
 ----
 

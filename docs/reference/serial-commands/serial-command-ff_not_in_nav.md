@@ -1,6 +1,6 @@
 ---
 tags:
-  - _F_loco_DCCFREQ_freqvalue
+  - _F_loco_DCCFREQ_freqValue
   - _F_loco_function_onoff
   - _f_loco_byte1
   - _f_loco_group_byte2

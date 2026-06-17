@@ -229,6 +229,7 @@ li a {
             - [Tuning an I2C Bus for the Engineer <small>(Tuning Information)</small>](reference\wiring\i2C\tuning-info.md)
 - **About Us**
     - [About the DCC-EX Project <small>(About)</small>](about\about.md)
+    - [DCC++ VS DCC-EX? - Project History <small>(History)</small>](about\history.md)
 - **Contribute**
     - [How Can I Contribute? <small>(How You Can Contribute)</small>](contributing\contributing.md)
     - [User Personas and Journeys - Front Page Tiles <small>(User Journeys)</small>](contributing\user-journeys.md)
@@ -250,6 +251,7 @@ li a {
 - [Incorrect IOREF voltage for 3.3v Microcontrollers](reference/esp32/ioref-incorrect-voltage-fix_not_in_nav.md)
 - [``<! [P|Q|R]>`` <br/>Emergence Stop or Pause](reference/serial-commands/serial-command-!_not_in_nav.md)
 - [``<1|0 [«track»]>`` <br/>Turn track power on or off](reference/serial-commands/serial-command-1-0_not_in_nav.md)
+- [<small>``<A «address» «value»>``</small> <br/><small>``<a «address» [«subAddr»]|[«activate» [onOff]]>``</small> <br/> Instruct Accessory Decoders](reference/serial-commands/serial-command-aa-and-a_not_in_nav.md)
 - [<small>``<C WIFI ON|OFF|AP|HIDDENAP|TEMP|DEFAULT|HOSTNAME [«various parameters»]>``</small> <br/> Setup the WiFi](reference/serial-commands/serial-command-cc-wifi_not_in_nav.md)
 - [<small>``<D WIFI ON|OFF|SHOW>``</small> <br/> WiFi diagnostics](reference/serial-commands/serial-command-dd-wifi_not_in_nav.md)
 - [<small>``<D ACK LIMIT|MAX|MIN|OFF|ON [«value» [MS]]>`` <br/>``<C PROGBOOST>``</small> <br/>Modify System PROG track settings](reference/serial-commands/serial-command-dd_ack_not_in_nav.md)

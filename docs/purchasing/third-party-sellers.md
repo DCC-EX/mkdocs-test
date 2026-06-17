@@ -10,7 +10,7 @@
 ---
 
 ## ![US Flag](/_static/images/icons/flag_us_small.png) David Yale  
-  David provides the files to make a 3D printed case or can sell an already made case to fit the Mega |EX-CS| with a motor shield, Wi-Fi shield, and LCD display. He has several designs.
+  David provides the files to make a 3D printed case or can sell an already made case to fit the Mega **EX-CommandStation** with a motor shield, Wi-Fi shield, and LCD display. He has several designs.
   
   [David's Makerbot Thingiverse page](https://www.thingiverse.com/dcyale/designs>)
 

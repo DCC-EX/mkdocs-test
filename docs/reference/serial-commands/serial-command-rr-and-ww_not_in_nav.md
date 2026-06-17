@@ -5,16 +5,16 @@ tags:
     - _R_LOCOID
     - _R_CONSIST
     - _r_loco_cv
-    - _V_cv_bit_bitvalue
+    - _V_cv_bitPosition_bitvalue
     - _V_cv_value
     - _W_loco
     - _W_CONSIST_loco
     - _W_CONSIST_loco_REVERSE
     - _W_cv_value
-    - _W_cv_bitvalue_bit
+    - _W_cv_bitPosition_bitValue
     - _w_loco_cv_value
-    - _B_cv_bit_bitvalue
-    - _b_loco_cv_bit_bitvalue
+    - _B_cv_bitPosition_bitValue
+    - _b_loco_cv_bitPosition_bitValue
 ---
 
 # <small>``<R [«cv»|LOCOID|CONSIST]>`` <br/>``<r «loco» «cv»>`` <br/>``<W [«loco»]|[«cv» «value»]|[«loco» «cv» «bitValue» «bit»]|[CONSIST «loco» [REVERSE]]>`` <br/>``<V [«cv» «value»]|[«cv» «bit» «bitValue»]>`` <br/>``<B «cv» «bit» «bitValue»>`` <br/>``<b «loco» «cv» «bit» «bitValue»>``</small> <br/>Read and write CVs

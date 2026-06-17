@@ -53,15 +53,16 @@ This will install all the files to run locally on your machine. You won't need a
 
 ## Operation
 
-**EX-WebThrottle** has five pages which you can switch between using the hamburger menu button (three horizontal bars) on the top left of the screen, or direct icon buttons at the top of the screen.
+**EX-WebThrottle** has a number of pages which you can switch between using the hamburger menu button (three horizontal bars) on the top left of the screen, or direct icon buttons at the top of the screen.
 
-* Throttle *(the default page)*
-* CV Programmer
-* Routes/Automation
-* Turnouts/Points
-* Locomotives (local)
-* Function Maps (local)
-* Settings
+* [Throttle](#throttle) *(the default page)*
+* [CV Programmer](#cv-porgramming)
+* [Routes/Automation](#routesautomation)
+* [Turnouts/Points](#turnoutspoints)
+* [WiFi configuration (EX-CSB1 or ESP32 ONLY. v5.7.0+ ONLY)](#wifi-configuration-ex-csb1-or-esp32-only-v570-only)
+* [Locomotives](#locomotives) (local)
+* [Function Maps](#function-maps) (local)
+* [Settings](#settings)
 
 ----
 
@@ -85,11 +86,11 @@ When the **EX-CommandStation** is ready to use you should see ``[i] EX-CommandSt
 
 Now you are ready to run trains! Place your loco on the track and click the `Power` slider button to turn on power to your track (if not already on). You should see LEDs on your Motor Driver and an indication that your loco has power.
 
-.. note:: Make sure you place the loco on the *MAIN* track, **not** the PROG track. Check your wiring. On an  Motor Driver, Motor Output "A" should connect to your MAIN track and "B" to the PROGRAM track.
+**Note:** Make sure you place the loco on the *MAIN* track, **not** the PROG track. Check your wiring. By default, on an **EX-CSB1** or a Motor Driver, Motor Output "A" should connect to your MAIN track (your layout) and "B" to the PROG track (a separate programming track).
 
 ![EX-WebThrottle](../../_static/images/ex-webthrottle/loco-id.png){: align=right width=50%}
 
-Next go to the `Loco ID` textbox and enter the DCC Address of your loco and press the ``Acquire`` (right arrow in a circle) button. 
+Next go to the `Loco ID` textbox and enter the DCC Address of your loco and press the ``Acquire`` (right arrow in a circle) button.
 
 You should now have full control over your loco.
 
@@ -97,7 +98,7 @@ You should now have full control over your loco.
 
 In the throttle control area, to the left of the function buttons, are vertical controls to control direction. The up arrow selects forward, the square button is stop and the down arrow is reverse.
 
-All the function buttons should be working, so you can play with the headlight, horn and bell and any other function assigned to a function button. The commands being sent to the **EX-CommandStation** and its responses will display in the log window if it is open
+All the function buttons should be working, so you can play with the headlight, horn and bell and any other function assigned to a function button. The commands being sent to the **EX-CommandStation** and its responses will display in the log window if it is open.
 
 The circular control or vertical slider (chosen by the throttle select slider) can be moved by clicking and holding down the mouse button and dragging, clicking at a spot where you want the throttle to move, or clicking the ``+`` and ``-`` buttons.
 
@@ -157,7 +158,7 @@ To read a decoder address, place your loco on the PROG track and press `Read Add
 
 To write a decoder address, place you loco on the PROG track, enter the desired address into the ``DCC Address`` field and press `Write Address`.  If Successful or unsuccessful, a message to that effect will appear in the log.
 
-### CV
+### CV Porgramming
 
 To read a CV, place your loco on the **PROG** track and press `Read CV`.  If Successful, the Value of the CV will be loaded in the ``CV Value`` field.  If unsuccessful, a message to that effect will appear in the log.
 
@@ -166,6 +167,14 @@ To write a decoder address, place you loco on the **PROG** track, enter the desi
 You can use the ``Common CVs`` drop list to select a CV. The approprate value will be put into the `CV Number`` field on selection.
 
 *Note: Programming on the Main (PoM) is not currently supported directly, though you can manually issue the appropriate commands from the throttle page.*
+
+----
+
+### WiFi configuration (EX-CSB1 or ESP32 ONLY. v5.7.0+ ONLY)
+
+If you are using an **EX-CSB1**, ESP32 based EX-CommandStation and are are using the latest DEVEL versions of the  EX-CommandStation code (versions from 5.7.0),</span> the ``config.h`` options for WiFi configuration are ignored by CSB1 or ESP32 **EX-CommandStation**. 
+
+Instead you can use the instructions on [this page](/products/ex-commandstation/config-wifi-esp32-gui-options_not_in_nav.md) to chnage the WiFi setting in **EX-WebThrottle**.
 
 ----
 
@@ -227,3 +236,5 @@ The **Settings page** allows you to manage aspects of the **EX-CommandStation** 
 ## App
 
 * Install as an App
+
+--8<-- "snippets/abbr.md"
