@@ -78,7 +78,7 @@ The HM7000's DCC implementation has a bug in that the ACK response to a DCC CV r
 * Then try reading the decoder. <br/>Either from the console with <R>, <br/>or with the appropriate buttons in EX-Toolbox, EX-WebThrottle or Engine Driver, <br/>to watch for a response.
 * If this isn't working, then also add ``<D ACK MIN 150>``
 
-If this isn't working, then ``<D ACK ON>`` will enable diagnostic output from the CSB1 to show what the <R> is doing.
+If this isn't working, then ``<D ACK ON>`` will enable diagnostic output from the *EX-CSB1** to show what the <R> is doing.
 
 <style>
   .md-typeset h1 {

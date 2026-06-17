@@ -12,10 +12,10 @@ tags:
     - _C_WIFI_TEMP_ssid_password
 ---
 
-# <small>``<C WIFI ON|OFF|AP|HIDDENAP|TEMP|DEFAULT|HOSTNAME [«various parameters»]>``</small> <br/> Setup the WiFi
+# <small>``<C WIFI ON|OFF|AP|HIDDENAP|TEMP|DEFAULT|HOSTNAME [«various parameters»]>``</small> <br/> Setup WiFi (EX-CSB1 & ESP32, v5.7.0 ONLY)
 
 Serial commands to setup the WiFi on the **EX-CommandStations**.
-<span style="color:red">For EX-CSB1 and ESP32 based **EX-CommandStations** only. Version 5.7.0 or later only.</span>
+<span style="color:red">For **EX-CSB1** and ESP32 based **EX-CommandStations** only. Version 5.7.0 or later only.</span>
 
 ## Commands
 

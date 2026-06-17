@@ -7,7 +7,7 @@ tags:
   - _!_Q
 ---
 
-# ``<! [P|Q|R]>`` <br/>Emergence Stop or Pause
+# ``<! [P|Q|R]>`` <br/>Emergency Stop (ESTOP) or Pause
 
 Serial command to Emergency Stop all locos, pause all locos, or query the Estop pause status.
 

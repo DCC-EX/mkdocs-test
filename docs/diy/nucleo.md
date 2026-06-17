@@ -14,7 +14,7 @@ Reasons to consider the supported Nucleo-F4 boards
   &nbsp; &nbsp; Digikey, Farnell, Mouser
 
 - Nucleo-64  
-  Why would someone go this route vs. Nucleo-144 or CSB1/ESP32-WROOM?  
+  Why would someone go this route vs. Nucleo-144 or **EX-CSB1**/ESP32-WROOM?  
   \- More pins than ESP32  
   \- More memory than Mega  
   \- F411RE could be used as EX-IOExpander  

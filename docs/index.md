@@ -33,9 +33,9 @@ hide:
 
     ---
      [![csb1](/_static/images/ex-csb1/csb1-small.png){ align=right }](/products/ex-commandstation/ex-csb1.md)
-    The [**EX-CommandStation Booster 1 Express**](/products/ex-commandstation/ex-csb1.md), otherwise known as a CSB1, can be purchased ready to run, complete with WiFi and power supply. If you have a phone, you could be running your trains in less than 5 minutes, without a computer.  
+    The [**EX-CommandStation Booster 1 Express**](/products/ex-commandstation/ex-csb1.md), otherwise known as an **EX-CSB1**, can be purchased ready to run, complete with WiFi and power supply. If you have a phone, you could be running your trains in less than 5 minutes, without a computer.  
     If you would like to buy one, [check out our sellers](/purchasing/official-sellers.md)  
-    If you want to get started with a CSB1 [read the product page](/products/ex-commandstation/ex-csb1.md)
+    If you want to get started withan *EX-CSB1**[read the product page](/products/ex-commandstation/ex-csb1.md)
 
     ---
     [![diy](/_static/images/mega/mega-small.png){ align=right}](/diy/diy.md)

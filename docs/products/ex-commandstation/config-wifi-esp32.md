@@ -16,9 +16,9 @@ tags:
 
 This page is exclusively for users of **EX-CommandStation** version 5.7.0 and later. Version 5.7.0 is currently in the experimental / development (DEVEL) phase and is not recommended for general users.
 
-<span style="color:red;">The ``config.h`` options for WiFi configuration from EX-CommandStation versions prior to 5.7.0 are now ignored by the EX-CSB1 or ESP32 **EX-CommandStation**.</span>
+<span style="color:red;">The ``config.h`` options for WiFi configuration from EX-CommandStation versions prior to 5.7.0 are now ignored by the **EX-CSB1** or ESP32 **EX-CommandStation**.</span>
 
-If you are using an **EX-CSB1**, ESP32 based EX-CommandStation and are are using the latest DEVEL versions of the  EX-CommandStation code (versions from 5.7.0),</span> the ``config.h`` options for WiFi configuration are ignored by CSB1 or ESP32 **EX-CommandStation**. Instead you must use the instructions on this page.
+If you are using an **EX-CSB1**, ESP32 based EX-CommandStation and are are using the latest DEVEL versions of the  EX-CommandStation code (versions from 5.7.0),</span> the ``config.h`` options for WiFi configuration are ignored by *EX-CSB1** or ESP32 **EX-CommandStation**. Instead you must use the instructions on this page.
 
 Also see the [WiFi Configuration for version 5.7.0+ - Graphical User Interface Options](config-wifi-esp32-gui-options_not_in_nav.md) for detailed instructions on how, and why, to change these settings using EX-WebThrottle or EX-Toolbox.
 

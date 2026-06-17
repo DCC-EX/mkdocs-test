@@ -31,9 +31,9 @@ Further pre-defined shield names can be found in the code file MotorDrivers.h al
 
 Ignore this if you do not have WiFi on your **EX-CommandStation** or choose to avoid it.
 
-The CSB1 and other ESP32-based **EX-CommandStation** use a completely different method to define WiFi settings. This is to allow WiFi configuration without having to reinstall the software.
+The *EX-CSB1** and other ESP32-based **EX-CommandStation** use a completely different method to define WiFi settings. This is to allow WiFi configuration without having to reinstall the software.
 
-[WiFi setup for CSB1 or ESP32](/products/ex-commandstation/config-wifi-esp32.md)
+[WiFi setup for *EX-CSB1** or ESP32](/products/ex-commandstation/config-wifi-esp32.md)
 
 [WiFi setup for WiFi shield](/products/ex-commandstation/config-wifi-shield.md)
 

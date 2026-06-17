@@ -1,6 +1,6 @@
 # Optionally install Wifi
 
-This page does not apply to CSB1 or other ESP32-based command stations which have Wi-Fi built in.
+This page does not apply to *EX-CSB1** or other ESP32-based command stations which have Wi-Fi built in.
 
 If you intend to use an ESP-01 development board, please skip to [ESP01](#esp-01-or-esp-01s)
 

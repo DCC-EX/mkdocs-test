@@ -30,7 +30,7 @@ See [Programming with Engine Driver](/products/ex-commandstation/loco-programmin
 
 ## Programming using EX-Toolbox
 
-The EX-Toolbox Android application, includes simple programming dialogs and some more advanced features such as a speed matching tool used to adjust loco speed tables to match with another loco so that they can be coupled together in a consist.
+The **EX-Toolbox** Android application, includes simple programming dialogs and some more advanced features such as a speed matching tool used to adjust loco speed tables to match with another loco so that they can be coupled together in a consist.
 
 See [Programming with EX-Toolbox](/products/ex-commandstation/loco-programming/toolbox-programming.md)
 

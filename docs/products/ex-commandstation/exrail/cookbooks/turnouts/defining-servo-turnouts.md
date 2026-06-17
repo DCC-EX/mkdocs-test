@@ -10,7 +10,7 @@ Test, test, test your servo parameters prior to connecting to an actual turnout/
 
 Treat each servo and turnout/point as an individual as not all servos (or turnouts/points for that matter) are created equal. An angle that works with one servo and associated turnout/point will not necessarily provide the exact same result with another. Differences in servo brands, mounting methods, and even normal manufacturing tolerances will need to be factored in to the servo angles in use.
 
-The EX-Toolbox Android application provides a servo movement testing tool to help you discover the necessary values for the angles below.
+The **EX-Toolbox** Android application provides a servo movement testing tool to help you discover the necessary values for the angles below.
 
 Use flexible wire to connect your servo arm to the turnout/point. Using a flexible connection between the turnout/point and the servo mechanism means if anything does go wrong such as the turnout/point getting jammed or an incorrect servo angle being sent, it reduces the chance of damaging the turnout/point or servo.
 

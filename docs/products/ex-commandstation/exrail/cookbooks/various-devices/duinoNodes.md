@@ -5,7 +5,7 @@ CAUTION: these boards require several GPIO pins on the **EX-CommandStation** and
 ## DNIN8 8 Input board
 
 This is a shift-register implementation of a digital input collector.
-Multiple DNIN8 may be connected in a chain sequence but it is IMPORTANT that the software configuratuion correctly represents the number of boards connected otherwise the results will be meaningless.
+Multiple DNIN8 may be connected in a chain sequence but it is IMPORTANT that the software configuration correctly represents the number of boards connected otherwise the results will be meaningless.
 
 Define boards in **EXRAIL** using HAL(IO_DNIN8, firstVpin, numPins, clockPin, latchPin, dataPin)
 

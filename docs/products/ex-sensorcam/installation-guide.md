@@ -53,7 +53,7 @@ Select the tools - board manager and the AI thinker ESP32 CAM. Then run the exam
 
 [ESP32 CAM - 10 Dollar Camera for IoT Projects - YouTube](https://www.youtube.com/watch?v=visj0KE5VtY) For problems with ESP32 connections refer to
 
-[If you have an issue uploading to an EX-CSB1 - DCC-EX Model Railroading documentation](https://dcc-ex.com/news/posts/20250128.html#gsc.tab=0)
+[If you have an issue uploading to an **EX-CSB1** - DCC-EX Model Railroading documentation](https://dcc-ex.com/news/posts/20250128.html#gsc.tab=0)
 
 Note: With the MB board there is a push button (IO0) that replaces the FTDI programming link. Hold the button in when powering up the CAM to initiate programming mode. With later versions of esp32-CAM the IO0 push button on the MB may not be needed. Ensure a Huge Partition Scheme is selected.
 

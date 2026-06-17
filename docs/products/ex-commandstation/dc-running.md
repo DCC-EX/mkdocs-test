@@ -15,7 +15,7 @@ Using an **DCC-EX EX-CommandStation** to run a DC layout provides a number of ad
 
 - All Wifi and wired connected throttles will operate the same for DC and DCC locos using Cab road numbers 'loco addresses' from 1 to 10239.
 - Using this range of Cab locoid addresses you can assign any DC district/track any locoid to run in that DC district, i.e # 2.
-- Multiple DC Districts (maximum four on EX-CSB1 & maximum eight on Mega2560 system) can be independently controlled and reconfigured to allow crossing between districts and polarity reversal.
+- Multiple DC Districts (maximum four on **EX-CSB1** & maximum eight on Mega2560 system) can be independently controlled and reconfigured to allow crossing between districts and polarity reversal.
 - Any DC District can be further subdivided into smaller blocks and energized or powered via turnouts/points and or SPDT switches If desired, i.e. staging or fiddle yard..  
 - Momentum of a loco can be defined in number of seconds of travel for acceleration and braking distances.
 - **EXRAIL** automation can be used to run trains, create routes, switch block relays, control signals, control accessory special effects, manage reversing loops, etcetera.
@@ -30,7 +30,7 @@ The **DCC-EX EX-CommandStation** has TrackManager commands that can change each 
 
 The throttles or **EXRAIL** are unaware that they are driving a DC districts/tracks and so any DCC Throttle such as Engine Driver that can talk to DCC-EX will work for DC. In effect, in DC mode, the throttle drives the track compared with DCC mode where the throttle drives the loco.
 
-Although the EX-CSB1 can be switched to DC operation by commands from the throttle (Engine Driver has a Track Manager panel to help do this) it is generally easier, for a fully DC layout, to configure it so that it starts up in the desired mode of DC Districts.
+Although the **EX-CSB1** can be switched to DC operation by commands from the throttle (Engine Driver has a Track Manager panel to help do this) it is generally easier, for a fully DC layout, to configure it so that it starts up in the desired mode of DC Districts.
 
 Warning: The sometimes-alternate suggested technique of using a DCC decoder to output directly to a DC track instead internally to the loco motor is NOT RECOMMENDED as most decoders are not tolerant of a short between the motor outputs. This means a common track short could damage an expensive decoder.
 

@@ -16,7 +16,7 @@ For a video on how to install and use **EX-WebThrottle** [see here](https://yout
 You don't need anything else to test it out and to run in emulator mode, just run it and play. To use it to run real trains you will need:
 
 * An **EX-CSB1**, <br/> or
-* DIY **EX-CommandStation** based on a Arduino Mega, Arduino Uno, or other compatible microcontroller with a compatible Motor Shield
+* DIY **EX-CommandStation** based on a Arduino Mega, Arduino UNO, or other compatible microcontroller with a compatible Motor Shield
 * Plus the **EX-CommandStation** software already loaded
 
 ## Getting started
@@ -72,7 +72,7 @@ This will install all the files to run locally on your machine. You won't need a
 
 To use the program to connect to your **EX-CommandStation** leave the ``Serial`` dropdown as is.
 
-(See the section below if you wish to use the "emulator mode". )
+(See the [Emulator section](#emulator) below if you wish to use the "emulator mode". )
 
 ![EX-WebThrottle - Connect button](../../_static/images/ex-webthrottle/connect-button.png){: width=50%}
 
@@ -81,6 +81,8 @@ Next, click on the ``Connect EX-CS`` button.
 When using the serial connection, if the program finds any compatible devices, it will open a popup a window showing you a selection. It may show a line at the top such as "Arduino Mega 2560 (COM3)". Your com port may vary. Click on your board to select it and then click the ``Connect EX-CS`` button.
 
 You should then be connected to the **EX-CommandStation** and should see the response from the **EX-CommandStation** in the log textbox of the debug console at the bottom of the throttle window. Make sure your debug console is open. If it isn't, use the `Debug Console` slider button in the lower lower right to open it.
+
+chg xyz xyz
 
 When the **EX-CommandStation** is ready to use you should see ``[i] EX-CommandStation is READY`` appear in the log.
 
@@ -172,9 +174,9 @@ You can use the ``Common CVs`` drop list to select a CV. The approprate value wi
 
 ### WiFi configuration (EX-CSB1 or ESP32 ONLY. v5.7.0+ ONLY)
 
-If you are using an **EX-CSB1**, ESP32 based EX-CommandStation and are are using the latest DEVEL versions of the  EX-CommandStation code (versions from 5.7.0),</span> the ``config.h`` options for WiFi configuration are ignored by CSB1 or ESP32 **EX-CommandStation**. 
+If you are using an **EX-CSB1**, ESP32 based EX-CommandStation and are are using the latest DEVEL versions of the  EX-CommandStation code (versions from 5.7.0), the ``config.h`` options for WiFi configuration are ignored by **EX-CSB1** or ESP32 **EX-CommandStation**.
 
-Instead you can use the instructions on [this page](/products/ex-commandstation/config-wifi-esp32-gui-options_not_in_nav.md) to chnage the WiFi setting in **EX-WebThrottle**.
+Instead you can use the instructions on [this page](/products/ex-commandstation/config-wifi-esp32-gui-options_not_in_nav.md) to change the WiFi setting in **EX-WebThrottle**.
 
 ----
 

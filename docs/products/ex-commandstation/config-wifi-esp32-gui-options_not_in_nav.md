@@ -11,7 +11,7 @@ Also see [WiFi configuration (CSB1 or ESP32 ONLY. V5.7.0+ ONLY)](config-wifi-esp
 
 Prior to version 5.7.0, WiFi configuration for **EX-CommandStation** was done through options in the ``config.h`` file. This method required users to modify the firmware (by editing ``config.h``) and recompile it for their specific WiFi settings.
 
-From version 5.7.0, WiFi configuration options in ``config.h`` are *ignored* by the CSB1 or ESP32 EX-CommandStations.  
+From version 5.7.0, WiFi configuration options in ``config.h`` are *ignored* by the *EX-CSB1** or ESP32 EX-CommandStations.  
 
 It is now necessary to use a new WiFi configuration method, which involves connecting to the **EX-CommandStation** *after you have flashed the firmware.*  You do so by connecting to the **EX-CommandStation** via USB or by connecting to the WiFi Access Point network of the CS and issuing a set of new commands. (Note that the WiFi Access Point network approach has limitations. See below.)
 

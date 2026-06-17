@@ -13,7 +13,7 @@ This is a list of to do items that will allow us to release this new documentati
     - [ ] Clarity on what you need including **good and recommended** power supplies
     - [x] **EXRAIL** under EX-CS
     - [x] TrackManager under EX-CS - no waveform/DC PWM details, they can be a reference later, just focus on config and use
-    - [ ] EX-CSB1 RTR information - must be complete
+    - [ ] **EX-CSB1** RTR information - must be complete
     - [ ] Mega DIY stack page - Mega + EX8874/Arduino R3 + WiFiShield8266 only (no hardware mods, plug n play only)
 
 - Advanced DIY stacks:
@@ -24,9 +24,9 @@ This is a list of to do items that will allow us to release this new documentati
 - Product pages for:
 
     - [ ] CommandStation (includes **EXRAIL** and TrackManager)
-    - [ ] EX-CSB1
-    - [ ] EX-Motorshield8874
-    - [ ] EX-WiFiShield8266
+    - [ ] **EX-CSB1**
+    - [ ] **EX-Motorshield8874**
+    - [ ] **EX-WiFiShield8266**
 
 - Better how to get help and support info:
 
@@ -81,7 +81,7 @@ This is a list of to do items that will allow us to release this new documentati
 
 - Redirects for key items from the previous site, and QR codes on hardware devices
 
-    - [x] EX-CSB1 QR code
+    - [x] **EX-CSB1** QR code
     - [x] EX8874 QR code
     - [x] show QR codes for Toolbox, and ED.
     - [ ] and any other recommended throttle apps.
