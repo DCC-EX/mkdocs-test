@@ -1,8 +1,8 @@
 ---
 tags:
   - _t_loco
-  - _t_loco_tspeed_direction
-  - _t_ignore_loco_tspeed_direction
+  - _t_loco_tSpeed_direction
+  - _t_ignore_loco_tSpeed_direction
   - 
 ---
 

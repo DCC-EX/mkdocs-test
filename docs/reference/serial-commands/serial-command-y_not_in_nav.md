@@ -3,10 +3,10 @@ tags:
     - _y_vpin_EQ_eq
     - _y_vpin_FOLDER_folder
     - _y_vpin_PAUSE
-    - _y_vpin_PLAY_tracknumber_volume
-    - _y_vpin_PLAY_tracknumber
-    - _y_vpin_REPEAT_tracknumber_volume
-    - _y_vpin_REPEAT_tracknumber
+    - _y_vpin_PLAY_trackNumber_volume
+    - _y_vpin_PLAY_trackNumber
+    - _y_vpin_REPEAT_trackNumber_volume
+    - _y_vpin_REPEAT_trackNumber
     - _y_vpin_RESET
     - _y_vpin_RESUME
     - _y_vpin_STOP

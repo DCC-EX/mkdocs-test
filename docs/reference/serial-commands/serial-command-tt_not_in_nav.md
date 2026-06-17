@@ -1,7 +1,7 @@
 ---
 tags:
-  - _T_id_addr_subadd
-  - _T_id_DCC_addr_subadd
+  - _T_id_addr_subAddr
+  - _T_id_DCC_addr_subAddr
   - _T_id_DCC_linearAddr
   - _T_id_vpin_closedValue_thrownValue
   - _T_id_SERVO_vpin_closedValue_thrownValue
