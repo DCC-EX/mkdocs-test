@@ -274,5 +274,6 @@ li a {
 - [<small>``<cmd «required parameter» [«optional parameter»]>``</small> <br/> Short command decription](reference/serial-commands/shell_serial-command-xyz_not_in_nav.md)
 - [WiThrottle Protocol VS DCC-EX Native/Serial Commands](reference/withrottle-vs-native-protocol_not_in_nav.md)
 - [Android apps on Windows & macOS](throttles/android-apps-on-windows-and-ios_not_in_nav.md)
+- [Connecting WiFi Throttles via USB](throttles/connect_wifi_throttle_via_usb_not_in_nav.md)
 - [Engine Driver - Features when using the Native Protocol](throttles/engine-driver-native-protocol_not_in_nav.md)
 - [Engine Driver - Adding a Physical Dial/Knob](throttles/engine-driver-physical-knobs_not_in_nav.md)
