@@ -31,21 +31,23 @@ Serial commands to activate or dactivate accessory decoders.
 
 ## Response
 
-### Response for ``<cmd>``
+<!-- ### Response for ``<cmd>`` -->
 
 ==TODO== responses
 
 ## Notes
 
-* EX‑CommandStation can keep track of the direction of any turnout that is controlled by a DCC stationary accessory decoder once its Defined (Set Up).
+* **EX‑CommandStation** can keep track of the direction of any turnout/point that is controlled by a DCC stationary accessory decoder once its [Defined (Set Up)](serial-command-tt_not_in_nav.md).
 
-* All decoders that are not in an engine are accessory decoders including turnouts.
+* All decoders that are not in an engine are accessory decoders including turnouts/points.
 
-* Any DCC Accessory Decoder based turnouts, as well as any other DCC accessories connected in this fashion, can always be operated using the DCC COMMAND STATION Accessory command:
+* Any DCC Accessory Decoder based turnouts/points, as well as any other DCC accessories connected in this fashion, can always be operated using the DCC COMMAND STATION Accessory command:
 
-* There are two interchangeable commands for controlling Accessory Decoders, the Address/Subaddress method (aka “Dual-Coil” method) and linear addressing method. You can either specify an address and its subaddress (Addresses 0-511 with Subaddresses from 0-3) or the straight linear address (Addresses from 1-2044).
+    * There are two interchangeable commands for controlling Accessory Decoders, the Address/Subaddress method (aka 'Dual-Coil' method) and linear addressing method. You can either specify an address and its subaddress (Addresses 0-511 with Subaddresses from 0-3) or the straight linear address (Addresses from 1-2044).
 
-* In the mapping used by the **EX-CommandStation**, linear addresses range from linear address 1, which is address 1 subaddress 0, up to linear address 2040 which is address 510 subaddress 3. Decoder address 511 (linear addresses 2041-2044) is reserved for use as a broadcast address and should not be used for decoders. Decoder address 0 does not have a corresponding linear address. This seems strange, but it is the mapping used by many, but not all, commercial manufacturers. If your decoder does not respond on the expected linear address, try adding and subtracting 4 to see if it works. Or use the address/subaddress versions of the commands.
+* In the mapping used by the **EX-CommandStation**, linear addresses range from linear address 1, which is address 1 subaddress 0, up to linear address 2040 which is address 510 subaddress 3. <br/>
+Decoder address 511 (linear addresses 2041-2044) is reserved for use as a broadcast address and should not be used for decoders.  <br/>
+Decoder address 0 does not have a corresponding linear address. This seems strange, but it is the mapping used by many, but not all, commercial manufacturers.  <br/> <br/>If your decoder does not respond on the expected linear address, try adding and subtracting 4 to see if it works. Or use the address/subaddress versions of the commands.
 
 Here is a spreadsheet in .XLSX format to help you: [Stationary Decoder Address Table (xlsx Spreadsheet)](https://dcc-ex.com/reference/downloads/documents.html#stationary-decoder-address-table-xlsx-spreadsheet).
 
