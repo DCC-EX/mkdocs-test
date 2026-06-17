@@ -670,6 +670,8 @@ For a limited reach, perhaps using a LTC4311 terminator/buffer at the CS to boos
 
 ![ESP32 Wrover CAM with PCA9515A](/_static/images/ex-sensorcam/esp32-wrover-pca9515a.png)
 
+**If using a 3.3V processor such as the CSB1**, it may be adequate to have no voltage level shifting PCA9515 and instead simply connect directly to an i2c branch with an LTC4311 keeping the total i2c segment within allowable length limits.  This may mean using a multiplexer portmto limit segments to manageable lengths, as the run to the sensorCAM is a significant additional length to any existing i2c bus.  The sensorCAM still needs a regulated power supply independent of the i2c bus SDA,SCL and gnd cable.
+
 
 ### ADDITIONAL RANDOM NOTES:
 
