@@ -24,4 +24,3 @@ This is a micro Ethernet board no bigger than the RJ45 connector it is attached 
 
 ![Sunfounder](/_static/images/ethernet/sunfounder_ethernet_shield.png){ align=right width=400px}
 This board is tested and works. It is less expensive than the Arduino brand-name board and based on the Wiznet W5100 instead of the W5500.
-

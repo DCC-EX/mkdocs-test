@@ -12,7 +12,7 @@ To proceed, click the Manage Arduino CLI button.
 
 This screen allows you to install or update the Arduino Command Line Interface (CLI).
 
-We use the Arduino Command Line Interface (CLI) to upload the DCC-EX products to your Arduino. The CLI eliminates the need to install the more daunting Arduino IDE. EX‑Installer is able to manage the installation and updating of the Arduino CLI for you at the click of a button.
+We use the Arduino Command Line Interface (CLI) to upload the **DCC-EX** products to your Arduino. The CLI eliminates the need to install the more daunting Arduino IDE. EX‑Installer is able to manage the installation and updating of the Arduino CLI for you at the click of a button.
 
 If you have not installed the CLI previously you will see an 'Install Arduino CLI' button.
 

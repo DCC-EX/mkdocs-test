@@ -14,7 +14,7 @@ Don't forget when working with MkDocs, you can preview locally by running ``mkdo
 
 All customised styling for our branding and other customisations is contained in the "dccex_theme.css" file.
 
-**Do not adjust the contents of this file without liaising with the DCC-EX Documenter team to ensure styling is consistent with our theme.**
+**Do not adjust the contents of this file without liaising with the **DCC-EX** Documenter team to ensure styling is consistent with our theme.**
 
 ## DCC-EX JavaScript Files
 
@@ -32,7 +32,7 @@ While basic markdown is sufficient to get pages published with MkDocs and our do
 
 The authoritative list of enabled extensions can be determined by the "mkdocs.yml" file.
 
-**Do not adjust the contents of this file without liaising with the DCC-EX Documenter team to ensure no existing functionality is broken.**
+**Do not adjust the contents of this file without liaising with the **DCC-EX** Documenter team to ensure no existing functionality is broken.**
 
 ### Admonitions - Warning, Danger, Example, Note
 
@@ -146,7 +146,7 @@ This renders :thumbsup:
 
 The authoritative list of enabled plugins can be determined by the "mkdocs.yml" file.
 
-**Do not adjust the contents of this file without liaising with the DCC-EX Documenter team to ensure no existing functionality is broken.**
+**Do not adjust the contents of this file without liaising with the **DCC-EX** Documenter team to ensure no existing functionality is broken.**
 
 We have written two custom plugins for MkDocs to highlight the latest news articles and ensure the previous/next navigation buttons make sense within the context of what the user is seeing.
 

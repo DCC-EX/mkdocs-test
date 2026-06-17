@@ -5,7 +5,7 @@ hide:
 
 # DCC-EX Product Overview
 
-The DCC-EX team has designed and released various different open source products aimed at making model trains accessible to more people.
+The **DCC-EX** team has designed and released various different open source products aimed at making model trains accessible to more people.
 
 This page briefly outlines each of our products, the experience level you need to be able to use them, and links to more information.
 
@@ -85,7 +85,7 @@ Refer to the [Easy build Arduino Mega page](/diy/mega-easy.md) for information o
 [![EX-8874 Logo](/_static/images/logos/product-logo-ex-motorshield8874-only-light.png){ .only-light width=400px }
 ![EX-8874 Logo](/_static/images/logos/product-logo-ex-motorshield8874-only-dark.png){ .only-dark width=400px }](/products/ex-motorshield8874/ex-motorshield8874.md)
 
-A dual channel, 5 amp (per channel) motor shield designed specifically for DCC-EX in an Arduino shield format.
+A dual channel, 5 amp (per channel) motor shield designed specifically for **DCC-EX** in an Arduino shield format.
 
 Assembly is required to add this to an Arduino Mega along with software configuration.
 
@@ -98,7 +98,7 @@ Refer to the [EX-MotorShield8874 page](/products/ex-motorshield8874/ex-motorshie
 [![EX-8266 Logo](/_static/images/logos/product-logo-ex-wifishield8266-only-light.png){ .only-light width=400px }
 ![EX-8266 Logo](/_static/images/logos/product-logo-ex-wifishield8266-only-dark.png){ .only-dark width=400px }](/products/ex-wifishield8266/ex-wifishield8266.md)
 
-A WiFi shield designed specifically for DCC-EX in an Arduino shield format.
+A WiFi shield designed specifically for **DCC-EX** in an Arduino shield format.
 
 Assembly is required to add this to an Arduino Mega along with software configuration.
 
@@ -112,7 +112,7 @@ These products are far more involved and complicated to get up and running.
 
 This products go beyond simple assembly and you will need a good understanding of configuring software and hardware, including soldering components and making some modifications to existing hardware devices.
 
-If you are new to DCC-EX and/or electronics in general, we do not recommend you try to tackle any of these products until you have become familiar with how our products work.
+If you are new to **DCC-EX** and/or electronics in general, we do not recommend you try to tackle any of these products until you have become familiar with how our products work.
 
 ### EX-CommandStation Advanced Self Build (DIY)
 

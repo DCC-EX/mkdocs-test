@@ -1,6 +1,6 @@
 # Using Our Logos
 
-We have various logos available for both the DCC-EX brand and our various products.
+We have various logos available for both the **DCC-EX** brand and our various products.
 
 These are typically created using InkScape in SVG format, which are located in the "image-artefacts" directory.
 
@@ -10,7 +10,7 @@ The generated logos are exported in PNG format with a transparent background, an
 
 Due to most logos using a transparent background, there are typically both a light and dark version of each logo available, and a CSS class is required to display the correct one using an [attribute](/contributing/documentation/mkdocs-features.md#attribute-lists).
 
-If a logo has a solid background (for example our main DCC-EX logo), this is not required.
+If a logo has a solid background (for example our main **DCC-EX** logo), this is not required.
 
 For example, the EX-CommandStation logo has both options:
 
@@ -26,9 +26,9 @@ This renders, and switching your browser between light and dark modes will demon
 
 ## Branded and Non-Branded Product Logos
 
-In most instances, using our full brand and product logos can cause pages to become too "busy". Users are navigating the DCC-EX website looking at our products, so incorporating our brand along with the product name can cause content and visual overload.
+In most instances, using our full brand and product logos can cause pages to become too "busy". Users are navigating the **DCC-EX** website looking at our products, so incorporating our brand along with the product name can cause content and visual overload.
 
-Where possible, use product name logos only, but if a product is being used in isolation from other DCC-EX context, branded logos are also available.
+Where possible, use product name logos only, but if a product is being used in isolation from other **DCC-EX** context, branded logos are also available.
 
 Logo PNG files including the word "only" have no branding.
 

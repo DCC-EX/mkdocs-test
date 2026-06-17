@@ -2,7 +2,7 @@
 
 Once you go beyond just wanting to run trains, and want to control turnouts (points), signals, turntables, and potentially automate other parts of your layout, you will need to know how to connect accessories to your **EX-CommandStation**.
 
-Within the DCC-EX ecosystem, an accessory is anything you can connect to or control from your EX-CommandStation which also includes our other products such as EX-FastClock, EX-IOExpander, EX-SensorCAM, and EX-Turntable.
+Within the **DCC-EX** ecosystem, an accessory is anything you can connect to or control from your EX-CommandStation which also includes our other products such as EX-FastClock, EX-IOExpander, EX-SensorCAM, and EX-Turntable.
 
 ## Accessory Types
 

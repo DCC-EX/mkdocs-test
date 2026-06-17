@@ -6,7 +6,7 @@ The EX-CommandStation is capable of programming CVs of mobile decoders on the PR
 
 In normal DCC operation, running locos happens on a MAIN track (your layout) and programming takes place on a separate piece of track (typically just long enough for your loco) called a PROG track. You loco will not respond to throttles if it is on the PROG track, and the command station will not send programming commands to the MAIN track.
 
-Some command stations are not able to do programming and running at the same time, this restribction does not apply to DCC-EX.
+Some command stations are not able to do programming and running at the same time, this restriction does not apply to **DCC-EX**.
 
 DCC-EX provides some tricks to switch tracks in software, perhaps because you only have a single loco or your PROG track is actually an isolated siding on a layout. See [Track Manager](/products/ex-commandstation/trackmanager/trackmanager.md)
 

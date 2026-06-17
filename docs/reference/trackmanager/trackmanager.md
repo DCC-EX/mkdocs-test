@@ -2,11 +2,11 @@
 
 **If you are only interested in a standard setup using just a DCC track and PROG track, then you DO NOT need to read the rest of this document.**
 
-What follows is for advanced users interested in managing power districts and/or running DC locomotives through DCC-EX.
+What follows is for advanced users interested in managing power districts and/or running DC locomotives through **DCC-EX**.
 
 ## What is the Track Manager
 
-Track Manger (TM from now on) is an integral part of the command station software that is responsible for:
+Track Manger (TM from now on) is an integral part of the **EX-CommandStation** software that is responsible for:
 
 - Managing track power state.
 - Monitoring track overloads and shorts.
@@ -15,11 +15,11 @@ Track Manger (TM from now on) is an integral part of the command station softwar
 - Intercepting throttle commands to locos running on DC tracks.
 - Handling user or EXRAIL commands to switch track status.
 
-In the default scenario of a single DCC track and a PROG track, the TM behaves as for the previous versions of DCC-EX so if thats what you want, you dont need to mess with it.
+In the default scenario of a single DCC track and a PROG track, the TM behaves as for the previous versions of **DCC-EX** so if thats what you want, you dont need to mess with it.
 
 The TM is able to handle up to 8 separate track domains. Each domain requires a hardware driver to supply track voltage. A typical motor driver shield supplies two tracks, which is what we have used in the past as main and prog.
 
-Unlike the older version of DCC-EX, where the shield channel A was always the DCC main and channel B was always the DCC prog track, TM allows:
+Unlike the older version of **DCC-EX**, where the shield channel A was always the DCC main and channel B was always the DCC prog track, TM allows:
 
 - None, any or all the tracks can be DCC Main.
 - None or ONE track may be DCC prog at any given time.
@@ -61,7 +61,7 @@ When setting a track to MAIN (or DC, DCX see later) the power is applied accordi
 TM allows any or all of your tracks to be individually selected as a DC track which responds to throttle commands on any given loco address. So for example if track A is set to DC address 55, then any throttle commands to loco 55 will be transmitted as DC onto track A and thus a DC loco can be driven along that track. almost exactly as if it was DCC.
 Your throttle (JMRI, EX-Webthrottle, Withrottle, Engine Driver etc.) do not know or care that this is a DC loco so nothing needs to change.
 
-For a simple Command Station setup to run just two DC tracks instead of DCC, you only need to assign DC addresses to tracks A and B. If you want DCC on track A and DC on track B, you just need to set track B to a suitable DC address.
+For a simple **EX-CommandStation** setup to run just two DC tracks instead of DCC, you only need to assign DC addresses to tracks A and B. If you want DCC on track A and DC on track B, you just need to set track B to a suitable DC address.
 
 The command to set a track to a DC address is as follows
 

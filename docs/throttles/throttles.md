@@ -227,12 +227,12 @@ Also see: Connect WiFi Throttle via USB
 - Win = Windows 7 and above.
 - DIY = Do it Yourself. Requires you to buy components and 'build' the device.
 
-[^1]: CV programming is only available in Engine Driver when connected using the DCC-EX Native protocol.
+[^1]: CV programming is only available in Engine Driver when connected using the **DCC-EX** Native protocol.
 [^2]: Note: The Android throttle apps listed above can be made to made to run on Windows PCs.
 [^3]: JMRI is a suite of applications.  This table only refers the Web based throttle component of JMRI.  To use the Web throttle you will need to be running the JMRI suite of applications on a PC (Windows, OSX or Linux) or RPi. e.g. **Decoder Pro** or **Panel Pro**.
 [^4]: Connecting JMRI to an EX-CommandStation over WiFi works, but is not recommended and is not supported.
 [^5]: Free version is functionally limited. (No track power control, only one throttle and no consists/MUs.)
 [^6]: Free version is advertisement supported and time limited.
-[^7]: ESU Mobile Control Pro is an Android device with additional hardware, so can also run the Engine Driver app. As such it can use the DCC-EX Native protocol when connected to a *DCC-EX EX-CommandStation**. It uses the WiThrottle protocol when connected to a WiThrottle server. When using Engine Driver and the Native Protocol it is capable of CV programming.
+[^7]: ESU Mobile Control Pro is an Android device with additional hardware, so can also run the Engine Driver app. As such it can use the **DCC-EX** Native protocol when connected to a *DCC-EX EX-CommandStation**. It uses the WiThrottle protocol when connected to a WiThrottle server. When using Engine Driver and the Native Protocol it is capable of CV programming.
 
 --8<-- "snippets/abbr.md"

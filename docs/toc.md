@@ -182,7 +182,7 @@ li a {
 - **Support**
     - [Frequently Answered Questions  (FAQ) <small>(Frequently Answered Questions)</small>](support\faq.md)
     - [Help and Support <small>(Getting Support)</small>](support\support.md)
-    - [The DCC-EX Discord Server <small>(Discord)</small>](support\discord.md)
+    - [The **DCC-EX** Discord Server <small>(Discord)</small>](support\discord.md)
     - [Raising GitHub Issues <small>(Github)</small>](support\github.md)
 - **Donate**
     - [Donations](donations\donations.md)
@@ -199,7 +199,7 @@ li a {
         - [DC Mode - Logic Gate Circuits <small>(DC Mode Logic)</small>](reference\trackmanager\dc-mode-logic.md)
         - [DC Mode Track Sync <small>(DC Track Sync)</small>](reference\trackmanager\dc-track-sync.md)
     - [HAL Device Templates <small>(HAL Device Configuration)</small>](reference\hal-device-templates.md)
-    - [Command Station Internal Architecture](reference\command-station-arch.md)
+    - [**EX-CommandStation** Internal Architecture <small>(Command Station Internal Architecture)</small>](reference\command-station-arch.md)
     - [Throttle Writers Guide (doc incomplete) <small>(Throttle Writers Guide)</small>](reference\throttle-writers-guide.md)
     - [Legacy Command Reference](reference\legacy-command-reference.md)
     - **EX-CSB1**
@@ -229,7 +229,7 @@ li a {
             - [I2C Wiring for the Tinkerer <small>(I2C Wiring)</small>](reference\wiring\i2C\i2c-wiring.md)
             - [Tuning an I2C Bus for the Engineer <small>(Tuning Information)</small>](reference\wiring\i2C\tuning-info.md)
 - **About Us**
-    - [About the DCC-EX Project <small>(About)</small>](about\about.md)
+    - [About the **DCC-EX** Project <small>(About)</small>](about\about.md)
     - [DCC++ VS DCC-EX? - Project History <small>(History)</small>](about\history.md)
 - **Contribute**
     - [How Can I Contribute? <small>(How You Can Contribute)</small>](contributing\contributing.md)

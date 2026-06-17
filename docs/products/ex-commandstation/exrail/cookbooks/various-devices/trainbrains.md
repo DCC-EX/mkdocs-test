@@ -2,11 +2,11 @@
 
 These devices are available from [trainbrains.eu](https://trainbrains.eu) and operate over I2C.
 
-They auto-detect the device type so it is only necessary to provide HAL statements in myAutomation.h to identify that the device on the given address is a Trainbrains device and the number of VPINs that will be reserved for it by DCC-EX.
+They auto-detect the device type so it is only necessary to provide HAL statements in myAutomation.h to identify that the device on the given address is a Trainbrains device and the number of VPINs that will be reserved for it by **DCC-EX**.
 
 ## Turnout/Point drivers (solenoid and servo)
 
-Use the HAL statement to identify the device I2C address and create PIN_TURNOUT definitions so that DCC-EX sees the vpins as turnouts/points.
+Use the HAL statement to identify the device I2C address and create PIN_TURNOUT definitions so that **DCC-EX** sees the vpins as turnouts/points.
 
 ```cpp
 HAL(Trainbrains,700,2,0x14)
@@ -14,7 +14,7 @@ PIN_TURNOUT(1,700,"Coal yard exit")
 PIN_TURNOUT(1,701,"Oil yard exit")
 ```
 
-This creates VPINS 700 and 701 as turnouts/points. All other turnout/point operations in DCC-EX operate as normal.
+This creates VPINS 700 and 701 as turnouts/points. All other turnout/point operations in **DCC-EX** operate as normal.
 This isn't going to work if the devivce at I2C address 0x15 is not a Trainbrains turnout/point controller.
 
 ## Signal controller

@@ -1,8 +1,8 @@
 # EX-Installer
 
-With the exception of a Command Station Booster1 Express [CSB1](?CSB1) used solely as shipped with no accessories or options, you will need to download and install software to your Command Station or other DCC-EX products.
+With the exception of a Command Station Booster1 Express [CSB1](?CSB1) used solely as shipped with no accessories or options, you will need to download and install software to your **EX-CommandStation** or other **DCC-EX** products.
 
-This is managed by EX-Installer which is responsible for obtaining the relevant software and libraries, merging your custom configurations and mind-bending automations, locating the USB connection to your device,  compiling and downloading the result and showing the serial log from your device if required.
+This is managed by **EX-Installer** which is responsible for obtaining the relevant software and libraries, merging your custom configurations and mind-bending automations, locating the USB connection to your device,  compiling and downloading the result and showing the serial log from your device if required.
 
 Since every layout is essentially a prototype, and there are a huge variety of hardware build combinations, it is not possible to download a pre-built firmware package from the web.
 
@@ -18,7 +18,7 @@ Sometimes our software gets blocked by antivirus applications. If you see any er
 [macOS](download-mac.md){ .md-button }
 [Linux x64](download-linux.md){ .md-button }
 
-**NOTE:** There is no support for EX-Installer on Windows 7, nor 32-bit operating systems such as Windows x32 or RaspberryPi OS.
+**NOTE:** There is no support for **EX-Installer** on Windows 7, nor 32-bit operating systems such as Windows x32 or RaspberryPi OS.
 
 ## Alternatives to the EX-Installer
 

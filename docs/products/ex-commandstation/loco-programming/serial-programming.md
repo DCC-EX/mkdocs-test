@@ -2,7 +2,7 @@
 
 Serial commands are entered on a [serial monitor](?Serial)
 
-This gives you direct access to the underlying DCC-EX features to access the programming track.
+This gives you direct access to the underlying **DCC-EX** features to access the programming track.
 
 All other programming methods through throttles, toolbox or DecoderPro use this interface.
 
@@ -72,11 +72,11 @@ Following that:
 
 Issue the command ```<D ACK ON>```, this will enable the output of detailed diagnostic information of what the **EX-CommandStation** is doing when it runs programming commands.
 
-Then try the command ```<R 8>``` , this should attempt to read CV 8 (the Decoder manufacturer id). You will get a long diagnostic trace. If the final response is negatine (eg ```<r 8 -1>```) then copy the entire diagnostic trace to a support ticket and we can help. (Experienced users will soon learn to read the trace)
+Then try the command ```<R 8>``` , this should attempt to read CV 8 (the Decoder manufacturer id). You will get a long diagnostic trace. If the final response is negative (eg ```<r 8 -1>```) then copy the entire diagnostic trace to a support ticket and we can help. (Experienced users will soon learn to read the trace)
 
 PLEASE DO NOT SEND A SCREENSHOT OR PHOTO!
 
-If the ```<R 8>``` command respinds with a non-negative number like ```<r 8 123>``` that that command has worked,  so you should re-attempt the command that failed and send in the trace of that.
+If the ```<R 8>``` command responds with a non-negative number like ```<r 8 123>``` that that command has worked,  so you should re-attempt the command that failed and send in the trace of that.
 
 ## ACK detector tuning parameters
 

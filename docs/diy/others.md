@@ -12,11 +12,11 @@ We are unable to rely on third party libraries which are generally designed to b
 - Mega Wifi. Some users have had success with this but we have had approximately 50% failure rate on these devices. Its just not worth it. 
 - Arduino Giga. This has a very high cost and some strange WiFi limitations.
 - Teensy (various models). These have been made to work in the past but without help we are unable to update or support them.
-- ESP32. There are dozens of ESP32 versions and the vast majority of them will not be able to run DCC-EX. We can only support the explicitly recommended version.
+- ESP32. There are dozens of ESP32 versions and the vast majority of them will not be able to run **DCC-EX**. We can only support the explicitly recommended version.
 - UNO R4 WiFi. Useless and expensive.
 - Nano Every.  Not enough FLASH memory.
 - Pi Pico.  Lack of demand and awkward form factor for shields.
 
 - Motor shields other than those recommended.
 
-Many of these require modification or simply do not provide the features we need. Even the Arduino standard motor shield (which we do support) is not capable of the full range of the newer DCC-EX functions and requires physical modification to avoid melting your processor.
+Many of these require modification or simply do not provide the features we need. Even the Arduino standard motor shield (which we do support) is not capable of the full range of the newer **DCC-EX** functions and requires physical modification to avoid melting your processor.

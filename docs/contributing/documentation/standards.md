@@ -41,7 +41,7 @@ So:
 - Where possible, avoid starting a section with a negative point of view.  i.e. Talk about the positives of what you are discussing first, before you delve into the negative or problematic aspects. <br/>e.g. Don't start with "... This is not for Conductors...", instead say "..This page is for Tinkerers ... Conductors should...".
 - Use British/Australian/New Zealand/Canadian/Indian (pretty much every country except the USA) spelling e.g. 'colour' not 'color'. <br/>(Primarily because it is used in more English speaking countries)
 - Preferred Terms:
-    - Use **'EX-CommandStation'** not 'Command Station' when refering to something that is specific to the DCC-EX product.
+    - Use **'EX-CommandStation'** not 'Command Station' when refering to something that is specific to the **DCC-EX** product.
     - Where logical to do so, use **"Motor Driver"**, in preference to 'Motor Shield'.  Do not use 'Motor Board' or 'Motorboard'.
     - In general use **'train'** or **'loco'** instead of 'locomotive' or 'engine'
     - Use **'Smart Phone'** instead of 'Cell Phone' (US only term) or 'Mobile Phone' (just about everywhere else)
@@ -65,7 +65,7 @@ So:
 
 ## Directory Naming, Page Naming, and Titles
 
-With the exception of the home page and the DCC-EX News page, **do not use "index.md"**, but rather name pages according to their primary message. Using "index.md" adjusts the rendering of pages when navigating through the menus, and the team has a preference for the navigation experience using the benefits of the [MkDocs Awesome Nav plugin](https://lukasgeiter.github.io/mkdocs-awesome-nav/) over having an initial index page.
+With the exception of the home page and the **DCC-EX** News page, **do not use "index.md"**, but rather name pages according to their primary message. Using "index.md" adjusts the rendering of pages when navigating through the menus, and the team has a preference for the navigation experience using the benefits of the [MkDocs Awesome Nav plugin](https://lukasgeiter.github.io/mkdocs-awesome-nav/) over having an initial index page.
 
 - All directory and page names must be in lower case and use "-" instead of spaces.
 - Page ordering is determined by the Awesome Nav ".nav.yml" file, see [Directory Structure](/contributing/documentation/standards.md#directory-structure-and-navigation).
@@ -85,7 +85,7 @@ Note firstly that we use the [MkDocs Awesome Nav plugin](https://lukasgeiter.git
 
 The top level directories under the "docs" directory determine the tabs or horizontal menu items on the header bar, with the subsequent directories and files in each of these determining the menu on the left pane.
 
-**Do not adjust the top level directories without consulting the DCC-EX Documenter team, as these fundamentally adjust the user experience.**
+**Do not adjust the top level directories without consulting the **DCC-EX** Documenter team, as these fundamentally adjust the user experience.**
 
 If a new top level directory is to be added, it needs to be added to the "/docs/.nav.yml" file in the appropriate order. Files and directories created within existing top level directories will automatically be added to the menus (see [Page Naming and Titles](#directory-naming-page-naming-and-titles) for page ordering).
 

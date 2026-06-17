@@ -27,3 +27,7 @@
 
 *[SSID]: Service Set Identifier. Technical term for the WiFi network's name
 *[ssid]: Service Set Identifier. Technical term for the WiFi network's name
+
+*[NMRA]: National Model Railroad Association
+
+*[DIY]: Do-It-Yourself / Self Build

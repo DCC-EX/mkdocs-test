@@ -40,7 +40,7 @@ N/A
 
 * The Ack current limit is set according to the DCC standard(s) of 60mA. Most decoders send a quick back and forth current pulse to the motor to generate this ACK. However, some modern motors (N and Z scales) may not be able to draw that amount of current. You can adjust down this limit. Or, if for some reasons your acks seem to be too “trigger happy” you can make it less sensitive by raising this limit.
 
-* The NMRA specifies that the ACK pulse duration should be 6 milliseconds, which is 6000 microseconds (µS), give or take 1000 µS. That means the minimum pulse duration is 5000 µS and the maximum is 7000 µS. There are many poorly designed decoders in existence so DCC-EX extends this range from 4000 to 8500 µS. If you have any decoders that still do not function within this range, you can adjust the ACK MIN and ACK MAX parameters.
+* The NMRA specifies that the ACK pulse duration should be 6 milliseconds, which is 6000 microseconds (µS), give or take 1000 µS. That means the minimum pulse duration is 5000 µS and the maximum is 7000 µS. There are many poorly designed decoders in existence so **DCC-EX** extends this range from 4000 to 8500 µS. If you have any decoders that still do not function within this range, you can adjust the ACK MIN and ACK MAX parameters.
 
 * When reading/writing CVs, the program will try again upon failure. The default is ``<D ACK RETRY 2>``, which means 3 attempts before a failure is reported. Each of the unsuccessful attempts is reported in the Serial Monitor or JMRI monitor log. The last unsuccessful attempt remains on the display if in use. To reset the running total, send the command manually: ``<D ACK RETRY 2>``.
 
@@ -70,7 +70,7 @@ N/A
 
 ### **Hornby HM7000 decoders**
 
-The HM7000's DCC implementation has a bug in that the ACK response to a DCC CV read from the decoder on the programming track is far, far too long. So much so, the DCC-EX developers added a feature to cater specifically for the HM7000.
+The HM7000's DCC implementation has a bug in that the ACK response to a DCC CV read from the decoder on the programming track is far, far too long. So much so, the **DCC-EX** developers added a feature to cater specifically for the HM7000.
 
 * Make sure the loco is on the PROG output which is typically channel B on the EX-CommandStation.
 * Bring up a serial console to the EX-CommandStation, or use the command entry features in EX-Toolbox, EX-WebThrottle or Engine Driver.

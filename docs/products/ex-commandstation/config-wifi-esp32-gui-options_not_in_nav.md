@@ -41,7 +41,7 @@ There are some additional settings that are not modes but effect the wifi connec
 * **Hidden AP mode**: If enabled, the **EX-CommandStation**'s WiFi network will not be visible in the list of available networks on devices. This can enhance security by making it less obvious to potential attackers, but it also means that users will need to manually enter the network name (SSID) to connect.<br/><br/>
 Note that this does not provide any performance advantages.
 
-* **Temporary STA mode**: If enabled, the **EX-CommandStation** will start in Station mode and connect to an existing Wifi network. But will forget this setting the next time the **EX-CommandStation** is restarted.<br/><br/>
+* **Temporary STA mode**: If enabled, the **EX-CommandStation** will start in Station mode and connect to an existing WiFi network. But will forget this setting the next time the **EX-CommandStation** is restarted.<br/><br/>
 This may be useful if visiting a location with a different WiFi network which you would like to connect to without changing the permanent WiFi settings on the **EX-CommandStation**.
 
 * The **HOSTNAME** setting allows you to set the name that appears in your Throttle app, once you have connected to the appropriate network for the **EX-CommandStation**.
@@ -81,7 +81,7 @@ This is a security feature.  If you could change AP mode settings over WiFi, the
 
 The `Reset WiFi Settings` button on the WiFi Setup page will reset all WiFi settings to their default values. This will cause the **EX-CommandStation** to restart and create its own WiFi network in Access Point mode with the default SSID and password.
 
-#### notes (EX-WebThrotttle)
+#### notes (EX-WebThrottle)
 
 * In every case above, the **EX-CommandStation** will restart to apply the new settings. You will need to reconnect to the **EX-CommandStation** in the **EX-WebThrottle** interface.
 
@@ -105,7 +105,7 @@ The `Reset WiFi Settings` button on the WiFi Setup page will reset all WiFi sett
 
 ## Using EX-Installer, Arduino IDE, VSC, throttle apps
 
-The process for configuring WiFi settings using the serial monitor or device monitor on any of the EX-Installer, Arduino IDE, VSC or WiFi throttle apps are esentially the same.
+The process for configuring WiFi settings using the serial monitor or device monitor on any of the **EX-Installer**, Arduino IDE, VSC or WiFi throttle apps are esentially the same.
 
 Also see [WiFi configuration (CSB1 or ESP32 ONLY. V5.7.0+ ONLY)](config-wifi-esp32.md) for more detailed information.
 

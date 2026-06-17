@@ -4,7 +4,7 @@ Use these Mermaid diagrams to help ensure the various user types can navigate su
 
 ## New to DCC-EX
 
-These users don't really know what DCC-EX is, but saw it at their club, on a YouTube channel, at a show, or someone told them they should check it out.
+These users don't really know what **DCC-EX** is, but saw it at their club, on a YouTube channel, at a show, or someone told them they should check it out.
 
 ```mermaid
 graph LR
@@ -61,7 +61,7 @@ graph LR
 
 ## Large Club Layout
 
-These users are aware of DCC-EX and know enough to be able to start implementing it on a large club layout. They want to know about wiring, boosters, power districts, multiple wired and wireless throttles, and connecting accessories.
+These users are aware of **DCC-EX** and know enough to be able to start implementing it on a large club layout. They want to know about wiring, boosters, power districts, multiple wired and wireless throttles, and connecting accessories.
 
 ```mermaid
 graph LR

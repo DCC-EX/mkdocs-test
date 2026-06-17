@@ -8,7 +8,7 @@ You will need the following for up to 16 servos.
 - Qwiic cable for connection to **EX-CSB1**, with Qwiic or dupont connectors for connection to PCA9685.
 - PCA9685 module
 - Up to 16 SG90 servos
-- EX-Installer downloaded on your PC
+- **EX-Installer** downloaded on your PC
 - (Optionally) Android phone with **EX-Toolbox** installed
 - A servo power supply 5V 2A DC -- and not taken from the **EX-CommandStation**.
 
@@ -19,8 +19,8 @@ You will need the following for up to 16 servos.
  ![CSB1](/_static/images/ex-csb1/csb1qwiic.jpg){: style="width: 70%"} <BR>
 When using Mega, the I2C bus is 5V.<BR>
 Use the I2C headers, where 5V is available (IOREF/Vdd).<BR>
- ![mega](/_static/images/i2c-devices/EX8874_i2c_header.png){: style="width: 70%"} 
-3. Run the EX-Installer on your PC and select the cpu type, then the Serial Monitor. You should see output similar to the following where the **EX-CommandStation** enumerates all the I2C devices it can find.
+ ![mega](/_static/images/i2c-devices/EX8874_i2c_header.png){: style="width: 70%"}
+3. Run the **EX-Installer** on your PC and select the cpu type, then the Serial Monitor. You should see output similar to the following where the **EX-CommandStation** enumerates all the I2C devices it can find.
 from the startup logs using the serial monitor
 
     ```cpp
@@ -43,11 +43,11 @@ from the startup logs using the serial monitor
 6. Plug a servo into the first output socket. DO NOT mechanically connect the servo arm to any turnout/point or animation as the servo may move unexpectedly and cause physical damage.  You will connect the servo arm after exercising the servo (step 8).
 7. Connect the additional servo power supply to the long-edge turrets on the PCA9685, observing the correct polarity. ![PCA9685](/_static/images/i2c-devices/PCA9685.jpg){: style="width: 70%"}
 8. On the installers serial monitor, enter the command ```<D SERVO 100 200>``` which should move the servo. Experiment with other positions than 200. The usable range is approximately 102 to 490.  
-9. (Optionally) Use the **EX-Toolbox** Andoid app to experiment with servo angles and servo arm lengths until you have the required throw distance and angles to suit your servo mounting preferences.
+9. (Optionally) Use the **EX-Toolbox** Android app to experiment with servo angles and servo arm lengths until you have the required throw distance and angles to suit your servo mounting preferences.
 
 ## Define your turnouts/points
 
-01. In EX-Installer, edit myAutomation.h and define each turnout/point to give an id of your choice, the VPIN of the servo, the closed and open servo values you have discovered by experimentation and a suitable decription to show on your throttle.
+01. In **EX-Installer**, edit myAutomation.h and define each turnout/point to give an id of your choice, the VPIN of the servo, the closed and open servo values you have discovered by experimentation and a suitable description to show on your throttle.
 
      ```cpp
      //SERVO_TURNOUT( turnout_id, vpin, active_angle, inactive_angle, profile [, "description"|HIDDEN] )
