@@ -170,3 +170,5 @@ e.g. Sets the hostname to "DCCEX-MYCSB1":
 ```
 
 WiFi will revert to the internally generated ssid and password.
+
+--8<-- "snippets/abbr.md"

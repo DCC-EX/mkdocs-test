@@ -112,3 +112,5 @@ Should you wish to visit a friend and temporarily connect to their home network 
 ```cpp
 <D WIFI SHOW>
 ```
+
+--8<-- "snippets/abbr.md"
