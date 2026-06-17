@@ -262,6 +262,7 @@ li a {
 - [<small>``<J A [«id»]>``</small> <br/><small>``</ [START|PAUSE|RESUME|KILL] [«various parameters»]>``</small> <br/> List, Start or Stop Automations/Sequences](reference/serial-commands/serial-command-jj-aa-and-slash_not_in_nav.md)
 - [<small>``<J M [«various parameters»]>``</small> <br/> Manage Stash Values](reference/serial-commands/serial-command-jj-mm_not_in_nav.md)
 - [<small>``<J R [«id»]>``</small> <br/>Request Roster info](reference/serial-commands/serial-command-jj-rr_not_in_nav.md)
+- [<small>``<o «vpin» [«count»]|[«r» «g» «b» [«count»]]>``</small> <br/> Set Neopixels](reference/serial-commands/serial-command-o_not_in_nav.md)
 - [<small>``<Q>``</small> &nbsp; <small>``<S «id» [«vpin» «pullup»>]``</small> <br/>Manage Sensors](reference/serial-commands/serial-command-qq-and-ss_not_in_nav.md)
 - [<small>``<R [«cv»|LOCOID|CONSIST]>`` <br/>``<r «loco» «cv»>`` <br/>``<W [«loco»]|[«cv» «value»]|[«loco» «cv» «bitValue» «bit»]|[CONSIST «loco» [REVERSE]]>`` <br/>``<V [«cv» «value»]|[«cv» «bit» «bitValue»]>`` <br/>``<B «cv» «bit» «bitValue»>`` <br/>``<b «loco» «cv» «bit» «bitValue»>``</small> <br/>Read and write CVs](reference/serial-commands/serial-command-rr-and-ww_not_in_nav.md)
 - [<small>``<s>`` &nbsp; ``<#>`` <br/> ``<C RESET>`` ``<D RESET>`` </small> <br/> Query or Reset the EX-CommandStation](reference/serial-commands/serial-command-s-and-hash_not_in_nav.md)
