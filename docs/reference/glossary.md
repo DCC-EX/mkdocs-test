@@ -5,6 +5,8 @@ search:
 
 # Glossary of Terms
 
+<!-- Also consider adding anything you add here to the /snippets/abbr.md file -->
+
 These are common terms used throughout our documentation.
 
 If you wish to see where a term is used, click the term name to search for it.

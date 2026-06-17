@@ -65,6 +65,8 @@ Repeated for each loco in the reminders list <br/> ``<l «loco» «reg» «speed
 
 * TBA
 
+--8<-- "snippets/abbr.md"
+
 <style>
   .md-typeset h1 {
     line-height: 1.1 !important;

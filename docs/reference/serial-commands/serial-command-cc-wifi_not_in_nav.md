@@ -79,6 +79,8 @@ N/A. The **EX-CommandStation** will restart.
 
 N/A
 
+--8<-- "snippets/abbr.md"
+
 <style>
   .md-typeset h1 {
     line-height: 1.1 !important;

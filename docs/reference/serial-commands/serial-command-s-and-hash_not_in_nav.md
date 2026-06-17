@@ -65,7 +65,7 @@ N/A
 
 ## Notes
 
-* ==TODO==
+* ==TODO== Notes
 
 ----
 
@@ -75,11 +75,13 @@ N/A
 
 ### *Example Commands*
 
-* ==TODO==
+* ==TODO== Example Commands
 
 ### *Example Responses:*
 
-* ==TODO==
+* ==TODO== Example Responses
+
+--8<-- "snippets/abbr.md"
 
 <style>
   .md-typeset h1 {

@@ -59,6 +59,8 @@ The following are not a direct response, but rather a broadcast that will be tri
 * purpose: <br/>``<command>``
 * ==TODO== Example Responses
 
+--8<-- "snippets/abbr.md"
+
 <style>
   .md-typeset h1 {
     line-height: 1.1 !important;

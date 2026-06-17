@@ -58,11 +58,11 @@ N/A
 
 ### Example Commands
 
-==TODO==
+==TODO== Example Commands
 
 ### Example Responses
 
-==TODO==
+==TODO== Example Responses
 
 ----
 
@@ -79,6 +79,8 @@ The HM7000's DCC implementation has a bug in that the ACK response to a DCC CV r
 * If this isn't working, then also add ``<D ACK MIN 150>``
 
 If this isn't working, then ``<D ACK ON>`` will enable diagnostic output from the *EX-CSB1** to show what the <R> is doing.
+
+--8<-- "snippets/abbr.md"
 
 <style>
   .md-typeset h1 {

@@ -12,6 +12,7 @@ def on_nav(nav: Navigation, config, files) -> Navigation:
 "    margin: 0px;\n" +
 "    border: 0px;\n" +
 "    line-height: 100%;\n" +
+"    margin-bottom: 4px !important;\n" +
 "}\n" +
 "li a {\n" +
 "    font-weight: 500;\n" +
@@ -97,7 +98,7 @@ def on_nav(nav: Navigation, config, files) -> Navigation:
                 non_nav_files.append(rel_path)
 
     if non_nav_files:
-        toc_lines.append("\n## Files Not In Navigation\n")
+        toc_lines.append("\n## Pages Not In Navigation\n")
         for rel_path in sorted(non_nav_files):
             full_file_path = os.path.join(docs_dir, rel_path)
             title = get_h1_title(full_file_path) or os.path.basename(rel_path)

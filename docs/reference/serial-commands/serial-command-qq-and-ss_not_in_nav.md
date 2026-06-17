@@ -79,11 +79,13 @@ To monitor one or more Arduino pins for sensor triggers, first define/edit/delet
 
 ### *Example Commands*
 
-* ==TODO==
+* ==TODO== Example Commands
 
 ### *Example Responses:*
 
-* ==TODO==
+* ==TODO== Example Responses
+
+--8<-- "snippets/abbr.md"
 
 <style>
   .md-typeset h1 {

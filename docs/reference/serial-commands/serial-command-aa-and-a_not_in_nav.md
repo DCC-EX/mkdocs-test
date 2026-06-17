@@ -67,6 +67,8 @@ Here is a spreadsheet in .XLSX format to help you: [Stationary Decoder Address T
 
 * ==TODO== Example Responses
 
+--8<-- "snippets/abbr.md"
+
 <style>
   .md-typeset h1 {
     line-height: 1.1 !important;

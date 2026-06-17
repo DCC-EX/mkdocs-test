@@ -43,11 +43,13 @@ The following are not a direct response, but rather a broadcast that will be tri
 
 ### Example Commands
 
-* ==TODO==
+* ==TODO== Example Commands
 
 ### Example Responses
 
-* ==TODO==
+* ==TODO== Example Responses
+
+--8<-- "snippets/abbr.md"
 
 <style>
   .md-typeset h1 {

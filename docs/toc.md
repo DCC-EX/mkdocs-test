@@ -5,6 +5,7 @@ li {
     margin: 0px;
     border: 0px;
     line-height: 100%;
+    margin-bottom: 4px !important;
 }
 li a {
     font-weight: 500;
@@ -21,10 +22,10 @@ li a {
     - [Getting Started with DCC-EX <small>(Getting Started)</small>](products\getting-started.md)
     - **EX-CommandStation**
         - [The DCC-EX EX-CommandStation - Overview <small>(EX-CommandStation)</small>](products\ex-commandstation\overview.md)
-        - [EX-CSB1 CommandStation Booster <small>(EX-CSB1 Command Station/Booster)</small>](products\ex-commandstation\ex-csb1.md)
+        - [**EX-CSB1** CommandStation Booster <small>(EX-CSB1 Command Station/Booster)</small>](products\ex-commandstation\ex-csb1.md)
         - [Running a Legacy DC layout <small>(Running a DC layout)</small>](products\ex-commandstation\dc-running.md)
         - [Build configuration (config.h) <small>(Configuration (config.h))</small>](products\ex-commandstation\config-h.md)
-        - [Wifi configuration <br/><small>(Excluding EX-CSB1 or ESP32 v5.7.0+)</small> <small>(Configure WiFi (Wifi Shield))</small>](products\ex-commandstation\config-wifi-shield.md)
+        - [Wifi configuration <br/><small>(Excluding **EX-CSB1** or ESP32 v5.7.0+)</small> <small>(Configure WiFi (Wifi Shield))</small>](products\ex-commandstation\config-wifi-shield.md)
         - [WiFi configuration <br/><small>(EX-CSB1 or ESP32 ONLY. v5.7.0+ ONLY)</small> <small>(Configure WiFi (CSB1 & ESP32 v5.7.0+))</small>](products\ex-commandstation\config-wifi-esp32.md)
         - [Testing your EX-CommandStation](products\ex-commandstation\testing.md)
         - **TrackManager**
@@ -244,7 +245,7 @@ li a {
         - [Working With MkDocs](contributing\documentation\mkdocs-features.md)
         - [Mermaid Diagrams](contributing\documentation\mermaid-diagrams.md)
 
-## Files Not In Navigation
+## Pages Not In Navigation
 
 - [WiFi Configuration for version 5.7.0+ <br/><small>Graphical User Interface Options</small>](products/ex-commandstation/config-wifi-esp32-gui-options_not_in_nav.md)
 - [Connecting WiFi Throttles via USB](products/ex-toolbox/connect_wifi_throttle_via_usb_not_in_nav.md)
@@ -268,6 +269,7 @@ li a {
 - [<small>``<t «loco» [«tSpeed» «direction»]>``</small> <br/>Request or set loco status](reference/serial-commands/serial-command-t_not_in_nav.md)
 - [<small>``<T [«id»] [«various parameters»]>`` <br/> ``<J T [«id»]>``</small> <br/>Define or manage Turnouts/Points](reference/serial-commands/serial-command-tt_not_in_nav.md)
 - [<small>``<y «vpin» EQ|FOLDER|PAUSE|PLAY|REPEAT|RESET|RESUME|STOP|VOL [«various parameters»]>``</small> <br/> Play DF Player sounds](reference/serial-commands/serial-command-y_not_in_nav.md)
+- [<small>``<Z [«id» [«pin» «iFlag»]|«active»]]>``</small> <br/><small>``<z [«signedVpin»]|[«vpin» «analogue» [[«profile»] [«duration»]]]>``</small> <br/>Manage pin/vpin outputs](reference/serial-commands/serial-command-zz-and-z_not_in_nav.md)
 - [<small>``<cmd «required parameter» [«optional parameter»]>``</small> <br/> Short command decription](reference/serial-commands/shell_serial-command-xyz_not_in_nav.md)
 - [WiThrottle Protocol VS DCC-EX Native/Serial Commands](reference/withrottle-vs-native-protocol_not_in_nav.md)
 - [Android apps on Windows & macOS](throttles/android-apps-on-windows-and-ios_not_in_nav.md)
