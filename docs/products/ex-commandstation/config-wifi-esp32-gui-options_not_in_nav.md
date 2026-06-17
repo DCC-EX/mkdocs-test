@@ -5,13 +5,13 @@ This page is exclusively for users of **EX-CommandStation** version 5.7.0 and la
 
 If you are using an earlier version, please see [WiFi Config](config-wifi-shield.md).
 
-Also see [WiFi configuration (CSB1 or ESP32 ONLY. V5.7.0+ ONLY)](config-wifi-esp32.md) for more technical information.
+Also see [WiFi configuration (EX-CSB1 or ESP32 ONLY. V5.7.0+ ONLY)](config-wifi-esp32.md) for more technical information.
 
 ## Background
 
 Prior to version 5.7.0, WiFi configuration for **EX-CommandStation** was done through options in the ``config.h`` file. This method required users to modify the firmware (by editing ``config.h``) and recompile it for their specific WiFi settings.
 
-From version 5.7.0, WiFi configuration options in ``config.h`` are *ignored* by the *EX-CSB1** or ESP32 EX-CommandStations.  
+From version 5.7.0, WiFi configuration options in ``config.h`` are *ignored* by the **EX-CSB1** or ESP32 EX-CommandStations.  
 
 It is now necessary to use a new WiFi configuration method, which involves connecting to the **EX-CommandStation** *after you have flashed the firmware.*  You do so by connecting to the **EX-CommandStation** via USB or by connecting to the WiFi Access Point network of the CS and issuing a set of new commands. (Note that the WiFi Access Point network approach has limitations. See below.)
 
@@ -22,7 +22,7 @@ From version 5.7.0, you must configure the WiFi settings through one of the foll
 1. **EX-WebThrottle** (via USB),
 2. **EX-Toolbox** (via USB or over WiFi),
 3. the serial monitor / device monitor of **EX-Installer**, the **Arduino IDE** or **VSC** (via USB)
-4. any wifi throttle or app that can send the appropriate commands to the **EX-CommandStation** over WiFi 
+4. any WiFi throttle or app that can send the appropriate commands to the **EX-CommandStation** over WiFi
 
 **EX-WebThrottle** and **EX-Toolbox** provide a user-friendly interface for configuring WiFi settings, while the serial monitor method allows for more direct access to the configuration process but requires more technical knowledge.
 
