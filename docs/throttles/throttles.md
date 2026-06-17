@@ -74,12 +74,13 @@ See also: Arduino/ESP32 DCC-EX Native command library - [DCCEXProtocol](https://
 
 A **EX-CommandStation** can use different technologies to communicate with a throttle. While each technology has advantages and disadvantages, none is substantially better than the others for simply running locos.
 
-However the DCC-EX Native/Serial commands provive a significant numnber of extra capabilities including CV Programming, though not all apps and devices that use the Serial Commands make use of these features
+However the **DCC-EX Native/Serial commands** provide a significant number of extra capabilities including CV Programming, though not all apps and devices that use the Serial Commands make use of these features.
 
 ### General
 
-- [WiThrottle Server, DCC-EX Native Commands Explained](/reference/withrottle-vs-native-protocol_not_in_nav.md)
-- Connect WiFi Throttle via USB ==TODO==
+- [WiThrottle Server, DCC-EX Native/Serial Commands Explained](/reference/withrottle-vs-native-protocol_not_in_nav.md)
+- [Connect WiFi Throttle via USB](connect_wifi_throttle_via_usb_not_in_nav.md)
+- [Android Apps on Window s& macOS](android-apps-on-windows-and-ios_not_in_nav.md)
 
 ### DCC-EX Native/Serial Commands
 
@@ -215,7 +216,7 @@ Also see: Connect WiFi Throttle via USB
 - Free = No additional cost for full functionality.
 - Paid = Payment required for any usage.
 - Free/Paid = Both Free and Paid versions are available. The free version usually has limited features.
-- Open Source = Designs and Source code are available to view, modify and build your own. <br/> However the hardware to build it is not free. |BRxa|
+- Open Source = Designs and Source code are available to view, modify and build your own. <br/> However the hardware to build it is not free.
 - Native = Uses the DCC-EX Native protocol/commands.
 - Protocol - See the [WiThrottle VS Native Serial Protocol](/reference/withrottle-vs-native-protocol_not_in_nav.md) page.
 - WiT = Uses the WiThrottle protocol.
