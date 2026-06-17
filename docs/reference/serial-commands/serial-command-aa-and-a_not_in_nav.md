@@ -6,7 +6,7 @@ tags:
     - _A_address_value
 ---
 
-# <small>``<A «address» «value»>``</small> <br/><small>``<a «address» [«subAddr»]|[«activate» [onOff]]>``</small> <br/> Instruct Accessory Decoders
+# <small>``<A «address» «value»>``</small> <br/><small>``<a «address» [«subAddr»]|[«activate» [«onOff»]]>``</small> <br/>Instruct Accessory Decoders
 
 Serial commands to activate or dactivate accessory decoders.
 
@@ -14,7 +14,7 @@ Serial commands to activate or dactivate accessory decoders.
 
 * ``<A «address» «value»>`` Send DCC extended accessory (Aspect) command
 * ``<a «address» «subAddr» «activate»>`` Send DCC accessory command activate: 0=deactivate, 1=activate
-* ``<a «address» «subAddr» «activate» «onoff»>`` Send DCC accessory command with onoff control activate: 0=deactivate, 1=activate onoff: 0=off, 1=on, 2=toggle
+* ``<a «address» «subAddr» «activate» «onOff»>`` Send DCC accessory command with onoff control activate: 0=deactivate, 1=activate onoff: 0=off, 1=on, 2=toggle
 * ``<a «address» «activate»>`` Send dcc accessory command to linear address activate: 0=deactivate, 1=activate
 
 ## Parameters
@@ -50,6 +50,8 @@ Decoder address 511 (linear addresses 2041-2044) is reserved for use as a broadc
 Decoder address 0 does not have a corresponding linear address. This seems strange, but it is the mapping used by many, but not all, commercial manufacturers.  <br/> <br/>If your decoder does not respond on the expected linear address, try adding and subtracting 4 to see if it works. Or use the address/subaddress versions of the commands.
 
 Here is a spreadsheet in .XLSX format to help you: [Stationary Decoder Address Table (xlsx Spreadsheet)](https://dcc-ex.com/reference/downloads/documents.html#stationary-decoder-address-table-xlsx-spreadsheet).
+
+==TODO== move this spreadsheet to the new web site
 
 ----
 
