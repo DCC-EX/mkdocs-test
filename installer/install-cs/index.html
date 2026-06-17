@@ -7381,7 +7381,7 @@
 
 
 <h1 id="installing-ex-commandstation-software">Installing EX-CommandStation Software<a class="headerlink" href="#installing-ex-commandstation-software" title="Permanent link">&para;</a></h1>
-<p>This assumes you have read and done the EX-Installer installation, know how to execute it and have done the <a href="../first-run/">CLI download and optional ESP32 steps</a> to make sure you have the necessary build processor and run time libraries for your <strong>EX-CommandStation</strong>.</p>
+<p>This assumes you have read and done the <strong>EX-Installer</strong> installation, know how to execute it and have done the <a href="../first-run/">CLI download and optional ESP32 steps</a> to make sure you have the necessary build processor and run time libraries for your <strong>EX-CommandStation</strong>.</p>
 <p>To proceed, click the Select your device button.</p>
 <h2 id="device-selection">Device Selection<a class="headerlink" href="#device-selection" title="Permanent link">&para;</a></h2>
 <p><img alt="device selection" src="../../_static/images/ex-installer/select-device.png" /></p>
@@ -7418,7 +7418,7 @@
 This enables the "Wi-fi Options" button where you can configure the Wi-Fi.</p>
 <h3 id="wi-fi-access-point-mode">Wi-Fi Access Point mode<a class="headerlink" href="#wi-fi-access-point-mode" title="Permanent link">&para;</a></h3>
 <p><img alt="wifi AP" src="../../_static/images/ex-installer/wifi-ap.png" /></p>
-<p>In Access Point mode, your <strong>EX-CommandStation</strong> runs a completely isolated Wi-Fi Network. This is most useful if your layout is away from the house, or you transport your layout frequently, or do not want to give guests access to your home Wi-Fi. Wi-Fi phones or tablets will need to connect their Wi-Fi to the Access Point and will lose access to your home Wi-Fi. 
+<p>In Access Point mode, your <strong>EX-CommandStation</strong> runs a completely isolated Wi-Fi Network. This is most useful if your layout is away from the house, or you transport your layout frequently, or do not want to give guests access to your home Wi-Fi. Wi-Fi phones or tablets will need to connect their Wi-Fi to the Access Point and will lose access to your home Wi-Fi.
 Wi-Fi Password is optional.
 If this field is left blank the password will default to ‘PASS_xxxxxx’ where ‘xxxxxx’ will be the same as the SSID name that will be automatically configured.
 If possible, choose a channel that is unused (or least used) by other Wi-Fi networks around your location.
@@ -7449,7 +7449,7 @@ This is an advanced option and should only be used do not need to alter this unl
 <p>Note there is an additional option Create myAutomation.h that allows a blank myAutomation.h file to be created, which you can edit on the following Advanced Config screen. Leaving this option disabled means a myAutomation.h file will not be generated if it is not required, which saves memory on your EX‑CommandStation device.</p>
 <h2 id="compile-and-load">Compile and Load<a class="headerlink" href="#compile-and-load" title="Permanent link">&para;</a></h2>
 <p><img alt="load" src="../../_static/images/ex-installer/load.png" /></p>
-<p>This proceeds to compile your configuration in with the base code and load it into the Command Station Arduino processor.</p>
+<p>This proceeds to compile your configuration in with the base code and load it into the <strong>EX-CommandStation</strong> Arduino processor.</p>
 <p>There may be errors compiling (usually due to a mistake in the advanced configuration or myAutomation.h) and this will prevent the load stage from taking place.</p>
 <p><img alt="loaded" src="../../_static/images/ex-installer/loaded.png" /></p>
 <p>Errors during the load stage are almost invariably caused by problems communicating with the Arduino, possibly by incorrect selection of the type or by having another program, such as JMRI or EX-Webthrottle still using the USB connection.</p>
@@ -7458,9 +7458,9 @@ This is an advanced option and should only be used do not need to alter this unl
 You will be prompted to select a folder, and if the chosen folder already contains config files, you can overwrite these, or you can select an alternative location.</p>
 <h2 id="device-monitor">Device Monitor<a class="headerlink" href="#device-monitor" title="Permanent link">&para;</a></h2>
 <p>Once you have selected a device in EX‑Installer on the “Select your device” screen, or after successfully loading software onto your device, a View device monitor button will be available.</p>
-<p>When clicking this button, the EX-Installer Device Monitor window will open, allowing you to interact with your device by sending commands and viewing the serial console output.</p>
+<p>When clicking this button, the <strong>EX-Installer</strong> Device Monitor window will open, allowing you to interact with your device by sending commands and viewing the serial console output.</p>
 <p><img alt="device monitor" src="../../_static/images/ex-installer/device-monitor.png" />
-For further details on using EX-Installer Device Monitor, continue on to the next page with the ‘Next’ button, or go straight to Using the EX-Installer Device Monitor.</p>
+For further details on using <strong>EX-Installer</strong> Device Monitor, continue on to the next page with the ‘Next’ button, or go straight to Using the <strong>EX-Installer</strong> Device Monitor.</p>
 <p>Next Steps - Test your setup</p>
 <p><strong>IMPORTANT</strong></p>
 <p>The programming track is for programming only. Make sure you are on the main track if you expect your loco to move or respond to light or sound commands.</p>
@@ -7490,7 +7490,7 @@ For further details on using EX-Installer Device Monitor, continue on to the nex
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 17, 2026 03:16:04 UTC">June 17, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 17, 2026 11:04:31 UTC">June 17, 2026</span>
   </span>
 
     

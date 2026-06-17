@@ -7335,7 +7335,7 @@
 
 
 <h1 id="udp-audio-driver-for-dcc-ex">UDP Audio Driver for DCC-EX<a class="headerlink" href="#udp-audio-driver-for-dcc-ex" title="Permanent link">&para;</a></h1>
-<p>UDPAudio is a HAL driver that enables UDP network audio control for Waveshare ESP32-S3 audio nodes (or any compatible UDP audio device). It allows DCC-EX to control multiple audio nodes simultaneously over WiFi, supporting play, stop, pause, resume, volume, and folder selection commands with full WAITFOR feedback.</p>
+<p>UDPAudio is a HAL driver that enables UDP network audio control for Waveshare ESP32-S3 audio nodes (or any compatible UDP audio device). It allows <strong>DCC-EX</strong> to control multiple audio nodes simultaneously over WiFi, supporting play, stop, pause, resume, volume, and folder selection commands with full WAITFOR feedback.</p>
 <h2 id="features">Features<a class="headerlink" href="#features" title="Permanent link">&para;</a></h2>
 <table>
 <thead>
@@ -7396,7 +7396,7 @@
 <h2 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">&para;</a></h2>
 <p>The UDPAudio is connected to a number of separate WaveShare tracks by defining VPINs in myAutomation.h</p>
 <p>You can create a consecutive range of VPINS with a single HAL statement and also have multiple HAL statements for other pins or ranges.
-The vpin numbers will be broadcast to waveshare devices which are respoinsible for recognizing their own vpin.</p>
+The vpin numbers will be broadcast to waveshare devices which are responsible for recognizing their own vpin.</p>
 <div class="language-cpp highlight"><pre><span></span><code><span class="c1">// Node 1: Station (VPIN 11000)  </span>
 <span class="n">HAL</span><span class="p">(</span><span class="n">UDPAudio</span><span class="p">,</span><span class="w"> </span><span class="mi">11000</span><span class="p">)</span>
 
@@ -7681,7 +7681,7 @@ The vpin numbers will be broadcast to waveshare devices which are respoinsible f
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 16, 2026 11:01:09 UTC">June 16, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 17, 2026 11:04:31 UTC">June 17, 2026</span>
   </span>
 
     

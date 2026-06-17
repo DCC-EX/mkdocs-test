@@ -3733,9 +3733,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#cv-porgramming" class="md-nav__link">
+  <a href="#cv-programming" class="md-nav__link">
     <span class="md-ellipsis">
-      CV Porgramming
+      CV Programming
     </span>
   </a>
   
@@ -7333,9 +7333,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#cv-porgramming" class="md-nav__link">
+  <a href="#cv-programming" class="md-nav__link">
     <span class="md-ellipsis">
-      CV Porgramming
+      CV Programming
     </span>
   </a>
   
@@ -7447,7 +7447,7 @@
 <p>You don't need anything else to test it out and to run in emulator mode, just run it and play. To use it to run real trains you will need:</p>
 <ul>
 <li>An <strong><abbr title="EX-CommandStation/Booster 1">EX-CSB1</abbr></strong>, <br/> or</li>
-<li>DIY <strong>EX-CommandStation</strong> based on a Arduino Mega, <abbr title="Not recommended. Not supported in future releases">Arduino UNO</abbr>, or other compatible microcontroller with a compatible Motor Shield</li>
+<li><abbr title="Do-It-Yourself / Self Build">DIY</abbr> <strong>EX-CommandStation</strong> based on a Arduino Mega, <abbr title="Not recommended. Not supported in future releases">Arduino UNO</abbr>, or other compatible microcontroller with a compatible Motor Shield</li>
 <li>Plus the <strong>EX-CommandStation</strong> software already loaded</li>
 </ul>
 <h2 id="getting-started">Getting started<a class="headerlink" href="#getting-started" title="Permanent link">&para;</a></h2>
@@ -7470,7 +7470,7 @@
 <p><strong>EX-WebThrottle</strong> has a number of pages which you can switch between using the hamburger menu button (three horizontal bars) on the top left of the screen, or direct icon buttons at the top of the screen.</p>
 <ul>
 <li><a href="#throttle">Throttle</a> <em>(the default page)</em></li>
-<li><a href="#cv-porgramming"><abbr title="Configuration Variable (DCC Decoders)">CV</abbr> Programmer</a></li>
+<li><a href="#cv-programming"><abbr title="Configuration Variable (DCC Decoders)">CV</abbr> Programmer</a></li>
 <li><a href="#routesautomation">Routes/Automation</a></li>
 <li><a href="#turnoutspoints">Turnouts/Points</a></li>
 <li><a href="#wifi-configuration-ex-csb1-or-esp32-only-v570-only">WiFi configuration (<abbr title="EX-CommandStation/Booster 1">EX-CSB1</abbr> or ESP32 ONLY. v5.7.0+ ONLY)</a></li>
@@ -7487,7 +7487,6 @@
 <p>Next, click on the <code>Connect EX-CS</code> button.</p>
 <p>When using the serial connection, if the program finds any compatible devices, it will open a popup a window showing you a selection. It may show a line at the top such as "Arduino Mega 2560 (COM3)". Your com port may vary. Click on your board to select it and then click the <code>Connect EX-CS</code> button.</p>
 <p>You should then be connected to the <strong>EX-CommandStation</strong> and should see the response from the <strong>EX-CommandStation</strong> in the log textbox of the debug console at the bottom of the throttle window. Make sure your debug console is open. If it isn't, use the <code>Debug Console</code> slider button in the lower lower right to open it.</p>
-<p>chg xyz xyz</p>
 <p>When the <strong>EX-CommandStation</strong> is ready to use you should see <code>[i] EX-CommandStation is READY</code> appear in the log.</p>
 <p>Now you are ready to run trains! Place your loco on the track and click the <code>Power</code> slider button to turn on power to your track (if not already on). You should see LEDs on your Motor Driver and an indication that your loco has power.</p>
 <p><strong>Note:</strong> Make sure you place the loco on the <em><abbr title="Main Track / Ops Mode">MAIN</abbr></em> track, <strong>not</strong> the <abbr title="Programming Track / Service Mode">PROG</abbr> track. Check your wiring. By default, on an <strong><abbr title="EX-CommandStation/Booster 1">EX-CSB1</abbr></strong> or a Motor Driver, Motor Output "A" should connect to your <abbr title="Main Track / Ops Mode">MAIN</abbr> track (your layout) and "B" to the <abbr title="Programming Track / Service Mode">PROG</abbr> track (a separate programming track).</p>
@@ -7503,7 +7502,7 @@
 <p><img align="right" alt="EX-WebThrottle - Direct commands" src="../../../_static/images/ex-webthrottle/direct-commands.png" width="50%" /></p>
 <p>Once you are connected, you can also send commands directly to the <strong>EX-CommandStation</strong>.</p>
 <p>e.g. You can send the <code>&lt;s&gt;</code> command in the "direct command" textbox to get status information from your <strong>EX-CommandStation</strong>. To do this just enter <code>s</code> (without the quotes) and press the <code>Send</code> button. |BR| You should see <code>&lt;iDCC-EX...&gt;</code> returned in the log window with your version, type of Arduino, type of motor driver, and some other information.</p>
-<p>You can send any DCC-EX Native command in this way.</p>
+<p>You can send any <strong>DCC-EX</strong> Native command in this way.</p>
 <hr />
 <h3 id="emulator">Emulator<a class="headerlink" href="#emulator" title="Permanent link">&para;</a></h3>
 <p>To use the program in to emulate an <strong>EX-CommandStation</strong>, without actually connecting to a real one, click on the <code>Serial</code> dropdown button and select <code>Emulator</code> to run in emulator mode, then follow to instructions above from <code>Connect</code>.</p>
@@ -7513,11 +7512,15 @@
 <p><img align="right" alt="EX-WebThrottle - Routes/Automation" src="../../../_static/images/ex-webthrottle/routes-automation.png" width="40%" /></p>
 <p>Once connected to a <strong>EX-CommandStation</strong>, The <strong>Routes/Automation</strong> page allows you to activate any of the Routes or Automations that have been stored in your <strong>EX-CommandStation</strong>, if any.</p>
 <p>Clicking the <code>Set</code> button on a Route/Automation will activate it.</p>
+<div style="clear: both;"></div>
+
 <hr />
 <h2 id="turnoutspoints">Turnouts/Points<a class="headerlink" href="#turnoutspoints" title="Permanent link">&para;</a></h2>
 <p><img align="right" alt="EX-WebThrottle - Turnouts/Points" src="../../../_static/images/ex-webthrottle/turnouts.png" width="40%" /></p>
 <p>Once connected to a <strong>EX-CommandStation</strong>, The <strong>Turnouts/Points</strong> page allows you to throw or close any of the Turnouts/Points that have been stored in your <strong>EX-CommandStation</strong>, if any.</p>
 <p>Clicking either the <code>Throw</code> or <code>Close</code> buttons on a Turnout/Point will change it.</p>
+<div style="clear: both;"></div>
+
 <hr />
 <h2 id="cv-programmer"><abbr title="Configuration Variable (DCC Decoders)">CV</abbr> Programmer<a class="headerlink" href="#cv-programmer" title="Permanent link">&para;</a></h2>
 <p><img align="right" alt="EX-WebThrottle - CV Programmer" src="../../../_static/images/ex-webthrottle/cv-programmer.png" width="40%" /></p>
@@ -7526,11 +7529,13 @@
 <h3 id="decoder-address">Decoder Address<a class="headerlink" href="#decoder-address" title="Permanent link">&para;</a></h3>
 <p>To read a decoder address, place your loco on the <abbr title="Programming Track / Service Mode">PROG</abbr> track and press <code>Read Address</code>.  If Successful, the Address will be loaded in the <code>DCC Address</code> Field.  If unsuccessful, a message to that effect will appear in the log.</p>
 <p>To write a decoder address, place you loco on the <abbr title="Programming Track / Service Mode">PROG</abbr> track, enter the desired address into the <code>DCC Address</code> field and press <code>Write Address</code>.  If Successful or unsuccessful, a message to that effect will appear in the log.</p>
-<h3 id="cv-porgramming"><abbr title="Configuration Variable (DCC Decoders)">CV</abbr> Porgramming<a class="headerlink" href="#cv-porgramming" title="Permanent link">&para;</a></h3>
+<h3 id="cv-programming"><abbr title="Configuration Variable (DCC Decoders)">CV</abbr> Programming<a class="headerlink" href="#cv-programming" title="Permanent link">&para;</a></h3>
 <p>To read a <abbr title="Configuration Variable (DCC Decoders)">CV</abbr>, place your loco on the <strong><abbr title="Programming Track / Service Mode">PROG</abbr></strong> track and press <code>Read CV</code>.  If Successful, the Value of the <abbr title="Configuration Variable (DCC Decoders)">CV</abbr> will be loaded in the <code>CV Value</code> field.  If unsuccessful, a message to that effect will appear in the log.</p>
 <p>To write a decoder address, place you loco on the <strong><abbr title="Programming Track / Service Mode">PROG</abbr></strong> track, enter the desired <abbr title="Configuration Variable (DCC Decoders)">CV</abbr> into the <code>CV Number</code> field, the desired value into the <code>CV Value</code> field and press <code>Write CV</code>.  If Successful or unsuccessful, a message to that effect will appear in the log.</p>
-<p>You can use the <code>Common CVs</code> drop list to select a <abbr title="Configuration Variable (DCC Decoders)">CV</abbr>. The approprate value will be put into the `<abbr title="Configuration Variable (DCC Decoders)">CV</abbr> Number`` field on selection.</p>
+<p>You can use the <code>Common CVs</code> drop list to select a <abbr title="Configuration Variable (DCC Decoders)">CV</abbr>. The appropriate value will be put into the `<abbr title="Configuration Variable (DCC Decoders)">CV</abbr> Number`` field on selection.</p>
 <p><em>Note: Programming on the Main (<abbr title="Programming on Main / Ops Mode Programming">PoM</abbr>) is not currently supported directly, though you can manually issue the appropriate commands from the throttle page.</em></p>
+<div style="clear: both;"></div>
+
 <hr />
 <h3 id="wifi-configuration-ex-csb1-or-esp32-only-v570-only">WiFi configuration (<abbr title="EX-CommandStation/Booster 1">EX-CSB1</abbr> or ESP32 ONLY. v5.7.0+ ONLY)<a class="headerlink" href="#wifi-configuration-ex-csb1-or-esp32-only-v570-only" title="Permanent link">&para;</a></h3>
 <p>If you are using an <strong><abbr title="EX-CommandStation/Booster 1">EX-CSB1</abbr></strong>, ESP32 based EX-CommandStation and are are using the latest DEVEL versions of the  EX-CommandStation code (versions from 5.7.0), the <code>config.h</code> options for WiFi configuration are ignored by <strong><abbr title="EX-CommandStation/Booster 1">EX-CSB1</abbr></strong> or ESP32 <strong>EX-CommandStation</strong>.</p>
@@ -7603,7 +7608,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 17, 2026 03:16:04 UTC">June 17, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 17, 2026 11:04:31 UTC">June 17, 2026</span>
   </span>
 
     

@@ -7186,9 +7186,9 @@
 
 <h1 id="track-manager">Track Manager<a class="headerlink" href="#track-manager" title="Permanent link">&para;</a></h1>
 <p><strong>If you are only interested in a standard setup using just a DCC track and PROG track, then you DO NOT need to read the rest of this document.</strong></p>
-<p>What follows is for advanced users interested in managing power districts and/or running DC locomotives through DCC-EX.</p>
+<p>What follows is for advanced users interested in managing power districts and/or running DC locomotives through <strong>DCC-EX</strong>.</p>
 <h2 id="what-is-the-track-manager">What is the Track Manager<a class="headerlink" href="#what-is-the-track-manager" title="Permanent link">&para;</a></h2>
-<p>Track Manger (TM from now on) is an integral part of the command station software that is responsible for:</p>
+<p>Track Manger (TM from now on) is an integral part of the <strong>EX-CommandStation</strong> software that is responsible for:</p>
 <ul>
 <li>Managing track power state.</li>
 <li>Monitoring track overloads and shorts.</li>
@@ -7197,9 +7197,9 @@
 <li>Intercepting throttle commands to locos running on DC tracks.</li>
 <li>Handling user or EXRAIL commands to switch track status.</li>
 </ul>
-<p>In the default scenario of a single DCC track and a PROG track, the TM behaves as for the previous versions of DCC-EX so if thats what you want, you dont need to mess with it.</p>
+<p>In the default scenario of a single DCC track and a PROG track, the TM behaves as for the previous versions of <strong>DCC-EX</strong> so if thats what you want, you dont need to mess with it.</p>
 <p>The TM is able to handle up to 8 separate track domains. Each domain requires a hardware driver to supply track voltage. A typical motor driver shield supplies two tracks, which is what we have used in the past as main and prog.</p>
-<p>Unlike the older version of DCC-EX, where the shield channel A was always the DCC main and channel B was always the DCC prog track, TM allows:</p>
+<p>Unlike the older version of <strong>DCC-EX</strong>, where the shield channel A was always the DCC main and channel B was always the DCC prog track, TM allows:</p>
 <ul>
 <li>None, any or all the tracks can be DCC Main.</li>
 <li>None or ONE track may be DCC prog at any given time.</li>
@@ -7230,7 +7230,7 @@ When setting a track to MAIN (or DC, DCX see later) the power is applied accordi
 <h2 id="using-the-track-manager-dc">Using the Track Manager (DC)<a class="headerlink" href="#using-the-track-manager-dc" title="Permanent link">&para;</a></h2>
 <p>TM allows any or all of your tracks to be individually selected as a DC track which responds to throttle commands on any given loco address. So for example if track A is set to DC address 55, then any throttle commands to loco 55 will be transmitted as DC onto track A and thus a DC loco can be driven along that track. almost exactly as if it was DCC.
 Your throttle (JMRI, EX-Webthrottle, Withrottle, Engine Driver etc.) do not know or care that this is a DC loco so nothing needs to change.</p>
-<p>For a simple Command Station setup to run just two DC tracks instead of DCC, you only need to assign DC addresses to tracks A and B. If you want DCC on track A and DC on track B, you just need to set track B to a suitable DC address.</p>
+<p>For a simple <strong>EX-CommandStation</strong> setup to run just two DC tracks instead of DCC, you only need to assign DC addresses to tracks A and B. If you want DCC on track A and DC on track B, you just need to set track B to a suitable DC address.</p>
 <p>The command to set a track to a DC address is as follows</p>
 <ul>
 <li><code>&lt;=t DC a&gt;</code> Sets track t (A..H) to use loco address, example &lt;=A DC 3&gt;</li>
@@ -7317,7 +7317,7 @@ If however you are just running a ROUTE you can always do something like this:</
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 16, 2026 03:51:19 UTC">June 16, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 17, 2026 11:04:31 UTC">June 17, 2026</span>
   </span>
 
     

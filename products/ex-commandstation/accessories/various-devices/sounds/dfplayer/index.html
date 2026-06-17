@@ -7115,7 +7115,7 @@
 <li>Only limited by your imagination</li>
 </ol>
 <h2 id="hardware-connection">Hardware connection<a class="headerlink" href="#hardware-connection" title="Permanent link">&para;</a></h2>
-<p>Because the DFPlayer is a Serial device, this can be inconvenient for <strong>EX-CommandStation</strong> with limited serial pins available (eg CSB-1) so dcc-ex provides an additional HAL driver to access the device over I2C with a suitable UART breakout board.</p>
+<p>Because the DFPlayer is a Serial device, this can be inconvenient for <strong>EX-CommandStation</strong> with limited serial pins available (eg CSB-1) so <strong>DCC-EX</strong> provides an additional HAL driver to access the device over I2C with a suitable UART breakout board.</p>
 <p>Please see the relevant connection details:</p>
 <ul>
 <li><a href="../serial-dfplayer/">DFPlayer Serial connection</a></li>
@@ -7125,7 +7125,7 @@
 <p>The DFPlayer read audio files from a microSD flash card. If audio files are copied in the root directory, then the order of the copying determine which audio file will be the 1st.  So when a command is sent to the DFPlayer to play track 1, it will play the 1st audio file that was copied on the microSD card.</p>
 <p>To control consistently which audio file is to be played, the DFPlayer needs a folder structure. Folders need to be named 01, 02, 03 . . . . 99, and the audio files in each folder need to be named 001.mp2, 002.mp3 up to 255.mp3. Audio files in MP3 format are preferred, but WAV format is also supported, but take up more space.</p>
 <p>Audio files may be renamed from ‘my favourite song.mp3’ to ‘001My favourite song.mp3’ as per DFPlayer manual.</p>
-<p>The (current) exception is an audio file that is to be played continuously with the DF_REPEATPLAY command, as there is no DFPlayer REPEAT command to play a specific audio file in a specific folder. Therefor it is recommended to store the audio file that needs to be played continuously in the root folder and name it ‘001.mp3’.</p>
+<p>The (current) exception is an audio file that is to be played continuously with the DF_REPEATPLAY command, as there is no DFPlayer REPEAT command to play a specific audio file in a specific folder. Therefore it is recommended to store the audio file that needs to be played continuously in the root folder and name it ‘001.mp3’.</p>
 <h2 id="providing-sound-files">Providing sound files<a class="headerlink" href="#providing-sound-files" title="Permanent link">&para;</a></h2>
 <p>the DFPlayer has a strange behaviour when the audio files are stored in the root directory. It does not look at the file name for example 001.mp3 to play file 001.mp3, but will play the 1st file that has been copied on the microSD card when it receives the command to play file 1. To solve this issue, a directory structure must be in place.</p>
 <p>The DFLayer implementation require a directory named 01 to 99, and should contain all the audio files named 001.mp3 to 255.mp3. The format <code>001&lt;sound title&gt;.mp3</code> is also supported.</p>
@@ -7152,7 +7152,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 16, 2026 11:01:09 UTC">June 16, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 17, 2026 11:04:31 UTC">June 17, 2026</span>
   </span>
 
     

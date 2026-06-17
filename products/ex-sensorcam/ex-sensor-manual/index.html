@@ -9095,7 +9095,6 @@ You may also increase the image display window size by editing the <em>final int
 <p>The operation of the railway depends on a Control Station that polls the sensorCAM for sensor states. This might be a dedicated Arduino Mega 2560 for example. It might be an <em>EX-CSB1</em>* Command Station running DCC-EX and <strong>EXRAIL</strong> software. If the sensorCAM is powered up with default settings (from EPROM), or adjusted by the user at the start, the program need only talk to sensorCAM over an i2c bus using the commands a,b,i,l &amp; o for example, or it may be more sophisticated, providing a channel from a Control Station console to the sensorCAM to enable all configuration commands via the i2c bus.</p>
 <p>The i2c bus is running at 100kHz on the prototype software. It has not been tested at any higher speed yet. It is running fine over a 20m long i2c bus to the master microcontroller(mpu or Mega).</p>
 <h3 id="82-dcc-ex-command-station">8.2   DCC-EX Command Station<a class="headerlink" href="#82-dcc-ex-command-station" title="Permanent link">&para;</a></h3>
-<hr />
 <p>Setting up a DCC-EX Command Station, should you have one, requires configuration details placed in files config.h and mySetup.h along with a driver IO_EXSensorCAM.h and myAutomation.h. These must go in the directory containing file CommandStation-EX.ino. The IO_EXSensorCAM.h driver is based on the modified IO_EXIOExpander.h code. Refer to <strong>APPENDIX H</strong> for installation details. <em>EXSensorCAM.h</em> code mirrors the i,I,o,t &amp; m commands, while the EXIODPUP command may serve as the enable function(a). EXIOExpander.h codes don't have the "control &amp; setup" sensorCAM functions otherwise available from a USB console so additional functionality was added using the DCC-EX sensorCAM native command&lt;N&gt;(if using the newest CamParser.cpp).</p>
 <h3 id="83-non-dcc-ex-system">8.3 Non-DCC-EX system<a class="headerlink" href="#83-non-dcc-ex-system" title="Permanent link">&para;</a></h3>
 <p>Proprietary Master:  If writing raw code for another Command Station, you will need details on the protocol used by sensorCAM on the i2c bus, and code to interpret the bus bytes and reconstitute text for the console. Two such prototype examples exists. V155 of sensorCAM incorporates a subset of the DCC-EX IOexpander codes so that <strong>EXRAIL</strong> can use sensorCAM without further modification. V301 &amp; later mostly use ASCII code characters.</p>
@@ -9693,7 +9692,7 @@ Note: WROVER-CAM does not have a fitted external antenna socket like the ESP32-C
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 17, 2026 03:16:04 UTC">June 17, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 17, 2026 11:04:31 UTC">June 17, 2026</span>
   </span>
 
     
