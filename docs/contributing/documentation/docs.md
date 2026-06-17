@@ -10,9 +10,9 @@ Refer to the [Markdown Guide](https://www.markdownguide.org/).
 
 ## How to Contribute
 
-For contributions from the general public, we recommend forking the [GitHub repository](https://github.com/DCC-EX/dcc-ex.github.io) and submitting pull requests for the DCC-EX Documenter team to review and merge.
+For contributions from the general public, we recommend forking the [GitHub repository](https://github.com/DCC-EX/dcc-ex.github.io) and submitting pull requests for the **DCC-EX** Documenter team to review and merge.
 
-If you wish to contribute more fully and become a part of the DCC-EX Documenter team, reach out to us via [Discord](https://discord.gg/y2sB4Fp). To gain access to the [GitHub repository](https://github.com/DCC-EX/dcc-ex.github.io), one of the DCC-EX team administrators will need to add you to the "Web" team in GitHub.
+If you wish to contribute more fully and become a part of the **DCC-EX** Documenter team, reach out to us via [Discord](https://discord.gg/y2sB4Fp). To gain access to the [GitHub repository](https://github.com/DCC-EX/dcc-ex.github.io), one of the **DCC-EX** team administrators will need to add you to the "Web" team in GitHub.
 
 ## MkDocs Links
 
@@ -21,7 +21,7 @@ Here are some handy links with more info:
 - [MkDocs website](https://www.mkdocs.org/) - The official MkDocs documentation.
 - [MkDocs Material theme](https://squidfunk.github.io/mkdocs-material/) - The MkDocs Material theme documentation.
 - [MkDocs Awesome Nav plugin](https://lukasgeiter.github.io/mkdocs-awesome-nav/) - MkDocs Awesome Nav plugin is what we use for dynamic page structure.
-- [MkDocs RSS plugin](https://guts.github.io/mkdocs-rss-plugin/) - The MkDocs RSS Plugin publishes our DCC-EX News feed.
+- [MkDocs RSS plugin](https://guts.github.io/mkdocs-rss-plugin/) - The MkDocs RSS Plugin publishes our **DCC-EX** News feed.
 - [MkDocs Open in New Tab plugin](https://github.com/JakubAndrysek/mkdocs-open-in-new-tab) - The Open in New Tab plugin ensures all links to external websites open in a new tab to ensure the users' browsing experience in our documentation is consistent.
 
 ## What You Need to Install

@@ -2,7 +2,7 @@
 
 The following example creates a C++ function to display loco details on an OLED screen. By using a generic HAL driver, the function can be invoked repeatedly according to a time delay.
 
-BEWARE that code like this is sensitive to many restrictions such as time taken and memory use. It is also subject to version changes in some of the internal dcc-ex routines so is only given here as an example.
+BEWARE that code like this is sensitive to many restrictions such as time taken and memory use. It is also subject to version changes in some of the internal **DCC-EX** routines so is only given here as an example.
 
 **EXRAIL** macros cannot be used inside STEALTH sections. Users using STEALTH and STEALTH_GLOBAL are expected to understand the implications and the C++ language features used and the need to avoid any lengthy process.
 

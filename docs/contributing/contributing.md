@@ -1,6 +1,6 @@
 # How Can I Contribute?
 
-The DCC-EX Team has several projects and sub teams where you can help donate your expertise. See the sections below for the project or projects you are interested in.
+The **DCC-EX** Team has several projects and sub teams where you can help donate your expertise. See the sections below for the project or projects you are interested in.
 
 ## Documentation
 

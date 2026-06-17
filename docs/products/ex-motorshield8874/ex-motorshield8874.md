@@ -1,6 +1,6 @@
 # EX‑MotorShield8874
 
-Designed in conjunction with the DCC-EX development team, the **EX‑MotorShield8874** is extremely simple to use with all current and future generations of EX‑CommandStation hardware.
+Designed in conjunction with the **DCC-EX** development team, the **EX‑MotorShield8874** is extremely simple to use with all current and future generations of EX‑CommandStation hardware.
 
 This board is the new standard by which we compare other boards.
 
@@ -34,15 +34,15 @@ The **EX‑MotorShield8874** is available from many [suppliers](/purchasing/offi
 
 ## Licensing
 
-The **EX‑MotorShield8874** was created through the gracious support and design facilities of [Semify](https://www.semify-eda.com/), who, along with DCC-EX, license it to manufacturers. The hardware design has been made open source for individual users and the schematics are available on the DCC-EX GitHub repository.
+The **EX‑MotorShield8874** was created through the gracious support and design facilities of [Semify](https://www.semify-eda.com/), who, along with **DCC-EX**, license it to manufacturers. The hardware design has been made open source for individual users and the schematics are available on the **DCC-EX** GitHub repository.
 
-For quantities of 10 or less per annum, you may utilise a PCB manufacturing and assembly service such as JLCPCB without licensing fees. A donation to DCC-EX would be appreciated, so click the [donate](/contributing/contributing.md) button. The production files are available on the DCC-EX GitHub.
+For quantities of 10 or less per annum, you may utilise a PCB manufacturing and assembly service such as JLCPCB without licensing fees. A donation to **DCC-EX** would be appreciated, so click the [donate](/contributing/contributing.md) button. The production files are available on the **DCC-EX** GitHub.
 
-Entrepreneurs wanting to use the design to offer commercial quantities to their local communities should contact Semify (service @ semify-eda.com) to arrange a bulk purchase or DCC-EX (support @ dcc-ex.com) for a license to manufacture. Licensing includes donating a royalty to DCC-EX per board sold.
+Entrepreneurs wanting to use the design to offer commercial quantities to their local communities should contact Semify (service @ semify-eda.com) to arrange a bulk purchase or **DCC-EX** (support @ dcc-ex.com) for a license to manufacture. Licensing includes donating a royalty to **DCC-EX** per board sold.
 
 ## Assembly with EX-MotorShield8874
 
-The shield stacks onto an *EX-CSB1** without modification. The *EX-CSB1** firmware must be configured with the EX-Installer to recognise the additional two tracks.
+The shield stacks onto an *EX-CSB1** without modification. The *EX-CSB1** firmware must be configured with the **EX-Installer** to recognise the additional two tracks.
 
 For self-built **EX-CommandStations**, please consult the relevant build instructions.
 

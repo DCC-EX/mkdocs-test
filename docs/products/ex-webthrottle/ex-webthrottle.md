@@ -56,7 +56,7 @@ This will install all the files to run locally on your machine. You won't need a
 **EX-WebThrottle** has a number of pages which you can switch between using the hamburger menu button (three horizontal bars) on the top left of the screen, or direct icon buttons at the top of the screen.
 
 * [Throttle](#throttle) *(the default page)*
-* [CV Programmer](#cv-porgramming)
+* [CV Programmer](#cv-programming)
 * [Routes/Automation](#routesautomation)
 * [Turnouts/Points](#turnoutspoints)
 * [WiFi configuration (EX-CSB1 or ESP32 ONLY. v5.7.0+ ONLY)](#wifi-configuration-ex-csb1-or-esp32-only-v570-only)
@@ -81,8 +81,6 @@ Next, click on the ``Connect EX-CS`` button.
 When using the serial connection, if the program finds any compatible devices, it will open a popup a window showing you a selection. It may show a line at the top such as "Arduino Mega 2560 (COM3)". Your com port may vary. Click on your board to select it and then click the ``Connect EX-CS`` button.
 
 You should then be connected to the **EX-CommandStation** and should see the response from the **EX-CommandStation** in the log textbox of the debug console at the bottom of the throttle window. Make sure your debug console is open. If it isn't, use the `Debug Console` slider button in the lower lower right to open it.
-
-chg xyz xyz
 
 When the **EX-CommandStation** is ready to use you should see ``[i] EX-CommandStation is READY`` appear in the log.
 
@@ -114,7 +112,7 @@ Once you are connected, you can also send commands directly to the **EX-CommandS
 
 e.g. You can send the ``<s>`` command in the "direct command" textbox to get status information from your **EX-CommandStation**. To do this just enter ``s`` (without the quotes) and press the `Send` button. |BR| You should see ``<iDCC-EX...>`` returned in the log window with your version, type of Arduino, type of motor driver, and some other information.
 
-You can send any DCC-EX Native command in this way.
+You can send any **DCC-EX** Native command in this way.
 
 ----
 
@@ -134,6 +132,8 @@ Once connected to a **EX-CommandStation**, The **Routes/Automation** page allows
 
 Clicking the `Set` button on a Route/Automation will activate it.
 
+<div style="clear: both;"></div>
+
 ----
 
 ## Turnouts/Points
@@ -143,6 +143,8 @@ Clicking the `Set` button on a Route/Automation will activate it.
 Once connected to a **EX-CommandStation**, The **Turnouts/Points** page allows you to throw or close any of the Turnouts/Points that have been stored in your **EX-CommandStation**, if any.
 
 Clicking either the `Throw` or `Close` buttons on a Turnout/Point will change it.
+
+<div style="clear: both;"></div>
 
 ----
 
@@ -160,15 +162,17 @@ To read a decoder address, place your loco on the PROG track and press `Read Add
 
 To write a decoder address, place you loco on the PROG track, enter the desired address into the ``DCC Address`` field and press `Write Address`.  If Successful or unsuccessful, a message to that effect will appear in the log.
 
-### CV Porgramming
+### CV Programming
 
 To read a CV, place your loco on the **PROG** track and press `Read CV`.  If Successful, the Value of the CV will be loaded in the ``CV Value`` field.  If unsuccessful, a message to that effect will appear in the log.
 
 To write a decoder address, place you loco on the **PROG** track, enter the desired CV into the ``CV Number`` field, the desired value into the ``CV Value`` field and press `Write CV`.  If Successful or unsuccessful, a message to that effect will appear in the log.
 
-You can use the ``Common CVs`` drop list to select a CV. The approprate value will be put into the `CV Number`` field on selection.
+You can use the ``Common CVs`` drop list to select a CV. The appropriate value will be put into the `CV Number`` field on selection.
 
 *Note: Programming on the Main (PoM) is not currently supported directly, though you can manually issue the appropriate commands from the throttle page.*
+
+<div style="clear: both;"></div>
 
 ----
 

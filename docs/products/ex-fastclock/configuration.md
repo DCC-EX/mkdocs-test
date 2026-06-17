@@ -14,7 +14,7 @@ The config.h file comes pre-configured to use the clock in standalone mode.  No 
 
 ## Serial Mode
 
-To communicatein Serial mode it is necessary to edit the config.h file and uncomment the following line:
+To communicate with Serial mode it is necessary to edit the ``config.h`` file and uncomment the following line:
 
 ```cpp
 //#define SEND_VIA_SERIAL true
@@ -31,7 +31,7 @@ To operate in I2C mode edit the config.h file and uncomment the following lines:
 //#define SEND_VIA_I2C true
 ```
 
-In this mode the CS will poll the FastClock to obtain the time.  It is necessary to set the same I2C address here as used in the myHal.cpp file within the CS.  This is set to a default of 0x55 (decimal 85) but can be set to some other value if this conflicts with othere I2C devices on your setup.
+In this mode the CS will poll the FastClock to obtain the time.  It is necessary to set the same I2C address here as used in the myHal.cpp file within the CS.  This is set to a default of 0x55 (decimal 85) but can be set to some other value if this conflicts with other I2C devices on your setup.
 
 ## Screen Header
 
@@ -63,7 +63,7 @@ The various configuration options are outlined below
 Connecting via Serial is the simplest option if available.  
 
 - Run a dupont cable from the TX pin on the arduino to a RX pin on the EX-CommandStation.  It is not usually necessary to run a cable from RX to the TX on the EX-CommandStation as  the FastClock is not receiving data back.
-- Find the Serial defines in the config.h file (or copy config.example.h to config.h if you dont have one), locate the following lines:
+- Find the Serial defines in the config.h file (or copy config.example.h to config.h if you don't have one), locate the following lines:
 
 ```cpp
 //#define SERIAL1_COMMANDS

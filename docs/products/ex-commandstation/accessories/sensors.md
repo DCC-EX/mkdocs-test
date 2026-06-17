@@ -21,7 +21,7 @@ The problem with BOTH these systems is that the sensors do not know the DCC addr
 
 Also block occupancy is no help if you think in terms of "the block isn't occupied so I can go into it" because you don't know if another train is already heading towards that block at 300kph.. (single line working or anything involving a crossover)
 
-Automation in DCC-EX is much simpler if you forget the "Oh, a train is approaching signal x which is red so I now need to find out which train it is and tell it to stop" and start thinking from the perspective of a driver...
+Automation in **DCC-EX** is much simpler if you forget the "Oh, a train is approaching signal x which is red so I now need to find out which train it is and tell it to stop" and start thinking from the perspective of a driver...
 
 It's much simpler to think "Im proceeding along track 4 in a westerly direction and when I get to the footbridge I must look ahead at signal x and start braking, then carry on to the coal yard and stop at the buffers."
 Position sensors are ideal for this kind of thing, block occupancy just doesnt cut it.

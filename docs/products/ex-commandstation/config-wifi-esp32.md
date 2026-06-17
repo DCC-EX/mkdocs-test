@@ -18,7 +18,7 @@ This page is exclusively for users of **EX-CommandStation** version 5.7.0 and la
 
 <span style="color:red;">The ``config.h`` options for WiFi configuration from EX-CommandStation versions prior to 5.7.0 are now ignored by the **EX-CSB1** or ESP32 **EX-CommandStation**.</span>
 
-If you are using an **EX-CSB1**, ESP32 based EX-CommandStation and are are using the latest DEVEL versions of the  EX-CommandStation code (versions from 5.7.0),</span> the ``config.h`` options for WiFi configuration are ignored by *EX-CSB1** or ESP32 **EX-CommandStation**. Instead you must use the instructions on this page.
+If you are using an **EX-CSB1**, ESP32 based EX-CommandStation and are are using the latest DEVEL versions of the  EX-CommandStation code (versions from 5.7.0),</span> the ``config.h`` options for WiFi configuration are ignored by **EX-CSB1** or ESP32 **EX-CommandStation**. Instead you must use the instructions on this page.
 
 Also see the [WiFi Configuration for version 5.7.0+ - Graphical User Interface Options](config-wifi-esp32-gui-options_not_in_nav.md) for detailed instructions on how, and why, to change these settings using EX-WebThrottle or EX-Toolbox.
 
@@ -31,7 +31,7 @@ WiFi has two operating modes:
 
 As shipped, or without prior configuration, the ESP32 WiFi default to operate in AP mode with an ssid/Password combination generated from the internal chip (mac) address. The ssid and password will be shown on the oLED display (typically something like "DCCEX_123abc"[^1] and "PASS_123abc") so you can connect you phone or tablet immediately and start running.
 d
-[^1]: Where `123abc`` will be the last 6 digits of the mac address of the wifi board on the device. As such it will be unique for every EX-CommandStation.
+[^1]: Where `123abc`` will be the last 6 digits of the mac address of the WiFi board on the device. As such it will be unique for every EX-CommandStation.
 
 Later, you may wish to reset the connection to use your home router as this avoids the need to reconnect your normal phone WiFi before using a throttle.
 
@@ -47,7 +47,7 @@ Its is recommended that you don't do this while running trains.
 <C WIFI "routerSSID" "routerPassword">
 ```
 
-The **EX-CommandStation** will attempt this connection immediately, and on each rerstart. If it fails to connect, it will revert to AP mode.
+The **EX-CommandStation** will attempt this connection immediately, and on each restart. If it fails to connect, it will revert to AP mode.
 
 ## Changing the Access Point defaults
 

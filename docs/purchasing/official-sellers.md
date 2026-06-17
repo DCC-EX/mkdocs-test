@@ -1,10 +1,10 @@
 # Official DCC-EX Suppliers
 
-With the ever increasing demand for hardware that is guaranteed to be DCC-EX compatible, and the uptake of EX-CommandStation by more Conductor level users, we are striving to make the DCC-EX ecosystem more accessible.
+With the ever increasing demand for hardware that is guaranteed to be **DCC-EX** compatible, and the uptake of EX-CommandStation by more Conductor level users, we are striving to make the **DCC-EX** ecosystem more accessible.
 
-As part of that, and starting with the release of the EX-MotorShield8874, we have a number of official DCC-EX dealers that can supply various different hardware devices as well as complete EX-CommandStation systems.
+As part of that, and starting with the release of the EX-MotorShield8874, we have a number of official **DCC-EX** dealers that can supply various different hardware devices as well as complete EX-CommandStation systems.
 
-The dealers listed on this page work with the DCC-EX team to ensure these devices are compatible.
+The dealers listed on this page work with the **DCC-EX** team to ensure these devices are compatible.
 
 !!! note "International purchasers"
 

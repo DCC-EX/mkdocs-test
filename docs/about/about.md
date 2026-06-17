@@ -1,4 +1,4 @@
-# About the DCC-EX Project
+# About the **DCC-EX** Project
 
 Who is behind all this? And will they ever face justice? Who knows, but the following is a list of those names associated with taking over Gregg Berman’s original DCC++ BaseStation Project, and rewriting/expanding it into EX‑CommandStation and the wider DCC-EX project.
 
@@ -12,7 +12,7 @@ See the [History page](history.md).
 
 ## The DCC-EX Team
 
-The DCC-EX team is a worldwide group of enthusiasts who volunteer their time to produce the DCC-EX project, making model trains accessible and affordable for everyone.
+The **DCC-EX** team is a worldwide group of enthusiasts who volunteer their time to produce the **DCC-EX** project, making model trains accessible and affordable for everyone.
 
 *Names below in parentheses are screen names on TrainBoard and Discord.*
 

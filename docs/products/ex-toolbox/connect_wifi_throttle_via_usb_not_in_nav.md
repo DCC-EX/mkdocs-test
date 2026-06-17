@@ -31,7 +31,7 @@ SerialToIPGUI
 
 * start SerialToIPGUI
 * Select the correct COM port for the **EX-CommandStation**
-* Enter the port of '2560' 
+* Enter the port of '2560'
 * Click ``Start``
 
 Once started...
@@ -40,7 +40,7 @@ Once started...
 * On the connection screen/fields:
 
 * Enter the IP address of your PC (The one running socat or SerialToIPGUI)
-* Enter the port of '2560' 
+* Enter the port of '2560'
 
 * Connect
 

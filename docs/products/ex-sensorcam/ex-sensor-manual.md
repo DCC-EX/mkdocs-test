@@ -406,7 +406,7 @@ The operation of the railway depends on a Control Station that polls the sensorC
 The i2c bus is running at 100kHz on the prototype software. It has not been tested at any higher speed yet. It is running fine over a 20m long i2c bus to the master microcontroller(mpu or Mega).
 
 ### 8.2   DCC-EX Command Station
-****
+
 Setting up a DCC-EX Command Station, should you have one, requires configuration details placed in files config.h and mySetup.h along with a driver IO_EXSensorCAM.h and myAutomation.h. These must go in the directory containing file CommandStation-EX.ino. The IO_EXSensorCAM.h driver is based on the modified IO_EXIOExpander.h code. Refer to **APPENDIX H** for installation details. _EXSensorCAM.h_ code mirrors the i,I,o,t & m commands, while the EXIODPUP command may serve as the enable function(a). EXIOExpander.h codes don't have the "control & setup" sensorCAM functions otherwise available from a USB console so additional functionality was added using the DCC-EX sensorCAM native command<N\>(if using the newest CamParser.cpp).
 
 ### 8.3 Non-DCC-EX system

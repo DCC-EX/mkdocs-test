@@ -2,7 +2,7 @@
 
  (LOTS OF ==TODO== in this file)
 
-The simplest and most direct testing method is to use a serial monitor to talk directly to the USB connection of your **EX-CommandStation**. This is a fundamental aspect of the Arduino system and thus avoids issues such as wifi connections. Indeed, this is the only way to see what's going wrong if your problems are wifi or Etrhernet related.
+The simplest and most direct testing method is to use a serial monitor to talk directly to the USB connection of your **EX-CommandStation**. This is a fundamental aspect of the Arduino system and thus avoids issues such as WiFi connections. Indeed, this is the only way to see what's going wrong if your problems are WiFi or Ethernet related.
 
 ## Serial Monitors
 

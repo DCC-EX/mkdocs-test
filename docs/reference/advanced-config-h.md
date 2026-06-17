@@ -2,7 +2,7 @@
 
 The basic Motor Shield, WiFi and Ethernet settings are covered in detail in [basic config.h](/products/ex-commandstation/config-h.md)
 
-The following additional settings are for special cases and are not normally created automatically by the EX-Installer.
+The following additional settings are for special cases and are not normally created automatically by the **EX-Installer**.
 
 These options should be coded in the file `config.h` which will be automatically included in the compilation process.
 
@@ -28,7 +28,7 @@ NOTE: Before connecting these boards and selecting one in this software check th
 
 ### Motor shield max current
 
-If you want to restrict the maximum current LOWER than what your motor shield can provide, you can do that here. For example if you have a motor shield that can provide 5A and your power supply can only provide 2.5A then you should restrict the maximum current to 2.25A (90% of 2.5A) so that DCC-EX shuts off the track before your PS does shut DCC-EX. MAX_CURRENT is in mA so for this example it would be 2250, adjust the number according to your PS. If your PS has a higher rating than your motor shield you do not need this. You can use this as well if you are cautious and your trains do not need full current.
+If you want to restrict the maximum current LOWER than what your motor shield can provide, you can do that here. For example if you have a motor shield that can provide 5A and your power supply can only provide 2.5A then you should restrict the maximum current to 2.25A (90% of 2.5A) so that **DCC-EX** shuts off the track before your PS does shut **DCC-EX**. MAX_CURRENT is in mA so for this example it would be 2250, adjust the number according to your PS. If your PS has a higher rating than your motor shield you do not need this. You can use this as well if you are cautious and your trains do not need full current.
 
 ```cpp
 #define MAX_CURRENT 2250
@@ -99,7 +99,7 @@ You are advised to turn this off to save memory. It is automatically turned of o
 
 ## Disable PROG
 
-If you do not need programming capability, you can disable all program track related commands. You might want to do that if you are building a command station that drives multiple tracks and you do not have a spare track output for programming.
+If you do not need programming capability, you can disable all program track related commands. You might want to do that if you are building a **EX-CommandStation** that drives multiple tracks and you do not have a spare track output for programming.
 
 ```cpp
  #define DISABLE_PROG
@@ -123,7 +123,7 @@ DCC-EX does not support using the same address, for example 100(long) and 100(sh
 
 ## Redefine locomotive state table size
 
-This is the maximum number of locos that can be controlled at the same time. This defaults to 50 (8 on a UNO/NANO). If you have enough free memory you can increase this to a maximum of 255. If you are short of memory (typically a Mega with WiFi and lots of accessories) you can decrease it  to a minimum of 2. RAM is only used for locos that have been throttled since the Command Station was started so you cannot save RAM by setting this.  
+This is the maximum number of locos that can be controlled at the same time. This defaults to 50 (8 on a UNO/NANO). If you have enough free memory you can increase this to a maximum of 255. If you are short of memory (typically a Mega with WiFi and lots of accessories) you can decrease it  to a minimum of 2. RAM is only used for locos that have been throttled since the **EX-CommandStation** was started so you cannot save RAM by setting this.  
 
 ```cpp
 #define MAX_LOCOS 100
@@ -143,7 +143,7 @@ By default, the driver which defines a DCC accessory decoder does send out the s
 #define HAL_ACCESSORY_COMMAND_REVERSE
 ```
 
-If you have issues with that the direction of the accessory commands is reversed (for example when converting from another CS to DCC-EX) then you can use this to reverse the sense of all accessory commands sent over DCC-EX. This #define likewise inverts the behaviour of the `<a>` command for triggering DCC Accessory Decoders, so that `<a addr subaddr 0>` generates a DCC packet with D=1 (close turnout/point) and `<a addr subaddr 1>` generates D=0 (throw turnout/point).
+If you have issues with that the direction of the accessory commands is reversed (for example when converting from another CS to **DCC-EX**) then you can use this to reverse the sense of all accessory commands sent over **DCC-EX**. This #define likewise inverts the behaviour of the `<a>` command for triggering DCC Accessory Decoders, so that `<a addr subaddr 0>` generates a DCC packet with D=1 (close turnout/point) and `<a addr subaddr 1>` generates D=0 (throw turnout/point).
 
 ```cpp
 #define DCC_ACCESSORY_COMMAND_REVERSE

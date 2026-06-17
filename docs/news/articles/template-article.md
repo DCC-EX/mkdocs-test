@@ -9,7 +9,7 @@ categories:
 
 # Template DCC-EX News Article
 
-Copy this template to create new DCC-EX News articles, and update as per the below instructions.
+Copy this template to create new **DCC-EX** News articles, and update as per the below instructions.
 
 **NOTE: This draft will always show in the local preview, but not when deploying to GitHub Pages.**
 

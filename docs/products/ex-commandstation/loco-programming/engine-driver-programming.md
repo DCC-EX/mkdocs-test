@@ -4,9 +4,9 @@ The [Engine Driver Android app](https://play.google.com/store/apps/details?id=jm
 
 ## Accessing the DCC-EX page
 
-Touching either the DCC-EX Menu item or the button will open the "DCC-EX" screen.
+Touching either the **DCC-EX** Menu item or the button will open the "DCC-EX" screen.
 
-On the DCC-EX Screen you can use the "Action" pulldown to select Programming Track (Service Mode)
+On the **DCC-EX** Screen you can use the "Action" pulldown to select Programming Track (Service Mode)
 
 The commands do assume that you have the loco on the PROG track, and that it is clean etc.
 
@@ -28,10 +28,10 @@ Optionally, you can use the 'NRMA CVs' pulldown to select a common CV from a lis
 
 ## More Information
 
-See the [Engine Driver documentaion web site](https://enginedriver.mstevetodd.com/operation/dcc-ex-native-protocol.html#gsc.tab=0) for more detailed infomation.
+See the [Engine Driver documentaion web site](https://enginedriver.mstevetodd.com/operation/dcc-ex-native-protocol.html#gsc.tab=0) for more detailed information.
 
 These features are only available when the [DCC-EX Native Protocol preference](https://enginedriver.mstevetodd.com/operation/dcc-ex-native-protocol.html#how-to-enable-the-dcc-ex-native-protocol) is enabled. The WiThrottle protocol does not include programming.
 
-## If things dont work
+## If things don't work
 
 The best way to diagnose problems is to use a serial monito and the underlying commands. See [Diagnostics](/products/ex-commandstation/loco-programming/serial-programming.md#diagnostics-when-things-dont-work)

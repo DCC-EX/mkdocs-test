@@ -1,6 +1,6 @@
-# Command Station Internal Architecture
+# **EX-CommandStation** Internal Architecture
 
-The DCC-EX Command Station code is layered to reduce overall complexity and improve the ability to add new features. The most important layers are:
+The **DCC-EX** **EX-CommandStation** code is layered to reduce overall complexity and improve the ability to add new features. The most important layers are:
 
 - DCC packet API  (DCC.h)  
     - provides loco speed/function and accessory control functions

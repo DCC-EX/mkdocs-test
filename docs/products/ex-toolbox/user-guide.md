@@ -76,7 +76,7 @@ On this screen you can:
 
 ## Issuing DCC-EX Serial Commands (`<>`)
 
-On several of the screens in **EX‑Toolbox** you can issue native DCC-EX Serial ``<>`` commands to your EX‑CommandStation.
+On several of the screens in **EX‑Toolbox** you can issue native **DCC-EX** Serial ``<>`` commands to your EX‑CommandStation.
 
 Enter the command you want to send, and click ``Send``.
 

@@ -4,7 +4,7 @@ ESP32-WROOM-32 was selected as the microprocessor for the EX-CSB1. Although folk
 
 !!! warning "ESP32 Wroom Only!"
 
-    The only Espressif ESP32 microprocessor we support is the ESP32 Wroom. Espressif has released numerous ESP32 modules and variants (S2, S3, C3 etc.) but these are **NOT** supported. Other variants do not have the necessary RMT hardware, or do not have enough such hardware to run DCC-EX.
+    The only Espressif ESP32 microprocessor we support is the ESP32 Wroom. Espressif has released numerous ESP32 modules and variants (S2, S3, C3 etc.) but these are **NOT** supported. Other variants do not have the necessary RMT hardware, or do not have enough such hardware to run **DCC-EX**.
 
 ## Advantages of the ESP32
 

@@ -14,7 +14,7 @@ SC16IS750 breakout board hookup
 
 ## I2C address selection
 
-The I2C addresses shown in Table 2 are different from the addresses shown in the datasheet, this is because the datasheet include the LSB in the address, the DCC-EX system start the I2C address at bit 1 (shifted). The I2C addresses in Table 2 are correct for the DCC-EX system and for the examples in section 3.
+The I2C addresses shown in Table 2 are different from the addresses shown in the datasheet, this is because the datasheet include the LSB in the address, the **DCC-EX** system start the I2C address at bit 1 (shifted). The I2C addresses in Table 2 are correct for the **DCC-EX** system and for the examples in section 3.
 
 | A1  | A0  | I2C Address |
 |-----|-----|-------------|

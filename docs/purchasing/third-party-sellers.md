@@ -20,8 +20,8 @@
 
 ---
 
-## ![US Flag](/_static/images/icons/flag_uk_small.png) Command Station Rack (The Mac Rack)  
-  Created by Neil McKechnie, this is a rack style 3D printed case that can hold the Command Station Arduino, Motor Shield and Raspberry Pi.
+## ![US Flag](/_static/images/icons/flag_uk_small.png) **EX-CommandStation** Rack (The Mac Rack)  
+  Created by Neil McKechnie, this is a rack style 3D printed case that can hold the **EX-CommandStation** Arduino, Motor Shield and Raspberry Pi.
 
   [Neil's DCC++/EX Controller Case](https://wakwak2popo.wordpress.com/2021/01/04/dcc-controller-case/)
 
@@ -30,7 +30,7 @@
 ---
 
 ## ![US Flag](/_static/images/icons/flag_us_small.png) Sumner's Mega Dual Configuration Case (3D Print) 
-  Created by Sumner Patterson, this is a range of Mega Command Station cases with different configurations and different tops at different heights to handle your boards:
+  Created by Sumner Patterson, this is a range of Mega **EX-CommandStation** cases with different configurations and different tops at different heights to handle your boards:
 
   * Uno and Motor Shield Case
   * Mega and Motor Shield Case

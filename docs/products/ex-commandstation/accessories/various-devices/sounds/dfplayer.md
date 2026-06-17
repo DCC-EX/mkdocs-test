@@ -17,7 +17,7 @@ An example of a layout line side sound scenario of what can be achieved with two
 
 ## Hardware connection
 
-Because the DFPlayer is a Serial device, this can be inconvenient for **EX-CommandStation** with limited serial pins available (eg CSB-1) so dcc-ex provides an additional HAL driver to access the device over I2C with a suitable UART breakout board.
+Because the DFPlayer is a Serial device, this can be inconvenient for **EX-CommandStation** with limited serial pins available (eg CSB-1) so **DCC-EX** provides an additional HAL driver to access the device over I2C with a suitable UART breakout board.
 
 Please see the relevant connection details:
 
@@ -32,7 +32,7 @@ To control consistently which audio file is to be played, the DFPlayer needs a f
 
 Audio files may be renamed from ‘my favourite song.mp3’ to ‘001My favourite song.mp3’ as per DFPlayer manual.
 
-The (current) exception is an audio file that is to be played continuously with the DF_REPEATPLAY command, as there is no DFPlayer REPEAT command to play a specific audio file in a specific folder. Therefor it is recommended to store the audio file that needs to be played continuously in the root folder and name it ‘001.mp3’.
+The (current) exception is an audio file that is to be played continuously with the DF_REPEATPLAY command, as there is no DFPlayer REPEAT command to play a specific audio file in a specific folder. Therefore it is recommended to store the audio file that needs to be played continuously in the root folder and name it ‘001.mp3’.
 
 ## Providing sound files
 

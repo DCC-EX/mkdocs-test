@@ -8,7 +8,7 @@ The volt and current requirements for your track vary according to the scale of 
 
 These recommendations are generalised, and you must check to make sure they don't exceed your loco and DCC decoder manufacturer's recommendations.
 
-| **Scale**     | **Recommended Voltage (DC)** | **Minimum Current (Amps)** | **Notes**                                                                 |
+| **Scale**     | **Recommended Voltage (DC)** | **Minimum Current (Amps)**  | **Notes**                                                                 |
 |---------------|------------------------------|-----------------------------|---------------------------------------------------------------------------|
 | Z (1:220)     | 10–12V                       | 2A                          | Lower voltage protects tiny motors; avoid exceeding 12V.                  |
 | N (1:160)     | 12V                          | 3A                          | Most decoders rated for 12V max; higher voltages increase brush wear.     |

@@ -32,7 +32,7 @@ These consists can be built with
 
 ## EX-CommandStation consists with **EXRAIL**
 
-Command Station consists can be built up with **EXRAIL** commands:
+**EX-CommandStation** consists can be built up with **EXRAIL** commands:
 
 ```BUILD_CONSIST(newloco)```  adds the new loco to follow the existing task loco. Specifying newloco as negative means the loco is facing the opposite way to the rest of the consist.
 

@@ -1,6 +1,6 @@
 # UDP Audio Driver for DCC-EX
 
-UDPAudio is a HAL driver that enables UDP network audio control for Waveshare ESP32-S3 audio nodes (or any compatible UDP audio device). It allows DCC-EX to control multiple audio nodes simultaneously over WiFi, supporting play, stop, pause, resume, volume, and folder selection commands with full WAITFOR feedback.
+UDPAudio is a HAL driver that enables UDP network audio control for Waveshare ESP32-S3 audio nodes (or any compatible UDP audio device). It allows **DCC-EX** to control multiple audio nodes simultaneously over WiFi, supporting play, stop, pause, resume, volume, and folder selection commands with full WAITFOR feedback.
 
 ## Features
 
@@ -21,7 +21,7 @@ UDPAudio is a HAL driver that enables UDP network audio control for Waveshare ES
 The UDPAudio is connected to a number of separate WaveShare tracks by defining VPINs in myAutomation.h
 
 You can create a consecutive range of VPINS with a single HAL statement and also have multiple HAL statements for other pins or ranges.
-The vpin numbers will be broadcast to waveshare devices which are respoinsible for recognizing their own vpin.
+The vpin numbers will be broadcast to waveshare devices which are responsible for recognizing their own vpin.
 
 ```cpp  
 // Node 1: Station (VPIN 11000)  

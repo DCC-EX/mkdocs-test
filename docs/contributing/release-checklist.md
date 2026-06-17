@@ -2,7 +2,7 @@
 
 Everything on this page supports the team being able to determine when these docs can be released.
 
-This is a list of to do items that will allow us to release this new documentation, and move the existing to a separate "legacy-docs" URL for reference only.
+This is a list of to do items that will allow us to release this new documentation, and move the existing to a separate 'legacy-docs' URL for reference only.
 
 ## Content
 
@@ -38,7 +38,7 @@ This is a list of to do items that will allow us to release this new documentati
     - [ ] USB issues - drivers, cables, ports, permissions, other programs open
     - [ ] WiFi/serial interfering
     - [ ] WiFi issues
-    - [ ] EX-Installer common issues
+    - [ ] **EX-Installer** common issues
     - [ ] Not seeing roster/routes/turnouts in throttles/JMRI
 
 - I2C more accessible information:
@@ -50,7 +50,7 @@ This is a list of to do items that will allow us to release this new documentati
 
 - Purchasing information for hardware:
 
-    - [x] Official DCC-EX reseller stores
+    - [x] Official **DCC-EX** reseller stores
     - [x] Recommended third-party suppliers
 
 - [ ] **EXRAIL** command reference from doxyGen
@@ -73,7 +73,7 @@ This is a list of to do items that will allow us to release this new documentati
 
 ## Menu and Page Structure
 
-- [ ] All hardware pages should "next" onto the EX-Installer EX-CommandStation configuration instructions, maybe nav plugin extension, maybe JS
+- [ ] All hardware pages should "next" onto the **EX-Installer** EX-CommandStation configuration instructions, maybe nav plugin extension, maybe JS
 - If DIY on tap nav menu, RTR must be their too, choose:
 
     - [x] Both DIY and RTR on nav menu

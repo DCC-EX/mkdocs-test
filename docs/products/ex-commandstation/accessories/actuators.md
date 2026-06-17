@@ -19,8 +19,8 @@ Servo actuators generally use a [PCA9685](?PCA9685) device which can connect up 
 [EXRAIL](?EXRAIL) is used to
 
 - Define the PCA9685 connection and its address so that each output can be given a unique [VPIN](?VPIN) to control it.
-- For turnouts/points define a [SERVO_TURNOUT](?SERVO_TURNOUT) for each VPIN so that the rest of DCC-EX can throw or close this turnout/point without knowledge of the underlying mechanism.
-- For semaphore signals, define a [SERVO_SIGNAL](?SERVO_SIGNAL) to that the rest of DCC-EX can control the signal.
+- For turnouts/points define a [SERVO_TURNOUT](?SERVO_TURNOUT) for each VPIN so that the rest of **DCC-EX** can throw or close this turnout/point without knowledge of the underlying mechanism.
+- For semaphore signals, define a [SERVO_SIGNAL](?SERVO_SIGNAL) to that the rest of **DCC-EX** can control the signal.
 - Control animation servos directly, such as crossing gates or shed doors.
 
 ## Digital actuators
