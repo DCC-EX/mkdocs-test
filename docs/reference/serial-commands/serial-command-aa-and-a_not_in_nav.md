@@ -1,9 +1,9 @@
----
+﻿---
 tags:
     - _a_address_subAddr_activate
     - _a_address_subAddr_activate_onoff
     - _a_address_activate
-    - _A_address_value
+    - _9A9_address_value
 ---
 
 # <small>``<A «address» «value»>``</small> <br/><small>``<a «address» [«subAddr»]|[«activate» [«onOff»]]>``</small> <br/>Instruct Accessory Decoders

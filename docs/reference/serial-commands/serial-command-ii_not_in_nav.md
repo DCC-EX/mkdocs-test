@@ -1,17 +1,17 @@
----
+﻿---
 tags:
-    - _I
-    - _I_id_ADD_position_value_angle
-    - _I_id_DCC_home
-    - _I_id_EXTT_vpin_home
-    - _I_id_position_activity
-    - _I_id_position
-    - _I_id
-    - _D_TT_vpin_steps_activity
-    - _D_TT_vpin_steps
-    - _J_O_id
-    - _J_O
-    - _J_P_id
+    - _9I9
+    - _9I9_id_9ADD9_position_value_angle
+    - _9I9_id_9DCC9_home
+    - _9I9_id_9EXTT9_vpin_home
+    - _9I9_id_position_activity
+    - _9I9_id_position
+    - _9I9_id
+    - _9D9_9TT9_vpin_steps_activity
+    - _9D9_9TT9_vpin_steps
+    - _9J9_9O9_id
+    - _9J9_9O9
+    - _9J9_9P9_id
 ---
 
 # <small>``<I [«id»] [«various parameters»]>``</small> <br/><small>``<D TT «vpin» «steps» [«activity]>``</small> <br/><small>``<J O [«id»]>``</small> &nbsp; <small>``<J P «id»>``</small><br/>Manage Turntables

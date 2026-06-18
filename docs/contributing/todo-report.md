@@ -1,6 +1,6 @@
 # TODO Report
 
-Scanned root: `C:\Users\akers\OneDrive\github\github_doco\mkdocs-test`
+Scanned docs root: `C:\GitHub\mkdocs-test\docs`
 
 Total TODO matches: 71
 

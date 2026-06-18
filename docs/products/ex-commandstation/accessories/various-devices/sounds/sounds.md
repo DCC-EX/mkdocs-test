@@ -1,16 +1,16 @@
----
+﻿---
 tags:
-  - _y_vpin_PLAY_track
-  - _y_vpin_PLAY_track_volume
-  - _y_vpin_REPEAT_track
-  - _y_vpin_REPEAT_track_volume
-  - _y_vpin_PAUSE
-  - _y_vpin_RESUME
-  - _y_vpin_STOP
-  - _y_vpin_FOLDER_folder
-  - _y_vpin_VOL_volume
-  - _y_vpin_EQ_eq
-  - _y_vpin_RESET
+  - _y_vpin_9PLAY9_track
+  - _y_vpin_9PLAY9_track_volume
+  - _y_vpin_9REPEAT9_track
+  - _y_vpin_9REPEAT9_track_volume
+  - _y_vpin_9PAUSE9
+  - _y_vpin_9RESUME9
+  - _y_vpin_9STOP9
+  - _y_vpin_9FOLDER9_folder
+  - _y_vpin_9VOL9_volume
+  - _y_vpin_9EQ9_eq
+  - _y_vpin_9RESET9
 ---
 
 # Sounds

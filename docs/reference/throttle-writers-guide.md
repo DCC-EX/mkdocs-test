@@ -1,16 +1,16 @@
----
+﻿---
 tags:
-  - _T
-  - _J_T
-  - _J_T_id
-  - _J_A
-  - _J_A_id
-  - _J_R
-  - _J_R_id
-  - _m_LINEAR
+  - _9T9
+  - _9J9_9T9
+  - _9J9_9T9_id
+  - _9J9_9A9
+  - _9J9_9A9_id
+  - _9J9_9R9
+  - _9J9_9R9_id
+  - _m_9LINEAR9
   - _m_loco_accelerating_braking
   - _m_loco_momentum
-  - _m_POWER
+  - _m_9POWER9
 ---
 
 # Throttle Writers Guide (doc incomplete)

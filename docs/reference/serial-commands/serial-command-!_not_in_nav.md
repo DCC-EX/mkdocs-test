@@ -1,10 +1,10 @@
----
+﻿---
 tags:
   - _!
-  - _!_P
-  - _!_R
-  - _!_Q
-  - _!_Q
+  - _!_9P9
+  - _!_9R9
+  - _!_9Q9
+  - _!_9Q9
 ---
 
 # ``<! [P|Q|R]>`` <br/>Emergency Stop (ESTOP) or Pause

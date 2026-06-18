@@ -1,19 +1,19 @@
----
+﻿---
 tags:
-    - _R
-    - _R_cv
-    - _R_LOCOID
-    - _R_CONSIST
+    - _9R9
+    - _9R9_cv
+    - _9R9_9LOCOID9
+    - _9R9_9CONSIST9
     - _r_loco_cv
-    - _V_cv_bitPosition_bitvalue
-    - _V_cv_value
-    - _W_loco
-    - _W_CONSIST_loco
-    - _W_CONSIST_loco_REVERSE
-    - _W_cv_value
-    - _W_cv_bitPosition_bitValue
+    - _9V9_cv_bitPosition_bitvalue
+    - _9V9_cv_value
+    - _9W9_loco
+    - _9W9_9CONSIST9_loco
+    - _9W9_9CONSIST9_loco_9REVERSE9
+    - _9W9_cv_value
+    - _9W9_cv_bitPosition_bitValue
     - _w_loco_cv_value
-    - _B_cv_bitPosition_bitValue
+    - _9B9_cv_bitPosition_bitValue
     - _b_loco_cv_bitPosition_bitValue
 ---
 
@@ -174,7 +174,7 @@ no response.
     * ``1``-``127`` will be a short address
     * ``128``-``10293`` will be a long address
 
-    Note that addresses above ``9999`` cannot be used by *some* other brands of command station. So if you plan to take your loco to other layouts it is recommended that you avoid the ``10000``-``10293`` (inclusive) range.
+    Note that addresses above `9999`` cannot be used by *some* other brands of command station. So if you plan to take your loco to other layouts it is recommended that you avoid the ``10000``-``10293`` (inclusive) range.
 
 * **IMPORTANT:** If the loco is in a consist (CV19), the address returned by ``<R>`` will be the consist address, not the decoder address. To always get the decoder address, use ``<R LOCOID>`` instead.
 

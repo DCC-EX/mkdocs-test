@@ -1,8 +1,8 @@
----
+﻿---
 tags:
-  - _D_WIFI_ON
-  - _D_WIFI_OFF
-  - _D_WIFI_SHOW
+  - _9D9_9WIFI9_9ON9
+  - _9D9_9WIFI9_9OFF9
+  - _9D9_9WIFI9_9SHOW9
 ---
 
 # <small>``<D WIFI ON|OFF|SHOW>``</small> <br/> WiFi diagnostics

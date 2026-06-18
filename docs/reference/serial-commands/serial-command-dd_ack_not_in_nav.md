@@ -1,14 +1,14 @@
----
+﻿---
 tags:
-    - _C_PROGBOOST
-    - _D_ACK_LIMIT_value
-    - _D_ACK_MAX_value_MS
-    - _D_ACK_MAX_value
-    - _D_ACK_MIN_value_MS
-    - _D_ACK_MIN_value
-    - _D_ACK_OFF
-    - _D_ACK_ON
-    - _D_ACK_RETRY_value
+    - _9C9_9PROGBOOST9
+    - _9D9_9ACK9_9LIMIT9_value
+    - _9D9_9ACK9_9MAX9_value_9MS9
+    - _9D9_9ACK9_9MAX9_value
+    - _9D9_9ACK9_9MIN9_value_9MS9
+    - _9D9_9ACK9_9MIN9_value
+    - _9D9_9ACK9_9OFF9
+    - _9D9_9ACK9_9ON9
+    - _9D9_9ACK9_9RETRY9_value
 ---
 
 # <small>``<D ACK LIMIT|MAX|MIN|OFF|ON [«value» [MS]]>`` <br/>``<C PROGBOOST>``</small> <br/>Modify System PROG track settings

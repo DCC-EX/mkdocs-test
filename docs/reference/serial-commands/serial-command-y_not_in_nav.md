@@ -1,16 +1,16 @@
----
+﻿---
 tags:
-    - _y_vpin_EQ_eq
-    - _y_vpin_FOLDER_folder
-    - _y_vpin_PAUSE
-    - _y_vpin_PLAY_trackNumber_volume
-    - _y_vpin_PLAY_trackNumber
-    - _y_vpin_REPEAT_trackNumber_volume
-    - _y_vpin_REPEAT_trackNumber
-    - _y_vpin_RESET
-    - _y_vpin_RESUME
-    - _y_vpin_STOP
-    - _y_vpin_VOL_volume
+    - _y_vpin_9EQ9_eq
+    - _y_vpin_9FOLDER9_folder
+    - _y_vpin_9PAUSE9
+    - _y_vpin_9PLAY9_trackNumber_volume
+    - _y_vpin_9PLAY9_trackNumber
+    - _y_vpin_9REPEAT9_trackNumber_volume
+    - _y_vpin_9REPEAT9_trackNumber
+    - _y_vpin_9RESET9
+    - _y_vpin_9RESUME9
+    - _y_vpin_9STOP9
+    - _y_vpin_9VOL9_volume
 ---
 
 # <small>``<y «vpin» EQ|FOLDER|PAUSE|PLAY|REPEAT|RESET|RESUME|STOP|VOL [«various parameters»]>``</small> <br/> Play DF Player sounds

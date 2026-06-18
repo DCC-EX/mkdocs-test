@@ -1,19 +1,19 @@
----
+﻿---
 tags:
-  - _T_id_addr_subAddr
-  - _T_id_DCC_addr_subAddr
-  - _T_id_DCC_linearAddr
-  - _T_id_vpin_closedValue_thrownValue
-  - _T_id_SERVO_vpin_closedValue_thrownValue
-  - _T_id_VPIN_vpin
-  - _T_id
-  - _T
-  - _T_id_X
-  - _T_id_C
-  - _T_id_T
-  - _T_id_value
-  - _J_T
-  - _J_T_id
+  - _9T9_id_addr_subAddr
+  - _9T9_id_9DCC9_addr_subAddr
+  - _9T9_id_9DCC9_linearAddr
+  - _9T9_id_vpin_closedValue_thrownValue
+  - _9T9_id_9SERVO9_vpin_closedValue_thrownValue
+  - _9T9_id_9VPIN9_vpin
+  - _9T9_id
+  - _9T9
+  - _9T9_id_9X9
+  - _9T9_id_9C9
+  - _9T9_id_9T9
+  - _9T9_id_value
+  - _9J9_9T9
+  - _9J9_9T9_id
 ---
 
 # <small>``<T [«id»] [«various parameters»]>`` <br/> ``<J T [«id»]>``</small> <br/>Define or manage Turnouts/Points

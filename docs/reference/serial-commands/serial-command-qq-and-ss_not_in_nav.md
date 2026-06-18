@@ -1,9 +1,9 @@
----
+﻿---
 tags:
-  - _Q
-  - _S
-  - _S_id_vpin_pullup
-  - _S_id
+  - _9Q9
+  - _9S9
+  - _9S9_id_vpin_pullup
+  - _9S9_id
 ---
 
 # <small>``<Q>``</small> &nbsp; <small>``<S «id» [«vpin» «pullup»>]``</small> <br/>Manage Sensors

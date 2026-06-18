@@ -9,15 +9,6 @@ TODO_PATTERN = re.compile(r"\bTODO\b", re.IGNORECASE)
 EXCLUDE_LINE_PATTERN = re.compile(r"\bto-do/task list\b|/todo-report\.md|todo-report\.md\b", re.IGNORECASE)
 DEFAULT_IGNORE_DIRS = {
     ".git",
-    ".cache",
-    ".pytest_cache",
-    ".mypy_cache",
-    ".venv",
-    "venv",
-    "__pycache__",
-    "build",
-    "site",
-    "snippets",
 }
 DEFAULT_IGNORE_FILES = {
     ".DS_Store",
@@ -33,7 +24,7 @@ DEFAULT_IGNORE_SUFFIXES = {
 }
 
 
-def is_ignored(path: Path, root: Path) -> bool:
+def is_ignored(path: Path) -> bool:
     # Ignore exact files by name
     if path.name in DEFAULT_IGNORE_FILES:
         return True
@@ -43,15 +34,15 @@ def is_ignored(path: Path, root: Path) -> bool:
     # Ignore any path segment that matches the configured directories
     if any(part in DEFAULT_IGNORE_DIRS for part in path.parts):
         return True
-    # Also ignore the output markdown file if its path is under the root
-    if path.resolve() == (root / "docs" / "todo-report.md").resolve():
-        return True
     return False
 
 
-def iter_text_files(root: Path):
-    for path in root.rglob("*"):
-        if is_ignored(path, root):
+def iter_text_files(scan_root: Path):
+    if not scan_root.exists():
+        return
+
+    for path in scan_root.rglob("*"):
+        if is_ignored(path):
             continue
         if not path.is_file():
             continue
@@ -66,8 +57,9 @@ def iter_text_files(root: Path):
 
 def build_report(root: Path, output_path: Path) -> int:
     output_path = output_path.resolve()
+    scan_root = root / "docs"
     matches = []
-    for path in iter_text_files(root):
+    for path in iter_text_files(scan_root):
         if path.resolve() == output_path:
             continue
         try:
@@ -91,7 +83,7 @@ def build_report(root: Path, output_path: Path) -> int:
     output_path.parent.mkdir(parents=True, exist_ok=True)
     output_path.write_text(
         "# TODO Report\n\n"
-        f"Scanned root: `{root}`\n\n"
+        f"Scanned docs root: `{scan_root}`\n\n"
         f"Total TODO matches: {len(matches)}\n\n"
         + (
             "| File | Line | Line text |\n"

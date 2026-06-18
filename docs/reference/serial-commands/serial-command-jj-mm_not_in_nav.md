@@ -1,11 +1,11 @@
----
+﻿---
 tags:
-  - _J_M
-  - _J_M_CLEAR_ALL
-  - _J_M_CLEAR_ANY_loco
-  - _J_M_CLEAR_stashId
-  - _J_M_stashId
-  - _J_M_stashId_loco
+  - _9J9_9M9
+  - _9J9_9M9_9CLEAR9_9ALL9
+  - _9J9_9M9_9CLEAR9_9ANY9_loco
+  - _9J9_9M9_9CLEAR9_stashId
+  - _9J9_9M9_stashId
+  - _9J9_9M9_stashId_loco
 ---
 
 # <small>``<J M [«various parameters»]>``</small> <br/> Manage Stash Values

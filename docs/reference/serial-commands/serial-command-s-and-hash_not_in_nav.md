@@ -1,10 +1,10 @@
----
+﻿---
 tags:
   - _s
   - _#
-  - _C_RESET
-  - _D_RESET
-  - _J_I
+  - _9C9_9RESET9
+  - _9D9_9RESET9
+  - _9J9_9I9
   - _c 
 ---
 

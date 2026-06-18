@@ -1,9 +1,9 @@
----
+﻿---
 tags:
   - _!_
-  - _!_P
-  - _!_R
-  - _!_Q
+  - _!_9P9
+  - _!_9R9
+  - _!_9Q9
 ---
 
 # Emergency stop button

@@ -1,14 +1,14 @@
----
+﻿---
 tags:
-  - _J_A_id
-  - _J_A
+  - _9J9_9A9_id
+  - _9J9_9A9
   - _/
-  - _/_START_loco_route
-  - _/_START_route
-  - _/_PAUSE
-  - _/_RESUME
-  - _/_KILL_ALL
-  - _/_KILL_id 
+  - _/_9START9_loco_route
+  - _/_9START9_route
+  - _/_9PAUSE9
+  - _/_9RESUME9
+  - _/_9KILL9_9ALL9
+  - _/_9KILL9_id 
 ---
 
 # <small>``<J A [«id»]>``</small> <br/><small>``</ [START|PAUSE|RESUME|KILL] [«various parameters»]>``</small> <br/> List, Start or Stop Automations/Sequences
