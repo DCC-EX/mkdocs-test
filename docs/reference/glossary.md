@@ -22,7 +22,7 @@ Using the **EX-CommandStation** in AP mode allows you to have a separate network
 
 See [https://dccwiki.com/Command_Station](https://dccwiki.com/Command_Station)
 
-## Consist[^1], Multiple Unit[^2]
+## Consist[^1], Multiple Unit[^2], Multiple Unit Train, MU
 
 Multiple locos hauling a single train. See [https://dccwiki.com/Multiple_Unit_Consisting](https://dccwiki.com/Multiple_Unit_Consisting)
 

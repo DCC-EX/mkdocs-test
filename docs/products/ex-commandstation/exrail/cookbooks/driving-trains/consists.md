@@ -1,40 +1,40 @@
-# Consists
+# Consists / Multiple Unit (MU) Trains
 
 A "Consist" refers to multiple locos driving one train. This requires the locos to follow the same throttle commands.
 
-## Consist Types
+## Consist/MU Types
 
-There are four types of consist:
+There are four types of consist/MU:
 
 ### 1. All locos have the same address
 
 This involves programming the loco addresses individually. All functions will be read by all locos in the consist. Addresses can be easily programmed on the PROG track with the ```<W locoid>``` command.
 
-Disadvantages, visitors or club members domt like having their CVs changed. Functions sent to the address will affect all locos, which is often wrong for lighting rules etc.
+Disadvantages, visitors or club members don't like having their CVs changed. Functions sent to the address will affect all locos, which is often wrong for lighting rules etc.
 
-### 2. Decoder consist
+### 2. Decoder consist/MU
 
- The decoders have CVs (19 and 20) to give an address to which they will all respond. Their normal address is not altered. This consist address may be programmed into each loco with the PROG track ```<W CONSIST id [REVERSE]>``` command or main track ```<w locoid CONSIST consistid [REVERSE]>```. Disadvantages as above for CV changes.
+ The decoders have CVs (19 and 20) to give an address to which they will all respond. Their normal address is not altered. This consist address may be programmed into each loco with the PROG track ```<W CONSIST id [REVERSE]>``` command or main track ```<w locoId CONSIST consistId [REVERSE]>```. Disadvantages as above for CV changes.
 
-### 3. Throttle Consist (NOT POSSIBLE for **EXRAIL**)
+### 3. Throttle Consist/MU (NOT POSSIBLE for **EXRAIL**)
 
 The locos are unchanged and the throttle sends individual speed command to each loco.
 Disadvantages are that only the throttle knows about the relationship between the locos and that information can't easily be shared with other throttles, so another throttle may command one of the locos differently and cause mayhem. **EXRAIL** drives on one loco id so cannot drive this kind of consist. Which loco gets which functions may be configured at the throttle but are unknown to the **EX-CommandStation**.
 
-### 4. EX-CommandStation consists
+### 4. EX-CommandStation consists/MUs
 
 The **EX-CommandStation** knows the locos that are in the consist. Any speed commands to the lead loco are transmitted to all following locos. No CVs are modified and any throttle, including **EXRAIL**  can drive the lead loco or send function commands to the followers, but functions sent to the lead loco are not shared with the other locos, as there is no guarantee that "horn" on one loco isnt "halt and catch fire" on another.  
 
 Throttle commands sent to the following locos are ignored but the **EX-CommandStation** broadcasts lead loco throttle changes for each loco.
 
 These consists can be built with
- [commands](/reference/serial-commands.md/#consist-control) or **EXRAIL**.
+ [commands](/reference/serial-commands/serial-command-caret_not_in_nav.md) or **EXRAIL**.
 
-## EX-CommandStation consists with **EXRAIL**
+## EX-CommandStation consists/MUs with **EXRAIL**
 
 **EX-CommandStation** consists can be built up with **EXRAIL** commands:
 
-```BUILD_CONSIST(newloco)```  adds the new loco to follow the existing task loco. Specifying newloco as negative means the loco is facing the opposite way to the rest of the consist.
+```BUILD_CONSIST(newLoco)```  adds the new loco to follow the existing task loco. Specifying newloco as negative means the loco is facing the opposite way to the rest of the consist.
 
 For example:
 
