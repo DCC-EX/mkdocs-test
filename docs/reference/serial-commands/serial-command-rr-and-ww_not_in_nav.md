@@ -117,7 +117,7 @@ Avoid writing CV1, CV17 & CV18 directly. Use the ``<W «loco»>`` command instea
 
 ### Response for ``<r «loco» «cv»>``
 
-==TODO==
+==TODO== Response for ``<r «loco» «cv»>``
 
 ### Writing CVs - Responses
 
@@ -131,11 +131,11 @@ Avoid writing CV1, CV17 & CV18 directly. Use the ``<W «loco»>`` command instea
 
 ### Response for ``<W CONSIST «loco»>``
 
-==TODO==
+==TODO== Response for ``<W CONSIST «loco»>``
 
 ### Response for ``<W CONSIST «loco» REVERSE>``
 
-==TODO==
+==TODO== Response for ``<W CONSIST «loco» REVERSE>``
 
 ### Response for ``<W «cv» «value»>``
 
@@ -148,7 +148,7 @@ Avoid writing CV1, CV17 & CV18 directly. Use the ``<W «loco»>`` command instea
 
 ### Response for ``<W «cv» «bitValue» «bit»>``
 
-==TODO==
+==TODO== Response for ``<W «cv» «bitValue» «bit»>`
 
 ### Response for ``<w «loco» «cv» «value»>``
 
@@ -166,7 +166,7 @@ no response.
 
 ### Response for ``<b «loco» «cv» «bitValue» «bit»>``
 
-==TODO==
+==TODO== Response for ``<b «loco» «cv» «bitValue» «bit»>``
 
 ## Notes
 
@@ -202,14 +202,14 @@ no response.
 * Read cv 4 on PROG track: ``<R 4>``
 * Read loco actual DCC address on PROG track: ``<R LOCOID>``
 * Read loco consist (CV19) address on PROG track: ``<R CONSIST>``
-* ==TODO== Example Commands
+* ==TODO== LOW - Example Commands
 
 ### Example Responses
 
 * read address on PROG track (successful): ``<r 3>``
 * read address on PROG track (fail): ``<r -1>``
 * read CV 4 on PROG track (successful): ``<r 4 1>``
-* ==TODO== Example Responses
+* ==TODO== LOW - Example Responses
 
 --8<-- "snippets/abbr.md"
 

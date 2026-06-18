@@ -94,11 +94,11 @@ N/A
 
 ### *Example Commands*
 
-* ==TODO== Example Commands
+* ==TODO== LOW - Example Commands
 
 ### *Example Responses:*
 
-* ==TODO== Example Responses
+* ==TODO== LOW - Example Responses
 
 --8<-- "snippets/abbr.md"
 

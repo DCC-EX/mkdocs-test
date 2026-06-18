@@ -147,7 +147,7 @@ Response (id not defined): ``<jO «id» X>``
 
 ### *Example Commands*
 
-* ==TODO==
+* ==TODO== LOW - Example Commands
 
 * ``<I 1 DCC 0>`` defines a DCC accessory turntable/traverser with a 0 degree home angle.
 * ``<I 2 DCC 50>`` defines a DCC accessory turntable/traverser with a 5 degree home angle.
@@ -174,7 +174,7 @@ Example: This example defines an EX-Turntable device, with 3 positions:
 
 ### *Example Responses:*
 
-* ==TODO== Example Responses
+* ==TODO== LOW - Example Responses
 
 --8<-- "snippets/abbr.md"
 

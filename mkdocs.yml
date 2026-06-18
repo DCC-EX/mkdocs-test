@@ -133,6 +133,7 @@ plugins:
 
 hooks:
     - gen_toc.py
+    - find_todos.py
 
 # Copyright info
 copyright: |
@@ -175,7 +176,6 @@ markdown_extensions:
   - toc: # Table of Contents extension
       permalink: true # Add a permanent link to headings
   - footnotes # Standard footnotes
-
 
 watch:
   - snippets

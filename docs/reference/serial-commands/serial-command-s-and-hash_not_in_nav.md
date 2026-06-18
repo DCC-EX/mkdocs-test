@@ -42,7 +42,7 @@ N/A
 
 ### Response for ``<J I>``
 
-==TODO==
+==TODO== Response for ``<J I>``
 
 ### Response for ``<c>``
 
@@ -75,11 +75,11 @@ N/A
 
 ### *Example Commands*
 
-* ==TODO== Example Commands
+* ==TODO== LOW - Example Commands
 
 ### *Example Responses:*
 
-* ==TODO== Example Responses
+* ==TODO== LOW - Example Responses
 
 --8<-- "snippets/abbr.md"
 

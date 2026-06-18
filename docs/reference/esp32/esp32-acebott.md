@@ -96,4 +96,4 @@ hide:
 - [ ] Jumpers added for GPIO 2 and 4  
 - [ ] Add the custom motor define - 6 lines in config.h  
 
-==TODO==
+==TODO== Stacked EX8874 Checklist

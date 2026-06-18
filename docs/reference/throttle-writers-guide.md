@@ -79,7 +79,7 @@ Obtaining throttle status.
 
 ## Controlling Locos
 
-==TODO==
+==TODO== Controlling Locos
 
 ### Momentum
 
@@ -132,7 +132,7 @@ or ``<jT 17 X>`` indicating turnout/point unknown (or possibly hidden.)
 
 ## DCC Accessories
 
-==TODO==
+==TODO== DCC Accessories
 
 ----
 
@@ -162,7 +162,7 @@ Routes and Automations can also have their current status and caption altered dy
 
 ### Route Status
 
-==TODO==
+==TODO== Route Status
 
 ----
 
@@ -182,10 +182,10 @@ Routes and Automations can also have their current status and caption altered dy
 
 ## Gauges
 
-==TODO==
+==TODO== Gauges
 
 ----
 
 ## TCP vs UDP
 
-==TODO==
+==TODO== TCP VS UDP

@@ -43,11 +43,11 @@ The following are not a direct response, but rather a broadcast that will be tri
 
 ### Example Commands
 
-* ==TODO== Example Commands
+* ==TODO== LOW - Example Commands
 
 ### Example Responses
 
-* ==TODO== Example Responses
+* ==TODO== LOW - Example Responses
 
 --8<-- "snippets/abbr.md"
 
