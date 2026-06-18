@@ -1,13 +1,16 @@
 <!-- These are case sensitive -->
 
-*[WiThrottle]: Communication Protocol by Brett Hoffman. Also a trademark & iOS app owned by Brett Hoffman
+*[WiThrottle]: Communication Protocol. Trademark + iOS app owned by Brett Hoffman
 *[API]: Application Programming Interface
 *[JMRI]: Java Model Railroad Interface
+*[Arduino IDE]: Not recommended. Use EX-Installer or, if experienced, Microsoft Visual Studio Code (VSC)
+*[VSC]: Micosoft Visual Studio Code. Recommended IDE if EX-Installer is insufficient.
 
 *[AP]: Access Point Mode. Stand alone WiFi network
 *[STA]: Station Mode. Joins an existing WiFi network
 
 *[CV]: Configuration Variable (DCC Decoders)
+*[CVs]: Configuration Variables (DCC Decoders)
 *[PoM]: Programming on Main / Ops Mode Programming
 *[POM]: Programming on Main / Ops Mode Programming
 
@@ -32,3 +35,11 @@
 
 *[DIY]: Do-It-Yourself / Self Build
 *[RTR]: Ready to Run
+
+*[consist]: North American term. "Consist" refers to multiple locos driving one train. Elsewhere referred to as a "Multiple Unit" (MU) train
+*[Consist]: North American term. "Consist" refers to multiple locos driving one train. Elsewhere referred to as a "Multiple Unit" (MU) train
+*[MU]: Multiple Unit (MU) train. Refers to multiple locos driving one train. North American term is "Consist"
+*[Multiple Unit]: Refers to multiple locos driving one train. North American term is "Consist"
+
+*[turnout]: North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a "Point"
+*[Turnout]: North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a "Point"

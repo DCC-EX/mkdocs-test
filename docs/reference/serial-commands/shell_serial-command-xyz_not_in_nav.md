@@ -3,9 +3,9 @@ tags:
   - 
 ---
 
-# <small>``<cmd «required parameter» [«optional parameter»]>``</small> <br/> Short command decription
+# <small>``<cmd «required parameter» [«optional parameter»]>``</small> <br/> Short command description
 
-Serial command to ...
+Serial command(s) to ...
 
 ## Command(s)
 
