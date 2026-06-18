@@ -25,6 +25,5 @@ SavedFiles
 *.egg-info
 
 # Generated files
-toc.md
+docs/toc.md
 docs/contributing/todo-report.md
-todo-report.md
