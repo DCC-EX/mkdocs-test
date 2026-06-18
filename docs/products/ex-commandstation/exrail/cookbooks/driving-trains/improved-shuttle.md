@@ -74,7 +74,7 @@ AUTOMATION(123,"Dogbath to Catflap shuttle")
   FON(0) FON(3) DELAY(2000) FOFF(3) 
   REV(40)  
   AT(166) SPEED(15) 
-  RED(172) // rember to reset Catflap signal
+  RED(172) // remember to reset Catflap signal
   AT(164) ESTOP 
   DELAYRANDOM(5000,10000)  
   FOLLOW(123) 

@@ -1,6 +1,6 @@
 # Controlling Sounds in EXRAIL
 
-There are multiple `PLAY_` commands in **EXRAIL** is used to control sound. The first parameter is always the VPIN of the device, the meaning of the argumants depend on the command.
+There are multiple `PLAY_` commands in **EXRAIL** is used to control sound. The first parameter is always the VPIN of the device, the meaning of the arguments depend on the command.
 
 Note: Timing and race conditions may occur with multiple **EXRAIL** tasks sending commands to the same DFPlayer/UDPAudio to the extent that commands could be overwritten before they are executed or not executed in the desired order, possibly leaving the sound module in an unknown state or causing a timeout.
 

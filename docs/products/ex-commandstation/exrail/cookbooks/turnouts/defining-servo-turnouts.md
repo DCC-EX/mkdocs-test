@@ -26,7 +26,7 @@ id = Unique turnout/point ID within the CommandStation. All other turnout comman
 
 pin = The ID of the pin the servo is connected to, which would typically be the VPin ID of the PCA9685 controller board.
 
-active_angle = The angle to which the servo will move when the turnout/point is thrown (This is a value passed to the servo drtiver, it is not in degrees).
+active_angle = The angle to which the servo will move when the turnout/point is thrown (This is a value passed to the servo driver, it is not in degrees).
 
 inactive_angle = The angle to which the servo will move when the turnout/point is closed.
 

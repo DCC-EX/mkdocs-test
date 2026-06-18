@@ -10,7 +10,7 @@ In more advanced cases, an automation driving a loco may need to manage function
 - `XFON(locoid, function)`
 - `XFOFF(locoid, function)`
 
-For eaxample:
+For example:
 
 ```cpp
 ... while driving...

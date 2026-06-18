@@ -79,7 +79,7 @@ AUTOSTART
   DONE
 ```
 
-**EXRAIL** hs the full set of route setting and testing commands which should be self explanitory once the above simple examples have been understood. Each route can only be in one of the 4 states.
+**EXRAIL** hs the full set of route setting and testing commands which should be self explanatory once the above simple examples have been understood. Each route can only be in one of the 4 states.
 
 ```cpp
 IFROUTE_INACTIVE(route_id)

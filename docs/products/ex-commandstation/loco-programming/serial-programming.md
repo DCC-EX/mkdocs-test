@@ -54,7 +54,7 @@ For advanced use, the individual bits of a cv make be read or written:
 
 ## Diagnostics when things don't work
 
-There are a number of very basic checks that you should do before getting into software disgnostics. The vast majority of support calls are solved easily by checking:
+There are a number of very basic checks that you should do before getting into software diagnostics. The vast majority of support calls are solved easily by checking:
 
 - Is the loco on the PROG track?
 - Is the PROG track wired to the correct motor shield output?

@@ -1,6 +1,6 @@
 # Passing locos between sequences
 
-Each of the methods below involves creating a new Exrail task that will run in parallel with the current task. The difference is in how the locoid information is passed to the new sequence.
+Each of the methods below involves creating a new Exrail task that will run in parallel with the current task. The difference is in how the locoId information is passed to the new sequence.
 
 ## START(sequence_id)
 

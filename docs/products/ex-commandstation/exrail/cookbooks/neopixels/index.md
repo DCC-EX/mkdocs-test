@@ -14,7 +14,7 @@ Add a driver definition in myAutomation.h for each adafruit I2C driver.
 
 Where mode is selected from the various pixel string types which have varying colour order or refresh frequency. For MOST strings this mode will be NEO_GRB but for others refer to the comments in IO_NeoPixel.h
 
-If omitted the node and i2caddress default to NEO_GRB, 0x60.
+If omitted the node and i2cAddress default to NEO_GRB, 0x60.
 
 For example:
 
