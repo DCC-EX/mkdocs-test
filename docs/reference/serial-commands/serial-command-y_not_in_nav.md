@@ -65,11 +65,11 @@ See the [Sounds page](/products/ex-commandstation/accessories/various-devices/so
 
 ### *Example Commands*
 
-* ==TODO== Example Commands
+* ==TODO== LOW - Example Commands
 
 ### *Example Responses:*
 
-* ==TODO== Example Responses
+* ==TODO== LOW - Example Responses
 
 --8<-- "snippets/abbr.md"
 

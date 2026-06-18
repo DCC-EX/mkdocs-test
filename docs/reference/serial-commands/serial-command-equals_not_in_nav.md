@@ -72,13 +72,13 @@ The following are not a direct response, but rather a broadcast that will be tri
 
 * Request track status ``<=>``
 * Set track A to DC with address 10 ``<= A 10>``
-* ==TODO== Example Commands_
+* ==TODO== LOW - Example Commands
 
 ### Example Responses
 
 * Response/broadcast to track status for a default EX-CommandStation<br/> ``<= A MAIN>``<br/>``<= B PROG>``
 * Response/broadcast to setting track *A* to *DC* with address 10<BR/>``<= A 10>``<br/>``<= B PROG>``<br/>``<p1 A>``<br/>``<p0 B>``
-* ==TODO== Example Responses
+* ==TODO== LOW - Example Responses
 
 --8<-- "snippets/abbr.md"
 

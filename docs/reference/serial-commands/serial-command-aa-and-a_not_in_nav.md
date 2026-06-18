@@ -61,11 +61,11 @@ Here is a spreadsheet in .XLSX format to help you: [Stationary Decoder Address T
 
 ### *Example Commands*
 
-* ==TODO== Example Commands
+* ==TODO== LOW - Example Commands
 
 ### *Example Responses:*
 
-* ==TODO== Example Responses
+* ==TODO== LOW - Example Responses
 
 --8<-- "snippets/abbr.md"
 

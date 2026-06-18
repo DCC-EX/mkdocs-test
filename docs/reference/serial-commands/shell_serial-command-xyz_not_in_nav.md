@@ -51,13 +51,13 @@ The following are not a direct response, but rather a broadcast that will be tri
 
 * purpose: ``<command>``
 * purpose: <br/>``<command>``
-* ==TODO== Example Commands
+* ==TODO== LOW - Example Commands
 
 ### *Example Responses:*
 
 * purpose: ``<command>``
 * purpose: <br/>``<command>``
-* ==TODO== Example Responses
+* ==TODO== LOW - Example Responses
 
 --8<-- "snippets/abbr.md"
 

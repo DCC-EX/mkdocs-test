@@ -41,11 +41,11 @@ Serial commands to provide the ability to set neopixels on or off or change the 
 
 ### *Example Commands*
 
-* ==TODO== Example Commands
+* ==TODO== LOW - Example - Commands
 
 ### *Example Responses:*
 
-* ==TODO== Example Responses
+* ==TODO== LOW - Example - Responses
 
 --8<-- "snippets/abbr.md"
 

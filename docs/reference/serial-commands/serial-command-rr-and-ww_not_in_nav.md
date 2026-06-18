@@ -202,14 +202,14 @@ no response.
 * Read cv 4 on PROG track: ``<R 4>``
 * Read loco actual DCC address on PROG track: ``<R LOCOID>``
 * Read loco consist (CV19) address on PROG track: ``<R CONSIST>``
-* ==TODO== Example Commands
+* ==TODO== LOW - Example Commands
 
 ### Example Responses
 
 * read address on PROG track (successful): ``<r 3>``
 * read address on PROG track (fail): ``<r -1>``
 * read CV 4 on PROG track (successful): ``<r 4 1>``
-* ==TODO== Example Responses
+* ==TODO== LOW - Example Responses
 
 --8<-- "snippets/abbr.md"
 
