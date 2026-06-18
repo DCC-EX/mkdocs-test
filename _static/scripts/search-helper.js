@@ -11,6 +11,9 @@ function findnow(term) {
         s.focus();
         s.value=term;
         s.dispatchEvent(new Event('input', { bubbles: true }));
+        setTimeout(function() {
+           s.value='';
+        }, SEARCH_TRIGGER_DELAY_MS);
     }, SEARCH_TRIGGER_DELAY_MS);
 }
 
