@@ -21,13 +21,14 @@
 
 *[EX-CSB1]: EX-CommandStation/Booster 1
 
-*[Arduino UNO]: Not recommended. Not supported in future releases
+*[Arduino UNO]: Not recommended. Not supported in future releases of EX-CommandStation
 
 *[EEPROM]: Electrically Erasable Programmable Read-Only Memory. Available on the Arduino Mega ONLY
 
 *[SSID]: Service Set Identifier. Technical term for the WiFi network's name
 *[ssid]: Service Set Identifier. Technical term for the WiFi network's name
 
-*[NMRA]: National Model Railroad Association
+*[NMRA]: National Model Railroad Association (USA)
 
 *[DIY]: Do-It-Yourself / Self Build
+*[RTR]: Ready to Run

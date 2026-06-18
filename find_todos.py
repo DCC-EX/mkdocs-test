@@ -6,6 +6,7 @@ import re
 from pathlib import Path
 
 TODO_PATTERN = re.compile(r"\bTODO\b", re.IGNORECASE)
+EXCLUDE_LINE_PATTERN = re.compile(r"\bto-do/task list\b|/todo-report\.md|todo-report\.md\b", re.IGNORECASE)
 DEFAULT_IGNORE_DIRS = {
     ".git",
     ".cache",
@@ -75,7 +76,7 @@ def build_report(root: Path, output_path: Path) -> int:
             continue
 
         for line_number, line in enumerate(text.splitlines(), start=1):
-            if TODO_PATTERN.search(line):
+            if TODO_PATTERN.search(line) and not EXCLUDE_LINE_PATTERN.search(line):
                 rel_path = path.relative_to(root).as_posix()
                 link_path = os.path.relpath(path, output_path.parent).replace(os.sep, "/")
                 matches.append(
@@ -111,7 +112,7 @@ def build_report(root: Path, output_path: Path) -> int:
 def on_post_build(config, **kwargs) -> None:
     root = Path(config["config_file_path"]).resolve().parent
     docs_dir = Path(config["docs_dir"]).resolve()
-    output_path = docs_dir / "todo-report.md"
+    output_path = docs_dir / "contributing" / "todo-report.md"
     count = build_report(root, output_path)
     print(f"TODO scan completed: {count} entries found.")
 
@@ -127,8 +128,8 @@ def main() -> int:
     )
     parser.add_argument(
         "--output",
-        default="docs/todo-report.md",
-        help="Output markdown file (default: docs/todo-report.md).",
+        default="docs/contributing/todo-report.md",
+        help="Output markdown file (default: docs/contributing/todo-report.md).",
     )
     args = parser.parse_args()
 

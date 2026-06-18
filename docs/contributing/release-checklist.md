@@ -69,11 +69,11 @@ This is a list of to do items that will allow us to release this new documentati
 ## Release QA Items
 
 - [ ] Proof-reading all pages but not by original author
-- [ ] Address all ==TODO== markers [search for ==TODO==](?TODO)
+- [ ] Address all ==TODO== markers [search for ==TODO==](?TODO) or view the [To-Do/Task List page](/contributing/todo-report.md)
 
 ## Menu and Page Structure
 
-- [ ] All hardware pages should "next" onto the **EX-Installer** EX-CommandStation configuration instructions, maybe nav plugin extension, maybe JS
+- [ ] All hardware pages should "next" onto the **EX-Installer** **EX-CommandStation** configuration instructions, maybe nav plugin extension, maybe JS
 - If DIY on tap nav menu, RTR must be their too, choose:
 
     - [x] Both DIY and RTR on nav menu
