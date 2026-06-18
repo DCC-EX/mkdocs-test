@@ -32,7 +32,7 @@ Commands are entered as shown, complete with the `< >` markers. Case is importan
 <s>
 ```
 
-==TODO==... pic
+==TODO==... pic - Check communication and version
 
 ### Turn on track power
 

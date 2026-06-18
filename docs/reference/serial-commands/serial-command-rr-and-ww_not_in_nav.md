@@ -117,7 +117,7 @@ Avoid writing CV1, CV17 & CV18 directly. Use the ``<W «loco»>`` command instea
 
 ### Response for ``<r «loco» «cv»>``
 
-==TODO==
+==TODO== Response for ``<r «loco» «cv»>``
 
 ### Writing CVs - Responses
 
@@ -131,11 +131,11 @@ Avoid writing CV1, CV17 & CV18 directly. Use the ``<W «loco»>`` command instea
 
 ### Response for ``<W CONSIST «loco»>``
 
-==TODO==
+==TODO== Response for ``<W CONSIST «loco»>``
 
 ### Response for ``<W CONSIST «loco» REVERSE>``
 
-==TODO==
+==TODO== Response for ``<W CONSIST «loco» REVERSE>``
 
 ### Response for ``<W «cv» «value»>``
 
@@ -148,7 +148,7 @@ Avoid writing CV1, CV17 & CV18 directly. Use the ``<W «loco»>`` command instea
 
 ### Response for ``<W «cv» «bitValue» «bit»>``
 
-==TODO==
+==TODO== Response for ``<W «cv» «bitValue» «bit»>`
 
 ### Response for ``<w «loco» «cv» «value»>``
 
@@ -166,7 +166,7 @@ no response.
 
 ### Response for ``<b «loco» «cv» «bitValue» «bit»>``
 
-==TODO==
+==TODO== Response for ``<b «loco» «cv» «bitValue» «bit»>``
 
 ## Notes
 

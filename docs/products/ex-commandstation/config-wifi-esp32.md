@@ -31,11 +31,11 @@ WiFi has two operating modes:
 
 As shipped, or without prior configuration, the ESP32 WiFi default to operate in AP mode with an ssid/Password combination generated from the internal chip (mac) address. The ssid and password will be shown on the oLED display (typically something like "DCCEX_123abc"[^1] and "PASS_123abc") so you can connect you phone or tablet immediately and start running.
 d
-[^1]: Where `123abc`` will be the last 6 digits of the mac address of the WiFi board on the device. As such it will be unique for every EX-CommandStation.
+[^1]: Where `123abc`` will be the last 6 digits of the mac address of the WiFi board on the device. As such it will be unique for every **EX-CommandStation**.
 
 Later, you may wish to reset the connection to use your home router as this avoids the need to reconnect your normal phone WiFi before using a throttle.
 
-WiFi configuration changes are made by running commands from the USB serial (IDE, PaltformIO, EXWebThrottle) or from a connected WiFi throttle such as Engine Driver or EXToolbox.
+WiFi configuration changes are made by running commands from the USB serial (IDE, PlatformIO, **EX-WebThrottle**) or from a connected WiFi throttle such as Engine Driver or EXToolbox.
 
 The commands below are stored on the ESP32 (except for the TEMP command). Please be aware that if you issue a command to change the WiFi settings from a WiFi device, this will mean you lose connection and need to reconnect before continuing.
 

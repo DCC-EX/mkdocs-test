@@ -244,6 +244,8 @@ li a {
         - [Using Our Logos](contributing\documentation\logos.md)
         - [Working With MkDocs](contributing\documentation\mkdocs-features.md)
         - [Mermaid Diagrams](contributing\documentation\mermaid-diagrams.md)
+- **ToC**
+    - [TODO Report <small>(To-Do/Task List)</small>](todo-report.md)
 
 ## Pages Not In Navigation
 

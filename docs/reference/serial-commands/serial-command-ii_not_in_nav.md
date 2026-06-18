@@ -147,7 +147,7 @@ Response (id not defined): ``<jO «id» X>``
 
 ### *Example Commands*
 
-* ==TODO==
+* ==TODO== Example Commands
 
 * ``<I 1 DCC 0>`` defines a DCC accessory turntable/traverser with a 0 degree home angle.
 * ``<I 2 DCC 50>`` defines a DCC accessory turntable/traverser with a 5 degree home angle.

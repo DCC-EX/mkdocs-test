@@ -27,7 +27,7 @@ Serial commands to setup the WiFi on the **EX-CommandStations**.
 * ``<C WIFI DEFAULT>`` set WiFi to default credentials
 * ``<C WIFI ON|OFF>`` Enable/Disable WiFi
 
-See [WiFi configuration](../../products/ex-commandstation/config-wifi-esp32.md) for more infomation on these commands.
+See [WiFi configuration](/products/ex-commandstation/config-wifi-esp32.md) for more infomation on these commands.
 
 Also see the [WiFi Configuration for version 5.7.0+ - Graphical User Interface Options](../../products/ex-commandstation/config-wifi-esp32-gui-options_not_in_nav.md) for detailed instructions on how, and why, to change these settings using EX-WebThrottle or EX-Toolbox.
 
@@ -72,7 +72,7 @@ N/A. The **EX-CommandStation** will restart.
 
 ### Example Commands
 
-* See [WiFi configuration](../../products/ex-commandstation/config-wifi-esp32.md)
+* See [WiFi configuration](/products/ex-commandstation/config-wifi-esp32.md)
 * See [WiFi Configuration for version 5.7.0+](https://dcc-ex.com/ex-commandstation/advanced-setup/supported-wifi/wifi-config_v5_7.html)
 
 ### Example Responses

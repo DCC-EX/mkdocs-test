@@ -11,5 +11,7 @@ nav:
   - Reference : reference
   - About Us: about
   - Contribute: contributing
-  - ToC: toc.md
+  - ToC:
+    - Table of Contents: toc.md
+    - To-Do/Task List: todo-report.md
   
