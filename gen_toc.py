@@ -99,9 +99,13 @@ def on_nav(nav: Navigation, config, files) -> Navigation:
 
     if non_nav_files:
         toc_lines.append("\n## Pages Not In Navigation\n")
-        for rel_path in sorted(non_nav_files):
+        non_nav_items = []
+        for rel_path in non_nav_files:
             full_file_path = os.path.join(docs_dir, rel_path)
             title = get_h1_title(full_file_path) or os.path.basename(rel_path)
+            non_nav_items.append((title.lower(), title, rel_path))
+
+        for _, title, rel_path in sorted(non_nav_items, key=lambda item: item[0]):
             toc_lines.append(f"- [{title}]({rel_path})")
 
     # Physically save the table of contents 
