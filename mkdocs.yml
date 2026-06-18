@@ -131,9 +131,9 @@ plugins:
       count: 3
       list-class: news-headline-list
 
-hooks:
-    - gen_toc.py
-    - find_todos.py
+# causes mkdocs serve to loop hooks:
+# causes mkdocs serve to loop    - gen_toc.py
+# causes mkdocs serve to loop    - find_todos.py
 
 # Copyright info
 copyright: |
