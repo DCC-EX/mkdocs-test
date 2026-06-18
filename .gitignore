@@ -23,3 +23,8 @@ SavedFiles
 
 # Ignore Python packages in editable mode
 *.egg-info
+
+# Generated files
+toc.md
+docs/contributing/todo-report.md
+todo-report.md
