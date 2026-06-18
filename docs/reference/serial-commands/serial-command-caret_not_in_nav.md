@@ -20,7 +20,7 @@ See [Consists page](/products/ex-commandstation/exrail/cookbooks/driving-trains/
 ## Parameters
 
 * **loco**: DCC Address of the loco to add or remove from the consist.
-* **leadLoco**: Notional address of the loco to become the lead loco. (1-10293``) <br/>This does not need to be a real loco. Nor does tit need to be one of teh actual locos in the consts/MU. <br/>This will be the address that you select with a throttle or **EXRAIL** sequence to control all the locos in the consist/Multiple Unit train at the same time.
+* **leadLoco**: Notional address of the loco to become the lead loco. (``1``-``10293``) <br/>This does not need to be a real loco. Nor does tit need to be one of teh actual locos in the consts/MU. <br/>This will be the address that you select with a throttle or **EXRAIL** sequence to control all the locos in the consist/Multiple Unit train at the same time.
 * **follower1..7**: loco to add to the consist/Multiple Unit train.<br/> negative for a reversed loco.
 
 ## Response
