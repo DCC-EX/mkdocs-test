@@ -7248,25 +7248,25 @@
   
 
 
-<h1 id="r-cvlocoidconsist-r-loco-cv-w-lococv-valueloco-cv-bitvalue-bitconsist-loco-reverse-v-cv-valuecv-bit-bitvalue-b-cv-bit-bitvalue-b-loco-cv-bit-bitvalue-read-and-write-cvs"><small><code>&lt;R [«cv»|LOCOID|CONSIST]&gt;</code> <br/><code>&lt;r «loco» «cv»&gt;</code> <br/><code>&lt;W [«loco»]|[«cv» «value»]|[«loco» «cv» «bitValue» «bit»]|[CONSIST «loco» [REVERSE]]&gt;</code> <br/><code>&lt;V [«cv» «value»]|[«cv» «bit» «bitValue»]&gt;</code> <br/><code>&lt;B «cv» «bit» «bitValue»&gt;</code> <br/><code>&lt;b «loco» «cv» «bit» «bitValue»&gt;</code></small> <br/>Read and write CVs<a class="headerlink" href="#r-cvlocoidconsist-r-loco-cv-w-lococv-valueloco-cv-bitvalue-bitconsist-loco-reverse-v-cv-valuecv-bit-bitvalue-b-cv-bit-bitvalue-b-loco-cv-bit-bitvalue-read-and-write-cvs" title="Permanent link">&para;</a></h1>
-<p>Serial commands to read and write CVs on the <abbr title="Programming Track / Service Mode">PROG</abbr> track (Service mode) or on the <abbr title="Main Track / Ops Mode">MAIN</abbr> track (<abbr title="Programming on Main / Ops Mode Programming">PoM</abbr>). This includes reading and writing the decoder DCC Address.</p>
+<h1 id="r-cvlocoidconsist-r-loco-cv-w-lococv-valueloco-cv-bitvalue-bitconsist-loco-reverse-v-cv-valuecv-bit-bitvalue-b-cv-bit-bitvalue-b-loco-cv-bit-bitvalue-read-and-write-cvs"><small><code>&lt;R [«cv»|LOCOID|CONSIST]&gt;</code> <br/><code>&lt;r «loco» «cv»&gt;</code> <br/><code>&lt;W [«loco»]|[«cv» «value»]|[«loco» «cv» «bitValue» «bit»]|[CONSIST «loco» [REVERSE]]&gt;</code> <br/><code>&lt;V [«cv» «value»]|[«cv» «bit» «bitValue»]&gt;</code> <br/><code>&lt;B «cv» «bit» «bitValue»&gt;</code> <br/><code>&lt;b «loco» «cv» «bit» «bitValue»&gt;</code></small> <br/>Read and write <abbr title="Configuration Variables (DCC Decoders)">CVs</abbr><a class="headerlink" href="#r-cvlocoidconsist-r-loco-cv-w-lococv-valueloco-cv-bitvalue-bitconsist-loco-reverse-v-cv-valuecv-bit-bitvalue-b-cv-bit-bitvalue-b-loco-cv-bit-bitvalue-read-and-write-cvs" title="Permanent link">&para;</a></h1>
+<p>Serial commands to read and write <abbr title="Configuration Variables (DCC Decoders)">CVs</abbr> on the <abbr title="Programming Track / Service Mode">PROG</abbr> track (Service mode) or on the <abbr title="Main Track / Ops Mode">MAIN</abbr> track (<abbr title="Programming on Main / Ops Mode Programming">PoM</abbr>). This includes reading and writing the decoder DCC Address.</p>
 <p>It does not include reading or writing to DCC accessory decoders.</p>
 <h2 id="commands">Commands<a class="headerlink" href="#commands" title="Permanent link">&para;</a></h2>
-<h3 id="reading-cvs">Reading CVs<a class="headerlink" href="#reading-cvs" title="Permanent link">&para;</a></h3>
+<h3 id="reading-cvs">Reading <abbr title="Configuration Variables (DCC Decoders)">CVs</abbr><a class="headerlink" href="#reading-cvs" title="Permanent link">&para;</a></h3>
 <ul>
-<li><code>&lt;R&gt;</code> Read the driveable loco id on <abbr title="Programming Track / Service Mode">PROG</abbr> track. <br/>The response may be the long address, short address or consist address. </li>
+<li><code>&lt;R&gt;</code> Read the driveable loco id on <abbr title="Programming Track / Service Mode">PROG</abbr> track. <br/>The response may be the long address, short address or <abbr title="North American term. &quot;Consist&quot; refers to multiple locos driving one train. Elsewhere referred to as a &quot;Multiple Unit&quot; (MU) train">consist</abbr> address. </li>
 <li><code>&lt;R «cv»&gt;</code> Read a cv on <abbr title="Programming Track / Service Mode">PROG</abbr> track</li>
-<li><code>&lt;R LOCOID&gt;</code> Read the loco id (ignoring the consist address) on the <abbr title="Programming Track / Service Mode">PROG</abbr> track</li>
-<li><code>&lt;R CONSIST&gt;</code> Read the consist id on <abbr title="Programming Track / Service Mode">PROG</abbr> track</li>
+<li><code>&lt;R LOCOID&gt;</code> Read the loco id (ignoring the <abbr title="North American term. &quot;Consist&quot; refers to multiple locos driving one train. Elsewhere referred to as a &quot;Multiple Unit&quot; (MU) train">consist</abbr> address) on the <abbr title="Programming Track / Service Mode">PROG</abbr> track</li>
+<li><code>&lt;R CONSIST&gt;</code> Read the <abbr title="North American term. &quot;Consist&quot; refers to multiple locos driving one train. Elsewhere referred to as a &quot;Multiple Unit&quot; (MU) train">consist</abbr> id on <abbr title="Programming Track / Service Mode">PROG</abbr> track</li>
 <li><code>&lt;r «loco» «cv»&gt;</code> <abbr title="Programming on Main / Ops Mode Programming">PoM</abbr> read cv on <abbr title="Main Track / Ops Mode">MAIN</abbr> track - <span style="color:red">Requires RailCom</span></li>
 <li><code>&lt;V «cv» bit «bitValue»&gt;</code> Fast read bit with expected value</li>
 <li><code>&lt;V «cv» «value»&gt;</code> Fast read cv with expected value</li>
 </ul>
-<h3 id="writing-cvs">Writing CVs<a class="headerlink" href="#writing-cvs" title="Permanent link">&para;</a></h3>
+<h3 id="writing-cvs">Writing <abbr title="Configuration Variables (DCC Decoders)">CVs</abbr><a class="headerlink" href="#writing-cvs" title="Permanent link">&para;</a></h3>
 <ul>
 <li><code>&lt;W «loco»&gt;</code> Write loco address on <abbr title="Programming Track / Service Mode">PROG</abbr> track</li>
-<li><code>&lt;W CONSIST «loco»&gt;</code> write consist address on <abbr title="Programming Track / Service Mode">PROG</abbr> track</li>
-<li><code>&lt;W CONSIST «loco» REVERSE&gt;</code> Write consist address and reverse flag on <abbr title="Programming Track / Service Mode">PROG</abbr> track</li>
+<li><code>&lt;W CONSIST «loco»&gt;</code> write <abbr title="North American term. &quot;Consist&quot; refers to multiple locos driving one train. Elsewhere referred to as a &quot;Multiple Unit&quot; (MU) train">consist</abbr> address on <abbr title="Programming Track / Service Mode">PROG</abbr> track</li>
+<li><code>&lt;W CONSIST «loco» REVERSE&gt;</code> Write <abbr title="North American term. &quot;Consist&quot; refers to multiple locos driving one train. Elsewhere referred to as a &quot;Multiple Unit&quot; (MU) train">consist</abbr> address and reverse flag on <abbr title="Programming Track / Service Mode">PROG</abbr> track</li>
 <li><code>&lt;W «cv» «value»&gt;</code> Write cv value on <abbr title="Programming Track / Service Mode">PROG</abbr> track</li>
 <li><code>&lt;W «cv» «bitValue» «bit»&gt;</code> Write cv bit on <abbr title="Programming Track / Service Mode">PROG</abbr> track</li>
 <li><code>&lt;w «loco» «cv» «value»&gt;</code> <abbr title="Programming on Main / Ops Mode Programming">PoM</abbr> write cv on <abbr title="Main Track / Ops Mode">MAIN</abbr> track</li>
@@ -7287,14 +7287,14 @@ Avoid writing CV1, CV17 &amp; CV18 directly. Use the <code>&lt;W «loco»&gt;</c
 </li>
 </ul>
 <h2 id="responses">Responses<a class="headerlink" href="#responses" title="Permanent link">&para;</a></h2>
-<h3 id="reading-cvs-responses">Reading CVs - Responses<a class="headerlink" href="#reading-cvs-responses" title="Permanent link">&para;</a></h3>
+<h3 id="reading-cvs-responses">Reading <abbr title="Configuration Variables (DCC Decoders)">CVs</abbr> - Responses<a class="headerlink" href="#reading-cvs-responses" title="Permanent link">&para;</a></h3>
 <h3 id="response-for-r">Response for <code>&lt;R&gt;</code><a class="headerlink" href="#response-for-r" title="Permanent link">&para;</a></h3>
 <ul>
 <li><code>&lt;r «address»&gt;</code><ul>
 <li><code>r</code>: response/broadcast identifier</li>
 <li><strong>address</strong> - one of:<ul>
-<li>If the loco is in a consist (CV19), the address returned by will be the consist address.</li>
-<li>If not in a consist (CV19) DCC Address of the decoder/loco. The short (<code>1</code>-<code>127</code>) or long (<code>128</code>-<code>10293</code>) address of the engine decoder</li>
+<li>If the loco is in a <abbr title="North American term. &quot;Consist&quot; refers to multiple locos driving one train. Elsewhere referred to as a &quot;Multiple Unit&quot; (MU) train">consist</abbr> (CV19), the address returned by will be the <abbr title="North American term. &quot;Consist&quot; refers to multiple locos driving one train. Elsewhere referred to as a &quot;Multiple Unit&quot; (MU) train">consist</abbr> address.</li>
+<li>If not in a <abbr title="North American term. &quot;Consist&quot; refers to multiple locos driving one train. Elsewhere referred to as a &quot;Multiple Unit&quot; (MU) train">consist</abbr> (CV19) DCC Address of the decoder/loco. The short (<code>1</code>-<code>127</code>) or long (<code>128</code>-<code>10293</code>) address of the engine decoder</li>
 <li><code>-1</code> = failed read</li>
 </ul>
 </li>
@@ -7318,8 +7318,8 @@ Avoid writing CV1, CV17 &amp; CV18 directly. Use the <code>&lt;W «loco»&gt;</c
 <li><code>&lt;r CONSIST «address»&gt;</code><ul>
 <li><code>r</code>: response/broadcast identifier</li>
 <li><strong>address</strong> - one of:<ul>
-<li>If the loco is in a consist (CV19), the address returned by will be the consist address.</li>
-<li><code>-1</code> = failed read or not in a consist</li>
+<li>If the loco is in a <abbr title="North American term. &quot;Consist&quot; refers to multiple locos driving one train. Elsewhere referred to as a &quot;Multiple Unit&quot; (MU) train">consist</abbr> (CV19), the address returned by will be the <abbr title="North American term. &quot;Consist&quot; refers to multiple locos driving one train. Elsewhere referred to as a &quot;Multiple Unit&quot; (MU) train">consist</abbr> address.</li>
+<li><code>-1</code> = failed read or not in a <abbr title="North American term. &quot;Consist&quot; refers to multiple locos driving one train. Elsewhere referred to as a &quot;Multiple Unit&quot; (MU) train">consist</abbr></li>
 </ul>
 </li>
 </ul>
@@ -7368,7 +7368,7 @@ Avoid writing CV1, CV17 &amp; CV18 directly. Use the <code>&lt;W «loco»&gt;</c
 </ul>
 <h3 id="response-for-r-loco-cv">Response for <code>&lt;r «loco» «cv»&gt;</code><a class="headerlink" href="#response-for-r-loco-cv" title="Permanent link">&para;</a></h3>
 <p><mark>TODO</mark> Response for <code>&lt;r «loco» «cv»&gt;</code></p>
-<h3 id="writing-cvs-responses">Writing CVs - Responses<a class="headerlink" href="#writing-cvs-responses" title="Permanent link">&para;</a></h3>
+<h3 id="writing-cvs-responses">Writing <abbr title="Configuration Variables (DCC Decoders)">CVs</abbr> - Responses<a class="headerlink" href="#writing-cvs-responses" title="Permanent link">&para;</a></h3>
 <h3 id="response-for-w-loco">Response for <code>&lt;W «loco»&gt;</code><a class="headerlink" href="#response-for-w-loco" title="Permanent link">&para;</a></h3>
 <ul>
 <li><code>&lt;w «address»&gt;</code><ul>
@@ -7429,7 +7429,7 @@ Avoid writing CV1, CV17 &amp; CV18 directly. Use the <code>&lt;W «loco»&gt;</c
 <p>Note that addresses above <code>9999</code> cannot be used by <em>some</em> other brands of command station. So if you plan to take your loco to other layouts it is recommended that you avoid the <code>10000</code>-<code>10293</code> (inclusive) range.</p>
 </li>
 <li>
-<p><strong>IMPORTANT:</strong> If the loco is in a consist (CV19), the address returned by <code>&lt;R&gt;</code> will be the consist address, not the decoder address. To always get the decoder address, use <code>&lt;R LOCOID&gt;</code> instead.</p>
+<p><strong>IMPORTANT:</strong> If the loco is in a <abbr title="North American term. &quot;Consist&quot; refers to multiple locos driving one train. Elsewhere referred to as a &quot;Multiple Unit&quot; (MU) train">consist</abbr> (CV19), the address returned by <code>&lt;R&gt;</code> will be the <abbr title="North American term. &quot;Consist&quot; refers to multiple locos driving one train. Elsewhere referred to as a &quot;Multiple Unit&quot; (MU) train">consist</abbr> address, not the decoder address. To always get the decoder address, use <code>&lt;R LOCOID&gt;</code> instead.</p>
 </li>
 <li>
 <p>When combined with the <code>&lt;D ACK ON&gt;</code> Command, the <code>&lt;R&gt;</code> Command (with or without parameters) can be used for diagnostics, for example when you get a <code>-1</code> response.</p>
@@ -7458,7 +7458,7 @@ Avoid writing CV1, CV17 &amp; CV18 directly. Use the <code>&lt;W «loco»&gt;</c
 <li>Read loco address on <abbr title="Programming Track / Service Mode">PROG</abbr> track: <code>&lt;R&gt;</code></li>
 <li>Read cv 4 on <abbr title="Programming Track / Service Mode">PROG</abbr> track: <code>&lt;R 4&gt;</code></li>
 <li>Read loco actual DCC address on <abbr title="Programming Track / Service Mode">PROG</abbr> track: <code>&lt;R LOCOID&gt;</code></li>
-<li>Read loco consist (CV19) address on <abbr title="Programming Track / Service Mode">PROG</abbr> track: <code>&lt;R CONSIST&gt;</code></li>
+<li>Read loco <abbr title="North American term. &quot;Consist&quot; refers to multiple locos driving one train. Elsewhere referred to as a &quot;Multiple Unit&quot; (MU) train">consist</abbr> (CV19) address on <abbr title="Programming Track / Service Mode">PROG</abbr> track: <code>&lt;R CONSIST&gt;</code></li>
 <li><mark>TODO</mark> LOW - Example Commands</li>
 </ul>
 <h3 id="example-responses">Example Responses<a class="headerlink" href="#example-responses" title="Permanent link">&para;</a></h3>

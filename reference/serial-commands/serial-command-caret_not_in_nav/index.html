@@ -10,7 +10,7 @@
       
       
       
-        <link rel="canonical" href="https://dcc-ex.com/mkdocs-test/reference/serial-commands/serial-command-tt_not_in_nav/">
+        <link rel="canonical" href="https://dcc-ex.com/mkdocs-test/reference/serial-commands/serial-command-caret_not_in_nav/">
       
       
       
@@ -23,7 +23,7 @@
     
     
       
-        <title><T [«id»] [«various parameters»]> <J T [«id»]> Define or manage Turnouts/Points - DCC-EX Model Train Control, Animation, and Automation</title>
+        <title><^ «loco»|[«leadLoco» «follower» [ «follower2..7»]]> Manage EX-CommandStation Consists/MUs - DCC-EX Model Train Control, Animation, and Automation</title>
       
     
     
@@ -79,7 +79,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#t-id-various-parameters-j-t-id-define-or-manage-turnoutspoints" class="md-skip">
+        <a href="#locoleadloco-follower-follower27-manage-ex-commandstation-consistsmus" class="md-skip">
           Skip to content
         </a>
       
@@ -112,7 +112,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              &lt;T [«id»] [«various parameters»]&gt; &lt;J T [«id»]&gt; Define or manage Turnouts/Points
+              &lt;^ «loco»|[«leadLoco» «follower» [ «follower2..7»]]&gt; Manage EX-CommandStation Consists/MUs
             
           </span>
         </div>
@@ -6982,30 +6982,6 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Commands">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#defining-and-deleting-turnoutspoints" class="md-nav__link">
-    <span class="md-ellipsis">
-      Defining and deleting Turnouts/Points
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#managing-turnoutspoints" class="md-nav__link">
-    <span class="md-ellipsis">
-      Managing Turnouts/Points
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
       
         <li class="md-nav__item">
@@ -7023,57 +6999,6 @@
       Response
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="Response">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#response-for-t-id" class="md-nav__link">
-    <span class="md-ellipsis">
-      Response for &lt;T «id» ...&gt;
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#response-for-t-and-j-t" class="md-nav__link">
-    <span class="md-ellipsis">
-      Response for &lt;T&gt; and &lt;J T&gt;
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#response-for-t-id-x-and-j-t-id" class="md-nav__link">
-    <span class="md-ellipsis">
-      Response for &lt;T «id» X&gt; and &lt;J T «id»&gt;
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#response-for-t-id-state" class="md-nav__link">
-    <span class="md-ellipsis">
-      Response for &lt;T «id» «state»&gt;
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#response-for-t-id_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      Response for &lt;T «id»&gt;
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -7108,7 +7033,7 @@
           <li class="md-nav__item">
   <a href="#example-responses" class="md-nav__link">
     <span class="md-ellipsis">
-      Example Responses
+      Example Responses:
     </span>
   </a>
   
@@ -7140,166 +7065,35 @@
   
 
 
-<h1 id="t-id-various-parameters-j-t-id-define-or-manage-turnoutspoints"><small><code>&lt;T [«id»] [«various parameters»]&gt;</code> <br/> <code>&lt;J T [«id»]&gt;</code></small> <br/>Define or manage Turnouts/Points<a class="headerlink" href="#t-id-various-parameters-j-t-id-define-or-manage-turnoutspoints" title="Permanent link">&para;</a></h1>
-<p>Serial commands to define or manage Turnouts/Points.</p>
+<h1 id="locoleadloco-follower-follower27-manage-ex-commandstation-consistsmus"><small><code>&lt;^ «loco»|[«leadLoco» «follower» [ «follower2..7»]]&gt;</code></small> <br/> Manage EX-CommandStation Consists/MUs<a class="headerlink" href="#locoleadloco-follower-follower27-manage-ex-commandstation-consistsmus" title="Permanent link">&para;</a></h1>
+<p>Serial commands to manage in-command-station Consists/<abbr title="Refers to multiple locos driving one train. North American term is &quot;Consist&quot;">Multiple Unit</abbr> Trains (MUs).  These are created and held temporarily in the <strong>EX-CommandStation</strong> and are lost when the command station restarts.</p>
+<p>See <a href="../../../products/ex-commandstation/exrail/cookbooks/driving-trains/consists/">Consists page</a> for information on other types of <abbr title="North American term. &quot;Consist&quot; refers to multiple locos driving one train. Elsewhere referred to as a &quot;Multiple Unit&quot; (MU) train">consist</abbr>.</p>
 <h2 id="commands">Commands<a class="headerlink" href="#commands" title="Permanent link">&para;</a></h2>
-<h3 id="defining-and-deleting-turnoutspoints">Defining and deleting Turnouts/Points<a class="headerlink" href="#defining-and-deleting-turnoutspoints" title="Permanent link">&para;</a></h3>
 <ul>
-<li><code>&lt;T «id» DCC «addr» «subadd»&gt;</code> Create DCC <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnout</abbr>/point</li>
-<li><code>&lt;T «id» DCC «»&gt;</code> Create DCC <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnout</abbr>/point</li>
-<li><code>&lt;T «id» SERVO «vpin» «closedValue» «thrownValue» «profile»&gt;</code> Create Servo <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnout</abbr>/point</li>
-<li><code>&lt;T «id» VPIN «vpin»&gt;</code> Create pin <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnout</abbr>/point</li>
-<li><code>&lt;T «id»&gt;</code> Delete <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnout</abbr>/point</li>
-</ul>
-<h3 id="managing-turnoutspoints">Managing Turnouts/Points<a class="headerlink" href="#managing-turnoutspoints" title="Permanent link">&para;</a></h3>
-<ul>
-<li><code>&lt;T&gt;</code> List all turnouts/points. Equivalent to <code>&lt;J T&gt;</code></li>
-<li><code>&lt;J T&gt;</code> List all turnouts/points. Equivalent to <code>&lt;T&gt;</code></li>
-<li><code>&lt;T «id» X&gt;</code> List <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnout</abbr>/point details. Equivalent to <code>&lt;J T «id»&gt;</code></li>
-<li><code>&lt;J T «id»&gt;</code> List <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnout</abbr>/point details. Equivalent to <code>&lt;T «id» X&gt;</code></li>
-<li><code>&lt;T «id» «state»&gt;</code> Throw/Close <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnout</abbr>/point</li>
+<li><code>&lt;^&gt;</code> List consists</li>
+<li><code>&lt;^ loco&gt;</code> Uncouples any <abbr title="North American term. &quot;Consist&quot; refers to multiple locos driving one train. Elsewhere referred to as a &quot;Multiple Unit&quot; (MU) train">consist</abbr> containing this loco</li>
+<li><code>&lt;^ leadLoco follower [ follower2..7]&gt;</code> Creates a <abbr title="North American term. &quot;Consist&quot; refers to multiple locos driving one train. Elsewhere referred to as a &quot;Multiple Unit&quot; (MU) train">consist</abbr> from up to 8 loco ids (negative for loco in reverse)</li>
 </ul>
 <h2 id="parameters">Parameters<a class="headerlink" href="#parameters" title="Permanent link">&para;</a></h2>
 <ul>
-<li><strong>id</strong>: id of the <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">Turnout</abbr>/Point to define or manage (<code>0</code>-<code>32767</code>)</li>
-<li><strong>addr</strong>: Address. Ranges from <code>0</code> to <code>511</code></li>
-<li><strong>subAddr</strong>: Sub-address. Ranges from <code>0</code> to <code>3</code></li>
-<li><strong>linearAddr</strong>: ranges from <code>1</code> (address 1/subaddress 0) to <code>2044</code> (address 511/subaddress 3).</li>
-<li><strong><abbr title="an Arduino pin number that has been extended to include pins on external devices or expanders">vpin</abbr></strong>: Vpin to which the servo is attached</li>
-<li><strong>closedValue</strong>: the PWM value corresponding to the servo position for CLOSED state, normally in the range <code>102</code> to <code>490</code></li>
-<li><strong>thrownValue</strong>: the PWM value corresponding to the servo position for THROWN state, normally in the range <code>102</code> to <code>490</code></li>
-<li><strong>state</strong> - one of:<ul>
-<li><code>1</code> = Throw</li>
-<li><code>T</code> = Throw  (not seen in responses)</li>
-<li><code>0</code> = Close</li>
-<li><code>C</code> = Close  (not seen in responses)</li>
-<li><code>X</code> = eXamine. Equivalent to using <code>&lt;J T «id»&gt;</code></li>
-</ul>
-</li>
-<li><strong>Profile</strong> - one of:<ul>
-<li><code>Instant</code></li>
-<li><code>Fast</code></li>
-<li><code>Medium</code></li>
-<li><code>Slow</code></li>
-<li><code>Bounce</code></li>
-</ul>
-</li>
+<li><strong>loco</strong>: DCC Address of the loco to add or remove from the <abbr title="North American term. &quot;Consist&quot; refers to multiple locos driving one train. Elsewhere referred to as a &quot;Multiple Unit&quot; (MU) train">consist</abbr>.</li>
+<li><strong>leadLoco</strong>: Notional address of the loco to become the lead loco. (<code>1</code>-<code>10293</code>) <br/>This does not need to be a real loco. Nor does tit need to be one of teh actual locos in the consts/<abbr title="Multiple Unit (MU) train. Refers to multiple locos driving one train. North American term is &quot;Consist&quot;">MU</abbr>. <br/>This will be the address that you select with a throttle or <strong>EXRAIL</strong> sequence to control all the locos in the <abbr title="North American term. &quot;Consist&quot; refers to multiple locos driving one train. Elsewhere referred to as a &quot;Multiple Unit&quot; (MU) train">consist</abbr>/<abbr title="Refers to multiple locos driving one train. North American term is &quot;Consist&quot;">Multiple Unit</abbr> train at the same time.</li>
+<li><strong>follower1..7</strong>: loco to add to the <abbr title="North American term. &quot;Consist&quot; refers to multiple locos driving one train. Elsewhere referred to as a &quot;Multiple Unit&quot; (MU) train">consist</abbr>/<abbr title="Refers to multiple locos driving one train. North American term is &quot;Consist&quot;">Multiple Unit</abbr> train.<br/> negative for a reversed loco.</li>
 </ul>
 <h2 id="response">Response<a class="headerlink" href="#response" title="Permanent link">&para;</a></h2>
-<p>The following are not a direct response, but rather a broadcast that will be triggered as a result of any track manager changes.</p>
-<h3 id="response-for-t-id">Response for <code>&lt;T «id» ...&gt;</code><a class="headerlink" href="#response-for-t-id" title="Permanent link">&para;</a></h3>
-<p><strong>For the following commands:</strong></p>
-<ul>
-<li><code>&lt;T «id» DCC «addr» «subaddr»&gt;</code></li>
-<li><code>&lt;T «id» DCC «»&gt;</code></li>
-<li><code>&lt;T «id» SERVO «vpin» «closedValue» «thrownValue» «profile»&gt;</code></li>
-<li><code>&lt;T «id» VPIN «vpin»&gt;</code></li>
-<li><code>&lt;T «id»&gt;</code></li>
-</ul>
-<p>The response will be:</p>
-<ul>
-<li>(successful): <code>&lt;O&gt;</code></li>
-<li>(fail): <code>&lt;X&gt;</code></li>
-</ul>
-<h3 id="response-for-t-and-j-t">Response for <code>&lt;T&gt;</code> and <code>&lt;J T&gt;</code><a class="headerlink" href="#response-for-t-and-j-t" title="Permanent link">&para;</a></h3>
-<p><strong>the response/broadcast is:</strong></p>
-<p>Repeated for each defined <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">Turnout</abbr>/Point:</p>
-<ul>
-<li>(successful): <code>&lt;H «id» «state»&gt;</code></li>
-<li>(fail): N/A</li>
-<li>(no defined turnouts/points): <code>X</code><ul>
-<li><strong>id</strong> - The numeric ID (0-32767) of the <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnout</abbr>/point to control.</li>
-<li><strong>state:</strong> one of<ul>
-<li>1 = Thrown,</li>
-<li>0 = Closed</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<h3 id="response-for-t-id-x-and-j-t-id">Response for  <code>&lt;T «id» X&gt;</code> and <code>&lt;J T «id»&gt;</code><a class="headerlink" href="#response-for-t-id-x-and-j-t-id" title="Permanent link">&para;</a></h3>
-<p><strong>the response/broadcast is:</strong></p>
-<ul>
-<li>(DCC Accessories): <code>&lt;H «id» DCC «addr» «subaddr» «state»&gt;</code></li>
-<li>(Servos): <code>&lt;H «id» SERVO «vpin» «thrownValue» «closedValue» «profile» «state»&gt;</code></li>
-<li>(<abbr title="an Arduino pin number that has been extended to include pins on external devices or expanders">VPIN</abbr>): <code>&lt;H «id» VPIN «vpin» «state»&gt;</code></li>
-<li>(LCN): <code>&lt;H «id» LCN «state»&gt;</code></li>
-<li>(fail/no such <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnout</abbr>/point): <code>&lt;X&gt;</code><ul>
-<li><strong>id</strong>: The numeric ID (0-32767) of the <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnout</abbr>/point to control.</li>
-<li><strong>profile</strong> - one of:<ul>
-<li><code>0</code> = Instant</li>
-<li><code>1</code> = Fast (0.5 sec)</li>
-<li><code>2</code> = Medium (1 sec)</li>
-<li><code>3</code> = Slow (2 sec)</li>
-<li><code>4</code> = Bounce (subject to revision)</li>
-</ul>
-</li>
-<li><strong>state</strong> - one of:<ul>
-<li><code>1</code> = Thrown</li>
-<li><code>0</code> = Closed</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>(fail): <code>&lt;X&gt;</code></li>
-</ul>
-<h3 id="response-for-t-id-state">Response for  <code>&lt;T «id» «state»&gt;</code><a class="headerlink" href="#response-for-t-id-state" title="Permanent link">&para;</a></h3>
-<p><strong>the response/broadcast is:</strong></p>
-<ul>
-<li>(successful): <code>&lt;H «id» «state»&gt;</code><ul>
-<li><strong>id</strong>: The numeric ID (0-32767) of the <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnout</abbr>/point to control.</li>
-<li><strong>state</strong> - one of:<ul>
-<li><code>1</code> = Thrown</li>
-<li><code>0</code> = Closed</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>(fail): <code>&lt;X&gt;</code></li>
-</ul>
-<h3 id="response-for-t-id_1">Response for <code>&lt;T «id»&gt;</code><a class="headerlink" href="#response-for-t-id_1" title="Permanent link">&para;</a></h3>
-<p><strong>the response/broadcast is:</strong></p>
-<p>The response will be:</p>
-<ul>
-<li>(successful): <code>&lt;O&gt;</code></li>
-<li>(fail): <code>&lt;X&gt;</code>  (Id does not exist)<ul>
-<li><strong>id</strong>: The numeric ID (0-32767) of the <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnout</abbr>/point to control.</li>
-</ul>
-</li>
-</ul>
+<p><mark>TODO</mark> response</p>
 <h2 id="notes">Notes<a class="headerlink" href="#notes" title="Permanent link">&para;</a></h2>
 <ul>
-<li><em>Servos are not supported on the minimal HAL (Uno or Nano target).</em><br/><br/></li>
-<li>The active and inactive positions are defined in terms of the PWM parameter (0-4095 corresponds to 0-100% PWM). The limits for an SG90 servo are about 102 to 490. The standard range of 1ms to 2ms pulses correspond to values 205 to 409.
-Profile defines the speed and style of movement: 0=Instant, 1=Fast (0.5 sec), 2=Medium (1 sec), 3=Slow (2 sec) and 4=Bounce (subject to revision).</li>
-<li><abbr title="an Arduino pin number that has been extended to include pins on external devices or expanders">vpin</abbr> is the pin number of the output to be controlled by the <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnout</abbr>/point object. <br/>For Arduino output pins, this is the same as the digital pin number. For servo outputs and I/O expanders, it is the pin number defined for the HAL device (if present), for example 100-115 for servos attached to the first PCA9685 Servo Controller module, 116-131 for the second PCA9685 module, 164-179 for pins on the first MCP23017 GPIO expander module, and 180-195 for the second MCP23017 module.</li>
-<li><code>&lt;T «id» «vpin «closedValue» «thrownValue&gt;</code> is a depricated version of the command. It is not documented here.</li>
-<li><code>&lt;T «id» «addr» «subadd»&gt;</code> is a depricated version of the command. It is not documented here.</li>
+<li>none at this time</li>
 </ul>
 <hr />
 <h2 id="examples">Examples<a class="headerlink" href="#examples" title="Permanent link">&para;</a></h2>
-<p><a href="?_T">Also search for 'T'</a></p>
-<h3 id="example-commands">Example Commands<a class="headerlink" href="#example-commands" title="Permanent link">&para;</a></h3>
+<p><a href="?_^">Also search for '&lt;^&gt;'</a> or <a href="?consist">search for '<abbr title="North American term. &quot;Consist&quot; refers to multiple locos driving one train. Elsewhere referred to as a &quot;Multiple Unit&quot; (MU) train">consist</abbr>'</a></p>
+<h3 id="example-commands"><em>Example Commands</em><a class="headerlink" href="#example-commands" title="Permanent link">&para;</a></h3>
 <ul>
-<li>
-<p><em>Example:</em> <code>&lt;T 23 DCC 5 0&gt;</code></p>
-<p><em>Example:</em> You have a <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnout</abbr>/point on your main line going to warehouse industry. The <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnout</abbr>/point is controlled by an accessory decoder with a address of 123 and is wired to output 3. You want it to have the ID of 10. You would send the following command to the CommandStation: <br/><code>&lt;T 10 DCC 123 3&gt;</code></p>
-<p>This Command means:</p>
-<ul>
-<li><strong>T</strong> = (Upper case T) Define a <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnout</abbr>/point</li>
-<li><strong>DCC</strong> = The <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnout</abbr>/point is DCC Accessory Decoder based</li>
-<li><strong>10</strong> = ID number I am setting to use this <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnout</abbr>/point</li>
-<li><strong>123</strong> = The accessory decoders address</li>
-<li><strong>3</strong> = The <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnout</abbr>/point is wired to output 3</li>
+<li><mark>TODO</mark> LOW - Example Commands</li>
 </ul>
-</li>
-<li>
-<p><em>Example:</em> <code>&lt;T 23 DCC 44&gt;</code> (corresponds to address 11 subaddress 3)</p>
-</li>
-<li><em>Example:</em> <code>&lt;T 25 VPIN 30&gt;</code> defines a <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnout</abbr>/point that operates Arduino digital output pin D30.</li>
-<li><em>Example:</em> <code>&lt;T 26 VPIN 164&gt;</code> defines a <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnout</abbr>/point that operates the first pin on the first MCP23017 GPIO expander (if present).</li>
-</ul>
-<h3 id="example-responses">Example Responses<a class="headerlink" href="#example-responses" title="Permanent link">&para;</a></h3>
+<h3 id="example-responses"><em>Example Responses:</em><a class="headerlink" href="#example-responses" title="Permanent link">&para;</a></h3>
 <ul>
 <li><mark>TODO</mark> LOW - Example Responses</li>
 </ul>
@@ -7330,7 +7124,7 @@ Profile defines the speed and style of movement: 0=Instant, 1=Fast (0.5 sec), 2=
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 18, 2026 02:33:33 UTC">June 18, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 18, 2026 05:40:27 UTC">June 18, 2026</span>
   </span>
 
     
