@@ -6669,6 +6669,29 @@
   
   
     <li class="md-nav__item">
+      <a href="../../../contributing/todo-report/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    To-Do/Task List
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../../contributing/code/contributing-code/" class="md-nav__link">
         
   
@@ -6703,10 +6726,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_12_5" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_12_6" >
         
           
-          <label class="md-nav__link" for="__nav_12_5" id="__nav_12_5_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_12_6" id="__nav_12_6_label" tabindex="0">
             
   
   
@@ -6719,8 +6742,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_12_5_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_12_5">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_12_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_12_6">
             <span class="md-nav__icon md-icon"></span>
             Contributing Documentation
           </label>
@@ -7094,7 +7117,7 @@
 <p>The Ack current limit is set according to the DCC standard(s) of 60mA. Most decoders send a quick back and forth current pulse to the motor to generate this ACK. However, some modern motors (N and Z scales) may not be able to draw that amount of current. You can adjust down this limit. Or, if for some reasons your acks seem to be too “trigger happy” you can make it less sensitive by raising this limit.</p>
 </li>
 <li>
-<p>The <abbr title="National Model Railroad Association">NMRA</abbr> specifies that the ACK pulse duration should be 6 milliseconds, which is 6000 microseconds (µS), give or take 1000 µS. That means the minimum pulse duration is 5000 µS and the maximum is 7000 µS. There are many poorly designed decoders in existence so <strong>DCC-EX</strong> extends this range from 4000 to 8500 µS. If you have any decoders that still do not function within this range, you can adjust the ACK MIN and ACK MAX parameters.</p>
+<p>The <abbr title="National Model Railroad Association (USA)">NMRA</abbr> specifies that the ACK pulse duration should be 6 milliseconds, which is 6000 microseconds (µS), give or take 1000 µS. That means the minimum pulse duration is 5000 µS and the maximum is 7000 µS. There are many poorly designed decoders in existence so <strong>DCC-EX</strong> extends this range from 4000 to 8500 µS. If you have any decoders that still do not function within this range, you can adjust the ACK MIN and ACK MAX parameters.</p>
 </li>
 <li>
 <p>When reading/writing CVs, the program will try again upon failure. The default is <code>&lt;D ACK RETRY 2&gt;</code>, which means 3 attempts before a failure is reported. Each of the unsuccessful attempts is reported in the Serial Monitor or <abbr title="Java Model Railroad Interface">JMRI</abbr> monitor log. The last unsuccessful attempt remains on the display if in use. To reset the running total, send the command manually: <code>&lt;D ACK RETRY 2&gt;</code>.</p>
@@ -7102,16 +7125,16 @@
 </li>
 <li>
 <p>By default, the programming track has a current limit enabled of 250mA, so any programming activities requiring more than this value will cause power to the programming track to be cut for 100ms. Run the <code>C PROGBOOST&gt;</code> command to override this if programming decoders trigger current limiting on the programming track.</p>
-<p>When the programming track is switched on with <code>&lt;1&gt;</code> or <code>&lt;1 PROG&gt;</code> it will normally be restricted to 250mA according to <abbr title="National Model Railroad Association">NMRA</abbr> standards. Some loco decoders require more than this, especially sound versions. <code>&lt;C PROGBOOST&gt;</code> temporarily removes this limit to allow the decoder to use more power. The normal limit will be re-imposed when the programming track is switched off with <code>&lt;0&gt;</code> or <code>&lt;0 PROG&gt;</code> or the <strong>EX-CommandStation</strong> is reset.</p>
+<p>When the programming track is switched on with <code>&lt;1&gt;</code> or <code>&lt;1 PROG&gt;</code> it will normally be restricted to 250mA according to <abbr title="National Model Railroad Association (USA)">NMRA</abbr> standards. Some loco decoders require more than this, especially sound versions. <code>&lt;C PROGBOOST&gt;</code> temporarily removes this limit to allow the decoder to use more power. The normal limit will be re-imposed when the programming track is switched off with <code>&lt;0&gt;</code> or <code>&lt;0 PROG&gt;</code> or the <strong>EX-CommandStation</strong> is reset.</p>
 </li>
 </ul>
 <hr />
 <h2 id="examples">Examples<a class="headerlink" href="#examples" title="Permanent link">&para;</a></h2>
 <p><a href="?_D_ACK">Also search for <code>D ACK</code></a></p>
 <h3 id="example-commands">Example Commands<a class="headerlink" href="#example-commands" title="Permanent link">&para;</a></h3>
-<p><mark>TODO</mark> Example Commands</p>
+<p><mark>TODO</mark> LOW - Example Commands</p>
 <h3 id="example-responses">Example Responses<a class="headerlink" href="#example-responses" title="Permanent link">&para;</a></h3>
-<p><mark>TODO</mark> Example Responses</p>
+<p><mark>TODO</mark> LOW - Example Responses</p>
 <hr />
 <h2 id="hints-and-tips"><em>Hints and Tips</em><a class="headerlink" href="#hints-and-tips" title="Permanent link">&para;</a></h2>
 <h3 id="hornby-hm7000-decoders"><strong>Hornby HM7000 decoders</strong><a class="headerlink" href="#hornby-hm7000-decoders" title="Permanent link">&para;</a></h3>
@@ -7151,7 +7174,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 17, 2026 11:04:31 UTC">June 17, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 18, 2026 02:33:33 UTC">June 18, 2026</span>
   </span>
 
     

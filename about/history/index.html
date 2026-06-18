@@ -6783,6 +6783,29 @@
   
   
     <li class="md-nav__item">
+      <a href="../../contributing/todo-report/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    To-Do/Task List
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../contributing/code/contributing-code/" class="md-nav__link">
         
   
@@ -6817,10 +6840,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_12_5" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_12_6" >
         
           
-          <label class="md-nav__link" for="__nav_12_5" id="__nav_12_5_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_12_6" id="__nav_12_6_label" tabindex="0">
             
   
   
@@ -6833,8 +6856,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_12_5_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_12_5">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_12_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_12_6">
             <span class="md-nav__icon md-icon"></span>
             Contributing Documentation
           </label>
@@ -7166,7 +7189,7 @@
 <p>The 3 most requested features were: 1. More reliable <abbr title="Configuration Variable (DCC Decoders)">CV</abbr> read and writes, 2. Better accessory control, 3. Automation. Some have requested a Railcom cut-out. We haven't limited ourselves to just these features, but we put a lot of time into redesigning things to accommodate them.</p>
 <p>The current detection routines are completely different. One key difference is all current readings are in milliAmps (mA) instead of meaningless pin readings. So if you want to set your overload protection to kick in at 3 Amps, you just enter 3000 for 3000mA instead of looking up a value from a table.</p>
 <p>We continue to test all the motor board and Arduino combinations at different voltages to refine our current readings. This is important because we want to have accurate and fast short-circuit detection, and because the reason <abbr title="Configuration Variable (DCC Decoders)">CV</abbr> reading was occasionally unreliable in the past was due to not always sensing a current pulse on the track. In addition to more accurately reading current, we had to completely change the way we look for an "ACK" (acknowledgement from the train that it received a command). So we now check immediately after we send a command instead of waiting for a dozen or more packets. This means we don't miss an ACK while this is happening, and we jump out of sending unnecessary packets as soon as we get one. We also use our knowledge of CVs and the probability of what a <abbr title="Configuration Variable (DCC Decoders)">CV</abbr> may contain, so save time by skipping ahead if our first guess is correct. You will appreciate how much faster we can read CVs now!</p>
-<p>There are now full diagnostics for trying to determine why a particular decoder may not be reading or writing correctly and new commands to adjust parameters to deal with decoders that are not in compliance with <abbr title="National Model Railroad Association">NMRA</abbr> specifications. We use resolution down to the microsecond.</p>
+<p>There are now full diagnostics for trying to determine why a particular decoder may not be reading or writing correctly and new commands to adjust parameters to deal with decoders that are not in compliance with <abbr title="National Model Railroad Association (USA)">NMRA</abbr> specifications. We use resolution down to the microsecond.</p>
 <p>We not only are working on a RailCom cutout within the Command Station, but are developing a way of reading the RailCom data and reporting it.</p>
 <h2 id="automation">Automation<a class="headerlink" href="#automation" title="Permanent link">&para;</a></h2>
 <p><strong>EXRAIL</strong> (Extended Railroad Automation Interface for Layouts) brings new capability to the world of automation. You don't have to be a programmer to write a script that tells a train to start moving forward at a set speed until some action (like reaching a sensor) occurs! This is an open-ended project, since who knows what things people will come up with that they want to automate! It will be easy to extend the commands to handle whatever your imagination can dream of.</p>
