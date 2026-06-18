@@ -4,7 +4,7 @@ The EX-FastClock Software will be found in the appropriate repository in the **D
 
 This repository currently contains two branches:
 
-1. Main.  This branch contains a copy of the code and ancilliary files on PlatformIO configuration.
+1. Main.  This branch contains a copy of the code and ancillary files on PlatformIO configuration.
 2. Arduino IDE.  This branch contains the files in the necessary structure for use with the Arduino IDE
 
 ## Libraries

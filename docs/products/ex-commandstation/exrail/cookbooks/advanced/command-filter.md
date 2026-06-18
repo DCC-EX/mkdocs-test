@@ -8,7 +8,7 @@ The following code, added to myAutomation.h like any other **EXRAIL** code, give
 STEALTH_GLOBAL(
   void myFilter(Print * stream, byte & opcode, byte & paramCount, int16_t p[]) {
     (void)stream;
-    // use command <U locoid> to display name from roster
+    // use command <U locoId> to display name from roster
     if (opcode == 'U' && paramCount == 1) {
       auto locoId=p[0];
       auto name=RMFT2::getRosterName(locoId);

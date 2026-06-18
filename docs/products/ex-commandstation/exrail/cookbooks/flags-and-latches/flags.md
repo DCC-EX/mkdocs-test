@@ -13,7 +13,7 @@ Existing <> and exrail commands for vpins work on these pins.
 ## Creating virtual pins
   
   ```cpp
-    HAL(Bitmap,firstpin,npins) 
+    HAL(Bitmap,firstPin,nPins) 
   ```
 
 creates 1 or more virtual pins in software.

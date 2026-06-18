@@ -39,7 +39,7 @@ These consists can be built with
 For example:
 
 ```cpp
-SETLOCO(3)        // sets currect loco
+SETLOCO(3)        // sets current loco
 BUILD_CONSIST(77)  // Makes 3 a consist of 3 and 77
 BUILD_CONSIST(88)  // adds loco 88 to the consist
 BUILD_CONSIST(-99) // adds loco 99 facing backwards
@@ -47,3 +47,5 @@ FWD(10) // all 4 locos set off together
 ```
 
 **EXRAIL** can also break up a consist with the `BREAK_CONSIST` command which will break up any consist that includes the current loco.
+
+--8<-- "snippets/abbr.md"

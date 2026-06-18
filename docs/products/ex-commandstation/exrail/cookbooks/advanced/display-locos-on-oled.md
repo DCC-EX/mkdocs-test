@@ -43,7 +43,7 @@ STEALTH_GLOBAL(
 ```
 
 To ensure the function is called twice per second we use the UserAddin HAL feature.
-The LCD/OLED number 2 used by the function is connected by I2C. 
+The LCD/OLED number 2 used by the function is connected by I2C.
 
 ```cpp
 HAL(UserAddin,updateLocoScreen,500) 

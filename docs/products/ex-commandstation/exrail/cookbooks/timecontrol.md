@@ -66,7 +66,7 @@ ONCLOCKMINS(15)
 DONE
 ```
 
-The sequence above will repeat at 15 munites past the hour per FastClock time.  It would also be possible to make these routines be selectable from Engine Driver by configuring them as follows:
+The sequence above will repeat at 15 minutes past the hour per FastClock time.  It would also be possible to make these routines be selectable from Engine Driver by configuring them as follows:
 
 ```cpp
 ONCLOCKMINS(15) FOLLOW(10) DONE
@@ -86,7 +86,7 @@ In that way the Sequence 10 can either be run by the clock, or if the clock is n
 
 NB:  See the following page for details on running sound files.
 
-( add a refernce )
+( add a reference )
 
 ## Testing Timed Sequences
 

@@ -13,7 +13,7 @@ STASH is used for scenarios where it is helpful to relate a loco id to where it 
 
 Automated yard parking can use the stash to determine which tracks are empty without the need for block occupancy detectors.
 
-Note that a negative locoid may be stashed to indicate that the loco will operate with inverted direction. For example a loco facing backwards, with the INVERT_DRECTION state may be stashed by exrail and the invert state will be restored along with the loco id when using the PICKUP_STASH.  CLEAR_ANY_STASH will clear all references to the loco regardless of direction.
+Note that a negative locoId may be stashed to indicate that the loco will operate with inverted direction. For example a loco facing backwards, with the INVERT_DIRECTION state may be stashed by exrail and the invert state will be restored along with the loco id when using the PICKUP_STASH.  CLEAR_ANY_STASH will clear all references to the loco regardless of direction.
 
 The following Stash  commands are available:
 
@@ -31,4 +31,4 @@ The following Stash  commands are available:
 
 Notes: An automatic parking script can run through the various tracks and find one which has no stashed loco, then set the route and drive into the track. Once stopped, the locoid can be stashed against that track.
 
-If the operator wants to drive away a loco manually by loco id, an automation can search the tracks for that stashed loco id using IFSTASHED_HERE(trackid) so it can set the turnouts/points to exit the yard from that track.
+If the operator wants to drive away a loco manually by loco id, an automation can search the tracks for that stashed loco id using IFSTASHED_HERE(trackId) so it can set the turnouts/points to exit the yard from that track.

@@ -8,8 +8,8 @@ tags:
 
 # Emergency stop button
 
-An emergency stop is a way of stopping all locos immediately. DCC locos often have sustainers that are there to allow the loco to move over short sections of dirty track or insulated turnout/point frogs. Because of these sustainers, turning off the track power is not a reliable way of stopping trains, those with sustainers may continue moving for serveral metres/yards.
-To stop a loco immediately, the powewr must remain on and we must send it a particular DCC packet and the decoder will know to stop.  
+An emergency stop is a way of stopping all locos immediately. DCC locos often have sustainers that are there to allow the loco to move over short sections of dirty track or insulated turnout/point frogs. Because of these sustainers, turning off the track power is not a reliable way of stopping trains, those with sustainers may continue moving for several metres/yards.
+To stop a loco immediately, the power must remain on and we must send it a particular DCC packet and the decoder will know to stop.  
 
 ## ESTOPALL
 
@@ -67,7 +67,7 @@ ONBUTTON(174)
   DONE
 ```
 
-In some cases you may prefer that the system is locked but movement does not restart automatically when the resume is issued. This can be achieved by performing an ESTOPALL immediately before resuming. This forces all locos to have a current speed of 0 before releaseing the speed reminders onto the track.
+In some cases you may prefer that the system is locked but movement does not restart automatically when the resume is issued. This can be achieved by performing an ESTOPALL immediately before resuming. This forces all locos to have a current speed of 0 before releasing the speed reminders onto the track.
 
 ```cpp
 ONBUTTON(174) 
