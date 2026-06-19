@@ -194,7 +194,7 @@ li a {
     - [EXRAIL Command List](reference\exrail-command-reference.md)
     - [Advanced config.h settings for EX-CommandStation build <small>(Advanced config.h Options)</small>](reference\advanced-config-h.md)
     - **TrackManager**
-        - [Track Manager <small>(TrackManager)</small>](reference\trackmanager\trackmanager.md)
+        - [TrackManager](reference\trackmanager\trackmanager.md)
         - [DC Mode - PWM Frequency <small>(DC Mode Frequency)</small>](reference\trackmanager\dc-mode-frequency.md)
         - [DC Mode - Logic Gate Circuits <small>(DC Mode Logic)</small>](reference\trackmanager\dc-mode-logic.md)
         - [DC Mode Track Sync <small>(DC Track Sync)</small>](reference\trackmanager\dc-track-sync.md)
