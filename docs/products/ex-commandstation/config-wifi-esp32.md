@@ -1,4 +1,6 @@
 ﻿---
+hide:
+  - tags
 tags:
     - _9C9_9WIFI9_9AP9_ssid_password_channel
     - _9C9_9WIFI9_9AP9_ssid_password

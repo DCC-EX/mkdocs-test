@@ -1,0 +1,5 @@
+INHERIT: mkdocs.yml
+
+hooks:
+  - gen_toc.py
+  - find_todos.py
