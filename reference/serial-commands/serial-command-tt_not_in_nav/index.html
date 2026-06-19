@@ -7166,8 +7166,8 @@
 <li><strong>subAddr</strong>: Sub-address. Ranges from <code>0</code> to <code>3</code></li>
 <li><strong>linearAddr</strong>: ranges from <code>1</code> (address 1/subaddress 0) to <code>2044</code> (address 511/subaddress 3).</li>
 <li><strong><abbr title="an Arduino pin number that has been extended to include pins on external devices or expanders">vpin</abbr></strong>: Vpin to which the servo is attached</li>
-<li><strong>closedValue</strong>: the PWM value corresponding to the servo position for CLOSED state, normally in the range <code>102</code> to <code>490</code></li>
-<li><strong>thrownValue</strong>: the PWM value corresponding to the servo position for THROWN state, normally in the range <code>102</code> to <code>490</code></li>
+<li><strong>closedValue</strong>: the <abbr title="Pulse Width Modulation">PWM</abbr> value corresponding to the servo position for CLOSED state, normally in the range <code>102</code> to <code>490</code></li>
+<li><strong>thrownValue</strong>: the <abbr title="Pulse Width Modulation">PWM</abbr> value corresponding to the servo position for THROWN state, normally in the range <code>102</code> to <code>490</code></li>
 <li><strong>state</strong> - one of:<ul>
 <li><code>1</code> = Throw</li>
 <li><code>T</code> = Throw  (not seen in responses)</li>
@@ -7270,7 +7270,7 @@
 <h2 id="notes">Notes<a class="headerlink" href="#notes" title="Permanent link">&para;</a></h2>
 <ul>
 <li><em>Servos are not supported on the minimal HAL (Uno or Nano target).</em><br/><br/></li>
-<li>The active and inactive positions are defined in terms of the PWM parameter (0-4095 corresponds to 0-100% PWM). The limits for an SG90 servo are about 102 to 490. The standard range of 1ms to 2ms pulses correspond to values 205 to 409.
+<li>The active and inactive positions are defined in terms of the <abbr title="Pulse Width Modulation">PWM</abbr> parameter (0-4095 corresponds to 0-100% <abbr title="Pulse Width Modulation">PWM</abbr>). The limits for an SG90 servo are about 102 to 490. The standard range of 1ms to 2ms pulses correspond to values 205 to 409.
 Profile defines the speed and style of movement: 0=Instant, 1=Fast (0.5 sec), 2=Medium (1 sec), 3=Slow (2 sec) and 4=Bounce (subject to revision).</li>
 <li><abbr title="an Arduino pin number that has been extended to include pins on external devices or expanders">vpin</abbr> is the pin number of the output to be controlled by the <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnout</abbr>/point object. <br/>For Arduino output pins, this is the same as the digital pin number. For servo outputs and I/O expanders, it is the pin number defined for the HAL device (if present), for example 100-115 for servos attached to the first PCA9685 Servo Controller module, 116-131 for the second PCA9685 module, 164-179 for pins on the first MCP23017 GPIO expander module, and 180-195 for the second MCP23017 module.</li>
 <li><code>&lt;T «id» «vpin «closedValue» «thrownValue&gt;</code> is a depricated version of the command. It is not documented here.</li>

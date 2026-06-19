@@ -7011,10 +7011,152 @@
   
 
 
-<h1 id="dc-mode-pwm-frequency">DC Mode - PWM Frequency<a class="headerlink" href="#dc-mode-pwm-frequency" title="Permanent link">&para;</a></h1>
-<p>The default PWM frequency is 131Hz.  Functions F29-F30-F31 are defined to enable other frequencies.</p>
+<h1 id="dc-mode-pwm-frequency">DC Mode - <abbr title="Pulse Width Modulation">PWM</abbr> Frequency<a class="headerlink" href="#dc-mode-pwm-frequency" title="Permanent link">&para;</a></h1>
+<p>The default <abbr title="Pulse Width Modulation">PWM</abbr> frequency is 131Hz.  Functions F29-F30-F31 are defined to enable other frequencies.</p>
 <p>The functions will toggle the bits ON/OFF as shown in the table.</p>
-<p>&nbsp; &nbsp; &nbsp; &nbsp; <img alt="PWM Frenquency" src="../../../_static/images/trackmanager/dc-pwm-frequency.png" style="width: 50%" /></p>
+<!-- &nbsp; &nbsp; &nbsp; &nbsp; ![PWM Frenquency](/_static/images/trackmanager/dc-pwm-frequency.png){: style="width: 50%"} -->
+
+<style>
+/* Target the table inside the main content area */
+/* 1. Force the table container and table wrapper to allow shrinking */
+.md-typeset table:not([class]),
+.md-typeset .md-content__inner table {
+    table-layout: fixed !important;
+    width: auto !important; /* Forces the table to shrink wrap to cell widths instead of stretching to 100% */
+    display: table !important;
+}
+
+/* 2. Target the first 4 narrow columns (F31, F30, F29, and index) */
+.md-typeset table:not([class]) th:nth-child(-n+4),
+.md-typeset table:not([class]) td:nth-child(-n+4) {
+    width: 45px !important;
+    max-width: 45px !important;
+    min-width: 45px !important;
+    padding: 4px !important;
+    text-align: center !important;
+}
+
+/* 3. Target the microcontroller columns (Nucleo, ESP32, Mega) */
+.md-typeset table:not([class]) th:nth-child(n+5),
+.md-typeset table:not([class]) td:nth-child(n+5) {
+    width: 90px !important;
+    max-width: 90px !important;
+    min-width: 90px !important;
+    padding: 4px 8px !important;
+}
+
+.md-content th, 
+.md-content td {
+    width: 12%; /* Adjust this percentage or use pixels (e.g., 60px) to make them tighter */
+    padding: 4px 8px; /* Optional: reduce padding to squeeze text closer together */
+}
+
+.md-typeset__scrollwrap table {
+    display: table !important;
+    width: 100% !important;
+    border-collapse: separate !important;
+    border-spacing: 0 !important;
+}
+
+.md-typeset table td,  
+.md-typeset table th {
+    font-size: smaller !important;
+    padding-top: 2px !important;
+    padding-bottom: 2px !important;
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+    line-height: 110% !important;
+    font-family: 'Roboto Condensed', sans-serif !important;
+ }
+</style>
+
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">F31</th>
+<th style="text-align: right;">F30</th>
+<th style="text-align: right;">F29</th>
+<th style="text-align: right;"></th>
+<th style="text-align: right;">Nucleo-F4</th>
+<th style="text-align: right;">ESP32</th>
+<th style="text-align: right;">Mega</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">131</td>
+<td style="text-align: right;">131</td>
+<td style="text-align: right;">131</td>
+</tr>
+<tr>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">480</td>
+<td style="text-align: right;">480</td>
+<td style="text-align: right;">490</td>
+</tr>
+<tr>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">3600</td>
+<td style="text-align: right;">3400</td>
+<td style="text-align: right;">3400</td>
+</tr>
+<tr>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">16000</td>
+<td style="text-align: right;">16000</td>
+<td style="text-align: right;">3400</td>
+</tr>
+<tr>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">32000</td>
+<td style="text-align: right;">32000</td>
+<td style="text-align: right;">62500</td>
+</tr>
+<tr>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">32000</td>
+<td style="text-align: right;">32000</td>
+<td style="text-align: right;">62500</td>
+</tr>
+<tr>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">32000</td>
+<td style="text-align: right;">32000</td>
+<td style="text-align: right;">62500</td>
+</tr>
+<tr>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">7</td>
+<td style="text-align: right;">62500</td>
+<td style="text-align: right;">32000</td>
+<td style="text-align: right;">62500</td>
+</tr>
+</tbody>
+</table>
 <p><strong>NOTE:</strong></p>
 <ul>
 <li>
@@ -7029,6 +7171,7 @@
 <p><mark>TODO</mark>  How to effectively use DC mode when using multiple frequencies.  </p>
 </li>
 </ul>
+<!-- These are case sensitive -->
 
 
 
@@ -7049,7 +7192,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="December 23, 2025 21:09:41 UTC">December 23, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 19, 2026 00:00:18 UTC">June 19, 2026</span>
   </span>
 
     
