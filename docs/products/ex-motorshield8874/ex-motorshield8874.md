@@ -4,6 +4,8 @@ Designed in conjunction with the **DCC-EX** development team, the **EX‑MotorSh
 
 This board is the new standard by which we compare other boards.
 
+Not *required* for the *EX-CSB1*, but can be optionally added to provide two additional 5amp outputs (to two provided by default).
+
 ## Features
 
 - Pin compatible with the original Arduino Motor Shield Rev3 but provides significantly improved electrical performance for driving higher loads, and improved usability.
@@ -50,7 +52,7 @@ For self-built **EX-CommandStations**, please consult the relevant build instruc
 
 ## Engineering notes
 
-The **EX‑MotorShield8874** DC barrel jack is the only power source required to power both the tracks and the EX‑CommandStation into which it is plugged into. It supplies carefully regulated 7.2V DC power to the underlying Arduino R3 compatible motherboard via the VIN pin. This voltage is safely regulated down from the track power input to ensure **EX-CommandStation** motherboards will stay cool and work well. There is no need to power the **EX-CommandStation** via its barrel jack, or USB power. It is safe, however, to connect the USB cable as it will not create a conflict.
+The **EX‑MotorShield8874** DC barrel jack is the only power source required to power both the tracks and the **EX‑CommandStation** into which it is plugged into. It supplies carefully regulated 7.2V DC power to the underlying Arduino R3 compatible motherboard via the VIN pin. This voltage is safely regulated down from the track power input to ensure **EX-CommandStation** motherboards will stay cool and work well. There is no need to power the **EX-CommandStation** via its barrel jack, or USB power. It is safe, however, to connect the USB cable as it will not create a conflict.
 
 Applying a voltage above what a decoder was designed for, may permanently damage it, because the **EX‑MotorShield8874** does not drop voltage like the standard L298 based motor shields take care over track voltage selection.
 
@@ -86,7 +88,7 @@ The **CSB1** can only have a single **EX8874** stacked on it, unmodified. There 
 
 ![after](/_static/images/ex8874/pin-assignment-pads-after2.png)
 
-The reason we did not solder the FAULT pins to their righthand ALT pads is that this would connect the FAULT pins to D0/D1 on the Arduino R3 headers which is not ideal because D0/D1 typically carry the serial port. You can of course bend those pins out if you wish to use them, and simply jumper them that way. Please refer to the self-build instructions for your processor type.
+The reason we did not solder the FAULT pins to their right-hand ALT pads is that this would connect the FAULT pins to D0/D1 on the Arduino R3 headers which is not ideal because D0/D1 typically carry the serial port. You can of course bend those pins out if you wish to use them, and simply jumper them that way. Please refer to the self-build instructions for your processor type.
 
 Leaving the Fault pins on A4, A5 facilitates bending and jumpering them to nearby pins, such as  
 A6, A7 on Arduino Mega  

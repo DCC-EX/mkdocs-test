@@ -27,6 +27,11 @@ This is a list of to do items that will allow us to release this new documentati
     - [ ] **EX-CSB1**
     - [ ] **EX-Motorshield8874**
     - [ ] **EX-WiFiShield8266**
+    - [x] **EX-Toolbox**
+    - [x] **EX-WebThrottle**
+    - [ ] **EX-IOExpander**
+    - [ ] **EX-Turntable**
+
 
 - Better how to get help and support info:
 
@@ -112,6 +117,6 @@ This is a list of to do items that will allow us to release this new documentati
 ## Release To Do
 
 - [ ] GitHub workflow to build these docs on push/merge
-- [ ] GitHub workflow must use strict mode to error on all warnings and errors
+- [ ] ~~GitHub workflow must use strict mode to error on all warnings and errors~~ This causes too many problems
 - [ ] News article on existing site ahead of release
 - [ ] News article with this release

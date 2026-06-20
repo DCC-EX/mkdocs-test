@@ -24,4 +24,6 @@ The 3 I2C building blocks we very strongly request Conductors build for themselv
 
 - Third, even when using a configuration that is known to work, you will be using a number of cables to connect items and it is very common to have problems caused by inadvertently swapping cables, or simply poor connections, which can cause things not to work, or worse, be damaged. The use of a multimeter to confirm correct set up and to troubleshoot any issues arising is mission critical. Yes, we are strong on this point because it is such a vital tool for you to enjoy this aspect of your hobby and for our support teams to guide you through any problems you may encounter.
 
-Using these 3 proven building blocks together, you will likely have a successful installation. If you choose to ignore these, you will probably find a multitude of unexpected and unknown issues and join the ranks of users that can’t get their accessories to work and don’t understand why.
+Using these 3 proven building blocks together, you will likely have a successful installation. If you choose to ignore these, you will probably find a multitude of unexpected and unknown issues and join the ranks of users that can't get their accessories to work and don't understand why.
+
+--8<-- "snippets/abbr.md"
