@@ -37,3 +37,5 @@ The most common method of connecting sensor devices to your **EX-CommandStation*
 The [EX-IOExpander](?IOExpander) can be used to connect multiple sensors over a single I2C connection depending on the microprocessor used to build it.
 
 The [EX-SensorCam](?SensorCam) can be used to offer up to 80 sensor points on a single I2C connection.  
+
+--8<-- "snippets/abbr.md"

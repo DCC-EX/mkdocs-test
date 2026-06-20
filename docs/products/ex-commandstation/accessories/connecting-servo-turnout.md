@@ -1,6 +1,8 @@
 # Connecting a servo turnout/point
 
-The details below assume you are using an **EX-CSB1** command station or a DIY station with an EX8874 motor shield and WiFi connection. Otherwise the steps are the same but the wiring is trickier without the Qwiic sockets and testing requires command input.
+The details on this page assume you are using an **EX-CSB1** command station or a DIY station with an **EX-8874** motor shield and WiFi connection. Otherwise the steps are the same but the wiring is trickier without the Qwiic sockets and testing requires command input.
+
+## You Will Need
 
 You will need the following for up to 16 servos.
 
@@ -12,7 +14,7 @@ You will need the following for up to 16 servos.
 - (Optionally) Android phone with **EX-Toolbox** installed
 - A servo power supply 5V 2A DC -- and not taken from the **EX-CommandStation**.
 
-## Follow the steps below
+## Follow the Steps Below
 
 1. Turn off power to your **EX-CommandStation** and unplug the USB cable and power supply.
 2. Connect the Qwiic cable between the *EX-CSB1** or EX8874 and the PCA9685 module.<BR>
@@ -80,3 +82,5 @@ Configure additional PCA9685 in myAutomation.h.
 ```
 
 Nucleo-144 boards do not have pre-defined PCA9685 due to pin conflicts, as pins thru 116 are reserved for the microprocessor.  All PCA9685 connected to Nucleo-144 boards require configuration in myAutomation.h.
+
+--8<-- "snippets/abbr.md"

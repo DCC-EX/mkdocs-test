@@ -20,11 +20,12 @@ So:
     - Ensure sure the page title is the first item on the page (after any tags).  If it is not the file name will appear in the search results, not the title.
     - Ensure that the block of text between the page title and the next heading (of any sort) is relatively short. Ideally no more than a few paragraphs. This is what what will appear in the search results.
     - Ensure that you DO NOT use tables or complex formatting in the first block of text (between the page title and the next heading) as this will be scrambled in the search results.
-
-- Bold any product names. Hyperlink them to the appropriate page where practical.
+- Product names:
+    - Bold any product names. Hyperlink them to the appropriate page where practical.
     - i.e. use '\*\*EX-CommandStation\*\*' not 'EX-CommandStation'
-- Don't abbreviate product names.
+    - Don't abbreviate product names.
     - e.g. use '**EX-CSB1**' not 'CSB1'
+    - Alsways include the hyphen('-') e.g. **EX-CSB1**, not EXCSB1.
 - Avoid abbreviations that would not be easily recognised by 'Conductors'.
     - In particular *don't* use 'CS'.  Use the full name 'Command Station' or, more commonly, 'EX-CommandStation'
     - *Don't* use 'AP'.  Use 'Access Point' or 'Access Point Mode' or 'Access Point Mode (AP)'
@@ -41,23 +42,26 @@ So:
 - Where possible, avoid starting a section with a negative point of view.  i.e. Talk about the positives of what you are discussing first, before you delve into the negative or problematic aspects. <br/>e.g. Don't start with "... This is not for Conductors...", instead say "..This page is for Tinkerers ... Conductors should...".
 - Use British/Australian/New Zealand/Canadian/Indian (pretty much every country except the USA) spelling e.g. 'colour' not 'color'. <br/>(Primarily because it is used in more English speaking countries)
 - Preferred Terms:
-    - Use **'EX-CommandStation'** not 'Command Station' when refering to something that is specific to the **DCC-EX** product.
+    - Use **'EX-CommandStation'** not 'Command Station' when referring to something that is specific to the **DCC-EX** product.
     - Where logical to do so, use **"Motor Driver"**, in preference to 'Motor Shield'.  Do not use 'Motor Board' or 'Motorboard'.
     - In general use **'train'** or **'loco'** instead of 'locomotive' or 'engine'
     - Use **'Smart Phone'** instead of 'Cell Phone' (US only term) or 'Mobile Phone' (just about everywhere else)
     - Use **Throttle** or **Throttle (controller)** instead of 'controller' or 'controller (throttle)'
 
 - Use railroad/railway terminology that is understandable by all English-speaking people. <br/><br/>Where there are clear differences from USA to non-US terminology use both with a slash between and use the US version first. e.g. turnouts/points, consists/multiple units, switching/shunting.  (Only because the US term appears in apps like JMRI and in **EXRAIL**.)
-- For dates, use **dd-mmm-yyyy** or **yyyy-mm-dd** to avoid confusion with the way dates are uniquely written in the USA. <br/> e.g. 2-Mar-2022 or 2022-3-2, not 2-3-2022
+- For dates, use **dd-mmm-yyyy** or **yyyy-mm-dd** to avoid confusion with the way dates are uniquely/weirdly written in the USA. <br/> e.g. Use 2-Mar-2022 or 2022-3-2, not 2-3-2022
 - No full stop at the end of a numbered or unnumbered list unless the points are most points are multi-sentence.
 - Numbered lists should generally only be used if they are describing a specific sequence, or the numbering is important to the text.
 - Use second person (you and your; not I, me, my) language
 - A string of nouns should be generally be sequenced in alphabetic order, unless it makes more sense within the context to display them in some other sequence.
-- Double quotes (") should only be used for quoting text from people, documents or web sites.
+- Double quotes (") should only be used for quoting text from people, documents or web sites.  Otherwise use single quotes (').
 - Don't use curly quotes ``‘ ’ “ ”``.
 - No quotes around 'Also See' type references.
-- Avoid '(above)' or '(below)' in text.  Use hyperlinks instead.
-- ``==TODO==`` means that it is still a work-in-process and needs to be updated.  It must be followed by descriptive text describing the issue to be fixed.  If you want to to show in the page you will need add a separate line.
+- Avoid 'above' or 'below' in text.  Use hyperlinks instead.
+- ``==TODO==`` means that it is still a work-in-process and needs to be updated.  It must be followed by descriptive text describing the issue to be fixed.
+- Do not use images that only contain text unless there is no choice. Image text cannot be searched. Image text cannot be easily translated.
+- Keep the first section (between H! and the first H2) reasonably short. This is what appears search results.
+- The first section (between H! and the first H2) should describe what is on the rest if the page.
 
 ## Do Not Duplicate Content
 

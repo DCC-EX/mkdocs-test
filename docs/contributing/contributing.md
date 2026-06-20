@@ -25,3 +25,5 @@ Be Nice
 ### Enforcement
 
 Contributors who do not follow the be nice rule in good faith may face temporary or permanent repercussions as determined by other members of the project's leadership.
+
+--8<-- "snippets/abbr.md"
