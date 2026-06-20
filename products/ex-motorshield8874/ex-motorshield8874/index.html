@@ -475,7 +475,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../../toc/" class="md-tabs__link">
+      <a href="../../../toc.md" class="md-tabs__link">
         
   
   
@@ -6798,7 +6798,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../contributing/todo-report/" class="md-nav__link">
+      <a href="../../../todo-report.md" class="md-nav__link">
         
   
   
@@ -7061,7 +7061,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../toc/" class="md-nav__link">
+      <a href="../../../toc.md" class="md-nav__link">
         
   
   
@@ -7202,6 +7202,7 @@
 <h1 id="exmotorshield8874">EX‑MotorShield8874<a class="headerlink" href="#exmotorshield8874" title="Permanent link">&para;</a></h1>
 <p>Designed in conjunction with the <strong>DCC-EX</strong> development team, the <strong>EX‑MotorShield8874</strong> is extremely simple to use with all current and future generations of EX‑CommandStation hardware.</p>
 <p>This board is the new standard by which we compare other boards.</p>
+<p>Not <em>required</em> for the <em>EX-CSB1</em>, but can be optionally added to provide two additional 5amp outputs (to two provided by default).</p>
 <h2 id="features">Features<a class="headerlink" href="#features" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Pin compatible with the original Arduino Motor Shield Rev3 but provides significantly improved electrical performance for driving higher loads, and improved usability.</li>
@@ -7234,7 +7235,7 @@
 <p>For self-built <strong>EX-CommandStations</strong>, please consult the relevant build instructions.</p>
 <p><strong>DO NOT</strong> connect power to BOTH the EX-MotorShield8874 barrel jack and the underlying Arduino motherboard via its DC barrel jack as you may damage your Arduino and/or EX-MotorShield8874.</p>
 <h2 id="engineering-notes">Engineering notes<a class="headerlink" href="#engineering-notes" title="Permanent link">&para;</a></h2>
-<p>The <strong>EX‑MotorShield8874</strong> DC barrel jack is the only power source required to power both the tracks and the EX‑CommandStation into which it is plugged into. It supplies carefully regulated 7.2V DC power to the underlying Arduino R3 compatible motherboard via the VIN pin. This voltage is safely regulated down from the track power input to ensure <strong>EX-CommandStation</strong> motherboards will stay cool and work well. There is no need to power the <strong>EX-CommandStation</strong> via its barrel jack, or USB power. It is safe, however, to connect the USB cable as it will not create a conflict.</p>
+<p>The <strong>EX‑MotorShield8874</strong> DC barrel jack is the only power source required to power both the tracks and the <strong>EX‑CommandStation</strong> into which it is plugged into. It supplies carefully regulated 7.2V DC power to the underlying Arduino R3 compatible motherboard via the VIN pin. This voltage is safely regulated down from the track power input to ensure <strong>EX-CommandStation</strong> motherboards will stay cool and work well. There is no need to power the <strong>EX-CommandStation</strong> via its barrel jack, or USB power. It is safe, however, to connect the USB cable as it will not create a conflict.</p>
 <p>Applying a voltage above what a decoder was designed for, may permanently damage it, because the <strong>EX‑MotorShield8874</strong> does not drop voltage like the standard L298 based motor shields take care over track voltage selection.</p>
 <p><strong>NOTE:</strong> The <strong>EX‑MotorShield8874</strong> can supply up to 5A of track power per channel, a power supply of more than 10A peak capacity is required to run both channels at full peak current and have power left for the <strong>EX-CommandStation</strong>. A power supply that is unable to provide the current at which the software detects a short-circuit will not be safe as the <strong>EX-CommandStation</strong> will not be able to detect the short.</p>
 <p>If the track power supply is not plugged in, the <strong>EX-CommandStation</strong> will report track faults.</p>
@@ -7262,7 +7263,7 @@
 <li>Solder bridge the right hand ALT pads but <strong>NOT the FAULT pins</strong></li>
 </ul>
 <p><img alt="after" src="../../../_static/images/ex8874/pin-assignment-pads-after2.png" /></p>
-<p>The reason we did not solder the FAULT pins to their righthand ALT pads is that this would connect the FAULT pins to D0/D1 on the Arduino R3 headers which is not ideal because D0/D1 typically carry the serial port. You can of course bend those pins out if you wish to use them, and simply jumper them that way. Please refer to the self-build instructions for your processor type.</p>
+<p>The reason we did not solder the FAULT pins to their right-hand ALT pads is that this would connect the FAULT pins to D0/D1 on the Arduino R3 headers which is not ideal because D0/D1 typically carry the serial port. You can of course bend those pins out if you wish to use them, and simply jumper them that way. Please refer to the self-build instructions for your processor type.</p>
 <p>Leaving the Fault pins on A4, A5 facilitates bending and jumpering them to nearby pins, such as<br />
 A6, A7 on Arduino Mega<br />
 PC2, PC3 on Nucleo-64</p>
@@ -7287,7 +7288,7 @@ PC2, PC3 on Nucleo-64</p>
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 17, 2026 11:04:31 UTC">June 17, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 20, 2026 06:02:20 UTC">June 20, 2026</span>
   </span>
 
     

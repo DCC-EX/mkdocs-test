@@ -475,7 +475,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../../../toc/" class="md-tabs__link">
+      <a href="../../../../toc.md" class="md-tabs__link">
         
   
   
@@ -6742,7 +6742,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../contributing/todo-report/" class="md-nav__link">
+      <a href="../../../../todo-report.md" class="md-nav__link">
         
   
   
@@ -7005,7 +7005,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../toc/" class="md-nav__link">
+      <a href="../../../../toc.md" class="md-nav__link">
         
   
   
@@ -7084,10 +7084,10 @@
 
 
 <h1 id="actuators-to-make-stuff-happen">Actuators - to make stuff happen<a class="headerlink" href="#actuators-to-make-stuff-happen" title="Permanent link">&para;</a></h1>
-<p>Actuators are devices that you can add to make things happen under the control of the <strong>EX-CommandStation</strong>. For example throwing a turnout, setting a signal or switching lights. There are basically two types of actuator that will commonly be used:</p>
+<p>Actuators are devices that you can add to make things happen under the control of the <strong>EX-CommandStation</strong>. For example throwing a <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnout</abbr>, setting a signal or switching lights. There are basically two types of actuator that will commonly be used:</p>
 <ul>
-<li>PWM output used for Servo movement of turnouts/points, semaphore signals, crossing gates, fancy animations and LED fading.</li>
-<li>Digital output (On/Off) mostly used for LEDs, relays and some turnout/point types.</li>
+<li><abbr title="Pulse Width Modulation">PWM</abbr> output used for Servo movement of turnouts/points, semaphore signals, crossing gates, fancy animations and LED fading.</li>
+<li>Digital output (On/Off) mostly used for LEDs, relays and some <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnout</abbr>/point types.</li>
 </ul>
 <p>Other actuator types include:</p>
 <ul>
@@ -7100,19 +7100,20 @@
 <p>Servo actuators generally use a <a href="?PCA9685">PCA9685</a> device which can connect up to 16 Servos or LEDs over a single I2C connection. This device also acts to provide servo movement power separately from the movement control signal.</p>
 <p><a href="?EXRAIL">EXRAIL</a> is used to</p>
 <ul>
-<li>Define the PCA9685 connection and its address so that each output can be given a unique <a href="?VPIN">VPIN</a> to control it.</li>
-<li>For turnouts/points define a <a href="?SERVO_TURNOUT">SERVO_TURNOUT</a> for each VPIN so that the rest of <strong>DCC-EX</strong> can throw or close this turnout/point without knowledge of the underlying mechanism.</li>
+<li>Define the PCA9685 connection and its address so that each output can be given a unique <a href="?VPIN"><abbr title="an Arduino pin number that has been extended to include pins on external devices or expanders">VPIN</abbr></a> to control it.</li>
+<li>For turnouts/points define a <a href="?SERVO_TURNOUT">SERVO_TURNOUT</a> for each <abbr title="an Arduino pin number that has been extended to include pins on external devices or expanders">VPIN</abbr> so that the rest of <strong>DCC-EX</strong> can throw or close this <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnout</abbr>/point without knowledge of the underlying mechanism.</li>
 <li>For semaphore signals, define a <a href="?SERVO_SIGNAL">SERVO_SIGNAL</a> to that the rest of <strong>DCC-EX</strong> can control the signal.</li>
 <li>Control animation servos directly, such as crossing gates or shed doors.</li>
 </ul>
 <h2 id="digital-actuators">Digital actuators<a class="headerlink" href="#digital-actuators" title="Permanent link">&para;</a></h2>
 <p>Digital outputs are generally connected via an <a href="?MCP23017">MCP23017</a> device which offers up to 16 output pins on a single I2C connection.
-PCA9554, TCA9554, PCA9555, TCA9555 devices opereate in the same way as long as the relevant driver is used.</p>
+PCA9554, TCA9554, PCA9555, TCA9555 devices operate in the same way as long as the relevant driver is used.</p>
 <p><strong>EXRAIL</strong> is used to</p>
 <ul>
-<li>Define the MCP23017 (or other driver) connection and its address so that each output can be given a unique <a href="?VPIN">VPIN</a> to control it.</li>
+<li>Define the MCP23017 (or other driver) connection and its address so that each output can be given a unique <a href="?VPIN"><abbr title="an Arduino pin number that has been extended to include pins on external devices or expanders">VPIN</abbr></a> to control it.</li>
 <li>Set or reset the pin output when appropriate</li>
 </ul>
+<!-- These are case sensitive -->
 
 
 
@@ -7133,7 +7134,7 @@ PCA9554, TCA9554, PCA9555, TCA9555 devices opereate in the same way as long as t
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 17, 2026 11:04:31 UTC">June 17, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 20, 2026 06:02:20 UTC">June 20, 2026</span>
   </span>
 
     

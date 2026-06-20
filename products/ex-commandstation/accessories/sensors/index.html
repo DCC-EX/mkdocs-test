@@ -475,7 +475,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../../../toc/" class="md-tabs__link">
+      <a href="../../../../toc.md" class="md-tabs__link">
         
   
   
@@ -6742,7 +6742,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../contributing/todo-report/" class="md-nav__link">
+      <a href="../../../../todo-report.md" class="md-nav__link">
         
   
   
@@ -7005,7 +7005,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../toc/" class="md-nav__link">
+      <a href="../../../../toc.md" class="md-nav__link">
         
   
   
@@ -7084,7 +7084,7 @@
 
 
 <h1 id="sensors">Sensors<a class="headerlink" href="#sensors" title="Permanent link">&para;</a></h1>
-<p>Sensors become necessary when you wish to add automated control of accessories or trains, or you wish to add a control panel separate from the functions of your throttle. Each sensor device can trigger actions or be read in <a href="?EXRAIL">EXRAIL</a> or be passed up to a PC controller such as JMRI, RocRail or iTrain.</p>
+<p>Sensors become necessary when you wish to add automated control of accessories or trains, or you wish to add a control panel separate from the functions of your throttle. Each sensor device can trigger actions or be read in <a href="?EXRAIL">EXRAIL</a> or be passed up to a PC controller such as <abbr title="Java Model Railroad Interface">JMRI</abbr>, RocRail or iTrain.</p>
 <p>Sensor devices include</p>
 <ul>
 <li>Switches and buttons on a control panel</li>
@@ -7109,10 +7109,11 @@
 Position sensors are ideal for this kind of thing, block occupancy just doesnt cut it.</p>
 <p><strong>EXRAIL</strong> makes this stuff easy.... 😁  but you have to start with the right perspective.</p>
 <h2 id="defining-sensors">Defining sensors<a class="headerlink" href="#defining-sensors" title="Permanent link">&para;</a></h2>
-<p><strong>EXRAIL</strong> is used to describe how the sensor devices are wired to the <strong>EX-CommandStation</strong> (usually via I2C) and what <a href="?VPIN">VPIN</a> is to be assigned to each sensor</p>
+<p><strong>EXRAIL</strong> is used to describe how the sensor devices are wired to the <strong>EX-CommandStation</strong> (usually via I2C) and what <a href="?VPIN"><abbr title="an Arduino pin number that has been extended to include pins on external devices or expanders">VPIN</abbr></a> is to be assigned to each sensor</p>
 <p>The most common method of connecting sensor devices to your <strong>EX-CommandStation</strong> is through an <a href="?MCP23017">MCP23017</a> device which offers up to 14 input pins (or 16 output pins, or a mix of both) through a single I2C connection. For more inputs you can add more MCP23017 devices to the I2C chain.</p>
 <p>The <a href="?IOExpander">EX-IOExpander</a> can be used to connect multiple sensors over a single I2C connection depending on the microprocessor used to build it.</p>
 <p>The <a href="?SensorCam">EX-SensorCam</a> can be used to offer up to 80 sensor points on a single I2C connection.  </p>
+<!-- These are case sensitive -->
 
 
 
@@ -7133,7 +7134,7 @@ Position sensors are ideal for this kind of thing, block occupancy just doesnt c
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 17, 2026 11:04:31 UTC">June 17, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 20, 2026 06:02:20 UTC">June 20, 2026</span>
   </span>
 
     

@@ -475,7 +475,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../../../toc/" class="md-tabs__link">
+      <a href="../../../../toc.md" class="md-tabs__link">
         
   
   
@@ -1301,9 +1301,18 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#you-will-need" class="md-nav__link">
+    <span class="md-ellipsis">
+      You Will Need
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#follow-the-steps-below" class="md-nav__link">
     <span class="md-ellipsis">
-      Follow the steps below
+      Follow the Steps Below
     </span>
   </a>
   
@@ -6769,7 +6778,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../contributing/todo-report/" class="md-nav__link">
+      <a href="../../../../todo-report.md" class="md-nav__link">
         
   
   
@@ -7032,7 +7041,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../toc/" class="md-nav__link">
+      <a href="../../../../toc.md" class="md-nav__link">
         
   
   
@@ -7074,9 +7083,18 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#you-will-need" class="md-nav__link">
+    <span class="md-ellipsis">
+      You Will Need
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#follow-the-steps-below" class="md-nav__link">
     <span class="md-ellipsis">
-      Follow the steps below
+      Follow the Steps Below
     </span>
   </a>
   
@@ -7137,22 +7155,23 @@
   
 
 
-<h1 id="connecting-a-servo-turnoutpoint">Connecting a servo turnout/point<a class="headerlink" href="#connecting-a-servo-turnoutpoint" title="Permanent link">&para;</a></h1>
-<p>The details below assume you are using an <strong>EX-CSB1</strong> command station or a DIY station with an EX8874 motor shield and WiFi connection. Otherwise the steps are the same but the wiring is trickier without the Qwiic sockets and testing requires command input.</p>
+<h1 id="connecting-a-servo-turnoutpoint">Connecting a servo <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnout</abbr>/point<a class="headerlink" href="#connecting-a-servo-turnoutpoint" title="Permanent link">&para;</a></h1>
+<p>The details on this page assume you are using an <strong><abbr title="EX-CommandStation/Booster 1">EX-CSB1</abbr></strong> command station or a <abbr title="Do-It-Yourself / Self Build">DIY</abbr> station with an <strong>EX-8874</strong> motor shield and WiFi connection. Otherwise the steps are the same but the wiring is trickier without the Qwiic sockets and testing requires command input.</p>
+<h2 id="you-will-need">You Will Need<a class="headerlink" href="#you-will-need" title="Permanent link">&para;</a></h2>
 <p>You will need the following for up to 16 servos.</p>
 <ul>
 <li>Your <strong>EX-CommandStation</strong> with power supply and USB connection to your PC.</li>
-<li>Qwiic cable for connection to <strong>EX-CSB1</strong>, with Qwiic or dupont connectors for connection to PCA9685.</li>
+<li>Qwiic cable for connection to <strong><abbr title="EX-CommandStation/Booster 1">EX-CSB1</abbr></strong>, with Qwiic or dupont connectors for connection to PCA9685.</li>
 <li>PCA9685 module</li>
 <li>Up to 16 SG90 servos</li>
 <li><strong>EX-Installer</strong> downloaded on your PC</li>
 <li>(Optionally) Android phone with <strong>EX-Toolbox</strong> installed</li>
 <li>A servo power supply 5V 2A DC -- and not taken from the <strong>EX-CommandStation</strong>.</li>
 </ul>
-<h2 id="follow-the-steps-below">Follow the steps below<a class="headerlink" href="#follow-the-steps-below" title="Permanent link">&para;</a></h2>
+<h2 id="follow-the-steps-below">Follow the Steps Below<a class="headerlink" href="#follow-the-steps-below" title="Permanent link">&para;</a></h2>
 <ol>
 <li>Turn off power to your <strong>EX-CommandStation</strong> and unplug the USB cable and power supply.</li>
-<li>Connect the Qwiic cable between the <em>EX-CSB1</em>* or EX8874 and the PCA9685 module.<BR>
+<li>Connect the Qwiic cable between the <em><abbr title="EX-CommandStation/Booster 1">EX-CSB1</abbr></em>* or EX8874 and the PCA9685 module.<BR>
  <img alt="CSB1" src="../../../../_static/images/ex-csb1/csb1qwiic.jpg" style="width: 70%" /> <BR>
 When using Mega, the I2C bus is 5V.<BR>
 Use the I2C headers, where 5V is available (IOREF/Vdd).<BR>
@@ -7177,8 +7196,8 @@ from the startup logs using the serial monitor</p>
 <li>
 <p>Examine the log to check that your PCA9685 has been detected and note the I2C address it found. This will typically be 0x40. If this address is 0x40 or 0x41 then the CS has defaulted this to be a PCA9685 and automatically assigned a range of 16 <a href="?VPIN">VPINs</a> to represent the 16 servo outputs.</p>
 </li>
-<li>Examine the log further down and you should see where the VPINs are assigned. The following advice assumes that the address was 0x40 and the first VPIN will be 100.</li>
-<li>Plug a servo into the first output socket. DO NOT mechanically connect the servo arm to any turnout/point or animation as the servo may move unexpectedly and cause physical damage.  You will connect the servo arm after exercising the servo (step 8).</li>
+<li>Examine the log further down and you should see where the VPINs are assigned. The following advice assumes that the address was 0x40 and the first <abbr title="an Arduino pin number that has been extended to include pins on external devices or expanders">VPIN</abbr> will be 100.</li>
+<li>Plug a servo into the first output socket. DO NOT mechanically connect the servo arm to any <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnout</abbr>/point or animation as the servo may move unexpectedly and cause physical damage.  You will connect the servo arm after exercising the servo (step 8).</li>
 <li>Connect the additional servo power supply to the long-edge turrets on the PCA9685, observing the correct polarity. <img alt="PCA9685" src="../../../../_static/images/i2c-devices/PCA9685.jpg" style="width: 70%" /></li>
 <li>On the installers serial monitor, enter the command <code>&lt;D SERVO 100 200&gt;</code> which should move the servo. Experiment with other positions than 200. The usable range is approximately 102 to 490.  </li>
 <li>(Optionally) Use the <strong>EX-Toolbox</strong> Android app to experiment with servo angles and servo arm lengths until you have the required throw distance and angles to suit your servo mounting preferences.</li>
@@ -7186,7 +7205,7 @@ from the startup logs using the serial monitor</p>
 <h2 id="define-your-turnoutspoints">Define your turnouts/points<a class="headerlink" href="#define-your-turnoutspoints" title="Permanent link">&para;</a></h2>
 <ol>
 <li>
-<p>In <strong>EX-Installer</strong>, edit myAutomation.h and define each turnout/point to give an id of your choice, the VPIN of the servo, the closed and open servo values you have discovered by experimentation and a suitable description to show on your throttle.</p>
+<p>In <strong>EX-Installer</strong>, edit myAutomation.h and define each <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnout</abbr>/point to give an id of your choice, the <abbr title="an Arduino pin number that has been extended to include pins on external devices or expanders">VPIN</abbr> of the servo, the closed and open servo values you have discovered by experimentation and a suitable description to show on your throttle.</p>
 <div class="language-cpp highlight"><pre><span></span><code><span class="c1">//SERVO_TURNOUT( turnout_id, vpin, active_angle, inactive_angle, profile [, &quot;description&quot;|HIDDEN] )</span>
 <span class="n">SERVO_TURNOUT</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">100</span><span class="p">,</span><span class="w"> </span><span class="mi">350</span><span class="p">,</span><span class="w"> </span><span class="mi">120</span><span class="p">,</span><span class="w"> </span><span class="n">Slow</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Coal yard exit&quot;</span><span class="p">)</span>
 <span class="n">SERVO_TURNOUT</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">101</span><span class="p">,</span><span class="w"> </span><span class="mi">400</span><span class="p">,</span><span class="w"> </span><span class="mi">200</span><span class="p">,</span><span class="w"> </span><span class="n">Slow</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Branch line siding&quot;</span><span class="p">)</span>
@@ -7197,14 +7216,14 @@ from the startup logs using the serial monitor</p>
 <p>Reload the <strong>EX-CommandStation</strong> from the installer.</p>
 </li>
 </ol>
-<h2 id="test-your-turnoutpoint-definitions">Test your turnout/point definitions<a class="headerlink" href="#test-your-turnoutpoint-definitions" title="Permanent link">&para;</a></h2>
+<h2 id="test-your-turnoutpoint-definitions">Test your <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnout</abbr>/point definitions<a class="headerlink" href="#test-your-turnoutpoint-definitions" title="Permanent link">&para;</a></h2>
 <ol>
-<li>Using the serial monitor as before, enter the commands <code>&lt;T 1 T&gt;</code> to throw turnout/point 1, <code>&lt;T 2 C&gt;</code> to close turnout/point 2 and so on.</li>
+<li>Using the serial monitor as before, enter the commands <code>&lt;T 1 T&gt;</code> to throw <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnout</abbr>/point 1, <code>&lt;T 2 C&gt;</code> to close <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnout</abbr>/point 2 and so on.</li>
 <li>With your Wifi throttle (Typically Engine Driver) navigate to the turnouts/points page where you will see the two turnouts/points listed. From there you can throw or close them as required.</li>
 </ol>
 <h2 id="connect-your-servos-to-turnoutspoints">Connect your servos to turnouts/points<a class="headerlink" href="#connect-your-servos-to-turnoutspoints" title="Permanent link">&para;</a></h2>
 <p>There are many ways of mounting servos both above and below the baseboard using 3D printed mounts or a strip of plastic L shape. You will probably want to use microswitches to switch frog polarity or use more expensive frog juicers or <strong>EXRAIL</strong> driven relays.</p>
-<p>We recommend that whatever mechanical connection you make allows for protection of your turnout/point from excess servo movement.</p>
+<p>We recommend that whatever mechanical connection you make allows for protection of your <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnout</abbr>/point from excess servo movement.</p>
 <h2 id="pca9685-configure-additional-boards">PCA9685 Configure additional boards<a class="headerlink" href="#pca9685-configure-additional-boards" title="Permanent link">&para;</a></h2>
 <p>The first two PCA9685 are pre-defined at addresses 0x40 and 0x41, for pins 100-115 and 116-131.<BR>
 Configure additional PCA9685 in myAutomation.h.</p>
@@ -7212,6 +7231,7 @@ Configure additional PCA9685 in myAutomation.h.</p>
 <span class="w">  </span><span class="n">HAL</span><span class="p">(</span><span class="n">PCA9685</span><span class="p">,</span><span class="w"> </span><span class="mi">148</span><span class="p">,</span><span class="w"> </span><span class="mi">16</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="n">I2CMux_0</span><span class="p">,</span><span class="n">SubBus_4</span><span class="p">,</span><span class="mh">0x43</span><span class="p">})</span>
 </code></pre></div>
 <p>Nucleo-144 boards do not have pre-defined PCA9685 due to pin conflicts, as pins thru 116 are reserved for the microprocessor.  All PCA9685 connected to Nucleo-144 boards require configuration in myAutomation.h.</p>
+<!-- These are case sensitive -->
 
 
 
@@ -7232,7 +7252,7 @@ Configure additional PCA9685 in myAutomation.h.</p>
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 17, 2026 11:04:31 UTC">June 17, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 20, 2026 06:02:20 UTC">June 20, 2026</span>
   </span>
 
     

@@ -475,7 +475,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../../toc/" class="md-tabs__link">
+      <a href="../../../toc.md" class="md-tabs__link">
         
   
   
@@ -6678,7 +6678,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../todo-report/" class="md-nav__link">
+      <a href="../../../todo-report.md" class="md-nav__link">
         
   
   
@@ -7054,7 +7054,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../toc/" class="md-nav__link">
+      <a href="../../../toc.md" class="md-nav__link">
         
   
   
@@ -7195,22 +7195,18 @@
 <li>Avoid jargon where possible.</li>
 <li>If something does need elaboration, link to a relevant reference.</li>
 <li>Don't document things generally available on the Internet, eg. we don't document MkDocs or the Material theme as there is good documentation available, we only document the context of our use cases.</li>
-<li>
-<p>It is extremely important <em>for the search results to work correctly</em> to:</p>
-<ul>
+<li>It is extremely important <em>for the search results to work correctly</em> to:<ul>
 <li>Ensure sure the page title is the first item on the page (after any tags).  If it is not the file name will appear in the search results, not the title.</li>
 <li>Ensure that the block of text between the page title and the next heading (of any sort) is relatively short. Ideally no more than a few paragraphs. This is what what will appear in the search results.</li>
 <li>Ensure that you DO NOT use tables or complex formatting in the first block of text (between the page title and the next heading) as this will be scrambled in the search results.</li>
 </ul>
 </li>
-<li>
-<p>Bold any product names. Hyperlink them to the appropriate page where practical.</p>
-<ul>
+<li>Product names:<ul>
+<li>Bold any product names. Hyperlink them to the appropriate page where practical.</li>
 <li>i.e. use '**EX-CommandStation**' not 'EX-CommandStation'</li>
-</ul>
-</li>
-<li>Don't abbreviate product names.<ul>
+<li>Don't abbreviate product names.</li>
 <li>e.g. use '<strong>EX-CSB1</strong>' not 'CSB1'</li>
+<li>Alsways include the hyphen('-') e.g. <strong>EX-CSB1</strong>, not EXCSB1.</li>
 </ul>
 </li>
 <li>
@@ -7236,7 +7232,7 @@
 <li>
 <p>Preferred Terms:</p>
 <ul>
-<li>Use <strong>'EX-CommandStation'</strong> not 'Command Station' when refering to something that is specific to the <strong>DCC-EX</strong> product.</li>
+<li>Use <strong>'EX-CommandStation'</strong> not 'Command Station' when referring to something that is specific to the <strong>DCC-EX</strong> product.</li>
 <li>Where logical to do so, use <strong>"Motor Driver"</strong>, in preference to 'Motor Shield'.  Do not use 'Motor Board' or 'Motorboard'.</li>
 <li>In general use <strong>'train'</strong> or <strong>'loco'</strong> instead of 'locomotive' or 'engine'</li>
 <li>Use <strong>'Smart Phone'</strong> instead of 'Cell Phone' (US only term) or 'Mobile Phone' (just about everywhere else)</li>
@@ -7246,16 +7242,19 @@
 <li>
 <p>Use railroad/railway terminology that is understandable by all English-speaking people. <br/><br/>Where there are clear differences from USA to non-US terminology use both with a slash between and use the US version first. e.g. turnouts/points, consists/multiple units, switching/shunting.  (Only because the US term appears in apps like JMRI and in <strong>EXRAIL</strong>.)</p>
 </li>
-<li>For dates, use <strong>dd-mmm-yyyy</strong> or <strong>yyyy-mm-dd</strong> to avoid confusion with the way dates are uniquely written in the USA. <br/> e.g. 2-Mar-2022 or 2022-3-2, not 2-3-2022</li>
+<li>For dates, use <strong>dd-mmm-yyyy</strong> or <strong>yyyy-mm-dd</strong> to avoid confusion with the way dates are uniquely/weirdly written in the USA. <br/> e.g. Use 2-Mar-2022 or 2022-3-2, not 2-3-2022</li>
 <li>No full stop at the end of a numbered or unnumbered list unless the points are most points are multi-sentence.</li>
 <li>Numbered lists should generally only be used if they are describing a specific sequence, or the numbering is important to the text.</li>
 <li>Use second person (you and your; not I, me, my) language</li>
 <li>A string of nouns should be generally be sequenced in alphabetic order, unless it makes more sense within the context to display them in some other sequence.</li>
-<li>Double quotes (") should only be used for quoting text from people, documents or web sites.</li>
+<li>Double quotes (") should only be used for quoting text from people, documents or web sites.  Otherwise use single quotes (').</li>
 <li>Don't use curly quotes <code>‘ ’ “ ”</code>.</li>
 <li>No quotes around 'Also See' type references.</li>
-<li>Avoid '(above)' or '(below)' in text.  Use hyperlinks instead.</li>
-<li><code>==TODO==</code> means that it is still a work-in-process and needs to be updated.  It must be followed by descriptive text describing the issue to be fixed.  If you want to to show in the page you will need add a separate line.</li>
+<li>Avoid 'above' or 'below' in text.  Use hyperlinks instead.</li>
+<li><code>==TODO==</code> means that it is still a work-in-process and needs to be updated.  It must be followed by descriptive text describing the issue to be fixed.</li>
+<li>Do not use images that only contain text unless there is no choice. Image text cannot be searched. Image text cannot be easily translated.</li>
+<li>Keep the first section (between H! and the first H2) reasonably short. This is what appears search results.</li>
+<li>The first section (between H! and the first H2) should describe what is on the rest if the page.</li>
 </ul>
 <h2 id="do-not-duplicate-content">Do Not Duplicate Content<a class="headerlink" href="#do-not-duplicate-content" title="Permanent link">&para;</a></h2>
 <p><strong>DO NOT CREATE DUPLICATE CONTENT</strong> as this increases the maintenance burden significantly but, more importantly, makes it difficult for users when content appears slightly differently in two different places or even contradicts itself. When needing to repeat information in more than one place, take advantage of the <a href="../mkdocs-features/#snippets">MkDocs Snippets</a> feature. This allows you to include the same markdown content in multiple places.</p>
@@ -7324,7 +7323,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 17, 2026 11:04:31 UTC">June 17, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 20, 2026 06:02:20 UTC">June 20, 2026</span>
   </span>
 
     
