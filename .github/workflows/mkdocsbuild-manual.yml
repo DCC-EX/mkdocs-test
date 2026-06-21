@@ -1,4 +1,4 @@
-name: mkdocs-build
+name: mkdocs-build-manual
 
 on: workflow_dispatch:
     branches: [ main ]
