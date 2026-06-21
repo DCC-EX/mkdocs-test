@@ -11,7 +11,7 @@ For example:
   // on my Mega, I have signal1 on pins (30,31,32)
   ALIAS(mysignal1,30)
 #else 
-  // on my *EX-CSB1** or similar, I use pins 800,801,802 on an expander
+  // on my **EX-CSB1** or similar, I use pins 800,801,802 on an expander
   ALIAS(mysignal1,800)
 #endif
   SIGNALH(mysignal1,mysignal1+1,mysignal1+2)

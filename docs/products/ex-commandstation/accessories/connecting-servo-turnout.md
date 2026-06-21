@@ -17,7 +17,7 @@ You will need the following for up to 16 servos.
 ## Follow the Steps Below
 
 1. Turn off power to your **EX-CommandStation** and unplug the USB cable and power supply.
-2. Connect the Qwiic cable between the *EX-CSB1** or EX8874 and the PCA9685 module.<BR>
+2. Connect the Qwiic cable between the **EX-CSB1** or EX8874 and the PCA9685 module.<BR>
  ![CSB1](/_static/images/ex-csb1/csb1qwiic.jpg){: style="width: 70%"} <BR>
 When using Mega, the I2C bus is 5V.<BR>
 Use the I2C headers, where 5V is available (IOREF/Vdd).<BR>

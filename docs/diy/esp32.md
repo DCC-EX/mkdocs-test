@@ -53,3 +53,5 @@ See the [ESP32 Reference pages](../reference/esp32/esp32-ex8874.md) for more inf
 
 - Assembly and other information: [Reference - ESP32](/reference/esp32/esp32-ex8874.md)
 - [Legacy ESP32 documentation](https://dcc-ex.com/legacy-docs/reference/hardware/microcontrollers/esp32.html#esp32-recommended)
+
+==TODO== move legacy docs

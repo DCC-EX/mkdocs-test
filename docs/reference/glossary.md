@@ -50,6 +50,12 @@ The term pulldown within the context of **DCC-EX** is commonly used when discuss
 
 You will also see search results for using a pulldown menu, but that is a different context!
 
+## Railroad[^1] / Railway[^2]
+
+Railroad: The dominant term in the United States and Canada.
+
+Railway: The preferred term across the UK, Australia, New Zealand, India, and by the International Union of Railways
+
 ## Roster
 
 [Search for roster](?roster)
@@ -100,5 +106,5 @@ EX‑CommandStation contains a WiThrottle Server, as does JMRI
 
 ----
 
-[^1]: Term primariarly used in North American railroading.
+[^1]: Term primarily used in North American railroading.
 [^2]: Term used in most of the English speaking world other than North America. (British/United Kingdom origin)

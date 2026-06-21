@@ -1,8 +1,9 @@
 nav:
   - How You Can Contribute: contributing.md
-  - User Journeys: user-journeys.md
-  - Release Checklist: release-checklist.md
-  - To-Do/Task List: todo-report.md
+  - Donate: donations.md
   - Contributing Code: code/contributing-code.md
   - Contributing Documentation: documentation
+  - Release Checklist: release-checklist.md
+  - User Journeys: user-journeys.md
+  - To-Do/Task List: todo-report.md
   

@@ -21,8 +21,8 @@ There are a number of pre-defined motor shield typeNames available of which the 
 
 - STANDARD_MOTOR_SHIELD : Arduino Motor shield Rev3 based on the L298 with 18V 2A per channel
 - EX8874_SHIELD         : DCC-EX TI DRV8874 based motor shield
-- EXCSB1                : DCC-EX CSB-1 hardware
-- EXCSB1_WITH_EX8874    : DCC-EX CSB-1 hardware with DCC-EX TI DRV8874 shield
+- EXCSB1                : DCC-EX EX-CSB-1 hardware
+- EXCSB1_WITH_EX8874    : DCC-EX EX-CSB-1 hardware with DCC-EX TI DRV8874 shield
 - NO_SHIELD             : CS without any motor shield (as an accessory only CS)
 
 Further pre-defined shield names can be found in the code file MotorDrivers.h although their presence there does not necessarily mean that we can provide support for issues.
@@ -31,9 +31,9 @@ Further pre-defined shield names can be found in the code file MotorDrivers.h al
 
 Ignore this if you do not have WiFi on your **EX-CommandStation** or choose to avoid it.
 
-The *EX-CSB1** and other ESP32-based **EX-CommandStation** use a completely different method to define WiFi settings. This is to allow WiFi configuration without having to reinstall the software.
+The **EX-CSB1** and other ESP32-based **EX-CommandStation** use a completely different method to define WiFi settings. This is to allow WiFi configuration without having to reinstall the software.
 
-[WiFi setup for *EX-CSB1** or ESP32](/products/ex-commandstation/config-wifi-esp32.md)
+[WiFi setup for **EX-CSB1** or ESP32](/products/ex-commandstation/config-wifi-esp32.md)
 
 [WiFi setup for WiFi shield](/products/ex-commandstation/config-wifi-shield.md)
 

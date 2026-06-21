@@ -40,7 +40,7 @@ graph LR
 
 ## Existing Users Adding Accessories
 
-These users already have an *EX-CSB1** or DIY stack up and running and want to extend to using accessories including turnouts/points, signals, sensors, turntables, and so forth. They need to know how to physically connect them (I2C) and enable them in software (myAutomation.h). This will move them from Conductor into early Tinkerer territory for I2C in particular.
+These users already have an **EX-CSB1** or DIY stack up and running and want to extend to using accessories including turnouts/points, signals, sensors, turntables, and so forth. They need to know how to physically connect them (I2C) and enable them in software (myAutomation.h). This will move them from Conductor into early Tinkerer territory for I2C in particular.
 
 ```mermaid
 graph LR
@@ -49,7 +49,7 @@ graph LR
 
 ## Existing Users Looking to Automate/Animate
 
-These users already have an *EX-CSB1** or DIY stack up and running and may or may not have accessories as well. They want to understand how to automate and/or animate running trains and/or their layout in general. This may be as simple as a shuttle running back and forth between two stations, or a complex display running trains, controlling various layout aspects (eg. lighting, cross gates), and automating shunting or routes across different tracks. This will definitely be out of Conductor territory but is all about **EXRAIL**, although guidance on what hardware is required to achieve these will be required.
+These users already have an **EX-CSB1** or DIY stack up and running and may or may not have accessories as well. They want to understand how to automate and/or animate running trains and/or their layout in general. This may be as simple as a shuttle running back and forth between two stations, or a complex display running trains, controlling various layout aspects (eg. lighting, cross gates), and automating shunting or routes across different tracks. This will definitely be out of Conductor territory but is all about **EXRAIL**, although guidance on what hardware is required to achieve these will be required.
 
 ```mermaid
 graph LR
