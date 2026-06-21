@@ -47,3 +47,5 @@
 *[Turnout]: North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a "Point"
 
 *[PWM]: Pulse Width Modulation
+
+*[Railroad] North American term. Elsewhere referred to as a "Railway"

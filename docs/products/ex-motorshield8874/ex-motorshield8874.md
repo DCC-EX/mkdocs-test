@@ -22,7 +22,7 @@ Not *required* for the *EX-CSB1*, but can be optionally added to provide two add
 - Alternative power in and out solder pads for different connector types.
 - Stackable (Support Multiple Power Districts).
 - Optional OLED header to connect a display directly to the shield.
-- Based on two DRV8874 H-bridge motor drivers with integrated current sensing from Texas Instruments (TI). It is used to drive inductive loads like relays, solenoids, DC, stepping motors, as well as provide the DCC signal, and power to the model railroad tracks. Status LED for supply, which provides a visual indication of the power supply status in addition to LEDs to show each side of the A and B power outputs.
+- Based on two DRV8874 H-bridge motor drivers with integrated current sensing from Texas Instruments (TI). It is used to drive inductive loads like relays, solenoids, DC, stepping motors, as well as provide the DCC signal, and power to the model railroad/railway tracks. Status LED for supply, which provides a visual indication of the power supply status in addition to LEDs to show each side of the A and B power outputs.
 
 The boards 5V and 3V friendly design makes it suitable for a broad range of Arduino compatible platforms, with an override that compensates for designs with incomplete support (such as an incorrect IORef voltage).
 
