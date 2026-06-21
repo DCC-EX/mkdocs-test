@@ -22,6 +22,8 @@ The Turntable/Traverser commands provide a more flexible and functional way of o
 
 Also refer to the [legacy EX-Turntable documentation](https://dcc-ex.com/legacy-docs/ex-turntable/index.html).
 
+==TODO== move legacy docs
+
 ## Commands
 
 * ``<I>`` List all turntables

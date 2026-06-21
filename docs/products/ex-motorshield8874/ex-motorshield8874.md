@@ -44,7 +44,7 @@ Entrepreneurs wanting to use the design to offer commercial quantities to their 
 
 ## Assembly with EX-MotorShield8874
 
-The shield stacks onto an *EX-CSB1** without modification. The *EX-CSB1** firmware must be configured with the **EX-Installer** to recognise the additional two tracks.
+The shield stacks onto an **EX-CSB1** without modification. The **EX-CSB1** firmware must be configured with the **EX-Installer** to recognise the additional two tracks.
 
 For self-built **EX-CommandStations**, please consult the relevant build instructions.
 

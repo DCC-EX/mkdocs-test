@@ -22,7 +22,7 @@
 *[VPIN]: an Arduino pin number that has been extended to include pins on external devices or expanders
 *[vpin]: an Arduino pin number that has been extended to include pins on external devices or expanders
 
-*[EX-CSB1]: EX-CommandStation/Booster 1
+*[EX-CSB1]: EX-CommandStation Booster 1 Express
 
 *[Arduino UNO]: Not recommended. Not supported in future releases of EX-CommandStation. The shield is still important
 

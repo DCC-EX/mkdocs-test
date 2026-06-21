@@ -305,7 +305,7 @@ The ESP32-CAM reset button, remotely mounted on CAM, may be difficult to access.
 
 ### 8.1 Introduction
 
-The operation of the railway depends on a Control Station that polls the sensorCAM for sensor states. This might be a dedicated Arduino Mega 2560 for example. It might be an *EX-CSB1** Command Station running DCC-EX and **EXRAIL** software. If the sensorCAM is powered up with default settings (from EPROM), or adjusted by the user at the start, the program need only talk to sensorCAM over an i2c bus using the commands a,b,i,l & o for example, or it may be more sophisticated, providing a command channel from a Control Station monitor to the sensorCAM to enable most configuration commands via the i2c bus.
+The operation of the railway depends on a Control Station that polls the sensorCAM for sensor states. This might be a dedicated Arduino Mega 2560 for example. It might be an **EX-CSB1** Command Station running DCC-EX and **EXRAIL** software. If the sensorCAM is powered up with default settings (from EPROM), or adjusted by the user at the start, the program need only talk to sensorCAM over an i2c bus using the commands a,b,i,l & o for example, or it may be more sophisticated, providing a command channel from a Control Station monitor to the sensorCAM to enable most configuration commands via the i2c bus.
 
 The i2c bus is running at 100kHz on the prototype software. It has not been tested at any higher speed yet. It has been running fine over a 10m long i2c bus to the master microcontroller (CSB1, Mega or others).
 

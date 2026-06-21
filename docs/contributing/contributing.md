@@ -2,6 +2,10 @@
 
 The **DCC-EX** Team has several projects and sub teams where you can help donate your expertise. See the sections below for the project or projects you are interested in.
 
+## Donation
+
+Your donations help to offset the cost of running some of the resources used to operate **DCC-EX** and bring you new software and hardware.  See the [Donations page](donations.md)] for details on how you can donate.
+
 ## Documentation
 
 This [documentation](documentation/docs.md) is written in MkDocs so a knowledge of HTML, CSS or Javascript is not necessary.

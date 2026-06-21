@@ -41,6 +41,8 @@ This is the easiest way to validate you've connected your **EX-CommandStation** 
 
 To access it, refer to the [EX-WebThrottle documentation](https://dcc-ex.com/legacy-docs/ex-webthrottle/index.html#ex-webthrottle).
 
+==TODO== move legacy docs
+
 ---
 
 ### EX-Toolbox
@@ -165,6 +167,8 @@ A diagnostic tool to inspect DCC packets.
 This requires some assembly and soldering to get up and running, and you will need to understand various aspects of the DCC protocol to get the most out of it.
 
 Refer to the [EX-DCCInspector documentation](https://dcc-ex.com/legacy-docs/ex-dccinspector/index.html#ex-dccinspector) for more information.
+
+==TODO== move legacy docs
 
 ---
 

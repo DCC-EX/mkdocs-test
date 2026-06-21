@@ -2,14 +2,12 @@ nav:
   - Home: index.md
   - Products: products
   - Purchase: purchasing
-  - Install: installer
   - Self Build: diy
   - Throttles: throttles
   - News: news
   - Support: support
-  - Donate: donations
   - Reference : reference
   - About Us: about
-  - Contribute: contributing
+  - Donate / Contribute: contributing
   - ToC: toc.md
   
