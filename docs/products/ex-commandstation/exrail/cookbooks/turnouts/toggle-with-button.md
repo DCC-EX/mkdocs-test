@@ -1,4 +1,4 @@
-# Toggle turnouts with button or sensor
+# Toggle Turnouts/Points With Button or Sensor
 
 A turnout of any type can be toggled by a button or sensor of any type.
 

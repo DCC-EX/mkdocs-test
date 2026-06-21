@@ -1,8 +1,8 @@
-![Engine Driver](../_static/images/engine-driver/engine_driver_logo.png){: align="right" width="80px"}
-
 # Engine Driver
 
-**Engine Driver** (ED) is an Android App that uses the *WiThrottle Protocol* *or* the *DCC-EX Native Commands* to connect directly to the **EX-CommandStation** via WiFi. It can also connect to the JMRI WiThrottle Server via WiFi using the *WiThrottle Protocol*.
+![Engine Driver](../_static/images/engine-driver/engine_driver_logo.png){: align="right" width="80px"}
+
+**Engine Driver** (ED) is an Android App that uses the [WiThrottle Protocol](/reference/withrottle-vs-native-protocol_not_in_nav.md) *or* the [DCC-EX Native Serial Protocol](/reference/withrottle-vs-native-protocol_not_in_nav.md) to connect directly to the **EX-CommandStation** via WiFi. It can also connect to the JMRI WiThrottle Server via WiFi using the *WiThrottle Protocol*.
 
 If you wish to connect **Engine Driver** directly to **EX-CommandStation**, you need to add a WiFi option to your **EX-CommandStation**.
 
@@ -16,17 +16,17 @@ If you wish to connect **Engine Driver** to **JMRI**, you need to start the *WiT
 
 * You can Get 'Engine Driver Throttle' from the [Google Play Store](https://play.google.com/store/apps/details?id=jmri.enginedriver) <br />or
 
-* Visit the Engine Driver Website: [https://enginedriver.mstevetodd.com/](https://enginedriver.mstevetodd.com/) for more information.
+* Visit the Engine Driver Website: [https://enginedriver.mstevetodd.com/](https://enginedriver.mstevetodd.com/downloads/index.html) for more information.
 
-Extensive help is available at the [Engine Driver Home](https://flash62au.github.io/EngineDriver_Home/index.html) site.
+Extensive help is available at the [Engine Driver Home](https://enginedriver.mstevetodd.com/index.html) site.
 
 ## Standard Features (all WiThrottle servers)
 
 * Control one to six locomotives or consists
 * Speed and direction control
-* Up to 29 DCC functions
+* Up to 31 DCC functions
 * Create and edit consists (software-defined)
-* Control layout power, turnouts, routes, and access JMRI web panels and windows
+* Control layout power, turnouts/points, routes, and access JMRI web panels and windows
 * 'Discover Server' Detect, Select & Connect to WiFi enabled Command Stations
 * 'Roster Server' download Engine ID's & function keys from the Command Station
 * 'Virtual Engine Sounds' {Bell, Horn, Short Horn, Mute} for motor only decoders, on first two throttles
@@ -35,7 +35,7 @@ Extensive help is available at the [Engine Driver Home](https://flash62au.github
 
 ## EX-CommandStation Specific or Advantageous Features
 
-* DCC-EX EXRAIL Automation {Handoff}, Route {Set} and EXRAIL Command function buttons
+* **DCC-EX** **EXRAIL** Automation {Handoff}, Route {Set} and **EXRAIL** Command function buttons
 * Able to select local images for roster locos
 * New 'Request Loco ID' & 'Drive Away' feature from a Program track onto Mainline track with **EX-CommandStation**
 
@@ -108,3 +108,5 @@ To record a log file in Engine Driver:
 1. Browse down to the folder ``...\Internal shared storage\Android\data\jmri.enginedriver\files``
 1. Find the most resent file that looks like ``logcatxxxxxxxxxxxxx.txt``     e.g. logcat1699833098998.txt
 1. Attach that file to a message here in discord using the paperclip button on the toolbar above the message content
+
+--8<-- "snippets/abbr.md"

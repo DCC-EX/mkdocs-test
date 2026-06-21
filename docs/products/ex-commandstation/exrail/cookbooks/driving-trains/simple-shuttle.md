@@ -11,7 +11,7 @@ Dogbath                                                  Catflap
 
 ## Sensor positioning
 
-This illustrates an important aspect of EXRAIL driving. The sequence is only interested in one sensor at a time, there is no case for logic that says "Oh wait! Sensor 164 has been hit, how do I know which loco it was and which way it was going... and was it the loco that hit it or the end of the reversing train.."
+This illustrates an important aspect of **EXRAIL** driving. The sequence is only interested in one sensor at a time, there is no case for logic that says "Oh wait! Sensor 164 has been hit, how do I know which loco it was and which way it was going... and was it the loco that hit it or the end of the reversing train.."
 
 If you are using magnet-operated sensors that only detect the loco, you must adjust the sensor positions to take into account the length of the train when it is reversing. In this case, moving the sensors at the Dogbath end by one train length towards Catflap.
 
@@ -33,10 +33,10 @@ AUTOMATION(123,"Dogbath to Catflap shuttle")
 
 First drive your train to Dogbath, with the front facing Catflap. Select the automation from your throttle and the train should start after a random wait.
 
-It should be pretty obvious what this does and where the sensors need to be to give a reasonable stopping point, but this may depend on inertia settings in your loco decoder or command station setup.
+It should be pretty obvious what this does and where the sensors need to be to give a reasonable stopping point, but this may depend on inertia settings in your loco decoder or **EX-CommandStation** setup.
 
 The AT command pauses the driving task until the sensor is activated.
 
-EXRAIL commands can be on the same line or separate lines, it makes no difference but sometimes it's easier to read if you put things like "AT something DO something" on one line.
+**EXRAIL** commands can be on the same line or separate lines, it makes no difference but sometimes it's easier to read if you put things like "AT something DO something" on one line.
 
 Also notice that this automation will work just as well for a DC loco or when DCC is being run at 28 speed steps for very old decoders.

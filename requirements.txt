@@ -7,4 +7,5 @@ mkdocs-rss-plugin==1.17.3
 pymdown-extensions==10.15
 python-frontmatter==1.1.0
 setuptools==80.9.0
+Pygments==2.19.1
 .

@@ -1,17 +1,17 @@
-# The DCC-EX Discord Server
+# The **DCC-EX** Discord Server
 
-The DCC-EX team has a strong preference for providing support via the DCC-EX Discord server, and we have information on joining and using Discord on this page.
+The **DCC-EX** team has a strong preference for providing support via the **DCC-EX** Discord server, and we have information on joining and using Discord on this page.
 
 ![DCC-EX Discord](/_static/images/discord/dcc-ex-discord.png){ align=right width=300px }
 
 Discord is free to join, and provides these benefits over our other support methods:
 
-- The DCC-EX team actively participate in Discord, so you can talk to the people who create the products
-- There is a global community of over 4,000 DCC-EX users in Discord
+- The **DCC-EX** team actively participate in Discord, so you can talk to the people who create the products
+- There is a global community of over 4,000 **DCC-EX** users in Discord
 - When people are online at the same time, you can have a live, interactive chat
-- There is the opportunity for DCC-EX users to help other users, which happens frequently
+- There is the opportunity for **DCC-EX** users to help other users, which happens frequently
 
-In short, Discord gives you the best access to the broadest set of people who can help with DCC-EX; an entire, global community of users.
+In short, Discord gives you the best access to the broadest set of people who can help with **DCC-EX**; an entire, global community of users.
 
 ***Please ensure when you first join, you review the Server Guide which will help you get started with our Discord server.***
 
@@ -52,7 +52,7 @@ To use this in Discord, simply surround your code or configuration snippets in t
 ```
 ````
 
-If you're sharing code, sometimes it can be helpful to specify the language, which in the case of DCC-EX is typically C++:
+If you're sharing code, sometimes it can be helpful to specify the language, which in the case of **DCC-EX** is typically C++:
 
 ````console
 ```cpp
@@ -68,7 +68,7 @@ We have organised the Discord server into various channels which help keep simil
 
 If you can't see channels which seem relevant or of interest to you, you can customise which channels you can see:
 
-- Click ``Channels & Roles`` under the DCC-EX server menu:
+- Click ``Channels & Roles`` under the **DCC-EX** server menu:
 
     ![Channels & Roles](/_static/images/discord/channels-roles.png){ width=200px }
 
@@ -84,7 +84,7 @@ Here are some examples of commonly used channels, and there are plenty more:
 
 - ``#support-and-issues__ex-commandstation`` - Use this channel for general EX-CommandStation conversations and help
 - ``#exrail`` - Use this channel for general EXRAIL conversations and help
-- ``#tack-manager`` - Use this channel for general TrackManager conversations and help
+- ``#track-manager`` - Use this channel for general TrackManager conversations and help
 - ``#accessories`` - Use this channel for topics such as PCA9685 servo controllers and servos, MCP23017 I/O expansion boards, and other accessories
 - ``#sensors``
 - ``signals``
@@ -118,9 +118,9 @@ If you need help with a specific issue and the conversation in the general suppo
 
     ![Use ticket](/_static/images/discord/use-ticket.png){ width=500px }
 
-Once your ticket has been created, only the DCC-EX support team members and yourself will have access to the ticket, but other users can be invited if necessary.
+Once your ticket has been created, only the **DCC-EX** support team members and yourself will have access to the ticket, but other users can be invited if necessary.
 
-In order to help the DCC-EX team give you the help you need, you will need to provide as much information as possible, as we cannot read minds, see your setup, access your hardware or configuration files, nor look over your shoulder to see what is going on.
+In order to help the **DCC-EX** team give you the help you need, you will need to provide as much information as possible, as we cannot read minds, see your setup, access your hardware or configuration files, nor look over your shoulder to see what is going on.
 
 ![Discord Upload](/_static/images/discord/discord-upload.png){ align=right width=200px }
 

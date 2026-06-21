@@ -1,6 +1,6 @@
 # Android apps on Windows & macOS
 
-All the Android based throttle apps listed can be run on Microsoft Windows PCs and Apple Silicon Macs using `BlueStacks <https://www.bluestacks.com/>`_ |EXTERNAL-LINK|.
+All the Android based throttle apps listed can be run on Microsoft Windows PCs and Apple Silicon Macs using [BlueStacks](https://www.bluestacks.com/).
 
 ## BlueStacks
 

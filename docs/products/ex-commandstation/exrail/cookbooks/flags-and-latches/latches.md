@@ -1,6 +1,6 @@
 # Latches
 
-Latches were first introduced into EXRAIL as a way of latching a sensor value or pushbutton on, so that once detected it could be checked later and not suffer from bouncing. This use is comparatively rare and has generally been superseded by the more recent [ONBUTTON](?ONBUTTON) event handler.
+Latches were first introduced into **EXRAIL** as a way of latching a sensor value or pushbutton on, so that once detected it could be checked later and not suffer from bouncing. This use is comparatively rare and has generally been superseded by the more recent [ONBUTTON](?ONBUTTON) event handler.
 
 Latches were also used as a way of setting a flag that could be read later, for example to remember whether a light had been switched on by a ROUTE so that the next call to the same route could switch it off again.
 

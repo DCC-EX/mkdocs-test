@@ -1,0 +1,7 @@
+nav:
+  - Sounds: sounds.md
+  - DFPlayer: dfplayer.md
+  - Serial DFPlayer: serial-dfplayer.md
+  - I2C DFPlayer: i2c-dfplayer.md
+  - WaveShare: udpaudio.md
+

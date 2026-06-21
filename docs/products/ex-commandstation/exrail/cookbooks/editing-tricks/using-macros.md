@@ -1,6 +1,6 @@
 # Using C++ Macros
 
-The EXRAIL language is compiled by C++ and this means you can use MACROS of your own design according to the C++ compiler [pre-processor specification](https://gcc.gnu.org/onlinedocs/cpp/Macros.html).
+The **EXRAIL** language is compiled by C++ and this means you can use MACROS of your own design according to the C++ compiler [pre-processor specification](https://gcc.gnu.org/onlinedocs/cpp/Macros.html).
 
 A MACRO is essentially a tiny program that types stuff for you while substituting parameters.
 

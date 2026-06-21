@@ -1,8 +1,8 @@
 # Overview - What are Accessories?
 
-Once you go beyond just wanting to run trains, and want to control turnouts (points), signals, turntables, and potentially automate other parts of your layout, you will need to know how to connect accessories to your Command Station.
+Once you go beyond just wanting to run trains, and want to control turnouts (points), signals, turntables, and potentially automate other parts of your layout, you will need to know how to connect accessories to your **EX-CommandStation**.
 
-Within the DCC-EX ecosystem, an accessory is anything you can connect to or control from your EX-CommandStation which also includes our other products such as EX-FastClock, EX-IOExpander, EX-SensorCAM, and EX-Turntable.
+Within the **DCC-EX** ecosystem, an accessory is anything you can connect to or control from your **EX-CommandStation** which also includes our other products such as **EX-FastClock**, **EX-IOExpander**, **EX-SensorCAM**, and **EX-Turntable**.
 
 ## Accessory Types
 
@@ -28,7 +28,7 @@ Note that we consider throttles/controllers differently to accessories, so these
 
 ## Connecting Accessories
 
-There are generally three ways accessories can be connected to and controlled by your Command Station:
+There are generally three ways accessories can be connected to and controlled by your **EX-CommandStation**:
 
 - I2C
 - Serial
@@ -44,8 +44,8 @@ When purchasing DCC accessories, you will have received a user manual for these,
 
 !!! danger
 
-    It is essential to be aware that hardware devices may operate at different voltage levels, meaning simply connecting an accessory to your Command Station may lead to damage or incorrect operation should this situation occur.
+    It is essential to be aware that hardware devices may operate at different voltage levels, meaning simply connecting an accessory to your **EX-CommandStation** may lead to damage or incorrect operation should this situation occur.
 
-    This applies to any peripheral device connected directly to your Command Station via either serial or I2C interfaces.
+    This applies to any peripheral device connected directly to your **EX-CommandStation** via either serial or I2C interfaces.
 
-    The most common issue is connecting an accessory designed for 5V operation to a Command Station that operates at 3.3V, such as our EX-CSB1. This will cause damage!
+    The most common issue is connecting an accessory designed for 5V operation to a **EX-CommandStation** that operates at 3.3V, such as our EX-CSB1. This will cause damage!

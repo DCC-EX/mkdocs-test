@@ -1,8 +1,8 @@
-# Maintaining multiple command stations
+# Maintaining multiple EX-CommandStations
 
-Maybe you have more than one command station and you wish to have slightly different EXRAIL setups, perhaps because you are testing a new release on a separate CPU or need to compile different scripts for different layouts.
+Maybe you have more than one **EX-CommandStation** and you wish to have slightly different **EXRAIL** setups, perhaps because you are testing a new release on a separate CPU or need to compile different scripts for different layouts.
 
-The C++ compiler pre-processor is available to select various parts of your myAutomation.h based on definitions created in your config.h or those created by defines.he which automates the detection of the CPU type of your command station.
+The C++ compiler pre-processor is available to select various parts of your myAutomation.h based on definitions created in your config.h or those created by defines.he which automates the detection of the CPU type of your **EX-CommandStation**.
 
 For example:
 
@@ -11,7 +11,7 @@ For example:
   // on my Mega, I have signal1 on pins (30,31,32)
   ALIAS(mysignal1,30)
 #else 
-  // on my CSB1 or similar, I use pins 800,801,802 on an expander
+  // on my **EX-CSB1** or similar, I use pins 800,801,802 on an expander
   ALIAS(mysignal1,800)
 #endif
   SIGNALH(mysignal1,mysignal1+1,mysignal1+2)
@@ -19,7 +19,7 @@ For example:
   ONCLOSE(1) GREEN(mysignal1) DONE
 ```
 
-In addition, each EXRAIL command is actually a preprocessor definition so it is possible to use an #ifdef to include a section that uses a new feature but only if the code version has that feature available.
+In addition, each **EXRAIL** command is actually a preprocessor definition so it is possible to use an #ifdef to include a section that uses a new feature but only if the code version has that feature available.
 
 ```cpp
 #ifdef NEOPIXEL

@@ -1,6 +1,6 @@
 # Random selection
 
-EXRAIL provides a number of randomising functions that make it easy to create more interesting automations that behave in unpredictable ways. This may be as simple as a random delay time at a station, choosing a different route to follow or selecting a train from a fiddle yard.
+**EXRAIL** provides a number of randomising functions that make it easy to create more interesting automations that behave in unpredictable ways. This may be as simple as a random delay time at a station, choosing a different route to follow or selecting a train from a fiddle yard.
 
 Some layout builders have used this to create non-train animations such as flickering camp fires, welding flashes and crane movements.
 

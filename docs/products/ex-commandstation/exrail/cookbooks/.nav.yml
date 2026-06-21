@@ -1,2 +1,3 @@
 nav:
+  - Cookbooks: index.md
   - "*"

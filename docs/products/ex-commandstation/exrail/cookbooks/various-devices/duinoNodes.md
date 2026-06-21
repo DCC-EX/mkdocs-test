@@ -1,13 +1,13 @@
 # Lew's Duino Gear boards
 
-CAUTION: these boards require several GPIO pins on the Command Station and are therefore unsuitable for use with a CSB1 which has all available pins essentially reserved for track management.
+CAUTION: these boards require several GPIO pins on the **EX-CommandStation** and are therefore unsuitable for use with a **EX-CSB1** which has all available pins essentially reserved for track management.
 
 ## DNIN8 8 Input board
 
 This is a shift-register implementation of a digital input collector.
-Multiple DNIN8 may be connected in a chain sequence but it is IMPORTANT that the software configuratuion correctly represents the number of boards connected otherwise the results will be meaningless.
+Multiple DNIN8 may be connected in a chain sequence but it is IMPORTANT that the software configuration correctly represents the number of boards connected otherwise the results will be meaningless.
 
-Define boards in EXRAIL using HAL(IO_DNIN8, firstVpin, numPins, clockPin, latchPin, dataPin)
+Define boards in **EXRAIL** using HAL(IO_DNIN8, firstVpin, numPins, clockPin, latchPin, dataPin)
 
 ```cpp
    HAL(IO_DNIN8, 400, 16, 40, 42, 44)
@@ -26,7 +26,7 @@ This module works the same as DNIN8 but you must use DNIN8K in the HAL setup ins
 
 ## DNOU8 8 Output board
 
-DNOU8 works in a very similar fashion to the the DNIN boards and is defined in EXRAIL using
+DNOU8 works in a very similar fashion to the the DNIN boards and is defined in **EXRAIL** using
  HAL(IO_DNOU8, firstVpin, numPins, clockPin, latchPin, dataPin)
 
 ```cpp

@@ -1,10 +1,12 @@
 # Complex Build - ESP32
 
-ESP32-WROOM-32 was selected as the microprocessor for the EX-CSB1. Although folks are encouraged to use the [EX-CSB1](/products/ex-commandstation/ex-csb1.md), the information on this page should assist in building an ESP32-based DCC-EX command station.
+ESP32-WROOM-32 was selected as the microprocessor for the EX-CSB1. Although folks are encouraged to use the [EX-CSB1](/products/ex-commandstation/ex-csb1.md), the information on this page should assist in building an ESP32-based **DCC-EX EX-CommandStation**.
 
 !!! warning "ESP32 Wroom Only!"
 
-    The only Espressif ESP32 microprocessor we support is the ESP32 Wroom. Espressif has released numerous ESP32 modules and variants (S2, S3, C3 etc.) but these are **NOT** supported. Other variants do not have the necessary RMT hardware, or do not have enough such hardware to run DCC-EX.
+    The only Espressif ESP32 microprocessor we support is the ESP32 Wroom. Espressif has released numerous ESP32 modules and variants (S2, S3, C3 etc.) but these are **NOT** supported. Other variants do not have the necessary RMT hardware, or do not have enough such hardware to run **DCC-EX**.
+
+## Advantages of the ESP32
 
 ![ESPDuino-32](/_static/images/esp32/esp32-wroom32-mark.png){: style="width: 30%" align=right}  
 
@@ -35,7 +37,9 @@ ESP32-WROOM-32 was selected as the microprocessor for the EX-CSB1. Although folk
     - IOREF pin does not output 3v3, but instead breaches the UNO R3 specification and outputs 5V.  
     - A0 and A1 pins cannot be used for ADC input when WiFi is used.
 
-- There are other ESP32-WROOM-32 boards with the Uno form factor which might work, but these will require a custom motor define when there are differences in GPIO pin locations.
+- There are several other ESP32-WROOM-32 boards with the Uno form factor which work. These require a custom motor define when there are differences in GPIO pin locations.
+
+See the [ESP32 Reference pages](../reference/esp32/esp32-ex8874.md) for more information.
 
 ## ESP32-WROOM-32 Development boards
 
@@ -49,3 +53,5 @@ ESP32-WROOM-32 was selected as the microprocessor for the EX-CSB1. Although folk
 
 - Assembly and other information: [Reference - ESP32](/reference/esp32/esp32-ex8874.md)
 - [Legacy ESP32 documentation](https://dcc-ex.com/legacy-docs/reference/hardware/microcontrollers/esp32.html#esp32-recommended)
+
+==TODO== move legacy docs

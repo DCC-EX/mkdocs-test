@@ -4,9 +4,9 @@ At some point you will likely need to get some help or support for our products,
 
 **NOTE** For users of hardware products purchased from resellers, in the event of a hardware issue please contact the reseller in the first instance. Each reseller is responsible for supporting the hardware they sell.
 
-Please note that the DCC-EX team are all volunteers and are distributed globally, so while we endeavour to help as much and as quickly as we can, all support is provided on a best-effort basis only, and there will be times where no team members are available.
+Please note that the **DCC-EX** team are all volunteers and are distributed globally, so while we endeavour to help as much and as quickly as we can, all support is provided on a best-effort basis only, and there will be times where no team members are available.
 
-This is why we strongly recommend Discord as the best source of support, because there is a global community of over 4,000 users, some of whom may be able to help before a DCC-EX team member is online.
+This is why we strongly recommend Discord as the best source of support, because there is a global community of over 4,000 users, some of whom may be able to help before a **DCC-EX** team member is online.
 
 ## Information required for support queries
 
@@ -32,13 +32,13 @@ This is the information typically required:
 
 ## Discord (recommended)
 
-Our strongly recommended support option is the DCC-EX Discord server, where you can interact directly with the DCC-EX team as well as a global community of over 4,400 users. Issues are usually resolved quite quickly in comparison with the other options, and you can also interact with the community in real-time.
+Our strongly recommended support option is the **DCC-EX** Discord server, where you can interact directly with the **DCC-EX** team as well as a global community of over 4,400 users. Issues are usually resolved quite quickly in comparison with the other options, and you can also interact with the community in real-time.
 
 Please refer to our [Discord page](/support/discord.md) which outlines how to join our Discord server, interact with the community, and how to raise support tickets.
 
 ## GitHub
 
-If you are an existing GitHub user, you can also get support via GitHub which is particularly useful for bug reports. While all the DCC-EX team members have GitHub accounts and can respond, this is typically not as quick as getting support via our recommended Discord server option.
+If you are an existing GitHub user, you can also get support via GitHub which is particularly useful for bug reports. While all the **DCC-EX** team members have GitHub accounts and can respond, this is typically not as quick as getting support via our recommended Discord server option.
 
 Please refer to our [GitHub page](/support/github.md) on the various repositories you can raise issues in.
 
@@ -46,7 +46,7 @@ Please refer to our [GitHub page](/support/github.md) on the various repositorie
 
 If you're a member of the TrainBoard forum, there is a [DCC++ Forum](https://www.trainboard.com/highball/index.php?forums/dcc.177/) you can post in for help. Yes, it is still called DCC++.
 
-Note that this isn't the busiest forum and only a few of the DCC-EX team are members of TrainBoard, so resolution of issues may be slow. There are other members of the forum that may try to assist though.
+Note that this isn't the busiest forum and only a few of the **DCC-EX** team are members of TrainBoard, so resolution of issues may be slow. There are other members of the forum that may try to assist though.
 
 ## Email (not recommended)
 

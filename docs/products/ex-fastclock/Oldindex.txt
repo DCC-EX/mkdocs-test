@@ -1,7 +1,7 @@
 
 # EX-FastClock
 
-An Adjustable Speed Model Railway Fast Clock which integrates with the DCC-EX Command Station
+An Adjustable Speed Model Railway Fast Clock which integrates with the **DCC-EX** Command Station
 
 ## Background
 
@@ -11,8 +11,8 @@ This project is based on a project originally written by Jim Gifford (Hallet Cov
 
 I felt that this project was ripe for an update and decided to convert Jim's code to operate using a cheap TFT/LCD touch screen to run on my own layout. This project is the result.  Much of the code has been rewritten into smaller functions with additional features added, but the time clock calculations are the originals.
 
-This project has now been extended to add the capability of integrating the clock to the DCC-EX 
-Command Station and more specifically the EXRAIL automation feature which now allows time based 
+This project has now been extended to add the capability of integrating the clock to the **DCC-EX** 
+Command Station and more specifically the **EXRAIL** automation feature which now allows time based 
 control. This feature is optional and can be controlled by the config.h file.
 
 ## Hardware
@@ -26,7 +26,7 @@ The completed project is shown in the accompanying photograph:
 
 ![TFT Fast Clock](/_static/images/ex-fastclock/IMG_2502.jpg){ align=right }
 
-The FastClock communicates with the Command Station using either I2C or Serial.  
+The FastClock communicates with the **EX-CommandStation** using either I2C or Serial.  
 
 Given that the MCUFREIND style shield is a shield and uses the A4 pin as LCD_RST it is necessary to make a modification to enable the I2C communication.  This involces cutting the A4 pin and soldering a jumper from LCD_RST on the backof the TFT board to the pin that aligns with the UNO RST pin.
 

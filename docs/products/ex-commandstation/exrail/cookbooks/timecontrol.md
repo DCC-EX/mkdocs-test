@@ -1,7 +1,7 @@
 
 # Time Control
 
-The Command Station has additional commands added to exrail allow events to be controlled by a EX-FastClock.
+The **EX-CommandStation** has additional commands added to exrail allow events to be controlled by a EX-FastClock.
 
 ## Time Command
 
@@ -43,7 +43,7 @@ SEQUENCE(10)
 DONE
 ```
 
-This event could either be run by the clock or could be selected at will from Engine Driver.  To stop the Command Station from running timed commands to switch to manual running, simply pause the clock.
+This event could either be run by the clock or could be selected at will from Engine Driver.  To stop the **EX-CommandStation** from running timed commands to switch to manual running, simply pause the clock.
 
 ## Repeating Time events
 
@@ -66,7 +66,7 @@ ONCLOCKMINS(15)
 DONE
 ```
 
-The sequence above will repeat at 15 munites past the hour per FastClock time.  It would also be possible to make these routines be selectable from Engine Driver by configuring them as follows:
+The sequence above will repeat at 15 minutes past the hour per FastClock time.  It would also be possible to make these routines be selectable from Engine Driver by configuring them as follows:
 
 ```cpp
 ONCLOCKMINS(15) FOLLOW(10) DONE
@@ -86,7 +86,7 @@ In that way the Sequence 10 can either be run by the clock, or if the clock is n
 
 NB:  See the following page for details on running sound files.
 
-( add a refernce )
+( add a reference )
 
 ## Testing Timed Sequences
 
@@ -96,13 +96,13 @@ If one is testing out a sequence using a timed command it can be done quickly wi
 <JC mmmm ss> 
 ```
 
-where mmmm is the time in minutes since midnight.  This is (hours * 60) + mins and is how the time is held within  Command Station.  So for the time in the example above (6:15) the following:
+where mmmm is the time in minutes since midnight.  This is (hours * 60) + mins and is how the time is held within the **EX-CommandStation**.  So for the time in the example above (6:15) the following:
 
 ```cpp
 <JC 375 4>
 ```
 
-would execute the command immediately (4 being the perceived speed factor i.e. 1 minutes every 15 seconds).  The  Command Station would respond with:
+would execute the command immediately (4 being the perceived speed factor i.e. 1 minutes every 15 seconds).  The **EX-CommandStation** would respond with:
 
 ```cpp
 <jC 375>
@@ -116,7 +116,7 @@ The final command available is:
   <JC>
 ```
 
-which requests the latest time from  Command Station which responds with:
+which requests the latest time from **EX-CommandStation** which responds with:
 
 ```cpp
   <jC 375>

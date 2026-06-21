@@ -1,25 +1,25 @@
-# Track Manager
+# TrackManager
 
 **If you are only interested in a standard setup using just a DCC track and PROG track, then you DO NOT need to read the rest of this document.**
 
-What follows is for advanced users interested in managing power districts and/or running DC locomotives through DCC-EX.
+What follows is for advanced users interested in managing power districts and/or running DC locomotives through **DCC-EX**.
 
-## What is the Track Manager
+## What is the TrackManager
 
-Track Manger (TM from now on) is an integral part of the command station software that is responsible for:
+**TrackManger** is an integral part of the **EX-CommandStation** software that is responsible for:
 
 - Managing track power state.
 - Monitoring track overloads and shorts.
 - Routing the DCC main or prog track waveforms to the correct Motor Driver and thus track.
 - Managing the JOIN feature.
 - Intercepting throttle commands to locos running on DC tracks.
-- Handling user or EXRAIL commands to switch track status.
+- Handling user or **EXRAIL**  commands to switch track status.
 
-In the default scenario of a single DCC track and a PROG track, the TM behaves as for the previous versions of DCC-EX so if thats what you want, you dont need to mess with it.
+In the default scenario of a single DCC track and a PROG track, the **TrackManger** behaves as for the previous versions of **DCC-EX** so if that's what you want, you don't need to mess with it.
 
-The TM is able to handle up to 8 separate track domains. Each domain requires a hardware driver to supply track voltage. A typical motor driver shield supplies two tracks, which is what we have used in the past as main and prog.
+The **TrackManger** is able to handle up to 8 separate track domains. Each domain requires a hardware driver to supply track voltage. A typical motor driver shield supplies two tracks, which is what we have used in the past as main and prog.
 
-Unlike the older version of DCC-EX, where the shield channel A was always the DCC main and channel B was always the DCC prog track, TM allows:
+Unlike the older version of **DCC-EX**, where the shield channel A was always the DCC main and channel B was always the DCC prog track, **TrackManger** allows:
 
 - None, any or all the tracks can be DCC Main.
 - None or ONE track may be DCC prog at any given time.
@@ -28,13 +28,13 @@ Unlike the older version of DCC-EX, where the shield channel A was always the DC
 
 With such flexibility comes responsibility... the potential for making mistakes means taking extra care with your configuration!
 
-**NOTE:** TM does NOT use "zero stretching" to control your DC motor. Instead, it uses true Pulse Width Modulation (PWM) to efficiently run your loco using the same method a decoder uses to control a DCC loco's motor. DC locos can even run better on TM than they can on a normal analog throttle, especially at low speed, since it is always applying the full track voltage, albeit in pulses of varying duration.
+**NOTE:** **TrackManger** does NOT use "zero stretching" to control your DC motor. Instead, it uses true Pulse Width Modulation (PWM) to efficiently run your loco using the same method a decoder uses to control a DCC loco's motor. DC locos can even run better on **TrackManger** than they can on a normal analog throttle, especially at low speed, since it is always applying the full track voltage, albeit in pulses of varying duration.
 
 ## Using the Track Manager (DCC)
 
-TM names the tracks A to H. In a default setup, you will normally have tracks A and B where A will default to be the DCC main signal and B will be the DCC prog.
+**TrackManger** names the tracks A to H. In a default setup, you will normally have tracks A and B where A will default to be the DCC main signal and B will be the DCC prog.
 
-There is a new user command `<=>` which is used to control the TM but the `<0>` and `<1>` commands operate as before.
+There is a new user command `<=>` which is used to control the **TrackManger** but the `<0>` and `<1>` commands operate as before.
 
 - `<=>`  lists the current track settings.
 
@@ -51,17 +51,17 @@ In a default setup this will normally return
 
 In an all-DCC environment it is unlikely that you will need to do anything other than setting any additional tracks (C...H) as DCC in your `myAutomation.h` file.  [Example:  Startup - Define Tracks](/products/ex-commandstation/dc-running.md)
 
-Bear in mind that a track may actually be only connected to DCC accessories such as signals and turnouts... your layout, your choice.
+Bear in mind that a track may actually be only connected to DCC accessories such as signals and turnouts/points... your layout, your choice.
 
 Note that when setting a track to PROG or OFF, its power is switched off automatically. (The PROG track manages power on an as-needed basis under normal circumstances.
 When setting a track to MAIN (or DC, DCX see later) the power is applied according to the most recent `<1>` or `<0>` command as being the most compatible with previous versions.
 
 ## Using the Track Manager (DC)
 
-TM allows any or all of your tracks to be individually selected as a DC track which responds to throttle commands on any given loco address. So for example if track A is set to DC address 55, then any throttle commands to loco 55 will be transmitted as DC onto track A and thus a DC loco can be driven along that track. almost exactly as if it was DCC.
-Your throttle (JMRI, EX-Webthrottle, Withrottle, Engine Driver etc.) do not know or care that this is a DC loco so nothing needs to change.
+**TrackManger** allows any or all of your tracks to be individually selected as a DC track which responds to throttle commands on any given loco address. So for example if track A is set to DC address 55, then any throttle commands to loco 55 will be transmitted as DC onto track A and thus a DC loco can be driven along that track. almost exactly as if it was DCC.
+Your throttle (JMRI, **EX-WebThrottle**, WiThrottle, Engine Driver etc.) do not know or care that this is a DC loco so nothing needs to change.
 
-For a simple Command Station setup to run just two DC tracks instead of DCC, you only need to assign DC addresses to tracks A and B. If you want DCC on track A and DC on track B, you just need to set track B to a suitable DC address.
+For a simple **EX-CommandStation** setup to run just two DC tracks instead of DCC, you only need to assign DC addresses to tracks A and B. If you want DCC on track A and DC on track B, you just need to set track B to a suitable DC address.
 
 The command to set a track to a DC address is as follows
 
@@ -81,8 +81,8 @@ There are some slightly mind-bending issues to be addressed, especially if you w
 Generally DC tracks are wired so that two mainline tracks are in opposite direction which makes operation easy BUT crossovers between tracks will cause shorts unless you have very complex switching arrangements.
 This is generally incompatible with DCC wiring which expects to be able to cross between tracks with impunity because they are all wired with the same polarity.
 
-To get over this issue TM allows the polarity of a DC track to be swapped so that tracks wired for DCC may be switched to DC with a polarity chosen at run time according to your operations. So, for example, you may have two loops with a crossing between them. Normally you need them in opposite directions, but when you need to drive over the crossing, you need to switch one or other track so that they are at the same polarity.
-(This is a good case for using EXRAIL to help)
+To get over this issue **TrackManger** allows the polarity of a DC track to be swapped so that tracks wired for DCC may be switched to DC with a polarity chosen at run time according to your operations. So, for example, you may have two loops with a crossing between them. Normally you need them in opposite directions, but when you need to drive over the crossing, you need to switch one or other track so that they are at the same polarity.
+(This is a good case for using **EXRAIL**  to help)
 
 The command `<=t DCX a>` will set track t (A..H) to be DC but with reversed polarity compared with a track set to DC.
 
@@ -97,7 +97,7 @@ Each track requires hardware to control it
 - Brake (shorts tracks together)
 - Current (analog reading)
 
-The standard motor shields provide this for two separate tracks and are predictable and easy to use. However STACKING shields is not a viable way of adding more tracks because it prevents the software from gaining access to the individual track pins. Similarly, wiring all the signal pins together for example, will give you a shared DCC signal but it will eliminate any possibility of switching the track purpose at run time. So, you are going to have to understand enough to wire track drivers to various pins if you wish to extend beyond 2 tracks and take advantage of TM.
+The standard motor shields provide this for two separate tracks and are predictable and easy to use. However STACKING shields is not a viable way of adding more tracks because it prevents the software from gaining access to the individual track pins. Similarly, wiring all the signal pins together for example, will give you a shared DCC signal but it will eliminate any possibility of switching the track purpose at run time. So, you are going to have to understand enough to wire track drivers to various pins if you wish to extend beyond 2 tracks and take advantage of **TrackManger**.
 
 You will also need to consider the implications of differing electronic implementations that would cause unexpected issues when a loco moves between tracks. We know this works fine for a typical shield because we use `<1 JOIN>` quite happily but this may be different if you mix hardware types..... (NOT MY PROBLEM !)
 
@@ -123,14 +123,14 @@ Since there can be no standard setup of your wiring and hardware choices, it wil
 
 ## Using EXRAIL to control Track Manager
 
-EXRAIL has a single additional command that can be used to automate TM.
+**EXRAIL**  has a single additional command that can be used to automate **TrackManger**.
 
 - `SET_TRACK(t,mode)`, where t is the track letter A..H and mode is one of:
 
     - `OFF`: track is switched off
     - `MAIN`: track gets DCC signal
     - `PROG`: track gets DCC prog signal
-    - `DC`: track is set to DC mode with the cab address of the currently executing EXRAIL sequence.
+    - `DC`: track is set to DC mode with the cab address of the currently executing **EXRAIL**  sequence.
     - `DCX`: as DC but with reversed polarity.
 
 DC/DCX are designed so that you can be automating a DCC loco, drive it onto a separate track and switch to DC without having to know the cab address. (e.g AUTOMATION)
@@ -146,8 +146,10 @@ If however you are just running a ROUTE you can always do something like this:
 
 ## Where and How for the Code
 
-The TM code is primarily in TrackManager.cpp which is responsible for coordinating the track settings and commands.
+The **TrackManger** code is primarily in TrackManager.cpp which is responsible for coordinating the track settings and commands.
 
 Each individual track is handled by an instance of MotorDriver created from the ``MOTOR_SHIELD_TYPE`` definition in config.h
 
 Many functions formerly in the DCCWaveform code have been moved to TrackManager or MotorDriver, notably the power control and checking. This makes the code easier to follow.
+
+--8<-- "snippets/abbr.md"

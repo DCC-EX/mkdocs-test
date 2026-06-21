@@ -1,8 +1,8 @@
 # Signal Basics
 
-EXRAIL is able to define varuous different signal types depending on their electrical connection and assign each of them a unique signal_id that can be used to change and tese them without reference to their type. In some cases, the signal is made up of individually addressed LEDs, others thgeir own decoder, and in the case of semaphore signals they may be driven by a servo.
+**EXRAIL** is able to define various different signal types depending on their electrical connection and assign each of them a unique signal_id that can be used to change and tese them without reference to their type. In some cases, the signal is made up of individually addressed LEDs, others thgeir own decoder, and in the case of semaphore signals they may be driven by a servo.
 
-Signal definitions are extracted from myAutomation during the compile process and thus can appear anywhere in the EXRAIL script, they do not have to be executed as part of a sequence.
+Signal definitions are extracted from myAutomation during the compile process and thus can appear anywhere in the **EXRAIL** script, they do not have to be executed as part of a sequence.
 
 Refer to the following cookbook entries for details of defining signals of various types.
 

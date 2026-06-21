@@ -32,6 +32,7 @@ theme:
     - navigation.path
     # - navigation.sections
     - navigation.tabs # Top level navigation on header for tabs
+    # - navigation.tabs.sticky # Make the tabs navigation sticky when scrolling
     - navigation.top # Show back to top button when scrolling up
     - navigation.tracking # Auto update URL in address bar
     # - navigation.indexes # Enable section indexes
@@ -130,6 +131,8 @@ plugins:
       count: 3
       list-class: news-headline-list
 
+# Build-only hooks live in mkdocsbuild.yml so mkdocs serve does not loop.
+
 # Copyright info
 copyright: |
   &copy; 2025 <a href="https://dcc-ex.com/" target="_blank" rel="noopener">DCC-EX</a>
@@ -137,6 +140,7 @@ copyright: |
 # Markdown extensions to enhance content
 markdown_extensions:
   - admonition
+  - abbr
   - attr_list # Enabled setting attributes in markdown eg. image width
   - def_list # Enable definition/descriptions lists, required by ezglossary
   - md_in_html # Enable markdown in embedded HTML
@@ -154,6 +158,9 @@ markdown_extensions:
   - pymdownx.keys
   - pymdownx.snippets:
       check_paths: true
+  - pymdownx.highlight: # Syntax highlighting of code
+      anchor_linenums: false
+      pygments_lang_class: true
   - pymdownx.superfences: # Enhanced code blocks
       custom_fences:
         - name: mermaid # Enable Mermaid JS diagrams

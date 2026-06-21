@@ -2,7 +2,7 @@
 
 Everything on this page supports the team being able to determine when these docs can be released.
 
-This is a list of to do items that will allow us to release this new documentation, and move the existing to a separate "legacy-docs" URL for reference only.
+This is a list of to do items that will allow us to release this new documentation, and move the existing to a separate 'legacy-docs' URL for reference only.
 
 ## Content
 
@@ -11,9 +11,9 @@ This is a list of to do items that will allow us to release this new documentati
     - [ ] General getting started page
     - [ ] General EX-CommandStation page
     - [ ] Clarity on what you need including **good and recommended** power supplies
-    - [x] EXRAIL under EX-CS
+    - [x] **EXRAIL** under EX-CS
     - [x] TrackManager under EX-CS - no waveform/DC PWM details, they can be a reference later, just focus on config and use
-    - [ ] EX-CSB1 RTR information - must be complete
+    - [ ] **EX-CSB1** RTR information - must be complete
     - [ ] Mega DIY stack page - Mega + EX8874/Arduino R3 + WiFiShield8266 only (no hardware mods, plug n play only)
 
 - Advanced DIY stacks:
@@ -23,10 +23,15 @@ This is a list of to do items that will allow us to release this new documentati
 
 - Product pages for:
 
-    - [ ] CommandStation (includes EXRAIL and TrackManager)
-    - [ ] EX-CSB1
-    - [ ] EX-Motorshield8874
-    - [ ] EX-WiFiShield8266
+    - [ ] CommandStation (includes **EXRAIL** and TrackManager)
+    - [ ] **EX-CSB1**
+    - [ ] **EX-Motorshield8874**
+    - [ ] **EX-WiFiShield8266**
+    - [x] **EX-Toolbox**
+    - [x] **EX-WebThrottle**
+    - [ ] **EX-IOExpander**
+    - [ ] **EX-Turntable**
+
 
 - Better how to get help and support info:
 
@@ -38,7 +43,7 @@ This is a list of to do items that will allow us to release this new documentati
     - [ ] USB issues - drivers, cables, ports, permissions, other programs open
     - [ ] WiFi/serial interfering
     - [ ] WiFi issues
-    - [ ] EX-Installer common issues
+    - [ ] **EX-Installer** common issues
     - [ ] Not seeing roster/routes/turnouts in throttles/JMRI
 
 - I2C more accessible information:
@@ -50,10 +55,10 @@ This is a list of to do items that will allow us to release this new documentati
 
 - Purchasing information for hardware:
 
-    - [x] Official DCC-EX reseller stores
+    - [x] Official **DCC-EX** reseller stores
     - [x] Recommended third-party suppliers
 
-- [ ] EXRAIL command reference from doxyGen
+- [ ] **EXRAIL** command reference from doxyGen
 - User journeys to guide users through the site:
 
     - [ ] Brand new users no knowledge
@@ -69,11 +74,11 @@ This is a list of to do items that will allow us to release this new documentati
 ## Release QA Items
 
 - [ ] Proof-reading all pages but not by original author
-- [ ] Address all ==TODO== markers [search for ==TODO==](?TODO)
+- [ ] Address all ==TODO== markers [search for ==TODO==](?TODO) or view the [To-Do/Task List page](/contributing/todo-report.md)
 
 ## Menu and Page Structure
 
-- [ ] All hardware pages should "next" onto the EX-Installer EX-CommandStation configuration instructions, maybe nav plugin extension, maybe JS
+- [ ] All hardware pages should "next" onto the **EX-Installer** **EX-CommandStation** configuration instructions, maybe nav plugin extension, maybe JS
 - If DIY on tap nav menu, RTR must be their too, choose:
 
     - [x] Both DIY and RTR on nav menu
@@ -81,7 +86,7 @@ This is a list of to do items that will allow us to release this new documentati
 
 - Redirects for key items from the previous site, and QR codes on hardware devices
 
-    - [x] EX-CSB1 QR code
+    - [x] **EX-CSB1** QR code
     - [x] EX8874 QR code
     - [x] show QR codes for Toolbox, and ED.
     - [ ] and any other recommended throttle apps.
@@ -112,6 +117,6 @@ This is a list of to do items that will allow us to release this new documentati
 ## Release To Do
 
 - [ ] GitHub workflow to build these docs on push/merge
-- [ ] GitHub workflow must use strict mode to error on all warnings and errors
+- [ ] ~~GitHub workflow must use strict mode to error on all warnings and errors~~ This causes too many problems
 - [ ] News article on existing site ahead of release
 - [ ] News article with this release

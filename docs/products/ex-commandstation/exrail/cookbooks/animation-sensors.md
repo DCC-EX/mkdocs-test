@@ -11,7 +11,7 @@ ONBUTTON(172)
   PRINT("Moooving on")
   SERVO(135,417) // move cow out of the way
   DELAY(4000)  // wait 
-  THROW(3) // throw turnout 3 
+  THROW(3) // throw turnout/point 3 
   GREEN(130) // set a signal
   DONE
 ```
@@ -34,9 +34,9 @@ ONSENSOR(176)
   DONE
 ```
 
-Note: Switches are not suitable for controlling turnouts because the command station cant reach out a finger and change the switch position when the turnout is changed from a throttle or some other EXRAIL script. (Unless of course, you are into animating a servo to do just that!)
+Note: Switches are not suitable for controlling turnouts/points because the **EX-CommandStation** can't reach out a finger and change the switch position when the turnout/point is changed from a throttle or some other **EXRAIL** script. (Unless of course, you are into animating a servo to do just that!)
 
-You can toggle a turnout with a single button
+You can toggle a turnout/point with a single button
 
 ```cpp
 ONBUTTON(172) TOGGLE_TURNOUT(7) DONE

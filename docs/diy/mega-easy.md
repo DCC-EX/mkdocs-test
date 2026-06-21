@@ -6,7 +6,7 @@ The instructions below detail the steps required to use an EX8874 motor shield.
 
 ## What you need
 
-To build a basic DIY Command Station in easy steps you will need:
+To build a basic DIY **EX-CommandStation** in easy steps you will need:
 
 - A PC or laptop (Not a Raspberry Pi) running a reasonably recent versions of Windows, Linux or macOS
 - an Arduino Mega microprocessor or Elegoo clone.
@@ -23,7 +23,7 @@ To build a basic DIY Command Station in easy steps you will need:
 
 2. Use sticky tape or similar to cover the top of the USB connector on the mega. This prevents any accidental contact with the underside of the motor shield. ![connectors](/_static/images/mega/mega1.png)
 
-3. Mount your Mega on 3d printed tray, a piece of plastic card or wood to make sure that the underside solder points are insulated. Placing your Command Station down on a tool, coin or even your track can short the pins and, in some cases, damage the board.
+3. Mount your Mega on 3d printed tray, a piece of plastic card or wood to make sure that the underside solder points are insulated. Placing your **EX-CommandStation** down on a tool, coin or even your track can short the pins and, in some cases, damage the board.
 
 ### Mount the EX8874 shield
 
@@ -65,6 +65,6 @@ The EX8874 track connectors unplug for easy access.
 
 ### Load the software
 
-Congratulations, you have built a DIY command station the easy way. But you still have to load the software.
+Congratulations, you have built a DIY **EX-CommandStation** the easy way. But you still have to load the software.
 
 For simplicity, software loading is best done with the [EX-Installer](installer.md)

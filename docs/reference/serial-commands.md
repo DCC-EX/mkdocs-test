@@ -62,15 +62,15 @@ How to understand the syntax:
 | `<^ loco1 loco2 ... >` | Create Consist | `loco`: ID, negative for reversed loco | Active |
 | `<^ loco1>` | Deletes consist | `loco1`: ID | Active |
 
-## Turnout Control
+## Turnout/Point Control
 
 | Command | Description | Parameters |
 |---------|-------------|------------|
-| `<T>` | List all turnouts | None |
-| `<T id>` | Delete turnout | `id`: Turnout ID |
-| `<T id X>` | List turnout details | `id`: Turnout ID |
-| `<T id T>` | Throw turnout | `id`: Turnout ID |
-| `<T id C>` | Close turnout | `id`: Turnout ID |
+| `<T>` | List all turnouts/points | None |
+| `<T id>` | Delete turnout/point | `id`: Turnout ID |
+| `<T id X>` | List turnout/point details | `id`: Turnout ID |
+| `<T id T>` | Throw turnout/point | `id`: Turnout ID |
+| `<T id C>` | Close turnout/point | `id`: Turnout ID |
 | `<T id value>` | Close (value=0) or Throw turnout | `id`: Turnout ID, `value`: 0/1 |
 | `<T id SERVO vpin closedValue thrownValue>` | Create servo turnout | `id`: ID, `vpin`: Pin, values for positions |
 | `<T id VPIN vpin>` | Create pin turnout | `id`: ID, `vpin`: Pin number |
@@ -198,7 +198,7 @@ How to understand the syntax:
 | `<J A>` | List routes | None |
 | `<J R>` | List roster | None |
 | `<J R id>` | Get roster for loco | `id`: Locomotive ID |
-| `<J T>` | Get turnout list | None |
+| `<J T>` | Get turnout/point list | None |
 | `<J T id>` | Get turnout state and description | `id`: Turnout ID |
 | `<J O>` | List turntable IDs | None |
 | `<J O id>` | List turntable state | `id`: Turntable ID |
@@ -225,9 +225,9 @@ How to understand the syntax:
 ## Configuration Commands
 
 | Command | Description | Parameters |
-|---------|-------------|------------|
+| ------- | ----------- | ---------- |
 | `<C PROGBOOST>` | Configure PROG track boost | None |
-| `<C RESET>` | Reset and restart command station | None |
+| `<C RESET>` | Reset and restart **EX-CommandStation** | None |
 | `<C SPEED28>` | Set all DCC speed commands as 28 step | None |
 | `<C SPEED128>` | Set all DCC speed commands to 128 step (default) | None |
 | `<C RAILCOM ON>` | Enable Railcom cutout | None |

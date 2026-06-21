@@ -13,7 +13,7 @@ The vast majority of VPINs are either output (e.g. LEDs and servos) or input (e.
 
 ## Creating virtual pins
 
-Virtual pins are normally defined by specifying the Hardware Driver that is used to connect to an external device. There is no way for the command station to know for sure what devices are connected so it must be told. This is done by including HAL commands in myAutomation.h which configure the device.
+Virtual pins are normally defined by specifying the Hardware Driver that is used to connect to an external device. There is no way for the **EX-CommandStation** to know for sure what devices are connected so it must be told. This is done by including HAL commands in myAutomation.h which configure the device.
 
 For Example
 
@@ -33,7 +33,7 @@ Refer to wiring details and fuller list of [supported I2C devices](#) elsewhere.
 
 ## Using OUTPUT VPINS
 
-Pin values can be changed with basic digital pin commands common to all VPINs.  In EXRAIL
+Pin values can be changed with basic digital pin commands common to all VPINs.  In **EXRAIL**
 
 `SET(180)` `RESET(180)`  sets value HIGH or LOW.
 
@@ -49,7 +49,7 @@ Bear in mind that buttons (connected between a pin and ground) and most sensors 
 
 `IF(200)` tests if pin is active.
 
-`ONBUTTON(200)` triggers when a pin is SET or goes active. This causes a new EXRAIL task to start and switch bounce will be ignored until the task completes.
+`ONBUTTON(200)` triggers when a pin is SET or goes active. This causes a new **EXRAIL** task to start and switch bounce will be ignored until the task completes.
 
 For example:
 
@@ -68,4 +68,4 @@ Other more advanced commands are available, see cookbooks.
 
 ## Using INPUT/OUTPUT VPINs
 
-Bitmap pins are software flags with no actual hardware implementation. They can be used as INPUT and OUTPUT and thus can be used as flags between EXRAIL processes.  See [Bitmaps](/products/ex-commandstation/exrail/cookbooks/flags-and-latches/flags.md)
+Bitmap pins are software flags with no actual hardware implementation. They can be used as INPUT and OUTPUT and thus can be used as flags between **EXRAIL** processes.  See [Bitmaps](/products/ex-commandstation/exrail/cookbooks/flags-and-latches/flags.md)

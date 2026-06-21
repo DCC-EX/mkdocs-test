@@ -1,6 +1,6 @@
 # MkDocs Testing
 
-Repository to test if MkDocs meets the DCC-EX team's needs for a fresh start on simpler to maintain documentation.
+Repository to test if MkDocs meets the **DCC-EX**team's needs for a fresh start on simpler to maintain documentation.
 
 MkDocs is being tested with the Material theme, which is reported to have an excellent search engine and other built-in features that reduce dependency complexity.
 
@@ -8,13 +8,13 @@ MkDocs is being tested with the Material theme, which is reported to have an exc
 
 This is the simple working list of requirements to evaluate against:
 
-- Must have at least a basic DCC-EX look/feel colour theme
+- Must have at least a basic **DCC-EX** look/feel colour theme
 - Must have useful search capability
 - Must target RTR user base primarily
 - Must be easy to contribute to for non-developers, nothing more complicated than Markdown syntax
 - Must render well on both mobile and web
 - Must reduce maintenance/management complexity as much as possible
-- Must have DCC-EX News type blog/RSS feed
+- Must have **DCC-EX** News type blog/RSS feed
 - Must support internal reference links
 - Should enable adding new content without having to faff about with site structure
 - Should have a glossary of terms
@@ -96,13 +96,13 @@ mkdocs gh-deploy
 
 ## Design Principles for DCC-EX (Pete)
 
-- Must have at least a basic DCC-EX look/feel colour theme
+- Must have at least a basic **DCC-EX** look/feel colour theme
 - Must have useful search capability
 - Must target RTR user base primarily
 - Must be easy to contribute to for non-developers, nothing more complicated than Markdown syntax
 - Must render well on both mobile and web
 - Must reduce maintenance/management complexity as much as possible
-- Must have DCC-EX News type blog/RSS feed
+- Must have **DCC-EX** News type blog/RSS feed
 - Must support internal reference links
 - Should enable adding new content without having to faff about with site structure
 - Should have a glossary of terms
@@ -117,7 +117,7 @@ Half the wins we should be able to get here actually have nothing to do with MkD
 
 Instead of trying to cater for every possible custom tinkerer/engineer option on the planet, we need to start with the RTR user front and centre, and use that as the basis for the structure.
 
-So, we should focus on getting the CSB1 process in there first, and the latest EX-Installer updates.
+So, we should focus on getting the **EX-CSB1** process in there first, and the latest **EX-Installer** updates.
 
 The drive for MkDocs (or something simpler than RST) is that it just uses Markdown, which is a lot simpler for people to come to grips with, and if you don't want to run MkDocs locally, you can at least preview Markdown in VSCode directly, you just won't see it in the context of the website.
 

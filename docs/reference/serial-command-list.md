@@ -1,0 +1,21 @@
+﻿<style>
+  .md-typeset h3, .md-typeset a, .md-typeset a code {
+    margin-bottom: 0 !important;
+    font-style: normal !important;
+  }
+  .md-typeset h3 + p {
+    margin-top: 2px !important;
+    padding-left: 1em !important;
+  }
+</style>
+
+# DCC-EX Serial Command List
+
+The following list is dynamically built from the CommandStation-EX code. It contains all the serial commands with brief definitions.
+In many cases the parameters are self explanitory, for example a *speed* (which will always be a DCC compatible 0..127 where 0=stop and 1=emergency stop). Note *tSpeed* is different to *speed* and is a simple 0..127.
+
+This list appears in the order in which the command parser will detect command patterns. Clicking on a command pattern should search out documantation pages which describe or use each command.
+
+Please bear in mind that this list can be easily generated but the various links spread about the documentation take a lot of effort and will be built over time.  
+
+--8<-- "snippets/DCCEXCommands.md"

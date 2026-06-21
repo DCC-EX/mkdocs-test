@@ -5,9 +5,11 @@ hide:
 
 # HAL Device Templates
 
-### Configure HAL devices in myAutomation.h
+The templates below may help to understand the HAL system and how devices afre defined. 
 
-This information is also contained in the command station file:  
+## Configure HAL devices in myAutomation.h
+
+This information is also contained in the **EX-CommandStation** file:  
 
 ```text
 // myHalDeviceTemplates.txt  

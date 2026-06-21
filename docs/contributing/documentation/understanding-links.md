@@ -2,7 +2,7 @@
 
 ## What the html browser sees is this
 
-An ABOSLUTE link in html starts with `/`  which makes the browser prepend the web server address so `href="/blah/blah.html"`  for example would link to `"http:://dcc-ex.com/blah/blah.html"` which would be BAD because  we actually wanted  `http:://dcc-ex.com/mkdocs-test/blah/blah.html` but there was no way of doing that if you didn't know the sub-directory mkdocs-test in advance and code it on all your links.
+An ABSOLUTE link in html starts with `/`  which makes the browser prepend the web server address so `href="/blah/blah.html"`  for example would link to `"http:://dcc-ex.com/blah/blah.html"` which would be BAD because  we actually wanted  `http:://dcc-ex.com/mkdocs-test/blah/blah.html` but there was no way of doing that if you didn't know the sub-directory mkdocs-test in advance and code it on all your links.
 
 To resolve this, you have to use RELATIVE hrefs, in which the link is relative to the current page.  So if you are on page   `blah1/blah2/blah3.html` and you want a link or image in  `_static/images/stuff.jpg`  you have to use `href="../../_static/images/stuff.jpg"`
 

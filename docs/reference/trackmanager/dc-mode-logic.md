@@ -1,6 +1,6 @@
 # DC Mode - Logic Gate Circuits
 
-This additional information may be useful for those who are not using CSB1 or EX8874, and would like to understand what would be needed for DC mode with other motor boards/shields.
+This additional information may be useful for those who are not using **EX-CSB1** or EX8874, and would like to understand what would be needed for DC mode with other motor boards/shields.
 
 With DC mode, the PWM signal is provided with the brake pin.  The Signal-1 pin provides direction.
 

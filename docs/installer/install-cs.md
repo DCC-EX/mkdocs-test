@@ -1,6 +1,6 @@
-# Installing Command Station Software
+# Installing EX-CommandStation Software
 
-This assumes you have read and done the EX-Installer installation, know how to execute it and have done the [CLI download and optional ESP32 steps](first-run.md) to make sure you have the necessary build processor and run time libraries for your Command Station.
+This assumes you have read and done the **EX-Installer** installation, know how to execute it and have done the [CLI download and optional ESP32 steps](first-run.md) to make sure you have the necessary build processor and run time libraries for your **EX-CommandStation**.
 
 To proceed, click the Select your device button.
 
@@ -45,7 +45,7 @@ You must select the motor shield that you have installed. The installer can’t 
 
 ## Other options
 
-You should select "Disable EEPROM support" for most cases. 
+You should select "Disable EEPROM support" for most cases.
 
 ### Optional LCD or OLED display
 
@@ -57,14 +57,14 @@ If you have installed and optional OLED or LED display, enable [I have a display
 
 ### Optional Wi-fi
 
-If you are using a CSB1 or other board with integrated Wi-Fi, or have installed and optional Wi-Fi board you need to enable the `I have Wi-Fi`.
+If you are using an **EX-CSB1** or other board with integrated Wi-Fi, or have installed and optional Wi-Fi board you need to enable the `I have Wi-Fi`.
 This enables the "Wi-fi Options" button where you can configure the Wi-Fi.
 
 ### Wi-Fi Access Point mode
 
 ![wifi AP](/_static/images/ex-installer/wifi-ap.png)
 
-In Access Point mode, you command station runs a completely isolated Wi-Fi Network. This is most useful if your layout is away from the house, or you transport your layout frequently, or do not want to give guests access to your home Wi-Fi. Wi-Fi phones or tablets will need to connect their Wi-Fi to the Access Point and will lose access to your home Wi-Fi. 
+In Access Point mode, your **EX-CommandStation** runs a completely isolated Wi-Fi Network. This is most useful if your layout is away from the house, or you transport your layout frequently, or do not want to give guests access to your home Wi-Fi. Wi-Fi phones or tablets will need to connect their Wi-Fi to the Access Point and will lose access to your home Wi-Fi.
 Wi-Fi Password is optional.
 If this field is left blank the password will default to ‘PASS_xxxxxx’ where ‘xxxxxx’ will be the same as the SSID name that will be automatically configured.
 If possible, choose a channel that is unused (or least used) by other Wi-Fi networks around your location.
@@ -120,7 +120,7 @@ Note there is an additional option Create myAutomation.h that allows a blank myA
 
 ![load](/_static/images/ex-installer/load.png)
 
-This proceeds to compile your configuration in with the base code and load it into the Command Station Arduino processor.
+This proceeds to compile your configuration in with the base code and load it into the **EX-CommandStation** Arduino processor.
 
 There may be errors compiling (usually due to a mistake in the advanced configuration or myAutomation.h) and this will prevent the load stage from taking place.
 
@@ -137,10 +137,10 @@ You will be prompted to select a folder, and if the chosen folder already contai
 
 Once you have selected a device in EX‑Installer on the “Select your device” screen, or after successfully loading software onto your device, a View device monitor button will be available.
 
-When clicking this button, the EX-Installer Device Monitor window will open, allowing you to interact with your device by sending commands and viewing the serial console output.
+When clicking this button, the **EX-Installer** Device Monitor window will open, allowing you to interact with your device by sending commands and viewing the serial console output.
 
 ![device monitor](/_static/images/ex-installer/device-monitor.png)
-For further details on using EX-Installer Device Monitor, continue on to the next page with the ‘Next’ button, or go straight to Using the EX-Installer Device Monitor.
+For further details on using **EX-Installer** Device Monitor, continue on to the next page with the ‘Next’ button, or go straight to Using the **EX-Installer** Device Monitor.
 
 Next Steps - Test your setup
 

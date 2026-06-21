@@ -1,6 +1,6 @@
 # Raising GitHub Issues
 
-Most of the DCC-EX GitHub repositories have issue templates which will guide you through the required information related to the type of issue you are raising.
+Most of the **DCC-EX** GitHub repositories have issue templates which will guide you through the required information related to the type of issue you are raising.
 
 These typically include:
 

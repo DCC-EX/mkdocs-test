@@ -5,13 +5,13 @@ hide:
 
 # DCC-EX Product Overview
 
-The DCC-EX team has designed and released various different open source products aimed at making model trains accessible to more people.
+The **DCC-EX** team has designed and released various different open source products aimed at making model trains accessible to more people.
 
 This page briefly outlines each of our products, the experience level you need to be able to use them, and links to more information.
 
-## Conductor Level ![Conductor Icon](/_static/images/levels/conductor.png){ .header-img }
+## Easy to Use Products ![Conductor Icon](/_static/images/levels/conductor.png){ .header-img }
 
-These are our easy to use, get up and running quickly type products. You don't need to pick up a soldering iron or write any software, just plug them in and go!
+These are our powerful, but easy to use, get up and running quickly type products. You don't need to pick up a soldering iron or write any software, just plug them in and go!
 
 **NOTE:** You may need to install some software on your computer to take advantage of some of these, but our documentation will walk you through that process.
 
@@ -19,12 +19,12 @@ These are our easy to use, get up and running quickly type products. You don't n
 
 ### EX-CommandStation Booster 1 Express
 
-![EX-CommandStation Logo](/_static/images/logos/product-logo-ex-commandstation-only-light.png){ .only-light width=400px }
-![EX-CommandStation Logo](/_static/images/logos/product-logo-ex-commandstation-only-dark.png){ .only-dark width=400px }
+[![EX-CommandStation Logo](/_static/images/logos/product-logo-ex-commandstation-only-light.png){ .only-light width=400px }
+![EX-CommandStation Logo](/_static/images/logos/product-logo-ex-commandstation-only-dark.png){ .only-dark width=400px }](/products/ex-commandstation/overview.md)
 [![EX-CSB1 Logo](/_static/images/logos/product-logo-ex-csb1-only-light.png){ .only-light width=400px }
 ![EX-CSB1 Logo](/_static/images/logos/product-logo-ex-csb1-only-dark.png){ .only-dark width=400px }](/products/ex-commandstation/ex-csb1.md)
 
-A ready-to-run, all in one Command Station and Booster with built-in WiFi preloaded with our flagship train control, layout animation and automation software. 
+A ready-to-run, all in one Command Station and Booster with built-in WiFi preloaded with our flagship train control, layout animation and automation software.
 
 For more information on this and how to purchase, head over to the [EX-CSB1 product page](/products/ex-commandstation/ex-csb1.md)
 
@@ -35,18 +35,18 @@ You can learn more about the software in the [EX-CommandStation documentation](/
 ### EX-WebThrottle
 
 [![EX-WebThrottle Logo](/_static/images/logos/product-logo-ex-webthrottle-only-light.png){ .only-light width=400px }
-![EX-WebThrottle Logo](/_static/images/logos/product-logo-ex-webthrottle-only-dark.png){ .only-dark width=400px }](https://dcc-ex.com/legacy-docs/ex-webthrottle/index.html#ex-webthrottle)
+![EX-WebThrottle Logo](/_static/images/logos/product-logo-ex-webthrottle-only-dark.png){ .only-dark width=400px }](/products/ex-webthrottle/ex-webthrottle.md)
 
-This is the easiest way to validate you've connected your command station correctly to your track. Just load it up in your Chromium based web browser (Edge, Chrome, Opera) after connecting your command station to your computer and you can run your trains with it.
+This is the easiest way to validate you've connected your **EX-CommandStation** correctly to your track. Just load it up in your Chromium based web browser (Edge, Chrome, Opera) after connecting your **EX-CommandStation** to your computer and you can run your trains with it.
 
-To access it, refer to the [EX-WebThrottle documentation](https://dcc-ex.com/legacy-docs/ex-webthrottle/index.html#ex-webthrottle).
+See the [EX-WebThrottle documentation](/products/ex-webthrottle/ex-webthrottle.md).
 
 ---
 
 ### EX-Toolbox
 
-![EX-Toolbox Logo](/_static/images/logos/product-logo-ex-toolbox-only-light.png){ .only-light width=400px }
-![EX-Toolbox Logo](/_static/images/logos/product-logo-ex-toolbox-only-dark.png){ .only-dark width=400px }
+[![EX-Toolbox Logo](/_static/images/logos/product-logo-ex-toolbox-only-light.png){ .only-light width=400px }
+![EX-Toolbox Logo](/_static/images/logos/product-logo-ex-toolbox-only-dark.png){ .only-dark width=400px }](/products/ex-toolbox/ex-toolbox.md)
 
 For Android phone users, this is an extremely useful tool to help with configuring various aspects of your trains, command station, and accessories.
 
@@ -57,7 +57,7 @@ Refer to the [EX-Toolbox documentation](/products/ex-toolbox/ex-toolbox.md) for 
 
 ---
 
-## Tinkerer level ![Tinkerer Icon](/_static/images/levels/tinkerer.png){ .header-img }
+## A Bit More Technical Products ![Tinkerer Icon](/_static/images/levels/tinkerer.png){ .header-img } <br/><small>Intermediate Level</small>
 
 These products are more involved to get up and running, and aren't just plug in and go.
 
@@ -67,8 +67,8 @@ You will need to perform some assembly and configure and install some software t
 
 ### EX-CommandStation Recommended Self Build Option (DIY)
 
-![EX-CommandStation Logo](/_static/images/logos/product-logo-ex-commandstation-only-light.png){ .only-light width=400px }
-![EX-CommandStation Logo](/_static/images/logos/product-logo-ex-commandstation-only-dark.png){ .only-dark width=400px }
+[![EX-CommandStation Logo](/_static/images/logos/product-logo-ex-commandstation-only-light.png){ .only-light width=400px }
+![EX-CommandStation Logo](/_static/images/logos/product-logo-ex-commandstation-only-dark.png){ .only-dark width=400px }](/diy/mega-easy.md)
 [![CS DIY Logo](/_static/images/logos/product-logo-ex-cs-diy-only-light.png){ .only-light width=400px }
 ![CS DIY Logo](/_static/images/logos/product-logo-ex-cs-diy-only-dark.png){ .only-dark width=400px }](/diy/mega-easy.md)
 
@@ -85,7 +85,7 @@ Refer to the [Easy build Arduino Mega page](/diy/mega-easy.md) for information o
 [![EX-8874 Logo](/_static/images/logos/product-logo-ex-motorshield8874-only-light.png){ .only-light width=400px }
 ![EX-8874 Logo](/_static/images/logos/product-logo-ex-motorshield8874-only-dark.png){ .only-dark width=400px }](/products/ex-motorshield8874/ex-motorshield8874.md)
 
-A dual channel, 5 amp (per channel) motor shield designed specifically for DCC-EX in an Arduino shield format.
+A dual channel, 5 amp (per channel) motor shield designed specifically for **DCC-EX** in an Arduino shield format.
 
 Assembly is required to add this to an Arduino Mega along with software configuration.
 
@@ -98,7 +98,7 @@ Refer to the [EX-MotorShield8874 page](/products/ex-motorshield8874/ex-motorshie
 [![EX-8266 Logo](/_static/images/logos/product-logo-ex-wifishield8266-only-light.png){ .only-light width=400px }
 ![EX-8266 Logo](/_static/images/logos/product-logo-ex-wifishield8266-only-dark.png){ .only-dark width=400px }](/products/ex-wifishield8266/ex-wifishield8266.md)
 
-A WiFi shield designed specifically for DCC-EX in an Arduino shield format.
+A WiFi shield designed specifically for **DCC-EX** in an Arduino shield format.
 
 Assembly is required to add this to an Arduino Mega along with software configuration.
 
@@ -106,13 +106,13 @@ Refer to the [EX-WiFiShield8266 page](/products/ex-wifishield8266/ex-wifishield8
 
 ---
 
-## Engineer level ![Engineer Icon](/_static/images/levels/engineer.png){ .header-img }
+## Advanced Technical Products ![Engineer Icon](/_static/images/levels/engineer.png){ .header-img } <br/><small>Advanced Level</small>
 
 These products are far more involved and complicated to get up and running.
 
 This products go beyond simple assembly and you will need a good understanding of configuring software and hardware, including soldering components and making some modifications to existing hardware devices.
 
-If you are new to DCC-EX and/or electronics in general, we do not recommend you try to tackle any of these products until you have become familiar with how our products work.
+If you are new to **DCC-EX** and/or electronics in general, we do not recommend you try to tackle any of these products until you have become familiar with how our products work.
 
 ### EX-CommandStation Advanced Self Build (DIY)
 
@@ -166,6 +166,8 @@ This requires some assembly and soldering to get up and running, and you will ne
 
 Refer to the [EX-DCCInspector documentation](https://dcc-ex.com/legacy-docs/ex-dccinspector/index.html#ex-dccinspector) for more information.
 
+==TODO== move legacy docs
+
 ---
 
 ### EX-IOExpander
@@ -173,7 +175,7 @@ Refer to the [EX-DCCInspector documentation](https://dcc-ex.com/legacy-docs/ex-d
 [![EX-IOExpander Logo](/_static/images/logos/product-logo-ex-ioexpander-only-light.png){ .only-light width=400px }
 ![EX-IOExpander Logo](/_static/images/logos/product-logo-ex-ioexpander-only-dark.png){ .only-dark width=400px }](/products/ex-ioexpander/ex-ioexpander.md)
 
-Driven by a shortage of I2C connected I/O expansion devices, EX-IOExpander allows you to use various Arduino devices to expand the I/O capabilities of your command station.
+Driven by a shortage of I2C connected I/O expansion devices, **EX-IOExpander** allows you to use various Arduino devices to expand the I/O capabilities of your **EX-CommandStation**.
 
 However, this does mean you will need to understand I2C connectivity and will likely need some more complex assembly and/or soldering to use this on your layout.
 

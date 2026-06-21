@@ -4,7 +4,7 @@ These are implemented by a software-only driver that mimics a set of VPINs that 
 Unlike sensors and leds, these VPINs are both INPUT and OUTPUT  These can be used in many ways:
 
 - As a simple digital flag to assist in inter-thread communication.
-- A flag or value that can be set from commands and tested in EXRAIL.(e.g. to stop a sequence)
+- A flag or value that can be set from commands and tested in **EXRAIL**.(e.g. to stop a sequence)
 - As a counter for looping or occupancy counts such as trains passing over a multi track road crossing.
 - As a collection of 16 digital bits that can be set, reset, toggled, masked and tested.
   
@@ -13,7 +13,7 @@ Existing <> and exrail commands for vpins work on these pins.
 ## Creating virtual pins
   
   ```cpp
-    HAL(Bitmap,firstpin,npins) 
+    HAL(Bitmap,firstPin,nPins) 
   ```
 
 creates 1 or more virtual pins in software.
@@ -36,11 +36,11 @@ Detecting the first increment from 0 to 1 can be done with `ONBUTTON(1013)` and 
 
 Analog values may be set into the virtual pins and tested using the existing analog value commands and exrail macros.
 `<z vpin value>`  `<D ANIN vpin>` etc.
-and in EXRAIL `BITMAP_SET(vpin,value)` which is the same as `ANOUT(vpin,value,0,0)`
+and in **EXRAIL** `BITMAP_SET(vpin,value)` which is the same as `ANOUT(vpin,value,0,0)`
 
 ## Use as binary flag groups (advanced)
 
-Virtual pins (and others that respond to an analog read in order to provide bit mapped digital data, such as SensorCam) can be set and tested with new special EXRAIL commands
+Virtual pins (and others that respond to an analog read in order to provide bit mapped digital data, such as SensorCam) can be set and tested with new special **EXRAIL** commands
 
 `IFBITMAP_ALL(vpin,mask)`   Bitwise ANDs the  the vpin value with the mask value and is true if ALL the 1 bits in the mask are also 1 bits in the value.
     e.g.    `IFBITMAP_ALL(1013,0x0f)`  would be true if ALL the last 4 bits of the value are 1s.

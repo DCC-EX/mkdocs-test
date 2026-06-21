@@ -1,13 +1,12 @@
 # EX-WebThrottle - Overview
 
-TODO: Split into seperate pages for overview plus installing and using
+==TODO== Split into seperate pages for overview plus installing and using.
 
-[Run Ex-WebThrottle Now](https://dcc-ex.com/WebThrottle-EX/)
+[Run EX&#8209;WebThrottle Now](https://dcc-ex.com/WebThrottle-EX/){ .md-button .md-button--primary }
 
 **EX‑WebThrottle** is a throttle (controller) that can connect to the **EX-CommandStation** directly through the USB port of a computer
 
 For a video on how to install and use **EX-WebThrottle** [see here](https://youtu.be/BkgsEOjxWaU?si=Sm9e4o_jp4FXqFO3).
-
 
 ## What you need to run EX-WebThrottle
 
@@ -17,7 +16,7 @@ For a video on how to install and use **EX-WebThrottle** [see here](https://yout
 You don't need anything else to test it out and to run in emulator mode, just run it and play. To use it to run real trains you will need:
 
 * An **EX-CSB1**, <br/> or
-* DIY **EX-CommandStation** based on a Arduino Mega, Arduino Uno, or other compatible microcontroller with a compatible Motor Shield
+* DIY **EX-CommandStation** based on a Arduino Mega, Arduino UNO, or other compatible microcontroller with a compatible Motor Shield
 * Plus the **EX-CommandStation** software already loaded
 
 ## Getting started
@@ -36,7 +35,7 @@ You have an option for how you would like to run **EX-WebThrottle**, from the cl
 
 Just click the 'Run Ex-WebThrottle Now' button below and you will load a web page from our server that will run the web throttle on your computer. You can connect it to the **EX-CommandStation** or just run it in emulator mode where you don't have to have any hardware. Please read the requirements above for what you need in order to run **EX-CommandStation** in your browser. If you want to remember the link to run the throttle, it is [https://dcc-ex.github.io/WebThrottle-EX](https://dcc-ex.github.io/WebThrottle-EX).
 
-[Run Ex-WebThrottle Now](https://DCC-EX.github.io/WebThrottle-EX)
+[Run EX&#8209;WebThrottle Now](https://dcc-ex.com/WebThrottle-EX/){ .md-button .md-button--primary }
 
 ## Download
 
@@ -54,15 +53,16 @@ This will install all the files to run locally on your machine. You won't need a
 
 ## Operation
 
-**EX-WebThrottle** has five pages which you can switch between using the hamburger menu button (three horizontal bars) on the top left of the screen, or direct icon buttons at the top of the screen.
+**EX-WebThrottle** has a number of pages which you can switch between using the hamburger menu button (three horizontal bars) on the top left of the screen, or direct icon buttons at the top of the screen.
 
-* Throttle *(the default page)*
-* CV Programmer
-* Routes/Automation
-* Turnouts/Points
-* Locomotives (local)
-* Function Maps (local)
-* Settings
+* [Throttle](#throttle) *(the default page)*
+* [CV Programmer](#cv-programming)
+* [Routes/Automation](#routesautomation)
+* [Turnouts/Points](#turnoutspoints)
+* [WiFi configuration (EX-CSB1 or ESP32 ONLY. v5.7.0+ ONLY)](#wifi-configuration-ex-csb1-or-esp32-only-v570-only)
+* [Locomotives](#locomotives) (local)
+* [Function Maps](#function-maps) (local)
+* [Settings](#settings)
 
 ----
 
@@ -72,7 +72,7 @@ This will install all the files to run locally on your machine. You won't need a
 
 To use the program to connect to your **EX-CommandStation** leave the ``Serial`` dropdown as is.
 
-(See the section below if you wish to use the "emulator mode". )
+(See the [Emulator section](#emulator) below if you wish to use the "emulator mode". )
 
 ![EX-WebThrottle - Connect button](../../_static/images/ex-webthrottle/connect-button.png){: width=50%}
 
@@ -80,17 +80,17 @@ Next, click on the ``Connect EX-CS`` button.
 
 When using the serial connection, if the program finds any compatible devices, it will open a popup a window showing you a selection. It may show a line at the top such as "Arduino Mega 2560 (COM3)". Your com port may vary. Click on your board to select it and then click the ``Connect EX-CS`` button.
 
-You should then be connected to the **EX-CommandStation** and should see the response from the Command Station in the log textbox of the debug console at the bottom of the throttle window. Make sure your debug console is open. If it isn't, use the `Debug Console` slider button in the lower lower right to open it.
+You should then be connected to the **EX-CommandStation** and should see the response from the **EX-CommandStation** in the log textbox of the debug console at the bottom of the throttle window. Make sure your debug console is open. If it isn't, use the `Debug Console` slider button in the lower lower right to open it.
 
-When the command station is ready to use you should see ``[i] EX-CommandStation is READY`` appear in the log.
+When the **EX-CommandStation** is ready to use you should see ``[i] EX-CommandStation is READY`` appear in the log.
 
 Now you are ready to run trains! Place your loco on the track and click the `Power` slider button to turn on power to your track (if not already on). You should see LEDs on your Motor Driver and an indication that your loco has power.
 
-.. note:: Make sure you place the loco on the *MAIN* track, **not** the PROG track. Check your wiring. On an  Motor Driver, Motor Output "A" should connect to your MAIN track and "B" to the PROGRAM track.
+**Note:** Make sure you place the loco on the *MAIN* track, **not** the PROG track. Check your wiring. By default, on an **EX-CSB1** or a Motor Driver, Motor Output "A" should connect to your MAIN track (your layout) and "B" to the PROG track (a separate programming track).
 
 ![EX-WebThrottle](../../_static/images/ex-webthrottle/loco-id.png){: align=right width=50%}
 
-Next go to the `Loco ID` textbox and enter the DCC Address of your loco and press the ``Acquire`` (right arrow in a circle) button. 
+Next go to the `Loco ID` textbox and enter the DCC Address of your loco and press the ``Acquire`` (right arrow in a circle) button.
 
 You should now have full control over your loco.
 
@@ -98,7 +98,7 @@ You should now have full control over your loco.
 
 In the throttle control area, to the left of the function buttons, are vertical controls to control direction. The up arrow selects forward, the square button is stop and the down arrow is reverse.
 
-All the function buttons should be working, so you can play with the headlight, horn and bell and any other function assigned to a function button. The commands being sent to the Command Station and its responses will display in the log window if it is open
+All the function buttons should be working, so you can play with the headlight, horn and bell and any other function assigned to a function button. The commands being sent to the **EX-CommandStation** and its responses will display in the log window if it is open.
 
 The circular control or vertical slider (chosen by the throttle select slider) can be moved by clicking and holding down the mouse button and dragging, clicking at a spot where you want the throttle to move, or clicking the ``+`` and ``-`` buttons.
 
@@ -110,9 +110,9 @@ The circular control or vertical slider (chosen by the throttle select slider) c
 
 Once you are connected, you can also send commands directly to the **EX-CommandStation**.
 
-e.g. You can send the ``<s>`` command in the "direct command" textbox to get status information from your Command Station. To do this just enter ``s`` (without the quotes) and press the `Send` button. |BR| You should see ``<iDCC-EX...>`` returned in the log window with your version, type of Arduino, type of motor driver, and some other information.
+e.g. You can send the ``<s>`` command in the "direct command" textbox to get status information from your **EX-CommandStation**. To do this just enter ``s`` (without the quotes) and press the `Send` button. |BR| You should see ``<iDCC-EX...>`` returned in the log window with your version, type of Arduino, type of motor driver, and some other information.
 
-You can send any DCC-EX Native command in this way.
+You can send any **DCC-EX** Native command in this way.
 
 ----
 
@@ -120,7 +120,7 @@ You can send any DCC-EX Native command in this way.
 
 To use the program in to emulate an **EX-CommandStation**, without actually connecting to a real one, click on the ``Serial`` dropdown button and select ``Emulator`` to run in emulator mode, then follow to instructions above from ``Connect``.
 
-*Note: Not all Command Station functions are fully supported in the emulator. This means that although the software works, not all the responses will be shown in the debug console.*
+*Note: Not all EX-CommandStation functions are fully supported in the emulator. This means that although the software works, not all the responses will be shown in the debug console.*
 
 ----
 
@@ -132,6 +132,8 @@ Once connected to a **EX-CommandStation**, The **Routes/Automation** page allows
 
 Clicking the `Set` button on a Route/Automation will activate it.
 
+<div style="clear: both;"></div>
+
 ----
 
 ## Turnouts/Points
@@ -141,6 +143,8 @@ Clicking the `Set` button on a Route/Automation will activate it.
 Once connected to a **EX-CommandStation**, The **Turnouts/Points** page allows you to throw or close any of the Turnouts/Points that have been stored in your **EX-CommandStation**, if any.
 
 Clicking either the `Throw` or `Close` buttons on a Turnout/Point will change it.
+
+<div style="clear: both;"></div>
 
 ----
 
@@ -158,15 +162,25 @@ To read a decoder address, place your loco on the PROG track and press `Read Add
 
 To write a decoder address, place you loco on the PROG track, enter the desired address into the ``DCC Address`` field and press `Write Address`.  If Successful or unsuccessful, a message to that effect will appear in the log.
 
-### CV
+### CV Programming
 
 To read a CV, place your loco on the **PROG** track and press `Read CV`.  If Successful, the Value of the CV will be loaded in the ``CV Value`` field.  If unsuccessful, a message to that effect will appear in the log.
 
 To write a decoder address, place you loco on the **PROG** track, enter the desired CV into the ``CV Number`` field, the desired value into the ``CV Value`` field and press `Write CV`.  If Successful or unsuccessful, a message to that effect will appear in the log.
 
-You can use the ``Common CVs`` drop list to select a CV. The approprate value will be put into the `CV Number`` field on selection.
+You can use the ``Common CVs`` drop list to select a CV. The appropriate value will be put into the `CV Number`` field on selection.
 
 *Note: Programming on the Main (PoM) is not currently supported directly, though you can manually issue the appropriate commands from the throttle page.*
+
+<div style="clear: both;"></div>
+
+----
+
+### WiFi configuration (EX-CSB1 or ESP32 ONLY. v5.7.0+ ONLY)
+
+If you are using an **EX-CSB1**, ESP32 based EX-CommandStation and are are using the latest DEVEL versions of the  EX-CommandStation code (versions from 5.7.0), the ``config.h`` options for WiFi configuration are ignored by **EX-CSB1** or ESP32 **EX-CommandStation**.
+
+Instead you can use the instructions on [this page](/products/ex-commandstation/config-wifi-esp32-gui-options_not_in_nav.md) to change the WiFi setting in **EX-WebThrottle**.
 
 ----
 
@@ -174,7 +188,7 @@ You can use the ``Common CVs`` drop list to select a CV. The approprate value wi
 
 The **Locomotives** page allows you store a 'roster' of locomotives.  This is stored in the individual PC/computer, and cannot be accessed by any other computer, unless exported and imported into that computer.  The 'roster' cannot be accessed by any mobile device (phone app).
 
-*Note: Use of this is not recommended as it may not be available in the new version of EX-WebThrottle when it is developed.*
+<span style="color:red">*Note: Use of this is not recommended as it may not be available in the new version of EX-WebThrottle when it is developed.*</span>
 
 *Note: This is very different to the roster that can be stored in the **EX-CommandStation** itself*
 
@@ -184,7 +198,7 @@ The **Locomotives** page allows you store a 'roster' of locomotives.  This is st
 
 The **Function Maps** page allows you store collections of Function Maps.  This is stored in the individual PC/computer, and cannot be accessed by any other computer, unless exported and imported into that computer.  The 'functions maps' cannot be accessed by any mobile device (phone app).
 
-*Note: Use of this is not recommended as it may not be available in the new version of EX-WebThrottle when it is developed.*
+<span style="color:red">*Note: Use of this is not recommended as it may not be available in the new version of EX-WebThrottle when it is developed.*</span>
 
 *Note: This is very different to the functions stored with roster entries that can be stored in the **EX-CommandStation** itself.*
 
@@ -219,7 +233,7 @@ The **Settings page** allows you to manage aspects of the **EX-CommandStation** 
 
 ### Storage
 
-*Note: Use of this is not recommended as it may not be available in the new version when it is developed.*
+<span style="color:red">*Note: Use of this is not recommended as it may not be available in the new version when it is developed.*</span>
 
 * Export App data
 * Import App data
@@ -228,3 +242,5 @@ The **Settings page** allows you to manage aspects of the **EX-CommandStation** 
 ## App
 
 * Install as an App
+
+--8<-- "snippets/abbr.md"

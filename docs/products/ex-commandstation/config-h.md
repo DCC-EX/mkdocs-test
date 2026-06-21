@@ -2,9 +2,9 @@
 
 During compilation and build, there are a number of settings that control the way the code is constructed and important features are configured.
 
-Most configuration takes place in EXRAIL but some things just need setting before that.
+Most configuration takes place using **EXRAIL** in the `myAutomation.h` file, but some things just need setting before that.
 
-If you are using the EX-Installer, the important options will be automatically managed and configured. There are several more advanced options covered in the [config.h advanced](/reference/advanced-config-h.md) but these should not trouble the vast majority of users.
+If you are using the [EX-Installer](../../installer/overview.md), the important options will be automatically managed and configured. There are several more advanced options covered in the [config.h advanced](/reference/advanced-config-h.md) but these should not trouble the vast majority of users.
 
 These options should be coded in the file `config.h` which will be automatically included in the compilation process.
 
@@ -14,26 +14,26 @@ These options should be coded in the file `config.h` which will be automatically
 #define MOTOR_SHIELD_TYPE typeName
 ```
 
-The motor shield definition tells the code how many tracks your command station has and which pins are used to talk to the motor shield(s).
+The motor shield definition tells the code how many tracks your **EX-CommandStation** has and which pins are used to talk to the motor shield(s).
 It also describes the electrical characteristics of the current sensing and the current limits to be applied to each track.
 
 There are a number of pre-defined motor shield typeNames available of which the most common are:
 
 - STANDARD_MOTOR_SHIELD : Arduino Motor shield Rev3 based on the L298 with 18V 2A per channel
 - EX8874_SHIELD         : DCC-EX TI DRV8874 based motor shield
-- EXCSB1                : DCC-EX CSB-1 hardware
-- EXCSB1_WITH_EX8874    : DCC-EX CSB-1 hardware with DCC-EX TI DRV8874 shield
+- EXCSB1                : DCC-EX EX-CSB-1 hardware
+- EXCSB1_WITH_EX8874    : DCC-EX EX-CSB-1 hardware with DCC-EX TI DRV8874 shield
 - NO_SHIELD             : CS without any motor shield (as an accessory only CS)
 
 Further pre-defined shield names can be found in the code file MotorDrivers.h although their presence there does not necessarily mean that we can provide support for issues.
 
 ## WiFi settings
 
-Ignore this if you do not have WiFi on your command station or choose to avoid it.
+Ignore this if you do not have WiFi on your **EX-CommandStation** or choose to avoid it.
 
-The CSB1 and other ESP32-based command stations use a completely different method to define WiFi settings. This is to allow WiFi configuration without having to reinstall the software.
+The **EX-CSB1** and other ESP32-based **EX-CommandStation** use a completely different method to define WiFi settings. This is to allow WiFi configuration without having to reinstall the software.
 
-[WiFi setup for CSB1 or ESP32](/products/ex-commandstation/config-wifi-esp32.md)
+[WiFi setup for **EX-CSB1** or ESP32](/products/ex-commandstation/config-wifi-esp32.md)
 
 [WiFi setup for WiFi shield](/products/ex-commandstation/config-wifi-shield.md)
 
@@ -82,10 +82,9 @@ Define scroll mode as 0, 1 or 2
 #define SCROLLMODE 1
 ```
 
-In order to avoid wasting memory the current scroll buffer is limited
-to 8 lines.  Some users wishing to display additional information
-such as TrackManager power states have requested additional rows aware
-of the warning that this will take extra RAM.  if you wish to include additional rows
+In order to avoid wasting memory the current scroll buffer is limited to 8 lines.  Some users wishing to display additional information such as TrackManager power states have requested additional rows aware of the warning that this will take extra RAM.  
+
+If you wish to include additional rows:
 
 ```cpp
 #define MAX_CHARACTER_ROWS 12
@@ -93,7 +92,8 @@ of the warning that this will take extra RAM.  if you wish to include additional
 
 ## Disable EEPROM
 
-The EEPROM feature is only there for backward support of deprecated methods of turnout, sensor and output creation inherited from DCC++.
+The EEPROM feature is only there for backward support of deprecated methods of turnout/point, sensor and output creation inherited from DCC++.
+
 You are advised to turn this off to save memory.
 
 ```cpp

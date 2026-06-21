@@ -29,17 +29,17 @@ We encourage our users to reference this ahead of requesting support as there's 
 - I'm using the free WiThrottle Lite app on iOS, how can I turn track power on?
 
     - You can't turn track power on with the free WiThrottle Lite app for iOS, you must turn it on via the serial console with `<1>`
-    - Alternatively, you can enable the `Start with power on` option in EX-Installer
+    - Alternatively, you can enable the `Start with power on` option in **EX-Installer**
 
-## My CSB1 OLED display isnt working or looks "wrong"
+## My **EX-CSB1** OLED display isnt working or looks "wrong"
 
-- The CSB1 is shipped with whichever OLED display is available and although they look alike, they have different internals. The EX-Installer provides a dropdown list, if yours doesnt work, try selecting the other option.
+- The **EX-CSB1** is shipped with whichever OLED display is available and although they look alike, they have different internals. The **EX-Installer** provides a dropdown list, if yours doesnt work, try selecting the other option.
 
 ## Why do I get FAULT pin warnings
 
 - You may have a short on your layout. Most common causes are
   
-    - Loco driven into turnout set for the other track
+    - Loco driven into turnout/point set for the other track
     - Screwdriver or other tools left lying on layout
 
 - You forgot to switch on the track power supply
@@ -49,7 +49,7 @@ We encourage our users to reference this ahead of requesting support as there's 
 
 This can be complex but
 
-- At startup, the Command Station lists all the I2C devices it can see... If yours is not in that list there is nothing that you can change or configure in the software to make it work.
+- At startup, the **EX-CommandStation** lists all the I2C devices it can see... If yours is not in that list there is nothing that you can change or configure in the software to make it work.
 - Do not twist the SCL and SDA wires together
 - Avoid running SCL/SD in parallel with the track power (or track)
 - Refer to [I2C Wiring](/reference/wiring/i2C/i2c-wiring.md)

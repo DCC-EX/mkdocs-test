@@ -1,54 +1,76 @@
+var SEARCH_TRIGGER_DELAY_MS = 500;
+
 function findnow(term) {
     var s = document.querySelector('input.md-search__input');
-    if (s) {
-        s.value = term;
+    if (!s) {
+        return;
+    }
+
+    // Returned to simple search term, so open the search box and populate it with the term.
+    setTimeout(function() {
         s.focus();
-        s.dispatchEvent(new Event('input'));    
-    }
+        s.value=term;
+        s.dispatchEvent(new Event('input', { bubbles: true }));
+        setTimeout(function() {
+           s.value='';
+        }, SEARCH_TRIGGER_DELAY_MS);
+    }, SEARCH_TRIGGER_DELAY_MS);
 }
 
-// Replace search links with onClick handlers on page load
-function setupSearchLinks() {
-    var links = document.querySelectorAll('a[href*="/?"]');
-    links.forEach(function(link) {
-        var href = link.getAttribute('href');
-        if (href && href.includes('/?')) {
-            var rest = href.split('?')[1];
-            if (rest && !rest.includes('=')) {
-                var searchTerm = decodeURIComponent(rest);
-                // Replace href with '#' and set onClick handler
-                link.setAttribute('href', null);
-                link.onclick = function(event) {
-                    event.preventDefault();
-                    event.stopPropagation();
-                    findnow(searchTerm);
-                    return false;
-                };
-            }
+
+function getSearchTermFromHref(href) {
+    if (!href) {
+        return null;
+    }
+
+    if (href.startsWith('#')) {
+        return null;
+    }
+
+    if (/^(mailto:|tel:|javascript:)/i.test(href)) {
+        return null;
+    }
+
+    var url;
+    try {
+        url = new URL(href, window.location.href);
+    } catch (e) {
+        return null;
+    }
+
+    // Only intercept links that stay on this site.
+    if (url.origin !== window.location.origin) {
+        return null;
+    }
+
+    // Only accept links in the form /?term (no key=value pairs).
+    var rawQuery = url.search ? url.search.substring(1) : '';
+    if (!rawQuery || rawQuery.includes('=')) {
+        return null;
+    }
+
+    return decodeURIComponent(rawQuery);
+}
+
+// Delegated click handling means dynamically added links work automatically.
+if (!document.__searchHelperDelegatedBound) {
+    document.addEventListener('click', function(event) {
+        var link = event.target.closest('a[href]');
+        if (!link) {
+            return;
         }
+
+        var searchTerm = getSearchTermFromHref(link.getAttribute('href'));
+        if (!searchTerm) {
+            return;
+        }
+
+        event.preventDefault();
+        event.stopPropagation();
+        event.stopImmediatePropagation();
+
+        findnow(searchTerm);
     });
-}
 
-// Run setup when DOM is ready
-if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', setupSearchLinks);
-} else {
-    setupSearchLinks();
+    document.__searchHelperDelegatedBound = true;
 }
-
-// If links are added dynamically after page load, they will use the old click listener
-/* document.addEventListener('click', function(event) {
-    var link = event.target.closest('a');
-    if (link && link.getAttribute('href') && link.getAttribute('href').includes('/?')) {
-        // Extract the part after '?'
-        var rest = link.getAttribute('href').split('?')[1];
-        if (rest && !rest.includes('=')) {
-            // Prevent the anchor navigation and run the search instead
-            event.preventDefault();
-            event.stopPropagation();
-            findnow(decodeURIComponent(rest));
-            return false;
-        }
-    }
-});
-*/

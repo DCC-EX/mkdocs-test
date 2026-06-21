@@ -1,9 +1,18 @@
-# Wifi configuration (Not CSB1 or ESP32) 
+# Wifi configuration <br/><small>(Excluding **EX-CSB1** or ESP32 v5.7.0+)</small>
 
 WiFi has two operating modes:
 
-- AP (Access point) means the Command station acts as its own private WiFi network so throttle devices must connect first to the Command Station Wifi network.
-- STA (Station mode) means the command station connects to your WiFi router and appears as a device on that network. If the WiFI is configured for STA mode, but fails to connect to your router, it will fall back to AP mode in much the same way as smart plugs, lights etc.
+- AP (Access point) means the **EX-CommandStation** acts as its own private WiFi network so throttle devices must connect first to the **EX-CommandStation** WiFi network.
+- STA (Station mode) means the **EX-CommandStation** connects to your WiFi router and appears as a device on that network. If the WiFi is configured for STA mode, but fails to connect to your router, it will fall back to AP mode in much the same way as smart plugs, lights etc.
+
+<span style="color:red">NOTE: If you are using an **EX-CSB1** or ESP32 based EX-CommandStation ***AND*** you are are using the latest DEVEL versions of the  EX-CommandStation code (versions from 5.7.0),</span> the ``config.h`` options for WiFi configuration described here are ignored by the **EX-CSB1** or ESP32 EX-CommandStations. Instead see the [WiFi configuration (EX-CSB1 or ESP32 ONLY. Version 5.7.0+ ONLY) page](/products/ex-commandstation/config-wifi-esp32.md).
+
+## Operating Modes
+
+WiFi has two operating modes:
+
+- **AP** (Access point) means the **EX-CommandStation** acts as its own private WiFi network so throttle devices must connect first to the **EX-CommandStation**'s WiFi network.
+- **STA** (Station mode) means the **EX-CommandStation** connects to your existing WiFi router and appears as a device on that network. If the WiFi is configured for STA mode, but fails to connect to your router, it will fall back to AP mode in much the same way as smart plugs, lights etc.
 
 ## Setup STA (Station) mode
 
@@ -22,7 +31,9 @@ WiFi has two operating modes:
 The WiFi chip will first try to connect to the previously
 configured network and if that fails fall back to Access Point mode.
 
-The SSID of the AP will be automatically set to `DCCEX_*` where the `*` part is taken from an internal device number (for example `DCCEX_12b7c`) to try and avoid duplications. The password will be set to `PASS_*` where the `*` part matches the generated SSID name.
+The SSID of the AP will be automatically set to `DCCEX_*`[^1] where the `*` part is taken from an internal device number (for example `DCCEX_12b7c`) to try and avoid duplications. The password will be set to `PASS_*` where the `*` part matches the generated SSID name.
+
+[^1]: Where `123abc`` will be the last 6 digits of the mac address of the wifi board on the device. As such it will be unique for every EX-CommandStation.
 
 ## Setup AP (Access Point) advanced mode
 
@@ -52,3 +63,5 @@ In some environments you may want to hide the SSID from phones scanning for acce
 ```cpp
 #define WIFI_HIDE_SSID
 ```
+
+--8<-- "snippets/abbr.md"

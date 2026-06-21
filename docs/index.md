@@ -26,16 +26,16 @@ hide:
 
     Our [Command Station](/products/getting-started.md) is highly regarded as one of the best you can get and has many unique features that are specifically designed to bring control and fun to your hobby.
 
-    - Wi-fi access, with DCC-EX unique features, [Engine Driver](https://enginedriver.mstevetodd.com/) on Android, [ThrottleCard](https://throttlecard.com/) on iOS and a wide variety of other Apps. We can even show you how to build your own throttle.
+    - Wi-fi access, with **DCC-EX** unique features, [Engine Driver](https://enginedriver.mstevetodd.com/) on Android, [ThrottleCard](https://throttlecard.com/) on iOS and a wide variety of other Apps. We can even show you how to build your own throttle.
     - The ability to run DCC and DC trains from the same throttle at the same time.
-    - The powerful but easy [EXRAIL](/products/ex-commandstation/exrail/exrail.md) scripting language to configure and control accessories such as turnouts, signals, lights, and sounds. It can also run trains automatically and animate your layout!
+    - The powerful but easy [EXRAIL](/products/ex-commandstation/exrail/exrail.md) scripting language to configure and control accessories such as turnouts/points, signals, lights, and sounds. It can also run trains automatically and animate your layout!
     - Integration with [JMRI](https://www.jmri.org/), [iTrain](https://www.berros.eu/en/itrain/), and [RocRail](https://wiki.rocrail.net/) if you prefer to run trains from your computer.
 
     ---
      [![csb1](/_static/images/ex-csb1/csb1-small.png){ align=right }](/products/ex-commandstation/ex-csb1.md)
-    The [**EX-CommandStation Booster 1 Express**](/products/ex-commandstation/ex-csb1.md), otherwise known as a CSB1, can be purchased ready to run, complete with WiFi and power supply. If you have a phone, you could be running your trains in less than 5 minutes, without a computer.  
+    The [**EX-CommandStation Booster 1 Express**](/products/ex-commandstation/ex-csb1.md), otherwise known as an **EX-CSB1**, can be purchased ready to run, complete with WiFi and power supply. If you have a phone, you could be running your trains in less than 5 minutes, without a computer.  
     If you would like to buy one, [check out our sellers](/purchasing/official-sellers.md)  
-    If you want to get started with a CSB1 [read the product page](/products/ex-commandstation/ex-csb1.md)
+    If you want to get started with an **EX-CSB1** [read the product page](/products/ex-commandstation/ex-csb1.md)
 
     ---
     [![diy](/_static/images/mega/mega-small.png){ align=right}](/diy/diy.md)
@@ -50,7 +50,7 @@ hide:
 
 - ## :material-help-box-multiple-outline: What is DCC-EX
 
-    DCC-EX is world-wide team of dedicated enthusiasts producing **free** and open source **DCC** and **DC** software and hardware solutions to run your model trains and layout. Our mission is to use our many decades of software and hardware experience to make model trains accessible and affordable to everyone.
+    **DCC-EX** is world-wide team of dedicated enthusiasts producing **free** and open source **DCC** and **DC** software and hardware solutions to run your model trains and layout. Our mission is to use our many decades of software and hardware experience to make model trains accessible and affordable to everyone.
     
     You can learn more on our [About Us](/about/about.md) page.
 

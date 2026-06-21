@@ -1,10 +1,12 @@
 # Programming DCC locos
 
+The EX-CommandStation is capable of programming CVs of mobile decoders on the PRG track (Service Mode) and on the MAIN track (Ops mode / Programming on the Main - PoM).
+
 ## The PROG track
 
 In normal DCC operation, running locos happens on a MAIN track (your layout) and programming takes place on a separate piece of track (typically just long enough for your loco) called a PROG track. You loco will not respond to throttles if it is on the PROG track, and the command station will not send programming commands to the MAIN track.
 
-Some command stations are not able to do programming and running at the same time, this restribction does not apply to DCC-EX.
+Some command stations are not able to do programming and running at the same time, this restriction does not apply to **DCC-EX**.
 
 DCC-EX provides some tricks to switch tracks in software, perhaps because you only have a single loco or your PROG track is actually an isolated siding on a layout. See [Track Manager](/products/ex-commandstation/trackmanager/trackmanager.md)
 
@@ -12,7 +14,7 @@ DCC-EX provides some tricks to switch tracks in software, perhaps because you on
 
 Simple programming usually involves detecting or changing the DCC address of a loco. More advanced programming, especially involving sound locos can be very complex and varies from decoder to decoder, even when they are made by the same manufacturer.
 
-The EX_Command station provides the underlying technology to read and write individual decoder settings (called CVs) plus some higher-level functions to simplify this process for common problems like reading or writing a loco address which involves many reads or writes.
+The **EX-CommandStation** provides the underlying technology to read and write individual decoder settings (called CVs) plus some higher-level functions to simplify this process for common problems like reading or writing a loco address which involves many reads or writes.
 
 ## Programming using Serial input commands
 
@@ -28,7 +30,7 @@ See [Programming with Engine Driver](/products/ex-commandstation/loco-programmin
 
 ## Programming using EX-Toolbox
 
-The EX-Toolbox Android application, includes simple programming dialogs and some more advanced features such as a speed matching tool used to adjust loco speed tables to match with another loco so that they can be coupled together in a consist.
+The **EX-Toolbox** Android application, includes simple programming dialogs and some more advanced features such as a speed matching tool used to adjust loco speed tables to match with another loco so that they can be coupled together in a consist.
 
 See [Programming with EX-Toolbox](/products/ex-commandstation/loco-programming/toolbox-programming.md)
 

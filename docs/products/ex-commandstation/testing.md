@@ -1,8 +1,8 @@
-# Testing your Command Station
+# Testing your EX-CommandStation
 
  (LOTS OF ==TODO== in this file)
 
-The simplest and most direct testing method is to use a serial monitor to talk directly to the USB connection of you command station. This is a fundamental aspect of the Arduino system and thus avoids issues such as wifi connections. Indeed, this is the only way to see what's going wrong if your problems are wifi or Etrhernet related.
+The simplest and most direct testing method is to use a serial monitor to talk directly to the USB connection of your **EX-CommandStation**. This is a fundamental aspect of the Arduino system and thus avoids issues such as WiFi connections. Indeed, this is the only way to see what's going wrong if your problems are WiFi or Ethernet related.
 
 ## Serial Monitors
 
@@ -16,11 +16,11 @@ There are several serial monitors available:
 - Built in to JMRI or other train control software.
 (==TODO==.. above provide links to individual side-pages showing how to get at the serial monitor in each case)
 
-Whichever you use, please ensure the baud rate is set to 115200 so that it matches that used by the command station. (Installer anf WebThrottle do this automatically)
+Whichever you use, please ensure the baud rate is set to 115200 so that it matches that used by the **EX-CommandStation**. (Installer anf WebThrottle do this automatically)
 
-Its important to note that only one program on your PC can be connected to the Command Station USB. It is a common cause of error messages if you try and open a serial monitor when one of the other programs is still running.
+Its important to note that only one program on your PC can be connected to the **EX-CommandStation** via USB. It is a common cause of error messages if you try and open a serial monitor when one of the other programs is still running.
 
-In most cases, connecting a serial monitor causes the Command station to restart.
+In most cases, connecting a serial monitor causes the **EX-CommandStation** to restart.
 
 ## Simple testing commands (Main track)
 
@@ -32,7 +32,7 @@ Commands are entered as shown, complete with the `< >` markers. Case is importan
 <s>
 ```
 
-==TODO==... pic
+==TODO==... pic - Check communication and version
 
 ### Turn on track power
 
@@ -67,6 +67,6 @@ Assuming you know the loco address is 3, the following commands may be useful:
 
 The commands `<t` and `<F` will normally reply with a `<l` response when something about a loco is changed. This response is designed for throttles to share information and not generally for human reading.
 
-A response of `<X>` indicates the command was not understood by the command station, so check your typing as `<T` and `<f` are not the same as `<t` and `<F`.
+A response of `<X>` indicates the command was not understood by the **EX-CommandStation**, so check your typing as `<T` and `<f` are not the same as `<t` and `<F`.
 
 DCC generally has no way of knowing whether the loco exists, is listening or has dirty wheels. If you get no movement the first thing to do is check the track is clean.

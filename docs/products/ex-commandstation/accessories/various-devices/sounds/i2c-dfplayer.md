@@ -14,7 +14,7 @@ SC16IS750 breakout board hookup
 
 ## I2C address selection
 
-The I2C addresses shown in Table 2 are different from the addresses shown in the datasheet, this is because the datasheet include the LSB in the address, the DCC-EX system start the I2C address at bit 1 (shifted). The I2C addresses in Table 2 are correct for the DCC-EX system and for the examples in section 3.
+The I2C addresses shown in Table 2 are different from the addresses shown in the datasheet, this is because the datasheet include the LSB in the address, the **DCC-EX** system start the I2C address at bit 1 (shifted). The I2C addresses in Table 2 are correct for the **DCC-EX** system and for the examples in section 3.
 
 | A1  | A0  | I2C Address |
 |-----|-----|-------------|
@@ -39,13 +39,13 @@ A total of 16 I2C addresses can be selected. The number of serial controllers ca
 
 ## Configuring in myAutomation.h
 
-The I2C connected DFplayer is defined in EXRAIL using the HAL command
+The I2C connected DFplayer is defined in **EXRAIL** using the HAL command
 
 ```cpp
 HAL(DFPlayer,firstVpin,numVpins,i2cAddress)
 ```
 
-- firstVpin is First virtual pin that EXRAIL can control to play a sound, or sent a command
+- firstVpin is First virtual pin that **EXRAIL** can control to play a sound, or sent a command
 - numVpins=1 indicates only one DFPLayer attached at UART channel 0,
 numpins=2 indicates two DFPlayers attached, the second player will have a vipin of firstVpin+1.
 - i2cAddress is the connected i2cAddress of the UART device

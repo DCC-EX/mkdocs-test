@@ -49,7 +49,7 @@ If you optionally enabled the "DCC-EX button?", the a new "DCC-EX" button will a
 
 Touching either the Menu item and the button will open the "DCC-EX" screen.
 
-On the DCC-EX Screen you can use the "Action" pulldown to select from
+On the **DCC-EX** Screen you can use the "Action" pulldown to select from
 
 * Programming Track (Service Mode)
 * Program on Main (Operation Mode)
@@ -110,7 +110,7 @@ The states will be one of:
 * BOOST  *(Not selectable)*
 * EXT  *(Not selectable)*
 
-Each of the tracks/channels of the Motor Shield(s) can be changed to any one of the states above. (Except ``EXT`` and ``BOOST`` which can only be changed in the Command Station config. )
+Each of the tracks/channels of the Motor Shield(s) can be changed to any one of the states above. (Except ``EXT`` and ``BOOST`` which can only be changed in the **EX-CommandStation** config. )
 
 To change the simply select the state in the pulldown in the desired track (or tracks) and click `Set`
 

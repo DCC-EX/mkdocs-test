@@ -1,8 +1,8 @@
-# Buying I2C devices
+# Buying I2C (I<sup>2</sup>C) devices
 
 There are many I2C devices available and the price/availability can vary widely depending on your location and delivery options. Where devices are very cheap, you may find quality issues and so expect a few duds.
 
-Some devices come with [QWiic](https://learn.adafruit.com/introducing-adafruit-stemma-qt/technical-specs) connectors which makes them easier to plug-and-play with the QWiic connector on your EX-CSB1 or EX8874 motor shield.
+Some devices come with [QWiic](https://learn.adafruit.com/introducing-adafruit-stemma-qt/technical-specs) connectors which makes them easier to plug-and-play with the QWiic connector on your **EX-CSB1** or EX8874 motor shield.
 
 In general, the Adafruit devices below are high quality and well documented but that is usually reflected in the price.
 
@@ -26,3 +26,5 @@ In general, the Adafruit devices below are high quality and well documented but 
 Rosscoe supplies I2c devices with QWiic sockets and additional power feeds which makes wiring much easier.
 
 The Rosscoe Shop is linked from our [Third Party Products and Sellers](/purchasing/third-party-sellers.md#rosscoe) page.
+
+--8<-- "snippets/abbr.md"

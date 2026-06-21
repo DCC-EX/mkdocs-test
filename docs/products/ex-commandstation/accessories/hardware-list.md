@@ -1,8 +1,10 @@
 # Hardware device list
 
-The following hardware devices, available from various sources, have support code built in to the Command Station. Some are commonly used in the electronics and Arduino market, others are specifically designed for model railway use.
+The following hardware devices, available from various sources, have support code built in to the **EX-CommandStation**. Some are commonly used in the electronics and Arduino market, others are specifically designed for model railway use.
 
-Although the devices are summarised here, you should refer to EXRAIL cookbooks for examples of how to use these, or refer to the appropriate source code, normally found in a file called IO_something.h (e.g. IO_PCA9685.h)
+## Supported Device List
+
+Although the devices are summarised here, you should refer to **EXRAIL** cookbooks for examples of how to use these, or refer to the appropriate source code, normally found in a file called IO_something.h (e.g. IO_PCA9685.h)
 
 * [ADS111x](?ADS111x) I2C-connected analogue input
 * [DCCAccessoryDecoder](?DCCAccessoryDecoder) creates VPINs to drive DCC connected accessory decoders
@@ -10,14 +12,14 @@ Although the devices are summarised here, you should refer to EXRAIL cookbooks f
 * [DS1307](?DS1307) Real time clock
 * [duinoNodes](?duinoNodes) for DNIN8, DNIN8K and DNOU8 pin expanders
 * [EncoderThrottle](?EncoderThrottle) for simple throttle driving with a rotary encoder
-* [EXFastclock](?EXFastclock) connects to the EXFastClock product
-* [EXIOExpander](?EXIOExpander) connects to an EXIOExpander 
-* [EXSensorCAM](?EXSensorCAM) connects to the EXSensorCAM video sensor device
+* [EXFastclock](?EXFastclock) connects to the **EX-FastClock** product
+* [EXIOExpander](?EXIOExpander) connects to an **EX-IOExpander**
+* [EXSensorCAM](?EXSensorCAM) connects to the **EX-SensorCAM** video sensor device
 * [EXTurntable](?EXTurntable) connects to a  turntable device
 * [HALDisplay](?HALDisplay) connects additional OLED or Liquid Crystal displays
 * [HCSR04](?HCSR04) Ultrasonic distance measure
 * [I2CDFPlayer](?I2CDFPlayer)  MP3 sound player over I2C connection
-* [I2CRailcom](?I2CRailcom) connection to EXRailcomCollector device
+* [I2CRailcom](?I2CRailcom) connection to **EX-RailcomCollector** device
 * [MCP23007](?MCP23007) I/O expander
 * [MCP23017](?MCP23017) I/O 16 bit pin expander
 * [NeoPixel](?NeoPixel) Adafruit NeoPixel driver
