@@ -9,9 +9,9 @@ The **DCC-EX** team has designed and released various different open source prod
 
 This page briefly outlines each of our products, the experience level you need to be able to use them, and links to more information.
 
-## Conductor Level ![Conductor Icon](/_static/images/levels/conductor.png){ .header-img }
+## Easy to Use Products ![Conductor Icon](/_static/images/levels/conductor.png){ .header-img }
 
-These are our easy to use, get up and running quickly type products. You don't need to pick up a soldering iron or write any software, just plug them in and go!
+These are our powerful, but easy to use, get up and running quickly type products. You don't need to pick up a soldering iron or write any software, just plug them in and go!
 
 **NOTE:** You may need to install some software on your computer to take advantage of some of these, but our documentation will walk you through that process.
 
@@ -39,9 +39,7 @@ You can learn more about the software in the [EX-CommandStation documentation](/
 
 This is the easiest way to validate you've connected your **EX-CommandStation** correctly to your track. Just load it up in your Chromium based web browser (Edge, Chrome, Opera) after connecting your **EX-CommandStation** to your computer and you can run your trains with it.
 
-To access it, refer to the [EX-WebThrottle documentation](https://dcc-ex.com/legacy-docs/ex-webthrottle/index.html#ex-webthrottle).
-
-==TODO== move legacy docs
+See the [EX-WebThrottle documentation](/products/ex-webthrottle/ex-webthrottle.md).
 
 ---
 
@@ -59,7 +57,7 @@ Refer to the [EX-Toolbox documentation](/products/ex-toolbox/ex-toolbox.md) for 
 
 ---
 
-## Tinkerer level ![Tinkerer Icon](/_static/images/levels/tinkerer.png){ .header-img }
+## A Bit More Technical Products ![Tinkerer Icon](/_static/images/levels/tinkerer.png){ .header-img } <br/><small>Intermediate Level</small>
 
 These products are more involved to get up and running, and aren't just plug in and go.
 
@@ -108,7 +106,7 @@ Refer to the [EX-WiFiShield8266 page](/products/ex-wifishield8266/ex-wifishield8
 
 ---
 
-## Engineer level ![Engineer Icon](/_static/images/levels/engineer.png){ .header-img }
+## Advanced Technical Products ![Engineer Icon](/_static/images/levels/engineer.png){ .header-img } <br/><small>Advanced Level</small>
 
 These products are far more involved and complicated to get up and running.
 
