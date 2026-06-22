@@ -192,10 +192,7 @@ When setting up a turnout/point where multiple pins are required for control, th
 
 To connect a servo to **EX-CommandStation**, you first need to get a module, based on the PCA9685 chip.
 
-<!-- >.. image:: /_static/images/i2c/pca9685.jpg
-   :alt: PCA9685 Servo Module
-   :scale: 40%
--->
+![PCA9685 Servo Module](../../../_static/images/i2c-devices/PCA9685.jpg){ width=200px }
 
 These are widely available from eBay, Amazon, etc. for a few dollars.
 
@@ -207,7 +204,7 @@ The servo module itself is powered from the Arduino, but the servos themselves c
 
 Connections to the Arduino are made with four jumper wires (Arduino: +5V, GND, SCL, SDA to servo module: **VCC**, GND, SCL, SDA), as shown on the following diagram:
 
-![PCA9685 Servo Module](../../../_static/images/i2c-connected-devices/ArduinoMegaServo.png) { width=200px }
+![PCA9685 Servo Module](../../../_static/images/i2c-connected-devices/ArduinoMegaServo.png){ width=600px }
 
 In **EX-CommandStation**, the drivers for the PCA9685 module is already installed, and made available to for use as pin numbers 100-115. A servo is shown in the diagram, connected to the first set of pins on the module.  This will be accessed using pin number 100.
 
@@ -223,11 +220,11 @@ Try `<D SERVO 100 450 3>` and the servo should move slowly back.
 
 You can use the servo to control turnouts/points, semaphore signals, engine shed doors, and other layout components, to make your layout more dynamic and exciting.  In the picture below, you can see a servo mounted below the baseboard with a piece of wire passing through a slot cut in the baseboard, to operate a turnout/point.
 
-![Servo mount to operate a turnout/point](../../../_static/images/i2c-connected-devices/TurnoutServoMount.jpg) { width=200px }
+![Servo mount to operate a turnout/point](../../../_static/images/i2c-connected-devices/TurnoutServoMount.jpg){ width=200px }
 
 And in the next picture you can see a servo that operates a semaphore signal.  The signal, and its servo mounting bracket, were 3d-printed on a Creality Ender-3 printer.
 
-![Servo mount to operate a Semaphore Signal](../../../_static/images/i2c-connected-devices/SemaphoreSignal.jpg) { width=200px }
+![Servo mount to operate a Semaphore Signal](../../../_static/images/i2c-connected-devices/SemaphoreSignal.jpg){ width=200px }
 
 #### Configure myAutomation.h - Servo Turnouts/Points
 
@@ -359,11 +356,11 @@ On the Mega2560 Processor board:
 
 Place IR Infrared or Optical Sensor's Output wire on Dpins 22, 23, 24 ... 49. Plus one wire to GND and a third wire to 5v.
 
-![IR Sensor connected to Arduino mega](../../../_static/images/i2c-connected-devices/mega-with-ir-sensor.png) { width=200px }
+![IR Sensor connected to Arduino mega](../../../_static/images/i2c-connected-devices/mega-with-ir-sensor.png){ width=600px }
 
 If you need more sensors then there are available pins on the Mega, you use one or more [I2C](/products/ex-commandstation/accessories/i2c-gpio-expanders.md)
 
-![IR Sensor connected to Arduino mega via IO Expander](../../../_static/images/i2c-connected-devices/mega-with-io-expander-and-ir-sensor.png) { width=200px }
+![IR Sensor connected to Arduino mega via IO Expander](../../../_static/images/i2c-connected-devices/mega-with-io-expander-and-ir-sensor.png){ width=600px }
 
 ==TODO== Link here to recommended pin/vpin allocations etc.
 
@@ -393,7 +390,7 @@ Sensor polling by JMRI is independent of this, and may continue if ``<S>`` comma
 
 To connect a servo to **EX-CommandStation**, you first need to get a module, based on the PCA9685 chip.
 
-![PCA9685 Servo Module](../../../_static/images/i2c-devices/PCA9685.jpg) { width=200px }
+![PCA9685 Servo Module](../../../_static/images/i2c-devices/PCA9685.jpg){ width=200px }
 
 These are widely available from eBay, Amazon, etc. for a few dollars.
 
