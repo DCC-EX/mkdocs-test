@@ -18,6 +18,9 @@ Few digital multimeters will provide a consistent/useful reading on the AC scale
 Select 132x64 or 128x64  
 If one results in blank screen or image is shifted, try the other.
 
+Some CSB1 may have had screen display customized to display track status.  
+[myTrackStatus.example.h](../../products/ex-commandstation/exrail/cookbooks/advanced/display-track-status.md)
+
 ## Power supply
 
 If your power supply is less than 5A, add a line in config.h to set overcurrent reporting lower - 90% of track power supply.  
