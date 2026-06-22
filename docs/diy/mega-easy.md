@@ -1,23 +1,25 @@
-# Easy build - Arduino Mega
+# Easy build - Arduino Mega + EX-8874
 
-The instructions below detail the steps required to use an EX8874 motor shield.
+The instructions on this page are the steps required to use an **EX-8874** motor shield to build an **EX-CommandStation**.
+
+To use the Standard Arduino Motor Shield, or other supported motor driver, refer to [this page](mega-harder.md).
 
 **DO NOT USE ANY OTHER SHIELD TYPE WITHOUT FIRST CHECKING OUR DETAILED INSTRUCTIONS FOR THAT SHIELD.**
 
 ## What you need
 
-To build a basic DIY **EX-CommandStation** in easy steps you will need:
+To build a basic DIY **EX-CommandStation** with an **EX-8874** in easy steps you will need:
 
 - A PC or laptop (Not a Raspberry Pi) running a reasonably recent versions of Windows, Linux or macOS
-- an Arduino Mega microprocessor or Elegoo clone.
-- USB cable to your PC for the processor.
+- An Arduino Mega microcontroller or Elegoo clone.
+- USB cable to connect your PC to the microcontroller.
 - an [EX-MotorShield8874](/products/ex-motorshield8874/ex-motorshield8874.md) to power the track.
 - A double-insulated DC [power supply](/diy/power.md) with a voltage suitable for your layout/locos.
 - (Optional) [EX-WiFiShield8266](/products/ex-wifishield8266/ex-wifishield8266.md) to use Wi-Fi throttles.
 
 ## Step-by-Step Build
 
-### Prepare your Mega
+### Prepare your Arduino Mega
 
 1. Use sticky tape or similar to cover up the barrel connector on the Mega. (Power to the processor will be provided by the EX8874 shield and you don't want accidents.)
 
@@ -25,7 +27,7 @@ To build a basic DIY **EX-CommandStation** in easy steps you will need:
 
 3. Mount your Mega on 3d printed tray, a piece of plastic card or wood to make sure that the underside solder points are insulated. Placing your **EX-CommandStation** down on a tool, coin or even your track can short the pins and, in some cases, damage the board.
 
-### Mount the EX8874 shield
+### Mount the EX-8874 shield
 
 **DO NOT USE ANY OTHER SHIELD TYPE WITHOUT FIRST CHECKING OUR DETAILED INSTRUCTIONS FOR THAT SHIELD.**
 
@@ -39,7 +41,7 @@ Check your work. Look under and through where the boards connect, make sure no p
 
 ### Optionally Install WiFiShield
 
-1. Prepare your EX-WiFiShield8266 by removing the two jumpers, see picture. ![Wifi Jumpers](/_static/images/mega/mega4.png)
+1. Prepare your **EX-WiFiShield8266** by removing the two jumpers, see picture. ![Wifi Jumpers](/_static/images/mega/mega4.png)
 2. Mount the Wi-Fi shield on the EX8874 noting the correct orientation in the pictures and there will be 2 pins on either side which are deliberately missing.![Wifi shield](/_static/images/mega/mega5.png)
 3. Use a male-female Dupont wire (normally supplied with the shield) to connect to any one of the row of Tx pins on the Wi-Fi Board, and connect the other end to the Rx1 pin on the mega (pin 19). See photo below.
 4. Take a second jumper wire and connect it to any one of the row of Rx pins on the Wi-Fi Board and connect the other end to Tx1 on the mega (pin 18).![txrx](/_static/images/mega/mega6.png)
@@ -47,7 +49,7 @@ Check your work. Look under and through where the boards connect, make sure no p
 
 ### Connect your power supply
 
-We recommend you label the power supply so that it does not get confused with others of different voltages you may use later. Plug in to the barrel connector on the EX8874 shield (NOT the Mega).
+We recommend you label the power supply so that it does not get confused with others of different voltages you may use later. Plug in to the barrel connector on the **EX-8874** shield (NOT the Mega).
 
 ### Connect to your PC
 
@@ -55,7 +57,7 @@ Using a suitable USB cable (must carry Data and Power, not all cables do this!) 
 
 ### Connect your track
 
-The EX8874 track connectors unplug for easy access.
+The **EX-8874** track connectors unplug for easy access.
     If you only have one piece of track for testing, wire it to the PROG track plug.
 
  1. Your PROG track is wired to the green socket closest to the power barrel connector.
@@ -68,3 +70,5 @@ The EX8874 track connectors unplug for easy access.
 Congratulations, you have built a DIY **EX-CommandStation** the easy way. But you still have to load the software.
 
 For simplicity, software loading is best done with the [EX-Installer](installer.md)
+
+--8<-- "snippets/abbr.md"
