@@ -1,5 +1,8 @@
 # EX-SensorCAM
 
+[![EX-SensorCAM Light Logo](/_static/images/logos/product-logo-ex-sensorcam-only-light.png){ .only-light width=400px }
+![EX-SensorCAM Dark Logo](/_static/images/logos/product-logo-ex-sensorcam-only-dark.png){ .only-dark width=400px }](/products/ex-sensorcam/ex-sensorcam.md)
+
 EX-SensorCAM is a video based multi-channel position sensing camera.
 
 ## Introduction
@@ -14,9 +17,9 @@ It does not, however, include loco or rolling stock identification.
 
 ### Base Processor Module
 
-The Camera is a standard ESP32-CAM with an ESP32-CAM-MB (CH-340G based) to add USB capability and, in its simplest form, a PCA9515A i2c interface module.
+The Camera is a standard ESP32-CAM with an ESP32-CAM-MB (CH-340G based) to add USB capability and, in its simplest form, a PCA9515A I2C interface module.
 To connect the sensorCAM to i2c, some limited soldering is required to connect the PCA9515A (5 wires) to the USB MB on the CAM.
-An advanced proto-daughter board is preferable to the PCA9515, to include long i2c buffering (up to 30metres), an isolated power supply, and indicator LEDs.
+An advanced proto-daughter board is preferable to the PCA9515, to include long I2C buffering (up to 30metres), an isolated power supply, and indicator LEDs.
 A cheap commercial aerial may be useful in marginal WiFi situations.  
 The newer ESP32-Wrover-CAM and 38P/V4/Expansion board provides compatible and more convenient hardware with all power regulators on-board.  
 
@@ -28,7 +31,7 @@ It also has 3Mb of available program storage, EPROM memory for parameters, and 3
 
 ## Software requirements
 
-The Arduino IDE is recommended for the sensorCAM and, if used, the connected EX-Command Station DCC-EX-CS software (5.4.16+) with EX-RAIL.
+The Arduino IDE is recommended for the sensorCAM and, if used, the connected **EX-CommandStation** DCC-EX-CS software (5.4.16+) with **EXRAIL**.
 The ESP32-CAM has an Arduino library of software that is needed to enable the camera image manipulation and the WiFi imaging of the railroad.
 In addition, the Processing 4 application is highly desired to enable railroad images to be captured and sensor positions to be located and seen, as the Arduino IDE cannot give visual feedback.
 

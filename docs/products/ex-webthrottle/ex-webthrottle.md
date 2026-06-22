@@ -1,6 +1,9 @@
 # EX-WebThrottle - Overview
 
-==TODO== Split into seperate pages for overview plus installing and using.
+[![EX-WebThrottle Logo](/_static/images/logos/product-logo-ex-webthrottle-only-light.png){ .only-light width=400px }
+![EX-WebThrottle Logo](/_static/images/logos/product-logo-ex-webthrottle-only-dark.png){ .only-dark width=400px }](/products/ex-webthrottle/ex-webthrottle.md)
+
+==TODO== Split into separate pages for overview plus installing and using.
 
 [Run EX&#8209;WebThrottle Now](https://dcc-ex.com/WebThrottle-EX/){ .md-button .md-button--primary }
 

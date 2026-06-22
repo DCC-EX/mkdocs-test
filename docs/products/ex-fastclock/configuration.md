@@ -3,14 +3,14 @@
 The FastClock can either operate in one of three modes:
 
 - Standalone
-- Serial Communication with the CS
-- I2C Communication with the CS.
+- Serial Communication with the **EX-CommandStation**
+- I2C Communication with the **EX-CommandStation**.
 
-To indicate which mode is in use it is necessary to edit the config.h file.
+To indicate which mode is in use it is necessary to edit the ``config.h`` file.
 
 ## Standalone use
 
-The config.h file comes pre-configured to use the clock in standalone mode.  No changes are necessary.
+The ``config.h`` file comes pre-configured to use the clock in standalone mode.  No changes are necessary.
 
 ## Serial Mode
 
@@ -24,14 +24,14 @@ This will load the appropriate code including the Wire library.
 
 ## I2C mode
 
-To operate in I2C mode edit the config.h file and uncomment the following lines:
+To operate in I2C mode edit the ``config.h`` file and uncomment the following lines:
 
 ```cpp
 //#define I2CAddress 0x55 // default I2C address
 //#define SEND_VIA_I2C true
 ```
 
-In this mode the CS will poll the FastClock to obtain the time.  It is necessary to set the same I2C address here as used in the myHal.cpp file within the CS.  This is set to a default of 0x55 (decimal 85) but can be set to some other value if this conflicts with other I2C devices on your setup.
+In this mode the **EX-CommandStation** will poll the FastClock to obtain the time.  It is necessary to set the same I2C address here as used in the ``myHal.cpp`` file within the **EX-CommandStation**.  This is set to a default of 0x55 (decimal 85) but can be set to some other value if this conflicts with other I2C devices on your setup.
 
 ## Screen Header
 
@@ -62,8 +62,8 @@ The various configuration options are outlined below
 
 Connecting via Serial is the simplest option if available.  
 
-- Run a dupont cable from the TX pin on the arduino to a RX pin on the EX-CommandStation.  It is not usually necessary to run a cable from RX to the TX on the EX-CommandStation as  the FastClock is not receiving data back.
-- Find the Serial defines in the config.h file (or copy config.example.h to config.h if you don't have one), locate the following lines:
+- Run a dupont cable from the TX pin on the arduino to a RX pin on the EX-CommandStation.  It is not usually necessary to run a cable from RX to the TX on the **EX-CommandStation** as  the FastClock is not receiving data back.
+- Find the Serial defines in the ``config.h`` file (or copy ``config.example.h`` to ``config.h`` if you don't have one), locate the following lines:
 
 ```cpp
 //#define SERIAL1_COMMANDS
@@ -73,7 +73,7 @@ Connecting via Serial is the simplest option if available.
   
   and uncomment the appropriate one for the serial port you are using.
 
-- Add the following code to your Setup() function:
+- Add the following code to your ``Setup()`` function:
 
 ```cpp
 Serial.begin(115200);
@@ -123,7 +123,7 @@ Connecting via I2C involves a HAL driver file to the **EX-CommandStation** as we
   
 - Using Dupont connectors connect SDA/SCL/Gnd on the clock to SDA/SCL/Gnd on the **EX-CommandStation**.
   
-- Include the following code in your FastClock code:
+- Include the following code in your **EX-FastClock** code:
 
   Near the top of the sketch:
 
@@ -156,6 +156,6 @@ void TransmitTime() {
 
   In the function above  HH is the time as hours (24hr. clock) and MM is the minutes.
 
-- The CommandStation-EX will now poll the FastClock to request the time.  The frequency at which it does so is influenced by the clock speed (i.e. on a slow clock speed it polls less often).
+- The **EX-CommandStation** will now poll the **EX-FastClock** to request the time.  The frequency at which it does so is influenced by the clock speed (i.e. on a slow clock speed it polls less often).
 
-Now that you know how to connect your existing FastCLock, click the "next" button see how you use EX-FastClock.  
+Now that you know how to connect your existing **EX-FastClock**, click the "next" button see how you use **EX-FastClock**.  

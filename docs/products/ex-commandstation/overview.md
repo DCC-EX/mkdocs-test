@@ -1,5 +1,8 @@
 # The DCC-EX EX-CommandStation - Overview
 
+[![EX-CommandStation Logo](/_static/images/logos/product-logo-ex-commandstation-only-light.png){ .only-light width=400px }
+![EX-CommandStation Logo](/_static/images/logos/product-logo-ex-commandstation-only-dark.png){ .only-dark width=400px }](/products/ex-commandstation/overview.md)
+
 A DCC Command Station powers your track and sends digital signals to the locos and accessories through the track. All commercial command stations do that, but we think we do it a lot better for a lot less money.
 
 Our primary solution is the [EX-CommandStation Booster 1 Express (CSB1)](ex-csb1.md) CommandStation which provides a ready-to-run system with integrated WiFi. You can start running trains from your Android or iOS phone in a couple of minutes if you plug your track in one end and a power supply in the other.

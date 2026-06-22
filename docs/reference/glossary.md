@@ -13,7 +13,7 @@ If you wish to see where a term is used, click the term name to search for it.
 
 ## Access Point (AP) Mode
 
-[Search for Acccess Point Mode](?access point mode)
+[Search for Access Point Mode](?access point mode)
 
 In Access Point (AP) mode, the tiny ESP-WiFi chip acts as a very basic WiFi server and provides a small IP network for your throttle or for your computer running JMRI with the WiThrottle Server enabled. It acts much like your router does to let things connect directly to it (currently up to four connections).
 Using the **EX-CommandStation** in AP mode allows you to have a separate network so you can keep your layout network separate from your home network.
