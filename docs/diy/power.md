@@ -64,3 +64,5 @@ A Command Station is NOT a typical consumer electronics device where the user is
 You MUST use a suitable, double insulated, power supply where it is not possible for a loose wire or stray flexi-track clipping from your model building to fall in and bridge the gap between mains voltage and the output.
 
 Should this happen, it could melt your electronics, locos or children.
+
+--8<-- "snippets/abbr.md"
