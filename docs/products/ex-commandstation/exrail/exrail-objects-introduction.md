@@ -140,7 +140,7 @@ If you have installed turnouts/points using DCC accessory decoders, you can conf
     TURNOUT( id, addr, sub_addr [, "description"] )
 ```
 
-The ``TURNOUT`` command defines DCC accessory decoder turnout/point in **EXRAIL**, which will appear in |WiThrottle Protocol| apps, |Engine Driver|, and JMRI in addition to being defined as a turnout/point within the CommandStation.
+The ``TURNOUT`` command defines DCC accessory decoder turnout/point in **EXRAIL**, which will appear in WiThrottle Protocol apps, Engine Driver, and JMRI in addition to being defined as a turnout/point within the CommandStation.
 
 #### Configure myAutomation.h - DCC Turnouts/Points
 
@@ -275,7 +275,7 @@ As per the **EXRAIL** reference, turnouts/points are defined with the following 
 * active_angle = The angle to which the servo will move when the turnout/point is thrown (refer below for further detailed information).
 * inactive_angle = The angle to which the servo will move when the turnout/point is closed (refer below for further detailed information).
 * profile = There are five profiles to choose from that determine the speed at which a turnout/point will move: Instant, Fast, Medium, Slow, and Bounce (note we don't recommend Bounce for a turnout/point definition).
-* description = A human-friendly description of the turnout/point that will appear in WiThrottle apps and |Engine Driver|. Note that this must be enclosed in quotes "".
+* description = A human-friendly description of the turnout/point that will appear in WiThrottle apps and Engine Driver. Note that this must be enclosed in quotes "".
 
 ----
 
@@ -394,7 +394,7 @@ Sensor numbers are direct references to VPINs (virtual pin numbers) in the Hardw
 
 !!! note "Hall effect sensors"
 
-   Hall effect sensors work for some layouts, but beware of how you detect the back end of a train approaching the buffers in a siding, or knowing when the last car has cleared a crossing.
+    Hall effect sensors work for some layouts, but beware of how you detect the back end of a train approaching the buffers in a siding, or knowing when the last car has cleared a crossing.
 
 **EX-CommandStation** allows for sensors that are **Active Low or Active High**. This is particularly important for IR sensors that have been converted to detect by broken beam, rather than reflection. By making the sensor number negative, the sensor state is inverted. e.g. ``AT(-22)``.
 
@@ -436,29 +436,21 @@ Signals setup on vpins 101, 102 ... 115
 
 For each signal add a line in myAutomation.h in the form:
 
-SIGNAL(red_pin, amber_pin, green_pin) 
+``SIGNAL(red_pin, amber_pin, green_pin)``
 
 ```cpp
     // always use the first red_pin as the signal_id for All signal color changes)
     SIGNAL(106, 0, 107) // Red, Amber, Green For turnout/point 1
 ```
 
-Combine the two commands Servo_Turnout and Signal (New 4.1:)
+Combine the two commands Servo_Turnout and Signal
 
-New 4.1 SERVO_SIGNAL(vpin, redpos, amberpos, greenpos)
+``SERVO_SIGNAL(vpin, redpos, amberpos, greenpos)``
 
 ```cpp
     // Use the first Red vpin# as the signal_id for All Signal color changes
     // Use this to Combine the two commands Servo_Turnout and Signal above into One Function 
     SERVO_SIGNAL(106, 400, 0, 205) //  Red vpin 106 for turnout/point 1, Thrown=Red, Close = Green
 ```
-
-<!--
-----
-
-## Next Steps - Creating Sequences
-
-See the :doc:`getting-started` page or click the 'Next' button to learn how to create automation sequences.
--->
 
 --8<-- "snippets/abbr.md"

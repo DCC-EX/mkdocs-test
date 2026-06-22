@@ -68,6 +68,7 @@ li a {
             - **Cookbooks**
                 - [EXRAIL Cookbooks <small>(Cookbooks)</small>](products\ex-commandstation\exrail\cookbooks\index.md)
                 - **Editing Tips & tricks**
+                    - [General EXRAIL Tips](products\ex-commandstation\exrail\cookbooks\editing-tricks\general-tips.md)
                     - [Multiple Files in **EXRAIL**](products\ex-commandstation\exrail\cookbooks\editing-tricks\multi-files.md)
                     - [Maintaining multiple EX-CommandStations](products\ex-commandstation\exrail\cookbooks\editing-tricks\multiple-command-stations.md)
                     - [Naming sequences for easy commands](products\ex-commandstation\exrail\cookbooks\editing-tricks\naming-a-sequence.md)
