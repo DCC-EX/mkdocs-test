@@ -4488,6 +4488,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#track-voltage-vs-power-supply-voltage" class="md-nav__link">
+    <span class="md-ellipsis">
+      Track Voltage VS Power Supply Voltage
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#using-an-ex8874-or-ex-csb1" class="md-nav__link">
     <span class="md-ellipsis">
       Using an EX8874 or EX-CSB1
@@ -4544,7 +4553,7 @@
   
   
   <span class="md-ellipsis">
-    Easy Build - Arduino Mega
+    Easy Build - Arduino Mega + EX-8874
     
   </span>
   
@@ -4567,7 +4576,7 @@
   
   
   <span class="md-ellipsis">
-    Harder Build - Arduino Mega
+    Harder Build - Arduino Mega + Standard Motor Shield
     
   </span>
   
@@ -7152,6 +7161,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#track-voltage-vs-power-supply-voltage" class="md-nav__link">
+    <span class="md-ellipsis">
+      Track Voltage VS Power Supply Voltage
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#using-an-ex8874-or-ex-csb1" class="md-nav__link">
     <span class="md-ellipsis">
       Using an EX8874 or EX-CSB1
@@ -7231,7 +7249,7 @@
 <td>N (1:160)</td>
 <td>12V</td>
 <td>3A</td>
-<td>Most decoders rated for 12V max; higher voltages increase brush wear.</td>
+<td>Most decoders rated for ~14V max; higher voltages increase brush wear.</td>
 </tr>
 <tr>
 <td>TT (1:120)</td>
@@ -7271,15 +7289,23 @@
 </tr>
 </tbody>
 </table>
-<h2 id="using-an-ex8874-or-ex-csb1">Using an EX8874 or EX-CSB1<a class="headerlink" href="#using-an-ex8874-or-ex-csb1" title="Permanent link">&para;</a></h2>
-<p>The EX8874 (which is also built into the EX-CSB1) provides power for both the track and the <strong>EX-CommandStation</strong>. There is almost zero voltage drop between the power supply and the track.</p>
+<h2 id="track-voltage-vs-power-supply-voltage">Track Voltage VS Power Supply Voltage<a class="headerlink" href="#track-voltage-vs-power-supply-voltage" title="Permanent link">&para;</a></h2>
+<p>Not all Motor Drivers are equal!</p>
+<p>For the <strong><abbr title="EX-CommandStation Booster 1 Express">EX-CSB1</abbr></strong> and the <strong>EX-8874</strong> the DC voltage of the power supply that you use, will be very close to the quasi-AC voltage that will be provided to the track.</p>
+<p>For the Arduino Motor Shield, the DEEK Motor Shield and most others, the quasi-AC voltage on the track will be 1.5-2v <em>less than</em> the voltage of the power supply. So for those motor drivers, it is necessary to use a power supply about 2vDC greater than you want on the track.</p>
+<h2 id="using-an-ex8874-or-ex-csb1">Using an EX8874 or <abbr title="EX-CommandStation Booster 1 Express">EX-CSB1</abbr><a class="headerlink" href="#using-an-ex8874-or-ex-csb1" title="Permanent link">&para;</a></h2>
+<p>The EX8874 (which is also built into the <abbr title="EX-CommandStation Booster 1 Express">EX-CSB1</abbr>) provides power for both the track and the <strong>EX-CommandStation</strong>. There is almost zero voltage drop between the power supply and the track.</p>
 <p>We strongly advise purchasing a suitable power supply at the same time as the CSB or EX8874 from a vendor who understands your requirements.</p>
 <h2 id="other-motor-shields">Other motor shields<a class="headerlink" href="#other-motor-shields" title="Permanent link">&para;</a></h2>
-<p>Should you have the temerity to choose a motor-shield other than the EX8874:</p>
+<p>Should you choose a motor-shield other than the <strong>EX-8874</strong>:</p>
 <ul>
-<li>you must allow for the voltage drop within your chosen shield.</li>
-<li>you must provide separate power for the <strong>EX-CommandStation</strong> processor, most easily via the USB socket. A standard phone charger, or a connection to a computer, will be adequate. Other options are significantly more complex.</li>
-<li>you may not be protected from reverse-polarity mistakes.</li>
+<li>You must allow for the voltage drop within your chosen shield. (see <a href="#track-voltage-vs-power-supply-voltage">above</a>)</li>
+<li>You must provide separate power for the <strong>EX-CommandStation</strong> microcontroller:<ul>
+<li>Most easily this is done via the USB socket. A standard phone charger, or a connection to a computer, will be adequate. Note that if you are powering other devices connected directly to the GPIOs (including a WiFi shield), the USB socket may not provide adequate power.</li>
+<li>If you power the microcontroller through its barrel connector, you need to use a 7-9vDC power supply, not the 5v you might expect. Do not exceed 9vDC as this can cause electrical interference.</li>
+</ul>
+</li>
+<li>Note: You may not be protected from reverse-polarity mistakes.</li>
 </ul>
 <h2 id="what-to-look-for">What to look for<a class="headerlink" href="#what-to-look-for" title="Permanent link">&para;</a></h2>
 <p><img align="right" alt="Power brick" src="../../_static/images/power/powerbrick.png" /></p>
@@ -7296,6 +7322,7 @@
 <p>A Command Station is NOT a typical consumer electronics device where the user is never in contact with any bare wire of any voltage.  Your track is effectively a large bare wire that will be touched frequently.</p>
 <p>You MUST use a suitable, double insulated, power supply where it is not possible for a loose wire or stray flexi-track clipping from your model building to fall in and bridge the gap between mains voltage and the output.</p>
 <p>Should this happen, it could melt your electronics, locos or children.</p>
+<!-- These are case sensitive -->
 
 
 
@@ -7316,7 +7343,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 17, 2026 11:04:31 UTC">June 17, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 22, 2026 05:02:40 UTC">June 22, 2026</span>
   </span>
 
     
@@ -7372,13 +7399,13 @@
         
         
           
-          <a href="../mega-easy/" class="md-footer__link md-footer__link--next" aria-label="Next: Easy Build - Arduino Mega">
+          <a href="../mega-easy/" class="md-footer__link md-footer__link--next" aria-label="Next: Easy Build - Arduino Mega + EX-8874">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Easy Build - Arduino Mega
+                Easy Build - Arduino Mega + EX-8874
               </div>
             </div>
             <div class="md-footer__button md-icon">

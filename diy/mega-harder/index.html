@@ -27,7 +27,7 @@
     
     
       
-        <title>Harder Build - Arduino Mega - DCC-EX Model Train Control, Animation, and Automation</title>
+        <title>Harder Build - Arduino Mega + Standard Motor Shield - DCC-EX Model Train Control, Animation, and Automation</title>
       
     
     
@@ -83,7 +83,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#alternative-build-arduino-mega" class="md-skip">
+        <a href="#alternative-build-arduino-mega-standard-motor-shield" class="md-skip">
           Skip to content
         </a>
       
@@ -116,7 +116,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Harder Build - Arduino Mega
+              Harder Build - Arduino Mega + Standard Motor Shield
             
           </span>
         </div>
@@ -4457,7 +4457,7 @@
   
   
   <span class="md-ellipsis">
-    Easy Build - Arduino Mega
+    Easy Build - Arduino Mega + EX-8874
     
   </span>
   
@@ -4489,7 +4489,7 @@
   
   
   <span class="md-ellipsis">
-    Harder Build - Arduino Mega
+    Harder Build - Arduino Mega + Standard Motor Shield
     
   </span>
   
@@ -4502,7 +4502,7 @@
   
   
   <span class="md-ellipsis">
-    Harder Build - Arduino Mega
+    Harder Build - Arduino Mega + Standard Motor Shield
     
   </span>
   
@@ -7308,24 +7308,26 @@
   
 
 
-<h1 id="alternative-build-arduino-mega">Alternative build - Arduino Mega<a class="headerlink" href="#alternative-build-arduino-mega" title="Permanent link">&para;</a></h1>
+<h1 id="alternative-build-arduino-mega-standard-motor-shield">Alternative build - Arduino Mega + Standard Motor Shield<a class="headerlink" href="#alternative-build-arduino-mega-standard-motor-shield" title="Permanent link">&para;</a></h1>
+<p>The instructions on this page are the steps required to use an Arduino Motor Shield motor shield, or other supported motor driver, to build an <strong>EX-CommandStation</strong>.</p>
 <p>These instructions assume a slightly more competent user who has made the decision to trade simplicity for price. It is assumed that you are comfortable modifying devices, maybe soldering etc. and are not going to make costly mistakes such as mixing up the power supplies or putting the processor board down on something that will short the underside of the pins.</p>
 <p>There are a limited number of suitable motor or WiFi shields available and each has its own quirks.</p>
+<p>Note. The use of the <abbr title="Not recommended. Not supported in future releases of EX-CommandStation. The UNO shield shape/size is still relevant">Arduino UNO</abbr> is no longer supported.</p>
 <h2 id="what-you-need">What you need<a class="headerlink" href="#what-you-need" title="Permanent link">&para;</a></h2>
-<p>To build a basic DIY <strong>EX-CommandStation</strong> you will need:</p>
+<p>To build a basic <abbr title="Do-It-Yourself / Self Build">DIY</abbr> <strong>EX-CommandStation</strong> you will need:</p>
 <ul>
 <li>A PC or laptop (Not A Raspberry Pi) running a reasonably recent versions of Windows, Linux or MacOS</li>
-<li>an Arduino Mega microprocessor running our free Open Source software</li>
+<li>An Arduino Mega microcontroller running our free Open Source software</li>
 <li>USB cable to your PC for the processor.</li>
-<li>an Arduino standard (or others as noted in details) motor-shield to power the track.</li>
+<li>an Arduino Standard Motor-Shield (or others as noted in <mark>TODO</mark>) to power the track.</li>
 <li>A double-insulated DC power supply with a voltage suitable for your layout/locos.</li>
-<li>An additional double-insulated DC Power supply is needed to drive the Arduino logic.<br />
+<li>An additional double-insulated DC Power supply is needed to drive the Arduino microcontroller.<br />
   7 to 9 volts, using the barrel connector, is recommended when using a WiFi shield.<br />
   5 volts will not work for the barrel connector, but could be connected via USB cable.</li>
 <li>Optionally<ul>
-<li>a female barrel connector to match the plug on your chosen track power supply</li>
-<li>a suitable WiFi shield to use WiFi throttles (Recommended) with 2 suitable M-F Dupont wires.</li>
-<li>OR an Ethernet Shield</li>
+<li>A female barrel connector to match the plug on your chosen track power supply</li>
+<li>A suitable WiFi shield to use WiFi throttles (recommended) with 2 suitable M-F Dupont wires.<br/>OR</li>
+<li>An Ethernet Shield</li>
 </ul>
 </li>
 </ul>
@@ -7338,11 +7340,11 @@
 <p>Note, you can't have Ethernet and WiFi running on the same <strong>EX-CommandStation</strong>, but you can install both shields and choose one or the other when installing the software.
 See <a href="../ethernet/">Ethernet Install</a></p>
 <h3 id="prepare-your-motor-shield">Prepare your motor shield<a class="headerlink" href="#prepare-your-motor-shield" title="Permanent link">&para;</a></h3>
-<p>FAILURE TO DO THIS CAN DESTROY YOUR MEGA.</p>
+<p><span style="color:red"><strong>FAILURE TO DO THIS CAN DESTROY YOUR MEGA.</strong></span></p>
 <p><img align="right" alt="VIN trace" src="../../_static/images/mega-hard/mega2.png" /></p>
 <ol>
 <li>
-<p>Unless you are using an EX8874 shield, you MUST prevent the shield from feeding track voltage into your Mega. This is done by cutting the VIN trace and/or removing the pin that feeds the Mega.</p>
+<p>Unless you are using an <strong>EX-8874</strong> motor shield (<a href="../mega-easy/">covered here</a>), you MUST prevent the shield from feeding track voltage into your Mega. This is done by cutting the VIN trace and/or removing the pin that feeds the Mega.</p>
 </li>
 <li>
 <p>Ensure shield pins are straight and correctly aligned.</p>
@@ -7358,10 +7360,10 @@ See <a href="../ethernet/">Ethernet Install</a></p>
 <p><img align="right" alt="Orientation" src="../../_static/images/mega-hard/mega5.png" />
 Don't skip this step if you don't yet have any track because the WiFi shield will cover the connectors.</p>
 <p>It's best to create fly leads with a suitable pluggable connectors for later. It makes it much easier to detach your <strong>EX-CommandStation</strong> from your layout when you need to fiddle with it or throw it against the wall out of sheer frustration.</p>
-<p>If you only have one piece of track for testing, wire it to the PROG track plug.</p>
+<p>If you only have one piece of track for testing, wire it to the <abbr title="Programming Track / Service Mode">PROG</abbr> track plug.</p>
 <ol>
-<li>The MAIN track is wired to the A channel output.</li>
-<li>Your PROG track is wired to the B channel output.</li>
+<li>The <abbr title="Main Track / Ops Mode">MAIN</abbr> track is wired to the A channel output.</li>
+<li>Your <abbr title="Programming Track / Service Mode">PROG</abbr> track is wired to the B channel output.</li>
 </ol>
 <div style="clear: both;"></div>
 <h3 id="connect-your-track-power-supply">Connect your track power supply<a class="headerlink" href="#connect-your-track-power-supply" title="Permanent link">&para;</a></h3>
@@ -7372,6 +7374,7 @@ Wire your track power supply to the input turrets of the motor shield, observing
 <p>See <a href="../wifi/">WiFi Install</a></p>
 <h3 id="load-the-software">Load the software<a class="headerlink" href="#load-the-software" title="Permanent link">&para;</a></h3>
 <p>Software loading is best done with the <a href="../installer/">EX-Installer</a></p>
+<!-- These are case sensitive -->
 
 
 
@@ -7392,7 +7395,7 @@ Wire your track power supply to the input turrets of the motor shield, observing
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 16, 2026 06:08:27 UTC">June 16, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 22, 2026 05:34:14 UTC">June 22, 2026</span>
   </span>
 
     
@@ -7431,7 +7434,7 @@ Wire your track power supply to the input turrets of the motor shield, observing
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../mega-easy/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Easy Build - Arduino Mega">
+          <a href="../mega-easy/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Easy Build - Arduino Mega + EX-8874">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -7441,7 +7444,7 @@ Wire your track power supply to the input turrets of the motor shield, observing
                 Previous
               </span>
               <div class="md-ellipsis">
-                Easy Build - Arduino Mega
+                Easy Build - Arduino Mega + EX-8874
               </div>
             </div>
           </a>
