@@ -64,6 +64,12 @@ li a {
             - [**EXRAIL** Full Command List <small>(Command List)</small>](products\ex-commandstation\exrail\command-list.md)
             - **Cookbooks**
                 - [EXRAIL Cookbooks <small>(Cookbooks)</small>](products\ex-commandstation\exrail\cookbooks\index.md)
+                - **Editing Tips & tricks**
+                    - [Multiple Files in **EXRAIL**](products\ex-commandstation\exrail\cookbooks\editing-tricks\multi-files.md)
+                    - [Maintaining multiple EX-CommandStations](products\ex-commandstation\exrail\cookbooks\editing-tricks\multiple-command-stations.md)
+                    - [Naming sequences for easy commands](products\ex-commandstation\exrail\cookbooks\editing-tricks\naming-a-sequence.md)
+                    - [Using CALL and RETURN](products\ex-commandstation\exrail\cookbooks\editing-tricks\using-call-return.md)
+                    - [Using C++ Macros](products\ex-commandstation\exrail\cookbooks\editing-tricks\using-macros.md)
                 - [Buttons and Switches](products\ex-commandstation\exrail\cookbooks\animation-sensors.md)
                 - [DC Track Control](products\ex-commandstation\exrail\cookbooks\dc-tracks.md)
                 - [Emergency stop button](products\ex-commandstation\exrail\cookbooks\estop-button.md)
@@ -88,12 +94,6 @@ li a {
                     - [Random Selection](products\ex-commandstation\exrail\cookbooks\driving-trains\random-selection.md)
                     - [Consists / Multiple Unit (MU) Trains <small>(Consists)</small>](products\ex-commandstation\exrail\cookbooks\driving-trains\consists.md)
                     - [Controlling trains and decoders directly <small>(Advanced)</small>](products\ex-commandstation\exrail\cookbooks\driving-trains\advanced.md)
-                - **Editing tricks**
-                    - [Multiple Files in **EXRAIL**](products\ex-commandstation\exrail\cookbooks\editing-tricks\multi-files.md)
-                    - [Maintaining multiple EX-CommandStations](products\ex-commandstation\exrail\cookbooks\editing-tricks\multiple-command-stations.md)
-                    - [Naming sequences for easy commands](products\ex-commandstation\exrail\cookbooks\editing-tricks\naming-a-sequence.md)
-                    - [Using CALL and RETURN](products\ex-commandstation\exrail\cookbooks\editing-tricks\using-call-return.md)
-                    - [Using C++ Macros](products\ex-commandstation\exrail\cookbooks\editing-tricks\using-macros.md)
                 - **Flags and latches**
                     - [Flags, Counters and Bitmaps](products\ex-commandstation\exrail\cookbooks\flags-and-latches\flags.md)
                     - [Latches](products\ex-commandstation\exrail\cookbooks\flags-and-latches\latches.md)
@@ -159,10 +159,10 @@ li a {
 - **Self Build**
     - [Build Your Own Command Station <small>(Build Your Own)</small>](diy\diy.md)
     - [Selecting a Power Supply](diy\power.md)
-    - [Easy Build - Arduino Mega + EX-8874](diy\mega-easy.md)
-    - [Alternative build - Arduino Mega + Standard Motor Shield <small>(Harder Build - Arduino Mega + Standard Motor Shield)</small>](diy\mega-harder.md)
-    - [Complex Build - Nucleo](diy\nucleo.md)
-    - [Complex Build - ESP32](diy\esp32.md)
+    - [Easy build - Arduino Mega + EX-8874 <small>(Easy Build<small> - Arduino Mega + EX-8874</small>)</small>](diy\mega-easy.md)
+    - [Alternative build - Arduino Mega + Arduino Motor Shield <small>(Harder Build<small> - Arduino Mega + Arduino Motor Shield</small>)</small>](diy\mega-harder.md)
+    - [Complex Build - Nucleo <small>(Complex Build<small> - Nucleo</small>)</small>](diy\nucleo.md)
+    - [Complex Build - ESP32 <small>(Complex Build<small> - ESP32</small>)</small>](diy\esp32.md)
     - [Optionally install Wifi <small>(Optional WiFi)</small>](diy\wifi.md)
     - [Optionally install Ethernet <small>(Optional Ethernet)</small>](diy\ethernet.md)
     - [Installing EX-CommandStation firmware <small>(Installing Software)</small>](diy\installer.md)

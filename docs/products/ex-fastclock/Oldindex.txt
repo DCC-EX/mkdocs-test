@@ -5,7 +5,7 @@ An Adjustable Speed Model Railway Fast Clock which integrates with the **DCC-EX*
 
 ## Background
 
-This project is based on a project originally written by Jim Gifford (Hallet Cove Southern) in June 2017.  This project used a 32 x 8 LED matrix to display the time and was controlled by a number of pushbuttons.
+This project is based on a project originally written by Jim Gifford (Hallet Cove Southern) in June 2017.  This project used a 32 x 8 LED matrix to display the time and was controlled by a number of push buttons.
 
 [See Jim's Original Project here.](https://www.hallettcovesouthern.com/track-plan-design-info/arduino-projects/fast-clock/)
 
@@ -19,7 +19,7 @@ control. This feature is optional and can be controlled by the config.h file.
 
 The project uses only two components:
 
-1. A standard arduino or compatable clone.
+1. A standard arduino or compatible clone.
 2. A 2.8" MCUFRIEND style TFT-LCD plug-in shield.
 
 The completed project is shown in the accompanying photograph:
@@ -28,7 +28,7 @@ The completed project is shown in the accompanying photograph:
 
 The FastClock communicates with the **EX-CommandStation** using either I2C or Serial.  
 
-Given that the MCUFREIND style shield is a shield and uses the A4 pin as LCD_RST it is necessary to make a modification to enable the I2C communication.  This involces cutting the A4 pin and soldering a jumper from LCD_RST on the backof the TFT board to the pin that aligns with the UNO RST pin.
+Given that the MCUFREIND style shield is a shield and uses the A4 pin as LCD_RST it is necessary to make a modification to enable the I2C communication.  This involves cutting the A4 pin and soldering a jumper from LCD_RST on the back of the TFT board to the pin that aligns with the UNO RST pin.
 
 ![Modified LCD Sheild](/_static/images/ex-fastclock/IMG_3538.jpg)
 
@@ -40,10 +40,10 @@ If using Serial communication no modification is required. Pins 0 & 1 (TX/RX) ar
 
 At startup the clock will calculate a start time based on either a) a coded start time (currently 6:00 a.m.) or b) a run time stored in the EEPROM (see item 2) below.
 
-The clock will start in a paused state and will display the speed rate factor (default = x 4).  Once any adjustemts have been made the clock can be started.  The usage of the six buttons are as below:
+The clock will start in a paused state and will display the speed rate factor (default = x 4).  Once any adjustments have been made the clock can be started.  The usage of the six buttons are as below:
 
 1. **Start** - Pressing this button will start the clock and the button text will change to **Pause**.  
-2. **Save** - Pressing this button will pause the clock and save the current time and Speed Factor to the EEPROM.  These figures will be used to initialise the clock on nextstartup.
+2. **Save** - Pressing this button will pause the clock and save the current time and Speed Factor to the EEPROM.  These figures will be used to initialise the clock on next startup.
 3. **Reset** - Pressing this button will pause the clock and set the time to 06:00 with a speed factor of 4.
 4. **T+** - Pressing this key will pause the clock and add 15 minutes to the time.
 5. **T-** - Pressing this key will pause the clock and deduct 15 minutes from the time.
@@ -53,7 +53,7 @@ The clock will start in a paused state and will display the speed rate factor (d
 
 The project requires three libraries - Adafruit_GFX, Adafruit_Touchscreen and MCUFRIEND_kbv.  All three cn be installed from the Arduino IDE library manager.  Copies of these may be found in the .pio/libdeps/uno folder.
 
-I have also generated two special fonts for the project which can be found in the Fonts folder in the Adafruit GFX Library in this repository.  These should be copied into the fonts folder in the Adafruit_GFX library once installed. The file Arial9pt7b.h congtains a fullset of the Arial Font as used in Windows.  The file Arial48pt7b.h contains a large 48pt Arial font containing only charachters 0-9 and :.  This is used to display the time clock on the screen.  The full font was too large to fit into the Uno memory.
+I have also generated two special fonts for the project which can be found in the Fonts folder in the Adafruit GFX Library in this repository.  These should be copied into the fonts folder in the Adafruit_GFX library once installed. The file Arial9pt7b.h contains a full set of the Arial Font as used in Windows.  The file Arial48pt7b.h contains a large 48pt Arial font containing only characters 0-9 and :.  This is used to display the time clock on the screen.  The full font was too large to fit into the Uno memory.
 
 The files within this repository are held in VSCode format.  If using Arduino IDE, copy the files from the src folder to a folder called EX-FastClock within your Arduino folder and rename the EX_FastClock.cpp to EX-FastClock.ino.  The copy the libraries from .pio/libdeps/uno into your libraries folder.
 
@@ -69,11 +69,11 @@ To indicate which mode is in use it is necessary to edit the config.h file.
 
 ### Standalone
 
-The config.h file comes pre-configured to use the clock innstandalone mode.  No changes are necessary.
+The ``config.h`` file comes pre-configured to use the clock in standalone mode.  No changes are necessary.
 
 ### Serial Mode
 
-To communicatein Serial mode it is necessary to edit the config.h file and uncomment the following line:
+To communicate in Serial mode it is necessary to edit the config.h file and uncomment the following line:
 
 ```cpp
 #define SEND_VIA_SERIAL true
@@ -91,7 +91,7 @@ To operate in I2C mode edit the config.h file and uncomment the following lines
 #define SEND_VIA_I2C true
 ```
 
-In this mode the CS will poll the FastClock to obtain the time.  It is necessary to set the same I2C address here as used in the myAutomation.h file within the CS.  This is set to a default of 0x55 (decimal 85) but can be set to some other value if this conflicts with othere I2C devices on your setup.
+In this mode the CS will poll the FastClock to obtain the time.  It is necessary to set the same I2C address here as used in the myAutomation.h file within the CS.  This is set to a default of 0x55 (decimal 85) but can be set to some other value if this conflicts with other I2C devices on your setup.
 
 ### Operating Speed
 
