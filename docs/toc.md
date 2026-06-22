@@ -177,10 +177,10 @@ li a {
     - [First Run installer <small>(First Run)</small>](installer\first-run.md)
     - [Select Product to Install <small>(Select Product)</small>](installer\select-product.md)
     - [Installing EX-CommandStation Software <small>(Install Cs)</small>](installer\install-cs.md)
-    - [Advanced Users - VSCode/PlatformIO <small>(Advanced Users - PlatformIO)</small>](installer\platformio.md)
     - [Download linux](installer\download-linux.md)
     - [Download mac](installer\download-mac.md)
     - [Download win](installer\download-win.md)
+    - [Advanced Users - VSCode/PlatformIO <small>(Advanced Users - PlatformIO)</small>](installer\platformio.md)
 - **Throttles**
     - [Throttles and Other Controllers <small>(Throttle Lists)</small>](throttles\throttles.md)
     - [EX-WebThrottle](throttles\ex-webthrottle.md)

@@ -1,6 +1,6 @@
 # EX-Installer
 
-With the exception of a Command Station Booster1 Express [CSB1](?CSB1) used solely as shipped with no accessories or options, you will need to download and install software to your **EX-CommandStation** or other **DCC-EX** products.
+With the exception of a **EX-CommandStation Booster 1 Express** [EX-CSB1](?CSB1) used solely as shipped with no accessories or options, you will need to download and install software to your **EX-CommandStation** or other **DCC-EX** products.
 
 This is managed by **EX-Installer** which is responsible for obtaining the relevant software and libraries, merging your custom configurations and mind-bending automations, locating the USB connection to your device,  compiling and downloading the result and showing the serial log from your device if required.
 
@@ -27,3 +27,5 @@ Experienced programmers or those wishing to develop new features or products wil
 Methods involving downloading zip files have caused  support issues in the past, are troublesome and not recommended.
 
 Use of the Arduino IDE is discouraged and not covered in this documentation as it has far less functionality than VSCode and has limitations with respect to compiler and library options.
+
+--8<-- "snippets/abbr.md"
