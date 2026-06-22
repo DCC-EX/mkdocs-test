@@ -26,7 +26,7 @@
 
 *[EX-CSB1]: EX-CommandStation Booster 1 Express
 
-*[Arduino UNO]: Not recommended. Not supported in future releases of EX-CommandStation. The shield is still important
+*[Arduino UNO]: Not recommended. Not supported in future releases of EX-CommandStation. The UNO shield shape/size is still relevant
 
 *[EEPROM]: Electrically Erasable Programmable Read-Only Memory. Available on the Arduino Mega ONLY
 

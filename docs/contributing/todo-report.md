@@ -2,11 +2,12 @@
 
 Scanned docs root: `C:\Users\akers\OneDrive\github\github_doco\mkdocs-test\docs`
 
-Total TODO matches: 89
+Total TODO matches: 90
 
 | File | Line | Line text |
 | --- | ---: | --- |
 | [docs/diy/esp32.md](../diy/esp32.md) | 57 | ==TODO== move legacy docs |
+| [docs/diy/mega-harder.md](../diy/mega-harder.md) | 18 | - an Arduino Standard Motor-Shield (or others as noted in ==TODO==) to power the track. |
 | [docs/diy/nucleo.md](../diy/nucleo.md) | 48 | ==TODO== move legacy docs |
 | [docs/installer/download-linux.md](../installer/download-linux.md) | 7 | ==TODO== - Add screenshots & fix page flow |
 | [docs/installer/platformio.md](../installer/platformio.md) | 3 | ==TODO== - provide setup help. |

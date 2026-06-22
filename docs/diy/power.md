@@ -11,13 +11,21 @@ These recommendations are generalised, and you must check to make sure they don'
 | **Scale**     | **Recommended Voltage (DC)** | **Minimum Current (Amps)**  | **Notes**                                                                 |
 |---------------|------------------------------|-----------------------------|---------------------------------------------------------------------------|
 | Z (1:220)     | 10–12V                       | 2A                          | Lower voltage protects tiny motors; avoid exceeding 12V.                  |
-| N (1:160)     | 12V                          | 3A                          | Most decoders rated for 12V max; higher voltages increase brush wear.     |
+| N (1:160)     | 12V                          | 3A                          | Most decoders rated for ~14V max; higher voltages increase brush wear.    |
 | TT (1:120)    | 12–14V                       | 3–4A                        | Slightly more headroom than N scale.                                      |
 | HO (1:87)     | 14–15V                       | 4–5A                        | Common sweet spot for DCC; 15V is typical for DCC-EX setups.              |
 | OO (1:76)     | 15V                          | 4–5A                        | Similar to HO; check decoder specs.                                       |
 | S (1:64)      | 15–16V                       | 5A                          | Larger motors can handle more voltage.                                    |
 | O (1:48)      | 16–18V                       | 5–6A                        | Ensure decoder supports higher voltage; some cap at 18V.                  |
 | G (1:22.5)    | 18–22V                       | 6A+                         | Outdoor locos often need more torque and current.                         |
+
+## Track Voltage VS Power Supply Voltage
+
+Not all Motor Drivers are equal!
+
+For the **EX-CSB1** and the **EX-8874** the DC voltage of the power supply that you use, will be very close to the quasi-AC voltage that will be provided to the track.
+
+For the Arduino Motor Shield, the DEEK Motor Shield and most others, the quasi-AC voltage on the track will be 1.5-2v *less than* the voltage of the power supply. So for those motor drivers, it is necessary to use a power supply about 2vDC greater than you want on the track.
 
 ## Using an EX8874 or EX-CSB1
 
@@ -27,11 +35,13 @@ We strongly advise purchasing a suitable power supply at the same time as the CS
 
 ## Other motor shields
 
-Should you have the temerity to choose a motor-shield other than the EX8874:
+Should you choose a motor-shield other than the **EX-8874**:
 
-- you must allow for the voltage drop within your chosen shield.
-- you must provide separate power for the **EX-CommandStation** processor, most easily via the USB socket. A standard phone charger, or a connection to a computer, will be adequate. Other options are significantly more complex.
-- you may not be protected from reverse-polarity mistakes.
+- You must allow for the voltage drop within your chosen shield. (see [above](#track-voltage-vs-power-supply-voltage))
+- You must provide separate power for the **EX-CommandStation** microcontroller:
+    - Most easily this is done via the USB socket. A standard phone charger, or a connection to a computer, will be adequate. Note that if you are powering other devices connected directly to the GPIOs (including a WiFi shield), the USB socket may not provide adequate power.
+    - If you power the microcontroller through its barrel connector, you need to use a 7-9vDC power supply, not the 5v you might expect. Do not exceed 9vDC as this can cause electrical interference.
+- Note: You may not be protected from reverse-polarity mistakes.
 
 ## What to look for
 
@@ -54,3 +64,5 @@ A Command Station is NOT a typical consumer electronics device where the user is
 You MUST use a suitable, double insulated, power supply where it is not possible for a loose wire or stray flexi-track clipping from your model building to fall in and bridge the gap between mains voltage and the output.
 
 Should this happen, it could melt your electronics, locos or children.
+
+--8<-- "snippets/abbr.md"

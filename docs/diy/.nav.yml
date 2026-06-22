@@ -1,8 +1,8 @@
 nav:
   - Build Your Own: diy.md
   - Selecting a Power Supply: power.md
-  - Easy Build - Arduino Mega: mega-easy.md
-  - Harder Build - Arduino Mega: mega-harder.md
+  - Easy Build - Arduino Mega + EX-8874: mega-easy.md
+  - Harder Build - Arduino Mega + Standard Motor Shield: mega-harder.md
   - Complex Build - Nucleo: nucleo.md
   - Complex Build - ESP32: esp32.md
   - Optional WiFi: wifi.md

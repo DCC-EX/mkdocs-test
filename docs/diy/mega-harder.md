@@ -1,25 +1,29 @@
-# Alternative build - Arduino Mega
+# Alternative build - Arduino Mega + Standard Motor Shield
+
+The instructions on this page are the steps required to use an Arduino Motor Shield motor shield, or other supported motor driver, to build an **EX-CommandStation**.
 
 These instructions assume a slightly more competent user who has made the decision to trade simplicity for price. It is assumed that you are comfortable modifying devices, maybe soldering etc. and are not going to make costly mistakes such as mixing up the power supplies or putting the processor board down on something that will short the underside of the pins.
 
 There are a limited number of suitable motor or WiFi shields available and each has its own quirks.
+
+Note. The use of the Arduino UNO is no longer supported.
 
 ## What you need
 
 To build a basic DIY **EX-CommandStation** you will need:
 
 - A PC or laptop (Not A Raspberry Pi) running a reasonably recent versions of Windows, Linux or MacOS
-- an Arduino Mega microprocessor running our free Open Source software
+- An Arduino Mega microcontroller running our free Open Source software
 - USB cable to your PC for the processor.
-- an Arduino standard (or others as noted in details) motor-shield to power the track.
+- an Arduino Standard Motor-Shield (or others as noted in ==TODO==) to power the track.
 - A double-insulated DC power supply with a voltage suitable for your layout/locos.
-- An additional double-insulated DC Power supply is needed to drive the Arduino logic.  
+- An additional double-insulated DC Power supply is needed to drive the Arduino microcontroller.  
   7 to 9 volts, using the barrel connector, is recommended when using a WiFi shield.  
   5 volts will not work for the barrel connector, but could be connected via USB cable.
 - Optionally
-    - a female barrel connector to match the plug on your chosen track power supply
-    - a suitable WiFi shield to use WiFi throttles (Recommended) with 2 suitable M-F Dupont wires.
-    - OR an Ethernet Shield
+    - A female barrel connector to match the plug on your chosen track power supply
+    - A suitable WiFi shield to use WiFi throttles (recommended) with 2 suitable M-F Dupont wires.<br/>OR
+    - An Ethernet Shield
 
 ## Step By Step Build
 
@@ -34,11 +38,11 @@ See [Ethernet Install](ethernet.md)
 
 ### Prepare your motor shield
 
-FAILURE TO DO THIS CAN DESTROY YOUR MEGA.
+<span style="color:red">**FAILURE TO DO THIS CAN DESTROY YOUR MEGA.**</span>
 
 ![VIN trace](/_static/images/mega-hard/mega2.png){ align=right }
 
-1. Unless you are using an EX8874 shield, you MUST prevent the shield from feeding track voltage into your Mega. This is done by cutting the VIN trace and/or removing the pin that feeds the Mega.
+1. Unless you are using an **EX-8874** motor shield ([covered here](mega-easy.md)), you MUST prevent the shield from feeding track voltage into your Mega. This is done by cutting the VIN trace and/or removing the pin that feeds the Mega.
 
 2. Ensure shield pins are straight and correctly aligned.
 
@@ -77,3 +81,5 @@ See [WiFi Install](wifi.md)
 ### Load the software
 
 Software loading is best done with the [EX-Installer](installer.md)
+
+--8<-- "snippets/abbr.md"

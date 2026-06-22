@@ -53,7 +53,7 @@ These users already have an **EX-CSB1** or DIY stack up and running and may or m
 
 ```mermaid
 graph LR
-    A[Home page] --> B[**EXRAIL** introduction];
+    A[Home page] --> B[EXRAIL introduction];
     B --> C[Accessory options];
     B --> D[EXRAIL cookbook];
     B --> E[EXRAIL reference];

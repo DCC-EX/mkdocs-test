@@ -159,8 +159,8 @@ li a {
 - **Self Build**
     - [Build Your Own Command Station <small>(Build Your Own)</small>](diy\diy.md)
     - [Selecting a Power Supply](diy\power.md)
-    - [Easy Build - Arduino Mega](diy\mega-easy.md)
-    - [Alternative build - Arduino Mega <small>(Harder Build - Arduino Mega)</small>](diy\mega-harder.md)
+    - [Easy Build - Arduino Mega + EX-8874](diy\mega-easy.md)
+    - [Alternative build - Arduino Mega + Standard Motor Shield <small>(Harder Build - Arduino Mega + Standard Motor Shield)</small>](diy\mega-harder.md)
     - [Complex Build - Nucleo](diy\nucleo.md)
     - [Complex Build - ESP32](diy\esp32.md)
     - [Optionally install Wifi <small>(Optional WiFi)</small>](diy\wifi.md)
