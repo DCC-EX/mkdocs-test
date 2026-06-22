@@ -23,7 +23,7 @@ Select the Main branch from the repository and click on the CODE button.  Select
 
 ### Arduino IDE
 
-Select the Arduino IDE branch from the repository and click on the CODE button.  Select Download ZIP file option.  Create a folder within your Arduino sketch folder called EX-Fast_Clock.  Copy the files EX-Fast_Clock.ino, EX-FastClock.h and config.h to this folder.  Copy the directories from the libraries folder into the Arduino libraries folder.
+Select the Arduino IDE branch from the repository and click on the CODE button.  Select Download ZIP file option.  Create a folder within your Arduino sketch folder called ``EX-Fast_Clock``.  Copy the files ``EX-Fast_Clock.ino``, ``EX-FastClock.h`` and ``config.h`` to this folder.  Copy the directories from the libraries folder into the Arduino libraries folder.
 
 ### Both Environments
 

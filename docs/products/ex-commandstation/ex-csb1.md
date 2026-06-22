@@ -1,5 +1,8 @@
 # **EX-CSB1** CommandStation Booster
 
+[![EX-CSB1 Logo](/_static/images/logos/product-logo-ex-csb1-only-light.png){ .only-light width=400px }
+![EX-CSB1 Logo](/_static/images/logos/product-logo-ex-csb1-only-dark.png){ .only-dark width=400px }](/products/ex-commandstation/ex-csb1.md)
+
 This is the **EX-CSB1** Getting Started Guide.
 
 ## Features

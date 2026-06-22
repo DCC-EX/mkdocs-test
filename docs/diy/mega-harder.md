@@ -1,4 +1,4 @@
-# Alternative build - Arduino Mega + Standard Motor Shield
+# Alternative build - Arduino Mega + Arduino Motor Shield
 
 The instructions on this page are the steps required to use an Arduino Motor Shield motor shield, or other supported motor driver, to build an **EX-CommandStation**.
 
