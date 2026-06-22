@@ -10,4 +10,5 @@ nav:
       - I2C (I<sup>2</sup>C) Displays: i2c-displays.md
       - I2C (I<sup>2</sup>C) GPIO Expanders: i2c-gpio-expanders.md
       - I2C (I<sup>2</sup>C) Servo/LED modules: i2c-servo-led-modules.md
+      - I2C (I<sup>2</sup>C) Multiplexers: i2c-multiplexers.md
       - Various Devices: various-devices

@@ -4,7 +4,7 @@
 
 - Open the [Play Store app](https://play.google.com/store/apps/details?id=dcc_ex.ex_toolbox) on your Android phone or tablet and search for 'EX-Toolbox'. Or use the QRCode below
 
-  ![download](/_static/images/ex-toolbox/download.png)
+  ![download](../../_static/images/ex-toolbox/download.png)
 
 - Once installed, open **EX‑Toolbox** and it will go through the initial setup wizard where it will ask for one permission, and for which which theme you would like to use.
 
@@ -49,7 +49,7 @@ Notes
 - The direct USB connection is only supported on Android devices that support USB on-the-go (OTG).
 - In general USB-C to the USB-C cables are automatically OTG, but if you are using a USB-C to USB-A cable, you will need to check that the cable supports OTG.  If it doesn't, the 'DCC-EX-USB-OTG' entry won't appear in the discovered server list.
 
-![USB OTG](/_static/images/ex-toolbox/usb_utg_prompt.png){width=30% align=right}
+![USB OTG](../../_static/images/ex-toolbox/usb_utg_prompt.png){width=30% align=right}
 
 - Anytime you connect any USB device to your phone or tablet, you will likely get a pop up asking if you want to allow **EX-Toolbox** to access the USB.  IF you connect devices other that an **EX-CommandStation** to your phone or tablet, just cancel the pop up, but if you only connect an **EX-CommandStation** you can check the box to always open **EX-Toolbox**.
 

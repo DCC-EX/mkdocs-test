@@ -10,14 +10,14 @@ Load a System Monitor - this will display any output from the test program.
 
 Compile and upload this sketch to the Arduino UNO - this should generate the screen shown below.
 
-![Fig 1.](/_static/images/ex-fastclock/FIG1.png)
+![Fig 1.](../../_static/images/ex-fastclock/FIG1.png)
 
 Touching the screen will then display the calibration screen shown in Fig 2 below:
 
-![Fig 2.](/_static/images/ex-fastclock/FIG2.png)
+![Fig 2.](../../_static/images/ex-fastclock/FIG2.png)
 
 As requested - using a stylus press the crosses displayed in the squares in turn.  When this process is complete the configuration data will be displayed on the screen.  The same data should be displayed on the System Monitor.  The output should look like that shown in Fig 3 below:
 
-![Fig 4](/_static/images/ex-fastclock/FIG4.png)
+![Fig 4](../../_static/images/ex-fastclock/FIG4.png)
 
 Cut/Copy the two lines indicated in Fig 3. and paste them into the appropriate space in the config.h file from the EX-Fast_Clock code.
