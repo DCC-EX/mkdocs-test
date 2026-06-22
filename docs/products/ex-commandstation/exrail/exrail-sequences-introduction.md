@@ -1,22 +1,18 @@
 # EXRAIL Sequences - An Introduction
 
-==TODO== add missing images (see comments in the page source)
-
 This page is a limited introduction to the **EXRAIL** automation sequences.  For more comprehensive information refer to the [EXRAIL Command List](command-list.md).
 
-Before You start, generally you will need to have created some Key Objects (e.g. Turnouts/Points, Sensors, Signals) before you start writing sequences.  Refer to the previous page (:doc:`creating-elements`) for creating and adding those Objects.  Note that these objects don't have to be listed in the myAutomation.h file before the sequence in which you use it, but it is good practice to do so.
+Before You start, generally you will need to have created some Key Objects (e.g. Turnouts/Points, Sensors, Signals) before you start writing sequences.  Refer to the [previous page](exrail-objects-introduction.md) for creating and adding those Objects.  Note that these objects don't have to be listed in the myAutomation.h file before the sequence in which you use it, but it is good practice to do so.
 
-For a full list of keywords, see :doc:`/exrail/exrail-command-reference`.  Only a subset are described on this page.
+For a full list of keywords, see [EXRAIL Command List](command-list.md).  Only a subset are described on this page.
 
 !!! warning "AI does not understand EXRAIL"
 
     Do not waste your time asking ChatGPT, Copilot or Gemini to create EXRAIL scripts.   They do not understand EXRAIL and will get it wrong 100% of the time.
 
 !!! warning "Do not use leading zeros for any numbers!"
-
-    **Do not use leading zeros for any numbers!**
   
-    Any number with a leading zero will be treated as an octal number, so for example ``ALIAS(MY_ALIAS, 010)`` will assign the value of ``8`` to MY_ALIAS, not ``10``. This is a common mistake that can lead to very confusing behavior if you don't know about it. Always use numbers without leading zeros, for example ``ALIAS(MY_ALIAS, 10)`` to assign the value of 10 to MY_ALIAS.
+    Any number with a leading zero will be treated as an octal number, so for example ``ALIAS(MY_ALIAS, 010)`` will assign the value of ``8`` to MY_ALIAS, not ``10``. This is a common mistake that can lead to very confusing behaviour if you don't know about it. Always use numbers without leading zeros, for example ``ALIAS(MY_ALIAS, 10)`` to assign the value of 10 to MY_ALIAS.
 
 ## Types of Sequence
 
@@ -69,9 +65,9 @@ Sequential execution of sequences is supported. i.e. One sequence can invoke ano
 
 !!! note "Ids (Sequence Numbers)"
 
-* ROUTE / AUTOMATION / SEQUENCE ids share the same sequence number collection. i.e. an id must be unique across all three types
-* All ROUTE / AUTOMATION / SEQUENCE ids are limited to 1 - 32767
-* 0 is reserved for the startup sequence appearing as the first entry in the EXRAIL script.
+    * ROUTE / AUTOMATION / SEQUENCE ids share the same sequence number collection. i.e. an id must be unique across all three types
+    * All ROUTE / AUTOMATION / SEQUENCE ids are limited to 1 - 32767
+    * 0 is reserved for the startup sequence appearing as the first entry in the EXRAIL script.
 
 In general, sequences follow the basic structure:
 
@@ -141,7 +137,6 @@ Sequences that are triggered when 'events' occur, include:
 
 See the [EXRAIL Command List](command-list.md) for additional Event Triggered Sequence types, and additional information on these types.
 
-
 ### Automatically Running a Sequence at Power Up
 
 !!! note "There is no longer an implied AUTOSTART"
@@ -168,7 +163,7 @@ The commands fall into some basic categories:
 
 * Command Station commands
 
-##### Action Commands - Getting EXRAIL to 'do' something
+#### Action Commands - Getting EXRAIL to 'do' something
 
 This type of command will somehow change Objects of the system you have created and defined, like turnouts/points, signals, servos, turntables, blocks and locos.  
 
@@ -334,7 +329,7 @@ To invoke another sequence, with no wish to return and execute any further comma
 
 The timing of the execution of the commands in a sequence can be altered with 'Delay' or 'Wait' type commands. i.e. they don't happen immediately on completion of the previous command.
 
-There are a number of delay type commands that you can explore in the :doc:`/exrail/exrail-command-reference`. We will look at just a few here.
+There are a number of delay type commands that you can explore in the [EXRAIL Command List](command-list.md). We will look at just a few here.
 
 ```cpp
 // Example
@@ -360,7 +355,7 @@ There are a number of delay type commands that you can explore in the :doc:`/exr
 
 #### Command Station Commands
 
-There are a substantial number of commands that you can explore in the :doc:`/exrail/exrail-command-reference`. We will look at just a few here.
+There are a substantial number of commands that you can explore in the [EXRAIL Command List](command-list.md). We will look at just a few here.
 
 ```cpp
   // use the drive away feature to recginse the loco on the
@@ -392,7 +387,7 @@ You may, however, find it more convenient to define turnouts/points using **EXRA
 Turnouts/Points defined in 'myAutomation.h' will still be visible to WiThrottle and JMRI in the normal way.
 
 A TURNOUT command sends DCC signals to a decoder attached to the track, a PIN_TURNOUT sends a "throw" or "close" (5V or 0V signal) to a pin on the Arduino, and a SERVO_TURNOUT sends an I2C serial command to a servo board connected to your servos.
- 
+
 See the [EXRAIL Command List](command-list.md) for TURNOUT, PIN_TURNOUT and SERVO_TURNOUT definitions.
 
 ### Referencing Signals

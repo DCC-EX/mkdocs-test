@@ -1,7 +1,5 @@
 # EXRAIL Objects - An Introduction
 
-==TODO== add missing images (see comments in the page source)
-
 First we need the 'objects' that we will use for our automation sequences.
 
 There are a number key objects that are important for creating sequences:
@@ -209,10 +207,7 @@ The servo module itself is powered from the Arduino, but the servos themselves c
 
 Connections to the Arduino are made with four jumper wires (Arduino: +5V, GND, SCL, SDA to servo module: **VCC**, GND, SCL, SDA), as shown on the following diagram:
 
-<!-- .. image:: /_static/images/i2c/ArduinoMegaServo.png
-   :alt: PCA9685 Servo Module
-   :scale: 30%
--->
+![PCA9685 Servo Module](../../../_static/images/i2c-connected-devices/ArduinoMegaServo.png) { width=200px }
 
 In **EX-CommandStation**, the drivers for the PCA9685 module is already installed, and made available to for use as pin numbers 100-115. A servo is shown in the diagram, connected to the first set of pins on the module.  This will be accessed using pin number 100.
 
@@ -220,7 +215,7 @@ Once you've made all of the connections, apply power to the Arduino.
 
 Then, in the serial monitor, enter the command `<D SERVO 100 450>`.  The servo should move, as long as it isn't (by some fluke) already in that position.
 
-==TODO== add page for using a/the serial monitor and link here.
+==TODO== add page for using the various serial monitors and link here
 
 Enter `<D SERVO 100 110>` and this time it should definitely move.  For the last parameter (servo position) you can use any value between about 105 and 490.
 
@@ -228,17 +223,11 @@ Try `<D SERVO 100 450 3>` and the servo should move slowly back.
 
 You can use the servo to control turnouts/points, semaphore signals, engine shed doors, and other layout components, to make your layout more dynamic and exciting.  In the picture below, you can see a servo mounted below the baseboard with a piece of wire passing through a slot cut in the baseboard, to operate a turnout/point.
 
-<!-- .. image:: /_static/images/i2c/TurnoutServoMount.jpg
-   :alt: Servo mount to operate a turnout/point
-   :scale: 60%
--->
+![Servo mount to operate a turnout/point](../../../_static/images/i2c-connected-devices/TurnoutServoMount.jpg) { width=200px }
 
 And in the next picture you can see a servo that operates a semaphore signal.  The signal, and its servo mounting bracket, were 3d-printed on a Creality Ender-3 printer.
 
-<!-- .. image:: /_static/images/i2c/SemaphoreSignal.jpg
-   :alt: Servo mount to operate a Semaphore Signal
-   :scale: 60%
--->
+![Servo mount to operate a Semaphore Signal](../../../_static/images/i2c-connected-devices/SemaphoreSignal.jpg) { width=200px }
 
 #### Configure myAutomation.h - Servo Turnouts/Points
 
@@ -370,17 +359,11 @@ On the Mega2560 Processor board:
 
 Place IR Infrared or Optical Sensor's Output wire on Dpins 22, 23, 24 ... 49. Plus one wire to GND and a third wire to 5v.
 
-<!-- .. image:: /_static/images/ir-sensor/mega-with-ir-sensor.png
-   :alt: IR Sensor connected to Arduino mega
-   :scale: 30%
--->
+![IR Sensor connected to Arduino mega](../../../_static/images/i2c-connected-devices/mega-with-ir-sensor.png) { width=200px }
 
 If you need more sensors then there are available pins on the Mega, you use one or more [I2C](/products/ex-commandstation/accessories/i2c-gpio-expanders.md)
 
-<!-- .. image:: /_static/images/ir-sensor/mega-with-io-expander-and-ir-sensor.png
-   :alt: IR Sensor connected to Arduino mega via IO Expander
-   :scale: 30%
--->
+![IR Sensor connected to Arduino mega via IO Expander](../../../_static/images/i2c-connected-devices/mega-with-io-expander-and-ir-sensor.png) { width=200px }
 
 ==TODO== Link here to recommended pin/vpin allocations etc.
 
@@ -390,7 +373,7 @@ You don't actually require anything special to be added to myAutomation.h in adv
 
 Handling sensors in sequences is made easy because **EXRAIL** throws away the concept of interrupts (“oh… sensor 22 has been detected… which loco was that and whatever do I do now?”) and instead has the sequences work on the basis of “do nothing, maintain speed until sensor 22 triggers, and then carry on in the script”.
 
-Sensor numbers are direct references to VPINs (virtual pin numbers) in the Hardware Abstraction Layer. For a Mega onboard GPIO pin, this is the same as the digital pin number. Other pin ranges refer to I/O expanders etc. 
+Sensor numbers are direct references to VPINs (virtual pin numbers) in the Hardware Abstraction Layer. For a Mega onboard GPIO pin, this is the same as the digital pin number. Other pin ranges refer to I/O expanders etc.
 
 !!! note "Hall effect sensors"
 
@@ -410,10 +393,7 @@ Sensor polling by JMRI is independent of this, and may continue if ``<S>`` comma
 
 To connect a servo to **EX-CommandStation**, you first need to get a module, based on the PCA9685 chip.
 
-<!-- .. image:: /_static/images/i2c/pca9685.jpg
-   :alt: PCA9685 Servo Module
-   :scale: 40%
--->
+![PCA9685 Servo Module](../../../_static/images/i2c-devices/PCA9685.jpg) { width=200px }
 
 These are widely available from eBay, Amazon, etc. for a few dollars.
 
