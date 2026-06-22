@@ -44,16 +44,20 @@ li a {
             - [Sensors](products\ex-commandstation\accessories\sensors.md)
             - [Connecting a servo turnout/point <small>(Servo Turnouts/Points)</small>](products\ex-commandstation\accessories\connecting-servo-turnout.md)
             - [Hardware device list <small>(Hardware List)</small>](products\ex-commandstation\accessories\hardware-list.md)
-            - [I2C (I<sup>2</sup>C) – An Introduction <small>(I2C (I<sup>2</sup>C) Intro)</small>](products\ex-commandstation\accessories\i2c-intro.md)
-            - [Buying I2C (I<sup>2</sup>C) Devices](products\ex-commandstation\accessories\buying-i2c-devices.md)
-            - **Various Devices**
-                - **Sounds**
-                    - [Sounds](products\ex-commandstation\accessories\various-devices\sounds\sounds.md)
-                    - [DFPlayer Sound player <small>(DFPlayer)</small>](products\ex-commandstation\accessories\various-devices\sounds\dfplayer.md)
-                    - [Serial connected DFPlayer <small>(Serial DFPlayer)</small>](products\ex-commandstation\accessories\various-devices\sounds\serial-dfplayer.md)
-                    - [I2C Connected DFPlayer <small>(I2C DFPlayer)</small>](products\ex-commandstation\accessories\various-devices\sounds\i2c-dfplayer.md)
-                    - [UDP Audio Driver for DCC-EX <small>(WaveShare)</small>](products\ex-commandstation\accessories\various-devices\sounds\udpaudio.md)
-                - [DS1307 Real Time clock chip <small>(DS1307)</small>](products\ex-commandstation\accessories\various-devices\ds1307.md)
+            - **I2C (I<sup>2</sup>C)**
+                - [I2C (I<sup>2</sup>C) – An Introduction <small>(I2C (I<sup>2</sup>C) Intro)</small>](products\ex-commandstation\accessories\i2c-intro.md)
+                - [Buying I2C (I<sup>2</sup>C) Devices](products\ex-commandstation\accessories\buying-i2c-devices.md)
+                - [I2C Displays <small>(I2C (I<sup>2</sup>C) Displays)</small>](products\ex-commandstation\accessories\i2c-displays.md)
+                - [I2C GPIO Expanders <small>(I2C (I<sup>2</sup>C) GPIO Expanders)</small>](products\ex-commandstation\accessories\i2c-gpio-expanders.md)
+                - [I2C Servo and LED Module <small>(I2C (I<sup>2</sup>C) Servo/LED modules)</small>](products\ex-commandstation\accessories\i2c-servo-led-modules.md)
+                - **Various Devices**
+                    - **Sounds**
+                        - [Sounds](products\ex-commandstation\accessories\various-devices\sounds\sounds.md)
+                        - [DFPlayer Sound player <small>(DFPlayer)</small>](products\ex-commandstation\accessories\various-devices\sounds\dfplayer.md)
+                        - [Serial connected DFPlayer <small>(Serial DFPlayer)</small>](products\ex-commandstation\accessories\various-devices\sounds\serial-dfplayer.md)
+                        - [I2C Connected DFPlayer <small>(I2C DFPlayer)</small>](products\ex-commandstation\accessories\various-devices\sounds\i2c-dfplayer.md)
+                        - [UDP Audio Driver for DCC-EX <small>(WaveShare)</small>](products\ex-commandstation\accessories\various-devices\sounds\udpaudio.md)
+                    - [DS1307 Real Time clock chip <small>(DS1307)</small>](products\ex-commandstation\accessories\various-devices\ds1307.md)
         - **EXRAIL**
             - [What is EXRAIL?](products\ex-commandstation\exrail\exrail.md)
             - [Virtual Bitmap device pins (VPINs) <small>(Vpins)</small>](products\ex-commandstation\exrail\vpins.md)

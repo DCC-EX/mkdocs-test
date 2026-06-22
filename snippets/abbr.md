@@ -50,4 +50,4 @@
 
 *[PWM]: Pulse Width Modulation
 
-*[Railroad] North American term. Elsewhere referred to as a "Railway"
+*[Railroad]: North American term. Elsewhere referred to as a "Railway"
