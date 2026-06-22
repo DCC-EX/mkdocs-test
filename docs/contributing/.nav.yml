@@ -1,6 +1,6 @@
 nav:
   - How You Can Contribute: contributing.md
-  - Donate: donations.md
+  - <b><span style="font-size:110%">Donate</b></span>: donations.md
   - Contributing Code: code/contributing-code.md
   - Contributing Documentation: documentation
   - Release Checklist: release-checklist.md

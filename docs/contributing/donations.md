@@ -26,7 +26,12 @@ Or choose user "dccex" on Patreon
 
 We are **DCC-EX** on GitHub Sponsors. You can also donate from our [EX-CommandStation GitHub](https://github.com/DCC-EX/CommandStation-EX) repository page by scrolling down the right side column.
 
-By Mail: You may send checks made out to **DCC-EX** to:
-DCC-EX
-PO Box 674
-Holly Springs, NC 27540-0674
+----
+
+**By Mail:**
+
+You may send checks made out to **DCC-EX** to:
+
+<p style="padding-left: 2em;">DCC-EX <br/>
+PO Box 674 <br/>
+Holly Springs, NC 27540-0674</p>

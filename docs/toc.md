@@ -232,7 +232,7 @@ li a {
     - [DCC++ VS DCC-EX? - Project History <small>(History)</small>](about\history.md)
 - **Donate / Contribute**
     - [How Can I Contribute? <small>(How You Can Contribute)</small>](contributing\contributing.md)
-    - [Donations <small>(Donate)</small>](contributing\donations.md)
+    - [Donations <small>(<b><span style="font-size:110%">Donate</b></span>)</small>](contributing\donations.md)
     - [Contributing to the public domain code <small>(Contributing Code)</small>](contributing\code\contributing-code.md)
     - **Contributing Documentation**
         - [Contributing to Documentation](contributing\documentation\docs.md)
