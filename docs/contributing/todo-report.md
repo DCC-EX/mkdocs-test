@@ -2,7 +2,7 @@
 
 Scanned docs root: `C:\Users\akers\OneDrive\github\github_doco\mkdocs-test\docs`
 
-Total TODO matches: 79
+Total TODO matches: 85
 
 | File | Line | Line text |
 | --- | ---: | --- |
@@ -30,6 +30,8 @@ Total TODO matches: 79
 | [docs/reference/serial-commands/serial-command-caret_not_in_nav.md](../reference/serial-commands/serial-command-caret_not_in_nav.md) | 28 | ==TODO== response |
 | [docs/reference/serial-commands/serial-command-caret_not_in_nav.md](../reference/serial-commands/serial-command-caret_not_in_nav.md) | 42 | * ==TODO== LOW - Example Commands |
 | [docs/reference/serial-commands/serial-command-caret_not_in_nav.md](../reference/serial-commands/serial-command-caret_not_in_nav.md) | 46 | * ==TODO== LOW - Example Responses |
+| [docs/reference/serial-commands/serial-command-dd-cc-diagnostic-messages_not_in_nav.md](../reference/serial-commands/serial-command-dd-cc-diagnostic-messages_not_in_nav.md) | 39 | ==TODO== LOW - Responses |
+| [docs/reference/serial-commands/serial-command-dd-cc-diagnostic-messages_not_in_nav.md](../reference/serial-commands/serial-command-dd-cc-diagnostic-messages_not_in_nav.md) | 53 | ==TODO== LOW - Example Responses |
 | [docs/reference/serial-commands/serial-command-dd_ack_not_in_nav.md](../reference/serial-commands/serial-command-dd_ack_not_in_nav.md) | 61 | ==TODO== LOW - Example Commands |
 | [docs/reference/serial-commands/serial-command-dd_ack_not_in_nav.md](../reference/serial-commands/serial-command-dd_ack_not_in_nav.md) | 65 | ==TODO== LOW - Example Responses |
 | [docs/reference/serial-commands/serial-command-equals_not_in_nav.md](../reference/serial-commands/serial-command-equals_not_in_nav.md) | 75 | * ==TODO== LOW - Example Commands |
@@ -63,6 +65,9 @@ Total TODO matches: 79
 | [docs/reference/serial-commands/serial-command-s-and-hash_not_in_nav.md](../reference/serial-commands/serial-command-s-and-hash_not_in_nav.md) | 68 | * ==TODO== Notes |
 | [docs/reference/serial-commands/serial-command-s-and-hash_not_in_nav.md](../reference/serial-commands/serial-command-s-and-hash_not_in_nav.md) | 78 | * ==TODO== LOW - Example Commands |
 | [docs/reference/serial-commands/serial-command-s-and-hash_not_in_nav.md](../reference/serial-commands/serial-command-s-and-hash_not_in_nav.md) | 82 | * ==TODO== LOW - Example Responses |
+| [docs/reference/serial-commands/serial-command-slash-reserve_not_in_nav.md](../reference/serial-commands/serial-command-slash-reserve_not_in_nav.md) | 24 | ==TODO== LOW - Responses |
+| [docs/reference/serial-commands/serial-command-slash-reserve_not_in_nav.md](../reference/serial-commands/serial-command-slash-reserve_not_in_nav.md) | 38 | * ==TODO== LOW - Example Commands |
+| [docs/reference/serial-commands/serial-command-slash-reserve_not_in_nav.md](../reference/serial-commands/serial-command-slash-reserve_not_in_nav.md) | 42 | * ==TODO== LOW - Example Responses |
 | [docs/reference/serial-commands/serial-command-slash_colour_signal_not_in_nav.md](../reference/serial-commands/serial-command-slash_colour_signal_not_in_nav.md) | 42 | * ==TODO== LOW - Example Commands |
 | [docs/reference/serial-commands/serial-command-tt_not_in_nav.md](../reference/serial-commands/serial-command-tt_not_in_nav.md) | 173 | * ==TODO== LOW - Example Responses |
 | [docs/reference/serial-commands/serial-command-t_not_in_nav.md](../reference/serial-commands/serial-command-t_not_in_nav.md) | 46 | * ==TODO== LOW - Example Commands |
@@ -73,8 +78,9 @@ Total TODO matches: 79
 | [docs/reference/serial-commands/serial-command-zz-and-z_not_in_nav.md](../reference/serial-commands/serial-command-zz-and-z_not_in_nav.md) | 79 | ==TODO== Response |
 | [docs/reference/serial-commands/serial-command-zz-and-z_not_in_nav.md](../reference/serial-commands/serial-command-zz-and-z_not_in_nav.md) | 97 | * ==TODO== LOW - Example Commands |
 | [docs/reference/serial-commands/serial-command-zz-and-z_not_in_nav.md](../reference/serial-commands/serial-command-zz-and-z_not_in_nav.md) | 101 | * ==TODO== LOW - Example Responses |
-| [docs/reference/serial-commands/shell_serial-command-xyz_not_in_nav.md](../reference/serial-commands/shell_serial-command-xyz_not_in_nav.md) | 54 | * ==TODO== LOW - Example Commands |
-| [docs/reference/serial-commands/shell_serial-command-xyz_not_in_nav.md](../reference/serial-commands/shell_serial-command-xyz_not_in_nav.md) | 60 | * ==TODO== LOW - Example Responses |
+| [docs/reference/serial-commands/shell_serial-command-xyz_not_in_nav.md](../reference/serial-commands/shell_serial-command-xyz_not_in_nav.md) | 40 | ==TODO== LOW - Responses |
+| [docs/reference/serial-commands/shell_serial-command-xyz_not_in_nav.md](../reference/serial-commands/shell_serial-command-xyz_not_in_nav.md) | 56 | * ==TODO== LOW - Example Commands |
+| [docs/reference/serial-commands/shell_serial-command-xyz_not_in_nav.md](../reference/serial-commands/shell_serial-command-xyz_not_in_nav.md) | 62 | * ==TODO== LOW - Example Responses |
 | [docs/reference/trackmanager/dc-mode-frequency.md](../reference/trackmanager/dc-mode-frequency.md) | 84 | - ==TODO==  How to effectively use DC mode when using multiple frequencies. |
 | [docs/reference/wiring/i2C/i2c-wiring.md](../reference/wiring/i2C/i2c-wiring.md) | 54 | - When using separate power sources, there is potential for a ground loop. ==TODO== |
 | [docs/products/ex-commandstation/testing.md](../products/ex-commandstation/testing.md) | 3 | (LOTS OF ==TODO== in this file) |

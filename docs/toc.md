@@ -248,6 +248,7 @@ li a {
 
 ## Pages Not In Navigation
 
+- [<small>``</ FREEALL|[RESERVE|FREE «section»]>``</small> <br/> Reserve or Free Sections](reference/serial-commands/serial-command-slash-reserve_not_in_nav.md)
 - [<small>``</ «colour» «signal»>``</small> <br/> Set signal colour](reference/serial-commands/serial-command-slash_colour_signal_not_in_nav.md)
 - [<small>``<= [«trackletter» «mode»] [«id»]>``</small> <br/>Request or Configure Track Manager <span style="display:none;">(_equals)</span>](reference/serial-commands/serial-command-equals_not_in_nav.md)
 - [<small>``<^ «loco»|[«leadLoco» «follower» [ «follower2..7»]]>``</small> <br/> Manage EX-CommandStation Consists/MUs](reference/serial-commands/serial-command-caret_not_in_nav.md)
@@ -255,6 +256,7 @@ li a {
 - [<small>``<C WIFI ON|OFF|AP|HIDDENAP|TEMP|DEFAULT|HOSTNAME [«various parameters»]>``</small> <br/> Setup WiFi (EX-CSB1 & ESP32, v5.7.0 ONLY)](reference/serial-commands/serial-command-cc-wifi_not_in_nav.md)
 - [<small>``<cmd «required parameter» [«optional parameter»]>``</small> <br/> Short command description](reference/serial-commands/shell_serial-command-xyz_not_in_nav.md)
 - [<small>``<D ACK LIMIT|MAX|MIN|OFF|ON [«value» [MS]]>`` <br/>``<C PROGBOOST>``</small> <br/>Modify System PROG track settings](reference/serial-commands/serial-command-dd_ack_not_in_nav.md)
+- [<small>``<D CMD|EXRAIL|ETHERNET|WIT|WEBSOCKET|RAILCOM|LCN ON|OFF>``</small> <br/>Enable/Disable Various Diagnostic Messages](reference/serial-commands/serial-command-dd-cc-diagnostic-messages_not_in_nav.md)
 - [<small>``<D WIFI ON|OFF|SHOW>``</small> <br/> WiFi diagnostics](reference/serial-commands/serial-command-dd-wifi_not_in_nav.md)
 - [<small>``<F «loco» [«function» «state»]|[DCCFREQ «freqValue»]>``</small> <br/>Set decoder functions or set PWM frequency](reference/serial-commands/serial-command-ff_not_in_nav.md)
 - [<small>``<I [«id»] [«various parameters»]>``</small> <br/><small>``<D TT «vpin» «steps» [«activity]>``</small> <br/><small>``<J O [«id»]>``</small> &nbsp; <small>``<J P «id»>``</small><br/>Manage Turntables](reference/serial-commands/serial-command-ii_not_in_nav.md)

@@ -1,5 +1,7 @@
 <!-- These are case sensitive -->
 
+*[DCC++]: Old name for **DCC-EX**. Some references still remain for backward compatibility
+
 *[WiThrottle]: Communication Protocol. Trademark + iOS app owned by Brett Hoffman
 *[API]: Application Programming Interface
 *[JMRI]: Java Model Railroad Interface
