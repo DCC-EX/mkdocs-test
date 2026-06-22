@@ -37,6 +37,8 @@ The following are not a direct response, but rather a broadcast that will be tri
 
 ### Response for ``<cmd>``
 
+==TODO== LOW - Responses
+
 ## Notes
 
 * ...
@@ -45,7 +47,7 @@ The following are not a direct response, but rather a broadcast that will be tri
 
 ## Examples
 
-[Also search for 'xxx'](?_xxx) or [search for 'xxx'](?_xxx)
+<!-- [Also search for 'xxx'](?_xxx) or [search for 'xxx'](?_xxx) -->
 
 ### *Example Commands*
 
