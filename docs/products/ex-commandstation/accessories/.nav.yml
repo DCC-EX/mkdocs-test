@@ -4,6 +4,10 @@ nav:
   - Sensors: sensors.md
   - Servo Turnouts/Points: connecting-servo-turnout.md
   - Hardware List: hardware-list.md
-  - I2C (I<sup>2</sup>C) Intro: i2c-intro.md
-  - Buying I2C (I<sup>2</sup>C) Devices: buying-i2c-devices.md
-  - Various Devices: various-devices
+  - I2C (I<sup>2</sup>C):
+      - I2C (I<sup>2</sup>C) Intro: i2c-intro.md
+      - Buying I2C (I<sup>2</sup>C) Devices: buying-i2c-devices.md
+      - I2C (I<sup>2</sup>C) Displays: i2c-displays.md
+      - I2C (I<sup>2</sup>C) GPIO Expanders: i2c-gpio-expanders.md
+      - I2C (I<sup>2</sup>C) Servo/LED modules: i2c-servo-led-modules.md
+      - Various Devices: various-devices
