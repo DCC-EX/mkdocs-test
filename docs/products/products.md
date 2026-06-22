@@ -9,20 +9,20 @@ The **DCC-EX** team has designed and released various different open source prod
 
 This page briefly outlines each of our products, the experience level you need to be able to use them, and links to more information.
 
-## Easy to Use Products ![Conductor Icon](/_static/images/levels/conductor.png){ .header-img }
+## Easy to Use Products ![Conductor Icon](../_static/images/levels/conductor.png){ .header-img }
 
 These are our powerful, but easy to use, get up and running quickly type products. You don't need to pick up a soldering iron or write any software, just plug them in and go!
 
 **NOTE:** You may need to install some software on your computer to take advantage of some of these, but our documentation will walk you through that process.
 
-![csb1](/_static/images/ex-csb1/csb1-small.png){: style="width: 30%" align=right}
+![csb1](../_static/images/ex-csb1/csb1-small.png){: style="width: 30%" align=right}
 
 ### EX-CommandStation Booster 1 Express
 
-[![EX-CommandStation Logo](/_static/images/logos/product-logo-ex-commandstation-only-light.png){ .only-light width=400px }
-![EX-CommandStation Logo](/_static/images/logos/product-logo-ex-commandstation-only-dark.png){ .only-dark width=400px }](/products/ex-commandstation/overview.md)
-[![EX-CSB1 Logo](/_static/images/logos/product-logo-ex-csb1-only-light.png){ .only-light width=400px }
-![EX-CSB1 Logo](/_static/images/logos/product-logo-ex-csb1-only-dark.png){ .only-dark width=400px }](/products/ex-commandstation/ex-csb1.md)
+[![EX-CommandStation Logo](../_static/images/logos/product-logo-ex-commandstation-only-light.png){ .only-light width=400px }
+![EX-CommandStation Logo](../_static/images/logos/product-logo-ex-commandstation-only-dark.png){ .only-dark width=400px }](/products/ex-commandstation/overview.md)
+[![EX-CSB1 Logo](../_static/images/logos/product-logo-ex-csb1-only-light.png){ .only-light width=400px }
+![EX-CSB1 Logo](../_static/images/logos/product-logo-ex-csb1-only-dark.png){ .only-dark width=400px }](/products/ex-commandstation/ex-csb1.md)
 
 A ready-to-run, all in one Command Station and Booster with built-in WiFi preloaded with our flagship train control, layout animation and automation software.
 
@@ -34,8 +34,8 @@ You can learn more about the software in the [EX-CommandStation documentation](/
 
 ### EX-WebThrottle
 
-[![EX-WebThrottle Logo](/_static/images/logos/product-logo-ex-webthrottle-only-light.png){ .only-light width=400px }
-![EX-WebThrottle Logo](/_static/images/logos/product-logo-ex-webthrottle-only-dark.png){ .only-dark width=400px }](/products/ex-webthrottle/ex-webthrottle.md)
+[![EX-WebThrottle Logo](../_static/images/logos/product-logo-ex-webthrottle-only-light.png){ .only-light width=400px }
+![EX-WebThrottle Logo](../_static/images/logos/product-logo-ex-webthrottle-only-dark.png){ .only-dark width=400px }](/products/ex-webthrottle/ex-webthrottle.md)
 
 This is the easiest way to validate you've connected your **EX-CommandStation** correctly to your track. Just load it up in your Chromium based web browser (Edge, Chrome, Opera) after connecting your **EX-CommandStation** to your computer and you can run your trains with it.
 
@@ -45,32 +45,32 @@ See the [EX-WebThrottle documentation](/products/ex-webthrottle/ex-webthrottle.m
 
 ### EX-Toolbox
 
-[![EX-Toolbox Logo](/_static/images/logos/product-logo-ex-toolbox-only-light.png){ .only-light width=400px }
-![EX-Toolbox Logo](/_static/images/logos/product-logo-ex-toolbox-only-dark.png){ .only-dark width=400px }](/products/ex-toolbox/ex-toolbox.md)
+[![EX-Toolbox Logo](../_static/images/logos/product-logo-ex-toolbox-only-light.png){ .only-light width=400px }
+![EX-Toolbox Logo](../_static/images/logos/product-logo-ex-toolbox-only-dark.png){ .only-dark width=400px }](/products/ex-toolbox/ex-toolbox.md)
 
 For Android phone users, this is an extremely useful tool to help with configuring various aspects of your trains, command station, and accessories.
 
 You can download it here
-[![app store](/_static/images/ex-toolbox/download.png)](https://play.google.com/store/apps/details?id=dcc_ex.ex_toolbox)
+[![app store](../_static/images/ex-toolbox/download.png)](https://play.google.com/store/apps/details?id=dcc_ex.ex_toolbox)
 
 Refer to the [EX-Toolbox documentation](/products/ex-toolbox/ex-toolbox.md) for how to install and use it.
 
 ---
 
-## A Bit More Technical Products ![Tinkerer Icon](/_static/images/levels/tinkerer.png){ .header-img } <br/><small>Intermediate Level</small>
+## A Bit More Technical Products ![Tinkerer Icon](../_static/images/levels/tinkerer.png){ .header-img } <br/><small>Intermediate Level</small>
 
 These products are more involved to get up and running, and aren't just plug in and go.
 
 You will need to perform some assembly and configure and install some software to take advantage of these ones, but you won't need to solder anything.
 
-![diy](/_static/images/mega/mega-small.png){: style="width: 30%" align=right}
+![diy](../_static/images/mega/mega-small.png){: style="width: 30%" align=right}
 
 ### EX-CommandStation Recommended Self Build Option (DIY)
 
-[![EX-CommandStation Logo](/_static/images/logos/product-logo-ex-commandstation-only-light.png){ .only-light width=400px }
-![EX-CommandStation Logo](/_static/images/logos/product-logo-ex-commandstation-only-dark.png){ .only-dark width=400px }](/diy/mega-easy.md)
-[![CS DIY Logo](/_static/images/logos/product-logo-ex-cs-diy-only-light.png){ .only-light width=400px }
-![CS DIY Logo](/_static/images/logos/product-logo-ex-cs-diy-only-dark.png){ .only-dark width=400px }](/diy/mega-easy.md)
+[![EX-CommandStation Logo](../_static/images/logos/product-logo-ex-commandstation-only-light.png){ .only-light width=400px }
+![EX-CommandStation Logo](../_static/images/logos/product-logo-ex-commandstation-only-dark.png){ .only-dark width=400px }](/diy/mega-easy.md)
+[![CS DIY Logo](../_static/images/logos/product-logo-ex-cs-diy-only-light.png){ .only-light width=400px }
+![CS DIY Logo](../_static/images/logos/product-logo-ex-cs-diy-only-dark.png){ .only-dark width=400px }](/diy/mega-easy.md)
 
 A supported DIY stack for EX-CommandStation using an Arduino Mega + EX-MotorShield8874 (or Arduino R3 Motor Shield) + EX-WiFiShield8266 (optional).
 
@@ -82,8 +82,8 @@ Refer to the [Easy build Arduino Mega page](/diy/mega-easy.md) for information o
 
 ### EX-MotorShield8874
 
-[![EX-8874 Logo](/_static/images/logos/product-logo-ex-motorshield8874-only-light.png){ .only-light width=400px }
-![EX-8874 Logo](/_static/images/logos/product-logo-ex-motorshield8874-only-dark.png){ .only-dark width=400px }](/products/ex-motorshield8874/ex-motorshield8874.md)
+[![EX-8874 Logo](../_static/images/logos/product-logo-ex-motorshield8874-only-light.png){ .only-light width=400px }
+![EX-8874 Logo](../_static/images/logos/product-logo-ex-motorshield8874-only-dark.png){ .only-dark width=400px }](/products/ex-motorshield8874/ex-motorshield8874.md)
 
 A dual channel, 5 amp (per channel) motor shield designed specifically for **DCC-EX** in an Arduino shield format.
 
@@ -95,8 +95,8 @@ Refer to the [EX-MotorShield8874 page](/products/ex-motorshield8874/ex-motorshie
 
 ### EX-WiFiShield8266
 
-[![EX-8266 Logo](/_static/images/logos/product-logo-ex-wifishield8266-only-light.png){ .only-light width=400px }
-![EX-8266 Logo](/_static/images/logos/product-logo-ex-wifishield8266-only-dark.png){ .only-dark width=400px }](/products/ex-wifishield8266/ex-wifishield8266.md)
+[![EX-8266 Logo](../_static/images/logos/product-logo-ex-wifishield8266-only-light.png){ .only-light width=400px }
+![EX-8266 Logo](../_static/images/logos/product-logo-ex-wifishield8266-only-dark.png){ .only-dark width=400px }](/products/ex-wifishield8266/ex-wifishield8266.md)
 
 A WiFi shield designed specifically for **DCC-EX** in an Arduino shield format.
 
@@ -106,7 +106,7 @@ Refer to the [EX-WiFiShield8266 page](/products/ex-wifishield8266/ex-wifishield8
 
 ---
 
-## Advanced Technical Products ![Engineer Icon](/_static/images/levels/engineer.png){ .header-img } <br/><small>Advanced Level</small>
+## Advanced Technical Products ![Engineer Icon](../_static/images/levels/engineer.png){ .header-img } <br/><small>Advanced Level</small>
 
 These products are far more involved and complicated to get up and running.
 
@@ -116,10 +116,10 @@ If you are new to **DCC-EX** and/or electronics in general, we do not recommend 
 
 ### EX-CommandStation Advanced Self Build (DIY)
 
-![EX-CommandStation Logo](/_static/images/logos/product-logo-ex-commandstation-only-light.png){ .only-light width=400px }
-![EX-CommandStation Logo](/_static/images/logos/product-logo-ex-commandstation-only-dark.png){ .only-dark width=400px }
-[![CS DIY Logo](/_static/images/logos/product-logo-ex-cs-diy-only-light.png){ .only-light width=400px }
-![CS DIY Logo](/_static/images/logos/product-logo-ex-cs-diy-only-dark.png){ .only-dark width=400px }](/diy/diy.md)
+![EX-CommandStation Logo](../_static/images/logos/product-logo-ex-commandstation-only-light.png){ .only-light width=400px }
+![EX-CommandStation Logo](../_static/images/logos/product-logo-ex-commandstation-only-dark.png){ .only-dark width=400px }
+[![CS DIY Logo](../_static/images/logos/product-logo-ex-cs-diy-only-light.png){ .only-light width=400px }
+![CS DIY Logo](../_static/images/logos/product-logo-ex-cs-diy-only-dark.png){ .only-dark width=400px }](/diy/diy.md)
 
 A more complex DIY stack for EX-CommandStation using Espressif ESP32 or STMicroelectronics Nucleo microcontrollers. Some modifications may be required depending on the device chosen, and there are various nuances to be aware of when assembling and configuring these DIY options.
 
@@ -131,8 +131,8 @@ Refer to the [EX-CommandStation DIY Pages](/diy/diy.md) for information on what 
 
 ### EX-FastClock
 
-[![EX-FastClock Logo](/_static/images/logos/product-logo-ex-fastclock-only-light.png){ .only-light width=400px }
-![EX-FastClock Logo](/_static/images/logos/product-logo-ex-fastclock-only-dark.png){ .only-dark width=400px }](/products/ex-fastclock/overview.md)
+[![EX-FastClock Logo](../_static/images/logos/product-logo-ex-fastclock-only-light.png){ .only-light width=400px }
+![EX-FastClock Logo](../_static/images/logos/product-logo-ex-fastclock-only-dark.png){ .only-dark width=400px }](/products/ex-fastclock/overview.md)
 
 An integrated fast clock for your layout.
 
@@ -144,8 +144,8 @@ Refer to the [EX-FastClock documentation](/products/ex-fastclock/overview.md) fo
 
 ### EX-Turntable
 
-[![EX-Turntable Logo](/_static/images/logos/product-logo-ex-turntable-only-light.png){ .only-light width=400px }
-![EX-Turntable Logo](/_static/images/logos/product-logo-ex-turntable-only-dark.png){ .only-dark width=400px }](/products/ex-turntable/ex-turntable.md)
+[![EX-Turntable Logo](../_static/images/logos/product-logo-ex-turntable-only-light.png){ .only-light width=400px }
+![EX-Turntable Logo](../_static/images/logos/product-logo-ex-turntable-only-dark.png){ .only-dark width=400px }](/products/ex-turntable/ex-turntable.md)
 
 An integrated turntable/traverser controller using a stepper motor.
 
@@ -157,8 +157,8 @@ Refer to the [EX-Turntable documentation](/products/ex-turntable/ex-turntable.md
 
 ### EX-DCCInspector
 
-[![EX-DCCInspector Logo](/_static/images/logos/product-logo-ex-dccinspector-only-light.png){ .only-light width=400px }
-![EX-DCCInspector Logo](/_static/images/logos/product-logo-ex-dccinspector-only-dark.png){ .only-dark width=400px }](https://dcc-ex.com/legacy-docs/ex-dccinspector/index.html#ex-dccinspector)
+[![EX-DCCInspector Logo](../_static/images/logos/product-logo-ex-dccinspector-only-light.png){ .only-light width=400px }
+![EX-DCCInspector Logo](../_static/images/logos/product-logo-ex-dccinspector-only-dark.png){ .only-dark width=400px }](https://dcc-ex.com/legacy-docs/ex-dccinspector/index.html#ex-dccinspector)
 
 A diagnostic tool to inspect DCC packets.
 
@@ -172,8 +172,8 @@ Refer to the [EX-DCCInspector documentation](https://dcc-ex.com/legacy-docs/ex-d
 
 ### EX-IOExpander
 
-[![EX-IOExpander Logo](/_static/images/logos/product-logo-ex-ioexpander-only-light.png){ .only-light width=400px }
-![EX-IOExpander Logo](/_static/images/logos/product-logo-ex-ioexpander-only-dark.png){ .only-dark width=400px }](/products/ex-ioexpander/ex-ioexpander.md)
+[![EX-IOExpander Logo](../_static/images/logos/product-logo-ex-ioexpander-only-light.png){ .only-light width=400px }
+![EX-IOExpander Logo](../_static/images/logos/product-logo-ex-ioexpander-only-dark.png){ .only-dark width=400px }](/products/ex-ioexpander/ex-ioexpander.md)
 
 Driven by a shortage of I2C connected I/O expansion devices, **EX-IOExpander** allows you to use various Arduino devices to expand the I/O capabilities of your **EX-CommandStation**.
 
@@ -185,8 +185,8 @@ Refer to the [EX-IOExpander documentation](/products/ex-ioexpander/ex-ioexpander
 
 ### EX-SensorCAM
 
-[![EX-SensorCAM Light Logo](/_static/images/logos/product-logo-ex-sensorcam-only-light.png){ .only-light width=400px }
-![EX-SensorCAM Dark Logo](/_static/images/logos/product-logo-ex-sensorcam-only-dark.png){ .only-dark width=400px }](/products/ex-sensorcam/ex-sensorcam.md)
+[![EX-SensorCAM Light Logo](../_static/images/logos/product-logo-ex-sensorcam-only-light.png){ .only-light width=400px }
+![EX-SensorCAM Dark Logo](../_static/images/logos/product-logo-ex-sensorcam-only-dark.png){ .only-dark width=400px }](/products/ex-sensorcam/ex-sensorcam.md)
 
 Provides up to 80 sensors for your layout using an ESP32 based camera solution.
 

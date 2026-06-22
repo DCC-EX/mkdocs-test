@@ -1,7 +1,7 @@
 # EX-FastClock
 
-[![EX-FastClock Logo](/_static/images/logos/product-logo-ex-fastclock-only-light.png){ .only-light width=400px }
-![EX-FastClock Logo](/_static/images/logos/product-logo-ex-fastclock-only-dark.png){ .only-dark width=400px }](/products/ex-fastclock/overview.md)
+[![EX-FastClock Logo](../../_static/images/logos/product-logo-ex-fastclock-only-light.png){ .only-light width=400px }
+![EX-FastClock Logo](../../_static/images/logos/product-logo-ex-fastclock-only-dark.png){ .only-dark width=400px }](/products/ex-fastclock/overview.md)
 
 Welcome to the home of **EX-FastClock**, a fully integrated Fast Clock for **EX-CommandStation**.
 
@@ -23,7 +23,7 @@ This project has now been extended to add the capability of integrating the cloc
 
 **EX-FastClock** is a standalone microprocessor based fast adjustable speed clock, using an additional Arduino Uno in conjunction with a shield based TFT touchscreen. Features have been added to **EX-CommandStation** to allow the clock to integrate to the **EX-CommandStation** and control **EXRAIL** based on time events.
 
-![EX-FastClock](/_static/images/ex-fastclock/Fastclock.png){ align=right }
+![EX-FastClock](../../_static/images/ex-fastclock/Fastclock.png){ align=right }
 
 Each time the time changes the **EX-CommandStation** looks for a time change event and if it finds a match it executes the commands recorded for that event as defined in the **EXRAIL** ``myAutomation.h`` file.  Additionally the **EX-CommandStation** will issue a time broadcast so that other devices such as clock repeaters can capture the time.  Also where WiThrottle devices are connected a WiThrottle broadcast is made which means that connected devices such as Engine Driver can display the time.
 

@@ -2,7 +2,7 @@
 
 Scanned docs root: `C:\Users\akers\OneDrive\github\github_doco\mkdocs-test\docs`
 
-Total TODO matches: 90
+Total TODO matches: 92
 
 | File | Line | Line text |
 | --- | ---: | --- |
@@ -94,5 +94,7 @@ Total TODO matches: 90
 | [docs/products/ex-commandstation/accessories/i2c-gpio-expanders.md](../products/ex-commandstation/accessories/i2c-gpio-expanders.md) | 5 | ==TODO== move legacy docs |
 | [docs/products/ex-commandstation/accessories/i2c-multiplexers.md](../products/ex-commandstation/accessories/i2c-multiplexers.md) | 5 | ==TODO== move legacy docs |
 | [docs/products/ex-commandstation/accessories/i2c-servo-led-modules.md](../products/ex-commandstation/accessories/i2c-servo-led-modules.md) | 5 | ==TODO== move legacy docs |
+| [docs/products/ex-commandstation/exrail/exrail-objects-introduction.md](../products/ex-commandstation/exrail/exrail-objects-introduction.md) | 215 | ==TODO== add page for using the various serial monitors and link here |
+| [docs/products/ex-commandstation/exrail/exrail-objects-introduction.md](../products/ex-commandstation/exrail/exrail-objects-introduction.md) | 365 | ==TODO== Link here to recommended pin/vpin allocations etc. |
 | [docs/products/ex-commandstation/trackmanager/trackmanager.md](../products/ex-commandstation/trackmanager/trackmanager.md) | 52 | ==TODO== move legacy docs |
 | [docs/contributing/documentation/standards.md](documentation/standards.md) | 61 | - ``==TODO==`` means that it is still a work-in-process and needs to be updated.  It must be followed by descriptive text describing the issue to be fixed. |

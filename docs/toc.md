@@ -50,6 +50,7 @@ li a {
                 - [I2C Displays <small>(I2C (I<sup>2</sup>C) Displays)</small>](products\ex-commandstation\accessories\i2c-displays.md)
                 - [I2C GPIO Expanders <small>(I2C (I<sup>2</sup>C) GPIO Expanders)</small>](products\ex-commandstation\accessories\i2c-gpio-expanders.md)
                 - [I2C Servo and LED Module <small>(I2C (I<sup>2</sup>C) Servo/LED modules)</small>](products\ex-commandstation\accessories\i2c-servo-led-modules.md)
+                - [I2C Multiplexers <small>(I2C (I<sup>2</sup>C) Multiplexers)</small>](products\ex-commandstation\accessories\i2c-multiplexers.md)
                 - **Various Devices**
                     - **Sounds**
                         - [Sounds](products\ex-commandstation\accessories\various-devices\sounds\sounds.md)
@@ -60,11 +61,14 @@ li a {
                     - [DS1307 Real Time clock chip <small>(DS1307)</small>](products\ex-commandstation\accessories\various-devices\ds1307.md)
         - **EXRAIL**
             - [What is EXRAIL?](products\ex-commandstation\exrail\exrail.md)
+            - [EXRAIL Objects - An Introduction <small>(Objects Introduction)</small>](products\ex-commandstation\exrail\exrail-objects-introduction.md)
+            - [EXRAIL Sequences - An Introduction <small>(Sequences Introduction)</small>](products\ex-commandstation\exrail\exrail-sequences-introduction.md)
             - [Virtual Bitmap device pins (VPINs) <small>(Vpins)</small>](products\ex-commandstation\exrail\vpins.md)
             - [**EXRAIL** Full Command List <small>(Command List)</small>](products\ex-commandstation\exrail\command-list.md)
             - **Cookbooks**
                 - [EXRAIL Cookbooks <small>(Cookbooks)</small>](products\ex-commandstation\exrail\cookbooks\index.md)
                 - **Editing Tips & tricks**
+                    - [General EXRAIL Tips](products\ex-commandstation\exrail\cookbooks\editing-tricks\general-tips.md)
                     - [Multiple Files in **EXRAIL**](products\ex-commandstation\exrail\cookbooks\editing-tricks\multi-files.md)
                     - [Maintaining multiple EX-CommandStations](products\ex-commandstation\exrail\cookbooks\editing-tricks\multiple-command-stations.md)
                     - [Naming sequences for easy commands](products\ex-commandstation\exrail\cookbooks\editing-tricks\naming-a-sequence.md)

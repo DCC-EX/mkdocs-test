@@ -39,7 +39,6 @@
 *[RTR]: Ready to Run
 
 *[consist]: North American term. "Consist" refers to multiple locos driving one train. Elsewhere referred to as a "Multiple Unit" (MU) train
-*[consists]: North American term. "Consist" refers to multiple locos driving one train. Elsewhere referred to as a "Multiple Unit" (MU) train
 *[Consist]: North American term. "Consist" refers to multiple locos driving one train. Elsewhere referred to as a "Multiple Unit" (MU) train
 *[Consists]: North American term. "Consist" refers to multiple locos driving one train. Elsewhere referred to as a "Multiple Unit" (MU) train
 *[MU]: Multiple Unit (MU) train. Refers to multiple locos driving one train. North American term is "Consist"
