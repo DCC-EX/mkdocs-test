@@ -26,7 +26,7 @@ N/A
 
 ## Notes
 
-* When enabled, diagnostic messages will be shown on the the Serial Monitor.
+* When enabled, diagnostic messages will be shown on the the [serial monitor](../tools/serial-monitor_not_in_nav.md).
 
 ----
 

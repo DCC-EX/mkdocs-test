@@ -184,14 +184,15 @@ li a {
         - [Linux](installer\download-linux.md)
         - [Mac](installer\download-mac.md)
         - [Windows](installer\download-win.md)
-    - [Advanced Users - VSCode/PlatformIO <small>(Advanced Users - VSC/PlatformIO)</small>](installer\platformio.md)
+    - [Testing your installation With EX-Installer <small>(Test Your Installation)</small>](installer\testing.md)
+    - [Advanced Users - VSCode/PlatformIO <small>(<br/>Advanced Users - VSC/PlatformIO)</small>](installer\platformio.md)
 - **Throttles**
     - [Throttles and Other Controllers <small>(Throttle Lists)</small>](throttles\throttles.md)
     - [EX-WebThrottle <small>(EX-WebThrottle (Web))</small>](throttles\ex-webthrottle.md)
     - [Engine Driver <small>(Engine Driver (Android))</small>](throttles\engine-driver.md)
     - [ThrottleCard <small>(ThrottleCard (iOS))</small>](throttles\throttlecard.md)
 - **Enhance**
-    - [Enhancing & Expanding EX-CommandStation <small>(Enhancing your EX-CommandStation)</small>](enhance\index.md)
+    - [Enhancing & Expanding EX‑CommandStation <small>(Enhancing your EX-CommandStation)</small>](enhance\index.md)
 - **News**
     - [DCC-EX News](news\index.md)
 - **Support**
@@ -293,5 +294,6 @@ li a {
 - [Engine Driver - Adding a Physical Dial/Knob](throttles/engine-driver-physical-knobs_not_in_nav.md)
 - [Engine Driver - Features when using the Native Protocol](throttles/engine-driver-native-protocol_not_in_nav.md)
 - [Incorrect IOREF voltage for 3.3v Microcontrollers](reference/esp32/ioref-incorrect-voltage-fix_not_in_nav.md)
+- [Using a Serial Monitor / Device Monitor](reference/tools/serial-monitor_not_in_nav.md)
 - [WiFi Configuration for version 5.7.0+ <br/><small>Graphical User Interface Options</small>](products/ex-commandstation/config-wifi-esp32-gui-options_not_in_nav.md)
 - [WiThrottle Protocol VS DCC-EX Native/Serial Commands](reference/withrottle-vs-native-protocol_not_in_nav.md)

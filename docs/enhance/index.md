@@ -1,4 +1,4 @@
-# Enhancing & Expanding EX-CommandStation
+# Enhancing & Expanding EX‑CommandStation
 
 Out of the box your **EX-CommandStation** can run trains, but it its capable of so much more.
 
@@ -31,7 +31,7 @@ Also see:
 * **EX-Turntable**
 * **EX-FastClock**
 * **EX-IOExpander**
-* **EX-SensotrCAM**
+* **EX-SensorCAM**
 
 ## Tools
 

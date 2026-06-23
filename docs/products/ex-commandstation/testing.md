@@ -14,7 +14,8 @@ There are several serial monitors available:
 - Built in to the Arduino IDE (We do not recommend that for development)
 - Built in to the EX-WebThrottle
 - Built in to JMRI or other train control software.
-(==TODO==.. above provide links to individual side-pages showing how to get at the serial monitor in each case)
+
+See [Serial Monitors](../../reference/tools/serial-monitor_not_in_nav.md) for more information.
 
 Whichever you use, please ensure the baud rate is set to 115200 so that it matches that used by the **EX-CommandStation**. (Installer anf WebThrottle do this automatically)
 

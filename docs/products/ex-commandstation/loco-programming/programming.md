@@ -18,7 +18,7 @@ The **EX-CommandStation** provides the underlying technology to read and write i
 
 ## Programming using Serial input commands
 
-This requires access to the serial monitor. It is the most flexible method and can provide diagnostics when things dont work. It also has the flexibility to adjust the tuning parameters to cope with decoders that are way outside the normal decoder electronic standards.
+This requires access to the [serial monitor](../../../reference/tools/serial-monitor_not_in_nav.md). It is the most flexible method and can provide diagnostics when things don't work. It also has the flexibility to adjust the tuning parameters to cope with decoders that are way outside the normal decoder electronic standards.
 
 See [Programming with Serial commands](/products/ex-commandstation/loco-programming/serial-programming.md)
 
