@@ -5211,12 +5211,35 @@
   
   
     <li class="md-nav__item">
+      <a href="../../../installer/testing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Test Your Installation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../../installer/platformio/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    Advanced Users - VSC/PlatformIO
+    <br/>Advanced Users - VSC/PlatformIO
     
   </span>
   
@@ -7562,32 +7585,32 @@
 <p>The simplest and most direct testing method is to use a serial monitor to talk directly to the USB connection of your <strong>EX-CommandStation</strong>. This is a fundamental aspect of the Arduino system and thus avoids issues such as WiFi connections. Indeed, this is the only way to see what's going wrong if your problems are WiFi or Ethernet related.</p>
 <h2 id="serial-monitors">Serial Monitors<a class="headerlink" href="#serial-monitors" title="Permanent link">&para;</a></h2>
 <p>There are several serial monitors available:</p>
+<ul>
+<li>Built in to EX-Installer</li>
+<li>Built in to the EX-WebThrottle</li>
+<li>Built in to JMRI or other train control software.</li>
+<li>Built in to VSCode is you are using that as an IDE.</li>
+<li>Built in to the Arduino IDE (We do not recommend that for development)</li>
+</ul>
+<p>See <a href="../../../reference/tools/serial-monitor_not_in_nav/">Serial Monitors</a> for more information.</p>
 <p><mark>TODO</mark> Instructions on using Device Monitor.</p>
 <p><a href="https://dcc-ex.com">Testing a link to dcc-ex.com</a></p>
 <p><a href="../../ex-ioexpander/ex-ioexpander/">Test an internal link to EX-IOExpander</a></p>
-<ul>
-<li>Built in to VSCode is you are using that as an IDE.</li>
-<li>Built in to the Arduino IDE (We do not recommend that for development)</li>
-<li>Built in to the EX-WebThrottle</li>
-<li>Built in to JMRI or other train control software.
-(<mark>TODO</mark>.. above provide links to individual side-pages showing how to get at the serial monitor in each case)</li>
-</ul>
 <p>Whichever you use, please ensure the baud rate is set to 115200 so that it matches that used by the <strong>EX-CommandStation</strong>. (Installer anf WebThrottle do this automatically)</p>
 <p>Its important to note that only one program on your PC can be connected to the <strong>EX-CommandStation</strong> via USB. It is a common cause of error messages if you try and open a serial monitor when one of the other programs is still running.</p>
 <p>In most cases, connecting a serial monitor causes the <strong>EX-CommandStation</strong> to restart.</p>
 <h2 id="simple-testing-commands-main-track">Simple testing commands (Main track)<a class="headerlink" href="#simple-testing-commands-main-track" title="Permanent link">&para;</a></h2>
 <p>Commands are entered as shown, complete with the <code>&lt; &gt;</code> markers. Case is important because <code>&lt;T</code> is a completely different command to <code>&lt;t</code></p>
 <h3 id="check-communication-and-version">Check communication and version<a class="headerlink" href="#check-communication-and-version" title="Permanent link">&para;</a></h3>
-<div class="language-cpp highlight"><pre><span></span><code><span class="o">&lt;</span><span class="n">s</span><span class="o">&gt;</span>
-</code></pre></div>
+<p><code>&lt;s&gt;</code> Will instruct the <strong>EX_CommandStation</strong> to provide information about itself</p>
 <p><mark>TODO</mark>... pic - Check communication and version</p>
 <h3 id="turn-on-track-power">Turn on track power<a class="headerlink" href="#turn-on-track-power" title="Permanent link">&para;</a></h3>
 <p><code>&lt;1&gt;</code> will turn on all 4 leds that lie behind the track output sockets.</p>
 <p><code>&lt;0&gt;</code> Will turn the tracks off.</p>
 <h3 id="move-a-loco">Move a loco<a class="headerlink" href="#move-a-loco" title="Permanent link">&para;</a></h3>
 <p>You can only drive a loco if you know the loco DCC address. For a brand new loco or decoder this is normally preset to 3.
-If you don't know the loco address, then you can find out using the <a href="../../../reference/serial-commands/">simple programming commands</a></p>
-<p>Assuming you know the loco address is 3, the following commands may be useful:  </p>
+If you don't know the loco address, then you can find out using the <a href="../loco-programming/programming/">simple programming commands</a>.</p>
+<p>Assuming you know the loco address is <code>3</code>, the following commands may be useful:  </p>
 <p><code>&lt;!&gt;</code> Emergency stop all locos</p>
 <p><code>&lt;t 3 50 1&gt;</code>  Move loco 3 speed 50 forward.</p>
 <p><code>&lt;t 3 20 0&gt;</code>  Move loco 3 speed 20 reverse.</p>
@@ -7620,7 +7643,7 @@ If you don't know the loco address, then you can find out using the <a href="../
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 18, 2026 02:00:18 UTC">June 18, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 23, 2026 09:52:08 UTC">June 23, 2026</span>
   </span>
 
     
