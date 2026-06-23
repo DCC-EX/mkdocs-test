@@ -2,7 +2,7 @@
 
 Scanned docs root: `C:\Users\akers\OneDrive\github\github_doco\mkdocs-test\docs`
 
-Total TODO matches: 103
+Total TODO matches: 102
 
 | File | Line | Line text |
 | --- | ---: | --- |
@@ -21,7 +21,6 @@ Total TODO matches: 103
 | [docs/installer/install-ex-turntable.md](../installer/install-ex-turntable.md) | 3 | ==TODO== complete EX-Installer EX-Turntable page needed |
 | [docs/installer/installer.md](../installer/installer.md) | 3 | ==TODO== This page should probably be combined with the overview page |
 | [docs/installer/platformio.md](../installer/platformio.md) | 3 | ==TODO== - provide setup help. |
-| [docs/installer/testing.md](../installer/testing.md) | 5 | ==TODO== move legacy docs - contents of testing.est from the old site |
 | [docs/products/products.md](../products/products.md) | 169 | ==TODO== move legacy docs |
 | [docs/reference/legacy-command-reference.md](../reference/legacy-command-reference.md) | 5 | ==TODO== move legacy docs |
 | [docs/reference/throttle-writers-guide.md](../reference/throttle-writers-guide.md) | 82 | ==TODO== Controlling Locos |
