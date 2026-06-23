@@ -1,6 +1,6 @@
 # Throttles and Other Controllers
 
-Any app or device that can use the WiThrottle Protocol or the DCC-EX Native/Serial Protocol should be able to connect to an **EX-CommandStation** to control you trains.
+Any app or device that can use the WiThrottle Protocol or the DCC-EX Native/Serial Protocol should be able to connect to an **EX-CommandStation** to control your trains.
 
 The following are lists of the Throttle/Controller apps and devices that are known to work with **EX-CommandStations**.  There may be others.
 

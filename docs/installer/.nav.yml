@@ -10,4 +10,5 @@ nav:
       - Linux: download-linux.md
       - Mac: download-mac.md
       - Windows: download-win.md
-  - Advanced Users - VSC/PlatformIO: platformio.md
+  - Test Your Installation: testing.md
+  - <br/>Advanced Users - VSC/PlatformIO: platformio.md

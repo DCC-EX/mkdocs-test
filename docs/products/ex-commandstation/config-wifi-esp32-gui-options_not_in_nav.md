@@ -21,7 +21,7 @@ From version 5.7.0, you must configure the WiFi settings through one of the foll
 
 1. **EX-WebThrottle** (via USB),
 2. **EX-Toolbox** (via USB or over WiFi),
-3. the serial monitor / device monitor of **EX-Installer**, the **Arduino IDE** or **VSC** (via USB)
+3. the serial monitor / device monitor of **EX-Installer**, the **Arduino IDE** or **VSC** (via USB) See [Serial Monitors](../../reference/tools/serial-monitor_not_in_nav.md)
 4. any WiFi throttle or app that can send the appropriate commands to the **EX-CommandStation** over WiFi
 
 **EX-WebThrottle** and **EX-Toolbox** provide a user-friendly interface for configuring WiFi settings, while the serial monitor method allows for more direct access to the configuration process but requires more technical knowledge.
@@ -105,7 +105,9 @@ The `Reset WiFi Settings` button on the WiFi Setup page will reset all WiFi sett
 
 ## Using EX-Installer, Arduino IDE, VSC, throttle apps
 
-The process for configuring WiFi settings using the serial monitor or device monitor on any of the **EX-Installer**, Arduino IDE, VSC or WiFi throttle apps are esentially the same.
+The process for configuring WiFi settings using the serial monitor or device monitor on any of the **EX-Installer**, Arduino IDE, VSC or WiFi throttle apps are essentially the same.
+
+See [Serial Monitors](../../reference/tools/serial-monitor_not_in_nav.md) for more information.
 
 Also see [WiFi configuration (CSB1 or ESP32 ONLY. V5.7.0+ ONLY)](config-wifi-esp32.md) for more detailed information.
 

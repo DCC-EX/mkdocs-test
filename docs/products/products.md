@@ -72,7 +72,7 @@ You will need to perform some assembly and configure and install some software t
 [![CS DIY Logo](../_static/images/logos/product-logo-ex-cs-diy-only-light.png){ .only-light width=400px }
 ![CS DIY Logo](../_static/images/logos/product-logo-ex-cs-diy-only-dark.png){ .only-dark width=400px }](/diy/mega-easy.md)
 
-A supported DIY stack for EX-CommandStation using an Arduino Mega + EX-MotorShield8874 (or Arduino R3 Motor Shield) + EX-WiFiShield8266 (optional).
+A supported DIY stack for **EX-CommandStation** using an Arduino Mega + **EX-MotorShield8874** (or Arduino R3 Motor Shield) + **EX-WiFiShield8266** (optional).
 
 If you want to build it yourself, this is our recommended setup which simply requires some assembly and software installation with no advanced modifications required.
 
@@ -149,7 +149,7 @@ Refer to the [EX-FastClock documentation](/products/ex-fastclock/overview.md) fo
 
 An integrated turntable/traverser controller using a stepper motor.
 
-The software and integration side of EX-Turntable is reasonably straight forward, however the mechanics of getting a turntable operational with a stepper motor and the required sensors to control the location of the turntable accurately is quite involved.
+The software and integration side of **EX-Turntable** is reasonably straight forward, however the mechanics of getting a turntable operational with a stepper motor and the required sensors to control the location of the turntable accurately is quite involved.
 
 Refer to the [EX-Turntable documentation](/products/ex-turntable/ex-turntable.md) for what's required and how to get up and running.
 

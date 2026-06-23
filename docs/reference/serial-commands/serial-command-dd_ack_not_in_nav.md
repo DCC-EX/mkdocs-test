@@ -42,7 +42,7 @@ N/A
 
 * The NMRA specifies that the ACK pulse duration should be 6 milliseconds, which is 6000 microseconds (µS), give or take 1000 µS. That means the minimum pulse duration is 5000 µS and the maximum is 7000 µS. There are many poorly designed decoders in existence so **DCC-EX** extends this range from 4000 to 8500 µS. If you have any decoders that still do not function within this range, you can adjust the ACK MIN and ACK MAX parameters.
 
-* When reading/writing CVs, the program will try again upon failure. The default is ``<D ACK RETRY 2>``, which means 3 attempts before a failure is reported. Each of the unsuccessful attempts is reported in the Serial Monitor or JMRI monitor log. The last unsuccessful attempt remains on the display if in use. To reset the running total, send the command manually: ``<D ACK RETRY 2>``.
+* When reading/writing CVs, the program will try again upon failure. The default is ``<D ACK RETRY 2>``, which means 3 attempts before a failure is reported. Each of the unsuccessful attempts is reported in the [serial monitor](../tools/serial-monitor_not_in_nav.md) or JMRI monitor log. The last unsuccessful attempt remains on the display if in use. To reset the running total, send the command manually: ``<D ACK RETRY 2>``.
 
     When combined with the ``<D ACK ON>`` Command, the ``<R>`` Command (with or without parameters) can be used for diagnostics, for example when you get a ``-1`` response.
 

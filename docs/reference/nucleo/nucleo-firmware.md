@@ -9,7 +9,7 @@ hide:
 
 - All Nucleos come with a built-in debugger interface, which is the portion of the PCB at the top near the USB connector. This is of great advantage during development as it helps us track down issues more readily. It does however mean that device drivers are needed for Windows (7, 10 and 11 supported), and that the debugger firmware may need upgrading. See notes below.
 
-- During testing, it was noted with certain USB chipsets on Windows 11 that serial responses via the USB debugger port would stop being received by the Serial Monitor, even though the device continued to operate normally. The recommendation to resolve this issue is to upgrade the debugger firmware.
+- During testing, it was noted with certain USB chipsets on Windows 11 that serial responses via the USB debugger port would stop being received by the [serial monitor](../tools/serial-monitor_not_in_nav.md), even though the device continued to operate normally. The recommendation to resolve this issue is to upgrade the debugger firmware.
 
 - We recommend you upgrade the debugger firmware regardless if you experience this issue or not, and regardless of whether you use Windows, Linux or MacOS. Instructions for Linux and MacOS can be found on the web but rely on using the Java app in the AllPlatforms folder.
 

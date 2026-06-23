@@ -1,6 +1,6 @@
 # Programming using Serial commands
 
-Serial commands are entered on a [serial monitor](?Serial)
+Serial commands are entered on a [serial monitor](../../../reference/tools/serial-monitor_not_in_nav.md)
 
 This gives you direct access to the underlying **DCC-EX** features to access the programming track.
 

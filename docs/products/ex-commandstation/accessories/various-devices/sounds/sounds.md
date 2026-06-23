@@ -20,12 +20,12 @@ There are two sound devices supported.
 - [DFPlayer devices](dfplayer.md)
 - [UDPAudio devices](udpaudio.md)
 
-These have very different electronic characteristics but are operated by the same set of commands and **EXRAIL** funtions designed for simple sound control.
+These have very different electronic characteristics but are operated by the same set of commands and **EXRAIL** functions designed for simple sound control.
 Refer to the relevant page for device specific details.
 
 ## Sound Commands
 
-The <y> command is specifically designed for easy testing and control of sounds from the serial monitor. Every command is directed towards the previously defined vpin.
+The <y> command is specifically designed for easy testing and control of sounds from the [serial monitor](../../../../../reference/tools/serial-monitor_not_in_nav.md). Every command is directed towards the previously defined vpin.
 
 - `<y vpin PLAY track [volume]>` Plays given track number and specified (or default) volume
 - `<y vpin REPEAT track [volume]>` Plays track repeatedly

@@ -1,4 +1,4 @@
-# Enhancing & Expanding EX-CommandStation
+# Enhancing & Expanding EX‑CommandStation
 
 Out of the box your **EX-CommandStation** can run trains, but it its capable of so much more.
 
@@ -31,7 +31,7 @@ Also see:
 * **EX-Turntable**
 * **EX-FastClock**
 * **EX-IOExpander**
-* **EX-SensotrCAM**
+* **EX-SensorCAM**
 
 ## Tools
 
@@ -39,4 +39,4 @@ Also see:
 
 * **EX-Toolbox**
 * **EX-DCCInspector**
-* Serial Monitors
+* [Serial Monitors](../reference/tools/serial-monitor_not_in_nav.md)
