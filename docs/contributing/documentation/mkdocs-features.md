@@ -14,7 +14,58 @@ Don't forget when working with MkDocs, you can preview locally by running ``mkdo
 
 All customised styling for our branding and other customisations is contained in the "dccex_theme.css" file.
 
-**Do not adjust the contents of this file without liaising with the **DCC-EX** Documenter team to ensure styling is consistent with our theme.**
+**Do not adjust the contents of this file without liaising with the DCC-EX Documenter team to ensure styling is consistent with our theme.**
+
+### Making tables smaller
+
+The following, or a modified version, can be added to a page or span to make the tables smaller without upsetting the global table style.
+
+```html
+<style>
+.md-typeset table td,  
+.md-typeset table th {
+    font-size: smaller !important;
+    padding-top: 2px !important;
+    padding-bottom: 2px !important;
+    padding-left: 2px !important;
+    padding-right: 2px !important;
+    line-height: 110% !important;
+    font-family: 'Roboto Condensed', sans-serif !important;
+ }
+</style>
+```
+
+Note that unless the ``<style>...</style>`` and the table are inside a ``<span>...</span>`` all the tables on the page will be smaller.
+
+To freeze the first column you can also add:
+
+```html
+<style>
+.md-typeset .md-typeset__scrollwrap {
+    overflow-x: auto !important;
+    overflow-y: visible !important;
+}
+
+.md-typeset__scrollwrap table {
+    display: table !important;
+    width: 100% !important;
+    border-collapse: separate !important;
+    border-spacing: 0 !important;
+}
+
+.md-typeset__scrollwrap th:first-child,
+.md-typeset__scrollwrap td:first-child,
+.md-typeset table tr th:first-child,
+.md-typeset table tr td:first-child {
+    position: sticky;
+    left: 0;
+    z-index: 3; /* Keeps the column on top of the scrolling content */
+    background: var(--md-default-bg-color--light);
+}
+</style>
+```
+
+Examples can be see in on the throttles page and the dc-mode-frequency page. The dc-mode-frequency also has additional styling to alter the widths of the columns.
 
 ## DCC-EX JavaScript Files
 
@@ -25,6 +76,13 @@ There are several JavaScript files included to perform various client side funct
 - legacy-docs-new-tab.js - Ensures all HREF links pointing to `https://dcc-ex.com/legacy-docs/` open in a new tab
 - platform.js - Helper to determine the browser's operating system
 - search-helper.js - Helper to create search links, see [The search link](/contributing/documentation/understanding-links.md#the-search-link)
+
+## DCC-EX Python Scripts
+
+There are several Python files included to perform various site build functions:
+
+- find_todos.py - Builds the page with the list of TODOs.  This may be removed when the site is close to complete
+- toc.py - Builds the Table of Contents page
 
 ## MkDocs Material Extensions
 
@@ -142,6 +200,8 @@ To include, simply reference them as such:
 
 This renders :thumbsup:
 
+----
+
 ## MkDocs Plugins
 
 The authoritative list of enabled plugins can be determined by the "mkdocs.yml" file.
@@ -207,54 +267,3 @@ The first page in a directory will have no previous button, and the last no next
 **NOTE:** This is calculated based on the sorting order of the page file names within the directory, and therefore custom ordering of pages using .nav.yml will cause unexpected results.
 
 To enable this customised navigation, a custom "footer.html" template has been included and can be found in "overrides/partials/footer.html". This is required in order to show/hide the previous and next arrows as determined by the plugin.
-
-### Making tables smaller
-
-The following, or a modified version, can be added to a page or span to make the tables smaller.
-
-```html
-<style>
-.md-typeset table td,  
-.md-typeset table th {
-    font-size: smaller !important;
-    padding-top: 2px !important;
-    padding-bottom: 2px !important;
-    padding-left: 2px !important;
-    padding-right: 2px !important;
-    line-height: 110% !important;
-    font-family: 'Roboto Condensed', sans-serif !important;
- }
-</style>
-```
-
-Note that unless the ``<style>...</style>`` and the table are inside a ``<span>...</span>`` all the tables on the page will be smaller.
-
-To freeze the first column you can also add:
-
-```html
-<style>
-.md-typeset .md-typeset__scrollwrap {
-    overflow-x: auto !important;
-    overflow-y: visible !important;
-}
-
-.md-typeset__scrollwrap table {
-    display: table !important;
-    width: 100% !important;
-    border-collapse: separate !important;
-    border-spacing: 0 !important;
-}
-
-.md-typeset__scrollwrap th:first-child,
-.md-typeset__scrollwrap td:first-child,
-.md-typeset table tr th:first-child,
-.md-typeset table tr td:first-child {
-    position: sticky;
-    left: 0;
-    z-index: 3; /* Keeps the column on top of the scrolling content */
-    background: var(--md-default-bg-color--light);
-}
-</style>
-```
-
-Examples can be see in on the throttles page and the dc-mode-frequency page. The dc-mode-frequency also has additional styling to alter the widths of the columns.
