@@ -8,14 +8,15 @@ The simplest and most direct testing method is to use a serial monitor to talk d
 
 There are several serial monitors available:
 
---8<-- "snippets/ex-installer/device-monitor.md"
-
-- Built in to VSCode is you are using that as an IDE.
-- Built in to the Arduino IDE (We do not recommend that for development)
+- Built in to EX-Installer
 - Built in to the EX-WebThrottle
 - Built in to JMRI or other train control software.
+- Built in to VSCode is you are using that as an IDE.
+- Built in to the Arduino IDE (We do not recommend that for development)
 
 See [Serial Monitors](../../reference/tools/serial-monitor_not_in_nav.md) for more information.
+
+--8<-- "snippets/ex-installer/device-monitor.md"
 
 Whichever you use, please ensure the baud rate is set to 115200 so that it matches that used by the **EX-CommandStation**. (Installer anf WebThrottle do this automatically)
 
@@ -29,9 +30,7 @@ Commands are entered as shown, complete with the `< >` markers. Case is importan
 
 ### Check communication and version
 
-```cpp
-<s>
-```
+`<s>` Will instruct the **EX_CommandStation** to provide information about itself
 
 ==TODO==... pic - Check communication and version
 
@@ -44,9 +43,9 @@ Commands are entered as shown, complete with the `< >` markers. Case is importan
 ### Move a loco
 
 You can only drive a loco if you know the loco DCC address. For a brand new loco or decoder this is normally preset to 3.
-If you don't know the loco address, then you can find out using the [simple programming commands](/reference/serial-commands.md)
+If you don't know the loco address, then you can find out using the [simple programming commands](../ex-commandstation/loco-programming/programming.md).
 
-Assuming you know the loco address is 3, the following commands may be useful:  
+Assuming you know the loco address is ``3``, the following commands may be useful:  
 
 `<!>` Emergency stop all locos
 

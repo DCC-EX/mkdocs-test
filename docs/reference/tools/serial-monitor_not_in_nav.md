@@ -17,7 +17,7 @@ A Serial Monitor, or Device Monitor, is another name for a "terminal" program. I
 
 If you know how to use a terminal program it is as simple as connecting your device to the Command Station, opening a session and selecting the right baud rate (115200) and line endings (Carriage Return and Line Feed). For the rest of us, we will include detailed instructions on how to use a computer or a phone app to connect to your Command Station.
 
-A number of different serial monitors are avalilable:
+A number of different serial monitors are available:
 
 * [Connect with EX-Installer](#connect-with-ex-installers-device-monitor) (Recommended)
 * [Connect with EX-WebThrottle](#connect-with-ex-webthrottle)
@@ -28,7 +28,7 @@ A number of different serial monitors are avalilable:
 
 ## Connect with EX-Installer's Device Monitor
 
-This is the simplest way to use **EX-Installer's* Device Monitor to show the serial output of your device.
+This is the simplest way to use **EX-Installer's** Device Monitor to show the serial output of your device.
 
 For details, refer to [Testing with EX-Installer](../../installer/testing.md).
 
@@ -36,7 +36,7 @@ For details, refer to [Testing with EX-Installer](../../installer/testing.md).
 
 ## Connect with EX-WebThrottle
 
-Another simple way is to to use **EX-WEbThrottle's* Device Monitor to show the serial output of your device.
+Another simple way is to to use **EX-WEbThrottle's** Device Monitor to show the serial output of your device.
 
 For details, refer to [Issuing Direct Commands with EX-Installer](/products/ex-webthrottle/ex-webthrottle.md#issuing-direct-commands).
 
@@ -48,7 +48,7 @@ For details, refer to [Issuing Direct Commands with EX-Installer](/products/ex-w
 
     While it is possible use the Arduino IDE, we *seriously* **DO NOT RECOMMEND IT** for anyone that is technically inexperienced. It is an order of magnitude more complex and much slower.
 
-    Just run **EX-Installer** and :ref:`open the serial monitor in the [EX-Installer Device Monitor](../../installer/testing.md). 
+    Just run **EX-Installer** and open the serial monitor in the [EX-Installer Device Monitor](../../installer/testing.md). 
 
 ### What You Will Need
 
@@ -70,7 +70,7 @@ Start the Arduino IDE. You should see something like this:
 
 ### Select the Correct COM Port
 
-Select "Port" and find the port on your computer that recognises the Arduino. If you don't see a port listed there and are using a clone board, you may have to install a driver for a CH340 USB chip that is on these boards: see here `Drivers for the CH340 [https://learn.sparkfun.com/tutorials/how-to-install-ch340-drivers/all](https://learn.sparkfun.com/tutorials/how-to-install-ch340-drivers/all)
+Select "Port" and find the port on your computer that recognises the Arduino. If you don't see a port listed there and are using a clone board, you may have to install a driver for a CH340 USB chip that is on these boards: see here [Drivers for the CH340](https://learn.sparkfun.com/tutorials/how-to-install-ch340-drivers/all)
 
 ![Select the COM Port](../../_static/images/arduino-ide/board_port_mega.jpg){ width=400px }
 
@@ -82,21 +82,19 @@ The Arduino IDE has a built in Serial Monitor. That means that in addition to up
 
 Make sure the **baud rate at the lower right of the window is set to "115200"**. This is the data communication speed, equivalent to 115.2kb/s! **Make sure the dropdown next to that says "Both NL & CR"**. That makes sure you send a 'new line' command and 'carriage return' which the Arduino expects.
 
-![Serial Monitor](../../_static/images/arduino-ide/serial_monitor.jpg){ width=400px }
-
-Serial Monitor - Note line ending and baud rate settings!
+![Serial Monitor](../../_static/images/arduino-ide/serial_monitor.jpg){ width=400px } <br/>Serial Monitor - Note line ending and baud rate settings!
 
 Opening the Serial Monitor always resets the Arduino board. Therefore, you should see a startup (boot) log immediately display in the window. If you have a Network shield or WiFi shield connected, you will see the Command Station setup its AP, or connect to your network if you gave it your credentials. If you don't have a network, that's fine; the Command Station will sense that, the network test will fail, but everything else will be working as it should.
 
 ### Enter Commands to the EX-CommandStation
 
-There is an entire language that |EX-CS| understands. We call this the DCC-EX API for "Application Programming Interface". If you are interested, the list of all the commands is here in the :doc:`/reference/software/command-summary-consolidated`. Let's just try two commands to make sure everything is working.
+There is an entire language that **EX-CommandStation** understands. We call this the DCC-EX API for "Application Programming Interface". If you are interested, the [list of all the commands](../../reference/serial-command-list.md). Let's just try two commands to make sure everything is working.
 
 All DCC-EX commands begin with a ``<`` and end with a ``>``. In the command window, type ``<1>`` and press the ``send`` button, or Enter on your keyboard. Power should come on to the main track. You should see 2 red LEDs light on the "A" power output of the |motor shield|.
 
 Now enter ``<s>`` (lowercase). You should see status information for your Command Station appear in the log.
 
-Turn off the power to the track by sending ``<0>`` to the CS. That is a "zero".
+Turn off the power to the track by sending ``<0>`` to the CS. That is a 'zero'.
 
 There are diagnostics to test CV reads and writes on the programming track, WiFi Diagnostics to test your connection to throttles like Engine Driver, Ethernet debugging,  and more. Read the documentation and experiment!
 
@@ -110,7 +108,7 @@ If you run into trouble, remember to send us a log by cutting and pasting the te
 
 * A Smart Phone
 * A Terminal program (see below)
-* A USB "On The Go" Cable (aka. OTG Cable)
+* A USB On-The-Go Cable (aka. OTG Cable)
 * The USB Cable for your Arduino
 
 ### USB OTG Cable

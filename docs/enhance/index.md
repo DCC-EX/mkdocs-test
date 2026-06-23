@@ -39,4 +39,4 @@ Also see:
 
 * **EX-Toolbox**
 * **EX-DCCInspector**
-* Serial Monitors
+* [Serial Monitors](../reference/tools/serial-monitor_not_in_nav.md)

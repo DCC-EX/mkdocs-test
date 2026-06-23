@@ -96,7 +96,7 @@ Total TODO matches: 103
 | [docs/reference/trackmanager/dc-mode-frequency.md](../reference/trackmanager/dc-mode-frequency.md) | 82 | - ==TODO==  How to effectively use DC mode when using multiple frequencies. |
 | [docs/reference/wiring/i2C/i2c-wiring.md](../reference/wiring/i2C/i2c-wiring.md) | 54 | - When using separate power sources, there is potential for a ground loop. ==TODO== |
 | [docs/products/ex-commandstation/testing.md](../products/ex-commandstation/testing.md) | 3 | (LOTS OF ==TODO== in this file) |
-| [docs/products/ex-commandstation/testing.md](../products/ex-commandstation/testing.md) | 36 | ==TODO==... pic - Check communication and version |
+| [docs/products/ex-commandstation/testing.md](../products/ex-commandstation/testing.md) | 35 | ==TODO==... pic - Check communication and version |
 | [docs/products/ex-dccinspector/index.md](../products/ex-dccinspector/index.md) | 8 | ==TODO== move legacy docs |
 | [docs/products/ex-ioexpander/ex-ioexpander.md](../products/ex-ioexpander/ex-ioexpander.md) | 8 | ==TODO== move legacy docs |
 | [docs/products/ex-webthrottle/ex-webthrottle.md](../products/ex-webthrottle/ex-webthrottle.md) | 6 | ==TODO== Split into separate pages for overview plus installing and using. |
