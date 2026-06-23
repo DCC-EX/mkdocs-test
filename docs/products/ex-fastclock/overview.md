@@ -1,7 +1,7 @@
 # EX-FastClock
 
-[![EX-FastClock Logo](../../_static/images/logos/product-logo-ex-fastclock-only-light.png){ .only-light width=400px }
-![EX-FastClock Logo](../../_static/images/logos/product-logo-ex-fastclock-only-dark.png){ .only-dark width=400px }](/products/ex-fastclock/overview.md)
+![EX-FastClock Logo](../../_static/images/logos/product-logo-ex-fastclock-only-light.png){ .only-light width=400px align=right }
+![EX-FastClock Logo](../../_static/images/logos/product-logo-ex-fastclock-only-dark.png){ .only-dark width=400px align=right }
 
 Welcome to the home of **EX-FastClock**, a fully integrated Fast Clock for **EX-CommandStation**.
 

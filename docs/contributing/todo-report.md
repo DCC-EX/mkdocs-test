@@ -2,13 +2,20 @@
 
 Scanned docs root: `C:\Users\akers\OneDrive\github\github_doco\mkdocs-test\docs`
 
-Total TODO matches: 95
+Total TODO matches: 103
 
 | File | Line | Line text |
 | --- | ---: | --- |
 | [docs/diy/esp32.md](../diy/esp32.md) | 57 | ==TODO== move legacy docs |
 | [docs/diy/mega-harder.md](../diy/mega-harder.md) | 18 | - an Arduino Standard Motor-Shield (or others as noted in ==TODO==) to power the track. |
 | [docs/diy/nucleo.md](../diy/nucleo.md) | 48 | ==TODO== move legacy docs |
+| [docs/enhance/index.md](../enhance/index.md) | 9 | ==TODO== basic intro to rosters and links to the appropriate EXRAIL pages |
+| [docs/enhance/index.md](../enhance/index.md) | 13 | ==TODO== basic intro to Turnouts/Points and links to the appropriate pages |
+| [docs/enhance/index.md](../enhance/index.md) | 17 | ==TODO== basic intro to sequences and links to the appropriate EXRAIL pages |
+| [docs/enhance/index.md](../enhance/index.md) | 21 | ==TODO== basic intro to TrackManager and links to the appropriate TrackManager pages |
+| [docs/enhance/index.md](../enhance/index.md) | 23 | ==TODO== links to the DC pages |
+| [docs/enhance/index.md](../enhance/index.md) | 27 | ==TODO== basic intro to accessories and links to the appropriate EXRAIL pages |
+| [docs/enhance/index.md](../enhance/index.md) | 38 | ==TODO== basic intro to tools and links to the appropriate pages |
 | [docs/installer/download-linux.md](../installer/download-linux.md) | 7 | ==TODO== - Add screenshots & fix page flow |
 | [docs/installer/install-ex-ioexpander.md](../installer/install-ex-ioexpander.md) | 3 | ==TODO== complete EX-Installer EX-IOExpander page needed |
 | [docs/installer/install-ex-turntable.md](../installer/install-ex-turntable.md) | 3 | ==TODO== complete EX-Installer EX-Turntable page needed |
@@ -90,6 +97,7 @@ Total TODO matches: 95
 | [docs/products/ex-commandstation/testing.md](../products/ex-commandstation/testing.md) | 3 | (LOTS OF ==TODO== in this file) |
 | [docs/products/ex-commandstation/testing.md](../products/ex-commandstation/testing.md) | 17 | (==TODO==.. above provide links to individual side-pages showing how to get at the serial monitor in each case) |
 | [docs/products/ex-commandstation/testing.md](../products/ex-commandstation/testing.md) | 35 | ==TODO==... pic - Check communication and version |
+| [docs/products/ex-dccinspector/index.md](../products/ex-dccinspector/index.md) | 8 | ==TODO== move legacy docs |
 | [docs/products/ex-ioexpander/ex-ioexpander.md](../products/ex-ioexpander/ex-ioexpander.md) | 8 | ==TODO== move legacy docs |
 | [docs/products/ex-webthrottle/ex-webthrottle.md](../products/ex-webthrottle/ex-webthrottle.md) | 6 | ==TODO== Split into separate pages for overview plus installing and using. |
 | [docs/products/ex-wifishield8266/ex-wifishield8266.md](../products/ex-wifishield8266/ex-wifishield8266.md) | 8 | ==TODO== Improve intro paragraph |

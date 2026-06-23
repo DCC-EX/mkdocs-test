@@ -1,7 +1,7 @@
 # EX-SensorCAM
 
-[![EX-SensorCAM Light Logo](/_static/images/logos/product-logo-ex-sensorcam-only-light.png){ .only-light width=400px }
-![EX-SensorCAM Dark Logo](/_static/images/logos/product-logo-ex-sensorcam-only-dark.png){ .only-dark width=400px }](/products/ex-sensorcam/ex-sensorcam.md)
+![EX-SensorCAM Light Logo](/_static/images/logos/product-logo-ex-sensorcam-only-light.png){ .only-light width=400px align=right }
+![EX-SensorCAM Dark Logo](/_static/images/logos/product-logo-ex-sensorcam-only-dark.png){ .only-dark width=400px align=right }
 
 EX-SensorCAM is a video based multi-channel position sensing camera.
 

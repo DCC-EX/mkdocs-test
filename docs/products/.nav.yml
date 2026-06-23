@@ -10,4 +10,4 @@ nav:
   - EX-IOExpander: ex-ioexpander/ex-ioexpander.md
   - EX-Turntable: ex-turntable/ex-turntable.md
   - EX-SensorCAM: ex-sensorcam
-  
+  - DCC Inspector: ex-dccinspector/index.md

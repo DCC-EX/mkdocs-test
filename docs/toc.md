@@ -156,6 +156,7 @@ li a {
         - [EX-SensorCAM Manual <small>(User Manual)</small>](products\ex-sensorcam\ex-sensor-manual.md)
         - [Native EX-SensorCAM Command List <small>(Command Reference)</small>](products\ex-sensorcam\ex-sensorcam-command-reference.md)
         - [EX-SensorCAM Abridged Manual <small>(Manual Abridged)</small>](products\ex-sensorcam\ex-sensor-manual-abridged.md)
+    - [EX-DCCInspector <small>(DCC Inspector)</small>](products\ex-dccinspector\index.md)
 - **Purchase**
     - [Official DCC-EX Suppliers <small>(Official Sellers)</small>](purchasing\official-sellers.md)
     - [Third Party Products and Sellers <small>(Third Party Sellers)</small>](purchasing\third-party-sellers.md)
@@ -189,6 +190,8 @@ li a {
     - [EX-WebThrottle](throttles\ex-webthrottle.md)
     - [Engine Driver](throttles\engine-driver.md)
     - [ThrottleCard](throttles\throttlecard.md)
+- **Enhance**
+    - [Enhancing and Expanding Your EX-CommandStation <small>(Enhancing your EX-CommandStation)</small>](enhance\index.md)
 - **News**
     - [DCC-EX News](news\index.md)
 - **Support**
