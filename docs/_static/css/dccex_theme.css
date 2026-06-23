@@ -213,6 +213,8 @@
   height: 1.5rem;
   margin-top: 0.2rem;
   margin-bottom: 0.2rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
 }
 
 .md-tabs__link {
@@ -225,7 +227,7 @@
 
 .md-tabs__item--active {
   font-weight: 700;
-  padding: 0 0.8rem;
+  padding: 0 0.6rem;
   border-radius: 999px; /* Pill shape */
   transition: background-color 0.3s ease, box-shadow 0.3s ease, color 0.3s ease;
 }
