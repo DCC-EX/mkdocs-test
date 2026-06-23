@@ -40,7 +40,7 @@ from the startup logs using the serial monitor
     <* MCP23017 I2C:0x21 Configured on Vpins:180-195 OFFLINE *>
     ```
 
-4. Examine the log to check that your PCA9685 has been detected and note the I2C address it found. This will typically be 0x40. If this address is 0x40 or 0x41 then the CS has defaulted this to be a PCA9685 and automatically assigned a range of 16 [VPINs](?VPIN) to represent the 16 servo outputs.
+4. Examine the log to check that your PCA9685 has been detected and note the I2C address it found. This will typically be 0x40. If this address is 0x40 or 0x41 then the **EX-CommandStation** has defaulted this to be a PCA9685 and automatically assigned a range of 16 [VPINs](?VPIN) to represent the 16 servo outputs.
 5. Examine the log further down and you should see where the VPINs are assigned. The following advice assumes that the address was 0x40 and the first VPIN will be 100.
 6. Plug a servo into the first output socket. DO NOT mechanically connect the servo arm to any turnout/point or animation as the servo may move unexpectedly and cause physical damage.  You will connect the servo arm after exercising the servo (step 8).
 7. Connect the additional servo power supply to the long-edge turrets on the PCA9685, observing the correct polarity. ![PCA9685](/_static/images/i2c-devices/PCA9685.jpg){: style="width: 70%"}

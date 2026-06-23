@@ -1,10 +1,12 @@
 # Installing EX-Toolbox
 
+This page explains how to install the **EX-Toolbox** Android app on your Android device, or through emulation, on a Windows or macOS PC.
+
 ## Installing EX-Toolbox on an Android phone or tablet
 
-- Open the [Play Store app](https://play.google.com/store/apps/details?id=dcc_ex.ex_toolbox) on your Android phone or tablet and search for 'EX-Toolbox'. Or use the QRCode below
+![download](../../_static/images/ex-toolbox/download.png){ width=150px align=right }
 
-  ![download](../../_static/images/ex-toolbox/download.png)
+- Open the [Play Store app](https://play.google.com/store/apps/details?id=dcc_ex.ex_toolbox) on your Android phone or tablet and search for 'EX-Toolbox'. Or use the QRCode below
 
 - Once installed, open **EX‑Toolbox** and it will go through the initial setup wizard where it will ask for one permission, and for which which theme you would like to use.
 
@@ -12,7 +14,7 @@
 
 ## Installing EX-Toolbox on MS Windows & macOS
 
-EX-Toolbox and all the Android based throttle apps listed can be run on Microsoft Windows PCs and Apple Silicon Macs using BlueStacks.
+**EX-Toolbox** and all the Android based throttle apps listed can be run on Microsoft Windows PCs and Apple Silicon Macs using BlueStacks.
 
 ***BlueStacks***
 
@@ -34,15 +36,15 @@ Follow the instructions on their [site](https://www.bluestacks.com/)  to install
 
 ## Connecting to your EX-CommandStation
 
-Please remember that to connect to a Wifi **EX-CommandStation** on the correct WiFi network.
+Please remember that to connect to a WiFi **EX-CommandStation** on the correct WiFi network.
 
-* If you are running your **EX-CommandStation** in Access Point (AP) mode, you must switch your phone or tablet WiFi to the access point / WiFi network/SSID that the EX-CommandStation has created.
+- If you are running your **EX-CommandStation** in Access Point (AP) mode, you must switch your phone or tablet WiFi to the access point / WiFi network/SSID that the EX-CommandStation has created.
 
-* If you are running your **EX-CommandStation in Station mode, you must switch your phone or tablet WiFi to your home access point / WiFi network/SSID. that same one that the EX-CommandStation is connected to.
+- If you are running your **EX-CommandStation** in Station (STA) mode, you must switch your phone or tablet WiFi to your home access point / WiFi network/SSID. that same one that the EX-CommandStation is connected to.
 
 ### Direct USB / USB OTG
 
-As of Version 0.1.35 of **EX-Toolbox**, the discovered server list will also include an entry 'DCC-EX-USB-OTG' if you have a |EX-CS| connected directly to your phone or tablet using a USB on-the-go (OTG) cable.
+As of Version 0.1.35 of **EX-Toolbox**, the discovered server list will also include an entry ``DCC-EX-USB-OTG`` if you have a **EX-CommandStation** connected directly to your phone or tablet using a USB on-the-go (OTG) cable.
 
 Notes
 
@@ -59,7 +61,7 @@ Other than the very first time you start **EX‑Toolbox**, when the app opens yo
 
 ![connecting](../../_static/images/ex-toolbox/connect.png){width="200px"}
 
-There are three ways you can select a EX‑CommandStation to connect to:
+There are three ways you can select an **EX‑CommandStation** to connect to:
 
 - ``IP Address and Port`` <br/>
   To find your EX-CommandStation's IP address and Port refer you original setup or, if you have a OLED screen on your **EX-CommandStation** the details will be displayed on it.
@@ -82,3 +84,5 @@ There are three ways you can select a EX‑CommandStation to connect to:
 ----
 
 Follow the [User Guide](user-guide.md)
+
+--8<-- "snippets/abbr.md"

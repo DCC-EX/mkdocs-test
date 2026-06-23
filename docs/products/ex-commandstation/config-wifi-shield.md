@@ -50,8 +50,7 @@ The AP mode password must be at least 8 characters long.
 The default channel is set to "1". Use a phone WiFi analyser app to see which channels are relatively quiet in your area. If you need to use an
 alternate channel (we recommend using only 1,6, or 11) you may change it here.
 
-- WIFI_HOSTNAME: The default is "dccex" but you can change this if you have more than one
-CS on you home router to make them show up with different names on the network.
+- WIFI_HOSTNAME: The default is "dccex" but you can change this if you have more than one **EX-CommandStation** on you home router to make them show up with different names on the network.
 Host names starting with "dccex" are more readily found by WiFi throttles.
 
 ```cpp
