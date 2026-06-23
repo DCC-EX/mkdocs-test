@@ -1,5 +1,7 @@
 # EX-Installer
 
+==TODO== This page should probably be combined with the overview page
+
 With the exception of a **EX-CommandStation Booster 1 Express** [EX-CSB1](?CSB1) used solely as shipped with no accessories or options, you will need to download and install software to your **EX-CommandStation** or other **DCC-EX** products.
 
 This is managed by **EX-Installer** which is responsible for obtaining the relevant software and libraries, merging your custom configurations and mind-bending automations, locating the USB connection to your device,  compiling and downloading the result and showing the serial log from your device if required.
