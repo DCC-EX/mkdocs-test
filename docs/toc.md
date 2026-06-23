@@ -156,6 +156,7 @@ li a {
         - [EX-SensorCAM Manual <small>(User Manual)</small>](products\ex-sensorcam\ex-sensor-manual.md)
         - [Native EX-SensorCAM Command List <small>(Command Reference)</small>](products\ex-sensorcam\ex-sensorcam-command-reference.md)
         - [EX-SensorCAM Abridged Manual <small>(Manual Abridged)</small>](products\ex-sensorcam\ex-sensor-manual-abridged.md)
+    - [EX-DCCInspector <small>(DCC Inspector)</small>](products\ex-dccinspector\index.md)
 - **Purchase**
     - [Official DCC-EX Suppliers <small>(Official Sellers)</small>](purchasing\official-sellers.md)
     - [Third Party Products and Sellers <small>(Third Party Sellers)</small>](purchasing\third-party-sellers.md)
@@ -172,20 +173,25 @@ li a {
     - [Installing EX-CommandStation firmware <small>(Installing Software)</small>](diy\installer.md)
     - [DIY - Other devices <small>(Other Devices)</small>](diy\others.md)
 - **Install**
-    - [Using EX-Installer](installer\overview.md)
-    - [EX-Installer <small>(Installer)</small>](installer\installer.md)
+    - [EX-Installer Overview](installer\overview.md)
+    - [EX-Installer](installer\installer.md)
     - [First Run installer <small>(First Run)</small>](installer\first-run.md)
-    - [Select Product to Install <small>(Select Product)</small>](installer\select-product.md)
-    - [Installing EX-CommandStation Software <small>(Install Cs)</small>](installer\install-cs.md)
-    - [Advanced Users - VSCode/PlatformIO <small>(Advanced Users - PlatformIO)</small>](installer\platformio.md)
-    - [Download linux](installer\download-linux.md)
-    - [Download mac](installer\download-mac.md)
-    - [Download win](installer\download-win.md)
+    - [Select Product to Install <small>(Select A Product)</small>](installer\select-product.md)
+    - [Installing EX-CommandStation Software <small>(Install EX-CommandStation)</small>](installer\install-cs.md)
+    - [Install EX-IOExpander](installer\install-ex-ioexpander.md)
+    - [Install EX-Turntable](installer\install-ex-turntable.md)
+    - **Download EX-Installer**
+        - [Linux](installer\download-linux.md)
+        - [Mac](installer\download-mac.md)
+        - [Windows](installer\download-win.md)
+    - [Advanced Users - VSCode/PlatformIO <small>(Advanced Users - VSC/PlatformIO)</small>](installer\platformio.md)
 - **Throttles**
     - [Throttles and Other Controllers <small>(Throttle Lists)</small>](throttles\throttles.md)
-    - [EX-WebThrottle](throttles\ex-webthrottle.md)
-    - [Engine Driver](throttles\engine-driver.md)
-    - [ThrottleCard](throttles\throttlecard.md)
+    - [EX-WebThrottle <small>(EX-WebThrottle (Web))</small>](throttles\ex-webthrottle.md)
+    - [Engine Driver <small>(Engine Driver (Android))</small>](throttles\engine-driver.md)
+    - [ThrottleCard <small>(ThrottleCard (iOS))</small>](throttles\throttlecard.md)
+- **Enhance**
+    - [Enhancing & Expanding EX-CommandStation <small>(Enhancing your EX-CommandStation)</small>](enhance\index.md)
 - **News**
     - [DCC-EX News](news\index.md)
 - **Support**

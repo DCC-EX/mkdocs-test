@@ -1,7 +1,7 @@
 # EX-WebThrottle - Overview
 
-[![EX-WebThrottle Logo](../../_static/images/logos/product-logo-ex-webthrottle-only-light.png){ .only-light width=400px }
-![EX-WebThrottle Logo](../../_static/images/logos/product-logo-ex-webthrottle-only-dark.png){ .only-dark width=400px }](/products/ex-webthrottle/ex-webthrottle.md)
+![EX-WebThrottle Logo](../../_static/images/logos/product-logo-ex-webthrottle-only-light.png){ .only-light width=400px align=right }
+![EX-WebThrottle Logo](../../_static/images/logos/product-logo-ex-webthrottle-only-dark.png){ .only-dark width=400px align=right }
 
 ==TODO== Split into separate pages for overview plus installing and using.
 

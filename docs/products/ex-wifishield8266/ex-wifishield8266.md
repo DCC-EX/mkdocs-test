@@ -1,7 +1,7 @@
 # EX-WiFiShield 8266
 
-[![EX-8266 Logo](../../_static/images/logos/product-logo-ex-wifishield8266-only-light.png){ .only-light width=400px }
-![EX-8266 Logo](../../_static/images/logos/product-logo-ex-wifishield8266-only-dark.png){ .only-dark width=400px }](/products/ex-wifishield8266/ex-wifishield8266.md)
+![EX-8266 Logo](../../_static/images/logos/product-logo-ex-wifishield8266-only-light.png){ .only-light width=400px align=right }
+![EX-8266 Logo](../../_static/images/logos/product-logo-ex-wifishield8266-only-dark.png){ .only-dark width=400px align=right }
 
 Designed in conjunction with the **DCC-EX** development team…
 

@@ -4,6 +4,10 @@ Any app or device that can use the WiThrottle Protocol or the DCC-EX Native/Seri
 
 The following are lists of the Throttle/Controller apps and devices that are known to work with **EX-CommandStations**.  There may be others.
 
+- [By Client Technology](#throttles-by-client-technology)
+- [By Communication Technology](#throttles-by-communication-technology)
+- [Comparison Table](#comparison-table)
+
 ----
 
 ## Throttles - By Client Technology
@@ -80,7 +84,7 @@ However the **DCC-EX Native/Serial commands** provide a significant number of ex
 
 - [WiThrottle Server, DCC-EX Native/Serial Commands Explained](/reference/withrottle-vs-native-protocol_not_in_nav.md)
 - [Connect WiFi Throttle via USB](connect_wifi_throttle_via_usb_not_in_nav.md)
-- [Android Apps on Window s& macOS](android-apps-on-windows-and-ios_not_in_nav.md)
+- [Running Android Apps on Window s& macOS](android-apps-on-windows-and-ios_not_in_nav.md)
 
 ### DCC-EX Native/Serial Commands
 

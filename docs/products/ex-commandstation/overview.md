@@ -1,7 +1,7 @@
 # The DCC-EX EX-CommandStation - Overview
 
-[![EX-CommandStation Logo](../../_static/images/logos/product-logo-ex-commandstation-only-light.png){ .only-light width=400px }
-![EX-CommandStation Logo](../../_static/images/logos/product-logo-ex-commandstation-only-dark.png){ .only-dark width=400px }](/products/ex-commandstation/overview.md)
+![EX-CommandStation Logo](../../_static/images/logos/product-logo-ex-commandstation-only-light.png){ .only-light width=400px align=right }
+![EX-CommandStation Logo](../../_static/images/logos/product-logo-ex-commandstation-only-dark.png){ .only-dark width=400px align=right }
 
 A DCC Command Station powers your track and sends digital signals to the locos and accessories through the track. All commercial command stations do that, but we think we do it a lot better for a lot less money.
 

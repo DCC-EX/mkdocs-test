@@ -1,7 +1,7 @@
 # EX-Toolbox - Overview
 
-[![EX-Toolbox Logo](../../_static/images/logos/product-logo-ex-toolbox-only-light.png){ .only-light width=400px }
-![EX-Toolbox Logo](../../_static/images/logos/product-logo-ex-toolbox-only-dark.png){ .only-dark width=400px }](/products/ex-toolbox/ex-toolbox.md)
+![EX-Toolbox Logo](../../_static/images/logos/product-logo-ex-toolbox-only-light.png){ .only-light width=400px align=right }
+![EX-Toolbox Logo](../../_static/images/logos/product-logo-ex-toolbox-only-dark.png){ .only-dark width=400px align=right }
 
 **EX‑Toolbox** is a free, open source, Android app to help setup and configure your **EX‑CommandStation**. It is intended for setup, configuration, debugging your **EX-CommandStation** rather than continuous use.
 
