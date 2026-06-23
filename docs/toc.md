@@ -139,6 +139,7 @@ li a {
     - **EX-Toolbox**
         - [EX-Toolbox - Overview <small>(EX-Toolbox)</small>](products\ex-toolbox\ex-toolbox.md)
         - [Installing EX-Toolbox <small>(Installation Guide)</small>](products\ex-toolbox\installation-guide.md)
+        - [Connecting EX-Toolbox to your EX-CommandStation <small>(Connecting)</small>](products\ex-toolbox\connecting.md)
         - [EX-Toolbox User Guide <small>(User Manual)</small>](products\ex-toolbox\user-guide.md)
     - **EX-FastClock**
         - [EX-FastClock <small>(Overview)</small>](products\ex-fastclock\overview.md)
@@ -186,7 +187,7 @@ li a {
         - [Windows](installer\download-win.md)
     - [Testing your installation With EX-Installer <small>(Test Your Installation)</small>](installer\testing.md)
     - [Advanced Users - VSCode/PlatformIO <small>(<br/>Advanced Users - VSC/PlatformIO)</small>](installer\platformio.md)
-- **Throttles**
+- **Use (Throttles)**
     - [Throttles and Other Controllers <small>(Throttle Lists)</small>](throttles\throttles.md)
     - [EX-WebThrottle <small>(EX-WebThrottle (Web))</small>](throttles\ex-webthrottle.md)
     - [Engine Driver <small>(Engine Driver (Android))</small>](throttles\engine-driver.md)
