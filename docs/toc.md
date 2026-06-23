@@ -187,11 +187,11 @@ li a {
     - [Advanced Users - VSCode/PlatformIO <small>(Advanced Users - VSC/PlatformIO)</small>](installer\platformio.md)
 - **Throttles**
     - [Throttles and Other Controllers <small>(Throttle Lists)</small>](throttles\throttles.md)
-    - [EX-WebThrottle](throttles\ex-webthrottle.md)
-    - [Engine Driver](throttles\engine-driver.md)
-    - [ThrottleCard](throttles\throttlecard.md)
+    - [EX-WebThrottle <small>(EX-WebThrottle (Web))</small>](throttles\ex-webthrottle.md)
+    - [Engine Driver <small>(Engine Driver (Android))</small>](throttles\engine-driver.md)
+    - [ThrottleCard <small>(ThrottleCard (iOS))</small>](throttles\throttlecard.md)
 - **Enhance**
-    - [Enhancing and Expanding Your EX-CommandStation <small>(Enhancing your EX-CommandStation)</small>](enhance\index.md)
+    - [Enhancing & Expanding EX-CommandStation <small>(Enhancing your EX-CommandStation)</small>](enhance\index.md)
 - **News**
     - [DCC-EX News](news\index.md)
 - **Support**

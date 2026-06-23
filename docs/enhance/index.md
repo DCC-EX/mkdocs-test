@@ -1,6 +1,6 @@
-# Enhancing and Expanding Your EX-CommandStation
+# Enhancing & Expanding EX-CommandStation
 
-Out of the box your *EX-CommandStation** can run trains, but it its capable of so much more.
+Out of the box your **EX-CommandStation** can run trains, but it its capable of so much more.
 
 Explore this page to see how **EX-CommandStation** can be expanded to enhance your model railroad/railway.
 
@@ -39,3 +39,4 @@ Also see:
 
 * **EX-Toolbox**
 * **EX-DCCInspector**
+* Serial Monitors
