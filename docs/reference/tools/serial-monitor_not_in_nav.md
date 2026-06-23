@@ -94,7 +94,7 @@ All DCC-EX commands begin with a ``<`` and end with a ``>``. In the command wind
 
 Now enter ``<s>`` (lowercase). You should see status information for your Command Station appear in the log.
 
-Turn off the power to the track by sending ``<0>`` to the CS. That is a 'zero'.
+Turn off the power to the track by sending ``<0>`` to the **EX-CommandStation**. That is a 'zero'.
 
 There are diagnostics to test CV reads and writes on the programming track, WiFi Diagnostics to test your connection to throttles like Engine Driver, Ethernet debugging,  and more. Read the documentation and experiment!
 
@@ -133,3 +133,5 @@ Every smart phone OS such as Android or iOS has a program or two that will work 
 * Serial USB Terminal by Kai Morich
 * [Serial Monitor by CSA](https://play.google.com/store/apps/details?id=com.csa.serialmonitor)
 * [USB Serial Console by Felipe Herranz](https://play.google.com/store/apps/details?id=jp.sugnakys.usbserialconsole>)
+
+--8<-- "snippets/abbr.md"

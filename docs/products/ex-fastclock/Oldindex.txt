@@ -34,7 +34,7 @@ Given that the MCUFREIND style shield is a shield and uses the A4 pin as LCD_RST
 
 This modification allow the A4 & A5 to operate correctly as I2C and was suggested by David Prentice who wrote the MCUFRIEND.kbv library thatthis project uses.  A discussion on this modification can be found in an [Arduino forum post](https://forum.arduino.cc/t/mcufriend-kbv-library-for-uno-2-4-2-8-3-5-3-6-3-95-inch-mcufriend-shields/353100/100).
 
-If using Serial communication no modification is required. Pins 0 & 1 (TX/RX) are unused on the LCD PCB therefore wires may be soldered to the Arduino PCB to run to Serial connections on the CS.
+If using Serial communication no modification is required. Pins 0 & 1 (TX/RX) are unused on the LCD PCB therefore wires may be soldered to the Arduino PCB to run to Serial connections on the **EX-CommandStation**.
 
 ## Operation
 
@@ -62,8 +62,8 @@ The files within this repository are held in VSCode format.  If using Arduino ID
 The FastClock can either operate in one of three modes:
 
 - Standalone
-- Serial Communication with the CS
-- I2C Communication with the CS.
+- Serial Communication with the **EX-CommandStation**
+- I2C Communication with the **EX-CommandStation**.
 
 To indicate which mode is in use it is necessary to edit the config.h file.
 
@@ -91,7 +91,7 @@ To operate in I2C mode edit the config.h file and uncomment the following lines
 #define SEND_VIA_I2C true
 ```
 
-In this mode the CS will poll the FastClock to obtain the time.  It is necessary to set the same I2C address here as used in the myAutomation.h file within the CS.  This is set to a default of 0x55 (decimal 85) but can be set to some other value if this conflicts with other I2C devices on your setup.
+In this mode the **EX-CommandStation** will poll the FastClock to obtain the time.  It is necessary to set the same I2C address here as used in the myAutomation.h file within the **EX-CommandStation**.  This is set to a default of 0x55 (decimal 85) but can be set to some other value if this conflicts with other I2C devices on your setup.
 
 ### Operating Speed
 

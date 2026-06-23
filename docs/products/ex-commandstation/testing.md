@@ -70,3 +70,5 @@ The commands `<t` and `<F` will normally reply with a `<l` response when somethi
 A response of `<X>` indicates the command was not understood by the **EX-CommandStation**, so check your typing as `<T` and `<f` are not the same as `<t` and `<F`.
 
 DCC generally has no way of knowing whether the loco exists, is listening or has dirty wheels. If you get no movement the first thing to do is check the track is clean.
+
+--8<-- "snippets/abbr.md"

@@ -139,6 +139,7 @@ li a {
     - **EX-Toolbox**
         - [EX-Toolbox - Overview <small>(EX-Toolbox)</small>](products\ex-toolbox\ex-toolbox.md)
         - [Installing EX-Toolbox <small>(Installation Guide)</small>](products\ex-toolbox\installation-guide.md)
+        - [Connecting EX-Toolbox to your EX-CommandStation <small>(Connecting)</small>](products\ex-toolbox\connecting.md)
         - [EX-Toolbox User Guide <small>(User Manual)</small>](products\ex-toolbox\user-guide.md)
     - **EX-FastClock**
         - [EX-FastClock <small>(Overview)</small>](products\ex-fastclock\overview.md)
@@ -186,7 +187,7 @@ li a {
         - [Windows](installer\download-win.md)
     - [Testing your installation With EX-Installer <small>(Test Your Installation)</small>](installer\testing.md)
     - [Advanced Users - VSCode/PlatformIO <small>(<br/>Advanced Users - VSC/PlatformIO)</small>](installer\platformio.md)
-- **Throttles**
+- **Use (Throttles)**
     - [Throttles and Other Controllers <small>(Throttle Lists)</small>](throttles\throttles.md)
     - [EX-WebThrottle <small>(EX-WebThrottle (Web))</small>](throttles\ex-webthrottle.md)
     - [Engine Driver <small>(Engine Driver (Android))</small>](throttles\engine-driver.md)
@@ -216,24 +217,25 @@ li a {
     - [**EX-CommandStation** Internal Architecture <small>(Command Station Internal Architecture)</small>](reference\command-station-arch.md)
     - [Throttle Writers Guide (doc incomplete) <small>(Throttle Writers Guide)</small>](reference\throttle-writers-guide.md)
     - [Legacy Command Reference](reference\legacy-command-reference.md)
-    - **EX-CSB1**
-        - [EX-CSB1 FAQ](reference\ex-csb1\csb1-errors-faq.md)
-        - [EX-CSB1 Technical Reference](reference\ex-csb1\csb1-technical.md)
-    - **ESP32**
-        - [WeMos D1 R32 + EX8874](reference\esp32\esp32-ex8874.md)
-        - [Acebott + EX8874](reference\esp32\esp32-acebott.md)
-        - [Keyestudio IOT ESP32 PLUS Development Board *+* EX8874 <small>(Keyestudio + EX8874)</small>](reference\esp32\esp32-keyestudio.md)
-        - [ESP32 + L298 Shields](reference\esp32\esp32-l298-shield.md)
-    - **Nucleo**
-        - [Nucleo - USB Drivers](reference\nucleo\nucleo-drivers.md)
-        - [Nucleo - STLink Firmware](reference\nucleo\nucleo-firmware.md)
-        - [Nucleo - Debug](reference\nucleo\nucleo-debug.md)
-        - [Nucleo - Power](reference\nucleo\nucleo-power.md)
-        - [Nucleo 64 - EX8874](reference\nucleo\nucleo-64-ex8874.md)
-        - [Nucleo 64 - WiFi and Pins](reference\nucleo\nucleo-64-wifi.md)
-        - [Nucleo 144 - EX8874](reference\nucleo\nucleo-144-ex8874.md)
-        - [Nucleo 144 - WiFi](reference\nucleo\nucleo-144-wifi.md)
-        - [Nucleo 144 - Pins](reference\nucleo\nucleo-144-pin-reference.md)
+    - **Alternate Microcontrollers**
+        - **EX-CSB1**
+            - [EX-CSB1 FAQ](reference\ex-csb1\csb1-errors-faq.md)
+            - [EX-CSB1 Technical Reference](reference\ex-csb1\csb1-technical.md)
+        - **ESP32**
+            - [WeMos D1 R32 + EX8874](reference\esp32\esp32-ex8874.md)
+            - [Acebott + EX8874](reference\esp32\esp32-acebott.md)
+            - [Keyestudio IOT ESP32 PLUS Development Board *+* EX8874 <small>(Keyestudio + EX8874)</small>](reference\esp32\esp32-keyestudio.md)
+            - [ESP32 + L298 Shields](reference\esp32\esp32-l298-shield.md)
+        - **Nucleo**
+            - [Nucleo - USB Drivers](reference\nucleo\nucleo-drivers.md)
+            - [Nucleo - STLink Firmware](reference\nucleo\nucleo-firmware.md)
+            - [Nucleo - Debug](reference\nucleo\nucleo-debug.md)
+            - [Nucleo - Power](reference\nucleo\nucleo-power.md)
+            - [Nucleo 64 - EX8874](reference\nucleo\nucleo-64-ex8874.md)
+            - [Nucleo 64 - WiFi and Pins](reference\nucleo\nucleo-64-wifi.md)
+            - [Nucleo 144 - EX8874](reference\nucleo\nucleo-144-ex8874.md)
+            - [Nucleo 144 - WiFi](reference\nucleo\nucleo-144-wifi.md)
+            - [Nucleo 144 - Pins](reference\nucleo\nucleo-144-pin-reference.md)
     - **Other Hardware**
         - **Motorboards**
             - [L298P & L298HN Shields <small>(L298 Shields)</small>](reference\hardware\motorboards\l298-shields.md)

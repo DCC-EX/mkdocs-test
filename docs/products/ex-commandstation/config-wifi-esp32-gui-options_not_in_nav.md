@@ -13,7 +13,7 @@ Prior to version 5.7.0, WiFi configuration for **EX-CommandStation** was done th
 
 From version 5.7.0, WiFi configuration options in ``config.h`` are *ignored* by the **EX-CSB1** or ESP32 EX-CommandStations.  
 
-It is now necessary to use a new WiFi configuration method, which involves connecting to the **EX-CommandStation** *after you have flashed the firmware.*  You do so by connecting to the **EX-CommandStation** via USB or by connecting to the WiFi Access Point network of the CS and issuing a set of new commands. (Note that the WiFi Access Point network approach has limitations. See below.)
+It is now necessary to use a new WiFi configuration method, which involves connecting to the **EX-CommandStation** *after you have flashed the firmware.*  You do so by connecting to the **EX-CommandStation** via USB or by connecting to the WiFi Access Point network of the **EX-CommandStation** and issuing a set of new commands. (Note that the WiFi Access Point network approach has limitations. See below.)
 
 The advantage of this is that it is independent of the flashing process, and will remember your WiFi settings across firmware updates and changes.
 
@@ -157,7 +157,7 @@ In some environments you may want to hide the SSID from phones scanning for acce
 
 ### Configuring the Host Name
 
-The default hostname "DCCEX" but you can change this if you have more than one CS on your network to make them show up with different names. Host names containing "DCCEX" are more readily found by WiFi throttles.
+The default hostname "DCCEX" but you can change this if you have more than one **EX-CommandStation** on your network to make them show up with different names. Host names containing "DCCEX" are more readily found by WiFi throttles.
 
 ```cpp
    <C WIFI HOSTNAME "DCCEX-MYCSB1">

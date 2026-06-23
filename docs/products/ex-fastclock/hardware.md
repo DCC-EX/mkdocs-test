@@ -17,6 +17,6 @@ Given that the MCUFREIND style shield is a shield and uses the A4 pin as LCD_RST
 
 This modification allow the A4 & A5 to operate correctly as I2C and was suggested by David Prentice who wrote the MCUFRIEND.kbv library that this project uses.  A discussion on this modification can be found on the [Arduino forum here](https://forum.arduino.cc/t/mcufriend-kbv-library-for-uno-2-4-2-8-3-5-3-6-3-95-inch-mcufriend-shields/353100/100).
 
-If using Serial communication no modification is required. Pins 0 & 1 (TX/RX) are unused on the LCD PCB therefore wires may be soldered to the Arduino PCB to run to Serial connections on the CS.
+If using Serial communication no modification is required. Pins 0 & 1 (TX/RX) are unused on the LCD PCB therefore wires may be soldered to the Arduino PCB to run to Serial connections on the **EX-CommandStation**.
 
 Now that you know what you need, click the "next" button see how you use  EX-FastClock.

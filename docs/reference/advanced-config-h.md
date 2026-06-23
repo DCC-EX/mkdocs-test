@@ -49,13 +49,13 @@ If you want to restrict the maximum current LOWER than what your motor shield ca
 #define DONT_TOUCH_WIFI_CONF
 ```
 
-- WIFI_HOSTNAME: The default is "dccex" but you can change this if you have more than one CS on you home router to make them show up with different names on the network. Host names starting with "dccex" are more readily found by WiFi throttles.
+- WIFI_HOSTNAME: The default is "dccex" but you can change this if you have more than one **EX-CommandStation** on you home router to make them show up with different names on the network. Host names starting with "dccex" are more readily found by WiFi throttles.
 
 ```cpp
 #define WIFI_HOSTNAME "dccex-csb1"
 ```
 
-- ETHERNET_HOSTNAME: The default is "dccex" but you can change this if you have more than one CS on you home router to make them show up with different names on the network. Host names starting with "dccex" are more readily found by WiFi throttles.
+- ETHERNET_HOSTNAME: The default is "dccex" but you can change this if you have more than one **EX-CommandStation** on you home router to make them show up with different names on the network. Host names starting with "dccex" are more readily found by WiFi throttles.
 
 ```cpp
 #define ETHERNET_HOSTNAME "dccex-csb1"
@@ -166,15 +166,15 @@ The **EX-CommandStation** always operates with the default Serial port. Diagnost
 
 ## Bluetooth serial ON ESP32
 
-On ESP32 you have the possibility to use the builtin BT serial to connect to the CS.
+On ESP32 you have the possibility to use the builtin BT serial to connect to the **EX-CommandStation**.
 
-The CS shows up as a pairable BT Classic device. Name is "DCCEX-hexnumber". BT is as an additional serial port, debug messages are still sent over USB, not BT serial.
+The **EX-CommandStation** shows up as a pairable BT Classic device. Name is "DCCEX-hexnumber". BT is as an additional serial port, debug messages are still sent over USB, not BT serial.
 
 If you enable this there are some implications:
 
 1. WiFi will sleep more (as WiFi and BT share the radio). So WiFi performance may suffer
 2. The app will be bigger that 1.2MB, so the default partition scheme will not work any more. You need to choose a partition scheme with 2MB (or bigger). For example "NO OTA (2MB APP, 2MB SPIFFS)" in the Arduino IDE.
-3. There is no securuity (PIN) implemented. Everyone in radio range can pair with your CS.
+3. There is no securuity (PIN) implemented. Everyone in radio range can pair with your **EX-CommandStation**.
 
 ```cpp
 #define SERIAL_BT_COMMANDS
