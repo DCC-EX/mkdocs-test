@@ -7,9 +7,11 @@ Explore this page to see how **EX-CommandStation** can be expanded to enhance yo
 * [Adding a Roster](#rosters)
 * [Adding Turnouts/Points](#turnoutspoints)
 * [Adding Routes](#routes-and-automation-automating-your-layout)
-* [Adding Automations](#routes-and-automation-automating-your-layout)
+* [Automate trains or animate devices](#routes-and-automation-automating-your-layout)
 * [Controlling DC locomotives](#trackmanager-dc-and-dcc-operation)
-* [Adding Accessories](#accessories) e.g. Sensors, Turntable
+* [Adding Accessories](#accessories) e.g. Sensors, Turntables, DCC Boosters
+
+----
 
 ## Rosters
 
@@ -57,13 +59,17 @@ Also see:
 
 ==TODO== basic intro to accessories and links to the appropriate pages
 
-Also see:
+See:
 
 * [Accessories](../products/ex-commandstation/accessories/accessories.md)
+
+Also see:
+
 * [EX-Turntable](../products/ex-turntable/ex-turntable.md)
 * [EX-FastClock](../products/ex-fastclock/overview.md)
 * [EX-IOExpander](../products/ex-ioexpander/ex-ioexpander.md)
 * [EX-SensorCAM](../products/ex-sensorcam/ex-sensorcam.md)
+* [Use the EX-CSB1 as a DCC Booster](../products/ex-commandstation/trackmanager/booster.md)
 
 ## Tools
 
