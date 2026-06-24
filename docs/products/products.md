@@ -158,15 +158,13 @@ Refer to the [EX-Turntable documentation](/products/ex-turntable/ex-turntable.md
 ### EX-DCCInspector
 
 [![EX-DCCInspector Logo](../_static/images/logos/product-logo-ex-dccinspector-only-light.png){ .only-light width=400px }
-![EX-DCCInspector Logo](../_static/images/logos/product-logo-ex-dccinspector-only-dark.png){ .only-dark width=400px }](https://dcc-ex.com/legacy-docs/ex-dccinspector/index.html#ex-dccinspector)
+![EX-DCCInspector Logo](../_static/images/logos/product-logo-ex-dccinspector-only-dark.png){ .only-dark width=400px }](ex-dccinspector/index.md)
 
 A diagnostic tool to inspect DCC packets.
 
 This requires some assembly and soldering to get up and running, and you will need to understand various aspects of the DCC protocol to get the most out of it.
 
-Refer to the [EX-DCCInspector documentation](https://dcc-ex.com/legacy-docs/ex-dccinspector/index.html#ex-dccinspector) for more information.
-
-==TODO== move legacy docs
+Refer to the [EX-DCCInspector documentation](ex-dccinspector/index.md) for more information.
 
 ---
 
