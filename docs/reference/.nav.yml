@@ -1,18 +1,21 @@
 nav:
   - Glossary of Terms: glossary.md
-  - Serial Command Basics: serial-command-basics.md
-  - DCC-EX Command List: serial-command-list.md
-  - DCC-EX Command Protocol: serial-commands.md
+  - Serial/Native Commands:
+    - Serial Command Basics: serial-command-basics.md
+    - DCC-EX Command List: serial-command-list.md
+    - DCC-EX Command Protocol: serial-commands.md
+    - Legacy Command Reference: legacy-command-reference.md
   - EXRAIL Command List: exrail-command-reference.md
   - Advanced config.h Options: advanced-config-h.md
   - TrackManager: trackmanager
   - HAL Device Configuration: hal-device-templates.md
   - Command Station Internal Architecture: command-station-arch.md
   - Throttle Writers Guide: throttle-writers-guide.md
-  - Legacy Command Reference: legacy-command-reference.md
   - Alternate Microcontrollers:
       - EX-CSB1: ex-csb1
       - ESP32: esp32
       - Nucleo: nucleo
   - Other Hardware: hardware
   - Wiring: wiring
+  - <i>External References</i>: 
+    - Standards & Technical References: technical-references.md

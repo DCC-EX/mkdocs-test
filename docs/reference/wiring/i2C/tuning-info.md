@@ -1,10 +1,10 @@
 
-# Tuning an I2C Bus for the Engineer
+# Tuning an I2C (I<sup>2</sup>C) Bus for the Engineer
 
 ## Guiding Principles
 
 1. **The two signal lines (SCL & SDA) EACH require a resistor to pull them to a logic high voltage and a device output pin to pull them low.**  
-  All devices on an i2c bus segment should use the same voltage level. (exception: passive level-shifers)  
+  All devices on an i2c bus segment should use the same voltage level. (exception: passive level-shifters)  
   i.e. 5V (or 3.3V) supply voltage to all pull-up resistors (typically 10k ohms each).
 
 2. **Do NOT mix incompatible 3.3V and 5V devices on a segment (without a passive level-shifter).**  

@@ -2,7 +2,7 @@
 
 ![Engine Driver](../_static/images/engine-driver/engine_driver_logo.png){: align="right" width="80px"}
 
-**Engine Driver** (ED) is an Android App that uses the [WiThrottle Protocol](/reference/withrottle-vs-native-protocol_not_in_nav.md) *or* the [DCC-EX Native Serial Protocol](/reference/withrottle-vs-native-protocol_not_in_nav.md) to connect directly to the **EX-CommandStation** via WiFi. It can also connect to the JMRI WiThrottle Server via WiFi using the *WiThrottle Protocol*.
+**Engine Driver** (ED) is an Android App that uses the [WiThrottle Protocol](../throttles/withrottle-vs-native-protocol.md) *or* the [DCC-EX Native Serial Protocol](../throttles/withrottle-vs-native-protocol.md) to connect directly to the **EX-CommandStation** via WiFi. It can also connect to the JMRI WiThrottle Server via WiFi using the *WiThrottle Protocol*.
 
 If you wish to connect **Engine Driver** directly to **EX-CommandStation**, you need to add a WiFi option to your **EX-CommandStation**.
 

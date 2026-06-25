@@ -2,19 +2,19 @@
 
 Scanned docs root: `C:\Users\akers\OneDrive\github\github_doco\mkdocs-test\docs`
 
-Total TODO matches: 101
+Total TODO matches: 105
 
 | File | Line | Line text |
 | --- | ---: | --- |
 | [docs/diy/esp32.md](../diy/esp32.md) | 57 | ==TODO== move legacy docs |
 | [docs/diy/mega-harder.md](../diy/mega-harder.md) | 18 | - an Arduino Standard Motor-Shield (or others as noted in ==TODO==) to power the track. |
 | [docs/diy/nucleo.md](../diy/nucleo.md) | 48 | ==TODO== move legacy docs |
-| [docs/enhance/index.md](../enhance/index.md) | 27 | ==TODO== basic intro to Turnouts/Points and links to the appropriate pages |
-| [docs/enhance/index.md](../enhance/index.md) | 35 | ==TODO== basic intro to sequences and links to the appropriate EXRAIL pages |
-| [docs/enhance/index.md](../enhance/index.md) | 44 | ==TODO== basic intro to TrackManager and links to the appropriate TrackManager pages |
-| [docs/enhance/index.md](../enhance/index.md) | 50 | ==TODO== links to the DC pages |
-| [docs/enhance/index.md](../enhance/index.md) | 58 | ==TODO== basic intro to accessories and links to the appropriate pages |
-| [docs/enhance/index.md](../enhance/index.md) | 70 | ==TODO== basic intro to tools and links to the appropriate pages |
+| [docs/enhance/index.md](../enhance/index.md) | 29 | ==TODO== basic intro to Turnouts/Points and links to the appropriate pages |
+| [docs/enhance/index.md](../enhance/index.md) | 37 | ==TODO== basic intro to sequences and links to the appropriate EXRAIL pages |
+| [docs/enhance/index.md](../enhance/index.md) | 46 | ==TODO== basic intro to TrackManager and links to the appropriate TrackManager pages |
+| [docs/enhance/index.md](../enhance/index.md) | 52 | ==TODO== links to the DC pages |
+| [docs/enhance/index.md](../enhance/index.md) | 60 | ==TODO== basic intro to accessories and links to the appropriate pages |
+| [docs/enhance/index.md](../enhance/index.md) | 76 | ==TODO== basic intro to tools and links to the appropriate pages |
 | [docs/installer/download-linux.md](../installer/download-linux.md) | 7 | ==TODO== - Add screenshots & fix page flow |
 | [docs/installer/install-ex-ioexpander.md](../installer/install-ex-ioexpander.md) | 3 | ==TODO== complete EX-Installer EX-IOExpander page needed |
 | [docs/installer/install-ex-turntable.md](../installer/install-ex-turntable.md) | 3 | ==TODO== complete EX-Installer EX-Turntable page needed |
@@ -22,7 +22,7 @@ Total TODO matches: 101
 | [docs/installer/platformio.md](../installer/platformio.md) | 3 | ==TODO== - provide setup help. |
 | [docs/reference/legacy-command-reference.md](../reference/legacy-command-reference.md) | 5 | ==TODO== move legacy docs |
 | [docs/reference/throttle-writers-guide.md](../reference/throttle-writers-guide.md) | 82 | ==TODO== Controlling Locos |
-| [docs/reference/throttle-writers-guide.md](../reference/throttle-writers-guide.md) | 135 | ==TODO== DCC Accessories |
+| [docs/reference/throttle-writers-guide.md](../reference/throttle-writers-guide.md) | 135 | ==TODO== DCC Accessory Control |
 | [docs/reference/throttle-writers-guide.md](../reference/throttle-writers-guide.md) | 161 | Routes and Automations can also have their current status and caption altered dynamically by **EXRAIL** (docs ==TODO==) |
 | [docs/reference/throttle-writers-guide.md](../reference/throttle-writers-guide.md) | 165 | ==TODO== Route Status |
 | [docs/reference/throttle-writers-guide.md](../reference/throttle-writers-guide.md) | 169 | ## COMMANDS TO AVOID ==TODO== |
@@ -92,6 +92,9 @@ Total TODO matches: 101
 | [docs/reference/serial-commands/shell_serial-command-xyz_not_in_nav.md](../reference/serial-commands/shell_serial-command-xyz_not_in_nav.md) | 62 | * ==TODO== LOW - Example Responses |
 | [docs/reference/trackmanager/dc-mode-frequency.md](../reference/trackmanager/dc-mode-frequency.md) | 82 | - ==TODO==  How to effectively use DC mode when using multiple frequencies. |
 | [docs/reference/wiring/i2C/i2c-wiring.md](../reference/wiring/i2C/i2c-wiring.md) | 54 | - When using separate power sources, there is potential for a ground loop. ==TODO== |
+| [docs/reference/hardware/bluetooth-devices/index.md](../reference/hardware/bluetooth-devices/index.md) | 3 | ==TODO== Move the legacy pages |
+| [docs/reference/hardware/ethernet-boards/index.md](../reference/hardware/ethernet-boards/index.md) | 3 | ==TODO== Move the legacy pages |
+| [docs/reference/hardware/wifi-boards/index.md](../reference/hardware/wifi-boards/index.md) | 3 | ==TODO== Move the legacy pages |
 | [docs/products/ex-commandstation/testing.md](../products/ex-commandstation/testing.md) | 3 | (LOTS OF ==TODO== in this file) |
 | [docs/products/ex-commandstation/testing.md](../products/ex-commandstation/testing.md) | 35 | ==TODO==... pic - Check communication and version |
 | [docs/products/ex-dccinspector/index.md](../products/ex-dccinspector/index.md) | 8 | ==TODO== move legacy docs |
@@ -106,4 +109,5 @@ Total TODO matches: 101
 | [docs/products/ex-commandstation/exrail/exrail-objects-introduction.md](../products/ex-commandstation/exrail/exrail-objects-introduction.md) | 215 | ==TODO== add page for using the various serial monitors and link here |
 | [docs/products/ex-commandstation/exrail/exrail-objects-introduction.md](../products/ex-commandstation/exrail/exrail-objects-introduction.md) | 365 | ==TODO== Link here to recommended pin/vpin allocations etc. |
 | [docs/products/ex-commandstation/trackmanager/trackmanager.md](../products/ex-commandstation/trackmanager/trackmanager.md) | 52 | ==TODO== move legacy docs |
+| [docs/products/ex-commandstation/exrail/cookbooks/big-picture/index.md](../products/ex-commandstation/exrail/cookbooks/big-picture/index.md) | 5 | ==TODO== Move the big picture legacy files to the cookbooks |
 | [docs/contributing/documentation/standards.md](documentation/standards.md) | 61 | - ``==TODO==`` means that it is still a work-in-process and needs to be updated.  It must be followed by descriptive text describing the issue to be fixed. |

@@ -67,7 +67,7 @@ If you want to restrict the maximum current LOWER than what your motor shield ca
 #define IP_ADDRESS { 192, 168, 1, 200 }
 ```
 
-- MAX_NUM_TCP_CLIENTS: If you on STM32 Ethernet (and only there) want more than  9 (*) TCP clients, change this number to for example 20 here **AND** in  STM32lwiopts.h and follow the instructions in STM32lwiopts.h
+- MAX_NUM_TCP_CLIENTS: If you on STM32 Ethernet (and only there) want more than  9 (*) TCP clients, change this number to for example 20 here **AND** in  STM32lwiopts.h and follow the instructions in ``STM32lwiopts.h``
 
     (*) It would be 10 if there would not be a bug in LwIP by STM32duino.
 
@@ -153,7 +153,7 @@ If you have issues with that the direction of the accessory commands is reversed
 
 The **EX-CommandStation** always operates with the default Serial port. Diagnostics are only emitted on the default serial port and not broadcast. Other serial throttles may be added to the Serial1...Serial6 ports which may or may not exist on your CPU (Mega has 3, **EX-CSB1** has 1, and STM32 have up to 6.). To monitor a throttle on one or more serial ports, supply a #define for each serial port required.
 
-**NOTE: DO NOT define here the WiFi shield serial port or your Wifi will not work.**
+**NOTE: DO NOT define here the WiFi shield serial port or your WiFi will not work.**
 
 ```cpp
 // SERIAL1 in use by Wifi
@@ -174,7 +174,7 @@ If you enable this there are some implications:
 
 1. WiFi will sleep more (as WiFi and BT share the radio). So WiFi performance may suffer
 2. The app will be bigger that 1.2MB, so the default partition scheme will not work any more. You need to choose a partition scheme with 2MB (or bigger). For example "NO OTA (2MB APP, 2MB SPIFFS)" in the Arduino IDE.
-3. There is no securuity (PIN) implemented. Everyone in radio range can pair with your **EX-CommandStation**.
+3. There is no security (PIN) implemented. Everyone in radio range can pair with your **EX-CommandStation**.
 
 ```cpp
 #define SERIAL_BT_COMMANDS
@@ -196,7 +196,7 @@ GPIO 32 is Booster Input on EX-CSB1
 #define BOOSTER_INPUT 32
 ```
 
-## ESP32 LED Wifi Indicator
+## ESP32 LED WiFi Indicator
 
 GPIO 2 on ESPDuino-32
 
