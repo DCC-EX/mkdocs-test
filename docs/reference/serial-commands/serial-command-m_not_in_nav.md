@@ -6,7 +6,7 @@ tags:
   - _m_9POWER9
 ---
 
-# <small>``<m POWER|POWER|[«loco» «momentum»|«accelerating» [«braking»]]>``</small> <br/> Set the server based momentum
+# <small>``<m LINEAR|POWER|[«loco» «momentum»|«accelerating» [«braking»]]>``</small> <br/> Set the server based momentum
 
 Serial commands to Server based momentum for a specific loco.
 
