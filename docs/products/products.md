@@ -48,10 +48,11 @@ See the [EX-WebThrottle documentation](/products/ex-webthrottle/ex-webthrottle.m
 [![EX-Toolbox Logo](../_static/images/logos/product-logo-ex-toolbox-only-light.png){ .only-light width=400px }
 ![EX-Toolbox Logo](../_static/images/logos/product-logo-ex-toolbox-only-dark.png){ .only-dark width=400px }](/products/ex-toolbox/ex-toolbox.md)
 
-For Android phone users, this is an extremely useful tool to help with configuring various aspects of your trains, command station, and accessories.
+![app store](../_static/images/ex-toolbox/download.png){ width=150px align=right }
 
-You can download it here
-[![app store](../_static/images/ex-toolbox/download.png)](https://play.google.com/store/apps/details?id=dcc_ex.ex_toolbox)
+For Android device users, this is an extremely useful tool to help with configuring and testing various aspects of your trains, **EX-CommandStation**, and accessories.
+
+You can download it from the [Google Play Store](https://play.google.com/store/apps/details?id=dcc_ex.ex_toolbox)
 
 Refer to the [EX-Toolbox documentation](/products/ex-toolbox/ex-toolbox.md) for how to install and use it.
 

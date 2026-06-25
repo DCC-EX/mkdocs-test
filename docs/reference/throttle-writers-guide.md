@@ -28,7 +28,7 @@ The commonly used speed, function, loco programming and diagnostic commands are 
 Many commands that have been implemented to assist throttle authors to obtain information from the **EX-CommandStation** in order to implement turnout/point, route/automation and roster features.
 Some of these commands are deliberately multi-stage requests to avoid timing and blocking issues caused by massive transmissions (e.g. a full list of turnouts/points with descriptions) that can cause **EX-CommandStation** issues.
 
-Broadcast replies are also designed so that a throttle can maintain loco speed and function states, turnout/point poisitions and route states.
+Broadcast replies are also designed so that a throttle can maintain loco speed and function states, turnout/point positions and route states.
 
 ## Considerations for throttle developers
 
@@ -132,7 +132,7 @@ or ``<jT 17 X>`` indicating turnout/point unknown (or possibly hidden.)
 
 ## DCC Accessories
 
-==TODO== DCC Accessories
+==TODO== DCC Accessory Control
 
 ----
 

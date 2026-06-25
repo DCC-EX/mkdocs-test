@@ -1,6 +1,8 @@
 nav:
   - Throttle Lists: throttles.md
-  - EX-WebThrottle (Web): ex-webthrottle.md
-  - Engine Driver (Android): engine-driver.md
-  - ThrottleCard (iOS): throttlecard.md
+  - Some Recommended Throttles:
+    - EX-WebThrottle (Web): ex-webthrottle.md
+    - Engine Driver (Android): engine-driver.md
+    - ThrottleCard (iOS): throttlecard.md
+  - <br/>WiThrottle VS Native Protocol: withrottle-vs-native-protocol.md
   

@@ -82,7 +82,7 @@ However the **DCC-EX Native/Serial commands** provide a significant number of ex
 
 ### General
 
-- [WiThrottle Server, DCC-EX Native/Serial Commands Explained](/reference/withrottle-vs-native-protocol_not_in_nav.md)
+- [WiThrottle Server, DCC-EX Native/Serial Commands Explained](withrottle-vs-native-protocol.md)
 - [Connect WiFi Throttle via USB](connect_wifi_throttle_via_usb_not_in_nav.md)
 - [Running Android Apps on Window s& macOS](android-apps-on-windows-and-ios_not_in_nav.md)
 
@@ -222,7 +222,7 @@ Also see: Connect WiFi Throttle via USB
 - Free/Paid = Both Free and Paid versions are available. The free version usually has limited features.
 - Open Source = Designs and Source code are available to view, modify and build your own. <br/> However the hardware to build it is not free.
 - Native = Uses the DCC-EX Native protocol/commands.
-- Protocol - See the [WiThrottle VS Native Serial Protocol](/reference/withrottle-vs-native-protocol_not_in_nav.md) page.
+- Protocol - See the [WiThrottle VS Native Serial Protocol](withrottle-vs-native-protocol.md) page.
 - WiT = Uses the WiThrottle protocol.
 - Web = Requires the use of a Web Browser.
 - Physical = A dedicated separate physical device. Not an app running on a standard smart device.

@@ -4,7 +4,7 @@ The default PWM frequency is 131Hz.  Functions F29-F30-F31 are defined to enable
 
 The functions will toggle the bits ON/OFF as shown in the table.
 
-<!-- &nbsp; &nbsp; &nbsp; &nbsp; ![PWM Frenquency](/_static/images/trackmanager/dc-pwm-frequency.png){: style="width: 50%"} -->
+<!-- &nbsp; &nbsp; &nbsp; &nbsp; ![PWM Frequency](/_static/images/trackmanager/dc-pwm-frequency.png){: style="width: 50%"} -->
 
 <style>
 /* Target the table inside the main content area */

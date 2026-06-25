@@ -87,6 +87,8 @@ li a {
                     - [Command Filters](products\ex-commandstation\exrail\cookbooks\advanced\command-filter.md)
                     - [Passing locos between sequences](products\ex-commandstation\exrail\cookbooks\advanced\passing-locos-between-sequences.md)
                     - [Building a speed test track](products\ex-commandstation\exrail\cookbooks\advanced\speed-test.md)
+                - **Big picture**
+                    - [Big Picture EXRAIL Examples](products\ex-commandstation\exrail\cookbooks\big-picture\index.md)
                 - **Driving trains**
                     - [Basic driving functions <small>(Basic)</small>](products\ex-commandstation\exrail\cookbooks\driving-trains\basic.md)
                     - [Loco Functions <small>(Functions)</small>](products\ex-commandstation\exrail\cookbooks\driving-trains\functions.md)
@@ -189,9 +191,11 @@ li a {
     - [Advanced Users - VSCode/PlatformIO <small>(<br/>Advanced Users - VSC/PlatformIO)</small>](installer\platformio.md)
 - **Use (Throttles)**
     - [Throttles and Other Controllers <small>(Throttle Lists)</small>](throttles\throttles.md)
-    - [EX-WebThrottle <small>(EX-WebThrottle (Web))</small>](throttles\ex-webthrottle.md)
-    - [Engine Driver <small>(Engine Driver (Android))</small>](throttles\engine-driver.md)
-    - [ThrottleCard <small>(ThrottleCard (iOS))</small>](throttles\throttlecard.md)
+    - **Some Recommended Throttles**
+        - [EX-WebThrottle <small>(EX-WebThrottle (Web))</small>](throttles\ex-webthrottle.md)
+        - [Engine Driver <small>(Engine Driver (Android))</small>](throttles\engine-driver.md)
+        - [ThrottleCard <small>(ThrottleCard (iOS))</small>](throttles\throttlecard.md)
+    - [WiThrottle Protocol VS DCC-EX Native/Serial Commands <small>(<br/>WiThrottle VS Native Protocol)</small>](throttles\withrottle-vs-native-protocol.md)
 - **Enhance**
     - [Enhancing & Expanding EX‑CommandStation <small>(Enhancing your EX-CommandStation)</small>](enhance\index.md)
 - **News**
@@ -203,9 +207,11 @@ li a {
     - [Raising GitHub Issues <small>(Github)</small>](support\github.md)
 - **Reference**
     - [Glossary of Terms](reference\glossary.md)
-    - [DCC-EX Serial Command Basics <small>(Serial Command Basics)</small>](reference\serial-command-basics.md)
-    - [DCC-EX Serial Command List <small>(DCC-EX Command List)</small>](reference\serial-command-list.md)
-    - [DCC-EX Command Protocol](reference\serial-commands.md)
+    - **Serial/Native Commands**
+        - [DCC-EX Serial Command Basics <small>(Serial Command Basics)</small>](reference\serial-command-basics.md)
+        - [DCC-EX Serial Command List <small>(DCC-EX Command List)</small>](reference\serial-command-list.md)
+        - [DCC-EX Command Protocol](reference\serial-commands.md)
+        - [Legacy Command Reference](reference\legacy-command-reference.md)
     - [EXRAIL Command List](reference\exrail-command-reference.md)
     - [Advanced config.h settings for EX-CommandStation build <small>(Advanced config.h Options)</small>](reference\advanced-config-h.md)
     - **TrackManager**
@@ -216,7 +222,6 @@ li a {
     - [HAL Device Templates <small>(HAL Device Configuration)</small>](reference\hal-device-templates.md)
     - [**EX-CommandStation** Internal Architecture <small>(Command Station Internal Architecture)</small>](reference\command-station-arch.md)
     - [Throttle Writers Guide (doc incomplete) <small>(Throttle Writers Guide)</small>](reference\throttle-writers-guide.md)
-    - [Legacy Command Reference](reference\legacy-command-reference.md)
     - **Alternate Microcontrollers**
         - **EX-CSB1**
             - [EX-CSB1 FAQ](reference\ex-csb1\csb1-errors-faq.md)
@@ -237,16 +242,26 @@ li a {
             - [Nucleo 144 - WiFi](reference\nucleo\nucleo-144-wifi.md)
             - [Nucleo 144 - Pins](reference\nucleo\nucleo-144-pin-reference.md)
     - **Other Hardware**
+        - [Untitled](reference\hardware\i2c-devices.md)
+        - **Bluetooth devices**
+            - [Bluetooth Devices](reference\hardware\bluetooth-devices\index.md)
+        - **Ethernet boards**
+            - [Ethernet Boards](reference\hardware\ethernet-boards\index.md)
         - **Motorboards**
             - [L298P & L298HN Shields <small>(L298 Shields)</small>](reference\hardware\motorboards\l298-shields.md)
             - [Schematics](reference\hardware\motorboards\schematics.md)
+        - **Wifi boards**
+            - [WiFi Boards](reference\hardware\wifi-boards\index.md)
     - **Wiring**
         - **i2C**
-            - [I2C Wiring for the Tinkerer <small>(I2C Wiring)</small>](reference\wiring\i2C\i2c-wiring.md)
-            - [Tuning an I2C Bus for the Engineer <small>(Tuning Information)</small>](reference\wiring\i2C\tuning-info.md)
+            - [I2C (I<sup>2</sup>C) Wiring for the Tinkerer <small>(I2C Wiring)</small>](reference\wiring\i2C\i2c-wiring.md)
+            - [Tuning an I2C (I<sup>2</sup>C) Bus for the Engineer <small>(Tuning Information)</small>](reference\wiring\i2C\tuning-info.md)
+    - **<i>External References</i>**
+        - [Standards and Technical References <small>(Standards & Technical References)</small>](reference\technical-references.md)
 - **About Us**
     - [About the **DCC-EX** Project <small>(About)</small>](about\about.md)
     - [DCC++ VS DCC-EX? - Project History <small>(History)</small>](about\history.md)
+    - [Licence & Attributions <small>(<br/>Licence & Attribution)</small>](about\licence.md)
 - **Donate / Contribute**
     - [How Can I Contribute? <small>(How You Can Contribute)</small>](contributing\contributing.md)
     - [Donations <small>(<b><span style="font-size:110%">Donate</b></span>)</small>](contributing\donations.md)
@@ -298,4 +313,3 @@ li a {
 - [Incorrect IOREF voltage for 3.3v Microcontrollers](reference/esp32/ioref-incorrect-voltage-fix_not_in_nav.md)
 - [Using a Serial Monitor / Device Monitor](reference/tools/serial-monitor_not_in_nav.md)
 - [WiFi Configuration for version 5.7.0+ <br/><small>Graphical User Interface Options</small>](products/ex-commandstation/config-wifi-esp32-gui-options_not_in_nav.md)
-- [WiThrottle Protocol VS DCC-EX Native/Serial Commands](reference/withrottle-vs-native-protocol_not_in_nav.md)

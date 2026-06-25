@@ -1,4 +1,4 @@
-# I2C Wiring for the Tinkerer
+# I2C (I<sup>2</sup>C) Wiring for the Tinkerer
 
 I2C expansion modules provide accessory pins, but I2C wiring requires a lot of attention to detail.
 

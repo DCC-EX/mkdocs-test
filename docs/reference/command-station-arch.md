@@ -7,7 +7,7 @@ The **DCC-EX** **EX-CommandStation** code is layered to reduce overall complexit
     - maintains loco state and issues reminders
 
 - DCC realtime waveform generation (DCCWaveform.h, DCCRMT.h)
-    - handles simultaneous track signal for multiuple tracks
+    - handles simultaneous track signal for multiple tracks
 
 - Motor shield driver & track manager (MotorDriver.h, TrackManager.h)
     - handles shield specific pin numbers and current sensing

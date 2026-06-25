@@ -13,4 +13,4 @@
 
 *DCC-EX Serial Commands* are also refered to as *Native DCC-EX Commands/Protocol* or *DCC-EX Native Commands/Protocol*.
 
-Refer to the [WiThrottle VS Native Serial Protocol](withrottle-vs-native-protocol_not_in_nav.md) page for information on the differences to the Withrottle protocol/commands.
+Refer to the [WiThrottle VS Native Serial Protocol](../throttles/withrottle-vs-native-protocol.md) page for information on the differences to the Withrottle protocol/commands.
