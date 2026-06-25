@@ -8455,17 +8455,20 @@ li a {
 <li><a href="../reference/serial-commands/serial-command-equals_not_in_nav/"><small><code>&lt;= [«trackletter» «mode»] [«id»]&gt;</code></small> <br/>Request or Configure Track Manager <span style="display:none;">(_equals)</span></a></li>
 <li><a href="../reference/serial-commands/serial-command-caret_not_in_nav/"><small><code>&lt;^ «loco»|[«leadLoco» «follower» [ «follower2..7»]]&gt;</code></small> <br/> Manage EX-CommandStation Consists/MUs</a></li>
 <li><a href="../reference/serial-commands/serial-command-aa-and-a_not_in_nav/"><small><code>&lt;A «address» «value»&gt;</code></small> <br/><small><code>&lt;a «address» [«subAddr»]|[«activate» [«onOff»]]&gt;</code></small> <br/>Instruct Accessory Decoders</a></li>
+<li><a href="../reference/serial-commands/serial-command-c-railcom_not_in_nav/"><small><code>&lt;C RAILCOM ON|OFF&gt;</code></small> <br/> Enable/Disable Railcom cutout</a></li>
 <li><a href="../reference/serial-commands/serial-command-cc-wifi_not_in_nav/"><small><code>&lt;C WIFI ON|OFF|AP|HIDDENAP|TEMP|DEFAULT|HOSTNAME [«various parameters»]&gt;</code></small> <br/> Setup WiFi (EX-CSB1 &amp; ESP32, v5.7.0 ONLY)</a></li>
 <li><a href="../reference/serial-commands/shell_serial-command-xyz_not_in_nav/"><small><code>&lt;cmd «required parameter» [«optional parameter»]&gt;</code></small> <br/> Short command description</a></li>
 <li><a href="../reference/serial-commands/serial-command-dd_ack_not_in_nav/"><small><code>&lt;D ACK LIMIT|MAX|MIN|OFF|ON [«value» [MS]]&gt;</code> <br/><code>&lt;C PROGBOOST&gt;</code></small> <br/>Modify System PROG track settings</a></li>
 <li><a href="../reference/serial-commands/serial-command-dd-cc-diagnostic-messages_not_in_nav/"><small><code>&lt;D CMD|EXRAIL|ETHERNET|WIT|WEBSOCKET|RAILCOM|LCN ON|OFF&gt;</code></small> <br/>Enable/Disable Various Diagnostic Messages</a></li>
 <li><a href="../reference/serial-commands/serial-command-dd-wifi_not_in_nav/"><small><code>&lt;D WIFI ON|OFF|SHOW&gt;</code></small> <br/> WiFi diagnostics</a></li>
+<li><a href="../reference/serial-commands/serial-command-dd_and_e_and_ee_not_in_nav/"><small><code>&lt;E&gt;</code> <code>&lt;e&gt;</code> <code>&lt;D EPROM [«numEntries»]&gt;</code></small> <br/> Manage EEPROM <small>(Arduino Mega Only)</small></a></li>
 <li><a href="../reference/serial-commands/serial-command-ff_not_in_nav/"><small><code>&lt;F «loco» [«function» «state»]|[DCCFREQ «freqValue»]&gt;</code></small> <br/>Set decoder functions or set PWM frequency</a></li>
 <li><a href="../reference/serial-commands/serial-command-ii_not_in_nav/"><small><code>&lt;I [«id»] [«various parameters»]&gt;</code></small> <br/><small><code>&lt;D TT «vpin» «steps» [«activity]&gt;</code></small> <br/><small><code>&lt;J O [«id»]&gt;</code></small> &nbsp; <small><code>&lt;J P «id»&gt;</code></small><br/>Manage Turntables</a></li>
 <li><a href="../reference/serial-commands/serial-command-jj-aa-and-slash_not_in_nav/"><small><code>&lt;J A [«id»]&gt;</code></small> <br/><small><code>&lt;/ [START|PAUSE|RESUME|KILL] [«various parameters»]&gt;</code></small> <br/> List, Start or Stop Automations/Sequences</a></li>
+<li><a href="../reference/serial-commands/serial-command-jj-cc_not_in_nav/"><small><code>&lt;J C [«mmmm» [«nn»]]&gt;</code></small> <br/> Get/Set the Fastclock Time</a></li>
 <li><a href="../reference/serial-commands/serial-command-jj-mm_not_in_nav/"><small><code>&lt;J M [«various parameters»]&gt;</code></small> <br/> Manage Stash Values</a></li>
 <li><a href="../reference/serial-commands/serial-command-jj-rr_not_in_nav/"><small><code>&lt;J R [«id»]&gt;</code></small> <br/>Request Roster info</a></li>
-<li><a href="../reference/serial-commands/serial-command-m_not_in_nav/"><small><code>&lt;m POWER|POWER|[«loco» «momentum»|«accelerating» [«braking»]]&gt;</code></small> <br/> Set the server based momentum</a></li>
+<li><a href="../reference/serial-commands/serial-command-m_not_in_nav/"><small><code>&lt;m LINEAR|POWER|[«loco» «momentum»|«accelerating» [«braking»]]&gt;</code></small> <br/> Set the server based momentum</a></li>
 <li><a href="../reference/serial-commands/serial-command-o_not_in_nav/"><small><code>&lt;o «vpin» [«count»]|[«r» «g» «b» [«count»]]&gt;</code></small> <br/> Set Neopixels</a></li>
 <li><a href="../reference/serial-commands/serial-command-qq-and-ss_not_in_nav/"><small><code>&lt;Q&gt;</code></small> &nbsp; <small><code>&lt;S «id» [«vpin» «pullup»&gt;]</code></small> <br/>Manage Sensors</a></li>
 <li><a href="../reference/serial-commands/serial-command-rr-and-ww_not_in_nav/"><small><code>&lt;R [«cv»|LOCOID|CONSIST]&gt;</code> <br/><code>&lt;r «loco» «cv»&gt;</code> <br/><code>&lt;W [«loco»]|[«cv» «value»]|[«loco» «cv» «bitValue» «bit»]|[CONSIST «loco» [REVERSE]]&gt;</code> <br/><code>&lt;V [«cv» «value»]|[«cv» «bit» «bitValue»]&gt;</code> <br/><code>&lt;B «cv» «bit» «bitValue»&gt;</code> <br/><code>&lt;b «loco» «cv» «bit» «bitValue»&gt;</code></small> <br/>Read and write CVs</a></li>
@@ -8505,7 +8508,7 @@ li a {
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 25, 2026 01:14:53 UTC">June 25, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 25, 2026 23:12:48 UTC">June 25, 2026</span>
   </span>
 
     

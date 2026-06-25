@@ -8680,7 +8680,7 @@
 <h4 id="adding-the-hardware-pin-turnoutspoints">Adding the Hardware -  Pin Turnouts/Points<a class="headerlink" href="#adding-the-hardware-pin-turnoutspoints" title="Permanent link">&para;</a></h4>
 <!-- .. sidebar::
 
-  You can also refer to :doc:`/ex-commandstation/accessories/turnouts/solenoid-turnouts` for more information.
+  ==TODO== You can also refer to :doc:`/ex-commandstation/accessories/turnouts/solenoid-turnouts` for more information.
 -->
 
 <p>If you have installed turnouts/points using simple pin control, you can config the <strong>EXRAIL</strong> so that it knows about it and you can control in in your sequences.</p>
@@ -8709,7 +8709,7 @@
 <h4 id="adding-the-hardware-servo-turnoutspoints">Adding the Hardware -  Servo Turnouts/Points<a class="headerlink" href="#adding-the-hardware-servo-turnoutspoints" title="Permanent link">&para;</a></h4>
 <!-- .. sidebar::
 
-  You can also refer to :doc:`/reference/hardware/servo-module` for more information.
+  ==TODO== You can also refer to :doc:`/reference/hardware/servo-module` for more information.
 -->
 
 <p>To connect a servo to <strong>EX-CommandStation</strong>, you first need to get a module, based on the PCA9685 chip.</p>
@@ -8722,8 +8722,8 @@
 <p><img alt="PCA9685 Servo Module" src="../../../../_static/images/i2c-connected-devices/ArduinoMegaServo.png" width="600px" /></p>
 <p>In <strong>EX-CommandStation</strong>, the drivers for the PCA9685 module is already installed, and made available to for use as pin numbers 100-115. A servo is shown in the diagram, connected to the first set of pins on the module.  This will be accessed using pin number 100.</p>
 <p>Once you've made all of the connections, apply power to the Arduino.</p>
-<p>Then, in the <a href="../../../../reference/tools/serial-monitor_not_in_nav/">serial monitors</a>, enter the command <code>&lt;D SERVO 100 450&gt;</code>.  The servo should move, as long as it isn't (by some fluke) already in that position.</p>
-<p><mark>TODO</mark> add page for using the various serial monitors and link here</p>
+<p>Then, in a <a href="../../../../reference/tools/serial-monitor_not_in_nav/">serial monitors</a>, enter the command <code>&lt;D SERVO 100 450&gt;</code>.  The servo should move, as long as it isn't (by some fluke) already in that position. </p>
+<p>(See the <a href="../../../../reference/tools/serial-monitor_not_in_nav/">serial monitors</a> pages for the different serial monitors that are available to use.)</p>
 <p>Enter <code>&lt;D SERVO 100 110&gt;</code> and this time it should definitely move.  For the last parameter (servo position) you can use any value between about 105 and 490.</p>
 <p>Try <code>&lt;D SERVO 100 450 3&gt;</code> and the servo should move slowly back.</p>
 <p>You can use the servo to control turnouts/points, semaphore signals, engine shed doors, and other layout components, to make your layout more dynamic and exciting.  In the picture below, you can see a servo mounted below the baseboard with a piece of wire passing through a slot cut in the baseboard, to operate a <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnout</abbr>/point.</p>
@@ -8891,7 +8891,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 23, 2026 09:30:21 UTC">June 23, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 25, 2026 22:06:34 UTC">June 25, 2026</span>
   </span>
 
     

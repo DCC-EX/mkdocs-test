@@ -8872,7 +8872,7 @@
 </code></pre></div>
 <div class="language-cpp highlight"><pre><span></span><code><span class="w">  </span><span class="p">...</span>
 <span class="w">  </span><span class="n">IFxxx</span><span class="p">(</span><span class="w"> </span><span class="n">id_or_condition</span><span class="p">,</span><span class="w"> </span><span class="p">...</span><span class="w"> </span><span class="p">)</span><span class="w">  </span><span class="c1">// where xxx is the type of &#39;IF&#39; command (see below)</span>
-<span class="w">    </span><span class="o">&lt;</span><span class="n">commands</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">execute</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">conditions</span><span class="w"> </span><span class="n">are</span><span class="w"> </span><span class="n">met</span><span class="o">&gt;</span>
+<span class="w">    </span><span class="o">&lt;</span><span class="n">commands</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">execute</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">condition</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="n">met</span><span class="o">&gt;</span>
 <span class="w">    </span><span class="p">...</span>
 <span class="w">  </span><span class="n">ENDIF</span>
 <span class="w">  </span><span class="p">...</span>
@@ -8889,12 +8889,14 @@
 <span class="w">  </span><span class="p">...</span>
 </code></pre></div>
 <h6 id="types-of-conditionals">Types of Conditionals<a class="headerlink" href="#types-of-conditionals" title="Permanent link">&para;</a></h6>
-<p>Sensor Related Conditional:</p>
+<p>Sensor/<abbr title="an Arduino pin number that has been extended to include pins on external devices or expanders">VPIN</abbr> Related Conditional:</p>
 <ul>
-<li><code>IF( sensor_id )</code> - If sensor activated or latched, continue, otherwise skip to ELSE/ENDIF, use negative values for active HIGH sensors</li>
-<li><code>IFNOT( sensor_id )</code> - If sensor NOT activated and NOT latched, continue, otherwise skip to ELSE/ENDIF, use negative values for active HIGH sensors</li>
+<li><code>IF( sensor_id )</code> - If sensor activated or latched, continue, otherwise skip to ELSE/ENDIF. Use negative values for active HIGH sensors</li>
+<li><code>IFNOT( sensor_id )</code> - If sensor NOT activated and NOT latched, continue, otherwise skip to ELSE/ENDIF. Use negative values for active HIGH sensors</li>
 <li><code>IFGTE( sensor_id, value )</code> - Test if analog pin reading is greater than or equal to value (&gt;=)</li>
 <li><code>IFLT( sensor_id, value )</code> - Test if analog pin reading is less than value (&lt;)</li>
+<li><code>IF_ANY( sensor_id1, sensor_id2 [,sensor_id...] )</code> - If any one of a list of sensors is activated or latched, continue, otherwise skip to ELSE/ENDIF. Use negative values for active HIGH sensors</li>
+<li><code>IF_ALL( sensor_id1, sensor_id2 [,sensor_id...] )</code> - If any one of a list of sensors is activated or latched, continue, otherwise skip to ELSE/ENDIF. Use negative values for active HIGH sensors</li>
 </ul>
 <p><abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">Turnout</abbr>/Point Related Conditionals:</p>
 <ul>
@@ -8910,8 +8912,8 @@
 <p>Other Conditionals:</p>
 <ul>
 <li><code>IFRANDOM( percent )</code> - Runs commands in IF block a random percentage of the time</li>
-<li><code>IFRESERVE( block )</code> - If block is NOT reserved, reserves it and run commands in IF block.eise, skip to matching ENDIF</li>
-<li><code>IFTIMEOUT</code> - Tests if “timed out” flag has been set by an ATTIMEOUT sensor reading attempt</li>
+<li><code>IFRESERVE( block )</code> - If block is NOT reserved, reserves it and run commands in IF block.else, skip to matching ENDIF</li>
+<li><code>IFTIMEOUT</code> - Tests if 'timed out' flag has been set by an ATTIMEOUT sensor reading attempt</li>
 </ul>
 <p>See the <a href="../command-list/">EXRAIL Command List</a> for additional commands and additional information on these commands.</p>
 <h4 id="branching">Branching<a class="headerlink" href="#branching" title="Permanent link">&para;</a></h4>
@@ -8959,14 +8961,14 @@
 </ul>
 <h4 id="command-station-commands">Command Station Commands<a class="headerlink" href="#command-station-commands" title="Permanent link">&para;</a></h4>
 <p>There are a substantial number of commands that you can explore in the <a href="../command-list/">EXRAIL Command List</a>. We will look at just a few here.</p>
-<div class="language-cpp highlight"><pre><span></span><code><span class="w">  </span><span class="c1">// use the drive away feature to recginse the loco on the</span>
+<div class="language-cpp highlight"><pre><span></span><code><span class="w">  </span><span class="c1">// use the drive away feature to recognise the loco on the</span>
 <span class="w">  </span><span class="c1">// programming track and drive it onto the main track</span>
 <span class="w">  </span><span class="n">SEQUENCE</span><span class="p">(</span><span class="mi">99</span><span class="p">)</span><span class="w">    </span>
 <span class="w">    </span><span class="n">READ_LOCO</span><span class="w"> </span><span class="c1">// identify the loco on the programming track</span>
 <span class="w">    </span><span class="n">JOIN</span><span class="w">      </span><span class="c1">// connect programming track to main</span>
 <span class="w">    </span><span class="n">WAIT</span><span class="p">(</span><span class="mi">30000</span><span class="p">)</span><span class="w"> </span><span class="c1">// wait 30 seconds</span>
 <span class="w">    </span><span class="n">UNJOIN</span><span class="w">    </span><span class="c1">// disconnect the programming track form the main</span>
-<span class="w">    </span><span class="c1">// see the &#39;Drive-Away Feature&#39; on this page for more infomation</span>
+<span class="w">    </span><span class="c1">// see the &#39;Drive-Away Feature&#39; on this page for more information</span>
 </code></pre></div>
 <ul>
 <li><code>JOIN</code> - Joins <abbr title="Programming Track / Service Mode">PROG</abbr> and <abbr title="Main Track / Ops Mode">MAIN</abbr> track outputs to send the same <abbr title="Main Track / Ops Mode">MAIN</abbr> DCC signal on both tracks</li>
@@ -9043,7 +9045,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 22, 2026 23:20:56 UTC">June 22, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 25, 2026 22:06:34 UTC">June 25, 2026</span>
   </span>
 
     
