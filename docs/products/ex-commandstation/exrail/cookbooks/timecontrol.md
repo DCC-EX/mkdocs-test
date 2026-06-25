@@ -1,3 +1,8 @@
+---
+tags:
+  - _9J9_9C9
+  - _9J9_9C9_mmmm_nn
+---
 
 # Time Control
 
@@ -86,7 +91,7 @@ In that way the Sequence 10 can either be run by the clock, or if the clock is n
 
 NB:  See the following page for details on running sound files.
 
-( add a reference )
+( ==TODO== add a reference )
 
 ## Testing Timed Sequences
 
