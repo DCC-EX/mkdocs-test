@@ -148,7 +148,7 @@ The ``TURNOUT`` command defines DCC accessory decoder turnout/point in **EXRAIL*
 
 <!-- .. sidebar::
   
-  You can also refer to :doc:`/ex-commandstation/accessories/turnouts/solenoid-turnouts` for more information.
+  ==TODO== You can also refer to :doc:`/ex-commandstation/accessories/turnouts/solenoid-turnouts` for more information.
 -->
 
 If you have installed turnouts/points using simple pin control, you can config the **EXRAIL** so that it knows about it and you can control in in your sequences.
@@ -187,7 +187,7 @@ When setting up a turnout/point where multiple pins are required for control, th
 
 <!-- .. sidebar::
   
-  You can also refer to :doc:`/reference/hardware/servo-module` for more information.
+  ==TODO== You can also refer to :doc:`/reference/hardware/servo-module` for more information.
 -->
 
 To connect a servo to **EX-CommandStation**, you first need to get a module, based on the PCA9685 chip.
@@ -210,9 +210,9 @@ In **EX-CommandStation**, the drivers for the PCA9685 module is already installe
 
 Once you've made all of the connections, apply power to the Arduino.
 
-Then, in the [serial monitors](../../../reference/tools/serial-monitor_not_in_nav.md), enter the command `<D SERVO 100 450>`.  The servo should move, as long as it isn't (by some fluke) already in that position.
+Then, in a [serial monitors](../../../reference/tools/serial-monitor_not_in_nav.md), enter the command `<D SERVO 100 450>`.  The servo should move, as long as it isn't (by some fluke) already in that position. 
 
-==TODO== add page for using the various serial monitors and link here
+(See the [serial monitors](../../../reference/tools/serial-monitor_not_in_nav.md) pages for the different serial monitors that are available to use.)
 
 Enter `<D SERVO 100 110>` and this time it should definitely move.  For the last parameter (servo position) you can use any value between about 105 and 490.
 
