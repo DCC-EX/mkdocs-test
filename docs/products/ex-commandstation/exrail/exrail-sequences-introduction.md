@@ -253,7 +253,7 @@ Conditionals have the structure:
 ```cpp
   ...
   IFxxx( id_or_condition, ... )  // where xxx is the type of 'IF' command (see below)
-    <commands to execute if the conditions are met>
+    <commands to execute if the condition is met>
     ...
   ENDIF
   ...
@@ -275,12 +275,14 @@ or
 
 ###### Types of Conditionals
 
-Sensor Related Conditional:
+Sensor/VPIN Related Conditional:
 
-* ``IF( sensor_id )`` - If sensor activated or latched, continue, otherwise skip to ELSE/ENDIF, use negative values for active HIGH sensors
-* ``IFNOT( sensor_id )`` - If sensor NOT activated and NOT latched, continue, otherwise skip to ELSE/ENDIF, use negative values for active HIGH sensors
+* ``IF( sensor_id )`` - If sensor activated or latched, continue, otherwise skip to ELSE/ENDIF. Use negative values for active HIGH sensors
+* ``IFNOT( sensor_id )`` - If sensor NOT activated and NOT latched, continue, otherwise skip to ELSE/ENDIF. Use negative values for active HIGH sensors
 * ``IFGTE( sensor_id, value )`` - Test if analog pin reading is greater than or equal to value (>=)
 * ``IFLT( sensor_id, value )`` - Test if analog pin reading is less than value (<)
+* ``IF_ANY( sensor_id1, sensor_id2 [,sensor_id...] )`` - If any one of a list of sensors is activated or latched, continue, otherwise skip to ELSE/ENDIF. Use negative values for active HIGH sensors
+* ``IF_ALL( sensor_id1, sensor_id2 [,sensor_id...] )`` - If any one of a list of sensors is activated or latched, continue, otherwise skip to ELSE/ENDIF. Use negative values for active HIGH sensors
 
 Turnout/Point Related Conditionals:
 
@@ -296,8 +298,8 @@ Signal Related Conditionals:
 Other Conditionals:
 
 * ``IFRANDOM( percent )`` - Runs commands in IF block a random percentage of the time
-* ``IFRESERVE( block )`` - If block is NOT reserved, reserves it and run commands in IF block.eise, skip to matching ENDIF
-* ``IFTIMEOUT`` - Tests if “timed out” flag has been set by an ATTIMEOUT sensor reading attempt
+* ``IFRESERVE( block )`` - If block is NOT reserved, reserves it and run commands in IF block.else, skip to matching ENDIF
+* ``IFTIMEOUT`` - Tests if 'timed out' flag has been set by an ATTIMEOUT sensor reading attempt
 
 See the [EXRAIL Command List](command-list.md) for additional commands and additional information on these commands.
 
@@ -358,14 +360,14 @@ There are a number of delay type commands that you can explore in the [EXRAIL Co
 There are a substantial number of commands that you can explore in the [EXRAIL Command List](command-list.md). We will look at just a few here.
 
 ```cpp
-  // use the drive away feature to recginse the loco on the
+  // use the drive away feature to recognise the loco on the
   // programming track and drive it onto the main track
   SEQUENCE(99)    
     READ_LOCO // identify the loco on the programming track
     JOIN      // connect programming track to main
     WAIT(30000) // wait 30 seconds
     UNJOIN    // disconnect the programming track form the main
-    // see the 'Drive-Away Feature' on this page for more infomation
+    // see the 'Drive-Away Feature' on this page for more information
 ```
 
 * ``JOIN`` - Joins PROG and MAIN track outputs to send the same MAIN DCC signal on both tracks
