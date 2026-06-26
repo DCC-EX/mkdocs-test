@@ -65,7 +65,7 @@ def on_nav(nav: Navigation, config, files) -> Navigation:
         # Case B: It's a concrete Markdown Page
         elif isinstance(nav_item, Page):
             # Explicitly exclude the generated TOC from its own listings
-            if nav_item.file.src_path in {"toc.md", toc_src_path}:
+            if nav_item.file.src_path in {"toc.md", output_dir}:
                 return
                 
             # awesome-nav automatically resolves the cleanest title 

@@ -89,6 +89,13 @@ li:not(.md-nav__item, .md-tabs__item) a {
                     - [Building a speed test track](../products/ex-commandstation/exrail/cookbooks/advanced/speed-test.md)
                 - **Big picture**
                     - [Big Picture EXRAIL Examples](../products/ex-commandstation/exrail/cookbooks/big-picture/index.md)
+                    - [How it All Works Together](../products/ex-commandstation/exrail/cookbooks/big-picture/big-picture.md)
+                    - [Stage 1 - Running a Train](../products/ex-commandstation/exrail/cookbooks/big-picture/stage1.md)
+                    - [Stage 2 - Adding a Roster](../products/ex-commandstation/exrail/cookbooks/big-picture/stage2.md)
+                    - [Stage 3 - Turnouts/Points, Accessories, Sensors & Blocks](../products/ex-commandstation/exrail/cookbooks/big-picture/stage3.md)
+                    - [Stage 4 - Automation](../products/ex-commandstation/exrail/cookbooks/big-picture/stage4.md)
+                    - [Stage 5 - Turntables & Traversers](../products/ex-commandstation/exrail/cookbooks/big-picture/stage5.md)
+                    - [Stage 6 - Putting it all Together](../products/ex-commandstation/exrail/cookbooks/big-picture/stage6.md)
                 - **Driving trains**
                     - [Basic driving functions <small>(Basic)</small>](../products/ex-commandstation/exrail/cookbooks/driving-trains/basic.md)
                     - [Loco Functions <small>(Functions)</small>](../products/ex-commandstation/exrail/cookbooks/driving-trains/functions.md)
@@ -206,7 +213,7 @@ li:not(.md-nav__item, .md-tabs__item) a {
     - [The **DCC-EX** Discord Server <small>(Discord)</small>](../support/discord.md)
     - [Raising GitHub Issues <small>(Github)</small>](../support/github.md)
 - **Reference**
-    - [Table of Contents](toc.md)
+    - [Full Site Table of Contents <small>(Table of Contents)</small>](toc.md)
     - [Glossary of Terms](glossary.md)
     - **Serial/Native Commands**
         - [DCC-EX Serial Command Basics <small>(Serial Command Basics)</small>](serial-command-basics.md)
@@ -315,6 +322,15 @@ li:not(.md-nav__item, .md-tabs__item) a {
 - [Connecting WiFi Throttles via USB](../throttles/connect_wifi_throttle_via_usb_not_in_nav.md)
 - [Engine Driver - Adding a Physical Dial/Knob](../throttles/engine-driver-physical-knobs_not_in_nav.md)
 - [Engine Driver - Features when using the Native Protocol](../throttles/engine-driver-native-protocol_not_in_nav.md)
+- [Example - Full automation with pin based turnouts and signals on Mega2560 direct I/O pins](../products/ex-commandstation/exrail/cookbooks/big-picture/stage6-examples/example5_not_in_nav.md)
+- [Example - Full automation with pin based turnouts/points and signals on MCP23017 I/O expander Vpins](../products/ex-commandstation/exrail/cookbooks/big-picture/stage6-examples/example6_not_in_nav.md)
+- [Example - Full automation with servo based turnouts/points and signals with a PCA9685 servo module](../products/ex-commandstation/exrail/cookbooks/big-picture/stage6-examples/example7_not_in_nav.md)
+- [Example - ROUTEs with DCC accessory turnouts and signals on Mega2560 direct I/O pins](../products/ex-commandstation/exrail/cookbooks/big-picture/stage6-examples/example1_not_in_nav.md)
+- [Example - ROUTEs with servo based turnouts/signals on a PCA9685 servo module](../products/ex-commandstation/exrail/cookbooks/big-picture/stage6-examples/example4_not_in_nav.md)
+- [Example - ROUTEs with turnouts/signals on MCP23017 I/O expander Vpins](../products/ex-commandstation/exrail/cookbooks/big-picture/stage6-examples/example3_not_in_nav.md)
+- [Example - ROUTEs with turnouts/signals on Mega2560 direct I/O pins](../products/ex-commandstation/exrail/cookbooks/big-picture/stage6-examples/example2_not_in_nav.md)
+- [Example - Turntable and traverser ROUTEs](../products/ex-commandstation/exrail/cookbooks/big-picture/stage5-examples/traverser-example_not_in_nav.md)
+- [Example - Turntable ROUTEs](../products/ex-commandstation/exrail/cookbooks/big-picture/stage5-examples/turntable-example_not_in_nav.md)
 - [Incorrect IOREF voltage for 3.3v Microcontrollers](esp32/ioref-incorrect-voltage-fix_not_in_nav.md)
 - [Using a Serial Monitor / Device Monitor](tools/serial-monitor_not_in_nav.md)
 - [WiFi Configuration for version 5.7.0+ <br/><small>Graphical User Interface Options</small>](../products/ex-commandstation/config-wifi-esp32-gui-options_not_in_nav.md)

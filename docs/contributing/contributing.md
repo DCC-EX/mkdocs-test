@@ -18,7 +18,7 @@ Our products are in constant development, so we are always looking out for peopl
 
 ## Help with Development
 
-We use C++, Python, HTML/CSS/Javascript, Java (for Android), and even make up our own language (EXRAIL). If you like dealing with code, there's something for all. See [here for how to contribute code](code/contributing-code.md).
+We use C++, Python, HTML/CSS/Javascript, Java (for Android), and even made up our own language (EXRAIL). If you like dealing with code, there's something for all. See [here for how to contribute code](code/contributing-code.md).
 
 ## Help Provide Web Support
 
