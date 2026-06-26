@@ -4709,7 +4709,7 @@
           <li class="md-nav__item">
   <a href="#57-familiarise-with-sensorcam-command-set" class="md-nav__link">
     <span class="md-ellipsis">
-      5.7 Familiarise with sensorCAM command set.
+      5.7 Familiarise with sensorCAM command set
     </span>
   </a>
   
@@ -9120,7 +9120,7 @@
           <li class="md-nav__item">
   <a href="#57-familiarise-with-sensorcam-command-set" class="md-nav__link">
     <span class="md-ellipsis">
-      5.7 Familiarise with sensorCAM command set.
+      5.7 Familiarise with sensorCAM command set
     </span>
   </a>
   
@@ -9943,7 +9943,7 @@ Bri=0, Con=1, Sat=2, AWB=1, AWBg=1, AEC=1, AECd=1, AEL=1, AGC=1, AGg=9; &nbsp; (
 <p>The sensorCAM takes some time to boot and establish sensing mode. The white flash LED starts flashing on every frame after about 10 seconds and data flows to the USB terminal. A period of averaging ensues with "good" sensing by about 30 seconds. This flow of data (and sensing!) can be suspended with the '<strong>w</strong>' wait command. Some commands (including a blank line entry) will subsequently restart the sensing camera and sensor output. The CAM may crash if it is left waiting for input for over 30 minutes. Reference images would also be long out of date.</p>
 <h3 id="56-verify-wifi-webcam-operation">5.6 Verify wifi webCAM operation<a class="headerlink" href="#56-verify-wifi-webcam-operation" title="Permanent link">&para;</a></h3>
 <p>The CAM can be switched to WiFi webCAM video mode with the '<strong>v1</strong>' command. '<strong>v2</strong>' can select your alternate WiFi network. ('<strong>v</strong>' will give sensorCAM software version). '<strong>v1</strong>' (or&nbsp;'<strong>v2</strong>') will reboot and load WiFi mode connecting to the network selected, and providing a URL e.g. http://192.168.0.xx that can be used to connect with a browser. An image, like <strong>Figure 1</strong> above, should be seen with controls for experimenting with Brightness etc. This image is educational but not necessarily a good indication of the sensorCAM (sensor mode) image because of the unpredictable parameter effects. To see a more reliable image run the PROCESSING <em>SensorCAM.pde</em> monitor instead of Arduino IDE monitor (refer <strong>Section 6.</strong>). To exit video mode, try the monitor command 'R' (or'F') If this software reset fails, try manually rebooting the sensorCAM (power OFF/ON) or via the on-board black push-button using a non-metallic tool!</p>
-<h3 id="57-familiarise-with-sensorcam-command-set">5.7 Familiarise with sensorCAM command set.<a class="headerlink" href="#57-familiarise-with-sensorcam-command-set" title="Permanent link">&para;</a></h3>
+<h3 id="57-familiarise-with-sensorcam-command-set">5.7 Familiarise with sensorCAM command set<a class="headerlink" href="#57-familiarise-with-sensorcam-command-set" title="Permanent link">&para;</a></h3>
 <p>Proceeding with the steps below, before mounting the camera over the railroad, is advisable to learn the steps and familiarize oneself with the sensorCAM command set. The setup commands will have to be repeated accurately once the CAM is mounted in its final location.</p>
 <h3 id="58-sensor-placement">5.8 Sensor placement<a class="headerlink" href="#58-sensor-placement" title="Permanent link">&para;</a></h3>
 <p>Setting up the CAM first requires locating sensors. When deciding on sensor location, be aware that the sensor response is slow compared to conventional sensors. Allowing for 500mSec delay, which at 100kph equates to 150mm of travel(in HO), may influence sensor placement. Best performance is obtained if the sensors are not within 20 rows/columns of an image edge. Remember to save to EPROM with the '<strong>e</strong>' command once satisfied. Virtual sensor location can be set up in several ways. Option d. is preferred.</p>
@@ -10725,7 +10725,7 @@ Finally, at the signal(S17), <strong>IFGTE(CAM 013,128) STOP</strong></p>
 </code></pre></div>
 <h3 id="commandstationcs">CommandStation(CS)<a class="headerlink" href="#commandstationcs" title="Permanent link">&para;</a></h3>
 <p>following files all in CommandStation-EX.ino folder or separate folder for installer.</p>
-<p><strong>IO_EXSensorCAM.h</strong>   </p>
+<p><strong>IO_EXSensorCAM.h</strong></p>
 <p>CamParser.h, CamParser.cpp &amp; EX-SensorCAM.h (v3.08) are now included in CommandStation-EX versions 5.4.0+ by default. Different versions (driver v3.09) are included in CS devel 5.5.40+)</p>
 <p><strong>config.h</strong>             //standard should do for single CAM at Vpin 700&amp; address 0x11</p>
 <div class="language-c++ highlight"><pre><span></span><code><span class="cp">#define SENSORCAM VPIN 700     </span><span class="c1">//defines a suitable virtual vPin for the FIRST sensorCAM</span>
@@ -10855,7 +10855,7 @@ Note: WROVER-CAM does not have a fitted external antenna socket like the ESP32-C
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 26, 2026 05:30:18 UTC">June 26, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 26, 2026 06:50:03 UTC">June 26, 2026</span>
   </span>
 
     

@@ -4818,7 +4818,7 @@
           <li class="md-nav__item">
   <a href="#processing4-command-summary" class="md-nav__link">
     <span class="md-ellipsis">
-      PROCESSING4 command summary:
+      PROCESSING4 command summary
     </span>
   </a>
   
@@ -4935,7 +4935,7 @@
           <li class="md-nav__item">
   <a href="#i2c-command-notes" class="md-nav__link">
     <span class="md-ellipsis">
-      I2C command Notes:
+      I2C command Notes
     </span>
   </a>
   
@@ -5130,7 +5130,7 @@
           <li class="md-nav__item">
   <a href="#wrover-cam-notes" class="md-nav__link">
     <span class="md-ellipsis">
-      WROVER-CAM notes.
+      WROVER-CAM Notes
     </span>
   </a>
   
@@ -5157,7 +5157,7 @@
           <li class="md-nav__item">
   <a href="#additional-random-notes" class="md-nav__link">
     <span class="md-ellipsis">
-      ADDITIONAL RANDOM NOTES:
+      ADDITIONAL RANDOM NOTES
     </span>
   </a>
   
@@ -8931,7 +8931,7 @@
           <li class="md-nav__item">
   <a href="#processing4-command-summary" class="md-nav__link">
     <span class="md-ellipsis">
-      PROCESSING4 command summary:
+      PROCESSING4 command summary
     </span>
   </a>
   
@@ -9048,7 +9048,7 @@
           <li class="md-nav__item">
   <a href="#i2c-command-notes" class="md-nav__link">
     <span class="md-ellipsis">
-      I2C command Notes:
+      I2C command Notes
     </span>
   </a>
   
@@ -9243,7 +9243,7 @@
           <li class="md-nav__item">
   <a href="#wrover-cam-notes" class="md-nav__link">
     <span class="md-ellipsis">
-      WROVER-CAM notes.
+      WROVER-CAM Notes
     </span>
   </a>
   
@@ -9270,7 +9270,7 @@
           <li class="md-nav__item">
   <a href="#additional-random-notes" class="md-nav__link">
     <span class="md-ellipsis">
-      ADDITIONAL RANDOM NOTES:
+      ADDITIONAL RANDOM NOTES
     </span>
   </a>
   
@@ -9367,7 +9367,7 @@
 <p>Due to the slowness of the ESP32 &amp; wifi, the "live stream" is slow and a webCAM delay in response will be observed.  The delay is inevitable in webCAM WiFi mode.</p>
 <p><img alt="ESP32 CAM Example Capture Sample" src="../../../_static/images/ex-sensorcam/esp32-cam-example-capture-sample.png" /></p>
 <p><strong>Figure 2 &nbsp; Initiall sensorCAM settings</strong></p>
-<p>After the sensorCAM has booted up, it reads frames for 9 seconds before automatically doing a reference grab for all defined sensors (the <strong>r00</strong> command). </p>
+<p>After the sensorCAM has booted up, it reads frames for 9 seconds before automatically doing a reference grab for all defined sensors (the <strong>r00</strong> command).</p>
 <p>The ESP32-CAM has an Infra-Red(IR) filter to enhance colour response. The sensorCAM relies on strong colour contrast(saturation) to detect changes. Low lighting levels and poor contrast degrades performance.  Some IR penetrates, so the CAM may use an IR LED for reliable beam-break sensing.</p>
 <p>To run the sensorCAM.ino, it will be necessary to configure the Arduino IDE for the ESP32 as covered in the above you-tube tutorial links. Load and run the demonstration. For the sensorCAM, you will require new files as described in the sensorCAM installation Guide. </p>
 <p>The ESP32-CAM can take rgb565 frames at 13/second. However it is a 3 step process; image sensing, processing and storing. It will then take further cycles to assess the state of the 80 virtual sensors in the frame(another two cycles) A total of 5 cycles places a significant limit on the sensorCAM speed of response time (up to 0.5 seconds at 10 frames/second). A fast HO loco can travel 160mm @ 100kph, so this latency might need to be accommodated in planning virtual sensor locations.</p>
@@ -9434,7 +9434,7 @@
 <p>If you want a LED bank occupancy indicator on the CAM, use the '<strong>n$</strong>' command to cause a bank occupied LED to show (default Bank 2). <em>nLED, min2flip, maxSensors</em> and <em>threshold</em> can be saved to EPROM, along with sensor positions and twins (see <strong>5.15</strong> below) with the '<strong>e</strong>' command. <em>minSensors</em> (<strong>n10,%%</strong>) is not currently saved in EPROM.  You will of course have to add a resistor and LED to the physical CAM (GPIO14 or GPIO32).</p>
 <h3 id="513-sensor-reference-image-refreshing">5.13 Sensor reference image refreshing<a class="headerlink" href="#513-sensor-reference-image-refreshing" title="Permanent link">&para;</a></h3>
 <p>Although sensor enabling (<strong>a</strong>) causes an immediate reference capture, it may be necessary to occasionally do a fresh reference capture for all sensors (make sure they are unoccupied!) by using the '<strong>r00</strong>' command. Individual sensor references can be refreshed using '<em>r%%</em><em>'. The results of a refresh can be seen in the scrolling "data dumps" of enabled sensors, their "difference scores" (32-99), and their perceived occupancy state. The sensor *</em>S00** is constantly averaged and refreshed every 6.4 seconds. Furthermore, there is an automatic refresh process that cycles through enabled sensors and regularly averages 32 consecutive sample images.<br />
-If the sensor remains unoccupied, it updates the reference, compensating for slowly drifting lighting changes. </p>
+If the sensor remains unoccupied, it updates the reference, compensating for slowly drifting lighting changes.</p>
 <h3 id="514-scrolling-data-interpretation">5.14 Scrolling data interpretation<a class="headerlink" href="#514-scrolling-data-interpretation" title="Permanent link">&para;</a></h3>
 <p>The scrolling data dump displays "SUS" (suspend) if auto updates are off. It also displays <em>threshold</em>(T), <em>min2trip</em>(M), the bank assigned to the on-board <em>nLED</em>(N), S00 reference diff. score, as well as the S00 reference brightness(R) and its current actual brightness(A), a brightness scale factor(B) and other enabled sensors. 'A' is the Actual latest sum of the 48 bytes of a sensor image (max 3024) and should be between 1200 and 2500 ideally. Following a reference refresh (<strong>r</strong>), for an unoccupied image, the (noisy) diff. scores should be 32-37. If references are being updated, a note will appear at the right hand side of the data dump in the form of "<strong>Ref 0%%</strong>" to indicate that a new reference for an UNOCCUPIED sensor has occurred. This dump allows for performance monitoring during commissioning.<br />
 :<strong>oo46##</strong> indicates tripped sensor (## = <strong>occupied</strong>) sensor are shown by default with a central diff score (32-99).<br />
@@ -9453,7 +9453,7 @@ You may also increase the image display window size factor by editing the next <
 <p>The image will have enabled sensors (b/s) boxed and identified by a (resistor) colour code. Left bar is bank# and right bar is sensor#. Combined, they give the Sensor's bsNo (S%%). If two sensors have the same coordinates, the colour code will be for the highest bsNo.<br />
 <strong>Note:</strong> Only sensors below <em>maxSensors</em> will appear boxed. <strong>N.B.</strong> the ‘<strong>H</strong>’ command will REVERSE the coding from b/s to s/b.<br />
 <strong>(The resistor colour code is 0:black 1=brown 2=red 3=orange 4=yellow 5=green 6=blue 7=violet 8=grey 9=white)</strong></p>
-<h4 id="processing4-command-summary">PROCESSING4 command summary:<a class="headerlink" href="#processing4-command-summary" title="Permanent link">&para;</a></h4>
+<h4 id="processing4-command-summary">PROCESSING4 command summary<a class="headerlink" href="#processing4-command-summary" title="Permanent link">&para;</a></h4>
 <p><strong>W###</strong> &nbsp; will limit the image to### rows wide/high(1-240) (default 240)</p>
 <p><strong>X###</strong> &nbsp; will start the image from column ###(0-319) (default 0) -uses the sensorCAM 'x' command.</p>
 <p><strong>Y###</strong> &nbsp; will initiate an image download starting at row ### (0-239) (default 0) -uses the sensorCAM 'y' cmd.</p>
@@ -9466,7 +9466,7 @@ You may also increase the image display window size factor by editing the next <
 </blockquote>
 <ol>
 <li>
-<p>The above commands ARE CASE SENSITIVE. They are recognized by Processing 4 as non-sensorCAM commands and processed in the monitor/PC. Commands <strong>X, Y</strong> &amp; <strong>Z</strong> in turn automatically issue related sensorCAM commands <strong>x, y</strong> &amp; <strong>z</strong> respectively, with appropriate parameters.  The '<strong>Y</strong>' command suspends sensorCAM imaging, holding a single “frozen” frame until a terminating command ('yy') is received. </p>
+<p>The above commands ARE CASE SENSITIVE. They are recognized by Processing 4 as non-sensorCAM commands and processed in the monitor/PC. Commands <strong>X, Y</strong> &amp; <strong>Z</strong> in turn automatically issue related sensorCAM commands <strong>x, y</strong> &amp; <strong>z</strong> respectively, with appropriate parameters.  The '<strong>Y</strong>' command suspends sensorCAM imaging, holding a single “frozen” frame until a terminating command ('yy') is received.</p>
 </li>
 <li>
 <p>If you use <strong>H</strong> to mirror, the colour coding for boxed sensor number (bsNo.) has to be read right to left.  Do NOT click on image to create sensors if image has been flipped.</p>
@@ -9476,7 +9476,7 @@ You may also increase the image display window size factor by editing the next <
 </li>
 </ol>
 <h2 id="7-wiring-requirements">7 Wiring Requirements<a class="headerlink" href="#7-wiring-requirements" title="Permanent link">&para;</a></h2>
-<p>Refer to <strong>Figure 6</strong> and <strong>Appendix F</strong> for alternate solutions for connecting sensorCAM to an i2c bus for remote control. For initial testing from a PC, the basic ESP32-CAM-MB or Wrover-CAM (<strong>CH340</strong> based USB interface) could be sufficient via. USB.  With i2c, take care to use level shifting (PCA9515A or Endpoints) if using a 5V Mega CS. </p>
+<p>Refer to <strong>Figure 6</strong> and <strong>Appendix F</strong> for alternate solutions for connecting sensorCAM to an i2c bus for remote control. For initial testing from a PC, the basic ESP32-CAM-MB or Wrover-CAM (<strong>CH340</strong> based USB interface) could be sufficient via. USB.  With i2c, take care to use level shifting (PCA9515A or Endpoints) if using a 5V Mega CS.</p>
 <p>The recommended hardware interface to an <strong>EX-CommandStation</strong> is currently the <strong>Sparkfun Endpoint</strong> system (<strong>Figure 6.</strong> &amp; <strong>APPENDIX&nbsp;F</strong>) which permits the i2c bus to be run over long standard Cat5 twisted pair cable.  It can also carry the required raw power supply. The Sparkfun Endpoints are used <strong>in pairs</strong> and can cater for voltage shifting between 5V Command Stations  (e.g. Mega) and 3.3V sensorCAM as required. For the very simplest off-the-shelf arrangement, an ESP32-WROVER-DEV CAM with a cheap ESP32 breakout board (including regulator) can be linked to an Endpoint with 4 Dupont wires for a working CAM system on the end of a cat5 cable of considerable length as indicated in <strong>Figure 6</strong> &amp; <strong>APPENDIX&nbsp;F</strong>, needing only a remote, preferably electrically isolated(floating), 7-10Vdc 0.5A power supply and a matching endpoint on a Command Station.  For a cheaper solution, use the PCA9515A with dupont jumpers for a limited (2m?) reach with either esp32-CAM or Wrover-CAM powered via USB.<br />
 <strong>Note:</strong> The Sparkfun Endpoint may also need a jumper cut or joined for i2c bus voltage level matching to the Command Station.  </p>
 <p>The ESP32-WROVER-DEV board is a good alternative to the original ESP32-CAM-MB. The slightly bigger CAM will be a little more convenient with the ESP32S Expansion board. This 38 pin expansion board with 5V regulator is poorly described in the video below. <strong>IGNORE PRESENTERS DESCRIPTION OF HIS FAULTY 5V REGULATOR past the 5minute mark</strong>.  With NO Wrover, verify the regulator gives 5V from 9V at the barrel jack and remove power before inserting or removing the Wrover.  For want of a better video...</p>
@@ -9494,7 +9494,7 @@ You may also increase the image display window size factor by editing the next <
 <p>The operation of the railway depends on a Control Station that polls the sensorCAM for sensor states. This might be a dedicated Arduino Mega 2560 for example. It might be an <strong>EX-CSB1</strong> Command Station running DCC-EX and <strong>EXRAIL</strong> software. If the sensorCAM is powered up with default settings (from EPROM), or adjusted by the user at the start, the program need only talk to sensorCAM over an i2c bus using the commands a,b,i,l &amp; o for example, or it may be more sophisticated, providing a command channel from a Control Station monitor to the sensorCAM to enable most configuration commands via the i2c bus.</p>
 <p>The i2c bus is running at 100kHz on the prototype software. It has not been tested at any higher speed yet. It has been running fine over a 10m long i2c bus to the master microcontroller (CSB1, Mega or others).</p>
 <h3 id="82-dcc-ex-command-station">8.2   DCC-EX Command Station<a class="headerlink" href="#82-dcc-ex-command-station" title="Permanent link">&para;</a></h3>
-<p>Setting up a DCC-EX Command Station, should you have one, requires configuration details placed in files <em>config.h</em> and <em>mySetup.h</em> along with a driver <em>IO_EXSensorCAM.h</em> and <em>myAutomation.h</em>. These must go in the directory containing file CommandStation-EX.ino. Refer to <strong>APPENDIX H</strong> for installation details.  <em>EXSensorCAM.h</em> code mirrors the sensorCAM command set with a few exceptions.  Imaging and graphic placement is not available.  Functionality was added using the DCC-EX sensorCAM native command &lt;N&gt; format. </p>
+<p>Setting up a DCC-EX Command Station, should you have one, requires configuration details placed in files <em>config.h</em> and <em>mySetup.h</em> along with a driver <em>IO_EXSensorCAM.h</em> and <em>myAutomation.h</em>. These must go in the directory containing file CommandStation-EX.ino. Refer to <strong>APPENDIX H</strong> for installation details.  <em>EXSensorCAM.h</em> code mirrors the sensorCAM command set with a few exceptions.  Imaging and graphic placement is not available.  Functionality was added using the DCC-EX sensorCAM native command &lt;N&gt; format.</p>
 <h3 id="84-monitor-lighting">8.4 Monitor Lighting<a class="headerlink" href="#84-monitor-lighting" title="Permanent link">&para;</a></h3>
 <p>Stable good lighting is needed.  Gross Lighting changes will have two effects, namely cause trips of most sensors and stop automatic reference refreshes, it may be wise to include monitoring for this eventuality by detecting and setting an “alarm” state. The reference sensor (S00) is automatically re-referenced every 6.4 seconds so will indicate a fault-trip for a maximum of 6.4 seconds. All other sensors will continue to indicate a trip until the user resets the references with an r00 (having checked all unoccupied). See full manual for creating a fault LED indicator.  PLED uses GPIO14 and QLED uses GPIO32 (Wrover).</p>
 <h2 id="appendix-a">APPENDIX A<a class="headerlink" href="#appendix-a" title="Permanent link">&para;</a></h2>
@@ -9553,7 +9553,7 @@ Also able to change default setting for Brightness, Contrast &amp; Saturation wi
 <li>If the OV2640 camera or WiFi fails to initialize, the CAM resets and may restart/revert into Sensor mode.  </li>
 <li>If USB FTDI/MB is removed or not connected to PC, then WebServer may fail/reboot. Power issue?  </li>
 </ol>
-<h3 id="i2c-command-notes">I2C command Notes:<a class="headerlink" href="#i2c-command-notes" title="Permanent link">&para;</a></h3>
+<h3 id="i2c-command-notes">I2C command Notes<a class="headerlink" href="#i2c-command-notes" title="Permanent link">&para;</a></h3>
 <p><strong>(EX-CS may exhibit small variations &amp; reduced cmd functionality refer APPENDIX C)</strong></p>
 <p><strong>1.</strong> The same commands are valid from an I2C Master Arduino, but there are some variations.<br />
 <strong>2.</strong> The commands with asterisks normally pause CAM execution so the operator can read USB output on a monitor screen. The same commands from I2C DO NOT wait for a new line, with the exception of 'w'.<br />
@@ -9588,12 +9588,12 @@ Also able to change default setting for Brightness, Contrast &amp; Saturation wi
 <p><strong>7.</strong> Make sure you do a refresh/record reference (<strong>r</strong>) after any changes or the benefit will be obscured.</p>
 <p><strong>8.</strong> Is the camera steady? No vibration or movement since the last reference images (<strong>r</strong>)?</p>
 <p><strong>9.</strong> There is a 2-frame (experimental) averaging applied to low bank sensors (currently 0-2) This can be extended to cover all banks, if desired by increasing CAM parameter <em>TWOIMAGE_MAXBS</em> above 3/0</p>
-<p><strong>10.</strong> There has been poorer behavior observed with sensors placed near the edge of the frame. They seem to experience more electrical noise than mid-frame sensors and may need extra attention.</p>
+<p><strong>10.</strong> There has been poorer behaviour observed with sensors placed near the edge of the frame. They seem to experience more electrical noise than mid-frame sensors and may need extra attention.</p>
 <p><strong>11.</strong> A statistics function can be obtained to see how bad spurious tripping is. The '<strong>&amp;</strong>' cmd gives a table of stats accumulated since the previous '<strong>&amp;</strong>' command. May be useful. HINT: You can compare two or more sensors with different settings on the same spot. Accumulate data with no genuine trips.</p>
 <p><strong>12.</strong> Consider whether a pixel may be faulty or unduly noisy. Try another nearby sensor position.</p>
 <p><strong>13.</strong> If necessary, enhance the brightness of the Sensor location with light colour or a small reflector.</p>
 <p><strong>14.</strong> It is possible to set private thresholds on individual sensors if other solutions inadequate. (<strong>t##,%%</strong>)</p>
-<p><strong>15.</strong> Consider adjusting <em>brightSF</em>($) if colour contrast is generally poor (<strong>b#,$</strong>) default 3, try 1-5.</p>
+<p><strong>15.</strong> Consider adjusting _brightSF_($) if colour contrast is generally poor (<strong>b#,$</strong>) default 3, try 1-5.</p>
 <p><strong>16.</strong> In some situations, repositioning sensor slightly to include loco shadow will give extra sensitivity.</p>
 <p><strong>17.</strong> Consider repositioning CAM for better oblique view angle giving more contrast for better detection, catching sides of coaches/wagons, shadows and some trackside references.</p>
 <p><strong>18</strong> Consider a beam break enhancement by placing an IR led between rails at the sensor position (power from DCC track?)</p>
@@ -9872,7 +9872,7 @@ Finally, at the signal(S17), <strong>IFGTE(CAM 013,128) STOP</strong></p>
 <h3 id="2-multiple-cams">2. Multiple Cams<a class="headerlink" href="#2-multiple-cams" title="Permanent link">&para;</a></h3>
 <p>Multiple sensorCAMs can be easily handled if CAM2, CAM3 etc are defined along the lines of CAM above, so <strong>IF(CAM2 012)</strong> tests a different sensor to <strong>IF(CAM3 012)</strong>, provided <strong>SENSORCAM2_ VPIN</strong> etc. are defined. Using CS native commands, e.g. <strong>&lt;Ni 212&gt;</strong> and <strong>&lt;Ni 312&gt;</strong>, can also access <strong>S12</strong> on different CAMs. <strong>The #define SENSORCAM_VPIN ###</strong> is essential for cam1. Do NOT insert a 1 in to <strong>SENSORCAM_VPIN</strong>. You may use <strong>SENSORCAM2_VPIN</strong> and <strong>SENSORCAM3_VPIN</strong> with <strong>CAM2</strong> and <strong>CAM3</strong> in <em>config.h</em></p>
 <h2 id="appendix-j">APPENDIX J<a class="headerlink" href="#appendix-j" title="Permanent link">&para;</a></h2>
-<h3 id="wrover-cam-notes">WROVER-CAM notes.<a class="headerlink" href="#wrover-cam-notes" title="Permanent link">&para;</a></h3>
+<h3 id="wrover-cam-notes">WROVER-CAM Notes<a class="headerlink" href="#wrover-cam-notes" title="Permanent link">&para;</a></h3>
 <h3 id="1-note-on-i2c-clock-frequency">1 Note on i2c clock frequency<a class="headerlink" href="#1-note-on-i2c-clock-frequency" title="Permanent link">&para;</a></h3>
 <p>The newer sensorCAM drivers default to an i2c bus frequency of 100,000 Hz. With caution, this may be increased somewhat (e.g. 200000) if the i2c bus is well tuned and all attached devices can handle higher frequencies. To set a higher frequency, for example, place the following in mySetup.h or myHal.cpp I2Cmanager.forceClock(200000); //place after void halSetup()</p>
 <h3 id="2-notes-on-40-pin-wrover-cam-and-38-pin-breakout-board">2. Notes on 40-pin WROVER CAM and 38-pin breakout board<a class="headerlink" href="#2-notes-on-40-pin-wrover-cam-and-38-pin-breakout-board" title="Permanent link">&para;</a></h3>
@@ -9887,7 +9887,7 @@ Finally, at the signal(S17), <strong>IFGTE(CAM 013,128) STOP</strong></p>
 <p>For a limited reach, perhaps using a LTC4311 terminator/buffer at the CS to boost signal rise times and range, the cheaper PCA9515A may be used with the Wrover-CAM connected as below.  The wires from PCA9515A to the CAM can be up to 2m long (with extra pullups) using twisted pairs (cat5?).</p>
 <p><img alt="ESP32 Wrover CAM with PCA9515A" src="../../../_static/images/ex-sensorcam/esp32-wrover-pca9515a.png" /></p>
 <p><strong>If using a 3.3V processor such as the CSB1</strong>, it may be adequate to have no voltage level shifting PCA9515A and instead simply connect directly to an i2c branch with an LTC4311, keeping the total i2c segment within allowable length limits.  This may mean using a multiplexer port to limit segments to workable lengths, as the run to the sensorCAM is a significant additional length to any existing i2c bus.  The sensorCAM still needs a regulated power supply independent of the i2c bus SDA,SCL and gnd cable.</p>
-<h3 id="additional-random-notes">ADDITIONAL RANDOM NOTES:<a class="headerlink" href="#additional-random-notes" title="Permanent link">&para;</a></h3>
+<h3 id="additional-random-notes">ADDITIONAL RANDOM NOTES<a class="headerlink" href="#additional-random-notes" title="Permanent link">&para;</a></h3>
 <p>ALL FOLLOWING IMAGES ARE FOR GENERAL INFORMATION ONLY&amp; NOT DIRECTLY REFERENCED IN THE FULL MANUAL ABOVE</p>
 <p><img alt="ESP32 CAM MB v1.6 vs v1.9" src="../../../_static/images/ex-sensorcam/esp32-cam-mb-16-19.png" /></p>
 <p><img alt="ESP32 CAM Closeup 1" src="../../../_static/images/ex-sensorcam/esp32-cam-closeup-1.png" /></p>
@@ -9912,7 +9912,7 @@ Finally, at the signal(S17), <strong>IFGTE(CAM 013,128) STOP</strong></p>
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 23, 2026 23:10:21 UTC">June 23, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 26, 2026 06:50:03 UTC">June 26, 2026</span>
   </span>
 
     
