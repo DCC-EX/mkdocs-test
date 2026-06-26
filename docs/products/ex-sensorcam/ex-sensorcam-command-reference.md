@@ -21,7 +21,7 @@ Commands are used through the Command Station input to configure the sensorCAM s
 
 ## Native cam USB & CS cmd formats
 
-| native CAM | native CS |  &nbsp; &nbsp; &nbsp;  Command Description |
+| native CAM | native CS | &nbsp; &nbsp; &nbsp;  Command Description |
 | --- | --- | :--- |
 | **a%%[,rr,xx]** | **`<Na %%[ rr xx]>`** | **enAble Sensor and refresh reference**<br> Sensor will respond to changing image. rr,xx set as new coordinates |
 | **b#[,$]** | **`<Nb #>`** | **Bank occupancy status [& Brightness ScaleFactor $]**<br>Trip status of 8 sensors in a single byte (8 bits) (hex & binary) |
@@ -42,8 +42,8 @@ Commands are used through the Command Station input to configure the sensorCAM s
 | **q#** | **`<Nq #>`** | **Query enAbled state of sensors in bank**<br>Prints enabled state of all 8 sensors (1/0).  Use q9 for ALL banks |
 | **r%%** | **`<Nr %%>`** | **Refresh reference image for sensor**<br>enAbles sensor and captures a new reference image.  Use r00 for ALL |
 | **s%%** | **`<Ns %%>`** | **Scan video to define a new Sensor position (superseeded)**<br>Scan for brightest spot (LED) and position sensor there. |
-| **t##[,%%]** | **`<Nt ##[ %%]>`**  | **Theshold setting (32-98) global [pvtThreshold for S%%]**<br>Sets new global threshold, [or a  pvtThreshold] (t99 lists pvtThresholds)<br>For ## of (2-31), print ## data rows. &nbsp; (t00,%% clears a pvtThreshold) |
-| **t1[,%%]**  | **`<Nt 1[ %%]>`**  | **Toggle data scroll on/off. &nbsp; [or Trash pvtThresholds for S%% bank]**<br>clears 1 bank of 8 pvtThresholds. &nbsp; (t1,99 clears ALL pvtThresholds) |
+| **t##[,%%]** | **`<Nt ##[ %%]>`** | **Theshold setting (32-98) global [pvtThreshold for S%%]**<br>Sets new global threshold, [or a  pvtThreshold] (t99 lists pvtThresholds)<br>For ## of (2-31), print ## data rows. &nbsp; (t00,%% clears a pvtThreshold) |
+| **t1[,%%]** | **`<Nt 1[ %%]>`** | **Toggle data scroll on/off. &nbsp; [or Trash pvtThresholds for S%% bank]**<br>clears 1 bank of 8 pvtThresholds. &nbsp; (t1,99 clears ALL pvtThresholds) |
 | **u%%** | **`<Nu %%>`** | **Un-define Sensor**<br>Resets sensor coordinates to 0,0 |
 | **v[#]** | **`<Nv[ #]>`** | **Version [or Video webCAM SSID #]**<br>Displays EX-SensorCAM version info [v# starts SSID # webCAM] |
 | **w** | **`<Nw>`** | **Wait for command. &nbsp; (NOTE: 't1' alternative action)**<br>Cam suspends image capture and scrolling and waits for an 'Enter' |
@@ -51,11 +51,10 @@ Commands are used through the Command Station input to configure the sensorCAM s
 | n/a | **`<N[M #00]>`** | **Show Current CAM selection and others available (CS only)**<br>Optionally allows switching current cam to CAM# (1-4) |
 | n/a | **`<NC ###>`** | **CAM selection**<br>Switches commands to the CAM at vpin ### or CAM number #(1-4) |
 | n/a | **`<NQ>`** | **Query state of all Sensors**<br>Tabulation of all sensor tripped states in banks of 8 |
-| **F**  | **`<NF>`**  |  **Forces immediate CAM reset**<br>Reset into EX-SensorCAM mode, exting any webCAM/WiFi mode |
-| **R**  | `<n/a>` | **Reset EX-SensorCAM &nbsp; (CS <NR\> gives equivalent of <Nr 00\>)**<br>Reset into EX-SensorCAM mode, exting any WiFi mode |
+| **F** | **`<NF>`** | **Forces immediate CAM reset**<br>Reset into EX-SensorCAM mode, exting any webCAM/WiFi mode |
+| **R** | `<n/a>` | **Reset EX-SensorCAM &nbsp; (CS <NR\> gives equivalent of <Nr 00\>)**<br>Reset into EX-SensorCAM mode, exting any WiFi mode |
 | **&** | `<n/a>` | **Print statistics since last '&' cmd.**<br>USB histogram of trips and potential trips of 1-3 frames |
 | **+#,$** | `<n/a>` | **Add offset of # pixels in $ direction to ALL enabled Sensors**<br>realign ALL sensors by # pixels in direction specified (N-NW) |
-| **\\ &nbsp; / &nbsp; @** |   | **Commands for lines and trip symbol - refer to manual**  |
-
+| **\\ &nbsp; / &nbsp; @** | | **Commands for lines and trip symbol - refer to manual** |
 
 **NOTE:  The EX-SensorCAM USB input will also accept most CS formatted commands.**

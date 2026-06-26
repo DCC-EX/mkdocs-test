@@ -1,12 +1,12 @@
 # Installation Guide
 
-EX-SensorCAM is an advanced concept foreign to most model railroaders and consequently deals with many unfamiliar issues. It also calls on multiple software applications to address them. The initial software setup for an inexperienced tinkerer is consequently involved and needing perseverance. The Arduino IDE, the ESP32 libraries, the Processing 4 App, the EX-Command Station and **EXRAIL** (if used) combine to create a unique system supporting the sensorCAM's own software. Any prior knowledge of these will vastly expedite the installation.
+EX-SensorCAM is an advanced concept foreign to most model railroaders and consequently deals with many unfamiliar issues. It also calls on multiple software applications to address them. The initial software setup for an inexperienced tinkerer is consequently involved and needing perseverance. The Arduino IDE, the ESP32 libraries, the Processing 4 App, the **EX-CommandStation** and **EXRAIL** (if used) combine to create a unique system supporting the **EX-sensorCAM's** own software. Any prior knowledge of these will vastly expedite the installation.
 
-### **Outline**
+## Outline
 
 This installation process is divided into 12 steps outlined below. It is recommended that it be treated as a learning exercise and that testing of progress occur after each major step. For example, familiarization with Arduino IDE should be developed before moving to the ESP32 example, and then familiarize with the ESP32-CAM WiFi example before moving on to the sensorCAM loading.
 
-As the sensorCAM is not for Conductors, and perhaps only advanced Tinkerers, it is anticipated that users will already be familiar with the Arduino IDE and maybe already have toyed with the ESP32-CAM. We have not therefore included much detail on the first few steps but rather referred to existing documentation elsewhere (e.g. Arduino & YouTube). Most detail is provided in steps 4 to 8 at this stage.
+As the **EX-SensorCAM** is not for Conductors, and perhaps only advanced Tinkerers, it is anticipated that users will already be familiar with the Arduino IDE and maybe already have toyed with the ESP32-CAM. We have not therefore included much detail on the first few steps but rather referred to existing documentation elsewhere (e.g. Arduino & YouTube). Most detail is provided in steps 4 to 8 at this stage.
 
 The chapters of the full manual may be referred to where additional detail is sought. The 12 steps are:
 
@@ -21,7 +21,7 @@ The chapters of the full manual may be referred to where additional detail is so
 9. Setup the CAM viewing the model railroad and test a virtual sensor with moving rolling stock.
 10. Optimise parameters for best performance.
 11. Connect CAM to an i2c interface (e.g. PCA9515A or better)
-12. Depending on system, integrate sensorCAM into Command Station using appropriate code.
+12. Depending on system, integrate **EX-SensorCAM** into **EX-CommandStation** using appropriate code.
 
 **Note:** Check version of your CH340 driver in **Device Manager - Ports**. Change if issues arise**.**
 
@@ -191,15 +191,15 @@ The quickest and simplest method is to fit a PCA9515A to the ESP32-CAM-MB. Refer
 
 ### **Step 12. Depending on system, integrate sensorCAM into Command Station using appropriate code.**
 
-The CAM can be connected to a "Control Station" via i2c using appropriate host code (typically C++). It has been successfully interfaced to two different (Arduino Mega) systems but most focus has been on the DCC-EX-Command Station (CS). The sensorCAM can be connected to a CS and interrogated using EXRAIL.
+The CAM can be connected to a "Control Station" via i2c using appropriate host code (typically C++). It has been successfully interfaced to two different (Arduino Mega) systems but most focus has been on the **DCC-EX EX-CommandStation** (CS). The **EX-SensorCAM** can be connected to a Command Station and interrogated using EXRAIL.
 
-If you are wanting to integrate with a CS, we assume you have installed EX-CS previously. If not, refer to the DCC-EX website for details. The following guide assumes you have a working v5.4.x CS in place.
+If you are wanting to integrate with a Command Station, we assume you have installed **EX-CommandStation** previously. If not, refer to the DCC-EX website for details. The following guide assumes you have a working v5.4.x CS in place.
 
-**12.1** The EX-SensorCAM repository has an EX-CS directory. These files normally reside with the _CommandStation-EX.ino_ beside the other standard CS files. They are a guide to what is needed in the existing files in the _CommandStation-EX._ino directory. The user generally needs to EDIT existing files rather than copy these. The **_CamParser.cpp_** and **_IO_EXSensorCAM.h_** drivers already included in CS v5.4.16+ should be adequate for a "Production/master" CS installation, so do NOT copy these files from folder EX-CS unless they represent a known recommended upgrade to the integrated functions. It is advisable to make backups of any file you do need to edit in installing sensorCAM (12.2-12.5 below).
+**12.1** The **EX-SensorCAM** repository has an EX-CommandStation directory. These files normally reside with the _CommandStation-EX.ino_ beside the other standard CS files. They are a guide to what is needed in the existing files in the _CommandStation-EX._ino directory. The user generally needs to EDIT existing files rather than copy these. The **_CamParser.cpp_** and **_IO_EXSensorCAM.h_** drivers already included in CS v5.4.16+ should be adequate for a "Production/master" CS installation, so do NOT copy these files from folder EX-CommandStation unless they represent a known recommended upgrade to the integrated functions. It is advisable to make backups of any file you do need to edit in installing sensorCAM (12.2-12.5 below).
 
 ![Driver Files](/_static/images/ex-sensorcam/driver-files.png)
 
-**12.2** Edit CS **_config.h_** file adding **_#define SENSORCAM_VPIN 700_** and **_#define CAM SENSORCAM_VPIN+_** exactly as shown below for your first CAM. If you do NOT want to use vpins 700 to 779 for the sensorCAM virtual sensors, or use multiple sensorCAM's, you may adjust the vpin number accordingly. Be careful to not change any other CS _config.h_ code from your previous working CS installation. This suits both CS Production (main) version v5.4.0+ and versions v5.5.15+ (devel) versions.
+**12.2** Edit CS **_config.h_** file adding **_#define SENSORCAM_VPIN 700_** and **_#define CAM SENSORCAM_VPIN+_** exactly as shown below for your first CAM. If you do NOT want to use vpins 700 to 779 for the sensorCAM virtual sensors, or use multiple sensorCAM's, you may adjust the vpin number accordingly. Be careful to not change any other CS _config.h_ code from your previous working EX-CommandStation installation. This suits both CS Production (main) version v5.4.0+ and versions v5.5.15+ (devel) versions.
 
 ![Edit Cam 1 Vpins](/_static/images/ex-sensorcam/edit-cam-1-vpins.png)
 
@@ -245,7 +245,7 @@ With CAM flashing, try &lt;N m&gt;, &lt;N i 11&gt; and &lt;N t 46&gt; to confirm
 
 **Opening an Arduino IDE monitor on the CS OR sensorCAM (or uploading software) can cause a reboot of the respective microprocessor, so the above issue needs to be appreciated and catered for, possibly with a following CS or CAM reboot. It is a common issue with all "smart" peripherals (e.g. EX-IOExpander).**
 
-**12.9** To use EX-RAIL, refer to the EX documentation regarding general sensor usage.
+**12.9** To use EX-RAIL, refer to the DCC-EX documentation regarding general sensor usage.
 
 Refer to the sensorCAM manual Appendix H for further tips regarding sensorCAM with EXRAIL.
 
