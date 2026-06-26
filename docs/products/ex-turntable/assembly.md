@@ -351,7 +351,7 @@ In the device setup above, there are three parameters provided, but only two may
 
 If you already have an existing "myAutomation.h" file, then you simply need to add this entry in the appropriate section of your existing file.
 
-Follow the rest of the directions for ==TODO== :ref:`reference/developers/hal-config:adding a new device` all the way through to the ==TODO== :ref:`reference/developers/hal-config:upload the new version of the software` step to upload your newly configured CommandStation.
+Follow the rest of the directions for [adding a new device](/reference/hardware/hal/hal-config.md#adding-a-new-device) all the way through to the [upload the new version of the software](/reference/hardware/hal/hal-config.md#upload-the-new-version-of-the-software) step to upload your newly configured CommandStation.
 
 ### 9. Connect EX-Turntable to your EX-CommandStation
 

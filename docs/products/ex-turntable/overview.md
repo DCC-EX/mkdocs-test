@@ -1,4 +1,9 @@
-# EX- Turntable - Overview
+# EX-Turntable - Overview
+
+![EX-Turntable Logo](../../_static/images/logos/product-logo-ex-turntable-only-light.png){ .only-light width=400px align=right }
+![EX-Turntable Logo](../../_static/images/logos/product-logo-ex-turntable-only-dark.png){ .only-dark width=400px align=right }
+
+Welcome to the home of **EX-Turntable**, a fully integrated turntable controller for **EX-CommandStation**.
 
 ## What is EX-Turntable?
 

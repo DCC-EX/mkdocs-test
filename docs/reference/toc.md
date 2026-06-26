@@ -160,8 +160,7 @@ li:not(.md-nav__item, .md-tabs__item) a {
         - [Time Control](../products/ex-fastclock/timecontrol.md)
     - [EX-IOExpander](../products/ex-ioexpander/ex-ioexpander.md)
     - **EX-Turntable**
-        - [EX-Turntable](../products/ex-turntable/index.md)
-        - [EX- Turntable - Overview <small>(Overview)</small>](../products/ex-turntable/overview.md)
+        - [EX-Turntable - Overview <small>(EX-Turntable Overview)</small>](../products/ex-turntable/overview.md)
         - [Purchasing](../products/ex-turntable/purchasing.md)
         - [Assembly & Setup](../products/ex-turntable/assembly.md)
         - [Testing, Tuning, and Control <small>(Testing, Tuning & Control)</small>](../products/ex-turntable/test-and-tune.md)
@@ -264,6 +263,9 @@ li:not(.md-nav__item, .md-tabs__item) a {
             - [Bluetooth Devices](hardware/bluetooth-devices/index.md)
         - **Ethernet boards**
             - [Ethernet Boards](hardware/ethernet-boards/index.md)
+        - **Hal**
+            - [I/O Device Drivers and HAL](hardware/hal/hal-config.md)
+            - [Writing a HAL Driver](hardware/hal/writing-hal-driver.md)
         - **Motorboards**
             - [L298P & L298HN Shields <small>(L298 Shields)</small>](hardware/motorboards/l298-shields.md)
             - [Schematics](hardware/motorboards/schematics.md)

@@ -41,9 +41,8 @@ In this section, you will find some tips on troubleshooting the various issues e
 | -- | -- |
 | EX-CommandStation software fails to compile with "#include IO_TurntableEX.h" in myHal.cpp | The version of EX-CommandStation is incorrect, you need the "add-turntable-controller" branch of ==TODO== `EX-CommandStation <https://github.com/DCC-EX/CommandStation-EX/tree/add-turntable-controller>`_ |
 
-### EX-Turntable showing as offline with <D HAL SHOW>
+### EX-Turntable showing as offline with `<D HAL SHOW>`
 
 | Symptoms | Common Causes |
 | -- | -- |
-| \<D HAL SHOW\> reports EX-Turntable as OFFLINE <br/>EX-Turntable does not respond to EXRAIL or diagnostic commands   - | EX-Turntable is not powered on, or was powered on after the CommandStation <br/>The I2C (I<sup>2</sup>C) interfaces are not connected correctly, refer to [connect ex-turntable to your ex-commandstation](assembly.md#9-connect-ex-turntable-to-your-ex-commandstation) <br/>The I2C (I<sup>2</sup>C) address in EX-Turntable's config.h does not match the address in the CommandStation's myHal.cpp file |
-
+| \<D HAL SHOW\> reports **EX-Turntable** as OFFLINE <br/>EX-Turntable does not respond to EXRAIL or diagnostic commands   - | **EX-Turntable** is not powered on, or was powered on after the CommandStation <br/>The I2C (I<sup>2</sup>C) interfaces are not connected correctly, refer to [connect ex-turntable to your EX-CommandStation](assembly.md#9-connect-ex-turntable-to-your-ex-commandstation) <br/>The I2C (I<sup>2</sup>C) address in EX-Turntable's config.h does not match the address in the CommandStation's myHal.cpp file |

@@ -20,7 +20,7 @@ Serial commands to manage Turntables.
 
 The Turntable/Traverser commands provide a more flexible and functional way of operating turntables/traversers. These require that the turntable/traverser be pre-defined through the ``<I ...>`` commands, described below.
 
-Also refer to the [legacy EX-Turntable documentation](https://dcc-ex.com/legacy-docs/ex-turntable/index.html).
+Also refer to the [legacy EX-Turntable documentation](https://dcc-ex.com/legacy-docs/ex-turntable/overview.html).
 
 ==TODO== move legacy docs
 

@@ -8,15 +8,15 @@ When it comes to RMFT, we are adding a turntable that has seven defined position
 
 In addition, we are also adding a horizontal staging traverser that will allow for six complete trains to be staged off the layout ready for action.
 
-!! note "Tip"
+!!! note "Tip"
 
-  In preparation for adding an **EX-Turntable** to your layout, you'll need to understand the concepts outlined on the [EX-Turntable Overview](../../../../ex-turntable/overview.md) page, paying particular attention to the section on polarity or phase switching ([](../../../../ex-turntable/overview.md#important-phase-or-polarity-switching)), as we will be using automatic phase switching for the turntable.
+    In preparation for adding an **EX-Turntable** to your layout, you'll need to understand the concepts outlined on the [EX-Turntable Overview](../../../../ex-turntable/overview.md) page, paying particular attention to the section on polarity or phase switching ([](../../../../ex-turntable/overview.md#important-phase-or-polarity-switching)), as we will be using automatic phase switching for the turntable.
 
-  Further to this, you'll also need to understand the differences required for traverser mode as outlined on the [Traverser](../../../../ex-turntable/traverser.md) page. We will not require phase switching for the traverser, as any locos on the traverser will not be rotating 180 degrees.
+    Further to this, you'll also need to understand the differences required for traverser mode as outlined on the [Traverser](../../../../ex-turntable/traverser.md) page. We will not require phase switching for the traverser, as any locos on the traverser will not be rotating 180 degrees.
 
-  If you won't be using a traverser on your layout or want to tackle this separately, you can skip the traverser info on this page as it is essentially an extension of the turntable info.
+    If you won't be using a traverser on your layout or want to tackle this separately, you can skip the traverser info on this page as it is essentially an extension of the turntable info.
 
-  Having both a turntable and traverser will require two separate instances of **EX-Turntable**, meaning two Arduinos, two stepper drivers/motors, and so forth.
+    Having both a turntable and traverser will require two separate instances of **EX-Turntable**, meaning two Arduinos, two stepper drivers/motors, and so forth.
 
 ## What to expect to learn from stage 5
 

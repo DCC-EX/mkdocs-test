@@ -10,7 +10,7 @@ It is recommended to perform testing via the **EX-Turntable** serial console fir
 
 !!! note "Important"
 
-    For all references to "steps", this is the number of steps from the home position, not the number of steps the turntable has to travel.
+    For all references to 'steps', this is the number of steps from the home position, not the number of steps the turntable has to travel.
 
 ### EX-Turntable interactive serial console commands
 
@@ -51,7 +51,7 @@ Ensure **EX-Turntable** was powered on before **EX-CommandStation**. By powering
 
 **Note** that these commands are available when connected to the **EX-CommandStation** serial console, **not** the **EX-Turntable** serial console.
 
-Referring to ==TODO== :ref:`reference/developers/hal-config:adding a new device`, skip ahead to ==TODO== :ref:`reference/developers/hal-config:checking the driver`, and the output you're looking for to validate the **EX-Turntable** device driver is loaded and connected successfully is below:
+Referring to [adding a new device](/reference/hardware/hal/hal-config.md#adding-a-new-device), skip ahead to ==TODO== [checking the driver](/reference/hardware/hal/hal-config.md#checking-the-driver), and the output you're looking for to validate the **EX-Turntable** device driver is loaded and connected successfully is below:
 
 ```cpp
   <D HAL SHOW><* Arduino Vpins:2-69 *>
@@ -62,7 +62,7 @@ Referring to ==TODO== :ref:`reference/developers/hal-config:adding a new device`
   <* EX-Turntable I2C:x60 Configured on Vpins:600-600  *>          <<== This is the important line, **EX-Turntable** is connected!
 ```
 
-If there is an "OFFLINE" at the end of the **EX-Turntable** line, it indicates something is not quite right. Refer to [showing as offline with \<d hal show\>](ex-tt-troubleshooting.md#ex-turntable-showing-as-offline-with).
+If there is an "OFFLINE" at the end of the **EX-Turntable** line, it indicates something is not quite right. Refer to [showing as offline with `<d hal show>`](ex-tt-troubleshooting.md#ex-turntable-showing-as-offline-with).
 
 At power on, note that the turntable should have moved itself to the home position, so all commands below assume this is the case.
 

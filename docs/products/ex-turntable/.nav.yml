@@ -1,6 +1,5 @@
 nav:
-  - EX-Turntable: index.md
-  - Overview: overview.md
+  - EX-Turntable Overview: overview.md
   - Purchasing: purchasing.md
   - Assembly & Setup: assembly.md
   - Testing, Tuning & Control: test-and-tune.md

@@ -1,5 +1,7 @@
 # Configuration options
 
+==TODO== check the current version number of EX-Turntable and adjust the version notes on this page as needed
+
 **EX-Turntable** has a number of different configuration options available to customise the behaviour to suit your needs.
 
 Configuration changes are made by editing the "config.h" file.
