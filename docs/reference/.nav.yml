@@ -1,4 +1,5 @@
 nav:
+  - Table of Contents: toc.md
   - Glossary of Terms: glossary.md
   - Serial/Native Commands:
     - Serial Command Basics: serial-command-basics.md

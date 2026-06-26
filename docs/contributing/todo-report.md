@@ -6,7 +6,7 @@ Total TODO matches: 117
 
 | File | Line | Line text |
 | --- | ---: | --- |
-| [docs/diy/esp32.md](../diy/esp32.md) | 57 | ==TODO== move legacy docs |
+| [docs/diy/esp32.md](../diy/esp32.md) | 66 | ==TODO== move legacy docs |
 | [docs/diy/mega-harder.md](../diy/mega-harder.md) | 18 | - an Arduino Standard Motor-Shield (or others as noted in ==TODO==) to power the track. |
 | [docs/diy/nucleo.md](../diy/nucleo.md) | 48 | ==TODO== move legacy docs |
 | [docs/enhance/index.md](../enhance/index.md) | 29 | ==TODO== basic intro to Turnouts/Points and links to the appropriate pages |

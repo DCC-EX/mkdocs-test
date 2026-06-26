@@ -2,7 +2,7 @@ nav:
   - Home: index.md
   - Products: products
   - Purchase: purchasing
-  - Self Build: diy
+  - <small><small>or &nbsp;</small></small>Self Build: diy
   - Install: installer
   - Use (Throttles): throttles
   - Enhance: enhance
@@ -11,5 +11,4 @@ nav:
   - Reference : reference
   - About Us: about
   - Donate / Contribute: contributing
-  - ToC: toc.md
   

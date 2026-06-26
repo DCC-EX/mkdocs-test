@@ -4,7 +4,10 @@ from mkdocs.structure.nav import Navigation, Section, Page
 
 def on_nav(nav: Navigation, config, files) -> Navigation:
     docs_dir = config["docs_dir"]
-    toc_path = os.path.join(docs_dir, "toc.md")
+    output_dir = os.path.join(docs_dir, "reference")
+    os.makedirs(output_dir, exist_ok=True)
+    toc_path = os.path.join(output_dir, "toc.md")
+    toc_src_path = os.path.relpath(toc_path, docs_dir).replace(os.path.sep, "/")
     
     toc_lines = ["# Table of Contents\n\n" + 
 "<style>\n" +
@@ -38,6 +41,10 @@ def on_nav(nav: Navigation, config, files) -> Navigation:
             pass
         return None
 
+    def build_relative_link(src_path):
+        target_path = os.path.join(docs_dir, src_path)
+        return os.path.relpath(target_path, start=output_dir).replace(os.path.sep, "/")
+
     # Define a recursive loop to travel through awesome-nav's compiled classes
     def parse_nav_object(nav_item, depth=0):
         indent = "    " * depth
@@ -58,7 +65,7 @@ def on_nav(nav: Navigation, config, files) -> Navigation:
         # Case B: It's a concrete Markdown Page
         elif isinstance(nav_item, Page):
             # Explicitly exclude the generated TOC from its own listings
-            if nav_item.file.src_path == "toc.md":
+            if nav_item.file.src_path in {"toc.md", toc_src_path}:
                 return
                 
             # awesome-nav automatically resolves the cleanest title 
@@ -82,7 +89,7 @@ def on_nav(nav: Navigation, config, files) -> Navigation:
             else:
                 display_title = title
 
-            toc_lines.append(f"{indent}- [{display_title}]({url_path})")
+            toc_lines.append(f"{indent}- [{display_title}]({build_relative_link(url_path)})")
 
     # Cycle sequentially through awesome-nav's resolved root order
     for item in nav.items:
@@ -106,7 +113,7 @@ def on_nav(nav: Navigation, config, files) -> Navigation:
             non_nav_items.append((title.lower(), title, rel_path))
 
         for _, title, rel_path in sorted(non_nav_items, key=lambda item: item[0]):
-            toc_lines.append(f"- [{title}]({rel_path})")
+            toc_lines.append(f"- [{title}]({build_relative_link(rel_path)})")
 
     # Physically save the table of contents 
     with open(toc_path, "w", encoding="utf-8") as f:
