@@ -113,7 +113,7 @@ The circular control or vertical slider (chosen by the throttle select slider) c
 
 Once you are connected, you can also send commands directly to the **EX-CommandStation**.
 
-e.g. You can send the ``<s>`` command in the "direct command" textbox to get status information from your **EX-CommandStation**. To do this just enter ``s`` (without the quotes) and press the `Send` button. |BR| You should see ``<iDCC-EX...>`` returned in the log window with your version, type of Arduino, type of motor driver, and some other information.
+e.g. You can send the ``<s>`` command in the "direct command" textbox to get status information from your **EX-CommandStation**. To do this just enter ``s`` (without the quotes) and press the `Send` button. <br/> You should see ``<iDCC-EX...>`` returned in the log window with your version, type of Arduino, type of motor driver, and some other information.
 
 You can send any **DCC-EX** Native command in this way.
 

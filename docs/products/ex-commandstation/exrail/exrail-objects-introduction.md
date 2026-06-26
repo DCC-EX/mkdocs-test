@@ -248,8 +248,6 @@ As per the **EXRAIL** reference, turnouts/points are defined with the following 
 ```
 
 ```cpp
-   :class: code-block-float-right
-
    // Example
    SERVO_TURNOUT(200, 101, 450, 110, Slow, "Example slow turnout/point definition")
 
@@ -275,8 +273,8 @@ The ``myAutomation.h`` file needs to be altered so that the **EX-CommandStation*
 
 **EXRAIL** supports two methods of controlling servos that are not related to turnouts/points:
 
-* `Signals via the SERVO_SIGNAL directive <#servos-for-signals>`_
-* `Animations via the SERVO or SERVO2 directives <#servos-for-animations>`_
+* [Signals via the SERVO_SIGNAL directive](#servos-for-signals)
+* [Animations via the SERVO or SERVO2 directives](#servos-for-animations)
 
 #### Servos for Signals
 
@@ -291,8 +289,6 @@ Unlike servo based turnouts/points, there is no ID or description (they don't ap
 ```
 
 ```cpp
-   :class: code-block-float-right
-
    // Example
    SERVO_SIGNAL(102, 400, 250, 100)
 

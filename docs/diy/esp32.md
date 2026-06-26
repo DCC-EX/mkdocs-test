@@ -1,22 +1,22 @@
 # Complex Build - ESP32
 
-ESP32-WROOM-32 was selected as the microprocessor for the EX-CSB1. Although folks are encouraged to use the [EX-CSB1](/products/ex-commandstation/ex-csb1.md), the information on this page should assist in building an ESP32-based **DCC-EX EX-CommandStation**.
+ESP32-WROOM-32 was selected as the microprocessor for the **EX-CSB1**. Although folks are encouraged to use the [EX-CSB1](/products/ex-commandstation/ex-csb1.md), the information on this page should assist in building an ESP32-based **DCC-EX EX-CommandStation**.
 
 !!! warning "ESP32 Wroom Only!"
 
     The only Espressif ESP32 microprocessor we support is the ESP32 Wroom. Espressif has released numerous ESP32 modules and variants (S2, S3, C3 etc.) but these are **NOT** supported. Other variants do not have the necessary RMT hardware, or do not have enough such hardware to run **EX-CommandStation**.
 
-## Advantages of the ESP32
+## Advantages and Disadvantages of the ESP32
 
 ![ESPDuino-32](/_static/images/esp32/esp32-wroom32-mark.png){: style="width: 30%" align=right}  
 
-- ESP32-WROOM-32 advantages  
+- ESP32-WROOM-32 advantages:
 
     - Built-in WiFi  
     - Memory  
     - Sniffer/Booster capable (with additional optocoupler circuit)  
 
-- ESP32-WROOM-32 is more complex than using the Arduino Mega  
+- ESP32-WROOM-32 is more complex than using the Arduino Mega. Disadvantages include:
 
     - GPIO pin numbers are used (vs. Arduino style pin location numbers)  
     - ESP32 pins are not 5V tolerant  
@@ -28,6 +28,13 @@ ESP32-WROOM-32 was selected as the microprocessor for the EX-CSB1. Although folk
 
 ![ESPDuino-32](/_static/images/esp32/espduino-32.png){: style="width: 25%" align=right}  
 
+## Known Working Boards
+
+- [WeMos D1 R32 + EX8874](../reference/esp32/esp32-ex8874.md). Also described in the WeMos D1 R32/ESPDUINO-32 section below
+- [ACEBOTT ESP32 Max v1.0 + EX8874](../reference/esp32/esp32-acebott.md)  This requires fewer hardware modifications than the WeMos D1 R32
+- [Keyestudio IOT ESP32 PLUS Development Board + EX8874](../reference/esp32/esp32-keyestudio.md)  This requires fewer hardware modifications than the WeMos D1 R32
+- [ESP32 + L298 Shields (Genuine Arduino R3)](../reference/esp32/esp32-l298-shield.md)
+
 ## WeMos D1 R32
 
 - WeMos D1 R32/ESPDduino-32 has the Uno form factor.
@@ -37,17 +44,19 @@ ESP32-WROOM-32 was selected as the microprocessor for the EX-CSB1. Although folk
     - IOREF pin does not output 3v3, but instead breaches the UNO R3 specification and outputs 5V.  
     - A0 and A1 pins cannot be used for ADC input when WiFi is used.
 
-- There are several other ESP32-WROOM-32 boards with the Uno form factor which work. These require a custom motor define when there are differences in GPIO pin locations.
-
 See the [ESP32 Reference pages](../reference/esp32/esp32-ex8874.md) for more information.
 
 ## ESP32-WROOM-32 Development boards
 
 ![ESPDuino-32](/_static/images/esp32/esp32-dev-boards.png){: style="width: 30%" align=right}
 
+There are several other ESP32-WROOM-32 boards with the Uno form factor which work. These require a custom motor define when there are differences in GPIO pin locations.
+
 - ESP32-WROOM-32 Development boards come in various sizes and pin configurations.
 - 38-pin and 30-pin boards are common.
 - Only the ESP32-WROOM-32 variants can be used.
+
+See [ACEBOTT ESP32 Max v1.0 + EX8874](../reference/esp32/esp32-acebott.md) or [Keyestudio IOT ESP32 PLUS Development Board + EX8874](../reference/esp32/esp32-keyestudio.md) for two of the known working boards.
 
 ## Reference ESP32
 

@@ -5,6 +5,8 @@ import os
 import re
 from pathlib import Path
 
+from click import style
+
 TODO_PATTERN = re.compile(r"\bTODO\b", re.IGNORECASE)
 EXCLUDE_LINE_PATTERN = re.compile(r"\bto-do/task list\b|/todo-report\.md|todo-report\.md\b", re.IGNORECASE)
 DEFAULT_IGNORE_DIRS = {
@@ -83,6 +85,18 @@ def build_report(root: Path, output_path: Path) -> int:
     output_path.parent.mkdir(parents=True, exist_ok=True)
     output_path.write_text(
         "# TODO Report\n\n"
+        "<style>\n"
+        ".md-typeset table td,  \n"
+        ".md-typeset table th {\n"
+        "    font-size: small !important;\n"
+        "    padding-top: 2px !important;\n"
+        "    padding-bottom: 2px !important;\n"
+        "    padding-left: 2px !important;\n"
+        "    padding-right: 2px !important;\n"
+        "    line-height: 110% !important;\n"
+        "    font-family: 'Roboto Condensed', sans-serif !important;\n"
+        " }\n"
+        "</style>\n"
         f"Scanned docs root: `{scan_root}`\n\n"
         f"Total TODO matches: {len(matches)}\n\n"
         + (

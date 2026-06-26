@@ -11,6 +11,8 @@ Explore this page to see how **EX-CommandStation** can be expanded to enhance yo
 * [Controlling DC locomotives](#trackmanager-dc-and-dcc-operation)
 * [Adding Accessories](#accessories) e.g. Sensors, Turntables, DCC Boosters
 
+Also, the [Big Picture](../products/ex-commandstation/exrail/cookbooks/big-picture/index.md) pages describe a theoretical journey from just controlling some trains, through using rosters, turnouts/points, turntables and on to automation of trains.
+
 ----
 
 ## Rosters

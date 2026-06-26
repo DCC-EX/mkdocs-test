@@ -22,7 +22,7 @@ or (to provide more information)
 
 ``socat -d -d -d TCP-LISTEN:2560 /dev/ttyS11,b115200,raw,echo=0``
 
-Note: Change S11 to the appropriate USB port.  Whatever 'COM' number appears in the Device Manager, subtract 1.  |BR|
+Note: Change S11 to the appropriate USB port.  Whatever 'COM' number appears in the Device Manager, subtract 1.  <br/>
 i.e. 'COM12' in the Windows Device Manager becomes '/dev/ttyS11'
 
 ### Using *SerialToIPGUI* (For Microsoft Windows) (Recommended):

@@ -20,7 +20,7 @@ Unless required by applicable law or agreed to in writing, software distributed 
 * Announcement icon by [ColourCreatype](https://freeicons.io/profile/5790) on https://freeicons.io
 * Download Icon by [master mind](https://freeicons.io/profile/229456) on https://freeicons.io
 * Books icon by [www.wishforge.games](https://freeicons.io/profile/2257) on https://freeicons.io
-* Control Icon by [|I2C| icon](https://freeicons.io/profile/129933) on https://freeicons.io
+* Control Icon by [I2C icon](https://freeicons.io/profile/129933) on https://freeicons.io
 * Contributing Icon by [Chanut is Industries](https://freeicons.io/profile/135331) on https://freeicons.io
 * Bug Icon by [Fasil](https://freeicons.io/profile/722) on  https://freeicons.io
 * News Icon by [Kalash](https://iconscout.com/contributors/kolo-design) on  https://freeicons.io
