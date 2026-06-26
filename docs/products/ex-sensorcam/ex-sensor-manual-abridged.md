@@ -95,7 +95,7 @@ Due to the slowness of the ESP32 & wifi, the "live stream" is slow and a webCAM 
 
 **Figure 2 &nbsp; Initiall sensorCAM settings**
 
-After the sensorCAM has booted up, it reads frames for 9 seconds before automatically doing a reference grab for all defined sensors (the **r00** command). 
+After the sensorCAM has booted up, it reads frames for 9 seconds before automatically doing a reference grab for all defined sensors (the **r00** command).
 
 The ESP32-CAM has an Infra-Red(IR) filter to enhance colour response. The sensorCAM relies on strong colour contrast(saturation) to detect changes. Low lighting levels and poor contrast degrades performance.  Some IR penetrates, so the CAM may use an IR LED for reliable beam-break sensing.
 
@@ -164,7 +164,7 @@ Before uploading the software into CAM, check that it has the appropriate WiFi d
  &nbsp; &nbsp; a) If i2c address 0x11 is in use, change to 0x12 (or 0x13) i.e. _I2C_DEV_ADDR 0x11_ in your _configCAM.h_  
  &nbsp; &nbsp; b) If you want to use “larger” sensors, Place _#define SEN_SIZE 2_ (0-7) in your _configCAM.h_ (ver319+)  
 
-### 5.4 Load sensorCAM software 
+### 5.4 Load sensorCAM software
 
 Follow you-tube to pre-configure the Arduino IDE for ESP32.  Using this IDE, load the software into sensorCAM with it unmounted. Then mount the CAM in a suitable place for tests. A long USB cable is problematical.
 
@@ -222,7 +222,7 @@ If you want a LED bank occupancy indicator on the CAM, use the '**n$**' command 
 ### 5.13 Sensor reference image refreshing
 
 Although sensor enabling (**a**) causes an immediate reference capture, it may be necessary to occasionally do a fresh reference capture for all sensors (make sure they are unoccupied!) by using the '**r00**' command. Individual sensor references can be refreshed using '*r%%**'. The results of a refresh can be seen in the scrolling "data dumps" of enabled sensors, their "difference scores" (32-99), and their perceived occupancy state. The sensor **S00** is constantly averaged and refreshed every 6.4 seconds. Furthermore, there is an automatic refresh process that cycles through enabled sensors and regularly averages 32 consecutive sample images.  
-If the sensor remains unoccupied, it updates the reference, compensating for slowly drifting lighting changes. 
+If the sensor remains unoccupied, it updates the reference, compensating for slowly drifting lighting changes.
 
 ### 5.14 Scrolling data interpretation
 
@@ -251,7 +251,7 @@ The image will have enabled sensors (b/s) boxed and identified by a (resistor) c
 **Note:** Only sensors below _maxSensors_ will appear boxed. **N.B.** the ‘**H**’ command will REVERSE the coding from b/s to s/b.  
 **(The resistor colour code is 0:black 1=brown 2=red 3=orange 4=yellow 5=green 6=blue 7=violet 8=grey 9=white)**
 
-#### PROCESSING4 command summary:
+#### PROCESSING4 command summary
 
 **W###** &nbsp; will limit the image to\#\#\# rows wide/high(1-240) (default 240)
 
@@ -269,7 +269,7 @@ The image will have enabled sensors (b/s) boxed and identified by a (resistor) c
 
 > **NOTE**
 
-1. The above commands ARE CASE SENSITIVE. They are recognized by Processing 4 as non-sensorCAM commands and processed in the monitor/PC. Commands **X, Y** & **Z** in turn automatically issue related sensorCAM commands **x, y** & **z** respectively, with appropriate parameters.  The '**Y**' command suspends sensorCAM imaging, holding a single “frozen” frame until a terminating command ('yy') is received. 
+1. The above commands ARE CASE SENSITIVE. They are recognized by Processing 4 as non-sensorCAM commands and processed in the monitor/PC. Commands **X, Y** & **Z** in turn automatically issue related sensorCAM commands **x, y** & **z** respectively, with appropriate parameters.  The '**Y**' command suspends sensorCAM imaging, holding a single “frozen” frame until a terminating command ('yy') is received.
 
 2. If you use **H** to mirror, the colour coding for boxed sensor number (bsNo.) has to be read right to left.  Do NOT click on image to create sensors if image has been flipped.
 
@@ -277,7 +277,7 @@ The image will have enabled sensors (b/s) boxed and identified by a (resistor) c
 
 ## 7 Wiring Requirements
 
-Refer to **Figure 6** and **Appendix F** for alternate solutions for connecting sensorCAM to an i2c bus for remote control. For initial testing from a PC, the basic ESP32-CAM-MB or Wrover-CAM (**CH340** based USB interface) could be sufficient via. USB.  With i2c, take care to use level shifting (PCA9515A or Endpoints) if using a 5V Mega CS. 
+Refer to **Figure 6** and **Appendix F** for alternate solutions for connecting sensorCAM to an i2c bus for remote control. For initial testing from a PC, the basic ESP32-CAM-MB or Wrover-CAM (**CH340** based USB interface) could be sufficient via. USB.  With i2c, take care to use level shifting (PCA9515A or Endpoints) if using a 5V Mega CS.
 
 The recommended hardware interface to an **EX-CommandStation** is currently the **Sparkfun Endpoint** system (**Figure 6.** & **APPENDIX&nbsp;F**) which permits the i2c bus to be run over long standard Cat5 twisted pair cable.  It can also carry the required raw power supply. The Sparkfun Endpoints are used **in pairs** and can cater for voltage shifting between 5V Command Stations  (e.g. Mega) and 3.3V sensorCAM as required. For the very simplest off-the-shelf arrangement, an ESP32-WROVER-DEV CAM with a cheap ESP32 breakout board (including regulator) can be linked to an Endpoint with 4 Dupont wires for a working CAM system on the end of a cat5 cable of considerable length as indicated in **Figure 6** & **APPENDIX&nbsp;F**, needing only a remote, preferably electrically isolated(floating), 7-10Vdc 0.5A power supply and a matching endpoint on a Command Station.  For a cheaper solution, use the PCA9515A with dupont jumpers for a limited (2m?) reach with either esp32-CAM or Wrover-CAM powered via USB.  
 **Note:** The Sparkfun Endpoint may also need a jumper cut or joined for i2c bus voltage level matching to the Command Station.  
@@ -311,7 +311,7 @@ The i2c bus is running at 100kHz on the prototype software. It has not been test
 
 ### 8.2   DCC-EX Command Station
 
-Setting up a DCC-EX Command Station, should you have one, requires configuration details placed in files _config.h_ and _mySetup.h_ along with a driver _IO_EXSensorCAM.h_ and _myAutomation.h_. These must go in the directory containing file CommandStation-EX.ino. Refer to **APPENDIX H** for installation details.  _EXSensorCAM.h_ code mirrors the sensorCAM command set with a few exceptions.  Imaging and graphic placement is not available.  Functionality was added using the DCC-EX sensorCAM native command <N\> format. 
+Setting up a DCC-EX Command Station, should you have one, requires configuration details placed in files _config.h_ and _mySetup.h_ along with a driver _IO_EXSensorCAM.h_ and _myAutomation.h_. These must go in the directory containing file CommandStation-EX.ino. Refer to **APPENDIX H** for installation details.  _EXSensorCAM.h_ code mirrors the sensorCAM command set with a few exceptions.  Imaging and graphic placement is not available.  Functionality was added using the DCC-EX sensorCAM native command <N\> format.
 
 ### 8.4 Monitor Lighting
 
@@ -415,7 +415,7 @@ Also able to change default setting for Brightness, Contrast & Saturation with e
 5. If the OV2640 camera or WiFi fails to initialize, the CAM resets and may restart/revert into Sensor mode.  
 6. If USB FTDI/MB is removed or not connected to PC, then WebServer may fail/reboot. Power issue?  
 
-### I2C command Notes:
+### I2C command Notes
 
 **(EX-CS may exhibit small variations & reduced cmd functionality refer APPENDIX C)**
 
@@ -465,7 +465,7 @@ In the situation where sensors may be tripping undesirably, there is a range of 
 
 **9.** There is a 2-frame (experimental) averaging applied to low bank sensors (currently 0-2) This can be extended to cover all banks, if desired by increasing CAM parameter _TWOIMAGE_MAXBS_ above 3/0
 
-**10.** There has been poorer behavior observed with sensors placed near the edge of the frame. They seem to experience more electrical noise than mid-frame sensors and may need extra attention.
+**10.** There has been poorer behaviour observed with sensors placed near the edge of the frame. They seem to experience more electrical noise than mid-frame sensors and may need extra attention.
 
 **11.** A statistics function can be obtained to see how bad spurious tripping is. The '**&**' cmd gives a table of stats accumulated since the previous '**&**' command. May be useful. HINT: You can compare two or more sensors with different settings on the same spot. Accumulate data with no genuine trips.
 
@@ -475,7 +475,7 @@ In the situation where sensors may be tripping undesirably, there is a range of 
 
 **14.** It is possible to set private thresholds on individual sensors if other solutions inadequate. (**t##,%%**)
 
-**15.** Consider adjusting _brightSF_($) if colour contrast is generally poor (**b#,$**) default 3, try 1-5.
+**15.** Consider adjusting \_brightSF\_\($\) if colour contrast is generally poor \(**b#,$**\) default 3, try 1-5.
 
 **16.** In some situations, repositioning sensor slightly to include loco shadow will give extra sensitivity.
 
@@ -523,7 +523,7 @@ e.g. **<Ni 2%%\> <Nr&nbsp;2%%\>** also **<Nm 200\> <Nf 212\> <Nt 243\>**
 | **<N t # %%\>** | <Nt 0 12\> | t0,12 | **Trash** pvtThresholds. **<Nt 0 %%\>** individually, **<Nt 1 %%\>** for bank, **<Nt&nbsp;1&nbsp;99\>** trashes ALL pvtThresholds.  **<Nt&nbsp;99\>** lists ALL pvtThresholds. |
 | **<N t 1\>** | <Nt 1\> | t1 | **toggles** scroll on/off. |
 | **<N u %%\>** | <Nu 12\> | u12 | **Undefine** and disable sensor bsNo(erase coordinates). **<Nu 99\>** for ALL |
-| **<N v [#]\>** | <N v 1\> | v1 |  **Video** mode(1-2) invoke webCAM, or alt webCAM with v 2. **v** for **version** |
+| **<N v [#]\>** | <N v 1\> | v1 | **Video** mode(1-2) invoke webCAM, or alt webCAM with v 2. **v** for **version** |
 | **<N&nbsp;w\>** | <Nw\> | w | **Wait**. Stop/start CAM imaging (flash), status sensing & streaming. |
 | **x &nbsp; y &nbsp; z** | | | Reserved for binary export for Processing 4 images |
 | **<N ### ## ##\>** | <N&nbsp;711&nbsp;75&nbsp;85\> | a13,75,85 | Note: This uses the **vpin** for a sensor, NOT id/bsNo.(ref. **Appendix E**). |
@@ -551,7 +551,7 @@ Under normal circumstances if the CS has been configured as per the installation
 The full ID consists of CAM number #-bank-sensor or #bs. Each bank(0-9) contains 8 sensors(0-7)  
 vPin is the (CAM number # baseVpin) + 0bs,  bsNo skips id's ending in 8 or 9.  (e.g. 700 + 012 = 710)
 vPin is the base/first vPin number (e.g. 700) + DEC.number(_bsn_) in the conversion table below.
- 
+
 ![Sensor Code Conversions](/_static/images/ex-sensorcam/sensor-code-conversions.png)
 
 **Table E &nbsp; &nbsp; Reference Sensor ID to colour code conversion table**
@@ -570,7 +570,6 @@ The sensorCAM can be Reset remotely by software or by cycling the power supply. 
 The PCA9515A based module offers a simpler, but limited, interface to an i2c bus the use of will act as a level changer (3.3V to 5V) and can connect to a SHORT i2c bus (max 2-3m). If the i2c length is near or just over the limit, an optional LTC4311 extender can be attached to boost the signal. As indicated, this option relies on 5V USB power so needs a dedicated (permanent) USB cable connection.  A local 5v buck converter can be used beside the CAM for a better supply.  This is included on the Wrover breakout board. You could also extend a cable between the PCA9515 buffer and CAM (1m).
 
 A programmable nLED and 330ohm resistor may be attached between 3.3V VCC to GPIO14 to aid testing.
-
 
 The Sparkfun endpoint is perhaps the best overall solution at this stage for driving one (or more) sensorCAMs. It provides greater lengths of cable without extending the Command Station i2c local bus. The endpoints are used in pairs, connected by a long (<100m) differential pair cat5 cable providing power and communications. It can provide buffering, level shifting and power, but care is needed at the CS end to avoid over-voltage damage. It is suggested, with a 5V CS, that the Endpoint pullup 0-1 jumpers at the CS end be cut for safety. The sensorCAM Endpoint default pullups are needed for the 3.3V CAM i2c bus. The CS Endpoint requires 3.3V power(from the CS) and a separate (7 to 9V) DC supply for the Regulator & CAM.
 
@@ -642,7 +641,7 @@ Multiple sensorCAMs can be easily handled if CAM2, CAM3 etc are defined along th
 
 ## APPENDIX J
 
-### WROVER-CAM notes.
+### WROVER-CAM Notes
 
 ### 1 Note on i2c clock frequency
 
@@ -672,8 +671,7 @@ For a limited reach, perhaps using a LTC4311 terminator/buffer at the CS to boos
 
 **If using a 3.3V processor such as the CSB1**, it may be adequate to have no voltage level shifting PCA9515A and instead simply connect directly to an i2c branch with an LTC4311, keeping the total i2c segment within allowable length limits.  This may mean using a multiplexer port to limit segments to workable lengths, as the run to the sensorCAM is a significant additional length to any existing i2c bus.  The sensorCAM still needs a regulated power supply independent of the i2c bus SDA,SCL and gnd cable.
 
-
-### ADDITIONAL RANDOM NOTES:
+### ADDITIONAL RANDOM NOTES
 
 ALL FOLLOWING IMAGES ARE FOR GENERAL INFORMATION ONLY& NOT DIRECTLY REFERENCED IN THE FULL MANUAL ABOVE
 
@@ -682,5 +680,3 @@ ALL FOLLOWING IMAGES ARE FOR GENERAL INFORMATION ONLY& NOT DIRECTLY REFERENCED I
 ![ESP32 CAM Closeup 1](/_static/images/ex-sensorcam/esp32-cam-closeup-1.png)
 
 ![ESP32 CAM Closeup 2](/_static/images/ex-sensorcam/esp32-cam-closeup-2.png)
-
-

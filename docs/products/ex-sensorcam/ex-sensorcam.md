@@ -9,7 +9,7 @@ EX-SensorCAM is a video based multi-channel position sensing camera.
 
 This single camera is capable of replacing up to 80 detectors/sensors on a model railroad along with their extensive wiring. As it is a cheap device, on large railroads, several cameras can be used for adequate coverage. It can detect, and be used to control, train movements without any trackside sensors at all.
 
-Used in conjunction with an I2C bus to a DCC-EX Command Station, the options through X-RAIL automation seem unlimited.
+Used in conjunction with an I2C bus to a **DCC-EX EX-CommandStation**, the options through **EXRAIL** automation seem unlimited.
 
 It does not, however, include loco or rolling stock identification.
 
@@ -25,9 +25,9 @@ The newer ESP32-Wrover-CAM and 38P/V4/Expansion board provides compatible and mo
 
 ### Camera Module
 
-The sensorCAM uses the 32bit ESP32-S microcontroller with an OV2640 camera module.  
+The **EX-sensorCAM** uses the 32bit ESP32-S microcontroller with an OV2640 camera module.  
 It is fitted with a 4Mbyte PSRAM for image storage and a built in WiFi aerial.
-It also has 3Mb of available program storage, EPROM memory for parameters, and 327kbytes of dynamic memory. 
+It also has 3Mb of available program storage, EPROM memory for parameters, and 327kbytes of dynamic memory.
 
 ## Software requirements
 
@@ -40,7 +40,7 @@ You can download Processing from [the website](https://processing.org/)
 The webserver WiFi images are not a substitute for the Processing 4 utility, as sensorCAM cannot "sense" in webserver mode.
 Specific SensorCAM files are provided for each of the above apps.
 
-NOTE: For enhanced versions, rather than "main/master" branch, use a recent "devel" version of Command Station (5.5.40+) and "devel" branch of sensorCAM (0.3.20+)
+NOTE: For enhanced versions, rather than "main/master" branch, use a recent "devel" version of **EX-CommandStation** (5.5.40+) and "devel" branch of sensorCAM (0.3.20+)
 
 ## Documentation
 
@@ -62,6 +62,6 @@ If you want clarification or wish to discuss the implementation please contact t
 9. Setup the CAM viewing the model railroad and test a virtual sensor with moving rolling stock.
 10. Optimise parameters for best performance.
 11. Connect CAM to an i2c interface (e.g. PCA9515A or better).
-12. Depending on system, integrate sensorCAM into Command Station using appropriate code.
+12. Depending on system, integrate **EX-sensorCAM** into Command Station using appropriate code.
 
 For a detailed 12 step guide refer to the [Installation Guide](/products/ex-sensorcam/installation-guide.md).

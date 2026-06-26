@@ -213,7 +213,7 @@ Before uploading the software into CAM check that it has the appropriate WiFi de
  &nbsp; &nbsp; &nbsp; b) If you want to use "larger" sensors, Place #define SEN_SIZE 2(1-7) in your _configCAM.h_(ver169+)  
  &nbsp; &nbsp; &nbsp; c) The first TWOIMAGE_MAXBS sensors use 2 consecutive image averaging to suppress noise spikes. If you want to set a different range to use this feature, change _configCAM.h_ from the default(030) before upload.
 
-### 5.4 Load sensorCAM software 
+### 5.4 Load sensorCAM software
 
 Follow you-tube to pre-configure the Arduino IDE for ESP32. IF using an FTDI interface take EXTREME care not to connect 5V to the 3.3V CAM supply pin as this destroys CAMs. Using this IDE, load the software into sensorCAM with it unmounted. Then mount the CAM in a suitable place for tests. A long USB cable is problematical.
 
@@ -227,7 +227,7 @@ The sensorCAM takes some time to boot and establish sensing mode. The white flas
 
 The CAM can be switched to WiFi webCAM video mode with the '**v1**' command. '**v2**' can select your alternate WiFi network. ('**v**' will give sensorCAM software version). '**v1**' (or&nbsp;'**v2**') will reboot and load WiFi mode connecting to the network selected, and providing a URL e.g. http://192.168.0.xx that can be used to connect with a browser. An image, like **Figure 1** above, should be seen with controls for experimenting with Brightness etc. This image is educational but not necessarily a good indication of the sensorCAM (sensor mode) image because of the unpredictable parameter effects. To see a more reliable image run the PROCESSING *SensorCAM.pde* monitor instead of Arduino IDE monitor (refer **Section 6.**). To exit video mode, try the monitor command 'R' (or'F') If this software reset fails, try manually rebooting the sensorCAM (power OFF/ON) or via the on-board black push-button using a non-metallic tool!
 
-### 5.7 Familiarise with sensorCAM command set.
+### 5.7 Familiarise with sensorCAM command set
 
 Proceeding with the steps below, before mounting the camera over the railroad, is advisable to learn the steps and familiarize oneself with the sensorCAM command set. The setup commands will have to be repeated accurately once the CAM is mounted in its final location.
 
@@ -703,7 +703,7 @@ e.g. **<Ni 2%%\> <Nr&nbsp;2%%\>** also **<Nm 200\> <Nf 212\> <Nt 243\>**
 | **<N t # %%\>** | <Nt 0 12\> | t0,12 | **Trash** pvtThresholds. **<Nt 0 %%\>** individually, **<Nt 1 %%\>** for bank, **<Nt&nbsp;1&nbsp;99\>** trashes ALL pvtThresholds.  **<Nt&nbsp;99\>** lists ALL pvtThresholds. |
 | **<N t 1\>** | <Nt 1\> | t1 | **toggles** scroll on/off. |
 | **<N u %%\>** | <Nu 12\> | u12 | **Undefine** and disable sensor bsNo(erase coordinates). **<Nu 99\>** for ALL |
-| **<N v [#]\>** | <N v 1\> | v1 |  **Video** mode(1-2) invoke webCAM, or alt webCAM with v 2. **v** for **version** |
+| **<N v [#]\>** | <N v 1\> | v1 | **Video** mode(1-2) invoke webCAM, or alt webCAM with v 2. **v** for **version** |
 | **<N&nbsp;w\>** | <Nw\> | w | **Wait**. Stop/start CAM imaging (flash), status sensing & streaming. |
 | **x &nbsp; y &nbsp; z** | | | Reserved for binary export for Processing 4 images |
 | **<N ### ## ##\>** | <N&nbsp;711&nbsp;75&nbsp;85\> | a13,75,85 | Note: This uses the **vpin** for a sensor, NOT id/bsNo.(ref. **Appendix E**). |
@@ -889,7 +889,7 @@ A number of parameters and files may need to be changed or included to get the E
 
 Refer to the sensorCAM Installation Guide for more detail on the EX-CS installation procedure.
 
-### File edits: configCAM.h   
+### File edits: configCAM.h
 
 (refer to the latest InstallationGuide for details)
 
@@ -905,11 +905,11 @@ Refer to the sensorCAM Installation Guide for more detail on the EX-CS installat
 #define SEN_SIZE 0        //0 gives standard 4x4 pixels
 ```
 
-### CommandStation(CS)    
+### CommandStation(CS)
 
 following files all in CommandStation-EX.ino folder or separate folder for installer.
 
-**IO_EXSensorCAM.h**   
+**IO_EXSensorCAM.h**
 
 CamParser.h, CamParser.cpp & EX-SensorCAM.h (v3.08) are now included in CommandStation-EX versions 5.4.0+ by default. Different versions (driver v3.09) are included in CS devel 5.5.40+)
 
@@ -1022,15 +1022,14 @@ Version v319 also accepts _minSensors_ up to _maxSensors_-1
 
 Driver version v308 is intended for use with Prod versions 5.4.6 to 5.4.16. DCC-EX CS Prod. Versions 5.4.16+ incorporate v308 by default. v308 will not work with CS devel 5.5.15+. For CS devel versions look to v309 (default). Both these drivers MUST be used with sensorCAM version v320+ as earlier versions will not be recognized.
 
+## APPENDIX K
 
-## APPENDIX K 
-                   
-### OV2640 Lens options and geometry   
-              
+### OV2640 Lens options and geometry
+
 Since this project was initiated, the ov2640 has become available with a greater variety of camera lens attachments.
- 
+
 Measurements finally taken of the "Field Of View" of some of the more interesting offerings are below. The standard ov2640 comes with a lens with a nominal 66 degree FOV. In reality images never quite achieved this, giving a lesser field of view, hence needing a higher mounting. The ideal seemed to be about 80-90 degrees, but the cam's were offered with 66, 75, 120 160 and 200 mostly. A true 120° FOV vertically mounted CAM would give small features and a flat 30 degree view of the edge of the FOV which is generally too flat to give good sensorCAM results.
- 
+
 Having measured a few and discovered the truth of the matter in that the "rating" is likely the characteristic of the lens alone, not applicable when mounted on a small ov2640 sensor. The measurements reveal that the "66" lens gives a FOV of only 54° max.; adjustable 75 -> 50.1° (less than the 66); the fixed 120 -> 86.9°; adjustable 120 -> 75.3°. Larger "160" lens was untested as likely to give too small a track image and flat angle at edge. Needs to be confirmed. 
 
 These measurements put the fixed 120° ov2640 in a very usable position. The large "adjustable" offerings are not needed as a focus at "infinity" covers the normal sensorCAM range. The adjustable lenses are unnecessarily bulky and costly as well.  Close-up mounting is of little use, and that is where the adjustable focus lenses would be useful. Lenses come in "rectilinear" and "fisheye" style. The "rectilinear" tested above give less distortion and are preferred for sensorCAM. The following diagram helps envisage the relative coverage and includes examples of tilted camera of 30° for the "66" and 15° for the "120". These tilts are probably approaching the maximum tilt that is likely to be satisfactory as, at greater tilt, the extremity of images become small and again start to be viewed at a very flat angle.
