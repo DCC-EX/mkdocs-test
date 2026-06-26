@@ -14,7 +14,7 @@ The ``config.h`` file comes pre-configured to use the clock in standalone mode. 
 
 ## Serial Mode
 
-To communicate with Serial mode it is necessary to edit the ``config.h`` file and uncomment the following line:
+To communicate in Serial mode it is necessary to edit the ``config.h`` file and uncomment the following line:
 
 ```cpp
 //#define SEND_VIA_SERIAL true
@@ -35,7 +35,7 @@ In this mode the **EX-CommandStation** will poll the FastClock to obtain the tim
 
 ## Screen Header
 
-By default the top of the clock screen displays the name of my own layout.  To inset your layout name then change the following line.
+By default the top of the clock screen displays the name of my own layout.  To insert your layout name change the following line.
 
 ```cpp
 char header[HDDR_SIZE] = {"Nantyderry Junction"};
@@ -52,7 +52,7 @@ const int TS_LEFT=899,TS_RT=122,TS_TOP=100,TS_BOT=898;
 
 ## Configure existing clock
 
-If you already have a FastCLock there are a number of couple of configuration options which allow you to connect your own clock to an **EX-CommandStation**.
+If you already have a FastClock there are a number of couple of configuration options which allow you to connect your own clock to an **EX-CommandStation**.
 
 The various configuration options are outlined below
 
@@ -158,4 +158,4 @@ void TransmitTime() {
 
 - The **EX-CommandStation** will now poll the **EX-FastClock** to request the time.  The frequency at which it does so is influenced by the clock speed (i.e. on a slow clock speed it polls less often).
 
-Now that you know how to connect your existing **EX-FastClock**, click the "next" button see how you use **EX-FastClock**.  
+Now that you know how to connect your existing **EX-FastClock**, click the "next" button see how you use **EX-FastClock**.
