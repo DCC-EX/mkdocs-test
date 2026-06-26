@@ -41,7 +41,7 @@ A stepper motor is able to be rotated one step at a time, which translates to de
 
 !!! note "Number of steps"
 
-    You don't actually need to know the number of steps required to make a full rotation as this is calculated by **EX-Turntable** the first time it starts up and performs the calibration sequence. You will see the number displayed in the serial console as outlined in :ref:`ex-turntable/assembly:first start and automatic calibration`.
+    You don't actually need to know the number of steps required to make a full rotation as this is calculated by **EX-Turntable** the first time it starts up and performs the calibration sequence. You will see the number displayed in the serial console as outlined in [first start and automatic calibration](assembly.md#first-start-and-automatic-calibration).
 
 In **EX-Turntable**, at startup, the turntable will rotate until such time as the homing sensor is activated, in which case it will set the homed position as step 0 and stop moving. Typically, the homing sensor is a hall effect device mounted in the turntable pit which is activated when a magnet in one end of the turntable bridge comes in to close proximity.
 
@@ -81,7 +81,7 @@ While this is well within the limit of the maximum 32767 steps in **EX-Turntable
 
 Introduced in **EX-Turntable** version 0.6.0, there is an option that allows for larger step counts than the maximum of 32767. This number is used as a multiplier for the number of steps sent from **EX-CommandStation** and is set by defining ``#define STEPPER_GEARING_FACTOR x`` in your "config.h" file, where "x" is a number from 1 to 10.
 
-For example, if you had a step per revolution count of 60000 after calculating your gear ratio, you would set a gearing factor of 2, meaning all step counts configured in **EX-CommandStation** are 30000 or less (60000 / 2), allowing for control of this configuration. Refer to :ref:`ex-turntable/configure:stepper_gearing_factor` for how to configure this option.
+For example, if you had a step per revolution count of 60000 after calculating your gear ratio, you would set a gearing factor of 2, meaning all step counts configured in **EX-CommandStation** are 30000 or less (60000 / 2), allowing for control of this configuration. Refer to [stepper gearing factor](configure.md#stepper_gearing_factor) for how to configure this option.
 
 If you have a need to set a gearing factor higher than 1, you will likely also need to adjust the [Sanity Steps](configure.md#sanity_steps) option to allow the calibration process to still function, as by default it will stop at 10000 steps.
 

@@ -98,7 +98,7 @@ Removed in version 0.7.0:
 
 - A4988_INV        - Two wire stepper driver (e.g. A4988, DRV8825) with a NEMA17 motor, with the driver's enable pin inverted
 
-In version 0.7.0, simply use the ``A4988`` option above, and enable the :ref:`ex-turntable/configure:invert_enable` option below to achieve the same result. This change is due to no longer needing to modify the AccelStepper library. For version 0.6.0 and earlier, you will need to use ``A4988_INV`` to invert the enable pin.
+In version 0.7.0, simply use the ``A4988`` option above, and enable the [invert enable](configure.md#invert_enable) option below to achieve the same result. This change is due to no longer needing to modify the AccelStepper library. For version 0.6.0 and earlier, you will need to use ``A4988_INV`` to invert the enable pin.
 
 ### INVERT_DIRECTION
 

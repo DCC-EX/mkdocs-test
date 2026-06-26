@@ -119,7 +119,7 @@ Further information on the "activity" parameter is outlined in the [ex-turntable
 
 !!! note "Tip"
 
-    To determine your starting positions, you will need the full turn step count as recorded in :ref:`ex-turntable/assembly:first start and automatic calibration`.
+    To determine your starting positions, you will need the full turn step count as recorded in [first start and automatic calibration](assembly.md#first-start-and-automatic-calibration).
 
 To tune your turntable positions, you will need to calculate the number of steps from the home position the turntable needs to rotate in order to reach the desired position. By default, the turntable will turn in a clockwise direction (as demonstrated by the homing activity).
 

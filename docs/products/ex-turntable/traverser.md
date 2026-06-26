@@ -48,7 +48,7 @@ When determining which sensor needs to be located at each limit position of the 
 
 You will need to take these considerations into account, and ensure the sensors are connected in the correct order.
 
-For a method to test and validate this, see :ref:`ex-turntable/traverser:sensor testing mode` below.
+For a method to test and validate this, see [sensor testing mode](traverser.md#sensor-testing-mode) below.
 
 ## Assembly
 

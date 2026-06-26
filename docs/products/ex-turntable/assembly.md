@@ -72,7 +72,7 @@ Further to this, when using a stepper motor such as the NEMA17 with a two wire d
 ![DRV8825 NEMA Option](../../_static/images/ex-turntable/drv8825-nema17-nano.png){ width=400px }
 <br/>Connections for a DRV8825 stepper driver with NEMA17 stepper motor
 
-Credit to Dejan at HowToMechatronics.com for outlining the connections for a TMC2208 stepper driver with a NEMA17 stepper motor along with the microsteps table included below. Also note that with the TMC2208 driver, it typically rotates the stepper in the reverse direction to the A4988 and DRV8825, and likely requires inverting the DIR pin in order for it to rotate in the same direction. This is possible via a configuration option introduced in **EX-Turntable** version 0.7.0, see :ref:`ex-turntable/configure:invert_direction`.
+Credit to Dejan at HowToMechatronics.com for outlining the connections for a TMC2208 stepper driver with a NEMA17 stepper motor along with the microsteps table included below. Also note that with the TMC2208 driver, it typically rotates the stepper in the reverse direction to the A4988 and DRV8825, and likely requires inverting the DIR pin in order for it to rotate in the same direction. This is possible via a configuration option introduced in **EX-Turntable** version 0.7.0, see [invert_direction](configure.md#invert_direction).
 
 ![TMC2208](../../_static/images/ex-turntable/tmc2208.jpg){ width=400px }
 <br/>Connections for a TMC2208 stepper driver with NEMA17 stepper motor
@@ -285,7 +285,7 @@ Locate this section in "config.h", comment out the line defining the use of "ULN
 
   As of v0.5.0-Beta and up to version 0.6.0, you can also execute the command ``<0 3>`` in the serial console to initiate the calibration sequence. In version 0.7.0 you can execute ``<C>`` instead to initiate the sequence.
 
-  Also, if you have enabled the `FULL_STEP_COUNT` option in "config.h", that will prevent automatic calibration occurring, refer to :ref:`ex-turntable/configure:full_step_count`.
+  Also, if you have enabled the `FULL_STEP_COUNT` option in "config.h", that will prevent automatic calibration occurring, refer to [full step count](configure.md#full_step_count).
 
 When **EX-Turntable** is first loaded onto your Arduino, and it has successfully performed the homing process outlined above, it will commence an automatic calibration sequence. This involves several rotations of the turntable to ensure it is homed accurately, and is then able to count the steps required to complete a full rotation of the turntable.
 
