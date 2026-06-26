@@ -9,15 +9,15 @@ def on_nav(nav: Navigation, config, files) -> Navigation:
     toc_path = os.path.join(output_dir, "toc.md")
     toc_src_path = os.path.relpath(toc_path, docs_dir).replace(os.path.sep, "/")
     
-    toc_lines = ["# Table of Contents\n\n" + 
+    toc_lines = ["# Full Site Table of Contents\n\n" + 
 "<style>\n" +
-"li {\n" +
+"li:not(.md-nav__item, .md-tabs__item) {\n" +
 "    margin: 0px;\n" +
 "    border: 0px;\n" +
 "    line-height: 100%;\n" +
 "    margin-bottom: 4px !important;\n" +
 "}\n" +
-"li a {\n" +
+"li:not(.md-nav__item, .md-tabs__item) a {\n" +
 "    font-weight: 500;\n" +
 "    font-size: 85%;\n" +
 "}\n" +

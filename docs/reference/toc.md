@@ -1,13 +1,13 @@
 # Table of Contents
 
 <style>
-li {
+li:not(.md-nav__item, .md-tabs__item) {
     margin: 0px;
     border: 0px;
     line-height: 100%;
     margin-bottom: 4px !important;
 }
-li a {
+li:not(.md-nav__item, .md-tabs__item) a {
     font-weight: 500;
     font-size: 85%;
 }
