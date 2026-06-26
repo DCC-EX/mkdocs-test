@@ -705,7 +705,35 @@
          <lastmod>2026-06-26</lastmod>
     </url>
     <url>
-         <loc>https://dcc-ex.com/mkdocs-test/products/ex-turntable/ex-turntable/</loc>
+         <loc>https://dcc-ex.com/mkdocs-test/products/ex-turntable/assembly/</loc>
+         <lastmod>2026-06-26</lastmod>
+    </url>
+    <url>
+         <loc>https://dcc-ex.com/mkdocs-test/products/ex-turntable/configure/</loc>
+         <lastmod>2026-06-26</lastmod>
+    </url>
+    <url>
+         <loc>https://dcc-ex.com/mkdocs-test/products/ex-turntable/ex-tt-troubleshooting/</loc>
+         <lastmod>2026-06-26</lastmod>
+    </url>
+    <url>
+         <loc>https://dcc-ex.com/mkdocs-test/products/ex-turntable/layout-wiring/</loc>
+         <lastmod>2026-06-26</lastmod>
+    </url>
+    <url>
+         <loc>https://dcc-ex.com/mkdocs-test/products/ex-turntable/overview/</loc>
+         <lastmod>2026-06-26</lastmod>
+    </url>
+    <url>
+         <loc>https://dcc-ex.com/mkdocs-test/products/ex-turntable/purchasing/</loc>
+         <lastmod>2026-06-26</lastmod>
+    </url>
+    <url>
+         <loc>https://dcc-ex.com/mkdocs-test/products/ex-turntable/test-and-tune/</loc>
+         <lastmod>2026-06-26</lastmod>
+    </url>
+    <url>
+         <loc>https://dcc-ex.com/mkdocs-test/products/ex-turntable/traverser/</loc>
          <lastmod>2026-06-26</lastmod>
     </url>
     <url>
@@ -814,6 +842,14 @@
     </url>
     <url>
          <loc>https://dcc-ex.com/mkdocs-test/reference/hardware/ethernet-boards/</loc>
+         <lastmod>2026-06-26</lastmod>
+    </url>
+    <url>
+         <loc>https://dcc-ex.com/mkdocs-test/reference/hardware/hal/hal-config/</loc>
+         <lastmod>2026-06-26</lastmod>
+    </url>
+    <url>
+         <loc>https://dcc-ex.com/mkdocs-test/reference/hardware/hal/writing-hal-driver/</loc>
          <lastmod>2026-06-26</lastmod>
     </url>
     <url>
