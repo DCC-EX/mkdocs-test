@@ -20,3 +20,5 @@ This modification allow the A4 & A5 to operate correctly as I2C and was suggeste
 If using Serial communication no modification is required. Pins 0 & 1 (TX/RX) are unused on the LCD PCB therefore wires may be soldered to the Arduino PCB to run to Serial connections on the **EX-CommandStation**.
 
 Now that you know what you need, click the "next" button see how you use  EX-FastClock.
+
+--8<-- "snippets/abbr.md"

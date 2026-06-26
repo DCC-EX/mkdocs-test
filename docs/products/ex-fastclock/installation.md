@@ -28,3 +28,5 @@ Select the Arduino IDE branch from the repository and click on the CODE button. 
 ### Both Environments
 
 I have generated two special fonts for the project which can be found in the Fonts folder in the Adafruit GFX Library in this repository.  These should be copied into the fonts folder in the Adafruit_GFX library once installed. The file Arial9pt7b.h contains a full set of the Arial Font as used in Windows.  The file Arial48pt7b.h contains a large 48pt Arial font containing only characters 0-9 and :.  This is used to display the time clock on the screen.  The full font was too large to fit into the Uno memory.
+
+--8<-- "snippets/abbr.md"

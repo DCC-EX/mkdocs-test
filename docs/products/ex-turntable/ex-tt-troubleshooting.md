@@ -46,3 +46,5 @@ In this section, you will find some tips on troubleshooting the various issues e
 | Symptoms | Common Causes |
 | -- | -- |
 | \<D HAL SHOW\> reports **EX-Turntable** as OFFLINE <br/>EX-Turntable does not respond to EXRAIL or diagnostic commands   - | **EX-Turntable** is not powered on, or was powered on after the CommandStation <br/>The I2C (I<sup>2</sup>C) interfaces are not connected correctly, refer to [connect ex-turntable to your EX-CommandStation](assembly.md#9-connect-ex-turntable-to-your-ex-commandstation) <br/>The I2C (I<sup>2</sup>C) address in EX-Turntable's config.h does not match the address in the CommandStation's myHal.cpp file |
+
+--8<-- "snippets/abbr.md"

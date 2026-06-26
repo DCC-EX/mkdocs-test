@@ -14,3 +14,5 @@ The clock will start in a paused state and will display the speed rate factor (d
 In Serial Mode, at startup the initial clock time will be sent to the **EX-CommandStation** but when in a paused state no further time commands are sent until the START button is pressed.
 
 In I2C mode the **EX-CommandStation** polls the FastClock at intervals.
+
+--8<-- "snippets/abbr.md"

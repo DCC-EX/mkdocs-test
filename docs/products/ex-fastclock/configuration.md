@@ -159,3 +159,5 @@ void TransmitTime() {
 - The **EX-CommandStation** will now poll the **EX-FastClock** to request the time.  The frequency at which it does so is influenced by the clock speed (i.e. on a slow clock speed it polls less often).
 
 Now that you know how to connect your existing **EX-FastClock**, click the "next" button see how you use **EX-FastClock**.
+
+--8<-- "snippets/abbr.md"

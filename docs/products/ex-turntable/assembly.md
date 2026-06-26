@@ -20,7 +20,7 @@ Throughout the assembly process, you can refer to this Fritzing diagram to help 
 
 ![Fritzing Diagram](../../_static/images/ex-turntable/assembly.png){ width=400px }
 
-Note: For the Tinkerers and Engineers, a much neater solution is to use a prototyping or strip board with much shorter (and soldered) connections to ensure reliability of the connections.
+Note: A much neater solution is to use a prototyping or strip board with much shorter (and soldered) connections to ensure reliability of the connections.
 
 ### Connection summary
 
@@ -45,7 +45,7 @@ Summary table of all connections required during assembly:
 | CommandStation 21 (SCL) | A5 | A5 S or SCL |
 | CommandStation GND | GND | A4 G or I2C (I<sup>2</sup>C) GND |
 
-Of course for the Tinkerers and Engineers, if you're not using a Nano or a prototyping shield, adapt the details as suits your configuration.
+If you're not using a Nano or a prototyping shield, adapt the details as suits your configuration.
 
 #### Using a two wire stepper driver (e.g. A4988/DRV8825/TMC2208)
 
@@ -386,3 +386,5 @@ At this point, you should have a fully assembled **EX-Turntable** with the softw
 In addition, **EX-Turntable** should be connected to your CommandStation ready to test, tune your turntable positions, and configure EXRAIL ready for use on your layout.
 
 Click the 'Next' button to get cracking!
+
+--8<-- "snippets/abbr.md"

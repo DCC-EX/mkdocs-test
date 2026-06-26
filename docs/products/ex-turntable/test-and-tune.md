@@ -404,3 +404,5 @@ You will note that both interactive and **EXRAIL** commands have an "activity" p
 | 7 | LED_Off | Turns the LED off, ignores the provided step position |
 | 8 | Acc_On | Turns the accessory output on, ignores the provided step position |
 | 9 | Acc_Off | Turns the accessory output off, ignores the provided step position |
+
+--8<-- "snippets/abbr.md"

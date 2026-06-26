@@ -21,3 +21,5 @@ As requested - using a stylus press the crosses displayed in the squares in turn
 ![Fig 4](../../_static/images/ex-fastclock/FIG4.png)
 
 Cut/Copy the two lines indicated in Fig 3. and paste them into the appropriate space in the config.h file from the EX-Fast_Clock code.
+
+--8<-- "snippets/abbr.md"
