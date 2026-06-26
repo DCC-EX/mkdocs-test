@@ -1,5 +1,17 @@
 # TODO Report
 
+<style>
+.md-typeset table td,  
+.md-typeset table th {
+    font-size: small !important;
+    padding-top: 2px !important;
+    padding-bottom: 2px !important;
+    padding-left: 2px !important;
+    padding-right: 2px !important;
+    line-height: 110% !important;
+    font-family: 'Roboto Condensed', sans-serif !important;
+ }
+</style>
 Scanned docs root: `C:\Users\akers\OneDrive\github\github_doco\mkdocs-test\docs`
 
 Total TODO matches: 154
@@ -9,12 +21,12 @@ Total TODO matches: 154
 | [docs/diy/esp32.md](../diy/esp32.md) | 66 | ==TODO== move legacy docs |
 | [docs/diy/mega-harder.md](../diy/mega-harder.md) | 18 | - an Arduino Standard Motor-Shield (or others as noted in ==TODO==) to power the track. |
 | [docs/diy/nucleo.md](../diy/nucleo.md) | 48 | ==TODO== move legacy docs |
-| [docs/enhance/index.md](../enhance/index.md) | 29 | ==TODO== basic intro to Turnouts/Points and links to the appropriate pages |
-| [docs/enhance/index.md](../enhance/index.md) | 37 | ==TODO== basic intro to sequences and links to the appropriate EXRAIL pages |
-| [docs/enhance/index.md](../enhance/index.md) | 46 | ==TODO== basic intro to TrackManager and links to the appropriate TrackManager pages |
-| [docs/enhance/index.md](../enhance/index.md) | 52 | ==TODO== links to the DC pages |
-| [docs/enhance/index.md](../enhance/index.md) | 60 | ==TODO== basic intro to accessories and links to the appropriate pages |
-| [docs/enhance/index.md](../enhance/index.md) | 76 | ==TODO== basic intro to tools and links to the appropriate pages |
+| [docs/enhance/index.md](../enhance/index.md) | 31 | ==TODO== basic intro to Turnouts/Points and links to the appropriate pages |
+| [docs/enhance/index.md](../enhance/index.md) | 39 | ==TODO== basic intro to sequences and links to the appropriate EXRAIL pages |
+| [docs/enhance/index.md](../enhance/index.md) | 48 | ==TODO== basic intro to TrackManager and links to the appropriate TrackManager pages |
+| [docs/enhance/index.md](../enhance/index.md) | 54 | ==TODO== links to the DC pages |
+| [docs/enhance/index.md](../enhance/index.md) | 62 | ==TODO== basic intro to accessories and links to the appropriate pages |
+| [docs/enhance/index.md](../enhance/index.md) | 78 | ==TODO== basic intro to tools and links to the appropriate pages |
 | [docs/installer/download-linux.md](../installer/download-linux.md) | 7 | ==TODO== - Add screenshots & fix page flow |
 | [docs/installer/install-ex-ioexpander.md](../installer/install-ex-ioexpander.md) | 3 | ==TODO== complete EX-Installer EX-IOExpander page needed |
 | [docs/installer/install-ex-turntable.md](../installer/install-ex-turntable.md) | 3 | ==TODO== complete EX-Installer EX-Turntable page needed |
