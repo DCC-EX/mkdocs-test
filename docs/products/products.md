@@ -146,13 +146,13 @@ Refer to the [EX-FastClock documentation](/products/ex-fastclock/overview.md) fo
 ### EX-Turntable
 
 [![EX-Turntable Logo](../_static/images/logos/product-logo-ex-turntable-only-light.png){ .only-light width=400px }
-![EX-Turntable Logo](../_static/images/logos/product-logo-ex-turntable-only-dark.png){ .only-dark width=400px }](/products/ex-turntable/ex-turntable.md)
+![EX-Turntable Logo](../_static/images/logos/product-logo-ex-turntable-only-dark.png){ .only-dark width=400px }](/products/ex-turntable/overview.md)
 
 An integrated turntable/traverser controller using a stepper motor.
 
 The software and integration side of **EX-Turntable** is reasonably straight forward, however the mechanics of getting a turntable operational with a stepper motor and the required sensors to control the location of the turntable accurately is quite involved.
 
-Refer to the [EX-Turntable documentation](/products/ex-turntable/ex-turntable.md) for what's required and how to get up and running.
+Refer to the [EX-Turntable documentation](/products/ex-turntable/overview.md) for what's required and how to get up and running.
 
 ---
 

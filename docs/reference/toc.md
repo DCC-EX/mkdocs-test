@@ -159,7 +159,15 @@ li:not(.md-nav__item, .md-tabs__item) a {
         - [Operation](../products/ex-fastclock/operation.md)
         - [Time Control](../products/ex-fastclock/timecontrol.md)
     - [EX-IOExpander](../products/ex-ioexpander/ex-ioexpander.md)
-    - [EX-Turntable](../products/ex-turntable/ex-turntable.md)
+    - **EX-Turntable**
+        - [EX-Turntable - Overview <small>(EX-Turntable Overview)</small>](../products/ex-turntable/overview.md)
+        - [Purchasing](../products/ex-turntable/purchasing.md)
+        - [Assembly & Setup](../products/ex-turntable/assembly.md)
+        - [Testing, Tuning, and Control <small>(Testing, Tuning & Control)</small>](../products/ex-turntable/test-and-tune.md)
+        - [Layout Connections and Wiring <small>(Layout Connections & Wiring)</small>](../products/ex-turntable/layout-wiring.md)
+        - [Configuration Options](../products/ex-turntable/configure.md)
+        - [EX-Turntable FAQ and Troubleshooting <small>(FAQ & Troubleshooting)</small>](../products/ex-turntable/ex-tt-troubleshooting.md)
+        - [Traversers and Limited Rotation Turntables <small>(Traversers & Limited Rotation Turntables)</small>](../products/ex-turntable/traverser.md)
     - **EX-SensorCAM**
         - [EX-SensorCAM](../products/ex-sensorcam/ex-sensorcam.md)
         - [Installation Guide](../products/ex-sensorcam/installation-guide.md)
@@ -255,6 +263,9 @@ li:not(.md-nav__item, .md-tabs__item) a {
             - [Bluetooth Devices](hardware/bluetooth-devices/index.md)
         - **Ethernet boards**
             - [Ethernet Boards](hardware/ethernet-boards/index.md)
+        - **Hal**
+            - [I/O Device Drivers and HAL](hardware/hal/hal-config.md)
+            - [Writing a HAL Driver](hardware/hal/writing-hal-driver.md)
         - **Motorboards**
             - [L298P & L298HN Shields <small>(L298 Shields)</small>](hardware/motorboards/l298-shields.md)
             - [Schematics](hardware/motorboards/schematics.md)

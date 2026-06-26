@@ -67,7 +67,7 @@ See:
 
 Also see:
 
-* [EX-Turntable](../products/ex-turntable/ex-turntable.md)
+* [EX-Turntable](../products/ex-turntable/overview.md)
 * [EX-FastClock](../products/ex-fastclock/overview.md)
 * [EX-IOExpander](../products/ex-ioexpander/ex-ioexpander.md)
 * [EX-SensorCAM](../products/ex-sensorcam/ex-sensorcam.md)

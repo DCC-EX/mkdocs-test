@@ -1,2 +1,9 @@
 nav:
-  - EX-Turntable: ex-turntable.md
+  - EX-Turntable Overview: overview.md
+  - Purchasing: purchasing.md
+  - Assembly & Setup: assembly.md
+  - Testing, Tuning & Control: test-and-tune.md
+  - Layout Connections & Wiring: layout-wiring.md
+  - Configuration Options: configure.md
+  - FAQ & Troubleshooting: ex-tt-troubleshooting.md
+  - Traversers & Limited Rotation Turntables: traverser.md
