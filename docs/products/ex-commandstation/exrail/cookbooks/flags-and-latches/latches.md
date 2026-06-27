@@ -11,12 +11,12 @@ Because of these limitations, it is recommended that you use the much simpler [f
 For example:
 
 ```cpp
-HAL(Bitmap,800,16) // create flags 800..815 
+HAL(Bitmap,800,16) // create flags 800..815
 ROUTE(600,"Shed lights")
-  IF(800)  // is the light on? 
+  IF(800)  // is the light on?
      RESET(120)  // lights off
      RESET(800)
-  ELSE  // light is off 
+  ELSE  // light is off
      SET(120)  // lights on
      SET(800)
   ENDIF

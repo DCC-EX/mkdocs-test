@@ -25,7 +25,7 @@
   ALIAS(BLK3_BLK4, 5)
   ALIAS(BLK4_BLK1, 6)
   ALIAS(CHOOSE_BLK2, 60)
-  
+
   SERVO_TURNOUT(TRN1, 100, 400, 100, Slow, "Station entry")
   SERVO_TURNOUT(TRN2, 101, 400, 100, Slow, "Station exit")
   SERVO_SIGNAL(SIG1_TRN1_APP, 400, 250, 100)
@@ -113,7 +113,7 @@
     AFTER(SNS4_MAIN_TRN2_APP)
     FREE(BLK2_MAIN_HOLD)
     FOLLOW(BLK4_BLK1)
-  
+
   // Sequence to go from block 3 to block 4
   SEQUENCE(BLK3_BLK4)
     RESERVE(BLK4_TRN2_EX)
@@ -131,7 +131,7 @@
     AFTER(SNS5_STN_TRN2_APP)
     FREE(BLK3_STN)
     FOLLOW(BLK4_BLK1)
-  
+
   // Sequence to move from block 4 back to block 1
   SEQUENCE(BLK4_BLK1)
     RESERVE(BLK1_TRN1_APP)

@@ -10,7 +10,7 @@ For example:
 #if defined(ARDUINO_ARCH_AVR)
   // on my Mega, I have signal1 on pins (30,31,32)
   ALIAS(mysignal1,30)
-#else 
+#else
   // on my **EX-CSB1** or similar, I use pins 800,801,802 on an expander
   ALIAS(mysignal1,800)
 #endif
@@ -24,7 +24,7 @@ In addition, each **EXRAIL** command is actually a preprocessor definition so it
 ```cpp
 #ifdef NEOPIXEL
    NEOPIXEL(2013,255,255,0)
-#endif   
+#endif
 ```
 
 Note #ifdef xxx and #if defined(xxx) do the same thing.

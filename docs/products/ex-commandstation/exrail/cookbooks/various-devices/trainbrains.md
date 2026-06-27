@@ -31,13 +31,13 @@ NEOPIXEL_SIGNAL(720,NeoRGB(255,0,0),NeoRGB(255,100,0),NeoRGB(0,255,0))
 
 // Create 1-lamp signal with named colours.
 // This is better if you have multiple signals.
-// (Note: ALIAS is not suitable due to word length defaults) 
+// (Note: ALIAS is not suitable due to word length defaults)
 #define REDLAMP NeoRGB(255,0,0)
 #define AMBERLAMP NeoRGB(255,100,0)
 #define GREENLAMP NeoRGB(0,255,0)
 NEOPIXEL_SIGNAL(702,REDLAMP,AMBERLAMP,GREENLAMP)
 
-// Create 1-lamp signal with web type RGB colours 
+// Create 1-lamp signal with web type RGB colours
 NEOPIXEL_SIGNAL(702,0xFF0000,0xFF6400,0x00FF00)
 ```
 

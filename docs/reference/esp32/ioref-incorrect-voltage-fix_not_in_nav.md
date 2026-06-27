@@ -7,7 +7,7 @@ hide:
 
 ![ACEBOTT IOREF](/_static/images/esp32/esp32-keyestudio-ioref.png){ width=15% }
 
-For the 3.3v microcontrollers such as the ESP32 board, if the IOREF voltage is not be correct the ADC inputs will receive up to 5V when the IOREF pin is 5V which will damage the board and likely destroy it.  
+For the 3.3v microcontrollers such as the ESP32 board, if the IOREF voltage is not be correct the ADC inputs will receive up to 5V when the IOREF pin is 5V which will damage the board and likely destroy it.
 
 ***As such it is vital that the modifications below are made.***
 

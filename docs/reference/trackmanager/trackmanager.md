@@ -67,7 +67,7 @@ The command to set a track to a DC address is as follows
 
 - `<=t DC a>` Sets track t (A..H) to use loco address, example <=A DC 3>
 
-A simple two separate loop DC track, wired the traditional way in opposite directions, may be set like this to use loco addresses 1 and 2.  
+A simple two separate loop DC track, wired the traditional way in opposite directions, may be set like this to use loco addresses 1 and 2.
 
 ```console
 <=A DC 1>

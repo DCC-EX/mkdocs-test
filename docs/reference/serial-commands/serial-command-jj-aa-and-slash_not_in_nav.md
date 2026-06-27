@@ -8,7 +8,7 @@ tags:
   - _/_9PAUSE9
   - _/_9RESUME9
   - _/_9KILL9_9ALL9
-  - _/_9KILL9_id 
+  - _/_9KILL9_id
 ---
 
 # <small>``<J A [«id»]>``</small> <br/><small>``</ [START|PAUSE|RESUME|KILL] [«various parameters»]>``</small> <br/> List, Start or Stop Automations/Sequences

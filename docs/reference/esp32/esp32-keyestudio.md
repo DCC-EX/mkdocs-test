@@ -19,10 +19,10 @@ hide:
 
 ## Keyestudio IOT ESP32 PLUS Development Board *VS* WeMos R1 D32
 
-- Fewer modifications may be required.  
-- WiFi does not need the resistor.  
-- Pin locations A0, A1 can be used for current sensing.  
-- The default pins can be used on EX8874.  
+- Fewer modifications may be required.
+- WiFi does not need the resistor.
+- Pin locations A0, A1 can be used for current sensing.
+- The default pins can be used on EX8874.
 
 ## Incorrect IOREF voltage
 
@@ -53,13 +53,13 @@ Note:
 Add the following lines to your `config.h` and remove any existing `#define MOTOR_SHIELD_TYPE ...` line.
 
 ```cpp
-  #define EX8874_KEYES_ESP32 F("EX8874_KEYES_ESP32"), \  
-    new MotorDriver(25/* 3*/, 19/*12*/, UNUSED_PIN, 13/*9*/, 32/*A0*/, 1.52, 5000, 36 /*A4*/), \  
-    new MotorDriver(23/*11*/, 18/*13*/, UNUSED_PIN, 12/*8*/, 33/*A1*/, 1.52, 5000, 39 /*A5*/)  
+  #define EX8874_KEYES_ESP32 F("EX8874_KEYES_ESP32"), \
+    new MotorDriver(25/* 3*/, 19/*12*/, UNUSED_PIN, 13/*9*/, 32/*A0*/, 1.52, 5000, 36 /*A4*/), \
+    new MotorDriver(23/*11*/, 18/*13*/, UNUSED_PIN, 12/*8*/, 33/*A1*/, 1.52, 5000, 39 /*A5*/)
   #define MOTOR_SHIELD_TYPE EX8874_KEYES_ESP32
 ```
 
-- When one EX8874 motor shield is used with Keyestudio IOT ESP32 PLUS Development Board, the default EX8874 pins are used.  
+- When one EX8874 motor shield is used with Keyestudio IOT ESP32 PLUS Development Board, the default EX8874 pins are used.
 
 |<br/>output|Current<br/>Sense|*PWM*<br/>Enable|*DIR*<br/>Signal|<br/>Brake|<br/>Fault|<br/>Notes|
 |:--:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
@@ -68,8 +68,8 @@ Add the following lines to your `config.h` and remove any existing `#define MOTO
 
 ### Single EX8874 Checklist
 
-- [ ] Cover the barrel connector on Keyestudio IOT ESP32 PLUS Development Board, as VIN power will be provided by EX8874  
-- [ ] IOREF Override set to 3v3  
+- [ ] Cover the barrel connector on Keyestudio IOT ESP32 PLUS Development Board, as VIN power will be provided by EX8874
+- [ ] IOREF Override set to 3v3
 - [ ] IOREF pin is bent *or* trace is cut *or* both
 - [ ] Add the custom motor define - 4 lines in `config.h`
 
@@ -88,7 +88,7 @@ Add the following lines to your `config.h` and remove any existing `#define MOTO
         - *Option 1 - Cut the traces on the top EX8874*
 
             - Cut the regulator to VIN pin on the top of the PCB
-            - Cut the “Regulator Enable” trace on the bottom of the board
+            - Cut the "Regulator Enable" trace on the bottom of the board
 
         - *Option 2 - bend the VIN pin*
 
@@ -122,22 +122,22 @@ See the [Stacking two motor shields on the EX8874 page](../../products/ex-motors
 - A custom motor define will be needed in `config.h`
 
 ```cpp
-  #define EX8874X2_KEYES_ESP32 F("EX8874X2_KEYES_ESP32"), \  
-    new MotorDriver(25/* 3*/, 19/*12*/, UNUSED_PIN, 13/*9*/, 32/*A0*/, 1.52, 5000, 36/*A4*/), \  
-    new MotorDriver(23/*11*/, 18/*13*/, UNUSED_PIN, 12/*8*/, 33/*A1*/, 1.52, 5000, 39/*A5*/), \  
-    new MotorDriver(26/* 2*/,  5/*10*/, UNUSED_PIN, 14/*7*/, 34/*A4*/, 1.52, 5000, 2 /*A4*/), \ 
-    new MotorDriver(16/* 5*/, 17/* 4*/, UNUSED_PIN, 27/*6*/, 35/*A5*/, 1.52, 5000, 4 /*A5*/)  
+  #define EX8874X2_KEYES_ESP32 F("EX8874X2_KEYES_ESP32"), \
+    new MotorDriver(25/* 3*/, 19/*12*/, UNUSED_PIN, 13/*9*/, 32/*A0*/, 1.52, 5000, 36/*A4*/), \
+    new MotorDriver(23/*11*/, 18/*13*/, UNUSED_PIN, 12/*8*/, 33/*A1*/, 1.52, 5000, 39/*A5*/), \
+    new MotorDriver(26/* 2*/,  5/*10*/, UNUSED_PIN, 14/*7*/, 34/*A4*/, 1.52, 5000, 2 /*A4*/), \
+    new MotorDriver(16/* 5*/, 17/* 4*/, UNUSED_PIN, 27/*6*/, 35/*A5*/, 1.52, 5000, 4 /*A5*/)
   #define MOTOR_SHIELD_TYPE EX8874X2_KEYES_ESP32
 ```
 
 ### Stacked EX8874 Checklist
 
-- [ ] Cover the barrel connector on Keyestudio IOT ESP32 PLUS Development Board, as VIN power will be provided by one EX8874  
+- [ ] Cover the barrel connector on Keyestudio IOT ESP32 PLUS Development Board, as VIN power will be provided by one EX8874
 - [ ] IOREF Override set to 3v3 on **both** EX8874 boards
 - [ ] IOREF pin is bent out *or* trace is cut on **both** EX8874 boards
 - [ ] VIN trace & regulator cut *or* bend the VIN pin out on **top** EX8874
 - [ ] Alternate pins enabled via solder pads on **top** EX8874
 - [ ] A4 and A5 pins on the **top** EX8874 bent out
 - [ ] Jumpers added from GPIO 2 and 4 to A4 and A5 on **top** EX8874
-- [ ] Add the custom motor define - 6 lines in config.h  
+- [ ] Add the custom motor define - 6 lines in config.h
 

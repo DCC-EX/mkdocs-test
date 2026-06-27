@@ -11,7 +11,7 @@ Also see [WiFi configuration (EX-CSB1 or ESP32 ONLY. V5.7.0+ ONLY)](/products/ex
 
 Prior to version 5.7.0, WiFi configuration for **EX-CommandStation** was done through options in the ``config.h`` file. This method required users to modify the firmware (by editing ``config.h``) and recompile it for their specific WiFi settings.
 
-From version 5.7.0, WiFi configuration options in ``config.h`` are *ignored* by the **EX-CSB1** or ESP32 EX-CommandStations.  
+From version 5.7.0, WiFi configuration options in ``config.h`` are *ignored* by the **EX-CSB1** or ESP32 EX-CommandStations.
 
 It is now necessary to use a new WiFi configuration method, which involves connecting to the **EX-CommandStation** *after you have flashed the firmware.*  You do so by connecting to the **EX-CommandStation** via USB or by connecting to the WiFi Access Point network of the **EX-CommandStation** and issuing a set of new commands. (Note that the WiFi Access Point network approach has limitations. See below.)
 
@@ -54,7 +54,7 @@ There are significant limitations to be aware of when configuring WiFi settings 
 
 Only **Station (STA) mode** and the **HOSTNAME** can be changed over WiFi.
 
-**Access Point (AP)** mode changes require a serial/USB connection. 
+**Access Point (AP)** mode changes require a serial/USB connection.
 This is a security feature.  If you could change AP mode settings over WiFi, then anyone who could connect to the **EX-CommandStation**'s WiFi network could change the AP settings and potentially lock you out of your **EX-CommandStation**. By requiring a USB connection for AP mode changes, we ensure that only someone with physical access to the **EX-CommandStation** can modify these critical settings.
 
 ----
@@ -89,7 +89,7 @@ The `Reset WiFi Settings` button on the WiFi Setup page will reset all WiFi sett
 
 ### Using EX-Toolbox
 
-**EX-Toolbox** provides a similar interface to the **EX-WebThrottle** for configuring WiFi settings, but it can be accessed either via USB or over WiFi. The process for changing WiFi settings in the **EX-Toolbox** is essentially the same as in the **EX-WebThrottle**, with the same options for AP mode, STA mode, Temporary STA mode and Hostname. 
+**EX-Toolbox** provides a similar interface to the **EX-WebThrottle** for configuring WiFi settings, but it can be accessed either via USB or over WiFi. The process for changing WiFi settings in the **EX-Toolbox** is essentially the same as in the **EX-WebThrottle**, with the same options for AP mode, STA mode, Temporary STA mode and Hostname.
 
 1. Connect your PC to the **EX-Toolbox** via USB or Wifi.  See [EX-Toolbox](../ex-toolbox/ex-toolbox.md) for more details.
 

@@ -1,4 +1,4 @@
-# **EX-CSB1** CommandStation Booster
+# **EX-CSB1** CommandStation/Booster 1 Express
 
 ![EX-CSB1 Logo](/_static/images/logos/product-logo-ex-csb1-only-light.png){ .only-light width=400px align=right }
 ![EX-CSB1 Logo](/_static/images/logos/product-logo-ex-csb1-only-dark.png){ .only-dark width=400px align=right }

@@ -8,7 +8,7 @@ It is possible to easily add a rotary dial (knob) to **Engine Driver** due its a
 
 ![USB volume control knob](../_static/images/engine-driver/usb-volume-knob.png){: width="200px"}
 
-Examples of projects using this feature can be found at:  
+Examples of projects using this feature can be found at:
 
 * [http://1fatgmc.com/RailRoad/DCC/page-3.html](http://1fatgmc.com/RailRoad/DCC/page-3.html)
 * [https://www.youtube.com/watch?v=qA9WiscD1gk](https://www.youtube.com/watch?v=qA9WiscD1gk)

@@ -294,3 +294,5 @@ To add this to "config.h", add your new definition **before** the `STEPPER_DRIVE
   // #define STEPPER_DRIVER TWO_WIRE
   // #define STEPPER_DRIVER TWO_WIRE_INV
 ```
+
+--8<-- "snippets/abbr.md"

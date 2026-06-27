@@ -79,7 +79,7 @@ The **CSB1** can only have a single **EX8874** stacked on it, unmodified. There 
 
 ![vin pad](/_static/images/ex8874/vin_pad.png)
 
-- Cut the “Regulator Enable” trace on the bottom of the board
+- Cut the "Regulator Enable" trace on the bottom of the board
 
 ![vreg pad](/_static/images/ex8874/vreg_enable_pad.png)
 
@@ -93,8 +93,8 @@ The **CSB1** can only have a single **EX8874** stacked on it, unmodified. There 
 
 The reason we did not solder the FAULT pins to their right-hand ALT pads is that this would connect the FAULT pins to D0/D1 on the Arduino R3 headers which is not ideal because D0/D1 typically carry the serial port. You can of course bend those pins out if you wish to use them, and simply jumper them that way. Please refer to the self-build instructions for your processor type.
 
-Leaving the Fault pins on A4, A5 facilitates bending and jumpering them to nearby pins, such as  
-A6, A7 on Arduino Mega  
+Leaving the Fault pins on A4, A5 facilitates bending and jumpering them to nearby pins, such as
+A6, A7 on Arduino Mega
 PC2, PC3 on Nucleo-64
 
-After hardware installation, you will need to re-run the [EX-Installer](../../installer/overview.md) to configure the **EX-CommandStation** code to recognize the new board and allow you to control the third and fourth tracks.
+After hardware installation, you will need to re-run the [EX-Installer](../../installer/installer.md) to configure the **EX-CommandStation** code to recognize the new board and allow you to control the third and fourth tracks.

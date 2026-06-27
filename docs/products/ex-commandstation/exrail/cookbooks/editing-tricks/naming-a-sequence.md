@@ -13,7 +13,7 @@ However its is sometimes more convenient to code a sequence so that it can be st
 This is made possible by using upper case quoted sequence names with the _hk suffix.
 
 ```cpp
-SEQUENCE("BEER"_hk)  
+SEQUENCE("BEER"_hk)
   PRINT("BEER sequence started")
   ... and so on
 ```

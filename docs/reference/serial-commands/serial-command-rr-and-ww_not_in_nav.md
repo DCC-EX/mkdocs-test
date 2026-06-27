@@ -27,7 +27,7 @@ It does not include reading or writing to DCC accessory decoders.
 
 ### Reading CVs
 
-* ``<R>`` Read the driveable loco id on PROG track. <br/>The response may be the long address, short address or consist address. 
+* ``<R>`` Read the driveable loco id on PROG track. <br/>The response may be the long address, short address or consist address.
 * ``<R «cv»>`` Read a cv on PROG track
 * ``<R LOCOID>`` Read the loco id (ignoring the consist address) on the PROG track
 * ``<R CONSIST>`` Read the consist id on PROG track
@@ -180,7 +180,7 @@ no response.
 
 * When combined with the ``<D ACK ON>`` Command, the ``<R>`` Command (with or without parameters) can be used for diagnostics, for example when you get a ``-1`` response.
 
-* By design, for safety reasons, the NMRA specification prevents locos from responding to throttle or function commands while on the service track. A loco WILL NOT MOVE on the service track! Don’t let the little ‘jumps’ you may see when you are programming a CV confuse you. The loco pulses the motor to give a jump in current that we read as an ‘ACK’ (acknowledgment), that causes some locos to stutter ahead slightly every time you read or write a CV.
+* By design, for safety reasons, the NMRA specification prevents locos from responding to throttle or function commands while on the service track. A loco WILL NOT MOVE on the service track! Don't let the little 'jumps' you may see when you are programming a CV confuse you. The loco pulses the motor to give a jump in current that we read as an 'ACK' (acknowledgment), that causes some locos to stutter ahead slightly every time you read or write a CV.
 
 * The ``<V ..>`` commands are designed to offer faster verification of the value held in a CV and can be used instead of the ``<R>`` commands. Instead of reading a bit value, it compares the bit to an expected value. It will attempt to verify the value first, an if it is successful, will return the value as if it was simply 'read'. If the verify fails, it will perform a read bit command and return the value read.
 

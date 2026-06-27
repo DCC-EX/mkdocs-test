@@ -16,7 +16,7 @@ Using an **DCC-EX EX-CommandStation** to run a DC layout provides a number of ad
 - All Wifi and wired connected throttles will operate the same for DC and DCC locos using Cab road numbers 'loco addresses' from 1 to 10239.
 - Using this range of Cab locoid addresses you can assign any DC district/track any locoid to run in that DC district, i.e # 2.
 - Multiple DC Districts (maximum four on **EX-CSB1** & maximum eight on Mega2560 system) can be independently controlled and reconfigured to allow crossing between districts and polarity reversal.
-- Any DC District can be further subdivided into smaller blocks and energized or powered via turnouts/points and or SPDT switches If desired, i.e. staging or fiddle yard..  
+- Any DC District can be further subdivided into smaller blocks and energized or powered via turnouts/points and or SPDT switches If desired, i.e. staging or fiddle yard..
 - Momentum of a loco can be defined in number of seconds of travel for acceleration and braking distances.
 - **EXRAIL** automation can be used to run trains, create routes, switch block relays, control signals, control accessory special effects, manage reversing loops, etcetera.
 - Pulse Width Modulation PWM 'Frequency' can be adjusted to suit your locos and/or reduce DC noise with a touch of the throttles function F29-F31 button.
@@ -50,12 +50,12 @@ All of which apply equally to DC operation, plus:
 
 - How track Districts are set for DC and which locoid addresses they are mapped to
 
-To start this you need to follow the [Installer process described here](/installer/overview.md) and create an AUTOSTART section in your myAutomation.h file to set the track manager options suitable for your layout.
+To start this you need to follow the [Installer process described here](/installer/installer.md) and create an AUTOSTART section in your myAutomation.h file to set the track manager options suitable for your layout.
 
 Two districts A & B are set to DC mode and initially powered On:
 
 ```cpp
-AUTOSTART 
+AUTOSTART
    SETLOCO(1)
    SET_TRACK(A,DC)
    SET_POWER(A,ON)
@@ -88,16 +88,16 @@ ROUTE(12,"Drive from outer to inner loop")
   SET_POWER(B,ON)
   THROW(100) THROW(101) // throw the turnouts/points that join the tracks
   DONE
-  
+
 ROUTE(21,"Drive from inner to outer loop")
   SETLOCO(2)
   SET_TRACK(A,DCX)  // reverse polarity on track B and treat as loco 1
   SET_POWER(A,ON)
   THROW(100) THROW(101) // throw the turnouts/points that join the tracks
   DONE
-  
+
 ROUTE(99,"Restore tracks to normal")
-  CLOSE(100) CLOSE(101)  // close the turnouts/points  
+  CLOSE(100) CLOSE(101)  // close the turnouts/points
   SETLOCO(1)
   SET_TRACK(A,DC)
   SET_POWER(A,ON)

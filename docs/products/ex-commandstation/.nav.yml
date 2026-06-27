@@ -1,12 +1,12 @@
 nav:
-  - EX-CommandStation: overview.md
-  - EX-CSB1 Command Station/Booster: ex-csb1.md
-  - Running a DC layout: dc-running.md
-  - Configuration (config.h): config-h.md
-  - Configure WiFi (Wifi Shield): config-wifi-shield.md
-  - Configure WiFi (CSB1 & ESP32 v5.7.0+): config-wifi-esp32.md
+  - EX-CommandStation Overview: overview.md
+  - <b>EX-CSB1 CommandStation/Booster 1 Express</b>: ex-csb1.md
+  - Configuration <small>(config.h)</small>: config-h.md
+  - Configure WiFi <small>(Wifi Shield)</small>: config-wifi-shield.md
+  - Configure WiFi <small>(CSB1 & ESP32 v5.7.0+)</small>: config-wifi-esp32.md
   - Testing your EX-CommandStation: testing.md
   - TrackManager: trackmanager
   - Loco Programming: loco-programming
+  - Running a DC layout: dc-running.md
   - Accessories: accessories
   - EXRAIL: exrail

@@ -122,7 +122,7 @@ Not critical, but it is advisable to have the 'Master' also use the High, Mid, L
 
 - It is highly advisable that BACK-EMF is turned off on all locos that will be run in a consist. If you don't you will likely encounter surging of the locos as they speed up and slow down under individual load. <br/>
   BACK-EMF is referred to by some manufacturers as 'Dynamic Compensation for Speed Stabilisation', 'Scaleable Speed Stabilisation' or 'Load Compensation'. Unfortunately there is no standard way to disable BACK-EMF. You will need to refer to the manuals for your decoders.
-  
+
   [This page](https://tonystrains.com/news/dcc-motor-control-with-back-emf-and-p-i-d/) has a detailed explanation of BACK-EMF and details on how to change it for a number of manufacturers.
 
 It is well worth viewing the video before starting as it makes the process clear in a way text does not.
@@ -142,7 +142,7 @@ It is well worth viewing the video before starting as it makes the process clear
 - Click the ``Low Set Speed`` button. <br/>
   Watch and adjust the speeds of the Second loco in relation the Master, util they run at the same speed. <br/>
   Use the speed input or use the ``+`` and ``-`` buttons to adjust the second loco speed.
-  
+
 - Repeat for the 'Mid' Speed.
 
 - Repeat for the 'High' Speed.
@@ -179,7 +179,7 @@ The Speedometer allows you to calulate the scale speed of a loco as it passes tw
 
   ```cpp
   JMRI_SENSOR(160,2)  // pins 160 and 161
-  or 
+  or
   JMRI_SENSOR(160) JMRI_SENSOR(161)
   ```
 

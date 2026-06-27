@@ -7,12 +7,12 @@ The DFPlayer device an be used to play pre-recorded sounds from an onboard SD-ca
 An example of a layout line side sound scenario of what can be achieved with two or more DFPlayers:
 
 1. Background ambiance sound of a grand central station (repeat sound file on one DFPLayer)
-2. Conductor shouts: “All aboard”
+2. Conductor shouts: "All aboard"
 3. The Solari departure/arrival board comes to live (random play)
 4. A station announcement, synchronized with a train arrival (triggered via an input sensor)
 5. Station announcements (random play)
 6. Car horns outside station (random play)
-7. Someone shouting: “Taxi” (random play)
+7. Someone shouting: "Taxi" (random play)
 8. Only limited by your imagination
 
 ## Hardware connection

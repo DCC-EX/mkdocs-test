@@ -11,7 +11,7 @@ For a full list of keywords, see [EXRAIL Command List](command-list.md).  Only a
     Do not waste your time asking ChatGPT, Copilot or Gemini to create EXRAIL scripts.   They do not understand EXRAIL and will get it wrong 100% of the time.
 
 !!! warning "Do not use leading zeros for any numbers!"
-  
+
     Any number with a leading zero will be treated as an octal number, so for example ``ALIAS(MY_ALIAS, 010)`` will assign the value of ``8`` to MY_ALIAS, not ``10``. This is a common mistake that can lead to very confusing behaviour if you don't know about it. Always use numbers without leading zeros, for example ``ALIAS(MY_ALIAS, 10)`` to assign the value of 10 to MY_ALIAS.
 
 ## Types of Sequence
@@ -24,12 +24,12 @@ There are four types of Sequence:
 * **ONevent** based sequences
 
 ### SEQUENCE
-  
-* Simply a list of things to be done in order. These things might be to actually drive a train around, or merely to set some turnouts or flash some scene or panel lights. Actions can be made to wait for conditions to be met, like a sensor detecting a train, a button being pushed, or a period of time elapsing.  
+
+* Simply a list of things to be done in order. These things might be to actually drive a train around, or merely to set some turnouts or flash some scene or panel lights. Actions can be made to wait for conditions to be met, like a sensor detecting a train, a button being pushed, or a period of time elapsing.
 * A generic **SEQUENCE** (unlike the variations below) can only be started by another SEQUENCE, or automatically at the start-up of the Command Station.
 
 ### ROUTE
-  
+
 * A special type of SEQUENCE that is made visible to a throttle with a readable name, so the user can press a button to get the sequence executed. This might be best used to set a series of turnouts and signals to create a route through the layout.
 
 ### AUTOMATION
@@ -107,8 +107,8 @@ Sequences types fall in the following broad groups:
 
 Manually triggered sequences are advertised to WiThrottles so you can activate them on your throttles (e.g. Engine Driver or WiThrottle). They are one of:
 
-* ``AUTOMATION( id, “description” )`` <br/>- Start a Automation Sequence and creates a WiThrottles {Handoff} button to automatically send a train along.
-* ``ROUTE( id, “description” )`` <br/>- Start of a Route Sequence and creates a WiThrottles {Set} button to manual drive the train along
+* ``AUTOMATION( id, "description" )`` <br/>- Start a Automation Sequence and creates a WiThrottles {Handoff} button to automatically send a train along.
+* ``ROUTE( id, "description" )`` <br/>- Start of a Route Sequence and creates a WiThrottles {Set} button to manual drive the train along
 
 Note that these can also be invoked by other sequences.
 
@@ -151,7 +151,7 @@ This is useful for sequences where you want to constantly monitor the state of s
 
 ### Contents of a 'Sequence'
 
-A sequence is made up of 'Commands'. Commands are usually written one per line for ease of reading, but you can put multiple commands on a single line.  
+A sequence is made up of 'Commands'. Commands are usually written one per line for ease of reading, but you can put multiple commands on a single line.
 
 The commands fall into some basic categories:
 
@@ -165,7 +165,7 @@ The commands fall into some basic categories:
 
 #### Action Commands - Getting EXRAIL to 'do' something
 
-This type of command will somehow change Objects of the system you have created and defined, like turnouts/points, signals, servos, turntables, blocks and locos.  
+This type of command will somehow change Objects of the system you have created and defined, like turnouts/points, signals, servos, turntables, blocks and locos.
 
 There are a substantial number of commands that you can explore in the [EXRAIL Command List](command-list.md). We will look at just a few here.
 
@@ -196,10 +196,10 @@ Signal related commands include:
       AUTOSTART   // start this immediately the system powers up
       FWD(50)     // move forward at DCC speed 50
       DELAY(5000) // run for 5 seconds
-      STOP        // stop the train 
+      STOP        // stop the train
       REV(30)     // move backwards at DCC speed 50
       DELAY(5000) // run for 5 seconds
-      STOP        // stop the train 
+      STOP        // stop the train
     FOLLOW(4)   // repeat forever
 ```
 
@@ -237,7 +237,7 @@ If a conditional is encountered, the following (enclosed) commands are only exec
 Conditionals have the structure:
 
 ```cpp
-   // Example 
+   // Example
    // - Toggle a turnout/point based on a push button
    SEQUENCE(85)
       DELAY(100)     // check every 0.1 of a second
@@ -246,7 +246,7 @@ Conditionals have the structure:
           THROW(105)  // if closed THROW Turnout/Point 105
         ELSE
           CLOSE(105)  // if closed CLOSE Turnout/Point 105
-        ENDIF 
+        ENDIF
         FOLLOW(85)     // repeat forever
 ```
 
@@ -338,10 +338,10 @@ There are a number of delay type commands that you can explore in the [EXRAIL Co
    AUTOMATION(5,"Back and Forward - Random")
       FWD(50)     // move forward at DCC speed 50
       DELAY(5000, 20000) // run for between 5 to 20 seconds (random)
-      STOP        // stop the train 
+      STOP        // stop the train
       REV(30)     // move backwards at DCC speed 50
       DELAY(5000, 20000) // run for between 5 to 20 seconds (random)
-      STOP        // stop the train 
+      STOP        // stop the train
     FOLLOW(5)   // repeat forever
 ```
 
@@ -362,7 +362,7 @@ There are a substantial number of commands that you can explore in the [EXRAIL C
 ```cpp
   // use the drive away feature to recognise the loco on the
   // programming track and drive it onto the main track
-  SEQUENCE(99)    
+  SEQUENCE(99)
     READ_LOCO // identify the loco on the programming track
     JOIN      // connect programming track to main
     WAIT(30000) // wait 30 seconds
@@ -400,9 +400,9 @@ Signals can now simply be a decoration to be switched by the route process; they
 
 ### Referencing Locos
 
-```cpp  
+```cpp
   //Example
-  SEQUENCE(98)  
+  SEQUENCE(98)
     SETLOCO(9999)   // select loco 9999
     SPEED(0)        // set the speed to 0.
                     //   This will turn the track power on
@@ -422,7 +422,7 @@ You can use ``FON( function_no )`` and ``FOFF( function_no )`` to activate and d
 
 ### Referencing Sensors
 
-Sensor numbers are direct references to VPINs (virtual pin numbers) in the Hardware Abstraction Layer. For a Mega onboard GPIO pin, this is the same as the digital pin number. Other pin ranges refer to I/O expanders etc. 
+Sensor numbers are direct references to VPINs (virtual pin numbers) in the Hardware Abstraction Layer. For a Mega onboard GPIO pin, this is the same as the digital pin number. Other pin ranges refer to I/O expanders etc.
 
 Sensors with ID's 0 to 255 may be LATCHED/UNLATCHED in your script. If a sensor is latched on by the script, it can only be set off by the script… so ``AT(5) LATCH(5)`` for example effectively latches the sensor 5 on when detected once.
 
@@ -434,7 +434,7 @@ Sensor polling by JMRI is independent of this, and may continue if ``<S>`` comma
 
 **EXRAIL** can switch a track section between programming and mainline.
 
-Here for example is a launch sequence that has no predefined locos but allows locos to be added at station 1 while the system is in motion. Let's assume that the track section at Station1 is isolated and connected to the programming track power supply. Also that we have a “launch” button connected where sensor 17 would be and an optional signal (i.e. 3 LEDs) on the control panel connected where signal 27 would be.
+Here for example is a launch sequence that has no predefined locos but allows locos to be added at station 1 while the system is in motion. Let's assume that the track section at Station1 is isolated and connected to the programming track power supply. Also that we have a "launch" button connected where sensor 17 would be and an optional signal (i.e. 3 LEDs) on the control panel connected where signal 27 would be.
 
 ```cpp
  SEQUENCE(99)
@@ -444,7 +444,7 @@ Here for example is a launch sequence that has no predefined locos but allows lo
    UNJOIN    // separate the programming track from main
    DELAY(2000)
    AMBER(27) // Show amber, user may place loco
-   AFTER(17) // user places loco on track and presses “launch” again
+   AFTER(17) // user places loco on track and presses "launch" again
    READ_LOCO // identify the loco
    GREEN(27) // show green light to user
    JOIN      // connect prog track to main

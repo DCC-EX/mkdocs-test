@@ -2,7 +2,7 @@
 
 The **DCC-EX** **EX-CommandStation** code is layered to reduce overall complexity and improve the ability to add new features. The most important layers are:
 
-- DCC packet API  (DCC.h)  
+- DCC packet API  (DCC.h)
     - provides loco speed/function and accessory control functions
     - maintains loco state and issues reminders
 

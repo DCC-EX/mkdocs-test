@@ -62,7 +62,7 @@ Referring to [adding a new device](/reference/hardware/hal/hal-config.md#adding-
   <* EX-Turntable I2C:x60 Configured on Vpins:600-600  *>          <<== This is the important line, **EX-Turntable** is connected!
 ```
 
-If there is an "OFFLINE" at the end of the **EX-Turntable** line, it indicates something is not quite right. Refer to [showing as offline with `<d hal show>`](ex-tt-troubleshooting.md#ex-turntable-showing-as-offline-with).
+If there is an "OFFLINE" at the end of the **EX-Turntable** line, it indicates something is not quite right. Refer to [showing as offline with `<d hal show>`](ex-tt-troubleshooting.md#ex-turntable-showing-as-offline-with-d-hal-show).
 
 At power on, note that the turntable should have moved itself to the home position, so all commands below assume this is the case.
 
@@ -265,7 +265,7 @@ Stall 1's door is operated by enabling Vpin 164, 2 by Vpin 165, and 3 by Vpin 16
       CALL(103)
     ENDIF
   DONE
-  
+
   SEQUENCE(101)
     SET(164)
     AFTER(167)
@@ -309,7 +309,7 @@ It is highly recommended  to utilise the virtual ``RESERVE()`` and ``FREE()`` fu
 
 To define the required turntable positions in the example six position turntable from above, you will need to have this content added to your "myAutomation.h" file. Note that we recommend adding an additional ROUTE to activate the homing process.
 
-!! note  "Tip" 
+!! note  "Tip"
 
     To make this as simple as possible, we have included "myTurntable-EX.example.h" with the CommandStation-EX software containing an example automation macro with some pre-defined positions based on the example above as a starting point. Feel free to either copy or rename this to "myAutomation.h" and use it.
 
@@ -404,3 +404,5 @@ You will note that both interactive and **EXRAIL** commands have an "activity" p
 | 7 | LED_Off | Turns the LED off, ignores the provided step position |
 | 8 | Acc_On | Turns the accessory output on, ignores the provided step position |
 | 9 | Acc_Off | Turns the accessory output off, ignores the provided step position |
+
+--8<-- "snippets/abbr.md"

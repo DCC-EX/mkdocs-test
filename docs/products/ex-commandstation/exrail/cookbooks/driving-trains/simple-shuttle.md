@@ -17,17 +17,17 @@ If you are using magnet-operated sensors that only detect the loco, you must adj
 
 ## Creating the basic AUTOMATION
 
-Create an automation like this. The automation id needs to be unique amongst all AUTOMATION, ROUTE or SEQUENCE definitions.  
+Create an automation like this. The automation id needs to be unique amongst all AUTOMATION, ROUTE or SEQUENCE definitions.
 
 ```cpp
 AUTOMATION(123,"Dogbath to Catflap shuttle")
   FWD(40) // Set off from Dogbath
-  AT(165) // wait until we get to Catflap stopping point 
+  AT(165) // wait until we get to Catflap stopping point
   STOP // and then stop
-  DELAYRANDOM(15000,20000) // wait for driver to have a smoke 
-  REV(40) // reverse back 
-  AT(164) STOP // At Dogbath 
-  DELAYRANDOM(5000,10000) // wait 5 to 10 seconds 
+  DELAYRANDOM(15000,20000) // wait for driver to have a smoke
+  REV(40) // reverse back
+  AT(164) STOP // At Dogbath
+  DELAYRANDOM(5000,10000) // wait 5 to 10 seconds
   FOLLOW(123) // and follow the sequence again
 ```
 

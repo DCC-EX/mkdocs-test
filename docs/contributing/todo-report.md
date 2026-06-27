@@ -14,7 +14,7 @@
 </style>
 Scanned docs root: `C:\Users\akers\OneDrive\github\github_doco\mkdocs-test\docs`
 
-Total TODO matches: 143
+Total TODO matches: 142
 
 | File | Line | Line text |
 | --- | ---: | --- |
@@ -30,7 +30,6 @@ Total TODO matches: 143
 | [docs/installer/download-linux.md](../installer/download-linux.md) | 7 | ==TODO== - Add screenshots & fix page flow |
 | [docs/installer/install-ex-ioexpander.md](../installer/install-ex-ioexpander.md) | 3 | ==TODO== complete EX-Installer EX-IOExpander page needed |
 | [docs/installer/install-ex-turntable.md](../installer/install-ex-turntable.md) | 3 | ==TODO== complete EX-Installer EX-Turntable page needed |
-| [docs/installer/installer.md](../installer/installer.md) | 3 | ==TODO== This page should probably be combined with the overview page |
 | [docs/installer/platformio.md](../installer/platformio.md) | 3 | ==TODO== - provide setup help. |
 | [docs/reference/legacy-command-reference.md](../reference/legacy-command-reference.md) | 5 | ==TODO== move legacy docs |
 | [docs/reference/throttle-writers-guide.md](../reference/throttle-writers-guide.md) | 82 | ==TODO== Controlling Locos |
@@ -128,6 +127,7 @@ Total TODO matches: 143
 | [docs/products/ex-turntable/assembly.md](../products/ex-turntable/assembly.md) | 210 | Further to this, note that you will need to end up with two separate folders; one containing the **EX-CommandStation** software as per  ==TODO== :doc:`/ex-commandstation/advanced-setup/installation-options/arduino-ide`, and an additional folder containing the **EX-Turntable** software. The **EX-Turntable** software is not a component of **EX-CommandStation** or vice versa, and as such they should not exist in the same folder. |
 | [docs/products/ex-turntable/assembly.md](../products/ex-turntable/assembly.md) | 218 | The process here is the same as installing CommandStation-EX via the Arduino IDE which you can find on the ==TODO== :doc:`/ex-commandstation/advanced-setup/installation-options/arduino-ide` page. |
 | [docs/products/ex-turntable/assembly.md](../products/ex-turntable/assembly.md) | 349 | - VPIN=600 - This is the default virtual pin (Vpin) ID that is used to send **EX-Turntable** commands to. Vpin IDs need to be unique, so if this ID is used elsewhere, change as necessary (refer ==TODO== :ref:`reference/developers/hal:overview`). |
+| [docs/products/ex-turntable/configure.md](../products/ex-turntable/configure.md) | 3 | ==TODO== check the current version number of EX-Turntable and adjust the version notes on this page as needed |
 | [docs/products/ex-turntable/ex-tt-troubleshooting.md](../products/ex-turntable/ex-tt-troubleshooting.md) | 7 | ==TODO== Frequently Asked Questions |
 | [docs/products/ex-turntable/ex-tt-troubleshooting.md](../products/ex-turntable/ex-tt-troubleshooting.md) | 42 | | EX-CommandStation software fails to compile with "#include IO_TurntableEX.h" in myHal.cpp | The version of EX-CommandStation is incorrect, you need the "add-turntable-controller" branch of ==TODO== `EX-CommandStation <https://github.com/DCC-EX/CommandStation-EX/tree/add-turntable-controller>`_ | |
 | [docs/products/ex-turntable/overview.md](../products/ex-turntable/overview.md) | 161 | If you find that the default 45/225 degree angles aren't right for your layout, then this can be modified in "config.h" which is created in ==TODO== :ref:`ex-commandstation/diy/assembly:7. Load firmware on your Command Station`, and the configuration parameter is outlined here: [Phase Switch Angle](/products/ex-turntable/configure.md#phase_switch_angle). |
@@ -155,7 +155,6 @@ Total TODO matches: 143
 | [docs/products/ex-commandstation/exrail/cookbooks/big-picture/stage6.md](../products/ex-commandstation/exrail/cookbooks/big-picture/stage6.md) | 40 | For further reading on turnouts/points, you can refer to the ==TODO== `exrail/exrail-command-reference:turnout/point objects - definition and control` section of the **EXRAIL** reference and [Define or manage Turnouts/Points](/reference/serial-commands/serial-command-tt_not_in_nav.md) in the DCC-EX Command reference. |
 | [docs/products/ex-commandstation/exrail/cookbooks/big-picture/stage6.md](../products/ex-commandstation/exrail/cookbooks/big-picture/stage6.md) | 115 | ==TODO== `/reference/hardware/servo-module` page. |
 | [docs/products/ex-commandstation/exrail/cookbooks/big-picture/stage6.md](../products/ex-commandstation/exrail/cookbooks/big-picture/stage6.md) | 210 | ==TODO== `/reference/hardware/servo-module` page. |
-| [docs/products/ex-commandstation/exrail/cookbooks/big-picture/stage6.md](../products/ex-commandstation/exrail/cookbooks/big-picture/stage6.md) | 289 | Once you understand the logic of our routes below and the various turnout/point, sensor, signal, and virtual block concepts above, you can view some ==TODO== `complete myAutomation.h examples`_ at the end of this page. |
 | [docs/products/ex-commandstation/exrail/cookbooks/big-picture/stage6.md](../products/ex-commandstation/exrail/cookbooks/big-picture/stage6.md) | 394 | You will note that these are somewhat similar to ==TODO== `exrail/examples:multiple inter-connected trains`, updated to suit the specifics of the RMFT layout. |
 | [docs/products/ex-commandstation/exrail/cookbooks/big-picture/stage6.md](../products/ex-commandstation/exrail/cookbooks/big-picture/stage6.md) | 402 | Once you understand the logic below and the various turnout/point, sensor, signal, and virtual block concepts above, you can view some ==TODO== `complete myAutomation.h examples`_ at the end of this page. |
 | [docs/products/ex-commandstation/exrail/cookbooks/big-picture/stage6.md](../products/ex-commandstation/exrail/cookbooks/big-picture/stage6.md) | 410 | Remember, these are virtual blocks, and do not necessarily need to be electrically isolated from each other. Don't confuse isolated blocks of track or block occupancy detection with these virtual blocks. For further background, refer to ==TODO== `exrail/exrail-command-reference:virtual block control`. |

@@ -63,20 +63,20 @@ Note: With the MB board there is a push button (IO0) that replaces the FTDI prog
 
 ### **Step4. Install the sensorCAM**
 
- &nbsp; 4.1 &nbsp; For v5.4.xx, Download the software zip to your PC from <https://github.com/DCC-EX/EX-SensorCAM>  
- &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; For a "devel" version, rather than "main", select the later "devel" software (for CS v5.5.15 or higher)  
- &nbsp; 4.2 &nbsp;  Right click the zip and click Extract all. Browse to your Arduino sketches folder e.g. _Documents/Arduino_  
- &nbsp; 4.3 &nbsp;  Click Extract, creating new folder e.g. _Documents/Arduino/EX-SensorCAM-main_  
+ &nbsp; 4.1 &nbsp; For v5.4.xx, Download the software zip to your PC from <https://github.com/DCC-EX/EX-SensorCAM>
+ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; For a "devel" version, rather than "main", select the later "devel" software (for CS v5.5.15 or higher)
+ &nbsp; 4.2 &nbsp;  Right click the zip and click Extract all. Browse to your Arduino sketches folder e.g. _Documents/Arduino_
+ &nbsp; 4.3 &nbsp;  Click Extract, creating new folder e.g. _Documents/Arduino/EX-SensorCAM-main_
  &nbsp; 4.4 &nbsp;  Rename *EX-SensorCAM-main* to *sensorCAM*
-The essential files for now are shown below. Other files may be used in later install steps.  
+The essential files for now are shown below. Other files may be used in later install steps.
 
 ![Edit configCAM.h](/_static/images/ex-sensorcam/edit-configcam.png)
 
- &nbsp; 4.5 &nbsp;  Using the _configCAM.example.h_ as a guide, create and edit a _configCAM.h_ to reflect your WiFi network name and password.  
-  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Then with the correct com port and board selected, compile the _sensorCAM.ino_ sketch.  
+ &nbsp; 4.5 &nbsp;  Using the _configCAM.example.h_ as a guide, create and edit a _configCAM.h_ to reflect your WiFi network name and password.
+  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Then with the correct com port and board selected, compile the _sensorCAM.ino_ sketch.
   &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; If all is well, load it into the CAM (replacing the ESP32 WiFi example)
 
-**Note:** It may be necessary to use the MB IO0 button (or GPIO0 link) to get the CAM into upload mode.  
+**Note:** It may be necessary to use the MB IO0 button (or GPIO0 link) to get the CAM into upload mode.
 **(refer back to video and/or Appendix below)**
 
 ![Edit configCAM.h 2](/_static/images/ex-sensorcam/edit-configcam-2.png)

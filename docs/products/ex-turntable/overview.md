@@ -3,13 +3,13 @@
 ![EX-Turntable Logo](../../_static/images/logos/product-logo-ex-turntable-only-light.png){ .only-light width=400px align=right }
 ![EX-Turntable Logo](../../_static/images/logos/product-logo-ex-turntable-only-dark.png){ .only-dark width=400px align=right }
 
-Welcome to the home of **EX-Turntable**, a fully integrated turntable controller for **EX-CommandStation**.
+Welcome to the home of **EX-Turntable**, a Self Build (DIY), fully integrated turntable controller for **EX-CommandStation**.
 
 ## What is EX-Turntable?
 
-**EX-Turntable** is a fully integrated turntable controller, using an additional Arduino (Nano or Uno) microcontroller to drive a stepper motor that rotates a turntable to align the bridge track with the surrounding layout tracks.
+**EX-Turntable** is a Self Build (DIY), fully integrated turntable controller, using an additional Arduino (Nano or Uno) microcontroller to drive a stepper motor that rotates a turntable to align the bridge track with the surrounding layout tracks.
 
-While we aim to keep things simple, please note that there are complexities in setting up a turntable that tend to make **EX-Turntable** more in the realm of the |tinkerer-text| level user.
+While we aim to keep things simple, please note that there are complexities in setting up a turntable that tend to make **EX-Turntable** more in the realm of a technically advanced user.
 
 To make things easier, a turntable object is now available to define and control both **EX-Turntable** and DCC controlled turntables, which also allows throttle developers to implement direct control of turntables if they so wish. More information on how to use this with **EX-Turntable** is on the [test and tune](test-and-tune.md) page.
 
@@ -29,7 +29,7 @@ The **EX-Turntable** integration includes:
 * An LED and accessory output to control turntable specific automations (e.g. flashing warning light)
 
 !!! note "Credit where credit is due!"
-  
+
     **AccelStepper.h credit:** This project would not be effective without the excellent work by Mike McCauley on the AccelStepper.h library that enables us to have somewhat prototypical acceleration and deceleration of the turntable. This library is included with the **EX-Turntable** software (sans example sketches), and more details can be found on the official [AccelStepper](http://www.airspayce.com/mikem/arduino/AccelStepper/) web page. Note as of version 0.7.0 there is no longer a need for modifications to the library.
 
     **NmraDcc.h credit:** Also, while not directly used in this software, Alex Shephard's "DCCInterface_TurntableControl" was the inspiration for the initial turntable logic for another DCC driven turntable that translated into the beginnings of **EX-Turntable**. You can see this code as part of the [NmraDcc Arduino library](https://github.com/mrrwa/NmraDcc).
@@ -169,3 +169,5 @@ If you have a layout that requires more control over when phase switching does a
 ## Next Steps
 
 Now that you have a general overview of EX-Turntable's features and capabilities, click the 'Next' button see what is needed to create an **EX-Turntable**.
+
+--8<-- "snippets/abbr.md"

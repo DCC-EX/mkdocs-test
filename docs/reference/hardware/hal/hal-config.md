@@ -2,9 +2,9 @@
 
 ==TODO== change references to the Arduino IDE to VSC
 
-The **EX-CommandStation**** has always had built-in support for turnout control, output control and input sensors attached to the Arduino pins.  However, you may outgrow the built-in capabilities and want to access more output pins than the Arduino has available.  Or you may wish to attach servos to the controller for turnout control or for animating a layout component, such as the doors to an engine shed.  
+The **EX-CommandStation**** has always had built-in support for turnout control, output control and input sensors attached to the Arduino pins.  However, you may outgrow the built-in capabilities and want to access more output pins than the Arduino has available.  Or you may wish to attach servos to the controller for turnout control or for animating a layout component, such as the doors to an engine shed.
 
-**EX-CommandStation**, as of version 3.2.0, provides support for a wider set of input and output devices than previous versions.  This is thanks to a piece of software called the **HAL** or **H**ardware **A**bstraction **L**ayer. The HAL provides support for a range of different input and output modules through drivers that are supplied with **DCC-EX**. In addition, its simple interface allows engineers and tinkerers to add new plug-in device support to **EX-CommandStation** without having to change a line of the core application code.  
+**EX-CommandStation**, as of version 3.2.0, provides support for a wider set of input and output devices than previous versions.  This is thanks to a piece of software called the **HAL** or **H**ardware **A**bstraction **L**ayer. The HAL provides support for a range of different input and output modules through drivers that are supplied with **DCC-EX**. In addition, its simple interface allows advanced technical users to add new plug-in device support to **EX-CommandStation** without having to change a line of the core application code.
 
 The HAL exposes a standard set of functions which the rest of **EX-CommandStation** code is able to call upon, and the HAL directs the calls to the appropriate device driver. The specific device end-points are given by a kind of pin number, called a **V**\irtual **pin** or VPIN. Any module has one or more VPINs associated with it.
 
@@ -14,7 +14,7 @@ The HAL extends this model to other devices.  If you want to write to a digital 
 
 The same principle applies to Sensors (inputs).  You can configure a sensor object on **EX-CommandStation** by using the command `<S 2 40 1>` command (id=2, pin=40, pull-up=enabled). When pin 40 is connected to 0V (ground), a message `<Q 2>` is generated, and when it is disconnected, `<q 2>` is generated. But if you have an MCP23017 GPIO Extender module connected up, and you replace the pin number 40 with 164 (the number of the first pin on the MCP23017), then you will get the messages when the MCP23017 pin is connected to 0V or disconnected.
 
-So how are these 'VPINs' configured?  
+So how are these 'VPINs' configured?
 
 The standard **EX-CommandStation** build for an Arduino Mega already contains support for four external modules, two GPIO Extender modules and two servo modules.  The GPIO Extender modules are MCP23017 modules which each have 16 pins that can be configured as inputs or outputs.  The Servo modules are PCA9685 modules which each have 16 pins that each provide a pulse-width-modulated signal that may be used to control a servo.  That's sixteen independently controlled servos on each module.
 
@@ -25,8 +25,8 @@ It is theoretically possible to create an 'on-line only' version of **EX-Command
 
 ## Catching the I2C Bus
 
-Many of the external modules are connected to the Arduino via the I2C (I<sup>2</sup>C) (Inter Integrated Circuit) interface.  
-This has four connections, usually labelled SDA (data), SCL (clock), VSS (+5V power usually) and GND (ground, or zero volts).  
+Many of the external modules are connected to the Arduino via the I2C (I<sup>2</sup>C) (Inter Integrated Circuit) interface.
+This has four connections, usually labelled SDA (data), SCL (clock), VSS (+5V power usually) and GND (ground, or zero volts).
 Your motor driver may have convenient connectors for I2C (I<sup>2</sup>C) devices; for example, the DeekRobot shield has two sets of four I2C (I<sup>2</sup>C) pins on the top.  If not, then check the Arduino's data sheet to find the applicable I2C (I<sup>2</sup>C) and power connections. For an Arduino Mega, SCL and SDA are the two connectors nearest the reset button, in the connector block running along the edge of the Arduino.
 
 **WARNING**  *There is no standard pin order for the I2C (I<sup>2</sup>C) bus connectors, so be careful that you identify which pin is which, and always connect SDA to SDA, SCL to SCL, GND to GND and VSS/+5V to VSS/+5V.*
@@ -44,7 +44,7 @@ All I2C (I<sup>2</sup>C) devices are connected in parallel to this bus, and when
 The I2C (I<sup>2</sup>C) bus requires pull-up resistors in order for it to operate.  However, most I2C (I<sup>2</sup>C) modules contain 10kOhm pull-up resistors built in, and the Arduino also has built-in pull-up resistors which are sufficient for
 installations with short bus cables, so you don't have to be concerned about this unless you're really *pushing the envelope*\!
 
-For example, if you have 6 or more I2C (I<sup>2</sup>C) modules connected to the same bus, you may need to remove the built-in 
+For example, if you have 6 or more I2C (I<sup>2</sup>C) modules connected to the same bus, you may need to remove the built-in
 pull-up resistors from one or more of them since the minimum permitted pull-up is generally 1.7kOhm (at 5V supply), to avoid too much current flowing. Also, if your I2C (I<sup>2</sup>C) bus cable is long then a pull-up value closer to the minimum is desirable.
 
 ### Identifying What Devices Are Connected
@@ -70,7 +70,7 @@ Two MCP23017 modules are pre-configured, one is address 0x20 and uses VPINs 164-
 An input pin may be configured using the DCC-EX Sensor commands, as follows:
 
 ```cpp
-  <S 201 164 1>  
+  <S 201 164 1>
 ```
 
 This command associates sensor ID 201 with VPIN 164 (MCP23017 first pin) and enables pull-up.
@@ -115,7 +115,7 @@ In EXRAIL, the servo can be controlled directly via the **SERVO(pin,position,pro
 
 **Good to know:** The PCA9685 is not only used for servos.  It generates pulses of variable mark-to-space
 ratio, with a value of 0 being full off, and 4095 being full on.  So it can be used to control an LED
-to different brightness levels.  the EXRAIL automation has a command **FADE(pin,value,ms)** which operates the 
+to different brightness levels.  the EXRAIL automation has a command **FADE(pin,value,ms)** which operates the
 PCA9685 to do exactly this.
 
 ## Other Drivers
@@ -212,7 +212,7 @@ Within the new file that has been created, you can add in the definitions of new
   }
 ```
 
-Suppose you want to add a driver for the DFPlayer MP3 Player.  This module is widely available for a few dollars and allows MP3 files to be played from a Micro-SD card (up to 32GB).  The module is connected to an Arduino serial port, for example on the Mega the pins TX1(14)/RX1(15) which is Serial 3. Connect the DFPlayer's RX to the Arduino TX3 (14) via a 1kOhm resistor, and DFPlayer's TX direct to the Arduino RX3 (15).  You also need to connect +5V power to VCC, and GND on the Arduino to GND on the DFPlayer.  Connect a small speaker to the pins SPK1 and SPK2 on the DFPlayer, and that's the hardware set up. 
+Suppose you want to add a driver for the DFPlayer MP3 Player.  This module is widely available for a few dollars and allows MP3 files to be played from a Micro-SD card (up to 32GB).  The module is connected to an Arduino serial port, for example on the Mega the pins TX1(14)/RX1(15) which is Serial 3. Connect the DFPlayer's RX to the Arduino TX3 (14) via a 1kOhm resistor, and DFPlayer's TX direct to the Arduino RX3 (15).  You also need to connect +5V power to VCC, and GND on the Arduino to GND on the DFPlayer.  Connect a small speaker to the pins SPK1 and SPK2 on the DFPlayer, and that's the hardware set up.
 
 ![Arduino Mega with DFplayer](../../../_static/images/hal/dfplayer.png){ width=400px }
 <br/>Arduino Mega with DFPlayer
@@ -250,7 +250,7 @@ The file contents should now look like:
 ### Upload the new version of the software
 
 Finally, upload the code to the Arduino as you would do during the standard ==TODO== :ref:`Arduino IDE Setup <ex-commandstation/advanced-setup/installation-options/arduino-ide:upload the software>`.
-Restart the Command Station and the new device will be configured at startup.  
+Restart the Command Station and the new device will be configured at startup.
 
 ### Checking the Driver
 

@@ -1,19 +1,19 @@
 # Flags, Counters and Bitmaps
 
-These are implemented by a software-only driver that mimics a set of VPINs that can be used for both digital and analogue values.  
+These are implemented by a software-only driver that mimics a set of VPINs that can be used for both digital and analogue values.
 Unlike sensors and leds, these VPINs are both INPUT and OUTPUT  These can be used in many ways:
 
 - As a simple digital flag to assist in inter-thread communication.
 - A flag or value that can be set from commands and tested in **EXRAIL**.(e.g. to stop a sequence)
 - As a counter for looping or occupancy counts such as trains passing over a multi track road crossing.
 - As a collection of 16 digital bits that can be set, reset, toggled, masked and tested.
-  
-Existing <> and exrail commands for vpins work on these pins.  
+
+Existing <> and exrail commands for vpins work on these pins.
 
 ## Creating virtual pins
-  
+
   ```cpp
-    HAL(Bitmap,firstPin,nPins) 
+    HAL(Bitmap,firstPin,nPins)
   ```
 
 creates 1 or more virtual pins in software.
@@ -22,7 +22,7 @@ e.g. `HAL(Bitmap,1000,20)`  creates pins 1000..1019
 
 ## Use as flags
 
-When used as a digital flag, these pins can be changed or tested with the basic digital pin commands common to all VPINs.  SET, RESET, BLINK, IF, ONBUTTON, ONSENSOR and so forth. Serial commands operate in the same way.  
+When used as a digital flag, these pins can be changed or tested with the basic digital pin commands common to all VPINs.  SET, RESET, BLINK, IF, ONBUTTON, ONSENSOR and so forth. Serial commands operate in the same way.
 
 ## Use as counters
 

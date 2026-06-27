@@ -59,7 +59,7 @@ In **EXRAIL**, we would add these lines to myAutomation.h, with aliases defined:
 ```cpp
   ALIAS(TRN1, 100)
   ALIAS(TRN2, 101)
-  
+
   TURNOUT(TRN1, 26, 0, "Station entry")
   TURNOUT(TRN2, 26, 1, "Station exit")
 ```
@@ -99,7 +99,7 @@ And again, in myAutomation.h for EXRAIL:
 ```cpp
   ALIAS(TRN1, 100)
   ALIAS(TRN2, 101)
-  
+
   PIN_TURNOUT(TRN1, 164, "Station entry")
   PIN_TURNOUT(TRN2, 165, "Station exit")
 ```
@@ -108,7 +108,7 @@ And again, in myAutomation.h for EXRAIL:
 
 Finally, to define these same turnouts/points as servo based turnouts/points, these would be connected to a PCA9685 servo module, and our first module starts at Vpin ID 100.
 
-.. tip:: 
+.. tip::
 
   Remember! Servo angles will be unique to your layout, and probably even unique to individual turnouts/points, so be sure you read the blurb on [Tuning Servo Positions](stage3.md#tuning-servo-positions) and the `/reference/hardware/servo-module` page.
 
@@ -136,7 +136,7 @@ Again, in myAutomation.h this becomes:
 ```cpp
   ALIAS(TRN1, 100)
   ALIAS(TRN2, 101)
-  
+
   SERVO_TURNOUT(TRN1, 100, 400, 100, Slow, "Station entry")
   SERVO_TURNOUT(TRN2, 101, 400, 100, Slow, "Station exit")
 ```
@@ -203,7 +203,7 @@ Moving these again to an MCP23017 I/O expander, these would start at Vpin 172, h
 
 To define servo based signals, these only require one Vpin per signal along with specifying the servo angle for the red, amber, and green positions.
 
-.. tip:: 
+.. tip::
 
   Remember! Servo angles will be unique to your layout, and probably even unique to individual signals, so be sure you read the blurb on [tuning servo positions](stage3.md#tuning-servo-positions) and the `/reference/hardware/servo-module` page.
 
@@ -286,7 +286,7 @@ Note that you can mix and match all the above I/O methods together, so you can u
 
 For simplicity, we will outline the stage 1 options using consistent hardware types otherwise we'll wear out the scroll button on your mouse.
 
-Once you understand the logic of our routes below and the various turnout/point, sensor, signal, and virtual block concepts above, you can view some ==TODO== `complete myAutomation.h examples`_ at the end of this page.
+Once you understand the logic of our routes below and the various turnout/point, sensor, signal, and virtual block concepts above, you can view some [complete myAutomation.h examples](#complete-myautomationh-examples) at the end of this page.
 
 ### Startup sequence
 

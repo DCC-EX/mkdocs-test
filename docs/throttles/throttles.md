@@ -167,7 +167,7 @@ Also see: Connect WiFi Throttle via USB
     background: var(--md-default-bg-color--light);
 }
 
-.md-typeset table td,  
+.md-typeset table td,
 .md-typeset table th {
     font-size: smaller !important;
     padding-top: 2px !important;

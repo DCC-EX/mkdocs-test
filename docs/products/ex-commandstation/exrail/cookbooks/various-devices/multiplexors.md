@@ -15,7 +15,7 @@ The scan will look something like this:
 < I2C Device found at {I2CMux_1,SubBus_7,0x20}, GPIO Expander? >
 ```
 
-So the HAL definition will copy the {mux} information exactly as the I2C address. 
+So the HAL definition will copy the {mux} information exactly as the I2C address.
 
 ```cpp
 // This would be a example vpins 160-175 on address 0x20  (no Mux)

@@ -1,5 +1,5 @@
 # Purchasing
-  
+
 ## What you need for EX-Turntable
 
 * An **EX-CommandStation** running version 5.0.0 or later (preferably at least 5.4.0)
@@ -74,3 +74,5 @@ The complete list of supported stepper drivers and motors:
 ## Next Steps
 
 Now that you know what you need, click the 'Next' button see what is needed to create an **EX-Turntable**.
+
+--8<-- "snippets/abbr.md"

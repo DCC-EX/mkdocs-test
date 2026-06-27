@@ -1,6 +1,6 @@
 # What is EXRAIL?
 
-**EXRAIL** is an “EXtended Railroad Automation Instruction Language” used to:
+**EXRAIL** is an "EXtended Railroad Automation Instruction Language" used to:
 
 - Describe your turnouts/points, signals etc.
 - Configure your **EX-CommandStation** to understand the hardware and accessories you have attached.
@@ -10,8 +10,8 @@
 - Drive trains under automatic control
 - Implement mimic panels and control panels
 - Display status information or platform announcements on OLED screens.
-  
-## You DON’T need
+
+## You DON'T need
 
 - JMRI, or any additional utilities
 - Engine Driver, wiThrottle, or any other WiThrottle app
@@ -48,7 +48,7 @@ e.g.
     THROW(27) // set turnouts/points
     CLOSE(6)
     GREEN(101) // change departure signal
-    DONE 
+    DONE
 ```
 
 - ```AUTOMATION``` – A special type of SEQUENCE that is made visible to a throttle so that a user can hand over a loco and let **EXRAIL** drive the train away, following each step listed in the sequence. For example, a user could manually drive a train into a station and press a handoff button in the throttle to run an AUTOMATION to take it on a journey around the layout.
@@ -77,12 +77,12 @@ ONBUTTON(167)
 
 ## A users story
 
-I have used C++ on Arduino’s and Python/Jython on JMRI software to build Automation sequences. I now use **EXRAIL** instead because:
+I have used C++ on Arduino's and Python/Jython on JMRI software to build Automation sequences. I now use **EXRAIL** instead because:
 
-- It’s significantly easier and more flexible than the other two options.
+- It's significantly easier and more flexible than the other two options.
 
 - I reduce the number of Uno and Nano accessory boards needed to do the same tasks on the layout by using the **DCC-EX EX-CommandStation** and embedded **EXRAIL** instead.
 
-- I can create Automations, Routes, & Sequence scripts With **EXRAIL** on the **EX-CommandStation** and still access them from JMRI PanelPro and DecoderPro GUI buttons with a simple sendDCCmessage.py script pointer that passes them to the **EXRAIL** scripts on the **EX-CommandStation**, so I don’t have to rewrite the script in Jython/Python.
+- I can create Automations, Routes, & Sequence scripts With **EXRAIL** on the **EX-CommandStation** and still access them from JMRI PanelPro and DecoderPro GUI buttons with a simple sendDCCmessage.py script pointer that passes them to the **EXRAIL** scripts on the **EX-CommandStation**, so I don't have to rewrite the script in Jython/Python.
 
 - **EXRAIL** is ten times easier to learn and use and is more flexible than the other methods.

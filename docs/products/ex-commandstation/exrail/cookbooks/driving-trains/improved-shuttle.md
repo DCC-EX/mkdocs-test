@@ -19,13 +19,13 @@ Using the [previous](simple-shuttle.md) example.
 AUTOMATION(123,"Dogbath to Catflap shuttle")
   FWD(40)
   AT(167) SPEED(15) // At Catflap slow down point, change speed
-  AT(165) ESTOP     // ESTOP avoids any momentum issue   
-  DELAYRANDOM(15000,20000)  
-  REV(40)  
+  AT(165) ESTOP     // ESTOP avoids any momentum issue
+  DELAYRANDOM(15000,20000)
+  REV(40)
   AT(166) SPEED(15) // At Dogbath slow down point, change speed
-  AT(164) ESTOP 
-  DELAYRANDOM(5000,10000)  
-  FOLLOW(123) 
+  AT(164) ESTOP
+  DELAYRANDOM(5000,10000)
+  FOLLOW(123)
 ```
 
 ## Sounds and lights
@@ -36,16 +36,16 @@ Headlight settings and sounds may be added using the FON(functionNumber) and FOF
 AUTOMATION(123,"Dogbath to Catflap shuttle")
   FON(0) FON(3) DELAY(2000) FOFF(3) // light on, sound whistle for 2 seconds
   FWD(40)
-  AT(167) SPEED(15) 
+  AT(167) SPEED(15)
   AT(165) ESTOP
-  FOFF(0)  // turn off light 
-  DELAYRANDOM(15000,20000)  
+  FOFF(0)  // turn off light
+  DELAYRANDOM(15000,20000)
   FON(0) FON(3) DELAY(2000) FOFF(3) // Lights and whistle
-  REV(40)  
-  AT(166) SPEED(15) 
-  AT(164) ESTOP 
-  DELAYRANDOM(5000,10000)  
-  FOLLOW(123) 
+  REV(40)
+  AT(166) SPEED(15)
+  AT(164) ESTOP
+  DELAYRANDOM(5000,10000)
+  FOLLOW(123)
 ```
 
 ## Signals
@@ -60,22 +60,22 @@ Define the signals anywhere but not normally inside an AUTOMATION or other seque
 
 ```cpp
 SIGNALH(170,0,171) // Dogbath depart. Red LED on 170, Green on 171, no amber
-SIGNALH(172,0,173) // Catflap Depart. 
+SIGNALH(172,0,173) // Catflap Depart.
 
 AUTOMATION(123,"Dogbath to Catflap shuttle")
   GREEN(170) // set Dogbath departure signal to green
-  FON(0) FON(3) DELAY(2000) FOFF(3) 
+  FON(0) FON(3) DELAY(2000) FOFF(3)
   FWD(40)
   AT(167) SPEED(15)
-  RED(170)  // remember to set Dogbath signal red at some point 
-  AT(165) ESTOP FOFF(0) 
-  DELAYRANDOM(15000,20000)  
+  RED(170)  // remember to set Dogbath signal red at some point
+  AT(165) ESTOP FOFF(0)
+  DELAYRANDOM(15000,20000)
   GREEN(172) // Set Catflap departure signal to green
-  FON(0) FON(3) DELAY(2000) FOFF(3) 
-  REV(40)  
-  AT(166) SPEED(15) 
+  FON(0) FON(3) DELAY(2000) FOFF(3)
+  REV(40)
+  AT(166) SPEED(15)
   RED(172) // remember to reset Catflap signal
-  AT(164) ESTOP 
-  DELAYRANDOM(5000,10000)  
-  FOLLOW(123) 
+  AT(164) ESTOP
+  DELAYRANDOM(5000,10000)
+  FOLLOW(123)
 ```

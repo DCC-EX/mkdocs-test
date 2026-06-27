@@ -147,7 +147,7 @@ The ``TURNOUT`` command defines DCC accessory decoder turnout/point in **EXRAIL*
 #### Adding the Hardware -  Pin Turnouts/Points
 
 <!-- .. sidebar::
-  
+
   ==TODO== You can also refer to :doc:`/ex-commandstation/accessories/turnouts/solenoid-turnouts` for more information.
 -->
 
@@ -159,7 +159,7 @@ If you have installed turnouts/points using simple pin control, you can config t
 
 The ``PIN_TURNOUT`` command defines a pin operated turnout/point in **EXRAIL**, which will appear in WiThrottle Protocol apps, Engine Driver, and JMRI in addition to being defined as a turnout/point within the CommandStation.
 
-When setting up a turnout/point where multiple pins are required for control, the ``VIRTUAL_TURNOUT`` command should be used along with a control sequence. This is commonly used to configure solenoid-based turnout motors. 
+When setting up a turnout/point where multiple pins are required for control, the ``VIRTUAL_TURNOUT`` command should be used along with a control sequence. This is commonly used to configure solenoid-based turnout motors.
 
 ```cpp
   #define PULSE 10    // Set the duration of the pulse to 10ms
@@ -186,7 +186,7 @@ When setting up a turnout/point where multiple pins are required for control, th
 #### Adding the Hardware -  Servo Turnouts/Points
 
 <!-- .. sidebar::
-  
+
   ==TODO== You can also refer to :doc:`/reference/hardware/servo-module` for more information.
 -->
 
@@ -196,7 +196,7 @@ To connect a servo to **EX-CommandStation**, you first need to get a module, bas
 
 These are widely available from eBay, Amazon, etc. for a few dollars.
 
-Note the pin connectors along the left side of the module - these are where you connect to the Arduino.  
+Note the pin connectors along the left side of the module - these are where you connect to the Arduino.
 
 The 16 columns of three pins along the bottom of the module are where you connect the servos. The pins are arranged so that you can just plug a servo connector directly onto them, but be sure that the wire colours match the colours of the pins, i.e. yellow to yellow, red to red and black to black.
 
@@ -210,7 +210,7 @@ In **EX-CommandStation**, the drivers for the PCA9685 module is already installe
 
 Once you've made all of the connections, apply power to the Arduino.
 
-Then, in a [serial monitors](../../../reference/tools/serial-monitor_not_in_nav.md), enter the command `<D SERVO 100 450>`.  The servo should move, as long as it isn't (by some fluke) already in that position. 
+Then, in a [serial monitors](../../../reference/tools/serial-monitor_not_in_nav.md), enter the command `<D SERVO 100 450>`.  The servo should move, as long as it isn't (by some fluke) already in that position.
 
 (See the [serial monitors](../../../reference/tools/serial-monitor_not_in_nav.md) pages for the different serial monitors that are available to use.)
 
@@ -331,14 +331,14 @@ The valid parameters are:
       SERVO(101, 100, Slow)
    DONE
 
-   /* As an example, consider a lineside worker that needs to be moved away 
-   from the track when a train approaches, which is controlled by an infrared 
+   /* As an example, consider a lineside worker that needs to be moved away
+   from the track when a train approaches, which is controlled by an infrared
    sensor.
-   The SERVO is attached to VPin 101 (second control pin on first PCA9685), 
+   The SERVO is attached to VPin 101 (second control pin on first PCA9685),
    with a sensor attached to VPin 164 (first pin on the first MCP23017):
-   This tells EXRAIL that when the sensor at VPin 164 is activated, the 
-   lineside worker moves quickly back from the track for safety, and then 
-   after the sensor has been deactivated, he can leisurely move back to his 
+   This tells EXRAIL that when the sensor at VPin 164 is activated, the
+   lineside worker moves quickly back from the track for safety, and then
+   after the sensor has been deactivated, he can leisurely move back to his
    working position (no one wants to rush back to work right?). */
 ```
 
@@ -364,7 +364,7 @@ If you need more sensors then there are available pins on the Mega, you use one 
 
 You don't actually require anything special to be added to myAutomation.h in advance of using them in an sequence.
 
-Handling sensors in sequences is made easy because **EXRAIL** throws away the concept of interrupts (“oh… sensor 22 has been detected… which loco was that and whatever do I do now?”) and instead has the sequences work on the basis of “do nothing, maintain speed until sensor 22 triggers, and then carry on in the script”.
+Handling sensors in sequences is made easy because **EXRAIL** throws away the concept of interrupts ("oh… sensor 22 has been detected… which loco was that and whatever do I do now?") and instead has the sequences work on the basis of "do nothing, maintain speed until sensor 22 triggers, and then carry on in the script".
 
 Sensor numbers are direct references to VPINs (virtual pin numbers) in the Hardware Abstraction Layer. For a Mega onboard GPIO pin, this is the same as the digital pin number. Other pin ranges refer to I/O expanders etc.
 
@@ -390,7 +390,7 @@ To connect a servo to **EX-CommandStation**, you first need to get a module, bas
 
 These are widely available from eBay, Amazon, etc. for a few dollars.
 
-Note the pin connectors along the left side of the module - these are where you connect to the Arduino.  
+Note the pin connectors along the left side of the module - these are where you connect to the Arduino.
 
 The 16 columns of three pins along the bottom of the module are where you connect the LEDs.
 
@@ -422,7 +422,7 @@ Combine the two commands Servo_Turnout and Signal
 
 ```cpp
     // Use the first Red vpin# as the signal_id for All Signal color changes
-    // Use this to Combine the two commands Servo_Turnout and Signal above into One Function 
+    // Use this to Combine the two commands Servo_Turnout and Signal above into One Function
     SERVO_SIGNAL(106, 400, 0, 205) //  Red vpin 106 for turnout/point 1, Thrown=Red, Close = Green
 ```
 

@@ -37,9 +37,9 @@ So:
 - Keep sentences short.  Break them up where ever possible.
 - Keep paragraphs short.  Break them up where practical.
 - Keep paragraphs on the same topic. If the topic changes start a new paragraph.
-- Do not start any page for a Conductor or Tinkerer with a technical explanation.  Put technical explanations at the end of the page, or preferably in a separate dedicated page.  Make it clear the the technical explanation is not required reading (unless it is).
+- Do not start any page for a Beginner or Intermediate level userwith a technical explanation.  Put technical explanations at the end of the page, or preferably in a separate dedicated page.  Make it clear the the technical explanation is not required reading (unless it is).
 - If you have a number of sections that describe options; present them in list them first, before the sections, with an explanation as to why they are optional.  (i.e. a bullet list with hyperlinks to the headings.)
-- Where possible, avoid starting a section with a negative point of view.  i.e. Talk about the positives of what you are discussing first, before you delve into the negative or problematic aspects. <br/>e.g. Don't start with "... This is not for Conductors...", instead say "..This page is for Tinkerers ... Conductors should...".
+- Where possible, avoid starting a section with a negative point of view.  i.e. Talk about the positives of what you are discussing first, before you delve into the negative or problematic aspects. <br/>e.g. Don't start with "... This is not for Beginners...", instead say "..This page is for Intermediate Level ... Non-Technically experienced users should...".
 - Use British/Australian/New Zealand/Canadian/Indian (pretty much every country except the USA) spelling e.g. 'colour' not 'color'. <br/>(Primarily because it is used in more English speaking countries)
 - Preferred Terms:
     - Use **'EX-CommandStation'** not 'Command Station' when referring to something that is specific to the **DCC-EX** product.
@@ -65,7 +65,9 @@ So:
 
 ## Do Not Duplicate Content
 
-**DO NOT CREATE DUPLICATE CONTENT** as this increases the maintenance burden significantly but, more importantly, makes it difficult for users when content appears slightly differently in two different places or even contradicts itself. When needing to repeat information in more than one place, take advantage of the [MkDocs Snippets](/contributing/documentation/mkdocs-features.md#snippets) feature. This allows you to include the same markdown content in multiple places.
+**DO NOT CREATE DUPLICATE CONTENT** as this increases the maintenance burden significantly but, more importantly, makes it difficult for users when content appears slightly differently in two different places or even contradicts itself. When needing to repeat information in more than one place.
+
+Either link to the other page, or take advantage of the [MkDocs Snippets](/contributing/documentation/mkdocs-features.md#snippets) feature. This allows you to include the same markdown content in multiple places.
 
 ## Directory Naming, Page Naming, and Titles
 

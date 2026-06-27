@@ -66,7 +66,7 @@ and [https://enginedriver.mstevetodd.com/videos/index.html](https://enginedriver
 Here is one of a number of Bluetooth controllers that provides extra function buttons and you can hold by placing your finger in the ring and using the buttons and DPAD.
 
 ![Ring Shape Hand Controller](../_static/images/engine-driver/bt_controller2.png){: align="center" width="150px"}
-  
+
 Examples: [Walmart](https://www.walmart.com/ip/Gamepad-Ring-Shape-Wireless-VR-Joystick-Rechargeable-Bluetooth-compatible-V4-0-Game-Controller/443871148?wmlspartner=wlpa&selectedSellerId=101036302) :
 [AliExpress](https://www.aliexpress.com/wholesale?catId=0&initiative_id=SB_20220515220821&isPremium=y&SearchText=%22r1%22+bluetooth+game+controller&spm=a2g0o.productlist.1000002.0>)
 

@@ -16,6 +16,6 @@ In many cases the parameters are self explanitory, for example a *speed* (which 
 
 This list appears in the order in which the command parser will detect command patterns. Clicking on a command pattern should search out documantation pages which describe or use each command.
 
-Please bear in mind that this list can be easily generated but the various links spread about the documentation take a lot of effort and will be built over time.  
+Please bear in mind that this list can be easily generated but the various links spread about the documentation take a lot of effort and will be built over time.
 
 --8<-- "snippets/DCCEXCommands.md"

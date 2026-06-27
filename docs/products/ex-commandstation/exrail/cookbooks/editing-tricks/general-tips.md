@@ -9,7 +9,7 @@ Below are some tips and techniques you can implement to get the most out of **EX
 ## Numbers and Leading Zeros
 
 **Do not use leading zeros for any numbers!**
-  
+
 Any number with a leading zero will be treated as an octal number, so for example ``ALIAS(MY_ALIAS, 010)`` will assign the value of ``8`` to MY_ALIAS, not ``10``. This is a common mistake that can lead to very confusing behaviour if you don't know about it. Always use numbers without leading zeros, for example ``ALIAS(MY_ALIAS, 10)`` to assign the value of 10 to MY_ALIAS.
 
 ## Comments
@@ -23,7 +23,7 @@ You can add comments to myAutomation.h in two ways:
 
 ## Aliases - User Friendly Names for any Ids
 
-Use the ``ALIAS()`` command in your script to make IDs a bit more human friendly, and easier to refer to later. 
+Use the ``ALIAS()`` command in your script to make IDs a bit more human friendly, and easier to refer to later.
 
 ``ALIAS( name[, value] )`` Aliases assigns names to values. They can go anywhere in the script. If a value is not assigned, a unique ID will be assigned based on the alias "name" text.
 
@@ -37,7 +37,7 @@ This is a simple substitution that lets you have readable names for things in yo
    ROUTE(1,"Coal yard exit")
       THROW(COAL_YARD_TURNOUT)
       GREEN(COAL_YARD_SIGNAL_3)
-   
+
    // As above with auto generated IDs
    ALIAS(COAL_YARD_TURNOUT)
    ALIAS(COAL_YARD_SIGNAL_3)

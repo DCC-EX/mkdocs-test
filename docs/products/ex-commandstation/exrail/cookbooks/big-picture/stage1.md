@@ -57,24 +57,24 @@ If when you assembled your **EX-CommandStation** with one of the common configur
 ### Engine Driver (Android)
 
 * If you have set up your **EX-CommandStation** in Access Point Mode (The Recommended approach)
-  
+
     * Open the network settings on you phone
     * Change to the network of the **EX-CommandStation**
-  
+
         * SSID (Network name) : 'DCCEX_xxxxxx' <br/> where the x's are the last 6 digits of your device' MAC address (unique to each device)
         * Password: 'PASS_xxxxxx' <br/> where the x's are the last 6 digits of your device' MAC address (same as above)
 
 * If you have set up your **EX-CommandStation** in Station Mode (The alternate approach)
-  
+
     * open the network settings on you phone
     * change to your home network
-  
-        * use your normal home id and password 
+
+        * use your normal home id and password
 
 * Start the Engine Driver App
 * Go through the initial startup pages to set some basic configuration items
 * On the 'Connection screen'
-  
+
     * You should see 'DCCEX_xxxxxx' (as above) in the discovered servers list
     * Click on this. <br/> (As long as you did not change the IP address of the **EX-CommandStation** when you ran **EX-Installer** then this should connect.)
 
@@ -89,7 +89,7 @@ If when you assembled your **EX-CommandStation** with one of the common configur
 * back on the 'Throttle screen'
 
     * Click one of the `Select` buttons
-  
+
 * This will have taken you to the 'Select Loco screen'
 
     * Enter the DCC Address of the loco you put on the track
@@ -107,22 +107,22 @@ See [Engine Driver Web Site](https://enginedriver.mstevetodd.com/index.html) for
 !!! note "free version of WiThrottle"
 
     The free version of WiThrottle ('WiThrottle Lite') only controls one loco at a time and *does not* offer turnout control or DCC track power control. (Note: EX-CommandStation can be configured to automatically turn the track power on. See the [EXRAIL examples](../startup/startup-poweron.md).)
-  
+
     The paid version WiThrottle can control multiple locos, can create and control consists, can control turnouts and routes, and can control DCC track power.
 
 * If you have set up your **EX-CommandStation** in Access Point Mode (The Recommended approach)
-  
+
     * Open the network settings on you phone
     * Change to the network of the **EX-CommandStation**
-  
+
         * **SSID** (Network name) : 'DCCEX_xxxxxx' <br/> where the x's are the last 6 digits of your device' MAC address (unique to each device)
         * **Password**: 'PASS_xxxxxx' <br/> where the x's are the last 6 digits of your device' MAC address (same as above)
 
 * If you have set up your **EX-CommandStation** in Station Mode (The alternate approach)
-  
+
     * Open the network settings on you phone
     * Change to your home network
-  
+
         * Use your normal home network id and password
 
 * Start the WiThrottle App
@@ -138,7 +138,7 @@ See [Engine Driver Web Site](https://enginedriver.mstevetodd.com/index.html) for
     * WiThrottle should then connect
 
 * If you are using Station Mode
-  
+
     * It should find the WiThrottle Server and automatically connect to it
 
 * You should then see the 'Address Screen'
@@ -152,7 +152,7 @@ See [Engine Driver Web Site](https://enginedriver.mstevetodd.com/index.html) for
 * Click the `Set` button
 * The address should appear in the green box at the top left.
 * Select the 'Throttle' tab
-* You can now use the sliders to move your train 
+* You can now use the sliders to move your train
 
 See the [Throttles Page](../../../../../throttles/throttles.md) for links to the WiThrottle app documentation.
 
@@ -162,7 +162,7 @@ See the [Throttles Page](../../../../../throttles/throttles.md) for links to the
 
 If when you assembled your **EX-CommandStation** configured to Connect to JMRI, then you will have the ability to connect to your Command Station directly (using JMRI) to run your trains, or you can use smart phone. We are only going to cover three common options here:
 
-* JMRI - PC (Windows, Apple OSX, Linux) 
+* JMRI - PC (Windows, Apple OSX, Linux)
 * Engine Driver - For Android phones
 * WiThrottle - for Apple iOS phones
 
@@ -171,7 +171,7 @@ If when you assembled your **EX-CommandStation** configured to Connect to JMRI, 
 * open **DecoderPro**
 * Menu -> Actions -> New Throttle
 * Turn on the power to the track via the button on the toolbar
-  
+
     * Click the `Power` button till it turns green
 
 * Enter the DCC Address of the loco you put on the track in the field in the Address Panel
@@ -200,11 +200,11 @@ Before Engine Driver or WiThrottle can be run via JMRI, the JMRI WiThrottle Serv
 * Back on the 'Throttle screen'
 
     * Click one of the `Select` buttons
-  
+
 * This will have taken you to the 'Select Loco screen'
 
     * Enter the DCC Address of the loco you put on the track
-    * Select ``Short`` or ``Long`` (normally if the address is less than 127, it will automatically assume it is short) 
+    * Select ``Short`` or ``Long`` (normally if the address is less than 127, it will automatically assume it is short)
     * Click `Acquire`
 
 * Back on the 'Throttle screen' you can now use the sliders to move your train.
@@ -216,7 +216,7 @@ See [Engine Driver Page](../../../../../throttles/engine-driver.md) for details 
 !!! note "Free version of WiThrottle"
 
   The free version of WiThrottle ('WiThrottle Lite') only controls one loco at a time and does not offer turnout control or DCC track power control. (Note: JMRI can be configured to automatically turn the track power on.)
-  
+
   The paid version WiThrottle can control multiple locos, can create and control consists, can control turnouts and routes, and can control DCC track power.
 
 Before Engine Driver or WiThrottle can be run via JMRI, the JMRI WiThrottle server must be started.  It can be started manually by `menu --> actions --> start withrottle server` or be configured to start automatically whenever JMRI is started
@@ -240,7 +240,7 @@ Before Engine Driver or WiThrottle can be run via JMRI, the JMRI WiThrottle serv
 * Click the `Set` button
 * The address should appear in the green box at the top left.
 * Select the 'Throttle' tab
-* You can now use the sliders to move your train 
+* You can now use the sliders to move your train
 
 See the [Throttles Page](../../../../../throttles/throttles.md) for links to the WiThrottle app documentation.
 
@@ -258,7 +258,7 @@ To have more than one throttle you need to select a Throttle Screen Layout that 
 
 Use the ``Throttle Screen Layout`` preference to select a layout that supports more than one throttle (`menu --> Preferences --> Throttle Screen Appearance Preferences --> Throttle Screen Layout`).  The numbers in brackets after the Layout name are the number of throttles that the layout supports.
 
-Where a layout supports a range of throttles, select the number that you want to show with the ``Number of Throttles`` preference (`menu --> Preferences --> Throttle Screen Appearance Preferences --> Number of Throttles`).  
+Where a layout supports a range of throttles, select the number that you want to show with the ``Number of Throttles`` preference (`menu --> Preferences --> Throttle Screen Appearance Preferences --> Number of Throttles`).
 
 See the [Throttle Screen Appearance Preferences](https://enginedriver.mstevetodd.com/configuration/preferences.html#throttle-screen-appearance-preferences) page on the main Engine Driver help sites for detailed information on the options that each Throttle Screen Layout offers.
 
@@ -277,7 +277,7 @@ After selecting each additional loco, the Consist Edit screen will be shown. Thi
 !!! note "Free version of WiThrottle"
 
   The free version of WiThrottle ('WiThrottle Lite') only controls one loco at a time and does not offer turnout control or DCC track power control. (Note: JMRI can be configured to automatically turn the track power on.)
-  
+
   The paid version WiThrottle can control multiple locos, can create and control consists, can control turnouts and routes, and can control DCC track power.
 
 ==TODO== `LOW - Stage 1 <https://github.com/DCC-EX/dcc-ex.github.io/issues/415>`_  - WiThrottle - Multiple Trains

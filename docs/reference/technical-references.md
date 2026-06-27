@@ -27,5 +27,5 @@ The standards for the DCC protocol.
 
 #### Technical Informations (TI-)
 
-- [NMRA](https://www.nmra.org/index-nmra-standards-and-recommended-practices) [TI-9.1.1](https://www.nmra.org/sites/default/files/standards/sandrp/DCC/TI/ti-9.1.1_sources_for_connectors_for_dcc.pdf): Sources for Connectors for DCC Decoders 
+- [NMRA](https://www.nmra.org/index-nmra-standards-and-recommended-practices) [TI-9.1.1](https://www.nmra.org/sites/default/files/standards/sandrp/DCC/TI/ti-9.1.1_sources_for_connectors_for_dcc.pdf): Sources for Connectors for DCC Decoders
 - [NMRA](https://www.nmra.org/index-nmra-standards-and-recommended-practices) [TI-9.2.3](https://www.nmra.org/sites/default/files/standards/sandrp/DCC/TI/TI-9.2.3_SUSI_05_03.pdf): Serial User Standard Interface for DCC

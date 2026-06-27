@@ -1,5 +1,5 @@
 # Traversers and Limited Rotation Turntables
-  
+
 ## Overview
 
 **EX-Turntable** has the ability to cater for both horizontal and vertical traversers, as well as turntables that do not rotate a full 360 degrees.
@@ -13,7 +13,7 @@ The home sensor takes on an additional purpose in this mode, so in addition to f
 
 From here on in, for simplicity, we will refer to all variations of horizontal/vertical travers or limited rotation turntables as traversers.
 
-You will note we've rated the traverser feature as Tinkerer level. This is primarily due to the additional complexity of ensuring the mechanical aspects of the traverser are taken into consideration such as the home and limit sensors.
+You will note we've rated the traverser feature for Intermediate Level Users. This is primarily due to the additional complexity of ensuring the mechanical aspects of the traverser are taken into consideration such as the home and limit sensors.
 
 !!! note "addendum"
 
@@ -96,7 +96,7 @@ Edit "config.h", add "//" at the beginning of the `#define TURNTABLE_EX_MODE TUR
   //  TURNTABLE : Use this for normal, 360 degree rotation turntables (Default).
   //  TRAVERSER : Use this for vertical or horizontal traversers, or turntables that do
   //              do not rotate a full 360 degrees.
-  // 
+  //
   // #define TURNTABLE_EX_MODE TURNTABLE                      <<== After adding //
   #define TURNTABLE_EX_MODE TRAVERSER                         <<== After removing //
 ```
@@ -126,7 +126,7 @@ To enable SENSOR_TESTING mode, you will need to edit "config.h" again, and this 
   //  Enable sensor testing only, prevents all EX-Turntable operations.
   //  Uncomment this line to disable all normal EX-Turntable operations in order to test
   //  and validate that homing and limit sensors activate and deactivate correctly.
-  // 
+  //
   #define SENSOR_TESTING                                      <<== After removing //
 ```
 
@@ -193,3 +193,5 @@ When starting up for the first time, you should see output in the serial console
 ## Traverser mode is ready
 
 Now that you have enabled traverser mode in **EX-Turntable**, confirmed your HOME and LIMIT sensors are operating correctly, and calibration has completed, you can return to [test and tune](test-and-tune.md) as the tuning steps and control commands are the same in both turntable and traverser modes.
+
+--8<-- "snippets/abbr.md"

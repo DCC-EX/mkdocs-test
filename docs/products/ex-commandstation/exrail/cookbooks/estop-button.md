@@ -9,7 +9,7 @@ tags:
 # Emergency stop button
 
 An emergency stop is a way of stopping all locos immediately. DCC locos often have sustainers that are there to allow the loco to move over short sections of dirty track or insulated turnout/point frogs. Because of these sustainers, turning off the track power is not a reliable way of stopping trains, those with sustainers may continue moving for several metres/yards.
-To stop a loco immediately, the power must remain on and we must send it a particular DCC packet and the decoder will know to stop.  
+To stop a loco immediately, the power must remain on and we must send it a particular DCC packet and the decoder will know to stop.
 
 ## ESTOPALL
 
@@ -52,27 +52,27 @@ ONBUTTON(174) ESTOP_RESUME DONE
 Of course you may wish to enhance the control by adding flashing lights, sounds or other effects.
 
 ```cpp
-ONBUTTON(173) 
-  ESTOP_PAUSE 
+ONBUTTON(173)
+  ESTOP_PAUSE
   BLINK(180,250,250)
   PLAY_SOUND(8000,6) // "Don't Panic"
   DONE
 
-ONBUTTON(174) 
+ONBUTTON(174)
   PLAY_SOUND(8000,7) // "Stand clear of the layout, resuming"
   DELAY(2000)
-  RESET(180) 
+  RESET(180)
   DELAY(1000)
-  ESTOP_RESUME 
+  ESTOP_RESUME
   DONE
 ```
 
 In some cases you may prefer that the system is locked but movement does not restart automatically when the resume is issued. This can be achieved by performing an ESTOPALL immediately before resuming. This forces all locos to have a current speed of 0 before releasing the speed reminders onto the track.
 
 ```cpp
-ONBUTTON(174) 
+ONBUTTON(174)
   ESTOPALL
-  ESTOP_RESUME 
+  ESTOP_RESUME
   DONE
 ```
 
@@ -81,8 +81,8 @@ You may have a situation, like a lifting gate on your layout, where you need to 
 This example runs at startup and will check the gate switch on pin 174 to block all movement if it is open.
 
 ```cpp
-AUTOSTART 
-  IF(174) 
+AUTOSTART
+  IF(174)
     ESTOP_PAUSE
     ENDIF
   DONE

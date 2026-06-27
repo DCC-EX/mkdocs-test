@@ -38,7 +38,7 @@ We encourage our users to reference this ahead of requesting support as there's 
 ## Why do I get FAULT pin warnings
 
 - You may have a short on your layout. Most common causes are
-  
+
     - Loco driven into turnout/point set for the other track
     - Screwdriver or other tools left lying on layout
 

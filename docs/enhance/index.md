@@ -19,7 +19,7 @@ Also, the [Big Picture](../products/ex-commandstation/exrail/cookbooks/big-pictu
 
 **EX-CommandStation** has the ability to define all of your locomotives, each with their individual list of their defined decoder functions. That list is advertised to the various throttle apps.
 
-For the decoder functions, you can provide a text description of the function. So rather than seeing F0..F31 you see a description of what the functions actually do.  
+For the decoder functions, you can provide a text description of the function. So rather than seeing F0..F31 you see a description of what the functions actually do.
 
 This capability is part of **EXRAIL** and is built into your **EX-CommandStation**.  Read the following to explore this feature:
 

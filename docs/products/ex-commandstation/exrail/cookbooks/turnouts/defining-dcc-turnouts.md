@@ -16,7 +16,7 @@ id = Unique turnout/point ID within the CommandStation. All other turnout/point 
 address- the DCC address that the turnout/point decoder is listening to
   or
 shortAddress,subAddress - the alternative form of the same address.
-  
+
 description = A human-friendly description of the turnout/point that will appear in WiThrottle apps and Engine Driver. Note that this must be enclosed in quotes `""`. In some cases the HIDDEN keyword can be used here to prevent the turnout/point being visible to the throttles.
 
 For example:

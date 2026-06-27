@@ -1,6 +1,6 @@
 # About the **DCC-EX** Project
 
-Who is behind all this? And will they ever face justice? Who knows, but the following is a list of those names associated with taking over Gregg Berman’s original DCC++ BaseStation Project, and rewriting/expanding it into EX‑CommandStation and the wider DCC-EX project.
+Who is behind all this? And will they ever face justice? Who knows, but the following is a list of those names associated with taking over Gregg Berman's original DCC++ BaseStation Project, and rewriting/expanding it into EX‑CommandStation and the wider DCC-EX project.
 
 First, a special thanks to Gregg E. Berman, who had the original idea for a model railroad Command Station using an Arduino Uno and a Motor Driver.
 
@@ -135,10 +135,10 @@ The **DCC-EX** team is a worldwide group of enthusiasts who volunteer their time
 Making sure this software works well with the **EX-CommandStation**
 
 - [Java Model Railroad Interface (JMRI)](https://www.jmri.org/)
-  
+
     - M Steve Todd - USA (MSteveTodd)
 
 - [Engine Driver (ED)](https://github.com/DCC-EX/mkdocs-test)
-  
+
     - M Steve Todd - USA (MSteveTodd)
     - Peter Akers - South East QLD, Australia (flash62au)

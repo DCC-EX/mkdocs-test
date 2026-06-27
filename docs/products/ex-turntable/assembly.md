@@ -20,7 +20,7 @@ Throughout the assembly process, you can refer to this Fritzing diagram to help 
 
 ![Fritzing Diagram](../../_static/images/ex-turntable/assembly.png){ width=400px }
 
-Note: For the Tinkerers and Engineers, a much neater solution is to use a prototyping or strip board with much shorter (and soldered) connections to ensure reliability of the connections.
+Note: A much neater solution is to use a prototyping or strip board with much shorter (and soldered) connections to ensure reliability of the connections.
 
 ### Connection summary
 
@@ -45,7 +45,7 @@ Summary table of all connections required during assembly:
 | CommandStation 21 (SCL) | A5 | A5 S or SCL |
 | CommandStation GND | GND | A4 G or I2C (I<sup>2</sup>C) GND |
 
-Of course for the Tinkerers and Engineers, if you're not using a Nano or a prototyping shield, adapt the details as suits your configuration.
+If you're not using a Nano or a prototyping shield, adapt the details as suits your configuration.
 
 #### Using a two wire stepper driver (e.g. A4988/DRV8825/TMC2208)
 
@@ -115,7 +115,7 @@ You will need to connect six of the female to female Dupont wires from the ULN20
 | IN4 | A3 S |
 | \+ | A0 V |
 | \- | A0 G |
-  
+
 ![ULN2003 Pins](../../_static/images/ex-turntable/uln2003-pins.png){ width=400px }
 
 ![Shield to ULN2003 pins](../../_static/images/ex-turntable/shield-uln2003-pins.png){ width=400px }
@@ -251,19 +251,19 @@ Locate this section in "config.h", comment out the line defining the use of "ULN
   /////////////////////////////////////////////////////////////////////////////////////
   //  Define the stepper controller in use according to those available below, refer to the
   //  documentation for further details on which to select for your application.
-  // 
+  //
   //  ULN2003_HALF_CW     : ULN2003 in half step mode, clockwise homing/calibration
   //  ULN2003_HALF_CCW    : ULN2003 in half step mode, counter clockwise homing/calibration
   //  ULN2003_FULL_CW     : ULN2003 in full step mode, clockwise homing/calibration
   //  ULN2003_FULL_CCW    : ULN2003 in full step mode, counter clockwise homing/calibration
   //  A4988               : Two wire drivers (e.g. A4988, DRV8825)
   //  A4988_INV           : Two wire drivers (e.g. A4988, DRV8825), with enable pin inverted
-  // 
+  //
   //  NOTE: If you are using a different controller than those already defined, refer to
   //  the documentation to define the appropriate configuration variables. Note there are
   //  some controllers that are pin-compatible with an existing defined controller, and
   //  in those instances, no custom configuration would be required.
-  // 
+  //
   // #define STEPPER_DRIVER ULN2003_HALF_CW
   // #define STEPPER_DRIVER ULN2003_HALF_CCW
   // #define STEPPER_DRIVER ULN2003_FULL_CW
@@ -372,7 +372,7 @@ Connect these pins to your CommandStation as shown in the table below, noting th
 | 20 (SDA) | A4 S (SDA) |
 | 21 (SCL) | A5 S (SCL) |
 | Any spare ground | A4 G |
-  
+
 ![Nano I2C pins](../../_static/images/ex-turntable/nano-i2c.png){ width=400px }
 
 ![Nano I2C pins](../../_static/images/ex-turntable/commandstation-i2c.png){ width=400px }
@@ -386,3 +386,5 @@ At this point, you should have a fully assembled **EX-Turntable** with the softw
 In addition, **EX-Turntable** should be connected to your CommandStation ready to test, tune your turntable positions, and configure EXRAIL ready for use on your layout.
 
 Click the 'Next' button to get cracking!
+
+--8<-- "snippets/abbr.md"

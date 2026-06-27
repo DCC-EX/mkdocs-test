@@ -4,7 +4,7 @@ LED based signals are defined using the SIGNALH macro (For LEDS with common cath
 
 For example
 
-```cpp  
+```cpp
 SIGNALH(110,111,112)
 ```
 

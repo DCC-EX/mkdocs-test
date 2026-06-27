@@ -44,11 +44,13 @@ The **EX-FastClock** integration includes:
 
 ## Credit where credit is due
 
-*The **EX-FastClock** is based on a project originally written by Jim Gifford (Hallet Cove Southern) in June 2017. That project used a 32 x 8 LED matrix to display the time and was controlled by a number of pushbuttons. You can see [Jim's Original Project here](https://www.hallettcovesouthern.com/track-plan-design-info/arduino-projects/fast-clock/).
+- The **EX-FastClock** is based on a project originally written by Jim Gifford (Hallet Cove Southern) in June 2017. That project used a 32 x 8 LED matrix to display the time and was controlled by a number of pushbuttons. You can see [Jim's Original Project here](https://www.hallettcovesouthern.com/track-plan-design-info/arduino-projects/fast-clock/).
 
-- MCUFRIEND.kbv credit: This library was written by David Prentice and has become the De-Facto standard for the shield based TFT screens used in this project. This library inherits from the Adafruit GFX library.
+- MCUFRIEND.kbv credit: This library was written by David Prentice and has become the de facto standard for the shield based TFT screens used in this project. This library inherits from the Adafruit GFX library.
 - Adafruit for the Adafruit GFX Library.
 
 ## Next Steps
 
 Now that you have a general overview of EX-FastClock's features and capabilities, click the "next" button see what is needed to create an **EX-FastClock**.
+
+--8<-- "snippets/abbr.md"

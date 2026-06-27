@@ -16,7 +16,7 @@ For example:
 ... while driving...
    AT(189)   // passing tunnel
    FON(0)    // loco lights on
-   FON(8)    // make like a boy-racer  
+   FON(8)    // make like a boy-racer
    XFON(3001,0) // carriage lights on
    AT(190)   // at far end of tunnel
    FOFF(8)   // pretend we didn't do that

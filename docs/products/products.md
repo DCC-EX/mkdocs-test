@@ -24,7 +24,7 @@ These are our powerful, but easy to use, get up and running quickly type product
 [![EX-CSB1 Logo](../_static/images/logos/product-logo-ex-csb1-only-light.png){ .only-light width=400px }
 ![EX-CSB1 Logo](../_static/images/logos/product-logo-ex-csb1-only-dark.png){ .only-dark width=400px }](/products/ex-commandstation/ex-csb1.md)
 
-A ready-to-run, all in one Command Station and Booster with built-in WiFi preloaded with our flagship train control, layout animation and automation software.
+A ready-to-run, all in one DCC Command Station and Booster with built-in WiFi preloaded with our flagship train control, layout animation and automation software.
 
 For more information on this and how to purchase, head over to the [EX-CSB1 product page](/products/ex-commandstation/ex-csb1.md)
 
@@ -122,7 +122,7 @@ If you are new to **DCC-EX** and/or electronics in general, we do not recommend 
 [![CS DIY Logo](../_static/images/logos/product-logo-ex-cs-diy-only-light.png){ .only-light width=400px }
 ![CS DIY Logo](../_static/images/logos/product-logo-ex-cs-diy-only-dark.png){ .only-dark width=400px }](/diy/diy.md)
 
-A more complex DIY stack for EX-CommandStation using Espressif ESP32 or STMicroelectronics Nucleo microcontrollers. Some modifications may be required depending on the device chosen, and there are various nuances to be aware of when assembling and configuring these DIY options.
+A more complex Self Build (DIY) stack for EX-CommandStation using Espressif ESP32 or STMicroelectronics Nucleo microcontrollers. Some modifications may be required depending on the device chosen, and there are various nuances to be aware of when assembling and configuring these DIY options.
 
 You will need to need to be careful when configuring and installing software on these devices also.
 
@@ -135,7 +135,7 @@ Refer to the [EX-CommandStation DIY Pages](/diy/diy.md) for information on what 
 [![EX-FastClock Logo](../_static/images/logos/product-logo-ex-fastclock-only-light.png){ .only-light width=400px }
 ![EX-FastClock Logo](../_static/images/logos/product-logo-ex-fastclock-only-dark.png){ .only-dark width=400px }](/products/ex-fastclock/overview.md)
 
-An integrated fast clock for your layout.
+A Self Build (DIY) integrated fast clock for your layout.
 
 While it's possible to get up and running with this fairly easily, there is still some software configuration and installation to be performed which makes this a little more complicated.
 
@@ -148,7 +148,7 @@ Refer to the [EX-FastClock documentation](/products/ex-fastclock/overview.md) fo
 [![EX-Turntable Logo](../_static/images/logos/product-logo-ex-turntable-only-light.png){ .only-light width=400px }
 ![EX-Turntable Logo](../_static/images/logos/product-logo-ex-turntable-only-dark.png){ .only-dark width=400px }](/products/ex-turntable/overview.md)
 
-An integrated turntable/traverser controller using a stepper motor.
+A Self Build (DIY) integrated turntable/traverser controller using a stepper motor.
 
 The software and integration side of **EX-Turntable** is reasonably straight forward, however the mechanics of getting a turntable operational with a stepper motor and the required sensors to control the location of the turntable accurately is quite involved.
 
@@ -161,7 +161,7 @@ Refer to the [EX-Turntable documentation](/products/ex-turntable/overview.md) fo
 [![EX-DCCInspector Logo](../_static/images/logos/product-logo-ex-dccinspector-only-light.png){ .only-light width=400px }
 ![EX-DCCInspector Logo](../_static/images/logos/product-logo-ex-dccinspector-only-dark.png){ .only-dark width=400px }](ex-dccinspector/index.md)
 
-A diagnostic tool to inspect DCC packets.
+A Self Build (DIY) diagnostic tool to inspect DCC packets.
 
 This requires some assembly and soldering to get up and running, and you will need to understand various aspects of the DCC protocol to get the most out of it.
 
@@ -174,7 +174,7 @@ Refer to the [EX-DCCInspector documentation](ex-dccinspector/index.md) for more 
 [![EX-IOExpander Logo](../_static/images/logos/product-logo-ex-ioexpander-only-light.png){ .only-light width=400px }
 ![EX-IOExpander Logo](../_static/images/logos/product-logo-ex-ioexpander-only-dark.png){ .only-dark width=400px }](/products/ex-ioexpander/ex-ioexpander.md)
 
-Driven by a shortage of I2C connected I/O expansion devices, **EX-IOExpander** allows you to use various Arduino devices to expand the I/O capabilities of your **EX-CommandStation**.
+Driven by a shortage of I2C connected I/O expansion devices, **EX-IOExpander** is a Self Build (DIY) solution that allows you to use various Arduino devices to expand the I/O capabilities of your **EX-CommandStation**.
 
 However, this does mean you will need to understand I2C connectivity and will likely need some more complex assembly and/or soldering to use this on your layout.
 
@@ -187,6 +187,6 @@ Refer to the [EX-IOExpander documentation](/products/ex-ioexpander/ex-ioexpander
 [![EX-SensorCAM Light Logo](../_static/images/logos/product-logo-ex-sensorcam-only-light.png){ .only-light width=400px }
 ![EX-SensorCAM Dark Logo](../_static/images/logos/product-logo-ex-sensorcam-only-dark.png){ .only-dark width=400px }](/products/ex-sensorcam/ex-sensorcam.md)
 
-Provides up to 80 sensors for your layout using an ESP32 based camera solution.
+**EX-SensoorCAM** is a Self Build (DIY) solution that provides up to 80 sensors for your layout using an ESP32 based camera solution.
 
 Refer to the [EX-SensorCAM documentation](/products/ex-sensorcam/ex-sensorcam.md) for more information.

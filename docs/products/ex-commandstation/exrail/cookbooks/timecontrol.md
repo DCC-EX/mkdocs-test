@@ -19,8 +19,8 @@ ONCLOCKTIME( hour, mins)
 This is an event based command and will activate a sequence of commands until a DONE command is reached.  An example of how this might be used is as follows:
 
 ```cpp
-ONCLOCKTIME(06,15) 
-  SETLOCO(7309) 
+ONCLOCKTIME(06,15)
+  SETLOCO(7309)
   ....
   .... Do some stuff
   ....
@@ -61,10 +61,10 @@ ONCLOCKMINS( mins )
 This is an event based command that will activate at the same time each hour as in the example below:
 
 ```cpp
-ONCLOCKMINS(15) 
+ONCLOCKMINS(15)
   SET(1000)             // Start playing first MP3 file
   AT(-1000)             // Wait for playing to finish
-  RESET(1000)           // Stop player 
+  RESET(1000)           // Stop player
   ....
   .... Do some other stuff
   ....
@@ -80,7 +80,7 @@ SEQUENCE(10)
   SET(1000)             // Start playing first MP3 file
   AT(-1000)             // Wait for playing to finish
 
-  RESET(1000)           // Stop player 
+  RESET(1000)           // Stop player
   ....
   .... Do some other stuff
   ....
@@ -98,7 +98,7 @@ NB:  See the following page for details on running sound files.
 If one is testing out a sequence using a timed command it can be done quickly without using the clock.  The following command can be entered from the System Monitor:
 
 ```cpp
-<JC mmmm ss> 
+<JC mmmm ss>
 ```
 
 where mmmm is the time in minutes since midnight.  This is (hours * 60) + mins and is how the time is held within the **EX-CommandStation**.  So for the time in the example above (6:15) the following:

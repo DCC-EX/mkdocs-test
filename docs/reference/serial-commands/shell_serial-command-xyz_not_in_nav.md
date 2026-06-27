@@ -1,6 +1,6 @@
 ---
 tags:
-  - 
+  -
 ---
 
 # <small>``<cmd «required parameter» [«optional parameter»]>``</small> <br/> Short command description

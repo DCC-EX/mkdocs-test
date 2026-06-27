@@ -35,7 +35,7 @@ A negative return value indicates an error.
 
 ## DCC Consists
 
-A loco may be given a DCC consist address, it's actual address is not altered, but it will no longer accept throttle movement commands on the actual address. 
+A loco may be given a DCC consist address, it's actual address is not altered, but it will no longer accept throttle movement commands on the actual address.
 
 The command  ```<W CONSIST 77>``` will set the consist address to 77.
 

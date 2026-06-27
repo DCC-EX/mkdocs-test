@@ -50,3 +50,4 @@ Assuming that the default behaviour of automatic phase switching is enabled, whe
 
 ![Layout connection with centre rings](../../_static/images/ex-turntable/layout-connection-pit-and-centre-rings.png){ width=400ps }
 
+--8<-- "snippets/abbr.md"

@@ -17,5 +17,5 @@ HAL(DFPlayer,3500,Serial2)  // Use tx2/rx2 Arduino Serial2
 Note that the ESP32/CSB1 does not by default have a configured Serial2 so it is necessary to provide the spare pins to be used for the setup.
 
 ```cpp
-HAL(DFPLayer,3500,Serial2,16,17)  // For an ESP32 
+HAL(DFPLayer,3500,Serial2,16,17)  // For an ESP32
 ```

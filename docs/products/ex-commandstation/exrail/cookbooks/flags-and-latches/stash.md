@@ -20,7 +20,7 @@ The following Stash  commands are available:
  | **EXRAIL** command | Serial protocol | function |
  | -------------- | -------------------------- | -------- |
  | STASH(stashId) | `<JM stashId locoId>` | Save the current loco id in the stash array element s. |
- | CLEAR_STASH(stashId) | `<JM stashId 0>` | Sets stash array element s to zero. |  
+ | CLEAR_STASH(stashId) | `<JM stashId 0>` | Sets stash array element s to zero. |
  | CLEAR_ALL_STASH | `<JM CLEAR ALL>` | sets all stash entries to zero |
  | CLEAR_ANY_STASH | `<JM CLEAR ANY locoId>` | removes current loco from all stash elements |
  | PICKUP_STASH(stashId) | N/A | sets current loco to stash element s |
