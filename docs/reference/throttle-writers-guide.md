@@ -15,6 +15,8 @@ tags:
 
 # Throttle Writers Guide (doc incomplete)
 
+==TODO== Document incomplete.
+
 This page is a brief set of notes to help people write/create their own software or physical/hardware throttle/controllers to use the **DCC-EX** EX-CommandStations.
 
 The EX-CommandStation can communicate with either Native/Serial Protocol or the WiThrottle protocol.  Only the Native/Serial Protocol is discussed here. If you wish to use the WiThrottle protocol see the [JMRI Web Site](https://www.jmri.org/help/en/package/jmri/jmrit/withrottle/Protocol.shtml) for more information.
@@ -37,7 +39,7 @@ For anyone developing a throttle or controller application, these considerations
 * Refer to the [DCC-EX Native/Serial Commands List](./serial-command-list.md)
 * A throttle/controller MUST accept and ignore anything it does not understand
 * Track power state has three possible states: On, Off, and Unknown
-* There is no concept of a throttle 'acquiring' a loco.
+* There is no concept of a throttle 'acquiring' a loco.<br/>
 Simply, commands for a loco are sent to the **EX-CommandStation**, and the **EX-CommandStation** 'broadcasts' the status of any/every loco to every throttle any time a change is made to a loco.
 * There is no concept of the throttle disconnecting from the **EX-CommandStation**.
 
@@ -61,19 +63,19 @@ Key throttle/controller specific commands are summarised here, refer below for e
 
 ## Roster Information
 
-The ``<JR>`` command requests a list of cab ids from the roster.
-e.g. responding ``<jR 3 200 6336>``
-or <jR> for none.
+The ``<JR>`` command requests a list of cab ids from the roster.<br/>
+e.g. responding ``<jR 3 200 6336>``<br/>
+or ``<jR>`` for none.
 
-Each Roster entry had a name and function map obtained by:
+Each Roster entry had a name and function map obtained by:<br/>
 ``<JR 200>``  reply like ``<jR 200 "Thomas" "whistle/*bell/squeal/panic">``
 
 Refer to **EXRAIL** ROSTER command for function map format.
 
 Obtaining throttle status.
 
-``<t loco>``  Requests a deliberate update on the cab speed/functions in the same format as the cab broadcast.
-    ``<l loco slot speedbyte functionMap>``
+``<t loco>``  Requests a deliberate update on the cab speed/functions in the same format as the cab broadcast.<br/>
+``<l loco slot speedbyte functionMap>``
 
 **NOTE:** A slot of -1 indicates that the cab is not in the reminders table and this command will not reserve a slot until such time as the cab is throttled.
 
@@ -83,20 +85,20 @@ Obtaining throttle status.
 
 ### Momentum
 
-The **EX-CommandStation** can apply momentum to throttle movements in the same way that a standards compliant DCC decoder can be set to do. This momentum can be defaulted system wide and overridden on individual locos. It does not use or alter the loco CV values and so it also works when driving DC locos.
+The **EX-CommandStation** can apply momentum to throttle movements in the same way that a standards compliant DCC decoder can be set to do. This momentum can be defaulted system wide and overridden on individual locos. It does not use or alter the loco CV values and so it also works when driving DC locos.<br/>
 The momentum is applied regardless of the throttle type used (or even **EXRAIL**).
 
 Momentum is specified in mS / throttle_step.
 
-There is a new command `<m loco accelerating [brake]>`
-where the brake value defaults to the accelerating value.
+There is a new command `<m loco accelerating [brake]>` where the brake value defaults to the accelerating value.
 
 For example:
-`<m 3 0>`   sets loco 3 to no momentum.
-`<m 3 21>`   sets loco 3 to 21 mS/step.
+
+`<m 3 0>`   sets loco 3 to no momentum.<br/>
+`<m 3 21>`   sets loco 3 to 21 mS/step.<br/>
 `<m 3 21 42>`   sets loco 3 to 21 mS/step accelerating and 42 mS/step when decelerating.
 
-`<m 0 21>`  sets the default momentum to 21mS/Step for all current and future locos that have not been specifically set.
+`<m 0 21>`  sets the default momentum to 21mS/Step for all current and future locos that have not been specifically set.<br/>
 `<m 3 -1>`   sets loco 3 to track the default momentum value.
 
 **EXRAIL**
@@ -106,7 +108,7 @@ Note: Setting Momentum 7,14,21 etc is similar in effect to setting a decoder CV0
 
 As an additional option, the momentum calculation is based on the difference in throttle setting and actual speed. For example, the time taken to reach speed 50 from a standing start would be less if the throttle were set to speed 100, thus increasing the acceleration.
 
-`<m LINEAR>` - acceleration is uniform up to selected throttle speed.
+`<m LINEAR>` - acceleration is uniform up to selected throttle speed.<br/>
 `<m POWER>`  - acceleration depends on difference between loco speed and selected throttle speed.
 
 ----
@@ -115,13 +117,12 @@ As an additional option, the momentum calculation is based on the difference in 
 
 The conventional turnout/point definition commands and the ``<H>`` responses do not contain information about the turnout/point description which may have been provided in an **EXRAIL** script. A turnout/point description is much more user friendly than T123 and having a list helps the throttle UI build a suitable set of buttons.
 
-``<JT>`` command returns a list of turnout/point ids. The throttle should be uninterested in the turnout/point technology used but needs to know the ids it can throw/close and monitor the current state.
+``<JT>`` command returns a list of turnout/point ids. The throttle should be uninterested in the turnout/point technology used but needs to know the ids it can throw/close and monitor the current state.<br/>
 e.g.  response ``<jT 1 17 22 19>``
 
-``<JT 17>`` requests info on turnout/point 17.
-e.g. response ``<jT 17 T "Coal yard exit">`` or ``<jT 17 C "Coal yard exit">``
-(T=thrown, C=closed)
-or ``<jT 17 C "">`` indicating turnout/point description not given.
+``<JT 17>`` requests info on turnout/point 17.<br/>
+e.g. response ``<jT 17 T "Coal yard exit">`` or ``<jT 17 C "Coal yard exit">`` (T=thrown, C=closed)<br/>
+or ``<jT 17 C "">`` indicating turnout/point description not given.<br/>
 or ``<jT 17 X>`` indicating turnout/point unknown (or possibly hidden.)
 
 **NOTE:** It is still the throttles responsibility to monitor the status broadcasts. There is no intention of providing a command that indicates the turnout/point list has been updated since the throttle started.
@@ -138,31 +139,58 @@ or ``<jT 17 X>`` indicating turnout/point unknown (or possibly hidden.)
 
 ## Automations/Routes
 
- A throttle need to know which **EXRAIL** Automations and Routes it can show the user.
+A throttle need to know which **EXRAIL** Automations and Routes it can show the user.
 
- ``<JA>`` Returns a list of Automations/Routes
- e.g. ``<jA 13 16 23>``
- Indicates route/automation ids.
- Information on each id needs to be obtained by
- ``<JA 13>``
- returns e.g. ``<jA 13 R "description">`` for a route
- or  ``<jA 13 A "description">`` for an automation.
- or ``<jA 13 X>`` for id not found
+``<JA>`` Returns a list of Automations/Routes<br/>
+e.g. ``<jA 13 16 23>``<br/>
+Indicates route/automation ids.<br/>
 
- What's the difference:
+Information on each id needs to be obtained by<br/>
+``<JA 13>``<br/>
+returns e.g. ``<jA 13 R "description">`` for a route<br/>
+or  ``<jA 13 A "description">`` for an automation.<br/>
+or ``<jA 13 X>`` for id not found
 
-   A Route is just a call to an **EXRAIL** ROUTE, traditionally to set some turnouts or signals but can be used to perform any kind of **EXRAIL** function... but its not expecting to know the loco.
-   Thus, a route can be triggered by sending in for example ``</START 13>``.
+What's the difference:
 
-   An Automation is a handoff of the last accessed loco id to an **EXRAIL** AUTOMATION which would typically drive the loco away.
-   Thus, an Automation expects a start command with a cab id
-   e.g. ``</START 13 3>``
+* A Route is just a call to an **EXRAIL** ROUTE, traditionally to set some turnouts or signals but can be used to perform any kind of **EXRAIL** function... but its not expecting to know the loco.<br/>
+Thus, a route can be triggered by sending in for example ``</START 13>``.
+* An Automation is a handoff of the last accessed loco id to an **EXRAIL** AUTOMATION which would typically drive the loco away.<br/>
+Thus, an Automation expects a start command with a cab id<br/>
+e.g. ``</START 13 3>``
 
 Routes and Automations can also have their current status and caption altered dynamically by **EXRAIL** (docs ==TODO==)
 
 ### Route Status
 
 ==TODO== Route Status
+
+### Turntables/Traversers
+
+A feature is available to support control of turntables/traversers from throttles, including the ability for throttles to "draw" turntable positions as defined to support graphical operation. If **EXRAIL**** commands are used to define turntables and their associated positions, a description for the turntable as well as each position is able to be defined.
+
+Note that to obtain a complete definition for a turntable/traverser, the turntable object needs to be queried first (``<JO id>``) followed by the position query (``<JP id>``) to obtain all defined positions for the object.
+
+``<JO>`` - Returns a list of turntable IDs.
+
+Example response:
+
+* ``<jT 1 2>`` - Turntable IDs 1 and 2 are defined.
+
+``<JO 1>`` - Returns details of turntable ID 1.
+
+Example responses:
+
+* ``<jO 1 0 1 5 "DCC Turntable">`` - DCC turntable type currently at position 1, with 5 defined positions and a description "DCC Turntable".
+* ``<jO 1 1 0 11 "EX-Turntable">`` - EX-Turntable type currently at the home position (0), with 11 defined positions and a description "EX-Turntable"
+
+``<JP 1>`` - Returns all positions for turntable ID 1.
+
+Example responses (will return all positions):
+
+* ``<jP 1 0 0 "">`` - Position 0, unused for DCC turntables, "home" for EX-Turntable
+* ``<jP 1 1 100 "Turntable position 1">`` - Position 1, 10 degrees from home
+* ``<jP 1 2 1800 "Turntable position 2">`` - Position 2, 180 degrees from home
 
 ----
 

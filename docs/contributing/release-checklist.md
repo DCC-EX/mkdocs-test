@@ -120,3 +120,15 @@ This is a list of to do items that will allow us to release this new documentati
 - [ ] ~~GitHub workflow must use strict mode to error on all warnings and errors~~ This causes too many problems
 - [ ] News article on existing site ahead of release
 - [ ] News article with this release
+
+-----
+
+## General TODOs
+
+- ==TODO== I am not really sure of the purpose of the products/getting-started page
+- ==TODO== Restructure parts the reference section for throttle developers
+- ==TODO== Migrate the other missing HAL pages
+- ==TODO== Some of the low priority TODOs could be hidden in comments
+- ==TODO== Really need some pages with diagrams and picture covering physical installation of the CS
+- ==TODO== Try to remove the references to the Arduino IDE.  Change to VSC.  Not going to be simple.
+- ==TODO== Need to change the 'Withrottle' iOS app references to 'ThrottleCard'

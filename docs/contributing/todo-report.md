@@ -14,10 +14,17 @@
 </style>
 Scanned docs root: `C:\Users\akers\OneDrive\github\github_doco\mkdocs-test\docs`
 
-Total TODO matches: 142
+Total TODO matches: 150
 
 | File | Line | Line text |
 | --- | ---: | --- |
+| [docs/contributing/release-checklist.md](release-checklist.md) | 128 | - ==TODO== I am not really sure of the purpose of the products/getting-started page |
+| [docs/contributing/release-checklist.md](release-checklist.md) | 129 | - ==TODO== Restructure parts the reference section for throttle developers |
+| [docs/contributing/release-checklist.md](release-checklist.md) | 130 | - ==TODO== Migrate the other missing HAL pages |
+| [docs/contributing/release-checklist.md](release-checklist.md) | 131 | - ==TODO== Some of the low priority TODOs could be hidden in comments |
+| [docs/contributing/release-checklist.md](release-checklist.md) | 132 | - ==TODO== Really need some pages with diagrams and picture covering physical installation of the CS |
+| [docs/contributing/release-checklist.md](release-checklist.md) | 133 | - ==TODO== Try to remove the references to the Arduino IDE.  Change to VSC.  Not going to be simple. |
+| [docs/contributing/release-checklist.md](release-checklist.md) | 134 | - ==TODO== Need to change the 'Withrottle' iOS app references to 'ThrottleCard' |
 | [docs/diy/esp32.md](../diy/esp32.md) | 66 | ==TODO== move legacy docs |
 | [docs/diy/mega-harder.md](../diy/mega-harder.md) | 18 | - an Arduino Standard Motor-Shield (or others as noted in ==TODO==) to power the track. |
 | [docs/diy/nucleo.md](../diy/nucleo.md) | 48 | ==TODO== move legacy docs |
@@ -32,13 +39,14 @@ Total TODO matches: 142
 | [docs/installer/install-ex-turntable.md](../installer/install-ex-turntable.md) | 3 | ==TODO== complete EX-Installer EX-Turntable page needed |
 | [docs/installer/platformio.md](../installer/platformio.md) | 3 | ==TODO== - provide setup help. |
 | [docs/reference/legacy-command-reference.md](../reference/legacy-command-reference.md) | 5 | ==TODO== move legacy docs |
-| [docs/reference/throttle-writers-guide.md](../reference/throttle-writers-guide.md) | 82 | ==TODO== Controlling Locos |
-| [docs/reference/throttle-writers-guide.md](../reference/throttle-writers-guide.md) | 135 | ==TODO== DCC Accessory Control |
-| [docs/reference/throttle-writers-guide.md](../reference/throttle-writers-guide.md) | 161 | Routes and Automations can also have their current status and caption altered dynamically by **EXRAIL** (docs ==TODO==) |
-| [docs/reference/throttle-writers-guide.md](../reference/throttle-writers-guide.md) | 165 | ==TODO== Route Status |
-| [docs/reference/throttle-writers-guide.md](../reference/throttle-writers-guide.md) | 169 | ## COMMANDS TO AVOID ==TODO== |
-| [docs/reference/throttle-writers-guide.md](../reference/throttle-writers-guide.md) | 185 | ==TODO== Gauges |
-| [docs/reference/throttle-writers-guide.md](../reference/throttle-writers-guide.md) | 191 | ==TODO== TCP VS UDP |
+| [docs/reference/throttle-writers-guide.md](../reference/throttle-writers-guide.md) | 18 | ==TODO== Document incomplete. |
+| [docs/reference/throttle-writers-guide.md](../reference/throttle-writers-guide.md) | 84 | ==TODO== Controlling Locos |
+| [docs/reference/throttle-writers-guide.md](../reference/throttle-writers-guide.md) | 136 | ==TODO== DCC Accessory Control |
+| [docs/reference/throttle-writers-guide.md](../reference/throttle-writers-guide.md) | 162 | Routes and Automations can also have their current status and caption altered dynamically by **EXRAIL** (docs ==TODO==) |
+| [docs/reference/throttle-writers-guide.md](../reference/throttle-writers-guide.md) | 166 | ==TODO== Route Status |
+| [docs/reference/throttle-writers-guide.md](../reference/throttle-writers-guide.md) | 197 | ## COMMANDS TO AVOID ==TODO== |
+| [docs/reference/throttle-writers-guide.md](../reference/throttle-writers-guide.md) | 213 | ==TODO== Gauges |
+| [docs/reference/throttle-writers-guide.md](../reference/throttle-writers-guide.md) | 219 | ==TODO== TCP VS UDP |
 | [docs/reference/esp32/esp32-acebott.md](../reference/esp32/esp32-acebott.md) | 99 | ==TODO== Stacked EX8874 Checklist |
 | [docs/reference/esp32/esp32-ex8874.md](../reference/esp32/esp32-ex8874.md) | 110 | ==TODO== Stacked EX8874 Checklist |
 | [docs/reference/ex-csb1/csb1-technical.md](../reference/ex-csb1/csb1-technical.md) | 22 | ==TODO== EX-CSB1 Technical Reference |
