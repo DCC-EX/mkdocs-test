@@ -3,7 +3,7 @@
 Route buttons appear on the throttle and can be controlled from **EXRAIL** to hide, disable or recaption the button. Everything here applies equally to AUTOMATIONs.
 
 If a route button can be in one of 4 states:
-  
+
 - Inactive (waiting to be pressed)
 - Active (highlighted as if selected)
 - Disabled (you can't press this)
@@ -22,10 +22,10 @@ In this case we want a way of setting a light on or off.
 
 ```cpp
 ROUTE(600,"Shed lights")
-  IFROUTE_ACTIVE(600)  // is the light on? 
+  IFROUTE_ACTIVE(600)  // is the light on?
     RESET(120)        // lights off
     ROUTE_INACTIVE(600)
-  ELSE  // light is off 
+  ELSE  // light is off
     SET(120)  // lights on
     ROUTE_ACTIVE(600)
   ENDIF
@@ -39,11 +39,11 @@ The AUTOSTART section is to make sure the caption is set correctly at startup.
 
 ```cpp
 ROUTE(600,"Shed lights")
-  IFROUTE_ACTIVE(600)  // is the light on? 
+  IFROUTE_ACTIVE(600)  // is the light on?
     RESET(120)        // lights off
     ROUTE_INACTIVE(600)
     ROUTE_CAPTION(600,"Turn on") // change button caption
-  ELSE  // light is off 
+  ELSE  // light is off
     SET(120)  // lights on
     ROUTE_ACTIVE(600)
     ROUTE_CAPTION(600,"Turn off") // change button caption
@@ -65,7 +65,7 @@ Each route will have the default "Set" button.
 ROUTE(600,"Shed lights on")
   SET(120)
   ROUTE_HIDDEN(600) // hide self
-  ROUTE_INACTIVE(601) // reveal off 
+  ROUTE_INACTIVE(601) // reveal off
   DONE
 
 ROUTE(601,"Shed lights off")
@@ -73,7 +73,7 @@ ROUTE(601,"Shed lights off")
   ROUTE_HIDDEN(601)
   ROUTE_INACTIVE(600)
   DONE
-  
+
 AUTOSTART
     ROUTE_HIDDEN(601)  // shed lights are off already
   DONE

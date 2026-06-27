@@ -60,7 +60,7 @@ The various configuration options are outlined below
 
 ### Connecting via Serial
 
-Connecting via Serial is the simplest option if available.  
+Connecting via Serial is the simplest option if available.
 
 - Run a dupont cable from the TX pin on the arduino to a RX pin on the EX-CommandStation.  It is not usually necessary to run a cable from RX to the TX on the **EX-CommandStation** as  the FastClock is not receiving data back.
 - Find the Serial defines in the ``config.h`` file (or copy ``config.example.h`` to ``config.h`` if you don't have one), locate the following lines:
@@ -70,7 +70,7 @@ Connecting via Serial is the simplest option if available.
 //#define SERIAL2_COMMANDS
 //#define SERIAL3_COMMANDS
 ```
-  
+
   and uncomment the appropriate one for the serial port you are using.
 
 - Add the following code to your ``Setup()`` function:
@@ -83,7 +83,7 @@ while (!Serial) {
 ```
 
 - Include the following routine within your code:
-  
+
 ```cpp
 void SendTime(byte hour, byte mins, byte speed) {
 
@@ -95,7 +95,7 @@ void SendTime(byte hour, byte mins, byte speed) {
 ```
 
 - Each time the time changes call the SendTime routine as follows:
-  
+
 ```cpp
 SendTime(HH, MM, clockSpeed);
 ```
@@ -118,11 +118,11 @@ Connecting via I2C involves a HAL driver file to the **EX-CommandStation** as we
 ```cpp
 //  EXFastClock::create(0x55);
 ```
-  
+
   0x55 (decimal 85) is the default address but needs to match that in the FastClock code (see below).
-  
+
 - Using Dupont connectors connect SDA/SCL/Gnd on the clock to SDA/SCL/Gnd on the **EX-CommandStation**.
-  
+
 - Include the following code in your **EX-FastClock** code:
 
   Near the top of the sketch:
@@ -146,13 +146,13 @@ void TransmitTime() {
     // send the time as <mmmm> as two bytes followed by clockspeed
     int timetosend = (HH * 60) + MM;
     byte TimeArray[2];
-  
+
     TimeArray[0] = (timetosend >> 8);
     TimeArray[1] = timetosend & 0xFF;
     Wire.write(TimeArray, 2);
-    Wire.write(clockSpeed);      
+    Wire.write(clockSpeed);
 }
-```  
+```
 
   In the function above  HH is the time as hours (24hr. clock) and MM is the minutes.
 

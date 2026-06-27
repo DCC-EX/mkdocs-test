@@ -1,5 +1,5 @@
 # Traversers and Limited Rotation Turntables
-  
+
 ## Overview
 
 **EX-Turntable** has the ability to cater for both horizontal and vertical traversers, as well as turntables that do not rotate a full 360 degrees.
@@ -96,7 +96,7 @@ Edit "config.h", add "//" at the beginning of the `#define TURNTABLE_EX_MODE TUR
   //  TURNTABLE : Use this for normal, 360 degree rotation turntables (Default).
   //  TRAVERSER : Use this for vertical or horizontal traversers, or turntables that do
   //              do not rotate a full 360 degrees.
-  // 
+  //
   // #define TURNTABLE_EX_MODE TURNTABLE                      <<== After adding //
   #define TURNTABLE_EX_MODE TRAVERSER                         <<== After removing //
 ```
@@ -126,7 +126,7 @@ To enable SENSOR_TESTING mode, you will need to edit "config.h" again, and this 
   //  Enable sensor testing only, prevents all EX-Turntable operations.
   //  Uncomment this line to disable all normal EX-Turntable operations in order to test
   //  and validate that homing and limit sensors activate and deactivate correctly.
-  // 
+  //
   #define SENSOR_TESTING                                      <<== After removing //
 ```
 

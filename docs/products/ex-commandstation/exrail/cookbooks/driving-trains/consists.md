@@ -23,7 +23,7 @@ Disadvantages are that only the throttle knows about the relationship between th
 
 ### 4. EX-CommandStation consists/MUs
 
-The **EX-CommandStation** knows the locos that are in the consist. Any speed commands to the lead loco are transmitted to all following locos. No CVs are modified and any throttle, including **EXRAIL**  can drive the lead loco or send function commands to the followers, but functions sent to the lead loco are not shared with the other locos, as there is no guarantee that "horn" on one loco isnt "halt and catch fire" on another.  
+The **EX-CommandStation** knows the locos that are in the consist. Any speed commands to the lead loco are transmitted to all following locos. No CVs are modified and any throttle, including **EXRAIL**  can drive the lead loco or send function commands to the followers, but functions sent to the lead loco are not shared with the other locos, as there is no guarantee that "horn" on one loco isnt "halt and catch fire" on another.
 
 Throttle commands sent to the following locos are ignored but the **EX-CommandStation** broadcasts lead loco throttle changes for each loco.
 
@@ -43,7 +43,7 @@ SETLOCO(3)        // sets current loco
 BUILD_CONSIST(77)  // Makes 3 a consist of 3 and 77
 BUILD_CONSIST(88)  // adds loco 88 to the consist
 BUILD_CONSIST(-99) // adds loco 99 facing backwards
-FWD(10) // all 4 locos set off together 
+FWD(10) // all 4 locos set off together
 ```
 
 **EXRAIL** can also break up a consist with the `BREAK_CONSIST` command which will break up any consist that includes the current loco.

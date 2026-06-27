@@ -1,5 +1,5 @@
 # Hardware
-  
+
 ## What you need for EX-FastClock
 
 - An **EX-CommandStation** running version 5.0.0 or later

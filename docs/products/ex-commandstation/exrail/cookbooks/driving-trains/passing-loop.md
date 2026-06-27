@@ -24,7 +24,7 @@ For example, a train leaving Dogbath is already occupying `[1]` but it must rese
 So, the sequence starting from Dogbath, going to Catflap will look like this:
 
 ```cpp
-SEQUENCE(100) 
+SEQUENCE(100)
   DELAYRANDOM(5000,10000)
   RESERVE(2) // will wait with loco stopped until block 2 is available.
   THROW(1)   // set the turnout/point so we will enter the loop correctly
@@ -47,7 +47,7 @@ SEQUENCE(101)  // Catflap to Dogbath (loco in reverse)
   DELAYRANDOM(5000,10000)
   RESERVE(4) // will wait with loco stopped and until block 4 is available.
   THROW(2)   // set the turnout/point so we will enter the loop correctly
-  REV(40)    // move off backwards 
+  REV(40)    // move off backwards
   AT(166)    // we are in the E->W loop
   FREE(3)    // we are no longer in block 3
   RESERVE(1) // This will stop loco if 3 not yet free, and wait.
@@ -56,7 +56,7 @@ SEQUENCE(101)  // Catflap to Dogbath (loco in reverse)
   AT(164)    // when we get to Dogbath
   STOP
   FREE(4)    // we are not in loop
-  FOLLOW(100) // now follow the Dogbath-Catflap sequence 
+  FOLLOW(100) // now follow the Dogbath-Catflap sequence
 ```
 
 Notice that you don't drive into an area of the track without first reserving the corresponding block, and you must remember to free it once you have safely left. Also the script above assumes that a train can cause the turnout/point to change quickly enough if it reaches a sensor in the loop and doesn't need to stop, this can be alleviated if you throw/close the turnout/point behind you as you reach your loop sensor so that the other train does not need to worry about any slow turnout/point movement.
@@ -76,7 +76,7 @@ If we assume that:
 
 ```cpp
 ROUTE(1,"Start Dogbath-Catflap")
-FREEALL   // Clear any reserves left over from previous running 
+FREEALL   // Clear any reserves left over from previous running
 RESERVE(1) // loco is already at Dogbath
 RESERVE(3) // loco is already at Catflap
 SENDLOCO(3,100) // start loco 3 running the sequence from Dogbath
@@ -94,16 +94,16 @@ Note that **EXRAIL** is running a separate task for each loco.
 
 ```cpp
 ROUTE(1,"Start Dogbath-Catflap")
-FREEALL   // Make sure all reserves are cleared 
-RESERVE(1) 
+FREEALL   // Make sure all reserves are cleared
+RESERVE(1)
 RESERVE(3)
-SENDLOCO(3,100) 
+SENDLOCO(3,100)
 SENDLOCO(4,102) // start loco 4 running the inverted sequence from Catflap
 DONE
 
 SEQUENCE(102) // run inverted direction commands from Catflap
- INVERT_DIRECTION // tell current task to invert directions 
- FOLLOW(101) // carry on 
+ INVERT_DIRECTION // tell current task to invert directions
+ FOLLOW(101) // carry on
 ```
 
 ## Advanced Extras

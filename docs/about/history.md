@@ -5,7 +5,7 @@ A brief history of the **DCC-EX** project. *By Fred Decker*
 
 ## EX-CommandStation is all new
 
-**DCC-EX EX-CommandStation** is an all new development loosely based on Gregg Berman’s original DCC++ BaseStation Project. However it is a ground up rewrite.
+**DCC-EX EX-CommandStation** is an all new development loosely based on Gregg Berman's original DCC++ BaseStation Project. However it is a ground up rewrite.
 
 ## How did we do it?
 

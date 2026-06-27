@@ -14,7 +14,7 @@
 </style>
 Scanned docs root: `C:\Users\akers\OneDrive\github\github_doco\mkdocs-test\docs`
 
-Total TODO matches: 143
+Total TODO matches: 142
 
 | File | Line | Line text |
 | --- | ---: | --- |
@@ -155,7 +155,6 @@ Total TODO matches: 143
 | [docs/products/ex-commandstation/exrail/cookbooks/big-picture/stage6.md](../products/ex-commandstation/exrail/cookbooks/big-picture/stage6.md) | 40 | For further reading on turnouts/points, you can refer to the ==TODO== `exrail/exrail-command-reference:turnout/point objects - definition and control` section of the **EXRAIL** reference and [Define or manage Turnouts/Points](/reference/serial-commands/serial-command-tt_not_in_nav.md) in the DCC-EX Command reference. |
 | [docs/products/ex-commandstation/exrail/cookbooks/big-picture/stage6.md](../products/ex-commandstation/exrail/cookbooks/big-picture/stage6.md) | 115 | ==TODO== `/reference/hardware/servo-module` page. |
 | [docs/products/ex-commandstation/exrail/cookbooks/big-picture/stage6.md](../products/ex-commandstation/exrail/cookbooks/big-picture/stage6.md) | 210 | ==TODO== `/reference/hardware/servo-module` page. |
-| [docs/products/ex-commandstation/exrail/cookbooks/big-picture/stage6.md](../products/ex-commandstation/exrail/cookbooks/big-picture/stage6.md) | 289 | Once you understand the logic of our routes below and the various turnout/point, sensor, signal, and virtual block concepts above, you can view some ==TODO== `complete myAutomation.h examples`_ at the end of this page. |
 | [docs/products/ex-commandstation/exrail/cookbooks/big-picture/stage6.md](../products/ex-commandstation/exrail/cookbooks/big-picture/stage6.md) | 394 | You will note that these are somewhat similar to ==TODO== `exrail/examples:multiple inter-connected trains`, updated to suit the specifics of the RMFT layout. |
 | [docs/products/ex-commandstation/exrail/cookbooks/big-picture/stage6.md](../products/ex-commandstation/exrail/cookbooks/big-picture/stage6.md) | 402 | Once you understand the logic below and the various turnout/point, sensor, signal, and virtual block concepts above, you can view some ==TODO== `complete myAutomation.h examples`_ at the end of this page. |
 | [docs/products/ex-commandstation/exrail/cookbooks/big-picture/stage6.md](../products/ex-commandstation/exrail/cookbooks/big-picture/stage6.md) | 410 | Remember, these are virtual blocks, and do not necessarily need to be electrically isolated from each other. Don't confuse isolated blocks of track or block occupancy detection with these virtual blocks. For further background, refer to ==TODO== `exrail/exrail-command-reference:virtual block control`. |

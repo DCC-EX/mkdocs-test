@@ -4,7 +4,7 @@ You will be presented with the Welcome screen…
 
 ![welcome](/_static/images/ex-installer/welcome.png)
 
-This screen provides some basic information about the process of loading the Software. The font may be very small on a high quality screen so use the "tools sizing" menu to find a better zoom factor. 
+This screen provides some basic information about the process of loading the Software. The font may be very small on a high quality screen so use the "tools sizing" menu to find a better zoom factor.
 
 To proceed, click the Manage Arduino CLI button.
 

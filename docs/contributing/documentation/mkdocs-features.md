@@ -22,7 +22,7 @@ The following, or a modified version, can be added to a page or span to make the
 
 ```html
 <style>
-.md-typeset table td,  
+.md-typeset table td,
 .md-typeset table th {
     font-size: smaller !important;
     padding-top: 2px !important;

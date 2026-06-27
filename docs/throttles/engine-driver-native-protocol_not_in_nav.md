@@ -114,7 +114,7 @@ Each of the tracks/channels of the Motor Shield(s) can be changed to any one of 
 
 To change the simply select the state in the pulldown in the desired track (or tracks) and click `Set`
 
-Note that if you select ``DC`` or ``DC reversed polarity (DC_INV / DCX)`` you *must* also enter the Address that the track should respond to. 
+Note that if you select ``DC`` or ``DC reversed polarity (DC_INV / DCX)`` you *must* also enter the Address that the track should respond to.
 
 e.g. if you enter ``DC`` and address ``10`` for track 'A', then in the **Engine Driver** Select Loco screen, you would need to enter the 'DCC Address' of ``10`` to control the DC loco on the track which would normally have been the 'Main' track if you were using DCC.
 

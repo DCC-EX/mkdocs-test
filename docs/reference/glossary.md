@@ -60,7 +60,7 @@ Railway: The preferred term across the UK, Australia, New Zealand, India, and by
 
 [Search for roster](?roster)
 
-A roster is a list of locomotives that are known in advance by the **EX-CommandStation** so that DCC addresses, name, and functions can be used by throttles to configure buttons etc.  
+A roster is a list of locomotives that are known in advance by the **EX-CommandStation** so that DCC addresses, name, and functions can be used by throttles to configure buttons etc.
 
 ## SSID
 

@@ -202,7 +202,7 @@ Once we have our steps per revolution, we can use that number with our formulas 
 
 ### Calculating EX-Turntable positions and DCC phase/polarity switching
 
-.. tip:: 
+.. tip::
 
     It's a great idea at this point to understand the importance of DCC phase/polarity and how switching/reversing it works with **EX-Turntable**. Refer [important! phase (or polarity) switching](../../../../ex-turntable/overview.md#important-phase-or-polarity-switching) and [how does this work with EX-Turntable?](../../../../ex-turntable/overview.md#how-does-this-work-with-ex-turntable) for details.
 
@@ -286,7 +286,7 @@ Using this formula results in these step counts (noting we round up or down to t
 
 ### Tuning the traverser
 
-.. tip:: 
+.. tip::
 
   Now is a great time to revisit the [traverser](../../../../ex-turntable/traverser.md) page, and in particular the section on [considerations - turntable vs. traverser](../../../../ex-turntable/traverser.md#considerations-turntable-vs-traverser).
 
@@ -399,7 +399,7 @@ Here is an example of what you can do to control an **EX-Turntable** via a ROUTE
       WAITFOR(vpin) \
       FREE(reserve_id) \
       DONE
-  
+
   EX_TURNTABLE(TTRoute1, Turntable, 600, 114, Turn, "Roundhose stall 1")
 
   ALIAS(Turntable, 255)

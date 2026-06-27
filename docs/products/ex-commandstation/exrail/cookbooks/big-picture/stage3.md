@@ -44,7 +44,7 @@ For simplicity, we will use infrared obstacle avoidance/proximity sensors throug
 
 If you use different sensors that simply provide an active low or high output, then there should be no change required to the various automation sequences provided, except using a negative "-" for the sensor pin ID if the sensors are active high instead of active low.
 
-!!! note "aliases for sensors cannot be a negative number" 
+!!! note "aliases for sensors cannot be a negative number"
 
       When defining aliases for sensors, you cannot specify a negative number for these, and therefore to use an alias with an active high sensor, you need to add the negative in front of the alias name when referring to it in sequences and routes instead.
 
@@ -68,7 +68,7 @@ Instead, these use cases are valid:
 ## Adding a Turnout/Point
 
 .. sidebar::
-  
+
   ==TODO== You can also refer to :doc:`/reference/hardware/servo-module` for more information.
 
 ### Adding the Hardware -  Turnouts/points
@@ -77,7 +77,7 @@ To connect a servo to **EX-CommandStation**, you first need to get a module, bas
 
 ![PCA9685 Servo Module](../../../../../_static/images/i2c-devices/PCA9685.jpg){ width=300px }
 
-Note the pin connectors along the left side of the module - these are where you connect to the Arduino.  
+Note the pin connectors along the left side of the module - these are where you connect to the Arduino.
 
 The 16 columns of three pins along the bottom of the module are where you connect the servos. The pins are arranged so that you can just plug a servo connector directly onto them, but be sure that the wire colours match the colours of the pins, i.e. yellow to yellow, red to red and black to black.
 
@@ -142,7 +142,7 @@ An example definition for a servo connected to the second control pins of the fi
 
 ## Adding a Sensor
 
-.. sidebar:: 
+.. sidebar::
 
   ==TODO== Alternate is to use a :doc:`/reference/hardware/gpio-module`
 
@@ -164,8 +164,8 @@ Use in automation as AT(DpinNo) or AT(-DpinNo)
 
 ## Adding a Block
 
-.. sidebar:: 
-   
+.. sidebar::
+
    You can also refer to ==TODO== `exrail/exrail-command-reference:virtual block control` for more information.
 
 Blocks in **EXRAIL** are a virtual concept only, and they do not relate in any way to the concept of block occupancy detection.

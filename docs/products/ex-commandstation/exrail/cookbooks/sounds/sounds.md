@@ -27,7 +27,7 @@ PLAY_TRACK(3501,3)    // repeat plays file 3 on a different player at default vo
 
 ## Pause and Resume (PLAY_PAUSE, PLAY_RESUME)
 
-Playing may be paused and resumed 
+Playing may be paused and resumed
 
 ```cpp
 PLAY_PAUSE(3500) // pause playing
@@ -78,13 +78,13 @@ PLAY_VOLUME_(3500,15) // set more sensible volume 15
 
 ## Using WAITFOR
 
-Your **EXRAIL** script can wait until a sound has completed. This example 
+Your **EXRAIL** script can wait until a sound has completed. This example
 
 ```cpp
-// this example uses a pre-assigned ALIAS for the  VPIN. 
-PLAY_TRACK(STATION_SPEAKER, 2, 20)  
-WAITFOR(STATION_SPEAKER)           // Blocks until track finishes  
-PLAY_TRACK(STATION_SPEAKER, 5, 20) // Plays after track 2 completes  
+// this example uses a pre-assigned ALIAS for the  VPIN.
+PLAY_TRACK(STATION_SPEAKER, 2, 20)
+WAITFOR(STATION_SPEAKER)           // Blocks until track finishes
+PLAY_TRACK(STATION_SPEAKER, 5, 20) // Plays after track 2 completes
 ```
 
 ## Example EXRAIL Routes
@@ -97,53 +97,53 @@ ALIAS(STATION_SPEAKER,1100)
 
 ### Basic Playback
 
-```cpp  
-ROUTE(610, "Station: Play Track 1")  
-    PLAY_FOLDER(STATION_SPEAKER, 1)     // Set folder to trains  
-    PLAY_TRACK(STATION_SPEAKER, 1, 20)  // Play track 1 at 20% volume  
-    WAITFOR(STATION_SPEAKER)            // Wait for completion  
-    PRINT("Announcement finished")  
-DONE  
+```cpp
+ROUTE(610, "Station: Play Track 1")
+    PLAY_FOLDER(STATION_SPEAKER, 1)     // Set folder to trains
+    PLAY_TRACK(STATION_SPEAKER, 1, 20)  // Play track 1 at 20% volume
+    WAITFOR(STATION_SPEAKER)            // Wait for completion
+    PRINT("Announcement finished")
+DONE
 ```
 
 ### Route with Folder Change
 
-```cpp  
-ROUTE(611, "Station: Full Sequence")  
-    PLAY_FOLDER(STATION_SPEAKER, 1)  
-    PLAY_TRACK(STATION_SPEAKER, 1, 20)  
-    WAITFOR(STATION_SPEAKER)  
-      
-    DELAY(2000)  
-      
-    PLAY_FOLDER(STATION_SPEAKER, 3)     // Switch to music folder  
-    PLAY_TRACK(STATION_SPEAKER, 5, 15)  
-    WAITFOR(STATION_SPEAKER)  
-DONE  
+```cpp
+ROUTE(611, "Station: Full Sequence")
+    PLAY_FOLDER(STATION_SPEAKER, 1)
+    PLAY_TRACK(STATION_SPEAKER, 1, 20)
+    WAITFOR(STATION_SPEAKER)
+
+    DELAY(2000)
+
+    PLAY_FOLDER(STATION_SPEAKER, 3)     // Switch to music folder
+    PLAY_TRACK(STATION_SPEAKER, 5, 15)
+    WAITFOR(STATION_SPEAKER)
+DONE
 ```
 
 ### Pause/Resume Example
 
-```cpp  
-ROUTE(612, "Station: Pause Test")  
-    PLAY_FOLDER(STATION_SPEAKER, 1)  
-    PLAY_TRACK(STATION_SPEAKER, 10, 20)  
-    DELAY(5000)                         // Play for 5 seconds  
-    PLAY_PAUSE(STATION_SPEAKER)         // Pause  
-    DELAY(3000)                         // Wait 3 seconds  
-    PLAY_RESUME(STATION_SPEAKER)        // Resume  
-    WAITFOR(STATION_SPEAKER)            // Wait for completion  
-DONE  
+```cpp
+ROUTE(612, "Station: Pause Test")
+    PLAY_FOLDER(STATION_SPEAKER, 1)
+    PLAY_TRACK(STATION_SPEAKER, 10, 20)
+    DELAY(5000)                         // Play for 5 seconds
+    PLAY_PAUSE(STATION_SPEAKER)         // Pause
+    DELAY(3000)                         // Wait 3 seconds
+    PLAY_RESUME(STATION_SPEAKER)        // Resume
+    WAITFOR(STATION_SPEAKER)            // Wait for completion
+DONE
 ```
 
 ### Volume Control
 
-```cpp  
-ROUTE(613, "Station: Volume 30%")  
-    PLAY_VOLUME(STATION_SPEAKER, 9)     // 9 on 0-30 scale \= 30%  
+```cpp
+ROUTE(613, "Station: Volume 30%")
+    PLAY_VOLUME(STATION_SPEAKER, 9)     // 9 on 0-30 scale \= 30%
 DONE
 
-ROUTE(614, "Station: Volume 80%")  
-    PLAY_VOLUME(STATION_SPEAKER, 24)    // 24 on 0-30 scale \= 80%  
-DONE  
+ROUTE(614, "Station: Volume 80%")
+    PLAY_VOLUME(STATION_SPEAKER, 24)    // 24 on 0-30 scale \= 80%
+DONE
 ```

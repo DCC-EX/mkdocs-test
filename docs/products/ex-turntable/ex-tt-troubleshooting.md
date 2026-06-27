@@ -11,7 +11,7 @@ This is a list of common questions that we answer by our various support channel
 In this section, you will find some tips on troubleshooting the various issues encountered with |EX-TT|.
 
 ### Homing failure
-  
+
 | Symptoms | Common Causes |
 | --- | --- |
 | Turntable rotates on start up and ends in a random position <br/>Serial console reports "ERROR: Turntable failed to home, setting random home position" | The magnet in the turntable is too far away from the sensor <br/>Hall effect sensor is connected incorrectly |

@@ -17,18 +17,18 @@ hide:
 
 - [Download stsw-link007-v3-16-9.zip or later from st.com ](https://www.st.com/en/development-tools/stsw-link007.html)
 
-- You will need to navigate through the “en.stsw-link007_v3-16-9” folder down to the “Windows” folder, which contains an executable “ST-LinkUpgrade.exe” to upgrade the firmware on the NUCLEO devices.  
+- You will need to navigate through the "en.stsw-link007_v3-16-9" folder down to the "Windows" folder, which contains an executable "ST-LinkUpgrade.exe" to upgrade the firmware on the NUCLEO devices.
   ![download and extracted folders](/_static/images/nucleo/stlink-driver-install.png){width=40%}
 
-- Double click this file to run it, which should present the upgrade window.  
+- Double click this file to run it, which should present the upgrade window.
   ![download and extracted folders](/_static/images/nucleo/stlink-driver-install2.png){width=40%}
 
-- Clicking the “Device Connect” button will attempt to connect to your NUCLEO device and display the currently installed firmware version, along with the version it will attempt to upgrade to.  
+- Clicking the "Device Connect" button will attempt to connect to your NUCLEO device and display the currently installed firmware version, along with the version it will attempt to upgrade to.
   ![download and extracted folders](/_static/images/nucleo/stlink-driver-install2.png){width=40%}
 
-- Providing your NUCLEO device has been detected and is running an older version of the firmware, click “Yes >>>>” to proceed with the upgrade.
+- Providing your NUCLEO device has been detected and is running an older version of the firmware, click "Yes >>>>" to proceed with the upgrade.
 
-- Hopefully you will see the “Upgrade is successful” pop up appear when complete.  
+- Hopefully you will see the "Upgrade is successful" pop up appear when complete.
   ![download and extracted folders](/_static/images/nucleo/stlink-driver-install3.png){width=40%}
 
-- At this point, after clicking “OK” the software should display the new version of the firmware that has been applied to your device.
+- At this point, after clicking "OK" the software should display the new version of the firmware that has been applied to your device.

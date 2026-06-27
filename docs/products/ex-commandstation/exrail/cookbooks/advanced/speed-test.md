@@ -23,13 +23,13 @@ AUTOMATION(9000,"Run Speed Test") // speed test setup
 SEQUENCE(9001)
   // make sure loco is at start point
   AT(TS1) ESTOP
-  // drive loco fwd at testSpeed 
+  // drive loco fwd at testSpeed
   STEALTH(DCC::setThrottle(loco,testSpeed,true);)
   // At timing-start sensor(s2) record time
   AT(TS2) STEALTH(testStartTime=millis();)
  // at timing-end sensor(s3) stop and calculate and print speed
  AT(TS3) ESTOP STEALTH(
-    StringFormatter::send(&USB_SERIAL, 
+    StringFormatter::send(&USB_SERIAL,
        F("Speed %d Time %l\n"), testSpeed, millis()-testStartTime);
     testSpeed+=testStep;
     if (testSpeed>testEndSpeed) kill(); // test complete =DONE

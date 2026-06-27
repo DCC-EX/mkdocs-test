@@ -9,7 +9,7 @@ A VPIN is an Arduino pin number that has been extended to include pins on extern
 
 By giving external device pins unique VPIN numbers, the vast majority of the pin manipulation required by the user is controlled the same way regardless of whether the pin is an actual Arduino pin on the main CPU, an expander pin over i2c perhaps behind a multiplexer, a virtual pin or even a software-only pin simulation.
 
-The vast majority of VPINs are either output (e.g. LEDs and servos) or input (e.g. buttons and sensors) but rarely both.  
+The vast majority of VPINs are either output (e.g. LEDs and servos) or input (e.g. buttons and sensors) but rarely both.
 
 ## Creating virtual pins
 
@@ -18,17 +18,17 @@ Virtual pins are normally defined by specifying the Hardware Driver that is used
 For Example
 
 ```cpp
-    HAL(PCA9685, 100, 16, 0x40) 
-    HAL(PCA9685, 116, 16, 0x41) 
-    HAL(PCA9685, 132, 16, 0x42) 
+    HAL(PCA9685, 100, 16, 0x40)
+    HAL(PCA9685, 116, 16, 0x41)
+    HAL(PCA9685, 132, 16, 0x42)
     HAL(PCA9685, 148, 16, {I2CMux_0,SubBus_4,0x43})
 
-    HAL(MCP23017, 164, 16, 0x20) 
-    HAL(MCP23017, 180, 16, 0x21) 
+    HAL(MCP23017, 164, 16, 0x20)
+    HAL(MCP23017, 180, 16, 0x21)
 ```
 
-This would create VPINs 100 to 115 to represent the 16 servo outputs on the first [PCA9685](?PCA9685) servo control board at I2C address 0x40 and VPINs 164 to 179 on the first [MCP23017](?MCP23017) i/o expander.  
-VPINs for two PCA9685 and two MCP23017 are pre-defined, except for PCA9685 used with Nucleo-144.  
+This would create VPINs 100 to 115 to represent the 16 servo outputs on the first [PCA9685](?PCA9685) servo control board at I2C address 0x40 and VPINs 164 to 179 on the first [MCP23017](?MCP23017) i/o expander.
+VPINs for two PCA9685 and two MCP23017 are pre-defined, except for PCA9685 used with Nucleo-144.
 Refer to wiring details and fuller list of [supported I2C devices](#) elsewhere.
 
 ## Using OUTPUT VPINS
@@ -54,8 +54,8 @@ Bear in mind that buttons (connected between a pin and ground) and most sensors 
 For example:
 
 ```cpp
-ONBUTTON(202) 
-   RED(11) 
+ONBUTTON(202)
+   RED(11)
    THROW(2)
    CLOSE(1)
    GREEN(12)

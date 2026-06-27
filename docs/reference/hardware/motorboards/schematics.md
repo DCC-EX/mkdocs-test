@@ -6,5 +6,5 @@ Links to download/view schematics, etc.
 
 - [Arduino Motor Shield R3 L298P](https://docs.arduino.cc/resources/schematics/A000079-schematics.pdf)
 
-- [IBT_2 BTS7960 - Schematic](/_static/images/schematics/ibt-2-schematic.jpg)  
+- [IBT_2 BTS7960 - Schematic](/_static/images/schematics/ibt-2-schematic.jpg)
   [Handson Technology datasheet](/_static/images/schematics/bts7960-motor-driver.pdf)

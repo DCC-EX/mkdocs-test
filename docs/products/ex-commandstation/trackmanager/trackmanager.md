@@ -28,16 +28,16 @@ TrackManager is what lets you dynamically configure the outputs of your **EX-Com
 
 ## Defaults
 
-Track A defaults to MAIN.  Track B defaults to PROG.  
+Track A defaults to MAIN.  Track B defaults to PROG.
 
 ## myAutomation.h
 
-Track mode can be defined in myAutomation.h  
+Track mode can be defined in myAutomation.h
  &nbsp; &nbsp; &nbsp; &nbsp; [Example: Set a track to DC](../exrail/cookbooks/dc-tracks.md)
 
 ## Engine Driver
 
-This screen shows where track modes can be set with Engine Driver:  
+This screen shows where track modes can be set with Engine Driver:
 
  &nbsp; &nbsp; &nbsp; &nbsp; ![TrackManager ED](/_static/images/engine-driver/ed-trackmanager02.png){: style="width: 40%"}
 
@@ -45,8 +45,8 @@ This screen shows where track modes can be set with Engine Driver:
 
 **NOTE:** &nbsp; DC output is only available with specific hardware requirements.
 
-TrackManager  -  [reference document](/reference/trackmanager/trackmanager.md)  
-Multi-district DC mode track sync -  [additional detail](/reference/trackmanager/dc-track-sync.md)  
+TrackManager  -  [reference document](/reference/trackmanager/trackmanager.md)
+Multi-district DC mode track sync -  [additional detail](/reference/trackmanager/dc-track-sync.md)
 As these pages are under development, you may also want to refer to the [legacy documentation](https://dcc-ex.com/legacy-docs/trackmanager/index.html)
 
 ==TODO== move legacy docs

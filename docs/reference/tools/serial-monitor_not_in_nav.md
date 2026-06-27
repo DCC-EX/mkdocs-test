@@ -48,14 +48,14 @@ For details, refer to [Issuing Direct Commands with EX-Installer](/products/ex-w
 
     While it is possible use the Arduino IDE, we *seriously* **DO NOT RECOMMEND IT** for anyone that is technically inexperienced. It is an order of magnitude more complex and much slower.
 
-    Just run **EX-Installer** and open the serial monitor in the [EX-Installer Device Monitor](../../installer/testing.md). 
+    Just run **EX-Installer** and open the serial monitor in the [EX-Installer Device Monitor](../../installer/testing.md).
 
 ### What You Will Need
 
 * The Arduino IDE
 * A Computer (Just about any Windows, Mac or Linux machine including the Raspberry Pi)
 * The USB cable for your Arduino
-  
+
 ### Download and install the Arduino IDE
 
 Rather than go into details that are already covered in great detail on the Arduino web page, just follow the instructions in the following link and then return here.

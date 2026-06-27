@@ -29,7 +29,7 @@ The **EX-Turntable** integration includes:
 * An LED and accessory output to control turntable specific automations (e.g. flashing warning light)
 
 !!! note "Credit where credit is due!"
-  
+
     **AccelStepper.h credit:** This project would not be effective without the excellent work by Mike McCauley on the AccelStepper.h library that enables us to have somewhat prototypical acceleration and deceleration of the turntable. This library is included with the **EX-Turntable** software (sans example sketches), and more details can be found on the official [AccelStepper](http://www.airspayce.com/mikem/arduino/AccelStepper/) web page. Note as of version 0.7.0 there is no longer a need for modifications to the library.
 
     **NmraDcc.h credit:** Also, while not directly used in this software, Alex Shephard's "DCCInterface_TurntableControl" was the inspiration for the initial turntable logic for another DCC driven turntable that translated into the beginnings of **EX-Turntable**. You can see this code as part of the [NmraDcc Arduino library](https://github.com/mrrwa/NmraDcc).

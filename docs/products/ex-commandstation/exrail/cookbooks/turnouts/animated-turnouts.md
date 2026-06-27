@@ -15,28 +15,28 @@ First we need to hide the real turnout/point from the throttles. This is done by
   is changed to
 
 ```cpp
-  TURNOUTL(1001,1,HIDDEN) 
+  TURNOUTL(1001,1,HIDDEN)
 ```
 
   Now we can create a virtual turnout/point that will be seen by the throttles and specify what we want to happen when it is thrown or closed.
 
 ```cpp
    VIRTUAL_TURNOUT(100,"Coal yard exit")
-   
+
    ONCLOSE(100)
      RED(501)  // set approach signal
      RED(505)  // set approach signal
      DELAY(4000) // wait for signalman to move
-     CLOSE(1001) // close the real turnout/point 
+     CLOSE(1001) // close the real turnout/point
      DELAY(5000)
      GREEN(501) // set approach signal
      DONE
-   
+
    ONTHROW(100)
      RED(501)  // set approach signal
      RED(505)  // set approach signal
      DELAY(4000) // wait for signalman to move
-     THROW(1001) // throw the real turnout/point 
+     THROW(1001) // throw the real turnout/point
      DELAY(5000)
      GREEN(505) // set approach signal
      DONE

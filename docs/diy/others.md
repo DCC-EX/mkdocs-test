@@ -17,7 +17,7 @@ RAILCOM support is currently being investigated.
 ## The following devices are NOT supported
 
 - Arduino UNO and Nano. We have supported them in the past but the increase in **EX-CommandStation** features has oustripped their miniscule memory capabilities.
-- Mega Wifi. Some users have had success with this but we have had approximately 50% failure rate on these devices. Its just not worth it. 
+- Mega Wifi. Some users have had success with this but we have had approximately 50% failure rate on these devices. Its just not worth it.
 - Arduino Giga. This has a very high cost and some strange WiFi limitations.
 - Teensy (various models). These have been made to work in the past but without help we are unable to update or support them.
 - Most ESP32 versions. There are dozens of ESP32 versions and the vast majority of them will not be able to run **EX-CommandStation**. We can only support the explicitly recommended *ESP32 Wroom* version.

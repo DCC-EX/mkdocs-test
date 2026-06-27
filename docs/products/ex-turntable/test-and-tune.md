@@ -265,7 +265,7 @@ Stall 1's door is operated by enabling Vpin 164, 2 by Vpin 165, and 3 by Vpin 16
       CALL(103)
     ENDIF
   DONE
-  
+
   SEQUENCE(101)
     SET(164)
     AFTER(167)
@@ -309,7 +309,7 @@ It is highly recommended  to utilise the virtual ``RESERVE()`` and ``FREE()`` fu
 
 To define the required turntable positions in the example six position turntable from above, you will need to have this content added to your "myAutomation.h" file. Note that we recommend adding an additional ROUTE to activate the homing process.
 
-!! note  "Tip" 
+!! note  "Tip"
 
     To make this as simple as possible, we have included "myTurntable-EX.example.h" with the CommandStation-EX software containing an example automation macro with some pre-defined positions based on the example above as a starting point. Feel free to either copy or rename this to "myAutomation.h" and use it.
 

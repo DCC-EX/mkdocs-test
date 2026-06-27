@@ -32,7 +32,7 @@ inactive_angle = The angle to which the servo will move when the turnout/point i
 
 profile = The speed at which a turnout/point will move: Instant, Fast, Medium, Slow.
 
-description = A human-friendly description of the turnout/point that will appear in WiThrottle apps and Engine Driver. Note that this must be enclosed in quotes “”. In some cases the HIDDEN keyword can be used here to prevent the turnout/point being visible to the throttles.
+description = A human-friendly description of the turnout/point that will appear in WiThrottle apps and Engine Driver. Note that this must be enclosed in quotes "". In some cases the HIDDEN keyword can be used here to prevent the turnout/point being visible to the throttles.
 
 An example definition for a servo connected to the second control pins of the first PCA9685 connected to the CommandStation, using the slow profile for prototypical operation:
 

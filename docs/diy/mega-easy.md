@@ -32,7 +32,7 @@ To build a basic DIY **EX-CommandStation** with an **EX-8874** in easy steps you
 **DO NOT USE ANY OTHER SHIELD TYPE WITHOUT FIRST CHECKING OUR DETAILED INSTRUCTIONS FOR THAT SHIELD.**
 
 1. Make sure the pins are straight.
-2. Line up the shield with the connectors at the same end as the mega and carefully insert the pins. This is easiest if you insert one side slightly first. Don’t force anything, there will be a visible gap  between the bottom of the motor board and the top of the headers.
+2. Line up the shield with the connectors at the same end as the mega and carefully insert the pins. This is easiest if you insert one side slightly first. Don't force anything, there will be a visible gap  between the bottom of the motor board and the top of the headers.
 
 Check your work. Look under and through where the boards connect, make sure no pins missed the holes and got bent so that they run along the outside of the headers.
 
@@ -45,7 +45,7 @@ Check your work. Look under and through where the boards connect, make sure no p
 2. Mount the Wi-Fi shield on the EX8874 noting the correct orientation in the pictures and there will be 2 pins on either side which are deliberately missing.![Wifi shield](/_static/images/mega/mega5.png)
 3. Use a male-female Dupont wire (normally supplied with the shield) to connect to any one of the row of Tx pins on the Wi-Fi Board, and connect the other end to the Rx1 pin on the mega (pin 19). See photo below.
 4. Take a second jumper wire and connect it to any one of the row of Rx pins on the Wi-Fi Board and connect the other end to Tx1 on the mega (pin 18).![txrx](/_static/images/mega/mega6.png)
-5. Use a small piece of sticky tape or similar to keep the Dupont wires firmly in place in the mega header sockets. They are easily knocked out.  
+5. Use a small piece of sticky tape or similar to keep the Dupont wires firmly in place in the mega header sockets. They are easily knocked out.
 
 ### Connect your power supply
 

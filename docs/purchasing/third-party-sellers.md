@@ -9,9 +9,9 @@
 
 ---
 
-## ![US Flag](/_static/images/icons/flag_us_small.png) David Yale  
+## ![US Flag](/_static/images/icons/flag_us_small.png) David Yale
   David provides the files to make a 3D printed case or can sell an already made case to fit the Mega **EX-CommandStation** with a motor shield, Wi-Fi shield, and LCD display. He has several designs.
-  
+
   [David's Makerbot Thingiverse page](https://www.thingiverse.com/dcyale/designs>)
 
   [David's DCC-EX case designs](https://www.thingiverse.com/thing:4619514>)
@@ -20,7 +20,7 @@
 
 ---
 
-## ![US Flag](/_static/images/icons/flag_uk_small.png) **EX-CommandStation** Rack (The Mac Rack)  
+## ![US Flag](/_static/images/icons/flag_uk_small.png) **EX-CommandStation** Rack (The Mac Rack)
   Created by Neil McKechnie, this is a rack style 3D printed case that can hold the **EX-CommandStation** Arduino, Motor Shield and Raspberry Pi.
 
   [Neil's DCC++/EX Controller Case](https://wakwak2popo.wordpress.com/2021/01/04/dcc-controller-case/)
@@ -29,7 +29,7 @@
 
 ---
 
-## ![US Flag](/_static/images/icons/flag_us_small.png) Sumner's Mega Dual Configuration Case (3D Print) 
+## ![US Flag](/_static/images/icons/flag_us_small.png) Sumner's Mega Dual Configuration Case (3D Print)
   Created by Sumner Patterson, this is a range of Mega **EX-CommandStation** cases with different configurations and different tops at different heights to handle your boards:
 
   * Uno and Motor Shield Case
@@ -42,10 +42,10 @@
   [List of Sumner's 3D printed cases](https://1fatgmc.com/RailRoad/3D-Printer/3D-Printer-Index.html)
 
   ![Sumner Pi Case](/_static/images/suppliers/sumner_pi_case.png){ width=300px}
-  
+
 ---
 
-## ![US Flag](/_static/images/icons/flag_us_small.png) Hans Tanner's ioTT cube case system (3D Print) 
+## ![US Flag](/_static/images/icons/flag_us_small.png) Hans Tanner's ioTT cube case system (3D Print)
 
   Hans has created a stacking system of cases similar to the M5Stack system. Using his skill in design and TinkerCAD, he is offering the design files for free for you to 3D print yourself or have printed. He also sells kits and accessories (like a Loconet board) in his Tindie store:
 
@@ -66,7 +66,7 @@
 
 ---
 
-## ![US Flag](/_static/images/icons/flag_us_small.png) Nebbish's Arduino Mega case for DCC-EX (3D Print) 
+## ![US Flag](/_static/images/icons/flag_us_small.png) Nebbish's Arduino Mega case for DCC-EX (3D Print)
 
   Case to hold Arduino Mega, motor shield, and .96" display for DCC-EX
 

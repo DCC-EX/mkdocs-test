@@ -82,7 +82,7 @@ Define scroll mode as 0, 1 or 2
 #define SCROLLMODE 1
 ```
 
-In order to avoid wasting memory the current scroll buffer is limited to 8 lines.  Some users wishing to display additional information such as TrackManager power states have requested additional rows aware of the warning that this will take extra RAM.  
+In order to avoid wasting memory the current scroll buffer is limited to 8 lines.  Some users wishing to display additional information such as TrackManager power states have requested additional rows aware of the warning that this will take extra RAM.
 
 If you wish to include additional rows:
 

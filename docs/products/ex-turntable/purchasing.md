@@ -1,5 +1,5 @@
 # Purchasing
-  
+
 ## What you need for EX-Turntable
 
 * An **EX-CommandStation** running version 5.0.0 or later (preferably at least 5.4.0)

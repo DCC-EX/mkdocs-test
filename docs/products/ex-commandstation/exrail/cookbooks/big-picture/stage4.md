@@ -21,7 +21,7 @@ that can be used to describe sequential command 'sequences' to automatically tak
 
 **EXRAIL** will then run the sequences *automatically* on EX-CommandStation startup, be triggered *manually* or run on occurrence of a *specified events*.
 
-Once started, each 'sequence' will step through a list of simple keyword commands, in order, until they reach a ``DONE`` keyword.  Multiple concurrent sequences are supported.  
+Once started, each 'sequence' will step through a list of simple keyword commands, in order, until they reach a ``DONE`` keyword.  Multiple concurrent sequences are supported.
 
 By using *Conditional*, *Branching*, *Delay* and *Wait* commands it is possible to design complex sequences with multiple outcomes which can drive your trains, operate your turnouts/points and signals, and react to events on your layout.
 

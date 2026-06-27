@@ -4,7 +4,7 @@ This additional information may be useful for those who are not using **EX-CSB1*
 
 With DC mode, the PWM signal is provided with the brake pin.  The Signal-1 pin provides direction.
 
-These diagrams provide options on how logic gates could be used to provide inputs In1, In2 for motor boards, such as L298N or IBT_2.  
+These diagrams provide options on how logic gates could be used to provide inputs In1, In2 for motor boards, such as L298N or IBT_2.
 
 **NOTE:** L298P and L298HN motor shields use the XNOR gate.  To enable low side brake in both directions, an additional logic gate can be used.
 

@@ -11,13 +11,13 @@ Commands are used through the Command Station input to configure the sensorCAM s
 
 ## Conventions used on this page
 
-**`, space`**	Equivalent parameter separators.  CS must use space character  
-**`%%`** &nbsp; &nbsp; &nbsp; &nbsp; Represents a Sensor's bank/sensor two digit identifier (digits 0-7 only)  
-**`rr xx`**&nbsp; &nbsp; Represent the row and column position of sensor (range 1-236 & 1-316 only)  
-**`#`** &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Represents a single decimal digit (0-9)  
-**`$`** &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Represents a single alpha-numeric character (A-Z or 0-9 as relevant to command)  
-**`[ ]`** &nbsp; &nbsp; &nbsp;  &nbsp;Indicates enclosed parameter is optional.  Do NOT type brackets into commands  
-**`< >`** &nbsp; &nbsp; &nbsp;  &nbsp;Encloses native CS command and MUST be typed to define CS command  
+**`, space`**	Equivalent parameter separators.  CS must use space character
+**`%%`** &nbsp; &nbsp; &nbsp; &nbsp; Represents a Sensor's bank/sensor two digit identifier (digits 0-7 only)
+**`rr xx`**&nbsp; &nbsp; Represent the row and column position of sensor (range 1-236 & 1-316 only)
+**`#`** &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Represents a single decimal digit (0-9)
+**`$`** &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Represents a single alpha-numeric character (A-Z or 0-9 as relevant to command)
+**`[ ]`** &nbsp; &nbsp; &nbsp;  &nbsp;Indicates enclosed parameter is optional.  Do NOT type brackets into commands
+**`< >`** &nbsp; &nbsp; &nbsp;  &nbsp;Encloses native CS command and MUST be typed to define CS command
 
 ## Native cam USB & CS cmd formats
 
@@ -25,7 +25,7 @@ Commands are used through the Command Station input to configure the sensorCAM s
 | --- | --- | :--- |
 | **a%%[,rr,xx]** | **`<Na %%[ rr xx]>`** | **enAble Sensor and refresh reference**<br> Sensor will respond to changing image. rr,xx set as new coordinates |
 | **b#[,$]** | **`<Nb #>`** | **Bank occupancy status [& Brightness ScaleFactor $]**<br>Trip status of 8 sensors in a single byte (8 bits) (hex & binary) |
-| **c$$$$** | `<n/a>` | **Camera re-Calibration and re-reference Sensors**<br>Severe changes to camera settings.  Refer to manuals before use! |  
+| **c$$$$** | `<n/a>` | **Camera re-Calibration and re-reference Sensors**<br>Severe changes to camera settings.  Refer to manuals before use! |
 | **d%%[#]** | `<n/a>` | **Difference Score for Sensor [# repeats]**<br>Prints colour diff score, brightness score and sum of both |
 | **e** | **`<Ne>`** | **EPROM - save sensorCAM configuration to EPROM**<br>Records parameters in EPROM to be restored upon next Reset |
 | **f%%** | **`<Nf %%>`** | **Frame print. Full 16x3 byte Sensor pixel values**<br>Tabulates 4x4 (RGB) pixels for current and reference sensor images |

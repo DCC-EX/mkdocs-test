@@ -21,7 +21,7 @@ I2C expansion modules provide accessory pins, but I2C wiring requires a lot of a
 - Qwiic a.k.a. STEMMA QT - connectors and wiring are designed for 3.3V.
 - When using a Mega:  the Qwiic connector on EX8874 the power pin is 3.3V, but the SDA SCL pins have pullups to 5V. For most cases, use the I2C headers on the EX8874 when using a Mega.
 - Qwiic wiring pattern is used for the [Adafruit STEMMA QT / Qwiic connectors](https://learn.adafruit.com/introducing-adafruit-stemma-qt/technical-specs#stemma-4-pin-i2c-both-standard-and-stemma-qt-3035230) - and is different from the [NXP pattern *below*](#wiring-pattern-for-lower-capacitance).
-  
+
 ## I2C wire length</strong>
 
 - Length increases capacitance and reduces signal quality.
@@ -34,21 +34,21 @@ I2C expansion modules provide accessory pins, but I2C wiring requires a lot of a
 
 This table shows the parallel resistance values with multiple I2C modules:
 
-- Note that Mega has 10k onboard; **EX-CSB1** has 5.1k; others are weak or disabled.  
-- I2C modules, such as PCA9685 and MCP23017, will generally have 10k pullups. LCD and OLED displays may have 4.7k or 10k.  
-- Add/remove pullups to result in 2.5-3.0 mA.  
-- With LTC4311 the need to adjust resistance may be less important, unless resistance is too low.  
+- Note that Mega has 10k onboard; **EX-CSB1** has 5.1k; others are weak or disabled.
+- I2C modules, such as PCA9685 and MCP23017, will generally have 10k pullups. LCD and OLED displays may have 4.7k or 10k.
+- Add/remove pullups to result in 2.5-3.0 mA.
+- With LTC4311 the need to adjust resistance may be less important, unless resistance is too low.
 
 ![I2C Resistance](/_static/images/i2c-devices/i2c-pullup-resistance167.png){ width=70% }
 
 ## Wiring pattern for lower capacitance
 
-[https://www.nxp.com/docs/en/user-guide/UM10204.pdf](https://www.nxp.com/docs/en/user-guide/UM10204.pdf)  
+[https://www.nxp.com/docs/en/user-guide/UM10204.pdf](https://www.nxp.com/docs/en/user-guide/UM10204.pdf)
 
 ![I2C Wiring Pattern](/_static/images/i2c-devices/i2c-wiring-pattern.jpg){ width=70% }
 
 ## Power sources
 
-- A separate power source for the VCC pin of the I2C bus avoids potential voltage spikes/sags and noise into the power circuit of the microprocessor, and should make the I2C accessory bus more resilient.  
-- Additional/separate power source is required for the +5V servo power on the PCA9685 module.  
+- A separate power source for the VCC pin of the I2C bus avoids potential voltage spikes/sags and noise into the power circuit of the microprocessor, and should make the I2C accessory bus more resilient.
+- Additional/separate power source is required for the +5V servo power on the PCA9685 module.
 - When using separate power sources, there is potential for a ground loop. ==TODO==

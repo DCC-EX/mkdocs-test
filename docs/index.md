@@ -33,13 +33,13 @@ hide:
 
     ---
      [![csb1](/_static/images/ex-csb1/csb1-small.png){ align=right }](/products/ex-commandstation/ex-csb1.md)
-    The [**EX-CommandStation Booster 1 Express**](/products/ex-commandstation/ex-csb1.md), otherwise known as an **EX-CSB1**, can be purchased ready to run, complete with WiFi and power supply. If you have a phone, you could be running your trains in less than 5 minutes, without a computer.  
-    If you would like to buy one, [check out our sellers](/purchasing/official-sellers.md)  
+    The [**EX-CommandStation Booster 1 Express**](/products/ex-commandstation/ex-csb1.md), otherwise known as an **EX-CSB1**, can be purchased ready to run, complete with WiFi and power supply. If you have a phone, you could be running your trains in less than 5 minutes, without a computer.
+    If you would like to buy one, [check out our sellers](/purchasing/official-sellers.md)
     If you want to get started with an **EX-CSB1** [read the product page](/products/ex-commandstation/ex-csb1.md)
 
     ---
     [![diy](/_static/images/mega/mega-small.png){ align=right}](/diy/diy.md)
-    Or you can enjoy [building your own](/diy/diy.md), staggeringly cheap, version from readily-available Arduino parts in use by modellers from all over the world. We have even designed parts to make this easy for beginners, no soldering required. 
+    Or you can enjoy [building your own](/diy/diy.md), staggeringly cheap, version from readily-available Arduino parts in use by modellers from all over the world. We have even designed parts to make this easy for beginners, no soldering required.
     Of course, we also have a wealth of information for more adventurous builders if you have the appropriate electronics skills.
 
     ---
@@ -51,7 +51,7 @@ hide:
 - ## :material-help-box-multiple-outline: What is DCC-EX
 
     **DCC-EX** is world-wide team of dedicated enthusiasts producing **free** and open source **DCC** and **DC** software and hardware solutions to run your model trains and layout. Our mission is to use our many decades of software and hardware experience to make model trains accessible and affordable to everyone.
-    
+
     You can learn more on our [About Us](/about/about.md) page.
 
     ---

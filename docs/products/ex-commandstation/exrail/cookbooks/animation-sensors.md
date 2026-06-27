@@ -10,8 +10,8 @@ The ONBUTTON(x) sequence is started when the vpin x is made HIGH by a button pre
 ONBUTTON(172)
   PRINT("Moooving on")
   SERVO(135,417) // move cow out of the way
-  DELAY(4000)  // wait 
-  THROW(3) // throw turnout/point 3 
+  DELAY(4000)  // wait
+  THROW(3) // throw turnout/point 3
   GREEN(130) // set a signal
   DONE
 ```
@@ -24,7 +24,7 @@ The ONSENSOR(x) sequence is started when an input vpin changes state between HIG
 
 ```cpp
 ONSENSOR(176)
-  IF(176) 
+  IF(176)
     PRINT("Sensor 176 gone HIGH")
     GREEN(110) // set signal
   ELSE

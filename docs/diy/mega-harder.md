@@ -17,8 +17,8 @@ To build a basic DIY **EX-CommandStation** you will need:
 - USB cable to your PC for the processor.
 - an Arduino Standard Motor-Shield (or others as noted in ==TODO==) to power the track.
 - A double-insulated DC power supply with a voltage suitable for your layout/locos.
-- An additional double-insulated DC Power supply is needed to drive the Arduino microcontroller.  
-  7 to 9 volts, using the barrel connector, is recommended when using a WiFi shield.  
+- An additional double-insulated DC Power supply is needed to drive the Arduino microcontroller.
+  7 to 9 volts, using the barrel connector, is recommended when using a WiFi shield.
   5 volts will not work for the barrel connector, but could be connected via USB cable.
 - Optionally
     - A female barrel connector to match the plug on your chosen track power supply
@@ -29,7 +29,7 @@ To build a basic DIY **EX-CommandStation** you will need:
 
 ### Prepare your Mega
 
-- Use sticky tape or similar to cover the top of the USB connector on the mega. This prevents any accidental contact with the underside of the motor shield.  
+- Use sticky tape or similar to cover the top of the USB connector on the mega. This prevents any accidental contact with the underside of the motor shield.
 
 ### Optionally mount your Ethernet Shield
 

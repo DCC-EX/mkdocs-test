@@ -5,7 +5,7 @@ tags:
   - _9C9_9RESET9
   - _9D9_9RESET9
   - _9J9_9I9
-  - _c 
+  - _c
 ---
 
 # <small>``<s>`` &nbsp; ``<#>`` <br/> ``<C RESET>`` ``<D RESET>`` </small> <br/> Query or Reset the EX-CommandStation

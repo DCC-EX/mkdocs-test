@@ -28,7 +28,7 @@ Serial commands to modify the system PROG track settings. Used primarily to help
 
 ## Parameters
 
-* **value**: value to set. 
+* **value**: value to set.
 
     For time base commands values are in microseconds (µS) unless the parameter ``MS`` is added, in which case the value will be in milliseconds (ms).
 
@@ -38,7 +38,7 @@ N/A
 
 ## Notes
 
-* The Ack current limit is set according to the DCC standard(s) of 60mA. Most decoders send a quick back and forth current pulse to the motor to generate this ACK. However, some modern motors (N and Z scales) may not be able to draw that amount of current. You can adjust down this limit. Or, if for some reasons your acks seem to be too “trigger happy” you can make it less sensitive by raising this limit.
+* The Ack current limit is set according to the DCC standard(s) of 60mA. Most decoders send a quick back and forth current pulse to the motor to generate this ACK. However, some modern motors (N and Z scales) may not be able to draw that amount of current. You can adjust down this limit. Or, if for some reasons your acks seem to be too "trigger happy" you can make it less sensitive by raising this limit.
 
 * The NMRA specifies that the ACK pulse duration should be 6 milliseconds, which is 6000 microseconds (µS), give or take 1000 µS. That means the minimum pulse duration is 5000 µS and the maximum is 7000 µS. There are many poorly designed decoders in existence so **DCC-EX** extends this range from 4000 to 8500 µS. If you have any decoders that still do not function within this range, you can adjust the ACK MIN and ACK MAX parameters.
 

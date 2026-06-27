@@ -37,7 +37,7 @@ For anyone developing a throttle or controller application, these considerations
 * Refer to the [DCC-EX Native/Serial Commands List](./serial-command-list.md)
 * A throttle/controller MUST accept and ignore anything it does not understand
 * Track power state has three possible states: On, Off, and Unknown
-* There is no concept of a throttle ‘acquiring’ a loco.
+* There is no concept of a throttle 'acquiring' a loco.
 Simply, commands for a loco are sent to the **EX-CommandStation**, and the **EX-CommandStation** 'broadcasts' the status of any/every loco to every throttle any time a change is made to a loco.
 * There is no concept of the throttle disconnecting from the **EX-CommandStation**.
 
@@ -171,9 +171,9 @@ Routes and Automations can also have their current status and caption altered dy
 ``<f cab func1 func2>``     Use ``<F cab function 1/0>``
 
 ``<t  slot cab speed dir>`` Just drop the slot number
-  
+
 ``<T commands>`` other than ``<T id 0/1>``
-  
+
 ``<s>``
 
 ``<c>``

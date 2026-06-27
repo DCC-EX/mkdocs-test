@@ -7,10 +7,10 @@ hide:
 
 - [Link to EX-CSB1 Schematic](/_static/images/schematics/csb1-schematic.pdf)
 
-- Arduino headers  
+- Arduino headers
   ![EX-CSB1 headers](/_static/images/ex-csb1/csb1-arduino-headers.png){ width=60%}
 
-- I2C headers  
+- I2C headers
   ![EX-CSB1 I2C headers](/_static/images/ex-csb1/i2c-headers-csb1.png){ width=60%}
 
 - How to utilize Serial2

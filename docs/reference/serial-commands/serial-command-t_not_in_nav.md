@@ -3,7 +3,7 @@ tags:
   - _t_loco
   - _t_loco_tSpeed_direction
   - _t_ignore_loco_tSpeed_direction
-  - 
+  -
 ---
 
 # <small>``<t «loco» [«tSpeed» «direction»]>``</small> <br/>Request or set loco status

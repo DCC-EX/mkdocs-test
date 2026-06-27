@@ -48,11 +48,11 @@ Serial command to request roster info.
 ### *Examples Commands*
 
 * request list of locos in the roster: ``<J R>``
-* request the details of loco with an id of 100: ``<J R 100>`` 
+* request the details of loco with an id of 100: ``<J R 100>``
 
 ### Example Responses
 
-* a list of locos in the roster: <br/>``<jR 100 201 203 1005>`` 
+* a list of locos in the roster: <br/>``<jR 100 201 203 1005>``
 * details of loco ``100`` from the roster: <br/>``<jR 100, "Class 37 Loram Livery", "Lights/WarmEngineStart/Brake/*Single-Horn/*Double-Horn/Light Engine Mode/Coasting/Speed Lock/Sound Fade OutIn/Flange Squeal//*Buffer Up/*Coupling/STATIONARY-Guard's Whistle MOVING-Detonators/Wagon Snatching & Buffering/High Intensity Light-On/Red Tail Lights On Both Ends Non di/Marker Lights On Both Ends Non di/Cab Light On-No.1 End Fan/Cab Light On-No.2 End non fan/No.1 End Dir Lights Off/No.2 End Dir Lights Off/Compressor/Windscreen Wipers/Engine Room">``
 
 --8<-- "snippets/abbr.md"

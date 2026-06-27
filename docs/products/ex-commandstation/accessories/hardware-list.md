@@ -32,6 +32,6 @@ Although the devices are summarised here, you should refer to **EXRAIL** cookboo
 * [TCA8418](?TCA8418) 80-key keypad encoder
 * [TM1638](?TM1638)  8-button, 8-led, 8 digit device
 * [TouchKeypad](?TouchKeypad) capacitative touch-pad based on the TTP229-B
-* [Trainbrains](?Trainbrains) see [trainbrains.eu](https://trainbrains.eu) 
+* [Trainbrains](?Trainbrains) see [trainbrains.eu](https://trainbrains.eu)
 * [VL53LOX](?VL53LOX) time-of-flight
 * [XL95535](?XL95535) Multi-relay device

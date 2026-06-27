@@ -16,20 +16,20 @@ STEALTH_GLOBAL(
   void updateLocoScreen() {
     const byte loco_slots=8;
     static byte current_slot=loco_slots-1;
-    static byte shown_speed[loco_slots]; // remember whats already shown
+    static byte shown_speed[loco_slots]; // remember what's already shown
     static bool first_call=true;
-    
+
     if (first_call) {
       first_call=false;
       for (int i=0; i<loco_slots; i++) shown_speed[i]=127;
     }
-    
+
     // switch to next row
     current_slot= (current_slot + 1) % loco_slots;
     auto loco=DCC::speedTable[current_slot].loco;
     if (loco<0) return; // this slot is no longetr used
-    if (loco==0) return; // we are beyond the last loco   
-    
+    if (loco==0) return; // we are beyond the last loco
+
     auto speed = DCC::speedTable[current_slot].speedCode;
     if (speed== shown_speed[current_slot]) return; // no change in speed
     shown_speed[current_slot] = speed; // remember speed for next time
@@ -46,6 +46,6 @@ To ensure the function is called twice per second we use the UserAddin HAL featu
 The LCD/OLED number 2 used by the function is connected by I2C.
 
 ```cpp
-HAL(UserAddin,updateLocoScreen,500) 
-HAL(HALDisplay<OLED>, 2, 0x3d, 128, 64)  
+HAL(UserAddin,updateLocoScreen,500)
+HAL(HALDisplay<OLED>, 2, 0x3d, 128, 64)
 ```

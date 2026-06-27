@@ -50,7 +50,7 @@ Note: Add additional 'ROSTER(...)' lines for all your locos
 
 If a function is not available leave the spot empty. (Don't even have the space character.)
 
-For example: 
+For example:
 
 ```cpp
    ROSTER(2825,"CN ES44AC","Headlight/Bell/*Horn/Coupler/Dynamic Brake///Flange Squeal/Startup & Shutdown")
@@ -87,7 +87,7 @@ Note that it only has FO (the Headlight) and not following slashes.
 
 #### Using EX-Installer
 
-The **EX-Installer** can make use of the config files from a 'saved' location.  
+The **EX-Installer** can make use of the config files from a 'saved' location.
 
 *If you have previously saved the config files...*
 
@@ -138,7 +138,7 @@ The Roster will be automatically loaded with the **EX-CommandStation** software.
 There are three ways to load & store your Locomotive Icon Image in Engine Driver 2.32.142 and above.
 
 1. **Automatically from your existing JMRI Roster & Media**
-  
+
     If you have a WiThrottle Server that does support loco images:
 
     * Start JMRI and capture and load your images into JMRI Roster & Media panel as normal
@@ -153,7 +153,7 @@ There are three ways to load & store your Locomotive Icon Image in Engine Driver
          * Have image icons displayed for the locomotives
 
 2. **Manually entered directly into your Android Engine Driver folder**
-  
+
     * Capture then rename the image exactly like the Roster ID name in JMRI & **EXRAIL** and save as a .PNG file
     * Then place the engine Image into your Android device/phone in the <br/> '/Android/data/jmri.enginedriver/files/recent_engine_list' folder <br/> example image name;  PE 1225.png<br/><br/>
     Note: certain characters are not allowed in file names so need to be substituted with "_" (underscore) if you have used them in your roster name. They are:
@@ -179,7 +179,7 @@ There are three ways to load & store your Locomotive Icon Image in Engine Driver
 
 * If the loco already has an image in the JMRI Roster (of the currently connected WiThrottle Server), you won't be able to choose a local image.
 * If you later add an image in the JMRI Roster for the loco (or later connect to a WiThrottle Server that has an image), it will automatically overwrite the local image with the one on the server.
-* In the Recent Locos list you *can not* add images to locos entered by a DCC address. (i.e. not from the roster)  
+* In the Recent Locos list you *can not* add images to locos entered by a DCC address. (i.e. not from the roster)
 
 Also refer to the [Engine Driver Loco Icon Documentation](https://flash62au.github.io/EngineDriver_Home/configuration/loco_icons.html?highlight=images) for more information.
 

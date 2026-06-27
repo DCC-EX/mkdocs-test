@@ -44,7 +44,7 @@ from the startup logs using the serial monitor
 5. Examine the log further down and you should see where the VPINs are assigned. The following advice assumes that the address was 0x40 and the first VPIN will be 100.
 6. Plug a servo into the first output socket. DO NOT mechanically connect the servo arm to any turnout/point or animation as the servo may move unexpectedly and cause physical damage.  You will connect the servo arm after exercising the servo (step 8).
 7. Connect the additional servo power supply to the long-edge turrets on the PCA9685, observing the correct polarity. ![PCA9685](/_static/images/i2c-devices/PCA9685.jpg){: style="width: 70%"}
-8. On the installers serial monitor, enter the command ```<D SERVO 100 200>``` which should move the servo. Experiment with other positions than 200. The usable range is approximately 102 to 490.  
+8. On the installers serial monitor, enter the command ```<D SERVO 100 200>``` which should move the servo. Experiment with other positions than 200. The usable range is approximately 102 to 490.
 9. (Optionally) Use the **EX-Toolbox** Android app to experiment with servo angles and servo arm lengths until you have the required throw distance and angles to suit your servo mounting preferences.
 
 ## Define your turnouts/points

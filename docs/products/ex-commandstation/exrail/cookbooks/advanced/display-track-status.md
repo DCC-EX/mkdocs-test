@@ -7,7 +7,7 @@ To display track status, add a line in myAutomation.h
   #include "myTrackStatus.example.h"
 ```
 
-If using Mega, a line will be needed in config.h to allocate memory for additional lines on the first display.  
+If using Mega, a line will be needed in config.h to allocate memory for additional lines on the first display.
 ```cpp
   #define MAX_CHARACTER_ROWS 17
 ```
@@ -44,9 +44,9 @@ Contents of the example file -- suggested for review/reference on how various **
 
 // Reporting power status and mA for each track on the LCD
 HAL(Bitmap,8236,1) // create flag 8236
-AUTOSTART DELAY(5000) 
+AUTOSTART DELAY(5000)
  ROUTE("TRACKSTATUS"_hk, "Resume/Pause JL Display")
-  IF(8236) 
+  IF(8236)
     RESET(8236)
      ROUTE_CAPTION("TRACKSTATUS"_hk, "Paused") ROUTE_INACTIVE("TRACKSTATUS"_hk)
       SCREEN(0, 8, "Track status paused")
@@ -60,7 +60,7 @@ AUTOSTART DELAY(5000)
       SCREEN(0,16, "")
       PRINT("to pause/resume: </START TRACKSTATUS> \n")
     DONE ENDIF
-  SET(8236) 
+  SET(8236)
    ROUTE_CAPTION("TRACKSTATUS"_hk, "Running") ROUTE_ACTIVE("TRACKSTATUS"_hk)
     PRINT("Resume JL Display")
    FOLLOW("PAUSETRACKSTATUS"_hk)
@@ -81,21 +81,21 @@ DONE
 
 ## Lines displayed
 
-Options to adjust lines reported.  
+Options to adjust lines reported.
 On the primary display, SCREEN 0, blank lines are not displayed.
 
 There are multiple ways to avoid an extra line on the display; perhaps you just want the display to only contain 8 lines and not scroll.
 
-a.  One way to eliminate the Total line is to blank the line.  
-    Figure out which line is used.  If the `<JL` command results in 3 lines, starting on line 8, then write a blank line on line 10.  
-    .. in your customized myTrackStatus.h file.  
+a.  One way to eliminate the Total line is to blank the line.
+    Figure out which line is used.  If the `<JL` command results in 3 lines, starting on line 8, then write a blank line on line 10.
+    .. in your customized myTrackStatus.h file.
 
 ```cpp
     PARSE("<JL 0 8>")  // screen 0  start on line 8
     SCREEN(0,10, "")  // blank to remove total
 ```
 
-b.  use/change the parameter in config.h  
+b.  use/change the parameter in config.h
 
 ```cpp
     #define MAX_CHARACTER_ROWS 10
@@ -104,7 +104,7 @@ b.  use/change the parameter in config.h
 .. which results in lines 0-9 being available for use; line 10 is not displayed.
 
 c.  If it is the scrolling, and you want fewer lines displayed, select any of the static lines to blank
-    
+
 ```cpp
     AUTOSTART
     SET_TRACK(A,MAIN)

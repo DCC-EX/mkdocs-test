@@ -1,4 +1,4 @@
-# Analog sensors  
+# Analog sensors
 
 Sensors that read analog values are comparatively rare for model railway use but are sometimes used to detect a binary state depending on the current detected by a sensor.
 

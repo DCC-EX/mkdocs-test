@@ -123,7 +123,7 @@ DCC-EX does not support using the same address, for example 100(long) and 100(sh
 
 ## Redefine locomotive state table size
 
-This is the maximum number of locos that can be controlled at the same time. This defaults to 50 (8 on a UNO/NANO). If you have enough free memory you can increase this to a maximum of 255. If you are short of memory (typically a Mega with WiFi and lots of accessories) you can decrease it  to a minimum of 2. RAM is only used for locos that have been throttled since the **EX-CommandStation** was started so you cannot save RAM by setting this.  
+This is the maximum number of locos that can be controlled at the same time. This defaults to 50 (8 on a UNO/NANO). If you have enough free memory you can increase this to a maximum of 255. If you are short of memory (typically a Mega with WiFi and lots of accessories) you can decrease it  to a minimum of 2. RAM is only used for locos that have been throttled since the **EX-CommandStation** was started so you cannot save RAM by setting this.
 
 ```cpp
 #define MAX_LOCOS 100

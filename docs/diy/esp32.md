@@ -8,25 +8,25 @@ ESP32-WROOM-32 was selected as the microprocessor for the **EX-CSB1**. Although 
 
 ## Advantages and Disadvantages of the ESP32
 
-![ESPDuino-32](/_static/images/esp32/esp32-wroom32-mark.png){: style="width: 30%" align=right}  
+![ESPDuino-32](/_static/images/esp32/esp32-wroom32-mark.png){: style="width: 30%" align=right}
 
 - ESP32-WROOM-32 advantages:
 
-    - Built-in WiFi  
-    - Memory  
-    - Sniffer/Booster capable (with additional optocoupler circuit)  
+    - Built-in WiFi
+    - Memory
+    - Sniffer/Booster capable (with additional optocoupler circuit)
 
 - ESP32-WROOM-32 is more complex than using the Arduino Mega. Disadvantages include:
 
-    - GPIO pin numbers are used (vs. Arduino style pin location numbers)  
-    - ESP32 pins are not 5V tolerant  
-    - I2C bus is 3.3V  
-    - Soldering is required to modify the WeMos D1 R32/ESPDuino-32 board  
-    - Modifications are required for motor shields to protect ADC input pins  
-    - ADC input range begins at 0.15V  
+    - GPIO pin numbers are used (vs. Arduino style pin location numbers)
+    - ESP32 pins are not 5V tolerant
+    - I2C bus is 3.3V
+    - Soldering is required to modify the WeMos D1 R32/ESPDuino-32 board
+    - Modifications are required for motor shields to protect ADC input pins
+    - ADC input range begins at 0.15V
     - ESP32 Espressif boards package version 2.0.17 is required
 
-![ESPDuino-32](/_static/images/esp32/espduino-32.png){: style="width: 25%" align=right}  
+![ESPDuino-32](/_static/images/esp32/espduino-32.png){: style="width: 25%" align=right}
 
 ## Known Working Boards
 
@@ -38,10 +38,10 @@ ESP32-WROOM-32 was selected as the microprocessor for the **EX-CSB1**. Although 
 ## WeMos D1 R32
 
 - WeMos D1 R32/ESPDduino-32 has the Uno form factor.
-- WeMos D1 R32 boards have some obvious hardware errors:  
+- WeMos D1 R32 boards have some obvious hardware errors:
 
-    - Pullup voltage to the IO0 pin is too high (4.2v instead of 3.3-3.8v) which leads to unreliable WiFi.  
-    - IOREF pin does not output 3v3, but instead breaches the UNO R3 specification and outputs 5V.  
+    - Pullup voltage to the IO0 pin is too high (4.2v instead of 3.3-3.8v) which leads to unreliable WiFi.
+    - IOREF pin does not output 3v3, but instead breaches the UNO R3 specification and outputs 5V.
     - A0 and A1 pins cannot be used for ADC input when WiFi is used.
 
 See the [ESP32 Reference pages](../reference/esp32/esp32-ex8874.md) for more information.

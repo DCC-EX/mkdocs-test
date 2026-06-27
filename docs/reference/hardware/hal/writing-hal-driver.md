@@ -2,7 +2,7 @@
 
 Suppose you have a particular device you want to use with **EX-CommandStation**, but there isn't a driver for it.  Well, you could ask for one, and we may well write one for you.  Or you could write it yourself.
 
-The HAL framework is designed to be extendable by the creation of device drivers, without needing to modify the base **EX-CommandStation** software or the HAL itself.  
+The HAL framework is designed to be extendable by the creation of device drivers, without needing to modify the base **EX-CommandStation** software or the HAL itself.
 
 A HAL driver is normally created as an include (.h) file, although for more complex ones it may include source (.cpp) files as well.
 
@@ -22,7 +22,7 @@ Here is a template for a HAL driver, showing these elements:
   #include "IODevice.h"
   #include "DIAG.h"  // for DIAG calls
 
-  class MyDevice: public IODevice { 
+  class MyDevice: public IODevice {
   public:
     // Constructor
     MyDevice(VPIN firstVpin, int nPins) {
@@ -46,7 +46,7 @@ Here is a template for a HAL driver, showing these elements:
       delayUntil(currentMicros + 10*1000UL);  // 10ms till next entry
     }
     int _readAnalogue(VPIN vpin) override {
-      // Return acquired data value, e.g. 
+      // Return acquired data value, e.g.
       int pin = vpin - _firstVpin;
       return _value[pin];
     }

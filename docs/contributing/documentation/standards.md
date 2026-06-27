@@ -65,7 +65,9 @@ So:
 
 ## Do Not Duplicate Content
 
-**DO NOT CREATE DUPLICATE CONTENT** as this increases the maintenance burden significantly but, more importantly, makes it difficult for users when content appears slightly differently in two different places or even contradicts itself. When needing to repeat information in more than one place, take advantage of the [MkDocs Snippets](/contributing/documentation/mkdocs-features.md#snippets) feature. This allows you to include the same markdown content in multiple places.
+**DO NOT CREATE DUPLICATE CONTENT** as this increases the maintenance burden significantly but, more importantly, makes it difficult for users when content appears slightly differently in two different places or even contradicts itself. When needing to repeat information in more than one place.
+
+Either link to the other page, or take advantage of the [MkDocs Snippets](/contributing/documentation/mkdocs-features.md#snippets) feature. This allows you to include the same markdown content in multiple places.
 
 ## Directory Naming, Page Naming, and Titles
 
