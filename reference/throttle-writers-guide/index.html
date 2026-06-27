@@ -4082,7 +4082,7 @@
   
   
   <span class="md-ellipsis">
-    EX-Toolbox
+    EX-Toolbox Overview
     
   </span>
   
@@ -4223,7 +4223,7 @@
   
   
   <span class="md-ellipsis">
-    Overview
+    EX-FastClock Overview
     
   </span>
   
@@ -4689,7 +4689,7 @@
   
   
   <span class="md-ellipsis">
-    EX-SensorCAM
+    EX-SensorCAM Overview
     
   </span>
   
@@ -6836,6 +6836,15 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#turntablestraversers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Turntables/Traversers
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -8757,6 +8766,15 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#turntablestraversers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Turntables/Traversers
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -8811,6 +8829,7 @@
 
 
 <h1 id="throttle-writers-guide-doc-incomplete">Throttle Writers Guide (doc incomplete)<a class="headerlink" href="#throttle-writers-guide-doc-incomplete" title="Permanent link">&para;</a></h1>
+<p><mark>TODO</mark> Document incomplete.</p>
 <p>This page is a brief set of notes to help people write/create their own software or physical/hardware throttle/controllers to use the <strong>DCC-EX</strong> EX-CommandStations.</p>
 <p>The EX-CommandStation can communicate with either Native/Serial Protocol or the WiThrottle protocol.  Only the Native/Serial Protocol is discussed here. If you wish to use the WiThrottle protocol see the <a href="https://www.jmri.org/help/en/package/jmri/jmrit/withrottle/Protocol.shtml">JMRI Web Site</a> for more information.</p>
 <h2 id="general">General<a class="headerlink" href="#general" title="Permanent link">&para;</a></h2>
@@ -8825,7 +8844,7 @@ Some of these commands are deliberately multi-stage requests to avoid timing and
 <li>Refer to the <a href="../serial-command-list/">DCC-EX Native/Serial Commands List</a></li>
 <li>A throttle/controller MUST accept and ignore anything it does not understand</li>
 <li>Track power state has three possible states: On, Off, and Unknown</li>
-<li>There is no concept of a throttle 'acquiring' a loco.
+<li>There is no concept of a throttle 'acquiring' a loco.<br/>
 Simply, commands for a loco are sent to the <strong>EX-CommandStation</strong>, and the <strong>EX-CommandStation</strong> 'broadcasts' the status of any/every loco to every throttle any time a change is made to a loco.</li>
 <li>There is no concept of the throttle disconnecting from the <strong>EX-CommandStation</strong>.</li>
 </ul>
@@ -8888,45 +8907,43 @@ Simply, commands for a loco are sent to the <strong>EX-CommandStation</strong>, 
 </tbody>
 </table>
 <h2 id="roster-information">Roster Information<a class="headerlink" href="#roster-information" title="Permanent link">&para;</a></h2>
-<p>The <code>&lt;JR&gt;</code> command requests a list of cab ids from the roster.
-e.g. responding <code>&lt;jR 3 200 6336&gt;</code>
-or <jR> for none.</p>
-<p>Each Roster entry had a name and function map obtained by:
+<p>The <code>&lt;JR&gt;</code> command requests a list of cab ids from the roster.<br/>
+e.g. responding <code>&lt;jR 3 200 6336&gt;</code><br/>
+or <code>&lt;jR&gt;</code> for none.</p>
+<p>Each Roster entry had a name and function map obtained by:<br/>
 <code>&lt;JR 200&gt;</code>  reply like <code>&lt;jR 200 "Thomas" "whistle/*bell/squeal/panic"&gt;</code></p>
 <p>Refer to <strong>EXRAIL</strong> ROSTER command for function map format.</p>
 <p>Obtaining throttle status.</p>
-<p><code>&lt;t loco&gt;</code>  Requests a deliberate update on the cab speed/functions in the same format as the cab broadcast.
-    <code>&lt;l loco slot speedbyte functionMap&gt;</code></p>
+<p><code>&lt;t loco&gt;</code>  Requests a deliberate update on the cab speed/functions in the same format as the cab broadcast.<br/>
+<code>&lt;l loco slot speedbyte functionMap&gt;</code></p>
 <p><strong>NOTE:</strong> A slot of -1 indicates that the cab is not in the reminders table and this command will not reserve a slot until such time as the cab is throttled.</p>
 <h2 id="controlling-locos">Controlling Locos<a class="headerlink" href="#controlling-locos" title="Permanent link">&para;</a></h2>
 <p><mark>TODO</mark> Controlling Locos</p>
 <h3 id="momentum">Momentum<a class="headerlink" href="#momentum" title="Permanent link">&para;</a></h3>
-<p>The <strong>EX-CommandStation</strong> can apply momentum to throttle movements in the same way that a standards compliant DCC decoder can be set to do. This momentum can be defaulted system wide and overridden on individual locos. It does not use or alter the loco CV values and so it also works when driving DC locos.
+<p>The <strong>EX-CommandStation</strong> can apply momentum to throttle movements in the same way that a standards compliant DCC decoder can be set to do. This momentum can be defaulted system wide and overridden on individual locos. It does not use or alter the loco CV values and so it also works when driving DC locos.<br/>
 The momentum is applied regardless of the throttle type used (or even <strong>EXRAIL</strong>).</p>
 <p>Momentum is specified in mS / throttle_step.</p>
-<p>There is a new command <code>&lt;m loco accelerating [brake]&gt;</code>
-where the brake value defaults to the accelerating value.</p>
-<p>For example:
-<code>&lt;m 3 0&gt;</code>   sets loco 3 to no momentum.
-<code>&lt;m 3 21&gt;</code>   sets loco 3 to 21 mS/step.
+<p>There is a new command <code>&lt;m loco accelerating [brake]&gt;</code> where the brake value defaults to the accelerating value.</p>
+<p>For example:</p>
+<p><code>&lt;m 3 0&gt;</code>   sets loco 3 to no momentum.<br/>
+<code>&lt;m 3 21&gt;</code>   sets loco 3 to 21 mS/step.<br/>
 <code>&lt;m 3 21 42&gt;</code>   sets loco 3 to 21 mS/step accelerating and 42 mS/step when decelerating.</p>
-<p><code>&lt;m 0 21&gt;</code>  sets the default momentum to 21mS/Step for all current and future locos that have not been specifically set.
+<p><code>&lt;m 0 21&gt;</code>  sets the default momentum to 21mS/Step for all current and future locos that have not been specifically set.<br/>
 <code>&lt;m 3 -1&gt;</code>   sets loco 3 to track the default momentum value.</p>
 <p><strong>EXRAIL</strong>
   A new macro <code>MOMENTUM(accel [, decel])</code> sets the momentum value of the current tasks loco ot the global default if loco=0.</p>
 <p>Note: Setting Momentum 7,14,21 etc is similar in effect to setting a decoder CV03/CV04 to 1,2,3.</p>
 <p>As an additional option, the momentum calculation is based on the difference in throttle setting and actual speed. For example, the time taken to reach speed 50 from a standing start would be less if the throttle were set to speed 100, thus increasing the acceleration.</p>
-<p><code>&lt;m LINEAR&gt;</code> - acceleration is uniform up to selected throttle speed.
+<p><code>&lt;m LINEAR&gt;</code> - acceleration is uniform up to selected throttle speed.<br/>
 <code>&lt;m POWER&gt;</code>  - acceleration depends on difference between loco speed and selected throttle speed.</p>
 <hr />
 <h2 id="turnoutspoints">Turnouts/Points<a class="headerlink" href="#turnoutspoints" title="Permanent link">&para;</a></h2>
 <p>The conventional turnout/point definition commands and the <code>&lt;H&gt;</code> responses do not contain information about the turnout/point description which may have been provided in an <strong>EXRAIL</strong> script. A turnout/point description is much more user friendly than T123 and having a list helps the throttle UI build a suitable set of buttons.</p>
-<p><code>&lt;JT&gt;</code> command returns a list of turnout/point ids. The throttle should be uninterested in the turnout/point technology used but needs to know the ids it can throw/close and monitor the current state.
+<p><code>&lt;JT&gt;</code> command returns a list of turnout/point ids. The throttle should be uninterested in the turnout/point technology used but needs to know the ids it can throw/close and monitor the current state.<br/>
 e.g.  response <code>&lt;jT 1 17 22 19&gt;</code></p>
-<p><code>&lt;JT 17&gt;</code> requests info on turnout/point 17.
-e.g. response <code>&lt;jT 17 T "Coal yard exit"&gt;</code> or <code>&lt;jT 17 C "Coal yard exit"&gt;</code>
-(T=thrown, C=closed)
-or <code>&lt;jT 17 C ""&gt;</code> indicating turnout/point description not given.
+<p><code>&lt;JT 17&gt;</code> requests info on turnout/point 17.<br/>
+e.g. response <code>&lt;jT 17 T "Coal yard exit"&gt;</code> or <code>&lt;jT 17 C "Coal yard exit"&gt;</code> (T=thrown, C=closed)<br/>
+or <code>&lt;jT 17 C ""&gt;</code> indicating turnout/point description not given.<br/>
 or <code>&lt;jT 17 X&gt;</code> indicating turnout/point unknown (or possibly hidden.)</p>
 <p><strong>NOTE:</strong> It is still the throttles responsibility to monitor the status broadcasts. There is no intention of providing a command that indicates the turnout/point list has been updated since the throttle started.</p>
 <p><strong>NOTE:</strong> Turnouts/Points marked in <strong>EXRAIL</strong> with the HIDDEN keyword instead of a "description" will NOT show up in these commands.</p>
@@ -8936,23 +8953,46 @@ or <code>&lt;jT 17 X&gt;</code> indicating turnout/point unknown (or possibly hi
 <hr />
 <h2 id="automationsroutes">Automations/Routes<a class="headerlink" href="#automationsroutes" title="Permanent link">&para;</a></h2>
 <p>A throttle need to know which <strong>EXRAIL</strong> Automations and Routes it can show the user.</p>
-<p><code>&lt;JA&gt;</code> Returns a list of Automations/Routes
- e.g. <code>&lt;jA 13 16 23&gt;</code>
- Indicates route/automation ids.
- Information on each id needs to be obtained by
- <code>&lt;JA 13&gt;</code>
- returns e.g. <code>&lt;jA 13 R "description"&gt;</code> for a route
- or  <code>&lt;jA 13 A "description"&gt;</code> for an automation.
- or <code>&lt;jA 13 X&gt;</code> for id not found</p>
+<p><code>&lt;JA&gt;</code> Returns a list of Automations/Routes<br/>
+e.g. <code>&lt;jA 13 16 23&gt;</code><br/>
+Indicates route/automation ids.<br/></p>
+<p>Information on each id needs to be obtained by<br/>
+<code>&lt;JA 13&gt;</code><br/>
+returns e.g. <code>&lt;jA 13 R "description"&gt;</code> for a route<br/>
+or  <code>&lt;jA 13 A "description"&gt;</code> for an automation.<br/>
+or <code>&lt;jA 13 X&gt;</code> for id not found</p>
 <p>What's the difference:</p>
-<p>A Route is just a call to an <strong>EXRAIL</strong> ROUTE, traditionally to set some turnouts or signals but can be used to perform any kind of <strong>EXRAIL</strong> function... but its not expecting to know the loco.
-   Thus, a route can be triggered by sending in for example <code>&lt;/START 13&gt;</code>.</p>
-<p>An Automation is a handoff of the last accessed loco id to an <strong>EXRAIL</strong> AUTOMATION which would typically drive the loco away.
-   Thus, an Automation expects a start command with a cab id
-   e.g. <code>&lt;/START 13 3&gt;</code></p>
+<ul>
+<li>A Route is just a call to an <strong>EXRAIL</strong> ROUTE, traditionally to set some turnouts or signals but can be used to perform any kind of <strong>EXRAIL</strong> function... but its not expecting to know the loco.<br/>
+Thus, a route can be triggered by sending in for example <code>&lt;/START 13&gt;</code>.</li>
+<li>An Automation is a handoff of the last accessed loco id to an <strong>EXRAIL</strong> AUTOMATION which would typically drive the loco away.<br/>
+Thus, an Automation expects a start command with a cab id<br/>
+e.g. <code>&lt;/START 13 3&gt;</code></li>
+</ul>
 <p>Routes and Automations can also have their current status and caption altered dynamically by <strong>EXRAIL</strong> (docs <mark>TODO</mark>)</p>
 <h3 id="route-status">Route Status<a class="headerlink" href="#route-status" title="Permanent link">&para;</a></h3>
 <p><mark>TODO</mark> Route Status</p>
+<h3 id="turntablestraversers">Turntables/Traversers<a class="headerlink" href="#turntablestraversers" title="Permanent link">&para;</a></h3>
+<p>A feature is available to support control of turntables/traversers from throttles, including the ability for throttles to "draw" turntable positions as defined to support graphical operation. If <strong>EXRAIL</strong>** commands are used to define turntables and their associated positions, a description for the turntable as well as each position is able to be defined.</p>
+<p>Note that to obtain a complete definition for a turntable/traverser, the turntable object needs to be queried first (<code>&lt;JO id&gt;</code>) followed by the position query (<code>&lt;JP id&gt;</code>) to obtain all defined positions for the object.</p>
+<p><code>&lt;JO&gt;</code> - Returns a list of turntable IDs.</p>
+<p>Example response:</p>
+<ul>
+<li><code>&lt;jT 1 2&gt;</code> - Turntable IDs 1 and 2 are defined.</li>
+</ul>
+<p><code>&lt;JO 1&gt;</code> - Returns details of turntable ID 1.</p>
+<p>Example responses:</p>
+<ul>
+<li><code>&lt;jO 1 0 1 5 "DCC Turntable"&gt;</code> - DCC turntable type currently at position 1, with 5 defined positions and a description "DCC Turntable".</li>
+<li><code>&lt;jO 1 1 0 11 "EX-Turntable"&gt;</code> - EX-Turntable type currently at the home position (0), with 11 defined positions and a description "EX-Turntable"</li>
+</ul>
+<p><code>&lt;JP 1&gt;</code> - Returns all positions for turntable ID 1.</p>
+<p>Example responses (will return all positions):</p>
+<ul>
+<li><code>&lt;jP 1 0 0 ""&gt;</code> - Position 0, unused for DCC turntables, "home" for EX-Turntable</li>
+<li><code>&lt;jP 1 1 100 "Turntable position 1"&gt;</code> - Position 1, 10 degrees from home</li>
+<li><code>&lt;jP 1 2 1800 "Turntable position 2"&gt;</code> - Position 2, 180 degrees from home</li>
+</ul>
 <hr />
 <h2 id="commands-to-avoid-todo">COMMANDS TO AVOID <mark>TODO</mark><a class="headerlink" href="#commands-to-avoid-todo" title="Permanent link">&para;</a></h2>
 <p><code>&lt;f cab func1 func2&gt;</code>     Use <code>&lt;F cab function 1/0&gt;</code></p>
@@ -8994,7 +9034,7 @@ or <code>&lt;jT 17 X&gt;</code> indicating turnout/point unknown (or possibly hi
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 27, 2026 01:26:58 UTC">June 27, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 27, 2026 02:16:48 UTC">June 27, 2026</span>
   </span>
 
     
