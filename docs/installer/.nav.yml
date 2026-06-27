@@ -1,14 +1,13 @@
 nav:
-  - EX-Installer Overview: overview.md
   - EX-Installer: installer.md
   - First Run: first-run.md
   - Select A Product: select-product.md
   - Install EX-CommandStation: install-cs.md
   - Install EX-IOExpander: install-ex-ioexpander.md
-  - Install EX-Turntable: install-ex-turntable.md
+  - Install EX-Turntable<br>: install-ex-turntable.md
   - Download EX-Installer:
       - Linux: download-linux.md
       - Mac: download-mac.md
       - Windows: download-win.md
-  - Test Your Installation: testing.md
-  - <br/>Advanced Users - VSC/PlatformIO: platformio.md
+  - Test Your Installation<br>: testing.md
+  - Advanced Users - VSC/PlatformIO: platformio.md

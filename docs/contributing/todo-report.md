@@ -14,7 +14,7 @@
 </style>
 Scanned docs root: `C:\Users\akers\OneDrive\github\github_doco\mkdocs-test\docs`
 
-Total TODO matches: 144
+Total TODO matches: 143
 
 | File | Line | Line text |
 | --- | ---: | --- |
@@ -30,7 +30,6 @@ Total TODO matches: 144
 | [docs/installer/download-linux.md](../installer/download-linux.md) | 7 | ==TODO== - Add screenshots & fix page flow |
 | [docs/installer/install-ex-ioexpander.md](../installer/install-ex-ioexpander.md) | 3 | ==TODO== complete EX-Installer EX-IOExpander page needed |
 | [docs/installer/install-ex-turntable.md](../installer/install-ex-turntable.md) | 3 | ==TODO== complete EX-Installer EX-Turntable page needed |
-| [docs/installer/installer.md](../installer/installer.md) | 3 | ==TODO== This page should probably be combined with the overview page |
 | [docs/installer/platformio.md](../installer/platformio.md) | 3 | ==TODO== - provide setup help. |
 | [docs/reference/legacy-command-reference.md](../reference/legacy-command-reference.md) | 5 | ==TODO== move legacy docs |
 | [docs/reference/throttle-writers-guide.md](../reference/throttle-writers-guide.md) | 82 | ==TODO== Controlling Locos |

@@ -1,12 +1,16 @@
 # EX-Installer
 
-==TODO== This page should probably be combined with the overview page
-
-With the exception of a **EX-CommandStation Booster 1 Express** [EX-CSB1](?CSB1) used solely as shipped with no accessories or options, you will need to download and install software to your **EX-CommandStation** or other **DCC-EX** products.
+With the exception of a **EX-CommandStation Booster 1 Express** [EX-CSB1](?CSB1), used solely as shipped with no accessories or options, you will need to download and install software to your **EX-CommandStation** or other **DCC-EX** products.
 
 This is managed by **EX-Installer** which is responsible for obtaining the relevant software and libraries, merging your custom configurations and mind-bending automations, locating the USB connection to your device,  compiling and downloading the result and showing the serial log from your device if required.
 
 Since every layout is essentially a prototype, and there are a huge variety of hardware build combinations, it is not possible to download a pre-built firmware package from the web.
+
+## Recommended Method
+
+We highly recommend using **EX-Installer** to configure and install **EX-CommandStation**, **EX-IOExpander**, and **EX-Turntable** in preference to using the Arduino IDE or VSCode for all but highly technical users. (See [alternates](#alternatives-to-the-ex-installer) below.)
+
+**EX-Installer** is aimed to be easy to use, and also supports getting help and support by providing the mechanism to obtain log files and monitor your device which is necessary to provide sufficient information to get help.
 
 ## Warning Antivirus Software
 

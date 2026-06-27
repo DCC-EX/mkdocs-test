@@ -50,7 +50,7 @@ All of which apply equally to DC operation, plus:
 
 - How track Districts are set for DC and which locoid addresses they are mapped to
 
-To start this you need to follow the [Installer process described here](/installer/overview.md) and create an AUTOSTART section in your myAutomation.h file to set the track manager options suitable for your layout.
+To start this you need to follow the [Installer process described here](/installer/installer.md) and create an AUTOSTART section in your myAutomation.h file to set the track manager options suitable for your layout.
 
 Two districts A & B are set to DC mode and initially powered On:
 

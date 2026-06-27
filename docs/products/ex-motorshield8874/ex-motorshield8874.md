@@ -97,4 +97,4 @@ Leaving the Fault pins on A4, A5 facilitates bending and jumpering them to nearb
 A6, A7 on Arduino Mega  
 PC2, PC3 on Nucleo-64
 
-After hardware installation, you will need to re-run the [EX-Installer](../../installer/overview.md) to configure the **EX-CommandStation** code to recognize the new board and allow you to control the third and fourth tracks.
+After hardware installation, you will need to re-run the [EX-Installer](../../installer/installer.md) to configure the **EX-CommandStation** code to recognize the new board and allow you to control the third and fourth tracks.
