@@ -13,7 +13,7 @@ The home sensor takes on an additional purpose in this mode, so in addition to f
 
 From here on in, for simplicity, we will refer to all variations of horizontal/vertical travers or limited rotation turntables as traversers.
 
-You will note we've rated the traverser feature as Tinkerer level. This is primarily due to the additional complexity of ensuring the mechanical aspects of the traverser are taken into consideration such as the home and limit sensors.
+You will note we've rated the traverser feature for Intermediate Level Users. This is primarily due to the additional complexity of ensuring the mechanical aspects of the traverser are taken into consideration such as the home and limit sensors.
 
 !!! note "addendum"
 
