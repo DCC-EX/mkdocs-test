@@ -14,7 +14,7 @@
 </style>
 Scanned docs root: `C:\Users\akers\OneDrive\github\github_doco\mkdocs-test\docs`
 
-Total TODO matches: 150
+Total TODO matches: 158
 
 | File | Line | Line text |
 | --- | ---: | --- |
@@ -61,6 +61,14 @@ Total TODO matches: 150
 | [docs/reference/serial-commands/serial-command-caret_not_in_nav.md](../reference/serial-commands/serial-command-caret_not_in_nav.md) | 28 | ==TODO== response |
 | [docs/reference/serial-commands/serial-command-caret_not_in_nav.md](../reference/serial-commands/serial-command-caret_not_in_nav.md) | 42 | * ==TODO== LOW - Example Commands |
 | [docs/reference/serial-commands/serial-command-caret_not_in_nav.md](../reference/serial-commands/serial-command-caret_not_in_nav.md) | 46 | * ==TODO== LOW - Example Responses |
+| [docs/reference/serial-commands/serial-command-dd-anin-anout_not_in_nav.md](../reference/serial-commands/serial-command-dd-anin-anout_not_in_nav.md) | 13 | * ``<D ANOUT «vpin» «position» «profile»>`` see ==TODO== |
+| [docs/reference/serial-commands/serial-command-dd-anin-anout_not_in_nav.md](../reference/serial-commands/serial-command-dd-anin-anout_not_in_nav.md) | 14 | * ``<D ANOUT «vpin» «position»>`` see ==TODO== |
+| [docs/reference/serial-commands/serial-command-dd-anin-anout_not_in_nav.md](../reference/serial-commands/serial-command-dd-anin-anout_not_in_nav.md) | 20 | * **position**: ==TODO== |
+| [docs/reference/serial-commands/serial-command-dd-anin-anout_not_in_nav.md](../reference/serial-commands/serial-command-dd-anin-anout_not_in_nav.md) | 21 | * **profile**: ==TODO== |
+| [docs/reference/serial-commands/serial-command-dd-anin-anout_not_in_nav.md](../reference/serial-commands/serial-command-dd-anin-anout_not_in_nav.md) | 25 | ==TODO== LOW - Responses |
+| [docs/reference/serial-commands/serial-command-dd-anin-anout_not_in_nav.md](../reference/serial-commands/serial-command-dd-anin-anout_not_in_nav.md) | 29 | ==TODO== LOW - Responses |
+| [docs/reference/serial-commands/serial-command-dd-anin-anout_not_in_nav.md](../reference/serial-commands/serial-command-dd-anin-anout_not_in_nav.md) | 39 | * ==TODO== LOW - Example Commands |
+| [docs/reference/serial-commands/serial-command-dd-anin-anout_not_in_nav.md](../reference/serial-commands/serial-command-dd-anin-anout_not_in_nav.md) | 43 | * ==TODO== LOW - Example Responses |
 | [docs/reference/serial-commands/serial-command-dd-cc-diagnostic-messages_not_in_nav.md](../reference/serial-commands/serial-command-dd-cc-diagnostic-messages_not_in_nav.md) | 39 | ==TODO== LOW - Responses |
 | [docs/reference/serial-commands/serial-command-dd-cc-diagnostic-messages_not_in_nav.md](../reference/serial-commands/serial-command-dd-cc-diagnostic-messages_not_in_nav.md) | 53 | ==TODO== LOW - Example Responses |
 | [docs/reference/serial-commands/serial-command-dd_ack_not_in_nav.md](../reference/serial-commands/serial-command-dd_ack_not_in_nav.md) | 61 | ==TODO== LOW - Example Commands |
