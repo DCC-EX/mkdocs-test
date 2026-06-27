@@ -62,7 +62,7 @@ Referring to [adding a new device](/reference/hardware/hal/hal-config.md#adding-
   <* EX-Turntable I2C:x60 Configured on Vpins:600-600  *>          <<== This is the important line, **EX-Turntable** is connected!
 ```
 
-If there is an "OFFLINE" at the end of the **EX-Turntable** line, it indicates something is not quite right. Refer to [showing as offline with `<d hal show>`](ex-tt-troubleshooting.md#ex-turntable-showing-as-offline-with).
+If there is an "OFFLINE" at the end of the **EX-Turntable** line, it indicates something is not quite right. Refer to [showing as offline with `<d hal show>`](ex-tt-troubleshooting.md#ex-turntable-showing-as-offline-with-d-hal-show).
 
 At power on, note that the turntable should have moved itself to the home position, so all commands below assume this is the case.
 

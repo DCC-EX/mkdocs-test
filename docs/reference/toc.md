@@ -21,23 +21,23 @@ li:not(.md-nav__item, .md-tabs__item) a {
     - [DCC-EX Product Overview <small>(Product Overview)</small>](../products/products.md)
     - [Getting Started with DCC-EX <small>(Getting Started)</small>](../products/getting-started.md)
     - **EX-CommandStation**
-        - [The DCC-EX EX-CommandStation - Overview <small>(EX-CommandStation)</small>](../products/ex-commandstation/overview.md)
-        - [**EX-CSB1** CommandStation Booster <small>(EX-CSB1 Command Station/Booster)</small>](../products/ex-commandstation/ex-csb1.md)
-        - [Running a Legacy DC layout <small>(Running a DC layout)</small>](../products/ex-commandstation/dc-running.md)
-        - [Build configuration (config.h) <small>(Configuration (config.h))</small>](../products/ex-commandstation/config-h.md)
-        - [Wifi configuration <br/><small>(Excluding **EX-CSB1** or ESP32 v5.7.0+)</small> <small>(Configure WiFi (Wifi Shield))</small>](../products/ex-commandstation/config-wifi-shield.md)
-        - [WiFi configuration <br/><small>(EX-CSB1 or ESP32 ONLY. v5.7.0+ ONLY)</small> <small>(Configure WiFi (CSB1 & ESP32 v5.7.0+))</small>](../products/ex-commandstation/config-wifi-esp32.md)
+        - [The DCC-EX EX-CommandStation - Overview <small>(EX-CommandStation Overview)</small>](../products/ex-commandstation/overview.md)
+        - [**EX-CSB1** CommandStation/Booster 1 Express <small>(<b>EX-CSB1 CommandStation/Booster 1 Express</b>)</small>](../products/ex-commandstation/ex-csb1.md)
+        - [Build configuration (config.h) <small>(Configuration <small>(config.h)</small>)</small>](../products/ex-commandstation/config-h.md)
+        - [Wifi configuration <br/><small>(Excluding **EX-CSB1** or ESP32 v5.7.0+)</small> <small>(Configure WiFi <small>(Wifi Shield)</small>)</small>](../products/ex-commandstation/config-wifi-shield.md)
+        - [WiFi configuration <br/><small>(EX-CSB1 or ESP32 ONLY. v5.7.0+ ONLY)</small> <small>(Configure WiFi <small>(CSB1 & ESP32 v5.7.0+)</small>)</small>](../products/ex-commandstation/config-wifi-esp32.md)
         - [Testing your EX-CommandStation](../products/ex-commandstation/testing.md)
         - **TrackManager**
             - [TrackManager](../products/ex-commandstation/trackmanager/trackmanager.md)
             - [EX-CSB1 in DCC Booster Mode <small>(Booster)</small>](../products/ex-commandstation/trackmanager/booster.md)
         - **Loco Programming**
-            - [Programming DCC locos <small>(Programming)</small>](../products/ex-commandstation/loco-programming/programming.md)
+            - [Programming DCC locos <small>(Programming Overview)</small>](../products/ex-commandstation/loco-programming/programming.md)
             - [Programming using Serial commands <small>(Serial Programming)</small>](../products/ex-commandstation/loco-programming/serial-programming.md)
             - [Programming with EX-WebThrottle <small>(EX-WebThrottle Programming)</small>](../products/ex-commandstation/loco-programming/webthrottle-programming.md)
             - [Programming with Engine Driver <small>(Engine Driver Programming)</small>](../products/ex-commandstation/loco-programming/engine-driver-programming.md)
-            - [Programming with EX-Toolbox <small>(Toolbox Programming)</small>](../products/ex-commandstation/loco-programming/toolbox-programming.md)
+            - [Programming with EX-Toolbox <small>(EX-Toolbox Programming)</small>](../products/ex-commandstation/loco-programming/toolbox-programming.md)
             - [Using JMRI DecoderPro <small>(Decoderpro)</small>](../products/ex-commandstation/loco-programming/decoderpro.md)
+        - [Running a Legacy DC layout <small>(Running a DC layout)</small>](../products/ex-commandstation/dc-running.md)
         - **Accessories**
             - [Overview - What are Accessories? <small>(Accessories)</small>](../products/ex-commandstation/accessories/accessories.md)
             - [Actuators - to make stuff happen <small>(Actuators)</small>](../products/ex-commandstation/accessories/actuators.md)
@@ -150,7 +150,7 @@ li:not(.md-nav__item, .md-tabs__item) a {
         - [Installing EX-Toolbox <small>(Installation Guide)</small>](../products/ex-toolbox/installation-guide.md)
         - [Connecting EX-Toolbox to your EX-CommandStation <small>(Connecting)</small>](../products/ex-toolbox/connecting.md)
         - [EX-Toolbox User Guide <small>(User Manual)</small>](../products/ex-toolbox/user-guide.md)
-    - **EX-FastClock**
+    - **EX-FastClock<small><small> (DIY)</small></small>**
         - [EX-FastClock <small>(Overview)</small>](../products/ex-fastclock/overview.md)
         - [Hardware](../products/ex-fastclock/hardware.md)
         - [Calibration](../products/ex-fastclock/calibration.md)
@@ -158,8 +158,8 @@ li:not(.md-nav__item, .md-tabs__item) a {
         - [Configuration](../products/ex-fastclock/configuration.md)
         - [Operation](../products/ex-fastclock/operation.md)
         - [Time Control](../products/ex-fastclock/timecontrol.md)
-    - [EX-IOExpander](../products/ex-ioexpander/ex-ioexpander.md)
-    - **EX-Turntable**
+    - [EX-IOExpander <small>(EX-IOExpander<small><small> (DIY)</small></small>)</small>](../products/ex-ioexpander/ex-ioexpander.md)
+    - **EX-Turntable<small><small> (DIY)</small></small>**
         - [EX-Turntable - Overview <small>(EX-Turntable Overview)</small>](../products/ex-turntable/overview.md)
         - [Purchasing](../products/ex-turntable/purchasing.md)
         - [Assembly & Setup](../products/ex-turntable/assembly.md)
@@ -168,13 +168,13 @@ li:not(.md-nav__item, .md-tabs__item) a {
         - [Configuration Options](../products/ex-turntable/configure.md)
         - [EX-Turntable FAQ and Troubleshooting <small>(FAQ & Troubleshooting)</small>](../products/ex-turntable/ex-tt-troubleshooting.md)
         - [Traversers and Limited Rotation Turntables <small>(Traversers & Limited Rotation Turntables)</small>](../products/ex-turntable/traverser.md)
-    - **EX-SensorCAM**
+    - **EX-SensorCAM<small><small> (DIY)</small></small>**
         - [EX-SensorCAM](../products/ex-sensorcam/ex-sensorcam.md)
         - [Installation Guide](../products/ex-sensorcam/installation-guide.md)
         - [EX-SensorCAM Manual <small>(User Manual)</small>](../products/ex-sensorcam/ex-sensor-manual.md)
         - [Native EX-SensorCAM Command List <small>(Command Reference)</small>](../products/ex-sensorcam/ex-sensorcam-command-reference.md)
         - [EX-SensorCAM Abridged Manual <small>(Manual Abridged)</small>](../products/ex-sensorcam/ex-sensor-manual-abridged.md)
-    - [EX-DCCInspector <small>(DCC Inspector)</small>](../products/ex-dccinspector/index.md)
+    - [EX-DCCInspector <small>(DCC Inspector<small><small> (DIY)</small></small>)</small>](../products/ex-dccinspector/index.md)
 - **Purchase**
     - [Official DCC-EX Suppliers <small>(Official Sellers)</small>](../purchasing/official-sellers.md)
     - [Third Party Products and Sellers <small>(Third Party Sellers)</small>](../purchasing/third-party-sellers.md)
@@ -205,12 +205,14 @@ li:not(.md-nav__item, .md-tabs__item) a {
     - [Testing your installation With EX-Installer <small>(Test Your Installation)</small>](../installer/testing.md)
     - [Advanced Users - VSCode/PlatformIO <small>(<br/>Advanced Users - VSC/PlatformIO)</small>](../installer/platformio.md)
 - **Use (Throttles)**
-    - [Throttles and Other Controllers <small>(Throttle Lists)</small>](../throttles/throttles.md)
-    - **Some Recommended Throttles**
-        - [EX-WebThrottle <small>(EX-WebThrottle (Web))</small>](../throttles/ex-webthrottle.md)
-        - [Engine Driver <small>(Engine Driver (Android))</small>](../throttles/engine-driver.md)
-        - [ThrottleCard <small>(ThrottleCard (iOS))</small>](../throttles/throttlecard.md)
-    - [WiThrottle Protocol VS DCC-EX Native/Serial Commands <small>(<br/>WiThrottle VS Native Protocol)</small>](../throttles/withrottle-vs-native-protocol.md)
+    - **Throttles**
+        - [Throttles and Other Controllers <small>(Throttle Lists)</small>](../throttles/throttles.md)
+        - **Some Recommended Throttles**
+            - [EX-WebThrottle <small>(EX-WebThrottle (Web))</small>](../throttles/ex-webthrottle.md)
+            - [Engine Driver <small>(Engine Driver (Android))</small>](../throttles/engine-driver.md)
+            - [ThrottleCard <small>(ThrottleCard (iOS))</small>](../throttles/throttlecard.md)
+        - [WiThrottle Protocol VS DCC-EX Native/Serial Commands <small>(WiThrottle VS Native Protocol)</small>](../throttles/withrottle-vs-native-protocol.md)
+    - [Loco Programming](../throttles/cv-programming.md)
 - **Enhance**
     - [Enhancing & Expanding EX‑CommandStation <small>(Enhancing your EX-CommandStation)</small>](../enhance/index.md)
 - **News**

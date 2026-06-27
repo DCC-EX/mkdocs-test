@@ -14,7 +14,7 @@
 </style>
 Scanned docs root: `C:\Users\akers\OneDrive\github\github_doco\mkdocs-test\docs`
 
-Total TODO matches: 143
+Total TODO matches: 144
 
 | File | Line | Line text |
 | --- | ---: | --- |
@@ -128,6 +128,7 @@ Total TODO matches: 143
 | [docs/products/ex-turntable/assembly.md](../products/ex-turntable/assembly.md) | 210 | Further to this, note that you will need to end up with two separate folders; one containing the **EX-CommandStation** software as per  ==TODO== :doc:`/ex-commandstation/advanced-setup/installation-options/arduino-ide`, and an additional folder containing the **EX-Turntable** software. The **EX-Turntable** software is not a component of **EX-CommandStation** or vice versa, and as such they should not exist in the same folder. |
 | [docs/products/ex-turntable/assembly.md](../products/ex-turntable/assembly.md) | 218 | The process here is the same as installing CommandStation-EX via the Arduino IDE which you can find on the ==TODO== :doc:`/ex-commandstation/advanced-setup/installation-options/arduino-ide` page. |
 | [docs/products/ex-turntable/assembly.md](../products/ex-turntable/assembly.md) | 349 | - VPIN=600 - This is the default virtual pin (Vpin) ID that is used to send **EX-Turntable** commands to. Vpin IDs need to be unique, so if this ID is used elsewhere, change as necessary (refer ==TODO== :ref:`reference/developers/hal:overview`). |
+| [docs/products/ex-turntable/configure.md](../products/ex-turntable/configure.md) | 3 | ==TODO== check the current version number of EX-Turntable and adjust the version notes on this page as needed |
 | [docs/products/ex-turntable/ex-tt-troubleshooting.md](../products/ex-turntable/ex-tt-troubleshooting.md) | 7 | ==TODO== Frequently Asked Questions |
 | [docs/products/ex-turntable/ex-tt-troubleshooting.md](../products/ex-turntable/ex-tt-troubleshooting.md) | 42 | | EX-CommandStation software fails to compile with "#include IO_TurntableEX.h" in myHal.cpp | The version of EX-CommandStation is incorrect, you need the "add-turntable-controller" branch of ==TODO== `EX-CommandStation <https://github.com/DCC-EX/CommandStation-EX/tree/add-turntable-controller>`_ | |
 | [docs/products/ex-turntable/overview.md](../products/ex-turntable/overview.md) | 161 | If you find that the default 45/225 degree angles aren't right for your layout, then this can be modified in "config.h" which is created in ==TODO== :ref:`ex-commandstation/diy/assembly:7. Load firmware on your Command Station`, and the configuration parameter is outlined here: [Phase Switch Angle](/products/ex-turntable/configure.md#phase_switch_angle). |
