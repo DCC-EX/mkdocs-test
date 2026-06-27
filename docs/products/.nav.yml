@@ -6,8 +6,8 @@ nav:
   - EX-WiFiShield8266: ex-wifishield8266/ex-wifishield8266.md
   - EX-WebThrottle: ex-webthrottle/ex-webthrottle.md
   - EX-Toolbox: ex-toolbox
-  - EX-FastClock: ex-fastclock
-  - EX-IOExpander: ex-ioexpander/ex-ioexpander.md
-  - EX-Turntable: ex-turntable
-  - EX-SensorCAM: ex-sensorcam
-  - DCC Inspector: ex-dccinspector/index.md
+  - EX-FastClock<small><small> (DIY)</small></small>: ex-fastclock
+  - EX-IOExpander<small><small> (DIY)</small></small>: ex-ioexpander/ex-ioexpander.md
+  - EX-Turntable<small><small> (DIY)</small></small>: ex-turntable
+  - EX-SensorCAM<small><small> (DIY)</small></small>: ex-sensorcam
+  - DCC Inspector<small><small> (DIY)</small></small>: ex-dccinspector/index.md
