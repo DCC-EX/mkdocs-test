@@ -332,7 +332,7 @@
 
 /* override the font size of code blocks */
 .md-typeset code {
-  font-size:90% !important;
+  font-size:95% !important;
 }
 
 /* Set image sizes when used in headers */
