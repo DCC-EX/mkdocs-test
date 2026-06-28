@@ -7,7 +7,7 @@ For use with ov2640 camera module in esp32-CAM-MB and variants
 [1. Overview](#1-overview)  
 [2. ESP32-CAM](#2-esp32-cam)  
 [3. Physical Installation](#3-physical-installation)  
-[4. Notation& Help commands](#4-notation--help-commands)  
+[4. Notation & Help commands](#4-notation-help-commands)  
 [5. Configuration](#5-configuration)  
 [6. PROCESSING4 monitor/console](#6-processing4-monitorconsole)  
 [7. Wiring Requirements](#7-wiring-requirements)  
