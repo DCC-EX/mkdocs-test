@@ -11,7 +11,7 @@ For use with ov2640 camera module in esp32-CAM-MB and variants
 [5. Configuration](#5-configuration)  
 [6. PROCESSING4 monitor/console](#6-processing4-monitorconsole)  
 [7. Wiring Requirements](#7-wiring-requirements)  
-[8. Host Communication](#8-host-communication)
+[8. Host Communication](#8-host-communication)  
 [9. Methodology of operation](#9-methodology-of-operation)
 
 ## Appendix
@@ -19,12 +19,12 @@ For use with ov2640 camera module in esp32-CAM-MB and variants
 [A. ESP32 sensorCAM Command Summary](#appendix-a)  
 [B. Check List for Optimising Sensor Response](#appendix-b)  
 [C. Parsed DCC EX-CS sensorCAM commands](#appendix-c)  
-[D. Linear Sensor Commands](#appendix-d)
+[D. Linear Sensor Commands](#appendix-d)  
 [E. Tabulated DCC-EX-CS id's for sensorCAM](#appendix-e)  
 [F. Hardware Interface (PCA9515A & Endpoints)](#appendix-f)  
-[G. I2C sensorCAM commands & PROTOCOL](#appendix-g)
+[G. I2C sensorCAM commands & PROTOCOL](#appendix-g)  
 [H. Notes on use of EX-Rail with SensorCAM](#appendix-h)  
-[I. Configuring EX-CS to connect to sensorCAM as an EXIO device](#appendix-i)
+[I. Configuring EX-CS to connect to sensorCAM as an EXIO device](#appendix-i)  
 [J. WROVER-CAM notes](#appendix-j)  
 [K. OV2640 Lens options and geometry](#appendix-k)
 
