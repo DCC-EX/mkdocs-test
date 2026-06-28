@@ -4,5 +4,6 @@ nav:
   - WiFi Boards: wifi-boards
   - Motor Boards: motorboards
   - HAL: 
+     - HAL Device Configuration: hal/hal-device-templates.md
      - I/O Device Drivers and HAL: hal/hal-config.md
      - Writing a HAL Driver: hal/writing-hal-driver.md
