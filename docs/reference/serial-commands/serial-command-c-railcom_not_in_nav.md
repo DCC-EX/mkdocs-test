@@ -4,15 +4,15 @@ tags:
   - _9C9_9RAILCOM9_9OFF9
 ---
 
-# <small>``<C RAILCOM ON|OFF>``</small> <br/> Enable/Disable Railcom cutout
+# <small>``<C RAILCOM ON|OFF>``</small> <br/> Enable/Disable Railcom Cutout
 
 Serial command to Enable/Disable Railcom cutout.
 
-## Command(s)
+## Command
 
 * ``<C RAILCOM ON|OFF>`` Enable/Disable Railcom cutout.
 
-## Parameters
+## Parameter
 
 * **onOff**: *Required* - one of:
     * ``ON`` = Enable Railcom cutout

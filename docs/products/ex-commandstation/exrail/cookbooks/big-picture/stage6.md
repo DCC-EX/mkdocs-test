@@ -399,7 +399,7 @@ To setup for these fully automated sequences, we need to ensure our trains are p
 * Train 2 in block 2, between sensors 2 and 4.
 * Train 3 in block 4, after turnout/point 2.
 
-Once you understand the logic below and the various turnout/point, sensor, signal, and virtual block concepts above, you can view some ==TODO== `complete myAutomation.h examples`_ at the end of this page.
+Once you understand the logic below and the various turnout/point, sensor, signal, and virtual block concepts above, you can view some [complete myAutomation.h examples](#complete-myautomationh-examples) at the end of this page.
 
 ### Virtual block logic
 
