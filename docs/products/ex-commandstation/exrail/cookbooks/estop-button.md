@@ -9,6 +9,7 @@ tags:
 # Emergency stop button
 
 An emergency stop is a way of stopping all locos immediately. DCC locos often have sustainers that are there to allow the loco to move over short sections of dirty track or insulated turnout/point frogs. Because of these sustainers, turning off the track power is not a reliable way of stopping trains, those with sustainers may continue moving for several metres/yards.
+
 To stop a loco immediately, the power must remain on and we must send it a particular DCC packet and the decoder will know to stop.
 
 ## ESTOPALL

@@ -75,8 +75,8 @@ The functions will toggle the bits ON/OFF as shown in the table.
 
 - The frequency does not change until a powerON command is sent.
 
-- Tracks are assigned to timers.  Throttles are assigned to tracks.
-  Changing the frequency for one throttle will impact all tracks assigned to the same timer.
+- Tracks are assigned to timers.  Throttles are assigned to tracks.  
+  Changing the frequency for one throttle will impact all tracks assigned to the same timer.  
   [more information](dc-track-sync.md/#timers-brake-pins)
 
 - ==TODO==  How to effectively use DC mode when using multiple frequencies.

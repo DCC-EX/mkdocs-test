@@ -19,18 +19,18 @@ hide:
 
 - **Note for programming**: Once you do this it will mean you need both the EX-MotorShield8874 barrel jack to be powered AND the USB cable to enable programming. Or you can temporarily move JP5 back to U5V whilst uploading EX‑CommandStation.
 
-- **Power connection sequence**: The correct sequence is power on the EX-MotorShield8874 barrel jack, then attach the USB cable according to the STMicroelectronics documentation.
+- **Power connection sequence**: The correct sequence is power on the EX-MotorShield8874 barrel jack, then attach the USB cable according to the STMicroelectronics documentation.  
   <br>
-  &nbsp;  &nbsp; ![EX8874 Nucleo-144 pins](/_static/images/nucleo/vin-5v-power.jpg){: style="width: 90%"}
+  &nbsp;  &nbsp; ![EX8874 Nucleo-144 pins](../../_static/images/nucleo/vin-5v-power.jpg){: style="width: 90%"}  
   <br>
 
 ## VIN voltage
 
-- Optimum VIN voltage is 7 volts.
-  VIN range is from 7 V to 12 V only and input current capability is linked to input voltage:
-  &nbsp;  &nbsp; 800 mA input current when Vin = 7 V
-  &nbsp;  &nbsp; 450 mA input current when 7 V < Vin <= 9 V
-  &nbsp;  &nbsp; 250 mA input current when 9 V < Vin <= 12 V
+- Optimum VIN voltage is 7 volts.  
+  VIN range is from 7 V to 12 V only and input current capability is linked to input voltage:  
+  &nbsp;  &nbsp; 800 mA input current when Vin = 7 V  
+  &nbsp;  &nbsp; 450 mA input current when 7 V < Vin <= 9 V  
+  &nbsp;  &nbsp; 250 mA input current when 9 V < Vin <= 12 V  
 
 ## USB
 
@@ -38,6 +38,6 @@ hide:
 
 - Caution:  If VIN jumper is not set to use USB - and - USB is connected prior to EX8874 being powered, expect enumeration issues and reduced power.
 
-- Refer to st.com user manuals
-  &nbsp;  &nbsp; [UM1974 Nucleo-144](https://www.st.com/resource/en/user_manual/um1974-stm32-nucleo144-boards-mb1137-stmicroelectronics.pdf)
+- Refer to st.com user manuals  
+  &nbsp;  &nbsp; [UM1974 Nucleo-144](https://www.st.com/resource/en/user_manual/um1974-stm32-nucleo144-boards-mb1137-stmicroelectronics.pdf)  
   &nbsp;  &nbsp; [UM1724 Nucleo-64](https://www.st.com/resource/en/user_manual/um1724-stm32-nucleo64-boards-mb1136-stmicroelectronics.pdf)

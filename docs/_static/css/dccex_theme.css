@@ -330,6 +330,11 @@
   color: var(--md-default-fg-color) !important;
 }
 
+/* override the font size of code blocks */
+.md-typeset code {
+  font-size:95% !important;
+}
+
 /* Set image sizes when used in headers */
 .md-typeset .header-img {
   height: 1em;

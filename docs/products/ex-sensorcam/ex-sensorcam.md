@@ -1,7 +1,7 @@
 # EX-SensorCAM
 
-![EX-SensorCAM Light Logo](/_static/images/logos/product-logo-ex-sensorcam-only-light.png){ .only-light width=400px align=right }
-![EX-SensorCAM Dark Logo](/_static/images/logos/product-logo-ex-sensorcam-only-dark.png){ .only-dark width=400px align=right }
+![EX-SensorCAM Light Logo](../../_static/images/logos/product-logo-ex-sensorcam-only-light.png){ .only-light width=400px align=right }
+![EX-SensorCAM Dark Logo](../../_static/images/logos/product-logo-ex-sensorcam-only-dark.png){ .only-dark width=400px align=right }
 
 EX-SensorCAM is a video based multi-channel position sensing camera.
 
@@ -19,13 +19,13 @@ It does not, however, include loco or rolling stock identification.
 
 The Camera is a standard ESP32-CAM with an ESP32-CAM-MB (CH-340G based) to add USB capability and, in its simplest form, a PCA9515A I2C interface module.
 To connect the sensorCAM to i2c, some limited soldering is required to connect the PCA9515A (5 wires) to the USB MB on the CAM.
-An advanced proto-daughter board is preferable to the PCA9515, to include long I2C buffering (up to 30metres), an isolated power supply, and indicator LEDs.
+An advanced proto-daughter board is preferable to the PCA9515, to include long I2C buffering (up to 30metres), an isolated power supply, and indicator LEDs.  
 A cheap commercial aerial may be useful in marginal WiFi situations.
 The newer ESP32-Wrover-CAM and 38P/V4/Expansion board provides compatible and more convenient hardware with all power regulators on-board.
 
 ### Camera Module
 
-The **EX-sensorCAM** uses the 32bit ESP32-S microcontroller with an OV2640 camera module.
+The **EX-sensorCAM** uses the 32bit ESP32-S microcontroller with an OV2640 camera module.  
 It is fitted with a 4Mbyte PSRAM for image storage and a built in WiFi aerial.
 It also has 3Mb of available program storage, EPROM memory for parameters, and 327kbytes of dynamic memory.
 

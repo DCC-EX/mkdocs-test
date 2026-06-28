@@ -24,6 +24,8 @@
 *[VPIN]: an Arduino pin number that has been extended to include pins on external devices or expanders
 *[vpin]: an Arduino pin number that has been extended to include pins on external devices or expanders
 
+*[HAL]: Hardware Abstraction Layer. Allows the CS to discover and use the hardware through a simple abstract API, regardless of the type of underlying hardware.
+
 *[EX-CSB1]: EX-CommandStation Booster 1 Express
 
 *[Arduino UNO]: Not recommended. Not supported in future releases of EX-CommandStation. The UNO shield shape/size is still relevant
