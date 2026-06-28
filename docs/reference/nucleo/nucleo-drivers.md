@@ -18,10 +18,10 @@ When using any of the NUCLEO series microcontrollers with Microsoft Windows, you
 
 - Once you download and extract this zip file, you will need to install the STLink drivers located in the "stsw-link009" folder.
 
-- Right click the "stlink_winusb_install.bat" file and select "Run as administrator". You will need to click "Yes" to allow it to make changes to your computer.
+- Right click the "stlink_winusb_install.bat" file and select "Run as administrator". You will need to click "Yes" to allow it to make changes to your computer.  
   ![USB driver install](/_static/images/nucleo/usb-driver-install1.png){width=40%}
 
-- Click 'Next' to install the drivers, and you should see this summary screen to confirm the drivers installed successfully:
+- Click 'Next' to install the drivers, and you should see this summary screen to confirm the drivers installed successfully:  
   ![USB driver install](/_static/images/nucleo/usb-driver-install2.png){width=40%}
 
 - You can now plug your NUCLEO device in and proceed with upgrading the debugger firmware (highly recommended).

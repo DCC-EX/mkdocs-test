@@ -5,7 +5,7 @@ hide:
 
 # HAL Device Templates
 
-The templates below may help to understand the HAL system and how devices afre defined.
+The templates below may help to understand the HAL system and how devices are defined.
 
 ## Configure HAL devices in myAutomation.h
 
@@ -284,3 +284,5 @@ This information is also contained in the **EX-CommandStation** file:
 
 //HAL(EXFastClock, 0x55)
 ```
+
+*[HAL]: Hardware Abstraction Layer. Allows the CS to discover and use the hardware through a simple abstract API, regardless of the type of underlying hardware.

@@ -1,13 +1,15 @@
 # Display Track Status on OLED
 
-![Track Status Display](/_static/images/ex-csb1/track-status-display.png)
+![Track Status Display](../../../../../_static/images/ex-csb1/track-status-display.png)
 
 To display track status, add a line in myAutomation.h
+
 ```cpp
   #include "myTrackStatus.example.h"
 ```
 
 If using Mega, a line will be needed in config.h to allocate memory for additional lines on the first display.
+
 ```cpp
   #define MAX_CHARACTER_ROWS 17
 ```
@@ -39,6 +41,7 @@ DONE
 ## myTrackStatus.h
 
 Contents of the example file -- suggested for review/reference on how various **EXRAIL** commands have been used.
+
 ```cpp
 // myTrackStatus.example.h
 
@@ -86,8 +89,8 @@ On the primary display, SCREEN 0, blank lines are not displayed.
 
 There are multiple ways to avoid an extra line on the display; perhaps you just want the display to only contain 8 lines and not scroll.
 
-a.  One way to eliminate the Total line is to blank the line.
-    Figure out which line is used.  If the `<JL` command results in 3 lines, starting on line 8, then write a blank line on line 10.
+a.  One way to eliminate the Total line is to blank the line.  
+    Figure out which line is used.  If the `<JL` command results in 3 lines, starting on line 8, then write a blank line on line 10.  
     .. in your customized myTrackStatus.h file.
 
 ```cpp

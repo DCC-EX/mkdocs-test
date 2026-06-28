@@ -23,7 +23,7 @@ To build a basic DIY **EX-CommandStation** with an **EX-8874** in easy steps you
 
 1. Use sticky tape or similar to cover up the barrel connector on the Mega. (Power to the processor will be provided by the EX8874 shield and you don't want accidents.)
 
-2. Use sticky tape or similar to cover the top of the USB connector on the mega. This prevents any accidental contact with the underside of the motor shield. ![connectors](/_static/images/mega/mega1.png)
+2. Use sticky tape or similar to cover the top of the USB connector on the mega. This prevents any accidental contact with the underside of the motor shield. ![connectors](../_static/images/mega/mega1.png)
 
 3. Mount your Mega on 3d printed tray, a piece of plastic card or wood to make sure that the underside solder points are insulated. Placing your **EX-CommandStation** down on a tool, coin or even your track can short the pins and, in some cases, damage the board.
 
@@ -36,15 +36,15 @@ To build a basic DIY **EX-CommandStation** with an **EX-8874** in easy steps you
 
 Check your work. Look under and through where the boards connect, make sure no pins missed the holes and got bent so that they run along the outside of the headers.
 
-![Mounted EX8874](/_static/images/mega/mega2.png)
-![Mounted EX8874](/_static/images/mega/mega3.png)
+![Mounted EX8874](../_static/images/mega/mega2.png)
+![Mounted EX8874](../_static/images/mega/mega3.png)
 
 ### Optionally Install WiFiShield
 
-1. Prepare your **EX-WiFiShield8266** by removing the two jumpers, see picture. ![Wifi Jumpers](/_static/images/mega/mega4.png)
-2. Mount the Wi-Fi shield on the EX8874 noting the correct orientation in the pictures and there will be 2 pins on either side which are deliberately missing.![Wifi shield](/_static/images/mega/mega5.png)
+1. Prepare your **EX-WiFiShield8266** by removing the two jumpers, see picture. ![Wifi Jumpers](../_static/images/mega/mega4.png)
+2. Mount the Wi-Fi shield on the EX8874 noting the correct orientation in the pictures and there will be 2 pins on either side which are deliberately missing.![Wifi shield](../_static/images/mega/mega5.png)
 3. Use a male-female Dupont wire (normally supplied with the shield) to connect to any one of the row of Tx pins on the Wi-Fi Board, and connect the other end to the Rx1 pin on the mega (pin 19). See photo below.
-4. Take a second jumper wire and connect it to any one of the row of Rx pins on the Wi-Fi Board and connect the other end to Tx1 on the mega (pin 18).![txrx](/_static/images/mega/mega6.png)
+4. Take a second jumper wire and connect it to any one of the row of Rx pins on the Wi-Fi Board and connect the other end to Tx1 on the mega (pin 18).![txrx](../_static/images/mega/mega6.png)
 5. Use a small piece of sticky tape or similar to keep the Dupont wires firmly in place in the mega header sockets. They are easily knocked out.
 
 ### Connect your power supply
@@ -63,7 +63,7 @@ The **EX-8874** track connectors unplug for easy access.
  1. Your PROG track is wired to the green socket closest to the power barrel connector.
  2. The MAIN track is wired to the far connector.
 
-![CONNECTIONS](/_static/images/mega/mega7.png)
+![CONNECTIONS](../_static/images/mega/mega7.png)
 
 ### Load the software
 

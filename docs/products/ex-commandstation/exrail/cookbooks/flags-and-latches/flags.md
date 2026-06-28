@@ -1,6 +1,6 @@
 # Flags, Counters and Bitmaps
 
-These are implemented by a software-only driver that mimics a set of VPINs that can be used for both digital and analogue values.
+These are implemented by a software-only driver that mimics a set of VPINs that can be used for both digital and analogue values.  
 Unlike sensors and leds, these VPINs are both INPUT and OUTPUT  These can be used in many ways:
 
 - As a simple digital flag to assist in inter-thread communication.

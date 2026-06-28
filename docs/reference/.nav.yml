@@ -9,7 +9,6 @@ nav:
   - EXRAIL Command List: exrail-command-reference.md
   - Advanced config.h Options: advanced-config-h.md
   - TrackManager: trackmanager
-  - HAL Device Configuration: hal-device-templates.md
   - Command Station Internal Architecture: command-station-arch.md
   - Throttle Writers Guide: throttle-writers-guide.md
   - Alternate Microcontrollers:

@@ -236,7 +236,6 @@ li:not(.md-nav__item, .md-tabs__item) a {
         - [DC Mode - PWM Frequency <small>(DC Mode Frequency)</small>](trackmanager/dc-mode-frequency.md)
         - [DC Mode - Logic Gate Circuits <small>(DC Mode Logic)</small>](trackmanager/dc-mode-logic.md)
         - [DC Mode Track Sync <small>(DC Track Sync)</small>](trackmanager/dc-track-sync.md)
-    - [HAL Device Templates <small>(HAL Device Configuration)</small>](hal-device-templates.md)
     - [**EX-CommandStation** Internal Architecture <small>(Command Station Internal Architecture)</small>](command-station-arch.md)
     - [Throttle Writers Guide (doc incomplete) <small>(Throttle Writers Guide)</small>](throttle-writers-guide.md)
     - **Alternate Microcontrollers**
@@ -266,6 +265,7 @@ li:not(.md-nav__item, .md-tabs__item) a {
             - [Ethernet Boards](hardware/ethernet-boards/index.md)
         - **Hal**
             - [I/O Device Drivers and HAL](hardware/hal/hal-config.md)
+            - [HAL Device Templates](hardware/hal/hal-device-templates.md)
             - [Writing a HAL Driver](hardware/hal/writing-hal-driver.md)
         - **Motorboards**
             - [L298P & L298HN Shields <small>(L298 Shields)</small>](hardware/motorboards/l298-shields.md)

@@ -27,9 +27,9 @@ For Example
     HAL(MCP23017, 180, 16, 0x21)
 ```
 
-This would create VPINs 100 to 115 to represent the 16 servo outputs on the first [PCA9685](?PCA9685) servo control board at I2C address 0x40 and VPINs 164 to 179 on the first [MCP23017](?MCP23017) i/o expander.
-VPINs for two PCA9685 and two MCP23017 are pre-defined, except for PCA9685 used with Nucleo-144.
-Refer to wiring details and fuller list of [supported I2C devices](#) elsewhere.
+This would create VPINs 100 to 115 to represent the 16 servo outputs on the first [PCA9685](?PCA9685) servo control board at I2C address 0x40 and VPINs 164 to 179 on the first [MCP23017](?MCP23017) i/o expander.  
+VPINs for two PCA9685 and two MCP23017 are pre-defined, except for PCA9685 used with Nucleo-144.  
+Refer to wiring details and fuller list of [supported I2C devices](/products/ex-commandstation/accessories/i2c-intro.md) elsewhere.
 
 ## Using OUTPUT VPINS
 

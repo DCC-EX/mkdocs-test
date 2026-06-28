@@ -17,7 +17,7 @@ Review of **motor shield define** from MotorDrivers.h for F429ZI or F439ZI
     new MotorDriver( 5, 13, UNUSED_PIN, 6, A1, 1.27, 5000, A5)
 ```
 
-Alternate pins D5 and D6 are required for the Nucleo-144 boards with Ethernet.
+Alternate pins D5 and D6 are required for the Nucleo-144 boards with Ethernet.  
 One EX8874 motor shield would use the standard motor define EX8874_SHIELD, and update the solder pads to use D5 and D6.
 
  &nbsp; &nbsp; &nbsp; &nbsp; ![EX8874 Nucleo-144 pins](/_static/images/nucleo/ex8874-nucleo-144.png){: style="width: 70%"} &nbsp; &nbsp; &nbsp; &nbsp; ![EX8874 Nucleo-144 track B](/_static/images/nucleo/ex8874-nucleo144-pins-track-b.png){: style="width: 20%"}

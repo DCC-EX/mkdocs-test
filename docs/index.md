@@ -32,14 +32,14 @@ hide:
     - Integration with [JMRI](https://www.jmri.org/), [iTrain](https://www.berros.eu/en/itrain/), and [RocRail](https://wiki.rocrail.net/) if you prefer to run trains from your computer.
 
     ---
-     [![csb1](/_static/images/ex-csb1/csb1-small.png){ align=right }](/products/ex-commandstation/ex-csb1.md)
-    The [**EX-CommandStation Booster 1 Express**](/products/ex-commandstation/ex-csb1.md), otherwise known as an **EX-CSB1**, can be purchased ready to run, complete with WiFi and power supply. If you have a phone, you could be running your trains in less than 5 minutes, without a computer.
-    If you would like to buy one, [check out our sellers](/purchasing/official-sellers.md)
+     [![csb1](./_static/images/ex-csb1/csb1-small.png){ align=right }](./products/ex-commandstation/ex-csb1.md)
+    The [**EX-CommandStation Booster 1 Express**](/products/ex-commandstation/ex-csb1.md), otherwise known as an **EX-CSB1**, can be purchased ready to run, complete with WiFi and power supply. If you have a phone, you could be running your trains in less than 5 minutes, without a computer.  
+    If you would like to buy one, [check out our sellers](/purchasing/official-sellers.md)  
     If you want to get started with an **EX-CSB1** [read the product page](/products/ex-commandstation/ex-csb1.md)
 
     ---
-    [![diy](/_static/images/mega/mega-small.png){ align=right}](/diy/diy.md)
-    Or you can enjoy [building your own](/diy/diy.md), staggeringly cheap, version from readily-available Arduino parts in use by modellers from all over the world. We have even designed parts to make this easy for beginners, no soldering required.
+    [![diy](./_static/images/mega/mega-small.png){ align=right}](/diy/diy.md)
+    Or you can enjoy [building your own](/diy/diy.md), staggeringly cheap, version from readily-available Arduino parts in use by modellers from all over the world. We have even designed parts to make this easy for beginners, no soldering required.  
     Of course, we also have a wealth of information for more adventurous builders if you have the appropriate electronics skills.
 
     ---

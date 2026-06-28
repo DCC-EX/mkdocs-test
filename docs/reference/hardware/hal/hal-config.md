@@ -25,8 +25,8 @@ It is theoretically possible to create an 'on-line only' version of **EX-Command
 
 ## Catching the I2C Bus
 
-Many of the external modules are connected to the Arduino via the I2C (I<sup>2</sup>C) (Inter Integrated Circuit) interface.
-This has four connections, usually labelled SDA (data), SCL (clock), VSS (+5V power usually) and GND (ground, or zero volts).
+Many of the external modules are connected to the Arduino via the I2C (I<sup>2</sup>C) (Inter Integrated Circuit) interface.  
+This has four connections, usually labelled SDA (data), SCL (clock), VSS (+5V power usually) and GND (ground, or zero volts).  
 Your motor driver may have convenient connectors for I2C (I<sup>2</sup>C) devices; for example, the DeekRobot shield has two sets of four I2C (I<sup>2</sup>C) pins on the top.  If not, then check the Arduino's data sheet to find the applicable I2C (I<sup>2</sup>C) and power connections. For an Arduino Mega, SCL and SDA are the two connectors nearest the reset button, in the connector block running along the edge of the Arduino.
 
 **WARNING**  *There is no standard pin order for the I2C (I<sup>2</sup>C) bus connectors, so be careful that you identify which pin is which, and always connect SDA to SDA, SCL to SCL, GND to GND and VSS/+5V to VSS/+5V.*
