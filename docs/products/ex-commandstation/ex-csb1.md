@@ -1,13 +1,13 @@
 # **EX-CSB1** CommandStation/Booster 1 Express
 
-![EX-CSB1 Logo](/_static/images/logos/product-logo-ex-csb1-only-light.png){ .only-light width=400px align=right }
-![EX-CSB1 Logo](/_static/images/logos/product-logo-ex-csb1-only-dark.png){ .only-dark width=400px align=right }
+![EX-CSB1 Logo](../../_static/images/logos/product-logo-ex-csb1-only-light.png){ .only-light width=400px align=right }
+![EX-CSB1 Logo](../../_static/images/logos/product-logo-ex-csb1-only-dark.png){ .only-dark width=400px align=right }
 
 This is the **EX-CSB1** Getting Started Guide.
 
 ## Features
 
-![EX-CSB1](/_static/images/ex-csb1/csb1_power_barrel.png){ width="50%" }
+![EX-CSB1](../../_static/images/ex-csb1/csb1_power_barrel.png){ width="50%" }
 
 The **DCC-EX EX-CommandStation/Booster 1 (EX-CSB1)** comes ready to use out of the box and has the following features:
 
@@ -18,17 +18,17 @@ The **DCC-EX EX-CommandStation/Booster 1 (EX-CSB1)** comes ready to use out of t
 - **Railsync DCC input** – enables Booster or Sniffer modes, which with an **EXRAIL** script can be automatically engaged on receipt of a signal
 - **OLED screen** – for diagnostics, status and information display
 
-![EX-CSB1 OLED on startup](/_static/images/ex-csb1/oled_startup.png){ width="200" }
+![EX-CSB1 OLED on startup](../../_static/images/ex-csb1/oled_startup.png){ width="200" }
 
 ## Connecting
 
-![EX-CSB1 Connector Map](/_static/images/ex-csb1/csb1_3d_render_labelled.png){ width="100%" }
+![EX-CSB1 Connector Map](../../_static/images/ex-csb1/csb1_3d_render_labelled.png){ width="100%" }
 
 The **DCC-EX EX-CommandStation Booster 1 Express (EX-CSB1)** needs the minimum following connections to be able to run trains:
 
 - **Power input on the 2.1mm black barrel connector** –  accepts 10-25V DC fully regulated, preferably a modern switch-mode power brick, double-insulated with good power overload protection. Minimum current capability of 4A, suggested 12-16V for Z, N or HO/OO scales, with DCC+Sound locos generally wanting 14-16V even in N scale.
 - **One track connection** – on either the Track Out A (topmost) or Track Out B (beside the power) connector. Note that by default, A is configured for DCC MAIN operation, and B is configured for PROG or programming track. We recommend connecting your track to the A MAIN output initially to test running of trains.
-![track connections](/_static/images/ex-csb1/track-connections.png)
+![track connections](../../_static/images/ex-csb1/track-connections.png)
 
 When correctly supplied with track power, both green Power LEDs will light. If the right-most LED alone is lit, it indicates power is being supplied from the USB-C connector so software upload can proceed, but trains cannot be run.
 

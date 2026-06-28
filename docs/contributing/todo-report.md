@@ -14,7 +14,7 @@
 </style>
 Scanned docs root: `C:\Users\akers\OneDrive\github\github_doco\mkdocs-test\docs`
 
-Total TODO matches: 158
+Total TODO matches: 162
 
 | File | Line | Line text |
 | --- | ---: | --- |
@@ -77,6 +77,7 @@ Total TODO matches: 158
 | [docs/reference/serial-commands/serial-command-dd_and_e_and_ee_not_in_nav.md](../reference/serial-commands/serial-command-dd_and_e_and_ee_not_in_nav.md) | 26 | ==TODO== LOW - Responses |
 | [docs/reference/serial-commands/serial-command-dd_and_e_and_ee_not_in_nav.md](../reference/serial-commands/serial-command-dd_and_e_and_ee_not_in_nav.md) | 40 | * ==TODO== LOW - Example Commands |
 | [docs/reference/serial-commands/serial-command-dd_and_e_and_ee_not_in_nav.md](../reference/serial-commands/serial-command-dd_and_e_and_ee_not_in_nav.md) | 44 | * ==TODO== LOW - Example Responses |
+| [docs/reference/serial-commands/serial-command-dd_hal_not_in_nav.md](../reference/serial-commands/serial-command-dd_hal_not_in_nav.md) | 31 | ==TODO== LOW - Responses |
 | [docs/reference/serial-commands/serial-command-equals_not_in_nav.md](../reference/serial-commands/serial-command-equals_not_in_nav.md) | 75 | * ==TODO== LOW - Example Commands |
 | [docs/reference/serial-commands/serial-command-equals_not_in_nav.md](../reference/serial-commands/serial-command-equals_not_in_nav.md) | 81 | * ==TODO== LOW - Example Responses |
 | [docs/reference/serial-commands/serial-command-ff_not_in_nav.md](../reference/serial-commands/serial-command-ff_not_in_nav.md) | 29 | * ==TODO== = Mid frequency - 490Hz |
@@ -94,6 +95,9 @@ Total TODO matches: 158
 | [docs/reference/serial-commands/serial-command-m_not_in_nav.md](../reference/serial-commands/serial-command-m_not_in_nav.md) | 23 | * **accelerating**: ==TODO== |
 | [docs/reference/serial-commands/serial-command-m_not_in_nav.md](../reference/serial-commands/serial-command-m_not_in_nav.md) | 24 | * **braking**: ==TODO== |
 | [docs/reference/serial-commands/serial-command-m_not_in_nav.md](../reference/serial-commands/serial-command-m_not_in_nav.md) | 25 | * **momentum**: ==TODO== |
+| [docs/reference/serial-commands/serial-command-nn_not_in_nav.md](../reference/serial-commands/serial-command-nn_not_in_nav.md) | 25 | ==TODO== LOW - Responses |
+| [docs/reference/serial-commands/serial-command-nn_not_in_nav.md](../reference/serial-commands/serial-command-nn_not_in_nav.md) | 41 | * ==TODO== LOW - Example Commands |
+| [docs/reference/serial-commands/serial-command-nn_not_in_nav.md](../reference/serial-commands/serial-command-nn_not_in_nav.md) | 45 | * ==TODO== LOW - Example Responses |
 | [docs/reference/serial-commands/serial-command-o_not_in_nav.md](../reference/serial-commands/serial-command-o_not_in_nav.md) | 30 | ==TODO== Responses |
 | [docs/reference/serial-commands/serial-command-o_not_in_nav.md](../reference/serial-commands/serial-command-o_not_in_nav.md) | 34 | * ==TODO== Notes |
 | [docs/reference/serial-commands/serial-command-o_not_in_nav.md](../reference/serial-commands/serial-command-o_not_in_nav.md) | 44 | * ==TODO== LOW - Example - Commands |
