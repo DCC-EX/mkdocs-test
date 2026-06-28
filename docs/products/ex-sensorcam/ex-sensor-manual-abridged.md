@@ -160,7 +160,7 @@ The sensorCAM takes some time to boot and establish sensing mode. The flash LED 
 
 ### 5.6 Verify WiFi webCAM operation
 
-The CAM can be switched to webCAM WiFi video mode with the '**v1**' command. '**v2**' can select your alternate WiFi network. ('**v**' will give sensorCAM software version). '**v1**' (or '**v2**') will reboot and load webCAM mode connecting to the network selected, and providing a URL e.g. http://192.168.0.xx that can be used to connect with a browser. An image, like **Figure 1** above, should be seen with controls for experimenting with Brightness etc. This image is educational and useful for camera alignment, but not necessarily a good indication of the sensorCAM (sensor mode) image because of the unpredictable parameter effects. To see a more reliable image, run the PROCESSING 4 *SensorCAM.pde* monitor instead of Arduino webCAM example (refer [Section 6](#6-processing4-monitorconsole)). To exit video mode, try the monitor command '**R**' (or '**F**'). If this software reset fails, try manually rebooting the sensorCAM (power OFF/ON or via the on-board RST push-button using a non-metallic tool!).
+The CAM can be switched to webCAM WiFi video mode with the '**v1**' command. '**v2**' can select your alternate WiFi network. ('**v**' will give sensorCAM software version). '**v1**' (or '**v2**') will reboot and load webCAM mode connecting to the network selected, and providing a URL e.g. http://192.168.0.xx that can be used to connect with a browser. An image, like **Figure 1** above, should be seen with controls for experimenting with Brightness etc. This image is educational and useful for camera alignment, but not necessarily a good indication of the sensorCAM (sensor mode) image because of the unpredictable parameter effects. To see a more reliable image, run the PROCESSING 4 *SensorCAM.pde* monitor instead of Arduino webCAM example (refer [Section 6](#6-processing4-monitorconsole)). To exit video mode, try the monitor command **``R``** (or **``F``**). If this software reset fails, try manually rebooting the sensorCAM (power OFF/ON or via the on-board RST push-button using a non-metallic tool!).
 
 ### 5.7 Familiarise with sensorCAM command set
 
@@ -174,51 +174,51 @@ Setting up the CAM first requires locating sensors. When deciding on sensor loca
 
 **b.** &nbsp; The bright LED method: Place a bright LED at the required location and reduce room lighting if needed.  Issue an ``s%%`` command (e.g. S00 for an off-track reference sensor) and wait for the CAM to scan and locate the LED and setup sensor coordinates. Remove the LED, restore lighting, and perform an ``r%%`` for new reference images.
 
-**c.** &nbsp; Issue a ``k%%,rrr,xxx`` command to place sensor %% at CAM pixel position rrr(row) and xxx(column). This method is most useful for "tweaking" coordinates if you want to adjust the result of the LED method. The CAM has 240 rows/lines of 320 pixels each, numbered from 0. Use the ``i%%`` command for info. on sensor S%%.  **NOTE:** Use ``k`` to set up test sensors initially, but delay setting final positions until Processing 4 installed and enhanced GUI ``k`` and ``a`` available. The ``a`` command does 3 commands in one (i.e. **k**, **a**(enable) & **r**).
+**c.** &nbsp; Issue a ``k%%,rrr,xxx`` command to place sensor %% at CAM pixel position rrr(row) and xxx(column). This method is most useful for "tweaking" coordinates if you want to adjust the result of the LED method. The CAM has 240 rows/lines of 320 pixels each, numbered from 0. Use the ``i%%`` command for info. on sensor S%%.  **NOTE:** Use **``k``** to set up test sensors initially, but delay setting final positions until Processing 4 installed and enhanced GUI **``k``** and **``a``** available. The ``a`` command does 3 commands in one (i.e. `k`, ``a`` (enable) & ``r``*).
 
-**d.** &nbsp; Running Processing 4, an image can be downloaded, a bsNo. nominated by typing ``k%%`` (or ``a%%``) and the mouse click on the image appends coordinates to ``k%%``. Press Enter if the command is complete and correct. Similarly, the long version of ``a%%`` sets position, enables, and records a reference all in one command.
+**d.** &nbsp; Running Processing 4, an image can be downloaded, a bsNo. nominated by typing **``k%%``** (or **``a%%``**) and the mouse click on the image appends coordinates to **``k%%``**. Press Enter if the command is complete and correct. Similarly, the long version of **``a%%``** sets position, enables, and records a reference all in one command.
 
 ### 5.9 Sensor status and save
 
-Once a sensor has been located, the ``p$`` command can show/tabulate all defined positions up to bank$. To enable a sensor use the ``a%%`` command. This will enable AND record a new reference image for the sensor. It will then be included in the screen "data dump". Only "enable" sensors when UN-occupied, or do an ``r%%`` later when the sensor is empty. Also, remember to do an ``e`` command when you want to save positions in EPROM for next time.
+Once a sensor has been located, the **``p$``** command can show/tabulate all defined positions up to bank$. To enable a sensor use the **``a%%``** command. This will enable AND record a new reference image for the sensor. It will then be included in the screen "data dump". Only "enable" sensors when UN-occupied, or do an **``r%%``** later when the sensor is empty. Also, remember to do an **``e``** command when you want to save positions in EPROM for next time.
 
 ### 5.10 Set a Sensor Threshold
 
-A threshold needs to be set to define the level of difference in image required to register a sensor trip or "Occupation". This typically ranges from 40 to 60. Try '**t45**' for starters. Some fluctuating lighting and electrical "noise" needs to be tolerated, but a higher threshold reduces sensor sensitivity for dark-on-dark contrast in particular. If there are "noise" trips, adjust the threshold or min2trip a little higher. See [APPENDIX B](#appendix-b) for more.
+A threshold needs to be set to define the level of difference in image required to register a sensor trip or "Occupation". This typically ranges from 40 to 60. Try **``t45``** for starters. Some fluctuating lighting and electrical "noise" needs to be tolerated, but a higher threshold reduces sensor sensitivity for dark-on-dark contrast in particular. If there are "noise" trips, adjust the threshold or min2trip a little higher. See [APPENDIX B](#appendix-b) for more.
 
 ### 5.11 Limit printout to manageable range
 
-It is desirable to set (using ``m``) a *maxSensors* parameter (e.g. 030) to limit diagnostic printouts to a manageable screen width, and especially important to set the *min2flip* parameter which helps filter out noise trips. However *min2flip* slows the response to valid trips by 100mSec (frame rate) per extra count. Suggest settings of 2(default) or 3. e.g.'**m3,30**'. **Note:** *maxSensors* (pulled from EPROM) limits the following....
+It is desirable to set (using ``m``) a *maxSensors* parameter (e.g. 030) to limit diagnostic printouts to a manageable screen width, and especially important to set the *min2flip* parameter which helps filter out noise trips. However *min2flip* slows the response to valid trips by 100mSec (frame rate) per extra count. Suggest settings of 2(default) or 3. e.g.**``m3,30``**. **Note:** *maxSensors* (pulled from EPROM) limits the following....
 
 **a.** the data stream for console/monitor, limited to enabled sensors below *maxSensors* (and above *minSensors*)
 
-**b.** histogram printout, to enabled sensors below *maxSensors* (see statistics command ``&``)
+**b.** histogram printout, to enabled sensors below *maxSensors* (see statistics command **``&``**)
 
 **c.** the *boxlt()* sensor boxes seen on Processing 4 images, to enabled sensors below *maxSensors*
 
-**d.** i2c buffer data for 't' record, to bsn's below *maxSensors* (and above *minSensors*)(sent to Command Station) The command ``t`` acts as a flag to prepare a packet of i2c data that the CS can reconstitute as per the USB ASCII data stream/scroll.
+**d.** i2c buffer data for 't' record, to bsn's below *maxSensors* (and above *minSensors*)(sent to Command Station) The command **``t``** acts as a flag to prepare a packet of i2c data that the CS can reconstitute as per the USB ASCII data stream/scroll.
 
 ### 5.12 LED bank trip indicator & EPROM
 
-If you want a LED bank occupancy indicator on the CAM, use the ``n$`` command to cause a bank occupied LED to show (default Bank 2). *nLED, min2flip, maxSensors* and *threshold* can be saved to EPROM, along with sensor positions and twins (see **5.15** below) with the ``e`` command. *minSensors* (**n10,%%**) is not currently saved in EPROM.  You will of course have to add a resistor and LED to the physical CAM (GPIO14 or GPIO32).
+If you want a LED bank occupancy indicator on the CAM, use the **``n$``** command to cause a bank occupied LED to show (default Bank 2). *nLED, min2flip, maxSensors* and *threshold* can be saved to EPROM, along with sensor positions and twins (see **5.15** below) with the **``e``** command. *minSensors* (**``n10,%%``**) is not currently saved in EPROM.  You will of course have to add a resistor and LED to the physical CAM (GPIO14 or GPIO32).
 
 ### 5.13 Sensor reference image refreshing
 
-Although sensor enabling (``a``) causes an immediate reference capture, it may be necessary to occasionally do a fresh reference capture for all sensors (make sure they are unoccupied!) by using the '**r00**' command. Individual sensor references can be refreshed using ``r%%``. The results of a refresh can be seen in the scrolling "data dumps" of enabled sensors, their "difference scores" (32-99), and their perceived occupancy state. The sensor **S00** is constantly averaged and refreshed every 6.4 seconds. Furthermore, there is an automatic refresh process that cycles through enabled sensors and regularly averages 32 consecutive sample images.
+Although sensor enabling (**``a``**) causes an immediate reference capture, it may be necessary to occasionally do a fresh reference capture for all sensors (make sure they are unoccupied!) by using the '**r00**' command. Individual sensor references can be refreshed using **``r%%``**. The results of a refresh can be seen in the scrolling "data dumps" of enabled sensors, their "difference scores" (32-99), and their perceived occupancy state. The sensor **S00** is constantly averaged and refreshed every 6.4 seconds. Furthermore, there is an automatic refresh process that cycles through enabled sensors and regularly averages 32 consecutive sample images.
 If the sensor remains unoccupied, it updates the reference, compensating for slowly drifting lighting changes.
 
 ### 5.14 Scrolling data interpretation
 
-The scrolling data dump displays "SUS" (suspend) if auto updates are off. It also displays *threshold*(T), *min2trip*(M), the bank assigned to the on-board *nLED*(N), S00 reference diff. score, as well as the S00 reference brightness(R) and its current actual brightness(A), a brightness scale factor(B) and other enabled sensors. 'A' is the Actual latest sum of the 48 bytes of a sensor image (max 3024) and should be between 1200 and 2500 ideally. Following a reference refresh (``r``), for an unoccupied image, the (noisy) diff. scores should be 32-37. If references are being updated, a note will appear at the right hand side of the data dump in the form of "**Ref 0%%**" to indicate that a new reference for an UNOCCUPIED sensor has occurred. This dump allows for performance monitoring during commissioning.  
+The scrolling data dump displays "SUS" (suspend) if auto updates are off. It also displays *threshold*(T), *min2trip*(M), the bank assigned to the on-board *nLED*(N), S00 reference diff. score, as well as the S00 reference brightness(R) and its current actual brightness(A), a brightness scale factor(B) and other enabled sensors. 'A' is the Actual latest sum of the 48 bytes of a sensor image (max 3024) and should be between 1200 and 2500 ideally. Following a reference refresh (**``r``**), for an unoccupied image, the (noisy) diff. scores should be 32-37. If references are being updated, a note will appear at the right hand side of the data dump in the form of "**Ref 0%%**" to indicate that a new reference for an UNOCCUPIED sensor has occurred. This dump allows for performance monitoring during commissioning.  
 :**oo46##** indicates tripped sensor (## = **occupied**) sensor are shown by default with a central diff score (32-99).  
 :**?-46-?** indicate an above threshold image **potentially occupied**** (waiting for *min2trip*).  
-:**oo47?T** indicates **suspected occupied** but no confirmation from Twin (see **5.15**).
+:**oo47?T** indicates **suspected occupied** but no confirmation from Twin (see [5.15 in the full manual](ex-sensor-manual.md#515-second-opinions-twin)).
 
 ## 6 PROCESSING4 monitor/console
 
 ![Processing4 Console with Image](../../_static/images/ex-sensorcam/processing4-console-image.png)  
-**Figure 5 &nbsp; Processing 4 Console and image window**
- &nbsp; Note: Sub-optimum 'c' settings caused green tint.
+ &nbsp; &nbsp; **Figure 5 &nbsp; Processing 4 Console and image window**
+ &nbsp; &nbsp; &nbsp; Note: Sub-optimum 'c' settings caused green tint.
 
 The Processing application displays the image using sensorCAM settings, and also shows colour coded sensors. As previously stated, the PROCESSING4 application is a crude USB monitor that enables the user to control and configure the sensorCAM with the additional benefit of being able to invoke a display of the image. All the sensorCAM commands can be used. At 115200 baud, a full RGB565 image takes 13 seconds, but it is often convenient to reduce this by prescribing a smaller image segment of limited rows and/or columns (e.g. **Y120** for lower half of a 240 row screen).  
 The Processing 4 application can be [downloaded from here](https://processing.org)
@@ -226,36 +226,36 @@ The Processing 4 application can be [downloaded from here](https://processing.or
 The SensorCAM.pde code assumes the USB port for the sensorCAM is the lowest (*comNo=0;*) on the list displayed on startup. Should this not be the case, for example if another USB is being used to simultaneously run an IDE to a Command Station, then the *int&nbsp;comNo=0;* code line (line 15?) of the sensorCAM.pde will need to be increased to, for example, *int&nbsp;comNo=1;*  
 You may also increase the image display window size factor by editing the next *final&nbsp;&nbsp;int&nbsp;&nbsp;SF=2;* line to *=3;* or *=4;* on high res. screens.
 
-The sensorCAM Processing 4 monitor accepts commands **W, X, Y** & **Z** which allow one to nominate a "strip" or subsection to image. e.g. **Z80 X240 Y** will update the last quarter image(columns 240-319) of the 240x320 pixels in 4 seconds. This quicker shortcut method enables, for example, comparison of quarter images under different lighting conditions by using different **X** values. Similarly **W60 Y120**  will produce a quarter image from row 120 to 179. Each part image is pasted over previous images. Each new image appears more quickly if only a subsection is specified this way. The next image can be flipped Vertically(y) and Horizontally(x) by using **V** &/or **H** before capture. The **Figure 5** image used  **V H Y60**  The values for V, H, W, X & Z are remembered for subsequent '**Yrrr**' commands so need not be repeated.  
+The sensorCAM Processing 4 monitor accepts commands **``W``**, **``X``**, **``Y``** & **``Z``** which allow one to nominate a "strip" or subsection to image. e.g. **Z80 X240 Y** will update the last quarter image(columns 240-319) of the 240x320 pixels in 4 seconds. This quicker shortcut method enables, for example, comparison of quarter images under different lighting conditions by using different **X** values. Similarly **``W60``** **``Y120``** will produce a quarter image from row 120 to 179. Each part image is pasted over previous images. Each new image appears more quickly if only a subsection is specified this way. The next image can be flipped Vertically(y) and Horizontally(x) by using **``V``** &/or **``H``** before capture. The **Figure 5** image used  **``V H Y60``**  The values for V, H, W, X & Z are remembered for subsequent '**Yrrr**' commands so need not be repeated.  
 **NOTE: Do not flip image before creating new sensors as cursor coordinates don't flip!**
 
 The image will have enabled sensors (b/s) boxed and identified by a (resistor) colour code. Left bar is bank# and right bar is sensor#. Combined, they give the Sensor's bsNo (S%%). If two sensors have the same coordinates, the colour code will be for the highest bsNo.    
-**Note:** Only sensors below *maxSensors* will appear boxed. **N.B.** the ``H`` command will REVERSE the coding from b/s to s/b.  
+**Note:** Only sensors below *maxSensors* will appear boxed. **N.B.** the **``H``** command will REVERSE the coding from b/s to s/b.  
 **(The resistor colour code is 0:black 1=brown 2=red 3=orange 4=yellow 5=green 6=blue 7=violet 8=grey 9=white)**
 
 ### PROCESSING4 command summary
 
-``W###`` &nbsp; will limit the image to\#\#\# rows wide/high(1-240) (default 240)
+**``W###``** &nbsp; will limit the image to\#\#\# rows wide/high(1-240) (default 240)
 
-``X###`` &nbsp; will start the image from column ###(0-319) (default 0) -uses the sensorCAM 'x' command.
+**``X###``** &nbsp; will start the image from column ###(0-319) (default 0) -uses the sensorCAM 'x' command.
 
-``Y###`` &nbsp; will initiate an image download starting at row ### (0-239) (default 0) -uses the sensorCAM 'y' command.
+**``Y###``** &nbsp; will initiate an image download starting at row ### (0-239) (default 0) -uses the sensorCAM 'y' command.
 
-``Z###`` &nbsp; will limit the image to ### columns (1-320) (default 320) -uses the sensorCAM 'z' command.
+**``Z###``** &nbsp; will limit the image to ### columns (1-320) (default 320) -uses the sensorCAM 'z' command.
 
-``H`` &nbsp; will flip/mirror subsequent images horizontally.  **Note:** reverses bsNo sensor colour code to sb!
+**``H``** &nbsp; will flip/mirror subsequent images horizontally.  **Note:** reverses bsNo sensor colour code to sb!
 
-``V`` &nbsp; will flip/mirror subsequent images vertically. (V + H effectively rotates image 180 degrees)
+**``V``** &nbsp; will flip/mirror subsequent images vertically. (V + H effectively rotates image 180 degrees)
 
-``R`` &nbsp; will cause a firmware reset of the sensorCAM via the DTR line via. the USB interface. CAM will enter a wait mode for confirmation.  Reset can be aborted with command ``aw``(Abort&Wait). **Ctrl-R** Resets CAM instantly.
+**``R``** &nbsp; will cause a firmware reset of the sensorCAM via the DTR line via. the USB interface. CAM will enter a wait mode for confirmation.  Reset can be aborted with command **``aw``**(Abort&Wait). **Ctrl-R** Resets CAM instantly.
 
 !!! notes "NOTES"
 
-    1. The above commands ARE CASE SENSITIVE. They are recognized by Processing 4 as non-sensorCAM commands and processed in the monitor/PC. Commands ``X``, ``Y`` & ``Z`` in turn automatically issue related sensorCAM commands ``x``, ``y`` & ``z`` respectively, with appropriate parameters.  The ``Y`` command suspends sensorCAM imaging, holding a single "frozen" frame until a terminating command ('yy') is received.
+    1. The above commands ARE CASE SENSITIVE. They are recognized by Processing 4 as non-sensorCAM commands and processed in the monitor/PC. Commands **``X``**, **``Y``** & **``Z``** in turn automatically issue related sensorCAM commands **``x``**, **``y``** & **``z``** respectively, with appropriate parameters.  The **``Y``** command suspends sensorCAM imaging, holding a single "frozen" frame until a terminating command ('yy') is received.
 
-    2. If you use ``H`` to mirror, the colour coding for boxed sensor number (bsNo.) has to be read right to left.  Do NOT click on image to create sensors if image has been flipped.
+    2. If you use **``H``** to mirror, the colour coding for boxed sensor number (bsNo.) has to be read right to left.  Do NOT click on image to create sensors if image has been flipped.
 
-    3. **Ctrl-E** and **Ctrl-N** enable/disable echo of commands as typed, to the monitor/log file. It can replace the user's focus on the CAM image Cmd: window. ``YO`` should toggle the verbose mode. The command ``Y`` images from row 0 by default.
+    3. **Ctrl-E** and **Ctrl-N** enable/disable echo of commands as typed, to the monitor/log file. It can replace the user's focus on the CAM image Cmd: window. **``YO``** should toggle the verbose mode. The command **``Y``** images from row 0 by default.
 
 ## 7 Wiring Requirements
 
@@ -289,9 +289,9 @@ The operation of the railway depends on a Control Station that polls the sensorC
 
 The I2C bus is running at 100kHz on the prototype software. It has not been tested at any higher speed yet. It has been running fine over a 10m long I2C bus to the master microcontroller (CSB1, Mega or others).
 
-### 8.2   DCC-EX Command Station
+### 8.2   DCC-EX EX-CommandStation
 
-Setting up a DCC-EX Command Station, should you have one, requires configuration details placed in files *config.h* and *mySetup.h* along with a driver *IO_EXSensorCAM.h* and *myAutomation.h*. These must go in the directory containing file CommandStation-EX.ino. Refer to [APPENDIX&nbsp;H](#appendix-h) for installation details.  *EXSensorCAM.h* code mirrors the sensorCAM command set with a few exceptions.  Imaging and graphic placement is not available.  Functionality was added using the DCC-EX sensorCAM native command ``<N\>`` format.
+Setting up a **DCC-EX** **EX-CommandStation**, should you have one, requires configuration details placed in files *config.h* and *mySetup.h* along with a driver *IO_EXSensorCAM.h* and *myAutomation.h*. These must go in the directory containing file CommandStation-EX.ino. Refer to [APPENDIX&nbsp;H](#appendix-h) for installation details.  *EXSensorCAM.h* code mirrors the sensorCAM command set with a few exceptions.  Imaging and graphic placement is not available.  Functionality was added using the DCC-EX sensorCAM native command ``<N\>`` format.
 
 ### 8.4 Monitor Lighting
 
@@ -312,75 +312,75 @@ To define a sensor, use ``a`` command,  Processing4, or (outdated method) a brig
 
 #### Serial Command USB format
 
-``a%%[, rr, xx]`` **enAble** *Sensor[%%]* & refresh *Sensor_ref[%%]*, *cRatios* etc. 4x4 from image in latest frame. **(Note 20.)**
+**``a%%[, rr, xx]``** **enAble** *Sensor[%%]* & refresh *Sensor_ref[%%]*, *cRatios* etc. 4x4 from image in latest frame. **(Note 20.)**
 
-``b#[,$]``&nbsp; &nbsp; **Bank** # sensors. Show which sensors OCCUPIED(in bits 7-0).(1=occ.)(**b#,$** sets *brightSF* to $)
+**``b#[,$]``**&nbsp; &nbsp; **Bank** # sensors. Show which sensors OCCUPIED(in bits 7-0).(1=occ.)(**b#,$** sets *brightSF* to $)
 
-``c$$$$``&nbsp; &nbsp; **\* reCalibrate** camera CCD occasionally and grab new references for all enabled sensors(Beware of doing this while any sensors are occupied) **N.B.** Obstructed sensors will later need an **r%%**. Check all bank LEDs are off AND check all sensors are unoccupied before recalibrate. Can set AWB AEC AGC CB through $$$$ e.g. c0110  
+**``c$$$$``**&nbsp; &nbsp; **\* reCalibrate** camera CCD occasionally and grab new references for all enabled sensors(Beware of doing this while any sensors are occupied) **N.B.** Obstructed sensors will later need an **r%%**. Check all bank LEDs are off AND check all sensors are unoccupied before recalibrate. Can set AWB AEC AGC CB through $$$$ e.g. c0110  
 Also able to change default setting for Brightness, Contrast & Saturation with extra digits e.g. c$$$$012
 
-``d%%[#]``&nbsp; **\* Difference** score in colour& brightness between Ref & actual image. Show # grabs.
+**``d%%[#]``**&nbsp; **\* Difference** score in colour& brightness between Ref & actual image. Show # grabs.
 
-``e``&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; **EPROM** save of any new Sensor offset positions, pvtThresholds, new twins and 5 default parameter settings.
+**``e``**&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; **EPROM** save of any new Sensor offset positions, pvtThresholds, new twins and 5 default parameter settings.
 
-``f%%``&nbsp; &nbsp; &nbsp; **\* Frame** buffer sample display. Print latest bytes in *Sensor_ref[%%]* & Sensor S%% positions.
+**``f%%``**&nbsp; &nbsp; &nbsp; **\* Frame** buffer sample display. Print latest bytes in *Sensor_ref[%%]* & Sensor S%% positions.
 
-``g``&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; **\*Get** Camera Status. Displays most current settings available in webcam window (both sensor & video mode).
+**``g``**&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; **\*Get** Camera Status. Displays most current settings available in webcam window (both sensor & video mode).
 
-``h$[,#]`` &nbsp; &nbsp; **\* Help(debug)** output.  **h9**  to turn all OFF,  **h0**  turn ON detailed USB output. '**h7,#**' "Waits" scroll on a bank# trip.
+**``h$[,#]``** &nbsp; &nbsp; **\* Help(debug)** output.  **h9**  to turn all OFF,  **h0**  turn ON detailed USB output. '**h7,#**' "Waits" scroll on a bank# trip.
 
-``i%%[,$$]`` &nbsp;**Info.** on S%%.  Status(enabled/occupied), position(r,x), any twin(S$$), pvtThreshold & brightness.
+**``i%%[,$$]``** &nbsp;**Info.** on S%%.  Status(enabled/occupied), position(r,x), any twin(S$$), pvtThreshold & brightness.
 
-``j$#`` &nbsp; &nbsp; &nbsp; &nbsp; **\* adJust** camera setting $ to value # and display most settings (as for '**g**'). '**j**' alone lists options for \$\#.
+**``j$#``** &nbsp; &nbsp; &nbsp; &nbsp; **\* adJust** camera setting $ to value # and display most settings (as for '**g**'). '**j**' alone lists options for \$\#.
 
-``k%%,rrr,xxx`` \* set **coordinates** of Sensor S$$ to row: rrr & column: xxx. Follow with  **r%%**. Verify values with **p$**.
+**``k%%,rrr,xxx``** \* set **coordinates** of Sensor S$$ to row: rrr & column: xxx. Follow with  **r%%**. Verify values with **p$**.
 
-``l%%`` &nbsp; &nbsp; &nbsp; (Lima) **Latch** sensor S%% to on(1 = occupied(LED lit) & also set *SensorActive[%%]* false to disable sensing.
+**``l%%``** &nbsp; &nbsp; &nbsp; (Lima) **Latch** sensor S%% to on(1 = occupied(LED lit) & also set *SensorActive[%%]* false to disable sensing.
 
-``m$[,%%]`` **\* Minimum** $(1-4) sequential frames over *Threshold* to trigger/trip sensor. Shows list of parameters. **(Note 14)**
+**``m$[,%%]``** **\* Minimum** $(1-4) sequential frames over *Threshold* to trigger/trip sensor. Shows list of parameters. **(Note 14)**
 
-``n#[,%%]`` &nbsp; **nLED** bank Number assigned to the programmable status *nLED*. Optional  **n10,%%**  to set *minSensors*.
+**``n#[,%%]``** &nbsp; **nLED** bank Number assigned to the programmable status *nLED*. Optional  **n10,%%**  to set *minSensors*.
 
-``o%%`` &nbsp; &nbsp; &nbsp; (Oscar) force **Off** sensor%% (0=UN-occupied, LED off) Also set *SensorActive[##]* false to disable updating.
+**``o%%``** &nbsp; &nbsp; &nbsp; (Oscar) force **Off** sensor%% (0=UN-occupied, LED off) Also set *SensorActive[##]* false to disable updating.
 
-``p$``&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; **\*Position Pointe**r table info for banks 0 to $ giving DEFINED sensor r/ x\) positions.  p%% shorter.
+**``p$``**&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; **\*Position Pointe**r table info for banks 0 to $ giving DEFINED sensor r/ x\) positions.  p%% shorter.
 
-``q$``&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; **\*Query** bank$, to show which sensors ENABLED(in bits 7-0). 1=enabled. **q9** gives ALL banks.
+**``q$``**&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; **\*Query** bank$, to show which sensors ENABLED(in bits 7-0). 1=enabled. **q9** gives ALL banks.
 
-``r%%[,0]`` &nbsp;**Refresh** Average *Sensor_Ref[##]* (if defined), enable & calc. cRatios etc. **r%%,0** refreshes block S%0 to S%%.
+**``r%%[,0]``** &nbsp;**Refresh** Average *Sensor_Ref[##]* (if defined), enable & calc. cRatios etc. **r%%,0** refreshes block S%0 to S%%.
 
-``r00`` &nbsp; &nbsp; &nbsp; &nbsp; **Refresh** Average Refs etc. for ALL defined sensors. Ignores enable[]. Sensor[00] reserved for brightness ref.
+**``r00``** &nbsp; &nbsp; &nbsp; &nbsp; **Refresh** Average Refs etc. for ALL defined sensors. Ignores enable[]. Sensor[00] reserved for brightness ref.
 
-``s%%`` &nbsp; &nbsp; &nbsp; **\*Scan** for new location for sensor  S%%(00-97). If found, records location in *Sensor[0%%]*. **(Note 12)**
+**``s%%``** &nbsp; &nbsp; &nbsp; **\*Scan** for new location for sensor  S%%(00-97). If found, records location in *Sensor[0%%]*. **(Note 12)**
 
-``t##[,%%]`` **Threshold** level##(31-98 only) set as default. [``t#`#,%%`` sets the *pvtThreshold* for sensor %% (**t0,%%** to clear)]
+**``t##[,%%]``** **Threshold** level##(31-98 only) set as default. [``t#`#,%%`` sets the *pvtThreshold* for sensor %% (**t0,%%** to clear)]
 
-``t##`` &nbsp; &nbsp; &nbsp; &nbsp; **Tabulates** \#\#(2-30 only) rows of scroll data (continuous scroll toggled off) **Note:** ``t1`` alone toggles scroll on/off.
+**``t##``** &nbsp; &nbsp; &nbsp; &nbsp; **Tabulates** \#\#(2-30 only) rows of scroll data (continuous scroll toggled off) **Note:** ``t1`` alone toggles scroll on/off.
 
-``t1,%%``  &nbsp; &nbsp; **Trash** 1 entire bank of *pvtThresholds*. Use ``t1,99`` to clear ALL banks (0-9). **Note:** **t99** lists all *pvtThresholds*
+**``t1,%%``**  &nbsp; &nbsp; **Trash** 1 entire bank of *pvtThresholds*. Use ``t1,99`` to clear ALL banks (0-9). **Note:** **t99** lists all *pvtThresholds*
 
-``u%%`` &nbsp; &nbsp; &nbsp; **\* Un-define**/remove sensor %%  (Sensor S%%=0 & set DISABLED) **u99** for ALL. ``e`` will erase from EPROM.
+**``u%%``** &nbsp; &nbsp; &nbsp; **\* Un-define**/remove sensor %%  (Sensor S%%=0 & set DISABLED) **u99** for ALL. ``e`` will erase from EPROM.
 
-``v[1|2]``&nbsp; &nbsp; &nbsp; **Video** mode. Causes reboot as a webserver. '**v2**' will connect to  2nd (alt.) router ssid.(``v` or ``v0`` for version)
+**``v[1|2]``**&nbsp; &nbsp; &nbsp; **Video** mode. Causes reboot as a webserver. '**v2**' will connect to  2nd (alt.) router ssid.(``v` or ``v0`` for version)
 
-``w``&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; **\* Wait** for new command line (\\n) before resuming sensing (handy to freeze display data scroll - see ``t1`` toggle)
+**``w``**&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; **\* Wait** for new command line (\\n) before resuming sensing (handy to freeze display data scroll - see ``t1`` toggle)
 
-``x###`` &nbsp; &nbsp; &nbsp; \*selects first pixel column(0-319) & **z###** selects image width (### columns(1-320)) for imaging.
+**``x###``** &nbsp; &nbsp; &nbsp; \*selects first pixel column(0-319) & ``z###`` selects image width (### columns(1-320)) for imaging.
 
-``y###`` &nbsp; &nbsp; &nbsp; \*selects first row for image and initiates a binary data dump for that row (header + #x2 bytes) using rgb565.  
+**``y###``** &nbsp; &nbsp; &nbsp; \*selects first row for image and initiates a binary data dump for that row (header + #x2 bytes) using rgb565.  
   &nbsp; &nbsp; &nbsp; &nbsp; This command starts a process that must, after a series of ``y`` commands, end with a terminator of ``yy``.
 
-``R`` & ``F``&nbsp; &nbsp; &nbsp; ***Reset** commands- will Reset CAM and initiate the Sensor mode. Both will Finish the WebServer(``v``) mode.
+**``R``** & **``F``**&nbsp; &nbsp; &nbsp; ***Reset** commands- will Reset CAM and initiate the Sensor mode. Both will Finish the WebServer(``v``) mode.
 
-``\%,#,$`` &nbsp; &nbsp;  Convert bank to linear sensor starting with  ``S$$``  and using r,x step sizes of **#,$**(0-31) Slope is "down-right".
+**``\%,#,$``** &nbsp; &nbsp;  Convert bank to linear sensor starting with  ``S$$``  and using r,x step sizes of **#,$**(0-31) Slope is "down-right".
 
-``/%,#,$`` &nbsp; &nbsp;  Convert bank to linear sensor starting with S$$ as for '\\' but line will slope "down-left" (-deltaX).
+**``/%,#,$``** &nbsp; &nbsp;  Convert bank to linear sensor starting with S$$ as for '\\' but line will slope "down-left" (-deltaX).
 
-``&`` &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;  **statistics** histogram on trips and potential trips since last ``&``, then reset counters and start another sample process. The table gives number of single highs, double highs etc. and totals for No. of frames/run time
+**``&``** &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;  **statistics** histogram on trips and potential trips since last ``&``, then reset counters and start another sample process. The table gives number of single highs, double highs etc. and totals for No. of frames/run time
 
-``@##`` &nbsp; &nbsp; &nbsp;  \*set the "occupied" symbol in the scroll to ASCII character \#\#. Default is 35("#") Arduino IDE **@12** is bolder!
+**``@##``** &nbsp; &nbsp; &nbsp;  \*set the "occupied" symbol in the scroll to ASCII character \#\#. Default is 35("#") Arduino IDE **@12** is bolder!
 
-``+#,$`` &nbsp; &nbsp; &nbsp; \*add offset(\# pixels) in \$ direction to re-centre sensors after physical drift in CAM alignment. \$(0-7) for N-NW
+**``+#,$``** &nbsp; &nbsp; &nbsp; \*add offset(\# pixels) in \$ direction to re-centre sensors after physical drift in CAM alignment. \$(0-7) for N-NW
 
 &nbsp; &nbsp; &nbsp; * These commands typically for diagnostic/setup use only. They wait for a line feed or command to resume.
 
