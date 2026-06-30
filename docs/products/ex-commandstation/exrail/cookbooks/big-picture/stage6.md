@@ -18,8 +18,7 @@ At the end of this stage, we expect you will have learnt the following:
 * How to enable a fully automated layout.
 * What hardware can be used, and how to connect the components (Fritzing diagrams for this will be published soon).
 
-.. raw:: html
-  :file: ../_static/images/big-picture/rmft-stage1.drawio.svg
+![Stage 1](../../../../../_static/images/big-picture/rmft-stage1.drawio.svg)
 
 ## Aliases
 
@@ -37,7 +36,7 @@ For more information on aliases, refer to [EXRAIL Aliases](../editing-tricks/gen
 
 Two turnouts/points are used in this first stage of our RMFT layout to allow trains to enter and exit the station siding, or continue along the main track.
 
-For further reading on turnouts/points, you can refer to the ==TODO== `exrail/exrail-command-reference:turnout/point objects - definition and control` section of the **EXRAIL** reference and [Define or manage Turnouts/Points](/reference/serial-commands/serial-command-tt_not_in_nav.md) in the DCC-EX Command reference.
+For further reading on turnouts/points, you can refer to the [turnout/point objects](../../exrail-objects-introduction.md#adding-turnoutspoints) section of the **EXRAIL** reference and [Define or manage Turnouts/Points](/reference/serial-commands/serial-command-tt_not_in_nav.md) in the DCC-EX Command reference.
 
 ### Turnout/Point definitions
 

@@ -39,7 +39,7 @@ In this section, you will find some tips on troubleshooting the various issues e
 
 | Symptoms | Common Causes |
 | -- | -- |
-| EX-CommandStation software fails to compile with "#include IO_TurntableEX.h" in myHal.cpp | The version of EX-CommandStation is incorrect, you need the "add-turntable-controller" branch of ==TODO== `EX-CommandStation <https://github.com/DCC-EX/CommandStation-EX/tree/add-turntable-controller>`_ |
+| EX-CommandStation software fails to compile with "#include IO_TurntableEX.h" in myHal.cpp | The version of EX-CommandStation is incorrect, you need the "add-turntable-controller" branch of [EX-CommandStation](https://github.com/DCC-EX/CommandStation-EX/tree/add-turntable-controller>) |
 
 ### EX-Turntable showing as offline with `<D HAL SHOW>`
 
