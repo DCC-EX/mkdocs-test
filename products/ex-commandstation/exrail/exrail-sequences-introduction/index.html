@@ -9190,12 +9190,12 @@
 </ul>
 <h3 id="sequence">SEQUENCE<a class="headerlink" href="#sequence" title="Permanent link">&para;</a></h3>
 <ul>
-<li>Simply a list of things to be done in order. These things might be to actually drive a train around, or merely to set some turnouts or flash some scene or panel lights. Actions can be made to wait for conditions to be met, like a sensor detecting a train, a button being pushed, or a period of time elapsing.</li>
+<li>Simply a list of things to be done in order. These things might be to actually drive a train around, or merely to set some <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnouts</abbr> or flash some scene or panel lights. Actions can be made to wait for conditions to be met, like a sensor detecting a train, a button being pushed, or a period of time elapsing.</li>
 <li>A generic <strong>SEQUENCE</strong> (unlike the variations below) can only be started by another SEQUENCE, or automatically at the start-up of the Command Station.</li>
 </ul>
 <h3 id="route">ROUTE<a class="headerlink" href="#route" title="Permanent link">&para;</a></h3>
 <ul>
-<li>A special type of SEQUENCE that is made visible to a throttle with a readable name, so the user can press a button to get the sequence executed. This might be best used to set a series of turnouts and signals to create a route through the layout.</li>
+<li>A special type of SEQUENCE that is made visible to a throttle with a readable name, so the user can press a button to get the sequence executed. This might be best used to set a series of <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnouts</abbr> and signals to create a route through the layout.</li>
 </ul>
 <h3 id="automation">AUTOMATION<a class="headerlink" href="#automation" title="Permanent link">&para;</a></h3>
 <ul>
@@ -9203,11 +9203,11 @@
 </ul>
 <h3 id="onevent-sequences">ONevent sequences<a class="headerlink" href="#onevent-sequences" title="Permanent link">&para;</a></h3>
 <ul>
-<li>Special types of SEQUENCE that are activated when certain 'events' occur. Including when signals change, when turnouts/points change, when a turntable rotates, at a specific time, etc.</li>
+<li>Special types of SEQUENCE that are activated when certain 'events' occur. Including when signals change, when <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnouts</abbr>/points change, when a turntable rotates, at a specific time, etc.</li>
 <li>These include: <code>ONGREEN( signal_id)</code> <code>ONAMBER( signal_id)</code> <code>ONRED( signal_id)</code> <code>ONCLOSE( turnout_id )</code> <code>ONTHROW( turnout_id )</code> <code>ONCHANGE( vpin )</code> <code>ONROTATE( id )</code> <code>ONACTIVATE( addr, sub_addr )</code> <code>ONACTIVATEL( linear )</code> <code>ONDEACTIVATE( addr, sub_addr )</code> <code>ONDEACTIVATEL( linear )</code> <code>ONCLOCKTIME( hours, mins )</code> <code>ONCLOCKMINS( mins )</code> <code>ONOVERLOAD( track )</code></li>
 </ul>
 <p>Most people wanting to do animations or run trains through an automated route will use a SEQUENCE, but those with <a href="../../../../throttles/throttles/">throttles</a> that support it (Engine Driver, <strong>EX-WebThrottle</strong>) can add routes and automations. Both of these terms are just tags that let throttles with this feature automatically assign sequences to control buttons. "Routes" go into route buttons/screen. Automation sequences will also appear with the routes but with a 'handoff' button that will supply or handoff the Loco ID to <strong>EXRAIL</strong> where it can take over and run the train autonomously.</p>
-<p>e.g. A ROUTE could be just changing a series of turnouts/points, or could be driving a <em>specific</em> loco on a complex journey around the layout. An AUTOMATION could be reading id of the loco <em>currently controlled by user</em>, and taking it on a complex journey around the layout.</p>
+<p>e.g. A ROUTE could be just changing a series of <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnouts</abbr>/points, or could be driving a <em>specific</em> loco on a complex journey around the layout. An AUTOMATION could be reading id of the loco <em>currently controlled by user</em>, and taking it on a complex journey around the layout.</p>
 <hr />
 <h2 id="the-automation-process">The Automation Process<a class="headerlink" href="#the-automation-process" title="Permanent link">&para;</a></h2>
 <p>Once started, each 'sequence' will step through a list of simple keyword commands, in order, until they reach a <code>DONE</code> keyword.</p>
@@ -9251,7 +9251,7 @@
 <ul>
 <li>Manually triggered</li>
 <li>Triggered by another sequence</li>
-<li>Triggered as a result of an event that has occurred on one of the turnouts/points, sensors, signals.</li>
+<li>Triggered as a result of an event that has occurred on one of the <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnouts</abbr>/points, sensors, signals.</li>
 </ul>
 <h4 id="manually-triggered-sequence-types">Manually Triggered Sequence Types<a class="headerlink" href="#manually-triggered-sequence-types" title="Permanent link">&para;</a></h4>
 <p>Manually triggered sequences are advertised to WiThrottles so you can activate them on your throttles (e.g. Engine Driver or <abbr title="Communication Protocol. Trademark + iOS app owned by Brett Hoffman">WiThrottle</abbr>). They are one of:</p>
@@ -9305,7 +9305,7 @@
 </li>
 </ul>
 <h4 id="action-commands-getting-exrail-to-do-something">Action Commands - Getting EXRAIL to 'do' something<a class="headerlink" href="#action-commands-getting-exrail-to-do-something" title="Permanent link">&para;</a></h4>
-<p>This type of command will somehow change Objects of the system you have created and defined, like turnouts/points, signals, servos, turntables, blocks and locos.</p>
+<p>This type of command will somehow change Objects of the system you have created and defined, like <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnouts</abbr>/points, signals, servos, turntables, blocks and locos.</p>
 <p>There are a substantial number of commands that you can explore in the <a href="../command-list/">EXRAIL Command List</a>. We will look at just a few here.</p>
 <div class="language-cpp highlight"><pre><span></span><code><span class="w">   </span><span class="c1">// Example</span>
 <span class="w">   </span><span class="n">ONTHROW</span><span class="p">(</span><span class="mi">8</span><span class="p">)</span><span class="w">     </span><span class="c1">// When turnout 8 is thrown,</span>
@@ -9487,7 +9487,7 @@
 <h2 id="referencing-key-objects-in-sequences">Referencing Key Objects in Sequences<a class="headerlink" href="#referencing-key-objects-in-sequences" title="Permanent link">&para;</a></h2>
 <h3 id="referencing-turnoutspoints">Referencing Turnouts/Points<a class="headerlink" href="#referencing-turnoutspoints" title="Permanent link">&para;</a></h3>
 <p><strong>EX-CommandStation</strong> supports a number of different <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnout</abbr>/point hardware configurations, but your automation treats them all as simple ID numbers. Turnouts may be defined using <code>&lt;T&gt;</code> commands from <abbr title="Java Model Railroad Interface">JMRI</abbr>, or in <code>SETUP("&lt;T ...&gt;")</code> commands placed in your mySetup.h file, or C++ code in mySetup.h, just like earlier versions.</p>
-<p>You may, however, find it more convenient to define turnouts/points using <strong>EXRAIL</strong> commands, which may appear anywhere in the 'myAutomation.h' file, even after they are referenced in an <code>ONTHROW</code>, <code>ONCLOSE</code>, <code>THROW</code> or <code>CLOSE</code> command. (EXRAIL extracts the <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnout</abbr> definitions just once from your script at Command Station startup.)</p>
+<p>You may, however, find it more convenient to define <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnouts</abbr>/points using <strong>EXRAIL</strong> commands, which may appear anywhere in the 'myAutomation.h' file, even after they are referenced in an <code>ONTHROW</code>, <code>ONCLOSE</code>, <code>THROW</code> or <code>CLOSE</code> command. (EXRAIL extracts the <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnout</abbr> definitions just once from your script at Command Station startup.)</p>
 <p>Turnouts/Points defined in 'myAutomation.h' will still be visible to <abbr title="Communication Protocol. Trademark + iOS app owned by Brett Hoffman">WiThrottle</abbr> and <abbr title="Java Model Railroad Interface">JMRI</abbr> in the normal way.</p>
 <p>A TURNOUT command sends DCC signals to a decoder attached to the track, a PIN_TURNOUT sends a "throw" or "close" (5V or 0V signal) to a pin on the Arduino, and a SERVO_TURNOUT sends an I2C serial command to a servo board connected to your servos.</p>
 <p>See the <a href="../command-list/">EXRAIL Command List</a> for TURNOUT, PIN_TURNOUT and SERVO_TURNOUT definitions.</p>

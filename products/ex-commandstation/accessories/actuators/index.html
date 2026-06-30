@@ -8589,7 +8589,7 @@
 <h1 id="actuators-to-make-stuff-happen">Actuators - to make stuff happen<a class="headerlink" href="#actuators-to-make-stuff-happen" title="Permanent link">&para;</a></h1>
 <p>Actuators are devices that you can add to make things happen under the control of the <strong>EX-CommandStation</strong>. For example throwing a <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnout</abbr>, setting a signal or switching lights. There are basically two types of actuator that will commonly be used:</p>
 <ul>
-<li><abbr title="Pulse Width Modulation">PWM</abbr> output used for Servo movement of turnouts/points, semaphore signals, crossing gates, fancy animations and LED fading.</li>
+<li><abbr title="Pulse Width Modulation">PWM</abbr> output used for Servo movement of <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnouts</abbr>/points, semaphore signals, crossing gates, fancy animations and LED fading.</li>
 <li>Digital output (On/Off) mostly used for LEDs, relays and some <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnout</abbr>/point types.</li>
 </ul>
 <p>Other actuator types include:</p>
@@ -8604,7 +8604,7 @@
 <p><a href="?EXRAIL">EXRAIL</a> is used to</p>
 <ul>
 <li>Define the PCA9685 connection and its address so that each output can be given a unique <a href="?VPIN"><abbr title="an Arduino pin number that has been extended to include pins on external devices or expanders">VPIN</abbr></a> to control it.</li>
-<li>For turnouts/points define a <a href="?SERVO_TURNOUT">SERVO_TURNOUT</a> for each <abbr title="an Arduino pin number that has been extended to include pins on external devices or expanders">VPIN</abbr> so that the rest of <strong>DCC-EX</strong> can throw or close this <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnout</abbr>/point without knowledge of the underlying mechanism.</li>
+<li>For <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnouts</abbr>/points define a <a href="?SERVO_TURNOUT">SERVO_TURNOUT</a> for each <abbr title="an Arduino pin number that has been extended to include pins on external devices or expanders">VPIN</abbr> so that the rest of <strong>DCC-EX</strong> can throw or close this <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnout</abbr>/point without knowledge of the underlying mechanism.</li>
 <li>For semaphore signals, define a <a href="?SERVO_SIGNAL">SERVO_SIGNAL</a> to that the rest of <strong>DCC-EX</strong> can control the signal.</li>
 <li>Control animation servos directly, such as crossing gates or shed doors.</li>
 </ul>

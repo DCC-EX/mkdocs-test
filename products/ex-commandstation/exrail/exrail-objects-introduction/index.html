@@ -9120,7 +9120,7 @@
 </div>
 <hr />
 <h2 id="adding-a-roster">Adding a Roster<a class="headerlink" href="#adding-a-roster" title="Permanent link">&para;</a></h2>
-<p><strong>EXRAIL</strong> has a <code>ROSTER()</code> function to allow you to define all of your locomotives with a list of their defined functions which is advertised to <abbr title="Communication Protocol. Trademark + iOS app owned by Brett Hoffman">WiThrottle</abbr> applications, just like turnouts/points and routes.</p>
+<p><strong>EXRAIL</strong> has a <code>ROSTER()</code> function to allow you to define all of your locomotives with a list of their defined functions which is advertised to <abbr title="Communication Protocol. Trademark + iOS app owned by Brett Hoffman">WiThrottle</abbr> applications, just like <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnouts</abbr>/points and routes.</p>
 <p>The functions can simply be listed as "F" numbers, or you can provide a text description of the function. Prefacing the function with a "*" indicates it is momentary, meaning it is only activated while holding that function button down.</p>
 <p>In a text editor (e.g. notepad) create a new text file named 'myAutomation.h'. (Note the capital 'A' in the name.  The case of all the characters is important.)</p>
 <p>If you are already using <strong>EXRAIL</strong> and have a myAutomation.h, then just the add <code>ROSTER(...)</code> lines near the top of the file.</p>
@@ -9172,13 +9172,13 @@
 <h2 id="adding-turnoutspoints">Adding Turnouts/Points<a class="headerlink" href="#adding-turnoutspoints" title="Permanent link">&para;</a></h2>
 <p>Turnouts/Points can included on your layout in one of the</p>
 <ul>
-<li>DCC turnouts/Points</li>
+<li>DCC <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnouts</abbr>/Points</li>
 <li>Servo Turnouts/Points</li>
-<li>Pin turnouts/Points</li>
+<li>Pin <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnouts</abbr>/Points</li>
 </ul>
 <h3 id="dcc-turnoutspoints">DCC Turnouts/Points<a class="headerlink" href="#dcc-turnoutspoints" title="Permanent link">&para;</a></h3>
 <h4 id="adding-the-hardware-dcc-turnoutspoints">Adding the Hardware -  DCC Turnouts/Points<a class="headerlink" href="#adding-the-hardware-dcc-turnoutspoints" title="Permanent link">&para;</a></h4>
-<p>If you have installed turnouts/points using DCC accessory decoders, you can config the <strong>EX-CommandStation</strong> so that it knows about it and you can control in in your sequences.</p>
+<p>If you have installed <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnouts</abbr>/points using DCC accessory decoders, you can config the <strong>EX-CommandStation</strong> so that it knows about it and you can control in in your sequences.</p>
 <div class="language-cpp highlight"><pre><span></span><code><span class="w">    </span><span class="n">TURNOUT</span><span class="p">(</span><span class="w"> </span><span class="n">id</span><span class="p">,</span><span class="w"> </span><span class="n">addr</span><span class="p">,</span><span class="w"> </span><span class="n">sub_addr</span><span class="w"> </span><span class="p">[,</span><span class="w"> </span><span class="s">&quot;description&quot;</span><span class="p">]</span><span class="w"> </span><span class="p">)</span>
 </code></pre></div>
 <p>The <code>TURNOUT</code> command defines DCC accessory decoder <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnout</abbr>/point in <strong>EXRAIL</strong>, which will appear in <abbr title="Communication Protocol. Trademark + iOS app owned by Brett Hoffman">WiThrottle</abbr> Protocol apps, Engine Driver, and <abbr title="Java Model Railroad Interface">JMRI</abbr> in addition to being defined as a <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnout</abbr>/point within the CommandStation.</p>
@@ -9190,7 +9190,7 @@
   ==TODO== You can also refer to :doc:`/ex-commandstation/accessories/turnouts/solenoid-turnouts` for more information.
 -->
 
-<p>If you have installed turnouts/points using simple pin control, you can config the <strong>EXRAIL</strong> so that it knows about it and you can control in in your sequences.</p>
+<p>If you have installed <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnouts</abbr>/points using simple pin control, you can config the <strong>EXRAIL</strong> so that it knows about it and you can control in in your sequences.</p>
 <div class="language-cpp highlight"><pre><span></span><code><span class="w">    </span><span class="n">PIN_TURNOUT</span><span class="p">(</span><span class="w"> </span><span class="n">id</span><span class="p">,</span><span class="w"> </span><span class="n">vpin</span><span class="w"> </span><span class="p">[,</span><span class="w"> </span><span class="s">&quot;description&quot;</span><span class="p">]</span><span class="w"> </span><span class="p">)</span>
 </code></pre></div>
 <p>The <code>PIN_TURNOUT</code> command defines a pin operated <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnout</abbr>/point in <strong>EXRAIL</strong>, which will appear in <abbr title="Communication Protocol. Trademark + iOS app owned by Brett Hoffman">WiThrottle</abbr> Protocol apps, Engine Driver, and <abbr title="Java Model Railroad Interface">JMRI</abbr> in addition to being defined as a <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnout</abbr>/point within the CommandStation.</p>
@@ -9233,7 +9233,7 @@
 <p>(See the <a href="../../../../reference/tools/serial-monitor_not_in_nav/">serial monitors</a> pages for the different serial monitors that are available to use.)</p>
 <p>Enter <code>&lt;D SERVO 100 110&gt;</code> and this time it should definitely move.  For the last parameter (servo position) you can use any value between about 105 and 490.</p>
 <p>Try <code>&lt;D SERVO 100 450 3&gt;</code> and the servo should move slowly back.</p>
-<p>You can use the servo to control turnouts/points, semaphore signals, engine shed doors, and other layout components, to make your layout more dynamic and exciting.  In the picture below, you can see a servo mounted below the baseboard with a piece of wire passing through a slot cut in the baseboard, to operate a <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnout</abbr>/point.</p>
+<p>You can use the servo to control <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnouts</abbr>/points, semaphore signals, engine shed doors, and other layout components, to make your layout more dynamic and exciting.  In the picture below, you can see a servo mounted below the baseboard with a piece of wire passing through a slot cut in the baseboard, to operate a <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnout</abbr>/point.</p>
 <p><img alt="Servo mount to operate a turnout/point" src="../../../../_static/images/i2c-connected-devices/TurnoutServoMount.jpg" width="200px" /></p>
 <p>And in the next picture you can see a servo that operates a semaphore signal.  The signal, and its servo mounting bracket, were 3d-printed on a Creality Ender-3 printer.</p>
 <p><img alt="Servo mount to operate a Semaphore Signal" src="../../../../_static/images/i2c-connected-devices/SemaphoreSignal.jpg" width="200px" /></p>
@@ -9247,7 +9247,7 @@
 </ul>
 <h4 id="controlling-servos-for-turnoutspoints">Controlling Servos for Turnouts/Points<a class="headerlink" href="#controlling-servos-for-turnoutspoints" title="Permanent link">&para;</a></h4>
 <p>The <code>SERVO_TURNOUT</code> directive defines a servo based <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnout</abbr>/point in <strong>EXRAIL</strong>, which will appear in <abbr title="Communication Protocol. Trademark + iOS app owned by Brett Hoffman">WiThrottle</abbr> Protocol apps, Engine Driver, and <abbr title="Java Model Railroad Interface">JMRI</abbr> in addition to being defined as a <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnout</abbr>/point within the CommandStation.</p>
-<p>As per the <strong>EXRAIL</strong> reference, turnouts/points are defined with the following syntax:</p>
+<p>As per the <strong>EXRAIL</strong> reference, <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnouts</abbr>/points are defined with the following syntax:</p>
 <div class="language-cpp highlight"><pre><span></span><code><span class="w">   </span><span class="c1">// Example</span>
 <span class="w">   </span><span class="n">SERVO_TURNOUT</span><span class="p">(</span><span class="n">id</span><span class="p">,</span><span class="w"> </span><span class="n">pin</span><span class="p">,</span><span class="w"> </span><span class="n">active_angle</span><span class="p">,</span><span class="w"> </span><span class="n">inactive_angle</span><span class="p">,</span><span class="w"> </span><span class="n">profile</span><span class="w"> </span><span class="p">[,</span><span class="w"> </span><span class="s">&quot;description&quot;</span><span class="p">])</span>
 </code></pre></div>
@@ -9257,7 +9257,7 @@
 <span class="w">   </span><span class="cm">/* An example definition for a servo connected to the second control pins of the first PCA9685 connected to the CommandStation, using the slow profile for prototypical operation: */</span><span class="n">The</span><span class="w"> </span><span class="n">valid</span><span class="w"> </span><span class="n">parameters</span><span class="w"> </span><span class="n">are</span><span class="o">:</span>
 </code></pre></div>
 <ul>
-<li>id = Unique ID within the CommandStation (note these are shared across turnouts/points, sensors, and outputs).</li>
+<li>id = Unique ID within the CommandStation (note these are shared across <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnouts</abbr>/points, sensors, and outputs).</li>
 <li>pin = The ID of the pin the servo is connected to, which would typically be the VPin ID of the PCA9685 controller board.</li>
 <li>active_angle = The angle to which the servo will move when the <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnout</abbr>/point is thrown (refer below for further detailed information).</li>
 <li>inactive_angle = The angle to which the servo will move when the <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnout</abbr>/point is closed (refer below for further detailed information).</li>
@@ -9269,7 +9269,7 @@
 <p>See above for information on installing the servo hardware (it is the same as for a <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnout</abbr>/point).</p>
 <h3 id="configure-myautomationh-servos-for-signals-an-animations">Configure myAutomation.h - Servos for Signals an Animations<a class="headerlink" href="#configure-myautomationh-servos-for-signals-an-animations" title="Permanent link">&para;</a></h3>
 <p>The <code>myAutomation.h</code> file needs to be altered so that the <strong>EX-CommandStation</strong> knows about each servo.</p>
-<p><strong>EXRAIL</strong> supports two methods of controlling servos that are not related to turnouts/points:</p>
+<p><strong>EXRAIL</strong> supports two methods of controlling servos that are not related to <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnouts</abbr>/points:</p>
 <ul>
 <li><a href="#servos-for-signals">Signals via the SERVO_SIGNAL directive</a></li>
 <li><a href="#servos-for-animations">Animations via the SERVO or SERVO2 directives</a></li>
@@ -9277,7 +9277,7 @@
 <h4 id="servos-for-signals">Servos for Signals<a class="headerlink" href="#servos-for-signals" title="Permanent link">&para;</a></h4>
 <p>The <code>SERVO_SIGNAL</code> directive defines a servo based signal in <strong>EXRAIL</strong> to drive semaphore type signals as part of sequences or routes, or simply be set via a signal or similar.</p>
 <p>Similar to pin based signals, servo signals are controlled by the ID of the red pin only.</p>
-<p>Unlike servo based turnouts/points, there is no ID or description (they don't appear in throttles), and they use the "Bounce" profile with no other options available at the present time:</p>
+<p>Unlike servo based <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnouts</abbr>/points, there is no ID or description (they don't appear in throttles), and they use the "Bounce" profile with no other options available at the present time:</p>
 <div class="language-cpp highlight"><pre><span></span><code><span class="w">   </span><span class="n">SERVO_SIGNAL</span><span class="p">(</span><span class="n">vpin</span><span class="p">,</span><span class="w"> </span><span class="n">redpos</span><span class="p">,</span><span class="w"> </span><span class="n">amberpos</span><span class="p">,</span><span class="w"> </span><span class="n">greenpos</span><span class="p">)</span>
 </code></pre></div>
 <div class="language-cpp highlight"><pre><span></span><code><span class="w">   </span><span class="c1">// Example</span>
