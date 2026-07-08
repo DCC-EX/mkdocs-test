@@ -23,8 +23,6 @@ Including ESP32-WROVER-CAM and ESP32-WROOM-S3 CAM's
 [H. Notes on use of EX-Rail with SensorCAM](#appendix-h)  
 [J. WROVER-CAM notes](#appendix-j)  
 
-[Addenda](#additional-random-notes)
-
 ## 1. Overview
 
 The sensorCAM is a video camera replacement for physical proximity sensors/detectors on a model railroad. It can replace up to 80 detectors and their associated power and signal wiring using artificial vision alone. It offers the flexibility of sensor placement or relocation instantly by software command with no physical layout modification.The railroad can be automated using artificial vision of train activity. Each virtual sensor can produce a logical state of 1 (occupied) or 0 (unoccupied) and is readable over an i2c cable. SensorCAM originally used the ESP32-CAM module. However, the ESP32-WROVER-DEV CAM (v1.6) is the preferred substitute with potentially simpler setup.
@@ -32,15 +30,16 @@ The sensorCAM is a video camera replacement for physical proximity sensors/detec
 The sensorCAM takes 10 frames per second in RGB565 format at QVGA resolution of 240 x 320. Each sensor consists of a square group of 16 pixels which equates to approximately 20x20mm square with the standard lens at 1500mm. The software decodes and saves only the 80 sensor images (1280 pixels) and then compares each sensor image with a reference image prerecorded either at startup, on request, or by a "recent" automatic update. If the images do not match the references well, then the sensor is "tripped" or "occupied" & status '1' is registered. A good match results in '0' output. The state of virtual sensors can be manually monitored on the USB monitor, or polled by microcontroller over the i2c interface cable.  
 **Note:** The sensorCAM is sensing only when the Flash LED is pulsing at 10Hz (for each new frame).
 
-![ESP32 CAM with MB](../../_static/images/ex-sensorcam/esp32-cam-with-mb.png){ width=400px }
+![ESP32 CAM with MB](../../_static/images/ex-sensorcam/esp32-cam-with-mb.png){ width=500px }
 
 2PCS ESP32-CAM-MB, ESP32-CAM Board, Micro USB to Serial Port CH-340G with OV2640 2MP Camera Module 4MB PSRAM
 
 ![ESP32 Wrover CAM](../../_static/images/ex-sensorcam/esp32-wrover-cam.png){ width=400px }
 
-**Note:** While the full manual primarily talks about the ESP32-CAM-MB, the focus here is the alternative in the newer **ESP32 WROVER-CAM** single board option. For some further preliminary details refer to Section 7 Wiring, **Figure 6**.  The software is identical for both CAMs.
+!!! note "Note:"
+    While the full manual primarily talks about the ESP32-CAM-MB, the focus here is the alternative in the newer **ESP32 WROVER-CAM** single board option. For some further preliminary details refer to Section 7 Wiring, **Figure 6**.  The software is identical for both CAMs.
 
-Dealing with video images involves complexities not normally associated with model railroading sensors. The sensorCAM is a complex device with a number of commands explicitly for setup and evaluation. In addition to these, several "output" commands can be used by a host to interrogate the "virtual sensor" output states. The initial setup can be somewhat involved and requires familiarity with many of the 25 commands discussed below.
+    Dealing with video images involves complexities not normally associated with model railroading sensors. The sensorCAM is a complex device with a number of commands explicitly for setup and evaluation. In addition to these, several "output" commands can be used by a host to interrogate the "virtual sensor" output states. The initial setup can be somewhat involved and requires familiarity with many of the 25 commands discussed below.
 
 The sensorCAM has two ***mutually exclusive modes*** of operation; the sensorCAM mode and the webCAM mode. The webCAM mode is essentially as described in the on-line tutorials. Use that mode only for education and alignment. Invoke webCAM video mode by issuing the **v1** (or **v2**) sensorCAM command to get a webCAM URL (e.g.192.168.0.64)
 
@@ -58,7 +57,7 @@ A tutorial on setting up the ESP32 on Arduino IDE is available on YouTube
 
 The sensorCAM software is uploaded to the ESP32-CAM using the Arduino IDE. The sensorCAM has been programmed with two modes of operation; a webCAM mode (as in the on-line tutorial) and a sensorCAM mode. The limited power of an ESP32 prevents both functioning at the same time. Consequently, to see an image of the railway while sensorCAM is operational requires a third application (Processing 4.3) to retrieve a still image from the CAM over the USB cable to a computer. The Processing 4 *sensorCAM.pde* app replaces the Arduino IDE and IDE monitor retaining the sensorCAM command set and offering a (slow) image capture capability over USB cable. Processing 4 allows virtual sensors to be placed interactively on an image of the railway with a simple mouse click.
 
-In addition to the USB interface, you may need a daughter board, "perf" board or prototyping board to connect to the real world (power, indicators, control wires, and i2c.) Further details are given below. However to test the sensorCAM functions, one only needs the CAM and a USB interface, with power from the PC's USB port.  The Wrover Cam minimises this need.
+In addition to the USB interface, you may need a daughter board (e.g. ESP32S 38P/V4/Expansion Board), "perf" board or prototyping board to connect to the real world (power, indicators, control wires, and i2c.) Further details are given below. However to test the sensorCAM functions, one only needs the CAM with a USB interface, with power from the PC's USB port.  The Wrover Cam minimises this need.
 
 To control a railway, the railway needs a microcontroller based management system. This typically could be an Arduino Mega (or **EX-CSB1**) based system running software such as the DCC-EX CommandStation and EX-RAIL automation application. The **EX-CommandStation**(CS) includes a sensorCAM specific driver as detailed later.
 
@@ -90,14 +89,12 @@ The ESP32-CAM can take rgb565 frames at 13/second. However it is a 3 step proces
 
 ## 3. Physical Installation
 
-For testing purposes you will need a computer with a spare USB port and the Arduino IDE software installed. The PROCESSING 4 software is also advisable as it gives a more reliable and convenient image for setup. A long powered USB cable (5m?) may be an advantage as the sensorCAM may be some distance from the PC. For a final installation the sensorCAM would be connected via a cat5/6 cable carrying power and a differential i2c bus (of up to 30m) to a Command Station or similar. Some different practical wiring solutions are explored in [Appendix F](#appendix-f).
+For testing purposes you will need a computer with a spare USB port and the Arduino IDE software installed. The PROCESSING 4 software is also advisable as it gives a more reliable and convenient image for setup. A long powered USB cable (5m?) may be an advantage as the sensorCAM may be some distance from the PC. For a final installation the sensorCAM would be connected via a cat5/6 cable carrying power and an i2c bus (of up to 30m) to a Command Station or similar. Some different practical wiring solutions are explored in [Appendix F](#appendix-f).
 
-For a test hookup between a USB powered sensorCAM and a Command Station(mega) with a short existing i2c bus, provided the total length is under say 3 meters, a simple, cheap arrangement could be tried using a PCA9515A as both buffer and level shifter if needed. The CAM on i2c bus is best used theoretically with the USB computer running on battery power alone (unplugged) to absolutely avoid ground loops and associated electrical noise, but will probably function OK anyway.
+!!! note "NOTE: 5volt Command Stations"
+    A 5 volt Command station or i2c bus will need a 5V to 3.3V level shifter such as PCA9515A.  Refer to the full manual [Wiring Requirements](ex-sensor-manual.md#wiring-requirements) for further details.
 
-![ESP32 CAM with PCA9515A and LTC4311](../../_static/images/ex-sensorcam/esp32-cam-pca9515a-ltc4311.png)  
- &nbsp; &nbsp; **Figure 3 &nbsp; CAM with 3.3 to 5V i2c interface and optional LTC4311 "terminator" for greater reach**
-
- The sensorCAM is preferably placed above and square-on to a section of layout at a height of 1 to 1.8m above the surface. 1.2m gives a max. coverage of approximately 1.2x0.9m with the standard lens. Tilting the CAM by up to 30 degrees can increase the layout coverage by up to 50%.
+ The sensorCAM is preferably placed above and square-on to a section of layout at a height of 1 to 1.8m above the surface. 1.2m gives a max. coverage of approximately 1.2 x 0.9m with the standard(66) lens. Tilting the CAM by up to 30 degrees can increase the layout coverage by up to 50%. Refer to [Appendix K in full manual](ex-sensor-manual.md#appendix-k) for further options.
 
 Lighting is critical for reliable operation. The lighting should be steady. Both LED flood and Fluorescent lighting might degrade results due to the flickering levels of illumination at 100/120 Hz. Use quality LED lights. The light fittings should not be visible in the camera's field of view. A uniform level of lighting is the objective, with a minimum influence from fluctuating daylight, fans or direct sun and cloud shadows through windows. Some experimentation may be needed to avoid local "glare".  Bright lighting is desirable (good quality LEDS) to enhance colour differentiation. Check your lighting for flicker by taking a "slo-mo" test video on a cell phone. Fluoros are bad!
 
@@ -124,9 +121,10 @@ The notation used in all sensorCAM reference material uses symbols according to 
 
 Sensor "bsNo." number consists of two digits preferably written separated by a '/' as in 1/2 but in commands this is reduced to 12 as in command **i12**. Command 'i' has the form **i%%** indicating it requires a 2-digit bsNo. As 49 is an invalid bsNo.(s range is 0-7), i49 is invalid. Some commands require a DECIMAL number and are expressed as having form **t##** for example. **t49** is therefore a valid command. The '**m**' command takes the form **m$,##** requiring a single digit and a 2-digit decimal number. For more details on commands see **APPENDIX A**.
 
-Where bsNo.'s are printed, they can take several equivalent forms depending on context. Where possible they are printed as %/% e.g. 2/3. However an equivalent form is 023. Any printed sensor number starting with a '0' can be treated as equivalent to the '/' form so 023 == 2/3 == bank 2 sensor 3. The 0%% form is in fact the "OCTAL" format of bsNo. (Note: 087 and 097 are invalid. Keeping usage to banks ranging from 0 to 7 avoids any confusion).
+Where bsNo.'s are printed, they can take several equivalent forms depending on context. Where possible they are printed as %/% e.g. 2/3. However an equivalent form is 023. Any printed sensor number starting with a '0' can be treated as equivalent to the '/' form so Sensor 023 == 2/3 == bank 2 sensor 3. The 0%% form is in fact the "OCTAL" format of bsNo. (Note: 087 and 097 are invalid. Keeping usage to banks ranging from 0 to 7 avoids any confusion).
 
-Some diagnostic output (e.g. **f%%**) may resort to another numbering system  (i.e.HEXADECIMAL) for compactness, but for normal usage this notation can generally be avoided. Just be aware of the context in which numbers are being used.
+!!! note "Note:"
+    Some diagnostic output (e.g. **f%%**) may resort to another numbering system (i.e. HEXADECIMAL) for compactness, but for normal usage this notation is generally avoided. Just be aware of the context in which numbers are being used.
 
 Where words are in *italics*, these are the actual names used in the C++ programs for sensorCAM. Consequently they may seem cryptic, but their function is hopefully clear.
 
@@ -227,7 +225,6 @@ The SensorCAM.pde code assumes the USB port for the sensorCAM is the lowest (*co
 You may also increase the image display window size factor by editing the next *final&nbsp;&nbsp;int&nbsp;&nbsp;SF=2;* line to *=3;* or *=4;* on high res. screens.
 
 The sensorCAM Processing 4 monitor accepts commands **``W``**, **``X``**, **``Y``** & **``Z``** which allow one to nominate a "strip" or subsection to image. e.g. **Z80 X240 Y** will update the last quarter image(columns 240-319) of the 240x320 pixels in 4 seconds. This quicker shortcut method enables, for example, comparison of quarter images under different lighting conditions by using different **X** values. Similarly **``W60``** **``Y120``** will produce a quarter image from row 120 to 179. Each part image is pasted over previous images. Each new image appears more quickly if only a subsection is specified this way. The next image can be flipped Vertically(y) and Horizontally(x) by using **``V``** &/or **``H``** before capture. The **Figure 5** image used  **``V H Y60``**  The values for V, H, W, X & Z are remembered for subsequent '**Yrrr**' commands so need not be repeated.  
-**NOTE: Do not flip image before creating new sensors as cursor coordinates don't flip!**
 
 The image will have enabled sensors (b/s) boxed and identified by a (resistor) colour code. Left bar is bank# and right bar is sensor#. Combined, they give the Sensor's bsNo (S%%). If two sensors have the same coordinates, the colour code will be for the highest bsNo.    
 **Note:** Only sensors below *maxSensors* will appear boxed. **N.B.** the **``H``** command will REVERSE the coding from b/s to s/b.  
@@ -243,43 +240,46 @@ The image will have enabled sensors (b/s) boxed and identified by a (resistor) c
 
 **``Z###``** &nbsp; will limit the image to ### columns (1-320) (default 320) -uses the sensorCAM 'z' command.
 
-**``H``** &nbsp; will flip/mirror subsequent images horizontally.  **Note:** reverses bsNo sensor colour code to sb!
+**``H``** &nbsp; will flip/mirror subsequent images horizontally. **& reverses bsNo sensor colour code to s-b**
 
 **``V``** &nbsp; will flip/mirror subsequent images vertically. (V + H effectively rotates image 180 degrees)
 
 **``R``** &nbsp; will cause a firmware reset of the sensorCAM via the DTR line via. the USB interface. CAM will enter a wait mode for confirmation.  Reset can be aborted with command **``aw``**(Abort&Wait). **Ctrl-R** Resets CAM instantly.
 
 !!! notes "NOTES"
-
     1. The above commands ARE CASE SENSITIVE. They are recognized by Processing 4 as non-sensorCAM commands and processed in the monitor/PC. Commands **``X``**, **``Y``** & **``Z``** in turn automatically issue related sensorCAM commands **``x``**, **``y``** & **``z``** respectively, with appropriate parameters.  The **``Y``** command suspends sensorCAM imaging, holding a single "frozen" frame until a terminating command ('yy') is received.
 
     2. If you use **``H``** to mirror, the colour coding for boxed sensor number (bsNo.) has to be read right to left.  Do NOT click on image to create sensors if image has been flipped.
 
-    3. **Ctrl-E** and **Ctrl-N** enable/disable echo of commands as typed, to the monitor/log file. It can replace the user's focus on the CAM image Cmd: window. **``YO``** should toggle the verbose mode. The command **``Y``** images from row 0 by default.
-
+    3. **WIth sensorCAM.pde versions below 208, do not flip image before creating new sensors as cursor coordinates do not flip!** Version 208 resolves this.
+    
+    4. **Ctrl-E** toggles enable/disable echo of typed commands to the monitor/log file. It can replace the user's focus on the CAM image Cmd: window. **``YO``** should toggle the verbose mode. The command **``Y``** images from row 0 by default.
+    
 ## 7 Wiring Requirements
 
-Refer to **Figure 6** and [Appendix F](#appendix-f) for alternate solutions for connecting sensorCAM to an i2c bus for remote control. For initial testing from a PC, the basic ESP32-CAM-MB or Wrover-CAM (**CH340** based USB interface) could be sufficient via. USB.  With i2c, take care to use level shifting (PCA9515A or Endpoints) if using a 5V Mega CS.
-
-The recommended hardware interface to an **EX-CommandStation** is currently the **Sparkfun Endpoint** system (**Figure 6.** & [APPENDIX&nbsp;F](#appendix-f)) which permits the i2c bus to be run over long standard Cat5 twisted pair cable.  It can also carry the required raw power supply. The Sparkfun Endpoints are used **in pairs** and can cater for voltage shifting between 5V Command Stations  (e.g. Mega) and 3.3V sensorCAM as required. For the very simplest off-the-shelf arrangement, an ESP32-WROVER-DEV CAM with a cheap ESP32 breakout board (including regulator) can be linked to an Endpoint with 4 Dupont wires for a working CAM system on the end of a cat5 cable of considerable length as indicated in **Figure 6** & [APPENDIX&nbsp;F](#appendix-f), needing only a remote, preferably electrically isolated(floating), 7-10Vdc 0.5A power supply and a matching endpoint on a Command Station.  For a cheaper solution, use the PCA9515A with dupont jumpers for a limited (2m?) reach with either esp32-CAM or Wrover-CAM powered via USB.  
-**Note:** The Sparkfun Endpoint may also need a jumper cut or joined for i2c bus voltage level matching to the Command Station.
+Refer to **Figure 6** and [Appendix F](#appendix-f) for alternate solutions for connecting sensorCAM to an i2c bus for remote control. For initial testing from a PC, the basic ESP32-CAM-MB or Wrover-CAM (**CH340** based USB interface) could be sufficient via. USB.  With i2c, take care to use level shifting (PCA9515A or Endpoints) if using a Mega CS or 5V i2c bus.
 
 The ESP32-WROVER-DEV board is a good alternative to the original ESP32-CAM-MB. The slightly bigger CAM will be a little more convenient with the ESP32S Expansion board. This 38 pin expansion board with 5V regulator is poorly described in the video below. **IGNORE PRESENTERS DESCRIPTION OF HIS FAULTY 5V REGULATOR past the 5minute mark**.  With NO Wrover, verify the regulator gives 5V from 9V at the barrel jack and remove power before inserting or removing the Wrover.  For want of a better video...
 
 [ESP32S 38P/V4/ Expansion board](https://www.youtube.com/watch?v=AP_CX-SFPAQ)
 
-The SensorCAM software has been almost exclusively tested on the ESP32-CAM-MB as seen in **Figure 7**. The original prototype was fitted with some enhancements that may not be needed for the user's application.  However, at least one "super bright" LED (the "programmable nLED") is recommended for convenience to visually indicate when a sensor is "tripped", connected between 3.3V via a resistor (~470R) to GPIO14.
+The sensorCAM typically requires a long i2c cable for connection to the CS.  If the CS uses a 3.3V i2c bus, the length may be handled with use of an LTC4311 "terminator" to drive the extra length.  If the CS has a 5V i2c bus it must use a level shifter via an Endpoint or PCA9515A (refer [Wiring Requirements](ex-sensor-manual.md#wiring-requirements)
 
-The ESP32-CAM reset button, remotely mounted on CAM, may be difficult to access. To reset the device, two options need to be available. These can be via software command, either from the attached USB monitor, or i2c connected Command Station, or via a power supply induced reboot. A switch at the ("wall-wart") 9V supply is recommended independent of the CS supply. The USB connection is needed to set up the sensors initially and view images, but should be able to be disconnected once setup testing is complete.  Some esp32's may need a 1uF or 2.2uF on the reset pin for reliable reset.
+For long distances to sensorCAM, the recommended hardware interface to an **EX-CommandStation** is currently the **Sparkfun Endpoint** system (**Figure 6.** & [APPENDIX&nbsp;F](#appendix-f)) which permits the i2c bus to be run over long standard Cat5 twisted pair cable.  It can also carry the required raw power supply. The Sparkfun Endpoints are used **in pairs** and can cater for voltage shifting between 5V Command Stations (e.g. Mega) and 3.3V sensorCAM as required. For a simple off-the-shelf arrangement, an ESP32-WROVER-DEV CAM with a cheap ESP32S 38P Expander board (including regulator) can be linked to an Endpoint with 4 Dupont wires for a working CAM system on the end of a cat5 cable of considerable length as indicated in **Figure 6** & [APPENDIX&nbsp;F](#appendix-f), needing only a remote, preferably electrically isolated(floating), 7-10Vdc 0.5A power supply and a matching endpoint on a Command Station.
 
-**Note:** Care is needed as the WROVER CAM has 40 pins (not 38) but the spare end Gnd and Vcc can remain disconnected (cut off?).
+!!! note "NOTE:"
+    1. For a cheaper solution, use the CAM and Expander with a LTC4311 for a shorter reach with either esp32-CAM or Wrover-CAM powered via USB.  
+    2. The Sparkfun Endpoint may also need a jumper cut or joined for i2c bus isolation and voltage level matching to the Command Station.
+
+The SensorCAM software has been almost exclusively tested on the ESP32-CAM-MB. The original prototype was fitted with some enhancements that may not be needed for the user's application.  However, at least one "super bright" LED (the "programmable nLED") is recommended for convenience to visually indicate when a bank sensor is "tripped". Connect LED between 3.3V via a resistor (~470R) to GPIO14.
+
+The ESP32-CAM reset button, remotely mounted on CAM, may be difficult to access. To reset the device, two options need to be available. These can be via software command, either from the attached USB monitor, or i2c connected Command Station, or via a power supply induced reboot. A (Reset) switch at an ungrounded PSU ("wall-wart") 7-9V supply is recommended independent of the CS supply. The USB connection is needed to set up the sensors initially and view images, but should be able to be disconnected once setup testing is complete.  Some esp32's may need a 1uF or 2.2uF on the reset pin for reliable reset.
+
+!!! note "NOTE:"
+    **Care is needed as the WROVER CAM has 40 pins (not 38) but the spare end Gnd and Vcc can remain disconnected (cut off?).**
 
 ![ESP32 Wrover CAM with Sparkfun Endpoint](../../_static/images/ex-sensorcam/esp32-wrover-sparkfun-endpoint.png)  
 **Figure 6 &nbsp; ESP32 WROVER-CAM and interface**
-
-![ESP32 CAM MB with PCA9515A](../../_static/images/ex-sensorcam/esp32-cam-mb-pca9515a.png)  
-**Figure 7 &nbsp; PCA9515A 3.3V to 5V i2c interface improvisation compared to a full feature prototype solution**  
-&nbsp; Note: for 3.3V microprocessors (e.g. **EX-CSB1**) ensure Vcc1 is connected to 3.3V (Vcc0) not 5V.
 
 ## 8 Host Communication
 
