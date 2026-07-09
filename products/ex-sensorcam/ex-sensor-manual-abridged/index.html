@@ -9739,8 +9739,8 @@
 <h3 id="52-preset-the-wifi-ssid-and-password">5.2 Preset the WiFi SSID and password<a class="headerlink" href="#52-preset-the-wifi-ssid-and-password" title="Permanent link">&para;</a></h3>
 <p>Before uploading the software into CAM, check that it has the appropriate WiFi definitions for your railway <em>WIFI_SSID</em> &amp; <em>WIFI_PWD</em>, and perhaps for your test area <em>ALTWIFI_SSID</em> &amp; <em>ALTWIFI_PWD</em> are in your <strong><em>configCAM.h</em></strong> file.</p>
 <h3 id="53-adjust-other-configcamh-settings">5.3  Adjust other configCAM.h settings<a class="headerlink" href="#53-adjust-other-configcamh-settings" title="Permanent link">&para;</a></h3>
-<p>&nbsp; &nbsp; a) set i2c address appropriately (0x11-0x14) e.g. <em>#define I2C_DEV_ADDR&nbsp;0x11</em><br />
- &nbsp; &nbsp; b) If using WROVER,  <em>#define CAMERA_MODEL_WROVER_KIT</em> //(ver316+)
+<p>&nbsp; &nbsp; a) set i2c address appropriately (0x11-0x14) e.g. <em>#define I2C_DEV_ADDR&nbsp;0x11</em>  <br><br />
+ &nbsp; &nbsp; b) If using WROVER,  <em>#define CAMERA_MODEL_WROVER_KIT</em> //(ver316+)  <br>
  &nbsp; &nbsp; c) If you want to use "larger" sensors, <em>#define SEN_SIZE 2</em> //range (0-7)  </p>
 <h3 id="54-load-sensorcam-software">5.4 Load sensorCAM software<a class="headerlink" href="#54-load-sensorcam-software" title="Permanent link">&para;</a></h3>
 <p>Follow you-tube to pre-configure the Arduino IDE for ESP32.  Using this IDE, load the software into sensorCAM with it unmounted. Then mount the CAM in a suitable place for tests. A long USB cable is problematical.</p>
@@ -9834,7 +9834,7 @@ You may also increase the image display window size factor by editing the next <
 <p class="admonition-title">NOTE:</p>
 <p><strong>Care is needed as the WROVER CAM has 40 pins (not 38) but the spare end Gnd and Vcc can remain disconnected (cut off?).</strong></p>
 </div>
-<p><img alt="ESP32 Wrover CAM with Sparkfun Endpoint" src="../../_static/images/ex-sensorcam/esp32-wrover-sf-interface.png" /><br />
+<p><img alt="ESP32 Wrover CAM with Sparkfun Endpoint" src="../../../_static/images/ex-sensorcam/esp32-wrover-LTC4311.png" /><br />
 <strong>Figure 6 &nbsp; ESP32 WROVER-CAM and interface</strong></p>
 <h2 id="8-host-communication">8 Host Communication<a class="headerlink" href="#8-host-communication" title="Permanent link">&para;</a></h2>
 <h3 id="81-introduction">8.1 Introduction<a class="headerlink" href="#81-introduction" title="Permanent link">&para;</a></h3>
@@ -9996,15 +9996,15 @@ e.g. <code>&lt;Ni 2%%&gt; &lt;Nr 2%%&gt;</code> also <code>&lt;Nm 200&gt; &lt;Nf
 <table>
 <thead>
 <tr>
-<th>Command<br>CS native</th>
+<th>Native CS<br>command</th>
 <th>Example</th>
 <th>Native<br>CAM cmd.</th>
-<th>sensorCAM command &amp; action (some commands only return "ACK OK" to CS)</th>
+<th>sensorCAM action<br>(some only return "ACK OK" to CS)</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong><code>&lt;N\&gt;</code></strong></td>
+<td><strong><code>&lt;N&gt;</code></strong></td>
 <td>&lt;N&gt;</td>
 <td>n/a</td>
 <td>Lists current &amp; alt. defined CAM baseVpins.</td>
@@ -10217,11 +10217,11 @@ The information below pertains mostly to the newer WROVER-CAM, as mentioned in <
 </div>
 <p>The ESP32 CAM drives GPIO pins with 3.3V logic. This may well be incompatible with the master l2C signals at 5V. It is essential that appropriate voltage level shifting and buffering is used where necessary (e.g. PCA9515A). Unbuffered I2C is limited in range but an LTC4211 or Sparkfun differential i2c driver/endpoint may be used to achieve longer lengths (and voltage shifting) if needed.</p>
 <p>The sensorCAM can be Reset remotely by software or by cycling the power supply. The CAM MUST be rigidly mounted as it's response to any image vibration can trip sensors. It is best not moved after sensor location programming as precise realignment could be tedious. It is, however, advisable to make guides or jig arrangement to at least be able to remove (for maintenance) and return with minimal misalignment to cover the same field of view. The inconvenient LED method of placing/positioning sensors may be necessary if a long USB cable is impractical. A 5m buffered USB cable might be advantageous. Even so, setup programming or imaging over a long USB cable may not be satisfactory.</p>
-<p>If the CS is using a 3.3V i2c bus (e.g. the CSB1 board) the sensorCAM may be connected to an existing CS bus segment (SCL, SDA &amp; GND) directly.  However cable length must be catered for.  The workable i2c bus length will need to be extended by using an LTC4211 buffer.  THe CAM should use an independent 7-9V dc switchable ungrounded 1A PSU (e.g. "wall-wart") driving a 5V regulator at the CAM. </p>
+<p>If the CS is using a 3.3V i2c bus (e.g. the CSB1 board) the sensorCAM may be connected to an existing CS bus segment (SCL, SDA &amp; GND) directly.  However cable length must be catered for.  The workable i2c bus length will need to be extended by using an LTC4211 buffer.  The CAM should use an independent 7-9V dc switchable ungrounded 1A PSU (e.g. "wall-wart") driving a 5V regulator at the CAM. </p>
 <p>A programmable nLED and 330ohm resistor may be attached between 3.3V VCC to GPIO14 to aid testing.</p>
 <p>For long lengths, the Sparkfun endpoint is perhaps the best overall solution at this stage for driving one (or more) sensorCAMs. It provides greater lengths of cable without extending the Command Station i2c local bus. The endpoints are used in pairs, connected by a long (&lt;100m) differential pair cat5 cable providing power and communications. It can provide buffering, level shifting and power, but care is needed at the CS end to avoid over-voltage damage. It is suggested, with a 5V CS, that the Endpoint pullup 0-1 jumpers at the CS end be cut for safety. The sensorCAM Endpoint default pullups are needed for the 3.3V CAM i2c bus. The CS Endpoint requires 3.3V power (from the CS) and a separate (7 to 9V) DC supply for the Regulator &amp; CAM.</p>
 <p>Typical device applications:</p>
-<p><img alt="Typical Mega with ESP32 CAM" src="../../../_static/images/ex-sensorcam/typical-mega-esp32-cam.png" />
+<p><img alt="Typical Mega with ESP32 CAM" src="../../../_static/images/ex-sensorcam/esp32-wrover-LTC4311.png" />
 <br/>Sparkfun endpoints(requires a matching sparkfun endpoint at CS)</p>
 <p><img alt="ESP32 Wrover CAM with Sparkfun Endpoint" src="../../../_static/images/ex-sensorcam/esp32-wrover-sparkfun-endpoint.png" /></p>
 <p>Recommended CAM wiring is with Endpoints and 5V dedicated regulator with power over GRN-GRNW(Vin) (CAT 5) with Vin(7-9V) from an ungrounded 0.5A DC supply (wall-wart/plug pack).</p>
@@ -10293,7 +10293,7 @@ Finally, at the signal(S17), <strong>IFGTE(CAM 013,128) STOP</strong></p>
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="July 9, 2026 01:30:38 UTC">July 9, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="July 9, 2026 07:33:51 UTC">July 9, 2026</span>
   </span>
 
     
