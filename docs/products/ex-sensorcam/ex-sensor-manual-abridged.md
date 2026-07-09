@@ -143,8 +143,8 @@ Before uploading the software into CAM, check that it has the appropriate WiFi d
 
 ### 5.3  Adjust other configCAM.h settings
 
- &nbsp; &nbsp; a) set i2c address appropriately (0x11-0x14) e.g. *#define I2C_DEV_ADDR&nbsp;0x11*  
- &nbsp; &nbsp; b) If using WROVER,  *#define CAMERA_MODEL_WROVER_KIT* //(ver316+)
+ &nbsp; &nbsp; a) set i2c address appropriately (0x11-0x14) e.g. *#define I2C_DEV_ADDR&nbsp;0x11*  <br>  
+ &nbsp; &nbsp; b) If using WROVER,  *#define CAMERA_MODEL_WROVER_KIT* //(ver316+)  <br>
  &nbsp; &nbsp; c) If you want to use "larger" sensors, *#define SEN_SIZE 2* //range (0-7)  
 
 ### 5.4 Load sensorCAM software
@@ -280,7 +280,7 @@ The ESP32-CAM reset button, remotely mounted on CAM, may be difficult to access.
 !!! note "NOTE:"
     **Care is needed as the WROVER CAM has 40 pins (not 38) but the spare end Gnd and Vcc can remain disconnected (cut off?).**
 
-![ESP32 Wrover CAM with Sparkfun Endpoint](../../_static/images/ex-sensorcam/esp32-wrover-sf-interface.png)  
+![ESP32 Wrover CAM with Sparkfun Endpoint](../../_static/images/ex-sensorcam/esp32-wrover-LTC4311.png)  
 **Figure 6 &nbsp; ESP32 WROVER-CAM and interface**
 
 ## 8 Host Communication
@@ -478,9 +478,9 @@ e.g. ``<Ni 2%%> <Nr 2%%>`` also ``<Nm 200> <Nf 212> <Nt 243>``
 
 ### User commands
 
-| Command<br>CS native | Example | Native<br>CAM cmd. | sensorCAM command & action (some commands only return "ACK OK" to CS) |
+| Native CS<br>command | Example | Native<br>CAM cmd. | sensorCAM action<br>(some only return "ACK OK" to CS) |
 | --- | --- | --- | --- |
-| **``<N\>``** | <N\> | n/a | Lists current & alt. defined CAM baseVpins. |
+| **``<N>``** | <N\> | n/a | Lists current & alt. defined CAM baseVpins. |
 | **``<N C ###>``** | <NC 600\> | n/a | **CAM** base vpin(>99) for following commands OR <NC #\> selects CAM # (1-4) |
 | **``<N a %%>``** | <Na 12\> | a12 | **enAble** sensor S%% (bsNo). |
 | **``<N a%% row col>``** | <Na&nbsp;12&nbsp;32&nbsp;43\> | a12,32,43 | **enAble** & also set new coordinates for sensor bsNo & refresh |
@@ -553,7 +553,7 @@ The ESP32 CAM drives GPIO pins with 3.3V logic. This may well be incompatible wi
 
 The sensorCAM can be Reset remotely by software or by cycling the power supply. The CAM MUST be rigidly mounted as it's response to any image vibration can trip sensors. It is best not moved after sensor location programming as precise realignment could be tedious. It is, however, advisable to make guides or jig arrangement to at least be able to remove (for maintenance) and return with minimal misalignment to cover the same field of view. The inconvenient LED method of placing/positioning sensors may be necessary if a long USB cable is impractical. A 5m buffered USB cable might be advantageous. Even so, setup programming or imaging over a long USB cable may not be satisfactory.
 
-If the CS is using a 3.3V i2c bus (e.g. the CSB1 board) the sensorCAM may be connected to an existing CS bus segment (SCL, SDA & GND) directly.  However cable length must be catered for.  The workable i2c bus length will need to be extended by using an LTC4211 buffer.  THe CAM should use an independent 7-9V dc switchable ungrounded 1A PSU (e.g. "wall-wart") driving a 5V regulator at the CAM. 
+If the CS is using a 3.3V i2c bus (e.g. the CSB1 board) the sensorCAM may be connected to an existing CS bus segment (SCL, SDA & GND) directly.  However cable length must be catered for.  The workable i2c bus length will need to be extended by using an LTC4211 buffer.  The CAM should use an independent 7-9V dc switchable ungrounded 1A PSU (e.g. "wall-wart") driving a 5V regulator at the CAM. 
 
 A programmable nLED and 330ohm resistor may be attached between 3.3V VCC to GPIO14 to aid testing.
 
@@ -561,7 +561,7 @@ For long lengths, the Sparkfun endpoint is perhaps the best overall solution at 
 
 Typical device applications:
 
-![Typical Mega with ESP32 CAM](../../_static/images/ex-sensorcam/typical-mega-esp32-cam.png)
+![Typical Mega with ESP32 CAM](../../_static/images/ex-sensorcam/esp32-wrover-LTC4311.png)
 <br/>Sparkfun endpoints(requires a matching sparkfun endpoint at CS)
 
 ![ESP32 Wrover CAM with Sparkfun Endpoint](../../_static/images/ex-sensorcam/esp32-wrover-sparkfun-endpoint.png)
