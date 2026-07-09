@@ -28,7 +28,8 @@ Including ESP32-WROVER-CAM and ESP32-WROOM-S3 CAM's
 The sensorCAM is a video camera replacement for physical proximity sensors/detectors on a model railroad. It can replace up to 80 detectors and their associated power and signal wiring using artificial vision alone. It offers the flexibility of sensor placement or relocation instantly by software command with no physical layout modification.The railroad can be automated using artificial vision of train activity. Each virtual sensor can produce a logical state of 1 (occupied) or 0 (unoccupied) and is readable over an i2c cable. SensorCAM originally used the ESP32-CAM module. However, the ESP32-WROVER-DEV CAM (v1.6) is the preferred substitute with potentially simpler setup.
 
 The sensorCAM takes 10 frames per second in RGB565 format at QVGA resolution of 240 x 320. Each sensor consists of a square group of 16 pixels which equates to approximately 20x20mm square with the standard lens at 1500mm. The software decodes and saves only the 80 sensor images (1280 pixels) and then compares each sensor image with a reference image prerecorded either at startup, on request, or by a "recent" automatic update. If the images do not match the references well, then the sensor is "tripped" or "occupied" & status '1' is registered. A good match results in '0' output. The state of virtual sensors can be manually monitored on the USB monitor, or polled by microcontroller over the i2c interface cable.  
-**Note:** The sensorCAM is sensing only when the Flash LED is pulsing at 10Hz (for each new frame).
+!!! note "Note:"
+    The sensorCAM is sensing only when the Flash LED is pulsing at 10Hz (for each new frame).
 
 ![ESP32 CAM with MB](../../_static/images/ex-sensorcam/esp32-cam-with-mb.png){ width=500px }
 
@@ -142,8 +143,9 @@ Before uploading the software into CAM, check that it has the appropriate WiFi d
 
 ### 5.3  Adjust other configCAM.h settings
 
- &nbsp; &nbsp; a) If i2c address 0x11 is in use, change to 0x12 (or 0x13) i.e. *I2C_DEV_ADDR 0x11* in your *configCAM.h*  
- &nbsp; &nbsp; b) If you want to use "larger" sensors, Place *#define SEN_SIZE 2* (0-7) in your *configCAM.h* (ver319+)  
+ &nbsp; &nbsp; a) set i2c address appropriately (0x11-0x14) e.g. *#define I2C_DEV_ADDR&nbsp;0x11*  
+ &nbsp; &nbsp; b) If using WROVER,  *#define CAMERA_MODEL_WROVER_KIT* //(ver316+)
+ &nbsp; &nbsp; c) If you want to use "larger" sensors, *#define SEN_SIZE 2* //range (0-7)  
 
 ### 5.4 Load sensorCAM software
 
@@ -380,7 +382,7 @@ Also able to change default setting for Brightness, Contrast & Saturation with e
 
 **``@##``** &nbsp; &nbsp; &nbsp;  \*set the "occupied" symbol in the scroll to ASCII character \#\#. Default is 35("#") Arduino IDE **@12** is bolder!
 
-**``+#,$``** &nbsp; &nbsp; &nbsp; \*add offset(\# pixels) in \$ direction to re-centre sensors after physical drift in CAM alignment. \$(0-7) for N-NW
+**``+#,$``** &nbsp; &nbsp; &nbsp; \*add offset(\# pixels) in $ direction to re-centre sensors after physical drift in CAM alignment. $(0-7) for N-NW
 
 &nbsp; &nbsp; &nbsp; * These commands typically for diagnostic/setup use only. They wait for a line feed or command to resume.
 
@@ -476,7 +478,7 @@ e.g. ``<Ni 2%%> <Nr 2%%>`` also ``<Nm 200> <Nf 212> <Nt 243>``
 
 ### User commands
 
-| Command | Example | Equivalent | sensorCAM command & action (some commands only return "ACK OK" to CS) |
+| Command<br>CS native | Example | Native<br>CAM cmd. | sensorCAM command & action (some commands only return "ACK OK" to CS) |
 | --- | --- | --- | --- |
 | **``<N\>``** | <N\> | n/a | Lists current & alt. defined CAM baseVpins. |
 | **``<N C ###>``** | <NC 600\> | n/a | **CAM** base vpin(>99) for following commands OR <NC #\> selects CAM # (1-4) |
@@ -523,7 +525,7 @@ e.g. ``<Ni 2%%> <Nr 2%%>`` also ``<Nm 200> <Nf 212> <Nt 243>``
 
 **Table B** below shows the colour code used to identify sensors on the Processing 4 track image.
 For example, sensor S12 has a bsNo 1/2 for which the colours are Brown/Red (seen on sensor box edges).
-For CAM number 1, the full CS sensor S12 ID is 112 when used in CS native ``<N\>`` commands such as ``<N i 112>``
+For CAM number 1, the full CS sensor S12 ID is 112 when used in CS native ``<N>`` commands such as ``<N i 112>``
 The use of the CAM # can be optional.  If only one CAM is installed (or selected), ``<Ni 12>`` is sufficient.
 For **EXRAIL** it can be tested so: **AT(CAM 012)** where the vpin is invisibly calculated as (700+012).
 **N.B.** The use of the '0' after CAM is essential in EXRAIL.
