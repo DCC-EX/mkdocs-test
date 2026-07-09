@@ -60,16 +60,16 @@ The sensorCAM software is uploaded to the ESP32-CAM using the Arduino IDE. The s
 
 In addition to the USB interface, you may need a daughter board (e.g. ESP32S 38P/V4/Expansion Board), "perf" board or prototyping board to connect to the real world (power, indicators, control wires, and i2c.) Further details are given below. However to test the sensorCAM functions, one only needs the CAM with a USB interface, with power from the PC's USB port.  The Wrover Cam minimises this need.
 
-To control a railway, the railway needs a microcontroller based management system. This typically could be an Arduino Mega (or **EX-CSB1**) based system running software such as the DCC-EX CommandStation and EX-RAIL automation application. The **EX-CommandStation**(CS) includes a sensorCAM specific driver as detailed later.
+To control a railway, the layout needs a microcontroller based management system. This typically could be an Arduino Mega (or **EX-CSB1**) based system running software such as the DCC-EX CommandStation and EX-RAIL automation application. The **EX-CommandStation**(CS) includes a sensorCAM specific driver as detailed later.
 
 ## 2. ESP32/WROVER-CAM
 
-The heart of the sensorCAM is the ESP32 CAM module with an ov2640 camera sensor and a 32bit ESP32-S microprocessor. The sensorCAM software/sketch is loaded into the ESP32 using the Arduino IDE over a USB port with settings newline/115200 baud. Follow the above guidelines and run the camera example first, to get a demo webserver and CAM operational with a simple coloured test image. Experiment with settings to "get a feel" for the parameter effects. The CAM has a considerable number of video related on-screen settings. The standard ov2640 can see some Infra Red light which may be utilised to see a bright IR LED as a beam-break sensor.
+The heart of the sensorCAM is the ESP32 CAM module with an ov2640 camera sensor and a 32bit ESP32-S microprocessor. The sensorCAM software/sketch is loaded into the ESP32 using the Arduino IDE over a USB port with settings newline/115200 baud. Follow the installation guide and run the camera example first, to get a demo webserver and CAM operational with a simple coloured test image. Experiment with settings to "get a feel" for the parameter effects. The CAM has a considerable number of video related on-screen settings, but you should find the defaults adequate. The standard ov2640 can see some Infra Red light which may be utilised to see a bright IR LED as a beam-break sensor.
 
 ![ESP32 CAM Example Sketch](../../_static/images/ex-sensorcam/esp32-cam-example-sketch.png){ width=600px }  
  &nbsp; &nbsp; **Figure 1. &nbsp; webCAM mode**
 
-**Figure 1.** is an example of the standard webCAM browser presentation. It is a very useful mode for alignment and as a training aid in investigating the effects of the many video adjustments possible, but does not allow placement of sensors as sensorCAM mode can't be simultaneously enabled.
+**Figure 1.** is an example of the standard webCAM browser presentation. It is a very useful mode for alignment and as a training aid in investigating the effects of the many video adjustments possible, but does not allow placement of sensors as sensorCAM mode can not be simultaneously enabled.
 
 The sensorCAM uses QVGA but VGA is better in webCAM mode. These settings can be changed after the CAM images are stable, but the default values should be adequate.
 
@@ -143,8 +143,8 @@ Before uploading the software into CAM, check that it has the appropriate WiFi d
 
 ### 5.3  Adjust other configCAM.h settings
 
- &nbsp; &nbsp; a) set i2c address appropriately (0x11-0x14) e.g. *#define I2C_DEV_ADDR&nbsp;0x11*  <br>  
- &nbsp; &nbsp; b) If using WROVER,  *#define CAMERA_MODEL_WROVER_KIT* //(ver316+)  <br>
+ &nbsp; &nbsp; a) set i2c address appropriately (0x11-0x14) e.g. *#define I2C_DEV_ADDR&nbsp;0x11*<br>  
+ &nbsp; &nbsp; b) If using WROVER,  *#define CAMERA_MODEL_WROVER_KIT* //(ver316+)<br>
  &nbsp; &nbsp; c) If you want to use "larger" sensors, *#define SEN_SIZE 2* //range (0-7)  
 
 ### 5.4 Load sensorCAM software
@@ -494,20 +494,20 @@ e.g. ``<Ni 2%%> <Nr 2%%>`` also ``<Nm 200> <Nf 212> <Nt 243>``
 | **``<N i %%[ $$]>``** | <Ni 12\> | i12,02 | **Info.** & assigns new twin sensor(S$$) for "second-opinion" on S%%. |
 | **``<N j $ #>``** | <Nj B 2\> | jB2 | **adJust** ov2640 parameters($)(Brightness, Contrast etc)(values 0-2 only). |
 | **``<N l %%>``** | <Nl 12\> | l12 | (lima) **Latch** output state of sensor bsNo to 1 & disable. |
-| **``<N m $ [%%]>``** | <Nm 3 20\> | m3,20 | **Min/max** *min2trip*(1-4) frames [*maxSensors*] **<NM\> shows CAM parameters** |
-| **``<N n$ [%%]>``** | <Nn 1 10\> | n1,10 | set **nLED**= bank $ [and *minSensors*=%% to limit display range] <Nn v\> verifies. |
+| **``<N m $[ %%]>``** | <Nm 3 20\> | m3,20 | **Min/max** *min2trip*(1-4) frames [*maxSensors*] **<NM\> shows CAM parameters** |
+| **``<N n $[ %%]>``** | <Nn 1 10\> | n1,10 | set **nLED**= bank $ [set *minSensors*=%% to limit display range] <Nn v\> verifies. |
 | **``<N o %%>``** | <No 12\> | o12 | (oscar) **Zero** output state of sensor bsNo. Reset to 0 & disable. |
 | **``<N p %%>``** | <Np 1\> | p1 | **Positions**(r,x) of all enabled sensors in bank are listed. |
 | **``<N q #>``** | <Nq 1\> | q1 | **Query bank**# enabled states of sensors (0 indicates sensor disabled). |
 | **``<N Q>``** | <NQ\> | n/a | **Query** state of all sensorCAM Sensors |
-| **``<N r [%%]>``** | <Nr 12\> | r12 | **Refresh Reference** image for sensor S%% (default ALL=r00). |
+| **``<N r[ %%]>``** | <Nr 12\> | r12 | **Refresh Reference** image for sensor S%% (default ALL=r00). |
 | **``<N s %%>``** | <Ns 12\> | s12 | **Scan** image for brightest spot and set S%% to center that pixel. |
-| **``<N t ## [%%]>``** | <Nt 43 12\> | t43,12 | **Threshold** displayed, sets global *threshold* (32-98) [sets a *pvtThreshold*]. |
+| **``<N t ##[ %%]>``** | <Nt 43 12\> | t43,12 | **Threshold** displayed, sets global *threshold* (32-98) [sets a *pvtThreshold*]. |
 | **``<N t ##>``** | <Nt 10\> | t10 | **Tabulate** ## (2-31) rows of scroll data similar to CAM scroll. |
 | **``<N t # %%>``** | <Nt 0 12\> | t0,12 | **Trash** pvtThresholds. **<Nt 0 %%\>** individually, **<Nt 1 %%\>** for bank, **<Nt&nbsp;1&nbsp;99\>** trashes ALL pvtThresholds.  **<Nt&nbsp;99\>** lists ALL pvtThresholds. |
 | **``<N t 1>``** | <Nt 1\> | t1 | **toggles** scroll on/off. |
 | **``<N u %%>``** | <Nu 12\> | u12 | **Undefine** and disable sensor bsNo(erase coordinates). **<Nu 99\>** for ALL |
-| **``<N v [#]>``** | <N v 1\> | v1 | **Video** mode(1-2) invoke webCAM, or alt webCAM with v 2. **v** for **version** |
+| **``<N v[ #]>``** | <N v 1\> | v1 | **Video** mode(1-2) invoke webCAM, or alt webCAM with v 2. **v** for **version** |
 | **``<N w>``** | <Nw\> | w | **Wait**. Stop/start CAM imaging (flash), status sensing & streaming. |
 | **``x y z``** | | | Reserved for binary export for Processing 4 images |
 
@@ -601,7 +601,7 @@ e.g.
 
 Valid **EXRAIL** commands: AFTER(CAM 5)  AT(SENSORCAM_VPIN+7)  IFGTE(CAM 010, 2)
 
-To avoid frequent "CAM" in scripts, an alias can be assigned e.g. ALIAS(ESSEX_P1, CAM+0x10)
+To avoid frequent "CAM" in scripts, an alias can be assigned e.g. ALIAS(ESSEX_P1, CAM+010)
 ```
 
 With each sensorCAM having up to 80 sensors, it is desirable to test groups of (1 to 8) sensors with a single **EXRAIL** test using the **IFGTE()** or **IFLE()** commands. To do this, the sensors are logically arranged in "banks" of (consecutive) vpins. The logical grouping available can be written in the form "bs" or b/s where b can have bank values of 0-9 (10 banks) and s values 0-7 (8 sensors). **IFGTE** and **IFLT** read a whole bank "value". Native CAM commands can also be issued e.g. ``PARSE("<N b 4>")`` for bank 4.
