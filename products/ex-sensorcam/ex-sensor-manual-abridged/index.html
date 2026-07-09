@@ -9689,12 +9689,12 @@
 <p><a href="https://www.youtube.com/watch?v=xPINTk3VLQ">Introduction to ESP32- Getting Started</a></p>
 <p>The sensorCAM software is uploaded to the ESP32-CAM using the Arduino IDE. The sensorCAM has been programmed with two modes of operation; a webCAM mode (as in the on-line tutorial) and a sensorCAM mode. The limited power of an ESP32 prevents both functioning at the same time. Consequently, to see an image of the railway while sensorCAM is operational requires a third application (Processing 4.3) to retrieve a still image from the CAM over the USB cable to a computer. The Processing 4 <em>sensorCAM.pde</em> app replaces the Arduino IDE and IDE monitor retaining the sensorCAM command set and offering a (slow) image capture capability over USB cable. Processing 4 allows virtual sensors to be placed interactively on an image of the railway with a simple mouse click.</p>
 <p>In addition to the USB interface, you may need a daughter board (e.g. ESP32S 38P/V4/Expansion Board), "perf" board or prototyping board to connect to the real world (power, indicators, control wires, and i2c.) Further details are given below. However to test the sensorCAM functions, one only needs the CAM with a USB interface, with power from the PC's USB port.  The Wrover Cam minimises this need.</p>
-<p>To control a railway, the railway needs a microcontroller based management system. This typically could be an Arduino Mega (or <strong>EX-CSB1</strong>) based system running software such as the DCC-EX CommandStation and EX-RAIL automation application. The <strong>EX-CommandStation</strong>(CS) includes a sensorCAM specific driver as detailed later.</p>
+<p>To control a railway, the layout needs a microcontroller based management system. This typically could be an Arduino Mega (or <strong>EX-CSB1</strong>) based system running software such as the DCC-EX CommandStation and EX-RAIL automation application. The <strong>EX-CommandStation</strong>(CS) includes a sensorCAM specific driver as detailed later.</p>
 <h2 id="2-esp32wrover-cam">2. ESP32/WROVER-CAM<a class="headerlink" href="#2-esp32wrover-cam" title="Permanent link">&para;</a></h2>
-<p>The heart of the sensorCAM is the ESP32 CAM module with an ov2640 camera sensor and a 32bit ESP32-S microprocessor. The sensorCAM software/sketch is loaded into the ESP32 using the Arduino IDE over a USB port with settings newline/115200 baud. Follow the above guidelines and run the camera example first, to get a demo webserver and CAM operational with a simple coloured test image. Experiment with settings to "get a feel" for the parameter effects. The CAM has a considerable number of video related on-screen settings. The standard ov2640 can see some Infra Red light which may be utilised to see a bright IR LED as a beam-break sensor.</p>
+<p>The heart of the sensorCAM is the ESP32 CAM module with an ov2640 camera sensor and a 32bit ESP32-S microprocessor. The sensorCAM software/sketch is loaded into the ESP32 using the Arduino IDE over a USB port with settings newline/115200 baud. Follow the installation guide and run the camera example first, to get a demo webserver and CAM operational with a simple coloured test image. Experiment with settings to "get a feel" for the parameter effects. The CAM has a considerable number of video related on-screen settings, but you should find the defaults adequate. The standard ov2640 can see some Infra Red light which may be utilised to see a bright IR LED as a beam-break sensor.</p>
 <p><img alt="ESP32 CAM Example Sketch" src="../../../_static/images/ex-sensorcam/esp32-cam-example-sketch.png" width="600px" /><br />
  &nbsp; &nbsp; <strong>Figure 1. &nbsp; webCAM mode</strong></p>
-<p><strong>Figure 1.</strong> is an example of the standard webCAM browser presentation. It is a very useful mode for alignment and as a training aid in investigating the effects of the many video adjustments possible, but does not allow placement of sensors as sensorCAM mode can't be simultaneously enabled.</p>
+<p><strong>Figure 1.</strong> is an example of the standard webCAM browser presentation. It is a very useful mode for alignment and as a training aid in investigating the effects of the many video adjustments possible, but does not allow placement of sensors as sensorCAM mode can not be simultaneously enabled.</p>
 <p>The sensorCAM uses QVGA but VGA is better in webCAM mode. These settings can be changed after the CAM images are stable, but the default values should be adequate.</p>
 <p>If you "Start Stream", parameter changes will seem almost immediate. But with "stills", after changing a variable, you may have to click "Get Still" 3 times to clear the pipeline and get a changed image. In Stream mode, close observation will reveal changing whole image brightness/colour for several seconds after image disturbance (e.g. a hand in front of CAM) as the auto adjustments "correct" the image. These types of changes can trip the sensorCAM even if the obstruction does not block the virtual sensor. Consequently after power-up, the sensorCAM may stabilize and then turn off some auto adjustments in the first 15 seconds. Changing environment lighting may result in a need to use a "re-reference" command, for example perhaps after sunset or turning on extra lighting.</p>
 <p>Due to the slowness of the ESP32 &amp; WiFi, the "live stream" is slow and a webCAM delay in response will be observed.  The delay is inevitable in webCAM WiFi mode.</p>
@@ -9739,8 +9739,8 @@
 <h3 id="52-preset-the-wifi-ssid-and-password">5.2 Preset the WiFi SSID and password<a class="headerlink" href="#52-preset-the-wifi-ssid-and-password" title="Permanent link">&para;</a></h3>
 <p>Before uploading the software into CAM, check that it has the appropriate WiFi definitions for your railway <em>WIFI_SSID</em> &amp; <em>WIFI_PWD</em>, and perhaps for your test area <em>ALTWIFI_SSID</em> &amp; <em>ALTWIFI_PWD</em> are in your <strong><em>configCAM.h</em></strong> file.</p>
 <h3 id="53-adjust-other-configcamh-settings">5.3  Adjust other configCAM.h settings<a class="headerlink" href="#53-adjust-other-configcamh-settings" title="Permanent link">&para;</a></h3>
-<p>&nbsp; &nbsp; a) set i2c address appropriately (0x11-0x14) e.g. <em>#define I2C_DEV_ADDR&nbsp;0x11</em>  <br><br />
- &nbsp; &nbsp; b) If using WROVER,  <em>#define CAMERA_MODEL_WROVER_KIT</em> //(ver316+)  <br>
+<p>&nbsp; &nbsp; a) set i2c address appropriately (0x11-0x14) e.g. <em>#define I2C_DEV_ADDR&nbsp;0x11</em><br><br />
+ &nbsp; &nbsp; b) If using WROVER,  <em>#define CAMERA_MODEL_WROVER_KIT</em> //(ver316+)<br>
  &nbsp; &nbsp; c) If you want to use "larger" sensors, <em>#define SEN_SIZE 2</em> //range (0-7)  </p>
 <h3 id="54-load-sensorcam-software">5.4 Load sensorCAM software<a class="headerlink" href="#54-load-sensorcam-software" title="Permanent link">&para;</a></h3>
 <p>Follow you-tube to pre-configure the Arduino IDE for ESP32.  Using this IDE, load the software into sensorCAM with it unmounted. Then mount the CAM in a suitable place for tests. A long USB cable is problematical.</p>
@@ -10088,16 +10088,16 @@ e.g. <code>&lt;Ni 2%%&gt; &lt;Nr 2%%&gt;</code> also <code>&lt;Nm 200&gt; &lt;Nf
 <td>(lima) <strong>Latch</strong> output state of sensor bsNo to 1 &amp; disable.</td>
 </tr>
 <tr>
-<td><strong><code>&lt;N m $ [%%]&gt;</code></strong></td>
+<td><strong><code>&lt;N m $[ %%]&gt;</code></strong></td>
 <td>&lt;Nm 3 20&gt;</td>
 <td>m3,20</td>
 <td><strong>Min/max</strong> <em>min2trip</em>(1-4) frames [<em>maxSensors</em>] <strong>&lt;NM&gt; shows CAM parameters</strong></td>
 </tr>
 <tr>
-<td><strong><code>&lt;N n$ [%%]&gt;</code></strong></td>
+<td><strong><code>&lt;N n $[ %%]&gt;</code></strong></td>
 <td>&lt;Nn 1 10&gt;</td>
 <td>n1,10</td>
-<td>set <strong>nLED</strong>= bank $ [and <em>minSensors</em>=%% to limit display range] &lt;Nn v&gt; verifies.</td>
+<td>set <strong>nLED</strong>= bank $ [set <em>minSensors</em>=%% to limit display range] &lt;Nn v&gt; verifies.</td>
 </tr>
 <tr>
 <td><strong><code>&lt;N o %%&gt;</code></strong></td>
@@ -10124,7 +10124,7 @@ e.g. <code>&lt;Ni 2%%&gt; &lt;Nr 2%%&gt;</code> also <code>&lt;Nm 200&gt; &lt;Nf
 <td><strong>Query</strong> state of all sensorCAM Sensors</td>
 </tr>
 <tr>
-<td><strong><code>&lt;N r [%%]&gt;</code></strong></td>
+<td><strong><code>&lt;N r[ %%]&gt;</code></strong></td>
 <td>&lt;Nr 12&gt;</td>
 <td>r12</td>
 <td><strong>Refresh Reference</strong> image for sensor S%% (default ALL=r00).</td>
@@ -10136,7 +10136,7 @@ e.g. <code>&lt;Ni 2%%&gt; &lt;Nr 2%%&gt;</code> also <code>&lt;Nm 200&gt; &lt;Nf
 <td><strong>Scan</strong> image for brightest spot and set S%% to center that pixel.</td>
 </tr>
 <tr>
-<td><strong><code>&lt;N t ## [%%]&gt;</code></strong></td>
+<td><strong><code>&lt;N t ##[ %%]&gt;</code></strong></td>
 <td>&lt;Nt 43 12&gt;</td>
 <td>t43,12</td>
 <td><strong>Threshold</strong> displayed, sets global <em>threshold</em> (32-98) [sets a <em>pvtThreshold</em>].</td>
@@ -10166,7 +10166,7 @@ e.g. <code>&lt;Ni 2%%&gt; &lt;Nr 2%%&gt;</code> also <code>&lt;Nm 200&gt; &lt;Nf
 <td><strong>Undefine</strong> and disable sensor bsNo(erase coordinates). <strong>&lt;Nu 99&gt;</strong> for ALL</td>
 </tr>
 <tr>
-<td><strong><code>&lt;N v [#]&gt;</code></strong></td>
+<td><strong><code>&lt;N v[ #]&gt;</code></strong></td>
 <td>&lt;N v 1&gt;</td>
 <td>v1</td>
 <td><strong>Video</strong> mode(1-2) invoke webCAM, or alt webCAM with v 2. <strong>v</strong> for <strong>version</strong></td>
@@ -10244,7 +10244,7 @@ The information below pertains mostly to the newer WROVER-CAM, as mentioned in <
 
 <span class="n">Valid</span><span class="w"> </span><span class="o">**</span><span class="n">EXRAIL</span><span class="o">**</span><span class="w"> </span><span class="n">commands</span><span class="o">:</span><span class="w"> </span><span class="n">AFTER</span><span class="p">(</span><span class="n">CAM</span><span class="w"> </span><span class="mi">5</span><span class="p">)</span><span class="w">  </span><span class="n">AT</span><span class="p">(</span><span class="n">SENSORCAM_VPIN</span><span class="o">+</span><span class="mi">7</span><span class="p">)</span><span class="w">  </span><span class="n">IFGTE</span><span class="p">(</span><span class="n">CAM</span><span class="w"> </span><span class="mo">010</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">)</span>
 
-<span class="n">To</span><span class="w"> </span><span class="n">avoid</span><span class="w"> </span><span class="n">frequent</span><span class="w"> </span><span class="s">&quot;CAM&quot;</span><span class="w"> </span><span class="n">in</span><span class="w"> </span><span class="n">scripts</span><span class="p">,</span><span class="w"> </span><span class="n">an</span><span class="w"> </span><span class="n">alias</span><span class="w"> </span><span class="n">can</span><span class="w"> </span><span class="n">be</span><span class="w"> </span><span class="n">assigned</span><span class="w"> </span><span class="n">e</span><span class="p">.</span><span class="n">g</span><span class="p">.</span><span class="w"> </span><span class="n">ALIAS</span><span class="p">(</span><span class="n">ESSEX_P1</span><span class="p">,</span><span class="w"> </span><span class="n">CAM</span><span class="o">+</span><span class="mh">0x10</span><span class="p">)</span>
+<span class="n">To</span><span class="w"> </span><span class="n">avoid</span><span class="w"> </span><span class="n">frequent</span><span class="w"> </span><span class="s">&quot;CAM&quot;</span><span class="w"> </span><span class="n">in</span><span class="w"> </span><span class="n">scripts</span><span class="p">,</span><span class="w"> </span><span class="n">an</span><span class="w"> </span><span class="n">alias</span><span class="w"> </span><span class="n">can</span><span class="w"> </span><span class="n">be</span><span class="w"> </span><span class="n">assigned</span><span class="w"> </span><span class="n">e</span><span class="p">.</span><span class="n">g</span><span class="p">.</span><span class="w"> </span><span class="n">ALIAS</span><span class="p">(</span><span class="n">ESSEX_P1</span><span class="p">,</span><span class="w"> </span><span class="n">CAM</span><span class="o">+</span><span class="mo">010</span><span class="p">)</span>
 </code></pre></div>
 <p>With each sensorCAM having up to 80 sensors, it is desirable to test groups of (1 to 8) sensors with a single <strong>EXRAIL</strong> test using the <strong>IFGTE()</strong> or <strong>IFLE()</strong> commands. To do this, the sensors are logically arranged in "banks" of (consecutive) vpins. The logical grouping available can be written in the form "bs" or b/s where b can have bank values of 0-9 (10 banks) and s values 0-7 (8 sensors). <strong>IFGTE</strong> and <strong>IFLT</strong> read a whole bank "value". Native CAM commands can also be issued e.g. <code>PARSE("&lt;N b 4&gt;")</code> for bank 4.</p>
 <p>EXRAIL can accept "b/s" numbering (e.g. 047) if we add the leading 0. e.g. vpin= <strong>SENSORCAM_VPIN+ 047</strong> e.g. <strong>IFGTE(CAM 047,1)</strong> provided values are defined for <strong>SENSORCAM_VPIN</strong> &amp; <strong>CAM</strong>(as above).</p>
@@ -10293,7 +10293,7 @@ Finally, at the signal(S17), <strong>IFGTE(CAM 013,128) STOP</strong></p>
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="July 9, 2026 07:33:51 UTC">July 9, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="July 9, 2026 22:34:58 UTC">July 9, 2026</span>
   </span>
 
     
