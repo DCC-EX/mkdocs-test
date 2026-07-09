@@ -9667,8 +9667,11 @@
 <a href="#appendix-j">J. WROVER-CAM notes</a>  </p>
 <h2 id="1-overview">1. Overview<a class="headerlink" href="#1-overview" title="Permanent link">&para;</a></h2>
 <p>The sensorCAM is a video camera replacement for physical proximity sensors/detectors on a model railroad. It can replace up to 80 detectors and their associated power and signal wiring using artificial vision alone. It offers the flexibility of sensor placement or relocation instantly by software command with no physical layout modification.The railroad can be automated using artificial vision of train activity. Each virtual sensor can produce a logical state of 1 (occupied) or 0 (unoccupied) and is readable over an i2c cable. SensorCAM originally used the ESP32-CAM module. However, the ESP32-WROVER-DEV CAM (v1.6) is the preferred substitute with potentially simpler setup.</p>
-<p>The sensorCAM takes 10 frames per second in RGB565 format at QVGA resolution of 240 x 320. Each sensor consists of a square group of 16 pixels which equates to approximately 20x20mm square with the standard lens at 1500mm. The software decodes and saves only the 80 sensor images (1280 pixels) and then compares each sensor image with a reference image prerecorded either at startup, on request, or by a "recent" automatic update. If the images do not match the references well, then the sensor is "tripped" or "occupied" &amp; status '1' is registered. A good match results in '0' output. The state of virtual sensors can be manually monitored on the USB monitor, or polled by microcontroller over the i2c interface cable.<br />
-<strong>Note:</strong> The sensorCAM is sensing only when the Flash LED is pulsing at 10Hz (for each new frame).</p>
+<p>The sensorCAM takes 10 frames per second in RGB565 format at QVGA resolution of 240 x 320. Each sensor consists of a square group of 16 pixels which equates to approximately 20x20mm square with the standard lens at 1500mm. The software decodes and saves only the 80 sensor images (1280 pixels) and then compares each sensor image with a reference image prerecorded either at startup, on request, or by a "recent" automatic update. If the images do not match the references well, then the sensor is "tripped" or "occupied" &amp; status '1' is registered. A good match results in '0' output. The state of virtual sensors can be manually monitored on the USB monitor, or polled by microcontroller over the i2c interface cable.  </p>
+<div class="admonition note">
+<p class="admonition-title">Note:</p>
+<p>The sensorCAM is sensing only when the Flash LED is pulsing at 10Hz (for each new frame).</p>
+</div>
 <p><img alt="ESP32 CAM with MB" src="../../../_static/images/ex-sensorcam/esp32-cam-with-mb.png" width="500px" /></p>
 <p>2PCS ESP32-CAM-MB, ESP32-CAM Board, Micro USB to Serial Port CH-340G with OV2640 2MP Camera Module 4MB PSRAM</p>
 <p><img alt="ESP32 Wrover CAM" src="../../../_static/images/ex-sensorcam/esp32-wrover-cam.png" width="400px" /></p>
@@ -9736,8 +9739,9 @@
 <h3 id="52-preset-the-wifi-ssid-and-password">5.2 Preset the WiFi SSID and password<a class="headerlink" href="#52-preset-the-wifi-ssid-and-password" title="Permanent link">&para;</a></h3>
 <p>Before uploading the software into CAM, check that it has the appropriate WiFi definitions for your railway <em>WIFI_SSID</em> &amp; <em>WIFI_PWD</em>, and perhaps for your test area <em>ALTWIFI_SSID</em> &amp; <em>ALTWIFI_PWD</em> are in your <strong><em>configCAM.h</em></strong> file.</p>
 <h3 id="53-adjust-other-configcamh-settings">5.3  Adjust other configCAM.h settings<a class="headerlink" href="#53-adjust-other-configcamh-settings" title="Permanent link">&para;</a></h3>
-<p>&nbsp; &nbsp; a) If i2c address 0x11 is in use, change to 0x12 (or 0x13) i.e. <em>I2C_DEV_ADDR 0x11</em> in your <em>configCAM.h</em><br />
- &nbsp; &nbsp; b) If you want to use "larger" sensors, Place <em>#define SEN_SIZE 2</em> (0-7) in your <em>configCAM.h</em> (ver319+)  </p>
+<p>&nbsp; &nbsp; a) set i2c address appropriately (0x11-0x14) e.g. <em>#define I2C_DEV_ADDR&nbsp;0x11</em><br />
+ &nbsp; &nbsp; b) If using WROVER,  <em>#define CAMERA_MODEL_WROVER_KIT</em> //(ver316+)
+ &nbsp; &nbsp; c) If you want to use "larger" sensors, <em>#define SEN_SIZE 2</em> //range (0-7)  </p>
 <h3 id="54-load-sensorcam-software">5.4 Load sensorCAM software<a class="headerlink" href="#54-load-sensorcam-software" title="Permanent link">&para;</a></h3>
 <p>Follow you-tube to pre-configure the Arduino IDE for ESP32.  Using this IDE, load the software into sensorCAM with it unmounted. Then mount the CAM in a suitable place for tests. A long USB cable is problematical.</p>
 <h3 id="55-establish-a-monitor-screen-to-sensorcam">5.5 Establish a monitor screen to sensorCAM<a class="headerlink" href="#55-establish-a-monitor-screen-to-sensorcam" title="Permanent link">&para;</a></h3>
@@ -9884,7 +9888,7 @@ Also able to change default setting for Brightness, Contrast &amp; Saturation wi
 <p><strong><code>/%,#,$</code></strong> &nbsp; &nbsp;  Convert bank to linear sensor starting with S$$ as for '\' but line will slope "down-left" (-deltaX).</p>
 <p><strong><code>&amp;</code></strong> &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;  <strong>statistics</strong> histogram on trips and potential trips since last <code>&amp;</code>, then reset counters and start another sample process. The table gives number of single highs, double highs etc. and totals for No. of frames/run time</p>
 <p><strong><code>@##</code></strong> &nbsp; &nbsp; &nbsp;  *set the "occupied" symbol in the scroll to ASCII character ##. Default is 35("#") Arduino IDE <strong>@12</strong> is bolder!</p>
-<p><strong><code>+#,$</code></strong> &nbsp; &nbsp; &nbsp; *add offset(# pixels) in \$ direction to re-centre sensors after physical drift in CAM alignment. \$(0-7) for N-NW</p>
+<p><strong><code>+#,$</code></strong> &nbsp; &nbsp; &nbsp; *add offset(# pixels) in $ direction to re-centre sensors after physical drift in CAM alignment. $(0-7) for N-NW</p>
 <p>&nbsp; &nbsp; &nbsp; * These commands typically for diagnostic/setup use only. They wait for a line feed or command to resume.</p>
 <div class="admonition note">
 <p class="admonition-title">Note:</p>
@@ -9992,9 +9996,9 @@ e.g. <code>&lt;Ni 2%%&gt; &lt;Nr 2%%&gt;</code> also <code>&lt;Nm 200&gt; &lt;Nf
 <table>
 <thead>
 <tr>
-<th>Command</th>
+<th>Command<br>CS native</th>
 <th>Example</th>
-<th>Equivalent</th>
+<th>Native<br>CAM cmd.</th>
 <th>sensorCAM command &amp; action (some commands only return "ACK OK" to CS)</th>
 </tr>
 </thead>
@@ -10193,7 +10197,7 @@ For commands to work fully, need latest <em>CamParser.cpp</em>, CS driver(<em>IO
 <h3 id="tabulated-dcc-ex-cs-ids-for-sensorcam">Tabulated DCC-EX-CS ID's for sensorCAM<a class="headerlink" href="#tabulated-dcc-ex-cs-ids-for-sensorcam" title="Permanent link">&para;</a></h3>
 <p><strong>Table B</strong> below shows the colour code used to identify sensors on the Processing 4 track image.
 For example, sensor S12 has a bsNo 1/2 for which the colours are Brown/Red (seen on sensor box edges).
-For CAM number 1, the full CS sensor S12 ID is 112 when used in CS native <code>&lt;N\&gt;</code> commands such as <code>&lt;N i 112&gt;</code>
+For CAM number 1, the full CS sensor S12 ID is 112 when used in CS native <code>&lt;N&gt;</code> commands such as <code>&lt;N i 112&gt;</code>
 The use of the CAM # can be optional.  If only one CAM is installed (or selected), <code>&lt;Ni 12&gt;</code> is sufficient.
 For <strong>EXRAIL</strong> it can be tested so: <strong>AT(CAM 012)</strong> where the vpin is invisibly calculated as (700+012).
 <strong>N.B.</strong> The use of the '0' after CAM is essential in EXRAIL.
@@ -10289,7 +10293,7 @@ Finally, at the signal(S17), <strong>IFGTE(CAM 013,128) STOP</strong></p>
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="July 8, 2026 08:10:56 UTC">July 8, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="July 9, 2026 01:30:38 UTC">July 9, 2026</span>
   </span>
 
     
