@@ -120,7 +120,8 @@ The notation used in all sensorCAM reference material uses symbols according to 
 **S** &nbsp; &nbsp; &nbsp; Capital S may be used to refer to a specific sensor such as S02 for example. Designation format: S%%  
 **[ ]** &nbsp; &nbsp;&nbsp; Square brackets may be used to indicate optional command arguments(don't include[ ] in command).
 
-Sensor "bsNo." number consists of two digits preferably written separated by a '/' as in 1/2 but in commands this is reduced to 12 as in command **i12**. Command 'i' has the form **i%%** indicating it requires a 2-digit bsNo. As 49 is an invalid bsNo.(s range is 0-7), i49 is invalid. Some commands require a DECIMAL number and are expressed as having form **t##** for example. **t49** is therefore a valid command. The '**m**' command takes the form **m$,##** requiring a single digit and a 2-digit decimal number. For more details on commands see **APPENDIX A**.
+Sensor "bsNo." number consists of two digits preferably written separated by a '/' as in 1/2 but in commands this is reduced to 12 as in command **i12**. Command 'i' has the form **i%%** indicating it requires a 2-digit bsNo. As 49 is an invalid bsNo.(s range is 0-7), i49 is invalid. Some commands require a DECIMAL number and are expressed as having form **t##** for example. **t49** is therefore a valid command. The '**m**' command takes the form **m$,##** requiring a single digit and a 2-digit decimal number. For more details on commands see see [APPENDIX A](#appendix-a)
+.
 
 Where bsNo.'s are printed, they can take several equivalent forms depending on context. Where possible they are printed as %/% e.g. 2/3. However an equivalent form is 023. Any printed sensor number starting with a '0' can be treated as equivalent to the '/' form so Sensor 023 == 2/3 == bank 2 sensor 3. The 0%% form is in fact the "OCTAL" format of bsNo. (Note: 087 and 097 are invalid. Keeping usage to banks ranging from 0 to 7 avoids any confusion).
 
@@ -143,7 +144,7 @@ Before uploading the software into CAM, check that it has the appropriate WiFi d
 
 ### 5.3  Adjust other configCAM.h settings
 
- &nbsp; &nbsp; a) set i2c address appropriately (0x11-0x14) e.g. *#define I2C_DEV_ADDR&nbsp;0x11*<br>  
+ &nbsp; &nbsp; a) set i2c address appropriately (0x11-0x14) e.g. *#define I2C_DEV_ADDR&nbsp;0x11*   
  &nbsp; &nbsp; b) If using WROVER,  *#define CAMERA_MODEL_WROVER_KIT* //(ver316+)<br>
  &nbsp; &nbsp; c) If you want to use "larger" sensors, *#define SEN_SIZE 2* //range (0-7)  
 
@@ -211,7 +212,7 @@ If the sensor remains unoccupied, it updates the reference, compensating for slo
 
 The scrolling data dump displays "SUS" (suspend) if auto updates are off. It also displays *threshold*(T), *min2trip*(M), the bank assigned to the on-board *nLED*(N), S00 reference diff. score, as well as the S00 reference brightness(R) and its current actual brightness(A), a brightness scale factor(B) and other enabled sensors. 'A' is the Actual latest sum of the 48 bytes of a sensor image (max 3024) and should be between 1200 and 2500 ideally. Following a reference refresh (**``r``**), for an unoccupied image, the (noisy) diff. scores should be 32-37. If references are being updated, a note will appear at the right hand side of the data dump in the form of "**Ref 0%%**" to indicate that a new reference for an UNOCCUPIED sensor has occurred. This dump allows for performance monitoring during commissioning.  
 :**oo46##** indicates tripped sensor (## = **occupied**) sensor are shown by default with a central diff score (32-99).  
-:**?-46-?** indicate an above threshold image **potentially occupied**** (waiting for *min2trip*).  
+:**?-46-?** indicate an above threshold image **potentially occupied** (waiting for *min2trip*).  
 :**oo47?T** indicates **suspected occupied** but no confirmation from Twin (see [5.15 in the full manual](ex-sensor-manual.md#515-second-opinions-twin)).
 
 ## 6 PROCESSING4 monitor/console
@@ -595,13 +596,15 @@ The numbering of sensors can be consecutive by vPin, which is the common practic
 For any peripheral device, the vPin is needed for commands (e.g.700+5), but, if predefined (e.g. in config.h), alphanumeric names such as CAM or CAM2 or ESSEX can be used in place of the base vPin to identify the camera. Then commands for CAM pin 5 become: e.g. AT(CAM 05) or AT(ESSEX 05)
 
 ```c++
-e.g.
+examples:
 #define SENSORCAM_VPIN 700    //place in config.h or myAutomation.h or mysetup.h
 #define CAM  SENSORCAM_VPIN+  //in config.h or myAutomation.h or mysetup.h
 
-Valid **EXRAIL** commands: AFTER(CAM 5)  AT(SENSORCAM_VPIN+7)  IFGTE(CAM 010, 2)
+Valid EXRAIL commands can use CAM alaises e.g.
+AFTER(CAM 5)  AT(SENSORCAM_VPIN+7)  IFGTE(CAM 010, 2)
 
-To avoid frequent "CAM" in scripts, an alias can be assigned e.g. ALIAS(ESSEX_P1, CAM+010)
+To avoid frequent "CAM" in scripts, an alias can be assigned
+e.g. ALIAS(ESSEX_P1, CAM+010)   IFGTE(ESSEX_P1, 2)
 ```
 
 With each sensorCAM having up to 80 sensors, it is desirable to test groups of (1 to 8) sensors with a single **EXRAIL** test using the **IFGTE()** or **IFLE()** commands. To do this, the sensors are logically arranged in "banks" of (consecutive) vpins. The logical grouping available can be written in the form "bs" or b/s where b can have bank values of 0-9 (10 banks) and s values 0-7 (8 sensors). **IFGTE** and **IFLT** read a whole bank "value". Native CAM commands can also be issued e.g. ``PARSE("<N b 4>")`` for bank 4.
@@ -640,7 +643,7 @@ Software configuration: add #define CAMERA_MODEL_WROVER_KIT to bottom of configC
 
 2x"Spare" (USB end) Vcc and GND pins not used with the 38 pin breakout board shown. (remove?)
 
-Adding 2.2uF capacitor between reset (EN) pin and gnd ensures more reliable power-on reset.
+Adding 1 - 2.2uF capacitor between reset (EN) pin and gnd ensures more reliable power-on reset.
 
 Add a super-bright green LED and 330R from 3.3V to GPIO14 for programmable LED indicator.
 
