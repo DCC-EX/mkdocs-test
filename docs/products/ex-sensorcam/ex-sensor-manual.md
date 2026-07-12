@@ -652,7 +652,7 @@ e.g. **``<Ni 2%%\>``** **``<Nr 2%%>``** also **``<Nm 200\>``** **``<Nf 212>``** 
 
 ### User commands
 
-| Command | Example | Equivalent| sensorCAM command & action (some commands only return "ACK OK" to CS) |
+| Command | Example<br>CS \& native CAM | sensorCAM command & action (some commands only return "ACK OK" to CS) |
 | --- | --- | --- |
 | **``<N>       ``** | ``<N>       -  `` | Lists current & alt. defined CAM baseVpins. |
 | **``<N C ###> ``** | ``<NC 600>  -  `` | **CAM** base vpin(>99) for following commands OR <NC #\> selects CAM # (1-4) |
@@ -665,7 +665,7 @@ e.g. **``<Ni 2%%\>``** **``<Nr 2%%>``** also **``<Nm 200\>``** **``<Nf 212>``** 
 | **``<N g>     ``** | ``<Ng>      g  `` | g**Global status** ov2640 camera module settings (on sensorCAM monitor). |
 | **``<N h %%>  ``** | ``<Nh 30>   h30`` | set *maxSensors* to limit display to below sensor S%%. Also **Help** (0-9) |
 | **``<N i %%>  ``** | ``<Ni 12>   i12`` | **Information** on sensor bsNo state, position & twin (0=No twin). |
-| **``<N i %%[$$]>``** | ``<Ni 12>`` i12| **Info.** & assigns new twin sensor(S$$) for "second-opinion" on S%%. |
+| **``<N i %%[$$]>``** | ``<Ni 12>   i12`` | **Info.** & assigns new twin sensor(S$$) for "second-opinion" on S%%. |
 | **``<N j $ #> ``** | ``<Nj B 2>  jB2`` | **adJust** ov2640 parameters($)(Brightness, Contrast etc)(values 0-2 only). |
 | **``<N l %%>  ``** | ``<Nl 12>   l12`` | (lima) **Latch** output state of sensor bsNo to 1 & disable. |
 | **``<N m $ [%%]>``** | ``<Nm 3 20> m3,20`` | **Min/max** *min2trip*(1-4) frames [*maxSensors*] **<NM\> shows CAM parameters** |
@@ -676,13 +676,15 @@ e.g. **``<Ni 2%%\>``** **``<Nr 2%%>``** also **``<Nm 200\>``** **``<Nf 212>``** 
 | **``<N Q>     ``** | ``<NQ>      n/a`` | **Query** state of all sensorCAM Sensors |
 | **``<N r [%%]>``** | ``<Nr 12>   r12`` | **Refresh Reference** image for sensor S%% (default ALL=r00). |
 | **``<N s %%>  ``** | ``<Ns 12>   s12`` | **Scan** image for brightest spot and set S%% to center that pixel. |
-| **``<N t ## [%%]>``** | ``<Nt 43 12> t43,12`` | **Threshold** displayed, sets global *threshold* (32-98) [sets a *pvtThreshold*]. |
+| **``<N t ## [%%]>``** | ``<Nt 43 12>`` ``  t43,12`` | **Threshold** displayed, sets global *threshold* (32-98) [sets a *pvtThreshold*]. |
 | **``<N t ##>  ``** | ``<Nt 10>   t10`` | **Tabulate** ## (2-31) rows of scroll data similar to CAM scroll. |
 | **``<N t # %%>``** | ``<Nt 0 12> t0,12`` | **Trash** pvtThresholds. **<Nt 0 %%\>** individually, **<Nt 1 %%\>** for bank, **<Nt&nbsp;1&nbsp;99\>** trashes ALL pvtThresholds.  **<Nt&nbsp;99\>** lists ALL pvtThresholds. |
 | **``<N t 1>   ``** | ``<Nt 1>    t1 `` | **toggles** scroll on/off. |
 | **``<N u %%>  ``** | ``<Nu 12>   u12`` | **Undefine** and disable sensor bsNo(erase coordinates). **<Nu 99\>** for ALL |
 | **``<N v [#]> ``** | ``<Nv 1>    v1 `` | **Video** mode(1-2) invoke webCAM, or alt webCAM with v 2. **v** for **version** |
-| **``<N w>    # ##>``** | ``<N 711 75 85> a13,75,85`` | Note: This uses the **vpin** for a sensor, NOT id/bsNo.(ref. **Appendix E**). |
+| **``<N w>     ``** | ``<Nw\>     w  `` | **Wait**. Stop/start CAM imaging (flash), status sensing & streaming. |
+| **``  x  y  z ``** | ``  x   y   z  `` | Reserved for binary export for Processing 4 images |
+
 
 !!! note "Notes:"
 
