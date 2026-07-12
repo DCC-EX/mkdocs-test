@@ -10650,7 +10650,7 @@ You may also increase the image display window size by editing the <em>final int
 <p>The operation of the railway depends on a Control Station that polls the sensorCAM for sensor states. This might be a dedicated Arduino Mega 2560 for example. It might be an <strong>EX-CSB1</strong> Command Station running DCC-EX and <strong>EXRAIL</strong> software. If the sensorCAM is powered up with default settings (from EPROM), or adjusted by the user at the start, the program need only talk to sensorCAM over an i2c bus using the commands a,b,i,l &amp; o for example, or it may be more sophisticated, providing a channel from a Control Station console to the sensorCAM to enable all configuration commands via the i2c bus.</p>
 <p>The i2c bus is running at 100kHz on the prototype software. It has not been tested at any higher speed yet. It is running fine over a 20m long i2c bus to the master microcontroller(mpu or Mega).</p>
 <h3 id="82-dcc-ex-ex-commandstation">8.2   DCC-EX EX-CommandStation<a class="headerlink" href="#82-dcc-ex-ex-commandstation" title="Permanent link">&para;</a></h3>
-<p>Setting up a <strong>DCC-EX</strong> <strong>EX-CommandStation</strong>, should you have one, requires configuration details placed in files config.h and mySetup.h along with a driver IO_EXSensorCAM.h and myAutomation.h. These must go in the directory containing file CommandStation-EX.ino. The IO_EXSensorCAM.h driver is based on the modified IO_EXIOExpander.h code. Refer to <a href="#appendix-h">APPENDIX&nbsp;H</a>for installation details. <em>EXSensorCAM.h</em> code mirrors the i,I,o,t &amp; m commands, while the EXIODPUP command may serve as the enable function(a). EXIOExpander.h codes don't have the "control &amp; setup" sensorCAM functions otherwise available from a USB console so additional functionality was added using the DCC-EX sensorCAM native command <code>&lt;N\&gt;</code> (if using the newest CamParser.cpp).</p>
+<p>Setting up a <strong>DCC-EX</strong> <strong>EX-CommandStation</strong>, should you have one, requires configuration details placed in files config.h and mySetup.h along with a driver IO_EXSensorCAM.h and myAutomation.h. These must go in the directory containing file CommandStation-EX.ino. The IO_EXSensorCAM.h driver is based on the modified IO_EXIOExpander.h code. Refer to <a href="#appendix-h">APPENDIX&nbsp;H</a>for installation details. <em>EXSensorCAM.h</em> code mirrors the i,I,o,t &amp; m commands, while the EXIODPUP command may serve as the enable function(a). EXIOExpander.h codes don't have the "control &amp; setup" sensorCAM functions otherwise available from a USB console so additional functionality was added using the DCC-EX sensorCAM native command <code>&lt;N&gt;</code> (if using the newest CamParser.cpp).</p>
 <h3 id="83-non-dcc-ex-system">8.3 Non-DCC-EX system<a class="headerlink" href="#83-non-dcc-ex-system" title="Permanent link">&para;</a></h3>
 <p>Proprietary Master:  If writing raw code for another Command Station, you will need details on the protocol used by sensorCAM on the i2c bus, and code to interpret the bus bytes and reconstitute text for the console. Two such prototype examples exists. V155 of sensorCAM incorporates a subset of the DCC-EX IOexpander codes so that <strong>EXRAIL</strong> can use sensorCAM without further modification. V301 &amp; later mostly use ASCII code characters.</p>
 <h3 id="84-monitor-lighting">8.4 Monitor Lighting<a class="headerlink" href="#84-monitor-lighting" title="Permanent link">&para;</a></h3>
@@ -10882,160 +10882,191 @@ e.g. <strong><code>&lt;Ni 2%%\&gt;</code></strong> <strong><code>&lt;Nr 2%%&gt;<
 <table>
 <thead>
 <tr>
-<th>Command</th>
-<th>Example<br>CS \&amp; native CAM</th>
-<th>sensorCAM command &amp; action (some commands only return "ACK OK" to CS)</th>
+<th>Native CS<br>command</th>
+<th>Example</th>
+<th>Native<br>CAM cmd.</th>
+<th>sensorCAM action<br>(some only return "ACK OK" to CS)</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><strong><code>&lt;N&gt;</code></strong></td>
-<td><code>&lt;N&gt;       -</code></td>
+<td>&lt;N&gt;</td>
+<td>n/a</td>
 <td>Lists current &amp; alt. defined CAM baseVpins.</td>
 </tr>
 <tr>
 <td><strong><code>&lt;N C ###&gt;</code></strong></td>
-<td><code>&lt;NC 600&gt;  -</code></td>
-<td><strong>CAM</strong> base vpin(&gt;99) for following commands OR &lt;NC #&gt; selects CAM # (1-4)</td>
+<td>&lt;NC 2&gt;</td>
+<td>n/a</td>
+<td><strong>CAM</strong> selection # (1-4) OR base vpin(&gt;99), for following commands</td>
 </tr>
 <tr>
 <td><strong><code>&lt;N a %%&gt;</code></strong></td>
-<td><code>&lt;Na 12&gt;   a12</code></td>
+<td>&lt;Na 12&gt;</td>
+<td>a12</td>
 <td><strong>enAble</strong> sensor S%% (bsNo).</td>
 </tr>
 <tr>
-<td><strong><code>&lt;N a %% rr xx&gt;</code></strong></td>
-<td><code>&lt;Na 12 32 43&gt;</code><br><code>a12,32,43</code></td>
-<td><strong>enAble</strong> &amp; also set new coordinates for sensor bsNo &amp; refresh</td>
+<td><strong><code>&lt;N a %% ro col&gt;</code></strong></td>
+<td>&lt;Na 12 32 43&gt;</td>
+<td>a12,32,43</td>
+<td><strong>enAble</strong> &amp; also set new coordinates for sensor S%% &amp; refresh</td>
 </tr>
 <tr>
 <td><strong><code>&lt;N b #&gt;</code></strong></td>
-<td><code>&lt;Nb 1&gt;    b1</code></td>
+<td>&lt;Nb 1&gt;</td>
+<td>b1</td>
 <td><strong>Bank</strong> sensor states(all 8).(used by IFGTE() ATLT() e.g. to locate loco).</td>
 </tr>
 <tr>
 <td><strong><code>&lt;N e&gt;</code></strong></td>
-<td><code>&lt;Ne&gt;      e</code></td>
+<td>&lt;Ne&gt;</td>
+<td>e</td>
 <td><strong>EPROM</strong> write any changed settings to sensorCAM EPROM.</td>
 </tr>
 <tr>
 <td><strong><code>&lt;N f %%&gt;</code></strong></td>
-<td><code>&lt;Nf 12&gt;   f12</code></td>
+<td>&lt;Nf 12&gt;</td>
+<td>f12</td>
 <td><strong>Frame image</strong> pixel data for Sensor_ref[%%] and sensor666[%%] (RGB bytes).</td>
 </tr>
 <tr>
 <td><strong><code>&lt;N F&gt;</code></strong></td>
-<td><code>&lt;NF&gt;      F</code></td>
-<td><em>Forced reboot</em>*, restoring sensorCAM sensor mode &amp; EPROM defaults.</td>
+<td>&lt;NF&gt;</td>
+<td>F</td>
+<td><strong>Forced reboot</strong>, restoring sensorCAM sensor mode &amp; EPROM defaults.</td>
 </tr>
 <tr>
 <td><strong><code>&lt;N g&gt;</code></strong></td>
-<td><code>&lt;Ng&gt;      g</code></td>
-<td>g<strong>Global status</strong> ov2640 camera module settings (on sensorCAM monitor).</td>
+<td>&lt;Ng&gt;</td>
+<td>g</td>
+<td><strong>Global ov2640</strong> camera module settings (on sensorCAM monitor).</td>
 </tr>
 <tr>
 <td><strong><code>&lt;N h %%&gt;</code></strong></td>
-<td><code>&lt;Nh 30&gt;   h30</code></td>
+<td>&lt;Nh 30&gt;</td>
+<td>h30</td>
 <td>set <em>maxSensors</em> to limit display to below sensor S%%. Also <strong>Help</strong> (0-9)</td>
 </tr>
 <tr>
 <td><strong><code>&lt;N i %%&gt;</code></strong></td>
-<td><code>&lt;Ni 12&gt;   i12</code></td>
+<td>&lt;Ni 12&gt;</td>
+<td>i12</td>
 <td><strong>Information</strong> on sensor bsNo state, position &amp; twin (0=No twin).</td>
 </tr>
 <tr>
-<td><strong><code>&lt;N i %%[$$]&gt;</code></strong></td>
-<td><code>&lt;Ni 12&gt;   i12</code></td>
+<td><strong><code>&lt;N i %%[ $$]&gt;</code></strong></td>
+<td>&lt;Ni 12&gt;</td>
+<td>i12,02</td>
 <td><strong>Info.</strong> &amp; assigns new twin sensor(S$$) for "second-opinion" on S%%.</td>
 </tr>
 <tr>
 <td><strong><code>&lt;N j $ #&gt;</code></strong></td>
-<td><code>&lt;Nj B 2&gt;  jB2</code></td>
+<td>&lt;Nj B 2&gt;</td>
+<td>jB2</td>
 <td><strong>adJust</strong> ov2640 parameters($)(Brightness, Contrast etc)(values 0-2 only).</td>
 </tr>
 <tr>
 <td><strong><code>&lt;N l %%&gt;</code></strong></td>
-<td><code>&lt;Nl 12&gt;   l12</code></td>
+<td>&lt;Nl 12&gt;</td>
+<td>l12</td>
 <td>(lima) <strong>Latch</strong> output state of sensor bsNo to 1 &amp; disable.</td>
 </tr>
 <tr>
 <td><strong><code>&lt;N m $ [%%]&gt;</code></strong></td>
-<td><code>&lt;Nm 3 20&gt; m3,20</code></td>
+<td>&lt;Nm 3 20&gt;</td>
+<td>m3,20</td>
 <td><strong>Min/max</strong> <em>min2trip</em>(1-4) frames [<em>maxSensors</em>] <strong>&lt;NM&gt; shows CAM parameters</strong></td>
 </tr>
 <tr>
 <td><strong><code>&lt;N n $ [%%]&gt;</code></strong></td>
-<td><code>&lt;Nn 1 10&gt; n1,10</code></td>
-<td>set <strong>nLED</strong>= bank $ [and <em>minSensors</em>=%% to limit display range] &lt;Nn v&gt; verifies.</td>
+<td>&lt;Nn 1 10&gt;</td>
+<td>n1,10</td>
+<td>set <strong>nLED</strong>= bank $ [set <em>minSensors</em>=%% to limit display range] &lt;Nn v&gt; verifies.</td>
 </tr>
 <tr>
 <td><strong><code>&lt;N o %%&gt;</code></strong></td>
-<td><code>&lt;No 12&gt;   o12</code></td>
+<td>&lt;No 12&gt;</td>
 <td>o12</td>
+<td>(oscar) <strong>Zero</strong> output state of sensor bsNo. Reset to 0 &amp; disable.</td>
 </tr>
 <tr>
 <td><strong><code>&lt;N p %%&gt;</code></strong></td>
-<td><code>&lt;Np 1&gt;    p1</code></td>
+<td>&lt;Np 1&gt;</td>
 <td>p1</td>
+<td><strong>Positions</strong>(r,x) of all enabled sensors in bank are listed.</td>
 </tr>
 <tr>
 <td><strong><code>&lt;N q #&gt;</code></strong></td>
-<td><code>&lt;Nq 1&gt;    q1</code></td>
+<td>&lt;Nq 1&gt;</td>
+<td>q1</td>
 <td><strong>Query bank</strong># enabled states of sensors (0 indicates sensor disabled).</td>
 </tr>
 <tr>
 <td><strong><code>&lt;N Q&gt;</code></strong></td>
-<td><code>&lt;NQ&gt;      n/a</code></td>
+<td>&lt;NQ&gt;</td>
+<td>n/a</td>
 <td><strong>Query</strong> state of all sensorCAM Sensors</td>
 </tr>
 <tr>
-<td><strong><code>&lt;N r [%%]&gt;</code></strong></td>
-<td><code>&lt;Nr 12&gt;   r12</code></td>
+<td><strong><code>&lt;N r[ %%]&gt;</code></strong></td>
+<td>&lt;Nr 12&gt;</td>
+<td>r12</td>
 <td><strong>Refresh Reference</strong> image for sensor S%% (default ALL=r00).</td>
 </tr>
 <tr>
 <td><strong><code>&lt;N s %%&gt;</code></strong></td>
-<td><code>&lt;Ns 12&gt;   s12</code></td>
+<td>&lt;Ns 12&gt;</td>
+<td>s12</td>
 <td><strong>Scan</strong> image for brightest spot and set S%% to center that pixel.</td>
 </tr>
 <tr>
 <td><strong><code>&lt;N t ## [%%]&gt;</code></strong></td>
-<td><code>&lt;Nt 43 12&gt;</code> <code>t43,12</code></td>
+<td>&lt;Nt 43 12&gt;</td>
+<td>t43,12</td>
 <td><strong>Threshold</strong> displayed, sets global <em>threshold</em> (32-98) [sets a <em>pvtThreshold</em>].</td>
 </tr>
 <tr>
 <td><strong><code>&lt;N t ##&gt;</code></strong></td>
-<td><code>&lt;Nt 10&gt;   t10</code></td>
+<td>&lt;Nt 10&gt;</td>
+<td>t10</td>
 <td><strong>Tabulate</strong> ## (2-31) rows of scroll data similar to CAM scroll.</td>
 </tr>
 <tr>
 <td><strong><code>&lt;N t # %%&gt;</code></strong></td>
-<td><code>&lt;Nt 0 12&gt; t0,12</code></td>
+<td>&lt;Nt 0 12&gt;</td>
+<td>t0,12</td>
 <td><strong>Trash</strong> pvtThresholds. <strong>&lt;Nt 0 %%&gt;</strong> individually, <strong>&lt;Nt 1 %%&gt;</strong> for bank, <strong>&lt;Nt&nbsp;1&nbsp;99&gt;</strong> trashes ALL pvtThresholds.  <strong>&lt;Nt&nbsp;99&gt;</strong> lists ALL pvtThresholds.</td>
 </tr>
 <tr>
 <td><strong><code>&lt;N t 1&gt;</code></strong></td>
-<td><code>&lt;Nt 1&gt;    t1</code></td>
-<td><strong>toggles</strong> scroll on/off.</td>
+<td>&lt;Nt 1&gt;</td>
+<td>t1</td>
+<td><strong>Toggles</strong> scroll on/off.</td>
 </tr>
 <tr>
 <td><strong><code>&lt;N u %%&gt;</code></strong></td>
-<td><code>&lt;Nu 12&gt;   u12</code></td>
+<td>&lt;Nu 12&gt;</td>
+<td>u12</td>
 <td><strong>Undefine</strong> and disable sensor bsNo(erase coordinates). <strong>&lt;Nu 99&gt;</strong> for ALL</td>
 </tr>
 <tr>
-<td><strong><code>&lt;N v [#]&gt;</code></strong></td>
-<td><code>&lt;Nv 1&gt;    v1</code></td>
+<td><strong><code>&lt;N v[ #]&gt;</code></strong></td>
+<td>&lt;N v 1&gt;</td>
+<td>v1</td>
 <td><strong>Video</strong> mode(1-2) invoke webCAM, or alt webCAM with v 2. <strong>v</strong> for <strong>version</strong></td>
 </tr>
 <tr>
 <td><strong><code>&lt;N w&gt;</code></strong></td>
-<td><code>&lt;Nw\&gt;     w</code></td>
+<td>&lt;Nw&gt;</td>
+<td>w</td>
 <td><strong>Wait</strong>. Stop/start CAM imaging (flash), status sensing &amp; streaming.</td>
 </tr>
 <tr>
-<td><strong><code>x  y  z</code></strong></td>
-<td><code>x   y   z</code></td>
+<td><strong><code>x y z</code></strong></td>
+<td></td>
+<td></td>
 <td>Reserved for binary export for Processing 4 images</td>
 </tr>
 </tbody>
@@ -11293,7 +11324,7 @@ Note: WROVER-CAM does not have a fitted external antenna socket like the ESP32-C
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="July 12, 2026 06:55:31 UTC">July 12, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="July 12, 2026 23:51:29 UTC">July 12, 2026</span>
   </span>
 
     
