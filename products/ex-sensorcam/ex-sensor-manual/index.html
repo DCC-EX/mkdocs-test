@@ -5186,9 +5186,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#serial-command-usb-format" class="md-nav__link">
+  <a href="#serial-command-sensorcam-native-usb-format" class="md-nav__link">
     <span class="md-ellipsis">
-      Serial Command USB format
+      Serial Command - sensorCAM native USB format
     </span>
   </a>
   
@@ -9765,9 +9765,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#serial-command-usb-format" class="md-nav__link">
+  <a href="#serial-command-sensorcam-native-usb-format" class="md-nav__link">
     <span class="md-ellipsis">
-      Serial Command USB format
+      Serial Command - sensorCAM native USB format
     </span>
   </a>
   
@@ -10734,47 +10734,47 @@ e.g. (using <strong><code>t45</code></strong>) &nbsp; &nbsp; <strong>12:--38--* 
 <h3 id="cam-command-summary">CAM Command Summary<a class="headerlink" href="#cam-command-summary" title="Permanent link">&para;</a></h3>
 <p>rev 1DEC25</p>
 <h4 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">&para;</a></h4>
-<p>Holds up to 10 banks (0-9) of sensors. Each bank can have up to 8 enabled sensors (0-7). Bank/sensor (%%) up to '97'.  Array <em>Sensor[n]</em> holds coordinates(rx) of sensor n.  Sensors are grouped into banks(b) of sensors(s). e.g. bsNo 6/7 identifies bank 6, sensor 7 (n=8x6+7=55=067). Sensors are undefined if coordinates(rx) are set to 00. They are disabled if <em>SensorActive[n]</em> is set to false.<br />
-If a sensor detects differences, then any output LED (e.g. <em>pLED, qLED</em>) assigned to the associated Bank of sensors should turn ON.<br />
+<p>Up to 10 banks (0-9) of sensors. Each bank can have up to 8 enabled sensors (0-7) i.e. Bank/sensor (S%%) up to '97'.  Array <em>Sensor[n]</em> holds coordinates(rx) of sensor n.  Sensors are grouped into banks(b) of sensors(s). e.g. bsNo 6/7 identifies bank 6, sensor 7 (n=8x6+7=55=067). Sensors are undefined if coordinates(rx) are set to 00. They are disabled if <em>SensorActive[n]</em> is set to false.<br />
+If a sensor detects differences, then any output LED (e.g. <em>pLED qLED</em>) assigned to the associated Bank of sensors should turn ON.<br />
 On reset (power-up), reference grabs are taken for all defined (in EEPROM) sensors, and then enables them.<br />
 To define a sensor, use <strong><code>a</code></strong> command,  Processing4, or (outdated method) a bright LED on the desired spot and dim lighting with a "scan" (<strong>s%%</strong>). Save in EEPROM (<strong>e</strong>). SensorCAM uses RGB565 image format which is incompatible with JPG, so auto reboots between SensorCAM or webCAM modes occurs.</p>
-<h4 id="serial-command-usb-format">Serial Command USB format<a class="headerlink" href="#serial-command-usb-format" title="Permanent link">&para;</a></h4>
-<p><strong><code>a%%[, rr, xx]</code></strong> <strong>enAble</strong> <em>Sensor[%%]</em> &amp; refresh <em>Sensor_ref[%%]</em>, <em>cRatios</em> etc. 4x4 from image in latest frame. <strong>(Note 20.)</strong></p>
-<p><strong><code>b#[,$]</code></strong>&nbsp; &nbsp; <strong>Bank</strong> # sensors. Show which sensors OCCUPIED(in bits 7-0).(1=occ.)(<strong>b#,$</strong> sets <em>brightSF</em> to $)</p>
-<p><strong><code>c$$$$</code></strong>&nbsp; &nbsp; <strong>* reCalibrate</strong> camera CCD occasionally and grab new references for all enabled sensors(Beware of doing this while any sensors are occupied) <strong>N.B.</strong> Obstructed sensors will later need an <strong>r%%</strong>. Check all bank LEDs are off AND check all sensors are unoccupied before recalibrate. Can set AWB AEC AGC CB through $$$$ e.g. c0110<br />
-Also able to change default setting for Brightness, Contrast &amp; Saturation with extra digits e.g. c$$$$012</p>
-<p><strong><code>d%%[#]</code></strong>&nbsp; <strong>* Difference</strong> score in colour&amp; brightness between Ref &amp; actual image. Show # grabs.</p>
-<p><strong><code>e</code></strong>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <strong>EPROM</strong> save of any new Sensor offset positions, pvtThresholds, new twins and 5 default parameter settings.</p>
-<p><strong><code>f%%</code></strong>&nbsp; &nbsp; &nbsp; <strong>* Frame</strong> buffer sample display. Print latest bytes in <em>Sensor_ref[%%]</em> &amp; Sensor S%% positions.</p>
-<p><strong><code>g</code></strong>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <strong>*Get</strong> Camera Status. Displays most current settings available in webcam window (both sensor &amp; video mode).</p>
-<p><strong><code>h$[,#]</code></strong> &nbsp; &nbsp; <strong>* Help(debug)</strong> output.  <strong>h9</strong>  to turn all OFF,  <strong>h0</strong>  turn ON detailed USB output. '<strong>h7,#</strong>' "Waits" scroll on a bank# trip.</p>
-<p><strong><code>i%%[,$$]</code></strong> &nbsp;<strong>Info.</strong> on S%%.  Status(enabled/occupied), position(r,x), any twin(S$$), pvtThreshold &amp; brightness.</p>
-<p><strong><code>j$#</code></strong> &nbsp; &nbsp; &nbsp; &nbsp; <strong>* adJust</strong> camera setting $ to value # and display most settings (as for '<strong>g</strong>'). '<strong>j</strong>' alone lists options for \$#.</p>
+<h4 id="serial-command-sensorcam-native-usb-format">Serial Command - sensorCAM native USB format<a class="headerlink" href="#serial-command-sensorcam-native-usb-format" title="Permanent link">&para;</a></h4>
+<p><strong><code>a%%[,rr,xx]</code></strong> <strong>enAble</strong> <em>Sensor[%%]</em> &amp; refresh <em>Sensor_ref[%%]</em>, <em>cRatios</em> etc. 4x4 from image in latest frame. <strong>(Note 20.)</strong></p>
+<p><strong><code>b#[,$]</code></strong> <strong>Bank</strong> # sensors. Show which sensors OCCUPIED(in bits 7-0).(1=occ.)(<strong>b#,$</strong> sets <em>brightSF</em> to $)</p>
+<p><strong><code>c$$$$</code></strong> <strong>* reCalibrate</strong> camera CCD occasionally and grab new references for all enabled sensors(Beware of doing this while any sensors are occupied) <strong>N.B.</strong> Obstructed sensors will later need an <strong>r%%</strong>. Check all bank LEDs are off AND check all sensors are unoccupied before recalibrate. Can set AWB AEC AGC CB through $$$$ e.g. c0110<br />
+Also able to change default setting for Brightness, Contrast &amp; Saturation with extra digits e.g. c$$$$012.  Refer alternate <code>j</code> commnad.</p>
+<p><strong><code>d%%[#]</code></strong> <strong>* Difference</strong> score in colour&amp; brightness between Ref &amp; actual image. Show # grabs.</p>
+<p><strong><code>e</code></strong> <strong>EPROM</strong> save of any new Sensor offset positions, pvtThresholds, new twins and 5 default parameter settings.</p>
+<p><strong><code>f%%</code></strong> <strong>* Frame</strong> buffer sample display. Print latest bytes in <em>Sensor_ref[%%]</em> &amp; Sensor S%% positions.</p>
+<p><strong><code>g</code></strong> <strong>* Global ov2640 Status</strong>. Displays most current settings available in webcam window (both sensor &amp; video mode).</p>
+<p><strong><code>h$[,#]</code></strong> <strong>* Help(debug)</strong> output.  <strong>h9</strong>  to turn all OFF,  <strong>h0</strong>  turn ON detailed USB output. '<strong>h7,#</strong>' "Waits" scroll on a bank# trip.</p>
+<p><strong><code>i%%[,$$]</code></strong> <strong>Info.</strong> on S%%.  Status(enabled/occupied), position(r,x), any twin(S$$), pvtThreshold &amp; brightness.</p>
+<p><strong><code>j$#</code></strong> <strong>* adJust</strong> camera setting $ to value # and display most settings (as for '<strong>g</strong>'). '<strong>j</strong>' alone lists options for $#.</p>
 <p><strong><code>k%%,rrr,xxx</code></strong> * set <strong>coordinates</strong> of Sensor S$$ to row: rrr &amp; column: xxx. Follow with  <strong>r%%</strong>. Verify values with <strong>p$</strong>.</p>
-<p><strong><code>l%%</code></strong> &nbsp; &nbsp; &nbsp; (Lima) <strong>Latch</strong> sensor S%% to on(1 = occupied(LED lit) &amp; also set <em>SensorActive[%%]</em> false to disable sensing.</p>
+<p><strong><code>l%%</code></strong> (Lima) <strong>Latch</strong> sensor S%% to on(1 = occupied(LED lit) &amp; also set <em>SensorActive[%%]</em> false to disable sensing.</p>
 <p><strong><code>m$[,%%]</code></strong> <strong>* Minimum</strong> $(1-4) sequential frames over <em>Threshold</em> to trigger/trip sensor. Shows list of parameters. <strong>(Note 14)</strong></p>
-<p><strong><code>n#[,%%]</code></strong> &nbsp; <strong>nLED</strong> bank Number assigned to the programmable status <em>nLED</em>. Optional  <strong>n10,%%</strong>  to set <em>minSensors</em>.</p>
-<p><strong><code>o%%</code></strong> &nbsp; &nbsp; &nbsp; (Oscar) force <strong>Off</strong> sensor%% (0=UN-occupied, LED off) Also set <em>SensorActive[##]</em> false to disable updating.</p>
-<p><strong><code>p$</code></strong>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <strong>*Position Pointe</strong>r table info for banks 0 to $ giving DEFINED sensor r/ x) positions.  p%% shorter.</p>
-<p><strong><code>q$</code></strong>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <strong>*Query</strong> bank$, to show which sensors ENABLED(in bits 7-0). 1=enabled. <strong>q9</strong> gives ALL banks.</p>
-<p><strong><code>r%%[,0]</code></strong> &nbsp;<strong>Refresh</strong> Average <em>Sensor_Ref[##]</em> (if defined), enable &amp; calc. cRatios etc. <strong>r%%,0</strong> refreshes block S%0 to S%%.</p>
-<p><strong><code>r00</code></strong> &nbsp; &nbsp; &nbsp; &nbsp; <strong>Refresh</strong> Average Refs etc. for ALL defined sensors. Ignores enable[]. Sensor[00] reserved for brightness ref.</p>
-<p><strong><code>s%%</code></strong> &nbsp; &nbsp; &nbsp; <strong>*Scan</strong> for new location for sensor  S%%(00-97). If found, records location in <em>Sensor[0%%]</em>. <strong>(Note 12)</strong></p>
+<p><strong><code>n#[,%%]</code></strong> <strong>nLED</strong> bank Number assigned to the programmable status <em>nLED</em>. Optional  <strong>n10,%%</strong>  to set <em>minSensors</em>.</p>
+<p><strong><code>o%%</code></strong> (Oscar) force <strong>Off</strong> sensor%% (0=UN-occupied, LED off) Also set <em>SensorActive[##]</em> false to disable updating.</p>
+<p><strong><code>p$</code></strong> <strong>* Position Pointe</strong>r table info for banks 0 to $ giving DEFINED sensor r/ x) positions.  p%% shorter.</p>
+<p><strong><code>q$</code></strong> <strong>* Query</strong> bank$, to show which sensors ENABLED(in bits 7-0). 1=enabled. <strong>q9</strong> gives ALL banks.</p>
+<p><strong><code>r%%[,0]</code></strong> <strong>Refresh</strong> Average <em>Sensor_Ref[##]</em> (if defined), enable &amp; calc. cRatios etc. <strong>r%%,0</strong> refreshes block S%0 to S%%.</p>
+<p><strong><code>r00</code></strong> <strong>Refresh</strong> Average Refs etc. for ALL defined sensors. Ignores enable[]. Sensor[00] reserved for brightness ref.</p>
+<p><strong><code>s%%</code></strong> <strong>* Scan</strong> for new location for sensor  S%%(00-97). If found, records location in <em>Sensor[0%%]</em>. <strong>(Note 12)</strong></p>
 <p><strong><code>t##[,%%]</code></strong> <strong>Threshold</strong> level##(31-98 only) set as default. [<code>t#`#,%%</code> sets the <em>pvtThreshold</em> for sensor %% (<strong>t0,%%</strong> to clear)]</p>
-<p><strong><code>t##</code></strong> &nbsp; &nbsp; &nbsp; &nbsp; <strong>Tabulates</strong> ##(2-30 only) rows of scroll data (continuous scroll toggled off) <strong>Note:</strong> <code>t1</code> alone toggles scroll on/off.</p>
-<p><strong><code>t1,%%</code></strong>  &nbsp; &nbsp; <strong>Trash</strong> 1 entire bank of <em>pvtThresholds</em>. Use <code>t1,99</code> to clear ALL banks (0-9). <strong>Note:</strong> <strong>t99</strong> lists all <em>pvtThresholds</em></p>
-<p><strong><code>u%%</code></strong> &nbsp; &nbsp; &nbsp; <strong>* Un-define</strong>/remove sensor %%  (Sensor S%%=0 &amp; set DISABLED) <strong>u99</strong> for ALL. <code>e</code> will erase from EPROM.</p>
-<p><strong><code>v[1|2]</code></strong>&nbsp; &nbsp; &nbsp; <strong>Video</strong> mode. Causes reboot as a webserver. '<strong>v2</strong>' will connect to  2nd (alt.) router ssid.(<code>v` or</code>v0`` for version)</p>
-<p><strong><code>w</code></strong>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <strong>* Wait</strong> for new command line (\n) before resuming sensing (handy to freeze display data scroll - see <code>t1</code> toggle)</p>
-<p><strong><code>x###</code></strong> &nbsp; &nbsp; &nbsp; *selects first pixel column(0-319) &amp; <code>z###</code> selects image width (### columns(1-320)) for imaging.</p>
-<p><strong><code>y###</code></strong> &nbsp; &nbsp; &nbsp; *selects first row for image and initiates a binary data dump for that row (header + #x2 bytes) using rgb565.<br />
-  &nbsp; &nbsp; &nbsp; &nbsp; This command starts a process that must, after a series of <code>y</code> commands, end with a terminator of <code>yy</code>.</p>
-<p><strong><code>R</code></strong> &amp; <strong><code>F</code></strong>&nbsp; &nbsp; &nbsp; <em>*</em>Reset** commands- will Reset CAM and initiate the Sensor mode. Both will Finish the WebServer(<code>v</code>) mode.</p>
-<p><strong><code>\%,#,$</code></strong> &nbsp; &nbsp;  Convert bank to linear sensor starting with  <code>S$$</code>  and using r,x step sizes of <strong>#,$</strong>(0-31) Slope is "down-right".</p>
-<p><strong><code>/%,#,$</code></strong> &nbsp; &nbsp;  Convert bank to linear sensor starting with S$$ as for '\' but line will slope "down-left" (-deltaX).</p>
-<p><strong><code>&amp;</code></strong> &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;  <strong>statistics</strong> histogram on trips and potential trips since last <code>&amp;</code>, then reset counters and start another sample process. The table gives number of single highs, double highs etc. and totals for No. of frames/run time</p>
-<p><strong><code>@##</code></strong> &nbsp; &nbsp; &nbsp;  *set the "occupied" symbol in the scroll to ASCII character ##. Default is 35("#") Arduino IDE <strong>@12</strong> is bolder!</p>
-<p><strong><code>+#,$</code></strong> &nbsp; &nbsp; &nbsp; *add offset(# pixels) in \$ direction to re-centre sensors after physical drift in CAM alignment. \$(0-7) for N-NW</p>
+<p><strong><code>t##</code></strong> <strong>Tabulates</strong> ##(2-30 only) rows of scroll data (continuous scroll toggled off) <strong>Note:</strong> <code>t1</code> alone toggles scroll on/off.</p>
+<p><strong><code>t1,%%</code></strong> <strong>Trash</strong> 1 entire bank of <em>pvtThresholds</em>. Use <code>t1,99</code> to clear ALL banks (0-9). <strong>Note:</strong> <strong>t99</strong> lists all <em>pvtThresholds</em></p>
+<p><strong><code>u%%</code></strong> <strong>* Un-define</strong>/remove sensor %%  (Sensor S%%=0 &amp; set DISABLED) <strong>u99</strong> for ALL. <code>e</code> will erase from EPROM.</p>
+<p><strong><code>v[1|2]</code></strong> <strong>Video</strong> mode. Causes reboot as a webserver. <strong>v2</strong> will connect to  2nd (alt.) router ssid.(<strong>v</strong> or <strong>v0</strong> for version)</p>
+<p><strong><code>w</code></strong> <strong>* Wait</strong> for new command line (\n) before resuming sensing (handy to freeze display data scroll - see <code>t1</code> toggle)</p>
+<p><strong><code>x###</code></strong> * selects first pixel column(0-319) &amp; <code>z###</code> selects image width (### columns(1-320)) for imaging.</p>
+<p><strong><code>y###</code></strong> * selects first row for image and initiates a binary data dump for that row (header + 2# bytes) using rgb565.<br><br />
+   Note: This command starts a process that must, after a series of <code>y</code> commands, end with a terminator of <code>yy</code>.</p>
+<p><strong><code>R  or  F</code></strong> <strong>Reset</strong> commands- will Reset CAM and initiate the Sensor mode. Both will Finish the WebServer(<code>v</code>) mode.</p>
+<p><strong><code>\%,#,$</code></strong> linear sensor bank conversion starting with  <code>S$$</code>  and using r,x step sizes of <strong>#,$</strong>(0-31) Slope is "down-right".</p>
+<p><strong><code>/%,#,$</code></strong> linear sensor bank conversion starting with S$$ as for '\' but line will slope "down-left" (-deltaX).</p>
+<p><strong><code>&amp;</code></strong> <strong>statistics</strong> histogram on trips and potential trips since last <code>&amp;</code>, then reset counters and start another sample process. The table gives number of single highs, double highs etc. and totals for No. of frames/run time</p>
+<p><strong><code>@##</code></strong> * set the "occupied" symbol in the scroll to ASCII character ##. Default is 35("#") Arduino IDE <strong>@12</strong> is bolder!</p>
+<p><strong><code>+#,$</code></strong> *add offset(# pixels) in $ direction to re-centre sensors after physical drift in CAM alignment. $(0-7) for N-NW</p>
 <p>&nbsp; &nbsp; &nbsp; * These commands typically for diagnostic/setup use only. They wait for a line feed or command to resume.</p>
 <div class="admonition note">
 <p class="admonition-title">Note:</p>
@@ -10790,7 +10790,7 @@ Also able to change default setting for Brightness, Contrast &amp; Saturation wi
 <li>If USB FTDI/MB is removed or not connected to PC, then WebServer may fail/reboot. Power issue?</li>
 </ol>
 <h3 id="i2c-command-notes">I2C command Notes<a class="headerlink" href="#i2c-command-notes" title="Permanent link">&para;</a></h3>
-<p><strong>(EX-CS may exhibit small variations &amp; reduced cmd functionality refer <a href="#appendix-c">APPENDIX C)</a></strong></p>
+<p><strong>(EX-CS may exhibit small variations &amp; reduced command functionality refer <a href="#appendix-c">APPENDIX C)</a></strong></p>
 <ol>
 <li>The same commands are valid from an I2C Master Arduino, but there are some variations.  </li>
 <li>The commands with asterisks normally pause CAM execution so the operator can read USB output on a monitor screen. The same commands from I2C DO NOT wait for a new line, with the exception of 'w'.  </li>
@@ -10819,7 +10819,7 @@ Also able to change default setting for Brightness, Contrast &amp; Saturation wi
 <p>In the situation where sensors may be tripping undesirably, there is a range of adjustments that can be made to find a satisfactory operating point. Some have disadvantages that need to be considered and compromises may be necessary.</p>
 <ol>
 <li>
-<p>First step is to refresh the sensor reference image. Try Cmd: <strong><code>r00</code></strong>, or <strong><code>r%%</code></strong> for a single sensor. This may be necessary after any disturbance to the environment such as changed lighting.</p>
+<p>First step is to refresh the sensor reference image. Try Command: <strong><code>r00</code></strong>, or <strong><code>r%%</code></strong> for a single sensor. This may be necessary after any disturbance to the environment such as changed lighting.</p>
 </li>
 <li>
 <p>Check the "Diff" scores on the scrolling display. After a refresh they should be in the range 32-37 for normal operation. If occasional trips occur, one remedy is to increase the threshold with Cmd: <strong><code>t46</code></strong> say. Increasing the threshold reduces the sensitivity to low contrast objects (e.g. black over brown) If unoccupied Diff scores are consistently 32-35, reduce threshold for greater sensitivity.</p>
@@ -10858,7 +10858,7 @@ Also able to change default setting for Brightness, Contrast &amp; Saturation wi
 <p>If necessary, enhance the brightness of the Sensor location with light colour or a small reflector.</p>
 </li>
 <li>
-<p>It is possible to set private thresholds on individual sensors if other solutions inadequate. (*<em><code>t##,%%*</code></em>)</p>
+<p>It is possible to set private thresholds on individual sensors if other solutions inadequate. (<strong><code>t##,%%</code></strong>)</p>
 </li>
 <li>
 <p>Consider adjusting <em>brightSF</em> (\$) if colour contrast is generally poor (<strong><code>b#,$</code></strong>) default 3, try 1-5.</p>
@@ -10879,204 +10879,37 @@ Also able to change default setting for Brightness, Contrast &amp; Saturation wi
 <p>The base vpin address defaults to 700 but one can use the <em>#define SENSORCAM_VPIN ###</em> for another value (in <em>config.h</em>). With 2 to 4 CAM's, use <strong><code>&lt;N C #&gt;</code></strong> (1-4) when a switch is needed. The CAM# may also be placed, if defined in <em>config.h</em>, prefixing the sensor bsNo.<br />
 e.g. <strong><code>&lt;Ni 2%%\&gt;</code></strong> <strong><code>&lt;Nr 2%%&gt;</code></strong> also <strong><code>&lt;Nm 200\&gt;</code></strong> <strong><code>&lt;Nf 212&gt;</code></strong> <strong><code>&lt;Nt 243&gt;</code></strong></p>
 <h3 id="user-commands">User commands<a class="headerlink" href="#user-commands" title="Permanent link">&para;</a></h3>
-<table>
-<thead>
-<tr>
-<th>Command</th>
-<th>Example</th>
-<th>Equivalent</th>
-<th>sensorCAM command &amp; action (some commands only return "ACK OK" to CS)</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong><code>&lt;N&gt;</code></strong></td>
-<td><code>&lt;N&gt;</code></td>
-<td>n/a</td>
-<td>Lists current &amp; alt. defined CAM baseVpins.</td>
-</tr>
-<tr>
-<td><strong><code>&lt;N C ###&gt;</code></strong></td>
-<td><code>&lt;NC 600&gt;</code></td>
-<td>n/a</td>
-<td><strong>CAM</strong> base vpin(&gt;99) for following commands OR &lt;NC #&gt; selects CAM # (1-4)</td>
-</tr>
-<tr>
-<td><strong><code>&lt;N a %%&gt;</code></strong></td>
-<td><code>&lt;Na 12&gt;</code></td>
-<td>a12</td>
-<td><strong>enAble</strong> sensor S%% (bsNo).</td>
-</tr>
-<tr>
-<td><strong><code>&lt;N a%% row col&gt;</code></strong></td>
-<td><code>&lt;Na 12 32 43&gt;</code></td>
-<td>a12,32,43</td>
-<td><strong>enAble</strong> &amp; also set new coordinates for sensor bsNo &amp; refresh</td>
-</tr>
-<tr>
-<td><strong><code>&lt;N b bank#&gt;</code></strong></td>
-<td><code>&lt;Nb 1&gt;</code></td>
-<td>b1</td>
-<td><strong>Bank</strong> sensor states(all 8).(used by IFGTE() ATLT() e.g. to locate loco).</td>
-</tr>
-<tr>
-<td><strong><code>&lt;N e&gt;</code></strong></td>
-<td><code>&lt;Ne&gt;</code></td>
-<td>e</td>
-<td><strong>EPROM</strong> write any changed settings to sensorCAM EPROM.</td>
-</tr>
-<tr>
-<td><strong><code>&lt;N f %%&gt;</code></strong></td>
-<td><code>&lt;Nf 12&gt;</code></td>
-<td>f12</td>
-<td><strong>Frame image</strong> pixel data for Sensor_ref[%%] and sensor666[%%] (RGB bytes).</td>
-</tr>
-<tr>
-<td><strong><code>&lt;N F&gt;</code></strong></td>
-<td><code>&lt;NF&gt;</code></td>
-<td>F</td>
-<td><strong>Forced reboot</strong>, restoring sensorCAM sensor mode &amp; EPROM defaults.</td>
-</tr>
-<tr>
-<td><strong><code>&lt;N g&gt;</code></strong></td>
-<td><code>&lt;Ng&gt;</code></td>
-<td>g</td>
-<td><strong>Get</strong> status ov2640 camera module settings (on sensorCAM monitor).</td>
-</tr>
-<tr>
-<td><strong><code>&lt;N h %%&gt;</code></strong></td>
-<td><code>&lt;Nh 30&gt;</code></td>
-<td>h30</td>
-<td>set <em>maxSensors</em> to limit display to below sensor S%%. Also <strong>Help</strong> (0-9)</td>
-</tr>
-<tr>
-<td><strong><code>&lt;N i %%&gt;</code></strong></td>
-<td><code>&lt;Ni 12&gt;</code></td>
-<td>i12</td>
-<td><strong>Information</strong> on sensor bsNo state, position &amp; twin (0=No twin).</td>
-</tr>
-<tr>
-<td><strong><code>&lt;N i %%[ $$]&gt;</code></strong></td>
-<td><code>&lt;Ni 12&gt;</code></td>
-<td>i12,02</td>
-<td><strong>Info.</strong> &amp; assigns new twin sensor(S$$) for "second-opinion" on S%%.</td>
-</tr>
-<tr>
-<td><strong><code>&lt;N j $ #&gt;</code></strong></td>
-<td><code>&lt;Nj B 2&gt;</code></td>
-<td>jB2</td>
-<td><strong>adJust</strong> ov2640 parameters($)(Brightness, Contrast etc)(values 0-2 only).</td>
-</tr>
-<tr>
-<td><strong><code>&lt;N l %%&gt;</code></strong></td>
-<td><code>&lt;Nl 12&gt;</code></td>
-<td>l12</td>
-<td>(lima) <strong>Latch</strong> output state of sensor bsNo to 1 &amp; disable.</td>
-</tr>
-<tr>
-<td><strong><code>&lt;N m $ [%%]&gt;</code></strong></td>
-<td><code>&lt;Nm 3 20&gt;</code></td>
-<td>m3,20</td>
-<td><strong>Min/max</strong> <em>min2trip</em>(1-4) frames [<em>maxSensors</em>] <strong>&lt;NM&gt; shows CAM parameters</strong></td>
-</tr>
-<tr>
-<td><strong><code>&lt;N n$ [%%]&gt;</code></strong></td>
-<td><code>&lt;Nn 1 10&gt;</code></td>
-<td>n1,10</td>
-<td>set <strong>nLED</strong>= bank $ [and <em>minSensors</em>=%% to limit display range] &lt;Nn v&gt; verifies.</td>
-</tr>
-<tr>
-<td><strong><code>&lt;N o %%&gt;</code></strong></td>
-<td><code>&lt;No 12&gt;</code></td>
-<td>o12</td>
-<td>(oscar) <strong>Zero</strong> output state of sensor bsNo. Reset to 0 &amp; disable.</td>
-</tr>
-<tr>
-<td><strong><code>&lt;N p %%&gt;</code></strong></td>
-<td><code>&lt;Np 1&gt;</code></td>
-<td>p1</td>
-<td><strong>Positions</strong>(r,x) of all enabled sensors in bank are listed.</td>
-</tr>
-<tr>
-<td><strong><code>&lt;N q #&gt;</code></strong></td>
-<td><code>&lt;Nq 1&gt;</code></td>
-<td>q1</td>
-<td><strong>Query bank</strong># enabled states of sensors (0 indicates sensor disabled).</td>
-</tr>
-<tr>
-<td><strong><code>&lt;N Q&gt;</code></strong></td>
-<td><code>&lt;NQ&gt;</code></td>
-<td>n/a</td>
-<td><strong>Query</strong> state of all sensorCAM Sensors</td>
-</tr>
-<tr>
-<td><strong><code>&lt;N r [%%]&gt;</code></strong></td>
-<td><code>&lt;Nr 12&gt;</code></td>
-<td>r12</td>
-<td><strong>Refresh Reference</strong> image for sensor S%% (default ALL=r00).</td>
-</tr>
-<tr>
-<td><strong><code>&lt;N s %%&gt;</code></strong></td>
-<td><code>&lt;Ns 12&gt;</code></td>
-<td>s12</td>
-<td><strong>Scan</strong> image for brightest spot and set S%% to center that pixel.</td>
-</tr>
-<tr>
-<td><strong><code>&lt;N t ## [%%]&gt;</code></strong></td>
-<td><code>&lt;Nt 43 12&gt;</code></td>
-<td>t43,12</td>
-<td><strong>Threshold</strong> displayed, sets global <em>threshold</em> (32-98) [sets a <em>pvtThreshold</em>].</td>
-</tr>
-<tr>
-<td><strong><code>&lt;N t ##&gt;</code></strong></td>
-<td><code>&lt;Nt 10&gt;</code></td>
-<td>t10</td>
-<td><strong>Tabulate</strong> ## (2-31) rows of scroll data similar to CAM scroll.</td>
-</tr>
-<tr>
-<td><strong><code>&lt;N t # %%&gt;</code></strong></td>
-<td><code>&lt;Nt 0 12&gt;</code></td>
-<td>t0,12</td>
-<td><strong>Trash</strong> pvtThresholds. <strong>&lt;Nt 0 %%&gt;</strong> individually, <strong>&lt;Nt 1 %%&gt;</strong> for bank, <strong>&lt;Nt&nbsp;1&nbsp;99&gt;</strong> trashes ALL pvtThresholds.  <strong>&lt;Nt&nbsp;99&gt;</strong> lists ALL pvtThresholds.</td>
-</tr>
-<tr>
-<td><strong><code>&lt;N t 1&gt;</code></strong></td>
-<td><code>&lt;Nt 1&gt;</code></td>
-<td>t1</td>
-<td><strong>toggles</strong> scroll on/off.</td>
-</tr>
-<tr>
-<td><strong><code>&lt;N u %%&gt;</code></strong></td>
-<td><code>&lt;Nu 12&gt;</code></td>
-<td>u12</td>
-<td><strong>Undefine</strong> and disable sensor bsNo(erase coordinates). <strong>&lt;Nu 99&gt;</strong> for ALL</td>
-</tr>
-<tr>
-<td><strong><code>&lt;N v [#]&gt;</code></strong></td>
-<td><code>&lt;N v 1&gt;</code></td>
-<td>v1</td>
-<td><strong>Video</strong> mode(1-2) invoke webCAM, or alt webCAM with v 2. <strong>v</strong> for <strong>version</strong></td>
-</tr>
-<tr>
-<td><strong><code>&lt;N w&gt;</code></strong></td>
-<td><code>&lt;Nw&gt;</code></td>
-<td>w</td>
-<td><strong>Wait</strong>. Stop/start CAM imaging (flash), status sensing &amp; streaming.</td>
-</tr>
-<tr>
-<td><strong><code>x</code>  <code>y</code> <code>z</code></strong></td>
-<td></td>
-<td></td>
-<td>Reserved for binary export for Processing 4 images</td>
-</tr>
-<tr>
-<td><strong><code>&lt;N ### ## ##&gt;</code></strong></td>
-<td><code>&lt;N 711 75 85&gt;</code></td>
-<td>a13,75,85</td>
-<td>Note: This uses the <strong>vpin</strong> for a sensor, NOT id/bsNo.(ref. <strong>Appendix E</strong>).</td>
-</tr>
-</tbody>
-</table>
+<p>| Command | Example | Equivalent| sensorCAM command &amp; action (some commands only return "ACK OK" to CS) |
+| --- | --- | --- |
+| <strong><code>&lt;N&gt;</code></strong> | <code>&lt;N&gt;       -</code> | Lists current &amp; alt. defined CAM baseVpins. |
+| <strong><code>&lt;N C ###&gt;</code></strong> | <code>&lt;NC 600&gt;  -</code> | <strong>CAM</strong> base vpin(&gt;99) for following commands OR &lt;NC #&gt; selects CAM # (1-4) |
+| <strong><code>&lt;N a %%&gt;</code></strong> | <code>&lt;Na 12&gt;   a12</code> | <strong>enAble</strong> sensor S%% (bsNo). |
+| <strong><code>&lt;N a %% rr xx&gt;</code></strong> | <code>&lt;Na 12 32 43&gt;</code><br><code>a12,32,43</code> | <strong>enAble</strong> &amp; also set new coordinates for sensor bsNo &amp; refresh |
+| <strong><code>&lt;N b #&gt;</code></strong> | <code>&lt;Nb 1&gt;    b1</code> | <strong>Bank</strong> sensor states(all 8).(used by IFGTE() ATLT() e.g. to locate loco). |
+| <strong><code>&lt;N e&gt;</code></strong> | <code>&lt;Ne&gt;      e</code> | <strong>EPROM</strong> write any changed settings to sensorCAM EPROM. |
+| <strong><code>&lt;N f %%&gt;</code></strong> | <code>&lt;Nf 12&gt;   f12</code> | <strong>Frame image</strong> pixel data for Sensor_ref[%%] and sensor666[%%] (RGB bytes). |
+| <strong><code>&lt;N F&gt;</code></strong> | <code>&lt;NF&gt;      F</code> | <em>Forced reboot</em><em>, restoring sensorCAM sensor mode &amp; EPROM defaults. |
+| *</em><code>&lt;N g&gt;</code>** | <code>&lt;Ng&gt;      g</code> | g<strong>Global status</strong> ov2640 camera module settings (on sensorCAM monitor). |
+| <strong><code>&lt;N h %%&gt;</code></strong> | <code>&lt;Nh 30&gt;   h30</code> | set <em>maxSensors</em> to limit display to below sensor S%%. Also <strong>Help</strong> (0-9) |
+| <strong><code>&lt;N i %%&gt;</code></strong> | <code>&lt;Ni 12&gt;   i12</code> | <strong>Information</strong> on sensor bsNo state, position &amp; twin (0=No twin). |
+| <strong><code>&lt;N i %%[$$]&gt;</code></strong> | <code>&lt;Ni 12&gt;</code> i12| <strong>Info.</strong> &amp; assigns new twin sensor(S$$) for "second-opinion" on S%%. |
+| <strong><code>&lt;N j $ #&gt;</code></strong> | <code>&lt;Nj B 2&gt;  jB2</code> | <strong>adJust</strong> ov2640 parameters($)(Brightness, Contrast etc)(values 0-2 only). |
+| <strong><code>&lt;N l %%&gt;</code></strong> | <code>&lt;Nl 12&gt;   l12</code> | (lima) <strong>Latch</strong> output state of sensor bsNo to 1 &amp; disable. |
+| <strong><code>&lt;N m $ [%%]&gt;</code></strong> | <code>&lt;Nm 3 20&gt; m3,20</code> | <strong>Min/max</strong> <em>min2trip</em>(1-4) frames [<em>maxSensors</em>] <strong>&lt;NM&gt; shows CAM parameters</strong> |
+| <strong><code>&lt;N n $ [%%]&gt;</code></strong> | <code>&lt;Nn 1 10&gt; n1,10</code> | set <strong>nLED</strong>= bank $ [and <em>minSensors</em>=%% to limit display range] &lt;Nn v&gt; verifies. |
+| <strong><code>&lt;N o %%&gt;</code></strong> | <code>&lt;No 12&gt;   o12</code> | o12 | (oscar) <strong>Zero</strong> output state of sensor bsNo. Reset to 0 &amp; disable. |
+| <strong><code>&lt;N p %%&gt;</code></strong> | <code>&lt;Np 1&gt;    p1</code> | p1 | <strong>Positions</strong>(r,x) of all enabled sensors in bank are listed. |
+| <strong><code>&lt;N q #&gt;</code></strong> | <code>&lt;Nq 1&gt;    q1</code> | <strong>Query bank</strong># enabled states of sensors (0 indicates sensor disabled). |
+| <strong><code>&lt;N Q&gt;</code></strong> | <code>&lt;NQ&gt;      n/a</code> | <strong>Query</strong> state of all sensorCAM Sensors |
+| <strong><code>&lt;N r [%%]&gt;</code></strong> | <code>&lt;Nr 12&gt;   r12</code> | <strong>Refresh Reference</strong> image for sensor S%% (default ALL=r00). |
+| <strong><code>&lt;N s %%&gt;</code></strong> | <code>&lt;Ns 12&gt;   s12</code> | <strong>Scan</strong> image for brightest spot and set S%% to center that pixel. |
+| <strong><code>&lt;N t ## [%%]&gt;</code></strong> | <code>&lt;Nt 43 12&gt; t43,12</code> | <strong>Threshold</strong> displayed, sets global <em>threshold</em> (32-98) [sets a <em>pvtThreshold</em>]. |
+| <strong><code>&lt;N t ##&gt;</code></strong> | <code>&lt;Nt 10&gt;   t10</code> | <strong>Tabulate</strong> ## (2-31) rows of scroll data similar to CAM scroll. |
+| <strong><code>&lt;N t # %%&gt;</code></strong> | <code>&lt;Nt 0 12&gt; t0,12</code> | <strong>Trash</strong> pvtThresholds. <strong>&lt;Nt 0 %%&gt;</strong> individually, <strong>&lt;Nt 1 %%&gt;</strong> for bank, <strong>&lt;Nt&nbsp;1&nbsp;99&gt;</strong> trashes ALL pvtThresholds.  <strong>&lt;Nt&nbsp;99&gt;</strong> lists ALL pvtThresholds. |
+| <strong><code>&lt;N t 1&gt;</code></strong> | <code>&lt;Nt 1&gt;    t1</code> | <strong>toggles</strong> scroll on/off. |
+| <strong><code>&lt;N u %%&gt;</code></strong> | <code>&lt;Nu 12&gt;   u12</code> | <strong>Undefine</strong> and disable sensor bsNo(erase coordinates). <strong>&lt;Nu 99&gt;</strong> for ALL |
+| <strong><code>&lt;N v [#]&gt;</code></strong> | <code>&lt;Nv 1&gt;    v1</code> | <strong>Video</strong> mode(1-2) invoke webCAM, or alt webCAM with v 2. <strong>v</strong> for <strong>version</strong> |
+| <strong><code>&lt;N w&gt;    # ##&gt;</code></strong> | <code>&lt;N 711 75 85&gt; a13,75,85</code> | Note: This uses the <strong>vpin</strong> for a sensor, NOT id/bsNo.(ref. <strong>Appendix E</strong>). |</p>
 <div class="admonition note">
 <p class="admonition-title">Notes:</p>
 <p>The'i' command prints bsNo(bsn) where bsn/vPin offsets range from(7)00 to(7)79(e.g. baseVpin address 700).<br />
@@ -11104,19 +10937,19 @@ For commands to work fully, need latest <em>CamParser.cpp</em>, CS driver(<em>IO
 <p><img alt="Line Sensor Console Output" src="../../../_static/images/ex-sensorcam/line-sensor-console-output.png" /></p>
 <h2 id="appendix-e">APPENDIX E<a class="headerlink" href="#appendix-e" title="Permanent link">&para;</a></h2>
 <h3 id="tabulated-dcc-ex-cs-ids-for-sensorcam">Tabulated DCC-EX-CS ID's for sensorCAM<a class="headerlink" href="#tabulated-dcc-ex-cs-ids-for-sensorcam" title="Permanent link">&para;</a></h3>
-<p><strong>Table B</strong> below shows the colour code used to identify sensors on the Processing 4 track image.<br />
+<p><strong>Table B</strong> below shows the (resistor) colour code used to identify sensors on the Processing 4 track image.
 For example, sensor S12 has a bsNo 1/2 for which the colours are Brown/Red (seen on sensor box edges).<br />
-For CAM number 1, the full CS sensor S12 ID is 112 when used in CS native <code>&lt;N&gt;</code> commands such as <strong><code>&lt;N i 112&gt;</code></strong>
+For CAM number 1, the full CS sensor S12 ID is 112 when used in CS native <code>&lt;N</code> commands such as <strong><code>&lt;N i 112&gt;</code></strong><br />
 The use of the CAM # can be optional.  If only one CAM is installed (or selected), <strong><code>&lt;Ni 12&gt;</code></strong> is sufficient.
-For <strong>EXRAIL</strong> it can be tested so: <code>AT(CAM 012)</code> where the vpin is invisibly calculated as (700+012).<br />
-<strong>N.B.</strong> The use of the '0' after CAM is essential in EXRAIL.
+For <strong>EXRAIL</strong> it can be tested so: <strong>AT(CAM 012)</strong> where the vpin is automatically calculated as (700+012).<br />
+<strong>N.B.</strong> The use of the <strong>'0'</strong> (0%%) is essential in EXRAIL to distinguish a sensor id (S%%)
 The colour code is the standard resistor value colour code for 0-9.</p>
-<p>Under normal circumstances if the CS has been configured as per the installation instructions, there is no need to refer to the vpin of any Sensor.  They are all relative to the baseVpin of the CAM.</p>
-<p>The full ID consists of CAM number #-bank-sensor or #bs. Each bank(0-9) contains 8 sensors(0-7)<br />
-vPin is the (CAM number # baseVpin) + 0bs,  bsNo skips id's ending in 8 or 9.  (e.g. 700 + 012 = 710)
-vPin is the base/first vPin number (e.g. 700) + DEC(<em>bsn</em>)number in the conversion table below.</p>
+<p><strong>If the EX-CommandStation has been configured as per the installation instructions, there is no need to refer to the specific vpin of any Sensor</strong>  They are all relative to the baseVpin of the CAM.  The vpin details here are primarily for developer reference.</p>
+<p>The full Sensor ID consists of CAM number #-bank-sensor or #bs. Each bank(0-9) contains 8 sensors(0-7)<br />
+The CS vPin is the CAM_baseVpin + 0bs,  bsNo skips id's ending in 8 or 9.  (e.g. 700 + 012 = 710)
+vPin is the base/first vPin number (e.g. 700) + DEC(<em>bsn</em>) number in the conversion table below.</p>
 <p><img alt="Sensor Code Conversions" src="../../../_static/images/ex-sensorcam/sensor-code-conversions.png" /><br />
- &nbsp; &nbsp; <strong>Table E &nbsp; &nbsp; Reference Sensor ID to colour code conversion table</strong></p>
+<strong>Table E &nbsp; &nbsp; Reference Sensor ID to colour code conversion table</strong></p>
 <h2 id="appendix-f">APPENDIX F<a class="headerlink" href="#appendix-f" title="Permanent link">&para;</a></h2>
 <h3 id="hardware-interface-pca9515a-endpoints">Hardware Interface (PCA9515A&amp; &amp; Endpoints)<a class="headerlink" href="#hardware-interface-pca9515a-endpoints" title="Permanent link">&para;</a></h3>
 <div class="admonition note">
@@ -11162,25 +10995,27 @@ The information below pertains mostly to the newer WROVER-CAM, as mentioned in <
 <h3 id="1-sensorvpin-numbering">1. Sensor/vpin Numbering<a class="headerlink" href="#1-sensorvpin-numbering" title="Permanent link">&para;</a></h3>
 <p>The numbering of sensors can be consecutive by vPin, which is the common practice with multi-pin peripherals (e.g. PCA9685 16-channel Servo driver and MCP23017 16-channel GPIO Expander). Sequential vPin numbers within a device is hardware enforced, but this loses some of the advantages available by a more meaningful ID notation. Such ID's are available for jmri use and so can also be used for sensorCAM. Use of IDs, as suggested below, can remove any need to program with vPin numbers.</p>
 <p>For any peripheral device, the vPin is needed for commands (e.g.700+5), but, if predefined (e.g. in config.h), alphanumeric names such as CAM or CAM2 or ESSEX can be used in place of the base vPin to identify the camera. Then commands for CAM pin 5 become: e.g. AT(CAM+05) or AT(ESSEX+05)</p>
-<div class="language-c++ highlight"><pre><span></span><code><span class="w"> </span><span class="n">e</span><span class="p">.</span><span class="n">g</span><span class="p">.</span>
-<span class="w"> </span><span class="cp">#define SENSORCAM_VPIN 700    </span><span class="c1">//place in config.h or myAutomation.h or mysetup.h</span>
-<span class="w"> </span><span class="cp">#define CAM  SENSORCAM_VPIN+  </span><span class="c1">//in config.h or myAutomation.h or mysetup.h</span>
+<div class="language-c++ highlight"><pre><span></span><code><span class="nl">examples</span><span class="p">:</span>
+<span class="cp">#define SENSORCAM_VPIN 700    </span><span class="c1">//place in config.h or myAutomation.h or mysetup.h</span>
+<span class="cp">#define CAM  SENSORCAM_VPIN+  </span><span class="c1">//in config.h or myAutomation.h or mysetup.h</span>
 
-<span class="w"> </span><span class="n">Valid</span><span class="w"> </span><span class="o">**</span><span class="n">EXRAIL</span><span class="o">**</span><span class="w"> </span><span class="n">commands</span><span class="o">:</span><span class="w"> </span><span class="n">AFTER</span><span class="p">(</span><span class="n">CAM</span><span class="w"> </span><span class="mi">5</span><span class="p">)</span><span class="w">  </span><span class="n">AT</span><span class="p">(</span><span class="n">SENSORCAM_VPIN</span><span class="o">+</span><span class="mi">7</span><span class="p">)</span><span class="w">  </span><span class="n">IFGTE</span><span class="p">(</span><span class="n">CAM</span><span class="w"> </span><span class="mo">010</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">)</span>
+<span class="n">Valid</span><span class="w"> </span><span class="n">EXRAIL</span><span class="w"> </span><span class="n">commands</span><span class="w"> </span><span class="n">can</span><span class="w"> </span><span class="n">use</span><span class="w"> </span><span class="n">CAM</span><span class="w"> </span><span class="n">alaises</span><span class="w"> </span><span class="n">e</span><span class="p">.</span><span class="n">g</span><span class="p">.</span>
+<span class="n">AFTER</span><span class="p">(</span><span class="n">CAM</span><span class="w"> </span><span class="mi">5</span><span class="p">)</span><span class="w">  </span><span class="n">AT</span><span class="p">(</span><span class="n">SENSORCAM_VPIN</span><span class="o">+</span><span class="mi">7</span><span class="p">)</span><span class="w">  </span><span class="n">IFGTE</span><span class="p">(</span><span class="n">CAM</span><span class="w"> </span><span class="mo">010</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">)</span>
 
-<span class="w"> </span><span class="n">To</span><span class="w"> </span><span class="n">avoid</span><span class="w"> </span><span class="n">frequent</span><span class="w"> </span><span class="s">&quot;CAM&quot;</span><span class="w"> </span><span class="n">in</span><span class="w"> </span><span class="n">scripts</span><span class="p">,</span><span class="w"> </span><span class="n">an</span><span class="w"> </span><span class="n">alias</span><span class="w"> </span><span class="n">can</span><span class="w"> </span><span class="n">be</span><span class="w"> </span><span class="n">assigned</span><span class="w"> </span><span class="n">e</span><span class="p">.</span><span class="n">g</span><span class="p">.</span><span class="w"> </span><span class="n">ALIAS</span><span class="p">(</span><span class="n">ESSEX_P1</span><span class="p">,</span><span class="w"> </span><span class="n">CAM</span><span class="o">+</span><span class="mh">0x10</span><span class="p">)</span>
+<span class="n">To</span><span class="w"> </span><span class="n">avoid</span><span class="w"> </span><span class="n">frequent</span><span class="w"> </span><span class="s">&quot;CAM&quot;</span><span class="w"> </span><span class="n">in</span><span class="w"> </span><span class="n">scripts</span><span class="p">,</span><span class="w"> </span><span class="n">an</span><span class="w"> </span><span class="n">alias</span><span class="w"> </span><span class="n">can</span><span class="w"> </span><span class="n">be</span><span class="w"> </span><span class="n">assigned</span>
+<span class="n">e</span><span class="p">.</span><span class="n">g</span><span class="p">.</span><span class="w"> </span><span class="n">ALIAS</span><span class="p">(</span><span class="n">ESSEX_P1</span><span class="p">,</span><span class="w"> </span><span class="n">CAM</span><span class="o">+</span><span class="mo">010</span><span class="p">)</span><span class="w">   </span><span class="n">IFGTE</span><span class="p">(</span><span class="n">ESSEX_P1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">)</span>
 </code></pre></div>
-<p>With each sensorCAM having up to 80 sensors, it is desirable to test groups of (1 to 8) sensors with a single <strong>EXRAIL</strong> test using the <code>IFGTE()</code> or <code>IFLE()</code> commands. To do this, the sensors are logically arranged in "banks" of (consecutive) vpins. The logical grouping available can be written in the form "bs" or b/s where b can have bank values of 0-9 (10 banks) and s values 0-7 (8 sensors). <code>IFGTE</code> and <code>IFLT</code> read a whole bank "value". Native CAM commands can also be issued e.g. <code>PARSE("&lt;N b 4\&gt;")</code> for bank 4.  However consecutive PARSE() commands should be separated by a <code>PAUSE(400)</code> to give the CAM time to complete its action.</p>
-<p>EXRAIL can accept "b/s" numbering (e.g. 047) if we add the leading 0. e.g. vpin= <strong>SENSORCAM_VPIN+ 047</strong> so use <strong>IFGTE(CAM 047,1)</strong> provided values are defined for <strong>SENSORCAM_VPIN</strong> &amp; <strong>CAM</strong>(as above).</p>
+<p>With each sensorCAM having up to 80 sensors, it is desirable to test groups of (1 to 8) sensors with a single <strong>EXRAIL</strong> test using the <strong>IFGTE()</strong> or <strong>IFLE()</strong> commands. To do this, the sensors are logically arranged in "banks" of (consecutive) vpins. The logical grouping available can be written in the form "bs" or b/s where b can have bank values of 0-9 (10 banks) and s values 0-7 (8 sensors). <strong>IFGTE</strong> and <strong>IFLT</strong> read a whole bank "value". Native CAM commands can also be issued e.g. <code>PARSE("&lt;N b 4&gt;")</code> for bank 4.  However consecutive PARSE() commands should be separated by a <code>PAUSE(400)</code> to give the CAM time to complete its action.</p>
+<p>EXRAIL can accept "b/s" numbering (e.g. 047) if we add the leading 0. e.g. vpin= <strong>SENSORCAM_VPIN+ 047</strong> e.g. <strong>IFGTE(CAM 047,1)</strong> provided values are defined for <strong>SENSORCAM_VPIN</strong> &amp; <strong>CAM</strong>(as above).</p>
 <p><strong>(N.B. "CAM" includes the '+')</strong> Using this method there is no need to remember assigned vPin values!</p>
 <p><strong>Example 1:</strong> For the approach to a signal, several sensors may be deployed (say S13 to S17) with S17 last at the signal. As a train approaches the signal, the (bank) "value" of the tripping sensors will increase. This can be used to control the loco speed for a smooth and precise stop at a platform, for example.<br />
-Commands <code>IFGTE(CAM 013,8) SPEED(40)</code>... <code>IFGTE(CAM 013,16)</code> <code>SPEED(30)</code> etc. can be used to control the loco approach speed with some precision.
+Commands <strong>IFGTE(CAM 013,8) SPEED(40)</strong>... <strong>IFGTE(CAM 013,16)</strong> <strong>SPEED(30)</strong> etc. can be used to control the loco approach speed with some precision.
 Finally, at the signal(S17), <strong>IFGTE(CAM 013,128) STOP</strong></p>
-<p>Aliases could also be defined and used for station/bank or line sensors.e.g. IFGTE(TRENTHAM, 0x80)</p>
-<p><strong>Example 2:</strong> The CAM can have up to 10 occupation/line detectors. If two "linear" line sensors are needed, and we have bank 1 allocated (S10-S17), the following 16 vPins could be assigned to 2 banks of linear sensors. We can use (bs#) ID of 20 to 27 for first linear sensor(bank2) and 30-37 of bank3. The Command Station can easily handle banks of 8, using an ID based format of (CAM 020) and (CAM 030). The "bank" or b/s notation requires the leading '0' on the bsNo. for automatic vpin calculation. The linear segments at S21 to S27 may also be tested individually and a common bank threshold can be set if needed. e.g. <strong>IFGTE(CAM 020,1)</strong>...// bank occupied, or <strong>IFGTE(CAM 024,16)</strong> &nbsp; //2nd half occupied.</p>
+<p>Aliases could also be defined and used for station/bank or line sensors. e.g. IFGTE(TRENTHAM, 128)</p>
+<p><strong>Example 2:</strong> The CAM can have up to 10 occupation/line detectors. If two "linear" line sensors are needed, and we have bank 1 allocated (S10-S17), the following 16 vPins could be assigned to 2 banks of linear sensors. We can use (bs#) ID of 20 to 27 for first linear sensor (bank2) and 30-37 of bank3. The Command Station can easily handle banks of 8, using an ID based format of (CAM 020) and (CAM 030). The "bank" or b/s notation requires the leading '0' on the bsNo. for automatic vpin calculation. The linear segments at S21 to S27 may also be tested individually and a common bank threshold can be set if needed. e.g. <strong>IFGTE(CAM 020,1)</strong>...// bank occupied, or <strong>IFGTE(CAM 024,16)</strong> &nbsp; //2nd half occupied.</p>
 <p>Note: With '0%%' notation, unless you understand the issue, avoid using bank 8 &amp; 9 as mistakes may arise. (08# must be expressed as 010# and 09# as 011# for correct outcome)</p>
 <h3 id="2-multiple-cams">2. Multiple Cams<a class="headerlink" href="#2-multiple-cams" title="Permanent link">&para;</a></h3>
-<p>Multiple sensorCAMs can be easily handled if CAM2, CAM3 etc are defined along the lines of CAM above, so <strong>IF(CAM2 012)</strong> tests a different sensor to <strong>IF(CAM3 012)</strong>, provided <strong>SENSORCAM2_VPIN</strong> etc. are defined. Using CS native commands, e.g. <strong><code>&lt;Ni 212&gt;</code></strong> and <strong><code>&lt;Ni 312&gt;</code></strong>, can also access <strong>S12</strong> on different CAMs. <strong>The #define SENSORCAM_VPIN ###</strong> is essential for cam1. Do NOT insert a 1 in to <strong>SENSORCAM_VPIN</strong>. You may use <strong>SENSORCAM2_VPIN</strong> and <strong>SENSORCAM3_VPIN</strong> with <strong>CAM2</strong> and <strong>CAM3</strong> in <em>config.h</em>.</p>
+<p>Multiple sensorCAMs can be easily handled if CAM2, CAM3 etc are defined along the lines of CAM above, so <strong>IF(CAM2 012)</strong> tests a different sensor to <strong>IF(CAM3 012)</strong>, provided <strong>SENSORCAM2_VPIN</strong> etc. are defined. Using CS native commands, e.g. <strong>&lt;Ni 212&gt;</strong> and <strong>&lt;Ni 312&gt;</strong>, can also access <strong>S12</strong> on different CAMs. <strong>The #define SENSORCAM_VPIN ###</strong> is essential for cam1. Do NOT insert a 1 in to <strong>SENSORCAM_VPIN</strong>. You may use <strong>SENSORCAM2_VPIN</strong> and <strong>SENSORCAM3_VPIN</strong> with <strong>CAM2</strong> and <strong>CAM3</strong> in <em>config.h</em>.</p>
 <h2 id="appendix-i">APPENDIX I<a class="headerlink" href="#appendix-i" title="Permanent link">&para;</a></h2>
 <h3 id="configuring-cam-and-ex-cs">Configuring CAM and EX-CS<a class="headerlink" href="#configuring-cam-and-ex-cs" title="Permanent link">&para;</a></h3>
 <p>A number of parameters and files may need to be changed or included to get the EX Command Station to respond appropriately to the sensorCAM. The (CS) modifications are to be placed in the directory containing CommandStation-EX.ino BEFORE final compilation and upload to the CS(Mega). Some further changes to vpins and i2c addresses may be required to avoid conflicts with previously installed EX-CS devices.</p>
@@ -11328,7 +11163,7 @@ Note: WROVER-CAM does not have a fitted external antenna socket like the ESP32-C
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 28, 2026 06:36:54 UTC">June 28, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="July 12, 2026 04:35:02 UTC">July 12, 2026</span>
   </span>
 
     
