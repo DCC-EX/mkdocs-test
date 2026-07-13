@@ -9842,12 +9842,12 @@ You may also increase the image display window size factor by editing the next <
 <p>The operation of the railway depends on a Control Station that polls the sensorCAM for sensor states. This might be a dedicated Arduino Mega 2560 for example. It might be an <strong>EX-CSB1</strong> Command Station running DCC-EX and <strong>EXRAIL</strong> software. If the sensorCAM is powered up with default settings (from EPROM), or adjusted by the user at the start, the program need only talk to sensorCAM over an i2c bus using the commands a,b,i,l &amp; o for example, or it may be more sophisticated, providing a command channel from a Control Station monitor to the sensorCAM to enable most configuration commands via the i2c bus.</p>
 <p>The I2C bus is running at 100kHz on the prototype software. It has not been tested at any higher speed yet. It has been running fine over a 10m long I2C bus to the master microcontroller (CSB1, Mega or others).</p>
 <h3 id="82-dcc-ex-ex-commandstation">8.2   DCC-EX EX-CommandStation<a class="headerlink" href="#82-dcc-ex-ex-commandstation" title="Permanent link">&para;</a></h3>
-<p>Setting up a <strong>DCC-EX</strong> <strong>EX-CommandStation</strong>, should you have one, requires configuration details placed in files <em>config.h</em> and <em>mySetup.h</em> along with a driver <em>IO_EXSensorCAM.h</em> and <em>myAutomation.h</em>. These must go in the directory containing file CommandStation-EX.ino. Refer to <a href="#appendix-h">APPENDIX&nbsp;H</a> for installation details.  <em>EXSensorCAM.h</em> code mirrors the sensorCAM command set with a few exceptions.  Imaging and graphic placement is not available.  Functionality was added using the DCC-EX sensorCAM native command <code>&lt;N\&gt;</code> format.</p>
+<p>Setting up a <strong>DCC-EX</strong> <strong>EX-CommandStation</strong>, should you have one, requires configuration details placed in files <em>config.h</em> and <em>mySetup.h</em> along with a driver <em>IO_EXSensorCAM.h</em> and <em>myAutomation.h</em>. These must go in the directory containing file CommandStation-EX.ino. Refer to <a href="#appendix-h">APPENDIX&nbsp;H</a> for installation details.  <em>EXSensorCAM.h</em> code mirrors the sensorCAM command set with a few exceptions.  Imaging and graphic placement is not available.  Functionality was added using the DCC-EX sensorCAM native command <code>&lt;N&gt;</code> format.</p>
 <h3 id="84-monitor-lighting">8.4 Monitor Lighting<a class="headerlink" href="#84-monitor-lighting" title="Permanent link">&para;</a></h3>
 <p>Stable good lighting is needed.  Gross Lighting changes will have two effects, namely cause trips of most sensors and stop automatic reference refreshes, it may be wise to include monitoring for this eventuality by detecting and setting an "alarm" state. The reference sensor (S00) is automatically re-referenced every 6.4 seconds so will indicate a fault-trip for a maximum of 6.4 seconds. All other sensors will continue to indicate a trip until the user resets the references with an r00 (having checked all unoccupied). See full manual for creating a fault LED indicator.  PLED uses GPIO14 and QLED uses GPIO32 (Wrover).</p>
 <h2 id="appendix-a">APPENDIX A<a class="headerlink" href="#appendix-a" title="Permanent link">&para;</a></h2>
 <h3 id="esp32-sensorcam-command-summary">ESP32 sensorCAM Command Summary<a class="headerlink" href="#esp32-sensorcam-command-summary" title="Permanent link">&para;</a></h3>
-<p>rev 1DEC25</p>
+<p>rev 14JUL25</p>
 <h4 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">&para;</a></h4>
 <p>Up to 10 banks (0-9) of sensors. Each bank can have up to 8 enabled sensors (0-7). Bank/sensor (%%) up to '97'.  Array <em>Sensor[n]</em> holds coordinates(rx) of sensor n.  Sensors are grouped into banks(b) of sensors(s). e.g. bsNo 6/7 identifies bank 6, sensor 7 (n=8x6+7=55=067). Sensors are undefined if coordinates(rx) are set to 00. They are disabled if <em>SensorActive[n]</em> is set to false.<br />
 If a sensor detects differences, then any output LED (e.g. <em>pLED qLED</em>) assigned to the associated Bank of sensors should turn ON.<br />
@@ -9905,7 +9905,7 @@ Also able to change default setting for Brightness, Contrast &amp; Saturation wi
 <li>If USB FTDI/MB is removed or not connected to PC, then WebServer may fail/reboot. Power issue?</li>
 </ol>
 <h3 id="i2c-command-notes">I2C command Notes<a class="headerlink" href="#i2c-command-notes" title="Permanent link">&para;</a></h3>
-<p><strong>(EX-CS may exhibit small variations &amp; reduced command functionality refer APPENDIX C)</strong></p>
+<p><strong>(EX-CS may exhibit small variations &amp; reduced command functionality refer <a href="#appendix-c">APPENDIX C</a>)</strong></p>
 <ol>
 <li>The same commands are valid from an I2C Master Arduino, but there are some variations.  </li>
 <li>The commands with asterisks normally pause CAM execution so the operator can read USB output on a monitor screen. The same commands from I2C DO NOT wait for a new line, with the exception of 'w'.  </li>
@@ -10005,7 +10005,7 @@ e.g. <code>&lt;Ni 2%%&gt; &lt;Nr 2%%&gt;</code> also <code>&lt;Nm 200&gt; &lt;Nf
 </thead>
 <tbody>
 <tr>
-<td><strong><code>&lt;N&gt;</code></strong></td>
+<td><strong>`<N>``</strong></td>
 <td>&lt;N&gt;</td>
 <td>n/a</td>
 <td>Lists current &amp; alt. defined CAM baseVpins.</td>
@@ -10056,13 +10056,13 @@ e.g. <code>&lt;Ni 2%%&gt; &lt;Nr 2%%&gt;</code> also <code>&lt;Nm 200&gt; &lt;Nf
 <td><strong><code>&lt;N g&gt;</code></strong></td>
 <td>&lt;Ng&gt;</td>
 <td>g</td>
-<td><strong>Get</strong> status ov2640 camera module settings (on sensorCAM monitor).</td>
+<td><strong>Global ov2640</strong> camera module status (sensorCAM monitor).</td>
 </tr>
 <tr>
 <td><strong><code>&lt;N h %%&gt;</code></strong></td>
 <td>&lt;Nh 30&gt;</td>
 <td>h30</td>
-<td>set <em>maxSensors</em> to limit display to below sensor S%%. Also <strong>Help</strong> (0-9)</td>
+<td>set <em>maxSensors</em> to limit display to below sensor S%%. Also <strong>h</strong> for <strong>Help</strong></td>
 </tr>
 <tr>
 <td><strong><code>&lt;N i %%&gt;</code></strong></td>
@@ -10211,6 +10211,7 @@ vPin is the base/first vPin number (e.g. 700) + DEC.number(<em>bsn</em>) in the 
 <strong>Table E &nbsp; &nbsp; Reference Sensor ID to colour code conversion table</strong></p>
 <h2 id="appendix-f">APPENDIX F<a class="headerlink" href="#appendix-f" title="Permanent link">&para;</a></h2>
 <h3 id="hardware-interface-ltc4311-endpoints">Hardware Interface (LTC4311 &amp; Endpoints)<a class="headerlink" href="#hardware-interface-ltc4311-endpoints" title="Permanent link">&para;</a></h3>
+<p><a href="../ex-sensor-manual/#appendix-f">full manual</a></p>
 <div class="admonition note">
 <p class="admonition-title">Note:</p>
 <p>This Appendix originally focused on the <strong>ESP32-CAM-MB</strong> implementation, but for PCA9515A information now refer to the full <a href="../ex-sensor-manual/#appendix-f">sensorCAM Manual</a><br />
@@ -10255,7 +10256,7 @@ The information below pertains mostly to the newer WROVER-CAM, as mentioned in <
 <p><strong>Example 1:</strong> For the approach to a signal, several sensors may be deployed (say S13 to S17) with S17 last at the signal. As a train approaches the signal, the (bank) "value" of the tripping sensors will increase. This can be used to control the loco speed for a smooth and precise stop at a platform for example.
 Commands <strong>IFGTE(CAM 013,8) SPEED(40)</strong>... <strong>IFGTE(CAM 013,16)</strong> <strong>SPEED(30)</strong> etc. can be used to control the loco approach speed with some precision.
 Finally, at the signal(S17), <strong>IFGTE(CAM 013,128) STOP</strong></p>
-<p>Aliases could also be defined and used for station/bank or line sensors. e.g.IFGTE(TRENTHAM, 0x80)</p>
+<p>Aliases could also be defined and used for station/bank or line sensors. e.g.IFGTE(TRENTHAM, 128)</p>
 <p><strong>Example 2:</strong> The CAM can have up to 10 occupation/line detectors. If two "linear" line sensors are needed, and we have bank 1 allocated (S10-S17), the following 16 vPins could be assigned to 2 banks of linear sensors. We can use (bs#) ID of 20 to 27 for first linear sensor (bank2) and 30-37 of bank3. The Command Station can easily handle banks of 8, using an ID based format of (CAM 020) and (CAM 030). The "bank" or b/s notation requires the leading '0' on the bsNo. for automatic vpin calculation. The linear segments at S21 to S27 may also be tested individually and a common bank threshold can be set if needed. e.g. <strong>IFGTE(CAM 020,1)</strong>...// bank occupied, or <strong>IFGTE(CAM 024,16)</strong> &nbsp; //2nd half occupied.</p>
 <p>Note: With '0%%' notation, unless you understand the issue, avoid using bank 8 &amp; 9 as mistakes may arise. (08# must be expressed as 010# and 09# as 011# for correct outcome)</p>
 <h3 id="2-multiple-cams">2. Multiple Cams<a class="headerlink" href="#2-multiple-cams" title="Permanent link">&para;</a></h3>
@@ -10296,7 +10297,7 @@ Finally, at the signal(S17), <strong>IFGTE(CAM 013,128) STOP</strong></p>
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="July 10, 2026 05:19:46 UTC">July 10, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="July 13, 2026 05:22:39 UTC">July 13, 2026</span>
   </span>
 
     
