@@ -5201,9 +5201,9 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#parsed-dcc-ex-cs-sensorcam-commands" class="md-nav__link">
+  <a href="#dcc-ex-cs-sensorcam-commands" class="md-nav__link">
     <span class="md-ellipsis">
-      Parsed DCC EX-CS sensorCAM commands
+      DCC EX-CS sensorCAM commands
     </span>
   </a>
   
@@ -5369,6 +5369,30 @@
   <a href="#2-notes-on-40-pin-wrover-cam-and-38-pin-breakout-board" class="md-nav__link">
     <span class="md-ellipsis">
       2. Notes on 40-pin WROVER CAM and 38-pin breakout board
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#appendix-k" class="md-nav__link">
+    <span class="md-ellipsis">
+      APPENDIX K
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="APPENDIX K">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ov2640-lens-options-and-geometry" class="md-nav__link">
+    <span class="md-ellipsis">
+      OV2640 Lens options and geometry
     </span>
   </a>
   
@@ -9449,9 +9473,9 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#parsed-dcc-ex-cs-sensorcam-commands" class="md-nav__link">
+  <a href="#dcc-ex-cs-sensorcam-commands" class="md-nav__link">
     <span class="md-ellipsis">
-      Parsed DCC EX-CS sensorCAM commands
+      DCC EX-CS sensorCAM commands
     </span>
   </a>
   
@@ -9627,6 +9651,30 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#appendix-k" class="md-nav__link">
+    <span class="md-ellipsis">
+      APPENDIX K
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="APPENDIX K">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ov2640-lens-options-and-geometry" class="md-nav__link">
+    <span class="md-ellipsis">
+      OV2640 Lens options and geometry
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -9652,7 +9700,7 @@
 <p><a href="#1-overview">1. Overview</a><br />
 <a href="#2-esp32wrover-cam">2. ESP32-CAM</a><br />
 <a href="#3-physical-installation">3. Physical Installation</a><br />
-<a href="#4-notation">4. Notation&amp; Help commands</a><br />
+<a href="#4-notation">4. Notation</a><br />
 <a href="#5-configuration">5. Configuration</a><br />
 <a href="#6-processing4-monitorconsole">6. PROCESSING4 monitor/console</a><br />
 <a href="#7-wiring-requirements">7. Wiring Requirements</a><br />
@@ -9662,9 +9710,10 @@
 <a href="#appendix-b">B. Check List for Optimising Sensor Response</a><br />
 <a href="#appendix-c">C. Parsed DCC EX-CS sensorCAM commands</a><br />
 <a href="#appendix-e">E. Tabulated DCC-EX-CS id's for sensorCAM</a><br />
-<a href="#appendix-f">F. Hardware Interface (PCA9515A &amp; Endpoints)</a><br />
+<a href="#appendix-f">F. Hardware Interface (LTC4311 &amp; Endpoints)</a><br />
 <a href="#appendix-h">H. Notes on use of EX-Rail with SensorCAM</a><br />
-<a href="#appendix-j">J. WROVER-CAM notes</a>  </p>
+<a href="#appendix-j">J. WROVER-CAM notes</a><br />
+<a href="#appendix-k">K. OV2640 Lens options and geometry</a> </p>
 <h2 id="1-overview">1. Overview<a class="headerlink" href="#1-overview" title="Permanent link">&para;</a></h2>
 <p>The sensorCAM is a video camera replacement for physical proximity sensors/detectors on a model railroad. It can replace up to 80 detectors and their associated power and signal wiring using artificial vision alone. It offers the flexibility of sensor placement or relocation instantly by software command with no physical layout modification.The railroad can be automated using artificial vision of train activity. Each virtual sensor can produce a logical state of 1 (occupied) or 0 (unoccupied) and is readable over an i2c cable. SensorCAM originally used the ESP32-CAM module. However, the ESP32-WROVER-DEV CAM (v1.6) is the preferred substitute with potentially simpler setup.</p>
 <p>The sensorCAM takes 10 frames per second in RGB565 format at QVGA resolution of 240 x 320. Each sensor consists of a square group of 16 pixels which equates to approximately 20x20mm square with the standard lens at 1500mm. The software decodes and saves only the 80 sensor images (1280 pixels) and then compares each sensor image with a reference image prerecorded either at startup, on request, or by a "recent" automatic update. If the images do not match the references well, then the sensor is "tripped" or "occupied" &amp; status '1' is registered. A good match results in '0' output. The state of virtual sensors can be manually monitored on the USB monitor, or polled by microcontroller over the i2c interface cable.  </p>
@@ -9847,9 +9896,10 @@ You may also increase the image display window size factor by editing the next <
 <p>Stable good lighting is needed.  Gross Lighting changes will have two effects, namely cause trips of most sensors and stop automatic reference refreshes, it may be wise to include monitoring for this eventuality by detecting and setting an "alarm" state. The reference sensor (S00) is automatically re-referenced every 6.4 seconds so will indicate a fault-trip for a maximum of 6.4 seconds. All other sensors will continue to indicate a trip until the user resets the references with an r00 (having checked all unoccupied). See full manual for creating a fault LED indicator.  PLED uses GPIO14 and QLED uses GPIO32 (Wrover).</p>
 <h2 id="appendix-a">APPENDIX A<a class="headerlink" href="#appendix-a" title="Permanent link">&para;</a></h2>
 <h3 id="esp32-sensorcam-command-summary">ESP32 sensorCAM Command Summary<a class="headerlink" href="#esp32-sensorcam-command-summary" title="Permanent link">&para;</a></h3>
+<p><a href="../ex-sensor-manual/#appendix-A">full manual</a></p>
 <p>rev 14JUL25</p>
 <h4 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">&para;</a></h4>
-<p>Up to 10 banks (0-9) of sensors. Each bank can have up to 8 enabled sensors (0-7). Bank/sensor (%%) up to '97'.  Array <em>Sensor[n]</em> holds coordinates(rx) of sensor n.  Sensors are grouped into banks(b) of sensors(s). e.g. bsNo 6/7 identifies bank 6, sensor 7 (n=8x6+7=55=067). Sensors are undefined if coordinates(rx) are set to 00. They are disabled if <em>SensorActive[n]</em> is set to false.<br />
+<p>Up to 10 banks (0-9) of sensors. Each bank can have up to 8 enabled sensors (0-7), i.e. Bank/sensor (%%) up to '97'.  Array <em>Sensor[n]</em> holds coordinates(rx) of sensor n.  Sensors are grouped into banks(b) of sensors(s). e.g. bsNo 6/7 identifies bank 6, sensor 7 (n=8x6+7=55=067). Sensors are undefined if coordinates(rx) are set to 00. They are disabled if <em>SensorActive[n]</em> is set to false.<br />
 If a sensor detects differences, then any output LED (e.g. <em>pLED qLED</em>) assigned to the associated Bank of sensors should turn ON.<br />
 On reset (power-up), reference grabs are taken for all defined (in EEPROM) sensors, and then enables them.<br />
 To define a sensor, use <code>a</code> command,  Processing4, or (outdated method) a bright LED on the desired spot and dim lighting with a "scan" (<code>s%%</code>). Save in EEPROM (<code>e</code>). SensorCAM uses RGB565 image format which is incompatible with JPG, so auto reboots between SensorCAM or webCAM modes occurs.</p>
@@ -9864,7 +9914,7 @@ Also able to change default setting for Brightness, Contrast &amp; Saturation wi
 <p><strong><code>g</code></strong>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <strong>* Get</strong> Camera Status. Displays most current settings available in webcam window (both sensor &amp; video mode).</p>
 <p><strong><code>h$[,#]</code></strong> &nbsp; &nbsp; <strong>* Help(debug)</strong> output.  <strong>h9</strong>  to turn all OFF,  <strong>h0</strong>  turn ON detailed USB output. '<strong>h7,#</strong>' "Waits" scroll on a bank# trip.</p>
 <p><strong><code>i%%[,$$]</code></strong> &nbsp;<strong>Info.</strong> on S%%.  Status(enabled/occupied), position(r,x), any twin(S$$), pvtThreshold &amp; brightness.</p>
-<p><strong><code>j$#</code></strong> &nbsp; &nbsp; &nbsp; &nbsp; <strong>* adJust</strong> camera setting $ to value # and display most settings (as for '<strong>g</strong>'). '<strong>j</strong>' alone lists options for \$#.</p>
+<p><strong><code>j$#</code></strong> &nbsp; &nbsp; &nbsp; &nbsp; <strong>* adJust</strong> camera setting $ to value # and display most settings (as for '<strong>g</strong>'). '<strong>j</strong>' alone lists options for $#.</p>
 <p><strong><code>k%%,rrr,xxx</code></strong> * set <strong>coordinates</strong> of Sensor S$$ to row: rrr &amp; column: xxx. Follow with  <strong>r%%</strong>. Verify values with <strong>p$</strong>.</p>
 <p><strong><code>l%%</code></strong> &nbsp; &nbsp; &nbsp; (Lima) <strong>Latch</strong> sensor S%% to on(1 = occupied(LED lit) &amp; also set <em>SensorActive[%%]</em> false to disable sensing.</p>
 <p><strong><code>m$[,%%]</code></strong> <strong>* Minimum</strong> $(1-4) sequential frames over <em>Threshold</em> to trigger/trip sensor. Shows list of parameters. <strong>(Note 14)</strong></p>
@@ -9931,6 +9981,7 @@ Also able to change default setting for Brightness, Contrast &amp; Saturation wi
 </ol>
 <h2 id="appendix-b">APPENDIX B<a class="headerlink" href="#appendix-b" title="Permanent link">&para;</a></h2>
 <h3 id="check-list-for-optimising-sensor-response">Check List for Optimising Sensor Response<a class="headerlink" href="#check-list-for-optimising-sensor-response" title="Permanent link">&para;</a></h3>
+<p><a href="../ex-sensor-manual/#appendix-b">full manual</a></p>
 <p>In the situation where sensors may be tripping undesirably, there is a range of adjustments that can be made to find a satisfactory operating point. Some have disadvantages that need to be considered and compromises may be necessary.</p>
 <ol>
 <li>
@@ -9989,7 +10040,8 @@ Also able to change default setting for Brightness, Contrast &amp; Saturation wi
 </li>
 </ol>
 <h2 id="appendix-c">APPENDIX C<a class="headerlink" href="#appendix-c" title="Permanent link">&para;</a></h2>
-<h3 id="parsed-dcc-ex-cs-sensorcam-commands">Parsed DCC EX-CS sensorCAM commands<a class="headerlink" href="#parsed-dcc-ex-cs-sensorcam-commands" title="Permanent link">&para;</a></h3>
+<h3 id="dcc-ex-cs-sensorcam-commands">DCC EX-CS sensorCAM commands<a class="headerlink" href="#dcc-ex-cs-sensorcam-commands" title="Permanent link">&para;</a></h3>
+<p><a href="../ex-sensor-manual/#appendix-c">full manual</a></p>
 <p>The file <em>CamParser.cpp</em> has been added to the CS specifically tailored to provide a mechanism for the CS to send commands more easily than by using the clumsy diagnostic command style <code>&lt;D ANOUT vpin parm1 parm2&gt;</code>. The CS Native CAM command format is <code>&lt;N c [parm1] [parm2]&gt;</code> where command character '<strong>c</strong>' can be any of those listed below. Generally, to effect changes in sensorCAM, the CAM must be in the run mode (flashing).</p>
 <p>The base vpin address defaults to 700 but one can use the <em>#define SENSORCAM_VPIN ###</em> for another value (in <em>config.h</em>). With 2 to 4 CAM's, use <code>&lt;N C #&gt;</code> (1-4) when a switch is needed. The CAM# may also be placed, if defined in <em>config.h</em>, prefixing the sensor bsNo.
 e.g. <code>&lt;Ni 2%%&gt; &lt;Nr 2%%&gt;</code> also <code>&lt;Nm 200&gt; &lt;Nf 212&gt; &lt;Nt 243&gt;</code></p>
@@ -10049,7 +10101,7 @@ e.g. <code>&lt;Ni 2%%&gt; &lt;Nr 2%%&gt;</code> also <code>&lt;Nm 200&gt; &lt;Nf
 <tr>
 <td><strong><code>&lt;N F&gt;</code></strong></td>
 <td>&lt;NF&gt;</td>
-<td>F</td>
+<td>F (or R)</td>
 <td><strong>Forced reboot</strong>, restoring sensorCAM sensor mode &amp; EPROM defaults.</td>
 </tr>
 <tr>
@@ -10196,6 +10248,7 @@ For commands to work fully, need latest <em>CamParser.cpp</em>, CS driver(<em>IO
 </div>
 <h2 id="appendix-e">APPENDIX E<a class="headerlink" href="#appendix-e" title="Permanent link">&para;</a></h2>
 <h3 id="tabulated-dcc-ex-cs-ids-for-sensorcam">Tabulated DCC-EX-CS ID's for sensorCAM<a class="headerlink" href="#tabulated-dcc-ex-cs-ids-for-sensorcam" title="Permanent link">&para;</a></h3>
+<p><a href="../ex-sensor-manual/#appendix-e">full manual</a></p>
 <p><strong>Table B</strong> below shows the colour code used to identify sensors on the Processing 4 track image.
 For example, sensor S12 has a bsNo 1/2 for which the colours are Brown/Red (seen on sensor box edges).
 For CAM number 1, the full CS sensor S12 ID is 112 when used in CS native <code>&lt;N&gt;</code> commands such as <code>&lt;N i 112&gt;</code>
@@ -10237,6 +10290,7 @@ The information below pertains mostly to the newer WROVER-CAM, as mentioned in <
 <p><img alt="Differential Drive 3.3V Only CS" src="../../../_static/images/ex-sensorcam/differential-drive-3v3-only-cs.png" /></p>
 <h2 id="appendix-h">APPENDIX H<a class="headerlink" href="#appendix-h" title="Permanent link">&para;</a></h2>
 <h3 id="notes-on-use-of-ex-rail-with-sensorcam">Notes on use of EX-RAIL with sensorCAM<a class="headerlink" href="#notes-on-use-of-ex-rail-with-sensorcam" title="Permanent link">&para;</a></h3>
+<p><a href="../ex-sensor-manual/#appendix-h">full manual</a></p>
 <h3 id="1-sensorvpin-numbering">1. Sensor/vpin Numbering<a class="headerlink" href="#1-sensorvpin-numbering" title="Permanent link">&para;</a></h3>
 <p>The numbering of sensors can be consecutive by vPin, which is the common practice with multi-pin peripherals (e.g. PCA9685 16-channel Servo driver and MCP23017 16-channel GPIO Expander). Sequential vPin numbers within a device is hardware enforced, but this loses some of the advantages available by a more meaningful ID notation. Such IDs are available for JMRI use and so can also be used for sensorCAM. Use of IDs, as suggested below, can remove any need to program with vPin numbers.</p>
 <p>For any peripheral device, the vPin is needed for commands (e.g.700+5), but, if predefined (e.g. in config.h), alphanumeric names such as CAM or CAM2 or ESSEX can be used in place of the base vPin to identify the camera. Then commands for CAM pin 5 become: e.g. AT(CAM 05) or AT(ESSEX 05)</p>
@@ -10260,9 +10314,11 @@ Finally, at the signal(S17), <strong>IFGTE(CAM 013,128) STOP</strong></p>
 <p><strong>Example 2:</strong> The CAM can have up to 10 occupation/line detectors. If two "linear" line sensors are needed, and we have bank 1 allocated (S10-S17), the following 16 vPins could be assigned to 2 banks of linear sensors. We can use (bs#) ID of 20 to 27 for first linear sensor (bank2) and 30-37 of bank3. The Command Station can easily handle banks of 8, using an ID based format of (CAM 020) and (CAM 030). The "bank" or b/s notation requires the leading '0' on the bsNo. for automatic vpin calculation. The linear segments at S21 to S27 may also be tested individually and a common bank threshold can be set if needed. e.g. <strong>IFGTE(CAM 020,1)</strong>...// bank occupied, or <strong>IFGTE(CAM 024,16)</strong> &nbsp; //2nd half occupied.</p>
 <p>Note: With '0%%' notation, unless you understand the issue, avoid using bank 8 &amp; 9 as mistakes may arise. (08# must be expressed as 010# and 09# as 011# for correct outcome)</p>
 <h3 id="2-multiple-cams">2. Multiple Cams<a class="headerlink" href="#2-multiple-cams" title="Permanent link">&para;</a></h3>
-<p>Multiple sensorCAMs can be easily handled if CAM2, CAM3 etc are defined along the lines of CAM above, so <strong>IF(CAM2 012)</strong> tests a different sensor to <strong>IF(CAM3 012)</strong>, provided <strong>SENSORCAM2_ VPIN</strong> etc. are defined. Using CS native commands, e.g. <strong>&lt;Ni 212&gt;</strong> and <strong>&lt;Ni 312&gt;</strong>, can also access <strong>S12</strong> on different CAMs. <strong>The #define SENSORCAM_VPIN ###</strong> is essential for cam1. Do NOT insert a 1 in to <strong>SENSORCAM_VPIN</strong>. You may use <strong>SENSORCAM2_VPIN</strong> and <strong>SENSORCAM3_VPIN</strong> with <strong>CAM2</strong> and <strong>CAM3</strong> in <em>config.h</em></p>
+<p>Multiple sensorCAMs can be easily handled if CAM2, CAM3 etc are defined along the lines of CAM above, so <strong>IF(CAM2 012)</strong> tests a different sensor to <strong>IF(CAM3 012)</strong>, provided <strong>SENSORCAM2_ VPIN</strong> etc. are defined.<br />
+Using CS native commands, e.g. <strong>&lt;Ni 212&gt;</strong> and <strong>&lt;Ni 312&gt;</strong>, can also access <strong>S12</strong> on different CAMs. The <strong>#define SENSORCAM_VPIN ###</strong> is essential for cam1. Do NOT insert a 1 into <strong>SENSORCAM_VPIN</strong>. You may use <strong>SENSORCAM2_VPIN</strong> and <strong>SENSORCAM3_VPIN</strong> with <strong>CAM2</strong> and <strong>CAM3</strong> in <em>config.h</em></p>
 <h2 id="appendix-j">APPENDIX J<a class="headerlink" href="#appendix-j" title="Permanent link">&para;</a></h2>
 <h3 id="wrover-cam-notes">WROVER-CAM Notes<a class="headerlink" href="#wrover-cam-notes" title="Permanent link">&para;</a></h3>
+<p><a href="../ex-sensor-manual/#appendix-j">full manual</a></p>
 <h3 id="1-note-on-i2c-clock-frequency">1 Note on i2c clock frequency<a class="headerlink" href="#1-note-on-i2c-clock-frequency" title="Permanent link">&para;</a></h3>
 <p>The newer sensorCAM drivers default to an i2c bus frequency of 100,000 Hz. With caution, this may be increased somewhat (e.g. 200000) if the i2c bus is well tuned and all attached devices can handle higher frequencies. To set a higher frequency, for example, place the following in mySetup.h or myHal.cpp I2Cmanager.forceClock(200000); //place after void halSetup()</p>
 <h3 id="2-notes-on-40-pin-wrover-cam-and-38-pin-breakout-board">2. Notes on 40-pin WROVER CAM and 38-pin breakout board<a class="headerlink" href="#2-notes-on-40-pin-wrover-cam-and-38-pin-breakout-board" title="Permanent link">&para;</a></h3>
@@ -10274,9 +10330,12 @@ Finally, at the signal(S17), <strong>IFGTE(CAM 013,128) STOP</strong></p>
 <p>There is no white "flash" LED but, in sensorCAM mode, the on-board blue LED flashes instead. (GPIO2)</p>
 <p>The breakout board USB connectors are for an optional 5V power source ONLY. No comm's.</p>
 <p>Limit Vin barrel jack to 7-10V max to avoid destruction of the 1117C 5V regulator. (Vne= 16V)</p>
-<p>For a limited reach, perhaps using a LTC4311 terminator/buffer at the CS to boost signal rise times and range, the cheaper PCA9515A may be used with the Wrover-CAM connected as below.  The wires from PCA9515A to the CAM can be up to 2m long (with extra pullups) using twisted pairs (cat5?).</p>
+<p>For a limited reach, perhaps using a LTC4311 terminator/buffer at the CS to boost signal rise times and range, the cheaper PCA9515A may be used with the Wrover-CAM connected as below.  The wires from PCA9515A to the CAM can be up to 2m long (with extra pullups) using twisted pairs (cat5?).  Use of LTC4311 with PSA9515A is not recommeded.</p>
 <p><img alt="ESP32 Wrover CAM with PCA9515A" src="../../../_static/images/ex-sensorcam/esp32-wrover-pca9515a.png" /></p>
 <p><strong>If using a 3.3V processor such as the CSB1</strong>, it may be adequate to have no voltage level shifting PCA9515A and instead simply connect directly to an i2c branch with an LTC4311, keeping the total i2c segment within allowable length limits.  This may mean using a multiplexer port to limit segments to workable lengths, as the run to the sensorCAM is a significant additional length to any existing i2c bus.  The sensorCAM still needs a regulated power supply independent of the i2c bus SDA,SCL and gnd cable.</p>
+<h2 id="appendix-k">APPENDIX K<a class="headerlink" href="#appendix-k" title="Permanent link">&para;</a></h2>
+<h3 id="ov2640-lens-options-and-geometry">OV2640 Lens options and geometry<a class="headerlink" href="#ov2640-lens-options-and-geometry" title="Permanent link">&para;</a></h3>
+<p>see <a href="../ex-sensor-manual/#appendix-k">full manual</a></p>
 
 
 
@@ -10297,7 +10356,7 @@ Finally, at the signal(S17), <strong>IFGTE(CAM 013,128) STOP</strong></p>
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="July 13, 2026 05:22:39 UTC">July 13, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="July 13, 2026 08:14:13 UTC">July 13, 2026</span>
   </span>
 
     
