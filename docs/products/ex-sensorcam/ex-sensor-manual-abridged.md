@@ -7,7 +7,7 @@ Including ESP32-WROVER-CAM and ESP32-WROOM-S3 CAM's
 [1. Overview](#1-overview)  
 [2. ESP32-CAM](#2-esp32wrover-cam)  
 [3. Physical Installation](#3-physical-installation)  
-[4. Notation& Help commands](#4-notation)  
+[4. Notation](#4-notation)  
 [5. Configuration](#5-configuration)  
 [6. PROCESSING4 monitor/console](#6-processing4-monitorconsole)  
 [7. Wiring Requirements](#7-wiring-requirements)  
@@ -19,9 +19,10 @@ Including ESP32-WROVER-CAM and ESP32-WROOM-S3 CAM's
 [B. Check List for Optimising Sensor Response](#appendix-b)  
 [C. Parsed DCC EX-CS sensorCAM commands](#appendix-c)  
 [E. Tabulated DCC-EX-CS id's for sensorCAM](#appendix-e)  
-[F. Hardware Interface (PCA9515A & Endpoints)](#appendix-f)  
+[F. Hardware Interface (LTC4311 & Endpoints)](#appendix-f)  
 [H. Notes on use of EX-Rail with SensorCAM](#appendix-h)  
 [J. WROVER-CAM notes](#appendix-j)  
+[K. OV2640 Lens options and geometry](#appendix-k) 
 
 ## 1. Overview
 
@@ -304,11 +305,13 @@ Stable good lighting is needed.  Gross Lighting changes will have two effects, n
 
 ### ESP32 sensorCAM Command Summary
 
+[full manual](ex-sensor-manual.md#appendix-A)
+
 rev 14JUL25
 
 #### Introduction
 
-Up to 10 banks (0-9) of sensors. Each bank can have up to 8 enabled sensors (0-7). Bank/sensor (%%) up to '97'.  Array *Sensor\[n]* holds coordinates(rx) of sensor n.  Sensors are grouped into banks(b) of sensors(s). e.g. bsNo 6/7 identifies bank 6, sensor 7 (n=8x6+7=55=067). Sensors are undefined if coordinates(rx) are set to 00. They are disabled if *SensorActive\[n\]* is set to false.  
+Up to 10 banks (0-9) of sensors. Each bank can have up to 8 enabled sensors (0-7), i.e. Bank/sensor (%%) up to '97'.  Array *Sensor\[n]* holds coordinates(rx) of sensor n.  Sensors are grouped into banks(b) of sensors(s). e.g. bsNo 6/7 identifies bank 6, sensor 7 (n=8x6+7=55=067). Sensors are undefined if coordinates(rx) are set to 00. They are disabled if *SensorActive\[n\]* is set to false.  
 If a sensor detects differences, then any output LED (e.g. *pLED qLED*) assigned to the associated Bank of sensors should turn ON.  
 On reset (power-up), reference grabs are taken for all defined (in EEPROM) sensors, and then enables them.  
 To define a sensor, use ``a`` command,  Processing4, or (outdated method) a bright LED on the desired spot and dim lighting with a "scan" (``s%%``). Save in EEPROM (``e``). SensorCAM uses RGB565 image format which is incompatible with JPG, so auto reboots between SensorCAM or webCAM modes occurs.
@@ -334,7 +337,7 @@ Also able to change default setting for Brightness, Contrast & Saturation with e
 
 **``i%%[,$$]``** &nbsp;**Info.** on S%%.  Status(enabled/occupied), position(r,x), any twin(S$$), pvtThreshold & brightness.
 
-**``j$#``** &nbsp; &nbsp; &nbsp; &nbsp; **\* adJust** camera setting $ to value # and display most settings (as for '**g**'). '**j**' alone lists options for \$\#.
+**``j$#``** &nbsp; &nbsp; &nbsp; &nbsp; **\* adJust** camera setting $ to value # and display most settings (as for '**g**'). '**j**' alone lists options for $\#.
 
 **``k%%,rrr,xxx``** \* set **coordinates** of Sensor S$$ to row: rrr & column: xxx. Follow with  **r%%**. Verify values with **p$**.
 
@@ -430,6 +433,8 @@ Also able to change default setting for Brightness, Contrast & Saturation with e
 
 ### Check List for Optimising Sensor Response
 
+[full manual](ex-sensor-manual.md#appendix-b)
+
 In the situation where sensors may be tripping undesirably, there is a range of adjustments that can be made to find a satisfactory operating point. Some have disadvantages that need to be considered and compromises may be necessary.
 
 1. First step is to refresh the sensor reference image. Try command: ``r00``, or ``r%%`` for a single sensor. This may be necessary after any disturbance to the environment such as changed lighting.
@@ -470,7 +475,9 @@ In the situation where sensors may be tripping undesirably, there is a range of 
 
 ## APPENDIX C
 
-### Parsed DCC EX-CS sensorCAM commands
+### DCC EX-CS sensorCAM commands
+
+[full manual](ex-sensor-manual.md#appendix-c)
 
 The file *CamParser.cpp* has been added to the CS specifically tailored to provide a mechanism for the CS to send commands more easily than by using the clumsy diagnostic command style ``<D ANOUT vpin parm1 parm2>``. The CS Native CAM command format is ``<N c [parm1] [parm2]>`` where command character '**c**' can be any of those listed below. Generally, to effect changes in sensorCAM, the CAM must be in the run mode (flashing).
 
@@ -488,7 +495,7 @@ e.g. ``<Ni 2%%> <Nr 2%%>`` also ``<Nm 200> <Nf 212> <Nt 243>``
 | **`<N b bank#>`** | <Nb 1\> | b1 | **Bank** sensor states(all 8).(used by IFGTE() ATLT() e.g. to locate loco). |
 | **`<N e>`** | <Ne\> | e |**EPROM** write any changed settings to sensorCAM EPROM. |
 | **`<N f %%>`** | <Nf 12\> | f12 | **Frame image** pixel data for Sensor_ref[%%] and sensor666[%%] (RGB bytes). |
-| **`<N F>`** | <NF\> | F | **Forced reboot**, restoring sensorCAM sensor mode & EPROM defaults. |
+| **`<N F>`** | <NF\> | F (or R) | **Forced reboot**, restoring sensorCAM sensor mode & EPROM defaults. |
 | **`<N g>`** | <Ng\> | g | **Global ov2640** camera module status (sensorCAM monitor). |
 | **`<N h %%>`** | <Nh 30\> | h30 | set *maxSensors* to limit display to below sensor S%%. Also **h** for **Help** |
 | **`<N i %%>`** | <Ni 12\> | i12 | **Information** on sensor bsNo state, position & twin (0=No twin). |
@@ -524,6 +531,8 @@ e.g. ``<Ni 2%%> <Nr 2%%>`` also ``<Nm 200> <Nf 212> <Nt 243>``
 
 ### Tabulated DCC-EX-CS ID's for sensorCAM
 
+[full manual](ex-sensor-manual.md#appendix-e)
+
 **Table B** below shows the colour code used to identify sensors on the Processing 4 track image.
 For example, sensor S12 has a bsNo 1/2 for which the colours are Brown/Red (seen on sensor box edges).
 For CAM number 1, the full CS sensor S12 ID is 112 when used in CS native ``<N>`` commands such as ``<N i 112>``
@@ -548,7 +557,6 @@ vPin is the base/first vPin number (e.g. 700) + DEC.number(_bsn_) in the convers
 [full manual](ex-sensor-manual.md#appendix-f)
 
 !!! note "Note:"
-
     This Appendix originally focused on the **ESP32-CAM-MB** implementation, but for PCA9515A information now refer to the full [sensorCAM Manual](ex-sensor-manual.md#appendix-f)  
     The information below pertains mostly to the newer WROVER-CAM, as mentioned in **Section 7**, **Figure 6** for simpler implementations consider LTC4311 alone.
 
@@ -591,6 +599,8 @@ The 2x Endpoints require about  10mA  each from the 3.3V PS. All options can be 
 
 ### Notes on use of EX-RAIL with sensorCAM
 
+[full manual](ex-sensor-manual.md#appendix-h)
+
 ### 1. Sensor/vpin Numbering
 
 The numbering of sensors can be consecutive by vPin, which is the common practice with multi-pin peripherals (e.g. PCA9685 16-channel Servo driver and MCP23017 16-channel GPIO Expander). Sequential vPin numbers within a device is hardware enforced, but this loses some of the advantages available by a more meaningful ID notation. Such IDs are available for JMRI use and so can also be used for sensorCAM. Use of IDs, as suggested below, can remove any need to program with vPin numbers.
@@ -627,11 +637,14 @@ Note: With '0%%' notation, unless you understand the issue, avoid using bank 8 &
 
 ### 2. Multiple Cams
 
-Multiple sensorCAMs can be easily handled if CAM2, CAM3 etc are defined along the lines of CAM above, so **IF(CAM2 012)** tests a different sensor to **IF(CAM3 012)**, provided **SENSORCAM2_ VPIN** etc. are defined. Using CS native commands, e.g. **<Ni 212\>** and **<Ni 312\>**, can also access **S12** on different CAMs. **The #define SENSORCAM_VPIN ###** is essential for cam1. Do NOT insert a 1 in to **SENSORCAM_VPIN**. You may use **SENSORCAM2_VPIN** and **SENSORCAM3_VPIN** with **CAM2** and **CAM3** in *config.h*
+Multiple sensorCAMs can be easily handled if CAM2, CAM3 etc are defined along the lines of CAM above, so **IF(CAM2 012)** tests a different sensor to **IF(CAM3 012)**, provided **SENSORCAM2_ VPIN** etc. are defined.  
+Using CS native commands, e.g. **<Ni 212\>** and **<Ni 312\>**, can also access **S12** on different CAMs. The **#define SENSORCAM_VPIN ###** is essential for cam1. Do NOT insert a 1 into **SENSORCAM_VPIN**. You may use **SENSORCAM2_VPIN** and **SENSORCAM3_VPIN** with **CAM2** and **CAM3** in *config.h*
 
 ## APPENDIX J
 
 ### WROVER-CAM Notes
+
+[full manual](ex-sensor-manual.md#appendix-j)
 
 ### 1 Note on i2c clock frequency
 
@@ -655,8 +668,14 @@ The breakout board USB connectors are for an optional 5V power source ONLY. No c
 
 Limit Vin barrel jack to 7-10V max to avoid destruction of the 1117C 5V regulator. (Vne= 16V)
 
-For a limited reach, perhaps using a LTC4311 terminator/buffer at the CS to boost signal rise times and range, the cheaper PCA9515A may be used with the Wrover-CAM connected as below.  The wires from PCA9515A to the CAM can be up to 2m long (with extra pullups) using twisted pairs (cat5?).
+For a limited reach, perhaps using a LTC4311 terminator/buffer at the CS to boost signal rise times and range, the cheaper PCA9515A may be used with the Wrover-CAM connected as below.  The wires from PCA9515A to the CAM can be up to 2m long (with extra pullups) using twisted pairs (cat5?).  Use of LTC4311 with PSA9515A is not recommeded.
 
 ![ESP32 Wrover CAM with PCA9515A](../../_static/images/ex-sensorcam/esp32-wrover-pca9515a.png)
 
 **If using a 3.3V processor such as the CSB1**, it may be adequate to have no voltage level shifting PCA9515A and instead simply connect directly to an i2c branch with an LTC4311, keeping the total i2c segment within allowable length limits.  This may mean using a multiplexer port to limit segments to workable lengths, as the run to the sensorCAM is a significant additional length to any existing i2c bus.  The sensorCAM still needs a regulated power supply independent of the i2c bus SDA,SCL and gnd cable.
+
+## APPENDIX K
+
+### OV2640 Lens options and geometry
+
+see [full manual](ex-sensor-manual.md#appendix-k)
