@@ -368,6 +368,6 @@ Using POM only changes the loco you have selected, not all locos on the track.  
 * Click the "Basic" tab, set the desired DCC address in the "Active Address" text box, then click the `Write changes on sheet` button  *(See Warning)*
 * Close the "Program" window and when prompted, click the `Save and close` button
 
-For further information on programming on the main track, see [Ops Mode Programming](https://www.jmri.org/help/en/manual/DecoderPro3/Programmer_OpsMode.shtml>) on the JMRI website.
+For further information on programming on the main track, see [Ops Mode Programming](https://www.jmri.org/help/en/manual/DecoderPro3/Programmer_OpsMode.shtml) on the JMRI website.
 
 --8<-- "snippets/abbr.md"
