@@ -1090,6 +1090,29 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ex-commandstation/loco-programming/programming-tips/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Hints and Tips
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -9869,7 +9892,7 @@ You may also increase the image display window size factor by editing the next <
 <p>Refer to <strong>Figure 6</strong> and <a href="#appendix-f">Appendix F</a> for alternate solutions for connecting sensorCAM to an i2c bus for remote control. For initial testing from a PC, the basic ESP32-CAM-MB or Wrover-CAM (<strong>CH340</strong> based USB interface) could be sufficient via. USB.  With i2c, take care to use level shifting (PCA9515A or Endpoints) if using a Mega CS or 5V i2c bus.</p>
 <p>The ESP32-WROVER-DEV board is a good alternative to the original ESP32-CAM-MB. The slightly bigger CAM will be a little more convenient with the ESP32S Expansion board. This 38 pin expansion board with 5V regulator is poorly described in the video below. <strong>IGNORE PRESENTERS DESCRIPTION OF HIS FAULTY 5V REGULATOR past the 5minute mark</strong>.  With NO Wrover, verify the regulator gives 5V from 9V at the barrel jack and remove power before inserting or removing the Wrover.  For want of a better video...</p>
 <p><a href="https://www.youtube.com/watch?v=AP_CX-SFPAQ">ESP32S 38P/V4/ Expansion board</a></p>
-<p>The sensorCAM typically requires a long i2c cable for connection to the CS.  If the CS uses a 3.3V i2c bus, the length may be handled with use of an LTC4311 "terminator" to drive the extra length.  If the CS has a 5V i2c bus it must use a level shifter via an Endpoint or PCA9515A (refer <a href="../ex-sensor-manual/#wiring-requirements">Wiring Requirements</a></p>
+<p>The sensorCAM typically requires a long i2c cable for connection to the CS.  If the CS uses a 3.3V i2c bus, the length may be handled with use of an LTC4311 "terminator" to drive the extra length.  If the CS has a 5V i2c bus it must use a level shifter via an Endpoint or PCA9515A (refer <a href="../ex-sensor-manual/#7-wiring-requirements">Wiring Requirements</a></p>
 <p>For long distances to sensorCAM, the recommended hardware interface to an <strong>EX-CommandStation</strong> is currently the <strong>Sparkfun Endpoint</strong> system (<strong>Figure 6.</strong> &amp; <a href="#appendix-f">APPENDIX&nbsp;F</a>) which permits the i2c bus to be run over long standard Cat5 twisted pair cable.  It can also carry the required raw power supply. The Sparkfun Endpoints are used <strong>in pairs</strong> and can cater for voltage shifting between 5V Command Stations (e.g. Mega) and 3.3V sensorCAM as required. For a simple off-the-shelf arrangement, an ESP32-WROVER-DEV CAM with a cheap ESP32S 38P Expander board (including regulator) can be linked to an Endpoint with 4 Dupont wires for a working CAM system on the end of a cat5 cable of considerable length as indicated in <strong>Figure 6</strong> &amp; <a href="#appendix-f">APPENDIX&nbsp;F</a>, needing only a remote, preferably electrically isolated(floating), 7-10Vdc 0.5A power supply and a matching endpoint on a Command Station.</p>
 <div class="admonition note">
 <p class="admonition-title">NOTE:</p>
@@ -10356,7 +10379,7 @@ Using CS native commands, e.g. <strong>&lt;Ni 212&gt;</strong> and <strong>&lt;N
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="July 14, 2026 04:41:34 UTC">July 14, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="July 14, 2026 04:45:37 UTC">July 14, 2026</span>
   </span>
 
     
