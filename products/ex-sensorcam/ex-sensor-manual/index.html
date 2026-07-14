@@ -10777,9 +10777,9 @@ Also able to change default setting for Brightness, Contrast &amp; Saturation wi
 <p><strong><code>l%%</code></strong> <code>.....</code> (Lima) <strong>Latch</strong> sensor S%% to on(1 = occupied(LED lit) &amp; also set <em>SensorActive[%%]</em> false to disable sensing.</p>
 <p><strong><code>m$[,%%]</code></strong> <code>.</code> <strong>* Minimum</strong> $(1-4) sequential frames over <em>Threshold</em> to trigger/trip sensor. Shows list of parameters. <strong>(Note 14)</strong></p>
 <p><strong><code>n#[,%%]</code></strong> <code>.</code> <strong>nLED</strong> bank Number assigned to the programmable status <em>nLED</em>. Optional  <strong>n10,%%</strong>  to set <em>minSensors</em>.</p>
-<p><strong><code>o%%</code></strong> <code>.....</code> (Oscar) force <strong>Off</strong> sensor%% (0=UN-occupied, LED off) Also set <em>SensorActive[##]</em> false to disable updating.</p>
-<p><strong><code>p$</code></strong> <code>......</code> <strong>* Position Pointe</strong>r table info for banks 0 to $ giving DEFINED sensor r/ x) positions.  p%% shorter.</p>
-<p><strong><code>q$</code></strong> <code>......</code> <strong>* Query</strong> bank$, to show which sensors ENABLED(in bits 7-0). 1=enabled. <strong>q9</strong> gives ALL banks.</p>
+<p><strong><code>o%%</code></strong>. . . . . . (Oscar) force <strong>Off</strong> sensor%% (0=UN-occupied, LED off) Also set <em>SensorActive[##]</em> false to disable updating.</p>
+<p><strong><code>p$</code></strong>  . . . . . . <strong>* Position Pointe</strong>r table info for banks 0 to $ giving DEFINED sensor r/ x) positions.  p%% shorter.</p>
+<p><strong><code>q$</code></strong>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <strong>* Query</strong> bank$, to show which sensors ENABLED(in bits 7-0). 1=enabled. <strong>q9</strong> gives ALL banks.</p>
 <p><strong><code>r%%[,0]</code></strong> <code>.</code> <strong>Refresh</strong> Average <em>Sensor_Ref[##]</em> (if defined), enable &amp; calc. cRatios etc. <strong>r%%,0</strong> refreshes block S%0 to S%%.</p>
 <p><strong><code>r00</code></strong> <code>.....</code> <strong>Refresh</strong> Average Refs etc. for ALL defined sensors. Ignores enable[]. Sensor[00] reserved for brightness ref.</p>
 <p><strong><code>s%%</code></strong> <code>.....</code> <strong>* Scan</strong> for new location for sensor  S%%(00-97). If found, records location in <em>Sensor[0%%]</em>. <strong>(Note 12)</strong></p>
@@ -10836,7 +10836,7 @@ The table gives number of single highs, double highs etc. and totals for No. of 
 <li>Data requested over i2c may have a parity byte appended, and a check byte in byte[31].  </li>
 <li>NOTE Automatic updating of ref image of unoccupied sensors now starts after last SUS (suspend) indicator.  </li>
 <li><code>a%%,rrr,xxx</code> performs extended 'create sensor' equivalent to  <code>k%%,rrr,xxx</code> + <code>a%%</code> + <code>r%%</code> for new sensor S%%  </li>
-<li>Connection to DCC-EX Command Station has command. variations. See <a href="#appendix-f">APPENDIX C</a> for revised command detail.</li>
+<li>Connection to DCC-EX Command Station has command. variations. See <a href="#appendix-c">APPENDIX C</a> for revised command detail.</li>
 </ol>
 <h2 id="appendix-b">APPENDIX B<a class="headerlink" href="#appendix-b" title="Permanent link">&para;</a></h2>
 <h3 id="check-list-for-optimising-sensor-response">Check List for Optimising Sensor Response<a class="headerlink" href="#check-list-for-optimising-sensor-response" title="Permanent link">&para;</a></h3>
@@ -11345,7 +11345,7 @@ Note: WROVER-CAM does not have a fitted external antenna socket like the ESP32-C
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="July 14, 2026 22:32:04 UTC">July 14, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="July 14, 2026 22:57:27 UTC">July 14, 2026</span>
   </span>
 
     
