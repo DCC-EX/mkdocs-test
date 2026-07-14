@@ -487,32 +487,32 @@ To define a sensor, use **``a``** command,  Processing4, or (outdated method) a 
 
 #### Serial Command - sensorCAM native USB format
 
-**``a%%[,rr,xx]``** **enAble** *Sensor[%%]* & refresh *Sensor_ref[%%]*, *cRatios* etc. 4x4 from image in latest frame. **(Note 20.)**
+**`a%%[,rr,xx]`** **enAble** *Sensor[%%]* & refresh *Sensor_ref[%%]*, *cRatios* etc. 4x4 from image in latest frame. **(Note 20.)**
 
-**``b#[,$]     ``** **Bank** # sensors. Show which sensors OCCUPIED(in bits 7-0).(1=occ.)(**b#,$** sets *brightSF* to $)
+**`b#[,$]     `** **Bank** # sensors. Show which sensors OCCUPIED(in bits 7-0).(1=occ.)(**b#,$** sets *brightSF* to $)
 
-**``c$$$$      ``** **\* reCalibrate** camera CCD occasionally and grab new references for all enabled sensors(Beware of doing this while any sensors are occupied) **N.B.** Obstructed sensors will later need an **r%%**. Check all bank LEDs are off AND check all sensors are unoccupied before recalibrate. Can set AWB AEC AGC CB through $$$$ e.g. c0110  
+**`c$$$$      `** **\* reCalibrate** camera CCD occasionally and grab new references for all enabled sensors(Beware of doing this while any sensors are occupied) **N.B.** Obstructed sensors will later need an **r%%**. Check all bank LEDs are off AND check all sensors are unoccupied before recalibrate. Can set AWB AEC AGC CB through $$$$ e.g. c0110  
 Also able to change default setting for Brightness, Contrast & Saturation with extra digits e.g. c$$$$012.  Refer alternate ``j`` commnad.
 
-**``d%%[#]     ``** **\* Difference** score in colour& brightness between Ref & actual image. Show # grabs.
+**`d%%[#]     `** **\* Difference** score in colour& brightness between Ref & actual image. Show # grabs.
 
-**``e          ``** **EPROM** save of any new Sensor offset positions, pvtThresholds, new twins and 5 default parameter settings.
+**`e          `** **EPROM** save of any new Sensor offset positions, pvtThresholds, new twins and 5 default parameter settings.
 
-**``f%%        ``** **\* Frame** buffer sample display. Print latest bytes in *Sensor_ref[%%]* & Sensor S%% positions.
+**`f%%        `** **\* Frame** buffer sample display. Print latest bytes in *Sensor_ref[%%]* & Sensor S%% positions.
 
-**``g          ``** **\* Global ov2640 Status**. Displays most current settings available in webcam window (both sensor & video mode).
+**`g          `** **\* Global ov2640 Status**. Displays most current settings available in webcam window (both sensor & video mode).
 
-**``h$[,#]     ``** **\* Help(debug)** output.  **h9**  to turn all OFF,  **h0**  turn ON detailed USB output. '**h7,#**' "Waits" scroll on a bank# trip.
+**`h$[,#]     `** **\* Help(debug)** output.  **h9**  to turn all OFF,  **h0**  turn ON detailed USB output. '**h7,#**' "Waits" scroll on a bank# trip.
 
-**``i%%[,$$]   ``** **Info.** on S%%.  Status(enabled/occupied), position(r,x), any twin(S$$), pvtThreshold & brightness.
+**`i%%[,$$]   `** **Info.** on S%%.  Status(enabled/occupied), position(r,x), any twin(S$$), pvtThreshold & brightness.
 
-**``j$#        ``** **\* adJust** camera setting $ to value # and display most settings (as for '**g**'). '**j**' alone lists options for $\#.
+**`j$#        `** **\* adJust** camera setting $ to value # and display most settings (as for '**g**'). '**j**' alone lists options for $\#.
 
-**``k%%,rrr,xxx``** \* set **coordinates** of Sensor S$$ to row: rrr & column: xxx. Follow with  **r%%**. Verify values with **p$**.
+**`k%%,rrr,xxx`** \* set **coordinates** of Sensor S$$ to row: rrr & column: xxx. Follow with  **r%%**. Verify values with **p$**.
 
-**``l%%        ``** (Lima) **Latch** sensor S%% to on(1 = occupied(LED lit) & also set *SensorActive[%%]* false to disable sensing.
+**`l%%        `** (Lima) **Latch** sensor S%% to on(1 = occupied(LED lit) & also set *SensorActive[%%]* false to disable sensing.
 
-**``m$[,%%]    ``** **\* Minimum** $(1-4) sequential frames over *Threshold* to trigger/trip sensor. Shows list of parameters. **(Note 14)**
+**`m$[,%%]    `** **\* Minimum** $(1-4) sequential frames over *Threshold* to trigger/trip sensor. Shows list of parameters. **(Note 14)**
 
 **``n#[,%%]    ``** **nLED** bank Number assigned to the programmable status *nLED*. Optional  **n10,%%**  to set *minSensors*.
 
@@ -661,7 +661,7 @@ e.g. **``<Ni 2%%\>``** **``<Nr 2%%>``** also **``<Nm 200\>``** **``<Nf 212>``** 
 | **``<N b #>``** | <Nb 1\> | b1 | **Bank** sensor states(all 8).(used by IFGTE() ATLT() e.g. to locate loco). |
 | **``<N e>``** | <Ne\> | e |**EPROM** write any changed settings to sensorCAM EPROM. |
 | **``<N f %%>``** | <Nf 12\> | f12 | **Frame image** pixel data for Sensor_ref[%%] and sensor666[%%] (RGB bytes). |
-| **``<N F>``** | <NF\> | F | **Forced reboot**, restoring sensorCAM sensor mode & EPROM defaults. |
+| **``<N F>``** | <NF\> | F (or R) | **Forced reboot**, restoring sensorCAM sensor mode & EPROM defaults. |
 | **``<N g>``** | <Ng\> | g | **Global ov2640** camera module settings (on sensorCAM monitor). |
 | **``<N h %%>``** | <Nh 30\> | h30 | set *maxSensors* to limit display to below sensor S%%. Also **Help** (0-9) |
 | **``<N i %%>``** | <Ni 12\> | i12 | **Information** on sensor bsNo state, position & twin (0=No twin). |
@@ -985,9 +985,12 @@ Limit Vin barrel jack to 7-10V max to avoid destruction of the 1117C 5V regulato
 The CS endpoint shown should be powered with 3.3V from the CS end (NOT 5V), and 9V on GRNW/GRN  
 Note: WROVER-CAM does not have a fitted external antenna socket like the ESP32-CAM.
 
+![Typical 3.3V CS/CSB1 with ESP32 CAM](../../_static/images/ex-sensorcam/esp32-wrover-LTC4311.png)
+<br/>Sparkfun endpoints(requires a matching sparkfun endpoint at CS)
+
 ![ESP32 Wrover CAM with Sparkfun Endpoint](../../_static/images/ex-sensorcam/esp32-wrover-sparkfun-endpoint.png)
 
-For a limited reach, perhaps using a LTC4311 terminator/buffer at the CS to boost signal rise times and range, the cheaper PCA9515A may be used with the Wrover-CAM connected as shown.  The cable to the CAM can be up to 2m long using twisted pairs (cat5?) but may need tuning with extra pullup resistors.
+For a limited reach, perhaps using a LTC4311 terminator/buffer at the CS to boost signal rise times and range, the cheaper PCA9515A may be used with the Wrover-CAM connected as shown.  The cable from PCA9515A to the CAM can be up to 2m long using twisted pairs (cat5?) but may need tuning with extra pullup resistors.  Use of LTC4311 is not recommended with the LTC9515A
 
 ### 3. Enhanced 't' cmd for pvtThresholds
 
