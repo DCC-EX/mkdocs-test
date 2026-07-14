@@ -63,3 +63,5 @@ The outputs can be configured as:
 - ``BOOST`` - Booster mode
 - ``BOOST_INV`` - Booster mode inverted
 - ``BOOST_AUTO`` - Booster mode + Auto-reverser mode
+
+--8<-- "snippets/abbr.md"

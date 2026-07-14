@@ -94,3 +94,9 @@ These include:
 | `<D ACK MAX value MS>` | Set ACK maximum duration mS | `value`: Duration in milliseconds |
 | `<D ACK MAX value>` | Set ACK maximum duration µS | `value`: Duration in microseconds |
 | `<D ACK RETRY value>` | Set ACK retry count | `value`: Retry count |
+
+## More Information
+
+Also refer to the [Programming Tips](programming-tips.md) for additional information.
+
+--8<-- "snippets/abbr.md"

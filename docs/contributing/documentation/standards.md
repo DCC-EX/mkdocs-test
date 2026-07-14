@@ -58,7 +58,8 @@ So:
 - Don't use curly quotes ``‘ ’ “ ”``.
 - No quotes around 'Also See' type references.
 - Avoid 'above' or 'below' in text.  Use hyperlinks instead.
-- ``==TODO==`` means that it is still a work-in-process and needs to be updated.  It must be followed by descriptive text describing the issue to be fixed.
+- **&#61;&#61;TODO&#61;&#61;** <br/>means that it is still a work-in-process and needs to be updated.  It must be followed by descriptive text describing the issue to be fixed.  
+- **&#61;&#61;TODO&#61;&#61; LOW** <br/>will cause the todo to appear in a secondary list.
 - Do not use images that only contain text unless there is no choice. Image text cannot be searched. Image text cannot be easily translated.
 - Keep the first section (between H! and the first H2) reasonably short. This is what appears search results.
 - The first section (between H! and the first H2) should describe what is on the rest if the page.

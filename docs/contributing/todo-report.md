@@ -16,7 +16,7 @@ Scanned docs root: `C:\Users\akers\OneDrive\github\github_doco\mkdocs-test\docs`
 
 ## High &amp; Medium TODOs
 
-Total High &amp; Medium TODO matches: 107
+Total High &amp; Medium TODO matches: 106
 
 | File | Line | Line text |
 | --- | ---: | --- |
@@ -126,7 +126,6 @@ Total High &amp; Medium TODO matches: 107
 | [docs/products/ex-commandstation/exrail/cookbooks/big-picture/stage6.md](../products/ex-commandstation/exrail/cookbooks/big-picture/stage6.md) | 393 | You will note that these are somewhat similar to ==TODO== `exrail/examples:multiple inter-connected trains`, updated to suit the specifics of the RMFT layout. |
 | [docs/products/ex-commandstation/exrail/cookbooks/big-picture/stage6.md](../products/ex-commandstation/exrail/cookbooks/big-picture/stage6.md) | 409 | Remember, these are virtual blocks, and do not necessarily need to be electrically isolated from each other. Don't confuse isolated blocks of track or block occupancy detection with these virtual blocks. For further background, refer to ==TODO== `exrail/exrail-command-reference:virtual block control`. |
 | [docs/products/ex-commandstation/exrail/cookbooks/big-picture/stage6.md](../products/ex-commandstation/exrail/cookbooks/big-picture/stage6.md) | 451 | Using the ``LATCH()`` command gives us a way to automatically alternate between the main track and the station siding. ``LATCH()`` simply sets the state of a pin (either real or virtual) which can then be tested by an ``IF()`` statement. In this particular case, we have defined pin 60 (alias "CHOOSE_BLK2") to be latched and unlatched, as this pin does not exist on the Mega2560, nor does it exist on any of our I/O expander boards. Further reading on ``LATCH()`` and ``UNLATCH()`` can be found in the ==TODO== `exrail/exrail-command-reference:sensors/inputs - reading and responding` section of the EXRAIL reference. |
-| [docs/contributing/documentation/standards.md](documentation/standards.md) | 61 | - ``==TODO==`` means that it is still a work-in-process and needs to be updated.  It must be followed by descriptive text describing the issue to be fixed. |
 
 ## Low priority TODOs
 

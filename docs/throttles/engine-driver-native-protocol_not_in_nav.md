@@ -119,3 +119,5 @@ Note that if you select ``DC`` or ``DC reversed polarity (DC_INV / DCX)`` you *m
 e.g. if you enter ``DC`` and address ``10`` for track 'A', then in the **Engine Driver** Select Loco screen, you would need to enter the 'DCC Address' of ``10`` to control the DC loco on the track which would normally have been the 'Main' track if you were using DCC.
 
 Note that only one track can ever be selected as ``DCC PROG``
+
+--8<-- "snippets/abbr.md"
