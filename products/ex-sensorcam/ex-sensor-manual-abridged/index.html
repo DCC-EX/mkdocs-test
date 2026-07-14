@@ -9896,7 +9896,7 @@ You may also increase the image display window size factor by editing the next <
 <p>Stable good lighting is needed.  Gross Lighting changes will have two effects, namely cause trips of most sensors and stop automatic reference refreshes, it may be wise to include monitoring for this eventuality by detecting and setting an "alarm" state. The reference sensor (S00) is automatically re-referenced every 6.4 seconds so will indicate a fault-trip for a maximum of 6.4 seconds. All other sensors will continue to indicate a trip until the user resets the references with an r00 (having checked all unoccupied). See full manual for creating a fault LED indicator.  PLED uses GPIO14 and QLED uses GPIO32 (Wrover).</p>
 <h2 id="appendix-a">APPENDIX A<a class="headerlink" href="#appendix-a" title="Permanent link">&para;</a></h2>
 <h3 id="esp32-sensorcam-command-summary">ESP32 sensorCAM Command Summary<a class="headerlink" href="#esp32-sensorcam-command-summary" title="Permanent link">&para;</a></h3>
-<p><a href="../ex-sensor-manual/#appendix-A">full manual</a></p>
+<p><a href="../ex-sensor-manual/#appendix-a">full manual</a></p>
 <p>rev 14JUL25</p>
 <h4 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">&para;</a></h4>
 <p>Up to 10 banks (0-9) of sensors. Each bank can have up to 8 enabled sensors (0-7), i.e. Bank/sensor (%%) up to '97'.  Array <em>Sensor[n]</em> holds coordinates(rx) of sensor n.  Sensors are grouped into banks(b) of sensors(s). e.g. bsNo 6/7 identifies bank 6, sensor 7 (n=8x6+7=55=067). Sensors are undefined if coordinates(rx) are set to 00. They are disabled if <em>SensorActive[n]</em> is set to false.<br />
@@ -9904,42 +9904,42 @@ If a sensor detects differences, then any output LED (e.g. <em>pLED qLED</em>) a
 On reset (power-up), reference grabs are taken for all defined (in EEPROM) sensors, and then enables them.<br />
 To define a sensor, use <code>a</code> command,  Processing4, or (outdated method) a bright LED on the desired spot and dim lighting with a "scan" (<code>s%%</code>). Save in EEPROM (<code>e</code>). SensorCAM uses RGB565 image format which is incompatible with JPG, so auto reboots between SensorCAM or webCAM modes occurs.</p>
 <h4 id="serial-command-usb-format">Serial Command USB format<a class="headerlink" href="#serial-command-usb-format" title="Permanent link">&para;</a></h4>
-<p><strong><code>a%%[, rr, xx]</code></strong> <strong>enAble</strong> <em>Sensor[%%]</em> &amp; refresh <em>Sensor_ref[%%]</em>, <em>cRatios</em> etc. 4x4 from image in latest frame. <strong>(Note 20.)</strong></p>
-<p><strong><code>b#[,$]</code></strong>&nbsp; &nbsp; <strong>Bank</strong> # sensors. Show which sensors OCCUPIED(in bits 7-0).(1=occ.)(<strong>b#,$</strong> sets <em>brightSF</em> to $)</p>
+<p><strong><code>a%%[,rr,xx]</code></strong> <strong>enAble</strong> <em>Sensor[%%]</em> &amp; refresh <em>Sensor_ref[%%]</em>, <em>cRatios</em> etc. 4x4 from latest image frame. <strong>(Note 20)</strong></p>
+<p><strong><code>b#[,$]</code></strong>&nbsp; &nbsp; <strong>Bank</strong> # sensors. Show which sensors OCCUPIED(in bits 7-0).(1=occ.) [ <strong>$</strong> sets <em>brightSF</em> to $]</p>
 <p><strong><code>c$$$$</code></strong>&nbsp; &nbsp; <strong>* reCalibrate</strong> camera CCD occasionally and grab new references for all enabled sensors(Beware of doing this while any sensors are occupied) <strong>N.B.</strong> Obstructed sensors will later need an <strong>r%%</strong>. Check all bank LEDs are off AND check all sensors are unoccupied before recalibrate. Can set AWB AEC AGC CB through $$$$ e.g. c0110<br />
 Also able to change default setting for Brightness, Contrast &amp; Saturation with extra digits e.g. c$$$$012</p>
-<p><strong><code>d%%[#]</code></strong>&nbsp; <strong>* Difference</strong> score in colour&amp; brightness between Ref &amp; actual image. Show # grabs.</p>
-<p><strong><code>e</code></strong>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <strong>EPROM</strong> save of any new Sensor offset positions, pvtThresholds, new twins and 5 default parameter settings.</p>
-<p><strong><code>f%%</code></strong>&nbsp; &nbsp; &nbsp; <strong>* Frame</strong> buffer sample display. Print latest bytes in <em>Sensor_ref[%%]</em> &amp; Sensor S%% positions.</p>
-<p><strong><code>g</code></strong>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <strong>* Get</strong> Camera Status. Displays most current settings available in webcam window (both sensor &amp; video mode).</p>
-<p><strong><code>h$[,#]</code></strong> &nbsp; &nbsp; <strong>* Help(debug)</strong> output.  <strong>h9</strong>  to turn all OFF,  <strong>h0</strong>  turn ON detailed USB output. '<strong>h7,#</strong>' "Waits" scroll on a bank# trip.</p>
-<p><strong><code>i%%[,$$]</code></strong> &nbsp;<strong>Info.</strong> on S%%.  Status(enabled/occupied), position(r,x), any twin(S$$), pvtThreshold &amp; brightness.</p>
+<p><strong><code>d%%[#]</code></strong>&nbsp; <strong>* Difference</strong> score in colour&amp; brightness between Ref &amp; actual image. [Show # grabs]</p>
+<p><strong><code>e</code></strong> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <strong>EPROM</strong> save of any new Sensor offset positions, pvtThresholds, new twins and 5 default parameter settings.</p>
+<p><strong><code>f%%</code></strong> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <strong>* Frame</strong> buffer sample display. Print latest bytes in <em>Sensor_ref[%%]</em> &amp; Sensor S%% positions.</p>
+<p><strong><code>g</code></strong>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <strong>* Global ov2640</strong> Status. Displays current settings available in webcam (sensor &amp; video mode).</p>
+<p><strong><code>h$[,#]</code></strong>&nbsp; <strong>* Help(debug)</strong> output.  <strong>h9</strong>  to turn all OFF,  <strong>h0</strong>  turn ON detailed USB output. '<strong>h7,#</strong>' "Waits" (w) on a bank# trip.</p>
+<p><strong><code>i%%[,$$]</code></strong> <strong>Info.</strong> on S%%.  Status(enabled/occupied), position(r,x), any twin(S$$), pvtThreshold &amp; brightness.</p>
 <p><strong><code>j$#</code></strong> &nbsp; &nbsp; &nbsp; &nbsp; <strong>* adJust</strong> camera setting $ to value # and display most settings (as for '<strong>g</strong>'). '<strong>j</strong>' alone lists options for $#.</p>
 <p><strong><code>k%%,rrr,xxx</code></strong> * set <strong>coordinates</strong> of Sensor S$$ to row: rrr &amp; column: xxx. Follow with  <strong>r%%</strong>. Verify values with <strong>p$</strong>.</p>
-<p><strong><code>l%%</code></strong> &nbsp; &nbsp; &nbsp; (Lima) <strong>Latch</strong> sensor S%% to on(1 = occupied(LED lit) &amp; also set <em>SensorActive[%%]</em> false to disable sensing.</p>
-<p><strong><code>m$[,%%]</code></strong> <strong>* Minimum</strong> $(1-4) sequential frames over <em>Threshold</em> to trigger/trip sensor. Shows list of parameters. <strong>(Note 14)</strong></p>
-<p><strong><code>n#[,%%]</code></strong> &nbsp; <strong>nLED</strong> bank Number assigned to the programmable status <em>nLED</em>. Optional  <strong>n10,%%</strong>  to set <em>minSensors</em>.</p>
-<p><strong><code>o%%</code></strong> &nbsp; &nbsp; &nbsp; (Oscar) force <strong>Off</strong> sensor%% (0=UN-occupied, LED off) Also set <em>SensorActive[##]</em> false to disable updating.</p>
-<p><strong><code>p$</code></strong>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <strong>*Position Pointe</strong>r table info for banks 0 to $ giving DEFINED sensor r/ x) positions.  p%% shorter.</p>
-<p><strong><code>q$</code></strong>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <strong>*Query</strong> bank$, to show which sensors ENABLED(in bits 7-0). 1=enabled. <strong>q9</strong> gives ALL banks.</p>
-<p><strong><code>r%%[,0]</code></strong> &nbsp;<strong>Refresh</strong> Average <em>Sensor_Ref[##]</em> (if defined), enable &amp; calc. cRatios etc. <strong>r%%,0</strong> refreshes block S%0 to S%%.</p>
+<p><strong><code>l%%</code></strong> &nbsp; &nbsp; &nbsp; &nbsp; (Lima) <strong>Latch</strong> sensor S%% to on(1=occupied &amp; also set <em>SensorActive[%%]</em> false to disable sensing.</p>
+<p><strong><code>m$[,%%]</code></strong> <strong>* Minimum</strong> $(1-4) sequential frames over <em>Threshold</em> to trigger/trip sensor. Configuration list<strong>(Note 14)</strong></p>
+<p><strong><code>n#[,%%]</code></strong> &nbsp;<strong>nLED</strong> bank Number assigned to the programmable status <em>nLED</em>. [ <strong>n10,%%</strong> will set <em>minSensors</em> ].</p>
+<p><strong><code>o%%</code></strong> &nbsp; &nbsp; &nbsp; &nbsp; (Oscar) force <strong>Off</strong> sensor%% (0=UN-occupied, LED off) Also set <em>SensorActive[##]</em> false to disable updating.</p>
+<p><strong><code>p$</code></strong>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<strong>* Position Pointe</strong>r table info for banks 0 to $ giving DEFINED sensor r/ x) positions.  p%% shorter.</p>
+<p><strong><code>q$</code></strong>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<strong>* Query</strong> bank$, to show which sensors ENABLED(in bits 7-0). 1=enabled. <strong>q9</strong> gives ALL banks.</p>
+<p><strong><code>r%%[,0]</code></strong> <strong>Refresh</strong> Average <em>Sensor_Ref[0%%]</em>, enable &amp; calc. cRatios etc. [<strong>r%%,0</strong> refreshes block S%0 to S%%]</p>
 <p><strong><code>r00</code></strong> &nbsp; &nbsp; &nbsp; &nbsp; <strong>Refresh</strong> Average Refs etc. for ALL defined sensors. Ignores enable[]. Sensor[00] reserved for brightness ref.</p>
-<p><strong><code>s%%</code></strong> &nbsp; &nbsp; &nbsp; <strong>*Scan</strong> for new location for sensor  S%%(00-97). If found, records location in <em>Sensor[0%%]</em>. <strong>(Note 12)</strong></p>
-<p><strong><code>t##[,%%]</code></strong> <strong>Threshold</strong> level##(31-98 only) set as default. [<code>t#`#,%%</code> sets the <em>pvtThreshold</em> for sensor %% (<strong>t0,%%</strong> to clear)]</p>
-<p><strong><code>t##</code></strong> &nbsp; &nbsp; &nbsp; &nbsp; <strong>Tabulates</strong> ##(2-30 only) rows of scroll data (continuous scroll toggled off) <strong>Note:</strong> <code>t1</code> alone toggles scroll on/off.</p>
+<p><strong><code>s%%</code></strong> &nbsp; &nbsp; &nbsp;<strong>* Scan</strong> for new location for sensor  S%%(00-97). If found, records location in <em>Sensor[0%%]</em>. <strong>(Note 12)</strong></p>
+<p><strong><code>t##[,%%]</code></strong> <strong>Threshold</strong> level##(31-98 only) set as default. [<strong><code>t##,%%</code></strong> sets the <em>pvtThreshold</em> for S%% (<strong>t0,%%</strong> clears)]</p>
+<p><strong><code>t##</code></strong> &nbsp; &nbsp; &nbsp; &nbsp; <strong>Tabulates</strong> ##(2-30 only) rows of scroll data (continuous scroll toggled off) <strong>Note:</strong> <code>t1</code>** toggles scroll on/off.</p>
 <p><strong><code>t1,%%</code></strong>  &nbsp; &nbsp; <strong>Trash</strong> 1 entire bank of <em>pvtThresholds</em>. Use <code>t1,99</code> to clear ALL banks (0-9). <strong>Note:</strong> <strong>t99</strong> lists all <em>pvtThresholds</em></p>
 <p><strong><code>u%%</code></strong> &nbsp; &nbsp; &nbsp; <strong>* Un-define</strong>/remove sensor %%  (Sensor S%%=0 &amp; set DISABLED) <strong>u99</strong> for ALL. <code>e</code> will erase from EPROM.</p>
-<p><strong><code>v[1|2]</code></strong>&nbsp; &nbsp; &nbsp; <strong>Video</strong> mode. Causes reboot as a webserver. '<strong>v2</strong>' will connect to  2nd (alt.) router ssid.(<code>v` or</code>v0`` for version)</p>
-<p><strong><code>w</code></strong>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <strong>* Wait</strong> for new command line (\n) before resuming sensing (handy to freeze display data scroll - see <code>t1</code> toggle)</p>
-<p><strong><code>x###</code></strong> &nbsp; &nbsp; &nbsp; *selects first pixel column(0-319) &amp; <code>z###</code> selects image width (### columns(1-320)) for imaging.</p>
-<p><strong><code>y###</code></strong> &nbsp; &nbsp; &nbsp; *selects first row for image and initiates a binary data dump for that row (header + #x2 bytes) using rgb565.<br />
+<p><strong><code>v[#]</code></strong> &nbsp; &nbsp; &nbsp; <strong>Version/Video mode</strong> [<strong>v1</strong> reboots into webserver mode. <strong>v2</strong> connects to 2nd (alt.) router ssid.]</p>
+<p><strong><code>w</code></strong>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <strong>* Wait</strong> for new command line (\n) before resuming sensing (handy to freeze display data scroll - ref.<strong><code>t1</code></strong> toggle)</p>
+<p><strong><code>x###</code></strong> &nbsp; &nbsp; &nbsp;* selects first pixel column(0-319) &amp; <strong><code>z###</code></strong> selects image width (### columns(1-320)) for imaging.</p>
+<p><strong><code>y###</code></strong> &nbsp; &nbsp; &nbsp;* selects first row for image and initiates a binary data dump for that row (header + #x2 bytes) using rgb565.<br />
   &nbsp; &nbsp; &nbsp; &nbsp; This command starts a process that must, after a series of <code>y</code> commands, end with a terminator of <code>yy</code>.</p>
-<p><strong><code>R</code></strong> &amp; <strong><code>F</code></strong>&nbsp; &nbsp; &nbsp; <em>*</em>Reset** commands- will Reset CAM and initiate the Sensor mode. Both will Finish the WebServer(<code>v</code>) mode.</p>
-<p><strong><code>\%,#,$</code></strong> &nbsp; &nbsp;  Convert bank to linear sensor starting with  <code>S$$</code>  and using r,x step sizes of <strong>#,$</strong>(0-31) Slope is "down-right".</p>
-<p><strong><code>/%,#,$</code></strong> &nbsp; &nbsp;  Convert bank to linear sensor starting with S$$ as for '\' but line will slope "down-left" (-deltaX).</p>
-<p><strong><code>&amp;</code></strong> &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;  <strong>statistics</strong> histogram on trips and potential trips since last <code>&amp;</code>, then reset counters and start another sample process. The table gives number of single highs, double highs etc. and totals for No. of frames/run time</p>
-<p><strong><code>@##</code></strong> &nbsp; &nbsp; &nbsp;  *set the "occupied" symbol in the scroll to ASCII character ##. Default is 35("#") Arduino IDE <strong>@12</strong> is bolder!</p>
-<p><strong><code>+#,$</code></strong> &nbsp; &nbsp; &nbsp; *add offset(# pixels) in $ direction to re-centre sensors after physical drift in CAM alignment. $(0-7) for N-NW</p>
+<p><strong><code>R</code></strong> &amp; <strong><code>F</code></strong> &nbsp; &nbsp;* <strong>Reset</strong> commands- will Reset CAM and initiate the Sensor mode. Both Finishes the WebServer mode.</p>
+<p><strong><code>\%%,#,$</code></strong> &nbsp; &nbsp;linear sensor bank conversion starting with <strong>S%%</strong>  and using r,x step sizes of <strong>#,$</strong>(0-31) Slope "down-right".</p>
+<p><strong><code>/%%,#,$</code></strong> &nbsp; &nbsp;Convert bank to linear sensor starting with S%% as for '\' but line will slope "down-left" (-deltaX).</p>
+<p><strong><code>&amp;</code></strong> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<strong>statistics</strong> histogram on trips and potential trips since last <code>&amp;</code>, then reset counters and start another sample process. The table gives number of single highs, double highs etc. and totals for No. of frames/run time</p>
+<p><strong><code>@##</code></strong> &nbsp; &nbsp; &nbsp; &nbsp; * set the "occupied" symbol in the scroll to ASCII character ##. Default is 35("#") Arduino IDE <strong>@12</strong> is bolder!</p>
+<p><strong><code>+#,$</code></strong> &nbsp; &nbsp; &nbsp;* add offset(# pixels) in $ direction to re-centre sensors after any drift in CAM alignment. $(0-7) for N-NW</p>
 <p>&nbsp; &nbsp; &nbsp; * These commands typically for diagnostic/setup use only. They wait for a line feed or command to resume.</p>
 <div class="admonition note">
 <p class="admonition-title">Note:</p>
@@ -10102,7 +10102,7 @@ e.g. <code>&lt;Ni 2%%&gt; &lt;Nr 2%%&gt;</code> also <code>&lt;Nm 200&gt; &lt;Nf
 <td><strong><code>&lt;N F&gt;</code></strong></td>
 <td>&lt;NF&gt;</td>
 <td>F (or R)</td>
-<td><strong>Forced reboot</strong>, restoring sensorCAM sensor mode &amp; EPROM defaults.</td>
+<td><strong>Forced Reboot</strong>, restoring sensorCAM sensor mode &amp; EPROM defaults.</td>
 </tr>
 <tr>
 <td><strong><code>&lt;N g&gt;</code></strong></td>
@@ -10356,7 +10356,7 @@ Using CS native commands, e.g. <strong>&lt;Ni 212&gt;</strong> and <strong>&lt;N
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="July 13, 2026 08:14:13 UTC">July 13, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="July 14, 2026 04:41:34 UTC">July 14, 2026</span>
   </span>
 
     
