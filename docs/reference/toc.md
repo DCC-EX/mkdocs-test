@@ -37,6 +37,7 @@ li:not(.md-nav__item, .md-tabs__item) a {
             - [Programming with Engine Driver <small>(Engine Driver Programming)</small>](../products/ex-commandstation/loco-programming/engine-driver-programming.md)
             - [Programming with EX-Toolbox <small>(EX-Toolbox Programming)</small>](../products/ex-commandstation/loco-programming/toolbox-programming.md)
             - [Using JMRI DecoderPro <small>(Decoderpro)</small>](../products/ex-commandstation/loco-programming/decoderpro.md)
+            - [Programming Tips <small>(Hints and Tips)</small>](../products/ex-commandstation/loco-programming/programming-tips.md)
         - [Running a Legacy DC layout <small>(Running a DC layout)</small>](../products/ex-commandstation/dc-running.md)
         - **Accessories**
             - [Overview - What are Accessories? <small>(Accessories)</small>](../products/ex-commandstation/accessories/accessories.md)
