@@ -7,7 +7,8 @@ from pathlib import Path
 
 from click import style
 
-TODO_PATTERN = re.compile(r"\bTODO\b", re.IGNORECASE)
+TODO_MARKER_PATTERN = re.compile(r"==TODO==", re.IGNORECASE)
+LOW_TODO_PATTERN = re.compile(r"==TODO==\s*LOW\b", re.IGNORECASE)
 EXCLUDE_LINE_PATTERN = re.compile(r"\bto-do/task list\b|/todo-report\.md|todo-report\.md\b", re.IGNORECASE)
 DEFAULT_IGNORE_DIRS = {
     ".git",
@@ -57,10 +58,19 @@ def iter_text_files(scan_root: Path):
         yield path
 
 
+def classify_todo_line(line: str) -> str | None:
+    if not TODO_MARKER_PATTERN.search(line):
+        return None
+    if LOW_TODO_PATTERN.search(line):
+        return "low"
+    return "normal"
+
+
 def build_report(root: Path, output_path: Path) -> int:
     output_path = output_path.resolve()
     scan_root = root / "docs"
     matches = []
+    low_matches = []
     for path in iter_text_files(scan_root):
         if path.resolve() == output_path:
             continue
@@ -70,21 +80,29 @@ def build_report(root: Path, output_path: Path) -> int:
             continue
 
         for line_number, line in enumerate(text.splitlines(), start=1):
-            if TODO_PATTERN.search(line) and not EXCLUDE_LINE_PATTERN.search(line):
-                rel_path = path.relative_to(root).as_posix()
-                link_path = os.path.relpath(path, output_path.parent).replace(os.sep, "/")
-                matches.append(
-                    {
-                        "file": rel_path,
-                        "line_number": line_number,
-                        "line": line.strip(),
-                        "link_path": link_path,
-                    }
-                )
+            if EXCLUDE_LINE_PATTERN.search(line):
+                continue
+
+            category = classify_todo_line(line)
+            if category is None:
+                continue
+
+            rel_path = path.relative_to(root).as_posix()
+            link_path = os.path.relpath(path, output_path.parent).replace(os.sep, "/")
+            entry = {
+                "file": rel_path,
+                "line_number": line_number,
+                "line": line.strip(),
+                "link_path": link_path,
+            }
+            if category == "low":
+                low_matches.append(entry)
+            else:
+                matches.append(entry)
 
     output_path.parent.mkdir(parents=True, exist_ok=True)
-    output_path.write_text(
-        "# TODO Report\n\n"
+    report_sections = [
+        "# TODO Report\n\n",
         "<style>\n"
         ".md-typeset table td,  \n"
         ".md-typeset table th {\n"
@@ -96,23 +114,38 @@ def build_report(root: Path, output_path: Path) -> int:
         "    line-height: 110% !important;\n"
         "    font-family: 'Roboto Condensed', sans-serif !important;\n"
         " }\n"
-        "</style>\n"
-        f"Scanned docs root: `{scan_root}`\n\n"
-        f"Total TODO matches: {len(matches)}\n\n"
-        + (
-            "| File | Line | Line text |\n"
-            "| --- | ---: | --- |\n"
-            + "\n".join(
-                f"| [{item['file']}]({item['link_path']}) | {item['line_number']} | {item['line']} |"
-                for item in matches
-            )
-            + "\n"
+        "</style>\n",
+        f"Scanned docs root: `{scan_root}`\n\n",
+        "## High &amp; Medium TODOs\n\n",
+        f"Total High &amp; Medium TODO matches: {len(matches)}\n\n",
+    ]
+
+    if matches:
+        report_sections.append("| File | Line | Line text |\n")
+        report_sections.append("| --- | ---: | --- |\n")
+        report_sections.extend(
+            f"| [{item['file']}]({item['link_path']}) | {item['line_number']} | {item['line']} |\n"
+            for item in matches
         )
-        if matches
-        else "No TODO entries found.\n",
-        encoding="utf-8",
-    )
-    return len(matches)
+        report_sections.append("\n")
+    else:
+        report_sections.append("No standard TODO entries found.\n\n")
+
+    report_sections.append("## Low priority TODOs\n\n")
+    report_sections.append(f"Total low priority TODO matches: {len(low_matches)}\n\n")
+    if low_matches:
+        report_sections.append("| File | Line | Line text |\n")
+        report_sections.append("| --- | ---: | --- |\n")
+        report_sections.extend(
+            f"| [{item['file']}]({item['link_path']}) | {item['line_number']} | {item['line']} |\n"
+            for item in low_matches
+        )
+        report_sections.append("\n")
+    else:
+        report_sections.append("No low priority TODO entries found.\n")
+
+    output_path.write_text("".join(report_sections), encoding="utf-8")
+    return len(matches) + len(low_matches)
 
 
 def on_post_build(config, **kwargs) -> None:
