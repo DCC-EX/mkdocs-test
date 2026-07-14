@@ -6,5 +6,5 @@ nav:
       - Engine Driver (Android): engine-driver.md
       - ThrottleCard (iOS): throttlecard.md
     - WiThrottle VS Native Protocol: withrottle-vs-native-protocol.md
-  - Loco Programming: cv-programming.md
+  - Loco/CV Programming: cv-programming.md
   

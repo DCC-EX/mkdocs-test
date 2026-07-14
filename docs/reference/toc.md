@@ -212,7 +212,7 @@ li:not(.md-nav__item, .md-tabs__item) a {
             - [Engine Driver <small>(Engine Driver (Android))</small>](../throttles/engine-driver.md)
             - [ThrottleCard <small>(ThrottleCard (iOS))</small>](../throttles/throttlecard.md)
         - [WiThrottle Protocol VS DCC-EX Native/Serial Commands <small>(WiThrottle VS Native Protocol)</small>](../throttles/withrottle-vs-native-protocol.md)
-    - [Loco Programming](../throttles/cv-programming.md)
+    - [Loco Programming <small>(Loco/CV Programming)</small>](../throttles/cv-programming.md)
 - **Enhance**
     - [Enhancing & Expanding EX‑CommandStation <small>(Enhancing your EX-CommandStation)</small>](../enhance/index.md)
 - **News**
