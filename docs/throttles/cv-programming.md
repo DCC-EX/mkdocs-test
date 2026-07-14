@@ -1,3 +1,6 @@
+---
+redirect: ../products/ex-commandstation/loco-programming/programming.html
+---
 # Loco Programming
 
-See [Loco Programming](../products/ex-commandstation/loco-programming/programming.md)
+You are being redirected to [Loco Programming](../products/ex-commandstation/loco-programming/programming.md)
