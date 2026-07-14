@@ -10957,7 +10957,7 @@ e.g. <strong><code>&lt;Ni 2%%\&gt;</code></strong> <strong><code>&lt;Nr 2%%&gt;<
 <tr>
 <td><strong><code>&lt;N F&gt;</code></strong></td>
 <td>&lt;NF&gt;</td>
-<td>F</td>
+<td>F (or R)</td>
 <td><strong>Forced reboot</strong>, restoring sensorCAM sensor mode &amp; EPROM defaults.</td>
 </tr>
 <tr>
@@ -11277,8 +11277,10 @@ SETUP(&quot;&lt;S 110708 0\&gt;&quot;);     //note recommended id is 1%%(b/s) fo
 <p>Limit Vin barrel jack to 7-10V max to avoid destruction of the 1117C 5V regulator (Vne = 16V).</p>
 <p>The CS endpoint shown should be powered with 3.3V from the CS end (NOT 5V), and 9V on GRNW/GRN<br />
 Note: WROVER-CAM does not have a fitted external antenna socket like the ESP32-CAM.</p>
+<p><img alt="Typical 3.3V CS/CSB1 with ESP32 CAM" src="../../../_static/images/ex-sensorcam/esp32-wrover-LTC4311.png" />
+<br/>Sparkfun endpoints(requires a matching sparkfun endpoint at CS)</p>
 <p><img alt="ESP32 Wrover CAM with Sparkfun Endpoint" src="../../../_static/images/ex-sensorcam/esp32-wrover-sparkfun-endpoint.png" /></p>
-<p>For a limited reach, perhaps using a LTC4311 terminator/buffer at the CS to boost signal rise times and range, the cheaper PCA9515A may be used with the Wrover-CAM connected as shown.  The cable to the CAM can be up to 2m long using twisted pairs (cat5?) but may need tuning with extra pullup resistors.</p>
+<p>For a limited reach, perhaps using a LTC4311 terminator/buffer at the CS to boost signal rise times and range, the cheaper PCA9515A may be used with the Wrover-CAM connected as shown.  The cable from PCA9515A to the CAM can be up to 2m long using twisted pairs (cat5?) but may need tuning with extra pullup resistors.  Use of LTC4311 is not recommended with the LTC9515A</p>
 <h3 id="3-enhanced-t-cmd-for-pvtthresholds">3. Enhanced 't' cmd for pvtThresholds<a class="headerlink" href="#3-enhanced-t-cmd-for-pvtthresholds" title="Permanent link">&para;</a></h3>
 <p><strong>t0,%%</strong> will cancel a <em>pvtThreshold</em> on S%% as always.<br />
 <strong>t1,%%</strong> will cancel ALL pvtThresholds in bank% e.g.t1,30<br />
@@ -11347,7 +11349,7 @@ Note: WROVER-CAM does not have a fitted external antenna socket like the ESP32-C
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="July 12, 2026 23:51:29 UTC">July 12, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="July 14, 2026 07:11:55 UTC">July 14, 2026</span>
   </span>
 
     
