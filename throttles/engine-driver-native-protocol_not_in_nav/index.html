@@ -5856,7 +5856,7 @@
   
   
   <span class="md-ellipsis">
-    Loco Programming
+    Loco/CV Programming
     
   </span>
   
@@ -8596,14 +8596,14 @@
 
 <p><img align="right" alt="Engine Driver" src="../../_static/images/engine-driver/engine_driver_logo.png" width="80px" /></p>
 <h1 id="engine-driver-features-when-using-the-native-protocol">Engine Driver - Features when using the Native Protocol<a class="headerlink" href="#engine-driver-features-when-using-the-native-protocol" title="Permanent link">&para;</a></h1>
-<p>By default, <strong>Engine Driver</strong> (ED) uses the <em>WiThrottle Protocol</em> to talk to all types of Command Station.</p>
+<p>By default, <strong>Engine Driver</strong> (ED) uses the <em><abbr title="Communication Protocol. Trademark + iOS app owned by Brett Hoffman">WiThrottle</abbr> Protocol</em> to talk to all types of Command Station.</p>
 <p>When connecting to a <strong>EX-CommandStation</strong>  it can optionally use the <em>DCC-EX Native Protocol</em>.</p>
 <h2 id="specific-features-when-using-the-dcc-ex-native-protocol">Specific Features - when using the DCC-EX Native Protocol<a class="headerlink" href="#specific-features-when-using-the-dcc-ex-native-protocol" title="Permanent link">&para;</a></h2>
 <p>These features are only available when the <em>DCC-EX Native Protocol</em> preference is enabled:</p>
 <ul>
 <li>Read and write DCC addresses on the Programming Track</li>
-<li>Read and write CVs of decoders on the Programming Track</li>
-<li>Write CVs of decoders on the Main Track</li>
+<li>Read and write <abbr title="Configuration Variables (DCC Decoders)">CVs</abbr> of decoders on the Programming Track</li>
+<li>Write <abbr title="Configuration Variables (DCC Decoders)">CVs</abbr> of decoders on the Main Track</li>
 <li>Issue Native commands to the <strong>EX-CommandStation</strong></li>
 <li>TrackManager control - able to change the type and state of each Track/Channel (e.g DCC and DC)</li>
 </ul>
@@ -8651,16 +8651,16 @@
 <p>To read and write DCC addresses on the Programming Track select "Programming Track (Service Mode)" in the Action pulldown.</p>
 <p>To read the address, put your loco on the programming track and click the <code>Read</code> button on the same line as the 'DCC Address' label.</p>
 <p>To write a new address, enter the address in the 'DCC Address' field and click <code>Write</code></p>
-<h3 id="read-and-write-cvs-of-decoders-on-the-programming-track">Read and write CVs of decoders on the Programming Track<a class="headerlink" href="#read-and-write-cvs-of-decoders-on-the-programming-track" title="Permanent link">&para;</a></h3>
-<p>To read and write CVs of decoders on the Programming Track select "Programming Track (Service Mode)" in the Action pulldown.</p>
-<p>To read a CV, put your loco on the programming track, enter the CV number into the 'CV' field, and click the <code>Read</code> button on the same line as the 'CV' label.</p>
-<p>To write a new CV value, enter the CV number into the 'CV' field, enter the new value in the 'Value' field and click <code>Write</code></p>
-<p>Optionally, you can use the 'NRMA CVs' pulldown to select a common CV from a list.  This just enters the appropriate CV number in the 'CV' field.</p>
-<h3 id="write-cvs-of-decoders-on-the-main-track">Write CVs of decoders on the Main Track<a class="headerlink" href="#write-cvs-of-decoders-on-the-main-track" title="Permanent link">&para;</a></h3>
-<p>To write CVs of decoders on the Main Track select "Program on Main (Operation Mode)" in the Action pulldown.</p>
-<p>Note that you cannot read CVs or DCC Addresses on the main track.  You can only write CVs of a specified loco (DCC Address).</p>
-<p>To write a new CV value, enter the DCC address of the loco you want to change, enter the CV number into the 'CV' field, enter the new value in the 'Value' field and click <code>Write</code></p>
-<p>Optionally, you can use the 'NRMA CVs' pulldown to select a common CV from a list.  This just enters the appropriate CV number in the 'CV' field.</p>
+<h3 id="read-and-write-cvs-of-decoders-on-the-programming-track">Read and write <abbr title="Configuration Variables (DCC Decoders)">CVs</abbr> of decoders on the Programming Track<a class="headerlink" href="#read-and-write-cvs-of-decoders-on-the-programming-track" title="Permanent link">&para;</a></h3>
+<p>To read and write <abbr title="Configuration Variables (DCC Decoders)">CVs</abbr> of decoders on the Programming Track select "Programming Track (Service Mode)" in the Action pulldown.</p>
+<p>To read a <abbr title="Configuration Variable (DCC Decoders)">CV</abbr>, put your loco on the programming track, enter the <abbr title="Configuration Variable (DCC Decoders)">CV</abbr> number into the '<abbr title="Configuration Variable (DCC Decoders)">CV</abbr>' field, and click the <code>Read</code> button on the same line as the '<abbr title="Configuration Variable (DCC Decoders)">CV</abbr>' label.</p>
+<p>To write a new <abbr title="Configuration Variable (DCC Decoders)">CV</abbr> value, enter the <abbr title="Configuration Variable (DCC Decoders)">CV</abbr> number into the '<abbr title="Configuration Variable (DCC Decoders)">CV</abbr>' field, enter the new value in the 'Value' field and click <code>Write</code></p>
+<p>Optionally, you can use the 'NRMA <abbr title="Configuration Variables (DCC Decoders)">CVs</abbr>' pulldown to select a common <abbr title="Configuration Variable (DCC Decoders)">CV</abbr> from a list.  This just enters the appropriate <abbr title="Configuration Variable (DCC Decoders)">CV</abbr> number in the '<abbr title="Configuration Variable (DCC Decoders)">CV</abbr>' field.</p>
+<h3 id="write-cvs-of-decoders-on-the-main-track">Write <abbr title="Configuration Variables (DCC Decoders)">CVs</abbr> of decoders on the Main Track<a class="headerlink" href="#write-cvs-of-decoders-on-the-main-track" title="Permanent link">&para;</a></h3>
+<p>To write <abbr title="Configuration Variables (DCC Decoders)">CVs</abbr> of decoders on the Main Track select "Program on Main (Operation Mode)" in the Action pulldown.</p>
+<p>Note that you cannot read <abbr title="Configuration Variables (DCC Decoders)">CVs</abbr> or DCC Addresses on the main track.  You can only write <abbr title="Configuration Variables (DCC Decoders)">CVs</abbr> of a specified loco (DCC Address).</p>
+<p>To write a new <abbr title="Configuration Variable (DCC Decoders)">CV</abbr> value, enter the DCC address of the loco you want to change, enter the <abbr title="Configuration Variable (DCC Decoders)">CV</abbr> number into the '<abbr title="Configuration Variable (DCC Decoders)">CV</abbr>' field, enter the new value in the 'Value' field and click <code>Write</code></p>
+<p>Optionally, you can use the 'NRMA <abbr title="Configuration Variables (DCC Decoders)">CVs</abbr>' pulldown to select a common <abbr title="Configuration Variable (DCC Decoders)">CV</abbr> from a list.  This just enters the appropriate <abbr title="Configuration Variable (DCC Decoders)">CV</abbr> number in the '<abbr title="Configuration Variable (DCC Decoders)">CV</abbr>' field.</p>
 <h3 id="issue-native-commands-to-the-ex-commandstation">Issue Native commands to the <strong>EX-CommandStation</strong><a class="headerlink" href="#issue-native-commands-to-the-ex-commandstation" title="Permanent link">&para;</a></h3>
 <p>To issue Native commands to the <strong>EX-CommandStation</strong>  select any option in the Action pulldown. (it is available for all)</p>
 <p>To issue a command to the <strong>EX-CommandStation</strong>  end the command in the 'DCC-EX Cmd' field, without the opening and closing angle brackets (i.e. Don't enter '&lt;' or '&gt;'), then click <code>Send</code></p>
@@ -8671,8 +8671,8 @@
 <p>Depending on the Motor Shields you have on you <strong>EX-CommandStation</strong>  you will have up to 8 'tracks' listed (labelled 'A' to 'H') along with their current TrackManager state.</p>
 <p>The states will be one of:</p>
 <ul>
-<li>DCC MAIN</li>
-<li>DCC PROG</li>
+<li>DCC <abbr title="Main Track / Ops Mode">MAIN</abbr></li>
+<li>DCC <abbr title="Programming Track / Service Mode">PROG</abbr></li>
 <li>DC</li>
 <li>DC reversed polarity (DC_INV / DCX)</li>
 <li>NONE</li>
@@ -8685,6 +8685,7 @@
 <p>Note that if you select <code>DC</code> or <code>DC reversed polarity (DC_INV / DCX)</code> you <em>must</em> also enter the Address that the track should respond to.</p>
 <p>e.g. if you enter <code>DC</code> and address <code>10</code> for track 'A', then in the <strong>Engine Driver</strong> Select Loco screen, you would need to enter the 'DCC Address' of <code>10</code> to control the DC loco on the track which would normally have been the 'Main' track if you were using DCC.</p>
 <p>Note that only one track can ever be selected as <code>DCC PROG</code></p>
+<!-- These are case sensitive -->
 
 
 
@@ -8705,7 +8706,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 27, 2026 01:26:58 UTC">June 27, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="July 14, 2026 05:47:36 UTC">July 14, 2026</span>
   </span>
 
     

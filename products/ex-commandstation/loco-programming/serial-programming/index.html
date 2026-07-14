@@ -1107,6 +1107,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#more-information" class="md-nav__link">
+    <span class="md-ellipsis">
+      More Information
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -5985,7 +5994,7 @@
   
   
   <span class="md-ellipsis">
-    Loco Programming
+    Loco/CV Programming
     
   </span>
   
@@ -8698,6 +8707,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#more-information" class="md-nav__link">
+    <span class="md-ellipsis">
+      More Information
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -8723,26 +8741,26 @@
 <p>All other programming methods through throttles, toolbox or DecoderPro use this interface.</p>
 <p>In other words... If this method doesn't work, don't waste your time trying the others!</p>
 <h2 id="reading-a-loco-id">Reading a loco id<a class="headerlink" href="#reading-a-loco-id" title="Permanent link">&para;</a></h2>
-<p>The command <code>&lt;R&gt;</code> examines all the necessary CVs and should return something like <code>&lt;r 123&gt;</code> to indicate that address 123 will drive the loco.
+<p>The command <code>&lt;R&gt;</code> examines all the necessary <abbr title="Configuration Variables (DCC Decoders)">CVs</abbr> and should return something like <code>&lt;r 123&gt;</code> to indicate that address 123 will drive the loco.
 A negative result like <code>&lt;r -3&gt;</code> indicates that there was an error. See below for diagnosing this problem.</p>
-<p>Contrary to what you may read on the internet, reading CV1 is NOT sufficient to find the address of a DCC loco that you wish to drive. It is important to check up to 6 separate CVs to find the address that will drive the loco, especially if it has been given a DCC consist address.</p>
+<p>Contrary to what you may read on the internet, reading CV1 is NOT sufficient to find the address of a DCC loco that you wish to drive. It is important to check up to 6 separate <abbr title="Configuration Variables (DCC Decoders)">CVs</abbr> to find the address that will drive the loco, especially if it has been given a DCC <abbr title="North American term. &quot;Consist&quot; refers to multiple locos driving one train. Elsewhere referred to as a &quot;Multiple Unit&quot; (MU) train">consist</abbr> address.</p>
 <h2 id="setting-a-loco-id">Setting a loco id<a class="headerlink" href="#setting-a-loco-id" title="Permanent link">&para;</a></h2>
 <p>The command <code>&lt;W 123&gt;</code> will set the locoid to 123. You should confirm this with <code>&lt;R&gt;</code>.</p>
-<p>This command will clear any DCC consist settings, decide whether the address is a long or short type and set all the necessary CVs. As before, writing CV1 is not sufficient.</p>
-<h2 id="reading-a-cv-value">Reading a CV value<a class="headerlink" href="#reading-a-cv-value" title="Permanent link">&para;</a></h2>
+<p>This command will clear any DCC <abbr title="North American term. &quot;Consist&quot; refers to multiple locos driving one train. Elsewhere referred to as a &quot;Multiple Unit&quot; (MU) train">consist</abbr> settings, decide whether the address is a long or short type and set all the necessary <abbr title="Configuration Variables (DCC Decoders)">CVs</abbr>. As before, writing CV1 is not sufficient.</p>
+<h2 id="reading-a-cv-value">Reading a <abbr title="Configuration Variable (DCC Decoders)">CV</abbr> value<a class="headerlink" href="#reading-a-cv-value" title="Permanent link">&para;</a></h2>
 <p>The command <code>&lt;R 123&gt;</code> will read the value from CV123 and return it like <code>&lt;r 123 99&gt;</code></p>
 <p>Negative values indicate an error accessing the cv. Refer to diagnostics below.</p>
-<h2 id="setting-a-cv-value">Setting a CV value<a class="headerlink" href="#setting-a-cv-value" title="Permanent link">&para;</a></h2>
+<h2 id="setting-a-cv-value">Setting a <abbr title="Configuration Variable (DCC Decoders)">CV</abbr> value<a class="headerlink" href="#setting-a-cv-value" title="Permanent link">&para;</a></h2>
 <p>The command <code>&lt;W 123 99&gt;</code> will write the value 99 into CV123 and return it like <code>&lt;r 123 99&gt;</code></p>
 <p>A negative return value indicates an error.</p>
-<h2 id="dcc-consists">DCC Consists<a class="headerlink" href="#dcc-consists" title="Permanent link">&para;</a></h2>
-<p>A loco may be given a DCC consist address, it's actual address is not altered, but it will no longer accept throttle movement commands on the actual address.</p>
-<p>The command  <code>&lt;W CONSIST 77&gt;</code> will set the consist address to 77.</p>
-<p>The command  <code>&lt;W CONSIST 77 REVERSE&gt;</code> will set the consist address to 77 but indicate that the loco is facing backwards compared to others.</p>
+<h2 id="dcc-consists">DCC <abbr title="North American term. &quot;Consist&quot; refers to multiple locos driving one train. Elsewhere referred to as a &quot;Multiple Unit&quot; (MU) train">Consists</abbr><a class="headerlink" href="#dcc-consists" title="Permanent link">&para;</a></h2>
+<p>A loco may be given a DCC <abbr title="North American term. &quot;Consist&quot; refers to multiple locos driving one train. Elsewhere referred to as a &quot;Multiple Unit&quot; (MU) train">consist</abbr> address, it's actual address is not altered, but it will no longer accept throttle movement commands on the actual address.</p>
+<p>The command  <code>&lt;W CONSIST 77&gt;</code> will set the <abbr title="North American term. &quot;Consist&quot; refers to multiple locos driving one train. Elsewhere referred to as a &quot;Multiple Unit&quot; (MU) train">consist</abbr> address to 77.</p>
+<p>The command  <code>&lt;W CONSIST 77 REVERSE&gt;</code> will set the <abbr title="North American term. &quot;Consist&quot; refers to multiple locos driving one train. Elsewhere referred to as a &quot;Multiple Unit&quot; (MU) train">consist</abbr> address to 77 but indicate that the loco is facing backwards compared to others.</p>
 <ul>
-<li>The <code>&lt;R&gt;</code> command will then return the consist address because that is the address needed to drive it.</li>
+<li>The <code>&lt;R&gt;</code> command will then return the <abbr title="North American term. &quot;Consist&quot; refers to multiple locos driving one train. Elsewhere referred to as a &quot;Multiple Unit&quot; (MU) train">consist</abbr> address because that is the address needed to drive it.</li>
 <li>To obtain the actual locoid, use <code>&lt;R LOCOID&gt;</code>.</li>
-<li>To obtain the consist address, use <code>&lt;R LOCOID&gt;</code>.</li>
+<li>To obtain the <abbr title="North American term. &quot;Consist&quot; refers to multiple locos driving one train. Elsewhere referred to as a &quot;Multiple Unit&quot; (MU) train">consist</abbr> address, use <code>&lt;R LOCOID&gt;</code>.</li>
 </ul>
 <h2 id="bit-management">Bit management<a class="headerlink" href="#bit-management" title="Permanent link">&para;</a></h2>
 <p>For advanced use, the individual bits of a cv make be read or written:</p>
@@ -8751,8 +8769,8 @@ A negative result like <code>&lt;r -3&gt;</code> indicates that there was an err
 <h2 id="diagnostics-when-things-dont-work">Diagnostics when things don't work<a class="headerlink" href="#diagnostics-when-things-dont-work" title="Permanent link">&para;</a></h2>
 <p>There are a number of very basic checks that you should do before getting into software diagnostics. The vast majority of support calls are solved easily by checking:</p>
 <ul>
-<li>Is the loco on the PROG track?</li>
-<li>Is the PROG track wired to the correct motor shield output?</li>
+<li>Is the loco on the <abbr title="Programming Track / Service Mode">PROG</abbr> track?</li>
+<li>Is the <abbr title="Programming Track / Service Mode">PROG</abbr> track wired to the correct motor shield output?</li>
 <li>Is the track clean?</li>
 <li>Are the loco wheels clean?</li>
 <li>Are the pickups from the wheels clean?</li>
@@ -8760,16 +8778,16 @@ A negative result like <code>&lt;r -3&gt;</code> indicates that there was an err
 </ul>
 <p>Following that:</p>
 <ul>
-<li>DO you have a PROG track defined, the <code>&lt;=&gt;</code> command will tell you.</li>
+<li>DO you have a <abbr title="Programming Track / Service Mode">PROG</abbr> track defined, the <code>&lt;=&gt;</code> command will tell you.</li>
 <li>
-<p>Issue the <code>&lt;1 PROG&gt;</code> command and check that the two leds on the motor shield for the PROG track oputput come on</p>
+<p>Issue the <code>&lt;1 PROG&gt;</code> command and check that the two leds on the motor shield for the <abbr title="Programming Track / Service Mode">PROG</abbr> track oputput come on</p>
 </li>
 <li>
-<p>Check with a meter that you get power to the PROG track.</p>
+<p>Check with a meter that you get power to the <abbr title="Programming Track / Service Mode">PROG</abbr> track.</p>
 </li>
 </ul>
 <p>Issue the command <code>&lt;D ACK ON&gt;</code>, this will enable the output of detailed diagnostic information of what the <strong>EX-CommandStation</strong> is doing when it runs programming commands.</p>
-<p>Then try the command <code>&lt;R 8&gt;</code> , this should attempt to read CV 8 (the Decoder manufacturer id). You will get a long diagnostic trace. If the final response is negative (eg <code>&lt;r 8 -1&gt;</code>) then copy the entire diagnostic trace to a support ticket and we can help. (Experienced users will soon learn to read the trace)</p>
+<p>Then try the command <code>&lt;R 8&gt;</code> , this should attempt to read <abbr title="Configuration Variable (DCC Decoders)">CV</abbr> 8 (the Decoder manufacturer id). You will get a long diagnostic trace. If the final response is negative (eg <code>&lt;r 8 -1&gt;</code>) then copy the entire diagnostic trace to a support ticket and we can help. (Experienced users will soon learn to read the trace)</p>
 <p>PLEASE DO NOT SEND A SCREENSHOT OR PHOTO!</p>
 <p>If the <code>&lt;R 8&gt;</code> command responds with a non-negative number like <code>&lt;r 8 123&gt;</code> that that command has worked,  so you should re-attempt the command that failed and send in the trace of that.</p>
 <h2 id="ack-detector-tuning-parameters">ACK detector tuning parameters<a class="headerlink" href="#ack-detector-tuning-parameters" title="Permanent link">&para;</a></h2>
@@ -8786,12 +8804,12 @@ A negative result like <code>&lt;r -3&gt;</code> indicates that there was an err
 <tbody>
 <tr>
 <td><code>&lt;D ACK ON&gt;</code></td>
-<td>Enable PROG track diagnostics</td>
+<td>Enable <abbr title="Programming Track / Service Mode">PROG</abbr> track diagnostics</td>
 <td>None</td>
 </tr>
 <tr>
 <td><code>&lt;D ACK OFF&gt;</code></td>
-<td>Disable PROG track diagnostics</td>
+<td>Disable <abbr title="Programming Track / Service Mode">PROG</abbr> track diagnostics</td>
 <td>None</td>
 </tr>
 <tr>
@@ -8826,6 +8844,9 @@ A negative result like <code>&lt;r -3&gt;</code> indicates that there was an err
 </tr>
 </tbody>
 </table>
+<h2 id="more-information">More Information<a class="headerlink" href="#more-information" title="Permanent link">&para;</a></h2>
+<p>Also refer to the <a href="../programming-tips/">Programming Tips</a> for additional information.</p>
+<!-- These are case sensitive -->
 
 
 
@@ -8846,7 +8867,7 @@ A negative result like <code>&lt;r -3&gt;</code> indicates that there was an err
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 27, 2026 01:26:58 UTC">June 27, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="July 14, 2026 05:47:36 UTC">July 14, 2026</span>
   </span>
 
     
