@@ -130,6 +130,9 @@ plugins:
   - latest-news: # Enable including the latest news excerpts in markdown
       count: 3
       list-class: news-headline-list
+  - redirects:
+      redirect_maps:
+        'throttles/cv-programming.md': 'products/ex-commandstation/loco-programming/programming.md'
 
 # Build-only hooks live in mkdocsbuild.yml so mkdocs serve does not loop.
 

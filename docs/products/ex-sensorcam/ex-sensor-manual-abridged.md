@@ -305,7 +305,7 @@ Stable good lighting is needed.  Gross Lighting changes will have two effects, n
 
 ### ESP32 sensorCAM Command Summary
 
-[full manual](ex-sensor-manual.md#appendix-A)
+[full manual](ex-sensor-manual.md#appendix-a)
 
 rev 14JUL25
 
