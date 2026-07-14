@@ -515,11 +515,11 @@ Also able to change default setting for Brightness, Contrast & Saturation with e
 
 **`n#[,%%]`** ` . ` **nLED** bank Number assigned to the programmable status *nLED*. Optional  **n10,%%**  to set *minSensors*.
 
-**`o%%`** ` ..... ` (Oscar) force **Off** sensor%% (0=UN-occupied, LED off) Also set *SensorActive[##]* false to disable updating.
+**`o%%`**. . . . . . (Oscar) force **Off** sensor%% (0=UN-occupied, LED off) Also set *SensorActive[##]* false to disable updating.
 
-**`p$`** ` ...... ` **\* Position Pointe**r table info for banks 0 to $ giving DEFINED sensor r/ x\) positions.  p%% shorter.
+**`p$`**  . . . . . . **\* Position Pointe**r table info for banks 0 to $ giving DEFINED sensor r/ x\) positions.  p%% shorter.
 
-**`q$`** ` ...... ` **\* Query** bank$, to show which sensors ENABLED(in bits 7-0). 1=enabled. **q9** gives ALL banks.
+**`q$`**  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; **\* Query** bank$, to show which sensors ENABLED(in bits 7-0). 1=enabled. **q9** gives ALL banks.
 
 **`r%%[,0]`** ` . ` **Refresh** Average *Sensor_Ref[##]* (if defined), enable & calc. cRatios etc. **r%%,0** refreshes block S%0 to S%%.
 
@@ -596,7 +596,7 @@ The table gives number of single highs, double highs etc. and totals for No. of 
 18. Data requested over i2c may have a parity byte appended, and a check byte in byte[31].  
 19. NOTE Automatic updating of ref image of unoccupied sensors now starts after last SUS (suspend) indicator.  
 20. ``a%%,rrr,xxx`` performs extended 'create sensor' equivalent to  ``k%%,rrr,xxx`` + ``a%%`` + ``r%%`` for new sensor S%%  
-21. Connection to DCC-EX Command Station has command. variations. See [APPENDIX C](#appendix-f) for revised command detail.
+21. Connection to DCC-EX Command Station has command. variations. See [APPENDIX C](#appendix-c) for revised command detail.
 
 ## APPENDIX B
 
