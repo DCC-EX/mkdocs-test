@@ -40,7 +40,7 @@ The sensorCAM takes 10 frames per second in RGB565 format at QVGA resolution of 
 
 2PCS ESP32-CAM-MB, Aideepen ESP32-CAM W BT Board ESP32-CAM-MB Micro USB to Serial Port CH-340G with OV2640 2MP Camera Module Dual Mode
 
-![ESP32 Wrover CAM Photo](../../_static/images/ex-sensorcam/esp32-wrover-cam-photo.png)
+![ESP32 Wrover CAM Photo](../../_static/images/ex-sensorcam/esp32-wrover-cam.png)
 
 **Note:** While this manual primarily talks about the ESP32-CAM-MB, there is a similar tested and **recommended** alternative in the newer **ESP32 WROVER CAM** single board option requiring simpler wiring with the 38P expander board. For some further preliminary details refer to Section 7 Wiring, **Figure 6**. The software is identical for both CAMs.
 
@@ -489,30 +489,30 @@ To define a sensor, use **``a``** command,  Processing4, or (outdated method) a 
 
 **`a%%[,rr,xx]`** **enAble** *Sensor[%%]* & refresh *Sensor_ref[%%]*, *cRatios* etc. 4x4 from image in latest frame. **(Note 20.)**
 
-**`b#[,$]     `** **Bank** # sensors. Show which sensors OCCUPIED(in bits 7-0).(1=occ.)(**b#,$** sets *brightSF* to $)
+**`b#[,$]`** `    ` **Bank** # sensors. Show which sensors OCCUPIED(in bits 7-0).(1=occ.)(**b#,$** sets *brightSF* to $)
 
-**`c$$$$      `** **\* reCalibrate** camera CCD occasionally and grab new references for all enabled sensors(Beware of doing this while any sensors are occupied) **N.B.** Obstructed sensors will later need an **r%%**. Check all bank LEDs are off AND check all sensors are unoccupied before recalibrate. Can set AWB AEC AGC CB through $$$$ e.g. c0110  
+**`c$$$$`** `     ` **\* reCalibrate** camera CCD occasionally and grab new references for all enabled sensors(Beware of doing this while any sensors are occupied) **N.B.** Obstructed sensors will later need an **r%%**. Check all bank LEDs are off AND check all sensors are unoccupied before recalibrate. Can set AWB AEC AGC CB through $$$$ e.g. c0110  
 Also able to change default setting for Brightness, Contrast & Saturation with extra digits e.g. c$$$$012.  Refer alternate ``j`` commnad.
 
-**`d%%[#]     `** **\* Difference** score in colour& brightness between Ref & actual image. Show # grabs.
+**`d%%[#]`** `    ` **\* Difference** score in colour& brightness between Ref & actual image. Show # grabs.
 
-**`e          `** **EPROM** save of any new Sensor offset positions, pvtThresholds, new twins and 5 default parameter settings.
+**`e`** `         ` **EPROM** save of any new Sensor offset positions, pvtThresholds, new twins and 5 default parameter settings.
 
-**`f%%        `** **\* Frame** buffer sample display. Print latest bytes in *Sensor_ref[%%]* & Sensor S%% positions.
+**`f%%`** `       ` **\* Frame** buffer sample display. Print latest bytes in *Sensor_ref[%%]* & Sensor S%% positions.
 
-**`g          `** **\* Global ov2640 Status**. Displays most current settings available in webcam window (both sensor & video mode).
+**`g`** `         ` **\* Global ov2640 Status**. Displays most current settings available in webcam window (both sensor & video mode).
 
-**`h$[,#]     `** **\* Help(debug)** output.  **h9**  to turn all OFF,  **h0**  turn ON detailed USB output. '**h7,#**' "Waits" scroll on a bank# trip.
+**`h$[,#]`** `    ` **\* Help(debug)** output.  **h9**  to turn all OFF,  **h0**  turn ON detailed USB output. '**h7,#**' "Waits" scroll on a bank# trip.
 
-**`i%%[,$$]   `** **Info.** on S%%.  Status(enabled/occupied), position(r,x), any twin(S$$), pvtThreshold & brightness.
+**`i%%[,$$]`** `  ` **Info.** on S%%.  Status(enabled/occupied), position(r,x), any twin(S$$), pvtThreshold & brightness.
 
-**`j$#        `** **\* adJust** camera setting $ to value # and display most settings (as for '**g**'). '**j**' alone lists options for $\#.
+**`j$#`** `       ` **\* adJust** camera setting $ to value # and display most settings (as for '**g**'). '**j**' alone lists options for $\#.
 
 **`k%%,rrr,xxx`** \* set **coordinates** of Sensor S$$ to row: rrr & column: xxx. Follow with  **r%%**. Verify values with **p$**.
 
-**`l%%        `** (Lima) **Latch** sensor S%% to on(1 = occupied(LED lit) & also set *SensorActive[%%]* false to disable sensing.
+**`l%%`** `       ` (Lima) **Latch** sensor S%% to on(1 = occupied(LED lit) & also set *SensorActive[%%]* false to disable sensing.
 
-**`m$[,%%]    `** **\* Minimum** $(1-4) sequential frames over *Threshold* to trigger/trip sensor. Shows list of parameters. **(Note 14)**
+**`m$[,%%]`** `   ` **\* Minimum** $(1-4) sequential frames over *Threshold* to trigger/trip sensor. Shows list of parameters. **(Note 14)**
 
 **``n#[,%%]    ``** **nLED** bank Number assigned to the programmable status *nLED*. Optional  **n10,%%**  to set *minSensors*.
 
