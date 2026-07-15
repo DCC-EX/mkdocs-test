@@ -36,11 +36,11 @@ The sensorCAM is a video camera replacement for physical proximity sensors on a 
 
 The sensorCAM takes 10 frames per second in RGB565 format at QVGA resolution of 240 x 320. Each sensor consists of a square group of 16 pixels which equates to approx. 20x20mm square with the standard lens at 1500mm. The software decodes and saves only the 80 sensor images(1280 pixels) and then compares each sensor image with a reference image prerecorded either at startup, on request, or by a "recent" automatic update. If the images do not match the references well then the sensor is "tripped" or "occupied" & status '1' is produced. Good match results in '0' output. The state of virtual sensors can be manually monitored on the USB monitor, or polled by microcontroller over the i2c interface cable. N.B. The sensorCAM is sensing only when the Flash LED is pulsing (for each new frame).
 
-![ESP32 CAM with MB](../../_static/images/ex-sensorcam/esp32-cam-with-mb.png)
+![ESP32 CAM with MB](../../_static/images/ex-sensorcam/esp32-cam-with-mb.png){ width=500px }
 
 2PCS ESP32-CAM-MB, Aideepen ESP32-CAM W BT Board ESP32-CAM-MB Micro USB to Serial Port CH-340G with OV2640 2MP Camera Module Dual Mode
 
-![ESP32 Wrover CAM Photo](../../_static/images/ex-sensorcam/esp32-wrover-cam.png)
+![ESP32 Wrover CAM Photo](../../_static/images/ex-sensorcam/esp32-wrover-cam.png){ width=400px }
 
 **Note:** While this manual primarily talks about the ESP32-CAM-MB, there is a similar tested and **recommended** alternative in the newer **ESP32 WROVER CAM** single board option requiring simpler wiring with the 38P expander board. For some further preliminary details refer to Section 7 Wiring, **Figure 6**. The software is identical for both CAMs.
 
@@ -486,76 +486,76 @@ To define a sensor, use **``a``** command,  Processing4, or (outdated method) a 
 
 #### Serial Command - sensorCAM native USB format
 
-**`a%%[,rr,xx]`** **enAble** *Sensor[%%]* & refresh *Sensor_ref[%%]*, *cRatios* etc. 4x4 from image in latest frame. **(Note 20.)**
+**`a%%[,rr,xx]`** **enAble** *Sensor[%%]* & refresh *Sensor_ref[%%]*, *cRatios* etc. 4x4 from image in latest frame. **(Note 20)**
 
-**`b#[,$]`** ` .. ` **Bank** # sensors. Show which sensors OCCUPIED(in bits 7-0).(1=occ.)(**b#,$** sets *brightSF* to $)
+**`b#[,$]`** &nbsp; **Bank** # sensors. Show which sensors OCCUPIED(in bits 7-0).(1=occ.)(**b#,$** sets *brightSF* to $)
 
-**`c$$$$`** ` ... `**\* reCalibrate** camera CCD occasionally and grab new references for all enabled sensors(Beware of doing this while any sensors are occupied) **N.B.** Obstructed sensors will later need an **r%%**. Check all bank LEDs are off AND check all sensors are unoccupied before recalibrate. Can set AWB AEC AGC CB through $$$$ e.g. c0110  
+**`c$$$$`** &nbsp; &nbsp; **\* reCalibrate** camera CCD occasionally and grab new references for all enabled sensors(Beware of doing this while any sensors are occupied) **N.B.** Obstructed sensors will later need an **r%%**. Check all bank LEDs are off AND check all sensors are unoccupied before recalibrate. Can set AWB AEC AGC CB through $$$$ e.g. c0110  
 Also able to change default setting for Brightness, Contrast & Saturation with extra digits e.g. c$$$$012.  Refer alternate **j** commnad.
 
-**`d%%[#]`** ` .. ` **\* Difference** score in colour& brightness between Ref & actual image. Show # grabs.
+**`d%%[#]`** &nbsp; &nbsp; **\* Difference** score in colour& brightness between Ref & actual image. Show # grabs.
 
-**`e`** ` ....... ` **EPROM** save of any new Sensor offset positions, pvtThresholds, new twins and 5 default parameter settings.
+**`e`** &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; **EPROM** save of any new Sensor offset positions, pvtThresholds, new twins and 5 default parameter settings.
 
-**`f%%`** ` ..... ` **\* Frame** buffer sample display. Print latest bytes in *Sensor_ref[%%]* & Sensor S%% positions.
+**`f%%`** &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; **\* Frame** buffer sample display. Print latest bytes in *Sensor_ref[%%]* & Sensor S%% positions.
 
-**`g`** ` ....... ` **\* Global ov2640 Status**. Displays most current settings available in webcam window (both sensor & video mode).
+**`g`** &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; **\* Global ov2640 Status**. Displays most current settings available in webcam window (both sensor & video mode).
 
-**`h$[,#]`** ` .. ` **\* Help(debug)** output.  **h9**  to turn all OFF,  **h0**  turn ON detailed USB output. '**h7,#**' pauses scroll (w) on a bank# trip.
+**`h$[,#]`** &nbsp; &nbsp; **\* Help(debug)** output.  **h9**  to turn all OFF,  **h0**  turn ON detailed USB output. '**h7,#**' pauses scroll (w) on a bank# trip.
 
-**`i%%[,$$]`** `. ` **Info.** on S%%.  Status(enabled/occupied), position(r,x), any twin(S$$), pvtThreshold & brightness.
+**`i%%[,$$]`** **Info.** on S%%.  Status(enabled/occupied), position(r,x), any twin(S$$), pvtThreshold & brightness.
 
-**`j$#`** ` ..... ` **\* adJust** camera setting $ to value # and display most settings (as for '**g**'). '**j**' alone lists options for $\#.
+**`j$#`** &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; **\* adJust** camera setting $ to value # and display most settings (as for '**g**'). '**j**' alone lists options for $\#.
 
 **`k%%,rrr,xxx`** \* set **coordinates** of Sensor S$$ to row: rrr & column: xxx. Follow with  **r%%**. Verify values with **p$**.
 
-**`l%%`** ` ..... ` (Lima) **Latch** sensor S%% to on(1 = occupied(LED lit) & also set *SensorActive[%%]* false to disable sensing.
+**`l%%`** &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; (Lima) **Latch** sensor S%% to on(1 = occupied(LED lit) & also set *SensorActive[%%]* false to disable sensing.
 
-**`m$[,%%]`** ` . ` **\* Minimum** $(1-4) sequential frames over *Threshold* to trigger/trip sensor. Shows list of parameters. **(Note 14)**
+**`m$[,%%]`** &nbsp; **\* Minimum** $(1-4) sequential frames over *Threshold* to trigger/trip sensor. Shows list of parameters. **(Note 14)**
 
-**`n#[,%%]`** ` . ` **nLED** bank Number assigned to the programmable status *nLED*. Optional  **n10,%%**  to set *minSensors*.
+**`n#[,%%]`** &nbsp; **nLED** bank Number assigned to the programmable status *nLED*. Optional  **n10,%%**  to set *minSensors*.
 
-**`o%%`**. . . . . . (Oscar) force **Off** sensor%% (0=UN-occupied, LED off) Also set *SensorActive[##]* false to disable updating.
+**`o%%`** &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; (Oscar) force **Off** sensor%% (0=UN-occupied, LED off) Also set *SensorActive[##]* false to disable updating.
 
-**`p$`**  . . . . . . **\* Position Pointe**r table info for banks 0 to $ giving DEFINED sensor r/ x\) positions.  p%% shorter.
+**`p$`** &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; **\* Position Pointe**r table info for banks 0 to $ giving DEFINED sensor r/ x\) positions.  p%% shorter.
 
-**`q$`**  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; **\* Query** bank$, to show which sensors ENABLED(in bits 7-0). 1=enabled. **q9** gives ALL banks.
+**`q$`** &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; **\* Query** bank$, to show which sensors ENABLED(in bits 7-0). 1=enabled. **q9** gives ALL banks.
 
-**`r%%[,0]`** ` . ` **Refresh** Average *Sensor_Ref[##]* (if defined), enable & calc. cRatios etc. **r%%,0** refreshes block S%0 to S%%.
+**`r%%[,0]`** &nbsp; **Refresh** Average *Sensor_Ref[##]* (if defined), enable & calc. cRatios etc. **r%%,0** refreshes block S%0 to S%%.
 
-**`r00`** ` ..... ` **Refresh** Average Refs etc. for ALL defined sensors. Ignores enable[]. Sensor[00] reserved for brightness ref.
+**`r00`** &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; **Refresh** Average Refs etc. for ALL defined sensors. Ignores enable[]. Sensor[00] reserved for brightness ref.
 
-**`s%%`** ` ..... ` **\* Scan** for new location for sensor  S%%(00-97). If found, records location in *Sensor[0%%]*. **(Note 12)**
+**`s%%`** &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; **\* Scan** for new location for sensor  S%%(00-97). If found, records location in *Sensor[0%%]*. **(Note 12)**
 
-**`t##[,%%]`** .. **Threshold** level##(31-98 only) set as default. [``t#`#,%%`` sets the *pvtThreshold* for sensor %% (**t0,%%** to clear)]
+**`t##[,%%]`** &nbsp; **Threshold** level##(31-98 only) set as default. [``t#`#,%%`` sets the *pvtThreshold* for sensor %% (**t0,%%** to clear)]
 
-**`t##`** ` ..... ` **Tabulates** \#\#(2-30 only) rows of scroll data (continuous scroll toggled off) **Note:** ``t1`` alone toggles scroll on/off.
+**`t##`** &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; **Tabulates** \#\#(2-30 only) rows of scroll data (continuous scroll toggled off) **Note:** ``t1`` alone toggles scroll on/off.
 
-**`t1,%%`** ` ... ` **Trash** 1 entire bank of *pvtThresholds*. Use ``t1,99`` to clear ALL banks (0-9). **Note:** **t99** lists all *pvtThresholds*
+**`t1,%%`** &nbsp; &nbsp; &nbsp; &nbsp; **Trash** 1 entire bank of *pvtThresholds*. Use ``t1,99`` to clear ALL banks (0-9). **Note:** **t99** lists all *pvtThresholds*
 
-**`u%%`** ` ..... ` **\* Un-define**/remove sensor %%  (Sensor S%%=0 & set DISABLED) **u99** for ALL. ``e`` will erase from EPROM.
+**`u%%`** &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; **\* Un-define**/remove sensor %%  (Sensor S%%=0 & set DISABLED) **u99** for ALL. ``e`` will erase from EPROM.
 
-**`v[#]`** ` .... ` **Version** or **Video mode** causing reboot as a webserver. **v2** will connect to  2nd (alt.) router ssid.
+**`v[#]`** &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; **Version** or **Video mode** causing reboot as a webserver. **v2** will connect to  2nd (alt.) router ssid.
 
-**`w`** ` ....... ` **\* Wait** for new command line (\\n) before resuming sensing (handy to freeze display data scroll - see ``t1`` toggle)
+**`w`** &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; **\* Wait** for new command line (\\n) before resuming sensing (handy to freeze display data scroll - see ``t1`` toggle)
 
-**`x###`** ` .... ` \* selects first pixel column(0-319) & ``z###`` selects image width (### columns(1-320)) for imaging.
+**`x###`** &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; \* selects first pixel column(0-319) & ``z###`` selects image width (### columns(1-320)) for imaging.
 
-**`y###`** ` .... ` \* selects first row for image and initiates a binary data dump for that row (header + 2# bytes) using rgb565.  
+**`y###`** &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; \* selects first row for image and initiates a binary data dump for that row (header + 2# bytes) using rgb565.  
 Note: The 'y' command starts a process that must, after a series of ``y`` commands, end with a terminator of ``yy``.
 
-**`R or F`** ` .. ` **Reset** commands- will Reset CAM and initiate the Sensor mode. Both will Finish the WebServer(``v``) mode.
+**`R`** or **`F`** &nbsp; **Reset** commands- will Reset CAM and initiate the Sensor mode. Both will Finish the WebServer(``v``) mode.
 
-**`\%,#,$`** ` .. ` linear sensor bank conversion starting with  ``S$$``  and using r,x step sizes of **#,$**(0-31) Slope is "down-right".
+**`\%,#,$`** &nbsp; &nbsp; &nbsp; &nbsp; linear sensor bank conversion starting with  ``S$$``  and using r,x step sizes of **#,$**(0-31) Slope is "down-right".
 
-**`/%,#,$`** ` .. ` linear sensor bank conversion starting with S$$ as for '\\' but line will slope "down-left" (-deltaX).
+**`/%,#,$`** &nbsp; &nbsp; &nbsp; &nbsp; linear sensor bank conversion starting with S$$ as for '\\' but line will slope "down-left" (-deltaX).
 
-**`&`** ` ....... ` **statistics** histogram on trips and potential trips since last ``&``, then reset counters and start another sample process.  
+**`&`** &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; **statistics** histogram on trips and potential trips since last ``&``, then reset counters and start another sample process.  
 The table gives number of single highs, double highs etc. and totals for No. of frames/run time
 
-**`@##`** ` ..... ` \* set the "occupied" symbol in the scroll to ASCII character \#\#. Default is 35("#") Arduino IDE **@12** is bolder!
+**`@##`** &nbsp; &nbsp; &nbsp; \* set the "occupied" symbol in the scroll to ASCII character \#\#. Default is 35("#") Arduino IDE **@12** is bolder!
 
-**`+#,$`** ` .... ` \* add offset(\# pixels) in $ direction to re-centre sensors after physical drift in CAM alignment. $(0-7) for N-NW
+**`+#,$`** &nbsp; &nbsp; \* add offset(\# pixels) in $ direction to re-centre sensors after physical drift in CAM alignment. $(0-7) for N-NW
 
  \* These commands typically for diagnostic/setup use only. They wait for a line feed or command to resume.
 
