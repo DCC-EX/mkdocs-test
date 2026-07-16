@@ -529,15 +529,15 @@ Also able to change default setting for Brightness, Contrast & Saturation with e
 
 **`t##[,%%]`**&nbsp; **Threshold** level##(31-98 only) set as default. [``t#`#,%%`` sets the *pvtThreshold* for sensor %% (**t0,%%** to clear)]
 
-**`t##`** &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; **Tabulates** \#\#(2-30 only) rows of scroll data (continuous scroll toggled off) **Note:** ``t1`` toggles scroll on/off.
+**`t##`** &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; **Tabulates** \#\#(2-30 only) rows of scroll data (continuous scroll toggled off) **Note:** `t1` toggles scroll on/off.
 
 **`t1,%%`** &nbsp; &nbsp; &nbsp; &nbsp; **Trash** 1 entire bank of *pvtThresholds*. Use ``t1,99`` to clear ALL banks (0-9). **Note:** **t99** lists all *pvtThresholds*
 
 **`u%%`** &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; **\* Un-define**/remove sensor %%  (Sensor S%%=0 & set DISABLED) **u99** for ALL. ``e`` will erase from EPROM.
 
-**`v[#]`** &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; **Version** or **Video mode** causing reboot as a webserver. **v2** will connect to  2nd (alt.) router ssid.
+**`v[#]`** &nbsp; &nbsp; &nbsp; &nbsp; **Version** or **Video mode** causing reboot as a webserver. **v2** will connect to  2nd (alt.) router ssid.
 
-**`w`** &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; **\* Wait** for new command line (\\n) before resuming sensing (handy to freeze display data scroll - see ``t1`` toggle)
+**`w`** &nbsp; &nbsp; &nbsp; &nbsp;.&nbsp; &nbsp; &nbsp; &nbsp; **\* Wait** for new command line (\\n) before resuming sensing (handy to freeze display data scroll - see ``t1`` toggle)
 
 **`x###`** &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; \* selects first pixel column(0-319) & ``z###`` selects image width (### columns(1-320)) for imaging.
 
@@ -550,12 +550,12 @@ Note: The 'y' command starts a process that must, after a series of ``y`` comman
 
 **`/%,#,$`** &nbsp; &nbsp; &nbsp; linear sensor bank conversion starting with S$$ as for '\\' but line will slope "down-left" (-deltaX).
 
-**`&`** &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; **statistics** histogram on trips and potential trips since last ``&``, then reset counters and start another sample process.  
+**`&`** &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; **statistics** histogram on trips and potential trips since last ``&``, then reset counters and start another sample process.  
 The table gives number of single highs, double highs etc. and totals for No. of frames/run time
 
-**`@##`** &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; \* set the "occupied" symbol in scroll to ASCII character \#\#. Default is 35("#") Arduino IDE **@12** is bolder!
+**`@##`** &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; \* set the "occupied" symbol in scroll to ASCII character \#\#. Default is 35("#") Arduino IDE **@12** is bolder!
 
-**`+#,$`** &nbsp;&nbsp; &nbsp; &nbsp; \* add offset(\# pixels) in $ direction to re-centre sensors after physical drift in CAM alignment. $(0-7) for N-NW
+**`+#,$`** &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; \* add offset(\# pixels) in $ direction to re-centre sensors after physical drift in CAM alignment. $(0-7) for N-NW
 
  \* These commands typically for diagnostic/setup use only. They wait for a line feed or command to resume.
 
@@ -729,6 +729,9 @@ Line sensors, developed for visitor intrusion curtains, are currently automatica
 
 ### Tabulated DCC-EX-CS ID's for sensorCAM
 
+!!! note "Note:"
+    This Appendix originally focused on the **ESP32-CAM-MB** implementation. For information on the recommended ESP32-WROVER-CAM see [APPENDIX F](#appendix-f)  
+
 **Table B** below shows the (resistor) colour code used to identify sensors on the Processing 4 track image.
 For example, sensor S12 has a bsNo 1/2 for which the colours are Brown/Red (seen on sensor box edges).  
 For CAM number 1, the full CS sensor S12 ID is 112 when used in CS native ``<N`` commands such as **``<N i 112>``**  
@@ -777,8 +780,6 @@ Sparkfun endpoints(requires a matching sparkfun endpoint at CS)(CS interface opt
 With Dual CAM header:
 
 ![Dual CAM Header](../../_static/images/ex-sensorcam/dual-cam-header.png)
-
-![DuaL CAM Header Closeup](../../_static/images/ex-sensorcam/dual-cam-header-closeup.png)
 
 NOTE: Take care to cut copper strips appropriately!
 
