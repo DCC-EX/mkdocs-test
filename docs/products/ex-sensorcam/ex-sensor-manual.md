@@ -511,9 +511,9 @@ Also able to change default setting for Brightness, Contrast & Saturation with e
 
 **`l%%`** &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; (Lima) **Latch** sensor S%% to on(1 = occupied(LED lit) & also set *SensorActive[%%]* false to disable.
 
-**`m$[,%%]`** &nbsp; **\* Minimum** $(1-4) sequential frames over *Threshold* to trigger/trip sensor. Shows list of parameters. **(Note 14)**
+**`m$[,%%]`** &nbsp; **\* Minimum** $(1-4) sequential frames over *Threshold* to trigger/trip sensor. Shows list of parameters. **[Note 14]**
 
-**`n#[,%%]`** &nbsp; **nLED** bank Number assigned to the programmable status *nLED*. Optional  **n10,%%**  to set *minSensors*.
+**`n#[,%%]`** &nbsp; **nLED** bank Number assigned to the programmable status *nLED*. [Optional  **n10,%%**  to set *minSensors*]
 
 **`o%%`** &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; (Oscar) force **Off** sensor%% (0=UN-occupied, LED off) Also set *SensorActive[##]* false to disable updating.
 
@@ -527,7 +527,7 @@ Also able to change default setting for Brightness, Contrast & Saturation with e
 
 **`s%%`** &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; **\* Scan** for new location for sensor  S%%(00-97). If found, records location in *Sensor[0%%]*. **(Note 12)**
 
-**`t##[,%%]`**&nbsp; **Threshold** level##(31-98 only) set as default. [``t#`#,%%`` sets the *pvtThreshold* for sensor %% (**t0,%%** to clear)]
+**`t##[,%%]`**&nbsp; **Threshold** level##(31-98 only) set as default. [`t##,%%` sets the *pvtThreshold* for S%% (**t0,%%** clears)]
 
 **`t##`** &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; **Tabulates** \#\#(2-30 only) rows of scroll data (continuous scroll toggled off) **Note:** `t1` toggles scroll on/off.
 
@@ -535,7 +535,7 @@ Also able to change default setting for Brightness, Contrast & Saturation with e
 
 **`u%%`** &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; **\* Un-define**/remove sensor %%  (Sensor S%%=0 & set DISABLED) **u99** for ALL. ``e`` will erase from EPROM.
 
-**`v[#]`** &nbsp; &nbsp; &nbsp; &nbsp; **Version** or **Video mode** causing reboot as a webserver. **v2** will connect to  2nd (alt.) router ssid.
+**`v[#]`**&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; **Version** or **Video mode** causing reboot as a webserver. **v2** will connect to  2nd (alt.) router ssid.
 
 **`w`** &nbsp; &nbsp; &nbsp; &nbsp;.&nbsp; &nbsp; &nbsp; &nbsp; **\* Wait** for new command line (\\n) before resuming sensing (handy to freeze display data scroll - see ``t1`` toggle)
 
@@ -544,11 +544,11 @@ Also able to change default setting for Brightness, Contrast & Saturation with e
 **`y###`** &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; \* selects first row for image and initiates a binary data dump for that row (header + 2# bytes) using rgb565.  
 Note: The 'y' command starts a process that must, after a series of ``y`` commands, end with a terminator of ``yy``.
 
-**`R`** or **`F`** &nbsp; &nbsp; **Reset** commands- will Reset CAM and initiate the Sensor mode. Both will Finish the WebServer.
+**`R`** or **`F`** &nbsp; &nbsp; &nbsp; **Reset** commands- will Reset CAM and initiate the Sensor mode. Both will Finish the WebServer.
 
-**`\%,#,$`** &nbsp; &nbsp; &nbsp; linear sensor bank conversion starting with  ``S$$``  and using r,x step sizes of **#,$**(0-31) Slope is "down-right".
+**`\%,#,$`**&nbsp; &nbsp; &nbsp; linear sensor bank conversion starting with  ``S$$``  and using r,x step sizes of **#,$**(0-31) Slope is "down-right".
 
-**`/%,#,$`** &nbsp; &nbsp; &nbsp; linear sensor bank conversion starting with S$$ as for '\\' but line will slope "down-left" (-deltaX).
+**`/%,#,$`**&nbsp; &nbsp; &nbsp; linear sensor bank conversion starting with S$$ as for '\\' but line will slope "down-left" (-deltaX).
 
 **`&`** &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; **statistics** histogram on trips and potential trips since last ``&``, then reset counters and start another sample process.  
 The table gives number of single highs, double highs etc. and totals for No. of frames/run time
@@ -667,8 +667,8 @@ e.g. **``<Ni 2%%\>``** **``<Nr 2%%>``** also **``<Nm 200\>``** **``<Nf 212>``** 
 | **``<N i %%[ $$]>``** | <Ni 12\> | i12,02 | **Info.** & assigns new twin sensor(S$$) for "second-opinion" on S%%. |
 | **``<N j $ #>``** | <Nj B 2\> | jB2 | **adJust** ov2640 parameters($)(Brightness, Contrast etc)(values 0-2 only). |
 | **``<N l %%>``** | <Nl 12\> | l12 | (lima) **Latch** output state of sensor bsNo to 1 & disable. |
-| **``<N m $ [%%]>``** | <Nm 3 20\> | m3,20 | **Min/max** *min2trip*(1-4) frames [*maxSensors*] **<NM\> shows CAM parameters** |
-| **``<N n $ [%%]>``** | <Nn 1 10\> | n1,10 | set **nLED**= bank $ [set *minSensors*=%% to limit display range] <Nn v\> verifies. |
+| **``<N m $ [%%]>``** | <Nm 3 30\> | m10,30 | **Min/max** *min2trip*(1-4) frames [*maxSensors*] **<NM\> shows CAM parameters** |
+| **``<N n $ [%%]>``** | <Nn 1 15\> | n10,15 | set **nLED**= bank $ [set *minSensors*=%% to limit display range] <Nn v\> verifies. |
 | **``<N o %%>``** | <No 12\> | o12 | (oscar) **Zero** output state of sensor bsNo. Reset to 0 & disable. |
 | **``<N p %%>``** | <Np 1\> | p1 | **Positions**(r,x) of all enabled sensors in bank are listed. |
 | **``<N q #>``** | <Nq 1\> | q1 | **Query bank**# enabled states of sensors (0 indicates sensor disabled). |
@@ -729,9 +729,6 @@ Line sensors, developed for visitor intrusion curtains, are currently automatica
 
 ### Tabulated DCC-EX-CS ID's for sensorCAM
 
-!!! note "Note:"
-    This Appendix originally focused on the **ESP32-CAM-MB** implementation. For information on the recommended ESP32-WROVER-CAM see [APPENDIX F](#appendix-f)  
-
 **Table B** below shows the (resistor) colour code used to identify sensors on the Processing 4 track image.
 For example, sensor S12 has a bsNo 1/2 for which the colours are Brown/Red (seen on sensor box edges).  
 For CAM number 1, the full CS sensor S12 ID is 112 when used in CS native ``<N`` commands such as **``<N i 112>``**  
@@ -751,8 +748,11 @@ vPin is the base/first vPin number (e.g. 700) + DEC(*bsn*) number in the convers
 
 ## APPENDIX F
 
-### Hardware Interface (PCA9515A& & Endpoints)
+### Hardware Interface (PCA9515A & Endpoints)
 
+!!! note "Note:"
+    This Appendix originally focused on the **ESP32-CAM-MB** implementation. For information on the recommended ESP32-WROVER-CAM see [APPENDIX J](#appendix-j)  
+    
 The ESP32 CAM drives GPIO pins with 3.3V logic. This may well be incompatible with the master l2C signals at 5V. It is essential that appropriate voltage level shifting and buffering is used where necessary. Unbuffered I2C is limited in range but a Sparkfun differential i2c driver/endpoint may also be used to achieve long lengths and voltage shifting (3.5v to 5v) if needed.
 
 The sensorCAM can be Reset remotely by software or by cycling the power supply. The CAM MUST be rigidly mounted as its response to any image vibration can trip sensors. It is best not moved after sensor location programming as precise realignment could be tedious. It is, however, advisable to make guides or jig arrangement to at least be able to remove (for maintenance) and return with minimal misalignment to cover the same field of view. The LED method of placing/positioning sensors may be necessary if a long USB cable is impractical. A 5m buffered USB cable might be advantageous. Even so, programming or imaging over a very long USB cable may not be satisfactory.
@@ -987,21 +987,9 @@ Note: WROVER-CAM does not have a fitted external antenna socket like the ESP32-C
 
 For a limited reach, perhaps using a LTC4311 terminator/buffer at the CS to boost signal rise times and range, the cheaper PCA9515A may be used with the Wrover-CAM connected as shown.  The cable from PCA9515A to the CAM can be up to 2m long using twisted pairs (cat5?) but may need tuning with extra pullup resistors.  Use of LTC4311 is not recommended with the LTC9515A
 
-### 3. Enhanced 't' cmd for pvtThresholds
+### 3. CS drivers v308 & v309
 
-**t0,%%** will cancel a *pvtThreshold* on S%% as always.  
-**t1,%%** will cancel ALL pvtThresholds in bank% e.g.t1,30  
-**t1,99** will cancel ALL pvtThresholds in the sensorCAM(i.e.S00 to S97)  
-**t99** will list ALL pvtThresholds in the sensorCAM by bank#(10 banks)  
-**t1** will toggle SCROLL ON/OFF as always. The**``e``** command is needed to make changes"permanent"
-
-Version v319 also accepts *minSensors* up to *maxSensors*-1  
-**m#,%%** will set *maxSensors* to%%. e.g. m10,30 sets *maxSensors*=030 (leaving *min2trip* unchanged as does m0,30)  
-**n#,%%** will set *minSensors* to%%. e.g. n10,27 sets *minSensors*=027 leaving *nLED* unchanged. **n0,27** would set *nLED* to 0)
-
-### 4. CS drivers v308 & v309
-
-Driver version v308 is intended for use with Prod versions 5.4.6 to 5.4.16. DCC-EX CS Prod. Versions 5.4.16+ incorporate v308 by default. v308 will not work with CS devel 5.5.15+. For CS devel versions look to v309 (default). Both these drivers MUST be used with sensorCAM version v320+ as earlier versions will not be recognized.
+Driver version v308 is intended for use with EX Prod versions 5.4.6 to 5.4.16. DCC-EX CS Prod. Versions 5.4.16+ incorporate v308 by default. v308 will not work with CS devel 5.5.15+. For CS devel versions look to v309 (default). Both these drivers MUST be used with sensorCAM version v320+ as earlier versions will not be recognized. Appropriate drivers are preloaded into DCC-EX CS versions over 5.5.15, 5.6.x and 5.7.x versions
 
 ## APPENDIX K
 
@@ -1067,12 +1055,4 @@ Long(75mm) and short(21mm) ribbon ov2640, angles 66(std?),100,120,160deg lens,65
 
 ![OV2640 Example 3](../../_static/images/ex-sensorcam/ov2640-example-3.png)
 
-### ESP32 CAM 8MB PSRAM
 
-Cameramodulekit 2,4 GHz WiFi Bluetooth 8 MB PSRAM OV2640 Cameramodule 120 66 160 graden 850 nm Nachtzicht 2 MP
-
-![OV2640 Example 4](../../_static/images/ex-sensorcam/ov2640-example-4.png)
-
-### Acceptable alt. WROVER CAM
-
-![ESP32 Wrover CAM](../../_static/images/ex-sensorcam/esp32-wrover-cam.png)
