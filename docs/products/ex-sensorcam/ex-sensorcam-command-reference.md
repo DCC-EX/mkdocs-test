@@ -29,17 +29,19 @@ Commands are used through the Command Station input to configure the sensorCAM s
 }
 </style>
 
-| native CAM | native CS | &nbsp; &nbsp; &nbsp;  Command Description |
+| native CAM<br>example | DCC-EX<br>native CS | &nbsp; &nbsp; &nbsp;  Command Description |
 | --- | --- | :--- |
-| **``a%%[,rr,xx]``** | `<Na %%[ rr xx]>` | **enAble Sensor and refresh reference**<br> Sensor will respond to changing image. rr,xx set as new coordinates |
-| **``b#[,$]``** | `<Nb #>` | **Bank occupancy status [& Brightness ScaleFactor $]**<br>Trip status of 8 sensors in a single byte (8 bits) (hex & binary) |
-| **``c$$$$``** | `<n/a>` | **Camera re-Calibration and re-reference Sensors**<br>Severe changes to camera settings.  Refer to manuals before use! |
-| **``d%%[#]``** | `<n/a>` | **Difference Score for Sensor [# repeats]**<br>Prints colour diff score, brightness score and sum of both |
-| **``e``** | `<Ne>` | **EPROM - save sensorCAM configuration to EPROM**<br>Records parameters in EPROM to be restored upon next Reset |
-| **``f%%``** | `<Nf %%>` | **Frame print. Full 16x3 byte Sensor pixel values**<br>Tabulates 4x4 (RGB) pixels for current and reference sensor images |
-| **``g``** | `<Ng>` | **Get Camera Global Config. Status (to USB)**<br>Lists 14 different parameters of the ov2640 "Calibration" settings |
-| **``h$[,#]``** | `<Nh $ #>` | **Help cmd.(debug for devel)**<br>Debug. h alone lists options. h7,# pauses scroll if bank # trips |
-| **``i%%[,$$]``** | `<Ni %%[ $$]>` | **Info. on Sensor state and configuration**<br>prints sensor state & full definition. [add a "twin" sensor S$$] |
+| `n/a` | `<N>` | **Show Current CAM selection and others available**<lists assigned base vpins |
+| `n/a` | `<NQ>` | **Query state of all Sensors**<br> Tabulation of all CAM sensor tripped states |
+| **`a%%[,rr,xx]`**<br>a12,32,43 | `<Na %%[ rr xx]>` | **enAble Sensor and refresh reference**<br> Sensor responsive. [coordinates:rr,xx\] |
+| **`b#[,$]`**<br>b1 | `<Nb #>` | **Bank occupancy status** bytes of 8 sensors [set Brightness ScaleFactor $\] |
+| **`c$$$$`** | `<n/a>` | **ov2640 re-Calibration and re-reference**<br>Refer to manual before use! (deprecate) |
+| **`d%%[#]`**<br> | `<n/a>` | **Difference Score** for Sensor** [# repeats\]**<br>scores for colour, brightness & sum |
+| **`e`**<br>e | `<Ne>` | **EPROM write configuration**<br>Save parameters for next Reset |
+| **`f%%`**<br>f12 | `<Nf %%>` | **Frame pixel print. Full 16x3 bytes**<br>4x4(RGB) pixels current & reference |
+| **`g`**<br>g | `<Ng>` | **Global ov2640 Status to USB**<br>Lists 14 parameter settings |
+| **`h$[,#]`**<br>h7,1 | `<Nh $ #>` | **Help (debug\)** h lists options<br>h7,# pauses(w\) scroll on bank # trips |
+| **`i%%[,$$]`**<br>i12,02 | `<Ni %%[ $$]>` | **Info on Sensor state & configuration**<br> [add a "twin" sensor (S$$\) to S%%] |
 | **``j$,#``** | `<Nj $ #>` | **adJust ov2640 global parameters & lists 'g' status**<br>Sets a single parameter($) for ov2640. &nbsp; j alone, lists options |
 | **``k%%,rr,xx``** | `<n/a>` | **locate a basic sensor at row rr, column xx**<br>Defines sensor at rr,xx but DOES NOT enable or reference/refresh it |
 | **``l%%``** | `<Nl %%>` | **(Lima) Latch sensor on (occupied=1)**<br>Sensor disabled, & set 1 until a%%, r%% or cleared by o%% |
@@ -57,8 +59,7 @@ Commands are used through the Command Station input to configure the sensorCAM s
 | **``w``** | `<Nw>` | **Wait for command. &nbsp; (NOTE: 't1' alternative action)**<br>Cam suspends image capture and scrolling and waits for an 'Enter' |
 | **``x  y  z``** | `<n/a>` | **Reserved commands for image transfer management**<br>Sends binary data to USB port for Processing4 (X Y Z) image delivery |
 | n/a | `<N[M #00]>` | **Show Current CAM selection and others available (CS only)**<br>Optionally allows switching current cam to CAM# (1-4) |
-| n/a | `<NC ###>` | **CAM selection**<br>Switches commands to the CAM at vpin ### or CAM number #(1-4) |
-| n/a | `<NQ>` | **Query state of all Sensors**<br>Tabulation of all sensor tripped states in banks of 8 |
+| n/a | `<NC ###>` | **CAM selection** Switches to CAM<br> at CAM number #(1-4) or vpin ### |
 | **``F``** | `<NF>` | **Forces immediate CAM reset**<br>Reset into EX-SensorCAM mode, exting any webCAM/WiFi mode |
 | **``R``** | `<n/a>` | **Reset EX-SensorCAM &nbsp; (CS <NR\> gives equivalent of <Nr 00\>)**<br>Reset into EX-SensorCAM mode, exting any WiFi mode |
 | **``&``** | `<n/a>` | **Print statistics since last '&' cmd.**<br>USB histogram of trips and potential trips of 1-3 frames |
