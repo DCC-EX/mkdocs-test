@@ -8629,56 +8629,66 @@
 <table>
 <thead>
 <tr>
-<th>native CAM</th>
-<th>native CS</th>
+<th>native CAM<br>example</th>
+<th>DCC-EX<br>native CS</th>
 <th style="text-align: left;">&nbsp; &nbsp; &nbsp;  Command Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong><code>a%%[,rr,xx]</code></strong></td>
-<td><code>&lt;Na %%[ rr xx]&gt;</code></td>
-<td style="text-align: left;"><strong>enAble Sensor and refresh reference</strong><br> Sensor will respond to changing image. rr,xx set as new coordinates</td>
+<td><code>n/a</code></td>
+<td><code>&lt;N&gt;</code></td>
+<td style="text-align: left;"><strong>Show Current CAM selection and others available</strong>&lt;lists assigned base vpins</td>
 </tr>
 <tr>
-<td><strong><code>b#[,$]</code></strong></td>
+<td><code>n/a</code></td>
+<td><code>&lt;NQ&gt;</code></td>
+<td style="text-align: left;"><strong>Query state of all Sensors</strong><br> Tabulation of all CAM sensor tripped states</td>
+</tr>
+<tr>
+<td><strong><code>a%%[,rr,xx]</code></strong><br>a12,32,43</td>
+<td><code>&lt;Na %%[ rr xx]&gt;</code></td>
+<td style="text-align: left;"><strong>enAble Sensor and refresh reference</strong><br> Sensor responsive. [coordinates:rr,xx]</td>
+</tr>
+<tr>
+<td><strong><code>b#[,$]</code></strong><br>b1</td>
 <td><code>&lt;Nb #&gt;</code></td>
-<td style="text-align: left;"><strong>Bank occupancy status [&amp; Brightness ScaleFactor $]</strong><br>Trip status of 8 sensors in a single byte (8 bits) (hex &amp; binary)</td>
+<td style="text-align: left;"><strong>Bank occupancy status</strong> bytes of 8 sensors [set Brightness ScaleFactor $]</td>
 </tr>
 <tr>
 <td><strong><code>c$$$$</code></strong></td>
 <td><code>&lt;n/a&gt;</code></td>
-<td style="text-align: left;"><strong>Camera re-Calibration and re-reference Sensors</strong><br>Severe changes to camera settings.  Refer to manuals before use!</td>
+<td style="text-align: left;"><strong>ov2640 re-Calibration and re-reference</strong><br>Refer to manual before use! (deprecate)</td>
 </tr>
 <tr>
-<td><strong><code>d%%[#]</code></strong></td>
+<td><strong><code>d%%[#]</code></strong><br></td>
 <td><code>&lt;n/a&gt;</code></td>
-<td style="text-align: left;"><strong>Difference Score for Sensor [# repeats]</strong><br>Prints colour diff score, brightness score and sum of both</td>
+<td style="text-align: left;"><strong>Difference Score</strong> for Sensor** [# repeats]**<br>scores for colour, brightness &amp; sum</td>
 </tr>
 <tr>
-<td><strong><code>e</code></strong></td>
+<td><strong><code>e</code></strong><br>e</td>
 <td><code>&lt;Ne&gt;</code></td>
-<td style="text-align: left;"><strong>EPROM - save sensorCAM configuration to EPROM</strong><br>Records parameters in EPROM to be restored upon next Reset</td>
+<td style="text-align: left;"><strong>EPROM write configuration</strong><br>Save parameters for next Reset</td>
 </tr>
 <tr>
-<td><strong><code>f%%</code></strong></td>
+<td><strong><code>f%%</code></strong><br>f12</td>
 <td><code>&lt;Nf %%&gt;</code></td>
-<td style="text-align: left;"><strong>Frame print. Full 16x3 byte Sensor pixel values</strong><br>Tabulates 4x4 (RGB) pixels for current and reference sensor images</td>
+<td style="text-align: left;"><strong>Frame pixel print. Full 16x3 bytes</strong><br>4x4(RGB) pixels current &amp; reference</td>
 </tr>
 <tr>
-<td><strong><code>g</code></strong></td>
+<td><strong><code>g</code></strong><br>g</td>
 <td><code>&lt;Ng&gt;</code></td>
-<td style="text-align: left;"><strong>Get Camera Global Config. Status (to USB)</strong><br>Lists 14 different parameters of the ov2640 "Calibration" settings</td>
+<td style="text-align: left;"><strong>Global ov2640 Status to USB</strong><br>Lists 14 parameter settings</td>
 </tr>
 <tr>
-<td><strong><code>h$[,#]</code></strong></td>
+<td><strong><code>h$[,#]</code></strong><br>h7,1</td>
 <td><code>&lt;Nh $ #&gt;</code></td>
-<td style="text-align: left;"><strong>Help cmd.(debug for devel)</strong><br>Debug. h alone lists options. h7,# pauses scroll if bank # trips</td>
+<td style="text-align: left;"><strong>Help (debug)</strong> h lists options<br>h7,# pauses(w) scroll on bank # trips</td>
 </tr>
 <tr>
-<td><strong><code>i%%[,$$]</code></strong></td>
+<td><strong><code>i%%[,$$]</code></strong><br>i12,02</td>
 <td><code>&lt;Ni %%[ $$]&gt;</code></td>
-<td style="text-align: left;"><strong>Info. on Sensor state and configuration</strong><br>prints sensor state &amp; full definition. [add a "twin" sensor S$$]</td>
+<td style="text-align: left;"><strong>Info on Sensor state &amp; configuration</strong><br> [add a "twin" sensor (S$$) to S%%]</td>
 </tr>
 <tr>
 <td><strong><code>j$,#</code></strong></td>
@@ -8768,12 +8778,7 @@
 <tr>
 <td>n/a</td>
 <td><code>&lt;NC ###&gt;</code></td>
-<td style="text-align: left;"><strong>CAM selection</strong><br>Switches commands to the CAM at vpin ### or CAM number #(1-4)</td>
-</tr>
-<tr>
-<td>n/a</td>
-<td><code>&lt;NQ&gt;</code></td>
-<td style="text-align: left;"><strong>Query state of all Sensors</strong><br>Tabulation of all sensor tripped states in banks of 8</td>
+<td style="text-align: left;"><strong>CAM selection</strong> Switches to CAM<br> at CAM number #(1-4) or vpin ###</td>
 </tr>
 <tr>
 <td><strong><code>F</code></strong></td>
@@ -8823,7 +8828,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 28, 2026 04:48:00 UTC">June 28, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="July 17, 2026 01:39:45 UTC">July 17, 2026</span>
   </span>
 
     
