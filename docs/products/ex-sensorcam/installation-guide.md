@@ -10,7 +10,7 @@ As the **EX-SensorCAM** is not for Conductors, and perhaps only advanced Tinkere
 
 The chapters of the full manual may be referred to where additional detail is sought. The 12 steps are:
 
-[1. Check youtube video then acquire ESP32-CAM and MB/FTDI](OR ESP32-WROVER-DEV CAM)](#step-1-esp32-cam)  
+[1. Check youtube video then acquire ESP32-CAM or WROVER-CAM and MB/FTDI](#step-1-esp32-cam)  
 [2. install Arduino IDE with the ESP32 libraries including a WiFi CAM example](#step-2-install-the-arduino-ide)  
 [3. Load the CAM with the WiFi example and test](#step-3-load-and-test-the-esp32-cam-example)  
 [4. Install the _sensorCAM.ino_ software and configure](#step-4-install-the-sensorcam)  
