@@ -10,7 +10,7 @@ As the **EX-SensorCAM** is not for Conductors, and perhaps only advanced Tinkere
 
 The chapters of the full manual may be referred to where additional detail is sought. The 12 steps are:
 
-[1. Check youtube video then acquire ESP32-CAM and MB/FTDI](OR ESP32-WROVER-DEV CAM)](#Step-1-esp-32-cam)  
+[1. Check youtube video then acquire ESP32-CAM and MB/FTDI](OR ESP32-WROVER-DEV CAM)](#step-1-esp32-cam)  
 [2. install Arduino IDE with the ESP32 libraries including a WiFi CAM example](#step-2-install-the-arduino-ide)  
 [3. Load the CAM with the WiFi example and test](#step-3-load-and-test-the-esp32-cam-example)  
 [4. Install the _sensorCAM.ino_ software and configure](#step-4-install-the-sensorcam)  
@@ -29,7 +29,7 @@ The chapters of the full manual may be referred to where additional detail is so
 
 See [Drivers for the CH340](https://learn.sparkfun.com/tutorials/how-to-install-ch340-drivers/all) for detailed instructions.
 
-### Step 1. **ESP-32 CAM**
+### Step 1. **ESP32 CAM**
 
 To understand the animal, watch the video at [ESP32 CAM - 10 Dollar Camera for IoT Projects - YouTube](https://www.youtube.com/watch?v=visj0KE5VtY)
 
