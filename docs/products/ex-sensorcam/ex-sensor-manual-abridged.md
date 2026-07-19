@@ -575,7 +575,7 @@ Typical device applications:
 ![Typical Mega with ESP32 CAM](../../_static/images/ex-sensorcam/esp32-wrover-LTC4311.png)
 <br/>Sparkfun endpoints(requires a matching sparkfun endpoint at CS)
 
-![ESP32 Wrover CAM with Sparkfun Endpoint](../../_static/images/ex-sensorcam/esp32-wrover-sparkfun-endpoint.png)
+![ESP32 Wrover CAM with Sparkfun Endpoint](../../_static/images/ex-sensorcam/esp32-wrover-with-endpoint.png)
 
 Recommended CAM wiring is with Endpoints and 5V dedicated regulator with power over GRN-GRNW(Vin) (CAT 5) with Vin(7-9V) from an ungrounded 0.5A DC supply (wall-wart/plug pack).
 
@@ -682,7 +682,7 @@ The ESP32 CAM drives GPIO pins with 3.3V logic. This may well be incompatible wi
 
 For long lengths, the Sparkfun endpoint is perhaps the best overall solution at this stage for driving one (or more) sensorCAMs. It provides greater lengths of cable without extending the Command Station i2c local bus. The endpoints are used in pairs, connected by a long (<100m) differential pair cat5 cable providing power and communications. It can provide buffering, level shifting and power delivery, but care is needed at the CS end to avoid over-voltage damage. It is suggested, with a 5V CS, that the Endpoint pullup 0-1 jumpers at the CS end be cut for safety. The sensorCAM Endpoint default pullups are needed for the 3.3V CAM i2c bus. The CS Endpoint requires 3.3V power (from the CS) and a separate (7 to 9V) DC supply for the expander Regulator & CAM.
 
-![ESP32 Wrover CAM with Sparkfun Endpoint](../../_static/images/ex-sensorcam/esp32-wrover-sparkfun-endpoint.png)
+![ESP32 Wrover CAM with Sparkfun Endpoint](../../_static/images/ex-sensorcam/esp32-wrover-with-endpoint.png)
 
 For further information on use of two Sparkfun Endpoints to connect a CAM over differential pair cable to the CS refer to [full manual APPENDIX F](ex-sensor-manual.md#c-for-3-3v-differential-drive-3-3v-cs-i2c-bus)
 
