@@ -4972,9 +4972,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#57-familiarise-with-commands" class="md-nav__link">
+  <a href="#57-command-familiarisation" class="md-nav__link">
     <span class="md-ellipsis">
-      5.7 Familiarise with commands
+      5.7 Command Familiarisation
     </span>
   </a>
   
@@ -5035,9 +5035,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#514-scrolling-data-interpretation" class="md-nav__link">
+  <a href="#514-scroll-data-interpretation" class="md-nav__link">
     <span class="md-ellipsis">
-      5.14 Scrolling data interpretation
+      5.14 Scroll data interpretation
     </span>
   </a>
   
@@ -5049,19 +5049,19 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#6-processing4-monitorconsole" class="md-nav__link">
+  <a href="#6-processing4-monitor" class="md-nav__link">
     <span class="md-ellipsis">
-      6 PROCESSING4 monitor/console
+      6 PROCESSING4 monitor
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="6 PROCESSING4 monitor/console">
+    <nav class="md-nav" aria-label="6 PROCESSING4 monitor">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#processing4-command-summary" class="md-nav__link">
+  <a href="#processing4-commands" class="md-nav__link">
     <span class="md-ellipsis">
-      PROCESSING4 command summary
+      PROCESSING4 commands
     </span>
   </a>
   
@@ -9268,9 +9268,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#57-familiarise-with-commands" class="md-nav__link">
+  <a href="#57-command-familiarisation" class="md-nav__link">
     <span class="md-ellipsis">
-      5.7 Familiarise with commands
+      5.7 Command Familiarisation
     </span>
   </a>
   
@@ -9331,9 +9331,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#514-scrolling-data-interpretation" class="md-nav__link">
+  <a href="#514-scroll-data-interpretation" class="md-nav__link">
     <span class="md-ellipsis">
-      5.14 Scrolling data interpretation
+      5.14 Scroll data interpretation
     </span>
   </a>
   
@@ -9345,19 +9345,19 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#6-processing4-monitorconsole" class="md-nav__link">
+  <a href="#6-processing4-monitor" class="md-nav__link">
     <span class="md-ellipsis">
-      6 PROCESSING4 monitor/console
+      6 PROCESSING4 monitor
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="6 PROCESSING4 monitor/console">
+    <nav class="md-nav" aria-label="6 PROCESSING4 monitor">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#processing4-command-summary" class="md-nav__link">
+  <a href="#processing4-commands" class="md-nav__link">
     <span class="md-ellipsis">
-      PROCESSING4 command summary
+      PROCESSING4 commands
     </span>
   </a>
   
@@ -9871,7 +9871,7 @@
 <strong>Note: t1</strong> toggles output scrolling data ON/OFF without suspending either flashing or sensing.</p>
 <h3 id="56-verify-wifi-webcam-ops">5.6 Verify WiFi webCAM ops<a class="headerlink" href="#56-verify-wifi-webcam-ops" title="Permanent link">&para;</a></h3>
 <p>The CAM can be switched to webCAM WiFi video mode with the '<strong>v1</strong>' command. '<strong>v2</strong>' can select your alternate WiFi network. ('<strong>v</strong>' will give sensorCAM software version). '<strong>v1</strong>' (or '<strong>v2</strong>') will reboot and load webCAM mode connecting to the network selected, and providing a URL e.g. http://192.168.0.xx that can be used to connect with a browser. An image, like <strong>Figure 1</strong> above, should be seen with controls for experimenting with Brightness etc. This image is educational and useful for camera alignment, but not necessarily a good indication of the sensorCAM (sensor mode) image because of the unpredictable parameter effects. To see a more reliable image, run the PROCESSING 4 <em>SensorCAM.pde</em> monitor instead of Arduino webCAM example (refer <a href="#6-processing4-monitorconsole">Section 6</a>). To exit video mode, try the monitor command <strong><code>R</code></strong> (or <strong><code>F</code></strong>). If this software reset fails, try manually rebooting the sensorCAM (power OFF/ON or via the on-board RST push-button using a non-metallic tool!).</p>
-<h3 id="57-familiarise-with-commands">5.7 Familiarise with commands<a class="headerlink" href="#57-familiarise-with-commands" title="Permanent link">&para;</a></h3>
+<h3 id="57-command-familiarisation">5.7 Command Familiarisation<a class="headerlink" href="#57-command-familiarisation" title="Permanent link">&para;</a></h3>
 <p>Review the sections below (<strong>5.8 etc.</strong>), before mounting the camera over the railroad, as it is advisable to be familiar with the sensorCAM command set. The setup commands will have to be repeated accurately once the CAM is mounted in its final location (Step 5. Installation Guide).</p>
 <h3 id="58-sensor-placement">5.8 Sensor placement<a class="headerlink" href="#58-sensor-placement" title="Permanent link">&para;</a></h3>
 <p>Setting up the CAM first requires locating sensors. When deciding on sensor location, be aware that the sensor response is slow compared to conventional sensors. Allowing for 500mSec delay, which at 100kph equates to 150mm of travel (in HO), may influence sensor placement. Best performance is obtained if the sensors are not within 20 rows/columns of an image edge. Remember to save to EPROM with the 'e' command once satisfied. Virtual sensor location can be set up in several ways. Option d. is preferred.</p>
@@ -9894,13 +9894,13 @@
 <h3 id="513-sensor-reference-refresh">5.13 Sensor reference refresh<a class="headerlink" href="#513-sensor-reference-refresh" title="Permanent link">&para;</a></h3>
 <p>Although sensor enabling (<strong><code>a</code></strong>) causes an immediate reference capture, it may be necessary to occasionally do a fresh reference capture for all sensors (make sure they are unoccupied!) by using the '<strong>r00</strong>' command. Individual sensor references can be refreshed using <strong><code>r%%</code></strong>. The results of a refresh can be seen in the scrolling "data dumps" of enabled sensors, their "difference scores" (32-99), and their perceived occupancy state. The sensor <strong>S00</strong> is constantly averaged and refreshed every 6.4 seconds. Furthermore, there is an automatic refresh process that cycles through enabled sensors and regularly averages 32 consecutive sample images.
 If the sensor remains unoccupied, it updates the reference, compensating for slowly drifting lighting changes.</p>
-<h3 id="514-scrolling-data-interpretation">5.14 Scrolling data interpretation<a class="headerlink" href="#514-scrolling-data-interpretation" title="Permanent link">&para;</a></h3>
+<h3 id="514-scroll-data-interpretation">5.14 Scroll data interpretation<a class="headerlink" href="#514-scroll-data-interpretation" title="Permanent link">&para;</a></h3>
 <p>The scrolling data dump displays "SUS" (suspend) if auto updates are off. It also displays <em>threshold</em>(T), <em>min2trip</em>(M), the bank assigned to the on-board <em>nLED</em>(N), S00 reference diff. score, as well as the S00 reference brightness(R) and its current actual brightness(A), a brightness scale factor(B) and other enabled sensors. 'A' is the Actual latest sum of the 48 bytes of a sensor image (max 3024) and should be between 1200 and 2500 ideally. Following a reference refresh (<strong><code>r</code></strong>), for an unoccupied image, the (noisy) diff. scores should be 32-37. If references are being updated, a note will appear at the right hand side of the data dump in the form of "<strong>Ref 0%%</strong>" to indicate that a new reference for an UNOCCUPIED sensor has occurred. This dump allows for performance monitoring during commissioning.<br />
 :<strong>oo46##</strong> indicates tripped sensor (## = <strong>occupied</strong>) sensor are shown by default with a central diff score (32-99).<br />
 :<strong>?-46-?</strong> indicate an above threshold image <strong>potentially occupied</strong> (waiting for <em>min2trip</em>).<br />
 :<strong>oo47?T</strong> indicates <strong>suspected occupied</strong> but no confirmation from Twin (see <a href="../ex-sensor-manual/#515-second-opinions-twin">5.15 in the full manual</a>).</p>
-<h2 id="6-processing4-monitorconsole">6 PROCESSING4 monitor/console<a class="headerlink" href="#6-processing4-monitorconsole" title="Permanent link">&para;</a></h2>
-<p><img alt="Processing4 Console with Image" src="../../../_static/images/ex-sensorcam/processing4-console-image.png" /><br />
+<h2 id="6-processing4-monitor">6 PROCESSING4 monitor<a class="headerlink" href="#6-processing4-monitor" title="Permanent link">&para;</a></h2>
+<p><img alt="Processing4 Monitor/Console with Image" src="../../../_static/images/ex-sensorcam/processing4-console-image.png" /><br />
  &nbsp; &nbsp; <strong>Figure 5 &nbsp; Processing 4 Console and image window</strong>
  &nbsp; &nbsp; &nbsp; Note: Sub-optimum 'c' settings caused green tint.</p>
 <p>The Processing application displays the image using sensorCAM settings, and also shows colour coded sensors. As previously stated, the PROCESSING4 application is a crude USB monitor that enables the user to control and configure the sensorCAM with the additional benefit of being able to invoke a display of the image. All the sensorCAM commands can be used. At 115200 baud, a full RGB565 image takes 13 seconds, but it is often convenient to reduce this by prescribing a smaller image segment of limited rows and/or columns (e.g. <strong>Y120</strong> for lower half of a 240 row screen).<br />
@@ -9911,7 +9911,7 @@ You may also increase the image display window size factor by editing the next <
 <p>The image will have enabled sensors (b/s) boxed and identified by a (resistor) colour code. Left bar is bank# and right bar is sensor#. Combined, they give the Sensor's bsNo (S%%). If two sensors have the same coordinates, the colour code will be for the highest bsNo.  <br />
 <strong>Note:</strong> Only sensors below <em>maxSensors</em> will appear boxed. <strong>N.B.</strong> the <strong><code>H</code></strong> command will REVERSE the coding from b/s to s/b.<br />
 <strong>(The resistor colour code is 0:black 1=brown 2=red 3=orange 4=yellow 5=green 6=blue 7=violet 8=grey 9=white)</strong></p>
-<h3 id="processing4-command-summary">PROCESSING4 command summary<a class="headerlink" href="#processing4-command-summary" title="Permanent link">&para;</a></h3>
+<h3 id="processing4-commands">PROCESSING4 commands<a class="headerlink" href="#processing4-commands" title="Permanent link">&para;</a></h3>
 <p><strong><code>W###</code></strong> &nbsp; will limit the image to### rows wide/high(1-240) (default 240)</p>
 <p><strong><code>X###</code></strong> &nbsp; will start the image from column ###(0-319) (default 0) -uses the sensorCAM 'x' command.</p>
 <p><strong><code>Y###</code></strong> &nbsp; will initiate an image download starting at row ### (0-239) (default 0) -uses the sensorCAM 'y' command.</p>
@@ -10392,7 +10392,6 @@ Using CS native commands, e.g. <strong>&lt;Ni 212&gt;</strong> and <strong>&lt;N
 <p><a href="../ex-sensor-manual/#appendix-j">full manual</a></p>
 <div class="admonition note">
 <p class="admonition-title">NOTES on using 40-pin WROVER CAM and 38-pin breakout board</p>
-</div>
 <ol>
 <li>
 <p>The WROVER-CAM offers potentially the simplest commercially available hookup for any sensorCAM.</p>
@@ -10419,6 +10418,7 @@ Using CS native commands, e.g. <strong>&lt;Ni 212&gt;</strong> and <strong>&lt;N
 <p>The breakout board USB connectors are for an optional 5V power source ONLY. No comm's.</p>
 </li>
 </ol>
+</div>
 <h4 id="mounting-and-power">Mounting and Power<a class="headerlink" href="#mounting-and-power" title="Permanent link">&para;</a></h4>
 <p>The sensorCAM can be Reset remotely by software or by cycling the power supply. The CAM MUST be rigidly mounted as it's response to any image vibration can trip sensors. It is best not moved after sensor location programming as precise realignment could be tedious. It is, however, advisable to make guides or jig arrangement to at least be able to remove (for maintenance) and return with minimal misalignment to cover the same field of view. The inconvenient LED method of placing/positioning sensors may be necessary if a long USB cable is impractical. A 5m buffered USB cable might be advantageous. Even so, setup programming or imaging over a long USB cable may not be satisfactory.</p>
 <p>The sensorCAM needs a regulated power supply independent of the i2c bus SDA,SCL &amp; GND cable. It requires 1A 9V DC supply (wall-wart/plugpack PSU). The cam typically runs on 200mA but 500mA in wifi mode.  A 5V regulator is needed at the CAM itself to feed the on-board 3.3V regulator.  The 5V regulator is included on the recommended 38pin expander board. Limited 3.3V is available from the CAM itself.</p>
@@ -10429,6 +10429,8 @@ Using CS native commands, e.g. <strong>&lt;Ni 212&gt;</strong> and <strong>&lt;N
 <h4 id="i2c-sparkfun-endpoints">I2C Sparkfun Endpoints<a class="headerlink" href="#i2c-sparkfun-endpoints" title="Permanent link">&para;</a></h4>
 <p>For long lengths, the Sparkfun endpoint is perhaps the best overall solution at this stage for driving one (or more) sensorCAMs. It provides greater lengths of cable without extending the Command Station i2c local bus. The endpoints are used in pairs, connected by a long (&lt;100m) differential pair cat5 cable providing power and communications. It can provide buffering, level shifting and power delivery, but care is needed at the CS end to avoid over-voltage damage. It is suggested, with a 5V CS, that the Endpoint pullup 0-1 jumpers at the CS end be cut for safety. The sensorCAM Endpoint default pullups are needed for the 3.3V CAM i2c bus. The CS Endpoint requires 3.3V power (from the CS) and a separate (7 to 9V) DC supply for the expander Regulator &amp; CAM.</p>
 <p><img alt="ESP32 Wrover CAM with Sparkfun Endpoint" src="../../../_static/images/ex-sensorcam/esp32-wrover-with-endpoint.png" /></p>
+<p><strong>Wiring for Differential drive with 3.3V CS BUS:</strong></p>
+<p><img alt="Differential Drive 3.3V Only CS" src="../../../_static/images/ex-sensorcam/differential-drive-3v3-only-cs.png" /></p>
 <p>For further information on use of two Sparkfun Endpoints to connect a CAM over differential pair cable to the CS refer to <a href="../ex-sensor-manual/#c-for-3-3v-differential-drive-3-3v-cs-i2c-bus">full manual APPENDIX F</a></p>
 <h4 id="i2c-and-pca9515a">I2C and PCA9515A<a class="headerlink" href="#i2c-and-pca9515a" title="Permanent link">&para;</a></h4>
 <p>Another option is to use PCA9515A with the Wrover-CAM connected as below, particularly with a 5V CS Mega to achieve voltage level shifting.  The wires from PCA9515A to the CAM can be up to 2m long if needed (with extra pullups) using twisted pairs (cat5?).  Use of LTC4311 with PSA9515A is not recommeded.</p>
@@ -10456,7 +10458,7 @@ Using CS native commands, e.g. <strong>&lt;Ni 212&gt;</strong> and <strong>&lt;N
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="July 19, 2026 02:02:09 UTC">July 19, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="July 19, 2026 02:43:52 UTC">July 19, 2026</span>
   </span>
 
     
