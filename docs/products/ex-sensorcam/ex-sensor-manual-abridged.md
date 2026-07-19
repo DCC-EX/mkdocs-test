@@ -164,7 +164,7 @@ The sensorCAM takes some time to boot and establish sensing mode. The flash LED 
 
 The CAM can be switched to webCAM WiFi video mode with the '**v1**' command. '**v2**' can select your alternate WiFi network. ('**v**' will give sensorCAM software version). '**v1**' (or '**v2**') will reboot and load webCAM mode connecting to the network selected, and providing a URL e.g. http://192.168.0.xx that can be used to connect with a browser. An image, like **Figure 1** above, should be seen with controls for experimenting with Brightness etc. This image is educational and useful for camera alignment, but not necessarily a good indication of the sensorCAM (sensor mode) image because of the unpredictable parameter effects. To see a more reliable image, run the PROCESSING 4 *SensorCAM.pde* monitor instead of Arduino webCAM example (refer [Section 6](#6-processing4-monitorconsole)). To exit video mode, try the monitor command **``R``** (or **``F``**). If this software reset fails, try manually rebooting the sensorCAM (power OFF/ON or via the on-board RST push-button using a non-metallic tool!).
 
-### 5.7 Familiarise with commands
+### 5.7 Command Familiarisation
 
 Review the sections below (**5.8 etc.**), before mounting the camera over the railroad, as it is advisable to be familiar with the sensorCAM command set. The setup commands will have to be repeated accurately once the CAM is mounted in its final location (Step 5. Installation Guide).
 
@@ -209,16 +209,16 @@ If you want a LED bank occupancy indicator on the CAM, use the **``n$``** comman
 Although sensor enabling (**``a``**) causes an immediate reference capture, it may be necessary to occasionally do a fresh reference capture for all sensors (make sure they are unoccupied!) by using the '**r00**' command. Individual sensor references can be refreshed using **``r%%``**. The results of a refresh can be seen in the scrolling "data dumps" of enabled sensors, their "difference scores" (32-99), and their perceived occupancy state. The sensor **S00** is constantly averaged and refreshed every 6.4 seconds. Furthermore, there is an automatic refresh process that cycles through enabled sensors and regularly averages 32 consecutive sample images.
 If the sensor remains unoccupied, it updates the reference, compensating for slowly drifting lighting changes.
 
-### 5.14 Scrolling data interpretation
+### 5.14 Scroll data interpretation
 
 The scrolling data dump displays "SUS" (suspend) if auto updates are off. It also displays *threshold*(T), *min2trip*(M), the bank assigned to the on-board *nLED*(N), S00 reference diff. score, as well as the S00 reference brightness(R) and its current actual brightness(A), a brightness scale factor(B) and other enabled sensors. 'A' is the Actual latest sum of the 48 bytes of a sensor image (max 3024) and should be between 1200 and 2500 ideally. Following a reference refresh (**``r``**), for an unoccupied image, the (noisy) diff. scores should be 32-37. If references are being updated, a note will appear at the right hand side of the data dump in the form of "**Ref 0%%**" to indicate that a new reference for an UNOCCUPIED sensor has occurred. This dump allows for performance monitoring during commissioning.  
 :**oo46##** indicates tripped sensor (## = **occupied**) sensor are shown by default with a central diff score (32-99).  
 :**?-46-?** indicate an above threshold image **potentially occupied** (waiting for *min2trip*).  
 :**oo47?T** indicates **suspected occupied** but no confirmation from Twin (see [5.15 in the full manual](ex-sensor-manual.md#515-second-opinions-twin)).
 
-## 6 PROCESSING4 monitor/console
+## 6 PROCESSING4 monitor
 
-![Processing4 Console with Image](../../_static/images/ex-sensorcam/processing4-console-image.png)  
+![Processing4 Monitor/Console with Image](../../_static/images/ex-sensorcam/processing4-console-image.png)  
  &nbsp; &nbsp; **Figure 5 &nbsp; Processing 4 Console and image window**
  &nbsp; &nbsp; &nbsp; Note: Sub-optimum 'c' settings caused green tint.
 
@@ -234,7 +234,7 @@ The image will have enabled sensors (b/s) boxed and identified by a (resistor) c
 **Note:** Only sensors below *maxSensors* will appear boxed. **N.B.** the **``H``** command will REVERSE the coding from b/s to s/b.  
 **(The resistor colour code is 0:black 1=brown 2=red 3=orange 4=yellow 5=green 6=blue 7=violet 8=grey 9=white)**
 
-### PROCESSING4 command summary
+### PROCESSING4 commands
 
 **``W###``** &nbsp; will limit the image to\#\#\# rows wide/high(1-240) (default 240)
 
@@ -648,21 +648,21 @@ Using CS native commands, e.g. **<Ni 212\>** and **<Ni 312\>**, can also access 
 
 !!! note "NOTES on using 40-pin WROVER CAM and 38-pin breakout board"
 
- 1. The WROVER-CAM offers potentially the simplest commercially available hookup for any sensorCAM.
+    1. The WROVER-CAM offers potentially the simplest commercially available hookup for any sensorCAM.
 
- 2. Software configuration: add *#define CAMERA_MODEL_WROVER_KIT* to bottom of configCAM.h
+    2. Software configuration: add *#define CAMERA_MODEL_WROVER_KIT* to bottom of configCAM.h
 
- 3. 2x"Spare" (USB end) Vcc and GND pins not used with the 38 pin expansion board shown. (pins could be removed for safety)
+    3. 2x"Spare" (USB end) Vcc and GND pins not used with the 38 pin expansion board shown. (pins could be removed for safety)
 
- 4. As with other esp32 devices, adding 2.2uF capacitor between reset (EN) pin and gnd ensures more reliable power-on reset.
+    4. As with other esp32 devices, adding 2.2uF capacitor between reset (EN) pin and gnd ensures more reliable power-on reset.
 
- 5. Optionally add a super-bright green LED and 330R resistor from 3.3V to GPIO14 for programmable nLED indicator.
+    5. Optionally add a super-bright green LED and 330R resistor from 3.3V to GPIO14 for programmable nLED indicator.
 
- 6. There is no white "flash" LED on Wrover-CAM but, in sensorCAM mode, the on-board blue LED flashes instead. (GPIO2)
+    6. There is no white "flash" LED on Wrover-CAM but, in sensorCAM mode, the on-board blue LED flashes instead. (GPIO2)
 
- 7. Limit Vin barrel jack to 7-10V max to avoid overheating the 1117C 5V regulator. (Vne= 16V)
+    7. Limit Vin barrel jack to 7-10V max to avoid overheating the 1117C 5V regulator. (Vne= 16V)
 
- 8. The breakout board USB connectors are for an optional 5V power source ONLY. No comm's.
+    8. The breakout board USB connectors are for an optional 5V power source ONLY. No comm's.
 
 ####Mounting and Power
 
@@ -683,6 +683,10 @@ The ESP32 CAM drives GPIO pins with 3.3V logic. This may well be incompatible wi
 For long lengths, the Sparkfun endpoint is perhaps the best overall solution at this stage for driving one (or more) sensorCAMs. It provides greater lengths of cable without extending the Command Station i2c local bus. The endpoints are used in pairs, connected by a long (<100m) differential pair cat5 cable providing power and communications. It can provide buffering, level shifting and power delivery, but care is needed at the CS end to avoid over-voltage damage. It is suggested, with a 5V CS, that the Endpoint pullup 0-1 jumpers at the CS end be cut for safety. The sensorCAM Endpoint default pullups are needed for the 3.3V CAM i2c bus. The CS Endpoint requires 3.3V power (from the CS) and a separate (7 to 9V) DC supply for the expander Regulator & CAM.
 
 ![ESP32 Wrover CAM with Sparkfun Endpoint](../../_static/images/ex-sensorcam/esp32-wrover-with-endpoint.png)
+
+**Wiring for Differential drive with 3.3V CS BUS:**
+
+![Differential Drive 3.3V Only CS](../../_static/images/ex-sensorcam/differential-drive-3v3-only-cs.png)
 
 For further information on use of two Sparkfun Endpoints to connect a CAM over differential pair cable to the CS refer to [full manual APPENDIX F](ex-sensor-manual.md#c-for-3-3v-differential-drive-3-3v-cs-i2c-bus)
 
