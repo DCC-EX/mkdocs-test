@@ -10349,7 +10349,7 @@ The information below pertains mostly to the newer WROVER-CAM, as mentioned in <
 <p>Typical device applications:</p>
 <p><img alt="Typical Mega with ESP32 CAM" src="../../../_static/images/ex-sensorcam/esp32-wrover-LTC4311.png" />
 <br/>Sparkfun endpoints(requires a matching sparkfun endpoint at CS)</p>
-<p><img alt="ESP32 Wrover CAM with Sparkfun Endpoint" src="../../../_static/images/ex-sensorcam/esp32-wrover-sparkfun-endpoint.png" /></p>
+<p><img alt="ESP32 Wrover CAM with Sparkfun Endpoint" src="../../../_static/images/ex-sensorcam/esp32-wrover-with-endpoint.png" /></p>
 <p>Recommended CAM wiring is with Endpoints and 5V dedicated regulator with power over GRN-GRNW(Vin) (CAT 5) with Vin(7-9V) from an ungrounded 0.5A DC supply (wall-wart/plug pack).</p>
 <p>There are two basic variations below for connecting the Endpoints to the CS. The choice depends on the current system being extended. Options A applies to a 5V CS(Mega) with or without other existing I2C accessory connections, while Option C is the simplest connection to a 3.3Volt CS (e.g. <strong>EX-CSB1</strong>) i2c bus.  The i2c bus should be "tuned" to include the CAM load before the CAM is attached.  The Endpoint has a pair of 4k7 pullups that may be disconnected by jumper cuts.  Refer to Tinkerers Guide to Tuning documentation on i2c.</p>
 <p>The 2x Endpoints require about  10mA  each from the 3.3V PS. All options can be adapted for use with a mux if necessary.</p>
@@ -10428,7 +10428,7 @@ Using CS native commands, e.g. <strong>&lt;Ni 212&gt;</strong> and <strong>&lt;N
 <p><img alt="Typical Mega with ESP32 CAM" src="../../../_static/images/ex-sensorcam/esp32-wrover-LTC4311.png" /></p>
 <h4 id="i2c-sparkfun-endpoints">I2C Sparkfun Endpoints<a class="headerlink" href="#i2c-sparkfun-endpoints" title="Permanent link">&para;</a></h4>
 <p>For long lengths, the Sparkfun endpoint is perhaps the best overall solution at this stage for driving one (or more) sensorCAMs. It provides greater lengths of cable without extending the Command Station i2c local bus. The endpoints are used in pairs, connected by a long (&lt;100m) differential pair cat5 cable providing power and communications. It can provide buffering, level shifting and power delivery, but care is needed at the CS end to avoid over-voltage damage. It is suggested, with a 5V CS, that the Endpoint pullup 0-1 jumpers at the CS end be cut for safety. The sensorCAM Endpoint default pullups are needed for the 3.3V CAM i2c bus. The CS Endpoint requires 3.3V power (from the CS) and a separate (7 to 9V) DC supply for the expander Regulator &amp; CAM.</p>
-<p><img alt="ESP32 Wrover CAM with Sparkfun Endpoint" src="../../../_static/images/ex-sensorcam/esp32-wrover-sparkfun-endpoint.png" /></p>
+<p><img alt="ESP32 Wrover CAM with Sparkfun Endpoint" src="../../../_static/images/ex-sensorcam/esp32-wrover-with-endpoint.png" /></p>
 <p>For further information on use of two Sparkfun Endpoints to connect a CAM over differential pair cable to the CS refer to <a href="../ex-sensor-manual/#c-for-3-3v-differential-drive-3-3v-cs-i2c-bus">full manual APPENDIX F</a></p>
 <h4 id="i2c-and-pca9515a">I2C and PCA9515A<a class="headerlink" href="#i2c-and-pca9515a" title="Permanent link">&para;</a></h4>
 <p>Another option is to use PCA9515A with the Wrover-CAM connected as below, particularly with a 5V CS Mega to achieve voltage level shifting.  The wires from PCA9515A to the CAM can be up to 2m long if needed (with extra pullups) using twisted pairs (cat5?).  Use of LTC4311 with PSA9515A is not recommeded.</p>
@@ -10456,7 +10456,7 @@ Using CS native commands, e.g. <strong>&lt;Ni 212&gt;</strong> and <strong>&lt;N
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="July 18, 2026 08:27:53 UTC">July 18, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="July 19, 2026 02:02:09 UTC">July 19, 2026</span>
   </span>
 
     
