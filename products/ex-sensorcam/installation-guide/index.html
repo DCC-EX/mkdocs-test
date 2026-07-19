@@ -4822,9 +4822,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#step4-install-the-sensorcam" class="md-nav__link">
+  <a href="#step-4-install-the-sensorcam" class="md-nav__link">
     <span class="md-ellipsis">
-      Step4. Install the sensorCAM
+      Step 4. Install the sensorCAM
     </span>
   </a>
   
@@ -4885,18 +4885,18 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#step-11-connect-cam-to-an-i2c-interface-eg-pca9515a-or-better" class="md-nav__link">
+  <a href="#step-11-connect-cam-to-an-i2c-interface" class="md-nav__link">
     <span class="md-ellipsis">
-      Step 11. Connect CAM to an i2c interface (e.g. PCA9515A or better)
+      Step 11. Connect CAM to an i2c interface
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#step-12-depending-on-system-integrate-sensorcam-into-command-station-using-appropriate-code" class="md-nav__link">
+  <a href="#step-12-integrate-sensorcam-into-command-station-using-appropriate-code" class="md-nav__link">
     <span class="md-ellipsis">
-      Step 12. Depending on system, integrate sensorCAM into Command Station using appropriate code.
+      Step 12. Integrate sensorCAM into Command Station using appropriate code.
     </span>
   </a>
   
@@ -8722,9 +8722,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#step4-install-the-sensorcam" class="md-nav__link">
+  <a href="#step-4-install-the-sensorcam" class="md-nav__link">
     <span class="md-ellipsis">
-      Step4. Install the sensorCAM
+      Step 4. Install the sensorCAM
     </span>
   </a>
   
@@ -8785,18 +8785,18 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#step-11-connect-cam-to-an-i2c-interface-eg-pca9515a-or-better" class="md-nav__link">
+  <a href="#step-11-connect-cam-to-an-i2c-interface" class="md-nav__link">
     <span class="md-ellipsis">
-      Step 11. Connect CAM to an i2c interface (e.g. PCA9515A or better)
+      Step 11. Connect CAM to an i2c interface
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#step-12-depending-on-system-integrate-sensorcam-into-command-station-using-appropriate-code" class="md-nav__link">
+  <a href="#step-12-integrate-sensorcam-into-command-station-using-appropriate-code" class="md-nav__link">
     <span class="md-ellipsis">
-      Step 12. Depending on system, integrate sensorCAM into Command Station using appropriate code.
+      Step 12. Integrate sensorCAM into Command Station using appropriate code.
     </span>
   </a>
   
@@ -8841,27 +8841,25 @@
 <p>This installation process is divided into 12 steps outlined below. It is recommended that it be treated as a learning exercise and that testing of progress occur after each major step. For example, familiarization with Arduino IDE should be developed before moving to the ESP32 example, and then familiarize with the ESP32-CAM WiFi example before moving on to the sensorCAM loading.</p>
 <p>As the <strong>EX-SensorCAM</strong> is not for Conductors, and perhaps only advanced Tinkerers, it is anticipated that users will already be familiar with the Arduino IDE and maybe already have toyed with the ESP32-CAM. We have not therefore included much detail on the first few steps but rather referred to existing documentation elsewhere (e.g. Arduino &amp; YouTube). Most detail is provided in steps 4 to 8 at this stage.</p>
 <p>The chapters of the full manual may be referred to where additional detail is sought. The 12 steps are:</p>
-<ol>
-<li>Check youtube video then acquire ESP32-CAM and MB/FTDI (OR ESP32-WROVER-DEV CAM)</li>
-<li>install Arduino IDE with the ESP32 libraries (includes a WiFi CAM example)</li>
-<li>Load the CAM with the WiFi example and test.</li>
-<li>Install the <em>sensorCAM.ino</em> software and configure.</li>
-<li>Test the basic sensorCAM functions to confirm functional install</li>
-<li>Load Processing 4 app. and <em>sensorCAM.pde</em> code</li>
-<li>Use the Processing 4 app to replace the Arduino Monitor. Further familiarise and test.</li>
-<li>With a fixed camera, create test sensors and test detection with moving targets.</li>
-<li>Setup the CAM viewing the model railroad and test a virtual sensor with moving rolling stock.</li>
-<li>Optimise parameters for best performance.</li>
-<li>Connect CAM to an i2c interface (e.g. PCA9515A or better)</li>
-<li>Depending on system, integrate <strong>EX-SensorCAM</strong> into <strong>EX-CommandStation</strong> using appropriate code.</li>
-</ol>
+<p><a href="OR ESP32-WROVER-DEV CAM">1. Check youtube video then acquire ESP32-CAM and MB/FTDI</a>](#Step-1-esp-32-cam)<br />
+<a href="#step-2-install-the-arduino-ide">2. install Arduino IDE with the ESP32 libraries including a WiFi CAM example</a><br />
+<a href="#step-3-load-and-test-the-esp32-cam-example">3. Load the CAM with the WiFi example and test</a><br />
+<a href="#step-4-install-the-sensorcam">4. Install the <em>sensorCAM.ino</em> software and configure</a><br />
+<a href="#step-5-test-the-basic-sensorcam-functions">5. Test the basic sensorCAM functions to confirm functional install</a><br />
+<a href="#step-6-load-processing-4">6. Load Processing 4 App. and <em>sensorCAM.pde</em> code</a><br />
+<a href="#step-7-use-the-processing-4-app-to-replace-the-arduino-monitor">7. Use the Processing 4 app to replace the Arduino Monitor. Further familiarise and test</a><br />
+<a href="#step-8-create-test-sensors-and-test-detection-with-moving-targets">8. With a fixed camera, create test sensors and test detection with moving targets</a><br />
+<a href="#step-9-setup-the-cam-viewing-a-railroad-and-test-a-virtual-sensor-with-moving-rolling-stock">9. Setup the CAM viewing the model railroad and test a virtual sensor with moving rolling stock</a><br />
+<a href="#step-10-optimise-parameters-for-best-performance">10. Optimise parameters for best performance</a><br />
+<a href="#step-11-connect-cam-to-an-i2c-interface">11. Connect CAM to an i2c interface - PCA9515A or better</a><br />
+<a href="#step-12-integrate-sensorcam-into-command-station-using-appropriate-code">12. Depending on system, integrate <strong>EX-SensorCAM</strong> into <strong>EX-CommandStation</strong> using appropriate code</a>  </p>
 <p><strong>Note:</strong> Check version of your CH340 driver in <strong>Device Manager - Ports</strong>. Change if issues arise<strong>.</strong></p>
 <p><strong>Recommended system USB driver is 3.5.2019.1 <img alt="Serial Driver Version" src="../../../_static/images/ex-sensorcam/serial-driver-version.png" /></strong></p>
 <p>See <a href="https://learn.sparkfun.com/tutorials/how-to-install-ch340-drivers/all">Drivers for the CH340</a> for detailed instructions.</p>
-<h3 id="step-1-esp-32-cam"><strong>Step 1. ESP-32 CAM</strong><a class="headerlink" href="#step-1-esp-32-cam" title="Permanent link">&para;</a></h3>
+<h3 id="step-1-esp-32-cam">Step 1. <strong>ESP-32 CAM</strong><a class="headerlink" href="#step-1-esp-32-cam" title="Permanent link">&para;</a></h3>
 <p>To understand the animal, watch the video at <a href="https://www.youtube.com/watch?v=visj0KE5VtY">ESP32 CAM - 10 Dollar Camera for IoT Projects - YouTube</a></p>
 <p>Be aware that you need a USB adapter and the ESP32-CAM-MB is preferred as it avoids hazards associated with a "wired" FTDI power where errors can easily result in CAM destruction. Programming is also easier. Acquire a CAM from your favourite source. Also be prepared for defective product so a spare CAM may be worthwhile. I have had 2 faulty ov2640 modules. ESP32-CAM version 1.9 is preferred (has GND/Reset pin) Purchasing ESP32-CAM-MB as a pair (MB &amp; CAM) is safest. Purchasing two pairs is insurance. Alternatively consider a new compatible ESP32-WROVER-CAM with simpler wiring (see Appendix &amp; sensorCAMmanual)</p>
-<h3 id="step-2-install-the-arduino-ide"><strong>Step 2. Install the Arduino IDE</strong><a class="headerlink" href="#step-2-install-the-arduino-ide" title="Permanent link">&para;</a></h3>
+<h3 id="step-2-install-the-arduino-ide">Step 2. <strong>Install the Arduino IDE</strong><a class="headerlink" href="#step-2-install-the-arduino-ide" title="Permanent link">&para;</a></h3>
 <p>If you are not already familiar with this IDE (Integrated Development Environment), rather than go into details that are already covered in great detail on the Arduino web page, just follow the instructions in the following link <a href="https://www.arduino.cc/en/Guide">Arduino IDE Guide</a> and then return here.</p>
 <p><strong>Step 2A. Install the IDE ESP32 libraries (including for ESP32-CAM).</strong></p>
 <p>If you are new to ESP32, the board manager for ESP32 must be loaded. This is explained in the video at the <strong>10minute</strong> mark. <strong>Note: WE <em>MUST</em> USE esp32 by Espressif. Select version 2.0.17</strong> &amp; Install, NOT latest <strong>(3.1.x)</strong></p>
@@ -8874,7 +8872,7 @@
 <p>Note: With the MB board there is a push button (IO0) that replaces the FTDI programming link. Hold the button in when powering up the CAM to initiate programming mode. With later versions of esp32-CAM the IO0 push button on the MB may not be needed. Ensure a Huge Partition Scheme is selected.</p>
 <p><img alt="Ardino IDE Select AI Thinker Board" src="../../../_static/images/ex-sensorcam/arduino-ide-board-select.png" /></p>
 <p><img alt="Arduino IDE Open Example Sketch" src="../../../_static/images/ex-sensorcam/arduino-ide-example.png" /></p>
-<h3 id="step4-install-the-sensorcam"><strong>Step4. Install the sensorCAM</strong><a class="headerlink" href="#step4-install-the-sensorcam" title="Permanent link">&para;</a></h3>
+<h3 id="step-4-install-the-sensorcam"><strong>Step 4. Install the sensorCAM</strong><a class="headerlink" href="#step-4-install-the-sensorcam" title="Permanent link">&para;</a></h3>
 <p>&nbsp; 4.1 &nbsp; For v5.4.xx, Download the software zip to your PC from <a href="https://github.com/DCC-EX/EX-SensorCAM">https://github.com/DCC-EX/EX-SensorCAM</a><br />
  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; For a "devel" version, rather than "main", select the later "devel" software (for CS v5.5.15 or higher)<br />
  &nbsp; 4.2 &nbsp;  Right click the zip and click Extract all. Browse to your Arduino sketches folder e.g. <em>Documents/Arduino</em><br />
@@ -8959,9 +8957,9 @@ The essential files for now are shown below. Other files may be used in later in
 <p>The Manual Chapter 5 covers many points of relevance to getting satisfactory detection. Review this chapter and test topics for clarification. Good familiarity leads to success. Initial tests should be with good contrast between track and rolling stock. Refine parameters later to handle more difficult targets.</p>
 <h3 id="step-10-optimise-parameters-for-best-performance"><strong>Step 10. Optimise parameters for best performance.</strong><a class="headerlink" href="#step-10-optimise-parameters-for-best-performance" title="Permanent link">&para;</a></h3>
 <p>Initially by trial &amp; error users will learn the significance of parameters. This is an Alpha release and consequently the default settings may not be best. Refer sensorCAM manual Appendix B.</p>
-<h3 id="step-11-connect-cam-to-an-i2c-interface-eg-pca9515a-or-better"><strong>Step 11. Connect CAM to an i2c interface (e.g. PCA9515A or better)</strong><a class="headerlink" href="#step-11-connect-cam-to-an-i2c-interface-eg-pca9515a-or-better" title="Permanent link">&para;</a></h3>
+<h3 id="step-11-connect-cam-to-an-i2c-interface"><strong>Step 11. Connect CAM to an i2c interface</strong><a class="headerlink" href="#step-11-connect-cam-to-an-i2c-interface" title="Permanent link">&para;</a></h3>
 <p>The quickest and simplest method is to fit a PCA9515A to the ESP32-CAM-MB. Refer to the manual Chapter 3, the pictures in the manual (Figure 7 and Appendix F). Level shifting (3.3V to 5V) for a Mega is the primary function of the PCA9515A. Adjust voltages if not 5V compliant (e.g. ESP32 Command Station). It has 10k pull-up resistors but extra may be needed. If distance is an issue, as the PCA9515A is limited to about 3metres, either an LTC4311A enhancer or a buffered i2c solution will be needed. The manual Ch. 7 &amp; Appendix F describes the PCA9515A used, but the Sparkfun differential Endpoint is also recommended.</p>
-<h3 id="step-12-depending-on-system-integrate-sensorcam-into-command-station-using-appropriate-code"><strong>Step 12. Depending on system, integrate sensorCAM into Command Station using appropriate code.</strong><a class="headerlink" href="#step-12-depending-on-system-integrate-sensorcam-into-command-station-using-appropriate-code" title="Permanent link">&para;</a></h3>
+<h3 id="step-12-integrate-sensorcam-into-command-station-using-appropriate-code"><strong>Step 12. Integrate sensorCAM into Command Station using appropriate code.</strong><a class="headerlink" href="#step-12-integrate-sensorcam-into-command-station-using-appropriate-code" title="Permanent link">&para;</a></h3>
 <p>The CAM can be connected to a "Control Station" via i2c using appropriate host code (typically C++). It has been successfully interfaced to two different (Arduino Mega) systems but most focus has been on the <strong>DCC-EX EX-CommandStation</strong> (CS). The <strong>EX-SensorCAM</strong> can be connected to a Command Station and interrogated using EXRAIL.</p>
 <p>If you are wanting to integrate with a Command Station, we assume you have installed <strong>EX-CommandStation</strong> previously. If not, refer to the DCC-EX website for details. The following guide assumes you have a working v5.4.x CS in place.</p>
 <p><strong>12.1</strong> The <strong>EX-SensorCAM</strong> repository has an EX-CommandStation directory. These files normally reside with the <em>CommandStation-EX.ino</em> beside the other standard CS files. They are a guide to what is needed in the existing files in the _CommandStation-EX._ino directory. The user generally needs to EDIT existing files rather than copy these. The <strong><em>CamParser.cpp</em></strong> and <strong><em>IO_EXSensorCAM.h</em></strong> drivers already included in CS v5.4.16+ should be adequate for a "Production/master" CS installation, so do NOT copy these files from folder EX-CommandStation unless they represent a known recommended upgrade to the integrated functions. It is advisable to make backups of any file you do need to edit in installing sensorCAM (12.2-12.5 below).</p>
@@ -9058,7 +9056,7 @@ The essential files for now are shown below. Other files may be used in later in
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 28, 2026 03:28:53 UTC">June 28, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="July 19, 2026 08:47:40 UTC">July 19, 2026</span>
   </span>
 
     
