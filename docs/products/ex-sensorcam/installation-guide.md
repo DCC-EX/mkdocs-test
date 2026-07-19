@@ -10,18 +10,18 @@ As the **EX-SensorCAM** is not for Conductors, and perhaps only advanced Tinkere
 
 The chapters of the full manual may be referred to where additional detail is sought. The 12 steps are:
 
-1. Check youtube video then acquire ESP32-CAM and MB/FTDI (OR ESP32-WROVER-DEV CAM)
-2. install Arduino IDE with the ESP32 libraries (includes a WiFi CAM example)
-3. Load the CAM with the WiFi example and test.
-4. Install the _sensorCAM.ino_ software and configure.
-5. Test the basic sensorCAM functions to confirm functional install
-6. Load Processing 4 app. and _sensorCAM.pde_ code
-7. Use the Processing 4 app to replace the Arduino Monitor. Further familiarise and test.
-8. With a fixed camera, create test sensors and test detection with moving targets.
-9. Setup the CAM viewing the model railroad and test a virtual sensor with moving rolling stock.
-10. Optimise parameters for best performance.
-11. Connect CAM to an i2c interface (e.g. PCA9515A or better)
-12. Depending on system, integrate **EX-SensorCAM** into **EX-CommandStation** using appropriate code.
+[1. Check youtube video then acquire ESP32-CAM and MB/FTDI](OR ESP32-WROVER-DEV CAM)](#Step-1-esp-32-cam)  
+[2. install Arduino IDE with the ESP32 libraries including a WiFi CAM example](#step-2-install-the-arduino-ide)  
+[3. Load the CAM with the WiFi example and test](#step-3-load-and-test-the-esp32-cam-example)  
+[4. Install the _sensorCAM.ino_ software and configure](#step-4-install-the-sensorcam)  
+[5. Test the basic sensorCAM functions to confirm functional install](#step-5-test-the-basic-sensorcam-functions)  
+[6. Load Processing 4 App. and _sensorCAM.pde_ code](#step-6-load-processing-4)  
+[7. Use the Processing 4 app to replace the Arduino Monitor. Further familiarise and test](#step-7-use-the-processing-4-app-to-replace-the-arduino-monitor)  
+[8. With a fixed camera, create test sensors and test detection with moving targets](#step-8-create-test-sensors-and-test-detection-with-moving-targets)  
+[9. Setup the CAM viewing the model railroad and test a virtual sensor with moving rolling stock](#step-9-setup-the-cam-viewing-a-railroad-and-test-a-virtual-sensor-with-moving-rolling-stock)  
+[10. Optimise parameters for best performance](#step-10-optimise-parameters-for-best-performance)  
+[11. Connect CAM to an i2c interface - PCA9515A or better](#step-11-connect-cam-to-an-i2c-interface)  
+[12. Depending on system, integrate **EX-SensorCAM** into **EX-CommandStation** using appropriate code](#step-12-integrate-sensorcam-into-command-station-using-appropriate-code)  
 
 **Note:** Check version of your CH340 driver in **Device Manager - Ports**. Change if issues arise**.**
 
@@ -29,13 +29,13 @@ The chapters of the full manual may be referred to where additional detail is so
 
 See [Drivers for the CH340](https://learn.sparkfun.com/tutorials/how-to-install-ch340-drivers/all) for detailed instructions.
 
-### **Step 1. ESP-32 CAM**
+### Step 1. **ESP-32 CAM**
 
 To understand the animal, watch the video at [ESP32 CAM - 10 Dollar Camera for IoT Projects - YouTube](https://www.youtube.com/watch?v=visj0KE5VtY)
 
 Be aware that you need a USB adapter and the ESP32-CAM-MB is preferred as it avoids hazards associated with a "wired" FTDI power where errors can easily result in CAM destruction. Programming is also easier. Acquire a CAM from your favourite source. Also be prepared for defective product so a spare CAM may be worthwhile. I have had 2 faulty ov2640 modules. ESP32-CAM version 1.9 is preferred (has GND/Reset pin) Purchasing ESP32-CAM-MB as a pair (MB & CAM) is safest. Purchasing two pairs is insurance. Alternatively consider a new compatible ESP32-WROVER-CAM with simpler wiring (see Appendix & sensorCAMmanual)
 
-### **Step 2. Install the Arduino IDE**
+### Step 2. **Install the Arduino IDE**
 
 If you are not already familiar with this IDE (Integrated Development Environment), rather than go into details that are already covered in great detail on the Arduino web page, just follow the instructions in the following link [Arduino IDE Guide](https://www.arduino.cc/en/Guide) and then return here.
 
@@ -61,7 +61,7 @@ Note: With the MB board there is a push button (IO0) that replaces the FTDI prog
 
 ![Arduino IDE Open Example Sketch](/_static/images/ex-sensorcam/arduino-ide-example.png)
 
-### **Step4. Install the sensorCAM**
+### **Step 4. Install the sensorCAM**
 
  &nbsp; 4.1 &nbsp; For v5.4.xx, Download the software zip to your PC from <https://github.com/DCC-EX/EX-SensorCAM>  
  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; For a "devel" version, rather than "main", select the later "devel" software (for CS v5.5.15 or higher)  
@@ -185,11 +185,11 @@ The Manual Chapter 5 covers many points of relevance to getting satisfactory det
 
 Initially by trial & error users will learn the significance of parameters. This is an Alpha release and consequently the default settings may not be best. Refer sensorCAM manual Appendix B.
 
-### **Step 11. Connect CAM to an i2c interface (e.g. PCA9515A or better)**
+### **Step 11. Connect CAM to an i2c interface**
 
 The quickest and simplest method is to fit a PCA9515A to the ESP32-CAM-MB. Refer to the manual Chapter 3, the pictures in the manual (Figure 7 and Appendix F). Level shifting (3.3V to 5V) for a Mega is the primary function of the PCA9515A. Adjust voltages if not 5V compliant (e.g. ESP32 Command Station). It has 10k pull-up resistors but extra may be needed. If distance is an issue, as the PCA9515A is limited to about 3metres, either an LTC4311A enhancer or a buffered i2c solution will be needed. The manual Ch. 7 & Appendix F describes the PCA9515A used, but the Sparkfun differential Endpoint is also recommended.
 
-### **Step 12. Depending on system, integrate sensorCAM into Command Station using appropriate code.**
+### **Step 12. Integrate sensorCAM into Command Station using appropriate code.**
 
 The CAM can be connected to a "Control Station" via i2c using appropriate host code (typically C++). It has been successfully interfaced to two different (Arduino Mega) systems but most focus has been on the **DCC-EX EX-CommandStation** (CS). The **EX-SensorCAM** can be connected to a Command Station and interrogated using EXRAIL.
 
