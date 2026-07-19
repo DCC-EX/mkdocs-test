@@ -261,7 +261,7 @@ The image will have enabled sensors (b/s) boxed and identified by a (resistor) c
     
 ## 7 Wiring Requirements
 
-Refer to **Figure 6** and [Appendix F](#appendix-f) for alternate solutions for connecting sensorCAM to an i2c bus for remote control. For initial testing from a PC, the basic ESP32-CAM-MB or Wrover-CAM (**CH340** based USB interface) could be sufficient via. USB.  With i2c, take care to use level shifting (PCA9515A or Endpoints) if using a Mega CS or 5V i2c bus.
+Refer to **Figure 6** and [Appendix J](#appendix-j) for alternate solutions for connecting sensorCAM to an i2c bus for remote control. For initial testing from a PC, the basic ESP32-CAM-MB or Wrover-CAM (**CH340** based USB interface) could be sufficient via. USB.  With i2c, take care to use level shifting (PCA9515A or Endpoints) if using a Mega CS or 5V i2c bus.
 
 The ESP32-WROVER-DEV board is a good alternative to the original ESP32-CAM-MB. The slightly bigger CAM will be a little more convenient with the ESP32S Expansion board. This 38 pin expansion board with 5V regulator is poorly described in the video below. **IGNORE PRESENTERS DESCRIPTION OF HIS FAULTY 5V REGULATOR past the 5minute mark**.  With NO Wrover, verify the regulator gives 5V from 9V at the barrel jack and remove power before inserting or removing the Wrover.  For want of a better video...
 
@@ -269,7 +269,7 @@ The ESP32-WROVER-DEV board is a good alternative to the original ESP32-CAM-MB. T
 
 The sensorCAM typically requires a long i2c cable for connection to the CS.  If the CS uses a 3.3V i2c bus, the length may be handled with use of an LTC4311 "terminator" to drive the extra length.  If the CS has a 5V i2c bus it must use a level shifter via an Endpoint or PCA9515A (refer [Wiring Requirements](ex-sensor-manual.md#7-wiring-requirements)
 
-For long distances to sensorCAM, the recommended hardware interface to an **EX-CommandStation** is currently the **Sparkfun Endpoint** system (**Figure 6.** & [APPENDIX&nbsp;F](#appendix-f)) which permits the i2c bus to be run over long standard Cat5 twisted pair cable.  It can also carry the required raw power supply. The Sparkfun Endpoints are used **in pairs** and can cater for voltage shifting between 5V Command Stations (e.g. Mega) and 3.3V sensorCAM as required. For a simple off-the-shelf arrangement, an ESP32-WROVER-DEV CAM with a cheap ESP32S 38P Expander board (including regulator) can be linked to an Endpoint with 4 Dupont wires for a working CAM system on the end of a cat5 cable of considerable length as indicated in **Figure 6** & [APPENDIX&nbsp;F](#appendix-f), needing only a remote, preferably electrically isolated(floating), 7-10Vdc 0.5A power supply and a matching endpoint on a Command Station.
+For long distances to sensorCAM, the recommended hardware interface to an **EX-CommandStation** is currently the **Sparkfun Endpoint** system (**Figure 6.** & [APPENDIX&nbsp;F](#appendix-f)) which permits the i2c bus to be run over long standard Cat5 twisted pair cable.  It can also carry the required raw power supply. The Sparkfun Endpoints are used **in pairs** and can cater for voltage shifting between 5V Command Stations (e.g. Mega) and 3.3V sensorCAM as required. For a simple off-the-shelf arrangement, an ESP32-WROVER-DEV CAM with a cheap ESP32S 38P Expander board (including regulator) can be linked to an Endpoint with 4 Dupont wires for a working CAM system on the end of a cat5 cable of considerable length as indicated in **Figure 6** & [APPENDIX&nbsp;J](#appendix-j), needing only a remote, preferably electrically isolated(floating), 7-10Vdc 0.5A power supply and a matching endpoint on a Command Station.
 
 !!! note "NOTE:"
     1. For a cheaper solution, use the CAM and Expander with a LTC4311 for a shorter reach with either esp32-CAM or Wrover-CAM powered via USB.  
@@ -533,7 +533,7 @@ e.g. ``<Ni 2%%> <Nr 2%%>`` also ``<Nm 200> <Nf 212> <Nt 243>``
 
 [full manual](ex-sensor-manual.md#appendix-e)
 
-**Table B** below shows the colour code used to identify sensors on the Processing 4 track image.
+**Table E** below shows the colour code used to identify sensors on the Processing 4 track image.
 For example, sensor S12 has a bsNo 1/2 for which the colours are Brown/Red (seen on sensor box edges).
 For CAM number 1, the full CS sensor S12 ID is 112 when used in CS native ``<N>`` commands such as ``<N i 112>``
 The use of the CAM # can be optional.  If only one CAM is installed (or selected), ``<Ni 12>`` is sufficient.
@@ -557,88 +557,15 @@ vPin is the base/first vPin number (e.g. 700) + DEC.number(_bsn_) in the convers
 [full manual](ex-sensor-manual.md#appendix-f)
 
 !!! note "Note:"
-    This Appendix originally focused on the **ESP32-CAM-MB** implementation, but for PCA9515A information now refer to the full [sensorCAM Manual](ex-sensor-manual.md#appendix-f)  
-    The information below pertains mostly to the newer WROVER-CAM, as mentioned in **Section 7**, **Figure 6** for simpler implementations consider LTC4311 alone.
+    This Appendix focused on the **ESP32-CAM-MB** implementation, but for WROVER-CAM information now refer to the full [sensorCAM Manual](ex-sensor-manual.md#appendix-f)  
+    The information below in [APPENDIX J](#appendix-j) pertains mostly to the newer WROVER-CAM, as mentioned in **Section 7**, **Figure 6** 
 
-The ESP32 CAM drives GPIO pins with 3.3V logic. This may well be incompatible with the master l2C signals at 5V. It is essential that appropriate voltage level shifting and buffering is used where necessary (e.g. PCA9515A). Unbuffered I2C is limited in range but an LTC4211 or Sparkfun differential i2c driver/endpoint may be used to achieve longer lengths (and voltage shifting) if needed.
-
-The sensorCAM can be Reset remotely by software or by cycling the power supply. The CAM MUST be rigidly mounted as it's response to any image vibration can trip sensors. It is best not moved after sensor location programming as precise realignment could be tedious. It is, however, advisable to make guides or jig arrangement to at least be able to remove (for maintenance) and return with minimal misalignment to cover the same field of view. The inconvenient LED method of placing/positioning sensors may be necessary if a long USB cable is impractical. A 5m buffered USB cable might be advantageous. Even so, setup programming or imaging over a long USB cable may not be satisfactory.
-
-If the CS is using a 3.3V i2c bus (e.g. the CSB1 board) the sensorCAM may be connected to an existing CS bus segment (SCL, SDA & GND) directly.  However cable length must be catered for.  The workable i2c bus length will need to be extended by using an LTC4211 buffer.  The CAM should use an independent 7-9V dc switchable ungrounded 1A PSU (e.g. "wall-wart") driving a 5V regulator at the CAM. 
-
-A programmable nLED and 330ohm resistor may be attached between 3.3V VCC to GPIO14 to aid testing.
-
-For long lengths, the Sparkfun endpoint is perhaps the best overall solution at this stage for driving one (or more) sensorCAMs. It provides greater lengths of cable without extending the Command Station i2c local bus. The endpoints are used in pairs, connected by a long (<100m) differential pair cat5 cable providing power and communications. It can provide buffering, level shifting and power, but care is needed at the CS end to avoid over-voltage damage. It is suggested, with a 5V CS, that the Endpoint pullup 0-1 jumpers at the CS end be cut for safety. The sensorCAM Endpoint default pullups are needed for the 3.3V CAM i2c bus. The CS Endpoint requires 3.3V power (from the CS) and a separate (7 to 9V) DC supply for the Regulator & CAM.
-
-Typical device applications:
-
-![Typical Mega with ESP32 CAM](../../_static/images/ex-sensorcam/esp32-wrover-LTC4311.png)
-<br/>Sparkfun endpoints(requires a matching sparkfun endpoint at CS)
-
-![ESP32 Wrover CAM with Sparkfun Endpoint](../../_static/images/ex-sensorcam/esp32-wrover-with-endpoint.png)
-
-Recommended CAM wiring is with Endpoints and 5V dedicated regulator with power over GRN-GRNW(Vin) (CAT 5) with Vin(7-9V) from an ungrounded 0.5A DC supply (wall-wart/plug pack).
-
-There are two basic variations below for connecting the Endpoints to the CS. The choice depends on the current system being extended. Options A applies to a 5V CS(Mega) with or without other existing I2C accessory connections, while Option C is the simplest connection to a 3.3Volt CS (e.g. **EX-CSB1**) i2c bus.  The i2c bus should be "tuned" to include the CAM load before the CAM is attached.  The Endpoint has a pair of 4k7 pullups that may be disconnected by jumper cuts.  Refer to Tinkerers Guide to Tuning documentation on i2c.
-
-The 2x Endpoints require about  10mA  each from the 3.3V PS. All options can be adapted for use with a mux if necessary.
-
-**Option A:** CUT CAM endpoint jumper 0-1 and supply 5V and 3.3V from the CS. Option A connections results in a 5V i2c interface to 3.3V differential cable for 5V microprocessor based CS (e.g. Mega).
-
-**Option C:** used with newer (32bit) MPU's (e.g. **EX-CSB1**) & uses 3V3 throughout. No Endpoint jumpers need to be cut. Whichever option is used, the user should consider if the I2C bus needs to be tuned differently. For very short extra cable length to the Endpoint and only one extra device count on an I2C bus under 1m in length, tuning may be unnecessary. In marginal conditions consider returning as per DCC-EX recommendations.
-
-#### A. &nbsp; FOR 3.3V Differential drive 5V CS I2C BUS
-
-![Differential Drive 5V CS](../../_static/images/ex-sensorcam/differential-drive-5v-cs.png)
-
-#### C. &nbsp; FOR 3.3V Differential drive 3.3V CS I2C BUS
-
-![Differential Drive 3.3V Only CS](../../_static/images/ex-sensorcam/differential-drive-3v3-only-cs.png)
 
 ## APPENDIX H
 
 ### Notes on use of EX-RAIL
 
-[full manual](ex-sensor-manual.md#appendix-h)
-
-### 1. Sensor/vpin Numbering
-
-The numbering of sensors can be consecutive by vPin, which is the common practice with multi-pin peripherals (e.g. PCA9685 16-channel Servo driver and MCP23017 16-channel GPIO Expander). Sequential vPin numbers within a device is hardware enforced, but this loses some of the advantages available by a more meaningful ID notation. Such IDs are available for JMRI use and so can also be used for sensorCAM. Use of IDs, as suggested below, can remove any need to program with vPin numbers.
-
-For any peripheral device, the vPin is needed for commands (e.g.700+5), but, if predefined (e.g. in config.h), alphanumeric names such as CAM or CAM2 or ESSEX can be used in place of the base vPin to identify the camera. Then commands for CAM pin 5 become: e.g. AT(CAM 05) or AT(ESSEX 05)
-
-```c++
-examples:
-#define SENSORCAM_VPIN 700    //place in config.h or myAutomation.h or mysetup.h
-#define CAM  SENSORCAM_VPIN+  //in config.h or myAutomation.h or mysetup.h
-
-Valid EXRAIL commands can use CAM alaises e.g.
-AFTER(CAM 5)  AT(SENSORCAM_VPIN+7)  IFGTE(CAM 010, 2)
-
-To avoid frequent "CAM" in scripts, an alias can be assigned
-e.g. ALIAS(ESSEX_P1, CAM+010)   IFGTE(ESSEX_P1, 2)
-```
-
-With each sensorCAM having up to 80 sensors, it is desirable to test groups of (1 to 8) sensors with a single **EXRAIL** test using the **IFGTE()** or **IFLE()** commands. To do this, the sensors are logically arranged in "banks" of (consecutive) vpins. The logical grouping available can be written in the form "bs" or b/s where b can have bank values of 0-9 (10 banks) and s values 0-7 (8 sensors). **IFGTE** and **IFLT** read a whole bank "value". Native CAM commands can also be issued e.g. ``PARSE("<N b 4>")`` for bank 4.
-
-EXRAIL can accept "b/s" numbering (e.g. 047) if we add the leading 0. e.g. vpin= **SENSORCAM_VPIN+ 047** e.g. **IFGTE(CAM 047,1)** provided values are defined for **SENSORCAM_VPIN** & **CAM**(as above).
-
-**(N.B. "CAM" includes the '+')** Using this method there is no need to remember assigned vPin values!
-
-**Example 1:** For the approach to a signal, several sensors may be deployed (say S13 to S17) with S17 last at the signal. As a train approaches the signal, the (bank) "value" of the tripping sensors will increase. This can be used to control the loco speed for a smooth and precise stop at a platform for example.
-Commands **IFGTE(CAM 013,8) SPEED(40)**... **IFGTE(CAM 013,16)** **SPEED(30)** etc. can be used to control the loco approach speed with some precision.
-Finally, at the signal(S17), **IFGTE(CAM 013,128) STOP**
-
-Aliases could also be defined and used for station/bank or line sensors. e.g.IFGTE(TRENTHAM, 128)
-
-**Example 2:** The CAM can have up to 10 occupation/line detectors. If two "linear" line sensors are needed, and we have bank 1 allocated (S10-S17), the following 16 vPins could be assigned to 2 banks of linear sensors. We can use (bs#) ID of 20 to 27 for first linear sensor (bank2) and 30-37 of bank3. The Command Station can easily handle banks of 8, using an ID based format of (CAM 020) and (CAM 030). The "bank" or b/s notation requires the leading '0' on the bsNo. for automatic vpin calculation. The linear segments at S21 to S27 may also be tested individually and a common bank threshold can be set if needed. e.g. **IFGTE(CAM 020,1)**...// bank occupied, or **IFGTE(CAM 024,16)** &nbsp; //2nd half occupied.
-
-Note: With '0%%' notation, unless you understand the issue, avoid using bank 8 & 9 as mistakes may arise. (08# must be expressed as 010# and 09# as 011# for correct outcome)
-
-### 2. Multiple Cams
-
-Multiple sensorCAMs can be easily handled if CAM2, CAM3 etc are defined along the lines of CAM above, so **IF(CAM2 012)** tests a different sensor to **IF(CAM3 012)**, provided **SENSORCAM2_ VPIN** etc. are defined.  
-Using CS native commands, e.g. **<Ni 212\>** and **<Ni 312\>**, can also access **S12** on different CAMs. The **#define SENSORCAM_VPIN ###** is essential for cam1. Do NOT insert a 1 into **SENSORCAM_VPIN**. You may use **SENSORCAM2_VPIN** and **SENSORCAM3_VPIN** with **CAM2** and **CAM3** in *config.h*
+For tips and techniques of reading sensorCAM sensor states, refer to [full manual](ex-sensor-manual.md#appendix-h)
 
 ## APPENDIX J
 
@@ -688,7 +615,7 @@ For long lengths, the Sparkfun endpoint is perhaps the best overall solution at 
 
 ![Differential Drive 3.3V Only CS](../../_static/images/ex-sensorcam/differential-drive-3v3-only-cs.png)
 
-For further information on use of two Sparkfun Endpoints to connect a CAM over differential pair cable to the CS refer to [full manual APPENDIX F](ex-sensor-manual.md#c-for-3-3v-differential-drive-3-3v-cs-i2c-bus)
+For further information on use of two Sparkfun Endpoints to connect a CAM over differential pair cable to the CS refer to [full manual APPENDIX F](ex-sensor-manual.md#c-for-33v-differential-drive-33v-cs-i2c-bus)
 
 
 ####I2C and PCA9515A
