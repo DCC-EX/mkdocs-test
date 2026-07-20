@@ -5040,9 +5040,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#517-pvtthresholds-sensor-size" class="md-nav__link">
+  <a href="#517-pvtthreshold-sensor-size" class="md-nav__link">
     <span class="md-ellipsis">
-      5.17 pvtThresholds-Sensor size
+      5.17 pvtThreshold &amp; Sensor size
     </span>
   </a>
   
@@ -5106,9 +5106,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#82-ex-commandstation" class="md-nav__link">
+  <a href="#82-ex-command-station" class="md-nav__link">
     <span class="md-ellipsis">
-      8.2 EX-CommandStation
+      8.2 EX-Command Station
     </span>
   </a>
   
@@ -9616,9 +9616,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#517-pvtthresholds-sensor-size" class="md-nav__link">
+  <a href="#517-pvtthreshold-sensor-size" class="md-nav__link">
     <span class="md-ellipsis">
-      5.17 pvtThresholds-Sensor size
+      5.17 pvtThreshold &amp; Sensor size
     </span>
   </a>
   
@@ -9682,9 +9682,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#82-ex-commandstation" class="md-nav__link">
+  <a href="#82-ex-command-station" class="md-nav__link">
     <span class="md-ellipsis">
-      8.2 EX-CommandStation
+      8.2 EX-Command Station
     </span>
   </a>
   
@@ -10391,7 +10391,7 @@ If the sensor remains unoccupied, it updates the reference, compensating for slo
 <p>Test image with Fluorescent or LED lighting - note three faint dull stripes across white test panel in <strong>Figure 5</strong> below. Strong banding is also evident in <strong>Figure 4</strong>. Horizontal stripe position varies frame-to-frame as not effectively synchronized with mains yet.<br />
 (<strong>Figure 5</strong> image was obtained using <strong><code>V</code></strong>, <strong><code>H</code></strong> &amp; <strong><code>Y60</code></strong> Processing commands)</p>
 <p>The mains supply synchronization is currently inadequate (ESP32-CAM limitation) so drifting illumination bands will add a little to the "noise" seen by the sensors. The significance of this may need evaluation by experiment.</p>
-<h3 id="517-pvtthresholds-sensor-size">5.17 pvtThresholds-Sensor size<a class="headerlink" href="#517-pvtthresholds-sensor-size" title="Permanent link">&para;</a></h3>
+<h3 id="517-pvtthreshold-sensor-size">5.17 pvtThreshold &amp; Sensor size<a class="headerlink" href="#517-pvtthreshold-sensor-size" title="Permanent link">&para;</a></h3>
 <p>Two additional features have been added which may resolve lingering issues. Individual thresholds can be set to override the "global" <em>threshold</em> set with <strong><code>t##</code></strong>. The command <strong><code>t##,%%</code></strong> will set a <em>pvtThreshold</em> for sensor S%% replacing the "global" (t##) value. It can be removed with the <strong><code>t00,%%</code></strong> command. This way a higher threshold can be set on a "noisy" sensor.  While an increased <em>pvtThreshold</em> may reduce its sensitivity, it has no effect on the other sensors. <strong><code>t1,%%</code></strong> will cancel all pvtThresholds in one bank, while <strong><code>t1,99</code></strong> cancels ALL pvtThresholds in the CAM.</p>
 <p>The second feature enables the size of the sensor to be increased. This is done by inserting spare pixels in a cross(+) through the 4x4 sensor moving 4 pixels out to each of the corners of a larger footprint. The parameter SEN_SIZE (default 0) adds from 1 to 9 rows of spare pixels. This parameter is set in <em>configCAM.h</em> and may, for example, allow a sensor to be placed so as to register a greater variation in pixel values. A uniform 16 identical pixels is less effective than ones capturing various colours/shades. If it can include a shadow of a passing loco/wagon, then the "diff" can be stronger and a more positive trip attained. A footprint size increase affects ALL sensors.</p>
 <p>It is desirable to place sensors where they generate a "mottled" image of pixels rather than a uniform colour which makes distinguishing grey roofs against plain grey track hard. Pixel size is therefore relevant. It is helpful if the pixels are the width of sleepers so they can be distinguished. If they can't then try an offset sensor that sees track bed and trackside grass/shadows say. <strong>Table 1</strong> indicates pixel/sensor sizes relative to sleepers and track gauge. It shows that sleeper detection is limited with the ov2640 QVGA (240x320) resolution. Future sensorCAM variants may do better.  An angled camera (less than 30degrees) could benefit from a glimpse of the side of the loco/coach/wagon and increase the field of view, but parallax issues may arise.</p>
@@ -10660,13 +10660,14 @@ You may also increase the image display window size by editing the <em>final int
 <strong>Figure 6 &nbsp; ESP32 WROVER-CAM and interface</strong></p>
 <p><img alt="ESP32 CAM MB with PCA9515A" src="../../../_static/images/ex-sensorcam/esp32-cam-mb-pca9515a.png" /><br />
 <strong>Figure 7 &nbsp; PCA9515A 3.3V to 5V i2c interface improvisation compared to a full feature prototype solution</strong>  </p>
-<p>!!! note "NOTE:"
-     For 3.3V microprocessors (e.g. <strong>EX-CSB1</strong>) ensure Vcc1 is connected to 3.3V (Vcc0) not 5V.</p>
+<p>!!! note "NOTE:"</p>
+<div class="language-text highlight"><pre><span></span><code>For 3.3V microprocessors (e.g. **EX-CSB1**) ensure Vcc1 is connected to 3.3V (Vcc0) not 5V.
+</code></pre></div>
 <h2 id="8-host-communication">8 Host Communication<a class="headerlink" href="#8-host-communication" title="Permanent link">&para;</a></h2>
 <h3 id="81-intro">8.1 Intro<a class="headerlink" href="#81-intro" title="Permanent link">&para;</a></h3>
 <p>The operation of the railway depends on a Control Station that polls the sensorCAM for sensor states. This might be a dedicated Arduino Mega 2560 for example. It might be an <strong>EX-CSB1</strong> Command Station running DCC-EX and <strong>EXRAIL</strong> software. If the sensorCAM is powered up with default settings (from EPROM), or adjusted by the user at the start, the program need only talk to sensorCAM over an i2c bus using the commands a,b,i,l &amp; o for example, or it may be more sophisticated, providing a channel from a Control Station console to the sensorCAM to enable all configuration commands via the i2c bus.</p>
 <p>The i2c bus is running at 100kHz on the prototype software. It has not been tested at any higher speed yet. It is running fine over a 20m long i2c bus to the master microcontroller(mpu or Mega).</p>
-<h3 id="82-ex-commandstation">8.2  EX-CommandStation<a class="headerlink" href="#82-ex-commandstation" title="Permanent link">&para;</a></h3>
+<h3 id="82-ex-command-station">8.2  EX-Command Station<a class="headerlink" href="#82-ex-command-station" title="Permanent link">&para;</a></h3>
 <p>Setting up a <strong>DCC-EX</strong> <strong>EX-CommandStation</strong>, should you have one, requires configuration details placed in files config.h and mySetup.h along with a driver IO_EXSensorCAM.h and myAutomation.h. These must go in the directory containing file CommandStation-EX.ino. The IO_EXSensorCAM.h driver is based on the modified IO_EXIOExpander.h code. Refer to <a href="#appendix-h">APPENDIX&nbsp;H</a>for installation guide. <em>EXSensorCAM.h</em> code mirrors the i,I,o,t &amp; m commands, while the EXIODPUP command may serve as the enable function(a). EXIOExpander.h codes don't have the "control &amp; setup" sensorCAM functions otherwise available from a USB console so additional functionality was added using the DCC-EX sensorCAM native command <code>&lt;N&gt;</code> (if using the newest CamParser.cpp).</p>
 <h3 id="83-non-dcc-ex-system">8.3 Non-DCC-EX system<a class="headerlink" href="#83-non-dcc-ex-system" title="Permanent link">&para;</a></h3>
 <p>Proprietary Master:  If writing raw code for another Command Station, you will need details on the protocol used by sensorCAM on the i2c bus, and code to interpret the bus bytes and reconstitute text for the console. Two such prototype examples exists. V155 of sensorCAM incorporates a subset of the DCC-EX IOexpander codes so that <strong>EXRAIL</strong> can use sensorCAM without further modification. V301 &amp; later mostly use ASCII code characters.</p>
@@ -11349,7 +11350,7 @@ SETUP(&quot;&lt;S 110 708 0\&gt;&quot;);     //note recommended id is 1%%(b/s) f
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="July 20, 2026 08:03:51 UTC">July 20, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="July 20, 2026 08:34:12 UTC">July 20, 2026</span>
   </span>
 
     
