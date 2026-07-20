@@ -5031,9 +5031,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#516-other-diagnostic-commands" class="md-nav__link">
+  <a href="#516-diagnostic-commands" class="md-nav__link">
     <span class="md-ellipsis">
-      5.16 Other diagnostic commands
+      5.16 Diagnostic Commands
     </span>
   </a>
   
@@ -5042,7 +5042,7 @@
           <li class="md-nav__item">
   <a href="#517-pvtthresholds-sensor-size" class="md-nav__link">
     <span class="md-ellipsis">
-      5.17 pvtThresholds &amp; sensor size
+      5.17 pvtThresholds-Sensor size
     </span>
   </a>
   
@@ -5106,9 +5106,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#82-dcc-ex-ex-commandstation" class="md-nav__link">
+  <a href="#82-ex-commandstation" class="md-nav__link">
     <span class="md-ellipsis">
-      8.2 DCC-EX EX-CommandStation
+      8.2 EX-CommandStation
     </span>
   </a>
   
@@ -9607,9 +9607,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#516-other-diagnostic-commands" class="md-nav__link">
+  <a href="#516-diagnostic-commands" class="md-nav__link">
     <span class="md-ellipsis">
-      5.16 Other diagnostic commands
+      5.16 Diagnostic Commands
     </span>
   </a>
   
@@ -9618,7 +9618,7 @@
           <li class="md-nav__item">
   <a href="#517-pvtthresholds-sensor-size" class="md-nav__link">
     <span class="md-ellipsis">
-      5.17 pvtThresholds &amp; sensor size
+      5.17 pvtThresholds-Sensor size
     </span>
   </a>
   
@@ -9682,9 +9682,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#82-dcc-ex-ex-commandstation" class="md-nav__link">
+  <a href="#82-ex-commandstation" class="md-nav__link">
     <span class="md-ellipsis">
-      8.2 DCC-EX EX-CommandStation
+      8.2 EX-CommandStation
     </span>
   </a>
   
@@ -10384,14 +10384,14 @@ If the sensor remains unoccupied, it updates the reference, compensating for slo
 <h3 id="515-second-opinions-twin">5.15 Second opinions (Twin)<a class="headerlink" href="#515-second-opinions-twin" title="Permanent link">&para;</a></h3>
 <p>If necessary, another option can be tried to address "noise" trips if all else fails. It is possible to "get a second opinion" on a sensor by assigning a "Twin" sensor (using <strong>i%%,$$</strong>). For example if sensor S15 is prone to noise trips, set a Twin using sensor S05(say). Set up the Twin position to touch or slightly overlap the primary sensor(S15) with the commands <strong><code>a05,rrr,xxx</code></strong>. The primary sensor will not register "Occupied" (tripped) unless the Twin agrees.</p>
 <p>Note: The Twin should have a bsNo less than the primary sensor to avoid introducing an extra 100mSec delay to the trip time as the lowest bsNo is evaluated first. We suggest using bank 0 for twins, or a lower number in the same bank.</p>
-<h3 id="516-other-diagnostic-commands">5.16 Other diagnostic commands<a class="headerlink" href="#516-other-diagnostic-commands" title="Permanent link">&para;</a></h3>
+<h3 id="516-diagnostic-commands">5.16 Diagnostic Commands<a class="headerlink" href="#516-diagnostic-commands" title="Permanent link">&para;</a></h3>
 <p>There are other commands that can be used to optimise the CAM performance by trial-and-error. These include Frame(<strong><code>f</code></strong>), GetCAMsettings(<strong><code>g</code></strong>), adJustCAMsettings(<strong><code>j</code></strong>) and Statistics(<strong><code>&amp;</code></strong>), also Calibrate(<strong>c</strong>)(not recommended). If the scene contrast is inadequate, a lighter reflector between the tracks is a cure particularly in fiddle yards (e.g. light green grass).</p>
 <p>Explore and familiarize: Operational output commands will give the sensor states and include Individual(<strong><code>i</code></strong>), Bank(<strong><code>b</code></strong>), Diff(<strong><code>d</code></strong>), Position(<strong><code>p</code></strong>), &amp; Query enabled(<strong><code>q</code></strong>). Other input sensor commands include Zero(<strong><code>o</code></strong>), One(<strong><code>l</code></strong>), Enable(<strong><code>a</code></strong>), Undefine(<strong><code>u</code></strong>) &amp; the define coordinate(<strong><code>k</code></strong>) command. Zero <strong><code>o</code></strong>(oscar) and One <strong><code>l</code></strong>(lima) preset and disable sensors.</p>
 <p>NOTE: Historically the term "activate" has been used in the CAM program rather than "enable". In the context of sensorCAM, activated means "enabled" rather than output "1" as typically may be used in EX-CS sensor documentation. This manual has been rewritten to use the "enabled" terminology, but names and references in the actual program still use the original terminology, so interpret "activated", in a sensorCAM context, as "enabled". Sensor output is referred to as "tripped" (1/occupied) or "untripped" (0/unoccupied).</p>
 <p>Test image with Fluorescent or LED lighting - note three faint dull stripes across white test panel in <strong>Figure 5</strong> below. Strong banding is also evident in <strong>Figure 4</strong>. Horizontal stripe position varies frame-to-frame as not effectively synchronized with mains yet.<br />
 (<strong>Figure 5</strong> image was obtained using <strong><code>V</code></strong>, <strong><code>H</code></strong> &amp; <strong><code>Y60</code></strong> Processing commands)</p>
 <p>The mains supply synchronization is currently inadequate (ESP32-CAM limitation) so drifting illumination bands will add a little to the "noise" seen by the sensors. The significance of this may need evaluation by experiment.</p>
-<h3 id="517-pvtthresholds-sensor-size">5.17 pvtThresholds &amp; sensor size<a class="headerlink" href="#517-pvtthresholds-sensor-size" title="Permanent link">&para;</a></h3>
+<h3 id="517-pvtthresholds-sensor-size">5.17 pvtThresholds-Sensor size<a class="headerlink" href="#517-pvtthresholds-sensor-size" title="Permanent link">&para;</a></h3>
 <p>Two additional features have been added which may resolve lingering issues. Individual thresholds can be set to override the "global" <em>threshold</em> set with <strong><code>t##</code></strong>. The command <strong><code>t##,%%</code></strong> will set a <em>pvtThreshold</em> for sensor S%% replacing the "global" (t##) value. It can be removed with the <strong><code>t00,%%</code></strong> command. This way a higher threshold can be set on a "noisy" sensor.  While an increased <em>pvtThreshold</em> may reduce its sensitivity, it has no effect on the other sensors. <strong><code>t1,%%</code></strong> will cancel all pvtThresholds in one bank, while <strong><code>t1,99</code></strong> cancels ALL pvtThresholds in the CAM.</p>
 <p>The second feature enables the size of the sensor to be increased. This is done by inserting spare pixels in a cross(+) through the 4x4 sensor moving 4 pixels out to each of the corners of a larger footprint. The parameter SEN_SIZE (default 0) adds from 1 to 9 rows of spare pixels. This parameter is set in <em>configCAM.h</em> and may, for example, allow a sensor to be placed so as to register a greater variation in pixel values. A uniform 16 identical pixels is less effective than ones capturing various colours/shades. If it can include a shadow of a passing loco/wagon, then the "diff" can be stronger and a more positive trip attained. A footprint size increase affects ALL sensors.</p>
 <p>It is desirable to place sensors where they generate a "mottled" image of pixels rather than a uniform colour which makes distinguishing grey roofs against plain grey track hard. Pixel size is therefore relevant. It is helpful if the pixels are the width of sleepers so they can be distinguished. If they can't then try an offset sensor that sees track bed and trackside grass/shadows say. <strong>Table 1</strong> indicates pixel/sensor sizes relative to sleepers and track gauge. It shows that sleeper detection is limited with the ov2640 QVGA (240x320) resolution. Future sensorCAM variants may do better.  An angled camera (less than 30degrees) could benefit from a glimpse of the side of the loco/coach/wagon and increase the field of view, but parallax issues may arise.</p>
@@ -10659,14 +10659,15 @@ You may also increase the image display window size by editing the <em>final int
 <p><img alt="ESP32 Wrover CAM with Sparkfun Endpoint" src="../../../_static/images/ex-sensorcam/esp32-wrover-sparkfun-endpoint.png" /><br />
 <strong>Figure 6 &nbsp; ESP32 WROVER-CAM and interface</strong></p>
 <p><img alt="ESP32 CAM MB with PCA9515A" src="../../../_static/images/ex-sensorcam/esp32-cam-mb-pca9515a.png" /><br />
-<strong>Figure 7 &nbsp; PCA9515A 3.3V to 5V i2c interface improvisation compared to a full feature prototype solution</strong><br />
- &nbsp; Note: for 3.3V microprocessors (e.g. <strong>EX-CSB1</strong>) ensure Vcc1 is connected to 3.3V (Vcc0) not 5V.</p>
+<strong>Figure 7 &nbsp; PCA9515A 3.3V to 5V i2c interface improvisation compared to a full feature prototype solution</strong>  </p>
+<p>!!! note "NOTE:"
+     For 3.3V microprocessors (e.g. <strong>EX-CSB1</strong>) ensure Vcc1 is connected to 3.3V (Vcc0) not 5V.</p>
 <h2 id="8-host-communication">8 Host Communication<a class="headerlink" href="#8-host-communication" title="Permanent link">&para;</a></h2>
 <h3 id="81-intro">8.1 Intro<a class="headerlink" href="#81-intro" title="Permanent link">&para;</a></h3>
 <p>The operation of the railway depends on a Control Station that polls the sensorCAM for sensor states. This might be a dedicated Arduino Mega 2560 for example. It might be an <strong>EX-CSB1</strong> Command Station running DCC-EX and <strong>EXRAIL</strong> software. If the sensorCAM is powered up with default settings (from EPROM), or adjusted by the user at the start, the program need only talk to sensorCAM over an i2c bus using the commands a,b,i,l &amp; o for example, or it may be more sophisticated, providing a channel from a Control Station console to the sensorCAM to enable all configuration commands via the i2c bus.</p>
 <p>The i2c bus is running at 100kHz on the prototype software. It has not been tested at any higher speed yet. It is running fine over a 20m long i2c bus to the master microcontroller(mpu or Mega).</p>
-<h3 id="82-dcc-ex-ex-commandstation">8.2   DCC-EX EX-CommandStation<a class="headerlink" href="#82-dcc-ex-ex-commandstation" title="Permanent link">&para;</a></h3>
-<p>Setting up a <strong>DCC-EX</strong> <strong>EX-CommandStation</strong>, should you have one, requires configuration details placed in files config.h and mySetup.h along with a driver IO_EXSensorCAM.h and myAutomation.h. These must go in the directory containing file CommandStation-EX.ino. The IO_EXSensorCAM.h driver is based on the modified IO_EXIOExpander.h code. Refer to <a href="#appendix-h">APPENDIX&nbsp;H</a>for installation details. <em>EXSensorCAM.h</em> code mirrors the i,I,o,t &amp; m commands, while the EXIODPUP command may serve as the enable function(a). EXIOExpander.h codes don't have the "control &amp; setup" sensorCAM functions otherwise available from a USB console so additional functionality was added using the DCC-EX sensorCAM native command <code>&lt;N&gt;</code> (if using the newest CamParser.cpp).</p>
+<h3 id="82-ex-commandstation">8.2  EX-CommandStation<a class="headerlink" href="#82-ex-commandstation" title="Permanent link">&para;</a></h3>
+<p>Setting up a <strong>DCC-EX</strong> <strong>EX-CommandStation</strong>, should you have one, requires configuration details placed in files config.h and mySetup.h along with a driver IO_EXSensorCAM.h and myAutomation.h. These must go in the directory containing file CommandStation-EX.ino. The IO_EXSensorCAM.h driver is based on the modified IO_EXIOExpander.h code. Refer to <a href="#appendix-h">APPENDIX&nbsp;H</a>for installation guide. <em>EXSensorCAM.h</em> code mirrors the i,I,o,t &amp; m commands, while the EXIODPUP command may serve as the enable function(a). EXIOExpander.h codes don't have the "control &amp; setup" sensorCAM functions otherwise available from a USB console so additional functionality was added using the DCC-EX sensorCAM native command <code>&lt;N&gt;</code> (if using the newest CamParser.cpp).</p>
 <h3 id="83-non-dcc-ex-system">8.3 Non-DCC-EX system<a class="headerlink" href="#83-non-dcc-ex-system" title="Permanent link">&para;</a></h3>
 <p>Proprietary Master:  If writing raw code for another Command Station, you will need details on the protocol used by sensorCAM on the i2c bus, and code to interpret the bus bytes and reconstitute text for the console. Two such prototype examples exists. V155 of sensorCAM incorporates a subset of the DCC-EX IOexpander codes so that <strong>EXRAIL</strong> can use sensorCAM without further modification. V301 &amp; later mostly use ASCII code characters.</p>
 <h3 id="84-monitor-lighting">8.4 Monitor Lighting<a class="headerlink" href="#84-monitor-lighting" title="Permanent link">&para;</a></h3>
@@ -11151,16 +11152,16 @@ vPin is the base/first vPin number (e.g. 700) + DEC(<em>bsn</em>) number in the 
 <p><img alt="Dual CAM Header" src="../../../_static/images/ex-sensorcam/dual-cam-header.png" /></p>
 <p>NOTE: Take care to cut copper strips appropriately!</p>
 <p><img alt="Dual CAM Header Wiring" src="../../../_static/images/ex-sensorcam/dual-cam-header-wiring.png" /></p>
-<p>There are three basic variations below for connecting the Endpoints to the CS. The choice depends on the current system being extended. Options A &amp; B apply to a 5Volt I2C bus on a 5V CS with or without existing I2C accessory connections, while Option C is the simplest connection to a 3.3Volt CS i2c bus.</p>
+<p>There are three basic variations below for connecting the Endpoints to the CS. The choice depends on the current system being extended. Options A &amp; B apply to a 5Volt I2C bus on a 5V CS with or without existing I2C accessory connections, while Option C is the simplest and safest connection to a 3.3Volt CS i2c bus.</p>
 <p>The 2x Endpoints require about  10mA  each. All options can be adapted for use with a mux if necessary. The choice between A and B depends on the power supplies available. If the CS Endpoint is to be tapped into a "remote" 5V i2c bus location, a CS 3.3V supply may not be available, only a 5V I2C supply. Option B removes one 10k pullup resistor pair from the bus to avoid inappropriate pull-up voltage(3.3V).</p>
-<p><strong>Option A:</strong> CUT CAM endpoint jumper 0-1 and supply 5V and 3.3V from the CS. Option A connections results in a 5V i2c interface to 3.3V differential cable for 5V microprocessor based CS (e.g. Mega).</p>
-<p><strong>Option B:</strong> may be used if the CS 3V3 regulator is more convenient. CUT two CS Endpoint I2C jumpers to disconnect the on-board I2C pullup 10k resistors and 3v3 from the bus. This adds load to the i2c bus data so may need extra pullups to 5V. This does function but is not recommended.</p>
-<p><strong>Option C:</strong> used with newer (32bit) MPU's (e.g. <strong>EX-CSB1</strong>) &amp; uses 3V3 throughout. No Endpoint jumpers need to be cut. Whichever option is used, the user should consider if the I2C bus needs to be tuned differently. For very short extra cable length to the Endpoint and only one extra device count on an I2C bus under 1m in length, tuning may be unnecessary. In marginal conditions consider returning as per DCC-EX recommendations.</p>
 <h4 id="a-for-33v-differential-drive-5v-cs-i2c-bus">A FOR 3.3V Differential drive 5V CS I2C BUS<a class="headerlink" href="#a-for-33v-differential-drive-5v-cs-i2c-bus" title="Permanent link">&para;</a></h4>
+<p><strong>Option A:</strong> CUT CAM endpoint jumper 0-1 and supply 5V and 3.3V from the CS. Option A connections results in a 5V i2c interface to 3.3V differential cable for 5V microprocessor based CS (e.g. Mega).</p>
 <p><img alt="Differential Drive 5V CS" src="../../../_static/images/ex-sensorcam/differential-drive-5v-cs.png" /></p>
 <h4 id="b-for-33v-differential-drive-5v-cs-i2c-bus">B FOR 3.3V Differential drive 5V CS I2C BUS<a class="headerlink" href="#b-for-33v-differential-drive-5v-cs-i2c-bus" title="Permanent link">&para;</a></h4>
+<p><strong>Option B:</strong> may be used if the CS 3V3 regulator is more convenient. CUT two CS Endpoint I2C jumpers to disconnect the on-board I2C pullup 10k resistors and 3v3 from the bus. This adds load to the i2c bus data so may need extra pullups to 5V. This does function but is not recommended.</p>
 <p><img alt="Differential Drive 3.3V CS" src="../../../_static/images/ex-sensorcam/differential-drive-3v3-cs.png" /></p>
 <h4 id="c-for-33v-differential-drive-33v-cs-i2c-bus">C FOR 3.3V Differential drive 3.3V CS I2C BUS<a class="headerlink" href="#c-for-33v-differential-drive-33v-cs-i2c-bus" title="Permanent link">&para;</a></h4>
+<p><strong>Option C:</strong> used with newer (32bit) MPU's (e.g. <strong>EX-CSB1</strong>) &amp; uses 3V3 throughout. No Endpoint jumpers need to be cut. Whichever option is used, the user should consider if the I2C bus needs to be tuned differently. For very short extra cable length to the Endpoint and only one extra device count on an I2C bus under 1m in length, tuning may be unnecessary. In marginal conditions consider returning as per DCC-EX recommendations.</p>
 <p><img alt="Differential Drive 3.3V Only CS" src="../../../_static/images/ex-sensorcam/differential-drive-3v3-only-cs.png" /></p>
 <h2 id="appendix-g">APPENDIX G<a class="headerlink" href="#appendix-g" title="Permanent link">&para;</a></h2>
 <h3 id="i2c-command-protocol">I2C command PROTOCOL<a class="headerlink" href="#i2c-command-protocol" title="Permanent link">&para;</a></h3>
@@ -11348,7 +11349,7 @@ SETUP(&quot;&lt;S 110 708 0\&gt;&quot;);     //note recommended id is 1%%(b/s) f
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="July 20, 2026 05:30:14 UTC">July 20, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="July 20, 2026 08:03:51 UTC">July 20, 2026</span>
   </span>
 
     
