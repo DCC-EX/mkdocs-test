@@ -264,7 +264,7 @@ If necessary, another option can be tried to address "noise" trips if all else f
 
 Note: The Twin should have a bsNo less than the primary sensor to avoid introducing an extra 100mSec delay to the trip time as the lowest bsNo is evaluated first. We suggest using bank 0 for twins, or a lower number in the same bank.
 
-### 5.16 Other diagnostic commands
+### 5.16 Diagnostic Commands
 
 There are other commands that can be used to optimise the CAM performance by trial-and-error. These include Frame(**``f``**), GetCAMsettings(**``g``**), adJustCAMsettings(**``j``**) and Statistics(**``&``**), also Calibrate(**c**)(not recommended). If the scene contrast is inadequate, a lighter reflector between the tracks is a cure particularly in fiddle yards (e.g. light green grass).
 
@@ -277,7 +277,7 @@ Test image with Fluorescent or LED lighting - note three faint dull stripes acro
 
 The mains supply synchronization is currently inadequate (ESP32-CAM limitation) so drifting illumination bands will add a little to the "noise" seen by the sensors. The significance of this may need evaluation by experiment.
 
-### 5.17 pvtThresholds & sensor size
+### 5.17 pvtThresholds-Sensor size
 
 Two additional features have been added which may resolve lingering issues. Individual thresholds can be set to override the "global" *threshold* set with **``t##``**. The command **``t##,%%``** will set a *pvtThreshold* for sensor S%% replacing the "global" (t##) value. It can be removed with the **``t00,%%``** command. This way a higher threshold can be set on a "noisy" sensor.  While an increased *pvtThreshold* may reduce its sensitivity, it has no effect on the other sensors. **``t1,%%``** will cancel all pvtThresholds in one bank, while **``t1,99``** cancels ALL pvtThresholds in the CAM.
 
@@ -369,7 +369,9 @@ The ESP32-CAM reset button, remotely mounted on CAM, may be difficult to access.
 
 ![ESP32 CAM MB with PCA9515A](../../_static/images/ex-sensorcam/esp32-cam-mb-pca9515a.png)  
 **Figure 7 &nbsp; PCA9515A 3.3V to 5V i2c interface improvisation compared to a full feature prototype solution**  
- &nbsp; Note: for 3.3V microprocessors (e.g. **EX-CSB1**) ensure Vcc1 is connected to 3.3V (Vcc0) not 5V.
+ 
+ !!! note "NOTE:"
+     For 3.3V microprocessors (e.g. **EX-CSB1**) ensure Vcc1 is connected to 3.3V (Vcc0) not 5V.
 
 ## 8 Host Communication
 
@@ -379,9 +381,9 @@ The operation of the railway depends on a Control Station that polls the sensorC
 
 The i2c bus is running at 100kHz on the prototype software. It has not been tested at any higher speed yet. It is running fine over a 20m long i2c bus to the master microcontroller(mpu or Mega).
 
-### 8.2   DCC-EX EX-CommandStation
+### 8.2  EX-CommandStation
 
-Setting up a **DCC-EX** **EX-CommandStation**, should you have one, requires configuration details placed in files config.h and mySetup.h along with a driver IO_EXSensorCAM.h and myAutomation.h. These must go in the directory containing file CommandStation-EX.ino. The IO_EXSensorCAM.h driver is based on the modified IO_EXIOExpander.h code. Refer to [APPENDIX&nbsp;H](#appendix-h)for installation details. *EXSensorCAM.h* code mirrors the i,I,o,t & m commands, while the EXIODPUP command may serve as the enable function(a). EXIOExpander.h codes don't have the "control & setup" sensorCAM functions otherwise available from a USB console so additional functionality was added using the DCC-EX sensorCAM native command ``<N>`` (if using the newest CamParser.cpp).
+Setting up a **DCC-EX** **EX-CommandStation**, should you have one, requires configuration details placed in files config.h and mySetup.h along with a driver IO_EXSensorCAM.h and myAutomation.h. These must go in the directory containing file CommandStation-EX.ino. The IO_EXSensorCAM.h driver is based on the modified IO_EXIOExpander.h code. Refer to [APPENDIX&nbsp;H](#appendix-h)for installation guide. *EXSensorCAM.h* code mirrors the i,I,o,t & m commands, while the EXIODPUP command may serve as the enable function(a). EXIOExpander.h codes don't have the "control & setup" sensorCAM functions otherwise available from a USB console so additional functionality was added using the DCC-EX sensorCAM native command ``<N>`` (if using the newest CamParser.cpp).
 
 ### 8.3 Non-DCC-EX system
 
@@ -782,25 +784,25 @@ NOTE: Take care to cut copper strips appropriately!
 
 ![Dual CAM Header Wiring](../../_static/images/ex-sensorcam/dual-cam-header-wiring.png)
 
-There are three basic variations below for connecting the Endpoints to the CS. The choice depends on the current system being extended. Options A & B apply to a 5Volt I2C bus on a 5V CS with or without existing I2C accessory connections, while Option C is the simplest connection to a 3.3Volt CS i2c bus.
+There are three basic variations below for connecting the Endpoints to the CS. The choice depends on the current system being extended. Options A & B apply to a 5Volt I2C bus on a 5V CS with or without existing I2C accessory connections, while Option C is the simplest and safest connection to a 3.3Volt CS i2c bus.
 
 The 2x Endpoints require about  10mA  each. All options can be adapted for use with a mux if necessary. The choice between A and B depends on the power supplies available. If the CS Endpoint is to be tapped into a "remote" 5V i2c bus location, a CS 3.3V supply may not be available, only a 5V I2C supply. Option B removes one 10k pullup resistor pair from the bus to avoid inappropriate pull-up voltage(3.3V).
 
-**Option A:** CUT CAM endpoint jumper 0-1 and supply 5V and 3.3V from the CS. Option A connections results in a 5V i2c interface to 3.3V differential cable for 5V microprocessor based CS (e.g. Mega).
-
-**Option B:** may be used if the CS 3V3 regulator is more convenient. CUT two CS Endpoint I2C jumpers to disconnect the on-board I2C pullup 10k resistors and 3v3 from the bus. This adds load to the i2c bus data so may need extra pullups to 5V. This does function but is not recommended.
-
-**Option C:** used with newer (32bit) MPU's (e.g. **EX-CSB1**) & uses 3V3 throughout. No Endpoint jumpers need to be cut. Whichever option is used, the user should consider if the I2C bus needs to be tuned differently. For very short extra cable length to the Endpoint and only one extra device count on an I2C bus under 1m in length, tuning may be unnecessary. In marginal conditions consider returning as per DCC-EX recommendations.
-
 #### A FOR 3.3V Differential drive 5V CS I2C BUS
+
+**Option A:** CUT CAM endpoint jumper 0-1 and supply 5V and 3.3V from the CS. Option A connections results in a 5V i2c interface to 3.3V differential cable for 5V microprocessor based CS (e.g. Mega).
 
 ![Differential Drive 5V CS](../../_static/images/ex-sensorcam/differential-drive-5v-cs.png)
 
 #### B FOR 3.3V Differential drive 5V CS I2C BUS
 
+**Option B:** may be used if the CS 3V3 regulator is more convenient. CUT two CS Endpoint I2C jumpers to disconnect the on-board I2C pullup 10k resistors and 3v3 from the bus. This adds load to the i2c bus data so may need extra pullups to 5V. This does function but is not recommended.
+
 ![Differential Drive 3.3V CS](../../_static/images/ex-sensorcam/differential-drive-3v3-cs.png)
 
 #### C FOR 3.3V Differential drive 3.3V CS I2C BUS
+
+**Option C:** used with newer (32bit) MPU's (e.g. **EX-CSB1**) & uses 3V3 throughout. No Endpoint jumpers need to be cut. Whichever option is used, the user should consider if the I2C bus needs to be tuned differently. For very short extra cable length to the Endpoint and only one extra device count on an I2C bus under 1m in length, tuning may be unnecessary. In marginal conditions consider returning as per DCC-EX recommendations.
 
 ![Differential Drive 3.3V Only CS](../../_static/images/ex-sensorcam/differential-drive-3v3-only-cs.png)
 
