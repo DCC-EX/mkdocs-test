@@ -277,7 +277,7 @@ Test image with Fluorescent or LED lighting - note three faint dull stripes acro
 
 The mains supply synchronization is currently inadequate (ESP32-CAM limitation) so drifting illumination bands will add a little to the "noise" seen by the sensors. The significance of this may need evaluation by experiment.
 
-### 5.17 pvtThresholds-Sensor size
+### 5.17 pvtThreshold & Sensor size
 
 Two additional features have been added which may resolve lingering issues. Individual thresholds can be set to override the "global" *threshold* set with **``t##``**. The command **``t##,%%``** will set a *pvtThreshold* for sensor S%% replacing the "global" (t##) value. It can be removed with the **``t00,%%``** command. This way a higher threshold can be set on a "noisy" sensor.  While an increased *pvtThreshold* may reduce its sensitivity, it has no effect on the other sensors. **``t1,%%``** will cancel all pvtThresholds in one bank, while **``t1,99``** cancels ALL pvtThresholds in the CAM.
 
@@ -371,7 +371,8 @@ The ESP32-CAM reset button, remotely mounted on CAM, may be difficult to access.
 **Figure 7 &nbsp; PCA9515A 3.3V to 5V i2c interface improvisation compared to a full feature prototype solution**  
  
  !!! note "NOTE:"
-     For 3.3V microprocessors (e.g. **EX-CSB1**) ensure Vcc1 is connected to 3.3V (Vcc0) not 5V.
+
+    For 3.3V microprocessors (e.g. **EX-CSB1**) ensure Vcc1 is connected to 3.3V (Vcc0) not 5V.
 
 ## 8 Host Communication
 
@@ -381,7 +382,7 @@ The operation of the railway depends on a Control Station that polls the sensorC
 
 The i2c bus is running at 100kHz on the prototype software. It has not been tested at any higher speed yet. It is running fine over a 20m long i2c bus to the master microcontroller(mpu or Mega).
 
-### 8.2  EX-CommandStation
+### 8.2  EX-Command Station
 
 Setting up a **DCC-EX** **EX-CommandStation**, should you have one, requires configuration details placed in files config.h and mySetup.h along with a driver IO_EXSensorCAM.h and myAutomation.h. These must go in the directory containing file CommandStation-EX.ino. The IO_EXSensorCAM.h driver is based on the modified IO_EXIOExpander.h code. Refer to [APPENDIX&nbsp;H](#appendix-h)for installation guide. *EXSensorCAM.h* code mirrors the i,I,o,t & m commands, while the EXIODPUP command may serve as the enable function(a). EXIOExpander.h codes don't have the "control & setup" sensorCAM functions otherwise available from a USB console so additional functionality was added using the DCC-EX sensorCAM native command ``<N>`` (if using the newest CamParser.cpp).
 
