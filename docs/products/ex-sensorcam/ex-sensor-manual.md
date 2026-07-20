@@ -370,7 +370,7 @@ The ESP32-CAM reset button, remotely mounted on CAM, may be difficult to access.
 ![ESP32 CAM MB with PCA9515A](../../_static/images/ex-sensorcam/esp32-cam-mb-pca9515a.png)  
 **Figure 7 &nbsp; PCA9515A 3.3V to 5V i2c interface improvisation compared to a full feature prototype solution**  
 
- !!! note "NOTE:"
+!!! note "NOTE:"
     For 3.3V microprocessors (e.g. **EX-CSB1**) ensure Vcc1 is connected to 3.3V (Vcc0) not 5V.
 
 ## 8 Host Communication
