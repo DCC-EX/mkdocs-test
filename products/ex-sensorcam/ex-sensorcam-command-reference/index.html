@@ -8723,17 +8723,17 @@
 <tr>
 <td><strong><code>p#</code></strong><br>p2</td>
 <td><code>&lt;Np #&gt;</code></td>
-<td style="text-align: left;"><strong>Position table for a bank of sensors</strong> <br>Prints for enAbled sensors of bank #. &nbsp; p%% similar</td>
+<td style="text-align: left;"><strong>Position table for a bank of sensors</strong> <br>List for enAbled sensors of bank #. Also <strong>p%%</strong></td>
 </tr>
 <tr>
 <td><strong><code>q#</code></strong><br>q2</td>
 <td><code>&lt;Nq #&gt;</code></td>
-<td style="text-align: left;"><strong>Query enAbled state of sensors in bank</strong><br>Prints state of all 8 sensors (1/0).  Use q9 for ALL banks</td>
+<td style="text-align: left;"><strong>Query enAbled state of sensors in bank</strong><br>State of 8 sensors (1/0).  Use <strong>q9</strong> for ALL banks</td>
 </tr>
 <tr>
 <td><strong><code>r%%</code></strong><br>r12</td>
 <td><code>&lt;Nr %%&gt;</code></td>
-<td style="text-align: left;"><strong>Refresh reference image for sensor</strong><br>enAbles sensor &amp; capture new reference. <strong>r00</strong> for ALL</td>
+<td style="text-align: left;"><strong>Refresh reference image for sensor S%%</strong> <br>enAble S%% &amp; capture new ref image. <strong>r00</strong> for ALL</td>
 </tr>
 <tr>
 <td><strong><code>s%%</code></strong><br>s12</td>
@@ -8743,17 +8743,17 @@
 <tr>
 <td><strong><code>t##[,%%]</code></strong><br>t42,12</td>
 <td><code>&lt;Nt ##[ %%]&gt;</code></td>
-<td style="text-align: left;"><strong>Theshold value (32-98) [pvtThreshold for S%%]</strong> <br>Sets global threshold. [<strong>t0,%%</strong> clears a pvtThreshold]</td>
+<td style="text-align: left;"><strong>Theshold value (32-98) [pvtThreshold for S%%]</strong> <br>Sets global threshold. [<strong>t0,%%</strong> removes pvtT.]</td>
 </tr>
 <tr>
 <td><strong><code>t##</code></strong><br>t20</td>
 <td><code>&lt;Nt ##&gt;</code></td>
-<td style="text-align: left;"><strong>Tabulate ## (2-30 only) rows of scroll data</strong> <br> Note: <strong>t1</strong> toggles scroll on/off &amp; <strong>t99</strong> lists pvtThresholds</td>
+<td style="text-align: left;"><strong>Tabulate ## (2-30 only) rows of scroll data</strong> <br> <strong>t1</strong> toggles scroll on/off &amp; <strong>t99</strong> lists pvtThresholds</td>
 </tr>
 <tr>
 <td><strong><code>t1,%%</code></strong><br>t1,12</td>
 <td><code>&lt;Nt 1 %%&gt;</code></td>
-<td style="text-align: left;"><strong>Trash pvtThresholds for S%% bank</strong><br>clears 1 bank of 8 pvtThresholds. <strong>t1,99</strong> clears ALL pvtT.</td>
+<td style="text-align: left;"><strong>Trash pvtThresholds for S%% bank</strong><br>Clears 8 pvtThresholds. <strong>t1,99</strong> clears ALL pvtT.</td>
 </tr>
 <tr>
 <td><strong><code>u%%</code></strong><br>u12</td>
@@ -8793,12 +8793,12 @@
 <tr>
 <td><strong><code>R</code></strong></td>
 <td><code>&lt;n/a&gt;</code></td>
-<td style="text-align: left;"><strong>Reset EX-SensorCAM</strong> (CS &lt;NR&gt; equates to &lt;Nr 00&gt;) <br>Reset into EX-SensorCAM mode, exit any WiFi mode</td>
+<td style="text-align: left;"><strong>Reset EX-SensorCAM</strong> (&lt;NR&gt; equates to &lt;Nr 00&gt;) <br>Reset into EX-SensorCAM mode, exit any WiFi mode</td>
 </tr>
 <tr>
 <td><strong><code>&amp;</code></strong></td>
 <td><code>&lt;n/a&gt;</code></td>
-<td style="text-align: left;"><strong>Print statistics since last '&amp;' cmd.</strong> <br>USB histogram of trips + potential trips of 1-3 frames</td>
+<td style="text-align: left;"><strong>Print statistics since last '&amp;' cmd.</strong> <br>Histogram of trips + potential trips of 1-3 frames</td>
 </tr>
 <tr>
 <td><strong><code>+#,$</code></strong><br>+2,3</td>
@@ -8816,9 +8816,9 @@
 <td style="text-align: left;"><strong>linear sensor bank conversion starting at S%%</strong> <br>use r,x step size of #,$(0-31) Slope "down-left"</td>
 </tr>
 <tr>
-<td><strong><code>@##</code></strong></td>
+<td><strong><code>@##</code></strong><br>@73</td>
 <td><na></td>
-<td style="text-align: left;"><strong>change scroll trip symbol - refer to manual</strong></td>
+<td style="text-align: left;"><strong>change scroll trip symbol - refer to manual</strong><br><span style="opacity:0">EXISensorCAMIversionIinfoIIvIIstartsISSIDIIIwebCAMIII</span></td>
 </tr>
 </tbody>
 </table>
@@ -8843,7 +8843,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="July 17, 2026 08:04:22 UTC">July 17, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="July 21, 2026 05:12:25 UTC">July 21, 2026</span>
   </span>
 
     
