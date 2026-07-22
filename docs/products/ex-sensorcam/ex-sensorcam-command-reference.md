@@ -33,14 +33,14 @@ Commands are used through the Command Station input to configure the sensorCAM s
 | --- | --- | :--- |
 | `n/a` | `<N>` | **Show Current CAM selection and others available** <br>lists assigned base vpins |
 | `n/a` | `<NQ>` | **Query state of all Sensors**<br> Tabulation of all CAM sensor tripped states |
-| **`a%%[,rr,xx]`**<br>a12,32,43 | `<Na %% [&nbsp;rr&nbsp;xx]>` | **enAble Sensor and refresh reference**<br> Sensor responsive. [new coordinates: rr,xx\] |
+| **`a%%[,rr,xx]`**<br>a12,32,43 | `<Na %%`<br>`[ rr xx]>` | **enAble Sensor and refresh reference**<br> Sensor responsive. [new coordinates: rr,xx\] |
 | **`b#[,$]`**<br>b1 | `<Nb #>` | **Bank occupancy status** bytes of 8 sensors<br> gives a bank 'value' [set Brightness ScaleFactor $\] |
 | **`c$$$$`** | `n/a` | **ov2640 re-Calibration and re-reference**<br>Refer to manual before use! (deprecate) |
 | **`d%%[,#]`**<br>d12,5 | `n/a` | **Difference Score for Sensor** [# repeats\]<br>scores for colour, brightness & sum |
 | **`e`**<br>e | `<Ne>` | **EPROM write sensorCAM configuration**<br>Save parameters for next Reset |
 | **`f%%`**<br>f12 | `<Nf %%>` | **Frame S%% pixel array. Full 16x3 bytes**(HEX)<br>4x4(RGB) pixels current & reference frames |
 | **`g`**<br>g | `<Ng>` | **Global ov2640 Status to CAM monitor**<br>Lists 14 parameter settings |
-| **`h$[,#]`**<br>h7,1 | `<Nh %%><br><Nh $[ #]>` | **Help (debug\) set *maxSensors*(>9\)** (h lists options)<br>h7,# pauses(w\) scroll on bank # trips |
+| **`h$[,#]`**<br>h7,1 | `<Nh %%>`<br>`<Nh $[ #]>` | **Help (debug\) set *maxSensors*(>9\)** (h lists options)<br>h7,# pauses(w\) scroll on bank # trips |
 | **`i%%[,$$]`**<br>i12,02 | `<Ni %% [$$]>` | **Info on Sensor state & configuration**<br> [add a "twin" sensor (S$$\) to S%%] |
 | **`j$,#`**<br>jB2 | `<Nj $ #>` | **adJust ov2640 global parameters & lists 'g' stae**<br>Set a single parameter($) for ov2640. **j** lists options |
 | **`k%%,rr,xx`**<br>k12,130,205 | `n/a` | **locate a basic sensor at row rr, column xx**<br>Defines sensor at rr,xx DOES NOT enable or reference |
