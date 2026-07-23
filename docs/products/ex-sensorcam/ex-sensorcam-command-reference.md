@@ -13,7 +13,7 @@ Commands are used through the Command Station input to configure the sensorCAM s
 
 **`, space`**	Equivalent parameter separators.  CS must use space character  
 **`%%`** &nbsp; &nbsp; &nbsp; &nbsp; Represents a Sensor's bank/sensor two digit identifier (digits 0-7 only)  
-**`rr xx`**&nbsp; &nbsp; Represent the row and column position of sensor (range 1-236 & 1-316 only)  
+**`ro xx`**&nbsp; &nbsp; Represent the row and column position of sensor (range 1-236 & 1-316 only)  
 **`#`** &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Represents a single decimal digit (0-9)  
 **`$`** &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Represents a single alpha-numeric character (A-Z or 0-9 as relevant to command)  
 **`[ ]`** &nbsp; &nbsp; &nbsp;  &nbsp;Indicates enclosed parameter is optional.  Do NOT type brackets into commands  
@@ -29,21 +29,21 @@ Commands are used through the Command Station input to configure the sensorCAM s
 }
 </style>
 
-| native CAM<br>example | DCC-EX<br>Serial Cmd | &nbsp; &nbsp; &nbsp;  Command Description |
+| Native CAM<br>example | DCC-EX CS<br>Serial Cmd. | &nbsp; &nbsp; &nbsp;  Command Description |
 | --- | --- | :--- |
 | `n/a` | `<N>` | **Show Current CAM selection and others available** <br>lists assigned base vpins |
 | `n/a` | `<NQ>` | **Query state of all Sensors**<br> Tabulation of all CAM sensor tripped states |
-| **`a%%[,rr,xx]`**<br>a12,32,43 | `<Na %%`<br>`[ rr xx]>` | **enAble Sensor and refresh reference**<br> Sensor responsive. [new coordinates: rr,xx\] |
-| **`b#[,$]`**<br>b1 | `<Nb #>` | **Bank occupancy status** bytes of 8 sensors<br> gives a bank 'value' [set Brightness ScaleFactor $\] |
+| **`a%%[,ro,xx]`**<br>a12,32,43 | `<Na %%`<br>`[ ro xx]>` | **enAble Sensor and refresh reference**<br> Sensor responsive. [new coordinates: ro,xx\] |
+| **`b#[,$]`**<br>b1 | `<Nb #>` | **Bank occupancy status** bytes of 8 sensors<br> gives a bank "value" [set Brightness ScaleFactor $\] |
 | **`c$$$$`** | `n/a` | **ov2640 re-Calibration and re-reference**<br>Refer to manual before use! (deprecate) |
 | **`d%%[,#]`**<br>d12,5 | `n/a` | **Difference Score for Sensor** [# repeats\]<br>scores for colour, brightness & sum |
 | **`e`**<br>e | `<Ne>` | **EPROM write sensorCAM configuration**<br>Save parameters for next Reset |
-| **`f%%`**<br>f12 | `<Nf %%>` | **Frame S%% pixel array. Full 16x3 bytes**(HEX)<br>4x4(RGB) pixels current & reference frames |
+| **`f%%`**<br>f12 | `<Nf %%>` | **Frame S%% pixel array. Full 16x3 bytes** (HEX)<br>4x4(RGB) pixels current & reference frames |
 | **`g`**<br>g | `<Ng>` | **Global ov2640 Status to CAM monitor**<br>Lists 14 parameter settings |
-| **`h$[,#]`**<br>h7,1 | `<Nh %%>`<br>`<Nh $[ #]>` | **Help (debug\) set *maxSensors*(>9\)** (h lists options)<br>h7,# pauses(w\) scroll on bank # trips |
+| **`h$[,#]`**<br>h7,1 | `<Nh %%>`<br>`<Nh $[ #]>` | **Help (debug\) set *maxSensors*(>9\)** (**h** lists options)<br>h7,# pauses(w\) scroll on bank # trips |
 | **`i%%[,$$]`**<br>i12,02 | `<Ni %% [$$]>` | **Info on Sensor state & configuration**<br> [add a "twin" sensor (S$$\) to S%%] |
-| **`j$,#`**<br>jB2 | `<Nj $ #>` | **adJust ov2640 global parameters & lists 'g' stae**<br>Set a single parameter($) for ov2640. **j** lists options |
-| **`k%%,rr,xx`**<br>k12,130,205 | `n/a` | **locate a basic sensor at row rr, column xx**<br>Defines sensor at rr,xx DOES NOT enable or reference |
+| **`j$,#`**<br>jB2 | `<Nj $ #>` | **adJust ov2640 global parameters & lists 'g' state**<br>Set a single parameter($) for ov2640. **j** lists options |
+| **`k%%,ro,xx`**<br>k12,130,205 | `n/a` | **locate a basic sensor at row ro, column xx**<br>Defines sensor at ro,xx DOES NOT enable or reference |
 | **`l%%`**<br>l12 | `<Nl %%>` | (Lima) **Latch sensor on (i.e. occupied = 1\)** <br>Sensor disabled, & set 1 until a%%, r%% or o%% |
 | **`m$[,%%]`**<br>m2,30 | `<Nm $ [%%]>` | **Min2trip frames setting $(1-4) [*MaxSensor* setting]** <br>Sets min/max.  m0,%% leaves *min2trip* unchanged |
 | **`n$[,%%]`**<br>n0,10 | `<Nn $ [%%]>` | **Number for bank trip nLED indicator [set *minSensor*]** <br>Sets LED to indicates when bank $ sensor is tripped |
