@@ -9,7 +9,7 @@ Including ESP32-WROVER-CAM and ESP32-WROOM-S3 CAM's
 [3. Physical Installation](#3-physical-installation)  
 [4. Notation](#4-notation)  
 [5. Configuration](#5-configuration)  
-[6. PROCESSING4 monitor/console](#6-processing4-monitorconsole)  
+[6. PROCESSING4 monitor/console](#6-processing4-monitor)  
 [7. Wiring Requirements](#7-wiring-requirements)  
 [8. Host Communication](#8-host-communication)
 
@@ -162,7 +162,7 @@ The sensorCAM takes some time to boot and establish sensing mode. The flash LED 
 
 ### 5.6 Verify WiFi webCAM ops
 
-The CAM can be switched to webCAM WiFi video mode with the '**v1**' command. '**v2**' can select your alternate WiFi network. ('**v**' will give sensorCAM software version). '**v1**' (or '**v2**') will reboot and load webCAM mode connecting to the network selected, and providing a URL e.g. http://192.168.0.xx that can be used to connect with a browser. An image, like **Figure 1** above, should be seen with controls for experimenting with Brightness etc. This image is educational and useful for camera alignment, but not necessarily a good indication of the sensorCAM (sensor mode) image because of the unpredictable parameter effects. To see a more reliable image, run the PROCESSING 4 *SensorCAM.pde* monitor instead of Arduino webCAM example (refer [Section 6](#6-processing4-monitorconsole)). To exit video mode, try the monitor command **``R``** (or **``F``**). If this software reset fails, try manually rebooting the sensorCAM (power OFF/ON or via the on-board RST push-button using a non-metallic tool!).
+The CAM can be switched to webCAM WiFi video mode with the '**v1**' command. '**v2**' can select your alternate WiFi network. ('**v**' will give sensorCAM software version). '**v1**' (or '**v2**') will reboot and load webCAM mode connecting to the network selected, and providing a URL e.g. http://192.168.0.xx that can be used to connect with a browser. An image, like **Figure 1** above, should be seen with controls for experimenting with Brightness etc. This image is educational and useful for camera alignment, but not necessarily a good indication of the sensorCAM (sensor mode) image because of the unpredictable parameter effects. To see a more reliable image, run the PROCESSING 4 *SensorCAM.pde* monitor instead of Arduino webCAM example (refer [Section 6](#6-processing4-monitor)). To exit video mode, try the monitor command **``R``** (or **``F``**). If this software reset fails, try manually rebooting the sensorCAM (power OFF/ON or via the on-board RST push-button using a non-metallic tool!).
 
 ### 5.7 Command Familiarisation
 

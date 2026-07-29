@@ -2,21 +2,38 @@
   <ol class="md-breadcrumbs__list" style="display: flex; flex-wrap: wrap; list-style: none; padding: 0; margin: 0; gap: 8px; align-items: center;">
     
     <!-- Home Root Link -->
-    <li class="md-breadcrumbs__item">
-      <a href="{{ '#' | url }}" class="md-breadcrumbs__link" style="color: var(--md-typeset-color); opacity: 0.7; text-decoration: none;">
+    <li class="md-breadcrumbs__item" style="display: flex; align-items: center;">
+      <a href="{{ config.site_url }}" class="md-breadcrumbs__link" style="color: var(--md-typeset-color); opacity: 0.7; text-decoration: none;">
         Home
       </a>
     </li>
 
-    <!-- Reverse the ancestors array to display from highest category down to deepest subfolder -->
+    <!-- Safe loop through corrected structural directory ancestors -->
     {% if page and page.ancestors %}
       {% for nav_item in page.ancestors | reverse %}
         {% if nav_item.title %}
           <li class="md-breadcrumbs__item" style="display: flex; align-items: center;">
             <span style="opacity: 0.35; color: var(--md-typeset-color); margin: 0 8px;">|</span>
-            <a href="{{ nav_item.url | url }}" class="md-breadcrumbs__link" style="color: var(--md-typeset-color); opacity: 0.7; text-decoration: none;">
-              {{ nav_item.title }}
-            </a>
+            
+            {# Extract the valid URL string safely from the section wrapper #}
+            {% set target_url = "" %}
+            {% if nav_item.url %}
+              {% set target_url = nav_item.url %}
+            {% elif nav_item.active_page and nav_item.active_page.url %}
+              {% set target_url = nav_item.active_page.url %}
+            {% elif nav_item.children and nav_item.children[0] and nav_item.children[0].url %}
+              {% set target_url = nav_item.children[0].url %}
+            {% endif %}
+
+            {% if target_url != "" %}
+              <a href="{{ target_url | url }}" class="md-breadcrumbs__link" style="color: var(--md-typeset-color); opacity: 0.7; text-decoration: none;">
+                {{ nav_item.title }}
+              </a>
+            {% else %}
+              <span class="md-breadcrumbs__link" style="color: var(--md-typeset-color); opacity: 0.5;">
+                {{ nav_item.title }}
+              </span>
+            {% endif %}
           </li>
         {% endif %}
       {% endfor %}
