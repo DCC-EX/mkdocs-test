@@ -33,7 +33,7 @@ Note: The Android throttle apps listed above can be made to made to run on Windo
 
 ### Apple iOS (Phones and Tablets)
 
-- [Throttle Card](./throttlecard.md) (MacOS, iOS)
+- [Throttle Card](./throttlecard.md) (MacOS, iOS) *recommended*
 - DigiTrainsPro ([Android](https://play.google.com/store/apps/details?id=digitrainspro.digitrainspro.hu&hl=en_US&gl=US), [iOS](https://apps.apple.com/us/app/digitrainspro/id1481937310), [Windows](https://www.microsoft.com/en-us/p/digitrainspro/9p3kl60r0c5q?rtc=1&activetab=pivot:overviewtab)) *- Requires JMRI*
 - [Locontrol](https://apps.apple.com/us/app/locontrol-dcc-controller/id1473757920) (iOS)
 - [SRCP Client](https://www.io-expert.com/) (iOS)
@@ -90,7 +90,7 @@ However the **DCC-EX Native/Serial commands** provide a significant number of ex
 
 - [EX-WebThrottle](../products/ex-webthrottle/ex-webthrottle.md) (Windows, MacOS, Linux) *recommended*
 - [Engine Driver](./engine-driver.md) (Android) *recommended*
-- [Throttle Card](./throttlecard.md) (MacOS, iOS)
+- [Throttle Card](./throttlecard.md) (MacOS, iOS) *recommended*
 - [DCCpp CAB](http://lamaquetade.infotronikblog.com/dccppcab/dccppcab_index.html) (Android)
 - DCC-EX CAB ([iOS](https://apps.apple.com/us/app/dcc-ex-cab/id6695754417) and [Android](https://play.google.com/store/apps/details?id=com.gothicmaestro.dccexcab))
 - [DCC++ Throttle](https://aleksandr.ru/my/dccppthrottle) (Android)
@@ -111,7 +111,7 @@ See also: Arduino/ESP32 DCC-EX Native command library - [DCCEXProtocol](https://
 ### WiThrottle Protocol Based Throttles
 
 - [Engine Driver](./engine-driver.md) (Android) *recommended*
-- [Throttle Card](./throttlecard.md) (MacOS, iOS)
+- [Throttle Card](./throttlecard.md) (MacOS, iOS) *recommended*
 - [Cab Engineer: DCC Throttle](https://www.alfray.com/trains/cab_app.html) (Android)
 - [Locontrol](https://apps.apple.com/us/app/locontrol-dcc-controller/id1473757920) (iOS)
 - WiThrottle Cab ([iOS](https://apps.apple.com/us/app/withrottle-cab/id6746695618) and [Android](https://play.google.com/store/apps/details?id=com.gothicmaestro.withrottlecab))
