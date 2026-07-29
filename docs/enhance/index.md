@@ -50,8 +50,7 @@ This capability is part of **EXRAIL** and is built into your **EX-CommandStation
 This capability is part of **TrackManager** and is built into your **EX-CommandStation**.  Read the following to explore this feature:
 
 * [TrackManager](../products/ex-commandstation/trackmanager/trackmanager.md)
-
-==TODO== links to the DC pages
+* [Running a Legacy DC layout](../products/ex-commandstation/dc-running.md)
 
 Also see:
 
