@@ -7,7 +7,7 @@ For use with ov2640 camera module with esp32-CAM-MB and variants
 [1. Overview](#1-overview)  
 [2. ESP32-CAM](#2-esp32wrover-cam)  
 [3. Physical Installation](#3-physical-installation)  
-[4. Notation & Help commands](#4-notation--help-commands)  
+[4. Notation & Help commands](#4-notation-help-commands)  
 [5. Configuration](#5-configuration)  
 [6. PROCESSING4 monitor/console](#6-processing4-monitor)  
 [7. Wiring Requirements](#7-wiring-requirements)  
@@ -202,7 +202,7 @@ The sensorCAM takes some time to boot and establish sensing mode. The white flas
 
 ### 5.6 Verify wifi webCAM ops
 
-The CAM can be switched to WiFi webCAM video mode with the **``v1``** command. **``v2``** can select your alternate WiFi network. (**``v``** will give sensorCAM software version). **``v1``** (or&nbsp;**``v2``**) will reboot and load WiFi mode connecting to the network selected, and providing a URL e.g. http://192.168.0.xx that can be used to connect with a browser. An image, like **Figure 1** above, should be seen with controls for experimenting with Brightness etc. This image is educational but not necessarily a good indication of the sensorCAM (sensor mode) image because of the unpredictable parameter effects. To see a more reliable image run the PROCESSING *SensorCAM.pde* monitor instead of Arduino IDE monitor (refer [Section 6](#6-processing4-monitorconsole)). To exit video mode, try the monitor command **``R``** (or **``F``**). If this software reset fails, try manually rebooting the sensorCAM (power OFF/ON) or via the on-board black push-button using a non-metallic tool!
+The CAM can be switched to WiFi webCAM video mode with the **``v1``** command. **``v2``** can select your alternate WiFi network. (**``v``** will give sensorCAM software version). **``v1``** (or&nbsp;**``v2``**) will reboot and load WiFi mode connecting to the network selected, and providing a URL e.g. http://192.168.0.xx that can be used to connect with a browser. An image, like **Figure 1** above, should be seen with controls for experimenting with Brightness etc. This image is educational but not necessarily a good indication of the sensorCAM (sensor mode) image because of the unpredictable parameter effects. To see a more reliable image run the PROCESSING *SensorCAM.pde* monitor instead of Arduino IDE monitor (refer [Section 6](#6-processing4-monitor)). To exit video mode, try the monitor command **``R``** (or **``F``**). If this software reset fails, try manually rebooting the sensorCAM (power OFF/ON) or via the on-board black push-button using a non-metallic tool!
 
 ### 5.7 Command Familiarisation
 
