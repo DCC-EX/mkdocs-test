@@ -649,3 +649,8 @@ a.external-link-icon::after {
 .md-tag {
     display: none !important;
 }
+
+.md-breadcrumbs {
+    margin-top: 8px !important;
+    margin-bottom: -10px !important;
+}
