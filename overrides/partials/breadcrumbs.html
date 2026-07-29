@@ -8,15 +8,17 @@
       </a>
     </li>
 
-    <!-- Map nested sections dynamically -->
+    <!-- Reverse the ancestors array to display from highest category down to deepest subfolder -->
     {% if page and page.ancestors %}
-      {% for nav_item in page.ancestors %}
-        <li class="md-breadcrumbs__item" style="display: flex; align-items: center; gap: 8px;">
-          <span style="opacity: 0.35; color: var(--md-typeset-color);">|</span>
-          <a href="{{ nav_item.url | url }}" class="md-breadcrumbs__link" style="color: var(--md-typeset-color); opacity: 0.7; text-decoration: none;">
-            {{ nav_item.title }}
-          </a>
-        </li>
+      {% for nav_item in page.ancestors | reverse %}
+        {% if nav_item.title %}
+          <li class="md-breadcrumbs__item" style="display: flex; align-items: center;">
+            <span style="opacity: 0.35; color: var(--md-typeset-color); margin: 0 8px;">|</span>
+            <a href="{{ nav_item.url | url }}" class="md-breadcrumbs__link" style="color: var(--md-typeset-color); opacity: 0.7; text-decoration: none;">
+              {{ nav_item.title }}
+            </a>
+          </li>
+        {% endif %}
       {% endfor %}
     {% endif %}
 
