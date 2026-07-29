@@ -221,6 +221,8 @@
     <div class="md-container" data-md-component="container">
       
       
+  <!-- Retain the original theme tabs layout -->
+  
         
           
             
@@ -485,6 +487,87 @@
           
         
       
+
+  <!-- Safely inject breadcrumbs directly under the top header navigation grid -->
+  
+    <!-- <div class="md-container"> -->
+      <div class="md-grid">
+        <nav class="md-breadcrumbs" aria-label="Breadcrumbs" style="margin-top: 15px; margin-bottom: 5px; display: block !important; visibility: visible !important;">
+  <ol class="md-breadcrumbs__list" style="display: flex; flex-wrap: wrap; list-style: none; padding: 0; margin: 0; gap: 8px; align-items: center;">
+    
+    <!-- Home Root Link -->
+    <li class="md-breadcrumbs__item">
+      <a href="#" class="md-breadcrumbs__link" style="color: var(--md-typeset-color); opacity: 0.7; text-decoration: none;">
+        Home
+      </a>
+    </li>
+
+    <!-- Reverse the ancestors array to display from highest category down to deepest subfolder -->
+    
+      
+        
+          <li class="md-breadcrumbs__item" style="display: flex; align-items: center;">
+            <span style="opacity: 0.35; color: var(--md-typeset-color); margin: 0 8px;">|</span>
+            <a href="../../../../../.." class="md-breadcrumbs__link" style="color: var(--md-typeset-color); opacity: 0.7; text-decoration: none;">
+              Products
+            </a>
+          </li>
+        
+      
+        
+          <li class="md-breadcrumbs__item" style="display: flex; align-items: center;">
+            <span style="opacity: 0.35; color: var(--md-typeset-color); margin: 0 8px;">|</span>
+            <a href="../../../../../.." class="md-breadcrumbs__link" style="color: var(--md-typeset-color); opacity: 0.7; text-decoration: none;">
+              EX-CommandStation
+            </a>
+          </li>
+        
+      
+        
+          <li class="md-breadcrumbs__item" style="display: flex; align-items: center;">
+            <span style="opacity: 0.35; color: var(--md-typeset-color); margin: 0 8px;">|</span>
+            <a href="../../../../../.." class="md-breadcrumbs__link" style="color: var(--md-typeset-color); opacity: 0.7; text-decoration: none;">
+              EXRAIL
+            </a>
+          </li>
+        
+      
+        
+          <li class="md-breadcrumbs__item" style="display: flex; align-items: center;">
+            <span style="opacity: 0.35; color: var(--md-typeset-color); margin: 0 8px;">|</span>
+            <a href="../../../../../.." class="md-breadcrumbs__link" style="color: var(--md-typeset-color); opacity: 0.7; text-decoration: none;">
+              Cookbooks
+            </a>
+          </li>
+        
+      
+        
+          <li class="md-breadcrumbs__item" style="display: flex; align-items: center;">
+            <span style="opacity: 0.35; color: var(--md-typeset-color); margin: 0 8px;">|</span>
+            <a href="../../../../../.." class="md-breadcrumbs__link" style="color: var(--md-typeset-color); opacity: 0.7; text-decoration: none;">
+              Advanced
+            </a>
+          </li>
+        
+      
+    
+
+    <!-- Current Document View Node -->
+    
+      <li class="md-breadcrumbs__item" style="display: flex; align-items: center; gap: 8px;">
+        <span style="opacity: 0.35; color: var(--md-typeset-color);">|</span>
+        <span class="md-breadcrumbs__link" style="color: var(--md-typeset-color); font-weight: 700;">
+          Analog sensors
+        </span>
+      </li>
+    
+
+  </ol>
+</nav>
+      </div>
+    <!-- </div> -->
+  
+
       <main class="md-main" data-md-component="main">
         <div class="md-main__inner md-grid">
           
