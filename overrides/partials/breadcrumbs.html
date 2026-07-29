@@ -1,0 +1,36 @@
+<nav class="md-breadcrumbs" aria-label="Breadcrumbs" style="margin-top: 15px; margin-bottom: 5px; display: block !important; visibility: visible !important;">
+  <ol class="md-breadcrumbs__list" style="display: flex; flex-wrap: wrap; list-style: none; padding: 0; margin: 0; gap: 8px; align-items: center;">
+    
+    <!-- Home Root Link -->
+    <li class="md-breadcrumbs__item">
+      <a href="{{ '#' | url }}" class="md-breadcrumbs__link" style="color: var(--md-typeset-color); opacity: 0.7; text-decoration: none;">
+        Home
+      </a>
+    </li>
+
+    <!-- Reverse the ancestors array to display from highest category down to deepest subfolder -->
+    {% if page and page.ancestors %}
+      {% for nav_item in page.ancestors | reverse %}
+        {% if nav_item.title %}
+          <li class="md-breadcrumbs__item" style="display: flex; align-items: center;">
+            <span style="opacity: 0.35; color: var(--md-typeset-color); margin: 0 8px;">|</span>
+            <a href="{{ nav_item.url | url }}" class="md-breadcrumbs__link" style="color: var(--md-typeset-color); opacity: 0.7; text-decoration: none;">
+              {{ nav_item.title }}
+            </a>
+          </li>
+        {% endif %}
+      {% endfor %}
+    {% endif %}
+
+    <!-- Current Document View Node -->
+    {% if page and page.title %}
+      <li class="md-breadcrumbs__item" style="display: flex; align-items: center; gap: 8px;">
+        <span style="opacity: 0.35; color: var(--md-typeset-color);">|</span>
+        <span class="md-breadcrumbs__link" style="color: var(--md-typeset-color); font-weight: 700;">
+          {{ page.title }}
+        </span>
+      </li>
+    {% endif %}
+
+  </ol>
+</nav>

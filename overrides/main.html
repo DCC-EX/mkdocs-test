@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block tabs %}
+  <!-- Retain the original theme tabs layout -->
+  {{ super() }}
+
+  <!-- Safely inject breadcrumbs directly under the top header navigation grid -->
+  {% if page and page.url != "" and page.url != "index.html" %}
+    <!-- <div class="md-container"> -->
+      <div class="md-grid">
+        {% include "partials/breadcrumbs.html" %}
+      </div>
+    <!-- </div> -->
+  {% endif %}
+{% endblock %}
