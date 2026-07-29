@@ -496,30 +496,48 @@
   <ol class="md-breadcrumbs__list" style="display: flex; flex-wrap: wrap; list-style: none; padding: 0; margin: 0; gap: 8px; align-items: center;">
     
     <!-- Home Root Link -->
-    <li class="md-breadcrumbs__item">
-      <a href="#" class="md-breadcrumbs__link" style="color: var(--md-typeset-color); opacity: 0.7; text-decoration: none;">
+    <li class="md-breadcrumbs__item" style="display: flex; align-items: center;">
+      <a href="https://dcc-ex.com/mkdocs-test/" class="md-breadcrumbs__link" style="color: var(--md-typeset-color); opacity: 0.7; text-decoration: none;">
         Home
       </a>
     </li>
 
-    <!-- Reverse the ancestors array to display from highest category down to deepest subfolder -->
+    <!-- Safe loop through corrected structural directory ancestors -->
     
       
         
           <li class="md-breadcrumbs__item" style="display: flex; align-items: center;">
             <span style="opacity: 0.35; color: var(--md-typeset-color); margin: 0 8px;">|</span>
-            <a href="../../.." class="md-breadcrumbs__link" style="color: var(--md-typeset-color); opacity: 0.7; text-decoration: none;">
-              Products
-            </a>
+            
+            
+            
+            
+              
+            
+
+            
+              <a href="../../products/" class="md-breadcrumbs__link" style="color: var(--md-typeset-color); opacity: 0.7; text-decoration: none;">
+                Products
+              </a>
+            
           </li>
         
       
         
           <li class="md-breadcrumbs__item" style="display: flex; align-items: center;">
             <span style="opacity: 0.35; color: var(--md-typeset-color); margin: 0 8px;">|</span>
-            <a href="../../.." class="md-breadcrumbs__link" style="color: var(--md-typeset-color); opacity: 0.7; text-decoration: none;">
-              EX-SensorCAM<small><small> (DIY)</small></small>
-            </a>
+            
+            
+            
+            
+              
+            
+
+            
+              <a href="../ex-sensorcam/" class="md-breadcrumbs__link" style="color: var(--md-typeset-color); opacity: 0.7; text-decoration: none;">
+                EX-SensorCAM<small><small> (DIY)</small></small>
+              </a>
+            
           </li>
         
       
@@ -10295,7 +10313,7 @@
 <p><a href="#1-overview">1. Overview</a><br />
 <a href="#2-esp32wrover-cam">2. ESP32-CAM</a><br />
 <a href="#3-physical-installation">3. Physical Installation</a><br />
-<a href="#4-notation--help-commands">4. Notation &amp; Help commands</a><br />
+<a href="#4-notation-help-commands">4. Notation &amp; Help commands</a><br />
 <a href="#5-configuration">5. Configuration</a><br />
 <a href="#6-processing4-monitor">6. PROCESSING4 monitor/console</a><br />
 <a href="#7-wiring-requirements">7. Wiring Requirements</a><br />
@@ -10407,7 +10425,7 @@ Where bsNo.'s are printed, they can take several equivalent forms depending on c
 <p>Establish a USB connected monitor (e.g. Arduino IDE monitor, or PROCESSING monitor, preferably at 115200 baud. The PROCESSING monitor coded for the sensorCAM has the advantage of displaying the CAM's railroad image (or selected part thereof), albeit rather slowly!). Because of the many changeable CAM parameters, the WiFi link(webCAM) is not a reliable indicator of the sensorCAM image quality. It may be better or worse. The PC (using Arduino IDE) is only able to show images via WiFi, but because the sensorCAM runs on RGB565 format it cannot send WiFi (jpeg) images without rebooting into WiFi/jpg webCAM mode (under which it cannot read sensors!). The reboot/display/reboot cycle for WiFi webCAM is also tediously time consuming.</p>
 <p>The sensorCAM takes some time to boot and establish sensing mode. The white flash LED starts flashing on every frame after about 10 seconds and data flows to the USB terminal. A period of averaging ensues with "good" sensing by about 30 seconds. This flow of data (and sensing!) can be suspended with the <strong><code>w</code></strong> wait command. Some commands (including a blank line entry) will subsequently restart the sensing camera and sensor output. The CAM may crash if it is left waiting for input for over 30 minutes. Reference images would also be long out of date.</p>
 <h3 id="56-verify-wifi-webcam-ops">5.6 Verify wifi webCAM ops<a class="headerlink" href="#56-verify-wifi-webcam-ops" title="Permanent link">&para;</a></h3>
-<p>The CAM can be switched to WiFi webCAM video mode with the <strong><code>v1</code></strong> command. <strong><code>v2</code></strong> can select your alternate WiFi network. (<strong><code>v</code></strong> will give sensorCAM software version). <strong><code>v1</code></strong> (or&nbsp;<strong><code>v2</code></strong>) will reboot and load WiFi mode connecting to the network selected, and providing a URL e.g. http://192.168.0.xx that can be used to connect with a browser. An image, like <strong>Figure 1</strong> above, should be seen with controls for experimenting with Brightness etc. This image is educational but not necessarily a good indication of the sensorCAM (sensor mode) image because of the unpredictable parameter effects. To see a more reliable image run the PROCESSING <em>SensorCAM.pde</em> monitor instead of Arduino IDE monitor (refer <a href="#6-processing4-monitorconsole">Section 6</a>). To exit video mode, try the monitor command <strong><code>R</code></strong> (or <strong><code>F</code></strong>). If this software reset fails, try manually rebooting the sensorCAM (power OFF/ON) or via the on-board black push-button using a non-metallic tool!</p>
+<p>The CAM can be switched to WiFi webCAM video mode with the <strong><code>v1</code></strong> command. <strong><code>v2</code></strong> can select your alternate WiFi network. (<strong><code>v</code></strong> will give sensorCAM software version). <strong><code>v1</code></strong> (or&nbsp;<strong><code>v2</code></strong>) will reboot and load WiFi mode connecting to the network selected, and providing a URL e.g. http://192.168.0.xx that can be used to connect with a browser. An image, like <strong>Figure 1</strong> above, should be seen with controls for experimenting with Brightness etc. This image is educational but not necessarily a good indication of the sensorCAM (sensor mode) image because of the unpredictable parameter effects. To see a more reliable image run the PROCESSING <em>SensorCAM.pde</em> monitor instead of Arduino IDE monitor (refer <a href="#6-processing4-monitor">Section 6</a>). To exit video mode, try the monitor command <strong><code>R</code></strong> (or <strong><code>F</code></strong>). If this software reset fails, try manually rebooting the sensorCAM (power OFF/ON) or via the on-board black push-button using a non-metallic tool!</p>
 <h3 id="57-command-familiarisation">5.7 Command Familiarisation<a class="headerlink" href="#57-command-familiarisation" title="Permanent link">&para;</a></h3>
 <p>Proceeding with the steps below, before mounting the camera over the railroad, is advisable to learn the steps and familiarize oneself with the sensorCAM command set. The setup commands will have to be repeated accurately once the CAM is mounted in its final location.</p>
 <h3 id="58-sensor-placement">5.8 Sensor placement<a class="headerlink" href="#58-sensor-placement" title="Permanent link">&para;</a></h3>
@@ -11407,7 +11425,7 @@ SETUP(&quot;&lt;S 110 708 0\&gt;&quot;);     //note recommended id is 1%%(b/s) f
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="July 20, 2026 09:13:54 UTC">July 20, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="July 29, 2026 06:19:54 UTC">July 29, 2026</span>
   </span>
 
     
