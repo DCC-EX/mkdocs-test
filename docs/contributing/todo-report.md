@@ -48,8 +48,8 @@ Total High &amp; Medium TODO matches: 109
 | [docs/reference/throttle-writers-guide.md](../reference/throttle-writers-guide.md) | 197 | ## COMMANDS TO AVOID ==TODO== |
 | [docs/reference/throttle-writers-guide.md](../reference/throttle-writers-guide.md) | 213 | ==TODO== Gauges |
 | [docs/reference/throttle-writers-guide.md](../reference/throttle-writers-guide.md) | 219 | ==TODO== TCP VS UDP |
-| [docs/support/faq.md](../support/faq.md) | 9 | ==TODO== Rework this so that it includes GUI options (EX-Web-Throttle, Engine Driver, etc.) |
-| [docs/support/faq.md](../support/faq.md) | 19 | ==TODO== Rework this so that it includes GUI options (EX-Web-Throttle, Engine Driver, etc.) |
+| [docs/support/faq.md](../support/faq.md) | 9 | ==TODO== Rework this so that it includes GUI options (EX-WebThrottle, Engine Driver, etc.) |
+| [docs/support/faq.md](../support/faq.md) | 19 | ==TODO== Rework this so that it includes GUI options (EX-WebThrottle, Engine Driver, etc.) |
 | [docs/throttles/dc.md](../throttles/dc.md) | 3 | ==TODO== basic intro to TrackManager and links to the appropriate TrackManager pages |
 | [docs/throttles/dcc-accessories.md](../throttles/dcc-accessories.md) | 3 | ==TODO== how to control DCC Accessories |
 | [docs/reference/esp32/esp32-acebott.md](../reference/esp32/esp32-acebott.md) | 99 | ==TODO== Stacked EX8874 Checklist |
