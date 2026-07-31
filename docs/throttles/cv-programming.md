@@ -1,4 +1,7 @@
 ---
+search:
+    exclude: true
+
 redirect: ../products/ex-commandstation/loco-programming/programming.html
 ---
 # Loco Programming
