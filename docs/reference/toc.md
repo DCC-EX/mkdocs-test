@@ -213,6 +213,8 @@ li:not(.md-nav__item, .md-tabs__item) a {
             - [ThrottleCard <small>(ThrottleCard (iOS))</small>](../throttles/throttlecard.md)
         - [WiThrottle Protocol VS DCC-EX Native/Serial Commands <small>(WiThrottle VS Native Protocol)</small>](../throttles/withrottle-vs-native-protocol.md)
     - [Loco Programming <small>(Loco/CV Programming)</small>](../throttles/cv-programming.md)
+    - [DCC Accessory Operation](../throttles/dcc-accessories.md)
+    - [DC Operation <small>(Controlling DC Locos)</small>](../throttles/dc.md)
 - **Enhance**
     - [Enhancing & Expanding EX‑CommandStation <small>(Enhancing your EX-CommandStation)</small>](../enhance/index.md)
 - **News**

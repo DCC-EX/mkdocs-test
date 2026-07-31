@@ -16,7 +16,7 @@ Scanned docs root: `C:\Users\akers\OneDrive\github\github_doco\mkdocs-test\docs`
 
 ## High &amp; Medium TODOs
 
-Total High &amp; Medium TODO matches: 106
+Total High &amp; Medium TODO matches: 109
 
 | File | Line | Line text |
 | --- | ---: | --- |
@@ -33,9 +33,8 @@ Total High &amp; Medium TODO matches: 106
 | [docs/enhance/index.md](../enhance/index.md) | 31 | ==TODO== basic intro to Turnouts/Points and links to the appropriate pages |
 | [docs/enhance/index.md](../enhance/index.md) | 39 | ==TODO== basic intro to sequences and links to the appropriate EXRAIL pages |
 | [docs/enhance/index.md](../enhance/index.md) | 48 | ==TODO== basic intro to TrackManager and links to the appropriate TrackManager pages |
-| [docs/enhance/index.md](../enhance/index.md) | 54 | ==TODO== links to the DC pages |
-| [docs/enhance/index.md](../enhance/index.md) | 62 | ==TODO== basic intro to accessories and links to the appropriate pages |
-| [docs/enhance/index.md](../enhance/index.md) | 78 | ==TODO== basic intro to tools and links to the appropriate pages |
+| [docs/enhance/index.md](../enhance/index.md) | 61 | ==TODO== basic intro to accessories and links to the appropriate pages |
+| [docs/enhance/index.md](../enhance/index.md) | 77 | ==TODO== basic intro to tools and links to the appropriate pages |
 | [docs/installer/download-linux.md](../installer/download-linux.md) | 7 | ==TODO== - Add screenshots & fix page flow |
 | [docs/installer/install-ex-ioexpander.md](../installer/install-ex-ioexpander.md) | 3 | ==TODO== complete EX-Installer EX-IOExpander page needed |
 | [docs/installer/install-ex-turntable.md](../installer/install-ex-turntable.md) | 3 | ==TODO== complete EX-Installer EX-Turntable page needed |
@@ -49,6 +48,10 @@ Total High &amp; Medium TODO matches: 106
 | [docs/reference/throttle-writers-guide.md](../reference/throttle-writers-guide.md) | 197 | ## COMMANDS TO AVOID ==TODO== |
 | [docs/reference/throttle-writers-guide.md](../reference/throttle-writers-guide.md) | 213 | ==TODO== Gauges |
 | [docs/reference/throttle-writers-guide.md](../reference/throttle-writers-guide.md) | 219 | ==TODO== TCP VS UDP |
+| [docs/support/faq.md](../support/faq.md) | 9 | ==TODO== Rework this so that it includes GUI options (EX-Web-Throttle, Engine Driver, etc.) |
+| [docs/support/faq.md](../support/faq.md) | 19 | ==TODO== Rework this so that it includes GUI options (EX-Web-Throttle, Engine Driver, etc.) |
+| [docs/throttles/dc.md](../throttles/dc.md) | 3 | ==TODO== basic intro to TrackManager and links to the appropriate TrackManager pages |
+| [docs/throttles/dcc-accessories.md](../throttles/dcc-accessories.md) | 3 | ==TODO== how to control DCC Accessories |
 | [docs/reference/esp32/esp32-acebott.md](../reference/esp32/esp32-acebott.md) | 99 | ==TODO== Stacked EX8874 Checklist |
 | [docs/reference/esp32/esp32-ex8874.md](../reference/esp32/esp32-ex8874.md) | 110 | ==TODO== Stacked EX8874 Checklist |
 | [docs/reference/ex-csb1/csb1-technical.md](../reference/ex-csb1/csb1-technical.md) | 22 | ==TODO== EX-CSB1 Technical Reference |
@@ -110,7 +113,7 @@ Total High &amp; Medium TODO matches: 106
 | [docs/products/ex-commandstation/exrail/exrail-objects-introduction.md](../products/ex-commandstation/exrail/exrail-objects-introduction.md) | 151 | ==TODO== You can also refer to :doc:`/ex-commandstation/accessories/turnouts/solenoid-turnouts` for more information. |
 | [docs/products/ex-commandstation/exrail/exrail-objects-introduction.md](../products/ex-commandstation/exrail/exrail-objects-introduction.md) | 190 | ==TODO== You can also refer to :doc:`/reference/hardware/servo-module` for more information. |
 | [docs/products/ex-commandstation/exrail/exrail-objects-introduction.md](../products/ex-commandstation/exrail/exrail-objects-introduction.md) | 361 | ==TODO== Link here to recommended pin/vpin allocations etc. |
-| [docs/products/ex-commandstation/loco-programming/programming-tips.md](../products/ex-commandstation/loco-programming/programming-tips.md) | 12 | ==TODO== Fill this page out. Also move the references from the old site |
+| [docs/products/ex-commandstation/loco-programming/programming-tips.md](../products/ex-commandstation/loco-programming/programming-tips.md) | 14 | ==TODO== Fill this page out. Also move the references from the old site |
 | [docs/products/ex-commandstation/trackmanager/trackmanager.md](../products/ex-commandstation/trackmanager/trackmanager.md) | 51 | ==TODO== move legacy docs |
 | [docs/products/ex-commandstation/exrail/cookbooks/timecontrol.md](../products/ex-commandstation/exrail/cookbooks/timecontrol.md) | 94 | ( ==TODO== add a reference ) |
 | [docs/products/ex-commandstation/exrail/cookbooks/big-picture/stage1.md](../products/ex-commandstation/exrail/cookbooks/big-picture/stage1.md) | 283 | ==TODO== `LOW - Stage 1 <https://github.com/DCC-EX/dcc-ex.github.io/issues/415>`_  - WiThrottle - Multiple Trains |

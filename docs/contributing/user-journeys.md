@@ -8,11 +8,14 @@ These users don't really know what **DCC-EX** is, but saw it at their club, on a
 
 ```mermaid
 graph LR
-    A[Home page] --> B[DCC-EX introduction];
+    A([Home]) --> B[DCC-EX introduction];
     B --> C[General product overview];
     C --> D[How they can get them];
-    D --> E[Purchasing info];
-    D --> F[DIY info];
+    D --> E{DiY or RtR};
+    E --> |RTR| F[Purchasing info];
+    F --> G([See 'Ready-to-Run EX-CSB1'])
+    E --> |DiY| H[DIY info];
+    H --> I([See 'DIY Building an EX-CS'])
 ```
 
 ## Ready-to-Run EX-CSB1
@@ -21,42 +24,98 @@ These users just purchased their brand new shiny **EX-CSB1** and want to get up 
 
 ```mermaid
 graph LR
-    A[Home page] --> B[Get Started or Run trains?];
-    B --> C[EX-CSB1 how to plug it in or user manual];
-    C --> D[What's next to expand?];
-```
-
-## DC Ready-to-Run Users
-
-These users are similar to the above but want to run their existing DC trains. They may have a large collection that is too expensive or difficult to convert. They also need to know how to connect it to the layout and connect throttles as well as how to power it, but they also need to understand about isolation between the track outputs and potentially PWM sync issues.
-
-```mermaid
-graph LR
-    A[Home page] -->B[Get Started with DC];
-    B --> C[EX-CSB1 manual - plug it in];
-    C --> D[DC considerations];
+    A([Home]) --> B[Get Started or Run trains?];
+    B --> C[EX-CSB1 setup, or user manual];
+    C --> D[Use - Run Trains];
     D --> E[What's next to expand?];
 ```
 
-## Existing Users Adding Accessories
+## DIY - Building an EX-CommandStation
+
+These users are just want to build a DIY EX-CommandStation.
+
+```mermaid
+graph LR
+    A([Home]) --> B[Self Build];
+    B --> C[Choose Options];
+    C --> D[Purchase Parts];
+    D --> E[Build];
+    E --> F([See 'Getting it running'])
+```
+
+## DIY - Getting it running
+
+These users want to enhance their **EX-CommandStation** or have just put together their DIY EX-CommandStation and want to get it up and running. They need to know how to upload the software and connect a throttle (e.g. **EX-WebThrottle**, Engine Driver, etc.).
+
+```mermaid
+graph LR
+    A([Home]) --> B[Install the software];
+    B --> C[Test];
+    C --> |Needs changes| B;
+    C --> D[Use - Run Trains];
+    C --> E[Use - DCC Accessories];
+    E --> F[What's next to expand?];
+    D --> F;
+```
+
+## DC Users
+
+These users want to run their existing DC trains. They may have a large collection that is too expensive or difficult to convert.
+
+They have followed the steps above but now need to understand how to use the DC TrackManager modes.
+
+They also need to know how to connect it to the layout and connect throttles as well as how to power it, but they also need to understand about isolation between the track outputs and potentially PWM sync issues.
+
+```mermaid
+graph LR
+    A([Home]) --> B[Understanding <br/>DC PWM];
+    B --> C[Understanding TrackManager];
+    C --> D{Temp. or<br/>semi-<br/>permanent}
+    D --> |Temporary changes| E[GUI and/or <br/>commands];
+    D --> |Semi-permanent| F[EXRAIL commands];
+    F --> G([See 'Getting it running'])
+
+```
+
+## Existing Users - Adding a Roster
+
+These users already have an **EX-CSB1** or DIY stack up and running and want to extend to adding a Roster.
+
+```mermaid
+graph LR
+    A([Home]) --> B[Explain Rosters in EXRAIL];
+    B --> C[Install the software];
+    C --> D[Test];
+    D --> |Needs changes| C;
+    D --> E[Use - Run Trains];
+```
+
+## Existing Users - Adding Accessories
 
 These users already have an **EX-CSB1** or DIY stack up and running and want to extend to using accessories including turnouts/points, signals, sensors, turntables, and so forth. They need to know how to physically connect them (I2C) and enable them in software (myAutomation.h). This will move them from Conductor into early Tinkerer territory for I2C in particular.
 
 ```mermaid
 graph LR
-    A[Home page] --> B[Adding Accessories];
+    A([Home]) --> B[Adding Accessories];
+    B --> C[Understanding <br/>EXRAIL objects];
+    C --> D[Editing <br/>myAutomation.h]
+    D --> E([See 'Getting it running'])
 ```
 
-## Existing Users Looking to Automate/Animate
+## Existing Users - Looking to Automate/Animate
 
 These users already have an **EX-CSB1** or DIY stack up and running and may or may not have accessories as well. They want to understand how to automate and/or animate running trains and/or their layout in general. This may be as simple as a shuttle running back and forth between two stations, or a complex display running trains, controlling various layout aspects (eg. lighting, cross gates), and automating shunting or routes across different tracks. This will definitely be out of Conductor territory but is all about **EXRAIL**, although guidance on what hardware is required to achieve these will be required.
 
 ```mermaid
 graph LR
-    A[Home page] --> B[EXRAIL introduction];
+    A([Home]) --> B[EXRAIL introduction];
     B --> C[Accessory options];
     B --> D[EXRAIL cookbook];
     B --> E[EXRAIL reference];
+    C --> F[Editing <br/>myAutomation.h]
+    F --> G([See 'Getting it running'])
+    D --> F;
+    E --> F;
 ```
 
 ## Large Club Layout
@@ -65,10 +124,14 @@ These users are aware of **DCC-EX** and know enough to be able to start implemen
 
 ```mermaid
 graph LR
-    A[Home page] --> B[Large layout page];
+    A([Home]) --> B[Large layout page];
     B --> C[Sample use cases?];
     B --> D[Accessories?];
-    B --> E[EXRAIL animation/automation?];
+    B --> E[EXRAIL animation<br/>/automation?];
+    C --> F[Editing <br/>myAutomation.h]
+    F --> G([See 'Getting it running'])
+    D --> F;
+    E --> F;
 ```
 
 ## Downloader
@@ -77,5 +140,5 @@ These users already know enough and just want a quick way to get the latest vers
 
 ```mermaid
 graph LR
-    A[Home page] --> B[Download page];
+    A([Home]) --> B[Download page];
 ```
