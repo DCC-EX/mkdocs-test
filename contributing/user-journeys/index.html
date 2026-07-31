@@ -8606,9 +8606,36 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#dc-ready-to-run-users" class="md-nav__link">
+  <a href="#diy-building-an-ex-commandstation" class="md-nav__link">
     <span class="md-ellipsis">
-      DC Ready-to-Run Users
+      DIY - Building an EX-CommandStation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#diy-getting-it-running" class="md-nav__link">
+    <span class="md-ellipsis">
+      DIY - Getting it running
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dc-users" class="md-nav__link">
+    <span class="md-ellipsis">
+      DC Users
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#existing-users-adding-a-roster" class="md-nav__link">
+    <span class="md-ellipsis">
+      Existing Users - Adding a Roster
     </span>
   </a>
   
@@ -8617,7 +8644,7 @@
         <li class="md-nav__item">
   <a href="#existing-users-adding-accessories" class="md-nav__link">
     <span class="md-ellipsis">
-      Existing Users Adding Accessories
+      Existing Users - Adding Accessories
     </span>
   </a>
   
@@ -8626,7 +8653,7 @@
         <li class="md-nav__item">
   <a href="#existing-users-looking-to-automateanimate" class="md-nav__link">
     <span class="md-ellipsis">
-      Existing Users Looking to Automate/Animate
+      Existing Users - Looking to Automate/Animate
     </span>
   </a>
   
@@ -8734,9 +8761,36 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#dc-ready-to-run-users" class="md-nav__link">
+  <a href="#diy-building-an-ex-commandstation" class="md-nav__link">
     <span class="md-ellipsis">
-      DC Ready-to-Run Users
+      DIY - Building an EX-CommandStation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#diy-getting-it-running" class="md-nav__link">
+    <span class="md-ellipsis">
+      DIY - Getting it running
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dc-users" class="md-nav__link">
+    <span class="md-ellipsis">
+      DC Users
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#existing-users-adding-a-roster" class="md-nav__link">
+    <span class="md-ellipsis">
+      Existing Users - Adding a Roster
     </span>
   </a>
   
@@ -8745,7 +8799,7 @@
         <li class="md-nav__item">
   <a href="#existing-users-adding-accessories" class="md-nav__link">
     <span class="md-ellipsis">
-      Existing Users Adding Accessories
+      Existing Users - Adding Accessories
     </span>
   </a>
   
@@ -8754,7 +8808,7 @@
         <li class="md-nav__item">
   <a href="#existing-users-looking-to-automateanimate" class="md-nav__link">
     <span class="md-ellipsis">
-      Existing Users Looking to Automate/Animate
+      Existing Users - Looking to Automate/Animate
     </span>
   </a>
   
@@ -8802,46 +8856,92 @@
 <h2 id="new-to-dcc-ex">New to DCC-EX<a class="headerlink" href="#new-to-dcc-ex" title="Permanent link">&para;</a></h2>
 <p>These users don't really know what <strong>DCC-EX</strong> is, but saw it at their club, on a YouTube channel, at a show, or someone told them they should check it out.</p>
 <pre class="mermaid"><code>graph LR
-    A[Home page] --&gt; B[DCC-EX introduction];
+    A([Home]) --&gt; B[DCC-EX introduction];
     B --&gt; C[General product overview];
     C --&gt; D[How they can get them];
-    D --&gt; E[Purchasing info];
-    D --&gt; F[DIY info];</code></pre>
+    D --&gt; E{DiY or RtR};
+    E --&gt; |RTR| F[Purchasing info];
+    F --&gt; G([See 'Ready-to-Run EX-CSB1'])
+    E --&gt; |DiY| H[DIY info];
+    H --&gt; I([See 'DIY Building an EX-CS'])</code></pre>
 <h2 id="ready-to-run-ex-csb1">Ready-to-Run EX-CSB1<a class="headerlink" href="#ready-to-run-ex-csb1" title="Permanent link">&para;</a></h2>
 <p>These users just purchased their brand new shiny <strong>EX-CSB1</strong> and want to get up and running with it ASAP. They need to know how to connect it safely to their layout, how to connect a throttle (eg. <strong>EX-WebThrottle</strong>, Engine Driver), and how to power it.</p>
 <pre class="mermaid"><code>graph LR
-    A[Home page] --&gt; B[Get Started or Run trains?];
-    B --&gt; C[EX-CSB1 how to plug it in or user manual];
-    C --&gt; D[What's next to expand?];</code></pre>
-<h2 id="dc-ready-to-run-users">DC Ready-to-Run Users<a class="headerlink" href="#dc-ready-to-run-users" title="Permanent link">&para;</a></h2>
-<p>These users are similar to the above but want to run their existing DC trains. They may have a large collection that is too expensive or difficult to convert. They also need to know how to connect it to the layout and connect throttles as well as how to power it, but they also need to understand about isolation between the track outputs and potentially PWM sync issues.</p>
-<pre class="mermaid"><code>graph LR
-    A[Home page] --&gt;B[Get Started with DC];
-    B --&gt; C[EX-CSB1 manual - plug it in];
-    C --&gt; D[DC considerations];
+    A([Home]) --&gt; B[Get Started or Run trains?];
+    B --&gt; C[EX-CSB1 setup, or user manual];
+    C --&gt; D[Use - Run Trains];
     D --&gt; E[What's next to expand?];</code></pre>
-<h2 id="existing-users-adding-accessories">Existing Users Adding Accessories<a class="headerlink" href="#existing-users-adding-accessories" title="Permanent link">&para;</a></h2>
+<h2 id="diy-building-an-ex-commandstation">DIY - Building an EX-CommandStation<a class="headerlink" href="#diy-building-an-ex-commandstation" title="Permanent link">&para;</a></h2>
+<p>These users are just want to build a DIY EX-CommandStation.</p>
+<pre class="mermaid"><code>graph LR
+    A([Home]) --&gt; B[Self Build];
+    B --&gt; C[Choose Options];
+    C --&gt; D[Purchase Parts];
+    D --&gt; E[Build];
+    E --&gt; F([See 'Getting it running'])</code></pre>
+<h2 id="diy-getting-it-running">DIY - Getting it running<a class="headerlink" href="#diy-getting-it-running" title="Permanent link">&para;</a></h2>
+<p>These users want to enhance their <strong>EX-CommandStation</strong> or have just put together their DIY EX-CommandStation and want to get it up and running. They need to know how to upload the software and connect a throttle (e.g. <strong>EX-WebThrottle</strong>, Engine Driver, etc.).</p>
+<pre class="mermaid"><code>graph LR
+    A([Home]) --&gt; B[Install the software];
+    B --&gt; C[Test];
+    C --&gt; |Needs changes| B;
+    C --&gt; D[Use - Run Trains];
+    C --&gt; E[Use - DCC Accessories];
+    E --&gt; F[What's next to expand?];
+    D --&gt; F;</code></pre>
+<h2 id="dc-users">DC Users<a class="headerlink" href="#dc-users" title="Permanent link">&para;</a></h2>
+<p>These users want to run their existing DC trains. They may have a large collection that is too expensive or difficult to convert.</p>
+<p>They have followed the steps above but now need to understand how to use the DC TrackManager modes.</p>
+<p>They also need to know how to connect it to the layout and connect throttles as well as how to power it, but they also need to understand about isolation between the track outputs and potentially PWM sync issues.</p>
+<pre class="mermaid"><code>graph LR
+    A([Home]) --&gt; B[Understanding &lt;br/&gt;DC PWM];
+    B --&gt; C[Understanding TrackManager];
+    C --&gt; D{Temp. or&lt;br/&gt;semi-&lt;br/&gt;permanent}
+    D --&gt; |Temporary changes| E[GUI and/or &lt;br/&gt;commands];
+    D --&gt; |Semi-permanent| F[EXRAIL commands];
+    F --&gt; G([See 'Getting it running'])
+</code></pre>
+<h2 id="existing-users-adding-a-roster">Existing Users - Adding a Roster<a class="headerlink" href="#existing-users-adding-a-roster" title="Permanent link">&para;</a></h2>
+<p>These users already have an <strong>EX-CSB1</strong> or DIY stack up and running and want to extend to adding a Roster.</p>
+<pre class="mermaid"><code>graph LR
+    A([Home]) --&gt; B[Explain Rosters in EXRAIL];
+    B --&gt; C[Install the software];
+    C --&gt; D[Test];
+    D --&gt; |Needs changes| C;
+    D --&gt; E[Use - Run Trains];</code></pre>
+<h2 id="existing-users-adding-accessories">Existing Users - Adding Accessories<a class="headerlink" href="#existing-users-adding-accessories" title="Permanent link">&para;</a></h2>
 <p>These users already have an <strong>EX-CSB1</strong> or DIY stack up and running and want to extend to using accessories including turnouts/points, signals, sensors, turntables, and so forth. They need to know how to physically connect them (I2C) and enable them in software (myAutomation.h). This will move them from Conductor into early Tinkerer territory for I2C in particular.</p>
 <pre class="mermaid"><code>graph LR
-    A[Home page] --&gt; B[Adding Accessories];</code></pre>
-<h2 id="existing-users-looking-to-automateanimate">Existing Users Looking to Automate/Animate<a class="headerlink" href="#existing-users-looking-to-automateanimate" title="Permanent link">&para;</a></h2>
+    A([Home]) --&gt; B[Adding Accessories];
+    B --&gt; C[Understanding &lt;br/&gt;EXRAIL objects];
+    C --&gt; D[Editing &lt;br/&gt;myAutomation.h]
+    D --&gt; E([See 'Getting it running'])</code></pre>
+<h2 id="existing-users-looking-to-automateanimate">Existing Users - Looking to Automate/Animate<a class="headerlink" href="#existing-users-looking-to-automateanimate" title="Permanent link">&para;</a></h2>
 <p>These users already have an <strong>EX-CSB1</strong> or DIY stack up and running and may or may not have accessories as well. They want to understand how to automate and/or animate running trains and/or their layout in general. This may be as simple as a shuttle running back and forth between two stations, or a complex display running trains, controlling various layout aspects (eg. lighting, cross gates), and automating shunting or routes across different tracks. This will definitely be out of Conductor territory but is all about <strong>EXRAIL</strong>, although guidance on what hardware is required to achieve these will be required.</p>
 <pre class="mermaid"><code>graph LR
-    A[Home page] --&gt; B[EXRAIL introduction];
+    A([Home]) --&gt; B[EXRAIL introduction];
     B --&gt; C[Accessory options];
     B --&gt; D[EXRAIL cookbook];
-    B --&gt; E[EXRAIL reference];</code></pre>
+    B --&gt; E[EXRAIL reference];
+    C --&gt; F[Editing &lt;br/&gt;myAutomation.h]
+    F --&gt; G([See 'Getting it running'])
+    D --&gt; F;
+    E --&gt; F;</code></pre>
 <h2 id="large-club-layout">Large Club Layout<a class="headerlink" href="#large-club-layout" title="Permanent link">&para;</a></h2>
 <p>These users are aware of <strong>DCC-EX</strong> and know enough to be able to start implementing it on a large club layout. They want to know about wiring, boosters, power districts, multiple wired and wireless throttles, and connecting accessories.</p>
 <pre class="mermaid"><code>graph LR
-    A[Home page] --&gt; B[Large layout page];
+    A([Home]) --&gt; B[Large layout page];
     B --&gt; C[Sample use cases?];
     B --&gt; D[Accessories?];
-    B --&gt; E[EXRAIL animation/automation?];</code></pre>
+    B --&gt; E[EXRAIL animation&lt;br/&gt;/automation?];
+    C --&gt; F[Editing &lt;br/&gt;myAutomation.h]
+    F --&gt; G([See 'Getting it running'])
+    D --&gt; F;
+    E --&gt; F;</code></pre>
 <h2 id="downloader">Downloader<a class="headerlink" href="#downloader" title="Permanent link">&para;</a></h2>
 <p>These users already know enough and just want a quick way to get the latest version of software.</p>
 <pre class="mermaid"><code>graph LR
-    A[Home page] --&gt; B[Download page];</code></pre>
+    A([Home]) --&gt; B[Download page];</code></pre>
 
 
 
@@ -8862,7 +8962,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 22, 2026 05:02:40 UTC">June 22, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="July 31, 2026 04:56:21 UTC">July 31, 2026</span>
   </span>
 
     
