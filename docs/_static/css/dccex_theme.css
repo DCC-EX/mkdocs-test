@@ -97,6 +97,15 @@
     background-color:         var(--md-primary-fg-color--dark);
   }
 
+  /* Lighter font weight for better readability on dark backgrounds */
+  .md-typeset {
+    font-weight: 300 !important; 
+  }
+  .md-typeset strong,
+  .md-typeset b {
+    font-weight: 500 !important;
+  }
+
   /* Accent remains a variant of cyan for consistency */
   --md-accent-fg-color:         #00CEF7;
   --md-accent-fg-color--light:  #33E6FF;
