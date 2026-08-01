@@ -242,6 +242,7 @@ li:not(.md-nav__item, .md-tabs__item) a {
     - [**EX-CommandStation** Internal Architecture <small>(Command Station Internal Architecture)</small>](command-station-arch.md)
     - [Throttle Writers Guide (doc incomplete) <small>(Throttle Writers Guide)</small>](throttle-writers-guide.md)
     - **Alternate Microcontrollers**
+        - [Microcontroller Boards - Overview <small>(Overview)</small>](microcontrollers.md)
         - **EX-CSB1**
             - [EX-CSB1 FAQ](ex-csb1/csb1-errors-faq.md)
             - [EX-CSB1 Technical Reference](ex-csb1/csb1-technical.md)
