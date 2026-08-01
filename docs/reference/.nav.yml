@@ -12,6 +12,7 @@ nav:
   - Command Station Internal Architecture: command-station-arch.md
   - Throttle Writers Guide: throttle-writers-guide.md
   - Alternate Microcontrollers:
+      - Overview: microcontrollers.md
       - EX-CSB1: ex-csb1
       - ESP32: esp32
       - Nucleo: nucleo
