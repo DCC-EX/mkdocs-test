@@ -9,3 +9,5 @@ These diagrams provide options on how logic gates could be used to provide input
 **NOTE:** L298P and L298HN motor shields use the XNOR gate.  To enable low side brake in both directions, an additional logic gate can be used.
 
  &nbsp; &nbsp; &nbsp; &nbsp; ![Logic gate circuits](/_static/images/trackmanager/logic-gate-circuitx3.png){: style="width: 70%"}
+
+--8<-- "snippets/abbr.md"

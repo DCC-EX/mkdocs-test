@@ -217,6 +217,10 @@ li:not(.md-nav__item, .md-tabs__item) a {
     - [DC Operation <small>(Controlling DC Locos)</small>](../throttles/dc.md)
 - **Enhance**
     - [Enhancing & Expanding EX‑CommandStation <small>(Enhancing your EX-CommandStation)</small>](../enhance/index.md)
+    - [Adding a Roster](../enhance/rosters.md)
+    - [Adding a Roster <small>(Adding Turnouts/Points)</small>](../enhance/turnouts.md)
+    - [Routes and Automation <small>(Adding Routes and Automations)</small>](../enhance/routes.md)
+    - [TrackManager - DC and DCC Operation](../enhance/trackmanager.md)
 - **News**
     - [DCC-EX News](../news/index.md)
 - **Support**
@@ -246,6 +250,7 @@ li:not(.md-nav__item, .md-tabs__item) a {
         - **EX-CSB1**
             - [EX-CSB1 FAQ](ex-csb1/csb1-errors-faq.md)
             - [EX-CSB1 Technical Reference](ex-csb1/csb1-technical.md)
+        - [Arduino-Mega <small>(Arduino Mega)</small>](arduino-mega.md)
         - **ESP32**
             - [WeMos D1 R32 + EX8874](esp32/esp32-ex8874.md)
             - [Acebott + EX8874](esp32/esp32-acebott.md)
@@ -328,7 +333,7 @@ li:not(.md-nav__item, .md-tabs__item) a {
 - [<small>``<J M [«various parameters»]>``</small> <br/> Manage Stash Values](serial-commands/serial-command-jj-mm_not_in_nav.md)
 - [<small>``<J R [«id»]>``</small> <br/>Request Roster info](serial-commands/serial-command-jj-rr_not_in_nav.md)
 - [<small>``<m LINEAR|POWER|[«loco» «momentum»|«accelerating» [«braking»]]>``</small> <br/> Set the server based momentum](serial-commands/serial-command-m_not_in_nav.md)
-- [<small>``<M «ignore» «d0» «d1» [«d2» [«d3» [«d4»]]]>`` <br/> ``<P «ignore» «d0» «d1» [«d2» [«d3» [«d4»]]]>``</small> <br/> Send up to 5 byte DCC packet to MAIN or PROG](serial-commands/serial-command-mm-and-pp_not_in_nav.md)
+- [<small>``<M «ignore» «d0» «d1» [«d2» [«d3» [«d4» [«d5»]]]]>`` <br/> ``<P «ignore» «d0» «d1» [«d2» [«d3» [«d4»] [«d5»]]]]>``</small> <br/> Send up to 6 byte DCC packet to MAIN or PROG](serial-commands/serial-command-mm-and-pp_not_in_nav.md)
 - [<small>``<N Q|[«cmd» «value»]>``</small> <br/> List SensorCAM Defines or Execute Commands](serial-commands/serial-command-nn_not_in_nav.md)
 - [<small>``<o «vpin» [«count»]|[«r» «g» «b» [«count»]]>``</small> <br/> Set Neopixels](serial-commands/serial-command-o_not_in_nav.md)
 - [<small>``<Q>``</small> &nbsp; <small>``<S «id» [«vpin» «pullup»>]``</small> <br/>Manage Sensors](serial-commands/serial-command-qq-and-ss_not_in_nav.md)

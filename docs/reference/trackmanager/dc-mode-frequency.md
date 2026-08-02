@@ -60,8 +60,8 @@ The functions will toggle the bits ON/OFF as shown in the table.
  }
 </style>
 
-| F31 | F30 | F29 |      | Nucleo-F4 | ESP32 | Mega |
-| --: | --: | --: | ---: | --------: | ----: | ---: |
+| F31 | F30 | F29 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Nucleo-F4 | ESP32 | Mega |
+| --: | --: | --: | --: | --------: | ----: | ---: |
 | 0 | 0 | 0 | 0 | 131 | 131 | 131 |
 | 0 | 0 | 1 | 1 | 480 | 480 | 490 |
 | 0 | 1 | 0 | 2 | 3600 | 3400 | 3400 |

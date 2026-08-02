@@ -1,6 +1,6 @@
 # TrackManager
 
-**If you are only interested in a standard setup using just a DCC track and PROG track, then you DO NOT need to read the rest of this document.**
+**If you are only interested in a standard setup using just a DCC track and **PROG** track, then you DO NOT need to read the rest of this document.**
 
 What follows is for advanced users interested in managing power districts and/or running DC locomotives through **DCC-EX**.
 
@@ -10,19 +10,19 @@ What follows is for advanced users interested in managing power districts and/or
 
 - Managing track power state.
 - Monitoring track overloads and shorts.
-- Routing the DCC main or prog track waveforms to the correct Motor Driver and thus track.
+- Routing the DCC **MAIN** or **PROG** track waveforms to the correct Motor Driver and thus track.
 - Managing the JOIN feature.
 - Intercepting throttle commands to locos running on DC tracks.
 - Handling user or **EXRAIL**  commands to switch track status.
 
-In the default scenario of a single DCC track and a PROG track, the **TrackManger** behaves as for the previous versions of **DCC-EX** so if that's what you want, you don't need to mess with it.
+In the default scenario of a single DCC **MAIN** track and a **PROG** track, the **TrackManger** behaves as for the previous versions of **DCC-EX** so if that's what you want, you don't need to mess with it.
 
-The **TrackManger** is able to handle up to 8 separate track domains. Each domain requires a hardware driver to supply track voltage. A typical motor driver shield supplies two tracks, which is what we have used in the past as main and prog.
+The **TrackManger** is able to handle up to 8 separate track domains. Each domain requires a hardware driver to supply track voltage. A typical motor driver shield supplies two tracks, which is what we have used in the past as **MAIN** and **PROG**.
 
-Unlike the older version of **DCC-EX**, where the shield channel A was always the DCC main and channel B was always the DCC prog track, **TrackManger** allows:
+Unlike the older version of **DCC-EX**, where the shield channel A was always the DCC **MAIN** and channel B was always the DCC **PROG** track, **TrackManger** allows:
 
-- None, any or all the tracks can be DCC Main.
-- None or ONE track may be DCC prog at any given time.
+- None, any or all the tracks can be DCC **MAIN**.
+- None or ONE track may be DCC **PROG** at any given time.
 - Any track may be powered on or off independently of the others.
 - Any track may be disconnected from the DCC signal and used as a DC track with a given loco address. (See DC discussion later)
 
@@ -32,7 +32,7 @@ With such flexibility comes responsibility... the potential for making mistakes 
 
 ## Using the Track Manager (DCC)
 
-**TrackManger** names the tracks A to H. In a default setup, you will normally have tracks A and B where A will default to be the DCC main signal and B will be the DCC prog.
+**TrackManger** names the tracks A to H. In a default setup, you will normally have tracks A and B where A will default to be the DCC **MAIN** signal and B will be the DCC **PROG**.
 
 There is a new user command `<=>` which is used to control the **TrackManger** but the `<0>` and `<1>` commands operate as before.
 
@@ -45,16 +45,16 @@ In a default setup this will normally return
 <=B PROG>
 ```
 
-- `<=t MAIN>`  sets track t (A..H) to use the DCC main track.   For example `<=C MAIN>` sets track C. All tracks that are set to DCC will receive the same DCC signal waveform.
-- `<=t PROG>` Sets track t (A..H) to be the one and only PROG track. Any previous PROG track is turned off.
+- `<=t MAIN>`  sets track t (A..H) to use the DCC **MAIN** track.   For example `<=C MAIN>` sets track C. All tracks that are set to DCC will receive the same DCC signal waveform.
+- `<=t PROG>` Sets track t (A..H) to be the one and only **PROG** track. Any previous **PROG** track is turned off.
 - `<=t OFF>` turns off the track t. It will not power on with `<1>` because it will not know what signal to send.
 
 In an all-DCC environment it is unlikely that you will need to do anything other than setting any additional tracks (C...H) as DCC in your `myAutomation.h` file.  [Example:  Startup - Define Tracks](/products/ex-commandstation/dc-running.md)
 
 Bear in mind that a track may actually be only connected to DCC accessories such as signals and turnouts/points... your layout, your choice.
 
-Note that when setting a track to PROG or OFF, its power is switched off automatically. (The PROG track manages power on an as-needed basis under normal circumstances.
-When setting a track to MAIN (or DC, DCX see later) the power is applied according to the most recent `<1>` or `<0>` command as being the most compatible with previous versions.
+Note that when setting a track to **PROG** or OFF, its power is switched off automatically. (The **PROG** track manages power on an as-needed basis under normal circumstances.
+When setting a track to **MAIN** (or DC, DCX see later) the power is applied according to the most recent `<1>` or `<0>` command as being the most compatible with previous versions.
 
 ## Using the Track Manager (DC)
 
@@ -129,7 +129,7 @@ Since there can be no standard setup of your wiring and hardware choices, it wil
 
     - `OFF`: track is switched off
     - `MAIN`: track gets DCC signal
-    - `PROG`: track gets DCC prog signal
+    - `PROG`: track gets DCC **PROG** signal
     - `DC`: track is set to DC mode with the cab address of the currently executing **EXRAIL**  sequence.
     - `DCX`: as DC but with reversed polarity.
 
