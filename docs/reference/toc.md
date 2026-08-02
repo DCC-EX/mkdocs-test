@@ -310,6 +310,7 @@ li:not(.md-nav__item, .md-tabs__item) a {
 ## Pages Not In Navigation
 
 - [<small>``</ FREEALL|[RESERVE|FREE «section»]>``</small> <br/> Reserve or Free Sections](serial-commands/serial-command-slash-reserve_not_in_nav.md)
+- [<small>``</ LATCH «latch»>`` ``</ UNLATCH «latch»>``</small> <br/> Set or remove a latch](serial-commands/serial-command-slash-latch_not_in_nav.md)
 - [<small>``</ «colour» «signal»>``</small> <br/> Set signal colour](serial-commands/serial-command-slash_colour_signal_not_in_nav.md)
 - [<small>``<= [«trackletter» «mode»] [«id»]>``</small> <br/>Request or Configure Track Manager <span style="display:none;">(_equals)</span>](serial-commands/serial-command-equals_not_in_nav.md)
 - [<small>``<^ «loco»|[«leadLoco» «follower» [ «follower2..7»]]>``</small> <br/> Manage EX-CommandStation Consists/MUs](serial-commands/serial-command-caret_not_in_nav.md)

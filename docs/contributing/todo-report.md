@@ -16,7 +16,7 @@ Scanned docs root: `C:\Users\akers\OneDrive\github\github_doco\mkdocs-test\docs`
 
 ## High &amp; Medium TODOs
 
-Total High &amp; Medium TODO matches: 108
+Total High &amp; Medium TODO matches: 109
 
 | File | Line | Line text |
 | --- | ---: | --- |
@@ -111,11 +111,12 @@ Total High &amp; Medium TODO matches: 108
 | [docs/products/ex-commandstation/accessories/i2c-servo-led-modules.md](../products/ex-commandstation/accessories/i2c-servo-led-modules.md) | 5 | ==TODO== move legacy docs |
 | [docs/products/ex-commandstation/exrail/exrail-objects-introduction.md](../products/ex-commandstation/exrail/exrail-objects-introduction.md) | 151 | ==TODO== You can also refer to :doc:`/ex-commandstation/accessories/turnouts/solenoid-turnouts` for more information. |
 | [docs/products/ex-commandstation/exrail/exrail-objects-introduction.md](../products/ex-commandstation/exrail/exrail-objects-introduction.md) | 190 | ==TODO== You can also refer to :doc:`/reference/hardware/servo-module` for more information. |
-| [docs/products/ex-commandstation/exrail/exrail-objects-introduction.md](../products/ex-commandstation/exrail/exrail-objects-introduction.md) | 361 | ==TODO== Link here to recommended pin/vpin allocations etc. |
+| [docs/products/ex-commandstation/exrail/exrail-objects-introduction.md](../products/ex-commandstation/exrail/exrail-objects-introduction.md) | 209 | ==TODO== Add a diagram for the EX-CSB1 to a PCA9685 |
+| [docs/products/ex-commandstation/exrail/exrail-objects-introduction.md](../products/ex-commandstation/exrail/exrail-objects-introduction.md) | 363 | ==TODO== Link here to recommended pin/vpin allocations etc. |
+| [docs/products/ex-commandstation/exrail/exrail-objects-introduction.md](../products/ex-commandstation/exrail/exrail-objects-introduction.md) | 365 | ==TODO== Add a diagram for the EX-CSB1 to an IO Expander |
 | [docs/products/ex-commandstation/loco-programming/programming-tips.md](../products/ex-commandstation/loco-programming/programming-tips.md) | 14 | ==TODO== Fill this page out. Also move the references from the old site |
 | [docs/products/ex-commandstation/trackmanager/trackmanager.md](../products/ex-commandstation/trackmanager/trackmanager.md) | 51 | ==TODO== move legacy docs |
 | [docs/products/ex-commandstation/exrail/cookbooks/timecontrol.md](../products/ex-commandstation/exrail/cookbooks/timecontrol.md) | 94 | ( ==TODO== add a reference ) |
-| [docs/products/ex-commandstation/exrail/cookbooks/big-picture/stage1.md](../products/ex-commandstation/exrail/cookbooks/big-picture/stage1.md) | 283 | ==TODO== `LOW - Stage 1 <https://github.com/DCC-EX/dcc-ex.github.io/issues/415>`_  - WiThrottle - Multiple Trains |
 | [docs/products/ex-commandstation/exrail/cookbooks/big-picture/stage2.md](../products/ex-commandstation/exrail/cookbooks/big-picture/stage2.md) | 106 | More information on the config files can be found on the ==TODO== managing-config-files page. |
 | [docs/products/ex-commandstation/exrail/cookbooks/big-picture/stage3.md](../products/ex-commandstation/exrail/cookbooks/big-picture/stage3.md) | 17 | We provide some handy documentation on how to evaluate the correct angles on our ==TODO== servo-module page. |
 | [docs/products/ex-commandstation/exrail/cookbooks/big-picture/stage3.md](../products/ex-commandstation/exrail/cookbooks/big-picture/stage3.md) | 25 | For further information on IDs used in **EXRAIL**, refer to the ==TODO== exrail-command-reference:handy information section of the **EXRAIL** reference page. |
@@ -131,7 +132,7 @@ Total High &amp; Medium TODO matches: 108
 
 ## Low priority TODOs
 
-Total low priority TODO matches: 60
+Total low priority TODO matches: 65
 
 | File | Line | Line text |
 | --- | ---: | --- |
@@ -181,6 +182,10 @@ Total low priority TODO matches: 60
 | [docs/reference/serial-commands/serial-command-s-and-hash_not_in_nav.md](../reference/serial-commands/serial-command-s-and-hash_not_in_nav.md) | 68 | * ==TODO== LOW Notes |
 | [docs/reference/serial-commands/serial-command-s-and-hash_not_in_nav.md](../reference/serial-commands/serial-command-s-and-hash_not_in_nav.md) | 78 | * ==TODO== LOW - Example Commands |
 | [docs/reference/serial-commands/serial-command-s-and-hash_not_in_nav.md](../reference/serial-commands/serial-command-s-and-hash_not_in_nav.md) | 82 | * ==TODO== LOW - Example Responses |
+| [docs/reference/serial-commands/serial-command-slash-latch_not_in_nav.md](../reference/serial-commands/serial-command-slash-latch_not_in_nav.md) | 22 | ==TODO== LOW - Responses |
+| [docs/reference/serial-commands/serial-command-slash-latch_not_in_nav.md](../reference/serial-commands/serial-command-slash-latch_not_in_nav.md) | 26 | ==TODO== LOW - Notes |
+| [docs/reference/serial-commands/serial-command-slash-latch_not_in_nav.md](../reference/serial-commands/serial-command-slash-latch_not_in_nav.md) | 57 | * ==TODO== LOW - Example Commands |
+| [docs/reference/serial-commands/serial-command-slash-latch_not_in_nav.md](../reference/serial-commands/serial-command-slash-latch_not_in_nav.md) | 61 | * ==TODO== LOW - Example Responses |
 | [docs/reference/serial-commands/serial-command-slash-reserve_not_in_nav.md](../reference/serial-commands/serial-command-slash-reserve_not_in_nav.md) | 24 | ==TODO== LOW - Responses |
 | [docs/reference/serial-commands/serial-command-slash-reserve_not_in_nav.md](../reference/serial-commands/serial-command-slash-reserve_not_in_nav.md) | 38 | * ==TODO== LOW - Example Commands |
 | [docs/reference/serial-commands/serial-command-slash-reserve_not_in_nav.md](../reference/serial-commands/serial-command-slash-reserve_not_in_nav.md) | 42 | * ==TODO== LOW - Example Responses |
@@ -195,4 +200,5 @@ Total low priority TODO matches: 60
 | [docs/reference/serial-commands/shell_serial-command-xyz_not_in_nav.md](../reference/serial-commands/shell_serial-command-xyz_not_in_nav.md) | 40 | ==TODO== LOW - Responses |
 | [docs/reference/serial-commands/shell_serial-command-xyz_not_in_nav.md](../reference/serial-commands/shell_serial-command-xyz_not_in_nav.md) | 56 | * ==TODO== LOW - Example Commands |
 | [docs/reference/serial-commands/shell_serial-command-xyz_not_in_nav.md](../reference/serial-commands/shell_serial-command-xyz_not_in_nav.md) | 62 | * ==TODO== LOW - Example Responses |
+| [docs/products/ex-commandstation/exrail/cookbooks/big-picture/stage1.md](../products/ex-commandstation/exrail/cookbooks/big-picture/stage1.md) | 283 | ==TODO== LOW - `Stage 1 <https://github.com/DCC-EX/dcc-ex.github.io/issues/415>`_  - WiThrottle - Multiple Trains |
 
