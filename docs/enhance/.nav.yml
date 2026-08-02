@@ -1,2 +1,6 @@
 nav:
   - Enhancing your EX-CommandStation: index.md
+  - Adding a Roster: rosters.md
+  - Adding Turnouts/Points: turnouts.md
+  - Adding Routes and Automations: routes.md
+  - TrackManager - DC and DCC Operation: trackmanager.md

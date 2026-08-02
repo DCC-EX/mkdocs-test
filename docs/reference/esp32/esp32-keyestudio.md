@@ -141,3 +141,17 @@ See the [Stacking two motor shields on the EX8874 page](../../products/ex-motors
 - [ ] Jumpers added from GPIO 2 and 4 to A4 and A5 on **top** EX8874
 - [ ] Add the custom motor define - 6 lines in config.h
 
+<style>
+.md-typeset table td,
+.md-typeset table th {
+    font-size: smaller !important;
+    padding-top: 6px !important;
+    padding-bottom: 6px !important;
+    padding-left: 2px !important;
+    padding-right: 2px !important;
+    line-height: 110% !important;
+    font-family: 'Roboto Condensed', sans-serif !important;
+ }
+</style>
+
+--8<-- "snippets/abbr.md"

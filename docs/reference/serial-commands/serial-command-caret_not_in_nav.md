@@ -1,8 +1,8 @@
 ---
 tags:
-  - _^
-  - _^_ loco
-  - _^_ leadLoco_follower [_follower2..7]
+  - _:c:
+  - _:c:_ loco
+  - _:c:_ leadLoco_follower [_follower2..7]
 ---
 
 # <small>``<^ «loco»|[«leadLoco» «follower» [ «follower2..7»]]>``</small> <br/> Manage EX-CommandStation Consists/MUs

@@ -1,6 +1,8 @@
 ---
 tags:
-  -
+  - _9D9_9ANIN9_vpin
+  - _9D9_9ANOUT9_vpin_position
+  - _9D9_9ANOUT9_vpin_position_profile 
 ---
 
 # <small>``<D ANIN «vpin»>``</small> <br/><small>``<D ANOUT «vpin» «position» [«profile»]>``</small> <br/>Manage VPINs analogue values
@@ -16,7 +18,6 @@ Serial command(s) to ...
 ## Parameters
 
 * **vpin**: *Required* Analogue VPIN to read or write
-
 * **position**: ==TODO==
 * **profile**: ==TODO==
 
@@ -26,7 +27,7 @@ Serial command(s) to ...
 
 ## Notes
 
-==TODO== LOW - Responses
+==TODO== LOW - Notes
 
 ----
 

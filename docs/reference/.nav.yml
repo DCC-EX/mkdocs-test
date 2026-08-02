@@ -14,6 +14,7 @@ nav:
   - Alternate Microcontrollers:
       - Overview: microcontrollers.md
       - EX-CSB1: ex-csb1
+      - Arduino Mega: arduino-mega.md
       - ESP32: esp32
       - Nucleo: nucleo
   - Other Hardware: hardware

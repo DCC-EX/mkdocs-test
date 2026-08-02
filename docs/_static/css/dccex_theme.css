@@ -663,3 +663,7 @@ a.external-link-icon::after {
     margin-top: 8px !important;
     margin-bottom: -10px !important;
 }
+
+.admonition-title {
+    background-color: #ff91008a !important;
+}
