@@ -137,6 +137,7 @@ plugins:
         'enhance/turnouts.md': 'products/ex-commandstation/exrail/exrail-objects-introduction.md#adding-turnoutspoints'
         'enhance/routes.md': 'products/ex-commandstation/exrail/exrail-sequences-introduction.md'
         'enhance/trackmanager.md': 'products/ex-commandstation/trackmanager/trackmanager.md'
+        'reference/exrail-command-reference.md': 'products/ex-commandstation/exrail/command-list.md'
 
 # Build-only hooks live in mkdocsbuild.yml so mkdocs serve does not loop.
 
