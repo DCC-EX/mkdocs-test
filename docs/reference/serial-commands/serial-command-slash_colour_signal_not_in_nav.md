@@ -1,8 +1,8 @@
 ﻿---
 tags:
-  - _/_red_signal
-  - _/_amber_signal
-  - _/_green_signal
+  - _/_9RED9_signal
+  - _/_9AMBER9_signal
+  - _/_9GREEN9_signal
 ---
 
 # <small>``</ «colour» «signal»>``</small> <br/> Set signal colour
@@ -19,7 +19,6 @@ Serial command to set the colour of a signal.
     * ``RED``
     * ``AMBER``
     * ``GREEN``
-    * ...
 
 * **signal**: *Required* defined **red** Vpin of the signal to control
 

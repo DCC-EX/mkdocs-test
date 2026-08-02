@@ -1,7 +1,7 @@
 ﻿---
 tags:
-  - _s
-  - _#
+  - _9S9
+  - _:h:
   - _9C9_9RESET9
   - _9D9_9RESET9
   - _9J9_9I9
@@ -19,7 +19,7 @@ Serial commands to query or reset the EX-CommandStation
 * ``<C RESET>`` Reset and restart **EX-CommandStation**
 * ``<D RESET>`` Reset and restart **EX-CommandStation**
 * ``<J I>`` Report currents
-* ``<c>`` (Deprecated) Report main track currect
+* ``<c>`` (Deprecated) Report main track current
 
 ## Parameters
 
@@ -65,7 +65,7 @@ N/A
 
 ## Notes
 
-* ==TODO== Notes
+* ==TODO== LOW Notes
 
 ----
 
