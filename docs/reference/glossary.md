@@ -36,6 +36,17 @@ Some references to this still remain for backward compatibility. i.e. JMRI still
 New name for the DCC++ Commands/Protocol/API.
 Refer to [DCC-EX Serial Command List](serial-command-list.md) for details.
 
+## MAIN mode/track(s) vs PROG mode/track
+
+[Search for TrackManager](?trackmanager)
+
+**MAIN** = Main Track / Operations Mode / Ops Mode output.<br/>
+**PROG** = Programming Track / Service Mode output.
+
+In normal DCC operation, running locos happens on a **MAIN** track (your layout) and programming takes place on a separate piece of track (typically just long enough for your loco) called a **PROG** track.
+
+Your loco will not respond to throttles if it is on the **PROG** track, and the command station will not send programming commands to the **MAIN** track.
+
 ## Pullup
 
 [Search for pullup](?pullup)
@@ -76,7 +87,7 @@ Station Mode allows you to connect the **EX-CommandStation** to your existing ho
 The **EX-CommandStation** becomes a Station or Client rather than an Access Point.
 That means instead of being a host that manages the IP of the smartphone that runs your Throttle, it becomes a station that connects to your existing network just like any of the other computers or devices connected to your network. The Throttle then connects to the **EX-CommandStation** by finding its IP address on the network.
 
-## Turnout[^1] (Point[^2]/Switch)
+## Turnout[^1] / Point[^2] / Switch
 
 [Search for turnout](?turnout)
 

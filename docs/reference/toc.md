@@ -231,11 +231,11 @@ li:not(.md-nav__item, .md-tabs__item) a {
 - **Reference**
     - [Full Site Table of Contents <small>(Table of Contents)</small>](toc.md)
     - [Glossary of Terms](glossary.md)
-    - **Serial/Native Commands**
-        - [DCC-EX Serial Command Basics <small>(Serial Command Basics)</small>](serial-command-basics.md)
-        - [DCC-EX Serial Command List <small>(DCC-EX Command List)</small>](serial-command-list.md)
-        - [DCC-EX Command Protocol](serial-commands.md)
-        - [Legacy Command Reference](legacy-command-reference.md)
+    - **DCC-EX Serial/Native Commands**
+        - [DCC-EX Serial Command Basics <small>(Command Basics)</small>](serial-command-basics.md)
+        - [DCC-EX Serial Command List <small>(Full List)</small>](serial-command-list.md)
+        - [Grouped Commands](serial-commands.md)
+        - [Legacy Command Reference <small>(Legacy Reference)</small>](legacy-command-reference.md)
     - [EXRAIL Command List](exrail-command-reference.md)
     - [Advanced config.h settings for EX-CommandStation build <small>(Advanced config.h Options)</small>](advanced-config-h.md)
     - **TrackManager**
