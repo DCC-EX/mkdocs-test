@@ -232,8 +232,8 @@ li:not(.md-nav__item, .md-tabs__item) a {
     - [Full Site Table of Contents <small>(Table of Contents)</small>](toc.md)
     - [Glossary of Terms](glossary.md)
     - **DCC-EX Serial/Native Commands**
-        - [DCC-EX Serial Command Basics <small>(Command Basics)</small>](serial-command-basics.md)
-        - [DCC-EX Serial Command List <small>(Full List)</small>](serial-command-list.md)
+        - [DCC-EX Serial Commands Overview <small>(Overview)</small>](serial-command-basics.md)
+        - [DCC-EX Serial Command List <small>(Command List)</small>](serial-command-list.md)
         - [Grouped Commands](serial-commands.md)
         - [Legacy Command Reference <small>(Legacy Reference)</small>](legacy-command-reference.md)
     - [EXRAIL Command List](exrail-command-reference.md)

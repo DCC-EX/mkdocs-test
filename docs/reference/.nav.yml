@@ -2,8 +2,8 @@ nav:
   - Table of Contents: toc.md
   - Glossary of Terms: glossary.md
   - DCC-EX Serial/Native Commands:
-    - Command Basics: serial-command-basics.md
-    - Full List: serial-command-list.md
+    - Overview: serial-command-basics.md
+    - Command List: serial-command-list.md
     - Grouped Commands: serial-commands.md
     - Legacy Reference: legacy-command-reference.md
   - EXRAIL Command List: exrail-command-reference.md
