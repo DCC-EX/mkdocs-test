@@ -1,10 +1,12 @@
 # Build Your Own Command Station
 
-A command station consists of a processor and a shield/board to convert the low voltage digital signal from the processor into the high powered track output.
+At a minimum, a command station consists of a processor plus a shield/board to convert the low voltage digital signal from the processor into the high powered track output.
 
 **DCC-EX** started life creating home-built command stations using Arduino UNO and Arduino Mega microcontrollers with the standard Arduino motor shields. This was attractive to users that liked to experiment and was exceptionally cheap to create.
 
-Our [Command Station Booster 1 Express (EX-CSB1)](/products/ex-commandstation/ex-csb1.md) is now available as a complete ready-to-run, plug-and-go, solution. ***However, if wish you build your own, or even buy a pre-built stack from a third party***, you can still do so using our open source **EX-CommandStation** software and commonly available parts. However, you will need to learn quite a lot more than using our plug-and-go solution the **EX-CSB1**.
+Our [Command Station Booster 1 Express (EX-CSB1)](/products/ex-commandstation/ex-csb1.md) is now available as a complete ready-to-run, plug-and-go, solution.
+
+***However, if wish you build your own, or even buy a pre-built stack from a third party***, you can still do so using our open source **EX-CommandStation** software and commonly available parts. Though you will need to learn quite a lot more than using our plug-and-go **EX-CSB1** solution.
 
 ## Before You Start
 

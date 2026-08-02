@@ -9,11 +9,13 @@ tags:
     - _9D9_9ACK9_9OFF9
     - _9D9_9ACK9_9ON9
 ---
-# Programming Tips
+# CV Programming Tips
 
 ==TODO== Fill this page out. Also move the references from the old site
 
 ## *Hints and Tips*
+
+----
 
 ### **Hornby HM7000 decoders**
 
@@ -30,7 +32,7 @@ If this isn't working, then ``<D ACK ON>`` will enable diagnostic output from th
 
 You can also refer to the [RailSnail -DCC-EX and Hornby TTS Decoders – (No ACK!)](https://railsnail.uk/dcc-ex-and-hornby-tts-decoders-no-ack/?cn-reloaded=1) article for more information.
 
-## Making the changes permanent
+### Making the changes permanent
 
 If you expect to be needing this often, you can add whatever commands you found worked for you, to your `myAutomation.h`.  e.g.
 
