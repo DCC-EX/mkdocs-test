@@ -6066,6 +6066,98 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../enhance/rosters/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Adding a Roster
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../enhance/turnouts/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Adding Turnouts/Points
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../enhance/routes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Adding Routes and Automations
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../enhance/trackmanager/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    TrackManager - DC and DCC Operation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -7113,6 +7205,29 @@
   
   
   
+    <li class="md-nav__item">
+      <a href="../../arduino-mega/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Arduino Mega
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
     
     
     
@@ -7125,10 +7240,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10_9_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10_9_4" >
         
           
-          <label class="md-nav__link" for="__nav_10_9_3" id="__nav_10_9_3_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_10_9_4" id="__nav_10_9_4_label" tabindex="0">
             
   
   
@@ -7141,8 +7256,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_10_9_3_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_10_9_3">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_10_9_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10_9_4">
             <span class="md-nav__icon md-icon"></span>
             ESP32
           </label>
@@ -7266,10 +7381,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10_9_4" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10_9_5" >
         
           
-          <label class="md-nav__link" for="__nav_10_9_4" id="__nav_10_9_4_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_10_9_5" id="__nav_10_9_5_label" tabindex="0">
             
   
   
@@ -7282,8 +7397,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_10_9_4_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_10_9_4">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_10_9_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10_9_5">
             <span class="md-nav__icon md-icon"></span>
             Nucleo
           </label>
@@ -8877,31 +8992,31 @@
 
 
 <h1 id="trackmanager">TrackManager<a class="headerlink" href="#trackmanager" title="Permanent link">&para;</a></h1>
-<p><strong>If you are only interested in a standard setup using just a DCC track and <abbr title="Programming Track / Service Mode">PROG</abbr> track, then you DO NOT need to read the rest of this document.</strong></p>
+<p><strong>If you are only interested in a standard setup using just a DCC track and **<abbr title="Programming Track / Service Mode">PROG</abbr></strong> track, then you DO NOT need to read the rest of this document.**</p>
 <p>What follows is for advanced users interested in managing power districts and/or running DC locomotives through <strong>DCC-EX</strong>.</p>
 <h2 id="what-is-the-trackmanager">What is the TrackManager<a class="headerlink" href="#what-is-the-trackmanager" title="Permanent link">&para;</a></h2>
 <p><strong>TrackManger</strong> is an integral part of the <strong>EX-CommandStation</strong> software that is responsible for:</p>
 <ul>
 <li>Managing track power state.</li>
 <li>Monitoring track overloads and shorts.</li>
-<li>Routing the DCC main or prog track waveforms to the correct Motor Driver and thus track.</li>
+<li>Routing the DCC <strong><abbr title="Main Track / Ops Mode">MAIN</abbr></strong> or <strong><abbr title="Programming Track / Service Mode">PROG</abbr></strong> track waveforms to the correct Motor Driver and thus track.</li>
 <li>Managing the JOIN feature.</li>
 <li>Intercepting throttle commands to locos running on DC tracks.</li>
 <li>Handling user or <strong>EXRAIL</strong>  commands to switch track status.</li>
 </ul>
-<p>In the default scenario of a single DCC track and a <abbr title="Programming Track / Service Mode">PROG</abbr> track, the <strong>TrackManger</strong> behaves as for the previous versions of <strong>DCC-EX</strong> so if that's what you want, you don't need to mess with it.</p>
-<p>The <strong>TrackManger</strong> is able to handle up to 8 separate track domains. Each domain requires a hardware driver to supply track voltage. A typical motor driver shield supplies two tracks, which is what we have used in the past as main and prog.</p>
-<p>Unlike the older version of <strong>DCC-EX</strong>, where the shield channel A was always the DCC main and channel B was always the DCC prog track, <strong>TrackManger</strong> allows:</p>
+<p>In the default scenario of a single DCC <strong><abbr title="Main Track / Ops Mode">MAIN</abbr></strong> track and a <strong><abbr title="Programming Track / Service Mode">PROG</abbr></strong> track, the <strong>TrackManger</strong> behaves as for the previous versions of <strong>DCC-EX</strong> so if that's what you want, you don't need to mess with it.</p>
+<p>The <strong>TrackManger</strong> is able to handle up to 8 separate track domains. Each domain requires a hardware driver to supply track voltage. A typical motor driver shield supplies two tracks, which is what we have used in the past as <strong><abbr title="Main Track / Ops Mode">MAIN</abbr></strong> and <strong><abbr title="Programming Track / Service Mode">PROG</abbr></strong>.</p>
+<p>Unlike the older version of <strong>DCC-EX</strong>, where the shield channel A was always the DCC <strong><abbr title="Main Track / Ops Mode">MAIN</abbr></strong> and channel B was always the DCC <strong><abbr title="Programming Track / Service Mode">PROG</abbr></strong> track, <strong>TrackManger</strong> allows:</p>
 <ul>
-<li>None, any or all the tracks can be DCC Main.</li>
-<li>None or ONE track may be DCC prog at any given time.</li>
+<li>None, any or all the tracks can be DCC <strong><abbr title="Main Track / Ops Mode">MAIN</abbr></strong>.</li>
+<li>None or ONE track may be DCC <strong><abbr title="Programming Track / Service Mode">PROG</abbr></strong> at any given time.</li>
 <li>Any track may be powered on or off independently of the others.</li>
 <li>Any track may be disconnected from the DCC signal and used as a DC track with a given loco address. (See DC discussion later)</li>
 </ul>
 <p>With such flexibility comes responsibility... the potential for making mistakes means taking extra care with your configuration!</p>
 <p><strong>NOTE:</strong> <strong>TrackManger</strong> does NOT use "zero stretching" to control your DC motor. Instead, it uses true Pulse Width Modulation (<abbr title="Pulse Width Modulation">PWM</abbr>) to efficiently run your loco using the same method a decoder uses to control a DCC loco's motor. DC locos can even run better on <strong>TrackManger</strong> than they can on a normal analog throttle, especially at low speed, since it is always applying the full track voltage, albeit in pulses of varying duration.</p>
 <h2 id="using-the-track-manager-dcc">Using the Track Manager (DCC)<a class="headerlink" href="#using-the-track-manager-dcc" title="Permanent link">&para;</a></h2>
-<p><strong>TrackManger</strong> names the tracks A to H. In a default setup, you will normally have tracks A and B where A will default to be the DCC main signal and B will be the DCC prog.</p>
+<p><strong>TrackManger</strong> names the tracks A to H. In a default setup, you will normally have tracks A and B where A will default to be the DCC <strong><abbr title="Main Track / Ops Mode">MAIN</abbr></strong> signal and B will be the DCC <strong><abbr title="Programming Track / Service Mode">PROG</abbr></strong>.</p>
 <p>There is a new user command <code>&lt;=&gt;</code> which is used to control the <strong>TrackManger</strong> but the <code>&lt;0&gt;</code> and <code>&lt;1&gt;</code> commands operate as before.</p>
 <ul>
 <li><code>&lt;=&gt;</code>  lists the current track settings.</li>
@@ -8911,14 +9026,14 @@
 <span class="go">&lt;=B PROG&gt;</span>
 </code></pre></div>
 <ul>
-<li><code>&lt;=t MAIN&gt;</code>  sets track t (A..H) to use the DCC main track.   For example <code>&lt;=C MAIN&gt;</code> sets track C. All tracks that are set to DCC will receive the same DCC signal waveform.</li>
-<li><code>&lt;=t PROG&gt;</code> Sets track t (A..H) to be the one and only <abbr title="Programming Track / Service Mode">PROG</abbr> track. Any previous <abbr title="Programming Track / Service Mode">PROG</abbr> track is turned off.</li>
+<li><code>&lt;=t MAIN&gt;</code>  sets track t (A..H) to use the DCC <strong><abbr title="Main Track / Ops Mode">MAIN</abbr></strong> track.   For example <code>&lt;=C MAIN&gt;</code> sets track C. All tracks that are set to DCC will receive the same DCC signal waveform.</li>
+<li><code>&lt;=t PROG&gt;</code> Sets track t (A..H) to be the one and only <strong><abbr title="Programming Track / Service Mode">PROG</abbr></strong> track. Any previous <strong><abbr title="Programming Track / Service Mode">PROG</abbr></strong> track is turned off.</li>
 <li><code>&lt;=t OFF&gt;</code> turns off the track t. It will not power on with <code>&lt;1&gt;</code> because it will not know what signal to send.</li>
 </ul>
 <p>In an all-DCC environment it is unlikely that you will need to do anything other than setting any additional tracks (C...H) as DCC in your <code>myAutomation.h</code> file.  <a href="../../../products/ex-commandstation/dc-running/">Example:  Startup - Define Tracks</a></p>
 <p>Bear in mind that a track may actually be only connected to DCC accessories such as signals and <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnouts</abbr>/points... your layout, your choice.</p>
-<p>Note that when setting a track to <abbr title="Programming Track / Service Mode">PROG</abbr> or OFF, its power is switched off automatically. (The <abbr title="Programming Track / Service Mode">PROG</abbr> track manages power on an as-needed basis under normal circumstances.
-When setting a track to <abbr title="Main Track / Ops Mode">MAIN</abbr> (or DC, DCX see later) the power is applied according to the most recent <code>&lt;1&gt;</code> or <code>&lt;0&gt;</code> command as being the most compatible with previous versions.</p>
+<p>Note that when setting a track to <strong><abbr title="Programming Track / Service Mode">PROG</abbr></strong> or OFF, its power is switched off automatically. (The <strong><abbr title="Programming Track / Service Mode">PROG</abbr></strong> track manages power on an as-needed basis under normal circumstances.
+When setting a track to <strong><abbr title="Main Track / Ops Mode">MAIN</abbr></strong> (or DC, DCX see later) the power is applied according to the most recent <code>&lt;1&gt;</code> or <code>&lt;0&gt;</code> command as being the most compatible with previous versions.</p>
 <h2 id="using-the-track-manager-dc">Using the Track Manager (DC)<a class="headerlink" href="#using-the-track-manager-dc" title="Permanent link">&para;</a></h2>
 <p><strong>TrackManger</strong> allows any or all of your tracks to be individually selected as a DC track which responds to throttle commands on any given loco address. So for example if track A is set to DC address 55, then any throttle commands to loco 55 will be transmitted as DC onto track A and thus a DC loco can be driven along that track. almost exactly as if it was DCC.
 Your throttle (<abbr title="Java Model Railroad Interface">JMRI</abbr>, <strong>EX-WebThrottle</strong>, <abbr title="Communication Protocol. Trademark + iOS app owned by Brett Hoffman">WiThrottle</abbr>, Engine Driver etc.) do not know or care that this is a DC loco so nothing needs to change.</p>
@@ -8971,7 +9086,7 @@ This is generally incompatible with DCC wiring which expects to be able to cross
 <ul>
 <li><code>OFF</code>: track is switched off</li>
 <li><code>MAIN</code>: track gets DCC signal</li>
-<li><code>PROG</code>: track gets DCC prog signal</li>
+<li><code>PROG</code>: track gets DCC <strong><abbr title="Programming Track / Service Mode">PROG</abbr></strong> signal</li>
 <li><code>DC</code>: track is set to DC mode with the cab address of the currently executing <strong>EXRAIL</strong>  sequence.</li>
 <li><code>DCX</code>: as DC but with reversed polarity.</li>
 </ul>
@@ -9010,7 +9125,7 @@ If however you are just running a ROUTE you can always do something like this:</
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 27, 2026 01:26:58 UTC">June 27, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="August 2, 2026 00:48:57 UTC">August 2, 2026</span>
   </span>
 
     

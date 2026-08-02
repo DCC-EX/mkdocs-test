@@ -6066,6 +6066,98 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../enhance/rosters/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Adding a Roster
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../enhance/turnouts/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Adding Turnouts/Points
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../enhance/routes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Adding Routes and Automations
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../enhance/trackmanager/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    TrackManager - DC and DCC Operation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -7101,6 +7193,29 @@
   
   
   
+    <li class="md-nav__item">
+      <a href="../../arduino-mega/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Arduino Mega
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
     
     
     
@@ -7113,10 +7228,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10_9_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10_9_4" >
         
           
-          <label class="md-nav__link" for="__nav_10_9_3" id="__nav_10_9_3_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_10_9_4" id="__nav_10_9_4_label" tabindex="0">
             
   
   
@@ -7129,8 +7244,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_10_9_3_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_10_9_3">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_10_9_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10_9_4">
             <span class="md-nav__icon md-icon"></span>
             ESP32
           </label>
@@ -7254,10 +7369,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10_9_4" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10_9_5" >
         
           
-          <label class="md-nav__link" for="__nav_10_9_4" id="__nav_10_9_4_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_10_9_5" id="__nav_10_9_5_label" tabindex="0">
             
   
   
@@ -7270,8 +7385,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_10_9_4_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_10_9_4">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_10_9_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10_9_5">
             <span class="md-nav__icon md-icon"></span>
             Nucleo
           </label>
@@ -8855,11 +8970,11 @@
 <h1 id="dc-mode-track-sync">DC Mode Track Sync<a class="headerlink" href="#dc-mode-track-sync" title="Permanent link">&para;</a></h1>
 <p>This is additional information on how to sync adjacent districts when using DC mode tracks.</p>
 <p>The DCC signal for all tracks uses a single timer; the tracks in multiple DCC districts will be in sync.  The only issue is that the tracks must have the same phase when crossing to another district.</p>
-<p>With DC tracks and PWM voltages and frequencies, there are multiple timers to consider.<br />
+<p>With DC tracks and <abbr title="Pulse Width Modulation">PWM</abbr> voltages and frequencies, there are multiple timers to consider.<br />
 In the case of a reversing loop, there are also hardware considerations.<br />
 DC mode is not compatible with the DCC two signal pin method. (see below)</p>
 <h2 id="timers-brake-pins">Timers / Brake Pins<a class="headerlink" href="#timers-brake-pins" title="Permanent link">&para;</a></h2>
-<h3 id="ex-csb1-esp32">EX-CSB1 / ESP32<a class="headerlink" href="#ex-csb1-esp32" title="Permanent link">&para;</a></h3>
+<h3 id="ex-csb1-esp32"><abbr title="EX-CommandStation Booster 1 Express">EX-CSB1</abbr> / ESP32<a class="headerlink" href="#ex-csb1-esp32" title="Permanent link">&para;</a></h3>
 <ul>
 <li>Tracks with the same throttle will be in sync.</li>
 </ul>
@@ -8875,28 +8990,29 @@ DC mode is not compatible with the DCC two signal pin method. (see below)</p>
 </code></pre></div>
 <h3 id="nucleo-f4">Nucleo F4<a class="headerlink" href="#nucleo-f4" title="Permanent link">&para;</a></h3>
 <ul>
-<li>Tracks with the same PWM frequency and throttle or speed will be in sync when updated code is used.</li>
+<li>Tracks with the same <abbr title="Pulse Width Modulation">PWM</abbr> frequency and throttle or speed will be in sync when updated code is used.</li>
 <li>Frequency updates will impact all tracks using the same timer.</li>
 <li>Timers 1-4, 9, 13 have been tested for use with Nucleo-F4.  Those timers should not be used for other purposes.</li>
 <li>Further discussion on the Discord server may be helpful to gain an understanding of the issues.</li>
 </ul>
 <h2 id="hardware-considerations">Hardware considerations<a class="headerlink" href="#hardware-considerations" title="Permanent link">&para;</a></h2>
-<p>Brake pin provides the PWM signal.<br />
+<p>Brake pin provides the <abbr title="Pulse Width Modulation">PWM</abbr> signal.<br />
 Signal-1 pin provides direction in DC mode.</p>
 <p>The two signal pin method is used with some motor boards for DCC.  Those boards do not work for DC mode, unless logic gate circuitry is added.</p>
-<p><strong>EX-CSB1</strong> and <strong>EX8874</strong> provide low side brake in both directions.</p>
+<p><strong><abbr title="EX-CommandStation Booster 1 Express">EX-CSB1</abbr></strong> and <strong>EX8874</strong> provide low side brake in both directions.</p>
 <h3 id="low-side-brake-in-both-directions">Low side brake in both directions<a class="headerlink" href="#low-side-brake-in-both-directions" title="Permanent link">&para;</a></h3>
 <ul>
 <li>The XNOR gate of the standard motor shield and clones will have high side brake in one direction and low side brake in the other.  This precludes a reversing loop, as the reverse does not result in tracks being in sync in the adjacent district.</li>
 </ul>
 <p>The voltage between the rails results in the engine's direction.</p>
 <ul>
-<li>With low side brake, one rail is low and the other has the PWM voltage.</li>
-<li>With high side brake, one rail is high and the other has a PWM voltage offset.</li>
+<li>With low side brake, one rail is low and the other has the <abbr title="Pulse Width Modulation">PWM</abbr> voltage.</li>
+<li>With high side brake, one rail is high and the other has a <abbr title="Pulse Width Modulation">PWM</abbr> voltage offset.</li>
 </ul>
 <p>&nbsp; &nbsp; &nbsp; &nbsp; Example with voltages at 25% throttle.<br />
  &nbsp; &nbsp; &nbsp; &nbsp; <img alt="TrackManager ED" src="../../../_static/images/trackmanager/low-side-brake.png" style="width: 70%" /></p>
 <p>Additional detail  -  <a href="../dc-mode-logic/">DC mode - Logic Gate Circuit</a></p>
+<!-- These are case sensitive -->
 
 
 
@@ -8917,7 +9033,7 @@ Signal-1 pin provides direction in DC mode.</p>
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 28, 2026 03:28:53 UTC">June 28, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="August 2, 2026 00:48:57 UTC">August 2, 2026</span>
   </span>
 
     
