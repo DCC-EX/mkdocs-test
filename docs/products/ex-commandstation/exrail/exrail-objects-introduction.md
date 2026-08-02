@@ -206,6 +206,8 @@ Connections to the Arduino are made with four jumper wires (Arduino: +5V, GND, S
 
 ![PCA9685 Servo Module](../../../_static/images/i2c-connected-devices/ArduinoMegaServo.png){ width=600px }
 
+==TODO== Add a diagram for the EX-CSB1 to a PCA9685
+
 In **EX-CommandStation**, the drivers for the PCA9685 module is already installed, and made available to for use as pin numbers 100-115. A servo is shown in the diagram, connected to the first set of pins on the module.  This will be accessed using pin number 100.
 
 Once you've made all of the connections, apply power to the Arduino.
@@ -359,6 +361,8 @@ If you need more sensors then there are available pins on the Mega, you use one 
 ![IR Sensor connected to Arduino mega via IO Expander](../../../_static/images/i2c-connected-devices/mega-with-io-expander-and-ir-sensor.png){ width=600px }
 
 ==TODO== Link here to recommended pin/vpin allocations etc.
+
+==TODO== Add a diagram for the EX-CSB1 to an IO Expander
 
 ### Configure myAutomation.h - Sensors
 
