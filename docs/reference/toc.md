@@ -212,7 +212,8 @@ li:not(.md-nav__item, .md-tabs__item) a {
             - [Engine Driver <small>(Engine Driver (Android))</small>](../throttles/engine-driver.md)
             - [ThrottleCard <small>(ThrottleCard (iOS))</small>](../throttles/throttlecard.md)
         - [WiThrottle Protocol VS DCC-EX Native/Serial Commands <small>(WiThrottle VS Native Protocol)</small>](../throttles/withrottle-vs-native-protocol.md)
-    - [Loco Programming <small>(Loco/CV Programming)</small>](../throttles/cv-programming.md)
+    - [Connecting a WiFi Throttle to your EX-CommandStation <small>(How to Connect)</small>](../throttles/connecting.md)
+    - [Loco Programming <small>(<br/>Loco/CV Programming)</small>](../throttles/cv-programming.md)
     - [DCC Accessory Operation](../throttles/dcc-accessories.md)
     - [DC Operation <small>(Controlling DC Locos)</small>](../throttles/dc.md)
 - **Enhance**
@@ -221,8 +222,6 @@ li:not(.md-nav__item, .md-tabs__item) a {
     - [Adding a Roster <small>(Adding Turnouts/Points)</small>](../enhance/turnouts.md)
     - [Routes and Automation <small>(Adding Routes and Automations)</small>](../enhance/routes.md)
     - [TrackManager - DC and DCC Operation](../enhance/trackmanager.md)
-- **News**
-    - [DCC-EX News](../news/index.md)
 - **Support**
     - [Frequently Answered Questions  (FAQ) <small>(Frequently Answered Questions)</small>](../support/faq.md)
     - [Help and Support <small>(Getting Support)</small>](../support/support.md)
@@ -291,6 +290,8 @@ li:not(.md-nav__item, .md-tabs__item) a {
     - [About the **DCC-EX** Project <small>(About DCC-EX)</small>](../about/about.md)
     - [DCC++ VS DCC-EX? - Project History <small>(History)</small>](../about/history.md)
     - [Licence & Attributions <small>(<br/>Licence & Attribution)</small>](../about/licence.md)
+- **News**
+    - [DCC-EX News](../news/index.md)
 - **Donate / Contribute**
     - [How Can I Contribute? <small>(How You Can Contribute)</small>](../contributing/contributing.md)
     - [Donations <small>(<b><span style="font-size:110%">Donate</b></span>)</small>](../contributing/donations.md)
