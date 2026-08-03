@@ -23,7 +23,7 @@ See the [Overview](./serial-command-basics.md) for more information on these and
 
 | Command | Description | Parameters |
 |---------|-------------|------------|
-| `<#>` | Request number of simultaneously supported locos | None |
+| [`<#>`](../reference/serial-commands/) | Request number of simultaneously supported locos | None |
 | `<!>` | Emergency stop all locos | None |
 | `<!P>` | Emergency stop and PAUSE loco movement | None |
 | `<!R>` | Resume after `<!P>` | None |
