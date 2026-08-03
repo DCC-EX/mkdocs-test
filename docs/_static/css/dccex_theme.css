@@ -670,6 +670,6 @@ a.external-link-icon::after {
     background-color: #ff91008a !important;
 }
 
-/* [data-md-color-scheme="dccex-dark"]  .md-typeset .admonition, .md-typeset details {
-  background-color: #000000 !important;
-} */
+.md-typeset .admonition, .md-typeset details {
+    font-size: 0.75rem !important;
+}
