@@ -189,6 +189,10 @@
          <lastmod>2026-08-03</lastmod>
     </url>
     <url>
+         <loc>https://dcc-ex.com/mkdocs-test/products/ex-commandstation/</loc>
+         <lastmod>2026-08-03</lastmod>
+    </url>
+    <url>
          <loc>https://dcc-ex.com/mkdocs-test/products/ex-commandstation/config-h/</loc>
          <lastmod>2026-08-03</lastmod>
     </url>
@@ -213,15 +217,11 @@
          <lastmod>2026-08-03</lastmod>
     </url>
     <url>
-         <loc>https://dcc-ex.com/mkdocs-test/products/ex-commandstation/overview/</loc>
-         <lastmod>2026-08-03</lastmod>
-    </url>
-    <url>
          <loc>https://dcc-ex.com/mkdocs-test/products/ex-commandstation/testing/</loc>
          <lastmod>2026-08-03</lastmod>
     </url>
     <url>
-         <loc>https://dcc-ex.com/mkdocs-test/products/ex-commandstation/accessories/accessories/</loc>
+         <loc>https://dcc-ex.com/mkdocs-test/products/ex-commandstation/accessories/</loc>
          <lastmod>2026-08-03</lastmod>
     </url>
     <url>
@@ -289,6 +289,10 @@
          <lastmod>2026-08-03</lastmod>
     </url>
     <url>
+         <loc>https://dcc-ex.com/mkdocs-test/products/ex-commandstation/exrail/</loc>
+         <lastmod>2026-08-03</lastmod>
+    </url>
+    <url>
          <loc>https://dcc-ex.com/mkdocs-test/products/ex-commandstation/exrail/command-list/</loc>
          <lastmod>2026-08-03</lastmod>
     </url>
@@ -298,10 +302,6 @@
     </url>
     <url>
          <loc>https://dcc-ex.com/mkdocs-test/products/ex-commandstation/exrail/exrail-sequences-introduction/</loc>
-         <lastmod>2026-08-03</lastmod>
-    </url>
-    <url>
-         <loc>https://dcc-ex.com/mkdocs-test/products/ex-commandstation/exrail/exrail/</loc>
          <lastmod>2026-08-03</lastmod>
     </url>
     <url>
@@ -605,6 +605,10 @@
          <lastmod>2026-08-03</lastmod>
     </url>
     <url>
+         <loc>https://dcc-ex.com/mkdocs-test/products/ex-commandstation/loco-programming/</loc>
+         <lastmod>2026-08-03</lastmod>
+    </url>
+    <url>
          <loc>https://dcc-ex.com/mkdocs-test/products/ex-commandstation/loco-programming/decoderpro/</loc>
          <lastmod>2026-08-03</lastmod>
     </url>
@@ -614,10 +618,6 @@
     </url>
     <url>
          <loc>https://dcc-ex.com/mkdocs-test/products/ex-commandstation/loco-programming/programming-tips/</loc>
-         <lastmod>2026-08-03</lastmod>
-    </url>
-    <url>
-         <loc>https://dcc-ex.com/mkdocs-test/products/ex-commandstation/loco-programming/programming/</loc>
          <lastmod>2026-08-03</lastmod>
     </url>
     <url>
@@ -633,15 +633,19 @@
          <lastmod>2026-08-03</lastmod>
     </url>
     <url>
+         <loc>https://dcc-ex.com/mkdocs-test/products/ex-commandstation/trackmanager/</loc>
+         <lastmod>2026-08-03</lastmod>
+    </url>
+    <url>
          <loc>https://dcc-ex.com/mkdocs-test/products/ex-commandstation/trackmanager/booster/</loc>
          <lastmod>2026-08-03</lastmod>
     </url>
     <url>
-         <loc>https://dcc-ex.com/mkdocs-test/products/ex-commandstation/trackmanager/trackmanager/</loc>
+         <loc>https://dcc-ex.com/mkdocs-test/products/ex-dccinspector/</loc>
          <lastmod>2026-08-03</lastmod>
     </url>
     <url>
-         <loc>https://dcc-ex.com/mkdocs-test/products/ex-dccinspector/</loc>
+         <loc>https://dcc-ex.com/mkdocs-test/products/ex-fastclock/</loc>
          <lastmod>2026-08-03</lastmod>
     </url>
     <url>
@@ -662,10 +666,6 @@
     </url>
     <url>
          <loc>https://dcc-ex.com/mkdocs-test/products/ex-fastclock/operation/</loc>
-         <lastmod>2026-08-03</lastmod>
-    </url>
-    <url>
-         <loc>https://dcc-ex.com/mkdocs-test/products/ex-fastclock/overview/</loc>
          <lastmod>2026-08-03</lastmod>
     </url>
     <url>
@@ -701,6 +701,10 @@
          <lastmod>2026-08-03</lastmod>
     </url>
     <url>
+         <loc>https://dcc-ex.com/mkdocs-test/products/ex-toolbox/</loc>
+         <lastmod>2026-08-03</lastmod>
+    </url>
+    <url>
          <loc>https://dcc-ex.com/mkdocs-test/products/ex-toolbox/connect_wifi_throttle_via_usb_not_in_nav/</loc>
          <lastmod>2026-08-03</lastmod>
     </url>
@@ -709,15 +713,15 @@
          <lastmod>2026-08-03</lastmod>
     </url>
     <url>
-         <loc>https://dcc-ex.com/mkdocs-test/products/ex-toolbox/ex-toolbox/</loc>
-         <lastmod>2026-08-03</lastmod>
-    </url>
-    <url>
          <loc>https://dcc-ex.com/mkdocs-test/products/ex-toolbox/installation-guide/</loc>
          <lastmod>2026-08-03</lastmod>
     </url>
     <url>
          <loc>https://dcc-ex.com/mkdocs-test/products/ex-toolbox/user-guide/</loc>
+         <lastmod>2026-08-03</lastmod>
+    </url>
+    <url>
+         <loc>https://dcc-ex.com/mkdocs-test/products/ex-turntable/</loc>
          <lastmod>2026-08-03</lastmod>
     </url>
     <url>
@@ -734,10 +738,6 @@
     </url>
     <url>
          <loc>https://dcc-ex.com/mkdocs-test/products/ex-turntable/layout-wiring/</loc>
-         <lastmod>2026-08-03</lastmod>
-    </url>
-    <url>
-         <loc>https://dcc-ex.com/mkdocs-test/products/ex-turntable/overview/</loc>
          <lastmod>2026-08-03</lastmod>
     </url>
     <url>
@@ -777,10 +777,6 @@
          <lastmod>2026-08-03</lastmod>
     </url>
     <url>
-         <loc>https://dcc-ex.com/mkdocs-test/reference/arduino-mega/</loc>
-         <lastmod>2026-08-03</lastmod>
-    </url>
-    <url>
          <loc>https://dcc-ex.com/mkdocs-test/reference/command-station-arch/</loc>
          <lastmod>2026-08-03</lastmod>
     </url>
@@ -793,30 +789,6 @@
          <lastmod>2026-08-03</lastmod>
     </url>
     <url>
-         <loc>https://dcc-ex.com/mkdocs-test/reference/legacy-command-reference/</loc>
-         <lastmod>2026-08-03</lastmod>
-    </url>
-    <url>
-         <loc>https://dcc-ex.com/mkdocs-test/reference/microcontrollers/</loc>
-         <lastmod>2026-08-03</lastmod>
-    </url>
-    <url>
-         <loc>https://dcc-ex.com/mkdocs-test/reference/serial-command-basics/</loc>
-         <lastmod>2026-08-03</lastmod>
-    </url>
-    <url>
-         <loc>https://dcc-ex.com/mkdocs-test/reference/serial-command-list/</loc>
-         <lastmod>2026-08-03</lastmod>
-    </url>
-    <url>
-         <loc>https://dcc-ex.com/mkdocs-test/reference/serial-commands/</loc>
-         <lastmod>2026-08-03</lastmod>
-    </url>
-    <url>
-         <loc>https://dcc-ex.com/mkdocs-test/reference/technical-references/</loc>
-         <lastmod>2026-08-03</lastmod>
-    </url>
-    <url>
          <loc>https://dcc-ex.com/mkdocs-test/reference/throttle-writers-guide/</loc>
          <lastmod>2026-08-03</lastmod>
     </url>
@@ -825,31 +797,7 @@
          <lastmod>2026-08-03</lastmod>
     </url>
     <url>
-         <loc>https://dcc-ex.com/mkdocs-test/reference/esp32/esp32-acebott/</loc>
-         <lastmod>2026-08-03</lastmod>
-    </url>
-    <url>
-         <loc>https://dcc-ex.com/mkdocs-test/reference/esp32/esp32-ex8874/</loc>
-         <lastmod>2026-08-03</lastmod>
-    </url>
-    <url>
-         <loc>https://dcc-ex.com/mkdocs-test/reference/esp32/esp32-keyestudio/</loc>
-         <lastmod>2026-08-03</lastmod>
-    </url>
-    <url>
-         <loc>https://dcc-ex.com/mkdocs-test/reference/esp32/esp32-l298-shield/</loc>
-         <lastmod>2026-08-03</lastmod>
-    </url>
-    <url>
-         <loc>https://dcc-ex.com/mkdocs-test/reference/esp32/ioref-incorrect-voltage-fix_not_in_nav/</loc>
-         <lastmod>2026-08-03</lastmod>
-    </url>
-    <url>
-         <loc>https://dcc-ex.com/mkdocs-test/reference/ex-csb1/csb1-errors-faq/</loc>
-         <lastmod>2026-08-03</lastmod>
-    </url>
-    <url>
-         <loc>https://dcc-ex.com/mkdocs-test/reference/ex-csb1/csb1-technical/</loc>
+         <loc>https://dcc-ex.com/mkdocs-test/reference/external-references/</loc>
          <lastmod>2026-08-03</lastmod>
     </url>
     <url>
@@ -889,39 +837,83 @@
          <lastmod>2026-08-03</lastmod>
     </url>
     <url>
-         <loc>https://dcc-ex.com/mkdocs-test/reference/nucleo/nucleo-144-ex8874/</loc>
+         <loc>https://dcc-ex.com/mkdocs-test/reference/microcontrollers/</loc>
          <lastmod>2026-08-03</lastmod>
     </url>
     <url>
-         <loc>https://dcc-ex.com/mkdocs-test/reference/nucleo/nucleo-144-pin-reference/</loc>
+         <loc>https://dcc-ex.com/mkdocs-test/reference/microcontrollers/arduino-mega/</loc>
          <lastmod>2026-08-03</lastmod>
     </url>
     <url>
-         <loc>https://dcc-ex.com/mkdocs-test/reference/nucleo/nucleo-144-wifi/</loc>
+         <loc>https://dcc-ex.com/mkdocs-test/reference/microcontrollers/esp32/esp32-acebott/</loc>
          <lastmod>2026-08-03</lastmod>
     </url>
     <url>
-         <loc>https://dcc-ex.com/mkdocs-test/reference/nucleo/nucleo-64-ex8874/</loc>
+         <loc>https://dcc-ex.com/mkdocs-test/reference/microcontrollers/esp32/esp32-ex8874/</loc>
          <lastmod>2026-08-03</lastmod>
     </url>
     <url>
-         <loc>https://dcc-ex.com/mkdocs-test/reference/nucleo/nucleo-64-wifi/</loc>
+         <loc>https://dcc-ex.com/mkdocs-test/reference/microcontrollers/esp32/esp32-keyestudio/</loc>
          <lastmod>2026-08-03</lastmod>
     </url>
     <url>
-         <loc>https://dcc-ex.com/mkdocs-test/reference/nucleo/nucleo-debug/</loc>
+         <loc>https://dcc-ex.com/mkdocs-test/reference/microcontrollers/esp32/esp32-l298-shield/</loc>
          <lastmod>2026-08-03</lastmod>
     </url>
     <url>
-         <loc>https://dcc-ex.com/mkdocs-test/reference/nucleo/nucleo-drivers/</loc>
+         <loc>https://dcc-ex.com/mkdocs-test/reference/microcontrollers/esp32/ioref-incorrect-voltage-fix_not_in_nav/</loc>
          <lastmod>2026-08-03</lastmod>
     </url>
     <url>
-         <loc>https://dcc-ex.com/mkdocs-test/reference/nucleo/nucleo-firmware/</loc>
+         <loc>https://dcc-ex.com/mkdocs-test/reference/microcontrollers/ex-csb1/csb1-errors-faq/</loc>
          <lastmod>2026-08-03</lastmod>
     </url>
     <url>
-         <loc>https://dcc-ex.com/mkdocs-test/reference/nucleo/nucleo-power/</loc>
+         <loc>https://dcc-ex.com/mkdocs-test/reference/microcontrollers/ex-csb1/csb1-technical/</loc>
+         <lastmod>2026-08-03</lastmod>
+    </url>
+    <url>
+         <loc>https://dcc-ex.com/mkdocs-test/reference/microcontrollers/nucleo/nucleo-144-ex8874/</loc>
+         <lastmod>2026-08-03</lastmod>
+    </url>
+    <url>
+         <loc>https://dcc-ex.com/mkdocs-test/reference/microcontrollers/nucleo/nucleo-144-pin-reference/</loc>
+         <lastmod>2026-08-03</lastmod>
+    </url>
+    <url>
+         <loc>https://dcc-ex.com/mkdocs-test/reference/microcontrollers/nucleo/nucleo-144-wifi/</loc>
+         <lastmod>2026-08-03</lastmod>
+    </url>
+    <url>
+         <loc>https://dcc-ex.com/mkdocs-test/reference/microcontrollers/nucleo/nucleo-64-ex8874/</loc>
+         <lastmod>2026-08-03</lastmod>
+    </url>
+    <url>
+         <loc>https://dcc-ex.com/mkdocs-test/reference/microcontrollers/nucleo/nucleo-64-wifi/</loc>
+         <lastmod>2026-08-03</lastmod>
+    </url>
+    <url>
+         <loc>https://dcc-ex.com/mkdocs-test/reference/microcontrollers/nucleo/nucleo-debug/</loc>
+         <lastmod>2026-08-03</lastmod>
+    </url>
+    <url>
+         <loc>https://dcc-ex.com/mkdocs-test/reference/microcontrollers/nucleo/nucleo-drivers/</loc>
+         <lastmod>2026-08-03</lastmod>
+    </url>
+    <url>
+         <loc>https://dcc-ex.com/mkdocs-test/reference/microcontrollers/nucleo/nucleo-firmware/</loc>
+         <lastmod>2026-08-03</lastmod>
+    </url>
+    <url>
+         <loc>https://dcc-ex.com/mkdocs-test/reference/microcontrollers/nucleo/nucleo-power/</loc>
+         <lastmod>2026-08-03</lastmod>
+    </url>
+    <url>
+         <loc>https://dcc-ex.com/mkdocs-test/reference/serial-commands/</loc>
+         <lastmod>2026-08-03</lastmod>
+    </url>
+    <url>
+         <loc>https://dcc-ex.com/mkdocs-test/reference/serial-commands/legacy-command-reference/</loc>
          <lastmod>2026-08-03</lastmod>
     </url>
     <url>
@@ -1013,6 +1005,10 @@
          <lastmod>2026-08-03</lastmod>
     </url>
     <url>
+         <loc>https://dcc-ex.com/mkdocs-test/reference/serial-commands/serial-command-list/</loc>
+         <lastmod>2026-08-03</lastmod>
+    </url>
+    <url>
          <loc>https://dcc-ex.com/mkdocs-test/reference/serial-commands/serial-command-m_not_in_nav/</loc>
          <lastmod>2026-08-03</lastmod>
     </url>
@@ -1069,11 +1065,19 @@
          <lastmod>2026-08-03</lastmod>
     </url>
     <url>
+         <loc>https://dcc-ex.com/mkdocs-test/reference/serial-commands/serial-commands/</loc>
+         <lastmod>2026-08-03</lastmod>
+    </url>
+    <url>
          <loc>https://dcc-ex.com/mkdocs-test/reference/serial-commands/shell_serial-command-xyz_not_in_nav/</loc>
          <lastmod>2026-08-03</lastmod>
     </url>
     <url>
          <loc>https://dcc-ex.com/mkdocs-test/reference/tools/serial-monitor_not_in_nav/</loc>
+         <lastmod>2026-08-03</lastmod>
+    </url>
+    <url>
+         <loc>https://dcc-ex.com/mkdocs-test/reference/trackmanager/</loc>
          <lastmod>2026-08-03</lastmod>
     </url>
     <url>
@@ -1086,10 +1090,6 @@
     </url>
     <url>
          <loc>https://dcc-ex.com/mkdocs-test/reference/trackmanager/dc-track-sync/</loc>
-         <lastmod>2026-08-03</lastmod>
-    </url>
-    <url>
-         <loc>https://dcc-ex.com/mkdocs-test/reference/trackmanager/trackmanager/</loc>
          <lastmod>2026-08-03</lastmod>
     </url>
     <url>
