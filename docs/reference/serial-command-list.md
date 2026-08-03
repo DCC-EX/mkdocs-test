@@ -12,7 +12,7 @@
 # DCC-EX Serial Command List
 
 The following list is dynamically built from the CommandStation-EX code. It contains all the serial commands with brief definitions.
-In many cases the parameters are self explanatory. For example a *tSpeed* will always be -1..127 where 0=stop and 1=emergency stop. (See the [Overview](./serial-command-basics.md) for more information on this and other common elements.)
+In many cases the parameters are self explanatory. For example a *tSpeed* will always be **-1..127** where **0**=stop and **-1**=emergency stop. (See the [Overview](./serial-command-basics.md) for more information on this and other common elements.)
 
 This list appears in the order in which the command parser will detect command patterns.
 
