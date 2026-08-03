@@ -27,7 +27,7 @@
     
     
       
-        <title>DCC-EX Command Protocol - DCC-EX Model Train Control, Animation, and Automation</title>
+        <title>Grouped Commands - DCC-EX Model Train Control, Animation, and Automation</title>
       
     
     
@@ -83,7 +83,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#dcc-ex-command-protocol-reference" class="md-skip">
+        <a href="#grouped-dcc-ex-serial-command-reference" class="md-skip">
           Skip to content
         </a>
       
@@ -116,7 +116,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              DCC-EX Command Protocol
+              Grouped Commands
             
           </span>
         </div>
@@ -535,7 +535,7 @@
 
             
               <a href="../serial-command-basics/" class="md-breadcrumbs__link" style="color: var(--md-typeset-color); opacity: 0.7; text-decoration: none;">
-                Serial/Native Commands
+                DCC-EX Serial/Native Commands
               </a>
             
           </li>
@@ -548,7 +548,7 @@
       <li class="md-breadcrumbs__item" style="display: flex; align-items: center; gap: 8px;">
         <span style="opacity: 0.35; color: var(--md-typeset-color);">|</span>
         <span class="md-breadcrumbs__link" style="color: var(--md-typeset-color); font-weight: 700;">
-          DCC-EX Command Protocol
+          Grouped Commands
         </span>
       </li>
     
@@ -6572,7 +6572,7 @@
   
   
   <span class="md-ellipsis">
-    Serial/Native Commands
+    DCC-EX Serial/Native Commands
     
   </span>
   
@@ -6583,7 +6583,7 @@
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_10_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_10_3">
             <span class="md-nav__icon md-icon"></span>
-            Serial/Native Commands
+            DCC-EX Serial/Native Commands
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -6599,7 +6599,7 @@
   
   
   <span class="md-ellipsis">
-    Serial Command Basics
+    Overview
     
   </span>
   
@@ -6622,7 +6622,7 @@
   
   
   <span class="md-ellipsis">
-    DCC-EX Command List
+    Command List
     
   </span>
   
@@ -6654,7 +6654,7 @@
   
   
   <span class="md-ellipsis">
-    DCC-EX Command Protocol
+    Grouped Commands
     
   </span>
   
@@ -6667,7 +6667,7 @@
   
   
   <span class="md-ellipsis">
-    DCC-EX Command Protocol
+    Grouped Commands
     
   </span>
   
@@ -6688,6 +6688,15 @@
       Table of contents
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#common-elements-parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Common Elements / Parameters
+    </span>
+  </a>
+  
+</li>
       
         <li class="md-nav__item">
   <a href="#system-commands" class="md-nav__link">
@@ -6890,7 +6899,7 @@
   
   
   <span class="md-ellipsis">
-    Legacy Command Reference
+    Legacy Reference
     
   </span>
   
@@ -8995,6 +9004,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#common-elements-parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Common Elements / Parameters
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#system-commands" class="md-nav__link">
     <span class="md-ellipsis">
       System Commands
@@ -9195,15 +9213,22 @@
   
 
 
-<h1 id="dcc-ex-command-protocol-reference">DCC-EX Command Protocol Reference<a class="headerlink" href="#dcc-ex-command-protocol-reference" title="Permanent link">&para;</a></h1>
-<p>Complete reference guide for serial commands used with DCC command stations.</p>
+<h1 id="grouped-dcc-ex-serial-command-reference">Grouped DCC-EX Serial Command Reference<a class="headerlink" href="#grouped-dcc-ex-serial-command-reference" title="Permanent link">&para;</a></h1>
+<p>Reference guide for serial commands used by <strong>EX-CommandStations</strong>, shown in functional groups.</p>
+<div class="admonition warning">
+<p class="admonition-title">This list may not be complete</p>
+<p>This list of commands is manually created and may lag behind the latest developments.  Refer to the <a href="../serial-command-list/">Full Command List</a> for the up-to-date list of commands.</p>
+</div>
+<h2 id="common-elements-parameters">Common Elements / Parameters<a class="headerlink" href="#common-elements-parameters" title="Permanent link">&para;</a></h2>
 <p>How to understand the syntax:</p>
 <ul>
 <li>The first symbol after the <code>&lt;</code> character is the opcode. It's case sensitive so <code>&lt;F</code> is not the same as <code>&lt;f</code>.</li>
-<li>parameters in UPPER CASE (eg LIMIT) are keywords and form part of the command. Keywords are not case sensitive.</li>
-<li>parameters in lower case (eg speed) are values you must supply</li>
-<li>parameters in [square brackets] are optional (e.g. [volume]). Do not include the brackets in your command.</li>
+<li>parameters in UPPER CASE (eg <code>LIMIT</code>) are keywords and form part of the command. Keywords are not case sensitive.</li>
+<li>parameters in lower case (eg <code>tSpeed</code>) are values you must supply</li>
+<li>parameters in <code>[square brackets]</code> are optional (e.g. <code>[volume]</code>). Do not include the brackets in your command.</li>
 </ul>
+<p>See the <a href="../serial-command-basics/">Overview</a> for more information on these and other common elements.</p>
+<hr />
 <h2 id="system-commands">System Commands<a class="headerlink" href="#system-commands" title="Permanent link">&para;</a></h2>
 <table>
 <thead>
@@ -9215,7 +9240,7 @@
 </thead>
 <tbody>
 <tr>
-<td><code>&lt;#&gt;</code></td>
+<td><a href="../reference/serial-commands/"><code>&lt;#&gt;</code></a></td>
 <td>Request number of simultaneously supported locos</td>
 <td>None</td>
 </tr>
@@ -9326,13 +9351,13 @@
 <td>Active</td>
 </tr>
 <tr>
-<td><code>&lt;t loco tspeed direction&gt;</code></td>
+<td><code>&lt;t loco tSpeed direction&gt;</code></td>
 <td>Set throttle speed and direction</td>
-<td><code>loco</code>: ID, <code>tspeed</code>: 0-127, <code>direction</code>: 0/1</td>
+<td><code>loco</code>: ID, <code>tSpeed</code>: 0-127, <code>direction</code>: 0/1</td>
 <td>Active</td>
 </tr>
 <tr>
-<td><code>&lt;t ignore loco tspeed direction&gt;</code></td>
+<td><code>&lt;t ignore loco tSpeed direction&gt;</code></td>
 <td>Set throttle speed and direction</td>
 <td>Legacy format</td>
 <td>⚠️ Deprecated</td>
@@ -10362,10 +10387,11 @@
 </tbody>
 </table>
 <div class="admonition info">
-<p class="admonition-title">Speed Values</p>
+<p class="admonition-title">tSpeed Values</p>
 <ul>
 <li><strong>0</strong>: Stop</li>
 <li><strong>1-127</strong>: Variable speed (1=slowest, 127=fastest)</li>
+<li><strong>-1</strong>: Emergency stop</li>
 </ul>
 </div>
 <div class="admonition info">
@@ -10399,7 +10425,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 24, 2026 01:56:51 UTC">June 24, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="August 3, 2026 00:34:33 UTC">August 3, 2026</span>
   </span>
 
     
@@ -10442,7 +10468,7 @@
       <nav class="md-footer__inner md-grid" aria-label="Footer" hidden>
         
           
-          <a href="../serial-command-list/" class="md-footer__link md-footer__link--prev" aria-label="Previous: DCC-EX Command List">
+          <a href="../serial-command-list/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Command List">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -10452,20 +10478,20 @@
                 Previous
               </span>
               <div class="md-ellipsis">
-                DCC-EX Command List
+                Command List
               </div>
             </div>
           </a>
         
         
           
-          <a href="../legacy-command-reference/" class="md-footer__link md-footer__link--next" aria-label="Next: Legacy Command Reference">
+          <a href="../legacy-command-reference/" class="md-footer__link md-footer__link--next" aria-label="Next: Legacy Reference">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Legacy Command Reference
+                Legacy Reference
               </div>
             </div>
             <div class="md-footer__button md-icon">

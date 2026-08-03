@@ -27,7 +27,7 @@
     
     
       
-        <title>Serial Command Basics - DCC-EX Model Train Control, Animation, and Automation</title>
+        <title>Overview - DCC-EX Model Train Control, Animation, and Automation</title>
       
     
     
@@ -83,7 +83,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#dcc-ex-serial-command-basics" class="md-skip">
+        <a href="#dcc-ex-serial-commands-overview" class="md-skip">
           Skip to content
         </a>
       
@@ -116,7 +116,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Serial Command Basics
+              Overview
             
           </span>
         </div>
@@ -535,7 +535,7 @@
 
             
               <a href="./" class="md-breadcrumbs__link" style="color: var(--md-typeset-color); opacity: 0.7; text-decoration: none;">
-                Serial/Native Commands
+                DCC-EX Serial/Native Commands
               </a>
             
           </li>
@@ -548,7 +548,7 @@
       <li class="md-breadcrumbs__item" style="display: flex; align-items: center; gap: 8px;">
         <span style="opacity: 0.35; color: var(--md-typeset-color);">|</span>
         <span class="md-breadcrumbs__link" style="color: var(--md-typeset-color); font-weight: 700;">
-          Serial Command Basics
+          Overview
         </span>
       </li>
     
@@ -6572,7 +6572,7 @@
   
   
   <span class="md-ellipsis">
-    Serial/Native Commands
+    DCC-EX Serial/Native Commands
     
   </span>
   
@@ -6583,7 +6583,7 @@
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_10_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_10_3">
             <span class="md-nav__icon md-icon"></span>
-            Serial/Native Commands
+            DCC-EX Serial/Native Commands
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -6608,7 +6608,7 @@
   
   
   <span class="md-ellipsis">
-    Serial Command Basics
+    Overview
     
   </span>
   
@@ -6621,7 +6621,7 @@
   
   
   <span class="md-ellipsis">
-    Serial Command Basics
+    Overview
     
   </span>
   
@@ -6642,6 +6642,24 @@
       Table of contents
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#conventions-used-for-command-descriptions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conventions used for command descriptions
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#common-elements-parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Common Elements / Parameters
+    </span>
+  </a>
+  
+</li>
       
         <li class="md-nav__item">
   <a href="#notes" class="md-nav__link">
@@ -6673,7 +6691,7 @@
   
   
   <span class="md-ellipsis">
-    DCC-EX Command List
+    Command List
     
   </span>
   
@@ -6696,7 +6714,7 @@
   
   
   <span class="md-ellipsis">
-    DCC-EX Command Protocol
+    Grouped Commands
     
   </span>
   
@@ -6719,7 +6737,7 @@
   
   
   <span class="md-ellipsis">
-    Legacy Command Reference
+    Legacy Reference
     
   </span>
   
@@ -8824,6 +8842,24 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#conventions-used-for-command-descriptions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conventions used for command descriptions
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#common-elements-parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Common Elements / Parameters
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#notes" class="md-nav__link">
     <span class="md-ellipsis">
       Notes
@@ -8853,19 +8889,65 @@
   
 
 
-<h1 id="dcc-ex-serial-command-basics">DCC-EX Serial Command Basics<a class="headerlink" href="#dcc-ex-serial-command-basics" title="Permanent link">&para;</a></h1>
+<h1 id="dcc-ex-serial-commands-overview">DCC-EX Serial Commands Overview<a class="headerlink" href="#dcc-ex-serial-commands-overview" title="Permanent link">&para;</a></h1>
 <ul>
 <li>Serial commands are accepted as input from the USB serial connection or a TCP/IP connection.</li>
-<li>Commands have a single case dependent character opcode and optionaly parameters.</li>
+<li>Commands have a single case dependent character opcode and optionally parameters.</li>
 <li>Keyword parameters are shown in upper case but may be entered in mixed case.</li>
 <li>Value parameters are decimal numeric (unless otherwise noted)</li>
 <li>Not all commands have a response, and broadcasts mean that not all responses come from the last commands that you have issued.</li>
-<li>Commands entered like <code>&lt;JA&gt;</code> are actually read as <code>&lt;J A&gt;</code>, so <code>&lt;Ja&gt;</code> is also acceptible.</li>
+<li>Commands entered like <code>&lt;JA&gt;</code> are actually read as <code>&lt;J A&gt;</code>, so <code>&lt;Ja&gt;</code> is also acceptable.</li>
 <li>Commands that produce diagnostic information (which is intended for human reading rather than code) only write to the USB Serial output.</li>
 <li>Commands that cause state changes (such as loco speeds, turnout position) cause broadcasts to all serial connections and, where appropriate, WiThrottle protocol connections.</li>
 </ul>
+<h2 id="conventions-used-for-command-descriptions">Conventions used for command descriptions<a class="headerlink" href="#conventions-used-for-command-descriptions" title="Permanent link">&para;</a></h2>
+<ul>
+<li><code>&lt;</code> and <code>&gt;</code> - All DCC-EX commands are surrounded by these characters to indicate the beginning and end, these must always be included</li>
+<li>First letter or number - These are called OPCODES, are case sensitive, and must be specified as directed, e.g. <code>1</code>, <code>c</code>, or <code>-</code></li>
+<li>CAPITALISED words - These are parameters referred to as keywords, and should be specified as directed, e.g. <code>MAIN</code> (note these are not case sensitive, however capitalising makes them easier to distinguish from other parameters)</li>
+<li>lowercase words - These are parameters that must be provided or are returned, with multiple parameters separated by a space " ", e.g. <code>loco</code> or <code>«loco»</code></li>
+<li>Square brackets <code>[]</code> - Parameters within square brackets <code>[]</code> are optional and may be omitted, and if specifying these parameters, do not include the square brackets themselves</li>
+<li>| - Use of the | character means you need to provide one of the provided options only, for example <code>&lt;0|1 MAIN|PROG|JOIN&gt;</code> becomes either <code>&lt;0 MAIN&gt;</code> or <code>&lt;1 MAIN&gt;</code></li>
+<li><code>0|1</code> DIRECTION: 1=forward, 0=reverse.</li>
+</ul>
+<h2 id="common-elements-parameters">Common Elements / Parameters<a class="headerlink" href="#common-elements-parameters" title="Permanent link">&para;</a></h2>
+<p>The following are element / parameters that are common across multiple commands and are described here for ease of reference.</p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>cab</strong> or <br/><strong>loco</strong></td>
+<td>The short (1-127) or long (128-10293) address of the engine decoder. <br/> (This has to be already programmed in the decoder.) <br/> Note: DCC-EX commands do not distinguish between short and long DCC addresses, so you can use the same command format for both.</td>
+</tr>
+<tr>
+<td><strong>dir</strong> or <br/><strong>direction</strong></td>
+<td>One of <br/>- 1=forward <br/>- 0=reverse</td>
+</tr>
+<tr>
+<td><strong>tSpeed</strong></td>
+<td>0-127 or -1 for Emergency Stop</td>
+</tr>
+<tr>
+<td><strong>speedByte</strong></td>
+<td>Speed in DCC speedstep format. This is an encoded (1-7 bits) byte. <br/>The single value incorporates both speed and direction, with the following values: <br/>- reverse - 2-127 = speed 1-126, 0 = stop, 1 = Emergency Stop <br/>- forward - 130-255 = speed 1-126,  128 = stop, 129 = Emergency Stop</td>
+</tr>
+<tr>
+<td><strong>id</strong></td>
+<td>The numeric ID (0-32767) assigned to an element to control. <br/><em>ids</em> are generally unique within the element type, but not across element types. <br/>(NOTE: <em>ids</em> are shared between Turnouts/Points, Sensors and Outputs)</td>
+</tr>
+<tr>
+<td><strong>vpin</strong></td>
+<td>Generally, the pin number of the physical input or output GPIO to receive information from or to control. <br/><em>vpins</em> are normally assigned to an <em>id</em> to use in subsequent commands. <br/><br/>For GPIOs on the microcontroller, this is the same as the pin number.  For servo outputs and I/O expanders, it is the pin number defined for the HAL device (if present), for example 100-115 for servos attached to the first PCA9685 Servo Controller module, 200-215 for the second PCA9685 Servo Controller module, 300-315 for the first PCA9685 I/O Expander module, and 400-415 for the second PCA9685 I/O  Expander module.</td>
+</tr>
+</tbody>
+</table>
 <h2 id="notes">Notes<a class="headerlink" href="#notes" title="Permanent link">&para;</a></h2>
-<p><em>DCC-EX Serial Commands</em> are also refered to as <em>Native DCC-EX Commands/Protocol</em> or <em>DCC-EX Native Commands/Protocol</em>.</p>
+<p><em>DCC-EX Serial Commands</em> are also referred to as <em>Native DCC-EX Commands/Protocol</em> or <em>DCC-EX Native Commands/Protocol</em>.</p>
 <p>Refer to the <a href="../../throttles/withrottle-vs-native-protocol/">WiThrottle VS Native Serial Protocol</a> page for information on the differences to the Withrottle protocol/commands.</p>
 
 
@@ -8887,7 +8969,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 25, 2026 01:14:53 UTC">June 25, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="August 2, 2026 23:55:44 UTC">August 2, 2026</span>
   </span>
 
     
@@ -8947,13 +9029,13 @@
         
         
           
-          <a href="../serial-command-list/" class="md-footer__link md-footer__link--next" aria-label="Next: DCC-EX Command List">
+          <a href="../serial-command-list/" class="md-footer__link md-footer__link--next" aria-label="Next: Command List">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                DCC-EX Command List
+                Command List
               </div>
             </div>
             <div class="md-footer__button md-icon">
