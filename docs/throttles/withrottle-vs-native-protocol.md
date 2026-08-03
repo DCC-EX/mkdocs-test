@@ -20,7 +20,7 @@ The 'WiThrottle Protocol' itself is a standard for how WiFi throttles can commun
 
 ## DCC-EX Native protocol / commands
 
-When the **DCC-EX** team designed the **DCC-EX EX-CommandStation** they found the 'WiThrottle Protocol' too limiting and came up with a new protocol referred to originally as **DCC++** but later as [DCC-EX Native Serial Protocol or DCC-EX Native Serial Commands](/reference/serial-command-list.md).
+When the **DCC-EX** team designed the **DCC-EX EX-CommandStation** they found the 'WiThrottle Protocol' too limiting and came up with a new protocol referred to originally as **DCC++** but later as [DCC-EX Native Serial Protocol or DCC-EX Native Serial Commands](/reference/serial-commands/serial-command-list.md).
 
 **Engine Driver**, **EX-WebThrottle**, **EX-Toolbox**, **JMRI** and a few other apps can use the more powerful **DCC-EX Native Serial Protocol** when connecting to a **DCC-EX** **EX-CommandStation**.
 

@@ -30,10 +30,10 @@ ESP32-WROOM-32 was selected as the microprocessor for the **EX-CSB1**. Although 
 
 ## Known Working Boards
 
-- [WeMos D1 R32 + EX8874](../reference/esp32/esp32-ex8874.md). Also described in the WeMos D1 R32/ESPDUINO-32 section below
-- [ACEBOTT ESP32 Max v1.0 + EX8874](../reference/esp32/esp32-acebott.md)  This requires fewer hardware modifications than the WeMos D1 R32
-- [Keyestudio IOT ESP32 PLUS Development Board + EX8874](../reference/esp32/esp32-keyestudio.md)  This requires fewer hardware modifications than the WeMos D1 R32
-- [ESP32 + L298 Shields (Genuine Arduino R3)](../reference/esp32/esp32-l298-shield.md)
+- [WeMos D1 R32 + EX8874](../reference/microcontrollers/esp32/esp32-ex8874.md). Also described in the WeMos D1 R32/ESPDUINO-32 section below
+- [ACEBOTT ESP32 Max v1.0 + EX8874](../reference/microcontrollers/esp32/esp32-acebott.md)  This requires fewer hardware modifications than the WeMos D1 R32
+- [Keyestudio IOT ESP32 PLUS Development Board + EX8874](../reference/microcontrollers/esp32/esp32-keyestudio.md)  This requires fewer hardware modifications than the WeMos D1 R32
+- [ESP32 + L298 Shields (Genuine Arduino R3)](../reference/microcontrollers/esp32/esp32-l298-shield.md)
 
 ## WeMos D1 R32
 
@@ -44,7 +44,7 @@ ESP32-WROOM-32 was selected as the microprocessor for the **EX-CSB1**. Although 
     - IOREF pin does not output 3v3, but instead breaches the UNO R3 specification and outputs 5V.
     - A0 and A1 pins cannot be used for ADC input when WiFi is used.
 
-See the [ESP32 Reference pages](../reference/esp32/esp32-ex8874.md) for more information.
+See the [ESP32 Reference pages](../reference/microcontrollers/esp32/esp32-ex8874.md) for more information.
 
 ## ESP32-WROOM-32 Development boards
 
@@ -56,11 +56,11 @@ There are several other ESP32-WROOM-32 boards with the Uno form factor which wor
 - 38-pin and 30-pin boards are common.
 - Only the ESP32-WROOM-32 variants can be used.
 
-See [ACEBOTT ESP32 Max v1.0 + EX8874](../reference/esp32/esp32-acebott.md) or [Keyestudio IOT ESP32 PLUS Development Board + EX8874](../reference/esp32/esp32-keyestudio.md) for two of the known working boards.
+See [ACEBOTT ESP32 Max v1.0 + EX8874](../reference/microcontrollers/esp32/esp32-acebott.md) or [Keyestudio IOT ESP32 PLUS Development Board + EX8874](../reference/microcontrollers/esp32/esp32-keyestudio.md) for two of the known working boards.
 
 ## Reference ESP32
 
-- Assembly and other information: [Reference - ESP32](/reference/esp32/esp32-ex8874.md)
+- Assembly and other information: [Reference - ESP32](/reference/microcontrollers/esp32/esp32-ex8874.md)
 - [Legacy ESP32 documentation](https://dcc-ex.com/legacy-docs/reference/hardware/microcontrollers/esp32.html#esp32-recommended)
 
 ==TODO== move legacy docs

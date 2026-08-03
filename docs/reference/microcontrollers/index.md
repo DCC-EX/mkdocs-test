@@ -4,8 +4,8 @@
 
 **EX-CommandStation** currently is designed for Atmel AVR based Arduino and compatible microcontrollers, some ESP32 based boards and the STM32 Nucleo based boards. Out of the box, it is compatible with the following boards:
 
-* [EX-CSB1](../products/ex-commandstation/ex-csb1.md)
-* Arduino [Mega2560](../diy/mega-easy.md)
+* [EX-CSB1](../../products/ex-commandstation/ex-csb1.md)
+* Arduino [Mega2560](../../diy/mega-easy.md)
 * [ESP32-WROOM](./esp32/esp32-acebott.md)
 * [STM32 Nucleo](./nucleo/nucleo-drivers.md)
 * Arduino [Mega+WiFi](https://dcc-ex.com/legacy-docs/reference/hardware/microcontrollers/wifi-mega.html) (Not Recommended)
@@ -53,14 +53,14 @@ We've compiled this simple summary table to help with this:
 
 | Type / Brand | Recommended | Supported | Level | Shield[^9] | HAL/I2C | EEPROM | EX-RAIL<br/>Support | Track Manager<br/>Support | D C<br/>Sup-<br/>port | WiFi | WiFi no.<br/> Connections[^6] | Comments / Notes |
 | -- | :--: | :--: | :--: | :--: | :--: | :--: | :--: | :--: | :--: | :--: | :--: | :-- |
-| [EX-CSB1](../products/ex-commandstation/ex-csb1.md) | Yes | Yes | Easy | Mega | Yes | No | Yes | Yes | Yes | Yes | ~11 | This is our stable, well supported platform |
-| Arduino [Mega2560](../diy/mega-easy.md) | Yes | Yes | Intermediate | UNO | Yes | Yes | Yes | Yes | Yes [^2] | yes [^1] | 4 | This is our stable, well supported platform |
+| [EX-CSB1](../../products/ex-commandstation/ex-csb1.md) | Yes | Yes | Easy | Mega | Yes | No | Yes | Yes | Yes | Yes | ~11 | This is our stable, well supported platform |
+| Arduino [Mega2560](../../diy/mega-easy.md) | Yes | Yes | Intermediate | UNO | Yes | Yes | Yes | Yes | Yes [^2] | yes [^1] | 4 | This is our stable, well supported platform |
 | [ESP32-WROOM](./esp32/esp32-acebott.md) | Yes | Yes | Complex | UNO | Yes [^4] | No | Yes | Yes | Yes [^2] | Yes | ~11 | Inexpensive and includes both WiFi and Bluetooth connectivity, limited in I/O pins. Most require hardware modifications to work. |
 | [STM32 Nucleo](./nucleo/nucleo-drivers.md) | Yes | Yes | Complex | UNO | Yes | No | Yes | Yes | Yes [^2] [^3] | Yes [^1] [^3] | 4 | Lots of memory and 32 bit architecture, still in the convenient Uno form factor but with more I/O pins |
 | Arduino [Mega+WiFi](https://dcc-ex.com/legacy-docs/reference/hardware/microcontrollers/wifi-mega.html) | No [^5] | Yes | Intermediate | Mega | Yes | Yes | Yes | Yes | Yes [^2] | Yes | 4 | This is our stable, well supported platform, but with WiFi on board, but beware quality issues |
 
-[^1]: Requires an additional [WiFi shield](./hardware/wifi-boards/index.md)
-[^2]: Requires a supported motor driver that supports [TrackManager](../products/ex-commandstation/trackmanager/trackmanager.md)
+[^1]: Requires an additional [WiFi shield](../hardware/wifi-boards/index.md)
+[^2]: Requires a supported motor driver that supports [TrackManager](../../products/ex-commandstation/trackmanager/trackmanager.md)
 [^3]: Features and support in Beta testing can and will change regularly, be sure to keep up to date with developments on our [Discord server](https://discord.gg/y2sB4Fp)
 [^4]: HAL/I2C connectivity is only available via the blocking Arduino Wire library at present
 [^5]: While the Mega+WiFi boards seem like a good option and are based on our well-known, stable Mega2560 platform, there are many reports of quality issues with these, so buyer beware, and use of these is not recommended
@@ -108,8 +108,8 @@ You can still flash these boards with older versions of the **EX-CommandStation*
 
 **WAVGAT Uno clone** - This board is NOT 100% Uno compatible. It uses a LGT8F328P processor from a company in China called "Logic Green". It has no EEPROM and requires a bit of configuration in the Arduino IDE to get it to be seen correctly and compile sketches. It is, however, a good board for developing other applications on because it can be switched to run at 32mHz instead of 16. It also has 12 bit analog pins instead of 10 bit. That means higher resolution readings, 0-4096 instead of 0-1024. It could potentially work as a Command Station with more testing and some code changes, but we will leave that to someone else to attempt. Various other microcontrollers offer more memory, more serial ports and more GPIO pins and are just a better way to go for the future.
 
-**Arduino Uno R4** - Despite the name, this is not simply a new release of the tried and true Arduino Uno platform, and is a major redesign using a totally different CPU architecture and is expensive. Refer to the :doc:`/news/posts/20230728` News article.
+**Arduino Uno R4** - Despite the name, this is not simply a new release of the tried and true Arduino Uno platform, and is a major redesign using a totally different CPU architecture and is expensive.
 
-**Arduino Giga** - Like the above Uno R4, this is not just an enhanced version of our recommended Arduino Mega2560 but rather an entirely new (and also very expensive) board that just happens to share the same footprint. Refer to the :doc:`/news/posts/20230728` News article.
+**Arduino Giga** - Like the above Uno R4, this is not just an enhanced version of our recommended Arduino Mega2560 but rather an entirely new (and also very expensive) board that just happens to share the same footprint.
 
 --8<-- "snippets/abbr.md"

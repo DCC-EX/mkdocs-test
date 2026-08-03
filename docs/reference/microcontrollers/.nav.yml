@@ -1,0 +1,6 @@
+nav:
+  - Overview: index.md
+  - EX-CSB1: ex-csb1
+  - Arduino Mega: arduino-mega.md
+  - ESP32: esp32
+  - Nucleo: nucleo

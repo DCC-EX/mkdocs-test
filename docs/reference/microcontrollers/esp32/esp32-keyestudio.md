@@ -5,7 +5,7 @@ hide:
 
 # Keyestudio IOT ESP32 PLUS Development Board *+* EX8874
 
-![Keyestudio ESP32](/_static/images/esp32/keyestudio-iot-esp32-plus.png){ width=30% align=right }
+![Keyestudio ESP32](../../../_static/images/esp32/keyestudio-iot-esp32-plus.png){ width=30% align=right }
 
 !!! note "Keyestudio ESP32 Beta Testing"
 
@@ -26,7 +26,7 @@ hide:
 
 ## Incorrect IOREF voltage
 
-![ACEBOTT IOREF](/_static/images/esp32/esp32-keyestudio-ioref.png){ width=15% align=left }
+![ACEBOTT IOREF](../../../_static/images/esp32/esp32-keyestudio-ioref.png){ width=15% align=left }
 
 The pin in the IOREF location is 5V and labeled `5V` on the board.
 
@@ -38,7 +38,7 @@ EX8874 requires IOREF voltage at 3.3V when used with ESP32 or other 3.3V micropr
 
 - Option B: The `IOREF` pin location is labeled `5V`.  An acceptable workaround that does not require soldering is for the corresponding pin on the EX8874 to be bent out, and the `IOREF` to be jumpered to `3V3` header on the EX8874.
 
-See the [Incorrect IOREF voltage page](ioref-incorrect-voltage-fix_not_in_nav.md) for details on how to correct the IOREF voltage for this board combination.
+See the [Incorrect IOREF voltage page](./ioref-incorrect-voltage-fix_not_in_nav.md) for details on how to correct the IOREF voltage for this board combination.
 
 ---
 
@@ -78,8 +78,8 @@ Add the following lines to your `config.h` and remove any existing `#define MOTO
 ## Stacked EX8874
 
 - Reminder: No modifications are needed when stacking an EX8874 on an **EX-CSB1** for 4 track outputs.
-- **IOREF:** The IOREF override is also needed for the top shield. See the [Incorrect IOREF voltage page](ioref-incorrect-voltage-fix_not_in_nav.md) for details.
-- **VIN:** Refer to instructions on [cutting the VIN trace and disabling the regulator](/products/ex-motorshield8874/ex-motorshield8874.md/#steps-to-stack) for the top EX8874. (See Option 1 below.)
+- **IOREF:** The IOREF override is also needed for the top shield. See the [Incorrect IOREF voltage page](./ioref-incorrect-voltage-fix_not_in_nav.md) for details.
+- **VIN:** Refer to instructions on [cutting the VIN trace and disabling the regulator](../../../products/ex-motorshield8874/ex-motorshield8874.md/#steps-to-stack) for the top EX8874. (See Option 1 below.)
 
 - Stacking (2) motor shields on Keystudio ESP32 requires ***additional*** modification of the second/top shield:
 
@@ -101,9 +101,9 @@ Add the following lines to your `config.h` and remove any existing `#define MOTO
         - need to be bent about 45 degrees so that jumpers can be put on them, or
         - use modified jumper cables with the plastic ends removed, bent and covered with heat shrink.
 
-  ![Bent jumper](/_static/images/esp32/esp32-keyestudio-bent-jumper.png){ width=15% }
+  ![Bent jumper](../../../_static/images/esp32/esp32-keyestudio-bent-jumper.png){ width=15% }
 
-See the [Stacking two motor shields on the EX8874 page](../../products/ex-motorshield8874/ex-motorshield8874.md#steps-to-stack) for details on how to alter the board for this combination.
+See the [Stacking two motor shields on the EX8874 page](../../../products/ex-motorshield8874/ex-motorshield8874.md#steps-to-stack) for details on how to alter the board for this combination.
 
 ### First EX8874
 

@@ -36,7 +36,7 @@ Broadcast replies are also designed so that a throttle can maintain loco speed a
 
 For anyone developing a throttle or controller application, these considerations should be taken into account:
 
-* Refer to the [DCC-EX Native/Serial Commands List](./serial-command-list.md)
+* Refer to the [DCC-EX Native/Serial Commands List](./serial-commands/serial-command-list.md)
 * A throttle/controller MUST accept and ignore anything it does not understand
 * Track power state has three possible states: On, Off, and Unknown
 * There is no concept of a throttle 'acquiring' a loco.<br/>
@@ -45,7 +45,7 @@ Simply, commands for a loco are sent to the **EX-CommandStation**, and the **EX-
 
 ## Key Throttle/Controller Commands
 
-Key throttle/controller specific commands are summarised here, refer below for elaboration on the details with examples. Refer to the [DCC-EX Native/Serial Commands List](./serial-command-list.md) for a complete list, or [search for the 'T'](?_T) or ['J R'](?_J_R) commands.
+Key throttle/controller specific commands are summarised here, refer below for elaboration on the details with examples. Refer to the [DCC-EX Native/Serial Commands List](./serial-commands/serial-command-list.md) for a complete list, or [search for the 'T'](?_T) or ['J R'](?_J_R) commands.
 
 | Command | Response | Description |
 | -------------------------------- | -------------------------------- | --------------------- |

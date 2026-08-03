@@ -50,7 +50,7 @@ On this screen you can:
 - Select from a list of named, common CVs <br/>
   If you select a 'common CV value' it will enter the CV number into the field. From there follow the instructions above for reading or writing the CV.
 
-- Issue [DCC-EX Serial commands](/reference/serial-command-list.md) (``<>``) to the EX‑CommandStation
+- Issue [DCC-EX Serial commands](/reference/serial-commands/serial-command-list.md) (``<>``) to the EX‑CommandStation
 
 ### CV Programming (Operation Mode)
 
@@ -70,7 +70,7 @@ On this screen you can:
 - Select from a list of named, common CVs <br/>
   If you select a 'common CV value' it will enter the CV number into the field. From there follow the instructions above for writing the CV.
 
-- Issue [DCC-EX Serial commands](/reference/serial-command-list.md) (``<>``) to the EX‑CommandStation
+- Issue [DCC-EX Serial commands](/reference/serial-commands/serial-command-list.md) (``<>``) to the EX‑CommandStation
 
 ----
 

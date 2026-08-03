@@ -9,7 +9,7 @@ hide:
 
     Please note that the ACEBOTT board is currently in Beta testing, so this information may change at any time. If using this board, we highly recommend joining our [Discord server](/support/discord.md) and request access to the `#beta-testing` channel.
 
-![ACEBOTT ESP32](/_static/images/esp32/esp32-acebott.png){ width=40% align=right }
+![ACEBOTT ESP32](../../../_static/images/esp32/esp32-acebott.png){ width=40% align=right }
 
 ## ACEBOTT ESP32 Max v1.0
 
@@ -26,8 +26,8 @@ hide:
 - Pin locations A0, A1 can be used for current sensing.
 - Default pins can be used on EX8874.
 
-![ACEBOTT IOREF](/_static/images/esp32/esp32-acebott-ioref.png){ width=10% align=right }
-![EX8874 IOREF](/_static/images/esp32/ioref-override.png){ width=25% align=right }
+![ACEBOTT IOREF](../../../_static/images/esp32/esp32-acebott-ioref.png){ width=10% align=right }
+![EX8874 IOREF](../../..//_static/images/esp32/ioref-override.png){ width=25% align=right }
 
 ## IOREF voltage
 
@@ -52,7 +52,7 @@ hide:
 
 - When one EX8874 motor shield is used with ACEBOTT ESP32 Max v1.0, the default EX8874 pins are used.
 
-&nbsp; &nbsp; &nbsp; &nbsp;![ACEBOTT table](/_static/images/esp32/acebott-ex8874-x1b.png){ width=80% }
+&nbsp; &nbsp; &nbsp; &nbsp;![ACEBOTT table](../../../_static/images/esp32/acebott-ex8874-x1b.png){ width=80% }
 
 ### Single EX8874 Checklist
 
@@ -67,13 +67,13 @@ hide:
 
 - Reminder: No modifications are needed when installing EX8874 for 4 track outputs on EX-CSB1.
 - **IOREF:** The IOREF override is also needed for the top shield.
-- **VIN:** Refer to instructions on [cutting the VIN trace and disabling the regulator](/products/ex-motorshield8874/ex-motorshield8874.md/#steps-to-stack) for the top shield.
+- **VIN:** Refer to instructions on [cutting the VIN trace and disabling the regulator](../../../products/ex-motorshield8874/ex-motorshield8874.md/#steps-to-stack) for the top shield.
 
 - Stacking motor shields on ACEBOTT ESP32 requires
     a. use of solder pad for 8 alternate pins
     b. for Fault pins, bend A4 and A5 pins and jumper to the GPIO headers
 
-&nbsp; &nbsp; &nbsp; &nbsp;![ACEBOTT table](/_static/images/esp32/acebott-ex8874-x2b.png){ width=80% }
+&nbsp; &nbsp; &nbsp; &nbsp;![ACEBOTT table](../../../_static/images/esp32/acebott-ex8874-x2b.png){ width=80% }
 
 - A custom motor define will be needed in config.h
 

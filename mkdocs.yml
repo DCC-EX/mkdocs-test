@@ -35,7 +35,7 @@ theme:
     # - navigation.tabs.sticky # Make the tabs navigation sticky when scrolling
     - navigation.top # Show back to top button when scrolling up
     - navigation.tracking # Auto update URL in address bar
-    # - navigation.indexes # Enable section indexes
+    - navigation.indexes # Enable section indexes
     - navigation.instant
     - navigation.instant.progress
     - search.highlight # Highlight search results
@@ -63,6 +63,8 @@ extra_javascript:
   - _static/scripts/ex-installer-run-helper.js
   - _static/scripts/clickable-cards.js
   - _static/scripts/legacy-docs-new-tab.js
+  - https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js
+  - javascripts/tablesort.js
 
 extra:
   social:
@@ -138,6 +140,28 @@ plugins:
         'enhance/routes.md': 'products/ex-commandstation/exrail/exrail-sequences-introduction.md'
         'enhance/trackmanager.md': 'products/ex-commandstation/trackmanager/trackmanager.md'
         'reference/exrail-command-reference.md': 'products/ex-commandstation/exrail/command-list.md'
+        'reference/serial-commands/exrail-command-reference.md': 'products/ex-commandstation/exrail/command-list.md'
+        'reference/serial-command-basics.md': 'reference/serial-commands/index.md'
+        'reference/serial-command-list.md': 'reference/serial-commands/serial-command-list.md'
+
+        'reference/esp32/esp32-acebott.md': 'reference/microcontrollers/esp32/esp32-acebott.md'
+        'reference/esp32/esp32-ex8874.md': 'reference/microcontrollers/esp32/esp32-ex8874.md'
+        'reference/esp32/esp32-keyestudio.md': 'reference/microcontrollers/esp32/esp32-keyestudio.md'
+        'reference/esp32/esp32-l298-shield.md': 'reference/microcontrollers/esp32/esp32-l298-shield.md'
+        'reference/esp32/ioref-incorrect-voltage-fix_not_in_nav.md': 'reference/microcontrollers/esp32/ioref-incorrect-voltage-fix_not_in_nav.md'
+
+        'reference/ex-csb1/csb1-errors-faq.md': 'reference/microcontrollers/ex-csb1/csb1-errors-faq.md'
+        'reference/ex-csb1/csb1-technical.md': 'reference/microcontrollers/ex-csb1/csb1-technical.md'
+
+        'reference/nucleo/nucleo-64-ex8874.md': 'reference/microcontrollers/nucleo/nucleo-64-ex8874.md'
+        'reference/nucleo/nucleo-64-wifi.md': 'reference/microcontrollers/nucleo/nucleo-64-wifi.md'
+        'reference/nucleo/nucleo-144-ex8874.md': 'reference/microcontrollers/nucleo/nucleo-144-ex8874.md'
+        'reference/nucleo/nucleo-144-pin-reference.md': 'reference/microcontrollers/nucleo/nucleo-144-pin-reference.md'
+        'reference/nucleo/nucleo-144-wifi.md': 'reference/microcontrollers/nucleo/nucleo-144-wifi.md'
+        'reference/nucleo/nucleo-debug.md': 'reference/microcontrollers/nucleo/nucleo-debug.md'
+        'reference/nucleo/nucleo-drivers.md': 'reference/microcontrollers/nucleo/nucleo-drivers.md'
+        'reference/nucleo/nucleo-firmware.md': 'reference/microcontrollers/nucleo/nucleo-firmware.md'
+        'reference/nucleo/nucleo-power.md': 'reference/microcontrollers/nucleo/nucleo-power.md'
 
 # Build-only hooks live in mkdocsbuild.yml so mkdocs serve does not loop.
 

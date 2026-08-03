@@ -31,7 +31,7 @@ The following information is highlighted for **EX-CommandStation**:
 
 ### Sending commands
 
-You can send any supported command to your device by typing it into the "Enter command" box and clicking the "Send" button. Refer to the [Serial Commands List](../reference/serial-command-list.md) for the list of available commands. This will also work for the **EX-Turntable** and **EX-IOExpander** commands.
+You can send any supported command to your device by typing it into the "Enter command" box and clicking the "Send" button. Refer to the [Serial Commands List](../reference/serial-commands/serial-command-list.md) for the list of available commands. This will also work for the **EX-Turntable** and **EX-IOExpander** commands.
 
 ### Saving startup or serial console logs
 

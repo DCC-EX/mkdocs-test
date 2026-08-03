@@ -24,7 +24,7 @@ You may not be able to tell which type it is by looking at it. So, if you are un
 If one results in blank screen or image is shifted, try the other.
 
 Some **EX-CSB1**s may have had the screen display customized to display track status.  
-[myTrackStatus.example.h](../../products/ex-commandstation/exrail/cookbooks/advanced/display-track-status.md)
+[myTrackStatus.example.h](../../../products/ex-commandstation/exrail/cookbooks/advanced/display-track-status.md)
 
 ## OLED Power Status
 
@@ -41,7 +41,7 @@ i.e. ``Power SC`` means the same as either ``Power Ab`` or ``Power bA``.
 ## Power supply
 
 If your power supply is less than 5A, add a line in config.h to set overcurrent reporting lower - 90% of track power supply.  
-[motor-shield-max-current](../advanced-config-h.md#motor-shield-max-current)
+[motor-shield-max-current](../../advanced-config-h.md#motor-shield-max-current)
 
 ## EX8874 on CSB1
 
@@ -52,7 +52,7 @@ A second identical power supply or Y-cable will be needed for the EX88874 track 
 
 Add lines to myAutomation.h to define track modes and power state at startup.  
 Note that the power command is placed after the change in track mode.  
-See [Startup - Define Tracks](../../products/ex-commandstation/exrail/cookbooks/startup/startup-set-track.md) for more information.
+See [Startup - Define Tracks](../../../products/ex-commandstation/exrail/cookbooks/startup/startup-set-track.md) for more information.
 
 ## Fault reporting
 
@@ -73,13 +73,13 @@ Note that `<C PROGBOOST>` remains in effect until the **EX-CommandStation** is r
 
 ``config.h`` is used for WiFi configuration in earlier versions of the **EX-CommandStation** software. This can be done as part of the configuration in **EX-Installer**.
 
-See [WiFi Configuration](../../products/ex-commandstation/config-wifi-shield.md) for more information.
+See [WiFi Configuration](../../../products/ex-commandstation/config-wifi-shield.md) for more information.
 
 ### Version 5.7.0 and Later
 
 WiFi configuration is different starting with version 5.7.0 and is done after the **EX-CommandStation** software is loaded (via **EX-Installer**).
 
-See [5.7.0 WiFi Configuration](/products/ex-commandstation/config-wifi-esp32.md) for more information.
+See [5.7.0 WiFi Configuration](../../../products/ex-commandstation/config-wifi-esp32.md) for more information.
 
 Note that if the new WiFi configuration commands are sent via a WiFi connection, your existing connection will drop.  Current connection info should be reported on the OLED.
 
@@ -87,13 +87,13 @@ Note that if the new WiFi configuration commands are sent via a WiFi connection,
 
 ## More
 
-- [The general support FAQ page](../../support/faq.md)
+- [The general support FAQ page](../../../support/faq.md)
 
-- [EX-CSB1 Getting Started Guide](../../products/ex-commandstation/ex-csb1.md)
+- [EX-CSB1 Getting Started Guide](../../../products/ex-commandstation/ex-csb1.md)
 
 ## Discord
 
 Join the discussion on the discord server.  
-[https://dcc-ex.com/mkdocs-test/support/discord/](../../support/discord.md)
+[https://dcc-ex.com/mkdocs-test/support/discord/](../../../support/discord.md)
 
 --8<-- "snippets/abbr.md"
