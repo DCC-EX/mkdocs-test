@@ -155,6 +155,8 @@
   --md-admonition-color--tip:      #81C784; /* Material Green Light */
   --md-admonition-color--warning:  #FFB74D; /* Material Amber Light */
   --md-admonition-color--danger:   #E57373; /* Material Red Light */
+  --md-admonition-bg-color:        #000000;
+  --md-admonition-fg-color:        #ffffff;
 
   /* Footer colour shades */
   --md-footer-fg-color:              #FFFFFF;
@@ -667,3 +669,7 @@ a.external-link-icon::after {
 .admonition-title {
     background-color: #ff91008a !important;
 }
+
+/* [data-md-color-scheme="dccex-dark"]  .md-typeset .admonition, .md-typeset details {
+  background-color: #000000 !important;
+} */

@@ -1,4 +1,4 @@
-# The DCC-EX EX-CommandStation - Overview
+# DCC-EX EX-CommandStation - Overview
 
 ![EX-CommandStation Logo](../../_static/images/logos/product-logo-ex-commandstation-only-light.png){ .only-light width=400px align=right }
 ![EX-CommandStation Logo](../../_static/images/logos/product-logo-ex-commandstation-only-dark.png){ .only-dark width=400px align=right }
