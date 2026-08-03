@@ -16,7 +16,7 @@ Scanned docs root: `C:\Users\akers\OneDrive\github\github_doco\mkdocs-test\docs`
 
 ## High &amp; Medium TODOs
 
-Total High &amp; Medium TODO matches: 109
+Total High &amp; Medium TODO matches: 111
 
 | File | Line | Line text |
 | --- | ---: | --- |
@@ -35,7 +35,6 @@ Total High &amp; Medium TODO matches: 109
 | [docs/enhance/index.md](../enhance/index.md) | 48 | ==TODO== basic intro to TrackManager and links to the appropriate TrackManager pages |
 | [docs/enhance/index.md](../enhance/index.md) | 61 | ==TODO== basic intro to accessories and links to the appropriate pages |
 | [docs/enhance/index.md](../enhance/index.md) | 77 | ==TODO== basic intro to tools and links to the appropriate pages |
-| [docs/installer/download-linux.md](../installer/download-linux.md) | 7 | ==TODO== - Add screenshots & fix page flow |
 | [docs/installer/install-ex-ioexpander.md](../installer/install-ex-ioexpander.md) | 3 | ==TODO== complete EX-Installer EX-IOExpander page needed |
 | [docs/installer/install-ex-turntable.md](../installer/install-ex-turntable.md) | 3 | ==TODO== complete EX-Installer EX-Turntable page needed |
 | [docs/installer/platformio.md](../installer/platformio.md) | 3 | ==TODO== - provide setup help. |
@@ -49,6 +48,7 @@ Total High &amp; Medium TODO matches: 109
 | [docs/reference/throttle-writers-guide.md](../reference/throttle-writers-guide.md) | 219 | ==TODO== TCP VS UDP |
 | [docs/support/faq.md](../support/faq.md) | 9 | ==TODO== Rework this so that it includes GUI options (EX-WebThrottle, Engine Driver, etc.) |
 | [docs/support/faq.md](../support/faq.md) | 19 | ==TODO== Rework this so that it includes GUI options (EX-WebThrottle, Engine Driver, etc.) |
+| [docs/throttles/connecting.md](../throttles/connecting.md) | 3 | ==TODO== Connecting a WiFi Throttle to your EX-CommandStation |
 | [docs/throttles/dc.md](../throttles/dc.md) | 3 | ==TODO== basic intro to TrackManager and links to the appropriate TrackManager pages |
 | [docs/throttles/dcc-accessories.md](../throttles/dcc-accessories.md) | 3 | ==TODO== how to control DCC Accessories |
 | [docs/reference/serial-commands/legacy-command-reference.md](../reference/serial-commands/legacy-command-reference.md) | 5 | ==TODO== move legacy docs |
@@ -129,6 +129,8 @@ Total High &amp; Medium TODO matches: 109
 | [docs/products/ex-commandstation/exrail/cookbooks/big-picture/stage6.md](../products/ex-commandstation/exrail/cookbooks/big-picture/stage6.md) | 393 | You will note that these are somewhat similar to ==TODO== `exrail/examples:multiple inter-connected trains`, updated to suit the specifics of the RMFT layout. |
 | [docs/products/ex-commandstation/exrail/cookbooks/big-picture/stage6.md](../products/ex-commandstation/exrail/cookbooks/big-picture/stage6.md) | 409 | Remember, these are virtual blocks, and do not necessarily need to be electrically isolated from each other. Don't confuse isolated blocks of track or block occupancy detection with these virtual blocks. For further background, refer to ==TODO== `exrail/exrail-command-reference:virtual block control`. |
 | [docs/products/ex-commandstation/exrail/cookbooks/big-picture/stage6.md](../products/ex-commandstation/exrail/cookbooks/big-picture/stage6.md) | 451 | Using the ``LATCH()`` command gives us a way to automatically alternate between the main track and the station siding. ``LATCH()`` simply sets the state of a pin (either real or virtual) which can then be tested by an ``IF()`` statement. In this particular case, we have defined pin 60 (alias "CHOOSE_BLK2") to be latched and unlatched, as this pin does not exist on the Mega2560, nor does it exist on any of our I/O expander boards. Further reading on ``LATCH()`` and ``UNLATCH()`` can be found in the ==TODO== `exrail/exrail-command-reference:sensors/inputs - reading and responding` section of the EXRAIL reference. |
+| [docs/installer/download/download-linux.md](../installer/download/download-linux.md) | 7 | ==TODO== - Add screenshots & fix page flow |
+| [docs/installer/download/index.md](../installer/download/index.md) | 3 | ==TODO== Downloading EX-Installer - Overview |
 
 ## Low priority TODOs
 

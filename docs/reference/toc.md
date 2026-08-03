@@ -20,16 +20,16 @@ li:not(.md-nav__item, .md-tabs__item) a {
 - **Products**
     - [DCC-EX Product Overview <small>(Product Overview)</small>](../products/products.md)
     - [Getting Started with DCC-EX <small>(Getting Started)</small>](../products/getting-started.md)
-    - **EX-CommandStation**
+    - **EX-CommandStation<small><small> (Ready&nbsp;to&nbsp;Run &amp; Self&nbsp;Build)</small></small>**
         - [DCC-EX EX-CommandStation - Overview <small>(EX-CommandStation Overview)</small>](../products/ex-commandstation/index.md)
         - [**EX-CSB1** CommandStation/Booster 1 Express <small>(<b>EX-CSB1 CommandStation/Booster 1 Express</b>)</small>](../products/ex-commandstation/ex-csb1.md)
-        - [Build configuration (config.h) <small>(Configuration <small>(config.h)</small>)</small>](../products/ex-commandstation/config-h.md)
-        - [Wifi configuration <br/><small>(Excluding **EX-CSB1** or ESP32 v5.7.0+)</small> <small>(Configure WiFi <small>(Wifi Shield)</small>)</small>](../products/ex-commandstation/config-wifi-shield.md)
-        - [WiFi configuration <br/><small>(EX-CSB1 or ESP32 ONLY. v5.7.0+ ONLY)</small> <small>(Configure WiFi <small>(CSB1 & ESP32 v5.7.0+)</small>)</small>](../products/ex-commandstation/config-wifi-esp32.md)
+        - [Build configuration (config.h) <small>(Configuration <small><small>(config.h)</small></small>)</small>](../products/ex-commandstation/config-h.md)
+        - [Wifi configuration <br/><small>(Excluding **EX-CSB1** or ESP32 v5.7.0+)</small> <small>(Configure WiFi <small><small>(Wifi Shield)</small></small>)</small>](../products/ex-commandstation/config-wifi-shield.md)
+        - [WiFi configuration <br/><small>(EX-CSB1 or ESP32 ONLY. v5.7.0+ ONLY)</small> <small>(Configure WiFi <small><small>(EX-CSB1 & ESP32 v5.7.0+)</small></small>)</small>](../products/ex-commandstation/config-wifi-esp32.md)
         - [Testing your EX-CommandStation](../products/ex-commandstation/testing.md)
         - **TrackManager**
             - [TrackManager](../products/ex-commandstation/trackmanager/index.md)
-            - [EX-CSB1 in DCC Booster Mode <small>(Booster)</small>](../products/ex-commandstation/trackmanager/booster.md)
+            - [EX-CSB1 in DCC Booster Mode <small>(DCC Booster Mode <small><small>(EX-CSB1)</small></small>)</small>](../products/ex-commandstation/trackmanager/booster.md)
         - **Loco Programming**
             - [Programming DCC locos <small>(Programming Overview)</small>](../products/ex-commandstation/loco-programming/index.md)
             - [Programming using Serial commands <small>(Serial Programming)</small>](../products/ex-commandstation/loco-programming/serial-programming.md)
@@ -143,15 +143,15 @@ li:not(.md-nav__item, .md-tabs__item) a {
                     - [TM1638 Buttons, leds and 7 segment display](../products/ex-commandstation/exrail/cookbooks/various-devices/tm-1638.md)
                     - [Trainbrains Devices](../products/ex-commandstation/exrail/cookbooks/various-devices/trainbrains.md)
                     - [XL9535 Relay Board](../products/ex-commandstation/exrail/cookbooks/various-devices/xl9535.md)
-    - [EX‑MotorShield8874 <small>(EX-MotorShield8874)</small>](../products/ex-motorshield8874/ex-motorshield8874.md)
+    - [EX‑MotorShield8874 <small>(<br/>EX-MotorShield8874)</small>](../products/ex-motorshield8874/ex-motorshield8874.md)
     - [EX-WiFiShield 8266 <small>(EX-WiFiShield8266)</small>](../products/ex-wifishield8266/ex-wifishield8266.md)
-    - [EX-WebThrottle - Overview <small>(EX-WebThrottle)</small>](../products/ex-webthrottle/ex-webthrottle.md)
+    - [EX-WebThrottle - Overview <small>(<br/>EX-WebThrottle)</small>](../products/ex-webthrottle/ex-webthrottle.md)
     - **EX-Toolbox**
         - [EX-Toolbox - Overview <small>(EX-Toolbox Overview)</small>](../products/ex-toolbox/index.md)
         - [Installing EX-Toolbox <small>(Installation Guide)</small>](../products/ex-toolbox/installation-guide.md)
         - [Connecting EX-Toolbox to your EX-CommandStation <small>(Connecting)</small>](../products/ex-toolbox/connecting.md)
         - [EX-Toolbox User Guide <small>(User Manual)</small>](../products/ex-toolbox/user-guide.md)
-    - **EX-FastClock<small><small> (DIY)</small></small>**
+    - **<br/>EX-FastClock<small><small> (DIY)</small></small>**
         - [EX-FastClock <small>(EX-FastClock Overview)</small>](../products/ex-fastclock/index.md)
         - [Hardware](../products/ex-fastclock/hardware.md)
         - [Calibration](../products/ex-fastclock/calibration.md)
@@ -191,20 +191,21 @@ li:not(.md-nav__item, .md-tabs__item) a {
     - [Optionally install Ethernet <small>(Optional Ethernet)</small>](../diy/ethernet.md)
     - [Installing EX-CommandStation firmware <small>(Installing Software)</small>](../diy/installer.md)
     - [DIY - Other devices <small>(Other Devices)</small>](../diy/others.md)
-- **Install**
-    - [EX-Installer](../installer/installer.md)
+- **Install &amp; Configure**
+    - [EX-Installer <small>(EX-Installer<small><small> (Install &amp; Configure)</small></small>)</small>](../installer/installer.md)
     - [First Run installer <small>(First Run)</small>](../installer/first-run.md)
     - [Select Product to Install <small>(Select A Product)</small>](../installer/select-product.md)
     - [Installing EX-CommandStation Software <small>(Install EX-CommandStation)</small>](../installer/install-cs.md)
     - [Install EX-IOExpander](../installer/install-ex-ioexpander.md)
     - [Install EX-Turntable <small>(Install EX-Turntable<br>)</small>](../installer/install-ex-turntable.md)
     - **Download EX-Installer**
-        - [Linux](../installer/download-linux.md)
-        - [Mac](../installer/download-mac.md)
-        - [Windows](../installer/download-win.md)
+        - [Downloading EX-Installer - Overview <small>(Download EX-Installer)</small>](../installer/download/index.md)
+        - [Linux](../installer/download/download-linux.md)
+        - [Mac](../installer/download/download-mac.md)
+        - [Windows](../installer/download/download-win.md)
     - [Testing your installation With EX-Installer <small>(Test Your Installation<br>)</small>](../installer/testing.md)
-    - [Advanced Users - VSCode/PlatformIO <small>(Advanced Users - VSC/PlatformIO)</small>](../installer/platformio.md)
-- **Use (Throttles)**
+    - [Advanced Users - VSCode/PlatformIO <small>(<br/>Advanced Users - VSC/PlatformIO)</small>](../installer/platformio.md)
+- **Use<small><small>&nbsp;Throttles, etc.</small></small>**
     - **Throttles**
         - [Throttles and Other Controllers <small>(Throttle Lists)</small>](../throttles/throttles.md)
         - **Some Recommended Throttles**
@@ -212,7 +213,8 @@ li:not(.md-nav__item, .md-tabs__item) a {
             - [Engine Driver <small>(Engine Driver (Android))</small>](../throttles/engine-driver.md)
             - [ThrottleCard <small>(ThrottleCard (iOS))</small>](../throttles/throttlecard.md)
         - [WiThrottle Protocol VS DCC-EX Native/Serial Commands <small>(WiThrottle VS Native Protocol)</small>](../throttles/withrottle-vs-native-protocol.md)
-    - [Loco Programming <small>(Loco/CV Programming)</small>](../throttles/cv-programming.md)
+    - [Connecting a WiFi Throttle to your EX-CommandStation <small>(How to Connect)</small>](../throttles/connecting.md)
+    - [Loco Programming <small>(<br/>Loco/CV Programming)</small>](../throttles/cv-programming.md)
     - [DCC Accessory Operation](../throttles/dcc-accessories.md)
     - [DC Operation <small>(Controlling DC Locos)</small>](../throttles/dc.md)
 - **Enhance**
@@ -221,8 +223,6 @@ li:not(.md-nav__item, .md-tabs__item) a {
     - [Adding a Roster <small>(Adding Turnouts/Points)</small>](../enhance/turnouts.md)
     - [Routes and Automation <small>(Adding Routes and Automations)</small>](../enhance/routes.md)
     - [TrackManager - DC and DCC Operation](../enhance/trackmanager.md)
-- **News**
-    - [DCC-EX News](../news/index.md)
 - **Support**
     - [Frequently Answered Questions  (FAQ) <small>(Frequently Answered Questions)</small>](../support/faq.md)
     - [Help and Support <small>(Getting Support)</small>](../support/support.md)
@@ -291,6 +291,8 @@ li:not(.md-nav__item, .md-tabs__item) a {
     - [About the **DCC-EX** Project <small>(About DCC-EX)</small>](../about/about.md)
     - [DCC++ VS DCC-EX? - Project History <small>(History)</small>](../about/history.md)
     - [Licence & Attributions <small>(<br/>Licence & Attribution)</small>](../about/licence.md)
+- **News**
+    - [DCC-EX News](../news/index.md)
 - **Donate / Contribute**
     - [How Can I Contribute? <small>(How You Can Contribute)</small>](../contributing/contributing.md)
     - [Donations <small>(<b><span style="font-size:110%">Donate</b></span>)</small>](../contributing/donations.md)
