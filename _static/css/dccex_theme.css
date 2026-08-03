@@ -224,8 +224,8 @@
   height: 1.5rem;
   margin-top: 0.2rem;
   margin-bottom: 0.2rem;
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
+  padding-left: 0.4rem;
+  padding-right: 0.4rem;
 }
 
 .md-tabs__link {
@@ -672,4 +672,8 @@ a.external-link-icon::after {
 
 .md-typeset .admonition, .md-typeset details {
     font-size: 0.75rem !important;
+}
+
+.md-nav__container>.md-nav__link {
+    margin-top: auto !important;
 }

@@ -129,18 +129,6 @@
          <lastmod>2026-08-03</lastmod>
     </url>
     <url>
-         <loc>https://dcc-ex.com/mkdocs-test/installer/download-linux/</loc>
-         <lastmod>2026-08-03</lastmod>
-    </url>
-    <url>
-         <loc>https://dcc-ex.com/mkdocs-test/installer/download-mac/</loc>
-         <lastmod>2026-08-03</lastmod>
-    </url>
-    <url>
-         <loc>https://dcc-ex.com/mkdocs-test/installer/download-win/</loc>
-         <lastmod>2026-08-03</lastmod>
-    </url>
-    <url>
          <loc>https://dcc-ex.com/mkdocs-test/installer/first-run/</loc>
          <lastmod>2026-08-03</lastmod>
     </url>
@@ -170,6 +158,22 @@
     </url>
     <url>
          <loc>https://dcc-ex.com/mkdocs-test/installer/testing/</loc>
+         <lastmod>2026-08-03</lastmod>
+    </url>
+    <url>
+         <loc>https://dcc-ex.com/mkdocs-test/installer/download/</loc>
+         <lastmod>2026-08-03</lastmod>
+    </url>
+    <url>
+         <loc>https://dcc-ex.com/mkdocs-test/installer/download/download-linux/</loc>
+         <lastmod>2026-08-03</lastmod>
+    </url>
+    <url>
+         <loc>https://dcc-ex.com/mkdocs-test/installer/download/download-mac/</loc>
+         <lastmod>2026-08-03</lastmod>
+    </url>
+    <url>
+         <loc>https://dcc-ex.com/mkdocs-test/installer/download/download-win/</loc>
          <lastmod>2026-08-03</lastmod>
     </url>
     <url>
@@ -1122,6 +1126,10 @@
     </url>
     <url>
          <loc>https://dcc-ex.com/mkdocs-test/throttles/connect_wifi_throttle_via_usb_not_in_nav/</loc>
+         <lastmod>2026-08-03</lastmod>
+    </url>
+    <url>
+         <loc>https://dcc-ex.com/mkdocs-test/throttles/connecting/</loc>
          <lastmod>2026-08-03</lastmod>
     </url>
     <url>
