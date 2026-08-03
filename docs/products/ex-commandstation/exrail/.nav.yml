@@ -1,5 +1,5 @@
 nav:
-  - What is EXRAIL?: exrail.md
+  - What is EXRAIL?: index.md
   - Objects Introduction: exrail-objects-introduction.md
   - Sequences Introduction: exrail-sequences-introduction.md
   - Vpins: vpins.md

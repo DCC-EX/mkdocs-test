@@ -7,7 +7,7 @@ hide:
 
 ## MakerFabs WiFi shield
 
-- ![MakerFabs WiFi shield](../../_static/images/nucleo/makerfabs-wifi-3v3.png){: style="width: 30%" align=right}  
+- ![MakerFabs WiFi shield](../../../_static/images/nucleo/makerfabs-wifi-3v3.png){: style="width: 30%" align=right}  
   The shorting jumpers can be used for pins D0/D1 (USART6) to connect the 5V WiFi shield pins.  
   <BR>
   3.3V headers can be installed on the WiFi shield and flying wire jumpers used to connect USART6 or UART2 pins.  (remove the shorting jumpers)  
@@ -35,10 +35,10 @@ hide:
 ```
 
 - Serial pins for Nucleo-64 and Nucleo-144 boards  
-  ![8 district pcb](../../_static/images/nucleo/nucleo-wifi-pins.png){: style="width: 80%"}
+  ![8 district pcb](../../../_static/images/nucleo/nucleo-wifi-pins.png){: style="width: 80%"}
 
 ## Pin diagram
 
 - Pin diagram for Nucleo-144 boards  
   Read the notes added to the diagram.  
-  ![8 district pcb](../../_static/images/nucleo/serial-nucleo144.png){: style="width: 80%"}
+  ![8 district pcb](../../../_static/images/nucleo/serial-nucleo144.png){: style="width: 80%"}

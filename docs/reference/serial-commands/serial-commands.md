@@ -15,7 +15,7 @@ How to understand the syntax:
 - parameters in lower case (eg ``tSpeed``) are values you must supply
 - parameters in ``[square brackets]`` are optional (e.g. ``[volume]``). Do not include the brackets in your command.
 
-See the [Overview](./serial-command-basics.md) for more information on these and other common elements.
+See the [Overview](./index.md) for more information on these and other common elements.
 
 ----
 

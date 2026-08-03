@@ -8,4 +8,4 @@ redirect: ../products/ex-commandstation/trackmanager/trackmanager.html
 
 # TrackManager - DC and DCC Operation
 
-You are being redirected to the [TrackManager](../products/ex-commandstation/trackmanager/trackmanager.md) pages.
+You are being redirected to the [TrackManager](../products/ex-commandstation/trackmanager/index.md) pages.

@@ -7,7 +7,7 @@ hide:
 
 ## MakerFabs WiFi shield
 
-- ![MakerFabs WiFi shield](../../_static/images/nucleo/makerfabs-wifi-3v3.png){: style="width: 30%" align=right}  
+- ![MakerFabs WiFi shield](../../../_static/images/nucleo/makerfabs-wifi-3v3.png){: style="width: 30%" align=right}  
   Remove the shorting jumpers to disconnect pins D0/D1.
   <BR>
   3.3V headers can be installed on the WiFi shield and flying wire jumpers used to connect USART6 or UART2 pins.  (remove the shorting jumpers)  
@@ -32,7 +32,7 @@ hide:
 ```
 
 - WiFi Polling alias  
-  The SERIAL1 or SERAIL3 alias would be used in config.h, if Serial1, Serial6, Serial3 or Serial5 are used for other purposes.
+  The SERIAL1 or SERIAL3 alias would be used in config.h, if Serial1, Serial6, Serial3 or Serial5 are used for other purposes.
 
 ```cpp
   #if defined(ARDUINO_NUCLEO_F401RE) || defined(ARDUINO_NUCLEO_F411RE)
@@ -44,12 +44,12 @@ hide:
 ```
 
 - Serial pins for Nucleo-64 and Nucleo-144 boards  
-  ![Nucleo serial pins](/_static/images/nucleo/nucleo-wifi-pins.png){: style="width: 80%"}
+  ![Nucleo serial pins](../../../_static/images/nucleo/nucleo-wifi-pins.png){: style="width: 80%"}
 
 ## Pin diagram
 
 - Pin diagram for Nucleo-64 boards  
-  ![Nucleo 64 serial pins](/_static/images/nucleo/f411re-f446re-pins.png){: style="width: 80%"}
+  ![Nucleo 64 serial pins](../../../_static/images/nucleo/f411re-f446re-pins.png){: style="width: 80%"}
 
 - Links to st.com for each Nucleo-64 and the UM1724 pdf  
   [https://os.mbed.com/platforms/ST-Nucleo-F411RE/](https://os.mbed.com/platforms/ST-Nucleo-F411RE/)  

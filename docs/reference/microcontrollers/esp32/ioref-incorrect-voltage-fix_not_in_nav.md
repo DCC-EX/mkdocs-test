@@ -5,7 +5,7 @@ hide:
 
 # Incorrect IOREF voltage for 3.3v Microcontrollers
 
-![ACEBOTT IOREF](/_static/images/esp32/esp32-keyestudio-ioref.png){ width=15% }
+![ACEBOTT IOREF](../../../_static/images/esp32/esp32-keyestudio-ioref.png){ width=15% }
 
 For the 3.3v microcontrollers such as the ESP32 board, if the IOREF voltage is not be correct the ADC inputs will receive up to 5V when the IOREF pin is 5V which will damage the board and likely destroy it.
 
@@ -22,9 +22,9 @@ Reminder: These modifications are *not* needed when installing a single EX8874 o
 
 ## Option A - 3V3 IOREF Override pad changes (Recommended)
 
-![EX8874 IOREF](/_static/images/esp32/esp32-keyestudio-bent-pin.png){ width=25% }
+![EX8874 IOREF](../../../_static/images/esp32/esp32-keyestudio-bent-pin.png){ width=25% }
 
-![EX8874 IOREF](/_static/images/esp32/ioref-override.png){ width=22% }
+![EX8874 IOREF](../../../_static/images/esp32/ioref-override.png){ width=22% }
 
 - The prefered work-around for the incorrect `IOREF`/`5V` pin is to modify the EX8874, using the **3V3 IOREF Override** solder pad on the EX8874.
 - When using the 3V3 IOREF Override:
@@ -44,9 +44,9 @@ Double check that that you have it correct by checking wth a multimeter on the E
 
 ## Option B - bend + Jumper (Acceptable solution)
 
-![EX8874 IOREF](/_static/images/esp32/ioref-to-3v3-jumper.png){ width=15%}
+![EX8874 IOREF](../../../_static/images/esp32/ioref-to-3v3-jumper.png){ width=15%}
 
-![EX8874 IOREF](/_static/images/esp32/ioref-to-3v3-jumper2.png){ width=50%}
+![EX8874 IOREF](../../../_static/images/esp32/ioref-to-3v3-jumper2.png){ width=50%}
 
 *This option does not require soldering.*
 

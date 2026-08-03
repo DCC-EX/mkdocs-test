@@ -29,10 +29,10 @@ hide:
 This is a prototype/development board - - almost plug-n-play, once the headers and other components are soldered.  Motor shields are installed without modifications.
 
 - Table of pins used in motor define  
-  &nbsp; &nbsp; &nbsp; &nbsp; ![motor define pins](/_static/images/nucleo/nucleo-8track-003-0041-pins.jpg){: style="width: 30%" align=center}
+  &nbsp; &nbsp; &nbsp; &nbsp; ![motor define pins](../../../_static/images/nucleo/nucleo-8track-003-0041-pins.jpg){: style="width: 30%" align=center}
 
 - Link to pdf with pins assigned for 8 districts and other accessories  
-  [Nucleo-144 pin use table - pdf](/_static/images/nucleo/pin-use-table-f446ze-f429zi-20240402.pdf)
+  [Nucleo-144 pin use table - pdf](../../../_static/images/nucleo/pin-use-table-f446ze-f429zi-20240402.pdf)
 
 - Add custom motor define in config.h
   Example shows two EX8874 and two L298 motor shields
@@ -50,11 +50,11 @@ This is a prototype/development board - - almost plug-n-play, once the headers a
   #define MOTOR_SHIELD_TYPE F439_4X2
 ```
 
-![8 district pcb](/_static/images/nucleo/8track-4x-01.png){: style="width: 45%"}
-![8 district pcb](/_static/images/nucleo/8track-pcb-02.jpg){: style="width: 46%"}
+![8 district pcb](../../../_static/images/nucleo/8track-4x-01.png){: style="width: 45%"}
+![8 district pcb](../../../_static/images/nucleo/8track-pcb-02.jpg){: style="width: 46%"}
 &nbsp; &nbsp;
-![8 district pcb](/_static/images/nucleo/pcb-nucleo-144-0031-2024062901.png){: style="width: 92%"}
+![8 district pcb](../../../_static/images/nucleo/pcb-nucleo-144-0031-2024062901.png){: style="width: 92%"}
 
-- [Schematic](/_static/images/nucleo/schematic-nucleo-144-0031-20240629.pdf)
+- [Schematic](../../../_static/images/nucleo/schematic-nucleo-144-0031-20240629.pdf)
 
 - Limited availability upon request - open a ticket on the discord server

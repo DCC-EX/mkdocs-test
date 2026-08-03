@@ -21,7 +21,7 @@ hide:
 
 - **Power connection sequence**: The correct sequence is power on the EX-MotorShield8874 barrel jack, then attach the USB cable according to the STMicroelectronics documentation.  
   <br>
-  &nbsp;  &nbsp; ![EX8874 Nucleo-144 pins](../../_static/images/nucleo/vin-5v-power.jpg){: style="width: 90%"}  
+  &nbsp;  &nbsp; ![EX8874 Nucleo-144 pins](../../../_static/images/nucleo/vin-5v-power.jpg){: style="width: 90%"}  
   <br>
 
 ## VIN voltage

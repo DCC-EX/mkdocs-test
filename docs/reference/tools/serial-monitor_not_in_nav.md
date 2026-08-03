@@ -88,7 +88,7 @@ Opening the Serial Monitor always resets the Arduino board. Therefore, you shoul
 
 ### Enter Commands to the EX-CommandStation
 
-There is an entire language that **EX-CommandStation** understands. We call this the DCC-EX API for "Application Programming Interface". If you are interested, the [list of all the commands](../../reference/serial-command-list.md). Let's just try two commands to make sure everything is working.
+There is an entire language that **EX-CommandStation** understands. We call this the DCC-EX API for "Application Programming Interface". If you are interested, the [list of all the commands](../../reference/serial-commands/serial-command-list.md). Let's just try two commands to make sure everything is working.
 
 All DCC-EX commands begin with a ``<`` and end with a ``>``. In the command window, type ``<1>`` and press the ``send`` button, or Enter on your keyboard. Power should come on to the main track. You should see 2 red LEDs light on the "A" power output of the |motor shield|.
 
@@ -129,7 +129,7 @@ And one for an iPad or iPhone:
 
 Every smart phone OS such as Android or iOS has a program or two that will work as a Serial Monitor. For Android, here are a few:
 
-* [EX-Toolbox](/products/ex-toolbox/ex-toolbox.md) See [Using Serial Commands](../../products/ex-toolbox/user-guide.md#view-log) for details
+* [EX-Toolbox](/products/ex-toolbox/index.md) See [Using Serial Commands](../../products/ex-toolbox/user-guide.md#view-log) for details
 * Serial USB Terminal by Kai Morich
 * [Serial Monitor by CSA](https://play.google.com/store/apps/details?id=com.csa.serialmonitor)
 * [USB Serial Console by Felipe Herranz](https://play.google.com/store/apps/details?id=jp.sugnakys.usbserialconsole>)

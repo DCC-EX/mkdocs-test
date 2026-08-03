@@ -1,5 +1,5 @@
 nav:
-  - Programming Overview: programming.md
+  - Programming Overview: index.md
   - Serial Programming: serial-programming.md
   - EX-WebThrottle Programming: webthrottle-programming.md
   - Engine Driver Programming: engine-driver-programming.md

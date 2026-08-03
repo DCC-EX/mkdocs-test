@@ -34,7 +34,7 @@ Some references to this still remain for backward compatibility. i.e. JMRI still
 ## **DCC-EX** Serial Commands, **DCC-EX** Native Commands, **DCC-EX** Native Protocol, **DCC-EX** Native API
 
 New name for the DCC++ Commands/Protocol/API.
-Refer to [DCC-EX Serial Command List](serial-command-list.md) for details.
+Refer to [DCC-EX Serial Command List](./serial-commands/serial-command-list.md) for details.
 
 ## MAIN mode/track(s) vs PROG mode/track
 

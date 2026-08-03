@@ -5,7 +5,7 @@ hide:
 
 #  ESP32 + L298 Shields
 
-![Genuino Arduino R3](/_static/images/esp32/espduino-32-motor-shield-fritzing.png){ width=40% align=right }
+![Genuino Arduino R3](../../../_static/images/esp32/espduino-32-motor-shield-fritzing.png){ width=40% align=right }
 
 ## Genuine Arduino Motor Shield R3
 
@@ -39,7 +39,7 @@ hide:
 - **Modifications to protect ADC inputs**
     - Connecting IOREF to 3V3 will enable the Schottky diodes which connect to the A2, A3 pins.
     - Voltage divider resistor circuit is used to reduce the voltage from the op-amp
-      ![Voltage divider resistors](/_static/images/esp32/voltage-divider-circuit.png){ width=90% }
+      ![Voltage divider resistors](../../../_static/images/esp32/voltage-divider-circuit.png){ width=90% }
 
 ---
 
@@ -53,7 +53,7 @@ hide:
         new MotorDriver(23/*11*/, 18/*13*/, UNUSED_PIN, 12/*8*/, 34/*A3*/, 0.70, 1500, UNUSED_PIN)
     ```
 
-![L298 WeMos R1 D32 table](/_static/images/esp32/espduino-32-l298-x1b.png){: style="width: 80%"}
+![L298 WeMos R1 D32 table](../../../_static/images/esp32/espduino-32-l298-x1b.png){: style="width: 80%"}
 
 ---
 
@@ -68,7 +68,7 @@ hide:
     #define MOTOR_SHIELD_TYPE L298_ACEBOTT_ESP32
     ```
 
-![L298 ACEBOTT table](/_static/images/esp32/acebott-l298-x1b.png){: style="width: 80%"}
+![L298 ACEBOTT table](../../../_static/images/esp32/acebott-l298-x1b.png){: style="width: 80%"}
 
 ---
 
@@ -83,4 +83,4 @@ hide:
     #define MOTOR_SHIELD_TYPE L298_KEYES_ESP32
     ```
 
-![L298 Keyestudio table](/_static/images/esp32/keyestudio-l298-x1b.png){: style="width: 80%"}
+![L298 Keyestudio table](../../../_static/images/esp32/keyestudio-l298-x1b.png){: style="width: 80%"}

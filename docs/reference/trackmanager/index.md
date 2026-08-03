@@ -1,6 +1,6 @@
 # TrackManager
 
-**If you are only interested in a standard setup using just a DCC track and **PROG** track, then you DO NOT need to read the rest of this document.**
+**If you are only interested in a standard setup using just a DCC track and PROG track, then you DO NOT need to read the rest of this document.**
 
 What follows is for advanced users interested in managing power districts and/or running DC locomotives through **DCC-EX**.
 

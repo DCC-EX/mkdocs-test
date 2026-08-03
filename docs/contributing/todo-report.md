@@ -39,7 +39,6 @@ Total High &amp; Medium TODO matches: 109
 | [docs/installer/install-ex-ioexpander.md](../installer/install-ex-ioexpander.md) | 3 | ==TODO== complete EX-Installer EX-IOExpander page needed |
 | [docs/installer/install-ex-turntable.md](../installer/install-ex-turntable.md) | 3 | ==TODO== complete EX-Installer EX-Turntable page needed |
 | [docs/installer/platformio.md](../installer/platformio.md) | 3 | ==TODO== - provide setup help. |
-| [docs/reference/legacy-command-reference.md](../reference/legacy-command-reference.md) | 5 | ==TODO== move legacy docs |
 | [docs/reference/throttle-writers-guide.md](../reference/throttle-writers-guide.md) | 18 | ==TODO== Document incomplete. |
 | [docs/reference/throttle-writers-guide.md](../reference/throttle-writers-guide.md) | 84 | ==TODO== Controlling Locos |
 | [docs/reference/throttle-writers-guide.md](../reference/throttle-writers-guide.md) | 136 | ==TODO== DCC Accessory Control |
@@ -52,10 +51,7 @@ Total High &amp; Medium TODO matches: 109
 | [docs/support/faq.md](../support/faq.md) | 19 | ==TODO== Rework this so that it includes GUI options (EX-WebThrottle, Engine Driver, etc.) |
 | [docs/throttles/dc.md](../throttles/dc.md) | 3 | ==TODO== basic intro to TrackManager and links to the appropriate TrackManager pages |
 | [docs/throttles/dcc-accessories.md](../throttles/dcc-accessories.md) | 3 | ==TODO== how to control DCC Accessories |
-| [docs/reference/esp32/esp32-acebott.md](../reference/esp32/esp32-acebott.md) | 99 | ==TODO== Stacked EX8874 Checklist |
-| [docs/reference/esp32/esp32-ex8874.md](../reference/esp32/esp32-ex8874.md) | 110 | ==TODO== Stacked EX8874 Checklist |
-| [docs/reference/ex-csb1/csb1-technical.md](../reference/ex-csb1/csb1-technical.md) | 22 | ==TODO== EX-CSB1 Technical Reference |
-| [docs/reference/nucleo/nucleo-144-ex8874.md](../reference/nucleo/nucleo-144-ex8874.md) | 59 | ==TODO== - update MotorDrivers.h for D8 |
+| [docs/reference/serial-commands/legacy-command-reference.md](../reference/serial-commands/legacy-command-reference.md) | 5 | ==TODO== move legacy docs |
 | [docs/reference/serial-commands/serial-command-aa-and-a_not_in_nav.md](../reference/serial-commands/serial-command-aa-and-a_not_in_nav.md) | 36 | ==TODO== responses |
 | [docs/reference/serial-commands/serial-command-aa-and-a_not_in_nav.md](../reference/serial-commands/serial-command-aa-and-a_not_in_nav.md) | 54 | ==TODO== move this spreadsheet to the new web site |
 | [docs/reference/serial-commands/serial-command-c-railcom_not_in_nav.md](../reference/serial-commands/serial-command-c-railcom_not_in_nav.md) | 23 | ==TODO== Response |
@@ -85,6 +81,10 @@ Total High &amp; Medium TODO matches: 109
 | [docs/reference/serial-commands/serial-command-zz-and-z_not_in_nav.md](../reference/serial-commands/serial-command-zz-and-z_not_in_nav.md) | 79 | ==TODO== Response |
 | [docs/reference/trackmanager/dc-mode-frequency.md](../reference/trackmanager/dc-mode-frequency.md) | 82 | - ==TODO==  How to effectively use DC mode when using multiple frequencies. |
 | [docs/reference/wiring/i2C/i2c-wiring.md](../reference/wiring/i2C/i2c-wiring.md) | 54 | - When using separate power sources, there is potential for a ground loop. ==TODO== |
+| [docs/reference/microcontrollers/esp32/esp32-acebott.md](../reference/microcontrollers/esp32/esp32-acebott.md) | 99 | ==TODO== Stacked EX8874 Checklist |
+| [docs/reference/microcontrollers/esp32/esp32-ex8874.md](../reference/microcontrollers/esp32/esp32-ex8874.md) | 110 | ==TODO== Stacked EX8874 Checklist |
+| [docs/reference/microcontrollers/ex-csb1/csb1-technical.md](../reference/microcontrollers/ex-csb1/csb1-technical.md) | 22 | ==TODO== EX-CSB1 Technical Reference |
+| [docs/reference/microcontrollers/nucleo/nucleo-144-ex8874.md](../reference/microcontrollers/nucleo/nucleo-144-ex8874.md) | 59 | ==TODO== - update MotorDrivers.h for D8 |
 | [docs/reference/hardware/bluetooth-devices/index.md](../reference/hardware/bluetooth-devices/index.md) | 3 | ==TODO== Move the legacy pages |
 | [docs/reference/hardware/ethernet-boards/index.md](../reference/hardware/ethernet-boards/index.md) | 3 | ==TODO== Move the legacy pages |
 | [docs/reference/hardware/hal/hal-config.md](../reference/hardware/hal/hal-config.md) | 3 | ==TODO== change references to the Arduino IDE to VSC |
@@ -115,7 +115,7 @@ Total High &amp; Medium TODO matches: 109
 | [docs/products/ex-commandstation/exrail/exrail-objects-introduction.md](../products/ex-commandstation/exrail/exrail-objects-introduction.md) | 363 | ==TODO== Link here to recommended pin/vpin allocations etc. |
 | [docs/products/ex-commandstation/exrail/exrail-objects-introduction.md](../products/ex-commandstation/exrail/exrail-objects-introduction.md) | 365 | ==TODO== Add a diagram for the EX-CSB1 to an IO Expander |
 | [docs/products/ex-commandstation/loco-programming/programming-tips.md](../products/ex-commandstation/loco-programming/programming-tips.md) | 14 | ==TODO== Fill this page out. Also move the references from the old site |
-| [docs/products/ex-commandstation/trackmanager/trackmanager.md](../products/ex-commandstation/trackmanager/trackmanager.md) | 51 | ==TODO== move legacy docs |
+| [docs/products/ex-commandstation/trackmanager/index.md](../products/ex-commandstation/trackmanager/index.md) | 51 | ==TODO== move legacy docs |
 | [docs/products/ex-commandstation/exrail/cookbooks/timecontrol.md](../products/ex-commandstation/exrail/cookbooks/timecontrol.md) | 94 | ( ==TODO== add a reference ) |
 | [docs/products/ex-commandstation/exrail/cookbooks/big-picture/stage2.md](../products/ex-commandstation/exrail/cookbooks/big-picture/stage2.md) | 106 | More information on the config files can be found on the ==TODO== managing-config-files page. |
 | [docs/products/ex-commandstation/exrail/cookbooks/big-picture/stage3.md](../products/ex-commandstation/exrail/cookbooks/big-picture/stage3.md) | 17 | We provide some handy documentation on how to evaluate the correct angles on our ==TODO== servo-module page. |

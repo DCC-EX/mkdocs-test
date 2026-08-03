@@ -20,7 +20,7 @@ These are our powerful, but easy to use, get up and running quickly type product
 ### EX-CommandStation Booster 1 Express
 
 [![EX-CommandStation Logo](../_static/images/logos/product-logo-ex-commandstation-only-light.png){ .only-light width=400px }
-![EX-CommandStation Logo](../_static/images/logos/product-logo-ex-commandstation-only-dark.png){ .only-dark width=400px }](/products/ex-commandstation/overview.md)
+![EX-CommandStation Logo](../_static/images/logos/product-logo-ex-commandstation-only-dark.png){ .only-dark width=400px }](/products/ex-commandstation/index.md)
 [![EX-CSB1 Logo](../_static/images/logos/product-logo-ex-csb1-only-light.png){ .only-light width=400px }
 ![EX-CSB1 Logo](../_static/images/logos/product-logo-ex-csb1-only-dark.png){ .only-dark width=400px }](/products/ex-commandstation/ex-csb1.md)
 
@@ -28,7 +28,7 @@ A ready-to-run, all in one DCC Command Station and Booster with built-in WiFi pr
 
 For more information on this and how to purchase, head over to the [EX-CSB1 product page](/products/ex-commandstation/ex-csb1.md)
 
-You can learn more about the software in the [EX-CommandStation documentation](/products/ex-commandstation/overview.md).
+You can learn more about the software in the [EX-CommandStation documentation](/products/ex-commandstation/index.md).
 
 ---
 
@@ -46,7 +46,7 @@ See the [EX-WebThrottle documentation](/products/ex-webthrottle/ex-webthrottle.m
 ### EX-Toolbox
 
 [![EX-Toolbox Logo](../_static/images/logos/product-logo-ex-toolbox-only-light.png){ .only-light width=400px }
-![EX-Toolbox Logo](../_static/images/logos/product-logo-ex-toolbox-only-dark.png){ .only-dark width=400px }](/products/ex-toolbox/ex-toolbox.md)
+![EX-Toolbox Logo](../_static/images/logos/product-logo-ex-toolbox-only-dark.png){ .only-dark width=400px }](/products/ex-toolbox/index.md)
 
 ![app store](../_static/images/ex-toolbox/download.png){ width=150px align=right }
 
@@ -54,7 +54,7 @@ For Android device users, this is an extremely useful tool to help with configur
 
 You can download it from the [Google Play Store](https://play.google.com/store/apps/details?id=dcc_ex.ex_toolbox)
 
-Refer to the [EX-Toolbox documentation](/products/ex-toolbox/ex-toolbox.md) for how to install and use it.
+Refer to the [EX-Toolbox documentation](/products/ex-toolbox/index.md) for how to install and use it.
 
 ---
 
@@ -133,26 +133,26 @@ Refer to the [EX-CommandStation DIY Pages](/diy/diy.md) for information on what 
 ### EX-FastClock
 
 [![EX-FastClock Logo](../_static/images/logos/product-logo-ex-fastclock-only-light.png){ .only-light width=400px }
-![EX-FastClock Logo](../_static/images/logos/product-logo-ex-fastclock-only-dark.png){ .only-dark width=400px }](/products/ex-fastclock/overview.md)
+![EX-FastClock Logo](../_static/images/logos/product-logo-ex-fastclock-only-dark.png){ .only-dark width=400px }](/products/ex-fastclock/index.md)
 
 A Self Build (DIY) integrated fast clock for your layout.
 
 While it's possible to get up and running with this fairly easily, there is still some software configuration and installation to be performed which makes this a little more complicated.
 
-Refer to the [EX-FastClock documentation](/products/ex-fastclock/overview.md) for how to get up and running.
+Refer to the [EX-FastClock documentation](/products/ex-fastclock/index.md) for how to get up and running.
 
 ---
 
 ### EX-Turntable
 
 [![EX-Turntable Logo](../_static/images/logos/product-logo-ex-turntable-only-light.png){ .only-light width=400px }
-![EX-Turntable Logo](../_static/images/logos/product-logo-ex-turntable-only-dark.png){ .only-dark width=400px }](/products/ex-turntable/overview.md)
+![EX-Turntable Logo](../_static/images/logos/product-logo-ex-turntable-only-dark.png){ .only-dark width=400px }](/products/ex-turntable/index.md)
 
 A Self Build (DIY) integrated turntable/traverser controller using a stepper motor.
 
 The software and integration side of **EX-Turntable** is reasonably straight forward, however the mechanics of getting a turntable operational with a stepper motor and the required sensors to control the location of the turntable accurately is quite involved.
 
-Refer to the [EX-Turntable documentation](/products/ex-turntable/overview.md) for what's required and how to get up and running.
+Refer to the [EX-Turntable documentation](/products/ex-turntable/index.md) for what's required and how to get up and running.
 
 ---
 

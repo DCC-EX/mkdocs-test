@@ -36,4 +36,4 @@ The following are element / parameters that are common across multiple commands 
 
 *DCC-EX Serial Commands* are also referred to as *Native DCC-EX Commands/Protocol* or *DCC-EX Native Commands/Protocol*.
 
-Refer to the [WiThrottle VS Native Serial Protocol](../throttles/withrottle-vs-native-protocol.md) page for information on the differences to the Withrottle protocol/commands.
+Refer to the [WiThrottle VS Native Serial Protocol](../../throttles/withrottle-vs-native-protocol.md) page for information on the differences to the WiThrottle protocol/commands.

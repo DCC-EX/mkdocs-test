@@ -290,7 +290,7 @@ After selecting each additional loco, the Consist Edit screen will be shown. Thi
 
 There are several Android apps that can program decoders, including:
 
-* [EX-Toolbox](../../../../ex-toolbox/ex-toolbox.md) can program decoders over WiFi or Ethernet.
+* [EX-Toolbox](../../../../ex-toolbox/index.md) can program decoders over WiFi or Ethernet.
 * [Engine Driver](../../../../../throttles/engine-driver.md) can program decoders over WiFi or Ethernet.
 
 See the [Throttle List page](../../../../../throttles/throttles.md#android-phones-and-tablets) for other Android apps.

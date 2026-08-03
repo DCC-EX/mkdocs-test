@@ -14,7 +14,7 @@ Some command stations are not able to do programming and running at the same tim
     You cannot 'read' CVs if the track is set to ``MAIN``.<br/>
     While you can write CVs on ``MAIN`` using 'PoM' you will not receive a response. PoM should never be used to change loco addresses.
 
-**EX-CommandStation** provides some simple commands to allow you switch tracks types in software. Perhaps because you only have a single loco or your PROG track is actually an isolated siding on a layout, you can easily, temporarily, change a track to, and from, PROG or MAIN. See the [Track Manager](../../ex-commandstation/trackmanager/trackmanager.md) pages for more information.
+**EX-CommandStation** provides some simple commands to allow you switch tracks types in software. Perhaps because you only have a single loco or your PROG track is actually an isolated siding on a layout, you can easily, temporarily, change a track to, and from, PROG or MAIN. See the [Track Manager](../../ex-commandstation/trackmanager/index.md) pages for more information.
 
 ## Reading/Writing decoder settings
 
