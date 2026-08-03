@@ -192,18 +192,19 @@ li:not(.md-nav__item, .md-tabs__item) a {
     - [Installing EX-CommandStation firmware <small>(Installing Software)</small>](../diy/installer.md)
     - [DIY - Other devices <small>(Other Devices)</small>](../diy/others.md)
 - **Install &amp; Configure**
-    - [EX-Installer](../installer/installer.md)
+    - [EX-Installer <small>(EX-Installer<small><small> (Install &amp; Configure)</small></small>)</small>](../installer/installer.md)
     - [First Run installer <small>(First Run)</small>](../installer/first-run.md)
     - [Select Product to Install <small>(Select A Product)</small>](../installer/select-product.md)
     - [Installing EX-CommandStation Software <small>(Install EX-CommandStation)</small>](../installer/install-cs.md)
     - [Install EX-IOExpander](../installer/install-ex-ioexpander.md)
     - [Install EX-Turntable <small>(Install EX-Turntable<br>)</small>](../installer/install-ex-turntable.md)
     - **Download EX-Installer**
-        - [Linux](../installer/download-linux.md)
-        - [Mac](../installer/download-mac.md)
-        - [Windows](../installer/download-win.md)
+        - [Downloading EX-Installer - Overview <small>(Download EX-Installer)</small>](../installer/download/index.md)
+        - [Linux](../installer/download/download-linux.md)
+        - [Mac](../installer/download/download-mac.md)
+        - [Windows](../installer/download/download-win.md)
     - [Testing your installation With EX-Installer <small>(Test Your Installation<br>)</small>](../installer/testing.md)
-    - [Advanced Users - VSCode/PlatformIO <small>(Advanced Users - VSC/PlatformIO)</small>](../installer/platformio.md)
+    - [Advanced Users - VSCode/PlatformIO <small>(<br/>Advanced Users - VSC/PlatformIO)</small>](../installer/platformio.md)
 - **Use<small><small>&nbsp;Throttles, etc.</small></small>**
     - **Throttles**
         - [Throttles and Other Controllers <small>(Throttle Lists)</small>](../throttles/throttles.md)
