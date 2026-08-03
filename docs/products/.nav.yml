@@ -1,12 +1,12 @@
 nav:
   - Product Overview: products.md
   - Getting Started: getting-started.md
-  - EX-CommandStation: ex-commandstation
-  - EX-MotorShield8874: ex-motorshield8874/ex-motorshield8874.md
+  - EX-CommandStation<small><small> (Ready&nbsp;to&nbsp;Run &amp; Self&nbsp;Build)</small></small>: ex-commandstation
+  - <br/>EX-MotorShield8874: ex-motorshield8874/ex-motorshield8874.md
   - EX-WiFiShield8266: ex-wifishield8266/ex-wifishield8266.md
-  - EX-WebThrottle: ex-webthrottle/ex-webthrottle.md
+  - <br/>EX-WebThrottle: ex-webthrottle/ex-webthrottle.md
   - EX-Toolbox: ex-toolbox
-  - EX-FastClock<small><small> (DIY)</small></small>: ex-fastclock
+  - <br/>EX-FastClock<small><small> (DIY)</small></small>: ex-fastclock
   - EX-IOExpander<small><small> (DIY)</small></small>: ex-ioexpander/ex-ioexpander.md
   - EX-Turntable<small><small> (DIY)</small></small>: ex-turntable
   - EX-SensorCAM<small><small> (DIY)</small></small>: ex-sensorcam

@@ -3,12 +3,12 @@ nav:
   - Products: products
   - Purchase: purchasing
   - <small><small>or &nbsp;</small></small>Self Build: diy
-  - Install: installer
-  - Use (Throttles): throttles
+  - Install &amp; Configure: installer
+  - Use<small><small>&nbsp;Throttles, etc.</small></small>: throttles
   - Enhance: enhance
-  - News: news
   - Support: support
   - Reference : reference
   - About Us: about
+  - News: news
   - Donate / Contribute: contributing
   
