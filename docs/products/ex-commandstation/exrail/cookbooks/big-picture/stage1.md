@@ -280,7 +280,7 @@ After selecting each additional loco, the Consist Edit screen will be shown. Thi
 
   The paid version WiThrottle can control multiple locos, can create and control consists, can control turnouts and routes, and can control DCC track power.
 
-==TODO== `LOW - Stage 1 <https://github.com/DCC-EX/dcc-ex.github.io/issues/415>`_  - WiThrottle - Multiple Trains
+==TODO== LOW - `Stage 1 <https://github.com/DCC-EX/dcc-ex.github.io/issues/415>`_  - WiThrottle - Multiple Trains
 
 ----
 

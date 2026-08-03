@@ -1,11 +1,11 @@
 nav:
   - Table of Contents: toc.md
   - Glossary of Terms: glossary.md
-  - Serial/Native Commands:
-    - Serial Command Basics: serial-command-basics.md
-    - DCC-EX Command List: serial-command-list.md
-    - DCC-EX Command Protocol: serial-commands.md
-    - Legacy Command Reference: legacy-command-reference.md
+  - DCC-EX Serial/Native Commands:
+    - Overview: serial-command-basics.md
+    - Command List: serial-command-list.md
+    - Grouped Commands: serial-commands.md
+    - Legacy Reference: legacy-command-reference.md
   - EXRAIL Command List: exrail-command-reference.md
   - Advanced config.h Options: advanced-config-h.md
   - TrackManager: trackmanager

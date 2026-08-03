@@ -1,19 +1,29 @@
-﻿# DCC-EX Command Protocol Reference
+﻿# Grouped DCC-EX Serial Command Reference
 
-Complete reference guide for serial commands used with DCC command stations.
+Reference guide for serial commands used by **EX-CommandStations**, shown in functional groups.
+
+!!! warning "This list may not be complete"
+
+    This list of commands is manually created and may lag behind the latest developments.  Refer to the [Full Command List](./serial-command-list.md) for the up-to-date list of commands.
+
+## Common Elements / Parameters
 
 How to understand the syntax:
 
 - The first symbol after the `<` character is the opcode. It's case sensitive so `<F` is not the same as `<f`.
-- parameters in UPPER CASE (eg LIMIT) are keywords and form part of the command. Keywords are not case sensitive.
-- parameters in lower case (eg speed) are values you must supply
-- parameters in [square brackets] are optional (e.g. [volume]). Do not include the brackets in your command.
+- parameters in UPPER CASE (eg ``LIMIT``) are keywords and form part of the command. Keywords are not case sensitive.
+- parameters in lower case (eg ``tSpeed``) are values you must supply
+- parameters in ``[square brackets]`` are optional (e.g. ``[volume]``). Do not include the brackets in your command.
+
+See the [Overview](./serial-command-basics.md) for more information on these and other common elements.
+
+----
 
 ## System Commands
 
 | Command | Description | Parameters |
 |---------|-------------|------------|
-| `<#>` | Request number of simultaneously supported locos | None |
+| [`<#>`](../reference/serial-commands/) | Request number of simultaneously supported locos | None |
 | `<!>` | Emergency stop all locos | None |
 | `<!P>` | Emergency stop and PAUSE loco movement | None |
 | `<!R>` | Resume after `<!P>` | None |
@@ -40,8 +50,8 @@ How to understand the syntax:
 | Command | Description | Parameters | Status |
 |---------|-------------|------------|--------|
 | `<t loco>` | Request loco status | `loco`: Locomotive ID | Active |
-| `<t loco tspeed direction>` | Set throttle speed and direction | `loco`: ID, `tspeed`: 0-127, `direction`: 0/1 | Active |
-| `<t ignore loco tspeed direction>` | Set throttle speed and direction | Legacy format | ⚠️ Deprecated |
+| `<t loco tSpeed direction>` | Set throttle speed and direction | `loco`: ID, `tSpeed`: 0-127, `direction`: 0/1 | Active |
+| `<t ignore loco tSpeed direction>` | Set throttle speed and direction | Legacy format | ⚠️ Deprecated |
 | `<- loco>` | Remove loco state and reminders | `loco`: Locomotive ID | Active |
 | `<->` | Clear loco state and reminder table | None | Active |
 
@@ -82,7 +92,7 @@ How to understand the syntax:
 ## Sensor Control
 
 | Command | Description | Parameters |
-|---------|-------------|------------|
+| ------- | ----------- | ---------- |
 | `<S id vpin pullup>` | Create sensor | `id`: Sensor ID, `vpin`: Pin, `pullup`: Pull-up setting |
 | `<S id>` | Delete sensor | `id`: Sensor ID |
 | `<S>` | List sensors | None |
@@ -91,7 +101,7 @@ How to understand the syntax:
 ## CV Programming
 
 | Command | Description | Parameters | Status |
-|---------|-------------|------------|--------|
+| ------- | ----------- | ---------- | ------ |
 | `<W cv value>` | Write CV value on PROG track | `cv`: CV number, `value`: Value | Active |
 | `<W loco>` | Write loco address on PROG track | `loco`: Address | Active |
 | `<W CONSIST loco>` | Write consist address on PROG track | `loco`: Address | Active |
@@ -113,7 +123,7 @@ How to understand the syntax:
 ## DCC Accessory Commands
 
 | Command | Description | Parameters |
-|---------|-------------|------------|
+| ------- | ----------- | ---------- |
 | `<a address subaddress activate>` | Send DCC accessory command | `address`: Address, `subaddress`: Sub-address, `activate`: 0/1 |
 | `<a address subaddress activate onoff>` | Send DCC accessory command with on/off | `address`: Address, `subaddress`: Sub, `activate`: 0/1, `onoff`: 0/1 |
 | `<a linearaddress activate>` | Send DCC accessory command | `linearaddress`: Linear address, `activate`: 0/1 |
@@ -122,7 +132,7 @@ How to understand the syntax:
 ## Momentum Control
 
 | Command | Description | Parameters |
-|---------|-------------|------------|
+| ------- | ----------- | ---------- |
 | `<m LINEAR>` | Set momentum algorithm to linear acceleration | None |
 | `<m POWER>` | Set momentum algorithm based on speed difference | None |
 | `<m loco momentum>` | Set momentum for loco (accel and braking) | `loco`: ID, `momentum`: Value |
@@ -131,7 +141,7 @@ How to understand the syntax:
 ## Output Control
 
 | Command | Description | Parameters |
-|---------|-------------|------------|
+| ------- | ----------- | ---------- |
 | `<Z>` | List output definitions | None |
 | `<Z id pin iflag>` | Create output | `id`: Output ID, `pin`: Pin number, `iflag`: Invert flag |
 | `<Z id active>` | Set output | `id`: Output ID, `active`: 0/1 |
@@ -140,7 +150,7 @@ How to understand the syntax:
 ## Pin Control
 
 | Command | Description | Parameters |
-|---------|-------------|------------|
+| ------- | ----------- | ---------- |
 | `<z vpin>` | Set pin HIGH if vpin positive, LOW if negative | `vpin`: Pin number (signed) |
 | `<z vpin analog>` | Write analog device value | `vpin`: Pin, `analog`: Value |
 | `<z vpin analog profile>` | Write analog device using profile | `vpin`: Pin, `analog`: Value, `profile`: Profile ID |
@@ -149,7 +159,7 @@ How to understand the syntax:
 ## NeoPixel Control
 
 | Command | Description | Parameters |
-|---------|-------------|------------|
+| ------- | ----------- | ---------- |
 | `<o vpin>` | Set neopixel on (vpin>0) or off (vpin<0) | `vpin`: Pin number (signed) |
 | `<o vpin count>` | Set multiple neopixels on/off | `vpin`: Pin, `count`: Number of pixels |
 | `<o vpin r g b>` | Set neopixel colour | `vpin`: Pin, `r`: Red, `g`: Green, `b`: Blue |
@@ -158,7 +168,7 @@ How to understand the syntax:
 ## Turntable Control
 
 | Command | Description | Parameters |
-|---------|-------------|------------|
+| ------- | ----------- | ---------- |
 | `<I>` | List all turntables | None |
 | `<I id>` | Broadcast turntable type and current position | `id`: Turntable ID |
 | `<I id position>` | Rotate a DCC turntable | `id`: ID, `position`: Position |
@@ -170,7 +180,7 @@ How to understand the syntax:
 ## Sound Control
 
 | Command | Description |
-|---------|-------------|
+| ------- | ----------- |
 | `<y vpin PLAY track [volume]>` | Play track |
 | `<y vpin REPEAT track [volume]>` | Play track repeat |
 | `<y vpin STOP>` | Stop playing |
@@ -184,7 +194,7 @@ How to understand the syntax:
 ## Throttle Information Commands
 
 | Command | Description | Parameters |
-|---------|-------------|------------|
+| ------- | ----------- | ---------- |
 | `<J M>` | List stash values | None |
 | `<J M stash_id>` | Get stash value | `stash_id`: Stash identifier |
 | `<J M CLEAR ALL>` | Clear all stash values | None |
@@ -207,7 +217,7 @@ How to understand the syntax:
 ## Track Manager
 
 | Command | Description | Parameters |
-|---------|-------------|------------|
+| ------- | ----------- | ---------- |
 | `<=>` | List track manager states | None |
 | `<= track MAIN>` | Set track to MAIN | `track`: Track identifier |
 | `<= track MAIN_INV>` | Set track to MAIN inverted polarity | `track`: Track identifier |
@@ -242,7 +252,7 @@ How to understand the syntax:
 ## Diagnostic Commands
 
 | Command | Description | Parameters |
-|---------|-------------|------------|
+| ------- | ----------- | ---------- |
 | `<D ACK ON>` | Enable PROG track diagnostics | None |
 | `<D ACK OFF>` | Disable PROG track diagnostics | None |
 | `<D ACK LIMIT value>` | Set ACK detection limit mA | `value`: Current limit in mA |
@@ -282,14 +292,15 @@ How to understand the syntax:
 ## Raw DCC Packets
 
 | Command | Description | Parameters | Status |
-|---------|-------------|------------|--------|
+| ------- | ----------- | ---------- | ------ |
 | `<M ignore d0 d1 d2 d3 d4 d5>` | Send up to 5 byte DCC packet on MAIN track | `ignore`: Ignored, `d0-d5`: Hex bytes | Active |
 | `<P ignore d0 d1 d2 d3 d4 d5>` | Send up to 5 byte DCC packet on PROG track | `ignore`: Ignored, `d0-d5`: Hex bytes | Active |
 | `<c>` | Report main track current | None | ⚠️ Deprecated |
 
-!!! info "Speed Values"
+!!! info "tSpeed Values"
     - **0**: Stop
     - **1-127**: Variable speed (1=slowest, 127=fastest)
+    - **-1**: Emergency stop
 
 !!! info "Direction Values"
     - **0**: Reverse

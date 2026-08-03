@@ -1,6 +1,8 @@
 ---
 tags:
-  -
+  - _9D9_9CABS9
+  - _-
+  - _-_loco
 ---
 
 # <small>``<D CABS>`` ``<- [«loco»]>`` </small> <br/> Loco state table commands

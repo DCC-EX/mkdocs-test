@@ -231,11 +231,11 @@ li:not(.md-nav__item, .md-tabs__item) a {
 - **Reference**
     - [Full Site Table of Contents <small>(Table of Contents)</small>](toc.md)
     - [Glossary of Terms](glossary.md)
-    - **Serial/Native Commands**
-        - [DCC-EX Serial Command Basics <small>(Serial Command Basics)</small>](serial-command-basics.md)
-        - [DCC-EX Serial Command List <small>(DCC-EX Command List)</small>](serial-command-list.md)
-        - [DCC-EX Command Protocol](serial-commands.md)
-        - [Legacy Command Reference](legacy-command-reference.md)
+    - **DCC-EX Serial/Native Commands**
+        - [DCC-EX Serial Commands Overview <small>(Overview)</small>](serial-command-basics.md)
+        - [DCC-EX Serial Command List <small>(Command List)</small>](serial-command-list.md)
+        - [Grouped Commands](serial-commands.md)
+        - [Legacy Command Reference <small>(Legacy Reference)</small>](legacy-command-reference.md)
     - [EXRAIL Command List](exrail-command-reference.md)
     - [Advanced config.h settings for EX-CommandStation build <small>(Advanced config.h Options)</small>](advanced-config-h.md)
     - **TrackManager**
@@ -310,6 +310,7 @@ li:not(.md-nav__item, .md-tabs__item) a {
 ## Pages Not In Navigation
 
 - [<small>``</ FREEALL|[RESERVE|FREE «section»]>``</small> <br/> Reserve or Free Sections](serial-commands/serial-command-slash-reserve_not_in_nav.md)
+- [<small>``</ LATCH «latch»>`` ``</ UNLATCH «latch»>``</small> <br/> Set or remove a latch](serial-commands/serial-command-slash-latch_not_in_nav.md)
 - [<small>``</ «colour» «signal»>``</small> <br/> Set signal colour](serial-commands/serial-command-slash_colour_signal_not_in_nav.md)
 - [<small>``<= [«trackletter» «mode»] [«id»]>``</small> <br/>Request or Configure Track Manager <span style="display:none;">(_equals)</span>](serial-commands/serial-command-equals_not_in_nav.md)
 - [<small>``<^ «loco»|[«leadLoco» «follower» [ «follower2..7»]]>``</small> <br/> Manage EX-CommandStation Consists/MUs](serial-commands/serial-command-caret_not_in_nav.md)

@@ -1,19 +1,19 @@
 ﻿---
 tags:
   - _=
-  - _equals
-  - _equals_track_9MAIN9
-  - _equals_track_9MAIN9_9INV9
-  - _equals_track_9MAIN9_9AUTO9
-  - _equals_track_9PROG9
-  - _equals_track_9OFF9
-  - _equals_track_9NONE9
-  - _equals_track_9EXT9
-  - _equals_track_9AUTO9
-  - _equals_track_9INV9
-  - _equals_track_9DC9_loco
-  - _equals_track_9DC9_9INV9_loco
-  - _equals_track_9DC9_9X9_loco
+  - _:e:
+  - _:e:_track_9MAIN9
+  - _:e:_track_9MAIN9_9INV9
+  - _:e:_track_9MAIN9_9AUTO9
+  - _:e:_track_9PROG9
+  - _:e:_track_9OFF9
+  - _:e:_track_9NONE9
+  - _:e:_track_9EXT9
+  - _:e:_track_9AUTO9
+  - _:e:_track_9INV9
+  - _:e:_track_9DC9_loco
+  - _:e:_track_9DC9_9INV9_loco
+  - _:e:_track_9DC9_9X9_loco
 ---
 
 # <small>``<= [«trackletter» «mode»] [«id»]>``</small> <br/>Request or Configure Track Manager <span style="display:none;">(_equals)</span>
