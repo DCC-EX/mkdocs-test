@@ -43,7 +43,7 @@ Commands are entered as shown, complete with the `< >` markers. Case is importan
 ### Move a loco
 
 You can only drive a loco if you know the loco DCC address. For a brand new loco or decoder this is normally preset to 3.
-If you don't know the loco address, then you can find out using the [simple programming commands](../ex-commandstation/loco-programming/programming.md).
+If you don't know the loco address, then you can find out using the [simple programming commands](../ex-commandstation/loco-programming/index.md).
 
 Assuming you know the loco address is ``3``, the following commands may be useful:
 

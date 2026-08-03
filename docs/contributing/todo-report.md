@@ -115,7 +115,7 @@ Total High &amp; Medium TODO matches: 109
 | [docs/products/ex-commandstation/exrail/exrail-objects-introduction.md](../products/ex-commandstation/exrail/exrail-objects-introduction.md) | 363 | ==TODO== Link here to recommended pin/vpin allocations etc. |
 | [docs/products/ex-commandstation/exrail/exrail-objects-introduction.md](../products/ex-commandstation/exrail/exrail-objects-introduction.md) | 365 | ==TODO== Add a diagram for the EX-CSB1 to an IO Expander |
 | [docs/products/ex-commandstation/loco-programming/programming-tips.md](../products/ex-commandstation/loco-programming/programming-tips.md) | 14 | ==TODO== Fill this page out. Also move the references from the old site |
-| [docs/products/ex-commandstation/trackmanager/trackmanager.md](../products/ex-commandstation/trackmanager/trackmanager.md) | 51 | ==TODO== move legacy docs |
+| [docs/products/ex-commandstation/trackmanager/index.md](../products/ex-commandstation/trackmanager/index.md) | 51 | ==TODO== move legacy docs |
 | [docs/products/ex-commandstation/exrail/cookbooks/timecontrol.md](../products/ex-commandstation/exrail/cookbooks/timecontrol.md) | 94 | ( ==TODO== add a reference ) |
 | [docs/products/ex-commandstation/exrail/cookbooks/big-picture/stage2.md](../products/ex-commandstation/exrail/cookbooks/big-picture/stage2.md) | 106 | More information on the config files can be found on the ==TODO== managing-config-files page. |
 | [docs/products/ex-commandstation/exrail/cookbooks/big-picture/stage3.md](../products/ex-commandstation/exrail/cookbooks/big-picture/stage3.md) | 17 | We provide some handy documentation on how to evaluate the correct angles on our ==TODO== servo-module page. |

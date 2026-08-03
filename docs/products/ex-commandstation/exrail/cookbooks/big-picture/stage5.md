@@ -10,7 +10,7 @@ In addition, we are also adding a horizontal staging traverser that will allow f
 
 !!! note "Tip"
 
-    In preparation for adding an **EX-Turntable** to your layout, you'll need to understand the concepts outlined on the [EX-Turntable Overview](../../../../ex-turntable/overview.md) page, paying particular attention to the section on polarity or phase switching ([](../../../../ex-turntable/overview.md#important-phase-or-polarity-switching)), as we will be using automatic phase switching for the turntable.
+    In preparation for adding an **EX-Turntable** to your layout, you'll need to understand the concepts outlined on the [EX-Turntable Overview](../../../../ex-turntable/index.md) page, paying particular attention to the section on polarity or phase switching ([](../../../../ex-turntable/index.md#important-phase-or-polarity-switching)), as we will be using automatic phase switching for the turntable.
 
     Further to this, you'll also need to understand the differences required for traverser mode as outlined on the [Traverser](../../../../ex-turntable/traverser.md) page. We will not require phase switching for the traverser, as any locos on the traverser will not be rotating 180 degrees.
 
@@ -204,7 +204,7 @@ Once we have our steps per revolution, we can use that number with our formulas 
 
 .. tip::
 
-    It's a great idea at this point to understand the importance of DCC phase/polarity and how switching/reversing it works with **EX-Turntable**. Refer [important! phase (or polarity) switching](../../../../ex-turntable/overview.md#important-phase-or-polarity-switching) and [how does this work with EX-Turntable?](../../../../ex-turntable/overview.md#how-does-this-work-with-ex-turntable) for details.
+    It's a great idea at this point to understand the importance of DCC phase/polarity and how switching/reversing it works with **EX-Turntable**. Refer [important! phase (or polarity) switching](../../../../ex-turntable/index.md#important-phase-or-polarity-switching) and [how does this work with EX-Turntable?](../../../../ex-turntable/index.md#how-does-this-work-with-ex-turntable) for details.
 
 !!! note "outlining turntable positions"
 

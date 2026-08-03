@@ -21,17 +21,17 @@ li:not(.md-nav__item, .md-tabs__item) a {
     - [DCC-EX Product Overview <small>(Product Overview)</small>](../products/products.md)
     - [Getting Started with DCC-EX <small>(Getting Started)</small>](../products/getting-started.md)
     - **EX-CommandStation**
-        - [The DCC-EX EX-CommandStation - Overview <small>(EX-CommandStation Overview)</small>](../products/ex-commandstation/overview.md)
+        - [The DCC-EX EX-CommandStation - Overview <small>(EX-CommandStation Overview)</small>](../products/ex-commandstation/index.md)
         - [**EX-CSB1** CommandStation/Booster 1 Express <small>(<b>EX-CSB1 CommandStation/Booster 1 Express</b>)</small>](../products/ex-commandstation/ex-csb1.md)
         - [Build configuration (config.h) <small>(Configuration <small>(config.h)</small>)</small>](../products/ex-commandstation/config-h.md)
         - [Wifi configuration <br/><small>(Excluding **EX-CSB1** or ESP32 v5.7.0+)</small> <small>(Configure WiFi <small>(Wifi Shield)</small>)</small>](../products/ex-commandstation/config-wifi-shield.md)
         - [WiFi configuration <br/><small>(EX-CSB1 or ESP32 ONLY. v5.7.0+ ONLY)</small> <small>(Configure WiFi <small>(CSB1 & ESP32 v5.7.0+)</small>)</small>](../products/ex-commandstation/config-wifi-esp32.md)
         - [Testing your EX-CommandStation](../products/ex-commandstation/testing.md)
         - **TrackManager**
-            - [TrackManager](../products/ex-commandstation/trackmanager/trackmanager.md)
+            - [TrackManager](../products/ex-commandstation/trackmanager/index.md)
             - [EX-CSB1 in DCC Booster Mode <small>(Booster)</small>](../products/ex-commandstation/trackmanager/booster.md)
         - **Loco Programming**
-            - [Programming DCC locos <small>(Programming Overview)</small>](../products/ex-commandstation/loco-programming/programming.md)
+            - [Programming DCC locos <small>(Programming Overview)</small>](../products/ex-commandstation/loco-programming/index.md)
             - [Programming using Serial commands <small>(Serial Programming)</small>](../products/ex-commandstation/loco-programming/serial-programming.md)
             - [Programming with EX-WebThrottle <small>(EX-WebThrottle Programming)</small>](../products/ex-commandstation/loco-programming/webthrottle-programming.md)
             - [Programming with Engine Driver <small>(Engine Driver Programming)</small>](../products/ex-commandstation/loco-programming/engine-driver-programming.md)
@@ -40,7 +40,7 @@ li:not(.md-nav__item, .md-tabs__item) a {
             - [CV Programming Tips <small>(Hints and Tips)</small>](../products/ex-commandstation/loco-programming/programming-tips.md)
         - [Running a Legacy DC layout <small>(Running a DC layout)</small>](../products/ex-commandstation/dc-running.md)
         - **Accessories**
-            - [Overview - What are Accessories? <small>(Accessories)</small>](../products/ex-commandstation/accessories/accessories.md)
+            - [Overview - What are Accessories? <small>(Accessories)</small>](../products/ex-commandstation/accessories/index.md)
             - [Actuators - to make stuff happen <small>(Actuators)</small>](../products/ex-commandstation/accessories/actuators.md)
             - [Sensors](../products/ex-commandstation/accessories/sensors.md)
             - [Connecting a servo turnout/point <small>(Servo Turnouts/Points)</small>](../products/ex-commandstation/accessories/connecting-servo-turnout.md)
@@ -61,7 +61,7 @@ li:not(.md-nav__item, .md-tabs__item) a {
                         - [UDP Audio Driver for DCC-EX <small>(WaveShare)</small>](../products/ex-commandstation/accessories/various-devices/sounds/udpaudio.md)
                     - [DS1307 Real Time clock chip <small>(DS1307)</small>](../products/ex-commandstation/accessories/various-devices/ds1307.md)
         - **EXRAIL**
-            - [What is EXRAIL?](../products/ex-commandstation/exrail/exrail.md)
+            - [What is EXRAIL?](../products/ex-commandstation/exrail/index.md)
             - [EXRAIL Objects - An Introduction <small>(Objects Introduction)</small>](../products/ex-commandstation/exrail/exrail-objects-introduction.md)
             - [EXRAIL Sequences - An Introduction <small>(Sequences Introduction)</small>](../products/ex-commandstation/exrail/exrail-sequences-introduction.md)
             - [Virtual Bitmap device pins (VPINs) <small>(Vpins)</small>](../products/ex-commandstation/exrail/vpins.md)
@@ -147,12 +147,12 @@ li:not(.md-nav__item, .md-tabs__item) a {
     - [EX-WiFiShield 8266 <small>(EX-WiFiShield8266)</small>](../products/ex-wifishield8266/ex-wifishield8266.md)
     - [EX-WebThrottle - Overview <small>(EX-WebThrottle)</small>](../products/ex-webthrottle/ex-webthrottle.md)
     - **EX-Toolbox**
-        - [EX-Toolbox - Overview <small>(EX-Toolbox Overview)</small>](../products/ex-toolbox/ex-toolbox.md)
+        - [EX-Toolbox - Overview <small>(EX-Toolbox Overview)</small>](../products/ex-toolbox/index.md)
         - [Installing EX-Toolbox <small>(Installation Guide)</small>](../products/ex-toolbox/installation-guide.md)
         - [Connecting EX-Toolbox to your EX-CommandStation <small>(Connecting)</small>](../products/ex-toolbox/connecting.md)
         - [EX-Toolbox User Guide <small>(User Manual)</small>](../products/ex-toolbox/user-guide.md)
     - **EX-FastClock<small><small> (DIY)</small></small>**
-        - [EX-FastClock <small>(EX-FastClock Overview)</small>](../products/ex-fastclock/overview.md)
+        - [EX-FastClock <small>(EX-FastClock Overview)</small>](../products/ex-fastclock/index.md)
         - [Hardware](../products/ex-fastclock/hardware.md)
         - [Calibration](../products/ex-fastclock/calibration.md)
         - [Installation](../products/ex-fastclock/installation.md)
@@ -161,7 +161,7 @@ li:not(.md-nav__item, .md-tabs__item) a {
         - [Time Control](../products/ex-fastclock/timecontrol.md)
     - [EX-IOExpander <small>(EX-IOExpander<small><small> (DIY)</small></small>)</small>](../products/ex-ioexpander/ex-ioexpander.md)
     - **EX-Turntable<small><small> (DIY)</small></small>**
-        - [EX-Turntable - Overview <small>(EX-Turntable Overview)</small>](../products/ex-turntable/overview.md)
+        - [EX-Turntable - Overview <small>(EX-Turntable Overview)</small>](../products/ex-turntable/index.md)
         - [Purchasing](../products/ex-turntable/purchasing.md)
         - [Assembly & Setup](../products/ex-turntable/assembly.md)
         - [Testing, Tuning, and Control <small>(Testing, Tuning & Control)</small>](../products/ex-turntable/test-and-tune.md)

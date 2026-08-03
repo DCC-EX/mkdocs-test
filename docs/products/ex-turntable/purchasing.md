@@ -10,7 +10,7 @@
 * A prototyping shield is highly recommended, especially when using a Nano, and the pictured version is preferred over the screw terminal version
 * Dupont type wires to connect the components, male to female or female to female as required
 * A USB cable to connect the Arduino to a PC to load the software
-* *Optional:* A dual relay board (or similar) if you wish to use the phase switching capability (see [phase (or polarity) switching](overview.md#important-phase-or-polarity-switching))
+* *Optional:* A dual relay board (or similar) if you wish to use the phase switching capability (see [phase (or polarity) switching](./index.md#important-phase-or-polarity-switching))
 
 !!! warning "using the UNL2003/28BYJ-48 stepper driver"
 

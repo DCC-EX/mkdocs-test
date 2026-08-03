@@ -134,11 +134,11 @@ plugins:
       list-class: news-headline-list
   - redirects:
       redirect_maps:
-        'throttles/cv-programming.md': 'products/ex-commandstation/loco-programming/programming.md'
+        'throttles/cv-programming.md': 'products/ex-commandstation/loco-programming/index.md'
         'enhance/rosters.md': 'products/ex-commandstation/exrail/exrail-objects-introduction.md#adding-a-roster'
         'enhance/turnouts.md': 'products/ex-commandstation/exrail/exrail-objects-introduction.md#adding-turnoutspoints'
         'enhance/routes.md': 'products/ex-commandstation/exrail/exrail-sequences-introduction.md'
-        'enhance/trackmanager.md': 'products/ex-commandstation/trackmanager/trackmanager.md'
+        'enhance/trackmanager.md': 'products/ex-commandstation/trackmanager/index.md'
         'reference/exrail-command-reference.md': 'products/ex-commandstation/exrail/command-list.md'
         'reference/serial-commands/exrail-command-reference.md': 'products/ex-commandstation/exrail/command-list.md'
         'reference/serial-command-basics.md': 'reference/serial-commands/index.md'

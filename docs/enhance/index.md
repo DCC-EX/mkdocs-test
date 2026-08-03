@@ -49,7 +49,7 @@ This capability is part of **EXRAIL** and is built into your **EX-CommandStation
 
 This capability is part of **TrackManager** and is built into your **EX-CommandStation**.  Read the following to explore this feature:
 
-* [TrackManager](../products/ex-commandstation/trackmanager/trackmanager.md)
+* [TrackManager](../products/ex-commandstation/trackmanager/index.md)
 * [Running a Legacy DC layout](../products/ex-commandstation/dc-running.md)
 
 Also see:
@@ -62,12 +62,12 @@ Also see:
 
 See:
 
-* [Accessories](../products/ex-commandstation/accessories/accessories.md)
+* [Accessories](../products/ex-commandstation/accessories/index.md)
 
 Also see:
 
-* [EX-Turntable](../products/ex-turntable/overview.md)
-* [EX-FastClock](../products/ex-fastclock/overview.md)
+* [EX-Turntable](../products/ex-turntable/index.md)
+* [EX-FastClock](../products/ex-fastclock/index.md)
 * [EX-IOExpander](../products/ex-ioexpander/ex-ioexpander.md)
 * [EX-SensorCAM](../products/ex-sensorcam/ex-sensorcam.md)
 * [Use the EX-CSB1 as a DCC Booster](../products/ex-commandstation/trackmanager/booster.md)
@@ -76,7 +76,7 @@ Also see:
 
 ==TODO== basic intro to tools and links to the appropriate pages
 
-* [EX-Toolbox](../products/ex-toolbox/ex-toolbox.md)
+* [EX-Toolbox](../products/ex-toolbox/index.md)
 * [EX-DCCInspector](../products/ex-dccinspector/index.md)
 * [Serial Monitors](../reference/tools/serial-monitor_not_in_nav.md)
 

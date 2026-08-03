@@ -91,7 +91,7 @@ The `Reset WiFi Settings` button on the WiFi Setup page will reset all WiFi sett
 
 **EX-Toolbox** provides a similar interface to the **EX-WebThrottle** for configuring WiFi settings, but it can be accessed either via USB or over WiFi. The process for changing WiFi settings in the **EX-Toolbox** is essentially the same as in the **EX-WebThrottle**, with the same options for AP mode, STA mode, Temporary STA mode and Hostname.
 
-1. Connect your PC to the **EX-Toolbox** via USB or Wifi.  See [EX-Toolbox](../ex-toolbox/ex-toolbox.md) for more details.
+1. Connect your PC to the **EX-Toolbox** via USB or Wifi.  See [EX-Toolbox](../ex-toolbox/index.md) for more details.
 
 2. Go to the ``WiFi Setup`` page from the menu or the toolbar buttons and follow the same steps as outlined for the **EX-WebThrottle** above.
 

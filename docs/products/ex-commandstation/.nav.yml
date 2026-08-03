@@ -1,5 +1,5 @@
 nav:
-  - EX-CommandStation Overview: overview.md
+  - EX-CommandStation Overview: index.md
   - <b>EX-CSB1 CommandStation/Booster 1 Express</b>: ex-csb1.md
   - Configuration <small>(config.h)</small>: config-h.md
   - Configure WiFi <small>(Wifi Shield)</small>: config-wifi-shield.md

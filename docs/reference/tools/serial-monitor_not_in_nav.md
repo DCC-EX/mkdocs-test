@@ -129,7 +129,7 @@ And one for an iPad or iPhone:
 
 Every smart phone OS such as Android or iOS has a program or two that will work as a Serial Monitor. For Android, here are a few:
 
-* [EX-Toolbox](/products/ex-toolbox/ex-toolbox.md) See [Using Serial Commands](../../products/ex-toolbox/user-guide.md#view-log) for details
+* [EX-Toolbox](/products/ex-toolbox/index.md) See [Using Serial Commands](../../products/ex-toolbox/user-guide.md#view-log) for details
 * Serial USB Terminal by Kai Morich
 * [Serial Monitor by CSA](https://play.google.com/store/apps/details?id=com.csa.serialmonitor)
 * [USB Serial Console by Felipe Herranz](https://play.google.com/store/apps/details?id=jp.sugnakys.usbserialconsole>)

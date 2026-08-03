@@ -60,7 +60,7 @@ We've compiled this simple summary table to help with this:
 | Arduino [Mega+WiFi](https://dcc-ex.com/legacy-docs/reference/hardware/microcontrollers/wifi-mega.html) | No [^5] | Yes | Intermediate | Mega | Yes | Yes | Yes | Yes | Yes [^2] | Yes | 4 | This is our stable, well supported platform, but with WiFi on board, but beware quality issues |
 
 [^1]: Requires an additional [WiFi shield](../hardware/wifi-boards/index.md)
-[^2]: Requires a supported motor driver that supports [TrackManager](../../products/ex-commandstation/trackmanager/trackmanager.md)
+[^2]: Requires a supported motor driver that supports [TrackManager](../../products/ex-commandstation/trackmanager/index.md)
 [^3]: Features and support in Beta testing can and will change regularly, be sure to keep up to date with developments on our [Discord server](https://discord.gg/y2sB4Fp)
 [^4]: HAL/I2C connectivity is only available via the blocking Arduino Wire library at present
 [^5]: While the Mega+WiFi boards seem like a good option and are based on our well-known, stable Mega2560 platform, there are many reports of quality issues with these, so buyer beware, and use of these is not recommended

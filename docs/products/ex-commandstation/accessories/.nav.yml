@@ -1,5 +1,5 @@
 nav:
-  - Accessories: accessories.md
+  - Accessories: index.md
   - Actuators: actuators.md
   - Sensors: sensors.md
   - Servo Turnouts/Points: connecting-servo-turnout.md

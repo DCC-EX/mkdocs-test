@@ -303,7 +303,7 @@ Until such time as throttle software is updated to take advantage of this, using
 
 Once throttle developers start implementing support for the native turnable object, any configured turntables will automatically be advertised to throttle software, enabling direct control without needing to add routes to enable this.
 
-If this is your first experience with **EXRAIL** and the "myAutomation.h" file, familiarise yourself with **EXRAIL** by reading through [EXRAIL Overview](../ex-commandstation/exrail/exrail.md), paying particular attention to the various mentions of ROUTE and the associated examples.
+If this is your first experience with **EXRAIL** and the "myAutomation.h" file, familiarise yourself with **EXRAIL** by reading through [EXRAIL Overview](../ex-commandstation/exrail/index.md), paying particular attention to the various mentions of ROUTE and the associated examples.
 
 It is highly recommended  to utilise the virtual ``RESERVE()`` and ``FREE()`` functions to ensure that while you are operating your turntable, nothing else can interfere with it. This is not so important during manual operation, however if you want to add any other automation (say, turning a warning light on), you will need these to ensure the relevant automation activities are not interrupted should you choose another turntable position prior to the first move completing.
 
@@ -324,7 +324,7 @@ For example, the ``ROUTE()`` for the first position in our tuning example might 
   DONE
 ```
 
-That's it! Once you have created "myAutomation.h" and uploaded it to your CommandStation as per the process on the [EXRAIL overview](../ex-commandstation/exrail/exrail.md) page, the routes for each turntable position should automatically be visible in Engine Driver and WiThrottle applications.
+That's it! Once you have created "myAutomation.h" and uploaded it to your CommandStation as per the process on the [EXRAIL overview](../ex-commandstation/exrail/index.md) page, the routes for each turntable position should automatically be visible in Engine Driver and WiThrottle applications.
 
 ## Manual phase switching
 
