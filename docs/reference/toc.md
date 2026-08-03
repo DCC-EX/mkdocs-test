@@ -21,7 +21,7 @@ li:not(.md-nav__item, .md-tabs__item) a {
     - [DCC-EX Product Overview <small>(Product Overview)</small>](../products/products.md)
     - [Getting Started with DCC-EX <small>(Getting Started)</small>](../products/getting-started.md)
     - **EX-CommandStation**
-        - [The DCC-EX EX-CommandStation - Overview <small>(EX-CommandStation Overview)</small>](../products/ex-commandstation/index.md)
+        - [DCC-EX EX-CommandStation - Overview <small>(EX-CommandStation Overview)</small>](../products/ex-commandstation/index.md)
         - [**EX-CSB1** CommandStation/Booster 1 Express <small>(<b>EX-CSB1 CommandStation/Booster 1 Express</b>)</small>](../products/ex-commandstation/ex-csb1.md)
         - [Build configuration (config.h) <small>(Configuration <small>(config.h)</small>)</small>](../products/ex-commandstation/config-h.md)
         - [Wifi configuration <br/><small>(Excluding **EX-CSB1** or ESP32 v5.7.0+)</small> <small>(Configure WiFi <small>(Wifi Shield)</small>)</small>](../products/ex-commandstation/config-wifi-shield.md)
