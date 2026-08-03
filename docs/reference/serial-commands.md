@@ -22,14 +22,14 @@ See the [Overview](./serial-command-basics.md) for more information on these and
 ## System Commands
 
 | Command | Description | Parameters |
-|---------|-------------|------------|
-| [`<#>`](../reference/serial-commands/) | Request number of simultaneously supported locos | None |
-| `<!>` | Emergency stop all locos | None |
-| `<!P>` | Emergency stop and PAUSE loco movement | None |
-| `<!R>` | Resume after `<!P>` | None |
-| `<s>` | Command station status | None |
-| `<E>` | Store EEPROM | None |
-| `<e>` | Clear EEPROM | None |
+| ------- | ----------- | ---------- |
+| [`<#>`](?_:h:) | Request number of simultaneously supported locos | None |
+| [`<!>`](?_!) | Emergency stop all locos | None |
+| [`<!P>`](?_!) | Emergency stop and PAUSE loco movement | None |
+| [`<!R>`](?_!) | Resume after `<!P>` | None |
+| [`<s>`](?_s) | Command station status | None |
+| [`<E>`](?_9E9) | Store EEPROM | None |
+| [`<e>`](?_e) | Clear EEPROM | None |
 
 ## Power Control
 
