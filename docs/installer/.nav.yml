@@ -6,5 +6,6 @@ nav:
   - Install EX-IOExpander: install-ex-ioexpander.md
   - Install EX-Turntable<br>: install-ex-turntable.md
   - Download EX-Installer: download
+  - <br/>Configure WiFi <small><small>(EX-CSB1 & ESP32 v5.7.0+)</small></small>: config-wifi-esp32.md
   - Test Your Installation<br>: testing.md
   - <br/>Advanced Users - VSC/PlatformIO: platformio.md
