@@ -1,5 +1,9 @@
 # Build configuration (config.h)
 
+!!! info inline end "EX-Installer"
+
+    Using [EX-Installer](../../installer/installer.md) is the recommended way to modify ``config.h`` and ``myAutomation.h``.
+
 During compilation and build, there are a number of settings that control the way the code is constructed and important features are configured.
 
 Most configuration takes place using **EXRAIL** in the `myAutomation.h` file, but some things just need setting before that.
