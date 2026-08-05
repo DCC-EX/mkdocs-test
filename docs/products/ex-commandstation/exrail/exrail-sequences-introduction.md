@@ -105,10 +105,10 @@ Sequences types fall in the following broad groups:
 
 #### Manually Triggered Sequence Types
 
-Manually triggered sequences are advertised to WiThrottles so you can activate them on your throttles (e.g. Engine Driver or WiThrottle). They are one of:
+Manually triggered sequences are advertised to apps and devices that support the WiThrottle protocol or Native Serial protocol so you can activate them on your throttles (e.g. Engine Driver or ThrottleCard). They are one of:
 
-* ``AUTOMATION( id, "description" )`` <br/>- Start a Automation Sequence and creates a WiThrottles {Handoff} button to automatically send a train along.
-* ``ROUTE( id, "description" )`` <br/>- Start of a Route Sequence and creates a WiThrottles {Set} button to manual drive the train along
+* ``AUTOMATION( id, "description" )`` <br/>- Start a Automation Sequence and creates a apps and devices that support the WiThrottle protocol or Native Serial protocol {Handoff} button to automatically send a train along.
+* ``ROUTE( id, "description" )`` <br/>- Start of a Route Sequence and creates a apps and devices that support the WiThrottle protocol or Native Serial protocol {Set} button to manual drive the train along
 
 Note that these can also be invoked by other sequences.
 
@@ -386,7 +386,7 @@ See the [EXRAIL Command List](command-list.md) for additional commands and addit
 
 You may, however, find it more convenient to define turnouts/points using **EXRAIL** commands, which may appear anywhere in the 'myAutomation.h' file, even after they are referenced in an ``ONTHROW``, ``ONCLOSE``, ``THROW`` or ``CLOSE`` command. (EXRAIL extracts the turnout definitions just once from your script at Command Station startup.)
 
-Turnouts/Points defined in 'myAutomation.h' will still be visible to WiThrottle and JMRI in the normal way.
+Turnouts/Points defined in 'myAutomation.h' will still be visible to apps and devices that support the WiThrottle protocol or Native Serial protocol and JMRI in the normal way.
 
 A TURNOUT command sends DCC signals to a decoder attached to the track, a PIN_TURNOUT sends a "throw" or "close" (5V or 0V signal) to a pin on the Arduino, and a SERVO_TURNOUT sends an I2C serial command to a servo board connected to your servos.
 

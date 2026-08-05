@@ -4,7 +4,7 @@
 
 There are a lot of different throttle options available to control your trains and layout, including software applications available for your smart phone or computer and physical hardware options, both wired and wireless.
 
-Going in to any detail on the myriad of options available is well outside the scope of this exercise, so on this page we will be focusing on the four options most commonly used with **EX-CommandStation**: **EX-WebThrottle**, Engine Driver, WiThrottle, and JMRI.
+Going in to any detail on the myriad of options available is well outside the scope of this exercise, so on this page we will be focusing on the four options most commonly used with **EX-CommandStation**: **EX-WebThrottle**, Engine Driver, ThrottleCard, and JMRI.
 
 For other throttle options, refer to the the [Throttles List page](../../../../../throttles/throttles.md) for further information on choosing a throttle.
 
