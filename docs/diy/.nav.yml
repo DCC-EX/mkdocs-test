@@ -7,7 +7,5 @@ nav:
   - Selecting a Power Supply: power.md
   - <br/>Optional WiFi: wifi.md
   - Optional Ethernet: ethernet.md
-  - <br/>Install &amp; Configure Software: installer.md
-  - Configure WiFi <small><small>(EX-CSB1 & ESP32 v5.7.0+)</small></small>: config-wifi-esp32.md
-  - Testing your EX-CommandStation: testing.md
+  - <br/><i>Next Steps</i> - Install &amp; Configure: installer.md
   - <br/>Other Devices: others.md

@@ -2,9 +2,31 @@
 
  (LOTS OF ==TODO== in this file)
 
-The simplest and most direct testing method is to use a serial monitor to talk directly to the USB connection of your **EX-CommandStation**. This is a fundamental aspect of the Arduino system and thus avoids issues such as WiFi connections. Indeed, this is the only way to see what's going wrong if your problems are WiFi or Ethernet related.
+Ways you can test your **EX-CommandStation** include:
+
+- Testing use **EX-WebThrottle**
+- Testing over WiFi with a Smart Device
+- Testing with a Serial Monitor
+
+!!! Note "DIY - Testing over WiFi"
+
+    Testing over WiFi of a Self Build (DIY) **EX-CommandStation** is only practical if you have installed a WiFi Shield as part of your build, or you used an ESP32 or Nucelo microcontroller.
+
+## Testing with EX-WebThrottle
+
+==TODO== Initial Testing with EX-WebThrottle
+
+See [Connecting a USB Throttle to your EX-CommandStation](/throttles/connecting-usb.md) and see [EX-WebThrottle](/products/ex-webthrottle/ex-webthrottle.md)
+
+## Testing with a Smart Device
+
+==TODO== Initial Testing with a Smart Device over WiFi
+
+See [Connecting a WiFi Throttle to your EX-CommandStation](/throttles/connecting-wifi.md)
 
 ## Serial Monitors
+
+The most direct testing method is to use a serial monitor to talk directly to the USB connection of your **EX-CommandStation**. This is a fundamental aspect of the Arduino system and thus avoids issues such as WiFi connections. Indeed, this is the only way to see what's going wrong if your problems are WiFi or Ethernet related.
 
 There are several serial monitors available:
 
@@ -12,7 +34,7 @@ There are several serial monitors available:
 - Built in to the EX-WebThrottle
 - Built in to JMRI or other train control software.
 - Built in to VSCode is you are using that as an IDE.
-- Built in to the Arduino IDE (We do not recommend that for development)
+- Built in to the Arduino IDE (Not recommended)
 
 See [Serial Monitors](/reference/tools/serial-monitor_not_in_nav.md) for more information.
 

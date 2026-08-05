@@ -180,6 +180,8 @@ li:not(.md-nav__item, .md-tabs__item) a {
     - [Official DCC-EX Suppliers <small>(Official Sellers)</small>](../purchasing/official-sellers.md)
     - [Third Party Products and Sellers <small>(Third Party Sellers)</small>](../purchasing/third-party-sellers.md)
     - [DCC-EX Merchandise <small>(Merchandise)</small>](../purchasing/merchandise.md)
+    - [EX-CSB1 - Next Steps - Testing Your Installation <small>(<br/><i>Next Steps</i> - Test&nbsp;Your&nbsp;EX-CSB1)</small>](../purchasing/next-steps.md)
+    - [NextFollowing Steps - Throttles <small>(<br/><i>Following Steps</i> - Throttles)</small>](../purchasing/following-steps.md)
 - **<small><small>or &nbsp;</small></small>Self Build**
     - [Build Your Own Command Station <small>(Build Your Own)</small>](../diy/diy.md)
     - [Easy build - Arduino Mega + EX-8874 <small>(Easy Build<small> - Arduino Mega + EX-8874</small>)</small>](../diy/mega-easy.md)
@@ -189,9 +191,7 @@ li:not(.md-nav__item, .md-tabs__item) a {
     - [Selecting a Power Supply](../diy/power.md)
     - [Optionally install Wifi <small>(<br/>Optional WiFi)</small>](../diy/wifi.md)
     - [Optionally install Ethernet <small>(Optional Ethernet)</small>](../diy/ethernet.md)
-    - [Installing EX-CommandStation firmware <small>(<br/>Install &amp; Configure Software)</small>](../diy/installer.md)
-    - [WiFi configuration <br/><small>(EX-CSB1 or ESP32 ONLY. v5.7.0+ ONLY)</small> <small>(Configure WiFi <small><small>(EX-CSB1 & ESP32 v5.7.0+)</small></small>)</small>](../diy/config-wifi-esp32.md)
-    - [Testing your EX-CommandStation](../diy/testing.md)
+    - [Installing EX-CommandStation firmware <small>(<br/><i>Next Steps</i> - Install &amp; Configure)</small>](../diy/installer.md)
     - [DIY - Other devices <small>(<br/>Other Devices)</small>](../diy/others.md)
 - **Install &amp; Configure**
     - [EX-Installer <small>(EX-Installer<small><small> (Install &amp; Configure)</small></small>)</small>](../installer/installer.md)
@@ -206,8 +206,9 @@ li:not(.md-nav__item, .md-tabs__item) a {
         - [Mac](../installer/download/download-mac.md)
         - [Windows](../installer/download/download-win.md)
     - [WiFi configuration <br/><small>(EX-CSB1 or ESP32 ONLY. v5.7.0+ ONLY)</small> <small>(<br/>Configure WiFi <small><small>(EX-CSB1&nbsp;&amp;&nbsp;ESP32&nbsp;v5.7.0+)</small></small>)</small>](../installer/config-wifi-esp32.md)
-    - [Testing your installation With EX-Installer <small>(Test Your Installation<br>)</small>](../installer/testing.md)
+    - [Testing your installation <small>(Test Your Installation<br>)</small>](../installer/testing.md)
     - [Connecting to your layout <small>(<br/>Connecting to Your Layout<small><small> (Physical&nbsp;Connection)</small></small>)</small>](../installer/physical-installation.md)
+    - [Next Steps - Throttles <small>(<br/><i>Next Steps</i> - Throttles)</small>](../installer/next-steps.md)
     - [Advanced Users - VSCode/PlatformIO <small>(<br/>Advanced Users - VSC/PlatformIO)</small>](../installer/platformio.md)
 - **Use<small><small>&nbsp;Throttles, etc.</small></small>**
     - **Throttles**
