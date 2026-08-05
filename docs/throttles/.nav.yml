@@ -6,7 +6,8 @@ nav:
       - Engine Driver (Android): engine-driver.md
       - ThrottleCard (iOS): throttlecard.md
     - WiThrottle VS Native Protocol: withrottle-vs-native-protocol.md
-  - How to Connect: connecting.md
+  - <br/>How to Connect - WiFi: connecting-wifi.md
+  - How to Connect - USB: connecting-usb.md
   - <br/>Loco/CV Programming: cv-programming.md
   - DCC Accessory Operation: dcc-accessories.md
   - Controlling DC Locos: dc.md

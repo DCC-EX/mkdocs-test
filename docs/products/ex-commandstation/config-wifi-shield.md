@@ -1,5 +1,9 @@
 # Wifi configuration <br/><small>(Excluding **EX-CSB1** or ESP32 v5.7.0+)</small>
 
+!!! info inline end "EX-Installer"
+
+    Using [EX-Installer](../../installer/installer.md) is the recommended way to modify ``config.h`` and ``myAutomation.h``.
+
 WiFi has two operating modes:
 
 - AP (Access point) means the **EX-CommandStation** acts as its own private WiFi network so throttle devices must connect first to the **EX-CommandStation** WiFi network.

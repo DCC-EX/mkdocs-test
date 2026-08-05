@@ -205,8 +205,9 @@ li:not(.md-nav__item, .md-tabs__item) a {
         - [Linux](../installer/download/download-linux.md)
         - [Mac](../installer/download/download-mac.md)
         - [Windows](../installer/download/download-win.md)
-    - [WiFi configuration <br/><small>(EX-CSB1 or ESP32 ONLY. v5.7.0+ ONLY)</small> <small>(<br/>Configure WiFi <small><small>(EX-CSB1 & ESP32 v5.7.0+)</small></small>)</small>](../installer/config-wifi-esp32.md)
+    - [WiFi configuration <br/><small>(EX-CSB1 or ESP32 ONLY. v5.7.0+ ONLY)</small> <small>(<br/>Configure WiFi <small><small>(EX-CSB1&nbsp;&amp;&nbsp;ESP32&nbsp;v5.7.0+)</small></small>)</small>](../installer/config-wifi-esp32.md)
     - [Testing your installation With EX-Installer <small>(Test Your Installation<br>)</small>](../installer/testing.md)
+    - [Connecting to your layout <small>(<br/>Connecting to Your Layout<small><small> (Physical&nbsp;Connection)</small></small>)</small>](../installer/physical-installation.md)
     - [Advanced Users - VSCode/PlatformIO <small>(<br/>Advanced Users - VSC/PlatformIO)</small>](../installer/platformio.md)
 - **Use<small><small>&nbsp;Throttles, etc.</small></small>**
     - **Throttles**
@@ -216,7 +217,8 @@ li:not(.md-nav__item, .md-tabs__item) a {
             - [Engine Driver <small>(Engine Driver (Android))</small>](../throttles/engine-driver.md)
             - [ThrottleCard <small>(ThrottleCard (iOS))</small>](../throttles/throttlecard.md)
         - [WiThrottle Protocol VS DCC-EX Native/Serial Commands <small>(WiThrottle VS Native Protocol)</small>](../throttles/withrottle-vs-native-protocol.md)
-    - [Connecting a WiFi Throttle to your EX-CommandStation <small>(How to Connect)</small>](../throttles/connecting.md)
+    - [Connecting a WiFi Throttle to your EX-CommandStation <small>(<br/>How to Connect - WiFi)</small>](../throttles/connecting-wifi.md)
+    - [Connecting a USB Throttle to your EX-CommandStation <small>(How to Connect - USB)</small>](../throttles/connecting-usb.md)
     - [Loco Programming <small>(<br/>Loco/CV Programming)</small>](../throttles/cv-programming.md)
     - [DCC Accessory Operation](../throttles/dcc-accessories.md)
     - [DC Operation <small>(Controlling DC Locos)</small>](../throttles/dc.md)
@@ -301,7 +303,7 @@ li:not(.md-nav__item, .md-tabs__item) a {
     - [Donations <small>(<b><span style="font-size:110%">Donate</b></span>)</small>](../contributing/donations.md)
     - [Contributing to the public domain code <small>(Contributing Code)</small>](../contributing/code/contributing-code.md)
     - **Contributing Documentation**
-        - [Contributing to Documentation](../contributing/documentation/docs.md)
+        - [Contributing to Documentation](../contributing/documentation/index.md)
         - [Documentation Standards](../contributing/documentation/standards.md)
         - [Formatting Guide](../contributing/documentation/formatting-guide.md)
         - [Understanding Links](../contributing/documentation/understanding-links.md)

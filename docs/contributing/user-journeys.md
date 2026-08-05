@@ -52,10 +52,11 @@ graph LR
     A([Home]) --> B[Install the software];
     B --> C[Test];
     C --> |Needs changes| B;
-    C --> D[Use - Run Trains];
-    C --> E[Use - DCC Accessories];
-    E --> F[What's next to expand?];
-    D --> F;
+    C --> D[Connect to layout];
+    D --> E[Use - Run Trains];
+    D --> F[Use - DCC Accessories];
+    F --> G[What's next to expand?];
+    E --> G;
 ```
 
 ## DC Users
