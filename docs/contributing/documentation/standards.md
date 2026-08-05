@@ -6,13 +6,13 @@ We try to keep as few mandatory standards as possible, but these items must be a
 
 ## General Content
 
-When creating content, remember to keep the target user in mind at all times, with a strong preference to Conductor level users. A significant (and growing) proportion of our user base do not understand software, nor a lot of electronics or embedded systems. Use terminology they are likely understand.
+When creating content, remember to keep the target user in mind at all times, with a strong preference to Beginner level users. A significant (and growing) proportion of our user base do not understand software, nor a lot of electronics or embedded systems. Use terminology they are likely understand.
 
 Most importantly, **keep pages concise, to the point, and avoid excess words or waffle**. Not only does this make the key messages clear and easy to read for our users, but maintaining lengthy pages that are a wall of text becomes onerous, daunting, and reduces the likelihood of keeping our documentation current.
 
 So:
 
-- Brevity is good, keep topics to the concise point (eg. Conductors don't care about DCC waveforms, they care about running a train).
+- Brevity is good, keep topics to the concise point (eg. Beginners don't care about DCC waveforms, they care about running a train).
 - Avoid jargon where possible.
 - If something does need elaboration, link to a relevant reference.
 - Don't document things generally available on the Internet, eg. we don't document MkDocs or the Material theme as there is good documentation available, we only document the context of our use cases.
@@ -25,8 +25,8 @@ So:
     - i.e. use '\*\*EX-CommandStation\*\*' not 'EX-CommandStation'
     - Don't abbreviate product names.
     - e.g. use '**EX-CSB1**' not 'CSB1'
-    - Alsways include the hyphen('-') e.g. **EX-CSB1**, not EXCSB1.
-- Avoid abbreviations that would not be easily recognised by 'Conductors'.
+    - Always include the hyphen('-') e.g. **EX-CSB1**, not EXCSB1.
+- Avoid abbreviations that would not be easily recognised by 'Beginners'.
     - In particular *don't* use 'CS'.  Use the full name 'Command Station' or, more commonly, 'EX-CommandStation'
     - *Don't* use 'AP'.  Use 'Access Point' or 'Access Point Mode' or 'Access Point Mode (AP)'
     - *Don't* use 'STA'.  Use 'Station' or 'Station Mode' or 'Station Mode (STA)'
@@ -37,7 +37,7 @@ So:
 - Keep sentences short.  Break them up where ever possible.
 - Keep paragraphs short.  Break them up where practical.
 - Keep paragraphs on the same topic. If the topic changes start a new paragraph.
-- Do not start any page for a Beginner or Intermediate level userwith a technical explanation.  Put technical explanations at the end of the page, or preferably in a separate dedicated page.  Make it clear the the technical explanation is not required reading (unless it is).
+- Do not start any page for a Beginner or Intermediate level user with a technical explanation.  Put technical explanations at the end of the page, or preferably in a separate dedicated page.  Make it clear the the technical explanation is not required reading (unless it is).
 - If you have a number of sections that describe options; present them in list them first, before the sections, with an explanation as to why they are optional.  (i.e. a bullet list with hyperlinks to the headings.)
 - Where possible, avoid starting a section with a negative point of view.  i.e. Talk about the positives of what you are discussing first, before you delve into the negative or problematic aspects. <br/>e.g. Don't start with "... This is not for Beginners...", instead say "..This page is for Intermediate Level ... Non-Technically experienced users should...".
 - Use British/Australian/New Zealand/Canadian/Indian (pretty much every country except the USA) spelling e.g. 'colour' not 'color'. <br/>(Primarily because it is used in more English speaking countries)
@@ -61,8 +61,8 @@ So:
 - **&#61;&#61;TODO&#61;&#61;** <br/>means that it is still a work-in-process and needs to be updated.  It must be followed by descriptive text describing the issue to be fixed.  
 - **&#61;&#61;TODO&#61;&#61; LOW** <br/>will cause the todo to appear in a secondary list.
 - Do not use images that only contain text unless there is no choice. Image text cannot be searched. Image text cannot be easily translated.
-- Keep the first section (between H! and the first H2) reasonably short. This is what appears search results.
-- The first section (between H! and the first H2) should describe what is on the rest if the page.
+- Keep the first section (between H1 and the first H2) reasonably short. This is what appears search results.
+- The first section (between H1 and the first H2) should describe what is on the rest if the page.
 
 ## Do Not Duplicate Content
 
@@ -70,11 +70,13 @@ So:
 
 Either link to the other page, or take advantage of the [MkDocs Snippets](/contributing/documentation/mkdocs-features.md#snippets) feature. This allows you to include the same markdown content in multiple places.
 
-## Directory Naming, Page Naming, and Titles
+## Directory Naming, File Naming, and Titles
 
-With the exception of the home page and the **DCC-EX** News page, **do not use "index.md"**, but rather name pages according to their primary message. Using "index.md" adjusts the rendering of pages when navigating through the menus, and the team has a preference for the navigation experience using the benefits of the [MkDocs Awesome Nav plugin](https://lukasgeiter.github.io/mkdocs-awesome-nav/) over having an initial index page.
+When creating sub-folders for sub-menus, always name the primary/landing page/file **index.md**.  This avoids the usability issue having to click on the heading, then click on the page.
 
-- All directory and page names must be in lower case and use "-" instead of spaces.
+The primary/landing page in a sub-section should *generally* be an overview of what is in that section.
+
+- All directory and page names must be in lower case and use "-" (hyphen) instead of spaces.  The one variation to this is appending "_not_in_nav" to a file name when that file does not appear in any navigation menu, so it does not create a build warning.
 - Page ordering is determined by the Awesome Nav ".nav.yml" file, see [Directory Structure](/contributing/documentation/standards.md#directory-structure-and-navigation).
 - The page title is determined by the top level heading, see [Headings](/contributing/documentation/formatting-guide.md#headings).
 
@@ -84,7 +86,8 @@ When running locally with ``mkdocs serve``, ensure any INFO, WARNING, or ERROR l
 
 !!! warning
 
-    When we release the new MkDocs based documentation, the deployment GitHub workflow will enforce ``strict`` mode, meaning any issues will generate a workflow error, preventing updates being deployed.
+    ~~~When we release the new MkDocs based documentation, the deployment GitHub workflow will enforce ``strict`` mode, meaning any issues will generate a workflow error, preventing updates being deployed.~~~
+    At the moment the ``strict`` more is turned off, but will be turned back on later.
 
 ## Directory Structure and Navigation
 
@@ -94,7 +97,7 @@ The top level directories under the "docs" directory determine the tabs or horiz
 
 **Do not adjust the top level directories without consulting the **DCC-EX** Documenter team, as these fundamentally adjust the user experience.**
 
-If a new top level directory is to be added, it needs to be added to the "/docs/.nav.yml" file in the appropriate order. Files and directories created within existing top level directories will automatically be added to the menus (see [Page Naming and Titles](#directory-naming-page-naming-and-titles) for page ordering).
+If a new top level directory is to be added, it needs to be added to the "/docs/.nav.yml" file in the appropriate order. Files and directories created within existing top level directories will automatically be added to the menus (see [Page Naming and Titles](#directory-naming-file-naming-and-titles) for page ordering).
 
 ### Managing Navigation files ".nav.yml"
 

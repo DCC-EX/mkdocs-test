@@ -10,7 +10,7 @@ Your donations help to offset the cost of running some of the resources used to 
 
 ## Help with the Documentation
 
-This [documentation](documentation/docs.md) is written in a simple markdown syntax called *MkDocs* so a knowledge of HTML, CSS or Javascript is not necessary for you help improve our documentation.
+This [documentation](./documentation/index.md) is written in a simple markdown syntax called *MkDocs* so a knowledge of HTML, CSS or Javascript is not necessary for you help improve our documentation.
 
 ## Alpha and Beta Testing
 
