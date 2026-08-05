@@ -1,6 +1,6 @@
 <!-- #### Installing with EX-Installer -->
 
-**EX-Installer** can be used to install both **EX-CommandStation** and **EX-Turntable**. The process is the same for both, with the exception of the configuration options, therefore we will only outline the configuration options here. Refer to [EX-Installer](../../installer/installer.md) for the full documentation on using **EX-Installer**.
+**EX-Installer** can be used to install both **EX-CommandStation** and **EX-Turntable**. The process is the same for both, with the exception of the configuration options, therefore we will only outline the configuration options here. Refer to [EX-Installer](/installer/installer.md) for the full documentation on using **EX-Installer**.
 
 When you reach the "Select Product" screen, select **EX-Turntable**.
 
