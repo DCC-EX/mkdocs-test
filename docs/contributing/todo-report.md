@@ -16,7 +16,7 @@ Scanned docs root: `C:\Users\akers\OneDrive\github\github_doco\mkdocs-test\docs`
 
 ## High &amp; Medium TODOs
 
-Total High &amp; Medium TODO matches: 111
+Total High &amp; Medium TODO matches: 112
 
 | File | Line | Line text |
 | --- | ---: | --- |
@@ -37,8 +37,9 @@ Total High &amp; Medium TODO matches: 111
 | [docs/enhance/index.md](../enhance/index.md) | 77 | ==TODO== basic intro to tools and links to the appropriate pages |
 | [docs/installer/install-ex-ioexpander.md](../installer/install-ex-ioexpander.md) | 3 | ==TODO== complete EX-Installer EX-IOExpander page needed |
 | [docs/installer/install-ex-turntable.md](../installer/install-ex-turntable.md) | 3 | ==TODO== complete EX-Installer EX-Turntable page needed |
-| [docs/installer/physical-installation.md](../installer/physical-installation.md) | 3 | ==TODO== new page on physically connecting the EX-CS to a layout |
+| [docs/installer/physical-installation.md](../installer/physical-installation.md) | 3 | ==TODO== new page on physically connecting the EX-CS to a layout. Should be in a snippet and reused |
 | [docs/installer/platformio.md](../installer/platformio.md) | 3 | ==TODO== - provide setup help. |
+| [docs/purchasing/physical-installation.md](../purchasing/physical-installation.md) | 3 | ==TODO== new page on physically connecting the EX-CSB1 to a layout. Should be in a snippet and reused |
 | [docs/reference/throttle-writers-guide.md](../reference/throttle-writers-guide.md) | 18 | ==TODO== Document incomplete. |
 | [docs/reference/throttle-writers-guide.md](../reference/throttle-writers-guide.md) | 84 | ==TODO== Controlling Locos |
 | [docs/reference/throttle-writers-guide.md](../reference/throttle-writers-guide.md) | 136 | ==TODO== DCC Accessory Control |

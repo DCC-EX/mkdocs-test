@@ -180,8 +180,9 @@ li:not(.md-nav__item, .md-tabs__item) a {
     - [Official DCC-EX Suppliers <small>(Official Sellers)</small>](../purchasing/official-sellers.md)
     - [Third Party Products and Sellers <small>(Third Party Sellers)</small>](../purchasing/third-party-sellers.md)
     - [DCC-EX Merchandise <small>(Merchandise)</small>](../purchasing/merchandise.md)
-    - [EX-CSB1 - Next Steps - Testing Your Installation <small>(<br/><i>Next Steps</i> - Test&nbsp;Your&nbsp;EX-CSB1)</small>](../purchasing/next-steps.md)
-    - [NextFollowing Steps - Throttles <small>(<br/><i>Following Steps</i> - Throttles)</small>](../purchasing/following-steps.md)
+    - [EX-CSB1 - Next Steps - Testing Your Installation <small>(<br/><i>EX-CSB1 Next Steps</i><br/>Test&nbsp;Your&nbsp;EX-CSB1)</small>](../purchasing/next-steps.md)
+    - [Connecting to your layout <small>(Connecting to Your Layout<small><small> (Physical&nbsp;Connection)</small></small>)</small>](../purchasing/physical-installation.md)
+    - [Following Steps - Throttles <small>(Throttles)</small>](../purchasing/throttles.md)
 - **<small><small>or &nbsp;</small></small>Self Build**
     - [Build Your Own Command Station <small>(Build Your Own)</small>](../diy/diy.md)
     - [Easy build - Arduino Mega + EX-8874 <small>(Easy Build<small> - Arduino Mega + EX-8874</small>)</small>](../diy/mega-easy.md)
