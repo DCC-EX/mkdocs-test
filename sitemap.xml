@@ -69,10 +69,6 @@
          <lastmod>2026-08-05</lastmod>
     </url>
     <url>
-         <loc>https://dcc-ex.com/mkdocs-test/diy/config-wifi-esp32/</loc>
-         <lastmod>2026-08-05</lastmod>
-    </url>
-    <url>
          <loc>https://dcc-ex.com/mkdocs-test/diy/diy/</loc>
          <lastmod>2026-08-05</lastmod>
     </url>
@@ -106,10 +102,6 @@
     </url>
     <url>
          <loc>https://dcc-ex.com/mkdocs-test/diy/power/</loc>
-         <lastmod>2026-08-05</lastmod>
-    </url>
-    <url>
-         <loc>https://dcc-ex.com/mkdocs-test/diy/testing/</loc>
          <lastmod>2026-08-05</lastmod>
     </url>
     <url>
@@ -158,6 +150,10 @@
     </url>
     <url>
          <loc>https://dcc-ex.com/mkdocs-test/installer/installer/</loc>
+         <lastmod>2026-08-05</lastmod>
+    </url>
+    <url>
+         <loc>https://dcc-ex.com/mkdocs-test/installer/next-steps/</loc>
          <lastmod>2026-08-05</lastmod>
     </url>
     <url>
@@ -785,11 +781,23 @@
          <lastmod>2026-08-05</lastmod>
     </url>
     <url>
+         <loc>https://dcc-ex.com/mkdocs-test/purchasing/next-steps/</loc>
+         <lastmod>2026-08-05</lastmod>
+    </url>
+    <url>
          <loc>https://dcc-ex.com/mkdocs-test/purchasing/official-sellers/</loc>
          <lastmod>2026-08-05</lastmod>
     </url>
     <url>
+         <loc>https://dcc-ex.com/mkdocs-test/purchasing/physical-installation/</loc>
+         <lastmod>2026-08-05</lastmod>
+    </url>
+    <url>
          <loc>https://dcc-ex.com/mkdocs-test/purchasing/third-party-sellers/</loc>
+         <lastmod>2026-08-05</lastmod>
+    </url>
+    <url>
+         <loc>https://dcc-ex.com/mkdocs-test/purchasing/throttles/</loc>
          <lastmod>2026-08-05</lastmod>
     </url>
     <url>
