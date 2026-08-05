@@ -32,7 +32,7 @@ The process for creating these objects consists of:
 
 ## Adding a Roster
 
-**EXRAIL** has a ``ROSTER()`` function to allow you to define all of your locomotives with a list of their defined functions which is advertised to WiThrottle applications, just like turnouts/points and routes.
+**EXRAIL** has a ``ROSTER()`` function to allow you to define all of your locomotives with a list of their defined functions which is advertised to apps and devices that support the WiThrottle protocol or Native Serial protocol, just like turnouts/points and routes.
 
 The functions can simply be listed as "F" numbers, or you can provide a text description of the function. Prefacing the function with a "*" indicates it is momentary, meaning it is only activated while holding that function button down.
 
@@ -157,7 +157,7 @@ If you have installed turnouts/points using simple pin control, you can config t
     PIN_TURNOUT( id, vpin [, "description"] )
 ```
 
-The ``PIN_TURNOUT`` command defines a pin operated turnout/point in **EXRAIL**, which will appear in WiThrottle Protocol apps, Engine Driver, and JMRI in addition to being defined as a turnout/point within the CommandStation.
+The ``PIN_TURNOUT`` command defines a pin operated turnout/point in **EXRAIL**, which will appear in apps and devices that support the WiThrottle protocol or Native Serial protocol. e.g. Engine Driver, and JMRI in addition to being defined as a turnout/point within the CommandStation.
 
 When setting up a turnout/point where multiple pins are required for control, the ``VIRTUAL_TURNOUT`` command should be used along with a control sequence. This is commonly used to configure solenoid-based turnout motors.
 
@@ -240,7 +240,7 @@ The myAutomation.h file needs to be altered so that the **EX-CommandStation** kn
 
 #### Controlling Servos for Turnouts/Points
 
-The ``SERVO_TURNOUT`` directive defines a servo based turnout/point in **EXRAIL**, which will appear in WiThrottle Protocol apps, Engine Driver, and JMRI in addition to being defined as a turnout/point within the CommandStation.
+The ``SERVO_TURNOUT`` directive defines a servo based turnout/point in **EXRAIL**, which will appear in WiThroapps and devices that support the WiThrottle protocol or Native Serial protocol. e.g. Engine Driver, and JMRI in addition to being defined as a turnout/point within the CommandStation.
 
 As per the **EXRAIL** reference, turnouts/points are defined with the following syntax:
 
@@ -261,7 +261,7 @@ As per the **EXRAIL** reference, turnouts/points are defined with the following 
 * active_angle = The angle to which the servo will move when the turnout/point is thrown (refer below for further detailed information).
 * inactive_angle = The angle to which the servo will move when the turnout/point is closed (refer below for further detailed information).
 * profile = There are five profiles to choose from that determine the speed at which a turnout/point will move: Instant, Fast, Medium, Slow, and Bounce (note we don't recommend Bounce for a turnout/point definition).
-* description = A human-friendly description of the turnout/point that will appear in WiThrottle apps and Engine Driver. Note that this must be enclosed in quotes "".
+* description = A human-friendly description of the turnout/point that will appear in apps and devices that support the WiThrottle protocol or Native Serial protocol/ e.g. Engine Driver. Note that this must be enclosed in quotes "".
 
 ----
 
@@ -307,7 +307,7 @@ Unlike servo based turnouts/points, there is no ID or description (they don't ap
 
 The ``SERVO`` and ``SERVO2`` directives allow for servos to be used in various automations within **EXRAIL**.
 
-Note that unlike a ``SERVO_TURNOUT`` these are not definitions that appear within WiThrottle apps, Engine Driver, or JMRI, but are instead actions designed to be used within **EXRAIL** automations.
+Note that unlike a ``SERVO_TURNOUT`` these are not definitions that appear within apps and devices that support the WiThrottle protocol or Native Serial protocol. e.g. Engine Driver, or JMRI, but are instead actions designed to be used within **EXRAIL** automations.
 
 As per the **EXRAIL** reference, these are defined with the following syntax:
 

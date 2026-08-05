@@ -1,13 +1,19 @@
-# Testing your installation With EX-Installer
+# Testing your installation
+
+There are a number of ways that you can test your installation, but assuming that you have just installed the software using **EX-Installer** the simplest way to test is usingthe Serial Monitor in **EX-Installer**.
+
+See the other [Testing Your Installation](../purchasing/next-steps.md) page for alternate ways to test your installation.
+
+## Testing your installation With EX-Installer
 
 With a Serial Monitor you can, among other things:
 
-* Test your Command Station
-* View startup and other diagnostic logs to fix issues or help us support you
-* Turn on extra diagnostic commands
-* Diagnose communication issues with your loco on the programming track (ACK failure/Error 308)
+- Test your Command Station
+- View startup and other diagnostic logs to fix issues or help us support you
+- Turn on extra diagnostic commands
+- Diagnose communication issues with your loco on the programming track (ACK failure/Error 308)
 
-## Using the EX-Installer Device Monitor
+### Using the EX-Installer Device Monitor
 
 Once you have selected a device in **EX-Installer** on the 'Select your device' screen, or after successfully loading software onto your device, a ``View device monitor`` button will be available.
 
@@ -29,11 +35,11 @@ The following information is highlighted for **EX-CommandStation**:
 - WiFi SSID in station (STA) mode (blue)
 - WiFi IP address and port (purple)
 
-### Sending commands
+#### Sending commands
 
 You can send any supported command to your device by typing it into the "Enter command" box and clicking the "Send" button. Refer to the [Serial Commands List](../reference/serial-commands/serial-command-list.md) for the list of available commands. This will also work for the **EX-Turntable** and **EX-IOExpander** commands.
 
-### Saving startup or serial console logs
+#### Saving startup or serial console logs
 
 When interacting with the **DCC-EX** team for support, you will likely be asked to provide the "startup logs", or output from the serial console of your device.
 

@@ -2,7 +2,7 @@
 
 A common topic that arises in Discord conversations is the question "How does it all fit together?"
 
-We have a great core product (**EX-CommandStation**) with great features such as built-in automation (**EXRAIL**) along with many integration options (JMRI, WiThrottle, Engine Driver), support for various different integrated hardware devices (IO expanders, sensors, audio) and now even an integrated turntable controller (**EX-Turntable**). However, how does one take all these bits and pieces and use them together cohesively to control and/or automate an entire layout?
+We have a great core product (**EX-CommandStation**) with great features such as built-in automation (**EXRAIL**) along with many integration options (JMRI, ThrottleCard, Engine Driver, etc.), support for various different integrated hardware devices (IO expanders, sensors, audio) and now even an integrated turntable controller (**EX-Turntable**). However, how does one take all these bits and pieces and use them together cohesively to control and/or automate an entire layout?
 
 This section of our website is aimed to answer just that!
 

@@ -23,8 +23,7 @@ Total High &amp; Medium TODO matches: 111
 | [docs/contributing/release-checklist.md](release-checklist.md) | 128 | - ==TODO== I am not really sure of the purpose of the products/getting-started page |
 | [docs/contributing/release-checklist.md](release-checklist.md) | 129 | - ==TODO== Restructure parts the reference section for throttle developers |
 | [docs/contributing/release-checklist.md](release-checklist.md) | 130 | - ==TODO== Migrate the other missing HAL pages |
-| [docs/contributing/release-checklist.md](release-checklist.md) | 131 | - ==TODO== Some of the low priority TODOs could be hidden in comments |
-| [docs/contributing/release-checklist.md](release-checklist.md) | 132 | - ==TODO== Really need some pages with diagrams and picture covering physical installation of the CS |
+| [docs/contributing/release-checklist.md](release-checklist.md) | 132 | - ==TODO== Really need some pages with diagrams and picture covering physical installation of the CS. See /purchasing/physical-installation.md and installer/physical-installation.md |
 | [docs/contributing/release-checklist.md](release-checklist.md) | 133 | - ==TODO== Try to remove the references to the Arduino IDE.  Change to VSC.  Not going to be simple. |
 | [docs/contributing/release-checklist.md](release-checklist.md) | 134 | - ==TODO== Need to change the 'Withrottle' iOS app references to 'ThrottleCard' |
 | [docs/diy/esp32.md](../diy/esp32.md) | 66 | ==TODO== move legacy docs |
@@ -37,8 +36,9 @@ Total High &amp; Medium TODO matches: 111
 | [docs/enhance/index.md](../enhance/index.md) | 77 | ==TODO== basic intro to tools and links to the appropriate pages |
 | [docs/installer/install-ex-ioexpander.md](../installer/install-ex-ioexpander.md) | 3 | ==TODO== complete EX-Installer EX-IOExpander page needed |
 | [docs/installer/install-ex-turntable.md](../installer/install-ex-turntable.md) | 3 | ==TODO== complete EX-Installer EX-Turntable page needed |
-| [docs/installer/physical-installation.md](../installer/physical-installation.md) | 3 | ==TODO== new page on physically connecting the EX-CS to a layout |
+| [docs/installer/physical-installation.md](../installer/physical-installation.md) | 3 | ==TODO== new page on physically connecting the EX-CS to a layout. Should be in a snippet and reused |
 | [docs/installer/platformio.md](../installer/platformio.md) | 3 | ==TODO== - provide setup help. |
+| [docs/purchasing/physical-installation.md](../purchasing/physical-installation.md) | 3 | ==TODO== new page on physically connecting the EX-CSB1 to a layout. Should be in a snippet and reused |
 | [docs/reference/throttle-writers-guide.md](../reference/throttle-writers-guide.md) | 18 | ==TODO== Document incomplete. |
 | [docs/reference/throttle-writers-guide.md](../reference/throttle-writers-guide.md) | 84 | ==TODO== Controlling Locos |
 | [docs/reference/throttle-writers-guide.md](../reference/throttle-writers-guide.md) | 136 | ==TODO== DCC Accessory Control |
@@ -96,9 +96,9 @@ Total High &amp; Medium TODO matches: 111
 | [docs/reference/hardware/wifi-boards/index.md](../reference/hardware/wifi-boards/index.md) | 3 | ==TODO== Move the legacy pages |
 | [docs/products/ex-dccinspector/index.md](../products/ex-dccinspector/index.md) | 8 | ==TODO== move legacy docs |
 | [docs/products/ex-ioexpander/ex-ioexpander.md](../products/ex-ioexpander/ex-ioexpander.md) | 8 | ==TODO== move legacy docs |
-| [docs/products/ex-turntable/assembly.md](../products/ex-turntable/assembly.md) | 210 | Further to this, note that you will need to end up with two separate folders; one containing the **EX-CommandStation** software as per  ==TODO== :doc:`/ex-commandstation/advanced-setup/installation-options/arduino-ide`, and an additional folder containing the **EX-Turntable** software. The **EX-Turntable** software is not a component of **EX-CommandStation** or vice versa, and as such they should not exist in the same folder. |
-| [docs/products/ex-turntable/assembly.md](../products/ex-turntable/assembly.md) | 218 | The process here is the same as installing CommandStation-EX via the Arduino IDE which you can find on the ==TODO== :doc:`/ex-commandstation/advanced-setup/installation-options/arduino-ide` page. |
-| [docs/products/ex-turntable/assembly.md](../products/ex-turntable/assembly.md) | 349 | - VPIN=600 - This is the default virtual pin (Vpin) ID that is used to send **EX-Turntable** commands to. Vpin IDs need to be unique, so if this ID is used elsewhere, change as necessary (refer ==TODO== :ref:`reference/developers/hal:overview`). |
+| [docs/products/ex-turntable/assembly.md](../products/ex-turntable/assembly.md) | 188 | Further to this, note that you will need to end up with two separate folders; one containing the **EX-CommandStation** software as per  ==TODO== :doc:`/ex-commandstation/advanced-setup/installation-options/arduino-ide`, and an additional folder containing the **EX-Turntable** software. The **EX-Turntable** software is not a component of **EX-CommandStation** or vice versa, and as such they should not exist in the same folder. |
+| [docs/products/ex-turntable/assembly.md](../products/ex-turntable/assembly.md) | 196 | The process here is the same as installing CommandStation-EX via the Arduino IDE which you can find on the ==TODO== :doc:`/ex-commandstation/advanced-setup/installation-options/arduino-ide` page. |
+| [docs/products/ex-turntable/assembly.md](../products/ex-turntable/assembly.md) | 327 | - VPIN=600 - This is the default virtual pin (Vpin) ID that is used to send **EX-Turntable** commands to. Vpin IDs need to be unique, so if this ID is used elsewhere, change as necessary (refer ==TODO== :ref:`reference/developers/hal:overview`). |
 | [docs/products/ex-turntable/configure.md](../products/ex-turntable/configure.md) | 3 | ==TODO== check the current version number of EX-Turntable and adjust the version notes on this page as needed |
 | [docs/products/ex-turntable/ex-tt-troubleshooting.md](../products/ex-turntable/ex-tt-troubleshooting.md) | 7 | ==TODO== Frequently Asked Questions |
 | [docs/products/ex-turntable/test-and-tune.md](../products/ex-turntable/test-and-tune.md) | 54 | Referring to [adding a new device](/reference/hardware/hal/hal-config.md#adding-a-new-device), skip ahead to ==TODO== [checking the driver](/reference/hardware/hal/hal-config.md#checking-the-driver), and the output you're looking for to validate the **EX-Turntable** device driver is loaded and connected successfully is below: |
@@ -134,10 +134,11 @@ Total High &amp; Medium TODO matches: 111
 
 ## Low priority TODOs
 
-Total low priority TODO matches: 65
+Total low priority TODO matches: 66
 
 | File | Line | Line text |
 | --- | ---: | --- |
+| [docs/contributing/release-checklist.md](release-checklist.md) | 131 | - ==TODO== LOW Some of the low priority TODOs could be hidden in comments |
 | [docs/reference/serial-commands/serial-command-aa-and-a_not_in_nav.md](../reference/serial-commands/serial-command-aa-and-a_not_in_nav.md) | 64 | * ==TODO== LOW - Example Commands |
 | [docs/reference/serial-commands/serial-command-aa-and-a_not_in_nav.md](../reference/serial-commands/serial-command-aa-and-a_not_in_nav.md) | 68 | * ==TODO== LOW - Example Responses |
 | [docs/reference/serial-commands/serial-command-c-railcom_not_in_nav.md](../reference/serial-commands/serial-command-c-railcom_not_in_nav.md) | 37 | * ==TODO== LOW - Example Commands |

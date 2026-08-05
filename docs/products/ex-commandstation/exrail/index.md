@@ -14,7 +14,7 @@
 ## You DON'T need
 
 - JMRI, or any additional utilities
-- Engine Driver, wiThrottle, or any other WiThrottle app
+- Engine Driver, ThrottleCard, or any other apps and devices that support the WiThrottle protocol or Native Serial protocol
 - A separate computer living under your layout
 - Knowledge of C++ or Python/Jython programming
 
