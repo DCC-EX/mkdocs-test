@@ -5764,6 +5764,8 @@
       
         
       
+        
+      
     
     
     
@@ -6087,7 +6089,7 @@
   
   
   <span class="md-ellipsis">
-    <br/>Configure WiFi <small><small>(EX-CSB1 & ESP32 v5.7.0+)</small></small>
+    <br/>Configure WiFi <small><small>(EX-CSB1&nbsp;&amp;&nbsp;ESP32&nbsp;v5.7.0+)</small></small>
     
   </span>
   
@@ -6111,6 +6113,29 @@
   
   <span class="md-ellipsis">
     Test Your Installation<br>
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../installer/physical-installation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    <br/>Connecting to Your Layout<small><small> (Physical&nbsp;Connection)</small></small>
     
   </span>
   
@@ -6159,6 +6184,8 @@
   
     
     
+      
+        
       
         
       
@@ -6440,12 +6467,35 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../throttles/connecting/" class="md-nav__link">
+      <a href="../../../throttles/connecting-wifi/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    How to Connect
+    <br/>How to Connect - WiFi
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../throttles/connecting-usb/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    How to Connect - USB
     
   </span>
   
@@ -9065,6 +9115,8 @@
     
       
         
+          
+        
       
         
       
@@ -9092,8 +9144,9 @@
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_12_4" >
         
           
-          <label class="md-nav__link" for="__nav_12_4" id="__nav_12_4_label" tabindex="0">
-            
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../contributing/documentation/" class="md-nav__link ">
+              
   
   
   <span class="md-ellipsis">
@@ -9102,8 +9155,14 @@
   </span>
   
 
-            <span class="md-nav__icon md-icon"></span>
-          </label>
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_12_4" id="__nav_12_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
         
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_12_4_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_12_4">
@@ -9112,27 +9171,6 @@
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../contributing/documentation/docs/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Contributing to Documentation
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
               
             
               
@@ -9457,6 +9495,10 @@
 
 
 <h1 id="build-configuration-configh">Build configuration (config.h)<a class="headerlink" href="#build-configuration-configh" title="Permanent link">&para;</a></h1>
+<div class="admonition info inline end">
+<p class="admonition-title">EX-Installer</p>
+<p>Using <a href="../../../installer/installer/">EX-Installer</a> is the recommended way to modify <code>config.h</code> and <code>myAutomation.h</code>.</p>
+</div>
 <p>During compilation and build, there are a number of settings that control the way the code is constructed and important features are configured.</p>
 <p>Most configuration takes place using <strong>EXRAIL</strong> in the <code>myAutomation.h</code> file, but some things just need setting before that.</p>
 <p>If you are using the <a href="../../../installer/installer/">EX-Installer</a>, the important options will be automatically managed and configured. There are several more advanced options covered in the <a href="../../../reference/advanced-config-h/">config.h advanced</a> but these should not trouble the vast majority of users.</p>
@@ -9541,7 +9583,7 @@ Use 132,64 for a SH1106-based I2C device with a 132x64 display.</p>
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 27, 2026 01:26:58 UTC">June 27, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="August 4, 2026 00:41:00 UTC">August 4, 2026</span>
   </span>
 
     

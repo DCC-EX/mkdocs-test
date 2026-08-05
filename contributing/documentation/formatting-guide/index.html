@@ -556,7 +556,7 @@
             
 
             
-              <a href="../docs/" class="md-breadcrumbs__link" style="color: var(--md-typeset-color); opacity: 0.7; text-decoration: none;">
+              <a href="../" class="md-breadcrumbs__link" style="color: var(--md-typeset-color); opacity: 0.7; text-decoration: none;">
                 Contributing Documentation
               </a>
             
@@ -5661,6 +5661,8 @@
       
         
       
+        
+      
     
     
     
@@ -5984,7 +5986,7 @@
   
   
   <span class="md-ellipsis">
-    <br/>Configure WiFi <small><small>(EX-CSB1 & ESP32 v5.7.0+)</small></small>
+    <br/>Configure WiFi <small><small>(EX-CSB1&nbsp;&amp;&nbsp;ESP32&nbsp;v5.7.0+)</small></small>
     
   </span>
   
@@ -6008,6 +6010,29 @@
   
   <span class="md-ellipsis">
     Test Your Installation<br>
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../installer/physical-installation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    <br/>Connecting to Your Layout<small><small> (Physical&nbsp;Connection)</small></small>
     
   </span>
   
@@ -6056,6 +6081,8 @@
   
     
     
+      
+        
       
         
       
@@ -6337,12 +6364,35 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../throttles/connecting/" class="md-nav__link">
+      <a href="../../../throttles/connecting-wifi/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    How to Connect
+    <br/>How to Connect - WiFi
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../throttles/connecting-usb/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    How to Connect - USB
     
   </span>
   
@@ -8969,6 +9019,8 @@
     
       
         
+          
+        
       
         
       
@@ -8996,8 +9048,9 @@
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_12_4" checked>
         
           
-          <label class="md-nav__link" for="__nav_12_4" id="__nav_12_4_label" tabindex="0">
-            
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
   
   
   <span class="md-ellipsis">
@@ -9006,8 +9059,14 @@
   </span>
   
 
-            <span class="md-nav__icon md-icon"></span>
-          </label>
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_12_4" id="__nav_12_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
         
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_12_4_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_12_4">
@@ -9016,27 +9075,6 @@
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../docs/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Contributing to Documentation
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
               
             
               
@@ -9610,13 +9648,13 @@
 </code></pre></div>
 <p>Results in: <a href="#page-and-section-links">Link to this section</a></p>
 <h3 id="document-links">Document Links<a class="headerlink" href="#document-links" title="Permanent link">&para;</a></h3>
-<div class="language-markdown highlight"><pre><span></span><code>[<span class="nt">Link to Contributing to Documentation Page</span>](<span class="na">/contributing/documentation/docs.md</span>)
+<div class="language-markdown highlight"><pre><span></span><code>[<span class="nt">Link to Contributing to Documentation Page</span>](<span class="na">/contributing/documentation/index.md</span>)
 </code></pre></div>
-<p>Results in: <a href="../docs/">Link to Contributing to Documentation Page</a></p>
-<div class="language-markdown highlight"><pre><span></span><code>[<span class="nt">Link to How to Contribute Section</span>](<span class="na">/contributing/documentation/docs.md#how-to-contribute</span>)
+<p>Results in: <a href="../">Link to Contributing to Documentation Page</a></p>
+<div class="language-markdown highlight"><pre><span></span><code>[<span class="nt">Link to How to Contribute Section</span>](<span class="na">/contributing/documentation/index.md#how-to-contribute</span>)
 </code></pre></div>
-<p>Results in: <a href="../docs/#how-to-contribute">Link to How to Contribute Section</a></p>
-<p>Note: when typing a link in VSCode, the intellisense dropdown will help you complete the link by following the path from the project directory. This creates links that start with "/docs" (for example "/docs/contributing/1-contribute-docs.md" ). These links will not work unless you manually delete the /docs prefix.  Its a pain but we have raised a PR for VScode and mkDocs on this.</p>
+<p>Results in: <a href="../#how-to-contribute">Link to How to Contribute Section</a></p>
+<p>Note: when typing a link in VSCode, the intellisense dropdown will help you complete the link by following the path from the project directory. This creates links that start with "/docs" (for example "/docs/contributing/1-contribute-index.md" ). These links will not work unless you manually delete the /docs prefix.  Its a pain but we have raised a PR for VScode and mkDocs on this.</p>
 <h3 id="external-links">External Links<a class="headerlink" href="#external-links" title="Permanent link">&para;</a></h3>
 <div class="language-markdown highlight"><pre><span></span><code>[<span class="nt">Link to Google Search</span>](<span class="na">https://www.google.com</span>)
 </code></pre></div>
@@ -9806,7 +9844,7 @@ This is a new term being added to the glossary.
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 16, 2026 11:01:09 UTC">June 16, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="August 5, 2026 00:46:15 UTC">August 5, 2026</span>
   </span>
 
     
