@@ -28,15 +28,19 @@ This capability is part of **EXRAIL** and is built into your **EX-CommandStation
 
 ## Turnouts/Points
 
-==TODO== basic intro to Turnouts/Points and links to the appropriate pages
+Turnouts/Points included on your layout can be any of the following forms:
 
-This capability is part of **EXRAIL** and is built into your **EX-CommandStation**.  Read the follow to explore this feature:
+* DCC Turnouts/Points
+* Servo Turnouts/Points
+* Pin Turnouts/Points
 
-* [EXRAIL Turnouts/Points](../products/ex-commandstation/exrail/exrail-objects-introduction.md#adding-turnoutspoints)
+The capability to define and support these is part of **EXRAIL** and is built into your **EX-CommandStation**.  See [EXRAIL Turnouts/Points](../products/ex-commandstation/exrail/exrail-objects-introduction.md#adding-turnoutspoints) for more information on these.
+
+Note: To simply control existing DCC Turnouts/Points see [DCC Accessory Operation](../throttles/dcc-accessories.md) for more information.
 
 ## Routes and Automation - Automating your layout
 
-==TODO== basic intro to sequences and links to the appropriate EXRAIL pages
+Your **EX-CommandStation** has the ability to perform sequences of instructions ranging from simply throwing a set of turnouts/points (a traditional 'route') to performing extremely complex control of locos, animations, lights and, of course, turnouts/points.
 
 This capability is part of **EXRAIL** and is built into your **EX-CommandStation**.  Read the following to explore this feature:
 
@@ -45,7 +49,15 @@ This capability is part of **EXRAIL** and is built into your **EX-CommandStation
 
 ## TrackManager - DC and DCC Operation
 
-==TODO== basic intro to TrackManager and links to the appropriate TrackManager pages
+Your **EX-CommandStation** has the ability to dynamically configure the outputs of your EX-CommandStation as either:
+
+* Main DCC track output
+* Programming DCC track output
+* DC mode
+* DCC Auto Reverse
+* DCC Booster
+
+Any output of your **EX-CommandStation** can perform any of the functions listed above. And, for most of them, you can change them at will.
 
 This capability is part of **TrackManager** and is built into your **EX-CommandStation**.  Read the following to explore this feature:
 
@@ -74,7 +86,7 @@ Also see:
 
 ## Tools
 
-==TODO== basic intro to tools and links to the appropriate pages
+The **DCC-EX** team also provide a number of tools to support you **EX-CommandStation* and you layout generally.  These include:
 
 * [EX-Toolbox](../products/ex-toolbox/index.md)
 * [EX-DCCInspector](../products/ex-dccinspector/index.md)
