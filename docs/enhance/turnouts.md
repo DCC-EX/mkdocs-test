@@ -6,6 +6,6 @@ redirect: ../products/ex-commandstation/exrail/exrail-objects-introduction.html#
 ---
 <!-- The redirect directive on this page does not work.  It needs to be set in mkdocs.yml -->
 
-# Adding a Roster
+# Adding a Turnouts/Points
 
 You are being redirected to [Adding a Turnouts/Points](../products/ex-commandstation/exrail/exrail-objects-introduction.md#adding-turnoutspoints) on the EXRAIL pages.

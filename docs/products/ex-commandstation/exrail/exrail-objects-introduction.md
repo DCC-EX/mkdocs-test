@@ -122,11 +122,11 @@ For example, to make F2 default to latching you may want to add...
 
 ## Adding Turnouts/Points
 
-Turnouts/Points can included on your layout in one of the
+Turnouts/Points included on your layout can be any of the following forms:
 
-* DCC turnouts/Points
+* DCC Turnouts/Points
 * Servo Turnouts/Points
-* Pin turnouts/Points
+* Pin Turnouts/Points
 
 ### DCC Turnouts/Points
 
