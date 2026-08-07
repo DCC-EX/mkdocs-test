@@ -14,7 +14,7 @@ At the end of this stage, we expect you will have learnt the following:
 
 An important item to note when configuring servo based turnouts/points and signals is that the angles provided are going to be unique to your layout, and possibly even be unique to each particular turnout/point or signal, depending on how they are mounted and physically connected.
 
-We provide some handy documentation on how to evaluate the correct angles on our ==TODO== servo-module page.
+We provide some handy documentation on how to evaluate the correct angles on our [I2C Servo and LED Module](../../../accessories/i2c-servo-led-modules.md) page.
 
 ### Turnout/point object IDs
 
@@ -32,11 +32,11 @@ For help understanding linear vs. address/sub address formatting of DCC accessor
 
 !!! note "turnout/point IDs"
 
-  When going through the various examples where we define DCC turnouts/points, you may notice that a turnout/point ID has a DCC linear address that is the same, or close to it. **This is pure coincidence**.
+    When going through the various examples where we define DCC turnouts/points, you may notice that a turnout/point ID has a DCC linear address that is the same, or close to it. **This is pure coincidence**.
 
-  A turnout/point ID has no direct relationship to a DCC linear address, so turnout/point ID 100 has no direct relationship to DCC address 100.
+    A turnout/point ID has no direct relationship to a DCC linear address, so turnout/point ID 100 has no direct relationship to DCC address 100.
 
-  Some people choose to ensure the turnout/point ID matches the DCC linear address when using DCC turnouts/points, but this is not necessary.
+    Some people choose to ensure the turnout/point ID matches the DCC linear address when using DCC turnouts/points, but this is not necessary.
 
 ## Sensor types
 
@@ -46,7 +46,7 @@ If you use different sensors that simply provide an active low or high output, t
 
 !!! note "aliases for sensors cannot be a negative number"
 
-      When defining aliases for sensors, you cannot specify a negative number for these, and therefore to use an alias with an active high sensor, you need to add the negative in front of the alias name when referring to it in sequences and routes instead.
+    When defining aliases for sensors, you cannot specify a negative number for these, and therefore to use an alias with an active high sensor, you need to add the negative in front of the alias name when referring to it in sequences and routes instead.
 
 This is invalid:
 
@@ -67,9 +67,9 @@ Instead, these use cases are valid:
 
 ## Adding a Turnout/Point
 
-.. sidebar::
+!!! tip inline end "Servo Module page"
 
-  ==TODO== You can also refer to :doc:`/reference/hardware/servo-module` for more information.
+    You can also refer to [I2C Servo and LED Module](../../../accessories/i2c-servo-led-modules.md) page for more information.
 
 ### Adding the Hardware -  Turnouts/points
 
@@ -120,7 +120,7 @@ The SERVO_TURNOUT directive defines a servo based turnout in **EXRAIL**, which w
 As per the **EXRAIL** reference, turnouts are defined with the following syntax:
 
 ```cpp
-   SERVO_TURNOUT(id, pin, active_angle, inactive_angle, profile [, "description"])
+    SERVO_TURNOUT(id, pin, active_angle, inactive_angle, profile [, "description"])
 ```
 
 The valid parameters are:
@@ -135,16 +135,16 @@ The valid parameters are:
 An example definition for a servo connected to the second control pins of the first PCA9685 connected to the CommandStation, using the slow profile for prototypical operation:
 
 ```cpp
-   SERVO_TURNOUT(200, 101, 450, 110, Slow, "Example slow turnout/point definition")
+    SERVO_TURNOUT(200, 101, 450, 110, Slow, "Example slow turnout/point definition")
 ```
 
 ----
 
 ## Adding a Sensor
 
-.. sidebar::
+!!! Tip inline end "GPIO Expanders"
 
-  ==TODO== Alternate is to use a :doc:`/reference/hardware/gpio-module`
+  Alternate is to use a [GPIO Expander](../../../accessories/i2c-gpio-expanders.md)
 
 IR sensors typically require three connections: 5V (or VCC), Ground, and output (OUT or S).
 
@@ -164,9 +164,9 @@ Use in automation as AT(DpinNo) or AT(-DpinNo)
 
 ## Adding a Block
 
-.. sidebar::
+!!! tip inline end "Virtual Block Control"
 
-   You can also refer to ==TODO== `exrail/exrail-command-reference:virtual block control` for more information.
+    You can also refer to ==TODO== `exrail/exrail-command-reference:virtual block control` for more information.
 
 Blocks in **EXRAIL** are a virtual concept only, and they do not relate in any way to the concept of block occupancy detection.
 

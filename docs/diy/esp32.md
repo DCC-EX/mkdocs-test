@@ -62,5 +62,3 @@ See [ACEBOTT ESP32 Max v1.0 + EX8874](../reference/microcontrollers/esp32/esp32-
 
 - Assembly and other information: [Reference - ESP32](/reference/microcontrollers/esp32/esp32-ex8874.md)
 - [Legacy ESP32 documentation](https://dcc-ex.com/legacy-docs/reference/hardware/microcontrollers/esp32.html#esp32-recommended)
-
-==TODO== move legacy docs

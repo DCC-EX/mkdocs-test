@@ -8,7 +8,7 @@ When it comes to RMFT, we are adding a turntable that has seven defined position
 
 In addition, we are also adding a horizontal staging traverser that will allow for six complete trains to be staged off the layout ready for action.
 
-!!! note "Tip"
+!!! tip "Tip"
 
     In preparation for adding an **EX-Turntable** to your layout, you'll need to understand the concepts outlined on the [EX-Turntable Overview](../../../../ex-turntable/index.md) page, paying particular attention to the section on polarity or phase switching ([](../../../../ex-turntable/index.md#important-phase-or-polarity-switching)), as we will be using automatic phase switching for the turntable.
 
@@ -103,7 +103,7 @@ Now, we are ready to move on to adding the traverser, then tuning the positions 
 * All steps up to and including [connect power and test](../../../../ex-turntable/assembly.md#6-connect-power-and-test) on the [assembly](../../../../ex-turntable/assembly.md) page have been completed
 * All changes required as outlined on the [traverser](../../../../ex-turntable/traverser.md) page have been taken into account
 
-!!! note  "Tip"
+!!! tip  "Tip"
 
     It is highly recommended to make use of the [sensor testing mode](../../../../ex-turntable/traverser.md#sensor-testing-mode) to validate both the home and limit sensors are working correctly when in traverser mode.
 
@@ -169,7 +169,7 @@ Now, we are ready to move on to tuning the positions.
 
 We'll use some basic mathematics to tune our turntable and traverser positions, however in a real layout, some experimentation will be required for fine tuning to ensure proper track alignment.
 
-!!! note "tuning positions"
+!!! note "Tuning Positions"
 
     When tuning positions, you can use the ``<D TT vpin steps activity>`` diagnostic command as outlined in [tuning your turntable positions](../../../../ex-turntable/test-and-tune.md#tuning-your-turntable-positions) to test and refine these for perfect track alignment between the turntable bridge track and the surrounding tracks. You can also use the direct EX-Turntable serial testing command ``<M steps activity>`` as covered in [EX-Turntable interactive serial console commands](../../../../ex-turntable/test-and-tune.md#ex-turntable-interactive-serial-console-commands).
 
@@ -202,9 +202,9 @@ Once we have our steps per revolution, we can use that number with our formulas 
 
 ### Calculating EX-Turntable positions and DCC phase/polarity switching
 
-.. tip::
+!!! tip "DCC phase/polarity"
 
-    It's a great idea at this point to understand the importance of DCC phase/polarity and how switching/reversing it works with **EX-Turntable**. Refer [important! phase (or polarity) switching](../../../../ex-turntable/index.md#important-phase-or-polarity-switching) and [how does this work with EX-Turntable?](../../../../ex-turntable/index.md#how-does-this-work-with-ex-turntable) for details.
+    It's a great idea at this point to understand the importance of DCC phase/polarity and how switching/reversing it works with **EX-Turntable**. Refer to [important! phase (or polarity) switching](../../../../ex-turntable/index.md#important-phase-or-polarity-switching) and [how does this work with EX-Turntable?](../../../../ex-turntable/index.md#how-does-this-work-with-ex-turntable) for details.
 
 !!! note "outlining turntable positions"
 
@@ -286,9 +286,9 @@ Using this formula results in these step counts (noting we round up or down to t
 
 ### Tuning the traverser
 
-.. tip::
+!!! tip "Tip"
 
-  Now is a great time to revisit the [traverser](../../../../ex-turntable/traverser.md) page, and in particular the section on [considerations - turntable vs. traverser](../../../../ex-turntable/traverser.md#considerations-turntable-vs-traverser).
+    Now is a great time to revisit the [traverser](../../../../ex-turntable/traverser.md) page, and in particular the section on [considerations - turntable vs. traverser](../../../../ex-turntable/traverser.md#considerations-turntable-vs-traverser).
 
 One key item to note with a traverser vs. a turntable is that we don't have a single track that moves and aligns with multiple layout tracks, but rather the whole traverser bed moves, aligning with a single track that connects to the rest of the layout.
 
@@ -389,27 +389,27 @@ The **EXRAIL** version of our diagnostic commands:
 Here is an example of what you can do to control an **EX-Turntable** via a ROUTE using **EXRAIL** (you will note this is based on the example provided in myEX-Turntable.example.h provided with the **EX-CommandStation** software):
 
 ```cpp
-  // Definition of the EX_TURNTABLE macro to correctly create the ROUTEs required for each position.
-  // This includes RESERVE()/FREE() to protect any automation activities.
-  //
-  #define EX_TURNTABLE(route_id, reserve_id, vpin, steps, activity, desc) \
-    ROUTE(route_id, desc) \
-      RESERVE(reserve_id) \
-      MOVETT(vpin, steps, activity) \
-      WAITFOR(vpin) \
-      FREE(reserve_id) \
-      DONE
+    // Definition of the EX_TURNTABLE macro to correctly create the ROUTEs required for each position.
+    // This includes RESERVE()/FREE() to protect any automation activities.
+    //
+    #define EX_TURNTABLE(route_id, reserve_id, vpin, steps, activity, desc) \
+        ROUTE(route_id, desc) \
+        RESERVE(reserve_id) \
+        MOVETT(vpin, steps, activity) \
+        WAITFOR(vpin) \
+        FREE(reserve_id) \
+        DONE
 
-  EX_TURNTABLE(TTRoute1, Turntable, 600, 114, Turn, "Roundhose stall 1")
+    EX_TURNTABLE(TTRoute1, Turntable, 600, 114, Turn, "Roundhose stall 1")
 
-  ALIAS(Turntable, 255)
-  ALIAS(TTRoute1)
+    ALIAS(Turntable, 255)
+    ALIAS(TTRoute1)
 ```
 
 Here's the explanation:
 
 ```cpp
-  #define EX_TURNTABLE...
+    #define EX_TURNTABLE...
 ```
 
 This macro is only defined once, and encapsulates all the activities you wish to configure and perform for each **EX-Turntable** position you want to define as a ROUTE.

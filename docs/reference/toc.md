@@ -206,8 +206,9 @@ li:not(.md-nav__item, .md-tabs__item) a {
         - [Linux](../installer/download/download-linux.md)
         - [Mac](../installer/download/download-mac.md)
         - [Windows](../installer/download/download-win.md)
-    - [WiFi configuration <br/><small>(EX-CSB1 or ESP32 ONLY. v5.7.0+ ONLY)</small> <small>(<br/>Configure WiFi <small><small>(EX-CSB1&nbsp;&amp;&nbsp;ESP32&nbsp;v5.7.0+)</small></small>)</small>](../installer/config-wifi-esp32.md)
+    - [WiFi configuration <br/><small>(EX-CSB1 or ESP32 ONLY. v5.7.0+ ONLY)</small> <small>(<br/>Configure WiFi <small><small>(EX-CSB1&nbsp;&amp;&nbsp;ESP32&nbsp;v5.7.0+%nbsp;Only)</small></small>)</small>](../installer/config-wifi-esp32.md)
     - [Testing your installation <small>(Test Your Installation<br>)</small>](../installer/testing.md)
+    - [Managing You Config files - Saving and Reusing <small>(<br/>Manage Config files<small><small> Saving&nbsp;&amp;&nbsp;Restoring</small></small>)</small>](../installer/manage-config-files.md)
     - [Connecting to your layout <small>(<br/>Connecting to Your Layout<small><small> (Physical&nbsp;Connection)</small></small>)</small>](../installer/physical-installation.md)
     - [Next Steps - Throttles <small>(<br/><i>Next Steps</i> - Throttles)</small>](../installer/next-steps.md)
     - [Advanced Users - VSCode/PlatformIO <small>(<br/>Advanced Users - VSC/PlatformIO)</small>](../installer/platformio.md)
@@ -227,7 +228,7 @@ li:not(.md-nav__item, .md-tabs__item) a {
 - **Enhance**
     - [Enhancing & Expanding EX‑CommandStation <small>(Enhancing your EX-CommandStation)</small>](../enhance/index.md)
     - [Adding a Roster](../enhance/rosters.md)
-    - [Adding a Roster <small>(Adding Turnouts/Points)</small>](../enhance/turnouts.md)
+    - [Adding a Turnouts/Points <small>(Adding Turnouts/Points)</small>](../enhance/turnouts.md)
     - [Routes and Automation <small>(Adding Routes and Automations)</small>](../enhance/routes.md)
     - [TrackManager - DC and DCC Operation](../enhance/trackmanager.md)
 - **Support**

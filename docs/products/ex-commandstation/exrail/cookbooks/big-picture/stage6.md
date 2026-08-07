@@ -49,18 +49,18 @@ To define these as DCC accessory turnouts/points, turnout/points 1 will be at li
 Therefore, the DCC-EX command to define these in the serial console is as follows:
 
 ```cpp
-  <T 100 DCC 26 0>
-  <T 101 DCC 26 1>
+    <T 100 DCC 26 0>
+    <T 101 DCC 26 1>
 ``
 
 In **EXRAIL**, we would add these lines to myAutomation.h, with aliases defined:
 
 ```cpp
-  ALIAS(TRN1, 100)
-  ALIAS(TRN2, 101)
+    ALIAS(TRN1, 100)
+    ALIAS(TRN2, 101)
 
-  TURNOUT(TRN1, 26, 0, "Station entry")
-  TURNOUT(TRN2, 26, 1, "Station exit")
+    TURNOUT(TRN1, 26, 0, "Station entry")
+    TURNOUT(TRN2, 26, 1, "Station exit")
 ```
 
 #### Pin turnouts/Points
@@ -70,18 +70,18 @@ To define these same turnout/point IDs as pin turnouts/points instead, and using
 To define these in the serial console:
 
 ```cpp
-  <T 100 VPIN 22>
-  <T 101 VPIN 23>
+    <T 100 VPIN 22>
+    <T 101 VPIN 23>
 ```
 
 In **EXRAIL**, we would add these lines to myAutomation.h:
 
 ```cpp
-  ALIAS(TRN1, 100)
-  ALIAS(TRN2, 101)
+    ALIAS(TRN1, 100)
+    ALIAS(TRN2, 101)
 
-  PIN_TURNOUT(TRN1, 22, "Station entry")
-  PIN_TURNOUT(TRN2, 23, "Station exit")
+    PIN_TURNOUT(TRN1, 22, "Station entry")
+    PIN_TURNOUT(TRN2, 23, "Station exit")
 ```
 
 If we were instead to use an MCP23017 I/O expander, we would use Vpins instead of direct pins on the Mega2560, and we would start these at the first I/O expander's 164 Vpin ID.
@@ -89,55 +89,53 @@ If we were instead to use an MCP23017 I/O expander, we would use Vpins instead o
 To define these in the serial console:
 
 ```cpp
-  <T 100 VPIN 164>
-  <T 101 VPIN 165>
+    <T 100 VPIN 164>
+    <T 101 VPIN 165>
 ```
 
 And again, in myAutomation.h for EXRAIL:
 
 ```cpp
-  ALIAS(TRN1, 100)
-  ALIAS(TRN2, 101)
+    ALIAS(TRN1, 100)
+    ALIAS(TRN2, 101)
 
-  PIN_TURNOUT(TRN1, 164, "Station entry")
-  PIN_TURNOUT(TRN2, 165, "Station exit")
+    PIN_TURNOUT(TRN1, 164, "Station entry")
+    PIN_TURNOUT(TRN2, 165, "Station exit")
 ```
 
 #### Servo turnouts/points
 
 Finally, to define these same turnouts/points as servo based turnouts/points, these would be connected to a PCA9685 servo module, and our first module starts at Vpin ID 100.
 
-.. tip::
+!!! tip "Adjust the servo angles"
 
-  Remember! Servo angles will be unique to your layout, and probably even unique to individual turnouts/points, so be sure you read the blurb on [Tuning Servo Positions](stage3.md#tuning-servo-positions) and the `/reference/hardware/servo-module` page.
+    Remember! Servo angles will be unique to your layout, and probably even unique to individual turnouts/points, so be sure you read the blurb on [Tuning Servo Positions](stage3.md#tuning-servo-positions) and the [I2C Servo and LED Module](../../../accessories/i2c-servo-led-modules.md) page.
 
-  ==TODO== `/reference/hardware/servo-module` page.
-
-  Please don't blindly copy/paste the servo angles listed here and expect them to "just work".
+    Please don't blindly copy/paste the servo angles listed here and expect them to "just work".
 
 Throughout these pages, we will assume that the thrown servo position is 400, the closed servo position is 100, and we will use the "Slow" profile.
 
 !!! note "turnout/point with an object ID of 100"
 
-  You will note below that our turnout ID 100 matches the first PCA9685 module's first Vpin which happens to also be 100. While these numbers are the same, they do not represent the same item.
+    You will note below that our turnout ID 100 matches the first PCA9685 module's first Vpin which happens to also be 100. While these numbers are the same, they do not represent the same item.
 
-  You can see within this section on defining the turnouts/points that a turnout/point with an object ID of 100 could represent any variation of turnout object, with any support hardware implementation.
+    You can see within this section on defining the turnouts/points that a turnout/point with an object ID of 100 could represent any variation of turnout object, with any support hardware implementation.
 
 Defining these in the serial console therefore would be:
 
 ```cpp
-  <T 100 SERVO 100 400 100 3>
-  <T 101 SERVO 101 400 100 3>
+    <T 100 SERVO 100 400 100 3>
+    <T 101 SERVO 101 400 100 3>
 ```
 
 Again, in myAutomation.h this becomes:
 
 ```cpp
-  ALIAS(TRN1, 100)
-  ALIAS(TRN2, 101)
+    ALIAS(TRN1, 100)
+    ALIAS(TRN2, 101)
 
-  SERVO_TURNOUT(TRN1, 100, 400, 100, Slow, "Station entry")
-  SERVO_TURNOUT(TRN2, 101, 400, 100, Slow, "Station exit")
+    SERVO_TURNOUT(TRN1, 100, 400, 100, Slow, "Station entry")
+    SERVO_TURNOUT(TRN2, 101, 400, 100, Slow, "Station exit")
 ```
 
 ## Sensors
@@ -149,21 +147,21 @@ We don't need to explicitly define any sensor objects to work with **EXRAIL**, s
 To use pins directly on our Mega2560, we would start at pin 24 (we used pins 22/23 for turnouts):
 
 ```cpp
-  ALIAS(SNS1_TRN1_APP, 24)       // Sensor 1, approaching turnout/point 1
-  ALIAS(SNS2_MAIN_TRN1_EX, 25)   // Sensor 2, on the main track exiting turnout/point 1
-  ALIAS(SNS3_STN, 26)            // Sensor 3, at our station stop
-  ALIAS(SNS4_MAIN_TRN2_APP, 27)  // Sensor 4, on the main track approaching turnout/point 2
-  ALIAS(SNS5_STN_TRN2_APP, 28)   // Sensor 5, on the station siding approaching turnout/point 2
+    ALIAS(SNS1_TRN1_APP, 24)       // Sensor 1, approaching turnout/point 1
+    ALIAS(SNS2_MAIN_TRN1_EX, 25)   // Sensor 2, on the main track exiting turnout/point 1
+    ALIAS(SNS3_STN, 26)            // Sensor 3, at our station stop
+    ALIAS(SNS4_MAIN_TRN2_APP, 27)  // Sensor 4, on the main track approaching turnout/point 2
+    ALIAS(SNS5_STN_TRN2_APP, 28)   // Sensor 5, on the station siding approaching turnout/point 2
 ```
 
 Moving these to our first MCP23017 I/O expander, these would start at Vpin 166 (we used Vpins 164/165 for turnouts/points):
 
 ```cpp
-  ALIAS(SNS1_TRN1_APP, 166)       // Sensor 1, approaching turnout/point 1
-  ALIAS(SNS2_MAIN_TRN1_EX, 167)   // Sensor 2, on the main track exiting turnout/point 1
-  ALIAS(SNS3_STN, 168)            // Sensor 3, at our station stop
-  ALIAS(SNS4_MAIN_TRN2_APP, 169)  // Sensor 4, on the main track approaching turnout/point 2
-  ALIAS(SNS5_STN_TRN2_APP, 170)   // Sensor 5, on the station siding approaching turnout/point 2
+    ALIAS(SNS1_TRN1_APP, 166)       // Sensor 1, approaching turnout/point 1
+    ALIAS(SNS2_MAIN_TRN1_EX, 167)   // Sensor 2, on the main track exiting turnout/point 1
+    ALIAS(SNS3_STN, 168)            // Sensor 3, at our station stop
+    ALIAS(SNS4_MAIN_TRN2_APP, 169)  // Sensor 4, on the main track approaching turnout/point 2
+    ALIAS(SNS5_STN_TRN2_APP, 170)   // Sensor 5, on the station siding approaching turnout/point 2
 ```
 
 ## Signals
@@ -177,50 +175,47 @@ To use pin based signals, we require three pins per signal, and therefore nine p
 To define pin based signals directly on the Mega2560 with aliases for the control pins:
 
 ```cpp
-  ALIAS(SIG1_TRN1_APP, 30)       // Signal 1, approaching turnout/point 1
-  ALIAS(SIG2_TRN2_GO, 33)        // Signal 2, proceed beyond turnout/point 2
-  ALIAS(SIG3_STN_EX, 36)         // Signal 3, exit the station siding
+    ALIAS(SIG1_TRN1_APP, 30)       // Signal 1, approaching turnout/point 1
+    ALIAS(SIG2_TRN2_GO, 33)        // Signal 2, proceed beyond turnout/point 2
+    ALIAS(SIG3_STN_EX, 36)         // Signal 3, exit the station siding
 
-  SIGNAL(SIG1_TRN1_APP, 31, 32)
-  SIGNAL(SIG2_TRN2_GO, 34, 35)
-  SIGNAL(SIG3_STN_EX, 37, 38)
+    SIGNAL(SIG1_TRN1_APP, 31, 32)
+    SIGNAL(SIG2_TRN2_GO, 34, 35)
+    SIGNAL(SIG3_STN_EX, 37, 38)
 ```
 
 Moving these again to an MCP23017 I/O expander, these would start at Vpin 172, however this also overlaps to a second I/O expander by one pin:
 
 ```cpp
-  ALIAS(SIG1_TRN1_APP, 172)      // Signal 1, approaching turnout/point 1
-  ALIAS(SIG2_TRN2_GO, 175)       // Signal 2, proceed beyond turnout/point 2
-  ALIAS(SIG3_STN_EX, 178)        // Signal 3, exit the station siding
+    ALIAS(SIG1_TRN1_APP, 172)      // Signal 1, approaching turnout/point 1
+    ALIAS(SIG2_TRN2_GO, 175)       // Signal 2, proceed beyond turnout/point 2
+    ALIAS(SIG3_STN_EX, 178)        // Signal 3, exit the station siding
 
-  SIGNAL(SIG1_TRN1_APP, 173, 174)
-  SIGNAL(SIG2_TRN2_GO, 176, 177)
-  SIGNAL(SIG3_STN_EX, 179, 180)
+    SIGNAL(SIG1_TRN1_APP, 173, 174)
+    SIGNAL(SIG2_TRN2_GO, 176, 177)
+    SIGNAL(SIG3_STN_EX, 179, 180)
 ```
 
 ### Servo based signals
 
 To define servo based signals, these only require one Vpin per signal along with specifying the servo angle for the red, amber, and green positions.
 
-.. tip::
+!!! tip  "Adjust the servo angles"
 
-  Remember! Servo angles will be unique to your layout, and probably even unique to individual signals, so be sure you read the blurb on [tuning servo positions](stage3.md#tuning-servo-positions) and the `/reference/hardware/servo-module` page.
+    Remember! Servo angles will be unique to your layout, and probably even unique to individual signals, so be sure you read the blurb on [tuning servo positions](stage3.md#tuning-servo-positions) and the [I2C Servo and LED Module](../../../accessories/i2c-servo-led-modules.md) page.
 
-   ==TODO== `/reference/hardware/servo-module` page.
-
-  Please don't blindly copy/paste the servo angles listed here and expect them to "just work".
+    Please don't blindly copy/paste the servo angles listed here and expect them to "just work".
 
 Allowing for servo based turnouts/points being used, we will start our signals from the third available Vpin on our PCA9685 servo module (we used the first two for servo turnouts/points). We will make the assumption that red requires a servo angle of 100, amber 250, and green 400:
 
-
 ```cpp
-      ALIAS(SIG1_TRN1_APP, 102)       // Signal 1, approaching turnout/point 1
-      ALIAS(SIG2_TRN2_GO, 103)        // Signal 2, proceed beyond turnout/point 2
-      ALIAS(SIG3_STN_EX, 104)         // Signal 3, exit the station siding
+    ALIAS(SIG1_TRN1_APP, 102)       // Signal 1, approaching turnout/point 1
+    ALIAS(SIG2_TRN2_GO, 103)        // Signal 2, proceed beyond turnout/point 2
+    ALIAS(SIG3_STN_EX, 104)         // Signal 3, exit the station siding
 
-      SERVO_SIGNAL(SIG1_TRN1_APP, 400, 250, 100)
-      SERVO_SIGNAL(SIG2_TRN2_GO, 400, 250, 100)
-      SERVO_SIGNAL(SIG3_STN_EX, 400, 250, 100)
+    SERVO_SIGNAL(SIG1_TRN1_APP, 400, 250, 100)
+    SERVO_SIGNAL(SIG2_TRN2_GO, 400, 250, 100)
+    SERVO_SIGNAL(SIG3_STN_EX, 400, 250, 100)
 ```
 
 ## Virtual blocks
@@ -234,7 +229,7 @@ Block 1 is the approach to turnout/point 1, and can be used to prevent a train f
 We will use ID 1 for this, with an alias:
 
 ```cpp
-  ALIAS(BLK1_TRN1_APP, 1)
+    ALIAS(BLK1_TRN1_APP, 1)
 ```
 
 ### Block 2
@@ -244,7 +239,7 @@ Block 2 consists of the section of the main track between turnouts/points 1 and 
 We will use ID 2 for this, with an alias:
 
 ```cpp
-  ALIAS(BLK2_MAIN_HOLD, 2)
+    ALIAS(BLK2_MAIN_HOLD, 2)
 ```
 
 ### Block 3
@@ -254,7 +249,7 @@ Block 3 is for our station siding, ensuring no other trains can enter this block
 We will use ID 3 for this, with an alias:
 
 ```cpp
-  ALIAS(BLK3_STN, 3)
+    ALIAS(BLK3_STN, 3)
 ```
 
 ### Block 4
@@ -266,7 +261,7 @@ Note that block 4 on the diagram continues all the way to the beginning of block
 We will use ID 4 for this, with an alias:
 
 ```cpp
-  ALIAS(BLK4_TRN2_EX, 4)
+    ALIAS(BLK4_TRN2_EX, 4)
 ```
 
 ## Station
@@ -297,15 +292,15 @@ If we omit that first ``DONE``, EXRAIL would automatically execute ``ROUTE(1, "M
 
 
 ```cpp
-      // Start up with turnouts/points closed and signals red
-      CLOSE(TRN1)
-      CLOSE(TRN2)
-      RED(SIG1_TRN1_APP)
-      RED(SIG2_TRN2_GO)
-      RED(SIG3_STN_EX)
+    // Start up with turnouts/points closed and signals red
+    CLOSE(TRN1)
+    CLOSE(TRN2)
+    RED(SIG1_TRN1_APP)
+    RED(SIG2_TRN2_GO)
+    RED(SIG3_STN_EX)
 
-      // We need DONE to tell EXRAIL not to automatically proceed beyond definitions above
-      DONE
+    // We need DONE to tell EXRAIL not to automatically proceed beyond definitions above
+    DONE
 ```
 
 ### Route 1 - main track running
@@ -327,25 +322,25 @@ Once both turnouts are closed, both signals 1 and 2 are set to green to indicate
 The route is completed with a ``DONE`` to tell **EXRAIL** not to proceed any further.
 
 ```cpp
-      ROUTE(1, "Main track")        // Select this route to just use the main track
-        RED(SIG3_STN_EX)            // Set signal 3 red as it is not safe to exit the station siding
-        IFTHROWN(TRN1)              // If turnout/point 1 is thrown, do these:
-          AMBER(SIG1_TRN1_APP)      // Set signal 1 amber for 2 seconds to warn of the change
-          DELAY(2000)
-          RED(SIG1_TRN1_APP)        // Set signal 1 red while we close turnout/point 1
-          CLOSE(TRN1)               // Close turnout/point 1
-          DELAY(2000)               // Wait 2 seconds for the turnout/point to close
-        ENDIF
-        IFTHROWN(TRN2)              // If turnout/point 2 is thrown, do these:
-          AMBER(SIG2_TRN2_GO)       // Set signal 2 amber for 2 seconds to warn of the change
-          DELAY(2000)
-          RED(SIG2_TRN2_GO)         // Set signal 2 red while we close turnout/point 2
-          CLOSE(TRN2)               // Close turnout/point 2
-          DELAY(2000)               // Wait 2 seconds for the turnout/point to close
-        ENDIF
-        GREEN(SIG1_TRN1_APP)        // Set signal 1 green because we're safe to proceed
-        GREEN(SIG2_TRN2_GO)         // Set signal 2 green because we're safe to proceed
-      DONE
+    ROUTE(1, "Main track")        // Select this route to just use the main track
+      RED(SIG3_STN_EX)            // Set signal 3 red as it is not safe to exit the station siding
+      IFTHROWN(TRN1)              // If turnout/point 1 is thrown, do these:
+        AMBER(SIG1_TRN1_APP)      // Set signal 1 amber for 2 seconds to warn of the change
+        DELAY(2000)
+        RED(SIG1_TRN1_APP)        // Set signal 1 red while we close turnout/point 1
+        CLOSE(TRN1)               // Close turnout/point 1
+        DELAY(2000)               // Wait 2 seconds for the turnout/point to close
+      ENDIF
+      IFTHROWN(TRN2)              // If turnout/point 2 is thrown, do these:
+        AMBER(SIG2_TRN2_GO)       // Set signal 2 amber for 2 seconds to warn of the change
+        DELAY(2000)
+        RED(SIG2_TRN2_GO)         // Set signal 2 red while we close turnout/point 2
+        CLOSE(TRN2)               // Close turnout/point 2
+        DELAY(2000)               // Wait 2 seconds for the turnout/point to close
+      ENDIF
+      GREEN(SIG1_TRN1_APP)        // Set signal 1 green because we're safe to proceed
+      GREEN(SIG2_TRN2_GO)         // Set signal 2 green because we're safe to proceed
+    DONE
 ```
 
 ### Route 2 - enter and exit the station siding
@@ -365,32 +360,32 @@ Once both turnouts/points are thrown, both signals 1 and 3 are set to green to i
 The route is completed with a ``DONE`` to tell EXRAIL not to proceed any further.
 
 ```cpp
-      ROUTE(2, "Station siding")    // Select this route to use the station siding
-        RED(SIG2_TRN2_GO)           // Set signal 2 red as it is not safe to proceed beyond turnout/point 2 on the main track
-        IFCLOSED(TRN1)              // If turnout/point 1 is closed, do these:
-          AMBER(SIG1_TRN1_APP)      // Set signal 1 amber for 2 seconds to warn of the change
-          DELAY(2000)
-          RED(SIG1_TRN1_APP)        // Set signal 1 red while we throw turnout/point 1
-          THROW(TRN1)               // Throw turnout/point 1
-          DELAY(2000)               // Wait 2 seconds for the turnout/point to throw
-        ENDIF
-        IFCLOSED(TRN2)              // If turnout/point 2 is closed, do these:
-          AMBER(SIG3_STN_EX)       // Set signal 2 amber for 2 seconds to warn of the change
-          DELAY(2000)
-          RED(SIG3_STN_EX)         // Set signal 2 red while we throw turnout/point 2
-          THROW(TRN2)               // Throw turnout/point 2
-          DELAY(2000)               // Wait 2 seconds for the turnout/point to throw
-        ENDIF
-        GREEN(SIG1_TRN1_APP)        // Set signal 1 green because we're safe to proceed
-        GREEN(SIG3_STN_EX)          // Set signal 2 green because we're safe to proceed
-      DONE
+    ROUTE(2, "Station siding")    // Select this route to use the station siding
+      RED(SIG2_TRN2_GO)           // Set signal 2 red as it is not safe to proceed beyond turnout/point 2 on the main track
+      IFCLOSED(TRN1)              // If turnout/point 1 is closed, do these:
+        AMBER(SIG1_TRN1_APP)      // Set signal 1 amber for 2 seconds to warn of the change
+        DELAY(2000)
+        RED(SIG1_TRN1_APP)        // Set signal 1 red while we throw turnout/point 1
+        THROW(TRN1)               // Throw turnout/point 1
+        DELAY(2000)               // Wait 2 seconds for the turnout/point to throw
+      ENDIF
+      IFCLOSED(TRN2)              // If turnout/point 2 is closed, do these:
+        AMBER(SIG3_STN_EX)       // Set signal 2 amber for 2 seconds to warn of the change
+        DELAY(2000)
+        RED(SIG3_STN_EX)         // Set signal 2 red while we throw turnout/point 2
+        THROW(TRN2)               // Throw turnout/point 2
+        DELAY(2000)               // Wait 2 seconds for the turnout/point to throw
+      ENDIF
+      GREEN(SIG1_TRN1_APP)        // Set signal 1 green because we're safe to proceed
+      GREEN(SIG3_STN_EX)          // Set signal 2 green because we're safe to proceed
+    DONE
 ```
 
 ## Fully automated layout
 
 Now it's time to display the full automation capabilities by setting our layout up for fully automated control of your trains.
 
-You will note that these are somewhat similar to ==TODO== `exrail/examples:multiple inter-connected trains`, updated to suit the specifics of the RMFT layout.
+You will note that these are somewhat similar to [Passing loop shuttle](../driving-trains/passing-loop.md), updated to suit the specifics of the RMFT layout.
 
 To setup for these fully automated sequences, we need to ensure our trains are placed in the below positions, noting that **EXRAIL** has no way of knowing where a train is on the layout when first starting.
 
@@ -406,7 +401,7 @@ As mentioned in the introduction, we can enable fully automated running of up to
 
 !!! note "virtual blocks"
 
-  Remember, these are virtual blocks, and do not necessarily need to be electrically isolated from each other. Don't confuse isolated blocks of track or block occupancy detection with these virtual blocks. For further background, refer to ==TODO== `exrail/exrail-command-reference:virtual block control`.
+    Remember, these are virtual blocks, and do not necessarily need to be electrically isolated from each other. Don't confuse isolated blocks of track or block occupancy detection with these virtual blocks. For further background, refer to ==TODO== `exrail/exrail-command-reference:virtual block control`.
 
 When reading through the sections below on the logic, it helps to keep in mind the perspective of the engineer driving the train, rather than thinking of the complete layout. As the engineer, you need to ask yourself the question "what needs to be in place for me to safely drive this train to the desired destination?"
 
@@ -425,23 +420,23 @@ Next, we place a RESERVE() on each block a train occupies, which will prevent an
 Once these activities have been done, we can tell our trains to start following the appropriate sequence, which will let them start on their fully automated journey safely.
 
 ```cpp
-      // Start up with turnouts/points closed and signals red
-      CLOSE(TRN1)
-      CLOSE(TRN2)
-      RED(SIG1_TRN1_APP)
-      RED(SIG2_TRN2_GO)
-      RED(SIG3_STN_EX)
+    // Start up with turnouts/points closed and signals red
+    CLOSE(TRN1)
+    CLOSE(TRN2)
+    RED(SIG1_TRN1_APP)
+    RED(SIG2_TRN2_GO)
+    RED(SIG3_STN_EX)
 
-      // Send three locos around our layout:
-      RESERVE(BLK1_TRN1_APP)
-      RESERVE(BLK2_MAIN_HOLD)
-      RESERVE(BLK4_TRN2_EX)
-      SENDLOCO(1, BLK1_EXIT)
-      SENDLOCO(2, BLK2_BLK4)
-      SENDLOCO(3, BLK4_BLK1)
+    // Send three locos around our layout:
+    RESERVE(BLK1_TRN1_APP)
+    RESERVE(BLK2_MAIN_HOLD)
+    RESERVE(BLK4_TRN2_EX)
+    SENDLOCO(1, BLK1_EXIT)
+    SENDLOCO(2, BLK2_BLK4)
+    SENDLOCO(3, BLK4_BLK1)
 
-      // We need DONE to tell EXRAIL not to automatically proceed beyond definitions above
-      DONE
+    // We need DONE to tell EXRAIL not to automatically proceed beyond definitions above
+    DONE
 ```
 
 ### Exiting block 1 - station entry or main track?
@@ -459,15 +454,15 @@ On startup, we are sending train 1 on this sequence, which means with our ``IF(C
 As a result of executing the ``LATCH(CHOOSE_BLK2)``, the next train navigating this block will instead have control handed over to the [moving from block 1 to block 2 - continue on the main track](#moving-from-block-2-to-block-4-continue-on-the-main-track) sequence.
 
 ```cpp
-      // Sequence to exit block 1, and choose whether to go to the station or continue on main
-      SEQUENCE(BLK1_EXIT)
-        IF(CHOOSE_BLK2)
-          UNLATCH(CHOOSE_BLK2)
-          FOLLOW(BLK1_BLK2)
-        ELSE
-          LATCH(CHOOSE_BLK2)
-          FOLLOW(BLK1_BLK3)
-        ENDIF
+    // Sequence to exit block 1, and choose whether to go to the station or continue on main
+    SEQUENCE(BLK1_EXIT)
+      IF(CHOOSE_BLK2)
+        UNLATCH(CHOOSE_BLK2)
+        FOLLOW(BLK1_BLK2)
+      ELSE
+        LATCH(CHOOSE_BLK2)
+        FOLLOW(BLK1_BLK3)
+      ENDIF
 ```
 
 ### Moving from block 1 to block 2 - continue on the main track
@@ -485,21 +480,21 @@ Then, after the train has not only activated sensor 2, but has passed over it co
 At this point, control of the train is handed over to the [moving from block 2 to block 4 - continue on the main track](#moving-from-block-2-to-block-4-continue-on-the-main-track) sequence.
 
 ```cpp
-    // Sequence to go from block 1 to block 2
-    SEQUENCE(BLK1_BLK2)
-      RESERVE(BLK2_MAIN_HOLD)
-      IFTHROWN(TRN1)
-        AMBER(SIG1_TRN1_APP)
-        DELAY(2000)
-        RED(SIG1_TRN1_APP)
-        CLOSE(TRN1)
-        DELAY(2000)
-      ENDIF
-      GREEN(SIG1_TRN1_APP)
-      FWD(20)
-      AFTER(SNS2_MAIN_TRN1_EX)
-      FREE(BLK1_TRN1_APP)
-      FOLLOW(BLK2_BLK4)
+  // Sequence to go from block 1 to block 2
+  SEQUENCE(BLK1_BLK2)
+    RESERVE(BLK2_MAIN_HOLD)
+    IFTHROWN(TRN1)
+      AMBER(SIG1_TRN1_APP)
+      DELAY(2000)
+      RED(SIG1_TRN1_APP)
+      CLOSE(TRN1)
+      DELAY(2000)
+    ENDIF
+    GREEN(SIG1_TRN1_APP)
+    FWD(20)
+    AFTER(SNS2_MAIN_TRN1_EX)
+    FREE(BLK1_TRN1_APP)
+    FOLLOW(BLK2_BLK4)
 ```
 
 ### Moving from block 1 to block 3 - entering the station
@@ -515,25 +510,25 @@ The train needs to ``STOP`` at the appropriate point on the station ``AT(SNS3_ST
 There is now a delay of 10 to 15 seconds while our passengers embark or disembark ``DELAYRANDOM(10000, 15000)``, before moving off again at low speed ``FWD(10)`` until sensor 5 is reached ``AT(SNS5_STN_TRN2_APP)``, at which point the control of the train is over to the [moving from block 3 to block 4 - exiting the station siding](#moving-from-block-3-to-block-4-exiting-the-station-siding) sequence.
 
 ```cpp
-      // Sequence to go from block 1 to block 3
-      SEQUENCE(BLK1_BLK3)
-        RESERVE(BLK3_STN)
-        IFCLOSED(TRN1)
-          AMBER(SIG1_TRN1_APP)
-          DELAY(2000)
-          RED(SIG1_TRN1_APP)
-          THROW(TRN1)
-          DELAY(2000)
-        ENDIF
-        GREEN(SIG1_TRN1_APP)
-        FWD(10)
-        AT(SNS3_STN)
-        STOP
-        FREE(BLK1_TRN1_APP)
-        DELAYRANDOM(10000, 15000)
-        FWD(10)
-        AT(SNS5_STN_TRN2_APP)
-        FOLLOW(BLK3_BLK4)
+    // Sequence to go from block 1 to block 3
+    SEQUENCE(BLK1_BLK3)
+      RESERVE(BLK3_STN)
+      IFCLOSED(TRN1)
+        AMBER(SIG1_TRN1_APP)
+        DELAY(2000)
+        RED(SIG1_TRN1_APP)
+        THROW(TRN1)
+        DELAY(2000)
+      ENDIF
+      GREEN(SIG1_TRN1_APP)
+      FWD(10)
+      AT(SNS3_STN)
+      STOP
+      FREE(BLK1_TRN1_APP)
+      DELAYRANDOM(10000, 15000)
+      FWD(10)
+      AT(SNS5_STN_TRN2_APP)
+      FOLLOW(BLK3_BLK4)
 ```
 
 ### Moving from block 2 to block 4 - continue on the main track
@@ -544,30 +539,30 @@ Once done, train control is over to the [moving from block 4 to block 1 - the sp
 
 !!! note "start with train 2 occupying block 2"
 
-  Note that we start with train 2 occupying block 2, and train 3 occupying block 4 (both with a ``RESERVE()`` in place as part of our startup sequence) and therefore train 2 cannot proceed until train 3 has exited block 4.
+    Note that we start with train 2 occupying block 2, and train 3 occupying block 4 (both with a ``RESERVE()`` in place as part of our startup sequence) and therefore train 2 cannot proceed until train 3 has exited block 4.
 
-  Also on startup, train 1 is occupying block 1 (with a ``RESERVE()`` in place as part of our startup sequence), and therefore until train 1 exits block 1, train 3 cannot enter block 1.
+    Also on startup, train 1 is occupying block 1 (with a ``RESERVE()`` in place as part of our startup sequence), and therefore until train 1 exits block 1, train 3 cannot enter block 1.
 
-  This creates a domino effect whereby train 1's exit of block 1 is needed in order for train 3 to enter block 1, and likewise for train 3 to exit block 4 in order for train 2 to enter block 4. The trains will then follow the sequences around the layout accordingly.
+    This creates a domino effect whereby train 1's exit of block 1 is needed in order for train 3 to enter block 1, and likewise for train 3 to exit block 4 in order for train 2 to enter block 4. The trains will then follow the sequences around the layout accordingly.
 
 ```cpp
-      // Sequence to go from block 2 to block 4
-      SEQUENCE(BLK2_BLK4)
-        RESERVE(BLK4_TRN2_EX)
-        IFTHROWN(TRN2)
-          AMBER(SIG2_TRN2_GO)
-          AMBER(SIG3_STN_EX)
-          DELAY(2000)
-          RED(SIG2_TRN2_GO)
-          RED(SIG3_STN_EX)
-          CLOSE(TRN2)
-          DELAY(2000)
-        ENDIF
-        GREEN(SIG2_TRN2_GO)
-        FWD(20)
-        AFTER(SNS4_MAIN_TRN2_APP)
-        FREE(BLK2_MAIN_HOLD)
-        FOLLOW(BLK4_BLK1)
+    // Sequence to go from block 2 to block 4
+    SEQUENCE(BLK2_BLK4)
+      RESERVE(BLK4_TRN2_EX)
+      IFTHROWN(TRN2)
+        AMBER(SIG2_TRN2_GO)
+        AMBER(SIG3_STN_EX)
+        DELAY(2000)
+        RED(SIG2_TRN2_GO)
+        RED(SIG3_STN_EX)
+        CLOSE(TRN2)
+        DELAY(2000)
+      ENDIF
+      GREEN(SIG2_TRN2_GO)
+      FWD(20)
+      AFTER(SNS4_MAIN_TRN2_APP)
+      FREE(BLK2_MAIN_HOLD)
+      FOLLOW(BLK4_BLK1)
 ```
 
 ### Moving from block 3 to block 4 - exiting the station siding
@@ -577,23 +572,23 @@ Leaving the station siding is another repeat of the same logic, ensuring block 4
 Control is then handed over to the [moving from block 4 to block 1 - the speed run](#moving-from-block-4-to-block-1-the-speed-run) sequence.
 
 ```cpp
-      // Sequence to go from block 3 to block 4
-      SEQUENCE(BLK3_BLK4)
-        RESERVE(BLK4_TRN2_EX)
-        IFCLOSED(TRN2)
-          AMBER(SIG2_TRN2_GO)
-          AMBER(SIG3_STN_EX)
-          DELAY(2000)
-          RED(SIG2_TRN2_GO)
-          RED(SIG3_STN_EX)
-          THROW(TRN2)
-          DELAY(2000)
-        ENDIF
-        GREEN(SIG3_STN_EX)
-        FWD(20)
-        AFTER(SNS5_STN_TRN2_APP)
-        FREE(BLK3_STN)
-        FOLLOW(BLK4_BLK1)
+    // Sequence to go from block 3 to block 4
+    SEQUENCE(BLK3_BLK4)
+      RESERVE(BLK4_TRN2_EX)
+      IFCLOSED(TRN2)
+        AMBER(SIG2_TRN2_GO)
+        AMBER(SIG3_STN_EX)
+        DELAY(2000)
+        RED(SIG2_TRN2_GO)
+        RED(SIG3_STN_EX)
+        THROW(TRN2)
+        DELAY(2000)
+      ENDIF
+      GREEN(SIG3_STN_EX)
+      FWD(20)
+      AFTER(SNS5_STN_TRN2_APP)
+      FREE(BLK3_STN)
+      FOLLOW(BLK4_BLK1)
 ```
 
 ### Moving from block 4 to block 1 - the speed run
@@ -603,13 +598,13 @@ The final sequence is the simplest of all, and allows for a higher speed run thr
 Again, we start up with train 3 occupying block 4, and once train 1 has exited block 1, the sequence below will execute, with train 3 moving to block 1, and train 2 being able to exit block 2.
 
 ```cpp
-      // Sequence to move from block 4 back to block 1
-      SEQUENCE(BLK4_BLK1)
-        RESERVE(BLK1_TRN1_APP)
-        FWD(40)
-        AFTER(SNS1_TRN1_APP)
-        FREE(BLK4_TRN2_EX)
-        FOLLOW(BLK1_EXIT)
+    // Sequence to move from block 4 back to block 1
+    SEQUENCE(BLK4_BLK1)
+      RESERVE(BLK1_TRN1_APP)
+      FWD(40)
+      AFTER(SNS1_TRN1_APP)
+      FREE(BLK4_TRN2_EX)
+      FOLLOW(BLK1_EXIT)
 ```
 
 ## Learnings from stage 1

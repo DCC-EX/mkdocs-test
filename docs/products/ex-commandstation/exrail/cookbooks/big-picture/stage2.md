@@ -103,7 +103,7 @@ Re-run the **EX-Installer**. Select the same options that you originally chose *
 
    The Roster will be automatically loaded with the **EX-CommandStation** software.
 
-More information on the config files can be found on the ==TODO== managing-config-files page.
+More information on the config files can be found on the [Managing Config Files](../../../../../installer/manage-config-files.md) page.
 
 !!! warning "Never edit any files in the EX-Installer folder"
 
