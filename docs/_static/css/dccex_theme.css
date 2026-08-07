@@ -677,3 +677,23 @@ a.external-link-icon::after {
 .md-nav__container>.md-nav__link {
     margin-top: auto !important;
 }
+
+.md-typeset .note>.admonition-title {
+    background-color: var(--md-admonition-color--note) !important;
+}
+
+.md-typeset .important>.admonition-title {
+    background-color: var(--md-admonition-color--important) !important;
+}
+
+.md-typeset .tip>.admonition-title {
+    background-color: var(--md-admonition-color--tip) !important;
+}
+
+.md-typeset .info>.admonition-title {
+    background-color: var(--md-admonition-color--info) !important;
+}
+
+.md-typeset .danger>.admonition-title {
+    background-color: var(--md-admonition-color--danger) !important;
+}
