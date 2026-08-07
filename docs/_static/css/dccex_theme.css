@@ -54,7 +54,7 @@
   --md-code-hl-variable-color:         var(--md-default-fg-color--light);
 
   /* Admonitions (Note, Warning, etc.) */
-  --md-admonition-color--note:     var(--md-primary-fg-color);
+  --md-admonition-color--note:     var(--md-default-fg-color--light);
   --md-admonition-color--info:     #2196F3; /* Material Blue */
   --md-admonition-color--tip:      #4CAF50; /* Material Green */
   --md-admonition-color--warning:  #FF9800; /* Material Amber */
@@ -677,6 +677,8 @@ a.external-link-icon::after {
 .md-nav__container>.md-nav__link {
     margin-top: auto !important;
 }
+
+/* Admonition title background colours */
 
 .md-typeset .note>.admonition-title {
     background-color: var(--md-admonition-color--note) !important;
