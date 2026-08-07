@@ -5994,6 +5994,8 @@
       
         
       
+        
+      
     
     
     
@@ -6317,7 +6319,7 @@
   
   
   <span class="md-ellipsis">
-    <br/>Configure WiFi <small><small>(EX-CSB1&nbsp;&amp;&nbsp;ESP32&nbsp;v5.7.0+)</small></small>
+    <br/>Configure WiFi <small><small>(EX-CSB1&nbsp;&amp;&nbsp;ESP32&nbsp;v5.7.0+%nbsp;Only)</small></small>
     
   </span>
   
@@ -6341,6 +6343,29 @@
   
   <span class="md-ellipsis">
     Test Your Installation<br>
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../installer/manage-config-files/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    <br/>Manage Config files<small><small> Saving&nbsp;&amp;&nbsp;Restoring</small></small>
     
   </span>
   
@@ -9891,7 +9916,7 @@
 <p>In addition, turntables can be a real space saver compared to reversing loops, and traversers can also be significant space savers for staging tracks, allowing multiple trains to be staged ready for action without taking up spurs or sidings on the main layout when not in use.</p>
 <p>When it comes to RMFT, we are adding a turntable that has seven defined positions, six of which are for entering roundhouse stalls, and the seventh is the track connecting to the rest of the layout via the switching/shunting yard.</p>
 <p>In addition, we are also adding a horizontal staging traverser that will allow for six complete trains to be staged off the layout ready for action.</p>
-<div class="admonition note">
+<div class="admonition tip">
 <p class="admonition-title">Tip</p>
 <p>In preparation for adding an <strong>EX-Turntable</strong> to your layout, you'll need to understand the concepts outlined on the <a href="../../../../../ex-turntable/">EX-Turntable Overview</a> page, paying particular attention to the section on polarity or phase switching (<a href="../../../../../ex-turntable/#important-phase-or-polarity-switching"></a>), as we will be using automatic phase switching for the turntable.</p>
 <p>Further to this, you'll also need to understand the differences required for traverser mode as outlined on the <a href="../../../../../ex-turntable/traverser/">Traverser</a> page. We will not require phase switching for the traverser, as any locos on the traverser will not be rotating 180 degrees.</p>
@@ -9965,7 +9990,7 @@
 <li>All steps up to and including <a href="../../../../../ex-turntable/assembly/#6-connect-power-and-test">connect power and test</a> on the <a href="../../../../../ex-turntable/assembly/">assembly</a> page have been completed</li>
 <li>All changes required as outlined on the <a href="../../../../../ex-turntable/traverser/">traverser</a> page have been taken into account</li>
 </ul>
-<div class="admonition note">
+<div class="admonition tip">
 <p class="admonition-title">Tip</p>
 <p>It is highly recommended to make use of the <a href="../../../../../ex-turntable/traverser/#sensor-testing-mode">sensor testing mode</a> to validate both the home and limit sensors are working correctly when in traverser mode.</p>
 </div>
@@ -10015,7 +10040,7 @@
 <h2 id="tune-your-turntable-and-traverser-positions">Tune your turntable and traverser positions<a class="headerlink" href="#tune-your-turntable-and-traverser-positions" title="Permanent link">&para;</a></h2>
 <p>We'll use some basic mathematics to tune our turntable and traverser positions, however in a real layout, some experimentation will be required for fine tuning to ensure proper track alignment.</p>
 <div class="admonition note">
-<p class="admonition-title">tuning positions</p>
+<p class="admonition-title">Tuning Positions</p>
 <p>When tuning positions, you can use the <code>&lt;D TT vpin steps activity&gt;</code> diagnostic command as outlined in <a href="../../../../../ex-turntable/test-and-tune/#tuning-your-turntable-positions">tuning your turntable positions</a> to test and refine these for perfect track alignment between the turntable bridge track and the surrounding tracks. You can also use the direct EX-Turntable serial testing command <code>&lt;M steps activity&gt;</code> as covered in <a href="../../../../../ex-turntable/test-and-tune/#ex-turntable-interactive-serial-console-commands">EX-Turntable interactive serial console commands</a>.</p>
 <p>We will be using the same steps per revolution number throughout this page (4097) for both the turntable and traverser, and are keeping this consistent with the examples in the <strong>EX-Turntable</strong> documentation for simplicity.</p>
 <p>If the calculations below seem too complicated, then you are free to figure the step positions out however suits you, and you can always just use experimentation with the diagnostic command to determine the correct positions.</p>
@@ -10037,9 +10062,10 @@
 </code></pre></div>
 <p>Once we have our steps per revolution, we can use that number with our formulas to calculate the steps required to move to each desired position.</p>
 <h3 id="calculating-ex-turntable-positions-and-dcc-phasepolarity-switching">Calculating EX-Turntable positions and DCC phase/polarity switching<a class="headerlink" href="#calculating-ex-turntable-positions-and-dcc-phasepolarity-switching" title="Permanent link">&para;</a></h3>
-<p>.. tip::</p>
-<div class="language-text highlight"><pre><span></span><code>It&#39;s a great idea at this point to understand the importance of DCC phase/polarity and how switching/reversing it works with **EX-Turntable**. Refer [important! phase (or polarity) switching](../../../../ex-turntable/index.md#important-phase-or-polarity-switching) and [how does this work with EX-Turntable?](../../../../ex-turntable/index.md#how-does-this-work-with-ex-turntable) for details.
-</code></pre></div>
+<div class="admonition tip">
+<p class="admonition-title">DCC phase/polarity</p>
+<p>It's a great idea at this point to understand the importance of DCC phase/polarity and how switching/reversing it works with <strong>EX-Turntable</strong>. Refer to <a href="../../../../../ex-turntable/#important-phase-or-polarity-switching">important! phase (or polarity) switching</a> and <a href="../../../../../ex-turntable/#how-does-this-work-with-ex-turntable">how does this work with EX-Turntable?</a> for details.</p>
+</div>
 <div class="admonition note">
 <p class="admonition-title">outlining turntable positions</p>
 <p>When outlining turntable positions and angles at which DCC phase switching occurs, these are all relative to the home sensor from the perspective of the turntable bridge end that has the magnet attached.</p>
@@ -10145,8 +10171,10 @@
 </tbody>
 </table>
 <h3 id="tuning-the-traverser">Tuning the traverser<a class="headerlink" href="#tuning-the-traverser" title="Permanent link">&para;</a></h3>
-<p>.. tip::</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
 <p>Now is a great time to revisit the <a href="../../../../../ex-turntable/traverser/">traverser</a> page, and in particular the section on <a href="../../../../../ex-turntable/traverser/#considerations-turntable-vs-traverser">considerations - turntable vs. traverser</a>.</p>
+</div>
 <p>One key item to note with a traverser vs. a turntable is that we don't have a single track that moves and aligns with multiple layout tracks, but rather the whole traverser bed moves, aligning with a single track that connects to the rest of the layout.</p>
 <p>In our diagram, the grey outer rectangle represents the limit of movement for the traverser table, with the home sensor located at the top, and limit sensor at the bottom. This way, when the traverser moves beyond position 1, it will trigger the home sensor. Likewise, when moving beyond position 6, it will trigger the limit sensor.</p>
 <p>It is currently aligned with position 3.</p>
@@ -10403,24 +10431,24 @@
 </table>
 <h3 id="exrail-routes-for-ex-turntable">EXRAIL ROUTEs for EX-Turntable<a class="headerlink" href="#exrail-routes-for-ex-turntable" title="Permanent link">&para;</a></h3>
 <p>Here is an example of what you can do to control an <strong>EX-Turntable</strong> via a ROUTE using <strong>EXRAIL</strong> (you will note this is based on the example provided in myEX-Turntable.example.h provided with the <strong>EX-CommandStation</strong> software):</p>
-<div class="language-cpp highlight"><pre><span></span><code><span class="w">  </span><span class="c1">// Definition of the EX_TURNTABLE macro to correctly create the ROUTEs required for each position.</span>
-<span class="w">  </span><span class="c1">// This includes RESERVE()/FREE() to protect any automation activities.</span>
-<span class="w">  </span><span class="c1">//</span>
-<span class="w">  </span><span class="cp">#define EX_TURNTABLE(route_id, reserve_id, vpin, steps, activity, desc) \</span>
-<span class="cp">    ROUTE(route_id, desc) \</span>
-<span class="cp">      RESERVE(reserve_id) \</span>
-<span class="cp">      MOVETT(vpin, steps, activity) \</span>
-<span class="cp">      WAITFOR(vpin) \</span>
-<span class="cp">      FREE(reserve_id) \</span>
-<span class="cp">      DONE</span>
+<div class="language-cpp highlight"><pre><span></span><code><span class="w">    </span><span class="c1">// Definition of the EX_TURNTABLE macro to correctly create the ROUTEs required for each position.</span>
+<span class="w">    </span><span class="c1">// This includes RESERVE()/FREE() to protect any automation activities.</span>
+<span class="w">    </span><span class="c1">//</span>
+<span class="w">    </span><span class="cp">#define EX_TURNTABLE(route_id, reserve_id, vpin, steps, activity, desc) \</span>
+<span class="cp">        ROUTE(route_id, desc) \</span>
+<span class="cp">        RESERVE(reserve_id) \</span>
+<span class="cp">        MOVETT(vpin, steps, activity) \</span>
+<span class="cp">        WAITFOR(vpin) \</span>
+<span class="cp">        FREE(reserve_id) \</span>
+<span class="cp">        DONE</span>
 
-<span class="w">  </span><span class="n">EX_TURNTABLE</span><span class="p">(</span><span class="n">TTRoute1</span><span class="p">,</span><span class="w"> </span><span class="n">Turntable</span><span class="p">,</span><span class="w"> </span><span class="mi">600</span><span class="p">,</span><span class="w"> </span><span class="mi">114</span><span class="p">,</span><span class="w"> </span><span class="n">Turn</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Roundhose stall 1&quot;</span><span class="p">)</span>
+<span class="w">    </span><span class="n">EX_TURNTABLE</span><span class="p">(</span><span class="n">TTRoute1</span><span class="p">,</span><span class="w"> </span><span class="n">Turntable</span><span class="p">,</span><span class="w"> </span><span class="mi">600</span><span class="p">,</span><span class="w"> </span><span class="mi">114</span><span class="p">,</span><span class="w"> </span><span class="n">Turn</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Roundhose stall 1&quot;</span><span class="p">)</span>
 
-<span class="w">  </span><span class="n">ALIAS</span><span class="p">(</span><span class="n">Turntable</span><span class="p">,</span><span class="w"> </span><span class="mi">255</span><span class="p">)</span>
-<span class="w">  </span><span class="n">ALIAS</span><span class="p">(</span><span class="n">TTRoute1</span><span class="p">)</span>
+<span class="w">    </span><span class="n">ALIAS</span><span class="p">(</span><span class="n">Turntable</span><span class="p">,</span><span class="w"> </span><span class="mi">255</span><span class="p">)</span>
+<span class="w">    </span><span class="n">ALIAS</span><span class="p">(</span><span class="n">TTRoute1</span><span class="p">)</span>
 </code></pre></div>
 <p>Here's the explanation:</p>
-<div class="language-cpp highlight"><pre><span></span><code><span class="w">  </span><span class="cp">#define EX_TURNTABLE...</span>
+<div class="language-cpp highlight"><pre><span></span><code><span class="w">    </span><span class="cp">#define EX_TURNTABLE...</span>
 </code></pre></div>
 <p>This macro is only defined once, and encapsulates all the activities you wish to configure and perform for each <strong>EX-Turntable</strong> position you want to define as a ROUTE.</p>
 <p>In this case, this macro will do these things:</p>
@@ -10470,7 +10498,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="August 3, 2026 08:12:22 UTC">August 3, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="August 7, 2026 03:44:38 UTC">August 7, 2026</span>
   </span>
 
     

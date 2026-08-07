@@ -6123,6 +6123,8 @@
       
         
       
+        
+      
     
     
     
@@ -6446,7 +6448,7 @@
   
   
   <span class="md-ellipsis">
-    <br/>Configure WiFi <small><small>(EX-CSB1&nbsp;&amp;&nbsp;ESP32&nbsp;v5.7.0+)</small></small>
+    <br/>Configure WiFi <small><small>(EX-CSB1&nbsp;&amp;&nbsp;ESP32&nbsp;v5.7.0+%nbsp;Only)</small></small>
     
   </span>
   
@@ -6470,6 +6472,29 @@
   
   <span class="md-ellipsis">
     Test Your Installation<br>
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../installer/manage-config-files/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    <br/>Manage Config files<small><small> Saving&nbsp;&amp;&nbsp;Restoring</small></small>
     
   </span>
   
@@ -10174,143 +10199,145 @@
 <h3 id="dcc-accessory-turnoutspoints">DCC accessory <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnouts</abbr>/points<a class="headerlink" href="#dcc-accessory-turnoutspoints" title="Permanent link">&para;</a></h3>
 <p>To define these as DCC accessory <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnouts</abbr>/points, <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnout</abbr>/points 1 will be at linear address 101, and <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnout</abbr>/points 2 at 102. These translate to address 26 with sub address 0 for linear address 101, and address 26 with sub address 1 for linear address 102.</p>
 <p>Therefore, the DCC-EX command to define these in the serial console is as follows:</p>
-<div class="language-cpp highlight"><pre><span></span><code><span class="w">  </span><span class="o">&lt;</span><span class="n">T</span><span class="w"> </span><span class="mi">100</span><span class="w"> </span><span class="n">DCC</span><span class="w"> </span><span class="mi">26</span><span class="w"> </span><span class="mi">0</span><span class="o">&gt;</span>
-<span class="w">  </span><span class="o">&lt;</span><span class="n">T</span><span class="w"> </span><span class="mi">101</span><span class="w"> </span><span class="n">DCC</span><span class="w"> </span><span class="mi">26</span><span class="w"> </span><span class="mi">1</span><span class="o">&gt;</span>
+<div class="language-cpp highlight"><pre><span></span><code><span class="w">    </span><span class="o">&lt;</span><span class="n">T</span><span class="w"> </span><span class="mi">100</span><span class="w"> </span><span class="n">DCC</span><span class="w"> </span><span class="mi">26</span><span class="w"> </span><span class="mi">0</span><span class="o">&gt;</span>
+<span class="w">    </span><span class="o">&lt;</span><span class="n">T</span><span class="w"> </span><span class="mi">101</span><span class="w"> </span><span class="n">DCC</span><span class="w"> </span><span class="mi">26</span><span class="w"> </span><span class="mi">1</span><span class="o">&gt;</span>
 <span class="err">``</span>
 
 <span class="n">In</span><span class="w"> </span><span class="o">**</span><span class="n">EXRAIL</span><span class="o">**</span><span class="p">,</span><span class="w"> </span><span class="n">we</span><span class="w"> </span><span class="n">would</span><span class="w"> </span><span class="n">add</span><span class="w"> </span><span class="n">these</span><span class="w"> </span><span class="n">lines</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">myAutomation</span><span class="p">.</span><span class="n">h</span><span class="p">,</span><span class="w"> </span><span class="n">with</span><span class="w"> </span><span class="n">aliases</span><span class="w"> </span><span class="n">defined</span><span class="o">:</span>
 
 <span class="err">```</span><span class="n">cpp</span>
-<span class="w">  </span><span class="n">ALIAS</span><span class="p">(</span><span class="n">TRN1</span><span class="p">,</span><span class="w"> </span><span class="mi">100</span><span class="p">)</span>
-<span class="w">  </span><span class="n">ALIAS</span><span class="p">(</span><span class="n">TRN2</span><span class="p">,</span><span class="w"> </span><span class="mi">101</span><span class="p">)</span>
+<span class="w">    </span><span class="n">ALIAS</span><span class="p">(</span><span class="n">TRN1</span><span class="p">,</span><span class="w"> </span><span class="mi">100</span><span class="p">)</span>
+<span class="w">    </span><span class="n">ALIAS</span><span class="p">(</span><span class="n">TRN2</span><span class="p">,</span><span class="w"> </span><span class="mi">101</span><span class="p">)</span>
 
-<span class="w">  </span><span class="n">TURNOUT</span><span class="p">(</span><span class="n">TRN1</span><span class="p">,</span><span class="w"> </span><span class="mi">26</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Station entry&quot;</span><span class="p">)</span>
-<span class="w">  </span><span class="n">TURNOUT</span><span class="p">(</span><span class="n">TRN2</span><span class="p">,</span><span class="w"> </span><span class="mi">26</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Station exit&quot;</span><span class="p">)</span>
+<span class="w">    </span><span class="n">TURNOUT</span><span class="p">(</span><span class="n">TRN1</span><span class="p">,</span><span class="w"> </span><span class="mi">26</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Station entry&quot;</span><span class="p">)</span>
+<span class="w">    </span><span class="n">TURNOUT</span><span class="p">(</span><span class="n">TRN2</span><span class="p">,</span><span class="w"> </span><span class="mi">26</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Station exit&quot;</span><span class="p">)</span>
 </code></pre></div>
 <h4 id="pin-turnoutspoints">Pin <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnouts</abbr>/Points<a class="headerlink" href="#pin-turnoutspoints" title="Permanent link">&para;</a></h4>
 <p>To define these same <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnout</abbr>/point IDs as pin <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnouts</abbr>/points instead, and using I/O pins that are directly on our <strong>EX-CommandStation</strong> Mega2560, we will use pins 22 and 23.</p>
 <p>To define these in the serial console:</p>
-<div class="language-cpp highlight"><pre><span></span><code><span class="w">  </span><span class="o">&lt;</span><span class="n">T</span><span class="w"> </span><span class="mi">100</span><span class="w"> </span><span class="n">VPIN</span><span class="w"> </span><span class="mi">22</span><span class="o">&gt;</span>
-<span class="w">  </span><span class="o">&lt;</span><span class="n">T</span><span class="w"> </span><span class="mi">101</span><span class="w"> </span><span class="n">VPIN</span><span class="w"> </span><span class="mi">23</span><span class="o">&gt;</span>
+<div class="language-cpp highlight"><pre><span></span><code><span class="w">    </span><span class="o">&lt;</span><span class="n">T</span><span class="w"> </span><span class="mi">100</span><span class="w"> </span><span class="n">VPIN</span><span class="w"> </span><span class="mi">22</span><span class="o">&gt;</span>
+<span class="w">    </span><span class="o">&lt;</span><span class="n">T</span><span class="w"> </span><span class="mi">101</span><span class="w"> </span><span class="n">VPIN</span><span class="w"> </span><span class="mi">23</span><span class="o">&gt;</span>
 </code></pre></div>
 <p>In <strong>EXRAIL</strong>, we would add these lines to myAutomation.h:</p>
-<div class="language-cpp highlight"><pre><span></span><code><span class="w">  </span><span class="n">ALIAS</span><span class="p">(</span><span class="n">TRN1</span><span class="p">,</span><span class="w"> </span><span class="mi">100</span><span class="p">)</span>
-<span class="w">  </span><span class="n">ALIAS</span><span class="p">(</span><span class="n">TRN2</span><span class="p">,</span><span class="w"> </span><span class="mi">101</span><span class="p">)</span>
+<div class="language-cpp highlight"><pre><span></span><code><span class="w">    </span><span class="n">ALIAS</span><span class="p">(</span><span class="n">TRN1</span><span class="p">,</span><span class="w"> </span><span class="mi">100</span><span class="p">)</span>
+<span class="w">    </span><span class="n">ALIAS</span><span class="p">(</span><span class="n">TRN2</span><span class="p">,</span><span class="w"> </span><span class="mi">101</span><span class="p">)</span>
 
-<span class="w">  </span><span class="n">PIN_TURNOUT</span><span class="p">(</span><span class="n">TRN1</span><span class="p">,</span><span class="w"> </span><span class="mi">22</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Station entry&quot;</span><span class="p">)</span>
-<span class="w">  </span><span class="n">PIN_TURNOUT</span><span class="p">(</span><span class="n">TRN2</span><span class="p">,</span><span class="w"> </span><span class="mi">23</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Station exit&quot;</span><span class="p">)</span>
+<span class="w">    </span><span class="n">PIN_TURNOUT</span><span class="p">(</span><span class="n">TRN1</span><span class="p">,</span><span class="w"> </span><span class="mi">22</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Station entry&quot;</span><span class="p">)</span>
+<span class="w">    </span><span class="n">PIN_TURNOUT</span><span class="p">(</span><span class="n">TRN2</span><span class="p">,</span><span class="w"> </span><span class="mi">23</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Station exit&quot;</span><span class="p">)</span>
 </code></pre></div>
 <p>If we were instead to use an MCP23017 I/O expander, we would use Vpins instead of direct pins on the Mega2560, and we would start these at the first I/O expander's 164 Vpin ID.</p>
 <p>To define these in the serial console:</p>
-<div class="language-cpp highlight"><pre><span></span><code><span class="w">  </span><span class="o">&lt;</span><span class="n">T</span><span class="w"> </span><span class="mi">100</span><span class="w"> </span><span class="n">VPIN</span><span class="w"> </span><span class="mi">164</span><span class="o">&gt;</span>
-<span class="w">  </span><span class="o">&lt;</span><span class="n">T</span><span class="w"> </span><span class="mi">101</span><span class="w"> </span><span class="n">VPIN</span><span class="w"> </span><span class="mi">165</span><span class="o">&gt;</span>
+<div class="language-cpp highlight"><pre><span></span><code><span class="w">    </span><span class="o">&lt;</span><span class="n">T</span><span class="w"> </span><span class="mi">100</span><span class="w"> </span><span class="n">VPIN</span><span class="w"> </span><span class="mi">164</span><span class="o">&gt;</span>
+<span class="w">    </span><span class="o">&lt;</span><span class="n">T</span><span class="w"> </span><span class="mi">101</span><span class="w"> </span><span class="n">VPIN</span><span class="w"> </span><span class="mi">165</span><span class="o">&gt;</span>
 </code></pre></div>
 <p>And again, in myAutomation.h for EXRAIL:</p>
-<div class="language-cpp highlight"><pre><span></span><code><span class="w">  </span><span class="n">ALIAS</span><span class="p">(</span><span class="n">TRN1</span><span class="p">,</span><span class="w"> </span><span class="mi">100</span><span class="p">)</span>
-<span class="w">  </span><span class="n">ALIAS</span><span class="p">(</span><span class="n">TRN2</span><span class="p">,</span><span class="w"> </span><span class="mi">101</span><span class="p">)</span>
+<div class="language-cpp highlight"><pre><span></span><code><span class="w">    </span><span class="n">ALIAS</span><span class="p">(</span><span class="n">TRN1</span><span class="p">,</span><span class="w"> </span><span class="mi">100</span><span class="p">)</span>
+<span class="w">    </span><span class="n">ALIAS</span><span class="p">(</span><span class="n">TRN2</span><span class="p">,</span><span class="w"> </span><span class="mi">101</span><span class="p">)</span>
 
-<span class="w">  </span><span class="n">PIN_TURNOUT</span><span class="p">(</span><span class="n">TRN1</span><span class="p">,</span><span class="w"> </span><span class="mi">164</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Station entry&quot;</span><span class="p">)</span>
-<span class="w">  </span><span class="n">PIN_TURNOUT</span><span class="p">(</span><span class="n">TRN2</span><span class="p">,</span><span class="w"> </span><span class="mi">165</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Station exit&quot;</span><span class="p">)</span>
+<span class="w">    </span><span class="n">PIN_TURNOUT</span><span class="p">(</span><span class="n">TRN1</span><span class="p">,</span><span class="w"> </span><span class="mi">164</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Station entry&quot;</span><span class="p">)</span>
+<span class="w">    </span><span class="n">PIN_TURNOUT</span><span class="p">(</span><span class="n">TRN2</span><span class="p">,</span><span class="w"> </span><span class="mi">165</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Station exit&quot;</span><span class="p">)</span>
 </code></pre></div>
 <h4 id="servo-turnoutspoints">Servo <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnouts</abbr>/points<a class="headerlink" href="#servo-turnoutspoints" title="Permanent link">&para;</a></h4>
 <p>Finally, to define these same <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnouts</abbr>/points as servo based <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnouts</abbr>/points, these would be connected to a PCA9685 servo module, and our first module starts at Vpin ID 100.</p>
-<p>.. tip::</p>
-<p>Remember! Servo angles will be unique to your layout, and probably even unique to individual <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnouts</abbr>/points, so be sure you read the blurb on <a href="../stage3/#tuning-servo-positions">Tuning Servo Positions</a> and the <code>/reference/hardware/servo-module</code> page.</p>
-<p><mark>TODO</mark> <code>/reference/hardware/servo-module</code> page.</p>
+<div class="admonition tip">
+<p class="admonition-title">Adjust the servo angles</p>
+<p>Remember! Servo angles will be unique to your layout, and probably even unique to individual <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnouts</abbr>/points, so be sure you read the blurb on <a href="../stage3/#tuning-servo-positions">Tuning Servo Positions</a> and the <a href="../../../../accessories/i2c-servo-led-modules/">I2C Servo and LED Module</a> page.</p>
 <p>Please don't blindly copy/paste the servo angles listed here and expect them to "just work".</p>
+</div>
 <p>Throughout these pages, we will assume that the thrown servo position is 400, the closed servo position is 100, and we will use the "Slow" profile.</p>
 <div class="admonition note">
 <p class="admonition-title"><abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnout</abbr>/point with an object ID of 100</p>
-</div>
 <p>You will note below that our <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnout</abbr> ID 100 matches the first PCA9685 module's first Vpin which happens to also be 100. While these numbers are the same, they do not represent the same item.</p>
 <p>You can see within this section on defining the <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnouts</abbr>/points that a <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnout</abbr>/point with an object ID of 100 could represent any variation of <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnout</abbr> object, with any support hardware implementation.</p>
+</div>
 <p>Defining these in the serial console therefore would be:</p>
-<div class="language-cpp highlight"><pre><span></span><code><span class="w">  </span><span class="o">&lt;</span><span class="n">T</span><span class="w"> </span><span class="mi">100</span><span class="w"> </span><span class="n">SERVO</span><span class="w"> </span><span class="mi">100</span><span class="w"> </span><span class="mi">400</span><span class="w"> </span><span class="mi">100</span><span class="w"> </span><span class="mi">3</span><span class="o">&gt;</span>
-<span class="w">  </span><span class="o">&lt;</span><span class="n">T</span><span class="w"> </span><span class="mi">101</span><span class="w"> </span><span class="n">SERVO</span><span class="w"> </span><span class="mi">101</span><span class="w"> </span><span class="mi">400</span><span class="w"> </span><span class="mi">100</span><span class="w"> </span><span class="mi">3</span><span class="o">&gt;</span>
+<div class="language-cpp highlight"><pre><span></span><code><span class="w">    </span><span class="o">&lt;</span><span class="n">T</span><span class="w"> </span><span class="mi">100</span><span class="w"> </span><span class="n">SERVO</span><span class="w"> </span><span class="mi">100</span><span class="w"> </span><span class="mi">400</span><span class="w"> </span><span class="mi">100</span><span class="w"> </span><span class="mi">3</span><span class="o">&gt;</span>
+<span class="w">    </span><span class="o">&lt;</span><span class="n">T</span><span class="w"> </span><span class="mi">101</span><span class="w"> </span><span class="n">SERVO</span><span class="w"> </span><span class="mi">101</span><span class="w"> </span><span class="mi">400</span><span class="w"> </span><span class="mi">100</span><span class="w"> </span><span class="mi">3</span><span class="o">&gt;</span>
 </code></pre></div>
 <p>Again, in myAutomation.h this becomes:</p>
-<div class="language-cpp highlight"><pre><span></span><code><span class="w">  </span><span class="n">ALIAS</span><span class="p">(</span><span class="n">TRN1</span><span class="p">,</span><span class="w"> </span><span class="mi">100</span><span class="p">)</span>
-<span class="w">  </span><span class="n">ALIAS</span><span class="p">(</span><span class="n">TRN2</span><span class="p">,</span><span class="w"> </span><span class="mi">101</span><span class="p">)</span>
+<div class="language-cpp highlight"><pre><span></span><code><span class="w">    </span><span class="n">ALIAS</span><span class="p">(</span><span class="n">TRN1</span><span class="p">,</span><span class="w"> </span><span class="mi">100</span><span class="p">)</span>
+<span class="w">    </span><span class="n">ALIAS</span><span class="p">(</span><span class="n">TRN2</span><span class="p">,</span><span class="w"> </span><span class="mi">101</span><span class="p">)</span>
 
-<span class="w">  </span><span class="n">SERVO_TURNOUT</span><span class="p">(</span><span class="n">TRN1</span><span class="p">,</span><span class="w"> </span><span class="mi">100</span><span class="p">,</span><span class="w"> </span><span class="mi">400</span><span class="p">,</span><span class="w"> </span><span class="mi">100</span><span class="p">,</span><span class="w"> </span><span class="n">Slow</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Station entry&quot;</span><span class="p">)</span>
-<span class="w">  </span><span class="n">SERVO_TURNOUT</span><span class="p">(</span><span class="n">TRN2</span><span class="p">,</span><span class="w"> </span><span class="mi">101</span><span class="p">,</span><span class="w"> </span><span class="mi">400</span><span class="p">,</span><span class="w"> </span><span class="mi">100</span><span class="p">,</span><span class="w"> </span><span class="n">Slow</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Station exit&quot;</span><span class="p">)</span>
+<span class="w">    </span><span class="n">SERVO_TURNOUT</span><span class="p">(</span><span class="n">TRN1</span><span class="p">,</span><span class="w"> </span><span class="mi">100</span><span class="p">,</span><span class="w"> </span><span class="mi">400</span><span class="p">,</span><span class="w"> </span><span class="mi">100</span><span class="p">,</span><span class="w"> </span><span class="n">Slow</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Station entry&quot;</span><span class="p">)</span>
+<span class="w">    </span><span class="n">SERVO_TURNOUT</span><span class="p">(</span><span class="n">TRN2</span><span class="p">,</span><span class="w"> </span><span class="mi">101</span><span class="p">,</span><span class="w"> </span><span class="mi">400</span><span class="p">,</span><span class="w"> </span><span class="mi">100</span><span class="p">,</span><span class="w"> </span><span class="n">Slow</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Station exit&quot;</span><span class="p">)</span>
 </code></pre></div>
 <h2 id="sensors">Sensors<a class="headerlink" href="#sensors" title="Permanent link">&para;</a></h2>
 <p>Five sensors are used in this first stage, which allows us to have up to three trains controlled by <strong>EXRAIL</strong> automation. The sensors are placed within each virtual block to ensure we know when the front of the train enters a block, and when the rear of the train has exited a block.</p>
 <p>We don't need to explicitly define any sensor objects to work with <strong>EXRAIL</strong>, so we will simply map these by defining <strong>EXRAIL</strong> aliases.</p>
 <p>To use pins directly on our Mega2560, we would start at pin 24 (we used pins 22/23 for <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnouts</abbr>):</p>
-<div class="language-cpp highlight"><pre><span></span><code><span class="w">  </span><span class="n">ALIAS</span><span class="p">(</span><span class="n">SNS1_TRN1_APP</span><span class="p">,</span><span class="w"> </span><span class="mi">24</span><span class="p">)</span><span class="w">       </span><span class="c1">// Sensor 1, approaching turnout/point 1</span>
-<span class="w">  </span><span class="n">ALIAS</span><span class="p">(</span><span class="n">SNS2_MAIN_TRN1_EX</span><span class="p">,</span><span class="w"> </span><span class="mi">25</span><span class="p">)</span><span class="w">   </span><span class="c1">// Sensor 2, on the main track exiting turnout/point 1</span>
-<span class="w">  </span><span class="n">ALIAS</span><span class="p">(</span><span class="n">SNS3_STN</span><span class="p">,</span><span class="w"> </span><span class="mi">26</span><span class="p">)</span><span class="w">            </span><span class="c1">// Sensor 3, at our station stop</span>
-<span class="w">  </span><span class="n">ALIAS</span><span class="p">(</span><span class="n">SNS4_MAIN_TRN2_APP</span><span class="p">,</span><span class="w"> </span><span class="mi">27</span><span class="p">)</span><span class="w">  </span><span class="c1">// Sensor 4, on the main track approaching turnout/point 2</span>
-<span class="w">  </span><span class="n">ALIAS</span><span class="p">(</span><span class="n">SNS5_STN_TRN2_APP</span><span class="p">,</span><span class="w"> </span><span class="mi">28</span><span class="p">)</span><span class="w">   </span><span class="c1">// Sensor 5, on the station siding approaching turnout/point 2</span>
+<div class="language-cpp highlight"><pre><span></span><code><span class="w">    </span><span class="n">ALIAS</span><span class="p">(</span><span class="n">SNS1_TRN1_APP</span><span class="p">,</span><span class="w"> </span><span class="mi">24</span><span class="p">)</span><span class="w">       </span><span class="c1">// Sensor 1, approaching turnout/point 1</span>
+<span class="w">    </span><span class="n">ALIAS</span><span class="p">(</span><span class="n">SNS2_MAIN_TRN1_EX</span><span class="p">,</span><span class="w"> </span><span class="mi">25</span><span class="p">)</span><span class="w">   </span><span class="c1">// Sensor 2, on the main track exiting turnout/point 1</span>
+<span class="w">    </span><span class="n">ALIAS</span><span class="p">(</span><span class="n">SNS3_STN</span><span class="p">,</span><span class="w"> </span><span class="mi">26</span><span class="p">)</span><span class="w">            </span><span class="c1">// Sensor 3, at our station stop</span>
+<span class="w">    </span><span class="n">ALIAS</span><span class="p">(</span><span class="n">SNS4_MAIN_TRN2_APP</span><span class="p">,</span><span class="w"> </span><span class="mi">27</span><span class="p">)</span><span class="w">  </span><span class="c1">// Sensor 4, on the main track approaching turnout/point 2</span>
+<span class="w">    </span><span class="n">ALIAS</span><span class="p">(</span><span class="n">SNS5_STN_TRN2_APP</span><span class="p">,</span><span class="w"> </span><span class="mi">28</span><span class="p">)</span><span class="w">   </span><span class="c1">// Sensor 5, on the station siding approaching turnout/point 2</span>
 </code></pre></div>
 <p>Moving these to our first MCP23017 I/O expander, these would start at Vpin 166 (we used Vpins 164/165 for <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnouts</abbr>/points):</p>
-<div class="language-cpp highlight"><pre><span></span><code><span class="w">  </span><span class="n">ALIAS</span><span class="p">(</span><span class="n">SNS1_TRN1_APP</span><span class="p">,</span><span class="w"> </span><span class="mi">166</span><span class="p">)</span><span class="w">       </span><span class="c1">// Sensor 1, approaching turnout/point 1</span>
-<span class="w">  </span><span class="n">ALIAS</span><span class="p">(</span><span class="n">SNS2_MAIN_TRN1_EX</span><span class="p">,</span><span class="w"> </span><span class="mi">167</span><span class="p">)</span><span class="w">   </span><span class="c1">// Sensor 2, on the main track exiting turnout/point 1</span>
-<span class="w">  </span><span class="n">ALIAS</span><span class="p">(</span><span class="n">SNS3_STN</span><span class="p">,</span><span class="w"> </span><span class="mi">168</span><span class="p">)</span><span class="w">            </span><span class="c1">// Sensor 3, at our station stop</span>
-<span class="w">  </span><span class="n">ALIAS</span><span class="p">(</span><span class="n">SNS4_MAIN_TRN2_APP</span><span class="p">,</span><span class="w"> </span><span class="mi">169</span><span class="p">)</span><span class="w">  </span><span class="c1">// Sensor 4, on the main track approaching turnout/point 2</span>
-<span class="w">  </span><span class="n">ALIAS</span><span class="p">(</span><span class="n">SNS5_STN_TRN2_APP</span><span class="p">,</span><span class="w"> </span><span class="mi">170</span><span class="p">)</span><span class="w">   </span><span class="c1">// Sensor 5, on the station siding approaching turnout/point 2</span>
+<div class="language-cpp highlight"><pre><span></span><code><span class="w">    </span><span class="n">ALIAS</span><span class="p">(</span><span class="n">SNS1_TRN1_APP</span><span class="p">,</span><span class="w"> </span><span class="mi">166</span><span class="p">)</span><span class="w">       </span><span class="c1">// Sensor 1, approaching turnout/point 1</span>
+<span class="w">    </span><span class="n">ALIAS</span><span class="p">(</span><span class="n">SNS2_MAIN_TRN1_EX</span><span class="p">,</span><span class="w"> </span><span class="mi">167</span><span class="p">)</span><span class="w">   </span><span class="c1">// Sensor 2, on the main track exiting turnout/point 1</span>
+<span class="w">    </span><span class="n">ALIAS</span><span class="p">(</span><span class="n">SNS3_STN</span><span class="p">,</span><span class="w"> </span><span class="mi">168</span><span class="p">)</span><span class="w">            </span><span class="c1">// Sensor 3, at our station stop</span>
+<span class="w">    </span><span class="n">ALIAS</span><span class="p">(</span><span class="n">SNS4_MAIN_TRN2_APP</span><span class="p">,</span><span class="w"> </span><span class="mi">169</span><span class="p">)</span><span class="w">  </span><span class="c1">// Sensor 4, on the main track approaching turnout/point 2</span>
+<span class="w">    </span><span class="n">ALIAS</span><span class="p">(</span><span class="n">SNS5_STN_TRN2_APP</span><span class="p">,</span><span class="w"> </span><span class="mi">170</span><span class="p">)</span><span class="w">   </span><span class="c1">// Sensor 5, on the station siding approaching turnout/point 2</span>
 </code></pre></div>
 <h2 id="signals">Signals<a class="headerlink" href="#signals" title="Permanent link">&para;</a></h2>
 <p>Three signals have been used in this first stage to indicate whether or not a train can enter either the station siding or proceed beyond <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnout</abbr>/point 1 on the main track, to indicate whether a train can exit the station siding, or if a train can proceed beyond <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnout</abbr>/point 2 on the main track.</p>
 <h3 id="pin-based-signals">Pin based signals<a class="headerlink" href="#pin-based-signals" title="Permanent link">&para;</a></h3>
 <p>To use pin based signals, we require three pins per signal, and therefore nine pins in total, but we will only define an alias for the red pin given that it is the "control" pin for each signal. The other pins are used in the background by DCC-EX and are not referenced anywhere else outside the object definition.</p>
 <p>To define pin based signals directly on the Mega2560 with aliases for the control pins:</p>
-<div class="language-cpp highlight"><pre><span></span><code><span class="w">  </span><span class="n">ALIAS</span><span class="p">(</span><span class="n">SIG1_TRN1_APP</span><span class="p">,</span><span class="w"> </span><span class="mi">30</span><span class="p">)</span><span class="w">       </span><span class="c1">// Signal 1, approaching turnout/point 1</span>
-<span class="w">  </span><span class="n">ALIAS</span><span class="p">(</span><span class="n">SIG2_TRN2_GO</span><span class="p">,</span><span class="w"> </span><span class="mi">33</span><span class="p">)</span><span class="w">        </span><span class="c1">// Signal 2, proceed beyond turnout/point 2</span>
-<span class="w">  </span><span class="n">ALIAS</span><span class="p">(</span><span class="n">SIG3_STN_EX</span><span class="p">,</span><span class="w"> </span><span class="mi">36</span><span class="p">)</span><span class="w">         </span><span class="c1">// Signal 3, exit the station siding</span>
+<div class="language-cpp highlight"><pre><span></span><code><span class="w">    </span><span class="n">ALIAS</span><span class="p">(</span><span class="n">SIG1_TRN1_APP</span><span class="p">,</span><span class="w"> </span><span class="mi">30</span><span class="p">)</span><span class="w">       </span><span class="c1">// Signal 1, approaching turnout/point 1</span>
+<span class="w">    </span><span class="n">ALIAS</span><span class="p">(</span><span class="n">SIG2_TRN2_GO</span><span class="p">,</span><span class="w"> </span><span class="mi">33</span><span class="p">)</span><span class="w">        </span><span class="c1">// Signal 2, proceed beyond turnout/point 2</span>
+<span class="w">    </span><span class="n">ALIAS</span><span class="p">(</span><span class="n">SIG3_STN_EX</span><span class="p">,</span><span class="w"> </span><span class="mi">36</span><span class="p">)</span><span class="w">         </span><span class="c1">// Signal 3, exit the station siding</span>
 
-<span class="w">  </span><span class="n">SIGNAL</span><span class="p">(</span><span class="n">SIG1_TRN1_APP</span><span class="p">,</span><span class="w"> </span><span class="mi">31</span><span class="p">,</span><span class="w"> </span><span class="mi">32</span><span class="p">)</span>
-<span class="w">  </span><span class="n">SIGNAL</span><span class="p">(</span><span class="n">SIG2_TRN2_GO</span><span class="p">,</span><span class="w"> </span><span class="mi">34</span><span class="p">,</span><span class="w"> </span><span class="mi">35</span><span class="p">)</span>
-<span class="w">  </span><span class="n">SIGNAL</span><span class="p">(</span><span class="n">SIG3_STN_EX</span><span class="p">,</span><span class="w"> </span><span class="mi">37</span><span class="p">,</span><span class="w"> </span><span class="mi">38</span><span class="p">)</span>
+<span class="w">    </span><span class="n">SIGNAL</span><span class="p">(</span><span class="n">SIG1_TRN1_APP</span><span class="p">,</span><span class="w"> </span><span class="mi">31</span><span class="p">,</span><span class="w"> </span><span class="mi">32</span><span class="p">)</span>
+<span class="w">    </span><span class="n">SIGNAL</span><span class="p">(</span><span class="n">SIG2_TRN2_GO</span><span class="p">,</span><span class="w"> </span><span class="mi">34</span><span class="p">,</span><span class="w"> </span><span class="mi">35</span><span class="p">)</span>
+<span class="w">    </span><span class="n">SIGNAL</span><span class="p">(</span><span class="n">SIG3_STN_EX</span><span class="p">,</span><span class="w"> </span><span class="mi">37</span><span class="p">,</span><span class="w"> </span><span class="mi">38</span><span class="p">)</span>
 </code></pre></div>
 <p>Moving these again to an MCP23017 I/O expander, these would start at Vpin 172, however this also overlaps to a second I/O expander by one pin:</p>
-<div class="language-cpp highlight"><pre><span></span><code><span class="w">  </span><span class="n">ALIAS</span><span class="p">(</span><span class="n">SIG1_TRN1_APP</span><span class="p">,</span><span class="w"> </span><span class="mi">172</span><span class="p">)</span><span class="w">      </span><span class="c1">// Signal 1, approaching turnout/point 1</span>
-<span class="w">  </span><span class="n">ALIAS</span><span class="p">(</span><span class="n">SIG2_TRN2_GO</span><span class="p">,</span><span class="w"> </span><span class="mi">175</span><span class="p">)</span><span class="w">       </span><span class="c1">// Signal 2, proceed beyond turnout/point 2</span>
-<span class="w">  </span><span class="n">ALIAS</span><span class="p">(</span><span class="n">SIG3_STN_EX</span><span class="p">,</span><span class="w"> </span><span class="mi">178</span><span class="p">)</span><span class="w">        </span><span class="c1">// Signal 3, exit the station siding</span>
+<div class="language-cpp highlight"><pre><span></span><code><span class="w">    </span><span class="n">ALIAS</span><span class="p">(</span><span class="n">SIG1_TRN1_APP</span><span class="p">,</span><span class="w"> </span><span class="mi">172</span><span class="p">)</span><span class="w">      </span><span class="c1">// Signal 1, approaching turnout/point 1</span>
+<span class="w">    </span><span class="n">ALIAS</span><span class="p">(</span><span class="n">SIG2_TRN2_GO</span><span class="p">,</span><span class="w"> </span><span class="mi">175</span><span class="p">)</span><span class="w">       </span><span class="c1">// Signal 2, proceed beyond turnout/point 2</span>
+<span class="w">    </span><span class="n">ALIAS</span><span class="p">(</span><span class="n">SIG3_STN_EX</span><span class="p">,</span><span class="w"> </span><span class="mi">178</span><span class="p">)</span><span class="w">        </span><span class="c1">// Signal 3, exit the station siding</span>
 
-<span class="w">  </span><span class="n">SIGNAL</span><span class="p">(</span><span class="n">SIG1_TRN1_APP</span><span class="p">,</span><span class="w"> </span><span class="mi">173</span><span class="p">,</span><span class="w"> </span><span class="mi">174</span><span class="p">)</span>
-<span class="w">  </span><span class="n">SIGNAL</span><span class="p">(</span><span class="n">SIG2_TRN2_GO</span><span class="p">,</span><span class="w"> </span><span class="mi">176</span><span class="p">,</span><span class="w"> </span><span class="mi">177</span><span class="p">)</span>
-<span class="w">  </span><span class="n">SIGNAL</span><span class="p">(</span><span class="n">SIG3_STN_EX</span><span class="p">,</span><span class="w"> </span><span class="mi">179</span><span class="p">,</span><span class="w"> </span><span class="mi">180</span><span class="p">)</span>
+<span class="w">    </span><span class="n">SIGNAL</span><span class="p">(</span><span class="n">SIG1_TRN1_APP</span><span class="p">,</span><span class="w"> </span><span class="mi">173</span><span class="p">,</span><span class="w"> </span><span class="mi">174</span><span class="p">)</span>
+<span class="w">    </span><span class="n">SIGNAL</span><span class="p">(</span><span class="n">SIG2_TRN2_GO</span><span class="p">,</span><span class="w"> </span><span class="mi">176</span><span class="p">,</span><span class="w"> </span><span class="mi">177</span><span class="p">)</span>
+<span class="w">    </span><span class="n">SIGNAL</span><span class="p">(</span><span class="n">SIG3_STN_EX</span><span class="p">,</span><span class="w"> </span><span class="mi">179</span><span class="p">,</span><span class="w"> </span><span class="mi">180</span><span class="p">)</span>
 </code></pre></div>
 <h3 id="servo-based-signals">Servo based signals<a class="headerlink" href="#servo-based-signals" title="Permanent link">&para;</a></h3>
 <p>To define servo based signals, these only require one Vpin per signal along with specifying the servo angle for the red, amber, and green positions.</p>
-<p>.. tip::</p>
-<p>Remember! Servo angles will be unique to your layout, and probably even unique to individual signals, so be sure you read the blurb on <a href="../stage3/#tuning-servo-positions">tuning servo positions</a> and the <code>/reference/hardware/servo-module</code> page.</p>
-<p><mark>TODO</mark> <code>/reference/hardware/servo-module</code> page.</p>
+<div class="admonition tip">
+<p class="admonition-title">Adjust the servo angles</p>
+<p>Remember! Servo angles will be unique to your layout, and probably even unique to individual signals, so be sure you read the blurb on <a href="../stage3/#tuning-servo-positions">tuning servo positions</a> and the <a href="../../../../accessories/i2c-servo-led-modules/">I2C Servo and LED Module</a> page.</p>
 <p>Please don't blindly copy/paste the servo angles listed here and expect them to "just work".</p>
+</div>
 <p>Allowing for servo based <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnouts</abbr>/points being used, we will start our signals from the third available Vpin on our PCA9685 servo module (we used the first two for servo <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnouts</abbr>/points). We will make the assumption that red requires a servo angle of 100, amber 250, and green 400:</p>
-<div class="language-cpp highlight"><pre><span></span><code><span class="w">      </span><span class="n">ALIAS</span><span class="p">(</span><span class="n">SIG1_TRN1_APP</span><span class="p">,</span><span class="w"> </span><span class="mi">102</span><span class="p">)</span><span class="w">       </span><span class="c1">// Signal 1, approaching turnout/point 1</span>
-<span class="w">      </span><span class="n">ALIAS</span><span class="p">(</span><span class="n">SIG2_TRN2_GO</span><span class="p">,</span><span class="w"> </span><span class="mi">103</span><span class="p">)</span><span class="w">        </span><span class="c1">// Signal 2, proceed beyond turnout/point 2</span>
-<span class="w">      </span><span class="n">ALIAS</span><span class="p">(</span><span class="n">SIG3_STN_EX</span><span class="p">,</span><span class="w"> </span><span class="mi">104</span><span class="p">)</span><span class="w">         </span><span class="c1">// Signal 3, exit the station siding</span>
+<div class="language-cpp highlight"><pre><span></span><code><span class="w">    </span><span class="n">ALIAS</span><span class="p">(</span><span class="n">SIG1_TRN1_APP</span><span class="p">,</span><span class="w"> </span><span class="mi">102</span><span class="p">)</span><span class="w">       </span><span class="c1">// Signal 1, approaching turnout/point 1</span>
+<span class="w">    </span><span class="n">ALIAS</span><span class="p">(</span><span class="n">SIG2_TRN2_GO</span><span class="p">,</span><span class="w"> </span><span class="mi">103</span><span class="p">)</span><span class="w">        </span><span class="c1">// Signal 2, proceed beyond turnout/point 2</span>
+<span class="w">    </span><span class="n">ALIAS</span><span class="p">(</span><span class="n">SIG3_STN_EX</span><span class="p">,</span><span class="w"> </span><span class="mi">104</span><span class="p">)</span><span class="w">         </span><span class="c1">// Signal 3, exit the station siding</span>
 
-<span class="w">      </span><span class="n">SERVO_SIGNAL</span><span class="p">(</span><span class="n">SIG1_TRN1_APP</span><span class="p">,</span><span class="w"> </span><span class="mi">400</span><span class="p">,</span><span class="w"> </span><span class="mi">250</span><span class="p">,</span><span class="w"> </span><span class="mi">100</span><span class="p">)</span>
-<span class="w">      </span><span class="n">SERVO_SIGNAL</span><span class="p">(</span><span class="n">SIG2_TRN2_GO</span><span class="p">,</span><span class="w"> </span><span class="mi">400</span><span class="p">,</span><span class="w"> </span><span class="mi">250</span><span class="p">,</span><span class="w"> </span><span class="mi">100</span><span class="p">)</span>
-<span class="w">      </span><span class="n">SERVO_SIGNAL</span><span class="p">(</span><span class="n">SIG3_STN_EX</span><span class="p">,</span><span class="w"> </span><span class="mi">400</span><span class="p">,</span><span class="w"> </span><span class="mi">250</span><span class="p">,</span><span class="w"> </span><span class="mi">100</span><span class="p">)</span>
+<span class="w">    </span><span class="n">SERVO_SIGNAL</span><span class="p">(</span><span class="n">SIG1_TRN1_APP</span><span class="p">,</span><span class="w"> </span><span class="mi">400</span><span class="p">,</span><span class="w"> </span><span class="mi">250</span><span class="p">,</span><span class="w"> </span><span class="mi">100</span><span class="p">)</span>
+<span class="w">    </span><span class="n">SERVO_SIGNAL</span><span class="p">(</span><span class="n">SIG2_TRN2_GO</span><span class="p">,</span><span class="w"> </span><span class="mi">400</span><span class="p">,</span><span class="w"> </span><span class="mi">250</span><span class="p">,</span><span class="w"> </span><span class="mi">100</span><span class="p">)</span>
+<span class="w">    </span><span class="n">SERVO_SIGNAL</span><span class="p">(</span><span class="n">SIG3_STN_EX</span><span class="p">,</span><span class="w"> </span><span class="mi">400</span><span class="p">,</span><span class="w"> </span><span class="mi">250</span><span class="p">,</span><span class="w"> </span><span class="mi">100</span><span class="p">)</span>
 </code></pre></div>
 <h2 id="virtual-blocks">Virtual blocks<a class="headerlink" href="#virtual-blocks" title="Permanent link">&para;</a></h2>
 <p>We've divided the layout into four virtual blocks, allowing for up to three trains to coexist safely on the layout. You will need at least one more block than you have trains in order to fully automate a layout, otherwise  there will be nowhere for a train to move to in order to start the automation sequences. This is outlined in further detail in the <a href="#fully-automated-layout">fully automated layout</a> section.</p>
 <h3 id="block-1">Block 1<a class="headerlink" href="#block-1" title="Permanent link">&para;</a></h3>
 <p>Block 1 is the approach to <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnout</abbr>/point 1, and can be used to prevent a train from entering either the station siding or the main track between <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnouts</abbr>/points 1 and 2 if they are occupied.</p>
 <p>We will use ID 1 for this, with an alias:</p>
-<div class="language-cpp highlight"><pre><span></span><code><span class="w">  </span><span class="n">ALIAS</span><span class="p">(</span><span class="n">BLK1_TRN1_APP</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span>
+<div class="language-cpp highlight"><pre><span></span><code><span class="w">    </span><span class="n">ALIAS</span><span class="p">(</span><span class="n">BLK1_TRN1_APP</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span>
 </code></pre></div>
 <h3 id="block-2">Block 2<a class="headerlink" href="#block-2" title="Permanent link">&para;</a></h3>
 <p>Block 2 consists of the section of the main track between <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnouts</abbr>/points 1 and 2, providing for a section to hold one train, allow a train on the station siding to exit safely, and also prevent a train running around the main track from entering this block.</p>
 <p>We will use ID 2 for this, with an alias:</p>
-<div class="language-cpp highlight"><pre><span></span><code><span class="w">  </span><span class="n">ALIAS</span><span class="p">(</span><span class="n">BLK2_MAIN_HOLD</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">)</span>
+<div class="language-cpp highlight"><pre><span></span><code><span class="w">    </span><span class="n">ALIAS</span><span class="p">(</span><span class="n">BLK2_MAIN_HOLD</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">)</span>
 </code></pre></div>
 <h3 id="block-3">Block 3<a class="headerlink" href="#block-3" title="Permanent link">&para;</a></h3>
 <p>Block 3 is for our station siding, ensuring no other trains can enter this block while it is occupied.</p>
 <p>We will use ID 3 for this, with an alias:</p>
-<div class="language-cpp highlight"><pre><span></span><code><span class="w">  </span><span class="n">ALIAS</span><span class="p">(</span><span class="n">BLK3_STN</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">)</span>
+<div class="language-cpp highlight"><pre><span></span><code><span class="w">    </span><span class="n">ALIAS</span><span class="p">(</span><span class="n">BLK3_STN</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">)</span>
 </code></pre></div>
 <h3 id="block-4">Block 4<a class="headerlink" href="#block-4" title="Permanent link">&para;</a></h3>
 <p>Block 4 is the exit beyond <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnout</abbr>/point 2, and can hold a train while block 1 is occupied. Once block 1 is free, a train can run uninterrupted from block 4 back to block 1.</p>
 <p>Note that block 4 on the diagram continues all the way to the beginning of block 1</p>
 <p>We will use ID 4 for this, with an alias:</p>
-<div class="language-cpp highlight"><pre><span></span><code><span class="w">  </span><span class="n">ALIAS</span><span class="p">(</span><span class="n">BLK4_TRN2_EX</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">)</span>
+<div class="language-cpp highlight"><pre><span></span><code><span class="w">    </span><span class="n">ALIAS</span><span class="p">(</span><span class="n">BLK4_TRN2_EX</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">)</span>
 </code></pre></div>
 <h2 id="station">Station<a class="headerlink" href="#station" title="Permanent link">&para;</a></h2>
 <p>In this particular stage, there's nothing specific for the station, however some advanced concepts might be to trigger an automated sound recording of arrivals and departures based on triggering sensor 3 or even sensor 2 if <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnout</abbr>/point 1 is in the thrown position.</p>
@@ -10325,15 +10352,15 @@
 <p>When the <strong>EX-CommandStation</strong> and <strong>EXRAIL</strong> starts, everything defined before the first <code>DONE</code> command executes automatically.</p>
 <p>For safe running and a known starting state, we ensure both our <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnouts</abbr>/points are closed and set all our signals to red, followed by the first <code>DONE</code> to stop EXRAIL executing any further automatically.</p>
 <p>If we omit that first <code>DONE</code>, EXRAIL would automatically execute <code>ROUTE(1, "Main Track")</code> at every startup. Note, of course, that if you want that first route executed at every startup, then you can simply omit that same <code>DONE</code>, which will have the same effect as manually selecting the "Main track" route.</p>
-<div class="language-cpp highlight"><pre><span></span><code><span class="w">      </span><span class="c1">// Start up with turnouts/points closed and signals red</span>
-<span class="w">      </span><span class="n">CLOSE</span><span class="p">(</span><span class="n">TRN1</span><span class="p">)</span>
-<span class="w">      </span><span class="n">CLOSE</span><span class="p">(</span><span class="n">TRN2</span><span class="p">)</span>
-<span class="w">      </span><span class="n">RED</span><span class="p">(</span><span class="n">SIG1_TRN1_APP</span><span class="p">)</span>
-<span class="w">      </span><span class="n">RED</span><span class="p">(</span><span class="n">SIG2_TRN2_GO</span><span class="p">)</span>
-<span class="w">      </span><span class="n">RED</span><span class="p">(</span><span class="n">SIG3_STN_EX</span><span class="p">)</span>
+<div class="language-cpp highlight"><pre><span></span><code><span class="w">    </span><span class="c1">// Start up with turnouts/points closed and signals red</span>
+<span class="w">    </span><span class="n">CLOSE</span><span class="p">(</span><span class="n">TRN1</span><span class="p">)</span>
+<span class="w">    </span><span class="n">CLOSE</span><span class="p">(</span><span class="n">TRN2</span><span class="p">)</span>
+<span class="w">    </span><span class="n">RED</span><span class="p">(</span><span class="n">SIG1_TRN1_APP</span><span class="p">)</span>
+<span class="w">    </span><span class="n">RED</span><span class="p">(</span><span class="n">SIG2_TRN2_GO</span><span class="p">)</span>
+<span class="w">    </span><span class="n">RED</span><span class="p">(</span><span class="n">SIG3_STN_EX</span><span class="p">)</span>
 
-<span class="w">      </span><span class="c1">// We need DONE to tell EXRAIL not to automatically proceed beyond definitions above</span>
-<span class="w">      </span><span class="n">DONE</span>
+<span class="w">    </span><span class="c1">// We need DONE to tell EXRAIL not to automatically proceed beyond definitions above</span>
+<span class="w">    </span><span class="n">DONE</span>
 </code></pre></div>
 <h3 id="route-1-main-track-running">Route 1 - main track running<a class="headerlink" href="#route-1-main-track-running" title="Permanent link">&para;</a></h3>
 <p>The first route we publish for use is <code>ROUTE(1, "Main track")</code> which will appear in <abbr title="Communication Protocol. Trademark + iOS app owned by Brett Hoffman">WiThrottle</abbr> protocol based apps (like Engine Driver and <abbr title="Communication Protocol. Trademark + iOS app owned by Brett Hoffman">WiThrottle</abbr>) with the description "Main track".</p>
@@ -10344,25 +10371,25 @@
 <p>This same logic is applied for <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnout</abbr>/point 2, setting signal 2 to amber <code>AMBER(SIG2_TRN2_GO)</code>, then red <code>RED(SIG2_TRN2_GO)</code> to allow <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnout</abbr>/point 2 to close fully <code>CLOSE(TRN2)</code>.</p>
 <p>Once both <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnouts</abbr> are closed, both signals 1 and 2 are set to green to indicate trains are safe to run through both <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnouts</abbr> with <code>GREEN(SIG1_TRN1_APP)</code> and <code>GREEN(SIG2_TRN2_GO)</code>.</p>
 <p>The route is completed with a <code>DONE</code> to tell <strong>EXRAIL</strong> not to proceed any further.</p>
-<div class="language-cpp highlight"><pre><span></span><code><span class="w">      </span><span class="n">ROUTE</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Main track&quot;</span><span class="p">)</span><span class="w">        </span><span class="c1">// Select this route to just use the main track</span>
-<span class="w">        </span><span class="n">RED</span><span class="p">(</span><span class="n">SIG3_STN_EX</span><span class="p">)</span><span class="w">            </span><span class="c1">// Set signal 3 red as it is not safe to exit the station siding</span>
-<span class="w">        </span><span class="n">IFTHROWN</span><span class="p">(</span><span class="n">TRN1</span><span class="p">)</span><span class="w">              </span><span class="c1">// If turnout/point 1 is thrown, do these:</span>
-<span class="w">          </span><span class="n">AMBER</span><span class="p">(</span><span class="n">SIG1_TRN1_APP</span><span class="p">)</span><span class="w">      </span><span class="c1">// Set signal 1 amber for 2 seconds to warn of the change</span>
-<span class="w">          </span><span class="n">DELAY</span><span class="p">(</span><span class="mi">2000</span><span class="p">)</span>
-<span class="w">          </span><span class="n">RED</span><span class="p">(</span><span class="n">SIG1_TRN1_APP</span><span class="p">)</span><span class="w">        </span><span class="c1">// Set signal 1 red while we close turnout/point 1</span>
-<span class="w">          </span><span class="n">CLOSE</span><span class="p">(</span><span class="n">TRN1</span><span class="p">)</span><span class="w">               </span><span class="c1">// Close turnout/point 1</span>
-<span class="w">          </span><span class="n">DELAY</span><span class="p">(</span><span class="mi">2000</span><span class="p">)</span><span class="w">               </span><span class="c1">// Wait 2 seconds for the turnout/point to close</span>
-<span class="w">        </span><span class="n">ENDIF</span>
-<span class="w">        </span><span class="n">IFTHROWN</span><span class="p">(</span><span class="n">TRN2</span><span class="p">)</span><span class="w">              </span><span class="c1">// If turnout/point 2 is thrown, do these:</span>
-<span class="w">          </span><span class="n">AMBER</span><span class="p">(</span><span class="n">SIG2_TRN2_GO</span><span class="p">)</span><span class="w">       </span><span class="c1">// Set signal 2 amber for 2 seconds to warn of the change</span>
-<span class="w">          </span><span class="n">DELAY</span><span class="p">(</span><span class="mi">2000</span><span class="p">)</span>
-<span class="w">          </span><span class="n">RED</span><span class="p">(</span><span class="n">SIG2_TRN2_GO</span><span class="p">)</span><span class="w">         </span><span class="c1">// Set signal 2 red while we close turnout/point 2</span>
-<span class="w">          </span><span class="n">CLOSE</span><span class="p">(</span><span class="n">TRN2</span><span class="p">)</span><span class="w">               </span><span class="c1">// Close turnout/point 2</span>
-<span class="w">          </span><span class="n">DELAY</span><span class="p">(</span><span class="mi">2000</span><span class="p">)</span><span class="w">               </span><span class="c1">// Wait 2 seconds for the turnout/point to close</span>
-<span class="w">        </span><span class="n">ENDIF</span>
-<span class="w">        </span><span class="n">GREEN</span><span class="p">(</span><span class="n">SIG1_TRN1_APP</span><span class="p">)</span><span class="w">        </span><span class="c1">// Set signal 1 green because we&#39;re safe to proceed</span>
-<span class="w">        </span><span class="n">GREEN</span><span class="p">(</span><span class="n">SIG2_TRN2_GO</span><span class="p">)</span><span class="w">         </span><span class="c1">// Set signal 2 green because we&#39;re safe to proceed</span>
-<span class="w">      </span><span class="n">DONE</span>
+<div class="language-cpp highlight"><pre><span></span><code><span class="w">    </span><span class="n">ROUTE</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Main track&quot;</span><span class="p">)</span><span class="w">        </span><span class="c1">// Select this route to just use the main track</span>
+<span class="w">      </span><span class="n">RED</span><span class="p">(</span><span class="n">SIG3_STN_EX</span><span class="p">)</span><span class="w">            </span><span class="c1">// Set signal 3 red as it is not safe to exit the station siding</span>
+<span class="w">      </span><span class="n">IFTHROWN</span><span class="p">(</span><span class="n">TRN1</span><span class="p">)</span><span class="w">              </span><span class="c1">// If turnout/point 1 is thrown, do these:</span>
+<span class="w">        </span><span class="n">AMBER</span><span class="p">(</span><span class="n">SIG1_TRN1_APP</span><span class="p">)</span><span class="w">      </span><span class="c1">// Set signal 1 amber for 2 seconds to warn of the change</span>
+<span class="w">        </span><span class="n">DELAY</span><span class="p">(</span><span class="mi">2000</span><span class="p">)</span>
+<span class="w">        </span><span class="n">RED</span><span class="p">(</span><span class="n">SIG1_TRN1_APP</span><span class="p">)</span><span class="w">        </span><span class="c1">// Set signal 1 red while we close turnout/point 1</span>
+<span class="w">        </span><span class="n">CLOSE</span><span class="p">(</span><span class="n">TRN1</span><span class="p">)</span><span class="w">               </span><span class="c1">// Close turnout/point 1</span>
+<span class="w">        </span><span class="n">DELAY</span><span class="p">(</span><span class="mi">2000</span><span class="p">)</span><span class="w">               </span><span class="c1">// Wait 2 seconds for the turnout/point to close</span>
+<span class="w">      </span><span class="n">ENDIF</span>
+<span class="w">      </span><span class="n">IFTHROWN</span><span class="p">(</span><span class="n">TRN2</span><span class="p">)</span><span class="w">              </span><span class="c1">// If turnout/point 2 is thrown, do these:</span>
+<span class="w">        </span><span class="n">AMBER</span><span class="p">(</span><span class="n">SIG2_TRN2_GO</span><span class="p">)</span><span class="w">       </span><span class="c1">// Set signal 2 amber for 2 seconds to warn of the change</span>
+<span class="w">        </span><span class="n">DELAY</span><span class="p">(</span><span class="mi">2000</span><span class="p">)</span>
+<span class="w">        </span><span class="n">RED</span><span class="p">(</span><span class="n">SIG2_TRN2_GO</span><span class="p">)</span><span class="w">         </span><span class="c1">// Set signal 2 red while we close turnout/point 2</span>
+<span class="w">        </span><span class="n">CLOSE</span><span class="p">(</span><span class="n">TRN2</span><span class="p">)</span><span class="w">               </span><span class="c1">// Close turnout/point 2</span>
+<span class="w">        </span><span class="n">DELAY</span><span class="p">(</span><span class="mi">2000</span><span class="p">)</span><span class="w">               </span><span class="c1">// Wait 2 seconds for the turnout/point to close</span>
+<span class="w">      </span><span class="n">ENDIF</span>
+<span class="w">      </span><span class="n">GREEN</span><span class="p">(</span><span class="n">SIG1_TRN1_APP</span><span class="p">)</span><span class="w">        </span><span class="c1">// Set signal 1 green because we&#39;re safe to proceed</span>
+<span class="w">      </span><span class="n">GREEN</span><span class="p">(</span><span class="n">SIG2_TRN2_GO</span><span class="p">)</span><span class="w">         </span><span class="c1">// Set signal 2 green because we&#39;re safe to proceed</span>
+<span class="w">    </span><span class="n">DONE</span>
 </code></pre></div>
 <h3 id="route-2-enter-and-exit-the-station-siding">Route 2 - enter and exit the station siding<a class="headerlink" href="#route-2-enter-and-exit-the-station-siding" title="Permanent link">&para;</a></h3>
 <p>The second route we publish for use is <code>ROUTE(2, "Stating siding")</code> which will appear in <abbr title="Communication Protocol. Trademark + iOS app owned by Brett Hoffman">WiThrottle</abbr> protocol based apps (like Engine Driver and <abbr title="Communication Protocol. Trademark + iOS app owned by Brett Hoffman">WiThrottle</abbr>)  with the description "Station siding".</p>
@@ -10372,29 +10399,29 @@
 <p>This same logic is applied for <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnout</abbr>/point 2, setting signal 3 to amber <code>AMBER(SIG3_STN_EX)</code>, then red <code>RED(SIG3_STN_EX)</code> to allow <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnout</abbr>/point 2 to be thrown <code>THROW(TRN2)</code>.</p>
 <p>Once both <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnouts</abbr>/points are thrown, both signals 1 and 3 are set to green to indicate trains are safe to enter and exit the station siding with <code>GREEN(SIG1_TRN1_APP)</code> and <code>GREEN(SIG3_STN_EX)</code>.</p>
 <p>The route is completed with a <code>DONE</code> to tell EXRAIL not to proceed any further.</p>
-<div class="language-cpp highlight"><pre><span></span><code><span class="w">      </span><span class="n">ROUTE</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Station siding&quot;</span><span class="p">)</span><span class="w">    </span><span class="c1">// Select this route to use the station siding</span>
-<span class="w">        </span><span class="n">RED</span><span class="p">(</span><span class="n">SIG2_TRN2_GO</span><span class="p">)</span><span class="w">           </span><span class="c1">// Set signal 2 red as it is not safe to proceed beyond turnout/point 2 on the main track</span>
-<span class="w">        </span><span class="n">IFCLOSED</span><span class="p">(</span><span class="n">TRN1</span><span class="p">)</span><span class="w">              </span><span class="c1">// If turnout/point 1 is closed, do these:</span>
-<span class="w">          </span><span class="n">AMBER</span><span class="p">(</span><span class="n">SIG1_TRN1_APP</span><span class="p">)</span><span class="w">      </span><span class="c1">// Set signal 1 amber for 2 seconds to warn of the change</span>
-<span class="w">          </span><span class="n">DELAY</span><span class="p">(</span><span class="mi">2000</span><span class="p">)</span>
-<span class="w">          </span><span class="n">RED</span><span class="p">(</span><span class="n">SIG1_TRN1_APP</span><span class="p">)</span><span class="w">        </span><span class="c1">// Set signal 1 red while we throw turnout/point 1</span>
-<span class="w">          </span><span class="n">THROW</span><span class="p">(</span><span class="n">TRN1</span><span class="p">)</span><span class="w">               </span><span class="c1">// Throw turnout/point 1</span>
-<span class="w">          </span><span class="n">DELAY</span><span class="p">(</span><span class="mi">2000</span><span class="p">)</span><span class="w">               </span><span class="c1">// Wait 2 seconds for the turnout/point to throw</span>
-<span class="w">        </span><span class="n">ENDIF</span>
-<span class="w">        </span><span class="n">IFCLOSED</span><span class="p">(</span><span class="n">TRN2</span><span class="p">)</span><span class="w">              </span><span class="c1">// If turnout/point 2 is closed, do these:</span>
-<span class="w">          </span><span class="n">AMBER</span><span class="p">(</span><span class="n">SIG3_STN_EX</span><span class="p">)</span><span class="w">       </span><span class="c1">// Set signal 2 amber for 2 seconds to warn of the change</span>
-<span class="w">          </span><span class="n">DELAY</span><span class="p">(</span><span class="mi">2000</span><span class="p">)</span>
-<span class="w">          </span><span class="n">RED</span><span class="p">(</span><span class="n">SIG3_STN_EX</span><span class="p">)</span><span class="w">         </span><span class="c1">// Set signal 2 red while we throw turnout/point 2</span>
-<span class="w">          </span><span class="n">THROW</span><span class="p">(</span><span class="n">TRN2</span><span class="p">)</span><span class="w">               </span><span class="c1">// Throw turnout/point 2</span>
-<span class="w">          </span><span class="n">DELAY</span><span class="p">(</span><span class="mi">2000</span><span class="p">)</span><span class="w">               </span><span class="c1">// Wait 2 seconds for the turnout/point to throw</span>
-<span class="w">        </span><span class="n">ENDIF</span>
-<span class="w">        </span><span class="n">GREEN</span><span class="p">(</span><span class="n">SIG1_TRN1_APP</span><span class="p">)</span><span class="w">        </span><span class="c1">// Set signal 1 green because we&#39;re safe to proceed</span>
-<span class="w">        </span><span class="n">GREEN</span><span class="p">(</span><span class="n">SIG3_STN_EX</span><span class="p">)</span><span class="w">          </span><span class="c1">// Set signal 2 green because we&#39;re safe to proceed</span>
-<span class="w">      </span><span class="n">DONE</span>
+<div class="language-cpp highlight"><pre><span></span><code><span class="w">    </span><span class="n">ROUTE</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Station siding&quot;</span><span class="p">)</span><span class="w">    </span><span class="c1">// Select this route to use the station siding</span>
+<span class="w">      </span><span class="n">RED</span><span class="p">(</span><span class="n">SIG2_TRN2_GO</span><span class="p">)</span><span class="w">           </span><span class="c1">// Set signal 2 red as it is not safe to proceed beyond turnout/point 2 on the main track</span>
+<span class="w">      </span><span class="n">IFCLOSED</span><span class="p">(</span><span class="n">TRN1</span><span class="p">)</span><span class="w">              </span><span class="c1">// If turnout/point 1 is closed, do these:</span>
+<span class="w">        </span><span class="n">AMBER</span><span class="p">(</span><span class="n">SIG1_TRN1_APP</span><span class="p">)</span><span class="w">      </span><span class="c1">// Set signal 1 amber for 2 seconds to warn of the change</span>
+<span class="w">        </span><span class="n">DELAY</span><span class="p">(</span><span class="mi">2000</span><span class="p">)</span>
+<span class="w">        </span><span class="n">RED</span><span class="p">(</span><span class="n">SIG1_TRN1_APP</span><span class="p">)</span><span class="w">        </span><span class="c1">// Set signal 1 red while we throw turnout/point 1</span>
+<span class="w">        </span><span class="n">THROW</span><span class="p">(</span><span class="n">TRN1</span><span class="p">)</span><span class="w">               </span><span class="c1">// Throw turnout/point 1</span>
+<span class="w">        </span><span class="n">DELAY</span><span class="p">(</span><span class="mi">2000</span><span class="p">)</span><span class="w">               </span><span class="c1">// Wait 2 seconds for the turnout/point to throw</span>
+<span class="w">      </span><span class="n">ENDIF</span>
+<span class="w">      </span><span class="n">IFCLOSED</span><span class="p">(</span><span class="n">TRN2</span><span class="p">)</span><span class="w">              </span><span class="c1">// If turnout/point 2 is closed, do these:</span>
+<span class="w">        </span><span class="n">AMBER</span><span class="p">(</span><span class="n">SIG3_STN_EX</span><span class="p">)</span><span class="w">       </span><span class="c1">// Set signal 2 amber for 2 seconds to warn of the change</span>
+<span class="w">        </span><span class="n">DELAY</span><span class="p">(</span><span class="mi">2000</span><span class="p">)</span>
+<span class="w">        </span><span class="n">RED</span><span class="p">(</span><span class="n">SIG3_STN_EX</span><span class="p">)</span><span class="w">         </span><span class="c1">// Set signal 2 red while we throw turnout/point 2</span>
+<span class="w">        </span><span class="n">THROW</span><span class="p">(</span><span class="n">TRN2</span><span class="p">)</span><span class="w">               </span><span class="c1">// Throw turnout/point 2</span>
+<span class="w">        </span><span class="n">DELAY</span><span class="p">(</span><span class="mi">2000</span><span class="p">)</span><span class="w">               </span><span class="c1">// Wait 2 seconds for the turnout/point to throw</span>
+<span class="w">      </span><span class="n">ENDIF</span>
+<span class="w">      </span><span class="n">GREEN</span><span class="p">(</span><span class="n">SIG1_TRN1_APP</span><span class="p">)</span><span class="w">        </span><span class="c1">// Set signal 1 green because we&#39;re safe to proceed</span>
+<span class="w">      </span><span class="n">GREEN</span><span class="p">(</span><span class="n">SIG3_STN_EX</span><span class="p">)</span><span class="w">          </span><span class="c1">// Set signal 2 green because we&#39;re safe to proceed</span>
+<span class="w">    </span><span class="n">DONE</span>
 </code></pre></div>
 <h2 id="fully-automated-layout">Fully automated layout<a class="headerlink" href="#fully-automated-layout" title="Permanent link">&para;</a></h2>
 <p>Now it's time to display the full automation capabilities by setting our layout up for fully automated control of your trains.</p>
-<p>You will note that these are somewhat similar to <mark>TODO</mark> <code>exrail/examples:multiple inter-connected trains</code>, updated to suit the specifics of the RMFT layout.</p>
+<p>You will note that these are somewhat similar to <a href="../../driving-trains/passing-loop/">Passing loop shuttle</a>, updated to suit the specifics of the RMFT layout.</p>
 <p>To setup for these fully automated sequences, we need to ensure our trains are placed in the below positions, noting that <strong>EXRAIL</strong> has no way of knowing where a train is on the layout when first starting.</p>
 <ul>
 <li>Train 1 in block 1, between sensor 1 and <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnout</abbr>/point 1.</li>
@@ -10406,8 +10433,8 @@
 <p>As mentioned in the introduction, we can enable fully automated running of up to three trains on this layout by breaking it into four virtual blocks.</p>
 <div class="admonition note">
 <p class="admonition-title">virtual blocks</p>
-</div>
 <p>Remember, these are virtual blocks, and do not necessarily need to be electrically isolated from each other. Don't confuse isolated blocks of track or block occupancy detection with these virtual blocks. For further background, refer to <mark>TODO</mark> <code>exrail/exrail-command-reference:virtual block control</code>.</p>
+</div>
 <p>When reading through the sections below on the logic, it helps to keep in mind the perspective of the engineer driving the train, rather than thinking of the complete layout. As the engineer, you need to ask yourself the question "what needs to be in place for me to safely drive this train to the desired destination?"</p>
 <p>The automation is accomplished by defining six separate sequences that map out how trains can move safely from one block to the next, and we also use <code>LATCH()</code> as a technique to alternate between trains stopping at the station or continuing on the main track.</p>
 <h3 id="full-automation-startup-sequence">Full automation startup sequence<a class="headerlink" href="#full-automation-startup-sequence" title="Permanent link">&para;</a></h3>
@@ -10416,23 +10443,23 @@
 <p>Therefore, once again we ensure both our <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnouts</abbr>/points are closed and our signals are set to red so these objects are all in a known state to start with.</p>
 <p>Next, we place a RESERVE() on each block a train occupies, which will prevent any sequence from driving another train into that block.</p>
 <p>Once these activities have been done, we can tell our trains to start following the appropriate sequence, which will let them start on their fully automated journey safely.</p>
-<div class="language-cpp highlight"><pre><span></span><code><span class="w">      </span><span class="c1">// Start up with turnouts/points closed and signals red</span>
-<span class="w">      </span><span class="n">CLOSE</span><span class="p">(</span><span class="n">TRN1</span><span class="p">)</span>
-<span class="w">      </span><span class="n">CLOSE</span><span class="p">(</span><span class="n">TRN2</span><span class="p">)</span>
-<span class="w">      </span><span class="n">RED</span><span class="p">(</span><span class="n">SIG1_TRN1_APP</span><span class="p">)</span>
-<span class="w">      </span><span class="n">RED</span><span class="p">(</span><span class="n">SIG2_TRN2_GO</span><span class="p">)</span>
-<span class="w">      </span><span class="n">RED</span><span class="p">(</span><span class="n">SIG3_STN_EX</span><span class="p">)</span>
+<div class="language-cpp highlight"><pre><span></span><code><span class="w">    </span><span class="c1">// Start up with turnouts/points closed and signals red</span>
+<span class="w">    </span><span class="n">CLOSE</span><span class="p">(</span><span class="n">TRN1</span><span class="p">)</span>
+<span class="w">    </span><span class="n">CLOSE</span><span class="p">(</span><span class="n">TRN2</span><span class="p">)</span>
+<span class="w">    </span><span class="n">RED</span><span class="p">(</span><span class="n">SIG1_TRN1_APP</span><span class="p">)</span>
+<span class="w">    </span><span class="n">RED</span><span class="p">(</span><span class="n">SIG2_TRN2_GO</span><span class="p">)</span>
+<span class="w">    </span><span class="n">RED</span><span class="p">(</span><span class="n">SIG3_STN_EX</span><span class="p">)</span>
 
-<span class="w">      </span><span class="c1">// Send three locos around our layout:</span>
-<span class="w">      </span><span class="n">RESERVE</span><span class="p">(</span><span class="n">BLK1_TRN1_APP</span><span class="p">)</span>
-<span class="w">      </span><span class="n">RESERVE</span><span class="p">(</span><span class="n">BLK2_MAIN_HOLD</span><span class="p">)</span>
-<span class="w">      </span><span class="n">RESERVE</span><span class="p">(</span><span class="n">BLK4_TRN2_EX</span><span class="p">)</span>
-<span class="w">      </span><span class="n">SENDLOCO</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">BLK1_EXIT</span><span class="p">)</span>
-<span class="w">      </span><span class="n">SENDLOCO</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="n">BLK2_BLK4</span><span class="p">)</span>
-<span class="w">      </span><span class="n">SENDLOCO</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="n">BLK4_BLK1</span><span class="p">)</span>
+<span class="w">    </span><span class="c1">// Send three locos around our layout:</span>
+<span class="w">    </span><span class="n">RESERVE</span><span class="p">(</span><span class="n">BLK1_TRN1_APP</span><span class="p">)</span>
+<span class="w">    </span><span class="n">RESERVE</span><span class="p">(</span><span class="n">BLK2_MAIN_HOLD</span><span class="p">)</span>
+<span class="w">    </span><span class="n">RESERVE</span><span class="p">(</span><span class="n">BLK4_TRN2_EX</span><span class="p">)</span>
+<span class="w">    </span><span class="n">SENDLOCO</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">BLK1_EXIT</span><span class="p">)</span>
+<span class="w">    </span><span class="n">SENDLOCO</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="n">BLK2_BLK4</span><span class="p">)</span>
+<span class="w">    </span><span class="n">SENDLOCO</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="n">BLK4_BLK1</span><span class="p">)</span>
 
-<span class="w">      </span><span class="c1">// We need DONE to tell EXRAIL not to automatically proceed beyond definitions above</span>
-<span class="w">      </span><span class="n">DONE</span>
+<span class="w">    </span><span class="c1">// We need DONE to tell EXRAIL not to automatically proceed beyond definitions above</span>
+<span class="w">    </span><span class="n">DONE</span>
 </code></pre></div>
 <h3 id="exiting-block-1-station-entry-or-main-track">Exiting block 1 - station entry or main track?<a class="headerlink" href="#exiting-block-1-station-entry-or-main-track" title="Permanent link">&para;</a></h3>
 <p>In order to safely exit block 1, the first decision to be made is if the train will go straight through to continue on the main track, or if it will switch on to the station siding.</p>
@@ -10441,15 +10468,15 @@
 <p>This logic allows us to follow our block 1 to block 3 sequence (if false) to switch onto the station siding, or follow our block 1 to block 2 sequence (if true) to continue on the main track.</p>
 <p>On startup, we are sending train 1 on this sequence, which means with our <code>IF(CHOOSE_BLK2)</code> returning false on startup, train 1 will first attempt to move from block 1 to block 3, which means switching to our station siding. Control at this point is handed over to the <a href="#moving-from-block-1-to-block-3-entering-the-station">moving from block 1 to block 3 - entering the station</a> sequence.</p>
 <p>As a result of executing the <code>LATCH(CHOOSE_BLK2)</code>, the next train navigating this block will instead have control handed over to the <a href="#moving-from-block-2-to-block-4-continue-on-the-main-track">moving from block 1 to block 2 - continue on the main track</a> sequence.</p>
-<div class="language-cpp highlight"><pre><span></span><code><span class="w">      </span><span class="c1">// Sequence to exit block 1, and choose whether to go to the station or continue on main</span>
-<span class="w">      </span><span class="n">SEQUENCE</span><span class="p">(</span><span class="n">BLK1_EXIT</span><span class="p">)</span>
-<span class="w">        </span><span class="n">IF</span><span class="p">(</span><span class="n">CHOOSE_BLK2</span><span class="p">)</span>
-<span class="w">          </span><span class="n">UNLATCH</span><span class="p">(</span><span class="n">CHOOSE_BLK2</span><span class="p">)</span>
-<span class="w">          </span><span class="n">FOLLOW</span><span class="p">(</span><span class="n">BLK1_BLK2</span><span class="p">)</span>
-<span class="w">        </span><span class="n">ELSE</span>
-<span class="w">          </span><span class="n">LATCH</span><span class="p">(</span><span class="n">CHOOSE_BLK2</span><span class="p">)</span>
-<span class="w">          </span><span class="n">FOLLOW</span><span class="p">(</span><span class="n">BLK1_BLK3</span><span class="p">)</span>
-<span class="w">        </span><span class="n">ENDIF</span>
+<div class="language-cpp highlight"><pre><span></span><code><span class="w">    </span><span class="c1">// Sequence to exit block 1, and choose whether to go to the station or continue on main</span>
+<span class="w">    </span><span class="n">SEQUENCE</span><span class="p">(</span><span class="n">BLK1_EXIT</span><span class="p">)</span>
+<span class="w">      </span><span class="n">IF</span><span class="p">(</span><span class="n">CHOOSE_BLK2</span><span class="p">)</span>
+<span class="w">        </span><span class="n">UNLATCH</span><span class="p">(</span><span class="n">CHOOSE_BLK2</span><span class="p">)</span>
+<span class="w">        </span><span class="n">FOLLOW</span><span class="p">(</span><span class="n">BLK1_BLK2</span><span class="p">)</span>
+<span class="w">      </span><span class="n">ELSE</span>
+<span class="w">        </span><span class="n">LATCH</span><span class="p">(</span><span class="n">CHOOSE_BLK2</span><span class="p">)</span>
+<span class="w">        </span><span class="n">FOLLOW</span><span class="p">(</span><span class="n">BLK1_BLK3</span><span class="p">)</span>
+<span class="w">      </span><span class="n">ENDIF</span>
 </code></pre></div>
 <h3 id="moving-from-block-1-to-block-2-continue-on-the-main-track">Moving from block 1 to block 2 - continue on the main track<a class="headerlink" href="#moving-from-block-1-to-block-2-continue-on-the-main-track" title="Permanent link">&para;</a></h3>
 <p>To move from block 1 to block 2, the first thing we need to know is if it's safe to do so.</p>
@@ -10458,21 +10485,21 @@
 <p>Once the <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnout</abbr>/point is closed, or if it already was, we set our signal green <code>GREEN(SIG1_TRN1_APP)</code> and tell the train to proceed at speed 20 <code>FWD(20)</code>. The speed is relatively slow given the train is likely to need to stop again before being able to move beyond <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnout</abbr>/point 2.</p>
 <p>Then, after the train has not only activated sensor 2, but has passed over it completely and allowed it to deactivate for 0.5 seconds <code>AFTER(SNS2_MAIN_TRN1_EX)</code>, the reservation on block 1 can be released <code>FREE(BLK1_TRN1_APP)</code>, meaning the next train needing to enter block 1 can do so.</p>
 <p>At this point, control of the train is handed over to the <a href="#moving-from-block-2-to-block-4-continue-on-the-main-track">moving from block 2 to block 4 - continue on the main track</a> sequence.</p>
-<div class="language-cpp highlight"><pre><span></span><code><span class="w">    </span><span class="c1">// Sequence to go from block 1 to block 2</span>
-<span class="w">    </span><span class="n">SEQUENCE</span><span class="p">(</span><span class="n">BLK1_BLK2</span><span class="p">)</span>
-<span class="w">      </span><span class="n">RESERVE</span><span class="p">(</span><span class="n">BLK2_MAIN_HOLD</span><span class="p">)</span>
-<span class="w">      </span><span class="n">IFTHROWN</span><span class="p">(</span><span class="n">TRN1</span><span class="p">)</span>
-<span class="w">        </span><span class="n">AMBER</span><span class="p">(</span><span class="n">SIG1_TRN1_APP</span><span class="p">)</span>
-<span class="w">        </span><span class="n">DELAY</span><span class="p">(</span><span class="mi">2000</span><span class="p">)</span>
-<span class="w">        </span><span class="n">RED</span><span class="p">(</span><span class="n">SIG1_TRN1_APP</span><span class="p">)</span>
-<span class="w">        </span><span class="n">CLOSE</span><span class="p">(</span><span class="n">TRN1</span><span class="p">)</span>
-<span class="w">        </span><span class="n">DELAY</span><span class="p">(</span><span class="mi">2000</span><span class="p">)</span>
-<span class="w">      </span><span class="n">ENDIF</span>
-<span class="w">      </span><span class="n">GREEN</span><span class="p">(</span><span class="n">SIG1_TRN1_APP</span><span class="p">)</span>
-<span class="w">      </span><span class="n">FWD</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span>
-<span class="w">      </span><span class="n">AFTER</span><span class="p">(</span><span class="n">SNS2_MAIN_TRN1_EX</span><span class="p">)</span>
-<span class="w">      </span><span class="n">FREE</span><span class="p">(</span><span class="n">BLK1_TRN1_APP</span><span class="p">)</span>
-<span class="w">      </span><span class="n">FOLLOW</span><span class="p">(</span><span class="n">BLK2_BLK4</span><span class="p">)</span>
+<div class="language-cpp highlight"><pre><span></span><code><span class="w">  </span><span class="c1">// Sequence to go from block 1 to block 2</span>
+<span class="w">  </span><span class="n">SEQUENCE</span><span class="p">(</span><span class="n">BLK1_BLK2</span><span class="p">)</span>
+<span class="w">    </span><span class="n">RESERVE</span><span class="p">(</span><span class="n">BLK2_MAIN_HOLD</span><span class="p">)</span>
+<span class="w">    </span><span class="n">IFTHROWN</span><span class="p">(</span><span class="n">TRN1</span><span class="p">)</span>
+<span class="w">      </span><span class="n">AMBER</span><span class="p">(</span><span class="n">SIG1_TRN1_APP</span><span class="p">)</span>
+<span class="w">      </span><span class="n">DELAY</span><span class="p">(</span><span class="mi">2000</span><span class="p">)</span>
+<span class="w">      </span><span class="n">RED</span><span class="p">(</span><span class="n">SIG1_TRN1_APP</span><span class="p">)</span>
+<span class="w">      </span><span class="n">CLOSE</span><span class="p">(</span><span class="n">TRN1</span><span class="p">)</span>
+<span class="w">      </span><span class="n">DELAY</span><span class="p">(</span><span class="mi">2000</span><span class="p">)</span>
+<span class="w">    </span><span class="n">ENDIF</span>
+<span class="w">    </span><span class="n">GREEN</span><span class="p">(</span><span class="n">SIG1_TRN1_APP</span><span class="p">)</span>
+<span class="w">    </span><span class="n">FWD</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span>
+<span class="w">    </span><span class="n">AFTER</span><span class="p">(</span><span class="n">SNS2_MAIN_TRN1_EX</span><span class="p">)</span>
+<span class="w">    </span><span class="n">FREE</span><span class="p">(</span><span class="n">BLK1_TRN1_APP</span><span class="p">)</span>
+<span class="w">    </span><span class="n">FOLLOW</span><span class="p">(</span><span class="n">BLK2_BLK4</span><span class="p">)</span>
 </code></pre></div>
 <h3 id="moving-from-block-1-to-block-3-entering-the-station">Moving from block 1 to block 3 - entering the station<a class="headerlink" href="#moving-from-block-1-to-block-3-entering-the-station" title="Permanent link">&para;</a></h3>
 <p>To move from block 1 to block 3, we again use <code>RESERVE()</code>.</p>
@@ -10480,84 +10507,84 @@
 <p>Once the <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnout</abbr>/point is thrown, or if it already was, we set our signal green and tell the train to proceed at a very leisurely speed of 10 <code>FWD(10)</code> as we need to be cautious approaching the station.</p>
 <p>The train needs to <code>STOP</code> at the appropriate point on the station <code>AT(SNS3_STN)</code>, at which point the reservation on block 1 can be released as we no longer occupy it <code>FREE(BLK1_TRN1_APP)</code> and it's safe for another train to enter that block.</p>
 <p>There is now a delay of 10 to 15 seconds while our passengers embark or disembark <code>DELAYRANDOM(10000, 15000)</code>, before moving off again at low speed <code>FWD(10)</code> until sensor 5 is reached <code>AT(SNS5_STN_TRN2_APP)</code>, at which point the control of the train is over to the <a href="#moving-from-block-3-to-block-4-exiting-the-station-siding">moving from block 3 to block 4 - exiting the station siding</a> sequence.</p>
-<div class="language-cpp highlight"><pre><span></span><code><span class="w">      </span><span class="c1">// Sequence to go from block 1 to block 3</span>
-<span class="w">      </span><span class="n">SEQUENCE</span><span class="p">(</span><span class="n">BLK1_BLK3</span><span class="p">)</span>
-<span class="w">        </span><span class="n">RESERVE</span><span class="p">(</span><span class="n">BLK3_STN</span><span class="p">)</span>
-<span class="w">        </span><span class="n">IFCLOSED</span><span class="p">(</span><span class="n">TRN1</span><span class="p">)</span>
-<span class="w">          </span><span class="n">AMBER</span><span class="p">(</span><span class="n">SIG1_TRN1_APP</span><span class="p">)</span>
-<span class="w">          </span><span class="n">DELAY</span><span class="p">(</span><span class="mi">2000</span><span class="p">)</span>
-<span class="w">          </span><span class="n">RED</span><span class="p">(</span><span class="n">SIG1_TRN1_APP</span><span class="p">)</span>
-<span class="w">          </span><span class="n">THROW</span><span class="p">(</span><span class="n">TRN1</span><span class="p">)</span>
-<span class="w">          </span><span class="n">DELAY</span><span class="p">(</span><span class="mi">2000</span><span class="p">)</span>
-<span class="w">        </span><span class="n">ENDIF</span>
-<span class="w">        </span><span class="n">GREEN</span><span class="p">(</span><span class="n">SIG1_TRN1_APP</span><span class="p">)</span>
-<span class="w">        </span><span class="n">FWD</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
-<span class="w">        </span><span class="n">AT</span><span class="p">(</span><span class="n">SNS3_STN</span><span class="p">)</span>
-<span class="w">        </span><span class="n">STOP</span>
-<span class="w">        </span><span class="n">FREE</span><span class="p">(</span><span class="n">BLK1_TRN1_APP</span><span class="p">)</span>
-<span class="w">        </span><span class="n">DELAYRANDOM</span><span class="p">(</span><span class="mi">10000</span><span class="p">,</span><span class="w"> </span><span class="mi">15000</span><span class="p">)</span>
-<span class="w">        </span><span class="n">FWD</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
-<span class="w">        </span><span class="n">AT</span><span class="p">(</span><span class="n">SNS5_STN_TRN2_APP</span><span class="p">)</span>
-<span class="w">        </span><span class="n">FOLLOW</span><span class="p">(</span><span class="n">BLK3_BLK4</span><span class="p">)</span>
+<div class="language-cpp highlight"><pre><span></span><code><span class="w">    </span><span class="c1">// Sequence to go from block 1 to block 3</span>
+<span class="w">    </span><span class="n">SEQUENCE</span><span class="p">(</span><span class="n">BLK1_BLK3</span><span class="p">)</span>
+<span class="w">      </span><span class="n">RESERVE</span><span class="p">(</span><span class="n">BLK3_STN</span><span class="p">)</span>
+<span class="w">      </span><span class="n">IFCLOSED</span><span class="p">(</span><span class="n">TRN1</span><span class="p">)</span>
+<span class="w">        </span><span class="n">AMBER</span><span class="p">(</span><span class="n">SIG1_TRN1_APP</span><span class="p">)</span>
+<span class="w">        </span><span class="n">DELAY</span><span class="p">(</span><span class="mi">2000</span><span class="p">)</span>
+<span class="w">        </span><span class="n">RED</span><span class="p">(</span><span class="n">SIG1_TRN1_APP</span><span class="p">)</span>
+<span class="w">        </span><span class="n">THROW</span><span class="p">(</span><span class="n">TRN1</span><span class="p">)</span>
+<span class="w">        </span><span class="n">DELAY</span><span class="p">(</span><span class="mi">2000</span><span class="p">)</span>
+<span class="w">      </span><span class="n">ENDIF</span>
+<span class="w">      </span><span class="n">GREEN</span><span class="p">(</span><span class="n">SIG1_TRN1_APP</span><span class="p">)</span>
+<span class="w">      </span><span class="n">FWD</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+<span class="w">      </span><span class="n">AT</span><span class="p">(</span><span class="n">SNS3_STN</span><span class="p">)</span>
+<span class="w">      </span><span class="n">STOP</span>
+<span class="w">      </span><span class="n">FREE</span><span class="p">(</span><span class="n">BLK1_TRN1_APP</span><span class="p">)</span>
+<span class="w">      </span><span class="n">DELAYRANDOM</span><span class="p">(</span><span class="mi">10000</span><span class="p">,</span><span class="w"> </span><span class="mi">15000</span><span class="p">)</span>
+<span class="w">      </span><span class="n">FWD</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+<span class="w">      </span><span class="n">AT</span><span class="p">(</span><span class="n">SNS5_STN_TRN2_APP</span><span class="p">)</span>
+<span class="w">      </span><span class="n">FOLLOW</span><span class="p">(</span><span class="n">BLK3_BLK4</span><span class="p">)</span>
 </code></pre></div>
 <h3 id="moving-from-block-2-to-block-4-continue-on-the-main-track">Moving from block 2 to block 4 - continue on the main track<a class="headerlink" href="#moving-from-block-2-to-block-4-continue-on-the-main-track" title="Permanent link">&para;</a></h3>
 <p>There are no new concepts here compared with our previous virtual block sequences, and we again need to ensure block 4 is free prior to entering it, then ensure our signals and <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnout</abbr>/point are set correctly, and once again after leaving block 2 <code>AFTER(SNS4_MAIN_TRN2_APP)</code> we free block 2 in order for the next train to be able to safely enter it.</p>
 <p>Once done, train control is over to the <a href="#moving-from-block-4-to-block-1-the-speed-run">moving from block 4 to block 1 - the speed run</a> sequence.</p>
 <div class="admonition note">
 <p class="admonition-title">start with train 2 occupying block 2</p>
-</div>
 <p>Note that we start with train 2 occupying block 2, and train 3 occupying block 4 (both with a <code>RESERVE()</code> in place as part of our startup sequence) and therefore train 2 cannot proceed until train 3 has exited block 4.</p>
 <p>Also on startup, train 1 is occupying block 1 (with a <code>RESERVE()</code> in place as part of our startup sequence), and therefore until train 1 exits block 1, train 3 cannot enter block 1.</p>
 <p>This creates a domino effect whereby train 1's exit of block 1 is needed in order for train 3 to enter block 1, and likewise for train 3 to exit block 4 in order for train 2 to enter block 4. The trains will then follow the sequences around the layout accordingly.</p>
-<div class="language-cpp highlight"><pre><span></span><code><span class="w">      </span><span class="c1">// Sequence to go from block 2 to block 4</span>
-<span class="w">      </span><span class="n">SEQUENCE</span><span class="p">(</span><span class="n">BLK2_BLK4</span><span class="p">)</span>
-<span class="w">        </span><span class="n">RESERVE</span><span class="p">(</span><span class="n">BLK4_TRN2_EX</span><span class="p">)</span>
-<span class="w">        </span><span class="n">IFTHROWN</span><span class="p">(</span><span class="n">TRN2</span><span class="p">)</span>
-<span class="w">          </span><span class="n">AMBER</span><span class="p">(</span><span class="n">SIG2_TRN2_GO</span><span class="p">)</span>
-<span class="w">          </span><span class="n">AMBER</span><span class="p">(</span><span class="n">SIG3_STN_EX</span><span class="p">)</span>
-<span class="w">          </span><span class="n">DELAY</span><span class="p">(</span><span class="mi">2000</span><span class="p">)</span>
-<span class="w">          </span><span class="n">RED</span><span class="p">(</span><span class="n">SIG2_TRN2_GO</span><span class="p">)</span>
-<span class="w">          </span><span class="n">RED</span><span class="p">(</span><span class="n">SIG3_STN_EX</span><span class="p">)</span>
-<span class="w">          </span><span class="n">CLOSE</span><span class="p">(</span><span class="n">TRN2</span><span class="p">)</span>
-<span class="w">          </span><span class="n">DELAY</span><span class="p">(</span><span class="mi">2000</span><span class="p">)</span>
-<span class="w">        </span><span class="n">ENDIF</span>
-<span class="w">        </span><span class="n">GREEN</span><span class="p">(</span><span class="n">SIG2_TRN2_GO</span><span class="p">)</span>
-<span class="w">        </span><span class="n">FWD</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span>
-<span class="w">        </span><span class="n">AFTER</span><span class="p">(</span><span class="n">SNS4_MAIN_TRN2_APP</span><span class="p">)</span>
-<span class="w">        </span><span class="n">FREE</span><span class="p">(</span><span class="n">BLK2_MAIN_HOLD</span><span class="p">)</span>
-<span class="w">        </span><span class="n">FOLLOW</span><span class="p">(</span><span class="n">BLK4_BLK1</span><span class="p">)</span>
+</div>
+<div class="language-cpp highlight"><pre><span></span><code><span class="w">    </span><span class="c1">// Sequence to go from block 2 to block 4</span>
+<span class="w">    </span><span class="n">SEQUENCE</span><span class="p">(</span><span class="n">BLK2_BLK4</span><span class="p">)</span>
+<span class="w">      </span><span class="n">RESERVE</span><span class="p">(</span><span class="n">BLK4_TRN2_EX</span><span class="p">)</span>
+<span class="w">      </span><span class="n">IFTHROWN</span><span class="p">(</span><span class="n">TRN2</span><span class="p">)</span>
+<span class="w">        </span><span class="n">AMBER</span><span class="p">(</span><span class="n">SIG2_TRN2_GO</span><span class="p">)</span>
+<span class="w">        </span><span class="n">AMBER</span><span class="p">(</span><span class="n">SIG3_STN_EX</span><span class="p">)</span>
+<span class="w">        </span><span class="n">DELAY</span><span class="p">(</span><span class="mi">2000</span><span class="p">)</span>
+<span class="w">        </span><span class="n">RED</span><span class="p">(</span><span class="n">SIG2_TRN2_GO</span><span class="p">)</span>
+<span class="w">        </span><span class="n">RED</span><span class="p">(</span><span class="n">SIG3_STN_EX</span><span class="p">)</span>
+<span class="w">        </span><span class="n">CLOSE</span><span class="p">(</span><span class="n">TRN2</span><span class="p">)</span>
+<span class="w">        </span><span class="n">DELAY</span><span class="p">(</span><span class="mi">2000</span><span class="p">)</span>
+<span class="w">      </span><span class="n">ENDIF</span>
+<span class="w">      </span><span class="n">GREEN</span><span class="p">(</span><span class="n">SIG2_TRN2_GO</span><span class="p">)</span>
+<span class="w">      </span><span class="n">FWD</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span>
+<span class="w">      </span><span class="n">AFTER</span><span class="p">(</span><span class="n">SNS4_MAIN_TRN2_APP</span><span class="p">)</span>
+<span class="w">      </span><span class="n">FREE</span><span class="p">(</span><span class="n">BLK2_MAIN_HOLD</span><span class="p">)</span>
+<span class="w">      </span><span class="n">FOLLOW</span><span class="p">(</span><span class="n">BLK4_BLK1</span><span class="p">)</span>
 </code></pre></div>
 <h3 id="moving-from-block-3-to-block-4-exiting-the-station-siding">Moving from block 3 to block 4 - exiting the station siding<a class="headerlink" href="#moving-from-block-3-to-block-4-exiting-the-station-siding" title="Permanent link">&para;</a></h3>
 <p>Leaving the station siding is another repeat of the same logic, ensuring block 4 is free to enter, our signals and <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnout</abbr>/point are set correctly, and again freeing block 3 after we leave it <code>AFTER(SNS5_STN_TRN2_APP)</code>.</p>
 <p>Control is then handed over to the <a href="#moving-from-block-4-to-block-1-the-speed-run">moving from block 4 to block 1 - the speed run</a> sequence.</p>
-<div class="language-cpp highlight"><pre><span></span><code><span class="w">      </span><span class="c1">// Sequence to go from block 3 to block 4</span>
-<span class="w">      </span><span class="n">SEQUENCE</span><span class="p">(</span><span class="n">BLK3_BLK4</span><span class="p">)</span>
-<span class="w">        </span><span class="n">RESERVE</span><span class="p">(</span><span class="n">BLK4_TRN2_EX</span><span class="p">)</span>
-<span class="w">        </span><span class="n">IFCLOSED</span><span class="p">(</span><span class="n">TRN2</span><span class="p">)</span>
-<span class="w">          </span><span class="n">AMBER</span><span class="p">(</span><span class="n">SIG2_TRN2_GO</span><span class="p">)</span>
-<span class="w">          </span><span class="n">AMBER</span><span class="p">(</span><span class="n">SIG3_STN_EX</span><span class="p">)</span>
-<span class="w">          </span><span class="n">DELAY</span><span class="p">(</span><span class="mi">2000</span><span class="p">)</span>
-<span class="w">          </span><span class="n">RED</span><span class="p">(</span><span class="n">SIG2_TRN2_GO</span><span class="p">)</span>
-<span class="w">          </span><span class="n">RED</span><span class="p">(</span><span class="n">SIG3_STN_EX</span><span class="p">)</span>
-<span class="w">          </span><span class="n">THROW</span><span class="p">(</span><span class="n">TRN2</span><span class="p">)</span>
-<span class="w">          </span><span class="n">DELAY</span><span class="p">(</span><span class="mi">2000</span><span class="p">)</span>
-<span class="w">        </span><span class="n">ENDIF</span>
-<span class="w">        </span><span class="n">GREEN</span><span class="p">(</span><span class="n">SIG3_STN_EX</span><span class="p">)</span>
-<span class="w">        </span><span class="n">FWD</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span>
-<span class="w">        </span><span class="n">AFTER</span><span class="p">(</span><span class="n">SNS5_STN_TRN2_APP</span><span class="p">)</span>
-<span class="w">        </span><span class="n">FREE</span><span class="p">(</span><span class="n">BLK3_STN</span><span class="p">)</span>
-<span class="w">        </span><span class="n">FOLLOW</span><span class="p">(</span><span class="n">BLK4_BLK1</span><span class="p">)</span>
+<div class="language-cpp highlight"><pre><span></span><code><span class="w">    </span><span class="c1">// Sequence to go from block 3 to block 4</span>
+<span class="w">    </span><span class="n">SEQUENCE</span><span class="p">(</span><span class="n">BLK3_BLK4</span><span class="p">)</span>
+<span class="w">      </span><span class="n">RESERVE</span><span class="p">(</span><span class="n">BLK4_TRN2_EX</span><span class="p">)</span>
+<span class="w">      </span><span class="n">IFCLOSED</span><span class="p">(</span><span class="n">TRN2</span><span class="p">)</span>
+<span class="w">        </span><span class="n">AMBER</span><span class="p">(</span><span class="n">SIG2_TRN2_GO</span><span class="p">)</span>
+<span class="w">        </span><span class="n">AMBER</span><span class="p">(</span><span class="n">SIG3_STN_EX</span><span class="p">)</span>
+<span class="w">        </span><span class="n">DELAY</span><span class="p">(</span><span class="mi">2000</span><span class="p">)</span>
+<span class="w">        </span><span class="n">RED</span><span class="p">(</span><span class="n">SIG2_TRN2_GO</span><span class="p">)</span>
+<span class="w">        </span><span class="n">RED</span><span class="p">(</span><span class="n">SIG3_STN_EX</span><span class="p">)</span>
+<span class="w">        </span><span class="n">THROW</span><span class="p">(</span><span class="n">TRN2</span><span class="p">)</span>
+<span class="w">        </span><span class="n">DELAY</span><span class="p">(</span><span class="mi">2000</span><span class="p">)</span>
+<span class="w">      </span><span class="n">ENDIF</span>
+<span class="w">      </span><span class="n">GREEN</span><span class="p">(</span><span class="n">SIG3_STN_EX</span><span class="p">)</span>
+<span class="w">      </span><span class="n">FWD</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span>
+<span class="w">      </span><span class="n">AFTER</span><span class="p">(</span><span class="n">SNS5_STN_TRN2_APP</span><span class="p">)</span>
+<span class="w">      </span><span class="n">FREE</span><span class="p">(</span><span class="n">BLK3_STN</span><span class="p">)</span>
+<span class="w">      </span><span class="n">FOLLOW</span><span class="p">(</span><span class="n">BLK4_BLK1</span><span class="p">)</span>
 </code></pre></div>
 <h3 id="moving-from-block-4-to-block-1-the-speed-run">Moving from block 4 to block 1 - the speed run<a class="headerlink" href="#moving-from-block-4-to-block-1-the-speed-run" title="Permanent link">&para;</a></h3>
 <p>The final sequence is the simplest of all, and allows for a higher speed run through block 4 <code>FWD(40)</code> (providing block 1 is free to enter), again freeing up block 4 once we've exited it <code>AFTER(SNS1_TRN1_APP)</code>, and then finally handing control back to our original <a href="#exiting-block-1-station-entry-or-main-track">exiting block 1 - station entry or main track?</a> decision sequence.</p>
 <p>Again, we start up with train 3 occupying block 4, and once train 1 has exited block 1, the sequence below will execute, with train 3 moving to block 1, and train 2 being able to exit block 2.</p>
-<div class="language-cpp highlight"><pre><span></span><code><span class="w">      </span><span class="c1">// Sequence to move from block 4 back to block 1</span>
-<span class="w">      </span><span class="n">SEQUENCE</span><span class="p">(</span><span class="n">BLK4_BLK1</span><span class="p">)</span>
-<span class="w">        </span><span class="n">RESERVE</span><span class="p">(</span><span class="n">BLK1_TRN1_APP</span><span class="p">)</span>
-<span class="w">        </span><span class="n">FWD</span><span class="p">(</span><span class="mi">40</span><span class="p">)</span>
-<span class="w">        </span><span class="n">AFTER</span><span class="p">(</span><span class="n">SNS1_TRN1_APP</span><span class="p">)</span>
-<span class="w">        </span><span class="n">FREE</span><span class="p">(</span><span class="n">BLK4_TRN2_EX</span><span class="p">)</span>
-<span class="w">        </span><span class="n">FOLLOW</span><span class="p">(</span><span class="n">BLK1_EXIT</span><span class="p">)</span>
+<div class="language-cpp highlight"><pre><span></span><code><span class="w">    </span><span class="c1">// Sequence to move from block 4 back to block 1</span>
+<span class="w">    </span><span class="n">SEQUENCE</span><span class="p">(</span><span class="n">BLK4_BLK1</span><span class="p">)</span>
+<span class="w">      </span><span class="n">RESERVE</span><span class="p">(</span><span class="n">BLK1_TRN1_APP</span><span class="p">)</span>
+<span class="w">      </span><span class="n">FWD</span><span class="p">(</span><span class="mi">40</span><span class="p">)</span>
+<span class="w">      </span><span class="n">AFTER</span><span class="p">(</span><span class="n">SNS1_TRN1_APP</span><span class="p">)</span>
+<span class="w">      </span><span class="n">FREE</span><span class="p">(</span><span class="n">BLK4_TRN2_EX</span><span class="p">)</span>
+<span class="w">      </span><span class="n">FOLLOW</span><span class="p">(</span><span class="n">BLK1_EXIT</span><span class="p">)</span>
 </code></pre></div>
 <h2 id="learnings-from-stage-1">Learnings from stage 1<a class="headerlink" href="#learnings-from-stage-1" title="Permanent link">&para;</a></h2>
 <p>No doubt, as you've read through this fairly lengthy stage 1 page, you've already noted a number of commonalities between all variations of myAutomation.h, regardless of the way we have defined the various objects, and hopefully you've picked up a few tips and techniques to help you on your <strong>DCC-EX</strong> and <strong>EXRAIL</strong> journey.</p>
@@ -10599,7 +10626,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 30, 2026 06:46:26 UTC">June 30, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="August 7, 2026 03:44:38 UTC">August 7, 2026</span>
   </span>
 
     

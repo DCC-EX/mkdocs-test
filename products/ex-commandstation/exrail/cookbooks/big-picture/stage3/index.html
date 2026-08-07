@@ -5940,6 +5940,8 @@
       
         
       
+        
+      
     
     
     
@@ -6263,7 +6265,7 @@
   
   
   <span class="md-ellipsis">
-    <br/>Configure WiFi <small><small>(EX-CSB1&nbsp;&amp;&nbsp;ESP32&nbsp;v5.7.0+)</small></small>
+    <br/>Configure WiFi <small><small>(EX-CSB1&nbsp;&amp;&nbsp;ESP32&nbsp;v5.7.0+%nbsp;Only)</small></small>
     
   </span>
   
@@ -6287,6 +6289,29 @@
   
   <span class="md-ellipsis">
     Test Your Installation<br>
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../installer/manage-config-files/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    <br/>Manage Config files<small><small> Saving&nbsp;&amp;&nbsp;Restoring</small></small>
     
   </span>
   
@@ -9789,7 +9814,7 @@
 <h2 id="notes">Notes<a class="headerlink" href="#notes" title="Permanent link">&para;</a></h2>
 <h3 id="tuning-servo-positions">Tuning servo positions<a class="headerlink" href="#tuning-servo-positions" title="Permanent link">&para;</a></h3>
 <p>An important item to note when configuring servo based <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnouts</abbr>/points and signals is that the angles provided are going to be unique to your layout, and possibly even be unique to each particular <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnout</abbr>/point or signal, depending on how they are mounted and physically connected.</p>
-<p>We provide some handy documentation on how to evaluate the correct angles on our <mark>TODO</mark> servo-module page.</p>
+<p>We provide some handy documentation on how to evaluate the correct angles on our <a href="../../../../accessories/i2c-servo-led-modules/">I2C Servo and LED Module</a> page.</p>
 <h3 id="turnoutpoint-object-ids"><abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">Turnout</abbr>/point object IDs<a class="headerlink" href="#turnoutpoint-object-ids" title="Permanent link">&para;</a></h3>
 <p>Throughout this exercise, we will be defining <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnout</abbr>/point objects, and for consistency will be using IDs in the range of 100 to 199 for these.</p>
 <p>This way, the various possible variations of each type of object will be defined with the same ID, meaning the same <strong>EXRAIL</strong> sequences will apply, no matter how the objects are defined.</p>
@@ -9799,10 +9824,10 @@
 <p>For help understanding linear vs. address/sub address formatting of DCC accessories, refer to the <mark>TODO</mark> 'reference/downloads/documents:stationary decoder address table (xlsx spreadsheet)'.</p>
 <div class="admonition note">
 <p class="admonition-title"><abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnout</abbr>/point IDs</p>
-</div>
 <p>When going through the various examples where we define DCC <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnouts</abbr>/points, you may notice that a <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnout</abbr>/point ID has a DCC linear address that is the same, or close to it. <strong>This is pure coincidence</strong>.</p>
 <p>A <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnout</abbr>/point ID has no direct relationship to a DCC linear address, so <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnout</abbr>/point ID 100 has no direct relationship to DCC address 100.</p>
 <p>Some people choose to ensure the <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnout</abbr>/point ID matches the DCC linear address when using DCC <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnouts</abbr>/points, but this is not necessary.</p>
+</div>
 <h2 id="sensor-types">Sensor types<a class="headerlink" href="#sensor-types" title="Permanent link">&para;</a></h2>
 <p>For simplicity, we will use infrared obstacle avoidance/proximity sensors throughout these exercises, which produce an active low output when activated.</p>
 <p>If you use different sensors that simply provide an active low or high output, then there should be no change required to the various automation sequences provided, except using a negative "-" for the sensor pin ID if the sensors are active high instead of active low.</p>
@@ -9821,8 +9846,10 @@
 </code></pre></div>
 <hr />
 <h2 id="adding-a-turnoutpoint">Adding a <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">Turnout</abbr>/Point<a class="headerlink" href="#adding-a-turnoutpoint" title="Permanent link">&para;</a></h2>
-<p>.. sidebar::</p>
-<p><mark>TODO</mark> You can also refer to :doc:<code>/reference/hardware/servo-module</code> for more information.</p>
+<div class="admonition tip inline end">
+<p class="admonition-title">Servo Module page</p>
+<p>You can also refer to <a href="../../../../accessories/i2c-servo-led-modules/">I2C Servo and LED Module</a> page for more information.</p>
+</div>
 <h3 id="adding-the-hardware-turnoutspoints">Adding the Hardware -  Turnouts/points<a class="headerlink" href="#adding-the-hardware-turnoutspoints" title="Permanent link">&para;</a></h3>
 <p>To connect a servo to <strong>EX-CommandStation</strong>, you first need to get a module, based on the PCA9685 chip.</p>
 <p><img alt="PCA9685 Servo Module" src="../../../../../../_static/images/i2c-devices/PCA9685.jpg" width="300px" /></p>
@@ -9850,7 +9877,7 @@
 </ul>
 <p>The SERVO_TURNOUT directive defines a servo based <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnout</abbr> in <strong>EXRAIL</strong>, which will appear in <abbr title="Communication Protocol. Trademark + iOS app owned by Brett Hoffman">WiThrottle</abbr> protocol apps, Engine Driver, and <abbr title="Java Model Railroad Interface">JMRI</abbr> in addition to being defined as a <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnout</abbr> within the CommandStation.</p>
 <p>As per the <strong>EXRAIL</strong> reference, <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnouts</abbr> are defined with the following syntax:</p>
-<div class="language-cpp highlight"><pre><span></span><code><span class="w">   </span><span class="n">SERVO_TURNOUT</span><span class="p">(</span><span class="n">id</span><span class="p">,</span><span class="w"> </span><span class="n">pin</span><span class="p">,</span><span class="w"> </span><span class="n">active_angle</span><span class="p">,</span><span class="w"> </span><span class="n">inactive_angle</span><span class="p">,</span><span class="w"> </span><span class="n">profile</span><span class="w"> </span><span class="p">[,</span><span class="w"> </span><span class="s">&quot;description&quot;</span><span class="p">])</span>
+<div class="language-cpp highlight"><pre><span></span><code><span class="w">    </span><span class="n">SERVO_TURNOUT</span><span class="p">(</span><span class="n">id</span><span class="p">,</span><span class="w"> </span><span class="n">pin</span><span class="p">,</span><span class="w"> </span><span class="n">active_angle</span><span class="p">,</span><span class="w"> </span><span class="n">inactive_angle</span><span class="p">,</span><span class="w"> </span><span class="n">profile</span><span class="w"> </span><span class="p">[,</span><span class="w"> </span><span class="s">&quot;description&quot;</span><span class="p">])</span>
 </code></pre></div>
 <p>The valid parameters are:</p>
 <ul>
@@ -9862,12 +9889,14 @@
 <li>description = A human-friendly description of the <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnout</abbr>/point that will appear in <abbr title="Communication Protocol. Trademark + iOS app owned by Brett Hoffman">WiThrottle</abbr> protocol apps including Engine Driver. Note that this must be enclosed in quotes "".</li>
 </ul>
 <p>An example definition for a servo connected to the second control pins of the first PCA9685 connected to the CommandStation, using the slow profile for prototypical operation:</p>
-<div class="language-cpp highlight"><pre><span></span><code><span class="w">   </span><span class="n">SERVO_TURNOUT</span><span class="p">(</span><span class="mi">200</span><span class="p">,</span><span class="w"> </span><span class="mi">101</span><span class="p">,</span><span class="w"> </span><span class="mi">450</span><span class="p">,</span><span class="w"> </span><span class="mi">110</span><span class="p">,</span><span class="w"> </span><span class="n">Slow</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Example slow turnout/point definition&quot;</span><span class="p">)</span>
+<div class="language-cpp highlight"><pre><span></span><code><span class="w">    </span><span class="n">SERVO_TURNOUT</span><span class="p">(</span><span class="mi">200</span><span class="p">,</span><span class="w"> </span><span class="mi">101</span><span class="p">,</span><span class="w"> </span><span class="mi">450</span><span class="p">,</span><span class="w"> </span><span class="mi">110</span><span class="p">,</span><span class="w"> </span><span class="n">Slow</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Example slow turnout/point definition&quot;</span><span class="p">)</span>
 </code></pre></div>
 <hr />
 <h2 id="adding-a-sensor">Adding a Sensor<a class="headerlink" href="#adding-a-sensor" title="Permanent link">&para;</a></h2>
-<p>.. sidebar::</p>
-<p><mark>TODO</mark> Alternate is to use a :doc:<code>/reference/hardware/gpio-module</code></p>
+<div class="admonition tip inline end">
+<p class="admonition-title">GPIO Expanders</p>
+</div>
+<p>Alternate is to use a <a href="../../../../accessories/i2c-gpio-expanders/">GPIO Expander</a></p>
 <p>IR sensors typically require three connections: 5V (or VCC), Ground, and output (OUT or S).</p>
 <p><img alt="IR Sensor microcontroller-boards" src="../../../../../../_static/images/sensors/ir-sensor.png" width="300px" /></p>
 <p>To add a sensor, simply connect VCC to 5V, GND to ground, and OUT (or S) to an available digital I/O pin on your <strong>EX-CommandStation</strong>. Typically D22 through to D49 are available for use.</p>
@@ -9877,8 +9906,10 @@
 <p>You don't actually require anything special to be configured in advance of using them in an automation.</p>
 <p>Use in automation as AT(DpinNo) or AT(-DpinNo)</p>
 <h2 id="adding-a-block">Adding a Block<a class="headerlink" href="#adding-a-block" title="Permanent link">&para;</a></h2>
-<p>.. sidebar::</p>
+<div class="admonition tip inline end">
+<p class="admonition-title">Virtual Block Control</p>
 <p>You can also refer to <mark>TODO</mark> <code>exrail/exrail-command-reference:virtual block control</code> for more information.</p>
+</div>
 <p>Blocks in <strong>EXRAIL</strong> are a virtual concept only, and they do not relate in any way to the concept of block occupancy detection.</p>
 <p>A block is represented by an ID from 0 to 255 and is used to logically reserve a section of track in automation sequences to ensure only one train can enter a block at any given time to avoid collisions.</p>
 <p>There are two keywords for using blocks: RESERVE(id) and FREE(id)</p>
@@ -9906,7 +9937,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 27, 2026 01:26:58 UTC">June 27, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="August 7, 2026 03:44:38 UTC">August 7, 2026</span>
   </span>
 
     
