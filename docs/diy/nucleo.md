@@ -44,5 +44,3 @@ Reasons to consider the supported Nucleo-F4 boards
 - [Nucleo information](/reference/microcontrollers/nucleo/nucleo-drivers.md)
 
 - [Legacy Nucleo documentation](https://dcc-ex.com/legacy-docs/reference/hardware/microcontrollers/stm32-nucleo.html#stmicroelectronics-nucleo-recommended)
-
-==TODO== move legacy docs

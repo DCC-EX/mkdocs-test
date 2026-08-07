@@ -6,8 +6,9 @@ nav:
   - Install EX-IOExpander: install-ex-ioexpander.md
   - Install EX-Turntable<br>: install-ex-turntable.md
   - Download EX-Installer: download
-  - <br/>Configure WiFi <small><small>(EX-CSB1&nbsp;&amp;&nbsp;ESP32&nbsp;v5.7.0+)</small></small>: config-wifi-esp32.md
+  - <br/>Configure WiFi <small><small>(EX-CSB1&nbsp;&amp;&nbsp;ESP32&nbsp;v5.7.0+%nbsp;Only)</small></small>: config-wifi-esp32.md
   - Test Your Installation<br>: testing.md
+  - <br/>Manage Config files<small><small> Saving&nbsp;&amp;&nbsp;Restoring</small></small>: manage-config-files.md
   - <br/>Connecting to Your Layout<small><small> (Physical&nbsp;Connection)</small></small>: physical-installation.md
   - <br/><i>Next Steps</i> - Throttles: next-steps.md
   - <br/>Advanced Users - VSC/PlatformIO: platformio.md

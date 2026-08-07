@@ -99,15 +99,15 @@ The Roster will be automatically loaded with the **EX-CommandStation** software.
 
 Re-run the **EX-Installer**. Select the same options that you originally chose *and* also select the ``create myAutomation.h`` and the ``Advanced config`` options.  This will show a myAutomation.h window on the following page. Copy and paste your roster lines into this window then ``Compile and load`` the software.
 
-   After the load finishes you will be asked to 'backup/save' the config files. Say `Yes` and put them in a folder well away from the EX-Installer folder. You can can then make direct edits to the file there, and when you next run **EX-Installer**, it asks if you want to use existing config files. Just point it to where you saved and edited the file.
+After the load finishes you will be asked to 'backup/save' the config files. Say `Yes` and put them in a folder well away from the EX-Installer folder. You can can then make direct edits to the file there, and when you next run **EX-Installer**, it asks if you want to use existing config files. Just point it to where you saved and edited the file.
 
-   The Roster will be automatically loaded with the **EX-CommandStation** software.
+The Roster will be automatically loaded with the **EX-CommandStation** software.
 
-More information on the config files can be found on the ==TODO== managing-config-files page.
+More information on the config files can be found on the [Managing Config Files](../../../../../installer/manage-config-files.md) page.
 
 !!! warning "Never edit any files in the EX-Installer folder"
 
-   Never edit any files in the EX-Installer folder. Editing any files in the EX-Installer folder will **always** cause **EX-Installer** to fail.
+    Never edit any files in the EX-Installer folder. Editing any files in the EX-Installer folder will **always** cause **EX-Installer** to fail.
 
 ----
 
@@ -115,11 +115,11 @@ More information on the config files can be found on the ==TODO== managing-confi
 
 !!! important "Using the Arduino IDE is not recommended"
 
-   A word of caution on using the Arduino IDE to install the software:
+    A word of caution on using the Arduino IDE to install the software:
 
-   While it is possible install the software using the Arduino IDE, we *seriously* **DO NOT RECOMMEND IT** for anyone but technically experienced users. It is an order of magnitude more complex, much slower, and with a very high probability of getting something wrong unless you really know what you are doing.
+    While it is possible install the software using the Arduino IDE, we *seriously* **DO NOT RECOMMEND IT** for anyone but technically experienced users. It is an order of magnitude more complex, much slower, and with a very high probability of getting something wrong unless you really know what you are doing.
 
-   The **EX-Installer** described below will meet 100% of the needs of a almost all users with considerably less effort.
+The **EX-Installer** described below will meet 100% of the needs of a almost all users with considerably less effort.
 
 1. Place your 'myAutomation.h' file in the ``CommandStation-EX`` subfolder of wherever you extracted the **EX-CommandStation** files from GitHub.
 1. Run the Arduino IDE

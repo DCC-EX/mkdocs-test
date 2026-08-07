@@ -16,7 +16,7 @@ Scanned docs root: `C:\Users\akers\OneDrive\github\github_doco\mkdocs-test\docs`
 
 ## High &amp; Medium TODOs
 
-Total High &amp; Medium TODO matches: 111
+Total High &amp; Medium TODO matches: 99
 
 | File | Line | Line text |
 | --- | ---: | --- |
@@ -26,16 +26,11 @@ Total High &amp; Medium TODO matches: 111
 | [docs/contributing/release-checklist.md](release-checklist.md) | 132 | - ==TODO== Really need some pages with diagrams and picture covering physical installation of the CS. See /purchasing/physical-installation.md and installer/physical-installation.md |
 | [docs/contributing/release-checklist.md](release-checklist.md) | 133 | - ==TODO== Try to remove the references to the Arduino IDE.  Change to VSC.  Not going to be simple. |
 | [docs/contributing/release-checklist.md](release-checklist.md) | 134 | - ==TODO== Need to change the 'Withrottle' iOS app references to 'ThrottleCard' |
-| [docs/diy/esp32.md](../diy/esp32.md) | 66 | ==TODO== move legacy docs |
 | [docs/diy/mega-harder.md](../diy/mega-harder.md) | 18 | - an Arduino Standard Motor-Shield (or others as noted in ==TODO==) to power the track. |
-| [docs/diy/nucleo.md](../diy/nucleo.md) | 48 | ==TODO== move legacy docs |
-| [docs/enhance/index.md](../enhance/index.md) | 31 | ==TODO== basic intro to Turnouts/Points and links to the appropriate pages |
-| [docs/enhance/index.md](../enhance/index.md) | 39 | ==TODO== basic intro to sequences and links to the appropriate EXRAIL pages |
-| [docs/enhance/index.md](../enhance/index.md) | 48 | ==TODO== basic intro to TrackManager and links to the appropriate TrackManager pages |
-| [docs/enhance/index.md](../enhance/index.md) | 61 | ==TODO== basic intro to accessories and links to the appropriate pages |
-| [docs/enhance/index.md](../enhance/index.md) | 77 | ==TODO== basic intro to tools and links to the appropriate pages |
+| [docs/enhance/index.md](../enhance/index.md) | 73 | ==TODO== basic intro to accessories and links to the appropriate pages |
 | [docs/installer/install-ex-ioexpander.md](../installer/install-ex-ioexpander.md) | 3 | ==TODO== complete EX-Installer EX-IOExpander page needed |
 | [docs/installer/install-ex-turntable.md](../installer/install-ex-turntable.md) | 3 | ==TODO== complete EX-Installer EX-Turntable page needed |
+| [docs/installer/manage-config-files.md](../installer/manage-config-files.md) | 3 | ==TODO== Managing You Config files - Saving and Reusing - Copy legacy info |
 | [docs/installer/physical-installation.md](../installer/physical-installation.md) | 3 | ==TODO== new page on physically connecting the EX-CS to a layout. Should be in a snippet and reused |
 | [docs/installer/platformio.md](../installer/platformio.md) | 3 | ==TODO== - provide setup help. |
 | [docs/purchasing/physical-installation.md](../purchasing/physical-installation.md) | 3 | ==TODO== new page on physically connecting the EX-CSB1 to a layout. Should be in a snippet and reused |
@@ -117,18 +112,11 @@ Total High &amp; Medium TODO matches: 111
 | [docs/products/ex-commandstation/loco-programming/programming-tips.md](../products/ex-commandstation/loco-programming/programming-tips.md) | 14 | ==TODO== Fill this page out. Also move the references from the old site |
 | [docs/products/ex-commandstation/trackmanager/index.md](../products/ex-commandstation/trackmanager/index.md) | 51 | ==TODO== move legacy docs |
 | [docs/products/ex-commandstation/exrail/cookbooks/timecontrol.md](../products/ex-commandstation/exrail/cookbooks/timecontrol.md) | 94 | ( ==TODO== add a reference ) |
-| [docs/products/ex-commandstation/exrail/cookbooks/big-picture/stage2.md](../products/ex-commandstation/exrail/cookbooks/big-picture/stage2.md) | 106 | More information on the config files can be found on the ==TODO== managing-config-files page. |
-| [docs/products/ex-commandstation/exrail/cookbooks/big-picture/stage3.md](../products/ex-commandstation/exrail/cookbooks/big-picture/stage3.md) | 17 | We provide some handy documentation on how to evaluate the correct angles on our ==TODO== servo-module page. |
 | [docs/products/ex-commandstation/exrail/cookbooks/big-picture/stage3.md](../products/ex-commandstation/exrail/cookbooks/big-picture/stage3.md) | 25 | For further information on IDs used in **EXRAIL**, refer to the ==TODO== exrail-command-reference:handy information section of the **EXRAIL** reference page. |
 | [docs/products/ex-commandstation/exrail/cookbooks/big-picture/stage3.md](../products/ex-commandstation/exrail/cookbooks/big-picture/stage3.md) | 31 | For help understanding linear vs. address/sub address formatting of DCC accessories, refer to the ==TODO== 'reference/downloads/documents:stationary decoder address table (xlsx spreadsheet)'. |
-| [docs/products/ex-commandstation/exrail/cookbooks/big-picture/stage3.md](../products/ex-commandstation/exrail/cookbooks/big-picture/stage3.md) | 72 | ==TODO== You can also refer to :doc:`/reference/hardware/servo-module` for more information. |
-| [docs/products/ex-commandstation/exrail/cookbooks/big-picture/stage3.md](../products/ex-commandstation/exrail/cookbooks/big-picture/stage3.md) | 147 | ==TODO== Alternate is to use a :doc:`/reference/hardware/gpio-module` |
 | [docs/products/ex-commandstation/exrail/cookbooks/big-picture/stage3.md](../products/ex-commandstation/exrail/cookbooks/big-picture/stage3.md) | 169 | You can also refer to ==TODO== `exrail/exrail-command-reference:virtual block control` for more information. |
-| [docs/products/ex-commandstation/exrail/cookbooks/big-picture/stage6.md](../products/ex-commandstation/exrail/cookbooks/big-picture/stage6.md) | 114 | ==TODO== `/reference/hardware/servo-module` page. |
-| [docs/products/ex-commandstation/exrail/cookbooks/big-picture/stage6.md](../products/ex-commandstation/exrail/cookbooks/big-picture/stage6.md) | 209 | ==TODO== `/reference/hardware/servo-module` page. |
-| [docs/products/ex-commandstation/exrail/cookbooks/big-picture/stage6.md](../products/ex-commandstation/exrail/cookbooks/big-picture/stage6.md) | 393 | You will note that these are somewhat similar to ==TODO== `exrail/examples:multiple inter-connected trains`, updated to suit the specifics of the RMFT layout. |
-| [docs/products/ex-commandstation/exrail/cookbooks/big-picture/stage6.md](../products/ex-commandstation/exrail/cookbooks/big-picture/stage6.md) | 409 | Remember, these are virtual blocks, and do not necessarily need to be electrically isolated from each other. Don't confuse isolated blocks of track or block occupancy detection with these virtual blocks. For further background, refer to ==TODO== `exrail/exrail-command-reference:virtual block control`. |
-| [docs/products/ex-commandstation/exrail/cookbooks/big-picture/stage6.md](../products/ex-commandstation/exrail/cookbooks/big-picture/stage6.md) | 451 | Using the ``LATCH()`` command gives us a way to automatically alternate between the main track and the station siding. ``LATCH()`` simply sets the state of a pin (either real or virtual) which can then be tested by an ``IF()`` statement. In this particular case, we have defined pin 60 (alias "CHOOSE_BLK2") to be latched and unlatched, as this pin does not exist on the Mega2560, nor does it exist on any of our I/O expander boards. Further reading on ``LATCH()`` and ``UNLATCH()`` can be found in the ==TODO== `exrail/exrail-command-reference:sensors/inputs - reading and responding` section of the EXRAIL reference. |
+| [docs/products/ex-commandstation/exrail/cookbooks/big-picture/stage6.md](../products/ex-commandstation/exrail/cookbooks/big-picture/stage6.md) | 404 | Remember, these are virtual blocks, and do not necessarily need to be electrically isolated from each other. Don't confuse isolated blocks of track or block occupancy detection with these virtual blocks. For further background, refer to ==TODO== `exrail/exrail-command-reference:virtual block control`. |
+| [docs/products/ex-commandstation/exrail/cookbooks/big-picture/stage6.md](../products/ex-commandstation/exrail/cookbooks/big-picture/stage6.md) | 446 | Using the ``LATCH()`` command gives us a way to automatically alternate between the main track and the station siding. ``LATCH()`` simply sets the state of a pin (either real or virtual) which can then be tested by an ``IF()`` statement. In this particular case, we have defined pin 60 (alias "CHOOSE_BLK2") to be latched and unlatched, as this pin does not exist on the Mega2560, nor does it exist on any of our I/O expander boards. Further reading on ``LATCH()`` and ``UNLATCH()`` can be found in the ==TODO== `exrail/exrail-command-reference:sensors/inputs - reading and responding` section of the EXRAIL reference. |
 | [docs/installer/download/download-linux.md](../installer/download/download-linux.md) | 7 | ==TODO== - Add screenshots & fix page flow |
 | [docs/installer/download/index.md](../installer/download/index.md) | 3 | ==TODO== Downloading EX-Installer - Overview |
 
