@@ -4,4 +4,6 @@ Once you have purchased and received your **EX-CSB1**, your next step should be 
 
 Follow the instructions this page to confirm that it is working correctly, before you [connect it to your layout](../installer/physical-installation.md).
 
+ (LOTS OF ==TODO== in this file)
+
 --8<-- "snippets/testing/testing.md"

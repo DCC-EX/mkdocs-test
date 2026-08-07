@@ -4,13 +4,11 @@
 
 Ways you can test your **EX-CommandStation** include:
 
-- Testing use **EX-WebThrottle**
-- Testing over WiFi with a Smart Device
-- Testing with a Serial Monitor
+- Testing use [**EX-WebThrottle**](#testing-with-ex-webthrottle)
+- Testing with a [Serial Monitor](#serial-monitors)
+- Testing over [WiFi with a Smart Device](#testing-with-a-smart-device-over-wifi)
 
-!!! Note "DIY - Testing over WiFi"
-
-    Testing over WiFi of a Self Build (DIY) **EX-CommandStation** is only practical if you have installed a WiFi Shield as part of your build, or you used an ESP32 or Nucelo microcontroller.
+----
 
 ## Testing with EX-WebThrottle
 
@@ -18,11 +16,31 @@ Ways you can test your **EX-CommandStation** include:
 
 See [Connecting a USB Throttle to your EX-CommandStation](/throttles/connecting-usb.md) and see [EX-WebThrottle](/products/ex-webthrottle/ex-webthrottle.md)
 
-## Testing with a Smart Device
+----
 
-==TODO== Initial Testing with a Smart Device over WiFi
+## Testing with a Smart Device over WiFi
 
-See [Connecting a WiFi Throttle to your EX-CommandStation](/throttles/connecting-wifi.md)
+!!! Note inline end "DIY - Testing over WiFi"
+
+    Testing over WiFi of an *Arduino Mega* Self Build (DIY) **EX-CommandStation** is only practical if you have installed a WiFi Shield as part of your build.
+
+You can test your **EX-CommandStation** to some degree using a smart device (phone or tablet) running a throttle app.  While this will tell you if it is working it provided limited capability for diagnosing problems if they arise. See [Connecting a WiFi Throttle to your EX-CommandStation](/throttles/connecting-wifi.md)
+
+The [**EX-ToolBox**](/products/ex-toolbox/connecting.md) Android app also provides similar capabilities for testing over WiFi.
+
+==TODO== basic steps for initial testing with a Smart Device over WiFi
+
+- connect A to track
+- confirm track power is on (4 LEDS). Turn on if necessary.
+- connect to the EX-CS WiFi in your smart device network settings (See throttle connecting page)
+- open the throttle app and connect to the server (see appropriate page)
+- put a loco on the track
+- acquire the loco in the throttle app (see appropriate page)
+- control the loco
+
+==TODO== what to do if any of the initial testing steps fail
+
+----
 
 ## Serial Monitors
 
@@ -30,11 +48,12 @@ The most direct testing method is to use a serial monitor to talk directly to th
 
 There are several serial monitors available:
 
-- Built in to EX-Installer
-- Built in to the EX-WebThrottle
-- Built in to JMRI or other train control software.
-- Built in to VSCode is you are using that as an IDE.
+- Built in to [**EX-Installer**](/docs/installer/installer.md)
+- Built in to the [**EX-WebThrottle**](/docs/products/ex-webthrottle/ex-webthrottle.md)
+- Built in to JMRI or other train control software
+- Built in to VSCode is you are using that as an IDE
 - Built in to the Arduino IDE (Not recommended)
+- built into the [**EX-ToolBox**](/products/ex-toolbox/connecting.md) Android app
 
 See [Serial Monitors](/reference/tools/serial-monitor_not_in_nav.md) for more information.
 

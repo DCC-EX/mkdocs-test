@@ -58,10 +58,10 @@ If you are using an **EX-CSB1** as your Command Station, it is recommended that 
 
 !!! note "Output configuration options"
 
-The outputs can be configured as:
+    The outputs can be configured as:
 
-- ``BOOST`` - Booster mode
-- ``BOOST_INV`` - Booster mode inverted
-- ``BOOST_AUTO`` - Booster mode + Auto-reverser mode
+    - ``BOOST`` - Booster mode
+    - ``BOOST_INV`` - Booster mode inverted
+    - ``BOOST_AUTO`` - Booster mode + Auto-reverser mode
 
 --8<-- "snippets/abbr.md"
