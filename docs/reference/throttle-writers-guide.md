@@ -131,6 +131,26 @@ or ``<jT 17 X>`` indicating turnout/point unknown (or possibly hidden.)
 
 ----
 
+## Signals
+
+A variety of signals can be defined in **EXRAIL** but they all operate using the same basic logic.
+
+``<JS>`` command returns a list of signal ids. The throttle should be uninterested in the signal technology used but needs to know the ids it can throw/close and monitor the current state.<br/>
+e.g.  response ``<jS 1 17 22 19>``
+
+``<JS 17>`` requests info on signal 17.<br/>
+e.g. response ``<jS 17 R "Up Home, platform 1">``  (R=red, A=amber, G=Green)<br/>
+or ``<jS 17 C "">`` indicating signal description not given.<br/>
+or ``<jS 17 X>`` indicating signal unknown (or possibly hidden.)
+
+**NOTE:** It is still the throttles responsibility to monitor the status broadcasts. There is no method to update the signal list once the throttle started.
+
+Signal staus chenges are reported with the ``<h id state>`` command for example ``<h 17 G>`` meaning signal 17 set green.
+
+**NOTE:** Signals marked in **EXRAIL** with the HIDDEN keyword instead of a "description" will NOT show up in these commands.
+
+----
+
 ## DCC Accessories
 
 ==TODO== DCC Accessory Control
