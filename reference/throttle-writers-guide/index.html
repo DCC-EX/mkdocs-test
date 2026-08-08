@@ -7442,6 +7442,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#signals" class="md-nav__link">
+    <span class="md-ellipsis">
+      Signals
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#dcc-accessories" class="md-nav__link">
     <span class="md-ellipsis">
       DCC Accessories
@@ -9634,6 +9643,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#signals" class="md-nav__link">
+    <span class="md-ellipsis">
+      Signals
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#dcc-accessories" class="md-nav__link">
     <span class="md-ellipsis">
       DCC Accessories
@@ -9843,6 +9861,18 @@ or <code>&lt;jT 17 X&gt;</code> indicating turnout/point unknown (or possibly hi
 <p><strong>NOTE:</strong> It is still the throttles responsibility to monitor the status broadcasts. There is no intention of providing a command that indicates the turnout/point list has been updated since the throttle started.</p>
 <p><strong>NOTE:</strong> Turnouts/Points marked in <strong>EXRAIL</strong> with the HIDDEN keyword instead of a "description" will NOT show up in these commands.</p>
 <hr />
+<h2 id="signals">Signals<a class="headerlink" href="#signals" title="Permanent link">&para;</a></h2>
+<p>A variety of signals can be defined in <strong>EXRAIL</strong> but they all operate using the same basic logic.</p>
+<p><code>&lt;JS&gt;</code> command returns a list of signal ids. The throttle should be uninterested in the signal technology used but needs to know the ids it can throw/close and monitor the current state.<br/>
+e.g.  response <code>&lt;jS 1 17 22 19&gt;</code></p>
+<p><code>&lt;JS 17&gt;</code> requests info on signal 17.<br/>
+e.g. response <code>&lt;jS 17 R "Up Home, platform 1"&gt;</code>  (R=red, A=amber, G=Green)<br/>
+or <code>&lt;jS 17 C ""&gt;</code> indicating signal description not given.<br/>
+or <code>&lt;jS 17 X&gt;</code> indicating signal unknown (or possibly hidden.)</p>
+<p><strong>NOTE:</strong> It is still the throttles responsibility to monitor the status broadcasts. There is no method to update the signal list once the throttle started.</p>
+<p>Signal staus chenges are reported with the <code>&lt;h id state&gt;</code> command for example <code>&lt;h 17 G&gt;</code> meaning signal 17 set green.</p>
+<p><strong>NOTE:</strong> Signals marked in <strong>EXRAIL</strong> with the HIDDEN keyword instead of a "description" will NOT show up in these commands.</p>
+<hr />
 <h2 id="dcc-accessories">DCC Accessories<a class="headerlink" href="#dcc-accessories" title="Permanent link">&para;</a></h2>
 <p><mark>TODO</mark> DCC Accessory Control</p>
 <hr />
@@ -9929,7 +9959,7 @@ e.g. <code>&lt;/START 13 3&gt;</code></li>
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="August 3, 2026 07:34:47 UTC">August 3, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="August 8, 2026 22:01:43 UTC">August 8, 2026</span>
   </span>
 
     
