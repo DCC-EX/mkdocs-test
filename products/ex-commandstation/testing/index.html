@@ -1004,9 +1004,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#testing-with-a-smart-device" class="md-nav__link">
+  <a href="#testing-with-a-smart-device-over-wifi" class="md-nav__link">
     <span class="md-ellipsis">
-      Testing with a Smart Device
+      Testing with a Smart Device over WiFi
     </span>
   </a>
   
@@ -6151,7 +6151,7 @@
   
   
   <span class="md-ellipsis">
-    <br/>Configure WiFi <small><small>(EX-CSB1&nbsp;&amp;&nbsp;ESP32&nbsp;v5.7.0+%nbsp;Only)</small></small>
+    <br/>Configure WiFi <small><small>(EX-CSB1&nbsp;&amp;&nbsp;ESP32&nbsp;v5.7.0+&nbsp;Only)</small></small>
     
   </span>
   
@@ -9539,9 +9539,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#testing-with-a-smart-device" class="md-nav__link">
+  <a href="#testing-with-a-smart-device-over-wifi" class="md-nav__link">
     <span class="md-ellipsis">
-      Testing with a Smart Device
+      Testing with a Smart Device over WiFi
     </span>
   </a>
   
@@ -9636,34 +9636,50 @@
 
 
 <h1 id="testing-your-ex-commandstation">Testing your EX-CommandStation<a class="headerlink" href="#testing-your-ex-commandstation" title="Permanent link">&para;</a></h1>
+<p>(LOTS OF <mark>TODO</mark> in this file)</p>
 <!-- # Testing your EX-CommandStation -->
 
 <p>(LOTS OF <mark>TODO</mark> in this file)</p>
 <p>Ways you can test your <strong>EX-CommandStation</strong> include:</p>
 <ul>
-<li>Testing use <strong>EX-WebThrottle</strong></li>
-<li>Testing over WiFi with a Smart Device</li>
-<li>Testing with a Serial Monitor</li>
+<li>Testing use <a href="#testing-with-ex-webthrottle"><strong>EX-WebThrottle</strong></a></li>
+<li>Testing with a <a href="#serial-monitors">Serial Monitor</a></li>
+<li>Testing over <a href="#testing-with-a-smart-device-over-wifi">WiFi with a Smart Device</a></li>
 </ul>
-<div class="admonition note">
-<p class="admonition-title"><abbr title="Do-It-Yourself / Self Build">DIY</abbr> - Testing over WiFi</p>
-<p>Testing over WiFi of a Self Build (<abbr title="Do-It-Yourself / Self Build">DIY</abbr>) <strong>EX-CommandStation</strong> is only practical if you have installed a WiFi Shield as part of your build, or you used an ESP32 or Nucelo microcontroller.</p>
-</div>
+<hr />
 <h2 id="testing-with-ex-webthrottle">Testing with EX-WebThrottle<a class="headerlink" href="#testing-with-ex-webthrottle" title="Permanent link">&para;</a></h2>
 <p><mark>TODO</mark> Initial Testing with EX-WebThrottle</p>
 <p>See <a href="../../../throttles/connecting-usb/">Connecting a USB Throttle to your EX-CommandStation</a> and see <a href="../../ex-webthrottle/ex-webthrottle/">EX-WebThrottle</a></p>
-<h2 id="testing-with-a-smart-device">Testing with a Smart Device<a class="headerlink" href="#testing-with-a-smart-device" title="Permanent link">&para;</a></h2>
-<p><mark>TODO</mark> Initial Testing with a Smart Device over WiFi</p>
-<p>See <a href="../../../throttles/connecting-wifi/">Connecting a WiFi Throttle to your EX-CommandStation</a></p>
+<hr />
+<h2 id="testing-with-a-smart-device-over-wifi">Testing with a Smart Device over WiFi<a class="headerlink" href="#testing-with-a-smart-device-over-wifi" title="Permanent link">&para;</a></h2>
+<div class="admonition note inline end">
+<p class="admonition-title"><abbr title="Do-It-Yourself / Self Build">DIY</abbr> - Testing over WiFi</p>
+<p>Testing over WiFi of an <em>Arduino Mega</em> Self Build (<abbr title="Do-It-Yourself / Self Build">DIY</abbr>) <strong>EX-CommandStation</strong> is only practical if you have installed a WiFi Shield as part of your build.</p>
+</div>
+<p>You can test your <strong>EX-CommandStation</strong> to some degree using a smart device (phone or tablet) running a throttle app.  While this will tell you if it is working it provided limited capability for diagnosing problems if they arise. See <a href="../../../throttles/connecting-wifi/">Connecting a WiFi Throttle to your EX-CommandStation</a></p>
+<p>The <a href="../../ex-toolbox/connecting/"><strong>EX-ToolBox</strong></a> Android app also provides similar capabilities for testing over WiFi.</p>
+<p><mark>TODO</mark> basic steps for initial testing with a Smart Device over WiFi</p>
+<ul>
+<li>connect A to track</li>
+<li>confirm track power is on (4 LEDS). Turn on if necessary.</li>
+<li>connect to the EX-CS WiFi in your smart device network settings (See throttle connecting page)</li>
+<li>open the throttle app and connect to the server (see appropriate page)</li>
+<li>put a loco on the track</li>
+<li>acquire the loco in the throttle app (see appropriate page)</li>
+<li>control the loco</li>
+</ul>
+<p><mark>TODO</mark> what to do if any of the initial testing steps fail</p>
+<hr />
 <h2 id="serial-monitors">Serial Monitors<a class="headerlink" href="#serial-monitors" title="Permanent link">&para;</a></h2>
 <p>The most direct testing method is to use a serial monitor to talk directly to the USB connection of your <strong>EX-CommandStation</strong>. This is a fundamental aspect of the Arduino system and thus avoids issues such as WiFi connections. Indeed, this is the only way to see what's going wrong if your problems are WiFi or Ethernet related.</p>
 <p>There are several serial monitors available:</p>
 <ul>
-<li>Built in to EX-Installer</li>
-<li>Built in to the EX-WebThrottle</li>
-<li>Built in to <abbr title="Java Model Railroad Interface">JMRI</abbr> or other train control software.</li>
-<li>Built in to VSCode is you are using that as an IDE.</li>
+<li>Built in to <a href="/docs/installer/installer.md"><strong>EX-Installer</strong></a></li>
+<li>Built in to the <a href="/docs/products/ex-webthrottle/ex-webthrottle.md"><strong>EX-WebThrottle</strong></a></li>
+<li>Built in to <abbr title="Java Model Railroad Interface">JMRI</abbr> or other train control software</li>
+<li>Built in to VSCode is you are using that as an IDE</li>
 <li>Built in to the <abbr title="Not recommended. Use EX-Installer or, if experienced, Microsoft Visual Studio Code (VSC)">Arduino IDE</abbr> (Not recommended)</li>
+<li>built into the <a href="../../ex-toolbox/connecting/"><strong>EX-ToolBox</strong></a> Android app</li>
 </ul>
 <p>See <a href="../../../reference/tools/serial-monitor_not_in_nav/">Serial Monitors</a> for more information.</p>
 <p><mark>TODO</mark> Instructions on using Device Monitor.</p>
@@ -9717,7 +9733,7 @@ If you don't know the loco address, then you can find out using the <a href="../
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="August 4, 2026 00:23:50 UTC">August 4, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="August 7, 2026 22:50:01 UTC">August 7, 2026</span>
   </span>
 
     
