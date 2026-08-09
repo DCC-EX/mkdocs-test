@@ -11,13 +11,13 @@ We currently support various displays:
 * LCDs based on the PCF8574 backpack with 16 column by 2 row (16x2) and 20 column by 4 row (20x4) displays attached
 * OLED displays in .96" and 1.3" formats based on SSD1306 and SH1106 display controllers
 
-!!! warning "Warning"
+!!! warning "Do not modify the code without contacting us"
 
-    Do NOT modify any code related to displays without contacting us. We use our own included code, NOT an external library you have to download. The code was written to support LCD and OLED displays and to fit on a Mega *and* an Uno. It has a custom font table and the LCD macro works to output diagnostics even if there is no display. If your display is not supported, let us know and we can take a look.
+    Do NOT modify any code related to displays without contacting us. We use our own included code, NOT an external library you have to download. The code was written to support LCD and OLED displays and to fit on a Mega. It has a custom font table and the LCD macro works to output diagnostics even if there is no display. If your display is not supported, let us know and we can take a look.
 
 The LCD displays require a "backpack" that converts the raw display to I2C. I2C allows us to use just 2 lines (SDA (serial data) and clock (SCL)) to send text to the display. Without this board, we wouldn't have enough pins, especially on an Uno, to use a display. The OLED displays natively support I2C and can be wired directly.
 
-!!! warning "Two Parts"
+!!! warning "Purchase Two Parts"
 
     You MUST make sure to order TWO (2) parts for your LCD Displays. You need the display AND a backpack based on the PCF8574 controller chip. Some displays come with this already soldered together. Also note that **some** OLED displays use the SPI standard or are configured for it, so make sure to buy the I2C enabled ones, or ones that can be configured for I2C use. Make sure to check before you buy!
 

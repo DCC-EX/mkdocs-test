@@ -16,7 +16,7 @@ Scanned docs root: `C:\Users\akers\OneDrive\github\github_doco\mkdocs-test\docs`
 
 ## High TODOs
 
-Total High TODO matches: 97
+Total High TODO matches: 94
 
 | File | Line | Line text |
 | --- | ---: | --- |
@@ -36,12 +36,12 @@ Total High TODO matches: 97
 | [docs/purchasing/physical-installation.md](../purchasing/physical-installation.md) | 3 | ==TODO== new page on physically connecting the EX-CSB1 to a layout. Should be in a snippet and reused |
 | [docs/reference/throttle-writers-guide.md](../reference/throttle-writers-guide.md) | 18 | ==TODO== Document incomplete. |
 | [docs/reference/throttle-writers-guide.md](../reference/throttle-writers-guide.md) | 84 | ==TODO== Controlling Locos |
-| [docs/reference/throttle-writers-guide.md](../reference/throttle-writers-guide.md) | 136 | ==TODO== DCC Accessory Control |
-| [docs/reference/throttle-writers-guide.md](../reference/throttle-writers-guide.md) | 162 | Routes and Automations can also have their current status and caption altered dynamically by **EXRAIL** (docs ==TODO==) |
-| [docs/reference/throttle-writers-guide.md](../reference/throttle-writers-guide.md) | 166 | ==TODO== Route Status |
-| [docs/reference/throttle-writers-guide.md](../reference/throttle-writers-guide.md) | 197 | ## COMMANDS TO AVOID ==TODO== |
-| [docs/reference/throttle-writers-guide.md](../reference/throttle-writers-guide.md) | 213 | ==TODO== Gauges |
-| [docs/reference/throttle-writers-guide.md](../reference/throttle-writers-guide.md) | 219 | ==TODO== TCP VS UDP |
+| [docs/reference/throttle-writers-guide.md](../reference/throttle-writers-guide.md) | 156 | ==TODO== DCC Accessory Control |
+| [docs/reference/throttle-writers-guide.md](../reference/throttle-writers-guide.md) | 182 | Routes and Automations can also have their current status and caption altered dynamically by **EXRAIL** (docs ==TODO==) |
+| [docs/reference/throttle-writers-guide.md](../reference/throttle-writers-guide.md) | 186 | ==TODO== Route Status |
+| [docs/reference/throttle-writers-guide.md](../reference/throttle-writers-guide.md) | 217 | ## COMMANDS TO AVOID ==TODO== |
+| [docs/reference/throttle-writers-guide.md](../reference/throttle-writers-guide.md) | 233 | ==TODO== Gauges |
+| [docs/reference/throttle-writers-guide.md](../reference/throttle-writers-guide.md) | 239 | ==TODO== TCP VS UDP |
 | [docs/support/faq.md](../support/faq.md) | 9 | ==TODO== Rework this so that it includes GUI options (EX-WebThrottle, Engine Driver, etc.) |
 | [docs/support/faq.md](../support/faq.md) | 19 | ==TODO== Rework this so that it includes GUI options (EX-WebThrottle, Engine Driver, etc.) |
 | [docs/throttles/connecting-usb.md](../throttles/connecting-usb.md) | 3 | ==TODO== Connecting a USB Throttle to your EX-CommandStation |
@@ -96,10 +96,7 @@ Total High TODO matches: 97
 | [docs/products/ex-turntable/test-and-tune.md](../products/ex-turntable/test-and-tune.md) | 180 | For full details on using the new commands available, refer to ==TODO== :ref:`reference/software/command-summary-consolidated:turntables/traversers (configuring the ex-commandstation)` and :ref:`reference/software/command-summary-consolidated:turntables/traversers`, and also the **EXRAIL** commands in :ref:`exrail/exrail-command-reference:turntable/traverser objects - definition and control` and :ref:`exrail/exrail-command-reference:turntable features`. |
 | [docs/products/ex-webthrottle/ex-webthrottle.md](../products/ex-webthrottle/ex-webthrottle.md) | 6 | ==TODO== Split into separate pages for overview plus installing and using. |
 | [docs/products/ex-wifishield8266/ex-wifishield8266.md](../products/ex-wifishield8266/ex-wifishield8266.md) | 8 | ==TODO== Improve intro paragraph |
-| [docs/products/ex-commandstation/accessories/i2c-displays.md](../products/ex-commandstation/accessories/i2c-displays.md) | 96 | ==TODO== diagram for connecting the EX-CSB1 to an oLED via the headers |
-| [docs/products/ex-commandstation/accessories/i2c-displays.md](../products/ex-commandstation/accessories/i2c-displays.md) | 98 | ==TODO== diagram for connecting the EX-CSB1 to an oLED via the QWIIC connector |
 | [docs/products/ex-commandstation/accessories/i2c-displays.md](../products/ex-commandstation/accessories/i2c-displays.md) | 193 | As you can see from the comments in this code, both of these displays can now be written to from **EXRAIL** using the ``SCREEN()`` directive. See the **EXRAIL** ==TODO== :ref:`exrail/exrail-command-reference:communication and display functions` for more information. |
-| [docs/products/ex-commandstation/accessories/i2c-gpio-expanders.md](../products/ex-commandstation/accessories/i2c-gpio-expanders.md) | 5 | ==TODO== move legacy docs |
 | [docs/products/ex-commandstation/accessories/i2c-multiplexers.md](../products/ex-commandstation/accessories/i2c-multiplexers.md) | 5 | ==TODO== move legacy docs |
 | [docs/products/ex-commandstation/accessories/i2c-servo-led-modules.md](../products/ex-commandstation/accessories/i2c-servo-led-modules.md) | 5 | ==TODO== move legacy docs |
 | [docs/products/ex-commandstation/exrail/exrail-objects-introduction.md](../products/ex-commandstation/exrail/exrail-objects-introduction.md) | 151 | ==TODO== You can also refer to :doc:`/ex-commandstation/accessories/turnouts/solenoid-turnouts` for more information. |
@@ -120,7 +117,7 @@ Total High TODO matches: 97
 
 ## Medium priority TODOs
 
-Total medium priority TODO matches: 14
+Total medium priority TODO matches: 17
 
 | File | Line | Line text |
 | --- | ---: | --- |
@@ -138,6 +135,9 @@ Total medium priority TODO matches: 14
 | [docs/reference/serial-commands/serial-command-slash-latch_not_in_nav.md](../reference/serial-commands/serial-command-slash-latch_not_in_nav.md) | 22 | ==TODO== MEDIUM - Responses |
 | [docs/reference/serial-commands/serial-command-slash-reserve_not_in_nav.md](../reference/serial-commands/serial-command-slash-reserve_not_in_nav.md) | 24 | ==TODO== MEDIUM - Responses |
 | [docs/reference/serial-commands/serial-command-y_not_in_nav.md](../reference/serial-commands/serial-command-y_not_in_nav.md) | 54 | ==TODO== MEDIUM - Responses |
+| [docs/products/ex-commandstation/accessories/i2c-displays.md](../products/ex-commandstation/accessories/i2c-displays.md) | 96 | ==TODO== MEDIUM - diagram for connecting the EX-CSB1 to an oLED via the headers |
+| [docs/products/ex-commandstation/accessories/i2c-displays.md](../products/ex-commandstation/accessories/i2c-displays.md) | 98 | ==TODO== MEDIUM - diagram for connecting the EX-CSB1 to an oLED via the QWIIC connector |
+| [docs/products/ex-commandstation/accessories/i2c-gpio-expanders.md](../products/ex-commandstation/accessories/i2c-gpio-expanders.md) | 41 | ==TODO== MEDIUM - diagram for connecting the EX-CSB1 to an GPIO Expander via the headers |
 
 ## Low priority TODOs
 
