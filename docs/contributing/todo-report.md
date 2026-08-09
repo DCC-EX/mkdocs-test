@@ -16,7 +16,7 @@ Scanned docs root: `C:\Users\akers\OneDrive\github\github_doco\mkdocs-test\docs`
 
 ## High TODOs
 
-Total High TODO matches: 94
+Total High TODO matches: 95
 
 | File | Line | Line text |
 | --- | ---: | --- |
@@ -98,7 +98,8 @@ Total High TODO matches: 94
 | [docs/products/ex-wifishield8266/ex-wifishield8266.md](../products/ex-wifishield8266/ex-wifishield8266.md) | 8 | ==TODO== Improve intro paragraph |
 | [docs/products/ex-commandstation/accessories/i2c-displays.md](../products/ex-commandstation/accessories/i2c-displays.md) | 193 | As you can see from the comments in this code, both of these displays can now be written to from **EXRAIL** using the ``SCREEN()`` directive. See the **EXRAIL** ==TODO== :ref:`exrail/exrail-command-reference:communication and display functions` for more information. |
 | [docs/products/ex-commandstation/accessories/i2c-multiplexers.md](../products/ex-commandstation/accessories/i2c-multiplexers.md) | 5 | ==TODO== move legacy docs |
-| [docs/products/ex-commandstation/accessories/i2c-servo-led-modules.md](../products/ex-commandstation/accessories/i2c-servo-led-modules.md) | 5 | ==TODO== move legacy docs |
+| [docs/products/ex-commandstation/accessories/i2c-servo-led-modules.md](../products/ex-commandstation/accessories/i2c-servo-led-modules.md) | 180 | LEDs can be connected with either the anode (positive) or cathode (negative) to the PWM pin of the PCA9685, and to set the required intensity for the LED, you will need to add a configuration setting to your "mySetup.h" file. Refer to ==TODO== :doc:`/ex-commandstation/advanced-setup/startup-config` for further information on this file. |
+| [docs/products/ex-commandstation/accessories/i2c-servo-led-modules.md](../products/ex-commandstation/accessories/i2c-servo-led-modules.md) | 220 | An output is defined by using the ``<Z id vpin iflag>`` command. Refer to ==TODO== :ref:`reference/software/command-summary-consolidated:outputs (configuring the ex-commandstation)` for further information on this command. |
 | [docs/products/ex-commandstation/exrail/exrail-objects-introduction.md](../products/ex-commandstation/exrail/exrail-objects-introduction.md) | 151 | ==TODO== You can also refer to :doc:`/ex-commandstation/accessories/turnouts/solenoid-turnouts` for more information. |
 | [docs/products/ex-commandstation/exrail/exrail-objects-introduction.md](../products/ex-commandstation/exrail/exrail-objects-introduction.md) | 190 | ==TODO== You can also refer to :doc:`/reference/hardware/servo-module` for more information. |
 | [docs/products/ex-commandstation/exrail/exrail-objects-introduction.md](../products/ex-commandstation/exrail/exrail-objects-introduction.md) | 209 | ==TODO== Add a diagram for the EX-CSB1 to a PCA9685 |

@@ -191,3 +191,5 @@ In order to configure additional displays, you will need to add lines to "myHal.
 ```
 
 As you can see from the comments in this code, both of these displays can now be written to from **EXRAIL** using the ``SCREEN()`` directive. See the **EXRAIL** ==TODO== :ref:`exrail/exrail-command-reference:communication and display functions` for more information.
+
+--8<-- "snippets/abbr.md"
