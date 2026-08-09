@@ -32,12 +32,12 @@ If you are using the **EX-Installer** then this file will be automatically creat
 
 The **myAutomation.h** file can contain any customisations, including:
 
-* Your Roster
-* Turnouts/Points
-* Routes
-* Servos
-* **EXRAIL** automations
-* Turntables (Not available in the current 'Release' version)
+* [Your Roster](../products/ex-commandstation/exrail/exrail-objects-introduction.md#adding-a-roster)
+* [Turnouts/Points](../enhance/turnouts.md)
+* [Routes](../products/ex-commandstation/exrail/exrail-sequences-introduction.md)
+* [Servos](../products/ex-commandstation/accessories/index.md)
+* [**EXRAIL** automations](../products/ex-commandstation/exrail/exrail-sequences-introduction.md)
+* [Turntables](../products/ex-turntable/configure.md)
 
 This can be created manually, or by the **EX-Installer** if you select the `Create MyAutomation.h` option.
 
@@ -53,7 +53,6 @@ The **mySetup.h** file can contain:
 * Any c++ code you wish
 
 This file must be created manually.
-
 
 ----
 
