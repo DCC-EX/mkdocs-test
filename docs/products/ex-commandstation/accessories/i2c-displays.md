@@ -27,9 +27,9 @@ Here is an example of a 20 x 4 LCD screen. They come in different colours like b
 
 ### 20 x 4 LCD with backpack
 
-![20 x 4 LCD](../../../_static/images/display/lcd_20x4_backpack.jpg){ width="400px"}
+![20 x 4 LCD](../../../_static/images/display/lcd_20x4_backpack.png){ width="400px"}
 
-![16 x 2 LCD](../../../_static/images/display/lcd_16x2_backpack.jpg){ width="400px"}
+![16 x 2 LCD](../../../_static/images/display/lcd_16x2_backpack.png){ width="400px"}
 
 On the left is 20x4 LCD with backpack, and on the right is a 16x2 LCD.
 
@@ -37,11 +37,9 @@ Remember to either order an LCD display with the backpack already soldered or tw
 
 Some examples of supported OLED displays:
 
-![Adafruit .96" OLED](../../../_static/images/display/adafruit_96in_oled_sm.jpg){ width="400px"}
-
-![Makerfocus OLED Display](../../../_static/images/display/makerfocus_oled_sm.jpg){ width="400px"}
-
-Adafruit 0.96" 128x64 OLED, and Makerfocus 128x32 .91" OLED.
+![Adafruit .96" OLED](../../../_static/images/display/adafruit_96in_oled_sm.jpg){ width="400px"}  
+![Makerfocus OLED Display](../../../_static/images/display/makerfocus_oled_sm.png){ width="400px"}
+<br/> Adafruit 0.96" 128x64 OLED, and Makerfocus 128x32 .91" OLED.
 
 ## Connecting an LCD Display
 
@@ -55,7 +53,7 @@ And here is a picture of the board after soldering or if you purchase a board al
 
 LCD with backpack soldered to the back
 
-![Backpack Soldered to LCD](../../../_static/images/display/lcd_soldered.jpg){ width="400px"}
+![Backpack Soldered to LCD](../../../_static/images/display/lcd_soldered.png){ width="400px"}
 
 ### Connecting the Jumper Wires
 
@@ -77,7 +75,7 @@ OLED displays come in more varieties than LCD displays. The library to run them 
 ![Adafruit .96" OLED](../../../_static/images/display/adafruit_96in_oled_sm.jpg){ width="400px"}
 <br/>Adafruit .96" OLED
 
-![Makerfocus OLED Display](../../../_static/images/display/makerfocus_oled_sm.jpg){ width="400px"}
+![Makerfocus OLED Display](../../../_static/images/display/makerfocus_oled_sm.png){ width="400px"}
 <br/>Makerfocus OLED Display
 
 ### Soldering Wires to the Display
@@ -94,6 +92,10 @@ Physically connecting an I2C OLED display to your **EX-CommandStation** is relat
 You can also connect the display to the motor shield's I2C headers.
 
 ![Mega2560 with I2C OLED](../../../_static/images/display/mega-with-i2c-oled-twi.png){ width="600px"}
+
+==TODO== MEDIUM - diagram for connecting the EX-CSB1 to an oLED via the headers
+
+==TODO== MEDIUM - diagram for connecting the EX-CSB1 to an oLED via the QWIIC connector
 
 ### Reconfigure your Command Station to use a single display
 

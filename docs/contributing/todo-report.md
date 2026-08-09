@@ -16,7 +16,7 @@ Scanned docs root: `C:\Users\akers\OneDrive\github\github_doco\mkdocs-test\docs`
 
 ## High TODOs
 
-Total High TODO matches: 95
+Total High TODO matches: 97
 
 | File | Line | Line text |
 | --- | ---: | --- |
@@ -96,7 +96,9 @@ Total High TODO matches: 95
 | [docs/products/ex-turntable/test-and-tune.md](../products/ex-turntable/test-and-tune.md) | 180 | For full details on using the new commands available, refer to ==TODO== :ref:`reference/software/command-summary-consolidated:turntables/traversers (configuring the ex-commandstation)` and :ref:`reference/software/command-summary-consolidated:turntables/traversers`, and also the **EXRAIL** commands in :ref:`exrail/exrail-command-reference:turntable/traverser objects - definition and control` and :ref:`exrail/exrail-command-reference:turntable features`. |
 | [docs/products/ex-webthrottle/ex-webthrottle.md](../products/ex-webthrottle/ex-webthrottle.md) | 6 | ==TODO== Split into separate pages for overview plus installing and using. |
 | [docs/products/ex-wifishield8266/ex-wifishield8266.md](../products/ex-wifishield8266/ex-wifishield8266.md) | 8 | ==TODO== Improve intro paragraph |
-| [docs/products/ex-commandstation/accessories/i2c-displays.md](../products/ex-commandstation/accessories/i2c-displays.md) | 191 | As you can see from the comments in this code, both of these displays can now be written to from **EXRAIL** using the ``SCREEN()`` directive. See the **EXRAIL** ==TODO== :ref:`exrail/exrail-command-reference:communication and display functions` for more information. |
+| [docs/products/ex-commandstation/accessories/i2c-displays.md](../products/ex-commandstation/accessories/i2c-displays.md) | 96 | ==TODO== diagram for connecting the EX-CSB1 to an oLED via the headers |
+| [docs/products/ex-commandstation/accessories/i2c-displays.md](../products/ex-commandstation/accessories/i2c-displays.md) | 98 | ==TODO== diagram for connecting the EX-CSB1 to an oLED via the QWIIC connector |
+| [docs/products/ex-commandstation/accessories/i2c-displays.md](../products/ex-commandstation/accessories/i2c-displays.md) | 193 | As you can see from the comments in this code, both of these displays can now be written to from **EXRAIL** using the ``SCREEN()`` directive. See the **EXRAIL** ==TODO== :ref:`exrail/exrail-command-reference:communication and display functions` for more information. |
 | [docs/products/ex-commandstation/accessories/i2c-gpio-expanders.md](../products/ex-commandstation/accessories/i2c-gpio-expanders.md) | 5 | ==TODO== move legacy docs |
 | [docs/products/ex-commandstation/accessories/i2c-multiplexers.md](../products/ex-commandstation/accessories/i2c-multiplexers.md) | 5 | ==TODO== move legacy docs |
 | [docs/products/ex-commandstation/accessories/i2c-servo-led-modules.md](../products/ex-commandstation/accessories/i2c-servo-led-modules.md) | 5 | ==TODO== move legacy docs |
