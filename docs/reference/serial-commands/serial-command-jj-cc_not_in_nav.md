@@ -27,7 +27,7 @@ Serial commands to get or set the Fastclock time.
 
 ## Response
 
-``J C [«mmmm»>``
+==TODO== MEDIUM - Responses
 
 ## Notes
 

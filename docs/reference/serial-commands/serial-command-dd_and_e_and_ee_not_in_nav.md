@@ -17,13 +17,13 @@ Serial commands to Manage the EEPROM. (Arduino Mega Only. Not available on the *
 
 ## Parameters
 
-* **numEntries**: *optional* ==TODO==
+* **numEntries**: *optional* ==TODO== explain the parameter
 
 ## Response
 
 ### Response for ``<D EEPROM «numEntries»>``
 
-==TODO== LOW - Responses
+==TODO== MEDIUM - Responses
 
 ## Notes
 

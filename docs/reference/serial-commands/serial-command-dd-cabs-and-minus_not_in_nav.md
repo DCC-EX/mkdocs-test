@@ -26,7 +26,7 @@ Serial commands to display and manage the loco state table.
 
 ### Responses for ``<- [«loco»]>``
 
-==TODO== LOW - Responses
+==TODO== MEDIUM - Responses
 
 ## Notes
 

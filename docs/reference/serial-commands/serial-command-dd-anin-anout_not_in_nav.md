@@ -23,7 +23,7 @@ Serial command(s) to ...
 
 ## Response
 
-==TODO== LOW - Responses
+==TODO== MEDIUM - Responses
 
 ## Notes
 

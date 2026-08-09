@@ -36,7 +36,7 @@ Serial commands to enable or disable various diagnostic messages shown on the se
 
 ## Response
 
-==TODO== LOW - Responses
+==TODO== MEDIUM - Responses
 
 ----
 

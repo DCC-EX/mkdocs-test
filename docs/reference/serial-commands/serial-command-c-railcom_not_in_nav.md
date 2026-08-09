@@ -20,7 +20,7 @@ Serial command to Enable/Disable Railcom cutout.
 
 ## Response
 
-==TODO== Response
+==TODO== MEDIUM - Response
 
 ## Notes
 

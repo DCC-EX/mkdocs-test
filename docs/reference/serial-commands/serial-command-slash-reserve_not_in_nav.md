@@ -21,7 +21,7 @@ Serial commands to reserve or free sections.
 
 ## Response
 
-==TODO== LOW - Responses
+==TODO== MEDIUM - Responses
 
 ## Notes
 

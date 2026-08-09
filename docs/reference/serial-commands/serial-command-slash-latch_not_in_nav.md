@@ -19,7 +19,7 @@ Serial command(s) to set or remove a latch.
 
 ## Response
 
-==TODO== LOW - Responses
+==TODO== MEDIUM - Responses
 
 ## Notes
 

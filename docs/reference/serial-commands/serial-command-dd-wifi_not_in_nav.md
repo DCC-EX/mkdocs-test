@@ -16,13 +16,9 @@ Serial commands to provide WiFi diagnostica.
 
 ## Response
 
-The following are not a direct response, but rather a broadcast that will be triggered as a result of any track manager changes.
+==TODO== MEDIUM - Responses
 
 ``<response>``
-
-N/A
-
-### Response for ``<cmd>``
 
 ## Notes
 
@@ -40,7 +36,7 @@ N/A
 
 ### *Example Responses:*
 
-N/A
+==TODO== LOW - Example Responses
 
 --8<-- "snippets/abbr.md"
 

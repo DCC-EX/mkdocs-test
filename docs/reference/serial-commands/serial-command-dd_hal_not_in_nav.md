@@ -28,7 +28,7 @@ Lists the configured I/O drivers in the Hardware Abstraction Layer (HAL). See Ex
 
 ### Response for ``<D HAL RESET>``
 
-==TODO== LOW - Responses
+==TODO== MEDIUM - Responses
 
 ## Notes
 

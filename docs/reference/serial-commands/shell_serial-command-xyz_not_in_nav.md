@@ -37,7 +37,7 @@ The following are not a direct response, but rather a broadcast that will be tri
 
 ### Response for ``<cmd>``
 
-==TODO== LOW - Responses
+==TODO== MENU - Responses
 
 ## Notes
 
