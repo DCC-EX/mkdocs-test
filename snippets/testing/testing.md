@@ -48,8 +48,8 @@ The most direct testing method is to use a serial monitor to talk directly to th
 
 There are several serial monitors available:
 
-- Built in to [**EX-Installer**](/docs/installer/installer.md)
-- Built in to the [**EX-WebThrottle**](/docs/products/ex-webthrottle/ex-webthrottle.md)
+- Built in to [**EX-Installer**](/installer/installer.md)
+- Built in to the [**EX-WebThrottle**](/products/ex-webthrottle/ex-webthrottle.md)
 - Built in to JMRI or other train control software
 - Built in to VSCode is you are using that as an IDE
 - Built in to the Arduino IDE (Not recommended)
