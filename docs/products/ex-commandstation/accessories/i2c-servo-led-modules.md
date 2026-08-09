@@ -7,7 +7,7 @@ To connect a servo module to **EX-CommandStation**, you first need to get a modu
 
 These are widely available from eBay, Amazon, etc. for a few dollars.
 
-See also the [Connecting a servo turnout/point](./connecting-servo-turnout.md) page fro additional information.
+See also the [Connecting a servo turnout/point](./connecting-servo-turnout.md) page for additional information.
 
 ## Pins
 
@@ -23,7 +23,7 @@ consume more current than the Arduino is able to supply, and so a separate 5V su
 
 Connections to the Arduino are made with four jumper wires (+5V power and GND, and SCL and SDA), as shown on the following diagram:
 
-![Mega with PCA9685 Servo Module](../../../_static/images/i2c-devices/ArduinoMegaServo.png){ width="400px"}
+![Mega with PCA9685 Servo Module](../../../_static/images/i2c-devices/ArduinoMegaServo.png){ width="600px"}
 <br/>Mega with PCA9685 Servo Module
 
 In **EX-CommandStation**, the drivers for the PCA9685 module is already installed, and made available to for use as pin numbers 100-115. A servo is shown in the diagram, connected to the first set of pins on the module.  This will be accessed using pin number 100.

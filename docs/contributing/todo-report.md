@@ -16,16 +16,15 @@ Scanned docs root: `C:\Users\akers\OneDrive\github\github_doco\mkdocs-test\docs`
 
 ## High TODOs
 
-Total High TODO matches: 95
+Total High TODO matches: 94
 
 | File | Line | Line text |
 | --- | ---: | --- |
-| [docs/contributing/release-checklist.md](release-checklist.md) | 128 | - ==TODO== I am not really sure of the purpose of the products/getting-started page |
-| [docs/contributing/release-checklist.md](release-checklist.md) | 129 | - ==TODO== Restructure parts the reference section for throttle developers |
-| [docs/contributing/release-checklist.md](release-checklist.md) | 130 | - ==TODO== Migrate the other missing HAL pages |
-| [docs/contributing/release-checklist.md](release-checklist.md) | 132 | - ==TODO== Really need some pages with diagrams and picture covering physical installation of the CS. See /purchasing/physical-installation.md and installer/physical-installation.md |
-| [docs/contributing/release-checklist.md](release-checklist.md) | 133 | - ==TODO== Try to remove the references to the Arduino IDE.  Change to VSC.  Not going to be simple. |
-| [docs/contributing/release-checklist.md](release-checklist.md) | 134 | - ==TODO== Need to change the 'Withrottle' iOS app references to 'ThrottleCard' |
+| [docs/contributing/release-checklist.md](release-checklist.md) | 128 | - ==TODO== Restructure parts the reference section for throttle developers |
+| [docs/contributing/release-checklist.md](release-checklist.md) | 129 | - ==TODO== Migrate the other missing HAL pages |
+| [docs/contributing/release-checklist.md](release-checklist.md) | 130 | - ==TODO== Really need some pages with diagrams and picture covering physical installation of the CS. See /purchasing/physical-installation.md and installer/physical-installation.md |
+| [docs/contributing/release-checklist.md](release-checklist.md) | 131 | - ==TODO== Try to remove the references to the Arduino IDE.  Change to VSC.  Not going to be simple. |
+| [docs/contributing/release-checklist.md](release-checklist.md) | 132 | - ==TODO== Need to change the 'Withrottle' iOS app references to 'ThrottleCard' |
 | [docs/diy/mega-harder.md](../diy/mega-harder.md) | 18 | - an Arduino Standard Motor-Shield (or others as noted in ==TODO==) to power the track. |
 | [docs/enhance/index.md](../enhance/index.md) | 73 | ==TODO== basic intro to accessories and links to the appropriate pages |
 | [docs/installer/install-ex-ioexpander.md](../installer/install-ex-ioexpander.md) | 3 | ==TODO== complete EX-Installer EX-IOExpander page needed |
@@ -142,11 +141,10 @@ Total medium priority TODO matches: 17
 
 ## Low priority TODOs
 
-Total low priority TODO matches: 60
+Total low priority TODO matches: 59
 
 | File | Line | Line text |
 | --- | ---: | --- |
-| [docs/contributing/release-checklist.md](release-checklist.md) | 131 | - ==TODO== LOW Some of the low priority TODOs could be hidden in comments |
 | [docs/reference/serial-commands/serial-command-aa-and-a_not_in_nav.md](../reference/serial-commands/serial-command-aa-and-a_not_in_nav.md) | 64 | * ==TODO== LOW - Example Commands |
 | [docs/reference/serial-commands/serial-command-aa-and-a_not_in_nav.md](../reference/serial-commands/serial-command-aa-and-a_not_in_nav.md) | 68 | * ==TODO== LOW - Example Responses |
 | [docs/reference/serial-commands/serial-command-c-railcom_not_in_nav.md](../reference/serial-commands/serial-command-c-railcom_not_in_nav.md) | 37 | * ==TODO== LOW - Example Commands |

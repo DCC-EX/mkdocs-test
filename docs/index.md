@@ -24,7 +24,7 @@ hide:
 
 - ## :material-hand-wave-outline: Welcome to DCC-EX
 
-    Our highly regarded [Command Station](/products/getting-started.md) is one of the best available with many unique features specifically designed to bring control and fun to your hobby:
+    Our highly regarded open source [Command Station](./products/ex-commandstation/index.md) is one of the best available with many unique features specifically designed to bring control and fun to your hobby:
 
     - Wi-fi access, with **DCC-EX** unique features, to use [Engine Driver](https://enginedriver.mstevetodd.com/) on Android, [ThrottleCard](https://throttlecard.com/) on iOS and a wide variety of other Apps and physical throttles.
     - The ability to run DCC and DC trains from the same throttle at the same time.
