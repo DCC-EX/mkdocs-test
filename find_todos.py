@@ -8,6 +8,7 @@ from pathlib import Path
 from click import style
 
 TODO_MARKER_PATTERN = re.compile(r"==TODO==", re.IGNORECASE)
+MEDIUM_TODO_PATTERN = re.compile(r"==TODO==\s*MEDIUM\b", re.IGNORECASE)
 LOW_TODO_PATTERN = re.compile(r"==TODO==\s*LOW\b", re.IGNORECASE)
 EXCLUDE_LINE_PATTERN = re.compile(r"\bto-do/task list\b|/todo-report\.md|todo-report\.md\b", re.IGNORECASE)
 DEFAULT_IGNORE_DIRS = {
@@ -61,6 +62,8 @@ def iter_text_files(scan_root: Path):
 def classify_todo_line(line: str) -> str | None:
     if not TODO_MARKER_PATTERN.search(line):
         return None
+    if MEDIUM_TODO_PATTERN.search(line):
+        return "medium"
     if LOW_TODO_PATTERN.search(line):
         return "low"
     return "normal"
@@ -70,6 +73,7 @@ def build_report(root: Path, output_path: Path) -> int:
     output_path = output_path.resolve()
     scan_root = root / "docs"
     matches = []
+    medium_matches = []
     low_matches = []
     for path in iter_text_files(scan_root):
         if path.resolve() == output_path:
@@ -97,6 +101,8 @@ def build_report(root: Path, output_path: Path) -> int:
             }
             if category == "low":
                 low_matches.append(entry)
+            elif category == "medium":
+                medium_matches.append(entry)
             else:
                 matches.append(entry)
 
@@ -116,8 +122,8 @@ def build_report(root: Path, output_path: Path) -> int:
         " }\n"
         "</style>\n",
         f"Scanned docs root: `{scan_root}`\n\n",
-        "## High &amp; Medium TODOs\n\n",
-        f"Total High &amp; Medium TODO matches: {len(matches)}\n\n",
+        "## High TODOs\n\n",
+        f"Total High TODO matches: {len(matches)}\n\n",
     ]
 
     if matches:
@@ -130,6 +136,19 @@ def build_report(root: Path, output_path: Path) -> int:
         report_sections.append("\n")
     else:
         report_sections.append("No standard TODO entries found.\n\n")
+
+    report_sections.append("## Medium priority TODOs\n\n")
+    report_sections.append(f"Total medium priority TODO matches: {len(medium_matches)}\n\n")
+    if medium_matches:
+        report_sections.append("| File | Line | Line text |\n")
+        report_sections.append("| --- | ---: | --- |\n")
+        report_sections.extend(
+            f"| [{item['file']}]({item['link_path']}) | {item['line_number']} | {item['line']} |\n"
+            for item in medium_matches
+        )
+        report_sections.append("\n")
+    else:
+        report_sections.append("No medium priority TODO entries found.\n")
 
     report_sections.append("## Low priority TODOs\n\n")
     report_sections.append(f"Total low priority TODO matches: {len(low_matches)}\n\n")

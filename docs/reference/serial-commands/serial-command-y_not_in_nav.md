@@ -51,7 +51,7 @@ See the [Sounds page](/products/ex-commandstation/accessories/various-devices/so
 
 ## Responses
 
-==TODO== Responses
+==TODO== MEDIUM - Responses
 
 ## Notes
 

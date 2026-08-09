@@ -1,3 +1,102 @@
-# Managing You Config files - Saving and Reusing
+# Managing Your Config files - Saving and Reusing
 
-==TODO== Managing You Config files - Saving and Reusing - Copy legacy info
+When using **EX-Installer** you can save your customisations and reuse them later to reload the same configuration, or modify it, rather than selecting all the options again each time you load.
+
+## Custom config files
+
+**EX-CommandStation** uses three main config files that allow you to modify aspects of the command station to suit your needs. These files are:
+
+!!! tip inline end ""
+
+    The *case* of characters in the file names is very important!
+
+* [config.h](#configh)
+* [myAutomation.h](#myautomationh)
+* [mySetup.h](#mysetuph)
+
+### config.h
+
+The **config.h** file contains the core information for how your **EX-CommandStation** will be configured, including:
+
+* The motor driver type
+* The WiFi network configuration
+* etc.
+
+If you are using the **EX-Installer** then this file will be automatically created for you based on your answers to the question.  However you can supply your own file (which you can create manually, or may have been previously created by the installer)
+
+!!! note inline end "Memory usage"
+
+    Using **myAutomation.h** does use more progmem as it uses **EXRAIL**.  This is really only significant on Arduino Mega based **EX-CommandStations**
+
+### myAutomation.h
+
+The **myAutomation.h** file can contain any customisations, including:
+
+* [Your Roster](../products/ex-commandstation/exrail/exrail-objects-introduction.md#adding-a-roster)
+* [Turnouts/Points](../enhance/turnouts.md)
+* [Routes](../products/ex-commandstation/exrail/exrail-sequences-introduction.md)
+* [Servos](../products/ex-commandstation/accessories/index.md)
+* [**EXRAIL** automations](../products/ex-commandstation/exrail/exrail-sequences-introduction.md)
+* [Turntables](../products/ex-turntable/configure.md)
+
+This can be created manually, or by the **EX-Installer** if you select the `Create MyAutomation.h` option.
+
+!!! Note inline end "mySetup.h is not really needed"
+
+    Use of `mySetup.h` is not really needed any more. Almost everything that it was previously used for can now be done inside `myAutomation.h`.
+
+### mySetup.h
+
+The **mySetup.h** file can contain:
+
+* ``SETUP(cmd)`` commands  (allows issuing of DCC-EX Native protocol commands to be run at start-up of the Command Station)
+* Any c++ code you wish
+
+This file must be created manually.
+
+----
+
+## Creating Custom Config files
+
+You can create and manage custom config files several ways:
+
+* By using the editing features in **EX-Installer**
+* Manually using any text Editor
+
+### Using EX-Installer
+
+Note: if you are just starting out this is the recommended approach.
+
+* Run **EX-Installer** following the instructions 
+* in the **'Install EX-CommandStation'** screen, make sure you select `Create MyAutomation.h` and `advanced config` along with any other options you need for your Command Station.
+* Click the `Advanced Config` button you will be shown the **'Advanced Configuration'** Screen where you can make additional edits to **config.h** and **myAutomation.h**
+* On the **'Load EX-CommandStation'** screen, after you click `Load` and the software has finished loading, you will see a `Backup config files` button.  
+* Click on the button and follow select or create a folder  backup your files. :dcc-ex-red-bold-italic:`This MUST NOT be inside any of the folders created by the installer.`
+
+The next time you run **EX-Installer**
+
+* On the **'Select EX-CommandStation version'** screen, select the version you wish to install.
+* Then select `Use my existing config files` and locate the files you saved as a backup previously. <br/> Select any of the files you backed up. (Even though you select only one file, all the files will be included.)
+* Then click `Advanced Config`,
+* Follow the instructions above for the **'Advanced Configuration'** screen and the following steps.
+
+Note: this process does not automatically create **mySetup.h**.  This file can be manually added to the other two files using the text editor instructions below if needed.
+
+### Using any text Editor
+
+Any app that can edit plain text files can be used.
+
+* Create or select a folder to store the files. <span style="color:red;">This MUST NOT be inside any of the folders created by the installer.</span>
+* Copy `config-sample.h` from github or the **EX-Installer** install folders.
+* Rename `config-sample.h` to `config.h` and edit as needed
+* If needed, create `myAutomation.h` and edit as needed
+* If needed, create `mySetup.h` and edit as needed
+* Run **EX-Installer** following the instructions.
+* On the **'Select EX-CommandStation version'** select the version you wish to install.
+* Then select `Use my existing config files` and locate the files you saved as a backup previously, and select any of the files you backed up. (Even though you select only one file, all the files will be included.)
+* Then click `Advanced Config`
+* Continue to the **'Load Configuration'** screen and load the software
+
+If you had previously used the Arduino IDE or VSC to create custom config files, you can use these files, either from where you originally created them, or you can copy them to a separate folder. <span style="color:red;">As long as that folder IS NOT inside any of the folders created by the installer.</span>
+
+--8<-- "snippets/abbr.md"
