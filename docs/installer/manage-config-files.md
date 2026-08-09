@@ -1,6 +1,6 @@
 # Managing Your Config files - Saving and Reusing
 
-When using **EX-Installer** you can save your customisations and reuse later to reload the or same configuration, or modify it, rather than selecting all the options again each time.
+When using **EX-Installer** you can save your customisations and reuse them later to reload the same configuration, or modify it, rather than selecting all the options again each time you load.
 
 ## Custom config files
 
@@ -8,7 +8,7 @@ When using **EX-Installer** you can save your customisations and reuse later to 
 
 !!! tip inline end ""
 
-    The *case* of characters in the names is very important!
+    The *case* of characters in the file names is very important!
 
 * [config.h](#configh)
 * [myAutomation.h](#myautomationh)
