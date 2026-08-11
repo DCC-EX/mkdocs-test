@@ -19,7 +19,6 @@ li:not(.md-nav__item, .md-tabs__item) a {
 - [Home](../index.md)
 - **Products**
     - [DCC-EX Product Overview <small>(Product Overview)</small>](../products/products.md)
-    - [Getting Started with DCC-EX <small>(Getting Started)</small>](../products/getting-started.md)
     - **EX-CommandStation<small><small> (Ready&nbsp;to&nbsp;Run &amp; Self&nbsp;Build)</small></small>**
         - [DCC-EX EX-CommandStation - Overview <small>(EX-CommandStation Overview)</small>](../products/ex-commandstation/index.md)
         - [**EX-CSB1** CommandStation/Booster 1 Express <small>(<b>EX-CSB1 CommandStation/Booster 1 Express</b>)</small>](../products/ex-commandstation/ex-csb1.md)
@@ -54,7 +53,7 @@ li:not(.md-nav__item, .md-tabs__item) a {
                 - [I2C Multiplexers <small>(I2C (I<sup>2</sup>C) Multiplexers)</small>](../products/ex-commandstation/accessories/i2c-multiplexers.md)
                 - **Various Devices**
                     - **Sounds**
-                        - [Sounds](../products/ex-commandstation/accessories/various-devices/sounds/sounds.md)
+                        - [Sounds](../products/ex-commandstation/accessories/various-devices/sounds/index.md)
                         - [DFPlayer Sound player <small>(DFPlayer)</small>](../products/ex-commandstation/accessories/various-devices/sounds/dfplayer.md)
                         - [Serial connected DFPlayer <small>(Serial DFPlayer)</small>](../products/ex-commandstation/accessories/various-devices/sounds/serial-dfplayer.md)
                         - [I2C Connected DFPlayer <small>(I2C DFPlayer)</small>](../products/ex-commandstation/accessories/various-devices/sounds/i2c-dfplayer.md)
@@ -370,6 +369,7 @@ li:not(.md-nav__item, .md-tabs__item) a {
 - [Example - ROUTEs with turnouts/signals on Mega2560 direct I/O pins](../products/ex-commandstation/exrail/cookbooks/big-picture/stage6-examples/example2_not_in_nav.md)
 - [Example - Turntable and traverser ROUTEs](../products/ex-commandstation/exrail/cookbooks/big-picture/stage5-examples/traverser-example_not_in_nav.md)
 - [Example - Turntable ROUTEs](../products/ex-commandstation/exrail/cookbooks/big-picture/stage5-examples/turntable-example_not_in_nav.md)
+- [Getting Started with DCC-EX](../products/getting-started_not_in_nav.md)
 - [Incorrect IOREF voltage for 3.3v Microcontrollers](microcontrollers/esp32/ioref-incorrect-voltage-fix_not_in_nav.md)
 - [Using a Serial Monitor / Device Monitor](tools/serial-monitor_not_in_nav.md)
 - [WiFi Configuration for version 5.7.0+ <br/><small>Graphical User Interface Options</small>](../products/ex-commandstation/config-wifi-esp32-gui-options_not_in_nav.md)

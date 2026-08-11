@@ -1,6 +1,5 @@
 nav:
   - Product Overview: products.md
-  - Getting Started: getting-started.md
   - EX-CommandStation<small><small> (Ready&nbsp;to&nbsp;Run &amp; Self&nbsp;Build)</small></small>: ex-commandstation
   - <br/>EX-MotorShield8874: ex-motorshield8874/ex-motorshield8874.md
   - EX-WiFiShield8266: ex-wifishield8266/ex-wifishield8266.md
