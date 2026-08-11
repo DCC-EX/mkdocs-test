@@ -31,7 +31,7 @@ This capability is part of **EXRAIL** and is built into your **EX-CommandStation
 Turnouts/Points included on your layout can be any of the following forms:
 
 * DCC Turnouts/Points
-* Servo Turnouts/Points
+* [Servo Turnouts/Points](../products/ex-commandstation/accessories/connecting-servo-turnout.md)
 * Pin Turnouts/Points
 
 The capability to define and support these is part of **EXRAIL** and is built into your **EX-CommandStation**.  See [EXRAIL Turnouts/Points](../products/ex-commandstation/exrail/exrail-objects-introduction.md#adding-turnoutspoints) for more information on these.
@@ -70,11 +70,28 @@ Also see:
 
 ## Accessories
 
-==TODO== basic intro to accessories and links to the appropriate pages
+Within the **DCC-EX** ecosystem, an accessory is anything you can connect to or control from your **EX-CommandStation** which also includes our other products such as **EX-FastClock**, **EX-IOExpander**, **EX-SensorCAM**, and **EX-Turntable**.
 
-See:
+Accessories are broadly divided into two categories:
 
-* [Accessories](../products/ex-commandstation/accessories/index.md)
+* Outputs:
+
+    * [Turnouts/Points](../products/ex-commandstation/accessories/connecting-servo-turnout.md)
+    * Signals
+    * [Turntables](../products/ex-turntable/index.md)
+    * [Lighting](../products/ex-commandstation/accessories/i2c-servo-led-modules.
+    * [Servos](../products/ex-commandstation/accessories/i2c-servo-led-modules.md)
+    * [Sounds](../products/ex-commandstation/accessories/various-devices/sounds/index.md)
+
+* Inputs:
+
+    * [Sensors](../products/ex-commandstation/accessories/sensors.md)
+    * Push buttons
+    * Keypads
+    * Rotary encoders
+    * [Clocks](../products/ex-fastclock/index.md)
+
+See [***Accessories***](../products/ex-commandstation/accessories/index.md) for more information.
 
 Also see:
 

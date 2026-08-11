@@ -53,7 +53,7 @@ li:not(.md-nav__item, .md-tabs__item) a {
                 - [I2C Multiplexers <small>(I2C (I<sup>2</sup>C) Multiplexers)</small>](../products/ex-commandstation/accessories/i2c-multiplexers.md)
                 - **Various Devices**
                     - **Sounds**
-                        - [Sounds](../products/ex-commandstation/accessories/various-devices/sounds/sounds.md)
+                        - [Sounds](../products/ex-commandstation/accessories/various-devices/sounds/index.md)
                         - [DFPlayer Sound player <small>(DFPlayer)</small>](../products/ex-commandstation/accessories/various-devices/sounds/dfplayer.md)
                         - [Serial connected DFPlayer <small>(Serial DFPlayer)</small>](../products/ex-commandstation/accessories/various-devices/sounds/serial-dfplayer.md)
                         - [I2C Connected DFPlayer <small>(I2C DFPlayer)</small>](../products/ex-commandstation/accessories/various-devices/sounds/i2c-dfplayer.md)

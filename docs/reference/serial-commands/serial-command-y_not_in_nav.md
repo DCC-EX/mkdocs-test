@@ -19,7 +19,7 @@ Serial commands to play sounds on a DFPlayer or UDPAudio device.
 
 Theese devices can be used to play pre-recorded sounds from an onboard SD-card.
 
-See the [Sounds page](/products/ex-commandstation/accessories/various-devices/sounds/sounds.md) for more information.
+See the [Sounds page](/products/ex-commandstation/accessories/various-devices/sounds/index.md) for more information.
 
 ## Commands
 

@@ -185,10 +185,9 @@ When setting up a turnout/point where multiple pins are required for control, th
 
 #### Adding the Hardware -  Servo Turnouts/Points
 
-<!-- .. sidebar::
+!!! note inline end ""
 
-  ==TODO== You can also refer to :doc:`/reference/hardware/servo-module` for more information.
--->
+  You can also refer to [Servo Turnouts/Points page](../accessories/connecting-servo-turnout.md) and the [Servo Module page](../accessories/i2c-servo-led-modules.md) for more information.
 
 To connect a servo to **EX-CommandStation**, you first need to get a module, based on the PCA9685 chip.
 

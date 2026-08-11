@@ -43,7 +43,7 @@ ALIAS(YARD_WORKERS_CHOIR_REHERSAL, 12003)
 
 ## Playing sounds
 
-Refer to the  [Sounds page](sounds.md)
+Refer to the  [Sounds page](index.md)
 
 ## WaveShare implementation details
 

@@ -10,11 +10,12 @@ Accessories are broadly divided into two categories:
 
 - Outputs:
 
-    - Turnouts or points
+    - Turnouts/Points
     - Signals
     - Turntables
     - Lighting
     - Servos
+    - [Sounds](./various-devices/sounds/index.md)
 
 - Inputs:
 
