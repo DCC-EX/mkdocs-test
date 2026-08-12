@@ -238,21 +238,14 @@ li:not(.md-nav__item, .md-tabs__item) a {
 - **Reference**
     - [Full Site Table of Contents <small>(Table of Contents)</small>](toc.md)
     - [Glossary of Terms](glossary.md)
-    - **DCC-EX Serial/Native Commands**
-        - [DCC-EX Serial Commands Overview <small>(Overview)</small>](serial-commands/index.md)
-        - [DCC-EX Serial Command List <small>(Command List)</small>](serial-commands/serial-command-list.md)
-        - [Grouped Commands](serial-commands/serial-commands.md)
-        - [Legacy Command Reference <small>(Legacy Reference)</small>](serial-commands/legacy-command-reference.md)
+    - [Advanced config.h settings for EX-CommandStation build <small>(<br/>Advanced config.h Options)</small>](advanced-config-h.md)
     - [EXRAIL Command List](exrail-command-reference.md)
-    - [Advanced config.h settings for EX-CommandStation build <small>(Advanced config.h Options)</small>](advanced-config-h.md)
-    - **TrackManager**
+    - **<br/>TrackManager**
         - [TrackManager](trackmanager/index.md)
         - [DC Mode - PWM Frequency <small>(DC Mode Frequency)</small>](trackmanager/dc-mode-frequency.md)
         - [DC Mode - Logic Gate Circuits <small>(DC Mode Logic)</small>](trackmanager/dc-mode-logic.md)
         - [DC Mode Track Sync <small>(DC Track Sync)</small>](trackmanager/dc-track-sync.md)
-    - [**EX-CommandStation** Internal Architecture <small>(Command Station Internal Architecture)</small>](command-station-arch.md)
-    - [Throttle Writers Guide (doc incomplete) <small>(Throttle Writers Guide)</small>](throttle-writers-guide.md)
-    - **Alternate Microcontrollers**
+    - **<br/>Alternate Microcontrollers**
         - [Microcontroller Boards - Overview <small>(Overview)</small>](microcontrollers/index.md)
         - **EX-CSB1**
             - [EX-CSB1 FAQ](microcontrollers/ex-csb1/csb1-errors-faq.md)
@@ -292,6 +285,18 @@ li:not(.md-nav__item, .md-tabs__item) a {
         - **i2C**
             - [I2C (I<sup>2</sup>C) Wiring for the Tinkerer <small>(I2C Wiring)</small>](wiring/i2C/i2c-wiring.md)
             - [Tuning an I2C (I<sup>2</sup>C) Bus for the Engineer <small>(Tuning Information)</small>](wiring/i2C/tuning-info.md)
+    - **<br/>Throttle Developers**
+        - [Overview](throttle-writers/index.md)
+        - [Considerations for throttle developers <small>(Throttle Writers Guide)</small>](throttle-writers/throttle-writers-guide.md)
+    - **DCC-EX Serial/Native Commands**
+        - [DCC-EX Serial Commands Overview <small>(Overview)</small>](serial-commands/index.md)
+        - [DCC-EX Serial Command List <small>(Command List)</small>](serial-commands/serial-command-list.md)
+        - [Grouped Commands](serial-commands/serial-commands.md)
+        - [Legacy Command Reference <small>(Legacy Reference)</small>](serial-commands/legacy-command-reference.md)
+    - **Command Station Internal Architecture**
+        - [**EX-CommandStation** Internal Architecture <small>(Command Station Internal Architecture)</small>](command-station-architecture/index.md)
+        - [DCC-EX HAL Architecture <small>(HAL Architecture)</small>](command-station-architecture/hal-architecture.md)
+        - [Writing a HAL Driver <small>(HAL Writer's Guide)</small>](command-station-architecture/writing-hal-drivers.md)
     - **<i>External References</i>**
         - [Standards and Technical References <small>(Standards & Technical References)</small>](external-references/index.md)
 - **About Us**

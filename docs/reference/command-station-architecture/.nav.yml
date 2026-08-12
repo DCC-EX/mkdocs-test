@@ -1,0 +1,4 @@
+nav:
+  - Command Station Internal Architecture: index.md
+  - HAL Architecture: hal-architecture.md
+  - HAL Writer's Guide: writing-hal-drivers.md
