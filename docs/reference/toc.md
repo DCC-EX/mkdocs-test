@@ -297,6 +297,7 @@ li:not(.md-nav__item, .md-tabs__item) a {
         - [**EX-CommandStation** Internal Architecture <small>(Command Station Internal Architecture)</small>](command-station-architecture/index.md)
         - [DCC-EX HAL Architecture <small>(HAL Architecture)</small>](command-station-architecture/hal-architecture.md)
         - [Writing a HAL Driver <small>(HAL Writer's Guide)</small>](command-station-architecture/writing-hal-drivers.md)
+        - [I/O Device Drivers and HAL](command-station-architecture/io-device-drivers.md)
     - **<i>External References</i>**
         - [Standards and Technical References <small>(Standards & Technical References)</small>](external-references/index.md)
 - **About Us**

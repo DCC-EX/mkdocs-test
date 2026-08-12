@@ -249,7 +249,6 @@ The following functional changes have been done in the neil-hal branch to suppor
 - Sensors/Turnouts/Outputs: Revise Turnout command handling to support new commands, e.g.
 
 ```cpp
-
       <T id SERVO vpin activeposition inactiveposition profile>
       <T id DCC address subaddress>  // address 1-512, subaddress 0-3
       <T id DCC linearaddress>         // linearaddress 1-2048
@@ -302,7 +301,6 @@ The following functional changes have been done in the neil-hal branch to suppor
 - HAL: New device support for HC-SR04 Ultrasonic Distance Sensor.  This device senses distance of nearby objects by sending an ultrasound pulse and listening for the echo.  From the delay time, the distance can be calculated. The device is configured in myHal.cpp by 
   
 ```cpp
-
       #include "IO_HCSR04.h"
       void halSetup() {
         ...
@@ -316,7 +314,6 @@ where triggerPin and echoPin are the Arduino pins connected to the corresponding
 - HAL: New function IODevice::readAnalogue(vpin) added to support analogue inputs on the Arduino pins and on external I2C analogue input modules.  Driver for ADS1113 and ADS1114 (both single input) and ADS1115 (4-input) added as class ADS111x. The device is configured in myHal.cpp by
 
 ```cpp
-
       #include "IO_AnalogueInputs.h"
       void halSetup() {
         ...
@@ -327,21 +324,20 @@ where triggerPin and echoPin are the Arduino pins connected to the corresponding
 
 ## Future Enhancements
 
-1. HAL: Produce a simple IODevice class template, to help |DCC-EX| developers/tinkerers who want to implement their own extensions protocols, e.g. for a serial link to an external device (LCN?).  See IO_ExampleSerial.cpp.
+1. HAL: Produce a simple IODevice class template, to help **DCC_EX** developers/tinkerers who want to implement their own extensions protocols, e.g. for a serial link to an external device (LCN?).  See IO_ExampleSerial.cpp.
 
-```
-    _begin	Initialise serial line.
-    _loop	State machine to read incoming characters and decode rudimentary data messages.
-    _read	Return current state from received data messages.
-    _write	Send simple messages over serial line
-```
+    _begin Initialise serial line.<br/>
+    _loop State machine to read incoming characters and decode rudimentary data messages.<br/>
+    _read Return current state from received data messages.<br/>
+    _write Send simple messages over serial line
 
-2. HAL: Remove the ability to switch off pull-ups for inputs?  Initially the IODevice class was implemented with pull-ups switched     permanently on for input pins.  On the PCF8574 they have to be on anyway, because of the way the chip works. So I added them, but @UKBloke asked why anyone wouldn't want pull-ups enabled?  Most, if not all, sensors operate by pulling a pin down to earth.  Look at pushbuttons, microswitches, relays, hall effect sensors, and others.  So supplying a pull-up, and inverting (0V=active=true, 5V=inactive=false), would seem to be the standard.  Pull-up+inversion is now default if not configured otherwise.
+2. HAL: Remove the ability to switch off pull-ups for inputs?  Initially the IODevice class was implemented with pull-ups switched     permanently on for input pins.  On the PCF8574 they have to be on anyway, because of the way the chip works. So I added them, but @UKBloke asked why anyone wouldn't want pull-ups enabled?  Most, if not all, sensors operate by pulling a pin down to earth.  Look at push buttons, microswitches, relays, hall effect sensors, and others.  So supplying a pull-up, and inverting (0V=active=true, 5V=inactive=false), would seem to be the standard.  Pull-up+inversion is now default if not configured otherwise.
 3. I2C: The overall capacitance of an I2C bus is limited in the specification to 400pF.  Above this, the slew rate of the clock and data signals is too slow to achieve the expected performance.  Capacitance increases with bus length, and increases as devices are added to the bus.  Also, the I2C address choice for most devices is limited and using the same I2C address for two devices causes a conflict.  PROPOSAL: A bus multiplexer provides the capability to switch, under I2C control, one or more separate bus segments to be connected to the bus controller.  When a bus segment is not connected, its devices will not respond, and the capacitance of the bus segment does not contribute to the overall I2C bus capacitance.  Support for a bus multiplexer could readily be added in the I2CManager, by extending the I2C address field for each device to 16 bits (instead of 8 bits).  The low bits would contain the I2C address of the destination device.  The high bits would contain a selector for the multiplexer (1-8, as up to 8 multiplexers may be present), and a sub-bus number (0-7) to be selected on the multiplexer.  A value of zero for the multiplexer and sub-bus number would indicate that the device in question is connected to the primary bus and is not affected by the state of the multiplexer.  The impact on I2C traffic is minimal;  two additional bytes need to be sent if an I2C request requires to switch to a different sub-bus and the affect on the code is just the changes above to the I2C handling.
 4. Sensors/Turnouts/Outputs: I can't see anything in the existing code which checks whether the EEPROM writes overrun the available EEPROM space.  If not, then when the address overflows, I think that the writes will wrap around and overwrite the start of the EEPROM space.  This is, in fact, safe since the beginning of the EEPROM contains a text flag and, if it s not present or has been overwritten, the EEPROM is considered to be empty.  PROPOSAL: Analyse more thoroughly and, if the address overrun check is missing, add suitable checks, and report failure (<X>) if there is insufficient EEPROM to store everything.  I've added a DIAG report of how much EEPROM is written when <E> command is executed.
 5. Sensors: Sensor handling is not ideal.  When the Sensor class scans for changes in current state by calling IODevice::read(), potentially each device (ArduinoPins, MCP23017 etc) needs to be checked to find the correct device, which takes time.  For a system with, say, three I2C devices, this means up to four devices being checked for each pin being read.  This can be mitigated by using the callback capability, but this also has its problems.  When a change is detected and the callback is invoked, the relevant sensor object has to be located by scanning the sensor list, potentially to the end.  For the same three I2C devices each with 16 sensors, that's up to 48 sensor objects that need to be checked to find the appropriate sensor object, but this isn't as bad as it sounds as it only happens on a sensor state change.  Also, the transmission of the <Q>/<q> message is deferred to the checkAll() method which also has to scan through all of the sensor objects, partly because of the anti-bounce delay handling and partly because the output stream is only available within the checkAll function.  I can't really see how this can be improved without serious restructuring of other parts of the CS.  PROPOSAL: The anti-bounce code in the Sensor class could be removed in favour of adding simple double-scan validation within the HAL drivers (input must be the same for two consecutive scans to be considered a valid change).  This would use minimal RAM in external GPIO module drivers (one extra byte per 8 input pins) but would need more changes for Arduino pins, which are currently scanned on demand.
-6. HAL, Sensors/Turnouts: Each HAL device and pin, each turnout, and each sensor requires some RAM to hold its configuration parameters and its current state.  While the configuration parameters associated with dynamically created objects (e.g. turnouts through the <T> command) must be held in RAM, it is theoretically possible to provide an alternative way of creating these objects where the configuration parameters are held only in FLASH, thereby reducing the RAM requirements.  This would be relatively straightforward if all objects were to be statically created, but the need to support both dynamically create objects and statically created objects would complicate the code 
-significantly.  To be explored.
+6. HAL, Sensors/Turnouts: Each HAL device and pin, each turnout, and each sensor requires some RAM to hold its configuration parameters and its current state.  While the configuration parameters associated with dynamically created objects (e.g. turnouts through the <T> command) must be held in RAM, it is theoretically possible to provide an alternative way of creating these objects where the configuration parameters are held only in FLASH, thereby reducing the RAM requirements.  This would be relatively straightforward if all objects were to be statically created, but the need to support both dynamically create objects and statically created objects would complicate the code significantly.  To be explored.
 7. HAL, Turnouts:  EEPROM is currently optionally used for storing definitions of Turnouts, Sensors and Outputs. In addition, if a turnout or output definition has been saved to EEPROM then the state of the turnout (closed/thrown) or output will be updated in EEPROM each time it is changed.  This allows the turnout/output to be reinitialised to its last known state on each restart of the Command Station.  However, if the EEPROM is not used for definitions, then the states are not available either.  PROPOSAL: If the EEPROM isn't used for object definitions, then store current states of objects instead.  This could be done fairly readily for turnouts, using existing code, by writing just the TurnoutData contents to EEPROM - this contains the turnout ID, type and current position (closed/thrown).  Thus, when a turnout is recreated (from a <T> command in the myConfig.h, or otherwise) the last known state for that turnout ID can be retrieved by searching the EEPROM for a turnout with a matching ID.  When a turnout is deleted, the slot it occupied in EEPROM would be marked free (e.g. with an ID of -1).  If a turnout is created and its ID is not found, then the first free space would be allocated to it.  When the turnout position changes, the flags byte would be rewritten to EEPROM.  Note that this approach only stores the binary closed/thrown state and not, for example, the current position of a servo, which may be any arbitrary value within the servo's range.
 
-*N McKechnie, 27th August 2021*
+    *N McKechnie, 27th August 2021*
+
+--8<-- "snippets/abbr.md"
