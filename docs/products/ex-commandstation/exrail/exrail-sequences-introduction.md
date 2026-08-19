@@ -107,8 +107,10 @@ Sequences types fall in the following broad groups:
 
 Manually triggered sequences are advertised to apps and devices that support the WiThrottle protocol or Native Serial protocol so you can activate them on your throttles (e.g. Engine Driver or ThrottleCard). They are one of:
 
-* ``AUTOMATION( id, "description" )`` <br/>- Start a Automation Sequence and creates a apps and devices that support the WiThrottle protocol or Native Serial protocol {Handoff} button to automatically send a train along.
-* ``ROUTE( id, "description" )`` <br/>- Start of a Route Sequence and creates a apps and devices that support the WiThrottle protocol or Native Serial protocol {Set} button to manual drive the train along
+| Command | Explanation |
+| --- | --- |
+| ``AUTOMATION( id, "description" )`` | Start a Automation Sequence and creates a apps and devices that support the WiThrottle protocol or Native Serial protocol {Handoff} button to automatically send a train along |
+| ``ROUTE( id, "description" )`` | Start of a Route Sequence and creates a apps and devices that support the WiThrottle protocol or Native Serial protocol {Set} button to manual drive the train along |
 
 Note that these can also be invoked by other sequences.
 
@@ -116,7 +118,9 @@ Note that these can also be invoked by other sequences.
 
 Sequences that can only be triggered by other sequences have the following form:
 
-* ``SEQUENCE( id )`` <br/>- A general purpose Sequence for scenic animations, etc.
+| Command | Explanation |
+| --- | --- |
+| ``SEQUENCE( id )`` | A general purpose Sequence for scenic animations, etc. |
 
 #### Event Triggered Sequence Types
 
@@ -132,8 +136,10 @@ Sequences that can only be triggered by other sequences have the following form:
 
 Sequences that are triggered when 'events' occur, include:
 
-* ``ONCLOSE( turnout_id )`` - Event handler for turnout close
-* ``ONTHROW( turnout_id )`` - Event handler for turnout thrown
+| Command | Explanation |
+| --- | --- |
+| ``ONCLOSE( turnout_id )`` | Event handler for turnout close |
+| ``ONTHROW( turnout_id )`` | Event handler for turnout thrown |
 
 See the [EXRAIL Command List](command-list.md) for additional Event Triggered Sequence types, and additional information on these types.
 
@@ -181,14 +187,18 @@ There are a substantial number of commands that you can explore in the [EXRAIL C
 
 Turnout/Point commands include:
 
-* ``THROW( id )`` - Throw a defined turnout
-* ``CLOSE( id)`` - Close a defined turnout
+| Command | Explanation |
+| --- | --- |
+| ``THROW( id )`` | Throw a defined turnout |
+| ``CLOSE( id)`` | Close a defined turnout |
 
 Signal related commands include:
 
-* ``RED( signal_id )`` - Set defined signal to Red (See SIGNAL)
-* ``AMBER( signal_id )`` - Set a defined signal to Amber. (See SIGNAL)
-* ``GREEN( signal_id )`` - Set a defined signal to GREEN (see SIGNAL)
+| Command | Explanation |
+| --- | --- |
+| ``RED( signal_id )`` | Set defined signal to Red. (See [SIGNAL()](./exrail-objects-introduction.md#adding-signals)) |
+| ``AMBER( signal_id )`` | Set a defined signal to Amber. (See [SIGNAL()](./exrail-objects-introduction.md#adding-signals)) |
+| ``GREEN( signal_id )`` | Set a defined signal to Green. (See [SIGNAL()](./exrail-objects-introduction.md#adding-signals)) |
 
 ```cpp
    // Example
@@ -205,14 +215,18 @@ Signal related commands include:
 
 Loco related commands include:
 
-* ``FWD( speed )`` - Drive loco forward at DCC speed 0-127 (1=ESTOP)
-* ``REV( speed )`` - Drive logo in reverse at DCC speed 0-127 (1=ESTOP)
-* ``SPEED( speed )`` - Drive loco in current direction at DCC speed (0-127)
-* ``STOP`` - Set loco speed to 0 (same as SPEED(0) )
+| Command | Explanation |
+| --- | --- |
+| ``FWD( speed )`` | Drive loco forward at DCC speed 0-127 (1=ESTOP) |
+| ``REV( speed )`` | Drive logo in reverse at DCC speed 0-127 (1=ESTOP) |
+| ``SPEED( speed )`` | Drive loco in current direction at DCC speed (0-127) |
+| ``STOP`` | Set loco speed to 0 (same as SPEED(0) ) |
 
 Turntable related commands include:
 
-* ``MOVETT( vpin, steps, activity )`` - Move a turntable the number of steps relative to home, and perform the activity (refer EX-Turntable documentation)
+| Command | Explanation |
+| --- | --- |
+| ``MOVETT( vpin, steps, activity )`` | Move a turntable the number of steps relative to home, and perform the activity (refer EX-Turntable documentation) |
 
 See the [EXRAIL Command List](command-list.md) for additional commands and additional information on these commands.
 
@@ -277,29 +291,37 @@ or
 
 Sensor/VPIN Related Conditional:
 
-* ``IF( sensor_id )`` - If sensor activated or latched, continue, otherwise skip to ELSE/ENDIF. Use negative values for active HIGH sensors
-* ``IFNOT( sensor_id )`` - If sensor NOT activated and NOT latched, continue, otherwise skip to ELSE/ENDIF. Use negative values for active HIGH sensors
-* ``IFGTE( sensor_id, value )`` - Test if analog pin reading is greater than or equal to value (>=)
-* ``IFLT( sensor_id, value )`` - Test if analog pin reading is less than value (<)
-* ``IF_ANY( sensor_id1, sensor_id2 [,sensor_id...] )`` - If any one of a list of sensors is activated or latched, continue, otherwise skip to ELSE/ENDIF. Use negative values for active HIGH sensors
-* ``IF_ALL( sensor_id1, sensor_id2 [,sensor_id...] )`` - If any one of a list of sensors is activated or latched, continue, otherwise skip to ELSE/ENDIF. Use negative values for active HIGH sensors
+| Command | Explanation |
+| --- | --- |
+| ``IF( sensor_id )`` | If sensor activated or latched, continue, otherwise skip to ELSE/ENDIF. Use negative values for active HIGH sensors |
+| ``IFNOT( sensor_id )`` | If sensor NOT activated and NOT latched, continue, otherwise skip to ELSE/ENDIF. Use negative values for active HIGH sensors |
+| ``IFGTE( sensor_id, value )`` | Test if analog pin reading is greater than or equal to value (>=) |
+| ``IFLT( sensor_id, value )`` | Test if analog pin reading is less than value (<) |
+| ``IF_ANY( sensor_id1, sensor_id2 [,sensor_id...] )`` | If any one of a list of sensors is activated or latched, continue, otherwise skip to ELSE/ENDIF. Use negative values for active HIGH sensors |
+| ``IF_ALL( sensor_id1, sensor_id2 [,sensor_id...] )`` | If any one of a list of sensors is activated or latched, continue, otherwise skip to ELSE/ENDIF. Use negative values for active HIGH sensors |
 
 Turnout/Point Related Conditionals:
 
-* ``IFTHROWN( turnout_id )`` - Test if turnout is thrown
-* ``IFCLOSED( turnout_id )`` - Check if turnout is closed
+| Command | Explanation |
+| --- | --- |
+| ``IFTHROWN( turnout_id )`` | Test if turnout is thrown |
+| ``IFCLOSED( turnout_id )`` | Check if turnout is closed |
 
 Signal Related Conditionals:
 
-* ``IFRED( signal_id )`` - Tests if signal is red
-* ``IFAMBER( signal_id )`` - Tests if signal is amber
-* ``IFGREEN( signal_id )`` - Tests if signal is green
+| Command | Explanation |
+| --- | --- |
+| ``IFRED( signal_id )`` | Tests if signal is Red. (See [SIGNAL()](./exrail-objects-introduction.md#adding-signals))|
+| ``IFAMBER( signal_id )`` | Tests if signal is Amber. (See [SIGNAL()](./exrail-objects-introduction.md#adding-signals)) |
+| ``IFGREEN( signal_id )`` | Tests if signal is Green. (See [SIGNAL()](./exrail-objects-introduction.md#adding-signals)) |
 
 Other Conditionals:
 
-* ``IFRANDOM( percent )`` - Runs commands in IF block a random percentage of the time
-* ``IFRESERVE( block )`` - If block is NOT reserved, reserves it and run commands in IF block.else, skip to matching ENDIF
-* ``IFTIMEOUT`` - Tests if 'timed out' flag has been set by an ATTIMEOUT sensor reading attempt
+| Command | Explanation |
+| --- | --- |
+| ``IFRANDOM( percent )`` | Runs commands in IF block a random percentage of the time |
+| ``IFRESERVE( block )`` | If block is NOT reserved, reserves it and run commands in IF block.else, skip to matching ENDIF |
+| ``IFTIMEOUT`` | Tests if 'timed out' flag has been set by an ATTIMEOUT sensor reading attempt |
 
 See the [EXRAIL Command List](command-list.md) for additional commands and additional information on these commands.
 
@@ -311,15 +333,10 @@ Sequences can invoke other sequences.  There are two ways this can be done.
 
 To invoke another sequence, and return and execute the next command in the current sequence you can use the combination of the ``CALL( route_id )`` command in the main sequence, and in the called sequence, use the ``RETURN`` command to return.
 
-.. list-table::
-    :widths: auto
-    :header-rows: 0
-    :class: command-table
-
-    * - CALL( route_id )
-      - Branch to a separate sequence, which will need to RETURN when complete
-    * - RETURN
-      - Return to the calling sequence when completed (no DONE required).
+| Command | Explanation |
+| --- | --- |
+| ``CALL( route_id )`` | Branch to a separate sequence, which will need to ``RETURN`` when complete |
+| ``RETURN`` | Return to the calling sequence when completed (no ``DONE`` required) |
 
 ##### FOLLOW
 
@@ -345,15 +362,19 @@ There are a number of delay type commands that you can explore in the [EXRAIL Co
     FOLLOW(5)   // repeat forever
 ```
 
-* ``DELAY( delay )`` - Delay a number of milliseconds
-* ``DELAYMINS( delay )`` - Delay a number of minutes
-* ``DELAYRANDOM( min_delay, max_delay )`` - Delay a random time between min and max milliseconds
+| Command | Explanation |
+| --- | --- |
+| ``DELAY( delay )`` | Delay a number of milliseconds |
+| ``DELAYMINS( delay )`` | Delay a number of minutes |
+| ``DELAYRANDOM( min_delay, max_delay )`` | Delay a random time between min and max milliseconds |
 
-* ``AFTER( sensor_id )`` - Waits for sensor to trigger and then go off for 0.5 seconds, use negative values for active HIGH sensors
-* ``WAITFOR( pin )`` - Wait for servo to complete movement
-* ``AT( sensor_id )`` - Wait until sensor is active/triggered, use negative values for active HIGH sensors
-* ``ATTIMEOUT( sensor_id, timeout_ms )`` - Wait until sensor is active/triggered, or if the timer runs out, then continue and set a testable "timed out" flag, use negative values for active HIGH sensors
-* ``AFTER( sensor_id )`` - Waits for sensor to trigger and then go off for 0.5 seconds, use negative values for active HIGH sensors
+| Command | Explanation |
+| --- | --- |
+| ``AFTER( sensor_id )`` | Waits for sensor to trigger and then go off for 0.5 seconds, use negative values for active HIGH sensors |
+| ``WAITFOR( pin )`` | Wait for servo to complete movement |
+| ``AT( sensor_id )`` | Wait until sensor is active/triggered, use negative values for active HIGH sensors |
+| ``ATTIMEOUT( sensor_id, timeout_ms )`` | Wait until sensor is active/triggered, or if the timer runs out, then continue and set a testable "timed out" flag, use negative values for active HIGH sensors |
+| ``AFTER( sensor_id )`` | Waits for sensor to trigger and then go off for 0.5 seconds, use negative values for active HIGH sensors |
 
 #### Command Station Commands
 
@@ -370,9 +391,11 @@ There are a substantial number of commands that you can explore in the [EXRAIL C
     // see the 'Drive-Away Feature' on this page for more information
 ```
 
-* ``JOIN`` - Joins PROG and MAIN track outputs to send the same MAIN DCC signal on both tracks
-* ``UNJOIN`` - Disconnect Prog track from Main DCC signal
-* ``READ_LOCO`` - Read loco ID from Prog track
+| Command | Explanation |
+| --- | --- |
+| ``JOIN`` | Joins PROG and MAIN track outputs to send the same MAIN DCC signal on both tracks |
+| ``UNJOIN`` | Disconnect Prog track from Main DCC signal |
+| ``READ_LOCO`` | Read loco ID from Prog track |
 
 See the [EXRAIL Command List](command-list.md) for additional commands and additional information on these commands.
 
@@ -455,3 +478,22 @@ Here for example is a launch sequence that has no predefined locos but allows lo
 The READ_LOCO reads the loco address from the PROG track and the current route takes on that loco. By altering the script slightly and adding another sensor, it's possible to detect which way the loco sets off and switch the code logic to send it in the correct direction by using the ``INVERT_DIRECTION`` instruction so that this locos FWD and REV commands are reversed. (easily done with diesels!)
 
 --8<-- "snippets/abbr.md"
+
+
+<style>
+
+.md-typeset table:not([class]) {
+    width: 100% !important;
+    display: table;
+}
+
+.md-typeset table:not([class]) tr th:first-child,
+.md-typeset table:not([class]) tr td:first-child {
+  width:33% !important;
+}
+
+.md-typeset table:not([class]) tr th:nth-child(2),
+.md-typeset table:not([class]) tr td:nth-child(2) {
+  width:67%  !important;
+}
+</style>
