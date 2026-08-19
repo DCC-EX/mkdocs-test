@@ -25,12 +25,12 @@ There are four types of Sequence:
 
 ### SEQUENCE
 
-* Simply a list of things to be done in order. These things might be to actually drive a train around, or merely to set some turnouts or flash some scene or panel lights. Actions can be made to wait for conditions to be met, like a sensor detecting a train, a button being pushed, or a period of time elapsing.
+* Simply a list of things to be done in order. These things might be to actually drive a train around, or merely to set some turnouts/points or flash some scene or panel lights. Actions can be made to wait for conditions to be met, like a sensor detecting a train, a button being pushed, or a period of time elapsing.
 * A generic **SEQUENCE** (unlike the variations below) can only be started by another SEQUENCE, or automatically at the start-up of the Command Station.
 
 ### ROUTE
 
-* A special type of SEQUENCE that is made visible to a throttle with a readable name, so the user can press a button to get the sequence executed. This might be best used to set a series of turnouts and signals to create a route through the layout.
+* A special type of SEQUENCE that is made visible to a throttle with a readable name, so the user can press a button to get the sequence executed. This might be best used to set a series of turnouts/points and signals to create a route through the layout.
 
 ### AUTOMATION
 
@@ -107,6 +107,24 @@ Sequences types fall in the following broad groups:
 
 Manually triggered sequences are advertised to apps and devices that support the WiThrottle protocol or Native Serial protocol so you can activate them on your throttles (e.g. Engine Driver or ThrottleCard). They are one of:
 
+<style>
+.md-typeset table:not([class]) {
+    width: 100% !important;
+    display: table;
+    table-layout: fixed;
+}
+
+.md-typeset table:not([class]) tr th:first-child,
+.md-typeset table:not([class]) tr td:first-child {
+  width:33% !important;
+}
+
+.md-typeset table:not([class]) tr th:nth-child(2),
+.md-typeset table:not([class]) tr td:nth-child(2) {
+  width:67%  !important;
+}
+</style>
+
 | Command | Explanation |
 | --- | --- |
 | ``AUTOMATION( id, "description" )`` | Start a Automation Sequence and creates a apps and devices that support the WiThrottle protocol or Native Serial protocol {Handoff} button to automatically send a train along |
@@ -126,8 +144,8 @@ Sequences that can only be triggered by other sequences have the following form:
 
 ```cpp
    // Example
-   ONTHROW(8)     // When turnout 8 is thrown,
-      THROW(9)    // throw the facing turnout
+   ONTHROW(8)     // When turnout/point 8 is thrown,
+      THROW(9)    // throw the facing turnout/point
       RED(24)     // signal 24 to red
       DELAY(2000) // wait 2 seconds
       GREEN(27)   // signal 27 to green
@@ -138,8 +156,8 @@ Sequences that are triggered when 'events' occur, include:
 
 | Command | Explanation |
 | --- | --- |
-| ``ONCLOSE( turnout_id )`` | Event handler for turnout close |
-| ``ONTHROW( turnout_id )`` | Event handler for turnout thrown |
+| ``ONCLOSE( turnout_id )`` | Event handler for turnout/point close |
+| ``ONTHROW( turnout_id )`` | Event handler for turnout/point thrown |
 
 See the [EXRAIL Command List](command-list.md) for additional Event Triggered Sequence types, and additional information on these types.
 
@@ -177,8 +195,8 @@ There are a substantial number of commands that you can explore in the [EXRAIL C
 
 ```cpp
    // Example
-   ONTHROW(8)     // When turnout 8 is thrown,
-      THROW(9)    // throw the facing turnout
+   ONTHROW(8)     // When turnout/point 8 is thrown,
+      THROW(9)    // throw the facing turnout/point
       RED(24)     // signal 24 to red
       DELAY(2000) // wait 2 seconds
       GREEN(27)   // signal 27 to green
@@ -189,8 +207,8 @@ Turnout/Point commands include:
 
 | Command | Explanation |
 | --- | --- |
-| ``THROW( id )`` | Throw a defined turnout |
-| ``CLOSE( id)`` | Close a defined turnout |
+| ``THROW( id )`` | Throw a defined turnout/point |
+| ``CLOSE( id)`` | Close a defined turnout/point |
 
 Signal related commands include:
 
@@ -304,8 +322,8 @@ Turnout/Point Related Conditionals:
 
 | Command | Explanation |
 | --- | --- |
-| ``IFTHROWN( turnout_id )`` | Test if turnout is thrown |
-| ``IFCLOSED( turnout_id )`` | Check if turnout is closed |
+| ``IFTHROWN( turnout_id )`` | Test if turnout/point is thrown |
+| ``IFCLOSED( turnout_id )`` | Check if turnout/point is closed |
 
 Signal Related Conditionals:
 
@@ -405,15 +423,15 @@ See the [EXRAIL Command List](command-list.md) for additional commands and addit
 
 ### Referencing Turnouts/Points
 
-**EX-CommandStation** supports a number of different turnout/point hardware configurations, but your automation treats them all as simple ID numbers. Turnouts may be defined using ``<T>`` commands from JMRI, or in ``SETUP("<T ...>")`` commands placed in your mySetup.h file, or C++ code in mySetup.h, just like earlier versions.
+**EX-CommandStation** supports a number of different turnout/point hardware configurations, but your automation treats them all as simple ID numbers. Turnouts/Points may be defined using ``<T>`` commands from JMRI, or in ``SETUP("<T ...>")`` commands placed in your mySetup.h file, or C++ code in mySetup.h, just like earlier versions.
 
 You may, however, find it more convenient to define turnouts/points using **EXRAIL** commands, which may appear anywhere in the 'myAutomation.h' file, even after they are referenced in an ``ONTHROW``, ``ONCLOSE``, ``THROW`` or ``CLOSE`` command. (EXRAIL extracts the turnout definitions just once from your script at Command Station startup.)
 
 Turnouts/Points defined in 'myAutomation.h' will still be visible to apps and devices that support the WiThrottle protocol or Native Serial protocol and JMRI in the normal way.
 
-A TURNOUT command sends DCC signals to a decoder attached to the track, a PIN_TURNOUT sends a "throw" or "close" (5V or 0V signal) to a pin on the Arduino, and a SERVO_TURNOUT sends an I2C serial command to a servo board connected to your servos.
+A ``TURNOUT`` command sends DCC signals to a decoder attached to the track, a ``PIN_TURNOUT`` sends a "throw" or "close" (5V or 0V signal) to a pin on the Arduino, and a ``SERVO_TURNOUT`` sends an I2C serial command to a servo board connected to your servos.
 
-See the [EXRAIL Command List](command-list.md) for TURNOUT, PIN_TURNOUT and SERVO_TURNOUT definitions.
+See the [EXRAIL Command List](command-list.md) for ``TURNOUT``, ``PIN_TURNOUT`` and ``SERVO_TURNOUT`` definitions.
 
 ### Referencing Signals
 
@@ -478,22 +496,3 @@ Here for example is a launch sequence that has no predefined locos but allows lo
 The READ_LOCO reads the loco address from the PROG track and the current route takes on that loco. By altering the script slightly and adding another sensor, it's possible to detect which way the loco sets off and switch the code logic to send it in the correct direction by using the ``INVERT_DIRECTION`` instruction so that this locos FWD and REV commands are reversed. (easily done with diesels!)
 
 --8<-- "snippets/abbr.md"
-
-
-<style>
-
-.md-typeset table:not([class]) {
-    width: 100% !important;
-    display: table;
-}
-
-.md-typeset table:not([class]) tr th:first-child,
-.md-typeset table:not([class]) tr td:first-child {
-  width:33% !important;
-}
-
-.md-typeset table:not([class]) tr th:nth-child(2),
-.md-typeset table:not([class]) tr td:nth-child(2) {
-  width:67%  !important;
-}
-</style>
