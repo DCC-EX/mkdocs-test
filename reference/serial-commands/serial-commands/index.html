@@ -10081,6 +10081,32 @@
 </ul>
 <p>See the <a href="../">Overview</a> for more information on these and other common elements.</p>
 <hr />
+<style>
+.md-typeset table:not([class]) {
+    width: 100% !important;
+    display: table;
+    table-layout: fixed;
+}
+
+.md-typeset table:not([class]) tr th:first-child,
+.md-typeset table:not([class]) tr td:first-child {
+  width:30% !important;
+}
+
+.md-typeset table:not([class]) tr th:nth-child(2),
+.md-typeset table:not([class]) tr td:nth-child(2) {
+  width:30%  !important;
+}
+.md-typeset table:not([class]) tr th:nth-child(3),
+.md-typeset table:not([class]) tr td:nth-child(3) {
+  width:25%  !important;
+}
+.md-typeset table:not([class]) tr th:nth-child(4),
+.md-typeset table:not([class]) tr td:nth-child(4) {
+  width:15%  !important;
+}
+</style>
+
 <h2 id="system-commands">System Commands<a class="headerlink" href="#system-commands" title="Permanent link">&para;</a></h2>
 <table>
 <thead>
@@ -10088,6 +10114,7 @@
 <th>Command</th>
 <th>Description</th>
 <th>Parameters</th>
+<th>Status</th>
 </tr>
 </thead>
 <tbody>
@@ -10095,36 +10122,43 @@
 <td><a href="?_:h:"><code>&lt;#&gt;</code></a></td>
 <td>Request number of simultaneously supported locos</td>
 <td>None</td>
+<td>Active</td>
 </tr>
 <tr>
 <td><a href="?_!"><code>&lt;!&gt;</code></a></td>
 <td>Emergency stop all locos</td>
 <td>None</td>
+<td>Active</td>
 </tr>
 <tr>
 <td><a href="?_!"><code>&lt;!P&gt;</code></a></td>
 <td>Emergency stop and PAUSE loco movement</td>
 <td>None</td>
+<td>Active</td>
 </tr>
 <tr>
 <td><a href="?_!"><code>&lt;!R&gt;</code></a></td>
 <td>Resume after <code>&lt;!P&gt;</code></td>
 <td>None</td>
+<td>Active</td>
 </tr>
 <tr>
 <td><a href="?_s"><code>&lt;s&gt;</code></a></td>
 <td>Command station status</td>
 <td>None</td>
+<td>Active</td>
 </tr>
 <tr>
 <td><a href="?_9E9"><code>&lt;E&gt;</code></a></td>
 <td>Store EEPROM</td>
 <td>None</td>
+<td>Active</td>
 </tr>
 <tr>
 <td><a href="?_e"><code>&lt;e&gt;</code></a></td>
 <td>Clear EEPROM</td>
 <td>None</td>
+<td>Active</td>
 </tr>
 </tbody>
 </table>
@@ -10135,53 +10169,63 @@
 <th>Command</th>
 <th>Description</th>
 <th>Parameters</th>
+<th>Status</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><code>&lt;1&gt;</code></td>
+<td><a href="?_1"><code>&lt;1&gt;</code></a></td>
 <td>Power ON all tracks</td>
 <td>None</td>
+<td>Active</td>
 </tr>
 <tr>
-<td><code>&lt;1 MAIN&gt;</code></td>
+<td><a href="?_1_9MAIN9"><code>&lt;1 MAIN&gt;</code></a></td>
 <td>Power on MAIN track</td>
 <td>None</td>
+<td>Active</td>
 </tr>
 <tr>
-<td><code>&lt;1 PROG&gt;</code></td>
+<td><a href="?_1_9PROG9"><code>&lt;1 PROG&gt;</code></a></td>
 <td>Power on PROG track</td>
 <td>None</td>
+<td>Active</td>
 </tr>
 <tr>
-<td><code>&lt;1 JOIN&gt;</code></td>
+<td><a href="?_1_9JOIN9"><code>&lt;1 JOIN&gt;</code></a></td>
 <td>JOIN prog track to MAIN and power</td>
 <td>None</td>
+<td>Active</td>
 </tr>
 <tr>
-<td><code>&lt;1 track&gt;</code></td>
+<td><a href="?_1_track"><code>&lt;1 track&gt;</code></a></td>
 <td>Power on given track</td>
 <td><code>track</code>: Track identifier</td>
+<td>Active</td>
 </tr>
 <tr>
-<td><code>&lt;0&gt;</code></td>
+<td><a href="?_0"><code>&lt;0&gt;</code></a></td>
 <td>Power off all tracks</td>
 <td>None</td>
+<td>Active</td>
 </tr>
 <tr>
-<td><code>&lt;0 MAIN&gt;</code></td>
+<td><a href="?_0_9MAIN9"><code>&lt;0 MAIN&gt;</code></a></td>
 <td>Power off MAIN track</td>
 <td>None</td>
+<td>Active</td>
 </tr>
 <tr>
-<td><code>&lt;0 PROG&gt;</code></td>
+<td><a href="?_0_9PROG9"><code>&lt;0 PROG&gt;</code></a></td>
 <td>Power off PROG track</td>
 <td>None</td>
+<td>Active</td>
 </tr>
 <tr>
-<td><code>&lt;0 track&gt;</code></td>
+<td><a href="?_0_track"><code>&lt;0 track&gt;</code></a></td>
 <td>Power off given track</td>
 <td><code>track</code>: Track identifier</td>
+<td>Active</td>
 </tr>
 </tbody>
 </table>
@@ -10197,13 +10241,13 @@
 </thead>
 <tbody>
 <tr>
-<td><code>&lt;t loco&gt;</code></td>
+<td><a href="?_t_loco"><code>&lt;t loco&gt;</code></a></td>
 <td>Request loco status</td>
 <td><code>loco</code>: Locomotive ID</td>
 <td>Active</td>
 </tr>
 <tr>
-<td><code>&lt;t loco tSpeed direction&gt;</code></td>
+<td><a href="?_t_loco_tSpeed_direction"><code>&lt;t loco tSpeed direction&gt;</code></a></td>
 <td>Set throttle speed and direction</td>
 <td><code>loco</code>: ID, <code>tSpeed</code>: 0-127, <code>direction</code>: 0/1</td>
 <td>Active</td>
@@ -10215,13 +10259,13 @@
 <td>⚠️ Deprecated</td>
 </tr>
 <tr>
-<td><code>&lt;- loco&gt;</code></td>
+<td><a href="?_-_loco"><code>&lt;- loco&gt;</code></a></td>
 <td>Remove loco state and reminders</td>
 <td><code>loco</code>: Locomotive ID</td>
 <td>Active</td>
 </tr>
 <tr>
-<td><code>&lt;-&gt;</code></td>
+<td><a href="?_-"><code>&lt;-&gt;</code></a></td>
 <td>Clear loco state and reminder table</td>
 <td>None</td>
 <td>Active</td>
@@ -10240,13 +10284,13 @@
 </thead>
 <tbody>
 <tr>
-<td><code>&lt;F loco function onoff&gt;</code></td>
+<td><a href="?_9F9_loco_function_onoff"><code>&lt;F loco function onoff&gt;</code></a></td>
 <td>Set loco function ON/OFF</td>
 <td><code>loco</code>: ID, <code>function</code>: Function number, <code>onoff</code>: 0/1</td>
 <td>Active</td>
 </tr>
 <tr>
-<td><code>&lt;F loco DCCFREQ freqvalue&gt;</code></td>
+<td><a href="?_9F9_loco_9DCCFREQ9_freqValue"><code>&lt;F loco DCCFREQ freqvalue&gt;</code></a></td>
 <td>Set DC frequency for loco</td>
 <td><code>loco</code>: ID, <code>freqvalue</code>: Frequency value</td>
 <td>Active</td>
@@ -10277,19 +10321,19 @@
 </thead>
 <tbody>
 <tr>
-<td><code>&lt;^&gt;</code></td>
+<td><a href="?_:c:"><code>&lt;^&gt;</code></a></td>
 <td>Show all consists</td>
-<td></td>
+<td>none</td>
 <td>Active</td>
 </tr>
 <tr>
-<td><code>&lt;^ loco1 loco2 ... &gt;</code></td>
+<td><a href="?_:c:_ leadLoco_follower [_follower2..7]"><code>&lt;^ leadLoco follower [ follower2..7]&gt;</code></a></td>
 <td>Create Consist</td>
 <td><code>loco</code>: ID, negative for reversed loco</td>
 <td>Active</td>
 </tr>
 <tr>
-<td><code>&lt;^ loco1&gt;</code></td>
+<td><a href="?_:c:_loco"><code>&lt;^ loco&gt;</code></a></td>
 <td>Deletes consist</td>
 <td><code>loco1</code>: ID</td>
 <td>Active</td>
@@ -10303,6 +10347,7 @@
 <th>Command</th>
 <th>Description</th>
 <th>Parameters</th>
+<th>Status</th>
 </tr>
 </thead>
 <tbody>
@@ -10310,61 +10355,73 @@
 <td><code>&lt;T&gt;</code></td>
 <td>List all turnouts/points</td>
 <td>None</td>
+<td>Active</td>
 </tr>
 <tr>
 <td><code>&lt;T id&gt;</code></td>
 <td>Delete turnout/point</td>
 <td><code>id</code>: Turnout ID</td>
+<td>Active</td>
 </tr>
 <tr>
 <td><code>&lt;T id X&gt;</code></td>
 <td>List turnout/point details</td>
 <td><code>id</code>: Turnout ID</td>
+<td>Active</td>
 </tr>
 <tr>
 <td><code>&lt;T id T&gt;</code></td>
 <td>Throw turnout/point</td>
 <td><code>id</code>: Turnout ID</td>
+<td>Active</td>
 </tr>
 <tr>
 <td><code>&lt;T id C&gt;</code></td>
 <td>Close turnout/point</td>
 <td><code>id</code>: Turnout ID</td>
+<td>Active</td>
 </tr>
 <tr>
 <td><code>&lt;T id value&gt;</code></td>
 <td>Close (value=0) or Throw turnout</td>
 <td><code>id</code>: Turnout ID, <code>value</code>: 0/1</td>
+<td>Active</td>
 </tr>
 <tr>
 <td><code>&lt;T id SERVO vpin closedValue thrownValue&gt;</code></td>
 <td>Create servo turnout</td>
 <td><code>id</code>: ID, <code>vpin</code>: Pin, values for positions</td>
+<td>Active</td>
 </tr>
 <tr>
 <td><code>&lt;T id VPIN vpin&gt;</code></td>
 <td>Create pin turnout</td>
 <td><code>id</code>: ID, <code>vpin</code>: Pin number</td>
+<td>Active</td>
 </tr>
 <tr>
 <td><code>&lt;T id DCC addr subadd&gt;</code></td>
 <td>Create DCC turnout</td>
 <td><code>id</code>: ID, <code>addr</code>: Address, <code>subadd</code>: Sub-address</td>
+<td>Active</td>
 </tr>
 <tr>
 <td><code>&lt;T id DCC linearAddr&gt;</code></td>
 <td>Create DCC turnout</td>
 <td><code>id</code>: ID, <code>linearAddr</code>: Linear address</td>
+<td>Active</td>
 </tr>
 <tr>
 <td><code>&lt;T id addr subadd&gt;</code></td>
 <td>Create DCC turnout</td>
 <td><code>id</code>: ID, <code>addr</code>: Address, <code>subadd</code>: Sub-address</td>
+<td>Active</td>
 </tr>
 <tr>
 <td><code>&lt;T id vpin closedValue thrownValue&gt;</code></td>
 <td>Create SERVO turnout</td>
 <td><code>id</code>: ID, <code>vpin</code>: Pin, position values</td>
+<td>Active</td>
 </tr>
 </tbody>
 </table>
@@ -10375,6 +10432,7 @@
 <th>Command</th>
 <th>Description</th>
 <th>Parameters</th>
+<th>Status</th>
 </tr>
 </thead>
 <tbody>
@@ -10382,21 +10440,25 @@
 <td><code>&lt;S id vpin pullup&gt;</code></td>
 <td>Create sensor</td>
 <td><code>id</code>: Sensor ID, <code>vpin</code>: Pin, <code>pullup</code>: Pull-up setting</td>
+<td>Active</td>
 </tr>
 <tr>
 <td><code>&lt;S id&gt;</code></td>
 <td>Delete sensor</td>
 <td><code>id</code>: Sensor ID</td>
+<td>Active</td>
 </tr>
 <tr>
 <td><code>&lt;S&gt;</code></td>
 <td>List sensors</td>
 <td>None</td>
+<td>Active</td>
 </tr>
 <tr>
 <td><code>&lt;Q&gt;</code></td>
 <td>List all sensors</td>
 <td>None</td>
+<td>Active</td>
 </tr>
 </tbody>
 </table>
@@ -10522,6 +10584,7 @@
 <th>Command</th>
 <th>Description</th>
 <th>Parameters</th>
+<th>Status</th>
 </tr>
 </thead>
 <tbody>
@@ -10529,21 +10592,25 @@
 <td><code>&lt;a address subaddress activate&gt;</code></td>
 <td>Send DCC accessory command</td>
 <td><code>address</code>: Address, <code>subaddress</code>: Sub-address, <code>activate</code>: 0/1</td>
+<td>Active</td>
 </tr>
 <tr>
 <td><code>&lt;a address subaddress activate onoff&gt;</code></td>
 <td>Send DCC accessory command with on/off</td>
 <td><code>address</code>: Address, <code>subaddress</code>: Sub, <code>activate</code>: 0/1, <code>onoff</code>: 0/1</td>
+<td>Active</td>
 </tr>
 <tr>
 <td><code>&lt;a linearaddress activate&gt;</code></td>
 <td>Send DCC accessory command</td>
 <td><code>linearaddress</code>: Linear address, <code>activate</code>: 0/1</td>
+<td>Active</td>
 </tr>
 <tr>
 <td><code>&lt;A address value&gt;</code></td>
 <td>Send DCC extended accessory (Aspect) command</td>
 <td><code>address</code>: Address, <code>value</code>: Aspect value</td>
+<td>Active</td>
 </tr>
 </tbody>
 </table>
@@ -10554,6 +10621,7 @@
 <th>Command</th>
 <th>Description</th>
 <th>Parameters</th>
+<th>Status</th>
 </tr>
 </thead>
 <tbody>
@@ -10561,21 +10629,25 @@
 <td><code>&lt;m LINEAR&gt;</code></td>
 <td>Set momentum algorithm to linear acceleration</td>
 <td>None</td>
+<td>Active</td>
 </tr>
 <tr>
 <td><code>&lt;m POWER&gt;</code></td>
 <td>Set momentum algorithm based on speed difference</td>
 <td>None</td>
+<td>Active</td>
 </tr>
 <tr>
 <td><code>&lt;m loco momentum&gt;</code></td>
 <td>Set momentum for loco (accel and braking)</td>
 <td><code>loco</code>: ID, <code>momentum</code>: Value</td>
+<td>Active</td>
 </tr>
 <tr>
 <td><code>&lt;m loco accelerating braking&gt;</code></td>
 <td>Set momentum for loco</td>
 <td><code>loco</code>: ID, <code>accelerating</code>: Value, <code>braking</code>: Value</td>
+<td>Active</td>
 </tr>
 </tbody>
 </table>
@@ -10586,6 +10658,7 @@
 <th>Command</th>
 <th>Description</th>
 <th>Parameters</th>
+<th>Status</th>
 </tr>
 </thead>
 <tbody>
@@ -10593,21 +10666,25 @@
 <td><code>&lt;Z&gt;</code></td>
 <td>List output definitions</td>
 <td>None</td>
+<td>Active</td>
 </tr>
 <tr>
 <td><code>&lt;Z id pin iflag&gt;</code></td>
 <td>Create output</td>
 <td><code>id</code>: Output ID, <code>pin</code>: Pin number, <code>iflag</code>: Invert flag</td>
+<td>Active</td>
 </tr>
 <tr>
 <td><code>&lt;Z id active&gt;</code></td>
 <td>Set output</td>
 <td><code>id</code>: Output ID, <code>active</code>: 0/1</td>
+<td>Active</td>
 </tr>
 <tr>
 <td><code>&lt;Z id&gt;</code></td>
 <td>Delete output</td>
 <td><code>id</code>: Output ID</td>
+<td>Active</td>
 </tr>
 </tbody>
 </table>
@@ -10618,6 +10695,7 @@
 <th>Command</th>
 <th>Description</th>
 <th>Parameters</th>
+<th>Status</th>
 </tr>
 </thead>
 <tbody>
@@ -10625,21 +10703,25 @@
 <td><code>&lt;z vpin&gt;</code></td>
 <td>Set pin HIGH if vpin positive, LOW if negative</td>
 <td><code>vpin</code>: Pin number (signed)</td>
+<td>Active</td>
 </tr>
 <tr>
 <td><code>&lt;z vpin analog&gt;</code></td>
 <td>Write analog device value</td>
 <td><code>vpin</code>: Pin, <code>analog</code>: Value</td>
+<td>Active</td>
 </tr>
 <tr>
 <td><code>&lt;z vpin analog profile&gt;</code></td>
 <td>Write analog device using profile</td>
 <td><code>vpin</code>: Pin, <code>analog</code>: Value, <code>profile</code>: Profile ID</td>
+<td>Active</td>
 </tr>
 <tr>
 <td><code>&lt;z vpin analog profile duration&gt;</code></td>
 <td>Change analog value over duration</td>
 <td><code>vpin</code>: Pin, <code>analog</code>: Value, <code>profile</code>: Profile, <code>duration</code>: Time</td>
+<td>Active</td>
 </tr>
 </tbody>
 </table>
@@ -10650,6 +10732,7 @@
 <th>Command</th>
 <th>Description</th>
 <th>Parameters</th>
+<th>Status</th>
 </tr>
 </thead>
 <tbody>
@@ -10657,21 +10740,25 @@
 <td><code>&lt;o vpin&gt;</code></td>
 <td>Set neopixel on (vpin&gt;0) or off (vpin&lt;0)</td>
 <td><code>vpin</code>: Pin number (signed)</td>
+<td>Active</td>
 </tr>
 <tr>
 <td><code>&lt;o vpin count&gt;</code></td>
 <td>Set multiple neopixels on/off</td>
 <td><code>vpin</code>: Pin, <code>count</code>: Number of pixels</td>
+<td>Active</td>
 </tr>
 <tr>
 <td><code>&lt;o vpin r g b&gt;</code></td>
 <td>Set neopixel colour</td>
 <td><code>vpin</code>: Pin, <code>r</code>: Red, <code>g</code>: Green, <code>b</code>: Blue</td>
+<td>Active</td>
 </tr>
 <tr>
 <td><code>&lt;o vpin r g b count&gt;</code></td>
 <td>Set multiple neopixels colour</td>
 <td><code>vpin</code>: Pin, <code>r</code>: Red, <code>g</code>: Green, <code>b</code>: Blue, <code>count</code>: Count</td>
+<td>Active</td>
 </tr>
 </tbody>
 </table>
@@ -10682,6 +10769,7 @@
 <th>Command</th>
 <th>Description</th>
 <th>Parameters</th>
+<th>Status</th>
 </tr>
 </thead>
 <tbody>
@@ -10689,36 +10777,43 @@
 <td><code>&lt;I&gt;</code></td>
 <td>List all turntables</td>
 <td>None</td>
+<td>Active</td>
 </tr>
 <tr>
 <td><code>&lt;I id&gt;</code></td>
 <td>Broadcast turntable type and current position</td>
 <td><code>id</code>: Turntable ID</td>
+<td>Active</td>
 </tr>
 <tr>
 <td><code>&lt;I id position&gt;</code></td>
 <td>Rotate a DCC turntable</td>
 <td><code>id</code>: ID, <code>position</code>: Position</td>
+<td>Active</td>
 </tr>
 <tr>
 <td><code>&lt;I id DCC home&gt;</code></td>
 <td>Create DCC turntable</td>
 <td><code>id</code>: ID, <code>home</code>: Home position</td>
+<td>Active</td>
 </tr>
 <tr>
 <td><code>&lt;I id position activity&gt;</code></td>
 <td>Rotate an EXTT turntable</td>
 <td><code>id</code>: ID, <code>position</code>: Position, <code>activity</code>: Activity</td>
+<td>Active</td>
 </tr>
 <tr>
 <td><code>&lt;I id EXTT vpin home&gt;</code></td>
 <td>Create an EXTT turntable</td>
 <td><code>id</code>: ID, <code>vpin</code>: Pin, <code>home</code>: Home position</td>
+<td>Active</td>
 </tr>
 <tr>
 <td><code>&lt;I id ADD position value angle&gt;</code></td>
 <td>Add turntable position</td>
 <td><code>id</code>: ID, <code>position</code>: Position, <code>value</code>: Value, <code>angle</code>: Angle</td>
+<td>Active</td>
 </tr>
 </tbody>
 </table>
@@ -10728,44 +10823,64 @@
 <tr>
 <th>Command</th>
 <th>Description</th>
+<th>Parameters</th>
+<th>Status</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><code>&lt;y vpin PLAY track [volume]&gt;</code></td>
 <td>Play track</td>
+<td>Active</td>
+<td></td>
 </tr>
 <tr>
 <td><code>&lt;y vpin REPEAT track [volume]&gt;</code></td>
 <td>Play track repeat</td>
+<td>Active</td>
+<td></td>
 </tr>
 <tr>
 <td><code>&lt;y vpin STOP&gt;</code></td>
 <td>Stop playing</td>
+<td>Active</td>
+<td></td>
 </tr>
 <tr>
 <td><code>&lt;y vpin PAUSE&gt;</code></td>
 <td>Pause playing</td>
+<td>Active</td>
+<td></td>
 </tr>
 <tr>
 <td><code>&lt;y vpin RESUME&gt;</code></td>
 <td>Resume playing</td>
+<td>Active</td>
+<td></td>
 </tr>
 <tr>
 <td><code>&lt;y vpin FOLDER folder&gt;</code></td>
 <td>Set folder to play from</td>
+<td>Active</td>
+<td></td>
 </tr>
 <tr>
 <td><code>&lt;y vpin VOLUME vol&gt;</code></td>
 <td>Set default volume 0..30</td>
+<td>Active</td>
+<td></td>
 </tr>
 <tr>
 <td><code>&lt;y vpin EQ type&gt;</code></td>
 <td>Set EQ type NORMAL, POP, ROCK, JAZZ, CLASSCS, BASS</td>
+<td>Active</td>
+<td></td>
 </tr>
 <tr>
 <td><code>&lt;y vpin RESET&gt;</code></td>
 <td>Reset player</td>
+<td>Active</td>
+<td></td>
 </tr>
 </tbody>
 </table>
@@ -10776,6 +10891,7 @@
 <th>Command</th>
 <th>Description</th>
 <th>Parameters</th>
+<th>Status</th>
 </tr>
 </thead>
 <tbody>
@@ -10783,91 +10899,109 @@
 <td><code>&lt;J M&gt;</code></td>
 <td>List stash values</td>
 <td>None</td>
+<td>Active</td>
 </tr>
 <tr>
 <td><code>&lt;J M stash_id&gt;</code></td>
 <td>Get stash value</td>
 <td><code>stash_id</code>: Stash identifier</td>
+<td>Active</td>
 </tr>
 <tr>
 <td><code>&lt;J M CLEAR ALL&gt;</code></td>
 <td>Clear all stash values</td>
 <td>None</td>
+<td>Active</td>
 </tr>
 <tr>
 <td><code>&lt;J M CLEAR stash_id&gt;</code></td>
 <td>Clear given stash</td>
 <td><code>stash_id</code>: Stash identifier</td>
+<td>Active</td>
 </tr>
 <tr>
 <td><code>&lt;J M stashId locoId&gt;</code></td>
 <td>Set stash value</td>
 <td><code>stashId</code>: Stash ID, <code>locoId</code>: Loco ID</td>
+<td>Active</td>
 </tr>
 <tr>
 <td><code>&lt;J M CLEAR ANY locoId&gt;</code></td>
 <td>Clear all stash entries containing locoId</td>
 <td><code>locoId</code>: Locomotive ID</td>
+<td>Active</td>
 </tr>
 <tr>
 <td><code>&lt;J C&gt;</code></td>
 <td>Get fastclock time</td>
 <td>None</td>
+<td>Active</td>
 </tr>
 <tr>
 <td><code>&lt;J C mmmm nn&gt;</code></td>
 <td>Set fastclock time</td>
 <td><code>mmmm</code>: Minutes, <code>nn</code>: Rate</td>
+<td>Active</td>
 </tr>
 <tr>
 <td><code>&lt;J G&gt;</code></td>
 <td>Report gauge limits</td>
 <td>None</td>
+<td>Active</td>
 </tr>
 <tr>
 <td><code>&lt;J I&gt;</code></td>
 <td>Report currents</td>
 <td>None</td>
+<td>Active</td>
 </tr>
 <tr>
 <td><code>&lt;J A&gt;</code></td>
 <td>List routes</td>
 <td>None</td>
+<td>Active</td>
 </tr>
 <tr>
 <td><code>&lt;J R&gt;</code></td>
 <td>List roster</td>
 <td>None</td>
+<td>Active</td>
 </tr>
 <tr>
 <td><code>&lt;J R id&gt;</code></td>
 <td>Get roster for loco</td>
 <td><code>id</code>: Locomotive ID</td>
+<td>Active</td>
 </tr>
 <tr>
 <td><code>&lt;J T&gt;</code></td>
 <td>Get turnout/point list</td>
 <td>None</td>
+<td>Active</td>
 </tr>
 <tr>
 <td><code>&lt;J T id&gt;</code></td>
 <td>Get turnout state and description</td>
 <td><code>id</code>: Turnout ID</td>
+<td>Active</td>
 </tr>
 <tr>
 <td><code>&lt;J O&gt;</code></td>
 <td>List turntable IDs</td>
 <td>None</td>
+<td>Active</td>
 </tr>
 <tr>
 <td><code>&lt;J O id&gt;</code></td>
 <td>List turntable state</td>
 <td><code>id</code>: Turntable ID</td>
+<td>Active</td>
 </tr>
 <tr>
 <td><code>&lt;J P id&gt;</code></td>
 <td>List turntable positions</td>
 <td><code>id</code>: Turntable ID</td>
+<td>Active</td>
 </tr>
 </tbody>
 </table>
@@ -10878,6 +11012,7 @@
 <th>Command</th>
 <th>Description</th>
 <th>Parameters</th>
+<th>Status</th>
 </tr>
 </thead>
 <tbody>
@@ -10885,66 +11020,79 @@
 <td><code>&lt;=&gt;</code></td>
 <td>List track manager states</td>
 <td>None</td>
+<td>Active</td>
 </tr>
 <tr>
 <td><code>&lt;= track MAIN&gt;</code></td>
 <td>Set track to MAIN</td>
 <td><code>track</code>: Track identifier</td>
+<td>Active</td>
 </tr>
 <tr>
 <td><code>&lt;= track MAIN_INV&gt;</code></td>
 <td>Set track to MAIN inverted polarity</td>
 <td><code>track</code>: Track identifier</td>
+<td>Active</td>
 </tr>
 <tr>
 <td><code>&lt;= track MAIN_AUTO&gt;</code></td>
 <td>Set track to MAIN with auto reversing</td>
 <td><code>track</code>: Track identifier</td>
+<td>Active</td>
 </tr>
 <tr>
 <td><code>&lt;= track PROG&gt;</code></td>
 <td>Set track to PROG</td>
 <td><code>track</code>: Track identifier</td>
+<td>Active</td>
 </tr>
 <tr>
 <td><code>&lt;= track OFF&gt;</code></td>
 <td>Set track power OFF</td>
 <td><code>track</code>: Track identifier</td>
+<td>Active</td>
 </tr>
 <tr>
 <td><code>&lt;= track NONE&gt;</code></td>
 <td>Set track no output</td>
 <td><code>track</code>: Track identifier</td>
+<td>Active</td>
 </tr>
 <tr>
 <td><code>&lt;= track EXT&gt;</code></td>
 <td>Set track to use external sync</td>
 <td><code>track</code>: Track identifier</td>
+<td>Active</td>
 </tr>
 <tr>
 <td><code>&lt;= track AUTO&gt;</code></td>
 <td>Update track to auto reverse</td>
 <td><code>track</code>: Track identifier</td>
+<td>Active</td>
 </tr>
 <tr>
 <td><code>&lt;= track INV&gt;</code></td>
 <td>Update track to inverse polarity</td>
 <td><code>track</code>: Track identifier</td>
+<td>Active</td>
 </tr>
 <tr>
 <td><code>&lt;= track DC loco&gt;</code></td>
 <td>Set track to DC</td>
 <td><code>track</code>: Track ID, <code>loco</code>: Loco ID</td>
+<td>Active</td>
 </tr>
 <tr>
 <td><code>&lt;= track DC_INV loco&gt;</code></td>
 <td>Set track to DC with inverted polarity</td>
 <td><code>track</code>: Track ID, <code>loco</code>: Loco ID</td>
+<td>Active</td>
 </tr>
 <tr>
 <td><code>&lt;= track DCX loco&gt;</code></td>
 <td>Set track to DC with inverted polarity</td>
 <td><code>track</code>: Track ID, <code>loco</code>: Loco ID</td>
+<td>Active</td>
 </tr>
 </tbody>
 </table>
@@ -10955,6 +11103,7 @@
 <th>Command</th>
 <th>Description</th>
 <th>Parameters</th>
+<th>Status</th>
 </tr>
 </thead>
 <tbody>
@@ -10962,61 +11111,73 @@
 <td><code>&lt;C PROGBOOST&gt;</code></td>
 <td>Configure PROG track boost</td>
 <td>None</td>
+<td>Active</td>
 </tr>
 <tr>
 <td><code>&lt;C RESET&gt;</code></td>
 <td>Reset and restart <strong>EX-CommandStation</strong></td>
 <td>None</td>
+<td>Active</td>
 </tr>
 <tr>
 <td><code>&lt;C SPEED28&gt;</code></td>
 <td>Set all DCC speed commands as 28 step</td>
 <td>None</td>
+<td>Active</td>
 </tr>
 <tr>
 <td><code>&lt;C SPEED128&gt;</code></td>
 <td>Set all DCC speed commands to 128 step (default)</td>
 <td>None</td>
+<td>Active</td>
 </tr>
 <tr>
 <td><code>&lt;C RAILCOM ON&gt;</code></td>
 <td>Enable Railcom cutout</td>
 <td>None</td>
+<td>Active</td>
 </tr>
 <tr>
 <td><code>&lt;C RAILCOM OFF&gt;</code></td>
 <td>Disable Railcom cutout</td>
 <td>None</td>
+<td>Active</td>
 </tr>
 <tr>
 <td><code>&lt;C RAILCOM DEBUG&gt;</code></td>
 <td>Enable Railcom cutout for scope testing</td>
 <td>None</td>
+<td>Active</td>
 </tr>
 <tr>
 <td><code>&lt;C WIFI "ssid" "password"&gt;</code></td>
 <td>Reconfigure stored STA WiFi credentials</td>
 <td><code>ssid</code>: Network name, <code>password</code>: Password</td>
+<td>Active</td>
 </tr>
 <tr>
 <td><code>&lt;C WIFI AP "ssid" "password" [channel]&gt;</code></td>
 <td>Reconfigure stored WiFi AP</td>
 <td><code>ssid</code>: Network name, <code>password</code>: Password</td>
+<td>Active</td>
 </tr>
 <tr>
 <td><code>&lt;C WIFI HIDDENAP "ssid" "password" [channel]&gt;</code></td>
 <td>Reconfigure stored WiFi AP</td>
 <td><code>ssid</code>: Network name, <code>password</code>: Password</td>
+<td>Active</td>
 </tr>
 <tr>
 <td><code>&lt;C WIFI DEFAULT&gt;</code></td>
 <td>Set WiFi to default</td>
-<td></td>
+<td>None</td>
+<td>Active</td>
 </tr>
 <tr>
 <td><code>&lt;C WIFI ON/OFF&gt;</code></td>
 <td>Set WiFi on/off name</td>
-<td></td>
+<td>None</td>
+<td>Active</td>
 </tr>
 </tbody>
 </table>
@@ -11027,6 +11188,7 @@
 <th>Command</th>
 <th>Description</th>
 <th>Parameters</th>
+<th>Status</th>
 </tr>
 </thead>
 <tbody>
@@ -11034,176 +11196,211 @@
 <td><code>&lt;D ACK ON&gt;</code></td>
 <td>Enable PROG track diagnostics</td>
 <td>None</td>
+<td>Active</td>
 </tr>
 <tr>
 <td><code>&lt;D ACK OFF&gt;</code></td>
 <td>Disable PROG track diagnostics</td>
 <td>None</td>
+<td>Active</td>
 </tr>
 <tr>
 <td><code>&lt;D ACK LIMIT value&gt;</code></td>
 <td>Set ACK detection limit mA</td>
 <td><code>value</code>: Current limit in mA</td>
+<td>Active</td>
 </tr>
 <tr>
 <td><code>&lt;D ACK MIN value MS&gt;</code></td>
 <td>Set ACK minimum duration mS</td>
 <td><code>value</code>: Duration in milliseconds</td>
+<td>Active</td>
 </tr>
 <tr>
 <td><code>&lt;D ACK MIN value&gt;</code></td>
 <td>Set ACK minimum duration µS</td>
 <td><code>value</code>: Duration in microseconds</td>
+<td>Active</td>
 </tr>
 <tr>
 <td><code>&lt;D ACK MAX value MS&gt;</code></td>
 <td>Set ACK maximum duration mS</td>
 <td><code>value</code>: Duration in milliseconds</td>
+<td>Active</td>
 </tr>
 <tr>
 <td><code>&lt;D ACK MAX value&gt;</code></td>
 <td>Set ACK maximum duration µS</td>
 <td><code>value</code>: Duration in microseconds</td>
+<td>Active</td>
 </tr>
 <tr>
 <td><code>&lt;D ACK RETRY value&gt;</code></td>
 <td>Set ACK retry count</td>
 <td><code>value</code>: Retry count</td>
+<td>Active</td>
 </tr>
 <tr>
 <td><code>&lt;D CABS&gt;</code></td>
 <td>Diagnostic display loco state table</td>
 <td>None</td>
+<td>Active</td>
 </tr>
 <tr>
 <td><code>&lt;D RAM&gt;</code></td>
 <td>Diagnostic display free RAM</td>
 <td>None</td>
+<td>Active</td>
 </tr>
 <tr>
 <td><code>&lt;D CMD ON&gt;</code></td>
 <td>Enable command input diagnostics</td>
 <td>None</td>
+<td>Active</td>
 </tr>
 <tr>
 <td><code>&lt;D CMD OFF&gt;</code></td>
 <td>Disable command input diagnostics</td>
 <td>None</td>
+<td>Active</td>
 </tr>
 <tr>
 <td><code>&lt;D RAILCOM ON&gt;</code></td>
 <td>Enable Railcom diagnostics</td>
 <td>None</td>
+<td>Active</td>
 </tr>
 <tr>
 <td><code>&lt;D RAILCOM OFF&gt;</code></td>
 <td>Disable Railcom diagnostics</td>
 <td>None</td>
+<td>Active</td>
 </tr>
 <tr>
 <td><code>&lt;D WIFI ON&gt;</code></td>
 <td>Enable WiFi diagnostics</td>
 <td>None</td>
+<td>Active</td>
 </tr>
 <tr>
 <td><code>&lt;D WIFI OFF&gt;</code></td>
 <td>Disable WiFi diagnostics</td>
 <td>None</td>
+<td>Active</td>
 </tr>
 <tr>
 <td><code>&lt;D WIFI SHOW&gt;</code></td>
 <td>Shows WiFi settings</td>
 <td>None</td>
+<td>Active</td>
 </tr>
 <tr>
 <td><code>&lt;D ETHERNET ON&gt;</code></td>
 <td>Enable Ethernet diagnostics</td>
 <td>None</td>
+<td>Active</td>
 </tr>
 <tr>
 <td><code>&lt;D ETHERNET OFF&gt;</code></td>
 <td>Disable Ethernet diagnostics</td>
 <td>None</td>
+<td>Active</td>
 </tr>
 <tr>
 <td><code>&lt;D WIT ON&gt;</code></td>
 <td>Enable Withrottle diagnostics</td>
 <td>None</td>
+<td>Active</td>
 </tr>
 <tr>
 <td><code>&lt;D WIT OFF&gt;</code></td>
 <td>Disable Withrottle diagnostics</td>
 <td>None</td>
+<td>Active</td>
 </tr>
 <tr>
 <td><code>&lt;D LCN ON&gt;</code></td>
 <td>Enable LCN diagnostics</td>
 <td>None</td>
+<td>Active</td>
 </tr>
 <tr>
 <td><code>&lt;D LCN OFF&gt;</code></td>
 <td>Disable LCN diagnostics</td>
 <td>None</td>
+<td>Active</td>
 </tr>
 <tr>
 <td><code>&lt;D WEBSOCKET ON&gt;</code></td>
 <td>Enable Websocket diagnostics</td>
 <td>None</td>
+<td>Active</td>
 </tr>
 <tr>
 <td><code>&lt;D WEBSOCKET OFF&gt;</code></td>
 <td>Disable Websocket diagnostics</td>
 <td>None</td>
+<td>Active</td>
 </tr>
 <tr>
 <td><code>&lt;D EEPROM numentries&gt;</code></td>
 <td>Dump EEPROM contents</td>
 <td><code>numentries</code>: Number of entries</td>
+<td>Active</td>
 </tr>
 <tr>
 <td><code>&lt;D ANOUT vpin position&gt;</code></td>
 <td>Test analog output</td>
 <td><code>vpin</code>: Pin, <code>position</code>: Position</td>
+<td>Active</td>
 </tr>
 <tr>
 <td><code>&lt;D ANOUT vpin position profile&gt;</code></td>
 <td>Test analog output with profile</td>
 <td><code>vpin</code>: Pin, <code>position</code>: Position, <code>profile</code>: Profile</td>
+<td>Active</td>
 </tr>
 <tr>
 <td><code>&lt;D SERVO vpin position&gt;</code></td>
 <td>Test servo</td>
 <td><code>vpin</code>: Pin, <code>position</code>: Position</td>
+<td>Active</td>
 </tr>
 <tr>
 <td><code>&lt;D SERVO vpin position profile&gt;</code></td>
 <td>Test servo with profile</td>
 <td><code>vpin</code>: Pin, <code>position</code>: Position, <code>profile</code>: Profile</td>
+<td>Active</td>
 </tr>
 <tr>
 <td><code>&lt;D ANIN vpin&gt;</code></td>
 <td>Display analogue input value</td>
 <td><code>vpin</code>: Pin number</td>
+<td>Active</td>
 </tr>
 <tr>
 <td><code>&lt;D HAL SHOW&gt;</code></td>
 <td>Show HAL devices table</td>
 <td>None</td>
+<td>Active</td>
 </tr>
 <tr>
 <td><code>&lt;D HAL RESET&gt;</code></td>
 <td>Reset all HAL devices</td>
 <td>None</td>
+<td>Active</td>
 </tr>
 <tr>
 <td><code>&lt;D TT vpin steps&gt;</code></td>
 <td>Test turntable</td>
 <td><code>vpin</code>: Pin, <code>steps</code>: Step count</td>
+<td>Active</td>
 </tr>
 <tr>
 <td><code>&lt;D TT vpin steps activity&gt;</code></td>
 <td>Test turntable with activity</td>
 <td><code>vpin</code>: Pin, <code>steps</code>: Steps, <code>activity</code>: Activity</td>
+<td>Active</td>
 </tr>
 </tbody>
 </table>
@@ -11277,7 +11474,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="August 3, 2026 07:34:47 UTC">August 3, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="August 20, 2026 22:14:44 UTC">August 20, 2026</span>
   </span>
 
     
