@@ -61,32 +61,32 @@ See the [Overview](./index.md) for more information on these and other common el
 
 | Command | Description | Parameters | Status |
 | ------- | ----------- | ---------- | ------ |
-| `<1>` | Power ON all tracks | None | Active |
-| `<1 MAIN>` | Power on MAIN track | None | Active |
-| `<1 PROG>` | Power on PROG track | None | Active |
-| `<1 JOIN>` | JOIN prog track to MAIN and power | None | Active |
-| `<1 track>` | Power on given track | `track`: Track identifier | Active |
-| `<0>` | Power off all tracks | None | Active |
-| `<0 MAIN>` | Power off MAIN track | None | Active |
-| `<0 PROG>` | Power off PROG track | None | Active |
-| `<0 track>` | Power off given track | `track`: Track identifier | Active |
+| [`<1>`](?_1) | Power ON all tracks | None | Active |
+| [`<1 MAIN>`](?_1_9MAIN9) | Power on MAIN track | None | Active |
+| [`<1 PROG>`](?_1_9PROG9) | Power on PROG track | None | Active |
+| [`<1 JOIN>`](?_1_9JOIN9) | JOIN prog track to MAIN and power | None | Active |
+| [`<1 track>`](?_1_track) | Power on given track | `track`: Track identifier | Active |
+| [`<0>`](?_0) | Power off all tracks | None | Active |
+| [`<0 MAIN>`](?_0_9MAIN9) | Power off MAIN track | None | Active |
+| [`<0 PROG>`](?_0_9PROG9) | Power off PROG track | None | Active |
+| [`<0 track>`](?_0_track) | Power off given track | `track`: Track identifier | Active |
 
 ## Locomotive Control
 
 | Command | Description | Parameters | Status |
 | ------- | ----------- | ---------- | ------ |
-| `<t loco>` | Request loco status | `loco`: Locomotive ID | Active |
-| `<t loco tSpeed direction>` | Set throttle speed and direction | `loco`: ID, `tSpeed`: 0-127, `direction`: 0/1 | Active |
+| [`<t loco>`](?_t_loco) | Request loco status | `loco`: Locomotive ID | Active |
+| [`<t loco tSpeed direction>`](?_t_loco_tSpeed_direction) | Set throttle speed and direction | `loco`: ID, `tSpeed`: 0-127, `direction`: 0/1 | Active |
 | `<t ignore loco tSpeed direction>` | Set throttle speed and direction | Legacy format | ⚠️ Deprecated |
-| `<- loco>` | Remove loco state and reminders | `loco`: Locomotive ID | Active |
-| `<->` | Clear loco state and reminder table | None | Active |
+| [`<- loco>`](?_-_loco) | Remove loco state and reminders | `loco`: Locomotive ID | Active |
+| [`<->`](?_-) | Clear loco state and reminder table | None | Active |
 
 ## Function Control
 
 | Command | Description | Parameters | Status |
 | ------- | ----------- | ---------- | ------ |
-| `<F loco function onoff>` | Set loco function ON/OFF | `loco`: ID, `function`: Function number, `onoff`: 0/1 | Active |
-| `<F loco DCCFREQ freqvalue>` | Set DC frequency for loco | `loco`: ID, `freqvalue`: Frequency value | Active |
+| [`<F loco function onoff>`](?_9F9_loco_function_onoff) | Set loco function ON/OFF | `loco`: ID, `function`: Function number, `onoff`: 0/1 | Active |
+| [`<F loco DCCFREQ freqvalue>`](?_9F9_loco_9DCCFREQ9_freqValue) | Set DC frequency for loco | `loco`: ID, `freqvalue`: Frequency value | Active |
 | `<f loco byte1>` | Set loco function group | `loco`: ID, `byte1`: Function byte | ⚠️ Deprecated |
 | `<f loco group byte2>` | Set loco function group | `loco`: ID, `group`: Group ID, `byte2`: Function byte | ⚠️ Deprecated |
 
@@ -94,9 +94,9 @@ See the [Overview](./index.md) for more information on these and other common el
 
 | Command | Description | Parameters | Status |
 | ------- | ----------- | ---------- | ------ |
-| `<^>` | Show all consists | none | Active |
-| `<^ loco1 loco2 ... >` | Create Consist | `loco`: ID, negative for reversed loco | Active |
-| `<^ loco1>` | Deletes consist | `loco1`: ID | Active |
+| [`<^>`](?_:c:) | Show all consists | none | Active |
+| [`<^ leadLoco follower [ follower2..7]>`](?_:c:_ leadLoco_follower [_follower2..7]) | Create Consist | `loco`: ID, negative for reversed loco | Active |
+| [`<^ loco>`](?_:c:_loco) | Deletes consist | `loco1`: ID | Active |
 
 ## Turnout/Point Control
 
