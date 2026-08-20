@@ -10038,10 +10038,10 @@
 <h3 id="turnoutpoint-object-ids"><abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">Turnout</abbr>/point object IDs<a class="headerlink" href="#turnoutpoint-object-ids" title="Permanent link">&para;</a></h3>
 <p>Throughout this exercise, we will be defining <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnout</abbr>/point objects, and for consistency will be using IDs in the range of 100 to 199 for these.</p>
 <p>This way, the various possible variations of each type of object will be defined with the same ID, meaning the same <strong>EXRAIL</strong> sequences will apply, no matter how the objects are defined.</p>
-<p>For further information on IDs used in <strong>EXRAIL</strong>, refer to the <mark>TODO</mark> exrail-command-reference:handy information section of the <strong>EXRAIL</strong> reference page.</p>
+<p>For further information on IDs used in <strong>EXRAIL</strong>, refer to the <a href="../../../exrail-objects-introduction/"><strong>EXRAIL</strong> pages</a>.</p>
 <h3 id="dcc-addresses">DCC addresses<a class="headerlink" href="#dcc-addresses" title="Permanent link">&para;</a></h3>
 <p>Further to the above, for DCC controlled <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnouts</abbr>/points, these will commence at the linear DCC address 101, which starts at an address of 26, and a sub address of 0.</p>
-<p>For help understanding linear vs. address/sub address formatting of DCC accessories, refer to the <mark>TODO</mark> 'reference/downloads/documents:stationary decoder address table (xlsx spreadsheet)'.</p>
+<p>For help understanding linear vs. address/sub address formatting of DCC accessories, refer to the <a href="../../../../../../reference/stationary-decoder-addresses_not_in_nav/">Stationary Decoder Address Table</a></p>
 <div class="admonition note">
 <p class="admonition-title"><abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnout</abbr>/point IDs</p>
 <p>When going through the various examples where we define DCC <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnouts</abbr>/points, you may notice that a <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnout</abbr>/point ID has a DCC linear address that is the same, or close to it. <strong>This is pure coincidence</strong>.</p>
@@ -10077,7 +10077,7 @@
 <p>The 16 columns of three pins along the bottom of the module are where you connect the servos. The pins are arranged so that you can just plug a servo connector directly onto them, but be sure that the wire colours match the colours of the pins, i.e. yellow to yellow, red to red and black to black.</p>
 <p>The servo module itself is powered from the Arduino, but the servos themselves contain motors that consume more current than the Arduino is able to supply, and so a separate 5V supply is required for the servos.  This is connected to the green terminal block at the top of the module, with terminals labelled V+ and GND. The V+ terminal is connected to 5V and the GND to the 0V (ground) wire of the supply.</p>
 <p>Connections to the Arduino are made with four jumper wires (+5V power and GND, and SCL and SDA), as shown on the following diagram:</p>
-<p><img alt="PCA9685 Servo Module" src="../../../../../../_static/images/i2c-devices/ArduinoMegaServo.png" width="300px" /></p>
+<p><img alt="PCA9685 Servo Module" src="../../../../../../_static/images/i2c-devices/ArduinoMegaServo.png" width="600px" /></p>
 <p>In <strong>EX-CommandStation</strong>, the drivers for the PCA9685 module is already installed, and made available to for use as pin numbers 100-115. A servo is shown in the diagram, connected to the first set of pins on the module.  This will be accessed using pin number 100.</p>
 <p>Once you've made all of the connections, apply power to the Arduino.</p>
 <p>Then, in the Serial Monitor, enter the command <code>&lt;D SERVO 100 450&gt;</code>.  The servo should move, as long as it isn't (by some fluke) already in that position.</p>
@@ -10157,7 +10157,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="August 7, 2026 03:44:38 UTC">August 7, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="August 20, 2026 04:58:59 UTC">August 20, 2026</span>
   </span>
 
     
