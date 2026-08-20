@@ -162,6 +162,7 @@ plugins:
         'reference/nucleo/nucleo-drivers.md': 'reference/microcontrollers/nucleo/nucleo-drivers.md'
         'reference/nucleo/nucleo-firmware.md': 'reference/microcontrollers/nucleo/nucleo-firmware.md'
         'reference/nucleo/nucleo-power.md': 'reference/microcontrollers/nucleo/nucleo-power.md'
+        'reference/throttle-writers/withrottle-vs-native-protocol.md': 'throttles/withrottle-vs-native-protocol.md'
 
 # Build-only hooks live in mkdocsbuild.yml so mkdocs serve does not loop.
 

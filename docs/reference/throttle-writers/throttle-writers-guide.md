@@ -18,6 +18,7 @@ tags:
 For anyone developing a throttle or controller application, these considerations should be taken into account:
 
 * Refer to the [DCC-EX Native/Serial Commands List](../serial-commands/serial-command-list.md)
+* Commands and responses/broadcast are not serial. <br/>i.e. When you issue a command, the response/broadcast caused by the command may not be the next thing that the throttle sees.  You must now re
 * A throttle/controller MUST accept and ignore anything it does not understand
 * Track power state has three possible states: On, Off, and Unknown
 * There is no concept of a throttle 'acquiring' a loco.<br/>
