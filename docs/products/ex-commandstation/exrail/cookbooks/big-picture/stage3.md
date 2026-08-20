@@ -28,7 +28,7 @@ For further information on IDs used in **EXRAIL**, refer to the ==TODO== exrail-
 
 Further to the above, for DCC controlled turnouts/points, these will commence at the linear DCC address 101, which starts at an address of 26, and a sub address of 0.
 
-For help understanding linear vs. address/sub address formatting of DCC accessories, refer to the ==TODO== 'reference/downloads/documents:stationary decoder address table (xlsx spreadsheet)'.
+For help understanding linear vs. address/sub address formatting of DCC accessories, refer to the [Stationary Decoder Address Table](../../../../../reference/stationary-decoder-addresses_not_in_nav.md)
 
 !!! note "turnout/point IDs"
 
@@ -85,7 +85,7 @@ The servo module itself is powered from the Arduino, but the servos themselves c
 
 Connections to the Arduino are made with four jumper wires (+5V power and GND, and SCL and SDA), as shown on the following diagram:
 
-![PCA9685 Servo Module](../../../../../_static/images/i2c-devices/ArduinoMegaServo.png){ width=300px }
+![PCA9685 Servo Module](../../../../../_static/images/i2c-devices/ArduinoMegaServo.png){ width=600px }
 
 In **EX-CommandStation**, the drivers for the PCA9685 module is already installed, and made available to for use as pin numbers 100-115. A servo is shown in the diagram, connected to the first set of pins on the module.  This will be accessed using pin number 100.
 

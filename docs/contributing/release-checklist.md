@@ -125,8 +125,6 @@ This is a list of to do items that will allow us to release this new documentati
 
 ## General TODOs
 
-- ==TODO== Restructure parts the reference section for throttle developers
-- ==TODO== Migrate the other missing HAL pages
 - ==TODO== Really need some pages with diagrams and picture covering physical installation of the CS. See /purchasing/physical-installation.md and installer/physical-installation.md
-- ==TODO== Try to remove the references to the Arduino IDE.  Change to VSC.  Not going to be simple.
-- ==TODO== Need to change the 'Withrottle' iOS app references to 'ThrottleCard'
+- ==TODO== MEDIUM - Try to remove the references to the Arduino IDE.  Change to VSC/PIO.  Not going to be simple.
+- ==TODO== LOW - Need to change the 'Withrottle' iOS app references to 'ThrottleCard'
