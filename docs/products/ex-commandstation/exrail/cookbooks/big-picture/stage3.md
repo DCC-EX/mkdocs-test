@@ -22,7 +22,7 @@ Throughout this exercise, we will be defining turnout/point objects, and for con
 
 This way, the various possible variations of each type of object will be defined with the same ID, meaning the same **EXRAIL** sequences will apply, no matter how the objects are defined.
 
-For further information on IDs used in **EXRAIL**, refer to the ==TODO== exrail-command-reference:handy information section of the **EXRAIL** reference page.
+For further information on IDs used in **EXRAIL**, refer to the [**EXRAIL** pages](../../exrail-objects-introduction.md).
 
 ### DCC addresses
 
