@@ -1,3 +1,6 @@
 nav:
   - Overview: index.md
   - Throttle Writers Guide: throttle-writers-guide.md
+  - Native Protocol Library: native-protocol-library.md
+  - WiThrottle Protocol Library: withrottle-protocol-library.md
+  - WiThrottle VS Native Protocol: withrottle-vs-native-protocol.md

@@ -32,6 +32,8 @@ When the **DCC-EX** team designed the **DCC-EX EX-CommandStation** they found th
 
 The **WiThrottle Protocol** is adequate for running trains, throwing turnouts/points and selecting Routes.
 
+The **WiThrottle Protocol** is supported by **EX-CommandStations**, JMRI and a number of commercial command station manufacturers.  It is a de facto standard.
+
 What the **WiThrottle Protocol** can't do is *CV programming*, *Track Manager changes*, and *system configuration*.
 
 The **DCC-EX Native Commands** can do these and a lot more.
