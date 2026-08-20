@@ -1,13 +1,13 @@
 nav:
   - Table of Contents: toc.md
   - Glossary of Terms: glossary.md
-  - DCC-EX Serial/Native Commands: serial-commands
+  - <br/>Advanced config.h Options: advanced-config-h.md
   - EXRAIL Command List: exrail-command-reference.md
-  - Advanced config.h Options: advanced-config-h.md
-  - TrackManager: trackmanager
-  - Command Station Internal Architecture: command-station-arch.md
-  - Throttle Writers Guide: throttle-writers-guide.md
-  - Alternate Microcontrollers: microcontrollers
+  - <br/>TrackManager: trackmanager
+  - <br/>Alternate Microcontrollers: microcontrollers
   - Other Hardware: hardware
   - Wiring: wiring
+  - <br/>Throttle Developers: throttle-writers
+  - DCC-EX Serial/Native Commands: serial-commands
+  - Command Station Internal Architecture: command-station-architecture
   - <i>External References</i>: external-references

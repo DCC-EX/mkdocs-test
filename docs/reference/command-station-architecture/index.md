@@ -38,3 +38,4 @@ The **DCC-EX** **EX-CommandStation** code is layered to reduce overall complexit
 - CPU-specific layer (DCCTimer*.h)
     - provides pin and timer functions which differ between cpu types
   
+--8<-- "snippets/abbr.md"

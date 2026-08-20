@@ -16,7 +16,7 @@ Scanned docs root: `C:\Users\akers\OneDrive\github\github_doco\mkdocs-test\docs`
 
 ## High TODOs
 
-Total High TODO matches: 92
+Total High TODO matches: 91
 
 | File | Line | Line text |
 | --- | ---: | --- |
@@ -32,14 +32,6 @@ Total High TODO matches: 92
 | [docs/installer/platformio.md](../installer/platformio.md) | 3 | ==TODO== - provide setup help. |
 | [docs/purchasing/next-steps.md](../purchasing/next-steps.md) | 7 | (LOTS OF ==TODO== in this file) |
 | [docs/purchasing/physical-installation.md](../purchasing/physical-installation.md) | 3 | ==TODO== new page on physically connecting the EX-CSB1 to a layout. Should be in a snippet and reused |
-| [docs/reference/throttle-writers-guide.md](../reference/throttle-writers-guide.md) | 18 | ==TODO== Document incomplete. |
-| [docs/reference/throttle-writers-guide.md](../reference/throttle-writers-guide.md) | 84 | ==TODO== Controlling Locos |
-| [docs/reference/throttle-writers-guide.md](../reference/throttle-writers-guide.md) | 156 | ==TODO== DCC Accessory Control |
-| [docs/reference/throttle-writers-guide.md](../reference/throttle-writers-guide.md) | 182 | Routes and Automations can also have their current status and caption altered dynamically by **EXRAIL** (docs ==TODO==) |
-| [docs/reference/throttle-writers-guide.md](../reference/throttle-writers-guide.md) | 186 | ==TODO== Route Status |
-| [docs/reference/throttle-writers-guide.md](../reference/throttle-writers-guide.md) | 217 | ## COMMANDS TO AVOID ==TODO== |
-| [docs/reference/throttle-writers-guide.md](../reference/throttle-writers-guide.md) | 233 | ==TODO== Gauges |
-| [docs/reference/throttle-writers-guide.md](../reference/throttle-writers-guide.md) | 239 | ==TODO== TCP VS UDP |
 | [docs/support/faq.md](../support/faq.md) | 9 | ==TODO== Rework this so that it includes GUI options (EX-WebThrottle, Engine Driver, etc.) |
 | [docs/support/faq.md](../support/faq.md) | 19 | ==TODO== Rework this so that it includes GUI options (EX-WebThrottle, Engine Driver, etc.) |
 | [docs/throttles/connecting-usb.md](../throttles/connecting-usb.md) | 3 | ==TODO== Connecting a USB Throttle to your EX-CommandStation |
@@ -69,6 +61,13 @@ Total High TODO matches: 92
 | [docs/reference/serial-commands/serial-command-rr-and-ww_not_in_nav.md](../reference/serial-commands/serial-command-rr-and-ww_not_in_nav.md) | 169 | ==TODO== Response for ``<b «loco» «cv» «bitValue» «bit»>`` |
 | [docs/reference/serial-commands/serial-command-zz-and-z_not_in_nav.md](../reference/serial-commands/serial-command-zz-and-z_not_in_nav.md) | 79 | ==TODO== Response |
 | [docs/reference/serial-commands/shell_serial-command-xyz_not_in_nav.md](../reference/serial-commands/shell_serial-command-xyz_not_in_nav.md) | 40 | ==TODO== MENU - Responses |
+| [docs/reference/throttle-writers/throttle-writers-guide.md](../reference/throttle-writers/throttle-writers-guide.md) | 65 | ==TODO== Controlling Locos |
+| [docs/reference/throttle-writers/throttle-writers-guide.md](../reference/throttle-writers/throttle-writers-guide.md) | 137 | ==TODO== DCC Accessory Control |
+| [docs/reference/throttle-writers/throttle-writers-guide.md](../reference/throttle-writers/throttle-writers-guide.md) | 163 | Routes and Automations can also have their current status and caption altered dynamically by **EXRAIL** (docs ==TODO==) |
+| [docs/reference/throttle-writers/throttle-writers-guide.md](../reference/throttle-writers/throttle-writers-guide.md) | 167 | ==TODO== Route Status |
+| [docs/reference/throttle-writers/throttle-writers-guide.md](../reference/throttle-writers/throttle-writers-guide.md) | 198 | ## COMMANDS TO AVOID ==TODO== |
+| [docs/reference/throttle-writers/throttle-writers-guide.md](../reference/throttle-writers/throttle-writers-guide.md) | 214 | ==TODO== Gauges |
+| [docs/reference/throttle-writers/throttle-writers-guide.md](../reference/throttle-writers/throttle-writers-guide.md) | 220 | ==TODO== TCP VS UDP |
 | [docs/reference/trackmanager/dc-mode-frequency.md](../reference/trackmanager/dc-mode-frequency.md) | 82 | - ==TODO==  How to effectively use DC mode when using multiple frequencies. |
 | [docs/reference/wiring/i2C/i2c-wiring.md](../reference/wiring/i2C/i2c-wiring.md) | 54 | - When using separate power sources, there is potential for a ground loop. ==TODO== |
 | [docs/reference/microcontrollers/esp32/esp32-acebott.md](../reference/microcontrollers/esp32/esp32-acebott.md) | 99 | ==TODO== Stacked EX8874 Checklist |
@@ -139,10 +138,13 @@ Total medium priority TODO matches: 17
 
 ## Low priority TODOs
 
-Total low priority TODO matches: 59
+Total low priority TODO matches: 62
 
 | File | Line | Line text |
 | --- | ---: | --- |
+| [docs/reference/command-station-architecture/io-device-drivers.md](../reference/command-station-architecture/io-device-drivers.md) | 174 | This will need to be done in the ==TODO== LOW -  :doc:`Arduino-IDE </ex-commandstation/advanced-setup/installation-options/arduino-ide>`, so first make sure you have followed these steps to load up the |Arduino IDE|. |
+| [docs/reference/command-station-architecture/io-device-drivers.md](../reference/command-station-architecture/io-device-drivers.md) | 178 | First you will need to add a new file, just like the ==TODO== LOW - :ref:`config.h file <ex-commandstation/advanced-setup/installation-options/arduino-ide:Copy the config.example.h file (or rename it)>`. |
+| [docs/reference/command-station-architecture/io-device-drivers.md](../reference/command-station-architecture/io-device-drivers.md) | 248 | Finally, upload the code to the Arduino as you would do during the standard ==TODO== LOW - :ref:`Arduino IDE Setup <ex-commandstation/advanced-setup/installation-options/arduino-ide:upload the software>`. |
 | [docs/reference/serial-commands/serial-command-aa-and-a_not_in_nav.md](../reference/serial-commands/serial-command-aa-and-a_not_in_nav.md) | 64 | * ==TODO== LOW - Example Commands |
 | [docs/reference/serial-commands/serial-command-aa-and-a_not_in_nav.md](../reference/serial-commands/serial-command-aa-and-a_not_in_nav.md) | 68 | * ==TODO== LOW - Example Responses |
 | [docs/reference/serial-commands/serial-command-c-railcom_not_in_nav.md](../reference/serial-commands/serial-command-c-railcom_not_in_nav.md) | 37 | * ==TODO== LOW - Example Commands |
