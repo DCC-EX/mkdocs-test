@@ -13,7 +13,7 @@ There are a number key objects that are important for creating sequences:
 The process for creating these objects consists of:
 
 * Adding the hardware (not strictly applicable to the roster)
-* Configuring **EX-CommandStation** by modifying ``myAutomation.h` so that it knows about the object
+* Configuring **EX-CommandStation** by modifying ``myAutomation.h`` so that it knows about the object
 * Re-uploading the software to the **EX-CommandStation**
 
 !!! note "COMMANDS are case sensitive"

@@ -16,15 +16,11 @@ Scanned docs root: `C:\Users\akers\OneDrive\github\github_doco\mkdocs-test\docs`
 
 ## High TODOs
 
-Total High TODO matches: 91
+Total High TODO matches: 84
 
 | File | Line | Line text |
 | --- | ---: | --- |
-| [docs/contributing/release-checklist.md](release-checklist.md) | 128 | - ==TODO== Restructure parts the reference section for throttle developers |
-| [docs/contributing/release-checklist.md](release-checklist.md) | 129 | - ==TODO== Migrate the other missing HAL pages |
-| [docs/contributing/release-checklist.md](release-checklist.md) | 130 | - ==TODO== Really need some pages with diagrams and picture covering physical installation of the CS. See /purchasing/physical-installation.md and installer/physical-installation.md |
-| [docs/contributing/release-checklist.md](release-checklist.md) | 131 | - ==TODO== Try to remove the references to the Arduino IDE.  Change to VSC.  Not going to be simple. |
-| [docs/contributing/release-checklist.md](release-checklist.md) | 132 | - ==TODO== Need to change the 'Withrottle' iOS app references to 'ThrottleCard' |
+| [docs/contributing/release-checklist.md](release-checklist.md) | 128 | - ==TODO== Really need some pages with diagrams and picture covering physical installation of the CS. See /purchasing/physical-installation.md and installer/physical-installation.md |
 | [docs/diy/mega-harder.md](../diy/mega-harder.md) | 18 | - an Arduino Standard Motor-Shield (or others as noted in ==TODO==) to power the track. |
 | [docs/installer/install-ex-ioexpander.md](../installer/install-ex-ioexpander.md) | 3 | ==TODO== complete EX-Installer EX-IOExpander page needed |
 | [docs/installer/install-ex-turntable.md](../installer/install-ex-turntable.md) | 3 | ==TODO== complete EX-Installer EX-Turntable page needed |
@@ -38,7 +34,6 @@ Total High TODO matches: 91
 | [docs/throttles/connecting-wifi.md](../throttles/connecting-wifi.md) | 3 | ==TODO== Connecting a WiFi Throttle to your EX-CommandStation |
 | [docs/throttles/dc.md](../throttles/dc.md) | 3 | ==TODO== basic intro to TrackManager and links to the appropriate TrackManager pages |
 | [docs/throttles/dcc-accessories.md](../throttles/dcc-accessories.md) | 3 | ==TODO== how to control DCC Accessories |
-| [docs/reference/serial-commands/legacy-command-reference.md](../reference/serial-commands/legacy-command-reference.md) | 5 | ==TODO== move legacy docs |
 | [docs/reference/serial-commands/serial-command-aa-and-a_not_in_nav.md](../reference/serial-commands/serial-command-aa-and-a_not_in_nav.md) | 36 | ==TODO== responses |
 | [docs/reference/serial-commands/serial-command-aa-and-a_not_in_nav.md](../reference/serial-commands/serial-command-aa-and-a_not_in_nav.md) | 54 | ==TODO== move this spreadsheet to the new web site |
 | [docs/reference/serial-commands/serial-command-dd-anin-anout_not_in_nav.md](../reference/serial-commands/serial-command-dd-anin-anout_not_in_nav.md) | 15 | * ``<D ANOUT «vpin» «position» «profile»>`` see ==TODO== |
@@ -61,13 +56,13 @@ Total High TODO matches: 91
 | [docs/reference/serial-commands/serial-command-rr-and-ww_not_in_nav.md](../reference/serial-commands/serial-command-rr-and-ww_not_in_nav.md) | 169 | ==TODO== Response for ``<b «loco» «cv» «bitValue» «bit»>`` |
 | [docs/reference/serial-commands/serial-command-zz-and-z_not_in_nav.md](../reference/serial-commands/serial-command-zz-and-z_not_in_nav.md) | 79 | ==TODO== Response |
 | [docs/reference/serial-commands/shell_serial-command-xyz_not_in_nav.md](../reference/serial-commands/shell_serial-command-xyz_not_in_nav.md) | 40 | ==TODO== MENU - Responses |
-| [docs/reference/throttle-writers/throttle-writers-guide.md](../reference/throttle-writers/throttle-writers-guide.md) | 65 | ==TODO== Controlling Locos |
-| [docs/reference/throttle-writers/throttle-writers-guide.md](../reference/throttle-writers/throttle-writers-guide.md) | 137 | ==TODO== DCC Accessory Control |
-| [docs/reference/throttle-writers/throttle-writers-guide.md](../reference/throttle-writers/throttle-writers-guide.md) | 163 | Routes and Automations can also have their current status and caption altered dynamically by **EXRAIL** (docs ==TODO==) |
-| [docs/reference/throttle-writers/throttle-writers-guide.md](../reference/throttle-writers/throttle-writers-guide.md) | 167 | ==TODO== Route Status |
-| [docs/reference/throttle-writers/throttle-writers-guide.md](../reference/throttle-writers/throttle-writers-guide.md) | 198 | ## COMMANDS TO AVOID ==TODO== |
-| [docs/reference/throttle-writers/throttle-writers-guide.md](../reference/throttle-writers/throttle-writers-guide.md) | 214 | ==TODO== Gauges |
-| [docs/reference/throttle-writers/throttle-writers-guide.md](../reference/throttle-writers/throttle-writers-guide.md) | 220 | ==TODO== TCP VS UDP |
+| [docs/reference/throttle-writers/throttle-writers-guide.md](../reference/throttle-writers/throttle-writers-guide.md) | 66 | ==TODO== Controlling Locos |
+| [docs/reference/throttle-writers/throttle-writers-guide.md](../reference/throttle-writers/throttle-writers-guide.md) | 138 | ==TODO== DCC Accessory Control |
+| [docs/reference/throttle-writers/throttle-writers-guide.md](../reference/throttle-writers/throttle-writers-guide.md) | 164 | Routes and Automations can also have their current status and caption altered dynamically by **EXRAIL** (docs ==TODO==) |
+| [docs/reference/throttle-writers/throttle-writers-guide.md](../reference/throttle-writers/throttle-writers-guide.md) | 168 | ==TODO== Route Status |
+| [docs/reference/throttle-writers/throttle-writers-guide.md](../reference/throttle-writers/throttle-writers-guide.md) | 199 | ## COMMANDS TO AVOID ==TODO== |
+| [docs/reference/throttle-writers/throttle-writers-guide.md](../reference/throttle-writers/throttle-writers-guide.md) | 215 | ==TODO== Gauges |
+| [docs/reference/throttle-writers/throttle-writers-guide.md](../reference/throttle-writers/throttle-writers-guide.md) | 221 | ==TODO== TCP VS UDP |
 | [docs/reference/trackmanager/dc-mode-frequency.md](../reference/trackmanager/dc-mode-frequency.md) | 82 | - ==TODO==  How to effectively use DC mode when using multiple frequencies. |
 | [docs/reference/wiring/i2C/i2c-wiring.md](../reference/wiring/i2C/i2c-wiring.md) | 54 | - When using separate power sources, there is potential for a ground loop. ==TODO== |
 | [docs/reference/microcontrollers/esp32/esp32-acebott.md](../reference/microcontrollers/esp32/esp32-acebott.md) | 99 | ==TODO== Stacked EX8874 Checklist |
@@ -104,8 +99,6 @@ Total High TODO matches: 91
 | [docs/products/ex-commandstation/loco-programming/programming-tips.md](../products/ex-commandstation/loco-programming/programming-tips.md) | 14 | ==TODO== Fill this page out. Also move the references from the old site |
 | [docs/products/ex-commandstation/trackmanager/index.md](../products/ex-commandstation/trackmanager/index.md) | 51 | ==TODO== move legacy docs |
 | [docs/products/ex-commandstation/exrail/cookbooks/timecontrol.md](../products/ex-commandstation/exrail/cookbooks/timecontrol.md) | 92 | NB:  ==TODO== See the following page for details on running sound files. |
-| [docs/products/ex-commandstation/exrail/cookbooks/big-picture/stage3.md](../products/ex-commandstation/exrail/cookbooks/big-picture/stage3.md) | 25 | For further information on IDs used in **EXRAIL**, refer to the ==TODO== exrail-command-reference:handy information section of the **EXRAIL** reference page. |
-| [docs/products/ex-commandstation/exrail/cookbooks/big-picture/stage3.md](../products/ex-commandstation/exrail/cookbooks/big-picture/stage3.md) | 31 | For help understanding linear vs. address/sub address formatting of DCC accessories, refer to the ==TODO== 'reference/downloads/documents:stationary decoder address table (xlsx spreadsheet)'. |
 | [docs/products/ex-commandstation/exrail/cookbooks/big-picture/stage3.md](../products/ex-commandstation/exrail/cookbooks/big-picture/stage3.md) | 169 | You can also refer to ==TODO== `exrail/exrail-command-reference:virtual block control` for more information. |
 | [docs/products/ex-commandstation/exrail/cookbooks/big-picture/stage6.md](../products/ex-commandstation/exrail/cookbooks/big-picture/stage6.md) | 404 | Remember, these are virtual blocks, and do not necessarily need to be electrically isolated from each other. Don't confuse isolated blocks of track or block occupancy detection with these virtual blocks. For further background, refer to ==TODO== `exrail/exrail-command-reference:virtual block control`. |
 | [docs/products/ex-commandstation/exrail/cookbooks/big-picture/stage6.md](../products/ex-commandstation/exrail/cookbooks/big-picture/stage6.md) | 446 | Using the ``LATCH()`` command gives us a way to automatically alternate between the main track and the station siding. ``LATCH()`` simply sets the state of a pin (either real or virtual) which can then be tested by an ``IF()`` statement. In this particular case, we have defined pin 60 (alias "CHOOSE_BLK2") to be latched and unlatched, as this pin does not exist on the Mega2560, nor does it exist on any of our I/O expander boards. Further reading on ``LATCH()`` and ``UNLATCH()`` can be found in the ==TODO== `exrail/exrail-command-reference:sensors/inputs - reading and responding` section of the EXRAIL reference. |
@@ -114,10 +107,11 @@ Total High TODO matches: 91
 
 ## Medium priority TODOs
 
-Total medium priority TODO matches: 17
+Total medium priority TODO matches: 18
 
 | File | Line | Line text |
 | --- | ---: | --- |
+| [docs/contributing/release-checklist.md](release-checklist.md) | 129 | - ==TODO== MEDIUM - Try to remove the references to the Arduino IDE.  Change to VSC/PIO.  Not going to be simple. |
 | [docs/reference/serial-commands/serial-command-c-railcom_not_in_nav.md](../reference/serial-commands/serial-command-c-railcom_not_in_nav.md) | 23 | ==TODO== MEDIUM - Response |
 | [docs/reference/serial-commands/serial-command-caret_not_in_nav.md](../reference/serial-commands/serial-command-caret_not_in_nav.md) | 28 | ==TODO== MEDIUM - response |
 | [docs/reference/serial-commands/serial-command-dd-anin-anout_not_in_nav.md](../reference/serial-commands/serial-command-dd-anin-anout_not_in_nav.md) | 26 | ==TODO== MEDIUM - Responses |
@@ -138,10 +132,11 @@ Total medium priority TODO matches: 17
 
 ## Low priority TODOs
 
-Total low priority TODO matches: 62
+Total low priority TODO matches: 63
 
 | File | Line | Line text |
 | --- | ---: | --- |
+| [docs/contributing/release-checklist.md](release-checklist.md) | 130 | - ==TODO== LOW - Need to change the 'Withrottle' iOS app references to 'ThrottleCard' |
 | [docs/reference/command-station-architecture/io-device-drivers.md](../reference/command-station-architecture/io-device-drivers.md) | 174 | This will need to be done in the ==TODO== LOW -  :doc:`Arduino-IDE </ex-commandstation/advanced-setup/installation-options/arduino-ide>`, so first make sure you have followed these steps to load up the |Arduino IDE|. |
 | [docs/reference/command-station-architecture/io-device-drivers.md](../reference/command-station-architecture/io-device-drivers.md) | 178 | First you will need to add a new file, just like the ==TODO== LOW - :ref:`config.h file <ex-commandstation/advanced-setup/installation-options/arduino-ide:Copy the config.example.h file (or rename it)>`. |
 | [docs/reference/command-station-architecture/io-device-drivers.md](../reference/command-station-architecture/io-device-drivers.md) | 248 | Finally, upload the code to the Arduino as you would do during the standard ==TODO== LOW - :ref:`Arduino IDE Setup <ex-commandstation/advanced-setup/installation-options/arduino-ide:upload the software>`. |

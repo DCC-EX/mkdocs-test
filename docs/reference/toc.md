@@ -288,6 +288,9 @@ li:not(.md-nav__item, .md-tabs__item) a {
     - **<br/>Throttle Developers**
         - [Overview](throttle-writers/index.md)
         - [Considerations for throttle developers <small>(Throttle Writers Guide)</small>](throttle-writers/throttle-writers-guide.md)
+        - [DCC-EX Native/Serial Command Protocol Library - DCCEXProtocol <small>(Native Protocol Library)</small>](throttle-writers/native-protocol-library.md)
+        - [WiThrottle Protocol Library - WiThrottleProtocol <small>(WiThrottle Protocol Library)</small>](throttle-writers/withrottle-protocol-library.md)
+        - [WiThrottle Protocol VS DCC-EX Native/Serial Commands <small>(WiThrottle VS Native Protocol)</small>](throttle-writers/withrottle-vs-native-protocol.md)
     - **DCC-EX Serial/Native Commands**
         - [DCC-EX Serial Commands Overview <small>(Overview)</small>](serial-commands/index.md)
         - [DCC-EX Serial Command List <small>(Command List)</small>](serial-commands/serial-command-list.md)
@@ -377,5 +380,6 @@ li:not(.md-nav__item, .md-tabs__item) a {
 - [Example - Turntable ROUTEs](../products/ex-commandstation/exrail/cookbooks/big-picture/stage5-examples/turntable-example_not_in_nav.md)
 - [Getting Started with DCC-EX](../products/getting-started_not_in_nav.md)
 - [Incorrect IOREF voltage for 3.3v Microcontrollers](microcontrollers/esp32/ioref-incorrect-voltage-fix_not_in_nav.md)
+- [Stationary Decoder Address table](stationary-decoder-addresses_not_in_nav.md)
 - [Using a Serial Monitor / Device Monitor](tools/serial-monitor_not_in_nav.md)
 - [WiFi Configuration for version 5.7.0+ <br/><small>Graphical User Interface Options</small>](../products/ex-commandstation/config-wifi-esp32-gui-options_not_in_nav.md)

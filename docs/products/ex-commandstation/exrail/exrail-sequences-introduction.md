@@ -59,6 +59,12 @@ Sequential execution of sequences is supported. i.e. One sequence can invoke ano
 
     COMMANDS are case sensitive. i.e. they must be in uppercase. Text parameters you provide (aliases,  descriptions) are not.
 
+!!! note "EXRAIL is procedural"
+
+    If you are familiar with programming, then it is important to note that EXRAIL has more in common with procedural languages like BASIC or Fortran, than it does with object oriented languages like C++ or Java.
+
+    In particular, if it starts executing a SEQUENCE, it will continue executing commands until it hits a DONE, RETURN or FOLLOW.  If it does not see one of these it will happily start executing the next defined SEQUENCE.
+
 ----
 
 ## Structure of a 'Sequence'
