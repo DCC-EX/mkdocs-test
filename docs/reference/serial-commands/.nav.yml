@@ -1,5 +1,5 @@
 nav:
   - Overview: index.md
   - Command List: serial-command-list.md
-  - Grouped Commands: serial-commands.md
+  - Commands by Function Group: serial-commands.md
   - Legacy Reference: legacy-command-reference.md
