@@ -242,6 +242,7 @@ li:not(.md-nav__item, .md-tabs__item) a {
     - [EXRAIL Command List](exrail-command-reference.md)
     - **<br/>TrackManager**
         - [TrackManager](trackmanager/index.md)
+        - [DCC vs DC PWM <small>(DCC VS DC)</small>](trackmanager/dcc-vs-dc.md)
         - [DC Mode - PWM Frequency <small>(DC Mode Frequency)</small>](trackmanager/dc-mode-frequency.md)
         - [DC Mode - Logic Gate Circuits <small>(DC Mode Logic)</small>](trackmanager/dc-mode-logic.md)
         - [DC Mode Track Sync <small>(DC Track Sync)</small>](trackmanager/dc-track-sync.md)
@@ -294,7 +295,7 @@ li:not(.md-nav__item, .md-tabs__item) a {
     - **DCC-EX Serial/Native Commands**
         - [DCC-EX Serial Commands Overview <small>(Overview)</small>](serial-commands/index.md)
         - [DCC-EX Serial Command List <small>(Command List)</small>](serial-commands/serial-command-list.md)
-        - [Grouped Commands](serial-commands/serial-commands.md)
+        - [Commands by Function Group](serial-commands/serial-commands.md)
         - [Legacy Command Reference <small>(Legacy Reference)</small>](serial-commands/legacy-command-reference.md)
     - **Command Station Internal Architecture**
         - [**EX-CommandStation** Internal Architecture <small>(Command Station Internal Architecture)</small>](command-station-architecture/index.md)

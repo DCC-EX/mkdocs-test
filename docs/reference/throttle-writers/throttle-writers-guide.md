@@ -17,13 +17,15 @@ tags:
 
 For anyone developing a throttle or controller application, these considerations should be taken into account:
 
-* Refer to the [DCC-EX Native/Serial Commands List](../serial-commands/serial-command-list.md)
-* Commands and responses/broadcast are not serial. <br/>i.e. When you issue a command, the response/broadcast caused by the command may not be the next thing that the throttle sees.  You must now re
-* A throttle/controller MUST accept and ignore anything it does not understand
-* Track power state has three possible states: On, Off, and Unknown
+* Generally speaking, most commands do not have direct 'responses'. What generally happens that commands will cause something to be 'broadcast' to **all** throttles/controllers, not just the throttle/controller that sent the command.
+* Commands and responses/broadcast are asynchronous (not serial). <br/>i.e. When you issue a command, any response/broadcast caused by the command, if there is one, may not be the next thing that the throttle sees.
 * There is no concept of a throttle 'acquiring' a loco.<br/>
-Simply, commands for a loco are sent to the **EX-CommandStation**, and the **EX-CommandStation** 'broadcasts' the status of any/every loco to every throttle any time a change is made to a loco.
+Simply, commands for a loco are sent to the **EX-CommandStation**, and the **EX-CommandStation** 'broadcasts' the status of any/every loco to every throttle any time a change is made to any/every loco.
+* A throttle/controller MUST accept and ignore anything it does not understand.
 * There is no concept of the throttle disconnecting from the **EX-CommandStation**.
+* Track power state has three possible states: On, Off, and Unknown.
+
+Refer to the [DCC-EX Native/Serial Commands List](../serial-commands/serial-command-list.md) for more information on all commands.
 
 ## Key Throttle/Controller Commands
 

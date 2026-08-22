@@ -16,7 +16,7 @@ Scanned docs root: `C:\Users\akers\OneDrive\github\github_doco\mkdocs-test\docs`
 
 ## High TODOs
 
-Total High TODO matches: 84
+Total High TODO matches: 87
 
 | File | Line | Line text |
 | --- | ---: | --- |
@@ -56,14 +56,17 @@ Total High TODO matches: 84
 | [docs/reference/serial-commands/serial-command-rr-and-ww_not_in_nav.md](../reference/serial-commands/serial-command-rr-and-ww_not_in_nav.md) | 169 | ==TODO== Response for ``<b «loco» «cv» «bitValue» «bit»>`` |
 | [docs/reference/serial-commands/serial-command-zz-and-z_not_in_nav.md](../reference/serial-commands/serial-command-zz-and-z_not_in_nav.md) | 79 | ==TODO== Response |
 | [docs/reference/serial-commands/shell_serial-command-xyz_not_in_nav.md](../reference/serial-commands/shell_serial-command-xyz_not_in_nav.md) | 40 | ==TODO== MENU - Responses |
-| [docs/reference/throttle-writers/throttle-writers-guide.md](../reference/throttle-writers/throttle-writers-guide.md) | 66 | ==TODO== Controlling Locos |
-| [docs/reference/throttle-writers/throttle-writers-guide.md](../reference/throttle-writers/throttle-writers-guide.md) | 138 | ==TODO== DCC Accessory Control |
-| [docs/reference/throttle-writers/throttle-writers-guide.md](../reference/throttle-writers/throttle-writers-guide.md) | 164 | Routes and Automations can also have their current status and caption altered dynamically by **EXRAIL** (docs ==TODO==) |
-| [docs/reference/throttle-writers/throttle-writers-guide.md](../reference/throttle-writers/throttle-writers-guide.md) | 168 | ==TODO== Route Status |
-| [docs/reference/throttle-writers/throttle-writers-guide.md](../reference/throttle-writers/throttle-writers-guide.md) | 199 | ## COMMANDS TO AVOID ==TODO== |
-| [docs/reference/throttle-writers/throttle-writers-guide.md](../reference/throttle-writers/throttle-writers-guide.md) | 215 | ==TODO== Gauges |
-| [docs/reference/throttle-writers/throttle-writers-guide.md](../reference/throttle-writers/throttle-writers-guide.md) | 221 | ==TODO== TCP VS UDP |
+| [docs/reference/throttle-writers/throttle-writers-guide.md](../reference/throttle-writers/throttle-writers-guide.md) | 68 | ==TODO== Controlling Locos |
+| [docs/reference/throttle-writers/throttle-writers-guide.md](../reference/throttle-writers/throttle-writers-guide.md) | 140 | ==TODO== DCC Accessory Control |
+| [docs/reference/throttle-writers/throttle-writers-guide.md](../reference/throttle-writers/throttle-writers-guide.md) | 166 | Routes and Automations can also have their current status and caption altered dynamically by **EXRAIL** (docs ==TODO==) |
+| [docs/reference/throttle-writers/throttle-writers-guide.md](../reference/throttle-writers/throttle-writers-guide.md) | 170 | ==TODO== Route Status |
+| [docs/reference/throttle-writers/throttle-writers-guide.md](../reference/throttle-writers/throttle-writers-guide.md) | 201 | ## COMMANDS TO AVOID ==TODO== |
+| [docs/reference/throttle-writers/throttle-writers-guide.md](../reference/throttle-writers/throttle-writers-guide.md) | 217 | ==TODO== Gauges |
+| [docs/reference/throttle-writers/throttle-writers-guide.md](../reference/throttle-writers/throttle-writers-guide.md) | 223 | ==TODO== TCP VS UDP |
 | [docs/reference/trackmanager/dc-mode-frequency.md](../reference/trackmanager/dc-mode-frequency.md) | 82 | - ==TODO==  How to effectively use DC mode when using multiple frequencies. |
+| [docs/reference/trackmanager/dcc-vs-dc.md](../reference/trackmanager/dcc-vs-dc.md) | 43 | **Brake Pin:** In order for **TrackManager** to operate in DC mode, the motor shield must have a brake pin defined in your "config.h" motor shield definition. <br /> There are a very limited number of motor drivers that are known to be suitable for use with DC mode. The current list is available in ==TODO== :ref:`reference/hardware/motor-boards:trackmanager dc compatible boards`. Any other motor drivers, not explicitly listed, are not supported. |
+| [docs/reference/trackmanager/dcc-vs-dc.md](../reference/trackmanager/dcc-vs-dc.md) | 99 | ==TODO== XXX - map of function number to frequency |
+| [docs/reference/trackmanager/dcc-vs-dc.md](../reference/trackmanager/dcc-vs-dc.md) | 166 | There are a very limited number of motor drivers that are known to be suitable for use with DC mode. The current list is available in ==TODO== :ref:`reference/hardware/motor-boards:trackmanager dc compatible boards`. Any other motor drivers, not explicitly listed, are not supported. |
 | [docs/reference/wiring/i2C/i2c-wiring.md](../reference/wiring/i2C/i2c-wiring.md) | 54 | - When using separate power sources, there is potential for a ground loop. ==TODO== |
 | [docs/reference/microcontrollers/esp32/esp32-acebott.md](../reference/microcontrollers/esp32/esp32-acebott.md) | 99 | ==TODO== Stacked EX8874 Checklist |
 | [docs/reference/microcontrollers/esp32/esp32-ex8874.md](../reference/microcontrollers/esp32/esp32-ex8874.md) | 110 | ==TODO== Stacked EX8874 Checklist |
@@ -97,7 +100,7 @@ Total High TODO matches: 84
 | [docs/products/ex-commandstation/exrail/exrail-objects-introduction.md](../products/ex-commandstation/exrail/exrail-objects-introduction.md) | 362 | ==TODO== Link here to recommended pin/vpin allocations etc. |
 | [docs/products/ex-commandstation/exrail/exrail-objects-introduction.md](../products/ex-commandstation/exrail/exrail-objects-introduction.md) | 364 | ==TODO== Add a diagram for the EX-CSB1 to an IO Expander |
 | [docs/products/ex-commandstation/loco-programming/programming-tips.md](../products/ex-commandstation/loco-programming/programming-tips.md) | 14 | ==TODO== Fill this page out. Also move the references from the old site |
-| [docs/products/ex-commandstation/trackmanager/index.md](../products/ex-commandstation/trackmanager/index.md) | 51 | ==TODO== move legacy docs |
+| [docs/products/ex-commandstation/trackmanager/index.md](../products/ex-commandstation/trackmanager/index.md) | 104 | - A motor shield with a brake pin. <br/> (See the list of compatible boards at ==TODO== :ref:`reference/hardware/motor-boards:trackmanager dc compatible boards`.) <br/> (The **EX-CSB1** and **EX‑MotorShield8874** have a brake pin.) |
 | [docs/products/ex-commandstation/exrail/cookbooks/timecontrol.md](../products/ex-commandstation/exrail/cookbooks/timecontrol.md) | 92 | NB:  ==TODO== See the following page for details on running sound files. |
 | [docs/products/ex-commandstation/exrail/cookbooks/big-picture/stage3.md](../products/ex-commandstation/exrail/cookbooks/big-picture/stage3.md) | 169 | You can also refer to ==TODO== `exrail/exrail-command-reference:virtual block control` for more information. |
 | [docs/products/ex-commandstation/exrail/cookbooks/big-picture/stage6.md](../products/ex-commandstation/exrail/cookbooks/big-picture/stage6.md) | 404 | Remember, these are virtual blocks, and do not necessarily need to be electrically isolated from each other. Don't confuse isolated blocks of track or block occupancy detection with these virtual blocks. For further background, refer to ==TODO== `exrail/exrail-command-reference:virtual block control`. |
