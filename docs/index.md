@@ -32,7 +32,7 @@ hide:
     - Integration with [JMRI](https://www.jmri.org/), [iTrain](https://www.berros.eu/en/itrain/), and [RocRail](https://wiki.rocrail.net/) if you prefer to run trains from your computer.
 
     ---
-     [![EX-CSB1](./_static/images/ex-csb1/csb1-small.png){ align=right }](./products/ex-commandstation/ex-csb1.md)
+     [![EX-CSB1](./_static/images/ex-csb1/csb1-resin-case-small.png){ align=right }](./products/ex-commandstation/ex-csb1.md)
     The ready-to-run [**EX-CommandStation Booster 1 Express**](/products/ex-commandstation/ex-csb1.md) (**EX-CSB1**) is available for purchase, complete with WiFi and power supply. With your own phone, you could be running your trains in less than 5 minutes. *No computer required.*  
     To purchase one, [check out our official suppliers](/purchasing/official-sellers.md).  
     To get started with an **EX-CSB1** [read the product page](/products/ex-commandstation/ex-csb1.md).
