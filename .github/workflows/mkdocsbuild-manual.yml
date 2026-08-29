@@ -26,6 +26,9 @@ jobs:
           echo "::group::DCCEXCommands"
           bash pull_docu_from_source.sh devel/DCCEXCommands.h cmdref
           echo "::endgroup::"
+        run: |
+          . ./venv/bin/activate
+          python3 find_todos.py --root . --output docs/contributing/todo-report.md
       - name: Build docu site
         run: |
           . ./venv/bin/activate

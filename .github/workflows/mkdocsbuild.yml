@@ -29,6 +29,9 @@ jobs:
         run: |
           . ./venv/bin/activate
           python3 find_todos.py --root . --output docs/contributing/todo-report.md
+        run: |
+          . ./venv/bin/activate
+          python3 gen_toc.py --root .
       - name: Build docu site
         run: |
           . ./venv/bin/activate
