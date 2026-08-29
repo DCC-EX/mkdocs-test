@@ -1,4 +1,4 @@
-INHERIT: mkdocs.yml
+INHERIT: properdocs.yml
 
 hooks:
   - gen_toc.py

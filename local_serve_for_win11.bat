@@ -1,1 +1,1 @@
-mkdocs serve
+properdocs serve

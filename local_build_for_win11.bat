@@ -1,2 +1,2 @@
-python -m mkdocs build --clean -f mkdocsbuild.yml
+python -m properdocs build --clean -f properdocsbuild.yml
 pause
