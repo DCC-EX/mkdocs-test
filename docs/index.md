@@ -24,16 +24,16 @@ hide:
 
 - ## :material-hand-wave-outline: Welcome to DCC-EX
 
-    Our highly regarded open source [Command Station](./products/ex-commandstation/index.md) is one of the best available with many unique features designed to bring control and fun to your hobby:
+    Our highly regarded open source [Command Station](./products/ex-commandstation/index.md) is one of the most comprehensive available, with many unique features designed to bring control and fun to your hobby:
 
-    - Wi-fi access, with **DCC-EX** unique features, to use [Engine Driver](https://enginedriver.mstevetodd.com/) on Android, [ThrottleCard](https://throttlecard.com/) on iOS plus a wide variety of other Apps and physical throttles.
+    - Use your smart devices (phones and tablets) to control your trains and run your layout over WiFi. Or use one of the many commercial and DIY physical WiFi throttles.
     - Able to run DCC and DC trains from the same throttle at the same time.
-    - Powerful [EXRAIL](/products/ex-commandstation/exrail/index.md) scripting to easily implement a roster and accessories such as turnouts/points, routes, signals, lights, and sounds. EXRAIL can also automate your trains and animate your layout!
+    - Equipped with the powerful [EXRAIL](/products/ex-commandstation/exrail/index.md) scripting to easily implement a roster and accessories such as turnouts/points, routes, signals, lights, and sounds. EXRAIL can also automate your trains and animate your layout!
     - Integration with [JMRI](https://www.jmri.org/), [iTrain](https://www.berros.eu/en/itrain/), and [RocRail](https://wiki.rocrail.net/) if you prefer to run trains from your computer.
 
     ---
      [![EX-CSB1](./_static/images/ex-csb1/csb1-resin-case-small.png){ align=right }](./products/ex-commandstation/ex-csb1.md)
-    The ready-to-run [**EX-CommandStation Booster 1 Express**](/products/ex-commandstation/ex-csb1.md) (**EX-CSB1**) is available for purchase, complete with WiFi and power supply. With your own phone, you could be running your trains in less than 5 minutes. *No computer required.*  
+    Our flagship ready-to-run [**EX-CommandStation Booster 1 Express**](/products/ex-commandstation/ex-csb1.md) (**EX-CSB1**) is available for purchase, complete with WiFi and power supply. With your own phone, you could be running your trains in less than 5 minutes. *No computer required.*  
     To purchase one, [check out our official suppliers](/purchasing/official-sellers.md).  
     To get started with an **EX-CSB1** [read the product page](/products/ex-commandstation/ex-csb1.md).
 
