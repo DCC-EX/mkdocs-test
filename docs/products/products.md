@@ -96,6 +96,8 @@ Refer to the [EX-MotorShield8874 page](/products/ex-motorshield8874/ex-motorshie
 
 ---
 
+![EX-8266](../_static/images/wifi/exwifi6-small.png){ align=right}
+
 ### EX-WiFiShield8266
 
 [![EX-8266 Logo](../_static/images/logos/product-logo-ex-wifishield8266-only-light.png){ .only-light width=400px }
@@ -109,6 +111,10 @@ Refer to the [EX-WiFiShield8266 page](/products/ex-wifishield8266/ex-wifishield8
 
 ---
 
+&nbsp;
+
+---
+
 ## Advanced Technical Products ![Engineer Icon](../_static/images/levels/engineer.png){ .header-img } <br/><small>Advanced Level</small>
 
 These products are far more involved and complicated to get up and running.
@@ -116,6 +122,10 @@ These products are far more involved and complicated to get up and running.
 This products go beyond simple assembly and you will need a good understanding of configuring software and hardware, including soldering components and making some modifications to existing hardware devices.
 
 If you are new to **DCC-EX** and/or electronics in general, we do not recommend you try to tackle any of these products until you have become familiar with how our products work.
+
+---
+
+![ESP32](../_static/images/esp32/ioref-to-3v3-jumper2.png){ width="160px" align=right}
 
 ### EX-CommandStation Advanced Self Build (DIY)
 
