@@ -7,13 +7,15 @@ Designed in conjunction with the **DCC-EX** development team, the **EX‑MotorSh
 
 This board is the new standard by which we compare other boards.
 
+![EX-CSB1](../../_static/images/ex8874/ex_motorshield8874_purple_side-small.png){ align=right}
+
 Not *required* for the *EX-CSB1*, but can be optionally added to provide two additional 5amp outputs (to two provided by default).
 
 ## Features
 
 - Pin compatible with the original Arduino Motor Shield Rev3 but provides significantly improved electrical performance for driving higher loads, and improved usability.
 - Rated for 5 Amps of continuous output current.
-- No need to cut traces or bend out pins for stacking on the EX-CommandStation.
+- No need to cut traces or bend out pins for stacking on the Arduino Mega based EX-CommandStations or the **EX-CSB1**.
 - 2 outputs (Main and Programming Track or 2 Mains).
 - Single power supply input powers the shield, the Arduino, and the track (motor output). Powering of Arduino boards is possible due to the onboard DC/DC buck converter, supporting a wide input supply range from 9 to 30V. The reverse polarity protection prevents damage to the circuit and its components in case the power supply is accidentally connected backwards.
 - Wide input voltage range from 9V to 30V DC.

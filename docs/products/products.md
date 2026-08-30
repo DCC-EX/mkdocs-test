@@ -15,7 +15,7 @@ These are our powerful, but easy to use, get up and running quickly type product
 
 **NOTE:** You may need to install some software on your computer to take advantage of some of these, but our documentation will walk you through that process.
 
-![csb1](../_static/images/ex-csb1/csb1-small.png){: style="width: 30%" align=right}
+![EX-CSB1](../_static/images/ex-csb1/csb1-small.png){ align=right} ![EX-CSB1](../_static/images/ex-csb1/csb1-resin-case-small.png){ align=right}
 
 ### EX-CommandStation Booster 1 Express
 
@@ -64,7 +64,7 @@ These products are more involved to get up and running, and aren't just plug in 
 
 You will need to perform some assembly and configure and install some software to take advantage of these ones, but you won't need to solder anything.
 
-![diy](../_static/images/mega/mega-small.png){: style="width: 30%" align=right}
+![DIY EX-CommandStation](../_static/images/mega/mega-small.png){ align=right}
 
 ### EX-CommandStation Recommended Self Build Option (DIY)
 
@@ -80,6 +80,8 @@ If you want to build it yourself, this is our recommended setup which simply req
 Refer to the [Easy build Arduino Mega page](/diy/mega-easy.md) for information on what to buy and how to assemble.
 
 ---
+
+![EX-CSB1](../_static/images/ex8874/ex_motorshield8874_purple_side-small.png){ align=right}
 
 ### EX-MotorShield8874
 

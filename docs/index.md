@@ -51,19 +51,18 @@ hide:
 
 - ## :material-help-box-multiple-outline: What is DCC-EX
 
-    **DCC-EX** is world-wide team of dedicated enthusiasts producing **free** and open source **DCC** and **DC** software and hardware solutions to run your model trains and layout.
+    <span style="font-size: .75rem;">**DCC-EX** is world-wide team of dedicated enthusiasts producing **free** and open source **DCC** and **DC** software and hardware solutions to run your model trains and layout.  
+    Our mission is to use our many decades of software and hardware experience to make model trains accessible and affordable to everyone.</span>
 
-    Our mission is to use our many decades of software and hardware experience to make model trains accessible and affordable to everyone.
-
-    You can learn more on our [About Us](/about/about.md) page.
+    <span style="font-size: .75rem;">You can learn more on our [About Us](/about/about.md) page.</span>
 
     ---
 
-    This website contains a vast amount of information, ranging from how to run your first train to how to automate a large exhibition layout.
+    <span style="font-size: .75rem;">This website contains a vast amount of information, ranging from how to run your first train to how to automate a large exhibition layout.
 
-    The navigation buttons above should help you find what you want and the search facility is extremely powerful.
+    <span style="font-size: .75rem;">The navigation buttons above should help you find what you want and the search facility is extremely powerful.</span>
 
-    There is a light/dark mode button beside the search bar.
+    <span style="font-size: .75rem;">There is a light/dark mode button beside the search bar.</span>
 
     <small>This site does not use Third Party Cookies.</small>
 
