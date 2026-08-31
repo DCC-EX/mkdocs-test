@@ -23,11 +23,11 @@
         <link rel="alternate" type="application/rss+xml" title="RSS feed of updated content" href="../../../../feed_rss_updated.xml">
       
       <link rel="icon" href="../../../../_static/images/logos/favicon.ico">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.14">
+      <meta name="generator" content="mkdocs-ProperDocs 1.6.7, mkdocs-material-9.6.14">
     
     
       
-        <title>Command List - DCC-EX Model Train Control, Animation, and Automation</title>
+        <title>Command List - DCC-EX Model Train Control, Animation &amp; Automation</title>
       
     
     
@@ -97,7 +97,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../../../.." title="DCC-EX Model Train Control, Animation, and Automation" class="md-header__button md-logo" aria-label="DCC-EX Model Train Control, Animation, and Automation" data-md-component="logo">
+    <a href="../../../.." title="DCC-EX Model Train Control, Animation &amp;amp; Automation" class="md-header__button md-logo" aria-label="DCC-EX Model Train Control, Animation &amp; Automation" data-md-component="logo">
       
   <img src="../../../../_static/images/logos/logo_with_border.png" alt="logo">
 
@@ -110,7 +110,7 @@
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
           <span class="md-ellipsis">
-            DCC-EX Model Train Control, Animation, and Automation
+            DCC-EX Model Train Control, Animation &amp; Automation
           </span>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
@@ -615,12 +615,12 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../../.." title="DCC-EX Model Train Control, Animation, and Automation" class="md-nav__button md-logo" aria-label="DCC-EX Model Train Control, Animation, and Automation" data-md-component="logo">
+    <a href="../../../.." title="DCC-EX Model Train Control, Animation &amp;amp; Automation" class="md-nav__button md-logo" aria-label="DCC-EX Model Train Control, Animation &amp; Automation" data-md-component="logo">
       
   <img src="../../../../_static/images/logos/logo_with_border.png" alt="logo">
 
     </a>
-    DCC-EX Model Train Control, Animation, and Automation
+    DCC-EX Model Train Control, Animation &amp; Automation
   </label>
   
     <div class="md-nav__source">
@@ -2256,6 +2256,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#change_direction" class="md-nav__link">
+    <span class="md-ellipsis">
+      CHANGE_DIRECTION
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#clear_stashstash_id" class="md-nav__link">
     <span class="md-ellipsis">
       CLEAR_STASH(stash_id)
@@ -2292,6 +2301,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#configure_dialogtitlebody" class="md-nav__link">
+    <span class="md-ellipsis">
+      CONFIGURE_DIALOG(title,body)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#configure_servovpinpos1pos2profile" class="md-nav__link">
     <span class="md-ellipsis">
       CONFIGURE_SERVO(vpin,pos1,pos2,profile)
@@ -2301,18 +2319,18 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#dcc_signalsignal_idaddrsubaddr" class="md-nav__link">
+  <a href="#dcc_signalsignal_idaddrsubaddrdescription" class="md-nav__link">
     <span class="md-ellipsis">
-      DCC_SIGNAL(signal_id,addr,subaddr)
+      DCC_SIGNAL(signal_id,addr,subaddr,description...)
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#dccx_signalsignal_idredaspectamberaspectgreenaspect" class="md-nav__link">
+  <a href="#dccx_signalsignal_idredaspectamberaspectgreenaspectdescription" class="md-nav__link">
     <span class="md-ellipsis">
-      DCCX_SIGNAL(signal_id,redAspect,amberAspect,greenAspect)
+      DCCX_SIGNAL(signal_id,redAspect,amberAspect,greenAspect,description...)
     </span>
   </a>
   
@@ -2679,6 +2697,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#ifnvsnvenum" class="md-nav__link">
+    <span class="md-ellipsis">
+      IFNVS(nvenum)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#ifrandompercent" class="md-nav__link">
     <span class="md-ellipsis">
       IFRANDOM(percent)
@@ -2823,6 +2850,24 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#shared_sensorvpincount" class="md-nav__link">
+    <span class="md-ellipsis">
+      SHARED_SENSOR(vpin,count...)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#remote_sensorvpincount" class="md-nav__link">
+    <span class="md-ellipsis">
+      REMOTE_SENSOR(vpin,count...)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#jmri_sensorvpincount" class="md-nav__link">
     <span class="md-ellipsis">
       JMRI_SENSOR(vpin,count...)
@@ -2949,9 +2994,27 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#neopixel_signalvpinredcolourambercolourgreencolour" class="md-nav__link">
+  <a href="#neopixel_signalvpinredcolourambercolourgreencolourdescription" class="md-nav__link">
     <span class="md-ellipsis">
-      NEOPIXEL_SIGNAL(vpin,redcolour,ambercolour,greencolour)
+      NEOPIXEL_SIGNAL(vpin,redcolour,ambercolour,greencolour,description...)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#node_share_screen0display_idcount" class="md-nav__link">
+    <span class="md-ellipsis">
+      NODE_SHARE_SCREEN0(display_id,count...)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#shared_write_vpinsvpincount" class="md-nav__link">
+    <span class="md-ellipsis">
+      SHARED_WRITE_VPINS(vpin,count)
     </span>
   </a>
   
@@ -3633,9 +3696,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#servo_signalvpinredposamberposgreenpos" class="md-nav__link">
+  <a href="#servo_signalvpinredposamberposgreenposdescription" class="md-nav__link">
     <span class="md-ellipsis">
-      SERVO_SIGNAL(vpin,redpos,amberpos,greenpos)
+      SERVO_SIGNAL(vpin,redpos,amberpos,greenpos,description...)
     </span>
   </a>
   
@@ -3696,18 +3759,27 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#signalredpinamberpingreenpin" class="md-nav__link">
+  <a href="#signalredpinamberpingreenpindescription" class="md-nav__link">
     <span class="md-ellipsis">
-      SIGNAL(redpin,amberpin,greenpin)
+      SIGNAL(redpin,amberpin,greenpin,description...)
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#signalhredpinamberpingreenpin" class="md-nav__link">
+  <a href="#signalhredpinamberpingreenpindescription" class="md-nav__link">
     <span class="md-ellipsis">
-      SIGNALH(redpin,amberpin,greenpin)
+      SIGNALH(redpin,amberpin,greenpin,description...)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#led_signalsignalidredpinamberpingreenpindescription" class="md-nav__link">
+    <span class="md-ellipsis">
+      LED_SIGNAL(signalid,redpin,amberpin,greenpin,description...)
     </span>
   </a>
   
@@ -3876,9 +3948,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#virtual_signalsignal_id" class="md-nav__link">
+  <a href="#virtual_signalsignal_iddescription" class="md-nav__link">
     <span class="md-ellipsis">
-      VIRTUAL_SIGNAL(signal_id)
+      VIRTUAL_SIGNAL(signal_id,description...)
     </span>
   </a>
   
@@ -11886,6 +11958,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#change_direction" class="md-nav__link">
+    <span class="md-ellipsis">
+      CHANGE_DIRECTION
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#clear_stashstash_id" class="md-nav__link">
     <span class="md-ellipsis">
       CLEAR_STASH(stash_id)
@@ -11922,6 +12003,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#configure_dialogtitlebody" class="md-nav__link">
+    <span class="md-ellipsis">
+      CONFIGURE_DIALOG(title,body)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#configure_servovpinpos1pos2profile" class="md-nav__link">
     <span class="md-ellipsis">
       CONFIGURE_SERVO(vpin,pos1,pos2,profile)
@@ -11931,18 +12021,18 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#dcc_signalsignal_idaddrsubaddr" class="md-nav__link">
+  <a href="#dcc_signalsignal_idaddrsubaddrdescription" class="md-nav__link">
     <span class="md-ellipsis">
-      DCC_SIGNAL(signal_id,addr,subaddr)
+      DCC_SIGNAL(signal_id,addr,subaddr,description...)
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#dccx_signalsignal_idredaspectamberaspectgreenaspect" class="md-nav__link">
+  <a href="#dccx_signalsignal_idredaspectamberaspectgreenaspectdescription" class="md-nav__link">
     <span class="md-ellipsis">
-      DCCX_SIGNAL(signal_id,redAspect,amberAspect,greenAspect)
+      DCCX_SIGNAL(signal_id,redAspect,amberAspect,greenAspect,description...)
     </span>
   </a>
   
@@ -12309,6 +12399,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#ifnvsnvenum" class="md-nav__link">
+    <span class="md-ellipsis">
+      IFNVS(nvenum)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#ifrandompercent" class="md-nav__link">
     <span class="md-ellipsis">
       IFRANDOM(percent)
@@ -12453,6 +12552,24 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#shared_sensorvpincount" class="md-nav__link">
+    <span class="md-ellipsis">
+      SHARED_SENSOR(vpin,count...)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#remote_sensorvpincount" class="md-nav__link">
+    <span class="md-ellipsis">
+      REMOTE_SENSOR(vpin,count...)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#jmri_sensorvpincount" class="md-nav__link">
     <span class="md-ellipsis">
       JMRI_SENSOR(vpin,count...)
@@ -12579,9 +12696,27 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#neopixel_signalvpinredcolourambercolourgreencolour" class="md-nav__link">
+  <a href="#neopixel_signalvpinredcolourambercolourgreencolourdescription" class="md-nav__link">
     <span class="md-ellipsis">
-      NEOPIXEL_SIGNAL(vpin,redcolour,ambercolour,greencolour)
+      NEOPIXEL_SIGNAL(vpin,redcolour,ambercolour,greencolour,description...)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#node_share_screen0display_idcount" class="md-nav__link">
+    <span class="md-ellipsis">
+      NODE_SHARE_SCREEN0(display_id,count...)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#shared_write_vpinsvpincount" class="md-nav__link">
+    <span class="md-ellipsis">
+      SHARED_WRITE_VPINS(vpin,count)
     </span>
   </a>
   
@@ -13263,9 +13398,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#servo_signalvpinredposamberposgreenpos" class="md-nav__link">
+  <a href="#servo_signalvpinredposamberposgreenposdescription" class="md-nav__link">
     <span class="md-ellipsis">
-      SERVO_SIGNAL(vpin,redpos,amberpos,greenpos)
+      SERVO_SIGNAL(vpin,redpos,amberpos,greenpos,description...)
     </span>
   </a>
   
@@ -13326,18 +13461,27 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#signalredpinamberpingreenpin" class="md-nav__link">
+  <a href="#signalredpinamberpingreenpindescription" class="md-nav__link">
     <span class="md-ellipsis">
-      SIGNAL(redpin,amberpin,greenpin)
+      SIGNAL(redpin,amberpin,greenpin,description...)
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#signalhredpinamberpingreenpin" class="md-nav__link">
+  <a href="#signalhredpinamberpingreenpindescription" class="md-nav__link">
     <span class="md-ellipsis">
-      SIGNALH(redpin,amberpin,greenpin)
+      SIGNALH(redpin,amberpin,greenpin,description...)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#led_signalsignalidredpinamberpingreenpindescription" class="md-nav__link">
+    <span class="md-ellipsis">
+      LED_SIGNAL(signalid,redpin,amberpin,greenpin,description...)
     </span>
   </a>
   
@@ -13506,9 +13650,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#virtual_signalsignal_id" class="md-nav__link">
+  <a href="#virtual_signalsignal_iddescription" class="md-nav__link">
     <span class="md-ellipsis">
-      VIRTUAL_SIGNAL(signal_id)
+      VIRTUAL_SIGNAL(signal_id,description...)
     </span>
   </a>
   
@@ -13847,6 +13991,8 @@ In many cases the parameters are self explanatory, for example a speed (which wi
 <ul>
 <li>sequence_id SEQUENCE to jump processing to, must terminate or RETURN</li>
 </ul>
+<h2 id="change_direction">CHANGE_DIRECTION<a class="headerlink" href="#change_direction" title="Permanent link">&para;</a></h2>
+<p>Change the direction of the current loco</p>
 <h2 id="clear_stashstash_id">CLEAR_STASH(stash_id)<a class="headerlink" href="#clear_stashstash_id" title="Permanent link">&para;</a></h2>
 <p>Clears loco value stored in stash</p>
 <ul>
@@ -13859,6 +14005,12 @@ In many cases the parameters are self explanatory, for example a speed (which wi
 <h2 id="closeturnout_id">CLOSE(turnout_id)<a class="headerlink" href="#closeturnout_id" title="Permanent link">&para;</a></h2>
 <p>Close turnout by id</p>
 <p>see THROW</p>
+<h2 id="configure_dialogtitlebody">CONFIGURE_DIALOG(title,body)<a class="headerlink" href="#configure_dialogtitlebody" title="Permanent link">&para;</a></h2>
+<p>Set up browser config dialog with title and body text. The dialog will be shown when the user clicks on the config button in the browser interface.</p>
+<ul>
+<li>title Quoted text for dialog title</li>
+<li>body base name for dialog body text.</li>
+</ul>
 <h2 id="configure_servovpinpos1pos2profile">CONFIGURE_SERVO(vpin,pos1,pos2,profile)<a class="headerlink" href="#configure_servovpinpos1pos2profile" title="Permanent link">&para;</a></h2>
 <p>Set up servo movement parameters for non-turnout</p>
 <ul>
@@ -13867,17 +14019,19 @@ In many cases the parameters are self explanatory, for example a speed (which wi
 <li>pos2 RESET position of servo</li>
 <li>profile Movement profile (Instant, Fast, Medium, Slow, Bounce)</li>
 </ul>
-<h2 id="dcc_signalsignal_idaddrsubaddr">DCC_SIGNAL(signal_id,addr,subaddr)<a class="headerlink" href="#dcc_signalsignal_idaddrsubaddr" title="Permanent link">&para;</a></h2>
+<h2 id="dcc_signalsignal_idaddrsubaddrdescription">DCC_SIGNAL(signal_id,addr,subaddr,description...)<a class="headerlink" href="#dcc_signalsignal_idaddrsubaddrdescription" title="Permanent link">&para;</a></h2>
 <p>Define a DCC accessory signal with short address</p>
 <ul>
 <li>signal_id Id used for all signal manipulation commands</li>
 <li>addr DCC address</li>
 <li>subaddr DCC subaddress</li>
+<li>description... Quoted text description of signal</li>
 </ul>
-<h2 id="dccx_signalsignal_idredaspectamberaspectgreenaspect">DCCX_SIGNAL(signal_id,redAspect,amberAspect,greenAspect)<a class="headerlink" href="#dccx_signalsignal_idredaspectamberaspectgreenaspect" title="Permanent link">&para;</a></h2>
+<h2 id="dccx_signalsignal_idredaspectamberaspectgreenaspectdescription">DCCX_SIGNAL(signal_id,redAspect,amberAspect,greenAspect,description...)<a class="headerlink" href="#dccx_signalsignal_idredaspectamberaspectgreenaspectdescription" title="Permanent link">&para;</a></h2>
 <p>Define advanced DCC accessory signal with aspects</p>
 <ul>
 <li>signal_id DCC Linear address AND Id used for all signal manipulation commands</li>
+<li>description... Quoted text description of signal</li>
 </ul>
 <h2 id="dcc_turntableturntable_idhomedescription">DCC_TURNTABLE(turntable_id,home,description...)<a class="headerlink" href="#dcc_turntableturntable_idhomedescription" title="Permanent link">&para;</a></h2>
 <p>defines a Turntable device</p>
@@ -14024,6 +14178,9 @@ In many cases the parameters are self explanatory, for example a speed (which wi
 <h2 id="ifnotvpin">IFNOT(vpin)<a class="headerlink" href="#ifnotvpin" title="Permanent link">&para;</a></h2>
 <p>Inverse of IF</p>
 <p>see IF</p>
+<h2 id="ifnvsnvenum">IFNVS(nvenum)<a class="headerlink" href="#ifnvsnvenum" title="Permanent link">&para;</a></h2>
+<p>Check if given Non Volatile Storage entry is non-zero</p>
+<p>see IF</p>
 <h2 id="ifrandompercent">IFRANDOM(percent)<a class="headerlink" href="#ifrandompercent" title="Permanent link">&para;</a></h2>
 <p>randomly satisfied IF at given percent probability</p>
 <p>see IF</p>
@@ -14079,6 +14236,18 @@ In many cases the parameters are self explanatory, for example a speed (which wi
 <p>see IF</p>
 <h2 id="invert_direction">INVERT_DIRECTION<a class="headerlink" href="#invert_direction" title="Permanent link">&para;</a></h2>
 <p>Marks current task so that FWD and REV commands are inverted.</p>
+<h2 id="shared_sensorvpincount">SHARED_SENSOR(vpin,count...)<a class="headerlink" href="#shared_sensorvpincount" title="Permanent link">&para;</a></h2>
+<p>Defines multiple sensor vpins to be shared to other nodes</p>
+<ul>
+<li>vpin first vpin number</li>
+<li>count... Number of consecutive VPINS. Default 1.</li>
+</ul>
+<h2 id="remote_sensorvpincount">REMOTE_SENSOR(vpin,count...)<a class="headerlink" href="#remote_sensorvpincount" title="Permanent link">&para;</a></h2>
+<p>Defines multiple sensor vpins shared by other nodes.</p>
+<ul>
+<li>vpin first vpin number</li>
+<li>count... Number of consecutive VPINS. Default 1.</li>
+</ul>
 <h2 id="jmri_sensorvpincount">JMRI_SENSOR(vpin,count...)<a class="headerlink" href="#jmri_sensorvpincount" title="Permanent link">&para;</a></h2>
 <p>Defines multiple JMRI <code>&lt;s&gt;</code> type sensor feedback definitions each with id matching vpin and INPUT_PULLUP</p>
 <ul>
@@ -14150,13 +14319,27 @@ displays which may have different display numbers on different devices.</p>
 <li>b blue component 0-255</li>
 <li>count... Number of consecutive pixels to set, Default 1.</li>
 </ul>
-<h2 id="neopixel_signalvpinredcolourambercolourgreencolour">NEOPIXEL_SIGNAL(vpin,redcolour,ambercolour,greencolour)<a class="headerlink" href="#neopixel_signalvpinredcolourambercolourgreencolour" title="Permanent link">&para;</a></h2>
+<h2 id="neopixel_signalvpinredcolourambercolourgreencolourdescription">NEOPIXEL_SIGNAL(vpin,redcolour,ambercolour,greencolour,description...)<a class="headerlink" href="#neopixel_signalvpinredcolourambercolourgreencolourdescription" title="Permanent link">&para;</a></h2>
 <p>Define a signal that uses a single multi colour pixel</p>
 <p>see NEORGB</p>
 <ul>
 <li>vpin unique signal_id</li>
 <li>redcolour  RGB colour use NEORGB(red,green,blue) to create values.</li>
+<li>description... Quoted text description of signal</li>
 </ul>
+<h2 id="node_share_screen0display_idcount">NODE_SHARE_SCREEN0(display_id,count...)<a class="headerlink" href="#node_share_screen0display_idcount" title="Permanent link">&para;</a></h2>
+<p>Remaps this devices screen display 0 to another id when sharing with nodes.</p>
+<p>see LCD, SCREEN</p>
+<ul>
+<li>display_id Alternative display id that nodes may render as required.
+Display 0 is used to represent node-specific values such as Wifi settings, so it cant be mixed with other display 0 data. </li>
+</ul>
+<p>This node will display it's own display 0 as normal.</p>
+<ul>
+<li>optional second parameter for start row offset</li>
+</ul>
+<h2 id="shared_write_vpinsvpincount">SHARED_WRITE_VPINS(vpin,count)<a class="headerlink" href="#shared_write_vpinsvpincount" title="Permanent link">&para;</a></h2>
+<p>Marks a range of VPINS as shared, so that any node can write to them</p>
 <h2 id="aconeventid">ACON(eventid)<a class="headerlink" href="#aconeventid" title="Permanent link">&para;</a></h2>
 <p>Send MERG CBUS ACON to Adapter</p>
 <h2 id="acofeventid">ACOF(eventid)<a class="headerlink" href="#acofeventid" title="Permanent link">&para;</a></h2>
@@ -14466,13 +14649,14 @@ displays which may have different display numbers on different devices.</p>
 <li>position  servo position (values are hardware dependent)</li>
 <li>duration mS</li>
 </ul>
-<h2 id="servo_signalvpinredposamberposgreenpos">SERVO_SIGNAL(vpin,redpos,amberpos,greenpos)<a class="headerlink" href="#servo_signalvpinredposamberposgreenpos" title="Permanent link">&para;</a></h2>
+<h2 id="servo_signalvpinredposamberposgreenposdescription">SERVO_SIGNAL(vpin,redpos,amberpos,greenpos,description...)<a class="headerlink" href="#servo_signalvpinredposamberposgreenposdescription" title="Permanent link">&para;</a></h2>
 <p>Dedfine a servo based signal with 3 servo positions</p>
 <ul>
 <li>vpin of servo, acts as signal_id</li>
 <li>redpos servo position (values are hardware dependent)</li>
 <li>amberpos servo position (values are hardware dependent)</li>
 <li>greenpos servo position (values are hardware dependent)</li>
+<li>description... Quoted text description of signal</li>
 </ul>
 <h2 id="servo_turnoutturnout_idvpinactiveangleinactiveangleprofiledescription">SERVO_TURNOUT(turnout_id,vpin,activeAngle,inactiveAngle,profile,description...)<a class="headerlink" href="#servo_turnoutturnout_idvpinactiveangleinactiveangleprofiledescription" title="Permanent link">&para;</a></h2>
 <p>Define a servo driven turnout</p>
@@ -14509,16 +14693,31 @@ displays which may have different display numbers on different devices.</p>
 <ul>
 <li>freq Frequency is default 0, or 1..3</li>
 </ul>
-<h2 id="signalredpinamberpingreenpin">SIGNAL(redpin,amberpin,greenpin)<a class="headerlink" href="#signalredpinamberpingreenpin" title="Permanent link">&para;</a></h2>
-<p>Define a Signal with LOW=on leds</p>
+<h2 id="signalredpinamberpingreenpindescription">SIGNAL(redpin,amberpin,greenpin,description...)<a class="headerlink" href="#signalredpinamberpingreenpindescription" title="Permanent link">&para;</a></h2>
+<p>Define a Signal with LOW=on leds (rare case)</p>
 <p>see SIGNALH</p>
 <ul>
 <li>redpin vpin for RED state, also acts as signal_id</li>
+<li>amberpin vpin for AMBER state</li>
+<li>greenpin vpin for GREEN state</li>
+<li>description... Quoted text description of signal</li>
 </ul>
-<h2 id="signalhredpinamberpingreenpin">SIGNALH(redpin,amberpin,greenpin)<a class="headerlink" href="#signalhredpinamberpingreenpin" title="Permanent link">&para;</a></h2>
-<p>define a signal with HIGH=ON leds</p>
+<h2 id="signalhredpinamberpingreenpindescription">SIGNALH(redpin,amberpin,greenpin,description...)<a class="headerlink" href="#signalhredpinamberpingreenpindescription" title="Permanent link">&para;</a></h2>
+<p>define a signal with HIGH=ON leds (use LED_SIGNAL prefereably)</p>
 <ul>
 <li>redpin vpin for RED state, also acts as signal_id</li>
+<li>amberpin vpin for AMBER state</li>
+<li>greenpin vpin for GREEN state</li>
+<li>description... Quoted text description of signal</li>
+</ul>
+<h2 id="led_signalsignalidredpinamberpingreenpindescription">LED_SIGNAL(signalid,redpin,amberpin,greenpin,description...)<a class="headerlink" href="#led_signalsignalidredpinamberpingreenpindescription" title="Permanent link">&para;</a></h2>
+<p>define a signal with HIGH=ON leds</p>
+<ul>
+<li>signalid unique identifier for the signal</li>
+<li>redpin vpin for RED state</li>
+<li>amberpin vpin for AMBER state</li>
+<li>greenpin vpin for GREEN state</li>
+<li>description... Quoted text description of signal</li>
 </ul>
 <h2 id="speedspeed">SPEED(speed)<a class="headerlink" href="#speedspeed" title="Permanent link">&para;</a></h2>
 <p>Changes current tasks loco speed without changing direction</p>
@@ -14601,9 +14800,12 @@ displays which may have different display numbers on different devices.</p>
 <ul>
 <li>vpin (limited to 0..255)</li>
 </ul>
-<h2 id="virtual_signalsignal_id">VIRTUAL_SIGNAL(signal_id)<a class="headerlink" href="#virtual_signalsignal_id" title="Permanent link">&para;</a></h2>
+<h2 id="virtual_signalsignal_iddescription">VIRTUAL_SIGNAL(signal_id,description...)<a class="headerlink" href="#virtual_signalsignal_iddescription" title="Permanent link">&para;</a></h2>
 <p>Defines a virtual (no hardware) signal, use ONhandlers to simulate hardware</p>
 <p>see SIGNAL ONRED ONAMBER ONGREEN</p>
+<ul>
+<li>description... Quoted text description of signal</li>
+</ul>
 <h2 id="virtual_turnoutiddescription">VIRTUAL_TURNOUT(id,description...)<a class="headerlink" href="#virtual_turnoutiddescription" title="Permanent link">&para;</a></h2>
 <p>Defines a virtual (no hardware) turnout, use ONhandlers to simulate hardware</p>
 <p>see TURNOUT ONCLOSE ONTHROW</p>
@@ -14690,7 +14892,7 @@ see XRESTORE_SPEED</li>
 <h2 id="ztest3commandreplytestcode">ZTEST3(command,reply,testcode...)<a class="headerlink" href="#ztest3commandreplytestcode" title="Permanent link">&para;</a></h2>
 <p>Developer Unit testing.  Do not use. </p>
 <h2 id="build-info">Build info:<a class="headerlink" href="#build-info" title="Permanent link">&para;</a></h2>
-<p>Autogenerated from devel/EXRAIL2MacroBase.h at Sat Aug 22 03:54:14 UTC 2026</p>
+<p>Autogenerated from devel/EXRAIL2MacroBase.h at Mon Aug 31 00:04:48 UTC 2026</p>
 
 
 
