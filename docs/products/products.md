@@ -15,7 +15,7 @@ These are our powerful, but easy to use, get up and running quickly type product
 
 **NOTE:** You may need to install some software on your computer to take advantage of some of these, but our documentation will walk you through that process.
 
-![csb1](../_static/images/ex-csb1/csb1-small.png){: style="width: 30%" align=right}
+![EX-CSB1](../_static/images/ex-csb1/csb1-small.png){ align=right} ![EX-CSB1](../_static/images/ex-csb1/csb1-resin-case-small.png){ align=right}
 
 ### EX-CommandStation Booster 1 Express
 
@@ -64,7 +64,7 @@ These products are more involved to get up and running, and aren't just plug in 
 
 You will need to perform some assembly and configure and install some software to take advantage of these ones, but you won't need to solder anything.
 
-![diy](../_static/images/mega/mega-small.png){: style="width: 30%" align=right}
+![DIY EX-CommandStation](../_static/images/mega/mega-small.png){ align=right}
 
 ### EX-CommandStation Recommended Self Build Option (DIY)
 
@@ -81,6 +81,8 @@ Refer to the [Easy build Arduino Mega page](/diy/mega-easy.md) for information o
 
 ---
 
+![EX-CSB1](../_static/images/ex8874/ex_motorshield8874_purple_side-small.png){ align=right}
+
 ### EX-MotorShield8874
 
 [![EX-8874 Logo](../_static/images/logos/product-logo-ex-motorshield8874-only-light.png){ .only-light width=400px }
@@ -93,6 +95,8 @@ Assembly is required to add this to an Arduino Mega along with software configur
 Refer to the [EX-MotorShield8874 page](/products/ex-motorshield8874/ex-motorshield8874.md) for more information.
 
 ---
+
+![EX-8266](../_static/images/wifi/exwifi6-small.png){ align=right}
 
 ### EX-WiFiShield8266
 
@@ -107,6 +111,10 @@ Refer to the [EX-WiFiShield8266 page](/products/ex-wifishield8266/ex-wifishield8
 
 ---
 
+&nbsp;
+
+---
+
 ## Advanced Technical Products ![Engineer Icon](../_static/images/levels/engineer.png){ .header-img } <br/><small>Advanced Level</small>
 
 These products are far more involved and complicated to get up and running.
@@ -114,6 +122,10 @@ These products are far more involved and complicated to get up and running.
 This products go beyond simple assembly and you will need a good understanding of configuring software and hardware, including soldering components and making some modifications to existing hardware devices.
 
 If you are new to **DCC-EX** and/or electronics in general, we do not recommend you try to tackle any of these products until you have become familiar with how our products work.
+
+---
+
+![ESP32](../_static/images/esp32/ioref-to-3v3-jumper2.png){ width="160px" align=right}
 
 ### EX-CommandStation Advanced Self Build (DIY)
 

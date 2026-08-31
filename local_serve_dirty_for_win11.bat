@@ -1,1 +1,1 @@
-mkdocs serve --dirty
+properdocs serve --dirty
