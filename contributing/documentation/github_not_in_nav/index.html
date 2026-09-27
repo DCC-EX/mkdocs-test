@@ -9807,7 +9807,7 @@
 <li>Using <strong>GitHub Desktop</strong> to download the repository to your PC</li>
 </ol>
 <p>Ongoing:</p>
-<ol>
+<ol start="3">
 <li>Opening the repository in <strong>VSCode</strong></li>
 <li>Making your changes</li>
 <li>Previewing your changes on your PC</li>
@@ -9864,8 +9864,14 @@ b. Use <strong>GitHub Desktop</strong> to pull the changes to your repository on
 <h4 id="5-live-previews">5. Live previews<a class="headerlink" href="#5-live-previews" title="Permanent link">&para;</a></h4>
 <p>Providing you followed the installation guide for VSCode on the page accurately, there are several methods available for generating previews as you are editing the reStructuredText code.</p>
 <p><mark>TODO</mark> LOW - how to preview options</p>
-<p>In VSC, you can get a basic preview with the preview button. top right of the editing page.</p>
-<p>UYou can push to your github repository and view the build (see below)</p>
+<ul>
+<li>
+<p>In VSC, you can get a basic preview with the preview button (icon of two pages with a magnifying glass). Top right of the editing page.  This only shows basic formatting.</p>
+</li>
+<li>
+<p>You can push to your github repository and view the build (see below).</p>
+</li>
+<li>
 <p>On MS Windows you can use one of the <code>.bat</code> files to get a full preview:</p>
 <ul>
 <li>local_build_for_win11.bat</li>
@@ -9873,29 +9879,31 @@ b. Use <strong>GitHub Desktop</strong> to pull the changes to your repository on
 <li>local_serve_dirty_for_win11.bat</li>
 <li>local_serve_for_win11.bat</li>
 </ul>
+</li>
+</ul>
 <p><code>local_serve_for_win11.bat</code> is the simplest and most accurate but is slow.</p>
 <h4 id="6-push-your-changes-to-your-github-repository">6. Push your changes to your GitHub repository<a class="headerlink" href="#6-push-your-changes-to-your-github-repository" title="Permanent link">&para;</a></h4>
-<p>You will need to</p>
+<p>You will need to:</p>
 <ul>
 <li>Commit your changes</li>
 <li>Push your changes</li>
 </ul>
 <p>In <strong>GitHub Desktop</strong>:</p>
-<ul>
+<ol>
 <li>Open/select the repository</li>
 <li>note and review the changes that have been made</li>
 <li>Add a <code>Summary</code> of your changes</li>
 <li>Add a <code>Description</code> of your changes, if the summary is not sufficient</li>
 <li>click <code>Commit to main</code></li>
 <li>click <code>Push origin</code></li>
-</ul>
+</ol>
 <h4 id="7-creating-a-pull-request-to-send-your-changes-for-review">7. Creating a <em>pull request</em> to send your changes for review<a class="headerlink" href="#7-creating-a-pull-request-to-send-your-changes-for-review" title="Permanent link">&para;</a></h4>
 <ol>
 <li>Open the <strong>GitHub website</strong></li>
 <li>Open/select your repository <code>https://github.com/&lt;your_account_name&gt;/dcc-ex.github.io</code></li>
 </ol>
 <p>On the 'code' page you should see "This branch is <em>x</em> commit(s) ahead of DCC-EX/dcc-ex.github.io:sphinx."</p>
-<ol>
+<ol start="3">
 <li>Click on the <code>x commit(s) ahead of</code> hyperlink</li>
 <li>Confirm or add to the title and documentation fields</li>
 <li>Click on the :guilabel:<code>Create pull request</code> button</li>
@@ -9905,16 +9913,20 @@ b. Use <strong>GitHub Desktop</strong> to pull the changes to your repository on
 <h3 id="periodic">Periodic<a class="headerlink" href="#periodic" title="Permanent link">&para;</a></h3>
 <p>To see the changes that other people have made to the original repository you need to periodically refresh your repository on both GitHub website and locally.</p>
 <h4 id="a-get-any-changes-to-your-repository-on-github-website">a. Get any changes to your repository on GitHub website<a class="headerlink" href="#a-get-any-changes-to-your-repository-on-github-website" title="Permanent link">&para;</a></h4>
-<p>1. Open the <strong>GitHub website</strong><br />
-2. open/select your repository <code>https://github.com/&lt;your_account_name&gt;/mkdocs-test</code></p>
+<ol>
+<li>Open the <strong>GitHub website</strong>  </li>
+<li>open/select your repository <code>https://github.com/&lt;your_account_name&gt;/mkdocs-test</code></li>
+</ol>
 <p>On the 'code' page you should see "This branch is <em>x</em> commit(s) behind DCC-EX/mkdocs-test."</p>
 <p>If does not say you are 'behind' there is nothing to do.  Stop here.</p>
 <p>If you are behind...</p>
-<p>3. Click on the <code>x commit(s) behind</code> hyperlink<br />
-5. Add to the title and/or documentation fields.  This does not matter so entering just <code>Catchup</code> is fine.<br />
-6. Click on the <code>Create pull request</code> button<br />
-7. Click on the <code>Merge pull request</code> button<br />
-8. Click on the <code>Confirm merge</code> button</p>
+<ol start="3">
+<li>Click on the <code>x commit(s) behind</code> hyperlink  </li>
+<li>Add to the title and/or documentation fields.  This does not matter so entering just <code>Catchup</code> is fine.  </li>
+<li>Click on the <code>Create pull request</code> button  </li>
+<li>Click on the <code>Merge pull request</code> button  </li>
+<li>Click on the <code>Confirm merge</code> button</li>
+</ol>
 <p>Any changes are now also in your repository on the GitHub website.</p>
 <h4 id="b-pull-the-changes-to-your-repository-on-your-pc">b. Pull the changes to your repository on your PC<a class="headerlink" href="#b-pull-the-changes-to-your-repository-on-your-pc" title="Permanent link">&para;</a></h4>
 <p>In <strong>GitHub Desktop</strong>:</p>
@@ -9926,10 +9938,12 @@ b. Use <strong>GitHub Desktop</strong> to pull the changes to your repository on
 <h2 id="additional">Additional<a class="headerlink" href="#additional" title="Permanent link">&para;</a></h2>
 <h3 id="your-own-github-pages">Your own github pages<a class="headerlink" href="#your-own-github-pages" title="Permanent link">&para;</a></h3>
 <p>You can, optionally, setup <em>github pages</em> from you own repository on the GitHub website.  This allows you to make changes that <em>other people</em> can view before creating a pull request.</p>
-<p>1. Fork the "mkdocs-test" repository, ensure the <code>Copy the main branch only</code> box is selected.<br />
-2. In your forked repository settings, navigate to Settings -&gt; Actions -&gt; General and ensure <code>Allow all actions and reusable workflows</code> is selected.<br />
-3. Set up VSCode for your forked repository as outlined above.<br />
-4. Create a new, orphaned branch called <code>gh-pages</code> using the command line; <strong>you cannot do this in VSCode or in your browser</strong>. Open a command prompt (or bash shell) and change into the directory containing your cloned fork then run the following commands:</p>
+<ol>
+<li>Fork the "mkdocs-test" repository, ensure the <code>Copy the main branch only</code> box is selected.  </li>
+<li>In your forked repository settings, navigate to Settings -&gt; Actions -&gt; General and ensure <code>Allow all actions and reusable workflows</code> is selected.  </li>
+<li>Set up VSCode for your forked repository as outlined above.  </li>
+<li>Create a new, orphaned branch called <code>gh-pages</code> using the command line; <strong>you cannot do this in VSCode or in your browser</strong>. Open a command prompt (or bash shell) and change into the directory containing your cloned fork then run the following commands:</li>
+</ol>
 <div class="language-text highlight"><pre><span></span><code>  git checkout --orphan gh-pages
   # Use Windows Explorer, macOS Finder, or whatever method you prefer and delete all files and folders within the directory.
   # It must be completely empty aside from the hidden .git folder before proceeding.
@@ -9938,11 +9952,13 @@ b. Use <strong>GitHub Desktop</strong> to pull the changes to your repository on
   git commit -a -m &quot;First commit&quot;
   git push origin gh-pages
 </code></pre></div>
-<p>5. At this point, review "Actions" in your forked repository and you should see the <code>pages build and deployment</code> job run, allowing you to preview the temporary "index.html" once complete.<br />
-6. Review the Settings -&gt; Pages tab and click the <code>Visit site</code> button to open your GitHub Pages generated content in a new browser tab, and you should see the basic "My DCC-EX Documentation Fork".<br />
-7. If at this point in time the only action in the "Actions" tab is "pages-build-deployment", click the "..." beside the latest run and select <code>Delete workflow run</code>.<br />
-8. You should now see a big green button <code>I understand my workflows, go ahead and enable them</code>. Click this button, which will show all the available actions as forked from the DCC-EX repository.<br />
-9. Now, each time you commit and push to your fork's sphinx branch or merge a pull request to it, it should automatically build a new pages deployment and publish it.</p>
+<ol start="5">
+<li>At this point, review "Actions" in your forked repository and you should see the <code>pages build and deployment</code> job run, allowing you to preview the temporary "index.html" once complete.  </li>
+<li>Review the Settings -&gt; Pages tab and click the <code>Visit site</code> button to open your GitHub Pages generated content in a new browser tab, and you should see the basic "My DCC-EX Documentation Fork".  </li>
+<li>If at this point in time the only action in the "Actions" tab is "pages-build-deployment", click the "..." beside the latest run and select <code>Delete workflow run</code>.  </li>
+<li>You should now see a big green button <code>I understand my workflows, go ahead and enable them</code>. Click this button, which will show all the available actions as forked from the DCC-EX repository.  </li>
+<li>Now, each time you commit and push to your fork's sphinx branch or merge a pull request to it, it should automatically build a new pages deployment and publish it.</li>
+</ol>
 <p>Building the pages and deploying takes time, every time you push any changes, but you will eventually be able to see your own version of the website at <code>https://&lt;your_account_name&gt;.github.io/makdocs-test/</code>.</p>
 <p>You can see the state of the processing of your changes by looking at the <code>Actions</code> page.  It will also tell you there if there are any errors.</p>
 
@@ -9965,7 +9981,7 @@ b. Use <strong>GitHub Desktop</strong> to pull the changes to your repository on
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="September 27, 2026 22:43:32 UTC">September 27, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="September 27, 2026 23:05:00 UTC">September 27, 2026</span>
   </span>
 
     

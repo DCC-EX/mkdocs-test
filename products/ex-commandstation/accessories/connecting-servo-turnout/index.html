@@ -9882,7 +9882,7 @@ from the startup logs using the serial monitor</p>
 <li>(Optionally) Use the <strong>EX-Toolbox</strong> Android app to experiment with servo angles and servo arm lengths until you have the required throw distance and angles to suit your servo mounting preferences.</li>
 </ol>
 <h2 id="define-your-turnoutspoints">Define your <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnouts</abbr>/points<a class="headerlink" href="#define-your-turnoutspoints" title="Permanent link">&para;</a></h2>
-<ol>
+<ol start="01">
 <li>
 <p>In <strong>EX-Installer</strong>, edit myAutomation.h and define each <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnout</abbr>/point to give an id of your choice, the <abbr title="an Arduino pin number that has been extended to include pins on external devices or expanders">VPIN</abbr> of the servo, the closed and open servo values you have discovered by experimentation and a suitable description to show on your throttle.</p>
 <div class="language-cpp highlight"><pre><span></span><code><span class="c1">//SERVO_TURNOUT( turnout_id, vpin, active_angle, inactive_angle, profile [, &quot;description&quot;|HIDDEN] )</span>
