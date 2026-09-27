@@ -112,34 +112,34 @@ Providing you followed the installation guide for VSCode on the page accurately,
 
 ==TODO== LOW - how to preview options
 
-In VSC, you can get a basic preview with the preview button. top right of the editing page.
+* In VSC, you can get a basic preview with the preview button (icon of two pages with a magnifying glass). Top right of the editing page.  This only shows basic formatting.
 
-UYou can push to your github repository and view the build (see below)
+* You can push to your github repository and view the build (see below).
 
-On MS Windows you can use one of the `.bat` files to get a full preview:
+* On MS Windows you can use one of the `.bat` files to get a full preview:
 
-* local_build_for_win11.bat
-* local_dirty_build_for_win11.bat
-* local_serve_dirty_for_win11.bat
-* local_serve_for_win11.bat
+    * local_build_for_win11.bat
+    * local_dirty_build_for_win11.bat
+    * local_serve_dirty_for_win11.bat
+    * local_serve_for_win11.bat
 
 ``local_serve_for_win11.bat`` is the simplest and most accurate but is slow.
 
 #### 6. Push your changes to your GitHub repository
 
-You will need to
+You will need to:
 
 * Commit your changes
 * Push your changes
 
 In **GitHub Desktop**:
 
-* Open/select the repository
-* note and review the changes that have been made
-* Add a ``Summary`` of your changes
-* Add a ``Description`` of your changes, if the summary is not sufficient
-* click `Commit to main`
-* click `Push origin`
+1. Open/select the repository
+2. note and review the changes that have been made
+3. Add a ``Summary`` of your changes
+4. Add a ``Description`` of your changes, if the summary is not sufficient
+5. click `Commit to main`
+6. click `Push origin`
 
 #### 7. Creating a *pull request* to send your changes for review
 
