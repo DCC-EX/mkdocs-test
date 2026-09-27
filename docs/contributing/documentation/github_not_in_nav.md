@@ -80,35 +80,17 @@ You can open the repository in VSCode at any time by using `File --> Open Folder
 
 You can subsequently open the repository in VSCode using `File --> Open Recent` and selecting the repository name.
 
-You can subsequently open the repository in VSCode from **GitHub Desktop**.
+You can also open the repository in VSCode from **GitHub Desktop**.
 
 #### 4. Make your changes
 
 You can use the navigation tree on the left to find the file you want to change. Clicking on a file will open it in the edit window.
 
-
-For this section, we are assuming that you are using VSCode with Git installed, allowing the built-in functionality for Git management in VSCode to work.
-
-To clone the documentation repository, and ensure you are on the correct branch, follow these steps:
-
-1. In VSCode, either click on the Source Control icon in the left pane, or press <Ctrl> + <Shift> + "g" + "g" (Yes, press "g" twice).
-2. Click the "Clone Repository" button.
-3. Enter the documentation repository URL ``https://github.com/DCC-EX/mkdocs-test`` then press <Enter>.
-4. Select the appropriate folder on your hard drive to clone it to, then click "Select Repository Location".
-5. The clone will take a minute or two to complete depending on the speed of your computer and internet connection.
-6. Once complete, click "Open".
-7. At the bottom of the window, ensure that the branch "sphinx" is listed beside the Source Control icon.
-8. When you're ready to start editing, click the Source Control or press <Ctrl> + <Shift> +"g" + "g" again.
-9. Click the three dots "..." beside "SOURCE CONTROL" in bold text and select "Checkout to".
-10. Enter a new name for your branch, then click "Create new branch".
-
-At this point, any editing you do will be on a new branch linked to the parent "sphinx" branch.
-
-While editing, be sure to save often, stage and commit your changes, and publish them. This way, should anything go wrong with your computer, your work will be saved in GitHub rather than be lost.
+While editing, be sure to save often (auto-save should be on by default), preview and commit your changes, and publish them. This way, should anything go wrong with your computer, your work will be saved in GitHub rather than be lost.
 
 #### 5. Live previews
 
-Providing you followed the installation guide for VSCode on the page accurately, there are several methods available for generating previews as you are editing the reStructuredText code.
+Providing you followed the installation guide for VSCode on the page accurately, there are several methods available for generating previews as you are editing the code.
 
 ==TODO== LOW - how to preview options
 
@@ -150,7 +132,7 @@ On the 'code' page you should see "This branch is *x* commit(s) ahead of DCC-EX/
 
 3. Click on the `x commit(s) ahead of` hyperlink
 4. Confirm or add to the title and documentation fields
-5. Click on the :guilabel:`Create pull request` button
+5. Click on the `Create pull request` button
 
 This creates a pull request to be reviewed by the documentation team
 
@@ -183,9 +165,9 @@ Any changes are now also in your repository on the GitHub website.
 
 In **GitHub Desktop**:
 
-1. Click on the `Fetch origin` button`
+1. Click on the `Fetch origin` button
 
-Any changes are now also in your repository on PC.
+Any changes are now also in your repository on the PC.
 
 ----
 
