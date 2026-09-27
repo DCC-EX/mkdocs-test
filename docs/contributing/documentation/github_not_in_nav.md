@@ -112,34 +112,34 @@ Providing you followed the installation guide for VSCode on the page accurately,
 
 ==TODO== LOW - how to preview options
 
-In VSC, you can get a basic preview with the preview button. top right of the editing page.
+* In VSC, you can get a basic preview with the preview button (icon of two pages with a magnifying glass). Top right of the editing page.  This only shows basic formatting.
 
-UYou can push to your github repository and view the build (see below)
+* You can push to your github repository and view the build (see below).
 
-On MS Windows you can use one of the `.bat` files to get a full preview:
+* On MS Windows you can use one of the `.bat` files to get a full preview:
 
-* local_build_for_win11.bat
-* local_dirty_build_for_win11.bat
-* local_serve_dirty_for_win11.bat
-* local_serve_for_win11.bat
+    * local_build_for_win11.bat
+    * local_dirty_build_for_win11.bat
+    * local_serve_dirty_for_win11.bat
+    * local_serve_for_win11.bat
 
 ``local_serve_for_win11.bat`` is the simplest and most accurate but is slow.
 
 #### 6. Push your changes to your GitHub repository
 
-You will need to
+You will need to:
 
 * Commit your changes
 * Push your changes
 
 In **GitHub Desktop**:
 
-* Open/select the repository
-* note and review the changes that have been made
-* Add a ``Summary`` of your changes
-* Add a ``Description`` of your changes, if the summary is not sufficient
-* click `Commit to main`
-* click `Push origin`
+1. Open/select the repository
+2. note and review the changes that have been made
+3. Add a ``Summary`` of your changes
+4. Add a ``Description`` of your changes, if the summary is not sufficient
+5. click `Commit to main`
+6. click `Push origin`
 
 #### 7. Creating a *pull request* to send your changes for review
 
@@ -149,8 +149,8 @@ In **GitHub Desktop**:
 On the 'code' page you should see "This branch is *x* commit(s) ahead of DCC-EX/dcc-ex.github.io:sphinx."
 
 3. Click on the `x commit(s) ahead of` hyperlink
-5. Confirm or add to the title and documentation fields
-6. Click on the :guilabel:`Create pull request` button
+4. Confirm or add to the title and documentation fields
+5. Click on the :guilabel:`Create pull request` button
 
 This creates a pull request to be reviewed by the documentation team
 
@@ -162,8 +162,8 @@ To see the changes that other people have made to the original repository you ne
 
 #### a. Get any changes to your repository on GitHub website
 
-1\. Open the **GitHub website**  
-2\. open/select your repository ``https://github.com/<your_account_name>/mkdocs-test``
+1. Open the **GitHub website**  
+2. open/select your repository ``https://github.com/<your_account_name>/mkdocs-test``
 
 On the 'code' page you should see "This branch is *x* commit(s) behind DCC-EX/mkdocs-test."
 
@@ -171,11 +171,11 @@ If does not say you are 'behind' there is nothing to do.  Stop here.
 
 If you are behind...
 
-3\. Click on the `x commit(s) behind` hyperlink  
-5\. Add to the title and/or documentation fields.  This does not matter so entering just ``Catchup`` is fine.  
-6\. Click on the `Create pull request` button  
-7\. Click on the `Merge pull request` button  
-8\. Click on the `Confirm merge` button
+3. Click on the `x commit(s) behind` hyperlink  
+5. Add to the title and/or documentation fields.  This does not matter so entering just ``Catchup`` is fine.  
+6. Click on the `Create pull request` button  
+7. Click on the `Merge pull request` button  
+8. Click on the `Confirm merge` button
 
 Any changes are now also in your repository on the GitHub website.
 
@@ -195,10 +195,10 @@ Any changes are now also in your repository on PC.
 
 You can, optionally, setup *github pages* from you own repository on the GitHub website.  This allows you to make changes that *other people* can view before creating a pull request.
 
-1\. Fork the "mkdocs-test" repository, ensure the ``Copy the main branch only`` box is selected.  
-2\. In your forked repository settings, navigate to Settings -> Actions -> General and ensure ``Allow all actions and reusable workflows`` is selected.  
-3\. Set up VSCode for your forked repository as outlined above.  
-4\. Create a new, orphaned branch called ``gh-pages`` using the command line; **you cannot do this in VSCode or in your browser**. Open a command prompt (or bash shell) and change into the directory containing your cloned fork then run the following commands:
+1. Fork the "mkdocs-test" repository, ensure the ``Copy the main branch only`` box is selected.  
+2. In your forked repository settings, navigate to Settings -> Actions -> General and ensure ``Allow all actions and reusable workflows`` is selected.  
+3. Set up VSCode for your forked repository as outlined above.  
+4. Create a new, orphaned branch called ``gh-pages`` using the command line; **you cannot do this in VSCode or in your browser**. Open a command prompt (or bash shell) and change into the directory containing your cloned fork then run the following commands:
 
 ```
   git checkout --orphan gh-pages
@@ -210,11 +210,11 @@ You can, optionally, setup *github pages* from you own repository on the GitHub 
   git push origin gh-pages
 ```
 
-5\. At this point, review "Actions" in your forked repository and you should see the ``pages build and deployment`` job run, allowing you to preview the temporary "index.html" once complete.  
-6\. Review the Settings -> Pages tab and click the ``Visit site`` button to open your GitHub Pages generated content in a new browser tab, and you should see the basic "My DCC-EX Documentation Fork".  
-7\. If at this point in time the only action in the "Actions" tab is "pages-build-deployment", click the "..." beside the latest run and select ``Delete workflow run``.  
-8\. You should now see a big green button ``I understand my workflows, go ahead and enable them``. Click this button, which will show all the available actions as forked from the DCC-EX repository.  
-9\. Now, each time you commit and push to your fork's sphinx branch or merge a pull request to it, it should automatically build a new pages deployment and publish it.
+5. At this point, review "Actions" in your forked repository and you should see the ``pages build and deployment`` job run, allowing you to preview the temporary "index.html" once complete.  
+6. Review the Settings -> Pages tab and click the ``Visit site`` button to open your GitHub Pages generated content in a new browser tab, and you should see the basic "My DCC-EX Documentation Fork".  
+7. If at this point in time the only action in the "Actions" tab is "pages-build-deployment", click the "..." beside the latest run and select ``Delete workflow run``.  
+8. You should now see a big green button ``I understand my workflows, go ahead and enable them``. Click this button, which will show all the available actions as forked from the DCC-EX repository.  
+9. Now, each time you commit and push to your fork's sphinx branch or merge a pull request to it, it should automatically build a new pages deployment and publish it.
 
 Building the pages and deploying takes time, every time you push any changes, but you will eventually be able to see your own version of the website at ``https://<your_account_name>.github.io/makdocs-test/``.
 
