@@ -10,9 +10,9 @@ Refer to the [Markdown Guide](https://www.markdownguide.org/).
 
 ## How to Contribute
 
-For contributions from the general public, we recommend forking the [GitHub repository](https://github.com/DCC-EX/dcc-ex.github.io) and submitting pull requests for the **DCC-EX** Documenter team to review and merge.
+For contributions from the general public, we recommend forking the [GitHub repository](github_not_in_nav.md) and submitting pull requests for the **DCC-EX** Documenter team to review and merge.
 
-If you wish to contribute more fully and become a part of the **DCC-EX** Documenter team, reach out to us via [Discord](https://discord.gg/y2sB4Fp). To gain access to the [GitHub repository](https://github.com/DCC-EX/dcc-ex.github.io), one of the **DCC-EX** team administrators will need to add you to the "Web" team in GitHub.
+If you wish to contribute more fully and become a part of the **DCC-EX** Documenter team, reach out to us via [Discord](https://discord.gg/y2sB4Fp). To gain access to the [GitHub repository](https://github.com/DCC-EX/mkdocs-test), one of the **DCC-EX** team administrators will need to add you to the "Web" team in GitHub.
 
 ## MkDocs Links
 
