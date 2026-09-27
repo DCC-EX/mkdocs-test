@@ -195,27 +195,13 @@ Any changes are now also in your repository on PC.
 
 You can, optionally, setup *github pages* from you own repository on the GitHub website.  This allows you to make changes that *other people* can view before creating a pull request.
 
-1. Fork the "mkdocs-test" repository, ensure the ``Copy the main branch only`` box is selected.  
-2. In your forked repository settings, navigate to Settings -> Actions -> General and ensure ``Allow all actions and reusable workflows`` is selected.  
-3. Set up VSCode for your forked repository as outlined above.  
-4. Create a new, orphaned branch called ``gh-pages`` using the command line; **you cannot do this in VSCode or in your browser**. Open a command prompt (or bash shell) and change into the directory containing your cloned fork then run the following commands:
+1. In your forked repository settings, navigate to ``Settings -> Pages``
+2. Under ``Build and deployment, Source`` confirm ``Deploy from a branch`` is selected
+3. User ``Build and deployment, Branch`` confirm ``gh-pages`` and ``/root`` are selected.
+4. Click ``save``
 
-```
-  git checkout --orphan gh-pages
-  # Use Windows Explorer, macOS Finder, or whatever method you prefer and delete all files and folders within the directory.
-  # It must be completely empty aside from the hidden .git folder before proceeding.
-  echo "My DCC-EX Documentation Fork" > index.html
-  git add .
-  git commit -a -m "First commit"
-  git push origin gh-pages
-```
+Now, each time you commit and push to your fork or merge a pull request to it, it should automatically build a new pages deployment and publish it.
 
-5. At this point, review "Actions" in your forked repository and you should see the ``pages build and deployment`` job run, allowing you to preview the temporary "index.html" once complete.  
-6. Review the Settings -> Pages tab and click the ``Visit site`` button to open your GitHub Pages generated content in a new browser tab, and you should see the basic "My DCC-EX Documentation Fork".  
-7. If at this point in time the only action in the "Actions" tab is "pages-build-deployment", click the "..." beside the latest run and select ``Delete workflow run``.  
-8. You should now see a big green button ``I understand my workflows, go ahead and enable them``. Click this button, which will show all the available actions as forked from the DCC-EX repository.  
-9. Now, each time you commit and push to your fork's sphinx branch or merge a pull request to it, it should automatically build a new pages deployment and publish it.
-
-Building the pages and deploying takes time, every time you push any changes, but you will eventually be able to see your own version of the website at ``https://<your_account_name>.github.io/makdocs-test/``.
+Building the pages and deploying takes time, every time you push any changes, but you will eventually be able to see your own version of the website at ``https://<your_account_name>.github.io/mkdocs-test/``.
 
 You can see the state of the processing of your changes by looking at the ``Actions`` page.  It will also tell you there if there are any errors.
