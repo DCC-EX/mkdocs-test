@@ -9939,27 +9939,13 @@ b. Use <strong>GitHub Desktop</strong> to pull the changes to your repository on
 <h3 id="your-own-github-pages">Your own github pages<a class="headerlink" href="#your-own-github-pages" title="Permanent link">&para;</a></h3>
 <p>You can, optionally, setup <em>github pages</em> from you own repository on the GitHub website.  This allows you to make changes that <em>other people</em> can view before creating a pull request.</p>
 <ol>
-<li>Fork the "mkdocs-test" repository, ensure the <code>Copy the main branch only</code> box is selected.  </li>
-<li>In your forked repository settings, navigate to Settings -&gt; Actions -&gt; General and ensure <code>Allow all actions and reusable workflows</code> is selected.  </li>
-<li>Set up VSCode for your forked repository as outlined above.  </li>
-<li>Create a new, orphaned branch called <code>gh-pages</code> using the command line; <strong>you cannot do this in VSCode or in your browser</strong>. Open a command prompt (or bash shell) and change into the directory containing your cloned fork then run the following commands:</li>
+<li>In your forked repository settings, navigate to <code>Settings -&gt; Pages</code></li>
+<li>Under <code>Build and deployment, Source</code> confirm <code>Deploy from a branch</code> is selected</li>
+<li>User <code>Build and deployment, Branch</code> confirm <code>gh-pages</code> and <code>/root</code> are selected.</li>
+<li>Click <code>save</code></li>
 </ol>
-<div class="language-text highlight"><pre><span></span><code>  git checkout --orphan gh-pages
-  # Use Windows Explorer, macOS Finder, or whatever method you prefer and delete all files and folders within the directory.
-  # It must be completely empty aside from the hidden .git folder before proceeding.
-  echo &quot;My DCC-EX Documentation Fork&quot; &gt; index.html
-  git add .
-  git commit -a -m &quot;First commit&quot;
-  git push origin gh-pages
-</code></pre></div>
-<ol start="5">
-<li>At this point, review "Actions" in your forked repository and you should see the <code>pages build and deployment</code> job run, allowing you to preview the temporary "index.html" once complete.  </li>
-<li>Review the Settings -&gt; Pages tab and click the <code>Visit site</code> button to open your GitHub Pages generated content in a new browser tab, and you should see the basic "My DCC-EX Documentation Fork".  </li>
-<li>If at this point in time the only action in the "Actions" tab is "pages-build-deployment", click the "..." beside the latest run and select <code>Delete workflow run</code>.  </li>
-<li>You should now see a big green button <code>I understand my workflows, go ahead and enable them</code>. Click this button, which will show all the available actions as forked from the DCC-EX repository.  </li>
-<li>Now, each time you commit and push to your fork's sphinx branch or merge a pull request to it, it should automatically build a new pages deployment and publish it.</li>
-</ol>
-<p>Building the pages and deploying takes time, every time you push any changes, but you will eventually be able to see your own version of the website at <code>https://&lt;your_account_name&gt;.github.io/makdocs-test/</code>.</p>
+<p>Now, each time you commit and push to your fork or merge a pull request to it, it should automatically build a new pages deployment and publish it.</p>
+<p>Building the pages and deploying takes time, every time you push any changes, but you will eventually be able to see your own version of the website at <code>https://&lt;your_account_name&gt;.github.io/mkdocs-test/</code>.</p>
 <p>You can see the state of the processing of your changes by looking at the <code>Actions</code> page.  It will also tell you there if there are any errors.</p>
 
 
@@ -9981,7 +9967,7 @@ b. Use <strong>GitHub Desktop</strong> to pull the changes to your repository on
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="September 27, 2026 23:05:00 UTC">September 27, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="September 27, 2026 23:16:43 UTC">September 27, 2026</span>
   </span>
 
     
