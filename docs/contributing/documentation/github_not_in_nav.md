@@ -44,6 +44,8 @@ You will periodically need to update your repository:
 a. Create a pull request on the **GitHub website** to get any changes from the original repository to your repository on GitHub website
 b. Use **GitHub Desktop** to pull the changes to your repository on your PC
 
+----
+
 ### One time only
 
 #### 1. Cloning the repository on GitHub website
@@ -68,6 +70,8 @@ A copy of the repository should now be on the PC.
 
 You can open it in VSCode by selecting ``Repository -> Open in Visual Studio Code``
 
+----
+
 ### Ongoing
 
 #### 3. Open the repository in VSCode
@@ -82,26 +86,25 @@ You can subsequently open the repository in VSCode from **GitHub Desktop**.
 
 You can use the navigation tree on the left to find the file you want to change. Clicking on a file will open it in the edit window.
 
-!!! note ""
 
-   For this section, we are assuming that you are using VSCode with Git installed, allowing the built-in functionality for Git management in VSCode to work.
+For this section, we are assuming that you are using VSCode with Git installed, allowing the built-in functionality for Git management in VSCode to work.
 
-   To clone the documentation repository, and ensure you are on the correct branch, follow these steps:
+To clone the documentation repository, and ensure you are on the correct branch, follow these steps:
 
-   1. In VSCode, either click on the Source Control icon in the left pane, or press <Ctrl> + <Shift> + "g" + "g" (Yes, press "g" twice).
-   2. Click the "Clone Repository" button.
-   3. Enter the documentation repository URL ``https://github.com/DCC-EX/mkdocs-test`` then press <Enter>.
-   4. Select the appropriate folder on your hard drive to clone it to, then click "Select Repository Location".
-   5. The clone will take a minute or two to complete depending on the speed of your computer and internet connection.
-   6. Once complete, click "Open".
-   7. At the bottom of the window, ensure that the branch "sphinx" is listed beside the Source Control icon.
-   8. When you're ready to start editing, click the Source Control or press <Ctrl> + <Shift> +"g" + "g" again.
-   9. Click the three dots "..." beside "SOURCE CONTROL" in bold text and select "Checkout to".
-   10. Enter a new name for your branch, then click "Create new branch".
+1. In VSCode, either click on the Source Control icon in the left pane, or press <Ctrl> + <Shift> + "g" + "g" (Yes, press "g" twice).
+2. Click the "Clone Repository" button.
+3. Enter the documentation repository URL ``https://github.com/DCC-EX/mkdocs-test`` then press <Enter>.
+4. Select the appropriate folder on your hard drive to clone it to, then click "Select Repository Location".
+5. The clone will take a minute or two to complete depending on the speed of your computer and internet connection.
+6. Once complete, click "Open".
+7. At the bottom of the window, ensure that the branch "sphinx" is listed beside the Source Control icon.
+8. When you're ready to start editing, click the Source Control or press <Ctrl> + <Shift> +"g" + "g" again.
+9. Click the three dots "..." beside "SOURCE CONTROL" in bold text and select "Checkout to".
+10. Enter a new name for your branch, then click "Create new branch".
 
-   At this point, any editing you do will be on a new branch linked to the parent "sphinx" branch.
+At this point, any editing you do will be on a new branch linked to the parent "sphinx" branch.
 
-   While editing, be sure to save often, stage and commit your changes, and publish them. This way, should anything go wrong with your computer, your work will be saved in GitHub rather than be lost.
+While editing, be sure to save often, stage and commit your changes, and publish them. This way, should anything go wrong with your computer, your work will be saved in GitHub rather than be lost.
 
 #### 5. Live previews
 
@@ -109,11 +112,11 @@ Providing you followed the installation guide for VSCode on the page accurately,
 
 ==TODO== LOW - how to preview options
 
-1. in VSC, you can get a basic preview with the preview button. top right of the editing page.
+In VSC, you can get a basic preview with the preview button. top right of the editing page.
 
-2. Push to your github repository
+UYou can push to your github repository and view the build (see below)
 
-3. On MS Windows you can use one of the bat files to get a full preview.
+On MS Windows you can use one of the `.bat` files to get a full preview:
 
 * local_build_for_win11.bat
 * local_dirty_build_for_win11.bat
@@ -151,14 +154,16 @@ On the 'code' page you should see "This branch is *x* commit(s) ahead of DCC-EX/
 
 This creates a pull request to be reviewed by the documentation team
 
+----
+
 ### Periodic
 
 To see the changes that other people have made to the original repository you need to periodically refresh your repository on both GitHub website and locally.
 
 #### a. Get any changes to your repository on GitHub website
 
-1. Open the **GitHub website**
-2. open/select your repository ``https://github.com/<your_account_name>/mkdocs-test``
+1\. Open the **GitHub website**  
+2\. open/select your repository ``https://github.com/<your_account_name>/mkdocs-test``
 
 On the 'code' page you should see "This branch is *x* commit(s) behind DCC-EX/mkdocs-test."
 
@@ -166,11 +171,11 @@ If does not say you are 'behind' there is nothing to do.  Stop here.
 
 If you are behind...
 
-3. Click on the `x commit(s) behind` hyperlink
-5. Add to the title and/or documentation fields.  This does not matter so entering just ``Catchup`` is fine.
-6. Click on the `Create pull request` button
-7. Click on the `Merge pull request` button
-7. Click on the `Confirm merge` button
+3\. Click on the `x commit(s) behind` hyperlink  
+5\. Add to the title and/or documentation fields.  This does not matter so entering just ``Catchup`` is fine.  
+6\. Click on the `Create pull request` button  
+7\. Click on the `Merge pull request` button  
+8\. Click on the `Confirm merge` button
 
 Any changes are now also in your repository on the GitHub website.
 
@@ -182,6 +187,7 @@ In **GitHub Desktop**:
 
 Any changes are now also in your repository on PC.
 
+----
 
 ## Additional
 
@@ -189,10 +195,10 @@ Any changes are now also in your repository on PC.
 
 You can, optionally, setup *github pages* from you own repository on the GitHub website.  This allows you to make changes that *other people* can view before creating a pull request.
 
-1. Fork the "dcc-ex.github.io" repository, ensure the ``Copy the sphinx main only`` box is selected.
-2. In your forked repository settings, navigate to Settings -> Actions -> General and ensure ``Allow all actions and reusable workflows`` is selected.
-3. Set up VSCode for your forked repository as outlined above.
-4. Create a new, orphaned branch called ``gh-pages`` using the command line; **you cannot do this in VSCode or in your browser**. Open a command prompt (or bash shell) and change into the directory containing your cloned fork then run the following commands:
+1\. Fork the "mkdocs-test" repository, ensure the ``Copy the main branch only`` box is selected.  
+2\. In your forked repository settings, navigate to Settings -> Actions -> General and ensure ``Allow all actions and reusable workflows`` is selected.  
+3\. Set up VSCode for your forked repository as outlined above.  
+4\. Create a new, orphaned branch called ``gh-pages`` using the command line; **you cannot do this in VSCode or in your browser**. Open a command prompt (or bash shell) and change into the directory containing your cloned fork then run the following commands:
 
 ```
   git checkout --orphan gh-pages
@@ -204,11 +210,11 @@ You can, optionally, setup *github pages* from you own repository on the GitHub 
   git push origin gh-pages
 ```
 
-5. At this point, review "Actions" in your forked repository and you should see the ``pages build and deployment`` job run, allowing you to preview the temporary "index.html" once complete.
-6. Review the Settings -> Pages tab and click the ``Visit site`` button to open your GitHub Pages generated content in a new browser tab, and you should see the basic "My DCC-EX Documentation Fork".
-7. If at this point in time the only action in the "Actions" tab is "pages-build-deployment", click the "..." beside the latest run and select ``Delete workflow run``.
-8. You should now see a big green button ``I understand my workflows, go ahead and enable them``. Click this button, which will show all the available actions as forked from the DCC-EX repository.
-9. Now, each time you commit and push to your fork's sphinx branch or merge a pull request to it, it should automatically build a new pages deployment and publish it.
+5\. At this point, review "Actions" in your forked repository and you should see the ``pages build and deployment`` job run, allowing you to preview the temporary "index.html" once complete.  
+6\. Review the Settings -> Pages tab and click the ``Visit site`` button to open your GitHub Pages generated content in a new browser tab, and you should see the basic "My DCC-EX Documentation Fork".  
+7\. If at this point in time the only action in the "Actions" tab is "pages-build-deployment", click the "..." beside the latest run and select ``Delete workflow run``.  
+8\. You should now see a big green button ``I understand my workflows, go ahead and enable them``. Click this button, which will show all the available actions as forked from the DCC-EX repository.  
+9\. Now, each time you commit and push to your fork's sphinx branch or merge a pull request to it, it should automatically build a new pages deployment and publish it.
 
 Building the pages and deploying takes time, every time you push any changes, but you will eventually be able to see your own version of the website at ``https://<your_account_name>.github.io/makdocs-test/``.
 
