@@ -2,7 +2,7 @@
 
 In order for GitHub pages to function correctly and automatically publish updated content, the content must be located in a specific repository named after the GitHub organisation, and therefore our website repository is [mk-docs-test](https://github.com/DCC-EX/mkdocs-test).
 
-In addition to this, rather than using the main or master branch, the default branch is called "sphinx", so any branches created for contributing to documentation must use this as the parent, and all pull requests must be submitted against this same branch.
+In addition to this, rather than using the main or master branch, the default branch is called "main", so any branches created for contributing to documentation must use this as the parent, and all pull requests must be submitted against this same branch.
 
 ## Procedure
 
