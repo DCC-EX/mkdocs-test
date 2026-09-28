@@ -41,7 +41,7 @@ There are two VSCode plugins that are highly recommended also:
 
 ## Getting Started
 
-Once you have installed VSCode and Python, you need to clone the [GitHub repository](https://github.com/DCC-EX/dcc-ex.github.io), set up a virtual environment, and install the MkDocs requirements. See the [GitHub Repository Instructions page](github_not_in_nav.md) for details on how to work with the GitHub repositories.
+Once you have installed VSCode and Python, you need to clone the [GitHub repository](https://github.com/DCC-EX/dcc-ex.github.io), set up a virtual environment, and install the MkDocs requirements. See the [GitHub Repository Instructions page](github.md) for details on how to work with the GitHub repositories.
 
 We recommend using [GitHub Desktop](https://github.com/apps/desktop), the built-in Git functionality of VSCode to clone the repository, command line Git, whichever you prefer. There is plenty of information generally available on that so we won't cover it here, and instead will focus on the specifics required to ready to contribute to ProperDocs content.
 
