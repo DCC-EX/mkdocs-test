@@ -2,9 +2,9 @@
 
 This page outlines what you need in order to contribute to the documentation, along with the various markdown attributes and so forth you can use.
 
-The documentation is hosted using GitHub Pages and is written in Markdown format, originally using **MkDocs**, then later **ProperDocs** to publish the content. the syntax for **MkDocs** and **ProperDocs** is identical, but **MKDocs** is no longer supported. Many of the MKDocs extensions are still used.
+The documentation is hosted using GitHub Pages and is written in Markdown format, originally using **MkDocs**, then later **ProperDocs** to publish the content. the syntax for **MkDocs** and **ProperDocs** is identical, but **MKDocs** is no longer supported. Many of the MKDocs extensions are still used, so references to 'MKDocs' is still valid in some cases.  Unfortunately the repository itself is still called 'mkdocs-test' but this will be changed when it is moved to production.
 
-We use the MkDocs Material theme to give us the framework for the look and feel of the website, along with a number of other useful plugins and extensions to enhance the content.
+We use the **MkDocs Material theme** to give us the framework for the look and feel of the website, along with a number of other useful plugins and extensions to enhance the content.
 
 **Important! Once up and running with the information on this page, please ensure you are familiar with general markdown syntax.**
 
@@ -12,7 +12,7 @@ Refer to the [Markdown Guide](https://www.markdownguide.org/).
 
 ## How to Contribute
 
-For contributions from the general public, we recommend forking the [GitHub repository](github_not_in_nav.md) and submitting pull requests for the **DCC-EX** Documenter team to review and merge.
+For contributions from the general public, we recommend forking the [GitHub repository](github.md) and submitting pull requests for the **DCC-EX** Documenter team to review and merge.
 
 If you wish to contribute more fully and become a part of the **DCC-EX** Documenter team, reach out to us via [Discord](https://discord.gg/y2sB4Fp). To gain access to the [GitHub repository](https://github.com/DCC-EX/mkdocs-test), one of the **DCC-EX** team administrators will need to add you to the "Web" team in GitHub.
 
@@ -36,20 +36,20 @@ This is the list of software you need to successfully contribute to the document
 
 There are two VSCode plugins that are highly recommended also:
 
-- Markdown Preview Mermaid Support by Matt Bierner - enables previewing Mermaid diagrams in VSCode
-- markdownlint by David Anson - helps keep consistent, good formatting in Markdown files (like flake8 for Python)
+- **Markdown Preview Mermaid Support** by Matt Bierner - enables previewing Mermaid diagrams in VSCode
+- **markdownlint** by David Anson - helps keep consistent, good formatting in Markdown files (like flake8 for Python)
 
 ## Getting Started
 
-Once you have installed VSCode and Python, you need to clone the [GitHub repository](https://github.com/DCC-EX/dcc-ex.github.io), set up a virtual environment, and install the MkDocs requirements.
+Once you have installed VSCode and Python, you need to clone the [GitHub repository](https://github.com/DCC-EX/dcc-ex.github.io), set up a virtual environment, and install the MkDocs requirements. See the [GitHub Repository Instructions page](github_not_in_nav.md) for details on how to work with the GitHub repositories.
 
-We recommend using the built-in Git functionality of VSCode to clone the repository, or you can use [GitHub Desktop](https://github.com/apps/desktop) or command line Git, whichever you prefer. There is plenty of information generally available on that so we won't cover it here, and instead will focus on the specifics required to ready to contribute to ProperDocs content.
+We recommend using [GitHub Desktop](https://github.com/apps/desktop), the built-in Git functionality of VSCode to clone the repository, command line Git, whichever you prefer. There is plenty of information generally available on that so we won't cover it here, and instead will focus on the specifics required to ready to contribute to ProperDocs content.
 
-Follow the appropriate section below to setup ProperDocs in Python for your operating system:
+Follow the appropriate section below to setup **ProperDocs** in Python for your operating system:
 
 ### Virtual Environments
 
-These instructions are for setting up virtual environments to run the build/server process.  While this is safest approach, it is a bit slower than installing all the required files locally
+These instructions are for setting up virtual environments to run the build/server process.  While this is safest approach, it is a bit slower than installing all the required files [locally](#local-install).
 
 #### Setup on macOS
 
@@ -80,7 +80,7 @@ pip install -r requirements.txt
 
 ### local install
 
-Local installs are less safe, in that if you have other versions of the required files install, the build may fail.  But this approach is generally quicker
+Local installs are less safe, in that if you have other versions of the required files install the build/serve may fail.  But this approach is generally quicker.
 
 ```console
 cd mkdocs-test
@@ -105,7 +105,9 @@ Building locally is equally as simple:
 properdocs build --strict
 ```
 
-Note: generally you will not need to 'build' locally.
+!!! note "Not normally needed"
+
+    Generally you will not need to 'build' locally.
 
 Proper also has a feature to deploy to GitHub pages without using a workflow:
 
@@ -113,4 +115,6 @@ Proper also has a feature to deploy to GitHub pages without using a workflow:
 properdocs gh-deploy
 ```
 
-Note: generally you will not need to 'deploy' locally.
+!!! note "Not normally needed"
+
+    Generally you will not need to 'deploy' locally.

@@ -1,5 +1,6 @@
 nav:
   - Contributing to Documentation: index.md
+  - Working with GitHub: github.md
   - Documentation Standards: standards.md
   - Formatting Guide: formatting-guide.md
   - Understanding Links: understanding-links.md
