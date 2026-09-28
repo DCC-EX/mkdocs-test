@@ -4,7 +4,7 @@ search:
 
 redirect: ../products/ex-commandstation/exrail/command-list.html
 ---
-<!-- The redirect directive on this page does not work.  It needs to be set in mkdocs.yml -->
+<!-- The redirect directive on this page does not work.  It needs to be set in properdocs.yml -->
 
 # EXRAIL Command List
 

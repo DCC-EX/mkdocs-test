@@ -101,7 +101,7 @@ This is a list of to do items that will allow us to release this new documentati
 
 ## Team Info
 
-- [x] Ensure MkDocs contributor guide covers all customisations
+- [x] Ensure ProperDocs contributor guide covers all customisations
 
     - [x] How to use our logos
     - [x] Grid cards

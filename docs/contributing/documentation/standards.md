@@ -15,7 +15,7 @@ So:
 - Brevity is good, keep topics to the concise point (eg. Beginners don't care about DCC waveforms, they care about running a train).
 - Avoid jargon where possible.
 - If something does need elaboration, link to a relevant reference.
-- Don't document things generally available on the Internet, eg. we don't document MkDocs or the Material theme as there is good documentation available, we only document the context of our use cases.
+- Don't document things generally available on the Internet, eg. we don't document ProperDocs or the Material theme as there is good documentation available, we only document the context of our use cases.
 - It is extremely important *for the search results to work correctly* to:
     - Ensure sure the page title is the first item on the page (after any tags).  If it is not the file name will appear in the search results, not the title.
     - Ensure that the block of text between the page title and the next heading (of any sort) is relatively short. Ideally no more than a few paragraphs. This is what what will appear in the search results.
@@ -68,7 +68,7 @@ So:
 
 **DO NOT CREATE DUPLICATE CONTENT** as this increases the maintenance burden significantly but, more importantly, makes it difficult for users when content appears slightly differently in two different places or even contradicts itself. When needing to repeat information in more than one place.
 
-Either link to the other page, or take advantage of the [MkDocs Snippets](/contributing/documentation/mkdocs-features.md#snippets) feature. This allows you to include the same markdown content in multiple places.
+Either link to the other page, or take advantage of the [ProperDocs Snippets](/contributing/documentation/mkdocs-features.md#snippets) feature. This allows you to include the same markdown content in multiple places.
 
 ## Directory Naming, File Naming, and Titles
 
@@ -80,13 +80,13 @@ The primary/landing page in a sub-section should *generally* be an overview of w
 - Page ordering is determined by the Awesome Nav ".nav.yml" file, see [Directory Structure](/contributing/documentation/standards.md#directory-structure-and-navigation).
 - The page title is determined by the top level heading, see [Headings](/contributing/documentation/formatting-guide.md#headings).
 
-## Address all MkDocs Warnings and Errors
+## Address all ProperDocs Warnings and Errors
 
-When running locally with ``mkdocs serve``, ensure any INFO, WARNING, or ERROR level messages are dealt with prior to submitting pull requests or deploying a new version.
+When running locally with ``properdocs serve``, ensure any INFO, WARNING, or ERROR level messages are dealt with prior to submitting pull requests or deploying a new version.
 
 !!! warning
 
-    ~~~When we release the new MkDocs based documentation, the deployment GitHub workflow will enforce ``strict`` mode, meaning any issues will generate a workflow error, preventing updates being deployed.~~~
+    ~~~When we release the new ProperDocs based documentation, the deployment GitHub workflow will enforce ``strict`` mode, meaning any issues will generate a workflow error, preventing updates being deployed.~~~
     At the moment the ``strict`` more is turned off, but will be turned back on later.
 
 ## Directory Structure and Navigation
@@ -120,11 +120,11 @@ nav:
   - Formatting Guide: formatting-guide.md
   - Understanding Links: understanding-links.md
   - Using Our Logos: logos.md
-  - Working With MkDocs: mkdocs-features.md
+  - Working With ProperDocs: mkdocs-features.md
   - Mermaid Diagrams: mermaid-diagrams.md
 ```
 
-**Note on relative paths in .nav.yml**: At the time of writing, there seems to be an undocumented bug related to MkDocs and/or the MkDocs Awesome Nav plugin that means you cannot use upwards level relative links within the ".nav.yml" file.
+**Note on relative paths in .nav.yml**: At the time of writing, there seems to be an undocumented bug related to ProperDocs and/or the MkDocs Awesome Nav plugin that means you cannot use upwards level relative links within the ".nav.yml" file.
 
 So, this will not work:
 

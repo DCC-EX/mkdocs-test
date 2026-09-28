@@ -320,7 +320,7 @@ li:not(.md-nav__item, .md-tabs__item) a {
         - [Formatting Guide](../contributing/documentation/formatting-guide.md)
         - [Understanding Links](../contributing/documentation/understanding-links.md)
         - [Using Our Logos](../contributing/documentation/logos.md)
-        - [Working With MkDocs](../contributing/documentation/mkdocs-features.md)
+        - [Working With ProperDocs](../contributing/documentation/mkdocs-features.md)
         - [Mermaid Diagrams](../contributing/documentation/mermaid-diagrams.md)
     - [Release Checklist](../contributing/release-checklist.md)
     - [User Personas and Journeys - Front Page Tiles <small>(User Journeys)</small>](../contributing/user-journeys.md)
