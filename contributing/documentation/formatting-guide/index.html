@@ -9354,6 +9354,8 @@
       
         
       
+        
+      
     
     
     
@@ -9499,6 +9501,15 @@
   <a href="#document-links" class="md-nav__link">
     <span class="md-ellipsis">
       Document Links
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#in-page-links" class="md-nav__link">
+    <span class="md-ellipsis">
+      In Page Links
     </span>
   </a>
   
@@ -9661,12 +9672,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../mkdocs-features/" class="md-nav__link">
+      <a href="../mermaid-diagrams/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    Working With ProperDocs
+    Mermaid Diagrams
     
   </span>
   
@@ -9684,12 +9695,35 @@
   
   
     <li class="md-nav__item">
-      <a href="../mermaid-diagrams/" class="md-nav__link">
+      <a href="../github/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    Mermaid Diagrams
+    Working with GitHub
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mkdocs-features/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Working With ProperDocs
     
   </span>
   
@@ -9839,6 +9873,15 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#in-page-links" class="md-nav__link">
+    <span class="md-ellipsis">
+      In Page Links
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#external-links" class="md-nav__link">
     <span class="md-ellipsis">
       External Links
@@ -9974,7 +10017,27 @@
 <div class="language-markdown highlight"><pre><span></span><code>[<span class="nt">Link to How to Contribute Section</span>](<span class="na">/contributing/documentation/index.md#how-to-contribute</span>)
 </code></pre></div>
 <p>Results in: <a href="../#how-to-contribute">Link to How to Contribute Section</a></p>
-<p>Note: when typing a link in VSCode, the intellisense dropdown will help you complete the link by following the path from the project directory. This creates links that start with "/docs" (for example "/docs/contributing/1-contribute-index.md" ). These links will not work unless you manually delete the /docs prefix.  Its a pain but we have raised a PR for VScode and ProperDocs on this.</p>
+<div class="admonition note">
+<p class="admonition-title">Relative Links</p>
+<p>When typing a link in VSCode, the intellisense dropdown will help you complete the link by following the path from the current folder.</p>
+<p>If you enter <code>[your title](.</code> as soon as you type <code>.</code> VSC will show you a list of folder and .md files in the current folder to select from. If you type <code>..</code> or <code>../</code> or <code>../..</code> etc. you can navigate up and down the folder structure to find the document you need.  This embeds the relative link to the document.</p>
+<p>The technique above ensures that the link is valid.</p>
+</div>
+<h3 id="in-page-links">In Page Links<a class="headerlink" href="#in-page-links" title="Permanent link">&para;</a></h3>
+<div class="language-markdown highlight"><pre><span></span><code>[<span class="nt">Link to Search heading on the same page</span>](<span class="na">#search-links</span>)
+</code></pre></div>
+<p>Results in <a href="#search-links">Link to Search heading on the same page</a></p>
+<div class="language-markdown highlight"><pre><span></span><code>[<span class="nt">Link to heading on a differnet page</span>](<span class="na">github.md#5-live-previews</span>)
+</code></pre></div>
+<p>Results in: <a href="../github/#5-live-previews">Link to heading on a differnet page</a></p>
+<div class="admonition note">
+<p class="admonition-title">Relative Links</p>
+<p>When typing a link in VSCode, the intellisense dropdown will help you complete the link by following the path from the current folder.</p>
+<p>If you enter <code>[your title](#</code> as soon as you type <code>#</code> VSC will show you a list of headings in the current document to choose from. </p>
+<p>You can use the technique above to locate a differnt documnet, then press<code>#</code> to show a list of headings in that document to choose from. </p>
+<p>The technique above ensures that the link is valid.</p>
+</div>
+<p><mark>TODO</mark>  Note there is a bug in this process if the heading contains <code>-</code> (space dash space).</p>
 <h3 id="external-links">External Links<a class="headerlink" href="#external-links" title="Permanent link">&para;</a></h3>
 <div class="language-markdown highlight"><pre><span></span><code>[<span class="nt">Link to Google Search</span>](<span class="na">https://www.google.com</span>)
 </code></pre></div>
@@ -10164,7 +10227,7 @@ This is a new term being added to the glossary.
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="September 28, 2026 21:22:49 UTC">September 28, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="September 28, 2026 22:19:04 UTC">September 28, 2026</span>
   </span>
 
     
