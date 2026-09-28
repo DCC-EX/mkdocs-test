@@ -177,7 +177,7 @@ As mentioned previously, we recommend using **EX-CommandStation** version 5.4.0 
 
 Note that the previous **EXRAIL** commands are still valid and will work, however all examples on this page have been updated to reflect the new commands.
 
-For full details on using the new commands available, refer to ==TODO== :ref:`reference/software/command-summary-consolidated:turntables/traversers (configuring the ex-commandstation)` and :ref:`reference/software/command-summary-consolidated:turntables/traversers`, and also the **EXRAIL** commands in :ref:`exrail/exrail-command-reference:turntable/traverser objects - definition and control` and :ref:`exrail/exrail-command-reference:turntable features`.
+For full details on using the EX-Turntable commands available, refer to ==TODO== [DCC-EX Serial/Native Commands](/reference/serial-commands/serial-command-list.md) and [Turntable Control](reference/serial-commands/serial-commands.md#Turntable-Control), and also the **EXRAIL** commands in [EXRAIL Command List](products/ex-commandstation/exrail/command-list.md).
 
 For simplicity, the examples below use the same step counts as calculated in the tuning section above.
 
