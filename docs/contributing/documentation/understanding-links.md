@@ -8,18 +8,18 @@ To resolve this, you have to use RELATIVE hrefs, in which the link is relative t
 
 So.. RELATIVE HTML links are the only reliable way to work, otherwise your website is borked if you install it in for example `http:://dcc-ex.com/newsite/`
 
-## What the mkdocs author sees
+## What the ProperDocs author sees
 
-In mkdocs,  the markdown to html generator  passes through RELATIVE links unchanged, this means that you can easily refer to images in the same directory as the current page by just giving the name, or get to any other directory with the appropriate number of ../ to go up the tree.  That's great until you move the current page to another directory so the relative link is no longer going to find the image or page you want.
+In ProperDocs,  the markdown to html generator  passes through RELATIVE links unchanged, this means that you can easily refer to images in the same directory as the current page by just giving the name, or get to any other directory with the appropriate number of ../ to go up the tree.  That's great until you move the current page to another directory so the relative link is no longer going to find the image or page you want.
 
-MkDocs has a solution. When you code what appears to be an absolute link like `/_static/images/spaff.png` then the HTM generated will look like `href="../../_static/images/spaff.png"`  with the appropriate number of `../` to walk back up the tree from the current file to the docs directory. So basically you code what looks like an ABSOLUTE link, but the html is generated with a relative link. Hooray!
+ProperDocs has a solution. When you code what appears to be an absolute link like `/_static/images/spaff.png` then the HTM generated will look like `href="../../_static/images/spaff.png"`  with the appropriate number of `../` to walk back up the tree from the current file to the docs directory. So basically you code what looks like an ABSOLUTE link, but the html is generated with a relative link. Hooray!
 
 BUT there is one annoying little quirk...
 
-The intellisense when typing the start of a link like `[look here](/`   gives you a dropdown starting at docs  so you get `/docs/_static/images/spaff.jpg`   which wont get converted so it gives `href="/docs/_static/images/spaff.jpg"`  which isn't found because the `/docs/` directory level isnt copied to the website.
+The intellisense when typing the start of a link like `[look here](/`   gives you a dropdown starting at docs so you get `/docs/_static/images/spaff.jpg`   which won't get converted so it gives `href="/docs/_static/images/spaff.jpg"`  which isn't found because the `/docs/` directory level isn't copied to the website.
 
-Pending a VSCode or mkDocs fix (both applied for) the only solution is to manually remove the `/docs` prefix from the link created by intellisense.
+Pending a VSCode or ProperDocs fix (both applied for) the only solution is to manually remove the `/docs` prefix from the link created by intellisense.
 
 ## The search link
 
-The search link like `?turnout` is passed through unchanged by mkDocs but is intercepted in the browser by our own  [JavaSCript code](/_static/scripts/search-helper.js)
+The search link like `?turnout` is passed through unchanged by ProperDocs but is intercepted in the browser by our own  [JavaSCript code](/_static/scripts/search-helper.js)

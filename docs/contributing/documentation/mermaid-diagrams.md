@@ -1,6 +1,6 @@
 # Mermaid Diagrams
 
-Mermaid diagrams are a great way of codifying diagrams and charts within Markdown documents, and we have enabled a plugin to support these within MkDocs.
+Mermaid diagrams are a great way of codifying diagrams and charts within Markdown documents, and we have enabled a plugin to support these within ProperDocs.
 
 The full capability of Mermaid is outlined on the [Mermaid website](https://mermaid.js.org/).
 

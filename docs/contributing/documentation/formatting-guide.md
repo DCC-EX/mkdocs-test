@@ -36,7 +36,7 @@ Results in: [Link to Contributing to Documentation Page](/contributing/documenta
 
 Results in: [Link to How to Contribute Section](/contributing/documentation/index.md#how-to-contribute)
 
-Note: when typing a link in VSCode, the intellisense dropdown will help you complete the link by following the path from the project directory. This creates links that start with "/docs" (for example "/docs/contributing/1-contribute-index.md" ). These links will not work unless you manually delete the /docs prefix.  Its a pain but we have raised a PR for VScode and mkDocs on this.
+Note: when typing a link in VSCode, the intellisense dropdown will help you complete the link by following the path from the project directory. This creates links that start with "/docs" (for example "/docs/contributing/1-contribute-index.md" ). These links will not work unless you manually delete the /docs prefix.  Its a pain but we have raised a PR for VScode and ProperDocs on this.
 
 ### External Links
 
@@ -48,7 +48,7 @@ Results in: [Link to Google Search](https://www.google.com)
 
 ## Search Links
 
-We have added a link feature to directly invoke the MkDocs powerful search dialog. This is particularly useful when you wish to refer to information that may be spread over several places and possibly not yet written.
+We have added a link feature to directly invoke the ProperDocs powerful search dialog. This is particularly useful when you wish to refer to information that may be spread over several places and possibly not yet written.
 
 ```markdown
  [Find out about PCA9685 servo controllers](?PCA9685)

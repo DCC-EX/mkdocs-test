@@ -33,7 +33,7 @@ Authors are defined in the ".authors.yml" file, if you don't exist in there, set
 
 ## categories
 
-Valid categories are defined in "mkdocs.yml", and this is the current list:
+Valid categories are defined in "properdocs.yml", and this is the current list:
 
 - General DCC-EX News
 - EX-CommandStation

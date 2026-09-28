@@ -4,7 +4,7 @@ search:
 
 redirect: ../products/ex-commandstation/exrail/exrail-objects-introduction.html#adding-turnoutspoints
 ---
-<!-- The redirect directive on this page does not work.  It needs to be set in mkdocs.yml -->
+<!-- The redirect directive on this page does not work.  It needs to be set in properdocs.yml -->
 
 # Adding a Turnouts/Points
 
