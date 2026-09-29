@@ -177,39 +177,24 @@ To validate the hall effect sensor is connected correctly, put a magnet in close
 
 !!! note "Tip"
 
-    Please read through this entire section prior to loading any software onto your Arduino. It is also recommended that the turntable is able to trigger the homing sensor correctly to ensure the automatic calibration works correctly at first startup.
+    Please read through this entire section prior to loading any software. It is also recommended that the turntable is able to trigger the homing sensor correctly to ensure the automatic calibration works correctly at first startup.
 
 #### Installing with EX-Installer
 
 --8<-- "snippets/ex-turntable/ex-installer.md"
 
 #### Installing with the Arduino IDE
+!!! warning "Using Arduino IDE is discouraged"
 
-Further to this, note that you will need to end up with two separate folders; one containing the **EX-CommandStation** software as per  ==TODO== :doc:`/ex-commandstation/advanced-setup/installation-options/arduino-ide`, and an additional folder containing the **EX-Turntable** software. The **EX-Turntable** software is not a component of **EX-CommandStation** or vice versa, and as such they should not exist in the same folder.
+    Use of the Arduino IDE is discouraged and not covered in this documentation.  It is recommended to use **EX-Installer** to install the **EX-Turntable** software.  See [Alternatives to the EX-Installer](/installer/installer.md#alternatives-to-the-ex-installer).
 
-We recommend using **EX-Installer** to install **EX-Turntable** as outlined above, however you can use the Arduino IDE to load the software onto the Arduino manually.
+!!! note "Tip"
 
-As noted in the tip above, you should have a **EX-Turntable** folder alongside the **EX-CommandStation** folder, and neither should reside in the other (the **EX-Turntable** software is required in the next step):
+    The **EX-Turntable** software is not a component of **EX-CommandStation** or vice versa, and as such they should not exist in the same folder.
+
+As noted in the tip above, you should have a **EX-Turntable** folder alongside the **EX-CommandStation** folder, and neither folder should reside in the other (the **EX-Turntable** software is required in the next step):
 
 ![Two folders](../../_static/images/ex-turntable/two-folders.png){ width=400px }
-
-The process here is the same as installing CommandStation-EX via the Arduino IDE which you can find on the ==TODO== :doc:`/ex-commandstation/advanced-setup/installation-options/arduino-ide` page.
-
-When you get to the point of opening the sketch, ensure you open the EX-Turntable sketch:
-
-![Open EX-Turntable sketch](../../_static/images/ex-turntable/open-turntable-ex-sketch.png){ width=400px }
-
-Use Windows Explorer to either copy or rename "config.example.h" to "config.h".
-
-If you need to make adjustments to config.h, refer to the [configure](configure.md) page.
-
-Set the board type to "Nano" and set the correct Processor type (typically ATMega328P):
-
-![Select Nano](../../_static/images/ex-turntable/select-nano.png){ width=400px }
-
-After any adjustments are made and "config.h" has been created, the software can be uploaded to the Arduino with the upload button:
-
-![Upload](../../_static/images/arduino-ide/upload_arrow.jpg){ width=400px }
 
 Once the software is loaded successfully on to **EX-Turntable**, the stepper motor should automatically start rotating in an attempt to find its "home" position, which will be activated when the magnet at one end of the turntable comes in close proximity to the hall effect sensor.
 
@@ -324,7 +309,7 @@ This requires creating or editing the myAutomation.h file in the **EX-CommandSta
 
 In the device setup above, there are three parameters provided, but only two may need to change in your environment if you have other devices that may conflict with these two settings:
 
-- VPIN=600 - This is the default virtual pin (Vpin) ID that is used to send **EX-Turntable** commands to. Vpin IDs need to be unique, so if this ID is used elsewhere, change as necessary (refer ==TODO== :ref:`reference/developers/hal:overview`).
+- VPIN=600 - This is the default virtual pin (Vpin) ID that is used to send **EX-Turntable** commands to. Vpin IDs need to be unique, so if this ID is used elsewhere, change as necessary (refer [HAL Overview](/reference/command-station-architecture/hal-architecture.md)).
 - I2C (I<sup>2</sup>C) address=0x60 - This is the default address on the I2C (I<sup>2</sup>C) bus that the **EX-Turntable** is configured to use. This address also needs to be unique, so change this also if it is in use elsewhere, both in "myAutomation.h" and in "config.h" in the **EX-Turntable** software.
 
 If you already have an existing "myAutomation.h" file, then you simply need to add this entry in the appropriate section of your existing file.
