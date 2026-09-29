@@ -51,7 +51,7 @@ Ensure **EX-Turntable** was powered on before **EX-CommandStation**. By powering
 
 **Note** that these commands are available when connected to the **EX-CommandStation** serial console, **not** the **EX-Turntable** serial console.
 
-Referring to [adding a new device](/reference/hardware/hal/hal-config.md#adding-a-new-device), skip ahead to ==TODO== [checking the driver](/reference/hardware/hal/hal-config.md#checking-the-driver), and the output you're looking for to validate the **EX-Turntable** device driver is loaded and connected successfully is below:
+Referring to [adding a new device](/reference/hardware/hal/hal-config.md#adding-a-new-device), skip ahead to [checking the driver](/reference/hardware/hal/hal-config.md#checking-the-driver), and the output you're looking for to validate the **EX-Turntable** device driver is loaded and connected successfully is below:
 
 ```cpp
   <D HAL SHOW><* Arduino Vpins:2-69 *>
@@ -177,7 +177,7 @@ As mentioned previously, we recommend using **EX-CommandStation** version 5.4.0 
 
 Note that the previous **EXRAIL** commands are still valid and will work, however all examples on this page have been updated to reflect the new commands.
 
-For full details on using the EX-Turntable commands available, refer to ==TODO== [DCC-EX Serial/Native Commands](/reference/serial-commands/serial-command-list.md) and [Turntable Control](reference/serial-commands/serial-commands.md#Turntable-Control), and also the **EXRAIL** commands in [EXRAIL Command List](products/ex-commandstation/exrail/command-list.md).
+For full details on using the EX-Turntable commands available, refer to [DCC-EX Serial/Native Commands](/reference/serial-commands/serial-command-list.md) and [Turntable Control](/reference/serial-commands/serial-commands.md#turntable-control), and also the **EXRAIL** commands in [EXRAIL Command List](/products/ex-commandstation/exrail/command-list.md).
 
 For simplicity, the examples below use the same step counts as calculated in the tuning section above.
 
