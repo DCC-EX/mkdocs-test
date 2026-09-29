@@ -36,7 +36,39 @@ Results in: [Link to Contributing to Documentation Page](/contributing/documenta
 
 Results in: [Link to How to Contribute Section](/contributing/documentation/index.md#how-to-contribute)
 
-Note: when typing a link in VSCode, the intellisense dropdown will help you complete the link by following the path from the project directory. This creates links that start with "/docs" (for example "/docs/contributing/1-contribute-index.md" ). These links will not work unless you manually delete the /docs prefix.  Its a pain but we have raised a PR for VScode and mkDocs on this.
+!!! note "Relative Links"
+
+    When typing a link in VSCode, the intellisense dropdown will help you complete the link by following the path from the current folder.
+    
+    If you enter `[your title](.` as soon as you type ``.`` VSC will show you a list of folder and .md files in the current folder to select from. If you type ``..`` or ``../`` or ``../..`` etc. you can navigate up and down the folder structure to find the document you need.  This embeds the relative link to the document.
+
+    The technique above ensures that the link is valid.
+
+### In Page Links
+
+```markdown
+[Link to Search heading on the same page](#search-links)
+```
+
+Results in [Link to Search heading on the same page](#search-links)
+
+```markdown
+[Link to heading on a differnet page](github.md#5-live-previews)
+```
+
+Results in: [Link to heading on a differnet page](github.md#5-live-previews)
+
+!!! note "Relative Links"
+
+    When typing a link in VSCode, the intellisense dropdown will help you complete the link by following the path from the current folder.
+    
+    If you enter `[your title](#` as soon as you type ``#`` VSC will show you a list of headings in the current document to choose from. 
+    
+    You can use the technique above to locate a differnt documnet, then press`#` to show a list of headings in that document to choose from. 
+
+    The technique above ensures that the link is valid.
+
+==TODO==  Note there is a bug in this process if the heading contains ` - ` (space dash space).
 
 ### External Links
 
@@ -48,7 +80,7 @@ Results in: [Link to Google Search](https://www.google.com)
 
 ## Search Links
 
-We have added a link feature to directly invoke the MkDocs powerful search dialog. This is particularly useful when you wish to refer to information that may be spread over several places and possibly not yet written.
+We have added a link feature to directly invoke the ProperDocs powerful search dialog. This is particularly useful when you wish to refer to information that may be spread over several places and possibly not yet written.
 
 ```markdown
  [Find out about PCA9685 servo controllers](?PCA9685)

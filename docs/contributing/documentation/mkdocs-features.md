@@ -1,14 +1,14 @@
-# Working with MkDocs
+# Working with ProperDocs
 
 As outlined previously, MkDocs with the MkDocs Material theme are used as the basis of our documentation, utilising markdown plus other enhanced features to give our users a good experience.
 
 Only a brief introduction to these are outlined below to set the context for their use within our documentation, aside from custom plugins we have written which are covered here.
 
-Read the full [MkDocs documentation](https://www.mkdocs.org/) and [MkDocs Material documentation](https://squidfunk.github.io/mkdocs-material/) for more information.
+Read the full [ProperDocs documentation](https://www.properdocs.org/) and [MkDocs Material documentation](https://squidfunk.github.io/mkdocs-material/) for more information.
 
-## Previewing and Deploying MkDocs
+## Previewing and Deploying ProperDocs
 
-Don't forget when working with MkDocs, you can preview locally by running ``mkdocs serve`` at a command prompt or bash console, and you can manually deploy to GitHub Pages (provided you have permissions to do so) with ``mkdocs gh-deploy``.
+Don't forget when working with ProperDocs, you can preview locally by running ``properdocs serve`` at a command prompt or bash console.
 
 ## DCC-EX CSS Styling
 
@@ -84,11 +84,11 @@ There are several Python files included to perform various site build functions:
 - find_todos.py - Builds the page with the list of TODOs.  This may be removed when the site is close to complete
 - toc.py - Builds the Table of Contents page
 
-## MkDocs Material Extensions
+## ProperDocs Material Extensions
 
-While basic markdown is sufficient to get pages published with MkDocs and our documentation, there are certain extensions and plugins for MkDocs and the MkDocs Material theme that both improve the maintainability of our documentation, and improve the experience for our users.
+While basic markdown is sufficient to get pages published with ProperDocs and our documentation, there are certain extensions and plugins for ProperDocs and the MkDocs Material theme that both improve the maintainability of our documentation, and improve the experience for our users.
 
-The authoritative list of enabled extensions can be determined by the "mkdocs.yml" file.
+The authoritative list of enabled extensions can be determined by the "properdocs.yml" file.
 
 **Do not adjust the contents of this file without liaising with the **DCC-EX** Documenter team to ensure no existing functionality is broken.**
 
@@ -145,14 +145,14 @@ Adding HTML attributes to inline or block level elements can be done using [Attr
 **NOTE** that like all markdown syntax, there must be no spaces between the attribute list and the element it is being applied to.
 
 ```markdown
-![Logo example small](/_static/images/logos/logo.png){ width=100px }
-![Logo example](/_static/images/logos/logo.png){ width=200px }
+![Logo example small](../../_static/images/logos/logo_with_border.png){ width=100px }
+![Logo example](../../_static/images/logos/logo_with_border.png){ width=200px }
 ```
 
 This renders:
 
-![Logo example small](/_static/images/logos/logo.png){ width=100px }
-![Logo example](/_static/images/logos/logo.png){ width=200px }
+![Logo example small](../../_static/images/logos/logo_with_border.png){ width=100px }
+![Logo example](../../_static/images/logos/logo_with_border.png){ width=200px }
 
 The other most common example in our documentation is to provide a specific CSS class to an element, for example our buttons are a CSS class applied to a link:
 
@@ -167,10 +167,10 @@ Multiple attributes can be applied using spaces between them, don't use a comma 
 For example, this logo will be 100px wide and only show in light mode (switch to dark mode to hide it):
 
 ```markdown
-![Logo example](/_static/images/logos/logo.png){ width=100px .only-light }
+![Logo example](../../_static/images/logos/logo_with_border.png){ width=100px .only-light }
 ```
 
-![Logo example](/_static/images/logos/logo.png){ width=100px .only-light }
+![Logo example](../../_static/images/logos/logo_with_border.png){ width=100px .only-light }
 
 ### Snippets
 
@@ -178,7 +178,7 @@ To help us remove unnecessary duplication of content, we have enabled the ``pymd
 
 All files that are to be included as snippets must reside in the "snippets" directory, and preferably within a subdirectory relevant to the topic.
 
-**NOTE:** the code below includes extra back tick "`" characters at the beginning and end to prevent MkDocs rendering this as a snippet.
+**NOTE:** the code below includes extra back tick "`" characters at the beginning and end to prevent ProperDocs rendering this as a snippet.
 
 ```markdown
 `--8<-- "snippets/snippet-example/snippet-example.md"`
@@ -202,13 +202,13 @@ This renders :thumbsup:
 
 ----
 
-## MkDocs Plugins
+## ProperDocs Plugins
 
-The authoritative list of enabled plugins can be determined by the "mkdocs.yml" file.
+The authoritative list of enabled plugins can be determined by the "properdocs.yml" file.
 
 **Do not adjust the contents of this file without liaising with the **DCC-EX** Documenter team to ensure no existing functionality is broken.**
 
-We have written two custom plugins for MkDocs to highlight the latest news articles and ensure the previous/next navigation buttons make sense within the context of what the user is seeing.
+We have written two custom plugins for ProperDocs to highlight the latest news articles and ensure the previous/next navigation buttons make sense within the context of what the user is seeing.
 
 These plugins reside within the "plugins" directory and are included in "requirements.txt" for installation by contributors.
 
@@ -247,7 +247,7 @@ plugins:
       list-class: my-list-class
 ```
 
-To ensure the CSS class correctly overrides MkDocs Material classes, make it specific, eg:
+To ensure the CSS class correctly overrides ProperDocs Material classes, make it specific, eg:
 
 ```css
 .md-typeset li.news-headline-list {

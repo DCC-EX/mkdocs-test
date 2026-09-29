@@ -1,8 +1,8 @@
 # GitHub repository
 
-In order for GitHub pages to function correctly and automatically publish updated content, the content must be located in a specific repository named after the GitHub organisation, and therefore our website repository is [mk-docs-test](https://github.com/DCC-EX/mkdocs-test).
+In order for GitHub pages to function correctly and automatically publish updated content, the content must be located in a specific repository named after the GitHub organisation, and therefore our website repository is [mkdocs-test](https://github.com/DCC-EX/mkdocs-test).
 
-In addition to this, rather than using the main or master branch, the default branch is called "main", so any branches created for contributing to documentation must use this as the parent, and all pull requests must be submitted against this same branch.
+The default branch is called "main", so any branches created for contributing to documentation must use this as the parent, and all pull requests must be submitted against this same branch.
 
 ## Procedure
 
@@ -60,10 +60,10 @@ You will now have a new fork located at ``https://github.com/<your_account_name>
 
 In **GitHub Desktop**:
 
-1. Select :menuselection:`File --> Clone Repository`
+1. Select `File --> Clone Repository`
 2. Enter the name of you repository ``<your_account_name>/mkdocs-test``
 3. Select a location on your PC to store the repository.
-4. Click :guilabel:`Clone`
+4. Click `Clone`
 5. Make sure that ``Sphinx`` is selected as the 'Current Branch'
 
 A copy of the repository should now be on the PC.
@@ -153,11 +153,11 @@ If does not say you are 'behind' there is nothing to do.  Stop here.
 
 If you are behind...
 
-3. Click on the `x commit(s) behind` hyperlink  
-5. Add to the title and/or documentation fields.  This does not matter so entering just ``Catchup`` is fine.  
-6. Click on the `Create pull request` button  
-7. Click on the `Merge pull request` button  
-8. Click on the `Confirm merge` button
+3. Click on the `x commit(s) behind` hyperlink
+4. Add to the title and/or documentation fields.  This does not matter so entering just ``Catchup`` is fine.  
+5. Click on the `Create pull request` button
+6. Click on the `Merge pull request` button  
+7. Click on the `Confirm merge` button
 
 Any changes are now also in your repository on the GitHub website.
 
@@ -165,7 +165,7 @@ Any changes are now also in your repository on the GitHub website.
 
 In **GitHub Desktop**:
 
-1. Click on the `Fetch origin` button
+8. Click on the `Fetch origin` button
 
 Any changes are now also in your repository on the PC.
 
