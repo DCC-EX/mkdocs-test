@@ -26,7 +26,7 @@ hide:
 
 - ## :material-hand-wave-outline: Welcome to DCC-EX
 
-    Our highly regarded, free, open source, [Command Station](./products/ex-commandstation/index.md) software is one of the most comprehensive available, with included features designed to bring control and fun to your hobby, including:
+    Our highly regarded, free, open source, [Command Station](./products/ex-commandstation/index.md) software is one of the most comprehensive available, with in-built features designed to bring control and fun to your hobby, including:
 
     - Use smart phones &amp; tablets, or commercial and DIY physical throttles, to control your trains and layout over WiFi.
     - Run either, or both, DCC and DC trains.
