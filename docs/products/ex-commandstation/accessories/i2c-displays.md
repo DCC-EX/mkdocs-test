@@ -176,18 +176,18 @@ Apart from the main status display (display '0'), **EX-CommandStation** allows d
 
 ![OLED showing train departure times](../../../_static/images/display/polar_express_oled.jpg){ width="400px"}
 
-In order to configure additional displays, you will need to add lines to "myHal.cpp" in order to create the displays when the command station is running. Below we configure an additional OLED display as display #1, and an LCD as display #2:
+In order to configure additional displays, you will need to add lines to myAutomation.h in order to create the displays when the command station is running. Below we configure an additional OLED display as display #1, and an LCD as display #2:
 
 ```cpp
   // Create a 128x32 OLED display device as display number 1 
   // (line 0 is written by EXRAIL 'SCREEN(1, 0, "text")').
 
-  HALDisplay<OLED>::create(1, 0x3d, 128, 32);
+  HAL(HALDisplay<OLED>, 1, 0x3d, 128, 32)
 
   // Create a 20x4 LCD display device as display number 2 
   // (line 0 is written by EXRAIL 'SCREEN(2, 0, "text")').
 
-  HALDisplay<LiquidCrystal>::create(2, 0x27, 20, 4);
+  HAL(HALDisplay<LiquidCrystal>, 2, 0x27, 20, 4)
 ```
 
 As you can see from the comments in this code, both of these displays can now be written to from **EXRAIL** using the ``SCREEN()`` directive. See the **EXRAIL** ==TODO== :ref:`exrail/exrail-command-reference:communication and display functions` for more information.
