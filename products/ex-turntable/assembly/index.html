@@ -10335,7 +10335,7 @@
 <h3 id="7-load-the-ex-turntable-software">7. Load the EX-Turntable software<a class="headerlink" href="#7-load-the-ex-turntable-software" title="Permanent link">&para;</a></h3>
 <div class="admonition note">
 <p class="admonition-title">Tip</p>
-<p>Please read through this entire section prior to loading any software onto your Arduino. It is also recommended that the turntable is able to trigger the homing sensor correctly to ensure the automatic calibration works correctly at first startup.</p>
+<p>Please read through this entire section prior to loading any software. It is also recommended that the turntable is able to trigger the homing sensor correctly to ensure the automatic calibration works correctly at first startup.</p>
 </div>
 <h4 id="installing-with-ex-installer">Installing with EX-Installer<a class="headerlink" href="#installing-with-ex-installer" title="Permanent link">&para;</a></h4>
 <!-- #### Installing with EX-Installer -->
@@ -10355,19 +10355,16 @@
 <br/>EX-Installer - EX-Turntable Advanced Config</p>
 <p>Continue through the rest of the <strong>EX-Installer</strong> process to load the software on to your device, then skip to <a href="./#first-start-and-automatic-calibration">first start and automatic calibration</a> to continue.</p>
 <h4 id="installing-with-the-arduino-ide">Installing with the <abbr title="Not recommended. Use EX-Installer or, if experienced, Microsoft Visual Studio Code (VSC)">Arduino IDE</abbr><a class="headerlink" href="#installing-with-the-arduino-ide" title="Permanent link">&para;</a></h4>
-<p>Further to this, note that you will need to end up with two separate folders; one containing the <strong>EX-CommandStation</strong> software as per  <mark>TODO</mark> :doc:<code>/ex-commandstation/advanced-setup/installation-options/arduino-ide</code>, and an additional folder containing the <strong>EX-Turntable</strong> software. The <strong>EX-Turntable</strong> software is not a component of <strong>EX-CommandStation</strong> or vice versa, and as such they should not exist in the same folder.</p>
-<p>We recommend using <strong>EX-Installer</strong> to install <strong>EX-Turntable</strong> as outlined above, however you can use the <abbr title="Not recommended. Use EX-Installer or, if experienced, Microsoft Visual Studio Code (VSC)">Arduino IDE</abbr> to load the software onto the Arduino manually.</p>
-<p>As noted in the tip above, you should have a <strong>EX-Turntable</strong> folder alongside the <strong>EX-CommandStation</strong> folder, and neither should reside in the other (the <strong>EX-Turntable</strong> software is required in the next step):</p>
+<div class="admonition warning">
+<p class="admonition-title">Using <abbr title="Not recommended. Use EX-Installer or, if experienced, Microsoft Visual Studio Code (VSC)">Arduino IDE</abbr> is discouraged</p>
+<p>Use of the <abbr title="Not recommended. Use EX-Installer or, if experienced, Microsoft Visual Studio Code (VSC)">Arduino IDE</abbr> is discouraged and not covered in this documentation.  It is recommended to use <strong>EX-Installer</strong> to install the <strong>EX-Turntable</strong> software.  See <a href="../../../installer/installer/#alternatives-to-the-ex-installer">Alternatives to the EX-Installer</a>.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Tip</p>
+<p>The <strong>EX-Turntable</strong> software is not a component of <strong>EX-CommandStation</strong> or vice versa, and as such they should not exist in the same folder.</p>
+</div>
+<p>As noted in the tip above, you should have a <strong>EX-Turntable</strong> folder alongside the <strong>EX-CommandStation</strong> folder, and neither folder should reside in the other (the <strong>EX-Turntable</strong> software is required in the next step):</p>
 <p><img alt="Two folders" src="../../../_static/images/ex-turntable/two-folders.png" width="400px" /></p>
-<p>The process here is the same as installing CommandStation-EX via the <abbr title="Not recommended. Use EX-Installer or, if experienced, Microsoft Visual Studio Code (VSC)">Arduino IDE</abbr> which you can find on the <mark>TODO</mark> :doc:<code>/ex-commandstation/advanced-setup/installation-options/arduino-ide</code> page.</p>
-<p>When you get to the point of opening the sketch, ensure you open the EX-Turntable sketch:</p>
-<p><img alt="Open EX-Turntable sketch" src="../../../_static/images/ex-turntable/open-turntable-ex-sketch.png" width="400px" /></p>
-<p>Use Windows Explorer to either copy or rename "config.example.h" to "config.h".</p>
-<p>If you need to make adjustments to config.h, refer to the <a href="../configure/">configure</a> page.</p>
-<p>Set the board type to "Nano" and set the correct Processor type (typically ATMega328P):</p>
-<p><img alt="Select Nano" src="../../../_static/images/ex-turntable/select-nano.png" width="400px" /></p>
-<p>After any adjustments are made and "config.h" has been created, the software can be uploaded to the Arduino with the upload button:</p>
-<p><img alt="Upload" src="../../../_static/images/arduino-ide/upload_arrow.jpg" width="400px" /></p>
 <p>Once the software is loaded successfully on to <strong>EX-Turntable</strong>, the stepper motor should automatically start rotating in an attempt to find its "home" position, which will be activated when the magnet at one end of the turntable comes in close proximity to the hall effect sensor.</p>
 <p>If you don't have the magnet installed at this point, or if it is too far from the sensor, <strong>EX-Turntable</strong> will rotate several turns prior to flagging that homing has failed, and will then cease turning. The automatic calibration process will not commence if homing has failed.</p>
 <p>If your testing of the hall effect sensor in step 6 above succeeded, then the issue is likely to be the distance the magnet is from the sensor, and this will require adjustment. See <a href="../ex-tt-troubleshooting/">EX-Turntable troubleshooting</a> for further assistance if required.</p>
@@ -10451,7 +10448,7 @@
 </code></pre></div>
 <p>In the device setup above, there are three parameters provided, but only two may need to change in your environment if you have other devices that may conflict with these two settings:</p>
 <ul>
-<li><abbr title="an Arduino pin number that has been extended to include pins on external devices or expanders">VPIN</abbr>=600 - This is the default virtual pin (Vpin) ID that is used to send <strong>EX-Turntable</strong> commands to. Vpin IDs need to be unique, so if this ID is used elsewhere, change as necessary (refer <mark>TODO</mark> :ref:<code>reference/developers/hal:overview</code>).</li>
+<li><abbr title="an Arduino pin number that has been extended to include pins on external devices or expanders">VPIN</abbr>=600 - This is the default virtual pin (Vpin) ID that is used to send <strong>EX-Turntable</strong> commands to. Vpin IDs need to be unique, so if this ID is used elsewhere, change as necessary (refer <a href="../../../reference/command-station-architecture/hal-architecture/"><abbr title="Hardware Abstraction Layer. Allows the CS to discover and use the hardware through a simple abstract API, regardless of the type of underlying hardware.">HAL</abbr> Overview</a>).</li>
 <li>I2C (I<sup>2</sup>C) address=0x60 - This is the default address on the I2C (I<sup>2</sup>C) bus that the <strong>EX-Turntable</strong> is configured to use. This address also needs to be unique, so change this also if it is in use elsewhere, both in "myAutomation.h" and in "config.h" in the <strong>EX-Turntable</strong> software.</li>
 </ul>
 <p>If you already have an existing "myAutomation.h" file, then you simply need to add this entry in the appropriate section of your existing file.</p>
@@ -10515,7 +10512,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="August 5, 2026 06:22:19 UTC">August 5, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="September 29, 2026 18:29:39 UTC">September 29, 2026</span>
   </span>
 
     
