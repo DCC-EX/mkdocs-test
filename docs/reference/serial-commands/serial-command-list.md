@@ -24,4 +24,6 @@ Note: This list is easily, automatically, generated but the various links spread
 
 ---
 
+## Command List
+
 --8<-- "snippets/DCCEXCommands.md"
