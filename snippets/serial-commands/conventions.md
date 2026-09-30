@@ -12,9 +12,13 @@
 - Commands that produce diagnostic information (which is intended for human reading rather than code) only write to the USB Serial output.
 - Commands that cause state changes (such as loco speeds, turnout position) cause broadcasts to all serial connections and, where appropriate, WiThrottle protocol connections.
 
+*DCC-EX Serial Commands* are also referred to as *Native DCC-EX Commands/Protocol* or *DCC-EX Native Commands/Protocol*.
+
+Refer to the [WiThrottle VS Native Serial Protocol](../../throttles/withrottle-vs-native-protocol.md) page for information on the differences to the WiThrottle protocol/commands.
+
 </details>
 
-## Conventions used for command descriptions
+## Conventions Used for Command Descriptions
 
 <details markdown="1">
 <summary>Click to expand</summary>
@@ -44,16 +48,5 @@ The following are element / parameters that are common across multiple commands 
 | **speedByte** | Speed in DCC speedstep format. This is an encoded (1-7 bits) byte. <br/>The single value incorporates both speed and direction, with the following values: <br/>- reverse - 2-127 = speed 1-126, 0 = stop, 1 = Emergency Stop <br/>- forward - 130-255 = speed 1-126,  128 = stop, 129 = Emergency Stop |
 | **id** | The numeric ID (0-32767) assigned to an element to control. <br/>*ids* are generally unique within the element type, but not across element types. <br/>(NOTE: *ids* are shared between Turnouts/Points, Sensors and Outputs) |
 | **vpin** | Generally, the pin number of the physical input or output GPIO to receive information from or to control. <br/>*vpins* are normally assigned to an *id* to use in subsequent commands. <br/><br/>For GPIOs on the microcontroller, this is the same as the pin number.  For servo outputs and I/O expanders, it is the pin number defined for the HAL device (if present), for example 100-115 for servos attached to the first PCA9685 Servo Controller module, 200-215 for the second PCA9685 Servo Controller module, 300-315 for the first PCA9685 I/O Expander module, and 400-415 for the second PCA9685 I/O  Expander module. |
-
-</details>
-
-## Notes
-
-<details markdown="1">
-<summary>Click to expand</summary>
-
-*DCC-EX Serial Commands* are also referred to as *Native DCC-EX Commands/Protocol* or *DCC-EX Native Commands/Protocol*.
-
-Refer to the [WiThrottle VS Native Serial Protocol](../../throttles/withrottle-vs-native-protocol.md) page for information on the differences to the WiThrottle protocol/commands.
 
 </details>
