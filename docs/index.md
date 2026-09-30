@@ -22,6 +22,11 @@ hide:
 .homepage_img {
   margin-bottom: 0px !important;
 }
+
+.md-typeset ol li, .md-typeset ul li {
+    margin-bottom: 0.1em !important;
+}
+
 </style>
 
 # Home
@@ -56,9 +61,8 @@ hide:
 
 - ## :material-help-box-multiple-outline: What is DCC-EX
 
-    <span style="font-size: .75rem;">![DCC-EX](./_static/images/logos/logo_with_border.png){ align=right width=80px } **DCC-EX** is world-wide team of dedicated enthusiasts producing free and open source DCC and DC *software* and *hardware* solutions to run your model trains and layout.</span>
-
-    <span style="font-size: .75rem;">*Our mission* is to make model trains accessible and affordable to everyone.</span>
+    <span style="font-size: .75rem;">![DCC-EX](./_static/images/logos/logo_with_border.png){ align=right width=80px } **DCC-EX** is world-wide team of dedicated enthusiasts producing free and open source DCC and DC *software* and *hardware* solutions to run your model trains and layout.  
+    *Our mission* is to make model trains accessible and affordable to everyone.</span>
 
     <span style="font-size: .75rem;">Learn more on our [About Us](./about/about.md) page.</span>
 
