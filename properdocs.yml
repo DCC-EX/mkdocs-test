@@ -176,6 +176,7 @@ markdown_extensions:
   - abbr
   - attr_list # Enabled setting attributes in markdown eg. image width
   - def_list # Enable definition/descriptions lists, required by ezglossary
+  - sane_lists
   - md_in_html # Enable markdown in embedded HTML
   - pymdownx.betterem # Improved detection for emphasis in text
   - pymdownx.blocks.caption # Enable captions for images, tables, and code blocks

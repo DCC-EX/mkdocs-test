@@ -1,8 +1,8 @@
-# MkDocs Testing
+# ProperDocs Testing
 
-Repository to test if MkDocs meets the **DCC-EX**team's needs for a fresh start on simpler to maintain documentation.
+Repository to test if ProperDocs meets the **DCC-EX**team's needs for a fresh start on simpler to maintain documentation.
 
-MkDocs is being tested with the Material theme, which is reported to have an excellent search engine and other built-in features that reduce dependency complexity.
+ProperDocs is being tested with the Material theme, which is reported to have an excellent search engine and other built-in features that reduce dependency complexity.
 
 ## Evaluation requirements
 
@@ -23,15 +23,16 @@ This is the simple working list of requirements to evaluate against:
 - Could have a selector to change between production and development versions
 - Will not have a complicated "language" or other that people need to learn in order to contribute
 
-## MkDocs links
+## ProperDocs links
 
+[ProperDocs website](https://www.properdocs.org/)
 [MkDocs website](https://www.mkdocs.org/)
 [MkDocs Material theme](https://squidfunk.github.io/mkdocs-material/)
 [MkDocs Awesome Nav plugin](https://lukasgeiter.github.io/mkdocs-awesome-nav/)
 
-## MkDocs requirements
+## ProperDocs requirements
 
-MkDocs does require Python in order to be previewed and built locally, and all testing is being performed with Python 3.13.
+ProperDocs does require Python in order to be previewed and built locally, and all testing is being performed with Python 3.13.
 
 **Minimum python version seems to be 3.10**.
 
@@ -72,12 +73,12 @@ pip install -r requirements.txt
 ./pull_exrail.ps1
 ```
 
-## Previewing and building MkDocs
+## Previewing and building ProperDocs
 
 Previewing locally is very simple:
 
 ```bash
-mkdocs serve
+properdocs serve
 ```
 
 Navigate to the local preview in a browser at <http://localhost:8000/mkdocs-test/>.
@@ -85,13 +86,13 @@ Navigate to the local preview in a browser at <http://localhost:8000/mkdocs-test
 Building locally is equally as simple:
 
 ```bash
-mkdocs build
+properdocs build
 ```
 
-MkDocs also has a feature to deploy to GitHub pages without using a workflow:
+ProperDocs also has a feature to deploy to GitHub pages without using a workflow:
 
 ```bash
-mkdocs gh-deploy
+properdocs gh-deploy
 ```
 
 ## Design Principles for DCC-EX (Pete)
@@ -113,17 +114,17 @@ mkdocs gh-deploy
 
 That's actually one of the problems, we have too many complex pages! Or at least long pages anyway.
 
-Half the wins we should be able to get here actually have nothing to do with MkDocs, Sphinx, Markdown, or reStructuredText, but rather in just taking a different approach to how we do things full stop.
+Half the wins we should be able to get here actually have nothing to do with ProperDocs, Sphinx, Markdown, or reStructuredText, but rather in just taking a different approach to how we do things full stop.
 
 Instead of trying to cater for every possible custom tinkerer/engineer option on the planet, we need to start with the RTR user front and centre, and use that as the basis for the structure.
 
 So, we should focus on getting the **EX-CSB1** process in there first, and the latest **EX-Installer** updates.
 
-The drive for MkDocs (or something simpler than RST) is that it just uses Markdown, which is a lot simpler for people to come to grips with, and if you don't want to run MkDocs locally, you can at least preview Markdown in VSCode directly, you just won't see it in the context of the website.
+The drive for ProperDocs (or something simpler than RST) is that it just uses Markdown, which is a lot simpler for people to come to grips with, and if you don't want to run ProperDocs locally, you can at least preview Markdown in VSCode directly, you just won't see it in the context of the website.
 
 Using a paid WYSIWIG editor or service is ok, but it does mean everyone who contributes will need an account, and people outside the team can't just submit a PR of updates for us to review/approve, meaning we will always be blockers for getting those updates in. Further, it means as we figure out how to add doco from code comments, that will become complex or impossible depending on the service.
 
-I'm planning to keep playing with MkDocs, but we do need to figure out what the actual structure should look like.
+I'm planning to keep playing with ProperDocs, but we do need to figure out what the actual structure should look like.
 
 I'm leaning towards the user journey type idea I started with which is what drove us to have the links on the front page helping direct people to the right starting point. I'm open to whatever is the best approach, as long as it is simple for users to use.
 

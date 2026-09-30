@@ -8,6 +8,12 @@ Please note that the **DCC-EX** team are all volunteers and are distributed glob
 
 This is why we strongly recommend Discord as the best source of support, because there is a global community of over 4,000 users, some of whom may be able to help before a **DCC-EX** team member is online.
 
+!!! note "Precision Model Works (PMW)"
+
+    Precision Model Works in India appear to be selling command stations based on DCC-EX EX-CommandStation. It is entirely their right to do so, but as they have not engaged with the DCC-EX Team we have no idea what they are actually shipping.
+
+    As a result we are unable to provide any support for these systems. If you have one of these systems we suggest that you contact Precision Model Works directly for support. 
+
 ## Information required for support queries
 
 When requesting support for any of our products, there is some critical information you must provide in order for us to be able to help you. As volunteers, our time is limited and therefore the more information you can provide up front, the quicker we can help you resolve any issues rather than spend valuable time repeating requests for missing information.

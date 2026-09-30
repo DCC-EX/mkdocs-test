@@ -4,5 +4,6 @@ nav:
   - Formatting Guide: formatting-guide.md
   - Understanding Links: understanding-links.md
   - Using Our Logos: logos.md
-  - Working With MkDocs: mkdocs-features.md
   - Mermaid Diagrams: mermaid-diagrams.md
+  - Working with GitHub: github.md
+  - Working With ProperDocs: mkdocs-features.md
