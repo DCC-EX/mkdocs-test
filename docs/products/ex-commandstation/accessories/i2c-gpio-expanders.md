@@ -50,7 +50,7 @@ Many |I2C| GPIO Expander boards provide pin connections labelled INT, INTA, INTB
 
 **EX-CommandStation** supports the use of these pins.  On controllers with INTA and INTB, the two pins should be connected together to make a common INT signal.
 
-The INT signal may be connected to an input pin of the Arduino.  The INT signals from multiple modules may be connected to one pin, or you may connect the INT signal for each module to a different Arduino pin.  In either case, the Arduino pin number is specified when you configure the module in the `myHal.cpp` file.
+The INT signal may be connected to an input pin of the Arduino.  The INT signals from multiple modules may be connected to one pin, or you may connect the INT signal for each module to a different Arduino pin.  In either case, the Arduino pin number is specified when you configure the module in myAutomation.h.
 
 Once configured and connected, the GPIO Expander driver will not poll the GPIO module to obtain the input states unless the INT/INTA/INTB signal is active (LOW); so when no inputs are changing, the device will not be accessed.
 

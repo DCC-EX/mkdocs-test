@@ -183,10 +183,10 @@ If connecting the anode (positive) side of the LED to the PWM pin, the cathode (
 
 If connecting the cathode (negative) side of the LED to the PWM pin, the anode (positive) side connects to the V+ pin of the PCA9685, and you will require a 330ohm current limiting resistor.
 
-You will need to add this line to "mySetup.h" for each LED you wish to configure:
+You will need to add this line to myAutomation.h for each LED you wish to configure:
 
 ```cpp
-   IODevice::configureServo(vpin,OnValue,OffValue,PCA9685::NoPowerOff);
+   CONFIGURE_SERVO(vpin,OnValue,OffValue,NoPowerOff)
 ```
 
 The parameters required are:
@@ -201,16 +201,16 @@ Here are some examples:
 
 ```cpp
    // An LED with anode (positive) to PWM pin set for full intensity when turned on
-   IODevice::configureServo(101,4095,0,PCA9685::NoPowerOff);
+   CONFIGURE_SERVO(101,4095,0,NoPowerOff)
 
    // An LED with cathode (negative) to PWM pin set for full intensity when turned on
-   IODevice::configureServo(101,0,4095,PCA9685::NoPowerOff);
+   CONFIGURE_SERVO(101,0,4095,NoPowerOff)
 
    // An LED with anode (positive) to PWM pin set for half intensity when turned on
-   IODevice::configureServo(101,2048,0,PCA9685::NoPowerOff);
+   CONFIGURE_SERVO(101,2048,0,NoPowerOff)
 
    // An LED with anode (positive) to PWM pin set for full intensity turned on, and half intensity when turned off
-   IODevice::configureServo(101,4095,2048,PCA9685::NoPowerOff);
+   CONFIGURE_SERVO(101,4095,2048,NoPowerOff)
 ```
 
 ### Using these for JMRI signal heads and signal masts
