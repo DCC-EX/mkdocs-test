@@ -5,7 +5,7 @@ nav:
   - DCC-EX Serial Command List: serial-commands/serial-command-list.md
   - Commands by Function Group: serial-commands/serial-commands.md
   - Legacy Reference: serial-commands/legacy-command-reference.md
-  - Advanced config.h Options: advanced-config-h.md
+  - <br/>Advanced config.h Options: advanced-config-h.md
   - HAL Device Configuration: hardware/hal/hal-device-templates.md
   - <br/>TrackManager: trackmanager
   - <br/>Microcontrollers: microcontrollers
