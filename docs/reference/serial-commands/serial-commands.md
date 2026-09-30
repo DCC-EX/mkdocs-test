@@ -6,16 +6,7 @@ Reference guide for serial commands used by **EX-CommandStations**, shown in fun
 
     This list of commands is manually created and may lag behind the latest developments.  Refer to the [Full Command List](./serial-command-list.md) for the up-to-date list of commands.
 
-## Common Elements / Parameters
-
-How to understand the syntax:
-
-- The first symbol after the `<` character is the opcode. It's case sensitive so `<F` is not the same as `<f`.
-- parameters in UPPER CASE (eg ``LIMIT``) are keywords and form part of the command. Keywords are not case sensitive.
-- parameters in lower case (eg ``tSpeed``) are values you must supply
-- parameters in ``[square brackets]`` are optional (e.g. ``[volume]``). Do not include the brackets in your command.
-
-See the [Overview](./index.md) for more information on these and other common elements.
+--8<-- "snippets/serial-commands/conventions.md"
 
 ----
 
