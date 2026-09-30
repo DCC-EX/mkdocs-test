@@ -19,10 +19,11 @@ The advantage of this is that it is independent of the flashing process, and wil
 
 From version 5.7.0, you must configure the WiFi settings through one of the following methods:
 
-1. **EX-WebThrottle** (via USB),
-2. **EX-Toolbox** (via USB or over WiFi),
-3. the serial monitor / device monitor of **EX-Installer**, the **Arduino IDE** or **VSC** (via USB) See [Serial Monitors](../../reference/tools/serial-monitor_not_in_nav.md)
-4. any WiFi throttle or app that can send the appropriate commands to the **EX-CommandStation** over WiFi
+1. The **EX-CommandStation**'s own web server
+2. **EX-WebThrottle** (via USB),
+3. **EX-Toolbox** (via USB or over WiFi),
+4. the serial monitor / device monitor of **EX-Installer**, the **Arduino IDE** or **VSC** (via USB) See [Serial Monitors](../../reference/tools/serial-monitor_not_in_nav.md)
+5. any WiFi throttle or app that can send the appropriate commands to the **EX-CommandStation** over WiFi
 
 **EX-WebThrottle** and **EX-Toolbox** provide a user-friendly interface for configuring WiFi settings, while the serial monitor method allows for more direct access to the configuration process but requires more technical knowledge.
 
@@ -57,11 +58,17 @@ Only **Station (STA) mode** and the **HOSTNAME** can be changed over WiFi.
 **Access Point (AP)** mode changes require a serial/USB connection.
 This is a security feature.  If you could change AP mode settings over WiFi, then anyone who could connect to the **EX-CommandStation**'s WiFi network could change the AP settings and potentially lock you out of your **EX-CommandStation**. By requiring a USB connection for AP mode changes, we ensure that only someone with physical access to the **EX-CommandStation** can modify these critical settings.
 
+==TODO== The WiFi change limitation has been broken in the latest CS version as anything can be changed via the in-built web server
+
 ----
 
-## Changing the settings
+## Changing the WiFi Settings
 
-### Using EX-WebThrotttle
+### Using the EX-CommandStation's own Web Sever
+
+==TODO== Changing the WiFi Settings using the EX-CommandStation's own Web Sever
+
+### Using EX-WebThrottle
 
 1. Connect your PC to the **EX-CommandStation** via USB. Open the **EX-WebThrottle** and select the appropriate COM port for your **EX-CommandStation**. You should see the current WiFi settings displayed in the interface.  See [EX-WebThrottle](../ex-webthrottle/ex-webthrottle.md) for more details.
 

@@ -293,7 +293,6 @@ li:not(.md-nav__item, .md-tabs__item) a {
         - [WiThrottle Protocol Library - WiThrottleProtocol <small>(WiThrottle Protocol Library)</small>](throttle-writers/withrottle-protocol-library.md)
         - [WiThrottle Protocol VS DCC-EX Native/Serial Commands <small>(WiThrottle VS Native Protocol)</small>](throttle-writers/withrottle-vs-native-protocol.md)
     - **DCC-EX Serial/Native Commands**
-        - [DCC-EX Serial Commands Overview <small>(Overview)</small>](serial-commands/index.md)
         - [DCC-EX Serial Command List <small>(Command List)</small>](serial-commands/serial-command-list.md)
         - [Commands by Function Group](serial-commands/serial-commands.md)
         - [Legacy Command Reference <small>(Legacy Reference)</small>](serial-commands/legacy-command-reference.md)
