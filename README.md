@@ -89,11 +89,19 @@ Building locally is equally as simple:
 properdocs build
 ```
 
+!!! note "Not normally needed"
+
+    Generally you will not need to 'build' locally, unless you need to rebuild the the table of contents and todo list locally.
+
 ProperDocs also has a feature to deploy to GitHub pages without using a workflow:
 
 ```bash
 properdocs gh-deploy
 ```
+
+!!! note "Not normally needed"
+
+    Generally you will not need to 'deploy' locally.
 
 ## Design Principles for DCC-EX (Pete)
 

@@ -107,7 +107,7 @@ properdocs build --strict
 
 !!! note "Not normally needed"
 
-    Generally you will not need to 'build' locally.
+    Generally you will not need to 'build' locally, unless you need to rebuild the the table of contents and todo list locally.
 
 Proper also has a feature to deploy to GitHub pages without using a workflow:
 

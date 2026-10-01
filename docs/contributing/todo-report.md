@@ -1,3 +1,7 @@
+---
+icon: material/reminder
+---
+
 # TODO Report
 
 <style>
@@ -16,7 +20,7 @@ Scanned docs root: `C:\Users\akers\OneDrive\github\github_doco\mkdocs-test\docs`
 
 ## High TODOs
 
-Total High TODO matches: 87
+Total High TODO matches: 85
 
 | File | Line | Line text |
 | --- | ---: | --- |
@@ -79,16 +83,13 @@ Total High TODO matches: 87
 | [docs/reference/hardware/hal/hal-config.md](../reference/hardware/hal/hal-config.md) | 189 | First you will need to add a new file, just like the ==TODO== :ref:`config.h file <ex-commandstation/advanced-setup/installation-options/arduino-ide:Copy the config.example.h file (or rename it)>`. |
 | [docs/reference/hardware/hal/hal-config.md](../reference/hardware/hal/hal-config.md) | 252 | Finally, upload the code to the Arduino as you would do during the standard ==TODO== :ref:`Arduino IDE Setup <ex-commandstation/advanced-setup/installation-options/arduino-ide:upload the software>`. |
 | [docs/reference/hardware/wifi-boards/index.md](../reference/hardware/wifi-boards/index.md) | 3 | ==TODO== Move the legacy pages |
+| [docs/products/ex-commandstation/config-wifi-esp32-gui-options_not_in_nav.md](../products/ex-commandstation/config-wifi-esp32-gui-options_not_in_nav.md) | 61 | ==TODO== The WiFi change limitation has been broken in the latest CS version as anything can be changed via the in-built web server |
+| [docs/products/ex-commandstation/config-wifi-esp32-gui-options_not_in_nav.md](../products/ex-commandstation/config-wifi-esp32-gui-options_not_in_nav.md) | 69 | ==TODO== Changing the WiFi Settings using the EX-CommandStation's own Web Sever |
 | [docs/products/ex-commandstation/testing.md](../products/ex-commandstation/testing.md) | 3 | (LOTS OF ==TODO== in this file) |
 | [docs/products/ex-dccinspector/index.md](../products/ex-dccinspector/index.md) | 8 | ==TODO== move legacy docs |
 | [docs/products/ex-ioexpander/ex-ioexpander.md](../products/ex-ioexpander/ex-ioexpander.md) | 8 | ==TODO== move legacy docs |
-| [docs/products/ex-turntable/assembly.md](../products/ex-turntable/assembly.md) | 188 | Further to this, note that you will need to end up with two separate folders; one containing the **EX-CommandStation** software as per  ==TODO== :doc:`/ex-commandstation/advanced-setup/installation-options/arduino-ide`, and an additional folder containing the **EX-Turntable** software. The **EX-Turntable** software is not a component of **EX-CommandStation** or vice versa, and as such they should not exist in the same folder. |
-| [docs/products/ex-turntable/assembly.md](../products/ex-turntable/assembly.md) | 196 | The process here is the same as installing CommandStation-EX via the Arduino IDE which you can find on the ==TODO== :doc:`/ex-commandstation/advanced-setup/installation-options/arduino-ide` page. |
-| [docs/products/ex-turntable/assembly.md](../products/ex-turntable/assembly.md) | 327 | - VPIN=600 - This is the default virtual pin (Vpin) ID that is used to send **EX-Turntable** commands to. Vpin IDs need to be unique, so if this ID is used elsewhere, change as necessary (refer ==TODO== :ref:`reference/developers/hal:overview`). |
 | [docs/products/ex-turntable/configure.md](../products/ex-turntable/configure.md) | 3 | ==TODO== check the current version number of EX-Turntable and adjust the version notes on this page as needed |
 | [docs/products/ex-turntable/ex-tt-troubleshooting.md](../products/ex-turntable/ex-tt-troubleshooting.md) | 7 | ==TODO== Frequently Asked Questions |
-| [docs/products/ex-turntable/test-and-tune.md](../products/ex-turntable/test-and-tune.md) | 54 | Referring to [adding a new device](/reference/hardware/hal/hal-config.md#adding-a-new-device), skip ahead to ==TODO== [checking the driver](/reference/hardware/hal/hal-config.md#checking-the-driver), and the output you're looking for to validate the **EX-Turntable** device driver is loaded and connected successfully is below: |
-| [docs/products/ex-turntable/test-and-tune.md](../products/ex-turntable/test-and-tune.md) | 180 | For full details on using the new commands available, refer to ==TODO== :ref:`reference/software/command-summary-consolidated:turntables/traversers (configuring the ex-commandstation)` and :ref:`reference/software/command-summary-consolidated:turntables/traversers`, and also the **EXRAIL** commands in :ref:`exrail/exrail-command-reference:turntable/traverser objects - definition and control` and :ref:`exrail/exrail-command-reference:turntable features`. |
 | [docs/products/ex-webthrottle/ex-webthrottle.md](../products/ex-webthrottle/ex-webthrottle.md) | 6 | ==TODO== Split into separate pages for overview plus installing and using. |
 | [docs/products/ex-wifishield8266/ex-wifishield8266.md](../products/ex-wifishield8266/ex-wifishield8266.md) | 8 | ==TODO== Improve intro paragraph |
 | [docs/products/ex-commandstation/accessories/i2c-displays.md](../products/ex-commandstation/accessories/i2c-displays.md) | 193 | As you can see from the comments in this code, both of these displays can now be written to from **EXRAIL** using the ``SCREEN()`` directive. See the **EXRAIL** ==TODO== :ref:`exrail/exrail-command-reference:communication and display functions` for more information. |
@@ -107,6 +108,7 @@ Total High TODO matches: 87
 | [docs/products/ex-commandstation/exrail/cookbooks/big-picture/stage6.md](../products/ex-commandstation/exrail/cookbooks/big-picture/stage6.md) | 446 | Using the ``LATCH()`` command gives us a way to automatically alternate between the main track and the station siding. ``LATCH()`` simply sets the state of a pin (either real or virtual) which can then be tested by an ``IF()`` statement. In this particular case, we have defined pin 60 (alias "CHOOSE_BLK2") to be latched and unlatched, as this pin does not exist on the Mega2560, nor does it exist on any of our I/O expander boards. Further reading on ``LATCH()`` and ``UNLATCH()`` can be found in the ==TODO== `exrail/exrail-command-reference:sensors/inputs - reading and responding` section of the EXRAIL reference. |
 | [docs/installer/download/download-linux.md](../installer/download/download-linux.md) | 7 | ==TODO== - Add screenshots & fix page flow |
 | [docs/installer/download/index.md](../installer/download/index.md) | 3 | ==TODO== Downloading EX-Installer - Overview |
+| [docs/contributing/documentation/formatting-guide.md](documentation/formatting-guide.md) | 71 | ==TODO==  Note there is a bug in this process if the heading contains ` - ` (space dash space). |
 
 ## Medium priority TODOs
 
@@ -135,7 +137,7 @@ Total medium priority TODO matches: 18
 
 ## Low priority TODOs
 
-Total low priority TODO matches: 63
+Total low priority TODO matches: 64
 
 | File | Line | Line text |
 | --- | ---: | --- |
@@ -202,4 +204,5 @@ Total low priority TODO matches: 63
 | [docs/reference/serial-commands/shell_serial-command-xyz_not_in_nav.md](../reference/serial-commands/shell_serial-command-xyz_not_in_nav.md) | 56 | * ==TODO== LOW - Example Commands |
 | [docs/reference/serial-commands/shell_serial-command-xyz_not_in_nav.md](../reference/serial-commands/shell_serial-command-xyz_not_in_nav.md) | 62 | * ==TODO== LOW - Example Responses |
 | [docs/products/ex-commandstation/exrail/cookbooks/big-picture/stage1.md](../products/ex-commandstation/exrail/cookbooks/big-picture/stage1.md) | 283 | ==TODO== LOW - `Stage 1 <https://github.com/DCC-EX/dcc-ex.github.io/issues/415>`_  - WiThrottle - Multiple Trains |
+| [docs/contributing/documentation/github.md](documentation/github.md) | 95 | ==TODO== LOW - how to preview options |
 

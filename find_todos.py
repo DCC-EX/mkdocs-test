@@ -108,6 +108,7 @@ def build_report(root: Path, output_path: Path) -> int:
 
     output_path.parent.mkdir(parents=True, exist_ok=True)
     report_sections = [
+        "---\nicon: material/reminder\n---\n\n" + 
         "# TODO Report\n\n",
         "<style>\n"
         ".md-typeset table td,  \n"

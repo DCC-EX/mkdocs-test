@@ -16,7 +16,7 @@ li:not(.md-nav__item, .md-tabs__item) a {
 ## Indexed Pages
 
 
-- [Home](../index.md)
+- [Home <small>(<small> </small>)</small>](../index.md)
 - **Products**
     - [DCC-EX Product Overview <small>(Product Overview)</small>](../products/products.md)
     - **EX-CommandStation<small><small> (Ready&nbsp;to&nbsp;Run &amp; Self&nbsp;Build)</small></small>**
@@ -238,15 +238,19 @@ li:not(.md-nav__item, .md-tabs__item) a {
 - **Reference**
     - [Full Site Table of Contents <small>(Table of Contents)</small>](toc.md)
     - [Glossary of Terms](glossary.md)
+    - [EXRAIL Command List <small>(<br/>EXRAIL Command List)</small>](exrail-command-reference.md)
+    - [DCC-EX Serial Command List <small>(Serial Commands <small>Full List</small>)</small>](serial-commands/serial-command-list.md)
+    - [Serial Commands <small>by Function Group</small>](serial-commands/serial-commands.md)
+    - [Legacy Command Reference <small>(Serial Commands <small>Legacy Reference</small>)</small>](serial-commands/legacy-command-reference.md)
     - [Advanced config.h settings for EX-CommandStation build <small>(<br/>Advanced config.h Options)</small>](advanced-config-h.md)
-    - [EXRAIL Command List](exrail-command-reference.md)
+    - [HAL Device Templates <small>(HAL Device Configuration)</small>](hardware/hal/hal-device-templates.md)
     - **<br/>TrackManager**
         - [TrackManager](trackmanager/index.md)
         - [DCC vs DC PWM <small>(DCC VS DC)</small>](trackmanager/dcc-vs-dc.md)
         - [DC Mode - PWM Frequency <small>(DC Mode Frequency)</small>](trackmanager/dc-mode-frequency.md)
         - [DC Mode - Logic Gate Circuits <small>(DC Mode Logic)</small>](trackmanager/dc-mode-logic.md)
         - [DC Mode Track Sync <small>(DC Track Sync)</small>](trackmanager/dc-track-sync.md)
-    - **<br/>Alternate Microcontrollers**
+    - **<br/>Microcontrollers**
         - [Microcontroller Boards - Overview <small>(Overview)</small>](microcontrollers/index.md)
         - **EX-CSB1**
             - [EX-CSB1 FAQ](microcontrollers/ex-csb1/csb1-errors-faq.md)
@@ -275,7 +279,6 @@ li:not(.md-nav__item, .md-tabs__item) a {
             - [Ethernet Boards](hardware/ethernet-boards/index.md)
         - **Hal**
             - [I/O Device Drivers and HAL](hardware/hal/hal-config.md)
-            - [HAL Device Templates](hardware/hal/hal-device-templates.md)
             - [Writing a HAL Driver](hardware/hal/writing-hal-driver.md)
         - **Motorboards**
             - [L298P & L298HN Shields <small>(L298 Shields)</small>](hardware/motorboards/l298-shields.md)
@@ -292,10 +295,6 @@ li:not(.md-nav__item, .md-tabs__item) a {
         - [DCC-EX Native/Serial Command Protocol Library - DCCEXProtocol <small>(Native Protocol Library)</small>](throttle-writers/native-protocol-library.md)
         - [WiThrottle Protocol Library - WiThrottleProtocol <small>(WiThrottle Protocol Library)</small>](throttle-writers/withrottle-protocol-library.md)
         - [WiThrottle Protocol VS DCC-EX Native/Serial Commands <small>(WiThrottle VS Native Protocol)</small>](throttle-writers/withrottle-vs-native-protocol.md)
-    - **DCC-EX Serial/Native Commands**
-        - [DCC-EX Serial Command List <small>(Command List)</small>](serial-commands/serial-command-list.md)
-        - [Commands by Function Group](serial-commands/serial-commands.md)
-        - [Legacy Command Reference <small>(Legacy Reference)</small>](serial-commands/legacy-command-reference.md)
     - **Command Station Internal Architecture**
         - [**EX-CommandStation** Internal Architecture <small>(Command Station Internal Architecture)</small>](command-station-architecture/index.md)
         - [DCC-EX HAL Architecture <small>(HAL Architecture)</small>](command-station-architecture/hal-architecture.md)
@@ -319,8 +318,9 @@ li:not(.md-nav__item, .md-tabs__item) a {
         - [Formatting Guide](../contributing/documentation/formatting-guide.md)
         - [Understanding Links](../contributing/documentation/understanding-links.md)
         - [Using Our Logos](../contributing/documentation/logos.md)
-        - [Working With ProperDocs](../contributing/documentation/mkdocs-features.md)
         - [Mermaid Diagrams](../contributing/documentation/mermaid-diagrams.md)
+        - [GitHub repository <small>(Working with GitHub)</small>](../contributing/documentation/github.md)
+        - [Working With ProperDocs](../contributing/documentation/mkdocs-features.md)
     - [Release Checklist](../contributing/release-checklist.md)
     - [User Personas and Journeys - Front Page Tiles <small>(User Journeys)</small>](../contributing/user-journeys.md)
     - [TODO Report <small>(To-Do/Task List)</small>](../contributing/todo-report.md)
