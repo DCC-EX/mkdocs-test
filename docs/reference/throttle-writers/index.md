@@ -2,7 +2,7 @@
 
 These pages are a brief set of notes to help people write/create their own software or physical/hardware throttle/controllers to use the **DCC-EX** EX-CommandStations.
 
-The EX-CommandStation can communicate with either Native/Serial Protocol or the WiThrottle protocol.  Only the Native/Serial Protocol is discussed here. If you wish to use the WiThrottle protocol see the [JMRI Web Site](https://www.jmri.org/help/en/package/jmri/jmrit/withrottle/Protocol.shtml) for more information.
+The EX-CommandStation can communicate with either the Native/Serial Protocol or the WiThrottle protocol.  Only the Native/Serial Protocol is discussed here. If you wish to use the WiThrottle protocol see the [JMRI Web Site](https://www.jmri.org/help/en/package/jmri/jmrit/withrottle/Protocol.shtml) and the [WiThrottleProtocol library GitHub page](https://github.com/flash62au/WiThrottleProtocol) for more information.
 
 ## General
 

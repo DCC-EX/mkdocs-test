@@ -1,3 +1,7 @@
+---
+icon: material/open-in-new
+---
+
 # Standards and Technical References
 
 Standards and technical references the **DCC-EX** components are build onto.
