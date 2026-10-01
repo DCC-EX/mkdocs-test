@@ -32,6 +32,8 @@ You can learn more about the software in the [EX-CommandStation documentation](/
 
 ---
 
+![EX-WebThrottle](../_static/images/ex-webthrottle/ex-webthrottle.png){ align=right width=250px }
+
 ### EX-WebThrottle
 
 [![EX-WebThrottle Logo](../_static/images/logos/product-logo-ex-webthrottle-only-light.png){ .only-light width=400px }

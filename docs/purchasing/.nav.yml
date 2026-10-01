@@ -1,7 +1,8 @@
 nav:
-  - Official Sellers: official-sellers.md
-  - Third Party Sellers: third-party-sellers.md
-  - Merchandise: merchandise.md
+  - Official Suppliers: official-sellers.md
+  - Selecting a Power Supply: power.md
+  - <br/>Third Party Sellers: third-party-sellers.md
+  - <br/>Merchandise: merchandise.md
   - <br/><i>EX-CSB1 Next Steps</i><br/>Test&nbsp;Your&nbsp;EX-CSB1: next-steps.md
   - Connecting to Your Layout<small><small> (Physical&nbsp;Connection)</small></small>: physical-installation.md
   - Throttles: throttles.md
