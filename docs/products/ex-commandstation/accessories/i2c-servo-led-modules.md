@@ -47,6 +47,32 @@ servo mounting bracket, were 3d-printed on a Creality Ender-3 printer.
 ![Servo mount to operate a Semaphore Signal](../../../_static/images/i2c-devices/SemaphoreSignal.jpg){Width="400px"}
 <br/>Servo mount to operate a Semaphore Signal
 
+## Technical Discussion for Engineers
+
+There are three types of servos, standard or "Positional Rotation", "Continuous Rotation" and "Linear"
+
+**A Standard, positional rotation servo** allows a shaft to spin around a central axis to position something like an arm or disk at specific angles. A standard servo can be positioned between 0 and 180 degrees. An example is the SG90 9g Micro Servo
+
+**A Continuous Rotation Servo** can spin around a full circle continuously like a motor. Instead of providing an angular position that the servo should rotate to, the continuous rotation servo simply has a speed and direction, clockwise or counter-clockwise.
+
+**Linear Servos** use a rack and pinion gear that converts rotary motion to linear motion. A linear servo works just like a Standard Servo and you can control its position along a straight line, forward and back in a similar way by giving it a position.
+
+Pulse width modulation (PWM) sends an electric pulse of variable width to the motor. With PWM there is a minimum pulse, maximum pulse, and a repetition rate. The rotor will turn to the desired position based on the duration of the pulse. When servos are commanded to move, they move to the position and hold the position. A feedback mechanism (usually a potentiometer that rotates with the shaft) adjusts the speed and direction of the motor to be able to hold the correct position.
+
+For our analog servos, the signal or repetition rate is 50Hz, that is once every 20 milliseconds (ms). The duration of the pulses are between 544 and 2400 microseconds (µs) representing 0 and 180 degrees. To derive our 12-bit PWM value, we divide the pulse durations by 20ms and multiply by 4096. That gives us a range of 111 to 491.
+
+Another way to look at this is that with our 12bit ADC (Analog to Digital Converter), which can measure from 0 to 4095, 4096 (100%) is 20ms pulse length and 0 (0%) is 0ms pulse length. We convert 4095 to 100% since you can't represent the value 4096 in 12 bits.
+
+!!! note "Datasheets"
+
+    It is a bit difficult finding datasheets for different servos. For the SG90, we have seen a range listed of 1000-2000µs, which maps to 205-410, and 500 to 2400µs, which is 102 to 490. You define these in JMRI, or in the command station in mySetup.h or via command with "<T id SERVO vpin thrownPos closedPos profile>".
+
+!!! tip "Keep a spare slot"
+
+    Keep a spare slot (we recommend 100) open on your first PCA9685 board so that you can test servo positions with the `<D SERVO ...>` command to connect your servos to and get the exact positions you need.
+
+Servo motors have three wires: power, ground, and signal. The power wire is typically red, and should be connected to the an external 5V power supply. Do NOT connect this to the 5V power of the Arduino! The ground wire is usually black or brown and connects to a ground pin. The signal pin is typically yellow, orange or white and should be connected to a digital pin of the PCA9685.
+
 ## Using Servos with EXRAIL
 
 **EXRAIL** supports three methods of controlling servos:
@@ -177,7 +203,7 @@ Another use case for the PCA9685 is to drive LEDs using PWM to control the inten
 
 ### Connecting LEDs and setting intensity
 
-LEDs can be connected with either the anode (positive) or cathode (negative) to the PWM pin of the PCA9685, and to set the required intensity for the LED, you will need to add a configuration setting to your "mySetup.h" file. Refer to ==TODO== :doc:`/ex-commandstation/advanced-setup/startup-config` for further information on this file.
+LEDs can be connected with either the anode (positive) or cathode (negative) to the PWM pin of the PCA9685.
 
 If connecting the anode (positive) side of the LED to the PWM pin, the cathode (negative) side connects to the ground pin, and you do not need a current limiting resistor in this scenario.
 
@@ -217,15 +243,9 @@ Here are some examples:
 
 If the LEDs are to be used for signal heads or signal masts in JMRI, they can be added to the Turnout Table by defining these as outputs also in "mySetup.h".
 
-An output is defined by using the ``<Z id vpin iflag>`` command. Refer to ==TODO== :ref:`reference/software/command-summary-consolidated:outputs (configuring the ex-commandstation)` for further information on this command.
+An output is defined by using the ``<Z id vpin iflag>`` command. Refer to [Output Control](/reference/serial-commands/serial-commands.md#output-control) for further information on this command.
 
 This command will associate the provided output ID with the LED connected to the VPin as defined in the configuration commands in the section above.
-
-To define an output with ID 101 to match the LED connected to VPin 101, add this line to "mySetup.h":
-
-```cpp
-   SETUP("<Z 101 101 0>");
-```
 
 ### Using these with EXRAIL
 
@@ -249,31 +269,5 @@ The example below simulates a camp fire by continuously varying the LED brightne
       FADE(101, 1500,10)   DELAYRANDOM( 50,250)
       FOLLOW(3)
 ```
-
-## Technical Discussion for Engineers
-
-There are three types of servos, standard or "Positional Rotation", "Continuous Rotation" and "Linear"
-
-**A Standard, positional rotation servo** allows a shaft to spin around a central axis to position something like an arm or disk at specific angles. A standard servo can be positioned between 0 and 180 degrees. An example is the SG90 9g Micro Servo
-
-**A Continuous Rotation Servo** can spin around a full circle continuously like a motor. Instead of providing an angular position that the servo should rotate to, the continuous rotation servo simply has a speed and direction, clockwise or counter-clockwise.
-
-**Linear Servos** use a rack and pinion gear that converts rotary motion to linear motion. A linear servo works just like a Standard Servo and you can control its position along a straight line, forward and back in a similar way by giving it a position.
-
-Pulse width modulation (PWM) sends an electric pulse of variable width to the motor. With PWM there is a minimum pulse, maximum pulse, and a repetition rate. The rotor will turn to the desired position based on the duration of the pulse. When servos are commanded to move, they move to the position and hold the position. A feedback mechanism (usually a potentiometer that rotates with the shaft) adjusts the speed and direction of the motor to be able to hold the correct position.
-
-For our analog servos, the signal or repetition rate is 50Hz, that is once every 20 milliseconds (ms). The duration of the pulses are between 544 and 2400 microseconds (µs) representing 0 and 180 degrees. To derive our 12-bit PWM value, we divide the pulse durations by 20ms and multiply by 4096. That gives us a range of 111 to 491.
-
-Another way to look at this is that with our 12bit ADC (Analog to Digital Converter), which can measure from 0 to 4095, 4096 (100%) is 20ms pulse length and 0 (0%) is 0ms pulse length. We convert 4095 to 100% since you can't represent the value 4096 in 12 bits.
-
-!!! note "Datasheets"
-
-    It is a bit difficult finding datasheets for different servos. For the SG90, we have seen a range listed of 1000-2000µs, which maps to 205-410, and 500 to 2400µs, which is 102 to 490. You define these in JMRI, or in the command station in mySetup.h or via command with "<T id SERVO vpin thrownPos closedPos profile>".
-
-!!! tip "Keep a spare slot"
-
-    Keep a spare slot (we recommend 100) open on your first PCA9685 board so that you can test servo positions with the `<D SERVO ...>` command to connect your servos to and get the exact positions you need.
-
-Servo motors have three wires: power, ground, and signal. The power wire is typically red, and should be connected to the an external 5V power supply. Do NOT connect this to the 5V power of the Arduino! The ground wire is usually black or brown and connects to a ground pin. The signal pin is typically yellow, orange or white and should be connected to a digital pin of the PCA9685.
 
 --8<-- "snippets/abbr.md"
