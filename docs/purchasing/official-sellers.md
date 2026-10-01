@@ -1,3 +1,7 @@
+---
+icon: material/store
+---
+
 # Official DCC-EX Suppliers
 
 With the ever increasing demand for hardware that is guaranteed to be **DCC-EX** compatible, and the uptake of EX-CommandStation by more Conductor level users, we are striving to make the **DCC-EX** ecosystem more accessible.
