@@ -5127,6 +5127,8 @@
       
         
       
+        
+      
     
     
     
@@ -5172,8 +5174,33 @@
         
   
   
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18H6v-4h6m9 0v-2l-1-5H4l-1 5v2h1v6h10v-6h4v6h2v-6m0-10H4v2h16z"/></svg>
+  
   <span class="md-ellipsis">
-    Official Sellers
+    Official Suppliers
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../purchasing/power/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Selecting a Power Supply
     
   </span>
   
@@ -5196,7 +5223,7 @@
   
   
   <span class="md-ellipsis">
-    Third Party Sellers
+    <br/>Third Party Sellers
     
   </span>
   
@@ -5219,7 +5246,7 @@
   
   
   <span class="md-ellipsis">
-    Merchandise
+    <br/>Merchandise
     
   </span>
   
@@ -5573,9 +5600,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#other-motor-shields" class="md-nav__link">
+  <a href="#other-motor-drivers" class="md-nav__link">
     <span class="md-ellipsis">
-      Other motor shields
+      Other Motor Drivers
     </span>
   </a>
   
@@ -9718,9 +9745,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#other-motor-shields" class="md-nav__link">
+  <a href="#other-motor-drivers" class="md-nav__link">
     <span class="md-ellipsis">
-      Other motor shields
+      Other Motor Drivers
     </span>
   </a>
   
@@ -9764,7 +9791,9 @@
 
 
 <h1 id="selecting-a-power-supply">Selecting a power supply<a class="headerlink" href="#selecting-a-power-supply" title="Permanent link">&para;</a></h1>
-<p>You will require a power supply unit to provide track power and to run the <strong>EX-CommandStation</strong> processor.</p>
+<p>You will require one <em>or two</em> power supply units to provide track power and to run the <strong>EX-CommandStation</strong> processor.</p>
+<p>If you have used a <strong>EX-MotorShield8874</strong> then only one power supply is required.</p>
+<p>If you have used a motor driver other than the <strong>EX-MotorShield8874</strong> (e.g. Arduino Motor Shield or Deek Robot Motor shield), then you will need <em>a second 7v power supply</em> to power the Microprocessor.</p>
 <h2 id="volts-and-amps">Volts and Amps<a class="headerlink" href="#volts-and-amps" title="Permanent link">&para;</a></h2>
 <p>The volt and current requirements for your track vary according to the scale of your locos and the number you expect to run simultaneously.</p>
 <p>These recommendations are generalised, and you must check to make sure they don't exceed your loco and DCC decoder manufacturer's recommendations.</p>
@@ -9835,10 +9864,10 @@
 <h2 id="using-an-ex8874-or-ex-csb1">Using an EX8874 or <abbr title="EX-CommandStation Booster 1 Express">EX-CSB1</abbr><a class="headerlink" href="#using-an-ex8874-or-ex-csb1" title="Permanent link">&para;</a></h2>
 <p>The EX8874 (which is also built into the <abbr title="EX-CommandStation Booster 1 Express">EX-CSB1</abbr>) provides power for both the track and the <strong>EX-CommandStation</strong>. There is almost zero voltage drop between the power supply and the track.</p>
 <p>We strongly advise purchasing a suitable power supply at the same time as the CSB or EX8874 from a vendor who understands your requirements.</p>
-<h2 id="other-motor-shields">Other motor shields<a class="headerlink" href="#other-motor-shields" title="Permanent link">&para;</a></h2>
-<p>Should you choose a motor-shield other than the <strong>EX-8874</strong>:</p>
+<h2 id="other-motor-drivers">Other Motor Drivers<a class="headerlink" href="#other-motor-drivers" title="Permanent link">&para;</a></h2>
+<p>Should you choose a motor driver other than the <strong>EX-8874</strong>:</p>
 <ul>
-<li>You must allow for the voltage drop within your chosen shield. (see <a href="#track-voltage-vs-power-supply-voltage">above</a>)</li>
+<li>You must allow for the voltage drop within your chosen driver. (see <a href="#track-voltage-vs-power-supply-voltage">above</a>)</li>
 <li>You must provide separate power for the <strong>EX-CommandStation</strong> microcontroller:<ul>
 <li>Most easily this is done via the USB socket. A standard phone charger, or a connection to a computer, will be adequate. Note that if you are powering other devices connected directly to the GPIOs (including a WiFi shield), the USB socket may not provide adequate power.</li>
 <li>If you power the microcontroller through its barrel connector, you need to use a 7-9vDC power supply, not the 5v you might expect. Do not exceed 9vDC as this can cause electrical interference.</li>
@@ -9882,7 +9911,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 22, 2026 05:02:40 UTC">June 22, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="October 1, 2026 23:34:17 UTC">October 1, 2026</span>
   </span>
 
     
