@@ -1,12 +1,14 @@
 <!-- These are case sensitive -->
 
-*[DCC++]: Old name for **DCC-EX**. Some references still remain for backward compatibility
+*[DCC++]: Old/obsolete name for **DCC-EX**. Some references still remain for backward compatibility
 
 *[WiThrottle]: Communication Protocol. Trademark + iOS app owned by Brett Hoffman
 *[API]: Application Programming Interface
 *[JMRI]: Java Model Railroad Interface
 *[Arduino IDE]: Not recommended. Use EX-Installer or, if experienced, Microsoft Visual Studio Code (VSC)
-*[VSC]: Micosoft Visual Studio Code. Recommended IDE if EX-Installer is insufficient.
+*[VSC]: Microsoft Visual Studio Code. Recommended IDE if EX-Installer is insufficient for your needs.
+*[VSCode]: Microsoft Visual Studio Code. Recommended IDE if EX-Installer is insufficient for your needs.
+*[PlatformIO]: Used with Microsoft Visual Studio Code. The recommended IDE if EX-Installer is insufficient for your needs.
 
 *[AP]: Access Point Mode. Stand alone WiFi network
 *[STA]: Station Mode. Joins an existing WiFi network
