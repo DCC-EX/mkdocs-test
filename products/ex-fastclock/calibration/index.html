@@ -7072,18 +7072,96 @@
   
   
   
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_9_6" id="__nav_9_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Additional Serial Commands
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_9_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9_6">
+            <span class="md-nav__icon md-icon"></span>
+            Additional Serial Commands
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
     <li class="md-nav__item">
       <a href="../../../reference/serial-commands/legacy-command-reference/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    Serial Commands <small>Legacy Reference</small>
+    Legacy Reference <small>Not Maintained</small>
     
   </span>
   
 
       </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../reference/serial-commands/config-wifi-esp32/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Configure WiFi <small>(EX‑CSB1 & ESP32 v5.7.0+ Only)</small>
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -9665,7 +9743,7 @@
 <h1 id="calibration">Calibration<a class="headerlink" href="#calibration" title="Permanent link">&para;</a></h1>
 <p>The MCUFRIEND style shield used in this project is usually a cheap(ish) import from China.  These come with a variety of processor chips and various tolerances on the touch screen.  As such before use it is necessary to carry out a calibration routine.  The MCUFRIEND library contains a routine for this and a number ot test programs to test out the functionality of the TFT/Touch screen.</p>
 <p>To carry out the calibration please carry out the following steps:</p>
-<p>In either VSCODE/PlatformIO or <abbr title="Not recommended. Use EX-Installer or, if experienced, Microsoft Visual Studio Code (VSC)">Arduino IDE</abbr> locate and load the sketch TouchScreen_Calibr_Native.ino  This should be found in the MCUFRIEND_kbv/examples folder in the libraries.  By default this test is setup to run using the screen in Portrait mode which is the correct orientation.</p>
+<p>In either VSCODE/<abbr title="Used with Microsoft Visual Studio Code. The recommended IDE if EX-Installer is insufficient for your needs.">PlatformIO</abbr> or <abbr title="Not recommended. Use EX-Installer or, if experienced, Microsoft Visual Studio Code (VSC)">Arduino IDE</abbr> locate and load the sketch TouchScreen_Calibr_Native.ino  This should be found in the MCUFRIEND_kbv/examples folder in the libraries.  By default this test is setup to run using the screen in Portrait mode which is the correct orientation.</p>
 <p>Load a System Monitor - this will display any output from the test program.</p>
 <p>Compile and upload this sketch to the <abbr title="Not recommended. No longer supported for the EX-CommandStation. The UNO shield shape/size is still relevant">Arduino UNO</abbr> - this should generate the screen shown below.</p>
 <p><img alt="Fig 1." src="../../../_static/images/ex-fastclock/FIG1.png" /></p>

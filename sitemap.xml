@@ -221,10 +221,6 @@
          <lastmod>2026-10-05</lastmod>
     </url>
     <url>
-         <loc>https://dcc-ex.com/mkdocs-test/products/ex-commandstation/config-wifi-esp32-gui-options_not_in_nav/</loc>
-         <lastmod>2026-10-05</lastmod>
-    </url>
-    <url>
          <loc>https://dcc-ex.com/mkdocs-test/products/ex-commandstation/config-wifi-esp32/</loc>
          <lastmod>2026-10-05</lastmod>
     </url>
@@ -958,6 +954,10 @@
     </url>
     <url>
          <loc>https://dcc-ex.com/mkdocs-test/reference/microcontrollers/nucleo/nucleo-power/</loc>
+         <lastmod>2026-10-05</lastmod>
+    </url>
+    <url>
+         <loc>https://dcc-ex.com/mkdocs-test/reference/serial-commands/config-wifi-esp32/</loc>
          <lastmod>2026-10-05</lastmod>
     </url>
     <url>

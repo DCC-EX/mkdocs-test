@@ -7080,18 +7080,96 @@
   
   
   
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_9_6" id="__nav_9_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Additional Serial Commands
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_9_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9_6">
+            <span class="md-nav__icon md-icon"></span>
+            Additional Serial Commands
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
     <li class="md-nav__item">
       <a href="../../../serial-commands/legacy-command-reference/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    Serial Commands <small>Legacy Reference</small>
+    Legacy Reference <small>Not Maintained</small>
     
   </span>
   
 
       </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../serial-commands/config-wifi-esp32/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Configure WiFi <small>(EX‑CSB1 & ESP32 v5.7.0+ Only)</small>
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -10035,7 +10113,7 @@
 
 
 <h1 id="io-device-drivers-and-hal">I/O Device Drivers and <abbr title="Hardware Abstraction Layer. Allows the CS to discover and use the hardware through a simple abstract API, regardless of the type of underlying hardware.">HAL</abbr><a class="headerlink" href="#io-device-drivers-and-hal" title="Permanent link">&para;</a></h1>
-<p><mark>TODO</mark> change references to the <abbr title="Not recommended. Use EX-Installer or, if experienced, Microsoft Visual Studio Code (VSC)">Arduino IDE</abbr> to <abbr title="Micosoft Visual Studio Code. Recommended IDE if EX-Installer is insufficient.">VSC</abbr></p>
+<p><mark>TODO</mark> change references to the <abbr title="Not recommended. Use EX-Installer or, if experienced, Microsoft Visual Studio Code (VSC)">Arduino IDE</abbr> to <abbr title="Microsoft Visual Studio Code. Recommended IDE if EX-Installer is insufficient for your needs.">VSC</abbr></p>
 <p>The <strong>EX-CommandStation</strong>** has always had built-in support for <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnout</abbr> control, output control and input sensors attached to the Arduino pins.  However, you may outgrow the built-in capabilities and want to access more output pins than the Arduino has available.  Or you may wish to attach servos to the controller for <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnout</abbr> control or for animating a layout component, such as the doors to an engine shed.</p>
 <p><strong>EX-CommandStation</strong>, as of version 3.2.0, provides support for a wider set of input and output devices than previous versions.  This is thanks to a piece of software called the <strong><abbr title="Hardware Abstraction Layer. Allows the CS to discover and use the hardware through a simple abstract API, regardless of the type of underlying hardware.">HAL</abbr></strong> or <strong>H</strong>ardware <strong>A</strong>bstraction <strong>L</strong>ayer. The <abbr title="Hardware Abstraction Layer. Allows the CS to discover and use the hardware through a simple abstract API, regardless of the type of underlying hardware.">HAL</abbr> provides support for a range of different input and output modules through drivers that are supplied with <strong>DCC-EX</strong>. In addition, its simple interface allows advanced technical users to add new plug-in device support to <strong>EX-CommandStation</strong> without having to change a line of the core application code.</p>
 <p>The <abbr title="Hardware Abstraction Layer. Allows the CS to discover and use the hardware through a simple abstract API, regardless of the type of underlying hardware.">HAL</abbr> exposes a standard set of functions which the rest of <strong>EX-CommandStation</strong> code is able to call upon, and the <abbr title="Hardware Abstraction Layer. Allows the CS to discover and use the hardware through a simple abstract API, regardless of the type of underlying hardware.">HAL</abbr> directs the calls to the appropriate device driver. The specific device end-points are given by a kind of pin number, called a <strong>V</strong>\irtual <strong>pin</strong> or <abbr title="an Arduino pin number that has been extended to include pins on external devices or expanders">VPIN</abbr>. Any module has one or more VPINs associated with it.</p>

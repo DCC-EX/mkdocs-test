@@ -7062,18 +7062,96 @@
   
   
   
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_9_6" id="__nav_9_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Additional Serial Commands
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_9_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9_6">
+            <span class="md-nav__icon md-icon"></span>
+            Additional Serial Commands
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
     <li class="md-nav__item">
       <a href="../../serial-commands/legacy-command-reference/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    Serial Commands <small>Legacy Reference</small>
+    Legacy Reference <small>Not Maintained</small>
     
   </span>
   
 
       </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../serial-commands/config-wifi-esp32/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Configure WiFi <small>(EX‑CSB1 & ESP32 v5.7.0+ Only)</small>
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -9996,7 +10074,7 @@ Create an instance of a <abbr title="Hardware Abstraction Layer. Allows the CS t
 <span class="w">      </span><span class="n">ServoTurnout</span><span class="o">::</span><span class="n">create</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="mi">300</span><span class="p">,</span><span class="w"> </span><span class="mi">420</span><span class="w"> </span><span class="mi">210</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span>
 <span class="w">    </span><span class="p">}</span>
 </code></pre></div>
-<p>Because the myHal.cpp module is a self-contained C++ module, autocomplete and visual syntax checking will be fully functional in editors that support it (e.g. PlatformIO).</p>
+<p>Because the myHal.cpp module is a self-contained C++ module, autocomplete and visual syntax checking will be fully functional in editors that support it (e.g. <abbr title="Used with Microsoft Visual Studio Code. The recommended IDE if EX-Installer is insufficient for your needs.">PlatformIO</abbr>).</p>
 <h2 id="list-of-changes">List of Changes<a class="headerlink" href="#list-of-changes" title="Permanent link">&para;</a></h2>
 <p>The following functional changes have been done in the neil-hal branch to support the implementation of the <abbr title="Hardware Abstraction Layer. Allows the CS to discover and use the hardware through a simple abstract API, regardless of the type of underlying hardware.">HAL</abbr> in <strong>EX-CommandStation</strong>, and to improve the handling of Displays, Turnouts, Sensors and Outputs.</p>
 <ul>
