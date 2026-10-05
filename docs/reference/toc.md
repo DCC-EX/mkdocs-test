@@ -24,7 +24,7 @@ li:not(.md-nav__item, .md-tabs__item) a {
         - [**EX-CSB1** CommandStation/Booster 1 Express <small>(<b>EX-CSB1 CommandStation/Booster 1 Express</b>)</small>](../products/ex-commandstation/ex-csb1.md)
         - [Build configuration (config.h) <small>(Configuration <small><small>(config.h)</small></small>)</small>](../products/ex-commandstation/config-h.md)
         - [Wifi configuration <br/><small>(Excluding **EX-CSB1** or ESP32 v5.7.0+)</small> <small>(Configure WiFi <small><small>(Wifi Shield)</small></small>)</small>](../products/ex-commandstation/config-wifi-shield.md)
-        - [WiFi configuration <br/><small>(EX-CSB1 or ESP32 ONLY. v5.7.0+ ONLY)</small> <small>(Configure WiFi <small><small>(EX-CSB1 & ESP32 v5.7.0+)</small></small>)</small>](../products/ex-commandstation/config-wifi-esp32.md)
+        - [WiFi Configuration for version 5.7.0+ <br/><small>Graphical User Interface Options</small> <small>(Configure WiFi <small><small>(EX-CSB1 & ESP32 v5.7.0+)</small></small>)</small>](../products/ex-commandstation/config-wifi-esp32.md)
         - [Testing your EX-CommandStation](../products/ex-commandstation/testing.md)
         - **TrackManager**
             - [TrackManager](../products/ex-commandstation/trackmanager/index.md)
@@ -176,9 +176,10 @@ li:not(.md-nav__item, .md-tabs__item) a {
         - [EX-SensorCAM Abridged Manual <small>(Manual Abridged)</small>](../products/ex-sensorcam/ex-sensor-manual-abridged.md)
     - [EX-DCCInspector <small>(DCC Inspector<small><small> (DIY)</small></small>)</small>](../products/ex-dccinspector/index.md)
 - **Purchase**
-    - [Official DCC-EX Suppliers <small>(Official Sellers)</small>](../purchasing/official-sellers.md)
-    - [Third Party Products and Sellers <small>(Third Party Sellers)</small>](../purchasing/third-party-sellers.md)
-    - [DCC-EX Merchandise <small>(Merchandise)</small>](../purchasing/merchandise.md)
+    - [Official DCC-EX Suppliers <small>(Official Suppliers)</small>](../purchasing/official-sellers.md)
+    - [Selecting a Power Supply](../purchasing/power.md)
+    - [Third Party Products and Sellers <small>(<br/>Third Party Sellers)</small>](../purchasing/third-party-sellers.md)
+    - [DCC-EX Merchandise <small>(<br/>Merchandise)</small>](../purchasing/merchandise.md)
     - [EX-CSB1 - Next Steps - Testing Your Installation <small>(<br/><i>EX-CSB1 Next Steps</i><br/>Test&nbsp;Your&nbsp;EX-CSB1)</small>](../purchasing/next-steps.md)
     - [Connecting to your layout <small>(Connecting to Your Layout<small><small> (Physical&nbsp;Connection)</small></small>)</small>](../purchasing/physical-installation.md)
     - [Following Steps - Throttles <small>(Throttles)</small>](../purchasing/throttles.md)
@@ -241,7 +242,9 @@ li:not(.md-nav__item, .md-tabs__item) a {
     - [EXRAIL Command List <small>(<br/>EXRAIL Command List)</small>](exrail-command-reference.md)
     - [DCC-EX Serial Command List <small>(Serial Commands <small>Full List</small>)</small>](serial-commands/serial-command-list.md)
     - [Serial Commands <small>by Function Group</small>](serial-commands/serial-commands.md)
-    - [Legacy Command Reference <small>(Serial Commands <small>Legacy Reference</small>)</small>](serial-commands/legacy-command-reference.md)
+    - **Additional Serial Commands**
+        - [Legacy Command Reference <small>(Serial Commands <small>Legacy Reference</small>)</small>](serial-commands/legacy-command-reference.md)
+        - [WiFi configuration <br/><small>(EX-CSB1 or ESP32 ONLY. v5.7.0+ ONLY)</small> <small>(Configure WiFi <small>(EX‑CSB1 & ESP32 v5.7.0+ Only)</small>)</small>](serial-commands/config-wifi-esp32.md)
     - [Advanced config.h settings for EX-CommandStation build <small>(<br/>Advanced config.h Options)</small>](advanced-config-h.md)
     - [HAL Device Templates <small>(HAL Device Configuration)</small>](hardware/hal/hal-device-templates.md)
     - **<br/>TrackManager**
@@ -382,4 +385,3 @@ li:not(.md-nav__item, .md-tabs__item) a {
 - [Incorrect IOREF voltage for 3.3v Microcontrollers](microcontrollers/esp32/ioref-incorrect-voltage-fix_not_in_nav.md)
 - [Stationary Decoder Address table](stationary-decoder-addresses_not_in_nav.md)
 - [Using a Serial Monitor / Device Monitor](tools/serial-monitor_not_in_nav.md)
-- [WiFi Configuration for version 5.7.0+ <br/><small>Graphical User Interface Options</small>](../products/ex-commandstation/config-wifi-esp32-gui-options_not_in_nav.md)

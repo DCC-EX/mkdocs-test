@@ -1,0 +1,3 @@
+nav:
+  - Legacy Reference <small>Not Maintained</small>: legacy-command-reference.md
+  - Configure WiFi <small>(EX‑CSB1 & ESP32 v5.7.0+ Only)</small>: config-wifi-esp32.md

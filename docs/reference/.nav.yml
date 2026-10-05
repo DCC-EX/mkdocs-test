@@ -4,7 +4,7 @@ nav:
   - <br/>EXRAIL Command List: exrail-command-reference.md
   - Serial Commands <small>Full List</small>: serial-commands/serial-command-list.md
   - Serial Commands <small>by Function Group</small>: serial-commands/serial-commands.md
-  - Serial Commands <small>Legacy Reference</small>: serial-commands/legacy-command-reference.md
+  - Additional Serial Commands: serial-commands
   - <br/>Advanced config.h Options: advanced-config-h.md
   - HAL Device Configuration: hardware/hal/hal-device-templates.md
   - <br/>TrackManager: trackmanager

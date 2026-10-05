@@ -183,7 +183,7 @@ You can use the ``Common CVs`` drop list to select a CV. The appropriate value w
 
 If you are using an **EX-CSB1**, ESP32 based EX-CommandStation and are are using the latest DEVEL versions of the  EX-CommandStation code (versions from 5.7.0), the ``config.h`` options for WiFi configuration are ignored by **EX-CSB1** or ESP32 **EX-CommandStation**.
 
-Instead you can use the instructions on [this page](/products/ex-commandstation/config-wifi-esp32-gui-options_not_in_nav.md) to change the WiFi setting in **EX-WebThrottle**.
+Instead you can use the instructions on [this page](/products/ex-commandstation/config-wifi-esp32.md) to change the WiFi setting in **EX-WebThrottle**.
 
 ----
 

@@ -1,11 +1,11 @@
 
-# WiFi Configuration for version 5.7.0+ <br/><small>Graphical User Interface Options</small>
+<!-- # WiFi Configuration for version 5.7.0+ <br/><small>Graphical User Interface Options</small> -->
 
 This page is exclusively for users of **EX-CommandStation** version 5.7.0 and later. Version 5.7.0 is currently in the experimental / development (DEVEL) phase and is not recommended for general users.
 
 If you are using an earlier version, please see [WiFi Config](/products/ex-commandstation/config-wifi-shield.md).
 
-Also see [WiFi configuration (EX-CSB1 or ESP32 ONLY. V5.7.0+ ONLY)](/products/ex-commandstation/config-wifi-esp32.md) for more technical information.
+Also see [WiFi configuration Serial Commands (EX-CSB1 or ESP32 ONLY. V5.7.0+ ONLY)](/reference/serial-commands/config-wifi-esp32.md) for more technical information.
 
 ## Background
 
@@ -19,10 +19,10 @@ The advantage of this is that it is independent of the flashing process, and wil
 
 From version 5.7.0, you must configure the WiFi settings through one of the following methods:
 
-1. The **EX-CommandStation**'s own web server
+1. The **EX-CommandStation**'s own web server,
 2. **EX-WebThrottle** (via USB),
 3. **EX-Toolbox** (via USB or over WiFi),
-4. the serial monitor / device monitor of **EX-Installer**, the **Arduino IDE** or **VSC** (via USB) See [Serial Monitors](../../reference/tools/serial-monitor_not_in_nav.md)
+4. the serial monitor / device monitor of **EX-Installer**, the **Arduino IDE** or **VSC** (via USB) See [Serial Monitors](/reference/tools/serial-monitor_not_in_nav.md)
 5. any WiFi throttle or app that can send the appropriate commands to the **EX-CommandStation** over WiFi
 
 **EX-WebThrottle** and **EX-Toolbox** provide a user-friendly interface for configuring WiFi settings, while the serial monitor method allows for more direct access to the configuration process but requires more technical knowledge.
@@ -70,7 +70,7 @@ This is a security feature.  If you could change AP mode settings over WiFi, the
 
 ### Using EX-WebThrottle
 
-1. Connect your PC to the **EX-CommandStation** via USB. Open the **EX-WebThrottle** and select the appropriate COM port for your **EX-CommandStation**. You should see the current WiFi settings displayed in the interface.  See [EX-WebThrottle](../ex-webthrottle/ex-webthrottle.md) for more details.
+1. Connect your PC to the **EX-CommandStation** via USB. Open the **EX-WebThrottle** and select the appropriate COM port for your **EX-CommandStation**. You should see the current WiFi settings displayed in the interface.  See [EX-WebThrottle](/products/ex-webthrottle/ex-webthrottle.md) for more details.
 
 2. Go to the ``Wifi Setup`` page from the menu or the toolbar buttons.
 
@@ -98,7 +98,7 @@ The `Reset WiFi Settings` button on the WiFi Setup page will reset all WiFi sett
 
 **EX-Toolbox** provides a similar interface to the **EX-WebThrottle** for configuring WiFi settings, but it can be accessed either via USB or over WiFi. The process for changing WiFi settings in the **EX-Toolbox** is essentially the same as in the **EX-WebThrottle**, with the same options for AP mode, STA mode, Temporary STA mode and Hostname.
 
-1. Connect your PC to the **EX-Toolbox** via USB or Wifi.  See [EX-Toolbox](../ex-toolbox/index.md) for more details.
+1. Connect your PC to the **EX-Toolbox** via USB or Wifi.  See [EX-Toolbox](/products/ex-toolbox/index.md) for more details.
 
 2. Go to the ``WiFi Setup`` page from the menu or the toolbar buttons and follow the same steps as outlined for the **EX-WebThrottle** above.
 
@@ -114,7 +114,7 @@ The `Reset WiFi Settings` button on the WiFi Setup page will reset all WiFi sett
 
 The process for configuring WiFi settings using the serial monitor or device monitor on any of the **EX-Installer**, Arduino IDE, VSC or WiFi throttle apps are essentially the same.
 
-See [Serial Monitors](../../reference/tools/serial-monitor_not_in_nav.md) for more information.
+See [Serial Monitors](/reference/tools/serial-monitor_not_in_nav.md) for more information.
 
 Also see [WiFi configuration (CSB1 or ESP32 ONLY. V5.7.0+ ONLY)](config-wifi-esp32.md) for more detailed information.
 
@@ -132,7 +132,7 @@ i.e. your home router.  You will need to issue the command:
 
 e.g. Sets the STA mode to connect to a router with SSID "routerSSID" and password.
 
-The **EX-CommandStation** will attempt to connect to this network immediately, and on each rerstart. If it fails to connect, it will revert to AP mode.
+The **EX-CommandStation** will attempt to connect to this network immediately, and on each restart. If it fails to connect, it will revert to AP mode.
 
 ### Changing the Access Point settings
 

@@ -29,7 +29,7 @@ Serial commands to setup the WiFi on the **EX-CommandStations**.
 
 See [WiFi configuration](/products/ex-commandstation/config-wifi-esp32.md) for more infomation on these commands.
 
-Also see the [WiFi Configuration for version 5.7.0+ - Graphical User Interface Options](../../products/ex-commandstation/config-wifi-esp32-gui-options_not_in_nav.md) for detailed instructions on how, and why, to change these settings using EX-WebThrottle or EX-Toolbox.
+Also see the [WiFi Configuration for version 5.7.0+ - Graphical User Interface Options](../../products/ex-commandstation/config-wifi-esp32.md) for detailed instructions on how, and why, to change these settings using EX-WebThrottle or EX-Toolbox.
 
 ## Parameters
 

@@ -83,8 +83,8 @@ Total High TODO matches: 85
 | [docs/reference/hardware/hal/hal-config.md](../reference/hardware/hal/hal-config.md) | 189 | First you will need to add a new file, just like the ==TODO== :ref:`config.h file <ex-commandstation/advanced-setup/installation-options/arduino-ide:Copy the config.example.h file (or rename it)>`. |
 | [docs/reference/hardware/hal/hal-config.md](../reference/hardware/hal/hal-config.md) | 252 | Finally, upload the code to the Arduino as you would do during the standard ==TODO== :ref:`Arduino IDE Setup <ex-commandstation/advanced-setup/installation-options/arduino-ide:upload the software>`. |
 | [docs/reference/hardware/wifi-boards/index.md](../reference/hardware/wifi-boards/index.md) | 3 | ==TODO== Move the legacy pages |
-| [docs/products/ex-commandstation/config-wifi-esp32-gui-options_not_in_nav.md](../products/ex-commandstation/config-wifi-esp32-gui-options_not_in_nav.md) | 61 | ==TODO== The WiFi change limitation has been broken in the latest CS version as anything can be changed via the in-built web server |
-| [docs/products/ex-commandstation/config-wifi-esp32-gui-options_not_in_nav.md](../products/ex-commandstation/config-wifi-esp32-gui-options_not_in_nav.md) | 69 | ==TODO== Changing the WiFi Settings using the EX-CommandStation's own Web Sever |
+| [docs/products/ex-commandstation/config-wifi-esp32.md](../products/ex-commandstation/config-wifi-esp32.md) | 61 | ==TODO== The WiFi change limitation has been broken in the latest CS version as anything can be changed via the in-built web server |
+| [docs/products/ex-commandstation/config-wifi-esp32.md](../products/ex-commandstation/config-wifi-esp32.md) | 69 | ==TODO== Changing the WiFi Settings using the EX-CommandStation's own Web Sever |
 | [docs/products/ex-commandstation/testing.md](../products/ex-commandstation/testing.md) | 3 | (LOTS OF ==TODO== in this file) |
 | [docs/products/ex-dccinspector/index.md](../products/ex-dccinspector/index.md) | 8 | ==TODO== move legacy docs |
 | [docs/products/ex-ioexpander/ex-ioexpander.md](../products/ex-ioexpander/ex-ioexpander.md) | 8 | ==TODO== move legacy docs |
