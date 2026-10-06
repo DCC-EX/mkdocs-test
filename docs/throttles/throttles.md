@@ -26,6 +26,7 @@ The following are lists of the Throttle/Controller apps and devices that are kno
 - [RtDrive DCC-EX (Android)](https://play.google.com/store/apps/details?id=net.rt2c.rtdrivedcc&hl=en_AU&gl=US)
 - DCC-EX CAB ([iOS](https://apps.apple.com/us/app/dcc-ex-cab/id6695754417) and [Android](https://play.google.com/store/apps/details?id=com.gothicmaestro.dccexcab))
 - WiThrottle Cab ([iOS](https://apps.apple.com/us/app/withrottle-cab/id6746695618) and [Android](https://play.google.com/store/apps/details?id=com.gothicmaestro.withrottlecab))
+- [Vector Throttle](https://railworksstudio.com/vector/)
 
 <div style="padding-left: 30px;" markdown="1">
 Note: The Android throttle apps listed above can be made to made to run on Windows PCs. See [Running Android apps on Microsoft Windows](./android-apps-on-windows-and-ios_not_in_nav.md).
@@ -97,6 +98,7 @@ However the **DCC-EX Native/Serial commands** provide a significant number of ex
 - [RtDrive DCC-EX](https://play.google.com/store/apps/details?id=net.rt2c.rtdrivedcc&hl=en_AU&gl=US) (Android)
 - [SRCP Client](https://www.io-expert.com/) (iOS)
 - [TrainNavigator](https://apps.apple.com/sk/app/trainnavigator/id6738654983) (iOS)
+- [Vector Throttle](https://railworksstudio.com/vector/)
 - [Java Model Railroad Interface (JMRI)](https://www.jmri.org/)(Windows, MacOS, Linux)
 - [EX-T3-WiFi (T3 = Tactile Touch Throttle)](https://github.com/DCC-EX/EX-T3-WiFi?tab=readme-ov-file) (Physical DIY)
 - [miniThrottle](https://camelthorn.cloud/miniThrottle/miniIntro.php) (Physical DIY)
@@ -115,6 +117,7 @@ See also: Arduino/ESP32 DCC-EX Native command library - [DCCEXProtocol](https://
 - [Cab Engineer: DCC Throttle](https://www.alfray.com/trains/cab_app.html) (Android)
 - [Locontrol](https://apps.apple.com/us/app/locontrol-dcc-controller/id1473757920) (iOS)
 - WiThrottle Cab ([iOS](https://apps.apple.com/us/app/withrottle-cab/id6746695618) and [Android](https://play.google.com/store/apps/details?id=com.gothicmaestro.withrottlecab))
+- [Vector Throttle](https://railworksstudio.com/vector/)
 - [WiThrottle](https://www.withrottle.com/) (iOS)
 - [SRCP Client](https://www.io-expert.com/) (iOS)
 - [Train Driver](https://apps.apple.com/au/app/train-driver/id1558334503) (iOS)
@@ -196,6 +199,7 @@ Also see: Connect WiFi Throttle via USB
 | [Signal Cab](https://signalcab.com/)                                                               | Paid            | WiFi           | Native / WiT | App        | -                    | -                   | -       | X   | -       | -     | -     | X                   |
 | [Train Throttle](https://drewhoffman.net/trainthrottle/)                                           | Free / Paid     | WiFi           | WiT          | App        | -                    | -                   | -       | X   | X       | X     | -     | -                   |
 | [TrainNavigator](https://apps.apple.com/sk/app/trainnavigator/id6738654983)                        | Free            | WiFi           | Native       | App        | -                    | -                   | -       | X   | -       | -     | -     | -                   |
+| [Vector Throttle](https://railworksstudio.com/vector/)                                             | Paid            | WiFi           | Native / Wit | App        | -                    | -                   | X       | -   | -       | -     | -     | -                   |
 | [WiThrottle](https://www.withrottle.com/)                                                          | Free[^5] / Paid | WiFi           | WiT          | App        | -                    | -                   | -       | X   | -       | -     | -     | -                   |
 | [DCC-EX CAB](https://apps.apple.com/us/app/dcc-ex-cab/id6695754417?uo=2)                           | Paid            | WiFi           | Native       | App        | -                    | -                   | X       | X   | -       | -     | -     | X                   |
 | [DCC Commander](https://apps.apple.com/us/app/dcc-commander/id6498150761)                          | Free[^6] / Paid | WiFi           | Native       | App        | -                    | -                   | -       | X   | -       | -     | -     | X                   |
