@@ -98,7 +98,6 @@ However the **DCC-EX Native/Serial commands** provide a significant number of ex
 - [RtDrive DCC-EX](https://play.google.com/store/apps/details?id=net.rt2c.rtdrivedcc&hl=en_AU&gl=US) (Android)
 - [SRCP Client](https://www.io-expert.com/) (iOS)
 - [TrainNavigator](https://apps.apple.com/sk/app/trainnavigator/id6738654983) (iOS)
-- [Vector Throttle](https://railworksstudio.com/vector/)
 - [Java Model Railroad Interface (JMRI)](https://www.jmri.org/)(Windows, MacOS, Linux)
 - [EX-T3-WiFi (T3 = Tactile Touch Throttle)](https://github.com/DCC-EX/EX-T3-WiFi?tab=readme-ov-file) (Physical DIY)
 - [miniThrottle](https://camelthorn.cloud/miniThrottle/miniIntro.php) (Physical DIY)
@@ -199,7 +198,7 @@ Also see: Connect WiFi Throttle via USB
 | [Signal Cab](https://signalcab.com/)                                                               | Paid            | WiFi           | Native / WiT | App        | -                    | -                   | -       | X   | -       | -     | -     | X                   |
 | [Train Throttle](https://drewhoffman.net/trainthrottle/)                                           | Free / Paid     | WiFi           | WiT          | App        | -                    | -                   | -       | X   | X       | X     | -     | -                   |
 | [TrainNavigator](https://apps.apple.com/sk/app/trainnavigator/id6738654983)                        | Free            | WiFi           | Native       | App        | -                    | -                   | -       | X   | -       | -     | -     | -                   |
-| [Vector Throttle](https://railworksstudio.com/vector/)                                             | Paid            | WiFi           | Native / Wit | App        | -                    | -                   | X       | -   | -       | -     | -     | -                   |
+| [Vector Throttle](https://railworksstudio.com/vector/)                                             | Paid            | WiFi           | Wit          | App        | -                    | -                   | X       | -   | -       | -     | -     | -                   |
 | [WiThrottle](https://www.withrottle.com/)                                                          | Free[^5] / Paid | WiFi           | WiT          | App        | -                    | -                   | -       | X   | -       | -     | -     | -                   |
 | [DCC-EX CAB](https://apps.apple.com/us/app/dcc-ex-cab/id6695754417?uo=2)                           | Paid            | WiFi           | Native       | App        | -                    | -                   | X       | X   | -       | -     | -     | X                   |
 | [DCC Commander](https://apps.apple.com/us/app/dcc-commander/id6498150761)                          | Free[^6] / Paid | WiFi           | Native       | App        | -                    | -                   | -       | X   | -       | -     | -     | X                   |
