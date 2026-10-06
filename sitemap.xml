@@ -977,6 +977,14 @@
          <lastmod>2026-10-06</lastmod>
     </url>
     <url>
+         <loc>https://dcc-ex.com/mkdocs-test/reference/serial-commands/serial-command-at_display_not_in_nav/</loc>
+         <lastmod>2026-10-06</lastmod>
+    </url>
+    <url>
+         <loc>https://dcc-ex.com/mkdocs-test/reference/serial-commands/serial-command-at_not_in_nav/</loc>
+         <lastmod>2026-10-06</lastmod>
+    </url>
+    <url>
          <loc>https://dcc-ex.com/mkdocs-test/reference/serial-commands/serial-command-c-railcom_not_in_nav/</loc>
          <lastmod>2026-10-06</lastmod>
     </url>
@@ -1050,6 +1058,10 @@
     </url>
     <url>
          <loc>https://dcc-ex.com/mkdocs-test/reference/serial-commands/serial-command-jj-rr_not_in_nav/</loc>
+         <lastmod>2026-10-06</lastmod>
+    </url>
+    <url>
+         <loc>https://dcc-ex.com/mkdocs-test/reference/serial-commands/serial-command-kk_and_k_not_in_nav/</loc>
          <lastmod>2026-10-06</lastmod>
     </url>
     <url>
