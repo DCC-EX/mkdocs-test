@@ -9,7 +9,7 @@ Serial command to display text on virtual LCD at specified row.
 
 ## Command(s)
 
-* ``<@ «display» «row» «text»>``
+* ``<@ «display» «row» «text»>`` Display text on virtual LCD at row
 
 ## Parameters
 

@@ -10,8 +10,8 @@ Serial command(s) to indicate a loco entering/leaving a block.
 
 ## Command(s)
 
-* ``<K «blockid» «loco»>``
-* ``<k «blockid» «loco»>``
+* ``<K «blockid» «loco»>`` Loco entering Block
+* ``<k «blockid» «loco»>`` Loco exiting block
 
 ## Parameters
 

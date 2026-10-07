@@ -1,27 +1,29 @@
 ---
 tags:
-  - _@
+  - _9L9
+  - _9L9_eventId
 ---
 
-# <small>``<@>``</small> <br/> Request all virtual msgs to this client
+# <small>``<L> [«eventid»]>``</small> <br/> LCC/CBUS adapter commands
 
-Serial command to request all virtual msgs to this client.
+Serial command(s) to support the LCC/CBUS adapter.
 
 ## Command(s)
 
-* ``<@>`` Request all virtual msgs to this client
+* ``<L>``  LCC incoming event
+* ``<L «eventid»>`` LCC/CBUS adapter introducing self
 
 ## Parameters
 
-none
+* **eventId**: *optional* ==TODO== MEDIUM description
 
 ## Response
 
-==TODO== LOW Responses
+==TODO== Responses
 
 ## Notes
 
-* n/a
+* ==TODO== LOW Notes
 
 ----
 
