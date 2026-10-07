@@ -10,8 +10,8 @@ Serial command(s) to support the LCC/CBUS adapter.
 
 ## Command(s)
 
-* ``<L>``  LCC incoming event
-* ``<L «eventid»>`` LCC/CBUS adapter introducing self
+* ``<L>`` = LCC incoming event
+* ``<L «eventid»>`` = LCC/CBUS adapter introducing self
 
 ## Parameters
 

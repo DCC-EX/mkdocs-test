@@ -11,7 +11,7 @@ Serial command to set the colour of a signal.
 
 ## Command
 
-* ``</ «colour» «signal»>``
+* ``</ «colour» «signal»>`` = Set signal colour
 
 ## Parameters
 

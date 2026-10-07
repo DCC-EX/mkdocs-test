@@ -9,7 +9,7 @@ Serial command to display free RAM.
 
 ## Command(s)
 
-* ``<D RAM>`` Diagnostic display free RAM
+* ``<D RAM>`` = Diagnostic display free RAM
 
 ## Parameters
 

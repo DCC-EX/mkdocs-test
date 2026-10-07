@@ -22,8 +22,8 @@ Serial command to request infomation about the modes of all tracks or alter the 
 
 ## Commands
 
-* ``<=>`` Request the current Track Manager configuration
-* ``<= [«trackletter» «mode»] [«id»]>`` set a specifc track to a mode
+* ``<=>`` = Request the current Track Manager configuration
+* ``<= [«trackletter» «mode»] [«id»]>`` = set a specifc track to a mode
 
 ## Parameters
 

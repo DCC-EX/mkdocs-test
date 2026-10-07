@@ -9,7 +9,7 @@ Serial command to request all virtual msgs to this client.
 
 ## Command(s)
 
-* ``<@>`` Request all virtual msgs to this client
+* ``<@>`` = Request all virtual msgs to this client
 
 ## Parameters
 

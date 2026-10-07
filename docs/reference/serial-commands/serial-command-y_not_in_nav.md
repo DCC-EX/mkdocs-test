@@ -23,17 +23,17 @@ See the [Sounds page](/products/ex-commandstation/accessories/various-devices/so
 
 ## Commands
 
-* ``<y «vpin» FOLDER «folder»>`` Switch to sound track folder
-* ``<y «vpin» PLAY «tracknumber»>`` Play sound track with default volume
-* ``<y «vpin» PLAY «tracknumber» «volume»>`` Play sound track with volume
-* ``<y «vpin» REPEAT «tracknumber»>`` Repeat sound track with default volume
-* ``<y «vpin» REPEAT «tracknumber» «volume»>`` Repeat sound track with volume
-* ``<y «vpin» PAUSE>`` Pause playing sound
-* ``<y «vpin» RESUME>`` Resume playing sound
-* ``<y «vpin» STOP>`` Stop playing sound
-* ``<y «vpin» VOL «volume»>`` Set default volume
-* ``<y «vpin» EQ «eq»>`` Set sound EQ
-* ``<y «vpin» RESET>`` Reset sound module
+* ``<y «vpin» FOLDER «folder»>`` = Switch to sound track folder
+* ``<y «vpin» PLAY «tracknumber»>`` = Play sound track with default volume
+* ``<y «vpin» PLAY «tracknumber» «volume»>`` = Play sound track with volume
+* ``<y «vpin» REPEAT «tracknumber»>`` = Repeat sound track with default volume
+* ``<y «vpin» REPEAT «tracknumber» «volume»>`` = Repeat sound track with volume
+* ``<y «vpin» PAUSE>`` = Pause playing sound
+* ``<y «vpin» RESUME>`` = Resume playing sound
+* ``<y «vpin» STOP>`` = Stop playing sound
+* ``<y «vpin» VOL «volume»>`` = Set default volume
+* ``<y «vpin» EQ «eq»>`` = Set sound EQ
+* ``<y «vpin» RESET>`` = Reset sound module
 
 ## Parameters
 

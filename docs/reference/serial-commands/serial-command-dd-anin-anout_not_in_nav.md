@@ -11,9 +11,9 @@ Serial command(s) to ...
 
 ## Command(s)
 
-* ``<D ANIN «vpin»>`` Display analogue input value
-* ``<D ANOUT «vpin» «position» «profile»>`` see ==TODO==
-* ``<D ANOUT «vpin» «position»>`` see ==TODO==
+* ``<D ANIN «vpin»>`` = Display analogue input value
+* ``<D ANOUT «vpin» «position» «profile»>`` = see ==TODO==
+* ``<D ANOUT «vpin» «position»>`` = see ==TODO==
 
 ## Parameters
 

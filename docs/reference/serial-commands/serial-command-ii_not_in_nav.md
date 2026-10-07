@@ -27,17 +27,17 @@ Also refer to the [legacy EX-Turntable documentation](https://dcc-ex.com/legacy-
 ## Commands
 
 * ``<I>`` List all turntables
-* ``<I «id» ADD «position» «value» «angle»>`` Add turntable position
-* ``<I «id» DCC «home»>`` Create DCC turntable
-* ``<I «id» EXTT «vpin» «home»>`` Create an EXTT turntable
-* ``<I «id» «position» «activity»>`` Rotate an EXTT turntable
-* ``<I «id» «position»>`` Rotate a DCC turntable
-* ``<I «id»>`` Broadcast turntable type and current position
-* ``<D TT «vpin» «steps» «activity»>`` Test turntable
-* ``<D TT «vpin» «steps»>`` Test turntable
-* ``<J O>`` List turntable IDs
-* ``<J O «id»>`` List turntable state
-* ``<J P «id»>`` list turntable positions
+* ``<I «id» ADD «position» «value» «angle»>`` = Add turntable position
+* ``<I «id» DCC «home»>`` = Create DCC turntable
+* ``<I «id» EXTT «vpin» «home»>`` = Create an EXTT turntable
+* ``<I «id» «position» «activity»>`` = Rotate an EXTT turntable
+* ``<I «id» «position»>`` = Rotate a DCC turntable
+* ``<I «id»>`` = Broadcast turntable type and current position
+* ``<D TT «vpin» «steps» «activity»>`` = Test turntable
+* ``<D TT «vpin» «steps»>`` = Test turntable
+* ``<J O>`` = List turntable IDs
+* ``<J O «id»>`` = List turntable state
+* ``<J P «id»>`` = list turntable positions
 
 ## Parameters
 

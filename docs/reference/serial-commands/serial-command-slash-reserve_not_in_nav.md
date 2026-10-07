@@ -11,9 +11,9 @@ Serial commands to reserve or free sections.
 
 ## Commands
 
-* ``</ RESERVE «section»>`` Flag section as reserved
-* ``</ FREE «section»>`` Free reserve on section
-* ``</ FREEALL>`` Free all reserves
+* ``</ RESERVE «section»>`` = Flag section as reserved
+* ``</ FREE «section»>`` = Free reserve on section
+* ``</ FREEALL>`` = Free all reserves
 
 ## Parameters
 

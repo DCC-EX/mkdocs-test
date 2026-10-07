@@ -9,7 +9,8 @@ Serial command(s) to ...
 
 ## Command(s)
 
-* ``<cmd «required parameter» [«optional parameter»]>``
+* ``<cmd «required parameter» [«optional parameter»]>`` = Description
+* ``<cmd «required parameter» [«optional parameter»]>`` = Description
 
 ## Parameters
 

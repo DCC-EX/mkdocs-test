@@ -8,14 +8,14 @@ tags:
 
 # <small>``<A «address» «value»>``</small> <br/><small>``<a «address» [«subAddr»]|[«activate» [«onOff»]]>``</small> <br/>Instruct Accessory Decoders
 
-Serial commands to activate or dactivate accessory decoders.
+Serial commands to activate or deactivate accessory decoders.
 
 ## Command(s)
 
-* ``<A «address» «value»>`` Send DCC extended accessory (Aspect) command
-* ``<a «address» «subAddr» «activate»>`` Send DCC accessory command activate: 0=deactivate, 1=activate
-* ``<a «address» «subAddr» «activate» «onOff»>`` Send DCC accessory command with onoff control activate: 0=deactivate, 1=activate onoff: 0=off, 1=on, 2=toggle
-* ``<a «address» «activate»>`` Send dcc accessory command to linear address activate: 0=deactivate, 1=activate
+* ``<A «address» «value»>`` = Send DCC extended accessory (Aspect) command
+* ``<a «address» «subAddr» «activate»>`` = Send DCC accessory command activate: 0=deactivate, 1=activate
+* ``<a «address» «subAddr» «activate» «onOff»>`` = Send DCC accessory command with onoff control activate: 0=deactivate, 1=activate onoff: 0=off, 1=on, 2=toggle
+* ``<a «address» «activate»>`` = Send dcc accessory command to linear address activate: 0=deactivate, 1=activate
 
 ## Parameters
 

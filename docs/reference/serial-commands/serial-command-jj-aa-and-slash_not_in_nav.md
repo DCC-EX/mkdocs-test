@@ -17,14 +17,14 @@ Serial commands to list, start, pause or stop automations/sequences including ro
 
 ## Commands
 
-* ``<J A>`` List all automations/routes
-* ``<J A «id»>`` list automation details
-* ``</ START [«loco»] «route»>`` Start a sequence, or an automation with a loco
-* ``</ PAUSE>`` Pause all **EXRAIL** tasks
-* ``</ RESUME>`` Resume all **EXRAIL** tasks
-* ``</ KILL ALL>`` Kill all **EXRAIL** tasks
-* ``</ KILL «taskId»>`` Kill specific **EXRAIL** tasks
-* ``<`` ``/`` ``>`` Stream **EXRAIL** status
+* ``<J A>`` = List all automations/routes
+* ``<J A «id»>`` = list automation details
+* ``</ START [«loco»] «route»>`` = Start a sequence, or an automation with a loco
+* ``</ PAUSE>`` = Pause all **EXRAIL** tasks
+* ``</ RESUME>`` = Resume all **EXRAIL** tasks
+* ``</ KILL ALL>`` = Kill all **EXRAIL** tasks
+* ``</ KILL «taskId»>`` = Kill specific **EXRAIL** tasks
+* ``<`` ``/`` ``>`` = Stream **EXRAIL** status
 
 ## Parameters
 

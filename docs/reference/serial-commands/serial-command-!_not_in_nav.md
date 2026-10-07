@@ -13,8 +13,8 @@ Serial command to Emergency Stop all locos, pause all locos, or query the Estop 
 
 ## Commands
 
-* ``<!>`` ESTOP all locos
-* ``<! [«pauseType»]>`` ESTOP pause or query pause
+* ``<!>`` = ESTOP all locos
+* ``<! [«pauseType»]>`` = ESTOP pause or query pause
 
 ## Parameters
 

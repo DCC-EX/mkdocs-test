@@ -10,8 +10,8 @@ Serial command to set DCC speed commands number of steps.
 
 ## Command(s)
 
-* ``<C SPEED128>`` Set all DCC speed commands to 128 step (default)
-* ``<C SPEED28>`` Set all DCC speed commands as 28 step to old decoders
+* ``<C SPEED128>`` = Set all DCC speed commands to 128 step (default)
+* ``<C SPEED28>`` = Set all DCC speed commands as 28 step to old decoders
 
 ## Parameters
 

@@ -12,10 +12,10 @@ Serial commands to Server based momentum for a specific loco.
 
 ## Command(s)
 
-* ``<m «loco» «accelerating» «braking»>`` Set momentum for loco
-* ``<m «loco» «momentum»>`` Set momentum for loco (acceleration and braking)
-* ``<m LINEAR>`` Set Momentum algorithm to linear acceleration
-* ``<m POWER>`` Set momentum algorithm to very based on difference between current speed and throttle setting
+* ``<m «loco» «accelerating» «braking»>`` = Set momentum for loco
+* ``<m «loco» «momentum»>`` = Set momentum for loco (acceleration and braking)
+* ``<m LINEAR>`` = Set Momentum algorithm to linear acceleration
+* ``<m POWER>`` = Set momentum algorithm to very based on difference between current speed and throttle setting
 
 ## Parameters
 

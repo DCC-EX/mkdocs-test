@@ -10,7 +10,7 @@ Serial command for servo motor testing.
 
 ## Command(s)
 
-* ``<D SERVO «vpin» «position» [«profile»]>`` Test servo
+* ``<D SERVO «vpin» «position» [«profile»]>`` = Test servo
 
 ## Parameters
 

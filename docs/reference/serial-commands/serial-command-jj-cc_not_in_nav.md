@@ -10,8 +10,8 @@ Serial commands to get or set the Fastclock time.
 
 ## Command(s)
 
-* ``<J C [«mmmm» [«nn»]]>`` Set fastclock time
-* ``<J C>`` get fastclock time
+* ``<J C [«mmmm» [«nn»]]>`` = Set fastclock time
+* ``<J C>`` = Get fastclock time
 
 ## Parameters
 

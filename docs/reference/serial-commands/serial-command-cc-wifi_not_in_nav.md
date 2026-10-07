@@ -19,13 +19,13 @@ Serial commands to setup the WiFi on the **EX-CommandStations**.
 
 ## Commands
 
-* ``<C WIFI "«ssid»" "«password»">`` set WiFi ssid and password - Station Mode (STA)
-* ``<C WIFI TEMP "«ssid»" "«password»">`` set WiFi ssid and password temporarily - Station Mode (STA)
-* ``<C WIFI AP "«ssid»" "«password»" [«channel»]>`` set WiFi to Access Point mode (AP) with given ssid and password
-* ``<C WIFI HIDDENAP "«ssid»" "«password»" [«channel»]>`` set WiFi to Access Point mode (AP) with given ssid and password, but not advertised (hidden)
-* ``<C WIFI HOSTNAME "«hostname»">`` set WiFi hostname
-* ``<C WIFI DEFAULT>`` set WiFi to default credentials
-* ``<C WIFI ON|OFF>`` Enable/Disable WiFi
+* ``<C WIFI "«ssid»" "«password»">`` = set WiFi ssid and password - Station Mode (STA)
+* ``<C WIFI TEMP "«ssid»" "«password»">`` = set WiFi ssid and password temporarily - Station Mode (STA)
+* ``<C WIFI AP "«ssid»" "«password»" [«channel»]>`` = set WiFi to Access Point mode (AP) with given ssid and password
+* ``<C WIFI HIDDENAP "«ssid»" "«password»" [«channel»]>`` = set WiFi to Access Point mode (AP) with given ssid and password, but not advertised (hidden)
+* ``<C WIFI HOSTNAME "«hostname»">`` = set WiFi hostname
+* ``<C WIFI DEFAULT>`` = set WiFi to default credentials
+* ``<C WIFI ON|OFF>`` = Enable/Disable WiFi
 
 See [WiFi configuration](/products/ex-commandstation/config-wifi-esp32.md) for more infomation on these commands.
 

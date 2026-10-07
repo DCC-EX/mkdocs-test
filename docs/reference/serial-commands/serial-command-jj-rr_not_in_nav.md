@@ -10,8 +10,8 @@ Serial command to request roster info.
 
 ## Commands
 
-* ``<J R>`` Request the list of all roster ids
-* ``<J R [«id»]>`` Request the detailed info on a sepecific roster id
+* ``<J R>`` = Request the list of all roster ids
+* ``<J R [«id»]>`` = Request the detailed info on a sepecific roster id
 
 ## Parameters
 

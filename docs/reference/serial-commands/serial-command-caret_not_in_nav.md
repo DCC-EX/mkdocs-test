@@ -13,9 +13,9 @@ See [Consists page](/products/ex-commandstation/exrail/cookbooks/driving-trains/
 
 ## Commands
 
-* ``<^>`` List consists
-* ``<^ loco>`` Uncouples any consist containing this loco
-* ``<^ leadLoco follower [ follower2..7]>`` Creates a consist from up to 8 loco ids (negative for loco in reverse)
+* ``<^>`` = List consists
+* ``<^ loco>`` = Uncouples any consist containing this loco
+* ``<^ leadLoco follower [ follower2..7]>`` = Creates a consist from up to 8 loco ids (negative for loco in reverse)
 
 ## Parameters
 
