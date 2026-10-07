@@ -10,8 +10,8 @@ Serial command(s) to set or remove a latch.
 
 ## Command(s)
 
-* ``</ LATCH «latch»>`` Set pin latch
-* ``</ UNLATCH «latch»>`` Remove pin latch
+* ``</ LATCH «latch»>`` = Set pin latch
+* ``</ UNLATCH «latch»>`` = Remove pin latch
 
 ## Parameters
 

@@ -22,13 +22,13 @@ Serial commands to enable or disable various diagnostic messages shown on the se
 
 ## Command(s)
 
-* ``<D CMD ON|OFF>`` Enable/Disable command input diagnostics
-* ``<D EXRAIL ON|OFF>`` Enable/Disable EXRAIL diagnostics
-* ``<D ETHERNET ON|OFF>`` Enable/Disable Ethernet diagnostics
-* ``<D WIT ON|OFF>`` Enable/Disable WiThrottle diagnostics
-* ``<D WEBSOCKET ON|OFF>`` Enable/Disable WebSocket diagnostics
-* ``<D RAILCOM ON|OFF>`` Enable/Disable Railcom diagnostics
-* ``<D LCN ON|OFF>`` Enable/Disable LCN diagnostics
+* ``<D CMD ON|OFF>`` = Enable/Disable command input diagnostics
+* ``<D EXRAIL ON|OFF>`` = Enable/Disable EXRAIL diagnostics
+* ``<D ETHERNET ON|OFF>`` = Enable/Disable Ethernet diagnostics
+* ``<D WIT ON|OFF>`` = Enable/Disable WiThrottle diagnostics
+* ``<D WEBSOCKET ON|OFF>`` = Enable/Disable WebSocket diagnostics
+* ``<D RAILCOM ON|OFF>`` = Enable/Disable Railcom diagnostics
+* ``<D LCN ON|OFF>`` = Enable/Disable LCN diagnostics
 
 ## Parameters
 

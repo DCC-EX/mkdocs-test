@@ -12,8 +12,8 @@ Serial command to turn loco decoder functions ON or OFF or set the DC PWM freque
 
 ## Commands
 
-* ``<F «loco» [«function» «state»]>`` set the function on or off
-* ``<F «loco» [DCCFREQ «freqValue»]>`` set the PWM frequency
+* ``<F «loco» [«function» «state»]>`` = set the function on or off
+* ``<F «loco» [DCCFREQ «freqValue»]>`` = set the PWM frequency
 
 ## Parameters
 

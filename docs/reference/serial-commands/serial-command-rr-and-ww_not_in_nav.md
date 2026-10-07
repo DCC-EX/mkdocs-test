@@ -27,13 +27,13 @@ It does not include reading or writing to DCC accessory decoders.
 
 ### Reading CVs
 
-* ``<R>`` Read the driveable loco id on PROG track. <br/>The response may be the long address, short address or consist address.
-* ``<R «cv»>`` Read a cv on PROG track
-* ``<R LOCOID>`` Read the loco id (ignoring the consist address) on the PROG track
-* ``<R CONSIST>`` Read the consist id on PROG track
-* ``<r «loco» «cv»>`` PoM read cv on MAIN track - <span style="color:red">Requires RailCom</span>
-* ``<V «cv» bit «bitValue»>`` Fast read bit with expected value
-* ``<V «cv» «value»>`` Fast read cv with expected value
+* ``<R>`` = Read the driveable loco id on PROG track. <br/>The response may be the long address, short address or consist address.
+* ``<R «cv»>`` = Read a cv on PROG track
+* ``<R LOCOID>`` = Read the loco id (ignoring the consist address) on the PROG track
+* ``<R CONSIST>`` = Read the consist id on PROG track
+* ``<r «loco» «cv»>`` = PoM read cv on MAIN track - <span style="color:red">Requires RailCom</span>
+* ``<V «cv» bit «bitValue»>`` = Fast read bit with expected value
+* ``<V «cv» «value»>`` = Fast read cv with expected value
 
 ### Writing CVs
 

@@ -11,9 +11,9 @@ Serial commands to Manage the EEPROM. (Arduino Mega Only. Not available on the *
 
 ## Command(s)
 
-* ``<D EEPROM «numEntries»>`` Dump EEPROM contents
-* ``<e>`` CLEAR EPROM
-* ``<E>`` STORE EPROM
+* ``<D EEPROM «numEntries»>`` = Dump EEPROM contents
+* ``<e>`` = CLEAR EPROM
+* ``<E>`` = STORE EPROM
 
 ## Parameters
 

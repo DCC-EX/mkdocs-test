@@ -11,9 +11,9 @@ Serial commands to List SensorCAM defines or execute **SensorCAM** commands.
 
 ## Commands
 
-* ``<N>`` List current and alternate defines for SensorCam base vpins
-* ``<N Q>`` Lists full set of SensorCam sensor states
-* ``<N «cmd» «value»>`` Execute SensorCam command with parameters
+* ``<N>`` = List current and alternate defines for SensorCam base vpins
+* ``<N Q>`` = Lists full set of SensorCam sensor states
+* ``<N «cmd» «value»>`` = Execute SensorCam command with parameters
 
 ## Parameters
 

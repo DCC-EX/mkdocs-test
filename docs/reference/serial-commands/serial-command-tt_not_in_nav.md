@@ -32,11 +32,11 @@ Serial commands to define or manage Turnouts/Points.
 
 ### Managing Turnouts/Points
 
-* ``<T>`` List all turnouts/points. Equivalent to ``<J T>``
-* ``<J T>`` List all turnouts/points. Equivalent to ``<T>``
-* ``<T «id» X>`` List turnout/point details. Equivalent to ``<J T «id»>``
-* ``<J T «id»>`` List turnout/point details. Equivalent to ``<T «id» X>``
-* ``<T «id» «state»>`` Throw/Close turnout/point
+* ``<T>`` = List all turnouts/points. Equivalent to ``<J T>``
+* ``<J T>`` = List all turnouts/points. Equivalent to ``<T>``
+* ``<T «id» X>`` = List turnout/point details. Equivalent to ``<J T «id»>``
+* ``<J T «id»>`` = List turnout/point details. Equivalent to ``<T «id» X>``
+* ``<T «id» «state»>`` = Throw/Close turnout/point
 
 ## Parameters
 

@@ -12,10 +12,10 @@ Serial commands to provide the ability to set neopixels on or off or change the 
 
 ## Commands
 
-* ``<o «vpin» «count»>`` Set multiple neopixels on(vpin>0) or off(vpin<0)
-* ``<o «vpin» «r» «g» «b» «count»>`` Set multiple neopixels colour
-* ``<o «vpin» «r» «g» «b»>`` Set neopixel colour
-* ``<o «vpin»>`` Set neopixel on(vpin>0) or off(vpin<0)
+* ``<o «vpin» «count»>`` = Set multiple neopixels on(vpin>0) or off(vpin<0)
+* ``<o «vpin» «r» «g» «b» «count»>`= Set multiple neopixels colour
+* ``<o «vpin» «r» «g» «b»>`` = Set neopixel colour
+* ``<o «vpin»>`` = Set neopixel on(vpin>0) or off(vpin<0)
 
 ## Parameters
 

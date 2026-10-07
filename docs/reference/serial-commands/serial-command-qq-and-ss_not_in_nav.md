@@ -12,10 +12,10 @@ Serial commands to create and manage sensors
 
 ## Commands
 
-* ``<Q>`` List all sensors
-* ``<S>`` List sensors
-* ``<S «id» «vpin» «pullup»>`` Create Sensor
-* ``<S «id»>`` Delete sensor
+* ``<Q>`` = List all sensors
+* ``<S>`` = List sensors
+* ``<S «id» «vpin» «pullup»>`` = Create Sensor
+* ``<S «id»>`` = Delete sensor
 
 ## Parameters
 

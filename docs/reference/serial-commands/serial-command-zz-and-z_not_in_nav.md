@@ -16,14 +16,14 @@ Serial commands to >Manage pin/vpin outputs.
 
 ## Commands
 
-* ``<Z>`` List Output definitions
-* ``<Z «id» «active»>`` Set output
-* ``<Z «id» «pin» «iFlag»>`` Create Output
-* ``<Z «id»>`` Delete output
-* ``<z «signedVpin»>`` Set pin. HIGH if vpin positive, LOW if vpin negative
-* ``<z «vpin» «analogue» «profile» duration»>`` Change analogue value over duration (Fade or servo move)
-* ``<z «vpin» «analogue» «profile»>`` Write analogue device using profile number (Fade or servo movement)
-* ``<z «vpin» «analogue»>`` Write analogue device value
+* ``<Z>`` = List Output definitions
+* ``<Z «id» «active»>`` = Set output
+* ``<Z «id» «pin» «iFlag»>`` = Create Output
+* ``<Z «id»>`` = Delete output
+* ``<z «signedVpin»>`` = Set pin. HIGH if vpin positive, LOW if vpin negative
+* ``<z «vpin» «analogue» «profile» duration»>`` = Change analogue value over duration (Fade or servo move)
+* ``<z «vpin» «analogue» «profile»>`` = Write analogue device using profile number (Fade or servo movement)
+* ``<z «vpin» «analogue»>`` = Write analogue device value
 
 ## Parameters
 

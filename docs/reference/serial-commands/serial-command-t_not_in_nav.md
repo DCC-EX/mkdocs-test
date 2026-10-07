@@ -12,8 +12,8 @@ Serial commands to request information about a loco or set its speed and directi
 
 ## Commands
 
-* ``<t «loco»>`` Request a deliberate update on the loco speed/functions
-* ``<t «loco» [«tSpeed» «direction»]>`` Set a loco's speed and direction
+* ``<t «loco»>`` = Request a deliberate update on the loco speed/functions
+* ``<t «loco» [«tSpeed» «direction»]>`` = Set a loco's speed and direction
 
 ## Parameters
 

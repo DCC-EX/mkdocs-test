@@ -14,12 +14,12 @@ Serial command to manage Stash values.
 
 ## Command(s)
 
-* ``<J M>`` List stash values
-* ``<J M CLEAR ALL>`` Clear all stash values
-* ``<J M CLEAR ANY «locoId»>`` Clear all stash entries that contain * locoId
-* ``<J M CLEAR «stashId»>`` Clear given stash
-* ``<J M «stashId»>`` Get stash value
-* ``<J M «stashId» «locoId»>`` Stash the specified loco in the numbered stash
+* ``<J M>`` = List stash values
+* ``<J M CLEAR ALL>`` = Clear all stash values
+* ``<J M CLEAR ANY «locoId»>`` = Clear all stash entries that contain * locoId
+* ``<J M CLEAR «stashId»>`` = Clear given stash
+* ``<J M «stashId»>`` = Get stash value
+* ``<J M «stashId» «locoId»>`` = Stash the specified loco in the numbered stash
 
 ## Parameters
 

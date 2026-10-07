@@ -1,15 +1,15 @@
 ---
 tags:
-  - _@
+  - _9D9_9RAM9
 ---
 
-# <small>``<@>``</small> <br/> Request all virtual msgs to this client
+# <small>``<D RAM>``</small> <br/> Diagnostic display free RAM
 
-Serial command to request all virtual msgs to this client.
+Serial command to display free RAM.
 
 ## Command(s)
 
-* ``<@>`` = Request all virtual msgs to this client
+* ``<D RAM>`` = Diagnostic display free RAM
 
 ## Parameters
 
@@ -17,11 +17,13 @@ none
 
 ## Response
 
-==TODO== LOW Responses
+``Free memory=xxxx``
+
+* **xxxx**: the amount of free ram
 
 ## Notes
 
-* n/a
+* The response is displayed on the Serial Monitor only.
 
 ----
 
@@ -31,7 +33,7 @@ none
 
 ### *Example Commands*
 
-* ==TODO== LOW - Example Commands
+* Diagnostic display free RAM: ``<D RAM>``
 
 ### *Example Responses:*
 

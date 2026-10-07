@@ -15,12 +15,12 @@ Serial commands to query or reset the EX-CommandStation
 
 ## Commands
 
-* ``<s>`` Request the **EX-CommandStation** status
-* ``<#>`` Request the number of simultaneously supported locos
-* ``<C RESET>`` Reset and restart **EX-CommandStation**
-* ``<D RESET>`` Reset and restart **EX-CommandStation**
-* ``<J I>`` Report currents
-* ``<c>`` (Deprecated) Report main track current
+* ``<s>`` = Request the **EX-CommandStation** status
+* ``<#>`` = Request the number of simultaneously supported locos
+* ``<C RESET>`` = Reset and restart **EX-CommandStation**
+* ``<D RESET>`` = Reset and restart **EX-CommandStation**
+* ``<J I>`` = Report currents
+* ``<c>`` (Deprecated) = Report main track current
 
 ## Parameters
 

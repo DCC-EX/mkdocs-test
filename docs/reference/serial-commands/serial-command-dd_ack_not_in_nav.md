@@ -13,18 +13,18 @@ tags:
 
 # <small>``<D ACK LIMIT|MAX|MIN|OFF|ON [«value» [MS]]>`` <br/>``<C PROGBOOST>``</small> <br/>Modify System PROG track settings
 
-Serial commands to modify the system PROG track settings. Used primarily to help read and write decoders that not fully DCC complient.
+Serial commands to modify the system PROG track settings. Used primarily to help read and write decoders that not fully DCC compliant.
 
 ## Commands
 
-* ``<D ACK LIMIT «value»>`` Set ACK detection limit mA
-* ``<D ACK MAX «value» MS>`` Set ACK maximum duration mS
-* ``<D ACK MAX «value»>`` Set ACK maximum duration µS
-* ``<D ACK MIN «value» MS>`` Set ACK minimum duration mS
-* ``<D ACK MIN «value»>`` Set ACK minimum duration µS
-* ``<D ACK ON|OFF>`` Enable/Disable PROG track diagnostics
-* ``<D ACK RETRY «value»>`` Set ACK retry count
-* ``<C PROGBOOST>`` Configute PROG track boost
+* ``<D ACK LIMIT «value»>`` = Set ACK detection limit mA
+* ``<D ACK MAX «value» MS>`` = Set ACK maximum duration mS
+* ``<D ACK MAX «value»>`` = Set ACK maximum duration µS
+* ``<D ACK MIN «value» MS>`` = Set ACK minimum duration mS
+* ``<D ACK MIN «value»>`` = Set ACK minimum duration µS
+* ``<D ACK ON|OFF>`` = Enable/Disable PROG track diagnostics
+* ``<D ACK RETRY «value»>`` = Set ACK retry count
+* ``<C PROGBOOST>`` = Configure PROG track boost
 
 ## Parameters
 
