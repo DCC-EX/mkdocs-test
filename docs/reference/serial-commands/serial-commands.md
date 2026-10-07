@@ -78,8 +78,8 @@ Reference guide for serial commands used by **EX-CommandStations**, shown in fun
 | ------- | ----------- | ---------- | ------ |
 | [`<F loco function onoff>`](?_9F9_loco_function_onoff) | Set loco function ON/OFF | `loco`: ID, `function`: Function number, `onoff`: 0/1 | Active |
 | [`<F loco DCCFREQ freqvalue>`](?_9F9_loco_9DCCFREQ9_freqValue) | Set DC frequency for loco | `loco`: ID, `freqvalue`: Frequency value | Active |
-| `<f loco byte1>` | Set loco function group | `loco`: ID, `byte1`: Function byte | ⚠️ Deprecated |
-| `<f loco group byte2>` | Set loco function group | `loco`: ID, `group`: Group ID, `byte2`: Function byte | ⚠️ Deprecated |
+| [`<f loco byte1>`](?_f_loco_byte1) | Set loco function group | `loco`: ID, `byte1`: Function byte | ⚠️ Deprecated |
+| [`<f loco group byte2>`](?_f_loco_group_byte2) | Set loco function group | `loco`: ID, `group`: Group ID, `byte2`: Function byte | ⚠️ Deprecated |
 
 ## Consist Control
 
@@ -93,27 +93,27 @@ Reference guide for serial commands used by **EX-CommandStations**, shown in fun
 
 | Command | Description | Parameters | Status |
 | ------- | ----------- | ---------- | ------ |
-| `<T>` | List all turnouts/points | None | Active |
-| `<T id>` | Delete turnout/point | `id`: Turnout ID | Active |
-| `<T id X>` | List turnout/point details | `id`: Turnout ID | Active |
-| `<T id T>` | Throw turnout/point | `id`: Turnout ID | Active |
-| `<T id C>` | Close turnout/point | `id`: Turnout ID | Active |
-| `<T id value>` | Close (value=0) or Throw turnout | `id`: Turnout ID, `value`: 0/1 | Active |
-| `<T id SERVO vpin closedValue thrownValue>` | Create servo turnout | `id`: ID, `vpin`: Pin, values for positions | Active |
-| `<T id VPIN vpin>` | Create pin turnout | `id`: ID, `vpin`: Pin number | Active |
-| `<T id DCC addr subadd>` | Create DCC turnout | `id`: ID, `addr`: Address, `subadd`: Sub-address | Active |
-| `<T id DCC linearAddr>` | Create DCC turnout | `id`: ID, `linearAddr`: Linear address | Active |
-| `<T id addr subadd>` | Create DCC turnout | `id`: ID, `addr`: Address, `subadd`: Sub-address | Active |
-| `<T id vpin closedValue thrownValue>` | Create SERVO turnout | `id`: ID, `vpin`: Pin, position values | Active |
+| [`<T>`](?_9t9) | List all turnouts/points | None | Active |
+| [`<T id>`](?_9t9_id) | Delete turnout/point | `id`: Turnout ID | Active |
+| [`<T id X>`](?_9t9_id_9X9) | List turnout/point details | `id`: Turnout ID | Active |
+| [`<T id T>`](?_9t9_id_9T9) | Throw turnout/point | `id`: Turnout ID | Active |
+| [`<T id C>`](?_9t9_id_9C9) | Close turnout/point | `id`: Turnout ID | Active |
+| [`<T id value>`](?_9t9_id_value) | Close (value=0) or Throw turnout | `id`: Turnout ID, `value`: 0/1 | Active |
+| [`<T id SERVO vpin closedValue thrownValue>`](?_9t9_id_9SERVO9_vpin_closedValue_thrownValue) | Create servo turnout | `id`: ID, `vpin`: Pin, values for positions | Active |
+| [`<T id VPIN vpin>`](?_9t9_id) | Create pin turnout | `id`: ID, `vpin`: Pin number | Active |
+| [`<T id DCC addr subAddr>`](?_9t9_id_9DCC9_addr_subAaddr) | Create DCC turnout | `id`: ID, `addr`: Address, `subadd`: Sub-address | Active |
+| [`<T id DCC linearAddr>`](?_9t9_id_9DCC9_linearAddr) | Create DCC turnout | `id`: ID, `linearAddr`: Linear address | Active |
+| [`<T id addr subadd>`](?_9t9_id_addr_aubaddr) | Create DCC turnout | `id`: ID, `addr`: Address, `subadd`: Sub-address | Active |
+| [`<T id vpin closedValue thrownValue>`](?_9t9_id_vpin_closedValue_thrownValue) | Create SERVO turnout | `id`: ID, `vpin`: Pin, position values | Active |
 
 ## Sensor Control
 
 | Command | Description | Parameters | Status |
 | ------- | ----------- | ---------- | ------ |
-| `<S id vpin pullup>` | Create sensor | `id`: Sensor ID, `vpin`: Pin, `pullup`: Pull-up setting | Active |
-| `<S id>` | Delete sensor | `id`: Sensor ID | Active |
-| `<S>` | List sensors | None | Active |
-| `<Q>` | List all sensors | None | Active |
+| [`<S id vpin pullup>`](?_9S9_id_vpin_pullup) | Create sensor | `id`: Sensor ID, `vpin`: Pin, `pullup`: Pull-up setting | Active |
+| [`<S id>`](?_9S9_id) | Delete sensor | `id`: Sensor ID | Active |
+| [`<S>`](?_9S9) | List sensors | None | Active |
+| [`<Q>`](?_9Q9) | List all sensors | None | Active |
 
 ## CV Programming
 
