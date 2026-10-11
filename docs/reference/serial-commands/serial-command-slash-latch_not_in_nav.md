@@ -2,6 +2,9 @@
 tags:
   - _/_9LATCH9_latch
   - _/_9UNLATCH9_latch
+
+search:
+  boost: 3
 ---
 
 # <small>``</ LATCH «latch»>`` ``</ UNLATCH «latch»>``</small> <br/> Set or remove a latch

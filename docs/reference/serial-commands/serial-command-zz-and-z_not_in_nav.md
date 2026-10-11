@@ -8,6 +8,9 @@ tags:
     - _z_vpin_analogue_profile_duration
     - _z_vpin_analogue_profile
     - _z_vpin_analogue
+
+search:
+  boost: 3
 ---
 
 # <small>``<Z [«id» [«pin» «iFlag»]|«active»]]>``</small> <br/><small>``<z [«signedVpin»]|[«vpin» «analogue» [[«profile»] [«duration»]]]>``</small> <br/>Manage pin/vpin outputs

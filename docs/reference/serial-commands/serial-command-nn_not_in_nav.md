@@ -3,6 +3,9 @@ tags:
   - _9N9
   - _9N9_9Q9
   - _9N9_cmd_value
+
+search:
+  boost: 3
 ---
 
 # <small>``<N Q|[«cmd» «value»]>``</small> <br/> List SensorCAM Defines or Execute Commands

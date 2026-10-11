@@ -12,6 +12,9 @@ tags:
     - _9J9_9O9_id
     - _9J9_9O9
     - _9J9_9P9_id
+
+search:
+  boost: 3
 ---
 
 # <small>``<I [«id»] [«various parameters»]>``</small> <br/><small>``<D TT «vpin» «steps» [«activity]>``</small> <br/><small>``<J O [«id»]>``</small> &nbsp; <small>``<J P «id»>``</small><br/>Manage Turntables

@@ -4,6 +4,9 @@ tags:
   - _m_loco_accelerating_braking
   - _m_loco_momentum
   - _m_9POWER9
+
+search:
+  boost: 3
 ---
 
 # <small>``<m LINEAR|POWER|[«loco» «momentum»|«accelerating» [«braking»]]>``</small> <br/> Set the server based momentum

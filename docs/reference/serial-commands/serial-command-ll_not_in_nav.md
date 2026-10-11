@@ -2,6 +2,9 @@
 tags:
   - _9L9
   - _9L9_eventId
+
+search:
+  boost: 3
 ---
 
 # <small>``<L> [«eventid»]>``</small> <br/> LCC/CBUS adapter commands

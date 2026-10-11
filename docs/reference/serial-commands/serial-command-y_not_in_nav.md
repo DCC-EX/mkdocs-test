@@ -11,6 +11,9 @@ tags:
     - _y_vpin_9RESUME9
     - _y_vpin_9STOP9
     - _y_vpin_9VOL9_volume
+
+search:
+  boost: 3
 ---
 
 # <small>``<y «vpin» EQ|FOLDER|PAUSE|PLAY|REPEAT|RESET|RESUME|STOP|VOL [«various parameters»]>``</small> <br/> Play DF Player sounds

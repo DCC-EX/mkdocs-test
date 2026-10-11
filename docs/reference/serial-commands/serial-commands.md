@@ -40,7 +40,7 @@ Reference guide for serial commands used by **EX-CommandStations**, shown in fun
 
 | Command | Description | Parameters | Status |
 | ------- | ----------- | ---------- | ------ |
-| [`<#>`](?_:h:) | Request number of simultaneously supported locos | None | Active |
+| [`<#>`](?_8hash8) | Request number of simultaneously supported locos | None | Active |
 | [`<!>`](?_!) | Emergency stop all locos | None | Active |
 | [`<!P>`](?_!) | Emergency stop and PAUSE loco movement | None | Active |
 | [`<!R>`](?_!) | Resume after `<!P>` | None | Active |
@@ -69,8 +69,8 @@ Reference guide for serial commands used by **EX-CommandStations**, shown in fun
 | [`<t loco>`](?_t_loco) | Request loco status | `loco`: Locomotive ID | Active |
 | [`<t loco tSpeed direction>`](?_t_loco_tSpeed_direction) | Set throttle speed and direction | `loco`: ID, `tSpeed`: 0-127, `direction`: 0/1 | Active |
 | `<t ignore loco tSpeed direction>` | Set throttle speed and direction | Legacy format | ⚠️ Deprecated |
-| [`<- loco>`](?_-_loco) | Remove loco state and reminders | `loco`: Locomotive ID | Active |
-| [`<->`](?_-) | Clear loco state and reminder table | None | Active |
+| [`<- loco>`](?_8equals8_loco) | Remove loco state and reminders | `loco`: Locomotive ID | Active |
+| [`<->`](?_8equals8) | Clear loco state and reminder table | None | Active |
 
 ## Function Control
 
@@ -85,9 +85,9 @@ Reference guide for serial commands used by **EX-CommandStations**, shown in fun
 
 | Command | Description | Parameters | Status |
 | ------- | ----------- | ---------- | ------ |
-| [`<^>`](?_:c:) | Show all consists | none | Active |
-| [`<^ leadLoco follower [ follower2..7]>`](?_:c:_ leadLoco_follower [_follower2..7]) | Create Consist | `loco`: ID, negative for reversed loco | Active |
-| [`<^ loco>`](?_:c:_loco) | Deletes consist | `loco1`: ID | Active |
+| [`<^>`](?_8caret8) | Show all consists | none | Active |
+| [`<^ leadLoco follower [ follower2..7]>`](?_8caret8_ leadLoco_follower [_follower2..7]) | Create Consist | `loco`: ID, negative for reversed loco | Active |
+| [`<^ loco>`](?_8caret8_loco) | Deletes consist | `loco1`: ID | Active |
 
 ## Turnout/Point Control
 

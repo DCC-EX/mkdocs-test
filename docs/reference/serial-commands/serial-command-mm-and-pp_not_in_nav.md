@@ -4,6 +4,9 @@ tags:
   - _9P9_ignore_d0_d1_d2_d3_d4_d5
   - _9M9_ignore_d0_d1_d2_d3_d4
   - _9P9_ignore_d0_d1_d2_d3_d4
+
+search:
+  boost: 3
 ---
 
 # <small>``<M «ignore» «d0» «d1» [«d2» [«d3» [«d4» [«d5»]]]]>`` <br/> ``<P «ignore» «d0» «d1» [«d2» [«d3» [«d4»] [«d5»]]]]>``</small> <br/> Send up to 6 byte DCC packet to MAIN or PROG

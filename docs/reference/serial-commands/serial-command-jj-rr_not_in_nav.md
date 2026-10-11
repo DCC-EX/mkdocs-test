@@ -2,6 +2,9 @@
 tags:
   - _9J9_9R9
   - _9J9_9R9_id
+
+search:
+  boost: 3
 ---
 
 # <small>``<J R [«id»]>``</small> <br/>Request Roster info

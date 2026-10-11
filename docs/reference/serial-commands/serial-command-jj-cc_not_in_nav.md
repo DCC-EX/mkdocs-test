@@ -2,6 +2,9 @@
 tags:
   - _9J9_9C9
   - _9J9_9C9_mmmm_nn
+
+search:
+  boost: 3
 ---
 
 # <small>``<J C [«mmmm» [«nn»]]>``</small> <br/> Get/Set the Fastclock Time

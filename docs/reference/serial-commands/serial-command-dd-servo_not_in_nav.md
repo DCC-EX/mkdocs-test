@@ -2,6 +2,9 @@
 tags:
   - _9D9_9SERVO9_vpin_position_profile
   - _9D9_9SERVO9_vpin_position
+
+search:
+  boost: 3
 ---
 
 # <small>``<D SERVO «vpin» «position» [«profile»]>``</small> <br/> Servo Motor Testing

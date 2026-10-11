@@ -4,6 +4,9 @@ tags:
     - _o_vpin_r_g_b_count
     - _o_vpin_r_g_b
     - _o_vpin
+
+search:
+  boost: 3
 ---
 
 # <small>``<o «vpin» [«count»]|[«r» «g» «b» [«count»]]>``</small> <br/> Set Neopixels

@@ -4,6 +4,9 @@ tags:
   - _9S9
   - _9S9_id_vpin_pullup
   - _9S9_id
+
+search:
+  boost: 3
 ---
 
 # <small>``<Q>``</small> &nbsp; <small>``<S «id» [«vpin» «pullup»>]``</small> <br/>Manage Sensors

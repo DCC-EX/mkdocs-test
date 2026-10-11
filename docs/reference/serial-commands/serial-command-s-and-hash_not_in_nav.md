@@ -2,11 +2,14 @@
 tags:
   - _s
   - _9S9
-  - _:h:
+  - _8hash8
   - _9C9_9RESET9
   - _9D9_9RESET9
   - _9J9_9I9
   - _c
+
+search:
+  boost: 3
 ---
 
 # <small>``<s>`` &nbsp; ``<#>`` <br/> ``<C RESET>`` ``<D RESET>`` </small> <br/> Query or Reset the EX-CommandStation
