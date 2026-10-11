@@ -46,7 +46,7 @@ function sort_blocks(    i, j, tmp_key, tmp_value) {
         # if linktag contains '^' change it to '8caret8'
         gsub(/\^/, "8caret8", linktag)
         # if linktag contains '-' change it to '8minus8'
-        gsub(/\^/, "8minus8", linktag)
+        gsub(/\-/, "8minus8", linktag)
         # surround uppercase underscore-delimited parts with '9'
         linktag = wrap_upper_parts(linktag)
         
