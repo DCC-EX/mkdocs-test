@@ -198,7 +198,7 @@ Example responses (will return all positions):
 
 ----
 
-## COMMANDS TO AVOID ==TODO==
+## COMMANDS TO AVOID ==TODO== LOW
 
 ``<f cab func1 func2>``     Use ``<F cab function 1/0>``
 

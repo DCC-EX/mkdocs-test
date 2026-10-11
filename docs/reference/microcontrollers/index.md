@@ -24,6 +24,7 @@ We've compiled this simple summary table to help with this:
 
 .md-typeset__scrollwrap table {
     display: table !important;
+    table-layout: fixed !important;
     width: 100% !important;
     border-collapse: separate !important;
     border-spacing: 0 !important;
@@ -37,6 +38,13 @@ We've compiled this simple summary table to help with this:
     left: 0;
     z-index: 3; /* Keeps the column on top of the scrolling content */
     background: var(--md-default-bg-color--light);
+}
+
+.md-typeset__scrollwrap th:nth-child(13),
+.md-typeset__scrollwrap td:nth-child(13),
+.md-typeset__scrollwrap th:first-child,
+.md-typeset__scrollwrap td:first-child {
+    width: 100px !important;
 }
 
 .md-typeset table td,

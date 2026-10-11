@@ -142,6 +142,8 @@ plugins:
         'reference/serial-command-basics.md': 'reference/serial-commands/serial-command-list.md'
         'reference/serial-command-list.md': 'reference/serial-commands/serial-command-list.md'
 
+        'reference/hardware/motorboards/ex-motor-shield-8874.md': 'products/ex-motorshield8874/ex-motorshield8874.md'
+
         'reference/esp32/esp32-acebott.md': 'reference/microcontrollers/esp32/esp32-acebott.md'
         'reference/esp32/esp32-ex8874.md': 'reference/microcontrollers/esp32/esp32-ex8874.md'
         'reference/esp32/esp32-keyestudio.md': 'reference/microcontrollers/esp32/esp32-keyestudio.md'

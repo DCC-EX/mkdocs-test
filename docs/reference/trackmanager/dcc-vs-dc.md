@@ -20,7 +20,6 @@ DC control is simpler but less flexible, especially if you want to run multiple 
 
 **Benefits of PWM in DC Operation** - Using PWM for speed control has several advantages, particularly in terms of smooth operation. Trains start and stop more gradually, and running at slow speeds becomes smoother and more consistent. This gives you better control over your locomotives, making your layout more enjoyable to operate, especially during more delicate manoeuvres.
 
-
 ![PWM Waveform Image](../../_static/images/power/sparkfun_pwm.png){ width=300px }
 <br/>PWM Waveform Image.
 
@@ -81,7 +80,7 @@ You will instead be using a regulated DC (Laptop) 12-16v DC 3-5Amp power supply 
 
 You will be using DC (Pulse Width Modulation PWM) to drive the DC engines, Not DC Direct Current (-0 +16v).
 
-1 - The voltage you need for the motor driver depends on the scale/gauge of the layout you are using. Bigger is not always better. Too high a voltage can damage your locos. See the :ref:`reference/hardware/power-supplies:powering the motor driver` for more information.  
+1. The voltage you need for the motor driver depends on the scale/gauge of the layout you are using. Bigger is not always better. Too high a voltage can damage your locos. See the :ref:`reference/hardware/power-supplies:powering the motor driver` for more information.  
 
 ### DC Operation
 
@@ -94,15 +93,13 @@ When using DC mode with the **EX-CommandStation**, it is important to understand
 
 **Benefits of PWM in DC Operation** - Using PWM for speed control has several advantages, particularly in terms of smooth operation. Trains start and stop more gradually, and running at slow speeds becomes smoother and more consistent. This gives you better control over your locomotives, making your layout more enjoyable to operate, especially during more delicate manoeuvres.
 
-**Frequency of PWM in DC Operation** - PWM can use a variety of frequencies for the pulses it sends, and this can alter motor behaviour and noise etc. The default frequency used for the **EX-CSB1** is xxHz, but this can be varied using the virtual DCC functions 28-31 (check) to allow you to alter the frequency to better suit your loco's motor. This can of course be done during running from the throttle.
-
-==TODO== XXX - map of function number to frequency
+**Frequency of PWM in DC Operation** - PWM can use a variety of frequencies for the pulses it sends, and this can alter motor behaviour and noise etc. The default frequency used for the **EX-CSB1** is 131Hz, but this can be varied using the [virtual DCC functions 28-31](dc-mode-frequency.md) to allow you to alter the frequency to better suit your loco's motor. This can of course be done during running from the throttle. Refer to the [function frequency table](dc-mode-frequency.md) for details.
 
 ### This is Not Zero Stretching
 
 We do not support **zero stretching** / **zero stretch address function**, found on Digitrax and Lenz command Stations, on purpose. The constant dual DCC electrical signal may damage certain types of older DC motors if left on for a long time.
 
-Unlike Digitrax and Lenz 0 Zero stretch DCC (PWM) signal which leaves the engine lit up and humming loudly with the throttle and engine at 0 speed, because it is receiving a Dual DCC(PWM) aka AC signal, while the **EX-CommandStation** TrackManager is dead quiet and at rest at 0 speed.
+The Digitrax and Lenz *0 (zero) stretch DCC* (PWM) signal leaves the engine lit up and humming loudly even with the throttle and engine at 0 speed, because it is receiving a Dual DCC(PWM) aka AC signal, while the **EX-CommandStation** TrackManager is dead quiet at rest (0 speed).
 
 ### Technical Information
 
@@ -119,7 +116,7 @@ These modes, (PWM) vs analogue DC are totally incompatible with one another and 
 
 The DC(PWM) track is Power supply dependent and needs a varying amount of 0 zero to maximum Vdc passed to the track of 12 or 16 or 18vdc, depending on whether they're N, HO or G scale engines.
 
-Note; The signal is detected as DC on this track, from 0Vdc to max +xxVdc depending on the motor shield DC power supply output. The DCC-EX 122.55Hz PWM DC motor signal allows for better functioning and better running than most competing systems.
+Note: The signal is detected as DC on this track, from 0Vdc to max +xxVdc depending on the motor shield DC power supply output. The DCC-EX 122.55Hz PWM DC motor signal allows for better functioning and better running than most competing systems.
 
 ### TrackManager DCC(PWM) vs. DC(PWM) wave forms
 
@@ -144,7 +141,7 @@ A simplified representation of what the dual (PWM) signals might look like throu
 
 Existing analogue DC layouts which have standard DC transformers on two or more separate DC tracks/districts/blocks and/or also have a second separate proprietary DCC command station would have in place a section of dead rail, an electric relay, or a DPDT centre-off switch between the two types of controller powered stations. These should not be using a common ground rail, and only use dual insulated tracks.
 
-You will be replacing this kind of legacy analogue DC and proprietary DCC installation described above with a single **EX-CommandStation** which will have a software switching implementation, allowing you to easily and quickly swap between the two DCC (PWM) and DC (PWM) modes on any of the A thru H dual insulated tracks/districts in real time.
+You will be replacing this kind of legacy analogue DC and proprietary DCC installation described above with a single **EX-CommandStation** which will have a software switching implementation, allowing you to easily and quickly swap between the two DCC (PWM) and DC (PWM) modes on any of the **A** through **H** dual insulated tracks/districts in real time.
 
 This also allows replacing the physical hardware DPDT switch.
 
@@ -174,3 +171,5 @@ Do not attempt to connect two insulated tracks together and drive a DCC engine b
     Never drive a loco from an **EX-CommandStation** controlled track or district to any other DCC or DC System.
 
 Some suggested precautions are to add 4 fuses on wires (-b +b, -a +a) to the **EX-CommandStation** connections. Use 2A fuses for the **EX-CSB1** or 5A fuses for the larger motor drivers.
+
+--8<-- "snippets/abbr.md"

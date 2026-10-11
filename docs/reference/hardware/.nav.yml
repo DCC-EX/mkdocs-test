@@ -1,0 +1,7 @@
+nav:
+  - Overview: index.md
+  - Motor Drivers: motorboards
+  - WiFi Boards: wifi-boards
+  - Ethernet Boards: ethernet-boards
+  - Bluetooth Devices: bluetooth-devices
+  - HAL:  hal

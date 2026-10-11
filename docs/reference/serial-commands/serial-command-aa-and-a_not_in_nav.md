@@ -49,9 +49,7 @@ Serial commands to activate or deactivate accessory decoders.
 Decoder address 511 (linear addresses 2041-2044) is reserved for use as a broadcast address and should not be used for decoders.  <br/>
 Decoder address 0 does not have a corresponding linear address. This seems strange, but it is the mapping used by many, but not all, commercial manufacturers.  <br/> <br/>If your decoder does not respond on the expected linear address, try adding and subtracting 4 to see if it works. Or use the address/subaddress versions of the commands.
 
-Here is a spreadsheet in .XLSX format to help you: [Stationary Decoder Address Table (xlsx Spreadsheet)](https://dcc-ex.com/reference/downloads/documents.html#stationary-decoder-address-table-xlsx-spreadsheet).
-
-==TODO== move this spreadsheet to the new web site
+Here is a spreadsheet in .XLSX format to help you: [Stationary Decoder Address Table (xlsx Spreadsheet)](../../_static/documents/DCCpp-stationary-decoder-addresses.xlsx).
 
 ----
 

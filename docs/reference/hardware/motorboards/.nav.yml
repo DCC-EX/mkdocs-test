@@ -1,3 +1,5 @@
 nav:
-  - L298 Shields: l298-shields.md
+  - Motor Drivers: index.md
+  - EX‑MotorShield8874 : ex-motor-shield-8874.md
+  - L298 Shields <br/><small>Arduino Motor Shield, etc.</small>: l298-shields.md
   - Schematics: schematics.md

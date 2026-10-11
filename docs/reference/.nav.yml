@@ -8,8 +8,8 @@ nav:
   - <br/>Advanced config.h Options: advanced-config-h.md
   - HAL Device Configuration: hardware/hal/hal-device-templates.md
   - <br/>TrackManager: trackmanager
-  - <br/>Microcontrollers: microcontrollers
-  - Other Hardware: hardware
+  - <br/>Alternate Microcontrollers: microcontrollers
+  - Additional &amp; Alternate Hardware: hardware
   - Wiring: wiring
   - <br/>Throttle Developers: throttle-writers
   - Command Station Internal Architecture: command-station-architecture
