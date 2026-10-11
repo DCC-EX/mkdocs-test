@@ -16,11 +16,11 @@ icon: material/reminder
     font-family: 'Roboto Condensed', sans-serif !important;
  }
 </style>
-Scanned docs root: `C:\Users\akers\OneDrive\github\github_doco\mkdocs-test\docs`
+Scanned roots: `C:\Users\akers\OneDrive\github\github_doco\mkdocs-test\docs`, `C:\Users\akers\OneDrive\github\github_doco\mkdocs-test\snippets`
 
 ## High TODOs
 
-Total High TODO matches: 83
+Total High TODO matches: 93
 
 | File | Line | Line text |
 | --- | ---: | --- |
@@ -41,8 +41,8 @@ Total High TODO matches: 83
 | [docs/throttles/dcc-accessories.md](../throttles/dcc-accessories.md) | 3 | ==TODO== how to control DCC Accessories |
 | [docs/reference/serial-commands/serial-command-aa-and-a_not_in_nav.md](../reference/serial-commands/serial-command-aa-and-a_not_in_nav.md) | 36 | ==TODO== responses |
 | [docs/reference/serial-commands/serial-command-aa-and-a_not_in_nav.md](../reference/serial-commands/serial-command-aa-and-a_not_in_nav.md) | 54 | ==TODO== move this spreadsheet to the new web site |
-| [docs/reference/serial-commands/serial-command-dd-anin-anout_not_in_nav.md](../reference/serial-commands/serial-command-dd-anin-anout_not_in_nav.md) | 15 | * ``<D ANOUT «vpin» «position» «profile»>`` see ==TODO== |
-| [docs/reference/serial-commands/serial-command-dd-anin-anout_not_in_nav.md](../reference/serial-commands/serial-command-dd-anin-anout_not_in_nav.md) | 16 | * ``<D ANOUT «vpin» «position»>`` see ==TODO== |
+| [docs/reference/serial-commands/serial-command-dd-anin-anout_not_in_nav.md](../reference/serial-commands/serial-command-dd-anin-anout_not_in_nav.md) | 15 | * ``<D ANOUT «vpin» «position» «profile»>`` = see ==TODO== |
+| [docs/reference/serial-commands/serial-command-dd-anin-anout_not_in_nav.md](../reference/serial-commands/serial-command-dd-anin-anout_not_in_nav.md) | 16 | * ``<D ANOUT «vpin» «position»>`` = see ==TODO== |
 | [docs/reference/serial-commands/serial-command-dd-anin-anout_not_in_nav.md](../reference/serial-commands/serial-command-dd-anin-anout_not_in_nav.md) | 21 | * **position**: ==TODO== |
 | [docs/reference/serial-commands/serial-command-dd-anin-anout_not_in_nav.md](../reference/serial-commands/serial-command-dd-anin-anout_not_in_nav.md) | 22 | * **profile**: ==TODO== |
 | [docs/reference/serial-commands/serial-command-dd_and_e_and_ee_not_in_nav.md](../reference/serial-commands/serial-command-dd_and_e_and_ee_not_in_nav.md) | 20 | * **numEntries**: *optional* ==TODO== explain the parameter |
@@ -62,7 +62,7 @@ Total High TODO matches: 83
 | [docs/reference/serial-commands/serial-command-rr-and-ww_not_in_nav.md](../reference/serial-commands/serial-command-rr-and-ww_not_in_nav.md) | 151 | ==TODO== Response for ``<W «cv» «bitValue» «bit»>` |
 | [docs/reference/serial-commands/serial-command-rr-and-ww_not_in_nav.md](../reference/serial-commands/serial-command-rr-and-ww_not_in_nav.md) | 169 | ==TODO== Response for ``<b «loco» «cv» «bitValue» «bit»>`` |
 | [docs/reference/serial-commands/serial-command-zz-and-z_not_in_nav.md](../reference/serial-commands/serial-command-zz-and-z_not_in_nav.md) | 79 | ==TODO== Response |
-| [docs/reference/serial-commands/shell_serial-command-xyz_not_in_nav.md](../reference/serial-commands/shell_serial-command-xyz_not_in_nav.md) | 40 | ==TODO== Responses |
+| [docs/reference/serial-commands/shell_serial-command-xyz_not_in_nav.md](../reference/serial-commands/shell_serial-command-xyz_not_in_nav.md) | 41 | ==TODO== Responses |
 | [docs/reference/throttle-writers/throttle-writers-guide.md](../reference/throttle-writers/throttle-writers-guide.md) | 68 | ==TODO== Controlling Locos |
 | [docs/reference/throttle-writers/throttle-writers-guide.md](../reference/throttle-writers/throttle-writers-guide.md) | 140 | ==TODO== DCC Accessory Control |
 | [docs/reference/throttle-writers/throttle-writers-guide.md](../reference/throttle-writers/throttle-writers-guide.md) | 166 | Routes and Automations can also have their current status and caption altered dynamically by **EXRAIL** (docs ==TODO==) |
@@ -107,6 +107,16 @@ Total High TODO matches: 83
 | [docs/installer/download/download-linux.md](../installer/download/download-linux.md) | 7 | ==TODO== - Add screenshots & fix page flow |
 | [docs/installer/download/index.md](../installer/download/index.md) | 3 | ==TODO== Downloading EX-Installer - Overview |
 | [docs/contributing/documentation/formatting-guide.md](documentation/formatting-guide.md) | 71 | ==TODO==  Note there is a bug in this process if the heading contains ` - ` (space dash space). |
+| snippets/configure/config-wifi-esp32-gui-options.md | 61 | ==TODO== The WiFi change limitation has been broken in the latest CS version as anything can be changed via the in-built web server |
+| snippets/configure/config-wifi-esp32-gui-options.md | 69 | ==TODO== Changing the WiFi Settings using the EX-CommandStation's own Web Sever |
+| snippets/ex-installer/device-monitor.md | 1 | ==TODO== Instructions on using Device Monitor. |
+| snippets/ex-installer/installing.md | 1 | ==TODO== **This needs to outline the steps to install EX-Installer.** |
+| snippets/ex-installer/startup-logs.md | 1 | ==TODO== Instructions required here to obtain the startup logs from **EX-Installer**. |
+| snippets/testing/testing.md | 3 | (LOTS OF ==TODO== in this file) |
+| snippets/testing/testing.md | 15 | ==TODO== Initial Testing with EX-WebThrottle |
+| snippets/testing/testing.md | 31 | ==TODO== basic steps for initial testing with a Smart Device over WiFi |
+| snippets/testing/testing.md | 41 | ==TODO== what to do if any of the initial testing steps fail |
+| snippets/testing/testing.md | 76 | ==TODO==... pic - Check communication and version |
 
 ## Medium priority TODOs
 
@@ -139,7 +149,7 @@ Total medium priority TODO matches: 22
 
 ## Low priority TODOs
 
-Total low priority TODO matches: 78
+Total low priority TODO matches: 77
 
 | File | Line | Line text |
 | --- | ---: | --- |
@@ -217,8 +227,7 @@ Total low priority TODO matches: 78
 | [docs/reference/serial-commands/serial-command-y_not_in_nav.md](../reference/serial-commands/serial-command-y_not_in_nav.md) | 72 | * ==TODO== LOW - Example Responses |
 | [docs/reference/serial-commands/serial-command-zz-and-z_not_in_nav.md](../reference/serial-commands/serial-command-zz-and-z_not_in_nav.md) | 97 | * ==TODO== LOW - Example Commands |
 | [docs/reference/serial-commands/serial-command-zz-and-z_not_in_nav.md](../reference/serial-commands/serial-command-zz-and-z_not_in_nav.md) | 101 | * ==TODO== LOW - Example Responses |
-| [docs/reference/serial-commands/shell_serial-command-xyz_not_in_nav.md](../reference/serial-commands/shell_serial-command-xyz_not_in_nav.md) | 56 | * ==TODO== LOW - Example Commands |
-| [docs/reference/serial-commands/shell_serial-command-xyz_not_in_nav.md](../reference/serial-commands/shell_serial-command-xyz_not_in_nav.md) | 62 | * ==TODO== LOW - Example Responses |
-| [docs/products/ex-commandstation/exrail/cookbooks/big-picture/stage1.md](../products/ex-commandstation/exrail/cookbooks/big-picture/stage1.md) | 283 | ==TODO== LOW - `Stage 1 <https://github.com/DCC-EX/dcc-ex.github.io/issues/415>`_  - WiThrottle - Multiple Trains |
+| [docs/reference/serial-commands/shell_serial-command-xyz_not_in_nav.md](../reference/serial-commands/shell_serial-command-xyz_not_in_nav.md) | 57 | * ==TODO== LOW - Example Commands |
+| [docs/reference/serial-commands/shell_serial-command-xyz_not_in_nav.md](../reference/serial-commands/shell_serial-command-xyz_not_in_nav.md) | 63 | * ==TODO== LOW - Example Responses |
 | [docs/contributing/documentation/github.md](documentation/github.md) | 95 | ==TODO== LOW - how to preview options |
 

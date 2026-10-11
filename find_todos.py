@@ -69,42 +69,53 @@ def classify_todo_line(line: str) -> str | None:
     return "normal"
 
 
+def format_file_reference(item: dict[str, str | int | None]) -> str:
+    if item["link_path"] is None:
+        return str(item["file"])
+    return f"[{item['file']}]({item['link_path']})"
+
+
 def build_report(root: Path, output_path: Path) -> int:
     output_path = output_path.resolve()
-    scan_root = root / "docs"
+    scan_roots = [root / "docs", root / "snippets"]
     matches = []
     medium_matches = []
     low_matches = []
-    for path in iter_text_files(scan_root):
-        if path.resolve() == output_path:
-            continue
-        try:
-            text = path.read_text(encoding="utf-8", errors="ignore")
-        except OSError:
-            continue
-
-        for line_number, line in enumerate(text.splitlines(), start=1):
-            if EXCLUDE_LINE_PATTERN.search(line):
+    for scan_root in scan_roots:
+        for path in iter_text_files(scan_root):
+            if path.resolve() == output_path:
+                continue
+            try:
+                text = path.read_text(encoding="utf-8", errors="ignore")
+            except OSError:
                 continue
 
-            category = classify_todo_line(line)
-            if category is None:
-                continue
+            for line_number, line in enumerate(text.splitlines(), start=1):
+                if EXCLUDE_LINE_PATTERN.search(line):
+                    continue
 
-            rel_path = path.relative_to(root).as_posix()
-            link_path = os.path.relpath(path, output_path.parent).replace(os.sep, "/")
-            entry = {
-                "file": rel_path,
-                "line_number": line_number,
-                "line": line.strip(),
-                "link_path": link_path,
-            }
-            if category == "low":
-                low_matches.append(entry)
-            elif category == "medium":
-                medium_matches.append(entry)
-            else:
-                matches.append(entry)
+                category = classify_todo_line(line)
+                if category is None:
+                    continue
+
+                rel_path = path.relative_to(root).as_posix()
+                link_path = (
+                    os.path.relpath(path, output_path.parent).replace(os.sep, "/")
+                    if scan_root == root / "docs"
+                    else None
+                )
+                entry = {
+                    "file": rel_path,
+                    "line_number": line_number,
+                    "line": line.strip(),
+                    "link_path": link_path,
+                }
+                if category == "low":
+                    low_matches.append(entry)
+                elif category == "medium":
+                    medium_matches.append(entry)
+                else:
+                    matches.append(entry)
 
     output_path.parent.mkdir(parents=True, exist_ok=True)
     report_sections = [
@@ -122,7 +133,7 @@ def build_report(root: Path, output_path: Path) -> int:
         "    font-family: 'Roboto Condensed', sans-serif !important;\n"
         " }\n"
         "</style>\n",
-        f"Scanned docs root: `{scan_root}`\n\n",
+        f"Scanned roots: `{scan_roots[0]}`, `{scan_roots[1]}`\n\n",
         "## High TODOs\n\n",
         f"Total High TODO matches: {len(matches)}\n\n",
     ]
@@ -131,7 +142,7 @@ def build_report(root: Path, output_path: Path) -> int:
         report_sections.append("| File | Line | Line text |\n")
         report_sections.append("| --- | ---: | --- |\n")
         report_sections.extend(
-            f"| [{item['file']}]({item['link_path']}) | {item['line_number']} | {item['line']} |\n"
+            f"| {format_file_reference(item)} | {item['line_number']} | {item['line']} |\n"
             for item in matches
         )
         report_sections.append("\n")
@@ -144,7 +155,7 @@ def build_report(root: Path, output_path: Path) -> int:
         report_sections.append("| File | Line | Line text |\n")
         report_sections.append("| --- | ---: | --- |\n")
         report_sections.extend(
-            f"| [{item['file']}]({item['link_path']}) | {item['line_number']} | {item['line']} |\n"
+            f"| {format_file_reference(item)} | {item['line_number']} | {item['line']} |\n"
             for item in medium_matches
         )
         report_sections.append("\n")
@@ -157,7 +168,7 @@ def build_report(root: Path, output_path: Path) -> int:
         report_sections.append("| File | Line | Line text |\n")
         report_sections.append("| --- | ---: | --- |\n")
         report_sections.extend(
-            f"| [{item['file']}]({item['link_path']}) | {item['line_number']} | {item['line']} |\n"
+            f"| {format_file_reference(item)} | {item['line_number']} | {item['line']} |\n"
             for item in low_matches
         )
         report_sections.append("\n")
