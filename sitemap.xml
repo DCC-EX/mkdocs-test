@@ -849,6 +849,10 @@
          <lastmod>2026-10-11</lastmod>
     </url>
     <url>
+         <loc>https://dcc-ex.com/mkdocs-test/reference/hardware/</loc>
+         <lastmod>2026-10-11</lastmod>
+    </url>
+    <url>
          <loc>https://dcc-ex.com/mkdocs-test/reference/hardware/i2c-devices/</loc>
          <lastmod>2026-10-11</lastmod>
     </url>
@@ -861,6 +865,10 @@
          <lastmod>2026-10-11</lastmod>
     </url>
     <url>
+         <loc>https://dcc-ex.com/mkdocs-test/reference/hardware/hal/</loc>
+         <lastmod>2026-10-11</lastmod>
+    </url>
+    <url>
          <loc>https://dcc-ex.com/mkdocs-test/reference/hardware/hal/hal-config/</loc>
          <lastmod>2026-10-11</lastmod>
     </url>
@@ -870,6 +878,14 @@
     </url>
     <url>
          <loc>https://dcc-ex.com/mkdocs-test/reference/hardware/hal/writing-hal-driver/</loc>
+         <lastmod>2026-10-11</lastmod>
+    </url>
+    <url>
+         <loc>https://dcc-ex.com/mkdocs-test/reference/hardware/motorboards/</loc>
+         <lastmod>2026-10-11</lastmod>
+    </url>
+    <url>
+         <loc>https://dcc-ex.com/mkdocs-test/reference/hardware/motorboards/ex-motor-shield-8874/</loc>
          <lastmod>2026-10-11</lastmod>
     </url>
     <url>
