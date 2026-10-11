@@ -9926,11 +9926,11 @@
 <li>Turn off power to your <strong>EX-CommandStation</strong> and unplug the USB cable and power supply.</li>
 <li>Connect the Qwiic cable between the <strong><abbr title="EX-CommandStation Booster 1 Express">EX-CSB1</abbr></strong> or EX8874 and the PCA9685 module.<BR>
  <img alt="CSB1" src="../../../../_static/images/ex-csb1/csb1qwiic.jpg" style="width: 70%" /> <BR>
-When using Mega, the I2C bus is 5V.<BR>
-Use the I2C headers, where 5V is available (IOREF/Vdd).<BR>
+When using Mega, the <abbr title="(Inter-Integrated Circuit, pronounced &quot;eye-squared-see&quot;) is a synchronous, multi-controller/multi-target serial communication protocol">I2C</abbr> bus is 5V.<BR>
+Use the <abbr title="(Inter-Integrated Circuit, pronounced &quot;eye-squared-see&quot;) is a synchronous, multi-controller/multi-target serial communication protocol">I2C</abbr> headers, where 5V is available (IOREF/Vdd).<BR>
  <img alt="mega" src="../../../../_static/images/i2c-devices/EX8874_i2c_header.png" style="width: 70%" /></li>
 <li>
-<p>Run the <strong>EX-Installer</strong> on your PC and select the cpu type, then the Serial Monitor. You should see output similar to the following where the <strong>EX-CommandStation</strong> enumerates all the I2C devices it can find.
+<p>Run the <strong>EX-Installer</strong> on your PC and select the cpu type, then the Serial Monitor. You should see output similar to the following where the <strong>EX-CommandStation</strong> enumerates all the <abbr title="(Inter-Integrated Circuit, pronounced &quot;eye-squared-see&quot;) is a synchronous, multi-controller/multi-target serial communication protocol">I2C</abbr> devices it can find.
 from the startup logs using the serial monitor</p>
 <div class="language-cpp highlight"><pre><span></span><code><span class="o">&lt;*</span><span class="w"> </span><span class="n">I2C</span><span class="w"> </span><span class="n">Device</span><span class="w"> </span><span class="n">found</span><span class="w"> </span><span class="n">at</span><span class="w"> </span><span class="mh">0x3C</span><span class="p">,</span><span class="w"> </span><span class="n">OLED</span><span class="w"> </span><span class="n">Display</span><span class="w"> </span><span class="k">or</span><span class="w"> </span><span class="n">HMC583L</span><span class="w"> </span><span class="n">Magnetometer</span><span class="o">?</span><span class="w"> </span><span class="o">*&gt;</span>
 <span class="o">&lt;*</span><span class="w"> </span><span class="n">I2C</span><span class="w"> </span><span class="n">Device</span><span class="w"> </span><span class="n">found</span><span class="w"> </span><span class="n">at</span><span class="w"> </span><span class="mh">0x40</span><span class="p">,</span><span class="w"> </span><span class="n">PWM</span><span class="o">?</span><span class="w"> </span><span class="o">*&gt;</span>
@@ -9947,7 +9947,7 @@ from the startup logs using the serial monitor</p>
 </code></pre></div>
 </li>
 <li>
-<p>Examine the log to check that your PCA9685 has been detected and note the I2C address it found. This will typically be 0x40. If this address is 0x40 or 0x41 then the <strong>EX-CommandStation</strong> has defaulted this to be a PCA9685 and automatically assigned a range of 16 <a href="?VPIN">VPINs</a> to represent the 16 servo outputs.</p>
+<p>Examine the log to check that your PCA9685 has been detected and note the <abbr title="(Inter-Integrated Circuit, pronounced &quot;eye-squared-see&quot;) is a synchronous, multi-controller/multi-target serial communication protocol">I2C</abbr> address it found. This will typically be 0x40. If this address is 0x40 or 0x41 then the <strong>EX-CommandStation</strong> has defaulted this to be a PCA9685 and automatically assigned a range of 16 <a href="?VPIN">VPINs</a> to represent the 16 servo outputs.</p>
 </li>
 <li>Examine the log further down and you should see where the VPINs are assigned. The following advice assumes that the address was 0x40 and the first <abbr title="an Arduino pin number that has been extended to include pins on external devices or expanders">VPIN</abbr> will be 100.</li>
 <li>Plug a servo into the first output socket. DO NOT mechanically connect the servo arm to any <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnout</abbr>/point or animation as the servo may move unexpectedly and cause physical damage.  You will connect the servo arm after exercising the servo (step 8).</li>

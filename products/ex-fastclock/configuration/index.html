@@ -9971,7 +9971,7 @@
 <ul>
 <li>Standalone</li>
 <li>Serial Communication with the <strong>EX-CommandStation</strong></li>
-<li>I2C Communication with the <strong>EX-CommandStation</strong>.</li>
+<li><abbr title="(Inter-Integrated Circuit, pronounced &quot;eye-squared-see&quot;) is a synchronous, multi-controller/multi-target serial communication protocol">I2C</abbr> Communication with the <strong>EX-CommandStation</strong>.</li>
 </ul>
 <p>To indicate which mode is in use it is necessary to edit the <code>config.h</code> file.</p>
 <h2 id="standalone-use">Standalone use<a class="headerlink" href="#standalone-use" title="Permanent link">&para;</a></h2>
@@ -9981,12 +9981,12 @@
 <div class="language-cpp highlight"><pre><span></span><code><span class="c1">//#define SEND_VIA_SERIAL true</span>
 </code></pre></div>
 <p>This will load the appropriate code including the Wire library.</p>
-<h2 id="i2c-mode">I2C mode<a class="headerlink" href="#i2c-mode" title="Permanent link">&para;</a></h2>
-<p>To operate in I2C mode edit the <code>config.h</code> file and uncomment the following lines:</p>
+<h2 id="i2c-mode"><abbr title="(Inter-Integrated Circuit, pronounced &quot;eye-squared-see&quot;) is a synchronous, multi-controller/multi-target serial communication protocol">I2C</abbr> mode<a class="headerlink" href="#i2c-mode" title="Permanent link">&para;</a></h2>
+<p>To operate in <abbr title="(Inter-Integrated Circuit, pronounced &quot;eye-squared-see&quot;) is a synchronous, multi-controller/multi-target serial communication protocol">I2C</abbr> mode edit the <code>config.h</code> file and uncomment the following lines:</p>
 <div class="language-cpp highlight"><pre><span></span><code><span class="c1">//#define I2CAddress 0x55 // default I2C address</span>
 <span class="c1">//#define SEND_VIA_I2C true</span>
 </code></pre></div>
-<p>In this mode the <strong>EX-CommandStation</strong> will poll the FastClock to obtain the time.  It is necessary to set the same I2C address here as used in the <code>myHal.cpp</code> file within the <strong>EX-CommandStation</strong>.  This is set to a default of 0x55 (decimal 85) but can be set to some other value if this conflicts with other I2C devices on your setup.</p>
+<p>In this mode the <strong>EX-CommandStation</strong> will poll the FastClock to obtain the time.  It is necessary to set the same <abbr title="(Inter-Integrated Circuit, pronounced &quot;eye-squared-see&quot;) is a synchronous, multi-controller/multi-target serial communication protocol">I2C</abbr> address here as used in the <code>myHal.cpp</code> file within the <strong>EX-CommandStation</strong>.  This is set to a default of 0x55 (decimal 85) but can be set to some other value if this conflicts with other <abbr title="(Inter-Integrated Circuit, pronounced &quot;eye-squared-see&quot;) is a synchronous, multi-controller/multi-target serial communication protocol">I2C</abbr> devices on your setup.</p>
 <h2 id="screen-header">Screen Header<a class="headerlink" href="#screen-header" title="Permanent link">&para;</a></h2>
 <p>By default the top of the clock screen displays the name of my own layout.  To insert your layout name change the following line.</p>
 <div class="language-cpp highlight"><pre><span></span><code><span class="kt">char</span><span class="w"> </span><span class="n">header</span><span class="p">[</span><span class="n">HDDR_SIZE</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="s">&quot;Nantyderry Junction&quot;</span><span class="p">};</span>
@@ -10036,8 +10036,8 @@
 <div class="language-cpp highlight"><pre><span></span><code><span class="n">SendTime</span><span class="p">(</span><span class="n">HH</span><span class="p">,</span><span class="w"> </span><span class="n">MM</span><span class="p">,</span><span class="w"> </span><span class="n">clockSpeed</span><span class="p">);</span>
 </code></pre></div>
 <p>where HH = the hour, MM = minutes and clockSpeed = the fast speed (e.g. at spped 4, 15 seconds represents a minute).</p>
-<h3 id="connecting-via-i2c">Connecting via I2C<a class="headerlink" href="#connecting-via-i2c" title="Permanent link">&para;</a></h3>
-<p>Connecting via I2C involves a <abbr title="Hardware Abstraction Layer. Allows the CS to discover and use the hardware through a simple abstract API, regardless of the type of underlying hardware.">HAL</abbr> driver file to the <strong>EX-CommandStation</strong> as well as adding some code to the existing FastClock code.  Follow the following steps:</p>
+<h3 id="connecting-via-i2c">Connecting via <abbr title="(Inter-Integrated Circuit, pronounced &quot;eye-squared-see&quot;) is a synchronous, multi-controller/multi-target serial communication protocol">I2C</abbr><a class="headerlink" href="#connecting-via-i2c" title="Permanent link">&para;</a></h3>
+<p>Connecting via <abbr title="(Inter-Integrated Circuit, pronounced &quot;eye-squared-see&quot;) is a synchronous, multi-controller/multi-target serial communication protocol">I2C</abbr> involves a <abbr title="Hardware Abstraction Layer. Allows the CS to discover and use the hardware through a simple abstract API, regardless of the type of underlying hardware.">HAL</abbr> driver file to the <strong>EX-CommandStation</strong> as well as adding some code to the existing FastClock code.  Follow the following steps:</p>
 <ul>
 <li>In the <strong>EX-CommandStation</strong> code copy the file myHal.cpp_example.txt to myHal.cpp.</li>
 <li>Edit the file myHal.cpp and uncomment the following line near the beginning of the file</li>

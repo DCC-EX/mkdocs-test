@@ -10316,9 +10316,9 @@
 <h2 id="standard-configuration-options">Standard configuration options<a class="headerlink" href="#standard-configuration-options" title="Permanent link">&para;</a></h2>
 <h3 id="i2c_address">I2C_ADDRESS<a class="headerlink" href="#i2c_address" title="Permanent link">&para;</a></h3>
 <p>Default: <code>0x60</code></p>
-<p>This is the address that <strong>EX-Turntable</strong> will occupy on the I2C (I<sup>2</sup>C) bus. The default address has been chosen as it is not expected to conflict with any of the existing know I/O expander modules or other known i2c devices.</p>
-<p>If you need to change this for any reason, ensure that the I2C (I<sup>2</sup>C) address in "myHal.cpp" in the <strong>EX-CommandStation</strong> software is also changed to the same value.</p>
-<p>Multiple instances of <strong>EX-Turntable</strong> can be controlled by the same CommandStation by ensuring each has its own unique I2C (I<sup>2</sup>C) address.</p>
+<p>This is the address that <strong>EX-Turntable</strong> will occupy on the <abbr title="(Inter-Integrated Circuit, pronounced &quot;eye-squared-see&quot;) is a synchronous, multi-controller/multi-target serial communication protocol">I2C</abbr> (I<sup>2</sup>C) bus. The default address has been chosen as it is not expected to conflict with any of the existing know I/O expander modules or other known i2c devices.</p>
+<p>If you need to change this for any reason, ensure that the <abbr title="(Inter-Integrated Circuit, pronounced &quot;eye-squared-see&quot;) is a synchronous, multi-controller/multi-target serial communication protocol">I2C</abbr> (I<sup>2</sup>C) address in "myHal.cpp" in the <strong>EX-CommandStation</strong> software is also changed to the same value.</p>
+<p>Multiple instances of <strong>EX-Turntable</strong> can be controlled by the same CommandStation by ensuring each has its own unique <abbr title="(Inter-Integrated Circuit, pronounced &quot;eye-squared-see&quot;) is a synchronous, multi-controller/multi-target serial communication protocol">I2C</abbr> (I<sup>2</sup>C) address.</p>
 <h3 id="turntable_ex_mode">TURNTABLE_EX_MODE<a class="headerlink" href="#turntable_ex_mode" title="Permanent link">&para;</a></h3>
 <p>Default: <code>TURNTABLE</code></p>
 <p>Valid values: <code>TURNTABLE, TRAVERSER</code></p>

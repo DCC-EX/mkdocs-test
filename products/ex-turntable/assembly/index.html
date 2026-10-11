@@ -10273,7 +10273,7 @@
 <tr>
 <td>CommandStation GND</td>
 <td>GND</td>
-<td>A4 G or I2C (I<sup>2</sup>C) GND</td>
+<td>A4 G or <abbr title="(Inter-Integrated Circuit, pronounced &quot;eye-squared-see&quot;) is a synchronous, multi-controller/multi-target serial communication protocol">I2C</abbr> (I<sup>2</sup>C) GND</td>
 </tr>
 </tbody>
 </table>
@@ -10560,19 +10560,19 @@
 <p>In the device setup above, there are three parameters provided, but only two may need to change in your environment if you have other devices that may conflict with these two settings:</p>
 <ul>
 <li><abbr title="an Arduino pin number that has been extended to include pins on external devices or expanders">VPIN</abbr>=600 - This is the default virtual pin (Vpin) ID that is used to send <strong>EX-Turntable</strong> commands to. Vpin IDs need to be unique, so if this ID is used elsewhere, change as necessary (refer <a href="../../../reference/command-station-architecture/hal-architecture/"><abbr title="Hardware Abstraction Layer. Allows the CS to discover and use the hardware through a simple abstract API, regardless of the type of underlying hardware.">HAL</abbr> Overview</a>).</li>
-<li>I2C (I<sup>2</sup>C) address=0x60 - This is the default address on the I2C (I<sup>2</sup>C) bus that the <strong>EX-Turntable</strong> is configured to use. This address also needs to be unique, so change this also if it is in use elsewhere, both in "myAutomation.h" and in "config.h" in the <strong>EX-Turntable</strong> software.</li>
+<li><abbr title="(Inter-Integrated Circuit, pronounced &quot;eye-squared-see&quot;) is a synchronous, multi-controller/multi-target serial communication protocol">I2C</abbr> (I<sup>2</sup>C) address=0x60 - This is the default address on the <abbr title="(Inter-Integrated Circuit, pronounced &quot;eye-squared-see&quot;) is a synchronous, multi-controller/multi-target serial communication protocol">I2C</abbr> (I<sup>2</sup>C) bus that the <strong>EX-Turntable</strong> is configured to use. This address also needs to be unique, so change this also if it is in use elsewhere, both in "myAutomation.h" and in "config.h" in the <strong>EX-Turntable</strong> software.</li>
 </ul>
 <p>If you already have an existing "myAutomation.h" file, then you simply need to add this entry in the appropriate section of your existing file.</p>
 <p>Follow the rest of the directions for <a href="../../../reference/hardware/hal/hal-config/#adding-a-new-device">adding a new device</a> all the way through to the <a href="../../../reference/hardware/hal/hal-config/#upload-the-new-version-of-the-software">upload the new version of the software</a> step to upload your newly configured CommandStation.</p>
 <h3 id="9-connect-ex-turntable-to-your-ex-commandstation">9. Connect EX-Turntable to your EX-CommandStation<a class="headerlink" href="#9-connect-ex-turntable-to-your-ex-commandstation" title="Permanent link">&para;</a></h3>
-<p>To control <strong>EX-Turntable</strong> from your CommandStation, you will need a connection to the I2C (I<sup>2</sup>C) (SDA, SCL) pins.</p>
+<p>To control <strong>EX-Turntable</strong> from your CommandStation, you will need a connection to the <abbr title="(Inter-Integrated Circuit, pronounced &quot;eye-squared-see&quot;) is a synchronous, multi-controller/multi-target serial communication protocol">I2C</abbr> (I<sup>2</sup>C) (SDA, SCL) pins.</p>
 <div class="admonition warninf">
 <p class="admonition-title">Danger</p>
 <p>Ensure you turn the power off to both your CommandStation and <strong>EX-Turntable</strong> prior to making any of these connections.</p>
 </div>
 <p>On the CommandStation, assuming this is a Mega2560 or Mega2560 + WiFi, the SDA (pin 20) and SCL (pin 21) pins are typically labelled as such, so should be easy to identify.</p>
 <p>On an Arduino Nano (and Uno) however, the SDA and SCL pins are shared with analog pins A4 and A5, and therefore aren't explicitly labelled. The SDA pin is A4, and the SCL pin is A5.</p>
-<p>Connect these pins to your CommandStation as shown in the table below, noting that it is important to ensure the ground is also connected to ensure the I2C (I<sup>2</sup>C) communication is reliable.</p>
+<p>Connect these pins to your CommandStation as shown in the table below, noting that it is important to ensure the ground is also connected to ensure the <abbr title="(Inter-Integrated Circuit, pronounced &quot;eye-squared-see&quot;) is a synchronous, multi-controller/multi-target serial communication protocol">I2C</abbr> (I<sup>2</sup>C) communication is reliable.</p>
 <table>
 <thead>
 <tr>

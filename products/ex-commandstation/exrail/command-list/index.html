@@ -2089,6 +2089,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#conventions-and-important-information" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conventions And Important Information
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#activateaddrsubaddr" class="md-nav__link">
     <span class="md-ellipsis">
       ACTIVATE(addr,subaddr)
@@ -11861,6 +11870,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#conventions-and-important-information" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conventions And Important Information
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#activateaddrsubaddr" class="md-nav__link">
     <span class="md-ellipsis">
       ACTIVATE(addr,subaddr)
@@ -13961,6 +13979,35 @@
 <h1 id="exrail-full-command-list"><strong>EXRAIL</strong> Full Command List<a class="headerlink" href="#exrail-full-command-list" title="Permanent link">&para;</a></h1>
 <p>The following list is dynamically built from the <strong>EXRAIL</strong> code. It contains all the <strong>EXRAIL</strong> commands with brief definitions.
 In many cases the parameters are self explanatory, for example a speed (which will always be a DCC compatible 0..127 where 0=stop and 1=emergency stop)</p>
+<h2 id="conventions-and-important-information">Conventions And Important Information<a class="headerlink" href="#conventions-and-important-information" title="Permanent link">&para;</a></h2>
+<details>
+<summary>Click to expand</summary>
+<ul>
+<li>CAPITALISED words - These are EXRAIL commands and are case sensitive</li>
+<li>lowercase words within brackets/braces <code>()</code> - These are EXRAIL parameters that must be provided, with multiple parameters separated by a comma <code>,</code>, for example <code>SEQUENCE(id)</code> or <code>DELAYRANDOM(min_delay, max_delay)</code></li>
+<li>Quoted <code>"text"</code> - Text within quote marks <code>""</code> are used as descriptions, and must include the quote characters, for example <code>ROUTE(id, "description")</code> becomes <code>ROUTE(1, "This is the route description")</code></li>
+<li>Square brackets <code>[]</code> - Parameters within square brackets <code>[]</code> are optional and may be omitted. If specifying these parameters, do not include the square brackets themselves, for example <code>ALIAS(name[, value])</code> becomes <code>ALIAS(MY_ALIAS)</code> or <code>ALIAS(MY_ALIAS, 3)</code></li>
+<li><code>|</code> - Use of the <code>|</code> character means you need to provide one of the provided options only, for example <code>&lt;D POWER ON|OFF&gt;</code> becomes either <code>&lt;D POWER ON&gt;</code> or <code>&lt;D POWER OFF&gt;</code></li>
+</ul>
+<hr />
+<ul>
+<li><em>AUTOMATION</em>, <em>ROUTE</em>, and <em>SEQUENCE</em> use the same ID number space, so a <code>FOLLOW(n)</code> command can be used for any of them</li>
+<li>Sensors and outputs used by AT/AFTER/SET/RESET/LATCH/UNLATCH/SERVO/IF/IFNOT refer directly to Arduino pins, and those handled by <abbr title="(Inter-Integrated Circuit, pronounced &quot;eye-squared-see&quot;) is a synchronous, multi-controller/multi-target serial communication protocol">I2C</abbr> expansion (as virtual pins or vpins).</li>
+<li>Signals also refer directly to pins, and the signal ID (for RED/AMBER/GREEN) is always the same as the RED signal pin</li>
+<li>It's OK to use sensor IDs that have no physical item in the layout. These can only be LATCHed, tested (IF/IFNOT), or UNLATCHed in the sequences. If a sensor is latched by the sequence, it can only be unlatched by the sequence so <code>AT(35) LATCH(35)</code> for example, effectively latches sensor 35 on when detected once</li>
+<li>All IDs used in commands and functions will be numbers, or an ALIAS name if configured</li>
+<li>Most IDs simply need to be unique, however RESERVE/FREE and LATCH/UNLATCH must be in the range 0 - 255</li>
+</ul>
+<div class="admonition warning">
+<p class="admonition-title">avoid angle brackets and double quotes</p>
+<p>You must avoid using these characters in all descriptions: <code>&lt;</code>, <code>&gt;</code>, <code>"</code> as these are part of the native serial protocol and are likely to prevent descriptions showing up in <abbr title="Java Model Railroad Interface">JMRI</abbr> and other throttle software/clients.</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Do not use leading zeros for any numbers!</p>
+<p>Any number with a leading zero will be treated as an octal number, so for example <code>ALIAS(MY_ALIAS, 010)</code> will assign the value of <code>8</code> to MY_ALIAS, not <code>10</code>. This is a common mistake that can lead to very confusing behaviour if you don't know about it. Always use numbers without leading zeros, for example <code>ALIAS(MY_ALIAS, 10)</code> to assign the value of 10 to MY_ALIAS.</p>
+</div>
+</details>
+<hr />
 <h2 id="activateaddrsubaddr">ACTIVATE(addr,subaddr)<a class="headerlink" href="#activateaddrsubaddr" title="Permanent link">&para;</a></h2>
 <p>Send DCC Accessory Activate packet (gate on then off)</p>
 <ul>
@@ -13972,10 +14019,10 @@ In many cases the parameters are self explanatory, for example a speed (which wi
 <ul>
 <li>linearaddr DCC linear address of accessory</li>
 </ul>
-<h2 id="aftervpintimer">AFTER(vpin,timer...)<a class="headerlink" href="#aftervpintimer" title="Permanent link">&para;</a></h2>
+<h2 id="aftervpintimer">AFTER(<abbr title="an Arduino pin number that has been extended to include pins on external devices or expanders">vpin</abbr>,timer...)<a class="headerlink" href="#aftervpintimer" title="Permanent link">&para;</a></h2>
 <p>Wait for sensor activated, then deactivated for given time</p>
 <ul>
-<li>vpin Virtual Pin number of sensor</li>
+<li><abbr title="an Arduino pin number that has been extended to include pins on external devices or expanders">vpin</abbr> Virtual Pin number of sensor</li>
 <li>timer... optional wait in ms, default 500</li>
 </ul>
 <h2 id="afteroverloadtrack_id">AFTEROVERLOAD(track_id)<a class="headerlink" href="#afteroverloadtrack_id" title="Permanent link">&para;</a></h2>
@@ -13992,18 +14039,18 @@ In many cases the parameters are self explanatory, for example a speed (which wi
 <h2 id="ambersignal_id">AMBER(signal_id)<a class="headerlink" href="#ambersignal_id" title="Permanent link">&para;</a></h2>
 <p>Sets a signal to amber state</p>
 <p>see ONAMBER</p>
-<h2 id="anoutvpinvalueparam1param2">ANOUT(vpin,value,param1,param2)<a class="headerlink" href="#anoutvpinvalueparam1param2" title="Permanent link">&para;</a></h2>
-<p>Writes to the HAL analog output interface of a device driver.</p>
+<h2 id="anoutvpinvalueparam1param2">ANOUT(<abbr title="an Arduino pin number that has been extended to include pins on external devices or expanders">vpin</abbr>,value,param1,param2)<a class="headerlink" href="#anoutvpinvalueparam1param2" title="Permanent link">&para;</a></h2>
+<p>Writes to the <abbr title="Hardware Abstraction Layer. Allows the CS to discover and use the hardware through a simple abstract API, regardless of the type of underlying hardware.">HAL</abbr> analog output interface of a device driver.</p>
 <ul>
-<li>vpin Virtual pin number of device</li>
+<li><abbr title="an Arduino pin number that has been extended to include pins on external devices or expanders">vpin</abbr> Virtual pin number of device</li>
 <li>value basic analog value</li>
 <li>param1 device dependent</li>
 <li>param2 device dependent</li>
 </ul>
-<h2 id="atvpin">AT(vpin)<a class="headerlink" href="#atvpin" title="Permanent link">&para;</a></h2>
+<h2 id="atvpin">AT(<abbr title="an Arduino pin number that has been extended to include pins on external devices or expanders">vpin</abbr>)<a class="headerlink" href="#atvpin" title="Permanent link">&para;</a></h2>
 <p>Wait until a sensor becomes active</p>
 <ul>
-<li>vpin Virtual pin of sensor. Use negative value for sensors that are HIGH when activated</li>
+<li><abbr title="an Arduino pin number that has been extended to include pins on external devices or expanders">vpin</abbr> Virtual pin of sensor. Use negative value for sensors that are HIGH when activated</li>
 </ul>
 <h2 id="aspectaddressvalue">ASPECT(address,value)<a class="headerlink" href="#aspectaddressvalue" title="Permanent link">&para;</a></h2>
 <p>Sends a DCC aspect value to an accessory address. May also change status of a signal defined using this aspect.</p>
@@ -14011,23 +14058,23 @@ In many cases the parameters are self explanatory, for example a speed (which wi
 <li>address Linear DCC address of device</li>
 <li>value Aspect value (Device dependent)</li>
 </ul>
-<h2 id="atgtevpinvalue">ATGTE(vpin,value)<a class="headerlink" href="#atgtevpinvalue" title="Permanent link">&para;</a></h2>
+<h2 id="atgtevpinvalue">ATGTE(<abbr title="an Arduino pin number that has been extended to include pins on external devices or expanders">vpin</abbr>,value)<a class="headerlink" href="#atgtevpinvalue" title="Permanent link">&para;</a></h2>
 <p>Wait for analog sensor to be greater than given value</p>
 <ul>
-<li>vpin Analog pin number</li>
+<li><abbr title="an Arduino pin number that has been extended to include pins on external devices or expanders">vpin</abbr> Analog pin number</li>
 <li>value integer value to compare against</li>
 </ul>
-<h2 id="atltvpinvalue">ATLT(vpin,value)<a class="headerlink" href="#atltvpinvalue" title="Permanent link">&para;</a></h2>
+<h2 id="atltvpinvalue">ATLT(<abbr title="an Arduino pin number that has been extended to include pins on external devices or expanders">vpin</abbr>,value)<a class="headerlink" href="#atltvpinvalue" title="Permanent link">&para;</a></h2>
 <p>Wait for analog sensor value to be less than given value</p>
 <ul>
-<li>vpin Analog pin number</li>
+<li><abbr title="an Arduino pin number that has been extended to include pins on external devices or expanders">vpin</abbr> Analog pin number</li>
 <li>value integer value to compare against</li>
 </ul>
-<h2 id="attimeoutvpintimeout_ms">ATTIMEOUT(vpin,timeout_ms)<a class="headerlink" href="#attimeoutvpintimeout_ms" title="Permanent link">&para;</a></h2>
+<h2 id="attimeoutvpintimeout_ms">ATTIMEOUT(<abbr title="an Arduino pin number that has been extended to include pins on external devices or expanders">vpin</abbr>,timeout_ms)<a class="headerlink" href="#attimeoutvpintimeout_ms" title="Permanent link">&para;</a></h2>
 <p>Wait for sensor active, with timeout. Use IFTIMEOUT to determine whether the AT was satisfied.</p>
 <p>see IFTIMEOUT</p>
 <ul>
-<li>vpin Sensor pin number</li>
+<li><abbr title="an Arduino pin number that has been extended to include pins on external devices or expanders">vpin</abbr> Sensor pin number</li>
 <li>timeout_ms Milliseconds to wait before timeout</li>
 </ul>
 <h2 id="automationsequence_iddescription">AUTOMATION(sequence_id,description)<a class="headerlink" href="#automationsequence_iddescription" title="Permanent link">&para;</a></h2>
@@ -14039,10 +14086,10 @@ In many cases the parameters are self explanatory, for example a speed (which wi
 </ul>
 <h2 id="autostart">AUTOSTART<a class="headerlink" href="#autostart" title="Permanent link">&para;</a></h2>
 <p>A new task will be created starting from this point at Command Station startup</p>
-<h2 id="blinkvpinondutyoffduty">BLINK(vpin,onDuty,offDuty)<a class="headerlink" href="#blinkvpinondutyoffduty" title="Permanent link">&para;</a></h2>
-<p>Starts a blinking process for a vpin (typically a LED). Stop blink with SET or RESET.</p>
+<h2 id="blinkvpinondutyoffduty">BLINK(<abbr title="an Arduino pin number that has been extended to include pins on external devices or expanders">vpin</abbr>,onDuty,offDuty)<a class="headerlink" href="#blinkvpinondutyoffduty" title="Permanent link">&para;</a></h2>
+<p>Starts a blinking process for a <abbr title="an Arduino pin number that has been extended to include pins on external devices or expanders">vpin</abbr> (typically a LED). Stop blink with SET or RESET.</p>
 <ul>
-<li>vpin Pin to blink</li>
+<li><abbr title="an Arduino pin number that has been extended to include pins on external devices or expanders">vpin</abbr> Pin to blink</li>
 <li>onDuty Milliseconds with LED ON</li>
 <li>offDuty Milliseconds with LED off</li>
 </ul>
@@ -14053,12 +14100,12 @@ In many cases the parameters are self explanatory, for example a speed (which wi
 <li>msg  Quoted message</li>
 </ul>
 <h2 id="build_consistloco_id">BUILD_CONSIST(loco_id)<a class="headerlink" href="#build_consistloco_id" title="Permanent link">&para;</a></h2>
-<p>Adds a loco to follow the current loco in a consist</p>
+<p>Adds a loco to follow the current loco in a <abbr title="North American term. &quot;Consist&quot; refers to multiple locos driving one train. Elsewhere referred to as a &quot;Multiple Unit&quot; (MU) train">consist</abbr></p>
 <ul>
 <li>loco_id may be negative to indicate loco facing backwards</li>
 </ul>
 <h2 id="break_consist">BREAK_CONSIST<a class="headerlink" href="#break_consist" title="Permanent link">&para;</a></h2>
-<p>Breaks up any consist involving the current loco</p>
+<p>Breaks up any <abbr title="North American term. &quot;Consist&quot; refers to multiple locos driving one train. Elsewhere referred to as a &quot;Multiple Unit&quot; (MU) train">consist</abbr> involving the current loco</p>
 <h2 id="callsequence_id">CALL(sequence_id)<a class="headerlink" href="#callsequence_id" title="Permanent link">&para;</a></h2>
 <p>transfer control to another sequence with expectation to return</p>
 <p>see RETURN</p>
@@ -14077,7 +14124,7 @@ In many cases the parameters are self explanatory, for example a speed (which wi
 <h2 id="clear_any_stash">CLEAR_ANY_STASH<a class="headerlink" href="#clear_any_stash" title="Permanent link">&para;</a></h2>
 <p>Clears loco value from all stash entries</p>
 <h2 id="closeturnout_id">CLOSE(turnout_id)<a class="headerlink" href="#closeturnout_id" title="Permanent link">&para;</a></h2>
-<p>Close turnout by id</p>
+<p>Close <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnout</abbr> by id</p>
 <p>see THROW</p>
 <h2 id="configure_dialogtitlebody">CONFIGURE_DIALOG(title,body)<a class="headerlink" href="#configure_dialogtitlebody" title="Permanent link">&para;</a></h2>
 <p>Set up browser config dialog with title and body text. The dialog will be shown when the user clicks on the config button in the browser interface.</p>
@@ -14085,10 +14132,10 @@ In many cases the parameters are self explanatory, for example a speed (which wi
 <li>title Quoted text for dialog title</li>
 <li>body base name for dialog body text.</li>
 </ul>
-<h2 id="configure_servovpinpos1pos2profile">CONFIGURE_SERVO(vpin,pos1,pos2,profile)<a class="headerlink" href="#configure_servovpinpos1pos2profile" title="Permanent link">&para;</a></h2>
-<p>Set up servo movement parameters for non-turnout</p>
+<h2 id="configure_servovpinpos1pos2profile">CONFIGURE_SERVO(<abbr title="an Arduino pin number that has been extended to include pins on external devices or expanders">vpin</abbr>,pos1,pos2,profile)<a class="headerlink" href="#configure_servovpinpos1pos2profile" title="Permanent link">&para;</a></h2>
+<p>Set up servo movement parameters for non-<abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnout</abbr></p>
 <ul>
-<li>vpin must refer to a servo capable pin</li>
+<li><abbr title="an Arduino pin number that has been extended to include pins on external devices or expanders">vpin</abbr> must refer to a servo capable pin</li>
 <li>pos1 SET position of servo</li>
 <li>pos2 RESET position of servo</li>
 <li>profile Movement profile (Instant, Fast, Medium, Slow, Bounce)</li>
@@ -14164,16 +14211,16 @@ In many cases the parameters are self explanatory, for example a speed (which wi
 <p>Resumes loco speeds after ESTOP_PAUSE</p>
 <h2 id="exrail">EXRAIL<a class="headerlink" href="#exrail" title="Permanent link">&para;</a></h2>
 <p>obsolete.. no longer needed. Does nothing.</p>
-<h2 id="extt_turntableidvpinhomedescription">EXTT_TURNTABLE(id,vpin,home,description...)<a class="headerlink" href="#extt_turntableidvpinhomedescription" title="Permanent link">&para;</a></h2>
-<p>Defines the EX‑Turntable turntable/traverser object only, so you will need a separate HAL() statement for an EX‑Turntable device driver.</p>
+<h2 id="extt_turntableidvpinhomedescription">EXTT_TURNTABLE(id,<abbr title="an Arduino pin number that has been extended to include pins on external devices or expanders">vpin</abbr>,home,description...)<a class="headerlink" href="#extt_turntableidvpinhomedescription" title="Permanent link">&para;</a></h2>
+<p>Defines the EX‑Turntable turntable/traverser object only, so you will need a separate <abbr title="Hardware Abstraction Layer. Allows the CS to discover and use the hardware through a simple abstract API, regardless of the type of underlying hardware.">HAL</abbr>() statement for an EX‑Turntable device driver.</p>
 <ul>
 <li>homeAngle  the angle of the home position, valid angles are 0 - 3600</li>
 <li>quoted description...</li>
 </ul>
-<h2 id="fadevpinvaluems">FADE(vpin,value,ms)<a class="headerlink" href="#fadevpinvaluems" title="Permanent link">&para;</a></h2>
+<h2 id="fadevpinvaluems">FADE(<abbr title="an Arduino pin number that has been extended to include pins on external devices or expanders">vpin</abbr>,value,ms)<a class="headerlink" href="#fadevpinvaluems" title="Permanent link">&para;</a></h2>
 <p>Modifies analog value slowly taking a given time</p>
 <ul>
-<li>vpin Servo virtual pin number</li>
+<li><abbr title="an Arduino pin number that has been extended to include pins on external devices or expanders">vpin</abbr> Servo virtual pin number</li>
 <li>value new target value</li>
 <li>ms time to reach value</li>
 </ul>
@@ -14205,51 +14252,51 @@ In many cases the parameters are self explanatory, for example a speed (which wi
 </ul>
 <h2 id="greensignal_id">GREEN(signal_id)<a class="headerlink" href="#greensignal_id" title="Permanent link">&para;</a></h2>
 <p>Sets signal to green state</p>
-<h2 id="halhaltypeparams">HAL(haltype,params...)<a class="headerlink" href="#halhaltypeparams" title="Permanent link">&para;</a></h2>
-<p>Defines VPIN mapping for specific hardware drivers</p>
+<h2 id="halhaltypeparams"><abbr title="Hardware Abstraction Layer. Allows the CS to discover and use the hardware through a simple abstract API, regardless of the type of underlying hardware.">HAL</abbr>(haltype,params...)<a class="headerlink" href="#halhaltypeparams" title="Permanent link">&para;</a></h2>
+<p>Defines <abbr title="an Arduino pin number that has been extended to include pins on external devices or expanders">VPIN</abbr> mapping for specific hardware drivers</p>
 <ul>
 <li>haltype driver name, normally device type</li>
 <li>params... depend on driver.</li>
 </ul>
 <h2 id="hal_ignore_defaults">HAL_IGNORE_DEFAULTS<a class="headerlink" href="#hal_ignore_defaults" title="Permanent link">&para;</a></h2>
-<p>System will ignore default HAL device mappings</p>
-<h2 id="ifvpin">IF(vpin)<a class="headerlink" href="#ifvpin" title="Permanent link">&para;</a></h2>
+<p>System will ignore default <abbr title="Hardware Abstraction Layer. Allows the CS to discover and use the hardware through a simple abstract API, regardless of the type of underlying hardware.">HAL</abbr> device mappings</p>
+<h2 id="ifvpin">IF(<abbr title="an Arduino pin number that has been extended to include pins on external devices or expanders">vpin</abbr>)<a class="headerlink" href="#ifvpin" title="Permanent link">&para;</a></h2>
 <p>Checks sensor state, If false jumps to matching nested ELSE or ENDIF</p>
 <ul>
-<li>vpin  VPIN of sensor. Negative VPIN will invert sensor state.</li>
+<li><abbr title="an Arduino pin number that has been extended to include pins on external devices or expanders">vpin</abbr>  <abbr title="an Arduino pin number that has been extended to include pins on external devices or expanders">VPIN</abbr> of sensor. Negative <abbr title="an Arduino pin number that has been extended to include pins on external devices or expanders">VPIN</abbr> will invert sensor state.</li>
 </ul>
 <h2 id="if_allvpinlist">IF_ALL(vpinList...)<a class="headerlink" href="#if_allvpinlist" title="Permanent link">&para;</a></h2>
 <p>Checks sensor state, If any are false, it jumps to matching nested ELSE or ENDIF</p>
 <ul>
-<li>vpinlist  comma separated list of VPINs of sensors. Negative VPIN will invert sensor state.</li>
+<li>vpinlist  comma separated list of VPINs of sensors. Negative <abbr title="an Arduino pin number that has been extended to include pins on external devices or expanders">VPIN</abbr> will invert sensor state.</li>
 </ul>
 <h2 id="if_anyvpinlist">IF_ANY(vpinList...)<a class="headerlink" href="#if_anyvpinlist" title="Permanent link">&para;</a></h2>
 <p>Checks sensor state, If all are false jumps to matching nested ELSE or ENDIF</p>
 <ul>
-<li>vpinlist  comma separated list of VPINs of sensors. Negative VPIN will invert sensor state.</li>
+<li>vpinlist  comma separated list of VPINs of sensors. Negative <abbr title="an Arduino pin number that has been extended to include pins on external devices or expanders">VPIN</abbr> will invert sensor state.</li>
 </ul>
 <h2 id="ifambersignal_id">IFAMBER(signal_id)<a class="headerlink" href="#ifambersignal_id" title="Permanent link">&para;</a></h2>
 <p>Checks if signal is in AMBER state.</p>
 <p>see IF</p>
 <h2 id="ifclosedturnout_id">IFCLOSED(turnout_id)<a class="headerlink" href="#ifclosedturnout_id" title="Permanent link">&para;</a></h2>
-<p>Checks if given turnout is in close state</p>
+<p>Checks if given <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnout</abbr> is in close state</p>
 <p>see IF</p>
 <h2 id="ifgreensignal_id">IFGREEN(signal_id)<a class="headerlink" href="#ifgreensignal_id" title="Permanent link">&para;</a></h2>
 <p>Checks if given signal is in GREEN state</p>
 <p>see IF</p>
-<h2 id="ifgtevpinvalue">IFGTE(vpin,value)<a class="headerlink" href="#ifgtevpinvalue" title="Permanent link">&para;</a></h2>
-<p>Checks if analog vpin sensor &gt;= value</p>
+<h2 id="ifgtevpinvalue">IFGTE(<abbr title="an Arduino pin number that has been extended to include pins on external devices or expanders">vpin</abbr>,value)<a class="headerlink" href="#ifgtevpinvalue" title="Permanent link">&para;</a></h2>
+<p>Checks if analog <abbr title="an Arduino pin number that has been extended to include pins on external devices or expanders">vpin</abbr> sensor &gt;= value</p>
 <p>see IF</p>
 <h2 id="iflocoloco_id_list">IFLOCO(loco_id_list...)<a class="headerlink" href="#iflocoloco_id_list" title="Permanent link">&para;</a></h2>
 <p>Checks if current task loco is in the list of loco ids. List may be comma separated values</p>
 <p>see IF</p>
-<h2 id="ifltvpinvalue">IFLT(vpin,value)<a class="headerlink" href="#ifltvpinvalue" title="Permanent link">&para;</a></h2>
+<h2 id="ifltvpinvalue">IFLT(<abbr title="an Arduino pin number that has been extended to include pins on external devices or expanders">vpin</abbr>,value)<a class="headerlink" href="#ifltvpinvalue" title="Permanent link">&para;</a></h2>
 <p>Checks if analog sensor &lt; value</p>
 <p>see IF</p>
 <ul>
-<li>vpin  Analog vpin of sensor</li>
+<li><abbr title="an Arduino pin number that has been extended to include pins on external devices or expanders">vpin</abbr>  Analog <abbr title="an Arduino pin number that has been extended to include pins on external devices or expanders">vpin</abbr> of sensor</li>
 </ul>
-<h2 id="ifnotvpin">IFNOT(vpin)<a class="headerlink" href="#ifnotvpin" title="Permanent link">&para;</a></h2>
+<h2 id="ifnotvpin">IFNOT(<abbr title="an Arduino pin number that has been extended to include pins on external devices or expanders">vpin</abbr>)<a class="headerlink" href="#ifnotvpin" title="Permanent link">&para;</a></h2>
 <p>Inverse of IF</p>
 <p>see IF</p>
 <h2 id="ifnvsnvenum">IFNVS(nvenum)<a class="headerlink" href="#ifnvsnvenum" title="Permanent link">&para;</a></h2>
@@ -14268,7 +14315,7 @@ In many cases the parameters are self explanatory, for example a speed (which wi
 <p>Checks if given stash entry has the current loco</p>
 <p>see IF</p>
 <h2 id="ifthrownturnout_id">IFTHROWN(turnout_id)<a class="headerlink" href="#ifthrownturnout_id" title="Permanent link">&para;</a></h2>
-<p>Checks if given turnout is in THROWN state</p>
+<p>Checks if given <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnout</abbr> is in THROWN state</p>
 <p>see IF</p>
 <h2 id="ifreservetoken_id">IFRESERVE(token_id)<a class="headerlink" href="#ifreservetoken_id" title="Permanent link">&para;</a></h2>
 <p>Attempts to reserve token and if satisfiled the token remains reserved.</p>
@@ -14279,22 +14326,22 @@ In many cases the parameters are self explanatory, for example a speed (which wi
 <h2 id="ifttpositionturntable_idposition">IFTTPOSITION(turntable_id,position)<a class="headerlink" href="#ifttpositionturntable_idposition" title="Permanent link">&para;</a></h2>
 <p>Checks if Turntable is in given position</p>
 <p>see IF</p>
-<h2 id="ifrevpinvalue">IFRE(vpin,value)<a class="headerlink" href="#ifrevpinvalue" title="Permanent link">&para;</a></h2>
+<h2 id="ifrevpinvalue">IFRE(<abbr title="an Arduino pin number that has been extended to include pins on external devices or expanders">vpin</abbr>,value)<a class="headerlink" href="#ifrevpinvalue" title="Permanent link">&para;</a></h2>
 <p>Checks external rotary encoder value</p>
 <ul>
-<li>vpin of device driver for rotary encoder</li>
+<li><abbr title="an Arduino pin number that has been extended to include pins on external devices or expanders">vpin</abbr> of device driver for rotary encoder</li>
 </ul>
-<h2 id="ifbitmap_allvpinmask">IFBITMAP_ALL(vpin,mask)<a class="headerlink" href="#ifbitmap_allvpinmask" title="Permanent link">&para;</a></h2>
-<p>Checks if (vpin pseudo-analog value &amp; mask) == mask.</p>
+<h2 id="ifbitmap_allvpinmask">IFBITMAP_ALL(<abbr title="an Arduino pin number that has been extended to include pins on external devices or expanders">vpin</abbr>,mask)<a class="headerlink" href="#ifbitmap_allvpinmask" title="Permanent link">&para;</a></h2>
+<p>Checks if (<abbr title="an Arduino pin number that has been extended to include pins on external devices or expanders">vpin</abbr> pseudo-analog value &amp; mask) == mask.</p>
 <p>see IF</p>
 <ul>
-<li>mask Binary mask applied to vpin value</li>
+<li>mask Binary mask applied to <abbr title="an Arduino pin number that has been extended to include pins on external devices or expanders">vpin</abbr> value</li>
 </ul>
-<h2 id="ifbitmap_anyvpinmask">IFBITMAP_ANY(vpin,mask)<a class="headerlink" href="#ifbitmap_anyvpinmask" title="Permanent link">&para;</a></h2>
-<p>Checks if vpin pseudo-analog value &amp; mask is non-zero</p>
+<h2 id="ifbitmap_anyvpinmask">IFBITMAP_ANY(<abbr title="an Arduino pin number that has been extended to include pins on external devices or expanders">vpin</abbr>,mask)<a class="headerlink" href="#ifbitmap_anyvpinmask" title="Permanent link">&para;</a></h2>
+<p>Checks if <abbr title="an Arduino pin number that has been extended to include pins on external devices or expanders">vpin</abbr> pseudo-analog value &amp; mask is non-zero</p>
 <p>see IF</p>
 <ul>
-<li>mask Binary mask applied to vpin value</li>
+<li>mask Binary mask applied to <abbr title="an Arduino pin number that has been extended to include pins on external devices or expanders">vpin</abbr> value</li>
 </ul>
 <h2 id="ifroute_activesequence_id">IFROUTE_ACTIVE(sequence_id)<a class="headerlink" href="#ifroute_activesequence_id" title="Permanent link">&para;</a></h2>
 <p>Checks if route is active</p>
@@ -14310,38 +14357,38 @@ In many cases the parameters are self explanatory, for example a speed (which wi
 <p>see IF</p>
 <h2 id="invert_direction">INVERT_DIRECTION<a class="headerlink" href="#invert_direction" title="Permanent link">&para;</a></h2>
 <p>Marks current task so that FWD and REV commands are inverted.</p>
-<h2 id="shared_sensorvpincount">SHARED_SENSOR(vpin,count...)<a class="headerlink" href="#shared_sensorvpincount" title="Permanent link">&para;</a></h2>
+<h2 id="shared_sensorvpincount">SHARED_SENSOR(<abbr title="an Arduino pin number that has been extended to include pins on external devices or expanders">vpin</abbr>,count...)<a class="headerlink" href="#shared_sensorvpincount" title="Permanent link">&para;</a></h2>
 <p>Defines multiple sensor vpins to be shared to other nodes</p>
 <ul>
-<li>vpin first vpin number</li>
+<li><abbr title="an Arduino pin number that has been extended to include pins on external devices or expanders">vpin</abbr> first <abbr title="an Arduino pin number that has been extended to include pins on external devices or expanders">vpin</abbr> number</li>
 <li>count... Number of consecutive VPINS. Default 1.</li>
 </ul>
-<h2 id="remote_sensorvpincount">REMOTE_SENSOR(vpin,count...)<a class="headerlink" href="#remote_sensorvpincount" title="Permanent link">&para;</a></h2>
+<h2 id="remote_sensorvpincount">REMOTE_SENSOR(<abbr title="an Arduino pin number that has been extended to include pins on external devices or expanders">vpin</abbr>,count...)<a class="headerlink" href="#remote_sensorvpincount" title="Permanent link">&para;</a></h2>
 <p>Defines multiple sensor vpins shared by other nodes.</p>
 <ul>
-<li>vpin first vpin number</li>
+<li><abbr title="an Arduino pin number that has been extended to include pins on external devices or expanders">vpin</abbr> first <abbr title="an Arduino pin number that has been extended to include pins on external devices or expanders">vpin</abbr> number</li>
 <li>count... Number of consecutive VPINS. Default 1.</li>
 </ul>
-<h2 id="jmri_sensorvpincount">JMRI_SENSOR(vpin,count...)<a class="headerlink" href="#jmri_sensorvpincount" title="Permanent link">&para;</a></h2>
-<p>Defines multiple JMRI <code>&lt;s&gt;</code> type sensor feedback definitions each with id matching vpin and INPUT_PULLUP</p>
+<h2 id="jmri_sensorvpincount">JMRI_SENSOR(<abbr title="an Arduino pin number that has been extended to include pins on external devices or expanders">vpin</abbr>,count...)<a class="headerlink" href="#jmri_sensorvpincount" title="Permanent link">&para;</a></h2>
+<p>Defines multiple <abbr title="Java Model Railroad Interface">JMRI</abbr> <code>&lt;s&gt;</code> type sensor feedback definitions each with id matching <abbr title="an Arduino pin number that has been extended to include pins on external devices or expanders">vpin</abbr> and INPUT_PULLUP</p>
 <ul>
-<li>vpin first vpin number</li>
-<li>count... Number of consecutive VPINS for which to create JMRI sensor feedbacks. Default 1.</li>
+<li><abbr title="an Arduino pin number that has been extended to include pins on external devices or expanders">vpin</abbr> first <abbr title="an Arduino pin number that has been extended to include pins on external devices or expanders">vpin</abbr> number</li>
+<li>count... Number of consecutive VPINS for which to create <abbr title="Java Model Railroad Interface">JMRI</abbr> sensor feedbacks. Default 1.</li>
 </ul>
-<h2 id="jmri_sensor_nopullupvpincount">JMRI_SENSOR_NOPULLUP(vpin,count...)<a class="headerlink" href="#jmri_sensor_nopullupvpincount" title="Permanent link">&para;</a></h2>
-<p>Defines multiple JMRI <code>&lt;s&gt;</code> type sensor feedback definitions each with id matching vpin</p>
+<h2 id="jmri_sensor_nopullupvpincount">JMRI_SENSOR_NOPULLUP(<abbr title="an Arduino pin number that has been extended to include pins on external devices or expanders">vpin</abbr>,count...)<a class="headerlink" href="#jmri_sensor_nopullupvpincount" title="Permanent link">&para;</a></h2>
+<p>Defines multiple <abbr title="Java Model Railroad Interface">JMRI</abbr> <code>&lt;s&gt;</code> type sensor feedback definitions each with id matching <abbr title="an Arduino pin number that has been extended to include pins on external devices or expanders">vpin</abbr></p>
 <ul>
-<li>vpin first vpin number</li>
-<li>count... Number of consecutive VPINS for which to create JMRI sensor feedbacks. Default 1.</li>
+<li><abbr title="an Arduino pin number that has been extended to include pins on external devices or expanders">vpin</abbr> first <abbr title="an Arduino pin number that has been extended to include pins on external devices or expanders">vpin</abbr> number</li>
+<li>count... Number of consecutive VPINS for which to create <abbr title="Java Model Railroad Interface">JMRI</abbr> sensor feedbacks. Default 1.</li>
 </ul>
 <h2 id="join">JOIN<a class="headerlink" href="#join" title="Permanent link">&para;</a></h2>
-<p>Switches PROG track to receive MAIN track DCC packets. (Drive on PROG track)</p>
+<p>Switches <abbr title="Programming Track / Service Mode">PROG</abbr> track to receive <abbr title="Main Track / Ops Mode">MAIN</abbr> track DCC packets. (Drive on <abbr title="Programming Track / Service Mode">PROG</abbr> track)</p>
 <h2 id="killall">KILLALL<a class="headerlink" href="#killall" title="Permanent link">&para;</a></h2>
 <p>Terminates all running EXRAIL tasks</p>
-<h2 id="latchvpin">LATCH(vpin)<a class="headerlink" href="#latchvpin" title="Permanent link">&para;</a></h2>
-<p>Make all AT/AFTER/IF see vpin as HIGH without checking hardware</p>
+<h2 id="latchvpin">LATCH(<abbr title="an Arduino pin number that has been extended to include pins on external devices or expanders">vpin</abbr>)<a class="headerlink" href="#latchvpin" title="Permanent link">&para;</a></h2>
+<p>Make all AT/AFTER/IF see <abbr title="an Arduino pin number that has been extended to include pins on external devices or expanders">vpin</abbr> as HIGH without checking hardware</p>
 <ul>
-<li>vpin Must only be for VPINS 0..255</li>
+<li><abbr title="an Arduino pin number that has been extended to include pins on external devices or expanders">vpin</abbr> Must only be for VPINS 0..255</li>
 </ul>
 <h2 id="lcceventid">LCC(eventid)<a class="headerlink" href="#lcceventid" title="Permanent link">&para;</a></h2>
 <p>Issue event to LCC</p>
@@ -14384,21 +14431,21 @@ displays which may have different display numbers on different devices.</p>
 <li>steps position to move to</li>
 <li>activity see ROTATE</li>
 </ul>
-<h2 id="neopixelvpinrgbcount">NEOPIXEL(vpin,r,g,b,count...)<a class="headerlink" href="#neopixelvpinrgbcount" title="Permanent link">&para;</a></h2>
-<p>Set a NEOPIXEL vpin to a given red/green/blue colour</p>
+<h2 id="neopixelvpinrgbcount">NEOPIXEL(<abbr title="an Arduino pin number that has been extended to include pins on external devices or expanders">vpin</abbr>,r,g,b,count...)<a class="headerlink" href="#neopixelvpinrgbcount" title="Permanent link">&para;</a></h2>
+<p>Set a NEOPIXEL <abbr title="an Arduino pin number that has been extended to include pins on external devices or expanders">vpin</abbr> to a given red/green/blue colour</p>
 <ul>
-<li>vpin VPIN of a pixel</li>
+<li><abbr title="an Arduino pin number that has been extended to include pins on external devices or expanders">vpin</abbr> <abbr title="an Arduino pin number that has been extended to include pins on external devices or expanders">VPIN</abbr> of a pixel</li>
 <li>r red component 0-255</li>
 <li>g green component 0-255</li>
 <li>b blue component 0-255</li>
 <li>count... Number of consecutive pixels to set, Default 1.</li>
 </ul>
-<h2 id="neopixel_signalvpinredcolourambercolourgreencolourdescription">NEOPIXEL_SIGNAL(vpin,redcolour,ambercolour,greencolour,description...)<a class="headerlink" href="#neopixel_signalvpinredcolourambercolourgreencolourdescription" title="Permanent link">&para;</a></h2>
+<h2 id="neopixel_signalvpinredcolourambercolourgreencolourdescription">NEOPIXEL_SIGNAL(<abbr title="an Arduino pin number that has been extended to include pins on external devices or expanders">vpin</abbr>,redcolour,ambercolour,greencolour,description...)<a class="headerlink" href="#neopixel_signalvpinredcolourambercolourgreencolourdescription" title="Permanent link">&para;</a></h2>
 <p>Define a signal that uses a single multi colour pixel</p>
 <p>see NEORGB</p>
 <ul>
-<li>vpin unique signal_id</li>
-<li>redcolour  RGB colour use NEORGB(red,green,blue) to create values.</li>
+<li><abbr title="an Arduino pin number that has been extended to include pins on external devices or expanders">vpin</abbr> unique signal_id</li>
+<li>redcolour  <abbr title="Red - Green - Blue">RGB</abbr> colour use NEORGB(red,green,blue) to create values.</li>
 <li>description... Quoted text description of signal</li>
 </ul>
 <h2 id="node_share_screen0display_idcount">NODE_SHARE_SCREEN0(display_id,count...)<a class="headerlink" href="#node_share_screen0display_idcount" title="Permanent link">&para;</a></h2>
@@ -14412,7 +14459,7 @@ Display 0 is used to represent node-specific values such as Wifi settings, so it
 <ul>
 <li>optional second parameter for start row offset</li>
 </ul>
-<h2 id="shared_write_vpinsvpincount">SHARED_WRITE_VPINS(vpin,count)<a class="headerlink" href="#shared_write_vpinsvpincount" title="Permanent link">&para;</a></h2>
+<h2 id="shared_write_vpinsvpincount">SHARED_WRITE_VPINS(<abbr title="an Arduino pin number that has been extended to include pins on external devices or expanders">vpin</abbr>,count)<a class="headerlink" href="#shared_write_vpinsvpincount" title="Permanent link">&para;</a></h2>
 <p>Marks a range of VPINS as shared, so that any node can write to them</p>
 <h2 id="aconeventid">ACON(eventid)<a class="headerlink" href="#aconeventid" title="Permanent link">&para;</a></h2>
 <p>Send MERG CBUS ACON to Adapter</p>
@@ -14431,12 +14478,12 @@ Display 0 is used to represent node-specific values such as Wifi settings, so it
 <h2 id="onblockenterblock_id">ONBLOCKENTER(block_id)<a class="headerlink" href="#onblockenterblock_id" title="Permanent link">&para;</a></h2>
 <p>Start task here when a loco enters a railcom block</p>
 <ul>
-<li>block_id vpin associated to block by HAL(I2CRailcom..)</li>
+<li>block_id <abbr title="an Arduino pin number that has been extended to include pins on external devices or expanders">vpin</abbr> associated to block by <abbr title="Hardware Abstraction Layer. Allows the CS to discover and use the hardware through a simple abstract API, regardless of the type of underlying hardware.">HAL</abbr>(I2CRailcom..)</li>
 </ul>
 <h2 id="onblockexitblock_id">ONBLOCKEXIT(block_id)<a class="headerlink" href="#onblockexitblock_id" title="Permanent link">&para;</a></h2>
 <p>Start task here when a loco leaves a railcom block</p>
 <ul>
-<li>block_id vpin associated to block by HAL(I2CRailcom..)</li>
+<li>block_id <abbr title="an Arduino pin number that has been extended to include pins on external devices or expanders">vpin</abbr> associated to block by <abbr title="Hardware Abstraction Layer. Allows the CS to discover and use the hardware through a simple abstract API, regardless of the type of underlying hardware.">HAL</abbr>(I2CRailcom..)</li>
 </ul>
 <h2 id="ontimeminute_in_day">ONTIME(minute_in_day)<a class="headerlink" href="#ontimeminute_in_day" title="Permanent link">&para;</a></h2>
 <p>Start task here when fastclock matches</p>
@@ -14461,7 +14508,7 @@ Display 0 is used to represent node-specific values such as Wifi settings, so it
 <h2 id="ondeactivatellinear">ONDEACTIVATEL(linear)<a class="headerlink" href="#ondeactivatellinear" title="Permanent link">&para;</a></h2>
 <p>Start task here when DCC deactivate sent to linear address</p>
 <h2 id="oncloseturnout_id">ONCLOSE(turnout_id)<a class="headerlink" href="#oncloseturnout_id" title="Permanent link">&para;</a></h2>
-<p>Start task here when turnout closed</p>
+<p>Start task here when <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnout</abbr> closed</p>
 <h2 id="onlccsenderevent">ONLCC(sender,event)<a class="headerlink" href="#onlccsenderevent" title="Permanent link">&para;</a></h2>
 <p>Start task here when LCC event arrives from sender</p>
 <h2 id="ongreensignal_id">ONGREEN(signal_id)<a class="headerlink" href="#ongreensignal_id" title="Permanent link">&para;</a></h2>
@@ -14471,20 +14518,20 @@ Display 0 is used to represent node-specific values such as Wifi settings, so it
 <h2 id="onrotateturntable_id">ONROTATE(turntable_id)<a class="headerlink" href="#onrotateturntable_id" title="Permanent link">&para;</a></h2>
 <p>Start task here when turntable is rotated</p>
 <h2 id="onthrowturnout_id">ONTHROW(turnout_id)<a class="headerlink" href="#onthrowturnout_id" title="Permanent link">&para;</a></h2>
-<p>Start task here when turnout is Thrown</p>
-<h2 id="onchangevpin">ONCHANGE(vpin)<a class="headerlink" href="#onchangevpin" title="Permanent link">&para;</a></h2>
+<p>Start task here when <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnout</abbr> is Thrown</p>
+<h2 id="onchangevpin">ONCHANGE(<abbr title="an Arduino pin number that has been extended to include pins on external devices or expanders">vpin</abbr>)<a class="headerlink" href="#onchangevpin" title="Permanent link">&para;</a></h2>
 <p>Rotary encoder change starts task here (This is obscurely different from ONSENSOR which will be merged in a later release.)</p>
-<h2 id="onsensorvpin">ONSENSOR(vpin)<a class="headerlink" href="#onsensorvpin" title="Permanent link">&para;</a></h2>
+<h2 id="onsensorvpin">ONSENSOR(<abbr title="an Arduino pin number that has been extended to include pins on external devices or expanders">vpin</abbr>)<a class="headerlink" href="#onsensorvpin" title="Permanent link">&para;</a></h2>
 <p>Start task here when sensor changes state (debounced)</p>
-<h2 id="onbitmapvpin">ONBITMAP(vpin)<a class="headerlink" href="#onbitmapvpin" title="Permanent link">&para;</a></h2>
+<h2 id="onbitmapvpin">ONBITMAP(<abbr title="an Arduino pin number that has been extended to include pins on external devices or expanders">vpin</abbr>)<a class="headerlink" href="#onbitmapvpin" title="Permanent link">&para;</a></h2>
 <p>Start task here when bitmap sensor changes state (debounced)</p>
-<h2 id="onbuttonvpin">ONBUTTON(vpin)<a class="headerlink" href="#onbuttonvpin" title="Permanent link">&para;</a></h2>
+<h2 id="onbuttonvpin">ONBUTTON(<abbr title="an Arduino pin number that has been extended to include pins on external devices or expanders">vpin</abbr>)<a class="headerlink" href="#onbuttonvpin" title="Permanent link">&para;</a></h2>
 <p>Start task here when sensor changes HIGH to LOW.</p>
 <h2 id="pause">PAUSE<a class="headerlink" href="#pause" title="Permanent link">&para;</a></h2>
 <p>Pauses all EXRAIL tasks except the current one.</p>
 <p>Other tasks ESTOP their locos until RESUME issued</p>
-<h2 id="pin_turnoutidvpindescription">PIN_TURNOUT(id,vpin,description...)<a class="headerlink" href="#pin_turnoutidvpindescription" title="Permanent link">&para;</a></h2>
-<p>Defines a turnout which operates on a single pin</p>
+<h2 id="pin_turnoutidvpindescription">PIN_TURNOUT(id,<abbr title="an Arduino pin number that has been extended to include pins on external devices or expanders">vpin</abbr>,description...)<a class="headerlink" href="#pin_turnoutidvpindescription" title="Permanent link">&para;</a></h2>
+<p>Defines a <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnout</abbr> which operates on a single pin</p>
 <ul>
 <li>description... Quoted text (shown to throttles) or HIDDEN</li>
 </ul>
@@ -14504,44 +14551,44 @@ Display 0 is used to represent node-specific values such as Wifi settings, so it
 <ul>
 <li>stash_id position in stash where a loco id was previously saved.</li>
 </ul>
-<h2 id="play_eqvpineqname">PLAY_EQ(vpin,eqname)<a class="headerlink" href="#play_eqvpineqname" title="Permanent link">&para;</a></h2>
+<h2 id="play_eqvpineqname">PLAY_EQ(<abbr title="an Arduino pin number that has been extended to include pins on external devices or expanders">vpin</abbr>,eqname)<a class="headerlink" href="#play_eqvpineqname" title="Permanent link">&para;</a></h2>
 <p>Sets EQ setting on DFPlayer module</p>
 <ul>
 <li>eqname One of: NORMAL,POP,ROCK,JAZZ,CLASSIC,BASS</li>
 </ul>
-<h2 id="play_foldervpinfolder">PLAY_FOLDER(vpin,folder)<a class="headerlink" href="#play_foldervpinfolder" title="Permanent link">&para;</a></h2>
+<h2 id="play_foldervpinfolder">PLAY_FOLDER(<abbr title="an Arduino pin number that has been extended to include pins on external devices or expanders">vpin</abbr>,folder)<a class="headerlink" href="#play_foldervpinfolder" title="Permanent link">&para;</a></h2>
 <p>Sets DFPlayer folder to use for tracks </p>
 <ul>
 <li>folder number</li>
 </ul>
-<h2 id="play_pausevpin">PLAY_PAUSE(vpin)<a class="headerlink" href="#play_pausevpin" title="Permanent link">&para;</a></h2>
+<h2 id="play_pausevpin">PLAY_PAUSE(<abbr title="an Arduino pin number that has been extended to include pins on external devices or expanders">vpin</abbr>)<a class="headerlink" href="#play_pausevpin" title="Permanent link">&para;</a></h2>
 <p>Pauses sound play</p>
 <p>see PLAY_RESUME</p>
-<h2 id="play_repeatvpintrackvolume">PLAY_REPEAT(vpin,track,volume...)<a class="headerlink" href="#play_repeatvpintrackvolume" title="Permanent link">&para;</a></h2>
+<h2 id="play_repeatvpintrackvolume">PLAY_REPEAT(<abbr title="an Arduino pin number that has been extended to include pins on external devices or expanders">vpin</abbr>,track,volume...)<a class="headerlink" href="#play_repeatvpintrackvolume" title="Permanent link">&para;</a></h2>
 <p>Plays a track on a DFPlayer module on repoeat</p>
 <ul>
 <li>track number</li>
 <li>volume... optional volume 0-30 or use default set below</li>
 </ul>
-<h2 id="play_resetvpin">PLAY_RESET(vpin)<a class="headerlink" href="#play_resetvpin" title="Permanent link">&para;</a></h2>
+<h2 id="play_resetvpin">PLAY_RESET(<abbr title="an Arduino pin number that has been extended to include pins on external devices or expanders">vpin</abbr>)<a class="headerlink" href="#play_resetvpin" title="Permanent link">&para;</a></h2>
 <p>Resets DFPlayer </p>
-<h2 id="play_resumevpin">PLAY_RESUME(vpin)<a class="headerlink" href="#play_resumevpin" title="Permanent link">&para;</a></h2>
+<h2 id="play_resumevpin">PLAY_RESUME(<abbr title="an Arduino pin number that has been extended to include pins on external devices or expanders">vpin</abbr>)<a class="headerlink" href="#play_resumevpin" title="Permanent link">&para;</a></h2>
 <p>Resumes playing sound</p>
 <p>see PLAY_PAUSE </p>
-<h2 id="play_stopvpin">PLAY_STOP(vpin)<a class="headerlink" href="#play_stopvpin" title="Permanent link">&para;</a></h2>
+<h2 id="play_stopvpin">PLAY_STOP(<abbr title="an Arduino pin number that has been extended to include pins on external devices or expanders">vpin</abbr>)<a class="headerlink" href="#play_stopvpin" title="Permanent link">&para;</a></h2>
 <p>Stops DFPlayer </p>
-<h2 id="play_trackvpintrackvolume">PLAY_TRACK(vpin,track,volume...)<a class="headerlink" href="#play_trackvpintrackvolume" title="Permanent link">&para;</a></h2>
+<h2 id="play_trackvpintrackvolume">PLAY_TRACK(<abbr title="an Arduino pin number that has been extended to include pins on external devices or expanders">vpin</abbr>,track,volume...)<a class="headerlink" href="#play_trackvpintrackvolume" title="Permanent link">&para;</a></h2>
 <p>Plays a track on a DFPlayer module</p>
 <ul>
 <li>track number</li>
 <li>volume... optional volume 0-30 or use default set below</li>
 </ul>
-<h2 id="play_volumevpinvolume">PLAY_VOLUME(vpin,volume)<a class="headerlink" href="#play_volumevpinvolume" title="Permanent link">&para;</a></h2>
+<h2 id="play_volumevpinvolume">PLAY_VOLUME(<abbr title="an Arduino pin number that has been extended to include pins on external devices or expanders">vpin</abbr>,volume)<a class="headerlink" href="#play_volumevpinvolume" title="Permanent link">&para;</a></h2>
 <p>Sets default volume on a DFPlayer module</p>
 <ul>
 <li>volume... volume 0-30</li>
 </ul>
-<h2 id="pomcvvalue">POM(cv,value)<a class="headerlink" href="#pomcvvalue" title="Permanent link">&para;</a></h2>
+<h2 id="pomcvvalue"><abbr title="Programming on Main / Ops Mode Programming">POM</abbr>(cv,value)<a class="headerlink" href="#pomcvvalue" title="Permanent link">&para;</a></h2>
 <p>Write value to cv on current tasks loco (Program on Main)</p>
 <h2 id="poweroff">POWEROFF<a class="headerlink" href="#poweroff" title="Permanent link">&para;</a></h2>
 <p>Powers off all tracks</p>
@@ -14565,7 +14612,7 @@ Display 0 is used to represent node-specific values such as Wifi settings, so it
 <p>sets signal to RED state</p>
 <h2 id="reservetoken_id">RESERVE(token_id)<a class="headerlink" href="#reservetoken_id" title="Permanent link">&para;</a></h2>
 <p>Waits for token for block. If not available immediately, current task loco is stopped.</p>
-<h2 id="resetvpincount">RESET(vpin,count...)<a class="headerlink" href="#resetvpincount" title="Permanent link">&para;</a></h2>
+<h2 id="resetvpincount">RESET(<abbr title="an Arduino pin number that has been extended to include pins on external devices or expanders">vpin</abbr>,count...)<a class="headerlink" href="#resetvpincount" title="Permanent link">&para;</a></h2>
 <p>Sets output pin LOW</p>
 <p>see SET</p>
 <ul>
@@ -14709,40 +14756,40 @@ Display 0 is used to represent node-specific values such as Wifi settings, so it
 <ul>
 <li>msg Quoted text</li>
 </ul>
-<h2 id="servovpinpositionprofile">SERVO(vpin,position,profile)<a class="headerlink" href="#servovpinpositionprofile" title="Permanent link">&para;</a></h2>
+<h2 id="servovpinpositionprofile">SERVO(<abbr title="an Arduino pin number that has been extended to include pins on external devices or expanders">vpin</abbr>,position,profile)<a class="headerlink" href="#servovpinpositionprofile" title="Permanent link">&para;</a></h2>
 <p>Move servo to given position</p>
 <ul>
-<li>vpin of servo</li>
+<li><abbr title="an Arduino pin number that has been extended to include pins on external devices or expanders">vpin</abbr> of servo</li>
 <li>position  servo position (values are hardware dependent)</li>
 <li>profile movement profile (Instant, Fast, Medium, Slow, Bounce)</li>
 </ul>
-<h2 id="servo2vpinpositionduration">SERVO2(vpin,position,duration)<a class="headerlink" href="#servo2vpinpositionduration" title="Permanent link">&para;</a></h2>
+<h2 id="servo2vpinpositionduration">SERVO2(<abbr title="an Arduino pin number that has been extended to include pins on external devices or expanders">vpin</abbr>,position,duration)<a class="headerlink" href="#servo2vpinpositionduration" title="Permanent link">&para;</a></h2>
 <p>Move servo to given position taking time</p>
 <ul>
-<li>vpin of servo</li>
+<li><abbr title="an Arduino pin number that has been extended to include pins on external devices or expanders">vpin</abbr> of servo</li>
 <li>position  servo position (values are hardware dependent)</li>
 <li>duration mS</li>
 </ul>
-<h2 id="servo_signalvpinredposamberposgreenposdescription">SERVO_SIGNAL(vpin,redpos,amberpos,greenpos,description...)<a class="headerlink" href="#servo_signalvpinredposamberposgreenposdescription" title="Permanent link">&para;</a></h2>
+<h2 id="servo_signalvpinredposamberposgreenposdescription">SERVO_SIGNAL(<abbr title="an Arduino pin number that has been extended to include pins on external devices or expanders">vpin</abbr>,redpos,amberpos,greenpos,description...)<a class="headerlink" href="#servo_signalvpinredposamberposgreenposdescription" title="Permanent link">&para;</a></h2>
 <p>Dedfine a servo based signal with 3 servo positions</p>
 <ul>
-<li>vpin of servo, acts as signal_id</li>
+<li><abbr title="an Arduino pin number that has been extended to include pins on external devices or expanders">vpin</abbr> of servo, acts as signal_id</li>
 <li>redpos servo position (values are hardware dependent)</li>
 <li>amberpos servo position (values are hardware dependent)</li>
 <li>greenpos servo position (values are hardware dependent)</li>
 <li>description... Quoted text description of signal</li>
 </ul>
-<h2 id="servo_turnoutturnout_idvpinactiveangleinactiveangleprofiledescription">SERVO_TURNOUT(turnout_id,vpin,activeAngle,inactiveAngle,profile,description...)<a class="headerlink" href="#servo_turnoutturnout_idvpinactiveangleinactiveangleprofiledescription" title="Permanent link">&para;</a></h2>
-<p>Define a servo driven turnout</p>
+<h2 id="servo_turnoutturnout_idvpinactiveangleinactiveangleprofiledescription">SERVO_TURNOUT(turnout_id,<abbr title="an Arduino pin number that has been extended to include pins on external devices or expanders">vpin</abbr>,activeAngle,inactiveAngle,profile,description...)<a class="headerlink" href="#servo_turnoutturnout_idvpinactiveangleinactiveangleprofiledescription" title="Permanent link">&para;</a></h2>
+<p>Define a servo driven <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnout</abbr></p>
 <ul>
 <li>turnout_id used by THROW/CLOSE</li>
-<li>vpin for servo</li>
+<li><abbr title="an Arduino pin number that has been extended to include pins on external devices or expanders">vpin</abbr> for servo</li>
 <li>activeAngle servo position (values are hardware dependent)</li>
 <li>inactiveAngle servo position (values are hardware dependent)</li>
 <li>profile movement profile (Instant, Fast, Medium, Slow, Bounce)</li>
-<li>description... Quoted text shown to throttles or HIDDEN keyword to hide turnout button</li>
+<li>description... Quoted text shown to throttles or HIDDEN keyword to hide <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnout</abbr> button</li>
 </ul>
-<h2 id="setvpincount">SET(vpin,count...)<a class="headerlink" href="#setvpincount" title="Permanent link">&para;</a></h2>
+<h2 id="setvpincount">SET(<abbr title="an Arduino pin number that has been extended to include pins on external devices or expanders">vpin</abbr>,count...)<a class="headerlink" href="#setvpincount" title="Permanent link">&para;</a></h2>
 <p>Set pin HIGH</p>
 <p>see RESET</p>
 <ul>
@@ -14752,7 +14799,7 @@ Display 0 is used to represent node-specific values such as Wifi settings, so it
 <p>Set output track type</p>
 <ul>
 <li>track A..H</li>
-<li>mode NONE, MAIN, PROG, DC, EXT, BOOST, BOOST_INV, BOOST_AUTO, MAIN_INV, MAIN_AUTO, DC_INV, DCX</li>
+<li>mode NONE, <abbr title="Main Track / Ops Mode">MAIN</abbr>, <abbr title="Programming Track / Service Mode">PROG</abbr>, DC, EXT, BOOST, BOOST_INV, BOOST_AUTO, MAIN_INV, MAIN_AUTO, DC_INV, DCX</li>
 </ul>
 <h2 id="set_powertrackonoff">SET_POWER(track,onoff)<a class="headerlink" href="#set_powertrackonoff" title="Permanent link">&para;</a></h2>
 <p>Set track power mode</p>
@@ -14763,7 +14810,7 @@ Display 0 is used to represent node-specific values such as Wifi settings, so it
 <h2 id="setlocoloco">SETLOCO(loco)<a class="headerlink" href="#setlocoloco" title="Permanent link">&para;</a></h2>
 <p>Sets the loco being handled by the current task</p>
 <h2 id="setfreqfreq">SETFREQ(freq)<a class="headerlink" href="#setfreqfreq" title="Permanent link">&para;</a></h2>
-<p>Sets the DC track PWM frequency</p>
+<p>Sets the DC track <abbr title="Pulse Width Modulation">PWM</abbr> frequency</p>
 <ul>
 <li>freq Frequency is default 0, or 1..3</li>
 </ul>
@@ -14771,26 +14818,26 @@ Display 0 is used to represent node-specific values such as Wifi settings, so it
 <p>Define a Signal with LOW=on leds (rare case)</p>
 <p>see SIGNALH</p>
 <ul>
-<li>redpin vpin for RED state, also acts as signal_id</li>
-<li>amberpin vpin for AMBER state</li>
-<li>greenpin vpin for GREEN state</li>
+<li>redpin <abbr title="an Arduino pin number that has been extended to include pins on external devices or expanders">vpin</abbr> for RED state, also acts as signal_id</li>
+<li>amberpin <abbr title="an Arduino pin number that has been extended to include pins on external devices or expanders">vpin</abbr> for AMBER state</li>
+<li>greenpin <abbr title="an Arduino pin number that has been extended to include pins on external devices or expanders">vpin</abbr> for GREEN state</li>
 <li>description... Quoted text description of signal</li>
 </ul>
 <h2 id="signalhredpinamberpingreenpindescription">SIGNALH(redpin,amberpin,greenpin,description...)<a class="headerlink" href="#signalhredpinamberpingreenpindescription" title="Permanent link">&para;</a></h2>
 <p>define a signal with HIGH=ON leds (use LED_SIGNAL prefereably)</p>
 <ul>
-<li>redpin vpin for RED state, also acts as signal_id</li>
-<li>amberpin vpin for AMBER state</li>
-<li>greenpin vpin for GREEN state</li>
+<li>redpin <abbr title="an Arduino pin number that has been extended to include pins on external devices or expanders">vpin</abbr> for RED state, also acts as signal_id</li>
+<li>amberpin <abbr title="an Arduino pin number that has been extended to include pins on external devices or expanders">vpin</abbr> for AMBER state</li>
+<li>greenpin <abbr title="an Arduino pin number that has been extended to include pins on external devices or expanders">vpin</abbr> for GREEN state</li>
 <li>description... Quoted text description of signal</li>
 </ul>
 <h2 id="led_signalsignalidredpinamberpingreenpindescription">LED_SIGNAL(signalid,redpin,amberpin,greenpin,description...)<a class="headerlink" href="#led_signalsignalidredpinamberpingreenpindescription" title="Permanent link">&para;</a></h2>
 <p>define a signal with HIGH=ON leds</p>
 <ul>
 <li>signalid unique identifier for the signal</li>
-<li>redpin vpin for RED state</li>
-<li>amberpin vpin for AMBER state</li>
-<li>greenpin vpin for GREEN state</li>
+<li>redpin <abbr title="an Arduino pin number that has been extended to include pins on external devices or expanders">vpin</abbr> for RED state</li>
+<li>amberpin <abbr title="an Arduino pin number that has been extended to include pins on external devices or expanders">vpin</abbr> for AMBER state</li>
+<li>greenpin <abbr title="an Arduino pin number that has been extended to include pins on external devices or expanders">vpin</abbr> for GREEN state</li>
 <li>description... Quoted text description of signal</li>
 </ul>
 <h2 id="speedspeed">SPEED(speed)<a class="headerlink" href="#speedspeed" title="Permanent link">&para;</a></h2>
@@ -14837,10 +14884,10 @@ Display 0 is used to represent node-specific values such as Wifi settings, so it
 <h2 id="stop">STOP<a class="headerlink" href="#stop" title="Permanent link">&para;</a></h2>
 <p>Same as SPEED(0)</p>
 <h2 id="throwturnout_id">THROW(turnout_id)<a class="headerlink" href="#throwturnout_id" title="Permanent link">&para;</a></h2>
-<p>Throws given turnout</p>
+<p>Throws given <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnout</abbr></p>
 <p>see CLOSE</p>
 <h2 id="toggle_turnoutturnout_id">TOGGLE_TURNOUT(turnout_id)<a class="headerlink" href="#toggle_turnoutturnout_id" title="Permanent link">&para;</a></h2>
-<p>Toggles given turnout</p>
+<p>Toggles given <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnout</abbr></p>
 <h2 id="tt_addpositionturntable_idposition_idvalueangledescription">TT_ADDPOSITION(turntable_id,position_id,value,angle,description...)<a class="headerlink" href="#tt_addpositionturntable_idposition_idvalueangledescription" title="Permanent link">&para;</a></h2>
 <p>Defines a turntable track position</p>
 <ul>
@@ -14850,7 +14897,7 @@ Display 0 is used to represent node-specific values such as Wifi settings, so it
 <li>description... quoted text or HIDDEN</li>
 </ul>
 <h2 id="turnoutturnout_idaddrsubaddrdescription">TURNOUT(turnout_id,addr,subaddr,description...)<a class="headerlink" href="#turnoutturnout_idaddrsubaddrdescription" title="Permanent link">&para;</a></h2>
-<p>Defines a DCC accessory turnout with legacy address</p>
+<p>Defines a DCC accessory <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnout</abbr> with legacy address</p>
 <ul>
 <li>turnout_id to be used in THROW/CLOSE etc</li>
 <li>addr DCC accessory address</li>
@@ -14858,7 +14905,7 @@ Display 0 is used to represent node-specific values such as Wifi settings, so it
 <li>description... Quoted text or HIDDEN, appears on throttle buttons</li>
 </ul>
 <h2 id="turnoutlturnout_idaddrdescription">TURNOUTL(turnout_id,addr,description...)<a class="headerlink" href="#turnoutlturnout_idaddrdescription" title="Permanent link">&para;</a></h2>
-<p>Defines a DCC accessory turnout with linear address</p>
+<p>Defines a DCC accessory <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnout</abbr> with linear address</p>
 <p>see TURNOUT</p>
 <ul>
 <li>turnout_id to be used in THROW/CLOSE etc</li>
@@ -14866,13 +14913,13 @@ Display 0 is used to represent node-specific values such as Wifi settings, so it
 <li>description... Quoted text or HIDDEN, appears on throttle buttons</li>
 </ul>
 <h2 id="unjoin">UNJOIN<a class="headerlink" href="#unjoin" title="Permanent link">&para;</a></h2>
-<p>Disconnects PROG track from MAIN</p>
+<p>Disconnects <abbr title="Programming Track / Service Mode">PROG</abbr> track from <abbr title="Main Track / Ops Mode">MAIN</abbr></p>
 <p>see JOIN</p>
-<h2 id="unlatchvpin">UNLATCH(vpin)<a class="headerlink" href="#unlatchvpin" title="Permanent link">&para;</a></h2>
+<h2 id="unlatchvpin">UNLATCH(<abbr title="an Arduino pin number that has been extended to include pins on external devices or expanders">vpin</abbr>)<a class="headerlink" href="#unlatchvpin" title="Permanent link">&para;</a></h2>
 <p>removes latched on flag</p>
 <p>see LATCH</p>
 <ul>
-<li>vpin (limited to 0..255)</li>
+<li><abbr title="an Arduino pin number that has been extended to include pins on external devices or expanders">vpin</abbr> (limited to 0..255)</li>
 </ul>
 <h2 id="virtual_signalsignal_iddescription">VIRTUAL_SIGNAL(signal_id,description...)<a class="headerlink" href="#virtual_signalsignal_iddescription" title="Permanent link">&para;</a></h2>
 <p>Defines a virtual (no hardware) signal, use ONhandlers to simulate hardware</p>
@@ -14881,32 +14928,32 @@ Display 0 is used to represent node-specific values such as Wifi settings, so it
 <li>description... Quoted text description of signal</li>
 </ul>
 <h2 id="virtual_turnoutiddescription">VIRTUAL_TURNOUT(id,description...)<a class="headerlink" href="#virtual_turnoutiddescription" title="Permanent link">&para;</a></h2>
-<p>Defines a virtual (no hardware) turnout, use ONhandlers to simulate hardware</p>
+<p>Defines a virtual (no hardware) <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnout</abbr>, use ONhandlers to simulate hardware</p>
 <p>see TURNOUT ONCLOSE ONTHROW</p>
 <ul>
 <li>description... quoted text or HIDDEN</li>
 </ul>
 <h2 id="bitmap_andvpin1mask">BITMAP_AND(vpin1,mask)<a class="headerlink" href="#bitmap_andvpin1mask" title="Permanent link">&para;</a></h2>
-<p>Performs a bitwise AND operation on the given vpin analog value and mask.</p>
+<p>Performs a bitwise AND operation on the given <abbr title="an Arduino pin number that has been extended to include pins on external devices or expanders">vpin</abbr> analog value and mask.</p>
 <ul>
 <li>mask Binary mask to be ANDed with vpin1 value</li>
 </ul>
-<h2 id="bitmap_incvpin">BITMAP_INC(vpin)<a class="headerlink" href="#bitmap_incvpin" title="Permanent link">&para;</a></h2>
+<h2 id="bitmap_incvpin">BITMAP_INC(<abbr title="an Arduino pin number that has been extended to include pins on external devices or expanders">vpin</abbr>)<a class="headerlink" href="#bitmap_incvpin" title="Permanent link">&para;</a></h2>
 <p>Increments pseudo analog value by 1</p>
-<h2 id="bitmap_decvpin">BITMAP_DEC(vpin)<a class="headerlink" href="#bitmap_decvpin" title="Permanent link">&para;</a></h2>
+<h2 id="bitmap_decvpin">BITMAP_DEC(<abbr title="an Arduino pin number that has been extended to include pins on external devices or expanders">vpin</abbr>)<a class="headerlink" href="#bitmap_decvpin" title="Permanent link">&para;</a></h2>
 <p>Decrements pseudo analog value by 1  (to zero)</p>
 <h2 id="bitmap_orvpin1mask">BITMAP_OR(vpin1,mask)<a class="headerlink" href="#bitmap_orvpin1mask" title="Permanent link">&para;</a></h2>
-<p>Performs a bitwise OR operation on the given vpin analog value and mask.</p>
+<p>Performs a bitwise OR operation on the given <abbr title="an Arduino pin number that has been extended to include pins on external devices or expanders">vpin</abbr> analog value and mask.</p>
 <ul>
 <li>mask Binary mask to be ORed with vpin1 value</li>
 </ul>
 <h2 id="bitmap_setvpin1value">BITMAP_SET(vpin1,value)<a class="headerlink" href="#bitmap_setvpin1value" title="Permanent link">&para;</a></h2>
-<p>Sets the given vpin analog value</p>
+<p>Sets the given <abbr title="an Arduino pin number that has been extended to include pins on external devices or expanders">vpin</abbr> analog value</p>
 <ul>
 <li>value Value to be set</li>
 </ul>
 <h2 id="bitmap_xorvpin1mask">BITMAP_XOR(vpin1,mask)<a class="headerlink" href="#bitmap_xorvpin1mask" title="Permanent link">&para;</a></h2>
-<p>Performs a bitwise XOR operation on the given vpin analog value and mask.</p>
+<p>Performs a bitwise XOR operation on the given <abbr title="an Arduino pin number that has been extended to include pins on external devices or expanders">vpin</abbr> analog value and mask.</p>
 <ul>
 <li>mask Binary mask to be XORed with vpin1 value</li>
 </ul>
@@ -14966,7 +15013,8 @@ see XRESTORE_SPEED</li>
 <h2 id="ztest3commandreplytestcode">ZTEST3(command,reply,testcode...)<a class="headerlink" href="#ztest3commandreplytestcode" title="Permanent link">&para;</a></h2>
 <p>Developer Unit testing.  Do not use. </p>
 <h2 id="build-info">Build info:<a class="headerlink" href="#build-info" title="Permanent link">&para;</a></h2>
-<p>Autogenerated from devel/EXRAIL2MacroBase.h at Wed Oct  7 00:49:54 UTC 2026</p>
+<p>Autogenerated from devel/EXRAIL2MacroBase.h at Sun Oct 11 00:58:41 UTC 2026</p>
+<!-- These are case sensitive -->
 
 
 
@@ -14987,7 +15035,7 @@ see XRESTORE_SPEED</li>
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 18, 2026 06:15:47 UTC">June 18, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="October 11, 2026 00:40:21 UTC">October 11, 2026</span>
   </span>
 
     
