@@ -69,8 +69,8 @@ Reference guide for serial commands used by **EX-CommandStations**, shown in fun
 | [`<t loco>`](?_t_loco) | Request loco status | `loco`: Locomotive ID | Active |
 | [`<t loco tSpeed direction>`](?_t_loco_tSpeed_direction) | Set throttle speed and direction | `loco`: ID, `tSpeed`: 0-127, `direction`: 0/1 | Active |
 | `<t ignore loco tSpeed direction>` | Set throttle speed and direction | Legacy format | ⚠️ Deprecated |
-| [`<- loco>`](?_-_loco) | Remove loco state and reminders | `loco`: Locomotive ID | Active |
-| [`<->`](?_-) | Clear loco state and reminder table | None | Active |
+| [`<- loco>`](?_8equals8_loco) | Remove loco state and reminders | `loco`: Locomotive ID | Active |
+| [`<->`](?_8equals8) | Clear loco state and reminder table | None | Active |
 
 ## Function Control
 
