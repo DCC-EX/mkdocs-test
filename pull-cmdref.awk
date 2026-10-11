@@ -40,7 +40,7 @@ function sort_blocks(    i, j, tmp_key, tmp_value) {
         # Replace commas in "linktag" with underscores
         gsub(/,/, "_", linktag);
         # if linktag starts with '#' change it to '8hash8'
-        gsub(/#/, "8h8", linktag)
+        gsub(/#/, "8hash8", linktag)
         # if linktag starts with '=' change it to '8equals8'
         gsub(/=/, "8equals8", linktag)
         # if linktag contains '^' change it to '8caret8'
