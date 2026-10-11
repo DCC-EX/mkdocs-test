@@ -3,8 +3,47 @@
 /^[[:space:]]*#define/ {
     line = $0
     sub(/^[[:space:]]*#define[[:space:]]*/ , "" , line)
-    print "\n## " line "\n"
+    # print "\n## " line "\n"
+    search_term = line
+    sub(/\(.*/, "", search_term)
+    sub(/[[:space:]]+$/, "", search_term)
+    print "\n## [" escape_markdown(line) "](?" url_encode(search_term) ")\n"
     next
+}
+
+function escape_markdown(text,    result, i, character) {
+    result = ""
+    for (i = 1; i <= length(text); i++) {
+        character = substr(text, i, 1)
+        if (character == "\\" || character == "[" || character == "]") {
+            result = result "\\"
+        }
+        result = result character
+    }
+    return result
+}
+
+function url_encode(text,    result, i, character, code, printable) {
+    result = ""
+    printable = ""
+    for (code = 32; code <= 126; code++) {
+        printable = printable sprintf("%c", code)
+    }
+
+    for (i = 1; i <= length(text); i++) {
+        character = substr(text, i, 1)
+        if (character ~ /^[[:alnum:]_.~-]$/) {
+            result = result character
+        } else {
+            code = index(printable, character)
+            if (code) {
+                result = result "%" sprintf("%02X", code + 31)
+            } else {
+                result = result character
+            }
+        }
+    }
+    return result
 }
 
 
@@ -34,5 +73,4 @@
     print ""
     next
 }
-
 
