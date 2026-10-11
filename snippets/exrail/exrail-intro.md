@@ -1,7 +1,7 @@
 The following list is dynamically built from the **EXRAIL** code. It contains all the **EXRAIL** commands with brief definitions.
 In many cases the parameters are self explanatory, for example a speed (which will always be a DCC compatible 0..127 where 0=stop and 1=emergency stop)
 
-## Conventions Used for Commands
+## Conventions And Important Information
 
 <details markdown="1">
 <summary>Click to expand</summary>
@@ -12,14 +12,8 @@ In many cases the parameters are self explanatory, for example a speed (which wi
 - Square brackets ``[]`` - Parameters within square brackets ``[]`` are optional and may be omitted. If specifying these parameters, do not include the square brackets themselves, for example ``ALIAS(name[, value])`` becomes ``ALIAS(MY_ALIAS)`` or ``ALIAS(MY_ALIAS, 3)``
 - ``|`` - Use of the ``|`` character means you need to provide one of the provided options only, for example ``<D POWER ON|OFF>`` becomes either ``<D POWER ON>`` or ``<D POWER OFF>``
 
-</details>
+---
 
-## Handy information
-
-<details markdown="1">
-<summary>Click to expand</summary>
-
-- COMMANDS are case sensitive. i.e. they must be in uppercase. Text parameters that you provide (aliases,  descriptions) are not
 - *AUTOMATION*, *ROUTE*, and *SEQUENCE* use the same ID number space, so a ``FOLLOW(n)`` command can be used for any of them
 - Sensors and outputs used by AT/AFTER/SET/RESET/LATCH/UNLATCH/SERVO/IF/IFNOT refer directly to Arduino pins, and those handled by I2C expansion (as virtual pins or vpins).
 - Signals also refer directly to pins, and the signal ID (for RED/AMBER/GREEN) is always the same as the RED signal pin
@@ -36,3 +30,5 @@ In many cases the parameters are self explanatory, for example a speed (which wi
     Any number with a leading zero will be treated as an octal number, so for example ``ALIAS(MY_ALIAS, 010)`` will assign the value of ``8`` to MY_ALIAS, not ``10``. This is a common mistake that can lead to very confusing behaviour if you don't know about it. Always use numbers without leading zeros, for example ``ALIAS(MY_ALIAS, 10)`` to assign the value of 10 to MY_ALIAS.
 
 </details>
+
+---
