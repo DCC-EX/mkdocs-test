@@ -144,9 +144,9 @@ For further details on using **EX-Installer** Device Monitor, continue on to the
 
 Next Steps - Test your setup
 
-**IMPORTANT**
+!!! IMPORTANT "The programming track is for programming only"
 
-The programming track is for programming only. Make sure you are on the main track if you expect your loco to move or respond to light or sound commands.
+    The programming track is for programming only. Make sure you are on the main track if you expect your loco to move or respond to light or sound commands.
 
 See the Testing your installation page or click the 'Next' button to learn how to test and use your EX‑CommandStation.
 
@@ -158,4 +158,4 @@ On this screen you can edit the configuration files. If you have more than two f
 
 **NOTE:** If you did not enable any options requiring myAutomation.h, and did not enable Create myAutomation.h, you will only be able to edit config.h on this screen.
 
-![stored_files](/_static/images/ex-installer/stored-files.png)
+![stored_files](../../_static/images/ex-installer/stored-files.png)

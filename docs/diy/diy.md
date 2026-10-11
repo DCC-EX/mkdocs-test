@@ -1,7 +1,5 @@
 # Build Your Own Command Station
 
-At a minimum, a command station consists of a processor plus a shield/board to convert the low voltage digital signal from the processor into the high powered track output.
-
 **DCC-EX** started life creating home-built command stations using Arduino UNO and Arduino Mega microcontrollers with the standard Arduino motor shields. This was attractive to users that liked to experiment and was exceptionally cheap to create.
 
 Our [Command Station Booster 1 Express (EX-CSB1)](/products/ex-commandstation/ex-csb1.md) is now available as a complete ready-to-run, plug-and-go, solution.
@@ -20,6 +18,8 @@ Our [Command Station Booster 1 Express (EX-CSB1)](/products/ex-commandstation/ex
 
 ## Components
 
+At a minimum, a command station consists of a processor plus a motor shield/board to convert the low voltage digital signal from the processor into the high powered track output.
+
 The core components of an **EX-CommandStation** are:
 
 - A microcontroller
@@ -37,7 +37,7 @@ Like any command station, you will want some kind of throttle but you can start 
 
 ## Getting the EX-CommandStation Software
 
-All builds will require the **EX-CommandStation** software to be configured and loaded onto the Arduino microcontroller from your PC. This is best done using the [EX-Installer](/installer/installer.md)
+All builds will require the **EX-CommandStation** software to be configured and loaded onto the Arduino microcontroller from your PC. This is best done using the [EX-Installer](../prepare-to-use/installer/installer.md)
 
 ## Quick and Easy Arduino Mega Build ![Tinkerer Icon](../_static/images/levels/tinkerer.png){ .header-img } <br/><small>Intermediate Level</small>
 

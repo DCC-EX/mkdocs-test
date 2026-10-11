@@ -160,7 +160,7 @@ The above outlines how the default automatic phase switching works with **EX-Tur
 
     If you find that the default 45/225 degree angles aren't right for your layout, then this can be modified in "config.h" which is created in [when installing the EX-CommandStation firmware](../../diy/installer.md). Load firmware on your Command Station, and the configuration parameter is outlined here: [Phase Switch Angle](/products/ex-turntable/configure.md#phase_switch_angle).
 
-If you find that the default 45/225 degree angles aren't right for your layout, then this can be modified in 'config.h' which is created in [EX-Installer](../../installer/installer.md), and the configuration parameter is outlined here: [Phase Switch Angle](configure.md#phase_switch_angle).
+If you find that the default 45/225 degree angles aren't right for your layout, then this can be modified in 'config.h' which is created in [EX-Installer](../../prepare-to-use/installer/installer.md), and the configuration parameter is outlined here: [Phase Switch Angle](configure.md#phase_switch_angle).
 
 If you have a layout that requires more control over when phase switching does and doesn't happen, you can configure manual phase switching, as outlined in [Manual Tuning Phase](test-and-tune.md#manual-phase-switching).
 

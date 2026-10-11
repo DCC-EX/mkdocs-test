@@ -99,7 +99,7 @@ You can also connect the display to the motor shield's I2C headers.
 
 ### Reconfigure your Command Station to use a single display
 
-If installing with **EX-Installer**, refer to [installing an optional display](../../../installer/install-cs.md#optional-lcd-or-oled-display) to configure a single display with your **EX-CommandStation**.
+If installing with **EX-Installer**, refer to [installing an optional display](../../../prepare-to-use/installer/install-cs.md#optional-lcd-or-oled-display) to configure a single display with your **EX-CommandStation**.
 
 If you are using the Arduino IDE or VSCode with PlatformIO, you will need to edit "config.h" to enable your display option. Look for this section in "config.example.h" to define the display:
 

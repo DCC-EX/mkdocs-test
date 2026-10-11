@@ -1,8 +1,8 @@
 # Testing your installation
 
-There are a number of ways that you can test your installation, but assuming that you have just installed the software using **EX-Installer** the simplest way to test is usingthe Serial Monitor in **EX-Installer**.
+There are a number of ways that you can test your installation, but assuming that you have just installed the software using **EX-Installer** the simplest way to test is using the Serial Monitor in **EX-Installer**.
 
-See the other [Testing Your Installation](../purchasing/next-steps.md) page for alternate ways to test your installation.
+See the other [Testing Your Installation](../../purchasing/next-steps.md) page for alternate ways to test your installation.
 
 ## Testing your installation With EX-Installer
 
@@ -17,13 +17,13 @@ With a Serial Monitor you can, among other things:
 
 Once you have selected a device in **EX-Installer** on the 'Select your device' screen, or after successfully loading software onto your device, a ``View device monitor`` button will be available.
 
-![Select Device screen](../_static/images/ex-installer/view-device-monitor.png){ width=400px }
+![Select Device screen](../../_static/images/ex-installer/view-device-monitor.png){ width=400px }
 
-![Load software screen](../_static/images/ex-installer/view-device-monitor-load-screen.png){ width=400px }
+![Load software screen](../../_static/images/ex-installer/view-device-monitor-load-screen.png){ width=400px }
 
 When clicking this button, the Device Monitor window will open, allowing you to interact with your device by sending commands and viewing the serial console output.
 
-![Device Monitor](../_static/images/ex-installer/device-monitor.png){ width=400px }
+![Device Monitor](../../_static/images/ex-installer/device-monitor.png){ width=400px }
 
 Within the Device Monitor window, you will see the serial console output of your device. As you can see in this screen shot, certain key bits of information are highlighted to help identify these when asked by the **DCC-EX** team.
 
@@ -37,7 +37,7 @@ The following information is highlighted for **EX-CommandStation**:
 
 #### Sending commands
 
-You can send any supported command to your device by typing it into the "Enter command" box and clicking the "Send" button. Refer to the [Serial Commands List](../reference/serial-commands/serial-command-list.md) for the list of available commands. This will also work for the **EX-Turntable** and **EX-IOExpander** commands.
+You can send any supported command to your device by typing it into the "Enter command" box and clicking the "Send" button. Refer to the [Serial Commands List](../../reference/serial-commands/serial-command-list.md) for the list of available commands. This will also work for the **EX-Turntable** and **EX-IOExpander** commands.
 
 #### Saving startup or serial console logs
 
@@ -45,7 +45,7 @@ When interacting with the **DCC-EX** team for support, you will likely be asked 
 
 Using Device Monitor is the simplest way to obtain this information by using the ``Save log`` button.
 
-![Save device log](../_static/images/ex-installer/save-device-log.png){ width=400px }
+![Save device log](../../_static/images/ex-installer/save-device-log.png){ width=400px }
 
 Using this option, you can browse to a location on your computer you can easily find (such as your Desktop), allowing you to upload this to Discord or a GitHub issue and share with the team.
 
@@ -62,6 +62,6 @@ There are several other serial monitors available that can be used for testing:
 - Built in to VSCode is you are using that as an IDE.
 - Built in to the Arduino IDE (We do not recommend that for development)
 
-See [Serial Monitors](../reference/tools/serial-monitor_not_in_nav.md) for more information.
+See [Serial Monitors](../../reference/tools/serial-monitor_not_in_nav.md) for more information.
 
 --8<-- "snippets/abbr.md"

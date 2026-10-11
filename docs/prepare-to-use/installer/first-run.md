@@ -2,13 +2,13 @@
 
 You will be presented with the Welcome screen…
 
-![welcome](/_static/images/ex-installer/welcome.png)
+![welcome](../../_static/images/ex-installer/welcome.png)
 
 This screen provides some basic information about the process of loading the Software. The font may be very small on a high quality screen so use the "tools sizing" menu to find a better zoom factor.
 
 To proceed, click the Manage Arduino CLI button.
 
-![device first_run](/_static/images/ex-installer/first-run.png)
+![device first_run](../../_static/images/ex-installer/first-run.png)
 
 This screen allows you to install or update the Arduino Command Line Interface (CLI).
 
@@ -18,11 +18,11 @@ If you have not installed the CLI previously you will see an 'Install Arduino CL
 
 If you have previously installed the CLI you will see a 'Refresh Arduino CLI' button.
 
-**HINT:**
+!!! HINT "Expressif ESP32 is required for the EX‑CSB1"
 
-Expressif ESP32 is required for the EX‑CSB1
+    Expressif ESP32 is required for the EX‑CSB1
 
-If you are using an Espressif or STMicroelectronics device (including the EX‑CSB1, as opposed to the other CPU based Arduinos, you will need to enable support for these by selecting the appropriate additional platform option.
+If you are using an Espressif or STMicroelectronics device (including the EX‑CSB1), as opposed to the other CPU based Arduinos, you will need to enable support for these by selecting the appropriate additional platform option.
 
 **NOTE:**
 
