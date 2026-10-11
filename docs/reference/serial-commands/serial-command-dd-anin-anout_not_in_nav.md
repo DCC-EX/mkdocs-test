@@ -18,8 +18,8 @@ Serial command(s) to ...
 ## Parameters
 
 * **vpin**: *Required* Analogue VPIN to read or write
-* **position**: ==TODO==
-* **profile**: ==TODO==
+* **position**: ==TODO== Parameter Description
+* **profile**: ==TODO== Parameter Description
 
 ## Response
 
