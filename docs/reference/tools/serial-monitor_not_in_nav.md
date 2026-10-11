@@ -30,7 +30,7 @@ A number of different serial monitors are available:
 
 This is the simplest way to use **EX-Installer's** Device Monitor to show the serial output of your device.
 
-For details, refer to [Testing with EX-Installer](../../installer/testing.md).
+For details, refer to [Testing with EX-Installer](../../prepare-to-use/installer/testing.md).
 
 ----
 
@@ -48,7 +48,7 @@ For details, refer to [Issuing Direct Commands with EX-Installer](/products/ex-w
 
     While it is possible use the Arduino IDE, we *seriously* **DO NOT RECOMMEND IT** for anyone that is technically inexperienced. It is an order of magnitude more complex and much slower.
 
-    Just run **EX-Installer** and open the serial monitor in the [EX-Installer Device Monitor](../../installer/testing.md).
+    Just run **EX-Installer** and open the serial monitor in the [EX-Installer Device Monitor](../../prepare-to-use/installer/testing.md).
 
 ### What You Will Need
 

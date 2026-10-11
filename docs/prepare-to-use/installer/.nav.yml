@@ -1,4 +1,5 @@
 nav:
+  - Installing: index.md
   - EX-Installer<small><small> (Install &amp; Configure)</small></small>: installer.md
   - First Run: first-run.md
   - Select A Product: select-product.md
@@ -9,6 +10,4 @@ nav:
   - <br/>Configure WiFi <small><small>(EX&#8209;CSB1&nbsp;&amp;&nbsp;ESP32&nbsp;v5.7.0+&nbsp;Only)</small></small>: config-wifi-esp32.md
   - Test Your Installation<br>: testing.md
   - <br/>Manage Config files<small><small> <br/>Saving&nbsp;&amp;&nbsp;Restoring</small></small>: manage-config-files.md
-  - <br/>Connecting to Your Layout<small><small> (Physical&nbsp;Connection)</small></small>: physical-installation.md
-  - <br/><i>Next Steps</i> - Throttles: next-steps.md
   - <br/>Advanced Users - VSC/PlatformIO: platformio.md

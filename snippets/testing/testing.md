@@ -1,12 +1,10 @@
 <!-- # Testing your EX-CommandStation -->
 
- (LOTS OF ==TODO== in this file)
-
 Ways you can test your **EX-CommandStation** include:
 
 - Testing use [**EX-WebThrottle**](#testing-with-ex-webthrottle)
-- Testing with a [Serial Monitor](#serial-monitors)
 - Testing over [WiFi with a Smart Device](#testing-with-a-smart-device-over-wifi)
+- Testing with a [Serial Monitor](#serial-monitors)
 
 ----
 
@@ -48,7 +46,7 @@ The most direct testing method is to use a serial monitor to talk directly to th
 
 There are several serial monitors available:
 
-- Built in to [**EX-Installer**](/installer/installer.md)
+- Built in to [**EX-Installer**](/prepare-to-use/installer/installer.md)
 - Built in to the [**EX-WebThrottle**](/products/ex-webthrottle/ex-webthrottle.md)
 - Built in to JMRI or other train control software
 - Built in to VSCode is you are using that as an IDE

@@ -2,7 +2,7 @@
 
 !!! info inline end "EX-Installer"
 
-    Using [EX-Installer](../../installer/installer.md) is the recommended way to modify ``config.h`` and ``myAutomation.h``.
+    Using [EX-Installer](../../prepare-to-use/installer/installer.md) is the recommended way to modify ``config.h`` and ``myAutomation.h``.
 
 WiFi has two operating modes:
 

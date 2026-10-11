@@ -703,3 +703,7 @@ a.external-link-icon::after {
 .md-typeset .danger>.admonition-title {
     background-color: var(--md-admonition-color--danger) !important;
 }
+
+.md-grid {
+    max-width: 65rem;
+}

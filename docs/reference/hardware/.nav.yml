@@ -4,4 +4,5 @@ nav:
   - WiFi Boards: wifi-boards
   - Ethernet Boards: ethernet-boards
   - Bluetooth Devices: bluetooth-devices
+  - I2C Devices: i2c-devices.md
   - HAL:  hal

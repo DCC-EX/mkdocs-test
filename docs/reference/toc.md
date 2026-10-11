@@ -181,7 +181,6 @@ li:not(.md-nav__item, .md-tabs__item) a {
     - [Third Party Products and Sellers <small>(<br/>Third Party Sellers)</small>](../purchasing/third-party-sellers.md)
     - [DCC-EX Merchandise <small>(<br/>Merchandise)</small>](../purchasing/merchandise.md)
     - [EX-CSB1 - Next Steps - Testing Your Installation <small>(<br/><i>EX-CSB1 Next Steps</i><br/>Test&nbsp;Your&nbsp;EX-CSB1)</small>](../purchasing/next-steps.md)
-    - [Connecting to your layout <small>(Connecting to Your Layout<small><small> (Physical&nbsp;Connection)</small></small>)</small>](../purchasing/physical-installation.md)
     - [Following Steps - Throttles <small>(Throttles)</small>](../purchasing/throttles.md)
 - **<small><small>or &nbsp;</small></small>Self Build**
     - [Build Your Own Command Station <small>(Build Your Own)</small>](../diy/diy.md)
@@ -194,24 +193,28 @@ li:not(.md-nav__item, .md-tabs__item) a {
     - [Optionally install Ethernet <small>(Optional Ethernet)</small>](../diy/ethernet.md)
     - [Installing EX-CommandStation firmware <small>(<br/><i>Next Steps</i> - Install &amp; Configure)</small>](../diy/installer.md)
     - [DIY - Other devices <small>(<br/>Other Devices)</small>](../diy/others.md)
-- **Install &amp; Configure**
-    - [EX-Installer <small>(EX-Installer<small><small> (Install &amp; Configure)</small></small>)</small>](../installer/installer.md)
-    - [First Run installer <small>(First Run)</small>](../installer/first-run.md)
-    - [Select Product to Install <small>(Select A Product)</small>](../installer/select-product.md)
-    - [Installing EX-CommandStation Software <small>(Install EX-CommandStation)</small>](../installer/install-cs.md)
-    - [Install EX-IOExpander](../installer/install-ex-ioexpander.md)
-    - [Install EX-Turntable <small>(Install EX-Turntable<br>)</small>](../installer/install-ex-turntable.md)
-    - **Download EX-Installer**
-        - [Downloading EX-Installer - Overview <small>(Download EX-Installer)</small>](../installer/download/index.md)
-        - [Linux](../installer/download/download-linux.md)
-        - [Mac](../installer/download/download-mac.md)
-        - [Windows](../installer/download/download-win.md)
-    - [WiFi Configuration for version 5.7.0+ <br/><small>Graphical User Interface Options</small> <small>(<br/>Configure WiFi <small><small>(EX&#8209;CSB1&nbsp;&amp;&nbsp;ESP32&nbsp;v5.7.0+&nbsp;Only)</small></small>)</small>](../installer/config-wifi-esp32.md)
-    - [Testing your installation <small>(Test Your Installation<br>)</small>](../installer/testing.md)
-    - [Managing Your Config files - Saving and Reusing <small>(<br/>Manage Config files<small><small> <br/>Saving&nbsp;&amp;&nbsp;Restoring</small></small>)</small>](../installer/manage-config-files.md)
-    - [Connecting to your layout <small>(<br/>Connecting to Your Layout<small><small> (Physical&nbsp;Connection)</small></small>)</small>](../installer/physical-installation.md)
-    - [Next Steps - Throttles <small>(<br/><i>Next Steps</i> - Throttles)</small>](../installer/next-steps.md)
-    - [Advanced Users - VSCode/PlatformIO <small>(<br/>Advanced Users - VSC/PlatformIO)</small>](../installer/platformio.md)
+- **Prepare to Use**
+    - [Prepare to Use](../prepare-to-use/index.md)
+    - [Connecting to your layout <small>(Connecting to Your Layout<small><small> (Physical&nbsp;Connection)</small></small>)</small>](../prepare-to-use/physical-installation.md)
+    - [Testing your installation <small>(Test Your Installation<br/><br/>)</small>](../prepare-to-use/testing.md)
+    - **Install and/or Configure**
+        - [Installing the EX-CommandStation Software <small>(Installing)</small>](../prepare-to-use/installer/index.md)
+        - [EX-Installer <small>(EX-Installer<small><small> (Install &amp; Configure)</small></small>)</small>](../prepare-to-use/installer/installer.md)
+        - [First Run installer <small>(First Run)</small>](../prepare-to-use/installer/first-run.md)
+        - [Select Product to Install <small>(Select A Product)</small>](../prepare-to-use/installer/select-product.md)
+        - [Installing EX-CommandStation Software <small>(Install EX-CommandStation)</small>](../prepare-to-use/installer/install-cs.md)
+        - [Install EX-IOExpander](../prepare-to-use/installer/install-ex-ioexpander.md)
+        - [Install EX-Turntable <small>(Install EX-Turntable<br>)</small>](../prepare-to-use/installer/install-ex-turntable.md)
+        - **Download EX-Installer**
+            - [Downloading EX-Installer - Overview <small>(Download EX-Installer)</small>](../prepare-to-use/installer/download/index.md)
+            - [Linux](../prepare-to-use/installer/download/download-linux.md)
+            - [Mac](../prepare-to-use/installer/download/download-mac.md)
+            - [Windows](../prepare-to-use/installer/download/download-win.md)
+        - [WiFi Configuration for version 5.7.0+ <br/><small>Graphical User Interface Options</small> <small>(<br/>Configure WiFi <small><small>(EX&#8209;CSB1&nbsp;&amp;&nbsp;ESP32&nbsp;v5.7.0+&nbsp;Only)</small></small>)</small>](../prepare-to-use/installer/config-wifi-esp32.md)
+        - [Testing your installation <small>(Test Your Installation<br>)</small>](../prepare-to-use/installer/testing.md)
+        - [Managing Your Config files - Saving and Reusing <small>(<br/>Manage Config files<small><small> <br/>Saving&nbsp;&amp;&nbsp;Restoring</small></small>)</small>](../prepare-to-use/installer/manage-config-files.md)
+        - [Advanced Users - VSCode/PlatformIO <small>(<br/>Advanced Users - VSC/PlatformIO)</small>](../prepare-to-use/installer/platformio.md)
+    - [Next Steps - Throttles <small>(<br/><i>Next Steps</i> - Throttles)</small>](../prepare-to-use/next-steps.md)
 - **Use<small><small>&nbsp;Throttles, etc.</small></small>**
     - **Throttles**
         - [Throttles and Other Controllers <small>(Throttle Lists)</small>](../throttles/throttles.md)
@@ -253,7 +256,7 @@ li:not(.md-nav__item, .md-tabs__item) a {
         - [DC Mode - PWM Frequency <small>(DC Mode Frequency)</small>](trackmanager/dc-mode-frequency.md)
         - [DC Mode - Logic Gate Circuits <small>(DC Mode Logic)</small>](trackmanager/dc-mode-logic.md)
         - [DC Mode Track Sync <small>(DC Track Sync)</small>](trackmanager/dc-track-sync.md)
-    - **<br/>Microcontrollers**
+    - **<br/>Alternate Microcontrollers**
         - [Microcontroller Boards - Overview <small>(Overview)</small>](microcontrollers/index.md)
         - **EX-CSB1**
             - [EX-CSB1 FAQ](microcontrollers/ex-csb1/csb1-errors-faq.md)
@@ -274,20 +277,24 @@ li:not(.md-nav__item, .md-tabs__item) a {
             - [Nucleo 144 - EX8874](microcontrollers/nucleo/nucleo-144-ex8874.md)
             - [Nucleo 144 - WiFi](microcontrollers/nucleo/nucleo-144-wifi.md)
             - [Nucleo 144 - Pins](microcontrollers/nucleo/nucleo-144-pin-reference.md)
-    - **Other Hardware**
-        - [Untitled](hardware/i2c-devices.md)
-        - **Bluetooth devices**
-            - [Bluetooth Devices](hardware/bluetooth-devices/index.md)
-        - **Ethernet boards**
+    - **Additional &amp; Alternate Hardware**
+        - [Hardware Options <small>(Overview)</small>](hardware/index.md)
+        - **Motor Drivers**
+            - [Motor Drivers](hardware/motorboards/index.md)
+            - [EX-Motor Shield 8874 Reference <small>(EX‑MotorShield8874)</small>](hardware/motorboards/ex-motor-shield-8874.md)
+            - [L298P & L298HN Shields <small>(L298 Shields <br/><small>Arduino Motor Shield, etc.</small>)</small>](hardware/motorboards/l298-shields.md)
+            - [Schematics](hardware/motorboards/schematics.md)
+        - **WiFi Boards**
+            - [WiFi Boards](hardware/wifi-boards/index.md)
+        - **Ethernet Boards**
             - [Ethernet Boards](hardware/ethernet-boards/index.md)
-        - **Hal**
+        - **Bluetooth Devices**
+            - [Bluetooth Devices](hardware/bluetooth-devices/index.md)
+        - [I2C Devices](hardware/i2c-devices.md)
+        - **HAL**
+            - [Hardware Abstraction Layer (HAL)](hardware/hal/index.md)
             - [I/O Device Drivers and HAL](hardware/hal/hal-config.md)
             - [Writing a HAL Driver](hardware/hal/writing-hal-driver.md)
-        - **Motorboards**
-            - [L298P & L298HN Shields <small>(L298 Shields)</small>](hardware/motorboards/l298-shields.md)
-            - [Schematics](hardware/motorboards/schematics.md)
-        - **Wifi boards**
-            - [WiFi Boards](hardware/wifi-boards/index.md)
     - **Wiring**
         - **i2C**
             - [I2C (I<sup>2</sup>C) Wiring for the Tinkerer <small>(I2C Wiring)</small>](wiring/i2C/i2c-wiring.md)
