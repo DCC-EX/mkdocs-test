@@ -133,75 +133,87 @@
          <lastmod>2026-10-11</lastmod>
     </url>
     <url>
-         <loc>https://dcc-ex.com/mkdocs-test/installer/config-wifi-esp32/</loc>
-         <lastmod>2026-10-11</lastmod>
-    </url>
-    <url>
-         <loc>https://dcc-ex.com/mkdocs-test/installer/first-run/</loc>
-         <lastmod>2026-10-11</lastmod>
-    </url>
-    <url>
-         <loc>https://dcc-ex.com/mkdocs-test/installer/install-cs/</loc>
-         <lastmod>2026-10-11</lastmod>
-    </url>
-    <url>
-         <loc>https://dcc-ex.com/mkdocs-test/installer/install-ex-ioexpander/</loc>
-         <lastmod>2026-10-11</lastmod>
-    </url>
-    <url>
-         <loc>https://dcc-ex.com/mkdocs-test/installer/install-ex-turntable/</loc>
-         <lastmod>2026-10-11</lastmod>
-    </url>
-    <url>
-         <loc>https://dcc-ex.com/mkdocs-test/installer/installer/</loc>
-         <lastmod>2026-10-11</lastmod>
-    </url>
-    <url>
-         <loc>https://dcc-ex.com/mkdocs-test/installer/manage-config-files/</loc>
-         <lastmod>2026-10-11</lastmod>
-    </url>
-    <url>
-         <loc>https://dcc-ex.com/mkdocs-test/installer/next-steps/</loc>
-         <lastmod>2026-10-11</lastmod>
-    </url>
-    <url>
-         <loc>https://dcc-ex.com/mkdocs-test/installer/physical-installation/</loc>
-         <lastmod>2026-10-11</lastmod>
-    </url>
-    <url>
-         <loc>https://dcc-ex.com/mkdocs-test/installer/platformio/</loc>
-         <lastmod>2026-10-11</lastmod>
-    </url>
-    <url>
-         <loc>https://dcc-ex.com/mkdocs-test/installer/select-product/</loc>
-         <lastmod>2026-10-11</lastmod>
-    </url>
-    <url>
-         <loc>https://dcc-ex.com/mkdocs-test/installer/testing/</loc>
-         <lastmod>2026-10-11</lastmod>
-    </url>
-    <url>
-         <loc>https://dcc-ex.com/mkdocs-test/installer/download/</loc>
-         <lastmod>2026-10-11</lastmod>
-    </url>
-    <url>
-         <loc>https://dcc-ex.com/mkdocs-test/installer/download/download-linux/</loc>
-         <lastmod>2026-10-11</lastmod>
-    </url>
-    <url>
-         <loc>https://dcc-ex.com/mkdocs-test/installer/download/download-mac/</loc>
-         <lastmod>2026-10-11</lastmod>
-    </url>
-    <url>
-         <loc>https://dcc-ex.com/mkdocs-test/installer/download/download-win/</loc>
-         <lastmod>2026-10-11</lastmod>
-    </url>
-    <url>
          <loc>https://dcc-ex.com/mkdocs-test/news/</loc>
          <lastmod>2026-10-11</lastmod>
     </url>
     <url>
          <loc>https://dcc-ex.com/mkdocs-test/news/2025/06/new-documentation/</loc>
+         <lastmod>2026-10-11</lastmod>
+    </url>
+    <url>
+         <loc>https://dcc-ex.com/mkdocs-test/prepare-to-use/</loc>
+         <lastmod>2026-10-11</lastmod>
+    </url>
+    <url>
+         <loc>https://dcc-ex.com/mkdocs-test/prepare-to-use/next-steps/</loc>
+         <lastmod>2026-10-11</lastmod>
+    </url>
+    <url>
+         <loc>https://dcc-ex.com/mkdocs-test/prepare-to-use/physical-installation/</loc>
+         <lastmod>2026-10-11</lastmod>
+    </url>
+    <url>
+         <loc>https://dcc-ex.com/mkdocs-test/prepare-to-use/testing/</loc>
+         <lastmod>2026-10-11</lastmod>
+    </url>
+    <url>
+         <loc>https://dcc-ex.com/mkdocs-test/prepare-to-use/installer/</loc>
+         <lastmod>2026-10-11</lastmod>
+    </url>
+    <url>
+         <loc>https://dcc-ex.com/mkdocs-test/prepare-to-use/installer/config-wifi-esp32/</loc>
+         <lastmod>2026-10-11</lastmod>
+    </url>
+    <url>
+         <loc>https://dcc-ex.com/mkdocs-test/prepare-to-use/installer/first-run/</loc>
+         <lastmod>2026-10-11</lastmod>
+    </url>
+    <url>
+         <loc>https://dcc-ex.com/mkdocs-test/prepare-to-use/installer/install-cs/</loc>
+         <lastmod>2026-10-11</lastmod>
+    </url>
+    <url>
+         <loc>https://dcc-ex.com/mkdocs-test/prepare-to-use/installer/install-ex-ioexpander/</loc>
+         <lastmod>2026-10-11</lastmod>
+    </url>
+    <url>
+         <loc>https://dcc-ex.com/mkdocs-test/prepare-to-use/installer/install-ex-turntable/</loc>
+         <lastmod>2026-10-11</lastmod>
+    </url>
+    <url>
+         <loc>https://dcc-ex.com/mkdocs-test/prepare-to-use/installer/installer/</loc>
+         <lastmod>2026-10-11</lastmod>
+    </url>
+    <url>
+         <loc>https://dcc-ex.com/mkdocs-test/prepare-to-use/installer/manage-config-files/</loc>
+         <lastmod>2026-10-11</lastmod>
+    </url>
+    <url>
+         <loc>https://dcc-ex.com/mkdocs-test/prepare-to-use/installer/platformio/</loc>
+         <lastmod>2026-10-11</lastmod>
+    </url>
+    <url>
+         <loc>https://dcc-ex.com/mkdocs-test/prepare-to-use/installer/select-product/</loc>
+         <lastmod>2026-10-11</lastmod>
+    </url>
+    <url>
+         <loc>https://dcc-ex.com/mkdocs-test/prepare-to-use/installer/testing/</loc>
+         <lastmod>2026-10-11</lastmod>
+    </url>
+    <url>
+         <loc>https://dcc-ex.com/mkdocs-test/prepare-to-use/installer/download/</loc>
+         <lastmod>2026-10-11</lastmod>
+    </url>
+    <url>
+         <loc>https://dcc-ex.com/mkdocs-test/prepare-to-use/installer/download/download-linux/</loc>
+         <lastmod>2026-10-11</lastmod>
+    </url>
+    <url>
+         <loc>https://dcc-ex.com/mkdocs-test/prepare-to-use/installer/download/download-mac/</loc>
+         <lastmod>2026-10-11</lastmod>
+    </url>
+    <url>
+         <loc>https://dcc-ex.com/mkdocs-test/prepare-to-use/installer/download/download-win/</loc>
          <lastmod>2026-10-11</lastmod>
     </url>
     <url>
@@ -790,10 +802,6 @@
     </url>
     <url>
          <loc>https://dcc-ex.com/mkdocs-test/purchasing/official-sellers/</loc>
-         <lastmod>2026-10-11</lastmod>
-    </url>
-    <url>
-         <loc>https://dcc-ex.com/mkdocs-test/purchasing/physical-installation/</loc>
          <lastmod>2026-10-11</lastmod>
     </url>
     <url>
