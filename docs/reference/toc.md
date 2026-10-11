@@ -239,7 +239,7 @@ li:not(.md-nav__item, .md-tabs__item) a {
 - **Reference**
     - [Full Site Table of Contents <small>(Table of Contents)</small>](toc.md)
     - [Glossary of Terms](glossary.md)
-    - [EXRAIL Command List <small>(<br/>EXRAIL Command List)</small>](exrail-command-reference.md)
+    - [**EXRAIL** Full Command List <small>(<br/>EXRAIL Command List)</small>](exrail-command-reference.md)
     - [DCC-EX Serial Command List <small>(Serial Commands <small>Full&nbsp;List</small>)</small>](serial-commands/serial-command-list.md)
     - [Serial Commands <small>by&nbsp;Function&nbsp;Group</small>](serial-commands/serial-commands.md)
     - **Serial Commands <small>Additional&nbsp;Info</small>**
