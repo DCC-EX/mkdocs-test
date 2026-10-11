@@ -278,9 +278,7 @@ After selecting each additional loco, the Consist Edit screen will be shown. Thi
 
   The free version of WiThrottle ('WiThrottle Lite') only controls one loco at a time and does not offer turnout control or DCC track power control. (Note: JMRI can be configured to automatically turn the track power on.)
 
-  The paid version WiThrottle can control multiple locos, can create and control consists, can control turnouts and routes, and can control DCC track power.
-
-==TODO== LOW - `Stage 1 <https://github.com/DCC-EX/dcc-ex.github.io/issues/415>`_  - WiThrottle - Multiple Trains
+  The paid version of WiThrottle can control multiple locos, can create and control consists, can control turnouts and routes, and can control DCC track power.  See the [WiThrottle manual](https://www.withrottle.com/html/manual).
 
 ----
 
