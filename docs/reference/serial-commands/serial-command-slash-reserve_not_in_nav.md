@@ -3,6 +3,9 @@ tags:
   - _/_9RESERVE9_section
   - _/_9FREE9_section
   - _/_9FREEALL9
+
+search:
+  boost: 3
 ---
 
 # <small>``</ FREEALL|[RESERVE|FREE «section»]>``</small> <br/> Reserve or Free Sections

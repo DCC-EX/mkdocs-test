@@ -40,7 +40,7 @@ Reference guide for serial commands used by **EX-CommandStations**, shown in fun
 
 | Command | Description | Parameters | Status |
 | ------- | ----------- | ---------- | ------ |
-| [`<#>`](?_:h:) | Request number of simultaneously supported locos | None | Active |
+| [`<#>`](?_8hash8) | Request number of simultaneously supported locos | None | Active |
 | [`<!>`](?_!) | Emergency stop all locos | None | Active |
 | [`<!P>`](?_!) | Emergency stop and PAUSE loco movement | None | Active |
 | [`<!R>`](?_!) | Resume after `<!P>` | None | Active |
@@ -85,9 +85,9 @@ Reference guide for serial commands used by **EX-CommandStations**, shown in fun
 
 | Command | Description | Parameters | Status |
 | ------- | ----------- | ---------- | ------ |
-| [`<^>`](?_:c:) | Show all consists | none | Active |
-| [`<^ leadLoco follower [ follower2..7]>`](?_:c:_ leadLoco_follower [_follower2..7]) | Create Consist | `loco`: ID, negative for reversed loco | Active |
-| [`<^ loco>`](?_:c:_loco) | Deletes consist | `loco1`: ID | Active |
+| [`<^>`](?_8caret8) | Show all consists | none | Active |
+| [`<^ leadLoco follower [ follower2..7]>`](?_8caret8_ leadLoco_follower [_follower2..7]) | Create Consist | `loco`: ID, negative for reversed loco | Active |
+| [`<^ loco>`](?_8caret8_loco) | Deletes consist | `loco1`: ID | Active |
 
 ## Turnout/Point Control
 

@@ -9,6 +9,9 @@ tags:
   - _/_9RESUME9
   - _/_9KILL9_9ALL9
   - _/_9KILL9_id
+
+search:
+  boost: 3
 ---
 
 # <small>``<J A [«id»]>``</small> <br/><small>``</ [START|PAUSE|RESUME|KILL] [«various parameters»]>``</small> <br/> List, Start or Stop Automations/Sequences

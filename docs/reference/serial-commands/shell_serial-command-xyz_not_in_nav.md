@@ -1,6 +1,9 @@
 ---
 tags:
-  -
+  - 
+
+search:
+  boost: 3
 ---
 
 # <small>``<cmd «required parameter» [«optional parameter»]>``</small> <br/> Short command description

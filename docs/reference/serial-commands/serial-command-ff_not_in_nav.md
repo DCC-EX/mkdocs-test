@@ -4,6 +4,9 @@ tags:
   - _9F9_loco_function_onoff
   - _f_loco_byte1
   - _f_loco_group_byte2
+
+search:
+  boost: 3
 ---
 
 # <small>``<F «loco» [«function» «state»]|[DCCFREQ «freqValue»]>``</small> <br/>Set decoder functions or set PWM frequency

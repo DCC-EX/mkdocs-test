@@ -3,6 +3,9 @@ tags:
   - _/_9RED9_signal
   - _/_9AMBER9_signal
   - _/_9GREEN9_signal
+
+search:
+  boost: 3
 ---
 
 # <small>``</ «colour» «signal»>``</small> <br/> Set signal colour

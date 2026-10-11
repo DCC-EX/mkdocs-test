@@ -14,6 +14,9 @@ tags:
   - _9T9_id_value
   - _9J9_9T9
   - _9J9_9T9_id
+
+search:
+  boost: 3
 ---
 
 # <small>``<T [«id»] [«various parameters»]>`` <br/> ``<J T [«id»]>``</small> <br/>Define or manage Turnouts/Points

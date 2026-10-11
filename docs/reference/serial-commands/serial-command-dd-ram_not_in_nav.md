@@ -1,6 +1,9 @@
 ---
 tags:
   - _9D9_9RAM9
+
+search:
+  boost: 3
 ---
 
 # <small>``<D RAM>``</small> <br/> Diagnostic display free RAM

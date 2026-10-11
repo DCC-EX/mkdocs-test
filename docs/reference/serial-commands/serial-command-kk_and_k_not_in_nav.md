@@ -2,6 +2,9 @@
 tags:
   - _9K9_blockId_loco
   - _k_blockId_loco
+
+search:
+  boost: 3
 ---
 
 # <small>``<K «blockid» «loco»>``</small> <br/> ``<k «blockid» «loco»>`` <br/> Loco entering/leaving Block

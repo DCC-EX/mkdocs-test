@@ -6,6 +6,9 @@ tags:
   - _9J9_9M9_9CLEAR9_stashId
   - _9J9_9M9_stashId
   - _9J9_9M9_stashId_loco
+
+search:
+  boost: 3
 ---
 
 # <small>``<J M [«various parameters»]>``</small> <br/> Manage Stash Values

@@ -15,6 +15,9 @@ tags:
     - _w_loco_cv_value
     - _9B9_cv_bitPosition_bitValue
     - _b_loco_cv_bitPosition_bitValue
+
+search:
+  boost: 3
 ---
 
 # <small>``<R [«cv»|LOCOID|CONSIST]>`` <br/>``<r «loco» «cv»>`` <br/>``<W [«loco»]|[«cv» «value»]|[«loco» «cv» «bitValue» «bit»]|[CONSIST «loco» [REVERSE]]>`` <br/>``<V [«cv» «value»]|[«cv» «bit» «bitValue»]>`` <br/>``<B «cv» «bit» «bitValue»>`` <br/>``<b «loco» «cv» «bit» «bitValue»>``</small> <br/>Read and write CVs
