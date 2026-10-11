@@ -181,7 +181,6 @@ li:not(.md-nav__item, .md-tabs__item) a {
     - [Third Party Products and Sellers <small>(<br/>Third Party Sellers)</small>](../purchasing/third-party-sellers.md)
     - [DCC-EX Merchandise <small>(<br/>Merchandise)</small>](../purchasing/merchandise.md)
     - [EX-CSB1 - Next Steps - Testing Your Installation <small>(<br/><i>EX-CSB1 Next Steps</i><br/>Test&nbsp;Your&nbsp;EX-CSB1)</small>](../purchasing/next-steps.md)
-    - [Connecting to your layout <small>(Connecting to Your Layout<small><small> (Physical&nbsp;Connection)</small></small>)</small>](../purchasing/physical-installation.md)
     - [Following Steps - Throttles <small>(Throttles)</small>](../purchasing/throttles.md)
 - **<small><small>or &nbsp;</small></small>Self Build**
     - [Build Your Own Command Station <small>(Build Your Own)</small>](../diy/diy.md)
@@ -198,7 +197,7 @@ li:not(.md-nav__item, .md-tabs__item) a {
     - [Prepare to Use](../prepare-to-use/index.md)
     - [Connecting to your layout <small>(Connecting to Your Layout<small><small> (Physical&nbsp;Connection)</small></small>)</small>](../prepare-to-use/physical-installation.md)
     - [Testing your installation <small>(Test Your Installation<br/><br/>)</small>](../prepare-to-use/testing.md)
-    - **Install &amp; Configure**
+    - **Install and/or Configure**
         - [Installing the EX-CommandStation Software <small>(Installing)</small>](../prepare-to-use/installer/index.md)
         - [EX-Installer <small>(EX-Installer<small><small> (Install &amp; Configure)</small></small>)</small>](../prepare-to-use/installer/installer.md)
         - [First Run installer <small>(First Run)</small>](../prepare-to-use/installer/first-run.md)

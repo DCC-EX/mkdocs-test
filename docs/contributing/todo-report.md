@@ -20,18 +20,17 @@ Scanned roots: `C:\Users\akers\OneDrive\github\github_doco\mkdocs-test\docs`, `C
 
 ## High TODOs
 
-Total High TODO matches: 92
+Total High TODO matches: 90
 
 | File | Line | Line text |
 | --- | ---: | --- |
 | [docs/contributing/release-checklist.md](release-checklist.md) | 128 | - ==TODO== Really need some pages with diagrams and picture covering physical installation of the CS. See /purchasing/physical-installation.md and installer/physical-installation.md |
 | [docs/diy/mega-harder.md](../diy/mega-harder.md) | 18 | - an Arduino Standard Motor-Shield (or others as noted in ==TODO==) to power the track. |
-| [docs/prepare-to-use/index.md](../prepare-to-use/index.md) | 5 | ==TODO==  Installing the EX-CommandStation software Not needed for the EX-CSB1 |
+| [docs/prepare-to-use/index.md](../prepare-to-use/index.md) | 5 | ==TODO==  Installing the EX-CommandStation software - overview -  Not needed for the EX-CSB1 |
 | [docs/prepare-to-use/index.md](../prepare-to-use/index.md) | 9 | ==TODO==  Installing the EX-CommandStation - Intro |
-| [docs/prepare-to-use/index.md](../prepare-to-use/index.md) | 13 | ==TODO==  Testing - Intro |
+| [docs/prepare-to-use/index.md](../prepare-to-use/index.md) | 15 | ==TODO==  Testing - Intro |
 | [docs/prepare-to-use/physical-installation.md](../prepare-to-use/physical-installation.md) | 3 | ==TODO== new page on physically connecting the EX-CS to a layout. Should be in a snippet and reused |
 | [docs/prepare-to-use/testing.md](../prepare-to-use/testing.md) | 3 | ==TODO== Basic testing... subset of the full testing page for the EX-CSB1 |
-| [docs/purchasing/physical-installation.md](../purchasing/physical-installation.md) | 3 | ==TODO== new page on physically connecting the EX-CSB1 to a layout. Should be in a snippet and reused |
 | [docs/support/faq.md](../support/faq.md) | 9 | ==TODO== Rework this so that it includes GUI options (EX-WebThrottle, Engine Driver, etc.) |
 | [docs/support/faq.md](../support/faq.md) | 19 | ==TODO== Rework this so that it includes GUI options (EX-WebThrottle, Engine Driver, etc.) |
 | [docs/throttles/connecting-usb.md](../throttles/connecting-usb.md) | 3 | ==TODO== Connecting a USB Throttle to your EX-CommandStation |
@@ -111,11 +110,10 @@ Total High TODO matches: 92
 | snippets/ex-installer/device-monitor.md | 1 | ==TODO== Instructions on using Device Monitor. |
 | snippets/ex-installer/installing.md | 1 | ==TODO== **This needs to outline the steps to install EX-Installer.** |
 | snippets/ex-installer/startup-logs.md | 1 | ==TODO== Instructions required here to obtain the startup logs from **EX-Installer**. |
-| snippets/testing/testing.md | 3 | (LOTS OF ==TODO== in this file) |
-| snippets/testing/testing.md | 15 | ==TODO== Initial Testing with EX-WebThrottle |
-| snippets/testing/testing.md | 31 | ==TODO== basic steps for initial testing with a Smart Device over WiFi |
-| snippets/testing/testing.md | 41 | ==TODO== what to do if any of the initial testing steps fail |
-| snippets/testing/testing.md | 76 | ==TODO==... pic - Check communication and version |
+| snippets/testing/testing.md | 13 | ==TODO== Initial Testing with EX-WebThrottle |
+| snippets/testing/testing.md | 29 | ==TODO== basic steps for initial testing with a Smart Device over WiFi |
+| snippets/testing/testing.md | 39 | ==TODO== what to do if any of the initial testing steps fail |
+| snippets/testing/testing.md | 74 | ==TODO==... pic - Check communication and version |
 
 ## Medium priority TODOs
 
