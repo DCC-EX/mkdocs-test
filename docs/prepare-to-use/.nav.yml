@@ -1,6 +1,6 @@
 nav:
   - Prepare to Use: index.md
-  - Connecting to Your Layout<small><small> (Physical&nbsp;Connection)</small></small>: physical-installation.md
+  - Connecting to Your Layout<small><small> (Physical&nbsp;Connection)</small></small>: connecting
   - Test Your Installation<br/><br/>: testing.md
   - Install and/or Configure: installer
   - <br/><i>Next Steps</i> - Throttles: next-steps.md

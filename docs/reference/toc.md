@@ -141,8 +141,9 @@ li:not(.md-nav__item, .md-tabs__item) a {
                     - [TM1638 Buttons, leds and 7 segment display](../products/ex-commandstation/exrail/cookbooks/various-devices/tm-1638.md)
                     - [Trainbrains Devices](../products/ex-commandstation/exrail/cookbooks/various-devices/trainbrains.md)
                     - [XL9535 Relay Board](../products/ex-commandstation/exrail/cookbooks/various-devices/xl9535.md)
-    - **<i>EX-CSB1 CommandStation/Booster 1 Express</i>**
-        - [**EX-CSB1** CommandStation/Booster 1 Express <small>(<i>EX-CSB1 CommandStation/Booster 1 Express</i>)</small>](../products/ex-csb1/index.md)
+    - **<b>EX-CSB1</b> <small><small>(Ready&nbsp;to&nbsp;Run) <br/>EX-CommandStation/Booster&thinsp;1&thinsp;Express</small></small>**
+        - [**EX-CSB1** <br/>EX-CommandStation/Booster 1 Express <small>(<i><b>EX-CSB1</b> CommandStation/Booster 1 Express</i>)</small>](../products/ex-csb1/index.md)
+        - [**EX-CSB1** - Quick Start<br/>EX-CommandStation/Booster 1 Express <small>(Getting Started)</small>](../products/ex-csb1/getting-started.md)
     - [EX‑MotorShield8874 <small>(<br/>EX-MotorShield8874)</small>](../products/ex-motorshield8874/ex-motorshield8874.md)
     - [EX-WiFiShield 8266 <small>(EX-WiFiShield8266)</small>](../products/ex-wifishield8266/ex-wifishield8266.md)
     - [EX-WebThrottle - Overview <small>(<br/>EX-WebThrottle)</small>](../products/ex-webthrottle/ex-webthrottle.md)
@@ -196,7 +197,10 @@ li:not(.md-nav__item, .md-tabs__item) a {
     - [DIY - Other devices <small>(<br/>Other Devices)</small>](../diy/others.md)
 - **Prepare to Use**
     - [Prepare to Use](../prepare-to-use/index.md)
-    - [Connecting to your layout <small>(Connecting to Your Layout<small><small> (Physical&nbsp;Connection)</small></small>)</small>](../prepare-to-use/physical-installation.md)
+    - **Connecting to Your Layout<small><small> (Physical&nbsp;Connection)</small></small>**
+        - [Connecting to your layout <small>(Connecting to Your Layout<small><small> (Physical&nbsp;Connection)</small></small>)</small>](../prepare-to-use/connecting/index.md)
+        - [Connecting to your layout <small>(Connecting an EX-CSB1)</small>](../prepare-to-use/connecting/connecting-ex-csb1.md)
+        - [Connecting to your layout <small>(Connecting a Self-Build)</small>](../prepare-to-use/connecting/connecting-diy.md)
     - [Testing your installation <small>(Test Your Installation<br/><br/>)</small>](../prepare-to-use/testing.md)
     - **Install and/or Configure**
         - [Installing the EX-CommandStation Software <small>(Installing)</small>](../prepare-to-use/installer/index.md)

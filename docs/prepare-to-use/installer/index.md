@@ -2,5 +2,6 @@
 
 ==TODO== Installing the EX-CommandStation Software - Intro
 
-- EXInstaller
-- Other (not recommended) options
+- [EX-Installer](installer.md)
+- [VSCode/PlatformIO](platformio.md)
+- Arduino IDE (not recommended)
