@@ -8,6 +8,6 @@ nav:
     - WiThrottle VS Native Protocol: withrottle-vs-native-protocol.md
   - <br/>How to Connect - WiFi: connecting-wifi.md
   - How to Connect - USB: connecting-usb.md
-  - <br/>Loco/CV Programming: cv-programming.md
-  - DCC Accessory Operation: dcc-accessories.md
+  - <br/>Loco/CV Programming: loco-programming
+  - <br/>DCC Accessory Operation: dcc-accessories.md
   - Controlling DC Locos: dc.md

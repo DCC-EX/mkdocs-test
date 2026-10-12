@@ -14,7 +14,7 @@ Some command stations are not able to do programming and running at the same tim
     You cannot 'read' CVs if the track is set to ``MAIN``.<br/>
     While you can write CVs on ``MAIN`` using 'PoM' you will not receive a response. PoM should never be used to change loco addresses.
 
-**EX-CommandStation** provides some simple commands to allow you switch tracks types in software. Perhaps because you only have a single loco or your PROG track is actually an isolated siding on a layout, you can easily, temporarily, change a track to, and from, PROG or MAIN. See the [Track Manager](../../ex-commandstation/trackmanager/index.md) pages for more information.
+**EX-CommandStation** provides some simple commands to allow you switch tracks types in software. Perhaps because you only have a single loco or your PROG track is actually an isolated siding on a layout, you can easily, temporarily, change a track to, and from, PROG or MAIN. See the [Track Manager](../../products/ex-commandstation/trackmanager/index.md) pages for more information.
 
 ## Reading/Writing decoder settings
 
@@ -24,45 +24,62 @@ The **EX-CommandStation** provides the underlying technology to read and write i
 
 There are a number of ways you can program decoders:
 
-* With [serial input commands](#programming-using-serial-input-commands)
+Easy ways:
+
+* With [EX-WebThtottle](#programming-using-ex-webthrottle)
 * With the [Engine Driver](#programming-using-engine-driver) app
 * With the [EX-Toolbox](#programming-using-ex-toolbox) app
+* With other [smart device](#programming-with-smart-devicethrottle-apps) (smart phones and tablets) apps
+
+More complex ways:
+
+* With [serial input commands](#programming-using-serial-input-commands)
 * With [JMRI Decoder Pro](#programming-with-jmri-decoderpro)
-* With other [smart device](#programming-with-smart-devicethrottle-apps) apps, or PC apps
+apps, or PC apps
 
 ----
 
-## Programming using Serial input commands
+## Easy Ways
 
-This requires access to the [serial monitor](../../../reference/tools/serial-monitor_not_in_nav.md). It is the most flexible method and can provide diagnostics when things don't work. It also has the flexibility to adjust the tuning parameters to cope with decoders that are way outside the normal decoder electronic standards.
+### Programming using EX-WebThrottle
 
-See [Programming with Serial commands](../../ex-commandstation/loco-programming/serial-programming.md)
+==TODO== CV Programming using EX-WebThrottle
 
-## Programming using Engine Driver
+### Programming using Engine Driver
 
 The Engine Driver throttle includes simple programming dialogs, including the "Drive Away" feature that allows a throttle to obtain the loco address from a prog track and drive the loco directly without having to re-enter the address.
 
-See [Programming with Engine Driver](../../ex-commandstation/loco-programming/engine-driver-programming.md)
+See [Programming with Engine Driver](../../throttles/loco-programming/engine-driver-programming.md)
 
-## Programming using EX-Toolbox
+### Programming using EX-Toolbox
 
 The **EX-Toolbox** Android application, includes simple programming dialogs and some more advanced features such as a speed matching tool used to adjust loco speed tables to match with another loco so that they can be coupled together in a consist.
 
-See [Programming with EX-Toolbox](../../ex-commandstation/loco-programming/toolbox-programming.md)
+See [Programming with EX-Toolbox](../../throttles/loco-programming/toolbox-programming.md)
 
-## Programming with JMRI DecoderPro
+### Programming with Smart Device/Throttle Apps
+
+A number of Throttle apps for iOS and Android are capable of reading and writing to decoders. There are also a few for Microsoft Windows and Apple MacOS.
+
+Refer to the [Throttles](../throttles.md#comparison-table) lists to see which apps can.  Then refer to the specific documentation of that app to find out how.
+
+----
+
+## more complex ways
+
+### Programming using Serial input commands
+
+This requires access to the [serial monitor](../../reference/tools/serial-monitor_not_in_nav.md). It is the most flexible method and can provide diagnostics when things don't work. It also has the flexibility to adjust the tuning parameters to cope with decoders that are way outside the normal decoder electronic standards.
+
+See [Programming with Serial commands](../../throttles/loco-programming/serial-programming.md)
+
+### Programming with JMRI DecoderPro
 
 There are very few "standards" relating to DCC decoders and there are hundreds of incompatible devices in use around the world. JMRI DecoderPro contains a massive database of decoder types, and their quirks, built up over many years of experience.
 
 For advanced programming, this is the tool of choice.
 
-See [Programming with DecoderPro](../../ex-commandstation/loco-programming/decoderpro.md)
-
-## Programming with Smart Device/Throttle Apps
-
-A number of Throttle apps for iOS and Android are capable of reading and writing to decoders. There are also a few for Microsoft Windows and Apple MacOS.
-
-Refer to the [Throttles](../../../throttles/throttles.md#comparison-table) lists to see which apps can.  Then refer to the specific documentation of that app to find out how.
+See [Programming with DecoderPro](../../throttles/loco-programming/decoderpro.md)
 
 ----
 
