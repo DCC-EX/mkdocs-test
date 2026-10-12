@@ -249,6 +249,10 @@
          <lastmod>2026-10-12</lastmod>
     </url>
     <url>
+         <loc>https://dcc-ex.com/mkdocs-test/prepare-to-use/installer/config-wifi-shield/</loc>
+         <lastmod>2026-10-12</lastmod>
+    </url>
+    <url>
          <loc>https://dcc-ex.com/mkdocs-test/prepare-to-use/installer/first-run/</loc>
          <lastmod>2026-10-12</lastmod>
     </url>
@@ -310,18 +314,6 @@
     </url>
     <url>
          <loc>https://dcc-ex.com/mkdocs-test/products/ex-commandstation/</loc>
-         <lastmod>2026-10-12</lastmod>
-    </url>
-    <url>
-         <loc>https://dcc-ex.com/mkdocs-test/products/ex-commandstation/config-wifi-esp32/</loc>
-         <lastmod>2026-10-12</lastmod>
-    </url>
-    <url>
-         <loc>https://dcc-ex.com/mkdocs-test/products/ex-commandstation/config-wifi-shield/</loc>
-         <lastmod>2026-10-12</lastmod>
-    </url>
-    <url>
-         <loc>https://dcc-ex.com/mkdocs-test/products/ex-commandstation/testing/</loc>
          <lastmod>2026-10-12</lastmod>
     </url>
     <url>
@@ -642,6 +634,10 @@
     </url>
     <url>
          <loc>https://dcc-ex.com/mkdocs-test/products/ex-csb1/</loc>
+         <lastmod>2026-10-12</lastmod>
+    </url>
+    <url>
+         <loc>https://dcc-ex.com/mkdocs-test/products/ex-csb1/config-wifi-esp32/</loc>
          <lastmod>2026-10-12</lastmod>
     </url>
     <url>
