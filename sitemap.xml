@@ -641,34 +641,6 @@
          <lastmod>2026-10-12</lastmod>
     </url>
     <url>
-         <loc>https://dcc-ex.com/mkdocs-test/products/ex-commandstation/loco-programming/</loc>
-         <lastmod>2026-10-12</lastmod>
-    </url>
-    <url>
-         <loc>https://dcc-ex.com/mkdocs-test/products/ex-commandstation/loco-programming/decoderpro/</loc>
-         <lastmod>2026-10-12</lastmod>
-    </url>
-    <url>
-         <loc>https://dcc-ex.com/mkdocs-test/products/ex-commandstation/loco-programming/engine-driver-programming/</loc>
-         <lastmod>2026-10-12</lastmod>
-    </url>
-    <url>
-         <loc>https://dcc-ex.com/mkdocs-test/products/ex-commandstation/loco-programming/programming-tips/</loc>
-         <lastmod>2026-10-12</lastmod>
-    </url>
-    <url>
-         <loc>https://dcc-ex.com/mkdocs-test/products/ex-commandstation/loco-programming/serial-programming/</loc>
-         <lastmod>2026-10-12</lastmod>
-    </url>
-    <url>
-         <loc>https://dcc-ex.com/mkdocs-test/products/ex-commandstation/loco-programming/toolbox-programming/</loc>
-         <lastmod>2026-10-12</lastmod>
-    </url>
-    <url>
-         <loc>https://dcc-ex.com/mkdocs-test/products/ex-commandstation/loco-programming/webthrottle-programming/</loc>
-         <lastmod>2026-10-12</lastmod>
-    </url>
-    <url>
          <loc>https://dcc-ex.com/mkdocs-test/products/ex-commandstation/trackmanager/</loc>
          <lastmod>2026-10-12</lastmod>
     </url>
@@ -1269,10 +1241,6 @@
          <lastmod>2026-10-12</lastmod>
     </url>
     <url>
-         <loc>https://dcc-ex.com/mkdocs-test/throttles/cv-programming/</loc>
-         <lastmod>2026-10-12</lastmod>
-    </url>
-    <url>
          <loc>https://dcc-ex.com/mkdocs-test/throttles/dc/</loc>
          <lastmod>2026-10-12</lastmod>
     </url>
@@ -1306,6 +1274,34 @@
     </url>
     <url>
          <loc>https://dcc-ex.com/mkdocs-test/throttles/withrottle-vs-native-protocol/</loc>
+         <lastmod>2026-10-12</lastmod>
+    </url>
+    <url>
+         <loc>https://dcc-ex.com/mkdocs-test/throttles/loco-programming/</loc>
+         <lastmod>2026-10-12</lastmod>
+    </url>
+    <url>
+         <loc>https://dcc-ex.com/mkdocs-test/throttles/loco-programming/decoderpro/</loc>
+         <lastmod>2026-10-12</lastmod>
+    </url>
+    <url>
+         <loc>https://dcc-ex.com/mkdocs-test/throttles/loco-programming/engine-driver-programming/</loc>
+         <lastmod>2026-10-12</lastmod>
+    </url>
+    <url>
+         <loc>https://dcc-ex.com/mkdocs-test/throttles/loco-programming/programming-tips/</loc>
+         <lastmod>2026-10-12</lastmod>
+    </url>
+    <url>
+         <loc>https://dcc-ex.com/mkdocs-test/throttles/loco-programming/serial-programming/</loc>
+         <lastmod>2026-10-12</lastmod>
+    </url>
+    <url>
+         <loc>https://dcc-ex.com/mkdocs-test/throttles/loco-programming/toolbox-programming/</loc>
+         <lastmod>2026-10-12</lastmod>
+    </url>
+    <url>
+         <loc>https://dcc-ex.com/mkdocs-test/throttles/loco-programming/webthrottle-programming/</loc>
          <lastmod>2026-10-12</lastmod>
     </url>
     <url>
