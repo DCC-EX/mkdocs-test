@@ -42,7 +42,7 @@ See [Ethernet Install](ethernet.md)
 
 ![VIN trace](/_static/images/mega-hard/mega2.png){ align=right }
 
-1. Unless you are using an **EX-8874** motor shield ([covered here](mega-easy.md)), you MUST prevent the shield from feeding track voltage into your Mega. This is done by cutting the VIN trace and/or removing the pin that feeds the Mega.
+1. Unless you are using an **EX-MotorShield8874** motor shield ([covered here](mega-easy.md)), you MUST prevent the shield from feeding track voltage into your Mega. This is done by cutting the VIN trace and/or removing the pin that feeds the Mega.
 
 2. Ensure shield pins are straight and correctly aligned.
 

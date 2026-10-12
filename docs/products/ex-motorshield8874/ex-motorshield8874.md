@@ -1,15 +1,17 @@
 # EX‑MotorShield8874
 
-![EX-8874 Logo](../../_static/images/logos/product-logo-ex-motorshield8874-only-light.png){ .only-light width=400px align=right }
-![EX-8874 Logo](../../_static/images/logos/product-logo-ex-motorshield8874-only-dark.png){ .only-dark width=400px align=right }
+![EX-MotorShield8874 Logo](../../_static/images/logos/product-logo-ex-motorshield8874-only-light.png){ .only-light width=400px align=right }
+![EX-MotorShield8874 Logo](../../_static/images/logos/product-logo-ex-motorshield8874-only-dark.png){ .only-dark width=400px align=right }
 
 Designed in conjunction with the **DCC-EX** development team, the **EX‑MotorShield8874** is extremely simple to use with all current and future generations of EX‑CommandStation hardware.
 
-This board is the new standard by which we compare other boards.
-
 ![EX-CSB1](../../_static/images/ex8874/ex_motorshield8874_purple_side-small.png){ align=right}
 
+This board is the new standard by which we compare other boards.
+
 Not *required* for the *EX-CSB1*, but can be optionally added to provide two additional 5amp outputs (to two provided by default).
+
+<br/>
 
 ## Features
 
@@ -67,9 +69,9 @@ If the track power supply is not plugged in, the **EX-CommandStation** will repo
 
 ## Stacking two motor shields
 
-Stacking an EX-8874 and another motor shield type is **not recommended**. There are complex pin conflicts and software configuration requirements.
+Stacking an **EX-MotorShield8874** and another motor shield type is **not recommended**. There are complex pin conflicts and software configuration requirements.
 
-The **CSB1** can only have a single **EX8874** stacked on it, unmodified. There are insufficient pins available on the internal ESP32 processor to handle more.
+The **EX-CSB1** can only have a single **EX-MotorShield8874** stacked on it, unmodified. There are insufficient pins available on the internal ESP32 processor to handle more.
 
 ### Steps to Stack
 

@@ -162,7 +162,7 @@ These requirements are only for operating DC locomotives. There is nothing to do
   
     There are a very limited number of motor drivers that are known to be suitable for use with DC mode. TThe current list is available in the [Motor Drivers List](../hardware/motorboards/index.md#current-list-of-motor-drivers). Any other motor drivers, not explicitly listed, are not supported. 
  
-    Note the **EX-CSB1** and **EX-8874** *have* a brake pin and *is* therefore capable of supporting DC PWM.
+    Note the **EX-CSB1** and **EX-MotorShield8874** *have* a brake pin and *is* therefore capable of supporting DC PWM.
 
 Do not attempt to connect two insulated tracks together and drive a DCC engine back and forth until someone bolder than you tries it first (or you've tested it).
 

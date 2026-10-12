@@ -1,6 +1,6 @@
-# Easy build - Arduino Mega + EX-8874
+# Easy build - Arduino Mega + EX-MotorShield8874
 
-The instructions on this page are the steps required to use an **EX-8874** motor shield to build an **EX-CommandStation**.
+The instructions on this page are the steps required to use an **EX-MotorShield8874** motor shield to build an **EX-CommandStation**.
 
 To use the Standard Arduino Motor Shield, or other supported motor driver, refer to [this page](mega-harder.md).
 
@@ -8,7 +8,7 @@ To use the Standard Arduino Motor Shield, or other supported motor driver, refer
 
 ## What you need
 
-To build a basic DIY **EX-CommandStation** with an **EX-8874** in easy steps you will need:
+To build a basic DIY **EX-CommandStation** with an **EX-MotorShield8874** in easy steps you will need:
 
 - A PC or laptop (Not a Raspberry Pi) running a reasonably recent versions of Windows, Linux or macOS
 - An Arduino Mega microcontroller or Elegoo clone.
@@ -27,7 +27,7 @@ To build a basic DIY **EX-CommandStation** with an **EX-8874** in easy steps you
 
 3. Mount your Mega on 3d printed tray, a piece of plastic card or wood to make sure that the underside solder points are insulated. Placing your **EX-CommandStation** down on a tool, coin or even your track can short the pins and, in some cases, damage the board.
 
-### Mount the EX-8874 shield
+### Mount the EX-MotorShield8874 shield
 
 **DO NOT USE ANY OTHER SHIELD TYPE WITHOUT FIRST CHECKING OUR DETAILED INSTRUCTIONS FOR THAT SHIELD.**
 
@@ -49,7 +49,7 @@ Check your work. Look under and through where the boards connect, make sure no p
 
 ### Connect your power supply
 
-We recommend you label the power supply so that it does not get confused with others of different voltages you may use later. Plug in to the barrel connector on the **EX-8874** shield (NOT the Mega).
+We recommend you label the power supply so that it does not get confused with others of different voltages you may use later. Plug in to the barrel connector on the **EX-MotorShield8874** shield (NOT the Mega).
 
 ### Connect to your PC
 
@@ -57,7 +57,7 @@ Using a suitable USB cable (must carry Data and Power, not all cables do this!) 
 
 ### Connect your track
 
-The **EX-8874** track connectors unplug for easy access.
+The **EX-MotorShield8874** track connectors unplug for easy access.
     If you only have one piece of track for testing, wire it to the PROG track plug.
 
  1. Your PROG track is wired to the green socket closest to the power barrel connector.

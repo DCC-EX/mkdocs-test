@@ -4,7 +4,7 @@ nav:
   - <b>EX-CSB1</b> <small><small>(Ready&nbsp;to&nbsp;Run) <br/>EX-CommandStation/Booster&thinsp;1&thinsp;Express</small></small>: ex-csb1
   - <br/>EX-MotorShield8874: ex-motorshield8874/ex-motorshield8874.md
   - EX-WiFiShield8266: ex-wifishield8266/ex-wifishield8266.md
-  - <br/>EX-WebThrottle: ex-webthrottle/ex-webthrottle.md
+  - <br/>EX-WebThrottle: ex-webthrottle
   - EX-Toolbox: ex-toolbox
   - <br/>EX-FastClock<small><small> (DIY)</small></small>: ex-fastclock
   - EX-IOExpander<small><small> (DIY)</small></small>: ex-ioexpander/ex-ioexpander.md

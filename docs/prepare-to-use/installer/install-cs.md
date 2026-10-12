@@ -39,7 +39,7 @@ On this screen you can select some of the flexible and optional features of the 
 
 You must select the motor shield that you have installed. The installer can't detect this. Selecting the wrong board will not work and may damage the hardware by compromising the short-circuit protection.
 
-- For the EX‑CSB1 alone select 'EX-CSB1' or 'EXCSB1_WITH_EX8874' as appropriate.
+- For the EX‑CSB1 alone select 'EX-CSB1' or 'EXCSB1_WITH_EX8874' if you have added the optional [EX-MotorShield8874](../../products/ex-motorshield8874/).
 
 ![motor_driver](/_static/images/ex-installer/motor-driver.png)
 

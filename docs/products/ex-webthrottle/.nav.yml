@@ -1,3 +1,4 @@
 nav:
-  - EX-WebThrottle: ex-webthrottle.md
+  - Overview: index.md
+  - User Guide: ex-webthrottle.md
   

@@ -46,7 +46,7 @@ hide:
     Our [ready-to-run](./products/ex-csb1/index.md) and [self-build](./diy/diy.md) systems use this same outstanding [**EX-CommandStation**](/products/ex-commandstation/index.md) software. Configuration is easy using our [**EX-Installer**](./prepare-to-use/installer/installer.md) app.
 
     ---
-    [![EX-CSB1](./_static/images/ex-csb1/csb1-resin-case-small.png){ align=left width=140px .homepage_img }](./products/ex-csb1/index.md) The [**EX-CommandStation Booster 1 Express**](./products/ex-csb1/index.md) (**EX-CSB1**) is our flagship, WiFi enabled, *ready-to-run* system and is available for [purchase now](./purchasing/official-sellers.md) from our [official suppliers](./purchasing/official-sellers.md).  
+    [![EX-CSB1](./_static/images/ex-csb1/csb1-resin-case-small.png){ align=left width=140px .homepage_img }](./products/ex-csb1/index.md) The [**EX-CommandStation/Booster 1 Express**](./products/ex-csb1/index.md) (**EX-CSB1**) is our flagship, WiFi enabled, *ready-to-run* system and is available for [purchase now](./purchasing/official-sellers.md) from our [official suppliers](./purchasing/official-sellers.md).  
     With your phone, you could be running your trains in less than 5 minutes. *No computer required.*  
     [Read the product page](./products/ex-csb1/index.md) for more information on the **EX-CSB1** .
 
