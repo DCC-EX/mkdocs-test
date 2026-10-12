@@ -4,7 +4,7 @@
 
 **EX-CommandStation** currently is designed for Atmel AVR based Arduino and compatible microcontrollers, some ESP32 based boards and the STM32 Nucleo based boards. Out of the box, it is compatible with the following boards:
 
-* [EX-CSB1](../../products/ex-commandstation/ex-csb1.md)
+* [EX-CSB1](../../products/ex-csb1/index.md)
 * Arduino [Mega2560](../../diy/mega-easy.md)
 * [ESP32-WROOM](./esp32/esp32-acebott.md)
 * [STM32 Nucleo](./nucleo/nucleo-drivers.md)
@@ -61,7 +61,7 @@ We've compiled this simple summary table to help with this:
 
 | Type / Brand | Recommended | Supported | Level | Shield[^9] | HAL/I2C | EEPROM | EX-RAIL<br/>Support | Track Manager<br/>Support | D C<br/>Sup-<br/>port | WiFi | WiFi no.<br/> Connections[^6] | Comments / Notes |
 | -- | :--: | :--: | :--: | :--: | :--: | :--: | :--: | :--: | :--: | :--: | :--: | :-- |
-| [EX-CSB1](../../products/ex-commandstation/ex-csb1.md) | Yes | Yes | Easy | Mega | Yes | No | Yes | Yes | Yes | Yes | ~11 | This is our stable, well supported platform |
+| [EX-CSB1](../../products/ex-csb1/index.md) | Yes | Yes | Easy | Mega | Yes | No | Yes | Yes | Yes | Yes | ~11 | This is our stable, well supported platform |
 | Arduino [Mega2560](../../diy/mega-easy.md) | Yes | Yes | Intermediate | UNO | Yes | Yes | Yes | Yes | Yes [^2] | yes [^1] | 4 | This is our stable, well supported platform |
 | [ESP32-WROOM](./esp32/esp32-acebott.md) | Yes | Yes | Complex | UNO | Yes [^4] | No | Yes | Yes | Yes [^2] | Yes | ~11 | Inexpensive and includes both WiFi and Bluetooth connectivity, limited in I/O pins. Most require hardware modifications to work. |
 | [STM32 Nucleo](./nucleo/nucleo-drivers.md) | Yes | Yes | Complex | UNO | Yes | No | Yes | Yes | Yes [^2] [^3] | Yes [^1] [^3] | 4 | Lots of memory and 32 bit architecture, still in the convenient Uno form factor but with more I/O pins |

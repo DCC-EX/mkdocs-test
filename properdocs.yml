@@ -139,6 +139,9 @@ plugins:
         'enhance/turnouts.md': 'products/ex-commandstation/exrail/exrail-objects-introduction.md#adding-turnoutspoints'
         'enhance/routes.md': 'products/ex-commandstation/exrail/exrail-sequences-introduction.md'
         'enhance/trackmanager.md': 'products/ex-commandstation/trackmanager/index.md'
+
+        'products/ex-commandstation/ex-csb1.md': 'products/ex-csb1/index.md'
+        
         'reference/serial-command-basics.md': 'reference/serial-commands/serial-command-list.md'
         'reference/serial-command-list.md': 'reference/serial-commands/serial-command-list.md'
 

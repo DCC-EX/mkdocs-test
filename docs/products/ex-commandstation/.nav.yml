@@ -1,6 +1,5 @@
 nav:
   - EX-CommandStation Overview: index.md
-  - <b>EX-CSB1 CommandStation/Booster 1 Express</b>: ex-csb1.md
   - Configuration <small><small>(config.h)</small></small>: config-h.md
   - Configure WiFi <small><small>(Wifi Shield)</small></small>: config-wifi-shield.md
   - Configure WiFi <small><small>(EX-CSB1 & ESP32 v5.7.0+)</small></small>: config-wifi-esp32.md

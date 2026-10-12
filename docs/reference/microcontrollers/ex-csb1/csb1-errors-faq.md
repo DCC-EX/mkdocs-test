@@ -89,7 +89,7 @@ Note that if the new WiFi configuration commands are sent via a WiFi connection,
 
 - [The general support FAQ page](../../../support/faq.md)
 
-- [EX-CSB1 Getting Started Guide](../../../products/ex-commandstation/ex-csb1.md)
+- [EX-CSB1 Getting Started Guide](../../../products/ex-csb1/index.md)
 
 ## Discord
 

@@ -39,7 +39,7 @@ For detailed steps on how to use TrackManager to change track modes and settings
 
 These requirements are only for *operating DC locomotives*. There is nothing to do in a pure DCC environment where no DC or analogue locomotives are run.
 
-**Brake Pin:** In order for **TrackManager** to operate in DC mode, the motor shield must have a brake pin defined in your "config.h" motor shield definition. <br /> There are a very limited number of motor drivers that are known to be suitable for use with DC mode. The current list is available in ==TODO== :ref:`reference/hardware/motor-boards:trackmanager dc compatible boards`. Any other motor drivers, not explicitly listed, are not supported.
+**Brake Pin:** In order for **TrackManager** to operate in DC mode, the motor shield must have a brake pin defined in your "config.h" motor shield definition. <br /> There are a very limited number of motor drivers that are known to be suitable for use with DC mode. The current list is available in the [Motor Drivers List](../hardware/motorboards/index.md#current-list-of-motor-drivers). Any other motor drivers, not explicitly listed, are not supported.
 
 Note the **EX-CSB1** *has* a brake pin and *is* therefore capable of supporting DC PWM.
 
@@ -160,7 +160,7 @@ These requirements are only for operating DC locomotives. There is nothing to do
 
     In order for **TrackManager** to operate in DC mode, the motor driver must have a brake pin defined in your "config.h" motor driver definition.
   
-    There are a very limited number of motor drivers that are known to be suitable for use with DC mode. The current list is available in ==TODO== :ref:`reference/hardware/motor-boards:trackmanager dc compatible boards`. Any other motor drivers, not explicitly listed, are not supported. 
+    There are a very limited number of motor drivers that are known to be suitable for use with DC mode. TThe current list is available in the [Motor Drivers List](../hardware/motorboards/index.md#current-list-of-motor-drivers). Any other motor drivers, not explicitly listed, are not supported. 
  
     Note the **EX-CSB1** and **EX-8874** *have* a brake pin and *is* therefore capable of supporting DC PWM.
 

@@ -1,6 +1,7 @@
 nav:
   - Product Overview: products.md
-  - EX-CommandStation<small><small> (Ready&nbsp;to&nbsp;Run &amp; Self&nbsp;Build)</small></small>: ex-commandstation
+  - <br/>EX-CommandStation<small><small> (Ready&nbsp;to&nbsp;Run &amp; Self&nbsp;Build)</small></small>: ex-commandstation
+  - <b>EX-CSB1</b> <small><small>(Ready&nbsp;to&nbsp;Run) <br/>EX-CommandStation/Booster&thinsp;1&thinsp;Express</small></small>: ex-csb1
   - <br/>EX-MotorShield8874: ex-motorshield8874/ex-motorshield8874.md
   - EX-WiFiShield8266: ex-wifishield8266/ex-wifishield8266.md
   - <br/>EX-WebThrottle: ex-webthrottle/ex-webthrottle.md

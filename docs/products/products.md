@@ -22,11 +22,11 @@ These are our powerful, but easy to use, get up and running quickly type product
 [![EX-CommandStation Logo](../_static/images/logos/product-logo-ex-commandstation-only-light.png){ .only-light width=400px }
 ![EX-CommandStation Logo](../_static/images/logos/product-logo-ex-commandstation-only-dark.png){ .only-dark width=400px }](/products/ex-commandstation/index.md)
 [![EX-CSB1 Logo](../_static/images/logos/product-logo-ex-csb1-only-light.png){ .only-light width=400px }
-![EX-CSB1 Logo](../_static/images/logos/product-logo-ex-csb1-only-dark.png){ .only-dark width=400px }](/products/ex-commandstation/ex-csb1.md)
+![EX-CSB1 Logo](../_static/images/logos/product-logo-ex-csb1-only-dark.png){ .only-dark width=400px }](/products/ex-csb1/index.md)
 
 A ready-to-run, all in one DCC Command Station and Booster with built-in WiFi preloaded with our flagship train control, layout animation and automation software.
 
-For more information on this and how to purchase, head over to the [EX-CSB1 product page](/products/ex-commandstation/ex-csb1.md)
+For more information on this and how to purchase, head over to the [EX-CSB1 product page](/products/ex-csb1/index.md)
 
 You can learn more about the software in the [EX-CommandStation documentation](/products/ex-commandstation/index.md).
 

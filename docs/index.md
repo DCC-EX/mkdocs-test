@@ -43,12 +43,12 @@ hide:
     - *Automate* your trains and *animate* your layout with the powerful [EXRAIL](./products/ex-commandstation/exrail/index.md) scripting.
     - Integrate with [JMRI](https://www.jmri.org/), [iTrain](https://www.berros.eu/en/itrain/) or [RocRail](https://wiki.rocrail.net/) if you prefer to run trains from your computer.
 
-    Our [ready-to-run](./products/ex-commandstation/ex-csb1.md) and [self-build](./diy/diy.md) systems use this same outstanding [**EX-CommandStation**](/products/ex-commandstation/index.md) software. Configuration is easy using our [**EX-Installer**](./prepare-to-use/installer/installer.md) app.
+    Our [ready-to-run](./products/ex-csb1/index.md) and [self-build](./diy/diy.md) systems use this same outstanding [**EX-CommandStation**](/products/ex-commandstation/index.md) software. Configuration is easy using our [**EX-Installer**](./prepare-to-use/installer/installer.md) app.
 
     ---
-    [![EX-CSB1](./_static/images/ex-csb1/csb1-resin-case-small.png){ align=left width=140px .homepage_img }](./products/ex-commandstation/ex-csb1.md) The [**EX-CommandStation Booster 1 Express**](./products/ex-commandstation/ex-csb1.md) (**EX-CSB1**) is our flagship, WiFi enabled, *ready-to-run* system and is available for [purchase now](./purchasing/official-sellers.md) from our [official suppliers](./purchasing/official-sellers.md).  
+    [![EX-CSB1](./_static/images/ex-csb1/csb1-resin-case-small.png){ align=left width=140px .homepage_img }](./products/ex-csb1/index.md) The [**EX-CommandStation Booster 1 Express**](./products/ex-csb1/index.md) (**EX-CSB1**) is our flagship, WiFi enabled, *ready-to-run* system and is available for [purchase now](./purchasing/official-sellers.md) from our [official suppliers](./purchasing/official-sellers.md).  
     With your phone, you could be running your trains in less than 5 minutes. *No computer required.*  
-    [Read the product page](./products/ex-commandstation/ex-csb1.md) for more information on the **EX-CSB1** .
+    [Read the product page](./products/ex-csb1/index.md) for more information on the **EX-CSB1** .
 
     ---
     [![diy](./_static/images/mega/mega-small.png){ align=right width=140px .homepage_img }](./diy/diy.md)
