@@ -8,7 +8,7 @@ Depending on whether or not you purchased an **EX-CSB1** or you self-built your 
 
 *This step is not normally needed if you just purchased an* ***EX-CSB1***.
 
-It is only needed for Self-Built EX-CommandStations, or if you wish to update or enhance your **EX-CSB1**.
+It is only needed for self-built EX-CommandStations, or if you wish to update or enhance your **EX-CSB1**.
 
 ==TODO==  Installing the EX-CommandStation software - overview -  Not needed for the EX-CSB1
 
@@ -21,7 +21,7 @@ Once you have purchased or built your **EX-CommandStation**, you will need to co
 Depending on whether or not you purchased an **EX-CSB1** or you self-built your own **EX-CommandStation**, the instructions for connecting to your layout and programming track will be slightly different.
 
 - See the [Connecting your **EX-CSB1**](./connecting/connecting-ex-csb1.md) page if you have purchased an **EX-CSB1**.
-- See the [Connecting you Self-Built **EX-CommandStation**](./connecting/connecting-diy.md) page if you built your own.
+- See the [Connecting your self-built **EX-CommandStation**](./connecting/connecting-diy.md) page if you built your own.
 
 ## Testing
 
