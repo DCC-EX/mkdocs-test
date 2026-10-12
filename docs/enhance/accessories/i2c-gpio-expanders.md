@@ -13,14 +13,14 @@ be configured as an input.
 
 A typical GPIO Expander, for which **EX-CommandStation** is pre-configured, is the MCP23017.  An example board (from PiHut) is shown here.
 
-![MCP23017 Module (PiHut)](../../../_static/images/i2c-devices/MCP23017_module.png){ width="400px"}
+![MCP23017 Module (PiHut)](../../_static/images/i2c-devices/MCP23017_module.png){ width="400px"}
 <br/>MCP23017 Module (PiHut)
 
 It has a Grove connector on the bottom-left side, for which a compatible converter cable is provided.  It also has five connector pads on the top-right side, to which pins or wires may be soldered. Along the top-left and bottom-right edges are the sixteen GPIO pins, and two Vcc and two GND pins.
 
 Here is another module, from DFRobot:
 
-![MCP23017 Module (DFRobot)](../../../_static/images/i2c-devices/DFrobot_mcp23017.jpg){ width="400px"}
+![MCP23017 Module (DFRobot)](../../_static/images/i2c-devices/DFrobot_mcp23017.jpg){ width="400px"}
 <br/>MCP23017 Module (DFRobot)
 
 This module has a row of three pin headers associated with each I/O pin; this allows
@@ -28,14 +28,14 @@ each sensor to have its own GND, VCC and signal pin connection, so we can use th
 
 An example of circuit connections for a module is shown below:
 
-![MCP23017 module connections](../../../_static/images/i2c-devices/ArduinoMega_MCP23017.png){ width="600px"}
+![MCP23017 module connections](../../_static/images/i2c-devices/ArduinoMega_MCP23017.png){ width="600px"}
 <br/>MCP23017 module connections
 
 This diagram also shows an infra-red sensor (3-pin device) connected to GPIO0 of the MCP23017, and a push-button (2-pin) connected to GPIO1.  
 
 Also generally available is the MCP23017 in IC form (28-pin DIL package).  This can be mounted on a breadboard for use, as shown below, or on stripboard if you want a more permanent solution.
 
-![MCP23017 on a Breadboard](../../../_static/images/i2c-devices/ArduinoMega_MCP23017_breadboard.png){ width="600px"}
+![MCP23017 on a Breadboard](../../_static/images/i2c-devices/ArduinoMega_MCP23017_breadboard.png){ width="600px"}
 <br/>MCP23017 on a Breadboard
 
 ==TODO== MEDIUM - diagram for connecting the EX-CSB1 to an GPIO Expander via the headers

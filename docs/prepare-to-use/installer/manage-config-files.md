@@ -35,7 +35,7 @@ The **myAutomation.h** file can contain any customisations, including:
 * [Your Roster](../../products/ex-commandstation/exrail/exrail-objects-introduction.md#adding-a-roster)
 * [Turnouts/Points](../../enhance/turnouts.md)
 * [Routes](../../products/ex-commandstation/exrail/exrail-sequences-introduction.md)
-* [Servos](../../products/ex-commandstation/accessories/index.md)
+* [Servos](../../enhance/accessories/index.md)
 * [**EXRAIL** automations](../../products/ex-commandstation/exrail/exrail-sequences-introduction.md)
 * [Turntables](../../products/ex-turntable/configure.md)
 

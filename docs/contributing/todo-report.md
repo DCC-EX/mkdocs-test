@@ -89,7 +89,6 @@ Total High TODO matches: 92
 | [docs/products/ex-turntable/ex-tt-troubleshooting.md](../products/ex-turntable/ex-tt-troubleshooting.md) | 7 | ==TODO== Frequently Asked Questions |
 | [docs/products/ex-webthrottle/ex-webthrottle.md](../products/ex-webthrottle/ex-webthrottle.md) | 6 | ==TODO== Split into separate pages for overview plus installing and using. |
 | [docs/products/ex-wifishield8266/ex-wifishield8266.md](../products/ex-wifishield8266/ex-wifishield8266.md) | 8 | ==TODO== Improve intro paragraph |
-| [docs/products/ex-commandstation/accessories/i2c-multiplexers.md](../products/ex-commandstation/accessories/i2c-multiplexers.md) | 5 | ==TODO== move legacy docs |
 | [docs/products/ex-commandstation/exrail/exrail-objects-introduction.md](../products/ex-commandstation/exrail/exrail-objects-introduction.md) | 151 | ==TODO== You can also refer to :doc:`/ex-commandstation/accessories/turnouts/solenoid-turnouts` for more information. |
 | [docs/products/ex-commandstation/exrail/exrail-objects-introduction.md](../products/ex-commandstation/exrail/exrail-objects-introduction.md) | 208 | ==TODO== Add a diagram for the EX-CSB1 to a PCA9685 |
 | [docs/products/ex-commandstation/exrail/exrail-objects-introduction.md](../products/ex-commandstation/exrail/exrail-objects-introduction.md) | 362 | ==TODO== Link here to recommended pin/vpin allocations etc. |
@@ -106,6 +105,7 @@ Total High TODO matches: 92
 | [docs/prepare-to-use/installer/platformio.md](../prepare-to-use/installer/platformio.md) | 5 | ==TODO== - provide setup help. |
 | [docs/prepare-to-use/installer/download/download-linux.md](../prepare-to-use/installer/download/download-linux.md) | 7 | ==TODO== - Add screenshots & fix page flow |
 | [docs/prepare-to-use/installer/download/index.md](../prepare-to-use/installer/download/index.md) | 3 | ==TODO== Downloading EX-Installer - Overview |
+| [docs/enhance/accessories/i2c-multiplexers.md](../enhance/accessories/i2c-multiplexers.md) | 5 | ==TODO== move legacy docs |
 | [docs/contributing/documentation/formatting-guide.md](documentation/formatting-guide.md) | 71 | ==TODO==  Note there is a bug in this process if the heading contains ` - ` (space dash space). |
 | snippets/configure/config-wifi-esp32-gui-options.md | 61 | ==TODO== The WiFi change limitation has been broken in the latest CS version as anything can be changed via the in-built web server |
 | snippets/configure/config-wifi-esp32-gui-options.md | 69 | ==TODO== Changing the WiFi Settings using the EX-CommandStation's own Web Sever |
@@ -142,9 +142,9 @@ Total medium priority TODO matches: 22
 | [docs/reference/serial-commands/serial-command-slash-latch_not_in_nav.md](../reference/serial-commands/serial-command-slash-latch_not_in_nav.md) | 25 | ==TODO== MEDIUM - Responses |
 | [docs/reference/serial-commands/serial-command-slash-reserve_not_in_nav.md](../reference/serial-commands/serial-command-slash-reserve_not_in_nav.md) | 27 | ==TODO== MEDIUM - Responses |
 | [docs/reference/serial-commands/serial-command-y_not_in_nav.md](../reference/serial-commands/serial-command-y_not_in_nav.md) | 57 | ==TODO== MEDIUM - Responses |
-| [docs/products/ex-commandstation/accessories/i2c-displays.md](../products/ex-commandstation/accessories/i2c-displays.md) | 96 | ==TODO== MEDIUM - diagram for connecting the EX-CSB1 to an oLED via the headers |
-| [docs/products/ex-commandstation/accessories/i2c-displays.md](../products/ex-commandstation/accessories/i2c-displays.md) | 98 | ==TODO== MEDIUM - diagram for connecting the EX-CSB1 to an oLED via the QWIIC connector |
-| [docs/products/ex-commandstation/accessories/i2c-gpio-expanders.md](../products/ex-commandstation/accessories/i2c-gpio-expanders.md) | 41 | ==TODO== MEDIUM - diagram for connecting the EX-CSB1 to an GPIO Expander via the headers |
+| [docs/enhance/accessories/i2c-displays.md](../enhance/accessories/i2c-displays.md) | 96 | ==TODO== MEDIUM - diagram for connecting the EX-CSB1 to an oLED via the headers |
+| [docs/enhance/accessories/i2c-displays.md](../enhance/accessories/i2c-displays.md) | 98 | ==TODO== MEDIUM - diagram for connecting the EX-CSB1 to an oLED via the QWIIC connector |
+| [docs/enhance/accessories/i2c-gpio-expanders.md](../enhance/accessories/i2c-gpio-expanders.md) | 41 | ==TODO== MEDIUM - diagram for connecting the EX-CSB1 to an GPIO Expander via the headers |
 
 ## Low priority TODOs
 

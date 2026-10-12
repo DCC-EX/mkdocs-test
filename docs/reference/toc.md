@@ -24,27 +24,6 @@ li:not(.md-nav__item, .md-tabs__item) a {
         - [Wifi configuration <br/><small>(Excluding **EX-CSB1** or ESP32 v5.7.0+)</small> <small>(Configure WiFi <small><small>(Wifi Shield)</small></small>)</small>](../products/ex-commandstation/config-wifi-shield.md)
         - [WiFi Configuration for version 5.7.0+ <br/><small>Graphical User Interface Options</small> <small>(Configure WiFi <small><small>(EX-CSB1 & ESP32 v5.7.0+)</small></small>)</small>](../products/ex-commandstation/config-wifi-esp32.md)
         - [Testing your EX-CommandStation](../products/ex-commandstation/testing.md)
-        - **Accessories**
-            - [Overview - What are Accessories? <small>(Accessories)</small>](../products/ex-commandstation/accessories/index.md)
-            - [Actuators - to make stuff happen <small>(Actuators)</small>](../products/ex-commandstation/accessories/actuators.md)
-            - [Sensors](../products/ex-commandstation/accessories/sensors.md)
-            - [Connecting a servo turnout/point <small>(Servo Turnouts/Points)</small>](../products/ex-commandstation/accessories/connecting-servo-turnout.md)
-            - [Hardware device list <small>(Hardware List)</small>](../products/ex-commandstation/accessories/hardware-list.md)
-            - **I2C (I<sup>2</sup>C)**
-                - [I2C (I<sup>2</sup>C) – An Introduction <small>(I2C (I<sup>2</sup>C) Intro)</small>](../products/ex-commandstation/accessories/i2c-intro.md)
-                - [Buying I2C (I<sup>2</sup>C) Devices](../products/ex-commandstation/accessories/buying-i2c-devices.md)
-                - [I2C Displays <small>(I2C (I<sup>2</sup>C) Displays)</small>](../products/ex-commandstation/accessories/i2c-displays.md)
-                - [I2C GPIO Expanders <small>(I2C (I<sup>2</sup>C) GPIO Expanders)</small>](../products/ex-commandstation/accessories/i2c-gpio-expanders.md)
-                - [I2C Servo and LED Module <small>(I2C (I<sup>2</sup>C) Servo/LED modules)</small>](../products/ex-commandstation/accessories/i2c-servo-led-modules.md)
-                - [I2C Multiplexers <small>(I2C (I<sup>2</sup>C) Multiplexers)</small>](../products/ex-commandstation/accessories/i2c-multiplexers.md)
-                - **Various Devices**
-                    - **Sounds**
-                        - [Sounds](../products/ex-commandstation/accessories/various-devices/sounds/index.md)
-                        - [DFPlayer Sound player <small>(DFPlayer)</small>](../products/ex-commandstation/accessories/various-devices/sounds/dfplayer.md)
-                        - [Serial connected DFPlayer <small>(Serial DFPlayer)</small>](../products/ex-commandstation/accessories/various-devices/sounds/serial-dfplayer.md)
-                        - [I2C Connected DFPlayer <small>(I2C DFPlayer)</small>](../products/ex-commandstation/accessories/various-devices/sounds/i2c-dfplayer.md)
-                        - [UDP Audio Driver for DCC-EX <small>(WaveShare)</small>](../products/ex-commandstation/accessories/various-devices/sounds/udpaudio.md)
-                    - [DS1307 Real Time clock chip <small>(DS1307)</small>](../products/ex-commandstation/accessories/various-devices/ds1307.md)
         - **EXRAIL**
             - [What is EXRAIL?](../products/ex-commandstation/exrail/index.md)
             - [EXRAIL Objects - An Introduction <small>(Objects Introduction)</small>](../products/ex-commandstation/exrail/exrail-objects-introduction.md)
@@ -232,6 +211,27 @@ li:not(.md-nav__item, .md-tabs__item) a {
     - [Adding a Roster](../enhance/rosters.md)
     - [Adding a Turnouts/Points <small>(Adding Turnouts/Points)</small>](../enhance/turnouts.md)
     - [Routes and Automation <small>(Adding Routes and Automations)</small>](../enhance/routes.md)
+    - **Adding Other Accessories**
+        - [Overview - What are Accessories? <small>(Accessories)</small>](../enhance/accessories/index.md)
+        - [Actuators - to make stuff happen <small>(Actuators)</small>](../enhance/accessories/actuators.md)
+        - [Sensors](../enhance/accessories/sensors.md)
+        - [Connecting a servo turnout/point <small>(Servo Turnouts/Points)</small>](../enhance/accessories/connecting-servo-turnout.md)
+        - [Hardware device list <small>(Hardware List)</small>](../enhance/accessories/hardware-list.md)
+        - **I2C (I<sup>2</sup>C)**
+            - [I2C (I<sup>2</sup>C) – An Introduction <small>(I2C (I<sup>2</sup>C) Intro)</small>](../enhance/accessories/i2c-intro.md)
+            - [Buying I2C (I<sup>2</sup>C) Devices](../enhance/accessories/buying-i2c-devices.md)
+            - [I2C Displays <small>(I2C (I<sup>2</sup>C) Displays)</small>](../enhance/accessories/i2c-displays.md)
+            - [I2C GPIO Expanders <small>(I2C (I<sup>2</sup>C) GPIO Expanders)</small>](../enhance/accessories/i2c-gpio-expanders.md)
+            - [I2C Servo and LED Module <small>(I2C (I<sup>2</sup>C) Servo/LED modules)</small>](../enhance/accessories/i2c-servo-led-modules.md)
+            - [I2C Multiplexers <small>(I2C (I<sup>2</sup>C) Multiplexers)</small>](../enhance/accessories/i2c-multiplexers.md)
+            - **Various Devices**
+                - **Sounds**
+                    - [Sounds](../enhance/accessories/various-devices/sounds/index.md)
+                    - [DFPlayer Sound player <small>(DFPlayer)</small>](../enhance/accessories/various-devices/sounds/dfplayer.md)
+                    - [Serial connected DFPlayer <small>(Serial DFPlayer)</small>](../enhance/accessories/various-devices/sounds/serial-dfplayer.md)
+                    - [I2C Connected DFPlayer <small>(I2C DFPlayer)</small>](../enhance/accessories/various-devices/sounds/i2c-dfplayer.md)
+                    - [UDP Audio Driver for DCC-EX <small>(WaveShare)</small>](../enhance/accessories/various-devices/sounds/udpaudio.md)
+                - [DS1307 Real Time clock chip <small>(DS1307)</small>](../enhance/accessories/various-devices/ds1307.md)
     - **<br/>TrackManager**
         - [TrackManager](../enhance/trackmanager/index.md)
         - [EX-CSB1 in DCC Booster Mode <small>(DCC Booster Mode <small><small>(EX-CSB1)</small></small>)</small>](../enhance/trackmanager/booster.md)

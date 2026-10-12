@@ -14,7 +14,7 @@ At the end of this stage, we expect you will have learnt the following:
 
 An important item to note when configuring servo based turnouts/points and signals is that the angles provided are going to be unique to your layout, and possibly even be unique to each particular turnout/point or signal, depending on how they are mounted and physically connected.
 
-We provide some handy documentation on how to evaluate the correct angles on our [I2C Servo and LED Module](../../../accessories/i2c-servo-led-modules.md) page.
+We provide some handy documentation on how to evaluate the correct angles on our [I2C Servo and LED Module](../../../../../enhance/accessories/i2c-servo-led-modules.md) page.
 
 ### Turnout/point object IDs
 
@@ -69,7 +69,7 @@ Instead, these use cases are valid:
 
 !!! tip inline end "Servo Module page"
 
-    You can also refer to [I2C Servo and LED Module](../../../accessories/i2c-servo-led-modules.md) page for more information.
+    You can also refer to [I2C Servo and LED Module](../../../../../enhance/accessories/i2c-servo-led-modules.md) page for more information.
 
 ### Adding the Hardware -  Turnouts/points
 
@@ -144,7 +144,7 @@ An example definition for a servo connected to the second control pins of the fi
 
 !!! Tip inline end "GPIO Expanders"
 
-  Alternate is to use a [GPIO Expander](../../../accessories/i2c-gpio-expanders.md)
+  Alternate is to use a [GPIO Expander](../../../../../enhance/accessories/i2c-gpio-expanders.md)
 
 IR sensors typically require three connections: 5V (or VCC), Ground, and output (OUT or S).
 

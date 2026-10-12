@@ -3,5 +3,4 @@ nav:
   - Configure WiFi <small><small>(Wifi Shield)</small></small>: config-wifi-shield.md
   - Configure WiFi <small><small>(EX-CSB1 & ESP32 v5.7.0+)</small></small>: config-wifi-esp32.md
   - Testing your EX-CommandStation: testing.md
-  - Accessories: accessories
   - EXRAIL: exrail

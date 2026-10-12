@@ -31,7 +31,7 @@ This capability is part of **EXRAIL** and is built into your **EX-CommandStation
 Turnouts/Points included on your layout can be any of the following forms:
 
 * DCC Turnouts/Points
-* [Servo Turnouts/Points](../products/ex-commandstation/accessories/connecting-servo-turnout.md)
+* [Servo Turnouts/Points](../enhance/accessories/connecting-servo-turnout.md)
 * Pin Turnouts/Points
 
 The capability to define and support these is part of **EXRAIL** and is built into your **EX-CommandStation**.  See [EXRAIL Turnouts/Points](../products/ex-commandstation/exrail/exrail-objects-introduction.md#adding-turnoutspoints) for more information on these.
@@ -76,22 +76,22 @@ Accessories are broadly divided into two categories:
 
 * Outputs:
 
-    * [Turnouts/Points](../products/ex-commandstation/accessories/connecting-servo-turnout.md)
+    * [Turnouts/Points](../enhance/accessories/connecting-servo-turnout.md)
     * Signals
     * [Turntables](../products/ex-turntable/index.md)
-    * [Lighting](../products/ex-commandstation/accessories/i2c-servo-led-modules.
-    * [Servos](../products/ex-commandstation/accessories/i2c-servo-led-modules.md)
-    * [Sounds](../products/ex-commandstation/accessories/various-devices/sounds/index.md)
+    * [Lighting](./accessories/i2c-servo-led-modules.
+    * [Servos](./accessories/i2c-servo-led-modules.md)
+    * [Sounds](./accessories/various-devices/sounds/index.md)
 
 * Inputs:
 
-    * [Sensors](../products/ex-commandstation/accessories/sensors.md)
+    * [Sensors](./accessories/sensors.md)
     * Push buttons
     * Keypads
     * Rotary encoders
     * [Clocks](../products/ex-fastclock/index.md)
 
-See [***Accessories***](../products/ex-commandstation/accessories/index.md) for more information.
+See [***Accessories***](./accessories/index.md) for more information.
 
 Also see:
 
@@ -99,7 +99,7 @@ Also see:
 * [EX-FastClock](../products/ex-fastclock/index.md)
 * [EX-IOExpander](../products/ex-ioexpander/ex-ioexpander.md)
 * [EX-SensorCAM](../products/ex-sensorcam/ex-sensorcam.md)
-* [Use the EX-CSB1 as a DCC Booster](../enhance/trackmanager/booster.md)
+* [Use the EX-CSB1 as a DCC Booster](./trackmanager/booster.md)
 
 ## Tools
 
