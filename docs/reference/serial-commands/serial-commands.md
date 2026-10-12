@@ -119,94 +119,94 @@ Reference guide for serial commands used by **EX-CommandStations**, shown in fun
 
 | Command | Description | Parameters | Status |
 | ------- | ----------- | ---------- | ------ |
-| `<W cv value>` | Write CV value on PROG track | `cv`: CV number, `value`: Value | Active |
-| `<W loco>` | Write loco address on PROG track | `loco`: Address | Active |
-| `<W CONSIST loco>` | Write consist address on PROG track | `loco`: Address | Active |
-| `<W CONSIST loco REVERSE>` | Write consist address and reverse flag | `loco`: Address | Active |
-| `<W cv bitvalue bit>` | Write CV bit on prog track | `cv`: CV, `bitvalue`: Bit value, `bit`: Bit position | Active |
-| `<W cv value ignore1 ignore2>` | Write CV value on PROG track | Legacy format | ⚠️ Deprecated |
-| `<R cv>` | Read CV | `cv`: CV number | Active |
-| `<R>` | Read driveable loco ID | None | Active |
-| `<R LOCOID>` | Read loco ID (ignoring consist) | None | Active |
-| `<R CONSIST>` | Read consist ID | None | Active |
-| `<R cv ignore1 ignore2>` | Read CV value on PROG track | Legacy format | ⚠️ Deprecated |
-| `<V cv value>` | Fast read CV with expected value | `cv`: CV number, `value`: Expected value | Active |
-| `<V cv bit bitvalue>` | Fast read bit with expected value | `cv`: CV, `bit`: Bit position, `bitvalue`: Expected | Active |
-| `<B cv bit bitvalue>` | Write CV bit | `cv`: CV number, `bit`: Bit position, `bitvalue`: Value | Active |
-| `<w loco cv value>` | POM write CV on main track | `loco`: ID, `cv`: CV number, `value`: Value | Active |
-| `<r loco cv>` | POM read CV on main track | `loco`: ID, `cv`: CV number | Railcom dependent |
-| `<b loco cv bit bitvalue>` | POM write CV bit on main track | `loco`: ID, `cv`: CV, `bit`: Position, `bitvalue`: Value | Active |
+| [`<W cv value>`](?_9W9_cv_value) | Write CV value on PROG track | `cv`: CV number, `value`: Value | Active |
+| [`<W loco>`](?_9W9_loco) | Write loco address on PROG track | `loco`: Address | Active |
+| [`<W CONSIST loco>`](?_9W9_9CONSIST9_loco) | Write consist address on PROG track | `loco`: Address | Active |
+| [`<W CONSIST loco REVERSE>`](?_9W9_9CONSIST9_loco_9REVERSE]) | Write consist address and reverse flag | `loco`: Address | Active |
+| [`<W cv bitvalue bit>`](?_9W9_cv_bitvalue_bit) | Write CV bit on prog track | `cv`: CV, `bitvalue`: Bit value, `bit`: Bit position | Active |
+| [`<W cv value ignore1 ignore2>`](?_9W9_cv_bitvalue_bit)ignore1 ignore2) | Write CV value on PROG track | Legacy format | ⚠️ Deprecated |
+| [`<R cv>`](?_9R9_cv) | Read CV | `cv`: CV number | Active |
+| [`<R>`](?_9R9) | Read driveable loco ID | None | Active |
+| [`<R LOCOID>`](?_9R9_9LOCOID9) | Read loco ID (ignoring consist) | None | Active |
+| [`<R CONSIST>`](?_9R9_9CONSIST9) | Read consist ID | None | Active |
+| [`<R cv ignore1 ignore2>`](?_9R9_cv_ignore1_ignore2) | Read CV value on PROG track | Legacy format | ⚠️ Deprecated |
+| [`<V cv value>`](?_9V9_value) | Fast read CV with expected value | `cv`: CV number, `value`: Expected value | Active |
+| [`<V cv bit bitvalue>`](?_9V9_cv_bit_bitvalue) | Fast read bit with expected value | `cv`: CV, `bit`: Bit position, `bitvalue`: Expected | Active |
+| [`<B cv bit bitvalue>`](?_9B9_cv_bit_bitvalue) | Write CV bit | `cv`: CV number, `bit`: Bit position, `bitvalue`: Value | Active |
+| [`<w loco cv value>`](?_w_loco_cv_value) | POM write CV on main track | `loco`: ID, `cv`: CV number, `value`: Value | Active |
+| [`<r loco cv>`](?_r_loco_cv) | POM read CV on main track | `loco`: ID, `cv`: CV number | Railcom dependent |
+| [`<b loco cv bit bitvalue>`](?_w_loco_cv_bit_bitvalue) | POM write CV bit on main track | `loco`: ID, `cv`: CV, `bit`: Position, `bitvalue`: Value | Active |
 
 ## DCC Accessory Commands
 
 | Command | Description | Parameters | Status |
 | ------- | ----------- | ---------- | ------ |
-| `<a address subaddress activate>` | Send DCC accessory command | `address`: Address, `subaddress`: Sub-address, `activate`: 0/1 | Active |
-| `<a address subaddress activate onoff>` | Send DCC accessory command with on/off | `address`: Address, `subaddress`: Sub, `activate`: 0/1, `onoff`: 0/1 | Active |
-| `<a linearaddress activate>` | Send DCC accessory command | `linearaddress`: Linear address, `activate`: 0/1 | Active |
-| `<A address value>` | Send DCC extended accessory (Aspect) command | `address`: Address, `value`: Aspect value | Active |
+| [`<a address subaddress activate>`](?_a_address_subaddress_activate) | Send DCC accessory command | `address`: Address, `subaddress`: Sub-address, `activate`: 0/1 | Active |
+| [`<a address subaddress activate onoff>`](?_a_address_subaddress_activate_onoff) | Send DCC accessory command with on/off | `address`: Address, `subaddress`: Sub, `activate`: 0/1, `onoff`: 0/1 | Active |
+| [`<a linearaddress activate>`](?_a_linearaddress_activate) | Send DCC accessory command | `linearaddress`: Linear address, `activate`: 0/1 | Active |
+| [`<A address value>`](?_9A9_address_value) | Send DCC extended accessory (Aspect) command | `address`: Address, `value`: Aspect value | Active |
 
 ## Momentum Control
 
 | Command | Description | Parameters | Status |
 | ------- | ----------- | ---------- | ------ |
-| `<m LINEAR>` | Set momentum algorithm to linear acceleration | None | Active |
-| `<m POWER>` | Set momentum algorithm based on speed difference | None | Active |
-| `<m loco momentum>` | Set momentum for loco (accel and braking) | `loco`: ID, `momentum`: Value | Active |
-| `<m loco accelerating braking>` | Set momentum for loco | `loco`: ID, `accelerating`: Value, `braking`: Value | Active |
+| [`<m LINEAR>`](?_m_9LINEAR9) | Set momentum algorithm to linear acceleration | None | Active |
+| [`<m POWER>`](?_m_9POWER9) | Set momentum algorithm based on speed difference | None | Active |
+| [`<m loco momentum>`](?_m_loco_momentum) | Set momentum for loco (accel and braking) | `loco`: ID, `momentum`: Value | Active |
+| [`<m loco accelerating braking>`](?_m_loco_accelerating_braking) | Set momentum for loco | `loco`: ID, `accelerating`: Value, `braking`: Value | Active |
 
 ## Output Control
 
 | Command | Description | Parameters | Status |
 | ------- | ----------- | ---------- | ------ |
-| `<Z>` | List output definitions | None | Active |
-| `<Z id pin iflag>` | Create output | `id`: Output ID, `pin`: Pin number, `iflag`: Invert flag | Active |
-| `<Z id active>` | Set output | `id`: Output ID, `active`: 0/1 | Active |
-| `<Z id>` | Delete output | `id`: Output ID | Active |
+| [`<Z>`](?_9Z9) | List output definitions | None | Active |
+| [`<Z id pin iflag>`](?_9Z9_id_pin_iflag) | Create output | `id`: Output ID, `pin`: Pin number, `iflag`: Invert flag | Active |
+| [`<Z id active>`](?_9Z9_id_active) | Set output | `id`: Output ID, `active`: 0/1 | Active |
+| [`<Z id>`](?_9Z9_id) | Delete output | `id`: Output ID | Active |
 
 ## Pin Control
 
 | Command | Description | Parameters | Status |
 | ------- | ----------- | ---------- | ------ |
-| `<z vpin>` | Set pin HIGH if vpin positive, LOW if negative | `vpin`: Pin number (signed) | Active |
-| `<z vpin analog>` | Write analog device value | `vpin`: Pin, `analog`: Value | Active |
-| `<z vpin analog profile>` | Write analog device using profile | `vpin`: Pin, `analog`: Value, `profile`: Profile ID | Active |
-| `<z vpin analog profile duration>` | Change analog value over duration | `vpin`: Pin, `analog`: Value, `profile`: Profile, `duration`: Time | Active |
+| [`<z vpin>`](?_z_vpin) | Set pin HIGH if vpin positive, LOW if negative | `vpin`: Pin number (signed) | Active |
+| [`<z vpin analog>`](?_z_vpin_analog) | Write analog device value | `vpin`: Pin, `analog`: Value | Active |
+| [`<z vpin analog profile>`](?_z_vpin_analog_profile) | Write analog device using profile | `vpin`: Pin, `analog`: Value, `profile`: Profile ID | Active |
+| [`<z vpin analog profile duration>`](?_z_vpin_analog_profile_duration) | Change analog value over duration | `vpin`: Pin, `analog`: Value, `profile`: Profile, `duration`: Time | Active |
 
 ## NeoPixel Control
 
 | Command | Description | Parameters | Status |
 | ------- | ----------- | ---------- | ------ |
-| `<o vpin>` | Set neopixel on (vpin>0) or off (vpin<0) | `vpin`: Pin number (signed) | Active |
-| `<o vpin count>` | Set multiple neopixels on/off | `vpin`: Pin, `count`: Number of pixels | Active |
-| `<o vpin r g b>` | Set neopixel colour | `vpin`: Pin, `r`: Red, `g`: Green, `b`: Blue | Active |
-| `<o vpin r g b count>` | Set multiple neopixels colour | `vpin`: Pin, `r`: Red, `g`: Green, `b`: Blue, `count`: Count | Active |
+| [`<o vpin>`](?_o_vpin) | Set neopixel on (vpin>0) or off (vpin<0) | `vpin`: Pin number (signed) | Active |
+| [`<o vpin count>`](?_o_vpin_count) | Set multiple neopixels on/off | `vpin`: Pin, `count`: Number of pixels | Active |
+| [`<o vpin r g b>`](?_o_vpin_r_g_b) | Set neopixel colour | `vpin`: Pin, `r`: Red, `g`: Green, `b`: Blue | Active |
+| [`<o vpin r g b count>`](?_o_vpin_r_g_b_count) | Set multiple neopixels colour | `vpin`: Pin, `r`: Red, `g`: Green, `b`: Blue, `count`: Count | Active |
 
 ## Turntable Control
 
 | Command | Description | Parameters | Status |
 | ------- | ----------- | ---------- | ------ |
-| `<I>` | List all turntables | None | Active |
-| `<I id>` | Broadcast turntable type and current position | `id`: Turntable ID | Active |
-| `<I id position>` | Rotate a DCC turntable | `id`: ID, `position`: Position | Active |
-| `<I id DCC home>` | Create DCC turntable | `id`: ID, `home`: Home position | Active |
-| `<I id position activity>` | Rotate an EXTT turntable | `id`: ID, `position`: Position, `activity`: Activity | Active |
-| `<I id EXTT vpin home>` | Create an EXTT turntable | `id`: ID, `vpin`: Pin, `home`: Home position | Active |
-| `<I id ADD position value angle>` | Add turntable position | `id`: ID, `position`: Position, `value`: Value, `angle`: Angle | Active |
+| [`<I>`](?_9I9) | List all turntables | None | Active |
+| [`<I id>`](?_9I9_id) | Broadcast turntable type and current position | `id`: Turntable ID | Active |
+| [`<I id position>`](?_9I9_id_position) | Rotate a DCC turntable | `id`: ID, `position`: Position | Active |
+| [`<I id DCC home>`](?_9I9_id_9DCC9_home) | Create DCC turntable | `id`: ID, `home`: Home position | Active |
+| [`<I id position activity>`](?_9I9_id_position_activity) | Rotate an EXTT turntable | `id`: ID, `position`: Position, `activity`: Activity | Active |
+| [`<I id EXTT vpin home>`](?_9I9_id_9EXTT9_vpin_home) | Create an EXTT turntable | `id`: ID, `vpin`: Pin, `home`: Home position | Active |
+| [`<I id ADD position value angle>`](?_9I9_id_9ADD9_position_value_angle) | Add turntable position | `id`: ID, `position`: Position, `value`: Value, `angle`: Angle | Active |
 
 ## Sound Control
 
 | Command | Description | Parameters | Status |
 | ------- | ----------- | ---------- | ------ |
-| `<y vpin PLAY track [volume]>` | Play track | Active |
-| `<y vpin REPEAT track [volume]>` | Play track repeat | Active |
-| `<y vpin STOP>` | Stop playing | Active |
-| `<y vpin PAUSE>` | Pause playing | Active |
-| `<y vpin RESUME>` | Resume playing | Active |
-| `<y vpin FOLDER folder>` | Set folder to play from | Active |
-| `<y vpin VOLUME vol>` | Set default volume 0..30 | Active |
-| `<y vpin EQ type>` | Set EQ type NORMAL, POP, ROCK, JAZZ, CLASSCS, BASS | Active |
-| `<y vpin RESET>` | Reset player | Active |
+| [`<y vpin PLAY track [volume]>`](?_y_vpin_9PLAY9_track_volume) | Play track | Active |
+| [`<y vpin REPEAT track [volume]>`](?_y_vpin_9REPEAT9_track_volume) | Play track repeat | Active |
+| [`<y vpin STOP>`](?_y_vpin_9STOP9) | Stop playing | Active |
+| [`<y vpin PAUSE>`](?_y_vpin_9PAUSE9) | Pause playing | Active |
+| [`<y vpin RESUME>`](?_y_vpin_9RESUME9) | Resume playing | Active |
+| [`<y vpin FOLDER folder>`](?_y_vpin_9FOLDER9_folder) | Set folder to play from | Active |
+| [`<y vpin VOLUME vol>`](?_y_vpin_9VOLUME9_vol) | Set default volume 0..30 | Active |
+| [`<y vpin EQ type>`](?_y_vpin_9EQ9_type) | Set EQ type NORMAL, POP, ROCK, JAZZ, CLASSCS, BASS | Active |
+| [`<y vpin RESET>`](?_y_vpin_9RESET9) | Reset player | Active |
 
 ## Throttle Information Commands
 
@@ -313,15 +313,6 @@ Reference guide for serial commands used by **EX-CommandStations**, shown in fun
 | `<M ignore d0 d1 d2 d3 d4 d5>` | Send up to 5 byte DCC packet on MAIN track | `ignore`: Ignored, `d0-d5`: Hex bytes | Active |
 | `<P ignore d0 d1 d2 d3 d4 d5>` | Send up to 5 byte DCC packet on PROG track | `ignore`: Ignored, `d0-d5`: Hex bytes | Active |
 | `<c>` | Report main track current | None | ⚠️ Deprecated |
-
-!!! info "tSpeed Values"
-    - **0**: Stop
-    - **1-127**: Variable speed (1=slowest, 127=fastest)
-    - **-1**: Emergency stop
-
-!!! info "Direction Values"
-    - **0**: Reverse
-    - **1**: Forward
 
 !!! warning "Deprecated Commands"
     Commands marked with ⚠️ are deprecated and may be removed in future versions. Use the recommended alternatives where available.
