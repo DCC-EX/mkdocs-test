@@ -1,8 +1,8 @@
-# Build Your Own Command Station
+# Build Your Own **EX-CommandStation**
 
 **DCC-EX** started life creating home-built command stations using Arduino UNO and Arduino Mega microcontrollers with the standard Arduino motor shields. This was attractive to users that liked to experiment and was exceptionally cheap to create.
 
-Our [Command Station Booster 1 Express (EX-CSB1)](../products/ex-csb1/index.md) is now available as a complete ready-to-run, plug-and-go, solution.
+Our [**EX-CommandStation/Booster 1 Express** (EX-CSB1)](../products/ex-csb1/index.md) is now available as a complete ready-to-run, plug-and-go, solution.
 
 ***However, if wish you build your own, or even buy a pre-built stack from a third party***, you can still do so using our open source **EX-CommandStation** software and commonly available parts. Though you will need to learn quite a lot more than using our plug-and-go **EX-CSB1** solution.
 
