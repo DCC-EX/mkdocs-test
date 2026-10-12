@@ -23,4 +23,4 @@ AUTOSTART
 
 Other track modes require the `SET_POWER` command, for each track.
 
-For DC mode operation, please see [DC Running](/products/ex-commandstation/dc-running.md)
+For DC mode operation, please see [DC Running](/enhance/dc-running.md)

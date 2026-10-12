@@ -7,7 +7,7 @@ tags:
 
 # Running a Legacy DC layout
 
-No additional hardware is required for DC (PWM) track assignments. A single **EX‑CommandStation** is the only hardware needed for full functionality to run a DC Layout just as easily as a DCC layout.
+No additional hardware is required for DC (PWM) track assignments. A single **EX‑CommandStation** ([Ready-To-Run **EX-CSB1**](../products/ex-csb1/index.md) or [Self-Built](../diy/diy.md)) is the only hardware needed for full functionality to run a DC Layout just as easily as a DCC layout.
 
 ## Advantages of using a EX-CommandStation to run a DC layout
 
@@ -50,7 +50,7 @@ All of which apply equally to DC operation, plus:
 
 - How track Districts are set for DC and which locoid addresses they are mapped to
 
-To start this you need to follow the [Installer process described here](../../prepare-to-use/installer/installer.md) and create an AUTOSTART section in your myAutomation.h file to set the track manager options suitable for your layout.
+To start this you need to follow the [Installer process described here](../prepare-to-use/installer/installer.md) and create an AUTOSTART section in your myAutomation.h file to set the track manager options suitable for your layout.
 
 Two districts A & B are set to DC mode and initially powered On:
 
@@ -108,7 +108,7 @@ ROUTE(99,"Restore tracks to normal")
   DONE
 ```
 
-Notice that when you apply ROUTE(12), you are now driving on both tracks with the same loco id 1. Throttles attempting to drive loco id 2 will be ignored.
+Notice that when you apply ``ROUTE(12)``, you are now driving on both tracks with the same loco id 1. Throttles attempting to drive loco id 2 will be ignored.
 
 As you get more advanced, the routes can be programmed to happen automatically or contain additional items such as signals, sounds, mimic panel control and so on.
 

@@ -4,8 +4,8 @@
 
 This capability is part of **TrackManager** and is built into your **EX-CommandStation**.  Read the following to explore this feature:
 
-* [TrackManager](../products/ex-commandstation/trackmanager/index.md)
-* [Running a Legacy DC layout](../products/ex-commandstation/dc-running.md)
+* [TrackManager](../enhance/trackmanager/index.md)
+* [Running a Legacy DC layout](../enhance/dc-running.md)
 
 Also see:
 

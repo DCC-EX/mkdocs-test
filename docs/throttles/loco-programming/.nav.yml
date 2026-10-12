@@ -1,8 +1,8 @@
 nav:
   - CV Programming Overview: index.md
-  - EX-WebThrottle Programming: webthrottle-programming.md
-  - Engine Driver Programming: engine-driver-programming.md
-  - EX-Toolbox Programming: toolbox-programming.md
-  - JMRI DecoderPro Programming: decoderpro.md
-  - Serial Programming: serial-programming.md
+  - Using EX-WebThrottle: webthrottle-programming.md
+  - Using Engine Driver: engine-driver-programming.md
+  - Using EX-Toolbox: toolbox-programming.md
+  - Using JMRI DecoderPro: decoderpro.md
+  - Using Serial Commands: serial-programming.md
   - Hints and Tips: programming-tips.md

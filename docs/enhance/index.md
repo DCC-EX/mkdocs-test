@@ -61,8 +61,8 @@ Any output of your **EX-CommandStation** can perform any of the functions listed
 
 This capability is part of **TrackManager** and is built into your **EX-CommandStation**.  Read the following to explore this feature:
 
-* [TrackManager](../products/ex-commandstation/trackmanager/index.md)
-* [Running a Legacy DC layout](../products/ex-commandstation/dc-running.md)
+* [TrackManager](../enhance/trackmanager/index.md)
+* [Running a Legacy DC layout](../enhance/dc-running.md)
 
 Also see:
 
@@ -99,7 +99,7 @@ Also see:
 * [EX-FastClock](../products/ex-fastclock/index.md)
 * [EX-IOExpander](../products/ex-ioexpander/ex-ioexpander.md)
 * [EX-SensorCAM](../products/ex-sensorcam/ex-sensorcam.md)
-* [Use the EX-CSB1 as a DCC Booster](../products/ex-commandstation/trackmanager/booster.md)
+* [Use the EX-CSB1 as a DCC Booster](../enhance/trackmanager/booster.md)
 
 ## Tools
 

@@ -18,7 +18,7 @@ The **DCC-EX EX-CommandStation/Booster 1 (EX-CSB1)** comes ready to use out of t
 - **USB-C connector** – for software upload, diagnostic monitoring, **DCC-EX** **EX-WebThrottle** and JMRI connectivity
 - **Railsync DCC input** – enables Booster or Sniffer modes, which with an **EXRAIL** script can be automatically engaged on receipt of a signal
 - **OLED screen** – for diagnostics, status and information display
-- When configured correctly, connecting a Railsync or DCC signal to the Railsync connector can enable your **EX-CSB1** to operate as a DCC booster.
+- When configured correctly, connecting a Railsync or DCC signal to the Railsync connector can enable your **EX-CSB1** to operate as a [DCC booster](../../enhance/trackmanager/booster.md).
 
 ## Purchasing
 
