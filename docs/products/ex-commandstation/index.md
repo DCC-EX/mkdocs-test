@@ -14,3 +14,5 @@ Our primary solution is the [**EX-CommandStation Booster 1 Express (CSB1**)](../
 - If you already have a **DCC-EX EX-CommandStation**, read on.
 
 To follow the basic setup process, you can use the `next` button seen at the bottom right of each page.
+
+--8<-- "snippets/abbr.md"

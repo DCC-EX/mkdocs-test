@@ -3,7 +3,7 @@
 ![EX-CSB1 Logo](../../_static/images/logos/product-logo-ex-csb1-only-light.png){ .only-light width=400px align=right }
 ![EX-CSB1 Logo](../../_static/images/logos/product-logo-ex-csb1-only-dark.png){ .only-dark width=400px align=right }
 
-This is the **EX-CSB1** *Quick* Getting Started Guide.  See ==TODO== for a detailed guide on setting up and using the **EX-CSB1**.
+This is the **EX-CSB1** *Quick* Getting Started Guide.  See the [Connecting your EX-CSB1](../../prepare-to-use/connecting/connecting-ex-csb1.md) page for a detailed guide on setting up and using the **EX-CSB1**.
 
 <br/><br/>
 

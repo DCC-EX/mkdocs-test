@@ -20,7 +20,7 @@ Scanned roots: `C:\Users\akers\OneDrive\github\github_doco\mkdocs-test\docs`, `C
 
 ## High TODOs
 
-Total High TODO matches: 91
+Total High TODO matches: 94
 
 | File | Line | Line text |
 | --- | ---: | --- |
@@ -28,7 +28,6 @@ Total High TODO matches: 91
 | [docs/prepare-to-use/index.md](../prepare-to-use/index.md) | 5 | ==TODO==  Installing the EX-CommandStation software - overview -  Not needed for the EX-CSB1 |
 | [docs/prepare-to-use/index.md](../prepare-to-use/index.md) | 9 | ==TODO==  Installing the EX-CommandStation - Intro |
 | [docs/prepare-to-use/index.md](../prepare-to-use/index.md) | 15 | ==TODO==  Testing - Intro |
-| [docs/prepare-to-use/physical-installation.md](../prepare-to-use/physical-installation.md) | 3 | ==TODO== new page on physically connecting the EX-CS to a layout. Should be in a snippet and reused |
 | [docs/prepare-to-use/testing.md](../prepare-to-use/testing.md) | 3 | ==TODO== Basic testing... subset of the full testing page for the EX-CSB1 |
 | [docs/support/faq.md](../support/faq.md) | 9 | ==TODO== Rework this so that it includes GUI options (EX-WebThrottle, Engine Driver, etc.) |
 | [docs/support/faq.md](../support/faq.md) | 19 | ==TODO== Rework this so that it includes GUI options (EX-WebThrottle, Engine Driver, etc.) |
@@ -82,6 +81,7 @@ Total High TODO matches: 91
 | [docs/reference/hardware/hal/hal-config.md](../reference/hardware/hal/hal-config.md) | 189 | First you will need to add a new file, just like the ==TODO== :ref:`config.h file <ex-commandstation/advanced-setup/installation-options/arduino-ide:Copy the config.example.h file (or rename it)>`. |
 | [docs/reference/hardware/hal/hal-config.md](../reference/hardware/hal/hal-config.md) | 252 | Finally, upload the code to the Arduino as you would do during the standard ==TODO== :ref:`Arduino IDE Setup <ex-commandstation/advanced-setup/installation-options/arduino-ide:upload the software>`. |
 | [docs/reference/hardware/wifi-boards/index.md](../reference/hardware/wifi-boards/index.md) | 3 | ==TODO== Move the legacy pages |
+| [docs/products/ex-csb1/getting-started.md](../products/ex-csb1/getting-started.md) | 6 | This is the **EX-CSB1** *Quick* Getting Started Guide.  See ==TODO== for a detailed guide on setting up and using the **EX-CSB1**. |
 | [docs/products/ex-dccinspector/index.md](../products/ex-dccinspector/index.md) | 8 | ==TODO== move legacy docs |
 | [docs/products/ex-ioexpander/ex-ioexpander.md](../products/ex-ioexpander/ex-ioexpander.md) | 8 | ==TODO== move legacy docs |
 | [docs/products/ex-turntable/configure.md](../products/ex-turntable/configure.md) | 3 | ==TODO== check the current version number of EX-Turntable and adjust the version notes on this page as needed |
@@ -99,6 +99,9 @@ Total High TODO matches: 91
 | [docs/products/ex-commandstation/exrail/cookbooks/big-picture/stage3.md](../products/ex-commandstation/exrail/cookbooks/big-picture/stage3.md) | 169 | You can also refer to ==TODO== `exrail/exrail-command-reference:virtual block control` for more information. |
 | [docs/products/ex-commandstation/exrail/cookbooks/big-picture/stage6.md](../products/ex-commandstation/exrail/cookbooks/big-picture/stage6.md) | 404 | Remember, these are virtual blocks, and do not necessarily need to be electrically isolated from each other. Don't confuse isolated blocks of track or block occupancy detection with these virtual blocks. For further background, refer to ==TODO== `exrail/exrail-command-reference:virtual block control`. |
 | [docs/products/ex-commandstation/exrail/cookbooks/big-picture/stage6.md](../products/ex-commandstation/exrail/cookbooks/big-picture/stage6.md) | 446 | Using the ``LATCH()`` command gives us a way to automatically alternate between the main track and the station siding. ``LATCH()`` simply sets the state of a pin (either real or virtual) which can then be tested by an ``IF()`` statement. In this particular case, we have defined pin 60 (alias "CHOOSE_BLK2") to be latched and unlatched, as this pin does not exist on the Mega2560, nor does it exist on any of our I/O expander boards. Further reading on ``LATCH()`` and ``UNLATCH()`` can be found in the ==TODO== `exrail/exrail-command-reference:sensors/inputs - reading and responding` section of the EXRAIL reference. |
+| [docs/prepare-to-use/connecting/connecting-diy.md](../prepare-to-use/connecting/connecting-diy.md) | 3 | ==TODO== new page on physically connecting DIY EX-CS to a layout. Should be in a snippet and reused |
+| [docs/prepare-to-use/connecting/connecting-ex-csb1.md](../prepare-to-use/connecting/connecting-ex-csb1.md) | 3 | ==TODO== new page on physically connecting the EX-CSB1 to a layout. Should be in a snippet and reused |
+| [docs/prepare-to-use/connecting/index.md](../prepare-to-use/connecting/index.md) | 3 | ==TODO== new page on physically connecting the EX-CS to a layout. Should be in a snippet and reused |
 | [docs/prepare-to-use/installer/index.md](../prepare-to-use/installer/index.md) | 3 | ==TODO== Installing the EX-CommandStation Software - Intro |
 | [docs/prepare-to-use/installer/install-ex-ioexpander.md](../prepare-to-use/installer/install-ex-ioexpander.md) | 3 | ==TODO== complete EX-Installer EX-IOExpander page needed |
 | [docs/prepare-to-use/installer/install-ex-turntable.md](../prepare-to-use/installer/install-ex-turntable.md) | 3 | ==TODO== complete EX-Installer EX-Turntable page needed |
