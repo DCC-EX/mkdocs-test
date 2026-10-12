@@ -37,9 +37,9 @@ Ignore this if you do not have WiFi on your **EX-CommandStation** or choose to a
 
 The **EX-CSB1** and other ESP32-based **EX-CommandStation** use a completely different method to define WiFi settings. This is to allow WiFi configuration without having to reinstall the software.
 
-[WiFi setup for **EX-CSB1** or ESP32](/products/ex-commandstation/config-wifi-esp32.md)
+[WiFi setup for **EX-CSB1** or ESP32](../../prepare-to-use/installer/config-wifi-esp32.md)
 
-[WiFi setup for WiFi shield](/products/ex-commandstation/config-wifi-shield.md)
+[WiFi setup for WiFi shield](../../prepare-to-use/installer/config-wifi-shield.md)
 
 ## Ethernet settings
 

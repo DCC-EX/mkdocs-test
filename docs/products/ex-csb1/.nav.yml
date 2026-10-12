@@ -1,3 +1,4 @@
 nav:
   - <i><b>EX-CSB1</b> CommandStation/Booster 1 Express</i>: index.md
   - Getting Started: getting-started.md
+  - Configure WiFi <small><small>(EX-CSB1 v5.7.0+)</small></small>: config-wifi-esp32.md

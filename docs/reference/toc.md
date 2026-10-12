@@ -21,9 +21,6 @@ li:not(.md-nav__item, .md-tabs__item) a {
     - [DCC-EX Product Overview <small>(Product Overview)</small>](../products/products.md)
     - **<br/>EX-CommandStation<small><small> (Ready&nbsp;to&nbsp;Run &amp; Self&nbsp;Build)</small></small>**
         - [DCC-EX EX-CommandStation - Overview <small>(EX-CommandStation Overview)</small>](../products/ex-commandstation/index.md)
-        - [Wifi configuration <br/><small>(Excluding **EX-CSB1** or ESP32 v5.7.0+)</small> <small>(Configure WiFi <small><small>(Wifi Shield)</small></small>)</small>](../products/ex-commandstation/config-wifi-shield.md)
-        - [WiFi Configuration for version 5.7.0+ <br/><small>Graphical User Interface Options</small> <small>(Configure WiFi <small><small>(EX-CSB1 & ESP32 v5.7.0+)</small></small>)</small>](../products/ex-commandstation/config-wifi-esp32.md)
-        - [Testing your EX-CommandStation](../products/ex-commandstation/testing.md)
         - **EXRAIL**
             - [What is EXRAIL?](../products/ex-commandstation/exrail/index.md)
             - [EXRAIL Objects - An Introduction <small>(Objects Introduction)</small>](../products/ex-commandstation/exrail/exrail-objects-introduction.md)
@@ -110,6 +107,7 @@ li:not(.md-nav__item, .md-tabs__item) a {
     - **<b>EX-CSB1</b> <small><small>(Ready&nbsp;to&nbsp;Run) <br/>EX-CommandStation/Booster&thinsp;1&thinsp;Express</small></small>**
         - [**EX-CSB1** <br/>EX-CommandStation/Booster 1 Express <small>(<i><b>EX-CSB1</b> CommandStation/Booster 1 Express</i>)</small>](../products/ex-csb1/index.md)
         - [**EX-CSB1** - Quick Start<br/>EX-CommandStation/Booster 1 Express <small>(Getting Started)</small>](../products/ex-csb1/getting-started.md)
+        - [WiFi Configuration for version 5.7.0+ <br/><small>Graphical User Interface Options</small> <small>(Configure WiFi <small><small>(EX-CSB1 v5.7.0+)</small></small>)</small>](../products/ex-csb1/config-wifi-esp32.md)
     - [EX‑MotorShield8874 <small>(<br/>EX-MotorShield8874)</small>](../products/ex-motorshield8874/ex-motorshield8874.md)
     - [EX-WiFiShield 8266 <small>(EX-WiFiShield8266)</small>](../products/ex-wifishield8266/ex-wifishield8266.md)
     - [EX-WebThrottle - Overview <small>(<br/>EX-WebThrottle)</small>](../products/ex-webthrottle/ex-webthrottle.md)
@@ -181,8 +179,9 @@ li:not(.md-nav__item, .md-tabs__item) a {
             - [Linux](../prepare-to-use/installer/download/download-linux.md)
             - [Mac](../prepare-to-use/installer/download/download-mac.md)
             - [Windows](../prepare-to-use/installer/download/download-win.md)
-        - [WiFi Configuration for version 5.7.0+ <br/><small>Graphical User Interface Options</small> <small>(<br/>Configure WiFi <small><small>(EX&#8209;CSB1&nbsp;&amp;&nbsp;ESP32&nbsp;v5.7.0+&nbsp;Only)</small></small>)</small>](../prepare-to-use/installer/config-wifi-esp32.md)
-        - [Testing your installation <small>(Test Your Installation<br>)</small>](../prepare-to-use/installer/testing.md)
+        - [Wifi configuration <br/><small>(Excluding **EX-CSB1** or ESP32 v5.7.0+)</small> <small>(<br/>Configure WiFi <small><small>(Wifi Shield)</small></small>)</small>](../prepare-to-use/installer/config-wifi-shield.md)
+        - [WiFi Configuration for version 5.7.0+ <br/><small>Graphical User Interface Options</small> <small>(Configure WiFi <small><small>(EX&#8209;CSB1&nbsp;&amp;&nbsp;ESP32&nbsp;v5.7.0+&nbsp;Only)</small></small>)</small>](../prepare-to-use/installer/config-wifi-esp32.md)
+        - [Testing your installation <small>(<br/>Test Your Installation<br>)</small>](../prepare-to-use/installer/testing.md)
         - [Managing Your Config files - Saving and Reusing <small>(<br/>Manage Config files<small><small> <br/>Saving&nbsp;&amp;&nbsp;Restoring</small></small>)</small>](../prepare-to-use/installer/manage-config-files.md)
         - [Advanced Users - VSCode/PlatformIO <small>(<br/>Advanced Users - VSC/PlatformIO)</small>](../prepare-to-use/installer/platformio.md)
     - [Next Steps - Throttles <small>(<br/><i>Next Steps</i> - Throttles)</small>](../prepare-to-use/next-steps.md)
