@@ -41,7 +41,7 @@ i.e. ``Power SC`` means the same as either ``Power Ab`` or ``Power bA``.
 ## Power supply
 
 If your power supply is less than 5A, add a line in config.h to set overcurrent reporting lower - 90% of track power supply.  
-[motor-shield-max-current](../../advanced-config-h.md#motor-shield-max-current)
+[motor-shield-max-current](../../../reference/configuration/advanced-config-h.md#motor-shield-max-current)
 
 ## EX8874 on CSB1
 

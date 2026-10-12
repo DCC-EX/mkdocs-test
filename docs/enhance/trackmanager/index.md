@@ -33,18 +33,18 @@ Track A defaults to ``MAIN``.  Track B defaults to ``PROG``.
 ## myAutomation.h
 
 Track mode can be defined in myAutomation.h  
- &nbsp; &nbsp; &nbsp; &nbsp; [Example: Set a track to DC](../exrail/cookbooks/dc-tracks.md)
+ &nbsp; &nbsp; &nbsp; &nbsp; [Example: Set a track to DC](../../products/ex-commandstation/exrail/cookbooks/dc-tracks.md)
 
 ## Engine Driver
 
 This screen shows where track modes can be set with Engine Driver:  
- &nbsp; &nbsp; &nbsp; &nbsp; ![TrackManager ED](../../../_static/images/engine-driver/ed-trackmanager02.png){: style="width: 300px;"}
+ &nbsp; &nbsp; &nbsp; &nbsp; ![TrackManager ED](../../_static/images/engine-driver/ed-trackmanager02.png){: style="width: 300px;"}
 
 ## Notes
 
 **NOTE:** &nbsp; DC output is only available with specific hardware requirements.
 
-TrackManager  -  [reference document](/reference/trackmanager/index.md)  
+TrackManager  -  [reference document](../../reference/trackmanager/index.md)  
 Multi-district DC mode track sync -  [additional detail](/reference/trackmanager/dc-track-sync.md)  
 As these pages are under development, you may also want to refer to the [legacy documentation](https://dcc-ex.com/legacy-docs/trackmanager/index.html)
 
@@ -101,7 +101,7 @@ Nothing special or extra is required for any of the DCC modes.
 To run DC locos with your **EX-CommandStation** you will need:
 
 - An **EX-CommandStation**.
-- A motor shield with a brake pin. <br/> (See the list of compatible boards at ==TODO== :ref:`reference/hardware/motor-boards:trackmanager dc compatible boards`.) <br/> (The **EX-CSB1** and **EX‑MotorShield8874** have a brake pin.)
+- A motor shield with a brake pin. <br/> (See the list of compatible boards at [Motor Drivers List](../../reference/hardware/motorboards/index.md#current-list-of-motor-drivers)<br/> (The **EX-CSB1** and **EX‑MotorShield8874** have a brake pin.)
 - A controller that can be used with the **EX-CommandStation**.
 
 *No additional external DCC decoders are required for DC (PWM) track assignments, and a single* **EX-CommandStation** *is the only hardware needed for full functionality.*
@@ -110,7 +110,7 @@ Note: An additional suggested precaution is to add 4 fuses on wires (-b +b, -a +
 
 #### Additional Technical Information
 
-If you are interested in the technical details of DC Pulse Width Modulation (PWM) visit our [DCC vs DC page](../../../reference/trackmanager/dcc-vs-dc.md)`/reference/hardware/dcc-vs-dc` page.
+If you are interested in the technical details of DC Pulse Width Modulation (PWM) visit our [DCC vs DC page](../../reference/trackmanager/dcc-vs-dc.md)`/reference/hardware/dcc-vs-dc` page.
 
 ## Changing a Motor Driver Output to a different DCC mode
 
@@ -236,7 +236,7 @@ There are several ways to temporarily change a Motor Driver Output to DC:
 
 Engine Driver has specific TrackManager features that allow you to alter the output modes.  See the [TrackManager control page](https://enginedriver.mstevetodd.com/operation/dcc-ex-native-protocol.html#trackmanager-control) on the Engine Driver web site for details.
 
-**EX-Toolbox** has specific TrackManager features that allow you to alter the output modes. See the [EX-Toolbox TrackManage page](../../ex-toolbox/user-guide.md#track-manager) for details.
+**EX-Toolbox** has specific TrackManager features that allow you to alter the output modes. See the [EX-Toolbox TrackManage page](../../products/ex-toolbox/user-guide.md#track-manager) for details.
 
 #### Issuing a Command (DC)
 
@@ -272,7 +272,7 @@ We will be adding some instructions the ``myAutomation.h`` file a re-uploading t
 
 5. Then Load the Command Station software as normal (on the next page)
 
-Note that this will make the output DC if you activate the route in you controller.  See the [DC Operation page](../../../throttles/dc.md) for more information.
+Note that this will make the output DC if you activate the route in you controller.  See the [DC Operation page](../../throttles/dc.md) for more information.
 
 Note the track power is immediately turn off anytime you change the track mode. you may wish to add ``SET_POWER( track, ON/OFF )`` after the ``SET_TRACK()`` command. e.g. ``SET_POWER(B ON)``.
 
@@ -295,7 +295,7 @@ We will be adding some instructions the ``myAutomation.h`` file a re-uploading t
 
 5. Then Load the Command Station software as normal (on the next page)
 
-Note that this will make the output DC if you activate the route in you controller.  See [DC Operation page](../../../throttles/dc.md) for more information.
+Note that this will make the output DC if you activate the route in you controller.  See [DC Operation page](../../throttles/dc.md) for more information.
 
 Note the track power is immediately turn off anytime you change the track mode. you may wish to add ``SET_POWER( track, ON/OFF )`` after the ``SET_TRACK()`` command. e.g. ``SET_POWER(B ON)``.
 

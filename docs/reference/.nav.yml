@@ -5,7 +5,7 @@ nav:
   - Serial Commands <small>Full&nbsp;List</small>: serial-commands/serial-command-list.md
   - Serial Commands <small>by&nbsp;Function&nbsp;Group</small>: serial-commands/serial-commands.md
   - Serial Commands <small>Additional&nbsp;Info</small>: serial-commands
-  - <br/>Advanced config.h Options: advanced-config-h.md
+  - <br/>Configuration Reference (config.h): configuration
   - HAL Device Configuration: hardware/hal/hal-device-templates.md
   - <br/>TrackManager: trackmanager
   - <br/>Alternate Microcontrollers: microcontrollers

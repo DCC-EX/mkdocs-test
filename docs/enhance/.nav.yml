@@ -3,4 +3,5 @@ nav:
   - Adding a Roster: rosters.md
   - Adding Turnouts/Points: turnouts.md
   - Adding Routes and Automations: routes.md
-  - TrackManager - DC and DCC Operation: trackmanager.md
+  - <br/>TrackManager: trackmanager
+  - Running a DC layout: dc-running.md

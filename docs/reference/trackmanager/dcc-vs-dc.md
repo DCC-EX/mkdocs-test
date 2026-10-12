@@ -33,7 +33,7 @@ If you are ready to dive into customising your track outputs, **TrackManager** i
 
 You can also set up different tracks for specific purposes, such as making one track a Booster, configuring your PROG track, or enabling Auto-Reverser mode.
 
-For detailed steps on how to use TrackManager to change track modes and settings, check out the [TrackManager page](../../products/ex-commandstation/trackmanager/index.md).
+For detailed steps on how to use TrackManager to change track modes and settings, check out the [TrackManager page](../../enhance/trackmanager/index.md).
 
 ## Hardware Requirements
 

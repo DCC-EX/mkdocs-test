@@ -1,3 +1,3 @@
 # DC Track Control
 
-Refer to [Running a DC layout](/products/ex-commandstation/dc-running.md)
+Refer to [Running a DC layout](/enhance/dc-running.md)

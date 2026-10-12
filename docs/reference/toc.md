@@ -21,14 +21,9 @@ li:not(.md-nav__item, .md-tabs__item) a {
     - [DCC-EX Product Overview <small>(Product Overview)</small>](../products/products.md)
     - **<br/>EX-CommandStation<small><small> (Ready&nbsp;to&nbsp;Run &amp; Self&nbsp;Build)</small></small>**
         - [DCC-EX EX-CommandStation - Overview <small>(EX-CommandStation Overview)</small>](../products/ex-commandstation/index.md)
-        - [Build configuration (config.h) <small>(Configuration <small><small>(config.h)</small></small>)</small>](../products/ex-commandstation/config-h.md)
         - [Wifi configuration <br/><small>(Excluding **EX-CSB1** or ESP32 v5.7.0+)</small> <small>(Configure WiFi <small><small>(Wifi Shield)</small></small>)</small>](../products/ex-commandstation/config-wifi-shield.md)
         - [WiFi Configuration for version 5.7.0+ <br/><small>Graphical User Interface Options</small> <small>(Configure WiFi <small><small>(EX-CSB1 & ESP32 v5.7.0+)</small></small>)</small>](../products/ex-commandstation/config-wifi-esp32.md)
         - [Testing your EX-CommandStation](../products/ex-commandstation/testing.md)
-        - **TrackManager**
-            - [TrackManager](../products/ex-commandstation/trackmanager/index.md)
-            - [EX-CSB1 in DCC Booster Mode <small>(DCC Booster Mode <small><small>(EX-CSB1)</small></small>)</small>](../products/ex-commandstation/trackmanager/booster.md)
-        - [Running a Legacy DC layout <small>(Running a DC layout)</small>](../products/ex-commandstation/dc-running.md)
         - **Accessories**
             - [Overview - What are Accessories? <small>(Accessories)</small>](../products/ex-commandstation/accessories/index.md)
             - [Actuators - to make stuff happen <small>(Actuators)</small>](../products/ex-commandstation/accessories/actuators.md)
@@ -222,22 +217,25 @@ li:not(.md-nav__item, .md-tabs__item) a {
         - [WiThrottle Protocol VS DCC-EX Native/Serial Commands <small>(WiThrottle VS Native Protocol)</small>](../throttles/withrottle-vs-native-protocol.md)
     - [Connecting a WiFi Throttle to your EX-CommandStation <small>(<br/>How to Connect - WiFi)</small>](../throttles/connecting-wifi.md)
     - [Connecting a USB Throttle to your EX-CommandStation <small>(How to Connect - USB)</small>](../throttles/connecting-usb.md)
-    - **Loco/CV Programming**
+    - **<br/>Loco/CV Programming**
         - [Programming DCC locos <small>(CV Programming Overview)</small>](../throttles/loco-programming/index.md)
-        - [Programming using Serial commands <small>(Serial Programming)</small>](../throttles/loco-programming/serial-programming.md)
-        - [Programming with EX-WebThrottle <small>(EX-WebThrottle Programming)</small>](../throttles/loco-programming/webthrottle-programming.md)
-        - [Programming with Engine Driver <small>(Engine Driver Programming)</small>](../throttles/loco-programming/engine-driver-programming.md)
-        - [Programming with EX-Toolbox <small>(EX-Toolbox Programming)</small>](../throttles/loco-programming/toolbox-programming.md)
-        - [Using JMRI DecoderPro <small>(Decoderpro)</small>](../throttles/loco-programming/decoderpro.md)
+        - [Programming with EX-WebThrottle <small>(Using EX-WebThrottle)</small>](../throttles/loco-programming/webthrottle-programming.md)
+        - [Programming with Engine Driver <small>(Using Engine Driver)</small>](../throttles/loco-programming/engine-driver-programming.md)
+        - [Programming with EX-Toolbox <small>(Using EX-Toolbox)</small>](../throttles/loco-programming/toolbox-programming.md)
+        - [Using JMRI DecoderPro](../throttles/loco-programming/decoderpro.md)
+        - [Programming using Serial commands <small>(Using Serial Commands)</small>](../throttles/loco-programming/serial-programming.md)
         - [CV Programming Tips <small>(Hints and Tips)</small>](../throttles/loco-programming/programming-tips.md)
-    - [DCC Accessory Operation](../throttles/dcc-accessories.md)
+    - [DCC Accessory Operation <small>(<br/>DCC Accessory Operation)</small>](../throttles/dcc-accessories.md)
     - [DC Operation <small>(Controlling DC Locos)</small>](../throttles/dc.md)
 - **Enhance**
     - [Enhancing & Expanding EX‑CommandStation <small>(Enhancing your EX-CommandStation)</small>](../enhance/index.md)
     - [Adding a Roster](../enhance/rosters.md)
     - [Adding a Turnouts/Points <small>(Adding Turnouts/Points)</small>](../enhance/turnouts.md)
     - [Routes and Automation <small>(Adding Routes and Automations)</small>](../enhance/routes.md)
-    - [TrackManager - DC and DCC Operation](../enhance/trackmanager.md)
+    - **<br/>TrackManager**
+        - [TrackManager](../enhance/trackmanager/index.md)
+        - [EX-CSB1 in DCC Booster Mode <small>(DCC Booster Mode <small><small>(EX-CSB1)</small></small>)</small>](../enhance/trackmanager/booster.md)
+    - [Running a Legacy DC layout <small>(Running a DC layout)</small>](../enhance/dc-running.md)
 - **Support**
     - [Frequently Answered Questions  (FAQ) <small>(Frequently Answered Questions)</small>](../support/faq.md)
     - [Help and Support <small>(Getting Support)</small>](../support/support.md)
@@ -252,7 +250,10 @@ li:not(.md-nav__item, .md-tabs__item) a {
     - **Serial Commands <small>Additional&nbsp;Info</small>**
         - [Legacy Command Reference <small>(Legacy Reference <small>Not&nbsp;Maintained</small>)</small>](serial-commands/legacy-command-reference.md)
         - [WiFi configuration <br/><small>(EX-CSB1 or ESP32 ONLY. v5.7.0+ ONLY)</small> <small>(Configure WiFi <br/><small>(EX‑CSB1 & ESP32 v5.7.0+ Only)</small>)</small>](serial-commands/config-wifi-esp32.md)
-    - [Advanced config.h settings for EX-CommandStation build <small>(<br/>Advanced config.h Options)</small>](advanced-config-h.md)
+    - **<br/>Configuration Reference (config.h)**
+        - [EX-CommandStation Configuration <small>(Table of Contents)</small>](configuration/index.md)
+        - [Build configuration (config.h) <small>(Configuration <small><small>(config.h)</small></small>)</small>](configuration/config-h.md)
+        - [Advanced config.h settings for EX-CommandStation build <small>(Advanced config.h Options)</small>](configuration/advanced-config-h.md)
     - [HAL Device Templates <small>(HAL Device Configuration)</small>](hardware/hal/hal-device-templates.md)
     - **<br/>TrackManager**
         - [TrackManager](trackmanager/index.md)
