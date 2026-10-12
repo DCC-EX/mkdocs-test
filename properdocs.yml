@@ -134,7 +134,6 @@ plugins:
       list-class: news-headline-list
   - redirects:
       redirect_maps:
-        'throttles/cv-programming.md': 'products/ex-commandstation/loco-programming/index.md'
         'enhance/rosters.md': 'products/ex-commandstation/exrail/exrail-objects-introduction.md#adding-a-roster'
         'enhance/turnouts.md': 'products/ex-commandstation/exrail/exrail-objects-introduction.md#adding-turnoutspoints'
         'enhance/routes.md': 'products/ex-commandstation/exrail/exrail-sequences-introduction.md'

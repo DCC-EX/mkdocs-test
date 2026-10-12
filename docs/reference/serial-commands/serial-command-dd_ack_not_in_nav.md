@@ -68,7 +68,7 @@ N/A
 
 ## *Hints and Tips*
 
-Refer to the [Programming Hint and Tips](../../products/ex-commandstation/loco-programming/programming-tips.md) page for examples on using some of the commands above for problematic decoders.
+Refer to the [Programming Hint and Tips](../../throttles/loco-programming/programming-tips.md) page for examples on using some of the commands above for problematic decoders.
 
 --8<-- "snippets/abbr.md"
 

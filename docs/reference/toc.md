@@ -28,14 +28,6 @@ li:not(.md-nav__item, .md-tabs__item) a {
         - **TrackManager**
             - [TrackManager](../products/ex-commandstation/trackmanager/index.md)
             - [EX-CSB1 in DCC Booster Mode <small>(DCC Booster Mode <small><small>(EX-CSB1)</small></small>)</small>](../products/ex-commandstation/trackmanager/booster.md)
-        - **Loco Programming**
-            - [Programming DCC locos <small>(Programming Overview)</small>](../products/ex-commandstation/loco-programming/index.md)
-            - [Programming using Serial commands <small>(Serial Programming)</small>](../products/ex-commandstation/loco-programming/serial-programming.md)
-            - [Programming with EX-WebThrottle <small>(EX-WebThrottle Programming)</small>](../products/ex-commandstation/loco-programming/webthrottle-programming.md)
-            - [Programming with Engine Driver <small>(Engine Driver Programming)</small>](../products/ex-commandstation/loco-programming/engine-driver-programming.md)
-            - [Programming with EX-Toolbox <small>(EX-Toolbox Programming)</small>](../products/ex-commandstation/loco-programming/toolbox-programming.md)
-            - [Using JMRI DecoderPro <small>(Decoderpro)</small>](../products/ex-commandstation/loco-programming/decoderpro.md)
-            - [CV Programming Tips <small>(Hints and Tips)</small>](../products/ex-commandstation/loco-programming/programming-tips.md)
         - [Running a Legacy DC layout <small>(Running a DC layout)</small>](../products/ex-commandstation/dc-running.md)
         - **Accessories**
             - [Overview - What are Accessories? <small>(Accessories)</small>](../products/ex-commandstation/accessories/index.md)
@@ -199,7 +191,7 @@ li:not(.md-nav__item, .md-tabs__item) a {
     - [Prepare to Use](../prepare-to-use/index.md)
     - **Connecting to Your Layout<small><small> (Physical&nbsp;Connection)</small></small>**
         - [Connecting to your layout <small>(Connecting to Your Layout<small><small> (Physical&nbsp;Connection)</small></small>)</small>](../prepare-to-use/connecting/index.md)
-        - [Connecting to your layout <small>(Connecting an EX-CSB1)</small>](../prepare-to-use/connecting/connecting-ex-csb1.md)
+        - [Connecting the EX-CSB1 to Your Layout <small>(Connecting an EX-CSB1)</small>](../prepare-to-use/connecting/connecting-ex-csb1.md)
         - [Connecting to your layout <small>(Connecting a Self-Build)</small>](../prepare-to-use/connecting/connecting-diy.md)
     - [Testing your installation <small>(Test Your Installation<br/><br/>)</small>](../prepare-to-use/testing.md)
     - **Install and/or Configure**
@@ -230,7 +222,14 @@ li:not(.md-nav__item, .md-tabs__item) a {
         - [WiThrottle Protocol VS DCC-EX Native/Serial Commands <small>(WiThrottle VS Native Protocol)</small>](../throttles/withrottle-vs-native-protocol.md)
     - [Connecting a WiFi Throttle to your EX-CommandStation <small>(<br/>How to Connect - WiFi)</small>](../throttles/connecting-wifi.md)
     - [Connecting a USB Throttle to your EX-CommandStation <small>(How to Connect - USB)</small>](../throttles/connecting-usb.md)
-    - [Loco Programming <small>(<br/>Loco/CV Programming)</small>](../throttles/cv-programming.md)
+    - **Loco/CV Programming**
+        - [Programming DCC locos <small>(CV Programming Overview)</small>](../throttles/loco-programming/index.md)
+        - [Programming using Serial commands <small>(Serial Programming)</small>](../throttles/loco-programming/serial-programming.md)
+        - [Programming with EX-WebThrottle <small>(EX-WebThrottle Programming)</small>](../throttles/loco-programming/webthrottle-programming.md)
+        - [Programming with Engine Driver <small>(Engine Driver Programming)</small>](../throttles/loco-programming/engine-driver-programming.md)
+        - [Programming with EX-Toolbox <small>(EX-Toolbox Programming)</small>](../throttles/loco-programming/toolbox-programming.md)
+        - [Using JMRI DecoderPro <small>(Decoderpro)</small>](../throttles/loco-programming/decoderpro.md)
+        - [CV Programming Tips <small>(Hints and Tips)</small>](../throttles/loco-programming/programming-tips.md)
     - [DCC Accessory Operation](../throttles/dcc-accessories.md)
     - [DC Operation <small>(Controlling DC Locos)</small>](../throttles/dc.md)
 - **Enhance**

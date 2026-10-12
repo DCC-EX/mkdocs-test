@@ -20,21 +20,22 @@ Scanned roots: `C:\Users\akers\OneDrive\github\github_doco\mkdocs-test\docs`, `C
 
 ## High TODOs
 
-Total High TODO matches: 94
+Total High TODO matches: 92
 
 | File | Line | Line text |
 | --- | ---: | --- |
 | [docs/diy/mega-harder.md](../diy/mega-harder.md) | 18 | - an Arduino Standard Motor-Shield (or others as noted in ==TODO==) to power the track. |
-| [docs/prepare-to-use/index.md](../prepare-to-use/index.md) | 5 | ==TODO==  Installing the EX-CommandStation software - overview -  Not needed for the EX-CSB1 |
-| [docs/prepare-to-use/index.md](../prepare-to-use/index.md) | 9 | ==TODO==  Installing the EX-CommandStation - Intro |
-| [docs/prepare-to-use/index.md](../prepare-to-use/index.md) | 15 | ==TODO==  Testing - Intro |
-| [docs/prepare-to-use/testing.md](../prepare-to-use/testing.md) | 3 | ==TODO== Basic testing... subset of the full testing page for the EX-CSB1 |
+| [docs/prepare-to-use/index.md](../prepare-to-use/index.md) | 13 | ==TODO==  Installing the EX-CommandStation software - overview -  Not needed for the EX-CSB1 |
+| [docs/prepare-to-use/index.md](../prepare-to-use/index.md) | 30 | ==TODO==  Testing - Intro |
+| [docs/prepare-to-use/testing.md](../prepare-to-use/testing.md) | 3 | ==TODO== Basic testing... |
 | [docs/support/faq.md](../support/faq.md) | 9 | ==TODO== Rework this so that it includes GUI options (EX-WebThrottle, Engine Driver, etc.) |
 | [docs/support/faq.md](../support/faq.md) | 19 | ==TODO== Rework this so that it includes GUI options (EX-WebThrottle, Engine Driver, etc.) |
 | [docs/throttles/connecting-usb.md](../throttles/connecting-usb.md) | 3 | ==TODO== Connecting a USB Throttle to your EX-CommandStation |
 | [docs/throttles/connecting-wifi.md](../throttles/connecting-wifi.md) | 3 | ==TODO== Connecting a WiFi Throttle to your EX-CommandStation |
 | [docs/throttles/dc.md](../throttles/dc.md) | 3 | ==TODO== basic intro to TrackManager and links to the appropriate TrackManager pages |
 | [docs/throttles/dcc-accessories.md](../throttles/dcc-accessories.md) | 3 | ==TODO== how to control DCC Accessories |
+| [docs/throttles/loco-programming/index.md](../throttles/loco-programming/index.md) | 46 | ==TODO== CV Programming using EX-WebThrottle |
+| [docs/throttles/loco-programming/programming-tips.md](../throttles/loco-programming/programming-tips.md) | 14 | ==TODO== Fill this page out. Also move the references from the old site |
 | [docs/reference/serial-commands/serial-command-aa-and-a_not_in_nav.md](../reference/serial-commands/serial-command-aa-and-a_not_in_nav.md) | 36 | ==TODO== responses |
 | [docs/reference/serial-commands/serial-command-dd-anin-anout_not_in_nav.md](../reference/serial-commands/serial-command-dd-anin-anout_not_in_nav.md) | 15 | * ``<D ANOUT «vpin» «position» «profile»>`` = see ==TODO== |
 | [docs/reference/serial-commands/serial-command-dd-anin-anout_not_in_nav.md](../reference/serial-commands/serial-command-dd-anin-anout_not_in_nav.md) | 16 | * ``<D ANOUT «vpin» «position»>`` = see ==TODO== |
@@ -81,7 +82,6 @@ Total High TODO matches: 94
 | [docs/reference/hardware/hal/hal-config.md](../reference/hardware/hal/hal-config.md) | 189 | First you will need to add a new file, just like the ==TODO== :ref:`config.h file <ex-commandstation/advanced-setup/installation-options/arduino-ide:Copy the config.example.h file (or rename it)>`. |
 | [docs/reference/hardware/hal/hal-config.md](../reference/hardware/hal/hal-config.md) | 252 | Finally, upload the code to the Arduino as you would do during the standard ==TODO== :ref:`Arduino IDE Setup <ex-commandstation/advanced-setup/installation-options/arduino-ide:upload the software>`. |
 | [docs/reference/hardware/wifi-boards/index.md](../reference/hardware/wifi-boards/index.md) | 3 | ==TODO== Move the legacy pages |
-| [docs/products/ex-csb1/getting-started.md](../products/ex-csb1/getting-started.md) | 6 | This is the **EX-CSB1** *Quick* Getting Started Guide.  See ==TODO== for a detailed guide on setting up and using the **EX-CSB1**. |
 | [docs/products/ex-dccinspector/index.md](../products/ex-dccinspector/index.md) | 8 | ==TODO== move legacy docs |
 | [docs/products/ex-ioexpander/ex-ioexpander.md](../products/ex-ioexpander/ex-ioexpander.md) | 8 | ==TODO== move legacy docs |
 | [docs/products/ex-turntable/configure.md](../products/ex-turntable/configure.md) | 3 | ==TODO== check the current version number of EX-Turntable and adjust the version notes on this page as needed |
@@ -93,19 +93,17 @@ Total High TODO matches: 94
 | [docs/products/ex-commandstation/exrail/exrail-objects-introduction.md](../products/ex-commandstation/exrail/exrail-objects-introduction.md) | 208 | ==TODO== Add a diagram for the EX-CSB1 to a PCA9685 |
 | [docs/products/ex-commandstation/exrail/exrail-objects-introduction.md](../products/ex-commandstation/exrail/exrail-objects-introduction.md) | 362 | ==TODO== Link here to recommended pin/vpin allocations etc. |
 | [docs/products/ex-commandstation/exrail/exrail-objects-introduction.md](../products/ex-commandstation/exrail/exrail-objects-introduction.md) | 364 | ==TODO== Add a diagram for the EX-CSB1 to an IO Expander |
-| [docs/products/ex-commandstation/loco-programming/programming-tips.md](../products/ex-commandstation/loco-programming/programming-tips.md) | 14 | ==TODO== Fill this page out. Also move the references from the old site |
 | [docs/products/ex-commandstation/trackmanager/index.md](../products/ex-commandstation/trackmanager/index.md) | 104 | - A motor shield with a brake pin. <br/> (See the list of compatible boards at ==TODO== :ref:`reference/hardware/motor-boards:trackmanager dc compatible boards`.) <br/> (The **EX-CSB1** and **EX‑MotorShield8874** have a brake pin.) |
 | [docs/products/ex-commandstation/exrail/cookbooks/timecontrol.md](../products/ex-commandstation/exrail/cookbooks/timecontrol.md) | 92 | NB:  ==TODO== See the following page for details on running sound files. |
 | [docs/products/ex-commandstation/exrail/cookbooks/big-picture/stage3.md](../products/ex-commandstation/exrail/cookbooks/big-picture/stage3.md) | 169 | You can also refer to ==TODO== `exrail/exrail-command-reference:virtual block control` for more information. |
 | [docs/products/ex-commandstation/exrail/cookbooks/big-picture/stage6.md](../products/ex-commandstation/exrail/cookbooks/big-picture/stage6.md) | 404 | Remember, these are virtual blocks, and do not necessarily need to be electrically isolated from each other. Don't confuse isolated blocks of track or block occupancy detection with these virtual blocks. For further background, refer to ==TODO== `exrail/exrail-command-reference:virtual block control`. |
 | [docs/products/ex-commandstation/exrail/cookbooks/big-picture/stage6.md](../products/ex-commandstation/exrail/cookbooks/big-picture/stage6.md) | 446 | Using the ``LATCH()`` command gives us a way to automatically alternate between the main track and the station siding. ``LATCH()`` simply sets the state of a pin (either real or virtual) which can then be tested by an ``IF()`` statement. In this particular case, we have defined pin 60 (alias "CHOOSE_BLK2") to be latched and unlatched, as this pin does not exist on the Mega2560, nor does it exist on any of our I/O expander boards. Further reading on ``LATCH()`` and ``UNLATCH()`` can be found in the ==TODO== `exrail/exrail-command-reference:sensors/inputs - reading and responding` section of the EXRAIL reference. |
 | [docs/prepare-to-use/connecting/connecting-diy.md](../prepare-to-use/connecting/connecting-diy.md) | 3 | ==TODO== new page on physically connecting DIY EX-CS to a layout. Should be in a snippet and reused |
-| [docs/prepare-to-use/connecting/connecting-ex-csb1.md](../prepare-to-use/connecting/connecting-ex-csb1.md) | 3 | ==TODO== new page on physically connecting the EX-CSB1 to a layout. Should be in a snippet and reused |
-| [docs/prepare-to-use/connecting/index.md](../prepare-to-use/connecting/index.md) | 3 | ==TODO== new page on physically connecting the EX-CS to a layout. Should be in a snippet and reused |
+| [docs/prepare-to-use/connecting/connecting-ex-csb1.md](../prepare-to-use/connecting/connecting-ex-csb1.md) | 3 | ==TODO== this page needs to be expanded |
 | [docs/prepare-to-use/installer/index.md](../prepare-to-use/installer/index.md) | 3 | ==TODO== Installing the EX-CommandStation Software - Intro |
 | [docs/prepare-to-use/installer/install-ex-ioexpander.md](../prepare-to-use/installer/install-ex-ioexpander.md) | 3 | ==TODO== complete EX-Installer EX-IOExpander page needed |
 | [docs/prepare-to-use/installer/install-ex-turntable.md](../prepare-to-use/installer/install-ex-turntable.md) | 3 | ==TODO== complete EX-Installer EX-Turntable page needed |
-| [docs/prepare-to-use/installer/platformio.md](../prepare-to-use/installer/platformio.md) | 3 | ==TODO== - provide setup help. |
+| [docs/prepare-to-use/installer/platformio.md](../prepare-to-use/installer/platformio.md) | 5 | ==TODO== - provide setup help. |
 | [docs/prepare-to-use/installer/download/download-linux.md](../prepare-to-use/installer/download/download-linux.md) | 7 | ==TODO== - Add screenshots & fix page flow |
 | [docs/prepare-to-use/installer/download/index.md](../prepare-to-use/installer/download/index.md) | 3 | ==TODO== Downloading EX-Installer - Overview |
 | [docs/contributing/documentation/formatting-guide.md](documentation/formatting-guide.md) | 71 | ==TODO==  Note there is a bug in this process if the heading contains ` - ` (space dash space). |
@@ -150,7 +148,7 @@ Total medium priority TODO matches: 22
 
 ## Low priority TODOs
 
-Total low priority TODO matches: 83
+Total low priority TODO matches: 84
 
 | File | Line | Line text |
 | --- | ---: | --- |
@@ -236,5 +234,6 @@ Total low priority TODO matches: 83
 | [docs/reference/serial-commands/shell_serial-command-xyz_not_in_nav.md](../reference/serial-commands/shell_serial-command-xyz_not_in_nav.md) | 66 | * ==TODO== LOW - Example Responses |
 | [docs/reference/throttle-writers/throttle-writers-guide.md](../reference/throttle-writers/throttle-writers-guide.md) | 201 | ## COMMANDS TO AVOID ==TODO== LOW |
 | [docs/reference/hardware/hal/index.md](../reference/hardware/hal/index.md) | 3 | ==TODO== LOW need a HAL intro page |
+| [docs/prepare-to-use/connecting/index.md](../prepare-to-use/connecting/index.md) | 14 | If you plan to run DC trains rather than the default of DCC, there are other considerations. Refer to ==TODO== LOW DC page for more information. |
 | [docs/contributing/documentation/github.md](documentation/github.md) | 95 | ==TODO== LOW - how to preview options |
 

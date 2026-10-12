@@ -5,7 +5,6 @@ nav:
   - Configure WiFi <small><small>(EX-CSB1 & ESP32 v5.7.0+)</small></small>: config-wifi-esp32.md
   - Testing your EX-CommandStation: testing.md
   - TrackManager: trackmanager
-  - Loco Programming: loco-programming
   - Running a DC layout: dc-running.md
   - Accessories: accessories
   - EXRAIL: exrail
