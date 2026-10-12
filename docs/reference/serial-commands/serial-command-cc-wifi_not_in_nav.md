@@ -27,9 +27,9 @@ Serial commands to setup the WiFi on the **EX-CommandStations**.
 * ``<C WIFI DEFAULT>`` = set WiFi to default credentials
 * ``<C WIFI ON|OFF>`` = Enable/Disable WiFi
 
-See [WiFi configuration](/products/ex-commandstation/config-wifi-esp32.md) for more infomation on these commands.
+See [WiFi configuration](../../prepare-to-use/installer/config-wifi-esp32.md) for more infomation on these commands.
 
-Also see the [WiFi Configuration for version 5.7.0+ - Graphical User Interface Options](../../products/ex-commandstation/config-wifi-esp32.md) for detailed instructions on how, and why, to change these settings using EX-WebThrottle or EX-Toolbox.
+Also see the [WiFi Configuration for version 5.7.0+ - Graphical User Interface Options](../../prepare-to-use/installer//config-wifi-esp32.md) for detailed instructions on how, and why, to change these settings using EX-WebThrottle or EX-Toolbox.
 
 ## Parameters
 
@@ -37,11 +37,11 @@ Also see the [WiFi Configuration for version 5.7.0+ - Graphical User Interface O
 
     Recommend that you avoid space characters in the ssid.
 
-* **password**: password to set the commandstation to use (AP) or to use when connecting to an existing ssid (STA) Must be in quotes.
+* **password**: password to set the command station to use (AP) or to use when connecting to an existing ssid (STA) Must be in quotes.
 
     Passwords must be at least 8 characters long.
 
-* **channel**: *optional* - channel to set the commandstation to use ``1``-``11`` (AP only)
+* **channel**: *optional* - channel to set the command station to use ``1``-``11`` (AP only)
 
     The default channel is set to ``11``. If you need to use an alternate channel (we recommend using only ``1``,``6``, or ``11``) you may change it with the command
 
@@ -72,7 +72,7 @@ N/A. The **EX-CommandStation** will restart.
 
 ### Example Commands
 
-* See [WiFi configuration](/products/ex-commandstation/config-wifi-esp32.md)
+* See [WiFi configuration](../../prepare-to-use/installer//config-wifi-esp32.md)
 * See [WiFi Configuration for version 5.7.0+](https://dcc-ex.com/ex-commandstation/advanced-setup/supported-wifi/wifi-config_v5_7.html)
 
 ### Example Responses

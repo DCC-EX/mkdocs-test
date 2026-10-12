@@ -73,13 +73,13 @@ Note that `<C PROGBOOST>` remains in effect until the **EX-CommandStation** is r
 
 ``config.h`` is used for WiFi configuration in earlier versions of the **EX-CommandStation** software. This can be done as part of the configuration in **EX-Installer**.
 
-See [WiFi Configuration](../../../products/ex-commandstation/config-wifi-shield.md) for more information.
+See [WiFi Configuration](../../../prepare-to-use/installer/config-wifi-shield.md) for more information.
 
 ### Version 5.7.0 and Later
 
 WiFi configuration is different starting with version 5.7.0 and is done after the **EX-CommandStation** software is loaded (via **EX-Installer**).
 
-See [5.7.0 WiFi Configuration](../../../products/ex-commandstation/config-wifi-esp32.md) for more information.
+See [5.7.0 WiFi Configuration](../../../prepare-to-use/installer/config-wifi-esp32.md) for more information.
 
 Note that if the new WiFi configuration commands are sent via a WiFi connection, your existing connection will drop.  Current connection info should be reported on the OLED.
 

@@ -3,7 +3,7 @@
 
 This page is exclusively for users of **EX-CommandStation** version 5.7.0 and later. Version 5.7.0 is currently in the experimental / development (DEVEL) phase and is not recommended for general users.
 
-If you are using an earlier version, please see [WiFi Config](/products/ex-commandstation/config-wifi-shield.md).
+If you are using an earlier version, please see [WiFi Config](/prepare-to-use/installer/config-wifi-shield.md).
 
 Also see [WiFi configuration Serial Commands (EX-CSB1 or ESP32 ONLY. V5.7.0+ ONLY)](/reference/serial-commands/config-wifi-esp32.md) for more technical information.
 
