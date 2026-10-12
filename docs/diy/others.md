@@ -10,13 +10,13 @@ We are unable to rely on third party libraries which are generally designed to b
 
 **EX-CommandStation** supports all 'standards compliant' DCC loco and accessory decoders.  Note that some DCC decoders do not fully comply with the DCC standards. (See [Modify System PROG track settings](../reference/serial-commands/serial-command-dd_ack_not_in_nav.md) for more information on workarounds for some of these.)
 
-See the [Supported Device List](../products/ex-commandstation/accessories/hardware-list.md) and [I2C (I<sup>2</sup>C) pages](../products/ex-commandstation/accessories/i2c-intro.md) for some of the other devices the **EX-CommandStation** currently supports.
+See the [Supported Device List](../enhance/accessories/hardware-list.md) and [I2C (I<sup>2</sup>C) pages](../enhance/accessories/i2c-intro.md) for some of the other devices the **EX-CommandStation** currently supports.
 
 RAILCOM support is currently being investigated.
 
 ## The following devices are NOT supported
 
-- Arduino UNO and Nano. We have supported them in the past but the increase in **EX-CommandStation** features has oustripped their miniscule memory capabilities.
+- Arduino UNO and Nano. We have supported them in the past but the increase in **EX-CommandStation** features has outstripped their miniscule memory capabilities.
 - Mega Wifi. Some users have had success with this but we have had approximately 50% failure rate on these devices. Its just not worth it.
 - Arduino Giga. This has a very high cost and some strange WiFi limitations.
 - Teensy (various models). These have been made to work in the past but without help we are unable to update or support them.

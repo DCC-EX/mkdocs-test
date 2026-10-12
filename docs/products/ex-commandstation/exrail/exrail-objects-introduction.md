@@ -187,7 +187,7 @@ When setting up a turnout/point where multiple pins are required for control, th
 
 !!! note inline end ""
 
-  You can also refer to [Servo Turnouts/Points page](../accessories/connecting-servo-turnout.md) and the [Servo Module page](../accessories/i2c-servo-led-modules.md) for more information.
+  You can also refer to [Servo Turnouts/Points page](../../../enhance/accessories/connecting-servo-turnout.md) and the [Servo Module page](../../../enhance/accessories/i2c-servo-led-modules.md) for more information.
 
 To connect a servo to **EX-CommandStation**, you first need to get a module, based on the PCA9685 chip.
 
@@ -355,7 +355,7 @@ Place IR Infrared or Optical Sensor's Output wire on Dpins 22, 23, 24 ... 49. Pl
 
 ![IR Sensor connected to Arduino mega](../../../_static/images/i2c-connected-devices/mega-with-ir-sensor.png){ width=600px }
 
-If you need more sensors then there are available pins on the Mega, you use one or more [I2C](/products/ex-commandstation/accessories/i2c-gpio-expanders.md)
+If you need more sensors then there are available pins on the Mega, you use one or more [I2C](/enhance/accessories/i2c-gpio-expanders.md)
 
 ![IR Sensor connected to Arduino mega via IO Expander](../../../_static/images/i2c-connected-devices/mega-with-io-expander-and-ir-sensor.png){ width=600px }
 
