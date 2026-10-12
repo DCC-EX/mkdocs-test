@@ -103,7 +103,7 @@ After the load finishes you will be asked to 'backup/save' the config files. Say
 
 The Roster will be automatically loaded with the **EX-CommandStation** software.
 
-More information on the config files can be found on the [Managing Config Files](../../../../../prepare-to-use/installer/manage-config-files.md) page.
+More information on the config files can be found on the [Managing Config Files](../../../../prepare-to-use/installer/manage-config-files.md) page.
 
 !!! warning "Never edit any files in the EX-Installer folder"
 

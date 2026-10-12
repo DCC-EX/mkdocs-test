@@ -220,9 +220,9 @@ Signal related commands include:
 
 | Command | Explanation |
 | --- | --- |
-| ``RED( signal_id )`` | Set defined signal to Red. (See [SIGNAL()](./exrail-objects-introduction.md#adding-signals)) |
-| ``AMBER( signal_id )`` | Set a defined signal to Amber. (See [SIGNAL()](./exrail-objects-introduction.md#adding-signals)) |
-| ``GREEN( signal_id )`` | Set a defined signal to Green. (See [SIGNAL()](./exrail-objects-introduction.md#adding-signals)) |
+| ``RED( signal_id )`` | Set defined signal to Red. (See [SIGNAL()](exrail-objects-introduction.md#adding-signals)) |
+| ``AMBER( signal_id )`` | Set a defined signal to Amber. (See [SIGNAL()](exrail-objects-introduction.md#adding-signals)) |
+| ``GREEN( signal_id )`` | Set a defined signal to Green. (See [SIGNAL()](exrail-objects-introduction.md#adding-signals)) |
 
 ```cpp
    // Example

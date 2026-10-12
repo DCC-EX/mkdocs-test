@@ -1,6 +1,6 @@
 # Display Track Status on OLED
 
-![Track Status Display](../../../../../_static/images/ex-csb1/track-status-display.png)
+![Track Status Display](../../../../_static/images/ex-csb1/track-status-display.png)
 
 To display track status, add a line in myAutomation.h
 

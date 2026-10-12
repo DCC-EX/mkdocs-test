@@ -2,7 +2,7 @@
 
 The IO_NeoPixel.h driver supports the [Adafruit NeoDriver - I2C to NeoPixel Driver](https://learn.adafruit.com/adafruit-neodriver-i2c-to-neopixel-driver)
 
-The driver turns each pixel into an individual VPIN which can be given a colour and turned on or off using the the NEOPIXEL **EXRAIL** macro. **EXRAIL** SIGNALS can also drive a single pixel signal or multiple separate pixels [See Neopixel Signals](/products/ex-commandstation/exrail/cookbooks/signals/neopixel-signals.md).
+The driver turns each pixel into an individual VPIN which can be given a colour and turned on or off using the the NEOPIXEL **EXRAIL** macro. **EXRAIL** SIGNALS can also drive a single pixel signal or multiple separate pixels [See Neopixel Signals](/enhance/exrail/cookbooks/signals/neopixel-signals.md).
 
 ## Defining the hardware driver
 
@@ -30,4 +30,4 @@ This is a NeoPixel driver defaulting to I2C aqddress 0x60 for a GRB pixel string
 
 This is a NeoPixel driver on i2c address 0x61.
 
-For devices behind multiplexors see [multiplexors](/products/ex-commandstation/exrail/cookbooks/various-devices/multiplexors.md)
+For devices behind multiplexors see [multiplexors](/enhance/exrail/cookbooks/various-devices/multiplexors.md)

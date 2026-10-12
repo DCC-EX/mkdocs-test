@@ -9,7 +9,7 @@ tags:
 
 Serial commands to manage in-command-station Consists/Multiple Unit Trains (MUs).  These are created and held temporarily in the **EX-CommandStation** and are lost when the command station restarts.
 
-See [Consists page](/products/ex-commandstation/exrail/cookbooks/driving-trains/consists.md) for information on other types of consist.
+See [Consists page](/enhance/exrail/cookbooks/driving-trains/consists.md) for information on other types of consist.
 
 ## Commands
 

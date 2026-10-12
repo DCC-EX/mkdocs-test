@@ -47,4 +47,4 @@ HAL(MCP23017,160,16,0x20)
 HAL(PCA9555,160,16,0x20) // easy isn't it...
 ```
 
-For devices behind multiplexors see [multiplexors](/products/ex-commandstation/exrail/cookbooks/various-devices/multiplexors.md)
+For devices behind multiplexors see [multiplexors](/enhance/exrail/cookbooks/various-devices/multiplexors.md)

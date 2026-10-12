@@ -18,7 +18,7 @@ At the end of this stage, we expect you will have learnt the following:
 * How to enable a fully automated layout.
 * What hardware can be used, and how to connect the components (Fritzing diagrams for this will be published soon).
 
-![Stage 1](../../../../../_static/images/big-picture/rmft-stage1.drawio.svg)
+![Stage 1](../../../../_static/images/big-picture/rmft-stage1.drawio.svg)
 
 ## Aliases
 
@@ -109,7 +109,7 @@ Finally, to define these same turnouts/points as servo based turnouts/points, th
 
 !!! tip "Adjust the servo angles"
 
-    Remember! Servo angles will be unique to your layout, and probably even unique to individual turnouts/points, so be sure you read the blurb on [Tuning Servo Positions](stage3.md#tuning-servo-positions) and the [I2C Servo and LED Module](../../../../../enhance/accessories/i2c-servo-led-modules.md) page.
+    Remember! Servo angles will be unique to your layout, and probably even unique to individual turnouts/points, so be sure you read the blurb on [Tuning Servo Positions](stage3.md#tuning-servo-positions) and the [I2C Servo and LED Module](../../../../enhance/accessories/i2c-servo-led-modules.md) page.
 
     Please don't blindly copy/paste the servo angles listed here and expect them to "just work".
 
@@ -202,7 +202,7 @@ To define servo based signals, these only require one Vpin per signal along with
 
 !!! tip  "Adjust the servo angles"
 
-    Remember! Servo angles will be unique to your layout, and probably even unique to individual signals, so be sure you read the blurb on [tuning servo positions](stage3.md#tuning-servo-positions) and the [I2C Servo and LED Module](../../../../../enhance/accessories/i2c-servo-led-modules.md) page.
+    Remember! Servo angles will be unique to your layout, and probably even unique to individual signals, so be sure you read the blurb on [tuning servo positions](stage3.md#tuning-servo-positions) and the [I2C Servo and LED Module](../../../../enhance/accessories/i2c-servo-led-modules.md) page.
 
     Please don't blindly copy/paste the servo angles listed here and expect them to "just work".
 

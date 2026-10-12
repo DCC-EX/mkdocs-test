@@ -39,4 +39,4 @@ The <y> command is specifically designed for easy testing and control of sounds 
 
 ## Sound in EXRAIL
 
-Refer to the [EXRAIL cookbooks](/products/ex-commandstation/exrail/cookbooks/sounds/sounds.md) for examples.
+Refer to the [EXRAIL cookbooks](/enhance/exrail/cookbooks/sounds/sounds.md) for examples.

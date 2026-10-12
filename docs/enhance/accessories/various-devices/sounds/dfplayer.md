@@ -44,4 +44,4 @@ Best practice is to compile an audio catalogue and store files in different fold
 
 Files in WAV format are also supported, but take up more space, audio files in MP3 format are recommended.
 
-The **EXRAIL** [cookbooks](/products/ex-commandstation/exrail/cookbooks/index.md) provide several worked example sound scenarios.
+The **EXRAIL** [cookbooks](/enhance/exrail/cookbooks/index.md) provide several worked example sound scenarios.

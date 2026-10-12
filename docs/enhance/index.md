@@ -11,7 +11,7 @@ Explore this page to see how **EX-CommandStation** can be expanded to enhance yo
 * [Controlling DC locomotives](#trackmanager-dc-and-dcc-operation)
 * [Adding Accessories](#accessories) e.g. Sensors, Turntables, DCC Boosters
 
-Also, the [Big Picture](../products/ex-commandstation/exrail/cookbooks/big-picture/index.md) pages describe a theoretical journey from just controlling some trains, through using rosters, turnouts/points, turntables and on to automation of trains.
+Also, the [Big Picture](../enhance/exrail/cookbooks/big-picture/index.md) pages describe a theoretical journey from just controlling some trains, through using rosters, turnouts/points, turntables and on to automation of trains.
 
 ----
 
@@ -23,8 +23,8 @@ For the decoder functions, you can provide a text description of the function. S
 
 This capability is part of **EXRAIL** and is built into your **EX-CommandStation**.  Read the following to explore this feature:
 
-* [EXRAIL Introduction](../products/ex-commandstation/exrail/exrail-objects-introduction.md)
-* [EXRAIL Adding a Roster](../products/ex-commandstation/exrail/exrail-objects-introduction.md#adding-a-roster)
+* [EXRAIL Introduction](../enhance/exrail/exrail-objects-introduction.md)
+* [EXRAIL Adding a Roster](../enhance/exrail/exrail-objects-introduction.md#adding-a-roster)
 
 ## Turnouts/Points
 
@@ -34,7 +34,7 @@ Turnouts/Points included on your layout can be any of the following forms:
 * [Servo Turnouts/Points](../enhance/accessories/connecting-servo-turnout.md)
 * Pin Turnouts/Points
 
-The capability to define and support these is part of **EXRAIL** and is built into your **EX-CommandStation**.  See [EXRAIL Turnouts/Points](../products/ex-commandstation/exrail/exrail-objects-introduction.md#adding-turnoutspoints) for more information on these.
+The capability to define and support these is part of **EXRAIL** and is built into your **EX-CommandStation**.  See [EXRAIL Turnouts/Points](../enhance/exrail/exrail-objects-introduction.md#adding-turnoutspoints) for more information on these.
 
 Note: To simply control existing DCC Turnouts/Points see [DCC Accessory Operation](../throttles/dcc-accessories.md) for more information.
 
@@ -44,8 +44,8 @@ Your **EX-CommandStation** has the ability to perform sequences of instructions 
 
 This capability is part of **EXRAIL** and is built into your **EX-CommandStation**.  Read the following to explore this feature:
 
-* [EXRAIL Introduction](../products/ex-commandstation/exrail/exrail-objects-introduction.md)
-* [EXRAIL Cookbooks](../products/ex-commandstation/exrail/cookbooks/index.md)
+* [EXRAIL Introduction](../enhance/exrail/exrail-objects-introduction.md)
+* [EXRAIL Cookbooks](../enhance/exrail/cookbooks/index.md)
 
 ## TrackManager - DC and DCC Operation
 
@@ -66,7 +66,7 @@ This capability is part of **TrackManager** and is built into your **EX-CommandS
 
 Also see:
 
-* [DC Tracks Cookbook](../products/ex-commandstation/exrail/cookbooks/dc-tracks.md)
+* [DC Tracks Cookbook](../enhance/exrail/cookbooks/dc-tracks.md)
 
 ## Accessories
 

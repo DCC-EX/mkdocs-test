@@ -49,5 +49,5 @@ HAL(TCA8418, 300, 80, 0x34, 21)
 
 Note that using an interrupt pin speeds up button press acquisition considerably (less than a millisecond vs 10-100), but even with interrupts enabled the code presently checks every 100ms in case the interrupt pin becomes disconnected. Use any available Arduino pin for interrupt monitoring.
 
-For devices behind multiplexors see [multiplexors](/products/ex-commandstation/exrail/cookbooks/various-devices/multiplexors.md)
+For devices behind multiplexors see [multiplexors](/enhance/exrail/cookbooks/various-devices/multiplexors.md)
 

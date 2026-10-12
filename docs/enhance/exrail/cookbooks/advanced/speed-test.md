@@ -1,6 +1,6 @@
 # Building a speed test track
 
-It is possible, using the STEALTH facility to create a speed test track that can create a table of DCC speed vs time between sensors. This can then be copied to a streadsheed for analysis.
+It is possible, using the STEALTH facility to create a speed test track that can create a table of DCC speed vs time between sensors. This can then be copied to a spreadsheet for analysis.
 
 ```cpp
 // Speedometer example
