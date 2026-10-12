@@ -19,9 +19,8 @@ li:not(.md-nav__item, .md-tabs__item) a {
 - [Home <small>(<small> </small>)</small>](../index.md)
 - **Products**
     - [DCC-EX Product Overview <small>(Product Overview)</small>](../products/products.md)
-    - **EX-CommandStation<small><small> (Ready&nbsp;to&nbsp;Run &amp; Self&nbsp;Build)</small></small>**
+    - **<br/>EX-CommandStation<small><small> (Ready&nbsp;to&nbsp;Run &amp; Self&nbsp;Build)</small></small>**
         - [DCC-EX EX-CommandStation - Overview <small>(EX-CommandStation Overview)</small>](../products/ex-commandstation/index.md)
-        - [**EX-CSB1** CommandStation/Booster 1 Express <small>(<b>EX-CSB1 CommandStation/Booster 1 Express</b>)</small>](../products/ex-commandstation/ex-csb1.md)
         - [Build configuration (config.h) <small>(Configuration <small><small>(config.h)</small></small>)</small>](../products/ex-commandstation/config-h.md)
         - [Wifi configuration <br/><small>(Excluding **EX-CSB1** or ESP32 v5.7.0+)</small> <small>(Configure WiFi <small><small>(Wifi Shield)</small></small>)</small>](../products/ex-commandstation/config-wifi-shield.md)
         - [WiFi Configuration for version 5.7.0+ <br/><small>Graphical User Interface Options</small> <small>(Configure WiFi <small><small>(EX-CSB1 & ESP32 v5.7.0+)</small></small>)</small>](../products/ex-commandstation/config-wifi-esp32.md)
@@ -142,6 +141,8 @@ li:not(.md-nav__item, .md-tabs__item) a {
                     - [TM1638 Buttons, leds and 7 segment display](../products/ex-commandstation/exrail/cookbooks/various-devices/tm-1638.md)
                     - [Trainbrains Devices](../products/ex-commandstation/exrail/cookbooks/various-devices/trainbrains.md)
                     - [XL9535 Relay Board](../products/ex-commandstation/exrail/cookbooks/various-devices/xl9535.md)
+    - **<i>EX-CSB1 CommandStation/Booster 1 Express</i>**
+        - [**EX-CSB1** CommandStation/Booster 1 Express <small>(<i>EX-CSB1 CommandStation/Booster 1 Express</i>)</small>](../products/ex-csb1/index.md)
     - [EX‑MotorShield8874 <small>(<br/>EX-MotorShield8874)</small>](../products/ex-motorshield8874/ex-motorshield8874.md)
     - [EX-WiFiShield 8266 <small>(EX-WiFiShield8266)</small>](../products/ex-wifishield8266/ex-wifishield8266.md)
     - [EX-WebThrottle - Overview <small>(<br/>EX-WebThrottle)</small>](../products/ex-webthrottle/ex-webthrottle.md)
@@ -362,6 +363,8 @@ li:not(.md-nav__item, .md-tabs__item) a {
 - [<small>``<I [«id»] [«various parameters»]>``</small> <br/><small>``<D TT «vpin» «steps» [«activity]>``</small> <br/><small>``<J O [«id»]>``</small> &nbsp; <small>``<J P «id»>``</small><br/>Manage Turntables](serial-commands/serial-command-ii_not_in_nav.md)
 - [<small>``<J A [«id»]>``</small> <br/><small>``</ [START|PAUSE|RESUME|KILL] [«various parameters»]>``</small> <br/> List, Start or Stop Automations/Sequences](serial-commands/serial-command-jj-aa-and-slash_not_in_nav.md)
 - [<small>``<J C [«mmmm» [«nn»]]>``</small> <br/> Get/Set the Fastclock Time](serial-commands/serial-command-jj-cc_not_in_nav.md)
+- [<small>``<J G>``</small> <br/> Request max current list](serial-commands/serial-command-jj-gg_not_in_nav.md)
+- [<small>``<J L «display» «row»>``</small> <br/> Direct current displays to LCS/OLED](serial-commands/serial-command-jj-ll_not_in_nav.md)
 - [<small>``<J M [«various parameters»]>``</small> <br/> Manage Stash Values](serial-commands/serial-command-jj-mm_not_in_nav.md)
 - [<small>``<J R [«id»]>``</small> <br/>Request Roster info](serial-commands/serial-command-jj-rr_not_in_nav.md)
 - [<small>``<K «blockid» «loco»>``</small> <br/> ``<k «blockid» «loco»>`` <br/> Loco entering/leaving Block](serial-commands/serial-command-kk_and_k_not_in_nav.md)
