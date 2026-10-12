@@ -12,7 +12,7 @@ We call our demonstration layout "Railway Modeller's Fictional Trains" (or RMFT 
 
 This is the complete layout we will build up to in stages:
 
-![RMFT Complete](../../../../../_static/images/big-picture/rmft-complete.png){ width=600px }
+![RMFT Complete](../../../../_static/images/big-picture/rmft-complete.png){ width=600px }
 
 These are the various concepts and components we will cover:
 
@@ -38,4 +38,4 @@ Our diagrams will be created in such a way that you'll be able to click on the v
 
 We will be using specific colour coded boxes and labels to identify track side buildings, sensors, signals, virtual blocks, and turnouts/points as outlined below:
 
-![ ](../../../../../_static/images/big-picture/rmft-legend.drawio.svg)
+![ ](../../../../_static/images/big-picture/rmft-legend.drawio.svg)

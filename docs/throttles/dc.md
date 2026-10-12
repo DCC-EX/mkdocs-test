@@ -9,4 +9,4 @@ This capability is part of **TrackManager** and is built into your **EX-CommandS
 
 Also see:
 
-* [DC Tracks Cookbook](../products/ex-commandstation/exrail/cookbooks/dc-tracks.md)
+* [DC Tracks Cookbook](../enhance/exrail/cookbooks/dc-tracks.md)

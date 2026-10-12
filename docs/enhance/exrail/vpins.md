@@ -29,7 +29,7 @@ For Example
 
 This would create VPINs 100 to 115 to represent the 16 servo outputs on the first [PCA9685](?PCA9685) servo control board at I2C address 0x40 and VPINs 164 to 179 on the first [MCP23017](?MCP23017) i/o expander.  
 VPINs for two PCA9685 and two MCP23017 are pre-defined, except for PCA9685 used with Nucleo-144.  
-Refer to wiring details and fuller list of [supported I2C devices](/enhance/accessories/i2c-intro.md) elsewhere.
+Refer to wiring details and fuller list of [supported I2C devices](../../enhance/accessories/i2c-intro.md) elsewhere.
 
 ## Using OUTPUT VPINS
 
@@ -68,4 +68,4 @@ Other more advanced commands are available, see cookbooks.
 
 ## Using INPUT/OUTPUT VPINs
 
-Bitmap pins are software flags with no actual hardware implementation. They can be used as INPUT and OUTPUT and thus can be used as flags between **EXRAIL** processes.  See [Bitmaps](/products/ex-commandstation/exrail/cookbooks/flags-and-latches/flags.md)
+Bitmap pins are software flags with no actual hardware implementation. They can be used as INPUT and OUTPUT and thus can be used as flags between **EXRAIL** processes.  See [Bitmaps](../../enhance/exrail/cookbooks/flags-and-latches/flags.md)

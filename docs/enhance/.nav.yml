@@ -1,8 +1,11 @@
 nav:
   - Enhancing your EX-CommandStation: index.md
-  - Adding a Roster: rosters.md
+  - EXRAIL: exrail
+  - <br/>Adding a Roster: rosters.md
   - Adding Turnouts/Points: turnouts.md
   - Adding Routes and Automations: routes.md
   - Adding Other Accessories: accessories
   - <br/>TrackManager: trackmanager
   - Running a DC layout: dc-running.md
+ 
+  

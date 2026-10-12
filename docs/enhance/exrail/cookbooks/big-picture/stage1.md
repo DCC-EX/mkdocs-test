@@ -6,7 +6,7 @@ There are a lot of different throttle options available to control your trains a
 
 Going in to any detail on the myriad of options available is well outside the scope of this exercise, so on this page we will be focusing on the four options most commonly used with **EX-CommandStation**: **EX-WebThrottle**, Engine Driver, ThrottleCard, and JMRI.
 
-For other throttle options, refer to the the [Throttles List page](../../../../../throttles/throttles.md) for further information on choosing a throttle.
+For other throttle options, refer to the the [Throttles List page](../../../../throttles/throttles.md) for further information on choosing a throttle.
 
 ## What to expect to learn from stage 1
 
@@ -26,7 +26,7 @@ If you're just starting out with **EX-CommandStation**, or have a minimal system
 
 This is by far the simplest option to verify your **EX-CommandStation** is set up and working correctly, as you don't need to install any software or worry about any network connections to get your first train running on your layout.
 
-While there is a lot more detail on the [EX-WebThrottle](../../../../ex-webthrottle/ex-webthrottle.md) page, we will give you a very quick start guide here to get a single train running with your **EX-CommandStation**.
+While there is a lot more detail on the [EX-WebThrottle](../../../../products/ex-webthrottle/ex-webthrottle.md) page, we will give you a very quick start guide here to get a single train running with your **EX-CommandStation**.
 
 Firstly, launch `EX-WebThrottle` in your Chromium based web browser (Google Chrome, Microsoft Edge, or Opera).
 
@@ -154,7 +154,7 @@ See [Engine Driver Web Site](https://enginedriver.mstevetodd.com/index.html) for
 * Select the 'Throttle' tab
 * You can now use the sliders to move your train
 
-See the [Throttles Page](../../../../../throttles/throttles.md) for links to the WiThrottle app documentation.
+See the [Throttles Page](../../../../throttles/throttles.md) for links to the WiThrottle app documentation.
 
 ----
 
@@ -181,7 +181,7 @@ If when you assembled your **EX-CommandStation** configured to Connect to JMRI, 
 ### Engine Driver (via JMRI)
 
 Before Engine Driver or WiThrottle can be run via JMRI, the JMRI WiThrottle Server must be started.  It can be started manually by `menu --> actions --> start withrottle server` or be configured to start automatically whenever JMRI is started
-`menu --> edit --> preferences --> start up --> add --> perform action --> start withrottle server`` then save, exit, restart JMRI. A WiThrottle server window should open showing WiThrottle server is running.
+`menu --> edit --> preferences --> start up --> add --> perform action --> start WiThrottle server`` then save, exit, restart JMRI. A WiThrottle server window should open showing WiThrottle server is running.
 
 * Open the network settings on your phone
 * Change to same network of the PC that JMRI is on
@@ -209,7 +209,7 @@ Before Engine Driver or WiThrottle can be run via JMRI, the JMRI WiThrottle Serv
 
 * Back on the 'Throttle screen' you can now use the sliders to move your train.
 
-See [Engine Driver Page](../../../../../throttles/engine-driver.md) for details on how to install and run Engine Driver.
+See [Engine Driver Page](../../../../throttles/engine-driver.md) for details on how to install and run Engine Driver.
 
 ### WiThrottle (via JMRI)
 
@@ -220,7 +220,7 @@ See [Engine Driver Page](../../../../../throttles/engine-driver.md) for details 
   The paid version WiThrottle can control multiple locos, can create and control consists, can control turnouts and routes, and can control DCC track power.
 
 Before Engine Driver or WiThrottle can be run via JMRI, the JMRI WiThrottle server must be started.  It can be started manually by `menu --> actions --> start withrottle server` or be configured to start automatically whenever JMRI is started
-`menu --> edit --> preferences --> start up --> add --> perform action --> start withrottle server`` then save, exit, restart JMRI. A WiThrottle server window should open showing WiThrottle server is running.
+`menu --> edit --> preferences --> start up --> add --> perform action --> start WiThrottle server`` then save, exit, restart JMRI. A WiThrottle server window should open showing WiThrottle server is running.
 
 * Open the network settings on your phone
 * Change to same network of the PC that JMRI is on
@@ -242,7 +242,7 @@ Before Engine Driver or WiThrottle can be run via JMRI, the JMRI WiThrottle serv
 * Select the 'Throttle' tab
 * You can now use the sliders to move your train
 
-See the [Throttles Page](../../../../../throttles/throttles.md) for links to the WiThrottle app documentation.
+See the [Throttles Page](../../../../throttles/throttles.md) for links to the WiThrottle app documentation.
 
 ----
 
@@ -288,10 +288,10 @@ After selecting each additional loco, the Consist Edit screen will be shown. Thi
 
 There are several Android apps that can program decoders, including:
 
-* [EX-Toolbox](../../../../ex-toolbox/index.md) can program decoders over WiFi or Ethernet.
-* [Engine Driver](../../../../../throttles/engine-driver.md) can program decoders over WiFi or Ethernet.
+* [EX-Toolbox](../../../../products/ex-toolbox/index.md) can program decoders over WiFi or Ethernet.
+* [Engine Driver](../../../../throttles/engine-driver.md) can program decoders over WiFi or Ethernet.
 
-See the [Throttle List page](../../../../../throttles/throttles.md#android-phones-and-tablets) for other Android apps.
+See the [Throttle List page](../../../../throttles/throttles.md#android-phones-and-tablets) for other Android apps.
 
 We also recommend using JMRI DecoderPro for programming decoders.  It works for USB connected a **EX-CommandStation** and it provides plain English descriptions of all the CVs of a huge number of different decoders, is very well supported, runs on the major PC operating systems, and is free and open source.
 

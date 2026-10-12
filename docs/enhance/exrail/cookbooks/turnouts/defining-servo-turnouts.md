@@ -1,6 +1,6 @@
 # Defining Servo Turnouts/Points
 
-(This does not include servos driven from track connected DCC decoders. See [DCC Decoders](/products/ex-commandstation/exrail/cookbooks/turnouts/defining-dcc-turnouts.md))
+(This does not include servos driven from track connected DCC decoders. See [DCC Decoders](/enhance/exrail/cookbooks/turnouts/defining-dcc-turnouts.md))
 
 ## Important considerations for servo operation
 

@@ -24,7 +24,7 @@ You may not be able to tell which type it is by looking at it. So, if you are un
 If one results in blank screen or image is shifted, try the other.
 
 Some **EX-CSB1**s may have had the screen display customized to display track status.  
-[myTrackStatus.example.h](../../../products/ex-commandstation/exrail/cookbooks/advanced/display-track-status.md)
+[myTrackStatus.example.h](../../../enhance/exrail/cookbooks/advanced/display-track-status.md)
 
 ## OLED Power Status
 
@@ -52,7 +52,7 @@ A second identical power supply or Y-cable will be needed for the EX88874 track 
 
 Add lines to myAutomation.h to define track modes and power state at startup.  
 Note that the power command is placed after the change in track mode.  
-See [Startup - Define Tracks](../../../products/ex-commandstation/exrail/cookbooks/startup/startup-set-track.md) for more information.
+See [Startup - Define Tracks](../../../enhance/exrail/cookbooks/startup/startup-set-track.md) for more information.
 
 ## Fault reporting
 

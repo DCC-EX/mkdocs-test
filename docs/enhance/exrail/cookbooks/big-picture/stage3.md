@@ -14,7 +14,7 @@ At the end of this stage, we expect you will have learnt the following:
 
 An important item to note when configuring servo based turnouts/points and signals is that the angles provided are going to be unique to your layout, and possibly even be unique to each particular turnout/point or signal, depending on how they are mounted and physically connected.
 
-We provide some handy documentation on how to evaluate the correct angles on our [I2C Servo and LED Module](../../../../../enhance/accessories/i2c-servo-led-modules.md) page.
+We provide some handy documentation on how to evaluate the correct angles on our [I2C Servo and LED Module](../../../../enhance/accessories/i2c-servo-led-modules.md) page.
 
 ### Turnout/point object IDs
 
@@ -28,7 +28,7 @@ For further information on IDs used in **EXRAIL**, refer to the [**EXRAIL** page
 
 Further to the above, for DCC controlled turnouts/points, these will commence at the linear DCC address 101, which starts at an address of 26, and a sub address of 0.
 
-For help understanding linear vs. address/sub address formatting of DCC accessories, refer to the [Stationary Decoder Address Table](../../../../../reference/stationary-decoder-addresses_not_in_nav.md)
+For help understanding linear vs. address/sub address formatting of DCC accessories, refer to the [Stationary Decoder Address Table](../../../../reference/stationary-decoder-addresses_not_in_nav.md)
 
 !!! note "turnout/point IDs"
 
@@ -69,13 +69,13 @@ Instead, these use cases are valid:
 
 !!! tip inline end "Servo Module page"
 
-    You can also refer to [I2C Servo and LED Module](../../../../../enhance/accessories/i2c-servo-led-modules.md) page for more information.
+    You can also refer to [I2C Servo and LED Module](../../../../enhance/accessories/i2c-servo-led-modules.md) page for more information.
 
 ### Adding the Hardware -  Turnouts/points
 
 To connect a servo to **EX-CommandStation**, you first need to get a module, based on the PCA9685 chip.
 
-![PCA9685 Servo Module](../../../../../_static/images/i2c-devices/PCA9685.jpg){ width=300px }
+![PCA9685 Servo Module](../../../../_static/images/i2c-devices/PCA9685.jpg){ width=300px }
 
 Note the pin connectors along the left side of the module - these are where you connect to the Arduino.
 
@@ -85,7 +85,7 @@ The servo module itself is powered from the Arduino, but the servos themselves c
 
 Connections to the Arduino are made with four jumper wires (+5V power and GND, and SCL and SDA), as shown on the following diagram:
 
-![PCA9685 Servo Module](../../../../../_static/images/i2c-devices/ArduinoMegaServo.png){ width=600px }
+![PCA9685 Servo Module](../../../../_static/images/i2c-devices/ArduinoMegaServo.png){ width=600px }
 
 In **EX-CommandStation**, the drivers for the PCA9685 module is already installed, and made available to for use as pin numbers 100-115. A servo is shown in the diagram, connected to the first set of pins on the module.  This will be accessed using pin number 100.
 
@@ -99,11 +99,11 @@ Try `<D SERVO 100 450 3>` and the servo should move slowly back.
 
 You can use the servo to control turnouts, semaphore signals, engine shed doors, and other layout components, to make your layout more dynamic and exciting.  In the picture below, you can see a servo mounted below the baseboard with a piece of wire passing through a slot cut in the baseboard, to operate a turnout.
 
-![Servo mount to operate a turnout/Point](../../../../../_static/images/i2c-devices/TurnoutServoMount.jpg){ width=300px }
+![Servo mount to operate a turnout/Point](../../../../_static/images/i2c-devices/TurnoutServoMount.jpg){ width=300px }
 
 And in the next picture you can see a servo that operates a semaphore signal.  The signal, and its servo mounting bracket, were 3d-printed on a Creality Ender-3 printer.
 
-![Servo mount to operate a Semaphore Signal](../../../../../_static/images/i2c-devices/SemaphoreSignal.jpg){ width=300px }
+![Servo mount to operate a Semaphore Signal](../../../../_static/images/i2c-devices/SemaphoreSignal.jpg){ width=300px }
 
 ### Configure the software - myAutomation.h - Turnouts/points
 
@@ -144,11 +144,11 @@ An example definition for a servo connected to the second control pins of the fi
 
 !!! Tip inline end "GPIO Expanders"
 
-  Alternate is to use a [GPIO Expander](../../../../../enhance/accessories/i2c-gpio-expanders.md)
+  Alternate is to use a [GPIO Expander](../../../../enhance/accessories/i2c-gpio-expanders.md)
 
 IR sensors typically require three connections: 5V (or VCC), Ground, and output (OUT or S).
 
-![IR Sensor microcontroller-boards](../../../../../_static/images/sensors/ir-sensor.png){ width=300px }
+![IR Sensor microcontroller-boards](../../../../_static/images/sensors/ir-sensor.png){ width=300px }
 
 To add a sensor, simply connect VCC to 5V, GND to ground, and OUT (or S) to an available digital I/O pin on your **EX-CommandStation**. Typically D22 through to D49 are available for use.
 

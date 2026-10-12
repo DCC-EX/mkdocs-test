@@ -1,10 +1,10 @@
 nav:
   - Throttles:
     - Throttle Lists: throttles.md
-    - Some Recommended Throttles:
-      - EX-WebThrottle (Web): ex-webthrottle.md
-      - Engine Driver (Android): engine-driver.md
-      - ThrottleCard (iOS): throttlecard.md
+    - <small>Some</small> Recommended Throttles:
+      - EX-WebThrottle <small>(Web)</small>: ex-webthrottle.md
+      - Engine Driver <small>(Android)</small>: engine-driver.md
+      - ThrottleCard <small>(iOS)</small>: throttlecard.md
     - WiThrottle VS Native Protocol: withrottle-vs-native-protocol.md
   - <br/>How to Connect - WiFi: connecting-wifi.md
   - How to Connect - USB: connecting-usb.md

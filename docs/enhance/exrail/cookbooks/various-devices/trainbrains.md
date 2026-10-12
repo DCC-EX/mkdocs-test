@@ -71,4 +71,4 @@ HAL(Trainbrains,730,3,0x13)
 
 makes virtual pins 730..732 usable as sensors like any other in DCC-EX
 
-For devices behind multiplexors see [multiplexors](/products/ex-commandstation/exrail/cookbooks/various-devices/multiplexors.md)
+For devices behind multiplexors see [multiplexors](/enhance/exrail/cookbooks/various-devices/multiplexors.md)

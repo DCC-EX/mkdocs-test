@@ -2,7 +2,7 @@ from pathlib import Path
 import re
 import sys
 
-html_path = Path("site/products/ex-commandstation/exrail/cookbooks/driving-trains/passing-loop/index.html")
+html_path = Path("site/enhance/exrail/cookbooks/driving-trains/passing-loop/index.html")
 css_path = Path("site/_static/css/dccex_theme.css")
 
 if not html_path.exists():

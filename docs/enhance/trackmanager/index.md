@@ -33,7 +33,7 @@ Track A defaults to ``MAIN``.  Track B defaults to ``PROG``.
 ## myAutomation.h
 
 Track mode can be defined in myAutomation.h  
- &nbsp; &nbsp; &nbsp; &nbsp; [Example: Set a track to DC](../../products/ex-commandstation/exrail/cookbooks/dc-tracks.md)
+ &nbsp; &nbsp; &nbsp; &nbsp; [Example: Set a track to DC](../../enhance/exrail/cookbooks/dc-tracks.md)
 
 ## Engine Driver
 

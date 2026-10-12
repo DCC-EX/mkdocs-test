@@ -40,7 +40,7 @@ hide:
     - *WiFi*. Use smart phones &amp; tablets, or commercial and DIY physical throttles, to control your trains and layout.
     - Run either, or both, *DCC* and *DC* trains from the same throttle.
     - Add a *loco roster* and accessories such as turnouts/points, routes, signals, lights, and sounds.
-    - *Automate* your trains and *animate* your layout with the powerful [EXRAIL](./products/ex-commandstation/exrail/index.md) scripting.
+    - *Automate* your trains and *animate* your layout with the powerful [EXRAIL](./enhance/exrail/index.md) scripting.
     - Integrate with [JMRI](https://www.jmri.org/), [iTrain](https://www.berros.eu/en/itrain/) or [RocRail](https://wiki.rocrail.net/) if you prefer to run trains from your computer.
 
     Our [ready-to-run](./products/ex-csb1/index.md) and [self-build](./diy/diy.md) systems use this same outstanding [**EX-CommandStation**](/products/ex-commandstation/index.md) software. Configuration is easy using our [**EX-Installer**](./prepare-to-use/installer/installer.md) app.

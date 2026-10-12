@@ -10,13 +10,13 @@ At the end of this stage, we expect you will have learnt the following:
 
 Throughout these pages we will be using **EXRAIL** functionality extensively, not just for automation, but also to define the various objects in use, and therefore we highly recommend being familiar with at least the basics of **EXRAIL**, so it would be best to read through the [EXRAIL Getting Started page](../../index.md) prior to going any further.
 
-We will also be outlining the equivalent DCC-EX commands for items where relevant, so it can be handy to refer to the [Serial Command List](../../../../../reference/serial-commands/serial-command-list.md) where necessary.
+We will also be outlining the equivalent DCC-EX commands for items where relevant, so it can be handy to refer to the [Serial Command List](../../../../reference/serial-commands/serial-command-list.md) where necessary.
 
 ## Overview of EXRAIL automations
 
 The **EXRAIL** sequences are described in detail in the [EXRAIL Sequences page](../../exrail-sequences-introduction.md), which we recommend that you read. We won't repeat all that information here, but as introduction...
 
-**EXRAIL** is an "|EXtended Railroad Automation Instruction Language"
+**EXRAIL** is an "EXtended Railroad Automation Instruction Language"
 that can be used to describe sequential command 'sequences' to automatically take place on your model layout. These sequences are defined in a simple command script file, and uploaded to the Command Station once to configure it.
 
 **EXRAIL** will then run the sequences *automatically* on EX-CommandStation startup, be triggered *manually* or run on occurrence of a *specified events*.

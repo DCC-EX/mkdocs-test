@@ -10,9 +10,9 @@ In addition, we are also adding a horizontal staging traverser that will allow f
 
 !!! tip "Tip"
 
-    In preparation for adding an **EX-Turntable** to your layout, you'll need to understand the concepts outlined on the [EX-Turntable Overview](../../../../ex-turntable/index.md) page, paying particular attention to the section on polarity or phase switching ([](../../../../ex-turntable/index.md#important-phase-or-polarity-switching)), as we will be using automatic phase switching for the turntable.
+    In preparation for adding an **EX-Turntable** to your layout, you'll need to understand the concepts outlined on the [EX-Turntable Overview](../../../../products/ex-turntable/index.md) page, paying particular attention to the section on polarity or phase switching ([](../../../../products/ex-turntable/index.md#important-phase-or-polarity-switching)), as we will be using automatic phase switching for the turntable.
 
-    Further to this, you'll also need to understand the differences required for traverser mode as outlined on the [Traverser](../../../../ex-turntable/traverser.md) page. We will not require phase switching for the traverser, as any locos on the traverser will not be rotating 180 degrees.
+    Further to this, you'll also need to understand the differences required for traverser mode as outlined on the [Traverser](../../../../products/ex-turntable/traverser.md) page. We will not require phase switching for the traverser, as any locos on the traverser will not be rotating 180 degrees.
 
     If you won't be using a traverser on your layout or want to tackle this separately, you can skip the traverser info on this page as it is essentially an extension of the turntable info.
 
@@ -40,8 +40,8 @@ To add our turntable and traverser to the **EX-CommandStation**, we need to ensu
 
 *For the purposes of this exercise, we will assume:*
 
-* Everything needed from the [purchasing](../../../../ex-turntable/purchasing.md) page is available
-* All steps up to and including [load the ex-turntable software](../../../../ex-turntable/assembly.md#7-load-the-ex-turntable-software) on the [assembly](../../../../ex-turntable/assembly.md) page have been completed
+* Everything needed from the [purchasing](../../../../products/ex-turntable/purchasing.md) page is available
+* All steps up to and including [load the ex-turntable software](../../../../products/ex-turntable/assembly.md#7-load-the-ex-turntable-software) on the [assembly](../../../../products/ex-turntable/assembly.md) page have been completed
 
 At this point, based on the assumptions above, our **EX-Turntable** should be configured ready to add to our **EX-CommandStation**.
 
@@ -65,9 +65,9 @@ Expand "config.h" to see the **EX-Turntable** configuration file for the turntab
 
 Now that the basics of **EX-Turntable** have been completed and it is ready to be added to our **EX-CommandStation**, we need to get it connected ready for action.
 
-Firstly, our **EX-CommandStation** needs to be prepared by ensuring the **EX-Turntable** device driver is loaded. This is covered in [add the ex-turntable device driver to EX-CommandStation](../../../../ex-turntable/assembly.md#8-add-the-ex-turntable-device-driver-to-ex-commandstation).
+Firstly, our **EX-CommandStation** needs to be prepared by ensuring the **EX-Turntable** device driver is loaded. This is covered in [add the ex-turntable device driver to EX-CommandStation](../../../../products/ex-turntable/assembly.md#8-add-the-ex-turntable-device-driver-to-ex-commandstation).
 
-Next, we need to connect **EX-Turntable** to our **EX-CommandStation** which requires a connection to the I2C interface, and it's a good idea to make sure **EX-Turntable** is turned on before **EX-CommandStation** to ensure it's detected successfully at startup. This is covered in [connect ex-turntable to your EX-CommandStation](../../../../ex-turntable/assembly.md#9-connect-ex-turntable-to-your-ex-commandstation).
+Next, we need to connect **EX-Turntable** to our **EX-CommandStation** which requires a connection to the I2C interface, and it's a good idea to make sure **EX-Turntable** is turned on before **EX-CommandStation** to ensure it's detected successfully at startup. This is covered in [connect ex-turntable to your EX-CommandStation](../../../../products/ex-turntable/assembly.md#9-connect-ex-turntable-to-your-ex-commandstation).
 
 Expand "myHal.cpp" to see the **EX-CommandStation** HAL configuration file required to add the turntable.
 
@@ -91,7 +91,7 @@ Expand "myHal.cpp" to see the **EX-CommandStation** HAL configuration file requi
     #endif
 ```
 
-Once we have prepared our **EX-CommandStation** and connected **EX-Turntable**, they then need to be turned on with the connection validated as per [testing ex-turntable](../../../../ex-turntable/test-and-tune.md#testing-ex-turntable).
+Once we have prepared our **EX-CommandStation** and connected **EX-Turntable**, they then need to be turned on with the connection validated as per [testing ex-turntable](../../../../products/ex-turntable/test-and-tune.md#testing-ex-turntable).
 
 Now, we are ready to move on to adding the traverser, then tuning the positions for both.
 
@@ -99,23 +99,23 @@ Now, we are ready to move on to adding the traverser, then tuning the positions 
 
 *For the purposes of this exercise, we will assume:*
 
-* Everything needed from the [purchasing](../../../../ex-turntable/purchasing.md) page including the considerations as outlined in [what you need for traverser mode](../../../../ex-turntable/traverser.md#what-you-need-for-traverser-mode) is available
-* All steps up to and including [connect power and test](../../../../ex-turntable/assembly.md#6-connect-power-and-test) on the [assembly](../../../../ex-turntable/assembly.md) page have been completed
-* All changes required as outlined on the [traverser](../../../../ex-turntable/traverser.md) page have been taken into account
+* Everything needed from the [purchasing](../../../../products/ex-turntable/purchasing.md) page including the considerations as outlined in [what you need for traverser mode](../../../../products/ex-turntable/traverser.md#what-you-need-for-traverser-mode) is available
+* All steps up to and including [connect power and test](../../../../products/ex-turntable/assembly.md#6-connect-power-and-test) on the [assembly](../../../../products/ex-turntable/assembly.md) page have been completed
+* All changes required as outlined on the [traverser](../../../../products/ex-turntable/traverser.md) page have been taken into account
 
 !!! tip  "Tip"
 
-    It is highly recommended to make use of the [sensor testing mode](../../../../ex-turntable/traverser.md#sensor-testing-mode) to validate both the home and limit sensors are working correctly when in traverser mode.
+    It is highly recommended to make use of the [sensor testing mode](../../../../products/ex-turntable/traverser.md#sensor-testing-mode) to validate both the home and limit sensors are working correctly when in traverser mode.
 
 Firstly, you will note in the list of assumptions above that we stopped one step earlier in the **EX-Turntable** assembly process at step 6, and that's because we need to ensure our traverser is available at a different I2C address and on a different Vpin to our turntable to ensure they are controlled independently of each other.
 
 To achieve this, we will be using the I2C address ``0x61`` and will be assigning the Vpin ``601``.
 
-So, in order to complete [load the ex-turntable software](../../../../ex-turntable/assembly.md#7-load-the-ex-turntable-software), the value for ``I2C_ADDRESS`` in the "config.h" file needs to be changed to ``0x61``, and of course the ``TURNTABLE_EX_MODE`` needs to be set to ``TRAVERSER``.
+So, in order to complete [load the ex-turntable software](../../../../products/ex-turntable/assembly.md#7-load-the-ex-turntable-software), the value for ``I2C_ADDRESS`` in the "config.h" file needs to be changed to ``0x61``, and of course the ``TURNTABLE_EX_MODE`` needs to be set to ``TRAVERSER``.
 
 As we are continuing to use the default ULN2003/28BYJ-48 stepper driver and motor combo for our traverser, nothing else needs to change.
 
-Once we have noted these changes, we can proceed with [load the ex-turntable software](../../../../ex-turntable/assembly.md#7-load-the-ex-turntable-software), using the updated values in the "config.h" file.
+Once we have noted these changes, we can proceed with [load the ex-turntable software](../../../../products/ex-turntable/assembly.md#7-load-the-ex-turntable-software), using the updated values in the "config.h" file.
 
 Expand "config.h" to see the **EX-Turntable** configuration file for the traverser, noting we have removed all comments for brevity.
 
@@ -136,7 +136,7 @@ Expand "config.h" to see the **EX-Turntable** configuration file for the travers
 
 Once again, as we did with the turntable, we need to add the traverser device to our **EX-CommandStation**, and this is where we need to specify both the updated I2C address of ``0x61`` and the updated Vpin of ``601`` to ensure we are adding this as a second device that does not conflict with the turntable.
 
-As per the turntable section, these changes need to be incorporated into the process outlined in [add the EX-Turntable device driver to EX-CommandStation](../../../../ex-turntable/assembly.md#8-add-the-ex-turntable-device-driver-to-ex-commandstation) in order to add the traverser device driver to our **EX-CommandStation**.
+As per the turntable section, these changes need to be incorporated into the process outlined in [add the EX-Turntable device driver to EX-CommandStation](../../../../products/ex-turntable/assembly.md#8-add-the-ex-turntable-device-driver-to-ex-commandstation) in order to add the traverser device driver to our **EX-CommandStation**.
 
 Expand "myHal.cpp" to see the **EX-CommandStation** HAL configuration file required to add both the turntable and traverser.
 
@@ -161,7 +161,7 @@ Expand "myHal.cpp" to see the **EX-CommandStation** HAL configuration file requi
     #endif
 ```
 
-Once we have prepared our **EX-CommandStation** and connected **EX-Turntable**, they then need to be turned on with the connection validated as per [testing ex-turntable](../../../../ex-turntable/test-and-tune.md#testing-ex-turntable).
+Once we have prepared our **EX-CommandStation** and connected **EX-Turntable**, they then need to be turned on with the connection validated as per [testing ex-turntable](../../../../products/ex-turntable/test-and-tune.md#testing-ex-turntable).
 
 Now, we are ready to move on to tuning the positions.
 
@@ -171,7 +171,7 @@ We'll use some basic mathematics to tune our turntable and traverser positions, 
 
 !!! note "Tuning Positions"
 
-    When tuning positions, you can use the ``<D TT vpin steps activity>`` diagnostic command as outlined in [tuning your turntable positions](../../../../ex-turntable/test-and-tune.md#tuning-your-turntable-positions) to test and refine these for perfect track alignment between the turntable bridge track and the surrounding tracks. You can also use the direct EX-Turntable serial testing command ``<M steps activity>`` as covered in [EX-Turntable interactive serial console commands](../../../../ex-turntable/test-and-tune.md#ex-turntable-interactive-serial-console-commands).
+    When tuning positions, you can use the ``<D TT vpin steps activity>`` diagnostic command as outlined in [tuning your turntable positions](../../../../products/ex-turntable/test-and-tune.md#tuning-your-turntable-positions) to test and refine these for perfect track alignment between the turntable bridge track and the surrounding tracks. You can also use the direct EX-Turntable serial testing command ``<M steps activity>`` as covered in [EX-Turntable interactive serial console commands](../../../../products/ex-turntable/test-and-tune.md#ex-turntable-interactive-serial-console-commands).
 
     We will be using the same steps per revolution number throughout this page (4097) for both the turntable and traverser, and are keeping this consistent with the examples in the **EX-Turntable** documentation for simplicity.
 
@@ -183,7 +183,7 @@ We'll use some basic mathematics to tune our turntable and traverser positions, 
 
 Before attempting any tuning, the first thing we need to obtain is the steps per revolution for both our turntable and traverser.
 
-Ideally these should have been noted in [load the ex-turntable software](../../../../ex-turntable/assembly.md#7-load-the-ex-turntable-software), however this value can also be obtained by monitoring the **EX-Turntable** serial console on startup where the steps per revolution are reported along with the other configuration details.
+Ideally these should have been noted in [load the ex-turntable software](../../../../products/ex-turntable/assembly.md#7-load-the-ex-turntable-software), however this value can also be obtained by monitoring the **EX-Turntable** serial console on startup where the steps per revolution are reported along with the other configuration details.
 
 ```cpp
     License GPLv3 fsf.org (c) dcc-ex.com
@@ -204,7 +204,7 @@ Once we have our steps per revolution, we can use that number with our formulas 
 
 !!! tip "DCC phase/polarity"
 
-    It's a great idea at this point to understand the importance of DCC phase/polarity and how switching/reversing it works with **EX-Turntable**. Refer to [important! phase (or polarity) switching](../../../../ex-turntable/index.md#important-phase-or-polarity-switching) and [how does this work with EX-Turntable?](../../../../ex-turntable/index.md#how-does-this-work-with-ex-turntable) for details.
+    It's a great idea at this point to understand the importance of DCC phase/polarity and how switching/reversing it works with **EX-Turntable**. Refer to [important! phase (or polarity) switching](../../../../products/ex-turntable/index.md#important-phase-or-polarity-switching) and [how does this work with EX-Turntable?](../../../../products/ex-turntable/index.md#how-does-this-work-with-ex-turntable) for details.
 
 !!! note "outlining turntable positions"
 
@@ -218,7 +218,7 @@ The home position has been set 10 degrees before position 1/roundhouse stall 1.
 
 As you can see by the diagram, we have identified the positions (in degrees) from the home position. The DCC phase inversion/reversal is also highlighted for reference when this is discussed a little further down the page.
 
-![Turntable Positions](../../../../../_static/images/big-picture/stage5-ex-tt-positions.png){ width=400px }
+![Turntable Positions](../../../../_static/images/big-picture/stage5-ex-tt-positions.png){ width=400px }
 
 #### Track wiring
 
@@ -234,7 +234,7 @@ You will note in the diagram that the motor driver's positive (+) output is conn
 
 The motor driver's negative (-) output is connected to the top rail of each track, and the normally open (NO) terminal of relay 1, and normally closed (NC) of relay 2.
 
-![Turntable Wiring](../../../../../_static/images/big-picture/stage5-ex-tt-wiring.png){ width=400px }
+![Turntable Wiring](../../../../_static/images/big-picture/stage5-ex-tt-wiring.png){ width=400px }
 
 In the scenario that the DCC phase is to be maintained (both relays turned off), this means the bridge track is kept aligned with the surrounding tracks, as relay 1 connects the brown wire to the positive (+) blue wire, and orange wire to the negative (-) green wire, so the bottom bridge rail is connected to the surrounding track's bottom rails, and likewise the top bridge rail to the surrounding track's top rails.
 
@@ -248,7 +248,7 @@ Therefore, we will set our phase switching angle to 80 degrees, resulting in the
 
 This is highlighted in the diagram above, with the yellow line indicating when the phase will switch and revert, and the yellow shaded area representing the 180 degrees in which the phase will be inverted.
 
-This means, for our turntable **EX-Turntable**, we will need to update "config.h" and repeat [load the ex-turntable software](../../../../ex-turntable/assembly.md#7-load-the-ex-turntable-software).
+This means, for our turntable **EX-Turntable**, we will need to update "config.h" and repeat [load the ex-turntable software](../../../../products/ex-turntable/assembly.md#7-load-the-ex-turntable-software).
 
 Expand "config.h" to see the updated **EX-Turntable** configuration file for the turntable, noting we have removed all comments for brevity.
 
@@ -270,7 +270,7 @@ Expand "config.h" to see the updated **EX-Turntable** configuration file for the
 
 #### Turntable position calculation
 
-Since we know the angles of our positions as outlined when considering our DCC phase switching, we can now calculate the step counts required for the turntable bridge to align with these positions. We will use the formula outlined in [determine the positions](../../../../ex-turntable/test-and-tune.md#determine-the-positions) to calculate these step counts (full rotation step count / 360 degrees * position in degrees).
+Since we know the angles of our positions as outlined when considering our DCC phase switching, we can now calculate the step counts required for the turntable bridge to align with these positions. We will use the formula outlined in [determine the positions](../../../../products/ex-turntable/test-and-tune.md#determine-the-positions) to calculate these step counts (full rotation step count / 360 degrees * position in degrees).
 
 Using this formula results in these step counts (noting we round up or down to the nearest full number):
 
@@ -288,7 +288,7 @@ Using this formula results in these step counts (noting we round up or down to t
 
 !!! tip "Tip"
 
-    Now is a great time to revisit the [traverser](../../../../ex-turntable/traverser.md) page, and in particular the section on [considerations - turntable vs. traverser](../../../../ex-turntable/traverser.md#considerations-turntable-vs-traverser).
+    Now is a great time to revisit the [traverser](../../../../products/ex-turntable/traverser.md) page, and in particular the section on [considerations - turntable vs. traverser](../../../../products/ex-turntable/traverser.md#considerations-turntable-vs-traverser).
 
 One key item to note with a traverser vs. a turntable is that we don't have a single track that moves and aligns with multiple layout tracks, but rather the whole traverser bed moves, aligning with a single track that connects to the rest of the layout.
 
@@ -296,7 +296,7 @@ In our diagram, the grey outer rectangle represents the limit of movement for th
 
 It is currently aligned with position 3.
 
-![Traverser Positions](../../../../../_static/images/big-picture/stage5-ex-traverser.png){ width-=300px }
+![Traverser Positions](../../../../_static/images/big-picture/stage5-ex-traverser.png){ width-=300px }
 
 For our traverser positions, we have six evenly spaced tracks on the traverser. In addition, we need to ensure we leave a buffer between our home and limit sensors as they should provide some indication of when the traverser is reaching the physical limits of movement. We will use an arbitrary value of 100 steps for this buffer.
 
@@ -358,7 +358,7 @@ As for our turntable, the last command will move our traverser to the home posit
 
 While controlling **EX-Turntable** via the diagnostic command is great for testing and tuning our various **EX-Turntable** positions, it's not exactly the friendliest way to control the turntable during normal use of our layout.
 
-There is a much better way to do this by using the ``MOVETT(vpin, steps, activity)`` command available in **EXRAIL** as part of a route definition that is advertised to WiThrottle apps and Engine Driver. This allows you to simply select the appropriate route from the route list, and **EXRAIL** and **EX-Turntable** will do their things, rotating or moving to the provided position. This is also covered [advertising positions to Engine Driver and WiThrottle applications](../../../../ex-turntable/test-and-tune.md#advertising-positions-to-engine-driver-and-withrottle-applications).
+There is a much better way to do this by using the ``MOVETT(vpin, steps, activity)`` command available in **EXRAIL** as part of a route definition that is advertised to WiThrottle apps and Engine Driver. This allows you to simply select the appropriate route from the route list, and **EXRAIL** and **EX-Turntable** will do their things, rotating or moving to the provided position. This is also covered [advertising positions to Engine Driver and WiThrottle applications](../../../../products/ex-turntable/test-and-tune.md#advertising-positions-to-engine-driver-and-withrottle-applications).
 
 Controlling your **EX-Turntable** this way also allows you to incorporate other automated activities associated with turntable or traverser movements, such as using the virtual block commands ``<RESERVE>`` and ``<FREE>`` to ensure no other automation sequences attempt to drive a loco on to the turntable while it is moving, to control auxiliary warning LEDs to indicate movements are happening, and so forth.
 

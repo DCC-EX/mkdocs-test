@@ -40,7 +40,7 @@ Serial commands to get or set the Fastclock time.
 
 ## Examples
 
-Also see the [EXRAIL Time Control Cookbooks](../../products/ex-commandstation/exrail/cookbooks/timecontrol.md).
+Also see the [EXRAIL Time Control Cookbooks](../../enhance/exrail/cookbooks/timecontrol.md).
 
 <!-- [Also search for 'xxx'](?_xxx) or [search for 'xxx'](?_xxx) -->
 
