@@ -875,7 +875,7 @@
   
   
   <span class="md-ellipsis">
-    Getting Started
+    Quick Start Guide
     
   </span>
   
@@ -898,7 +898,7 @@
   
   
   <span class="md-ellipsis">
-    Configure WiFi <small><small>(EX-CSB1 v5.7.0+)</small></small>
+    Configure WiFi <small><small>(EX-CSB1 v5.7.0+ only)</small></small>
     
   </span>
   
@@ -969,9 +969,32 @@
   
   
   
-    <li class="md-nav__item">
-      <a href="../../../products/ex-webthrottle/ex-webthrottle/" class="md-nav__link">
+    
+    
+      
         
+          
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_6" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../products/ex-webthrottle/" class="md-nav__link ">
+              
   
   
   <span class="md-ellipsis">
@@ -980,7 +1003,50 @@
   </span>
   
 
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_6" id="__nav_2_6_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_6">
+            <span class="md-nav__icon md-icon"></span>
+            <br/>EX-WebThrottle
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../products/ex-webthrottle/ex-webthrottle/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    User Guide
+    
+  </span>
+  
+
       </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -10740,7 +10806,7 @@
 <p>The servo module itself is powered from the Arduino, but the servos themselves contain motors that consume more current than the Arduino is able to supply, and so a separate 5V supply is required for the servos.  This is connected to the green terminal block at the top of the module, with terminals labelled V+ and GND. The V+ terminal is connected to 5V and the GND to the 0V (ground) wire of the supply.</p>
 <p>Connections to the Arduino are made with four jumper wires (Arduino: +5V, GND, SCL, SDA to servo module: <strong>VCC</strong>, GND, SCL, SDA), as shown on the following diagram:</p>
 <p><img alt="PCA9685 Servo Module" src="../../../_static/images/i2c-connected-devices/ArduinoMegaServo.png" width="600px" /></p>
-<p><mark>TODO</mark> Add a diagram for the <abbr title="EX-CommandStation Booster 1 Express">EX-CSB1</abbr> to a PCA9685</p>
+<p><mark>TODO</mark> Add a diagram for the <abbr title="EX-CommandStation/Booster 1 Express">EX-CSB1</abbr> to a PCA9685</p>
 <p>In <strong>EX-CommandStation</strong>, the drivers for the PCA9685 module is already installed, and made available to for use as pin numbers 100-115. A servo is shown in the diagram, connected to the first set of pins on the module.  This will be accessed using pin number 100.</p>
 <p>Once you've made all of the connections, apply power to the Arduino.</p>
 <p>Then, in a <a href="../../../reference/tools/serial-monitor_not_in_nav/">serial monitors</a>, enter the command <code>&lt;D SERVO 100 450&gt;</code>.  The servo should move, as long as it isn't (by some fluke) already in that position.</p>
@@ -10848,7 +10914,7 @@
 <p>If you need more sensors then there are available pins on the Mega, you use one or more <a href="../../accessories/i2c-gpio-expanders/"><abbr title="(Inter-Integrated Circuit, pronounced &quot;eye-squared-see&quot;) is a synchronous, multi-controller/multi-target serial communication protocol">I2C</abbr></a></p>
 <p><img alt="IR Sensor connected to Arduino mega via IO Expander" src="../../../_static/images/i2c-connected-devices/mega-with-io-expander-and-ir-sensor.png" width="600px" /></p>
 <p><mark>TODO</mark> Link here to recommended pin/<abbr title="an Arduino pin number that has been extended to include pins on external devices or expanders">vpin</abbr> allocations etc.</p>
-<p><mark>TODO</mark> Add a diagram for the <abbr title="EX-CommandStation Booster 1 Express">EX-CSB1</abbr> to an IO Expander</p>
+<p><mark>TODO</mark> Add a diagram for the <abbr title="EX-CommandStation/Booster 1 Express">EX-CSB1</abbr> to an IO Expander</p>
 <h3 id="configure-myautomationh-sensors">Configure myAutomation.h - Sensors<a class="headerlink" href="#configure-myautomationh-sensors" title="Permanent link">&para;</a></h3>
 <p>You don't actually require anything special to be added to myAutomation.h in advance of using them in an sequence.</p>
 <p>Handling sensors in sequences is made easy because <strong>EXRAIL</strong> throws away the concept of interrupts ("oh… sensor 22 has been detected… which loco was that and whatever do I do now?") and instead has the sequences work on the basis of "do nothing, maintain speed until sensor 22 triggers, and then carry on in the script".</p>

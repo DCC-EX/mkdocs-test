@@ -882,7 +882,7 @@
   
   
   <span class="md-ellipsis">
-    Getting Started
+    Quick Start Guide
     
   </span>
   
@@ -905,7 +905,7 @@
   
   
   <span class="md-ellipsis">
-    Configure WiFi <small><small>(EX-CSB1 v5.7.0+)</small></small>
+    Configure WiFi <small><small>(EX-CSB1 v5.7.0+ only)</small></small>
     
   </span>
   
@@ -976,9 +976,32 @@
   
   
   
-    <li class="md-nav__item">
-      <a href="../ex-webthrottle/ex-webthrottle/" class="md-nav__link">
+    
+    
+      
         
+          
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_6" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../ex-webthrottle/" class="md-nav__link ">
+              
   
   
   <span class="md-ellipsis">
@@ -987,7 +1010,50 @@
   </span>
   
 
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_6" id="__nav_2_6_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_6">
+            <span class="md-nav__icon md-icon"></span>
+            <br/>EX-WebThrottle
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ex-webthrottle/ex-webthrottle/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    User Guide
+    
+  </span>
+  
+
       </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -9999,6 +10065,32 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#features" class="md-nav__link">
+    <span class="md-ellipsis">
+      Features
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ready-to-run-or-self-build" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ready to Run or Self Build
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -10020,8 +10112,35 @@
 <p><img align="right" alt="EX-CommandStation Logo" class="only-light" src="../../_static/images/logos/product-logo-ex-commandstation-only-light.png" width="400px" />
 <img align="right" alt="EX-CommandStation Logo" class="only-dark" src="../../_static/images/logos/product-logo-ex-commandstation-only-dark.png" width="400px" /></p>
 <p>A DCC Command Station powers your track and sends digital signals to the locos and accessories through the track. All commercial command stations do that, but we think we do it a lot better for a lot less money.</p>
-<p>Our <a href="../ex-csb1/">ready-to-run</a> and <a href="../../diy/diy/">self-build</a> systems use our outstanding <strong>EX-CommandStation</strong> software.</p>
-<p>Our primary solution is the <a href="../ex-csb1/"><strong>EX-CommandStation Booster 1 Express (CSB1</strong>)</a> DCC Command Station which provides a ready-to-run system with integrated WiFi. You can start running trains from your Android or iOS phone in a couple of minutes if you plug your track in one end and a power supply in the other.</p>
+<p><span style="font-size: larger;">Our outstanding <strong>EX-CommandStation</strong> software is at the core of our <a href="../ex-csb1/">ready-to-run</a> and <a href="../../diy/diy/">self-build</a> systems.</span></p>
+<h2 id="features">Features<a class="headerlink" href="#features" title="Permanent link">&para;</a></h2>
+<p>An <strong>EX‑CommandStation</strong> is powerful, DCC and DC Command Station software which you can purchase on a ready-to-run <a href="../ex-csb1/"><strong><abbr title="EX-CommandStation/Booster 1 Express">EX-CSB1</abbr></strong></a> or install on self built hardware made from widely available parts.</p>
+<p>It supports almost all of the <a href="https://nmra.org"><abbr title="National Model Railroad Association (USA)">NMRA</abbr></a> <a href="https://dcc-ex.com/reference/hardware/dcc-vs-dc.html">Digital Command Control (DCC)</a> standards, including:</p>
+<ul>
+<li>Simultaneous control of multiple locomotives</li>
+<li>Control of all cab/loco functions (F0-F28 and F29-F68)</li>
+<li>Control of accessory / function decoders (F0-F28 and F29-F68)</li>
+<li>Main Track: Write configuration variable (<abbr title="Configuration Variable (DCC Decoders)">CV</abbr>) bytes and set/clear specific <abbr title="Configuration Variable (DCC Decoders)">CV</abbr> bits (aka Programming on Main, or <abbr title="Programming on Main / Ops Mode Programming">POM</abbr>)</li>
+<li>Programming Track: Same as the main track with the addition of reading <abbr title="Configuration Variable (DCC Decoders)">CV</abbr> bytes</li>
+</ul>
+<p>It includes advanced features, such as:</p>
+<ul>
+<li>Works on a variety of different microcontrollers and motor diver hardware</li>
+<li>A <a href="../../throttles/withrottle-vs-native-protocol/">wiThrottle Server</a> implementation for compatibility with popular WiFi throttles (controllers)</li>
+<li>A <a href="../../throttles/withrottle-vs-native-protocol/">Native Serial Server</a> implementation for use with advanced WiFi and hardware throttles (controllers)</li>
+<li>General purpose inputs and outputs (I/O) for extensibility (Self Build only)</li>
+<li><abbr title="(Inter-Integrated Circuit, pronounced &quot;eye-squared-see&quot;) is a synchronous, multi-controller/multi-target serial communication protocol">I2C</abbr> bus for controlling accessories with <abbr title="(Inter-Integrated Circuit, pronounced &quot;eye-squared-see&quot;) is a synchronous, multi-controller/multi-target serial communication protocol">I2C</abbr> capability</li>
+<li><a href="https://dcc-ex.com/throttles/software/jmri.html"><abbr title="Java Model Railroad Interface">JMRI</abbr></a> integration</li>
+<li><a href="../../enhance/exrail/">EXRAIL</a> Automation and Animation scripting that can control everything on your layout, including the locos</li>
+<li>Any output can be used as a <a href="../../enhance/trackmanager/">DCC Auto Reverser</a></li>
+<li>Can be used as a <a href="../../enhance/trackmanager/booster/">DCC booster</a> (<abbr title="EX-CommandStation/Booster 1 Express">EX-CSB1</abbr> only)</li>
+</ul>
+<p>It also supports:</p>
+<ul>
+<li><a href="../../enhance/dc-running/">Direct Current (DC)</a> locomotive control using Pulse Width Modulation (<abbr title="Pulse Width Modulation">PWM</abbr>)</li>
+</ul>
+<h2 id="ready-to-run-or-self-build">Ready to Run or Self Build<a class="headerlink" href="#ready-to-run-or-self-build" title="Permanent link">&para;</a></h2>
+<p>Our primary solution is the <a href="../ex-csb1/"><strong>EX-CommandStation/Booster 1 Express (CSB1</strong>)</a> DCC Command Station which provides a ready-to-run system with integrated WiFi. You can start running trains from your Android or iOS phone in a couple of minutes if you plug your track in one end and a power supply in the other.</p>
 <ul>
 <li>
 <p>If you want to <em>buy a ready built</em> <strong>EX-CommandStation</strong>, see <a href="../../purchasing/official-sellers/">Purchase a EX-CommandStation</a>.<br />
@@ -10052,7 +10171,7 @@ To follow the basic setup process, you can use the <code>next</code> button seen
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="October 12, 2026 06:02:41 UTC">October 12, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="October 12, 2026 22:38:49 UTC">October 12, 2026</span>
   </span>
 
     

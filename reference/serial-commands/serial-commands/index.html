@@ -859,7 +859,7 @@
   
   
   <span class="md-ellipsis">
-    Getting Started
+    Quick Start Guide
     
   </span>
   
@@ -882,7 +882,7 @@
   
   
   <span class="md-ellipsis">
-    Configure WiFi <small><small>(EX-CSB1 v5.7.0+)</small></small>
+    Configure WiFi <small><small>(EX-CSB1 v5.7.0+ only)</small></small>
     
   </span>
   
@@ -953,9 +953,32 @@
   
   
   
-    <li class="md-nav__item">
-      <a href="../../../products/ex-webthrottle/ex-webthrottle/" class="md-nav__link">
+    
+    
+      
         
+          
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_6" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../products/ex-webthrottle/" class="md-nav__link ">
+              
   
   
   <span class="md-ellipsis">
@@ -964,7 +987,50 @@
   </span>
   
 
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_6" id="__nav_2_6_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_6">
+            <span class="md-nav__icon md-icon"></span>
+            <br/>EX-WebThrottle
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../products/ex-webthrottle/ex-webthrottle/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    User Guide
+    
+  </span>
+  
+
       </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -10519,11 +10585,11 @@
 </tr>
 <tr>
 <td><strong>dir</strong> or <br/><strong>direction</strong></td>
-<td>One of <br/>- 1=forward <br/>- 0=reverse</td>
+<td>One of <br/>1=forward <br/>0=reverse</td>
 </tr>
 <tr>
 <td><strong>tSpeed</strong></td>
-<td>0-127 or -1 for Emergency Stop</td>
+<td>One of <br/>0 = stop <br/>1-127  speed (1=slowest, 127=fastest) <br/>-1 for Emergency Stop</td>
 </tr>
 <tr>
 <td><strong>speedByte</strong></td>
@@ -10934,103 +11000,103 @@
 </thead>
 <tbody>
 <tr>
-<td><code>&lt;W cv value&gt;</code></td>
+<td><a href="?_9W9_cv_value"><code>&lt;W cv value&gt;</code></a></td>
 <td>Write CV value on PROG track</td>
 <td><code>cv</code>: CV number, <code>value</code>: Value</td>
 <td>Active</td>
 </tr>
 <tr>
-<td><code>&lt;W loco&gt;</code></td>
+<td><a href="?_9W9_loco"><code>&lt;W loco&gt;</code></a></td>
 <td>Write loco address on PROG track</td>
 <td><code>loco</code>: Address</td>
 <td>Active</td>
 </tr>
 <tr>
-<td><code>&lt;W CONSIST loco&gt;</code></td>
+<td><a href="?_9W9_9CONSIST9_loco"><code>&lt;W CONSIST loco&gt;</code></a></td>
 <td>Write consist address on PROG track</td>
 <td><code>loco</code>: Address</td>
 <td>Active</td>
 </tr>
 <tr>
-<td><code>&lt;W CONSIST loco REVERSE&gt;</code></td>
+<td><a href="?_9W9_9CONSIST9_loco_9REVERSE]"><code>&lt;W CONSIST loco REVERSE&gt;</code></a></td>
 <td>Write consist address and reverse flag</td>
 <td><code>loco</code>: Address</td>
 <td>Active</td>
 </tr>
 <tr>
-<td><code>&lt;W cv bitvalue bit&gt;</code></td>
+<td><a href="?_9W9_cv_bitvalue_bit"><code>&lt;W cv bitvalue bit&gt;</code></a></td>
 <td>Write CV bit on prog track</td>
 <td><code>cv</code>: CV, <code>bitvalue</code>: Bit value, <code>bit</code>: Bit position</td>
 <td>Active</td>
 </tr>
 <tr>
-<td><code>&lt;W cv value ignore1 ignore2&gt;</code></td>
+<td><a href="?_9W9_cv_bitvalue_bit"><code>&lt;W cv value ignore1 ignore2&gt;</code></a>ignore1 ignore2)</td>
 <td>Write CV value on PROG track</td>
 <td>Legacy format</td>
 <td>⚠️ Deprecated</td>
 </tr>
 <tr>
-<td><code>&lt;R cv&gt;</code></td>
+<td><a href="?_9R9_cv"><code>&lt;R cv&gt;</code></a></td>
 <td>Read CV</td>
 <td><code>cv</code>: CV number</td>
 <td>Active</td>
 </tr>
 <tr>
-<td><code>&lt;R&gt;</code></td>
+<td><a href="?_9R9"><code>&lt;R&gt;</code></a></td>
 <td>Read driveable loco ID</td>
 <td>None</td>
 <td>Active</td>
 </tr>
 <tr>
-<td><code>&lt;R LOCOID&gt;</code></td>
+<td><a href="?_9R9_9LOCOID9"><code>&lt;R LOCOID&gt;</code></a></td>
 <td>Read loco ID (ignoring consist)</td>
 <td>None</td>
 <td>Active</td>
 </tr>
 <tr>
-<td><code>&lt;R CONSIST&gt;</code></td>
+<td><a href="?_9R9_9CONSIST9"><code>&lt;R CONSIST&gt;</code></a></td>
 <td>Read consist ID</td>
 <td>None</td>
 <td>Active</td>
 </tr>
 <tr>
-<td><code>&lt;R cv ignore1 ignore2&gt;</code></td>
+<td><a href="?_9R9_cv_ignore1_ignore2"><code>&lt;R cv ignore1 ignore2&gt;</code></a></td>
 <td>Read CV value on PROG track</td>
 <td>Legacy format</td>
 <td>⚠️ Deprecated</td>
 </tr>
 <tr>
-<td><code>&lt;V cv value&gt;</code></td>
+<td><a href="?_9V9_value"><code>&lt;V cv value&gt;</code></a></td>
 <td>Fast read CV with expected value</td>
 <td><code>cv</code>: CV number, <code>value</code>: Expected value</td>
 <td>Active</td>
 </tr>
 <tr>
-<td><code>&lt;V cv bit bitvalue&gt;</code></td>
+<td><a href="?_9V9_cv_bit_bitvalue"><code>&lt;V cv bit bitvalue&gt;</code></a></td>
 <td>Fast read bit with expected value</td>
 <td><code>cv</code>: CV, <code>bit</code>: Bit position, <code>bitvalue</code>: Expected</td>
 <td>Active</td>
 </tr>
 <tr>
-<td><code>&lt;B cv bit bitvalue&gt;</code></td>
+<td><a href="?_9B9_cv_bit_bitvalue"><code>&lt;B cv bit bitvalue&gt;</code></a></td>
 <td>Write CV bit</td>
 <td><code>cv</code>: CV number, <code>bit</code>: Bit position, <code>bitvalue</code>: Value</td>
 <td>Active</td>
 </tr>
 <tr>
-<td><code>&lt;w loco cv value&gt;</code></td>
+<td><a href="?_w_loco_cv_value"><code>&lt;w loco cv value&gt;</code></a></td>
 <td>POM write CV on main track</td>
 <td><code>loco</code>: ID, <code>cv</code>: CV number, <code>value</code>: Value</td>
 <td>Active</td>
 </tr>
 <tr>
-<td><code>&lt;r loco cv&gt;</code></td>
+<td><a href="?_r_loco_cv"><code>&lt;r loco cv&gt;</code></a></td>
 <td>POM read CV on main track</td>
 <td><code>loco</code>: ID, <code>cv</code>: CV number</td>
 <td>Railcom dependent</td>
 </tr>
 <tr>
-<td><code>&lt;b loco cv bit bitvalue&gt;</code></td>
+<td><a href="?_w_loco_cv_bit_bitvalue"><code>&lt;b loco cv bit bitvalue&gt;</code></a></td>
 <td>POM write CV bit on main track</td>
 <td><code>loco</code>: ID, <code>cv</code>: CV, <code>bit</code>: Position, <code>bitvalue</code>: Value</td>
 <td>Active</td>
@@ -11049,25 +11115,25 @@
 </thead>
 <tbody>
 <tr>
-<td><code>&lt;a address subaddress activate&gt;</code></td>
+<td><a href="?_a_address_subaddress_activate"><code>&lt;a address subaddress activate&gt;</code></a></td>
 <td>Send DCC accessory command</td>
 <td><code>address</code>: Address, <code>subaddress</code>: Sub-address, <code>activate</code>: 0/1</td>
 <td>Active</td>
 </tr>
 <tr>
-<td><code>&lt;a address subaddress activate onoff&gt;</code></td>
+<td><a href="?_a_address_subaddress_activate_onoff"><code>&lt;a address subaddress activate onoff&gt;</code></a></td>
 <td>Send DCC accessory command with on/off</td>
 <td><code>address</code>: Address, <code>subaddress</code>: Sub, <code>activate</code>: 0/1, <code>onoff</code>: 0/1</td>
 <td>Active</td>
 </tr>
 <tr>
-<td><code>&lt;a linearaddress activate&gt;</code></td>
+<td><a href="?_a_linearaddress_activate"><code>&lt;a linearaddress activate&gt;</code></a></td>
 <td>Send DCC accessory command</td>
 <td><code>linearaddress</code>: Linear address, <code>activate</code>: 0/1</td>
 <td>Active</td>
 </tr>
 <tr>
-<td><code>&lt;A address value&gt;</code></td>
+<td><a href="?_9A9_address_value"><code>&lt;A address value&gt;</code></a></td>
 <td>Send DCC extended accessory (Aspect) command</td>
 <td><code>address</code>: Address, <code>value</code>: Aspect value</td>
 <td>Active</td>
@@ -11086,25 +11152,25 @@
 </thead>
 <tbody>
 <tr>
-<td><code>&lt;m LINEAR&gt;</code></td>
+<td><a href="?_m_9LINEAR9"><code>&lt;m LINEAR&gt;</code></a></td>
 <td>Set momentum algorithm to linear acceleration</td>
 <td>None</td>
 <td>Active</td>
 </tr>
 <tr>
-<td><code>&lt;m POWER&gt;</code></td>
+<td><a href="?_m_9POWER9"><code>&lt;m POWER&gt;</code></a></td>
 <td>Set momentum algorithm based on speed difference</td>
 <td>None</td>
 <td>Active</td>
 </tr>
 <tr>
-<td><code>&lt;m loco momentum&gt;</code></td>
+<td><a href="?_m_loco_momentum"><code>&lt;m loco momentum&gt;</code></a></td>
 <td>Set momentum for loco (accel and braking)</td>
 <td><code>loco</code>: ID, <code>momentum</code>: Value</td>
 <td>Active</td>
 </tr>
 <tr>
-<td><code>&lt;m loco accelerating braking&gt;</code></td>
+<td><a href="?_m_loco_accelerating_braking"><code>&lt;m loco accelerating braking&gt;</code></a></td>
 <td>Set momentum for loco</td>
 <td><code>loco</code>: ID, <code>accelerating</code>: Value, <code>braking</code>: Value</td>
 <td>Active</td>
@@ -11123,25 +11189,25 @@
 </thead>
 <tbody>
 <tr>
-<td><code>&lt;Z&gt;</code></td>
+<td><a href="?_9Z9"><code>&lt;Z&gt;</code></a></td>
 <td>List output definitions</td>
 <td>None</td>
 <td>Active</td>
 </tr>
 <tr>
-<td><code>&lt;Z id pin iflag&gt;</code></td>
+<td><a href="?_9Z9_id_pin_iflag"><code>&lt;Z id pin iflag&gt;</code></a></td>
 <td>Create output</td>
 <td><code>id</code>: Output ID, <code>pin</code>: Pin number, <code>iflag</code>: Invert flag</td>
 <td>Active</td>
 </tr>
 <tr>
-<td><code>&lt;Z id active&gt;</code></td>
+<td><a href="?_9Z9_id_active"><code>&lt;Z id active&gt;</code></a></td>
 <td>Set output</td>
 <td><code>id</code>: Output ID, <code>active</code>: 0/1</td>
 <td>Active</td>
 </tr>
 <tr>
-<td><code>&lt;Z id&gt;</code></td>
+<td><a href="?_9Z9_id"><code>&lt;Z id&gt;</code></a></td>
 <td>Delete output</td>
 <td><code>id</code>: Output ID</td>
 <td>Active</td>
@@ -11160,25 +11226,25 @@
 </thead>
 <tbody>
 <tr>
-<td><code>&lt;z vpin&gt;</code></td>
+<td><a href="?_z_vpin"><code>&lt;z vpin&gt;</code></a></td>
 <td>Set pin HIGH if vpin positive, LOW if negative</td>
 <td><code>vpin</code>: Pin number (signed)</td>
 <td>Active</td>
 </tr>
 <tr>
-<td><code>&lt;z vpin analog&gt;</code></td>
+<td><a href="?_z_vpin_analog"><code>&lt;z vpin analog&gt;</code></a></td>
 <td>Write analog device value</td>
 <td><code>vpin</code>: Pin, <code>analog</code>: Value</td>
 <td>Active</td>
 </tr>
 <tr>
-<td><code>&lt;z vpin analog profile&gt;</code></td>
+<td><a href="?_z_vpin_analog_profile"><code>&lt;z vpin analog profile&gt;</code></a></td>
 <td>Write analog device using profile</td>
 <td><code>vpin</code>: Pin, <code>analog</code>: Value, <code>profile</code>: Profile ID</td>
 <td>Active</td>
 </tr>
 <tr>
-<td><code>&lt;z vpin analog profile duration&gt;</code></td>
+<td><a href="?_z_vpin_analog_profile_duration"><code>&lt;z vpin analog profile duration&gt;</code></a></td>
 <td>Change analog value over duration</td>
 <td><code>vpin</code>: Pin, <code>analog</code>: Value, <code>profile</code>: Profile, <code>duration</code>: Time</td>
 <td>Active</td>
@@ -11197,25 +11263,25 @@
 </thead>
 <tbody>
 <tr>
-<td><code>&lt;o vpin&gt;</code></td>
+<td><a href="?_o_vpin"><code>&lt;o vpin&gt;</code></a></td>
 <td>Set neopixel on (vpin&gt;0) or off (vpin&lt;0)</td>
 <td><code>vpin</code>: Pin number (signed)</td>
 <td>Active</td>
 </tr>
 <tr>
-<td><code>&lt;o vpin count&gt;</code></td>
+<td><a href="?_o_vpin_count"><code>&lt;o vpin count&gt;</code></a></td>
 <td>Set multiple neopixels on/off</td>
 <td><code>vpin</code>: Pin, <code>count</code>: Number of pixels</td>
 <td>Active</td>
 </tr>
 <tr>
-<td><code>&lt;o vpin r g b&gt;</code></td>
+<td><a href="?_o_vpin_r_g_b"><code>&lt;o vpin r g b&gt;</code></a></td>
 <td>Set neopixel colour</td>
 <td><code>vpin</code>: Pin, <code>r</code>: Red, <code>g</code>: Green, <code>b</code>: Blue</td>
 <td>Active</td>
 </tr>
 <tr>
-<td><code>&lt;o vpin r g b count&gt;</code></td>
+<td><a href="?_o_vpin_r_g_b_count"><code>&lt;o vpin r g b count&gt;</code></a></td>
 <td>Set multiple neopixels colour</td>
 <td><code>vpin</code>: Pin, <code>r</code>: Red, <code>g</code>: Green, <code>b</code>: Blue, <code>count</code>: Count</td>
 <td>Active</td>
@@ -11234,43 +11300,43 @@
 </thead>
 <tbody>
 <tr>
-<td><code>&lt;I&gt;</code></td>
+<td><a href="?_9I9"><code>&lt;I&gt;</code></a></td>
 <td>List all turntables</td>
 <td>None</td>
 <td>Active</td>
 </tr>
 <tr>
-<td><code>&lt;I id&gt;</code></td>
+<td><a href="?_9I9_id"><code>&lt;I id&gt;</code></a></td>
 <td>Broadcast turntable type and current position</td>
 <td><code>id</code>: Turntable ID</td>
 <td>Active</td>
 </tr>
 <tr>
-<td><code>&lt;I id position&gt;</code></td>
+<td><a href="?_9I9_id_position"><code>&lt;I id position&gt;</code></a></td>
 <td>Rotate a DCC turntable</td>
 <td><code>id</code>: ID, <code>position</code>: Position</td>
 <td>Active</td>
 </tr>
 <tr>
-<td><code>&lt;I id DCC home&gt;</code></td>
+<td><a href="?_9I9_id_9DCC9_home"><code>&lt;I id DCC home&gt;</code></a></td>
 <td>Create DCC turntable</td>
 <td><code>id</code>: ID, <code>home</code>: Home position</td>
 <td>Active</td>
 </tr>
 <tr>
-<td><code>&lt;I id position activity&gt;</code></td>
+<td><a href="?_9I9_id_position_activity"><code>&lt;I id position activity&gt;</code></a></td>
 <td>Rotate an EXTT turntable</td>
 <td><code>id</code>: ID, <code>position</code>: Position, <code>activity</code>: Activity</td>
 <td>Active</td>
 </tr>
 <tr>
-<td><code>&lt;I id EXTT vpin home&gt;</code></td>
+<td><a href="?_9I9_id_9EXTT9_vpin_home"><code>&lt;I id EXTT vpin home&gt;</code></a></td>
 <td>Create an EXTT turntable</td>
 <td><code>id</code>: ID, <code>vpin</code>: Pin, <code>home</code>: Home position</td>
 <td>Active</td>
 </tr>
 <tr>
-<td><code>&lt;I id ADD position value angle&gt;</code></td>
+<td><a href="?_9I9_id_9ADD9_position_value_angle"><code>&lt;I id ADD position value angle&gt;</code></a></td>
 <td>Add turntable position</td>
 <td><code>id</code>: ID, <code>position</code>: Position, <code>value</code>: Value, <code>angle</code>: Angle</td>
 <td>Active</td>
@@ -11289,55 +11355,55 @@
 </thead>
 <tbody>
 <tr>
-<td><code>&lt;y vpin PLAY track [volume]&gt;</code></td>
+<td><a href="?_y_vpin_9PLAY9_track_volume"><code>&lt;y vpin PLAY track [volume]&gt;</code></a></td>
 <td>Play track</td>
 <td>Active</td>
 <td></td>
 </tr>
 <tr>
-<td><code>&lt;y vpin REPEAT track [volume]&gt;</code></td>
+<td><a href="?_y_vpin_9REPEAT9_track_volume"><code>&lt;y vpin REPEAT track [volume]&gt;</code></a></td>
 <td>Play track repeat</td>
 <td>Active</td>
 <td></td>
 </tr>
 <tr>
-<td><code>&lt;y vpin STOP&gt;</code></td>
+<td><a href="?_y_vpin_9STOP9"><code>&lt;y vpin STOP&gt;</code></a></td>
 <td>Stop playing</td>
 <td>Active</td>
 <td></td>
 </tr>
 <tr>
-<td><code>&lt;y vpin PAUSE&gt;</code></td>
+<td><a href="?_y_vpin_9PAUSE9"><code>&lt;y vpin PAUSE&gt;</code></a></td>
 <td>Pause playing</td>
 <td>Active</td>
 <td></td>
 </tr>
 <tr>
-<td><code>&lt;y vpin RESUME&gt;</code></td>
+<td><a href="?_y_vpin_9RESUME9"><code>&lt;y vpin RESUME&gt;</code></a></td>
 <td>Resume playing</td>
 <td>Active</td>
 <td></td>
 </tr>
 <tr>
-<td><code>&lt;y vpin FOLDER folder&gt;</code></td>
+<td><a href="?_y_vpin_9FOLDER9_folder"><code>&lt;y vpin FOLDER folder&gt;</code></a></td>
 <td>Set folder to play from</td>
 <td>Active</td>
 <td></td>
 </tr>
 <tr>
-<td><code>&lt;y vpin VOLUME vol&gt;</code></td>
+<td><a href="?_y_vpin_9VOLUME9_vol"><code>&lt;y vpin VOLUME vol&gt;</code></a></td>
 <td>Set default volume 0..30</td>
 <td>Active</td>
 <td></td>
 </tr>
 <tr>
-<td><code>&lt;y vpin EQ type&gt;</code></td>
+<td><a href="?_y_vpin_9EQ9_type"><code>&lt;y vpin EQ type&gt;</code></a></td>
 <td>Set EQ type NORMAL, POP, ROCK, JAZZ, CLASSCS, BASS</td>
 <td>Active</td>
 <td></td>
 </tr>
 <tr>
-<td><code>&lt;y vpin RESET&gt;</code></td>
+<td><a href="?_y_vpin_9RESET9"><code>&lt;y vpin RESET&gt;</code></a></td>
 <td>Reset player</td>
 <td>Active</td>
 <td></td>
@@ -11895,21 +11961,6 @@
 </tr>
 </tbody>
 </table>
-<div class="admonition info">
-<p class="admonition-title">tSpeed Values</p>
-<ul>
-<li><strong>0</strong>: Stop</li>
-<li><strong>1-127</strong>: Variable speed (1=slowest, 127=fastest)</li>
-<li><strong>-1</strong>: Emergency stop</li>
-</ul>
-</div>
-<div class="admonition info">
-<p class="admonition-title">Direction Values</p>
-<ul>
-<li><strong>0</strong>: Reverse</li>
-<li><strong>1</strong>: Forward</li>
-</ul>
-</div>
 <div class="admonition warning">
 <p class="admonition-title">Deprecated Commands</p>
 <p>Commands marked with ⚠️ are deprecated and may be removed in future versions. Use the recommended alternatives where available.</p>
@@ -11934,7 +11985,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="October 11, 2026 23:15:34 UTC">October 11, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="October 12, 2026 11:19:08 UTC">October 12, 2026</span>
   </span>
 
     

@@ -875,7 +875,7 @@
   
   
   <span class="md-ellipsis">
-    Getting Started
+    Quick Start Guide
     
   </span>
   
@@ -898,7 +898,7 @@
   
   
   <span class="md-ellipsis">
-    Configure WiFi <small><small>(EX-CSB1 v5.7.0+)</small></small>
+    Configure WiFi <small><small>(EX-CSB1 v5.7.0+ only)</small></small>
     
   </span>
   
@@ -969,9 +969,32 @@
   
   
   
-    <li class="md-nav__item">
-      <a href="../../../products/ex-webthrottle/ex-webthrottle/" class="md-nav__link">
+    
+    
+      
         
+          
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_6" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../products/ex-webthrottle/" class="md-nav__link ">
+              
   
   
   <span class="md-ellipsis">
@@ -980,7 +1003,50 @@
   </span>
   
 
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_6" id="__nav_2_6_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_6">
+            <span class="md-nav__icon md-icon"></span>
+            <br/>EX-WebThrottle
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../products/ex-webthrottle/ex-webthrottle/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    User Guide
+    
+  </span>
+  
+
       </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -10138,7 +10204,7 @@
   
 
 
-<h1 id="wifi-configuration-excluding-ex-csb1-or-esp32-v570">Wifi configuration <br/><small>(Excluding <strong><abbr title="EX-CommandStation Booster 1 Express">EX-CSB1</abbr></strong> or ESP32 v5.7.0+)</small><a class="headerlink" href="#wifi-configuration-excluding-ex-csb1-or-esp32-v570" title="Permanent link">&para;</a></h1>
+<h1 id="wifi-configuration-excluding-ex-csb1-or-esp32-v570">Wifi configuration <br/><small>(Excluding <strong><abbr title="EX-CommandStation/Booster 1 Express">EX-CSB1</abbr></strong> or ESP32 v5.7.0+)</small><a class="headerlink" href="#wifi-configuration-excluding-ex-csb1-or-esp32-v570" title="Permanent link">&para;</a></h1>
 <div class="admonition info inline end">
 <p class="admonition-title">EX-Installer</p>
 <p>Using <a href="../installer/">EX-Installer</a> is the recommended way to modify <code>config.h</code> and <code>myAutomation.h</code>.</p>
@@ -10148,7 +10214,7 @@
 <li><abbr title="Access Point Mode. Stand alone WiFi network">AP</abbr> (Access point) means the <strong>EX-CommandStation</strong> acts as its own private WiFi network so throttle devices must connect first to the <strong>EX-CommandStation</strong> WiFi network.</li>
 <li><abbr title="Station Mode. Joins an existing WiFi network">STA</abbr> (Station mode) means the <strong>EX-CommandStation</strong> connects to your WiFi router and appears as a device on that network. If the WiFi is configured for <abbr title="Station Mode. Joins an existing WiFi network">STA</abbr> mode, but fails to connect to your router, it will fall back to <abbr title="Access Point Mode. Stand alone WiFi network">AP</abbr> mode in much the same way as smart plugs, lights etc.</li>
 </ul>
-<p><span style="color:red">NOTE: If you are using an <strong><abbr title="EX-CommandStation Booster 1 Express">EX-CSB1</abbr></strong> or ESP32 based EX-CommandStation <strong><em>AND</em></strong> you are are using the latest DEVEL versions of the  EX-CommandStation code (versions from 5.7.0),</span> the <code>config.h</code> options for WiFi configuration described here are ignored by the <strong><abbr title="EX-CommandStation Booster 1 Express">EX-CSB1</abbr></strong> or ESP32 EX-CommandStations. Instead see the <a href="../config-wifi-esp32/">WiFi configuration (<abbr title="EX-CommandStation Booster 1 Express">EX-CSB1</abbr> or ESP32 ONLY. Version 5.7.0+ ONLY) page</a>.</p>
+<p><span style="color:red">NOTE: If you are using an <strong><abbr title="EX-CommandStation/Booster 1 Express">EX-CSB1</abbr></strong> or ESP32 based EX-CommandStation <strong><em>AND</em></strong> you are are using the latest DEVEL versions of the  EX-CommandStation code (versions from 5.7.0),</span> the <code>config.h</code> options for WiFi configuration described here are ignored by the <strong><abbr title="EX-CommandStation/Booster 1 Express">EX-CSB1</abbr></strong> or ESP32 EX-CommandStations. Instead see the <a href="../config-wifi-esp32/">WiFi configuration (<abbr title="EX-CommandStation/Booster 1 Express">EX-CSB1</abbr> or ESP32 ONLY. Version 5.7.0+ ONLY) page</a>.</p>
 <h2 id="operating-modes">Operating Modes<a class="headerlink" href="#operating-modes" title="Permanent link">&para;</a></h2>
 <p>WiFi has two operating modes:</p>
 <ul>

@@ -27,7 +27,7 @@
     
     
       
-        <title>Configure WiFi (EX-CSB1 v5.7.0+) - DCC-EX Model Train Control, Animation &amp; Automation</title>
+        <title>Configure WiFi (EX-CSB1 v5.7.0+ only) - DCC-EX Model Train Control, Animation &amp; Automation</title>
       
     
     
@@ -116,7 +116,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Configure WiFi <small><small>(EX-CSB1 v5.7.0+)</small></small>
+              Configure WiFi <small><small>(EX-CSB1 v5.7.0+ only)</small></small>
             
           </span>
         </div>
@@ -572,7 +572,7 @@
       <li class="md-breadcrumbs__item" style="display: flex; align-items: center; gap: 8px;">
         <span style="opacity: 0.35; color: var(--md-typeset-color);">|</span>
         <span class="md-breadcrumbs__link" style="color: var(--md-typeset-color); font-weight: 700;">
-          Configure WiFi <small><small>(EX-CSB1 v5.7.0+)</small></small>
+          Configure WiFi <small><small>(EX-CSB1 v5.7.0+ only)</small></small>
         </span>
       </li>
     
@@ -882,7 +882,7 @@
   
   
   <span class="md-ellipsis">
-    Getting Started
+    Quick Start Guide
     
   </span>
   
@@ -914,7 +914,7 @@
   
   
   <span class="md-ellipsis">
-    Configure WiFi <small><small>(EX-CSB1 v5.7.0+)</small></small>
+    Configure WiFi <small><small>(EX-CSB1 v5.7.0+ only)</small></small>
     
   </span>
   
@@ -927,7 +927,7 @@
   
   
   <span class="md-ellipsis">
-    Configure WiFi <small><small>(EX-CSB1 v5.7.0+)</small></small>
+    Configure WiFi <small><small>(EX-CSB1 v5.7.0+ only)</small></small>
     
   </span>
   
@@ -1189,9 +1189,32 @@
   
   
   
-    <li class="md-nav__item">
-      <a href="../../ex-webthrottle/ex-webthrottle/" class="md-nav__link">
+    
+    
+      
         
+          
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_6" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../ex-webthrottle/" class="md-nav__link ">
+              
   
   
   <span class="md-ellipsis">
@@ -1200,7 +1223,50 @@
   </span>
   
 
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_6" id="__nav_2_6_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_6">
+            <span class="md-nav__icon md-icon"></span>
+            <br/>EX-WebThrottle
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ex-webthrottle/ex-webthrottle/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    User Guide
+    
+  </span>
+  
+
       </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -10413,10 +10479,10 @@
 
 <p>This page is exclusively for users of <strong>EX-CommandStation</strong> version 5.7.0 and later. Version 5.7.0 is currently in the experimental / development (DEVEL) phase and is not recommended for general users.</p>
 <p>If you are using an earlier version, please see <a href="../../../prepare-to-use/installer/config-wifi-shield/">WiFi Config</a>.</p>
-<p>Also see <a href="../../../reference/serial-commands/config-wifi-esp32/">WiFi configuration Serial Commands (<abbr title="EX-CommandStation Booster 1 Express">EX-CSB1</abbr> or ESP32 ONLY. V5.7.0+ ONLY)</a> for more technical information.</p>
+<p>Also see <a href="../../../reference/serial-commands/config-wifi-esp32/">WiFi configuration Serial Commands (<abbr title="EX-CommandStation/Booster 1 Express">EX-CSB1</abbr> or ESP32 ONLY. V5.7.0+ ONLY)</a> for more technical information.</p>
 <h2 id="background">Background<a class="headerlink" href="#background" title="Permanent link">&para;</a></h2>
 <p>Prior to version 5.7.0, WiFi configuration for <strong>EX-CommandStation</strong> was done through options in the <code>config.h</code> file. This method required users to modify the firmware (by editing <code>config.h</code>) and recompile it for their specific WiFi settings.</p>
-<p>From version 5.7.0, WiFi configuration options in <code>config.h</code> are <em>ignored</em> by the <strong><abbr title="EX-CommandStation Booster 1 Express">EX-CSB1</abbr></strong> or ESP32 EX-CommandStations.</p>
+<p>From version 5.7.0, WiFi configuration options in <code>config.h</code> are <em>ignored</em> by the <strong><abbr title="EX-CommandStation/Booster 1 Express">EX-CSB1</abbr></strong> or ESP32 EX-CommandStations.</p>
 <p>It is now necessary to use a new WiFi configuration method, which involves connecting to the <strong>EX-CommandStation</strong> <em>after you have flashed the firmware.</em>  You do so by connecting to the <strong>EX-CommandStation</strong> via USB or by connecting to the WiFi Access Point network of the <strong>EX-CommandStation</strong> and issuing a set of new commands. (Note that the WiFi Access Point network approach has limitations. See below.)</p>
 <p>The advantage of this is that it is independent of the flashing process, and will remember your WiFi settings across firmware updates and changes.</p>
 <p>From version 5.7.0, you must configure the WiFi settings through one of the following methods:</p>
@@ -10614,7 +10680,7 @@ This is useful if you have more than one <strong>EX-CommandStation</strong> on y
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../getting-started/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Getting Started">
+          <a href="../getting-started/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Quick Start Guide">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -10624,7 +10690,7 @@ This is useful if you have more than one <strong>EX-CommandStation</strong> on y
                 Previous
               </span>
               <div class="md-ellipsis">
-                Getting Started
+                Quick Start Guide
               </div>
             </div>
           </a>

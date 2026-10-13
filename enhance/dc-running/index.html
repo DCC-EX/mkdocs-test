@@ -857,7 +857,7 @@
   
   
   <span class="md-ellipsis">
-    Getting Started
+    Quick Start Guide
     
   </span>
   
@@ -880,7 +880,7 @@
   
   
   <span class="md-ellipsis">
-    Configure WiFi <small><small>(EX-CSB1 v5.7.0+)</small></small>
+    Configure WiFi <small><small>(EX-CSB1 v5.7.0+ only)</small></small>
     
   </span>
   
@@ -951,9 +951,32 @@
   
   
   
-    <li class="md-nav__item">
-      <a href="../../products/ex-webthrottle/ex-webthrottle/" class="md-nav__link">
+    
+    
+      
         
+          
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_6" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../products/ex-webthrottle/" class="md-nav__link ">
+              
   
   
   <span class="md-ellipsis">
@@ -962,7 +985,50 @@
   </span>
   
 
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_6" id="__nav_2_6_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_6">
+            <span class="md-nav__icon md-icon"></span>
+            <br/>EX-WebThrottle
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../products/ex-webthrottle/ex-webthrottle/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    User Guide
+    
+  </span>
+  
+
       </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -10155,13 +10221,13 @@
 
 
 <h1 id="running-a-legacy-dc-layout">Running a Legacy DC layout<a class="headerlink" href="#running-a-legacy-dc-layout" title="Permanent link">&para;</a></h1>
-<p>No additional hardware is required for DC (<abbr title="Pulse Width Modulation">PWM</abbr>) track assignments. A single <strong>EX‑CommandStation</strong> (<a href="../../products/ex-csb1/">Ready-To-Run <strong><abbr title="EX-CommandStation Booster 1 Express">EX-CSB1</abbr></strong></a> or <a href="../../diy/diy/">Self-Built</a>) is the only hardware needed for full functionality to run a DC Layout just as easily as a DCC layout.</p>
+<p>No additional hardware is required for DC (<abbr title="Pulse Width Modulation">PWM</abbr>) track assignments. A single <strong>EX‑CommandStation</strong> (<a href="../../products/ex-csb1/">Ready-To-Run <strong><abbr title="EX-CommandStation/Booster 1 Express">EX-CSB1</abbr></strong></a> or <a href="../../diy/diy/">Self-Built</a>) is the only hardware needed for full functionality to run a DC Layout just as easily as a DCC layout.</p>
 <h2 id="advantages-of-using-a-ex-commandstation-to-run-a-dc-layout">Advantages of using a EX-CommandStation to run a DC layout<a class="headerlink" href="#advantages-of-using-a-ex-commandstation-to-run-a-dc-layout" title="Permanent link">&para;</a></h2>
 <p>Using an <strong>DCC-EX EX-CommandStation</strong> to run a DC layout provides a number of advantages over conventional DC systems.</p>
 <ul>
 <li>All Wifi and wired connected throttles will operate the same for DC and DCC locos using Cab road numbers 'loco addresses' from 1 to 10239.</li>
 <li>Using this range of Cab locoid addresses you can assign any DC district/track any locoid to run in that DC district, i.e # 2.</li>
-<li>Multiple DC Districts (maximum four on <strong><abbr title="EX-CommandStation Booster 1 Express">EX-CSB1</abbr></strong> &amp; maximum eight on Mega2560 system) can be independently controlled and reconfigured to allow crossing between districts and polarity reversal.</li>
+<li>Multiple DC Districts (maximum four on <strong><abbr title="EX-CommandStation/Booster 1 Express">EX-CSB1</abbr></strong> &amp; maximum eight on Mega2560 system) can be independently controlled and reconfigured to allow crossing between districts and polarity reversal.</li>
 <li>Any DC District can be further subdivided into smaller blocks and energized or powered via <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnouts</abbr>/points and or SPDT switches If desired, i.e. staging or fiddle yard..</li>
 <li>Momentum of a loco can be defined in number of seconds of travel for acceleration and braking distances.</li>
 <li><strong>EXRAIL</strong> automation can be used to run trains, create routes, switch block relays, control signals, control accessory special effects, manage reversing loops, etcetera.</li>
@@ -10173,7 +10239,7 @@
 <h2 id="basic-functionality">Basic functionality<a class="headerlink" href="#basic-functionality" title="Permanent link">&para;</a></h2>
 <p>The <strong>DCC-EX EX-CommandStation</strong> has TrackManager commands that can change each district/track output to DC with appropriate polarity.  By associating a numeric road number as locoid (1..10239 the same range as DCC) with each district/track output the <strong>EX-CommandStation</strong> accepts incoming DCC throttle commands (Or <strong>EXRAIL</strong> automation commands) for that locoid and converts it to a DC output on every district/track output with the same locoid.</p>
 <p>The throttles or <strong>EXRAIL</strong> are unaware that they are driving a DC districts/tracks and so any DCC Throttle such as Engine Driver that can talk to <strong>DCC-EX</strong> will work for DC. In effect, in DC mode, the throttle drives the track compared with DCC mode where the throttle drives the loco.</p>
-<p>Although the <strong><abbr title="EX-CommandStation Booster 1 Express">EX-CSB1</abbr></strong> can be switched to DC operation by commands from the throttle (Engine Driver has a Track Manager panel to help do this) it is generally easier, for a fully DC layout, to configure it so that it starts up in the desired mode of DC Districts.</p>
+<p>Although the <strong><abbr title="EX-CommandStation/Booster 1 Express">EX-CSB1</abbr></strong> can be switched to DC operation by commands from the throttle (Engine Driver has a Track Manager panel to help do this) it is generally easier, for a fully DC layout, to configure it so that it starts up in the desired mode of DC Districts.</p>
 <p>Warning: The sometimes-alternate suggested technique of using a DCC decoder to output directly to a DC track instead internally to the loco motor is NOT RECOMMENDED as most decoders are not tolerant of a short between the motor outputs. This means a common track short could damage an expensive decoder.</p>
 <h2 id="configuring-default-outputs">Configuring Default Outputs<a class="headerlink" href="#configuring-default-outputs" title="Permanent link">&para;</a></h2>
 <p>The normal configuration method for <strong>DCC-EX EX-CommandStation</strong> is to use <strong>EXRAIL</strong> to define things like:</p>

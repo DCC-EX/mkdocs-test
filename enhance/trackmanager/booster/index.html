@@ -875,7 +875,7 @@
   
   
   <span class="md-ellipsis">
-    Getting Started
+    Quick Start Guide
     
   </span>
   
@@ -898,7 +898,7 @@
   
   
   <span class="md-ellipsis">
-    Configure WiFi <small><small>(EX-CSB1 v5.7.0+)</small></small>
+    Configure WiFi <small><small>(EX-CSB1 v5.7.0+ only)</small></small>
     
   </span>
   
@@ -969,9 +969,32 @@
   
   
   
-    <li class="md-nav__item">
-      <a href="../../../products/ex-webthrottle/ex-webthrottle/" class="md-nav__link">
+    
+    
+      
         
+          
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_6" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../products/ex-webthrottle/" class="md-nav__link ">
+              
   
   
   <span class="md-ellipsis">
@@ -980,7 +1003,50 @@
   </span>
   
 
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_6" id="__nav_2_6_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_6">
+            <span class="md-nav__icon md-icon"></span>
+            <br/>EX-WebThrottle
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../products/ex-webthrottle/ex-webthrottle/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    User Guide
+    
+  </span>
+  
+
       </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -10084,10 +10150,10 @@
   
 
 
-<h1 id="ex-csb1-in-dcc-booster-mode"><abbr title="EX-CommandStation Booster 1 Express">EX-CSB1</abbr> in DCC Booster Mode<a class="headerlink" href="#ex-csb1-in-dcc-booster-mode" title="Permanent link">&para;</a></h1>
-<p>The <strong><abbr title="EX-CommandStation Booster 1 Express">EX-CSB1</abbr></strong> can be configured as a DCC Booster.  As a booster it can take input from any DCC Command Station, not just an EX-CommandStation, to provide two additional power districts to your layout.  With the addition of an EX-MotorShield8874, it can provide up to 4 power districts.</p>
-<h2 id="configuring-the-ex-csb1-as-a-dcc-booster">Configuring the <abbr title="EX-CommandStation Booster 1 Express">EX-CSB1</abbr> as a DCC Booster<a class="headerlink" href="#configuring-the-ex-csb1-as-a-dcc-booster" title="Permanent link">&para;</a></h2>
-<p>To configure the <strong><abbr title="EX-CommandStation Booster 1 Express">EX-CSB1</abbr></strong> as a DCC Booster, you will need to install the EX-CommandStation software on it with the addition of the following commands in the <code>myAutomation.h</code> file:</p>
+<h1 id="ex-csb1-in-dcc-booster-mode"><abbr title="EX-CommandStation/Booster 1 Express">EX-CSB1</abbr> in DCC Booster Mode<a class="headerlink" href="#ex-csb1-in-dcc-booster-mode" title="Permanent link">&para;</a></h1>
+<p>The <strong><abbr title="EX-CommandStation/Booster 1 Express">EX-CSB1</abbr></strong> can be configured as a DCC Booster.  As a booster it can take input from any DCC Command Station, not just an EX-CommandStation, to provide two additional power districts to your layout.  With the addition of an EX-MotorShield8874, it can provide up to 4 power districts.</p>
+<h2 id="configuring-the-ex-csb1-as-a-dcc-booster">Configuring the <abbr title="EX-CommandStation/Booster 1 Express">EX-CSB1</abbr> as a DCC Booster<a class="headerlink" href="#configuring-the-ex-csb1-as-a-dcc-booster" title="Permanent link">&para;</a></h2>
+<p>To configure the <strong><abbr title="EX-CommandStation/Booster 1 Express">EX-CSB1</abbr></strong> as a DCC Booster, you will need to install the EX-CommandStation software on it with the addition of the following commands in the <code>myAutomation.h</code> file:</p>
 <div class="language-c++ highlight"><pre><span></span><code><span class="n">AUTOSTART</span>
 <span class="w">  </span><span class="n">PRINT</span><span class="p">(</span><span class="s">&quot;Auto Booster Mode&quot;</span><span class="p">)</span>
 <span class="w">  </span><span class="n">SET_TRACK</span><span class="p">(</span><span class="n">A</span><span class="p">,</span><span class="w"> </span><span class="n">MAIN</span><span class="p">)</span>
@@ -10129,8 +10195,8 @@
 <div class="language-c++ highlight"><pre><span></span><code><span class="cp">#define WIFI_LED 33</span>
 <span class="cp">#define BOOSTER_INPUT 32</span>
 </code></pre></div>
-<p>You will then need to connect a <code>MAIN</code> output from your <strong>EX-CommandStation</strong> to the Railsync connector on the <strong><abbr title="EX-CommandStation Booster 1 Express">EX-CSB1</abbr></strong> Booster.  The <strong><abbr title="EX-CommandStation Booster 1 Express">EX-CSB1</abbr> Booster</strong> will then provide power to the rails on the A and B outputs.  If you are using an <strong>EX-MotorShield8874</strong>, it will also provide power to the rails on the C and D outputs.</p>
-<p>If you are using an <strong><abbr title="EX-CommandStation Booster 1 Express">EX-CSB1</abbr></strong> as your Command Station, it is recommended that you use one of the outputs as the dedicated output to the <strong><abbr title="EX-CommandStation Booster 1 Express">EX-CSB1</abbr></strong> Booster. If you use the output to the booster, as well as to a block of track, a short or overload on that block will cause the <strong><abbr title="EX-CommandStation Booster 1 Express">EX-CSB1</abbr></strong> Booster to also kill power to all of its outputs.</p>
+<p>You will then need to connect a <code>MAIN</code> output from your <strong>EX-CommandStation</strong> to the Railsync connector on the <strong><abbr title="EX-CommandStation/Booster 1 Express">EX-CSB1</abbr></strong> Booster.  The <strong><abbr title="EX-CommandStation/Booster 1 Express">EX-CSB1</abbr> Booster</strong> will then provide power to the rails on the A and B outputs.  If you are using an <strong>EX-MotorShield8874</strong>, it will also provide power to the rails on the C and D outputs.</p>
+<p>If you are using an <strong><abbr title="EX-CommandStation/Booster 1 Express">EX-CSB1</abbr></strong> as your Command Station, it is recommended that you use one of the outputs as the dedicated output to the <strong><abbr title="EX-CommandStation/Booster 1 Express">EX-CSB1</abbr></strong> Booster. If you use the output to the booster, as well as to a block of track, a short or overload on that block will cause the <strong><abbr title="EX-CommandStation/Booster 1 Express">EX-CSB1</abbr></strong> Booster to also kill power to all of its outputs.</p>
 <div class="admonition note">
 <p class="admonition-title">Output configuration options</p>
 <p>The outputs can be configured as:</p>

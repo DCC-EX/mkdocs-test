@@ -862,7 +862,7 @@
   
   
   <span class="md-ellipsis">
-    Getting Started
+    Quick Start Guide
     
   </span>
   
@@ -885,7 +885,7 @@
   
   
   <span class="md-ellipsis">
-    Configure WiFi <small><small>(EX-CSB1 v5.7.0+)</small></small>
+    Configure WiFi <small><small>(EX-CSB1 v5.7.0+ only)</small></small>
     
   </span>
   
@@ -1076,9 +1076,32 @@
   
   
   
-    <li class="md-nav__item">
-      <a href="../../ex-webthrottle/ex-webthrottle/" class="md-nav__link">
+    
+    
+      
         
+          
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_6" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../ex-webthrottle/" class="md-nav__link ">
+              
   
   
   <span class="md-ellipsis">
@@ -1087,7 +1110,50 @@
   </span>
   
 
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_6" id="__nav_2_6_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_6">
+            <span class="md-nav__icon md-icon"></span>
+            <br/>EX-WebThrottle
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ex-webthrottle/ex-webthrottle/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    User Guide
+    
+  </span>
+  
+
       </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -10203,12 +10269,13 @@
 
 
 <h1 id="exmotorshield8874">EX‑MotorShield8874<a class="headerlink" href="#exmotorshield8874" title="Permanent link">&para;</a></h1>
-<p><img align="right" alt="EX-8874 Logo" class="only-light" src="../../../_static/images/logos/product-logo-ex-motorshield8874-only-light.png" width="400px" />
-<img align="right" alt="EX-8874 Logo" class="only-dark" src="../../../_static/images/logos/product-logo-ex-motorshield8874-only-dark.png" width="400px" /></p>
+<p><img align="right" alt="EX-MotorShield8874 Logo" class="only-light" src="../../../_static/images/logos/product-logo-ex-motorshield8874-only-light.png" width="400px" />
+<img align="right" alt="EX-MotorShield8874 Logo" class="only-dark" src="../../../_static/images/logos/product-logo-ex-motorshield8874-only-dark.png" width="400px" /></p>
 <p>Designed in conjunction with the <strong>DCC-EX</strong> development team, the <strong>EX‑MotorShield8874</strong> is extremely simple to use with all current and future generations of EX‑CommandStation hardware.</p>
-<p>This board is the new standard by which we compare other boards.</p>
 <p><img align="right" alt="EX-CSB1" src="../../../_static/images/ex8874/ex_motorshield8874_purple_side-small.png" /></p>
+<p>This board is the new standard by which we compare other boards.</p>
 <p>Not <em>required</em> for the <em>EX-CSB1</em>, but can be optionally added to provide two additional 5amp outputs (to two provided by default).</p>
+<p><br/></p>
 <h2 id="features">Features<a class="headerlink" href="#features" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Pin compatible with the original Arduino Motor Shield Rev3 but provides significantly improved electrical performance for driving higher loads, and improved usability.</li>
@@ -10246,8 +10313,8 @@
 <p><strong>NOTE:</strong> The <strong>EX‑MotorShield8874</strong> can supply up to 5A of track power per channel, a power supply of more than 10A peak capacity is required to run both channels at full peak current and have power left for the <strong>EX-CommandStation</strong>. A power supply that is unable to provide the current at which the software detects a short-circuit will not be safe as the <strong>EX-CommandStation</strong> will not be able to detect the short.</p>
 <p>If the track power supply is not plugged in, the <strong>EX-CommandStation</strong> will report track faults.</p>
 <h2 id="stacking-two-motor-shields">Stacking two motor shields<a class="headerlink" href="#stacking-two-motor-shields" title="Permanent link">&para;</a></h2>
-<p>Stacking an EX-8874 and another motor shield type is <strong>not recommended</strong>. There are complex pin conflicts and software configuration requirements.</p>
-<p>The <strong>CSB1</strong> can only have a single <strong>EX8874</strong> stacked on it, unmodified. There are insufficient pins available on the internal ESP32 processor to handle more.</p>
+<p>Stacking an <strong>EX-MotorShield8874</strong> and another motor shield type is <strong>not recommended</strong>. There are complex pin conflicts and software configuration requirements.</p>
+<p>The <strong>EX-CSB1</strong> can only have a single <strong>EX-MotorShield8874</strong> stacked on it, unmodified. There are insufficient pins available on the internal ESP32 processor to handle more.</p>
 <h3 id="steps-to-stack">Steps to Stack<a class="headerlink" href="#steps-to-stack" title="Permanent link">&para;</a></h3>
 <ul>
 <li>Leave the first <strong>EX‑MotorShield8874</strong> in the stack entirely unmodified.</li>
@@ -10294,7 +10361,7 @@ PC2, PC3 on Nucleo-64</p>
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="October 11, 2026 06:52:45 UTC">October 11, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="October 12, 2026 22:38:49 UTC">October 12, 2026</span>
   </span>
 
     

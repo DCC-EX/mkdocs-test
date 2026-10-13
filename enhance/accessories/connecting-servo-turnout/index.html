@@ -875,7 +875,7 @@
   
   
   <span class="md-ellipsis">
-    Getting Started
+    Quick Start Guide
     
   </span>
   
@@ -898,7 +898,7 @@
   
   
   <span class="md-ellipsis">
-    Configure WiFi <small><small>(EX-CSB1 v5.7.0+)</small></small>
+    Configure WiFi <small><small>(EX-CSB1 v5.7.0+ only)</small></small>
     
   </span>
   
@@ -969,9 +969,32 @@
   
   
   
-    <li class="md-nav__item">
-      <a href="../../../products/ex-webthrottle/ex-webthrottle/" class="md-nav__link">
+    
+    
+      
         
+          
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_6" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../products/ex-webthrottle/" class="md-nav__link ">
+              
   
   
   <span class="md-ellipsis">
@@ -980,7 +1003,50 @@
   </span>
   
 
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_6" id="__nav_2_6_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_6">
+            <span class="md-nav__icon md-icon"></span>
+            <br/>EX-WebThrottle
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../products/ex-webthrottle/ex-webthrottle/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    User Guide
+    
+  </span>
+  
+
       </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -10175,12 +10241,12 @@
 
 
 <h1 id="connecting-a-servo-turnoutpoint">Connecting a servo <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnout</abbr>/point<a class="headerlink" href="#connecting-a-servo-turnoutpoint" title="Permanent link">&para;</a></h1>
-<p>The details on this page assume you are using an <strong><abbr title="EX-CommandStation Booster 1 Express">EX-CSB1</abbr></strong> command station or a <abbr title="Do-It-Yourself / Self Build">DIY</abbr> station with an <strong>EX-8874</strong> motor shield and WiFi connection. Otherwise the steps are the same but the wiring is trickier without the Qwiic sockets and testing requires command input.</p>
+<p>The details on this page assume you are using an <strong><abbr title="EX-CommandStation/Booster 1 Express">EX-CSB1</abbr></strong> command station or a <abbr title="Do-It-Yourself / Self Build">DIY</abbr> station with an <strong>EX-MotorShield8874</strong> motor shield and WiFi connection. Otherwise the steps are the same but the wiring is trickier without the Qwiic sockets and testing requires command input.</p>
 <h2 id="you-will-need">You Will Need<a class="headerlink" href="#you-will-need" title="Permanent link">&para;</a></h2>
 <p>You will need the following for up to 16 servos.</p>
 <ul>
 <li>Your <strong>EX-CommandStation</strong> with power supply and USB connection to your PC.</li>
-<li>Qwiic cable for connection to <strong><abbr title="EX-CommandStation Booster 1 Express">EX-CSB1</abbr></strong>, with Qwiic or dupont connectors for connection to PCA9685.</li>
+<li>Qwiic cable for connection to <strong><abbr title="EX-CommandStation/Booster 1 Express">EX-CSB1</abbr></strong>, with Qwiic or dupont connectors for connection to PCA9685.</li>
 <li>PCA9685 module</li>
 <li>Up to 16 SG90 servos</li>
 <li><strong>EX-Installer</strong> downloaded on your PC</li>
@@ -10190,7 +10256,7 @@
 <h2 id="follow-the-steps-below">Follow the Steps Below<a class="headerlink" href="#follow-the-steps-below" title="Permanent link">&para;</a></h2>
 <ol>
 <li>Turn off power to your <strong>EX-CommandStation</strong> and unplug the USB cable and power supply.</li>
-<li>Connect the Qwiic cable between the <strong><abbr title="EX-CommandStation Booster 1 Express">EX-CSB1</abbr></strong> or EX8874 and the PCA9685 module.<BR>
+<li>Connect the Qwiic cable between the <strong><abbr title="EX-CommandStation/Booster 1 Express">EX-CSB1</abbr></strong> or EX8874 and the PCA9685 module.<BR>
  <img alt="CSB1" src="../../../_static/images/ex-csb1/csb1qwiic.jpg" style="width: 70%" /> <BR>
 When using Mega, the <abbr title="(Inter-Integrated Circuit, pronounced &quot;eye-squared-see&quot;) is a synchronous, multi-controller/multi-target serial communication protocol">I2C</abbr> bus is 5V.<BR>
 Use the <abbr title="(Inter-Integrated Circuit, pronounced &quot;eye-squared-see&quot;) is a synchronous, multi-controller/multi-target serial communication protocol">I2C</abbr> headers, where 5V is available (IOREF/Vdd).<BR>
@@ -10271,7 +10337,7 @@ Configure additional PCA9685 in myAutomation.h.</p>
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="October 12, 2026 04:21:05 UTC">October 12, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="October 12, 2026 22:38:49 UTC">October 12, 2026</span>
   </span>
 
     
