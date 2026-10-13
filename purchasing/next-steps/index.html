@@ -10299,8 +10299,64 @@
 </ul>
 <hr />
 <h2 id="testing-with-ex-webthrottle">Testing with EX-WebThrottle<a class="headerlink" href="#testing-with-ex-webthrottle" title="Permanent link">&para;</a></h2>
-<p><mark>TODO</mark> Initial Testing with EX-WebThrottle</p>
-<p>See <a href="../../throttles/connecting-usb/">Connecting a USB Throttle to your EX-CommandStation</a> and see <a href="../../products/ex-webthrottle/ex-webthrottle/">EX-WebThrottle</a></p>
+<p><img alt="EX-WebThrottle setup" src="../../_static/images/ex-webthrottle/webthrottle_setup.png" width="600px" /></p>
+<p>Connect Everything:</p>
+<ul>
+<li>Disconnect the <a href="https://dcc-ex.com/ex-commandstation/index.html">EX‑CommandStation</a> from the computer (that you used to load the software)</li>
+<li>Connect wires from the <abbr title="Main Track / Ops Mode">MAIN</abbr> Terminals of the motor driver (output A) to your <strong><abbr title="Main Track / Ops Mode">MAIN</abbr> track</strong></li>
+<li>Plug in the power supply for the motor driver <strong>only</strong></li>
+<li>Reconnect the EX‑CommandStation to the computer</li>
+<li>Wait for about 30 seconds for the Command Station to run through its startup sequence</li>
+</ul>
+<div class="admonition important">
+<p class="admonition-title">Programming Track</p>
+<p>The programming track is for programming only. Make sure you are on the <abbr title="Main Track / Ops Mode">MAIN</abbr> track if you expect your loco to move or respond to light or sound commands.</p>
+</div>
+<p><img alt="EX-WebThrottle screen" src="../../_static/images/ex-webthrottle/ex-webthrottle.png" width="400px" /></p>
+<ul>
+<li>Click this link and it will load a web page from our server that will run the web throttle on your PC</li>
+</ul>
+<p><a class="md-button md-button--primary" href="https://dcc-ex.com/WebThrottle-EX/">Run EX&#8209;WebThrottle Now</a></p>
+<ul>
+<li>Click on the <code>Serial</code> dropdown button and select <code>Serial</code></li>
+<li>Click on the <code>Connect EX-CS</code> button</li>
+<li>
+<p>If the program finds a compatible device</p>
+<ul>
+<li>It will open a popup a window showing you a selection.  </li>
+</ul>
+<p>It may show a line at the top such as <code>Arduino Mega 2560 (COM3)</code>. (The COM port will vary)</p>
+<ul>
+<li>Click on your board to select it</li>
+<li>Then click the Connect EX-CS button</li>
+</ul>
+</li>
+<li>
+<p>You should then be connected to the <strong>EX‑CommandStation</strong> and should see the response from the Command Station in the log textbox of the debug console at the bottom of the throttle window.  </p>
+<p>Make sure your debug console is open. If it isn’t, use the slider button in the lower left to open it. You can also open the DevTools window in your browser to see more developer logging</p>
+</li>
+<li>
+<p>Once you are connected, you can:</p>
+<ul>
+<li>Enter the <code>&lt;s&gt;</code> command in the “direct command” textbox to get status information from your Command Station. To do this just enter <code>s</code> (without the quotes) and press the SEND button.</li>
+<li>You should see &lt;iDCC++…&gt; returned in the log window with your version, type of Arduino, type of motor driver, and some other information</li>
+<li>Now you are ready to run trains!</li>
+<li>Place your loco on the <strong><abbr title="Main Track / Ops Mode">MAIN</abbr> track</strong>, a loco will NOT run on a programming track</li>
+<li>Click the Power Slider button to turn on power to your track</li>
+<li>You should see lights on your Either the 'Arduino Motor Shield R38' or 'Deek-Robot Motor Shield or <strong>EX‑MotorShield8874</strong> and an indication that your loco has power</li>
+<li>Next go to the <code>Locomotive ID</code> textbox</li>
+<li>Enter the DCC address of your loco</li>
+<li>Then press the <code>Acquire</code> button</li>
+<li>You should now have full control over your loco</li>
+<li>The circular control or vertical slider (chosen by the settings page) can be moved by clicking and holding down the mouse button and dragging, clicking at a spot where you want the throttle to move, or clicking the <code>+</code> and <code>-</code> buttons</li>
+</ul>
+</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">LEDs</p>
+<p>If you did not see the LEDs light up, near the A and B outputs on the Motor Shield, try pushing down on the Motor Shield to make sure that the pins are properly seated into the Arduino.</p>
+</div>
+<p>Also see <a href="../../throttles/connecting-usb/">Connecting a USB Throttle to your EX-CommandStation</a> or see <a href="../../products/ex-webthrottle/ex-webthrottle/">EX-WebThrottle</a></p>
 <hr />
 <h2 id="testing-with-a-smart-device-over-wifi">Testing with a Smart Device over WiFi<a class="headerlink" href="#testing-with-a-smart-device-over-wifi" title="Permanent link">&para;</a></h2>
 <div class="admonition note inline end">
