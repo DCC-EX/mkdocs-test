@@ -1,11 +1,11 @@
-# DCC-EX EX-CommandStation - Overview
+# EX-CommandStation - Overview
 
 ![EX-CommandStation Logo](../../_static/images/logos/product-logo-ex-commandstation-only-light.png){ .only-light width=400px align=right }
 ![EX-CommandStation Logo](../../_static/images/logos/product-logo-ex-commandstation-only-dark.png){ .only-dark width=400px align=right }
 
 A DCC Command Station powers your track and sends digital signals to the locos and accessories through the track. All commercial command stations do that, but we think we do it a lot better for a lot less money.
 
-<span style="font-size: larger;">Our outstanding **EX-CommandStation** software is at the core of our [ready-to-run](../ex-csb1/index.md) and [self-build](../../diy/diy.md) systems.</span>
+<span style="font-size: larger;">Our outstanding free, open source, **EX-CommandStation** software is at the core of our [ready-to-run](../ex-csb1/index.md) and [self-build](../../diy/diy.md) systems.</span>
 
 ## Features
 
@@ -15,13 +15,13 @@ It supports almost all of the [NMRA](https://nmra.org) [Digital Command Control 
 
 - Simultaneous control of multiple locomotives
 - Control of all cab/loco functions (F0-F28 and F29-F68)
-- Control of accessory / function decoders (F0-F28 and F29-F68)
+- Control of accessory / function decoders
 - Main Track: Write configuration variable (CV) bytes and set/clear specific CV bits (aka Programming on Main, or POM)
 - Programming Track: Same as the main track with the addition of reading CV bytes
 
-It includes advanced features, such as:
+It also includes advanced features, such as:
 
-- Works on a variety of different microcontrollers and motor diver hardware
+- Works on a variety of different [microcontroller](../../reference/microcontrollers/index.md) and [motor driver](../../reference/hardware/motorboards/index.md) hardware
 - A [wiThrottle Server](../../throttles/withrottle-vs-native-protocol.md) implementation for compatibility with popular WiFi throttles (controllers)
 - A [Native Serial Server](../../throttles/withrottle-vs-native-protocol.md) implementation for use with advanced WiFi and hardware throttles (controllers)
 - General purpose inputs and outputs (I/O) for extensibility (Self Build only)

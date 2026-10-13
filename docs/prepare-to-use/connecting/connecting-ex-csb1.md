@@ -4,6 +4,8 @@
 
 How to connect your **EX-CSB1** to your layout and programming track.
 
+Note: This page is for the **EX-CSB1**. If you have an self built **EX-CommandStation** please refer to the [corresponding page for the EX-CSB1](connecting-diy.md)
+
 ![EX-CSB1 Connector Map](../../_static/images/ex-csb1/csb1_3d_render_labelled.png){ width="100%" }
 
 The **DCC-EX EX-CommandStation/Booster 1 Express (EX-CSB1)** needs the minimum following connections to be able to run trains:

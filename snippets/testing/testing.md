@@ -10,9 +10,60 @@ Ways you can test your **EX-CommandStation** include:
 
 ## Testing with EX-WebThrottle
 
-==TODO== Initial Testing with EX-WebThrottle
+![EX-WebThrottle setup](/_static/images/ex-webthrottle/webthrottle_setup.png){ width=600px }
 
-See [Connecting a USB Throttle to your EX-CommandStation](/throttles/connecting-usb.md) and see [EX-WebThrottle](/products/ex-webthrottle/ex-webthrottle.md)
+Connect Everything:
+
+- Disconnect the [EX‑CommandStation](https://dcc-ex.com/ex-commandstation/index.html) from the computer (that you used to load the software)
+- Connect wires from the MAIN Terminals of the motor driver (output A) to your **MAIN track**
+- Plug in the power supply for the motor driver **only**
+- Reconnect the EX‑CommandStation to the computer
+- Wait for about 30 seconds for the Command Station to run through its startup sequence
+
+!!! Important "Programming Track"
+
+    The programming track is for programming only. Make sure you are on the MAIN track if you expect your loco to move or respond to light or sound commands.
+
+![EX-WebThrottle screen](/_static/images/ex-webthrottle/ex-webthrottle.png){ width=400px }
+
+- Click this link and it will load a web page from our server that will run the web throttle on your PC
+
+[Run EX&#8209;WebThrottle Now](https://dcc-ex.com/WebThrottle-EX/){ .md-button .md-button--primary }
+
+- Click on the ``Serial`` dropdown button and select ``Serial``
+- Click on the ``Connect EX-CS`` button
+- If the program finds a compatible device
+
+    - It will open a popup a window showing you a selection.  
+
+    It may show a line at the top such as ``Arduino Mega 2560 (COM3)``. (The COM port will vary)
+
+    - Click on your board to select it
+    - Then click the Connect EX-CS button
+
+- You should then be connected to the **EX‑CommandStation** and should see the response from the Command Station in the log textbox of the debug console at the bottom of the throttle window.  
+
+    Make sure your debug console is open. If it isn’t, use the slider button in the lower left to open it. You can also open the DevTools window in your browser to see more developer logging
+
+- Once you are connected, you can:
+
+    - Enter the `<s>` command in the “direct command” textbox to get status information from your Command Station. To do this just enter `s` (without the quotes) and press the SEND button.
+    - You should see &lt;iDCC++…&gt; returned in the log window with your version, type of Arduino, type of motor driver, and some other information
+- Now you are ready to run trains!
+- Place your loco on the **MAIN track**, a loco will NOT run on a programming track
+- Click the Power Slider button to turn on power to your track
+- You should see lights on your Either the 'Arduino Motor Shield R38' or 'Deek-Robot Motor Shield or **EX‑MotorShield8874** and an indication that your loco has power
+- Next go to the `Locomotive ID` textbox
+- Enter the DCC address of your loco
+- Then press the ``Acquire`` button
+- You should now have full control over your loco
+- The circular control or vertical slider (chosen by the settings page) can be moved by clicking and holding down the mouse button and dragging, clicking at a spot where you want the throttle to move, or clicking the ``+`` and ``-`` buttons
+
+!!! note "LEDs"
+
+    If you did not see the LEDs light up, near the A and B outputs on the Motor Shield, try pushing down on the Motor Shield to make sure that the pins are properly seated into the Arduino.
+
+Also see [Connecting a USB Throttle to your EX-CommandStation](/throttles/connecting-usb.md) or see [EX-WebThrottle](/products/ex-webthrottle/ex-webthrottle.md)
 
 ----
 
