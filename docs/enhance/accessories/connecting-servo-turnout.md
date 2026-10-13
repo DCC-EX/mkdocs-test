@@ -1,6 +1,6 @@
 # Connecting a servo turnout/point
 
-The details on this page assume you are using an **EX-CSB1** command station or a DIY station with an **EX-8874** motor shield and WiFi connection. Otherwise the steps are the same but the wiring is trickier without the Qwiic sockets and testing requires command input.
+The details on this page assume you are using an **EX-CSB1** command station or a DIY station with an **EX-MotorShield8874** motor shield and WiFi connection. Otherwise the steps are the same but the wiring is trickier without the Qwiic sockets and testing requires command input.
 
 ## You Will Need
 

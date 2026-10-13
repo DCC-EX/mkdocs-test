@@ -17,7 +17,7 @@ These are our powerful, but easy to use, get up and running quickly type product
 
 ![EX-CSB1](../_static/images/ex-csb1/csb1-small.png){ align=right} ![EX-CSB1](../_static/images/ex-csb1/csb1-resin-case-small.png){ align=right}
 
-### EX-CommandStation Booster 1 Express
+### EX-CommandStation/Booster 1 Express
 
 [![EX-CommandStation Logo](../_static/images/logos/product-logo-ex-commandstation-only-light.png){ .only-light width=400px }
 ![EX-CommandStation Logo](../_static/images/logos/product-logo-ex-commandstation-only-dark.png){ .only-dark width=400px }](/products/ex-commandstation/index.md)
@@ -87,8 +87,8 @@ Refer to the [Easy build Arduino Mega page](/diy/mega-easy.md) for information o
 
 ### EX-MotorShield8874
 
-[![EX-8874 Logo](../_static/images/logos/product-logo-ex-motorshield8874-only-light.png){ .only-light width=400px }
-![EX-8874 Logo](../_static/images/logos/product-logo-ex-motorshield8874-only-dark.png){ .only-dark width=400px }](/products/ex-motorshield8874/ex-motorshield8874.md)
+[![EX-MotorShield8874 Logo](../_static/images/logos/product-logo-ex-motorshield8874-only-light.png){ .only-light width=400px }
+![EX-MotorShield8874 Logo](../_static/images/logos/product-logo-ex-motorshield8874-only-dark.png){ .only-dark width=400px }](/products/ex-motorshield8874/ex-motorshield8874.md)
 
 A dual channel, 5 amp (per channel) motor shield designed specifically for **DCC-EX** in an Arduino shield format.
 
