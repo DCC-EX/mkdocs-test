@@ -4,15 +4,21 @@ icon: material/store
 
 # Official DCC-EX Suppliers
 
-With the ever increasing demand for hardware that is guaranteed to be **DCC-EX** compatible, and the uptake of EX-CommandStation by more Conductor level users, we are striving to make the **DCC-EX** ecosystem more accessible.
+With the ever increasing demand for hardware that is guaranteed to be **DCC-EX** compatible, and the uptake of EX-CommandStation by more entry level users, we are striving to make the **DCC-EX** ecosystem more accessible.
 
-As part of that, and starting with the release of the **EX-MotorShield8874**, we have a number of official **DCC-EX** dealers that can supply various different hardware devices as well as complete **EX-CommandStation** systems.
+As part of that we have a number of official **DCC-EX** suppliers that can supply various different hardware devices including complete, ready to run, **EX-CommandStation/Booster 1 Express (EX-CSB1)** systems.
 
-The dealers listed on this page work with the **DCC-EX** team to ensure these devices are compatible.
+The suppliers listed on this page work with the **DCC-EX** team to ensure these devices are compatible.
+
+!!! important "Choosing a Power Supply"
+
+    Our official suppliers will be able to assist you in choosing a power supply, but before purchasing or self building an **EX-CommandStation** we recommend you review our page on [how to choose an appropriate power supply](power.md).
 
 !!! note "International purchasers"
 
     If you are not in any of these countries, be aware that each dealer can usually ship anywhere in the world. Each dealer's primary territory is listed, so purchase from the one closest to you to save on shipping and duty charges.
+
+----
 
 ## ![USA Flag](../_static/images/icons/flag_us_small.png) In the United States serving USA, Canada, & Mexico
 
@@ -44,3 +50,11 @@ The dealers listed on this page work with the **DCC-EX** team to ensure these de
 
 - [Millennium Engineering Pty Ltd](https://www.milleng.com.au/)
 - [Buckambool Model Trains](https://bmodeltrains.com/product-category/dcc-ex-command-stations/)
+
+*[APAC]: Asia-Pacific region
+*[AU]: Australia
+*[NZ]: New Zealand
+*[UK]: United Kingdom
+*[USA]: United States of America
+
+--8<-- "snippets/abbr.md"
