@@ -3,21 +3,17 @@
 ![EX-8266 Logo](../../_static/images/logos/product-logo-ex-wifishield8266-only-light.png){ .only-light width=400px align=right }
 ![EX-8266 Logo](../../_static/images/logos/product-logo-ex-wifishield8266-only-dark.png){ .only-dark width=400px align=right }
 
-Designed in conjunction with the **DCC-EX** development team…
-
-==TODO== Improve intro paragraph
+The v1.1 WiFi shield is a joint **DCC-EX** and Makerfabs project. It comes already flashed with **DCC-EX** **EX-CommandStation** compatible firmware.
 
 ![EX-8266](../../_static/images/wifi/exwifi6-small.png){ align=right}
 
-Recommended for use with Arduino MEGA based DIY **EX-CommandStations**. Not required for the **EX-CSB1** or ESP32 based **EX-CommandStations**.
+The **EX-WiFiShield 8266** is a cost-effective and highly integrated UART-WiFi module for **DCC-EX**. It comes in a standard Arduino Uno shield format.
 
-## Overview
+!!! note "Recommended for use with Arduino MEGA based DIY **EX-CommandStations**."
 
-The v1.1 WiFi shield is a joint **DCC-EX** and Makerfabs project. It comes already flashed with **DCC-EX** **EX-CommandStation** compatible firmware and can now be easily updated with an Arduino or USB to TTL Adapter.
+    Not required for the **EX-CSB1** or ESP32 based **EX-CommandStations**.
 
-The **EX-WiFiShield 8266** is a cost-effective and highly integrated UART-WiFi module for **DCC-EX** and general IoT applications. It comes in a standard Arduino Uno shield format and uses ULP technology (Ultra Low Power).
-
-This WiFi Shield is based on ESP-12F, which is a newer version of the proven ESP8266 chip. With this Shield, you can connect your **EX-CommandStation** to your network, or have it operate as a stand alone Access Point to connect directly from your phone, tablet, laptop, or WiFi hardware throttle.
+This WiFi Shield is based on the new version of the ESP-12F with the Wifi chip ESP8266.  With this Shield, you can connect your **EX-CommandStation** to your home Wifi network, or have it operate as a stand alone Access Point to connect directly from your phone, tablet, laptop, or WiFi hardware throttle.
 
 ## Features
 
