@@ -23,11 +23,11 @@ For the **EX-CSB1** and the **EX-MotorShield8874** the DC voltage of the power s
 
 For the Arduino Motor Shield, the DEEK Motor Shield and most others, the quasi-AC voltage on the track will be 1.5-2v *less than* the voltage of the power supply. So for those motor drivers, it is necessary to use a power supply about 2vDC greater than you want on the track.
 
-## Using an EX8874 or EX-CSB1
+## Using an EX-8874 or EX-CSB1
 
-The EX8874 (which is also built into the EX-CSB1) provides power for both the track and the **EX-CommandStation**. There is almost zero voltage drop between the power supply and the track.
+The **EX-MotorShield8874** (which is also built into the **EX-CSB1**) provides power for both the track and the **EX-CommandStation**. There is almost zero voltage drop between the power supply and the track.
 
-We strongly advise purchasing a suitable power supply at the same time as the CSB or EX8874 from a vendor who understands your requirements.
+We strongly advise purchasing a suitable power supply at the same time as the **EX-CSB1**** or **EX-MotorShield8874** from a vendor who understands your requirements.
 
 ## Other Motor Drivers
 

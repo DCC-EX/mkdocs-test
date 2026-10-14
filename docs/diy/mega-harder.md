@@ -6,7 +6,7 @@ These instructions assume a slightly more competent user who has made the decisi
 
 There are a limited number of suitable motor or WiFi shields available and each has its own quirks.
 
-Note. The use of the Arduino UNO is no longer supported.
+Note. The use of the Arduino UNO is no longer supported by the current version of the **EX-CommandStation** software, but it is still possible to install older version on an Arduino UNO.
 
 ## What you need
 
@@ -15,14 +15,17 @@ To build a basic DIY **EX-CommandStation** you will need:
 - A PC or laptop (Not A Raspberry Pi) running a reasonably recent versions of Windows, Linux or MacOS
 - An Arduino Mega microcontroller running our free Open Source software
 - USB cable to your PC for the processor.
-- an Arduino Standard Motor-Shield (or others as noted in ==TODO==) to power the track.
+- an Arduino Standard Motor-Shield (or others as noted in the [motor shields list](../reference/hardware/motorboards/index.md)) to power the track.
 - A double-insulated DC power supply with a voltage suitable for your layout/locos.
 - An additional double-insulated DC Power supply is needed to drive the Arduino microcontroller.
   7 to 9 volts, using the barrel connector, is recommended when using a WiFi shield.
   5 volts will not work for the barrel connector, but could be connected via USB cable.
 - Optionally
     - A female barrel connector to match the plug on your chosen track power supply
-    - A suitable WiFi shield to use WiFi throttles (recommended) with 2 suitable M-F Dupont wires.<br/>OR
+    - A suitable WiFi shield to use WiFi throttles (recommended) with 2 suitable M-F Dupont wires.
+
+        OR
+
     - An Ethernet Shield
 
 ## Step By Step Build

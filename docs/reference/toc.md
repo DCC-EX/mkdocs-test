@@ -19,15 +19,17 @@ li:not(.md-nav__item, .md-tabs__item) a {
 - [Home <small>(<small> </small>)</small>](../index.md)
 - **Products**
     - [DCC-EX Product Overview <small>(Product Overview)</small>](../products/products.md)
-    - **<br/>EX-CommandStation<small><small> (Ready&nbsp;to&nbsp;Run &amp; Self&nbsp;Build)</small></small>**
-        - [DCC-EX EX-CommandStation - Overview <small>(EX-CommandStation Overview)</small>](../products/ex-commandstation/index.md)
+    - **<br/>EX-CommandStation<small><small> <br/>(Ready&nbsp;to&nbsp;Run &amp; Self&nbsp;Build)</small></small>**
+        - [EX-CommandStation - Overview <small>(EX-CommandStation Overview)</small>](../products/ex-commandstation/index.md)
     - **<b>EX-CSB1</b> <small><small>(Ready&nbsp;to&nbsp;Run) <br/>EX-CommandStation/Booster&thinsp;1&thinsp;Express</small></small>**
-        - [**EX-CSB1** <br/>EX-CommandStation/Booster 1 Express <small>(<i><b>EX-CSB1</b> CommandStation/Booster 1 Express</i>)</small>](../products/ex-csb1/index.md)
-        - [**EX-CSB1** - Quick Start<br/>EX-CommandStation/Booster 1 Express <small>(Getting Started)</small>](../products/ex-csb1/getting-started.md)
-        - [WiFi Configuration for version 5.7.0+ <br/><small>Graphical User Interface Options</small> <small>(Configure WiFi <small><small>(EX-CSB1 v5.7.0+)</small></small>)</small>](../products/ex-csb1/config-wifi-esp32.md)
+        - [**EX-CSB1** <br/><small>EX-CommandStation/Booster 1 Express</small> <small>(<i><b>EX-CSB1</b> CommandStation/Booster 1 Express</i>)</small>](../products/ex-csb1/index.md)
+        - [**EX-CSB1** - Quick Start<br/>EX-CommandStation/Booster 1 Express <small>(Quick Start Guide)</small>](../products/ex-csb1/getting-started.md)
+        - [WiFi Configuration for version 5.7.0+ <br/><small>Graphical User Interface Options</small> <small>(Configure WiFi <small><small>(EX-CSB1 v5.7.0+ only)</small></small>)</small>](../products/ex-csb1/config-wifi-esp32.md)
     - [EX‑MotorShield8874 <small>(<br/>EX-MotorShield8874)</small>](../products/ex-motorshield8874/ex-motorshield8874.md)
     - [EX-WiFiShield 8266 <small>(EX-WiFiShield8266)</small>](../products/ex-wifishield8266/ex-wifishield8266.md)
-    - [EX-WebThrottle - Overview <small>(<br/>EX-WebThrottle)</small>](../products/ex-webthrottle/ex-webthrottle.md)
+    - **<br/>EX-WebThrottle**
+        - [EX-WebThrottle - Overview <small>(Overview)</small>](../products/ex-webthrottle/index.md)
+        - [EX-WebThrottle - User Guide <small>(User Guide)</small>](../products/ex-webthrottle/ex-webthrottle.md)
     - **EX-Toolbox**
         - [EX-Toolbox - Overview <small>(EX-Toolbox Overview)</small>](../products/ex-toolbox/index.md)
         - [Installing EX-Toolbox <small>(Installation Guide)</small>](../products/ex-toolbox/installation-guide.md)
@@ -63,11 +65,10 @@ li:not(.md-nav__item, .md-tabs__item) a {
     - [Selecting a Power Supply](../purchasing/power.md)
     - [Third Party Products and Sellers <small>(<br/>Third Party Sellers)</small>](../purchasing/third-party-sellers.md)
     - [DCC-EX Merchandise <small>(<br/>Merchandise)</small>](../purchasing/merchandise.md)
-    - [EX-CSB1 - Next Steps - Testing Your Installation <small>(<br/><i>EX-CSB1 Next Steps</i><br/>Test&nbsp;Your&nbsp;EX-CSB1)</small>](../purchasing/next-steps.md)
-    - [Following Steps - Throttles <small>(Throttles)</small>](../purchasing/throttles.md)
+    - [EX-CSB1 - Next Steps <small>(<br/><i>EX-CSB1 Next Steps</i><br/>Installing &amp; Testing)</small>](../purchasing/next-steps.md)
 - **<small><small>or &nbsp;</small></small>Self Build**
-    - [Build Your Own Command Station <small>(Build Your Own)</small>](../diy/diy.md)
-    - [Easy build - Arduino Mega + EX-8874 <small>(Easy Build<small> - Arduino Mega + EX-8874</small>)</small>](../diy/mega-easy.md)
+    - [Build Your Own **EX-CommandStation** <small>(Build Your Own)</small>](../diy/diy.md)
+    - [Easy build - Arduino Mega + EX-MotorShield8874 <small>(Easy Build<small> - Arduino Mega + EX-8874</small>)</small>](../diy/mega-easy.md)
     - [Alternative build - Arduino Mega + Arduino Motor Shield <small>(Harder Build<small> - Arduino Mega + Arduino Motor Shield</small>)</small>](../diy/mega-harder.md)
     - [Complex Build - Nucleo <small>(Complex Build<small> - Nucleo</small>)</small>](../diy/nucleo.md)
     - [Complex Build - ESP32 <small>(Complex Build<small> - ESP32</small>)</small>](../diy/esp32.md)
@@ -105,10 +106,10 @@ li:not(.md-nav__item, .md-tabs__item) a {
 - **Use<small><small>&nbsp;Throttles, etc.</small></small>**
     - **Throttles**
         - [Throttles and Other Controllers <small>(Throttle Lists)</small>](../throttles/throttles.md)
-        - **Some Recommended Throttles**
-            - [EX-WebThrottle <small>(EX-WebThrottle (Web))</small>](../throttles/ex-webthrottle.md)
-            - [Engine Driver <small>(Engine Driver (Android))</small>](../throttles/engine-driver.md)
-            - [ThrottleCard <small>(ThrottleCard (iOS))</small>](../throttles/throttlecard.md)
+        - **<small>Some</small> Recommended Throttles**
+            - [EX-WebThrottle <small>(EX-WebThrottle <small>(Web)</small>)</small>](../throttles/ex-webthrottle.md)
+            - [Engine Driver <small>(Engine Driver <small>(Android)</small>)</small>](../throttles/engine-driver.md)
+            - [ThrottleCard <small>(ThrottleCard <small>(iOS)</small>)</small>](../throttles/throttlecard.md)
         - [WiThrottle Protocol VS DCC-EX Native/Serial Commands <small>(WiThrottle VS Native Protocol)</small>](../throttles/withrottle-vs-native-protocol.md)
     - [Connecting a WiFi Throttle to your EX-CommandStation <small>(<br/>How to Connect - WiFi)</small>](../throttles/connecting-wifi.md)
     - [Connecting a USB Throttle to your EX-CommandStation <small>(How to Connect - USB)</small>](../throttles/connecting-usb.md)
@@ -124,9 +125,6 @@ li:not(.md-nav__item, .md-tabs__item) a {
     - [DC Operation <small>(Controlling DC Locos)</small>](../throttles/dc.md)
 - **Enhance**
     - [Enhancing & Expanding EX‑CommandStation <small>(Enhancing your EX-CommandStation)</small>](../enhance/index.md)
-    - [Adding a Roster](../enhance/rosters.md)
-    - [Adding a Turnouts/Points <small>(Adding Turnouts/Points)</small>](../enhance/turnouts.md)
-    - [Routes and Automation <small>(Adding Routes and Automations)</small>](../enhance/routes.md)
     - **EXRAIL**
         - [What is EXRAIL?](../enhance/exrail/index.md)
         - [EXRAIL Objects - An Introduction <small>(Objects Introduction)</small>](../enhance/exrail/exrail-objects-introduction.md)
@@ -210,6 +208,9 @@ li:not(.md-nav__item, .md-tabs__item) a {
                 - [TM1638 Buttons, leds and 7 segment display](../enhance/exrail/cookbooks/various-devices/tm-1638.md)
                 - [Trainbrains Devices](../enhance/exrail/cookbooks/various-devices/trainbrains.md)
                 - [XL9535 Relay Board](../enhance/exrail/cookbooks/various-devices/xl9535.md)
+    - [Adding a Roster <small>(<br/>Adding a Roster)</small>](../enhance/rosters.md)
+    - [Adding a Turnouts/Points <small>(Adding Turnouts/Points)</small>](../enhance/turnouts.md)
+    - [Routes and Automation <small>(Adding Routes and Automations)</small>](../enhance/routes.md)
     - **Adding Other Accessories**
         - [Overview - What are Accessories? <small>(Accessories)</small>](../enhance/accessories/index.md)
         - [Actuators - to make stuff happen <small>(Actuators)</small>](../enhance/accessories/actuators.md)

@@ -22,18 +22,32 @@ At a minimum, a command station consists of a processor plus a motor shield/boar
 
 The core components of an **EX-CommandStation** are:
 
-- A microcontroller
-- A Motor Driver
-- *optionally*, a WiFi or Ethernet board
+1. A microcontroller
+2. A Motor Driver
+3. *optionally*, a WiFi or Ethernet board.
+
+    *Not required for an [ESP32 microcontroller](esp32.md)[^1]*
 
 In addition to the command station components, you will also need
 
-- a [power supply](power.md) appropriate you your track and locos.
-- a **'Main'** track, aka 'Operations' track - most people already have this: it's your layout! If you don't yet have this, no problem you can still test on the programming track (below).
-- a **'Programming'** track, aka 'PROG' or 'Service' track - an isolated short section of track that you will use to program locomotives
-- a Train - Specifically, a locomotive equipped with a DCC decoder (either a standard or sound decoder). Ideally, it should be a loco already proven to work on DCC. Otherwise, if you have a problem, you may not be able to tell if the problem is the decoder or the **EX-CommandStation**
+4. a [power supply](power.md) for the motor driver, appropriate for your track and locos.
+5. a [power supply](power.md) for your microcontroller
+
+    *Not required if using an [EX-MotorShield8874](../products/ex-motorshield8874/) motor driver [^2]*
+
+6. a **'Main'** track, aka 'Operations' track - most people already have this: it's your layout!
+
+    If you don't yet have this, no problem you can still test on the programming track (below)
+
+7. a **'Programming'** track, aka 'PROG' or 'Service' track - an isolated short section of track that you will use to program locomotives
+8. a Loco - Specifically, a locomotive equipped with a DCC decoder (either a standard or sound decoder)
+
+    Ideally, it should be a loco already proven to work on DCC. Otherwise, if you have a problem, you may not be able to tell if the problem is the decoder or the **EX-CommandStation**
 
 Like any command station, you will want some kind of throttle but you can start to drive trains with just the basic system and your PC using [EX-WebThrottle](/products/ex-webthrottle/ex-webthrottle.md).
+
+[^1]: The ESP32 has built in WiFi.
+[^2]: the EX-MotorShield8874 can supply suitable power to the microcntoller, without the need for an additional power supply.
 
 ## Getting the EX-CommandStation Software
 
