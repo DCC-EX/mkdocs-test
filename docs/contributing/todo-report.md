@@ -20,7 +20,7 @@ Scanned roots: `C:\Users\akers\OneDrive\github\github_doco\mkdocs-test\docs`, `C
 
 ## High TODOs
 
-Total High TODO matches: 91
+Total High TODO matches: 92
 
 | File | Line | Line text |
 | --- | ---: | --- |
@@ -88,7 +88,9 @@ Total High TODO matches: 91
 | [docs/products/ex-turntable/configure.md](../products/ex-turntable/configure.md) | 3 | ==TODO== check the current version number of EX-Turntable and adjust the version notes on this page as needed |
 | [docs/products/ex-turntable/ex-tt-troubleshooting.md](../products/ex-turntable/ex-tt-troubleshooting.md) | 7 | ==TODO== Frequently Asked Questions |
 | [docs/products/ex-wifishield8266/ex-wifishield8266.md](../products/ex-wifishield8266/ex-wifishield8266.md) | 8 | ==TODO== Improve intro paragraph |
-| [docs/prepare-to-use/connecting/connecting-diy.md](../prepare-to-use/connecting/connecting-diy.md) | 3 | ==TODO== new page on physically connecting DIY EX-CS to a layout. Should be in a snippet and reused |
+| [docs/prepare-to-use/connecting/connecting-diy.md](../prepare-to-use/connecting/connecting-diy.md) | 17 | ==TODO== physically connecting DIY EX-CS to a layout - EX8874 |
+| [docs/prepare-to-use/connecting/connecting-diy.md](../prepare-to-use/connecting/connecting-diy.md) | 28 | ==TODO== physically connecting DIY EX-CS to a layout - Standard Arduino Motor Shield |
+| [docs/prepare-to-use/connecting/connecting-diy.md](../prepare-to-use/connecting/connecting-diy.md) | 55 | ==TODO== physically connecting DIY EX-CS to a layout - Other Motor Shields |
 | [docs/prepare-to-use/connecting/connecting-ex-csb1.md](../prepare-to-use/connecting/connecting-ex-csb1.md) | 3 | ==TODO== this page needs to be expanded |
 | [docs/prepare-to-use/installer/index.md](../prepare-to-use/installer/index.md) | 3 | ==TODO== Installing the EX-CommandStation Software - Intro |
 | [docs/prepare-to-use/installer/install-ex-ioexpander.md](../prepare-to-use/installer/install-ex-ioexpander.md) | 3 | ==TODO== complete EX-Installer EX-IOExpander page needed |
@@ -111,10 +113,9 @@ Total High TODO matches: 91
 | snippets/ex-installer/device-monitor.md | 1 | ==TODO== Instructions on using Device Monitor. |
 | snippets/ex-installer/installing.md | 1 | ==TODO== **This needs to outline the steps to install EX-Installer.** |
 | snippets/ex-installer/startup-logs.md | 1 | ==TODO== Instructions required here to obtain the startup logs from **EX-Installer**. |
-| snippets/testing/testing.md | 13 | ==TODO== Initial Testing with EX-WebThrottle |
-| snippets/testing/testing.md | 29 | ==TODO== basic steps for initial testing with a Smart Device over WiFi |
-| snippets/testing/testing.md | 39 | ==TODO== what to do if any of the initial testing steps fail |
-| snippets/testing/testing.md | 74 | ==TODO==... pic - Check communication and version |
+| snippets/testing/testing.md | 80 | ==TODO== basic steps for initial testing with a Smart Device over WiFi |
+| snippets/testing/testing.md | 90 | ==TODO== what to do if any of the initial testing steps fail |
+| snippets/testing/testing.md | 125 | ==TODO==... pic - Check communication and version |
 
 ## Medium priority TODOs
 
