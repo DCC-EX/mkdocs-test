@@ -24,7 +24,11 @@ See the [Supported Device List](../enhance/accessories/hardware-list.md) and [I2
 
 RAILCOM support is currently being investigated.
 
-## The following devices are NOT supported
+----
+
+## Not Supported Devices
+
+The following devices are NOT supported:
 
 - Arduino UNO and Nano. We have supported them in the past but the increase in **EX-CommandStation** features has outstripped their miniscule memory capabilities.
 - Mega Wifi. Some users have had success with this but we have had approximately 50% failure rate on these devices. Its just not worth it.
