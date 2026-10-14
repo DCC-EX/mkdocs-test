@@ -2,7 +2,7 @@
 
 At some point you will likely need to get some help or support for our products, and the available methods are outlined on this page.
 
-**NOTE** For users of hardware products purchased from resellers, in the event of a hardware issue please contact the reseller in the first instance. Each reseller is responsible for supporting the hardware they sell.
+**NOTE** For users of hardware products purchased from suppliers, in the event of a hardware issue please contact the supplier in the first instance. Each supplier is responsible for supporting the hardware they sell.
 
 Please note that the **DCC-EX** team are all volunteers and are distributed globally, so while we endeavour to help as much and as quickly as we can, all support is provided on a best-effort basis only, and there will be times where no team members are available.
 
