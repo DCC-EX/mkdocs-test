@@ -92,7 +92,7 @@ Refer to the [Easy build Arduino Mega page](/diy/mega-easy.md) for information o
 
 A dual channel, 5 amp (per channel) motor shield designed specifically for **DCC-EX** in an Arduino shield format.
 
-Assembly is required to add this to an Arduino Mega along with software configuration.
+Assembly is required to add this to an Arduino Mega, Espressif ESP32 or STMicroelectronics microcontroller, along with software configuration.
 
 Refer to the [EX-MotorShield8874 page](/products/ex-motorshield8874/ex-motorshield8874.md) for more information.
 
@@ -105,7 +105,7 @@ Refer to the [EX-MotorShield8874 page](/products/ex-motorshield8874/ex-motorshie
 [![EX-8266 Logo](../_static/images/logos/product-logo-ex-wifishield8266-only-light.png){ .only-light width=400px }
 ![EX-8266 Logo](../_static/images/logos/product-logo-ex-wifishield8266-only-dark.png){ .only-dark width=400px }](/products/ex-wifishield8266/ex-wifishield8266.md)
 
-A WiFi shield designed specifically for **DCC-EX** in an Arduino shield format.
+A WiFi shield designed specifically for **DCC-EX** in an Arduino shield format. (NOte required for an Espressif ESP32 based command station build.)
 
 Assembly is required to add this to an Arduino Mega along with software configuration.
 
@@ -201,6 +201,8 @@ Refer to the [EX-IOExpander documentation](/products/ex-ioexpander/ex-ioexpander
 [![EX-SensorCAM Light Logo](../_static/images/logos/product-logo-ex-sensorcam-only-light.png){ .only-light width=400px }
 ![EX-SensorCAM Dark Logo](../_static/images/logos/product-logo-ex-sensorcam-only-dark.png){ .only-dark width=400px }](/products/ex-sensorcam/ex-sensorcam.md)
 
-**EX-SensoorCAM** is a Self Build (DIY) solution that provides up to 80 sensors for your layout using an ESP32 based camera solution.
+**EX-SensorCAM** is a Self Build (DIY) solution that provides up to 80 sensors for your layout using an ESP32 based camera solution.
 
 Refer to the [EX-SensorCAM documentation](/products/ex-sensorcam/ex-sensorcam.md) for more information.
+
+--8<-- "snippets/abbr.md"

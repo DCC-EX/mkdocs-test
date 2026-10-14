@@ -12,11 +12,11 @@ The suppliers listed on this page work with the **DCC-EX** team to ensure these 
 
 !!! important "Choosing a Power Supply"
 
-    Our official suppliers will be able to assist you in choosing a power supply, but before purchasing or self building an **EX-CommandStation** we recommend you review our page on [how to choose an appropriate power supply](power.md).
+    Our official suppliers will be able to assist you in choosing an appropriate power supply, but before purchasing or self building an **EX-CommandStation** we recommend you review our page on [how to choose a power supply](power.md).
 
 !!! note "International purchasers"
 
-    If you are not in any of these countries, be aware that each dealer can usually ship anywhere in the world. Each dealer's primary territory is listed, so purchase from the one closest to you to save on shipping and duty charges.
+    If you are not in any of these countries, be aware that each supplier can usually ship anywhere in the world. Each supplier's primary territory is listed, so purchase from the one closest to you to save on shipping and duty charges.
 
 ----
 

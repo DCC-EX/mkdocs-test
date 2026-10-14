@@ -23,4 +23,4 @@ The **DCC-EX EX-CommandStation/Booster 1 (EX-CSB1)** comes ready to use out of t
 
 ## Purchasing
 
-To purchase your own **EX-CommandStation/Booster 1 Express** (**EX-CSB1**) see our [Official Resellers page](../../purchasing/official-sellers.md).
+To purchase your own **EX-CommandStation/Booster 1 Express** (**EX-CSB1**) see our [Official Suppliers page](../../purchasing/official-sellers.md).
