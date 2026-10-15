@@ -160,19 +160,19 @@ Note that some users prefer to de-solder one or both LEDs and mount them on wire
 
 You don't actually require anything special to be configured in advance of using them in an automation.
 
-Use in automation as AT(DpinNo) or AT(-DpinNo)
+Use in automation as ``AT(DpinNo)`` or ``AT(-DpinNo)``
 
 ## Adding a Block
 
 !!! tip inline end "Virtual Block Control"
 
-    You can also refer to ==TODO== `exrail/exrail-command-reference:virtual block control` for more information.
+    You can also refer to the virtual block commands in the [**EXRAIL** Command List](/reference/exrail-command-reference.md).
 
 Blocks in **EXRAIL** are a virtual concept only, and they do not relate in any way to the concept of block occupancy detection.
 
 A block is represented by an ID from 0 to 255 and is used to logically reserve a section of track in automation sequences to ensure only one train can enter a block at any given time to avoid collisions.
 
-There are two keywords for using blocks: RESERVE(id) and FREE(id)
+There are four keywords for using blocks: ``RESERVE(id)``, ``IFSERSERVE(id)``, ``FREE(id)``, and ``FREEALL()``.
 
 ### Configure the software - myAutomation.h - Blocks
 
