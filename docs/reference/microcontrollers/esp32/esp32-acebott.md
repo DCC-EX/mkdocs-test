@@ -96,4 +96,6 @@ hide:
 - [ ] Jumpers added for GPIO 2 and 4
 - [ ] Add the custom motor define - 6 lines in config.h
 
-==TODO== Stacked EX8874 Checklist
+==TODO== MEDIUM - Stacked EX8874 Checklist
+
+--8<-- "snippets/abbr.md"
