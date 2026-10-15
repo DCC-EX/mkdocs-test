@@ -23,11 +23,11 @@ Serial command(s) to indicate a loco entering/leaving a block.
 
 ## Response
 
-==TODO== Responses
+==TODO== MEDIUM - Responses
 
 ## Notes
 
-* ==TODO== LOW Notes
+* ==TODO== LOW - Notes
 
 ----
 

@@ -6,7 +6,7 @@ We encourage our users to reference this ahead of requesting support as there's 
 
 ## Controlling and Running Trains
 
-==TODO== Rework this so that it includes GUI options (EX-WebThrottle, Engine Driver, etc.)
+==TODO== MEDIUM Rework this so that it includes GUI options (EX-WebThrottle, Engine Driver, etc.)
 
 - Why isn't my train responding to my throttle commands?
 
@@ -16,7 +16,7 @@ We encourage our users to reference this ahead of requesting support as there's 
 
 ## Programming and reading DCC decoders
 
-==TODO== Rework this so that it includes GUI options (EX-WebThrottle, Engine Driver, etc.)
+==TODO== MEDIUM Rework this so that it includes GUI options (EX-WebThrottle, Engine Driver, etc.)
 
 - How do I change the DCC address of my loco?
 

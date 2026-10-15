@@ -11,7 +11,7 @@ tags:
 ---
 # CV Programming Tips
 
-==TODO== Fill this page out. Also move the references from the old site
+==TODO== LOW - Fill this page out.
 
 ## *Hints and Tips*
 
