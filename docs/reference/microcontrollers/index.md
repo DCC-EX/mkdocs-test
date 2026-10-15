@@ -5,10 +5,12 @@
 **EX-CommandStation** currently is designed for Atmel AVR based Arduino and compatible microcontrollers, some ESP32 based boards and the STM32 Nucleo based boards. Out of the box, it is compatible with the following boards:
 
 * [EX-CSB1](../../products/ex-csb1/index.md)
-* Arduino [Mega2560](../../diy/mega-easy.md)
-* [ESP32-WROOM](./esp32/esp32-acebott.md)
+* [ESP32-WROOM](./esp32/index.md)
 * [STM32 Nucleo](./nucleo/nucleo-drivers.md)
-* Arduino [Mega+WiFi](https://dcc-ex.com/legacy-docs/reference/hardware/microcontrollers/wifi-mega.html) (Not Recommended)
+* Arduino [Mega2560](../../diy/mega-easy.md) - No longer recommended, but still supported. Only older versions of the EX-CommandStation can be installed on it (prior to version 6.0)[^10]
+* Arduino [Mega+WiFi](https://dcc-ex.com/legacy-docs/reference/hardware/microcontrollers/wifi-mega.html) - Not Recommended. [Refer to the legacy documentation](https://dcc-ex.com/legacy-docs/reference/hardware/microcontrollers/wifi-mega.html)[^10]
+
+Note that the Arduino UNO is no longer supported, though older versions of the **EX-CommandStation** can still be installed on it.
 
 ## Choosing a microcontroller
 
@@ -62,10 +64,10 @@ We've compiled this simple summary table to help with this:
 | Type / Brand | Recommended | Supported | Level | Shield[^9] | HAL/I2C | EEPROM | EX-RAIL<br/>Support | Track Manager<br/>Support | D C<br/>Sup-<br/>port | WiFi | WiFi no.<br/> Connections[^6] | Comments / Notes |
 | -- | :--: | :--: | :--: | :--: | :--: | :--: | :--: | :--: | :--: | :--: | :--: | :-- |
 | [EX-CSB1](../../products/ex-csb1/index.md) | Yes | Yes | Easy | Mega | Yes | No | Yes | Yes | Yes | Yes | ~11 | This is our stable, well supported platform |
-| Arduino [Mega2560](../../diy/mega-easy.md) | Yes | Yes | Intermediate | UNO | Yes | Yes | Yes | Yes | Yes [^2] | yes [^1] | 4 | This is our stable, well supported platform |
 | [ESP32-WROOM](./esp32/esp32-acebott.md) | Yes | Yes | Complex | UNO | Yes [^4] | No | Yes | Yes | Yes [^2] | Yes | ~11 | Inexpensive and includes both WiFi and Bluetooth connectivity, limited in I/O pins. Most require hardware modifications to work. |
 | [STM32 Nucleo](./nucleo/nucleo-drivers.md) | Yes | Yes | Complex | UNO | Yes | No | Yes | Yes | Yes [^2] [^3] | Yes [^1] [^3] | 4 | Lots of memory and 32 bit architecture, still in the convenient Uno form factor but with more I/O pins |
-| Arduino [Mega+WiFi](https://dcc-ex.com/legacy-docs/reference/hardware/microcontrollers/wifi-mega.html) | No [^5] | Yes | Intermediate | Mega | Yes | Yes | Yes | Yes | Yes [^2] | Yes | 4 | This is our stable, well supported platform, but with WiFi on board, but beware quality issues |
+| Arduino [Mega2560](../../diy/mega-easy.md) | Yes | Yes | Intermediate | UNO | Yes | Yes | Yes | Yes | Yes [^2] | yes [^1] | 4 | Stable, supported platform[^10] |
+| Arduino [Mega+WiFi](https://dcc-ex.com/legacy-docs/reference/hardware/microcontrollers/wifi-mega.html) | No [^5] | Yes | Intermediate | Mega | Yes | Yes | Yes | Yes | Yes [^2] | Yes | 4 | Stable, supported platform[^10], but with WiFi on board, but beware quality issues |
 
 [^1]: Requires an additional [WiFi shield](../hardware/wifi-boards/index.md)
 [^2]: Requires a supported motor driver that supports [TrackManager](../../enhance/trackmanager/index.md)
@@ -74,6 +76,7 @@ We've compiled this simple summary table to help with this:
 [^5]: While the Mega+WiFi boards seem like a good option and are based on our well-known, stable Mega2560 platform, there are many reports of quality issues with these, so buyer beware, and use of these is not recommended
 [^6]: Number of *direct* WiFi connections.  If connected via JMRI, more are are supported
 [^9]: If the board supports stackable shields.  UNO, Mega = Supports both Uno/Mega shields, - = no shield format
+[^10]: Will continue to be supported, but will no longer receive software updates from version 6.0 other than bug fixes
 
 ## Will you support other microcontrollers in the future?
 
