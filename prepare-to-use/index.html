@@ -10178,7 +10178,24 @@
 </div>
 <h2 id="installing-the-ex-commandstation-software">Installing the EX-CommandStation software<a class="headerlink" href="#installing-the-ex-commandstation-software" title="Permanent link">&para;</a></h2>
 <p>This step is only needed for self built EX-CommandStations, or if you wish to update or enhance your <strong><abbr title="EX-CommandStation/Booster 1 Express">EX-CSB1</abbr></strong>.</p>
-<p>Once you have assembled your self built <strong>EX‑CommandStation</strong> <em>hardware</em> you need to load our <strong>EX‑CommandStation</strong> <a href="../products/ex-commandstation/">software</a> onto it to make it usable.  There are several ways you can do so, but to make it as simple as possible we have created the <a href="installer/"><strong>EX‑Installer</strong></a> app.</p>
+<p>This software is <strong><em>only</em></strong> needed for self-built EX-CommandStations, or if you wish to update or enhance your <strong><abbr title="EX-CommandStation/Booster 1 Express">EX-CSB1</abbr></strong>.</p>
+<p>The <strong>EX-CommandStation</strong> software is what allows your self-built EX-CommandStation hardware or purchased <abbr title="EX-CommandStation/Booster 1 Express">EX-CSB1</abbr> to function as a simple, and powerful, DCC and DC Command Station.  If you purchased the <strong><abbr title="EX-CommandStation/Booster 1 Express">EX-CSB1</abbr></strong>, this software is already installed.  The software supports much of the <abbr title="National Model Railroad Association (USA)">NMRA</abbr> Digital Command Control (DCC) standards, including:</p>
+<ul>
+<li>Simultaneous control of multiple locomotives</li>
+<li>Control of all cab/loco functions (F0-F28 and F29-F68)</li>
+<li>Control of accessory / function decoders (F0-F28 and F29-F68)</li>
+<li>Main Track: Write configuration variable (<abbr title="Configuration Variable (DCC Decoders)">CV</abbr>) bytes and set/clear specific <abbr title="Configuration Variable (DCC Decoders)">CV</abbr> bits (aka Programming on Main, or <abbr title="Programming on Main / Ops Mode Programming">POM</abbr>)</li>
+<li>Programming Track: Same as the main track with the addition of reading <abbr title="Configuration Variable (DCC Decoders)">CV</abbr> bytes</li>
+</ul>
+<p>along with other advanced features, such as:</p>
+<ul>
+<li>A wiThrottle Server implementation for instant compatibility with popular throttles (controllers)</li>
+<li>General purpose inputs and outputs (I/O) for extensibility</li>
+<li><abbr title="(Inter-Integrated Circuit, pronounced &quot;eye-squared-see&quot;) is a synchronous, multi-controller/multi-target serial communication protocol">I2C</abbr> bus for controlling accessories with <abbr title="(Inter-Integrated Circuit, pronounced &quot;eye-squared-see&quot;) is a synchronous, multi-controller/multi-target serial communication protocol">I2C</abbr> capability</li>
+<li><abbr title="Java Model Railroad Interface">JMRI</abbr> integration</li>
+<li><strong>EXRAIL</strong> Automation and Animation scripting that can control everything on your layout, including the locos
+Once you have assembled your self built <strong>EX‑CommandStation</strong> <em>hardware</em> you need to load our <strong>EX‑CommandStation</strong> <a href="../products/ex-commandstation/">software</a> onto it to make it usable.  There are several ways you can do so, but to make it as simple as possible we have created the <a href="installer/"><strong>EX‑Installer</strong></a> app.</li>
+</ul>
 <p>Continue to the <a href="installer/">Install the software</a> page to install the software, before proceeding to the physical installation.</p>
 <hr />
 <h2 id="physical-connection-to-your-layout">Physical Connection to Your Layout<a class="headerlink" href="#physical-connection-to-your-layout" title="Permanent link">&para;</a></h2>
@@ -10190,7 +10207,12 @@
 </ul>
 <hr />
 <h2 id="testing">Testing<a class="headerlink" href="#testing" title="Permanent link">&para;</a></h2>
-<p>Once you have connected your <strong><abbr title="EX-CommandStation/Booster 1 Express">EX-CSB1</abbr></strong> or self built <strong>EX-CommandStation</strong> to your layout and programming track you should test it to confirm it is working correctly.</p>
+<p>Once you have connected your <strong><abbr title="EX-CommandStation/Booster 1 Express">EX-CSB1</abbr></strong> or <strong>EX-CommandStation</strong> to your layout and programming track you should test it to confirm it is working correctly.</p>
+<p>You need to test with a locomotive equipped with a DCC decoder (either a standard or sound decoder). Ideally, it should be a loco already proven to work on DCC. Otherwise, if you have a problem, you may not be able to tell if the problem is the decoder or the EX‑CommandStation.</p>
+<ul>
+<li>See the <a href="testing/">Testing your installation</a>
+Once you have connected your <strong><abbr title="EX-CommandStation/Booster 1 Express">EX-CSB1</abbr></strong> or self built <strong>EX-CommandStation</strong> to your layout and programming track you should test it to confirm it is working correctly.</li>
+</ul>
 <p>Continue to the <a href="testing/">testing</a> page to find out how.</p>
 <!-- These are case sensitive -->
 
@@ -10213,7 +10235,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="October 15, 2026 01:53:43 UTC">October 15, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="October 15, 2026 05:47:56 UTC">October 15, 2026</span>
   </span>
 
     
