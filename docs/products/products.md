@@ -5,17 +5,29 @@ hide:
 
 # DCC-EX Product Overview
 
-The **DCC-EX** team has designed and released various different open source products aimed at making model trains accessible to more people.
+The **DCC-EX** team has designed and released a number of open source, hardware and software, products aimed at making model trains accessible to more people.
 
 This page briefly outlines each of our products, the experience level you need to be able to use them, and links to more information.
 
-## Easy to Use Products ![Conductor Icon](../_static/images/levels/conductor.png){ .header-img }
+We have categorised our products as:
+
+- [Easy to Use / Conductor Level](#easy-to-use-products-conductor-level)
+- [A bit more technical / Tinkerer Level](#a-bit-more-technical-products-tinkerer-level)
+- [Advanced technical / Engineer Level](#advanced-technical-products-engineer-level)
+
+----
+
+![Conductor Icon](../_static/images/levels/conductor.png){ align=right }
+
+## Easy to Use Products <small>Conductor Level</small>
 
 These are our powerful, but easy to use, get up and running quickly type products. You don't need to pick up a soldering iron or write any software, just plug them in and go!
 
-**NOTE:** You may need to install some software on your computer to take advantage of some of these, but our documentation will walk you through that process.
+**NOTE:** You may need to install some software on your computer to take full advantage of some of these, but our documentation will walk you through that process.
 
 ![EX-CSB1](../_static/images/ex-csb1/csb1-small.png){ align=right} ![EX-CSB1](../_static/images/ex-csb1/csb1-resin-case-small.png){ align=right}
+
+<br/>
 
 ### EX-CommandStation/Booster 1 Express
 
@@ -24,13 +36,13 @@ These are our powerful, but easy to use, get up and running quickly type product
 [![EX-CSB1 Logo](../_static/images/logos/product-logo-ex-csb1-only-light.png){ .only-light width=400px }
 ![EX-CSB1 Logo](../_static/images/logos/product-logo-ex-csb1-only-dark.png){ .only-dark width=400px }](/products/ex-csb1/index.md)
 
-A ready-to-run, all in one DCC Command Station and Booster with built-in WiFi preloaded with our flagship train control, layout animation and automation software.
+A ready-to-run, all in one DCC Command Station and Booster with built-in WiFi, preloaded with our flagship [train control](./ex-commandstation/index.md), [layout animation and automation](../enhance/exrail/index.md) software.
 
-For more information on this and how to purchase, head over to the [EX-CSB1 product page](/products/ex-csb1/index.md)
+For more information on this and how to purchase, head over to the [EX-CSB1 product page](/products/ex-csb1/index.md).
 
-You can learn more about the software in the [EX-CommandStation documentation](/products/ex-commandstation/index.md).
+You can learn more about the preloaded software on the [EX-CommandStation documentation](/products/ex-commandstation/index.md) page.
 
----
+----
 
 ![EX-WebThrottle](../_static/images/ex-webthrottle/ex-webthrottle.png){ align=right width=250px }
 
@@ -39,11 +51,11 @@ You can learn more about the software in the [EX-CommandStation documentation](/
 [![EX-WebThrottle Logo](../_static/images/logos/product-logo-ex-webthrottle-only-light.png){ .only-light width=400px }
 ![EX-WebThrottle Logo](../_static/images/logos/product-logo-ex-webthrottle-only-dark.png){ .only-dark width=400px }](/products/ex-webthrottle/ex-webthrottle.md)
 
-This is the easiest way to validate you've connected your **EX-CommandStation** correctly to your track. Just load it up in your Chromium based web browser (Edge, Chrome, Opera) after connecting your **EX-CommandStation** to your computer and you can run your trains with it.
+This app is the easiest way to validate you've connected your **EX-CommandStation** correctly to your track. Just load it up in your Chromium based web browser (Edge, Chrome, Opera) after connecting your **EX-CommandStation** to your computer and you can run your trains with it.
 
 See the [EX-WebThrottle documentation](/products/ex-webthrottle/ex-webthrottle.md).
 
----
+----
 
 ### EX-Toolbox
 
@@ -52,19 +64,27 @@ See the [EX-WebThrottle documentation](/products/ex-webthrottle/ex-webthrottle.m
 
 ![app store](../_static/images/ex-toolbox/download.png){ width=150px align=right }
 
-For Android device users, this is an extremely useful tool to help with configuring and testing various aspects of your trains, **EX-CommandStation**, and accessories.
+For Android device users, this is an extremely useful tool to help with configuring, testing and monitoring various aspects of your trains, **EX-CommandStation**, and accessories.
 
 You can download it from the [Google Play Store](https://play.google.com/store/apps/details?id=dcc_ex.ex_toolbox)
 
 Refer to the [EX-Toolbox documentation](/products/ex-toolbox/index.md) for how to install and use it.
 
----
+----
 
-## A Bit More Technical Products ![Tinkerer Icon](../_static/images/levels/tinkerer.png){ .header-img } <br/><small>Intermediate Level</small>
+<br/>
+
+----
+
+![Tinkerer Icon](../_static/images/levels/tinkerer.png){ align=right }
+
+## A Bit More Technical Products <small>Tinkerer Level</small>
 
 These products are more involved to get up and running, and aren't just plug in and go.
 
 You will need to perform some assembly and configure and install some software to take advantage of these ones, but you won't need to solder anything.
+
+<br/>
 
 ![DIY EX-CommandStation](../_static/images/mega/mega-small.png){ align=right}
 
@@ -81,7 +101,7 @@ If you want to build it yourself, this is our recommended setup which simply req
 
 Refer to the [Easy build Arduino Mega page](/diy/mega-easy.md) for information on what to buy and how to assemble.
 
----
+----
 
 ![EX-CSB1](../_static/images/ex8874/ex_motorshield8874_purple_side-small.png){ align=right}
 
@@ -96,9 +116,9 @@ Assembly is required to add this to an Arduino Mega, Espressif ESP32 or STMicroe
 
 Refer to the [EX-MotorShield8874 page](/products/ex-motorshield8874/ex-motorshield8874.md) for more information.
 
----
+----
 
-![EX-8266](../_static/images/wifi/exwifi6-small.png){ align=right}
+![EX-8266](../_static/images/wifi/exwifi6-small.png){ align=right }
 
 ### EX-WiFiShield8266
 
@@ -111,21 +131,23 @@ Assembly is required to add this to an Arduino Mega along with software configur
 
 Refer to the [EX-WiFiShield8266 page](/products/ex-wifishield8266/ex-wifishield8266.md) for more information.
 
----
+----
 
 &nbsp;
 
----
+----
 
-## Advanced Technical Products ![Engineer Icon](../_static/images/levels/engineer.png){ .header-img } <br/><small>Advanced Level</small>
+![Engineer Icon](../_static/images/levels/engineer.png){ align=right }
+
+## Advanced Technical Products <small>Engineer Level</small>
 
 These products are far more involved and complicated to get up and running.
 
-This products go beyond simple assembly and you will need a good understanding of configuring software and hardware, including soldering components and making some modifications to existing hardware devices.
+They products go beyond simple assembly and you will need a good understanding of configuring software and hardware, including soldering components and making some modifications to existing hardware devices.
 
 If you are new to **DCC-EX** and/or electronics in general, we do not recommend you try to tackle any of these products until you have become familiar with how our products work.
 
----
+<br/>
 
 ![ESP32](../_static/images/esp32/ioref-to-3v3-jumper2.png){ width="160px" align=right}
 
@@ -142,7 +164,7 @@ You will need to need to be careful when configuring and installing software on 
 
 Refer to the [EX-CommandStation DIY Pages](/diy/diy.md) for information on what options are available and supported.
 
----
+----
 
 ### EX-FastClock
 
@@ -155,7 +177,7 @@ While it's possible to get up and running with this fairly easily, there is stil
 
 Refer to the [EX-FastClock documentation](/products/ex-fastclock/index.md) for how to get up and running.
 
----
+----
 
 ### EX-Turntable
 
@@ -168,7 +190,7 @@ The software and integration side of **EX-Turntable** is reasonably straight for
 
 Refer to the [EX-Turntable documentation](/products/ex-turntable/index.md) for what's required and how to get up and running.
 
----
+----
 
 ### EX-DCCInspector
 
@@ -181,7 +203,7 @@ This requires some assembly and soldering to get up and running, and you will ne
 
 Refer to the [EX-DCCInspector documentation](ex-dccinspector/index.md) for more information.
 
----
+----
 
 ### EX-IOExpander
 
@@ -194,7 +216,7 @@ However, this does mean you will need to understand I2C connectivity and will li
 
 Refer to the [EX-IOExpander documentation](/products/ex-ioexpander/ex-ioexpander.md) for more information.
 
----
+----
 
 ### EX-SensorCAM
 
