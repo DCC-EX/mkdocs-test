@@ -4,11 +4,6 @@
 
     Using [EX-Installer](../../prepare-to-use/installer/installer.md) is the recommended way to modify ``config.h`` and ``myAutomation.h``.
 
-WiFi has two operating modes:
-
-- AP (Access point) means the **EX-CommandStation** acts as its own private WiFi network so throttle devices must connect first to the **EX-CommandStation** WiFi network.
-- STA (Station mode) means the **EX-CommandStation** connects to your WiFi router and appears as a device on that network. If the WiFi is configured for STA mode, but fails to connect to your router, it will fall back to AP mode in much the same way as smart plugs, lights etc.
-
 <span style="color:red">NOTE: If you are using an **EX-CSB1** or ESP32 based EX-CommandStation ***AND*** you are are using the latest DEVEL versions of the  EX-CommandStation code (versions from 5.7.0),</span> the ``config.h`` options for WiFi configuration described here are ignored by the **EX-CSB1** or ESP32 EX-CommandStations. Instead see the [WiFi configuration (EX-CSB1 or ESP32 ONLY. Version 5.7.0+ ONLY) page](../../prepare-to-use/installer/config-wifi-esp32.md).
 
 ## Operating Modes
