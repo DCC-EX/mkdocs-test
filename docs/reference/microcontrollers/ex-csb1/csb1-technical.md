@@ -19,5 +19,5 @@ hide:
 
 - Difference in current sensing vs EX8874
 
-  ==TODO== EX-CSB1 Technical Reference
+  ==TODO== MEDIUM - EX-CSB1 Technical Reference
   

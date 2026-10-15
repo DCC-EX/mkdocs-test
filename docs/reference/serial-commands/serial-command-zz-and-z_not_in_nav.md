@@ -79,7 +79,7 @@ N/A
 
 ### Response for `<z «vpin» «analogue» «profile» duration»>``, ``<z «vpin» «analogue» «profile»>``, ``<z «vpin» «analogue»>`
 
-==TODO== Response
+==TODO== MEDIUM - Response
 
 ## Notes
 

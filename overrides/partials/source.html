@@ -1,0 +1,14 @@
+
+<a href="{{ base_url }}/news/" class="md-header__button md-icon" title="DCC-EX News" style="margin-right: 0rem;">
+    <img src="{{ base_url }}/_static/images/logos/news-icon-white-solid.svg" alt="News" style="height: 1.2rem; width: 1.2rem; vertical-align: middle;" />
+</a>
+
+<a href="{{ config.repo_url }}" title="{{ lang.t('source') }}" style="display:inline;" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    {% set icon = config.theme.icon.repo or "fontawesome/brands/git-alt" %}
+    {% include ".icons/" ~ icon ~ ".svg" %}
+  </div>
+  <div class="md-source__repository">
+    {{ config.repo_name }}
+  </div>
+</a>

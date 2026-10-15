@@ -22,11 +22,11 @@ Serial command(s) to support the LCC/CBUS adapter.
 
 ## Response
 
-==TODO== Responses
+==TODO== MEDIUM - Responses
 
 ## Notes
 
-* ==TODO== LOW Notes
+* ==TODO== LOW - Notes
 
 ----
 

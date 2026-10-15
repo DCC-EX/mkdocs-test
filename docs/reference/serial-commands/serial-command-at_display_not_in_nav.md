@@ -19,11 +19,11 @@ Serial command to display text on virtual LCD at specified row.
 
 ## Response
 
-==TODO== LOW Responses
+==TODO== MEDIUM - Responses
 
 ## Notes
 
-* ==TODO== LOW Notes
+* ==TODO== LOW - Notes
 
 ----
 

@@ -65,7 +65,7 @@ Obtaining throttle status.
 
 ## Controlling Locos
 
-==TODO== Controlling Locos
+==TODO== LOW Controlling Locos
 
 ### Momentum
 
@@ -137,7 +137,7 @@ Signal status changes are reported with the ``<h id state>`` command for example
 
 ## DCC Accessories
 
-==TODO== DCC Accessory Control
+==TODO== LOW DCC Accessory Control
 
 ----
 
@@ -163,11 +163,11 @@ Thus, a route can be triggered by sending in for example ``</START 13>``.
 Thus, an Automation expects a start command with a cab id<br/>
 e.g. ``</START 13 3>``
 
-Routes and Automations can also have their current status and caption altered dynamically by **EXRAIL** (docs ==TODO==)
+Routes and Automations can also have their current status and caption altered dynamically by **EXRAIL** (docs ==TODO== LOW)
 
 ### Route Status
 
-==TODO== Route Status
+==TODO== LOW Route Status
 
 ### Turntables/Traversers
 
@@ -214,12 +214,12 @@ Example responses (will return all positions):
 
 ## Gauges
 
-==TODO== Gauges
+==TODO== LOW Gauges
 
 ----
 
 ## TCP vs UDP
 
-==TODO== TCP VS UDP
+==TODO== LOW TCP VS UDP
 
 --8<-- "snippets/abbr.md"
