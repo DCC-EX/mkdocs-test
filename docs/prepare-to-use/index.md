@@ -42,8 +42,6 @@ Once you have connected your **EX-CSB1** or **EX-CommandStation** to your layout
 
 You need to test with a locomotive equipped with a DCC decoder (either a standard or sound decoder). Ideally, it should be a loco already proven to work on DCC. Otherwise, if you have a problem, you may not be able to tell if the problem is the decoder or the EX‑CommandStation.
 
-Once you have connected your **EX-CSB1** or self built **EX-CommandStation** to your layout and programming track you should test it to confirm it is working correctly.
-
 Continue to the [testing](testing.md) page to find out how.
 
 --8<-- "snippets/abbr.md"
