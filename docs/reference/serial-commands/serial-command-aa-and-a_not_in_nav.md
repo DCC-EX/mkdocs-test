@@ -33,7 +33,7 @@ Serial commands to activate or deactivate accessory decoders.
 
 <!-- ### Response for ``<cmd>`` -->
 
-==TODO== responses
+==TODO== MEDIUM - responses
 
 ## Notes
 

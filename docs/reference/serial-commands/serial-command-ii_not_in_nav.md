@@ -25,7 +25,6 @@ The Turntable/Traverser commands provide a more flexible and functional way of o
 
 Also refer to the [legacy EX-Turntable documentation](../../products/ex-turntable/index.md).
 
-
 ## Commands
 
 * ``<I>`` List all turntables

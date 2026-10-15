@@ -21,11 +21,11 @@ Serial command to Direct current displays to LCS/OLED
 
 ## Response
 
-==TODO== Responses
+==TODO== MEDIUM - Responses
 
 ## Notes
 
-* ==TODO== Notes
+* ==TODO== LOW - Notes
 
 ----
 

@@ -30,7 +30,7 @@ Serial commands to provide the ability to set neopixels on or off or change the 
 
 ## Response
 
-==TODO== MEDIUM Responses
+==TODO== MEDIUM - Responses
 
 ## Notes
 
