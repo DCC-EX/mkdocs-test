@@ -11,7 +11,7 @@ This page briefly outlines each of our products, the experience level you need t
 
 We have categorised our products as:
 
-- [Easy to Use / Conductor Level](#easy-to-use-products-conductor-level)
+- [Easy to use / Conductor Level](#easy-to-use-products-conductor-level)
 - [A bit more technical / Tinkerer Level](#a-bit-more-technical-products-tinkerer-level)
 - [Advanced technical / Engineer Level](#advanced-technical-products-engineer-level)
 
