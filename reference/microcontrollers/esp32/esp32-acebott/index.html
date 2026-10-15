@@ -675,8 +675,6 @@
         
       
         
-          
-        
       
     
     
@@ -692,9 +690,8 @@
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
         
           
-          <div class="md-nav__link md-nav__container">
-            <a href="../../../../products/ex-dccinspector/" class="md-nav__link ">
-              
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
   
   
   <span class="md-ellipsis">
@@ -703,14 +700,8 @@
   </span>
   
 
-            </a>
-            
-              
-              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="0">
-                <span class="md-nav__icon md-icon"></span>
-              </label>
-            
-          </div>
+            <span class="md-nav__icon md-icon"></span>
+          </label>
         
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2">
@@ -1841,6 +1832,63 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_12" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../products/ex-dccinspector/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    EX-DCCInspector<small><small> (DIY)</small></small>
+    
+  </span>
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_12_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_12">
+            <span class="md-nav__icon md-icon"></span>
+            EX-DCCInspector<small><small> (DIY)</small></small>
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
               
             
           </ul>
@@ -10339,7 +10387,7 @@
 <li>Please report any anomalies when using the pins in the suggested custom motor defines.</li>
 <li>A custom motor define is required when using the ACEBOTT ESP32 board, as the pins are in different locations vs. the WeMos ESP32.</li>
 <li>There is another version of the ACEBOTT ESP32 which has not been tested.  ACEBOTT focus is on STEM education kits and robotics; uncertain if their quality is better than the WeMos boards, but recent prices are comparable.</li>
-<li>Do not be fooled by the 5V pin on the I2C header block; there is no onboard level shifting.</li>
+<li>Do not be fooled by the 5V pin on the <abbr title="(Inter-Integrated Circuit, pronounced &quot;eye-squared-see&quot;) is a synchronous, multi-controller/multi-target serial communication protocol">I2C</abbr> header block; there is no onboard level shifting.</li>
 </ul>
 <h2 id="acebott-vs-wemos-r1-d32">ACEBOTT vs. WeMos R1 D32<a class="headerlink" href="#acebott-vs-wemos-r1-d32" title="Permanent link">&para;</a></h2>
 <ul>
@@ -10382,7 +10430,7 @@
 <hr />
 <h2 id="stacked-ex8874">Stacked EX8874<a class="headerlink" href="#stacked-ex8874" title="Permanent link">&para;</a></h2>
 <ul>
-<li>Reminder: No modifications are needed when installing EX8874 for 4 track outputs on EX-CSB1.</li>
+<li>Reminder: No modifications are needed when installing EX8874 for 4 track outputs on <abbr title="EX-CommandStation/Booster 1 Express">EX-CSB1</abbr>.</li>
 <li><strong>IOREF:</strong> The IOREF override is also needed for the top shield.</li>
 <li>
 <p><strong>VIN:</strong> Refer to instructions on <a href="../../../../products/ex-motorshield8874/ex-motorshield8874/#steps-to-stack">cutting the VIN trace and disabling the regulator</a> for the top shield.</p>
@@ -10414,7 +10462,8 @@
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> Jumpers added for GPIO 2 and 4</li>
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> Add the custom motor define - 6 lines in config.h</li>
 </ul>
-<p><mark>TODO</mark> Stacked EX8874 Checklist</p>
+<p><mark>TODO</mark> MEDIUM - Stacked EX8874 Checklist</p>
+<!-- These are case sensitive -->
 
 
 
@@ -10435,7 +10484,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="August 3, 2026 07:34:47 UTC">August 3, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="October 15, 2026 03:23:08 UTC">October 15, 2026</span>
   </span>
 
     
