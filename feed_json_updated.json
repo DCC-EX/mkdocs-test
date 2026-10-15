@@ -7,20 +7,5 @@
     "icon": "_static/images/logos/favicon.ico",
     "authors": [],
     "language": "en",
-    "items": [
-        {
-            "id": "https://dcc-ex.com/mkdocs-test/news/2025/06/new-documentation/",
-            "url": "https://dcc-ex.com/mkdocs-test/news/2025/06/new-documentation/",
-            "title": "New Documentation",
-            "content_html": "<h1>New Documentation</h1>\n<p>We have new documentation!</p>",
-            "image": null,
-            "date_modified": "2025-07-17T21:57:33+00:00",
-            "authors": [
-                {
-                    "name": "peteGSX"
-                }
-            ],
-            "tags": null
-        }
-    ]
+    "items": []
 }
