@@ -7896,6 +7896,10 @@
     
       
         
+          
+        
+      
+        
       
         
       
@@ -7917,8 +7921,9 @@
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9_10_4" >
         
           
-          <label class="md-nav__link" for="__nav_9_10_4" id="__nav_9_10_4_label" tabindex="0">
-            
+          <div class="md-nav__link md-nav__container">
+            <a href="esp32/" class="md-nav__link ">
+              
   
   
   <span class="md-ellipsis">
@@ -7927,8 +7932,14 @@
   </span>
   
 
-            <span class="md-nav__icon md-icon"></span>
-          </label>
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_9_10_4" id="__nav_9_10_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
         
         <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_9_10_4_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_9_10_4">
@@ -7936,6 +7947,8 @@
             ESP32
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
+            
+              
             
               
                 
@@ -10246,11 +10259,12 @@
 <p><strong>EX-CommandStation</strong> currently is designed for Atmel AVR based Arduino and compatible microcontrollers, some ESP32 based boards and the STM32 Nucleo based boards. Out of the box, it is compatible with the following boards:</p>
 <ul>
 <li><a href="../../products/ex-csb1/"><abbr title="EX-CommandStation/Booster 1 Express">EX-CSB1</abbr></a></li>
-<li>Arduino <a href="../../diy/mega-easy/">Mega2560</a></li>
-<li><a href="esp32/esp32-acebott/">ESP32-WROOM</a></li>
+<li><a href="esp32/">ESP32-WROOM</a></li>
 <li><a href="nucleo/nucleo-drivers/">STM32 Nucleo</a></li>
-<li>Arduino <a href="https://dcc-ex.com/legacy-docs/reference/hardware/microcontrollers/wifi-mega.html">Mega+WiFi</a> (Not Recommended)</li>
+<li>Arduino <a href="../../diy/mega-easy/">Mega2560</a> - No longer recommended, but still supported. Only older versions of the EX-CommandStation can be installed on it (prior to version 6.0)<sup id="fnref:10"><a class="footnote-ref" href="#fn:10">8</a></sup></li>
+<li>Arduino <a href="https://dcc-ex.com/legacy-docs/reference/hardware/microcontrollers/wifi-mega.html">Mega+WiFi</a> - Not Recommended. <a href="https://dcc-ex.com/legacy-docs/reference/hardware/microcontrollers/wifi-mega.html">Refer to the legacy documentation</a><sup id="fnref2:10"><a class="footnote-ref" href="#fn:10">8</a></sup></li>
 </ul>
+<p>Note that the <abbr title="Not recommended. No longer supported for the EX-CommandStation. The UNO shield shape/size is still relevant">Arduino UNO</abbr> is no longer supported, though older versions of the <strong>EX-CommandStation</strong> can still be installed on it.</p>
 <h2 id="choosing-a-microcontroller">Choosing a microcontroller<a class="headerlink" href="#choosing-a-microcontroller" title="Permanent link">&para;</a></h2>
 <p>With a number of microcontrollers to choose from, how do you know which is the best for your needs?</p>
 <p>We've compiled this simple summary table to help with this:</p>
@@ -10332,21 +10346,6 @@
 <td style="text-align: left;">This is our stable, well supported platform</td>
 </tr>
 <tr>
-<td>Arduino <a href="../../diy/mega-easy/">Mega2560</a></td>
-<td style="text-align: center;">Yes</td>
-<td style="text-align: center;">Yes</td>
-<td style="text-align: center;">Intermediate</td>
-<td style="text-align: center;">UNO</td>
-<td style="text-align: center;">Yes</td>
-<td style="text-align: center;">Yes</td>
-<td style="text-align: center;">Yes</td>
-<td style="text-align: center;">Yes</td>
-<td style="text-align: center;">Yes <sup id="fnref:2"><a class="footnote-ref" href="#fn:2">2</a></sup></td>
-<td style="text-align: center;">yes <sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup></td>
-<td style="text-align: center;">4</td>
-<td style="text-align: left;">This is our stable, well supported platform</td>
-</tr>
-<tr>
 <td><a href="esp32/esp32-acebott/">ESP32-WROOM</a></td>
 <td style="text-align: center;">Yes</td>
 <td style="text-align: center;">Yes</td>
@@ -10356,7 +10355,7 @@
 <td style="text-align: center;">No</td>
 <td style="text-align: center;">Yes</td>
 <td style="text-align: center;">Yes</td>
-<td style="text-align: center;">Yes <sup id="fnref2:2"><a class="footnote-ref" href="#fn:2">2</a></sup></td>
+<td style="text-align: center;">Yes <sup id="fnref:2"><a class="footnote-ref" href="#fn:2">2</a></sup></td>
 <td style="text-align: center;">Yes</td>
 <td style="text-align: center;">~11</td>
 <td style="text-align: left;">Inexpensive and includes both WiFi and Bluetooth connectivity, limited in I/O pins. Most require hardware modifications to work.</td>
@@ -10371,10 +10370,25 @@
 <td style="text-align: center;">No</td>
 <td style="text-align: center;">Yes</td>
 <td style="text-align: center;">Yes</td>
-<td style="text-align: center;">Yes <sup id="fnref3:2"><a class="footnote-ref" href="#fn:2">2</a></sup> <sup id="fnref:3"><a class="footnote-ref" href="#fn:3">3</a></sup></td>
-<td style="text-align: center;">Yes <sup id="fnref2:1"><a class="footnote-ref" href="#fn:1">1</a></sup> <sup id="fnref2:3"><a class="footnote-ref" href="#fn:3">3</a></sup></td>
+<td style="text-align: center;">Yes <sup id="fnref2:2"><a class="footnote-ref" href="#fn:2">2</a></sup> <sup id="fnref:3"><a class="footnote-ref" href="#fn:3">3</a></sup></td>
+<td style="text-align: center;">Yes <sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup> <sup id="fnref2:3"><a class="footnote-ref" href="#fn:3">3</a></sup></td>
 <td style="text-align: center;">4</td>
 <td style="text-align: left;">Lots of memory and 32 bit architecture, still in the convenient Uno form factor but with more I/O pins</td>
+</tr>
+<tr>
+<td>Arduino <a href="../../diy/mega-easy/">Mega2560</a></td>
+<td style="text-align: center;">Yes</td>
+<td style="text-align: center;">Yes</td>
+<td style="text-align: center;">Intermediate</td>
+<td style="text-align: center;">UNO</td>
+<td style="text-align: center;">Yes</td>
+<td style="text-align: center;">Yes</td>
+<td style="text-align: center;">Yes</td>
+<td style="text-align: center;">Yes</td>
+<td style="text-align: center;">Yes <sup id="fnref3:2"><a class="footnote-ref" href="#fn:2">2</a></sup></td>
+<td style="text-align: center;">yes <sup id="fnref2:1"><a class="footnote-ref" href="#fn:1">1</a></sup></td>
+<td style="text-align: center;">4</td>
+<td style="text-align: left;">Stable, supported platform<sup id="fnref3:10"><a class="footnote-ref" href="#fn:10">8</a></sup></td>
 </tr>
 <tr>
 <td>Arduino <a href="https://dcc-ex.com/legacy-docs/reference/hardware/microcontrollers/wifi-mega.html">Mega+WiFi</a></td>
@@ -10389,7 +10403,7 @@
 <td style="text-align: center;">Yes <sup id="fnref4:2"><a class="footnote-ref" href="#fn:2">2</a></sup></td>
 <td style="text-align: center;">Yes</td>
 <td style="text-align: center;">4</td>
-<td style="text-align: left;">This is our stable, well supported platform, but with WiFi on board, but beware quality issues</td>
+<td style="text-align: left;">Stable, supported platform<sup id="fnref4:10"><a class="footnote-ref" href="#fn:10">8</a></sup>, but with WiFi on board, but beware quality issues</td>
 </tr>
 </tbody>
 </table>
@@ -10447,6 +10461,9 @@
 <li id="fn:9">
 <p>If the board supports stackable shields.  UNO, Mega = Supports both Uno/Mega shields, - = no shield format&#160;<a class="footnote-backref" href="#fnref:9" title="Jump back to footnote 7 in the text">&#8617;</a></p>
 </li>
+<li id="fn:10">
+<p>Will continue to be supported, but will no longer receive software updates from version 6.0 other than bug fixes&#160;<a class="footnote-backref" href="#fnref:10" title="Jump back to footnote 8 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:10" title="Jump back to footnote 8 in the text">&#8617;</a><a class="footnote-backref" href="#fnref3:10" title="Jump back to footnote 8 in the text">&#8617;</a><a class="footnote-backref" href="#fnref4:10" title="Jump back to footnote 8 in the text">&#8617;</a></p>
+</li>
 </ol>
 </div>
 
@@ -10469,7 +10486,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="October 12, 2026 03:48:33 UTC">October 12, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="October 15, 2026 22:35:22 UTC">October 15, 2026</span>
   </span>
 
     
