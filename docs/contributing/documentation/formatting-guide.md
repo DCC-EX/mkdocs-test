@@ -68,7 +68,7 @@ Results in: [Link to heading on a differnet page](github.md#5-live-previews)
 
     The technique above ensures that the link is valid.
 
-==TODO==  Note there is a bug in this process if the heading contains ` - ` (space dash space).
+==TODO== LOW - Note there is a bug in this process if the heading contains ` - ` (space dash space).
 
 ### External Links
 
