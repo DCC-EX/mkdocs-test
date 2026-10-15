@@ -19,22 +19,7 @@ This step is only needed for self built EX-CommandStations, or if you wish to up
 
 This software is ***only*** needed for self-built EX-CommandStations, or if you wish to update or enhance your **EX-CSB1**.
 
-The **EX-CommandStation** software is what allows your self-built EX-CommandStation hardware or purchased EX-CSB1 to function as a simple, and powerful, DCC and DC Command Station.  If you purchased the **EX-CSB1**, this software is already installed.  The software supports much of the NMRA Digital Command Control (DCC) standards, including:
-
-- Simultaneous control of multiple locomotives
-- Control of all cab/loco functions (F0-F28 and F29-F68)
-- Control of accessory / function decoders (F0-F28 and F29-F68)
-- Main Track: Write configuration variable (CV) bytes and set/clear specific CV bits (aka Programming on Main, or POM)
-- Programming Track: Same as the main track with the addition of reading CV bytes
-
-along with other advanced features, such as:
-
-- A wiThrottle Server implementation for instant compatibility with popular throttles (controllers)
-- General purpose inputs and outputs (I/O) for extensibility
-- I2C bus for controlling accessories with I2C capability
-- JMRI integration
-- **EXRAIL** Automation and Animation scripting that can control everything on your layout, including the locos
-Once you have assembled your self built **EX‑CommandStation** *hardware* you need to load our **EX‑CommandStation** [software](../products/ex-commandstation/index.md) onto it to make it usable.  There are several ways you can do so, but to make it as simple as possible we have created the [**EX‑Installer**](./installer/index.md) app.
+The **EX-CommandStation** software is what allows your self-built EX-CommandStation hardware or purchased EX-CSB1 to function as a simple, and powerful, DCC and DC Command Station.  If you purchased the **EX-CSB1**, this software is already installed.  
 
 Continue to the [Install the software](./installer/index.md) page to install the software, before proceeding to the physical installation.
 
@@ -57,7 +42,6 @@ Once you have connected your **EX-CSB1** or **EX-CommandStation** to your layout
 
 You need to test with a locomotive equipped with a DCC decoder (either a standard or sound decoder). Ideally, it should be a loco already proven to work on DCC. Otherwise, if you have a problem, you may not be able to tell if the problem is the decoder or the EX‑CommandStation.
 
-- See the [Testing your installation](./testing.md)
 Once you have connected your **EX-CSB1** or self built **EX-CommandStation** to your layout and programming track you should test it to confirm it is working correctly.
 
 Continue to the [testing](testing.md) page to find out how.
