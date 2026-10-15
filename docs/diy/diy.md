@@ -33,7 +33,7 @@ In addition to the command station components, you will also need
 4. a [power supply](power.md) for the motor driver, appropriate for your track and locos.
 5. a [power supply](power.md) for your microcontroller
 
-    *Not required if using an [EX-MotorShield8874](../products/ex-motorshield8874/) motor driver [^2]*
+    *Not required if using an [EX-MotorShield8874](../products/ex-motorshield8874/ex-motorshield8874.md) motor driver [^2]*
 
 6. a **'Main'** track, aka 'Operations' track - most people already have this: it's your layout!
 

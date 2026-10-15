@@ -1,0 +1,53 @@
+# Using Your Command Station
+
+You need just two things that work together to operate your model railroad:
+
+- The **EX‑CommandStation** (aka the DCC Command Station)
+- A Controller (aka Front-end, Cab, or Throttle)
+
+==TODO== needs an intro for other than the throttles
+
+Additionally you may want to:
+
+- Do CV Programming
+- Control DCC Accessories
+- Use (Direct Current) DC
+
+## The EX-CommandStation
+
+The **EX‑CommandStation** is explained in detail in the EX-CommandStation (ready to run or self build) pages. It is either an **EX‑CommandStation/Booster One Express** or an microcontroller with a motor driver and a WiFi shield.
+
+The Command Station accepts instructions from a controller and generates packets that are transmitted to your track and subsequently your trains.
+
+## The Throttle (Controller)
+
+Since the **EX‑CommandStation** simply accepts commands to turn into signals for your layout, you need something that sends those commands to run your trains - a controller. (It isn’t very practical to type something like <t 1 3 75 1> into a serial monitor to tell your train to move each time! 😉)
+
+A controller can be a hardware device like a handheld throttle (also called a Controller or Cab), an App that runs on your phone, a Web Page, or front-end software like JMRI or Rocrail that runs on a computer or Raspberry Pi.
+
+### Throttle (Controller) Options
+
+!!! note inline end "Connection Types"
+
+    Your throttle (controller) can connect to the **EX‑CommandStation** several different ways, such as:
+
+    - WiFi
+    - Direct connection using a USB cable
+    - 2 wires to an Arduino serial port
+    - Ethernet
+    - Bluetooth
+    - Remote connection (VNC, MQTT, etc.)
+
+For further throttle and connection options, refer to the [Throttle List](throttles.md) page.
+
+----
+
+==TODO== the rest of this page
+
+## CV Programming
+
+## DCC Accessories
+
+## (Direct Current) DC
+
+--8<-- "snippets/abbr.md"
