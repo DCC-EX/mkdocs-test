@@ -1,6 +1,6 @@
 # I/O Device Drivers and HAL
 
-==TODO== change references to the Arduino IDE to VSC
+==TODO== LOW - change references in this document from the Arduino IDE to VSC/PIO
 
 The **EX-CommandStation**** has always had built-in support for turnout control, output control and input sensors attached to the Arduino pins.  However, you may outgrow the built-in capabilities and want to access more output pins than the Arduino has available.  Or you may wish to attach servos to the controller for turnout control or for animating a layout component, such as the doors to an engine shed.
 
@@ -33,11 +33,8 @@ Your motor driver may have convenient connectors for I2C (I<sup>2</sup>C) device
 
 All I2C (I<sup>2</sup>C) devices are connected in parallel to this bus, and when the Arduino sends commands, all attached devices receive them. However, only a device with a matching address will respond.  Each device attached to the bus should have a unique address.
 
-.. figure:: ../../_static/images/i2c/i2cbus.png
-   :alt: I2C (I<sup>2</sup>C) Bus Topology
-   :scale: 20%
-
-   Example I2C (I<sup>2</sup>C) Bus Topology with Arduino Mega and Three I2C (I<sup>2</sup>C) modules
+![Example I2C Bus Topology with Arduino Mega and Three I2C modules](../../../_static/images/i2c-devices/i2cbus.png) { width=400dp }  
+Example I2C (I<sup>2</sup>C) Bus Topology with Arduino Mega and Three I2C (I<sup>2</sup>C) modules
 
 ### Pull-Ups
 
