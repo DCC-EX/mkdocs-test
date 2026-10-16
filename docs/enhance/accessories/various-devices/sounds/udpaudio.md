@@ -138,3 +138,5 @@ Check:
 - Using v1.04 or later (folder fix in param1)
 - Waveshare has folders: `/trains/`, `/music/`, `/soundfx/`, `/other/`
 - Folder command sent before play command
+
+--8<-- "snippets/abbr.md"

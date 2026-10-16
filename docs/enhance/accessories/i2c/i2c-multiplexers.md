@@ -22,9 +22,9 @@ Both TCA9548A/PCA9548A 8-channel, and TCA9544A/PCA9544A 4-channel multiplexers h
 
 Most multiplexers allow you to set them to the I2C address range of 0x70-0x77. The issue with 0x70 is that it is also a broadcast address used by PCA9685 Servo Modules, and therefore any attempt to use this address can create issues. We therefore suggest you set all of your multiplexers into the range 0x71-77.
 
-!! Note "address range 0x71-77"
+!!! Note "address range 0x71-77"
 
-EX‑CommandStation will only scan for multiplexers in the address range 0x71-77, so please set your multiplexers into this address range.
+    EX‑CommandStation will only scan for multiplexers in the address range 0x71-77, so please set your multiplexers into this address range.
 
 ## Locating devices on I2C buses and multiplexer sub buses
 
@@ -119,8 +119,8 @@ HAL(PCA9685, 116, 16, {I2CMux_0, SubBus_01, 0x41})
 HAL(MCP23017, 196, 16, {I2CMux_0, SubBus_03, 0x20})
 ```
 
-Note "multiplexors"
+!!! Note "Multiplexers"
 
-Note that any currently supported I2C device can be connected to any port of any multiplexer, provided they are declared in 'myAutomation.h' with the HAL() macro, with the correct addressing for multiplexer and sub-bus. It is probably easiest to connect all the I2C devices to your multiplexers and let EX‑CommandStation probe for the them and any devices off each sub-bus, so you can use the console output to guide you in creating the HAL() macro declarations for 'myAutomation.h'.
+    Note that any currently supported I2C device can be connected to any port of any multiplexer, provided they are declared in 'myAutomation.h' with the HAL() macro, with the correct addressing for multiplexer and sub-bus. It is probably easiest to connect all the I2C devices to your multiplexers and let EX‑CommandStation probe for the them and any devices off each sub-bus, so you can use the console output to guide you in creating the HAL() macro declarations for 'myAutomation.h'.
 
 --8<-- "snippets/abbr.md"

@@ -14,12 +14,10 @@ See also the [Connecting a servo turnout/point](../connecting-servo-turnout.md) 
 Note the pin connectors along the left side of the module - these are where you connect to the
 Arduino.  
 
-The 16 columns of three pins along the bottom of the module are where you connect the servos.
-The pins are arranged so that you can just plug a servo connector directly onto them, but be
-sure that the wire colours match the colours of the pins, i.e. yellow to yellow, red to red and black to black.
+The 16 columns of three pins along the bottom of the module are where you connect the servos.  
+The pins are arranged so that you can just plug a servo connector directly onto them, but be sure that the wire colours match the colours of the pins, i.e. yellow to yellow, red to red and black to black.
 
-The servo module itself is powered from the Arduino, but the servos themselves contain motors that
-consume more current than the Arduino is able to supply, and so a separate 5V supply is required for the servos.  This is connected to the green terminal block at the top of the module, with terminals labelled V+ and GND. The V+ terminal is connected to 5V and the GND to the 0V (ground) wire of the supply.
+The servo module itself is powered from the Arduino, but the servos themselves contain motors that consume more current than the Arduino is able to supply, and so a separate 5V supply is required for the servos. This is connected to the green terminal block at the top of the module, with terminals labelled V+ and GND. The V+ terminal is connected to 5V and the GND to the 0V (ground) wire of the supply.
 
 Connections to the Arduino are made with four jumper wires (+5V power and GND, and SCL and SDA), as shown on the following diagram:
 
@@ -36,12 +34,12 @@ Enter `<D SERVO 100 110>` and this time it should definitely move.  For the last
 
 Try `<D SERVO 100 450 3>` and the servo should move slowly back.
 
-You can use the servo to control turnouts, semaphore signals, engine shed doors, and other layout components, to make your layout more dynamic and exciting.  In the picture below, you can see a servo mounted below the baseboard with a piece of wire passing through a slot cut in the baseboard, to operate a turnout.
+You can use the servo to control turnouts, semaphore signals, engine shed doors, and other layout components, to make your layout more dynamic and exciting. In the picture below, you can see a servo mounted below the baseboard with a piece of wire passing through a slot cut in the baseboard, to operate a turnout.
 
 ![Servo mount to operate a turnout](../../../_static/images/i2c-devices/TurnoutServoMount.jpg){ width="400px"}
 <br/>Servo mount to operate a turnout
 
-And in the next picture you can see a servo that operates a semaphore signal.  The signal, and its
+And in the next picture you can see a servo that operates a semaphore signal. The signal, and its
 servo mounting bracket, were 3d-printed on a Creality Ender-3 printer.
 
 ![Servo mount to operate a Semaphore Signal](../../../_static/images/i2c-devices/SemaphoreSignal.jpg){Width="400px"}
