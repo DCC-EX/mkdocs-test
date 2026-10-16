@@ -20,7 +20,7 @@ Refer to the [motor drivers](../reference/hardware/motorboards/index.md) list fo
 
 ## Other Supported devices
 
-See the [Supported Device List](../enhance/accessories/hardware-list.md) and [I2C (I<sup>2</sup>C) pages](../enhance/accessories/i2c-intro.md) for some of the other devices the **EX-CommandStation** currently supports.
+See the [Supported Device List](../enhance/accessories/hardware-list.md) and [I2C (I<sup>2</sup>C) pages](../enhance/accessories/i2c/index.md) for some of the other devices the **EX-CommandStation** currently supports.
 
 RAILCOM support is currently being investigated.
 

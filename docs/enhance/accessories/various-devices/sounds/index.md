@@ -40,3 +40,5 @@ The <y> command is specifically designed for easy testing and control of sounds 
 ## Sound in EXRAIL
 
 Refer to the [EXRAIL cookbooks](/enhance/exrail/cookbooks/sounds/sounds.md) for examples.
+
+--8<-- "snippets/abbr.md"

@@ -57,3 +57,5 @@ HAL(DFPlayer,10000,1,0x48)
 ```
 
 Where the connection is made through a multiplexor, the i2cAddress will reflect that, as for all other I2C HAL drivers.
+
+--8<-- "snippets/abbr.md"

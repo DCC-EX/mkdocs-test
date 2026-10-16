@@ -23,7 +23,7 @@ Accessories are broadly divided into two categories:
     - Push buttons
     - Keypads
     - Rotary encoders
-    - Clocks
+    - [Clocks](./various-devices/ds1307.md)
 
 Note that we consider throttles/controllers differently to accessories, so these are not covered in this section. See our [Throttles](/throttles/throttles.md) section instead.
 
@@ -31,7 +31,7 @@ Note that we consider throttles/controllers differently to accessories, so these
 
 There are generally three ways accessories can be connected to and controlled by your **EX-CommandStation**:
 
-- I2C
+- [I2C (i<sup>2</sup>C)](./i2c/index.md)
 - Serial
 - DCC accessories attached to a DCC main track output
 
