@@ -40,7 +40,7 @@ Simply, it means ensuring that when you are using multiple devices with the same
 
 Shown below is an Arduino Mega with a TCA9548A 8-channel multiplexer attached.
 
-![Example of Arduino Mega2560 with TCA9548A 8-channel multiplexer](../../_static/images/i2c-devices/mega2560-multiplexer-example.png)
+![Example of Arduino Mega2560 with TCA9548A 8-channel multiplexer](../../../_static/images/i2c-devices/mega2560-multiplexer-example.png)
 
 As you can see, we have two identically addressed I2C peripherals attached to independent channels SC2 and SC3 so that they don’t clash. The EX‑CommandStation software is able to distinguish between the two with new extended addressing formats. As a helpful aid, the command station will discover the multiplexer and then probe each channel to see what, if any, I2C devices are attached.
 

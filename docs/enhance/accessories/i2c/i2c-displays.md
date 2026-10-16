@@ -1,4 +1,4 @@
-# I2C Displays
+# I2C (I<sup>2</sup>C) Displays
 
 **EX-CommandStation** supports both LCD and OLED to display status and other user-defined information. While a command station is typically hidden away under a layout, if you like the idea of a nice visual display for your panel, several different I2C displays will work. You can use either a 20 character by 2 line or 4 line LCD display, or an OLED display capable of up to 8 lines.
 
@@ -27,9 +27,9 @@ Here is an example of a 20 x 4 LCD screen. They come in different colours like b
 
 ### 20 x 4 LCD with backpack
 
-![20 x 4 LCD](../../_static/images/display/lcd_20x4_backpack.png){ width="400px"}
+![20 x 4 LCD](../../../_static/images/display/lcd_20x4_backpack.png){ width="400px"}
 
-![16 x 2 LCD](../../_static/images/display/lcd_16x2_backpack.png){ width="400px"}
+![16 x 2 LCD](../../../_static/images/display/lcd_16x2_backpack.png){ width="400px"}
 
 On the left is 20x4 LCD with backpack, and on the right is a 16x2 LCD.
 
@@ -37,8 +37,8 @@ Remember to either order an LCD display with the backpack already soldered or tw
 
 Some examples of supported OLED displays:
 
-![Adafruit .96" OLED](../../_static/images/display/adafruit_96in_oled_sm.jpg){ width="400px"}  
-![Makerfocus OLED Display](../../_static/images/display/makerfocus_oled_sm.png){ width="400px"}
+![Adafruit .96" OLED](../../../_static/images/display/adafruit_96in_oled_sm.jpg){ width="400px"}  
+![Makerfocus OLED Display](../../../_static/images/display/makerfocus_oled_sm.png){ width="400px"}
 <br/> Adafruit 0.96" 128x64 OLED, and Makerfocus 128x32 .91" OLED.
 
 ## Connecting an LCD Display
@@ -53,7 +53,7 @@ And here is a picture of the board after soldering or if you purchase a board al
 
 LCD with backpack soldered to the back
 
-![Backpack Soldered to LCD](../../_static/images/display/lcd_soldered.png){ width="400px"}
+![Backpack Soldered to LCD](../../../_static/images/display/lcd_soldered.png){ width="400px"}
 
 ### Connecting the Jumper Wires
 
@@ -72,10 +72,10 @@ To connect the Display to the Command Station, you will need 4 male to female ju
 
 OLED displays come in more varieties than LCD displays. The library to run them also takes more memory. Therefore, OLED displays won't work with an UNO and you will require a Mega. Here are some examples of OLED displays:
 
-![Adafruit .96" OLED](../../_static/images/display/adafruit_96in_oled_sm.jpg){ width="400px"}
+![Adafruit .96" OLED](../../../_static/images/display/adafruit_96in_oled_sm.jpg){ width="400px"}
 <br/>Adafruit .96" OLED
 
-![Makerfocus OLED Display](../../_static/images/display/makerfocus_oled_sm.png){ width="400px"}
+![Makerfocus OLED Display](../../../_static/images/display/makerfocus_oled_sm.png){ width="400px"}
 <br/>Makerfocus OLED Display
 
 ### Soldering Wires to the Display
@@ -86,12 +86,12 @@ For any of these boards you can buy male header pins (either straight or 90 angl
 
 Physically connecting an I2C OLED display to your **EX-CommandStation** is relatively straight forward, with SDA connecting to the CommandStation's SDA pin, SCL to SCL, VCC to 5V, and GND to GND.
 
-![Mega2560 with I2C OLED](../../_static/images/display/mega-with-i2c-oled.png){ width="600px"}
+![Mega2560 with I2C OLED](../../../_static/images/display/mega-with-i2c-oled.png){ width="600px"}
 <br/>Mega2560 with I2C OLED
 
 You can also connect the display to the motor shield's I2C headers.
 
-![Mega2560 with I2C OLED](../../_static/images/display/mega-with-i2c-oled-twi.png){ width="600px"}
+![Mega2560 with I2C OLED](../../../_static/images/display/mega-with-i2c-oled-twi.png){ width="600px"}
 
 ==TODO== MEDIUM - diagram for connecting the EX-CSB1 to an oLED via the headers
 
@@ -99,7 +99,7 @@ You can also connect the display to the motor shield's I2C headers.
 
 ### Reconfigure your Command Station to use a single display
 
-If installing with **EX-Installer**, refer to [installing an optional display](../../prepare-to-use/installer/install-cs.md#optional-lcd-or-oled-display) to configure a single display with your **EX-CommandStation**.
+If installing with **EX-Installer**, refer to [installing an optional display](../../../prepare-to-use/installer/install-cs.md#optional-lcd-or-oled-display) to configure a single display with your **EX-CommandStation**.
 
 If you are using the Arduino IDE or VSCode with PlatformIO, you will need to edit "config.h" to enable your display option. Look for this section in "config.example.h" to define the display:
 
@@ -174,7 +174,7 @@ If you have custom messages you wish to display, you can do this by adding the l
 
 Apart from the main status display (display '0'), **EX-CommandStation** allows definition of many more additional displays which can be any mix of LCD and OLED I2C displays. These displays can show all manner of output, including using ``SCREEN()`` commands issued from within **EXRAIL** scripts. Here is an OLED showing train departure times on a station building:
 
-![OLED showing train departure times](../../_static/images/display/polar_express_oled.jpg){ width="400px"}
+![OLED showing train departure times](../../../_static/images/display/polar_express_oled.jpg){ width="400px"}
 
 In order to configure additional displays, you will need to add lines to myAutomation.h in order to create the displays when the command station is running. Below we configure an additional OLED display as display #1, and an LCD as display #2:
 

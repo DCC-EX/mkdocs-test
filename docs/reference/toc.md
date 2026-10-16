@@ -218,12 +218,12 @@ li:not(.md-nav__item, .md-tabs__item) a {
         - [Connecting a servo turnout/point <small>(Servo Turnouts/Points)</small>](../enhance/accessories/connecting-servo-turnout.md)
         - [Hardware device list <small>(Hardware List)</small>](../enhance/accessories/hardware-list.md)
         - **I2C (I<sup>2</sup>C)**
-            - [I2C (I<sup>2</sup>C) – An Introduction <small>(I2C (I<sup>2</sup>C) Intro)</small>](../enhance/accessories/i2c-intro.md)
-            - [Buying I2C (I<sup>2</sup>C) Devices](../enhance/accessories/buying-i2c-devices.md)
-            - [I2C Displays <small>(I2C (I<sup>2</sup>C) Displays)</small>](../enhance/accessories/i2c-displays.md)
-            - [I2C GPIO Expanders <small>(I2C (I<sup>2</sup>C) GPIO Expanders)</small>](../enhance/accessories/i2c-gpio-expanders.md)
-            - [I2C Servo and LED Module <small>(I2C (I<sup>2</sup>C) Servo/LED modules)</small>](../enhance/accessories/i2c-servo-led-modules.md)
-            - [I2C Multiplexers <small>(I2C (I<sup>2</sup>C) Multiplexers)</small>](../enhance/accessories/i2c-multiplexers.md)
+            - [I2C (I<sup>2</sup>C) – An Introduction <small>(I2C (I<sup>2</sup>C) Intro)</small>](../enhance/accessories/i2c/index.md)
+            - [Buying I2C (I<sup>2</sup>C) Devices](../enhance/accessories/i2c/buying-i2c-devices.md)
+            - [I2C Displays <small>(I2C (I<sup>2</sup>C) Displays)</small>](../enhance/accessories/i2c/i2c-displays.md)
+            - [I2C GPIO Expanders <small>(I2C (I<sup>2</sup>C) GPIO Expanders)</small>](../enhance/accessories/i2c/i2c-gpio-expanders.md)
+            - [I2C Servo and LED Module <small>(I2C (I<sup>2</sup>C) Servo/LED modules)</small>](../enhance/accessories/i2c/i2c-servo-led-modules.md)
+            - [I2C Multiplexers <small>(I2C (I<sup>2</sup>C) Multiplexers)</small>](../enhance/accessories/i2c/i2c-multiplexers.md)
             - **Various Devices**
                 - **Sounds**
                     - [Sounds](../enhance/accessories/various-devices/sounds/index.md)

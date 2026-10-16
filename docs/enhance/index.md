@@ -80,7 +80,7 @@ Accessories are broadly divided into two categories:
     * Signals
     * [Turntables](../products/ex-turntable/index.md)
     * [Lighting](./accessories/i2c-servo-led-modules.
-    * [Servos](./accessories/i2c-servo-led-modules.md)
+    * [Servos](./accessories/i2c/i2c-servo-led-modules.md)
     * [Sounds](./accessories/various-devices/sounds/index.md)
 
 * Inputs:

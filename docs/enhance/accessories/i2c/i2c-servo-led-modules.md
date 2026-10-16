@@ -1,13 +1,13 @@
-# I2C Servo and LED Module
+# I2C (I<sup>2</sup>C) Servo and LED Module
 
 To connect a servo module to **EX-CommandStation**, you first need to get a module, based on the PCA9685 chip.
 
-![PCA9685 Servo Module](../../_static/images/i2c-devices/pca9685.png){ width="400px"}
+![PCA9685 Servo Module](../../../_static/images/i2c-devices/pca9685.png){ width="400px"}
 <br/>PCA9685 Servo Module
 
 These are widely available from eBay, Amazon, etc. for a few dollars.
 
-See also the [Connecting a servo turnout/point](./connecting-servo-turnout.md) page for additional information.
+See also the [Connecting a servo turnout/point](../connecting-servo-turnout.md) page for additional information.
 
 ## Pins
 
@@ -23,7 +23,7 @@ consume more current than the Arduino is able to supply, and so a separate 5V su
 
 Connections to the Arduino are made with four jumper wires (+5V power and GND, and SCL and SDA), as shown on the following diagram:
 
-![Mega with PCA9685 Servo Module](../../_static/images/i2c-devices/ArduinoMegaServo.png){ width="600px"}
+![Mega with PCA9685 Servo Module](../../../_static/images/i2c-devices/ArduinoMegaServo.png){ width="600px"}
 <br/>Mega with PCA9685 Servo Module
 
 In **EX-CommandStation**, the drivers for the PCA9685 module is already installed, and made available to for use as pin numbers 100-115. A servo is shown in the diagram, connected to the first set of pins on the module.  This will be accessed using pin number 100.
@@ -38,13 +38,13 @@ Try `<D SERVO 100 450 3>` and the servo should move slowly back.
 
 You can use the servo to control turnouts, semaphore signals, engine shed doors, and other layout components, to make your layout more dynamic and exciting.  In the picture below, you can see a servo mounted below the baseboard with a piece of wire passing through a slot cut in the baseboard, to operate a turnout.
 
-![Servo mount to operate a turnout](../../_static/images/i2c-devices/TurnoutServoMount.jpg){ width="400px"}
+![Servo mount to operate a turnout](../../../_static/images/i2c-devices/TurnoutServoMount.jpg){ width="400px"}
 <br/>Servo mount to operate a turnout
 
 And in the next picture you can see a servo that operates a semaphore signal.  The signal, and its
 servo mounting bracket, were 3d-printed on a Creality Ender-3 printer.
 
-![Servo mount to operate a Semaphore Signal](../../_static/images/i2c-devices/SemaphoreSignal.jpg){Width="400px"}
+![Servo mount to operate a Semaphore Signal](../../../_static/images/i2c-devices/SemaphoreSignal.jpg){Width="400px"}
 <br/>Servo mount to operate a Semaphore Signal
 
 ## Technical Discussion for Engineers
@@ -194,7 +194,7 @@ Use SERVO2 function with Mega D35 pin for a panel button to operate animation ac
 
 Another use case for the PCA9685 is to drive LEDs using PWM to control the intensity of the LEDs. The intensity of the LEDs can vary from 0 (off) to 4095 (100%).
 
-![LED](../../_static/images/accessories/led.png){ width="100px"}
+![LED](../../../_static/images/accessories/led.png){ width="100px"}
 <br/>LED
 
 !!! note ""
