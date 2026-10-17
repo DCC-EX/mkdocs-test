@@ -26,6 +26,8 @@ This capability is part of **EXRAIL** and is built into your **EX-CommandStation
 * [EXRAIL Introduction](../enhance/exrail/exrail-objects-introduction.md)
 * [EXRAIL Adding a Roster](../enhance/exrail/exrail-objects-introduction.md#adding-a-roster)
 
+----
+
 ## Turnouts/Points
 
 Turnouts/Points included on your layout can be any of the following forms:
@@ -38,6 +40,8 @@ The capability to define and support these is part of **EXRAIL** and is built in
 
 Note: To simply control existing DCC Turnouts/Points see [DCC Accessory Operation](../throttles/dcc-accessories.md) for more information.
 
+----
+
 ## Routes and Automation - Automating your layout
 
 Your **EX-CommandStation** has the ability to perform sequences of instructions ranging from simply throwing a set of turnouts/points (a traditional 'route') to performing extremely complex control of locos, animations, lights and, of course, turnouts/points.
@@ -47,9 +51,11 @@ This capability is part of **EXRAIL** and is built into your **EX-CommandStation
 * [EXRAIL Introduction](../enhance/exrail/exrail-objects-introduction.md)
 * [EXRAIL Cookbooks](../enhance/exrail/cookbooks/index.md)
 
+----
+
 ## TrackManager - DC and DCC Operation
 
-Your **EX-CommandStation** has the ability to dynamically configure the outputs of your EX-CommandStation as either:
+Your **EX-CommandStation** has the ability to dynamically configure the outputs of your EX-CommandStation as any of:
 
 * Main DCC track output
 * Programming DCC track output
@@ -57,7 +63,7 @@ Your **EX-CommandStation** has the ability to dynamically configure the outputs 
 * DCC Auto Reverse
 * DCC Booster
 
-Any output of your **EX-CommandStation** can perform any of the functions listed above. And, for most of them, you can change them at will.
+Any output of your **EX-CommandStation** can perform any of the functions listed above. And, for most of them, you can temporarily change them at will.
 
 This capability is part of **TrackManager** and is built into your **EX-CommandStation**.  Read the following to explore this feature:
 
@@ -67,6 +73,8 @@ This capability is part of **TrackManager** and is built into your **EX-CommandS
 Also see:
 
 * [DC Tracks Cookbook](../enhance/exrail/cookbooks/dc-tracks.md)
+
+----
 
 ## Accessories
 
@@ -79,7 +87,7 @@ Accessories are broadly divided into two categories:
     * [Turnouts/Points](../enhance/accessories/connecting-servo-turnout.md)
     * Signals
     * [Turntables](../products/ex-turntable/index.md)
-    * [Lighting](./accessories/i2c-servo-led-modules.
+    * [Lighting](./accessories/i2c/i2c-servo-led-modules)
     * [Servos](./accessories/i2c/i2c-servo-led-modules.md)
     * [Sounds](./accessories/various-devices/sounds/index.md)
 
@@ -101,9 +109,11 @@ Also see:
 * [EX-SensorCAM](../products/ex-sensorcam/ex-sensorcam.md)
 * [Use the EX-CSB1 as a DCC Booster](./trackmanager/booster.md)
 
+----
+
 ## Tools
 
-The **DCC-EX** team also provide a number of tools to support you **EX-CommandStation* and you layout generally.  These include:
+The **DCC-EX** team also provide a number of tools to support your **EX-CommandStation** and your layout generally.  These include:
 
 * [EX-Toolbox](../products/ex-toolbox/index.md)
 * [EX-DCCInspector](../products/ex-dccinspector/index.md)
