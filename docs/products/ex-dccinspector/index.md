@@ -5,7 +5,7 @@
 
 ==TODO== MEDIUM - This page needs to be expanded
 
-EX‑DCCInspector is a packet sniffing tool that can connect directly to the signal pins on the Command Station or to the track depending on your circuit. For information in the [Diagnostic Tools Section](https://dcc-ex.com/reference/tools/diagnostic-tools.html). == TODO== Migrate the diagnostic tools pages
+EX‑DCCInspector is a packet sniffing tool that can connect directly to the signal pins on the Command Station or to the track depending on your circuit. For information in the [Diagnostic Tools Section](../../reference/tools/index.md).
 
 ![DCC Inspector EX thumbnail](../../_static/images/ex-dccinspector/sniffer_thumbnail.png){ width=200px align=left }
 [EX-DCCInspector source code Zip file](https://github.com/DCC-EX/DCCInspector-EX/archive/refs/heads/main.zip)

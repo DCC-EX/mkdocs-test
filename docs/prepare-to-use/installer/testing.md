@@ -62,6 +62,6 @@ There are several other serial monitors available that can be used for testing:
 - Built in to VSCode is you are using that as an IDE.
 - Built in to the Arduino IDE (We do not recommend that for development)
 
-See [Serial Monitors](../../reference/tools/serial-monitor_not_in_nav.md) for more information.
+See [Serial Monitors](../../reference/tools/serial-monitor.md) for more information.
 
 --8<-- "snippets/abbr.md"

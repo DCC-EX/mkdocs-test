@@ -403,4 +403,4 @@ li:not(.md-nav__item, .md-tabs__item) a {
 - [Getting Started with DCC-EX](../products/getting-started_not_in_nav.md)
 - [Incorrect IOREF voltage for 3.3v Microcontrollers](microcontrollers/esp32/ioref-incorrect-voltage-fix_not_in_nav.md)
 - [Stationary Decoder Address table](stationary-decoder-addresses_not_in_nav.md)
-- [Using a Serial Monitor / Device Monitor](tools/serial-monitor_not_in_nav.md)
+- [Using a Serial Monitor / Device Monitor](tools/serial-monitor.md)

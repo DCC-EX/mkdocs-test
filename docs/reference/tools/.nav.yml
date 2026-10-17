@@ -1,0 +1,6 @@
+nav:
+  - Tools Overview: index.md
+  - Using the Serial Monitor: serial-monitor.md
+  - <i>D</i> Command: diagnostic-d-command.md
+  - D ACK</i> Command: diagnostic-d-ack-command.md
+  - DCC Diagnostic Tools: diagnostic-tools.md

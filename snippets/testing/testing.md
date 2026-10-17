@@ -104,7 +104,7 @@ There are several serial monitors available:
 - Built in to the Arduino IDE (Not recommended)
 - built into the [**EX-ToolBox**](/products/ex-toolbox/connecting.md) Android app
 
-See [Serial Monitors](/reference/tools/serial-monitor_not_in_nav.md) for more information.
+See [Serial Monitors](/reference/tools/serial-monitor.md) for more information.
 
 --8<-- "snippets/ex-installer/device-monitor.md"
 

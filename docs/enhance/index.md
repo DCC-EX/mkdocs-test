@@ -87,7 +87,7 @@ Accessories are broadly divided into two categories:
     * [Turnouts/Points](../enhance/accessories/connecting-servo-turnout.md)
     * Signals
     * [Turntables](../products/ex-turntable/index.md)
-    * [Lighting](./accessories/i2c/i2c-servo-led-modules)
+    * [Lighting](./accessories/i2c/i2c-servo-led-modules.md)
     * [Servos](./accessories/i2c/i2c-servo-led-modules.md)
     * [Sounds](./accessories/various-devices/sounds/index.md)
 
@@ -117,6 +117,6 @@ The **DCC-EX** team also provide a number of tools to support your **EX-CommandS
 
 * [EX-Toolbox](../products/ex-toolbox/index.md)
 * [EX-DCCInspector](../products/ex-dccinspector/index.md)
-* [Serial Monitors](../reference/tools/serial-monitor_not_in_nav.md)
+* [Serial Monitors](../reference/tools/serial-monitor.md)
 
 --8<-- "snippets/abbr.md"
