@@ -20,15 +20,13 @@ Scanned roots: `C:\Users\akers\OneDrive\github\github_doco\mkdocs-test\docs`, `C
 
 ## High TODOs
 
-Total High TODO matches: 29
+Total High TODO matches: 27
 
 | File | Line | Line text |
 | --- | ---: | --- |
 | [docs/throttles/connecting-usb.md](../throttles/connecting-usb.md) | 3 | ==TODO== Connecting a USB Throttle to your EX-CommandStation |
 | [docs/throttles/connecting-wifi.md](../throttles/connecting-wifi.md) | 3 | ==TODO== Connecting a WiFi Throttle to your EX-CommandStation |
 | [docs/throttles/dcc-accessories.md](../throttles/dcc-accessories.md) | 3 | ==TODO== how to control DCC Accessories |
-| [docs/throttles/index.md](../throttles/index.md) | 8 | ==TODO== needs an intro for other than the throttles |
-| [docs/throttles/index.md](../throttles/index.md) | 45 | ==TODO== the rest of this page |
 | [docs/reference/configuration/index.md](../reference/configuration/index.md) | 3 | ==TODO== EX-CommandStation Configuration Reference - intro / overview |
 | [docs/reference/serial-commands/serial-command-dd-anin-anout_not_in_nav.md](../reference/serial-commands/serial-command-dd-anin-anout_not_in_nav.md) | 15 | * ``<D ANOUT «vpin» «position» «profile»>`` = see ==TODO== Command Description |
 | [docs/reference/serial-commands/serial-command-dd-anin-anout_not_in_nav.md](../reference/serial-commands/serial-command-dd-anin-anout_not_in_nav.md) | 16 | * ``<D ANOUT «vpin» «position»>`` = see ==TODO== Command Description |
@@ -56,12 +54,13 @@ Total High TODO matches: 29
 
 ## Medium priority TODOs
 
-Total medium priority TODO matches: 78
+Total medium priority TODO matches: 79
 
 | File | Line | Line text |
 | --- | ---: | --- |
 | [docs/support/faq.md](../support/faq.md) | 9 | ==TODO== MEDIUM Rework this so that it includes GUI options (EX-WebThrottle, Engine Driver, etc.) |
 | [docs/support/faq.md](../support/faq.md) | 19 | ==TODO== MEDIUM Rework this so that it includes GUI options (EX-WebThrottle, Engine Driver, etc.) |
+| [docs/throttles/index.md](../throttles/index.md) | 39 | ==TODO== MEDIUM - Overview of DCC Accessory Operation |
 | [docs/reference/command-station-architecture/io-device-drivers.md](../reference/command-station-architecture/io-device-drivers.md) | 3 | ==TODO== MEDIUM - change the references the this page from the Arduino IDE to VSC/PIO |
 | [docs/reference/configuration/advanced-config-h.md](../reference/configuration/advanced-config-h.md) | 3 | ==TODO== MEDIUM - change the references the this page/section from the Arduino IDE to VSC/PIO |
 | [docs/reference/microcontrollers/index.md](../reference/microcontrollers/index.md) | 5 | ==TODO== MEDIUM - change the references the this page/section from the Arduino IDE to VSC/PIO |

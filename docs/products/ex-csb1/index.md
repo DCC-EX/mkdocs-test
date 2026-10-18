@@ -12,6 +12,7 @@ With your phone, you could be running your trains in less than 5 minutes. *No co
 
 The **DCC-EX EX-CommandStation/Booster 1 (EX-CSB1)** comes ready to use out of the box and has the following features:
 
+- All the features of our [**EX-CommandStation** Software](../ex-commandstation/index.md)
 - **Dual DCC/PWM DC outputs with up to 5A capacity** – easily expandable to 4 outputs
 - **Wi-Fi built-in** – fast 802.11n capable, with Access Point and Station modes including support for connecting as many as 10 Wi-Fi throttles (you can also connect to JMRI via Wi-Fi, but a USB cable is often better)
 - **Single power supply for track and onboard electronics** – 12-25V DC with polarity protection

@@ -39,9 +39,9 @@ It also supports:
 
 Our primary solution is the [**EX-CommandStation/Booster 1 Express (CSB1**)](../ex-csb1/index.md) DCC Command Station which provides a ready-to-run system with integrated WiFi. You can start running trains from your Android or iOS phone in a couple of minutes if you plug your track in one end and a power supply in the other.
 
-- If you want to *buy a ready built* **EX-CommandStation**, see [Purchase a EX-CommandStation](/purchasing/official-sellers.md).  
-To follow the basic setup process, you can use the `next` button seen at the bottom right of each page.
+- If you want to *buy a ready built* **EX-CommandStation**, see [Official Suppliers](/purchasing/official-sellers.md) page.  
+To follow the basic setup process, see the [Quick Setup Guide](../ex-csb1/getting-started.md).
 
-- If you want to *build your own* **EX-CommandStation** and are prepared to learn about Arduinos, ESP32s (and other microcontrollers) see [Building your own EX-CommandStation](/diy/diy.md). But you are advised to read the basic guidance that follows so you will have a better understanding of what you want to achieve, and what will be possible.
+- If you want to *build your own* **EX-CommandStation** and are prepared to learn about Arduinos, ESP32s (and other microcontrollers) see [Building your own EX-CommandStation](/diy/diy.md). But you are advised to read the basic guidance so you will have a better understanding of what you want to achieve, and what will be possible.
 
 --8<-- "snippets/abbr.md"
