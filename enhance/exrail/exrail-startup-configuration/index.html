@@ -83,7 +83,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#startup-configuration" class="md-skip">
+        <a href="#startup-configuration-nativeserial-commands" class="md-skip">
           Skip to content
         </a>
       
@@ -3951,18 +3951,18 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#create-a-new-tab" class="md-nav__link">
+  <a href="#adding-in-the-startup-commands" class="md-nav__link">
     <span class="md-ellipsis">
-      Create a new tab
+      Adding in the startup commands
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#creating-the-mysetuph-file" class="md-nav__link">
+  <a href="#upload-the-new-version-of-the-software" class="md-nav__link">
     <span class="md-ellipsis">
-      Creating the mySetup.h file
+      Upload the new version of the software
     </span>
   </a>
   
@@ -10467,18 +10467,18 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#create-a-new-tab" class="md-nav__link">
+  <a href="#adding-in-the-startup-commands" class="md-nav__link">
     <span class="md-ellipsis">
-      Create a new tab
+      Adding in the startup commands
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#creating-the-mysetuph-file" class="md-nav__link">
+  <a href="#upload-the-new-version-of-the-software" class="md-nav__link">
     <span class="md-ellipsis">
-      Creating the mySetup.h file
+      Upload the new version of the software
     </span>
   </a>
   
@@ -10512,10 +10512,14 @@
   
 
 
-<h1 id="startup-configuration">Startup Configuration<a class="headerlink" href="#startup-configuration" title="Permanent link">&para;</a></h1>
-<p>Sometimes, you may want to configure your EX‑CommandStation with settings which are not otherwise saved by the Command Station when restarted. For example the ACK min for the Hornby R7150 Decoder (which seemed to need its minimum ACK pulse duration limit set to 2600µS to be recognised).</p>
-<p>To automatically run commands at start up, you can create a new file called mySetup.h to contain these commands.</p>
-<p>How you create the file will depend on how you load the EX‑CommandStation software onto your Arduino.</p>
+<h1 id="startup-configuration-nativeserial-commands">Startup Configuration - Native/Serial Commands<a class="headerlink" href="#startup-configuration-nativeserial-commands" title="Permanent link">&para;</a></h1>
+<p>Sometimes, you may want to configure your <strong>EX‑CommandStation</strong> with settings which are not otherwise saved by the Command Station when restarted, and are not included in the normal <strong>EXRAIL</strong> commands. For example the <code>ACK min</code> for the Hornby R7150 Decoder (which seems to need its minimum ACK pulse duration limit set to 2600µS to be recognised).</p>
+<p>To automatically run <a href="../../../reference/serial-commands/">native/serial commands</a> at start up using the <code>PARSE()</code> command in your <code>myAutomation.h</code>.</p>
+<div class="admonition note">
+<p class="admonition-title">PARSE() supersedes SETUP()</p>
+<p>The old method of creating a <code>mySetup.h</code> file and using <code>SETUP()</code> commands still works, but is no longer recommended.</p>
+</div>
+<p>How you method you use will depend on how you load the <strong>EX‑CommandStation</strong> software onto your Arduino.</p>
 <ul>
 <li>By using <a href="#if-you-are-using-ex-installer">EX‑Installer</a></li>
 <li>By using the <a href="#if-you-are-using-visual-studio-code-vsc">Visual Studio Code (<abbr title="Microsoft Visual Studio Code. Recommended IDE if EX-Installer is insufficient for your needs.">VSC</abbr>)</a></li>
@@ -10523,30 +10527,10 @@
 </ul>
 <hr />
 <h2 id="if-you-are-using-ex-installer">If you are using EX-Installer<a class="headerlink" href="#if-you-are-using-ex-installer" title="Permanent link">&para;</a></h2>
-<p>You need to create a text file in the CommandStation-EX folder below where you uncompressed the EX‑Installer files, and rename it to mySetup.h</p>
-<p>For example, in Microsoft Windows:</p>
-<p>For example, in Microsoft Windows:</p>
-<ul>
-<li>Open the <cite>File Explorer</cite> app</li>
-<li>Navigate to where you unzipped the <a href="https://dcc-ex.com/ex-installer/index.html">EX‑Installer</a> files that you downloaded from this site.</li>
-<li>Open the <cite>CommandStation-EX</cite> sub-folder</li>
-<li>In the ‘Home’ tab, click <code>New Item</code> and then <code>Text Document</code></li>
-<li>Replace the name with <cite>mySetup.h</cite> and press <code>Enter</code> It will warn you about changing the extension (the bit after the ‘.’). Click <code>yes</code>.</li>
-<li>[Right click] on the new file, and select Open With ‣ Notepad</li>
-<li>The file will open in the ‘Notepad’ app</li>
-<li>Enter the commands you need to perform. For Example:</li>
-</ul>
-<div class="language-c++ highlight"><pre><span></span><code><span class="w">    </span><span class="n">SETUP</span><span class="p">(</span><span class="s">&quot;&lt;1&gt;&quot;</span><span class="p">);</span><span class="w"> </span><span class="c1">// Turn track power on at startup</span>
-</code></pre></div>
-<ul>
-<li>Select <code>File</code> ‣ <code>Exit</code>.<br />
-It will ask you the save the file. Click <code>Save</code></li>
-<li>You now need to upload the software using the <a href="../../../prepare-to-use/installer/">EX‑Installer</a> just the same as you originally did to <a href="../../../prepare-to-use/installer/install-cs/">Install the Software</a></li>
-</ul>
-<p>See examples and information below for adding multiple instructions to <code>mySetup.h</code>.</p>
+<p><mark>TODO</mark> MEDIUM - Adding to your myAutomation.h in EX-Installer</p>
 <hr />
 <h2 id="if-you-are-using-visual-studio-code-vsc">If you are using Visual Studio Code (<abbr title="Microsoft Visual Studio Code. Recommended IDE if EX-Installer is insufficient for your needs.">VSC</abbr>)<a class="headerlink" href="#if-you-are-using-visual-studio-code-vsc" title="Permanent link">&para;</a></h2>
-<p><mark>TODO</mark> Uploading via <abbr title="Microsoft Visual Studio Code. Recommended IDE if EX-Installer is insufficient for your needs.">VSC</abbr></p>
+<p><mark>TODO</mark> MEDIUM - Adding to your myAutomation.h in <abbr title="Microsoft Visual Studio Code. Recommended IDE if EX-Installer is insufficient for your needs.">VSC</abbr></p>
 <hr />
 <h2 id="if-you-are-using-the-arduino-ide-not-recommended">If you are using the <abbr title="Not recommended. Use EX-Installer or, if experienced, Microsoft Visual Studio Code (VSC)">Arduino IDE</abbr> (Not Recommended)<a class="headerlink" href="#if-you-are-using-the-arduino-ide-not-recommended" title="Permanent link">&para;</a></h2>
 <p>This will need to be done in the Install using the <abbr title="Not recommended. Use EX-Installer or, if experienced, Microsoft Visual Studio Code (VSC)">Arduino IDE</abbr>, so first make sure you have followed these steps to load up the <abbr title="Not recommended. Use EX-Installer or, if experienced, Microsoft Visual Studio Code (VSC)">Arduino IDE</abbr>.</p>
@@ -10556,34 +10540,30 @@ It will ask you the save the file. Click <code>Save</code></li>
 While it is possible install the software using the <abbr title="Not recommended. Use EX-Installer or, if experienced, Microsoft Visual Studio Code (VSC)">Arduino IDE</abbr>, we seriously <strong><em>DO NOT RECOMMEND IT</em></strong> for a novice users. It is an order of magnitude more complex, much slower, and with a very high probability of getting something wrong unless you really know what you are doing.<br />
 The <strong>EX‑Installer</strong> will meet 100% of the needs of a most users with considerably less effort.</p>
 </div>
-<h2 id="create-a-new-tab">Create a new tab<a class="headerlink" href="#create-a-new-tab" title="Permanent link">&para;</a></h2>
-<p>First you will need to add a new file, just like the config.h file. Create a new tab using the following menu option.</p>
-<p><img alt="Creating a new tab in the Arduino IDE" src="../../../_static/images/arduino-ide/arduino_ide_newtab.jpg" /></p>
-<h2 id="creating-the-mysetuph-file">Creating the mySetup.h file<a class="headerlink" href="#creating-the-mysetuph-file" title="Permanent link">&para;</a></h2>
-<p>At the bottom of the <abbr title="Not recommended. Use EX-Installer or, if experienced, Microsoft Visual Studio Code (VSC)">Arduino IDE</abbr> window, a yellow bar will appear asking for a Name for new file, here make sure to enter mySetup.h (case sensitive, so upper case S in setup) and click OK to create the new file.</p>
-<p><img alt="Choosing a file name for the new file" src="../../../_static/images/arduino-ide/arduino_ide_mysetup.jpg" /></p>
-<p>Adding in the startup commands
-Within the new file that has been created, you can add in the commands that you wish the Command Station to run at startup. For example, if you need to run the following command each time your Command Station starts up:</p>
+<p><mark>TODO</mark> MEDIUM - Adding to your myAutomation.h in the <abbr title="Not recommended. Use EX-Installer or, if experienced, Microsoft Visual Studio Code (VSC)">Arduino IDE</abbr></p>
+<hr />
+<h2 id="adding-in-the-startup-commands">Adding in the startup commands<a class="headerlink" href="#adding-in-the-startup-commands" title="Permanent link">&para;</a></h2>
+<p>Within the new file that has been created, you can add in the commands that you wish the Command Station to run at startup. For example, if you need to run the following command each time your Command Station starts up:</p>
 <div class="language-c++ highlight"><pre><span></span><code><span class="o">&lt;</span><span class="n">D</span><span class="w"> </span><span class="n">ACK</span><span class="w"> </span><span class="n">MIN</span><span class="w"> </span><span class="mi">2600</span><span class="o">&gt;</span>
 </code></pre></div>
-<p>Then you would need to enter into the mySetup.h file:</p>
-<div class="language-c++ highlight"><pre><span></span><code><span class="n">SETUP</span><span class="p">(</span><span class="s">&quot;&lt;D ACK MIN 2600&gt;&quot;</span><span class="p">);</span>
+<p>Then you would need to enter into the myAutomation.h file:</p>
+<div class="language-c++ highlight"><pre><span></span><code><span class="n">PARSE</span><span class="p">(</span><span class="s">&quot;&lt;D ACK MIN 2600&gt;&quot;</span><span class="p">);</span>
 </code></pre></div>
-<p>Note the upper case word SETUP at the start.</p>
+<p>Note the upper case word <code>PARSE</code> at the start.</p>
 <p>Adding in more than one startup command
-If you need to have multiple commands run at start up, you will need to enter each additional command on a new line, so a longer mySetup.h file could look like:</p>
-<div class="language-c++ highlight"><pre><span></span><code><span class="n">SETUP</span><span class="p">(</span><span class="s">&quot;&lt;D ACK MAX 9200&gt;&quot;</span><span class="p">);</span><span class="w"> </span><span class="c1">// Set ACK detection to allow pulses up to 9200uS</span>
-<span class="n">SETUP</span><span class="p">(</span><span class="s">&quot;&lt;D ACK LIMIT 60&gt;&quot;</span><span class="p">);</span><span class="w"> </span><span class="c1">// 60mA is the default</span>
-<span class="n">SETUP</span><span class="p">(</span><span class="s">&quot;&lt;0&gt;&quot;</span><span class="p">);</span><span class="w"> </span><span class="c1">// tracks off at startup</span>
-<span class="n">SETUP</span><span class="p">(</span><span class="s">&quot;&lt;D CMD 0&gt;&quot;</span><span class="p">);</span><span class="w"> </span><span class="c1">// can be set to ON for testing in the serial monitor</span>
+If you need to have multiple commands run at start up, you will need to enter each additional command on a new line, so a longer myAutomation.h file could look like:</p>
+<div class="language-c++ highlight"><pre><span></span><code><span class="n">PARSE</span><span class="p">(</span><span class="s">&quot;&lt;D ACK MAX 9200&gt;&quot;</span><span class="p">);</span><span class="w"> </span><span class="c1">// Set ACK detection to allow pulses up to 9200uS</span>
+<span class="n">PARSE</span><span class="p">(</span><span class="s">&quot;&lt;D ACK LIMIT 60&gt;&quot;</span><span class="p">);</span><span class="w"> </span><span class="c1">// 60mA is the default</span>
+<span class="n">PARSE</span><span class="p">(</span><span class="s">&quot;&lt;0&gt;&quot;</span><span class="p">);</span><span class="w"> </span><span class="c1">// tracks off at startup</span>
+<span class="n">PARSE</span><span class="p">(</span><span class="s">&quot;&lt;D CMD 0&gt;&quot;</span><span class="p">);</span><span class="w"> </span><span class="c1">// can be set to ON for testing in the serial monitor</span>
 </code></pre></div>
-<p>Here you can add comments on each line, these can be added by using the double forward slash character // and then your comments. This makes it easier to remember why you added these start up commands.</p>
-<p>Upload the new version of the software
-Finally, upload the code to the Arduino as you would do during the standard <abbr title="Not recommended. Use EX-Installer or, if experienced, Microsoft Visual Studio Code (VSC)">Arduino IDE</abbr> Setup. Restart the Command Station and these commands will have run at start up.</p>
+<p>Here you can add comments on each line, these can be added by using two forward slash characters <code>//</code> and then your comments. This makes it easier to remember why you added these start up commands.</p>
+<h2 id="upload-the-new-version-of-the-software">Upload the new version of the software<a class="headerlink" href="#upload-the-new-version-of-the-software" title="Permanent link">&para;</a></h2>
+<p>Finally, upload the code to the Arduino as you would do during the standard <abbr title="Not recommended. Use EX-Installer or, if experienced, Microsoft Visual Studio Code (VSC)">Arduino IDE</abbr> Setup. Restart the Command Station and these commands will have run at start up.</p>
 <h2 id="examples">Examples<a class="headerlink" href="#examples" title="Permanent link">&para;</a></h2>
 <p>Automatically Turning Track Power on at Startup
 Adding this line to mySetup.h will cause the track power to turn on automatically when the <strong>EX‑CommandStation</strong> powers up.</p>
-<div class="language-c++ highlight"><pre><span></span><code><span class="n">SETUP</span><span class="p">(</span><span class="s">&quot;&lt;1&gt;&quot;</span><span class="p">);</span><span class="w">  </span><span class="c1">// Turn track power on at startup</span>
+<div class="language-c++ highlight"><pre><span></span><code><span class="n">PARSE</span><span class="p">(</span><span class="s">&quot;&lt;1&gt;&quot;</span><span class="p">);</span><span class="w">  </span><span class="c1">// Turn track power on at startup</span>
 </code></pre></div>
 <!-- These are case sensitive -->
 
@@ -10606,7 +10586,7 @@ Adding this line to mySetup.h will cause the track power to turn on automaticall
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="October 18, 2026 00:15:09 UTC">October 18, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="October 18, 2026 00:44:48 UTC">October 18, 2026</span>
   </span>
 
     
