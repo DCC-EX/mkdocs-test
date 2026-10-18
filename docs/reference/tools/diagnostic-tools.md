@@ -110,7 +110,7 @@ If you just need the power supply for your own board, use the schematic to get w
 
 And if you want to get into the development of [**EX-DCCInspector**](../../products/ex-dccinspector/index.md) and why we recommend the circuits we do, and see how to add a display and put it in a neat little case, please visit **DCC-EX** team member Neil McKechnie's blog. This version has plans for a 3D printed case and uses an ESP32 development board with an OLED display attached.
 
-![Neil's DCC-EX Sniffer in a 3D Printed Case]](../../_static/images/tools/neil_sniffer.png){ width=400px }
+![Neil's DCC-EX Sniffer in a 3D Printed Case](../../_static/images/tools/neil_sniffer.png){ width=400px }
 
 HERE:
 [https://wakwak2popo.wordpress.com/2020/12/11/dcc-sniffer/](https://wakwak2popo.wordpress.com/2020/12/11/dcc-sniffer/)
@@ -125,12 +125,11 @@ and HERE:
 No need to make this yourself, simply buy it. You will need the following items. They are available under many manufacturer names from many suppliers. eBay and AliExpress are good sources:
 
 - [8 Channel 24mHz USB Logic Anayzer ($8-20)](https://www.amazon.com/KeeYees-Analyzer-Device-Channel-Arduino/dp/B07K6HXDH1/)
-- [Logic Analyzer Probe Setup ($7-18) May come with your analyser](https://www.amazon.com/10PCS-Grabber-Jumper-Analyzer-Colors/dp/B083PRVPCR/)
+- [Logic Analyser Probe Setup ($7-18) May come with your analyser](https://www.amazon.com/10PCS-Grabber-Jumper-Analyzer-Colors/dp/B083PRVPCR/)
 - [Sigrok PulseView Software (FREE)](https://sigrok.org/wiki/PulseView>)
 - [DCC Decoder Plugin for PulseView (FREE)](https://github.com/littleyoda/sigrok-DCC-Protocoll/archive/master.zip)
 
 !!! note ""
-
    Search for the best source. As usual, you can often find the hardware items from online stores or Amazon, but also find them cheaper on eBay or AliExpress or BangGood direct from China.
 
 Any set of probes that will connect to the pins that are exposed between the Arduino and the motor driver will do, however we really like these "T" or "swept wing" probes. They are easy to hold and to open, can accept jumper wires from either side, and are pointed and use tiny hooks so they fit in tight spaces.
@@ -175,13 +174,13 @@ These device need USB drivers from Saleae. Download and install the 1.x drivers 
 
 [USB Analyser Drivers Download](https://support.saleae.com/logic-software/legacy-software/older-software-releases)
 
-### Connect the Analyzer
+### Connect the Analyser
 
 - Connect a jumper wire into a probe if you haven't already and then connect that into pin 0 or 1 on the logic analyser
 - Connect a jumper wire into a probe and connect the other end of the jumper into the GND pin on the analyser
 - Connect the GND probe to GND on the Arduino
 - Connect pin 0 or pin 1 probe to the DCC signal output (enable pin) you want to measure on the Arduino/MotorShield connection. For the MAIN track, this would usually be pin 13 for a STANDARD_MOTOR_SHIELD. Pin 12 would be the PROG track.
-- Connect the Analyzer to the USB port of your computer
+- Connect the Analyser to the USB port of your computer
 
 ### Capture the samples in PulseView
 
@@ -217,11 +216,11 @@ But those familiar with how DC and AC voltage works might look at that and see a
 
 In order to fully understand how this works, we have to stop thinking in terms of analog electronics and think in terms of the digital world. The DCC pulses provide both the voltage to operate locomotives and accessories connected to the tracks, and the data decoders need to operate them. Each rail carries the same information, just 180 degrees out of phase from the other. When one rail has a pulse of full voltage, the other is zero. We believe we are the first to present DCC in this fashion. Look at figure 8 and see that the pulses energise one rail with respect to the other back and forth.
 
-![DCC Pulse Train](../../_static/images/tools/dcc_pulse_train1.png){ width=400px }
+![DCC Pulse Train](../../_static/images/tools/dcc_pulse_train1.png){ width=300px }
 
 Now let's see things from a different perspective, both literally and figuratively by tilting the track away from you and imagining the pulse train operating like your model train and riding down the track.
 
-![DCC Pulse Train in Perspective](../../_static/images/tools/dcc_pulse_train2.png){ width=400px }
+![DCC Pulse Train in Perspective](../../_static/images/tools/dcc_pulse_train2.png){ width=300px }
 
 If it helps, you can think in the analog/DC world again for the purposes of connecting one piece of track in one block to a piece of track in another. Each rail is like a wire connected to our power supply, we have just cut it to length and are connecting to another piece that is connected to a different power supply. Here is the Command Station on the left connected to one section of track and a booster connected to another section of track with the two track sections isolated from each other by a small gap.
 

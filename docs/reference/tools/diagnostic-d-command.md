@@ -4,7 +4,7 @@ These commands either enable diagnostics or allow settings to be changed. There 
 
 **The** ``<D>`` **commands are intended for diagnostics only which means that their behaviour can change from one release to another without warning**
 
-These commands can be entered directly via the USB serial console or through a WiFi connection to the command station with a tool such as Telnet or Putty. JMRI includes the DCC++ traffic monitor which lets you insert serial [DCC-EX Native/Serial Commands](../../reference/serial-commands/index.md) as well. (==TODO== Low - JMRI links required)
+These commands can be entered directly via the USB serial console or through a WiFi connection to the command station with a tool such as Telnet or Putty. JMRI includes the DCC-EX traffic monitor which lets you insert serial [DCC-EX Native/Serial Commands](../../reference/serial-commands/index.md) as well. (==TODO== Low - JMRI links required)
 
 ----
 

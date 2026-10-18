@@ -59,12 +59,13 @@ li:not(.md-nav__item, .md-tabs__item) a {
         - [EX-SensorCAM Manual <small>(User Manual)</small>](../products/ex-sensorcam/ex-sensor-manual.md)
         - [Native EX-SensorCAM Command List <small>(Command Reference)</small>](../products/ex-sensorcam/ex-sensorcam-command-reference.md)
         - [EX-SensorCAM Abridged Manual <small>(Manual Abridged)</small>](../products/ex-sensorcam/ex-sensor-manual-abridged.md)
-    - [EX-DCCInspector <small>(DCC Inspector<small><small> (DIY)</small></small>)</small>](../products/ex-dccinspector/index.md)
+    - **EX-DCCInspector<small><small> (DIY)</small></small>**
+        - [EX-DCCInspector](../products/ex-dccinspector/index.md)
 - **Purchase**
     - [Official DCC-EX Suppliers <small>(Official Suppliers)</small>](../purchasing/official-sellers.md)
     - [Selecting a Power Supply](../purchasing/power.md)
     - [Third Party Products and Sellers <small>(<br/>Third Party Sellers)</small>](../purchasing/third-party-sellers.md)
-    - [DCC-EX Merchandise <small>(<br/>Merchandise)</small>](../purchasing/merchandise.md)
+    - [DCC-EX Merchandise <small>(<br/>Official Merchandise)</small>](../purchasing/merchandise.md)
     - [EX-CSB1 - Next Steps <small>(<br/><i>EX-CSB1 Next Steps</i><br/>Installing &amp; Testing)</small>](../purchasing/next-steps.md)
 - **<small><small>or &nbsp;</small></small>Self Build**
     - [Build Your Own **EX-CommandStation** <small>(Build Your Own)</small>](../diy/diy.md)
@@ -75,16 +76,11 @@ li:not(.md-nav__item, .md-tabs__item) a {
     - [Selecting a Power Supply](../diy/power.md)
     - [Optionally install Wifi <small>(<br/>Optional WiFi)</small>](../diy/wifi.md)
     - [Optionally install Ethernet <small>(Optional Ethernet)</small>](../diy/ethernet.md)
-    - [Installing EX-CommandStation firmware <small>(<br/><i>Next Steps</i> - Install &amp; Configure)</small>](../diy/installer.md)
-    - [DIY - Other devices <small>(<br/>Other Devices)</small>](../diy/others.md)
+    - [Installing EX-CommandStation firmware <small>(<br/><i>Next Steps</i> <br/>Configure &amp; Install)</small>](../diy/installer.md)
+    - [DIY - Other Devices <small>(<br/>Other Devices)</small>](../diy/others.md)
 - **Prepare to Use**
-    - [Prepare to Use](../prepare-to-use/index.md)
-    - **Connecting to Your Layout<small><small> (Physical&nbsp;Connection)</small></small>**
-        - [Connecting to your layout <small>(Connecting to Your Layout<small><small> (Physical&nbsp;Connection)</small></small>)</small>](../prepare-to-use/connecting/index.md)
-        - [Connecting the EX-CSB1 to Your Layout <small>(Connecting an EX-CSB1)</small>](../prepare-to-use/connecting/connecting-ex-csb1.md)
-        - [Connecting to your layout <small>(Connecting a Self-Build)</small>](../prepare-to-use/connecting/connecting-diy.md)
-    - [Testing your installation <small>(Test Your Installation<br/><br/>)</small>](../prepare-to-use/testing.md)
-    - **Install and/or Configure <br/><small>(EX-Installer)</small>**
+    - [Prepare to Use Your Command Station <small>(Prepare to Use)</small>](../prepare-to-use/index.md)
+    - **Install the Software <br/><small>(EX-Installer)</small>**
         - [Installing the EX-CommandStation Software <small>(Installing)</small>](../prepare-to-use/installer/index.md)
         - [EX-Installer <small>(EX-Installer<small><small> (Install &amp; Configure)</small></small>)</small>](../prepare-to-use/installer/installer.md)
         - [First Run installer <small>(First Run)</small>](../prepare-to-use/installer/first-run.md)
@@ -102,8 +98,14 @@ li:not(.md-nav__item, .md-tabs__item) a {
         - [Testing your installation <small>(<br/>Test Your Installation<br>)</small>](../prepare-to-use/installer/testing.md)
         - [Managing Your Config files - Saving and Reusing <small>(<br/>Manage Config files<small><small> <br/>Saving&nbsp;&amp;&nbsp;Restoring</small></small>)</small>](../prepare-to-use/installer/manage-config-files.md)
         - [Advanced Users - VSCode/PlatformIO <small>(<br/>Advanced Users - VSC/PlatformIO)</small>](../prepare-to-use/installer/platformio.md)
-    - [Next Steps - Throttles <small>(<br/><i>Next Steps</i> - Throttles)</small>](../prepare-to-use/next-steps.md)
+    - **Connecting to Your Layout<small><small> (Physical&nbsp;Connection)</small></small>**
+        - [Connecting to your layout <small>(Connecting to Your Layout<small><small> (Physical&nbsp;Connection)</small></small>)</small>](../prepare-to-use/connecting/index.md)
+        - [Connecting the EX-CSB1 to Your Layout <small>(Connecting an EX-CSB1)</small>](../prepare-to-use/connecting/connecting-ex-csb1.md)
+        - [Connecting to your layout <small>(Connecting a Self-Build)</small>](../prepare-to-use/connecting/connecting-diy.md)
+    - [Testing your installation <small>(Test Your Command Station<br/><br/>)</small>](../prepare-to-use/testing.md)
+    - [Next Steps - Throttles <small>(<br/><i>Next Steps</i> <br/>Select a Throttle)</small>](../prepare-to-use/next-steps.md)
 - **Use<small><small>&nbsp;Throttles, etc.</small></small>**
+    - [Using Your Command Station <small>(Overview)</small>](../throttles/index.md)
     - **Throttles**
         - [Throttles and Other Controllers <small>(Throttle Lists)</small>](../throttles/throttles.md)
         - **<small>Some</small> Recommended Throttles**
@@ -129,6 +131,7 @@ li:not(.md-nav__item, .md-tabs__item) a {
         - [What is EXRAIL?](../enhance/exrail/index.md)
         - [EXRAIL Objects - An Introduction <small>(Objects Introduction)</small>](../enhance/exrail/exrail-objects-introduction.md)
         - [EXRAIL Sequences - An Introduction <small>(Sequences Introduction)</small>](../enhance/exrail/exrail-sequences-introduction.md)
+        - [Startup Configuration](../enhance/exrail/exrail-startup-configuration.md)
         - [Virtual Bitmap device pins (VPINs) <small>(Vpins)</small>](../enhance/exrail/vpins.md)
         - [**EXRAIL** Full Command List <small>(Command List)</small>](../enhance/exrail/command-list.md)
         - **Cookbooks**
@@ -220,18 +223,18 @@ li:not(.md-nav__item, .md-tabs__item) a {
         - **I2C (I<sup>2</sup>C)**
             - [I2C (I<sup>2</sup>C) – An Introduction <small>(I2C (I<sup>2</sup>C) Intro)</small>](../enhance/accessories/i2c/index.md)
             - [Buying I2C (I<sup>2</sup>C) Devices](../enhance/accessories/i2c/buying-i2c-devices.md)
-            - [I2C Displays <small>(I2C (I<sup>2</sup>C) Displays)</small>](../enhance/accessories/i2c/i2c-displays.md)
-            - [I2C GPIO Expanders <small>(I2C (I<sup>2</sup>C) GPIO Expanders)</small>](../enhance/accessories/i2c/i2c-gpio-expanders.md)
-            - [I2C Servo and LED Module <small>(I2C (I<sup>2</sup>C) Servo/LED modules)</small>](../enhance/accessories/i2c/i2c-servo-led-modules.md)
-            - [I2C Multiplexers <small>(I2C (I<sup>2</sup>C) Multiplexers)</small>](../enhance/accessories/i2c/i2c-multiplexers.md)
-            - **Various Devices**
-                - **Sounds**
-                    - [Sounds](../enhance/accessories/various-devices/sounds/index.md)
-                    - [DFPlayer Sound player <small>(DFPlayer)</small>](../enhance/accessories/various-devices/sounds/dfplayer.md)
-                    - [Serial connected DFPlayer <small>(Serial DFPlayer)</small>](../enhance/accessories/various-devices/sounds/serial-dfplayer.md)
-                    - [I2C Connected DFPlayer <small>(I2C DFPlayer)</small>](../enhance/accessories/various-devices/sounds/i2c-dfplayer.md)
-                    - [UDP Audio Driver for DCC-EX <small>(WaveShare)</small>](../enhance/accessories/various-devices/sounds/udpaudio.md)
-                - [DS1307 Real Time clock chip <small>(DS1307)</small>](../enhance/accessories/various-devices/ds1307.md)
+            - [I2C (I<sup>2</sup>C) Displays](../enhance/accessories/i2c/i2c-displays.md)
+            - [I2C (I<sup>2</sup>C) GPIO Expanders](../enhance/accessories/i2c/i2c-gpio-expanders.md)
+            - [I2C (I<sup>2</sup>C) Servo and LED Module <small>(I2C (I<sup>2</sup>C) Servo/LED modules)</small>](../enhance/accessories/i2c/i2c-servo-led-modules.md)
+            - [I2C (I<sup>2</sup>C) Multiplexers](../enhance/accessories/i2c/i2c-multiplexers.md)
+        - **Various Devices**
+            - **Sounds <small>(DFPlayer)</small>**
+                - [Sounds](../enhance/accessories/various-devices/sounds/index.md)
+                - [DFPlayer Sound player <small>(DFPlayer)</small>](../enhance/accessories/various-devices/sounds/dfplayer.md)
+                - [Serial connected DFPlayer <small>(Serial DFPlayer)</small>](../enhance/accessories/various-devices/sounds/serial-dfplayer.md)
+                - [I2C Connected DFPlayer <small>(I2C DFPlayer)</small>](../enhance/accessories/various-devices/sounds/i2c-dfplayer.md)
+                - [UDP Audio Driver for DCC-EX <small>(WaveShare)</small>](../enhance/accessories/various-devices/sounds/udpaudio.md)
+            - [DS1307 Real Time clock chip <small>(Real Time Clock <small>(DS1307)</small>)</small>](../enhance/accessories/various-devices/ds1307.md)
     - **<br/>TrackManager**
         - [TrackManager](../enhance/trackmanager/index.md)
         - [EX-CSB1 in DCC Booster Mode <small>(DCC Booster Mode <small><small>(EX-CSB1)</small></small>)</small>](../enhance/trackmanager/booster.md)
@@ -240,7 +243,8 @@ li:not(.md-nav__item, .md-tabs__item) a {
     - [Frequently Answered Questions  (FAQ) <small>(Frequently Answered Questions)</small>](../support/faq.md)
     - [Help and Support <small>(Getting Support)</small>](../support/support.md)
     - [The **DCC-EX** Discord Server <small>(Discord)</small>](../support/discord.md)
-    - [Raising GitHub Issues <small>(Github)</small>](../support/github.md)
+    - [Raising GitHub Issues <small>(Github<br/>)</small>](../support/github.md)
+    - [Articles and Videos <small>(Articles &amp; Videos)</small>](../support/articles-and-videos.md)
 - **Reference**
     - [Full Site Table of Contents <small>(Table of Contents)</small>](toc.md)
     - [Glossary of Terms](glossary.md)
@@ -248,6 +252,7 @@ li:not(.md-nav__item, .md-tabs__item) a {
     - [DCC-EX Serial Command List <small>(Serial Commands <small>Full&nbsp;List</small>)</small>](serial-commands/serial-command-list.md)
     - [Serial Commands <small>by&nbsp;Function&nbsp;Group</small>](serial-commands/serial-commands.md)
     - **Serial Commands <small>Additional&nbsp;Info</small>**
+        - [DCC-EX Native/Serial Commands - Overview <small>(Serial Commands Overview)</small>](serial-commands/index.md)
         - [Legacy Command Reference <small>(Legacy Reference <small>Not&nbsp;Maintained</small>)</small>](serial-commands/legacy-command-reference.md)
         - [WiFi configuration <br/><small>(EX-CSB1 or ESP32 ONLY. v5.7.0+ ONLY)</small> <small>(Configure WiFi <br/><small>(EX‑CSB1 & ESP32 v5.7.0+ Only)</small>)</small>](serial-commands/config-wifi-esp32.md)
     - **<br/>Configuration Reference (config.h)**
@@ -268,6 +273,7 @@ li:not(.md-nav__item, .md-tabs__item) a {
             - [EX-CSB1 Technical Reference](microcontrollers/ex-csb1/csb1-technical.md)
         - [Arduino-Mega <small>(Arduino Mega)</small>](microcontrollers/arduino-mega.md)
         - **ESP32**
+            - [ESP32 Microcontrollers - Overview <small>(Overview)</small>](microcontrollers/esp32/index.md)
             - [WeMos D1 R32 + EX8874](microcontrollers/esp32/esp32-ex8874.md)
             - [Acebott + EX8874](microcontrollers/esp32/esp32-acebott.md)
             - [Keyestudio IOT ESP32 PLUS Development Board *+* EX8874 <small>(Keyestudio + EX8874)</small>](microcontrollers/esp32/esp32-keyestudio.md)
@@ -310,6 +316,12 @@ li:not(.md-nav__item, .md-tabs__item) a {
         - [DCC-EX Native/Serial Command Protocol Library - DCCEXProtocol <small>(Native Protocol Library)</small>](throttle-writers/native-protocol-library.md)
         - [WiThrottle Protocol Library - WiThrottleProtocol <small>(WiThrottle Protocol Library)</small>](throttle-writers/withrottle-protocol-library.md)
         - [WiThrottle Protocol VS DCC-EX Native/Serial Commands <small>(WiThrottle VS Native Protocol)</small>](throttle-writers/withrottle-vs-native-protocol.md)
+    - **Diagnostic Tools**
+        - [Diagnostic Tools <small>(Tools Overview)</small>](tools/index.md)
+        - [Using a Serial Monitor / Device Monitor <small>(Using the Serial Monitor)</small>](tools/serial-monitor.md)
+        - [Diagnostics ``<D>`` Command <small>(<i>D</i> Command)</small>](tools/diagnostic-d-command.md)
+        - [Diagnostics ``<D ACK>`` Command <small>(D ACK</i> Command)</small>](tools/diagnostic-d-ack-command.md)
+        - [DCC Diagnostic Tools](tools/diagnostic-tools.md)
     - **Command Station Internal Architecture**
         - [**EX-CommandStation** Internal Architecture <small>(Command Station Internal Architecture)</small>](command-station-architecture/index.md)
         - [DCC-EX HAL Architecture <small>(HAL Architecture)</small>](command-station-architecture/hal-architecture.md)
@@ -320,9 +332,12 @@ li:not(.md-nav__item, .md-tabs__item) a {
 - **About Us**
     - [About the **DCC-EX** Project <small>(About DCC-EX)</small>](../about/about.md)
     - [DCC++ VS DCC-EX? - Project History <small>(History)</small>](../about/history.md)
+    - **News**
+        - [DCC-EX News](../about/news/index.md)
+        - **Articles**
+            - [New Documentation](../about/news/articles/20250622.md)
+            - [Template DCC-EX News Article](../about/news/articles/template-article.md)
     - [Licence & Attributions <small>(<br/>Licence & Attribution)</small>](../about/licence.md)
-- **News**
-    - [DCC-EX News](../news/index.md)
 - **Donate / Contribute**
     - [How Can I Contribute? <small>(How You Can Contribute)</small>](../contributing/contributing.md)
     - [Donations <small>(<b><span style="font-size:110%">Donate</b></span>)</small>](../contributing/donations.md)
@@ -403,4 +418,3 @@ li:not(.md-nav__item, .md-tabs__item) a {
 - [Getting Started with DCC-EX](../products/getting-started_not_in_nav.md)
 - [Incorrect IOREF voltage for 3.3v Microcontrollers](microcontrollers/esp32/ioref-incorrect-voltage-fix_not_in_nav.md)
 - [Stationary Decoder Address table](stationary-decoder-addresses_not_in_nav.md)
-- [Using a Serial Monitor / Device Monitor](tools/serial-monitor.md)

@@ -1,6 +1,7 @@
 <!-- These are case sensitive -->
 
 *[DCC++]: Old/obsolete name for **DCC-EX**. Some references still remain for backward compatibility
+*[DCC++EX]: Old/obsolete name for **DCC-EX**. Some references still remain for backward compatibility
 
 *[WiThrottle]: Communication Protocol. Trademark + iOS app owned by Brett Hoffman
 *[API]: Application Programming Interface

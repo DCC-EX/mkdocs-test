@@ -8,7 +8,7 @@ How you create the file will depend on how you load the EX‑CommandStation soft
 
 - By using [EX‑Installer](#if-you-are-using-ex-installer)
 - By using the [Visual Studio Code (VSC)](#if-you-are-using-visual-studio-code-vsc)
-- By using the [Arduino IDE](#if-you-are-using-the-arduino-ide---not-recommended) - ***Not recommended***
+- By using the [Arduino IDE](#if-you-are-using-the-arduino-ide-not-recommended) - ***Not recommended***
 
 ----
 
@@ -47,7 +47,7 @@ See examples and information below for adding multiple instructions to ``mySetup
 
 ----
 
-## If you are using the Arduino IDE - Not Recommended
+## If you are using the Arduino IDE (Not Recommended)
 
 This will need to be done in the Install using the Arduino IDE, so first make sure you have followed these steps to load up the Arduino IDE.
 

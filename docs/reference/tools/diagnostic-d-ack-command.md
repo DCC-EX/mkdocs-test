@@ -2,20 +2,20 @@
 
 - [Turn on Loco acknowledgement diagnostics](#d-ack-on)
 - [Override ACK processing mA pulse size](#d-ack-limit-ma)
-- [Override ACK processing minimum pulse width](#d-ack-min-µs-and-d-ack-max-µs)
-- [Override ACK processing max pulse width](#d-ack-min-µs-and-d-ack-max-µs)
+- [Override ACK processing minimum pulse width](#d-ack-min-s-and-d-ack-max-s)
+- [Override ACK processing max pulse width](#d-ack-min-s-and-d-ack-max-s)
 - [Override 250mA prog track limit while idle.](#diagnostics-d-ack-command)
 
 ----
 
 ## ``<D ACK ON>``
 
-If you encounter problems with ACKs from the Decoder (Reading or Writing CVs) and you want help, the DCC-EX support team will ask you to provide a log. This is a very simple diagnostic test to provide us with the proper information. With your loco on the PROG track, and using a serial monitor like the one in **EX-Installer* or **Ex-WebThrottle**, enter each of these two commands followed by pressing "send":
+If you encounter problems with ACKs from the Decoder (Reading or Writing CVs) and you want help, the DCC-EX support team will ask you to provide a log. This is a very simple diagnostic test to provide us with the proper information. With your loco on the PROG track, and using a serial monitor like the one in **EX-Installer** or **Ex-WebThrottle**, enter each of these two commands followed by pressing "send":
 
 ``<D ACK ON>``
 ``<R>``
 
-This will turn ACK diagnostics ON and then try to read the appropriate CVs to determine your loco address. If you don't see your loco address at the end of the report (it could be incorrect or <r -1>), send us the log (see below for an example), and we can help you diagnose the problem.
+This will turn ACK diagnostics ON and then try to read the appropriate CVs to determine your loco address. If you don't see your loco address at the end of the report (it could be incorrect or ``<r -1>``), send us the log (see below for an example), and we can help you diagnose the problem.
 
 ### More Detail
 
@@ -51,7 +51,7 @@ In this example, we are checking CV 8, which is the manufacturer ID for your dec
 
 The first test, ``ACK-BASELINE`` gets a baseline reading of the current on your programming track with the loco just sitting there.
 
-Since most bits will be 0, we check that first to save time. ``V0`` means ``Verify zero``. If do not get a zero, we then try to verify a 1 - ``V1`` means "Verify one". If we don't get either, we display an error. A bit must be either a 0 or a 1 so the test will fail, but the data returned can help us see why. 
+Since most bits will be 0, we check that first to save time. ``V0`` means ``Verify zero``. If do not get a zero, we then try to verify a 1 - ``V1`` means "Verify one". If we don't get either, we display an error. A bit must be either a 0 or a 1 so the test will fail, but the data returned can help us see why.
 
 If we succeed on the first bit, we check each of the remaining 7 bits. ``NO-ACK`` means we did not see the bit value we were testing for, ``ACK-OK`` tells us we received an ACK. After each bit test, we show how long it took to receive the ACK (or the timeout value if we detected none), the Arduino raw pin reading being sent by your motor driver's current sense circuit, and what that translates to in milliAmps. Finally, we report the duration of the ACK Pulse, if detected.
 
