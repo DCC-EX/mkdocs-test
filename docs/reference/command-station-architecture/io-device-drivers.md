@@ -1,5 +1,7 @@
 # I/O Device Drivers and HAL
 
+==TODO== MEDIUM - change the references the this page from the Arduino IDE to VSC/PIO
+
 The DCC-EX controller has always had built-in support for turnout control, output control and input sensors attached to the Arduino pins.  However, you may outgrow the built-in capabilities and want to access more output pins than the Arduino has available. Or you may wish to attach servos to the controller for turnout control or for animating a layout component, such as the doors to an engine shed.  
 
 **EX-CommandStation**, as of version 3.2.0, provides support for a wider set of input and output devices than previous versions.  This is thanks to a piece of software called the **HAL** or **H**\ardware **A**\bstraction **L**\ayer. The HAL provides support for a range of different input and output modules through drivers that are supplied with *DCC-EX**.
@@ -167,7 +169,7 @@ required in order to use it, together with examples.  If you can't find document
 Now you need to create a configuration file to include the device driver in the build.  You can either copy the supplied
 file ``myHal.cpp_example.txt`` to ``myHal.cpp`` and then edit it, or you can create a new ``myHal.cpp`` from scratch.
 In fact, the file can have any name you like.  You could use ``AA_setup.cpp`` for example, then it will appear at the beginning of the
-list of files in the |Arduino IDE|.
+list of files in the Arduino IDE.
 
 ## Adding A New Device Configuration File
 

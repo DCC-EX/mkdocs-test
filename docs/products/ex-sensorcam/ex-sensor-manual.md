@@ -2,6 +2,8 @@
 
 For use with ov2640 camera module with esp32-CAM-MB and variants
 
+==TODO== MEDIUM - change the references the this page from the Arduino IDE to VSC/PIO
+
 ## CONTENTS
 
 [1. Overview](#1-overview)  
@@ -371,6 +373,7 @@ The ESP32-CAM reset button, remotely mounted on CAM, may be difficult to access.
 **Figure 7 &nbsp; PCA9515A 3.3V to 5V i2c interface improvisation compared to a full feature prototype solution**  
 
 !!! note "NOTE:"
+
     For 3.3V microprocessors (e.g. **EX-CSB1**) ensure Vcc1 is connected to 3.3V (Vcc0) not 5V.
 
 ## 8 Host Communication
@@ -560,6 +563,7 @@ The table gives number of single highs, double highs etc. and totals for No. of 
  \* These commands typically for diagnostic/setup use only. They wait for a line feed or command to resume.
 
 !!! note "Note:"
+
     The value of "bs"(80 sensors 0-79dec) is printed in several formats. For data entry, bsNo format %% (e.g. 47) is bank/sensor, so bsn=8*4+7=39dec.(vpin). S47 may be printed as(char) 47, 4/7 or 047 (octal) depending on context.  
     Note: Debug output likely uses OCT(or HEX). OCT 0107=8/7, 0117=9/7.
 
@@ -749,7 +753,9 @@ vPin is the base/first vPin number (e.g. 700) + DEC(*bsn*) number in the convers
 ## APPENDIX F
 
 ### Hardware Interface
+
 !!! note "Note:"
+
     This Appendix originally focused on the **ESP32-CAM-MB** implementation. For information on the recommended ESP32-WROVER-CAM see [APPENDIX J](#appendix-j)  
     
 The ESP32 CAM drives GPIO pins with 3.3V logic. This may well be incompatible with the master l2C signals at 5V. It is essential that appropriate voltage level shifting and buffering is used where necessary. Unbuffered I2C is limited in range but a Sparkfun differential i2c driver/endpoint may also be used to achieve long lengths and voltage shifting (3.5v to 5v) if needed.

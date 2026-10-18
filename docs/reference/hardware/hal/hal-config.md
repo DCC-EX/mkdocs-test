@@ -179,11 +179,11 @@ In fact, the file can have any name you like.  You could use ``AA_setup.cpp`` fo
 
 ## Adding A New Device Configuration File
 
-This will need to be done in the ==TODO== :doc:`Arduino-IDE </ex-commandstation/advanced-setup/installation-options/arduino-ide>`, so first make sure you have followed these steps to load up the Arduino IDE.
+This will need to be done in the ==TODO== MEDIUM :doc:`Arduino-IDE </ex-commandstation/advanced-setup/installation-options/arduino-ide>`, so first make sure you have followed these steps to load up the Arduino IDE.
 
 ### Create a new tab
 
-First you will need to add a new file, just like the ==TODO== :ref:`config.h file <ex-commandstation/advanced-setup/installation-options/arduino-ide:Copy the config.example.h file (or rename it)>`.
+First you will need to add a new file, just like the ==TODO== MEDIUM :ref:`config.h file <ex-commandstation/advanced-setup/installation-options/arduino-ide:Copy the config.example.h file (or rename it)>`.
 Create a new tab using the following menu option.
 
 ![Arduino IDE New Tab](../../../_static/images/arduino-ide/arduino_ide_newtab.jpg){ width=400px }

@@ -125,5 +125,4 @@ This is a list of to do items that will allow us to release this new documentati
 
 ## General TODOs
 
-- ==TODO== MEDIUM - Try to remove the references to the Arduino IDE.  Change to VSC/PIO.  Not going to be simple.
 - ==TODO== LOW - Need to change the 'Withrottle' iOS app references to 'ThrottleCard'

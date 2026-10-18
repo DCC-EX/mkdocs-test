@@ -1,6 +1,8 @@
 # Advanced config.h settings for EX-CommandStation build
 
-The basic Motor Shield, WiFi and Ethernet settings are covered in detail in [basic config.h](config-h.md)
+==TODO== MEDIUM - change the references the this page/section from the Arduino IDE to VSC/PIO
+
+The basic Motor Driver, WiFi and Ethernet settings are covered in detail in [basic config.h](config-h.md)
 
 The following additional settings are for special cases and are not normally created automatically by the **EX-Installer**.
 

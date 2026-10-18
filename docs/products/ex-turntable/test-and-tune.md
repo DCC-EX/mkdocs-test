@@ -8,7 +8,7 @@ Once you have performed this testing, you will be familiar with the commands tha
 
 It is recommended to perform testing via the **EX-Turntable** serial console first using the commands in the next section, and then test using the **EX-CommandStation** diagnostic command. Using the diagnostic command is also the recommended method to perform tuning, as it replicates what the turntable object (and/or **EXRAIL**) will use to operate the turntable.
 
-!!! note "Important"
+!!! Important "Important"
 
     For all references to 'steps', this is the number of steps from the home position, not the number of steps the turntable has to travel.
 
@@ -117,7 +117,7 @@ Further information on the "activity" parameter is outlined in the [ex-turntable
 
 ## Tuning your turntable positions
 
-!!! note "Tip"
+!!! tip "Tip"
 
     To determine your starting positions, you will need the full turn step count as recorded in [first start and automatic calibration](assembly.md#first-start-and-automatic-calibration).
 

@@ -2,6 +2,8 @@
 
 Including ESP32-WROVER-CAM and ESP32-WROOM-S3 CAM's
 
+==TODO== MEDIUM - change the references the this page from the Arduino IDE to VSC/PIO
+
 ## CONTENTS
 
 [1. Overview](#1-overview)  
@@ -28,7 +30,8 @@ Including ESP32-WROVER-CAM and ESP32-WROOM-S3 CAM's
 
 The sensorCAM is a video camera replacement for physical proximity sensors/detectors on a model railroad. It can replace up to 80 detectors and their associated power and signal wiring using artificial vision alone. It offers the flexibility of sensor placement or relocation instantly by software command with no physical layout modification.The railroad can be automated using artificial vision of train activity. Each virtual sensor can produce a logical state of 1 (occupied) or 0 (unoccupied) and is readable over an i2c cable. SensorCAM originally used the ESP32-CAM module. However, the ESP32-WROVER-DEV CAM (v1.6) is the preferred substitute with potentially simpler setup.
 
-The sensorCAM takes 10 frames per second in RGB565 format at QVGA resolution of 240 x 320. Each sensor consists of a square group of 16 pixels which equates to approximately 20x20mm square with the standard lens at 1500mm. The software decodes and saves only the 80 sensor images (1280 pixels) and then compares each sensor image with a reference image prerecorded either at startup, on request, or by a "recent" automatic update. If the images do not match the references well, then the sensor is "tripped" or "occupied" & status '1' is registered. A good match results in '0' output. The state of virtual sensors can be manually monitored on the USB monitor, or polled by microcontroller over the i2c interface cable.  
+The sensorCAM takes 10 frames per second in RGB565 format at QVGA resolution of 240 x 320. Each sensor consists of a square group of 16 pixels which equates to approximately 20x20mm square with the standard lens at 1500mm. The software decodes and saves only the 80 sensor images (1280 pixels) and then compares each sensor image with a reference image prerecorded either at startup, on request, or by a "recent" automatic update. If the images do not match the references well, then the sensor is "tripped" or "occupied" & status '1' is registered. A good match results in '0' output. The state of virtual sensors can be manually monitored on the USB monitor, or polled by microcontroller over the i2c interface cable.
+
 !!! note "Note:"
     The sensorCAM is sensing only when the Flash LED is pulsing at 10Hz (for each new frame).
 
@@ -272,6 +275,7 @@ The sensorCAM typically requires a long i2c cable for connection to the CS.  If 
 For long distances to sensorCAM, the recommended hardware interface to an **EX-CommandStation** is currently the **Sparkfun Endpoint** system (**Figure 6.** & [APPENDIX&nbsp;F](#appendix-f)) which permits the i2c bus to be run over long standard Cat5 twisted pair cable.  It can also carry the required raw power supply. The Sparkfun Endpoints are used **in pairs** and can cater for voltage shifting between 5V Command Stations (e.g. Mega) and 3.3V sensorCAM as required. For a simple off-the-shelf arrangement, an ESP32-WROVER-DEV CAM with a cheap ESP32S 38P Expander board (including regulator) can be linked to an Endpoint with 4 Dupont wires for a working CAM system on the end of a cat5 cable of considerable length as indicated in **Figure 6** & [APPENDIX&nbsp;J](#appendix-j), needing only a remote, preferably electrically isolated(floating), 7-10Vdc 0.5A power supply and a matching endpoint on a Command Station.
 
 !!! note "NOTE:"
+
     1. For a cheaper solution, use the CAM and Expander with a LTC4311 for a shorter reach with either esp32-CAM or Wrover-CAM powered via USB.  
     2. The Sparkfun Endpoint may also need a jumper cut or joined for i2c bus isolation and voltage level matching to the Command Station.
 
@@ -280,6 +284,7 @@ The SensorCAM software has been almost exclusively tested on the ESP32-CAM-MB. T
 The ESP32-CAM reset button, remotely mounted on CAM, may be difficult to access. To reset the device, two options need to be available. These can be via software command, either from the attached USB monitor, or i2c connected Command Station, or via a power supply induced reboot. A (Reset) switch at an ungrounded PSU ("wall-wart") 7-9V supply is recommended independent of the CS supply. The USB connection is needed to set up the sensors initially and view images, but should be able to be disconnected once setup testing is complete.  Some esp32's may need a 1uF or 2.2uF on the reset pin for reliable reset.
 
 !!! note "NOTE:"
+
     **Care is needed as the WROVER CAM has 40 pins (not 38) but the spare end Gnd and Vcc can remain disconnected (cut off?).**
 
 ![ESP32 Wrover CAM with Sparkfun Endpoint](../../_static/images/ex-sensorcam/esp32-wrover-LTC4311.png)  
