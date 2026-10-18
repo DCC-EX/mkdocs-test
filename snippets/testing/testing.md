@@ -87,7 +87,7 @@ The [**EX-ToolBox**](/products/ex-toolbox/connecting.md) Android app also provid
 - acquire the loco in the throttle app (see appropriate page)
 - control the loco
 
-==TODO== what to do if any of the initial testing steps fail
+==TODO== LOW - what to do if any of the initial testing steps fail
 
 ----
 
@@ -122,7 +122,7 @@ Commands are entered as shown, complete with the `< >` markers. Case is importan
 
 `<s>` Will instruct the **EX_CommandStation** to provide information about itself
 
-==TODO==... pic - Check communication and version
+==TODO== LOW - pic - Check communication and version
 
 ### Turn on track power
 

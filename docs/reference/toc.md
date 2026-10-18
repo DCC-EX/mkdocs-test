@@ -131,7 +131,7 @@ li:not(.md-nav__item, .md-tabs__item) a {
         - [What is EXRAIL?](../enhance/exrail/index.md)
         - [EXRAIL Objects - An Introduction <small>(Objects Introduction)</small>](../enhance/exrail/exrail-objects-introduction.md)
         - [EXRAIL Sequences - An Introduction <small>(Sequences Introduction)</small>](../enhance/exrail/exrail-sequences-introduction.md)
-        - [Startup Configuration](../enhance/exrail/exrail-startup-configuration.md)
+        - [Startup Configuration - Native/Serial Commands <small>(Startup Configuration)</small>](../enhance/exrail/exrail-startup-configuration.md)
         - [Virtual Bitmap device pins (VPINs) <small>(Vpins)</small>](../enhance/exrail/vpins.md)
         - [**EXRAIL** Full Command List <small>(Command List)</small>](../enhance/exrail/command-list.md)
         - **Cookbooks**
