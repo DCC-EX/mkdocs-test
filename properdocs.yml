@@ -138,6 +138,7 @@ plugins:
         'enhance/turnouts.md': 'enhance/exrail/exrail-objects-introduction.md#adding-turnoutspoints'
         'enhance/routes.md': 'enhance/exrail/exrail-sequences-introduction.md'
         
+        'prepare-to-use/next-steps.md': 'throttles/index.md'
         'products/ex-commandstation/ex-csb1.md': 'products/ex-csb1/index.md'
         'products/ex-commandstation/exrail/command-list.md': 'enhance/exrail/command-list.md'
         'products/ex-commandstation/exrail/exrail-objects-introduction.md': 'enhance/exrail/exrail-objects-introduction.md'

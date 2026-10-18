@@ -3,15 +3,9 @@
 You need just two things that work together to operate your model railroad:
 
 - The **EX‑CommandStation** (aka the DCC Command Station)
-- A Controller (aka Front-end, Cab, or Throttle)
+- A Throttle/Controller (also referred to as a Front-end or Cab)
 
-==TODO== needs an intro for other than the throttles
-
-Additionally you may want to:
-
-- Do CV Programming
-- Control DCC Accessories
-- Use (Direct Current) DC
+Additionally you may want to [program decoder/CVs](../throttles/loco-programming/index.md), [control DCC Accessories](dcc-accessories.md), [use (Direct Current) DC](../enhance/dc-running.md).  These will be covered in the [Enhance](../enhance/index.md) section of the website.
 
 ## The EX-CommandStation
 
@@ -21,15 +15,9 @@ The Command Station accepts instructions from a controller and generates packets
 
 ## The Throttle (Controller)
 
-Since the **EX‑CommandStation** simply accepts commands to turn into signals for your layout, you need something that sends those commands to run your trains - a controller. (It isn’t very practical to type something like <t 1 3 75 1> into a serial monitor to tell your train to move each time! 😉)
-
-A controller can be a hardware device like a handheld throttle (also called a Controller or Cab), an App that runs on your phone, a Web Page, or front-end software like JMRI or Rocrail that runs on a computer or Raspberry Pi.
-
-### Throttle (Controller) Options
-
 !!! note inline end "Connection Types"
 
-    Your throttle (controller) can connect to the **EX‑CommandStation** several different ways, such as:
+    Your throttle (controller) can connect to the **EX‑CommandStation** a number of different ways, such as:
 
     - WiFi
     - Direct connection using a USB cable
@@ -38,16 +26,18 @@ A controller can be a hardware device like a handheld throttle (also called a Co
     - Bluetooth
     - Remote connection (VNC, MQTT, etc.)
 
+Since the **EX‑CommandStation** simply accepts commands to turn into signals for your layout, you need something that sends those commands to run your trains - a controller. (It isn’t very practical to type something like <t 1 3 75 1> into a serial monitor to tell your train to move each time! 😉)
+
+A controller can be a hardware device like a handheld throttle (also called a Controller or Cab), an App that runs on your phone, a Web Page, or front-end software like JMRI or Rocrail that runs on a computer or Raspberry Pi.
+
+### Throttle (Controller) Options
+
 For further throttle and connection options, refer to the [Throttle List](throttles.md) page.
 
-----
+### DCC Accessory Operation
 
-==TODO== the rest of this page
+==TODO== MEDIUM - Overview of DCC Accessory Operation
 
-## CV Programming
-
-## DCC Accessories
-
-## (Direct Current) DC
+For further information, refer to the [DCC Accessory Operation](dcc-accessories.md) page.
 
 --8<-- "snippets/abbr.md"
