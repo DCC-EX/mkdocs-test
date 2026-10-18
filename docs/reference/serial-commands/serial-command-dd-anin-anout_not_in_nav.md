@@ -12,14 +12,14 @@ Serial command(s) to ...
 ## Command(s)
 
 * ``<D ANIN «vpin»>`` = Display analogue input value
-* ``<D ANOUT «vpin» «position» «profile»>`` = see ==TODO==
-* ``<D ANOUT «vpin» «position»>`` = see ==TODO==
+* ``<D ANOUT «vpin» «position» «profile»>`` = see ==TODO== Command Description
+* ``<D ANOUT «vpin» «position»>`` = see ==TODO== Command Description
 
 ## Parameters
 
 * **vpin**: *Required* Analogue VPIN to read or write
-* **position**: ==TODO== Parameter Description
-* **profile**: ==TODO== Parameter Description
+* **position**: ==TODO== MEDIUM - Parameter Description
+* **profile**: ==TODO== MEDIUM - Parameter Description
 
 ## Response
 

@@ -1,3 +1,5 @@
 # WiFi Boards
 
-==TODO== Move the legacy pages
+==TODO== MEDIUM - Move the legacy pages
+
+Refer to the [legacy documentation](https://dcc-ex.com/legacy-docs/ex-commandstation/advanced-setup/supported-wifi/index.html) for details.
