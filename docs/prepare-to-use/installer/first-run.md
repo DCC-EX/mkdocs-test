@@ -33,3 +33,5 @@ You must have Arduino CLI installed to proceed, simply click the Install Arduino
 If you already have the Arduino CLI installed, it is recommended that you refresh it periodically (e.g. weekly) to ensure support for the various device details are kept up to date. To refresh the CLI, simply click the Refresh Arduino CLI button.
 
 Installing the CLI can take some time. Maybe grab a cup of tea or coffee, and watch magic happen!
+
+--8<-- "snippets/abbr.md"
