@@ -20,7 +20,7 @@ Scanned roots: `C:\Users\akers\OneDrive\github\github_doco\mkdocs-test\docs`, `C
 
 ## High TODOs
 
-Total High TODO matches: 55
+Total High TODO matches: 42
 
 | File | Line | Line text |
 | --- | ---: | --- |
@@ -35,16 +35,6 @@ Total High TODO matches: 55
 | [docs/reference/serial-commands/serial-command-dd-anin-anout_not_in_nav.md](../reference/serial-commands/serial-command-dd-anin-anout_not_in_nav.md) | 16 | * ``<D ANOUT «vpin» «position»>`` = see ==TODO== |
 | [docs/reference/serial-commands/serial-command-dd-anin-anout_not_in_nav.md](../reference/serial-commands/serial-command-dd-anin-anout_not_in_nav.md) | 21 | * **position**: ==TODO== Parameter Description |
 | [docs/reference/serial-commands/serial-command-dd-anin-anout_not_in_nav.md](../reference/serial-commands/serial-command-dd-anin-anout_not_in_nav.md) | 22 | * **profile**: ==TODO== Parameter Description |
-| [docs/reference/serial-commands/serial-command-dd_and_e_and_ee_not_in_nav.md](../reference/serial-commands/serial-command-dd_and_e_and_ee_not_in_nav.md) | 20 | * **numEntries**: *optional* ==TODO== explain the parameter |
-| [docs/reference/serial-commands/serial-command-ff_not_in_nav.md](../reference/serial-commands/serial-command-ff_not_in_nav.md) | 32 | * ==TODO== = Mid frequency - 490Hz |
-| [docs/reference/serial-commands/serial-command-ff_not_in_nav.md](../reference/serial-commands/serial-command-ff_not_in_nav.md) | 33 | * ==TODO== = High frequency - 3400Hz |
-| [docs/reference/serial-commands/serial-command-ff_not_in_nav.md](../reference/serial-commands/serial-command-ff_not_in_nav.md) | 34 | * ==TODO== = Supersonic - 62500Hz |
-| [docs/reference/serial-commands/serial-command-jj-ll_not_in_nav.md](../reference/serial-commands/serial-command-jj-ll_not_in_nav.md) | 19 | * **display**: *Required* ==TODO== parameter description |
-| [docs/reference/serial-commands/serial-command-jj-ll_not_in_nav.md](../reference/serial-commands/serial-command-jj-ll_not_in_nav.md) | 20 | * **row**: *Required* ==TODO== parameter description |
-| [docs/reference/serial-commands/serial-command-jj-mm_not_in_nav.md](../reference/serial-commands/serial-command-jj-mm_not_in_nav.md) | 30 | * **StashId**: Id of the stash to set, clear or get (``0`` - ==TODO==) |
-| [docs/reference/serial-commands/serial-command-m_not_in_nav.md](../reference/serial-commands/serial-command-m_not_in_nav.md) | 26 | * **accelerating**: ==TODO== |
-| [docs/reference/serial-commands/serial-command-m_not_in_nav.md](../reference/serial-commands/serial-command-m_not_in_nav.md) | 27 | * **braking**: ==TODO== |
-| [docs/reference/serial-commands/serial-command-m_not_in_nav.md](../reference/serial-commands/serial-command-m_not_in_nav.md) | 28 | * **momentum**: ==TODO== |
 | [docs/reference/trackmanager/dc-mode-frequency.md](../reference/trackmanager/dc-mode-frequency.md) | 82 | - ==TODO==  How to effectively use DC mode when using multiple frequencies. |
 | [docs/reference/wiring/i2C/i2c-wiring.md](../reference/wiring/i2C/i2c-wiring.md) | 54 | - When using separate power sources, there is potential for a ground loop. ==TODO== |
 | [docs/reference/microcontrollers/nucleo/nucleo-144-ex8874.md](../reference/microcontrollers/nucleo/nucleo-144-ex8874.md) | 59 | ==TODO== - update MotorDrivers.h for D8 |
@@ -54,7 +44,6 @@ Total High TODO matches: 55
 | [docs/reference/hardware/hal/hal-config.md](../reference/hardware/hal/hal-config.md) | 186 | First you will need to add a new file, just like the ==TODO== :ref:`config.h file <ex-commandstation/advanced-setup/installation-options/arduino-ide:Copy the config.example.h file (or rename it)>`. |
 | [docs/reference/hardware/hal/hal-config.md](../reference/hardware/hal/hal-config.md) | 249 | Finally, upload the code to the Arduino as you would do during the standard ==TODO== :ref:`Arduino IDE Setup <ex-commandstation/advanced-setup/installation-options/arduino-ide:upload the software>`. |
 | [docs/reference/hardware/wifi-boards/index.md](../reference/hardware/wifi-boards/index.md) | 3 | ==TODO== Move the legacy pages |
-| [docs/products/ex-ioexpander/ex-ioexpander.md](../products/ex-ioexpander/ex-ioexpander.md) | 8 | ==TODO== move legacy docs |
 | [docs/products/ex-turntable/configure.md](../products/ex-turntable/configure.md) | 3 | ==TODO== check the current version number of EX-Turntable and adjust the version notes on this page as needed |
 | [docs/prepare-to-use/connecting/connecting-diy.md](../prepare-to-use/connecting/connecting-diy.md) | 17 | ==TODO== physically connecting DIY EX-CS to a layout - EX8874 |
 | [docs/prepare-to-use/connecting/connecting-diy.md](../prepare-to-use/connecting/connecting-diy.md) | 28 | ==TODO== physically connecting DIY EX-CS to a layout - Standard Arduino Motor Shield |
@@ -77,12 +66,10 @@ Total High TODO matches: 55
 | snippets/ex-installer/installing.md | 1 | ==TODO== **This needs to outline the steps to install EX-Installer.** |
 | snippets/ex-installer/startup-logs.md | 1 | ==TODO== Instructions required here to obtain the startup logs from **EX-Installer**. |
 | snippets/testing/testing.md | 80 | ==TODO== basic steps for initial testing with a Smart Device over WiFi |
-| snippets/testing/testing.md | 90 | ==TODO== what to do if any of the initial testing steps fail |
-| snippets/testing/testing.md | 125 | ==TODO==... pic - Check communication and version |
 
 ## Medium priority TODOs
 
-Total medium priority TODO matches: 47
+Total medium priority TODO matches: 57
 
 | File | Line | Line text |
 | --- | ---: | --- |
@@ -99,15 +86,25 @@ Total medium priority TODO matches: 47
 | [docs/reference/serial-commands/serial-command-dd-cabs-and-minus_not_in_nav.md](../reference/serial-commands/serial-command-dd-cabs-and-minus_not_in_nav.md) | 29 | ==TODO== MEDIUM - Responses |
 | [docs/reference/serial-commands/serial-command-dd-cc-diagnostic-messages_not_in_nav.md](../reference/serial-commands/serial-command-dd-cc-diagnostic-messages_not_in_nav.md) | 39 | ==TODO== MEDIUM - Responses |
 | [docs/reference/serial-commands/serial-command-dd-wifi_not_in_nav.md](../reference/serial-commands/serial-command-dd-wifi_not_in_nav.md) | 22 | ==TODO== MEDIUM - Responses |
+| [docs/reference/serial-commands/serial-command-dd_and_e_and_ee_not_in_nav.md](../reference/serial-commands/serial-command-dd_and_e_and_ee_not_in_nav.md) | 20 | * **numEntries**: *optional* ==TODO== MEDIUM explain the parameter |
 | [docs/reference/serial-commands/serial-command-dd_and_e_and_ee_not_in_nav.md](../reference/serial-commands/serial-command-dd_and_e_and_ee_not_in_nav.md) | 26 | ==TODO== MEDIUM - Responses |
 | [docs/reference/serial-commands/serial-command-dd_hal_not_in_nav.md](../reference/serial-commands/serial-command-dd_hal_not_in_nav.md) | 31 | ==TODO== MEDIUM - Responses |
+| [docs/reference/serial-commands/serial-command-ff_not_in_nav.md](../reference/serial-commands/serial-command-ff_not_in_nav.md) | 32 | * ==TODO== MEDIUM X = Mid frequency - 490Hz |
+| [docs/reference/serial-commands/serial-command-ff_not_in_nav.md](../reference/serial-commands/serial-command-ff_not_in_nav.md) | 33 | * ==TODO== MEDIUM X = High frequency - 3400Hz |
+| [docs/reference/serial-commands/serial-command-ff_not_in_nav.md](../reference/serial-commands/serial-command-ff_not_in_nav.md) | 34 | * ==TODO== MEDIUM X = Supersonic - 62500Hz |
 | [docs/reference/serial-commands/serial-command-jj-cc_not_in_nav.md](../reference/serial-commands/serial-command-jj-cc_not_in_nav.md) | 33 | ==TODO== MEDIUM - Responses |
+| [docs/reference/serial-commands/serial-command-jj-ll_not_in_nav.md](../reference/serial-commands/serial-command-jj-ll_not_in_nav.md) | 19 | * **display**: *Required* ==TODO== MEDIUM parameter description |
+| [docs/reference/serial-commands/serial-command-jj-ll_not_in_nav.md](../reference/serial-commands/serial-command-jj-ll_not_in_nav.md) | 20 | * **row**: *Required* ==TODO== MEDIUM parameter description |
 | [docs/reference/serial-commands/serial-command-jj-ll_not_in_nav.md](../reference/serial-commands/serial-command-jj-ll_not_in_nav.md) | 24 | ==TODO== MEDIUM - Responses |
+| [docs/reference/serial-commands/serial-command-jj-mm_not_in_nav.md](../reference/serial-commands/serial-command-jj-mm_not_in_nav.md) | 30 | * **StashId**: Id of the stash to set, clear or get (``0`` - ==TODO== MEDIUM) |
 | [docs/reference/serial-commands/serial-command-kk_and_k_not_in_nav.md](../reference/serial-commands/serial-command-kk_and_k_not_in_nav.md) | 21 | * **blockid**: *Required* ==TODO== MEDIUM description |
 | [docs/reference/serial-commands/serial-command-kk_and_k_not_in_nav.md](../reference/serial-commands/serial-command-kk_and_k_not_in_nav.md) | 22 | * **loco**: *Required* ==TODO== MEDIUM description |
 | [docs/reference/serial-commands/serial-command-kk_and_k_not_in_nav.md](../reference/serial-commands/serial-command-kk_and_k_not_in_nav.md) | 26 | ==TODO== MEDIUM - Responses |
 | [docs/reference/serial-commands/serial-command-ll_not_in_nav.md](../reference/serial-commands/serial-command-ll_not_in_nav.md) | 21 | * **eventId**: *optional* ==TODO== MEDIUM description |
 | [docs/reference/serial-commands/serial-command-ll_not_in_nav.md](../reference/serial-commands/serial-command-ll_not_in_nav.md) | 25 | ==TODO== MEDIUM - Responses |
+| [docs/reference/serial-commands/serial-command-m_not_in_nav.md](../reference/serial-commands/serial-command-m_not_in_nav.md) | 26 | * **accelerating**: ==TODO== MEDIUM parameter description |
+| [docs/reference/serial-commands/serial-command-m_not_in_nav.md](../reference/serial-commands/serial-command-m_not_in_nav.md) | 27 | * **braking**: ==TODO== MEDIUM parameter description |
+| [docs/reference/serial-commands/serial-command-m_not_in_nav.md](../reference/serial-commands/serial-command-m_not_in_nav.md) | 28 | * **momentum**: ==TODO== MEDIUM parameter description |
 | [docs/reference/serial-commands/serial-command-nn_not_in_nav.md](../reference/serial-commands/serial-command-nn_not_in_nav.md) | 28 | ==TODO== MEDIUM - Responses |
 | [docs/reference/serial-commands/serial-command-o_not_in_nav.md](../reference/serial-commands/serial-command-o_not_in_nav.md) | 33 | ==TODO== MEDIUM - Responses |
 | [docs/reference/serial-commands/serial-command-rr-and-ww_not_in_nav.md](../reference/serial-commands/serial-command-rr-and-ww_not_in_nav.md) | 123 | ==TODO== MEDIUM - Response for ``<r «loco» «cv»>`` |
@@ -136,7 +133,7 @@ Total medium priority TODO matches: 47
 
 ## Low priority TODOs
 
-Total low priority TODO matches: 95
+Total low priority TODO matches: 96
 
 | File | Line | Line text |
 | --- | ---: | --- |
@@ -226,7 +223,6 @@ Total low priority TODO matches: 95
 | [docs/reference/throttle-writers/throttle-writers-guide.md](../reference/throttle-writers/throttle-writers-guide.md) | 201 | ## COMMANDS TO AVOID ==TODO== LOW |
 | [docs/reference/throttle-writers/throttle-writers-guide.md](../reference/throttle-writers/throttle-writers-guide.md) | 217 | ==TODO== LOW Gauges |
 | [docs/reference/throttle-writers/throttle-writers-guide.md](../reference/throttle-writers/throttle-writers-guide.md) | 223 | ==TODO== LOW TCP VS UDP |
-| [docs/reference/tools/diagnostic-d-command.md](../reference/tools/diagnostic-d-command.md) | 7 | These commands can be entered directly via the USB serial console or through a WiFi connection to the command station with a tool such as Telnet or Putty. JMRI includes the DCC-EX traffic monitor which lets you insert serial [DCC-EX Native/Serial Commands](../../reference/serial-commands/index.md) as well. (==TODO== Low - JMRI links required) |
 | [docs/reference/tools/diagnostic-tools.md](../reference/tools/diagnostic-tools.md) | 45 | ==TODO== LOW - Wiring and more info goes here |
 | [docs/reference/tools/diagnostic-tools.md](../reference/tools/diagnostic-tools.md) | 91 | ==TODO== LOW - add info on wiring and sketches here |
 | [docs/reference/hardware/hal/hal-config.md](../reference/hardware/hal/hal-config.md) | 3 | ==TODO== LOW - change references in this document from the Arduino IDE to VSC/PIO |
@@ -235,4 +231,6 @@ Total low priority TODO matches: 95
 | [docs/prepare-to-use/connecting/index.md](../prepare-to-use/connecting/index.md) | 14 | If you plan to run DC trains rather than the default of DCC, there are other considerations. Refer to ==TODO== LOW DC page for more information. |
 | [docs/contributing/documentation/formatting-guide.md](documentation/formatting-guide.md) | 71 | ==TODO== LOW - Note there is a bug in this process if the heading contains ` - ` (space dash space). |
 | [docs/contributing/documentation/github.md](documentation/github.md) | 95 | ==TODO== LOW - how to preview options |
+| snippets/testing/testing.md | 90 | ==TODO== LOW - what to do if any of the initial testing steps fail |
+| snippets/testing/testing.md | 125 | ==TODO== LOW - pic - Check communication and version |
 

@@ -27,7 +27,7 @@ Serial command to manage Stash values.
 ## Parameters
 
 * **locoId**: loco Id to set or clear
-* **StashId**: Id of the stash to set, clear or get (``0`` - ==TODO==)
+* **StashId**: Id of the stash to set, clear or get (``0`` - ==TODO== MEDIUM)
 
 ## Response
 

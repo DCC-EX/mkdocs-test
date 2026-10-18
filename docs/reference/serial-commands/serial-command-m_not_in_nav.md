@@ -23,9 +23,9 @@ Serial commands to Server based momentum for a specific loco.
 ## Parameters
 
 * **loco**: Loco (DCC Address) to set the momentum for
-* **accelerating**: ==TODO==
-* **braking**: ==TODO==
-* **momentum**: ==TODO==
+* **accelerating**: ==TODO== MEDIUM parameter description
+* **braking**: ==TODO== MEDIUM parameter description
+* **momentum**: ==TODO== MEDIUM parameter description
 
 ## Response
 

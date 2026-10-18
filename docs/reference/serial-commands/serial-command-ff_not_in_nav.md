@@ -29,9 +29,9 @@ Serial command to turn loco decoder functions ON or OFF or set the DC PWM freque
         * ``0`` = off
 * If **DCCFREQ** plus **«freqValue»** are supplied - to set the PWM frequency
     * **«freqValue»** = one of:
-        * ==TODO== = Mid frequency - 490Hz
-        * ==TODO== = High frequency - 3400Hz
-        * ==TODO== = Supersonic - 62500Hz
+        * ==TODO== MEDIUM X = Mid frequency - 490Hz
+        * ==TODO== MEDIUM X = High frequency - 3400Hz
+        * ==TODO== MEDIUM X = Supersonic - 62500Hz
 
 ## Response
 

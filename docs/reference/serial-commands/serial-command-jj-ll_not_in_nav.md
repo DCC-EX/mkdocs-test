@@ -16,8 +16,8 @@ Serial command to Direct current displays to LCS/OLED
 
 ## Parameters
 
-* **display**: *Required* ==TODO== parameter description
-* **row**: *Required* ==TODO== parameter description
+* **display**: *Required* ==TODO== MEDIUM parameter description
+* **row**: *Required* ==TODO== MEDIUM parameter description
 
 ## Response
 
