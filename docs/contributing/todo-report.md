@@ -20,7 +20,7 @@ Scanned roots: `C:\Users\akers\OneDrive\github\github_doco\mkdocs-test\docs`, `C
 
 ## High TODOs
 
-Total High TODO matches: 56
+Total High TODO matches: 55
 
 | File | Line | Line text |
 | --- | ---: | --- |
@@ -70,7 +70,6 @@ Total High TODO matches: 56
 | [docs/enhance/exrail/exrail-objects-introduction.md](../enhance/exrail/exrail-objects-introduction.md) | 208 | ==TODO== Add a diagram for the EX-CSB1 to a PCA9685 |
 | [docs/enhance/exrail/exrail-objects-introduction.md](../enhance/exrail/exrail-objects-introduction.md) | 362 | ==TODO== Link here to recommended pin/vpin allocations etc. |
 | [docs/enhance/exrail/exrail-objects-introduction.md](../enhance/exrail/exrail-objects-introduction.md) | 364 | ==TODO== Add a diagram for the EX-CSB1 to an IO Expander |
-| [docs/enhance/exrail/exrail-startup-configuration.md](../enhance/exrail/exrail-startup-configuration.md) | 46 | ==TODO== Uploading via VSC |
 | [docs/enhance/exrail/cookbooks/timecontrol.md](../enhance/exrail/cookbooks/timecontrol.md) | 92 | NB:  ==TODO== See the following page for details on running sound files. |
 | snippets/configure/config-wifi-esp32-gui-options.md | 61 | ==TODO== The WiFi change limitation has been broken in the latest CS version as anything can be changed via the in-built web server |
 | snippets/configure/config-wifi-esp32-gui-options.md | 69 | ==TODO== Changing the WiFi Settings using the EX-CommandStation's own Web Sever |
@@ -83,7 +82,7 @@ Total High TODO matches: 56
 
 ## Medium priority TODOs
 
-Total medium priority TODO matches: 44
+Total medium priority TODO matches: 47
 
 | File | Line | Line text |
 | --- | ---: | --- |
@@ -128,6 +127,9 @@ Total medium priority TODO matches: 44
 | [docs/reference/microcontrollers/esp32/esp32-ex8874.md](../reference/microcontrollers/esp32/esp32-ex8874.md) | 110 | ==TODO== MEDIUM - Stacked EX8874 Checklist |
 | [docs/reference/microcontrollers/ex-csb1/csb1-technical.md](../reference/microcontrollers/ex-csb1/csb1-technical.md) | 22 | ==TODO== MEDIUM - EX-CSB1 Technical Reference |
 | [docs/products/ex-dccinspector/index.md](../products/ex-dccinspector/index.md) | 6 | ==TODO== MEDIUM - This page needs to be expanded |
+| [docs/enhance/exrail/exrail-startup-configuration.md](../enhance/exrail/exrail-startup-configuration.md) | 20 | ==TODO== MEDIUM - Adding to your myAutomation.h in EX-Installer |
+| [docs/enhance/exrail/exrail-startup-configuration.md](../enhance/exrail/exrail-startup-configuration.md) | 26 | ==TODO== MEDIUM - Adding to your myAutomation.h in VSC |
+| [docs/enhance/exrail/exrail-startup-configuration.md](../enhance/exrail/exrail-startup-configuration.md) | 39 | ==TODO== MEDIUM - Adding to your myAutomation.h in the Arduino IDE |
 | [docs/enhance/accessories/i2c/i2c-displays.md](../enhance/accessories/i2c/i2c-displays.md) | 96 | ==TODO== MEDIUM - diagram for connecting the EX-CSB1 to an oLED via the headers |
 | [docs/enhance/accessories/i2c/i2c-displays.md](../enhance/accessories/i2c/i2c-displays.md) | 98 | ==TODO== MEDIUM - diagram for connecting the EX-CSB1 to an oLED via the QWIIC connector |
 | [docs/enhance/accessories/i2c/i2c-gpio-expanders.md](../enhance/accessories/i2c/i2c-gpio-expanders.md) | 41 | ==TODO== MEDIUM - diagram for connecting the EX-CSB1 to an GPIO Expander via the headers |
