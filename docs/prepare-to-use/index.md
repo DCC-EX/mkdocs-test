@@ -15,9 +15,7 @@ Depending on whether or not you purchased an **EX-CSB1** or you self built your 
 
 ## Installing the EX-CommandStation software
 
-This step is only needed for self built EX-CommandStations, or if you wish to update or enhance your **EX-CSB1**.
-
-This software is ***only*** needed for self-built EX-CommandStations, or if you wish to update or enhance your **EX-CSB1**.
+This step is ***only*** needed for self-built EX-CommandStations, or if you wish to update or enhance your **EX-CSB1**.
 
 The **EX-CommandStation** software is what allows your self-built EX-CommandStation hardware or purchased EX-CSB1 to function as a simple, and powerful, DCC and DC Command Station.  If you purchased the **EX-CSB1**, this software is already installed.  
 
