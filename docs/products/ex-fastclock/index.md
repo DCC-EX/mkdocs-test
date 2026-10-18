@@ -40,7 +40,7 @@ The **EX-FastClock** integration includes:
 - I2C device driver
 - **EXRAIL** automation support
 - Time Broadcast for time display on WiThrottle controllers such as Engine Driver
-- Debug output to [serial monitor](../../reference/tools/serial-monitor_not_in_nav.md)
+- Debug output to [serial monitor](../../reference/tools/serial-monitor.md)
 
 ## Credit where credit is due
 

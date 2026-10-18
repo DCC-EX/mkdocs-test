@@ -1,3 +1,4 @@
 nav:
+  - Serial Commands Overview: index.md
   - Legacy Reference <small>Not&nbsp;Maintained</small>: legacy-command-reference.md
   - Configure WiFi <br/><small>(EX‑CSB1 & ESP32 v5.7.0+ Only)</small>: config-wifi-esp32.md

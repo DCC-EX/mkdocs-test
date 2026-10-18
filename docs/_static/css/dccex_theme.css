@@ -180,6 +180,7 @@
 /* Only show image in light mode - style with { .only-light } */
 [data-md-color-scheme="dccex-light"] img.only-light {
   display: block;
+  margin: 0.5em 0px 0.5em 0.5em !important;
 }
 
 /* Never show image in light mode - style with { .only-dark } */
@@ -195,6 +196,7 @@
 /* Only show image in dark mode - style with { .only-dark } */
 [data-md-color-scheme="dccex-dark"] img.only-dark {
   display: block;
+  margin: 0.5em 0px 0.5em 0.5em !important;
 }
 
 /* GENERAL STYLING OVERRIDES */

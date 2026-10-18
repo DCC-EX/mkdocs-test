@@ -25,7 +25,7 @@ Serial commands to provide WiFi diagnostica.
 
 ## Notes
 
-* When enabled, diagnostic messages will be shown on the the [serial monitor](../tools/serial-monitor_not_in_nav.md).
+* When enabled, diagnostic messages will be shown on the the [serial monitor](../tools/serial-monitor.md).
 
 ----
 

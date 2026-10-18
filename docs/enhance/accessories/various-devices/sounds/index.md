@@ -25,7 +25,7 @@ Refer to the relevant page for device specific details.
 
 ## Sound Commands
 
-The <y> command is specifically designed for easy testing and control of sounds from the [serial monitor](../../../../reference/tools/serial-monitor_not_in_nav.md). Every command is directed towards the previously defined vpin.
+The <y> command is specifically designed for easy testing and control of sounds from the [serial monitor](../../../../reference/tools/serial-monitor.md). Every command is directed towards the previously defined vpin.
 
 - `<y vpin PLAY track [volume]>` Plays given track number and specified (or default) volume
 - `<y vpin REPEAT track [volume]>` Plays track repeatedly

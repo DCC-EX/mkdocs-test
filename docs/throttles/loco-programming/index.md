@@ -71,7 +71,7 @@ Refer to the [Throttles](../throttles.md#comparison-table) lists to see which ap
 
 ### Programming using Serial input commands
 
-This requires access to the [serial monitor](../../reference/tools/serial-monitor_not_in_nav.md). It is the most flexible method and can provide diagnostics when things don't work. It also has the flexibility to adjust the tuning parameters to cope with decoders that are way outside the normal decoder electronic standards.
+This requires access to the [serial monitor](../../reference/tools/serial-monitor.md). It is the most flexible method and can provide diagnostics when things don't work. It also has the flexibility to adjust the tuning parameters to cope with decoders that are way outside the normal decoder electronic standards.
 
 See [Programming with Serial commands](../../throttles/loco-programming/serial-programming.md)
 

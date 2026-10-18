@@ -2,6 +2,7 @@ nav:
   - What is EXRAIL?: index.md
   - Objects Introduction: exrail-objects-introduction.md
   - Sequences Introduction: exrail-sequences-introduction.md
+  - Startup Configuration: exrail-startup-configuration.md
   - Vpins: vpins.md
   - Command List: command-list.md
   - Cookbooks: cookbooks
