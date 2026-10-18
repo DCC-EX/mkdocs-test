@@ -25,7 +25,7 @@ If you are already using **EXRAIL** and have a myAutomation.h, then just the add
 Add a line that looks like:
 
 ```cpp
-   ROSTER(999,"Loco Name","F0/F1/*F2/F3/F4/F5/F6/F7/F8")
+ROSTER(999,"Loco Name","F0/F1/*F2/F3/F4/F5/F6/F7/F8")
 ```
 
 Where:
@@ -38,10 +38,10 @@ Where:
 Some more realistic examples might look like:
 
 ```cpp
-   ROSTER(3,"Eng 3","F0/F1/*F2/*F3/F4/F5/F6/F7/Mute/F9//") // Address = 3, Loco Name = Eng 3, Function keys F0-F10
-   ROSTER(1224,"PE 1224","") // Motor Only Decoder, But use Engine Driver 'Preferences >In Phone Loco 'Sound'
-   ROSTER(1225,"PE 1225","Lights/Bell/*Whistle/*Short Whistle/Steam/On-Time/FX6 Bell Whistle/Dim Light/Mute")
-   ROSTER(4468,"LNER 4468","//Snd On/*Whistle/*Whistle2/Brake/F5 Drain/Coal Shvl/Guard-Squeal/Loaded/Coastng/Injector/Shunt-Door ~Opn-Cls/Couplng/BrakeVlv/Sfty Vlv/Shunting/BrkSql Off/No Momentm/Aux3/Fade Out/F22 Res/F23/Res//Aux 5/Aux6/Aux7/Aux 8")
+ROSTER(3,"Eng 3","F0/F1/*F2/*F3/F4/F5/F6/F7/Mute/F9//") // Address = 3, Loco Name = Eng 3, Function keys F0-F10
+ROSTER(1224,"PE 1224","") // Motor Only Decoder, But use Engine Driver 'Preferences >In Phone Loco 'Sound'
+ROSTER(1225,"PE 1225","Lights/Bell/*Whistle/*Short Whistle/Steam/On-Time/FX6 Bell Whistle/Dim Light/Mute")
+ROSTER(4468,"LNER 4468","//Snd On/*Whistle/*Whistle2/Brake/F5 Drain/Coal Shvl/Guard-Squeal/Loaded/Coastng/Injector/Shunt-Door ~Opn-Cls/Couplng/BrakeVlv/Sfty Vlv/Shunting/BrkSql Off/No Momentm/Aux3/Fade Out/F22 Res/F23/Res//Aux 5/Aux6/Aux7/Aux 8")
 ```
 
 Note: Add additional 'ROSTER(...)' lines for all your locos
@@ -53,7 +53,7 @@ If a function is not available leave the spot empty. (Don't even have the space 
 For example:
 
 ```cpp
-   ROSTER(2825,"CN ES44AC","Headlight/Bell/*Horn/Coupler/Dynamic Brake///Flange Squeal/Startup & Shutdown")
+ROSTER(2825,"CN ES44AC","Headlight/Bell/*Horn/Coupler/Dynamic Brake///Flange Squeal/Startup & Shutdown")
 ```
 
 Note the two missing text labels for positions F5 and F6. Engine Driver will skip those buttons and not display them at all in the interface since they do nothing for that loco.
@@ -61,26 +61,25 @@ Note the two missing text labels for positions F5 and F6. Engine Driver will ski
 Example of loco without sound:
 
 ```cpp
-   ROSTER(2405,"AT&SF 2-8-0 2405","Headlight")
+ROSTER(2405,"AT&SF 2-8-0 2405","Headlight")
 ```
 
 Note that it only has FO (the Headlight) and not following slashes.
 
-..
-   Locos With the Same DCC Address
+!! NOTE "Locos With the Same DCC Address"
 
    If you have two or more Loco with identical DCC Addresses, but with with decoder functions you need to make the "name" different or you'll get compile error 'Duplicate Case Value'.
 
    Examples of naming Different Locos identical DCC Addresses. Notice the different Function values in the following two examples:
 
 ```cpp
-      ROSTER(4468,"LNER 4468","//Snd On/*Whistle/*Whistle2/Brake/F5 Drain/Coal Shvl/Guard-Squeal/Loaded/Coastng/Injector/Shunt-Door ~Opn-Cls/Couplng/BrakeVlv/Sfty Vlv/Shunting/BrkSql Off/No Momentm/Aux3/Fade Out/F22 Res/F23/Res//Aux 5/Aux6/Aux7/Aux 8")
+ROSTER(4468,"LNER 4468","//Snd On/*Whistle/*Whistle2/Brake/F5 Drain/Coal Shvl/Guard-Squeal/Loaded/Coastng/Injector/Shunt-Door ~Opn-Cls/Couplng/BrakeVlv/Sfty Vlv/Shunting/BrkSql Off/No Momentm/Aux3/Fade Out/F22 Res/F23/Res//Aux 5/Aux6/Aux7/Aux 8")
 ```
 
-   For example, you can add a "-2" to the Second Loco DCC Address and Name:
+For example, you can add a "-2" to the Second Loco DCC Address and Name:
 
 ```cpp
-      ROSTER(4468-2,"LNER 4468-2","Lights/Steam/*L~Whistle/*S~Whistle/*Whistle2/DoorSlam/Whl Slip/Coal Shvl/BlwDown/SftyVlv/Injector/CylnCock/Brake/Blower/Grd Whistle/Coupler/Fireman/Chuff-Coast/Aux Lghts")
+ROSTER(4468-2,"LNER 4468-2","Lights/Steam/*L~Whistle/*S~Whistle/*Whistle2/DoorSlam/Whl Slip/Coal Shvl/BlwDown/SftyVlv/Injector/CylnCock/Brake/Blower/Grd Whistle/Coupler/Fireman/Chuff-Coast/Aux Lghts")
 ```
 
 ### Re-upload the EX-CommandStation software
@@ -107,17 +106,17 @@ More information on the config files can be found on the [Managing Config Files]
 
 !!! warning "Never edit any files in the EX-Installer folder"
 
-    Never edit any files in the EX-Installer folder. Editing any files in the EX-Installer folder will **always** cause **EX-Installer** to fail.
+   Never edit any files in the EX-Installer folder. Editing any files in the EX-Installer folder will **always** cause **EX-Installer** to fail.
 
 ----
 
 #### Using the Arduino IDE
 
-!!! important "Using the Arduino IDE is not recommended"
+==TODO== MEDIUM - change the references the this page/section from the Arduino IDE to VSC/PIO
 
-    A word of caution on using the Arduino IDE to install the software:
-
-    While it is possible install the software using the Arduino IDE, we *seriously* **DO NOT RECOMMEND IT** for anyone but technically experienced users. It is an order of magnitude more complex, much slower, and with a very high probability of getting something wrong unless you really know what you are doing.
+!!! IMPORTANT "Using the Arduino IDE is not recommended"
+   A word of caution on using the Arduino IDE to install the software:  
+   While it is possible install the software using the Arduino IDE, we *seriously* **DO NOT RECOMMEND IT** for anyone but technically experienced users. It is an order of magnitude more complex, much slower, and with a very high probability of getting something wrong unless you really know what you are doing.
 
 The **EX-Installer** described below will meet 100% of the needs of a almost all users with considerably less effort.
 
@@ -139,41 +138,41 @@ There are three ways to load & store your Locomotive Icon Image in Engine Driver
 
 1. **Automatically from your existing JMRI Roster & Media**
 
-    If you have a WiThrottle Server that does support loco images:
+   If you have a WiThrottle Server that does support loco images:
 
-    * Start JMRI and capture and load your images into JMRI Roster & Media panel as normal
-    * Start the WiThrottle Server.
-    * Start the Web Server.
-    * Connect Engine Driver to JMRI WiThrottle Server Discovered Server 'My JMRI Railroad' or type in the IP address : Port#
-    * Click ``Select`` and load your Locos then ``Release`` and repeat until you've loaded all the locomotives you require with Icons into a throttle.<br/>
-    These Loco Icons will automatically be saved/cached on the Android device/phone in a new '/Android/data/jmri.enginedriver/files/recent_engine_list/**recent_engine_list**' folder for you.<br/><br/>
-    Requirements for this to work:
+   * Start JMRI and capture and load your images into JMRI Roster & Media panel as normal
+   * Start the WiThrottle Server.
+   * Start the Web Server.
+   * Connect Engine Driver to JMRI WiThrottle Server Discovered Server 'My JMRI Railroad' or type in the IP address : Port#
+   * Click ``Select`` and load your Locos then ``Release`` and repeat until you've loaded all the locomotives you require with Icons into a throttle.<br/>
+   These Loco Icons will automatically be saved/cached on the Android device/phone in a new '/Android/data/jmri.enginedriver/files/recent_engine_list/**recent_engine_list**' folder for you.<br/><br/>
+   Requirements for this to work:
 
-         * Have identical names (from JMRI Roster ID to **DCC-EX** **EXRAIL** Roster ID)  example ID;    "PE 1225"
-         * Have image icons displayed for the locomotives
+      * Have identical names (from JMRI Roster ID to **DCC-EX** **EXRAIL** Roster ID)  example ID;    "PE 1225"
+      * Have image icons displayed for the locomotives
 
 2. **Manually entered directly into your Android Engine Driver folder**
 
-    * Capture then rename the image exactly like the Roster ID name in JMRI & **EXRAIL** and save as a .PNG file
-    * Then place the engine Image into your Android device/phone in the <br/> '/Android/data/jmri.enginedriver/files/recent_engine_list' folder <br/> example image name;  PE 1225.png<br/><br/>
-    Note: certain characters are not allowed in file names so need to be substituted with "_" (underscore) if you have used them in your roster name. They are:
+   * Capture then rename the image exactly like the Roster ID name in JMRI & **EXRAIL** and save as a .PNG file
+   * Then place the engine Image into your Android device/phone in the <br/> '/Android/data/jmri.enginedriver/files/recent_engine_list' folder <br/> example image name;  PE 1225.png<br/><br/>
+   Note: certain characters are not allowed in file names so need to be substituted with "_" (underscore) if you have used them in your roster name. They are:
 
-         * / (forward slash)
-         * " (double quote)
-         * \\ (backslash)
-         * \* (asterisk)
-         * ? (question mark)
-         * < (less than)
-         * > (greater than)
+      * / (forward slash)
+      * " (double quote)
+      * \\ (backslash)
+      * \* (asterisk)
+      * ? (question mark)
+      * < (less than)
+      * > (greater than)
 
 3. **Select an image on the phone/device (which can be taken on the phone's camera)**
 
-    * In the **Roster List** on the Select Loco screen
+   * In the **Roster List** on the Select Loco screen
 
-         * Long press on the loco
-         * press the `New Image` button, which will launch the Android system's default app for choosing images
-         * find and select an image
-         * click `Save` <br/> <br/> You can replace an image with the `New Image` button or remove it with the `Remove` button
+      * Long press on the loco
+      * press the `New Image` button, which will launch the Android system's default app for choosing images
+      * find and select an image
+      * click `Save` <br/> <br/> You can replace an image with the `New Image` button or remove it with the `Remove` button
 
 **General Notes on the Local Loco Icons:**
 

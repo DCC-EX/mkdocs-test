@@ -103,7 +103,7 @@ Edit "config.h", add "//" at the beginning of the `#define TURNTABLE_EX_MODE TUR
 
 If you need to make any other adjustments to cater for using different stepper driver/motor combinations, this is the time to do so also.
 
-!!! note  "Tip"
+!!! tip  "Tip"
 
     If you are using a mechanism that results in anything other than a 1:1 gear ratio (e.g. using a lead screw), you may need to consider updating the `SANITY_STEPS` setting in "config.h".
 

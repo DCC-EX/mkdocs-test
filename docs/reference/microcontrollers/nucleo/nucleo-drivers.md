@@ -7,7 +7,7 @@ hide:
 
 ## Required for Windows
 
-When using any of the NUCLEO series microcontrollers with Microsoft Windows, you will need to install their STLink USB drivers in order to be able to upload software to them and use the [serial monitor](../../tools/serial-monitor.md) in either PlatformIO or the Arduino IDE.
+When using any of the NUCLEO series microcontrollers with Microsoft Windows, you will need to install their STLink USB drivers in order to be able to upload software to them and use the [serial monitor](../../tools/serial-monitor.md) in either VSCode/PlatformIO or the Arduino IDE.
 
 !!! note "Note"
 

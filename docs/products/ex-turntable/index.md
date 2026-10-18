@@ -36,7 +36,7 @@ The **EX-Turntable** integration includes:
 
 ### How Does It Work?
 
-!!!note "Full step, half step, and other modes"
+!!! note "Full step, half step, and other modes"
 
     Stepper motor drivers typically support more than one mode for driving stepper motors. This simply means that they can be turned less than one complete step, allowing more granular control of positioning, resulting in higher precision, and much smoother operation. For example, the DRV8825 can drive 1/32 of a step, talk about smooooth!
 
@@ -54,9 +54,9 @@ Once the home position is determined, the various positions on your layout are d
 
 The command used to move to these positions simply sends the number of steps to **EX-Turntable**, which calculates the steps required in order to move the least number of steps to the desired position, meaning it will rotate either clockwise or counter clockwise depending which is the shortest distance.
 
-**tip**
+!!! tip "home position"
 
-* It's recommended that the home position does not align with a specific layout connection track to ensure that each time **EX-Turntable** powers on, it automatically triggers the homing activity to occur, ensuring it starts in a consistent location each time for the highest accuracy.
+    It's recommended that the home position does not align with a specific layout connection track to ensure that each time **EX-Turntable** powers on, it automatically triggers the homing activity to occur, ensuring it starts in a consistent location each time for the highest accuracy.
 
 Refer to the [Test and tune](test-and-tune.md) page for details on how to configure and control **EX-Turntable**.
 
@@ -67,14 +67,14 @@ Due to the HAL within **EX-CommandStation**, the maximum number of steps per rot
 If your physical turntable involves gearing, for example a small spur gear on the stepper driving a large gear connected to the turntable or you have a stepper with an inbuilt gearbox, you will need to know the gear ratio, and multiply that by the number of steps per rotation of your stepper motor. This would give a resultant step per rotation count that needs to be no more than 32767 steps.
 
 ```cpp
-  # large gear teeth / # small gear teeth * stepper steps per rotation
+# large gear teeth / # small gear teeth * stepper steps per rotation
 ```
 
 For example, if you have a large gear on the base of a turntable with 200 teeth which is driven by a 20 tooth spur gear on the stepper motor, that gives a gear ratio of 10:1 (200 / 20). If you then use the 28BYJ-48 stepper in half step mode with 4096 steps per revolution, this would result in 40960 steps per revolution with this gearing, meaning **EX-Turntable** will not be able to successfully address a full rotation.
 
 !!! warning "single step (or microstep) in one go"
 
-  Given a stepper motor needs to complete an entire, single step (or microstep) in one go, implementing a gear ratio that results in a fractional step count for a single, complete revolution will result in inaccuracies, as the step count will always be rounded to an integer. Always ensure the resultant steps per rotation will be a whole number before purchasing or building any geared stepper configuration.
+    Given a stepper motor needs to complete an entire, single step (or microstep) in one go, implementing a gear ratio that results in a fractional step count for a single, complete revolution will result in inaccuracies, as the step count will always be rounded to an integer. Always ensure the resultant steps per rotation will be a whole number before purchasing or building any geared stepper configuration.
 
 In this scenario, running the 28BYJ-48 in full step mode (2048 steps) would allow this to work, as a full rotation is 20480 steps.
 
@@ -96,7 +96,7 @@ An important aspect that must be taken into consideration with a rotating turnta
 
 !!! warning "DCC phase (or polarity) is not aligned"
 
-  If your locomotive drives on to the turntable bridge track, and the DCC phase (or polarity) is not aligned with the surrounding layout tracks, then you will cause a short circuit. The CommandStation should cut power in that scenario, but the desired behaviour is simply to drive onto the turntable with no interruption.
+    If your locomotive drives on to the turntable bridge track, and the DCC phase (or polarity) is not aligned with the surrounding layout tracks, then you will cause a short circuit. The CommandStation should cut power in that scenario, but the desired behaviour is simply to drive onto the turntable with no interruption.
 
 In order to prevent short circuits, the phase (or polarity) of the bridge track will need to be inverted when rotating to ensure it remains in alignment with the surrounding tracks. There are three options to achieve this:
 

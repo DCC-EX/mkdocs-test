@@ -1,5 +1,7 @@
 # DCC Diagnostic Tools
 
+==TODO== MEDIUM - change the references the this page/section from the Arduino IDE to VSC/PIO
+
 ==TODO== MEDIUM - Work in Progress. More detail and pictures
 
 There are many tools to help you operate your layout and find issues with your trains and accessories. We will list some of the most helpful tools here including where to buy them assembled or how to build them yourself.

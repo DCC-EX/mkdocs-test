@@ -69,7 +69,7 @@ Also see [Connecting a USB Throttle to your EX-CommandStation](/throttles/connec
 
 ## Testing with a Smart Device over WiFi
 
-!!! Note inline end "DIY - Testing over WiFi"
+!!! NOTE inline end "DIY - Testing over WiFi"
 
     Testing over WiFi of an *Arduino Mega* Self Build (DIY) **EX-CommandStation** is only practical if you have installed a WiFi Shield as part of your build.
 

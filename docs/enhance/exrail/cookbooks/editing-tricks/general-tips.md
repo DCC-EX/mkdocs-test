@@ -4,7 +4,7 @@ Below are some tips and techniques you can implement to get the most out of **EX
 
 !!! warning "AI does not understand EXRAIL"
 
-    Do not waste your time asking ChatGPT, Copilot or Gemini to create EXRAIL scripts.   They do not understand EXRAIL and will get it wrong 100% of the time.
+   Do not waste your time asking ChatGPT, Copilot or Gemini to create EXRAIL scripts.   They do not understand EXRAIL and will get it wrong 100% of the time.
 
 ## Numbers and Leading Zeros
 
@@ -30,21 +30,21 @@ Use the ``ALIAS()`` command in your script to make IDs a bit more human friendly
 This is a simple substitution that lets you have readable names for things in your script. For example, instead of having to remember the VPin a turnout/point is connected to, give the pin number an alias and refer to it by that name. You can use this to name routes, values, pin numbers, or anything you need.
 
 ```cpp
-   //example
-   ALIAS(COAL_YARD_TURNOUT,19)
-   ALIAS(COAL_YARD_SIGNAL_3,27)
+//example
+ALIAS(COAL_YARD_TURNOUT,19)
+ALIAS(COAL_YARD_SIGNAL_3,27)
 
-   ROUTE(1,"Coal yard exit")
-      THROW(COAL_YARD_TURNOUT)
-      GREEN(COAL_YARD_SIGNAL_3)
+ROUTE(1,"Coal yard exit")
+   THROW(COAL_YARD_TURNOUT)
+   GREEN(COAL_YARD_SIGNAL_3)
 
-   // As above with auto generated IDs
-   ALIAS(COAL_YARD_TURNOUT)
-   ALIAS(COAL_YARD_SIGNAL_3)
+// As above with auto generated IDs
+ALIAS(COAL_YARD_TURNOUT)
+ALIAS(COAL_YARD_SIGNAL_3)
 
-   ROUTE(1,"Coal yard exit")
-      THROW(COAL_YARD_TURNOUT)
-      GREEN(COAL_YARD_SIGNAL_3)
+ROUTE(1,"Coal yard exit")
+   THROW(COAL_YARD_TURNOUT)
+   GREEN(COAL_YARD_SIGNAL_3)
 ```
 
 Alias names:
@@ -63,9 +63,9 @@ Any parameter for an **EXRAIL** command that takes numbers can be replaced with 
 This can be useful if you have a block of related IDs or VPINs and you don't wish to give each an ALIAS.
 
 ```cpp
-   ALIAS(Platform, 600)
-   ...
-   IF(Platform)
-   IF(Platform + 1)     // equivalent to IF(601)
-   IF(Platform + 2)     // equivalent to IF(602)
+ALIAS(Platform, 600)
+...
+IF(Platform)
+IF(Platform + 1)     // equivalent to IF(601)
+IF(Platform + 2)     // equivalent to IF(602)
 ```

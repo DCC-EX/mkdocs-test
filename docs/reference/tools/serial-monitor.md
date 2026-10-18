@@ -1,5 +1,7 @@
 # Using a Serial Monitor / Device Monitor
 
+==TODO== MEDIUM - change the references the this page/section from the Arduino IDE to VSC/PIO
+
 With a Serial Monitor you can:
 
 * Test your Command Station

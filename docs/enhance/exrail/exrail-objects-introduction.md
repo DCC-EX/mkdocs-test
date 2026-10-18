@@ -18,15 +18,15 @@ The process for creating these objects consists of:
 
 !!! note "COMMANDS are case sensitive"
 
-    COMMANDS are case sensitive. i.e. they must be in uppercase. Text parameters you provide (aliases,  descriptions) are not.
+   COMMANDS are case sensitive. i.e. they must be in uppercase. Text parameters you provide (aliases,  descriptions) are not.
 
 !!! warning "Characters to avoid"
 
-    You must avoid using these characters in all descriptions: ``<``, ``>``, ``"`` as these are part of the **DCC-EX** protocol and are likely to prevent descriptions showing up in JMRI and other throttle software/clients.
+   You must avoid using these characters in all descriptions: ``<``, ``>``, ``"`` as these are part of the **DCC-EX** protocol and are likely to prevent descriptions showing up in JMRI and other throttle software/clients.
 
 !!! warning "AI does not understand EXRAIL"
 
-    Do not waste your time asking ChatGPT, Copilot or Gemini to create EXRAIL scripts.   They do not understand **EXRAIL** and will get it wrong 100% of the time.
+   Do not waste your time asking ChatGPT, Copilot or Gemini to create EXRAIL scripts.   They do not understand **EXRAIL** and will get it wrong 100% of the time.
 
 ----
 

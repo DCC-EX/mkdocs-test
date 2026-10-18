@@ -1,5 +1,7 @@
 # Assembly & Setup
 
+==TODO== MEDIUM - change the references the this page from the Arduino IDE to VSC/PIO
+
 ## Assembly
 
 !!! warning "using the UNL2003/28BYJ-48 stepper driver"

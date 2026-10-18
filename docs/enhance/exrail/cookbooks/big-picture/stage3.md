@@ -51,16 +51,16 @@ If you use different sensors that simply provide an active low or high output, t
 This is invalid:
 
 ```cpp
-    ALIAS(SNS1, -22)
+ALIAS(SNS1, -22)
 ```
 
 Instead, these use cases are valid:
 
 ```cpp
-    ALIAS(SNS1, 22)
+ALIAS(SNS1, 22)
 
-    AT(-SNS1)         // When activie high sensor 1 is triggered
-    IF(-SNS1)         // If activie high sensor 1 is triggered
+AT(-SNS1)         // When activie high sensor 1 is triggered
+IF(-SNS1)         // If activie high sensor 1 is triggered
 ```
 
 ----

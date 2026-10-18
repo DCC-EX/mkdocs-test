@@ -78,25 +78,25 @@ Sequential execution of sequences is supported. i.e. One sequence can invoke ano
 In general, sequences follow the basic structure:
 
 ```cpp
-   <sequence-type>( sequence-id, parameter-2, ...)
-     <command 1>
-     <command 2>
-     ...
-     <command n>
-     DONE     or     RETURN     or     FOLLOW ( id )
+<sequence-type>( sequence-id, parameter-2, ...)
+  <command 1>
+  <command 2>
+  ...
+  <command n>
+  DONE     or     RETURN     or     FOLLOW ( id )
 ```
 
 For example:
 
 ```cpp
-   // Example
-   ROUTE(1,"Coal Yard exit")    // unique sequence-id = 1
-      RED(77)      // signal 77 to Red
-      THROW(1)     // throw turnout/point 1
-      CLOSE(7)     // close turnout/point 7
-      DELAY(5000)  // 5 second wait
-      GREEN(92)    // signal 92 to Green
-    DONE
+// Example
+ROUTE(1,"Coal Yard exit")    // unique sequence-id = 1
+  RED(77)      // signal 77 to Red
+  THROW(1)     // throw turnout/point 1
+  CLOSE(7)     // close turnout/point 7
+  DELAY(5000)  // 5 second wait
+  GREEN(92)    // signal 92 to Green
+DONE
 ```
 
 ----
