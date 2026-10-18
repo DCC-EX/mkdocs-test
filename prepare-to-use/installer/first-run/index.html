@@ -8096,6 +8096,10 @@
     
       
         
+          
+        
+      
+        
       
         
       
@@ -8127,8 +8131,9 @@
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9_10_5" >
         
           
-          <label class="md-nav__link" for="__nav_9_10_5" id="__nav_9_10_5_label" tabindex="0">
-            
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../reference/microcontrollers/nucleo/" class="md-nav__link ">
+              
   
   
   <span class="md-ellipsis">
@@ -8137,8 +8142,14 @@
   </span>
   
 
-            <span class="md-nav__icon md-icon"></span>
-          </label>
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_9_10_5" id="__nav_9_10_5_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
         
         <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_9_10_5_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_9_10_5">
@@ -8146,6 +8157,8 @@
             Nucleo
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
+            
+              
             
               
                 
@@ -8159,7 +8172,7 @@
   
   
   <span class="md-ellipsis">
-    Nucleo - USB Drivers
+    USB Drivers
     
   </span>
   
@@ -8182,7 +8195,7 @@
   
   
   <span class="md-ellipsis">
-    Nucleo - STLink Firmware
+    STLink Firmware
     
   </span>
   
@@ -8205,7 +8218,7 @@
   
   
   <span class="md-ellipsis">
-    Nucleo - Debug
+    Debug
     
   </span>
   
@@ -8228,7 +8241,7 @@
   
   
   <span class="md-ellipsis">
-    Nucleo - Power
+    Power
     
   </span>
   
@@ -10368,12 +10381,12 @@
 <p>You will be presented with the Welcome screen…</p>
 <p><img alt="welcome" src="../../../_static/images/ex-installer/welcome.png" /></p>
 <p>This screen provides some basic information about the process of loading the Software. The font may be very small on a high quality screen so use the "tools sizing" menu to find a better zoom factor.</p>
-<p>To proceed, click the Manage Arduino CLI button.</p>
+<p>To proceed, click the Manage Arduino <abbr title="Command Line Interface">CLI</abbr> button.</p>
 <p><img alt="device first_run" src="../../../_static/images/ex-installer/first-run.png" /></p>
-<p>This screen allows you to install or update the Arduino Command Line Interface (CLI).</p>
-<p>We use the Arduino Command Line Interface (CLI) to upload the <strong>DCC-EX</strong> products to your Arduino. The CLI eliminates the need to install the more daunting Arduino IDE. EX‑Installer is able to manage the installation and updating of the Arduino CLI for you at the click of a button.</p>
-<p>If you have not installed the CLI previously you will see an 'Install Arduino CLI' button.</p>
-<p>If you have previously installed the CLI you will see a 'Refresh Arduino CLI' button.</p>
+<p>This screen allows you to install or update the Arduino Command Line Interface (<abbr title="Command Line Interface">CLI</abbr>).</p>
+<p>We use the Arduino Command Line Interface (<abbr title="Command Line Interface">CLI</abbr>) to upload the <strong>DCC-EX</strong> products to your Arduino. The <abbr title="Command Line Interface">CLI</abbr> eliminates the need to install the more daunting <abbr title="Not recommended. Use EX-Installer or, if experienced, Microsoft Visual Studio Code (VSC)">Arduino IDE</abbr>. EX‑Installer is able to manage the installation and updating of the Arduino <abbr title="Command Line Interface">CLI</abbr> for you at the click of a button.</p>
+<p>If you have not installed the <abbr title="Command Line Interface">CLI</abbr> previously you will see an 'Install Arduino <abbr title="Command Line Interface">CLI</abbr>' button.</p>
+<p>If you have previously installed the <abbr title="Command Line Interface">CLI</abbr> you will see a 'Refresh Arduino <abbr title="Command Line Interface">CLI</abbr>' button.</p>
 <div class="admonition hint">
 <p class="admonition-title">Expressif ESP32 is required for the EX‑CSB1</p>
 <p>Expressif ESP32 is required for the EX‑CSB1</p>
@@ -10381,9 +10394,10 @@
 <p>If you are using an Espressif or STMicroelectronics device (including the EX‑CSB1), as opposed to the other CPU based Arduinos, you will need to enable support for these by selecting the appropriate additional platform option.</p>
 <p><strong>NOTE:</strong></p>
 <p>Enabling additional platforms that you will not be using will take more space on your hard drive and is likely to add several minutes to the installation process.</p>
-<p>You must have Arduino CLI installed to proceed, simply click the Install Arduino CLI button if it is showing.</p>
-<p>If you already have the Arduino CLI installed, it is recommended that you refresh it periodically (e.g. weekly) to ensure support for the various device details are kept up to date. To refresh the CLI, simply click the Refresh Arduino CLI button.</p>
-<p>Installing the CLI can take some time. Maybe grab a cup of tea or coffee, and watch magic happen!</p>
+<p>You must have Arduino <abbr title="Command Line Interface">CLI</abbr> installed to proceed, simply click the Install Arduino <abbr title="Command Line Interface">CLI</abbr> button if it is showing.</p>
+<p>If you already have the Arduino <abbr title="Command Line Interface">CLI</abbr> installed, it is recommended that you refresh it periodically (e.g. weekly) to ensure support for the various device details are kept up to date. To refresh the <abbr title="Command Line Interface">CLI</abbr>, simply click the Refresh Arduino <abbr title="Command Line Interface">CLI</abbr> button.</p>
+<p>Installing the <abbr title="Command Line Interface">CLI</abbr> can take some time. Maybe grab a cup of tea or coffee, and watch magic happen!</p>
+<!-- These are case sensitive -->
 
 
 
@@ -10404,7 +10418,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="October 11, 2026 06:52:45 UTC">October 11, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="October 18, 2026 02:55:25 UTC">October 18, 2026</span>
   </span>
 
     

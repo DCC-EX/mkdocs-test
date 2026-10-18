@@ -8086,6 +8086,10 @@
     
       
         
+          
+        
+      
+        
       
         
       
@@ -8117,8 +8121,9 @@
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9_10_5" >
         
           
-          <label class="md-nav__link" for="__nav_9_10_5" id="__nav_9_10_5_label" tabindex="0">
-            
+          <div class="md-nav__link md-nav__container">
+            <a href="../../microcontrollers/nucleo/" class="md-nav__link ">
+              
   
   
   <span class="md-ellipsis">
@@ -8127,8 +8132,14 @@
   </span>
   
 
-            <span class="md-nav__icon md-icon"></span>
-          </label>
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_9_10_5" id="__nav_9_10_5_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
         
         <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_9_10_5_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_9_10_5">
@@ -8136,6 +8147,8 @@
             Nucleo
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
+            
+              
             
               
                 
@@ -8149,7 +8162,7 @@
   
   
   <span class="md-ellipsis">
-    Nucleo - USB Drivers
+    USB Drivers
     
   </span>
   
@@ -8172,7 +8185,7 @@
   
   
   <span class="md-ellipsis">
-    Nucleo - STLink Firmware
+    STLink Firmware
     
   </span>
   
@@ -8195,7 +8208,7 @@
   
   
   <span class="md-ellipsis">
-    Nucleo - Debug
+    Debug
     
   </span>
   
@@ -8218,7 +8231,7 @@
   
   
   <span class="md-ellipsis">
-    Nucleo - Power
+    Power
     
   </span>
   
@@ -9412,9 +9425,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#enter-commands-to-the-ex-commandstation" class="md-nav__link">
+  <a href="#send-commands-to-the-ex-commandstation" class="md-nav__link">
     <span class="md-ellipsis">
-      Enter Commands to the EX-CommandStation
+      Send Commands to the EX-CommandStation
     </span>
   </a>
   
@@ -10601,9 +10614,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#enter-commands-to-the-ex-commandstation" class="md-nav__link">
+  <a href="#send-commands-to-the-ex-commandstation" class="md-nav__link">
     <span class="md-ellipsis">
-      Enter Commands to the EX-CommandStation
+      Send Commands to the EX-CommandStation
     </span>
   </a>
   
@@ -10683,7 +10696,7 @@
 <h2 id="what-is-a-serial-monitor-and-why-do-i-need-one">What is a Serial Monitor and Why Do I Need One?<a class="headerlink" href="#what-is-a-serial-monitor-and-why-do-i-need-one" title="Permanent link">&para;</a></h2>
 <p>A Serial Monitor, or Device Monitor, is another name for a "terminal" program. It is software that runs on your computer or phone and connects to a serial port, like the USB connector on an Arduino, and lets you interact with your Command Station. The <abbr title="Not recommended. Use EX-Installer or, if experienced, Microsoft Visual Studio Code (VSC)">Arduino IDE</abbr> has one built in as does our very own <strong>EX-Installer</strong>, which makes it a bit of a "Swiss Army Knife" in that it provides a way to upload software to your Command Station, and connect to it to view logs and send manual commands. If anything goes wrong with the <strong>EX-CommandStation</strong>, we will ask you to check the startup log with a Serial Monitor.</p>
 <p>If you know how to use a terminal program it is as simple as connecting your device to the Command Station, opening a session and selecting the right baud rate (115200) and line endings (Carriage Return and Line Feed). For the rest of us, we will include detailed instructions on how to use a computer or a phone app to connect to your Command Station.</p>
-<p>A number of different serial monitors are available:</p>
+<p>A number of different serial monitors/ device monitors are available:</p>
 <ul>
 <li><a href="#connect-with-ex-installers-device-monitor">Connect with EX-Installer</a> (Recommended)</li>
 <li><a href="#connect-with-ex-webthrottle">Connect with EX-WebThrottle</a></li>
@@ -10726,7 +10739,7 @@
 <p>Make sure the <strong>baud rate at the lower right of the window is set to "115200"</strong>. This is the data communication speed, equivalent to 115.2kb/s! <strong>Make sure the dropdown next to that says "Both NL &amp; CR"</strong>. That makes sure you send a 'new line' command and 'carriage return' which the Arduino expects.</p>
 <p><img alt="Serial Monitor" src="../../../_static/images/arduino-ide/serial_monitor.jpg" width="400px" /> <br/>Serial Monitor - Note line ending and baud rate settings!</p>
 <p>Opening the Serial Monitor always resets the Arduino board. Therefore, you should see a startup (boot) log immediately display in the window. If you have a Network shield or WiFi shield connected, you will see the Command Station setup its <abbr title="Access Point Mode. Stand alone WiFi network">AP</abbr>, or connect to your network if you gave it your credentials. If you don't have a network, that's fine; the Command Station will sense that, the network test will fail, but everything else will be working as it should.</p>
-<h3 id="enter-commands-to-the-ex-commandstation">Enter Commands to the EX-CommandStation<a class="headerlink" href="#enter-commands-to-the-ex-commandstation" title="Permanent link">&para;</a></h3>
+<h3 id="send-commands-to-the-ex-commandstation">Send Commands to the EX-CommandStation<a class="headerlink" href="#send-commands-to-the-ex-commandstation" title="Permanent link">&para;</a></h3>
 <p>There is an entire language that <strong>EX-CommandStation</strong> understands. We call this the DCC-EX <abbr title="Application Programming Interface">API</abbr> for "Application Programming Interface". If you are interested, the <a href="../../serial-commands/serial-command-list/">list of all the commands</a>. Let's just try two commands to make sure everything is working.</p>
 <p>All DCC-EX commands begin with a <code>&lt;</code> and end with a <code>&gt;</code>. In the command window, type <code>&lt;1&gt;</code> and press the <code>send</code> button, or Enter on your keyboard. Power should come on to the main track. You should see 2 red LEDs light on the "A" power output of the motor driver.</p>
 <p>Now enter <code>&lt;s&gt;</code> (lowercase). You should see status information for your Command Station appear in the log.</p>
@@ -10778,7 +10791,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="October 17, 2026 23:54:27 UTC">October 17, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="October 18, 2026 02:31:28 UTC">October 18, 2026</span>
   </span>
 
     

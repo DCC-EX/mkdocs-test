@@ -8195,6 +8195,10 @@
     
       
         
+          
+        
+      
+        
       
         
       
@@ -8226,8 +8230,9 @@
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9_10_5" >
         
           
-          <label class="md-nav__link" for="__nav_9_10_5" id="__nav_9_10_5_label" tabindex="0">
-            
+          <div class="md-nav__link md-nav__container">
+            <a href="../../reference/microcontrollers/nucleo/" class="md-nav__link ">
+              
   
   
   <span class="md-ellipsis">
@@ -8236,8 +8241,14 @@
   </span>
   
 
-            <span class="md-nav__icon md-icon"></span>
-          </label>
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_9_10_5" id="__nav_9_10_5_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
         
         <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_9_10_5_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_9_10_5">
@@ -8245,6 +8256,8 @@
             Nucleo
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
+            
+              
             
               
                 
@@ -8258,7 +8271,7 @@
   
   
   <span class="md-ellipsis">
-    Nucleo - USB Drivers
+    USB Drivers
     
   </span>
   
@@ -8281,7 +8294,7 @@
   
   
   <span class="md-ellipsis">
-    Nucleo - STLink Firmware
+    STLink Firmware
     
   </span>
   
@@ -8304,7 +8317,7 @@
   
   
   <span class="md-ellipsis">
-    Nucleo - Debug
+    Debug
     
   </span>
   
@@ -8327,7 +8340,7 @@
   
   
   <span class="md-ellipsis">
-    Nucleo - Power
+    Power
     
   </span>
   
@@ -10559,8 +10572,6 @@
 
 
 <h1 id="testing-your-installation">Testing your installation<a class="headerlink" href="#testing-your-installation" title="Permanent link">&para;</a></h1>
-<p><mark>TODO</mark> Basic testing... </p>
-<p>This needs a subset of the full testing page for the <abbr title="EX-CommandStation/Booster 1 Express">EX-CSB1</abbr> since they won't have used the EX-Installer and should not be looking at a serial monitor, but needs to point to a full testing page for <abbr title="Do-It-Yourself / Self Build">DIY</abbr></p>
 <!-- # Testing your EX-CommandStation -->
 
 <p>Ways you can test your <strong>EX-CommandStation</strong> include:</p>
@@ -10611,7 +10622,7 @@
 <p>Once you are connected, you can:</p>
 <ul>
 <li>Enter the <code>&lt;s&gt;</code> command in the “direct command” textbox to get status information from your Command Station. To do this just enter <code>s</code> (without the quotes) and press the SEND button.</li>
-<li>You should see &lt;iDCC++…&gt; returned in the log window with your version, type of Arduino, type of motor driver, and some other information</li>
+<li>You should see <code>&lt;iDCC++…&gt;</code> returned in the log window with your version, type of Arduino, type of motor driver, and some other information</li>
 <li>Now you are ready to run trains!</li>
 <li>Place your loco on the <strong><abbr title="Main Track / Ops Mode">MAIN</abbr> track</strong>, a loco will NOT run on a programming track</li>
 <li>Click the Power Slider button to turn on power to your track</li>
@@ -10661,9 +10672,6 @@
 <li>built into the <a href="../../products/ex-toolbox/connecting/"><strong>EX-ToolBox</strong></a> Android app</li>
 </ul>
 <p>See <a href="../../reference/tools/serial-monitor/">Serial Monitors</a> for more information.</p>
-<p><mark>TODO</mark> Instructions on using Device Monitor.</p>
-<p><a href="https://dcc-ex.com">Testing a link to dcc-ex.com</a></p>
-<p><a href="../../products/ex-ioexpander/ex-ioexpander/">Test an internal link to EX-IOExpander</a></p>
 <p>Whichever you use, please ensure the baud rate is set to 115200 so that it matches that used by the <strong>EX-CommandStation</strong>. (Installer anf WebThrottle do this automatically)</p>
 <p>Its important to note that only one program on your PC can be connected to the <strong>EX-CommandStation</strong> via USB. It is a common cause of error messages if you try and open a serial monitor when one of the other programs is still running.</p>
 <p>In most cases, connecting a serial monitor causes the <strong>EX-CommandStation</strong> to restart.</p>
@@ -10714,7 +10722,7 @@ If you don't know the loco address, then you can find out using the <a href="../
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="October 12, 2026 04:59:02 UTC">October 12, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="October 18, 2026 02:31:28 UTC">October 18, 2026</span>
   </span>
 
     
