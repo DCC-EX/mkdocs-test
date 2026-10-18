@@ -10490,21 +10490,21 @@
 <p>In <strong>EX-Turntable</strong>, at startup, the turntable will rotate until such time as the homing sensor is activated, in which case it will set the homed position as step 0 and stop moving. Typically, the homing sensor is a hall effect device mounted in the turntable pit which is activated when a magnet in one end of the turntable bridge comes in to close proximity.</p>
 <p>Once the home position is determined, the various positions on your layout are defined as the number of steps from this home position.</p>
 <p>The command used to move to these positions simply sends the number of steps to <strong>EX-Turntable</strong>, which calculates the steps required in order to move the least number of steps to the desired position, meaning it will rotate either clockwise or counter clockwise depending which is the shortest distance.</p>
-<p><strong>tip</strong></p>
-<ul>
-<li>It's recommended that the home position does not align with a specific layout connection track to ensure that each time <strong>EX-Turntable</strong> powers on, it automatically triggers the homing activity to occur, ensuring it starts in a consistent location each time for the highest accuracy.</li>
-</ul>
+<div class="admonition tip">
+<p class="admonition-title">home position</p>
+<p>It's recommended that the home position does not align with a specific layout connection track to ensure that each time <strong>EX-Turntable</strong> powers on, it automatically triggers the homing activity to occur, ensuring it starts in a consistent location each time for the highest accuracy.</p>
+</div>
 <p>Refer to the <a href="test-and-tune/">Test and tune</a> page for details on how to configure and control <strong>EX-Turntable</strong>.</p>
 <h3 id="considerations-when-using-geared-steppers-turntables-andor-microsteps">Considerations when using geared steppers, turntables, and/or microsteps<a class="headerlink" href="#considerations-when-using-geared-steppers-turntables-andor-microsteps" title="Permanent link">&para;</a></h3>
 <p>Due to the <abbr title="Hardware Abstraction Layer. Allows the CS to discover and use the hardware through a simple abstract API, regardless of the type of underlying hardware.">HAL</abbr> within <strong>EX-CommandStation</strong>, the maximum number of steps per rotation the <strong>EX-Turntable</strong> device driver can address is 32767.</p>
 <p>If your physical turntable involves gearing, for example a small spur gear on the stepper driving a large gear connected to the turntable or you have a stepper with an inbuilt gearbox, you will need to know the gear ratio, and multiply that by the number of steps per rotation of your stepper motor. This would give a resultant step per rotation count that needs to be no more than 32767 steps.</p>
-<div class="language-cpp highlight"><pre><span></span><code><span class="w">  </span><span class="cp"># large gear teeth / # small gear teeth * stepper steps per rotation</span>
+<div class="language-cpp highlight"><pre><span></span><code><span class="cp"># large gear teeth / # small gear teeth * stepper steps per rotation</span>
 </code></pre></div>
 <p>For example, if you have a large gear on the base of a turntable with 200 teeth which is driven by a 20 tooth spur gear on the stepper motor, that gives a gear ratio of 10:1 (200 / 20). If you then use the 28BYJ-48 stepper in half step mode with 4096 steps per revolution, this would result in 40960 steps per revolution with this gearing, meaning <strong>EX-Turntable</strong> will not be able to successfully address a full rotation.</p>
 <div class="admonition warning">
 <p class="admonition-title">single step (or microstep) in one go</p>
-</div>
 <p>Given a stepper motor needs to complete an entire, single step (or microstep) in one go, implementing a gear ratio that results in a fractional step count for a single, complete revolution will result in inaccuracies, as the step count will always be rounded to an integer. Always ensure the resultant steps per rotation will be a whole number before purchasing or building any geared stepper configuration.</p>
+</div>
 <p>In this scenario, running the 28BYJ-48 in full step mode (2048 steps) would allow this to work, as a full rotation is 20480 steps.</p>
 <p>When using stepper drivers such as the A4988, DRV8825, or TMC2208, these are able to be configured using microsteps, which again impacts the number of steps per revolution of the stepper.</p>
 <p>In the case of a DRV8825, the smallest microstep it can be configured for is 1/32, meaning a NEMA17 stepper with 200 steps per revolution in 1/32 microstep mode equates to 6400 steps per revolution.</p>
@@ -10516,8 +10516,8 @@
 <p>An important aspect that must be taken into consideration with a rotating turntable is the phase or polarity of the turntable bridge track in relation to the surrounding layout tracks.</p>
 <div class="admonition warning">
 <p class="admonition-title">DCC phase (or polarity) is not aligned</p>
-</div>
 <p>If your locomotive drives on to the turntable bridge track, and the DCC phase (or polarity) is not aligned with the surrounding layout tracks, then you will cause a short circuit. The CommandStation should cut power in that scenario, but the desired behaviour is simply to drive onto the turntable with no interruption.</p>
+</div>
 <p>In order to prevent short circuits, the phase (or polarity) of the bridge track will need to be inverted when rotating to ensure it remains in alignment with the surrounding tracks. There are three options to achieve this:</p>
 <ul>
 <li>Use an auto-reverser that automatically reverses the phase when a short circuit is detected (the Digitrax AR1 is a commonly used option here)</li>
@@ -10580,7 +10580,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="October 11, 2026 06:52:45 UTC">October 11, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="October 18, 2026 06:28:48 UTC">October 18, 2026</span>
   </span>
 
     

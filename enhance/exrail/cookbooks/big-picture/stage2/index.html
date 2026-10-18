@@ -10673,7 +10673,7 @@
 <p>In a text editor (e.g. notepad) create a new text file named 'myAutomation.h'. (Note the capital 'A' in the name.  The case of all the characters is important.)</p>
 <p>If you are already using <strong>EXRAIL</strong> and have a myAutomation.h, then just the add <code>ROSTER(...)</code> lines near the top of the file.</p>
 <p>Add a line that looks like:</p>
-<div class="language-cpp highlight"><pre><span></span><code><span class="w">   </span><span class="n">ROSTER</span><span class="p">(</span><span class="mi">999</span><span class="p">,</span><span class="s">&quot;Loco Name&quot;</span><span class="p">,</span><span class="s">&quot;F0/F1/*F2/F3/F4/F5/F6/F7/F8&quot;</span><span class="p">)</span>
+<div class="language-cpp highlight"><pre><span></span><code><span class="n">ROSTER</span><span class="p">(</span><span class="mi">999</span><span class="p">,</span><span class="s">&quot;Loco Name&quot;</span><span class="p">,</span><span class="s">&quot;F0/F1/*F2/F3/F4/F5/F6/F7/F8&quot;</span><span class="p">)</span>
 </code></pre></div>
 <p>Where:</p>
 <ul>
@@ -10683,30 +10683,29 @@
 <li><strong>*F2</strong> - note that if the function is 'momentary' rather than 'latching' (On/Off) then start the function label with a asterisk (*).  The most common example of this is the Horn/Whistle which is commonly on F2.</li>
 </ul>
 <p>Some more realistic examples might look like:</p>
-<div class="language-cpp highlight"><pre><span></span><code><span class="w">   </span><span class="n">ROSTER</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="s">&quot;Eng 3&quot;</span><span class="p">,</span><span class="s">&quot;F0/F1/*F2/*F3/F4/F5/F6/F7/Mute/F9//&quot;</span><span class="p">)</span><span class="w"> </span><span class="c1">// Address = 3, Loco Name = Eng 3, Function keys F0-F10</span>
-<span class="w">   </span><span class="n">ROSTER</span><span class="p">(</span><span class="mi">1224</span><span class="p">,</span><span class="s">&quot;PE 1224&quot;</span><span class="p">,</span><span class="s">&quot;&quot;</span><span class="p">)</span><span class="w"> </span><span class="c1">// Motor Only Decoder, But use Engine Driver &#39;Preferences &gt;In Phone Loco &#39;Sound&#39;</span>
-<span class="w">   </span><span class="n">ROSTER</span><span class="p">(</span><span class="mi">1225</span><span class="p">,</span><span class="s">&quot;PE 1225&quot;</span><span class="p">,</span><span class="s">&quot;Lights/Bell/*Whistle/*Short Whistle/Steam/On-Time/FX6 Bell Whistle/Dim Light/Mute&quot;</span><span class="p">)</span>
-<span class="w">   </span><span class="n">ROSTER</span><span class="p">(</span><span class="mi">4468</span><span class="p">,</span><span class="s">&quot;LNER 4468&quot;</span><span class="p">,</span><span class="s">&quot;//Snd On/*Whistle/*Whistle2/Brake/F5 Drain/Coal Shvl/Guard-Squeal/Loaded/Coastng/Injector/Shunt-Door ~Opn-Cls/Couplng/BrakeVlv/Sfty Vlv/Shunting/BrkSql Off/No Momentm/Aux3/Fade Out/F22 Res/F23/Res//Aux 5/Aux6/Aux7/Aux 8&quot;</span><span class="p">)</span>
+<div class="language-cpp highlight"><pre><span></span><code><span class="n">ROSTER</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="s">&quot;Eng 3&quot;</span><span class="p">,</span><span class="s">&quot;F0/F1/*F2/*F3/F4/F5/F6/F7/Mute/F9//&quot;</span><span class="p">)</span><span class="w"> </span><span class="c1">// Address = 3, Loco Name = Eng 3, Function keys F0-F10</span>
+<span class="n">ROSTER</span><span class="p">(</span><span class="mi">1224</span><span class="p">,</span><span class="s">&quot;PE 1224&quot;</span><span class="p">,</span><span class="s">&quot;&quot;</span><span class="p">)</span><span class="w"> </span><span class="c1">// Motor Only Decoder, But use Engine Driver &#39;Preferences &gt;In Phone Loco &#39;Sound&#39;</span>
+<span class="n">ROSTER</span><span class="p">(</span><span class="mi">1225</span><span class="p">,</span><span class="s">&quot;PE 1225&quot;</span><span class="p">,</span><span class="s">&quot;Lights/Bell/*Whistle/*Short Whistle/Steam/On-Time/FX6 Bell Whistle/Dim Light/Mute&quot;</span><span class="p">)</span>
+<span class="n">ROSTER</span><span class="p">(</span><span class="mi">4468</span><span class="p">,</span><span class="s">&quot;LNER 4468&quot;</span><span class="p">,</span><span class="s">&quot;//Snd On/*Whistle/*Whistle2/Brake/F5 Drain/Coal Shvl/Guard-Squeal/Loaded/Coastng/Injector/Shunt-Door ~Opn-Cls/Couplng/BrakeVlv/Sfty Vlv/Shunting/BrkSql Off/No Momentm/Aux3/Fade Out/F22 Res/F23/Res//Aux 5/Aux6/Aux7/Aux 8&quot;</span><span class="p">)</span>
 </code></pre></div>
 <p>Note: Add additional 'ROSTER(...)' lines for all your locos</p>
 <h3 id="unavailable-functions">Unavailable Functions<a class="headerlink" href="#unavailable-functions" title="Permanent link">&para;</a></h3>
 <p>If a function is not available leave the spot empty. (Don't even have the space character.)</p>
 <p>For example:</p>
-<div class="language-cpp highlight"><pre><span></span><code><span class="w">   </span><span class="n">ROSTER</span><span class="p">(</span><span class="mi">2825</span><span class="p">,</span><span class="s">&quot;CN ES44AC&quot;</span><span class="p">,</span><span class="s">&quot;Headlight/Bell/*Horn/Coupler/Dynamic Brake///Flange Squeal/Startup &amp; Shutdown&quot;</span><span class="p">)</span>
+<div class="language-cpp highlight"><pre><span></span><code><span class="n">ROSTER</span><span class="p">(</span><span class="mi">2825</span><span class="p">,</span><span class="s">&quot;CN ES44AC&quot;</span><span class="p">,</span><span class="s">&quot;Headlight/Bell/*Horn/Coupler/Dynamic Brake///Flange Squeal/Startup &amp; Shutdown&quot;</span><span class="p">)</span>
 </code></pre></div>
 <p>Note the two missing text labels for positions F5 and F6. Engine Driver will skip those buttons and not display them at all in the interface since they do nothing for that loco.</p>
 <p>Example of loco without sound:</p>
-<div class="language-cpp highlight"><pre><span></span><code><span class="w">   </span><span class="n">ROSTER</span><span class="p">(</span><span class="mi">2405</span><span class="p">,</span><span class="s">&quot;AT&amp;SF 2-8-0 2405&quot;</span><span class="p">,</span><span class="s">&quot;Headlight&quot;</span><span class="p">)</span>
+<div class="language-cpp highlight"><pre><span></span><code><span class="n">ROSTER</span><span class="p">(</span><span class="mi">2405</span><span class="p">,</span><span class="s">&quot;AT&amp;SF 2-8-0 2405&quot;</span><span class="p">,</span><span class="s">&quot;Headlight&quot;</span><span class="p">)</span>
 </code></pre></div>
 <p>Note that it only has FO (the Headlight) and not following slashes.</p>
-<p>..
-   Locos With the Same DCC Address</p>
+<p>!! NOTE "Locos With the Same DCC Address"</p>
 <p>If you have two or more Loco with identical DCC Addresses, but with with decoder functions you need to make the "name" different or you'll get compile error 'Duplicate Case Value'.</p>
 <p>Examples of naming Different Locos identical DCC Addresses. Notice the different Function values in the following two examples:</p>
-<div class="language-cpp highlight"><pre><span></span><code><span class="w">      </span><span class="n">ROSTER</span><span class="p">(</span><span class="mi">4468</span><span class="p">,</span><span class="s">&quot;LNER 4468&quot;</span><span class="p">,</span><span class="s">&quot;//Snd On/*Whistle/*Whistle2/Brake/F5 Drain/Coal Shvl/Guard-Squeal/Loaded/Coastng/Injector/Shunt-Door ~Opn-Cls/Couplng/BrakeVlv/Sfty Vlv/Shunting/BrkSql Off/No Momentm/Aux3/Fade Out/F22 Res/F23/Res//Aux 5/Aux6/Aux7/Aux 8&quot;</span><span class="p">)</span>
+<div class="language-cpp highlight"><pre><span></span><code><span class="n">ROSTER</span><span class="p">(</span><span class="mi">4468</span><span class="p">,</span><span class="s">&quot;LNER 4468&quot;</span><span class="p">,</span><span class="s">&quot;//Snd On/*Whistle/*Whistle2/Brake/F5 Drain/Coal Shvl/Guard-Squeal/Loaded/Coastng/Injector/Shunt-Door ~Opn-Cls/Couplng/BrakeVlv/Sfty Vlv/Shunting/BrkSql Off/No Momentm/Aux3/Fade Out/F22 Res/F23/Res//Aux 5/Aux6/Aux7/Aux 8&quot;</span><span class="p">)</span>
 </code></pre></div>
 <p>For example, you can add a "-2" to the Second Loco DCC Address and Name:</p>
-<div class="language-cpp highlight"><pre><span></span><code><span class="w">      </span><span class="n">ROSTER</span><span class="p">(</span><span class="mi">4468-2</span><span class="p">,</span><span class="s">&quot;LNER 4468-2&quot;</span><span class="p">,</span><span class="s">&quot;Lights/Steam/*L~Whistle/*S~Whistle/*Whistle2/DoorSlam/Whl Slip/Coal Shvl/BlwDown/SftyVlv/Injector/CylnCock/Brake/Blower/Grd Whistle/Coupler/Fireman/Chuff-Coast/Aux Lghts&quot;</span><span class="p">)</span>
+<div class="language-cpp highlight"><pre><span></span><code><span class="n">ROSTER</span><span class="p">(</span><span class="mi">4468-2</span><span class="p">,</span><span class="s">&quot;LNER 4468-2&quot;</span><span class="p">,</span><span class="s">&quot;Lights/Steam/*L~Whistle/*S~Whistle/*Whistle2/DoorSlam/Whl Slip/Coal Shvl/BlwDown/SftyVlv/Injector/CylnCock/Brake/Blower/Grd Whistle/Coupler/Fireman/Chuff-Coast/Aux Lghts&quot;</span><span class="p">)</span>
 </code></pre></div>
 <h3 id="re-upload-the-ex-commandstation-software">Re-upload the EX-CommandStation software<a class="headerlink" href="#re-upload-the-ex-commandstation-software" title="Permanent link">&para;</a></h3>
 <h4 id="using-ex-installer">Using EX-Installer<a class="headerlink" href="#using-ex-installer" title="Permanent link">&para;</a></h4>
@@ -10721,15 +10720,16 @@
 <p>More information on the config files can be found on the <a href="../../../../../prepare-to-use/installer/manage-config-files/">Managing Config Files</a> page.</p>
 <div class="admonition warning">
 <p class="admonition-title">Never edit any files in the EX-Installer folder</p>
-<p>Never edit any files in the EX-Installer folder. Editing any files in the EX-Installer folder will <strong>always</strong> cause <strong>EX-Installer</strong> to fail.</p>
 </div>
+<p>Never edit any files in the EX-Installer folder. Editing any files in the EX-Installer folder will <strong>always</strong> cause <strong>EX-Installer</strong> to fail.</p>
 <hr />
 <h4 id="using-the-arduino-ide">Using the <abbr title="Not recommended. Use EX-Installer or, if experienced, Microsoft Visual Studio Code (VSC)">Arduino IDE</abbr><a class="headerlink" href="#using-the-arduino-ide" title="Permanent link">&para;</a></h4>
+<p><mark>TODO</mark> MEDIUM - change the references the this page/section from the <abbr title="Not recommended. Use EX-Installer or, if experienced, Microsoft Visual Studio Code (VSC)">Arduino IDE</abbr> to <abbr title="Microsoft Visual Studio Code. Recommended IDE if EX-Installer is insufficient for your needs.">VSC</abbr>/PIO</p>
 <div class="admonition important">
 <p class="admonition-title">Using the <abbr title="Not recommended. Use EX-Installer or, if experienced, Microsoft Visual Studio Code (VSC)">Arduino IDE</abbr> is not recommended</p>
-<p>A word of caution on using the <abbr title="Not recommended. Use EX-Installer or, if experienced, Microsoft Visual Studio Code (VSC)">Arduino IDE</abbr> to install the software:</p>
-<p>While it is possible install the software using the <abbr title="Not recommended. Use EX-Installer or, if experienced, Microsoft Visual Studio Code (VSC)">Arduino IDE</abbr>, we <em>seriously</em> <strong>DO NOT RECOMMEND IT</strong> for anyone but technically experienced users. It is an order of magnitude more complex, much slower, and with a very high probability of getting something wrong unless you really know what you are doing.</p>
 </div>
+<p>A word of caution on using the <abbr title="Not recommended. Use EX-Installer or, if experienced, Microsoft Visual Studio Code (VSC)">Arduino IDE</abbr> to install the software:<br />
+   While it is possible install the software using the <abbr title="Not recommended. Use EX-Installer or, if experienced, Microsoft Visual Studio Code (VSC)">Arduino IDE</abbr>, we <em>seriously</em> <strong>DO NOT RECOMMEND IT</strong> for anyone but technically experienced users. It is an order of magnitude more complex, much slower, and with a very high probability of getting something wrong unless you really know what you are doing.</p>
 <p>The <strong>EX-Installer</strong> described below will meet 100% of the needs of a almost all users with considerably less effort.</p>
 <ol>
 <li>Place your 'myAutomation.h' file in the <code>CommandStation-EX</code> subfolder of wherever you extracted the <strong>EX-CommandStation</strong> files from GitHub.</li>
@@ -10744,8 +10744,8 @@
 <h3 id="engine-driver">Engine Driver<a class="headerlink" href="#engine-driver" title="Permanent link">&para;</a></h3>
 <p>There are three ways to load &amp; store your Locomotive Icon Image in Engine Driver 2.32.142 and above.</p>
 <ol>
-<li>
-<p><strong>Automatically from your existing <abbr title="Java Model Railroad Interface">JMRI</abbr> Roster &amp; Media</strong></p>
+<li><strong>Automatically from your existing <abbr title="Java Model Railroad Interface">JMRI</abbr> Roster &amp; Media</strong></li>
+</ol>
 <p>If you have a <abbr title="Communication Protocol. Trademark + iOS app owned by Brett Hoffman">WiThrottle</abbr> Server that does support loco images:</p>
 <ul>
 <li>Start <abbr title="Java Model Railroad Interface">JMRI</abbr> and capture and load your images into <abbr title="Java Model Railroad Interface">JMRI</abbr> Roster &amp; Media panel as normal</li>
@@ -10754,22 +10754,22 @@
 <li>Connect Engine Driver to <abbr title="Java Model Railroad Interface">JMRI</abbr> <abbr title="Communication Protocol. Trademark + iOS app owned by Brett Hoffman">WiThrottle</abbr> Server Discovered Server 'My <abbr title="Java Model Railroad Interface">JMRI</abbr> <abbr title="North American term. Elsewhere referred to as a &quot;Railway&quot;">Railroad</abbr>' or type in the IP address : Port#</li>
 <li>
 <p>Click <code>Select</code> and load your Locos then <code>Release</code> and repeat until you've loaded all the locomotives you require with Icons into a throttle.<br/>
-These Loco Icons will automatically be saved/cached on the Android device/phone in a new '/Android/data/jmri.enginedriver/files/recent_engine_list/<strong>recent_engine_list</strong>' folder for you.<br/><br/>
-Requirements for this to work:</p>
+   These Loco Icons will automatically be saved/cached on the Android device/phone in a new '/Android/data/jmri.enginedriver/files/recent_engine_list/<strong>recent_engine_list</strong>' folder for you.<br/><br/>
+   Requirements for this to work:</p>
 <ul>
 <li>Have identical names (from <abbr title="Java Model Railroad Interface">JMRI</abbr> Roster ID to <strong>DCC-EX</strong> <strong>EXRAIL</strong> Roster ID)  example ID;    "PE 1225"</li>
 <li>Have image icons displayed for the locomotives</li>
 </ul>
 </li>
 </ul>
-</li>
-<li>
-<p><strong>Manually entered directly into your Android Engine Driver folder</strong></p>
+<ol start="2">
+<li><strong>Manually entered directly into your Android Engine Driver folder</strong></li>
+</ol>
 <ul>
 <li>Capture then rename the image exactly like the Roster ID name in <abbr title="Java Model Railroad Interface">JMRI</abbr> &amp; <strong>EXRAIL</strong> and save as a .PNG file</li>
 <li>
 <p>Then place the engine Image into your Android device/phone in the <br/> '/Android/data/jmri.enginedriver/files/recent_engine_list' folder <br/> example image name;  PE 1225.png<br/><br/>
-Note: certain characters are not allowed in file names so need to be substituted with "_" (underscore) if you have used them in your roster name. They are:</p>
+   Note: certain characters are not allowed in file names so need to be substituted with "_" (underscore) if you have used them in your roster name. They are:</p>
 <ul>
 <li>/ (forward slash)</li>
 <li>" (double quote)</li>
@@ -10785,9 +10785,9 @@ Note: certain characters are not allowed in file names so need to be substituted
 </ul>
 </li>
 </ul>
-</li>
-<li>
-<p><strong>Select an image on the phone/device (which can be taken on the phone's camera)</strong></p>
+<ol start="3">
+<li><strong>Select an image on the phone/device (which can be taken on the phone's camera)</strong></li>
+</ol>
 <ul>
 <li>
 <p>In the <strong>Roster List</strong> on the Select Loco screen</p>
@@ -10799,8 +10799,6 @@ Note: certain characters are not allowed in file names so need to be substituted
 </ul>
 </li>
 </ul>
-</li>
-</ol>
 <p><strong>General Notes on the Local Loco Icons:</strong></p>
 <ul>
 <li>If the loco already has an image in the <abbr title="Java Model Railroad Interface">JMRI</abbr> Roster (of the currently connected <abbr title="Communication Protocol. Trademark + iOS app owned by Brett Hoffman">WiThrottle</abbr> Server), you won't be able to choose a local image.</li>
@@ -10829,7 +10827,7 @@ Note: certain characters are not allowed in file names so need to be substituted
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="October 12, 2026 05:47:19 UTC">October 12, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="October 18, 2026 06:28:48 UTC">October 18, 2026</span>
   </span>
 
     
