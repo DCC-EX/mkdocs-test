@@ -10,6 +10,7 @@
 *[VSC]: Microsoft Visual Studio Code. Recommended IDE if EX-Installer is insufficient for your needs.
 *[VSCode]: Microsoft Visual Studio Code. Recommended IDE if EX-Installer is insufficient for your needs.
 *[PlatformIO]: Used with Microsoft Visual Studio Code. The recommended IDE if EX-Installer is insufficient for your needs.
+*[CLI]: Command Line Interface
 
 *[AP]: Access Point Mode. Stand alone WiFi network
 *[STA]: Station Mode. Joins an existing WiFi network

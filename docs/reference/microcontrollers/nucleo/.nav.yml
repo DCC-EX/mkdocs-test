@@ -1,8 +1,9 @@
 nav:
-  - Nucleo - USB Drivers: nucleo-drivers.md
-  - Nucleo - STLink Firmware: nucleo-firmware.md
-  - Nucleo - Debug: nucleo-debug.md
-  - Nucleo - Power: nucleo-power.md
+  - Nucleo - Overview: index.md
+  - USB Drivers: nucleo-drivers.md
+  - STLink Firmware: nucleo-firmware.md
+  - Debug: nucleo-debug.md
+  - Power: nucleo-power.md
   - Nucleo 64 - EX8874: nucleo-64-ex8874.md
   - Nucleo 64 - WiFi and Pins: nucleo-64-wifi.md
   - Nucleo 144 - EX8874: nucleo-144-ex8874.md

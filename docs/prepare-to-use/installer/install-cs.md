@@ -159,3 +159,5 @@ On this screen you can edit the configuration files. If you have more than two f
 **NOTE:** If you did not enable any options requiring myAutomation.h, and did not enable Create myAutomation.h, you will only be able to edit config.h on this screen.
 
 ![stored_files](../../_static/images/ex-installer/stored-files.png)
+
+--8<-- "snippets/abbr.md"

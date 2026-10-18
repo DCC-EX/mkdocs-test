@@ -20,11 +20,10 @@ Scanned roots: `C:\Users\akers\OneDrive\github\github_doco\mkdocs-test\docs`, `C
 
 ## High TODOs
 
-Total High TODO matches: 37
+Total High TODO matches: 32
 
 | File | Line | Line text |
 | --- | ---: | --- |
-| [docs/prepare-to-use/testing.md](../prepare-to-use/testing.md) | 3 | ==TODO== Basic testing... |
 | [docs/throttles/connecting-usb.md](../throttles/connecting-usb.md) | 3 | ==TODO== Connecting a USB Throttle to your EX-CommandStation |
 | [docs/throttles/connecting-wifi.md](../throttles/connecting-wifi.md) | 3 | ==TODO== Connecting a WiFi Throttle to your EX-CommandStation |
 | [docs/throttles/dcc-accessories.md](../throttles/dcc-accessories.md) | 3 | ==TODO== how to control DCC Accessories |
@@ -35,7 +34,6 @@ Total High TODO matches: 37
 | [docs/reference/serial-commands/serial-command-dd-anin-anout_not_in_nav.md](../reference/serial-commands/serial-command-dd-anin-anout_not_in_nav.md) | 16 | * ``<D ANOUT «vpin» «position»>`` = see ==TODO== Command Description |
 | [docs/reference/trackmanager/dc-mode-frequency.md](../reference/trackmanager/dc-mode-frequency.md) | 82 | - ==TODO==  How to effectively use DC mode when using multiple frequencies. |
 | [docs/reference/wiring/i2C/i2c-wiring.md](../reference/wiring/i2C/i2c-wiring.md) | 54 | - When using separate power sources, there is potential for a ground loop. ==TODO== |
-| [docs/reference/microcontrollers/nucleo/nucleo-144-ex8874.md](../reference/microcontrollers/nucleo/nucleo-144-ex8874.md) | 59 | ==TODO== - update MotorDrivers.h for D8 |
 | [docs/reference/hardware/hal/hal-config.md](../reference/hardware/hal/hal-config.md) | 182 | This will need to be done in the ==TODO== :doc:`Arduino-IDE </ex-commandstation/advanced-setup/installation-options/arduino-ide>`, so first make sure you have followed these steps to load up the Arduino IDE. |
 | [docs/reference/hardware/hal/hal-config.md](../reference/hardware/hal/hal-config.md) | 186 | First you will need to add a new file, just like the ==TODO== :ref:`config.h file <ex-commandstation/advanced-setup/installation-options/arduino-ide:Copy the config.example.h file (or rename it)>`. |
 | [docs/reference/hardware/hal/hal-config.md](../reference/hardware/hal/hal-config.md) | 249 | Finally, upload the code to the Arduino as you would do during the standard ==TODO== :ref:`Arduino IDE Setup <ex-commandstation/advanced-setup/installation-options/arduino-ide:upload the software>`. |
@@ -45,10 +43,8 @@ Total High TODO matches: 37
 | [docs/prepare-to-use/connecting/connecting-diy.md](../prepare-to-use/connecting/connecting-diy.md) | 55 | ==TODO== physically connecting DIY EX-CS to a layout - Other Motor Shields |
 | [docs/prepare-to-use/connecting/connecting-ex-csb1.md](../prepare-to-use/connecting/connecting-ex-csb1.md) | 3 | ==TODO== this page needs to be expanded |
 | [docs/prepare-to-use/installer/index.md](../prepare-to-use/installer/index.md) | 7 | ==TODO== Installing the EX-CommandStation Software - Intro |
-| [docs/prepare-to-use/installer/install-ex-ioexpander.md](../prepare-to-use/installer/install-ex-ioexpander.md) | 3 | ==TODO== complete EX-Installer EX-IOExpander page needed |
-| [docs/prepare-to-use/installer/install-ex-turntable.md](../prepare-to-use/installer/install-ex-turntable.md) | 3 | ==TODO== complete EX-Installer EX-Turntable page needed |
 | [docs/prepare-to-use/installer/platformio.md](../prepare-to-use/installer/platformio.md) | 5 | ==TODO== - provide setup help. |
-| [docs/prepare-to-use/installer/download/download-linux.md](../prepare-to-use/installer/download/download-linux.md) | 7 | ==TODO== - Add screenshots & fix page flow |
+| [docs/prepare-to-use/installer/download/download-linux.md](../prepare-to-use/installer/download/download-linux.md) | 7 | ==TODO== Download and install on Linux - Add screenshots |
 | [docs/prepare-to-use/installer/download/index.md](../prepare-to-use/installer/download/index.md) | 3 | ==TODO== Downloading EX-Installer - Overview |
 | [docs/enhance/exrail/exrail-objects-introduction.md](../enhance/exrail/exrail-objects-introduction.md) | 151 | ==TODO== You can also refer to :doc:`/ex-commandstation/accessories/turnouts/solenoid-turnouts` for more information. |
 | [docs/enhance/exrail/exrail-objects-introduction.md](../enhance/exrail/exrail-objects-introduction.md) | 208 | ==TODO== Add a diagram for the EX-CSB1 to a PCA9685 |
@@ -57,14 +53,13 @@ Total High TODO matches: 37
 | [docs/enhance/exrail/cookbooks/timecontrol.md](../enhance/exrail/cookbooks/timecontrol.md) | 92 | NB:  ==TODO== See the following page for details on running sound files. |
 | snippets/configure/config-wifi-esp32-gui-options.md | 61 | ==TODO== The WiFi change limitation has been broken in the latest CS version as anything can be changed via the in-built web server |
 | snippets/configure/config-wifi-esp32-gui-options.md | 69 | ==TODO== Changing the WiFi Settings using the EX-CommandStation's own Web Sever |
-| snippets/ex-installer/device-monitor.md | 1 | ==TODO== Instructions on using Device Monitor. |
 | snippets/ex-installer/installing.md | 1 | ==TODO== **This needs to outline the steps to install EX-Installer.** |
 | snippets/ex-installer/startup-logs.md | 1 | ==TODO== Instructions required here to obtain the startup logs from **EX-Installer**. |
 | snippets/testing/testing.md | 80 | ==TODO== basic steps for initial testing with a Smart Device over WiFi |
 
 ## Medium priority TODOs
 
-Total medium priority TODO matches: 61
+Total medium priority TODO matches: 64
 
 | File | Line | Line text |
 | --- | ---: | --- |
@@ -120,9 +115,12 @@ Total medium priority TODO matches: 61
 | [docs/reference/microcontrollers/esp32/esp32-acebott.md](../reference/microcontrollers/esp32/esp32-acebott.md) | 99 | ==TODO== MEDIUM - Stacked EX8874 Checklist |
 | [docs/reference/microcontrollers/esp32/esp32-ex8874.md](../reference/microcontrollers/esp32/esp32-ex8874.md) | 110 | ==TODO== MEDIUM - Stacked EX8874 Checklist |
 | [docs/reference/microcontrollers/ex-csb1/csb1-technical.md](../reference/microcontrollers/ex-csb1/csb1-technical.md) | 22 | ==TODO== MEDIUM - EX-CSB1 Technical Reference |
+| [docs/reference/microcontrollers/nucleo/index.md](../reference/microcontrollers/nucleo/index.md) | 3 | ==TODO== MEDIUM - Nucleo - Overview page |
+| [docs/reference/microcontrollers/nucleo/nucleo-144-ex8874.md](../reference/microcontrollers/nucleo/nucleo-144-ex8874.md) | 59 | ==TODO== MEDIUM - update MotorDrivers.h for D8 |
 | [docs/reference/hardware/ethernet-boards/index.md](../reference/hardware/ethernet-boards/index.md) | 3 | ==TODO== MEDIUM - Move the legacy pages |
 | [docs/reference/hardware/wifi-boards/index.md](../reference/hardware/wifi-boards/index.md) | 3 | ==TODO== MEDIUM - Move the legacy pages |
 | [docs/products/ex-dccinspector/index.md](../products/ex-dccinspector/index.md) | 6 | ==TODO== MEDIUM - This page needs to be expanded |
+| [docs/prepare-to-use/installer/install-ex-turntable.md](../prepare-to-use/installer/install-ex-turntable.md) | 3 | ==TODO== MEDIUM - complete EX-Installer EX-Turntable page needed |
 | [docs/enhance/exrail/exrail-startup-configuration.md](../enhance/exrail/exrail-startup-configuration.md) | 20 | ==TODO== MEDIUM - Adding to your myAutomation.h in EX-Installer |
 | [docs/enhance/exrail/exrail-startup-configuration.md](../enhance/exrail/exrail-startup-configuration.md) | 26 | ==TODO== MEDIUM - Adding to your myAutomation.h in VSC |
 | [docs/enhance/exrail/exrail-startup-configuration.md](../enhance/exrail/exrail-startup-configuration.md) | 39 | ==TODO== MEDIUM - Adding to your myAutomation.h in the Arduino IDE |
@@ -132,7 +130,7 @@ Total medium priority TODO matches: 61
 
 ## Low priority TODOs
 
-Total low priority TODO matches: 97
+Total low priority TODO matches: 98
 
 | File | Line | Line text |
 | --- | ---: | --- |
@@ -229,8 +227,9 @@ Total low priority TODO matches: 97
 | [docs/reference/hardware/hal/index.md](../reference/hardware/hal/index.md) | 3 | ==TODO== LOW need a HAL intro page |
 | [docs/products/ex-turntable/ex-tt-troubleshooting.md](../products/ex-turntable/ex-tt-troubleshooting.md) | 7 | ==TODO== LOW - Frequently Asked Questions |
 | [docs/prepare-to-use/connecting/index.md](../prepare-to-use/connecting/index.md) | 14 | If you plan to run DC trains rather than the default of DCC, there are other considerations. Refer to ==TODO== LOW DC page for more information. |
+| [docs/prepare-to-use/installer/install-ex-ioexpander.md](../prepare-to-use/installer/install-ex-ioexpander.md) | 3 | ==TODO== LOW - complete EX-Installer EX-IOExpander page needed |
 | [docs/contributing/documentation/formatting-guide.md](documentation/formatting-guide.md) | 71 | ==TODO== LOW - Note there is a bug in this process if the heading contains ` - ` (space dash space). |
 | [docs/contributing/documentation/github.md](documentation/github.md) | 95 | ==TODO== LOW - how to preview options |
 | snippets/testing/testing.md | 90 | ==TODO== LOW - what to do if any of the initial testing steps fail |
-| snippets/testing/testing.md | 125 | ==TODO== LOW - pic - Check communication and version |
+| snippets/testing/testing.md | 123 | ==TODO== LOW - pic - Check communication and version |
 

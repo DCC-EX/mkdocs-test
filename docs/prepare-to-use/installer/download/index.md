@@ -6,4 +6,5 @@
 [macOS](./download-mac.md){ .md-button }
 [Linux x64](./download-linux.md){ .md-button }
 
-**NOTE:** There is no support for **EX-Installer** on Windows 7, nor 32-bit operating systems such as Windows x32 or RaspberryPi OS.
+!!! IMPORTANT "Not supported on Win7 or rPi!"
+    There is no support for **EX-Installer** on Windows 7, nor 32-bit operating systems such as Windows x32 or RaspberryPi OS.

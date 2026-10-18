@@ -3,12 +3,16 @@ hide:
   - footer
 ---
 
-### Download and install on Windows
+# Download and install on Windows
+
+!!! IMPORTANT "Not supported on Win7 or rPi!"
+    There is no support for **EX-Installer** on Windows 7, nor 32-bit operating systems such as Windows x32 or RaspberryPi OS.
 
 - Download from here [Windows x64](https://github.com/DCC-EX/EX-Installer/releases/latest/download/EX-Installer-Win64.exe){ .md-button }
 - Open the downloads folder where your browser has saved the EX-Installer-Win64.exe and execute it.
 
-**NOTE:** Depending on the configuration of your computer the '.exe' may or may not appear. This is not of concern.
+!!! NOTE "file extensions"
+    Depending on the configuration of your computer the '.exe' may or may not appear. This is not of concern.
 
 If your browser shows a warning like
 
