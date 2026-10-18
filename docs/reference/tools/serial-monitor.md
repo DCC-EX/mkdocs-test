@@ -17,7 +17,7 @@ A Serial Monitor, or Device Monitor, is another name for a "terminal" program. I
 
 If you know how to use a terminal program it is as simple as connecting your device to the Command Station, opening a session and selecting the right baud rate (115200) and line endings (Carriage Return and Line Feed). For the rest of us, we will include detailed instructions on how to use a computer or a phone app to connect to your Command Station.
 
-A number of different serial monitors are available:
+A number of different serial monitors/ device monitors are available:
 
 * [Connect with EX-Installer](#connect-with-ex-installers-device-monitor) (Recommended)
 * [Connect with EX-WebThrottle](#connect-with-ex-webthrottle)
@@ -86,7 +86,7 @@ Make sure the **baud rate at the lower right of the window is set to "115200"**.
 
 Opening the Serial Monitor always resets the Arduino board. Therefore, you should see a startup (boot) log immediately display in the window. If you have a Network shield or WiFi shield connected, you will see the Command Station setup its AP, or connect to your network if you gave it your credentials. If you don't have a network, that's fine; the Command Station will sense that, the network test will fail, but everything else will be working as it should.
 
-### Enter Commands to the EX-CommandStation
+### Send Commands to the EX-CommandStation
 
 There is an entire language that **EX-CommandStation** understands. We call this the DCC-EX API for "Application Programming Interface". If you are interested, the [list of all the commands](../../reference/serial-commands/serial-command-list.md). Let's just try two commands to make sure everything is working.
 

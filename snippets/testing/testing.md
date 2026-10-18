@@ -48,7 +48,7 @@ Connect Everything:
 - Once you are connected, you can:
 
     - Enter the `<s>` command in the “direct command” textbox to get status information from your Command Station. To do this just enter `s` (without the quotes) and press the SEND button.
-    - You should see &lt;iDCC++…&gt; returned in the log window with your version, type of Arduino, type of motor driver, and some other information
+    - You should see ``<iDCC++…>`` returned in the log window with your version, type of Arduino, type of motor driver, and some other information
 - Now you are ready to run trains!
 - Place your loco on the **MAIN track**, a loco will NOT run on a programming track
 - Click the Power Slider button to turn on power to your track
@@ -105,8 +105,6 @@ There are several serial monitors available:
 - built into the [**EX-ToolBox**](/products/ex-toolbox/connecting.md) Android app
 
 See [Serial Monitors](/reference/tools/serial-monitor.md) for more information.
-
---8<-- "snippets/ex-installer/device-monitor.md"
 
 Whichever you use, please ensure the baud rate is set to 115200 so that it matches that used by the **EX-CommandStation**. (Installer anf WebThrottle do this automatically)
 

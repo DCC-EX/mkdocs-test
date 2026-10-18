@@ -20,11 +20,10 @@ Scanned roots: `C:\Users\akers\OneDrive\github\github_doco\mkdocs-test\docs`, `C
 
 ## High TODOs
 
-Total High TODO matches: 37
+Total High TODO matches: 35
 
 | File | Line | Line text |
 | --- | ---: | --- |
-| [docs/prepare-to-use/testing.md](../prepare-to-use/testing.md) | 3 | ==TODO== Basic testing... |
 | [docs/throttles/connecting-usb.md](../throttles/connecting-usb.md) | 3 | ==TODO== Connecting a USB Throttle to your EX-CommandStation |
 | [docs/throttles/connecting-wifi.md](../throttles/connecting-wifi.md) | 3 | ==TODO== Connecting a WiFi Throttle to your EX-CommandStation |
 | [docs/throttles/dcc-accessories.md](../throttles/dcc-accessories.md) | 3 | ==TODO== how to control DCC Accessories |
@@ -57,7 +56,6 @@ Total High TODO matches: 37
 | [docs/enhance/exrail/cookbooks/timecontrol.md](../enhance/exrail/cookbooks/timecontrol.md) | 92 | NB:  ==TODO== See the following page for details on running sound files. |
 | snippets/configure/config-wifi-esp32-gui-options.md | 61 | ==TODO== The WiFi change limitation has been broken in the latest CS version as anything can be changed via the in-built web server |
 | snippets/configure/config-wifi-esp32-gui-options.md | 69 | ==TODO== Changing the WiFi Settings using the EX-CommandStation's own Web Sever |
-| snippets/ex-installer/device-monitor.md | 1 | ==TODO== Instructions on using Device Monitor. |
 | snippets/ex-installer/installing.md | 1 | ==TODO== **This needs to outline the steps to install EX-Installer.** |
 | snippets/ex-installer/startup-logs.md | 1 | ==TODO== Instructions required here to obtain the startup logs from **EX-Installer**. |
 | snippets/testing/testing.md | 80 | ==TODO== basic steps for initial testing with a Smart Device over WiFi |
@@ -232,5 +230,5 @@ Total low priority TODO matches: 97
 | [docs/contributing/documentation/formatting-guide.md](documentation/formatting-guide.md) | 71 | ==TODO== LOW - Note there is a bug in this process if the heading contains ` - ` (space dash space). |
 | [docs/contributing/documentation/github.md](documentation/github.md) | 95 | ==TODO== LOW - how to preview options |
 | snippets/testing/testing.md | 90 | ==TODO== LOW - what to do if any of the initial testing steps fail |
-| snippets/testing/testing.md | 125 | ==TODO== LOW - pic - Check communication and version |
+| snippets/testing/testing.md | 123 | ==TODO== LOW - pic - Check communication and version |
 
