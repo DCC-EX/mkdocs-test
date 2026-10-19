@@ -20,7 +20,7 @@ Scanned roots: `C:\Users\akers\OneDrive\github\github_doco\mkdocs-test\docs`, `C
 
 ## High TODOs
 
-Total High TODO matches: 25
+Total High TODO matches: 24
 
 | File | Line | Line text |
 | --- | ---: | --- |
@@ -46,7 +46,6 @@ Total High TODO matches: 25
 | [docs/enhance/exrail/cookbooks/timecontrol.md](../enhance/exrail/cookbooks/timecontrol.md) | 92 | NB:  ==TODO== See the following page for details on running sound files. |
 | snippets/configure/config-wifi-esp32-gui-options.md | 61 | ==TODO== The WiFi change limitation has been broken in the latest CS version as anything can be changed via the in-built web server |
 | snippets/configure/config-wifi-esp32-gui-options.md | 69 | ==TODO== Changing the WiFi Settings using the EX-CommandStation&#x27;s own Web Sever |
-| snippets/ex-installer/installing.md | 1 | ==TODO== **This needs to outline the steps to install EX-Installer.** |
 | snippets/ex-installer/startup-logs.md | 1 | ==TODO== Instructions required here to obtain the startup logs from **EX-Installer**. |
 | snippets/testing/testing.md | 80 | ==TODO== basic steps for initial testing with a Smart Device over WiFi |
 
