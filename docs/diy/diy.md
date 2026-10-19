@@ -18,7 +18,7 @@ Our [**EX-CommandStation/Booster 1 Express** (EX-CSB1)](../products/ex-csb1/inde
 
 ## Components
 
-At a minimum, a command station consists of a processor plus a motor driver to convert the low voltage digital signal from the processor into the high powered track output.
+At a minimum, a command station consists of a microcontroller plus a motor driver to convert the low voltage digital signal from the microcontroller into the high powered track output.
 
 The core components of an **EX-CommandStation** are:
 
