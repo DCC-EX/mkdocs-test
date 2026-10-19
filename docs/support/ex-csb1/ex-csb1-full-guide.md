@@ -75,7 +75,7 @@ Please note the pin connection order when making your own cables or when purchas
 
 This is a standard Railsync input and is labelled 'Booster In' on the top of the board. Connecting a RailSync output from a Command Station or Booster will automatically switch the EXCSB1 to Booster Mode on receipt of an input signal when the **EX‑CSB1** is running the appropriate EXRAIL script.
 
-Again be sure to wire the DCC outputs to power districts with consistent phasing. Any voltage between 5V and 26V at the input will work. The Digitrax specification is from 12v to 26v. See the DCCWiki article on RailSync 
+Again be sure to wire the DCC outputs to power districts with consistent phasing. Any voltage between 5V and 26V at the input will work. The Digitrax specification is from 12v to 26v. See the DCCWiki article on RailSync.
 
 ### OLED I2C Header
 
@@ -147,9 +147,9 @@ Stacking the **EX-8874** on these headers provides 2 additional power districts 
 
 The OLED display provides diagnostics, status, and general information. The OLED display can also show output from EXRAIL scripts including user defined text. By default, the display shows the version number, license, power status, free memory, and if configured, your WiFi access point login information.
 
-![HOT Surface Area](../../_static/images/ex-csb1){ width="150px" align="right" }
-Hot Area Warning
-Fig 66: Hot Area Warning
+<div style="clear: both;"></div>
+
+![HOT Surface Area](../../_static/images/ex-csb1/hot_area.png){ width="150px" align="right" }
 
 The entire area shown in the image to the right can get extremely hot during operation. Be careful not to touch this area at the top or bottom of the board to avoid being burned. This is especially true at high track current levels. Also be sure to provide proper ventilation to the board. If placed in a case, that case must have proper ventilation. Consider using proper vent holes and a fan if you intend to place the **EX‑CSB1** inside an enclosure.
 
@@ -158,6 +158,8 @@ The entire area shown in the image to the right can get extremely hot during ope
 ![I2C Jumper Pads](../../_static/images/ex-csb1/i2c_jumper_pads.png){ width="150px" align="right" }
 
 There are 2 solder pad jumpers on the EX-CSB1 labelled 'i2c'.
+
+<div style="clear: both;"></div>
 
 ### Unpopulated Power Connector
 
@@ -328,11 +330,15 @@ However, if you wish to customise its configuration or update the software, you 
 
 ### First Time Connection
 
+<br/>
+
 #### Step 1: Connect the EX-CSB1 to Your Computer
 
 Locate the USB Port: Find the USB-C port on your **EX‑CSB1**. Use a Compatible USB Cable: Grab a USB-C cable that matches the port on your PC or laptop. This will likely be a USB-A to USB-C cable for older PCs and laptops, or a USB-C to USB-C for more modern PCs and laptops. Plug It In: Connect one end of the USB cable to the **EX‑CSB1** and the other end to an available USB port on your computer.
 
 #### Step 2: Install the Required USB Drivers
+
+<br/>
 
 ##### Automatic Driver Installation
 
@@ -372,6 +378,8 @@ Before you begin, make sure the Command Station is powered off. Unplug the power
 
 #### Step 2: Connect to Your Computer via USB
 
+<br/>
+
 ##### Locate the USB Port
 
 Find the USB port on your EX‑CSB1.
@@ -386,6 +394,8 @@ Plug the power supply back in or reconnect the barrel connector to power on the 
 
 #### Step 3: Download the Latest Installer
 
+<br/>
+
 ##### Visit the DCC-EX Website
 
 Go to the official DCC-EX website.
@@ -395,6 +405,8 @@ Go to the official DCC-EX website.
 Save the EX‑Installer file to a location on your computer where you can easily access it.
 
 #### Step 4: Run EX-Installer
+
+<br/>
 
 ##### Open EX-Installer
 
@@ -411,6 +423,8 @@ EX‑Installer will guide you through the reinstallation process. During this pr
 Allow EX‑Installer to complete the process. Once done, the Command Station will be reset to its original configuration.
 
 ##### Step 5: Verify the Reset
+
+<br/>
 
 ##### Launch the Command Station Software
 
@@ -432,6 +446,8 @@ Power up your layout and test the system to ensure everything is working as expe
 
 ## Connecting
 
+<br/>
+
 ### USB Connection to a Serial Monitor
 
 There are a number ways to open a Serial Monitor to the **EX‑CommandStation/Booster One Express**. They are discussed on the Using a Serial Monitor page, and any are acceptable.
@@ -446,11 +462,15 @@ USB Connection to JMRI
 
 ## Connecting Optional Devices and Accessories
 
+<br/>
+
 ### Integrated displays
 
 ==TODO== MEDIUM - Integrated displays
 
 #### I2C Accessories
+
+<br/>
 
 ##### DCC-EX I2C Hardware Overview
 
@@ -474,14 +494,15 @@ Connect your **EX‑CSB1** to your computer via USB. Open the EX‑Installer. Th
 
 The installer will allow you to configure connected displays (such as OLED or LCD) directly during the setup process. For other I2C devices, further configuration may require manual adjustments using the EX‑CommandStation software or editing configuration files.
 
-Step 4: Manual Configuration for Advanced Accessories
-Access the EX‑CommandStation Software:
+##### Step 4: Manual Configuration for Advanced Accessories
+
+Access the **EX‑CommandStation** Software:
 
 For advanced I2C accessories like sensors or GPIO expanders, you may need to manually configure them via the EX‑CommandStation software. This involves accessing configuration files or using a Serial Monitor to input specific commands.
 
 Editing Configuration Files:
 
-If necessary, open the configuration files provided with the DCC-EX software to manually add and configure your I2C devices. Instructions for this can be found on the DCC-EX documentation pages.
+If necessary, open the configuration files provided with the **EX‑CommandStation** software to manually add and configure your I2C devices. Instructions for this can be found on the DCC-EX documentation pages.
 
 Save and Apply Settings:
 
@@ -489,11 +510,11 @@ After configuring your devices, ensure you save and apply your settings through 
 
 Test Your Setup:
 
-Once configured, power on your layout and check if the I2C devices are functioning correctly. Use the diagnostics tools provided by the DCC-EX software to troubleshoot any issues.
+Once configured, power on your layout and check if the I2C devices are functioning correctly. Use the diagnostics tools provided by the **DCC-EX** software to troubleshoot any issues.
 
 Troubleshooting Common Issues:
 
-Double-check wiring connections and I2C addresses. If issues persist, refer to the troubleshooting guides on the DCC-EX website.
+Double-check wiring connections and I2C addresses. If issues persist, refer to the troubleshooting guides on the **DCC-EX** website.
 
 Additional Resources
 
