@@ -32,6 +32,6 @@ The **EX‑MotorShield8874** is available from many [suppliers](/purchasing/offi
 
 Follow the simple assembly instructions, Mega and Nucleo installs are essentially the same.
 
-- [WiFiShield8266 install](/diy/mega-easy.md#optionally-install-wifishield)
+- [WiFiShield8266 install](../../diy/mega-easy.md#3-optionally-install-wifishield---optional)
 
 --8<-- "snippets/abbr.md"
