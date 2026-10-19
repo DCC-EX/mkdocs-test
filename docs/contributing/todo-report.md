@@ -28,11 +28,11 @@ Total High TODO matches: 25
 | [docs/throttles/connecting-wifi.md](../throttles/connecting-wifi.md) | 3 | ==TODO== Connecting a WiFi Throttle to your EX-CommandStation |
 | [docs/throttles/dcc-accessories.md](../throttles/dcc-accessories.md) | 3 | ==TODO== how to control DCC Accessories |
 | [docs/reference/configuration/index.md](../reference/configuration/index.md) | 3 | ==TODO== EX-CommandStation Configuration Reference - intro / overview |
-| [docs/reference/serial-commands/serial-command-dd-anin-anout_not_in_nav.md](../reference/serial-commands/serial-command-dd-anin-anout_not_in_nav.md) | 15 | * ``<D ANOUT «vpin» «position» «profile»>`` = see ==TODO== Command Description |
-| [docs/reference/serial-commands/serial-command-dd-anin-anout_not_in_nav.md](../reference/serial-commands/serial-command-dd-anin-anout_not_in_nav.md) | 16 | * ``<D ANOUT «vpin» «position»>`` = see ==TODO== Command Description |
+| [docs/reference/serial-commands/serial-command-dd-anin-anout_not_in_nav.md](../reference/serial-commands/serial-command-dd-anin-anout_not_in_nav.md) | 15 | * ``&lt;D ANOUT «vpin» «position» «profile»&gt;`` = see ==TODO== Command Description |
+| [docs/reference/serial-commands/serial-command-dd-anin-anout_not_in_nav.md](../reference/serial-commands/serial-command-dd-anin-anout_not_in_nav.md) | 16 | * ``&lt;D ANOUT «vpin» «position»&gt;`` = see ==TODO== Command Description |
 | [docs/reference/trackmanager/dc-mode-frequency.md](../reference/trackmanager/dc-mode-frequency.md) | 82 | - ==TODO==  How to effectively use DC mode when using multiple frequencies. |
 | [docs/reference/wiring/i2C/i2c-wiring.md](../reference/wiring/i2C/i2c-wiring.md) | 54 | - When using separate power sources, there is potential for a ground loop. ==TODO== |
-| [docs/reference/hardware/hal/hal-config.md](../reference/hardware/hal/hal-config.md) | 249 | Finally, upload the code to the Arduino as you would do during the standard ==TODO== :ref:`Arduino IDE Setup <ex-commandstation/advanced-setup/installation-options/arduino-ide:upload the software>`. |
+| [docs/reference/hardware/hal/hal-config.md](../reference/hardware/hal/hal-config.md) | 249 | Finally, upload the code to the Arduino as you would do during the standard ==TODO== :ref:`Arduino IDE Setup &lt;ex-commandstation/advanced-setup/installation-options/arduino-ide:upload the software&gt;`. |
 | [docs/prepare-to-use/connecting/connecting-diy.md](../prepare-to-use/connecting/connecting-diy.md) | 57 | ==TODO== physically connecting DIY EX-CS to a layout - Other Motor Shields |
 | [docs/prepare-to-use/connecting/connecting-ex-csb1.md](../prepare-to-use/connecting/connecting-ex-csb1.md) | 3 | ==TODO== this page needs to be expanded |
 | [docs/prepare-to-use/installer/index.md](../prepare-to-use/installer/index.md) | 7 | ==TODO== Installing the EX-CommandStation Software - Intro |
@@ -45,7 +45,7 @@ Total High TODO matches: 25
 | [docs/enhance/exrail/exrail-objects-introduction.md](../enhance/exrail/exrail-objects-introduction.md) | 364 | ==TODO== Add a diagram for the EX-CSB1 to an IO Expander |
 | [docs/enhance/exrail/cookbooks/timecontrol.md](../enhance/exrail/cookbooks/timecontrol.md) | 92 | NB:  ==TODO== See the following page for details on running sound files. |
 | snippets/configure/config-wifi-esp32-gui-options.md | 61 | ==TODO== The WiFi change limitation has been broken in the latest CS version as anything can be changed via the in-built web server |
-| snippets/configure/config-wifi-esp32-gui-options.md | 69 | ==TODO== Changing the WiFi Settings using the EX-CommandStation's own Web Sever |
+| snippets/configure/config-wifi-esp32-gui-options.md | 69 | ==TODO== Changing the WiFi Settings using the EX-CommandStation&#x27;s own Web Sever |
 | snippets/ex-installer/installing.md | 1 | ==TODO== **This needs to outline the steps to install EX-Installer.** |
 | snippets/ex-installer/startup-logs.md | 1 | ==TODO== Instructions required here to obtain the startup logs from **EX-Installer**. |
 | snippets/testing/testing.md | 80 | ==TODO== basic steps for initial testing with a Smart Device over WiFi |
@@ -59,9 +59,9 @@ Total medium priority TODO matches: 81
 | [docs/support/faq.md](../support/faq.md) | 9 | ==TODO== MEDIUM Rework this so that it includes GUI options (EX-WebThrottle, Engine Driver, etc.) |
 | [docs/support/faq.md](../support/faq.md) | 19 | ==TODO== MEDIUM Rework this so that it includes GUI options (EX-WebThrottle, Engine Driver, etc.) |
 | [docs/throttles/index.md](../throttles/index.md) | 39 | ==TODO== MEDIUM - Overview of DCC Accessory Operation |
-| [docs/reference/command-station-architecture/io-device-drivers.md](../reference/command-station-architecture/io-device-drivers.md) | 3 | ==TODO== MEDIUM - change the references the this page from the Arduino IDE to VSC/PIO |
-| [docs/reference/configuration/advanced-config-h.md](../reference/configuration/advanced-config-h.md) | 3 | ==TODO== MEDIUM - change the references the this page/section from the Arduino IDE to VSC/PIO |
-| [docs/reference/microcontrollers/index.md](../reference/microcontrollers/index.md) | 5 | ==TODO== MEDIUM - change the references the this page/section from the Arduino IDE to VSC/PIO |
+| [docs/reference/command-station-architecture/io-device-drivers.md](../reference/command-station-architecture/io-device-drivers.md) | 3 | &lt;!-- ==TODO== MEDIUM - change the references on this page from the Arduino IDE to VSC/PIO --&gt; |
+| [docs/reference/configuration/advanced-config-h.md](../reference/configuration/advanced-config-h.md) | 3 | &lt;!-- ==TODO== MEDIUM - change the references on this page/section from the Arduino IDE to VSC/PIO --&gt; |
+| [docs/reference/microcontrollers/index.md](../reference/microcontrollers/index.md) | 5 | &lt;!-- ==TODO== MEDIUM - change the references on this page/section from the Arduino IDE to VSC/PIO --&gt; |
 | [docs/reference/serial-commands/serial-command-aa-and-a_not_in_nav.md](../reference/serial-commands/serial-command-aa-and-a_not_in_nav.md) | 36 | ==TODO== MEDIUM - responses |
 | [docs/reference/serial-commands/serial-command-at_display_not_in_nav.md](../reference/serial-commands/serial-command-at_display_not_in_nav.md) | 16 | * **display**: *Required* ==TODO== MEDIUM Display, to display the text on |
 | [docs/reference/serial-commands/serial-command-at_display_not_in_nav.md](../reference/serial-commands/serial-command-at_display_not_in_nav.md) | 22 | ==TODO== MEDIUM - Responses |
@@ -95,48 +95,48 @@ Total medium priority TODO matches: 81
 | [docs/reference/serial-commands/serial-command-m_not_in_nav.md](../reference/serial-commands/serial-command-m_not_in_nav.md) | 28 | * **momentum**: ==TODO== MEDIUM parameter description |
 | [docs/reference/serial-commands/serial-command-nn_not_in_nav.md](../reference/serial-commands/serial-command-nn_not_in_nav.md) | 28 | ==TODO== MEDIUM - Responses |
 | [docs/reference/serial-commands/serial-command-o_not_in_nav.md](../reference/serial-commands/serial-command-o_not_in_nav.md) | 33 | ==TODO== MEDIUM - Responses |
-| [docs/reference/serial-commands/serial-command-rr-and-ww_not_in_nav.md](../reference/serial-commands/serial-command-rr-and-ww_not_in_nav.md) | 123 | ==TODO== MEDIUM - Response for ``<r «loco» «cv»>`` |
-| [docs/reference/serial-commands/serial-command-rr-and-ww_not_in_nav.md](../reference/serial-commands/serial-command-rr-and-ww_not_in_nav.md) | 137 | ==TODO== MEDIUM - Response for ``<W CONSIST «loco»>`` |
-| [docs/reference/serial-commands/serial-command-rr-and-ww_not_in_nav.md](../reference/serial-commands/serial-command-rr-and-ww_not_in_nav.md) | 141 | ==TODO== MEDIUM - Response for ``<W CONSIST «loco» REVERSE>`` |
-| [docs/reference/serial-commands/serial-command-rr-and-ww_not_in_nav.md](../reference/serial-commands/serial-command-rr-and-ww_not_in_nav.md) | 154 | ==TODO== MEDIUM - Response for ``<W «cv» «bitValue» «bit»>` |
-| [docs/reference/serial-commands/serial-command-rr-and-ww_not_in_nav.md](../reference/serial-commands/serial-command-rr-and-ww_not_in_nav.md) | 172 | ==TODO== MEDIUM - Response for ``<b «loco» «cv» «bitValue» «bit»>`` |
-| [docs/reference/serial-commands/serial-command-s-and-hash_not_in_nav.md](../reference/serial-commands/serial-command-s-and-hash_not_in_nav.md) | 49 | ==TODO== MEDIUM - Response for ``<J I>`` |
+| [docs/reference/serial-commands/serial-command-rr-and-ww_not_in_nav.md](../reference/serial-commands/serial-command-rr-and-ww_not_in_nav.md) | 123 | ==TODO== MEDIUM - Response for ``&lt;r «loco» «cv»&gt;`` |
+| [docs/reference/serial-commands/serial-command-rr-and-ww_not_in_nav.md](../reference/serial-commands/serial-command-rr-and-ww_not_in_nav.md) | 137 | ==TODO== MEDIUM - Response for ``&lt;W CONSIST «loco»&gt;`` |
+| [docs/reference/serial-commands/serial-command-rr-and-ww_not_in_nav.md](../reference/serial-commands/serial-command-rr-and-ww_not_in_nav.md) | 141 | ==TODO== MEDIUM - Response for ``&lt;W CONSIST «loco» REVERSE&gt;`` |
+| [docs/reference/serial-commands/serial-command-rr-and-ww_not_in_nav.md](../reference/serial-commands/serial-command-rr-and-ww_not_in_nav.md) | 154 | ==TODO== MEDIUM - Response for ``&lt;W «cv» «bitValue» «bit»&gt;` |
+| [docs/reference/serial-commands/serial-command-rr-and-ww_not_in_nav.md](../reference/serial-commands/serial-command-rr-and-ww_not_in_nav.md) | 172 | ==TODO== MEDIUM - Response for ``&lt;b «loco» «cv» «bitValue» «bit»&gt;`` |
+| [docs/reference/serial-commands/serial-command-s-and-hash_not_in_nav.md](../reference/serial-commands/serial-command-s-and-hash_not_in_nav.md) | 49 | ==TODO== MEDIUM - Response for ``&lt;J I&gt;`` |
 | [docs/reference/serial-commands/serial-command-slash-latch_not_in_nav.md](../reference/serial-commands/serial-command-slash-latch_not_in_nav.md) | 25 | ==TODO== MEDIUM - Responses |
 | [docs/reference/serial-commands/serial-command-slash-reserve_not_in_nav.md](../reference/serial-commands/serial-command-slash-reserve_not_in_nav.md) | 27 | ==TODO== MEDIUM - Responses |
 | [docs/reference/serial-commands/serial-command-y_not_in_nav.md](../reference/serial-commands/serial-command-y_not_in_nav.md) | 57 | ==TODO== MEDIUM - Responses |
 | [docs/reference/serial-commands/serial-command-zz-and-z_not_in_nav.md](../reference/serial-commands/serial-command-zz-and-z_not_in_nav.md) | 82 | ==TODO== MEDIUM - Response |
 | [docs/reference/serial-commands/shell_serial-command-xyz_not_in_nav.md](../reference/serial-commands/shell_serial-command-xyz_not_in_nav.md) | 44 | ==TODO== MEDIUM - Responses |
-| [docs/reference/tools/diagnostic-tools.md](../reference/tools/diagnostic-tools.md) | 3 | ==TODO== MEDIUM - change the references the this page/section from the Arduino IDE to VSC/PIO |
+| [docs/reference/tools/diagnostic-tools.md](../reference/tools/diagnostic-tools.md) | 3 | &lt;!-- ==TODO== MEDIUM - change the references on this page/section from the Arduino IDE to VSC/PIO --&gt; |
 | [docs/reference/tools/diagnostic-tools.md](../reference/tools/diagnostic-tools.md) | 5 | ==TODO== MEDIUM - Work in Progress. More detail and pictures |
 | [docs/reference/tools/index.md](../reference/tools/index.md) | 3 | ==TODO== MEDIUM - Tools overview |
-| [docs/reference/tools/serial-monitor.md](../reference/tools/serial-monitor.md) | 3 | ==TODO== MEDIUM - change the references the this page/section from the Arduino IDE to VSC/PIO |
+| [docs/reference/tools/serial-monitor.md](../reference/tools/serial-monitor.md) | 3 | &lt;!-- ==TODO== MEDIUM - change the references on this page/section from the Arduino IDE to VSC/PIO --&gt; |
 | [docs/reference/microcontrollers/esp32/esp32-acebott.md](../reference/microcontrollers/esp32/esp32-acebott.md) | 99 | ==TODO== MEDIUM - Stacked EX8874 Checklist |
 | [docs/reference/microcontrollers/esp32/esp32-ex8874.md](../reference/microcontrollers/esp32/esp32-ex8874.md) | 110 | ==TODO== MEDIUM - Stacked EX8874 Checklist |
 | [docs/reference/microcontrollers/ex-csb1/csb1-technical.md](../reference/microcontrollers/ex-csb1/csb1-technical.md) | 22 | ==TODO== MEDIUM - EX-CSB1 Technical Reference |
 | [docs/reference/microcontrollers/nucleo/index.md](../reference/microcontrollers/nucleo/index.md) | 3 | ==TODO== MEDIUM - Nucleo - Overview page |
 | [docs/reference/microcontrollers/nucleo/nucleo-144-ex8874.md](../reference/microcontrollers/nucleo/nucleo-144-ex8874.md) | 59 | ==TODO== MEDIUM - update MotorDrivers.h for D8 |
 | [docs/reference/hardware/ethernet-boards/index.md](../reference/hardware/ethernet-boards/index.md) | 3 | ==TODO== MEDIUM - Move the legacy pages |
-| [docs/reference/hardware/hal/hal-config.md](../reference/hardware/hal/hal-config.md) | 182 | This will need to be done in the ==TODO== MEDIUM :doc:`Arduino-IDE </ex-commandstation/advanced-setup/installation-options/arduino-ide>`, so first make sure you have followed these steps to load up the Arduino IDE. |
-| [docs/reference/hardware/hal/hal-config.md](../reference/hardware/hal/hal-config.md) | 186 | First you will need to add a new file, just like the ==TODO== MEDIUM :ref:`config.h file <ex-commandstation/advanced-setup/installation-options/arduino-ide:Copy the config.example.h file (or rename it)>`. |
+| [docs/reference/hardware/hal/hal-config.md](../reference/hardware/hal/hal-config.md) | 182 | This will need to be done in the ==TODO== MEDIUM :doc:`Arduino-IDE &lt;/ex-commandstation/advanced-setup/installation-options/arduino-ide&gt;`, so first make sure you have followed these steps to load up the Arduino IDE. |
+| [docs/reference/hardware/hal/hal-config.md](../reference/hardware/hal/hal-config.md) | 186 | First you will need to add a new file, just like the ==TODO== MEDIUM :ref:`config.h file &lt;ex-commandstation/advanced-setup/installation-options/arduino-ide:Copy the config.example.h file (or rename it)&gt;`. |
 | [docs/reference/hardware/wifi-boards/index.md](../reference/hardware/wifi-boards/index.md) | 3 | ==TODO== MEDIUM - Move the legacy pages |
 | [docs/products/ex-dccinspector/index.md](../products/ex-dccinspector/index.md) | 6 | ==TODO== MEDIUM - This page needs to be expanded |
-| [docs/products/ex-fastclock/installation.md](../products/ex-fastclock/installation.md) | 12 | ==TODO== MEDIUM - change the references the this page/section from the Arduino IDE to VSC/PIO |
-| [docs/products/ex-sensorcam/ex-sensor-manual-abridged.md](../products/ex-sensorcam/ex-sensor-manual-abridged.md) | 5 | ==TODO== MEDIUM - change the references the this page from the Arduino IDE to VSC/PIO |
-| [docs/products/ex-sensorcam/ex-sensor-manual.md](../products/ex-sensorcam/ex-sensor-manual.md) | 5 | ==TODO== MEDIUM - change the references the this page from the Arduino IDE to VSC/PIO |
-| [docs/products/ex-sensorcam/ex-sensorcam.md](../products/ex-sensorcam/ex-sensorcam.md) | 8 | ==TODO== MEDIUM - change the references the this page from the Arduino IDE to VSC/PIO |
-| [docs/products/ex-sensorcam/installation-guide.md](../products/ex-sensorcam/installation-guide.md) | 3 | ==TODO== MEDIUM - change the references the this page from the Arduino IDE to VSC/PIO |
-| [docs/products/ex-turntable/assembly.md](../products/ex-turntable/assembly.md) | 3 | ==TODO== MEDIUM - change the references the this page from the Arduino IDE to VSC/PIO |
-| [docs/prepare-to-use/connecting/connecting-diy.md](../prepare-to-use/connecting/connecting-diy.md) | 17 | <!-- ==TODO== MEDIUM - This section could be improved. Physically connecting DIY EX-CS to a layout - EX8874 --> |
-| [docs/prepare-to-use/connecting/connecting-diy.md](../prepare-to-use/connecting/connecting-diy.md) | 30 | <!-- ==TODO== MEDIUM - This section could be improved. Physically connecting DIY EX-CS to a layout - Standard Arduino Motor Shield --> |
+| [docs/products/ex-fastclock/installation.md](../products/ex-fastclock/installation.md) | 12 | &lt;!-- ==TODO== MEDIUM - change the references on this page/section from the Arduino IDE to VSC/PIO --&gt; |
+| [docs/products/ex-sensorcam/ex-sensor-manual-abridged.md](../products/ex-sensorcam/ex-sensor-manual-abridged.md) | 5 | &lt;!-- ==TODO== MEDIUM - change the references on this page from the Arduino IDE to VSC/PIO --&gt; |
+| [docs/products/ex-sensorcam/ex-sensor-manual.md](../products/ex-sensorcam/ex-sensor-manual.md) | 5 | &lt;!-- ==TODO== MEDIUM - change the references on this page from the Arduino IDE to VSC/PIO --&gt; |
+| [docs/products/ex-sensorcam/ex-sensorcam.md](../products/ex-sensorcam/ex-sensorcam.md) | 8 | &lt;!-- ==TODO== MEDIUM - change the references on this page from the Arduino IDE to VSC/PIO --&gt; |
+| [docs/products/ex-sensorcam/installation-guide.md](../products/ex-sensorcam/installation-guide.md) | 3 | &lt;!-- ==TODO== MEDIUM - change the references on this page from the Arduino IDE to VSC/PIO --&gt; |
+| [docs/products/ex-turntable/assembly.md](../products/ex-turntable/assembly.md) | 3 | &lt;!-- ==TODO== MEDIUM - change the references on this page from the Arduino IDE to VSC/PIO --&gt; |
+| [docs/prepare-to-use/connecting/connecting-diy.md](../prepare-to-use/connecting/connecting-diy.md) | 17 | &lt;!-- ==TODO== MEDIUM - This section could be improved. Physically connecting DIY EX-CS to a layout - EX8874 --&gt; |
+| [docs/prepare-to-use/connecting/connecting-diy.md](../prepare-to-use/connecting/connecting-diy.md) | 30 | &lt;!-- ==TODO== MEDIUM - This section could be improved. Physically connecting DIY EX-CS to a layout - Standard Arduino Motor Shield --&gt; |
 | [docs/prepare-to-use/installer/install-ex-turntable.md](../prepare-to-use/installer/install-ex-turntable.md) | 3 | ==TODO== MEDIUM - complete EX-Installer EX-Turntable page needed |
 | [docs/enhance/exrail/exrail-startup-configuration.md](../enhance/exrail/exrail-startup-configuration.md) | 20 | ==TODO== MEDIUM - Adding to your myAutomation.h in EX-Installer |
 | [docs/enhance/exrail/exrail-startup-configuration.md](../enhance/exrail/exrail-startup-configuration.md) | 26 | ==TODO== MEDIUM - Adding to your myAutomation.h in VSC |
 | [docs/enhance/exrail/exrail-startup-configuration.md](../enhance/exrail/exrail-startup-configuration.md) | 39 | ==TODO== MEDIUM - Adding to your myAutomation.h in the Arduino IDE |
-| [docs/enhance/exrail/cookbooks/big-picture/stage2.md](../enhance/exrail/cookbooks/big-picture/stage2.md) | 115 | ==TODO== MEDIUM - change the references the this page/section from the Arduino IDE to VSC/PIO |
+| [docs/enhance/exrail/cookbooks/big-picture/stage2.md](../enhance/exrail/cookbooks/big-picture/stage2.md) | 115 | &lt;!-- ==TODO== MEDIUM - change the references on this page/section from the Arduino IDE to VSC/PIO --&gt; |
 | [docs/enhance/accessories/i2c/i2c-displays.md](../enhance/accessories/i2c/i2c-displays.md) | 96 | ==TODO== MEDIUM - diagram for connecting the EX-CSB1 to an oLED via the headers |
 | [docs/enhance/accessories/i2c/i2c-displays.md](../enhance/accessories/i2c/i2c-displays.md) | 98 | ==TODO== MEDIUM - diagram for connecting the EX-CSB1 to an oLED via the QWIIC connector |
 | [docs/enhance/accessories/i2c/i2c-gpio-expanders.md](../enhance/accessories/i2c/i2c-gpio-expanders.md) | 41 | ==TODO== MEDIUM - diagram for connecting the EX-CSB1 to an GPIO Expander via the headers |
-| [docs/contributing/code/contributing-code.md](code/contributing-code.md) | 13 | ==TODO== MEDIUM - change the references the this page/section from the Arduino IDE to VSC/PIO |
+| [docs/contributing/code/contributing-code.md](code/contributing-code.md) | 13 | &lt;!-- ==TODO== MEDIUM - change the references on this page/section from the Arduino IDE to VSC/PIO --&gt; |
 
 ## Low priority TODOs
 
@@ -144,11 +144,11 @@ Total low priority TODO matches: 99
 
 | File | Line | Line text |
 | --- | ---: | --- |
-| [docs/contributing/release-checklist.md](release-checklist.md) | 128 | - ==TODO== LOW - Need to change the 'Withrottle' iOS app references to 'ThrottleCard' |
+| [docs/contributing/release-checklist.md](release-checklist.md) | 128 | - ==TODO== LOW - Need to change the &#x27;Withrottle&#x27; iOS app references to &#x27;ThrottleCard&#x27; |
 | [docs/throttles/loco-programming/programming-tips.md](../throttles/loco-programming/programming-tips.md) | 14 | ==TODO== LOW - Fill this page out. |
-| [docs/reference/command-station-architecture/io-device-drivers.md](../reference/command-station-architecture/io-device-drivers.md) | 176 | This will need to be done in the ==TODO== LOW -  :doc:`Arduino-IDE </ex-commandstation/advanced-setup/installation-options/arduino-ide>`, so first make sure you have followed these steps to load up the |Arduino IDE|. |
-| [docs/reference/command-station-architecture/io-device-drivers.md](../reference/command-station-architecture/io-device-drivers.md) | 180 | First you will need to add a new file, just like the ==TODO== LOW - :ref:`config.h file <ex-commandstation/advanced-setup/installation-options/arduino-ide:Copy the config.example.h file (or rename it)>`. |
-| [docs/reference/command-station-architecture/io-device-drivers.md](../reference/command-station-architecture/io-device-drivers.md) | 250 | Finally, upload the code to the Arduino as you would do during the standard ==TODO== LOW - :ref:`Arduino IDE Setup <ex-commandstation/advanced-setup/installation-options/arduino-ide:upload the software>`. |
+| [docs/reference/command-station-architecture/io-device-drivers.md](../reference/command-station-architecture/io-device-drivers.md) | 176 | This will need to be done in the ==TODO== LOW -  :doc:`Arduino-IDE &lt;/ex-commandstation/advanced-setup/installation-options/arduino-ide&gt;`, so first make sure you have followed these steps to load up the |Arduino IDE|. |
+| [docs/reference/command-station-architecture/io-device-drivers.md](../reference/command-station-architecture/io-device-drivers.md) | 180 | First you will need to add a new file, just like the ==TODO== LOW - :ref:`config.h file &lt;ex-commandstation/advanced-setup/installation-options/arduino-ide:Copy the config.example.h file (or rename it)&gt;`. |
+| [docs/reference/command-station-architecture/io-device-drivers.md](../reference/command-station-architecture/io-device-drivers.md) | 250 | Finally, upload the code to the Arduino as you would do during the standard ==TODO== LOW - :ref:`Arduino IDE Setup &lt;ex-commandstation/advanced-setup/installation-options/arduino-ide:upload the software&gt;`. |
 | [docs/reference/serial-commands/serial-command-aa-and-a_not_in_nav.md](../reference/serial-commands/serial-command-aa-and-a_not_in_nav.md) | 62 | * ==TODO== LOW - Example Commands |
 | [docs/reference/serial-commands/serial-command-aa-and-a_not_in_nav.md](../reference/serial-commands/serial-command-aa-and-a_not_in_nav.md) | 66 | * ==TODO== LOW - Example Responses |
 | [docs/reference/serial-commands/serial-command-at_display_not_in_nav.md](../reference/serial-commands/serial-command-at_display_not_in_nav.md) | 26 | * ==TODO== LOW - Notes |

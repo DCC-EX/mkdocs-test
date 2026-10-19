@@ -2,7 +2,7 @@
 
 Including ESP32-WROVER-CAM and ESP32-WROOM-S3 CAM's
 
-==TODO== MEDIUM - change the references the this page from the Arduino IDE to VSC/PIO
+<!-- ==TODO== MEDIUM - change the references on this page from the Arduino IDE to VSC/PIO -->
 
 ## CONTENTS
 

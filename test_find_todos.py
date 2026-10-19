@@ -31,6 +31,26 @@ class FindTodosTests(unittest.TestCase):
         self.assertIn("| snippets/example.md |", report)
         self.assertNotIn("[snippets/example.md](", report)
 
+    def test_build_report_escapes_html_in_todo_lines(self):
+        with TemporaryDirectory() as temporary_directory:
+            root = Path(temporary_directory)
+            docs_file = root / "docs" / "guide.md"
+            output_path = root / "docs" / "contributing" / "todo-report.md"
+            docs_file.parent.mkdir(parents=True)
+            docs_file.write_text(
+                "<!-- ==TODO== comment -->\n"
+                "<span> ==TODO== html & text </span>\n",
+                encoding="utf-8",
+            )
+
+            count = find_todos.build_report(root, output_path)
+            report = output_path.read_text(encoding="utf-8")
+
+        self.assertEqual(count, 2)
+        self.assertIn("&lt;!-- ==TODO== comment --&gt;", report)
+        self.assertIn("&lt;span&gt; ==TODO== html &amp; text &lt;/span&gt;", report)
+        self.assertNotIn("<!-- ==TODO== comment -->", report)
+
 
 if __name__ == "__main__":
     unittest.main()

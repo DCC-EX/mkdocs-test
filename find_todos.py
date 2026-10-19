@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import argparse
+import html
 import os
 import re
 from pathlib import Path
@@ -142,7 +143,8 @@ def build_report(root: Path, output_path: Path) -> int:
         report_sections.append("| File | Line | Line text |\n")
         report_sections.append("| --- | ---: | --- |\n")
         report_sections.extend(
-            f"| {format_file_reference(item)} | {item['line_number']} | {item['line']} |\n"
+            f"| {format_file_reference(item)} | {item['line_number']} | "
+            f"{html.escape(item['line'])} |\n"
             for item in matches
         )
         report_sections.append("\n")
@@ -155,7 +157,8 @@ def build_report(root: Path, output_path: Path) -> int:
         report_sections.append("| File | Line | Line text |\n")
         report_sections.append("| --- | ---: | --- |\n")
         report_sections.extend(
-            f"| {format_file_reference(item)} | {item['line_number']} | {item['line']} |\n"
+            f"| {format_file_reference(item)} | {item['line_number']} | "
+            f"{html.escape(item['line'])} |\n"
             for item in medium_matches
         )
         report_sections.append("\n")
@@ -168,7 +171,8 @@ def build_report(root: Path, output_path: Path) -> int:
         report_sections.append("| File | Line | Line text |\n")
         report_sections.append("| --- | ---: | --- |\n")
         report_sections.extend(
-            f"| {format_file_reference(item)} | {item['line_number']} | {item['line']} |\n"
+            f"| {format_file_reference(item)} | {item['line_number']} | "
+            f"{html.escape(item['line'])} |\n"
             for item in low_matches
         )
         report_sections.append("\n")
