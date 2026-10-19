@@ -20,7 +20,7 @@ search:
   boost: 3
 ---
 
-# <small>``<R [«cv»|LOCOID|CONSIST]>`` <br/>``<r «loco» «cv»>`` <br/>``<W [«loco»]|[«cv» «value»]|[«loco» «cv» «bitValue» «bit»]|[CONSIST «loco» [REVERSE]]>`` <br/>``<V [«cv» «value»]|[«cv» «bit» «bitValue»]>`` <br/>``<B «cv» «bit» «bitValue»>`` <br/>``<b «loco» «cv» «bit» «bitValue»>``</small> <br/>Read and write CVs
+# <small><small>``<R>`` ``<R «cv»>`` ``<R LOCOID>`` ``<R CONSIST>`` <br/>``<r «loco» «cv»>`` <br/>``<W «loco»>`` ``<W CONSIST «loco»>`` ``<W CONSIST «loco» REVERSE>`` ``<W «cv» «value»>`` ``<W «loco» «cv» «bitValue» «bit»>`` ``<W «cv» «bitValue» «bit»>`` ``<W «loco» «cv» «bitValue» «bit»>`` <br/>``<V «cv» «value»>`` ``<V «cv» «bit» «bitValue»>``<br/>``<B «cv» «bit» «bitValue»>`` <br/>``<b «loco» «cv» «bit» «bitValue»>``</small></small> <br/>Read and write CVs
 
 Serial commands to read and write CVs on the PROG track (Service mode) or on the MAIN track (PoM). This includes reading and writing the decoder DCC Address.
 
@@ -70,7 +70,7 @@ Avoid writing CV1, CV17 & CV18 directly. Use the ``<W «loco»>`` command instea
     * ``r``: response/broadcast identifier
     * **address** - one of:
         * If the loco is in a consist (CV19), the address returned by will be the consist address.
-        * If not in a consist (CV19) DCC Address of the decoder/loco. The short (``1``-``127``) or long (``128``-``10293``) address of the engine decoder
+        * If not in a consist (CV19) DCC Address of the decoder/loco.
         * ``-1`` = failed read
 
 ### Response for ``<R LOCOID>``
@@ -78,7 +78,7 @@ Avoid writing CV1, CV17 & CV18 directly. Use the ``<W «loco»>`` command instea
 * ``<r LOCOID «address»>``
     * ``r``: response/broadcast identifier
     * **address** - one of:
-        * DCC Address of the decoder/loco. The short (``1``-``127``) or long (``128``-``10293``) address of the engine decoder
+        * DCC Address of the decoder/loco.
         * ``-1`` = failed read
 
 ### Response for ``<R CONSIST>``
@@ -129,7 +129,7 @@ Avoid writing CV1, CV17 & CV18 directly. Use the ``<W «loco»>`` command instea
 * ``<w «address»>``
     * ``w``: response/broadcast identifier
     * **address** - one of:
-        * DCC Address of the decoder/loco. The short (1-127) or long (128-10293) address of the engine decoder
+        * DCC Address of the decoder/loco.
         * ``-1`` = failed read
 
 ### Response for ``<W CONSIST «loco»>``
@@ -173,6 +173,7 @@ no response.
 
 ## Notes
 
+* ``«address»`` will be: The short (``1``-``127``) or long (``128``-``10293``) address of the engine decoder. 
 * ``<W «address»>`` will write a short address (CV1) or long address (CV17 plus CV18) depending on the value entered.  It will also adjust CV29 automatically depending on what address type is required.
     * ``1``-``127`` will be a short address
     * ``128``-``10293`` will be a long address
