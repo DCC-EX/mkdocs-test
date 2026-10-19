@@ -20,11 +20,13 @@ search:
   boost: 3
 ---
 
-# <small><small>``<R>`` ``<R «cv»>`` ``<R LOCOID>`` ``<R CONSIST>`` <br/>``<r «loco» «cv»>`` <br/>``<W «loco»>`` ``<W CONSIST «loco»>`` ``<W CONSIST «loco» REVERSE>`` ``<W «cv» «value»>`` ``<W «loco» «cv» «bitValue» «bit»>`` ``<W «cv» «bitValue» «bit»>`` ``<W «loco» «cv» «bitValue» «bit»>`` <br/>``<V «cv» «value»>`` ``<V «cv» «bit» «bitValue»>``<br/>``<B «cv» «bit» «bitValue»>`` <br/>``<b «loco» «cv» «bit» «bitValue»>``</small></small> <br/>Read and write CVs
+# Serial commands to: Read and write CVs
 
 Serial commands to read and write CVs on the PROG track (Service mode) or on the MAIN track (PoM). This includes reading and writing the decoder DCC Address.
 
-It does not include reading or writing to DCC accessory decoders.
+<small>``<R>`` ``<R «cv»>`` ``<R LOCOID>`` ``<R CONSIST>`` ``<r «loco» «cv»>`` ``<W «loco»>`` ``<W CONSIST «loco»>`` ``<W CONSIST «loco» REVERSE>`` ``<W «cv» «value»>`` ``<W «loco» «cv» «bitValue» «bit»>`` ``<W «cv» «bitValue» «bit»>`` ``<W «loco» «cv» «bitValue» «bit»>`` ``<V «cv» «value»>`` ``<V «cv» «bit» «bitValue»>`` ``<B «cv» «bit» «bitValue»>`` ``<b «loco» «cv» «bit» «bitValue»>``</small>
+
+These do not include reading or writing to DCC accessory decoders.
 
 ## Commands
 
@@ -173,7 +175,7 @@ no response.
 
 ## Notes
 
-* ``«address»`` will be: The short (``1``-``127``) or long (``128``-``10293``) address of the engine decoder. 
+* ``«address»`` will be: The short (``1``-``127``) or long (``128``-``10293``) address of the engine decoder.
 * ``<W «address»>`` will write a short address (CV1) or long address (CV17 plus CV18) depending on the value entered.  It will also adjust CV29 automatically depending on what address type is required.
     * ``1``-``127`` will be a short address
     * ``128``-``10293`` will be a long address
@@ -184,7 +186,7 @@ no response.
 
 * When combined with the ``<D ACK ON>`` Command, the ``<R>`` Command (with or without parameters) can be used for diagnostics, for example when you get a ``-1`` response.
 
-* By design, for safety reasons, the NMRA specification prevents locos from responding to throttle or function commands while on the service track. A loco WILL NOT MOVE on the service track! Don't let the little 'jumps' you may see when you are programming a CV confuse you. The loco pulses the motor to give a jump in current that we read as an 'ACK' (acknowledgment), that causes some locos to stutter ahead slightly every time you read or write a CV.
+* By design, for safety reasons, the NMRA specification prevents locos from responding to throttle or function commands while on the service track (PROG). A loco WILL NOT MOVE on the service track! Don't let the little 'jumps' you may see when you are programming a CV confuse you. The loco pulses the motor to give a jump in current that we read as an 'ACK' (acknowledgment), that causes some locos to stutter ahead slightly every time you read or write a CV.
 
 * The ``<V ..>`` commands are designed to offer faster verification of the value held in a CV and can be used instead of the ``<R>`` commands. Instead of reading a bit value, it compares the bit to an expected value. It will attempt to verify the value first, an if it is successful, will return the value as if it was simply 'read'. If the verify fails, it will perform a read bit command and return the value read.
 
