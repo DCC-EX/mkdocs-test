@@ -1237,6 +1237,10 @@
          <lastmod>2026-10-19</lastmod>
     </url>
     <url>
+         <loc>https://dcc-ex.com/mkdocs-test/reference/wiring/wire-gauge/</loc>
+         <lastmod>2026-10-19</lastmod>
+    </url>
+    <url>
          <loc>https://dcc-ex.com/mkdocs-test/reference/wiring/i2C/i2c-wiring/</loc>
          <lastmod>2026-10-19</lastmod>
     </url>
@@ -1262,6 +1266,14 @@
     </url>
     <url>
          <loc>https://dcc-ex.com/mkdocs-test/support/support/</loc>
+         <lastmod>2026-10-19</lastmod>
+    </url>
+    <url>
+         <loc>https://dcc-ex.com/mkdocs-test/support/ex-csb1/ex-csb1-extended-guide/</loc>
+         <lastmod>2026-10-19</lastmod>
+    </url>
+    <url>
+         <loc>https://dcc-ex.com/mkdocs-test/support/ex-csb1/ex-csb1-full-guide/</loc>
          <lastmod>2026-10-19</lastmod>
     </url>
     <url>
