@@ -68,7 +68,7 @@ hide:
 
     ---
 
-    <span style="font-size: .7rem;">This website contains a vast amount of information, ranging from how to run your first train to how to automate a large exhibition layout.
+    <span style="font-size: .7rem;">This website contains a vast amount of information, ranging from how to run your first train to how to automate a large exhibition layout.  It is still in the process of being migrated from our [old website](https://dcc-ex.com/legacy-docs). If you can't find what you are looking for, try looking in the [old website](https://dcc-ex.com/legacy-docs).</span>
 
     <span style="font-size: .7rem;">Use the navigation buttons or search facility above to find what you need.</span>
 

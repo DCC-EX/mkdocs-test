@@ -20,7 +20,7 @@ Scanned roots: `C:\Users\akers\OneDrive\github\github_doco\mkdocs-test\docs`, `C
 
 ## High TODOs
 
-Total High TODO matches: 27
+Total High TODO matches: 25
 
 | File | Line | Line text |
 | --- | ---: | --- |
@@ -33,9 +33,7 @@ Total High TODO matches: 27
 | [docs/reference/trackmanager/dc-mode-frequency.md](../reference/trackmanager/dc-mode-frequency.md) | 82 | - ==TODO==  How to effectively use DC mode when using multiple frequencies. |
 | [docs/reference/wiring/i2C/i2c-wiring.md](../reference/wiring/i2C/i2c-wiring.md) | 54 | - When using separate power sources, there is potential for a ground loop. ==TODO== |
 | [docs/reference/hardware/hal/hal-config.md](../reference/hardware/hal/hal-config.md) | 249 | Finally, upload the code to the Arduino as you would do during the standard ==TODO== :ref:`Arduino IDE Setup <ex-commandstation/advanced-setup/installation-options/arduino-ide:upload the software>`. |
-| [docs/prepare-to-use/connecting/connecting-diy.md](../prepare-to-use/connecting/connecting-diy.md) | 17 | ==TODO== physically connecting DIY EX-CS to a layout - EX8874 |
-| [docs/prepare-to-use/connecting/connecting-diy.md](../prepare-to-use/connecting/connecting-diy.md) | 28 | ==TODO== physically connecting DIY EX-CS to a layout - Standard Arduino Motor Shield |
-| [docs/prepare-to-use/connecting/connecting-diy.md](../prepare-to-use/connecting/connecting-diy.md) | 55 | ==TODO== physically connecting DIY EX-CS to a layout - Other Motor Shields |
+| [docs/prepare-to-use/connecting/connecting-diy.md](../prepare-to-use/connecting/connecting-diy.md) | 57 | ==TODO== physically connecting DIY EX-CS to a layout - Other Motor Shields |
 | [docs/prepare-to-use/connecting/connecting-ex-csb1.md](../prepare-to-use/connecting/connecting-ex-csb1.md) | 3 | ==TODO== this page needs to be expanded |
 | [docs/prepare-to-use/installer/index.md](../prepare-to-use/installer/index.md) | 7 | ==TODO== Installing the EX-CommandStation Software - Intro |
 | [docs/prepare-to-use/installer/platformio.md](../prepare-to-use/installer/platformio.md) | 5 | ==TODO== - provide setup help. |
@@ -54,7 +52,7 @@ Total High TODO matches: 27
 
 ## Medium priority TODOs
 
-Total medium priority TODO matches: 79
+Total medium priority TODO matches: 81
 
 | File | Line | Line text |
 | --- | ---: | --- |
@@ -128,6 +126,8 @@ Total medium priority TODO matches: 79
 | [docs/products/ex-sensorcam/ex-sensorcam.md](../products/ex-sensorcam/ex-sensorcam.md) | 8 | ==TODO== MEDIUM - change the references the this page from the Arduino IDE to VSC/PIO |
 | [docs/products/ex-sensorcam/installation-guide.md](../products/ex-sensorcam/installation-guide.md) | 3 | ==TODO== MEDIUM - change the references the this page from the Arduino IDE to VSC/PIO |
 | [docs/products/ex-turntable/assembly.md](../products/ex-turntable/assembly.md) | 3 | ==TODO== MEDIUM - change the references the this page from the Arduino IDE to VSC/PIO |
+| [docs/prepare-to-use/connecting/connecting-diy.md](../prepare-to-use/connecting/connecting-diy.md) | 17 | <!-- ==TODO== MEDIUM - This section could be improved. Physically connecting DIY EX-CS to a layout - EX8874 --> |
+| [docs/prepare-to-use/connecting/connecting-diy.md](../prepare-to-use/connecting/connecting-diy.md) | 30 | <!-- ==TODO== MEDIUM - This section could be improved. Physically connecting DIY EX-CS to a layout - Standard Arduino Motor Shield --> |
 | [docs/prepare-to-use/installer/install-ex-turntable.md](../prepare-to-use/installer/install-ex-turntable.md) | 3 | ==TODO== MEDIUM - complete EX-Installer EX-Turntable page needed |
 | [docs/enhance/exrail/exrail-startup-configuration.md](../enhance/exrail/exrail-startup-configuration.md) | 20 | ==TODO== MEDIUM - Adding to your myAutomation.h in EX-Installer |
 | [docs/enhance/exrail/exrail-startup-configuration.md](../enhance/exrail/exrail-startup-configuration.md) | 26 | ==TODO== MEDIUM - Adding to your myAutomation.h in VSC |
