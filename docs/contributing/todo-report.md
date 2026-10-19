@@ -20,7 +20,7 @@ Scanned roots: `C:\Users\akers\OneDrive\github\github_doco\mkdocs-test\docs`, `C
 
 ## High TODOs
 
-Total High TODO matches: 25
+Total High TODO matches: 24
 
 | File | Line | Line text |
 | --- | ---: | --- |
@@ -33,7 +33,7 @@ Total High TODO matches: 25
 | [docs/reference/trackmanager/dc-mode-frequency.md](../reference/trackmanager/dc-mode-frequency.md) | 82 | - ==TODO==  How to effectively use DC mode when using multiple frequencies. |
 | [docs/reference/wiring/i2C/i2c-wiring.md](../reference/wiring/i2C/i2c-wiring.md) | 54 | - When using separate power sources, there is potential for a ground loop. ==TODO== |
 | [docs/reference/hardware/hal/hal-config.md](../reference/hardware/hal/hal-config.md) | 249 | Finally, upload the code to the Arduino as you would do during the standard ==TODO== :ref:`Arduino IDE Setup &lt;ex-commandstation/advanced-setup/installation-options/arduino-ide:upload the software&gt;`. |
-| [docs/prepare-to-use/connecting/connecting-diy.md](../prepare-to-use/connecting/connecting-diy.md) | 59 | ==TODO== physically connecting DIY EX-CS to a layout - Other Motor Shields |
+| [docs/prepare-to-use/connecting/connecting-diy.md](../prepare-to-use/connecting/connecting-diy.md) | 61 | ==TODO== physically connecting DIY EX-CS to a layout - Other Motor Shields |
 | [docs/prepare-to-use/connecting/connecting-ex-csb1.md](../prepare-to-use/connecting/connecting-ex-csb1.md) | 3 | &lt;!-- ==TODO== this page needs to be expanded --&gt; |
 | [docs/prepare-to-use/installer/index.md](../prepare-to-use/installer/index.md) | 7 | ==TODO== Installing the EX-CommandStation Software - Intro |
 | [docs/prepare-to-use/installer/platformio.md](../prepare-to-use/installer/platformio.md) | 5 | ==TODO== - provide setup help. |
@@ -46,19 +46,22 @@ Total High TODO matches: 25
 | [docs/enhance/exrail/cookbooks/timecontrol.md](../enhance/exrail/cookbooks/timecontrol.md) | 92 | NB:  ==TODO== See the following page for details on running sound files. |
 | snippets/configure/config-wifi-esp32-gui-options.md | 61 | ==TODO== The WiFi change limitation has been broken in the latest CS version as anything can be changed via the in-built web server |
 | snippets/configure/config-wifi-esp32-gui-options.md | 69 | ==TODO== Changing the WiFi Settings using the EX-CommandStation&#x27;s own Web Sever |
-| snippets/ex-installer/installing.md | 1 | ==TODO== **This needs to outline the steps to install EX-Installer.** |
 | snippets/ex-installer/startup-logs.md | 1 | ==TODO== Instructions required here to obtain the startup logs from **EX-Installer**. |
 | snippets/testing/testing.md | 80 | ==TODO== basic steps for initial testing with a Smart Device over WiFi |
 
 ## Medium priority TODOs
 
-Total medium priority TODO matches: 81
+Total medium priority TODO matches: 85
 
 | File | Line | Line text |
 | --- | ---: | --- |
 | [docs/support/faq.md](../support/faq.md) | 9 | ==TODO== MEDIUM Rework this so that it includes GUI options (EX-WebThrottle, Engine Driver, etc.) |
 | [docs/support/faq.md](../support/faq.md) | 19 | ==TODO== MEDIUM Rework this so that it includes GUI options (EX-WebThrottle, Engine Driver, etc.) |
 | [docs/throttles/index.md](../throttles/index.md) | 39 | ==TODO== MEDIUM - Overview of DCC Accessory Operation |
+| [docs/support/ex-csb1/ex-csb1-full-guide.md](../support/ex-csb1/ex-csb1-full-guide.md) | 268 | You can connect to the **EX‑CommandStation/Booster One Express** using both an app via Wifi on a smartphone or tablet, and/or on a PC using **EX‑WebThrottle** with the PC plugged into the EX-CSB1&#x27;s USB-C port. Detailed instructions are here https://dcc-ex.com/ex-commandstation/controllers.html#choosing-a-throttle-controller ==TODO== MEDIUM - Find link |
+| [docs/support/ex-csb1/ex-csb1-full-guide.md](../support/ex-csb1/ex-csb1-full-guide.md) | 323 | If you are having problems, look at our uploading troubleshooting guide.  ==TODO== MEDIUM - find link |
+| [docs/support/ex-csb1/ex-csb1-full-guide.md](../support/ex-csb1/ex-csb1-full-guide.md) | 443 | ==TODO== MEDIUM - USB Connection to JMRI |
+| [docs/support/ex-csb1/ex-csb1-full-guide.md](../support/ex-csb1/ex-csb1-full-guide.md) | 451 | ==TODO== MEDIUM - Integrated displays |
 | [docs/reference/command-station-architecture/io-device-drivers.md](../reference/command-station-architecture/io-device-drivers.md) | 3 | &lt;!-- ==TODO== MEDIUM - change the references on this page from the Arduino IDE to VSC/PIO --&gt; |
 | [docs/reference/configuration/advanced-config-h.md](../reference/configuration/advanced-config-h.md) | 3 | &lt;!-- ==TODO== MEDIUM - change the references on this page/section from the Arduino IDE to VSC/PIO --&gt; |
 | [docs/reference/microcontrollers/index.md](../reference/microcontrollers/index.md) | 5 | &lt;!-- ==TODO== MEDIUM - change the references on this page/section from the Arduino IDE to VSC/PIO --&gt; |

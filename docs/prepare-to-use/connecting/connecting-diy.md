@@ -40,7 +40,9 @@ The **EX-CommandStation** needs the minimum following connections to be able to 
 - **Power supply for the Arduino Mega**.  This can be either:
 
     - **7-9v DC power input on the 2.1 barrel connector** - Recommended
-    - **USB power** - Not recommended. Powering with a USB power supply generally works, but may cause other issues later.
+    - **USB power** - Not recommended
+
+        Powering with a USB power supply generally works, but can cause issues if you have installed an optional WiFi shield or any other connected devices.
 
 - At least **one track connection** – on either the Track Output A (beside the power) or Track Output B connector.
 

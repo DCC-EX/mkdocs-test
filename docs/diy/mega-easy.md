@@ -21,13 +21,19 @@ To build a basic DIY **EX-CommandStation** with an **EX-MotorShield8874** in eas
 
 ### 1. Prepare your Arduino Mega
 
-1. Use sticky tape or similar to cover up the barrel connector on the Mega. (Power to the processor will be provided by the EX8874 shield and you don't want accidents.)
+1. Use sticky tape or similar to cover up the barrel connector on the Mega. (Power to the microcontroller will be provided by the **EX-MotorShield8874** shield and you don't want accidents.)
 
-2. Use sticky tape or similar to cover the top of the USB connector on the mega. This prevents any accidental contact with the underside of the motor shield. ![connectors](../_static/images/mega/mega1.png)
+2. If you have an older Arduino Mega with the large USB-B type connector, use kapton tape, electrical tape, sticky tape or similar to cover the top of the USB connector on the mega. This prevents any accidental contact with the underside of the motor shield.
 
-3. Mount your Mega on 3d printed tray, a piece of plastic card or wood to make sure that the underside solder points are insulated. Placing your **EX-CommandStation** down on a tool, coin or even your track can short the pins and, in some cases, damage the board.
+    ![connectors](../_static/images/mega/mega1.png){ width=400px }
 
-### 2. Mount the EX-MotorShield8874 shield
+    *Not required for later Megas that came wth MicroUSB or USB-C connectors.*
+
+3. Mount your Mega on a 3D printed tray, a piece of plastic card or wood to make sure that the underside solder points are insulated.
+
+    This prevents damage to the boards from an electrical short, if you accidentally place your **EX-CommandStation** down on a tool, coin or even your track.
+
+### 2. Mount the EX-MotorShield8874
 
 **DO NOT USE ANY OTHER SHIELD TYPE WITHOUT FIRST CHECKING OUR DETAILED INSTRUCTIONS FOR THAT SHIELD.**
 
@@ -53,7 +59,7 @@ We recommend you label the power supply so that it does not get confused with ot
 
 ### 5. Connect to your PC
 
-Using a suitable USB cable (must carry Data and Power, not all cables do this!) connect the Mega USB to your PC.
+Using a suitable USB cable (must carry both Data and Power, not all cables do this!) connect the Mega USB to your PC.
 
 ### 6. Connect your track
 
@@ -67,7 +73,7 @@ The **EX-MotorShield8874** track connectors unplug for easy access.
 
 ### 7. Load the software
 
-Congratulations, you have built a DIY **EX-CommandStation** the easy way. But you still have to load the software.
+Congratulations, you have built a DIY **EX-CommandStation** the easy way. But you now must load the software to be able to use it.
 
 For simplicity, software loading is best done with the [EX-Installer](installer.md)
 

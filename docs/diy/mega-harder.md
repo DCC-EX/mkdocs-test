@@ -6,7 +6,9 @@ These instructions assume a slightly more competent user who has made the decisi
 
 There are a limited number of suitable motor or WiFi shields available and each has its own quirks.
 
-Note. The use of the Arduino UNO is no longer supported by the current version of the **EX-CommandStation** software, but it is still possible to install older version on an Arduino UNO.
+!!! Note ""
+
+    Note: The Arduino UNO is no longer supported by the current version of the **EX-CommandStation** software, but it is still possible to install older versions on an Arduino UNO if really needed.
 
 ## What you need
 
@@ -36,20 +38,35 @@ To build a basic DIY **EX-CommandStation** you will need:
 
 ### 1. Prepare your Mega
 
-- Use sticky tape or similar to cover the top of the USB connector on the mega. This prevents any accidental contact with the underside of the motor shield.
+1. If you have an older Arduino Mega with the large USB-B type connector, use kapton tape, electrical tape, sticky tape or similar to cover the top of the USB connector on the mega. This prevents any accidental contact with the underside of the motor shield.
+
+    ![connectors](../_static/images/mega-hard/mega-with-usb-b-covered.png){ width=400px }
+
+    *Not required for later Megas that came wth MicroUSB or USB-C connectors.*
+
+2. Mount your Mega on a 3D printed tray, a piece of plastic card or wood to make sure that the underside solder points are insulated.
+
+    This prevents damage to the boards from an electrical short, if you accidentally place your **EX-CommandStation** down on a tool, coin or even your track.
 
 ### 2. Optionally mount your Ethernet Shield - ***OPTIONAL***
 
 Note, you can't have Ethernet and WiFi running on the same **EX-CommandStation**, but you can install both shields and choose one or the other when installing the software.
-See [Ethernet Install](ethernet.md)
+See the [Ethernet Install](ethernet.md) page for more information.
 
 ### 3. Prepare your motor shield
 
 ![VIN trace](../_static/images/mega-hard/mega2.png){ align=right }
 
-<span style="color:red">**FAILURE TO DO THIS CAN DESTROY YOUR MEGA.**</span>
+<span style="display: block; text-align: center;color:red;">**˅˅˅ WARNING - WARNING - WARNING ˅˅˅<br/>  
+FAILURE TO DO THIS CAN DESTROY YOUR MEGA**</span>
 
-1. Unless you are using an **EX-MotorShield8874** motor shield ([covered here](mega-easy.md)), you MUST prevent the shield from feeding track voltage into your Mega. This is done by cutting the VIN trace and/or removing the pin that feeds the Mega.
+1. You *MUST prevent the shield from feeding track voltage into your Mega*. This is done by cutting the VIN trace and/or removing the pin that feeds the Mega.
+
+    Recommended: If you have a multimeter, once cut, confirm that there is no conductivity between the two pads.
+
+    <span style="display: block; text-align: center;color:red;">**˄˄˄ WARNING - WARNING - WARNING ˄˄˄**</span>
+
+    *Note: This is not required if you are using an **EX-MotorShield8874** motor shield ([covered here](mega-easy.md))*.
 
 2. Ensure shield pins are straight and correctly aligned.
 
@@ -59,7 +76,9 @@ See [Ethernet Install](ethernet.md)
 
 ![Orientation](../_static/images/mega-hard/mega4.png){: style="width: 70%"  align=right }
 
-Align the motor shield so that the power connectors are at the same end as the Mega power/USB connectors. It is normal for you to see a few millimetres of the pins between the bottom of the motor board and the top of the headers.
+Align the motor shield so that the power connectors are at the same end as the Mega power/USB connectors. 
+
+It is normal for you to see a few millimetres of the pins between the bottom of the motor board and the top of the headers.
 
 <div style="clear: both;"></div>
 ### Connect your track
@@ -67,7 +86,7 @@ Align the motor shield so that the power connectors are at the same end as the M
 ![Orientation](../_static/images/mega-hard/mega5.png){ align=right }
 Don't skip this step if you don't yet have any track because the WiFi shield will cover the connectors.
 
-It's best to create fly leads with a suitable pluggable connectors for later. It makes it much easier to detach your **EX-CommandStation** from your layout when you need to fiddle with it or throw it against the wall out of sheer frustration.
+It's best to create fly leads with a suitable pluggable connectors for later. It makes it much easier to detach your **EX-CommandStation** from your layout when you need to fiddle with it later.
 
 If you only have one piece of track for testing, wire it to the PROG track plug.
 
@@ -89,15 +108,15 @@ You will need to connect to a 7-9vDC [Power supply](power.md) to the Arduino Meg
 
 ### 7. Optionally install a WiFi Shield - ***OPTIONAL***
 
-See [WiFi Install](wifi.md)
+See the [WiFi Install](wifi.md) page for more information.
 
 ### 8. Connect to your PC
 
-Using a suitable USB cable (must carry Data and Power, not all cables do this!) connect the Mega USB to your PC.
+Using a suitable USB cable (must carry both Data and Power, not all cables do this!) connect the Mega USB to your PC.
 
 ### 9. Load the software
 
-Congratulations, you have built a DIY **EX-CommandStation**. But you still have to load the software.
+Congratulations, you have built a DIY **EX-CommandStation**. But you now must load the software to be able to use it.
 
 For simplicity, software loading is best done with the [EX-Installer](installer.md)
 

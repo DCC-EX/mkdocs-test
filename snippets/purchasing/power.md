@@ -27,7 +27,7 @@ For the Arduino Motor Shield, the DEEK Motor Shield and most others, the quasi-A
 
 The **EX-MotorShield8874** (which is also built into the **EX-CSB1**) provides power for both the track and the **EX-CommandStation**. There is almost zero voltage drop between the power supply and the track.
 
-We strongly advise purchasing a suitable power supply at the same time as the **EX-CSB1**** or **EX-MotorShield8874** from a vendor who understands your requirements.
+We strongly advise purchasing a suitable power supply at the same time as the **EX-CSB1** or **EX-MotorShield8874** from a vendor who understands your requirements.
 
 ## Other Motor Drivers
 
