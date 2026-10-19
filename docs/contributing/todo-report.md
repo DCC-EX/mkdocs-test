@@ -51,17 +51,16 @@ Total High TODO matches: 24
 
 ## Medium priority TODOs
 
-Total medium priority TODO matches: 85
+Total medium priority TODO matches: 87
 
 | File | Line | Line text |
 | --- | ---: | --- |
 | [docs/support/faq.md](../support/faq.md) | 9 | ==TODO== MEDIUM Rework this so that it includes GUI options (EX-WebThrottle, Engine Driver, etc.) |
 | [docs/support/faq.md](../support/faq.md) | 19 | ==TODO== MEDIUM Rework this so that it includes GUI options (EX-WebThrottle, Engine Driver, etc.) |
 | [docs/throttles/index.md](../throttles/index.md) | 39 | ==TODO== MEDIUM - Overview of DCC Accessory Operation |
-| [docs/support/ex-csb1/ex-csb1-full-guide.md](../support/ex-csb1/ex-csb1-full-guide.md) | 268 | You can connect to the **EX‑CommandStation/Booster One Express** using both an app via Wifi on a smartphone or tablet, and/or on a PC using **EX‑WebThrottle** with the PC plugged into the EX-CSB1&#x27;s USB-C port. Detailed instructions are here https://dcc-ex.com/ex-commandstation/controllers.html#choosing-a-throttle-controller ==TODO== MEDIUM - Find link |
-| [docs/support/ex-csb1/ex-csb1-full-guide.md](../support/ex-csb1/ex-csb1-full-guide.md) | 323 | If you are having problems, look at our uploading troubleshooting guide.  ==TODO== MEDIUM - find link |
-| [docs/support/ex-csb1/ex-csb1-full-guide.md](../support/ex-csb1/ex-csb1-full-guide.md) | 443 | ==TODO== MEDIUM - USB Connection to JMRI |
-| [docs/support/ex-csb1/ex-csb1-full-guide.md](../support/ex-csb1/ex-csb1-full-guide.md) | 451 | ==TODO== MEDIUM - Integrated displays |
+| [docs/support/ex-csb1/ex-csb1-full-guide.md](../support/ex-csb1/ex-csb1-full-guide.md) | 325 | If you are having problems, look at our uploading troubleshooting guide.  ==TODO== MEDIUM - find link |
+| [docs/support/ex-csb1/ex-csb1-full-guide.md](../support/ex-csb1/ex-csb1-full-guide.md) | 445 | ==TODO== MEDIUM - USB Connection to JMRI |
+| [docs/support/ex-csb1/ex-csb1-full-guide.md](../support/ex-csb1/ex-csb1-full-guide.md) | 453 | ==TODO== MEDIUM - Integrated displays |
 | [docs/reference/command-station-architecture/io-device-drivers.md](../reference/command-station-architecture/io-device-drivers.md) | 3 | &lt;!-- ==TODO== MEDIUM - change the references on this page from the Arduino IDE to VSC/PIO --&gt; |
 | [docs/reference/configuration/advanced-config-h.md](../reference/configuration/advanced-config-h.md) | 3 | &lt;!-- ==TODO== MEDIUM - change the references on this page/section from the Arduino IDE to VSC/PIO --&gt; |
 | [docs/reference/microcontrollers/index.md](../reference/microcontrollers/index.md) | 5 | &lt;!-- ==TODO== MEDIUM - change the references on this page/section from the Arduino IDE to VSC/PIO --&gt; |
@@ -88,6 +87,9 @@ Total medium priority TODO matches: 85
 | [docs/reference/serial-commands/serial-command-jj-ll_not_in_nav.md](../reference/serial-commands/serial-command-jj-ll_not_in_nav.md) | 20 | * **row**: *Required* ==TODO== MEDIUM parameter description |
 | [docs/reference/serial-commands/serial-command-jj-ll_not_in_nav.md](../reference/serial-commands/serial-command-jj-ll_not_in_nav.md) | 24 | ==TODO== MEDIUM - Responses |
 | [docs/reference/serial-commands/serial-command-jj-mm_not_in_nav.md](../reference/serial-commands/serial-command-jj-mm_not_in_nav.md) | 30 | * **StashId**: Id of the stash to set, clear or get (``0`` - ==TODO== MEDIUM) |
+| [docs/reference/serial-commands/serial-command-jj-rr_not_in_nav.md](../reference/serial-commands/serial-command-jj-rr_not_in_nav.md) | 51 | ==TODO== MEDIUM - Response for ``&lt;J R «id» &quot;«name&quot; &quot;«functions»&quot;&gt;`` |
+| [docs/reference/serial-commands/serial-command-jj-rr_not_in_nav.md](../reference/serial-commands/serial-command-jj-rr_not_in_nav.md) | 55 | ==TODO== MEDIUM - Response for ``&lt;J R «id» DELETE&gt;``` |
+| [docs/reference/serial-commands/serial-command-jj-rr_not_in_nav.md](../reference/serial-commands/serial-command-jj-rr_not_in_nav.md) | 59 | ==TODO== MEDIUM - Response for ``&lt;J R SAVE&gt;`` |
 | [docs/reference/serial-commands/serial-command-kk_and_k_not_in_nav.md](../reference/serial-commands/serial-command-kk_and_k_not_in_nav.md) | 21 | * **blockid**: *Required* ==TODO== MEDIUM description |
 | [docs/reference/serial-commands/serial-command-kk_and_k_not_in_nav.md](../reference/serial-commands/serial-command-kk_and_k_not_in_nav.md) | 22 | * **loco**: *Required* ==TODO== MEDIUM description |
 | [docs/reference/serial-commands/serial-command-kk_and_k_not_in_nav.md](../reference/serial-commands/serial-command-kk_and_k_not_in_nav.md) | 26 | ==TODO== MEDIUM - Responses |

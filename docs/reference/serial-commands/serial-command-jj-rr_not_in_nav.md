@@ -7,7 +7,7 @@ search:
   boost: 3
 ---
 
-# <small>``<J R [«id»] ["«name" "«functions»"]|DELETE>`` <br/> ``<J R SAVE>``</small> <br/>Request Roster info
+# <small>``<J R>`` ``<J R «id»>`` ``<J R «id» "«name" "«functions»">`` <br/> ``<J R «id» DELETE>`` ``<J R SAVE>``</small> <br/>Request Roster info
 
 Serial command to request roster info, or add new roster entries and save them in RAM.
 
