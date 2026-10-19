@@ -18,8 +18,8 @@ To build a basic DIY **EX-CommandStation** you will need:
 - An Arduino Mega microcontroller running our free Open Source software
 - USB cable to your PC for the processor.
 - an Arduino Standard Motor-Shield (or others as noted in the [motor shields list](../reference/hardware/motorboards/index.md)) to power the track.
-- A double-insulated DC power supply with a voltage suitable for your layout/locos.
-- An additional double-insulated DC Power supply is needed to drive the Arduino microcontroller.
+- A double-insulated DC [Power supply](power.md) with a voltage suitable for your layout/locos.
+- An additional double-insulated DC [Power supply](power.md) is needed to drive the Arduino microcontroller.
   7 to 9 volts, using the barrel connector, is recommended when using a WiFi shield.
   5 volts will not work for the barrel connector, but could be connected via USB cable.
 - Optionally
@@ -34,20 +34,20 @@ To build a basic DIY **EX-CommandStation** you will need:
 
 ## Step By Step Build
 
-### Prepare your Mega
+### 1. Prepare your Mega
 
 - Use sticky tape or similar to cover the top of the USB connector on the mega. This prevents any accidental contact with the underside of the motor shield.
 
-### Optionally mount your Ethernet Shield
+### 2. Optionally mount your Ethernet Shield - ***OPTIONAL***
 
 Note, you can't have Ethernet and WiFi running on the same **EX-CommandStation**, but you can install both shields and choose one or the other when installing the software.
 See [Ethernet Install](ethernet.md)
 
-### Prepare your motor shield
-
-<span style="color:red">**FAILURE TO DO THIS CAN DESTROY YOUR MEGA.**</span>
+### 3. Prepare your motor shield
 
 ![VIN trace](../_static/images/mega-hard/mega2.png){ align=right }
+
+<span style="color:red">**FAILURE TO DO THIS CAN DESTROY YOUR MEGA.**</span>
 
 1. Unless you are using an **EX-MotorShield8874** motor shield ([covered here](mega-easy.md)), you MUST prevent the shield from feeding track voltage into your Mega. This is done by cutting the VIN trace and/or removing the pin that feeds the Mega.
 
@@ -55,7 +55,7 @@ See [Ethernet Install](ethernet.md)
 
 <div style="clear: both;"></div>
 
-### Mount the motor shield
+### 4. Mount the motor shield
 
 ![Orientation](../_static/images/mega-hard/mega4.png){: style="width: 70%"  align=right }
 
@@ -75,18 +75,30 @@ If you only have one piece of track for testing, wire it to the PROG track plug.
  2. Your PROG track is wired to the B channel output.
 
 <div style="clear: both;"></div>
-### Connect your track power supply
+
+### 5. Connect your track power supply
 
 ![Power](../_static/images/mega-hard/mega6.png){ align=right width=400px }
 Wire your track power supply to the input turrets of the motor shield, observing polarity. It is best to create short wire with a female barrel connector.
 
 <div style="clear: both;"></div>
-### Optionally install a WiFi Shield
+
+### 6. Connecting your Arduino Mega power supply
+
+You will need to connect to a 7-9vDC [Power supply](power.md) to the Arduino Mega before you can run your trains, but it is not required until after you have installed the **EX-CommandStation** software. The USB connection from your PC will provide sufficient power initially.
+
+### 7. Optionally install a WiFi Shield - ***OPTIONAL***
 
 See [WiFi Install](wifi.md)
 
-### Load the software
+### 8. Connect to your PC
 
-Software loading is best done with the [EX-Installer](installer.md)
+Using a suitable USB cable (must carry Data and Power, not all cables do this!) connect the Mega USB to your PC.
+
+### 9. Load the software
+
+Congratulations, you have built a DIY **EX-CommandStation**. But you still have to load the software.
+
+For simplicity, software loading is best done with the [EX-Installer](installer.md)
 
 --8<-- "snippets/abbr.md"
