@@ -10684,7 +10684,7 @@
 <p>For detailed steps on how to use TrackManager to change track modes and settings, check out the <a href="../../../enhance/trackmanager/">TrackManager page</a>.</p>
 <h2 id="hardware-requirements">Hardware Requirements<a class="headerlink" href="#hardware-requirements" title="Permanent link">&para;</a></h2>
 <p>These requirements are only for <em>operating DC locomotives</em>. There is nothing to do in a pure DCC environment where no DC or analogue locomotives are run.</p>
-<p><strong>Brake Pin:</strong> In order for <strong>TrackManager</strong> to operate in DC mode, the motor shield must have a brake pin defined in your "config.h" motor shield definition. <br /> There are a very limited number of motor drivers that are known to be suitable for use with DC mode. The current list is available in the <a href="../../hardware/motorboards/#current-list-of-motor-drivers">Motor Drivers List</a>. Any other motor drivers, not explicitly listed, are not supported.</p>
+<p><strong>Brake Pin:</strong> In order for <strong>TrackManager</strong> to operate in DC mode, the <abbr title="Also referred to as a 'motor controller' or 'motor driver'">motor shield</abbr> must have a brake pin defined in your "config.h" <abbr title="Also referred to as a 'motor controller' or 'motor driver'">motor shield</abbr> definition. <br /> There are a very limited number of motor drivers that are known to be suitable for use with DC mode. The current list is available in the <a href="../../hardware/motorboards/#current-list-of-motor-drivers">Motor Drivers List</a>. Any other motor drivers, not explicitly listed, are not supported.</p>
 <p>Note the <strong><abbr title="EX-CommandStation/Booster 1 Express">EX-CSB1</abbr></strong> <em>has</em> a brake pin and <em>is</em> therefore capable of supporting DC <abbr title="Pulse Width Modulation">PWM</abbr>.</p>
 <div class="admonition warning inline end">
 <p class="admonition-title">Never drive from/to DC to DCC</p>
@@ -10703,7 +10703,7 @@
 TrackManager allows you to set up and operate up to eight separate dual insulated sections of track/districts in either DCC (<abbr title="Pulse Width Modulation">PWM</abbr>) and or DC (<abbr title="Pulse Width Modulation">PWM</abbr>) as tracks A - H.</p>
 <p>An Arduino Mega (with or without WiFi) and <strong><abbr title="EX-CommandStation/Booster 1 Express">EX-CSB1</abbr></strong>, <strong>EX-CommandStation</strong> has two ready to run Tracks (<strong>A</strong> &amp; <strong>B</strong>) which can be configured as:</p>
 <ul>
-<li>DCC (<abbr title="Pulse Width Modulation">PWM</abbr>) modes <abbr title="Main Track / Ops Mode">MAIN</abbr> for mainline tracks and <abbr title="Programming Track / Service Mode">PROG</abbr> for a programming track</li>
+<li>DCC (<abbr title="Pulse Width Modulation">PWM</abbr>) modes <abbr title="Main Track / Operations Mode (Ops Mode)">MAIN</abbr> for mainline tracks and <abbr title="Programming Track / Service Mode">PROG</abbr> for a programming track</li>
 <li>DC (<abbr title="Pulse Width Modulation">PWM</abbr>) modes for DC or DC_INV / DCX (opposite polarity)</li>
 <li>Each track/district can also be disabled by setting to "NONE"</li>
 </ul>
@@ -10711,10 +10711,10 @@ TrackManager allows you to set up and operate up to eight separate dual insulate
 <p>One key difference to note in comparing DCC vs. DC is that in DCC mode, forward/reverse is determined by the DCC decoder, not the track, whereas in DC mode the direction is dependent upon the track polarity.</p>
 <p><strong>This is not your father's DC railway which used DC transformers for Cab control.</strong></p>
 <p>Turn off, unplug the AC power cord, and disconnect your current DC transformer(s) / power supply(s) from the DC layout track to place in a box for safe keeping.</p>
-<p>You will instead be using a regulated DC (Laptop) 12-16v DC 3-5Amp power supply <sup>1</sup> to your motor shield and or Motor Board (booster) to run all your DCC Locos and analogue DC Cabs on all your individual tracks/districts/blocks.</p>
+<p>You will instead be using a regulated DC (Laptop) 12-16v DC 3-5Amp power supply <sup>1</sup> to your <abbr title="Also referred to as a 'motor controller' or 'motor driver'">motor shield</abbr> and or Motor Board (booster) to run all your DCC Locos and analogue DC Cabs on all your individual tracks/districts/blocks.</p>
 <p>You will be using DC (Pulse Width Modulation <abbr title="Pulse Width Modulation">PWM</abbr>) to drive the DC engines, Not DC Direct Current (-0 +16v).</p>
 <ol>
-<li>The voltage you need for the motor driver depends on the scale/gauge of the layout you are using. Bigger is not always better. Too high a voltage can damage your locos. See the :ref:<code>reference/hardware/power-supplies:powering the motor driver</code> for more information.  </li>
+<li>The voltage you need for the <abbr title="Also referred to as a 'motor controller' or 'motor shield'">motor driver</abbr> depends on the scale/gauge of the layout you are using. Bigger is not always better. Too high a voltage can damage your locos. See the :ref:<code>reference/hardware/power-supplies:powering the motor driver</code> for more information.  </li>
 </ol>
 <h3 id="dc-operation">DC Operation<a class="headerlink" href="#dc-operation" title="Permanent link">&para;</a></h3>
 <p>When using DC mode with the <strong>EX-CommandStation</strong>, it is important to understand that this is mode does not produce the traditional varying of the DC voltage to control the speed of your locomotive. The speed of your train is controlled using a method called <abbr title="Pulse Width Modulation">PWM</abbr> (Pulse Width Modulation), so instead, the track always receives full voltage whenever the throttle is set above zero.</p>
@@ -10731,20 +10731,20 @@ TrackManager allows you to set up and operate up to eight separate dual insulate
 <br/>What a DCC waveform looks like</p>
 <p><img alt="PWM Waveform" src="../../../_static/images/trackmanager/pwm.svg" width="300px" />
 <br/>What a <abbr title="Pulse Width Modulation">PWM</abbr> waveform looks like</p>
-<p>These modes, (<abbr title="Pulse Width Modulation">PWM</abbr>) vs analogue DC are totally incompatible with one another and if crossed will result in magic smoke and a burned out motor shield and or USB connector.</p>
+<p>These modes, (<abbr title="Pulse Width Modulation">PWM</abbr>) vs analogue DC are totally incompatible with one another and if crossed will result in magic smoke and a burned out <abbr title="Also referred to as a 'motor controller' or 'motor driver'">motor shield</abbr> and or USB connector.</p>
 <ul>
 <li>DCC(<abbr title="Pulse Width Modulation">PWM</abbr>) is detected on a multimeter as an AC signal but in a square wave form, not as a sine wave</li>
 <li>DC(<abbr title="Pulse Width Modulation">PWM</abbr>) is detected on a multimeter as a DC signal in a square wave form, not as a direct current wave</li>
 </ul>
 <p>The DC(<abbr title="Pulse Width Modulation">PWM</abbr>) track is Power supply dependent and needs a varying amount of 0 zero to maximum Vdc passed to the track of 12 or 16 or 18vdc, depending on whether they're N, HO or G scale engines.</p>
-<p>Note: The signal is detected as DC on this track, from 0Vdc to max +xxVdc depending on the motor shield DC power supply output. The DCC-EX 122.55Hz <abbr title="Pulse Width Modulation">PWM</abbr> DC motor signal allows for better functioning and better running than most competing systems.</p>
+<p>Note: The signal is detected as DC on this track, from 0Vdc to max +xxVdc depending on the <abbr title="Also referred to as a 'motor controller' or 'motor driver'">motor shield</abbr> DC power supply output. The DCC-EX 122.55Hz <abbr title="Pulse Width Modulation">PWM</abbr> DC motor signal allows for better functioning and better running than most competing systems.</p>
 <h3 id="trackmanager-dccpwm-vs-dcpwm-wave-forms">TrackManager DCC(<abbr title="Pulse Width Modulation">PWM</abbr>) vs. DC(<abbr title="Pulse Width Modulation">PWM</abbr>) wave forms<a class="headerlink" href="#trackmanager-dccpwm-vs-dcpwm-wave-forms" title="Permanent link">&para;</a></h3>
 <p>A simplified representation of what the dual (<abbr title="Pulse Width Modulation">PWM</abbr>) signals might look like through the track:</p>
 <p><img alt="DCC PWM signal" src="../../../_static/images/trackmanager/dcc-and-dc-on-track.png" width="300px" />
 <br/>DCC <abbr title="Pulse Width Modulation">PWM</abbr> signal</p>
 <div class="admonition note">
 <p class="admonition-title">Note on <abbr title="Pulse Width Modulation">PWM</abbr> frequency</p>
-<p>Different microcontrollers utilise different <abbr title="Pulse Width Modulation">PWM</abbr> frequencies, and at present, these default frequencies are in use rather than using software to define them.</p>
+<p>Different <abbr title="ESP32, Nucleo, or Arduino Mega">microcontrollers</abbr> utilise different <abbr title="Pulse Width Modulation">PWM</abbr> frequencies, and at present, these default frequencies are in use rather than using software to define them.</p>
 <p>The side effect of these differing frequencies is that you may notice humming or sometimes squealing noises from older DC motors.</p>
 <p>The known <abbr title="Pulse Width Modulation">PWM</abbr> frequencies are:</p>
 <ul>
@@ -10766,8 +10766,8 @@ And no we're not using another Expensive DCC decoder under the table on each Tra
 <h2 id="hardware-requirements-and-technical-notes">Hardware Requirements and Technical Notes<a class="headerlink" href="#hardware-requirements-and-technical-notes" title="Permanent link">&para;</a></h2>
 <p>These requirements are only for operating DC locomotives. There is nothing to do in a pure DCC environment where no DC or analogue locomotives are run.</p>
 <div class="admonition warning">
-<p class="admonition-title">The motor driver must have a brake pin defined</p>
-<p>In order for <strong>TrackManager</strong> to operate in DC mode, the motor driver must have a brake pin defined in your "config.h" motor driver definition.</p>
+<p class="admonition-title">The <abbr title="Also referred to as a 'motor controller' or 'motor shield'">motor driver</abbr> must have a brake pin defined</p>
+<p>In order for <strong>TrackManager</strong> to operate in DC mode, the <abbr title="Also referred to as a 'motor controller' or 'motor shield'">motor driver</abbr> must have a brake pin defined in your "config.h" <abbr title="Also referred to as a 'motor controller' or 'motor shield'">motor driver</abbr> definition.</p>
 <p>There are a very limited number of motor drivers that are known to be suitable for use with DC mode. TThe current list is available in the <a href="../../hardware/motorboards/#current-list-of-motor-drivers">Motor Drivers List</a>. Any other motor drivers, not explicitly listed, are not supported. </p>
 <p>Note the <strong><abbr title="EX-CommandStation/Booster 1 Express">EX-CSB1</abbr></strong> and <strong>EX-MotorShield8874</strong> <em>have</em> a brake pin and <em>is</em> therefore capable of supporting DC <abbr title="Pulse Width Modulation">PWM</abbr>.</p>
 </div>

@@ -10481,21 +10481,21 @@
 
 <h1 id="esp32-l298-shields">ESP32 + L298 Shields<a class="headerlink" href="#esp32-l298-shields" title="Permanent link">&para;</a></h1>
 <p><img align="right" alt="Genuino Arduino R3" src="../../../../_static/images/esp32/espduino-32-motor-shield-fritzing.png" width="40%" /></p>
-<h2 id="genuine-arduino-motor-shield-r3">Genuine Arduino Motor Shield R3<a class="headerlink" href="#genuine-arduino-motor-shield-r3" title="Permanent link">&para;</a></h2>
+<h2 id="genuine-arduino-motor-shield-r3">Genuine Arduino <abbr title="Also referred to as a 'motor controller' or 'motor driver'">Motor Shield</abbr> R3<a class="headerlink" href="#genuine-arduino-motor-shield-r3" title="Permanent link">&para;</a></h2>
 <ul>
 <li>
 <p><strong>IOREF voltage</strong></p>
 <ul>
 <li>The IOREF pin on the ESP32 Uno form factor boards is 5V -- and not correct for a 3.3V microprocessor.</li>
-<li>To avoid damaging the ESP32's analog inputs, correct the IOREF voltage by bending the IOREF pin on the L298 motor shield, and use a jumper to connect the 3.3V pin to IOREF on the motor shield itself.</li>
-<li>On the Genuino Arduino Motor Shield R3, the IOREF voltage is used as the supply voltage on the LMV358 op-amp and provides a spillway effect for the Schottky diodes on the A2, A3 pins of the motor shield.</li>
+<li>To avoid damaging the ESP32's analog inputs, correct the IOREF voltage by bending the IOREF pin on the L298 <abbr title="Also referred to as a 'motor controller' or 'motor driver'">motor shield</abbr>, and use a jumper to connect the 3.3V pin to IOREF on the <abbr title="Also referred to as a 'motor controller' or 'motor driver'">motor shield</abbr> itself.</li>
+<li>On the Genuino Arduino <abbr title="Also referred to as a 'motor controller' or 'motor driver'">Motor Shield</abbr> R3, the IOREF voltage is used as the supply voltage on the LMV358 op-amp and provides a spillway effect for the Schottky diodes on the A2, A3 pins of the <abbr title="Also referred to as a 'motor controller' or 'motor driver'">motor shield</abbr>.</li>
 </ul>
 </li>
 <li>
 <p><strong>Current sensing</strong></p>
 <ul>
 <li>For current sensing bend or cut the A0 and A1 pins.</li>
-<li>On the top of the motor shield connect A0 to A2 and A1 to A3 via jumpers.</li>
+<li>On the top of the <abbr title="Also referred to as a 'motor controller' or 'motor driver'">motor shield</abbr> connect A0 to A2 and A1 to A3 via jumpers.</li>
 <li>On the Wemos D1 R32 ESP32, the A0, A1 pins are connected to GPIO2 and GPIO4 -- not useable for ADC input at the same time as WiFi.  Connecting to the A2, A3 pins also provides the benefit of the Schottky diodes.</li>
 </ul>
 </li>
@@ -10512,8 +10512,8 @@
 <p><strong>IOREF voltage</strong></p>
 <ul>
 <li>The IOREF pin on the ESP32 Uno form factor boards is 5V -- and not correct for a 3.3V microprocessor.</li>
-<li>Correct the IOREF voltage by bending the IOREF pin on the L298 motor shield, then
-  IOREF will can be connected to the 3.3V pin to provide a spillway effect for the Schottky diodes on the A2, A3 pins of the motor shield.</li>
+<li>Correct the IOREF voltage by bending the IOREF pin on the L298 <abbr title="Also referred to as a 'motor controller' or 'motor driver'">motor shield</abbr>, then
+  IOREF will can be connected to the 3.3V pin to provide a spillway effect for the Schottky diodes on the A2, A3 pins of the <abbr title="Also referred to as a 'motor controller' or 'motor driver'">motor shield</abbr>.</li>
 </ul>
 </li>
 <li>
@@ -10544,7 +10544,7 @@
 <p><strong>Motor define - STANDARD_MOTOR_SHIELD</strong></p>
 <ul>
 <li>When STANDARD_MOTOR_SHIELD is defined in config.h, the definition for the <strong>WeMos D1 R32</strong> is in place when ESP32 is selected as the build target.</li>
-<li>Review of <strong>motor shield define</strong> from MotorDrivers.h for ESP32 WeMos R1 D32</li>
+<li>Review of <strong><abbr title="Also referred to as a 'motor controller' or 'motor driver'">motor shield</abbr> define</strong> from MotorDrivers.h for ESP32 WeMos R1 D32</li>
 </ul>
 <div class="language-cpp highlight"><pre><span></span><code><span class="cp">#define STANDARD_MOTOR_SHIELD F(&quot;STANDARD_MOTOR_SHIELD&quot;), \</span>
 <span class="cp">    new MotorDriver(25</span><span class="cm">/* 3*/</span><span class="cp">, 19</span><span class="cm">/*12*/</span><span class="cp">, UNUSED_PIN, 13</span><span class="cm">/*9*/</span><span class="cp">, 35</span><span class="cm">/*A2*/</span><span class="cp">, 0.70, 1500, UNUSED_PIN), \</span>

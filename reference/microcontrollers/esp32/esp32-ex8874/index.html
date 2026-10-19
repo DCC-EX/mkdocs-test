@@ -10597,7 +10597,7 @@ The information below may help explain how to overcome some of the complexities 
 </ul>
 <hr />
 <h2 id="one-ex8874">One EX8874<a class="headerlink" href="#one-ex8874" title="Permanent link">&para;</a></h2>
-<p>Review of <strong>motor shield define</strong> from MotorDrivers.h for ESP32 WeMos R1 D32</p>
+<p>Review of <strong><abbr title="Also referred to as a 'motor controller' or 'motor driver'">motor shield</abbr> define</strong> from MotorDrivers.h for ESP32 WeMos R1 D32</p>
 <div class="language-cpp highlight"><pre><span></span><code><span class="w">  </span><span class="cp">#elif defined(ARDUINO_ARCH_ESP32)</span>
 <span class="w">  </span><span class="c1">// STANDARD shield on an ESPDUINO-32 (ESP32 in Uno form factor). The shield must be eiter the</span>
 <span class="w">  </span><span class="c1">// 3.3V compatible R3 version or it has to be modified to not supply more than 3.3V to the</span>
@@ -10620,9 +10620,9 @@ The information below may help explain how to overcome some of the complexities 
 <li>Note how the ESP32 GPIO pin numbers are used, and the Arduino pin locations are shown/commented.</li>
 </ul>
 <p>Alternate pins A2 and A3 are required for the WeMos D1 R32 / ESPDuino-32.</p>
-<p>One EX8874 motor shield would use the motor define EX8874_SHIELD, and update the solder pads to use A2 and A3.</p>
+<p>One EX8874 <abbr title="Also referred to as a 'motor controller' or 'motor driver'">motor shield</abbr> would use the motor define EX8874_SHIELD, and update the solder pads to use A2 and A3.</p>
 <p><img alt="EX8874 WeMos R1 D32 pins" src="../../../../_static/images/esp32/espduino-32-ex8874-x1.png" width="70%" /></p>
-<p>When one EX8874 motor shield is used with WeMos R1 D32 ESPDuino-32, the alternate current sense pins are used as the A0 and A1 pin locations cannot be used as ADC input when WiFi is enabled.</p>
+<p>When one EX8874 <abbr title="Also referred to as a 'motor controller' or 'motor driver'">motor shield</abbr> is used with WeMos R1 D32 ESPDuino-32, the alternate current sense pins are used as the A0 and A1 pin locations cannot be used as ADC input when WiFi is enabled.</p>
 <p><img alt="EX8874 WeMos R1 D32 table" src="../../../../_static/images/esp32/espduino-32-ex8874-x1b.png" width="80%" /></p>
 <h3 id="single-ex8874-checklist">Single EX8874 Checklist<a class="headerlink" href="#single-ex8874-checklist" title="Permanent link">&para;</a></h3>
 <ul class="task-list">

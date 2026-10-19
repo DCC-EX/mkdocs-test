@@ -10420,11 +10420,11 @@
 
 
 <h1 id="motor-drivers">Motor Drivers<a class="headerlink" href="#motor-drivers" title="Permanent link">&para;</a></h1>
-<p>A motor driver (aka 'motor controller', aka 'motor shield', aka 'motor board') is just a high voltage, high current switch. While initially designed to power electric motors, we use it to create the DCC signal to the track in a clever misapplication of technology. Normally, a pulse width modulated (<abbr title="Pulse Width Modulation">PWM</abbr>) signal would be applied to a motor with the <abbr title="Pulse Width Modulation">PWM</abbr> pin to control speed and the direction pin would switch the voltage from positive to negative to control the motor spin direction. Instead, we send full DC track voltage to the <abbr title="Pulse Width Modulation">PWM</abbr> pin and switch the direction pin at the DCC frequency (around 8000 times a second) to generate the bi-polar square wave. In this way, we use the 5V DC (or 3.3V) microcontroller output to switch the voltage from separate 12-16v DC power supply <sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup> connected to the motor driver, and create a pulse train signal of 1's and 0's that a mobile decoder can interpret as commands.</p>
+<p>A <abbr title="Also referred to as a 'motor controller' or 'motor shield'">motor driver</abbr> (aka 'motor controller', aka '<abbr title="Also referred to as a 'motor controller' or 'motor driver'">motor shield</abbr>', aka 'motor board') is just a high voltage, high current switch. While initially designed to power electric motors, we use it to create the DCC signal to the track in a clever misapplication of technology. Normally, a pulse width modulated (<abbr title="Pulse Width Modulation">PWM</abbr>) signal would be applied to a motor with the <abbr title="Pulse Width Modulation">PWM</abbr> pin to control speed and the direction pin would switch the voltage from positive to negative to control the motor spin direction. Instead, we send full DC track voltage to the <abbr title="Pulse Width Modulation">PWM</abbr> pin and switch the direction pin at the DCC frequency (around 8000 times a second) to generate the bi-polar square wave. In this way, we use the 5V DC (or 3.3V) <abbr title="ESP32, Nucleo, or Arduino Mega">microcontroller</abbr> output to switch the voltage from separate 12-16v DC power supply <sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup> connected to the <abbr title="Also referred to as a 'motor controller' or 'motor shield'">motor driver</abbr>, and create a pulse train signal of 1's and 0's that a mobile decoder can interpret as commands.</p>
 <h2 id="supported-motor-drivers">Supported Motor Drivers<a class="headerlink" href="#supported-motor-drivers" title="Permanent link">&para;</a></h2>
 <p><em>EX‑CommandStation</em> is compatible with a wide variety of motor drivers, also known as 'dual H-bridges' and 'motor shields'. When it comes to selecting a board, some considerations are size, whether it is a shield or needs to be connected with jumper wires, the amount of current you need, and whether it has current sensing capability built-in or if you have to supply it yourself.</p>
-<p>If you have trouble finding a particular board from the list, try searching based on it'’'s name or the type of chip on the board and the terms 'H-Bridge' or Motor Shield. There are often many places that sell these, especially the Chinese sites like AliExpress and Banggood.</p>
-<p><strong>TL;DR</strong> (aka short version): We currently recommend the DCC-EX <a href="../../../products/ex-motorshield8874/ex-motorshield8874/">EX-MotorShield8874</a>, and the Arduino Motor Shield R3 or a supported clone like the Deek-Robot.</p>
+<p>If you have trouble finding a particular board from the list, try searching based on it'’'s name or the type of chip on the board and the terms 'H-Bridge' or <abbr title="Also referred to as a 'motor controller' or 'motor driver'">Motor Shield</abbr>. There are often many places that sell these, especially the Chinese sites like AliExpress and Banggood.</p>
+<p><strong>TL;DR</strong> (aka short version): We currently recommend the DCC-EX <a href="../../../products/ex-motorshield8874/ex-motorshield8874/">EX-MotorShield8874</a>, and the Arduino <abbr title="Also referred to as a 'motor controller' or 'motor driver'">Motor Shield</abbr> R3 or a supported clone like the Deek-Robot.</p>
 <h2 id="current-list-of-motor-drivers">Current List of Motor Drivers<a class="headerlink" href="#current-list-of-motor-drivers" title="Permanent link">&para;</a></h2>
 <style>
 .md-typeset .md-typeset__scrollwrap {
@@ -10504,7 +10504,7 @@
 <td></td>
 </tr>
 <tr>
-<td><a href="l298-shields/">Arduino Motor Shield R3</a><sup id="fnref:6"><a class="footnote-ref" href="#fn:6">6</a></sup></td>
+<td><a href="l298-shields/">Arduino <abbr title="Also referred to as a 'motor controller' or 'motor driver'">Motor Shield</abbr> R3</a><sup id="fnref:6"><a class="footnote-ref" href="#fn:6">6</a></sup></td>
 <td style="text-align: center;">Yes</td>
 <td style="text-align: center;">Yes</td>
 <td style="text-align: center;">Simple</td>
@@ -10518,7 +10518,7 @@
 <td></td>
 </tr>
 <tr>
-<td><a href="l298-shields/">Deek-Robot Motor Shield</a><sup id="fnref2:6"><a class="footnote-ref" href="#fn:6">6</a></sup></td>
+<td><a href="l298-shields/">Deek-Robot <abbr title="Also referred to as a 'motor controller' or 'motor driver'">Motor Shield</abbr></a><sup id="fnref2:6"><a class="footnote-ref" href="#fn:6">6</a></sup></td>
 <td style="text-align: center;">Yes</td>
 <td style="text-align: center;">Yes</td>
 <td style="text-align: center;">Simple</td>
@@ -10532,7 +10532,7 @@
 <td></td>
 </tr>
 <tr>
-<td>Flashtree Motor Shield</td>
+<td>Flashtree <abbr title="Also referred to as a 'motor controller' or 'motor driver'">Motor Shield</abbr></td>
 <td style="text-align: center;">No</td>
 <td style="text-align: center;">Yes</td>
 <td style="text-align: center;">Intermediate</td>
@@ -10686,7 +10686,7 @@
 <td></td>
 </tr>
 <tr>
-<td>DFRobot 2x2A DC Motor Shield (DRI0009)</td>
+<td>DFRobot 2x2A DC <abbr title="Also referred to as a 'motor controller' or 'motor driver'">Motor Shield</abbr> (DRI0009)</td>
 <td style="text-align: center;">No</td>
 <td style="text-align: center;">Yes</td>
 <td style="text-align: center;">Advanced</td>
@@ -10756,7 +10756,7 @@
 <td>Does not work. Not enough current.</td>
 </tr>
 <tr>
-<td>Pololu TB9051FTG based motor shield</td>
+<td>Pololu TB9051FTG based <abbr title="Also referred to as a 'motor controller' or 'motor driver'">motor shield</abbr></td>
 <td style="text-align: center;">-</td>
 <td style="text-align: center;">No</td>
 <td style="text-align: center;">-</td>
@@ -10792,7 +10792,7 @@
 <p>Requires modification of the board to support Current Sense.&#160;<a class="footnote-backref" href="#fnref:5" title="Jump back to footnote 5 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:5" title="Jump back to footnote 5 in the text">&#8617;</a></p>
 </li>
 <li id="fn:6">
-<p>The <em>Arduino Motor Shield R38</em> and the <em>Deek-Robot Motor Shield</em> are interchangeably referred to in this documentation as the <em>standard motor driver</em>.&#160;<a class="footnote-backref" href="#fnref:6" title="Jump back to footnote 6 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:6" title="Jump back to footnote 6 in the text">&#8617;</a></p>
+<p>The <em>Arduino <abbr title="Also referred to as a 'motor controller' or 'motor driver'">Motor Shield</abbr> R38</em> and the <em>Deek-Robot <abbr title="Also referred to as a 'motor controller' or 'motor driver'">Motor Shield</abbr></em> are interchangeably referred to in this documentation as the <em>standard <abbr title="Also referred to as a 'motor controller' or 'motor shield'">motor driver</abbr></em>.&#160;<a class="footnote-backref" href="#fnref:6" title="Jump back to footnote 6 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:6" title="Jump back to footnote 6 in the text">&#8617;</a></p>
 </li>
 <li id="fn:7">
 <p>Can be stacked, but it is complicated.&#160;<a class="footnote-backref" href="#fnref:7" title="Jump back to footnote 7 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:7" title="Jump back to footnote 7 in the text">&#8617;</a></p>

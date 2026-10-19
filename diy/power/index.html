@@ -10508,7 +10508,7 @@
 <h1 id="selecting-a-power-supply">Selecting a power supply<a class="headerlink" href="#selecting-a-power-supply" title="Permanent link">&para;</a></h1>
 <p>You will require one <em>or two</em> power supply units to provide track power and to run the <strong>EX-CommandStation</strong> processor.</p>
 <p>If you have used a <strong>EX-MotorShield8874</strong> then only one power supply is required.</p>
-<p>If you have used a motor driver other than the <strong>EX-MotorShield8874</strong> (e.g. Arduino Motor Shield or Deek Robot Motor shield), then you will need <em>a second 7v power supply</em> to power the Microprocessor.</p>
+<p>If you have used a <abbr title="Also referred to as a 'motor controller' or 'motor shield'">motor driver</abbr> other than the <strong>EX-MotorShield8874</strong> (e.g. Arduino <abbr title="Also referred to as a 'motor controller' or 'motor driver'">Motor Shield</abbr> or Deek Robot Motor shield), then you will need <em>a second 7v power supply</em> to power the Microprocessor.</p>
 <h2 id="volts-and-amps">Volts and Amps<a class="headerlink" href="#volts-and-amps" title="Permanent link">&para;</a></h2>
 <p>The volt and current requirements for your track vary according to the scale of your locos and the number you expect to run simultaneously.</p>
 <p>These recommendations are generalised, and you must check to make sure they don't exceed your loco and DCC decoder manufacturer's recommendations.</p>
@@ -10575,17 +10575,17 @@
 <h2 id="track-voltage-vs-power-supply-voltage">Track Voltage VS Power Supply Voltage<a class="headerlink" href="#track-voltage-vs-power-supply-voltage" title="Permanent link">&para;</a></h2>
 <p>Not all Motor Drivers are equal!</p>
 <p>For the <strong><abbr title="EX-CommandStation/Booster 1 Express">EX-CSB1</abbr></strong> and the <strong>EX-MotorShield8874</strong> the DC voltage of the power supply that you use, will be very close to the quasi-AC voltage that will be provided to the track.</p>
-<p>For the Arduino Motor Shield, the DEEK Motor Shield and most others, the quasi-AC voltage on the track will be 1.5-2v <em>less than</em> the voltage of the power supply. So for those motor drivers, it is necessary to use a power supply about 2vDC greater than you want on the track.</p>
+<p>For the Arduino <abbr title="Also referred to as a 'motor controller' or 'motor driver'">Motor Shield</abbr>, the DEEK <abbr title="Also referred to as a 'motor controller' or 'motor driver'">Motor Shield</abbr> and most others, the quasi-AC voltage on the track will be 1.5-2v <em>less than</em> the voltage of the power supply. So for those motor drivers, it is necessary to use a power supply about 2vDC greater than you want on the track.</p>
 <h2 id="using-an-ex-8874-or-ex-csb1">Using an EX-8874 or <abbr title="EX-CommandStation/Booster 1 Express">EX-CSB1</abbr><a class="headerlink" href="#using-an-ex-8874-or-ex-csb1" title="Permanent link">&para;</a></h2>
 <p>The <strong>EX-MotorShield8874</strong> (which is also built into the <strong><abbr title="EX-CommandStation/Booster 1 Express">EX-CSB1</abbr></strong>) provides power for both the track and the <strong>EX-CommandStation</strong>. There is almost zero voltage drop between the power supply and the track.</p>
 <p>We strongly advise purchasing a suitable power supply at the same time as the <strong><abbr title="EX-CommandStation/Booster 1 Express">EX-CSB1</abbr></strong>** or <strong>EX-MotorShield8874</strong> from a vendor who understands your requirements.</p>
 <h2 id="other-motor-drivers">Other Motor Drivers<a class="headerlink" href="#other-motor-drivers" title="Permanent link">&para;</a></h2>
-<p>Should you choose a motor driver other than the <strong>EX-MotorShield8874</strong>:</p>
+<p>Should you choose a <abbr title="Also referred to as a 'motor controller' or 'motor shield'">motor driver</abbr> other than the <strong>EX-MotorShield8874</strong>:</p>
 <ul>
 <li>You must allow for the voltage drop within your chosen driver. (see <a href="#track-voltage-vs-power-supply-voltage">above</a>)</li>
-<li>You must provide separate power for the <strong>EX-CommandStation</strong> microcontroller:<ul>
+<li>You must provide separate power for the <strong>EX-CommandStation</strong> <abbr title="ESP32, Nucleo, or Arduino Mega">microcontroller</abbr>:<ul>
 <li>Most easily this is done via the USB socket. A standard phone charger, or a connection to a computer, will be adequate. Note that if you are powering other devices connected directly to the GPIOs (including a WiFi shield), the USB socket may not provide adequate power.</li>
-<li>If you power the microcontroller through its barrel connector, you need to use a 7-9vDC power supply, not the 5v you might expect. Do not exceed 9vDC as this can cause electrical interference.</li>
+<li>If you power the <abbr title="ESP32, Nucleo, or Arduino Mega">microcontroller</abbr> through its barrel connector, you need to use a 7-9vDC power supply, not the 5v you might expect. Do not exceed 9vDC as this can cause electrical interference.</li>
 </ul>
 </li>
 <li>Note: You may not be protected from reverse-polarity mistakes.</li>

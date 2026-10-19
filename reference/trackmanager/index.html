@@ -10467,16 +10467,16 @@
 <ul>
 <li>Managing track power state.</li>
 <li>Monitoring track overloads and shorts.</li>
-<li>Routing the DCC <strong><abbr title="Main Track / Ops Mode">MAIN</abbr></strong> or <strong><abbr title="Programming Track / Service Mode">PROG</abbr></strong> track waveforms to the correct Motor Driver and thus track.</li>
+<li>Routing the DCC <strong><abbr title="Main Track / Operations Mode (Ops Mode)">MAIN</abbr></strong> or <strong><abbr title="Programming Track / Service Mode">PROG</abbr></strong> track waveforms to the correct <abbr title="Also referred to as a 'motor controller' or 'motor shield'">Motor Driver</abbr> and thus track.</li>
 <li>Managing the JOIN feature.</li>
 <li>Intercepting throttle commands to locos running on DC tracks.</li>
 <li>Handling user or <strong>EXRAIL</strong>  commands to switch track status.</li>
 </ul>
-<p>In the default scenario of a single DCC <strong><abbr title="Main Track / Ops Mode">MAIN</abbr></strong> track and a <strong><abbr title="Programming Track / Service Mode">PROG</abbr></strong> track, the <strong>TrackManger</strong> behaves as for the previous versions of <strong>DCC-EX</strong> so if that's what you want, you don't need to mess with it.</p>
-<p>The <strong>TrackManger</strong> is able to handle up to 8 separate track domains. Each domain requires a hardware driver to supply track voltage. A typical motor driver shield supplies two tracks, which is what we have used in the past as <strong><abbr title="Main Track / Ops Mode">MAIN</abbr></strong> and <strong><abbr title="Programming Track / Service Mode">PROG</abbr></strong>.</p>
-<p>Unlike the older version of <strong>DCC-EX</strong>, where the shield channel A was always the DCC <strong><abbr title="Main Track / Ops Mode">MAIN</abbr></strong> and channel B was always the DCC <strong><abbr title="Programming Track / Service Mode">PROG</abbr></strong> track, <strong>TrackManger</strong> allows:</p>
+<p>In the default scenario of a single DCC <strong><abbr title="Main Track / Operations Mode (Ops Mode)">MAIN</abbr></strong> track and a <strong><abbr title="Programming Track / Service Mode">PROG</abbr></strong> track, the <strong>TrackManger</strong> behaves as for the previous versions of <strong>DCC-EX</strong> so if that's what you want, you don't need to mess with it.</p>
+<p>The <strong>TrackManger</strong> is able to handle up to 8 separate track domains. Each domain requires a hardware driver to supply track voltage. A typical <abbr title="Also referred to as a 'motor controller' or 'motor shield'">motor driver</abbr> shield supplies two tracks, which is what we have used in the past as <strong><abbr title="Main Track / Operations Mode (Ops Mode)">MAIN</abbr></strong> and <strong><abbr title="Programming Track / Service Mode">PROG</abbr></strong>.</p>
+<p>Unlike the older version of <strong>DCC-EX</strong>, where the shield channel A was always the DCC <strong><abbr title="Main Track / Operations Mode (Ops Mode)">MAIN</abbr></strong> and channel B was always the DCC <strong><abbr title="Programming Track / Service Mode">PROG</abbr></strong> track, <strong>TrackManger</strong> allows:</p>
 <ul>
-<li>None, any or all the tracks can be DCC <strong><abbr title="Main Track / Ops Mode">MAIN</abbr></strong>.</li>
+<li>None, any or all the tracks can be DCC <strong><abbr title="Main Track / Operations Mode (Ops Mode)">MAIN</abbr></strong>.</li>
 <li>None or ONE track may be DCC <strong><abbr title="Programming Track / Service Mode">PROG</abbr></strong> at any given time.</li>
 <li>Any track may be powered on or off independently of the others.</li>
 <li>Any track may be disconnected from the DCC signal and used as a DC track with a given loco address. (See DC discussion later)</li>
@@ -10484,7 +10484,7 @@
 <p>With such flexibility comes responsibility... the potential for making mistakes means taking extra care with your configuration!</p>
 <p><strong>NOTE:</strong> <strong>TrackManger</strong> does NOT use "zero stretching" to control your DC motor. Instead, it uses true Pulse Width Modulation (<abbr title="Pulse Width Modulation">PWM</abbr>) to efficiently run your loco using the same method a decoder uses to control a DCC loco's motor. DC locos can even run better on <strong>TrackManger</strong> than they can on a normal analog throttle, especially at low speed, since it is always applying the full track voltage, albeit in pulses of varying duration.</p>
 <h2 id="using-the-track-manager-dcc">Using the Track Manager (DCC)<a class="headerlink" href="#using-the-track-manager-dcc" title="Permanent link">&para;</a></h2>
-<p><strong>TrackManger</strong> names the tracks A to H. In a default setup, you will normally have tracks A and B where A will default to be the DCC <strong><abbr title="Main Track / Ops Mode">MAIN</abbr></strong> signal and B will be the DCC <strong><abbr title="Programming Track / Service Mode">PROG</abbr></strong>.</p>
+<p><strong>TrackManger</strong> names the tracks A to H. In a default setup, you will normally have tracks A and B where A will default to be the DCC <strong><abbr title="Main Track / Operations Mode (Ops Mode)">MAIN</abbr></strong> signal and B will be the DCC <strong><abbr title="Programming Track / Service Mode">PROG</abbr></strong>.</p>
 <p>There is a new user command <code>&lt;=&gt;</code> which is used to control the <strong>TrackManger</strong> but the <code>&lt;0&gt;</code> and <code>&lt;1&gt;</code> commands operate as before.</p>
 <ul>
 <li><code>&lt;=&gt;</code>  lists the current track settings.</li>
@@ -10494,14 +10494,14 @@
 <span class="go">&lt;=B PROG&gt;</span>
 </code></pre></div>
 <ul>
-<li><code>&lt;=t MAIN&gt;</code>  sets track t (A..H) to use the DCC <strong><abbr title="Main Track / Ops Mode">MAIN</abbr></strong> track.   For example <code>&lt;=C MAIN&gt;</code> sets track C. All tracks that are set to DCC will receive the same DCC signal waveform.</li>
+<li><code>&lt;=t MAIN&gt;</code>  sets track t (A..H) to use the DCC <strong><abbr title="Main Track / Operations Mode (Ops Mode)">MAIN</abbr></strong> track.   For example <code>&lt;=C MAIN&gt;</code> sets track C. All tracks that are set to DCC will receive the same DCC signal waveform.</li>
 <li><code>&lt;=t PROG&gt;</code> Sets track t (A..H) to be the one and only <strong><abbr title="Programming Track / Service Mode">PROG</abbr></strong> track. Any previous <strong><abbr title="Programming Track / Service Mode">PROG</abbr></strong> track is turned off.</li>
 <li><code>&lt;=t OFF&gt;</code> turns off the track t. It will not power on with <code>&lt;1&gt;</code> because it will not know what signal to send.</li>
 </ul>
 <p>In an all-DCC environment it is unlikely that you will need to do anything other than setting any additional tracks (C...H) as DCC in your <code>myAutomation.h</code> file.  <a href="../../enhance/dc-running/">Example:  Startup - Define Tracks</a></p>
 <p>Bear in mind that a track may actually be only connected to DCC accessories such as signals and <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnouts</abbr>/points... your layout, your choice.</p>
 <p>Note that when setting a track to <strong><abbr title="Programming Track / Service Mode">PROG</abbr></strong> or OFF, its power is switched off automatically. (The <strong><abbr title="Programming Track / Service Mode">PROG</abbr></strong> track manages power on an as-needed basis under normal circumstances.
-When setting a track to <strong><abbr title="Main Track / Ops Mode">MAIN</abbr></strong> (or DC, DCX see later) the power is applied according to the most recent <code>&lt;1&gt;</code> or <code>&lt;0&gt;</code> command as being the most compatible with previous versions.</p>
+When setting a track to <strong><abbr title="Main Track / Operations Mode (Ops Mode)">MAIN</abbr></strong> (or DC, DCX see later) the power is applied according to the most recent <code>&lt;1&gt;</code> or <code>&lt;0&gt;</code> command as being the most compatible with previous versions.</p>
 <h2 id="using-the-track-manager-dc">Using the Track Manager (DC)<a class="headerlink" href="#using-the-track-manager-dc" title="Permanent link">&para;</a></h2>
 <p><strong>TrackManger</strong> allows any or all of your tracks to be individually selected as a DC track which responds to throttle commands on any given loco address. So for example if track A is set to DC address 55, then any throttle commands to loco 55 will be transmitted as DC onto track A and thus a DC loco can be driven along that track. almost exactly as if it was DCC.
 Your throttle (<abbr title="Java Model Railroad Interface">JMRI</abbr>, <strong>EX-WebThrottle</strong>, <abbr title="Communication Protocol. Trademark + iOS app owned by Brett Hoffman">WiThrottle</abbr>, Engine Driver etc.) do not know or care that this is a DC loco so nothing needs to change.</p>

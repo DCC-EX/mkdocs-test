@@ -10455,7 +10455,7 @@
 <img align="right" alt="EX-Turntable Logo" class="only-dark" src="../../_static/images/logos/product-logo-ex-turntable-only-dark.png" width="400px" /></p>
 <p>Welcome to the home of <strong>EX-Turntable</strong>, a Self Build (<abbr title="Do-It-Yourself / Self Build">DIY</abbr>), fully integrated turntable controller for <strong>EX-CommandStation</strong>.</p>
 <h2 id="what-is-ex-turntable">What is EX-Turntable?<a class="headerlink" href="#what-is-ex-turntable" title="Permanent link">&para;</a></h2>
-<p><strong>EX-Turntable</strong> is a Self Build (<abbr title="Do-It-Yourself / Self Build">DIY</abbr>), fully integrated turntable controller, using an additional Arduino (Nano or Uno) microcontroller to drive a stepper motor that rotates a turntable to align the bridge track with the surrounding layout tracks.</p>
+<p><strong>EX-Turntable</strong> is a Self Build (<abbr title="Do-It-Yourself / Self Build">DIY</abbr>), fully integrated turntable controller, using an additional Arduino (Nano or Uno) <abbr title="ESP32, Nucleo, or Arduino Mega">microcontroller</abbr> to drive a stepper motor that rotates a turntable to align the bridge track with the surrounding layout tracks.</p>
 <p>While we aim to keep things simple, please note that there are complexities in setting up a turntable that tend to make <strong>EX-Turntable</strong> more in the realm of a technically advanced user.</p>
 <p>To make things easier, a turntable object is now available to define and control both <strong>EX-Turntable</strong> and DCC controlled turntables, which also allows throttle developers to implement direct control of turntables if they so wish. More information on how to use this with <strong>EX-Turntable</strong> is on the <a href="test-and-tune/">test and tune</a> page.</p>
 <p>It's highly recommended running the latest of both <strong>EX-CommandStation</strong> and <strong>EX-Turntable</strong> to ensure feature parity with the two, and ensure you have the latest bug fixes and so forth.</p>
@@ -10525,7 +10525,7 @@
 <li>Use <strong>EX-Turntable</strong> to automatically (or manually) invert the phase as appropriate</li>
 </ul>
 <p>The critical aspect when using <strong>EX-Turntable</strong>/<strong>EXRAIL</strong> or a mechanical method to control the phase is to ensure the entry and exit tracks for each position are wired with the same phase or polarity. An auto reverser will allow out of phase layouts to work as it will always reverse on a short circuit.</p>
-<p>Consider the turntable starting in alignment with the entry and exit tracks, with everything wired in alignment so the +/- connections from the |motor shield| are connected to the same rail all the way along.</p>
+<p>Consider the turntable starting in alignment with the entry and exit tracks, with everything wired in alignment so the +/- connections from the |<abbr title="Also referred to as a 'motor controller' or 'motor driver'">motor shield</abbr>| are connected to the same rail all the way along.</p>
 <p>If we do not invert or reverse the phase, when it rotates 180 degrees, there will be an obvious issue!</p>
 <p><img alt="No rotation" src="../../_static/images/ex-turntable/0degree-phase.png" width="400px" /></p>
 <p><img alt="90 degrees" src="../../_static/images/ex-turntable/90degree-no-phase-change.png" width="400px" /></p>

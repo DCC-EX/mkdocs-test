@@ -10870,7 +10870,7 @@
 <p>DCC Decoder <abbr title="Configuration Variable (DCC Decoders)">CV</abbr> programming is available:</p>
 <ul>
 <li>on the Programming track (<abbr title="Programming Track / Service Mode">PROG</abbr>) - Service Mode.</li>
-<li>on the main line (<abbr title="Main Track / Ops Mode">MAIN</abbr>) - Operation mode / Ops Mode / Programming on the Main (<abbr title="Programming on Main / Ops Mode Programming">PoM</abbr>).</li>
+<li>on the main line (<abbr title="Main Track / Operations Mode (Ops Mode)">MAIN</abbr>) - Operation mode / Ops Mode / Programming on the Main (<abbr title="Programming on Main / Ops Mode Programming">PoM</abbr>).</li>
 </ul>
 <p>By default <strong>EX‑Toolbox</strong> shows the Service Mode options. To switch to Operation Mode, select "Program on Main (Operation Mode)" on the drop down list at the top of the screen.</p>
 <h3 id="cv-programming-service-mode"><abbr title="Configuration Variable (DCC Decoders)">CV</abbr> Programming (Service Mode)<a class="headerlink" href="#cv-programming-service-mode" title="Permanent link">&para;</a></h3>
@@ -10885,7 +10885,7 @@
 <li>Read the decoder's DCC Address. (this reads multiple <abbr title="Configuration Variables (DCC Decoders)">CVs</abbr> to obtain the driveable address, which may be a <abbr title="North American term. &quot;Consist&quot; refers to multiple locos driving one train. Elsewhere referred to as a &quot;Multiple Unit&quot; (MU) train">consist</abbr>) <br/>
   Click the <code>Read</code> button on the DCC Address row.</li>
 </ul>
-<p>Note that when you read an address, <strong>EX-Toolbox</strong> will inform you whether or not the decoder is also in an advanced <abbr title="North American term. &quot;Consist&quot; refers to multiple locos driving one train. Elsewhere referred to as a &quot;Multiple Unit&quot; (MU) train">consist</abbr> (CV19).  If the loco is in an advanced <abbr title="North American term. &quot;Consist&quot; refers to multiple locos driving one train. Elsewhere referred to as a &quot;Multiple Unit&quot; (MU) train">consist</abbr> (CV19) it will not respond to <em>running</em>/<abbr title="Main Track / Ops Mode">MAIN</abbr> track commands to the decoder address.</p>
+<p>Note that when you read an address, <strong>EX-Toolbox</strong> will inform you whether or not the decoder is also in an advanced <abbr title="North American term. &quot;Consist&quot; refers to multiple locos driving one train. Elsewhere referred to as a &quot;Multiple Unit&quot; (MU) train">consist</abbr> (CV19).  If the loco is in an advanced <abbr title="North American term. &quot;Consist&quot; refers to multiple locos driving one train. Elsewhere referred to as a &quot;Multiple Unit&quot; (MU) train">consist</abbr> (CV19) it will not respond to <em>running</em>/<abbr title="Main Track / Operations Mode (Ops Mode)">MAIN</abbr> track commands to the decoder address.</p>
 <ul>
 <li>
 <p>Write a new DCC Address to the decoder. (This writes multiple <abbr title="Configuration Variables (DCC Decoders)">CVs</abbr> to automatically manage long and short addresses.) <br/>
@@ -10991,7 +10991,7 @@ Not critical, but it is advisable to have the 'Master' also use the High, Mid, L
   Watch for any -1 responses (failed reads), and redo the read if any have failed.</p>
 </li>
 <li>
-<p>Put the 'Master' on the <abbr title="Main Track / Ops Mode">MAIN</abbr> track (the loop of track), along with the 'Second' loco.</p>
+<p>Put the 'Master' on the <abbr title="Main Track / Operations Mode (Ops Mode)">MAIN</abbr> track (the loop of track), along with the 'Second' loco.</p>
 </li>
 <li>
 <p>Enter the DCC address of the Master.</p>
@@ -11017,7 +11017,7 @@ Not critical, but it is advisable to have the 'Master' also use the High, Mid, L
   e.g. When I start on a loco, I normally have the Step at 10. When it gets closer to a match I change the step to 1.</p>
 </li>
 <li>
-<p>You don't need a separate <abbr title="Programming Track / Service Mode">PROG</abbr> track. You can use the 'Track Manager' screen to temporarily set the loop of track to <abbr title="Programming Track / Service Mode">PROG</abbr> for steps 2-3, then change it back to <abbr title="Main Track / Ops Mode">MAIN</abbr> for steps 4 on.</p>
+<p>You don't need a separate <abbr title="Programming Track / Service Mode">PROG</abbr> track. You can use the 'Track Manager' screen to temporarily set the loop of track to <abbr title="Programming Track / Service Mode">PROG</abbr> for steps 2-3, then change it back to <abbr title="Main Track / Operations Mode (Ops Mode)">MAIN</abbr> for steps 4 on.</p>
 </li>
 <li>
 <p>Some decoders don't support Kick Start.</p>
@@ -11080,7 +11080,7 @@ Not critical, but it is advisable to have the 'Master' also use the High, Mid, L
 <hr />
 <h2 id="track-manager">Track Manager<a class="headerlink" href="#track-manager" title="Permanent link">&para;</a></h2>
 <p><img align="right" alt="menu" src="../../../_static/images/ex-toolbox/track_manager.png" width="200px" /></p>
-<p>Track Manager page allows you to change up to 8 channels (depending on the Motor Driver(s) you are using)</p>
+<p>Track Manager page allows you to change up to 8 channels (depending on the <abbr title="Also referred to as a 'motor controller' or 'motor shield'">Motor Driver</abbr>(s) you are using)</p>
 <p>Each channel can be one of:</p>
 <ul>
 <li><code>DCC PROG</code> - Programming Track</li>
@@ -11137,7 +11137,7 @@ Not critical, but it is advisable to have the 'Master' also use the High, Mid, L
 <hr />
 <h2 id="current-meter">Current Meter<a class="headerlink" href="#current-meter" title="Permanent link">&para;</a></h2>
 <p><img align="right" alt="menu" src="../../../_static/images/ex-toolbox/currents.png" width="200px" /></p>
-<p>The 'Current Status' screen will show you the current values for up to eight channels on the motor driver on your EX‑CommandStation.</p>
+<p>The 'Current Status' screen will show you the current values for up to eight channels on the <abbr title="Also referred to as a 'motor controller' or 'motor shield'">motor driver</abbr> on your EX‑CommandStation.</p>
 <p>For each channel the following is shown:</p>
 <ul>
 <li>the up-to-date value in Milliamps.</li>

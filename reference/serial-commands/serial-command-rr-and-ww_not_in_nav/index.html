@@ -10583,7 +10583,7 @@
 
 
 <h1 id="r-cvlocoidconsist-r-loco-cv-w-lococv-valueloco-cv-bitvalue-bitconsist-loco-reverse-v-cv-valuecv-bit-bitvalue-b-cv-bit-bitvalue-b-loco-cv-bit-bitvalue-read-and-write-cvs"><small><code>&lt;R [«cv»|LOCOID|CONSIST]&gt;</code> <br/><code>&lt;r «loco» «cv»&gt;</code> <br/><code>&lt;W [«loco»]|[«cv» «value»]|[«loco» «cv» «bitValue» «bit»]|[CONSIST «loco» [REVERSE]]&gt;</code> <br/><code>&lt;V [«cv» «value»]|[«cv» «bit» «bitValue»]&gt;</code> <br/><code>&lt;B «cv» «bit» «bitValue»&gt;</code> <br/><code>&lt;b «loco» «cv» «bit» «bitValue»&gt;</code></small> <br/>Read and write <abbr title="Configuration Variables (DCC Decoders)">CVs</abbr><a class="headerlink" href="#r-cvlocoidconsist-r-loco-cv-w-lococv-valueloco-cv-bitvalue-bitconsist-loco-reverse-v-cv-valuecv-bit-bitvalue-b-cv-bit-bitvalue-b-loco-cv-bit-bitvalue-read-and-write-cvs" title="Permanent link">&para;</a></h1>
-<p>Serial commands to read and write <abbr title="Configuration Variables (DCC Decoders)">CVs</abbr> on the <abbr title="Programming Track / Service Mode">PROG</abbr> track (Service mode) or on the <abbr title="Main Track / Ops Mode">MAIN</abbr> track (<abbr title="Programming on Main / Ops Mode Programming">PoM</abbr>). This includes reading and writing the decoder DCC Address.</p>
+<p>Serial commands to read and write <abbr title="Configuration Variables (DCC Decoders)">CVs</abbr> on the <abbr title="Programming Track / Service Mode">PROG</abbr> track (Service mode) or on the <abbr title="Main Track / Operations Mode (Ops Mode)">MAIN</abbr> track (<abbr title="Programming on Main / Ops Mode Programming">PoM</abbr>). This includes reading and writing the decoder DCC Address.</p>
 <p>It does not include reading or writing to DCC accessory decoders.</p>
 <h2 id="commands">Commands<a class="headerlink" href="#commands" title="Permanent link">&para;</a></h2>
 <h3 id="reading-cvs">Reading <abbr title="Configuration Variables (DCC Decoders)">CVs</abbr><a class="headerlink" href="#reading-cvs" title="Permanent link">&para;</a></h3>
@@ -10592,7 +10592,7 @@
 <li><code>&lt;R «cv»&gt;</code> = Read a cv on <abbr title="Programming Track / Service Mode">PROG</abbr> track</li>
 <li><code>&lt;R LOCOID&gt;</code> = Read the loco id (ignoring the <abbr title="North American term. &quot;Consist&quot; refers to multiple locos driving one train. Elsewhere referred to as a &quot;Multiple Unit&quot; (MU) train">consist</abbr> address) on the <abbr title="Programming Track / Service Mode">PROG</abbr> track</li>
 <li><code>&lt;R CONSIST&gt;</code> = Read the <abbr title="North American term. &quot;Consist&quot; refers to multiple locos driving one train. Elsewhere referred to as a &quot;Multiple Unit&quot; (MU) train">consist</abbr> id on <abbr title="Programming Track / Service Mode">PROG</abbr> track</li>
-<li><code>&lt;r «loco» «cv»&gt;</code> = <abbr title="Programming on Main / Ops Mode Programming">PoM</abbr> read cv on <abbr title="Main Track / Ops Mode">MAIN</abbr> track - <span style="color:red">Requires RailCom</span></li>
+<li><code>&lt;r «loco» «cv»&gt;</code> = <abbr title="Programming on Main / Ops Mode Programming">PoM</abbr> read cv on <abbr title="Main Track / Operations Mode (Ops Mode)">MAIN</abbr> track - <span style="color:red">Requires RailCom</span></li>
 <li><code>&lt;V «cv» bit «bitValue»&gt;</code> = Fast read bit with expected value</li>
 <li><code>&lt;V «cv» «value»&gt;</code> = Fast read cv with expected value</li>
 </ul>
@@ -10603,9 +10603,9 @@
 <li><code>&lt;W CONSIST «loco» REVERSE&gt;</code> Write <abbr title="North American term. &quot;Consist&quot; refers to multiple locos driving one train. Elsewhere referred to as a &quot;Multiple Unit&quot; (MU) train">consist</abbr> address and reverse flag on <abbr title="Programming Track / Service Mode">PROG</abbr> track</li>
 <li><code>&lt;W «cv» «value»&gt;</code> Write cv value on <abbr title="Programming Track / Service Mode">PROG</abbr> track</li>
 <li><code>&lt;W «cv» «bitValue» «bit»&gt;</code> Write cv bit on <abbr title="Programming Track / Service Mode">PROG</abbr> track</li>
-<li><code>&lt;w «loco» «cv» «value»&gt;</code> <abbr title="Programming on Main / Ops Mode Programming">PoM</abbr> write cv on <abbr title="Main Track / Ops Mode">MAIN</abbr> track</li>
+<li><code>&lt;w «loco» «cv» «value»&gt;</code> <abbr title="Programming on Main / Ops Mode Programming">PoM</abbr> write cv on <abbr title="Main Track / Operations Mode (Ops Mode)">MAIN</abbr> track</li>
 <li><code>&lt;B «cv» «bitValue» «bit»&gt;</code> Write cv bit on <abbr title="Programming Track / Service Mode">PROG</abbr> track</li>
-<li><code>&lt;b «loco» «cv» «bitValue» «bit»&gt;</code> <abbr title="Programming on Main / Ops Mode Programming">PoM</abbr> write cv bit on <abbr title="Main Track / Ops Mode">MAIN</abbr> track</li>
+<li><code>&lt;b «loco» «cv» «bitValue» «bit»&gt;</code> <abbr title="Programming on Main / Ops Mode Programming">PoM</abbr> write cv bit on <abbr title="Main Track / Operations Mode (Ops Mode)">MAIN</abbr> track</li>
 </ul>
 <h2 id="parameters">Parameters<a class="headerlink" href="#parameters" title="Permanent link">&para;</a></h2>
 <ul>

@@ -10400,7 +10400,7 @@
 
 
 <h1 id="10-track-turn-track-power-on-or-off"><code>&lt;1|0 [«track»]&gt;</code> <br/>Turn track power on or off<a class="headerlink" href="#10-track-turn-track-power-on-or-off" title="Permanent link">&para;</a></h1>
-<p>Serial command to turn power on or off to all or specific tracks.  Also allows joining the <abbr title="Main Track / Ops Mode">MAIN</abbr> and <abbr title="Programming Track / Service Mode">PROG</abbr> tracks together.</p>
+<p>Serial command to turn power on or off to all or specific tracks.  Also allows joining the <abbr title="Main Track / Operations Mode (Ops Mode)">MAIN</abbr> and <abbr title="Programming Track / Service Mode">PROG</abbr> tracks together.</p>
 <h2 id="commands">Commands<a class="headerlink" href="#commands" title="Permanent link">&para;</a></h2>
 <ul>
 <li><code>&lt;1&gt;</code> = Turn on both Main and Programming Tracks (All tracks)</li>
@@ -10414,7 +10414,7 @@
 <li><code>MAIN</code> = Main track</li>
 <li><code>PROG</code> = Programming Track</li>
 <li><code>JOIN</code> = Join the Main and Programming tracks temporarily <br/>Note: While <code>&lt;1 JOIN&gt;</code> is valid, <code>&lt;0 JOIN&gt;</code> is not.</li>
-<li><code>A</code> through <code>H</code> representing one of the outputs of the/a motor shield.</li>
+<li><code>A</code> through <code>H</code> representing one of the outputs of the/a <abbr title="Also referred to as a 'motor controller' or 'motor driver'">motor shield</abbr>.</li>
 </ul>
 </li>
 </ul>
@@ -10426,20 +10426,20 @@
 <ul>
 <li><code>p</code> = the 'message identifer'</li>
 <li><strong>onOff</strong> = one of: <code>1</code> = On or <code>0</code> = off</li>
-<li><strong>track</strong> = balnk = all tracks <br/> or one of <code>A</code> through <code>H</code> representing one of the outputs of the/a motor shield.</li>
+<li><strong>track</strong> = balnk = all tracks <br/> or one of <code>A</code> through <code>H</code> representing one of the outputs of the/a <abbr title="Also referred to as a 'motor controller' or 'motor driver'">motor shield</abbr>.</li>
 </ul>
 </li>
 </ul>
 <h2 id="notes">Notes<a class="headerlink" href="#notes" title="Permanent link">&para;</a></h2>
 <ul>
 <li>
-<p>The use of the JOIN function allows the DCC signal for the <abbr title="Main Track / Ops Mode">MAIN</abbr> track to also be sent to the <abbr title="Programming Track / Service Mode">PROG</abbr> track. This allows the prog track to act as a siding (or similar) in the main layout even though it is isolated electrically and connected to the programming track output.</p>
-<p>However, it is important that the prog track wiring be in the same phase as the main track i.e. when the left rail is high on <abbr title="Main Track / Ops Mode">MAIN</abbr>, it is also high on <abbr title="Programming Track / Service Mode">PROG</abbr>. You may have to swap the wires to your prog track to make this work.</p>
+<p>The use of the JOIN function allows the DCC signal for the <abbr title="Main Track / Operations Mode (Ops Mode)">MAIN</abbr> track to also be sent to the <abbr title="Programming Track / Service Mode">PROG</abbr> track. This allows the prog track to act as a siding (or similar) in the main layout even though it is isolated electrically and connected to the programming track output.</p>
+<p>However, it is important that the prog track wiring be in the same phase as the main track i.e. when the left rail is high on <abbr title="Main Track / Operations Mode (Ops Mode)">MAIN</abbr>, it is also high on <abbr title="Programming Track / Service Mode">PROG</abbr>. You may have to swap the wires to your prog track to make this work.</p>
 </li>
 <li>
 <p>If you drive onto a programming track that is "joined" and enter a programming command, the track will automatically switch to a programming track. If you use a compatible Throttle, you can then send the join command again and drive off the track onto the rest of your layout!</p>
 <ul>
-<li>In some split motor shield hardware configurations JOIN will not be able to work.</li>
+<li>In some split <abbr title="Also referred to as a 'motor controller' or 'motor driver'">motor shield</abbr> hardware configurations JOIN will not be able to work.</li>
 <li>While <code>&lt;1 JOIN&gt;</code> is valid, <code>&lt;0 JOIN&gt;</code> is not.</li>
 </ul>
 </li>

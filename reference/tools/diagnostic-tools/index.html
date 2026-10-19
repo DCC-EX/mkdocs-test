@@ -10963,7 +10963,7 @@
 <p><img alt="DCC Signal Analyser output" src="../../../_static/images/tools/dccpp_ex_acc_packet.jpg" width="200px" /></p>
 <h2 id="dcc-sniffer-packet-analyser">DCC Sniffer (PACKET analyser)<a class="headerlink" href="#dcc-sniffer-packet-analyser" title="Permanent link">&para;</a></h2>
 <h3 id="buy-it">Buy it<a class="headerlink" href="#buy-it" title="Permanent link">&para;</a></h3>
-<p>Well it isn't quite a turnkey solution, but it's close. You need this shield and an Arduino Uno or Mega and then to download our free <a href="../../../products/ex-dccinspector/"><strong>EX-DCCInspector</strong></a> file and upload it to your microcontroller with the <abbr title="Not recommended. Use EX-Installer or, if experienced, Microsoft Visual Studio Code (VSC)">Arduino IDE</abbr>. This is really a well-designed board. It is not only a packet sniffer, but can also be used as a decoder with different software. It has a wealth of configuration options and can even deliver ACK pulses if you use it as a programmable mobile decoder.</p>
+<p>Well it isn't quite a turnkey solution, but it's close. You need this shield and an Arduino Uno or Mega and then to download our free <a href="../../../products/ex-dccinspector/"><strong>EX-DCCInspector</strong></a> file and upload it to your <abbr title="ESP32, Nucleo, or Arduino Mega">microcontroller</abbr> with the <abbr title="Not recommended. Use EX-Installer or, if experienced, Microsoft Visual Studio Code (VSC)">Arduino IDE</abbr>. This is really a well-designed board. It is not only a packet sniffer, but can also be used as a decoder with different software. It has a wealth of configuration options and can even deliver ACK pulses if you use it as a programmable mobile decoder.</p>
 <p><img alt="Iowa Scale Engineering DCC Sniffer/Decoder Board" src="../../../_static/images/tools/iowa_scale_eng_dcc_board.jpg" width="400px" /></p>
 <p><a href="https://www.iascaled.com/store/ARD-DCCSHIELD">https://www.iascaled.com/store/ARD-DCCSHIELD</a><br />
 <strong>It costs about $30 US.</strong></p>
@@ -10971,14 +10971,14 @@
 <p><mark>TODO</mark> LOW - Wiring and more info goes here</p>
 <h3 id="build-it">Build It<a class="headerlink" href="#build-it" title="Permanent link">&para;</a></h3>
 <p>Now things get fun! A DCC sniffer is a very simple device that contains only 2 or 3 simple sections. Tinkerers and Engineers will have no trouble cobbling one together or buying a board and soldering on a few parts. You don't even need anything other than an Arduino or an ESP8266 or ESP32 if you connect to the signal pin of the <strong>EX-CommandStation</strong> instead of to the track.</p>
-<p>You will need to upload our <a href="../../../products/ex-dccinspector/"><strong>EX-DCCInspector</strong></a> software to whatever microcontroller you choose.</p>
+<p>You will need to upload our <a href="../../../products/ex-dccinspector/"><strong>EX-DCCInspector</strong></a> software to whatever <abbr title="ESP32, Nucleo, or Arduino Mega">microcontroller</abbr> you choose.</p>
 <p><img Width="400px" alt="Packet Sniffer Block Diagram" src="../../../_static/images/tools/sniffer_block_diag.png" /></p>
 <ul>
 <li>
 <p><strong>Power From Track</strong> This part is optional. You can use the USB cable connected to your computer to power everything. If you want the sniffer to be self-contained, for example if you attach a display to see the data or use WiFi to connect to the sniffer from a phone or another computer, then you can power the sniffer from the track OR from batteries.</p>
 </li>
 <li>
-<p><strong>DCC Signal Interface</strong> This is the part that connects to your track and reads the DCC signal and converts it to a safe level for your microcontroller. This can be as simple as a diode, two resistors and an optoisolator chip.</p>
+<p><strong>DCC Signal Interface</strong> This is the part that connects to your track and reads the DCC signal and converts it to a safe level for your <abbr title="ESP32, Nucleo, or Arduino Mega">microcontroller</abbr>. This can be as simple as a diode, two resistors and an optoisolator chip.</p>
 </li>
 <li>
 <p><strong>Microcontroller Decoder</strong> This is usually an Arduino of some kind or a WiFi Capable board like an ESP8266 with the DCCInspector-EX sketch.</p>
@@ -10992,18 +10992,18 @@
 <p>.. NOTE:: While you could substitute other optoisolator chips and get mixed results, the 6N137 was specifically chosen for it's switching speed. This allows for more reliable decoding and can even check the accuracy of the DCC signal.</p>
 <p><strong>Simplest circuit</strong><br />
 <img alt="Minimum recommended circuit" src="../../../_static/images/tools/dcc_interface_1.png" width="40px" /></p>
-<p>The circuit above represents the minimal number of components to potentially interface the track signal to the microcontroller running your sniffer software. It has been tested and eliminates the issues with many of the circuits available on the web. There should also ideally be a .1µF capacitor across pins 8 and 5 as close to the pins as possible. If you have one, a 1.3k resistor for R1 gives a little better range for track voltages from 10V up to 18V and a LED can be substituted for D1 as a track voltage indicator, though our <a href="../../../products/ex-dccinspector/"><strong>EX-DCCInspector</strong></a> sketch uses the pin 13 LED to provide the same function.</p>
+<p>The circuit above represents the minimal number of components to potentially interface the track signal to the <abbr title="ESP32, Nucleo, or Arduino Mega">microcontroller</abbr> running your sniffer software. It has been tested and eliminates the issues with many of the circuits available on the web. There should also ideally be a .1µF capacitor across pins 8 and 5 as close to the pins as possible. If you have one, a 1.3k resistor for R1 gives a little better range for track voltages from 10V up to 18V and a LED can be substituted for D1 as a track voltage indicator, though our <a href="../../../products/ex-dccinspector/"><strong>EX-DCCInspector</strong></a> sketch uses the pin 13 LED to provide the same function.</p>
 <p><strong>Another tested circuit (courtesy of Geoff Bunza)</strong><br />
 <img alt="Geoff Bunza DCC Interface Schematic" src="../../../_static/images/tools/dcc_fe2_schematic.jpg" width="400px" /></p>
 <p>The above is actually a simple circuit to build. To make it easy, Geoff has provided the CAD files that you can download, unzip, and then send the board file to one of many fabricators (like OSH Park) and have them make boards for you. <strong>DCC-EX</strong> may be selling these, so keep checking back. Here is what the boards look like:</p>
 <p><img Width="400px" alt="Geoff Bunza DCC Interface Board" src="../../../_static/images/tools/bunza_dcc_interface.jpg" /></p>
-<p>All you need to create your DCC Sniffer is to solder up this board and connect it to an Arduino. You can wire it to an Uno or Mega, but we like to use an Arduino Nano or ESP32 because you can connect the microcontroller and interface both on another carrier board or mount them in a case. The Nano and ESP32 are powered from the USB connection to your computer running a serial monitor, and it, in turn, can send that power to the DCC Interface Board.</p>
+<p>All you need to create your DCC Sniffer is to solder up this board and connect it to an Arduino. You can wire it to an Uno or Mega, but we like to use an Arduino Nano or ESP32 because you can connect the <abbr title="ESP32, Nucleo, or Arduino Mega">microcontroller</abbr> and interface both on another carrier board or mount them in a case. The Nano and ESP32 are powered from the USB connection to your computer running a serial monitor, and it, in turn, can send that power to the DCC Interface Board.</p>
 <p>Please check out Dr. Geoff's excellent blog on this board here:</p>
 <p><a href="https://model-railroad-hobbyist.com/node/41187">https://model-railroad-hobbyist.com/node/41187</a></p>
 <p><mark>TODO</mark> LOW - add info on wiring and sketches here</p>
 <h5 id="optional-power-supply-circuit">Optional Power Supply Circuit<a class="headerlink" href="#optional-power-supply-circuit" title="Permanent link">&para;</a></h5>
 <p>If you always intend to have your computer or laptop connected via the USB port to read the decoded DCC packets, then you can power everything from the 5V coming out of your USB port. But if you want something standalone, for example a sniffer with a display or that has wireless capability, then you are either going to have to power it from a 5V power supply (like a wall charger) or take your power from the track.</p>
-<p>Showing you how to build a power supply here wouldn't make much sense when you see Geoff Bunza's 17 function decoder board. It already has everything on it you need, power, optoisolator and space for an Arduino Pro Mini or Nano! You can use that little board to do just about anything you would ever want to do on your layout. Not only can it be programmed to be a DCC Sniffer, but it can be a fully functional decoder with up to 17 functions. It even has the option to have an H-Bridge chip motor driver right on the board to power motors!</p>
+<p>Showing you how to build a power supply here wouldn't make much sense when you see Geoff Bunza's 17 function decoder board. It already has everything on it you need, power, optoisolator and space for an Arduino Pro Mini or Nano! You can use that little board to do just about anything you would ever want to do on your layout. Not only can it be programmed to be a DCC Sniffer, but it can be a fully functional decoder with up to 17 functions. It even has the option to have an H-Bridge chip <abbr title="Also referred to as a 'motor controller' or 'motor shield'">motor driver</abbr> right on the board to power motors!</p>
 <h5 id="geoff-bunzas-17-function-decoder-and-sniffer">Geoff Bunza's 17 Function Decoder AND Sniffer<a class="headerlink" href="#geoff-bunzas-17-function-decoder-and-sniffer" title="Permanent link">&para;</a></h5>
 <p>If you just need the power supply for your own board, use the schematic to get what you need. Here at <strong>DCC-EX</strong> we use lots of these decoders and solder just the components we need. If we need a DCC interface, we just solder those components. If we need to connect it to the track, we add the rectifier and voltage regulator components.</p>
 <h5 id="ready-made-circuit-boards">Ready made circuit boards<a class="headerlink" href="#ready-made-circuit-boards" title="Permanent link">&para;</a></h5>
@@ -11029,7 +11029,7 @@
 </ul>
 <div class="admonition note"></div>
 <p>Search for the best source. As usual, you can often find the hardware items from online stores or Amazon, but also find them cheaper on eBay or AliExpress or BangGood direct from China.</p>
-<p>Any set of probes that will connect to the pins that are exposed between the Arduino and the motor driver will do, however we really like these "T" or "swept wing" probes. They are easy to hold and to open, can accept jumper wires from either side, and are pointed and use tiny hooks so they fit in tight spaces.</p>
+<p>Any set of probes that will connect to the pins that are exposed between the Arduino and the <abbr title="Also referred to as a 'motor controller' or 'motor shield'">motor driver</abbr> will do, however we really like these "T" or "swept wing" probes. They are easy to hold and to open, can accept jumper wires from either side, and are pointed and use tiny hooks so they fit in tight spaces.</p>
 <p><img alt="Logic Probes" src="../../../_static/images/tools/logic_probes.jpg" width="400px" /></p>
 <h3 id="install-pulseview">Install PulseView<a class="headerlink" href="#install-pulseview" title="Permanent link">&para;</a></h3>
 <p>Since the install instructions are particular for your operating system, we will just refer you to the SigRok page where you can follow their detailed instructions:</p>
@@ -11056,7 +11056,7 @@ $<span class="w"> </span>cp<span class="w"> </span>-r<span class="w"> </span>sig
 <li>Connect a jumper wire into a probe if you haven't already and then connect that into pin 0 or 1 on the logic analyser</li>
 <li>Connect a jumper wire into a probe and connect the other end of the jumper into the GND pin on the analyser</li>
 <li>Connect the GND probe to GND on the Arduino</li>
-<li>Connect pin 0 or pin 1 probe to the DCC signal output (enable pin) you want to measure on the Arduino/MotorShield connection. For the <abbr title="Main Track / Ops Mode">MAIN</abbr> track, this would usually be pin 13 for a STANDARD_MOTOR_SHIELD. Pin 12 would be the <abbr title="Programming Track / Service Mode">PROG</abbr> track.</li>
+<li>Connect pin 0 or pin 1 probe to the DCC signal output (enable pin) you want to measure on the Arduino/MotorShield connection. For the <abbr title="Main Track / Operations Mode (Ops Mode)">MAIN</abbr> track, this would usually be pin 13 for a STANDARD_MOTOR_SHIELD. Pin 12 would be the <abbr title="Programming Track / Service Mode">PROG</abbr> track.</li>
 <li>Connect the Analyser to the USB port of your computer</li>
 </ul>
 <h3 id="capture-the-samples-in-pulseview">Capture the samples in PulseView<a class="headerlink" href="#capture-the-samples-in-pulseview" title="Permanent link">&para;</a></h3>
@@ -11067,7 +11067,7 @@ $<span class="w"> </span>cp<span class="w"> </span>-r<span class="w"> </span>sig
 <li>Click on the new channel in the left column and give it a name and a height (Main and 26 or more)</li>
 <li>If you want to have a channel for <abbr title="Programming Track / Service Mode">PROG</abbr> and one for a trigger if you want to use a trigger output in DCC-EX to begin the capture, you can add those too.</li>
 <li>Select the waveform icon to add a protocol decoder. Choose "DCC"</li>
-<li>Click on the new channel and change the name to DCC, then link it in the "data line" dropdown to <abbr title="Main Track / Ops Mode">MAIN</abbr> (or whatever you named your first channel)</li>
+<li>Click on the new channel and change the name to DCC, then link it in the "data line" dropdown to <abbr title="Main Track / Operations Mode (Ops Mode)">MAIN</abbr> (or whatever you named your first channel)</li>
 <li>For "01 or 10", select 10 to display both the bits and the decoded packets. 01 will show just the bits</li>
 <li>In the main PulseView window, select "100kHz" for the sampling rate</li>
 <li>Next select your data sample size, which will determine how many seconds of data you save. If you select 100kHz sample rate and 100k samples, that is only 1 second. 1 M (as in Mega) is 1 Million sample, so that is 10 seconds.</li>
@@ -11096,7 +11096,7 @@ for a "0". It then immediately switches and does the same thing on the other tra
 <p>This is pretty easy. Set your DMM to AC Volts (important, NOT DC) in a range above your track voltage. For example, if your track voltage is 15 Volts, your meter may need to be set to the 20 volt range. Then follow these steps noting that unless you have a very expensive "TRUE RMS" Meter. we will just get an indication that there is a DCC signal is on the track, but the voltage will be off by a few volts.</p>
 <ol>
 <li>
-<p>Put one probe on Rail A of the known block and the other probe on Rail B. For our expected voltage of a 15 Volt supply, depending on your meter, it should read anywhere from 12-28 Volts AC. If not, you have a power issue or a Motor Driver issue.</p>
+<p>Put one probe on Rail A of the known block and the other probe on Rail B. For our expected voltage of a 15 Volt supply, depending on your meter, it should read anywhere from 12-28 Volts AC. If not, you have a power issue or a <abbr title="Also referred to as a 'motor controller' or 'motor shield'">Motor Driver</abbr> issue.</p>
 </li>
 <li>
 <p>Move your meter to the other block. Connect one probe to Rail A and the other to Rail B. You should measure the same voltage as before. If not, you have a power issue in your booster. It is either putting out DC or no voltage at all.</p>
