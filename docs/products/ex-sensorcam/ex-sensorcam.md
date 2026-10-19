@@ -5,7 +5,7 @@
 
 EX-SensorCAM is a video based multi-channel position sensing camera.
 
-==TODO== MEDIUM - change the references the this page from the Arduino IDE to VSC/PIO
+<!-- ==TODO== MEDIUM - change the references on this page from the Arduino IDE to VSC/PIO -->
 
 ## Introduction
 

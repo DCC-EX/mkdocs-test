@@ -2,7 +2,7 @@
 
 For use with ov2640 camera module with esp32-CAM-MB and variants
 
-==TODO== MEDIUM - change the references the this page from the Arduino IDE to VSC/PIO
+<!-- ==TODO== MEDIUM - change the references on this page from the Arduino IDE to VSC/PIO -->
 
 ## CONTENTS
 

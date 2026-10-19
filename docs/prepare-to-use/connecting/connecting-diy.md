@@ -14,9 +14,11 @@ How you connect you **EX-CommandStation** to your layout changes slightly depend
 
 ## Connecting an EX-MotorShield8874
 
-==TODO== physically connecting DIY EX-CS to a layout - EX8874
+<!-- ==TODO== MEDIUM - This section could be improved. Physically connecting DIY EX-CS to a layout - EX8874 -->
 
 The **EX-CommandStation** needs the minimum following connections to be able to run trains:
+
+![EX-8874 Power](../../_static/images/mega/ex-8874-connections.png){ width=200px align=right }
 
 - **Power input on the 2.1mm black barrel connector** –  accepts 10-25V DC fully regulated, preferably a modern switch-mode power brick, double-insulated with good power overload protection. See the [selecting power supply](../../diy/power.md) page for information on selecting a suitable power supply.
 - At least **one track connection** – on either the Track Output A (topmost) or Track Output B (beside the power) connector.
@@ -25,15 +27,15 @@ The **EX-CommandStation** needs the minimum following connections to be able to 
 
 ## Connecting a Standard Arduino Motor Shield
 
-==TODO== physically connecting DIY EX-CS to a layout - Standard Arduino Motor Shield
+<!-- ==TODO== MEDIUM - This section could be improved. Physically connecting DIY EX-CS to a layout - Standard Arduino Motor Shield -->
 
 The **EX-CommandStation** needs the minimum following connections to be able to run trains:
 
-![EX-8874 Power](../../_static/images/ex8874/motor_power2.jpg){ width=200px align=right }
+![Arduino Motor Shield Power](../../_static/images/mega-hard/mega-standard-motor-shield-power.png){ width=300px align=right }
 
 - **Power input for the motor shield** –  accepts 10-25V DC fully regulated, preferably a modern switch-mode power brick, double-insulated with good power overload protection. See the [selecting power supply](../../diy/power.md) page for information on selecting a suitable power supply.
 
-- **Power supply for the Microprocessor**.  This can be either:
+- **Power supply for the Arduino Mega**.  This can be either:
 
     - **7-9v DC power input on the 2.1 barrel connector** - Recommended
     - **USB power** - Not recommended. Powering with a USB power supply generally works, but may cause other issues later.

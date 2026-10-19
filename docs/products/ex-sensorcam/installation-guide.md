@@ -1,6 +1,6 @@
 # Installation Guide
 
-==TODO== MEDIUM - change the references the this page from the Arduino IDE to VSC/PIO
+<!-- ==TODO== MEDIUM - change the references on this page from the Arduino IDE to VSC/PIO -->
 
 EX-SensorCAM is an advanced concept foreign to most model railroaders and consequently deals with many unfamiliar issues. It also calls on multiple software applications to address them. The initial software setup for an inexperienced tinkerer is consequently involved and needing perseverance. The Arduino IDE, the ESP32 libraries, the Processing 4 App, the **EX-CommandStation** and **EXRAIL** (if used) combine to create a unique system supporting the **EX-sensorCAM's** own software. Any prior knowledge of these will vastly expedite the installation.
 

@@ -112,7 +112,7 @@ More information on the config files can be found on the [Managing Config Files]
 
 #### Using the Arduino IDE
 
-==TODO== MEDIUM - change the references the this page/section from the Arduino IDE to VSC/PIO
+<!-- ==TODO== MEDIUM - change the references on this page/section from the Arduino IDE to VSC/PIO -->
 
 !!! IMPORTANT "Using the Arduino IDE is not recommended"
    A word of caution on using the Arduino IDE to install the software:  

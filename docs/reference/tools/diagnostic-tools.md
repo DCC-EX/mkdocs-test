@@ -1,6 +1,6 @@
 # DCC Diagnostic Tools
 
-==TODO== MEDIUM - change the references the this page/section from the Arduino IDE to VSC/PIO
+<!-- ==TODO== MEDIUM - change the references on this page/section from the Arduino IDE to VSC/PIO -->
 
 ==TODO== MEDIUM - Work in Progress. More detail and pictures
 

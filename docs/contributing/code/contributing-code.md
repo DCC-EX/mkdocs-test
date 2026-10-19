@@ -10,7 +10,7 @@ If you reach out on discord, we have areas reserved for developers to discuss te
 
 ## Development Environment
 
-==TODO== MEDIUM - change the references the this page/section from the Arduino IDE to VSC/PIO
+<!-- ==TODO== MEDIUM - change the references on this page/section from the Arduino IDE to VSC/PIO -->
 
 We recommend using PlatformIO IDE for VSCode. If you haven't yet used it, it is an easy to learn and easy to use IDE that really shines for embedded development and the Arduino based hardware we use. For more information go to the [PlatformIO website](https://platformio.org/).
 

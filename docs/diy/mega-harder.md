@@ -10,6 +10,8 @@ Note. The use of the Arduino UNO is no longer supported by the current version o
 
 ## What you need
 
+![Basic Setup](../_static/images/mega-hard/basic_setup_lg.jpg){ width=600px }
+
 To build a basic DIY **EX-CommandStation** you will need:
 
 - A PC or laptop (Not A Raspberry Pi) running a reasonably recent versions of Windows, Linux or MacOS
@@ -28,6 +30,8 @@ To build a basic DIY **EX-CommandStation** you will need:
 
     - An Ethernet Shield
 
+----
+
 ## Step By Step Build
 
 ### Prepare your Mega
@@ -43,7 +47,7 @@ See [Ethernet Install](ethernet.md)
 
 <span style="color:red">**FAILURE TO DO THIS CAN DESTROY YOUR MEGA.**</span>
 
-![VIN trace](/_static/images/mega-hard/mega2.png){ align=right }
+![VIN trace](../_static/images/mega-hard/mega2.png){ align=right }
 
 1. Unless you are using an **EX-MotorShield8874** motor shield ([covered here](mega-easy.md)), you MUST prevent the shield from feeding track voltage into your Mega. This is done by cutting the VIN trace and/or removing the pin that feeds the Mega.
 
@@ -53,14 +57,14 @@ See [Ethernet Install](ethernet.md)
 
 ### Mount the motor shield
 
-![Orientation](/_static/images/mega-hard/mega4.png){: style="width: 70%"  align=right }
+![Orientation](../_static/images/mega-hard/mega4.png){: style="width: 70%"  align=right }
 
 Align the motor shield so that the power connectors are at the same end as the Mega power/USB connectors. It is normal for you to see a few millimetres of the pins between the bottom of the motor board and the top of the headers.
 
 <div style="clear: both;"></div>
 ### Connect your track
 
-![Orientation](/_static/images/mega-hard/mega5.png){ align=right }
+![Orientation](../_static/images/mega-hard/mega5.png){ align=right }
 Don't skip this step if you don't yet have any track because the WiFi shield will cover the connectors.
 
 It's best to create fly leads with a suitable pluggable connectors for later. It makes it much easier to detach your **EX-CommandStation** from your layout when you need to fiddle with it or throw it against the wall out of sheer frustration.
@@ -73,7 +77,7 @@ If you only have one piece of track for testing, wire it to the PROG track plug.
 <div style="clear: both;"></div>
 ### Connect your track power supply
 
-![Power](/_static/images/mega-hard/mega6.png){ align=right }
+![Power](../_static/images/mega-hard/mega6.png){ align=right width=400px }
 Wire your track power supply to the input turrets of the motor shield, observing polarity. It is best to create short wire with a female barrel connector.
 
 <div style="clear: both;"></div>
