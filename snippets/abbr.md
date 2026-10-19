@@ -21,7 +21,7 @@
 *[POM]: Programming on Main / Ops Mode Programming
 
 *[PROG]: Programming Track / Service Mode
-*[MAIN]: Main Track / Ops Mode
+*[MAIN]: Main Track / Operations Mode (Ops Mode)
 
 *[RGB]: Red - Green - Blue
 
@@ -33,6 +33,8 @@
 *[EX-CSB1]: EX-CommandStation/Booster 1 Express
 
 *[Arduino UNO]: Not recommended. No longer supported for the EX-CommandStation. The UNO shield shape/size is still relevant
+*[microcontroller]: ESP32, Nucleo, or Arduino Mega
+*[microcontrollers]: ESP32, Nucleo, or Arduino Mega
 
 *[EEPROM]: Electrically Erasable Programmable Read-Only Memory. Available on the Arduino Mega ONLY
 
@@ -53,6 +55,11 @@
 *[turnout]: North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a "Point"
 *[turnouts]: North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a "Point"
 *[Turnout]: North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a "Point"
+
+*[motor driver]: Also referred to as a 'motor controller' or 'motor shield'
+*[Motor Driver]: Also referred to as a 'motor controller' or 'motor shield'
+*[motor shield]: Also referred to as a 'motor controller' or 'motor driver'
+*[Motor Shield]: Also referred to as a 'motor controller' or 'motor driver'
 
 *[PWM]: Pulse Width Modulation
 

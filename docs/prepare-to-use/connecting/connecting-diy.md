@@ -1,10 +1,12 @@
 # Connecting to your layout
 
-How to connect your self build **EX-CommandStation** to your layout and programming track.
+This page explains how to connect your self built **EX-CommandStation** to your layout and programming track.
 
-Note: This page is for self build **EX-CommandStations** only. If you have an **EX-CSB1** please refer to the [corresponding page for the EX-CSB1](connecting-ex-csb1.md)
+!!! Note ""
 
-How you connect you **EX-CommandStation** to your layout changes slightly depending on the Motor Driver that you used in your self build.
+    This page is for self built **EX-CommandStations** only. If you have an **EX-CSB1** please refer to the [corresponding page](connecting-ex-csb1.md).
+
+How you connect your self built **EX-CommandStation** to your layout changes slightly depending on the Motor Driver that you used in your self build.
 
 - If you used an **EX-MotorShield8874** see the [EX-MotorShield8874](#connecting-an-ex-motorshield8874) section below
 - If you used a Standard Arduino Motor Shield see the [Standard Arduino Motor Shield](#connecting-a-standard-arduino-motor-shield) section below

@@ -47,6 +47,12 @@ In normal DCC operation, running locos happens on a **MAIN** track (your layout)
 
 Your loco will not respond to throttles if it is on the **PROG** track, and the command station will not send programming commands to the **MAIN** track.
 
+## [What is a Motor Driver?](https://dcc-ex.com/reference/hardware/motor-boards.html#id14)[](https://dcc-ex.com/reference/hardware/motor-boards.html#what-is-a-motor-driver "Link to this heading")
+
+A motor driver (aka ‘motor controller’, aka ‘motor shield’, aka ‘motor board’) is just a high voltage, high current switch. While initially designed to power electric motors, we use it to create the DCC signal to the track in a clever misapplication of technology. Normally, a pulse width modulated (PWM) signal would be applied to a motor with the PWM pin to control speed and the direction pin would switch the voltage from positive to negative to control the motor spin direction. Instead, we send full DC track voltage to the PWM pin and switch the direction pin at the DCC frequency (around 8000 times a second) to generate the bi-polar square wave. In this way, we use the 5V DC (or 3.3V) microcontroller output to switch the voltage from separate 12-16v DC power supply [^1] connected to the Motor Driver, and create a pulse train signal of 1’s and 0’s that a mobile decoder can interpret as commands.
+
+[^1]: The voltage you need for the Motor Driver depends on the scale/gauge of the layout you are using. Bigger is not always better. Too high a voltage can damage your locos. See the [power supplies](../purchasing/power.md) page for more information.
+
 ## Pullup
 
 [Search for pullup](?pullup)

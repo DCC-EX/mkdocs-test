@@ -19,7 +19,7 @@ To build a basic DIY **EX-CommandStation** with an **EX-MotorShield8874** in eas
 
 ## Step-by-Step Build
 
-### Prepare your Arduino Mega
+### 1. Prepare your Arduino Mega
 
 1. Use sticky tape or similar to cover up the barrel connector on the Mega. (Power to the processor will be provided by the EX8874 shield and you don't want accidents.)
 
@@ -27,7 +27,7 @@ To build a basic DIY **EX-CommandStation** with an **EX-MotorShield8874** in eas
 
 3. Mount your Mega on 3d printed tray, a piece of plastic card or wood to make sure that the underside solder points are insulated. Placing your **EX-CommandStation** down on a tool, coin or even your track can short the pins and, in some cases, damage the board.
 
-### Mount the EX-MotorShield8874 shield
+### 2. Mount the EX-MotorShield8874 shield
 
 **DO NOT USE ANY OTHER SHIELD TYPE WITHOUT FIRST CHECKING OUR DETAILED INSTRUCTIONS FOR THAT SHIELD.**
 
@@ -39,7 +39,7 @@ Check your work. Look under and through where the boards connect, make sure no p
 ![Mounted EX8874](../_static/images/mega/mega2.png)
 ![Mounted EX8874](../_static/images/mega/mega3.png)
 
-### Optionally Install WiFiShield
+### 3. Optionally Install WiFiShield - ***OPTIONAL***
 
 1. Prepare your **EX-WiFiShield8266** by removing the two jumpers, see picture. ![Wifi Jumpers](../_static/images/mega/mega4.png)
 2. Mount the Wi-Fi shield on the EX8874 noting the correct orientation in the pictures and there will be 2 pins on either side which are deliberately missing.![Wifi shield](../_static/images/mega/mega5.png)
@@ -47,15 +47,15 @@ Check your work. Look under and through where the boards connect, make sure no p
 4. Take a second jumper wire and connect it to any one of the row of Rx pins on the Wi-Fi Board and connect the other end to Tx1 on the mega (pin 18).![txrx](../_static/images/mega/mega6.png)
 5. Use a small piece of sticky tape or similar to keep the Dupont wires firmly in place in the mega header sockets. They are easily knocked out.
 
-### Connect your power supply
+### 4. Connect your power supply
 
 We recommend you label the power supply so that it does not get confused with others of different voltages you may use later. Plug in to the barrel connector on the **EX-MotorShield8874** shield (NOT the Mega).
 
-### Connect to your PC
+### 5. Connect to your PC
 
 Using a suitable USB cable (must carry Data and Power, not all cables do this!) connect the Mega USB to your PC.
 
-### Connect your track
+### 6. Connect your track
 
 The **EX-MotorShield8874** track connectors unplug for easy access.
     If you only have one piece of track for testing, wire it to the PROG track plug.
@@ -65,7 +65,7 @@ The **EX-MotorShield8874** track connectors unplug for easy access.
 
 ![CONNECTIONS](../_static/images/mega/mega7.png)
 
-### Load the software
+### 7. Load the software
 
 Congratulations, you have built a DIY **EX-CommandStation** the easy way. But you still have to load the software.
 
