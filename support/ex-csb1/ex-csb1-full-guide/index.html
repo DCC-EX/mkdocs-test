@@ -7971,6 +7971,15 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#step-4-manual-configuration-for-advanced-accessories" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 4: Manual Configuration for Advanced Accessories
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -12077,6 +12086,15 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#step-4-manual-configuration-for-advanced-accessories" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 4: Manual Configuration for Advanced Accessories
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -12173,7 +12191,7 @@
      The voltage for this connector is ALWAYS 3.3V!`</p>
 <p><img align="right" alt="RailSync Connector" src="../../../_static/images/ex-csb1/booster_conn.png" width="150px" /></p>
 <p>This is a standard Railsync input and is labelled 'Booster In' on the top of the board. Connecting a RailSync output from a Command Station or Booster will automatically switch the EXCSB1 to Booster Mode on receipt of an input signal when the <strong>EX‑CSB1</strong> is running the appropriate EXRAIL script.</p>
-<p>Again be sure to wire the DCC outputs to power districts with consistent phasing. Any voltage between 5V and 26V at the input will work. The Digitrax specification is from 12v to 26v. See the DCCWiki article on RailSync </p>
+<p>Again be sure to wire the DCC outputs to power districts with consistent phasing. Any voltage between 5V and 26V at the input will work. The Digitrax specification is from 12v to 26v. See the DCCWiki article on RailSync.</p>
 <h3 id="oled-i2c-header">OLED <abbr title="(Inter-Integrated Circuit, pronounced &quot;eye-squared-see&quot;) is a synchronous, multi-controller/multi-target serial communication protocol">I2C</abbr> Header<a class="headerlink" href="#oled-i2c-header" title="Permanent link">&para;</a></h3>
 <p><img align="right" alt="OLED header" src="../../../_static/images/ex-csb1/oled_header.png" width="150px" /></p>
 <p>This header is primarily designed for an OLED display, but can also be used as a female header for any <abbr title="(Inter-Integrated Circuit, pronounced &quot;eye-squared-see&quot;) is a synchronous, multi-controller/multi-target serial communication protocol">I2C</abbr> device that has male pins or for use with Dupont jumper wires.</p>
@@ -12212,13 +12230,15 @@
 <h3 id="oled-display-not-shown-above">OLED Display (not shown above)<a class="headerlink" href="#oled-display-not-shown-above" title="Permanent link">&para;</a></h3>
 <p><img align="right" alt="OLED Display" src="../../../_static/images/ex-csb1/oled_display.png" width="150px" /></p>
 <p>The OLED display provides diagnostics, status, and general information. The OLED display can also show output from EXRAIL scripts including user defined text. By default, the display shows the version number, license, power status, free memory, and if configured, your WiFi access point login information.</p>
-<p><img align="right" alt="HOT Surface Area" src="../../_static/images/ex-csb1" width="150px" />
-Hot Area Warning
-Fig 66: Hot Area Warning</p>
+<div style="clear: both;"></div>
+
+<p><img align="right" alt="HOT Surface Area" src="../../../_static/images/ex-csb1/hot_area.png" width="150px" /></p>
 <p>The entire area shown in the image to the right can get extremely hot during operation. Be careful not to touch this area at the top or bottom of the board to avoid being burned. This is especially true at high track current levels. Also be sure to provide proper ventilation to the board. If placed in a case, that case must have proper ventilation. Consider using proper vent holes and a fan if you intend to place the <strong>EX‑CSB1</strong> inside an enclosure.</p>
 <h3 id="i2c-jumper-pads"><abbr title="(Inter-Integrated Circuit, pronounced &quot;eye-squared-see&quot;) is a synchronous, multi-controller/multi-target serial communication protocol">I2C</abbr> Jumper Pads<a class="headerlink" href="#i2c-jumper-pads" title="Permanent link">&para;</a></h3>
 <p><img align="right" alt="I2C Jumper Pads" src="../../../_static/images/ex-csb1/i2c_jumper_pads.png" width="150px" /></p>
 <p>There are 2 solder pad jumpers on the <abbr title="EX-CommandStation/Booster 1 Express">EX-CSB1</abbr> labelled 'i2c'.</p>
+<div style="clear: both;"></div>
+
 <h3 id="unpopulated-power-connector">Unpopulated Power Connector<a class="headerlink" href="#unpopulated-power-connector" title="Permanent link">&para;</a></h3>
 <p><img align="right" alt="Unpopulated Power Pads" src="../../../_static/images/ex-csb1/unpopulated_power_pins.png" width="150px" /></p>
 <h3 id="power-pads">Power Pads<a class="headerlink" href="#power-pads" title="Permanent link">&para;</a></h3>
@@ -12317,9 +12337,11 @@ The <strong>EX‑CommandStation/Booster One Express</strong> is set to operate i
 <p>The <strong>EX‑CommandStation/Booster One Express</strong> comes preloaded with the Command Station software, so you can start using it right out of the box.</p>
 <p>However, if you wish to customise its configuration or update the software, you can easily do so by connecting the <strong>EX‑CommandStation/Booster One Express</strong> to your computer via USB and follow the steps below to make any changes you need.</p>
 <h3 id="first-time-connection">First Time Connection<a class="headerlink" href="#first-time-connection" title="Permanent link">&para;</a></h3>
+<p><br/></p>
 <h4 id="step-1-connect-the-ex-csb1-to-your-computer">Step 1: Connect the <abbr title="EX-CommandStation/Booster 1 Express">EX-CSB1</abbr> to Your Computer<a class="headerlink" href="#step-1-connect-the-ex-csb1-to-your-computer" title="Permanent link">&para;</a></h4>
 <p>Locate the USB Port: Find the USB-C port on your <strong>EX‑CSB1</strong>. Use a Compatible USB Cable: Grab a USB-C cable that matches the port on your PC or laptop. This will likely be a USB-A to USB-C cable for older PCs and laptops, or a USB-C to USB-C for more modern PCs and laptops. Plug It In: Connect one end of the USB cable to the <strong>EX‑CSB1</strong> and the other end to an available USB port on your computer.</p>
 <h4 id="step-2-install-the-required-usb-drivers">Step 2: Install the Required USB Drivers<a class="headerlink" href="#step-2-install-the-required-usb-drivers" title="Permanent link">&para;</a></h4>
+<p><br/></p>
 <h5 id="automatic-driver-installation">Automatic Driver Installation<a class="headerlink" href="#automatic-driver-installation" title="Permanent link">&para;</a></h5>
 <p>In most cases, your computer will automatically recognise the <strong>EX‑CSB1</strong> then you connect it and install the necessary USB serial drivers.</p>
 <h5 id="manual-driver-installation">Manual Driver Installation<a class="headerlink" href="#manual-driver-installation" title="Permanent link">&para;</a></h5>
@@ -12339,6 +12361,7 @@ The <strong>EX‑CommandStation/Booster One Express</strong> is set to operate i
 <h4 id="step-1-disconnect-power">Step 1: Disconnect Power<a class="headerlink" href="#step-1-disconnect-power" title="Permanent link">&para;</a></h4>
 <p>Before you begin, make sure the Command Station is powered off. Unplug the power supply from the wall or disconnect the barrel connector from the <strong>EX‑CSB1</strong>. This ensures that the system is completely powered down before the reset process.</p>
 <h4 id="step-2-connect-to-your-computer-via-usb">Step 2: Connect to Your Computer via USB<a class="headerlink" href="#step-2-connect-to-your-computer-via-usb" title="Permanent link">&para;</a></h4>
+<p><br/></p>
 <h5 id="locate-the-usb-port">Locate the USB Port<a class="headerlink" href="#locate-the-usb-port" title="Permanent link">&para;</a></h5>
 <p>Find the USB port on your EX‑CSB1.</p>
 <h5 id="use-a-compatible-usb-cable">Use a Compatible USB Cable<a class="headerlink" href="#use-a-compatible-usb-cable" title="Permanent link">&para;</a></h5>
@@ -12346,11 +12369,13 @@ The <strong>EX‑CommandStation/Booster One Express</strong> is set to operate i
 <h5 id="power-on">Power On<a class="headerlink" href="#power-on" title="Permanent link">&para;</a></h5>
 <p>Plug the power supply back in or reconnect the barrel connector to power on the EX‑CSB1.</p>
 <h4 id="step-3-download-the-latest-installer">Step 3: Download the Latest Installer<a class="headerlink" href="#step-3-download-the-latest-installer" title="Permanent link">&para;</a></h4>
+<p><br/></p>
 <h5 id="visit-the-dcc-ex-website">Visit the DCC-EX Website<a class="headerlink" href="#visit-the-dcc-ex-website" title="Permanent link">&para;</a></h5>
 <p>Go to the official DCC-EX website.</p>
 <h5 id="save-the-installer">Save the Installer<a class="headerlink" href="#save-the-installer" title="Permanent link">&para;</a></h5>
 <p>Save the EX‑Installer file to a location on your computer where you can easily access it.</p>
 <h4 id="step-4-run-ex-installer">Step 4: Run EX-Installer<a class="headerlink" href="#step-4-run-ex-installer" title="Permanent link">&para;</a></h4>
+<p><br/></p>
 <h5 id="open-ex-installer">Open EX-Installer<a class="headerlink" href="#open-ex-installer" title="Permanent link">&para;</a></h5>
 <p>Locate the downloaded installer file on your computer and double-click to run it.</p>
 <h5 id="follow-the-on-screen-instructions">Follow the On-Screen Instructions<a class="headerlink" href="#follow-the-on-screen-instructions" title="Permanent link">&para;</a></h5>
@@ -12359,6 +12384,7 @@ The <strong>EX‑CommandStation/Booster One Express</strong> is set to operate i
 <h5 id="complete-the-installation">Complete the Installation<a class="headerlink" href="#complete-the-installation" title="Permanent link">&para;</a></h5>
 <p>Allow EX‑Installer to complete the process. Once done, the Command Station will be reset to its original configuration.</p>
 <h5 id="step-5-verify-the-reset">Step 5: Verify the Reset<a class="headerlink" href="#step-5-verify-the-reset" title="Permanent link">&para;</a></h5>
+<p><br/></p>
 <h5 id="launch-the-command-station-software">Launch the Command Station Software<a class="headerlink" href="#launch-the-command-station-software" title="Permanent link">&para;</a></h5>
 <p>After the installation is complete, power up the <strong>EX‑CSB1</strong> to ensure it's running correctly with the default settings.</p>
 <h5 id="check-the-configuration">Check the Configuration<a class="headerlink" href="#check-the-configuration" title="Permanent link">&para;</a></h5>
@@ -12369,6 +12395,7 @@ The <strong>EX‑CommandStation/Booster One Express</strong> is set to operate i
 <h5 id="test-your-setup">Test Your Setup<a class="headerlink" href="#test-your-setup" title="Permanent link">&para;</a></h5>
 <p>Power up your layout and test the system to ensure everything is working as expected.</p>
 <h2 id="connecting">Connecting<a class="headerlink" href="#connecting" title="Permanent link">&para;</a></h2>
+<p><br/></p>
 <h3 id="usb-connection-to-a-serial-monitor">USB Connection to a Serial Monitor<a class="headerlink" href="#usb-connection-to-a-serial-monitor" title="Permanent link">&para;</a></h3>
 <p>There are a number ways to open a Serial Monitor to the <strong>EX‑CommandStation/Booster One Express</strong>. They are discussed on the Using a Serial Monitor page, and any are acceptable.</p>
 <p>To discuss just one of those options, which will likely be the easiest to do if you have recently installed the Command Station software using EX‑Installer. Simply click the Serial Monitor button when the the <strong>EX‑CSB1</strong> is connected via USB to your PC.</p>
@@ -12376,9 +12403,11 @@ The <strong>EX‑CommandStation/Booster One Express</strong> is set to operate i
 <p><mark>TODO</mark> MEDIUM - USB Connection to <abbr title="Java Model Railroad Interface">JMRI</abbr></p>
 <p>USB Connection to <abbr title="Java Model Railroad Interface">JMRI</abbr></p>
 <h2 id="connecting-optional-devices-and-accessories">Connecting Optional Devices and Accessories<a class="headerlink" href="#connecting-optional-devices-and-accessories" title="Permanent link">&para;</a></h2>
+<p><br/></p>
 <h3 id="integrated-displays">Integrated displays<a class="headerlink" href="#integrated-displays" title="Permanent link">&para;</a></h3>
 <p><mark>TODO</mark> MEDIUM - Integrated displays</p>
 <h4 id="i2c-accessories"><abbr title="(Inter-Integrated Circuit, pronounced &quot;eye-squared-see&quot;) is a synchronous, multi-controller/multi-target serial communication protocol">I2C</abbr> Accessories<a class="headerlink" href="#i2c-accessories" title="Permanent link">&para;</a></h4>
+<p><br/></p>
 <h5 id="dcc-ex-i2c-hardware-overview">DCC-EX <abbr title="(Inter-Integrated Circuit, pronounced &quot;eye-squared-see&quot;) is a synchronous, multi-controller/multi-target serial communication protocol">I2C</abbr> Hardware Overview<a class="headerlink" href="#dcc-ex-i2c-hardware-overview" title="Permanent link">&para;</a></h5>
 <p>The <strong>EX‑CSB1</strong> allows you to expand your model railway setup by connecting various <abbr title="(Inter-Integrated Circuit, pronounced &quot;eye-squared-see&quot;) is a synchronous, multi-controller/multi-target serial communication protocol">I2C</abbr> accessories such as sensors, displays, and GPIO expanders. Using the DCC-EX EX‑Installer and additional tools, you can easily configure these accessories to work with your layout.</p>
 <h5 id="step-1-selecting-i2c-accessories">Step 1: Selecting <abbr title="(Inter-Integrated Circuit, pronounced &quot;eye-squared-see&quot;) is a synchronous, multi-controller/multi-target serial communication protocol">I2C</abbr> Accessories<a class="headerlink" href="#step-1-selecting-i2c-accessories" title="Permanent link">&para;</a></h5>
@@ -12390,17 +12419,17 @@ The <strong>EX‑CommandStation/Booster One Express</strong> is set to operate i
 <p>Visit the EX‑Installer page to download the latest version. Follow the on-screen instructions to install the software on your computer. Run the Installer:</p>
 <p>Connect your <strong>EX‑CSB1</strong> to your computer via USB. Open the EX‑Installer. The installer will guide you through the initial setup, including basic configurations like setting up <abbr title="(Inter-Integrated Circuit, pronounced &quot;eye-squared-see&quot;) is a synchronous, multi-controller/multi-target serial communication protocol">I2C</abbr> displays. Configuring <abbr title="(Inter-Integrated Circuit, pronounced &quot;eye-squared-see&quot;) is a synchronous, multi-controller/multi-target serial communication protocol">I2C</abbr> Displays:</p>
 <p>The installer will allow you to configure connected displays (such as OLED or LCD) directly during the setup process. For other <abbr title="(Inter-Integrated Circuit, pronounced &quot;eye-squared-see&quot;) is a synchronous, multi-controller/multi-target serial communication protocol">I2C</abbr> devices, further configuration may require manual adjustments using the EX‑CommandStation software or editing configuration files.</p>
-<p>Step 4: Manual Configuration for Advanced Accessories
-Access the EX‑CommandStation Software:</p>
+<h5 id="step-4-manual-configuration-for-advanced-accessories">Step 4: Manual Configuration for Advanced Accessories<a class="headerlink" href="#step-4-manual-configuration-for-advanced-accessories" title="Permanent link">&para;</a></h5>
+<p>Access the <strong>EX‑CommandStation</strong> Software:</p>
 <p>For advanced <abbr title="(Inter-Integrated Circuit, pronounced &quot;eye-squared-see&quot;) is a synchronous, multi-controller/multi-target serial communication protocol">I2C</abbr> accessories like sensors or GPIO expanders, you may need to manually configure them via the EX‑CommandStation software. This involves accessing configuration files or using a Serial Monitor to input specific commands.</p>
 <p>Editing Configuration Files:</p>
-<p>If necessary, open the configuration files provided with the DCC-EX software to manually add and configure your <abbr title="(Inter-Integrated Circuit, pronounced &quot;eye-squared-see&quot;) is a synchronous, multi-controller/multi-target serial communication protocol">I2C</abbr> devices. Instructions for this can be found on the DCC-EX documentation pages.</p>
+<p>If necessary, open the configuration files provided with the <strong>EX‑CommandStation</strong> software to manually add and configure your <abbr title="(Inter-Integrated Circuit, pronounced &quot;eye-squared-see&quot;) is a synchronous, multi-controller/multi-target serial communication protocol">I2C</abbr> devices. Instructions for this can be found on the DCC-EX documentation pages.</p>
 <p>Save and Apply Settings:</p>
 <p>After configuring your devices, ensure you save and apply your settings through the CommandStation software. Step 5: Testing and Troubleshooting</p>
 <p>Test Your Setup:</p>
-<p>Once configured, power on your layout and check if the <abbr title="(Inter-Integrated Circuit, pronounced &quot;eye-squared-see&quot;) is a synchronous, multi-controller/multi-target serial communication protocol">I2C</abbr> devices are functioning correctly. Use the diagnostics tools provided by the DCC-EX software to troubleshoot any issues.</p>
+<p>Once configured, power on your layout and check if the <abbr title="(Inter-Integrated Circuit, pronounced &quot;eye-squared-see&quot;) is a synchronous, multi-controller/multi-target serial communication protocol">I2C</abbr> devices are functioning correctly. Use the diagnostics tools provided by the <strong>DCC-EX</strong> software to troubleshoot any issues.</p>
 <p>Troubleshooting Common Issues:</p>
-<p>Double-check wiring connections and <abbr title="(Inter-Integrated Circuit, pronounced &quot;eye-squared-see&quot;) is a synchronous, multi-controller/multi-target serial communication protocol">I2C</abbr> addresses. If issues persist, refer to the troubleshooting guides on the DCC-EX website.</p>
+<p>Double-check wiring connections and <abbr title="(Inter-Integrated Circuit, pronounced &quot;eye-squared-see&quot;) is a synchronous, multi-controller/multi-target serial communication protocol">I2C</abbr> addresses. If issues persist, refer to the troubleshooting guides on the <strong>DCC-EX</strong> website.</p>
 <p>Additional Resources</p>
 <p>For more detailed instructions and support, refer to these resources:</p>
 <hr />
@@ -12448,7 +12477,7 @@ Access the EX‑CommandStation Software:</p>
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="October 19, 2026 07:44:08 UTC">October 19, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="October 19, 2026 08:03:18 UTC">October 19, 2026</span>
   </span>
 
     
