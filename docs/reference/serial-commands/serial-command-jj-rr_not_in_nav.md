@@ -7,7 +7,7 @@ search:
   boost: 3
 ---
 
-# <small>``<J R>`` ``<J R «id»>`` ``<J R «id» "«name" "«functions»">`` <br/> ``<J R «id» DELETE>`` ``<J R SAVE>``</small> <br/>Request Roster info
+# <small><small>``<J R>`` ``<J R «id»>`` ``<J R «id» "«name»" "«functions»">`` <br/> ``<J R «id» DELETE>`` ``<J R SAVE>``</small></small> <br/>Request or Create Roster info
 
 Serial command to request roster info, or add new roster entries and save them in RAM.
 
@@ -18,15 +18,15 @@ Serial command to request roster info, or add new roster entries and save them i
 
 New Roster commands for v5.9.13 and above:
 
-* ``<J R «id» "«name" "«functions»">`` adds or replaces a roster in RAM
+* ``<J R «id» "«name»" "«functions»">`` adds or replaces a roster in RAM
 * ``<J R «id» DELETE>`` removes a roster entry from ram
 * ``<J R SAVE>`` saves the current rosters in ram. They will be reloaded again at startup
 
 ## Parameters
 
-* **id**: *optional* <br/>unique id and/or DCC address of the Loco/s in the roster
-* **name**: *optional* <br/> name of the locos for the roster entry.
-* **functions**: *optional* <br/> forward slash (/) separated list of function labels. Labels prefixes with asterisk (*) will be treated as momentary.
+* **id**: *optional* - unique id and/or DCC address of the Loco/s in the roster
+* **name**: *optional* - name of the locos for the roster entry.
+* **functions**: *optional* - forward slash (/) separated list of function labels. Labels prefixes with asterisk (*) will be treated as momentary.
 
 ## Responses
 
@@ -39,7 +39,7 @@ New Roster commands for v5.9.13 and above:
 
 ### Response for ``<j R «id»>``
 
-``<jR «id» ""|"desc" ""|"funct0/funct1/funct2/.../funct31">``
+``<jR «id» "desc" "funct0/funct1/funct2/.../funct31">``
 
 * ``jR`` = the 'message identifer'
 * **id1..n:** = unique id and/or DCC address of a Loco in the roster
@@ -50,9 +50,9 @@ New Roster commands for v5.9.13 and above:
 
 ==TODO== MEDIUM - Response for ``<J R «id» "«name" "«functions»">``
 
-### Response for ``<J R «id» DELETE>```
+### Response for ``<J R «id» DELETE>``
 
-==TODO== MEDIUM - Response for ``<J R «id» DELETE>```
+==TODO== MEDIUM - Response for ``<J R «id» DELETE>``
 
 ### Response for ``<J R SAVE>``
 
