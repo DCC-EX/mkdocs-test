@@ -23,7 +23,7 @@
     
     
       
-        <title>Serial commands to: Request or Configure Track Manager (_equals) - DCC-EX Model Train Control, Animation &amp; Automation</title>
+        <title>Serial commands to: Request or Configure Track Manager - DCC-EX Model Train Control, Animation &amp; Automation</title>
       
     
     
@@ -79,7 +79,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#serial-commands-to-request-or-configure-track-manager-_equals" class="md-skip">
+        <a href="#serial-commands-to-request-or-configure-track-manager" class="md-skip">
           Skip to content
         </a>
       
@@ -112,7 +112,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Serial commands to: Request or Configure Track Manager (_equals)
+              Serial commands to: Request or Configure Track Manager
             
           </span>
         </div>
@@ -501,7 +501,7 @@
       <li class="md-breadcrumbs__item" style="display: flex; align-items: center; gap: 8px;">
         <span style="opacity: 0.35; color: var(--md-typeset-color);">|</span>
         <span class="md-breadcrumbs__link" style="color: var(--md-typeset-color); font-weight: 700;">
-          Serial commands to: Request or Configure Track Manager (_equals)
+          Serial commands to: Request or Configure Track Manager
         </span>
       </li>
     
@@ -10527,7 +10527,7 @@
   
 
 
-<h1 id="serial-commands-to-request-or-configure-track-manager-_equals">Serial commands to: Request or Configure Track Manager <span style="display:none;">(_equals)</span><a class="headerlink" href="#serial-commands-to-request-or-configure-track-manager-_equals" title="Permanent link">&para;</a></h1>
+<h1 id="serial-commands-to-request-or-configure-track-manager">Serial commands to: Request or Configure Track Manager<a class="headerlink" href="#serial-commands-to-request-or-configure-track-manager" title="Permanent link">&para;</a></h1>
 <p>Serial command to request information about the modes of all tracks or alter the mode of a specific track.</p>
 <p><code>&lt;=&gt;</code>
 <code>&lt;= «trackletter» «mode»&gt;</code>
@@ -10536,12 +10536,13 @@
 <h2 id="commands">Commands<a class="headerlink" href="#commands" title="Permanent link">&para;</a></h2>
 <ul>
 <li><code>&lt;=&gt;</code> = Request the current Track Manager configuration</li>
-<li><code>&lt;= [«trackletter» «mode»] [«id»]&gt;</code> = set a specifc track to a mode</li>
+<li><code>&lt;= «trackletter» «mode»&gt;</code> = set a specific track to a mode (not DC)</li>
+<li><code>&lt;= «trackletter» «mode» «id»&gt;</code> = set a specific track to a mode (DC)</li>
 </ul>
 <h2 id="parameters">Parameters<a class="headerlink" href="#parameters" title="Permanent link">&para;</a></h2>
 <ul>
 <li>
-<p><strong>trackletter</strong> <em>optional</em> - one of:</p>
+<p><strong>trackletter</strong> one of:</p>
 <ul>
 <li><code>A</code> through <code>H</code> representing one of the outputs of the/a <abbr title="Also referred to as a 'motor controller' or 'motor driver'">motor shield</abbr>.</li>
 </ul>
@@ -10551,7 +10552,7 @@
 <ul>
 <li><code>MAIN</code></li>
 <li><code>MAIN_INV</code></li>
-<li><code>MAIN_AUTO</code> <BR/> Deprecated alias of <code>AUTO</code> but only when preceeded by a sperate <code>MAIN</code> command.</li>
+<li><code>MAIN_AUTO</code> <BR/> Deprecated alias of <code>AUTO</code> but only when preceded by a separate <code>MAIN</code> command.</li>
 <li><code>PROG</code></li>
 <li><code>DC</code></li>
 <li><code>DC_INV</code> = DC reversed polarity</li>
@@ -10621,7 +10622,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="October 20, 2026 03:26:09 UTC">October 20, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="October 20, 2026 04:13:02 UTC">October 20, 2026</span>
   </span>
 
     
