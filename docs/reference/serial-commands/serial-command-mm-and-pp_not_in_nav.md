@@ -22,16 +22,16 @@ Serial commands to Send up to 6 byte DCC packet to MAIN or PROG.
 
 ----
 
-## Command(s)
+## Commands
 
 * ``<M «ignore» «d0» «d1» [«d2» [«d3» [«d4» [«d5»]]]]>`` = Send up to 6 byte DCC packet on MAIN track
 * ``<P «ignore» «d0» «d1» [«d2» [«d3» [«d4» [«d5»]]]]>`` = Send up to 6 byte DCC packet on PROG track
 
 ## Parameters
 
-* **ignore**: *Required* not used
-* **d0**..**D1**: *Required* - values *in hex* to send
-* **d2**..**D5**: *Optional* - values *in hex* to send
+* **ignore**: *Required* but not used
+* **d0**..**D1**: values *in hex* to send
+* **d2**..**D5**: values *in hex* to send
 
 ## Response
 

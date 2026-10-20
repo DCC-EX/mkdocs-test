@@ -29,7 +29,7 @@ Serial commands to provide the ability to set neopixels on or off or change the 
 
 ## Parameters
 
-* **vpin**: *optional* The pin number of the output to be controlled. For Arduino output pins, this is the same as the digital pin number.
+* **vpin**: The pin number of the output to be controlled. For Arduino output pins, this is the same as the digital pin number.
 * **count**: number of pixels to set, starting at vpin. Default = ``1``
 * **r**: 0..255 intensity of the red channel
 * **g**: 0..255 intensity of the green channel

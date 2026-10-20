@@ -13,13 +13,12 @@ Serial command to Enable/Disable Railcom cutout.
 
 ## Command
 
-* ``<C RAILCOM ON|OFF>`` = Enable/Disable Railcom cutout.
+* ``<C RAILCOM ON>`` = Enable Railcom cutout.
+* ``<C RAILCOM OFF>`` = Disable Railcom cutout.
 
-## Parameter
+## Parameters
 
-* **onOff**: *Required* - one of:
-    * ``ON`` = Enable Railcom cutout
-    * ``OFF`` = Disable Railcom cutout
+none
 
 ## Response
 

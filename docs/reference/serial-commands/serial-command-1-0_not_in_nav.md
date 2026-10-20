@@ -31,7 +31,7 @@ Serial command to turn power on or off to all or specific tracks.  Also allows j
 
 ## Parameters
 
-* **track** *optional* - one of:
+* **track** one of:
     * ``MAIN`` = Main track
     * ``PROG`` = Programming Track
     * ``JOIN`` = Join the Main and Programming tracks temporarily <br/>Note: While ``<1 JOIN>`` is valid, ``<0 JOIN>`` is not.

@@ -16,14 +16,14 @@ Serial commands to set or remove a latch.
 
 ----
 
-## Command(s)
+## Commands
 
 * ``</ LATCH «latch»>`` = Set pin latch
 * ``</ UNLATCH «latch»>`` = Remove pin latch
 
 ## Parameters
 
-* **latch**: *Required* identifier of the Sensor (0-255)
+* **latch**: identifier of the Sensor (0-255)
 
 ## Response
 

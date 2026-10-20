@@ -30,7 +30,7 @@ Serial commands to enable or disable various diagnostic messages shown on the se
 
 ----
 
-## Command(s)
+## Commands
 
 * ``<D CMD ON|OFF>`` = Enable/Disable command input diagnostics
 * ``<D EXRAIL ON|OFF>`` = Enable/Disable EXRAIL diagnostics
@@ -42,7 +42,7 @@ Serial commands to enable or disable various diagnostic messages shown on the se
 
 ## Parameters
 
-* **ON|OFF**: *Required* Enable or Disable
+* **ON|OFF**: Enable or Disable
 
 ## Response
 

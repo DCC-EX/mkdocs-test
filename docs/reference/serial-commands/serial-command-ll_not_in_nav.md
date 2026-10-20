@@ -9,7 +9,7 @@ search:
 
 # Serial commands to: LCC/CBUS adapter commands
 
-Serial command(s) to support the LCC/CBUS adapter.
+Serial commands to support the LCC/CBUS adapter.
 
 ``<L>``
 ``<L «eventid»>``
@@ -23,7 +23,7 @@ Serial command(s) to support the LCC/CBUS adapter.
 
 ## Parameters
 
-* **eventId**: *optional* ==TODO== MEDIUM description
+* **eventId**: ==TODO== MEDIUM description
 
 ## Response
 

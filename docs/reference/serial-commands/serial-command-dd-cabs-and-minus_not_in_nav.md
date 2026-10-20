@@ -15,7 +15,7 @@ Serial commands to display and manage the loco state table.
 
 ----
 
-## Command(s)
+## Commands
 
 * ``<D CABS>`` = Diagnostic display loco state table
 * ``<->`` = Remove all locos from the state table and reminders

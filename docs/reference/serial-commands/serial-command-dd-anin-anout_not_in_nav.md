@@ -7,13 +7,13 @@ tags:
 
 # Serial commands to: Manage VPINs analogue values
 
-Serial command(s) to Manage VPINs analogue values.
+Serial commands to Manage VPINs analogue values.
 
 ``<D ANIN «vpin»>``
 ``<D ANOUT «vpin» «position»>``
 ``<D ANOUT «vpin» «position» «profile»>``
 
-## Command(s)
+## Commands
 
 * ``<D ANIN «vpin»>`` = Display analogue input value
 * ``<D ANOUT «vpin» «position» «profile»>`` = see ==TODO== Command Description
@@ -21,7 +21,7 @@ Serial command(s) to Manage VPINs analogue values.
 
 ## Parameters
 
-* **vpin**: *Required* Analogue VPIN to read or write
+* **vpin**: Analogue VPIN to read or write
 * **position**: ==TODO== MEDIUM - Parameter Description
 * **profile**: ==TODO== MEDIUM - Parameter Description
 

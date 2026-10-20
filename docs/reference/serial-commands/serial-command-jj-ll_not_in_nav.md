@@ -6,7 +6,7 @@ search:
   boost: 3
 ---
 
-# Serial commands to: Direct current displays to LCS/OLED
+# Serial command to: Direct current displays to LCS/OLED
 
 Serial command to Direct current displays to LCS/OLED
 
@@ -14,7 +14,7 @@ Serial command to Direct current displays to LCS/OLED
 
 ----
 
-## Command(s)
+## Command
 
 * ``<J L «display» «row»>`` = Direct current displays to LCS/OLED
 

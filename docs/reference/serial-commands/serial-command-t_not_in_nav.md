@@ -24,7 +24,7 @@ Serial commands to request information about a loco or set its speed and directi
 
 ## Parameters
 
-* **loco** *Required* <br/> Loco to request information about a loco or set its speed and direction
+* **loco**: Loco to request information about a loco or set its speed and direction
 * **tSpeed**: ``0``-``127`` or ``-1`` for Emergency Stop
 * **direction** - one of:
     * ``1`` = forward

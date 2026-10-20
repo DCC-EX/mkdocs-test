@@ -16,15 +16,15 @@ Serial command for servo motor testing.
 
 ----
 
-## Command(s)
+## Commands
 
 * ``<D SERVO «vpin» «position»>`` = Test servo
 * ``<D SERVO «vpin» «position» «profile»>`` = Test servo
 
 ## Parameters
 
-* **vpin**: *Required* vpin to which the servo is attached
-* **position**: *Required* position to move the servo to
+* **vpin**: vpin to which the servo is attached
+* **position**: position to move the servo to
 * **profile**: one of
     * ``0`` = instant
     * ``1`` = fast

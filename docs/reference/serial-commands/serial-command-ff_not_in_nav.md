@@ -25,7 +25,7 @@ Serial command to turn loco decoder functions ON or OFF or set the DC PWM freque
 
 ## Parameters
 
-* **loco** *Required*<br/> Loco to set the function or PWM frequency
+* **loco**: Loco to set the function or PWM frequency
 
 * If **function** plus **state** are supplied - To set the function on or off
     * **function*: Function to set. ``0``-``68`` (Support for the RCN-212 Functions)

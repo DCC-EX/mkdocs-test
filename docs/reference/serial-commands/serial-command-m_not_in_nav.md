@@ -20,7 +20,7 @@ Serial commands to Server based momentum for a specific loco.
 
 ----
 
-## Command(s)
+## Commands
 
 * ``<m «loco» «accelerating» «braking»>`` = Set momentum for loco
 * ``<m «loco» «momentum»>`` = Set momentum for loco (acceleration and braking)

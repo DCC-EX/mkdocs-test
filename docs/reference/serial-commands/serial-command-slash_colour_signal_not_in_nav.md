@@ -18,7 +18,7 @@ Serial command to set the colour of a signal.
 
 ----
 
-## Command
+## Commands
 
 * ``</ RED «signal»>`` = Set signal colour
 * ``</ AMBER «signal»>`` = Set signal colour
@@ -26,7 +26,7 @@ Serial command to set the colour of a signal.
 
 ## Parameters
 
-* **signal**: *Required* defined **red** Vpin of the signal to control
+* **signal**: defined **red** Vpin of the signal to control
 
 ## Response
 

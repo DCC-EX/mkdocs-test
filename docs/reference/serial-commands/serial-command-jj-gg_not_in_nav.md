@@ -6,7 +6,7 @@ search:
   boost: 3
 ---
 
-# Serial commands to: Request max current list
+# Serial command to: Request max current list
 
 Serial command to Request max current list
 
@@ -14,7 +14,7 @@ Serial command to Request max current list
 
 ----
 
-## Command(s)
+## Command
 
 * ``<J G>`` = Request max current list
 
