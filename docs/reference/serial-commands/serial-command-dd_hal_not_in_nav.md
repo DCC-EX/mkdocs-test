@@ -13,7 +13,7 @@ Serial commands to list or reset the HAL devices.
 
 ----
 
-## Command(s)
+## Commands
 
 * ``<D HAL SHOW>`` = Show HAL devices table
 * ``<D HAL RESET>`` = Reset all HAL devices
@@ -21,9 +21,7 @@ board config and used pins
 
 ## Parameters
 
-* **showReset**: *Required* - one of:
-    * ``SHOW`` = Show HAL devices table
-    * ``RESET`` = Reset all HAL devices
+none
 
 ## Response
 

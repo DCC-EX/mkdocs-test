@@ -16,7 +16,7 @@ Serial commands to Manage the EEPROM. (Arduino Mega Only. Not available on the *
 
 ----
 
-## Command(s)
+## Commands
 
 * ``<D EEPROM>`` = Dump EEPROM contents
 * ``<D EEPROM «numEntries»>`` = Dump EEPROM contents
@@ -25,7 +25,7 @@ Serial commands to Manage the EEPROM. (Arduino Mega Only. Not available on the *
 
 ## Parameters
 
-* **numEntries**: *optional* ==TODO== MEDIUM explain the parameter
+* **numEntries**: ==TODO== MEDIUM explain the parameter
 
 ## Response
 

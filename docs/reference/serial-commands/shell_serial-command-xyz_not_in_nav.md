@@ -44,6 +44,11 @@ The following are not a direct response, but rather a broadcast that will be tri
     * ...
 
 * Response for ``<cmd>``
+    * ``<response>``
+    * **parameter**: explanation of the parameter - one of:
+        * ``option`` = explanation of option
+        * ``option`` = explanation of option
+        * ...
 
 ==TODO== MEDIUM - Responses
 
@@ -62,13 +67,13 @@ The following are not a direct response, but rather a broadcast that will be tri
 ### *Example Commands*
 
 * purpose: ``<command>``
-* purpose: <br/>``<command>``
+* purpose: ``<command>``
 * ==TODO== LOW - Example Commands
 
 ### *Example Responses:*
 
 * purpose: ``<command>``
-* purpose: <br/>``<command>``
+* purpose: ``<command>``
 * ==TODO== LOW - Example Responses
 
 --8<-- "snippets/abbr.md"

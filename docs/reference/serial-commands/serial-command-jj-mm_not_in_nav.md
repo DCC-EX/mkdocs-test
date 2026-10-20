@@ -24,7 +24,7 @@ Serial command to manage Stash values.
 
 ----
 
-## Command(s)
+## Commands
 
 * ``<J M>`` = List stash values
 * ``<J M CLEAR ALL>`` = Clear all stash values

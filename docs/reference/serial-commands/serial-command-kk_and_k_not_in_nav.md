@@ -16,15 +16,15 @@ Serial command(s) to indicate a loco entering/leaving a block.
 
 ----
 
-## Command(s)
+## Commands
 
 * ``<K «blockid» «loco»>`` = Loco entering Block
 * ``<k «blockid» «loco»>`` = Loco exiting block
 
 ## Parameters
 
-* **blockid**: *Required* ==TODO== MEDIUM description
-* **loco**: *Required* ==TODO== MEDIUM description
+* **blockid**: ==TODO== MEDIUM description
+* **loco**: ==TODO== MEDIUM description
 
 ## Response
 

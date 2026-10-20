@@ -134,7 +134,6 @@ plugins:
       list-class: news-headline-list
   - redirects:
       redirect_maps:
-        'enhance/rosters.md': 'enhance/exrail/exrail-objects-introduction.md#adding-a-roster'
         'enhance/turnouts.md': 'enhance/exrail/exrail-objects-introduction.md#adding-turnoutspoints'
         'enhance/routes.md': 'enhance/exrail/exrail-sequences-introduction.md'
         

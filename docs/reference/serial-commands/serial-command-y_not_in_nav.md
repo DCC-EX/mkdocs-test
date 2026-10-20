@@ -44,7 +44,7 @@ See the [Sounds page](/enhance/accessories/various-devices/sounds/index.md) for 
 
 ## Parameters
 
-* **vpin**: *Required* vpin of the DFPlayer
+* **vpin**: vpin of the DFPlayer
 * **eq**: Equalizer profile. one of:
     * ``NORMAL``
     * ``POP``

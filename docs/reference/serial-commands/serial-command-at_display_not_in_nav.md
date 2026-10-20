@@ -11,15 +11,15 @@ Serial command to display text on virtual LCD at specified row.
 
 ----
 
-## Command(s)
+## Commands
 
 * ``<@ «display» «row» «text»>`` = Display text on virtual LCD at row
 
 ## Parameters
 
-* **display**: *Required* ==TODO== MEDIUM Display, to display the text on
-* **row**: *Required* row to display the text on
-* **text**: *Required* text to display
+* **display**:  ==TODO== MEDIUM Display, to display the text on
+* **row**: row to display the text on
+* **text**: text to display
 
 ## Response
 

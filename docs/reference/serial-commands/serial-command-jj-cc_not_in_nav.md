@@ -16,7 +16,7 @@ Serial commands to get or set the Fastclock time.
 
 ----
 
-## Command(s)
+## Commands
 
 * ``<J C «mmmm» [«nn»]>`` = Set fastclock time
 * ``<J C>`` = Get fastclock time
@@ -26,14 +26,7 @@ Serial commands to get or set the Fastclock time.
 * **mmmm**: minutes (hours * 60)
 * **nn**: *optional* speed factor. Default is 1
 
-* **parameter**: *Required*|*optional* description - one of:
-    * ``option`` = explanation of option
-    * ``option`` = explanation of option
-    * ...
-
-* ...
-
-## Response
+## Responses
 
 ==TODO== MEDIUM - Responses
 

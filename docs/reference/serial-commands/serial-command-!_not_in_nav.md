@@ -46,6 +46,8 @@ The following are not a direct response, but rather a broadcast that will be tri
 * Response for ``<! Q>``
     *``<!PAUSED>`` or ``<!RESUMED>`` depending on the current status
 
+----
+
 ## Notes
 
 * any throttle apps and devices using the WiThrottle protocol will receive alerts with the pause is activated or deactivated

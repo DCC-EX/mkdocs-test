@@ -18,13 +18,17 @@ Serial commands to provide WiFi diagnostics.
 
 ----
 
-## Command(s)
+## Commands
 
 * ``<D WIFI ON>`` = Enable Wifi diagnostics
 * ``<D WIFI OFF>`` = Disable Wifi diagnostics
 * ``<D WIFI SHOW>`` = Show Wifi status
 
-## Response
+## Parameters
+
+none
+
+## Responses
 
 ==TODO== MEDIUM - Responses
 

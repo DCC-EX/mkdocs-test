@@ -17,7 +17,7 @@ Serial commands to activate or deactivate accessory decoders.
 
 ----
 
-## Command(s)
+## Commands
 
 * ``<A «address» «value»>`` = Send DCC extended accessory (Aspect) command
 * ``<a «address» «subAddr» «activate»>`` = Send DCC accessory command activate: 0=deactivate, 1=activate
@@ -26,7 +26,7 @@ Serial commands to activate or deactivate accessory decoders.
 
 ## Parameters
 
-* **address**: *Required* accessory DCC decoder address to activate or deactivate
+* **address**: accessory DCC decoder address to activate or deactivate
 * **subAddr**:  accessory DCC decoder sub-address to activate or deactivate
 * **activate**:  - one of:
     * ``0`` = deactivate

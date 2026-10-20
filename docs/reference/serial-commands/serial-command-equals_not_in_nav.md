@@ -19,7 +19,7 @@ search:
   boost: 3
 ---
 
-# Serial commands to: Request or Configure Track Manager <span style="display:none;">(_equals)</span>
+# Serial commands to: Request or Configure Track Manager
 
 Serial command to request information about the modes of all tracks or alter the mode of a specific track.
 
@@ -32,11 +32,12 @@ Serial command to request information about the modes of all tracks or alter the
 ## Commands
 
 * ``<=>`` = Request the current Track Manager configuration
-* ``<= [«trackletter» «mode»] [«id»]>`` = set a specifc track to a mode
+* ``<= «trackletter» «mode»>`` = set a specific track to a mode (not DC)
+* ``<= «trackletter» «mode» «id»>`` = set a specific track to a mode (DC)
 
 ## Parameters
 
-* **trackletter** *optional* - one of:
+* **trackletter** one of:
 
     * ``A`` through ``H`` representing one of the outputs of the/a motor shield.
 
@@ -44,7 +45,7 @@ Serial command to request information about the modes of all tracks or alter the
 
     * ``MAIN``
     * ``MAIN_INV``
-    * ``MAIN_AUTO`` <BR/> Deprecated alias of ``AUTO`` but only when preceeded by a sperate ``MAIN`` command.
+    * ``MAIN_AUTO`` <BR/> Deprecated alias of ``AUTO`` but only when preceded by a separate ``MAIN`` command.
     * ``PROG``
     * ``DC``
     * ``DC_INV`` = DC reversed polarity
