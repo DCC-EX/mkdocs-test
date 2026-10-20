@@ -6,7 +6,7 @@ tags:
 
 # Serial commands to: Enable/Disable Railcom Cutout
 
-Serial command to Enable/Disable Railcom cutout.
+Serial command to Enable/Disable Railcom cutout.  Available on Arduino Mega based **EX-CommandStations** only.
 
 ``<C RAILCOM ON>``
 ``<C RAILCOM OFF>``
@@ -28,7 +28,7 @@ none
 
 ## Notes
 
-* None
+* These commands are available on Arduino Mega based **EX-CommandStations** only.
 
 ----
 
