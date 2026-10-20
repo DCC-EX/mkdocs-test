@@ -4,9 +4,14 @@ tags:
   - _9d9_9hal9_9reset9
 ---
 
-# <small>``<D HAL SHOW|RESET>``</small> <br/> List or Reset the HAL Devices
+# Serial commands to: List or Reset the HAL Devices
 
 Serial commands to list or reset the HAL devices.
+
+``<D HAL SHOW>``
+``<D HAL RESET>``
+
+----
 
 ## Command(s)
 
@@ -29,6 +34,8 @@ Lists the configured I/O drivers in the Hardware Abstraction Layer (HAL). See Ex
 ### Response for ``<D HAL RESET>``
 
 ==TODO== MEDIUM - Responses
+
+----
 
 ## Notes
 

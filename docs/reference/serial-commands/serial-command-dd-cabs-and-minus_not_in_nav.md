@@ -5,18 +5,25 @@ tags:
   - _8equals8_loco
 ---
 
-# <small>``<D CABS>`` ``<- [«loco»]>`` </small> <br/> Loco state table commands
+# Serial commands to: Loco state table commands
 
 Serial commands to display and manage the loco state table.
+
+``<D CABS>``
+``<->``
+``<- «loco»>``
+
+----
 
 ## Command(s)
 
 * ``<D CABS>`` = Diagnostic display loco state table
-* ``<- [«loco»]>`` = Remove one loco or all locos from the state table and reminders
+* ``<->`` = Remove all locos from the state table and reminders
+* ``<- [«loco»]>`` = Remove one loco from the state table and reminders
 
 ## Parameters
 
-* **parameter**: *optional* Loco to remove from the state table and reminders. If not supplied, all will be removed (cleared).
+none
 
 ## Responses
 
@@ -29,6 +36,8 @@ Serial commands to display and manage the loco state table.
 ==TODO== MEDIUM - Responses
 
 ## Notes
+
+----
 
 ### Notes for ``<D CABS>``
 

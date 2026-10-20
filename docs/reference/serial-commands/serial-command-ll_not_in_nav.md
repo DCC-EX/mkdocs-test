@@ -7,11 +7,16 @@ search:
   boost: 3
 ---
 
-# <small>``<L> [«eventid»]>``</small> <br/> LCC/CBUS adapter commands
+# Serial commands to: LCC/CBUS adapter commands
 
 Serial command(s) to support the LCC/CBUS adapter.
 
-## Command(s)
+``<L>``
+``<L «eventid»>``
+
+----
+
+## Commands
 
 * ``<L>`` = LCC incoming event
 * ``<L «eventid»>`` = LCC/CBUS adapter introducing self
@@ -23,6 +28,8 @@ Serial command(s) to support the LCC/CBUS adapter.
 ## Response
 
 ==TODO== MEDIUM - Responses
+
+----
 
 ## Notes
 

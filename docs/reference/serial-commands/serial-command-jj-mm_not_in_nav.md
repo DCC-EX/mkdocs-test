@@ -11,9 +11,18 @@ search:
   boost: 3
 ---
 
-# <small>``<J M [«various parameters»]>``</small> <br/> Manage Stash Values
+# Serial commands to: Manage Stash Values
 
 Serial command to manage Stash values.
+
+``<J M>``
+``<J M CLEAR ALL>``
+``<J M CLEAR ANY «locoId»>``
+``<J M CLEAR «stashId»>``
+``<J M «stashId»>``
+``<J M «stashId» «locoId»>``
+
+----
 
 ## Command(s)
 
@@ -31,21 +40,19 @@ Serial command to manage Stash values.
 
 ## Response
 
-### Response for ``<J M «stashId»>``
+* Response for ``<J M «stashId»>``
+    * ``<jM «stashId» «loco»>``
+        * **StashId**: Id of the stash
+        * **locoId**: loco Id in that stash
 
-``<jM «stashId» «loco»>``
+* Response for ``<J M>``
+    * Repeated for each defined Stash where loco is not zero:
+    * ``<jM «stashId» «loco»>``
 
-* **StashId**: Id of the stash
-* **locoId**: loco Id in that stash
+        * **StashId**: Id of the stash
+        * **locoId**: loco Id in that stash
 
-### Response for ``<J M>``
-
-Repeated for each defined Stash where loco is not zero:
-
-``<jM «stashId» «loco»>``
-
-* **StashId**: Id of the stash
-* **locoId**: loco Id in that stash
+----
 
 ## Notes
 

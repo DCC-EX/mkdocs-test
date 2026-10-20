@@ -8,9 +8,15 @@ search:
   boost: 3
 ---
 
-# <small>``<N Q|[«cmd» «value»]>``</small> <br/> List SensorCAM Defines or Execute Commands
+# Serial commands to: List SensorCAM Defines or Execute Commands
 
 Serial commands to List SensorCAM defines or execute **SensorCAM** commands.
+
+``<N>``
+``<N Q>``
+``<N Q «cmd» «value»>``
+
+----
 
 ## Commands
 
@@ -28,6 +34,8 @@ Serial commands to List SensorCAM defines or execute **SensorCAM** commands.
 ==TODO== MEDIUM - Responses
 
 See the [SensorCAM manual](../../products/ex-sensorcam/ex-sensorcam.md) for more information.
+
+----
 
 ## Notes
 

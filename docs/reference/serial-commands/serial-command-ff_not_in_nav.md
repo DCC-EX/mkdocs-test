@@ -9,14 +9,19 @@ search:
   boost: 3
 ---
 
-# <small>``<F «loco» [«function» «state»]|[DCCFREQ «freqValue»]>``</small> <br/>Set decoder functions or set PWM frequency
+# Serial commands to: Set decoder functions or set PWM frequency
 
 Serial command to turn loco decoder functions ON or OFF or set the DC PWM frequency of a track.
 
+``<F «loco» «function» «onOff»>``
+``<F «loco» DCCFREQ «freqValue»>``
+
+----
+
 ## Commands
 
-* ``<F «loco» [«function» «state»]>`` = set the function on or off
-* ``<F «loco» [DCCFREQ «freqValue»]>`` = set the PWM frequency
+* ``<F «loco» «function» «state»>`` = set the function on or off
+* ``<F «loco» DCCFREQ «freqValue»>`` = set the PWM frequency
 
 ## Parameters
 
@@ -24,7 +29,7 @@ Serial command to turn loco decoder functions ON or OFF or set the DC PWM freque
 
 * If **function** plus **state** are supplied - To set the function on or off
     * **function*: Function to set. ``0``-``68`` (Support for the RCN-212 Functions)
-    * **state** - one of:
+    * **onOff** - one of:
         * ``1`` = on
         * ``0`` = off
 * If **DCCFREQ** plus **«freqValue»** are supplied - to set the PWM frequency
@@ -38,6 +43,8 @@ Serial command to turn loco decoder functions ON or OFF or set the DC PWM freque
 The following are not a direct response, but rather a broadcast that will be triggered as a result of any track manager changes.
 
 --8<-- "snippets/serial-commands/broadcast_l.md"
+
+----
 
 ## Notes
 

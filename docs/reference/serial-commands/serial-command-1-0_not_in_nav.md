@@ -11,16 +11,23 @@ tags:
   - _0_track
 ---
 
-# ``<1|0 [«track»]>`` <br/>Turn track power on or off
+# Serial commands to: Turn track power on or off
 
 Serial command to turn power on or off to all or specific tracks.  Also allows joining the MAIN and PROG tracks together.
+
+``<1>``
+``<1 «track»>``
+``<0>``
+``<0 «track»>``
+
+----
 
 ## Commands
 
 * ``<1>`` = Turn on both Main and Programming Tracks (All tracks)
-* ``<1 [«track»]>`` = Turn specific tracks on
+* ``<1 «track»>`` = Turn specific tracks on
 * ``<0>`` = Turn off both Main and Programming Tracks (All tracks)
-* ``<0 [«track»]>`` = Turn specific tracks off
+* ``<0 «track»>`` = Turn specific tracks off
 
 ## Parameters
 
@@ -39,6 +46,8 @@ The following is not a direct response, but rather a broadcast that will be trig
     * ``p`` = the 'message identifer'
     * **onOff** = one of: ``1`` = On or ``0`` = off
     * **track** = balnk = all tracks <br/> or one of ``A`` through ``H`` representing one of the outputs of the/a motor shield.
+
+----
 
 ## Notes
 

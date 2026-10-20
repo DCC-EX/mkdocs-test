@@ -20,11 +20,30 @@ search:
   boost: 3
 ---
 
-# <small><small>``<R>`` ``<R «cv»>`` ``<R LOCOID>`` ``<R CONSIST>`` <br/>``<r «loco» «cv»>`` <br/>``<W «loco»>`` ``<W CONSIST «loco»>`` ``<W CONSIST «loco» REVERSE>`` ``<W «cv» «value»>`` ``<W «loco» «cv» «bitValue» «bit»>`` ``<W «cv» «bitValue» «bit»>`` ``<W «loco» «cv» «bitValue» «bit»>`` <br/>``<V «cv» «value»>`` ``<V «cv» «bit» «bitValue»>``<br/>``<B «cv» «bit» «bitValue»>`` <br/>``<b «loco» «cv» «bit» «bitValue»>``</small></small> <br/>Read and write CVs
+# Serial commands to: Read and write CVs
 
 Serial commands to read and write CVs on the PROG track (Service mode) or on the MAIN track (PoM). This includes reading and writing the decoder DCC Address.
 
-It does not include reading or writing to DCC accessory decoders.
+``<R>``
+``<R «cv»>``
+``<R LOCOID>``
+``<R CONSIST>``
+``<r «loco» «cv»>``
+``<W «loco»>``
+``<W CONSIST «loco»>``
+``<W CONSIST «loco» REVERSE>``
+``<W «cv» «value»>``
+``<W «loco» «cv» «bitValue» «bit»>``
+``<W «cv» «bitValue» «bit»>``
+``<W «loco» «cv» «bitValue» «bit»>``
+``<V «cv» «value»>``
+``<V «cv» «bit» «bitValue»>``
+``<B «cv» «bit» «bitValue»>``
+``<b «loco» «cv» «bit» «bitValue»>``
+
+These do not include reading or writing to DCC accessory decoders.
+
+----
 
 ## Commands
 
@@ -64,127 +83,111 @@ Avoid writing CV1, CV17 & CV18 directly. Use the ``<W «loco»>`` command instea
 
 ### Reading CVs - Responses
 
-### Response for ``<R>``
+* Response for ``<R>``
+    * ``<r «address»>``
+        * **address** - one of:
+            * If the loco is in a consist (CV19), the address returned by will be the consist address.
+            * If not in a consist (CV19) DCC Address of the decoder/loco.
+            * ``-1`` = failed read
 
-* ``<r «address»>``
-    * ``r``: response/broadcast identifier
-    * **address** - one of:
-        * If the loco is in a consist (CV19), the address returned by will be the consist address.
-        * If not in a consist (CV19) DCC Address of the decoder/loco.
-        * ``-1`` = failed read
+* Response for ``<R LOCOID>``
+    * ``<r LOCOID «address»>``
+        * **address** - one of:
+            * DCC Address of the decoder/loco.
+            * ``-1`` = failed read
 
-### Response for ``<R LOCOID>``
+* Response for ``<R CONSIST>``
+    * ``<r CONSIST «address»>``
+        * **address** - one of:
+            * If the loco is in a consist (CV19), the address returned by will be the consist address.
+            * ``-1`` = failed read or not in a consist
 
-* ``<r LOCOID «address»>``
-    * ``r``: response/broadcast identifier
-    * **address** - one of:
-        * DCC Address of the decoder/loco.
-        * ``-1`` = failed read
+* Response for ``<R «cv»>``
+    * ``<r «cv» «value»>``
+        * **cv**: the cv read
+        * **value** - one of:
+            * the value of the CV read
+            * ``-1`` = failed read
 
-### Response for ``<R CONSIST>``
+* Response for ``<V «cv» «value»>``
+    * ``<v «cv» «value»>``
+        * **cv**: the cv read
+        * **value** - one of:
+            * the value of the CV read
+            * ``-1`` = failed read
 
-* ``<r CONSIST «address»>``
-    * ``r``: response/broadcast identifier
-    * **address** - one of:
-        * If the loco is in a consist (CV19), the address returned by will be the consist address.
-        * ``-1`` = failed read or not in a consist
+* Response for ``<V «cv» «bit» «bitValue»>``
+    * ``<v «cv» «bit» «bitValue»>``
+        * **cv**: the cv read
+        * **bit**: the bit read
+        * **bitValue** - one of:
+            * ``1``
+            * ``0``
+            * ``-1`` = failed read
 
-### Response for ``<R «cv»>``
+* Response for ``<r «loco» «cv»>``
 
-* ``<r «cv» «value»>``
-    * ``r``: response/broadcast identifier
-    * **cv**: the cv read
-    * **value** - one of:
-        * the value of the CV read
-        * ``-1`` = failed read
-
-### Response for ``<V «cv» «value»>``
-
-* ``<v «cv» «value»>``
-    * ``v``: response/broadcast identifier
-    * **cv**: the cv read
-    * **value** - one of:
-        * the value of the CV read
-        * ``-1`` = failed read
-
-### Response for ``<V «cv» «bit» «bitValue»>``
-
-* ``<v «cv» «bit» «bitValue»>``
-    * ``v``: response/broadcast identifier
-    * **cv**: the cv read
-    * **bit**: the bit read
-    * **bitValue** - one of:
-        * ``1``
-        * ``0``
-        * ``-1`` = failed read
-
-### Response for ``<r «loco» «cv»>``
-
-==TODO== MEDIUM - Response for ``<r «loco» «cv»>``
+    ==TODO== MEDIUM - Response for ``<r «loco» «cv»>``
 
 ### Writing CVs - Responses
 
-### Response for ``<W «loco»>``
+* Response for ``<W «loco»>``
+    * ``<w «address»>``
+        * **address** - one of:
+            * DCC Address of the decoder/loco.
+            * ``-1`` = failed read
 
-* ``<w «address»>``
-    * ``w``: response/broadcast identifier
-    * **address** - one of:
-        * DCC Address of the decoder/loco.
-        * ``-1`` = failed read
+* Response for ``<W CONSIST «loco»>``
 
-### Response for ``<W CONSIST «loco»>``
+    ==TODO== MEDIUM - Response for ``<W CONSIST «loco»>``
 
-==TODO== MEDIUM - Response for ``<W CONSIST «loco»>``
+* Response for ``<W CONSIST «loco» REVERSE>``
 
-### Response for ``<W CONSIST «loco» REVERSE>``
+    ==TODO== MEDIUM - Response for ``<W CONSIST «loco» REVERSE>``
 
-==TODO== MEDIUM - Response for ``<W CONSIST «loco» REVERSE>``
+* Response for ``<W «cv» «value»>``
+    * ``<w «cv» «value»>``
+        * **cv**: the cv written
+        * **value** - one of:
+            * the value of the CV written/read
+            * ``-1`` = failed read
 
-### Response for ``<W «cv» «value»>``
+* Response for ``<W «cv» «bitValue» «bit»>``
 
-* ``<w «cv» «value»>``
-    * ``w``: response/broadcast identifier
-    * **cv**: the cv written
-    * **value** - one of:
-        * the value of the CV written/read
-        * ``-1`` = failed read
+    ==TODO== MEDIUM - Response for ``<W «cv» «bitValue» «bit»>`
 
-### Response for ``<W «cv» «bitValue» «bit»>``
+* Response for ``<w «loco» «cv» «value»>``
 
-==TODO== MEDIUM - Response for ``<W «cv» «bitValue» «bit»>`
+    no response.
 
-### Response for ``<w «loco» «cv» «value»>``
+* Response for ``<B «cv» «bitValue» «bit»>``
+    * ``<w «cv» «value»>``
+        * **cv**: the cv written
+        * **bit**: the bit written
+        * **biValue** - one of:
+            * the value of the bit written/read ``0``|``1``
+            * ``-1`` = failed read
 
-no response.
+* Response for ``<b «loco» «cv» «bitValue» «bit»>``
 
-### Response for ``<B «cv» «bitValue» «bit»>``
+    ==TODO== MEDIUM - Response for ``<b «loco» «cv» «bitValue» «bit»>``
 
-* ``<w «cv» «value»>``
-    * ``w``: response/broadcast identifier
-    * **cv**: the cv written
-    * **bit**: the bit written
-    * **biValue** - one of:
-        * the value of the bit written/read ``0``|``1``
-        * ``-1`` = failed read
-
-### Response for ``<b «loco» «cv» «bitValue» «bit»>``
-
-==TODO== MEDIUM - Response for ``<b «loco» «cv» «bitValue» «bit»>``
+----
 
 ## Notes
 
-* ``«address»`` will be: The short (``1``-``127``) or long (``128``-``10293``) address of the engine decoder. 
+* ``«address»`` will be: The short (``1``-``127``) or long (``128``-``10293``) address of the engine decoder.
 * ``<W «address»>`` will write a short address (CV1) or long address (CV17 plus CV18) depending on the value entered.  It will also adjust CV29 automatically depending on what address type is required.
     * ``1``-``127`` will be a short address
     * ``128``-``10293`` will be a long address
 
-    Note that addresses above `9999`` cannot be used by *some* other brands of command station. So if you plan to take your loco to other layouts it is recommended that you avoid the ``10000``-``10293`` (inclusive) range.
+    Note that addresses above ``9999`` cannot be used by *some* other brands of command station. So if you plan to take your loco to other layouts it is recommended that you avoid the ``10000``-``10293`` (inclusive) range.
 
 * **IMPORTANT:** If the loco is in a consist (CV19), the address returned by ``<R>`` will be the consist address, not the decoder address. To always get the decoder address, use ``<R LOCOID>`` instead.
 
 * When combined with the ``<D ACK ON>`` Command, the ``<R>`` Command (with or without parameters) can be used for diagnostics, for example when you get a ``-1`` response.
 
-* By design, for safety reasons, the NMRA specification prevents locos from responding to throttle or function commands while on the service track. A loco WILL NOT MOVE on the service track! Don't let the little 'jumps' you may see when you are programming a CV confuse you. The loco pulses the motor to give a jump in current that we read as an 'ACK' (acknowledgment), that causes some locos to stutter ahead slightly every time you read or write a CV.
+* By design, for safety reasons, the NMRA specification prevents locos from responding to throttle or function commands while on the service track (PROG). A loco WILL NOT MOVE on the service track! Don't let the little 'jumps' you may see when you are programming a CV confuse you. The loco pulses the motor to give a jump in current that we read as an 'ACK' (acknowledgment), that causes some locos to stutter ahead slightly every time you read or write a CV.
 
 * The ``<V ..>`` commands are designed to offer faster verification of the value held in a CV and can be used instead of the ``<R>`` commands. Instead of reading a bit value, it compares the bit to an expected value. It will attempt to verify the value first, an if it is successful, will return the value as if it was simply 'read'. If the verify fails, it will perform a read bit command and return the value read.
 

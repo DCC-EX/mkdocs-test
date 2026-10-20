@@ -7,13 +7,19 @@ search:
   boost: 3
 ---
 
-# <small>``<D SERVO «vpin» «position» [«profile»]>``</small> <br/> Servo Motor Testing
+# Serial commands to: Servo Motor Testing
 
 Serial command for servo motor testing.
 
+``<D SERVO «vpin» «position»>``
+``<D SERVO «vpin» «position» «profile»>``
+
+----
+
 ## Command(s)
 
-* ``<D SERVO «vpin» «position» [«profile»]>`` = Test servo
+* ``<D SERVO «vpin» «position»>`` = Test servo
+* ``<D SERVO «vpin» «position» «profile»>`` = Test servo
 
 ## Parameters
 
@@ -29,6 +35,8 @@ Serial command for servo motor testing.
 
 Successful: ``<O>``
 Fail: ``<X>`` (vpin does not exist)
+
+----
 
 ## Notes
 

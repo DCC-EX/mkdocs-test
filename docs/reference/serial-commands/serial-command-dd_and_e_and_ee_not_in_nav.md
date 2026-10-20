@@ -5,12 +5,20 @@ tags:
   - _9D9_9EEPROM9
 ---
 
-# <small>``<E>`` ``<e>`` ``<D EPROM [«numEntries»]>``</small> <br/> Manage EEPROM <small>(Arduino Mega Only)</small>
+# Serial commands to: Manage EEPROM <small>(Arduino Mega Only)</small>
 
 Serial commands to Manage the EEPROM. (Arduino Mega Only. Not available on the **EX-CSB1** or ESP32 based **EX-CommandsStations**)
 
+``<E>``
+``<e>``
+``<D EPROM>``
+``<D EPROM «numEntries»>``
+
+----
+
 ## Command(s)
 
+* ``<D EEPROM>`` = Dump EEPROM contents
 * ``<D EEPROM «numEntries»>`` = Dump EEPROM contents
 * ``<e>`` = CLEAR EPROM
 * ``<E>`` = STORE EPROM
@@ -24,6 +32,8 @@ Serial commands to Manage the EEPROM. (Arduino Mega Only. Not available on the *
 ### Response for ``<D EEPROM «numEntries»>``
 
 ==TODO== MEDIUM - Responses
+
+----
 
 ## Notes
 

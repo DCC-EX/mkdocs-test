@@ -8,20 +8,27 @@ search:
   boost: 3
 ---
 
-# <small>``<D WIFI ON|OFF|SHOW>``</small> <br/> WiFi diagnostics
+# Serial commands to: WiFi diagnostics
 
-Serial commands to provide WiFi diagnostica.
+Serial commands to provide WiFi diagnostics.
+
+``<D WIFI ON>``
+``<D WIFI OFF>``
+``<D WIFI SHOW>``
+
+----
 
 ## Command(s)
 
-* ``<D WIFI ON|OFF>`` = Enable/Disable Wifi diagnostics
+* ``<D WIFI ON>`` = Enable Wifi diagnostics
+* ``<D WIFI OFF>`` = Disable Wifi diagnostics
 * ``<D WIFI SHOW>`` = Show Wifi status
 
 ## Response
 
 ==TODO== MEDIUM - Responses
 
-``<response>``
+----
 
 ## Notes
 

@@ -16,13 +16,17 @@ search:
   boost: 3
 ---
 
-# <small>``<y «vpin» EQ|FOLDER|PAUSE|PLAY|REPEAT|RESET|RESUME|STOP|VOL [«various parameters»]>``</small> <br/> Play DF Player sounds
+# Serial commands to: Play DF Player sounds
 
 Serial commands to play sounds on a DFPlayer or UDPAudio device.
 
-Theese devices can be used to play pre-recorded sounds from an onboard SD-card.
+These devices can be used to play pre-recorded sounds from an onboard SD-card.
+
+``<y «vpin» EQ|FOLDER|PAUSE|PLAY|REPEAT|RESET|RESUME|STOP|VOL [«various parameters»]>``
 
 See the [Sounds page](/enhance/accessories/various-devices/sounds/index.md) for more information.
+
+----
 
 ## Commands
 
@@ -55,6 +59,8 @@ See the [Sounds page](/enhance/accessories/various-devices/sounds/index.md) for 
 ## Responses
 
 ==TODO== MEDIUM - Responses
+
+----
 
 ## Notes
 

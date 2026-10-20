@@ -6,17 +6,21 @@ tags:
 
 search:
   boost: 3
-  -
 ---
 
-# <small>``<t «loco» [«tSpeed» «direction»]>``</small> <br/>Request or set loco status
+# Serial commands to: Request or set loco status
 
 Serial commands to request information about a loco or set its speed and direction
+
+``<t «loco»>``
+``<t «loco» «tSpeed» «direction»>``
+
+----
 
 ## Commands
 
 * ``<t «loco»>`` = Request a deliberate update on the loco speed/functions
-* ``<t «loco» [«tSpeed» «direction»]>`` = Set a loco's speed and direction
+* ``<t «loco» «tSpeed» «direction»>`` = Set a loco's speed and direction
 
 ## Parameters
 
@@ -31,6 +35,8 @@ Serial commands to request information about a loco or set its speed and directi
 The following are not a direct response, but rather a broadcast that will be triggered as a result of any track manager changes.
 
 --8<-- "snippets/serial-commands/broadcast_l.md"
+
+----
 
 ## Notes
 

@@ -9,13 +9,18 @@ search:
   boost: 3
 ---
 
-# <small>``<M «ignore» «d0» «d1» [«d2» [«d3» [«d4» [«d5»]]]]>`` <br/> ``<P «ignore» «d0» «d1» [«d2» [«d3» [«d4»] [«d5»]]]]>``</small> <br/> Send up to 6 byte DCC packet to MAIN or PROG
+# Serial commands to: Send up to 6 byte DCC packet to MAIN or PROG
 
 Serial commands to Send up to 6 byte DCC packet to MAIN or PROG.
+
+``<M «ignore» «d0» «d1» [«d2» [«d3» [«d4» [«d5»]]]]>``
+``<P «ignore» «d0» «d1» [«d2» [«d3» [«d4» [«d5»]]]]>``
 
 !!! warning "These commands can reprogram your decoders"
 
     THESE ARE FOR DEBUGGING AND TESTING PURPOSES ONLY. DO NOT USE UNLESS YOU KNOW HOW TO CONSTRUCT NMRA DCC PACKETS - YOU CAN INADVERTENTLY RE-PROGRAM YOUR DECODERS
+
+----
 
 ## Command(s)
 
@@ -31,6 +36,8 @@ Serial commands to Send up to 6 byte DCC packet to MAIN or PROG.
 ## Response
 
 N/A
+
+----
 
 ## Notes
 

@@ -9,9 +9,16 @@ search:
   boost: 3
 ---
 
-# <small>``<m LINEAR|POWER|[«loco» «momentum»|«accelerating» [«braking»]]>``</small> <br/> Set the server based momentum
+# Serial commands to: Set the server based momentum
 
 Serial commands to Server based momentum for a specific loco.
+
+``<m «loco» «accelerating» «braking»>``
+``<m «loco» «momentum»>``
+``<m LINEAR>``
+``<m POWER>``
+
+----
 
 ## Command(s)
 
@@ -30,6 +37,8 @@ Serial commands to Server based momentum for a specific loco.
 ## Response
 
 N/A
+
+----
 
 ## Notes
 

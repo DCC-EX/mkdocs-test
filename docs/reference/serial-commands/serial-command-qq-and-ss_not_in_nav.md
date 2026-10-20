@@ -9,9 +9,15 @@ search:
   boost: 3
 ---
 
-# <small>``<Q>``</small> &nbsp; <small>``<S «id» [«vpin» «pullup»>]``</small> <br/>Manage Sensors
+# Serial commands to: Manage Sensors
 
-Serial commands to create and manage sensors
+Serial commands to create and manage sensors.
+
+``<Q>``
+``<S «id»>``
+``<S «id» «vpin» «pullup»>``
+
+----
 
 ## Commands
 
@@ -30,31 +36,29 @@ Serial commands to create and manage sensors
 
 ## Responses
 
-### Response for ``<Q>``
-
-(successful) Repeated for each inactive defined sensor: ``<q «id»>``<br/>
-(fail): N/A
+* Response for ``<Q>``
+    * (successful) Repeated for each inactive defined sensor: ``<q «id»>``<br/>
+    * (fail): N/A
 
 ### Response for ``<S>``
 
-(successful) Repeated for each inactive defined sensor: ``<Q «id» «vpin» «pullup»>``<br/>
-(fail): ``X``
+    * (successful) Repeated for each inactive defined sensor: ``<Q «id» «vpin» «pullup»>``<br/>
+        * **id**: identifier of the Sensor. (0-32767)
+        * **vpin**: pin number of the input to be controlled by the sensor object
+        * **pullup**: one of:
+            * ``1`` = Use pull-up resistor ACTIVE=LOW
+            * ``0``= don't use pull-up resistor ACTIVE=HIGH
+    * (fail): ``X``
 
-* **id**: identifier of the Sensor. (0-32767)
-* **vpin**: pin number of the input to be controlled by the sensor object
-* **pullup**: one of:
-    * ``1`` = Use pull-up resistor ACTIVE=LOW
-    * ``0``= don't use pull-up resistor ACTIVE=HIGH
+* Response for ``<S «id» «vpin» «pullup»>``
+    * (Successful): ``<O>``<br/>
+    * (Fail): ``<X>`` (e.g. out of memory)
 
-### Response for ``<S «id» «vpin» «pullup»>``
+* Response for ``<S «id»>``
+    * (Successful): ``<O>``<br/>
+    * (Fail): ``<X>`` (e.g. ID does not exist)
 
-(Successful): ``<O>``<br/>
-(Fail): ``<X>`` (e.g. out of memory)
-
-### Response for ``<S «id»>``
-
-(Successful): ``<O>``<br/>
-(Fail): ``<X>`` (e.g. ID does not exist)
+----
 
 ## Notes
 

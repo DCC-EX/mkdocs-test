@@ -4,9 +4,14 @@ tags:
   - _9C9_9SPEED1289
 ---
 
-# <small>``<cmd SPEED128|SPEED28>``</small> <br/> Set DCC speed commands number of steps
+# Serial commands to: Set DCC speed commands number of steps
 
 Serial command to set DCC speed commands number of steps.
+
+``<cmd SPEED28>``
+``<cmd SPEED128>``
+
+----
 
 ## Command(s)
 
@@ -27,6 +32,8 @@ One of:
 
 * 28 Speedsteps
 * 128 Speedsteps
+
+----
 
 ## Notes
 

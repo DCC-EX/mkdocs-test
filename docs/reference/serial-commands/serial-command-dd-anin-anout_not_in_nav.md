@@ -5,9 +5,13 @@ tags:
   - _9D9_9ANOUT9_vpin_position_profile 
 ---
 
-# <small>``<D ANIN «vpin»>``</small> <br/><small>``<D ANOUT «vpin» «position» [«profile»]>``</small> <br/>Manage VPINs analogue values
+# Serial commands to: Manage VPINs analogue values
 
-Serial command(s) to ...
+Serial command(s) to Manage VPINs analogue values.
+
+``<D ANIN «vpin»>``
+``<D ANOUT «vpin» «position»>``
+``<D ANOUT «vpin» «position» «profile»>``
 
 ## Command(s)
 
@@ -24,6 +28,8 @@ Serial command(s) to ...
 ## Response
 
 ==TODO== MEDIUM - Responses
+
+----
 
 ## Notes
 

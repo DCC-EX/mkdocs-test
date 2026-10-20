@@ -12,10 +12,23 @@ tags:
     - _9C9_9WIFI9_9TEMP9_ssid_password
 ---
 
-# <small>``<C WIFI ON|OFF|AP|HIDDENAP|TEMP|DEFAULT|HOSTNAME [«various parameters»]>``</small> <br/> Setup WiFi (EX-CSB1 & ESP32, v5.7.0 ONLY)
+# Serial commands to: Setup WiFi (EX-CSB1 & ESP32, v5.7.0 ONLY)
 
 Serial commands to setup the WiFi on the **EX-CommandStations**.
 <span style="color:red">For **EX-CSB1** and ESP32 based **EX-CommandStations** only. Version 5.7.0 or later only.</span>
+
+``<C WIFI "«ssid»" "«password»">``
+``<C WIFI TEMP "«ssid»" "«password»">``
+``<C WIFI AP "«ssid»" "«password»">``
+``<C WIFI AP "«ssid»" "«password»" «channel»>``
+``<C WIFI HIDDENAP "«ssid»" "«password»">``
+``<C WIFI HIDDENAP "«ssid»" "«password»" «channel»>``
+``<C WIFI HOSTNAME "«hostname»">``
+``<C WIFI DEFAULT>``
+``<C WIFI ON>``
+``<C WIFI OFF>``
+
+----
 
 ## Commands
 
@@ -25,7 +38,8 @@ Serial commands to setup the WiFi on the **EX-CommandStations**.
 * ``<C WIFI HIDDENAP "«ssid»" "«password»" [«channel»]>`` = set WiFi to Access Point mode (AP) with given ssid and password, but not advertised (hidden)
 * ``<C WIFI HOSTNAME "«hostname»">`` = set WiFi hostname
 * ``<C WIFI DEFAULT>`` = set WiFi to default credentials
-* ``<C WIFI ON|OFF>`` = Enable/Disable WiFi
+* ``<C WIFI ON>`` = Enable WiFi
+* ``<C WIFI OFF>`` = Disable WiFi
 
 See [WiFi configuration](../../prepare-to-use/installer/config-wifi-esp32.md) for more infomation on these commands.
 
@@ -47,9 +61,11 @@ Also see the [WiFi Configuration for version 5.7.0+ - Graphical User Interface O
 
 * **hostname**: the name that appears in your Throttle app, once you have connected to the appropriate network (ssid) for the **EX-CommandStation**.
 
-## Response
+## Responses
 
-N/A. The **EX-CommandStation** will restart.
+N/A. The **EX-CommandStation** will restart. ==TODO== This is no longer true
+
+----
 
 ## Notes
 

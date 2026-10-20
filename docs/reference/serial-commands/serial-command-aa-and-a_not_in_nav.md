@@ -6,9 +6,16 @@ tags:
     - _9A9_address_value
 ---
 
-# <small>``<A «address» «value»>``</small> <br/><small>``<a «address» [«subAddr»]|[«activate» [«onOff»]]>``</small> <br/>Instruct Accessory Decoders
+# Serial commands to: Instruct Accessory Decoders
 
 Serial commands to activate or deactivate accessory decoders.
+
+``<A «address» «value»>``
+``<a «address» «subAddr» «activate»>``
+``<a «address» «subAddr» «activate» «onOff»>``
+``<a «address» «activate»>``
+
+----
 
 ## Command(s)
 
@@ -34,6 +41,8 @@ Serial commands to activate or deactivate accessory decoders.
 <!-- ### Response for ``<cmd>`` -->
 
 ==TODO== MEDIUM - responses
+
+----
 
 ## Notes
 

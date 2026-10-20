@@ -6,9 +6,13 @@ search:
   boost: 3
 ---
 
-# <small>``<J G>``</small> <br/> Request max current list
+# Serial commands to: Request max current list
 
 Serial command to Request max current list
+
+``<J G>``
+
+----
 
 ## Command(s)
 
@@ -23,6 +27,8 @@ none
 ``<jG [mA mB mC ...]>``
 
 * **m?**: Raw current trip value for each defined Track, in milliAmps
+
+----
 
 ## Notes
 
