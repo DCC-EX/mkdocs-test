@@ -6,8 +6,7 @@ tags:
     - _9C9_9WIFI9_9HIDDENAP9_ssid_password_channel
     - _9C9_9WIFI9_9HIDDENAP9_ssid_password
     - _9C9_9WIFI9_9HOSTNAME9_hostname
-    - _9C9_9WIFI9_9OFF9
-    - _9C9_9WIFI9_9ON9
+    - _9C9_9WIFI9_onoff
     - _9C9_9WIFI9_ssid_password
     - _9C9_9WIFI9_9TEMP9_ssid_password
 ---
@@ -25,8 +24,7 @@ Serial commands to setup the WiFi on the **EX-CommandStations**.
 ``<C WIFI HIDDENAP "«ssid»" "«password»" «channel»>``
 ``<C WIFI HOSTNAME "«hostname»">``
 ``<C WIFI DEFAULT>``
-``<C WIFI ON>``
-``<C WIFI OFF>``
+``<C WIFI onOff>``
 
 ----
 
@@ -60,6 +58,10 @@ Also see the [WiFi Configuration for version 5.7.0+ - Graphical User Interface O
     The default channel is set to ``11``. If you need to use an alternate channel (we recommend using only ``1``,``6``, or ``11``) you may change it with the command
 
 * **hostname**: the name that appears in your Throttle app, once you have connected to the appropriate network (ssid) for the **EX-CommandStation**.
+
+* **onOff** One of:
+    * ``ON``: Enable
+    * ``OFF``: Disable
 
 ## Responses
 

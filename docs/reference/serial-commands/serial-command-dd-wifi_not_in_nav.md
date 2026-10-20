@@ -1,7 +1,6 @@
 ﻿---
 tags:
-  - _9D9_9WIFI9_9ON9
-  - _9D9_9WIFI9_9OFF9
+  - _9D9_9WIFI9_onoff
   - _9D9_9WIFI9_9SHOW9
 
 search:
@@ -12,21 +11,21 @@ search:
 
 Serial commands to provide WiFi diagnostics.
 
-``<D WIFI ON>``
-``<D WIFI OFF>``
+``<D WIFI onOff>``
 ``<D WIFI SHOW>``
 
 ----
 
 ## Commands
 
-* ``<D WIFI ON>`` = Enable Wifi diagnostics
-* ``<D WIFI OFF>`` = Disable Wifi diagnostics
+* ``<D WIFI onOff>`` = Enable/diable Wifi diagnostics
 * ``<D WIFI SHOW>`` = Show Wifi status
 
 ## Parameters
 
-none
+* **onOff** One of:
+    * ``ON``: Enable
+    * ``OFF``: Disable
 
 ## Responses
 
