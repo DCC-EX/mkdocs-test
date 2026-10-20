@@ -2,6 +2,8 @@
 
 Route buttons appear on the throttle and can be controlled from **EXRAIL** to hide, disable or recaption the button. Everything here applies equally to AUTOMATIONs.
 
+## Details
+
 If a route button can be in one of 4 states:
 
 - Inactive (waiting to be pressed)

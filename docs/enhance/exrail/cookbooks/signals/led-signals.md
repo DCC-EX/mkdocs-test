@@ -2,6 +2,8 @@
 
 LED based signals are defined using the SIGNALH macro (For LEDS with common cathode) or SIGNAL macro (for leds with common annode)
 
+## code
+
 For example
 
 ```cpp

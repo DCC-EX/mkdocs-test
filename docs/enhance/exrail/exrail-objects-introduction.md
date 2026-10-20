@@ -10,6 +10,8 @@ There are a number key objects that are important for creating sequences:
 * [Sensors](#adding-sensors)
 * [Signals (Lights)](#adding-signals)
 
+## Details
+
 The process for creating these objects consists of:
 
 * Adding the hardware (not strictly applicable to the roster)

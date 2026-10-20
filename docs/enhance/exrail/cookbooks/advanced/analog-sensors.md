@@ -6,6 +6,8 @@ Sensors that read analog values are comparatively rare for model railway use but
 
 The ADS111x is set up so that the maximum input voltage of 5V (when Vss=5V) gives a reading of 32767*(5.0/6.144) = 26666.
 
+## code
+
 A device like the above is defined in **EXRAIL** by
 
 ```cpp

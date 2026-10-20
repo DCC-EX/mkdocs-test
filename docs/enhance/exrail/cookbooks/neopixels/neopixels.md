@@ -2,6 +2,8 @@
 
 The NEOPIXEL macro provides the ability to set neopixels on or off change the colour. either individually or over a range of pixels.
 
+## code
+
 ```cpp
 NEOPIXEL([-]vpin, red, green, blue [,count])
 ```

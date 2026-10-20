@@ -6,6 +6,8 @@ To do this, we need to hide one of the turnouts/points from the user, and make s
 
 All turnout/point definitions in **EXRAIL** allow for a text description to be shown to the user throttle. The HIDDEN keyword, used instead of a turnout/point description prevents it being visible to the throttle or JMRI/iTrain etc.
 
+## code
+
 ```cpp
 TURNOUTL(1,101,"Cross inner to outer")
 TURNOUTL(2,102,HIDDEN)

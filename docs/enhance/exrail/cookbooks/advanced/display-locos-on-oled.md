@@ -11,6 +11,8 @@ This function displays the first 8 locos in the DCC speed reminders table on LCD
 
 Notice that it will only update one OLED row per call, and will not update the row if the speed byte has not changed. This is because OLED updates are very "expensive" in terms of cpu time and I2C traffic volumes and attempting to do too much in one call can cause blocking of other more important functions.
 
+## code
+
 ```cpp
 STEALTH_GLOBAL(
   void updateLocoScreen() {

@@ -2,6 +2,8 @@
 
 Where you want to use the same sequence of commands from several places in other sequences you can avoid copying the repeated stuff by using CALL and RETURN
 
+## code
+
 ```cpp
 ROUTE(1,"Platform A to mainline")
   CALL(911)
