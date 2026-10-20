@@ -37,6 +37,8 @@ When using a web browser dialog on the command station, the Config.. Roster Edit
 
 ==TODO== needs screenshots
 
+--8<-- "snippets/new-in-version-6-0.md"
+
 ----
 
 ## Roster Serial Commands
