@@ -29,7 +29,7 @@ See the [EXRAIL Rosters](../enhance/exrail/exrail-objects-introduction.md#adding
 
 !!! note ""
 
-    Available in v5.9.13 and above of **EX-CommandStation** only.
+    Available in version 5.9.13 and above of **EX-CommandStation** only.
 
 When using a web browser dialog on the command station, the Config.. Roster Editor menu will show a roster editing dialog. This edits and saves roster entries in RAM.
 
@@ -43,7 +43,7 @@ When using a web browser dialog on the command station, the Config.. Roster Edit
 
 !!! note ""
 
-    Available in v5.9.13 and above of **EX-CommandStation** only.
+    Available in version 5.9.13 and above of **EX-CommandStation** only.
 
 There are a selection of roster commands which are normally used by throttles to extract roster information from the command station.
 
@@ -64,5 +64,7 @@ New Roster commands for v5.9.13 and above:
 `<JR SAVE>`  saves the current rosters in ram. They will be reloaded again at startup.
 
 See the [Roster Serial Commands](../reference/serial-commands/serial-command-jj-rr_not_in_nav.md) reference page for more information.
+
+==TODO== add a link to a page that explains how/where to enter serial commands
 
 --8<-- "snippets/abbr.md"
