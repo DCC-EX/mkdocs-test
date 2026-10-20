@@ -63,4 +63,6 @@ New Roster commands for v5.9.13 and above:
 
 `<JR SAVE>`  saves the current rosters in ram. They will be reloaded again at startup.
 
+See the [Roster Serial Commands](../reference/serial-commands/serial-command-jj-rr_not_in_nav.md) reference page for more information.
+
 --8<-- "snippets/abbr.md"
