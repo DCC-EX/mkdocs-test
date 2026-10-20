@@ -27,6 +27,7 @@ Refer to the [WiThrottle VS Native Serial Protocol](../../throttles/withrottle-v
 - First letter or number - These are called OPCODES, are case sensitive, and must be specified as directed, e.g. ``1``, ``c``, or ``-``
 - CAPITALISED words - These are parameters referred to as keywords, and should be specified as directed, e.g. ``MAIN`` (note these are not case sensitive, however capitalising makes them easier to distinguish from other parameters)
 - lowercase words - These are parameters that must be provided or are returned, with multiple parameters separated by a space " ", e.g. ``loco`` or ``«loco»``
+- Quoted `"text"` - Text within quote marks `""` are used as descriptions, and must include the quote characters, for example `<JR id "name" "functions">` becomes `<J R 10,"DC Loco 10","/////////////////////////////FQ490 Hz/FQ3400 Hz/FQ62500 Hz">`
 - Square brackets ``[]`` - Parameters within square brackets ``[]`` are optional and may be omitted, and if specifying these parameters, do not include the square brackets themselves
 - \| - Use of the \| character means you need to provide one of the provided options only, for example ``<0|1 MAIN|PROG|JOIN>`` becomes either ``<0 MAIN>`` or ``<1 MAIN>``
 - ``0|1`` DIRECTION: 1=forward, 0=reverse.

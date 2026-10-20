@@ -6,6 +6,9 @@ Reference guide for serial commands used by **EX-CommandStations**, shown in fun
 
     This list of commands is manually created and may lag behind the latest developments.  Refer to the [Full Command List](./serial-command-list.md) for the up-to-date list of commands.
 
+!!! warning "Deprecated Commands"
+    Commands marked with ⚠️ are deprecated and may be removed in future versions. Use the recommended alternatives where available.
+
 --8<-- "snippets/serial-commands/conventions.md"
 
 ----
@@ -212,107 +215,95 @@ Reference guide for serial commands used by **EX-CommandStations**, shown in fun
 
 | Command | Description | Parameters | Status |
 | ------- | ----------- | ---------- | ------ |
-| `<J M>` | List stash values | None | Active |
-| `<J M stash_id>` | Get stash value | `stash_id`: Stash identifier | Active |
-| `<J M CLEAR ALL>` | Clear all stash values | None | Active |
-| `<J M CLEAR stash_id>` | Clear given stash | `stash_id`: Stash identifier | Active |
-| `<J M stashId locoId>` | Set stash value | `stashId`: Stash ID, `locoId`: Loco ID | Active |
-| `<J M CLEAR ANY locoId>` | Clear all stash entries containing locoId | `locoId`: Locomotive ID | Active |
-| `<J C>` | Get fastclock time | None | Active |
-| `<J C mmmm nn>` | Set fastclock time | `mmmm`: Minutes, `nn`: Rate | Active |
-| `<J G>` | Report gauge limits | None | Active |
-| `<J I>` | Report currents | None | Active |
-| `<J A>` | List routes | None | Active |
-| `<J R>` | List roster | None | Active |
-| `<J R id>` | Get roster for loco | `id`: Locomotive ID | Active |
-| `<J T>` | Get turnout/point list | None | Active |
-| `<J T id>` | Get turnout state and description | `id`: Turnout ID | Active |
-| `<J O>` | List turntable IDs | None | Active |
-| `<J O id>` | List turntable state | `id`: Turntable ID | Active |
-| `<J P id>` | List turntable positions | `id`: Turntable ID | Active |
+| [`<J M>`](?_9J9_9M9) | List stash values | None | Active |
+| [`<J M stashId>`](?_9J9_9M9_stashid) | Get stash value | `stash_id`: Stash identifier | Active |
+| [`<J M CLEAR ALL>`](?_9J9_9M9_9CLEAR9_9ALL9) | Clear all stash values | None | Active |
+| [`<J M CLEAR stashId>`](?_9J9_9M9_9CLEAR9_stashid) | Clear given stash | `stash_id`: Stash identifier | Active |
+| [`<J M stashId locoId>`](?_9J9_9M9_stashid_locoid) | Set stash value | `stashId`: Stash ID, `locoId`: Loco ID | Active |
+| [`<J M CLEAR ANY locoId>`](?_9J9_9M9_9CLEAR9_9ANY9_locoid) | Clear all stash entries containing locoId | `locoId`: Locomotive ID | Active |
+| [`<J C>`](?_9J9_9C9) | Get fastclock time | None | Active |
+| [`<J C mmmm nn>`](?_9J9_9C9_mmm_nn) | Set fastclock time | `mmmm`: Minutes, `nn`: Rate | Active |
+| [`<J G>`](?_9J9_9G9) | Report gauge limits | None | Active |
+| [`<J I>`](?_9J9_9I9) | Report currents | None | Active |
+| [`<J A>`](?_9J9_9A9) | List routes | None | Active |
+| [`<J R>`](?_9J9_9R9) | List roster | None | Active |
+| [`<J R id>`](?_9J9_9R9_id) | Get roster for loco | `id`: Locomotive ID | Active |
+| [`<J T>`](?_9J9_9T9) | Get turnout/point list | None | Active |
+| [`<J T id>`](?_9J9_9T9_id) | Get turnout state and description | `id`: Turnout ID | Active |
+| [`<J O>`](?_9J9_9O9) | List turntable IDs | None | Active |
+| [`<J O id>`](?_9J9_9O9_id) | List turntable state | `id`: Turntable ID | Active |
+| [`<J P id>`](?_9J9_9P9_id) | List turntable positions | `id`: Turntable ID | Active |
 
 ## Track Manager
 
 | Command | Description | Parameters | Status |
 | ------- | ----------- | ---------- | ------ |
-| `<=>` | List track manager states | None | Active |
-| `<= track MAIN>` | Set track to MAIN | `track`: Track identifier | Active |
-| `<= track MAIN_INV>` | Set track to MAIN inverted polarity | `track`: Track identifier | Active |
-| `<= track MAIN_AUTO>` | Set track to MAIN with auto reversing | `track`: Track identifier | Active |
-| `<= track PROG>` | Set track to PROG | `track`: Track identifier | Active |
-| `<= track OFF>` | Set track power OFF | `track`: Track identifier | Active |
-| `<= track NONE>` | Set track no output | `track`: Track identifier | Active |
-| `<= track EXT>` | Set track to use external sync | `track`: Track identifier | Active |
-| `<= track AUTO>` | Update track to auto reverse | `track`: Track identifier | Active |
-| `<= track INV>` | Update track to inverse polarity | `track`: Track identifier | Active |
-| `<= track DC loco>` | Set track to DC | `track`: Track ID, `loco`: Loco ID | Active |
-| `<= track DC_INV loco>` | Set track to DC with inverted polarity | `track`: Track ID, `loco`: Loco ID | Active |
-| `<= track DCX loco>` | Set track to DC with inverted polarity | `track`: Track ID, `loco`: Loco ID | Active |
+| [`<=>`](?_8equals8) | List track manager states | None | Active |
+| [`<= track MAIN>`](?_8equals8_track_9MAIN9) | Set track to MAIN | `track`: Track identifier | Active |
+| [`<= track MAIN_INV>`](?_8equals8_track_9MAIN_INV9) | Set track to MAIN inverted polarity | `track`: Track identifier | Active |
+| [`<= track MAIN_AUTO>`](?_8equals8_track_9MAIN_AUTO9) | Set track to MAIN with auto reversing | `track`: Track identifier | Active |
+| [`<= track PROG>`](?_8equals8_track_9PROG9) | Set track to PROG | `track`: Track identifier | Active |
+| [`<= track OFF>`](?_8equals8_track_9OFF9) | Set track power OFF | `track`: Track identifier | Active |
+| [`<= track NONE>`](?_8equals8_track_9NONE9) | Set track no output | `track`: Track identifier | Active |
+| [`<= track EXT>](?_8equals8_track_9EXT9)` | Set track to use external sync | `track`: Track identifier | Active |
+| [`<= track AUTO>`](?_8equals8_track_9AUTO9) | Update track to auto reverse | `track`: Track identifier | Active |
+| [`<= track INV>`](?_8equals8_track_9INV9) | Update track to inverse polarity | `track`: Track identifier | Active |
+| [`<= track DC loco>`](?_8equals8_track_9DC9_loco) | Set track to DC | `track`: Track ID, `loco`: Loco ID | Active |
+| [`<= track DC_INV loco>`](?_8equals8_track_9DC_INV9_loco) | Set track to DC with inverted polarity | `track`: Track ID, `loco`: Loco ID | Active |
+| [`<= track DCX loco>`](?_8equals8_track_9DCX9_loco) | Set track to DC with inverted polarity. Same as DC_INV | `track`: Track ID, `loco`: Loco ID | Active |
 
 ## Configuration Commands
 
 | Command | Description | Parameters | Status |
 | ------- | ----------- | ---------- | ------ |
-| `<C PROGBOOST>` | Configure PROG track boost | None | Active |
-| `<C RESET>` | Reset and restart **EX-CommandStation** | None | Active |
-| `<C SPEED28>` | Set all DCC speed commands as 28 step | None | Active |
-| `<C SPEED128>` | Set all DCC speed commands to 128 step (default) | None | Active |
-| `<C RAILCOM ON>` | Enable Railcom cutout | None | Active |
-| `<C RAILCOM OFF>` | Disable Railcom cutout | None | Active |
-| `<C RAILCOM DEBUG>` | Enable Railcom cutout for scope testing | None | Active |
-| `<C WIFI "ssid" "password">` | Reconfigure stored STA WiFi credentials | `ssid`: Network name, `password`: Password | Active |
-| `<C WIFI AP "ssid" "password" [channel]>` | Reconfigure stored WiFi AP | `ssid`: Network name, `password`: Password | Active |
-| `<C WIFI HIDDENAP "ssid" "password" [channel]>` | Reconfigure stored WiFi AP | `ssid`: Network name, `password`: Password | Active |
-| `<C WIFI DEFAULT>` | Set WiFi to default | None | Active |
-| `<C WIFI ON/OFF>` | Set WiFi on/off name | None | Active |
+| [`<C PROGBOOST>`](?_9PROGBOOST9) | Configure PROG track boost | None | Active |
+| [`<C RESET>`](?_9RESET9) | Reset and restart **EX-CommandStation** | None | Active |
+| [`<C SPEED28>`](?_9SPEED289) | Set all DCC speed commands as 28 step | None | Active |
+| [`<C SPEED128>`](?_9SPEED1289) | Set all DCC speed commands to 128 step (default) | None | Active |
+| [`<C RAILCOM onOff>`](?_9RAILCOM9_onoff) | Enable/Disable Railcom cutout | None | Active |
+| [`<C RAILCOM DEBUG>`](?_9RRAILCOM9_9DEBUG9) | Enable Railcom cutout for scope testing | None | Active |
+| [`<C WIFI "ssid" "password">`](?_9WIFI9_ssid_password) | Reconfigure stored STA WiFi credentials | `ssid`: Network name, `password`: Password | Active |
+| [`<C WIFI AP "ssid" "password" [channel]>`](?_9WIFI9_9AP9_ssid_password_channel) | Reconfigure stored WiFi AP | `ssid`: Network name, `password`: Password | Active |
+| [`<C WIFI HIDDENAP "ssid" "password" [channel]>`](?_9WIFI9_9HIDDENAP9_ssid_password_channel) | Reconfigure stored WiFi AP | `ssid`: Network name, `password`: Password | Active |
+| [`<C WIFI DEFAULT>`](?_9WIFI9_9DEFAULT9) | Set WiFi to default | None | Active |
+| [`<C WIFI onOff>`](?_9WIFI9_onoff) | Set WiFi on/off name | None | Active |
 
 ## Diagnostic Commands
 
 | Command | Description | Parameters | Status |
 | ------- | ----------- | ---------- | ------ |
-| `<D ACK ON>` | Enable PROG track diagnostics | None | Active |
-| `<D ACK OFF>` | Disable PROG track diagnostics | None | Active |
-| `<D ACK LIMIT value>` | Set ACK detection limit mA | `value`: Current limit in mA | Active |
-| `<D ACK MIN value MS>` | Set ACK minimum duration mS | `value`: Duration in milliseconds | Active |
-| `<D ACK MIN value>` | Set ACK minimum duration µS | `value`: Duration in microseconds | Active |
-| `<D ACK MAX value MS>` | Set ACK maximum duration mS | `value`: Duration in milliseconds | Active |
-| `<D ACK MAX value>` | Set ACK maximum duration µS | `value`: Duration in microseconds | Active |
-| `<D ACK RETRY value>` | Set ACK retry count | `value`: Retry count | Active |
-| `<D CABS>` | Diagnostic display loco state table | None | Active |
-| `<D RAM>` | Diagnostic display free RAM | None | Active |
-| `<D CMD ON>` | Enable command input diagnostics | None | Active |
-| `<D CMD OFF>` | Disable command input diagnostics | None | Active |
-| `<D RAILCOM ON>` | Enable Railcom diagnostics | None | Active |
-| `<D RAILCOM OFF>` | Disable Railcom diagnostics | None | Active |
-| `<D WIFI ON>` | Enable WiFi diagnostics | None | Active |
-| `<D WIFI OFF>` | Disable WiFi diagnostics | None | Active |
-| `<D WIFI SHOW>` | Shows WiFi settings | None | Active |
-| `<D ETHERNET ON>` | Enable Ethernet diagnostics | None | Active |
-| `<D ETHERNET OFF>` | Disable Ethernet diagnostics | None | Active |
-| `<D WIT ON>` | Enable Withrottle diagnostics | None | Active |
-| `<D WIT OFF>` | Disable Withrottle diagnostics | None | Active |
-| `<D LCN ON>` | Enable LCN diagnostics | None | Active |
-| `<D LCN OFF>` | Disable LCN diagnostics | None | Active |
-| `<D WEBSOCKET ON>` | Enable Websocket diagnostics | None | Active |
-| `<D WEBSOCKET OFF>` | Disable Websocket diagnostics | None | Active |
-| `<D EEPROM numentries>` | Dump EEPROM contents | `numentries`: Number of entries | Active |
-| `<D ANOUT vpin position>` | Test analog output | `vpin`: Pin, `position`: Position | Active |
-| `<D ANOUT vpin position profile>` | Test analog output with profile | `vpin`: Pin, `position`: Position, `profile`: Profile | Active |
-| `<D SERVO vpin position>` | Test servo | `vpin`: Pin, `position`: Position | Active |
-| `<D SERVO vpin position profile>` | Test servo with profile | `vpin`: Pin, `position`: Position, `profile`: Profile | Active |
-| `<D ANIN vpin>` | Display analogue input value | `vpin`: Pin number | Active |
-| `<D HAL SHOW>` | Show HAL devices table | None | Active |
-| `<D HAL RESET>` | Reset all HAL devices | None | Active |
-| `<D TT vpin steps>` | Test turntable | `vpin`: Pin, `steps`: Step count | Active |
-| `<D TT vpin steps activity>` | Test turntable with activity | `vpin`: Pin, `steps`: Steps, `activity`: Activity | Active |
+| [`<D ACK onoff>`](?_9D9_9ACK9_onoff) | Enable/Disable PROG track diagnostics | None | Active |
+| [`<D ACK LIMIT value>`](?_9D9_9ACK9_9LIMIT9_value) | Set ACK detection limit mA | `value`: Current limit in mA | Active |
+| [`<D ACK MIN value MS>`](?_9D9_9ACK9_9MIN9_value_9MS9) | Set ACK minimum duration mS | `value`: Duration in milliseconds | Active |
+| [`<D ACK MIN value>`](?_9D9_9ACK9_9MIN9_value) | Set ACK minimum duration µS | `value`: Duration in microseconds | Active |
+| [`<D ACK MAX value MS>`](?_9D9_9ACK9_9MAX9_value_9MS9) | Set ACK maximum duration mS | `value`: Duration in milliseconds | Active |
+| [`<D ACK MAX value>`](?_9D9_9ACK9_9MAX9_value) | Set ACK maximum duration µS | `value`: Duration in microseconds | Active |
+| [`<D ACK RETRY value>`](?_9D9_9ACK9_9RETRY9_value) | Set ACK retry count | `value`: Retry count | Active |
+| [`<D CABS>`](?_9D9_9CABS9) | Diagnostic display loco state table | None | Active |
+| [`<D RAM>`](?_9D9_9RAM9) | Diagnostic display free RAM | None | Active |
+| [`<D CMD onOff>`](?_9D9_9CMD9_onoff) | Enable/Disable command input diagnostics | None | Active |
+| [`<D RAILCOM onOff>`](?_9D9_9RAILCOM9_onoff) | Enable/Disable Railcom diagnostics | None | Active |
+| [`<D WIFI onOff>`](?_9D9_9WIFI9_onoff) | Enable/Disable WiFi diagnostics | None | Active |
+| [`<D WIFI SHOW>`](?_9D9_9WIFI9_9SHOW9) | Shows WiFi settings | None | Active |
+| [`<D ETHERNET onOff>`](?_9D9_9ETHERNET9_onoff) | Enable/Disable Ethernet diagnostics | None | Active |
+| [`<D WIT onOff>`](?_9D9_9WIT9_onoff) | Enable/Disable Withrottle diagnostics | None | Active |
+| [`<D LCN onOff>`](?_9D9_9LCN9_onoff) | Enable/Disable LCN diagnostics | None | Active |
+| [`<D WEBSOCKET onOff>`](?_9D9_9WEBSOCKET9_onoff) | Enable/Disable Websocket diagnostics | None | Active |
+| [`<D EEPROM numentries>`](?_9D9_9EEPROM9_numentries) | Dump EEPROM contents | `numentries`: Number of entries | Active |
+| [`<D ANOUT vpin position>`](?_9D9_9ANOUT9_vpin_position) | Test analog output | `vpin`: Pin, `position`: Position | Active |
+| [`<D ANOUT vpin position profile>`](?_9D9_9ANOUT9_vpin_position_profile) | Test analog output with profile | `vpin`: Pin, `position`: Position, `profile`: Profile | Active |
+| [`<D SERVO vpin position>`](?_9D9_9SERVO9_vpin_position) | Test servo | `vpin`: Pin, `position`: Position | Active |
+| [`<D SERVO vpin position profile>`](?_9D9_9SERVO9_vpin_position_profile) | Test servo with profile | `vpin`: Pin, `position`: Position, `profile`: Profile | Active |
+| [`<D ANIN vpin>`](?_9D9_9ANIN9_vpin) | Display analogue input value | `vpin`: Pin number | Active |
+| [`<D HAL SHOW>`](?_9D9_9HAL9_9SHOW9) | Show HAL devices table | None | Active |
+| [`<D HAL RESET>`](?_9D9_9HAL9_9RESET9) | Reset all HAL devices | None | Active |
+| [`<D TT vpin steps>`](?_9D9_9TT9_vpin_steps) | Test turntable | `vpin`: Pin, `steps`: Step count | Active |
+| [`<D TT vpin steps activity>`](?_9D9_9TT9_vpin_steps_activity) | Test turntable with activity | `vpin`: Pin, `steps`: Steps, `activity`: Activity | Active |
 
 ## Raw DCC Packets
 
 | Command | Description | Parameters | Status |
 | ------- | ----------- | ---------- | ------ |
-| `<M ignore d0 d1 d2 d3 d4 d5>` | Send up to 5 byte DCC packet on MAIN track | `ignore`: Ignored, `d0-d5`: Hex bytes | Active |
-| `<P ignore d0 d1 d2 d3 d4 d5>` | Send up to 5 byte DCC packet on PROG track | `ignore`: Ignored, `d0-d5`: Hex bytes | Active |
-| `<c>` | Report main track current | None | ⚠️ Deprecated |
-
-!!! warning "Deprecated Commands"
-    Commands marked with ⚠️ are deprecated and may be removed in future versions. Use the recommended alternatives where available.
+| [`<M ignore d0 d1 d2 d3 d4 d5>`](?_9M9_ignore_d0_d1_[d2_d3_d4_d5]) | Send up to 5 byte DCC packet on MAIN track | `ignore`: Ignored, `d0-d5`: Hex bytes | Active |
+| [`<P ignore d0 d1 d2 d3 d4 d5>`](?_9P9_ignore_d0_d1[_d2_d3_d4_d5]) | Send up to 5 byte DCC packet on PROG track | `ignore`: Ignored, `d0-d5`: Hex bytes | Active |
+| [`<c>`](?_c) | Report main track current | None | ⚠️ Deprecated |
