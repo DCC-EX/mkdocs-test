@@ -3,9 +3,11 @@ tags:
   - _@
 ---
 
-# <small>``<@>``</small> <br/> Request all virtual msgs to this client
+# Serial commands to: Request all virtual msgs to this client
 
 Serial command to request all virtual msgs to this client.
+
+``<@>``
 
 ## Command(s)
 

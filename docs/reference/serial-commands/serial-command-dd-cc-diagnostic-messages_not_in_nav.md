@@ -16,9 +16,19 @@ tags:
     - _9D9_9LCN9_9ON9
 ---
 
-# <small>``<D CMD|EXRAIL|ETHERNET|WIT|WEBSOCKET|RAILCOM|LCN ON|OFF>``</small> <br/>Enable/Disable Various Diagnostic Messages
+# Serial commands to: Enable/Disable Various Diagnostic Messages
 
 Serial commands to enable or disable various diagnostic messages shown on the serial output.
+
+``<D CMD ON|OFF>``
+``<D EXRAIL ON|OFF>``
+``<D ETHERNET ON|OFF>``
+``<D WIT ON|OFF>``
+``<D WEBSOCKET ON|OFF>``
+``<D RAILCOM ON|OFF>``
+``<D LCN ON|OFF>``
+
+----
 
 ## Command(s)
 

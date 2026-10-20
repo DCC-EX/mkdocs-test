@@ -17,13 +17,22 @@ search:
   boost: 3
 ---
 
-# <small>``<I [«id»] [«various parameters»]>``</small> <br/><small>``<D TT «vpin» «steps» [«activity]>``</small> <br/><small>``<J O [«id»]>``</small> &nbsp; <small>``<J P «id»>``</small><br/>Manage Turntables
+# Serial commands to: Manage Turntables
 
 Serial commands to manage Turntables.
 
 The Turntable/Traverser commands provide a more flexible and functional way of operating turntables/traversers. These require that the turntable/traverser be pre-defined through the ``<I ...>`` commands, described below.
 
+``<I>``
+``<I «id» [«various parameters»]>``
+``<D TT «vpin» «steps» [«activity]>``
+``<J O>``
+``<J O «id»>``
+``<J P «id»>``
+
 Also refer to the [legacy EX-Turntable documentation](../../products/ex-turntable/index.md).
+
+----
 
 ## Commands
 

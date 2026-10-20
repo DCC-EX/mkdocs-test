@@ -19,9 +19,15 @@ search:
   boost: 3
 ---
 
-# <small>``<= [«trackletter» «mode»] [«id»]>``</small> <br/>Request or Configure Track Manager <span style="display:none;">(_equals)</span>
+# Serial commands to: Request or Configure Track Manager <span style="display:none;">(_equals)</span>
 
-Serial command to request infomation about the modes of all tracks or alter the mode of a specific track.
+Serial command to request information about the modes of all tracks or alter the mode of a specific track.
+
+``<=>``
+``<= «trackletter» «mode»>``
+``<= «trackletter» DC|DC_INV «id»>``
+
+----
 
 ## Commands
 

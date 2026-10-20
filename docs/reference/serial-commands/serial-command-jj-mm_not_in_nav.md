@@ -11,9 +11,18 @@ search:
   boost: 3
 ---
 
-# <small>``<J M [«various parameters»]>``</small> <br/> Manage Stash Values
+# Serial commands to: Manage Stash Values
 
 Serial command to manage Stash values.
+
+``<J M>``
+``<J M CLEAR ALL>``
+``<J M CLEAR ANY «locoId»>``
+``<J M CLEAR «stashId»>``
+``<J M «stashId»>``
+``<J M «stashId» «locoId»>``
+
+----
 
 ## Command(s)
 

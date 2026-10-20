@@ -7,19 +7,24 @@ search:
   boost: 3
 ---
 
-# <small>``<J C [«mmmm» [«nn»]]>``</small> <br/> Get/Set the Fastclock Time
+# Serial commands to:  Get/Set the Fastclock Time
 
 Serial commands to get or set the Fastclock time.
 
+``<J C>``
+``<J C «mmmm» «nn»>``
+
+----
+
 ## Command(s)
 
-* ``<J C [«mmmm» [«nn»]]>`` = Set fastclock time
+* ``<J C «mmmm» [«nn»]>`` = Set fastclock time
 * ``<J C>`` = Get fastclock time
 
 ## Parameters
 
 * **mmmm**: minutes (hours * 60)
-* **nn**: speed factor. Default is 1
+* **nn**: *optional* speed factor. Default is 1
 
 * **parameter**: *Required*|*optional* description - one of:
     * ``option`` = explanation of option

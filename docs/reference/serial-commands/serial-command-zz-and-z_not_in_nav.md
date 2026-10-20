@@ -13,9 +13,20 @@ search:
   boost: 3
 ---
 
-# <small>``<Z [«id» [«pin» «iFlag»]|«active»]]>``</small> <br/><small>``<z [«signedVpin»]|[«vpin» «analogue» [[«profile»] [«duration»]]]>``</small> <br/>Manage pin/vpin outputs
+# Serial commands to: Manage pin/vpin outputs
 
 Serial commands to >Manage pin/vpin outputs.
+
+ ``<Z>``
+ ``<Z «id» «active»>``
+ ``<Z «id» «pin» «iFlag»>``
+ ``<Z «id»>``
+ ``<z «signedVpin»>``
+ ``<z «vpin» «analogue» «profile» duration»>``
+ ``<z «vpin» «analogue» «profile»>``
+ ``<z «vpin» «analogue»>``
+
+ ----
 
 ## Commands
 

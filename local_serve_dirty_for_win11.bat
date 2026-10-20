@@ -1,1 +1,2 @@
 properdocs serve --dirty
+pause

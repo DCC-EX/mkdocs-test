@@ -7,9 +7,14 @@ search:
   boost: 3
 ---
 
-# <small>``<K «blockid» «loco»>``<br/> ``<k «blockid» «loco»>``</small>  <br/> Loco entering/leaving Block
+# Serial commands to: Loco entering/leaving Block
 
 Serial command(s) to indicate a loco entering/leaving a block.
+
+``<K «blockid» «loco»>``
+``<k «blockid» «loco»>``
+
+----
 
 ## Command(s)
 

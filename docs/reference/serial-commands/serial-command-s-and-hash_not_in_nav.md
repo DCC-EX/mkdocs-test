@@ -12,9 +12,16 @@ search:
   boost: 3
 ---
 
-# <small>``<s>`` &nbsp; ``<#>`` <br/> ``<C RESET>`` ``<D RESET>`` </small> <br/> Query or Reset the EX-CommandStation
+# Serial commands to: Query or Reset the EX-CommandStation
 
 Serial commands to query or reset the EX-CommandStation
+
+``<s>``
+``<#>``
+``<C RESET>``
+``<D RESET>``
+
+----
 
 ## Commands
 

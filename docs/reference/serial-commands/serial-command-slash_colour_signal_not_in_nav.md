@@ -8,20 +8,23 @@ search:
   boost: 3
 ---
 
-# <small>``</ «colour» «signal»>``</small> <br/> Set signal colour
+# Serial commands to: Set signal colour
 
 Serial command to set the colour of a signal.
 
+``</ RED «signal»>``
+``</ AMBER «signal»>``
+``</ GREEN «signal»>``
+
+----
+
 ## Command
 
-* ``</ «colour» «signal»>`` = Set signal colour
+* ``</ RED «signal»>`` = Set signal colour
+* ``</ AMBER «signal»>`` = Set signal colour
+* ``</ GREEN «signal»>`` = Set signal colour
 
 ## Parameters
-
-* **colour**: *Required* colour to set - one of:
-    * ``RED``
-    * ``AMBER``
-    * ``GREEN``
 
 * **signal**: *Required* defined **red** Vpin of the signal to control
 

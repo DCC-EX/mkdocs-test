@@ -14,15 +14,26 @@ search:
   boost: 3
 ---
 
-# <small>``<J A [«id»]>``</small> <br/><small>``</ [START|PAUSE|RESUME|KILL] [«various parameters»]>``</small> <br/> List, Start or Stop Automations/Sequences
+# Serial commands to: List, Start or Stop Automations/Sequences
 
 Serial commands to list, start, pause or stop automations/sequences including routes and animations.
+
+``<J A>``
+``<J A «id»>``
+``</ START «route»>``
+``</ START «loco» «route»>``
+``</ PAUSE>``
+``</ RESUME>``
+``</ KILL ALL>``
+``</ KILL «taskId»>``
+``<`` ``/`` ``>``
 
 ## Commands
 
 * ``<J A>`` = List all automations/routes
 * ``<J A «id»>`` = list automation details
-* ``</ START [«loco»] «route»>`` = Start a sequence, or an automation with a loco
+* ``</ START «route»>`` = Start a sequence
+* ``</ START «loco» «route»>`` = Start an automation with a loco
 * ``</ PAUSE>`` = Pause all **EXRAIL** tasks
 * ``</ RESUME>`` = Resume all **EXRAIL** tasks
 * ``</ KILL ALL>`` = Kill all **EXRAIL** tasks
@@ -33,7 +44,7 @@ Serial commands to list, start, pause or stop automations/sequences including ro
 
 * **id** & **taskId**: id of the automation/sequence
 * **loco**: *optional* DCC address of the loco to be used by the automation. <br/> not relevant to routes and automations.
-* **route**: automation/sequence (includeing routes and animations) to start or kill.
+* **route**: automation/sequence (including routes and animations) to start or kill.
 
 ## Responses
 

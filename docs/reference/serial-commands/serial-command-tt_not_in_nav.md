@@ -19,9 +19,17 @@ search:
   boost: 3
 ---
 
-# <small>``<T [«id»] [«various parameters»]>`` <br/> ``<J T [«id»]>``</small> <br/>Define or manage Turnouts/Points
+# Serial commands to: Define or manage Turnouts/Points
 
 Serial commands to define or manage Turnouts/Points.
+
+``<T «id» DCC «addr» «subadd»>``
+``<T «id» DCC «»>``
+``<T «id» SERVO «vpin» «closedValue» «thrownValue» «profile»>``
+``<T «id» VPIN «vpin»>``
+``<T «id»>``
+
+----
 
 ## Commands
 

@@ -5,11 +5,17 @@ tags:
   - _8caret8_leadLoco_follower [_follower2..7]
 ---
 
-# <small>``<^ «loco»|[«leadLoco» «follower» [ «follower2..7»]]>``</small> <br/> Manage EX-CommandStation Consists/MUs
+# Serial commands to: Manage EX-CommandStation Consists/MUs
 
 Serial commands to manage in-command-station Consists/Multiple Unit Trains (MUs).  These are created and held temporarily in the **EX-CommandStation** and are lost when the command station restarts.
 
+``<^>``
+``<^ «loco»>``
+``<^ «leadLoco» «follower» [ «follower2..7»]>``
+
 See [Consists page](/enhance/exrail/cookbooks/driving-trains/consists.md) for information on other types of consist.
+
+----
 
 ## Commands
 

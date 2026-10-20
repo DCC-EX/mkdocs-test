@@ -4,9 +4,14 @@ tags:
   - _9d9_9hal9_9reset9
 ---
 
-# <small>``<D HAL SHOW|RESET>``</small> <br/> List or Reset the HAL Devices
+# Serial commands to: List or Reset the HAL Devices
 
 Serial commands to list or reset the HAL devices.
+
+``<D HAL SHOW>``
+``<D HAL RESET>``
+
+----
 
 ## Command(s)
 

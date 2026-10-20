@@ -9,9 +9,15 @@ search:
   boost: 3
 ---
 
-# <small>``<Q>``</small> &nbsp; <small>``<S «id» [«vpin» «pullup»>]``</small> <br/>Manage Sensors
+# Serial commands to: Manage Sensors
 
-Serial commands to create and manage sensors
+Serial commands to create and manage sensors.
+
+``<Q>``
+``<S «id»>``
+``<S «id» «vpin» «pullup»>``
+
+----
 
 ## Commands
 

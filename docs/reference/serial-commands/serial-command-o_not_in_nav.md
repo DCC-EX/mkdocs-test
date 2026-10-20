@@ -9,9 +9,16 @@ search:
   boost: 3
 ---
 
-# <small>``<o «vpin» [«count»]|[«r» «g» «b» [«count»]]>``</small> <br/> Set Neopixels
+# Serial commands to: Set Neopixels
 
 Serial commands to provide the ability to set neopixels on or off or change the colour either individually or over a range of pixels.
+
+``<o «vpin» «count»>``
+``<o «vpin» «r» «g» «b» «count»>``
+``<o «vpin» «r» «g» «b»>``
+``<o «vpin»>``
+
+----
 
 ## Commands
 

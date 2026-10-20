@@ -24,9 +24,26 @@ search:
 
 Serial commands to read and write CVs on the PROG track (Service mode) or on the MAIN track (PoM). This includes reading and writing the decoder DCC Address.
 
-<small>``<R>`` ``<R «cv»>`` ``<R LOCOID>`` ``<R CONSIST>`` ``<r «loco» «cv»>`` ``<W «loco»>`` ``<W CONSIST «loco»>`` ``<W CONSIST «loco» REVERSE>`` ``<W «cv» «value»>`` ``<W «loco» «cv» «bitValue» «bit»>`` ``<W «cv» «bitValue» «bit»>`` ``<W «loco» «cv» «bitValue» «bit»>`` ``<V «cv» «value»>`` ``<V «cv» «bit» «bitValue»>`` ``<B «cv» «bit» «bitValue»>`` ``<b «loco» «cv» «bit» «bitValue»>``</small>
+``<R>``
+``<R «cv»>``
+``<R LOCOID>``
+``<R CONSIST>``
+``<r «loco» «cv»>``
+``<W «loco»>``
+``<W CONSIST «loco»>``
+``<W CONSIST «loco» REVERSE>``
+``<W «cv» «value»>``
+``<W «loco» «cv» «bitValue» «bit»>``
+``<W «cv» «bitValue» «bit»>``
+``<W «loco» «cv» «bitValue» «bit»>``
+``<V «cv» «value»>``
+``<V «cv» «bit» «bitValue»>``
+``<B «cv» «bit» «bitValue»>``
+``<b «loco» «cv» «bit» «bitValue»>``
 
 These do not include reading or writing to DCC accessory decoders.
+
+----
 
 ## Commands
 

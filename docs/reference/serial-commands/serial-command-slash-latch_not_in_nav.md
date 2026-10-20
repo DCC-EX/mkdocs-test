@@ -7,9 +7,14 @@ search:
   boost: 3
 ---
 
-# <small>``</ LATCH «latch»>`` ``</ UNLATCH «latch»>``</small> <br/> Set or remove a latch
+# Serial commands to: Set or remove a latch
 
-Serial command(s) to set or remove a latch.
+Serial commands to set or remove a latch.
+
+``</ LATCH «latch»>``
+``</ UNLATCH «latch»>``
+
+----
 
 ## Command(s)
 

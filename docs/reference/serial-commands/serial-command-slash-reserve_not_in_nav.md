@@ -8,9 +8,15 @@ search:
   boost: 3
 ---
 
-# <small>``</ FREEALL|[RESERVE|FREE «section»]>``</small> <br/> Reserve or Free Sections
+# Serial commands to: Reserve or Free Sections
 
 Serial commands to reserve or free sections.
+
+``</ FREEALL>``
+``</ RESERVE «section»>``
+``</ FREE «section»>``
+
+----
 
 ## Commands
 

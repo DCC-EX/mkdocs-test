@@ -3,9 +3,13 @@ tags:
   - _@_display_row_text
 ---
 
-# <small>``<@ «display» «row» «text»>``</small> <br/> Display text on virtual LCD
+# Serial commands to: Display text on virtual LCD
 
 Serial command to display text on virtual LCD at specified row.
+
+``<@ «display» «row» «text»>``
+
+----
 
 ## Command(s)
 

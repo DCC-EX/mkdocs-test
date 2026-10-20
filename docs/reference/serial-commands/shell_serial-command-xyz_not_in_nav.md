@@ -6,9 +6,13 @@ search:
   boost: 3
 ---
 
-# <small>``<cmd «required parameter» [«optional parameter»]>``</small> <br/> Short command description
+# Serial commands to: Short command description
 
 Serial command(s) to ...
+
+``<cmd «required parameter» [«optional parameter»]>``
+
+----
 
 ## Command(s)
 

@@ -6,9 +6,13 @@ search:
   boost: 3
 ---
 
-# <small>``<D RAM>``</small> <br/> Diagnostic display free RAM
+# Serial commands to: Diagnostic display free RAM
 
 Serial command to display free RAM.
+
+``<D RAM>``
+
+----
 
 ## Command(s)
 
