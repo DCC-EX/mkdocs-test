@@ -1,48 +1,43 @@
 ---
 tags:
-    - _9D9_9CMD9_9OFF9
-    - _9D9_9CMD9_9ON9
-    - _9D9_9EXRAIL9_9OFF9
-    - _9D9_9EXRAIL9_9ON9
-    - _9D9_9ETHERNET9_9OFF9
-    - _9D9_9ETHERNET9_9ON9
-    - _9D9_9WIT9_9OFF9
-    - _9D9_9WIT9_9ON9
-    - _9D9_9WEBSOCKET9_9OFF9
-    - _9D9_9WEBSOCKET9_9ON9
-    - _9D9_9RAILCOM9_9OFF9
-    - _9D9_9RAILCOM9_9ON9
-    - _9D9_9LCN9_9OFF9
-    - _9D9_9LCN9_9ON9
+    - _9D9_9CMD9_onoff
+    - _9D9_9EXRAIL9_onoff
+    - _9D9_9ETHERNET9_onoff
+    - _9D9_9WIT9_onoff
+    - _9D9_9WEBSOCKET9_onoff
+    - _9D9_9RAILCOM9_onoff
+    - _9D9_9LCN9_onoff
 ---
 
 # Serial commands to: Enable/Disable Various Diagnostic Messages
 
 Serial commands to enable or disable various diagnostic messages shown on the serial output.
 
-``<D CMD ON|OFF>``
-``<D EXRAIL ON|OFF>``
-``<D ETHERNET ON|OFF>``
-``<D WIT ON|OFF>``
-``<D WEBSOCKET ON|OFF>``
-``<D RAILCOM ON|OFF>``
-``<D LCN ON|OFF>``
+``<D CMD onOff>``
+``<D EXRAIL onOff>``
+``<D ETHERNET onOff>``
+``<D WIT onOff>``
+``<D WEBSOCKET onOff>``
+``<D RAILCOM onOff>``
+``<D LCN onOff>``
 
 ----
 
 ## Commands
 
-* ``<D CMD ON|OFF>`` = Enable/Disable command input diagnostics
-* ``<D EXRAIL ON|OFF>`` = Enable/Disable EXRAIL diagnostics
-* ``<D ETHERNET ON|OFF>`` = Enable/Disable Ethernet diagnostics
-* ``<D WIT ON|OFF>`` = Enable/Disable WiThrottle diagnostics
-* ``<D WEBSOCKET ON|OFF>`` = Enable/Disable WebSocket diagnostics
-* ``<D RAILCOM ON|OFF>`` = Enable/Disable Railcom diagnostics
-* ``<D LCN ON|OFF>`` = Enable/Disable LCN diagnostics
+* ``<D CMD onOff>`` = Enable/Disable command input diagnostics
+* ``<D EXRAIL onOff>`` = Enable/Disable EXRAIL diagnostics
+* ``<D ETHERNET onOff>`` = Enable/Disable Ethernet diagnostics
+* ``<D WIT onOff>`` = Enable/Disable WiThrottle diagnostics
+* ``<D WEBSOCKET onOff>`` = Enable/Disable WebSocket diagnostics
+* ``<D RAILCOM onOff>`` = Enable/Disable Railcom diagnostics
+* ``<D LCN onOff>`` = Enable/Disable LCN diagnostics
 
 ## Parameters
 
-* **ON|OFF**: Enable or Disable
+* **onOff** One of:
+    * ``ON``: Enable
+    * ``OFF``: Disable
 
 ## Response
 

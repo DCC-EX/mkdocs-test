@@ -6,8 +6,7 @@ tags:
     - _9D9_9ACK9_9MAX9_value
     - _9D9_9ACK9_9MIN9_value_9MS9
     - _9D9_9ACK9_9MIN9_value
-    - _9D9_9ACK9_9OFF9
-    - _9D9_9ACK9_9ON9
+    - _9D9_9ACK9_onoff
 ---
 # CV Programming Tips
 

@@ -1,24 +1,23 @@
 ---
 tags:
-  - _9C9_9RAILCOM9_9ON9
-  - _9C9_9RAILCOM9_9OFF9
+  - _9C9_9RAILCOM9_onoff
 ---
 
 # Serial commands to: Enable/Disable Railcom Cutout
 
 Serial command to Enable/Disable Railcom cutout.  Available on Arduino Mega based **EX-CommandStations** only.
 
-``<C RAILCOM ON>``
-``<C RAILCOM OFF>``
+``<C RAILCOM onOff>``
 
 ## Command
 
-* ``<C RAILCOM ON>`` = Enable Railcom cutout.
-* ``<C RAILCOM OFF>`` = Disable Railcom cutout.
+* ``<C RAILCOM onOff>`` = Enable/Disable Railcom cutout.
 
 ## Parameters
 
-none
+* **onOff** One of:
+    * ``ON``: Enable
+    * ``OFF``: Disable
 
 ## Response
 

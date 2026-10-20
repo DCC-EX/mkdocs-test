@@ -6,8 +6,7 @@ tags:
     - _9D9_9ACK9_9MAX9_value
     - _9D9_9ACK9_9MIN9_value_9MS9
     - _9D9_9ACK9_9MIN9_value
-    - _9D9_9ACK9_9OFF9
-    - _9D9_9ACK9_9ON9
+    - _9D9_9ACK9_onoff
     - _9D9_9ACK9_9RETRY9_value
 ---
 
@@ -20,7 +19,7 @@ Serial commands to modify the system PROG track settings. Used primarily to help
 ``<D ACK MAX «value»>``
 ``<D ACK MIN «value» MS>``
 ``<D ACK MIN «value»>``
-``<D ACK ON|OFF>``
+``<D ACK onOff>``
 ``<D ACK RETRY «value»>``
 ``<C PROGBOOST>``
 
@@ -33,7 +32,7 @@ Serial commands to modify the system PROG track settings. Used primarily to help
 * ``<D ACK MAX «value»>`` = Set ACK maximum duration µS
 * ``<D ACK MIN «value» MS>`` = Set ACK minimum duration mS
 * ``<D ACK MIN «value»>`` = Set ACK minimum duration µS
-* ``<D ACK ON|OFF>`` = Enable/Disable PROG track diagnostics
+* ``<D ACK onOff>`` = Enable/Disable PROG track diagnostics
 * ``<D ACK RETRY «value»>`` = Set ACK retry count
 * ``<C PROGBOOST>`` = Configure PROG track boost
 
@@ -43,6 +42,10 @@ Serial commands to modify the system PROG track settings. Used primarily to help
 
     For time base commands values are in microseconds (µS) unless the parameter ``MS`` is added, in which case the value will be in milliseconds (ms).
 
+* **onOff** One of:
+    * ``ON``: Enable
+    * ``OFF``: Disable
+    
 ## Response
 
 N/A
