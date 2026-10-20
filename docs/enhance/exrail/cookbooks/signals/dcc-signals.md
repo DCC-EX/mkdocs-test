@@ -4,6 +4,8 @@
 
 Most DCC signals have an inbuilt decoder and generally only have a RED and GREEN aspect. They are driven by dcc accessory packets sent over the track signal.
 
+## code
+
 To define a DCC signal use
 
 ```cpp

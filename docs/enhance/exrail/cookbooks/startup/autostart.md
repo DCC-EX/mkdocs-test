@@ -9,6 +9,8 @@ Where VPINS are mapped to external expanders (such as an MCP23017), the HAL driv
 
 - **EXRAIL** will then automatically start tasks at any point in the myAutomation.h file where an AUTOSTART command is found. There may be several, they will all run simultaneously and in no particular priority.
 
+## code
+
 To create commands that will automatically run at startup:
 
 ```cpp

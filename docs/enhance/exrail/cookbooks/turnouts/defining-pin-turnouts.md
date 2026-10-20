@@ -2,6 +2,8 @@
 
 PIN Turnouts/Points operate by detecting the state of an output pin.
 
+## code
+
 Define pin based turnouts/points using **EXRAIL**.
 
 ```cpp

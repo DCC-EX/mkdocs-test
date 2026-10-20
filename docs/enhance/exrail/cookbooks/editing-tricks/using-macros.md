@@ -4,6 +4,8 @@ The **EXRAIL** language is compiled by C++ and this means you can use MACROS of 
 
 A MACRO is essentially a tiny program that types stuff for you while substituting parameters.
 
+## code
+
 For example: This macro can be used to start two leds flashing alternately at half second intervals:
 
 ```cpp

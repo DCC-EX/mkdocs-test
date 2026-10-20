@@ -8,6 +8,8 @@ Unfortunately, the LATCH implementation was designed in a limited way to support
 
 Because of these limitations, it is recommended that you use the much simpler [flags](flags.md) feature which provides virtual VPINs that can be set, reset and tested without the limitations of LATCH.
 
+## code
+
 For example:
 
 ```cpp

@@ -2,6 +2,8 @@
 
 Functions can be set on or off. **EXRAIL** knows nothing about the meaning of each function because this is internal to the loco decoder.
 
+## code
+
 - `FON(func)`  turns on a loco function
 - `FOFF(func)` turns off a function
 

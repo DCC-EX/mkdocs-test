@@ -4,6 +4,8 @@ Maybe you have more than one **EX-CommandStation** and you wish to have slightly
 
 The C++ compiler pre-processor is available to select various parts of your myAutomation.h based on definitions created in your config.h or those created by defines.he which automates the detection of the CPU type of your **EX-CommandStation**.
 
+## code
+
 For example:
 
 ```cpp

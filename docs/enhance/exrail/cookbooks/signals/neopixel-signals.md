@@ -9,6 +9,8 @@ Bear in mind that a single multicolour neopixel used above might be physically a
 
 For separate pixels, the colours should be established at startup and a normal SIGNALH macro used.
 
+## code
+
 ```cpp
 AUTOSTART
   SIGNALH(1010,1011,1012)

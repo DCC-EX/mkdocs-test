@@ -2,6 +2,8 @@
 
 ![Track Status Display](../../../../_static/images/ex-csb1/track-status-display.png)
 
+## code
+
 To display track status, add a line in myAutomation.h
 
 ```cpp

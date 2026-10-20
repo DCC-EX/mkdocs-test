@@ -2,6 +2,8 @@
 
 A command filter intercepts `< >` type commands from throttles or the [serial monitor](../../../../reference/tools/serial-monitor.md) and can be used to override, block or modify existing commands and implement completely new commands.
 
+## code
+
 The following code, added to myAutomation.h like any other **EXRAIL** code, gives a basic example.
 
 ```cpp

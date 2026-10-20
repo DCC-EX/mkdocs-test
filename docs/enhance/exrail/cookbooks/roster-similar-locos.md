@@ -2,6 +2,8 @@
 
 The ROSTER command in **EXRAIL** can be tedious if you have several sound locos with the same function settings. Using a preprocessor definition saves typing.
 
+## code
+
 ```cpp
 ROSTER(1201,"Red class 99","light/*horn/flash/bang/wallop/squeal/honk")
 ROSTER(1202,"Green class 99","light/*horn/flash/bang/wallop/squeal/honk")

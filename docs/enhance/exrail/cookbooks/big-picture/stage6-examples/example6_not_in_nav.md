@@ -1,5 +1,7 @@
 # Example - Full automation with pin based turnouts/points and signals on MCP23017 I/O expander Vpins
 
+## code
+
 ```cpp
   // myAutomation.h for SEQUENCEs with pin based turnouts/points, sensors, and signals via MCP23017 I/O expander Vpins.
 
