@@ -1,6 +1,6 @@
 ---
 tags:
-  - _9J9_9R9_id_name_functions
+  - _9J9_9R9_locoid_name_functionMap
   - _9J9_9R9_9SAVE9
   - _9J9_9R9_id_9DELETE9
 ---
