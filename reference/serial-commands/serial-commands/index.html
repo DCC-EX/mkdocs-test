@@ -10951,6 +10951,10 @@
 <p class="admonition-title">This list may not be complete</p>
 <p>This list of commands is manually created and may lag behind the latest developments.  Refer to the <a href="../serial-command-list/">Full Command List</a> for the up-to-date list of commands.</p>
 </div>
+<div class="admonition warning">
+<p class="admonition-title">Deprecated Commands</p>
+<p>Commands marked with ⚠️ are deprecated and may be removed in future versions. Use the recommended alternatives where available.</p>
+</div>
 <h2 id="dcc-ex-serial-commands-overview">DCC-EX Serial Commands Overview<a class="headerlink" href="#dcc-ex-serial-commands-overview" title="Permanent link">&para;</a></h2>
 <details>
 <summary>Click to expand</summary>
@@ -10975,6 +10979,7 @@
 <li>First letter or number - These are called OPCODES, are case sensitive, and must be specified as directed, e.g. <code>1</code>, <code>c</code>, or <code>-</code></li>
 <li>CAPITALISED words - These are parameters referred to as keywords, and should be specified as directed, e.g. <code>MAIN</code> (note these are not case sensitive, however capitalising makes them easier to distinguish from other parameters)</li>
 <li>lowercase words - These are parameters that must be provided or are returned, with multiple parameters separated by a space " ", e.g. <code>loco</code> or <code>«loco»</code></li>
+<li>Quoted <code>"text"</code> - Text within quote marks <code>""</code> are used as descriptions, and must include the quote characters, for example <code>&lt;JR id "name" "functions"&gt;</code> becomes <code>&lt;J R 10,"DC Loco 10","/////////////////////////////FQ490 Hz/FQ3400 Hz/FQ62500 Hz"&gt;</code></li>
 <li>Square brackets <code>[]</code> - Parameters within square brackets <code>[]</code> are optional and may be omitted, and if specifying these parameters, do not include the square brackets themselves</li>
 <li>| - Use of the | character means you need to provide one of the provided options only, for example <code>&lt;0|1 MAIN|PROG|JOIN&gt;</code> becomes either <code>&lt;0 MAIN&gt;</code> or <code>&lt;1 MAIN&gt;</code></li>
 <li><code>0|1</code> DIRECTION: 1=forward, 0=reverse.</li>
@@ -11835,109 +11840,109 @@
 </thead>
 <tbody>
 <tr>
-<td><code>&lt;J M&gt;</code></td>
+<td><a href="?_9J9_9M9"><code>&lt;J M&gt;</code></a></td>
 <td>List stash values</td>
 <td>None</td>
 <td>Active</td>
 </tr>
 <tr>
-<td><code>&lt;J M stash_id&gt;</code></td>
+<td><a href="?_9J9_9M9_stashid"><code>&lt;J M stashId&gt;</code></a></td>
 <td>Get stash value</td>
 <td><code>stash_id</code>: Stash identifier</td>
 <td>Active</td>
 </tr>
 <tr>
-<td><code>&lt;J M CLEAR ALL&gt;</code></td>
+<td><a href="?_9J9_9M9_9CLEAR9_9ALL9"><code>&lt;J M CLEAR ALL&gt;</code></a></td>
 <td>Clear all stash values</td>
 <td>None</td>
 <td>Active</td>
 </tr>
 <tr>
-<td><code>&lt;J M CLEAR stash_id&gt;</code></td>
+<td><a href="?_9J9_9M9_9CLEAR9_stashid"><code>&lt;J M CLEAR stashId&gt;</code></a></td>
 <td>Clear given stash</td>
 <td><code>stash_id</code>: Stash identifier</td>
 <td>Active</td>
 </tr>
 <tr>
-<td><code>&lt;J M stashId locoId&gt;</code></td>
+<td><a href="?_9J9_9M9_stashid_locoid"><code>&lt;J M stashId locoId&gt;</code></a></td>
 <td>Set stash value</td>
 <td><code>stashId</code>: Stash ID, <code>locoId</code>: Loco ID</td>
 <td>Active</td>
 </tr>
 <tr>
-<td><code>&lt;J M CLEAR ANY locoId&gt;</code></td>
+<td><a href="?_9J9_9M9_9CLEAR9_9ANY9_locoid"><code>&lt;J M CLEAR ANY locoId&gt;</code></a></td>
 <td>Clear all stash entries containing locoId</td>
 <td><code>locoId</code>: Locomotive ID</td>
 <td>Active</td>
 </tr>
 <tr>
-<td><code>&lt;J C&gt;</code></td>
+<td><a href="?_9J9_9C9"><code>&lt;J C&gt;</code></a></td>
 <td>Get fastclock time</td>
 <td>None</td>
 <td>Active</td>
 </tr>
 <tr>
-<td><code>&lt;J C mmmm nn&gt;</code></td>
+<td><a href="?_9J9_9C9_mmm_nn"><code>&lt;J C mmmm nn&gt;</code></a></td>
 <td>Set fastclock time</td>
 <td><code>mmmm</code>: Minutes, <code>nn</code>: Rate</td>
 <td>Active</td>
 </tr>
 <tr>
-<td><code>&lt;J G&gt;</code></td>
+<td><a href="?_9J9_9G9"><code>&lt;J G&gt;</code></a></td>
 <td>Report gauge limits</td>
 <td>None</td>
 <td>Active</td>
 </tr>
 <tr>
-<td><code>&lt;J I&gt;</code></td>
+<td><a href="?_9J9_9I9"><code>&lt;J I&gt;</code></a></td>
 <td>Report currents</td>
 <td>None</td>
 <td>Active</td>
 </tr>
 <tr>
-<td><code>&lt;J A&gt;</code></td>
+<td><a href="?_9J9_9A9"><code>&lt;J A&gt;</code></a></td>
 <td>List routes</td>
 <td>None</td>
 <td>Active</td>
 </tr>
 <tr>
-<td><code>&lt;J R&gt;</code></td>
+<td><a href="?_9J9_9R9"><code>&lt;J R&gt;</code></a></td>
 <td>List roster</td>
 <td>None</td>
 <td>Active</td>
 </tr>
 <tr>
-<td><code>&lt;J R id&gt;</code></td>
+<td><a href="?_9J9_9R9_id"><code>&lt;J R id&gt;</code></a></td>
 <td>Get roster for loco</td>
 <td><code>id</code>: Locomotive ID</td>
 <td>Active</td>
 </tr>
 <tr>
-<td><code>&lt;J T&gt;</code></td>
+<td><a href="?_9J9_9T9"><code>&lt;J T&gt;</code></a></td>
 <td>Get turnout/point list</td>
 <td>None</td>
 <td>Active</td>
 </tr>
 <tr>
-<td><code>&lt;J T id&gt;</code></td>
+<td><a href="?_9J9_9T9_id"><code>&lt;J T id&gt;</code></a></td>
 <td>Get turnout state and description</td>
 <td><code>id</code>: Turnout ID</td>
 <td>Active</td>
 </tr>
 <tr>
-<td><code>&lt;J O&gt;</code></td>
+<td><a href="?_9J9_9O9"><code>&lt;J O&gt;</code></a></td>
 <td>List turntable IDs</td>
 <td>None</td>
 <td>Active</td>
 </tr>
 <tr>
-<td><code>&lt;J O id&gt;</code></td>
+<td><a href="?_9J9_9O9_id"><code>&lt;J O id&gt;</code></a></td>
 <td>List turntable state</td>
 <td><code>id</code>: Turntable ID</td>
 <td>Active</td>
 </tr>
 <tr>
-<td><code>&lt;J P id&gt;</code></td>
+<td><a href="?_9J9_9P9_id"><code>&lt;J P id&gt;</code></a></td>
 <td>List turntable positions</td>
 <td><code>id</code>: Turntable ID</td>
 <td>Active</td>
@@ -11956,80 +11961,80 @@
 </thead>
 <tbody>
 <tr>
-<td><code>&lt;=&gt;</code></td>
+<td><a href="?_8equals8"><code>&lt;=&gt;</code></a></td>
 <td>List track manager states</td>
 <td>None</td>
 <td>Active</td>
 </tr>
 <tr>
-<td><code>&lt;= track MAIN&gt;</code></td>
+<td><a href="?_8equals8_track_9MAIN9"><code>&lt;= track MAIN&gt;</code></a></td>
 <td>Set track to MAIN</td>
 <td><code>track</code>: Track identifier</td>
 <td>Active</td>
 </tr>
 <tr>
-<td><code>&lt;= track MAIN_INV&gt;</code></td>
+<td><a href="?_8equals8_track_9MAIN_INV9"><code>&lt;= track MAIN_INV&gt;</code></a></td>
 <td>Set track to MAIN inverted polarity</td>
 <td><code>track</code>: Track identifier</td>
 <td>Active</td>
 </tr>
 <tr>
-<td><code>&lt;= track MAIN_AUTO&gt;</code></td>
+<td><a href="?_8equals8_track_9MAIN_AUTO9"><code>&lt;= track MAIN_AUTO&gt;</code></a></td>
 <td>Set track to MAIN with auto reversing</td>
 <td><code>track</code>: Track identifier</td>
 <td>Active</td>
 </tr>
 <tr>
-<td><code>&lt;= track PROG&gt;</code></td>
+<td><a href="?_8equals8_track_9PROG9"><code>&lt;= track PROG&gt;</code></a></td>
 <td>Set track to PROG</td>
 <td><code>track</code>: Track identifier</td>
 <td>Active</td>
 </tr>
 <tr>
-<td><code>&lt;= track OFF&gt;</code></td>
+<td><a href="?_8equals8_track_9OFF9"><code>&lt;= track OFF&gt;</code></a></td>
 <td>Set track power OFF</td>
 <td><code>track</code>: Track identifier</td>
 <td>Active</td>
 </tr>
 <tr>
-<td><code>&lt;= track NONE&gt;</code></td>
+<td><a href="?_8equals8_track_9NONE9"><code>&lt;= track NONE&gt;</code></a></td>
 <td>Set track no output</td>
 <td><code>track</code>: Track identifier</td>
 <td>Active</td>
 </tr>
 <tr>
-<td><code>&lt;= track EXT&gt;</code></td>
+<td>[<code>&lt;= track EXT&gt;](?_8equals8_track_9EXT9)</code></td>
 <td>Set track to use external sync</td>
 <td><code>track</code>: Track identifier</td>
 <td>Active</td>
 </tr>
 <tr>
-<td><code>&lt;= track AUTO&gt;</code></td>
+<td><a href="?_8equals8_track_9AUTO9"><code>&lt;= track AUTO&gt;</code></a></td>
 <td>Update track to auto reverse</td>
 <td><code>track</code>: Track identifier</td>
 <td>Active</td>
 </tr>
 <tr>
-<td><code>&lt;= track INV&gt;</code></td>
+<td><a href="?_8equals8_track_9INV9"><code>&lt;= track INV&gt;</code></a></td>
 <td>Update track to inverse polarity</td>
 <td><code>track</code>: Track identifier</td>
 <td>Active</td>
 </tr>
 <tr>
-<td><code>&lt;= track DC loco&gt;</code></td>
+<td><a href="?_8equals8_track_9DC9_loco"><code>&lt;= track DC loco&gt;</code></a></td>
 <td>Set track to DC</td>
 <td><code>track</code>: Track ID, <code>loco</code>: Loco ID</td>
 <td>Active</td>
 </tr>
 <tr>
-<td><code>&lt;= track DC_INV loco&gt;</code></td>
+<td><a href="?_8equals8_track_9DC_INV9_loco"><code>&lt;= track DC_INV loco&gt;</code></a></td>
 <td>Set track to DC with inverted polarity</td>
 <td><code>track</code>: Track ID, <code>loco</code>: Loco ID</td>
 <td>Active</td>
 </tr>
 <tr>
-<td><code>&lt;= track DCX loco&gt;</code></td>
-<td>Set track to DC with inverted polarity</td>
+<td><a href="?_8equals8_track_9DCX9_loco"><code>&lt;= track DCX loco&gt;</code></a></td>
+<td>Set track to DC with inverted polarity. Same as DC_INV</td>
 <td><code>track</code>: Track ID, <code>loco</code>: Loco ID</td>
 <td>Active</td>
 </tr>
@@ -12047,73 +12052,67 @@
 </thead>
 <tbody>
 <tr>
-<td><code>&lt;C PROGBOOST&gt;</code></td>
+<td><a href="?_9PROGBOOST9"><code>&lt;C PROGBOOST&gt;</code></a></td>
 <td>Configure PROG track boost</td>
 <td>None</td>
 <td>Active</td>
 </tr>
 <tr>
-<td><code>&lt;C RESET&gt;</code></td>
+<td><a href="?_9RESET9"><code>&lt;C RESET&gt;</code></a></td>
 <td>Reset and restart <strong>EX-CommandStation</strong></td>
 <td>None</td>
 <td>Active</td>
 </tr>
 <tr>
-<td><code>&lt;C SPEED28&gt;</code></td>
+<td><a href="?_9SPEED289"><code>&lt;C SPEED28&gt;</code></a></td>
 <td>Set all DCC speed commands as 28 step</td>
 <td>None</td>
 <td>Active</td>
 </tr>
 <tr>
-<td><code>&lt;C SPEED128&gt;</code></td>
+<td><a href="?_9SPEED1289"><code>&lt;C SPEED128&gt;</code></a></td>
 <td>Set all DCC speed commands to 128 step (default)</td>
 <td>None</td>
 <td>Active</td>
 </tr>
 <tr>
-<td><code>&lt;C RAILCOM ON&gt;</code></td>
-<td>Enable Railcom cutout</td>
+<td><a href="?_9RAILCOM9_onoff"><code>&lt;C RAILCOM onOff&gt;</code></a></td>
+<td>Enable/Disable Railcom cutout</td>
 <td>None</td>
 <td>Active</td>
 </tr>
 <tr>
-<td><code>&lt;C RAILCOM OFF&gt;</code></td>
-<td>Disable Railcom cutout</td>
-<td>None</td>
-<td>Active</td>
-</tr>
-<tr>
-<td><code>&lt;C RAILCOM DEBUG&gt;</code></td>
+<td><a href="?_9RRAILCOM9_9DEBUG9"><code>&lt;C RAILCOM DEBUG&gt;</code></a></td>
 <td>Enable Railcom cutout for scope testing</td>
 <td>None</td>
 <td>Active</td>
 </tr>
 <tr>
-<td><code>&lt;C WIFI "ssid" "password"&gt;</code></td>
+<td><a href="?_9WIFI9_ssid_password"><code>&lt;C WIFI "ssid" "password"&gt;</code></a></td>
 <td>Reconfigure stored STA WiFi credentials</td>
 <td><code>ssid</code>: Network name, <code>password</code>: Password</td>
 <td>Active</td>
 </tr>
 <tr>
-<td><code>&lt;C WIFI AP "ssid" "password" [channel]&gt;</code></td>
+<td><a href="?_9WIFI9_9AP9_ssid_password_channel"><code>&lt;C WIFI AP "ssid" "password" [channel]&gt;</code></a></td>
 <td>Reconfigure stored WiFi AP</td>
 <td><code>ssid</code>: Network name, <code>password</code>: Password</td>
 <td>Active</td>
 </tr>
 <tr>
-<td><code>&lt;C WIFI HIDDENAP "ssid" "password" [channel]&gt;</code></td>
+<td><a href="?_9WIFI9_9HIDDENAP9_ssid_password_channel"><code>&lt;C WIFI HIDDENAP "ssid" "password" [channel]&gt;</code></a></td>
 <td>Reconfigure stored WiFi AP</td>
 <td><code>ssid</code>: Network name, <code>password</code>: Password</td>
 <td>Active</td>
 </tr>
 <tr>
-<td><code>&lt;C WIFI DEFAULT&gt;</code></td>
+<td><a href="?_9WIFI9_9DEFAULT9"><code>&lt;C WIFI DEFAULT&gt;</code></a></td>
 <td>Set WiFi to default</td>
 <td>None</td>
 <td>Active</td>
 </tr>
 <tr>
-<td><code>&lt;C WIFI ON/OFF&gt;</code></td>
+<td><a href="?_9WIFI9_onoff"><code>&lt;C WIFI onOff&gt;</code></a></td>
 <td>Set WiFi on/off name</td>
 <td>None</td>
 <td>Active</td>
@@ -12132,211 +12131,163 @@
 </thead>
 <tbody>
 <tr>
-<td><code>&lt;D ACK ON&gt;</code></td>
-<td>Enable PROG track diagnostics</td>
+<td><a href="?_9D9_9ACK9_onoff"><code>&lt;D ACK onoff&gt;</code></a></td>
+<td>Enable/Disable PROG track diagnostics</td>
 <td>None</td>
 <td>Active</td>
 </tr>
 <tr>
-<td><code>&lt;D ACK OFF&gt;</code></td>
-<td>Disable PROG track diagnostics</td>
-<td>None</td>
-<td>Active</td>
-</tr>
-<tr>
-<td><code>&lt;D ACK LIMIT value&gt;</code></td>
+<td><a href="?_9D9_9ACK9_9LIMIT9_value"><code>&lt;D ACK LIMIT value&gt;</code></a></td>
 <td>Set ACK detection limit mA</td>
 <td><code>value</code>: Current limit in mA</td>
 <td>Active</td>
 </tr>
 <tr>
-<td><code>&lt;D ACK MIN value MS&gt;</code></td>
+<td><a href="?_9D9_9ACK9_9MIN9_value_9MS9"><code>&lt;D ACK MIN value MS&gt;</code></a></td>
 <td>Set ACK minimum duration mS</td>
 <td><code>value</code>: Duration in milliseconds</td>
 <td>Active</td>
 </tr>
 <tr>
-<td><code>&lt;D ACK MIN value&gt;</code></td>
+<td><a href="?_9D9_9ACK9_9MIN9_value"><code>&lt;D ACK MIN value&gt;</code></a></td>
 <td>Set ACK minimum duration µS</td>
 <td><code>value</code>: Duration in microseconds</td>
 <td>Active</td>
 </tr>
 <tr>
-<td><code>&lt;D ACK MAX value MS&gt;</code></td>
+<td><a href="?_9D9_9ACK9_9MAX9_value_9MS9"><code>&lt;D ACK MAX value MS&gt;</code></a></td>
 <td>Set ACK maximum duration mS</td>
 <td><code>value</code>: Duration in milliseconds</td>
 <td>Active</td>
 </tr>
 <tr>
-<td><code>&lt;D ACK MAX value&gt;</code></td>
+<td><a href="?_9D9_9ACK9_9MAX9_value"><code>&lt;D ACK MAX value&gt;</code></a></td>
 <td>Set ACK maximum duration µS</td>
 <td><code>value</code>: Duration in microseconds</td>
 <td>Active</td>
 </tr>
 <tr>
-<td><code>&lt;D ACK RETRY value&gt;</code></td>
+<td><a href="?_9D9_9ACK9_9RETRY9_value"><code>&lt;D ACK RETRY value&gt;</code></a></td>
 <td>Set ACK retry count</td>
 <td><code>value</code>: Retry count</td>
 <td>Active</td>
 </tr>
 <tr>
-<td><code>&lt;D CABS&gt;</code></td>
+<td><a href="?_9D9_9CABS9"><code>&lt;D CABS&gt;</code></a></td>
 <td>Diagnostic display loco state table</td>
 <td>None</td>
 <td>Active</td>
 </tr>
 <tr>
-<td><code>&lt;D RAM&gt;</code></td>
+<td><a href="?_9D9_9RAM9"><code>&lt;D RAM&gt;</code></a></td>
 <td>Diagnostic display free RAM</td>
 <td>None</td>
 <td>Active</td>
 </tr>
 <tr>
-<td><code>&lt;D CMD ON&gt;</code></td>
-<td>Enable command input diagnostics</td>
+<td><a href="?_9D9_9CMD9_onoff"><code>&lt;D CMD onOff&gt;</code></a></td>
+<td>Enable/Disable command input diagnostics</td>
 <td>None</td>
 <td>Active</td>
 </tr>
 <tr>
-<td><code>&lt;D CMD OFF&gt;</code></td>
-<td>Disable command input diagnostics</td>
+<td><a href="?_9D9_9RAILCOM9_onoff"><code>&lt;D RAILCOM onOff&gt;</code></a></td>
+<td>Enable/Disable Railcom diagnostics</td>
 <td>None</td>
 <td>Active</td>
 </tr>
 <tr>
-<td><code>&lt;D RAILCOM ON&gt;</code></td>
-<td>Enable Railcom diagnostics</td>
+<td><a href="?_9D9_9WIFI9_onoff"><code>&lt;D WIFI onOff&gt;</code></a></td>
+<td>Enable/Disable WiFi diagnostics</td>
 <td>None</td>
 <td>Active</td>
 </tr>
 <tr>
-<td><code>&lt;D RAILCOM OFF&gt;</code></td>
-<td>Disable Railcom diagnostics</td>
-<td>None</td>
-<td>Active</td>
-</tr>
-<tr>
-<td><code>&lt;D WIFI ON&gt;</code></td>
-<td>Enable WiFi diagnostics</td>
-<td>None</td>
-<td>Active</td>
-</tr>
-<tr>
-<td><code>&lt;D WIFI OFF&gt;</code></td>
-<td>Disable WiFi diagnostics</td>
-<td>None</td>
-<td>Active</td>
-</tr>
-<tr>
-<td><code>&lt;D WIFI SHOW&gt;</code></td>
+<td><a href="?_9D9_9WIFI9_9SHOW9"><code>&lt;D WIFI SHOW&gt;</code></a></td>
 <td>Shows WiFi settings</td>
 <td>None</td>
 <td>Active</td>
 </tr>
 <tr>
-<td><code>&lt;D ETHERNET ON&gt;</code></td>
-<td>Enable Ethernet diagnostics</td>
+<td><a href="?_9D9_9ETHERNET9_onoff"><code>&lt;D ETHERNET onOff&gt;</code></a></td>
+<td>Enable/Disable Ethernet diagnostics</td>
 <td>None</td>
 <td>Active</td>
 </tr>
 <tr>
-<td><code>&lt;D ETHERNET OFF&gt;</code></td>
-<td>Disable Ethernet diagnostics</td>
+<td><a href="?_9D9_9WIT9_onoff"><code>&lt;D WIT onOff&gt;</code></a></td>
+<td>Enable/Disable Withrottle diagnostics</td>
 <td>None</td>
 <td>Active</td>
 </tr>
 <tr>
-<td><code>&lt;D WIT ON&gt;</code></td>
-<td>Enable Withrottle diagnostics</td>
+<td><a href="?_9D9_9LCN9_onoff"><code>&lt;D LCN onOff&gt;</code></a></td>
+<td>Enable/Disable LCN diagnostics</td>
 <td>None</td>
 <td>Active</td>
 </tr>
 <tr>
-<td><code>&lt;D WIT OFF&gt;</code></td>
-<td>Disable Withrottle diagnostics</td>
+<td><a href="?_9D9_9WEBSOCKET9_onoff"><code>&lt;D WEBSOCKET onOff&gt;</code></a></td>
+<td>Enable/Disable Websocket diagnostics</td>
 <td>None</td>
 <td>Active</td>
 </tr>
 <tr>
-<td><code>&lt;D LCN ON&gt;</code></td>
-<td>Enable LCN diagnostics</td>
-<td>None</td>
-<td>Active</td>
-</tr>
-<tr>
-<td><code>&lt;D LCN OFF&gt;</code></td>
-<td>Disable LCN diagnostics</td>
-<td>None</td>
-<td>Active</td>
-</tr>
-<tr>
-<td><code>&lt;D WEBSOCKET ON&gt;</code></td>
-<td>Enable Websocket diagnostics</td>
-<td>None</td>
-<td>Active</td>
-</tr>
-<tr>
-<td><code>&lt;D WEBSOCKET OFF&gt;</code></td>
-<td>Disable Websocket diagnostics</td>
-<td>None</td>
-<td>Active</td>
-</tr>
-<tr>
-<td><code>&lt;D EEPROM numentries&gt;</code></td>
+<td><a href="?_9D9_9EEPROM9_numentries"><code>&lt;D EEPROM numentries&gt;</code></a></td>
 <td>Dump EEPROM contents</td>
 <td><code>numentries</code>: Number of entries</td>
 <td>Active</td>
 </tr>
 <tr>
-<td><code>&lt;D ANOUT vpin position&gt;</code></td>
+<td><a href="?_9D9_9ANOUT9_vpin_position"><code>&lt;D ANOUT vpin position&gt;</code></a></td>
 <td>Test analog output</td>
 <td><code>vpin</code>: Pin, <code>position</code>: Position</td>
 <td>Active</td>
 </tr>
 <tr>
-<td><code>&lt;D ANOUT vpin position profile&gt;</code></td>
+<td><a href="?_9D9_9ANOUT9_vpin_position_profile"><code>&lt;D ANOUT vpin position profile&gt;</code></a></td>
 <td>Test analog output with profile</td>
 <td><code>vpin</code>: Pin, <code>position</code>: Position, <code>profile</code>: Profile</td>
 <td>Active</td>
 </tr>
 <tr>
-<td><code>&lt;D SERVO vpin position&gt;</code></td>
+<td><a href="?_9D9_9SERVO9_vpin_position"><code>&lt;D SERVO vpin position&gt;</code></a></td>
 <td>Test servo</td>
 <td><code>vpin</code>: Pin, <code>position</code>: Position</td>
 <td>Active</td>
 </tr>
 <tr>
-<td><code>&lt;D SERVO vpin position profile&gt;</code></td>
+<td><a href="?_9D9_9SERVO9_vpin_position_profile"><code>&lt;D SERVO vpin position profile&gt;</code></a></td>
 <td>Test servo with profile</td>
 <td><code>vpin</code>: Pin, <code>position</code>: Position, <code>profile</code>: Profile</td>
 <td>Active</td>
 </tr>
 <tr>
-<td><code>&lt;D ANIN vpin&gt;</code></td>
+<td><a href="?_9D9_9ANIN9_vpin"><code>&lt;D ANIN vpin&gt;</code></a></td>
 <td>Display analogue input value</td>
 <td><code>vpin</code>: Pin number</td>
 <td>Active</td>
 </tr>
 <tr>
-<td><code>&lt;D HAL SHOW&gt;</code></td>
+<td><a href="?_9D9_9HAL9_9SHOW9"><code>&lt;D HAL SHOW&gt;</code></a></td>
 <td>Show HAL devices table</td>
 <td>None</td>
 <td>Active</td>
 </tr>
 <tr>
-<td><code>&lt;D HAL RESET&gt;</code></td>
+<td><a href="?_9D9_9HAL9_9RESET9"><code>&lt;D HAL RESET&gt;</code></a></td>
 <td>Reset all HAL devices</td>
 <td>None</td>
 <td>Active</td>
 </tr>
 <tr>
-<td><code>&lt;D TT vpin steps&gt;</code></td>
+<td><a href="?_9D9_9TT9_vpin_steps"><code>&lt;D TT vpin steps&gt;</code></a></td>
 <td>Test turntable</td>
 <td><code>vpin</code>: Pin, <code>steps</code>: Step count</td>
 <td>Active</td>
 </tr>
 <tr>
-<td><code>&lt;D TT vpin steps activity&gt;</code></td>
+<td><a href="?_9D9_9TT9_vpin_steps_activity"><code>&lt;D TT vpin steps activity&gt;</code></a></td>
 <td>Test turntable with activity</td>
 <td><code>vpin</code>: Pin, <code>steps</code>: Steps, <code>activity</code>: Activity</td>
 <td>Active</td>
@@ -12355,29 +12306,25 @@
 </thead>
 <tbody>
 <tr>
-<td><code>&lt;M ignore d0 d1 d2 d3 d4 d5&gt;</code></td>
+<td><a href="?_9M9_ignore_d0_d1_[d2_d3_d4_d5]"><code>&lt;M ignore d0 d1 d2 d3 d4 d5&gt;</code></a></td>
 <td>Send up to 5 byte DCC packet on MAIN track</td>
 <td><code>ignore</code>: Ignored, <code>d0-d5</code>: Hex bytes</td>
 <td>Active</td>
 </tr>
 <tr>
-<td><code>&lt;P ignore d0 d1 d2 d3 d4 d5&gt;</code></td>
+<td><a href="?_9P9_ignore_d0_d1[_d2_d3_d4_d5]"><code>&lt;P ignore d0 d1 d2 d3 d4 d5&gt;</code></a></td>
 <td>Send up to 5 byte DCC packet on PROG track</td>
 <td><code>ignore</code>: Ignored, <code>d0-d5</code>: Hex bytes</td>
 <td>Active</td>
 </tr>
 <tr>
-<td><code>&lt;c&gt;</code></td>
+<td><a href="?_c"><code>&lt;c&gt;</code></a></td>
 <td>Report main track current</td>
 <td>None</td>
 <td>⚠️ Deprecated</td>
 </tr>
 </tbody>
 </table>
-<div class="admonition warning">
-<p class="admonition-title">Deprecated Commands</p>
-<p>Commands marked with ⚠️ are deprecated and may be removed in future versions. Use the recommended alternatives where available.</p>
-</div>
 
 
 
@@ -12398,7 +12345,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="October 12, 2026 11:19:08 UTC">October 12, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="October 20, 2026 21:52:01 UTC">October 20, 2026</span>
   </span>
 
     
