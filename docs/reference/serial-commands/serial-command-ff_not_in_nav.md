@@ -44,6 +44,8 @@ The following are not a direct response, but rather a broadcast that will be tri
 
 --8<-- "snippets/serial-commands/broadcast_l.md"
 
+----
+
 ## Notes
 
 * Setting requests are transmitted directly to mobile loco decoder.

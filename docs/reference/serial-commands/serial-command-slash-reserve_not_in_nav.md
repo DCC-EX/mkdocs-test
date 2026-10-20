@@ -32,6 +32,8 @@ Serial commands to reserve or free sections.
 
 ==TODO== MEDIUM - Responses
 
+----
+
 ## Notes
 
 * None at this time

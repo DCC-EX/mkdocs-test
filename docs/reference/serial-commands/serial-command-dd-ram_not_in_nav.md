@@ -28,6 +28,8 @@ none
 
 * **xxxx**: the amount of free ram
 
+----
+
 ## Notes
 
 * The response is displayed on the Serial Monitor only.

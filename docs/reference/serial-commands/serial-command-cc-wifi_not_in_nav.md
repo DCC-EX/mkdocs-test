@@ -61,9 +61,11 @@ Also see the [WiFi Configuration for version 5.7.0+ - Graphical User Interface O
 
 * **hostname**: the name that appears in your Throttle app, once you have connected to the appropriate network (ssid) for the **EX-CommandStation**.
 
-## Response
+## Responses
 
 N/A. The **EX-CommandStation** will restart. ==TODO== This is no longer true
+
+----
 
 ## Notes
 

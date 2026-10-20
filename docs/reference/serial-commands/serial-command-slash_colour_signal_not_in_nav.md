@@ -32,6 +32,8 @@ Serial command to set the colour of a signal.
 
 N/A
 
+----
+
 ## Notes
 
 * regardless of the colour you wish to set, the **signal** parameter is always the Vpin of the *red* LED.

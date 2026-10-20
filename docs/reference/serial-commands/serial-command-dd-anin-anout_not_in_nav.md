@@ -29,6 +29,8 @@ Serial command(s) to Manage VPINs analogue values.
 
 ==TODO== MEDIUM - Responses
 
+----
+
 ## Notes
 
 ==TODO== LOW - Notes

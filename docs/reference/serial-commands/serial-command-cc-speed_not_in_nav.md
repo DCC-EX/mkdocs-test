@@ -33,6 +33,8 @@ One of:
 * 28 Speedsteps
 * 128 Speedsteps
 
+----
+
 ## Notes
 
 * Default for the **EX-CommandStation** is 28 Steps

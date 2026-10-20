@@ -83,112 +83,96 @@ Avoid writing CV1, CV17 & CV18 directly. Use the ``<W «loco»>`` command instea
 
 ### Reading CVs - Responses
 
-### Response for ``<R>``
+* Response for ``<R>``
+    * ``<r «address»>``
+        * **address** - one of:
+            * If the loco is in a consist (CV19), the address returned by will be the consist address.
+            * If not in a consist (CV19) DCC Address of the decoder/loco.
+            * ``-1`` = failed read
 
-* ``<r «address»>``
-    * ``r``: response/broadcast identifier
-    * **address** - one of:
-        * If the loco is in a consist (CV19), the address returned by will be the consist address.
-        * If not in a consist (CV19) DCC Address of the decoder/loco.
-        * ``-1`` = failed read
+* Response for ``<R LOCOID>``
+    * ``<r LOCOID «address»>``
+        * **address** - one of:
+            * DCC Address of the decoder/loco.
+            * ``-1`` = failed read
 
-### Response for ``<R LOCOID>``
+* Response for ``<R CONSIST>``
+    * ``<r CONSIST «address»>``
+        * **address** - one of:
+            * If the loco is in a consist (CV19), the address returned by will be the consist address.
+            * ``-1`` = failed read or not in a consist
 
-* ``<r LOCOID «address»>``
-    * ``r``: response/broadcast identifier
-    * **address** - one of:
-        * DCC Address of the decoder/loco.
-        * ``-1`` = failed read
+* Response for ``<R «cv»>``
+    * ``<r «cv» «value»>``
+        * **cv**: the cv read
+        * **value** - one of:
+            * the value of the CV read
+            * ``-1`` = failed read
 
-### Response for ``<R CONSIST>``
+* Response for ``<V «cv» «value»>``
+    * ``<v «cv» «value»>``
+        * **cv**: the cv read
+        * **value** - one of:
+            * the value of the CV read
+            * ``-1`` = failed read
 
-* ``<r CONSIST «address»>``
-    * ``r``: response/broadcast identifier
-    * **address** - one of:
-        * If the loco is in a consist (CV19), the address returned by will be the consist address.
-        * ``-1`` = failed read or not in a consist
+* Response for ``<V «cv» «bit» «bitValue»>``
+    * ``<v «cv» «bit» «bitValue»>``
+        * **cv**: the cv read
+        * **bit**: the bit read
+        * **bitValue** - one of:
+            * ``1``
+            * ``0``
+            * ``-1`` = failed read
 
-### Response for ``<R «cv»>``
+* Response for ``<r «loco» «cv»>``
 
-* ``<r «cv» «value»>``
-    * ``r``: response/broadcast identifier
-    * **cv**: the cv read
-    * **value** - one of:
-        * the value of the CV read
-        * ``-1`` = failed read
-
-### Response for ``<V «cv» «value»>``
-
-* ``<v «cv» «value»>``
-    * ``v``: response/broadcast identifier
-    * **cv**: the cv read
-    * **value** - one of:
-        * the value of the CV read
-        * ``-1`` = failed read
-
-### Response for ``<V «cv» «bit» «bitValue»>``
-
-* ``<v «cv» «bit» «bitValue»>``
-    * ``v``: response/broadcast identifier
-    * **cv**: the cv read
-    * **bit**: the bit read
-    * **bitValue** - one of:
-        * ``1``
-        * ``0``
-        * ``-1`` = failed read
-
-### Response for ``<r «loco» «cv»>``
-
-==TODO== MEDIUM - Response for ``<r «loco» «cv»>``
+    ==TODO== MEDIUM - Response for ``<r «loco» «cv»>``
 
 ### Writing CVs - Responses
 
-### Response for ``<W «loco»>``
+* Response for ``<W «loco»>``
+    * ``<w «address»>``
+        * **address** - one of:
+            * DCC Address of the decoder/loco.
+            * ``-1`` = failed read
 
-* ``<w «address»>``
-    * ``w``: response/broadcast identifier
-    * **address** - one of:
-        * DCC Address of the decoder/loco.
-        * ``-1`` = failed read
+* Response for ``<W CONSIST «loco»>``
 
-### Response for ``<W CONSIST «loco»>``
+    ==TODO== MEDIUM - Response for ``<W CONSIST «loco»>``
 
-==TODO== MEDIUM - Response for ``<W CONSIST «loco»>``
+* Response for ``<W CONSIST «loco» REVERSE>``
 
-### Response for ``<W CONSIST «loco» REVERSE>``
+    ==TODO== MEDIUM - Response for ``<W CONSIST «loco» REVERSE>``
 
-==TODO== MEDIUM - Response for ``<W CONSIST «loco» REVERSE>``
+* Response for ``<W «cv» «value»>``
+    * ``<w «cv» «value»>``
+        * **cv**: the cv written
+        * **value** - one of:
+            * the value of the CV written/read
+            * ``-1`` = failed read
 
-### Response for ``<W «cv» «value»>``
+* Response for ``<W «cv» «bitValue» «bit»>``
 
-* ``<w «cv» «value»>``
-    * ``w``: response/broadcast identifier
-    * **cv**: the cv written
-    * **value** - one of:
-        * the value of the CV written/read
-        * ``-1`` = failed read
+    ==TODO== MEDIUM - Response for ``<W «cv» «bitValue» «bit»>`
 
-### Response for ``<W «cv» «bitValue» «bit»>``
+* Response for ``<w «loco» «cv» «value»>``
 
-==TODO== MEDIUM - Response for ``<W «cv» «bitValue» «bit»>`
+    no response.
 
-### Response for ``<w «loco» «cv» «value»>``
+* Response for ``<B «cv» «bitValue» «bit»>``
+    * ``<w «cv» «value»>``
+        * **cv**: the cv written
+        * **bit**: the bit written
+        * **biValue** - one of:
+            * the value of the bit written/read ``0``|``1``
+            * ``-1`` = failed read
 
-no response.
+* Response for ``<b «loco» «cv» «bitValue» «bit»>``
 
-### Response for ``<B «cv» «bitValue» «bit»>``
+    ==TODO== MEDIUM - Response for ``<b «loco» «cv» «bitValue» «bit»>``
 
-* ``<w «cv» «value»>``
-    * ``w``: response/broadcast identifier
-    * **cv**: the cv written
-    * **bit**: the bit written
-    * **biValue** - one of:
-        * the value of the bit written/read ``0``|``1``
-        * ``-1`` = failed read
-
-### Response for ``<b «loco» «cv» «bitValue» «bit»>``
-
-==TODO== MEDIUM - Response for ``<b «loco» «cv» «bitValue» «bit»>``
+----
 
 ## Notes
 
@@ -197,7 +181,7 @@ no response.
     * ``1``-``127`` will be a short address
     * ``128``-``10293`` will be a long address
 
-    Note that addresses above `9999`` cannot be used by *some* other brands of command station. So if you plan to take your loco to other layouts it is recommended that you avoid the ``10000``-``10293`` (inclusive) range.
+    Note that addresses above ``9999`` cannot be used by *some* other brands of command station. So if you plan to take your loco to other layouts it is recommended that you avoid the ``10000``-``10293`` (inclusive) range.
 
 * **IMPORTANT:** If the loco is in a consist (CV19), the address returned by ``<R>`` will be the consist address, not the decoder address. To always get the decoder address, use ``<R LOCOID>`` instead.
 

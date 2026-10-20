@@ -28,7 +28,7 @@ Serial commands to provide WiFi diagnostics.
 
 ==TODO== MEDIUM - Responses
 
-``<response>``
+----
 
 ## Notes
 

@@ -30,6 +30,8 @@ Serial command(s) to indicate a loco entering/leaving a block.
 
 ==TODO== MEDIUM - Responses
 
+----
+
 ## Notes
 
 * ==TODO== LOW - Notes

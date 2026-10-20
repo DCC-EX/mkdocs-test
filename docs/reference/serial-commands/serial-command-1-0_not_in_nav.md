@@ -47,6 +47,8 @@ The following is not a direct response, but rather a broadcast that will be trig
     * **onOff** = one of: ``1`` = On or ``0`` = off
     * **track** = balnk = all tracks <br/> or one of ``A`` through ``H`` representing one of the outputs of the/a motor shield.
 
+----
+
 ## Notes
 
 * The use of the JOIN function allows the DCC signal for the MAIN track to also be sent to the PROG track. This allows the prog track to act as a siding (or similar) in the main layout even though it is isolated electrically and connected to the programming track output.

@@ -40,21 +40,19 @@ Serial command to manage Stash values.
 
 ## Response
 
-### Response for ``<J M «stashId»>``
+* Response for ``<J M «stashId»>``
+    * ``<jM «stashId» «loco»>``
+        * **StashId**: Id of the stash
+        * **locoId**: loco Id in that stash
 
-``<jM «stashId» «loco»>``
+* Response for ``<J M>``
+    * Repeated for each defined Stash where loco is not zero:
+    * ``<jM «stashId» «loco»>``
 
-* **StashId**: Id of the stash
-* **locoId**: loco Id in that stash
+        * **StashId**: Id of the stash
+        * **locoId**: loco Id in that stash
 
-### Response for ``<J M>``
-
-Repeated for each defined Stash where loco is not zero:
-
-``<jM «stashId» «loco»>``
-
-* **StashId**: Id of the stash
-* **locoId**: loco Id in that stash
+----
 
 ## Notes
 

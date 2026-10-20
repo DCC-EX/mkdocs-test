@@ -50,6 +50,10 @@ Serial commands to enable or disable various diagnostic messages shown on the se
 
 ----
 
+## Notes
+
+----
+
 ## Examples
 
 <!-- [Also search for 'xxx'](?_xxx) or [search for 'xxx'](?_xxx) -->

@@ -36,6 +36,8 @@ The following are not a direct response, but rather a broadcast that will be tri
 
 --8<-- "snippets/serial-commands/broadcast_l.md"
 
+----
+
 ## Notes
 
 * The speedbyte value is different to the speed sent, as it is an encoded (1,7 bits) byte.

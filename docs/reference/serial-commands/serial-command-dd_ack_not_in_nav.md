@@ -47,6 +47,8 @@ Serial commands to modify the system PROG track settings. Used primarily to help
 
 N/A
 
+----
+
 ## Notes
 
 * The Ack current limit is set according to the DCC standard(s) of 60mA. Most decoders send a quick back and forth current pulse to the motor to generate this ACK. However, some modern motors (N and Z scales) may not be able to draw that amount of current. You can adjust down this limit. Or, if for some reasons your acks seem to be too "trigger happy" you can make it less sensitive by raising this limit.

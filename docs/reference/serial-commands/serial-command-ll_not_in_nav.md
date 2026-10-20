@@ -16,7 +16,7 @@ Serial command(s) to support the LCC/CBUS adapter.
 
 ----
 
-## Command(s)
+## Commands
 
 * ``<L>`` = LCC incoming event
 * ``<L «eventid»>`` = LCC/CBUS adapter introducing self
@@ -28,6 +28,8 @@ Serial command(s) to support the LCC/CBUS adapter.
 ## Response
 
 ==TODO== MEDIUM - Responses
+
+----
 
 ## Notes
 

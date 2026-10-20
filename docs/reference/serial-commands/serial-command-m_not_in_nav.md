@@ -18,7 +18,6 @@ Serial commands to Server based momentum for a specific loco.
 ``<m LINEAR>``
 ``<m POWER>``
 
-
 ----
 
 ## Command(s)
@@ -38,6 +37,8 @@ Serial commands to Server based momentum for a specific loco.
 ## Response
 
 N/A
+
+----
 
 ## Notes
 

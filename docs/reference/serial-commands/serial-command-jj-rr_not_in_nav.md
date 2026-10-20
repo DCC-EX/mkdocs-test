@@ -38,33 +38,31 @@ New Roster commands for v5.9.13 and above:
 
 ## Responses
 
-### Response for ``<j R>``
+* Response for ``<j R>``
+    * ``<jR [«id1» «id2» «id3» ...]>``
+        * ``jR`` = the 'message identifier'
+        * **id1..n:** unique id and/or DCC address of each Loco in the roster
 
-``<jR [«id1» «id2» «id3» ...]>``
+* Response for ``<j R «id»>``
+    * ``<jR «id» "desc" "funct0/funct1/funct2/.../funct31">``
+        * ``jR`` = the 'message identifer'
+        * **id1..n:** = unique id and/or DCC address of a Loco in the roster
+        * **desc** = in quotes, empty or the description of the loco
+        * **funct0..31** = in quotes, empty or the Label for each function 0-31 for the loco
 
-* ``jR`` = the 'message identifier'
-* **id1..n:** unique id and/or DCC address of each Loco in the roster
+* Response for ``<J R «id» "«name" "«functions»">``
 
-### Response for ``<j R «id»>``
+    ==TODO== MEDIUM - Response for ``<J R «id» "«name" "«functions»">``
 
-``<jR «id» "desc" "funct0/funct1/funct2/.../funct31">``
+* Response for ``<J R «id» DELETE>``
 
-* ``jR`` = the 'message identifer'
-* **id1..n:** = unique id and/or DCC address of a Loco in the roster
-* **desc** = in quotes, empty or the description of the loco
-* **funct0..31** = in quotes, empty or the Label for each function 0-31 for the loco
+      ==TODO== MEDIUM - Response for ``<J R «id» DELETE>``
 
-### Response for ``<J R «id» "«name" "«functions»">``
+* Response for ``<J R SAVE>``
 
-==TODO== MEDIUM - Response for ``<J R «id» "«name" "«functions»">``
+      ==TODO== MEDIUM - Response for ``<J R SAVE>``
 
-### Response for ``<J R «id» DELETE>``
-
-==TODO== MEDIUM - Response for ``<J R «id» DELETE>``
-
-### Response for ``<J R SAVE>``
-
-==TODO== MEDIUM - Response for ``<J R SAVE>``
+----
 
 ## Notes
 

@@ -25,6 +25,8 @@ Serial command to display text on virtual LCD at specified row.
 
 ==TODO== MEDIUM - Responses
 
+----
+
 ## Notes
 
 * ==TODO== LOW - Notes

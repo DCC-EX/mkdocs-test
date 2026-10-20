@@ -33,6 +33,8 @@ Serial commands to Manage the EEPROM. (Arduino Mega Only. Not available on the *
 
 ==TODO== MEDIUM - Responses
 
+----
+
 ## Notes
 
 * Arduino Mega Only. Not available on the **EX-CSB1** or ESP32 based **EX-CommandsStations**

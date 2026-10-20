@@ -59,87 +59,76 @@ Also refer to the [legacy EX-Turntable documentation](../../products/ex-turntabl
 
 ## Responses
 
-### Response for ``<I>``
+* Response for ``<I>``
+    * (If any turntables defined) Repeated for each defined Turtable/traverser
+    * ``<I «id» «position» >`` <br/>
+        * **id**: The numeric ID (1-32767) of the turntable
+        * **position**: The current position of the turntable
+    * (If no defined turntables/traversers): ``X``
 
-(If any turntables defined) Repeated for each defined Turtable/traverser
-``<I «id» «position» >`` <br/>
-(If no defined turntables/traversers): ``X``
+* Response for ``<I «id»>``
+    * (If any turntables defined) Repeated for each defined Turtable/traverser
+    ``<I «id» «position» >`` <br/>
+        * **id**: The numeric ID (1-32767) of the turntable
+        * **position**: The current position of the turntable
+    * (If id not defined): ``X``
 
-* **id**: The numeric ID (1-32767) of the turntable
-* **position**: The current position of the turntable
+* Response for ``<I «id» «position»>`` or  ``<I «id» «activity»>``
+    * ``<I «id» «position» «moving»>``
+        * **id**: one of
+            * identifier of the Turntable/traverser, or
+            * ``X`` if the command fails
+        * **position**: one of
+            * position rotating to, or
+            * blank = command failed
+        * **moving**: one of
+            * ``0`` (no feedback can be returned from a DCC turntable), or
+            * blank = command failed
 
-### Response for ``<I «id»>``
+* Response for ``<J O>``
+    * (has defined Turnouts/Points) ``<jO «id1» «id2» «id3» ...>`` <br/>
+        * **id?**: unique id of the turntable(s)/traverser(s)
+    * (has no defined Turnouts/Points) ``<jO>``
 
-(If any turntables defined) Repeated for each defined Turtable/traverser
-``<I «id» «position» >`` <br/>
-(If id not defined): ``X``
+* Response for ``<J O «id»>``
+    * Response (id is defined): ``<jO «id» «type «position» «position_count» ["«desc»"]>``
+        * **id**: unique id of the turntable/traverser
+        * **type**: one of
+            * ``0`` = DCC
+            * ``1`` = EX-Turntable
+            * ``X`` = unknown id or hidden
+        * **position**: one of
+            * index of the current position (0 - 48)
+            * blank = unknown or hidden id
+        * **position_count**: one of
+            * number of defined positions, including home (0)
+            * blank = unknown or hidden id
+        * **desc**: one of
+            * "desc" = description of the turntable or traverser (including surrounding quotes)
+            * blank = unknown or hidden id
+    * Response (id not defined): ``<jO «id» X>``
 
-* **id**: The numeric ID (1-32767) of the turntable
-* **position**: The current position of the turntable
+    Note: The turntable or traverser information does not include the list of defined positions, and this must be requested separated as outlined in the following section.
 
-### Response for ``<I «id» «position»>`` or  ``<I «id» «activity»>``
+* Response for ``<J P «id»>``
+    * (id is defined): ``<jO «id» «index» «angle» ["«desc»"]>``
+        * **id**: unique id of the turntable/traverser
+        * **index**: one of
+            * the position index (0 - 48)
+            * X = unknown or hidden id
+        * **angle**: one of
+            * the angle from home for the position (0 - 3600 to allow for partial angles)
+            * blank = unknown or hidden id
+        * **desc**: one of
+            * desc = description of the position (including surrounding quotes)
+            * blank = unknown or hidden id
+    * (id not defined): ``<jO «id» X>``
 
-``<I «id» «position» «moving»>``
+* Response for ``<I «id» ADD «position» «value» «angle»>``, ``<I «id» DCC «home»>``, ``<I «id» EXTT «vpin» «home»>``
+    * (Successful): ``<I>`` <br/>
+    * (Fail): ``<X>``
 
-* **id**: one of
-    * identifier of the Turntable/traverser, or
-    * ``X`` if the command fails
-* **position**: one of
-    * position rotating to, or
-    * blank = command failed
-* **moving**: one of
-    * ``0`` (no feedback can be returned from a DCC turntable), or
-    * blank = command failed
-
-### Response for ``<J O>``
-
-(has defined Turnouts/Points) ``<jO «id1» «id2» «id3» ...>`` <br/>
-(has no defined Turnouts/Points) ``<jO>``
-
-* **id?**: unique id of the turntable(s)/traverser(s)
-
-### Response for ``<J O «id»>``
-
-Response (id is defined): ``<jO «id» «type «position» «position_count» ["«desc»"]>``
-Response (id not defined): ``<jO «id» X>``
-
-* **id**: unique id of the turntable/traverser
-* **type**: one of
-    * ``0`` = DCC
-    * ``1`` = EX-Turntable
-    * ``X`` = unknown id or hidden
-* **position**: one of
-    * index of the current position (0 - 48)
-    * blank = unknown or hidden id
-* **position_count**: one of
-    * number of defined positions, including home (0)
-    * blank = unknown or hidden id
-* **desc**: one of
-    * "desc" = description of the turntable or traverser (including surrounding quotes)
-    * blank = unknown or hidden id
-
-  Note: The turntable or traverser information does not include the list of defined positions, and this must be requested separated as outlined in the following section.
-
-### Response for ``<J P «id»>``
-
-(id is defined): ``<jO «id» «index» «angle» ["«desc»"]>``
-(id not defined): ``<jO «id» X>``
-
-* **id**: unique id of the turntable/traverser
-* **index**: one of
-    * the position index (0 - 48)
-    * X = unknown or hidden id
-* **angle**: one of
-    * the angle from home for the position (0 - 3600 to allow for partial angles)
-    * blank = unknown or hidden id
-* **desc**: one of
-    * desc = description of the position (including surrounding quotes)
-    * blank = unknown or hidden id
-
-### Response for ``<I «id» ADD «position» «value» «angle»>``, ``<I «id» DCC «home»>``, ``<I «id» EXTT «vpin» «home»>``
-
-(Successful): ``<I>`` <br/>
-(Fail): ``<X>``
+----
 
 ## Notes
 

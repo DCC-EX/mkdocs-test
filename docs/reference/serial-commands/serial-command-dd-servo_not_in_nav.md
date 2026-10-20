@@ -36,6 +36,8 @@ Serial command for servo motor testing.
 Successful: ``<O>``
 Fail: ``<X>`` (vpin does not exist)
 
+----
+
 ## Notes
 
 * Vpin is the pin number of the output to be controlled by the turnout/point object. For Arduino output pins, this is the same as the digital pin number. For servo outputs and I/O expanders, it is the pin number defined for the HAL device (if present), for example 100-115 for servos attached to the first PCA9685 Servo Controller module, 116-131 for the second PCA9685 module, 164-179 for pins on the first MCP23017 GPIO expander module, and 180-195 for the second MCP23017 module.

@@ -28,6 +28,8 @@ none
 
 * **m?**: Raw current trip value for each defined Track, in milliAmps
 
+----
+
 ## Notes
 
 none

@@ -60,6 +60,8 @@ See the [Sounds page](/enhance/accessories/various-devices/sounds/index.md) for 
 
 ==TODO== MEDIUM - Responses
 
+----
+
 ## Notes
 
 * See the [DFPlayer page](/enhance/accessories/various-devices/sounds/dfplayer.md) for more information.

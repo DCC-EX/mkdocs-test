@@ -58,39 +58,35 @@ Serial commands to >Manage pin/vpin outputs.
 
 ## Responses
 
-### Response for ``<Z «id»>``, ``<Z «id» «pin» «iFlag»>``
+* Response for ``<Z «id»>``, ``<Z «id» «pin» «iFlag»>``
+    * (Successful): ``<O>`` <br/>
+    * (Fail): ``<X>`` (e.g. out of memory).
 
-(Successful): ``<O>`` <br/>
-(Fail): ``<X>`` (e.g. out of memory).
+* Response for ``<Z>``
+    * (Successful): <Y «id «vpin» «iFlag» «state»> repeated for each defined output pin <br/>
+        * **Y**: Command identifier
+        * **id**: identifier of the output
+        * **state**: one of
+            * ``0`` = INACTIVE
+            * ``1`` = ACTIVE
+    * (Fail): <X> (e.g. ID does not exist)
 
-### Response for ``<Z>``
+* Response for ``<Z «vpin»>``
+    * N/A
 
-(Successful): <Y «id «vpin» «iFlag» «state»> repeated for each defined output pin <br/>
-(Fail): <X> (e.g. ID does not exist)
+* Response for ``<Z «id» «state»>``
+    * (Successful): <Y «id «state»> <br/>
+        * **Y**: Command identifier
+        * **state**: one of
+            * ``0`` = INACTIVE
+            * ``1`` = ACTIVE
+    * (Fail): <X> if output ID does not exist
 
-* **Y**: Command identifier
-* **id**: identifier of the output
-* **state**: one of
-    * ``0`` = INACTIVE
-    * ``1`` = ACTIVE
+* Response for `<z «vpin» «analogue» «profile» duration»>``, ``<z «vpin» «analogue» «profile»>``, ``<z «vpin» «analogue»>`
 
-### Response for ``<Z «vpin»>``
+    ==TODO== MEDIUM - Response
 
-N/A
-
-### Response for ``<Z «id» «state»>``
-
-(Successful): <Y «id «state»> <br/>
-(Fail): <X> if output ID does not exist
-
-* **Y**: Command identifier
-* **state**: one of
-    * ``0`` = INACTIVE
-    * ``1`` = ACTIVE
-
-### Response for `<z «vpin» «analogue» «profile» duration»>``, ``<z «vpin» «analogue» «profile»>``, ``<z «vpin» «analogue»>`
-
-==TODO== MEDIUM - Response
+----
 
 ## Notes
 

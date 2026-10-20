@@ -35,6 +35,8 @@ Lists the configured I/O drivers in the Hardware Abstraction Layer (HAL). See Ex
 
 ==TODO== MEDIUM - Responses
 
+----
+
 ## Notes
 
 * 'SHOW' Shows all configured servo board and GPIO extender board config and used pins, etc.

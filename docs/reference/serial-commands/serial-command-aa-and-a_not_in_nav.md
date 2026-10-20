@@ -42,6 +42,8 @@ Serial commands to activate or deactivate accessory decoders.
 
 ==TODO== MEDIUM - responses
 
+----
+
 ## Notes
 
 * **EX‑CommandStation** can keep track of the direction of any turnout/point that is controlled by a DCC stationary accessory decoder once its [Defined (Set Up)](serial-command-tt_not_in_nav.md).

@@ -35,6 +35,8 @@ Serial commands to List SensorCAM defines or execute **SensorCAM** commands.
 
 See the [SensorCAM manual](../../products/ex-sensorcam/ex-sensorcam.md) for more information.
 
+----
+
 ## Notes
 
 * See the [SensorCAM manual](../../products/ex-sensorcam/ex-sensorcam.md) for more information.

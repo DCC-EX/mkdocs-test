@@ -33,23 +33,18 @@ none
 
 The following are not a direct response, but rather a broadcast that will be triggered as a result of any track manager changes.
 
-### Response for  ``<!>``
+* Response for  ``<!>``
+    * Repeated for each loco in the reminders list <br/> ``<l «loco» «reg» «speedByte» «functMap»>``
+    * see the ``<t .. >`` command for information opn this response
 
-Repeated for each loco in the reminders list <br/> ``<l «loco» «reg» «speedByte» «functMap»>``
+* Response for ``<! P>``
+    * ``<!PAUSED>``
 
-* see the ``<t .. >`` command for information opn this response
+* Response for ``<! R>``
+    * ``<!RESUMED>``
 
-### Response for ``<! P>``
-
-``<!PAUSED>``
-
-### Response for ``<! R>``
-
-``<!RESUMED>``
-
-### Response for ``<! Q>``
-
-``<!PAUSED>`` or ``<!RESUMED>`` depending on the current status
+* Response for ``<! Q>``
+    *``<!PAUSED>`` or ``<!RESUMED>`` depending on the current status
 
 ## Notes
 

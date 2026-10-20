@@ -75,76 +75,63 @@ Serial commands to define or manage Turnouts/Points.
 
 The following are not a direct response, but rather a broadcast that will be triggered as a result of any track manager changes.
 
-### Response for ``<T «id» ...>``
+* Response for **For the following commands:**
+    * ``<T «id» DCC «addr» «subaddr»>``
+    * ``<T «id» DCC «»>``
+    * ``<T «id» SERVO «vpin» «closedValue» «thrownValue» «profile»>``
+    * ``<T «id» VPIN «vpin»>``
+    * ``<T «id»>``
 
-**For the following commands:**
+    * The response will be:
+        * (successful): ``<O>``
+        * (fail): ``<X>``
 
-* ``<T «id» DCC «addr» «subaddr»>``
-* ``<T «id» DCC «»>``
-* ``<T «id» SERVO «vpin» «closedValue» «thrownValue» «profile»>``
-* ``<T «id» VPIN «vpin»>``
-* ``<T «id»>``
+* Response for ``<T>`` and ``<J T>``
+    * **the response/broadcast is:**
+    * Repeated for each defined Turnout/Point:
+        * (successful): ``<H «id» «state»>``
+        * (fail): N/A
+        * (no defined turnouts/points): ``X``
+            * **id** - The numeric ID (0-32767) of the turnout/point to control.
+            * **state:** one of
+                * 1 = Thrown,
+                * 0 = Closed
 
-The response will be:
+* Response for  ``<T «id» X>`` and ``<J T «id»>``
+    * **the response/broadcast is:**
+    * (DCC Accessories): ``<H «id» DCC «addr» «subaddr» «state»>``
+    * (Servos): ``<H «id» SERVO «vpin» «thrownValue» «closedValue» «profile» «state»>``
+    * (VPIN): ``<H «id» VPIN «vpin» «state»>``
+    * (LCN): ``<H «id» LCN «state»>``
+    * (fail/no such turnout/point): ``<X>``
+        * **id**: The numeric ID (0-32767) of the turnout/point to control.
+        * **profile** - one of:
+            * ``0`` = Instant
+            * ``1`` = Fast (0.5 sec)
+            * ``2`` = Medium (1 sec)
+            * ``3`` = Slow (2 sec)
+            * ``4`` = Bounce (subject to revision)
+        * **state** - one of:
+            * ``1`` = Thrown
+            * ``0`` = Closed
+    * (fail): ``<X>``
 
-* (successful): ``<O>``
-* (fail): ``<X>``
+* Response for  ``<T «id» «state»>``
+    * **the response/broadcast is:**
+    * (successful): ``<H «id» «state»>``
+        * **id**: The numeric ID (0-32767) of the turnout/point to control.
+        * **state** - one of:
+            * ``1`` = Thrown
+            * ``0`` = Closed
+    * (fail): ``<X>``
 
-### Response for ``<T>`` and ``<J T>``
+* Response for ``<T «id»>``
+    * **the response/broadcast is:**
+    * (successful): ``<O>``
+    * (fail): ``<X>``  (Id does not exist)
+        * **id**: The numeric ID (0-32767) of the turnout/point to control.
 
-**the response/broadcast is:**
-
-Repeated for each defined Turnout/Point:
-
-* (successful): ``<H «id» «state»>``
-* (fail): N/A
-* (no defined turnouts/points): ``X``
-    * **id** - The numeric ID (0-32767) of the turnout/point to control.
-    * **state:** one of
-        * 1 = Thrown,
-        * 0 = Closed
-
-### Response for  ``<T «id» X>`` and ``<J T «id»>``
-
-**the response/broadcast is:**
-
-* (DCC Accessories): ``<H «id» DCC «addr» «subaddr» «state»>``
-* (Servos): ``<H «id» SERVO «vpin» «thrownValue» «closedValue» «profile» «state»>``
-* (VPIN): ``<H «id» VPIN «vpin» «state»>``
-* (LCN): ``<H «id» LCN «state»>``
-* (fail/no such turnout/point): ``<X>``
-    * **id**: The numeric ID (0-32767) of the turnout/point to control.
-    * **profile** - one of:
-        * ``0`` = Instant
-        * ``1`` = Fast (0.5 sec)
-        * ``2`` = Medium (1 sec)
-        * ``3`` = Slow (2 sec)
-        * ``4`` = Bounce (subject to revision)
-    * **state** - one of:
-        * ``1`` = Thrown
-        * ``0`` = Closed
-* (fail): ``<X>``
-
-### Response for  ``<T «id» «state»>``
-
-**the response/broadcast is:**
-
-* (successful): ``<H «id» «state»>``
-    * **id**: The numeric ID (0-32767) of the turnout/point to control.
-    * **state** - one of:
-        * ``1`` = Thrown
-        * ``0`` = Closed
-* (fail): ``<X>``
-
-### Response for ``<T «id»>``
-
-**the response/broadcast is:**
-
-The response will be:
-
-* (successful): ``<O>``
-* (fail): ``<X>``  (Id does not exist)
-    * **id**: The numeric ID (0-32767) of the turnout/point to control.
+----
 
 ## Notes
 

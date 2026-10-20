@@ -37,6 +37,8 @@ Serial commands to get or set the Fastclock time.
 
 ==TODO== MEDIUM - Responses
 
+----
+
 ## Notes
 
 * None

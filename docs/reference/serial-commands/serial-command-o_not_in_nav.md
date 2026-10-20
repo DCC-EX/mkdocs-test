@@ -39,6 +39,8 @@ Serial commands to provide the ability to set neopixels on or off or change the 
 
 ==TODO== MEDIUM - Responses
 
+----
+
 ## Notes
 
 * ==TODO== LOW - Notes

@@ -29,6 +29,8 @@ Serial commands to set or remove a latch.
 
 ==TODO== MEDIUM - Responses
 
+----
+
 ## Notes
 
 ==TODO== LOW - Notes
