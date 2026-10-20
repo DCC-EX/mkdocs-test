@@ -23,7 +23,7 @@
     
     
       
-        <title><I [«id»] [«various parameters»]> <D TT «vpin» «steps» [«activity]> <J O [«id»]>   <J P «id»>Manage Turntables - DCC-EX Model Train Control, Animation &amp; Automation</title>
+        <title>Serial commands to: Manage Turntables - DCC-EX Model Train Control, Animation &amp; Automation</title>
       
     
     
@@ -79,7 +79,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#i-id-various-parameters-d-tt-vpin-steps-activity-j-o-id-j-p-idmanage-turntables" class="md-skip">
+        <a href="#serial-commands-to-manage-turntables" class="md-skip">
           Skip to content
         </a>
       
@@ -112,7 +112,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              &lt;I [«id»] [«various parameters»]&gt; &lt;D TT «vpin» «steps» [«activity]&gt; &lt;J O [«id»]&gt; &nbsp; &lt;J P «id»&gt;Manage Turntables
+              Serial commands to: Manage Turntables
             
           </span>
         </div>
@@ -501,7 +501,7 @@
       <li class="md-breadcrumbs__item" style="display: flex; align-items: center; gap: 8px;">
         <span style="opacity: 0.35; color: var(--md-typeset-color);">|</span>
         <span class="md-breadcrumbs__link" style="color: var(--md-typeset-color); font-weight: 700;">
-          &lt;I [«id»] [«various parameters»]&gt; &lt;D TT «vpin» «steps» [«activity]&gt; &lt;J O [«id»]&gt; &nbsp; &lt;J P «id»&gt;Manage Turntables
+          Serial commands to: Manage Turntables
         </span>
       </li>
     
@@ -10462,75 +10462,6 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Responses">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#response-for-i" class="md-nav__link">
-    <span class="md-ellipsis">
-      Response for &lt;I&gt;
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#response-for-i-id" class="md-nav__link">
-    <span class="md-ellipsis">
-      Response for &lt;I «id»&gt;
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#response-for-i-id-position-or-i-id-activity" class="md-nav__link">
-    <span class="md-ellipsis">
-      Response for &lt;I «id» «position»&gt; or &lt;I «id» «activity»&gt;
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#response-for-j-o" class="md-nav__link">
-    <span class="md-ellipsis">
-      Response for &lt;J O&gt;
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#response-for-j-o-id" class="md-nav__link">
-    <span class="md-ellipsis">
-      Response for &lt;J O «id»&gt;
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#response-for-j-p-id" class="md-nav__link">
-    <span class="md-ellipsis">
-      Response for &lt;J P «id»&gt;
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#response-for-i-id-add-position-value-angle-i-id-dcc-home-i-id-extt-vpin-home" class="md-nav__link">
-    <span class="md-ellipsis">
-      Response for &lt;I «id» ADD «position» «value» «angle»&gt;, &lt;I «id» DCC «home»&gt;, &lt;I «id» EXTT «vpin» «home»&gt;
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
       
         <li class="md-nav__item">
@@ -10596,10 +10527,17 @@
   
 
 
-<h1 id="i-id-various-parameters-d-tt-vpin-steps-activity-j-o-id-j-p-idmanage-turntables"><small><code>&lt;I [«id»] [«various parameters»]&gt;</code></small> <br/><small><code>&lt;D TT «vpin» «steps» [«activity]&gt;</code></small> <br/><small><code>&lt;J O [«id»]&gt;</code></small> &nbsp; <small><code>&lt;J P «id»&gt;</code></small><br/>Manage Turntables<a class="headerlink" href="#i-id-various-parameters-d-tt-vpin-steps-activity-j-o-id-j-p-idmanage-turntables" title="Permanent link">&para;</a></h1>
+<h1 id="serial-commands-to-manage-turntables">Serial commands to: Manage Turntables<a class="headerlink" href="#serial-commands-to-manage-turntables" title="Permanent link">&para;</a></h1>
 <p>Serial commands to manage Turntables.</p>
 <p>The Turntable/Traverser commands provide a more flexible and functional way of operating turntables/traversers. These require that the turntable/traverser be pre-defined through the <code>&lt;I ...&gt;</code> commands, described below.</p>
+<p><code>&lt;I&gt;</code>
+<code>&lt;I «id» [«various parameters»]&gt;</code>
+<code>&lt;D TT «vpin» «steps» [«activity]&gt;</code>
+<code>&lt;J O&gt;</code>
+<code>&lt;J O «id»&gt;</code>
+<code>&lt;J P «id»&gt;</code></p>
 <p>Also refer to the <a href="../../../products/ex-turntable/">legacy EX-Turntable documentation</a>.</p>
+<hr />
 <h2 id="commands">Commands<a class="headerlink" href="#commands" title="Permanent link">&para;</a></h2>
 <ul>
 <li><code>&lt;I&gt;</code> List all turntables</li>
@@ -10624,25 +10562,35 @@
 <li><strong>activity</strong>: The activity for EX-Turntable to perform (refer EX-Turntable activity reference)</li>
 </ul>
 <h2 id="responses">Responses<a class="headerlink" href="#responses" title="Permanent link">&para;</a></h2>
-<h3 id="response-for-i">Response for <code>&lt;I&gt;</code><a class="headerlink" href="#response-for-i" title="Permanent link">&para;</a></h3>
-<p>(If any turntables defined) Repeated for each defined Turtable/traverser
-<code>&lt;I «id» «position» &gt;</code> <br/>
-(If no defined turntables/traversers): <code>X</code></p>
 <ul>
+<li>
+<p>Response for <code>&lt;I&gt;</code></p>
+<ul>
+<li>(If any turntables defined) Repeated for each defined Turtable/traverser</li>
+<li><code>&lt;I «id» «position» &gt;</code> <br/><ul>
 <li><strong>id</strong>: The numeric ID (1-32767) of the turntable</li>
 <li><strong>position</strong>: The current position of the turntable</li>
 </ul>
-<h3 id="response-for-i-id">Response for <code>&lt;I «id»&gt;</code><a class="headerlink" href="#response-for-i-id" title="Permanent link">&para;</a></h3>
-<p>(If any turntables defined) Repeated for each defined Turtable/traverser
-<code>&lt;I «id» «position» &gt;</code> <br/>
-(If id not defined): <code>X</code></p>
+</li>
+<li>(If no defined turntables/traversers): <code>X</code></li>
+</ul>
+</li>
+<li>
+<p>Response for <code>&lt;I «id»&gt;</code></p>
 <ul>
+<li>(If any turntables defined) Repeated for each defined Turtable/traverser
+<code>&lt;I «id» «position» &gt;</code> <br/><ul>
 <li><strong>id</strong>: The numeric ID (1-32767) of the turntable</li>
 <li><strong>position</strong>: The current position of the turntable</li>
 </ul>
-<h3 id="response-for-i-id-position-or-i-id-activity">Response for <code>&lt;I «id» «position»&gt;</code> or  <code>&lt;I «id» «activity»&gt;</code><a class="headerlink" href="#response-for-i-id-position-or-i-id-activity" title="Permanent link">&para;</a></h3>
-<p><code>&lt;I «id» «position» «moving»&gt;</code></p>
+</li>
+<li>(If id not defined): <code>X</code></li>
+</ul>
+</li>
+<li>
+<p>Response for <code>&lt;I «id» «position»&gt;</code> or  <code>&lt;I «id» «activity»&gt;</code></p>
 <ul>
+<li><code>&lt;I «id» «position» «moving»&gt;</code><ul>
 <li><strong>id</strong>: one of<ul>
 <li>identifier of the Turntable/traverser, or</li>
 <li><code>X</code> if the command fails</li>
@@ -10659,16 +10607,23 @@
 </ul>
 </li>
 </ul>
-<h3 id="response-for-j-o">Response for <code>&lt;J O&gt;</code><a class="headerlink" href="#response-for-j-o" title="Permanent link">&para;</a></h3>
-<p>(has defined Turnouts/Points) <code>&lt;jO «id1» «id2» «id3» ...&gt;</code> <br/>
-(has no defined Turnouts/Points) <code>&lt;jO&gt;</code></p>
+</li>
+</ul>
+</li>
+<li>
+<p>Response for <code>&lt;J O&gt;</code></p>
 <ul>
+<li>(has defined Turnouts/Points) <code>&lt;jO «id1» «id2» «id3» ...&gt;</code> <br/><ul>
 <li><strong>id?</strong>: unique id of the turntable(s)/traverser(s)</li>
 </ul>
-<h3 id="response-for-j-o-id">Response for <code>&lt;J O «id»&gt;</code><a class="headerlink" href="#response-for-j-o-id" title="Permanent link">&para;</a></h3>
-<p>Response (id is defined): <code>&lt;jO «id» «type «position» «position_count» ["«desc»"]&gt;</code>
-Response (id not defined): <code>&lt;jO «id» X&gt;</code></p>
+</li>
+<li>(has no defined Turnouts/Points) <code>&lt;jO&gt;</code></li>
+</ul>
+</li>
+<li>
+<p>Response for <code>&lt;J O «id»&gt;</code></p>
 <ul>
+<li>Response (id is defined): <code>&lt;jO «id» «type «position» «position_count» ["«desc»"]&gt;</code><ul>
 <li><strong>id</strong>: unique id of the turntable/traverser</li>
 <li><strong>type</strong>: one of<ul>
 <li><code>0</code> = DCC</li>
@@ -10692,11 +10647,15 @@ Response (id not defined): <code>&lt;jO «id» X&gt;</code></p>
 </ul>
 </li>
 </ul>
+</li>
+<li>Response (id not defined): <code>&lt;jO «id» X&gt;</code></li>
+</ul>
 <p>Note: The turntable or traverser information does not include the list of defined positions, and this must be requested separated as outlined in the following section.</p>
-<h3 id="response-for-j-p-id">Response for <code>&lt;J P «id»&gt;</code><a class="headerlink" href="#response-for-j-p-id" title="Permanent link">&para;</a></h3>
-<p>(id is defined): <code>&lt;jO «id» «index» «angle» ["«desc»"]&gt;</code>
-(id not defined): <code>&lt;jO «id» X&gt;</code></p>
+</li>
+<li>
+<p>Response for <code>&lt;J P «id»&gt;</code></p>
 <ul>
+<li>(id is defined): <code>&lt;jO «id» «index» «angle» ["«desc»"]&gt;</code><ul>
 <li><strong>id</strong>: unique id of the turntable/traverser</li>
 <li><strong>index</strong>: one of<ul>
 <li>the position index (0 - 48)</li>
@@ -10714,9 +10673,19 @@ Response (id not defined): <code>&lt;jO «id» X&gt;</code></p>
 </ul>
 </li>
 </ul>
-<h3 id="response-for-i-id-add-position-value-angle-i-id-dcc-home-i-id-extt-vpin-home">Response for <code>&lt;I «id» ADD «position» «value» «angle»&gt;</code>, <code>&lt;I «id» DCC «home»&gt;</code>, <code>&lt;I «id» EXTT «vpin» «home»&gt;</code><a class="headerlink" href="#response-for-i-id-add-position-value-angle-i-id-dcc-home-i-id-extt-vpin-home" title="Permanent link">&para;</a></h3>
-<p>(Successful): <code>&lt;I&gt;</code> <br/>
-(Fail): <code>&lt;X&gt;</code></p>
+</li>
+<li>(id not defined): <code>&lt;jO «id» X&gt;</code></li>
+</ul>
+</li>
+<li>
+<p>Response for <code>&lt;I «id» ADD «position» «value» «angle»&gt;</code>, <code>&lt;I «id» DCC «home»&gt;</code>, <code>&lt;I «id» EXTT «vpin» «home»&gt;</code></p>
+<ul>
+<li>(Successful): <code>&lt;I&gt;</code> <br/></li>
+<li>(Fail): <code>&lt;X&gt;</code></li>
+</ul>
+</li>
+</ul>
+<hr />
 <h2 id="notes">Notes<a class="headerlink" href="#notes" title="Permanent link">&para;</a></h2>
 <ul>
 <li>When a DCC accessory turntable is rotated or moved, no feedback is sent to EX‑CommandStation, and therefore the moving variable will always be <code>0</code>, and a second response will therefore never be sent to indicate the completion of a rotation or move, unlike how EX‑Turntable operates.</li>
@@ -10787,7 +10756,7 @@ Response (id not defined): <code>&lt;jO «id» X&gt;</code></p>
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="October 15, 2026 03:05:42 UTC">October 15, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="October 20, 2026 03:26:09 UTC">October 20, 2026</span>
   </span>
 
     

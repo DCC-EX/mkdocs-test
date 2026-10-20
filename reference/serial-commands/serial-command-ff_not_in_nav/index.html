@@ -23,7 +23,7 @@
     
     
       
-        <title><F «loco» [«function» «state»]|[DCCFREQ «freqValue»]> Set decoder functions or set PWM frequency - DCC-EX Model Train Control, Animation &amp; Automation</title>
+        <title>Serial commands to: Set decoder functions or set PWM frequency - DCC-EX Model Train Control, Animation &amp; Automation</title>
       
     
     
@@ -79,7 +79,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#f-loco-function-statedccfreq-freqvalue-set-decoder-functions-or-set-pwm-frequency" class="md-skip">
+        <a href="#serial-commands-to-set-decoder-functions-or-set-pwm-frequency" class="md-skip">
           Skip to content
         </a>
       
@@ -112,7 +112,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              &lt;F «loco» [«function» «state»]|[DCCFREQ «freqValue»]&gt; Set decoder functions or set PWM frequency
+              Serial commands to: Set decoder functions or set PWM frequency
             
           </span>
         </div>
@@ -501,7 +501,7 @@
       <li class="md-breadcrumbs__item" style="display: flex; align-items: center; gap: 8px;">
         <span style="opacity: 0.35; color: var(--md-typeset-color);">|</span>
         <span class="md-breadcrumbs__link" style="color: var(--md-typeset-color); font-weight: 700;">
-          &lt;F «loco» [«function» «state»]|[DCCFREQ «freqValue»]&gt; Set decoder functions or set PWM frequency
+          Serial commands to: Set decoder functions or set PWM frequency
         </span>
       </li>
     
@@ -10527,12 +10527,15 @@
   
 
 
-<h1 id="f-loco-function-statedccfreq-freqvalue-set-decoder-functions-or-set-pwm-frequency"><small><code>&lt;F «loco» [«function» «state»]|[DCCFREQ «freqValue»]&gt;</code></small> <br/>Set decoder functions or set <abbr title="Pulse Width Modulation">PWM</abbr> frequency<a class="headerlink" href="#f-loco-function-statedccfreq-freqvalue-set-decoder-functions-or-set-pwm-frequency" title="Permanent link">&para;</a></h1>
+<h1 id="serial-commands-to-set-decoder-functions-or-set-pwm-frequency">Serial commands to: Set decoder functions or set <abbr title="Pulse Width Modulation">PWM</abbr> frequency<a class="headerlink" href="#serial-commands-to-set-decoder-functions-or-set-pwm-frequency" title="Permanent link">&para;</a></h1>
 <p>Serial command to turn loco decoder functions ON or OFF or set the DC <abbr title="Pulse Width Modulation">PWM</abbr> frequency of a track.</p>
+<p><code>&lt;F «loco» «function» «onOff»&gt;</code>
+<code>&lt;F «loco» DCCFREQ «freqValue»&gt;</code></p>
+<hr />
 <h2 id="commands">Commands<a class="headerlink" href="#commands" title="Permanent link">&para;</a></h2>
 <ul>
-<li><code>&lt;F «loco» [«function» «state»]&gt;</code> = set the function on or off</li>
-<li><code>&lt;F «loco» [DCCFREQ «freqValue»]&gt;</code> = set the <abbr title="Pulse Width Modulation">PWM</abbr> frequency</li>
+<li><code>&lt;F «loco» «function» «state»&gt;</code> = set the function on or off</li>
+<li><code>&lt;F «loco» DCCFREQ «freqValue»&gt;</code> = set the <abbr title="Pulse Width Modulation">PWM</abbr> frequency</li>
 </ul>
 <h2 id="parameters">Parameters<a class="headerlink" href="#parameters" title="Permanent link">&para;</a></h2>
 <ul>
@@ -10543,7 +10546,7 @@
 <p>If <strong>function</strong> plus <strong>state</strong> are supplied - To set the function on or off</p>
 <ul>
 <li>*<em>function</em>: Function to set. <code>0</code>-<code>68</code> (Support for the RCN-212 Functions)</li>
-<li><strong>state</strong> - one of:<ul>
+<li><strong>onOff</strong> - one of:<ul>
 <li><code>1</code> = on</li>
 <li><code>0</code> = off</li>
 </ul>
@@ -10573,6 +10576,7 @@
 </li>
 <li><strong>FunctMap</strong> individual function states represented by the bits in a byte</li>
 </ul>
+<hr />
 <h2 id="notes">Notes<a class="headerlink" href="#notes" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Setting requests are transmitted directly to mobile loco decoder.</li>
@@ -10621,7 +10625,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="October 18, 2026 01:26:11 UTC">October 18, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="October 20, 2026 03:26:09 UTC">October 20, 2026</span>
   </span>
 
     

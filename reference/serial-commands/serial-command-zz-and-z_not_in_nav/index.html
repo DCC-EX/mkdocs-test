@@ -23,7 +23,7 @@
     
     
       
-        <title><Z [«id» [«pin» «iFlag»]|«active»]]> <z [«signedVpin»]|[«vpin» «analogue» [[«profile»] [«duration»]]]> Manage pin/vpin outputs - DCC-EX Model Train Control, Animation &amp; Automation</title>
+        <title>Serial commands to: Manage pin/vpin outputs - DCC-EX Model Train Control, Animation &amp; Automation</title>
       
     
     
@@ -79,7 +79,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#z-id-pin-iflagactive-z-signedvpinvpin-analogue-profile-duration-manage-pinvpin-outputs" class="md-skip">
+        <a href="#serial-commands-to-manage-pinvpin-outputs" class="md-skip">
           Skip to content
         </a>
       
@@ -112,7 +112,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              &lt;Z [«id» [«pin» «iFlag»]|«active»]]&gt; &lt;z [«signedVpin»]|[«vpin» «analogue» [[«profile»] [«duration»]]]&gt; Manage pin/vpin outputs
+              Serial commands to: Manage pin/vpin outputs
             
           </span>
         </div>
@@ -501,7 +501,7 @@
       <li class="md-breadcrumbs__item" style="display: flex; align-items: center; gap: 8px;">
         <span style="opacity: 0.35; color: var(--md-typeset-color);">|</span>
         <span class="md-breadcrumbs__link" style="color: var(--md-typeset-color); font-weight: 700;">
-          &lt;Z [«id» [«pin» «iFlag»]|«active»]]&gt; &lt;z [«signedVpin»]|[«vpin» «analogue» [[«profile»] [«duration»]]]&gt; Manage pin/vpin outputs
+          Serial commands to: Manage pin/vpin outputs
         </span>
       </li>
     
@@ -10462,57 +10462,6 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Responses">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#response-for-z-id-z-id-pin-iflag" class="md-nav__link">
-    <span class="md-ellipsis">
-      Response for &lt;Z «id»&gt;, &lt;Z «id» «pin» «iFlag»&gt;
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#response-for-z" class="md-nav__link">
-    <span class="md-ellipsis">
-      Response for &lt;Z&gt;
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#response-for-z-vpin" class="md-nav__link">
-    <span class="md-ellipsis">
-      Response for &lt;Z «vpin»&gt;
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#response-for-z-id-state" class="md-nav__link">
-    <span class="md-ellipsis">
-      Response for &lt;Z «id» «state»&gt;
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#response-for-z-vpin-analogue-profile-duration-z-vpin-analogue-profile-z-vpin-analogue" class="md-nav__link">
-    <span class="md-ellipsis">
-      Response for &lt;z «vpin» «analogue» «profile» duration»&gt;``, ``&lt;z «vpin» «analogue» «profile»&gt;``, ``&lt;z «vpin» «analogue»&gt;
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
       
         <li class="md-nav__item">
@@ -10578,8 +10527,17 @@
   
 
 
-<h1 id="z-id-pin-iflagactive-z-signedvpinvpin-analogue-profile-duration-manage-pinvpin-outputs"><small><code>&lt;Z [«id» [«pin» «iFlag»]|«active»]]&gt;</code></small> <br/><small><code>&lt;z [«signedVpin»]|[«vpin» «analogue» [[«profile»] [«duration»]]]&gt;</code></small> <br/>Manage pin/<abbr title="an Arduino pin number that has been extended to include pins on external devices or expanders">vpin</abbr> outputs<a class="headerlink" href="#z-id-pin-iflagactive-z-signedvpinvpin-analogue-profile-duration-manage-pinvpin-outputs" title="Permanent link">&para;</a></h1>
+<h1 id="serial-commands-to-manage-pinvpin-outputs">Serial commands to: Manage pin/<abbr title="an Arduino pin number that has been extended to include pins on external devices or expanders">vpin</abbr> outputs<a class="headerlink" href="#serial-commands-to-manage-pinvpin-outputs" title="Permanent link">&para;</a></h1>
 <p>Serial commands to &gt;Manage pin/<abbr title="an Arduino pin number that has been extended to include pins on external devices or expanders">vpin</abbr> outputs.</p>
+<p><code>&lt;Z&gt;</code>
+ <code>&lt;Z «id» «active»&gt;</code>
+ <code>&lt;Z «id» «pin» «iFlag»&gt;</code>
+ <code>&lt;Z «id»&gt;</code>
+ <code>&lt;z «signedVpin»&gt;</code>
+ <code>&lt;z «vpin» «analogue» «profile» duration»&gt;</code>
+ <code>&lt;z «vpin» «analogue» «profile»&gt;</code>
+ <code>&lt;z «vpin» «analogue»&gt;</code></p>
+<hr />
 <h2 id="commands">Commands<a class="headerlink" href="#commands" title="Permanent link">&para;</a></h2>
 <ul>
 <li><code>&lt;Z&gt;</code> = List Output definitions</li>
@@ -10619,13 +10577,18 @@
 </li>
 </ul>
 <h2 id="responses">Responses<a class="headerlink" href="#responses" title="Permanent link">&para;</a></h2>
-<h3 id="response-for-z-id-z-id-pin-iflag">Response for <code>&lt;Z «id»&gt;</code>, <code>&lt;Z «id» «pin» «iFlag»&gt;</code><a class="headerlink" href="#response-for-z-id-z-id-pin-iflag" title="Permanent link">&para;</a></h3>
-<p>(Successful): <code>&lt;O&gt;</code> <br/>
-(Fail): <code>&lt;X&gt;</code> (e.g. out of memory).</p>
-<h3 id="response-for-z">Response for <code>&lt;Z&gt;</code><a class="headerlink" href="#response-for-z" title="Permanent link">&para;</a></h3>
-<p>(Successful): <Y «id «vpin» «iFlag» «state»> repeated for each defined output pin <br/>
-(Fail): <X> (e.g. ID does not exist)</p>
 <ul>
+<li>
+<p>Response for <code>&lt;Z «id»&gt;</code>, <code>&lt;Z «id» «pin» «iFlag»&gt;</code></p>
+<ul>
+<li>(Successful): <code>&lt;O&gt;</code> <br/></li>
+<li>(Fail): <code>&lt;X&gt;</code> (e.g. out of memory).</li>
+</ul>
+</li>
+<li>
+<p>Response for <code>&lt;Z&gt;</code></p>
+<ul>
+<li>(Successful): <Y «id «vpin» «iFlag» «state»> repeated for each defined output pin <br/><ul>
 <li><strong>Y</strong>: Command identifier</li>
 <li><strong>id</strong>: identifier of the output</li>
 <li><strong>state</strong>: one of<ul>
@@ -10634,12 +10597,20 @@
 </ul>
 </li>
 </ul>
-<h3 id="response-for-z-vpin">Response for <code>&lt;Z «vpin»&gt;</code><a class="headerlink" href="#response-for-z-vpin" title="Permanent link">&para;</a></h3>
-<p>N/A</p>
-<h3 id="response-for-z-id-state">Response for <code>&lt;Z «id» «state»&gt;</code><a class="headerlink" href="#response-for-z-id-state" title="Permanent link">&para;</a></h3>
-<p>(Successful): <Y «id «state»> <br/>
-(Fail): <X> if output ID does not exist</p>
+</li>
+<li>(Fail): <X> (e.g. ID does not exist)</li>
+</ul>
+</li>
+<li>
+<p>Response for <code>&lt;Z «vpin»&gt;</code></p>
 <ul>
+<li>N/A</li>
+</ul>
+</li>
+<li>
+<p>Response for <code>&lt;Z «id» «state»&gt;</code></p>
+<ul>
+<li>(Successful): <Y «id «state»> <br/><ul>
 <li><strong>Y</strong>: Command identifier</li>
 <li><strong>state</strong>: one of<ul>
 <li><code>0</code> = INACTIVE</li>
@@ -10647,8 +10618,16 @@
 </ul>
 </li>
 </ul>
-<h3 id="response-for-z-vpin-analogue-profile-duration-z-vpin-analogue-profile-z-vpin-analogue">Response for <code>&lt;z «vpin» «analogue» «profile» duration»&gt;``, ``&lt;z «vpin» «analogue» «profile»&gt;``, ``&lt;z «vpin» «analogue»&gt;</code><a class="headerlink" href="#response-for-z-vpin-analogue-profile-duration-z-vpin-analogue-profile-z-vpin-analogue" title="Permanent link">&para;</a></h3>
+</li>
+<li>(Fail): <X> if output ID does not exist</li>
+</ul>
+</li>
+<li>
+<p>Response for <code>&lt;z «vpin» «analogue» «profile» duration»&gt;``, ``&lt;z «vpin» «analogue» «profile»&gt;``, ``&lt;z «vpin» «analogue»&gt;</code></p>
 <p><mark>TODO</mark> MEDIUM - Response</p>
+</li>
+</ul>
+<hr />
 <h2 id="notes">Notes<a class="headerlink" href="#notes" title="Permanent link">&para;</a></h2>
 <ul>
 <li><strong>EX‑CommandStation</strong> supports optional OUTPUT control of any unused Arduino Pins for custom purposes. Pins can be activated or de-activated. The default is to set ACTIVE pins HIGH and INACTIVE pins LOW. However, this default behaviour can be inverted for any pin in which case ACTIVE=LOW and INACTIVE=HIGH.</li>
@@ -10698,7 +10677,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="October 15, 2026 03:05:42 UTC">October 15, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="October 20, 2026 03:26:09 UTC">October 20, 2026</span>
   </span>
 
     
