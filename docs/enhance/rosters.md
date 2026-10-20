@@ -1,3 +1,10 @@
+---
+tags:
+  - _9J9_9R9_id_name_functions
+  - _9J9_9R9_9SAVE9
+  - _9J9_9R9_id_9DELETE9
+---
+
 # Roster
 
 The Roster is a list of loco DCC addresses, with names for convenience and a list of named/labelled function keys that are supported by each loco decoder.
