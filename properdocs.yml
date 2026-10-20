@@ -145,6 +145,7 @@ plugins:
         'products/ex-commandstation/exrail/vpins.md': 'enhance/exrail/vpins.md'
         'products/ex-commandstation/exrail/cookbooks/index.md': 'enhance/exrail/cookbooks/index.md'
         
+        'purchasing/next-steps.md': 'prepare-to-use/index.md'
         'reference/serial-command-basics.md': 'reference/serial-commands/serial-command-list.md'
         'reference/serial-command-list.md': 'reference/serial-commands/serial-command-list.md'
 
