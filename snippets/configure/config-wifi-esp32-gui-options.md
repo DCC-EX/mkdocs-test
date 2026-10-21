@@ -1,7 +1,7 @@
 
 <!-- # WiFi Configuration for version 5.7.0+ <br/><small>Graphical User Interface Options</small> -->
 
-This page is exclusively for users of <span class="badge-new">New in v6.0</span> **EX-CommandStation** version 5.7.0 and later. Version 5.7.0 is currently in the experimental / development (DEVEL) phase and is not recommended for general users.
+This page is exclusively for users of {{ new_in_v6() }} **EX-CommandStation** version 5.7.0 and later. Version 5.7.0 is currently in the experimental / development (DEVEL) phase and is not recommended for general users.
 
 If you are using an earlier version, please see [WiFi Config](/prepare-to-use/installer/config-wifi-shield.md).
 
