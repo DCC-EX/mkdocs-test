@@ -211,7 +211,7 @@ li:not(.md-nav__item, .md-tabs__item) a {
                 - [TM1638 Buttons, leds and 7 segment display](../enhance/exrail/cookbooks/various-devices/tm-1638.md)
                 - [Trainbrains Devices](../enhance/exrail/cookbooks/various-devices/trainbrains.md)
                 - [XL9535 Relay Board](../enhance/exrail/cookbooks/various-devices/xl9535.md)
-    - [Adding a Roster <small>(<br/>Adding a Roster)</small>](../enhance/rosters.md)
+    - [Roster <small>(<br/>Adding a Roster)</small>](../enhance/rosters.md)
     - [Adding a Turnouts/Points <small>(Adding Turnouts/Points)</small>](../enhance/turnouts.md)
     - [Routes and Automation <small>(Adding Routes and Automations)</small>](../enhance/routes.md)
     - **Adding Other Accessories**
@@ -337,11 +337,7 @@ li:not(.md-nav__item, .md-tabs__item) a {
 - **About Us**
     - [About the **DCC-EX** Project <small>(About DCC-EX)</small>](../about/about.md)
     - [DCC++ VS DCC-EX? - Project History <small>(History)</small>](../about/history.md)
-    - **News**
-        - [DCC-EX News](../about/news/index.md)
-        - **Articles**
-            - [New Documentation](../about/news/articles/20250622.md)
-            - [Template DCC-EX News Article](../about/news/articles/template-article.md)
+    - [News](../about/news.md)
     - [Licence & Attributions <small>(<br/>Licence & Attribution)</small>](../about/licence.md)
 - **Donate / Contribute**
     - [How Can I Contribute? <small>(How You Can Contribute)</small>](../contributing/contributing.md)
@@ -378,10 +374,12 @@ li:not(.md-nav__item, .md-tabs__item) a {
 - [Example - Turntable ROUTEs](../enhance/exrail/cookbooks/big-picture/stage5-examples/turntable-example_not_in_nav.md)
 - [Getting Started with DCC-EX](../products/getting-started_not_in_nav.md)
 - [Incorrect IOREF voltage for 3.3v Microcontrollers](microcontrollers/esp32/ioref-incorrect-voltage-fix_not_in_nav.md)
+- [Serial command to: Diagnostic display free RAM](serial-commands/serial-command-dd-ram_not_in_nav.md)
+- [Serial command to: Direct current displays to LCS/OLED](serial-commands/serial-command-jj-ll_not_in_nav.md)
+- [Serial command to: Request all virtual msgs to this client](serial-commands/serial-command-at_not_in_nav.md)
+- [Serial command to: Request max current list](serial-commands/serial-command-jj-gg_not_in_nav.md)
 - [Serial commands to:  Get/Set the Fastclock Time](serial-commands/serial-command-jj-cc_not_in_nav.md)
 - [Serial commands to: Define or manage Turnouts/Points](serial-commands/serial-command-tt_not_in_nav.md)
-- [Serial commands to: Diagnostic display free RAM](serial-commands/serial-command-dd-ram_not_in_nav.md)
-- [Serial commands to: Direct current displays to LCS/OLED](serial-commands/serial-command-jj-ll_not_in_nav.md)
 - [Serial commands to: Display text on virtual LCD](serial-commands/serial-command-at_display_not_in_nav.md)
 - [Serial commands to: Emergency Stop (ESTOP) or Pause](serial-commands/serial-command-!_not_in_nav.md)
 - [Serial commands to: Enable/Disable Railcom Cutout](serial-commands/serial-command-c-railcom_not_in_nav.md)
@@ -404,9 +402,7 @@ li:not(.md-nav__item, .md-tabs__item) a {
 - [Serial commands to: Play DF Player sounds](serial-commands/serial-command-y_not_in_nav.md)
 - [Serial commands to: Query or Reset the EX-CommandStation](serial-commands/serial-command-s-and-hash_not_in_nav.md)
 - [Serial commands to: Read and write CVs](serial-commands/serial-command-rr-and-ww_not_in_nav.md)
-- [Serial commands to: Request all virtual msgs to this client](serial-commands/serial-command-at_not_in_nav.md)
-- [Serial commands to: Request max current list](serial-commands/serial-command-jj-gg_not_in_nav.md)
-- [Serial commands to: Request or Configure Track Manager <span style="display:none;">(_equals)</span>](serial-commands/serial-command-equals_not_in_nav.md)
+- [Serial commands to: Request or Configure Track Manager](serial-commands/serial-command-equals_not_in_nav.md)
 - [Serial commands to: Request or Create Roster info](serial-commands/serial-command-jj-rr_not_in_nav.md)
 - [Serial commands to: Request or set loco status](serial-commands/serial-command-t_not_in_nav.md)
 - [Serial commands to: Reserve or Free Sections](serial-commands/serial-command-slash-reserve_not_in_nav.md)

@@ -115,6 +115,7 @@ plugins:
         - EX-Motorshield8874
         - EX-WiFiShield8266
         - DCCEXProtocol
+        - EXRAIL
   - rss: # Enable RSS feed for the blog/DCC-EX News articles
       match_path: "news/articles/.*"
       date_from_meta:
