@@ -27,7 +27,7 @@
     
     
       
-        <title>EXRAIL Commands by Function Group - DCC-EX Model Train Control, Animation &amp; Automation</title>
+        <title>... by Function Group - DCC-EX Model Train Control, Animation &amp; Automation</title>
       
     
     
@@ -116,7 +116,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              EXRAIL Commands <small>by&nbsp;Function&nbsp;Group</small>
+              ... by Function Group
             
           </span>
         </div>
@@ -527,7 +527,7 @@
       <li class="md-breadcrumbs__item" style="display: flex; align-items: center; gap: 8px;">
         <span style="opacity: 0.35; color: var(--md-typeset-color);">|</span>
         <span class="md-breadcrumbs__link" style="color: var(--md-typeset-color); font-weight: 700;">
-          EXRAIL Commands <small>by&nbsp;Function&nbsp;Group</small>
+          ... by Function Group
         </span>
       </li>
     
@@ -7364,7 +7364,7 @@
   
   
   <span class="md-ellipsis">
-    <br/>EXRAIL Command List
+    <br/>EXRAIL Commands <small><small>Full&nbsp;List</small></small>
     
   </span>
   
@@ -7396,7 +7396,7 @@
   
   
   <span class="md-ellipsis">
-    EXRAIL Commands <small>by&nbsp;Function&nbsp;Group</small>
+    ... by Function Group
     
   </span>
   
@@ -7409,7 +7409,7 @@
   
   
   <span class="md-ellipsis">
-    EXRAIL Commands <small>by&nbsp;Function&nbsp;Group</small>
+    ... by Function Group
     
   </span>
   
@@ -7441,9 +7441,18 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#flow-control" class="md-nav__link">
+  <a href="#general" class="md-nav__link">
     <span class="md-ellipsis">
-      Flow Control
+      General
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#general-flow-control" class="md-nav__link">
+    <span class="md-ellipsis">
+      General Flow Control
     </span>
   </a>
   
@@ -7558,7 +7567,7 @@
           <li class="md-nav__item">
   <a href="#locos-definition-and-control" class="md-nav__link">
     <span class="md-ellipsis">
-      Locos: Definition and Control
+      Locos - Definition and Control
     </span>
   </a>
   
@@ -7668,7 +7677,7 @@
   
   
   <span class="md-ellipsis">
-    Serial Commands <small>Full&nbsp;List</small>
+    Serial Commands <small><small>Full&nbsp;List</small></small>
     
   </span>
   
@@ -7691,7 +7700,7 @@
   
   
   <span class="md-ellipsis">
-    Serial Commands <small>by&nbsp;Function&nbsp;Group</small>
+    ... by Function Group
     
   </span>
   
@@ -7739,7 +7748,7 @@
   
   
   <span class="md-ellipsis">
-    Serial Commands <small>Additional&nbsp;Info</small>
+    ... Additional Info
     
   </span>
   
@@ -7756,7 +7765,7 @@
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_9_7_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_9_7">
             <span class="md-nav__icon md-icon"></span>
-            Serial Commands <small>Additional&nbsp;Info</small>
+            ... Additional Info
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -7853,7 +7862,7 @@
   
   
   <span class="md-ellipsis">
-    <br/>Configuration Reference (config.h)
+    <br/>Configuration Reference <small><small>(config.h)</small></small>
     
   </span>
   
@@ -7870,7 +7879,7 @@
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_9_8_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_9_8">
             <span class="md-nav__icon md-icon"></span>
-            <br/>Configuration Reference (config.h)
+            <br/>Configuration Reference <small><small>(config.h)</small></small>
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -10642,9 +10651,18 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#flow-control" class="md-nav__link">
+  <a href="#general" class="md-nav__link">
     <span class="md-ellipsis">
-      Flow Control
+      General
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#general-flow-control" class="md-nav__link">
+    <span class="md-ellipsis">
+      General Flow Control
     </span>
   </a>
   
@@ -10759,7 +10777,7 @@
           <li class="md-nav__item">
   <a href="#locos-definition-and-control" class="md-nav__link">
     <span class="md-ellipsis">
-      Locos: Definition and Control
+      Locos - Definition and Control
     </span>
   </a>
   
@@ -10934,7 +10952,7 @@
 }
 </style>
 
-<h2 id="flow-control">Flow Control<a class="headerlink" href="#flow-control" title="Permanent link">&para;</a></h2>
+<h2 id="general">General<a class="headerlink" href="#general" title="Permanent link">&para;</a></h2>
 <table>
 <thead>
 <tr>
@@ -10944,127 +10962,134 @@
 </thead>
 <tbody>
 <tr>
-<td>AUTOSTART</td>
-<td>Automatically start sequence at this point during EX-CommandStation startup</td>
-</tr>
-<tr>
-<td>AUTOMATION( id, "description" )</td>
-<td>Define an automation, advertised to throttles/clients</td>
-</tr>
-<tr>
-<td>ROUTE( id, "description" )</td>
-<td>Define a route, advertised to throttles/clients</td>
-</tr>
-<tr>
-<td>SEQUENCE( id )</td>
-<td>A general purpose sequence, not advertised to throttles/clients</td>
-</tr>
-<tr>
-<td>DONE</td>
-<td>Completes a Sequence/Route/Animation/Event, or any other automation</td>
-</tr>
-<tr>
-<td>ENDTASK</td>
-<td>Completes a Sequence/Route/Animation/Event, or any other automation</td>
-</tr>
-<tr>
-<td>CALL( id )</td>
-<td>Branch to a separate sequence</td>
-</tr>
-<tr>
-<td>RETURN</td>
-<td>Return to the calling sequence when completed</td>
-</tr>
-<tr>
-<td>FOLLOW( sequence_id )</td>
-<td>Branch or Follow a specified sequence</td>
-</tr>
-<tr>
-<td>PAUSE</td>
-<td>E-STOP all locos and PAUSE all other EXRAIL tasks</td>
-</tr>
-<tr>
-<td>RESUME</td>
-<td>Resume all paused tasks, including loco movement</td>
-</tr>
-<tr>
-<td>START( id )</td>
-<td>Execute a route or sequence</td>
-</tr>
-<tr>
-<td>START_SEND( id )</td>
-<td>Execute a route or sequence and send the current loco</td>
-</tr>
-<tr>
-<td>START_SHARED( id )</td>
-<td>Execute a route or sequence and pass the current loco</td>
-</tr>
-<tr>
-<td>SENDLOCO( loco, route )</td>
-<td>Start route/sequence with a specified loco</td>
-</tr>
-<tr>
-<td>DELAY( delay )</td>
-<td>Delay the sequence a number of milliseconds</td>
-</tr>
-<tr>
-<td>DELAYMS( delay )</td>
-<td>Delay the sequence a number of milliseconds</td>
-</tr>
-<tr>
-<td>DELAYMINS( delay )</td>
-<td>Delay the sequence a number of minutes</td>
-</tr>
-<tr>
-<td>DELAYRANDOM( min_delay, max_delay )</td>
-<td>Delay a random period of time</td>
-</tr>
-<tr>
-<td>RANDWAIT( ??? )</td>
-<td>TBA</td>
-</tr>
-<tr>
-<td>IFRANDOM( percent )</td>
-<td>Run commands a random percentage of the time</td>
-</tr>
-<tr>
-<td>ROUTE_CAPTION( route_id, "caption" )</td>
-<td>Change the label of the Route button</td>
-</tr>
-<tr>
-<td>ROUTE_ACTIVE( route_id )</td>
-<td>Activate a Route</td>
-</tr>
-<tr>
-<td>ROUTE_INACTIVE( route_id )</td>
-<td>Deactivate a Route</td>
-</tr>
-<tr>
-<td>ROUTE_HIDDEN( route_id )</td>
-<td>Hide a Route from display</td>
-</tr>
-<tr>
-<td>ROUTE_DISABLED( route_id )</td>
-<td>disable a Route</td>
-</tr>
-<tr>
-<td>STASH( stash_id )</td>
-<td>Stashes the current loco/invert</td>
-</tr>
-<tr>
-<td>CLEAR_STASH( stash_id )</td>
-<td>Zeroes the specified stash</td>
-</tr>
-<tr>
-<td>CLEAR_ALL_STASH</td>
-<td>Zeroes all stashes</td>
-</tr>
-<tr>
-<td>PICKUP_STASH( stash_id )</td>
-<td>Retrieves and sets the loco/invert from the specified stash</td>
+<td><a href="?ALIAS">ALIAS( name [, value])</a></td>
+<td>Assigns name to a value. <code>value</code> is optional. If omitted, a large negative value is created automatically</td>
 </tr>
 </tbody>
 </table>
+<hr />
+<h2 id="general-flow-control">General Flow Control<a class="headerlink" href="#general-flow-control" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Command</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="?AUTOSTART">AUTOSTART</a></td>
+<td>Automatically start sequence at this point during EX-CommandStation startup</td>
+</tr>
+<tr>
+<td><a href="?AUTOMATION">AUTOMATION( id, "description" )</a></td>
+<td>Define an automation, advertised to throttles/clients</td>
+</tr>
+<tr>
+<td><a href="?ROUTE">ROUTE( id, "description" )</a></td>
+<td>Define a route, advertised to throttles/clients</td>
+</tr>
+<tr>
+<td><a href="?SEQUENCE">SEQUENCE( id )</a></td>
+<td>A general purpose sequence, not advertised to throttles/clients</td>
+</tr>
+<tr>
+<td><a href="?DONE">DONE</a></td>
+<td>Completes a Sequence/Route/Animation/Event, or any other automation</td>
+</tr>
+<tr>
+<td><a href="?ENDTASK">ENDTASK</a></td>
+<td>Completes a Sequence/Route/Animation/Event, or any other automation</td>
+</tr>
+<tr>
+<td><a href="?CALL">CALL( id )</a></td>
+<td>Branch to a separate sequence, which will need to RETURN when complete. The current sequence is paused until the called sequence has completed.</td>
+</tr>
+<tr>
+<td><a href="?RETURN">RETURN</a></td>
+<td>Return to the calling sequence when completed</td>
+</tr>
+<tr>
+<td><a href="?FOLLOW">FOLLOW( sequence_id )</a></td>
+<td>Branch or Follow a specified sequence.  The current sequence ends and control is passed to the specified sequence.</td>
+</tr>
+<tr>
+<td><a href="?PAUSE">PAUSE</a></td>
+<td>E-STOP all locos and PAUSE all other EXRAIL tasks</td>
+</tr>
+<tr>
+<td><a href="?RESUME">RESUME</a></td>
+<td>Resume all paused tasks, including loco movement</td>
+</tr>
+<tr>
+<td><a href="?START">START( id )</a></td>
+<td>Execute a route or sequence</td>
+</tr>
+<tr>
+<td><a href="?START_SEND">START_SEND( id )</a></td>
+<td>Execute a route or sequence and send the current loco</td>
+</tr>
+<tr>
+<td><a href="?START_SHARED">START_SHARED( id )</a></td>
+<td>Execute a route or sequence and pass the current loco</td>
+</tr>
+<tr>
+<td><a href="?SENDLOCO">SENDLOCO( loco, route )</a></td>
+<td>Start route/sequence with a specified loco</td>
+</tr>
+<tr>
+<td><a href="?DELAY">DELAY( delay )</a></td>
+<td>Delay the sequence a number of milliseconds</td>
+</tr>
+<tr>
+<td><a href="?DELAYMS">DELAYMS( delay )</a></td>
+<td>Delay the sequence a number of milliseconds</td>
+</tr>
+<tr>
+<td><a href="?DELAYMINS">DELAYMINS( delay )</a></td>
+<td>Delay the sequence a number of minutes</td>
+</tr>
+<tr>
+<td><a href="?DELAYRANDOM">DELAYRANDOM( min_delay, max_delay )</a></td>
+<td>Delay a random period of time</td>
+</tr>
+<tr>
+<td><a href="?RANDWAIT">RANDWAIT( ??? )</a></td>
+<td>TBA</td>
+</tr>
+<tr>
+<td><a href="?IFRANDOM">IFRANDOM( percent )</a></td>
+<td>Run commands a random percentage of the time</td>
+</tr>
+<tr>
+<td><a href="?ROUTE_CAPTION">ROUTE_CAPTION( route_id, "caption" )</a></td>
+<td>Change the label of the Route button</td>
+</tr>
+<tr>
+<td><a href="?ROUTE_ACTIVE">ROUTE_ACTIVE( route_id )</a></td>
+<td>Activate a Route</td>
+</tr>
+<tr>
+<td><a href="?ROUTE_INACTIVE">ROUTE_INACTIVE( route_id )</a></td>
+<td>Deactivate a Route</td>
+</tr>
+<tr>
+<td><a href="?ROUTE_HIDDEN">ROUTE_HIDDEN( route_id )</a></td>
+<td>Hide a Route from display</td>
+</tr>
+<tr>
+<td><a href="?ROUTE_DISABLED">ROUTE_DISABLED( route_id )</a></td>
+<td>disable a Route</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="admonition-title"><code>ON??()</code> <code>AT()</code> <code>IF??()</code> <code>AFTER()</code></p>
+<p>Also see the various <code>ON??()</code>, `AFTER??()<code>events and</code>AT()<code>,</code>IF??()`` conditions in the sections below for other types of flow control.</p>
+</div>
+<hr />
+<p><br/></p>
+<hr />
 <h2 id="objects-definition-and-control">Objects: Definition and Control<a class="headerlink" href="#objects-definition-and-control" title="Permanent link">&para;</a></h2>
 <h3 id="create-and-manage-hal-device-objects">Create and manage <abbr title="Hardware Abstraction Layer. Allows the CS to discover and use the hardware through a simple abstract API, regardless of the type of underlying hardware.">HAL</abbr> device objects<a class="headerlink" href="#create-and-manage-hal-device-objects" title="Permanent link">&para;</a></h3>
 <table>
@@ -11076,15 +11101,16 @@
 </thead>
 <tbody>
 <tr>
-<td><abbr title="Hardware Abstraction Layer. Allows the CS to discover and use the hardware through a simple abstract API, regardless of the type of underlying hardware.">HAL</abbr>( device, parameters )</td>
+<td><a href="?HAL"><abbr title="Hardware Abstraction Layer. Allows the CS to discover and use the hardware through a simple abstract API, regardless of the type of underlying hardware.">HAL</abbr>( device, parameters )</a></td>
 <td>Create a <abbr title="Hardware Abstraction Layer. Allows the CS to discover and use the hardware through a simple abstract API, regardless of the type of underlying hardware.">HAL</abbr> device in myAutomation.h</td>
 </tr>
 <tr>
-<td>HAL_IGNORE_DEFAULTS</td>
+<td><a href="?HAL_IGNORE_DEFAULTS">HAL_IGNORE_DEFAULTS</a></td>
 <td>Disable default MCP23017 and PCA9685 <abbr title="Hardware Abstraction Layer. Allows the CS to discover and use the hardware through a simple abstract API, regardless of the type of underlying hardware.">HAL</abbr> devices</td>
 </tr>
 </tbody>
 </table>
+<hr />
 <h3 id="signal-objects-definition-and-control">Signal Objects: Definition and Control<a class="headerlink" href="#signal-objects-definition-and-control" title="Permanent link">&para;</a></h3>
 <table>
 <thead>
@@ -11095,71 +11121,72 @@
 </thead>
 <tbody>
 <tr>
-<td>SIGNAL( red_pin, amber_pin, green_pin )</td>
+<td><a href="?SIGNAL">SIGNAL( red_pin, amber_pin, green_pin )</a></td>
 <td>Define a pin based signal</td>
 </tr>
 <tr>
-<td>SIGNALH( red_pin, amber_pin, green_pin )</td>
+<td><a href="?SIGNALH">SIGNALH( red_pin, amber_pin, green_pin )</a></td>
 <td>Define a pin based signal with active high pins</td>
 </tr>
 <tr>
-<td>SERVO_SIGNAL( <abbr title="an Arduino pin number that has been extended to include pins on external devices or expanders">vpin</abbr>, red_pos, amber_pos, green_pos )</td>
+<td><a href="?SERVO_SIGNAL">SERVO_SIGNAL( <abbr title="an Arduino pin number that has been extended to include pins on external devices or expanders">vpin</abbr>, red_pos, amber_pos, green_pos )</a></td>
 <td>Define a servo based signal</td>
 </tr>
 <tr>
-<td>DCC_SIGNAL( id, addr, sub_addr )</td>
+<td><a href="?DCC_SIGNAL">DCC_SIGNAL( id, addr, sub_addr )</a></td>
 <td>Define a DCC accessory signal</td>
 </tr>
 <tr>
-<td>DCCX_SIGNAL( Address, redAspect, amberAspect, greenAspect )</td>
+<td><a href="?DCCX_SIGNAL">DCCX_SIGNAL( Address, redAspect, amberAspect, greenAspect )</a></td>
 <td>Defines a signal (with id as dcc address)</td>
 </tr>
 <tr>
-<td>VIRTUAL_SIGNAL( id )</td>
+<td><a href="?VIRTUAL_SIGNAL">VIRTUAL_SIGNAL( id )</a></td>
 <td>Define a virtual signal</td>
 </tr>
 <tr>
-<td>IFRED( signal_id )</td>
+<td><a href="?IFRED">IFRED( signal_id )</a></td>
 <td>Test if signal is red</td>
 </tr>
 <tr>
-<td>IFAMBER( signal_id )</td>
+<td><a href="?IFAMBER">IFAMBER( signal_id )</a></td>
 <td>Test if signal is amber</td>
 </tr>
 <tr>
-<td>IFGREEN( signal_id )</td>
+<td><a href="?IFGREEN">IFGREEN( signal_id )</a></td>
 <td>Test if signal is green</td>
 </tr>
 <tr>
-<td>GREEN( signal_id )</td>
+<td><a href="?GREEN">GREEN( signal_id )</a></td>
 <td>Set a defined signal to GREEN</td>
 </tr>
 <tr>
-<td>AMBER( signal_id )</td>
+<td><a href="?AMBER">AMBER( signal_id )</a></td>
 <td>Set a defined signal to Amber</td>
 </tr>
 <tr>
-<td>RED( signal_id )</td>
+<td><a href="?RED">RED( signal_id )</a></td>
 <td>Set defined signal to Red</td>
 </tr>
 <tr>
-<td>ASPECT( address, aspect )</td>
+<td><a href="?ASPECT">ASPECT( address, aspect )</a></td>
 <td>Command for DCC Extended Accessories</td>
 </tr>
 <tr>
-<td>ONGREEN( signal_id)</td>
+<td><a href="?ONGREEN">ONGREEN( signal_id)</a></td>
 <td>Define event handler for when a signal is set to the green</td>
 </tr>
 <tr>
-<td>ONAMBER( signal_id)</td>
+<td><a href="?ONAMBER">ONAMBER( signal_id)</a></td>
 <td>Define event handler for when a signal is set to the amber</td>
 </tr>
 <tr>
-<td>ONRED( signal_id)</td>
+<td><a href="?ONRED">ONRED( signal_id)</a></td>
 <td>Define event handler for when a signal is set to the red aspect</td>
 </tr>
 </tbody>
 </table>
+<hr />
 <h3 id="turnoutpoint-objects-definition-and-control"><abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">Turnout</abbr>/Point Objects: Definition and Control<a class="headerlink" href="#turnoutpoint-objects-definition-and-control" title="Permanent link">&para;</a></h3>
 <table>
 <thead>
@@ -11170,55 +11197,73 @@
 </thead>
 <tbody>
 <tr>
-<td>TURNOUT( turnout_id, addr, sub_addr [, "description"]|HIDDEN )</td>
+<td><a href="?TURNOUT">TURNOUT( turnout_id, addr, sub_addr [, "description"]|HIDDEN )</a></td>
 <td>Define a DCC accessory <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnout</abbr>/point</td>
 </tr>
 <tr>
-<td>TURNOUTL( turnout_id, addr [, "description"]|HIDDEN )</td>
+<td><a href="?TURNOUTL">TURNOUTL( turnout_id, addr [, "description"]|HIDDEN )</a></td>
 <td>Define a DCC accessory <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnout</abbr>/point</td>
 </tr>
 <tr>
-<td>PIN_TURNOUT( turnout_id, pin [, "description"]|HIDDEN )</td>
+<td><a href="?PIN_TURNOUT">PIN_TURNOUT( turnout_id, pin [, "description"]|HIDDEN )</a></td>
 <td>Define a pin operated <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnout</abbr></td>
 </tr>
 <tr>
-<td>SERVO_TURNOUT( turnout_id, pin, active_angle, inactive_angle, profile [, "description"]</td>
-<td>HIDDEN )</td>
+<td><a href="?SERVO_TURNOUT">SERVO_TURNOUT( turnout_id, pin, active_angle, inactive_angle, profile [, "description"]|HIDDEN )</a></td>
+<td>Define a servo <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnout</abbr>/point</td>
 </tr>
 <tr>
-<td>VIRTUAL_TURNOUT( turnout_id [, "description"]|HIDDEN )</td>
+<td><a href="?VIRTUAL_TURNOUT">VIRTUAL_TURNOUT( turnout_id [, "description"]|HIDDEN )</a></td>
 <td>Define a virtual <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnout</abbr>, which is backed by another automation sequence</td>
 </tr>
 <tr>
-<td>IFCLOSED( turnout_id )</td>
+<td><a href="?IFCLOSED">IFCLOSED( turnout_id )</a></td>
 <td>Test if a <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnout</abbr>/point is closed</td>
 </tr>
 <tr>
-<td>IFTHROWN( turnout_id )</td>
+<td><a href="?IFTHROWN">IFTHROWN( turnout_id )</a></td>
 <td>Test if a <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnout</abbr>/point is thrown</td>
 </tr>
 <tr>
-<td>ONCLOSE( turnout_id )</td>
+<td><a href="?ONCLOSE">ONCLOSE( turnout_id )</a></td>
 <td>Event handler for when a <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnout</abbr>/point is closed</td>
 </tr>
 <tr>
-<td>ONTHROW( turnout_id )</td>
+<td><a href="?ONTHROW">ONTHROW( turnout_id )</a></td>
 <td>Event handler for when a <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnout</abbr>/point is thrown</td>
 </tr>
 <tr>
-<td>CLOSE( turnout_id )</td>
+<td><a href="?CLOSE">CLOSE( turnout_id )</a></td>
 <td>Close a <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnout</abbr>/point</td>
 </tr>
 <tr>
-<td>THROW( turnout_id )</td>
+<td><a href="?THROW">THROW( turnout_id )</a></td>
 <td>Throw a <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnout</abbr>/point</td>
 </tr>
 <tr>
-<td>TOGGLE_TURNOUT( turnout_id )</td>
+<td><a href="?TOGGLE_TURNOUT">TOGGLE_TURNOUT( turnout_id )</a></td>
 <td>Toggle a defined <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnout</abbr>/point between CLOSE/THROW</td>
 </tr>
 </tbody>
 </table>
+<p><em>Parameters:</em>  </p>
+<ul>
+<li><strong>turnout_id</strong> - unique Id for the <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnout</abbr>/point servo  </li>
+<li><strong>pin</strong> - <abbr title="an Arduino pin number that has been extended to include pins on external devices or expanders">vpin</abbr> to which the servo is attached  </li>
+<li><strong>active_angle</strong> - the <abbr title="Pulse Width Modulation">PWM</abbr> value corresponding to the servo position for THROWN state, normally in the range 102 to 490  </li>
+<li><strong>inactive_angle</strong> - the <abbr title="Pulse Width Modulation">PWM</abbr> value corresponding to the servo position for CLOSED state, normally in the range 102 to 490  </li>
+<li><strong>profile</strong> - one of  <ul>
+<li><code>Instant</code> = Instant,  </li>
+<li><code>Fast</code> = Fast (0.5 sec),  </li>
+<li><code>Medium</code> = Medium (1 sec),  </li>
+<li><code>Slow</code> = Slow (2 sec) and  </li>
+<li><code>Bounce</code> = Bounce (subject to revision)  </li>
+</ul>
+</li>
+<li><strong>description</strong> - The description that will be assigned to the <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnout</abbr>/point, or  </li>
+<li><em>HIDDEN</em> - keyword - if used instead of the "description" the <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">Turnout</abbr>/point will not appear in the lists sent to throttle/controllers</li>
+</ul>
+<hr />
 <h3 id="turntabletraverser-objects-definition-and-control">Turntable/Traverser Objects: Definition and Control<a class="headerlink" href="#turntabletraverser-objects-definition-and-control" title="Permanent link">&para;</a></h3>
 <table>
 <thead>
@@ -11229,55 +11274,56 @@
 </thead>
 <tbody>
 <tr>
-<td>MOVETT( id, steps, activity )</td>
+<td><a href="?MOVETT">MOVETT( id, steps, activity )</a></td>
 <td>Move a EX‑Turntable to a step position and perform an activity</td>
 </tr>
 <tr>
-<td>IFRE ( <abbr title="an Arduino pin number that has been extended to include pins on external devices or expanders">vpin</abbr>, value )</td>
+<td><a href="?IFRE">IFRE ( <abbr title="an Arduino pin number that has been extended to include pins on external devices or expanders">vpin</abbr>, value )</a></td>
 <td>Test if a rotary encoder has been set to a value</td>
 </tr>
 <tr>
-<td>ONCHANGE( <abbr title="an Arduino pin number that has been extended to include pins on external devices or expanders">vpin</abbr> )</td>
+<td><a href="?ONCHANGE">ONCHANGE( <abbr title="an Arduino pin number that has been extended to include pins on external devices or expanders">vpin</abbr> )</a></td>
 <td>Detects a rotary encoder has changed position</td>
 </tr>
 <tr>
-<td>Turntable features</td>
+<td><a href="?Turntable">Turntable features</a></td>
 <td></td>
 </tr>
 <tr>
-<td>DCC_TURNTABLE( id, home_angle, [, "description"] )</td>
+<td><a href="?DCC_TURNTABLE">DCC_TURNTABLE( id, home_angle, [, "description"] )</a></td>
 <td>Define a DCC accessory turntable/traverser</td>
 </tr>
 <tr>
-<td>EXTT_TURNTABLE( id, <abbr title="an Arduino pin number that has been extended to include pins on external devices or expanders">vpin</abbr>, home_angle, [, "description"] )</td>
+<td><a href="?EXTT_TURNTABLE">EXTT_TURNTABLE( id, <abbr title="an Arduino pin number that has been extended to include pins on external devices or expanders">vpin</abbr>, home_angle, [, "description"] )</a></td>
 <td>Define an EX-Turntable turntable/traverser</td>
 </tr>
 <tr>
-<td>TT_ADDPOSITION( id, position_id, value, angle [, "description"] )</td>
+<td><a href="?TT_ADDPOSITION">TT_ADDPOSITION( id, position_id, value, angle [, "description"] )</a></td>
 <td>Add a turntable position</td>
 </tr>
 <tr>
-<td>IFTTPOSITION( id, position )</td>
+<td><a href="?IFTTPOSITION">IFTTPOSITION( id, position )</a></td>
 <td>Test if turntable/traverser is at a position</td>
 </tr>
 <tr>
-<td>ONROTATE( id )</td>
+<td><a href="?ONROTATE">ONROTATE( id )</a></td>
 <td>Event handler for when a turntable/traverser is rotated</td>
 </tr>
 <tr>
-<td>ROTATE( id, position, activity )</td>
+<td><a href="?ROTATE">ROTATE( id, position, activity )</a></td>
 <td>Rotate an EX-Turntable turntable/traverser</td>
 </tr>
 <tr>
-<td>ROTATE_DCC( id, position )</td>
+<td><a href="?ROTATE_DCC">ROTATE_DCC( id, position )</a></td>
 <td>Rotate a DCC accessory turntable/traverser</td>
 </tr>
 <tr>
-<td>WAITFORTT( id )</td>
+<td><a href="?WAITFORTT">WAITFORTT( id )</a></td>
 <td>Wait for EX-Turntable turntable/traverser to complete a rotation</td>
 </tr>
 </tbody>
 </table>
+<hr />
 <h3 id="sensorsinputs-reading-and-responding">Sensors/Inputs: Reading and Responding<a class="headerlink" href="#sensorsinputs-reading-and-responding" title="Permanent link">&para;</a></h3>
 <table>
 <thead>
@@ -11288,79 +11334,84 @@
 </thead>
 <tbody>
 <tr>
-<td>JMRI_SENSOR(<abbr title="an Arduino pin number that has been extended to include pins on external devices or expanders">vpin</abbr> [,count])</td>
+<td><a href="?JMRI_SENSOR">JMRI_SENSOR(<abbr title="an Arduino pin number that has been extended to include pins on external devices or expanders">vpin</abbr> [,count])</a></td>
 <td>Creates <S> type sensors visible to <abbr title="Java Model Railroad Interface">JMRI</abbr></td>
 </tr>
 <tr>
-<td>AT( <abbr title="an Arduino pin number that has been extended to include pins on external devices or expanders">vpin</abbr> )</td>
+<td><a href="?AT">AT( <abbr title="an Arduino pin number that has been extended to include pins on external devices or expanders">vpin</abbr> )</a></td>
 <td>Causes a sequence to wait until a sensor is active/triggered</td>
 </tr>
 <tr>
-<td>AFTER( <abbr title="an Arduino pin number that has been extended to include pins on external devices or expanders">vpin</abbr> )</td>
+<td><a href="?AFTER">AFTER( <abbr title="an Arduino pin number that has been extended to include pins on external devices or expanders">vpin</abbr> )</a></td>
 <td>Causes a sequence to wait until after a sensor has been triggered</td>
 </tr>
 <tr>
-<td>ATTIMEOUT( <abbr title="an Arduino pin number that has been extended to include pins on external devices or expanders">vpin</abbr>, timeout_ms )</td>
+<td><a href="?ATTIMEOUT">ATTIMEOUT( <abbr title="an Arduino pin number that has been extended to include pins on external devices or expanders">vpin</abbr>, timeout_ms )</a></td>
 <td>Causes a sequence to wait until either a sensor is active/triggered, or if the timer runs out</td>
 </tr>
 <tr>
-<td>IF( <abbr title="an Arduino pin number that has been extended to include pins on external devices or expanders">vpin</abbr> )</td>
+<td><a href="?IF">IF( <abbr title="an Arduino pin number that has been extended to include pins on external devices or expanders">vpin</abbr> )</a></td>
 <td>If sensor activated or latched, continue</td>
 </tr>
 <tr>
-<td>IFNOT( <abbr title="an Arduino pin number that has been extended to include pins on external devices or expanders">vpin</abbr> )</td>
+<td><a href="?IFNOT">IFNOT( <abbr title="an Arduino pin number that has been extended to include pins on external devices or expanders">vpin</abbr> )</a></td>
 <td>If sensor NOT activated and NOT latched, continue</td>
 </tr>
 <tr>
-<td>IFTIMEOUT</td>
+<td><a href="?IFTIMEOUT">IFTIMEOUT</a></td>
 <td>Tests if “timed out” flag has been set by an ATTIMEOUT() sensor reading attempt</td>
 </tr>
 <tr>
-<td>ATGTE( <abbr title="an Arduino pin number that has been extended to include pins on external devices or expanders">vpin</abbr>, value )</td>
+<td><a href="?ATGTE">ATGTE( <abbr title="an Arduino pin number that has been extended to include pins on external devices or expanders">vpin</abbr>, value )</a></td>
 <td>Waits for an analog pin to reach a value</td>
 </tr>
 <tr>
-<td>ATLT ( <abbr title="an Arduino pin number that has been extended to include pins on external devices or expanders">vpin</abbr>, value )</td>
+<td><a href="?ATLT">ATLT ( <abbr title="an Arduino pin number that has been extended to include pins on external devices or expanders">vpin</abbr>, value )</a></td>
 <td>Waits for an analog pin to go below a value</td>
 </tr>
 <tr>
-<td>IFGTE( <abbr title="an Arduino pin number that has been extended to include pins on external devices or expanders">vpin</abbr>, value )</td>
+<td><a href="?IFGTE">IFGTE( <abbr title="an Arduino pin number that has been extended to include pins on external devices or expanders">vpin</abbr>, value )</a></td>
 <td>Test if analog pin reading is greater than or equal to value</td>
 </tr>
 <tr>
-<td>IFLT( <abbr title="an Arduino pin number that has been extended to include pins on external devices or expanders">vpin</abbr>, value )</td>
+<td><a href="?IFLT">IFLT( <abbr title="an Arduino pin number that has been extended to include pins on external devices or expanders">vpin</abbr>, value )</a></td>
 <td>Test if analog pin reading is less than value</td>
 </tr>
 <tr>
-<td>ATTIMOUT1 ( <abbr title="an Arduino pin number that has been extended to include pins on external devices or expanders">vpin</abbr>, value )</td>
+<td><a href="?ATTIMOUT1">ATTIMOUT1 ( <abbr title="an Arduino pin number that has been extended to include pins on external devices or expanders">vpin</abbr>, value )</a></td>
 <td>TBA</td>
 </tr>
 <tr>
-<td>ATTIMOUT2 ( <abbr title="an Arduino pin number that has been extended to include pins on external devices or expanders">vpin</abbr>, value )</td>
+<td><a href="?ATTIMOUT2">ATTIMOUT2 ( <abbr title="an Arduino pin number that has been extended to include pins on external devices or expanders">vpin</abbr>, value )</a></td>
 <td>TBA</td>
 </tr>
 <tr>
-<td>DRIVE ( <abbr title="an Arduino pin number that has been extended to include pins on external devices or expanders">vpin</abbr> )</td>
+<td><a href="?DRIVE">DRIVE ( <abbr title="an Arduino pin number that has been extended to include pins on external devices or expanders">vpin</abbr> )</a></td>
 <td>TBA</td>
 </tr>
 <tr>
-<td>LATCH( <abbr title="an Arduino pin number that has been extended to include pins on external devices or expanders">vpin</abbr> )</td>
+<td><a href="?LATCH">LATCH( <abbr title="an Arduino pin number that has been extended to include pins on external devices or expanders">vpin</abbr> )</a></td>
 <td>Latches a sensor on</td>
 </tr>
 <tr>
-<td>UNLATCH( <abbr title="an Arduino pin number that has been extended to include pins on external devices or expanders">vpin</abbr> )</td>
+<td><a href="?UNLATCH">UNLATCH( <abbr title="an Arduino pin number that has been extended to include pins on external devices or expanders">vpin</abbr> )</a></td>
 <td>Remove LATCH on sensor</td>
 </tr>
 <tr>
-<td>ONBUTTON( <abbr title="an Arduino pin number that has been extended to include pins on external devices or expanders">vpin</abbr> )</td>
+<td><a href="?ONBUTTON">ONBUTTON( <abbr title="an Arduino pin number that has been extended to include pins on external devices or expanders">vpin</abbr> )</a></td>
 <td>Event handler for debounced button presses</td>
 </tr>
 <tr>
-<td>ONSENSOR( <abbr title="an Arduino pin number that has been extended to include pins on external devices or expanders">vpin</abbr> )</td>
+<td><a href="?ONSENSOR">ONSENSOR( <abbr title="an Arduino pin number that has been extended to include pins on external devices or expanders">vpin</abbr> )</a></td>
 <td>Event handler for sensors</td>
 </tr>
 </tbody>
 </table>
+<p><em>Parameters:</em></p>
+<ul>
+<li><code>vpin</code> - The VPin the encoder is connected to. <br/>A negative value for a <abbr title="an Arduino pin number that has been extended to include pins on external devices or expanders">vpin</abbr> can be used for an active high sensor.|BR| &gt; value - value to test</li>
+</ul>
+<hr />
 <h3 id="output-and-led-control">Output and LED control<a class="headerlink" href="#output-and-led-control" title="Permanent link">&para;</a></h3>
 <table>
 <thead>
@@ -11371,47 +11422,48 @@
 </thead>
 <tbody>
 <tr>
-<td>SET( <abbr title="an Arduino pin number that has been extended to include pins on external devices or expanders">vpin</abbr> [,count] )</td>
+<td><a href="?SET">SET( <abbr title="an Arduino pin number that has been extended to include pins on external devices or expanders">vpin</abbr> [,count] )</a></td>
 <td>Set an output pin HIGH</td>
 </tr>
 <tr>
-<td>RESET( <abbr title="an Arduino pin number that has been extended to include pins on external devices or expanders">vpin</abbr> [,count] )</td>
+<td><a href="?RESET">RESET( <abbr title="an Arduino pin number that has been extended to include pins on external devices or expanders">vpin</abbr> [,count] )</a></td>
 <td>Reset output pin</td>
 </tr>
 <tr>
-<td>FADE( <abbr title="an Arduino pin number that has been extended to include pins on external devices or expanders">vpin</abbr>, value, ms )</td>
+<td><a href="?FADE">FADE( <abbr title="an Arduino pin number that has been extended to include pins on external devices or expanders">vpin</abbr>, value, ms )</a></td>
 <td>Fade an LED</td>
 </tr>
 <tr>
-<td>BLINK( <abbr title="an Arduino pin number that has been extended to include pins on external devices or expanders">vpin</abbr>, onMs, offMs )</td>
+<td><a href="?BLINK">BLINK( <abbr title="an Arduino pin number that has been extended to include pins on external devices or expanders">vpin</abbr>, onMs, offMs )</a></td>
 <td>Blink an output pin</td>
 </tr>
 <tr>
-<td>LCN( "msg" )</td>
+<td><a href="?LCN">LCN( "msg" )</a></td>
 <td>Send message to LCN Accessory Network</td>
 </tr>
 <tr>
-<td>CONFIGURE_SERVO(<abbr title="an Arduino pin number that has been extended to include pins on external devices or expanders">vpin</abbr>, pos1, pos2, profile)</td>
+<td><a href="?CONFIGURE_SERVO">CONFIGURE_SERVO(<abbr title="an Arduino pin number that has been extended to include pins on external devices or expanders">vpin</abbr>, pos1, pos2, profile)</a></td>
 <td>Define LED’s connected to PCA9685 boards</td>
 </tr>
 <tr>
-<td>NEOPIXEL( <abbr title="an Arduino pin number that has been extended to include pins on external devices or expanders">vpin</abbr>, red, green, blue [,count] )</td>
+<td><a href="?NEOPIXEL">NEOPIXEL( <abbr title="an Arduino pin number that has been extended to include pins on external devices or expanders">vpin</abbr>, red, green, blue [,count] )</a></td>
 <td>Controls the colour of attached Neopixel LEDs</td>
 </tr>
 <tr>
-<td>NEOPIXEL_SIGNAL( signalid, red, green, blue )</td>
+<td><a href="?NEOPIXEL_SIGNAL">NEOPIXEL_SIGNAL( signalid, red, green, blue )</a></td>
 <td>Controls the colour of attached Neopixel LED</td>
 </tr>
 <tr>
-<td>ANOUT( <abbr title="an Arduino pin number that has been extended to include pins on external devices or expanders">vpin</abbr>, value, param1, param2)</td>
+<td><a href="?ANOUT">ANOUT( <abbr title="an Arduino pin number that has been extended to include pins on external devices or expanders">vpin</abbr>, value, param1, param2)</a></td>
 <td>Writes to the <abbr title="Hardware Abstraction Layer. Allows the CS to discover and use the hardware through a simple abstract API, regardless of the type of underlying hardware.">HAL</abbr> analog output interface of a device driver</td>
 </tr>
 <tr>
-<td>PLAYSOUND( <abbr title="an Arduino pin number that has been extended to include pins on external devices or expanders">vpin</abbr>, fileNumber, volume )</td>
+<td><a href="?PLAYSOUND">PLAYSOUND( <abbr title="an Arduino pin number that has been extended to include pins on external devices or expanders">vpin</abbr>, fileNumber, volume )</a></td>
 <td>Play mp3 files from a Micro-SD card</td>
 </tr>
 </tbody>
 </table>
+<hr />
 <h3 id="servo-control">Servo Control<a class="headerlink" href="#servo-control" title="Permanent link">&para;</a></h3>
 <table>
 <thead>
@@ -11422,19 +11474,33 @@
 </thead>
 <tbody>
 <tr>
-<td>SERVO( id, position, profile )</td>
+<td><a href="?SERVO">SERVO( id, position, profile )</a></td>
 <td>Move an animation servo</td>
 </tr>
 <tr>
-<td>SERVO2( id, position, duration )</td>
+<td><a href="?SERVO2">SERVO2( id, position, duration )</a></td>
 <td>Move an animation servo taking duration</td>
 </tr>
 <tr>
-<td>WAITFOR( pin )</td>
+<td><a href="?WAITFOR">WAITFOR( pin )</a></td>
 <td>Wait for a servo motion to complete prior to continuing</td>
 </tr>
 </tbody>
 </table>
+<p><em>Parameters:</em>  </p>
+<ul>
+<li><strong>id</strong> - id of the servo to move  </li>
+<li><strong>position</strong> - position to move to  </li>
+<li><strong>profile</strong> - one of  <ul>
+<li><strong>Instant</strong> = Instant,  </li>
+<li><strong>Fast</strong> = Fast (0.5 sec),  </li>
+<li><strong>Medium</strong> = Medium (1 sec),  </li>
+<li><strong>Slow</strong> = Slow (2 sec) and  </li>
+<li><strong>Bounce</strong> = Bounce (subject to revision)</li>
+</ul>
+</li>
+</ul>
+<hr />
 <h3 id="dcc-accessory-decoder-control">DCC Accessory Decoder Control<a class="headerlink" href="#dcc-accessory-decoder-control" title="Permanent link">&para;</a></h3>
 <table>
 <thead>
@@ -11445,43 +11511,44 @@
 </thead>
 <tbody>
 <tr>
-<td>ONACTIVATE( addr, sub_addr )</td>
+<td><a href="?ONACTIVATE">ONACTIVATE( addr, sub_addr )</a></td>
 <td>Event handler for 2 part DCC accessory packet value 1</td>
 </tr>
 <tr>
-<td>ONACTIVATEL( linear )</td>
+<td><a href="?ONACTIVATEL">ONACTIVATEL( linear )</a></td>
 <td>Event handler for linear DCC accessory packet value 1</td>
 </tr>
 <tr>
-<td>ONDEACTIVATE( addr, sub_addr )</td>
+<td><a href="?ONDEACTIVATE">ONDEACTIVATE( addr, sub_addr )</a></td>
 <td>Event handler for 2 part DCC accessory packet value 0</td>
 </tr>
 <tr>
-<td>ONDEACTIVATEL( linear )</td>
+<td><a href="?ONDEACTIVATEL">ONDEACTIVATEL( linear )</a></td>
 <td>Event handler for linear DCC accessory packet value 0</td>
 </tr>
 <tr>
-<td>ACTIVATE( addr, sub_addr )</td>
+<td><a href="?ACTIVATE">ACTIVATE( addr, sub_addr )</a></td>
 <td>Sends a DCC accessory packet with value 1</td>
 </tr>
 <tr>
-<td>ACTIVATEL( linear )</td>
+<td><a href="?ACTIVATEL">ACTIVATEL( linear )</a></td>
 <td>Sends a DCC accessory packet with value 1 to a linear address</td>
 </tr>
 <tr>
-<td>DEACTIVATE( addr, sub_addr )</td>
+<td><a href="?DEACTIVATE">DEACTIVATE( addr, sub_addr )</a></td>
 <td>Sends a DCC accessory packet with value 0</td>
 </tr>
 <tr>
-<td>DEACTIVATEL( addr )</td>
+<td><a href="?DEACTIVATEL">DEACTIVATEL( addr )</a></td>
 <td>Sends a DCC accessory packet with value 0 to a linear address</td>
 </tr>
 <tr>
-<td>DCCACTIVATE( addr, sub_addr )</td>
+<td><a href="?DCCACTIVATE">DCCACTIVATE( addr, sub_addr )</a></td>
 <td>TBA</td>
 </tr>
 </tbody>
 </table>
+<hr />
 <h3 id="ex-fastclock-event-handlers">EX-FastClock Event Handlers<a class="headerlink" href="#ex-fastclock-event-handlers" title="Permanent link">&para;</a></h3>
 <table>
 <thead>
@@ -11492,20 +11559,24 @@
 </thead>
 <tbody>
 <tr>
-<td>ONTIME( value )</td>
+<td><a href="?ONTIME">ONTIME( value )</a></td>
 <td>Event handler for when the specified time is reached</td>
 </tr>
 <tr>
-<td>ONCLOCKTIME( hours, mins )</td>
+<td><a href="?ONCLOCKTIME">ONCLOCKTIME( hours, mins )</a></td>
 <td>Event handler for when the specified clock time is reached</td>
 </tr>
 <tr>
-<td>ONCLOCKMINS( mins )</td>
+<td><a href="?ONCLOCKMINS">ONCLOCKMINS( mins )</a></td>
 <td>Event handler to be repeated the same time every hour</td>
 </tr>
 </tbody>
 </table>
+<hr />
+<p><br/></p>
+<hr />
 <h2 id="locos-and-tracks">Locos and Tracks<a class="headerlink" href="#locos-and-tracks" title="Permanent link">&para;</a></h2>
+<h3 id="locos-definition-and-control">Locos - Definition and Control<a class="headerlink" href="#locos-definition-and-control" title="Permanent link">&para;</a></h3>
 <table>
 <thead>
 <tr>
@@ -11515,126 +11586,143 @@
 </thead>
 <tbody>
 <tr>
-<td>ESTOP</td>
+<td><a href="?ESTOP">ESTOP</a></td>
 <td>Emergency stops all locomotives</td>
 </tr>
 <tr>
-<td>SETLOCO( loco )</td>
+<td><a href="?SETLOCO">SETLOCO( loco )</a></td>
 <td>Set the loco address for this task</td>
 </tr>
 <tr>
-<td>READ_LOCO</td>
+<td><a href="?READ_LOCO">READ_LOCO</a></td>
 <td>Read loco ID from prog track</td>
 </tr>
 <tr>
-<td>FWD( speed )</td>
+<td><a href="?FWD">FWD( speed )</a></td>
 <td>Drive loco forward at DCC speed</td>
 </tr>
 <tr>
-<td>REV( speed )</td>
+<td><a href="?REV">REV( speed )</a></td>
 <td>Drive loco in reverse at DCC speed</td>
 </tr>
 <tr>
-<td>SPEED( speed )</td>
+<td><a href="?SPEED">SPEED( speed )</a></td>
 <td>Drive loco in current direction at DCC speed</td>
 </tr>
 <tr>
-<td>STOP</td>
+<td><a href="?STOP">STOP</a></td>
 <td>Set loco speed to 0</td>
 </tr>
 <tr>
-<td>MOMENTUM( accel [,decel])</td>
+<td><a href="?MOMENTUM">MOMENTUM( accel [,decel])</a></td>
 <td>Set loco momentum</td>
 </tr>
 <tr>
-<td>FON( func )</td>
+<td><a href="?FON">FON( func )</a></td>
 <td>Turn on loco function</td>
 </tr>
 <tr>
-<td>FOFF( func )</td>
+<td><a href="?FOFF">FOFF( func )</a></td>
 <td>Turn off loco function</td>
 </tr>
 <tr>
-<td>FTOGGLE( func )</td>
+<td><a href="?FTOGGLE">FTOGGLE( func )</a></td>
 <td>Toggle the state of a loco’s function</td>
 </tr>
 <tr>
-<td>INVERT_DIRECTION</td>
+<td><a href="?INVERT_DIRECTION">INVERT_DIRECTION</a></td>
 <td>Switches FWD/REV meaning for loco</td>
 </tr>
 <tr>
-<td>ROSTER( loco, "name", "func_map" )</td>
+<td><a href="?ROSTER">ROSTER( loco, "name", "func_map" )</a></td>
 <td>Provide roster info for a specified loco</td>
 </tr>
 <tr>
-<td><abbr title="Programming on Main / Ops Mode Programming">POM</abbr>( cv, value )</td>
+<td><a href="?POM"><abbr title="Programming on Main / Ops Mode Programming">POM</abbr>( cv, value )</a></td>
 <td>Program <abbr title="Configuration Variable (DCC Decoders)">CV</abbr> value on main</td>
 </tr>
 <tr>
-<td>IFLOCO( loco )</td>
+<td><a href="?IFLOCO">IFLOCO( loco )</a></td>
 <td>perform commands if the specified loco ID is defined for this sequence</td>
 </tr>
 <tr>
-<td>XFWD( loco, speed )</td>
+<td><a href="?XFWD">XFWD( loco, speed )</a></td>
 <td>Sends DCC speed to a loco in forward direction</td>
 </tr>
 <tr>
-<td>XREV( loco, speed )</td>
+<td><a href="?XREV">XREV( loco, speed )</a></td>
 <td>Sends DCC speed to a loco in reverse direction</td>
 </tr>
 <tr>
-<td>XFON( cab, func )`</td>
+<td><a href="?XFON">XFON( loco, func )`</a></td>
 <td>Send DCC function ON to specific cab</td>
 </tr>
 <tr>
-<td>XFOFF( cab, func )</td>
+<td><a href="?XFOFF">XFOFF( loco, func )</a></td>
 <td>Send DCC function OFF to specific cab</td>
 </tr>
 <tr>
-<td>XFTOGGLE( loco, func )</td>
+<td><a href="?XFTOGGLE">XFTOGGLE( loco, func )</a></td>
 <td>Toggle DCC function on specific loco</td>
 </tr>
 <tr>
-<td>XPOM( loco, cv, value )</td>
+<td><a href="?XPOM">XPOM( loco, cv, value )</a></td>
 <td>Write <abbr title="Configuration Variable (DCC Decoders)">CV</abbr> value to specified loco on main</td>
 </tr>
 <tr>
-<td>XSAVE_SPEED( loco )</td>
+<td><a href="?XSAVE_SPEED">XSAVE_SPEED( loco )</a></td>
 <td>Saves the current speed of a loco</td>
 </tr>
 <tr>
-<td>XRESTORE_SPEED( loco )</td>
+<td><a href="?XRESTORE_SPEED">XRESTORE_SPEED( loco )</a></td>
 <td>Restores the saved speed of a loco</td>
 </tr>
 <tr>
-<td>FORGET</td>
+<td><a href="?FORGET">FORGET</a></td>
 <td>Forget the loco in the running automation/sequence</td>
 </tr>
-</tbody>
-</table>
-<h3 id="locos-definition-and-control">Locos: Definition and Control<a class="headerlink" href="#locos-definition-and-control" title="Permanent link">&para;</a></h3>
-<table>
-<thead>
 <tr>
-<th>Command</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>SET_TRACK( track, mode )</td>
-<td>Configures the mode of a track</td>
+<td><a href="?STASH">STASH( stash_id )</a></td>
+<td>Stashes the current loco/invert</td>
 </tr>
 <tr>
-<td>SET_POWER( track, ON/OFF )</td>
-<td>Enable/Disable power on a track</td>
+<td><a href="?CLEAR_STASH">CLEAR_STASH( stash_id )</a></td>
+<td>Zeroes the specified stash</td>
 </tr>
 <tr>
-<td>SETFREQ( frequency )</td>
-<td>Enable a specific frequency</td>
+<td><a href="?CLEAR_ALL_STASH">CLEAR_ALL_STASH</a></td>
+<td>Zeroes all stashes</td>
+</tr>
+<tr>
+<td><a href="?PICKUP_STASH">PICKUP_STASH( stash_id )</a></td>
+<td>Retrieves and sets the loco/invert from the specified stash</td>
 </tr>
 </tbody>
 </table>
+<p><em>Parameters:</em>  </p>
+<ul>
+<li>
+<p><strong>speed</strong> - DCC speed (0-127)  </p>
+<ul>
+<li>2-127 = speed 1-126  </li>
+<li>0 = stop  </li>
+<li>1 = Estop</li>
+</ul>
+</li>
+<li>
+<p><strong>loco</strong> - DCC address of your loco &gt; <strong>name</strong> - the name of this loco that will appear in the throttle apps. Enclosed in quotes (")</p>
+</li>
+<li>
+<p><strong>funct_map</strong> - the names that you want to see for the functions specific to this loco separated by forward slashes (/). All enclosed in quotes (")</p>
+<p>Note that if the function is ‘momentary’ rather than ‘latching’ (On/Off) then start the function label with a asterisk (*). The most common example of this is the Horn/Whistle which is commonly on F2.</p>
+</li>
+<li>
+<p><strong>func</strong> - Function number (0-31)</p>
+</li>
+<li><strong>cv</strong> - cv to change</li>
+<li><strong>value</strong> - value to write</li>
+</ul>
+<hr />
 <h3 id="trackmanager-control">TrackManager Control<a class="headerlink" href="#trackmanager-control" title="Permanent link">&para;</a></h3>
 <table>
 <thead>
@@ -11645,19 +11733,65 @@
 </thead>
 <tbody>
 <tr>
-<td>SET_TRACK( track, mode )</td>
+<td><a href="?SET_TRACK">SET_TRACK( track, mode )</a></td>
 <td>Configures the mode of a track</td>
 </tr>
 <tr>
-<td>SET_POWER( track, ON/OFF )</td>
+<td><a href="?SET_POWER">SET_POWER( track, ON/OFF )</a></td>
 <td>Enable/Disable power on a track</td>
 </tr>
 <tr>
-<td>SETFREQ( frequency )</td>
+<td><a href="?SETFREQ">SETFREQ( frequency )</a></td>
 <td>Enable a specific frequency</td>
 </tr>
 </tbody>
 </table>
+<p>The settings achievable vary slightly depending upon the processor running the <strong>EX‑CommandStation</strong> but broadly follow the following:</p>
+<p><em>Parameters:</em>  </p>
+<ul>
+<li><strong>track</strong> - - The track to configure, valid options are A to H</li>
+<li>
+<p><strong>mode</strong> - - The mode to set the track to.</p>
+<ul>
+<li>valid options for DCC are:  <ul>
+<li><code>MAIN</code></li>
+<li><code>MAIN_INV</code></li>
+<li><code>MAIN_AUTO</code></li>
+<li><code>PROG</code></li>
+</ul>
+</li>
+<li>valid options for DC are:  <ul>
+<li><code>DC</code></li>
+<li><code>DC_INV</code></li>
+<li><code>DCX</code> (same as DC_INV)</li>
+</ul>
+</li>
+<li>If a track is unused, it can be set to:<ul>
+<li><code>NONE</code></li>
+</ul>
+</li>
+<li>If the <strong>EX‑CommandStation</strong> is configured as a Booster (ESP32 Microcontrollers only), it can be set to:  <ul>
+<li><code>BOOST</code></li>
+<li><code>BOOST_INV</code></li>
+<li><code>BOOST_AUTO</code></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>frequency</strong> - - The frequency to set for the current track
+    -valid options are:
+        - <strong>0</strong> - Default - low frequency 131Hz
+        - <strong>1</strong> - Mid frequency - 490Hz
+        - <strong>2</strong> - High frequency - 3400Hz
+        - <strong>3</strong> - Supersonic - 62500Hz</p>
+</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">DC</p>
+<p>When setting at track mode to either <code>DC</code> or <code>DC_INV</code> / <code>DCX</code>, you must use the <code>SETLOCO(loco)</code> command first to specify the loco ID that will be used for the DC track then <code>SET_TRACK()</code></p>
+</div>
+<hr />
 <h3 id="controlling-overloadshorts">Controlling Overload/Shorts<a class="headerlink" href="#controlling-overloadshorts" title="Permanent link">&para;</a></h3>
 <table>
 <thead>
@@ -11668,15 +11802,16 @@
 </thead>
 <tbody>
 <tr>
-<td>ONOVERLOAD( track )</td>
+<td><a href="?ONOVERLOAD">ONOVERLOAD( track )</a></td>
 <td>Event handler for when an Overload occurs</td>
 </tr>
 <tr>
-<td>AFTEROVERLOAD( track )</td>
+<td><a href="?AFTEROVERLOAD">AFTEROVERLOAD( track )</a></td>
 <td>Event handler for when an Overload clears</td>
 </tr>
 </tbody>
 </table>
+<hr />
 <h3 id="virtual-block-control">Virtual Block Control<a class="headerlink" href="#virtual-block-control" title="Permanent link">&para;</a></h3>
 <table>
 <thead>
@@ -11687,19 +11822,22 @@
 </thead>
 <tbody>
 <tr>
-<td>RESERVE( block_id )</td>
+<td><a href="?RESERVE">RESERVE( block_id )</a></td>
 <td>Reserve a block</td>
 </tr>
 <tr>
-<td>FREE( block_id )</td>
+<td><a href="?FREE">FREE( block_id )</a></td>
 <td>Free block</td>
 </tr>
 <tr>
-<td>IFRESERVE( block_id )</td>
+<td><a href="?IFRESERVE">IFRESERVE( block_id )</a></td>
 <td>Execute commands if block is NOT reserved</td>
 </tr>
 </tbody>
 </table>
+<hr />
+<p><br/></p>
+<hr />
 <h2 id="system">System<a class="headerlink" href="#system" title="Permanent link">&para;</a></h2>
 <h3 id="communication-and-display-functions">Communication and Display Functions<a class="headerlink" href="#communication-and-display-functions" title="Permanent link">&para;</a></h3>
 <table>
@@ -11711,59 +11849,60 @@
 </thead>
 <tbody>
 <tr>
-<td>LCD( row, "msg" )</td>
+<td><a href="?LCD">LCD( row, "msg" )</a></td>
 <td>Write message on LCD/OLED</td>
 </tr>
 <tr>
-<td>SCREEN( display, row, "msg" )</td>
+<td><a href="?SCREEN">SCREEN( display, row, "msg" )</a></td>
 <td>Writes a message to a display</td>
 </tr>
 <tr>
-<td>BROADCAST( "msg" )</td>
+<td><a href="?BROADCAST">BROADCAST( "msg" )</a></td>
 <td>Broadcast to all throttles/<abbr title="Java Model Railroad Interface">JMRI</abbr> on serial and WiFi</td>
 </tr>
 <tr>
-<td>PRINT( "msg" )</td>
+<td><a href="?PRINT">PRINT( "msg" )</a></td>
 <td>Print diagnostic message to Serial Monitor</td>
 </tr>
 <tr>
-<td>SERIAL( "msg" )</td>
+<td><a href="?SERIAL">SERIAL( "msg" )</a></td>
 <td>Writes direct to Serial</td>
 </tr>
 <tr>
-<td>SERIAL1( "msg" )</td>
+<td><a href="?SERIAL1">SERIAL1( "msg" )</a></td>
 <td>Writes direct to Serial1</td>
 </tr>
 <tr>
-<td>SERIAL2( "msg" )</td>
+<td><a href="?SERIAL2">SERIAL2( "msg" )</a></td>
 <td>Writes direct to Serial2</td>
 </tr>
 <tr>
-<td>SERIAL3( "msg" )</td>
+<td><a href="?SERIAL3">SERIAL3( "msg" )</a></td>
 <td>Writes direct to Serial3</td>
 </tr>
 <tr>
-<td>SERIAL4( "msg" )</td>
+<td><a href="?SERIAL4">SERIAL4( "msg" )</a></td>
 <td>Writes direct to Serial4</td>
 </tr>
 <tr>
-<td>SERIAL5( "msg" )</td>
+<td><a href="?SERIAL5">SERIAL5( "msg" )</a></td>
 <td>Writes direct to Serial5</td>
 </tr>
 <tr>
-<td>SERIAL6( "msg" )</td>
+<td><a href="?SERIAL6">SERIAL6( "msg" )</a></td>
 <td>Writes direct to Serial6</td>
 </tr>
 <tr>
-<td>WITHROTTLE( "msg" )</td>
+<td><a href="?WITHROTTLE">WITHROTTLE( "msg" )</a></td>
 <td>Writes a message to <abbr title="Communication Protocol. Trademark + iOS app owned by Brett Hoffman">WiThrottle</abbr> clients</td>
 </tr>
 <tr>
-<td>MESSAGE( "msg" )</td>
+<td><a href="?MESSAGE">MESSAGE( "msg" )</a></td>
 <td>Writes a message to all clients</td>
 </tr>
 </tbody>
 </table>
+<hr />
 <h3 id="ex-commandstation-functions">EX-CommandStation Functions<a class="headerlink" href="#ex-commandstation-functions" title="Permanent link">&para;</a></h3>
 <table>
 <thead>
@@ -11774,47 +11913,48 @@
 </thead>
 <tbody>
 <tr>
-<td>POWERON</td>
+<td><a href="?POWERON">POWERON</a></td>
 <td>Power on track and UNJOIN</td>
 </tr>
 <tr>
-<td>POWEROFF</td>
+<td><a href="?POWEROFF">POWEROFF</a></td>
 <td>Power off track</td>
 </tr>
 <tr>
-<td>JOIN</td>
+<td><a href="?JOIN">JOIN</a></td>
 <td>Join <abbr title="Programming Track / Service Mode">PROG</abbr> and <abbr title="Main Track / Operations Mode (Ops Mode)">MAIN</abbr> track outputs</td>
 </tr>
 <tr>
-<td>UNJOIN</td>
+<td><a href="?UNJOIN">UNJOIN</a></td>
 <td>Disconnect prog track from main</td>
 </tr>
 <tr>
-<td>ENDEXRAIL</td>
+<td><a href="?ENDEXRAIL">ENDEXRAIL</a></td>
 <td>⚠️ Deprecated - Do not use</td>
 </tr>
 <tr>
-<td>EXRAIL</td>
+<td><a href="?EXRAIL">EXRAIL</a></td>
 <td>⚠️ Deprecated - Do not use</td>
 </tr>
 <tr>
-<td>KILLALL</td>
+<td><a href="?KILLALL">KILLALL</a></td>
 <td>Kills all running EXRAIL activities</td>
 </tr>
 <tr>
-<td>PARSE( "msg" )</td>
+<td><a href="?PARSE">PARSE( "msg" )</a></td>
 <td>Allows parsing of a DCC-EX <abbr title="Application Programming Interface">API</abbr> command via myAutomation.h</td>
 </tr>
 <tr>
-<td>DISABLE_PROG</td>
+<td><a href="?DISABLE_PROG">DISABLE_PROG</a></td>
 <td>Disable programming to save RAM/Flash</td>
 </tr>
 <tr>
-<td>IO_NO_HAL</td>
+<td><a href="?IO_NO_HAL">IO_NO_HAL</a></td>
 <td>Reduce FLASH footprint when <abbr title="Hardware Abstraction Layer. Allows the CS to discover and use the hardware through a simple abstract API, regardless of the type of underlying hardware.">HAL</abbr> features not required</td>
 </tr>
 </tbody>
 </table>
+<hr />
 <h3 id="layout-command-control-lcc">Layout Command Control (LCC)<a class="headerlink" href="#layout-command-control-lcc" title="Permanent link">&para;</a></h3>
 <table>
 <thead>
@@ -11825,35 +11965,38 @@
 </thead>
 <tbody>
 <tr>
-<td>ONLCC(sender, eventid)</td>
+<td><a href="?ONLCC">ONLCC(sender, eventid)</a></td>
 <td>Start task here when LCC event arrives from sender</td>
 </tr>
 <tr>
-<td>LCC(eventid)</td>
+<td><a href="?LCC">LCC(eventid)</a></td>
 <td>Issue event to LCC</td>
 </tr>
 <tr>
-<td>LCCX(senderid,eventid)</td>
+<td><a href="?LCCX">LCCX(senderid,eventid)</a></td>
 <td>Issue LCC event while impersonating another sender</td>
 </tr>
 <tr>
-<td>ACON(eventid)</td>
+<td><a href="?ACON">ACON(eventid)</a></td>
 <td>TBA</td>
 </tr>
 <tr>
-<td>ACOF(eventid)</td>
+<td><a href="?ACOF">ACOF(eventid)</a></td>
 <td>TBA</td>
 </tr>
 <tr>
-<td>ONACON(eventid)</td>
-<td>TBA</td>
+<td><a href="?ONACON">ONACON(eventid)</a></td>
+<td>Start task here when ACON for event received from MERG CBUS</td>
 </tr>
 <tr>
-<td>ONACOF(eventid)</td>
-<td>TBA</td>
+<td><a href="?ONACOF">ONACOF(eventid)</a></td>
+<td>Start task here when ACOF for event received from MERG CBUS</td>
 </tr>
 </tbody>
 </table>
+<hr />
+<p><br/></p>
+<hr />
 <h2 id="advanced">Advanced<a class="headerlink" href="#advanced" title="Permanent link">&para;</a></h2>
 <table>
 <thead>
@@ -11864,15 +12007,29 @@
 </thead>
 <tbody>
 <tr>
-<td>STEALTH( code )</td>
+<td><a href="?STEALTH">STEALTH( code )</a></td>
 <td>include some C++ code in a ROUTE/SEQUENCE</td>
 </tr>
 <tr>
-<td>STEALTH_GLOBAL( code )</td>
+<td><a href="?STEALTH_GLOBAL">STEALTH_GLOBAL( code )</a></td>
 <td>Inserts code such as static variables and functions that may be utilized by multiple STEALTH operations</td>
 </tr>
 </tbody>
 </table>
+<p>Please use this option with great care. If in doubt ask for assistance.</p>
+<p>For example:</p>
+<div class="language-c++ highlight"><pre><span></span><code><span class="c1">// run a routine to free any LATCHES that are left on.</span>
+<span class="n">SEQUENCE</span><span class="p">(</span><span class="mi">999</span><span class="p">)</span>
+<span class="w">      </span><span class="n">STEALTH</span><span class="p">(</span><span class="w">  </span><span class="c1">//RESET ANY LATCHES WE TURNED ON</span>
+<span class="w">      </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mi">255</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">getFlag</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="n">LATCH_FLAG</span><span class="p">))</span><span class="w"> </span><span class="p">{</span><span class="w">    </span><span class="c1">//IF LATCH ON</span>
+<span class="w">        </span><span class="n">setFlag</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="n">LATCH_FLAG</span><span class="p">);</span><span class="w">      </span><span class="c1">//RESET LATCH</span>
+<span class="w">          </span><span class="p">}</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">      </span><span class="p">)</span>
+<span class="n">RETURN</span>
+</code></pre></div>
+<p>then <code>CALL(999)</code> inside your onthrow/onclose sections.</p>
 <!-- These are case sensitive -->
 
 
@@ -11894,7 +12051,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="October 21, 2026 08:21:55 UTC">October 21, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="October 21, 2026 22:53:48 UTC">October 21, 2026</span>
   </span>
 
     
