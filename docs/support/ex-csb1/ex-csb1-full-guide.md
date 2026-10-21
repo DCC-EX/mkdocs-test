@@ -1,4 +1,4 @@
-# EX‑CommandStation/Booster One Express - Full Operating Manual
+# EX‑CommandStation/Booster One Express - Full Technical Manual
 
 The **EX‑CSB1** is the first fully integrated DCC Command Station with DC PWM and Booster Mode capabilities developed by the DCC-EX Team.
 

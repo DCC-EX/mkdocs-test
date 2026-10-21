@@ -246,12 +246,13 @@ li:not(.md-nav__item, .md-tabs__item) a {
     - [Raising GitHub Issues <small>(Github<br/>)</small>](../support/github.md)
     - **EX-CSB1 Guides**
         - [EX-CSB1 Extended Quick Setup Guide <small>(Quick Setup Guide)</small>](../support/ex-csb1/ex-csb1-extended-guide.md)
-        - [EX‑CommandStation/Booster One Express - Full Operating Manual <small>(Full Manual)</small>](../support/ex-csb1/ex-csb1-full-guide.md)
+        - [EX‑CommandStation/Booster One Express - Full Technical Manual <small>(Technical Manual)</small>](../support/ex-csb1/ex-csb1-full-guide.md)
     - [Articles and Videos <small>(<br/>Articles &amp; Videos)</small>](../support/articles-and-videos.md)
 - **Reference**
     - [Full Site Table of Contents <small>(Table of Contents)</small>](toc.md)
     - [Glossary of Terms](glossary.md)
     - [**EXRAIL** Full Command List <small>(<br/>EXRAIL Command List)</small>](exrail-command-reference.md)
+    - [Grouped DCC-EX EXRAIL Command Reference <small>(EXRAIL Commands <small>by&nbsp;Function&nbsp;Group</small>)</small>](exrail-commands/exrail-commands.md)
     - [DCC-EX Serial Command List <small>(Serial Commands <small>Full&nbsp;List</small>)</small>](serial-commands/serial-command-list.md)
     - [Serial Commands <small>by&nbsp;Function&nbsp;Group</small>](serial-commands/serial-commands.md)
     - **Serial Commands <small>Additional&nbsp;Info</small>**
@@ -359,7 +360,6 @@ li:not(.md-nav__item, .md-tabs__item) a {
 ## Pages Not In Navigation
 
 - [Android apps on Windows & macOS](../throttles/android-apps-on-windows-and-ios_not_in_nav.md)
-- [Connecting WiFi Throttles via USB](../products/ex-toolbox/connect_wifi_throttle_via_usb_not_in_nav.md)
 - [Connecting WiFi Throttles via USB](../throttles/connect_wifi_throttle_via_usb_not_in_nav.md)
 - [Engine Driver - Adding a Physical Dial/Knob](../throttles/engine-driver-physical-knobs_not_in_nav.md)
 - [Engine Driver - Features when using the Native Protocol](../throttles/engine-driver-native-protocol_not_in_nav.md)
