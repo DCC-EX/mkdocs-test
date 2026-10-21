@@ -6570,6 +6570,8 @@
       
         
       
+        
+      
     
     
     
@@ -6611,6 +6613,29 @@
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../accessories/hardware-list/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Hardware List
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
               
             
               
@@ -6689,12 +6714,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../../accessories/hardware-list/" class="md-nav__link">
+      <a href="../../accessories/solenoid-turnouts/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    Hardware List
+    Solenoid Turnouts/Points
     
   </span>
   
@@ -6739,7 +6764,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_6_6" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_6_7" >
         
           
           <div class="md-nav__link md-nav__container">
@@ -6756,14 +6781,14 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_7_6_6" id="__nav_7_6_6_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_7_6_7" id="__nav_7_6_7_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_7_6_6_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_7_6_6">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_7_6_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7_6_7">
             <span class="md-nav__icon md-icon"></span>
             I2C (I<sup>2</sup>C)
           </label>
@@ -6918,10 +6943,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_6_7" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_6_8" >
         
           
-          <label class="md-nav__link" for="__nav_7_6_7" id="__nav_7_6_7_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_7_6_8" id="__nav_7_6_8_label" tabindex="0">
             
   
   
@@ -6934,8 +6959,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_7_6_7_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_7_6_7">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_7_6_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7_6_8">
             <span class="md-nav__icon md-icon"></span>
             Various Devices
           </label>
@@ -6973,7 +6998,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_6_7_1" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_6_8_1" >
         
           
           <div class="md-nav__link md-nav__container">
@@ -6990,14 +7015,14 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_7_6_7_1" id="__nav_7_6_7_1_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_7_6_8_1" id="__nav_7_6_8_1_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_7_6_7_1_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_7_6_7_1">
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_7_6_8_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7_6_8_1">
             <span class="md-nav__icon md-icon"></span>
             Sounds <small>(DFPlayer)</small>
           </label>
@@ -11080,11 +11105,8 @@
 <h4 id="configure-myautomationh-dcc-turnoutspoints">Configure myAutomation.h - DCC Turnouts/Points<a class="headerlink" href="#configure-myautomationh-dcc-turnoutspoints" title="Permanent link">&para;</a></h4>
 <h3 id="pin-turnoutspoints">Pin Turnouts/Points<a class="headerlink" href="#pin-turnoutspoints" title="Permanent link">&para;</a></h3>
 <h4 id="adding-the-hardware-pin-turnoutspoints">Adding the Hardware -  Pin Turnouts/Points<a class="headerlink" href="#adding-the-hardware-pin-turnoutspoints" title="Permanent link">&para;</a></h4>
-<!-- .. sidebar::
-
-  ==TODO== You can also refer to :doc:`/ex-commandstation/accessories/turnouts/solenoid-turnouts` for more information.
--->
-
+<div class="admonition note inline end"></div>
+<p>You can also refer to the <a href="../../accessories/solenoid-turnouts/">Solenoid <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">Turnout</abbr></a> page for more information.</p>
 <p>If you have installed <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnouts</abbr>/points using simple pin control, you can config the <strong>EXRAIL</strong> so that it knows about it and you can control in in your sequences.</p>
 <div class="language-cpp highlight"><pre><span></span><code><span class="w">    </span><span class="n">PIN_TURNOUT</span><span class="p">(</span><span class="w"> </span><span class="n">id</span><span class="p">,</span><span class="w"> </span><span class="n">vpin</span><span class="w"> </span><span class="p">[,</span><span class="w"> </span><span class="s">&quot;description&quot;</span><span class="p">]</span><span class="w"> </span><span class="p">)</span>
 </code></pre></div>
@@ -11288,7 +11310,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="October 20, 2026 06:56:27 UTC">October 20, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="October 21, 2026 04:03:06 UTC">October 21, 2026</span>
   </span>
 
     
