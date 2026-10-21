@@ -40,7 +40,7 @@ When ready to publish, set *draft* to false.
 
 ## authors
 
-Authors are defined in the ".authors.yml" file, if you don't exist in there, set yourself up and set the *authors* metadata.
+Authors are defined in the ".authors.yml" file, if you don't exist in there, set yourself up and set the *authors* metadata. (It must include an avatar. It can be any image, on any website. You can use the one from anonymous if you don't have one. )
 
 ## categories
 
@@ -57,6 +57,6 @@ Valid categories are defined in "properdocs.yml", and this is the current list:
 - DCCEXProtocol
 - EXRAIL
 
-Set the appropriate category, or multiple.
+Set/remove the appropriate category in the directives at the start of this page, or multiple.
 
 --8<-- "snippets/abbr.md"
