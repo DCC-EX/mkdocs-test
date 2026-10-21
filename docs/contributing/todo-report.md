@@ -20,7 +20,7 @@ Scanned roots: `C:\Users\akers\OneDrive\github\github_doco\mkdocs-test\docs`, `C
 
 ## High TODOs
 
-Total High TODO matches: 25
+Total High TODO matches: 23
 
 | File | Line | Line text |
 | --- | ---: | --- |
@@ -30,8 +30,6 @@ Total High TODO matches: 25
 | [docs/throttles/dcc-accessories.md](../throttles/dcc-accessories.md) | 3 | ==TODO== how to control DCC Accessories |
 | [docs/reference/configuration/index.md](../reference/configuration/index.md) | 3 | ==TODO== EX-CommandStation Configuration Reference - intro / overview |
 | [docs/reference/serial-commands/serial-command-cc-wifi_not_in_nav.md](../reference/serial-commands/serial-command-cc-wifi_not_in_nav.md) | 68 | N/A. The **EX-CommandStation** will restart. ==TODO== This is no longer true |
-| [docs/reference/serial-commands/serial-command-dd-anin-anout_not_in_nav.md](../reference/serial-commands/serial-command-dd-anin-anout_not_in_nav.md) | 19 | * ``&lt;D ANOUT «vpin» «position» «profile»&gt;`` = see ==TODO== Command Description |
-| [docs/reference/serial-commands/serial-command-dd-anin-anout_not_in_nav.md](../reference/serial-commands/serial-command-dd-anin-anout_not_in_nav.md) | 20 | * ``&lt;D ANOUT «vpin» «position»&gt;`` = see ==TODO== Command Description |
 | [docs/reference/trackmanager/dc-mode-frequency.md](../reference/trackmanager/dc-mode-frequency.md) | 82 | - ==TODO==  How to effectively use DC mode when using multiple frequencies. |
 | [docs/reference/wiring/i2C/i2c-wiring.md](../reference/wiring/i2C/i2c-wiring.md) | 54 | - When using separate power sources, there is potential for a ground loop. ==TODO== |
 | [docs/reference/hardware/hal/hal-config.md](../reference/hardware/hal/hal-config.md) | 249 | Finally, upload the code to the Arduino as you would do during the standard ==TODO== :ref:`Arduino IDE Setup &lt;ex-commandstation/advanced-setup/installation-options/arduino-ide:upload the software&gt;`. |
@@ -52,7 +50,7 @@ Total High TODO matches: 25
 
 ## Medium priority TODOs
 
-Total medium priority TODO matches: 88
+Total medium priority TODO matches: 83
 
 | File | Line | Line text |
 | --- | ---: | --- |
@@ -71,8 +69,6 @@ Total medium priority TODO matches: 88
 | [docs/reference/serial-commands/serial-command-at_not_in_nav.md](../reference/serial-commands/serial-command-at_not_in_nav.md) | 22 | ==TODO== MEDIUM - Responses |
 | [docs/reference/serial-commands/serial-command-c-railcom_not_in_nav.md](../reference/serial-commands/serial-command-c-railcom_not_in_nav.md) | 24 | ==TODO== MEDIUM - Response |
 | [docs/reference/serial-commands/serial-command-caret_not_in_nav.md](../reference/serial-commands/serial-command-caret_not_in_nav.md) | 34 | ==TODO== MEDIUM - response |
-| [docs/reference/serial-commands/serial-command-dd-anin-anout_not_in_nav.md](../reference/serial-commands/serial-command-dd-anin-anout_not_in_nav.md) | 25 | * **position**: ==TODO== MEDIUM - Parameter Description |
-| [docs/reference/serial-commands/serial-command-dd-anin-anout_not_in_nav.md](../reference/serial-commands/serial-command-dd-anin-anout_not_in_nav.md) | 26 | * **profile**: ==TODO== MEDIUM - Parameter Description |
 | [docs/reference/serial-commands/serial-command-dd-anin-anout_not_in_nav.md](../reference/serial-commands/serial-command-dd-anin-anout_not_in_nav.md) | 30 | ==TODO== MEDIUM - Responses |
 | [docs/reference/serial-commands/serial-command-dd-cabs-and-minus_not_in_nav.md](../reference/serial-commands/serial-command-dd-cabs-and-minus_not_in_nav.md) | 36 | ==TODO== MEDIUM - Responses |
 | [docs/reference/serial-commands/serial-command-dd-cc-diagnostic-messages_not_in_nav.md](../reference/serial-commands/serial-command-dd-cc-diagnostic-messages_not_in_nav.md) | 44 | ==TODO== MEDIUM - Responses |
@@ -88,9 +84,6 @@ Total medium priority TODO matches: 88
 | [docs/reference/serial-commands/serial-command-jj-ll_not_in_nav.md](../reference/serial-commands/serial-command-jj-ll_not_in_nav.md) | 24 | * **row**: *Required* ==TODO== MEDIUM parameter description |
 | [docs/reference/serial-commands/serial-command-jj-ll_not_in_nav.md](../reference/serial-commands/serial-command-jj-ll_not_in_nav.md) | 28 | ==TODO== MEDIUM - Responses |
 | [docs/reference/serial-commands/serial-command-jj-mm_not_in_nav.md](../reference/serial-commands/serial-command-jj-mm_not_in_nav.md) | 39 | * **StashId**: Id of the stash to set, clear or get (``0`` - ==TODO== MEDIUM) |
-| [docs/reference/serial-commands/serial-command-jj-rr_not_in_nav.md](../reference/serial-commands/serial-command-jj-rr_not_in_nav.md) | 56 | ==TODO== MEDIUM - Response for ``&lt;J R «id» &quot;«name&quot; &quot;«functions»&quot;&gt;`` |
-| [docs/reference/serial-commands/serial-command-jj-rr_not_in_nav.md](../reference/serial-commands/serial-command-jj-rr_not_in_nav.md) | 60 | ==TODO== MEDIUM - Response for ``&lt;J R «id» DELETE&gt;`` |
-| [docs/reference/serial-commands/serial-command-jj-rr_not_in_nav.md](../reference/serial-commands/serial-command-jj-rr_not_in_nav.md) | 64 | ==TODO== MEDIUM - Response for ``&lt;J R SAVE&gt;`` |
 | [docs/reference/serial-commands/serial-command-kk_and_k_not_in_nav.md](../reference/serial-commands/serial-command-kk_and_k_not_in_nav.md) | 26 | * **blockid**: ==TODO== MEDIUM description |
 | [docs/reference/serial-commands/serial-command-kk_and_k_not_in_nav.md](../reference/serial-commands/serial-command-kk_and_k_not_in_nav.md) | 27 | * **loco**: ==TODO== MEDIUM description |
 | [docs/reference/serial-commands/serial-command-kk_and_k_not_in_nav.md](../reference/serial-commands/serial-command-kk_and_k_not_in_nav.md) | 31 | ==TODO== MEDIUM - Responses |
@@ -147,7 +140,7 @@ Total medium priority TODO matches: 88
 
 ## Low priority TODOs
 
-Total low priority TODO matches: 100
+Total low priority TODO matches: 102
 
 | File | Line | Line text |
 | --- | ---: | --- |
@@ -168,6 +161,8 @@ Total low priority TODO matches: 100
 | [docs/reference/serial-commands/serial-command-c-railcom_not_in_nav.md](../reference/serial-commands/serial-command-c-railcom_not_in_nav.md) | 44 | * ==TODO== LOW - Example Responses |
 | [docs/reference/serial-commands/serial-command-caret_not_in_nav.md](../reference/serial-commands/serial-command-caret_not_in_nav.md) | 50 | * ==TODO== LOW - Example Commands |
 | [docs/reference/serial-commands/serial-command-caret_not_in_nav.md](../reference/serial-commands/serial-command-caret_not_in_nav.md) | 54 | * ==TODO== LOW - Example Responses |
+| [docs/reference/serial-commands/serial-command-dd-anin-anout_not_in_nav.md](../reference/serial-commands/serial-command-dd-anin-anout_not_in_nav.md) | 25 | * **position**: ==TODO== LOW - Parameter Description |
+| [docs/reference/serial-commands/serial-command-dd-anin-anout_not_in_nav.md](../reference/serial-commands/serial-command-dd-anin-anout_not_in_nav.md) | 26 | * **profile**: ==TODO== LOW - Parameter Description |
 | [docs/reference/serial-commands/serial-command-dd-anin-anout_not_in_nav.md](../reference/serial-commands/serial-command-dd-anin-anout_not_in_nav.md) | 36 | ==TODO== LOW - Notes |
 | [docs/reference/serial-commands/serial-command-dd-anin-anout_not_in_nav.md](../reference/serial-commands/serial-command-dd-anin-anout_not_in_nav.md) | 46 | * ==TODO== LOW - Example Commands |
 | [docs/reference/serial-commands/serial-command-dd-anin-anout_not_in_nav.md](../reference/serial-commands/serial-command-dd-anin-anout_not_in_nav.md) | 50 | * ==TODO== LOW - Example Responses |

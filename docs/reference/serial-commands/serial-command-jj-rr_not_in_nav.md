@@ -53,22 +53,23 @@ Serial command to request roster info, or add new roster entries and save them i
 
 * Response for ``<J R «id» "«name" "«functions»">``
 
-    ==TODO== MEDIUM - Response for ``<J R «id» "«name" "«functions»">``
+    * none
 
 * Response for ``<J R «id» DELETE>``
 
-      ==TODO== MEDIUM - Response for ``<J R «id» DELETE>``
+    * none
 
 * Response for ``<J R SAVE>``
 
-      ==TODO== MEDIUM - Response for ``<J R SAVE>``
+    * ``<* Roster::save completed *>``
 
 ----
 
 ## Notes
 
 * Function labels starting with an asterisk (*) should be treated as momentary. Those without should be treated as latching.
-* when creating roster entries, the ids (the DCC address) must be unique.
+* When creating roster entries, the ids (the DCC address) must be unique.
+* Creating a roster entry for an id that already exists will replace it with new entry without warning.
 
 ----
 
