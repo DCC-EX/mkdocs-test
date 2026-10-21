@@ -290,8 +290,8 @@ Reference guide for serial commands used by **EX-CommandStations**, shown in fun
 | [`<D LCN onOff>`](?_9D9_9LCN9_onoff) | Enable/Disable LCN diagnostics | None | Active |
 | [`<D WEBSOCKET onOff>`](?_9D9_9WEBSOCKET9_onoff) | Enable/Disable Websocket diagnostics | None | Active |
 | [`<D EEPROM numentries>`](?_9D9_9EEPROM9_numentries) | Dump EEPROM contents | `numentries`: Number of entries | Active |
-| [`<D ANOUT vpin position>`](?_9D9_9ANOUT9_vpin_position) | Test analog output ⚠️ Deprecated | `vpin`: Pin, `position`: Position | Active |
-| [`<D ANOUT vpin position profile>`](?_9D9_9ANOUT9_vpin_position_profile) | Test analog output with profile ⚠️ Deprecated | `vpin`: Pin, `position`: Position, `profile`: Profile | Active |
+| [`<D ANOUT vpin position>`](?_9D9_9ANOUT9_vpin_position) | Test analog output ⚠️ Deprecated - use `<z vpin position>` | `vpin`: Pin, `position`: Position | Active |
+| [`<D ANOUT vpin position profile>`](?_9D9_9ANOUT9_vpin_position_profile) | Test analog output with profile ⚠️ Deprecated - use `<z vpin position profile>` | `vpin`: Pin, `position`: Position, `profile`: Profile | Active |
 | [`<D SERVO vpin position>`](?_9D9_9SERVO9_vpin_position) | Test servo | `vpin`: Pin, `position`: Position | Active |
 | [`<D SERVO vpin position profile>`](?_9D9_9SERVO9_vpin_position_profile) | Test servo with profile | `vpin`: Pin, `position`: Position, `profile`: Profile | Active |
 | [`<D ANIN vpin>`](?_9D9_9ANIN9_vpin) | Display analogue input value | `vpin`: Pin number | Active |

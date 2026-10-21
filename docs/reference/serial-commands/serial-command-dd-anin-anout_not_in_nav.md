@@ -16,14 +16,14 @@ Serial commands to Manage VPINs analogue values.
 ## Commands
 
 * ``<D ANIN «vpin»>`` = Display analogue input value
-* ``<D ANOUT «vpin» «position» «profile»>`` = see ==TODO== Command Description
-* ``<D ANOUT «vpin» «position»>`` = see ==TODO== Command Description
+* ``<D ANOUT «vpin» «position» «profile»>`` = Test analog output ⚠️ Deprecated - use `<z vpin position profile>`
+* ``<D ANOUT «vpin» «position»>`` = Test analog output with profile ⚠️ Deprecated - use `<z vpin position>`
 
 ## Parameters
 
 * **vpin**: Analogue VPIN to read or write
-* **position**: ==TODO== MEDIUM - Parameter Description
-* **profile**: ==TODO== MEDIUM - Parameter Description
+* **position**: ==TODO== LOW - Parameter Description
+* **profile**: ==TODO== LOW - Parameter Description
 
 ## Response
 
