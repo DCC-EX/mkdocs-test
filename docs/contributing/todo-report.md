@@ -20,7 +20,7 @@ Scanned roots: `C:\Users\akers\OneDrive\github\github_doco\mkdocs-test\docs`, `C
 
 ## High TODOs
 
-Total High TODO matches: 27
+Total High TODO matches: 26
 
 | File | Line | Line text |
 | --- | ---: | --- |
@@ -42,10 +42,9 @@ Total High TODO matches: 27
 | [docs/prepare-to-use/installer/platformio.md](../prepare-to-use/installer/platformio.md) | 5 | ==TODO== - provide setup help. |
 | [docs/prepare-to-use/installer/download/download-linux.md](../prepare-to-use/installer/download/download-linux.md) | 7 | ==TODO== Download and install on Linux - Add screenshots |
 | [docs/prepare-to-use/installer/download/index.md](../prepare-to-use/installer/download/index.md) | 3 | ==TODO== Downloading EX-Installer - Overview |
-| [docs/enhance/exrail/exrail-objects-introduction.md](../enhance/exrail/exrail-objects-introduction.md) | 153 | ==TODO== You can also refer to :doc:`/ex-commandstation/accessories/turnouts/solenoid-turnouts` for more information. |
-| [docs/enhance/exrail/exrail-objects-introduction.md](../enhance/exrail/exrail-objects-introduction.md) | 210 | ==TODO== Add a diagram for the EX-CSB1 to a PCA9685 |
-| [docs/enhance/exrail/exrail-objects-introduction.md](../enhance/exrail/exrail-objects-introduction.md) | 364 | ==TODO== Link here to recommended pin/vpin allocations etc. |
-| [docs/enhance/exrail/exrail-objects-introduction.md](../enhance/exrail/exrail-objects-introduction.md) | 366 | ==TODO== Add a diagram for the EX-CSB1 to an IO Expander |
+| [docs/enhance/exrail/exrail-objects-introduction.md](../enhance/exrail/exrail-objects-introduction.md) | 209 | ==TODO== Add a diagram for the EX-CSB1 to a PCA9685 |
+| [docs/enhance/exrail/exrail-objects-introduction.md](../enhance/exrail/exrail-objects-introduction.md) | 363 | ==TODO== Link here to recommended pin/vpin allocations etc. |
+| [docs/enhance/exrail/exrail-objects-introduction.md](../enhance/exrail/exrail-objects-introduction.md) | 365 | ==TODO== Add a diagram for the EX-CSB1 to an IO Expander |
 | [docs/enhance/exrail/cookbooks/timecontrol.md](../enhance/exrail/cookbooks/timecontrol.md) | 92 | NB:  ==TODO== See the following page for details on running sound files. |
 | snippets/configure/config-wifi-esp32-gui-options.md | 61 | ==TODO== The WiFi change limitation has been broken in the latest CS version as anything can be changed via the in-built web server |
 | snippets/configure/config-wifi-esp32-gui-options.md | 69 | ==TODO== Changing the WiFi Settings using the EX-CommandStation&#x27;s own Web Sever |
@@ -54,7 +53,7 @@ Total High TODO matches: 27
 
 ## Medium priority TODOs
 
-Total medium priority TODO matches: 87
+Total medium priority TODO matches: 88
 
 | File | Line | Line text |
 | --- | ---: | --- |
@@ -137,6 +136,7 @@ Total medium priority TODO matches: 87
 | [docs/prepare-to-use/connecting/connecting-diy.md](../prepare-to-use/connecting/connecting-diy.md) | 19 | &lt;!-- ==TODO== MEDIUM - This section could be improved. Physically connecting DIY EX-CS to a layout - EX8874 --&gt; |
 | [docs/prepare-to-use/connecting/connecting-diy.md](../prepare-to-use/connecting/connecting-diy.md) | 32 | &lt;!-- ==TODO== MEDIUM - This section could be improved. Physically connecting DIY EX-CS to a layout - Standard Arduino Motor Shield --&gt; |
 | [docs/prepare-to-use/installer/install-ex-turntable.md](../prepare-to-use/installer/install-ex-turntable.md) | 3 | ==TODO== MEDIUM - complete EX-Installer EX-Turntable page needed |
+| [docs/enhance/accessories/solenoid-turnouts.md](../enhance/accessories/solenoid-turnouts.md) | 102 | ==TODO== MEDIUM - Add CDU info |
 | [docs/enhance/exrail/exrail-startup-configuration.md](../enhance/exrail/exrail-startup-configuration.md) | 20 | ==TODO== MEDIUM - Adding to your myAutomation.h in EX-Installer |
 | [docs/enhance/exrail/exrail-startup-configuration.md](../enhance/exrail/exrail-startup-configuration.md) | 26 | ==TODO== MEDIUM - Adding to your myAutomation.h in VSC |
 | [docs/enhance/exrail/exrail-startup-configuration.md](../enhance/exrail/exrail-startup-configuration.md) | 39 | ==TODO== MEDIUM - Adding to your myAutomation.h in the Arduino IDE |
