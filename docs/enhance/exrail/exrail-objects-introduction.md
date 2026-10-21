@@ -148,10 +148,9 @@ The ``TURNOUT`` command defines DCC accessory decoder turnout/point in **EXRAIL*
 
 #### Adding the Hardware -  Pin Turnouts/Points
 
-<!-- .. sidebar::
+!!! note inline end ""
 
-  ==TODO== You can also refer to :doc:`/ex-commandstation/accessories/turnouts/solenoid-turnouts` for more information.
--->
+  You can also refer to the [Solenoid Turnout](../accessories/solenoid-turnouts.md) page for more information.
 
 If you have installed turnouts/points using simple pin control, you can config the **EXRAIL** so that it knows about it and you can control in in your sequences.
 

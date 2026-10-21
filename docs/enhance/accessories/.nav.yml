@@ -1,8 +1,9 @@
 nav:
   - Accessories: index.md
+  - Hardware List: hardware-list.md
   - Actuators: actuators.md
   - Sensors: sensors.md
   - Servo Turnouts/Points: connecting-servo-turnout.md
-  - Hardware List: hardware-list.md
+  - Solenoid Turnouts/Points: solenoid-turnouts.md
   - I2C (I<sup>2</sup>C): i2c
   - Various Devices: various-devices
