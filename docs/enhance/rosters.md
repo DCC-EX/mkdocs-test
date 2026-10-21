@@ -67,6 +67,6 @@ New Roster commands for v5.9.13 and above:
 
 See the [Roster Serial Commands](../reference/serial-commands/serial-command-jj-rr_not_in_nav.md) reference page for more information.
 
-==TODO== add a link to a page that explains how/where to enter serial commands
+See the [using a serial monitor](../reference/tools/serial-monitor.md) page for information and options on how and where to enter serial commands.
 
 --8<-- "snippets/abbr.md"
