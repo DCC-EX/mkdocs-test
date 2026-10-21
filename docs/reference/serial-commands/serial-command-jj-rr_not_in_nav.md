@@ -27,7 +27,7 @@ Serial command to request roster info, or add new roster entries and save them i
 * ``<J R>`` = Request the list of all roster ids
 * ``<J R «id»>`` = Request the detailed info on a specific roster id
 
-<span class="badge-new">New in v6.0</span> New Roster commands for v5.9.13 and above:
+{{ new_in_v6() }} New Roster commands for v5.9.13 and above:
 
 * ``<J R «id» "«name»" "«functions»">`` adds or replaces a roster in RAM
 * ``<J R «id» DELETE>`` removes a roster entry from ram
