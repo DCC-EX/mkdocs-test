@@ -549,6 +549,10 @@
          <lastmod>2026-10-21</lastmod>
     </url>
     <url>
+         <loc>https://dcc-ex.com/mkdocs-test/news/2026/10/new-in-version-60/</loc>
+         <lastmod>2026-10-21</lastmod>
+    </url>
+    <url>
          <loc>https://dcc-ex.com/mkdocs-test/prepare-to-use/</loc>
          <lastmod>2026-10-21</lastmod>
     </url>
@@ -1370,6 +1374,14 @@
     </url>
     <url>
          <loc>https://dcc-ex.com/mkdocs-test/news/category/exrail/</loc>
+         <lastmod>2026-10-21</lastmod>
+    </url>
+    <url>
+         <loc>https://dcc-ex.com/mkdocs-test/news/category/ex-commandstation/</loc>
+         <lastmod>2026-10-21</lastmod>
+    </url>
+    <url>
+         <loc>https://dcc-ex.com/mkdocs-test/news/category/dccexprotocol/</loc>
          <lastmod>2026-10-21</lastmod>
     </url>
 </urlset>

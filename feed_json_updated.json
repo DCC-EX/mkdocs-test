@@ -9,6 +9,20 @@
     "language": "en",
     "items": [
         {
+            "id": "https://dcc-ex.com/mkdocs-test/news/2026/10/new-in-version-60/",
+            "url": "https://dcc-ex.com/mkdocs-test/news/2026/10/new-in-version-60/",
+            "title": "New in Version 6.0",
+            "content_html": "<h1>New in Version 6.0</h1>\n<p>Updates for:</p>\n<p>intro text goes here</p>",
+            "image": null,
+            "date_modified": "2026-10-21T08:21:55+00:00",
+            "authors": [
+                {
+                    "name": "flash62au"
+                }
+            ],
+            "tags": null
+        },
+        {
             "id": "https://dcc-ex.com/mkdocs-test/news/2025/06/new-documentation-started/",
             "url": "https://dcc-ex.com/mkdocs-test/news/2025/06/new-documentation-started/",
             "title": "New Documentation Started",

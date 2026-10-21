@@ -13,8 +13,8 @@
     <language>en</language>
 
     
-    <pubDate>Wed, 21 Oct 2026 07:02:42 -0000</pubDate>
-    <lastBuildDate>Wed, 21 Oct 2026 07:02:42 -0000</lastBuildDate>
+    <pubDate>Wed, 21 Oct 2026 08:28:46 -0000</pubDate>
+    <lastBuildDate>Wed, 21 Oct 2026 08:28:46 -0000</lastBuildDate>
     <ttl>1440</ttl>
 
     
@@ -53,6 +53,27 @@
       <source url="https://dcc-ex.com/mkdocs-test/feed_rss_created.xml">DCC-EX News</source>
       
       <guid isPermaLink="true">https://dcc-ex.com/mkdocs-test/news/2026/10/assorted-new-feature-documentation/</guid>
+      
+    </item>
+    
+    <item>
+      <title>New in Version 6.0</title>
+      
+      
+        
+      <author>flash62au</author>
+        
+      
+      
+      
+      <description>&lt;h1&gt;New in Version 6.0&lt;/h1&gt;
+&lt;p&gt;Updates for:&lt;/p&gt;
+&lt;p&gt;intro text goes here&lt;/p&gt;</description>
+      <link>https://dcc-ex.com/mkdocs-test/news/2026/10/new-in-version-60/</link>
+      <pubDate>Sun, 11 Oct 2026 00:00:00 +0000</pubDate>
+      <source url="https://dcc-ex.com/mkdocs-test/feed_rss_created.xml">DCC-EX News</source>
+      
+      <guid isPermaLink="true">https://dcc-ex.com/mkdocs-test/news/2026/10/new-in-version-60/</guid>
       
     </item>
     
