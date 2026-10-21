@@ -20,13 +20,12 @@ Scanned roots: `C:\Users\akers\OneDrive\github\github_doco\mkdocs-test\docs`, `C
 
 ## High TODOs
 
-Total High TODO matches: 26
+Total High TODO matches: 25
 
 | File | Line | Line text |
 | --- | ---: | --- |
 | [docs/enhance/rosters.md](../enhance/rosters.md) | 30 | ==TODO== needs detailed instructions |
 | [docs/enhance/rosters.md](../enhance/rosters.md) | 32 | ==TODO== needs screenshots |
-| [docs/enhance/rosters.md](../enhance/rosters.md) | 70 | ==TODO== add a link to a page that explains how/where to enter serial commands |
 | [docs/throttles/connecting-usb.md](../throttles/connecting-usb.md) | 3 | ==TODO== Connecting a USB Throttle to your EX-CommandStation |
 | [docs/throttles/dcc-accessories.md](../throttles/dcc-accessories.md) | 3 | ==TODO== how to control DCC Accessories |
 | [docs/reference/configuration/index.md](../reference/configuration/index.md) | 3 | ==TODO== EX-CommandStation Configuration Reference - intro / overview |
@@ -136,7 +135,7 @@ Total medium priority TODO matches: 88
 | [docs/prepare-to-use/connecting/connecting-diy.md](../prepare-to-use/connecting/connecting-diy.md) | 19 | &lt;!-- ==TODO== MEDIUM - This section could be improved. Physically connecting DIY EX-CS to a layout - EX8874 --&gt; |
 | [docs/prepare-to-use/connecting/connecting-diy.md](../prepare-to-use/connecting/connecting-diy.md) | 32 | &lt;!-- ==TODO== MEDIUM - This section could be improved. Physically connecting DIY EX-CS to a layout - Standard Arduino Motor Shield --&gt; |
 | [docs/prepare-to-use/installer/install-ex-turntable.md](../prepare-to-use/installer/install-ex-turntable.md) | 3 | ==TODO== MEDIUM - complete EX-Installer EX-Turntable page needed |
-| [docs/enhance/accessories/solenoid-turnouts.md](../enhance/accessories/solenoid-turnouts.md) | 102 | ==TODO== MEDIUM - Add CDU info |
+| [docs/enhance/accessories/solenoid-turnouts.md](../enhance/accessories/solenoid-turnouts.md) | 103 | ==TODO== MEDIUM - Add CDU info |
 | [docs/enhance/exrail/exrail-startup-configuration.md](../enhance/exrail/exrail-startup-configuration.md) | 20 | ==TODO== MEDIUM - Adding to your myAutomation.h in EX-Installer |
 | [docs/enhance/exrail/exrail-startup-configuration.md](../enhance/exrail/exrail-startup-configuration.md) | 26 | ==TODO== MEDIUM - Adding to your myAutomation.h in VSC |
 | [docs/enhance/exrail/exrail-startup-configuration.md](../enhance/exrail/exrail-startup-configuration.md) | 39 | ==TODO== MEDIUM - Adding to your myAutomation.h in the Arduino IDE |
