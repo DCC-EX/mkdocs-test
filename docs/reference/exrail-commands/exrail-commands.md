@@ -171,7 +171,7 @@ Reference guide for EXRAIL commands used by **EX-CommandStations**, shown in fun
 | CONFIGURE_SERVO(vpin, pos1, pos2, profile) | Define LED’s connected to PCA9685 boards |
 | NEOPIXEL( vpin, red, green, blue [,count] ) | Controls the colour of attached Neopixel LEDs |
 | NEOPIXEL_SIGNAL( signalid, red, green, blue ) | Controls the colour of attached Neopixel LED |
-| ANOUT( vpin, value, param1, param2) | Analog output ?? |
+| ANOUT( vpin, value, param1, param2) | Writes to the HAL analog output interface of a device driver |
 | PLAYSOUND( vpin, fileNumber, volume ) | Play mp3 files from a Micro-SD card |
 
 ### Servo Control

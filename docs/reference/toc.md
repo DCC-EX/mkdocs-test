@@ -216,10 +216,11 @@ li:not(.md-nav__item, .md-tabs__item) a {
     - [Routes and Automation <small>(Adding Routes and Automations)</small>](../enhance/routes.md)
     - **Adding Other Accessories**
         - [Overview - What are Accessories? <small>(Accessories)</small>](../enhance/accessories/index.md)
+        - [Hardware device list <small>(Hardware List)</small>](../enhance/accessories/hardware-list.md)
         - [Actuators - to make stuff happen <small>(Actuators)</small>](../enhance/accessories/actuators.md)
         - [Sensors](../enhance/accessories/sensors.md)
         - [Connecting a servo turnout/point <small>(Servo Turnouts/Points)</small>](../enhance/accessories/connecting-servo-turnout.md)
-        - [Hardware device list <small>(Hardware List)</small>](../enhance/accessories/hardware-list.md)
+        - [Solenoid or coil turnouts/points <small>(Solenoid Turnouts/Points)</small>](../enhance/accessories/solenoid-turnouts.md)
         - **I2C (I<sup>2</sup>C)**
             - [I2C (I<sup>2</sup>C) – An Introduction <small>(I2C (I<sup>2</sup>C) Intro)</small>](../enhance/accessories/i2c/index.md)
             - [Buying I2C (I<sup>2</sup>C) Devices](../enhance/accessories/i2c/buying-i2c-devices.md)

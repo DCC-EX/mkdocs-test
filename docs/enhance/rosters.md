@@ -23,7 +23,7 @@ There are three ways to create or manipulate a roster
 
 !!! note ""
 
-    <span class="badge-new">New in v6.0</span> Available in version 5.9.13 and above of **EX-CommandStation** only.
+    {{new_in_v6()}} Available in version 5.9.13 and above of **EX-CommandStation** only.
 
 When using a web browser dialog on the command station, the Config.. Roster Editor menu will show a roster editing dialog. This edits and saves roster entries in RAM.
 
