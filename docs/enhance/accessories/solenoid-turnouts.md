@@ -4,7 +4,7 @@
 
 Solenoid/coil based turnouts are switched by very small coils that are typically designed to be energised for very brief periods of time (read milliseconds, not seconds), and leaving these energised for too long will burn them out.
 
-If not using the manufacturer’s turnout/point control hardware, the safest option is to use a capacitive discharge unit (CDU), as the short duration discharge of the capacitor is what is used to energise the coil.
+If not using the manufacturer's turnout/point control hardware, the safest option is to use a capacitive discharge unit (CDU), as the short duration discharge of the capacitor is what is used to energise the coil.
 
 If switching the points digitally via some other means such as a motor driver IC or relay, use the shortest duration that provides reliable switching.
 
@@ -18,13 +18,13 @@ To define solenoid/coil based turnouts directly in your EX‑CommandStation via 
 
 Refer to Turnouts/Points (Configuring the EX-CommandStation) for details on these commands.
 
-To define solenoid/coil based turnouts using EXRAIL (whether or not they are to be automated) via the “myAutomation.h” file, use the appropriate one of these commands:
+To define solenoid/coil based turnouts using EXRAIL (whether or not they are to be automated) via the ``myAutomation.h`` file, use the appropriate one of these commands:
 
-PIN_TURNOUT(id, vpin [, "description"]) - use this command when using a turnout/point controller that uses a single pin, whether connected directly to your EX‑CommandStation or via an I/O expander device
+``PIN_TURNOUT(id, vpin [, "description"])`` - use this command when using a turnout/point controller that uses a single pin, whether connected directly to your EX‑CommandStation or via an I/O expander device
 
-VIRTUAL_TURNOUT(id [, "description"]) - use this command when you need to define a custom macro that controls the various pins and duration required to switch a turnout
+``VIRTUAL_TURNOUT(id [, "description"])`` - use this command when you need to define a custom macro that controls the various pins and duration required to switch a turnout
 
-TURNOUT(id, addr, sub_addr [, "description"]) - use this command when using DCC accessory decoders to control the servos
+``TURNOUT(id, addr, sub_addr [, "description"])`` - use this command when using DCC accessory decoders to control the servos
 
 Refer to Turnout/Point Objects - Definition and Control for details on these commands, along with Adding Turnouts/Points for some further information and examples.
 
@@ -38,9 +38,9 @@ A single L293D motor driver IC can be used to control two turnouts/points and wi
 
 To operate the turnouts/points in this manner, the direction of the turnout (close/throw) is configured by setting the input pins (2 and 7, 10 and 15) high or low, and briefly setting the appropriate enable pin high (1 or 9).
 
-Note that the 10K pull down resistors connected from ground to the enable pins are there as a safety feature to ensure that any unknown states during start up don’t cause the enable pins to be set to a high state, causing the coils to overheat and burn out.
+Note that the 10K pull down resistors connected from ground to the enable pins are there as a safety feature to ensure that any unknown states during start up don't cause the enable pins to be set to a high state, causing the coils to overheat and burn out.
 
-The voltage provided to “External Power” is the voltage required to operate the turnouts/points, and will depend on the brand/model. Absolute maximum for the L293D is 36V DC.
+The voltage provided to 'External Power' is the voltage required to operate the turnouts/points, and will depend on the brand/model. Absolute maximum for the L293D is 36V DC.
 
 Here is an example **EXRAIL** macro that will configure a virtual turnout, setting the correct pins for the two turnouts to operate correctly:
 
@@ -72,9 +72,9 @@ Like the single solenoid/coil turnouts, a single L293D motor driver IC can be us
 
 To operate the turnouts/points in this manner, the direction of the turnout (close/throw) is still configured by setting the input pins (2 and 7, 10 and 15) high or low, and briefly setting the appropriate enable pin high (1 or 9). The key difference for dual solenoid/coil turnouts is the common (third) wire of the turnout being connected to ground as per the diagram above.
 
-Note that the 10K pull down resistors connected from ground to the enable pins are there as a safety feature to ensure that any unknown states during start up don’t cause the enable pins to be set to a high state, causing the coils to overheat and burn out.
+Note that the 10K pull down resistors connected from ground to the enable pins are there as a safety feature to ensure that any unknown states during start up don't cause the enable pins to be set to a high state, causing the coils to overheat and burn out.
 
-The voltage provided to “External Power” is the voltage required to operate the turnouts/points, and will depend on the brand/model. Absolute maximum for the L293D is 36V DC.
+The voltage provided to 'External Power' is the voltage required to operate the turnouts/points, and will depend on the brand/model. Absolute maximum for the L293D is 36V DC.
 
 Here is an example EXRAIL macro that will configure a virtual turnout, setting the correct pins for the two turnouts to operate correctly (note it is identical to the single coil version, but renamed):
 
@@ -104,7 +104,7 @@ Before implementing this macro (or any similar macro controlling solenoid/coil t
 
 ## Using a Capacitive Discharge Unit (CDU) - dual solenoid/coil turnouts
 
-### Option 1 - DIY CDU by “Rosscoe” (DCC-EX user on Discord)
+### Option 1 - DIY CDU by 'Rosscoe' (DCC-EX user on Discord)
 
 The information here is based on the combined driver and CDU as outlined in this GitHub repository, with a PCB available from [PCBWay](https://www.pcbway.com/)
 
@@ -157,7 +157,7 @@ DUAL_SOLENOID_TURNOUT(1,164,165,"Example CDU turnout",EXAMPLE_TURNOUT)
 
 ### Connecting A Tortoise
 
-A Tortoise is still a solenoid turnout/point motor that need a voltage applied for a certain amount of time and to reverse polarity to go in the other direction. They implement it as a stall motor, which means if you were willing to waste 15-20mA of current at idle, you can use a switch and it just stalls out at the end of travel. But now we get into the weeds about all the different ways you can control your Tortoise. The issue is that a command station can’t directly control things that require a lot of current or voltages higher than 5V or on the CSB1 3.3V. So we control a switch of some kind, like a relay or transistor, that CAN handle that load.
+A Tortoise is still a solenoid turnout/point motor that need a voltage applied for a certain amount of time and to reverse polarity to go in the other direction. They implement it as a stall motor, which means if you were willing to waste 15-20mA of current at idle, you can use a switch and it just stalls out at the end of travel. But now we get into the weeds about all the different ways you can control your Tortoise. The issue is that a command station can't directly control things that require a lot of current or voltages higher than 5V or on the CSB1 3.3V. So we control a switch of some kind, like a relay or transistor, that CAN handle that load.
 
 The easiest solution costs you $60 from Jack Reagan at [Smart Hobby LLC](https://dcc-ex.com/purchasing/dealers.html) which buys you a 16 output capacitive discharge board. You connect it to the I2C port on the CSB1, then a simple **EXRAIL** script he supplies goes in your myAutomation.h file and you are done. The turnouts/points would appear on an Engine Driver or [JMRI](https://dcc-ex.com/throttles/software/jmri.html) and you just `THROW` and `CLOSE` them.
 
@@ -165,7 +165,7 @@ You can add sensors and have the turnouts/points controlled by the route you wan
 
 **Rosscoetrain** has a similar board and an accessory controller version. You define a `DCC_TURNOUT` and his controller does the rest since it acts like an 8 port DCC accessory decoder. It takes a DCC turnout command from the track. It also can control anything else that needs on/off power control such as LED lighting, motors, etc. Rosscoetrain also provides support.
 
-A simple but less easy method is to use a DPDT relay and a MCP23017 port expander board (dirt cheap and also connects to the I2C port) or our EX‑IOExpander software running on a cheap processor like an Uno or Nano or Elegoo Mega. Define each turnout as a PIN_TURNOUT. This wastes 15-20mA or more of current for each one all the time since the power never gets shut off. The way around that is to use a motor driver board to act as a solid state relay. Transistors on the board and an EXRAIL script control both the polarity switching and the duration of the voltage. We have those simple scripts, so you don’t need to know C++ or electronics to throw a turnout/point. People have used all sorts of inexpensive boards for this, including Rosscoetrain’s motor board which has 4 MOSFET transistors.
+A simple but less easy method is to use a DPDT relay and a MCP23017 port expander board (dirt cheap and also connects to the I2C port) or our EX‑IOExpander software running on a cheap processor like an Uno or Nano or Elegoo Mega. Define each turnout as a PIN_TURNOUT. This wastes 15-20mA or more of current for each one all the time since the power never gets shut off. The way around that is to use a motor driver board to act as a solid state relay. Transistors on the board and an EXRAIL script control both the polarity switching and the duration of the voltage. We have those simple scripts, so you don't need to know C++ or electronics to throw a turnout/point. People have used all sorts of inexpensive boards for this, including Rosscoetrain's motor board which has 4 MOSFET transistors.
 
 Regardless of which method you use, take a look at the documentation for EX‑IOExpander since it has a lot built into it. And you can connect the Smart Hobby board and a lot of other things to it.
 
