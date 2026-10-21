@@ -2,6 +2,7 @@ nav:
   - Table of Contents: toc.md
   - Glossary of Terms: glossary.md
   - <br/>EXRAIL Command List: exrail-command-reference.md
+  - EXRAIL Commands <small>by&nbsp;Function&nbsp;Group</small>: exrail-commands/exrail-commands.md
   - Serial Commands <small>Full&nbsp;List</small>: serial-commands/serial-command-list.md
   - Serial Commands <small>by&nbsp;Function&nbsp;Group</small>: serial-commands/serial-commands.md
   - Serial Commands <small>Additional&nbsp;Info</small>: serial-commands
