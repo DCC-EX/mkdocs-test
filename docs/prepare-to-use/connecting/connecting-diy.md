@@ -58,6 +58,6 @@ The **EX-CommandStation** needs the minimum following connections to be able to 
 
 ## Connecting other types of Motor Driver
 
-==TODO== physically connecting DIY EX-CS to a layout - Other Motor Shields
+==TODO== LOW - physically connecting DIY EX-CS to a layout - Other Motor Shields
 
 --8<-- "snippets/abbr.md"
