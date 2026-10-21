@@ -134,6 +134,8 @@ plugins:
       list-class: news-headline-list
   - redirects:
       redirect_maps:
+        'about/news.md': 'news/index.md'
+
         'enhance/turnouts.md': 'enhance/exrail/exrail-objects-introduction.md#adding-turnoutspoints'
         'enhance/routes.md': 'enhance/exrail/exrail-sequences-introduction.md'
         
