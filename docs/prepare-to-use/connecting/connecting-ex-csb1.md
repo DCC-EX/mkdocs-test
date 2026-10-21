@@ -1,6 +1,6 @@
 # Connecting the EX-CSB1 to Your Layout
 
-<!-- ==TODO== this page needs to be expanded -->
+<!-- ==TODO== MEDIUM - this page needs to be expanded -->
 
 This page explains how to connect your **EX-CSB1** to your layout and programming track.
 

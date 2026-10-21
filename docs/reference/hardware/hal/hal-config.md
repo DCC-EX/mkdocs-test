@@ -1,6 +1,6 @@
 # I/O Device Drivers and HAL
 
-==TODO== LOW - change references in this document from the Arduino IDE to VSC/PIO
+<!-- ==TODO== LOW - change references in this document from the Arduino IDE to VSC/PIO -->
 
 The **EX-CommandStation**** has always had built-in support for turnout control, output control and input sensors attached to the Arduino pins.  However, you may outgrow the built-in capabilities and want to access more output pins than the Arduino has available.  Or you may wish to attach servos to the controller for turnout control or for animating a layout component, such as the doors to an engine shed.
 
@@ -179,11 +179,11 @@ In fact, the file can have any name you like.  You could use ``AA_setup.cpp`` fo
 
 ## Adding A New Device Configuration File
 
-This will need to be done in the ==TODO== MEDIUM :doc:`Arduino-IDE </ex-commandstation/advanced-setup/installation-options/arduino-ide>`, so first make sure you have followed these steps to load up the Arduino IDE.
+This will need to be done in the [Arduino-IDE](https://dcc-ex.com/legacy-docs/ex-commandstation/advanced-setup/installation-options/arduino-ide), so first make sure you have followed these steps to load up the Arduino IDE.
 
 ### Create a new tab
 
-First you will need to add a new file, just like the ==TODO== MEDIUM :ref:`config.h file <ex-commandstation/advanced-setup/installation-options/arduino-ide:Copy the config.example.h file (or rename it)>`.
+First you will need to add a new file, just like the [config.h file](https://dcc-ex.com/legacy-docs/ex-commandstation/advanced-setup/installation-options/arduino-ide#copy-the-config-example-h-file-or-rename-it).
 Create a new tab using the following menu option.
 
 ![Arduino IDE New Tab](../../../_static/images/arduino-ide/arduino_ide_newtab.jpg){ width=400px }
@@ -246,7 +246,7 @@ The file contents should now look like:
 
 ### Upload the new version of the software
 
-Finally, upload the code to the Arduino as you would do during the standard ==TODO== :ref:`Arduino IDE Setup <ex-commandstation/advanced-setup/installation-options/arduino-ide:upload the software>`.
+Finally, upload the code to the Arduino as you would do during the standard [Arduino IDE Setup](https://dcc-ex.com/legacy-docs/ex-commandstation/advanced-setup/installation-options/arduino-ide#upload-the-software).
 Restart the Command Station and the new device will be configured at startup.
 
 ### Checking the Driver
