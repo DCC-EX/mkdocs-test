@@ -721,10 +721,6 @@
          <lastmod>2026-10-21</lastmod>
     </url>
     <url>
-         <loc>https://dcc-ex.com/mkdocs-test/products/ex-toolbox/connect_wifi_throttle_via_usb_not_in_nav/</loc>
-         <lastmod>2026-10-21</lastmod>
-    </url>
-    <url>
          <loc>https://dcc-ex.com/mkdocs-test/products/ex-toolbox/connecting/</loc>
          <lastmod>2026-10-21</lastmod>
     </url>
@@ -842,6 +838,10 @@
     </url>
     <url>
          <loc>https://dcc-ex.com/mkdocs-test/reference/configuration/config-h/</loc>
+         <lastmod>2026-10-21</lastmod>
+    </url>
+    <url>
+         <loc>https://dcc-ex.com/mkdocs-test/reference/exrail-commands/exrail-commands/</loc>
          <lastmod>2026-10-21</lastmod>
     </url>
     <url>
