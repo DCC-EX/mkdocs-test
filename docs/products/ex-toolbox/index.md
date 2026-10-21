@@ -11,7 +11,7 @@ It is designed to function if your **EX‑CommandStation** is configured with Wi
 
 - As of version 0.1.35, it can also connect directly from an Android device to your **EX‑CommandStation** through a USB cable.
 
-- There are additional options to connect to an **EX‑CommandStation** though USB via a PC. See [Connecting via USB for details](connect_wifi_throttle_via_usb_not_in_nav.md).
+- There are additional options to connect to an **EX‑CommandStation** though USB via a PC. See [Connecting via USB for details](../../throttles/connect_wifi_throttle_via_usb_not_in_nav.md).
 
 - While **EX‑Toolbox** normally needs to be installed on your phone or tablet, it may be installed on Windows PC under a suitable Android emulator. Refer to the [Installation Guide](installation-guide.md#installing-ex-toolbox-on-ms-windows-macos)
 
