@@ -1,12 +1,12 @@
 nav:
   - Table of Contents: toc.md
   - Glossary of Terms: glossary.md
-  - <br/>EXRAIL Command List: exrail-command-reference.md
-  - EXRAIL Commands <small>by&nbsp;Function&nbsp;Group</small>: exrail-commands/exrail-commands.md
-  - Serial Commands <small>Full&nbsp;List</small>: serial-commands/serial-command-list.md
-  - Serial Commands <small>by&nbsp;Function&nbsp;Group</small>: serial-commands/serial-commands.md
-  - Serial Commands <small>Additional&nbsp;Info</small>: serial-commands
-  - <br/>Configuration Reference (config.h): configuration
+  - <br/>EXRAIL Commands <small><small>Full&nbsp;List</small></small>: exrail-command-reference.md
+  - ... by Function Group: exrail-commands/exrail-commands.md
+  - Serial Commands <small><small>Full&nbsp;List</small></small>: serial-commands/serial-command-list.md
+  - ... by Function Group: serial-commands/serial-commands.md
+  - ... Additional Info: serial-commands
+  - <br/>Configuration Reference <small><small>(config.h)</small></small>: configuration
   - HAL Device Configuration: hardware/hal/hal-device-templates.md
   - <br/>TrackManager: trackmanager
   - <br/>Alternate Microcontrollers: microcontrollers

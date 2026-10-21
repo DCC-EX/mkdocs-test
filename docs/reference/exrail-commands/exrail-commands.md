@@ -45,7 +45,7 @@ Reference guide for EXRAIL commands used by **EX-CommandStations**, shown in fun
 
 ----
 
-## Flow Control
+## General Flow Control
 
 | Command | Description |
 | ------- | ----------- |
@@ -75,10 +75,10 @@ Reference guide for EXRAIL commands used by **EX-CommandStations**, shown in fun
 | [ROUTE_INACTIVE( route_id )](?ROUTE_INACTIVE) | Deactivate a Route |
 | [ROUTE_HIDDEN( route_id )](?ROUTE_HIDDEN) | Hide a Route from display |
 | [ROUTE_DISABLED( route_id )](?ROUTE_DISABLED) | disable a Route |
-| [STASH( stash_id )](?STASH) | Stashes the current loco/invert |
-| [CLEAR_STASH( stash_id )](?CLEAR_STASH) | Zeroes the specified stash |
-| [CLEAR_ALL_STASH](?CLEAR_ALL_STASH) | Zeroes all stashes |
-| [PICKUP_STASH( stash_id )](?PICKUP_STASH) | Retrieves and sets the loco/invert from the specified stash |
+
+!!! note "``ON??()`` ``AT()`` ``IF??()`` ``AFTER()``"
+
+    Also see the various ``ON??()``, `AFTER??()`` events and  ``AT()``, ``IF??()`` conditions in the sections below for other types of flow control.
 
 ----
 
@@ -272,6 +272,8 @@ Reference guide for EXRAIL commands used by **EX-CommandStations**, shown in fun
 
 ## Locos and Tracks
 
+### Locos - Definition and Control
+
 | Command | Description |
 | ------- | ----------- |
 | [ESTOP](?ESTOP) | Emergency stops all locomotives |
@@ -298,6 +300,10 @@ Reference guide for EXRAIL commands used by **EX-CommandStations**, shown in fun
 | [XSAVE_SPEED( loco )](?XSAVE_SPEED) | Saves the current speed of a loco |
 | [XRESTORE_SPEED( loco )](?XRESTORE_SPEED) | Restores the saved speed of a loco |
 | [FORGET](?FORGET) | Forget the loco in the running automation/sequence |
+| [STASH( stash_id )](?STASH) | Stashes the current loco/invert |
+| [CLEAR_STASH( stash_id )](?CLEAR_STASH) | Zeroes the specified stash |
+| [CLEAR_ALL_STASH](?CLEAR_ALL_STASH) | Zeroes all stashes |
+| [PICKUP_STASH( stash_id )](?PICKUP_STASH) | Retrieves and sets the loco/invert from the specified stash |
 
 *Parameters:*  
 
@@ -317,16 +323,6 @@ Reference guide for EXRAIL commands used by **EX-CommandStations**, shown in fun
 
 ----
 
-### Locos: Definition and Control
-
-| Command | Description |
-| ------- | ----------- |
-| [SET_TRACK( track, mode )](?SET_TRACK) | Configures the mode of a track |
-| [SET_POWER( track, ON/OFF )](?SET_POWER) | Enable/Disable power on a track |
-| [SETFREQ( frequency )](?SETFREQ) | Enable a specific frequency |
-
-----
-
 ### TrackManager Control
 
 | Command | Description |
@@ -335,7 +331,9 @@ Reference guide for EXRAIL commands used by **EX-CommandStations**, shown in fun
 | [SET_POWER( track, ON/OFF )](?SET_POWER) | Enable/Disable power on a track |
 | [SETFREQ( frequency )](?SETFREQ) | Enable a specific frequency |
 
-*Parameters:*
+The settings achievable vary slightly depending upon the processor running the **EX‑CommandStation** but broadly follow the following:
+
+*Parameters:*  
 
 - **track** - - The track to configure, valid options are A to H
 - **mode** - - The mode to set the track to.
@@ -355,9 +353,16 @@ Reference guide for EXRAIL commands used by **EX-CommandStations**, shown in fun
         - `BOOST_INV`
         - `BOOST_AUTO`
 
+- **frequency** - - The frequency to set for the current track
+    -valid options are:
+        - **0** - Default - low frequency 131Hz
+        - **1** - Mid frequency - 490Hz
+        - **2** - High frequency - 3400Hz
+        - **3** - Supersonic - 62500Hz
+
 !!! note "DC"
 
-    When setting at track mode to either DC or DC_INV / DCX, you must use the SETLOCO( loco ) command first to specify the loco ID that will be used for the DC track then SET_TRACK()
+    When setting at track mode to either ``DC`` or ``DC_INV`` / ``DCX``, you must use the ``SETLOCO(loco)`` command first to specify the loco ID that will be used for the DC track then ``SET_TRACK()``
 
 ----
 
@@ -432,8 +437,8 @@ Reference guide for EXRAIL commands used by **EX-CommandStations**, shown in fun
 | [LCCX(senderid,eventid)](?LCCX) | Issue LCC event while impersonating another sender |
 | [ACON(eventid)](?ACON) | TBA |
 | [ACOF(eventid)](?ACOF) | TBA |
-| [ONACON(eventid)](?ONACON) | TBA |
-| [ONACOF(eventid)](?ONACOF) | TBA |
+| [ONACON(eventid)](?ONACON) | Start task here when ACON for event received from MERG CBUS |
+| [ONACOF(eventid)](?ONACOF) | Start task here when ACOF for event received from MERG CBUS |
 
 ----
 
