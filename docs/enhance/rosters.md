@@ -13,9 +13,23 @@ The Roster is a list of loco DCC addresses, with names for convenience and a lis
 
 There are three ways to create or manipulate a roster
 
-* [In EXRAIL](#roster-in-exrail-as-per-previous-versions)
 * [In a Web Browser](#roster-editing-with-a-web-browser)
+* [In EXRAIL](#roster-in-exrail-as-per-previous-versions)
 * [With Serial Commands](#roster-serial-commands)
+
+----
+
+## Roster Editing with a Web Browser
+
+!!! note ""
+
+    <span class="badge-new">New in v6.0</span> Available in version 5.9.13 and above of **EX-CommandStation** only.
+
+When using a web browser dialog on the command station, the Config.. Roster Editor menu will show a roster editing dialog. This edits and saves roster entries in RAM.
+
+==TODO== needs detailed instructions
+
+==TODO== needs screenshots
 
 ----
 
@@ -25,27 +39,13 @@ Roster entries in EXRAIL are compiled into the command station and therefore are
 
 See the [EXRAIL Rosters](../enhance/exrail/exrail-objects-introduction.md#adding-a-roster) page for more information.
 
-## Roster Editing with a Web Browser
-
-!!! note ""
-
-    Available in version 5.9.13 and above of **EX-CommandStation** only.
-
-When using a web browser dialog on the command station, the Config.. Roster Editor menu will show a roster editing dialog. This edits and saves roster entries in RAM.
-
-==TODO== needs detailed instructions
-
-==TODO== needs screenshots
-
---8<-- "snippets/new-in-version-6-0.md"
-
 ----
 
 ## Roster Serial Commands
 
 !!! note ""
 
-    Available in version 5.9.13 and above of **EX-CommandStation** only.
+    <span class="badge-new">New in v6.0</span> Available in version 5.9.13 and above of **EX-CommandStation** only.
 
 There are a selection of roster commands which are normally used by throttles to extract roster information from the command station.
 

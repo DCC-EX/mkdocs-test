@@ -5,6 +5,17 @@ authors:
   - peteGSX
 categories:
   - General DCC-EX News
+  - EX-CommandStation
+  - EX-Installer
+  - EX-IOExpander
+  - EX-Turntable
+  - EX-FastClock
+  - EX-DCCInspector
+  - EX-CSB1
+  - EX-Motorshield8874
+  - EX-WiFiShield8266
+  - DCCEXProtocol
+  - EXRAIL
 ---
 
 # Template DCC-EX News Article
@@ -44,5 +55,8 @@ Valid categories are defined in "properdocs.yml", and this is the current list:
 - EX-DCCInspector
 - EX-CSB1
 - DCCEXProtocol
+- EXRAIL
 
 Set the appropriate category, or multiple.
+
+--8<-- "snippets/abbr.md"
