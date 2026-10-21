@@ -7,5 +7,34 @@
     "icon": "_static/images/logos/favicon.ico",
     "authors": [],
     "language": "en",
-    "items": []
+    "items": [
+        {
+            "id": "https://dcc-ex.com/mkdocs-test/news/2025/06/new-documentation-started/",
+            "url": "https://dcc-ex.com/mkdocs-test/news/2025/06/new-documentation-started/",
+            "title": "New Documentation Started",
+            "content_html": "<h1>New Documentation Started</h1>\n<p>We have new documentation!</p>",
+            "image": null,
+            "date_modified": "2026-10-21T00:34:39+00:00",
+            "authors": [
+                {
+                    "name": "peteGSX"
+                }
+            ],
+            "tags": null
+        },
+        {
+            "id": "https://dcc-ex.com/mkdocs-test/news/2026/10/assorted-new-feature-documentation/",
+            "url": "https://dcc-ex.com/mkdocs-test/news/2026/10/assorted-new-feature-documentation/",
+            "title": "Assorted new feature documentation",
+            "content_html": "<h1>Assorted new feature documentation</h1>\n<p>Updates for:</p>\n<ul>\n<li>New EXRAIL commands</li>\n<li>Node Dialog Creation</li>\n<li>Railcom</li>\n</ul>",
+            "image": null,
+            "date_modified": "2026-10-21T00:34:39+00:00",
+            "authors": [
+                {
+                    "name": "flash62au"
+                }
+            ],
+            "tags": null
+        }
+    ]
 }

@@ -13,8 +13,8 @@
     <language>en</language>
 
     
-    <pubDate>Tue, 20 Oct 2026 21:59:51 -0000</pubDate>
-    <lastBuildDate>Tue, 20 Oct 2026 21:59:51 -0000</lastBuildDate>
+    <pubDate>Wed, 21 Oct 2026 00:41:27 -0000</pubDate>
+    <lastBuildDate>Wed, 21 Oct 2026 00:41:27 -0000</lastBuildDate>
     <ttl>1440</ttl>
 
     
@@ -30,6 +30,51 @@
     
 
     
+    
+    <item>
+      <title>New Documentation Started</title>
+      
+      
+        
+      <author>peteGSX</author>
+        
+      
+      
+      
+      <description>&lt;h1&gt;New Documentation Started&lt;/h1&gt;
+&lt;p&gt;We have new documentation!&lt;/p&gt;</description>
+      <link>https://dcc-ex.com/mkdocs-test/news/2025/06/new-documentation-started/</link>
+      <pubDate>Wed, 21 Oct 2026 00:34:39 +0000</pubDate>
+      <source url="https://dcc-ex.com/mkdocs-test/feed_rss_updated.xml">DCC-EX News</source>
+      
+      <guid isPermaLink="true">https://dcc-ex.com/mkdocs-test/news/2025/06/new-documentation-started/</guid>
+      
+    </item>
+    
+    <item>
+      <title>Assorted new feature documentation</title>
+      
+      
+        
+      <author>flash62au</author>
+        
+      
+      
+      
+      <description>&lt;h1&gt;Assorted new feature documentation&lt;/h1&gt;
+&lt;p&gt;Updates for:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;New EXRAIL commands&lt;/li&gt;
+&lt;li&gt;Node Dialog Creation&lt;/li&gt;
+&lt;li&gt;Railcom&lt;/li&gt;
+&lt;/ul&gt;</description>
+      <link>https://dcc-ex.com/mkdocs-test/news/2026/10/assorted-new-feature-documentation/</link>
+      <pubDate>Wed, 21 Oct 2026 00:34:39 +0000</pubDate>
+      <source url="https://dcc-ex.com/mkdocs-test/feed_rss_updated.xml">DCC-EX News</source>
+      
+      <guid isPermaLink="true">https://dcc-ex.com/mkdocs-test/news/2026/10/assorted-new-feature-documentation/</guid>
+      
+    </item>
     
   </channel>
 </rss>

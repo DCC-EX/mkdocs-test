@@ -9815,32 +9815,9 @@
   
   
   
-    
-    
-      
+    <li class="md-nav__item">
+      <a href="../../../about/news/" class="md-nav__link">
         
-          
-        
-      
-        
-      
-    
-    
-    
-      
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10_3" >
-        
-          
-          <div class="md-nav__link md-nav__container">
-            <a href="../../../about/news/" class="md-nav__link ">
-              
   
   
   <span class="md-ellipsis">
@@ -9849,128 +9826,7 @@
   </span>
   
 
-            </a>
-            
-              
-              <label class="md-nav__link " for="__nav_10_3" id="__nav_10_3_label" tabindex="0">
-                <span class="md-nav__icon md-icon"></span>
-              </label>
-            
-          </div>
-        
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_10_3_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_10_3">
-            <span class="md-nav__icon md-icon"></span>
-            News
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-      
-        
-      
-        
-      
-    
-    
-    
-      
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10_3_2" >
-        
-          
-          <label class="md-nav__link" for="__nav_10_3_2" id="__nav_10_3_2_label" tabindex="0">
-            
-  
-  
-  <span class="md-ellipsis">
-    Articles
-    
-  </span>
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_10_3_2_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_10_3_2">
-            <span class="md-nav__icon md-icon"></span>
-            Articles
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../about/news/articles/20250622/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    New Documentation
-    
-  </span>
-  
-
       </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../about/news/articles/template-article/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Template DCC-EX News Article
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
     </li>
   
 
@@ -10961,7 +10817,10 @@
 <h3 id="dcc-ex-custom-latest-news-plugin">DCC-EX Custom Latest News Plugin<a class="headerlink" href="#dcc-ex-custom-latest-news-plugin" title="Permanent link">&para;</a></h3>
 <p>This plugin simply grabs the title of the latest news/blog articles to create an unordered list which can be used in markdown files.</p>
 <p>To include it in a file, include this text on its own line with a blank line above and below:</p>
-<div class="language-markdown highlight"><pre><span></span><code>
+<div class="language-markdown highlight"><pre><span></span><code><span class="k">-</span><span class="w"> </span>:material-newspaper: Assorted new feature documentation
+{ .news-headline-list }
+<span class="k">-</span><span class="w"> </span>:material-newspaper: New Documentation Started
+{ .news-headline-list }
 </code></pre></div>
 <p>You may need to indent this line to suit the nesting of lists etc.</p>
 <p>This is included as a plugin in mkdocs.yml:</p>
