@@ -10784,7 +10784,8 @@
 
 
 <h1 id="io-device-drivers-and-hal">I/O Device Drivers and <abbr title="Hardware Abstraction Layer. Allows the CS to discover and use the hardware through a simple abstract API, regardless of the type of underlying hardware.">HAL</abbr><a class="headerlink" href="#io-device-drivers-and-hal" title="Permanent link">&para;</a></h1>
-<p><mark>TODO</mark> LOW - change references in this document from the <abbr title="Not recommended. Use EX-Installer or, if experienced, Microsoft Visual Studio Code (VSC)">Arduino IDE</abbr> to <abbr title="Microsoft Visual Studio Code. Recommended IDE if EX-Installer is insufficient for your needs.">VSC</abbr>/PIO</p>
+<!-- ==TODO== LOW - change references in this document from the Arduino IDE to VSC/PIO -->
+
 <p>The <strong>EX-CommandStation</strong>** has always had built-in support for <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnout</abbr> control, output control and input sensors attached to the Arduino pins.  However, you may outgrow the built-in capabilities and want to access more output pins than the Arduino has available.  Or you may wish to attach servos to the controller for <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnout</abbr> control or for animating a layout component, such as the doors to an engine shed.</p>
 <p><strong>EX-CommandStation</strong>, as of version 3.2.0, provides support for a wider set of input and output devices than previous versions.  This is thanks to a piece of software called the <strong><abbr title="Hardware Abstraction Layer. Allows the CS to discover and use the hardware through a simple abstract API, regardless of the type of underlying hardware.">HAL</abbr></strong> or <strong>H</strong>ardware <strong>A</strong>bstraction <strong>L</strong>ayer. The <abbr title="Hardware Abstraction Layer. Allows the CS to discover and use the hardware through a simple abstract API, regardless of the type of underlying hardware.">HAL</abbr> provides support for a range of different input and output modules through drivers that are supplied with <strong>DCC-EX</strong>. In addition, its simple interface allows advanced technical users to add new plug-in device support to <strong>EX-CommandStation</strong> without having to change a line of the core application code.</p>
 <p>The <abbr title="Hardware Abstraction Layer. Allows the CS to discover and use the hardware through a simple abstract API, regardless of the type of underlying hardware.">HAL</abbr> exposes a standard set of functions which the rest of <strong>EX-CommandStation</strong> code is able to call upon, and the <abbr title="Hardware Abstraction Layer. Allows the CS to discover and use the hardware through a simple abstract API, regardless of the type of underlying hardware.">HAL</abbr> directs the calls to the appropriate device driver. The specific device end-points are given by a kind of pin number, called a <strong>V</strong>\irtual <strong>pin</strong> or <abbr title="an Arduino pin number that has been extended to include pins on external devices or expanders">VPIN</abbr>. Any module has one or more VPINs associated with it.</p>
@@ -10892,9 +10893,9 @@ required in order to use it, together with examples.  If you can't find document
 file <code>myHal.cpp_example.txt</code> to <code>myHal.cpp</code> and then edit it, or you can create a new <code>myHal.cpp</code> from scratch.
 In fact, the file can have any name you like.  You could use <code>AA_setup.cpp</code> for example, then it will appear at the beginning of the list of files in the <abbr title="Not recommended. Use EX-Installer or, if experienced, Microsoft Visual Studio Code (VSC)">Arduino IDE</abbr>.</p>
 <h2 id="adding-a-new-device-configuration-file">Adding A New Device Configuration File<a class="headerlink" href="#adding-a-new-device-configuration-file" title="Permanent link">&para;</a></h2>
-<p>This will need to be done in the <mark>TODO</mark> MEDIUM :doc:<code>Arduino-IDE &lt;/ex-commandstation/advanced-setup/installation-options/arduino-ide&gt;</code>, so first make sure you have followed these steps to load up the <abbr title="Not recommended. Use EX-Installer or, if experienced, Microsoft Visual Studio Code (VSC)">Arduino IDE</abbr>.</p>
+<p>This will need to be done in the <a href="https://dcc-ex.com/legacy-docs/ex-commandstation/advanced-setup/installation-options/arduino-ide">Arduino-IDE</a>, so first make sure you have followed these steps to load up the <abbr title="Not recommended. Use EX-Installer or, if experienced, Microsoft Visual Studio Code (VSC)">Arduino IDE</abbr>.</p>
 <h3 id="create-a-new-tab">Create a new tab<a class="headerlink" href="#create-a-new-tab" title="Permanent link">&para;</a></h3>
-<p>First you will need to add a new file, just like the <mark>TODO</mark> MEDIUM :ref:<code>config.h file &lt;ex-commandstation/advanced-setup/installation-options/arduino-ide:Copy the config.example.h file (or rename it)&gt;</code>.
+<p>First you will need to add a new file, just like the <a href="https://dcc-ex.com/legacy-docs/ex-commandstation/advanced-setup/installation-options/arduino-ide#copy-the-config-example-h-file-or-rename-it">config.h file</a>.
 Create a new tab using the following menu option.</p>
 <p><img alt="Arduino IDE New Tab" src="../../../../_static/images/arduino-ide/arduino_ide_newtab.jpg" width="400px" />
 <br/>Creating a new tab in the <abbr title="Not recommended. Use EX-Installer or, if experienced, Microsoft Visual Studio Code (VSC)">Arduino IDE</abbr></p>
@@ -10933,7 +10934,7 @@ Create a new tab using the following menu option.</p>
 <span class="w">  </span><span class="p">}</span>
 </code></pre></div>
 <h3 id="upload-the-new-version-of-the-software">Upload the new version of the software<a class="headerlink" href="#upload-the-new-version-of-the-software" title="Permanent link">&para;</a></h3>
-<p>Finally, upload the code to the Arduino as you would do during the standard <mark>TODO</mark> :ref:<code>Arduino IDE Setup &lt;ex-commandstation/advanced-setup/installation-options/arduino-ide:upload the software&gt;</code>.
+<p>Finally, upload the code to the Arduino as you would do during the standard <a href="https://dcc-ex.com/legacy-docs/ex-commandstation/advanced-setup/installation-options/arduino-ide#upload-the-software"><abbr title="Not recommended. Use EX-Installer or, if experienced, Microsoft Visual Studio Code (VSC)">Arduino IDE</abbr> Setup</a>.
 Restart the Command Station and the new device will be configured at startup.</p>
 <h3 id="checking-the-driver">Checking the Driver<a class="headerlink" href="#checking-the-driver" title="Permanent link">&para;</a></h3>
 <p>Start the IDE serial monitor, and set its speed to 115200 baud.  If you enter the following command:</p>
@@ -11003,7 +11004,7 @@ some outputs using the IDE serial monitor, by entering the following commands:</
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="October 18, 2026 06:28:48 UTC">October 18, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="October 21, 2026 23:24:49 UTC">October 21, 2026</span>
   </span>
 
     
