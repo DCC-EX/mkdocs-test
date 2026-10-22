@@ -1,23 +1,44 @@
-const homeBackgroundImages = [
-  "_static/images/home/home1.png",
-  "_static/images/home/home2.png",
-];
-
-function setRandomHomeBackground() {
-  const backgroundBox = document.querySelector(".paragraph-bg-box");
-  if (!backgroundBox) return;
-
-  const image = homeBackgroundImages[
-    Math.floor(Math.random() * homeBackgroundImages.length)
+(() => {
+  const homeBackgroundImages = [
+    "_static/images/home/home1.png",
+    "_static/images/home/home2.png",
   ];
-  backgroundBox.style.backgroundImage =
-    `url("${new URL(image, document.baseURI).href}")`;
-}
+  let previousImage;
+  let refreshTimer;
 
-if (typeof document$ !== "undefined") {
-  document$.subscribe(setRandomHomeBackground);
-} else if (document.readyState === "loading") {
-  document.addEventListener("DOMContentLoaded", setRandomHomeBackground);
-} else {
-  setRandomHomeBackground();
-}
+  function setRandomHomeBackground() {
+    const backgroundBox = document.querySelector(".paragraph-bg-box");
+    if (!backgroundBox) return false;
+
+    const availableImages = homeBackgroundImages.filter(
+      image => image !== previousImage
+    );
+    const images = availableImages.length > 0
+      ? availableImages
+      : homeBackgroundImages;
+    const image = images[Math.floor(Math.random() * images.length)];
+    previousImage = image;
+    backgroundBox.style.backgroundImage =
+      `url("${new URL(image, document.baseURI).href}")`;
+    return true;
+  }
+
+  function startHomeBackgroundRefresh() {
+    if (!setRandomHomeBackground()) return;
+
+    window.clearInterval(refreshTimer);
+    refreshTimer = window.setInterval(setRandomHomeBackground, 20_000);
+  }
+
+  if (typeof document$ !== "undefined") {
+    document$.subscribe(startHomeBackgroundRefresh);
+  } else if (document.readyState === "loading") {
+    document.addEventListener(
+      "DOMContentLoaded",
+      startHomeBackgroundRefresh,
+      { once: true }
+    );
+  } else {
+    startHomeBackgroundRefresh();
+  }
+})();
