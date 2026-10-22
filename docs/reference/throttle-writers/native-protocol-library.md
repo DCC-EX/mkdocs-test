@@ -4,6 +4,6 @@ A DCC-EX Native/Serial command protocol library is available to help develop thr
 
 The library implements the DCC-EX Native/Serial command protocol (as used in the **DCC-EX** **EX-CommandStation** ONLY), allowing a device to connect to the server and act as a client (such as a hardware based throttle).
 
-Details of the library, including instructions and examples, [is available here](https://dcc-ex.com/DCCEXProtocol/index.html).
+Details of the library, including instructions and examples, [is available here](https://github.com/DCC-EX/DCCEXProtocol).
 
 Note that **EX-CommandStation** also supports the WiThrottle Protocol for which the [protocol library also exists](./withrottle-protocol-library.md).
