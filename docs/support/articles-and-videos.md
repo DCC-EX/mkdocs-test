@@ -5,6 +5,10 @@ icon: material/open-in-new
 
 The following are articles and videos created by people in and outside the **DCC-EX** project which you may find useful or interesting.
 
+!!! warning ""
+
+    Some of the videos below were created a long time ago and demonstrate features and techniques that may have been superseded or removed. Please check the up-to-date documentation on this website before trying to replicate what is in the videos.
+
 ## Videos
 
 ### DCC-EX YouTube Channel
@@ -64,6 +68,7 @@ an introduction to using the **EX‑Installer** and creating automation scripts 
 ### Peter Akers (flash62au)
 
 - 25 Jan 2023 - [JMRI Engine Driver - Native DCC-EX Command support](https://youtu.be/q5FezGEmAis)
+- 6 Feb 2024 - [DCC-EX EX-Toolbox - Speed Matching](https://youtu.be/7WyWR8xYvgY)
 
 ### Paul Antoine
 
