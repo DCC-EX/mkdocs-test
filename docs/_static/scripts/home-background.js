@@ -2,6 +2,7 @@
   const homeBackgroundImages = [
     "_static/images/home/home1.png",
     "_static/images/home/home2.png",
+    "_static/images/home/home3.png",
   ];
   let previousImage;
   let refreshTimer;
