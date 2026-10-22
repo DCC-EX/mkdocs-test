@@ -51,7 +51,7 @@ Like any command station, you will want some kind of throttle but you can start 
 
 ## Getting the EX-CommandStation Software
 
-All builds will require the **EX-CommandStation** software to be configured and loaded onto the Arduino microcontroller from your PC. This is best done using the [EX-Installer](../prepare-to-use/installer/installer.md)
+All builds will require the **EX-CommandStation** software to be configured and loaded onto the Arduino microcontroller from your PC. This is best done using the [EX-Installer](../prepare-to-use/installer/index.md)
 
 ## Quick and Easy Arduino Mega Build ![Tinkerer Icon](../_static/images/levels/tinkerer.png){ .header-img } <br/><small>Intermediate Level</small>
 

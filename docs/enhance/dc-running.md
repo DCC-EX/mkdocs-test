@@ -19,7 +19,7 @@ Using an **DCC-EX EX-CommandStation** to run a DC layout provides a number of ad
 - Any DC District can be further subdivided into smaller blocks and energized or powered via turnouts/points and or SPDT switches If desired, i.e. staging or fiddle yard..
 - Momentum of a loco can be defined in number of seconds of travel for acceleration and braking distances.
 - **EXRAIL** automation can be used to run trains, create routes, switch block relays, control signals, control accessory special effects, manage reversing loops, etcetera.
-- Pulse Width Modulation PWM 'Frequency' can be adjusted to suit your locos and/or reduce DC noise with a touch of the throttles function F29-F31 button.
+- Pulse Width Modulation PWM 'Frequency' can be adjusted to suit your locos and/or reduce DC noise with a touch of the throttles function F29-F31 button. Refer to the [DC Mode Frequencies](../reference/trackmanager/dc-mode-frequency.md) page for details.
 - With our **TrackManager** features it is possible to run parts of the layout with DC and other parts with DCC at the same time, and through a single wifi throttle controller with both DC & DCC locos shown & controlled at the same time.  (But do not leave a DC loco sitting idle on a track configured for DCC).
 - No DC legacy Transformers are used, only standard Laptop battery supplies from 12vdc to 24vdc and from 2A, 5A or 10Amps are used depending on your scale requirements.
 - Note: Each Power District section must have 'dual insulated rail joiners' between each track section that connect and travel between one districts to another.
@@ -50,7 +50,7 @@ All of which apply equally to DC operation, plus:
 
 - How track Districts are set for DC and which locoid addresses they are mapped to
 
-To start this you need to follow the [Installer process described here](../prepare-to-use/installer/installer.md) and create an AUTOSTART section in your myAutomation.h file to set the track manager options suitable for your layout.
+To start this you need to follow the [Installer process described here](../prepare-to-use/installer/index.md) and create an AUTOSTART section in your myAutomation.h file to set the track manager options suitable for your layout.
 
 Two districts A & B are set to DC mode and initially powered On:
 

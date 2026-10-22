@@ -1,4 +1,3 @@
 nav:
-  - Table of Contents: index.md
-  - Configuration <small><small>(config.h)</small></small>: config-h.md
+  - Configuration <small><small>(config.h)</small></small>: index.md
   - Advanced config.h Options: advanced-config-h.md

@@ -81,8 +81,7 @@ li:not(.md-nav__item, .md-tabs__item) a {
 - **Prepare to Use**
     - [Prepare to Use Your Command Station <small>(Prepare to Use)</small>](../prepare-to-use/index.md)
     - **Install the Software <br/><small>(EX-Installer)</small>**
-        - [Installing the EX-CommandStation Software <small>(Installing)</small>](../prepare-to-use/installer/index.md)
-        - [EX-Installer <small>(EX-Installer<small><small> (Install &amp; Configure)</small></small>)</small>](../prepare-to-use/installer/installer.md)
+        - [EX-Installer <small>(EX-Installer<small><small> (Install &amp; Configure)</small></small>)</small>](../prepare-to-use/installer/index.md)
         - [First Run installer <small>(First Run)</small>](../prepare-to-use/installer/first-run.md)
         - [Select Product to Install <small>(Select A Product)</small>](../prepare-to-use/installer/select-product.md)
         - [Installing EX-CommandStation Software <small>(Install EX-CommandStation)</small>](../prepare-to-use/installer/install-cs.md)
@@ -91,8 +90,8 @@ li:not(.md-nav__item, .md-tabs__item) a {
         - **Download EX-Installer**
             - [Downloading EX-Installer - Overview <small>(Download EX-Installer)</small>](../prepare-to-use/installer/download/index.md)
             - [Linux](../prepare-to-use/installer/download/download-linux.md)
-            - [Download and install on MacOS <small>(Mac)</small>](../prepare-to-use/installer/download/download-mac.md)
-            - [Download and install on Windows <small>(Windows)</small>](../prepare-to-use/installer/download/download-win.md)
+            - [Download and install on MacOS <small>(macOS)</small>](../prepare-to-use/installer/download/download-mac.md)
+            - [Download and install on Windows <small>(Windows x64)</small>](../prepare-to-use/installer/download/download-win.md)
         - [Wifi configuration <br/><small>(Excluding **EX-CSB1** or ESP32 v5.7.0+)</small> <small>(<br/>Configure WiFi <small><small>(Wifi Shield)</small></small>)</small>](../prepare-to-use/installer/config-wifi-shield.md)
         - [WiFi Configuration for version 5.7.0+ <br/><small>Graphical User Interface Options</small> <small>(Configure WiFi <small><small>(EX&#8209;CSB1&nbsp;&amp;&nbsp;ESP32&nbsp;v5.7.0+&nbsp;Only)</small></small>)</small>](../prepare-to-use/installer/config-wifi-esp32.md)
         - [Testing your installation <small>(<br/>Test Your Installation<br>)</small>](../prepare-to-use/installer/testing.md)
@@ -252,17 +251,16 @@ li:not(.md-nav__item, .md-tabs__item) a {
 - **Reference**
     - [Full Site Table of Contents <small>(Table of Contents)</small>](toc.md)
     - [Glossary of Terms](glossary.md)
-    - [**EXRAIL** Full Command List <small>(<br/>EXRAIL Command List)</small>](exrail-command-reference.md)
-    - [Grouped DCC-EX EXRAIL Command Reference <small>(EXRAIL Commands <small>by&nbsp;Function&nbsp;Group</small>)</small>](exrail-commands/exrail-commands.md)
-    - [DCC-EX Serial Command List <small>(Serial Commands <small>Full&nbsp;List</small>)</small>](serial-commands/serial-command-list.md)
-    - [Serial Commands <small>by&nbsp;Function&nbsp;Group</small>](serial-commands/serial-commands.md)
-    - **Serial Commands <small>Additional&nbsp;Info</small>**
+    - [**EXRAIL** Full Command List <small>(<br/>EXRAIL Commands <small><small>Full&nbsp;List</small></small>)</small>](exrail-command-reference.md)
+    - [Grouped DCC-EX EXRAIL Command Reference <small>(... by Function Group)</small>](exrail-commands/exrail-commands.md)
+    - [DCC-EX Serial Command List <small>(Serial Commands <small><small>Full&nbsp;List</small></small>)</small>](serial-commands/serial-command-list.md)
+    - [... by Function Group](serial-commands/serial-commands.md)
+    - **... Additional Info**
         - [DCC-EX Native/Serial Commands - Overview <small>(Serial Commands Overview)</small>](serial-commands/index.md)
         - [Legacy Command Reference <small>(Legacy Reference <small>Not&nbsp;Maintained</small>)</small>](serial-commands/legacy-command-reference.md)
         - [WiFi configuration <br/><small>(EX-CSB1 or ESP32 ONLY. v5.7.0+ ONLY)</small> <small>(Configure WiFi <br/><small>(EX‑CSB1 & ESP32 v5.7.0+ Only)</small>)</small>](serial-commands/config-wifi-esp32.md)
-    - **<br/>Configuration Reference (config.h)**
-        - [EX-CommandStation Configuration <small>(Table of Contents)</small>](configuration/index.md)
-        - [Build configuration (config.h) <small>(Configuration <small><small>(config.h)</small></small>)</small>](configuration/config-h.md)
+    - **<br/>Configuration Reference <small><small>(config.h)</small></small>**
+        - [Command Station Build Configuration (config.h) <small>(Configuration <small><small>(config.h)</small></small>)</small>](configuration/index.md)
         - [Advanced config.h settings for EX-CommandStation build <small>(Advanced config.h Options)</small>](configuration/advanced-config-h.md)
     - [HAL Device Templates <small>(HAL Device Configuration)</small>](hardware/hal/hal-device-templates.md)
     - **<br/>TrackManager**

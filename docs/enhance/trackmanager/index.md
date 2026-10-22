@@ -383,6 +383,8 @@ Just acquire the loco number you have assigned to your DC Output. Then select on
 
 Trial and error will be needed for specific locos that do not respond well to the defaults (low) frequency setting.
 
+Refer to the [DC Mode Frequencies](/reference/trackmanager/dc-mode-frequency.md) page for more information.
+
 **Notes:**
 
 - These functions are not cumulative - setting F30 overrides F29 and setting F31 overrides F29 & F30.

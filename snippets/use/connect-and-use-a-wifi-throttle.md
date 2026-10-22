@@ -1,5 +1,7 @@
 ### Connecting Your Throttle (controller)
 
+<!-- ==TODO== need to include an iOS app instructions -->
+
 !!! note ""
 
     The instructions below refer to the [Engine Driver](/throttles/engine-driver.md) Android app, but the principles described will be similar for all of the many [other throttle apps](/throttles/index.md) Android, iOS,  MS Windows and MacOS apps and other physical devices that work with **EX-CommandStation**.

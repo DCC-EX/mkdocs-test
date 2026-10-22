@@ -4,7 +4,7 @@ hide:
 ---
 ### Download and install on Linux
 
-==TODO== Download and install on Linux - Add screenshots
+<!-- ==TODO== MEDIUM - Download and install on Linux - Add screenshots -->
 
 !!! IMPORTANT "Not supported rPi!"
     There is no support for **EX-Installer** on 32-bit operating systems such as RaspberryPi OS.

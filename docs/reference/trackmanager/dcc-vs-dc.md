@@ -25,7 +25,7 @@ DC control is simpler but less flexible, especially if you want to run multiple 
 
 **Frequency of PWM in DC Operation** - PWM can use a variety of frequencies for the pulses it sends, and this can alter motor behaviour and noise etc. The default frequency used for the **EX-CSB1** is xxHz, but this can be varied using the virtual DCC functions 28-31 (check) to allow you to alter the frequency to better suit your loco's motor. This can of course be done during running from the throttle.
 
-The DC PWM frequency can be set using virtual DCC Functions 28-31
+The DC PWM frequency can be set using virtual DCC Functions 28-31. Refer to the [DC Mode Frequencies](/reference/trackmanager/dc-mode-frequency.md) page for details.
 
 ### Managing DCC and DC Modes in TrackManager
 

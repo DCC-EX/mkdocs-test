@@ -2,7 +2,7 @@
 
 !!! info inline end "EX-Installer"
 
-    Using [EX-Installer](../../prepare-to-use/installer/installer.md) is the recommended way to modify ``config.h`` and ``myAutomation.h``.
+    Using [EX-Installer](../../prepare-to-use/installer/index.md) is the recommended way to modify ``config.h`` and ``myAutomation.h``.
 
 <span style="color:red">NOTE: If you are using an **EX-CSB1** or ESP32 based EX-CommandStation ***AND*** you are are using the latest DEVEL versions of the  EX-CommandStation code (versions from 5.7.0),</span> the ``config.h`` options for WiFi configuration described here are ignored by the **EX-CSB1** or ESP32 EX-CommandStations. Instead see the [WiFi configuration (EX-CSB1 or ESP32 ONLY. Version 5.7.0+ ONLY) page](../../prepare-to-use/installer/config-wifi-esp32.md).
 

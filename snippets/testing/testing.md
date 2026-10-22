@@ -77,7 +77,9 @@ You can test your **EX-CommandStation** to some degree using a smart device (pho
 
 The [**EX-ToolBox**](/products/ex-toolbox/connecting.md) Android app also provides similar capabilities for testing over WiFi.
 
-==TODO== basic steps for initial testing with a Smart Device over WiFi
+Refer to the [how to connect via WiFi](/throttles/connecting-wifi.md) page for how to connect a smart device.
+
+==TODO== MEDIUM - basic steps for initial testing with a Smart Device over WiFi. needs to be a cut down version of the /throttles/connecting-wifi.md page.
 
 - connect A to track
 - confirm track power is on (4 LEDS). Turn on if necessary.
@@ -87,7 +89,7 @@ The [**EX-ToolBox**](/products/ex-toolbox/connecting.md) Android app also provid
 - acquire the loco in the throttle app (see appropriate page)
 - control the loco
 
-==TODO== LOW - what to do if any of the initial testing steps fail
+==TODO== MEDIUM - what to do if any of the initial testing steps fail -->
 
 ----
 
@@ -97,7 +99,7 @@ The most direct testing method is to use a serial monitor to talk directly to th
 
 There are several serial monitors available:
 
-- Built in to [**EX-Installer**](/prepare-to-use/installer/installer.md)
+- Built in to [**EX-Installer**](/prepare-to-use/installer/index.md)
 - Built in to the [**EX-WebThrottle**](/products/ex-webthrottle/ex-webthrottle.md)
 - Built in to JMRI or other train control software
 - Built in to VSCode is you are using that as an IDE

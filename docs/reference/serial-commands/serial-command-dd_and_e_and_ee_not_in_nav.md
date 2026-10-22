@@ -25,7 +25,7 @@ Serial commands to Manage the EEPROM. (Arduino Mega Only. Not available on the *
 
 ## Parameters
 
-* **numEntries**: ==TODO== MEDIUM explain the parameter
+* **numEntries**: ==TODO== LOW - explain the <D EEPROM «numEntries»>`` parameter
 
 ## Response
 

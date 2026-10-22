@@ -1,6 +1,5 @@
 nav:
-  - Installing: index.md
-  - EX-Installer<small><small> (Install &amp; Configure)</small></small>: installer.md
+  - EX-Installer<small><small> (Install &amp; Configure)</small></small>: index.md
   - First Run: first-run.md
   - Select A Product: select-product.md
   - Install EX-CommandStation: install-cs.md
