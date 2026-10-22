@@ -27,7 +27,7 @@
     if (!setRandomHomeBackground()) return;
 
     window.clearInterval(refreshTimer);
-    refreshTimer = window.setInterval(setRandomHomeBackground, 20_000);
+    refreshTimer = window.setInterval(setRandomHomeBackground, 10_000);
   }
 
   if (typeof document$ !== "undefined") {
