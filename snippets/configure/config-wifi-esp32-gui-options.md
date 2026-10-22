@@ -58,7 +58,7 @@ Only **Station (STA) mode** and the **HOSTNAME** can be changed over WiFi.
 **Access Point (AP)** mode changes require a serial/USB connection.
 This is a security feature.  If you could change AP mode settings over WiFi, then anyone who could connect to the **EX-CommandStation**'s WiFi network could change the AP settings and potentially lock you out of your **EX-CommandStation**. By requiring a USB connection for AP mode changes, we ensure that only someone with physical access to the **EX-CommandStation** can modify these critical settings.
 
-==TODO== The WiFi change limitation has been broken in the latest CS version as anything can be changed via the in-built web server
+==TODO== VERY HIGH! - The WiFi change limitation has been broken in the latest CS version as anything can be changed via the in-built web server
 
 ----
 
@@ -66,7 +66,7 @@ This is a security feature.  If you could change AP mode settings over WiFi, the
 
 ### Using the EX-CommandStation's own Web Sever
 
-==TODO== Changing the WiFi Settings using the EX-CommandStation's own Web Sever
+==TODO== VERY HIGH! - Changing the WiFi Settings using the EX-CommandStation's own Web Sever
 
 ### Using EX-WebThrottle
 

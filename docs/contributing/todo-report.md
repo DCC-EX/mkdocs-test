@@ -20,7 +20,7 @@ Scanned roots: `C:\Users\akers\OneDrive\github\github_doco\mkdocs-test\docs`, `C
 
 ## High TODOs
 
-Total High TODO matches: 13
+Total High TODO matches: 14
 
 | File | Line | Line text |
 | --- | ---: | --- |
@@ -31,6 +31,7 @@ Total High TODO matches: 13
 | [docs/reference/serial-commands/serial-command-cc-wifi_not_in_nav.md](../reference/serial-commands/serial-command-cc-wifi_not_in_nav.md) | 68 | N/A. The **EX-CommandStation** will restart. ==TODO== This is no longer true |
 | [docs/reference/serial-commands/serial-command-cc-wifi_not_in_nav.md](../reference/serial-commands/serial-command-cc-wifi_not_in_nav.md) | 74 | * In every case above, the **EX-CommandStation** will restart to apply the new settings. You will need to reconnect to the **EX-CommandStation** with whatever interface you are using. ==TODO== This is no longer true |
 | [docs/reference/serial-commands/serial-command-ff_not_in_nav.md](../reference/serial-commands/serial-command-ff_not_in_nav.md) | 36 | * **«freqValue»** = one of: ==TODO== What is the format of the parameters? |
+| [docs/reference/tools/serial-monitor.md](../reference/tools/serial-monitor.md) | 3 | &lt;!-- ==TODO== change the references on this page/section from the Arduino IDE to VSC/PIO Or add a VSC/PIO section --&gt; |
 | [docs/reference/wiring/i2C/i2c-wiring.md](../reference/wiring/i2C/i2c-wiring.md) | 54 | - When using separate power sources, there is potential for a ground loop. ==TODO== |
 | [docs/prepare-to-use/installer/platformio.md](../prepare-to-use/installer/platformio.md) | 5 | ==TODO== - provide setup help. |
 | snippets/configure/config-wifi-esp32-gui-options.md | 61 | ==TODO== The WiFi change limitation has been broken in the latest CS version as anything can be changed via the in-built web server |
@@ -40,7 +41,7 @@ Total High TODO matches: 13
 
 ## Medium priority TODOs
 
-Total medium priority TODO matches: 71
+Total medium priority TODO matches: 60
 
 | File | Line | Line text |
 | --- | ---: | --- |
@@ -53,20 +54,16 @@ Total medium priority TODO matches: 71
 | [docs/reference/microcontrollers/index.md](../reference/microcontrollers/index.md) | 5 | &lt;!-- ==TODO== MEDIUM - change the references on this page/section from the Arduino IDE to VSC/PIO --&gt; |
 | [docs/reference/serial-commands/serial-command-aa-and-a_not_in_nav.md](../reference/serial-commands/serial-command-aa-and-a_not_in_nav.md) | 43 | ==TODO== MEDIUM - responses |
 | [docs/reference/serial-commands/serial-command-at_display_not_in_nav.md](../reference/serial-commands/serial-command-at_display_not_in_nav.md) | 20 | * **display**:  Display, to display the text on ==TODO== MEDIUM What Format is the parameter? |
-| [docs/reference/serial-commands/serial-command-at_not_in_nav.md](../reference/serial-commands/serial-command-at_not_in_nav.md) | 22 | ==TODO== MEDIUM - Responses |
 | [docs/reference/serial-commands/serial-command-dd-cc-diagnostic-messages_not_in_nav.md](../reference/serial-commands/serial-command-dd-cc-diagnostic-messages_not_in_nav.md) | 44 | ==TODO== MEDIUM - Responses |
-| [docs/reference/serial-commands/serial-command-jj-cc_not_in_nav.md](../reference/serial-commands/serial-command-jj-cc_not_in_nav.md) | 31 | ==TODO== MEDIUM - Responses |
 | [docs/reference/serial-commands/serial-command-jj-ll_not_in_nav.md](../reference/serial-commands/serial-command-jj-ll_not_in_nav.md) | 23 | * **display**: *==TODO== MEDIUM parameter description / explanation |
 | [docs/reference/serial-commands/serial-command-jj-ll_not_in_nav.md](../reference/serial-commands/serial-command-jj-ll_not_in_nav.md) | 24 | * **row**: ==TODO== MEDIUM parameter description / explanation |
-| [docs/reference/serial-commands/serial-command-jj-ll_not_in_nav.md](../reference/serial-commands/serial-command-jj-ll_not_in_nav.md) | 28 | ==TODO== MEDIUM - Responses |
 | [docs/reference/serial-commands/serial-command-jj-mm_not_in_nav.md](../reference/serial-commands/serial-command-jj-mm_not_in_nav.md) | 39 | * **StashId**: Id of the stash to set, clear or get (``0`` - ==TODO== MEDIUM) |
 | [docs/reference/serial-commands/serial-command-kk_and_k_not_in_nav.md](../reference/serial-commands/serial-command-kk_and_k_not_in_nav.md) | 26 | * **blockid**: ==TODO== MEDIUM description |
 | [docs/reference/serial-commands/serial-command-kk_and_k_not_in_nav.md](../reference/serial-commands/serial-command-kk_and_k_not_in_nav.md) | 27 | * **loco**: ==TODO== MEDIUM description |
-| [docs/reference/serial-commands/serial-command-ll_not_in_nav.md](../reference/serial-commands/serial-command-ll_not_in_nav.md) | 26 | * **eventId**: ==TODO== MEDIUM description |
+| [docs/reference/serial-commands/serial-command-ll_not_in_nav.md](../reference/serial-commands/serial-command-ll_not_in_nav.md) | 26 | * **eventId**: ==TODO== MEDIUM Parameter description |
 | [docs/reference/serial-commands/serial-command-m_not_in_nav.md](../reference/serial-commands/serial-command-m_not_in_nav.md) | 33 | * **accelerating**: ==TODO== MEDIUM parameter description and range of values allowed |
 | [docs/reference/serial-commands/serial-command-m_not_in_nav.md](../reference/serial-commands/serial-command-m_not_in_nav.md) | 34 | * **braking**: ==TODO== MEDIUM parameter description and range of values allowed |
 | [docs/reference/serial-commands/serial-command-m_not_in_nav.md](../reference/serial-commands/serial-command-m_not_in_nav.md) | 35 | * **momentum**: ==TODO== MEDIUM parameter description and range of values allowed |
-| [docs/reference/serial-commands/serial-command-nn_not_in_nav.md](../reference/serial-commands/serial-command-nn_not_in_nav.md) | 34 | ==TODO== MEDIUM - Responses |
 | [docs/reference/serial-commands/serial-command-o_not_in_nav.md](../reference/serial-commands/serial-command-o_not_in_nav.md) | 40 | ==TODO== MEDIUM - Responses |
 | [docs/reference/serial-commands/serial-command-rr-and-ww_not_in_nav.md](../reference/serial-commands/serial-command-rr-and-ww_not_in_nav.md) | 131 | ==TODO== MEDIUM - Response for ``&lt;r «loco» «cv»&gt;`` |
 | [docs/reference/serial-commands/serial-command-rr-and-ww_not_in_nav.md](../reference/serial-commands/serial-command-rr-and-ww_not_in_nav.md) | 143 | ==TODO== MEDIUM - Response for ``&lt;W CONSIST «loco»&gt;`` |
@@ -79,10 +76,7 @@ Total medium priority TODO matches: 71
 | [docs/reference/serial-commands/serial-command-y_not_in_nav.md](../reference/serial-commands/serial-command-y_not_in_nav.md) | 61 | ==TODO== MEDIUM - Responses |
 | [docs/reference/serial-commands/serial-command-zz-and-z_not_in_nav.md](../reference/serial-commands/serial-command-zz-and-z_not_in_nav.md) | 87 | ==TODO== MEDIUM - Response |
 | [docs/reference/serial-commands/shell_serial-command-xyz_not_in_nav.md](../reference/serial-commands/shell_serial-command-xyz_not_in_nav.md) | 53 | ==TODO== MEDIUM - Responses |
-| [docs/reference/tools/diagnostic-tools.md](../reference/tools/diagnostic-tools.md) | 3 | &lt;!-- ==TODO== MEDIUM - change the references on this page/section from the Arduino IDE to VSC/PIO --&gt; |
-| [docs/reference/tools/diagnostic-tools.md](../reference/tools/diagnostic-tools.md) | 5 | ==TODO== MEDIUM - Work in Progress. More detail and pictures |
 | [docs/reference/tools/index.md](../reference/tools/index.md) | 3 | ==TODO== MEDIUM - Tools overview |
-| [docs/reference/tools/serial-monitor.md](../reference/tools/serial-monitor.md) | 3 | &lt;!-- ==TODO== MEDIUM - change the references on this page/section from the Arduino IDE to VSC/PIO --&gt; |
 | [docs/reference/trackmanager/dc-mode-frequency.md](../reference/trackmanager/dc-mode-frequency.md) | 82 | - ==TODO== MEDIUM - How to effectively use DC mode when using multiple frequencies. |
 | [docs/reference/microcontrollers/esp32/esp32-acebott.md](../reference/microcontrollers/esp32/esp32-acebott.md) | 99 | ==TODO== MEDIUM - Stacked EX8874 Checklist |
 | [docs/reference/microcontrollers/esp32/esp32-ex8874.md](../reference/microcontrollers/esp32/esp32-ex8874.md) | 110 | ==TODO== MEDIUM - Stacked EX8874 Checklist |
@@ -91,16 +85,12 @@ Total medium priority TODO matches: 71
 | [docs/reference/hardware/ethernet-boards/index.md](../reference/hardware/ethernet-boards/index.md) | 3 | ==TODO== MEDIUM - Move the legacy pages |
 | [docs/reference/hardware/wifi-boards/index.md](../reference/hardware/wifi-boards/index.md) | 3 | ==TODO== MEDIUM - Move the legacy pages |
 | [docs/products/ex-dccinspector/index.md](../products/ex-dccinspector/index.md) | 6 | ==TODO== MEDIUM - This page needs to be expanded |
-| [docs/products/ex-fastclock/installation.md](../products/ex-fastclock/installation.md) | 12 | &lt;!-- ==TODO== MEDIUM - change the references on this page/section from the Arduino IDE to VSC/PIO --&gt; |
 | [docs/products/ex-sensorcam/ex-sensor-manual-abridged.md](../products/ex-sensorcam/ex-sensor-manual-abridged.md) | 5 | &lt;!-- ==TODO== MEDIUM - change the references on this page from the Arduino IDE to VSC/PIO --&gt; |
-| [docs/products/ex-sensorcam/ex-sensor-manual.md](../products/ex-sensorcam/ex-sensor-manual.md) | 5 | &lt;!-- ==TODO== MEDIUM - change the references on this page from the Arduino IDE to VSC/PIO --&gt; |
 | [docs/products/ex-sensorcam/ex-sensorcam.md](../products/ex-sensorcam/ex-sensorcam.md) | 8 | &lt;!-- ==TODO== MEDIUM - change the references on this page from the Arduino IDE to VSC/PIO --&gt; |
 | [docs/products/ex-sensorcam/installation-guide.md](../products/ex-sensorcam/installation-guide.md) | 3 | &lt;!-- ==TODO== MEDIUM - change the references on this page from the Arduino IDE to VSC/PIO --&gt; |
-| [docs/products/ex-turntable/assembly.md](../products/ex-turntable/assembly.md) | 3 | &lt;!-- ==TODO== MEDIUM - change the references on this page from the Arduino IDE to VSC/PIO --&gt; |
 | [docs/prepare-to-use/connecting/connecting-diy.md](../prepare-to-use/connecting/connecting-diy.md) | 19 | &lt;!-- ==TODO== MEDIUM - This section could be improved. Physically connecting DIY EX-CS to a layout - EX8874 --&gt; |
 | [docs/prepare-to-use/connecting/connecting-diy.md](../prepare-to-use/connecting/connecting-diy.md) | 32 | &lt;!-- ==TODO== MEDIUM - This section could be improved. Physically connecting DIY EX-CS to a layout - Standard Arduino Motor Shield --&gt; |
 | [docs/prepare-to-use/connecting/connecting-ex-csb1.md](../prepare-to-use/connecting/connecting-ex-csb1.md) | 3 | &lt;!-- ==TODO== MEDIUM - this page needs to be expanded --&gt; |
-| [docs/prepare-to-use/installer/install-ex-turntable.md](../prepare-to-use/installer/install-ex-turntable.md) | 3 | ==TODO== MEDIUM - complete EX-Installer EX-Turntable page needed |
 | [docs/prepare-to-use/installer/download/download-linux.md](../prepare-to-use/installer/download/download-linux.md) | 7 | &lt;!-- ==TODO== MEDIUM - Download and install on Linux - Add screenshots --&gt; |
 | [docs/enhance/accessories/solenoid-turnouts.md](../enhance/accessories/solenoid-turnouts.md) | 103 | ==TODO== MEDIUM - Add CDU info |
 | [docs/enhance/exrail/exrail-objects-introduction.md](../enhance/exrail/exrail-objects-introduction.md) | 209 | ==TODO== MEDIUM - Add a diagram for the EX-CSB1 to a PCA9685 |
@@ -118,7 +108,7 @@ Total medium priority TODO matches: 71
 
 ## Low priority TODOs
 
-Total low priority TODO matches: 111
+Total low priority TODO matches: 120
 
 | File | Line | Line text |
 | --- | ---: | --- |
@@ -134,6 +124,7 @@ Total low priority TODO matches: 111
 | [docs/reference/serial-commands/serial-command-at_display_not_in_nav.md](../reference/serial-commands/serial-command-at_display_not_in_nav.md) | 32 | * ==TODO== LOW - Notes |
 | [docs/reference/serial-commands/serial-command-at_display_not_in_nav.md](../reference/serial-commands/serial-command-at_display_not_in_nav.md) | 42 | * ==TODO== LOW - Example Commands |
 | [docs/reference/serial-commands/serial-command-at_display_not_in_nav.md](../reference/serial-commands/serial-command-at_display_not_in_nav.md) | 46 | * ==TODO== LOW - Example Responses |
+| [docs/reference/serial-commands/serial-command-at_not_in_nav.md](../reference/serial-commands/serial-command-at_not_in_nav.md) | 22 | ==TODO== LOW - Responses |
 | [docs/reference/serial-commands/serial-command-at_not_in_nav.md](../reference/serial-commands/serial-command-at_not_in_nav.md) | 38 | * ==TODO== LOW - Example Commands |
 | [docs/reference/serial-commands/serial-command-at_not_in_nav.md](../reference/serial-commands/serial-command-at_not_in_nav.md) | 42 | * ==TODO== LOW - Example Responses |
 | [docs/reference/serial-commands/serial-command-c-railcom_not_in_nav.md](../reference/serial-commands/serial-command-c-railcom_not_in_nav.md) | 40 | * ==TODO== LOW - Example Commands |
@@ -167,8 +158,10 @@ Total low priority TODO matches: 111
 | [docs/reference/serial-commands/serial-command-ii_not_in_nav.md](../reference/serial-commands/serial-command-ii_not_in_nav.md) | 178 | * ==TODO== LOW - Example Responses |
 | [docs/reference/serial-commands/serial-command-jj-aa-and-slash_not_in_nav.md](../reference/serial-commands/serial-command-jj-aa-and-slash_not_in_nav.md) | 82 | * ==TODO== LOW - Example Commands |
 | [docs/reference/serial-commands/serial-command-jj-aa-and-slash_not_in_nav.md](../reference/serial-commands/serial-command-jj-aa-and-slash_not_in_nav.md) | 86 | * ==TODO== LOW - Example Responses |
+| [docs/reference/serial-commands/serial-command-jj-cc_not_in_nav.md](../reference/serial-commands/serial-command-jj-cc_not_in_nav.md) | 31 | ==TODO== LOW - Responses |
 | [docs/reference/serial-commands/serial-command-jj-gg_not_in_nav.md](../reference/serial-commands/serial-command-jj-gg_not_in_nav.md) | 45 | * ==TODO== LOW - Example Commands |
 | [docs/reference/serial-commands/serial-command-jj-gg_not_in_nav.md](../reference/serial-commands/serial-command-jj-gg_not_in_nav.md) | 49 | * ==TODO== LOW - Example Responses |
+| [docs/reference/serial-commands/serial-command-jj-ll_not_in_nav.md](../reference/serial-commands/serial-command-jj-ll_not_in_nav.md) | 28 | ==TODO== LOW - Responses |
 | [docs/reference/serial-commands/serial-command-jj-ll_not_in_nav.md](../reference/serial-commands/serial-command-jj-ll_not_in_nav.md) | 34 | * ==TODO== LOW - Notes |
 | [docs/reference/serial-commands/serial-command-jj-ll_not_in_nav.md](../reference/serial-commands/serial-command-jj-ll_not_in_nav.md) | 44 | * ==TODO== LOW - Example Commands |
 | [docs/reference/serial-commands/serial-command-jj-ll_not_in_nav.md](../reference/serial-commands/serial-command-jj-ll_not_in_nav.md) | 48 | * ==TODO== LOW - Example Responses |
@@ -184,6 +177,7 @@ Total low priority TODO matches: 111
 | [docs/reference/serial-commands/serial-command-ll_not_in_nav.md](../reference/serial-commands/serial-command-ll_not_in_nav.md) | 50 | * ==TODO== LOW - Example Responses |
 | [docs/reference/serial-commands/serial-command-mm-and-pp_not_in_nav.md](../reference/serial-commands/serial-command-mm-and-pp_not_in_nav.md) | 44 | ==TODO== LOW - Notes |
 | [docs/reference/serial-commands/serial-command-mm-and-pp_not_in_nav.md](../reference/serial-commands/serial-command-mm-and-pp_not_in_nav.md) | 54 | * ==TODO== LOW - Example Commands |
+| [docs/reference/serial-commands/serial-command-nn_not_in_nav.md](../reference/serial-commands/serial-command-nn_not_in_nav.md) | 34 | ==TODO== LOW - Responses |
 | [docs/reference/serial-commands/serial-command-nn_not_in_nav.md](../reference/serial-commands/serial-command-nn_not_in_nav.md) | 52 | * ==TODO== LOW - Example Commands |
 | [docs/reference/serial-commands/serial-command-nn_not_in_nav.md](../reference/serial-commands/serial-command-nn_not_in_nav.md) | 56 | * ==TODO== LOW - Example Responses |
 | [docs/reference/serial-commands/serial-command-o_not_in_nav.md](../reference/serial-commands/serial-command-o_not_in_nav.md) | 46 | * ==TODO== LOW - Notes |
@@ -218,19 +212,24 @@ Total low priority TODO matches: 111
 | [docs/reference/throttle-writers/throttle-writers-guide.md](../reference/throttle-writers/throttle-writers-guide.md) | 201 | ## COMMANDS TO AVOID ==TODO== LOW |
 | [docs/reference/throttle-writers/throttle-writers-guide.md](../reference/throttle-writers/throttle-writers-guide.md) | 217 | ==TODO== LOW Gauges |
 | [docs/reference/throttle-writers/throttle-writers-guide.md](../reference/throttle-writers/throttle-writers-guide.md) | 223 | ==TODO== LOW TCP VS UDP |
+| [docs/reference/tools/diagnostic-tools.md](../reference/tools/diagnostic-tools.md) | 3 | &lt;!-- ==TODO== LOW - change the references on this page/section from the Arduino IDE to VSC/PIO --&gt; |
+| [docs/reference/tools/diagnostic-tools.md](../reference/tools/diagnostic-tools.md) | 5 | ==TODO== LOW - Work in Progress. More detail and pictures |
 | [docs/reference/tools/diagnostic-tools.md](../reference/tools/diagnostic-tools.md) | 47 | ==TODO== LOW - Wiring and more info goes here |
 | [docs/reference/tools/diagnostic-tools.md](../reference/tools/diagnostic-tools.md) | 93 | ==TODO== LOW - add info on wiring and sketches here |
 | [docs/reference/hardware/bluetooth-devices/index.md](../reference/hardware/bluetooth-devices/index.md) | 3 | ==TODO== LOW - Move the legacy pages |
 | [docs/reference/hardware/hal/hal-config.md](../reference/hardware/hal/hal-config.md) | 3 | &lt;!-- ==TODO== LOW - change references in this document from the Arduino IDE to VSC/PIO --&gt; |
 | [docs/reference/hardware/hal/index.md](../reference/hardware/hal/index.md) | 3 | ==TODO== LOW need a HAL intro page |
-| [docs/products/ex-turntable/configure.md](../products/ex-turntable/configure.md) | 3 | ==TODO== LOW - check the current version number of EX-Turntable and adjust the version notes on this page as needed |
+| [docs/products/ex-fastclock/installation.md](../products/ex-fastclock/installation.md) | 12 | &lt;!-- ==TODO== LOW - change the references on this page/section from the Arduino IDE to VSC/PIO --&gt; |
+| [docs/products/ex-sensorcam/ex-sensor-manual.md](../products/ex-sensorcam/ex-sensor-manual.md) | 5 | &lt;!-- ==TODO== LOW - change the references on this page from the Arduino IDE to VSC/PIO --&gt; |
+| [docs/products/ex-turntable/assembly.md](../products/ex-turntable/assembly.md) | 3 | &lt;!-- ==TODO== LOW - change the references on this page from the Arduino IDE to VSC/PIO --&gt; |
+| [docs/products/ex-turntable/configure.md](../products/ex-turntable/configure.md) | 3 | &lt;!-- ==TODO== LOW - check the current version number of EX-Turntable and adjust the version notes on this page as needed --&gt; |
 | [docs/products/ex-turntable/ex-tt-troubleshooting.md](../products/ex-turntable/ex-tt-troubleshooting.md) | 7 | ==TODO== LOW - Frequently Asked Questions |
 | [docs/prepare-to-use/connecting/connecting-diy.md](../prepare-to-use/connecting/connecting-diy.md) | 61 | ==TODO== LOW - physically connecting DIY EX-CS to a layout - Other Motor Shields |
 | [docs/prepare-to-use/connecting/index.md](../prepare-to-use/connecting/index.md) | 14 | If you plan to run DC trains rather than the default of DCC, there are other considerations. Refer to ==TODO== LOW DC page for more information. |
 | [docs/prepare-to-use/installer/install-ex-ioexpander.md](../prepare-to-use/installer/install-ex-ioexpander.md) | 3 | ==TODO== LOW - complete EX-Installer EX-IOExpander page needed |
+| [docs/prepare-to-use/installer/install-ex-turntable.md](../prepare-to-use/installer/install-ex-turntable.md) | 3 | &lt;!-- ==TODO== LOW - EX-Installer EX-Turntable page could be improved/expanded --&gt; |
 | [docs/enhance/exrail/cookbooks/timecontrol.md](../enhance/exrail/cookbooks/timecontrol.md) | 92 | &lt;!-- NB:  ==TODO== LOW - See the following page for details on running sound files. No following page. Not sure where this is supposed to go --&gt; |
 | [docs/enhance/exrail/cookbooks/big-picture/stage2.md](../enhance/exrail/cookbooks/big-picture/stage2.md) | 115 | &lt;!-- ==TODO== LOW - change the references on this page/section from the Arduino IDE to VSC/PIO --&gt; |
-| [docs/contributing/documentation/formatting-guide.md](documentation/formatting-guide.md) | 71 | ==TODO== LOW - Note there is a bug in this process if the heading contains ` - ` (space dash space). |
 | [docs/contributing/documentation/github.md](documentation/github.md) | 95 | ==TODO== LOW - how to preview options |
 | snippets/testing/testing.md | 125 | ==TODO== LOW - pic - Check communication and version |
 
