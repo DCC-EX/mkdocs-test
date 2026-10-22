@@ -28,7 +28,7 @@ Serial command(s) to indicate a loco entering/leaving a block.
 
 ## Response
 
-==TODO== MEDIUM - Responses
+==TODO== LOW - Responses
 
 ----
 

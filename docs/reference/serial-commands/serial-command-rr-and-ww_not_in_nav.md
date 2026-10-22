@@ -81,6 +81,11 @@ Avoid writing CV1, CV17 & CV18 directly. Use the ``<W «loco»>`` command instea
 
 ## Responses
 
+Common response parameters:
+
+* **cv**: the cv to read or write, or was read/written
+* **bit**: the bit to read or write, or was read/written
+
 ### Reading CVs - Responses
 
 * Response for ``<R>``
@@ -104,22 +109,18 @@ Avoid writing CV1, CV17 & CV18 directly. Use the ``<W «loco»>`` command instea
 
 * Response for ``<R «cv»>``
     * ``<r «cv» «value»>``
-        * **cv**: the cv read
         * **value** - one of:
             * the value of the CV read
             * ``-1`` = failed read
 
 * Response for ``<V «cv» «value»>``
     * ``<v «cv» «value»>``
-        * **cv**: the cv read
         * **value** - one of:
             * the value of the CV read
             * ``-1`` = failed read
 
 * Response for ``<V «cv» «bit» «bitValue»>``
     * ``<v «cv» «bit» «bitValue»>``
-        * **cv**: the cv read
-        * **bit**: the bit read
         * **bitValue** - one of:
             * ``1``
             * ``0``
@@ -147,7 +148,6 @@ Avoid writing CV1, CV17 & CV18 directly. Use the ``<W «loco»>`` command instea
 
 * Response for ``<W «cv» «value»>``
     * ``<w «cv» «value»>``
-        * **cv**: the cv written
         * **value** - one of:
             * the value of the CV written/read
             * ``-1`` = failed read
@@ -162,9 +162,7 @@ Avoid writing CV1, CV17 & CV18 directly. Use the ``<W «loco»>`` command instea
 
 * Response for ``<B «cv» «bitValue» «bit»>``
     * ``<w «cv» «value»>``
-        * **cv**: the cv written
-        * **bit**: the bit written
-        * **biValue** - one of:
+        * **value** - one of:
             * the value of the bit written/read ``0``|``1``
             * ``-1`` = failed read
 

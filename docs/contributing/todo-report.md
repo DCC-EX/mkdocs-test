@@ -20,14 +20,17 @@ Scanned roots: `C:\Users\akers\OneDrive\github\github_doco\mkdocs-test\docs`, `C
 
 ## High TODOs
 
-Total High TODO matches: 10
+Total High TODO matches: 13
 
 | File | Line | Line text |
 | --- | ---: | --- |
 | [docs/enhance/rosters.md](../enhance/rosters.md) | 30 | ==TODO== needs detailed instructions for Roster Editing with a Web Browser. Needs to include screenshots! |
 | [docs/throttles/dcc-accessories.md](../throttles/dcc-accessories.md) | 3 | ==TODO== how to control DCC Accessories. GUI options.  NOT serial commands! |
+| [docs/throttles/index.md](../throttles/index.md) | 39 | ==TODO== HIGH - Overview of DCC Accessory Operation |
+| [docs/support/ex-csb1/ex-csb1-full-guide.md](../support/ex-csb1/ex-csb1-full-guide.md) | 445 | ==TODO== HIGH - USB Connection to JMRI |
 | [docs/reference/serial-commands/serial-command-cc-wifi_not_in_nav.md](../reference/serial-commands/serial-command-cc-wifi_not_in_nav.md) | 68 | N/A. The **EX-CommandStation** will restart. ==TODO== This is no longer true |
 | [docs/reference/serial-commands/serial-command-cc-wifi_not_in_nav.md](../reference/serial-commands/serial-command-cc-wifi_not_in_nav.md) | 74 | * In every case above, the **EX-CommandStation** will restart to apply the new settings. You will need to reconnect to the **EX-CommandStation** with whatever interface you are using. ==TODO== This is no longer true |
+| [docs/reference/serial-commands/serial-command-ff_not_in_nav.md](../reference/serial-commands/serial-command-ff_not_in_nav.md) | 36 | * **«freqValue»** = one of: ==TODO== What is the format of the parameters? |
 | [docs/reference/wiring/i2C/i2c-wiring.md](../reference/wiring/i2C/i2c-wiring.md) | 54 | - When using separate power sources, there is potential for a ground loop. ==TODO== |
 | [docs/prepare-to-use/installer/platformio.md](../prepare-to-use/installer/platformio.md) | 5 | ==TODO== - provide setup help. |
 | snippets/configure/config-wifi-esp32-gui-options.md | 61 | ==TODO== The WiFi change limitation has been broken in the latest CS version as anything can be changed via the in-built web server |
@@ -37,54 +40,39 @@ Total High TODO matches: 10
 
 ## Medium priority TODOs
 
-Total medium priority TODO matches: 88
+Total medium priority TODO matches: 71
 
 | File | Line | Line text |
 | --- | ---: | --- |
 | [docs/support/faq.md](../support/faq.md) | 9 | ==TODO== MEDIUM Rework this so that it includes GUI options (EX-WebThrottle, Engine Driver, etc.) |
 | [docs/support/faq.md](../support/faq.md) | 19 | ==TODO== MEDIUM Rework this so that it includes GUI options (EX-WebThrottle, Engine Driver, etc.) |
-| [docs/throttles/index.md](../throttles/index.md) | 39 | ==TODO== MEDIUM - Overview of DCC Accessory Operation |
 | [docs/support/ex-csb1/ex-csb1-full-guide.md](../support/ex-csb1/ex-csb1-full-guide.md) | 325 | If you are having problems, look at our uploading troubleshooting guide.  ==TODO== MEDIUM - find link |
-| [docs/support/ex-csb1/ex-csb1-full-guide.md](../support/ex-csb1/ex-csb1-full-guide.md) | 445 | ==TODO== MEDIUM - USB Connection to JMRI |
-| [docs/support/ex-csb1/ex-csb1-full-guide.md](../support/ex-csb1/ex-csb1-full-guide.md) | 453 | ==TODO== MEDIUM - Integrated displays |
+| [docs/support/ex-csb1/ex-csb1-full-guide.md](../support/ex-csb1/ex-csb1-full-guide.md) | 451 | ==TODO== MEDIUM - Integrated displays |
 | [docs/reference/command-station-architecture/io-device-drivers.md](../reference/command-station-architecture/io-device-drivers.md) | 3 | &lt;!-- ==TODO== MEDIUM - change the references on this page from the Arduino IDE to VSC/PIO --&gt; |
 | [docs/reference/configuration/advanced-config-h.md](../reference/configuration/advanced-config-h.md) | 3 | &lt;!-- ==TODO== MEDIUM - change the references on this page/section from the Arduino IDE to VSC/PIO --&gt; |
 | [docs/reference/microcontrollers/index.md](../reference/microcontrollers/index.md) | 5 | &lt;!-- ==TODO== MEDIUM - change the references on this page/section from the Arduino IDE to VSC/PIO --&gt; |
 | [docs/reference/serial-commands/serial-command-aa-and-a_not_in_nav.md](../reference/serial-commands/serial-command-aa-and-a_not_in_nav.md) | 43 | ==TODO== MEDIUM - responses |
-| [docs/reference/serial-commands/serial-command-at_display_not_in_nav.md](../reference/serial-commands/serial-command-at_display_not_in_nav.md) | 20 | * **display**:  ==TODO== MEDIUM Display, to display the text on |
-| [docs/reference/serial-commands/serial-command-at_display_not_in_nav.md](../reference/serial-commands/serial-command-at_display_not_in_nav.md) | 26 | ==TODO== MEDIUM - Responses |
+| [docs/reference/serial-commands/serial-command-at_display_not_in_nav.md](../reference/serial-commands/serial-command-at_display_not_in_nav.md) | 20 | * **display**:  Display, to display the text on ==TODO== MEDIUM What Format is the parameter? |
 | [docs/reference/serial-commands/serial-command-at_not_in_nav.md](../reference/serial-commands/serial-command-at_not_in_nav.md) | 22 | ==TODO== MEDIUM - Responses |
-| [docs/reference/serial-commands/serial-command-c-railcom_not_in_nav.md](../reference/serial-commands/serial-command-c-railcom_not_in_nav.md) | 24 | ==TODO== MEDIUM - Response |
-| [docs/reference/serial-commands/serial-command-caret_not_in_nav.md](../reference/serial-commands/serial-command-caret_not_in_nav.md) | 34 | ==TODO== MEDIUM - response |
-| [docs/reference/serial-commands/serial-command-dd-anin-anout_not_in_nav.md](../reference/serial-commands/serial-command-dd-anin-anout_not_in_nav.md) | 30 | ==TODO== MEDIUM - Responses |
-| [docs/reference/serial-commands/serial-command-dd-cabs-and-minus_not_in_nav.md](../reference/serial-commands/serial-command-dd-cabs-and-minus_not_in_nav.md) | 36 | ==TODO== MEDIUM - Responses |
 | [docs/reference/serial-commands/serial-command-dd-cc-diagnostic-messages_not_in_nav.md](../reference/serial-commands/serial-command-dd-cc-diagnostic-messages_not_in_nav.md) | 44 | ==TODO== MEDIUM - Responses |
-| [docs/reference/serial-commands/serial-command-dd-wifi_not_in_nav.md](../reference/serial-commands/serial-command-dd-wifi_not_in_nav.md) | 32 | ==TODO== MEDIUM - Responses |
-| [docs/reference/serial-commands/serial-command-dd_and_e_and_ee_not_in_nav.md](../reference/serial-commands/serial-command-dd_and_e_and_ee_not_in_nav.md) | 34 | ==TODO== MEDIUM - Responses |
-| [docs/reference/serial-commands/serial-command-dd_hal_not_in_nav.md](../reference/serial-commands/serial-command-dd_hal_not_in_nav.md) | 34 | ==TODO== MEDIUM - Responses |
-| [docs/reference/serial-commands/serial-command-ff_not_in_nav.md](../reference/serial-commands/serial-command-ff_not_in_nav.md) | 37 | * ==TODO== MEDIUM X = Mid frequency - 490Hz |
-| [docs/reference/serial-commands/serial-command-ff_not_in_nav.md](../reference/serial-commands/serial-command-ff_not_in_nav.md) | 38 | * ==TODO== MEDIUM X = High frequency - 3400Hz |
-| [docs/reference/serial-commands/serial-command-ff_not_in_nav.md](../reference/serial-commands/serial-command-ff_not_in_nav.md) | 39 | * ==TODO== MEDIUM X = Supersonic - 62500Hz |
 | [docs/reference/serial-commands/serial-command-jj-cc_not_in_nav.md](../reference/serial-commands/serial-command-jj-cc_not_in_nav.md) | 31 | ==TODO== MEDIUM - Responses |
-| [docs/reference/serial-commands/serial-command-jj-ll_not_in_nav.md](../reference/serial-commands/serial-command-jj-ll_not_in_nav.md) | 23 | * **display**: *Required* ==TODO== MEDIUM parameter description |
-| [docs/reference/serial-commands/serial-command-jj-ll_not_in_nav.md](../reference/serial-commands/serial-command-jj-ll_not_in_nav.md) | 24 | * **row**: *Required* ==TODO== MEDIUM parameter description |
+| [docs/reference/serial-commands/serial-command-jj-ll_not_in_nav.md](../reference/serial-commands/serial-command-jj-ll_not_in_nav.md) | 23 | * **display**: *==TODO== MEDIUM parameter description / explanation |
+| [docs/reference/serial-commands/serial-command-jj-ll_not_in_nav.md](../reference/serial-commands/serial-command-jj-ll_not_in_nav.md) | 24 | * **row**: ==TODO== MEDIUM parameter description / explanation |
 | [docs/reference/serial-commands/serial-command-jj-ll_not_in_nav.md](../reference/serial-commands/serial-command-jj-ll_not_in_nav.md) | 28 | ==TODO== MEDIUM - Responses |
 | [docs/reference/serial-commands/serial-command-jj-mm_not_in_nav.md](../reference/serial-commands/serial-command-jj-mm_not_in_nav.md) | 39 | * **StashId**: Id of the stash to set, clear or get (``0`` - ==TODO== MEDIUM) |
 | [docs/reference/serial-commands/serial-command-kk_and_k_not_in_nav.md](../reference/serial-commands/serial-command-kk_and_k_not_in_nav.md) | 26 | * **blockid**: ==TODO== MEDIUM description |
 | [docs/reference/serial-commands/serial-command-kk_and_k_not_in_nav.md](../reference/serial-commands/serial-command-kk_and_k_not_in_nav.md) | 27 | * **loco**: ==TODO== MEDIUM description |
-| [docs/reference/serial-commands/serial-command-kk_and_k_not_in_nav.md](../reference/serial-commands/serial-command-kk_and_k_not_in_nav.md) | 31 | ==TODO== MEDIUM - Responses |
 | [docs/reference/serial-commands/serial-command-ll_not_in_nav.md](../reference/serial-commands/serial-command-ll_not_in_nav.md) | 26 | * **eventId**: ==TODO== MEDIUM description |
-| [docs/reference/serial-commands/serial-command-ll_not_in_nav.md](../reference/serial-commands/serial-command-ll_not_in_nav.md) | 30 | ==TODO== MEDIUM - Responses |
-| [docs/reference/serial-commands/serial-command-m_not_in_nav.md](../reference/serial-commands/serial-command-m_not_in_nav.md) | 33 | * **accelerating**: ==TODO== MEDIUM parameter description |
-| [docs/reference/serial-commands/serial-command-m_not_in_nav.md](../reference/serial-commands/serial-command-m_not_in_nav.md) | 34 | * **braking**: ==TODO== MEDIUM parameter description |
-| [docs/reference/serial-commands/serial-command-m_not_in_nav.md](../reference/serial-commands/serial-command-m_not_in_nav.md) | 35 | * **momentum**: ==TODO== MEDIUM parameter description |
+| [docs/reference/serial-commands/serial-command-m_not_in_nav.md](../reference/serial-commands/serial-command-m_not_in_nav.md) | 33 | * **accelerating**: ==TODO== MEDIUM parameter description and range of values allowed |
+| [docs/reference/serial-commands/serial-command-m_not_in_nav.md](../reference/serial-commands/serial-command-m_not_in_nav.md) | 34 | * **braking**: ==TODO== MEDIUM parameter description and range of values allowed |
+| [docs/reference/serial-commands/serial-command-m_not_in_nav.md](../reference/serial-commands/serial-command-m_not_in_nav.md) | 35 | * **momentum**: ==TODO== MEDIUM parameter description and range of values allowed |
 | [docs/reference/serial-commands/serial-command-nn_not_in_nav.md](../reference/serial-commands/serial-command-nn_not_in_nav.md) | 34 | ==TODO== MEDIUM - Responses |
 | [docs/reference/serial-commands/serial-command-o_not_in_nav.md](../reference/serial-commands/serial-command-o_not_in_nav.md) | 40 | ==TODO== MEDIUM - Responses |
-| [docs/reference/serial-commands/serial-command-rr-and-ww_not_in_nav.md](../reference/serial-commands/serial-command-rr-and-ww_not_in_nav.md) | 130 | ==TODO== MEDIUM - Response for ``&lt;r «loco» «cv»&gt;`` |
-| [docs/reference/serial-commands/serial-command-rr-and-ww_not_in_nav.md](../reference/serial-commands/serial-command-rr-and-ww_not_in_nav.md) | 142 | ==TODO== MEDIUM - Response for ``&lt;W CONSIST «loco»&gt;`` |
-| [docs/reference/serial-commands/serial-command-rr-and-ww_not_in_nav.md](../reference/serial-commands/serial-command-rr-and-ww_not_in_nav.md) | 146 | ==TODO== MEDIUM - Response for ``&lt;W CONSIST «loco» REVERSE&gt;`` |
+| [docs/reference/serial-commands/serial-command-rr-and-ww_not_in_nav.md](../reference/serial-commands/serial-command-rr-and-ww_not_in_nav.md) | 131 | ==TODO== MEDIUM - Response for ``&lt;r «loco» «cv»&gt;`` |
+| [docs/reference/serial-commands/serial-command-rr-and-ww_not_in_nav.md](../reference/serial-commands/serial-command-rr-and-ww_not_in_nav.md) | 143 | ==TODO== MEDIUM - Response for ``&lt;W CONSIST «loco»&gt;`` |
+| [docs/reference/serial-commands/serial-command-rr-and-ww_not_in_nav.md](../reference/serial-commands/serial-command-rr-and-ww_not_in_nav.md) | 147 | ==TODO== MEDIUM - Response for ``&lt;W CONSIST «loco» REVERSE&gt;`` |
 | [docs/reference/serial-commands/serial-command-rr-and-ww_not_in_nav.md](../reference/serial-commands/serial-command-rr-and-ww_not_in_nav.md) | 157 | ==TODO== MEDIUM - Response for ``&lt;W «cv» «bitValue» «bit»&gt;` |
-| [docs/reference/serial-commands/serial-command-rr-and-ww_not_in_nav.md](../reference/serial-commands/serial-command-rr-and-ww_not_in_nav.md) | 173 | ==TODO== MEDIUM - Response for ``&lt;b «loco» «cv» «bitValue» «bit»&gt;`` |
+| [docs/reference/serial-commands/serial-command-rr-and-ww_not_in_nav.md](../reference/serial-commands/serial-command-rr-and-ww_not_in_nav.md) | 171 | ==TODO== MEDIUM - Response for ``&lt;b «loco» «cv» «bitValue» «bit»&gt;`` |
 | [docs/reference/serial-commands/serial-command-s-and-hash_not_in_nav.md](../reference/serial-commands/serial-command-s-and-hash_not_in_nav.md) | 54 | ==TODO== MEDIUM - Response for ``&lt;J I&gt;`` |
 | [docs/reference/serial-commands/serial-command-slash-latch_not_in_nav.md](../reference/serial-commands/serial-command-slash-latch_not_in_nav.md) | 30 | ==TODO== MEDIUM - Responses |
 | [docs/reference/serial-commands/serial-command-slash-reserve_not_in_nav.md](../reference/serial-commands/serial-command-slash-reserve_not_in_nav.md) | 33 | ==TODO== MEDIUM - Responses |
@@ -98,7 +86,6 @@ Total medium priority TODO matches: 88
 | [docs/reference/trackmanager/dc-mode-frequency.md](../reference/trackmanager/dc-mode-frequency.md) | 82 | - ==TODO== MEDIUM - How to effectively use DC mode when using multiple frequencies. |
 | [docs/reference/microcontrollers/esp32/esp32-acebott.md](../reference/microcontrollers/esp32/esp32-acebott.md) | 99 | ==TODO== MEDIUM - Stacked EX8874 Checklist |
 | [docs/reference/microcontrollers/esp32/esp32-ex8874.md](../reference/microcontrollers/esp32/esp32-ex8874.md) | 110 | ==TODO== MEDIUM - Stacked EX8874 Checklist |
-| [docs/reference/microcontrollers/ex-csb1/csb1-technical.md](../reference/microcontrollers/ex-csb1/csb1-technical.md) | 22 | ==TODO== MEDIUM - EX-CSB1 Technical Reference |
 | [docs/reference/microcontrollers/nucleo/index.md](../reference/microcontrollers/nucleo/index.md) | 3 | ==TODO== MEDIUM - Nucleo - Overview page |
 | [docs/reference/microcontrollers/nucleo/nucleo-144-ex8874.md](../reference/microcontrollers/nucleo/nucleo-144-ex8874.md) | 59 | ==TODO== MEDIUM - update MotorDrivers.h for D8 |
 | [docs/reference/hardware/ethernet-boards/index.md](../reference/hardware/ethernet-boards/index.md) | 3 | ==TODO== MEDIUM - Move the legacy pages |
@@ -122,7 +109,6 @@ Total medium priority TODO matches: 88
 | [docs/enhance/exrail/exrail-startup-configuration.md](../enhance/exrail/exrail-startup-configuration.md) | 20 | ==TODO== MEDIUM - Adding to your myAutomation.h in EX-Installer |
 | [docs/enhance/exrail/exrail-startup-configuration.md](../enhance/exrail/exrail-startup-configuration.md) | 26 | ==TODO== MEDIUM - Adding to your myAutomation.h in VSC |
 | [docs/enhance/exrail/exrail-startup-configuration.md](../enhance/exrail/exrail-startup-configuration.md) | 39 | ==TODO== MEDIUM - Adding to your myAutomation.h in the Arduino IDE |
-| [docs/enhance/exrail/cookbooks/big-picture/stage2.md](../enhance/exrail/cookbooks/big-picture/stage2.md) | 115 | &lt;!-- ==TODO== MEDIUM - change the references on this page/section from the Arduino IDE to VSC/PIO --&gt; |
 | [docs/enhance/accessories/i2c/i2c-displays.md](../enhance/accessories/i2c/i2c-displays.md) | 96 | ==TODO== MEDIUM - diagram for connecting the EX-CSB1 to an oLED via the headers |
 | [docs/enhance/accessories/i2c/i2c-displays.md](../enhance/accessories/i2c/i2c-displays.md) | 98 | ==TODO== MEDIUM - diagram for connecting the EX-CSB1 to an oLED via the QWIIC connector |
 | [docs/enhance/accessories/i2c/i2c-gpio-expanders.md](../enhance/accessories/i2c/i2c-gpio-expanders.md) | 41 | ==TODO== MEDIUM - diagram for connecting the EX-CSB1 to an GPIO Expander via the headers |
@@ -132,7 +118,7 @@ Total medium priority TODO matches: 88
 
 ## Low priority TODOs
 
-Total low priority TODO matches: 104
+Total low priority TODO matches: 111
 
 | File | Line | Line text |
 | --- | ---: | --- |
@@ -144,6 +130,7 @@ Total low priority TODO matches: 104
 | [docs/reference/command-station-architecture/io-device-drivers.md](../reference/command-station-architecture/io-device-drivers.md) | 250 | Finally, upload the code to the Arduino as you would do during the standard ==TODO== LOW - :ref:`Arduino IDE Setup &lt;ex-commandstation/advanced-setup/installation-options/arduino-ide:upload the software&gt;`. |
 | [docs/reference/serial-commands/serial-command-aa-and-a_not_in_nav.md](../reference/serial-commands/serial-command-aa-and-a_not_in_nav.md) | 71 | * ==TODO== LOW - Example Commands |
 | [docs/reference/serial-commands/serial-command-aa-and-a_not_in_nav.md](../reference/serial-commands/serial-command-aa-and-a_not_in_nav.md) | 75 | * ==TODO== LOW - Example Responses |
+| [docs/reference/serial-commands/serial-command-at_display_not_in_nav.md](../reference/serial-commands/serial-command-at_display_not_in_nav.md) | 26 | ==TODO== LOW - Responses |
 | [docs/reference/serial-commands/serial-command-at_display_not_in_nav.md](../reference/serial-commands/serial-command-at_display_not_in_nav.md) | 32 | * ==TODO== LOW - Notes |
 | [docs/reference/serial-commands/serial-command-at_display_not_in_nav.md](../reference/serial-commands/serial-command-at_display_not_in_nav.md) | 42 | * ==TODO== LOW - Example Commands |
 | [docs/reference/serial-commands/serial-command-at_display_not_in_nav.md](../reference/serial-commands/serial-command-at_display_not_in_nav.md) | 46 | * ==TODO== LOW - Example Responses |
@@ -151,25 +138,28 @@ Total low priority TODO matches: 104
 | [docs/reference/serial-commands/serial-command-at_not_in_nav.md](../reference/serial-commands/serial-command-at_not_in_nav.md) | 42 | * ==TODO== LOW - Example Responses |
 | [docs/reference/serial-commands/serial-command-c-railcom_not_in_nav.md](../reference/serial-commands/serial-command-c-railcom_not_in_nav.md) | 40 | * ==TODO== LOW - Example Commands |
 | [docs/reference/serial-commands/serial-command-c-railcom_not_in_nav.md](../reference/serial-commands/serial-command-c-railcom_not_in_nav.md) | 44 | * ==TODO== LOW - Example Responses |
-| [docs/reference/serial-commands/serial-command-caret_not_in_nav.md](../reference/serial-commands/serial-command-caret_not_in_nav.md) | 50 | * ==TODO== LOW - Example Commands |
-| [docs/reference/serial-commands/serial-command-caret_not_in_nav.md](../reference/serial-commands/serial-command-caret_not_in_nav.md) | 54 | * ==TODO== LOW - Example Responses |
+| [docs/reference/serial-commands/serial-command-caret_not_in_nav.md](../reference/serial-commands/serial-command-caret_not_in_nav.md) | 64 | * ==TODO== LOW - Example Responses |
 | [docs/reference/serial-commands/serial-command-dd-anin-anout_not_in_nav.md](../reference/serial-commands/serial-command-dd-anin-anout_not_in_nav.md) | 25 | * **position**: ==TODO== LOW - Parameter Description |
 | [docs/reference/serial-commands/serial-command-dd-anin-anout_not_in_nav.md](../reference/serial-commands/serial-command-dd-anin-anout_not_in_nav.md) | 26 | * **profile**: ==TODO== LOW - Parameter Description |
+| [docs/reference/serial-commands/serial-command-dd-anin-anout_not_in_nav.md](../reference/serial-commands/serial-command-dd-anin-anout_not_in_nav.md) | 30 | ==TODO== LOW - Responses |
 | [docs/reference/serial-commands/serial-command-dd-anin-anout_not_in_nav.md](../reference/serial-commands/serial-command-dd-anin-anout_not_in_nav.md) | 36 | ==TODO== LOW - Notes |
 | [docs/reference/serial-commands/serial-command-dd-anin-anout_not_in_nav.md](../reference/serial-commands/serial-command-dd-anin-anout_not_in_nav.md) | 46 | * ==TODO== LOW - Example Commands |
 | [docs/reference/serial-commands/serial-command-dd-anin-anout_not_in_nav.md](../reference/serial-commands/serial-command-dd-anin-anout_not_in_nav.md) | 50 | * ==TODO== LOW - Example Responses |
+| [docs/reference/serial-commands/serial-command-dd-cabs-and-minus_not_in_nav.md](../reference/serial-commands/serial-command-dd-cabs-and-minus_not_in_nav.md) | 36 | ==TODO== LOW - Responses |
 | [docs/reference/serial-commands/serial-command-dd-cabs-and-minus_not_in_nav.md](../reference/serial-commands/serial-command-dd-cabs-and-minus_not_in_nav.md) | 44 | ==TODO== LOW - Notes |
 | [docs/reference/serial-commands/serial-command-dd-cabs-and-minus_not_in_nav.md](../reference/serial-commands/serial-command-dd-cabs-and-minus_not_in_nav.md) | 65 | * ==TODO== LOW - Example Responses |
 | [docs/reference/serial-commands/serial-command-dd-cc-diagnostic-messages_not_in_nav.md](../reference/serial-commands/serial-command-dd-cc-diagnostic-messages_not_in_nav.md) | 62 | ==TODO== LOW - Example Responses |
 | [docs/reference/serial-commands/serial-command-dd-ram_not_in_nav.md](../reference/serial-commands/serial-command-dd-ram_not_in_nav.md) | 49 | * ==TODO== LOW - Example Responses |
 | [docs/reference/serial-commands/serial-command-dd-servo_not_in_nav.md](../reference/serial-commands/serial-command-dd-servo_not_in_nav.md) | 53 | * ==TODO== LOW - Example Commands |
 | [docs/reference/serial-commands/serial-command-dd-servo_not_in_nav.md](../reference/serial-commands/serial-command-dd-servo_not_in_nav.md) | 57 | * ==TODO== LOW - Example Responses |
-| [docs/reference/serial-commands/serial-command-dd-wifi_not_in_nav.md](../reference/serial-commands/serial-command-dd-wifi_not_in_nav.md) | 52 | ==TODO== LOW - Example Responses |
+| [docs/reference/serial-commands/serial-command-dd-wifi_not_in_nav.md](../reference/serial-commands/serial-command-dd-wifi_not_in_nav.md) | 63 | ==TODO== LOW - Example Responses |
 | [docs/reference/serial-commands/serial-command-dd_ack_not_in_nav.md](../reference/serial-commands/serial-command-dd_ack_not_in_nav.md) | 77 | ==TODO== LOW - Example Commands |
 | [docs/reference/serial-commands/serial-command-dd_ack_not_in_nav.md](../reference/serial-commands/serial-command-dd_ack_not_in_nav.md) | 81 | ==TODO== LOW - Example Responses |
 | [docs/reference/serial-commands/serial-command-dd_and_e_and_ee_not_in_nav.md](../reference/serial-commands/serial-command-dd_and_e_and_ee_not_in_nav.md) | 28 | * **numEntries**: ==TODO== LOW - explain the &lt;D EEPROM «numEntries»&gt;`` parameter |
+| [docs/reference/serial-commands/serial-command-dd_and_e_and_ee_not_in_nav.md](../reference/serial-commands/serial-command-dd_and_e_and_ee_not_in_nav.md) | 34 | ==TODO== LOW - Responses |
 | [docs/reference/serial-commands/serial-command-dd_and_e_and_ee_not_in_nav.md](../reference/serial-commands/serial-command-dd_and_e_and_ee_not_in_nav.md) | 50 | * ==TODO== LOW - Example Commands |
 | [docs/reference/serial-commands/serial-command-dd_and_e_and_ee_not_in_nav.md](../reference/serial-commands/serial-command-dd_and_e_and_ee_not_in_nav.md) | 54 | * ==TODO== LOW - Example Responses |
+| [docs/reference/serial-commands/serial-command-dd_hal_not_in_nav.md](../reference/serial-commands/serial-command-dd_hal_not_in_nav.md) | 34 | ==TODO== LOW - Responses |
 | [docs/reference/serial-commands/serial-command-equals_not_in_nav.md](../reference/serial-commands/serial-command-equals_not_in_nav.md) | 86 | * ==TODO== LOW - Example Commands |
 | [docs/reference/serial-commands/serial-command-equals_not_in_nav.md](../reference/serial-commands/serial-command-equals_not_in_nav.md) | 92 | * ==TODO== LOW - Example Responses |
 | [docs/reference/serial-commands/serial-command-ff_not_in_nav.md](../reference/serial-commands/serial-command-ff_not_in_nav.md) | 72 | * ==TODO== LOW - Example Responses |
@@ -184,9 +174,11 @@ Total low priority TODO matches: 104
 | [docs/reference/serial-commands/serial-command-jj-ll_not_in_nav.md](../reference/serial-commands/serial-command-jj-ll_not_in_nav.md) | 48 | * ==TODO== LOW - Example Responses |
 | [docs/reference/serial-commands/serial-command-jj-mm_not_in_nav.md](../reference/serial-commands/serial-command-jj-mm_not_in_nav.md) | 69 | * ==TODO== LOW - Example Commands |
 | [docs/reference/serial-commands/serial-command-jj-mm_not_in_nav.md](../reference/serial-commands/serial-command-jj-mm_not_in_nav.md) | 73 | * ==TODO== LOW - Example Responses |
+| [docs/reference/serial-commands/serial-command-kk_and_k_not_in_nav.md](../reference/serial-commands/serial-command-kk_and_k_not_in_nav.md) | 31 | ==TODO== LOW - Responses |
 | [docs/reference/serial-commands/serial-command-kk_and_k_not_in_nav.md](../reference/serial-commands/serial-command-kk_and_k_not_in_nav.md) | 37 | * ==TODO== LOW - Notes |
 | [docs/reference/serial-commands/serial-command-kk_and_k_not_in_nav.md](../reference/serial-commands/serial-command-kk_and_k_not_in_nav.md) | 47 | * ==TODO== LOW - Example Commands |
 | [docs/reference/serial-commands/serial-command-kk_and_k_not_in_nav.md](../reference/serial-commands/serial-command-kk_and_k_not_in_nav.md) | 51 | * ==TODO== LOW - Example Responses |
+| [docs/reference/serial-commands/serial-command-ll_not_in_nav.md](../reference/serial-commands/serial-command-ll_not_in_nav.md) | 30 | ==TODO== LOW - Responses |
 | [docs/reference/serial-commands/serial-command-ll_not_in_nav.md](../reference/serial-commands/serial-command-ll_not_in_nav.md) | 36 | * ==TODO== LOW - Notes |
 | [docs/reference/serial-commands/serial-command-ll_not_in_nav.md](../reference/serial-commands/serial-command-ll_not_in_nav.md) | 46 | * ==TODO== LOW - Example Commands |
 | [docs/reference/serial-commands/serial-command-ll_not_in_nav.md](../reference/serial-commands/serial-command-ll_not_in_nav.md) | 50 | * ==TODO== LOW - Example Responses |
@@ -199,8 +191,8 @@ Total low priority TODO matches: 104
 | [docs/reference/serial-commands/serial-command-o_not_in_nav.md](../reference/serial-commands/serial-command-o_not_in_nav.md) | 60 | * ==TODO== LOW - Example - Responses |
 | [docs/reference/serial-commands/serial-command-qq-and-ss_not_in_nav.md](../reference/serial-commands/serial-command-qq-and-ss_not_in_nav.md) | 89 | * ==TODO== LOW - Example Commands |
 | [docs/reference/serial-commands/serial-command-qq-and-ss_not_in_nav.md](../reference/serial-commands/serial-command-qq-and-ss_not_in_nav.md) | 93 | * ==TODO== LOW - Example Responses |
-| [docs/reference/serial-commands/serial-command-rr-and-ww_not_in_nav.md](../reference/serial-commands/serial-command-rr-and-ww_not_in_nav.md) | 212 | * ==TODO== LOW - Example Commands |
-| [docs/reference/serial-commands/serial-command-rr-and-ww_not_in_nav.md](../reference/serial-commands/serial-command-rr-and-ww_not_in_nav.md) | 219 | * ==TODO== LOW - Example Responses |
+| [docs/reference/serial-commands/serial-command-rr-and-ww_not_in_nav.md](../reference/serial-commands/serial-command-rr-and-ww_not_in_nav.md) | 210 | * ==TODO== LOW - Example Commands |
+| [docs/reference/serial-commands/serial-command-rr-and-ww_not_in_nav.md](../reference/serial-commands/serial-command-rr-and-ww_not_in_nav.md) | 217 | * ==TODO== LOW - Example Responses |
 | [docs/reference/serial-commands/serial-command-s-and-hash_not_in_nav.md](../reference/serial-commands/serial-command-s-and-hash_not_in_nav.md) | 75 | * ==TODO== LOW Notes |
 | [docs/reference/serial-commands/serial-command-s-and-hash_not_in_nav.md](../reference/serial-commands/serial-command-s-and-hash_not_in_nav.md) | 85 | * ==TODO== LOW - Example Commands |
 | [docs/reference/serial-commands/serial-command-s-and-hash_not_in_nav.md](../reference/serial-commands/serial-command-s-and-hash_not_in_nav.md) | 89 | * ==TODO== LOW - Example Responses |
@@ -237,6 +229,7 @@ Total low priority TODO matches: 104
 | [docs/prepare-to-use/connecting/index.md](../prepare-to-use/connecting/index.md) | 14 | If you plan to run DC trains rather than the default of DCC, there are other considerations. Refer to ==TODO== LOW DC page for more information. |
 | [docs/prepare-to-use/installer/install-ex-ioexpander.md](../prepare-to-use/installer/install-ex-ioexpander.md) | 3 | ==TODO== LOW - complete EX-Installer EX-IOExpander page needed |
 | [docs/enhance/exrail/cookbooks/timecontrol.md](../enhance/exrail/cookbooks/timecontrol.md) | 92 | &lt;!-- NB:  ==TODO== LOW - See the following page for details on running sound files. No following page. Not sure where this is supposed to go --&gt; |
+| [docs/enhance/exrail/cookbooks/big-picture/stage2.md](../enhance/exrail/cookbooks/big-picture/stage2.md) | 115 | &lt;!-- ==TODO== LOW - change the references on this page/section from the Arduino IDE to VSC/PIO --&gt; |
 | [docs/contributing/documentation/formatting-guide.md](documentation/formatting-guide.md) | 71 | ==TODO== LOW - Note there is a bug in this process if the heading contains ` - ` (space dash space). |
 | [docs/contributing/documentation/github.md](documentation/github.md) | 95 | ==TODO== LOW - how to preview options |
 | snippets/testing/testing.md | 125 | ==TODO== LOW - pic - Check communication and version |

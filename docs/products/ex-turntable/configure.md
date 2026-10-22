@@ -1,6 +1,6 @@
 # Configuration options
 
-==TODO== LOW - check the current version number of EX-Turntable and adjust the version notes on this page as needed
+<!-- ==TODO== LOW - check the current version number of EX-Turntable and adjust the version notes on this page as needed -->
 
 **EX-Turntable** has a number of different configuration options available to customise the behaviour to suit your needs.
 

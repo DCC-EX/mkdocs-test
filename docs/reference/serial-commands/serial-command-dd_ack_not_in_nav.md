@@ -45,10 +45,10 @@ Serial commands to modify the system PROG track settings. Used primarily to help
 * **onOff** One of:
     * ``ON``: Enable
     * ``OFF``: Disable
-    
+
 ## Response
 
-N/A
+none
 
 ----
 

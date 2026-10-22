@@ -44,6 +44,8 @@ Results in: [Link to How to Contribute Section](/contributing/documentation/inde
 
     The technique above ensures that the link is valid.
 
+    Note there is a bug in this process if the heading contains ` - ` (space dash space) VSC will show and allow you to select it as `---` (dash dash dash) but the real link will be a single `-` (dash). The problems does not appear till you build the site.
+
 ### In Page Links
 
 ```markdown
@@ -53,22 +55,22 @@ Results in: [Link to How to Contribute Section](/contributing/documentation/inde
 Results in [Link to Search heading on the same page](#search-links)
 
 ```markdown
-[Link to heading on a differnet page](github.md#5-live-previews)
+[Link to heading on a different page](github.md#5-live-previews)
 ```
 
-Results in: [Link to heading on a differnet page](github.md#5-live-previews)
+Results in: [Link to heading on a different page](github.md#5-live-previews)
 
 !!! note "Relative Links"
 
     When typing a link in VSCode, the intellisense dropdown will help you complete the link by following the path from the current folder.
+
+    you enter `[your title](#` as soon as you type ``#`` VSC will show you a list of headings in the current document to choose from. 
     
-    If you enter `[your title](#` as soon as you type ``#`` VSC will show you a list of headings in the current document to choose from. 
-    
-    You can use the technique above to locate a differnt documnet, then press`#` to show a list of headings in that document to choose from. 
+    You can use the technique above to locate a differnt document, then press`#` to show a list of headings in that document to choose from. 
 
     The technique above ensures that the link is valid.
 
-==TODO== LOW - Note there is a bug in this process if the heading contains ` - ` (space dash space).
+    Note there is a bug in this process if the heading contains ` - ` (space dash space) VSC will show and allow you to select it as `---` (dash dash dash) but the real link will be a single `-` (dash). The problems does not appear till you build the site.
 
 ### External Links
 

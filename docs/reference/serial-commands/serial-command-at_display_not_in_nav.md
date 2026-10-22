@@ -17,13 +17,13 @@ Serial command to display text on virtual LCD at specified row.
 
 ## Parameters
 
-* **display**:  ==TODO== MEDIUM Display, to display the text on
+* **display**:  Display, to display the text on ==TODO== MEDIUM What Format is the parameter?
 * **row**: row to display the text on
 * **text**: text to display
 
 ## Response
 
-==TODO== MEDIUM - Responses
+==TODO== LOW - Responses
 
 ----
 

@@ -1,6 +1,6 @@
 # Using a Serial Monitor / Device Monitor
 
-<!-- ==TODO== MEDIUM - change the references on this page/section from the Arduino IDE to VSC/PIO -->
+<!-- ==TODO== change the references on this page/section from the Arduino IDE to VSC/PIO Or add a VSC/PIO section -->
 
 With a Serial Monitor you can:
 

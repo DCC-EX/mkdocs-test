@@ -69,7 +69,7 @@ Serial commands to list, start, pause or stop automations/sequences including ro
 
 ## Notes
 
-* None at this time
+none
 
 ----
 

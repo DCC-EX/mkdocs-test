@@ -5,6 +5,8 @@ hide:
 
 # EX-CSB1 Technical Reference
 
+- [EX-CSB1 Technical Manual](../../../support/ex-csb1/ex-csb1-full-guide.md)
+
 - [Link to EX-CSB1 Schematic](../../../_static/images/schematics/csb1-schematic.pdf)
 
 - Arduino headers
@@ -19,5 +21,3 @@ hide:
 
 - Difference in current sensing vs EX8874
 
-  ==TODO== MEDIUM - EX-CSB1 Technical Reference
-  
