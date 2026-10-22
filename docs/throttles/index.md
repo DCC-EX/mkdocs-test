@@ -36,7 +36,7 @@ For further throttle and connection options, refer to the [Throttle List](thrott
 
 ### DCC Accessory Operation
 
-==TODO== MEDIUM - Overview of DCC Accessory Operation
+==TODO== HIGH - Overview of DCC Accessory Operation
 
 For further information, refer to the [DCC Accessory Operation](dcc-accessories.md) page.
 

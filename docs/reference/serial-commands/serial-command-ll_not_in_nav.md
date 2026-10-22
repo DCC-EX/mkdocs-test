@@ -27,7 +27,7 @@ Serial commands to support the LCC/CBUS adapter.
 
 ## Response
 
-==TODO== MEDIUM - Responses
+==TODO== LOW - Responses
 
 ----
 

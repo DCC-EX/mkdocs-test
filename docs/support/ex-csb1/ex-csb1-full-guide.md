@@ -442,9 +442,7 @@ To discuss just one of those options, which will likely be the easiest to do if 
 
 ### USB Connection to JMRI
 
-==TODO== MEDIUM - USB Connection to JMRI
-
-USB Connection to JMRI
+==TODO== HIGH - USB Connection to JMRI
 
 ## Connecting Optional Devices and Accessories
 

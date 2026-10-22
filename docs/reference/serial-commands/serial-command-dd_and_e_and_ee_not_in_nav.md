@@ -31,7 +31,7 @@ Serial commands to Manage the EEPROM. (Arduino Mega Only. Not available on the *
 
 ### Response for ``<D EEPROM «numEntries»>``
 
-==TODO== MEDIUM - Responses
+==TODO== LOW - Responses
 
 ----
 

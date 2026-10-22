@@ -39,7 +39,7 @@ Serial commands to enable or disable various diagnostic messages shown on the se
     * ``ON``: Enable
     * ``OFF``: Disable
 
-## Response
+## Responses
 
 ==TODO== MEDIUM - Responses
 

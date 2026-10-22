@@ -21,7 +21,7 @@ Serial command to Enable/Disable Railcom cutout.  Available on Arduino Mega base
 
 ## Response
 
-==TODO== MEDIUM - Response
+``<* Railcom ON *>`` or ``<* Railcom OFF *>``
 
 ----
 

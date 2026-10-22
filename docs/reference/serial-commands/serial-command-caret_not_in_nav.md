@@ -31,7 +31,15 @@ See [Consists page](/enhance/exrail/cookbooks/driving-trains/consists.md) for in
 
 ## Response
 
-==TODO== MEDIUM - response
+* Response to: ``<^>``
+    * repeated for each consist/MU
+        * ``<^ leadLoco follower [ follower2..7]>``
+
+* Response to: ``<^ loco>``
+    * ``<^ loco>``
+
+* Response to: ``<^ leadLoco follower [ follower2..7]>``
+    * ``<^ leadLoco follower [ follower2..7]>``
 
 ----
 
@@ -47,7 +55,9 @@ See [Consists page](/enhance/exrail/cookbooks/driving-trains/consists.md) for in
 
 ### *Example Commands*
 
-* ==TODO== LOW - Example Commands
+* Create Consist/MU 111 with two locos: ``<^ 111 222 333>``
+* Remove loco 222 from all consist/MUs: ``<^ 222>``
+* list all Consists/MUs: ``<^>``
 
 ### *Example Responses:*
 

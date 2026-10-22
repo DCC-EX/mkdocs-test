@@ -29,7 +29,18 @@ Serial commands to provide WiFi diagnostics.
 
 ## Responses
 
-==TODO== MEDIUM - Responses
+* Response to ``<D WIFI ON>``
+    * ``<D WIFI ON>``
+
+* Response to ``<D WIFI OFF>``
+    * ``<D WIFI OFF>``
+* Response to ``<D WIFI SHOW>``
+    * ``<* C HOSTNAME "xxxx" *>`` <br/>``<* C WIFI onOff *>`` <br/>``<* C WIFI AP "nnnn" "pppp" 11 *>`` <br/>``<* C WIFI "mmmm" "********" *>``
+        * "xxxx" = the actual hostname
+        * onOff = `ON` or `OFF`
+        * "nnnn" = Access Point SSID / network name
+        * "pppp" = password
+        * "mmmm" = Station mode SSID / network name
 
 ----
 
