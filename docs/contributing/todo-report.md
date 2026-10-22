@@ -42,7 +42,7 @@ Total High TODO matches: 15
 
 ## Medium priority TODOs
 
-Total medium priority TODO matches: 87
+Total medium priority TODO matches: 86
 
 | File | Line | Line text |
 | --- | ---: | --- |
@@ -65,7 +65,6 @@ Total medium priority TODO matches: 87
 | [docs/reference/serial-commands/serial-command-dd-cabs-and-minus_not_in_nav.md](../reference/serial-commands/serial-command-dd-cabs-and-minus_not_in_nav.md) | 36 | ==TODO== MEDIUM - Responses |
 | [docs/reference/serial-commands/serial-command-dd-cc-diagnostic-messages_not_in_nav.md](../reference/serial-commands/serial-command-dd-cc-diagnostic-messages_not_in_nav.md) | 44 | ==TODO== MEDIUM - Responses |
 | [docs/reference/serial-commands/serial-command-dd-wifi_not_in_nav.md](../reference/serial-commands/serial-command-dd-wifi_not_in_nav.md) | 32 | ==TODO== MEDIUM - Responses |
-| [docs/reference/serial-commands/serial-command-dd_and_e_and_ee_not_in_nav.md](../reference/serial-commands/serial-command-dd_and_e_and_ee_not_in_nav.md) | 28 | * **numEntries**: ==TODO== MEDIUM explain the parameter |
 | [docs/reference/serial-commands/serial-command-dd_and_e_and_ee_not_in_nav.md](../reference/serial-commands/serial-command-dd_and_e_and_ee_not_in_nav.md) | 34 | ==TODO== MEDIUM - Responses |
 | [docs/reference/serial-commands/serial-command-dd_hal_not_in_nav.md](../reference/serial-commands/serial-command-dd_hal_not_in_nav.md) | 34 | ==TODO== MEDIUM - Responses |
 | [docs/reference/serial-commands/serial-command-ff_not_in_nav.md](../reference/serial-commands/serial-command-ff_not_in_nav.md) | 37 | * ==TODO== MEDIUM X = Mid frequency - 490Hz |
@@ -136,7 +135,7 @@ Total medium priority TODO matches: 87
 
 ## Low priority TODOs
 
-Total low priority TODO matches: 102
+Total low priority TODO matches: 103
 
 | File | Line | Line text |
 | --- | ---: | --- |
@@ -171,6 +170,7 @@ Total low priority TODO matches: 102
 | [docs/reference/serial-commands/serial-command-dd-wifi_not_in_nav.md](../reference/serial-commands/serial-command-dd-wifi_not_in_nav.md) | 52 | ==TODO== LOW - Example Responses |
 | [docs/reference/serial-commands/serial-command-dd_ack_not_in_nav.md](../reference/serial-commands/serial-command-dd_ack_not_in_nav.md) | 77 | ==TODO== LOW - Example Commands |
 | [docs/reference/serial-commands/serial-command-dd_ack_not_in_nav.md](../reference/serial-commands/serial-command-dd_ack_not_in_nav.md) | 81 | ==TODO== LOW - Example Responses |
+| [docs/reference/serial-commands/serial-command-dd_and_e_and_ee_not_in_nav.md](../reference/serial-commands/serial-command-dd_and_e_and_ee_not_in_nav.md) | 28 | * **numEntries**: ==TODO== LOW - explain the &lt;D EEPROM «numEntries»&gt;`` parameter |
 | [docs/reference/serial-commands/serial-command-dd_and_e_and_ee_not_in_nav.md](../reference/serial-commands/serial-command-dd_and_e_and_ee_not_in_nav.md) | 50 | * ==TODO== LOW - Example Commands |
 | [docs/reference/serial-commands/serial-command-dd_and_e_and_ee_not_in_nav.md](../reference/serial-commands/serial-command-dd_and_e_and_ee_not_in_nav.md) | 54 | * ==TODO== LOW - Example Responses |
 | [docs/reference/serial-commands/serial-command-equals_not_in_nav.md](../reference/serial-commands/serial-command-equals_not_in_nav.md) | 86 | * ==TODO== LOW - Example Commands |
