@@ -44,7 +44,9 @@ hide:
 
 <img alt="DCC-EX" src="./_static/images/logos/logo_with_border.png" width="200px" style="display:block; margin-left:auto; margin-right:auto;">
 
-<span style="font-size: 250%; font-weight:900; display:block; margin-left:10%; margin-right:10%;">Free and open source control systems for DCC and DC model rail enthusiasts</span>
+<span style="display:block; margin-left:10%; margin-right:10%; text-align:center;">
+<span style="font-size: 250%; font-weight:900; text-align:center;">Free and open source control systems for DCC and DC model rail enthusiasts</span>
+</span>
 
 <br/>
 
