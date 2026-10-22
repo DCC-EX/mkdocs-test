@@ -8,4 +8,4 @@ Details of the library, including instructions and examples, [is available here]
 
 *This library is maintained independently from the **DCC-EX** project and any issues should be addressed via the instructions on the GitHub page.*
 
-Note that use the [DCC-EX Native/Serial Command Protocol Library](./native-protocol-library.md) is recommned if your throttle will only ever connect to the an **EX-CommandStation**.
+Note that use the [DCC-EX Native/Serial Command Protocol Library](./native-protocol-library.md) is recommended if your throttle will only ever connect to the an **EX-CommandStation**.
