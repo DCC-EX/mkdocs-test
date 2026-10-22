@@ -1,7 +1,7 @@
 # Site information
 site_name: DCC-EX Model Train Control, Animation &amp; Automation
 site_url: https://dcc-ex.com/mkdocs-test/
-site_description: Initial testing of MkDocs for DCC-EX documentation
+site_description: Preview of the new DCC-EX documentation website
 repo_url: https://github.com/DCC-EX/mkdocs-test
 repo_name: GitHub
 edit_uri: edit/main/docs/
