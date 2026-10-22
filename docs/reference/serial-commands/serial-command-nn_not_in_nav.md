@@ -31,7 +31,7 @@ Serial commands to List SensorCAM defines or execute **SensorCAM** commands.
 
 ## Response
 
-==TODO== MEDIUM - Responses
+==TODO== LOW - Responses
 
 See the [SensorCAM manual](../../products/ex-sensorcam/ex-sensorcam.md) for more information.
 

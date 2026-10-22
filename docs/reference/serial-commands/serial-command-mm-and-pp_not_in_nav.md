@@ -35,7 +35,7 @@ Serial commands to Send up to 6 byte DCC packet to MAIN or PROG.
 
 ## Response
 
-N/A
+none
 
 ----
 

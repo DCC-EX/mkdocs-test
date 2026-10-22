@@ -45,7 +45,7 @@ See [Consists page](/enhance/exrail/cookbooks/driving-trains/consists.md) for in
 
 ## Notes
 
-* none at this time
+none
 
 ----
 

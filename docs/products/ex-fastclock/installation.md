@@ -9,7 +9,7 @@ This repository currently contains two branches:
 
 ## Libraries
 
-<!-- ==TODO== MEDIUM - change the references on this page/section from the Arduino IDE to VSC/PIO -->
+<!-- ==TODO== LOW - change the references on this page/section from the Arduino IDE to VSC/PIO -->
 
 The project requires three libraries:
 

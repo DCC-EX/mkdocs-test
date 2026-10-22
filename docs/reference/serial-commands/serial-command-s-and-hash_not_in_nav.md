@@ -34,7 +34,7 @@ Serial commands to query or reset the EX-CommandStation
 
 ## Parameters
 
-N/A
+none
 
 ## Responses
 

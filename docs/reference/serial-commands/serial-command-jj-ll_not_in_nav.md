@@ -25,7 +25,7 @@ Serial command to Direct current displays to LCS/OLED
 
 ## Response
 
-==TODO== MEDIUM - Responses
+==TODO== LOW - Responses
 
 ----
 

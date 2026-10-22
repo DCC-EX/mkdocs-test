@@ -1,6 +1,6 @@
 # Install EX-Turntable
 
-==TODO== MEDIUM - complete EX-Installer EX-Turntable page needed
+<!-- ==TODO== LOW - EX-Installer EX-Turntable page could be improved/expanded -->
 
 --8<-- "snippets/ex-turntable/ex-installer.md"
 

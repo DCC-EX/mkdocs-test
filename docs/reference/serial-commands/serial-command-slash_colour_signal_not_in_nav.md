@@ -30,7 +30,7 @@ Serial command to set the colour of a signal.
 
 ## Response
 
-N/A
+none
 
 ----
 

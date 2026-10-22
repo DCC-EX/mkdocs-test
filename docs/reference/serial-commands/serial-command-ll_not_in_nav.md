@@ -23,7 +23,7 @@ Serial commands to support the LCC/CBUS adapter.
 
 ## Parameters
 
-* **eventId**: ==TODO== MEDIUM description
+* **eventId**: ==TODO== MEDIUM Parameter description
 
 ## Response
 
