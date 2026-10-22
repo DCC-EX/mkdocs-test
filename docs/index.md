@@ -29,30 +29,43 @@ hide:
 
 /* Custom container for your styled paragraphs */
 .paragraph-bg-box {
-    background-image: url('_static/images/home/home1.png'); /* Path to your image */
+    background-image: url('_static/images/home/home2.png'); /* Path to your image */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     padding: 20px;          /* Adds space inside the box so text doesn't touch edges */
     border-radius: 8px;     /* Optional: rounds the corners */
-    color: #ffffff;         /* Optional: changes text color if background is dark */
+    color: black;         /* Optional: changes text color if background is dark */
 }
 
 </style>
 
-<span style="display:block; text-align: center;">
-![DCC-EX](./_static/images/logos/logo_with_border.png){ width=200px }</span> <br/>
-<span style="display:block; text-align: center;">
-<span style="font-size: 250%;">**Free and open source control systems for DCC and DC model rail enthusiasts**</span></span>
+<div class="paragraph-bg-box">
 
-<!-- <div class="paragraph-bg-box"> -->
+<img alt="DCC-EX" src="./_static/images/logos/logo_with_border.png" width="200px" style="display:block; margin-left:auto; margin-right:auto;">
 
-<span style="font-size: 120%;">*"This is a team of volunteers who love model railroading, who wanted to design a new highly capable system for model railroads - and they've done it"*  
-\- DIY and Digital Railroad</span>
+<span style="font-size: 250%; font-weight:900; display:block; margin-left:10%; margin-right:10%;">Free and open source control systems for DCC and DC model rail enthusiasts</span>
 
-<!-- </div> -->
+<br/>
 
-![](_static/images/home/home1.png){ width=100% }
+<span style="font-size: 120%; font-weight:700; display:block; margin-left:10%; margin-right:10%;"><span style="font-style:italic;">"This is a team of volunteers who love model railroading, who wanted to design a new highly capable system for model railroads - and they've done it"</span><br/>- DIY and Digital Railroad</span>
+
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+
+</div>
+
+<!-- ![](_static/images/home/home1.png){ width=100% } -->
 
 # Home
 
