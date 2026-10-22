@@ -29,7 +29,6 @@ hide:
 
 /* Custom container for your styled paragraphs */
 .paragraph-bg-box {
-    background-image: url('_static/images/home/home2.png'); /* Path to your image */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -67,7 +66,7 @@ hide:
 
 </div>
 
-<!-- ![](_static/images/home/home1.png){ width=100% } -->
+<br/>
 
 # Home
 
