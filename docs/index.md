@@ -27,7 +27,32 @@ hide:
     margin-bottom: 0.1em !important;
 }
 
+/* Custom container for your styled paragraphs */
+.paragraph-bg-box {
+    background-image: url('_static/images/home/home1.png'); /* Path to your image */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 20px;          /* Adds space inside the box so text doesn't touch edges */
+    border-radius: 8px;     /* Optional: rounds the corners */
+    color: #ffffff;         /* Optional: changes text color if background is dark */
+}
+
 </style>
+
+<span style="display:block; text-align: center;">
+![DCC-EX](./_static/images/logos/logo_with_border.png){ width=200px }</span> <br/>
+<span style="display:block; text-align: center;">
+<span style="font-size: 250%;">**A free, open source, control system for DCC and DC model rail enthusiasts**</span></span>
+
+<!-- <div class="paragraph-bg-box"> -->
+
+<span style="font-size: 120%;">*"This is a team of volunteers who love model railroading, who wanted to design a new highly capable system for model railroads - and they've done it"*  
+\- DIY and Digital Railroad</span>
+
+<!-- </div> -->
+
+![](_static/images/home/home1.png){ width=100% }
 
 # Home
 
