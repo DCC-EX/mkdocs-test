@@ -53,6 +53,7 @@ The following are not a direct response, but rather a broadcast that will be tri
 * The **EX-CommandStation** knows about the previous settings in the same group and will not, for example, unset F2 because you change F1. If, however, you have never set F2, then changing F1 WILL unset F2
 * ``<f «loco» «byte1»>`` is a deprecated version of the command. It is not documented here.
 * ``<f «loco» «group» «byte2»>`` is a deprecated version of the command. It is not documented here.
+* Refer to the [DC Mode Frequencies](/reference/trackmanager/dc-mode-frequency.md) page for more information on the PWM Frequencies.
 
 ----
 

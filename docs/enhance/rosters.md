@@ -27,9 +27,7 @@ There are three ways to create or manipulate a roster
 
 When using a web browser dialog on the command station, the Config.. Roster Editor menu will show a roster editing dialog. This edits and saves roster entries in RAM.
 
-==TODO== needs detailed instructions
-
-==TODO== needs screenshots
+==TODO== needs detailed instructions for Roster Editing with a Web Browser. Needs to include screenshots!
 
 ----
 

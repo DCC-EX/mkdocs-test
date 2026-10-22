@@ -20,21 +20,16 @@ Scanned roots: `C:\Users\akers\OneDrive\github\github_doco\mkdocs-test\docs`, `C
 
 ## High TODOs
 
-Total High TODO matches: 15
+Total High TODO matches: 10
 
 | File | Line | Line text |
 | --- | ---: | --- |
-| [docs/enhance/rosters.md](../enhance/rosters.md) | 30 | ==TODO== needs detailed instructions |
-| [docs/enhance/rosters.md](../enhance/rosters.md) | 32 | ==TODO== needs screenshots |
-| [docs/throttles/dcc-accessories.md](../throttles/dcc-accessories.md) | 3 | ==TODO== how to control DCC Accessories |
-| [docs/reference/configuration/index.md](../reference/configuration/index.md) | 3 | ==TODO== EX-CommandStation Configuration Reference - intro / overview |
+| [docs/enhance/rosters.md](../enhance/rosters.md) | 30 | ==TODO== needs detailed instructions for Roster Editing with a Web Browser. Needs to include screenshots! |
+| [docs/throttles/dcc-accessories.md](../throttles/dcc-accessories.md) | 3 | ==TODO== how to control DCC Accessories. GUI options.  NOT serial commands! |
 | [docs/reference/serial-commands/serial-command-cc-wifi_not_in_nav.md](../reference/serial-commands/serial-command-cc-wifi_not_in_nav.md) | 68 | N/A. The **EX-CommandStation** will restart. ==TODO== This is no longer true |
-| [docs/reference/trackmanager/dc-mode-frequency.md](../reference/trackmanager/dc-mode-frequency.md) | 82 | - ==TODO==  How to effectively use DC mode when using multiple frequencies. |
+| [docs/reference/serial-commands/serial-command-cc-wifi_not_in_nav.md](../reference/serial-commands/serial-command-cc-wifi_not_in_nav.md) | 74 | * In every case above, the **EX-CommandStation** will restart to apply the new settings. You will need to reconnect to the **EX-CommandStation** with whatever interface you are using. ==TODO== This is no longer true |
 | [docs/reference/wiring/i2C/i2c-wiring.md](../reference/wiring/i2C/i2c-wiring.md) | 54 | - When using separate power sources, there is potential for a ground loop. ==TODO== |
-| [docs/prepare-to-use/installer/index.md](../prepare-to-use/installer/index.md) | 7 | ==TODO== Installing the EX-CommandStation Software - Intro |
 | [docs/prepare-to-use/installer/platformio.md](../prepare-to-use/installer/platformio.md) | 5 | ==TODO== - provide setup help. |
-| [docs/prepare-to-use/installer/download/download-linux.md](../prepare-to-use/installer/download/download-linux.md) | 7 | ==TODO== Download and install on Linux - Add screenshots |
-| [docs/enhance/exrail/cookbooks/timecontrol.md](../enhance/exrail/cookbooks/timecontrol.md) | 92 | NB:  ==TODO== See the following page for details on running sound files. |
 | snippets/configure/config-wifi-esp32-gui-options.md | 61 | ==TODO== The WiFi change limitation has been broken in the latest CS version as anything can be changed via the in-built web server |
 | snippets/configure/config-wifi-esp32-gui-options.md | 69 | ==TODO== Changing the WiFi Settings using the EX-CommandStation&#x27;s own Web Sever |
 | snippets/ex-installer/startup-logs.md | 1 | ==TODO== Instructions required here to obtain the startup logs from **EX-Installer**. |
@@ -42,7 +37,7 @@ Total High TODO matches: 15
 
 ## Medium priority TODOs
 
-Total medium priority TODO matches: 86
+Total medium priority TODO matches: 88
 
 | File | Line | Line text |
 | --- | ---: | --- |
@@ -100,6 +95,7 @@ Total medium priority TODO matches: 86
 | [docs/reference/tools/diagnostic-tools.md](../reference/tools/diagnostic-tools.md) | 5 | ==TODO== MEDIUM - Work in Progress. More detail and pictures |
 | [docs/reference/tools/index.md](../reference/tools/index.md) | 3 | ==TODO== MEDIUM - Tools overview |
 | [docs/reference/tools/serial-monitor.md](../reference/tools/serial-monitor.md) | 3 | &lt;!-- ==TODO== MEDIUM - change the references on this page/section from the Arduino IDE to VSC/PIO --&gt; |
+| [docs/reference/trackmanager/dc-mode-frequency.md](../reference/trackmanager/dc-mode-frequency.md) | 82 | - ==TODO== MEDIUM - How to effectively use DC mode when using multiple frequencies. |
 | [docs/reference/microcontrollers/esp32/esp32-acebott.md](../reference/microcontrollers/esp32/esp32-acebott.md) | 99 | ==TODO== MEDIUM - Stacked EX8874 Checklist |
 | [docs/reference/microcontrollers/esp32/esp32-ex8874.md](../reference/microcontrollers/esp32/esp32-ex8874.md) | 110 | ==TODO== MEDIUM - Stacked EX8874 Checklist |
 | [docs/reference/microcontrollers/ex-csb1/csb1-technical.md](../reference/microcontrollers/ex-csb1/csb1-technical.md) | 22 | ==TODO== MEDIUM - EX-CSB1 Technical Reference |
@@ -118,6 +114,7 @@ Total medium priority TODO matches: 86
 | [docs/prepare-to-use/connecting/connecting-diy.md](../prepare-to-use/connecting/connecting-diy.md) | 32 | &lt;!-- ==TODO== MEDIUM - This section could be improved. Physically connecting DIY EX-CS to a layout - Standard Arduino Motor Shield --&gt; |
 | [docs/prepare-to-use/connecting/connecting-ex-csb1.md](../prepare-to-use/connecting/connecting-ex-csb1.md) | 3 | &lt;!-- ==TODO== MEDIUM - this page needs to be expanded --&gt; |
 | [docs/prepare-to-use/installer/install-ex-turntable.md](../prepare-to-use/installer/install-ex-turntable.md) | 3 | ==TODO== MEDIUM - complete EX-Installer EX-Turntable page needed |
+| [docs/prepare-to-use/installer/download/download-linux.md](../prepare-to-use/installer/download/download-linux.md) | 7 | &lt;!-- ==TODO== MEDIUM - Download and install on Linux - Add screenshots --&gt; |
 | [docs/enhance/accessories/solenoid-turnouts.md](../enhance/accessories/solenoid-turnouts.md) | 103 | ==TODO== MEDIUM - Add CDU info |
 | [docs/enhance/exrail/exrail-objects-introduction.md](../enhance/exrail/exrail-objects-introduction.md) | 209 | ==TODO== MEDIUM - Add a diagram for the EX-CSB1 to a PCA9685 |
 | [docs/enhance/exrail/exrail-objects-introduction.md](../enhance/exrail/exrail-objects-introduction.md) | 363 | ==TODO== MEDIUM - Link here to recommended pin/vpin allocations etc. |
@@ -130,12 +127,12 @@ Total medium priority TODO matches: 86
 | [docs/enhance/accessories/i2c/i2c-displays.md](../enhance/accessories/i2c/i2c-displays.md) | 98 | ==TODO== MEDIUM - diagram for connecting the EX-CSB1 to an oLED via the QWIIC connector |
 | [docs/enhance/accessories/i2c/i2c-gpio-expanders.md](../enhance/accessories/i2c/i2c-gpio-expanders.md) | 41 | ==TODO== MEDIUM - diagram for connecting the EX-CSB1 to an GPIO Expander via the headers |
 | [docs/contributing/code/contributing-code.md](code/contributing-code.md) | 13 | &lt;!-- ==TODO== MEDIUM - change the references on this page/section from the Arduino IDE to VSC/PIO --&gt; |
-| snippets/testing/testing.md | 82 | ==TODO== MEDIUM - basic steps for initial testing with a Smart Device over WiFi. needs to be a cut down version of the /use/connect-and-use-a-wifi-throttle.md page. |
+| snippets/testing/testing.md | 82 | ==TODO== MEDIUM - basic steps for initial testing with a Smart Device over WiFi. needs to be a cut down version of the /throttles/connecting-wifi.md page. |
 | snippets/testing/testing.md | 92 | ==TODO== MEDIUM - what to do if any of the initial testing steps fail --&gt; |
 
 ## Low priority TODOs
 
-Total low priority TODO matches: 103
+Total low priority TODO matches: 104
 
 | File | Line | Line text |
 | --- | ---: | --- |
@@ -175,7 +172,7 @@ Total low priority TODO matches: 103
 | [docs/reference/serial-commands/serial-command-dd_and_e_and_ee_not_in_nav.md](../reference/serial-commands/serial-command-dd_and_e_and_ee_not_in_nav.md) | 54 | * ==TODO== LOW - Example Responses |
 | [docs/reference/serial-commands/serial-command-equals_not_in_nav.md](../reference/serial-commands/serial-command-equals_not_in_nav.md) | 86 | * ==TODO== LOW - Example Commands |
 | [docs/reference/serial-commands/serial-command-equals_not_in_nav.md](../reference/serial-commands/serial-command-equals_not_in_nav.md) | 92 | * ==TODO== LOW - Example Responses |
-| [docs/reference/serial-commands/serial-command-ff_not_in_nav.md](../reference/serial-commands/serial-command-ff_not_in_nav.md) | 71 | * ==TODO== LOW - Example Responses |
+| [docs/reference/serial-commands/serial-command-ff_not_in_nav.md](../reference/serial-commands/serial-command-ff_not_in_nav.md) | 72 | * ==TODO== LOW - Example Responses |
 | [docs/reference/serial-commands/serial-command-ii_not_in_nav.md](../reference/serial-commands/serial-command-ii_not_in_nav.md) | 151 | * ==TODO== LOW - Example Commands |
 | [docs/reference/serial-commands/serial-command-ii_not_in_nav.md](../reference/serial-commands/serial-command-ii_not_in_nav.md) | 178 | * ==TODO== LOW - Example Responses |
 | [docs/reference/serial-commands/serial-command-jj-aa-and-slash_not_in_nav.md](../reference/serial-commands/serial-command-jj-aa-and-slash_not_in_nav.md) | 82 | * ==TODO== LOW - Example Commands |
@@ -239,6 +236,7 @@ Total low priority TODO matches: 103
 | [docs/prepare-to-use/connecting/connecting-diy.md](../prepare-to-use/connecting/connecting-diy.md) | 61 | ==TODO== LOW - physically connecting DIY EX-CS to a layout - Other Motor Shields |
 | [docs/prepare-to-use/connecting/index.md](../prepare-to-use/connecting/index.md) | 14 | If you plan to run DC trains rather than the default of DCC, there are other considerations. Refer to ==TODO== LOW DC page for more information. |
 | [docs/prepare-to-use/installer/install-ex-ioexpander.md](../prepare-to-use/installer/install-ex-ioexpander.md) | 3 | ==TODO== LOW - complete EX-Installer EX-IOExpander page needed |
+| [docs/enhance/exrail/cookbooks/timecontrol.md](../enhance/exrail/cookbooks/timecontrol.md) | 92 | &lt;!-- NB:  ==TODO== LOW - See the following page for details on running sound files. No following page. Not sure where this is supposed to go --&gt; |
 | [docs/contributing/documentation/formatting-guide.md](documentation/formatting-guide.md) | 71 | ==TODO== LOW - Note there is a bug in this process if the heading contains ` - ` (space dash space). |
 | [docs/contributing/documentation/github.md](documentation/github.md) | 95 | ==TODO== LOW - how to preview options |
 | snippets/testing/testing.md | 125 | ==TODO== LOW - pic - Check communication and version |

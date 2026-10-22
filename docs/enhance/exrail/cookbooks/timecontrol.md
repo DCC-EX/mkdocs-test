@@ -89,7 +89,7 @@ DONE
 
 In that way the Sequence 10 can either be run by the clock, or if the clock is not running may be selected manually from Engine Driver.
 
-NB:  ==TODO== See the following page for details on running sound files.
+<!-- NB:  ==TODO== LOW - See the following page for details on running sound files. No following page. Not sure where this is supposed to go -->
 
 ## Testing Timed Sequences
 

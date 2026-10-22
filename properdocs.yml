@@ -142,6 +142,8 @@ plugins:
         'enhance/routes.md': 'enhance/exrail/exrail-sequences-introduction.md'
         
         'prepare-to-use/next-steps.md': 'throttles/index.md'
+        'prepare-to-use/installer/installer.md': 'prepare-to-use/installer/index.md'
+
         'products/ex-commandstation/ex-csb1.md': 'products/ex-csb1/index.md'
         'products/ex-commandstation/exrail/command-list.md': 'enhance/exrail/command-list.md'
         'products/ex-commandstation/exrail/exrail-objects-introduction.md': 'enhance/exrail/exrail-objects-introduction.md'
@@ -150,10 +152,13 @@ plugins:
         'products/ex-commandstation/exrail/cookbooks/index.md': 'enhance/exrail/cookbooks/index.md'
         
         'purchasing/next-steps.md': 'prepare-to-use/index.md'
+
         'reference/serial-command-basics.md': 'reference/serial-commands/serial-command-list.md'
         'reference/serial-command-list.md': 'reference/serial-commands/serial-command-list.md'
 
         'reference/hardware/motorboards/ex-motor-shield-8874.md': 'products/ex-motorshield8874/ex-motorshield8874.md'
+
+        'configuration/config-h.md': 'reference/configuration/index.md'
 
         'reference/esp32/esp32-acebott.md': 'reference/microcontrollers/esp32/esp32-acebott.md'
         'reference/esp32/esp32-ex8874.md': 'reference/microcontrollers/esp32/esp32-ex8874.md'

@@ -4,6 +4,6 @@ Your **EX-CommandStation** cannot operate without the appropriate firmware which
 
 Once your initial **EX-CommandStation** build is operating, you will almost certainly wish to make use of additional features such as defining turnouts/points, rosters, signals, routes, animations and other varied accessories. In each case, we make it as simple as possible but you do need to use the appropriate tools to re-install the firmware to incorporate your changes.
 
-The [EX-Installer](../prepare-to-use/installer/installer.md) guides you through the process.
+The [EX-Installer](../prepare-to-use/installer/index.md) guides you through the process.
 
 --8<-- "snippets/abbr.md"

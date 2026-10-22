@@ -2,7 +2,7 @@
 
 Other than some purpose built devices, currently we are only aware of three options for using a throttle by connecting a PC or smart device(phone) directly to an **EX-CommandStation** via USB
 
-- [**EX-WebThrottle](../products/ex-webthrottle/)
+- [**EX-WebThrottle](../products/ex-webthrottle/index.md)
 - [JMRI](https://jmri.org)
 - [Engine Driver](../throttles/engine-driver.md) Android App, using USB On-The-Go (OTG)
 

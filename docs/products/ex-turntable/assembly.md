@@ -189,7 +189,7 @@ To validate the hall effect sensor is connected correctly, put a magnet in close
 
 !!! warning "Using Arduino IDE is discouraged"
 
-    Use of the Arduino IDE is discouraged and not covered in this documentation.  It is recommended to use **EX-Installer** to install the **EX-Turntable** software.  See [Alternatives to the EX-Installer](../../prepare-to-use/installer/installer.md#alternatives-to-the-ex-installer).
+    Use of the Arduino IDE is discouraged and not covered in this documentation.  It is recommended to use **EX-Installer** to install the **EX-Turntable** software.  See [Alternatives to the EX-Installer](../../prepare-to-use/installer/index.md#alternatives-to-the-ex-installer).
 
 !!! note "Tip"
 
