@@ -77,7 +77,9 @@ You can test your **EX-CommandStation** to some degree using a smart device (pho
 
 The [**EX-ToolBox**](/products/ex-toolbox/connecting.md) Android app also provides similar capabilities for testing over WiFi.
 
-==TODO== basic steps for initial testing with a Smart Device over WiFi
+Refer to the [how to connect via WiFi](../use/connect-and-use-a-wifi-throttle.md) page for how to connect a smart device.
+
+==TODO== MEDIUM - basic steps for initial testing with a Smart Device over WiFi. needs to be a cut down version of the /use/connect-and-use-a-wifi-throttle.md page.
 
 - connect A to track
 - confirm track power is on (4 LEDS). Turn on if necessary.
@@ -87,7 +89,7 @@ The [**EX-ToolBox**](/products/ex-toolbox/connecting.md) Android app also provid
 - acquire the loco in the throttle app (see appropriate page)
 - control the loco
 
-==TODO== LOW - what to do if any of the initial testing steps fail
+==TODO== MEDIUM - what to do if any of the initial testing steps fail -->
 
 ----
 
