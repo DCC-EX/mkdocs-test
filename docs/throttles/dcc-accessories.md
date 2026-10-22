@@ -1,3 +1,3 @@
 # DCC Accessory Operation
 
-==TODO== how to control DCC Accessories. GUI options.  NOT serial commands!
+==TODO== HIGH - how to control DCC Accessories. GUI options.  NOT serial commands!

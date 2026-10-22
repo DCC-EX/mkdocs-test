@@ -65,13 +65,13 @@ Also see the [WiFi Configuration for version 5.7.0+ - Graphical User Interface O
 
 ## Responses
 
-N/A. The **EX-CommandStation** will restart. ==TODO== This is no longer true
+N/A. The **EX-CommandStation** will restart. ==TODO== VERY HIGH! - This is no longer true
 
 ----
 
 ## Notes
 
-* In every case above, the **EX-CommandStation** will restart to apply the new settings. You will need to reconnect to the **EX-CommandStation** with whatever interface you are using. ==TODO== This is no longer true
+* In every case above, the **EX-CommandStation** will restart to apply the new settings. You will need to reconnect to the **EX-CommandStation** with whatever interface you are using. ==TODO== VERY HIGH! - This is no longer true
 * Only Station (STA) mode and the HOSTNAME can be changed over WiFi.
 * Access Point (AP) mode changes require a serial/USB connection. This is a security feature. If you could change AP mode settings over WiFi, then anyone who could connect to the **EX-CommandStation's** WiFi network could change the AP settings and potentially lock you out of your **EX-CommandStation**. By requiring a USB connection for AP mode changes, we ensure that only someone with physical access to the **EX-CommandStation** can modify these critical settings.
 * Hidden AP mode: If enabled, the **EX-CommandStation's** WiFi network will not be visible in the list of available networks on devices. This can enhance security by making it less obvious to potential attackers, but it also means that users will need to manually enter the network name (SSID) to connect.
