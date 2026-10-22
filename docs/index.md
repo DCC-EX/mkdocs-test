@@ -43,7 +43,7 @@ hide:
 <span style="display:block; text-align: center;">
 ![DCC-EX](./_static/images/logos/logo_with_border.png){ width=200px }</span> <br/>
 <span style="display:block; text-align: center;">
-<span style="font-size: 250%;">**A free, open source, control system for DCC and DC model rail enthusiasts**</span></span>
+<span style="font-size: 250%;">**Free and open source control systems for DCC and DC model rail enthusiasts**</span></span>
 
 <!-- <div class="paragraph-bg-box"> -->
 
