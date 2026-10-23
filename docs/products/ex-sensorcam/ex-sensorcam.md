@@ -19,23 +19,21 @@ It does not, however, include loco or rolling stock identification.
 
 ### Base Processor Module
 
-The Camera is a standard ESP32-CAM with an ESP32-CAM-MB (CH-340G based) to add USB capability and, in its simplest form, a PCA9515A I2C interface module.
-To connect the sensorCAM to i2c, some limited soldering is required to connect the PCA9515A (5 wires) to the USB MB on the CAM.
-An advanced proto-daughter board is preferable to the PCA9515, to include long I2C buffering (up to 30metres), an isolated power supply, and indicator LEDs.  
-A cheap commercial aerial may be useful in marginal WiFi situations.
-The newer ESP32-Wrover-CAM and 38P/V4/Expansion board provides compatible and more convenient hardware with all power regulators on-board.
+The Camera may be a standard ESP32-CAM with an ESP32-CAM-MB (CH-340G based) to add USB capability, OR a preferred ESP32-WROVER CAM with a 38P/V4/Expansion board and regulator.  In its simplest form, a PCA9515A or LTC4311 I2C interface module is needed to connect the sensorCAM to i2c bus, some limited soldering is required to connect the PCA9515A (5 wires) to the USB MB on the CAM.
+
+An isolated power supply, and indicator LEDs complete the system.  For longer reach, Sparkfun Endpoints may be used, for long I2C buffering (up to 30metres).  A cheap commercial aerial may be added in marginal WiFi situations.
+
 
 ### Camera Module
 
-The **EX-sensorCAM** uses the 32bit ESP32-S microcontroller with an OV2640 camera module.  
-It is fitted with a 4Mbyte PSRAM for image storage and a built in WiFi aerial.
-It also has 3Mb of available program storage, EPROM memory for parameters, and 327kbytes of dynamic memory.
+The **EX-sensorCAM** uses the 32bit ESP32-S microcontroller with an **OV2640** camera module.  
+It requires a 4Mbyte PSRAM for image storage and a built in WiFi aerial.  It also has 3Mb of available program storage, EPROM memory for parameters, and 327kbytes of dynamic memory.
 
 ## Software requirements
 
-The Arduino IDE is recommended for the sensorCAM and, if used, the connected **EX-CommandStation** DCC-EX-CS software (5.4.16+) with **EXRAIL**.
+The Arduino IDE or VSC/PIO is recommended for the sensorCAM and, if used, the connected **EX-CommandStation** DCC-EX-CS software (5.4.16+) with **EXRAIL**.
 The ESP32-CAM has an Arduino library of software that is needed to enable the camera image manipulation and the WiFi imaging of the railroad.
-In addition, the Processing 4 application is highly desired to enable railroad images to be captured and sensor positions to be located and seen, as the Arduino IDE cannot give visual feedback.
+In addition, the **Processing 4** application is highly desired to enable railroad images to be captured and sensor positions to be located and seen, as the Arduino or VSC/PIO IDE cannot give visual feedback.
 
 You can download Processing from [the website](https://processing.org/)
 
@@ -53,8 +51,8 @@ If you want clarification or wish to discuss the implementation please contact t
 
 ## Outline of install process
 
-1. Acquire ESP32-CAM and MB or ESP32-WROVER-CAM and 38P expander board
-2. install Arduino IDE with the ESP32 libraries (includes a WiFi CAM example)
+1. Acquire ESP32-CAM and MB or ESP32-WROVER-CAM and 38P/v4 expander board with OV2640.
+2. install Arduino IDE or VSC/PIO with the ESP32 libraries (includes a WiFi CAM example)
 3. Load the CAM with the WiFi (webCAM) example and test.
 4. Install the sensorCAM.ino software and configure.
 5. Test the basic sensorCAM functions to confirm functional install.
@@ -63,7 +61,7 @@ If you want clarification or wish to discuss the implementation please contact t
 8. Create test sensors and test detection with moving targets.
 9. Setup the CAM viewing the model railroad and test a virtual sensor with moving rolling stock.
 10. Optimise parameters for best performance.
-11. Connect CAM to an i2c interface (e.g. PCA9515A or better).
-12. Depending on system, integrate **EX-sensorCAM** into Command Station using appropriate code.
+11. Connect CAM to an i2c interface (e.g. PCA9515A, LTC4311 or better).
+12. Integrate **EX-sensorCAM** into Command Station using appropriate code.
 
 For a detailed 12 step guide refer to the [Installation Guide](/products/ex-sensorcam/installation-guide.md).
