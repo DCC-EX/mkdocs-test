@@ -106,7 +106,7 @@ Also see:
 * [EX-Turntable](../products/ex-turntable/index.md)
 * [EX-FastClock](../products/ex-fastclock/index.md)
 * [EX-IOExpander](../products/ex-ioexpander/ex-ioexpander.md)
-* [EX-SensorCAM](../products/ex-sensorcam/ex-sensorcam.md)
+* [EX-SensorCAM](../products/ex-sensorcam/index.md)
 * [Use the EX-CSB1 as a DCC Booster](./trackmanager/booster.md)
 
 ----
