@@ -50,7 +50,7 @@ hide:
 </span>
 <br/>
 
-<span style="font-size: 120%; font-weight:700; display:block; margin-left:10%; margin-right:10%;"><span style="font-style:italic;">"This is a team of volunteers who love model railroading, who wanted to design a new highly capable system for model railroads - and they've done it"</span><br/>- DIY and Digital Railroad</span>
+<span style="font-size: 120%; font-weight:700; display:block; margin-left:10%; margin-right:10%;"><span style="font-style:italic;">"This is a team of volunteers who love model railroading, who wanted to design a new highly capable system for model railroads - and they've done it"</span><br/>- Jimmy at 'DIY and Digital Railroad'</span>
 
 <br/>
 <br/>
