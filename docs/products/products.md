@@ -221,10 +221,10 @@ Refer to the [EX-IOExpander documentation](/products/ex-ioexpander/ex-ioexpander
 ### EX-SensorCAM
 
 [![EX-SensorCAM Light Logo](../_static/images/logos/product-logo-ex-sensorcam-only-light.png){ .only-light width=400px }
-![EX-SensorCAM Dark Logo](../_static/images/logos/product-logo-ex-sensorcam-only-dark.png){ .only-dark width=400px }](/products/ex-sensorcam/ex-sensorcam.md)
+![EX-SensorCAM Dark Logo](../_static/images/logos/product-logo-ex-sensorcam-only-dark.png){ .only-dark width=400px }](/products/ex-sensorcam/index.md)
 
 **EX-SensorCAM** is a Self Build (DIY) solution that provides up to 80 sensors for your layout using an ESP32 based camera solution.
 
-Refer to the [EX-SensorCAM documentation](/products/ex-sensorcam/ex-sensorcam.md) for more information.
+Refer to the [EX-SensorCAM documentation](/products/ex-sensorcam/index.md) for more information.
 
 --8<-- "snippets/abbr.md"

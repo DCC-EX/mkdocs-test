@@ -54,7 +54,7 @@ li:not(.md-nav__item, .md-tabs__item) a {
         - [EX-Turntable FAQ and Troubleshooting <small>(FAQ & Troubleshooting)</small>](../products/ex-turntable/ex-tt-troubleshooting.md)
         - [Traversers and Limited Rotation Turntables <small>(Traversers & Limited Rotation Turntables)</small>](../products/ex-turntable/traverser.md)
     - **EX-SensorCAM<small><small> (DIY)</small></small>**
-        - [EX-SensorCAM <small>(EX-SensorCAM Overview)</small>](../products/ex-sensorcam/ex-sensorcam.md)
+        - [EX-SensorCAM <small>(EX-SensorCAM Overview)</small>](../products/ex-sensorcam/index.md)
         - [Installation Guide](../products/ex-sensorcam/installation-guide.md)
         - [EX-SensorCAM Manual <small>(User Manual)</small>](../products/ex-sensorcam/ex-sensor-manual.md)
         - [Native EX-SensorCAM Command List <small>(Command Reference)</small>](../products/ex-sensorcam/ex-sensorcam-command-reference.md)
