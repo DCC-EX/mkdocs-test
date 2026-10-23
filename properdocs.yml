@@ -182,6 +182,8 @@ plugins:
         'reference/throttle-writers/withrottle-vs-native-protocol.md': 'throttles/withrottle-vs-native-protocol.md'
         'reference/microcontrollers/arduino-mega.md': 'diy/mega-easy.md'
 
+        'throttles/next-steps.md': 'enhance/index.md'
+
 
 # Build-only hooks live in mkdocsbuild.yml so mkdocs serve does not loop.
 

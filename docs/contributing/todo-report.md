@@ -24,18 +24,18 @@ Total High TODO matches: 14
 
 | File | Line | Line text |
 | --- | ---: | --- |
-| [docs/enhance/rosters.md](../enhance/rosters.md) | 30 | ==TODO== needs detailed instructions for Roster Editing with a Web Browser. Needs to include screenshots! |
-| [docs/throttles/dcc-accessories.md](../throttles/dcc-accessories.md) | 3 | ==TODO== how to control DCC Accessories. GUI options.  NOT serial commands! |
+| [docs/enhance/rosters.md](../enhance/rosters.md) | 30 | ==TODO== VERY HIGH! - needs detailed instructions for Roster Editing with a Web Browser. Needs to include screenshots! |
+| [docs/throttles/dcc-accessories.md](../throttles/dcc-accessories.md) | 3 | ==TODO== HIGH - how to control DCC Accessories. GUI options.  NOT serial commands! |
 | [docs/throttles/index.md](../throttles/index.md) | 39 | ==TODO== HIGH - Overview of DCC Accessory Operation |
 | [docs/support/ex-csb1/ex-csb1-full-guide.md](../support/ex-csb1/ex-csb1-full-guide.md) | 445 | ==TODO== HIGH - USB Connection to JMRI |
-| [docs/reference/serial-commands/serial-command-cc-wifi_not_in_nav.md](../reference/serial-commands/serial-command-cc-wifi_not_in_nav.md) | 68 | N/A. The **EX-CommandStation** will restart. ==TODO== This is no longer true |
-| [docs/reference/serial-commands/serial-command-cc-wifi_not_in_nav.md](../reference/serial-commands/serial-command-cc-wifi_not_in_nav.md) | 74 | * In every case above, the **EX-CommandStation** will restart to apply the new settings. You will need to reconnect to the **EX-CommandStation** with whatever interface you are using. ==TODO== This is no longer true |
+| [docs/reference/serial-commands/serial-command-cc-wifi_not_in_nav.md](../reference/serial-commands/serial-command-cc-wifi_not_in_nav.md) | 68 | N/A. The **EX-CommandStation** will restart. ==TODO== VERY HIGH! - This is no longer true |
+| [docs/reference/serial-commands/serial-command-cc-wifi_not_in_nav.md](../reference/serial-commands/serial-command-cc-wifi_not_in_nav.md) | 74 | * In every case above, the **EX-CommandStation** will restart to apply the new settings. You will need to reconnect to the **EX-CommandStation** with whatever interface you are using. ==TODO== VERY HIGH! - This is no longer true |
 | [docs/reference/serial-commands/serial-command-ff_not_in_nav.md](../reference/serial-commands/serial-command-ff_not_in_nav.md) | 36 | * **«freqValue»** = one of: ==TODO== What is the format of the parameters? |
 | [docs/reference/tools/serial-monitor.md](../reference/tools/serial-monitor.md) | 3 | &lt;!-- ==TODO== change the references on this page/section from the Arduino IDE to VSC/PIO Or add a VSC/PIO section --&gt; |
 | [docs/reference/wiring/i2C/i2c-wiring.md](../reference/wiring/i2C/i2c-wiring.md) | 54 | - When using separate power sources, there is potential for a ground loop. ==TODO== |
 | [docs/prepare-to-use/installer/platformio.md](../prepare-to-use/installer/platformio.md) | 5 | ==TODO== - provide setup help. |
-| snippets/configure/config-wifi-esp32-gui-options.md | 61 | ==TODO== The WiFi change limitation has been broken in the latest CS version as anything can be changed via the in-built web server |
-| snippets/configure/config-wifi-esp32-gui-options.md | 69 | ==TODO== Changing the WiFi Settings using the EX-CommandStation&#x27;s own Web Sever |
+| snippets/configure/config-wifi-esp32-gui-options.md | 61 | ==TODO== VERY HIGH! - The WiFi change limitation has been broken in the latest CS version as anything can be changed via the in-built web server |
+| snippets/configure/config-wifi-esp32-gui-options.md | 69 | ==TODO== VERY HIGH! - Changing the WiFi Settings using the EX-CommandStation&#x27;s own Web Sever |
 | snippets/ex-installer/startup-logs.md | 1 | ==TODO== Instructions required here to obtain the startup logs from **EX-Installer**. |
 | snippets/use/connect-and-use-a-wifi-throttle.md | 3 | &lt;!-- ==TODO== need to include an iOS app instructions --&gt; |
 
@@ -108,7 +108,7 @@ Total medium priority TODO matches: 60
 
 ## Low priority TODOs
 
-Total low priority TODO matches: 120
+Total low priority TODO matches: 117
 
 | File | Line | Line text |
 | --- | ---: | --- |
@@ -177,9 +177,6 @@ Total low priority TODO matches: 120
 | [docs/reference/serial-commands/serial-command-ll_not_in_nav.md](../reference/serial-commands/serial-command-ll_not_in_nav.md) | 50 | * ==TODO== LOW - Example Responses |
 | [docs/reference/serial-commands/serial-command-mm-and-pp_not_in_nav.md](../reference/serial-commands/serial-command-mm-and-pp_not_in_nav.md) | 44 | ==TODO== LOW - Notes |
 | [docs/reference/serial-commands/serial-command-mm-and-pp_not_in_nav.md](../reference/serial-commands/serial-command-mm-and-pp_not_in_nav.md) | 54 | * ==TODO== LOW - Example Commands |
-| [docs/reference/serial-commands/serial-command-nn_not_in_nav.md](../reference/serial-commands/serial-command-nn_not_in_nav.md) | 34 | ==TODO== LOW - Responses |
-| [docs/reference/serial-commands/serial-command-nn_not_in_nav.md](../reference/serial-commands/serial-command-nn_not_in_nav.md) | 52 | * ==TODO== LOW - Example Commands |
-| [docs/reference/serial-commands/serial-command-nn_not_in_nav.md](../reference/serial-commands/serial-command-nn_not_in_nav.md) | 56 | * ==TODO== LOW - Example Responses |
 | [docs/reference/serial-commands/serial-command-o_not_in_nav.md](../reference/serial-commands/serial-command-o_not_in_nav.md) | 46 | * ==TODO== LOW - Notes |
 | [docs/reference/serial-commands/serial-command-o_not_in_nav.md](../reference/serial-commands/serial-command-o_not_in_nav.md) | 56 | * ==TODO== LOW - Example - Commands |
 | [docs/reference/serial-commands/serial-command-o_not_in_nav.md](../reference/serial-commands/serial-command-o_not_in_nav.md) | 60 | * ==TODO== LOW - Example - Responses |

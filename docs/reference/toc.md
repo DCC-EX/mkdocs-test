@@ -18,7 +18,7 @@ li:not(.md-nav__item, .md-tabs__item) a {
 
 - [Home <small>(<small> </small>)</small>](../index.md)
 - **Products**
-    - [DCC-EX Product Overview <small>(Product Overview)</small>](../products/products.md)
+    - [Our Products <small>(Product Overview)</small>](../products/products.md)
     - **<br/>EX-CommandStation<small><small> <br/>(Ready&nbsp;to&nbsp;Run &amp; Self&nbsp;Build)</small></small>**
         - [EX-CommandStation - Overview <small>(EX-CommandStation Overview)</small>](../products/ex-commandstation/index.md)
     - **<b>EX-CSB1</b> <small><small>(Ready&nbsp;to&nbsp;Run) <br/>EX-CommandStation/Booster&thinsp;1&thinsp;Express</small></small>**
@@ -124,6 +124,7 @@ li:not(.md-nav__item, .md-tabs__item) a {
         - [CV Programming Tips <small>(Hints and Tips)</small>](../throttles/loco-programming/programming-tips.md)
     - [DCC Accessory Operation <small>(<br/>DCC Accessory Operation)</small>](../throttles/dcc-accessories.md)
     - [DC Operation <small>(Controlling DC Locos)</small>](../throttles/dc.md)
+    - [<br/><i>Next Steps (Optional)</i> <br/> Enhancing Your Setup](../throttles/next-steps.md)
 - **Enhance**
     - [Enhancing & Expanding EX‑CommandStation <small>(Enhancing your EX-CommandStation)</small>](../enhance/index.md)
     - **EXRAIL**
@@ -386,7 +387,6 @@ li:not(.md-nav__item, .md-tabs__item) a {
 - [Serial commands to: Instruct Accessory Decoders](serial-commands/serial-command-aa-and-a_not_in_nav.md)
 - [Serial commands to: LCC/CBUS adapter commands](serial-commands/serial-command-ll_not_in_nav.md)
 - [Serial commands to: List or Reset the HAL Devices](serial-commands/serial-command-dd_hal_not_in_nav.md)
-- [Serial commands to: List SensorCAM Defines or Execute Commands](serial-commands/serial-command-nn_not_in_nav.md)
 - [Serial commands to: List, Start or Stop Automations/Sequences](serial-commands/serial-command-jj-aa-and-slash_not_in_nav.md)
 - [Serial commands to: Loco entering/leaving Block](serial-commands/serial-command-kk_and_k_not_in_nav.md)
 - [Serial commands to: Loco state table commands](serial-commands/serial-command-dd-cabs-and-minus_not_in_nav.md)
