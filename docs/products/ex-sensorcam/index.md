@@ -5,8 +5,6 @@
 
 EX-SensorCAM is a video based multi-channel position sensing camera.
 
-<!-- ==TODO== MEDIUM - change the references on this page from the Arduino IDE to VSC/PIO -->
-
 ## Introduction
 
 This single camera is capable of replacing up to 80 detectors/sensors on a model railroad/railway along with their extensive wiring. As it is a cheap device, on large railroads/railways, several cameras can be used for adequate coverage. It can detect, and be used to control, train movements without any trackside sensors at all.
