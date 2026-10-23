@@ -6,6 +6,7 @@
     "_static/images/home/home4.png",
     "_static/images/home/home5.png",
     "_static/images/home/home6.png",
+    "_static/images/home/home7.png",
   ];
   let previousImage;
   let refreshTimer;
