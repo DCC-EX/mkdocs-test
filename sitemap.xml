@@ -1121,10 +1121,6 @@
          <lastmod>2026-10-23</lastmod>
     </url>
     <url>
-         <loc>https://dcc-ex.com/mkdocs-test/reference/serial-commands/serial-command-nn_not_in_nav/</loc>
-         <lastmod>2026-10-23</lastmod>
-    </url>
-    <url>
          <loc>https://dcc-ex.com/mkdocs-test/reference/serial-commands/serial-command-o_not_in_nav/</loc>
          <lastmod>2026-10-23</lastmod>
     </url>
@@ -1318,6 +1314,10 @@
     </url>
     <url>
          <loc>https://dcc-ex.com/mkdocs-test/throttles/ex-webthrottle/</loc>
+         <lastmod>2026-10-23</lastmod>
+    </url>
+    <url>
+         <loc>https://dcc-ex.com/mkdocs-test/throttles/next-steps/</loc>
          <lastmod>2026-10-23</lastmod>
     </url>
     <url>
