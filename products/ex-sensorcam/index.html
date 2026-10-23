@@ -1936,6 +1936,34 @@
   
   
     <li class="md-nav__item">
+      <a href="ex-sensor-manual-abridged/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Manual Abridged
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="ex-sensor-manual/" class="md-nav__link">
         
   
@@ -1972,34 +2000,6 @@
     
   
     Command Reference
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="ex-sensor-manual-abridged/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Manual Abridged
   
 
     
@@ -12283,19 +12283,15 @@
 <p>It does not, however, include loco or rolling stock identification.</p>
 <h2 id="hardware">Hardware<a class="headerlink" href="#hardware" title="Permanent link">&para;</a></h2>
 <h3 id="base-processor-module">Base Processor Module<a class="headerlink" href="#base-processor-module" title="Permanent link">&para;</a></h3>
-<p>The Camera is a standard ESP32-CAM with an ESP32-CAM-MB (CH-340G based) to add USB capability and, in its simplest form, a PCA9515A I2C interface module.
-To connect the sensorCAM to i2c, some limited soldering is required to connect the PCA9515A (5 wires) to the USB MB on the CAM.
-An advanced proto-daughter board is preferable to the PCA9515, to include long I2C buffering (up to 30metres), an isolated power supply, and indicator LEDs.<br />
-A cheap commercial aerial may be useful in marginal WiFi situations.
-The newer ESP32-Wrover-CAM and 38P/V4/Expansion board provides compatible and more convenient hardware with all power regulators on-board.</p>
+<p>The Camera may be a standard ESP32-CAM with an ESP32-CAM-MB (CH-340G based) to add USB capability, OR a preferred ESP32-WROVER CAM with a 38P/V4/Expansion board and regulator.  In its simplest form, a PCA9515A or LTC4311 I2C interface module is needed to connect the sensorCAM to i2c bus, some limited soldering is required to connect the PCA9515A (5 wires) to the USB MB on the CAM.</p>
+<p>An isolated power supply, and indicator LEDs complete the system.  For longer reach, Sparkfun Endpoints may be used, for long I2C buffering (up to 30metres).  A cheap commercial aerial may be added in marginal WiFi situations.</p>
 <h3 id="camera-module">Camera Module<a class="headerlink" href="#camera-module" title="Permanent link">&para;</a></h3>
-<p>The <strong>EX-sensorCAM</strong> uses the 32bit ESP32-S microcontroller with an OV2640 camera module.<br />
-It is fitted with a 4Mbyte PSRAM for image storage and a built in WiFi aerial.
-It also has 3Mb of available program storage, EPROM memory for parameters, and 327kbytes of dynamic memory.</p>
+<p>The <strong>EX-sensorCAM</strong> uses the 32bit ESP32-S microcontroller with an <strong>OV2640</strong> camera module.<br />
+It requires a 4Mbyte PSRAM for image storage and a built in WiFi aerial.  It also has 3Mb of available program storage, EPROM memory for parameters, and 327kbytes of dynamic memory.</p>
 <h2 id="software-requirements">Software requirements<a class="headerlink" href="#software-requirements" title="Permanent link">&para;</a></h2>
-<p>The Arduino IDE is recommended for the sensorCAM and, if used, the connected <strong>EX-CommandStation</strong> DCC-EX-CS software (5.4.16+) with <strong>EXRAIL</strong>.
+<p>The Arduino IDE or VSC/PIO is recommended for the sensorCAM and, if used, the connected <strong>EX-CommandStation</strong> DCC-EX-CS software (5.4.16+) with <strong>EXRAIL</strong>.
 The ESP32-CAM has an Arduino library of software that is needed to enable the camera image manipulation and the WiFi imaging of the railroad.
-In addition, the Processing 4 application is highly desired to enable railroad images to be captured and sensor positions to be located and seen, as the Arduino IDE cannot give visual feedback.</p>
+In addition, the <strong>Processing 4</strong> application is highly desired to enable railroad images to be captured and sensor positions to be located and seen, as the Arduino or VSC/PIO IDE cannot give visual feedback.</p>
 <p>You can download Processing from <a href="https://processing.org/">the website</a></p>
 <p>The webserver WiFi images are not a substitute for the Processing 4 utility, as sensorCAM cannot "sense" in webserver mode.
 Specific SensorCAM files are provided for each of the above apps.</p>
@@ -12306,8 +12302,8 @@ A 30 page manual is provided to assist with this process.</p>
 <p>If you want clarification or wish to discuss the implementation please contact the developer on Discord (@Barryd) or at bcdaniel2@optusnet.com.au and he will attempt to address your issues. All feedback is welcome.</p>
 <h2 id="outline-of-install-process">Outline of install process<a class="headerlink" href="#outline-of-install-process" title="Permanent link">&para;</a></h2>
 <ol>
-<li>Acquire ESP32-CAM and MB or ESP32-WROVER-CAM and 38P expander board</li>
-<li>install Arduino IDE with the ESP32 libraries (includes a WiFi CAM example)</li>
+<li>Acquire ESP32-CAM and MB or ESP32-WROVER-CAM and 38P/v4 expander board with OV2640.</li>
+<li>install Arduino IDE or VSC/PIO with the ESP32 libraries (includes a WiFi CAM example)</li>
 <li>Load the CAM with the WiFi (webCAM) example and test.</li>
 <li>Install the sensorCAM.ino software and configure.</li>
 <li>Test the basic sensorCAM functions to confirm functional install.</li>
@@ -12316,8 +12312,8 @@ A 30 page manual is provided to assist with this process.</p>
 <li>Create test sensors and test detection with moving targets.</li>
 <li>Setup the CAM viewing the model railroad and test a virtual sensor with moving rolling stock.</li>
 <li>Optimise parameters for best performance.</li>
-<li>Connect CAM to an i2c interface (e.g. PCA9515A or better).</li>
-<li>Depending on system, integrate <strong>EX-sensorCAM</strong> into Command Station using appropriate code.</li>
+<li>Connect CAM to an i2c interface (e.g. PCA9515A, LTC4311 or better).</li>
+<li>Integrate <strong>EX-sensorCAM</strong> into Command Station using appropriate code.</li>
 </ol>
 <p>For a detailed 12 step guide refer to the <a href="installation-guide/">Installation Guide</a>.</p>
 
@@ -12340,7 +12336,7 @@ A 30 page manual is provided to assist with this process.</p>
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="October 23, 2026 02:24:39 UTC">October 23, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="October 23, 2026 04:55:58 UTC">October 23, 2026</span>
   </span>
 
     
