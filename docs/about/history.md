@@ -21,7 +21,7 @@ We completely re-wrote current sense and ACK detect routines to better protect y
 
 ## Why did we do this?
 
-First and foremost, we just wanted to have fun. We saw an engineering problem and we wanted to tackle it. As is the case with most engineers, we thought we could do it better than anyone else. ;) Second, we saw an opportunity to provide something really amazing to the Model Railroad Community for low cost and that worked as well or better than anything on the market.
+First and foremost, we just wanted to have fun. We saw an engineering problem and we wanted to tackle it. As is the case with most engineers, we thought we could do it better than anyone else. ;) Second, we saw an opportunity to provide something really amazing to the Model Train Community for low cost and that worked as well or better than anything on the market.
 
 ## Details to Make Engineer's Propellers Spin
 

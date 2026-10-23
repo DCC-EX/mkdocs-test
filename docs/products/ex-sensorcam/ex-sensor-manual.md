@@ -34,7 +34,7 @@ For use with ov2640 camera module with esp32-CAM-MB and variants
 
 ## 1. Overview
 
-The sensorCAM is a video camera replacement for physical proximity sensors on a model railroad. It can replace up to 80 sensors and their associated power and signal wiring using artificial vision alone. It offers the flexibility of sensor placement or relocation instantly by software command with no physical layout modification. The railroad can be automated using artificial vision of train activity. Each virtual sensor can produce a logical state of 1 (occupied) or 0 (unoccupied) and is readable over an i2c cable. SensorCAM uses the ESP32-CAM module. However, the ESP32-WROVER-DEV CAM (v1.6) is a recommended substitute with simpler wiring.
+The sensorCAM is a video camera replacement for physical proximity sensors on a model railroad/railway. It can replace up to 80 sensors and their associated power and signal wiring using artificial vision alone. It offers the flexibility of sensor placement or relocation instantly by software command with no physical layout modification. The railroad/railway can be automated using artificial vision of train activity. Each virtual sensor can produce a logical state of 1 (occupied) or 0 (unoccupied) and is readable over an i2c cable. SensorCAM uses the ESP32-CAM module. However, the ESP32-WROVER-DEV CAM (v1.6) is a recommended substitute with simpler wiring.
 
 The sensorCAM takes 10 frames per second in RGB565 format at QVGA resolution of 240 x 320. Each sensor consists of a square group of 16 pixels which equates to approx. 20x20mm square with the standard lens at 1500mm. The software decodes and saves only the 80 sensor images(1280 pixels) and then compares each sensor image with a reference image prerecorded either at startup, on request, or by a "recent" automatic update. If the images do not match the references well then the sensor is "tripped" or "occupied" & status '1' is produced. Good match results in '0' output. The state of virtual sensors can be manually monitored on the USB monitor, or polled by microcontroller over the i2c interface cable. N.B. The sensorCAM is sensing only when the Flash LED is pulsing (for each new frame).
 
@@ -198,7 +198,7 @@ Follow you-tube to pre-configure the Arduino IDE for ESP32. IF using an FTDI int
 
 ### 5.5 Establish a monitor screen
 
-Establish a USB connected monitor (e.g. Arduino IDE monitor, or PROCESSING monitor, preferably at 115200 baud. The PROCESSING monitor coded for the sensorCAM has the advantage of displaying the CAM's railroad image (or selected part thereof), albeit rather slowly!). Because of the many changeable CAM parameters, the WiFi link(webCAM) is not a reliable indicator of the sensorCAM image quality. It may be better or worse. The PC (using Arduino IDE) is only able to show images via WiFi, but because the sensorCAM runs on RGB565 format it cannot send WiFi (jpeg) images without rebooting into WiFi/jpg webCAM mode (under which it cannot read sensors!). The reboot/display/reboot cycle for WiFi webCAM is also tediously time consuming.
+Establish a USB connected monitor (e.g. Arduino IDE monitor, or PROCESSING monitor, preferably at 115200 baud. The PROCESSING monitor coded for the sensorCAM has the advantage of displaying the CAM's railroad/railway image (or selected part thereof), albeit rather slowly!). Because of the many changeable CAM parameters, the WiFi link(webCAM) is not a reliable indicator of the sensorCAM image quality. It may be better or worse. The PC (using Arduino IDE) is only able to show images via WiFi, but because the sensorCAM runs on RGB565 format it cannot send WiFi (jpeg) images without rebooting into WiFi/jpg webCAM mode (under which it cannot read sensors!). The reboot/display/reboot cycle for WiFi webCAM is also tediously time consuming.
 
 The sensorCAM takes some time to boot and establish sensing mode. The white flash LED starts flashing on every frame after about 10 seconds and data flows to the USB terminal. A period of averaging ensues with "good" sensing by about 30 seconds. This flow of data (and sensing!) can be suspended with the **``w``** wait command. Some commands (including a blank line entry) will subsequently restart the sensing camera and sensor output. The CAM may crash if it is left waiting for input for over 30 minutes. Reference images would also be long out of date.
 
@@ -208,7 +208,7 @@ The CAM can be switched to WiFi webCAM video mode with the **``v1``** command. *
 
 ### 5.7 Command Familiarisation
 
-Proceeding with the steps below, before mounting the camera over the railroad, is advisable to learn the steps and familiarize oneself with the sensorCAM command set. The setup commands will have to be repeated accurately once the CAM is mounted in its final location.
+Proceeding with the steps below, before mounting the camera over the railroad/railway, is advisable to learn the steps and familiarize oneself with the sensorCAM command set. The setup commands will have to be repeated accurately once the CAM is mounted in its final location.
 
 ### 5.8 Sensor placement
 

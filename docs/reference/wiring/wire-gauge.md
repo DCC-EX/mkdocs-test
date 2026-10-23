@@ -20,7 +20,7 @@ The main bus provides a low resistance, high current capable path for the voltag
 
     In the USA the smaller the number, the bigger the wire!
 
-Our general rules are based on 2 to 5 Amps of current maximum. Most model railroaders will be well within this range, most never going above 2 Amps. If you need more than 5 Amps, then you need separate power districts to distribute the load around the track. For example, you have have a motor or a lot of lights connected to one part of the track in its district. Breaking the track up into power districts ensures that there probably won’t be more than a few locos in any district at a given time.
+Our general rules are based on 2 to 5 Amps of current maximum. Most model train enthusiasts will be well within this range, most never going above 2 Amps. If you need more than 5 Amps, then you need separate power districts to distribute the load around the track. For example, you have have a motor or a lot of lights connected to one part of the track in its district. Breaking the track up into power districts ensures that there probably won’t be more than a few locos in any district at a given time.
 
 ## Feeders
 
@@ -53,7 +53,7 @@ https://sites.google.com/site/markgurries/dcc-welcome-page/advanced-topics/track
 
 http://www.sumidacrossing.org/LayoutControl/DCC/DCCLayoutPower/ 
 
-A little more involved, but worth the read if you already are an experienced railroader:
+A little more involved, but worth the read if you already are an experienced train enthusiasts:
 
 http://4dpnr.com/wp-content/uploads/2015/07/DCC_Wiring.pdf 
 

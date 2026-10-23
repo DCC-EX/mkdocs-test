@@ -9,7 +9,7 @@ EX-SensorCAM is a video based multi-channel position sensing camera.
 
 ## Introduction
 
-This single camera is capable of replacing up to 80 detectors/sensors on a model railroad along with their extensive wiring. As it is a cheap device, on large railroads, several cameras can be used for adequate coverage. It can detect, and be used to control, train movements without any trackside sensors at all.
+This single camera is capable of replacing up to 80 detectors/sensors on a model railroad/railway along with their extensive wiring. As it is a cheap device, on large railroads/railways, several cameras can be used for adequate coverage. It can detect, and be used to control, train movements without any trackside sensors at all.
 
 Used in conjunction with an I2C bus to a **DCC-EX EX-CommandStation**, the options through **EXRAIL** automation seem unlimited.
 
@@ -32,8 +32,8 @@ It requires a 4Mbyte PSRAM for image storage and a built in WiFi aerial.  It als
 ## Software requirements
 
 The Arduino IDE or VSC/PIO is recommended for the sensorCAM and, if used, the connected **EX-CommandStation** DCC-EX-CS software (5.4.16+) with **EXRAIL**.
-The ESP32-CAM has an Arduino library of software that is needed to enable the camera image manipulation and the WiFi imaging of the railroad.
-In addition, the **Processing 4** application is highly desired to enable railroad images to be captured and sensor positions to be located and seen, as the Arduino or VSC/PIO IDE cannot give visual feedback.
+The ESP32-CAM has an Arduino library of software that is needed to enable the camera image manipulation and the WiFi imaging of the railroad/railway.
+In addition, the **Processing 4** application is highly desired to enable railroad/railway images to be captured and sensor positions to be located and seen, as the Arduino or VSC/PIO IDE cannot give visual feedback.
 
 You can download Processing from [the website](https://processing.org/)
 
@@ -59,7 +59,7 @@ If you want clarification or wish to discuss the implementation please contact t
 6. Load Processing 4 app. and sensorCAM.pde code.
 7. Use the Processing 4 app to replace the Arduino Monitor.  Familiarise and test.
 8. Create test sensors and test detection with moving targets.
-9. Setup the CAM viewing the model railroad and test a virtual sensor with moving rolling stock.
+9. Setup the CAM viewing the model railroad/railway and test a virtual sensor with moving rolling stock.
 10. Optimise parameters for best performance.
 11. Connect CAM to an i2c interface (e.g. PCA9515A, LTC4311 or better).
 12. Integrate **EX-sensorCAM** into Command Station using appropriate code.

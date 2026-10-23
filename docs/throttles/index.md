@@ -1,6 +1,6 @@
 # Using Your Command Station
 
-You need just two things that work together to operate your model railroad:
+You need just two things that work together to operate your model railroad/railway:
 
 - The **EX‑CommandStation** (aka the DCC Command Station)
 - A Throttle/Controller (also referred to as a Front-end or Cab)

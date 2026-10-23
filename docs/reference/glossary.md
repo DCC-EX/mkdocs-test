@@ -73,7 +73,7 @@ You will also see search results for using a pulldown menu, but that is a differ
 
 Railroad: The dominant term in the United States and Canada.
 
-Railway: The preferred term across the UK, Australia, New Zealand, India, and by the International Union of Railways
+Railway: The preferred term across the UK, Australia, New Zealand, India, most other English speaking countries, and by the International Union of Railways
 
 ## Roster
 
