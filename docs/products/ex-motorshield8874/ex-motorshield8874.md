@@ -35,7 +35,7 @@ The boards 5V and 3V friendly design makes it suitable for a broad range of Ardu
 
 ## Why did we make it
 
-**EX‑MotorShield8874** is specifically designed for use with **DCC-EX EX-CommandStation**s for controlling model railroads, but can also be used as generally better replacement for Arduino Motor Shield R3 in any device that needs to control a motor. We needed higher current capacity to power more motors/trains and have little to no voltage drop due to advanced MOSFET driver technology.
+**EX‑MotorShield8874** is specifically designed for use with **DCC-EX EX-CommandStation**s for controlling model railroads/railways, but can also be used as generally better replacement for Arduino Motor Shield R3 in any device that needs to control a motor. We needed higher current capacity to power more motors/trains and have little to no voltage drop due to advanced MOSFET driver technology.
 
 ## Purchase
 

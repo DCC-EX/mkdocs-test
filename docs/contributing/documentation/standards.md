@@ -48,6 +48,7 @@ So:
     - Use **'Smart Phone'** or **'Smart Device'** instead of 'Cell Phone' (North America only term) or 'Mobile Phone' (just about everywhere else)
     - Use **Throttle** or **Throttle (controller)** instead of 'controller' or 'controller (throttle)'
 
+- While not alway possible, use 'train' or 'rail' or the combined railroad/railway', in preference to using 'railroad' or 'railway' alone.
 - Use railroad/railway/railway terminology that is understandable by all English-speaking people. <br/><br/>Where there are clear differences from North America to rest-of-the-world terminology use both with a slash between and use the North America version first. e.g. turnouts/points, consists/multiple units, switching/shunting.  (Only because the North America term appears in apps like JMRI and in **EXRAIL**.)
 - For dates, use **dd-mmm-yyyy** or **yyyy-mm-dd** to avoid confusion with the way dates are uniquely/weirdly written in the USA. <br/> e.g. Use 2-Mar-2022 or 2022-3-2, not 2-3-2022 (or worse, 3-2-2022).
 - Generally don't use full stops (periods) at the end of a numbered or unnumbered list unless the points are most points are multi-sentence.

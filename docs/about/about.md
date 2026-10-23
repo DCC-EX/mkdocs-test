@@ -4,7 +4,7 @@
 
 Who is behind all this? And will they ever face justice? Who knows, but the following is a list of those names associated with taking over Gregg Berman's original DCC++ BaseStation Project, and rewriting/expanding it into EX‑CommandStation and the wider DCC-EX project.
 
-First, a special thanks to Gregg E. Berman, who had the original idea for a model railroad Command Station using an Arduino Uno and a Motor Driver.
+First, a special thanks to Gregg E. Berman, who had the original idea for a model train Command Station using an Arduino Uno and a Motor Driver.
 
 If you wish to get in touch with the team, try our [Discord server](/support/discord.md) as the first preference, and you can also find some of the team on the [DCC++ Forum](https://www.trainboard.com/highball/index.php?forums/dcc.177/) on TrainBoard.
 
