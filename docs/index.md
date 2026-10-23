@@ -30,11 +30,13 @@ hide:
 /* Custom container for your styled paragraphs */
 .paragraph-bg-box {
     background-size: cover;
-    background-position: center;
+    background-position-x: center;
+    background-position-y: top;
     background-repeat: no-repeat;
     padding: 20px;          /* Adds space inside the box so text doesn't touch edges */
     border-radius: 8px;     /* Optional: rounds the corners */
-    color: black;         /* Optional: changes text color if background is dark */
+    color: black;
+    margin-bottom: 1em;
 }
 
 </style>
@@ -43,10 +45,9 @@ hide:
 
 <img alt="DCC-EX" src="./_static/images/logos/logo_with_border.png" width="200px" style="display:block; margin-left:auto; margin-right:auto;">
 
-<span style="display:block; margin-left:10%; margin-right:10%; text-align:center;">
+<span style="display:block; margin-left:10%; margin-right:10%; text-align:center; line-height: 240%; margin-top: 1em;">
 <span style="font-size: 250%; font-weight:900; text-align:center;">Free and open source control systems for DCC and DC model rail enthusiasts</span>
 </span>
-
 <br/>
 
 <span style="font-size: 120%; font-weight:700; display:block; margin-left:10%; margin-right:10%;"><span style="font-style:italic;">"This is a team of volunteers who love model railroading, who wanted to design a new highly capable system for model railroads - and they've done it"</span><br/>- DIY and Digital Railroad</span>
@@ -64,9 +65,7 @@ hide:
 <br/>
 <br/>
 
-</div>
-
-<br/>
+</div><br/><br/>
 
 # Home
 
