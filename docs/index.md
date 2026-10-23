@@ -73,7 +73,7 @@ hide:
 
 - ## :material-hand-wave-outline: Welcome to DCC-EX
 
-    Our free, open source, [Command Station](./products/ex-commandstation/index.md) software is one of the most comprehensive available. It comes with many *in-built* features which are unavailable or 'extras' in most commercial command stations. Including:
+    Our free, open source, [Command Station](./products/ex-commandstation/index.md) software is one of the most comprehensive available, with many *in-built* features which are unavailable or *extras* in most commercial command stations. Including:
 
     - *WiFi*. Use smart phones &amp; tablets, or commercial and DIY physical throttles, to control your trains and layout.
     - Run either, or both, *DCC* and *DC* trains from the same throttle.
