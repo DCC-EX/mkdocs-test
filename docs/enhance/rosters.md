@@ -29,15 +29,17 @@ When using a web browser dialog on the command station, the Config.. Roster Edit
 
 ==TODO== VERY HIGH! - needs detailed instructions for Roster Editing with a Web Browser. Needs to include screenshots!
 
-If you have an OLED screen, it will tell you the IP address of the **EX-CommandStation**
+Enter the IP address of the **EX-CommandStation** into the address bar of you browser. e.g. ``192.168.1.4`` if you are using the default [Access Point](../prepare-to-use/installer/config-wifi-esp32.md#the-wifi-different-modes) mode.
+Or use the Web Page in Engine Driver, after you have connected to the **EX-CommandStation**.
 
-Enter the IP address of the **EX-CommandStation** into the address bar of you browser. e.g. ``192.168.1.4`` if you are using the default [Access Point](../prepare-to-use/installer/config-wifi-esp32.md#the-wifi-different-modes)  mode.
+To find the IP address:
 
-The Engine Driver app (and most other throttle apps) will tell you the IP address of the **EX-CommandStation** on the connection screeen
+* If you have an OLED screen, it will tell you the IP address of the **EX-CommandStation**
+* The Engine Driver app (and most other throttle apps) will tell you the IP address of the **EX-CommandStation** on the connection screeen
 
-![Engine driver](../_static/images/web-server/engine-driver-web1.png){ width=500px }
+![Engine driver](../_static/images/web-server/engine-driver-web1.png){ width=200px }
 
-Using a PC Web Browser
+Using a PC Web Browser:
 
 ![web browser](../_static/images/web-server/web-server1.png){ width=500px }
 
@@ -49,9 +51,19 @@ Using a PC Web Browser
 
 ![web browser](../_static/images/web-server/web-server-roster3.png){ width=500px }
 
-Using Engine Driver's Web page
+Using Engine Driver's Web page:
 
 ![Engine driver](../_static/images/web-server/engine-driver-web2.png){ width=200px }  ![Engine driver](../_static/images/web-server/engine-driver-web3.png){ width=200px }
+
+* Click ``Configs`` then select ``Roster Editor``
+
+* To add a new roster entry...
+
+* To edit an existing roster entry...
+
+* To save the roster entries to ???...
+
+* To delete a roster entry...
 
 ----
 
