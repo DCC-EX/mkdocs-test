@@ -68,6 +68,26 @@ This is a security feature.  If you could change AP mode settings over WiFi, the
 
 ==TODO== VERY HIGH! - Changing the WiFi Settings using the EX-CommandStation's own Web Sever
 
+If you have an OLED screen, it will tell you the IP address of the **EX-CommandStation**
+
+Enter the IP address of the **EX-CommandStation** into the address bar of you browser. e.g. ``192.168.1.4`` if you are using the default Access Point mode.
+
+The Engine Driver app (and most other throttle apps) will tell you the IP address of the **EX-CommandStation** on the connection screeen
+
+![Engine driver](/_static/images/web-server/engine-driver-web1.png){ width=500px }
+
+Using a PC Web Browser
+
+![web browser](/_static/images/web-server/web-server1.png){ width=500px }
+
+![web browser](/_static/images/web-server/web-server-wifi.png){ width=500px }
+
+Using Engine Driver's Web page
+
+![Engine driver](/_static/images/web-server/engine-driver-web2.png){ width=200px } ![Engine driver](/_static/images/web-server/engine-driver-web3.png){ width=200px }
+
+----
+
 ### Using EX-WebThrottle
 
 1. Connect your PC to the **EX-CommandStation** via USB. Open the **EX-WebThrottle** and select the appropriate COM port for your **EX-CommandStation**. You should see the current WiFi settings displayed in the interface.  See [EX-WebThrottle](/products/ex-webthrottle/ex-webthrottle.md) for more details.
@@ -84,13 +104,15 @@ This is a security feature.  If you could change AP mode settings over WiFi, the
     * To set the **Hostname**, enter the desired hostname and click the `Set Hostname` button. The **EX-CommandStation** will update its hostname, which will be visible in your Throttle app when connected to the appropriate network.<br>/<br/>
     This is useful if you have more than one **EX-CommandStation** on your network to make them show up with different names.
 
-#### Resetting the Wifi settings
+----
+
+#### Resetting the WiFi settings
 
 The `Reset WiFi Settings` button on the WiFi Setup page will reset all WiFi settings to their default values. This will cause the **EX-CommandStation** to restart and create its own WiFi network in Access Point mode with the default SSID and password.
 
-#### notes (EX-WebThrottle)
+#### Notes (EX-WebThrottle)
 
-* In every case above, the **EX-CommandStation** will restart to apply the new settings. You will need to reconnect to the **EX-CommandStation** in the **EX-WebThrottle** interface.
+* In every case above, the **EX-CommandStation** will restart to apply the new settings. You will need to reconnect to the **EX-CommandStation** in the **EX-WebThrottle** interface. ==TODO== VERY HIGH! - The WiFi change limitation has been broken in the latest CS version as anything can be changed via the in-built web server
 
 ----
 
