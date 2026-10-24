@@ -29,14 +29,47 @@ hide:
 
 /* Custom container for your styled paragraphs */
 .paragraph-bg-box {
-    background-size: cover;
-    background-position-x: center;
-    background-position-y: top;
-    background-repeat: no-repeat;
+    position: relative;
+    isolation: isolate;
     padding: 20px;          /* Adds space inside the box so text doesn't touch edges */
     border-radius: 8px;     /* Optional: rounds the corners */
     color: black;
     margin-bottom: 1em;
+}
+
+.paragraph-bg-box::before,
+.paragraph-bg-box::after {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    border-radius: inherit;
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
+    content: "";
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 800ms ease-in-out;
+}
+
+.paragraph-bg-box::before {
+    background-image: var(--home-background-image-a);
+}
+
+.paragraph-bg-box::after {
+    background-image: var(--home-background-image-b);
+}
+
+.paragraph-bg-box.home-background-a::before,
+.paragraph-bg-box.home-background-b::after {
+    opacity: 1;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .paragraph-bg-box::before,
+    .paragraph-bg-box::after {
+        transition: none;
+    }
 }
 
 </style>
