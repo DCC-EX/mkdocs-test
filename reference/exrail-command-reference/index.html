@@ -9590,10 +9590,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#shared_sensorvpincount" class="md-nav__link">
+  <a href="#shared_sensorvpincountsharedvpin" class="md-nav__link">
     <span class="md-ellipsis">
       
-        SHARED_SENSOR(vpin,count...)
+        SHARED_SENSOR(vpin,count,sharedVpin)
       
     </span>
   </a>
@@ -9601,10 +9601,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#remote_sensorvpincount" class="md-nav__link">
+  <a href="#shared_sensor_nopullupvpincountsharedvpin" class="md-nav__link">
     <span class="md-ellipsis">
       
-        REMOTE_SENSOR(vpin,count...)
+        SHARED_SENSOR_NOPULLUP(vpin,count,sharedVpin)
       
     </span>
   </a>
@@ -9612,10 +9612,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#jmri_sensorvpincount" class="md-nav__link">
+  <a href="#remote_sensorsharedvpincount" class="md-nav__link">
     <span class="md-ellipsis">
       
-        JMRI_SENSOR(vpin,count...)
+        REMOTE_SENSOR(sharedVpin,count)
       
     </span>
   </a>
@@ -9623,10 +9623,21 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#jmri_sensor_nopullupvpincount" class="md-nav__link">
+  <a href="#jmri_sensorvpinoptions" class="md-nav__link">
     <span class="md-ellipsis">
       
-        JMRI_SENSOR_NOPULLUP(vpin,count...)
+        JMRI_SENSOR(vpin,options...)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#jmri_sensor_nopullupvpinoptions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        JMRI_SENSOR_NOPULLUP(vpin,options...)
       
     </span>
   </a>
@@ -15665,10 +15676,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#shared_sensorvpincount" class="md-nav__link">
+  <a href="#shared_sensorvpincountsharedvpin" class="md-nav__link">
     <span class="md-ellipsis">
       
-        SHARED_SENSOR(vpin,count...)
+        SHARED_SENSOR(vpin,count,sharedVpin)
       
     </span>
   </a>
@@ -15676,10 +15687,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#remote_sensorvpincount" class="md-nav__link">
+  <a href="#shared_sensor_nopullupvpincountsharedvpin" class="md-nav__link">
     <span class="md-ellipsis">
       
-        REMOTE_SENSOR(vpin,count...)
+        SHARED_SENSOR_NOPULLUP(vpin,count,sharedVpin)
       
     </span>
   </a>
@@ -15687,10 +15698,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#jmri_sensorvpincount" class="md-nav__link">
+  <a href="#remote_sensorsharedvpincount" class="md-nav__link">
     <span class="md-ellipsis">
       
-        JMRI_SENSOR(vpin,count...)
+        REMOTE_SENSOR(sharedVpin,count)
       
     </span>
   </a>
@@ -15698,10 +15709,21 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#jmri_sensor_nopullupvpincount" class="md-nav__link">
+  <a href="#jmri_sensorvpinoptions" class="md-nav__link">
     <span class="md-ellipsis">
       
-        JMRI_SENSOR_NOPULLUP(vpin,count...)
+        JMRI_SENSOR(vpin,options...)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#jmri_sensor_nopullupvpinoptions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        JMRI_SENSOR_NOPULLUP(vpin,options...)
       
     </span>
   </a>
@@ -17740,29 +17762,41 @@
 <p>see IF</p>
 <h2 id="invert_direction"><a href="?INVERT_DIRECTION">INVERT_DIRECTION</a><a class="headerlink" href="#invert_direction" title="Permanent link">&para;</a></h2>
 <p>Marks current task so that FWD and REV commands are inverted.</p>
-<h2 id="shared_sensorvpincount"><a href="?SHARED_SENSOR">SHARED_SENSOR(<abbr title="an Arduino pin number that has been extended to include pins on external devices or expanders">vpin</abbr>,count...)</a><a class="headerlink" href="#shared_sensorvpincount" title="Permanent link">&para;</a></h2>
-<p>Defines multiple sensor vpins to be shared to other nodes</p>
+<h2 id="shared_sensorvpincountsharedvpin"><a href="?SHARED_SENSOR">SHARED_SENSOR(<abbr title="an Arduino pin number that has been extended to include pins on external devices or expanders">vpin</abbr>,count,sharedVpin)</a><a class="headerlink" href="#shared_sensorvpincountsharedvpin" title="Permanent link">&para;</a></h2>
+<p>Defines multiple sensor vpins to be shared to other nodes as a different sharedVpin number</p>
 <ul>
 <li><abbr title="an Arduino pin number that has been extended to include pins on external devices or expanders">vpin</abbr> first <abbr title="an Arduino pin number that has been extended to include pins on external devices or expanders">vpin</abbr> number</li>
-<li>count... Number of consecutive VPINS. Default 1.</li>
+<li>count... Number of consecutive VPINS.</li>
+<li>sharedVpin The <abbr title="an Arduino pin number that has been extended to include pins on external devices or expanders">vpin</abbr> number to share the sensors to.</li>
 </ul>
-<h2 id="remote_sensorvpincount"><a href="?REMOTE_SENSOR">REMOTE_SENSOR(<abbr title="an Arduino pin number that has been extended to include pins on external devices or expanders">vpin</abbr>,count...)</a><a class="headerlink" href="#remote_sensorvpincount" title="Permanent link">&para;</a></h2>
+<h2 id="shared_sensor_nopullupvpincountsharedvpin"><a href="?SHARED_SENSOR_NOPULLUP">SHARED_SENSOR_NOPULLUP(<abbr title="an Arduino pin number that has been extended to include pins on external devices or expanders">vpin</abbr>,count,sharedVpin)</a><a class="headerlink" href="#shared_sensor_nopullupvpincountsharedvpin" title="Permanent link">&para;</a></h2>
+<p>Defines multiple sensor vpins to be shared to other nodes as a different sharedVpin number</p>
+<ul>
+<li><abbr title="an Arduino pin number that has been extended to include pins on external devices or expanders">vpin</abbr> first <abbr title="an Arduino pin number that has been extended to include pins on external devices or expanders">vpin</abbr> number</li>
+<li>count... Number of consecutive VPINS.</li>
+<li>sharedVpin The <abbr title="an Arduino pin number that has been extended to include pins on external devices or expanders">vpin</abbr> number to share the sensors to.</li>
+</ul>
+<h2 id="remote_sensorsharedvpincount"><a href="?REMOTE_SENSOR">REMOTE_SENSOR(sharedVpin,count)</a><a class="headerlink" href="#remote_sensorsharedvpincount" title="Permanent link">&para;</a></h2>
 <p>Defines multiple sensor vpins shared by other nodes.</p>
 <ul>
-<li><abbr title="an Arduino pin number that has been extended to include pins on external devices or expanders">vpin</abbr> first <abbr title="an Arduino pin number that has been extended to include pins on external devices or expanders">vpin</abbr> number</li>
-<li>count... Number of consecutive VPINS. Default 1.</li>
+<li>sharedVpin first <abbr title="an Arduino pin number that has been extended to include pins on external devices or expanders">vpin</abbr> number</li>
+<li>count... Number of consecutive VPINS.</li>
 </ul>
-<h2 id="jmri_sensorvpincount"><a href="?JMRI_SENSOR">JMRI_SENSOR(<abbr title="an Arduino pin number that has been extended to include pins on external devices or expanders">vpin</abbr>,count...)</a><a class="headerlink" href="#jmri_sensorvpincount" title="Permanent link">&para;</a></h2>
+<h2 id="jmri_sensorvpinoptions"><a href="?JMRI_SENSOR">JMRI_SENSOR(<abbr title="an Arduino pin number that has been extended to include pins on external devices or expanders">vpin</abbr>,options...)</a><a class="headerlink" href="#jmri_sensorvpinoptions" title="Permanent link">&para;</a></h2>
 <p>Defines multiple <abbr title="Java Model Railroad Interface">JMRI</abbr> <code>&lt;s&gt;</code> type sensor feedback definitions each with id matching <abbr title="an Arduino pin number that has been extended to include pins on external devices or expanders">vpin</abbr> and INPUT_PULLUP</p>
 <ul>
 <li><abbr title="an Arduino pin number that has been extended to include pins on external devices or expanders">vpin</abbr> first <abbr title="an Arduino pin number that has been extended to include pins on external devices or expanders">vpin</abbr> number</li>
-<li>count... Number of consecutive VPINS for which to create <abbr title="Java Model Railroad Interface">JMRI</abbr> sensor feedbacks. Default 1.</li>
+<li>options... count or count,sharedVpin </li>
+<li>count Number of consecutive VPINS for which to create sensors. Default 1.</li>
+<li>sharedVpin Vpin number range to emit to <abbr title="Java Model Railroad Interface">JMRI</abbr>/throttles. (Default <abbr title="an Arduino pin number that has been extended to include pins on external devices or expanders">vpin</abbr>)</li>
 </ul>
-<h2 id="jmri_sensor_nopullupvpincount"><a href="?JMRI_SENSOR_NOPULLUP">JMRI_SENSOR_NOPULLUP(<abbr title="an Arduino pin number that has been extended to include pins on external devices or expanders">vpin</abbr>,count...)</a><a class="headerlink" href="#jmri_sensor_nopullupvpincount" title="Permanent link">&para;</a></h2>
+<h2 id="jmri_sensor_nopullupvpinoptions"><a href="?JMRI_SENSOR_NOPULLUP">JMRI_SENSOR_NOPULLUP(<abbr title="an Arduino pin number that has been extended to include pins on external devices or expanders">vpin</abbr>,options...)</a><a class="headerlink" href="#jmri_sensor_nopullupvpinoptions" title="Permanent link">&para;</a></h2>
 <p>Defines multiple <abbr title="Java Model Railroad Interface">JMRI</abbr> <code>&lt;s&gt;</code> type sensor feedback definitions each with id matching <abbr title="an Arduino pin number that has been extended to include pins on external devices or expanders">vpin</abbr></p>
 <ul>
 <li><abbr title="an Arduino pin number that has been extended to include pins on external devices or expanders">vpin</abbr> first <abbr title="an Arduino pin number that has been extended to include pins on external devices or expanders">vpin</abbr> number</li>
-<li>count... Number of consecutive VPINS for which to create <abbr title="Java Model Railroad Interface">JMRI</abbr> sensor feedbacks. Default 1.</li>
+<li>options... count or count,sharedVpin </li>
+<li>count Number of consecutive VPINS for which to create sensors. Default 1.</li>
+<li>sharedVpin Vpin number range to emit to <abbr title="Java Model Railroad Interface">JMRI</abbr>/throttles. (Default <abbr title="an Arduino pin number that has been extended to include pins on external devices or expanders">vpin</abbr>)</li>
 </ul>
 <h2 id="join"><a href="?JOIN">JOIN</a><a class="headerlink" href="#join" title="Permanent link">&para;</a></h2>
 <p>Switches <abbr title="Programming Track / Service Mode">PROG</abbr> track to receive <abbr title="Main Track / Operations Mode (Ops Mode)">MAIN</abbr> track DCC packets. (Drive on <abbr title="Programming Track / Service Mode">PROG</abbr> track)</p>
@@ -18402,7 +18436,7 @@ see XRESTORE_SPEED</li>
 <h2 id="ztest3commandreplytestcode"><a href="?ZTEST3">ZTEST3(command,reply,testcode...)</a><a class="headerlink" href="#ztest3commandreplytestcode" title="Permanent link">&para;</a></h2>
 <p>Developer Unit testing.  Do not use. </p>
 <h2 id="build-info">Build info:<a class="headerlink" href="#build-info" title="Permanent link">&para;</a></h2>
-<p>Autogenerated from devel/EXRAIL2MacroBase.h at Sat Oct 24 05:57:22 UTC 2026</p>
+<p>Autogenerated from devel/EXRAIL2MacroBase.h at Sat Oct 24 21:40:48 UTC 2026</p>
 <!-- These are case sensitive -->
 
 <!-- ---
