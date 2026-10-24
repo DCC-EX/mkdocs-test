@@ -11,9 +11,12 @@
     "_static/images/home/home9.png",
     "_static/images/home/home10.png",
     "_static/images/home/home11.png",
+    "_static/images/home/home12.png",
   ];
   let previousImage;
   let refreshTimer;
+  let activeBackgroundBox;
+  let activeBackgroundLayer;
 
   function setRandomHomeBackground() {
     const backgroundBox = document.querySelector(".paragraph-bg-box");
@@ -27,8 +30,24 @@
       : homeBackgroundImages;
     const image = images[Math.floor(Math.random() * images.length)];
     previousImage = image;
-    backgroundBox.style.backgroundImage =
-      `url("${new URL(image, document.baseURI).href}")`;
+    const imageUrl = `url("${new URL(image, document.baseURI).href}")`;
+
+    if (backgroundBox !== activeBackgroundBox) {
+      activeBackgroundBox = backgroundBox;
+      activeBackgroundLayer = "a";
+      backgroundBox.style.setProperty("--home-background-image-a", imageUrl);
+      backgroundBox.classList.add("home-background-a");
+      backgroundBox.classList.remove("home-background-b");
+      return true;
+    }
+
+    activeBackgroundLayer = activeBackgroundLayer === "a" ? "b" : "a";
+    backgroundBox.style.setProperty(
+      `--home-background-image-${activeBackgroundLayer}`,
+      imageUrl
+    );
+    backgroundBox.classList.toggle("home-background-a", activeBackgroundLayer === "a");
+    backgroundBox.classList.toggle("home-background-b", activeBackgroundLayer === "b");
     return true;
   }
 
