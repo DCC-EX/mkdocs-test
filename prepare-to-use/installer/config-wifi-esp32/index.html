@@ -12713,14 +12713,38 @@ This is a security feature.  If you could change <abbr title="Access Point Mode.
 <h3 id="using-the-ex-commandstations-own-web-sever">Using the EX-CommandStation's own Web Sever<a class="headerlink" href="#using-the-ex-commandstations-own-web-sever" title="Permanent link">&para;</a></h3>
 <p><mark>TODO</mark> VERY HIGH! - Changing the WiFi Settings using the EX-CommandStation's own Web Sever</p>
 <p>If you have an OLED screen, it will tell you the IP address of the <strong>EX-CommandStation</strong></p>
-<p>Enter the IP address of the <strong>EX-CommandStation</strong> into the address bar of you browser. e.g. <code>192.168.1.4</code> if you are using the default <a href="./#the-wifi-different-modes">Access Point</a> mode.</p>
-<p>The Engine Driver app (and most other throttle apps) will tell you the IP address of the <strong>EX-CommandStation</strong> on the connection screen.</p>
-<p><img alt="Engine driver" src="../../../_static/images/web-server/engine-driver-web1.png" width="500px" /></p>
+<p>Enter the IP address of the <strong>EX-CommandStation</strong> into the address bar of you browser. e.g. <code>192.168.1.4</code> if you are using the default <a href="./#the-wifi-different-modes">Access Point</a> mode. Or use the Web Page in Engine Driver, after you have connected to the <strong>EX-CommandStation</strong>.</p>
+<p>To find the IP address:</p>
+<ul>
+<li>If you have an OLED screen, it will tell you the IP address of the <strong>EX-CommandStation</strong></li>
+<li>The Engine Driver app (and most other throttle apps) will tell you the IP address of the <strong>EX-CommandStation</strong> on the connection screeen</li>
+</ul>
+<p><img alt="Engine driver" src="../../../_static/images/web-server/engine-driver-web1.png" width="200px" /></p>
 <p>Using a PC Web Browser</p>
 <p><img alt="web browser" src="../../../_static/images/web-server/web-server1.png" width="500px" /></p>
 <p><img alt="web browser" src="../../../_static/images/web-server/web-server-wifi.png" width="500px" /></p>
 <p>Using Engine Driver's Web page</p>
 <p><img alt="Engine driver" src="../../../_static/images/web-server/engine-driver-web2.png" width="200px" /> <img alt="Engine driver" src="../../../_static/images/web-server/engine-driver-web3.png" width="200px" /></p>
+<ul>
+<li>
+<p>Click <code>Configs</code> then select <code>Network Preferences</code></p>
+</li>
+<li>
+<p>To set the <strong>Access Point (<abbr title="Access Point Mode. Stand alone WiFi network">AP</abbr>) mode</strong>, enter the <abbr title="Service Set Identifier. Technical term for the WiFi network's name">SSID</abbr> and password for the <strong>EX-CommandStation</strong>'s WiFi network and click the <code>Set Access Point</code> button. You can optional set a channel for the <abbr title="Access Point Mode. Stand alone WiFi network">AP</abbr> mode, but it is not required, and generally not recommended.</p>
+<p>The <strong>EX-CommandStation</strong> will restart and create its own WiFi network with the specified <abbr title="Service Set Identifier. Technical term for the WiFi network's name">SSID</abbr> and password.</p>
+</li>
+<li>
+<p>To set the <strong>Station (<abbr title="Station Mode. Joins an existing WiFi network">STA</abbr>) mode</strong>, enter the <abbr title="Service Set Identifier. Technical term for the WiFi network's name">SSID</abbr> and password for your existing WiFi network (eg your home router) and click the <code>Set Station Mode</code> button. The <strong>EX-CommandStation</strong> will attempt to connect to the specified WiFi network. If the connection is successful, it will operate in Station mode. If the connection fails, it will revert to Access Point mode.</p>
+</li>
+<li>
+<p>To set the <strong>Temporary Station (<abbr title="Station Mode. Joins an existing WiFi network">STA</abbr>) mode</strong>, enter the <abbr title="Service Set Identifier. Technical term for the WiFi network's name">SSID</abbr> and password for your existing WiFi network and click the <code>Set Temporary Station Mode</code> button. The <strong>EX-CommandStation</strong> will attempt to connect to the specified WiFi network.</p>
+<p>If the connection is successful, it will operate in Station mode. If the connection fails, it will revert to Access Point mode.</p>
+</li>
+<li>
+<p>To set the <strong>Hostname</strong>, enter the desired hostname and click the <code>Set Hostname</code> button. The <strong>EX-CommandStation</strong> will update its hostname, which will be visible in your Throttle app when connected to the appropriate network.</p>
+<p>This is useful if you have more than one <strong>EX-CommandStation</strong> on your network to make them show up with different names.</p>
+</li>
+</ul>
 <hr />
 <h3 id="using-ex-webthrottle">Using EX-WebThrottle<a class="headerlink" href="#using-ex-webthrottle" title="Permanent link">&para;</a></h3>
 <ol>
@@ -12729,23 +12753,25 @@ This is a security feature.  If you could change <abbr title="Access Point Mode.
 </li>
 <li>
 <p>Go to the <code>Wifi Setup</code> page from the menu or the toolbar buttons.</p>
-<ul>
-<li>
-<p>To set the <strong>Access Point (<abbr title="Access Point Mode. Stand alone WiFi network">AP</abbr>) mode</strong>, enter the <abbr title="Service Set Identifier. Technical term for the WiFi network's name">SSID</abbr> and password for the <strong>EX-CommandStation</strong>'s WiFi network and click the <code>Set Access Point</code> button. You can optional set a channel for the <abbr title="Access Point Mode. Stand alone WiFi network">AP</abbr> mode, but it is not required, and generally not recommended.<br/><br/>
-The <strong>EX-CommandStation</strong> will restart and create its own WiFi network with the specified <abbr title="Service Set Identifier. Technical term for the WiFi network's name">SSID</abbr> and password.<br/><br/>
-To set the <strong>Station (<abbr title="Station Mode. Joins an existing WiFi network">STA</abbr>) mode</strong>, enter the <abbr title="Service Set Identifier. Technical term for the WiFi network's name">SSID</abbr> and password for your existing WiFi network (eg your home router) and click the <code>Set Station Mode</code> button. The <strong>EX-CommandStation</strong> will attempt to connect to the specified WiFi network. If the connection is successful, it will operate in Station mode. If the connection fails, it will revert to Access Point mode.</p>
-</li>
-<li>
-<p>To set the <strong>Temporary Station (<abbr title="Station Mode. Joins an existing WiFi network">STA</abbr>) mode</strong>, enter the <abbr title="Service Set Identifier. Technical term for the WiFi network's name">SSID</abbr> and password for your existing WiFi network and click the <code>Set Temporary Station Mode</code> button. The <strong>EX-CommandStation</strong> will attempt to connect to the specified WiFi network.<br/><br/>
-If the connection is successful, it will operate in Station mode. If the connection fails, it will revert to Access Point mode.</p>
-</li>
-<li>
-<p>To set the <strong>Hostname</strong>, enter the desired hostname and click the <code>Set Hostname</code> button. The <strong>EX-CommandStation</strong> will update its hostname, which will be visible in your Throttle app when connected to the appropriate network.<br>/<br/>
-This is useful if you have more than one <strong>EX-CommandStation</strong> on your network to make them show up with different names.</p>
-</li>
-</ul>
 </li>
 </ol>
+<ul>
+<li>
+<p>To set the <strong>Access Point (<abbr title="Access Point Mode. Stand alone WiFi network">AP</abbr>) mode</strong>, enter the <abbr title="Service Set Identifier. Technical term for the WiFi network's name">SSID</abbr> and password for the <strong>EX-CommandStation</strong>'s WiFi network and click the <code>Set Access Point</code> button. You can optional set a channel for the <abbr title="Access Point Mode. Stand alone WiFi network">AP</abbr> mode, but it is not required, and generally not recommended.</p>
+<p>The <strong>EX-CommandStation</strong> will restart and create its own WiFi network with the specified <abbr title="Service Set Identifier. Technical term for the WiFi network's name">SSID</abbr> and password.</p>
+</li>
+<li>
+<p>To set the <strong>Station (<abbr title="Station Mode. Joins an existing WiFi network">STA</abbr>) mode</strong>, enter the <abbr title="Service Set Identifier. Technical term for the WiFi network's name">SSID</abbr> and password for your existing WiFi network (eg your home router) and click the <code>Set Station Mode</code> button. The <strong>EX-CommandStation</strong> will attempt to connect to the specified WiFi network. If the connection is successful, it will operate in Station mode. If the connection fails, it will revert to Access Point mode.</p>
+</li>
+<li>
+<p>To set the <strong>Temporary Station (<abbr title="Station Mode. Joins an existing WiFi network">STA</abbr>) mode</strong>, enter the <abbr title="Service Set Identifier. Technical term for the WiFi network's name">SSID</abbr> and password for your existing WiFi network and click the <code>Set Temporary Station Mode</code> button. The <strong>EX-CommandStation</strong> will attempt to connect to the specified WiFi network.</p>
+<p>If the connection is successful, it will operate in Station mode. If the connection fails, it will revert to Access Point mode.</p>
+</li>
+<li>
+<p>To set the <strong>Hostname</strong>, enter the desired hostname and click the <code>Set Hostname</code> button. The <strong>EX-CommandStation</strong> will update its hostname, which will be visible in your Throttle app when connected to the appropriate network.</p>
+<p>This is useful if you have more than one <strong>EX-CommandStation</strong> on your network to make them show up with different names.</p>
+</li>
+</ul>
 <hr />
 <h4 id="resetting-the-wifi-settings">Resetting the WiFi settings<a class="headerlink" href="#resetting-the-wifi-settings" title="Permanent link">&para;</a></h4>
 <p>The <code>Reset WiFi Settings</code> button on the WiFi Setup page will reset all WiFi settings to their default values. This will cause the <strong>EX-CommandStation</strong> to restart and create its own WiFi network in Access Point mode with the default <abbr title="Service Set Identifier. Technical term for the WiFi network's name">SSID</abbr> and password.</p>
