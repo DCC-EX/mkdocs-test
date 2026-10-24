@@ -70,11 +70,14 @@ This is a security feature.  If you could change AP mode settings over WiFi, the
 
 If you have an OLED screen, it will tell you the IP address of the **EX-CommandStation**
 
-Enter the IP address of the **EX-CommandStation** into the address bar of you browser. e.g. ``192.168.1.4`` if you are using the default [Access Point](/prepare-to-use/installer/config-wifi-esp32.md#the-wifi-different-modes) mode.
+Enter the IP address of the **EX-CommandStation** into the address bar of you browser. e.g. ``192.168.1.4`` if you are using the default [Access Point](/prepare-to-use/installer/config-wifi-esp32.md#the-wifi-different-modes) mode. Or use the Web Page in Engine Driver, after you have connected to the **EX-CommandStation**.
 
-The Engine Driver app (and most other throttle apps) will tell you the IP address of the **EX-CommandStation** on the connection screen.
+To find the IP address:
 
-![Engine driver](/_static/images/web-server/engine-driver-web1.png){ width=500px }
+* If you have an OLED screen, it will tell you the IP address of the **EX-CommandStation**
+* The Engine Driver app (and most other throttle apps) will tell you the IP address of the **EX-CommandStation** on the connection screeen
+
+![Engine driver](/_static/images/web-server/engine-driver-web1.png){ width=200px }
 
 Using a PC Web Browser
 
@@ -86,6 +89,22 @@ Using Engine Driver's Web page
 
 ![Engine driver](/_static/images/web-server/engine-driver-web2.png){ width=200px } ![Engine driver](/_static/images/web-server/engine-driver-web3.png){ width=200px }
 
+* Click ``Configs`` then select ``Network Preferences``
+
+* To set the **Access Point (AP) mode**, enter the SSID and password for the **EX-CommandStation**'s WiFi network and click the `Set Access Point` button. You can optional set a channel for the AP mode, but it is not required, and generally not recommended.
+
+    The **EX-CommandStation** will restart and create its own WiFi network with the specified SSID and password.
+
+* To set the **Station (STA) mode**, enter the SSID and password for your existing WiFi network (eg your home router) and click the `Set Station Mode` button. The **EX-CommandStation** will attempt to connect to the specified WiFi network. If the connection is successful, it will operate in Station mode. If the connection fails, it will revert to Access Point mode.
+
+* To set the **Temporary Station (STA) mode**, enter the SSID and password for your existing WiFi network and click the `Set Temporary Station Mode` button. The **EX-CommandStation** will attempt to connect to the specified WiFi network.
+
+    If the connection is successful, it will operate in Station mode. If the connection fails, it will revert to Access Point mode.
+
+* To set the **Hostname**, enter the desired hostname and click the `Set Hostname` button. The **EX-CommandStation** will update its hostname, which will be visible in your Throttle app when connected to the appropriate network.
+
+    This is useful if you have more than one **EX-CommandStation** on your network to make them show up with different names.
+
 ----
 
 ### Using EX-WebThrottle
@@ -94,15 +113,19 @@ Using Engine Driver's Web page
 
 2. Go to the ``Wifi Setup`` page from the menu or the toolbar buttons.
 
-    * To set the **Access Point (AP) mode**, enter the SSID and password for the **EX-CommandStation**'s WiFi network and click the `Set Access Point` button. You can optional set a channel for the AP mode, but it is not required, and generally not recommended.<br/><br/>
-    The **EX-CommandStation** will restart and create its own WiFi network with the specified SSID and password.<br/><br/>
-    To set the **Station (STA) mode**, enter the SSID and password for your existing WiFi network (eg your home router) and click the `Set Station Mode` button. The **EX-CommandStation** will attempt to connect to the specified WiFi network. If the connection is successful, it will operate in Station mode. If the connection fails, it will revert to Access Point mode.
+   * To set the **Access Point (AP) mode**, enter the SSID and password for the **EX-CommandStation**'s WiFi network and click the `Set Access Point` button. You can optional set a channel for the AP mode, but it is not required, and generally not recommended.
 
-    * To set the **Temporary Station (STA) mode**, enter the SSID and password for your existing WiFi network and click the `Set Temporary Station Mode` button. The **EX-CommandStation** will attempt to connect to the specified WiFi network.<br/><br/>
-    If the connection is successful, it will operate in Station mode. If the connection fails, it will revert to Access Point mode.
+      The **EX-CommandStation** will restart and create its own WiFi network with the specified SSID and password.
 
-    * To set the **Hostname**, enter the desired hostname and click the `Set Hostname` button. The **EX-CommandStation** will update its hostname, which will be visible in your Throttle app when connected to the appropriate network.<br>/<br/>
-    This is useful if you have more than one **EX-CommandStation** on your network to make them show up with different names.
+   * To set the **Station (STA) mode**, enter the SSID and password for your existing WiFi network (eg your home router) and click the `Set Station Mode` button. The **EX-CommandStation** will attempt to connect to the specified WiFi network. If the connection is successful, it will operate in Station mode. If the connection fails, it will revert to Access Point mode.
+
+   * To set the **Temporary Station (STA) mode**, enter the SSID and password for your existing WiFi network and click the `Set Temporary Station Mode` button. The **EX-CommandStation** will attempt to connect to the specified WiFi network.
+
+      If the connection is successful, it will operate in Station mode. If the connection fails, it will revert to Access Point mode.
+
+   * To set the **Hostname**, enter the desired hostname and click the `Set Hostname` button. The **EX-CommandStation** will update its hostname, which will be visible in your Throttle app when connected to the appropriate network.
+
+      This is useful if you have more than one **EX-CommandStation** on your network to make them show up with different names.
 
 ----
 
