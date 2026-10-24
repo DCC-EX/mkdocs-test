@@ -31,7 +31,7 @@ When using a web browser dialog on the command station, the Config.. Roster Edit
 
 If you have an OLED screen, it will tell you the IP address of the **EX-CommandStation**
 
-Enter the IP address of the **EX-CommandStation** into the address bar of you browser. e.g. ``192.168.1.4`` if you are using the default Access Point mode.
+Enter the IP address of the **EX-CommandStation** into the address bar of you browser. e.g. ``192.168.1.4`` if you are using the default [Access Point](../prepare-to-use/installer/config-wifi-esp32.md#the-wifi-different-modes)  mode.
 
 The Engine Driver app (and most other throttle apps) will tell you the IP address of the **EX-CommandStation** on the connection screeen
 

@@ -70,9 +70,9 @@ This is a security feature.  If you could change AP mode settings over WiFi, the
 
 If you have an OLED screen, it will tell you the IP address of the **EX-CommandStation**
 
-Enter the IP address of the **EX-CommandStation** into the address bar of you browser. e.g. ``192.168.1.4`` if you are using the default Access Point mode.
+Enter the IP address of the **EX-CommandStation** into the address bar of you browser. e.g. ``192.168.1.4`` if you are using the default [Access Point](/prepare-to-use/installer/config-wifi-esp32.md#the-wifi-different-modes) mode.
 
-The Engine Driver app (and most other throttle apps) will tell you the IP address of the **EX-CommandStation** on the connection screeen
+The Engine Driver app (and most other throttle apps) will tell you the IP address of the **EX-CommandStation** on the connection screen.
 
 ![Engine driver](/_static/images/web-server/engine-driver-web1.png){ width=500px }
 

@@ -20,7 +20,7 @@ Scanned roots: `C:\Users\akers\OneDrive\github\github_doco\mkdocs-test\docs`, `C
 
 ## High TODOs
 
-Total High TODO matches: 14
+Total High TODO matches: 15
 
 | File | Line | Line text |
 | --- | ---: | --- |
@@ -36,6 +36,7 @@ Total High TODO matches: 14
 | [docs/prepare-to-use/installer/platformio.md](../prepare-to-use/installer/platformio.md) | 5 | ==TODO== - provide setup help. |
 | snippets/configure/config-wifi-esp32-gui-options.md | 61 | ==TODO== VERY HIGH! - The WiFi change limitation has been broken in the latest CS version as anything can be changed via the in-built web server |
 | snippets/configure/config-wifi-esp32-gui-options.md | 69 | ==TODO== VERY HIGH! - Changing the WiFi Settings using the EX-CommandStation&#x27;s own Web Sever |
+| snippets/configure/config-wifi-esp32-gui-options.md | 115 | * In every case above, the **EX-CommandStation** will restart to apply the new settings. You will need to reconnect to the **EX-CommandStation** in the **EX-WebThrottle** interface. ==TODO== VERY HIGH! - The WiFi change limitation has been broken in the latest CS version as anything can be changed via the in-built web server |
 | snippets/ex-installer/startup-logs.md | 1 | ==TODO== Instructions required here to obtain the startup logs from **EX-Installer**. |
 | snippets/use/connect-and-use-a-wifi-throttle.md | 3 | &lt;!-- ==TODO== need to include an iOS app instructions --&gt; |
 
