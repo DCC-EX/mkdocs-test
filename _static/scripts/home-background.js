@@ -7,6 +7,10 @@
     "_static/images/home/home5.png",
     "_static/images/home/home6.png",
     "_static/images/home/home7.png",
+    "_static/images/home/home8.png",
+    "_static/images/home/home9.png",
+    "_static/images/home/home10.png",
+    "_static/images/home/home11.png",
   ];
   let previousImage;
   let refreshTimer;
@@ -32,7 +36,7 @@
     if (!setRandomHomeBackground()) return;
 
     window.clearInterval(refreshTimer);
-    refreshTimer = window.setInterval(setRandomHomeBackground, 10_000);
+    refreshTimer = window.setInterval(setRandomHomeBackground, 15_000);
   }
 
   if (typeof document$ !== "undefined") {
