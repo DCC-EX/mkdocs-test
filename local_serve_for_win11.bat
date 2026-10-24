@@ -1,2 +1,2 @@
-properdocs serve
+python -m properdocs serve
 pause

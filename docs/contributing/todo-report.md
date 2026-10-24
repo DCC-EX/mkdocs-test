@@ -20,13 +20,13 @@ Scanned roots: `C:\Users\akers\OneDrive\github\github_doco\mkdocs-test\docs`, `C
 
 ## High TODOs
 
-Total High TODO matches: 14
+Total High TODO matches: 15
 
 | File | Line | Line text |
 | --- | ---: | --- |
 | [docs/enhance/rosters.md](../enhance/rosters.md) | 30 | ==TODO== VERY HIGH! - needs detailed instructions for Roster Editing with a Web Browser. Needs to include screenshots! |
 | [docs/throttles/dcc-accessories.md](../throttles/dcc-accessories.md) | 3 | ==TODO== HIGH - how to control DCC Accessories. GUI options.  NOT serial commands! |
-| [docs/throttles/index.md](../throttles/index.md) | 39 | ==TODO== HIGH - Overview of DCC Accessory Operation |
+| [docs/throttles/index.md](../throttles/index.md) | 45 | ==TODO== HIGH - Overview of DCC Accessory Operation |
 | [docs/support/ex-csb1/ex-csb1-full-guide.md](../support/ex-csb1/ex-csb1-full-guide.md) | 445 | ==TODO== HIGH - USB Connection to JMRI |
 | [docs/reference/serial-commands/serial-command-cc-wifi_not_in_nav.md](../reference/serial-commands/serial-command-cc-wifi_not_in_nav.md) | 68 | N/A. The **EX-CommandStation** will restart. ==TODO== VERY HIGH! - This is no longer true |
 | [docs/reference/serial-commands/serial-command-cc-wifi_not_in_nav.md](../reference/serial-commands/serial-command-cc-wifi_not_in_nav.md) | 74 | * In every case above, the **EX-CommandStation** will restart to apply the new settings. You will need to reconnect to the **EX-CommandStation** with whatever interface you are using. ==TODO== VERY HIGH! - This is no longer true |
@@ -36,6 +36,7 @@ Total High TODO matches: 14
 | [docs/prepare-to-use/installer/platformio.md](../prepare-to-use/installer/platformio.md) | 5 | ==TODO== - provide setup help. |
 | snippets/configure/config-wifi-esp32-gui-options.md | 61 | ==TODO== VERY HIGH! - The WiFi change limitation has been broken in the latest CS version as anything can be changed via the in-built web server |
 | snippets/configure/config-wifi-esp32-gui-options.md | 69 | ==TODO== VERY HIGH! - Changing the WiFi Settings using the EX-CommandStation&#x27;s own Web Sever |
+| snippets/configure/config-wifi-esp32-gui-options.md | 115 | * In every case above, the **EX-CommandStation** will restart to apply the new settings. You will need to reconnect to the **EX-CommandStation** in the **EX-WebThrottle** interface. ==TODO== VERY HIGH! - The WiFi change limitation has been broken in the latest CS version as anything can be changed via the in-built web server |
 | snippets/ex-installer/startup-logs.md | 1 | ==TODO== Instructions required here to obtain the startup logs from **EX-Installer**. |
 | snippets/use/connect-and-use-a-wifi-throttle.md | 3 | &lt;!-- ==TODO== need to include an iOS app instructions --&gt; |
 

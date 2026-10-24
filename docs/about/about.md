@@ -123,6 +123,7 @@ The **DCC-EX** team is a worldwide group of dedicated enthusiasts with many deca
     - Fred Decker - Holly Springs, NC, USA (FlightRisk)
     - Herb Morton - Kingwood Texas, USA (Ash++)
     - Keith Trayler
+    - Mathew Winters
 
 ### Testing / Research / Support
 

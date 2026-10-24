@@ -1,2 +1,2 @@
-properdocs serve --dirty
+python -m properdocs serve --dirty
 pause
