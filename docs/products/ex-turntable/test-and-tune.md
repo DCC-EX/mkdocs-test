@@ -62,7 +62,7 @@ Referring to [adding a new device](/reference/hardware/hal/hal-config.md#adding-
   <* EX-Turntable I2C:x60 Configured on Vpins:600-600  *>          <<== This is the important line, **EX-Turntable** is connected!
 ```
 
-If there is an "OFFLINE" at the end of the **EX-Turntable** line, it indicates something is not quite right. Refer to [showing as offline with `<d hal show>`](ex-tt-troubleshooting.md#ex-turntable-showing-as-offline-with-d-hal-show).
+If there is an "OFFLINE" at the end of the **EX-Turntable** line, it indicates something is not quite right. Refer to [showing as offline with `<D HAL SHOW>`](ex-tt-troubleshooting.md#ex-turntable-showing-as-offline-with-d-hal-show).
 
 At power on, note that the turntable should have moved itself to the home position, so all commands below assume this is the case.
 
@@ -198,9 +198,9 @@ In this example, a turntable with ID 1 is defined with our six positions as per 
 Assuming **EX-Turntable** was configured for automatic phase switching, these commands would be used to rotate it to position 1, then position 6, and then home:
 
 ```cpp
-  <I 600 1 0>
-  <I 600 6 0>
-  <I 600 0 2>
+  <I 1 1 0>
+  <I 1 6 0>
+  <I 1 0 2>
 ```
 
 #### Operation with manual phase switching
@@ -208,14 +208,14 @@ Assuming **EX-Turntable** was configured for automatic phase switching, these co
 For the same scenario, but with manual phase switching, these commands would be used:
 
 ```cpp
-  <I 600 1 0>
-  <I 600 6 1>
-  <I 600 0 2>
+  <I 1 1 0>
+  <I 1 6 1>
+  <I 1 0 2>
 ```
 
 ### EXRAIL definition and control
 
-The real beauty of this new object comes in the form of automation possibilities with **EXRAIL**, as there is now an event handler ``ONROTATE()`` along with a position test command ``IF_TTPOSITION()`` and a new ``WAITFORTT()`` command to really enhance the possibilities of what can be accomplished when turntable/traverser activities occur.
+The real beauty of this new object comes in the form of automation possibilities with **EXRAIL**, as there is now an event handler ``ONROTATE()`` along with a position test command ``IFTTPOSITION()`` and a new ``WAITFORTT()`` command to really enhance the possibilities of what can be accomplished when turntable/traverser activities occur.
 
 To define our turntable as above but in **EXRAIL**, it looks like this:
 
@@ -246,22 +246,22 @@ Stall 1's door is operated by enabling Vpin 164, 2 by Vpin 165, and 3 by Vpin 16
 
 ```cpp
   ONROTATE(1)
-    IF_TTPOSITION(1,1)
+    IFTTPOSITION(1,1)
       CALL(101)
     ENDIF
-    IF_TTPOSITION(1,2)
+    IFTTPOSITION(1,2)
       CALL(102)
     ENDIF
-    IF_TTPOSITION(1,3)
+    IFTTPOSITION(1,3)
       CALL(103)
     ENDIF
-    IF_TTPOSITION(1,4)
+    IFTTPOSITION(1,4)
       CALL(101)
     ENDIF
-    IF_TTPOSITION(1,5)
+    IFTTPOSITION(1,5)
       CALL(102)
     ENDIF
-    IF_TTPOSITION(1,6)
+    IFTTPOSITION(1,6)
       CALL(103)
     ENDIF
   DONE
