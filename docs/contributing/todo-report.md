@@ -20,7 +20,7 @@ Scanned roots: `C:\Users\akers\OneDrive\github\github_doco\mkdocs-test\docs`, `C
 
 ## High TODOs
 
-Total High TODO matches: 15
+Total High TODO matches: 14
 
 | File | Line | Line text |
 | --- | ---: | --- |
@@ -31,18 +31,17 @@ Total High TODO matches: 15
 | [docs/reference/serial-commands/serial-command-cc-wifi_not_in_nav.md](../reference/serial-commands/serial-command-cc-wifi_not_in_nav.md) | 68 | N/A. The **EX-CommandStation** will restart. ==TODO== VERY HIGH! - This is no longer true |
 | [docs/reference/serial-commands/serial-command-cc-wifi_not_in_nav.md](../reference/serial-commands/serial-command-cc-wifi_not_in_nav.md) | 74 | * In every case above, the **EX-CommandStation** will restart to apply the new settings. You will need to reconnect to the **EX-CommandStation** with whatever interface you are using. ==TODO== VERY HIGH! - This is no longer true |
 | [docs/reference/serial-commands/serial-command-ff_not_in_nav.md](../reference/serial-commands/serial-command-ff_not_in_nav.md) | 36 | * **«freqValue»** = one of: ==TODO== What is the format of the parameters? |
-| [docs/reference/tools/serial-monitor.md](../reference/tools/serial-monitor.md) | 3 | &lt;!-- ==TODO== change the references on this page/section from the Arduino IDE to VSC/PIO Or add a VSC/PIO section --&gt; |
 | [docs/reference/wiring/i2C/i2c-wiring.md](../reference/wiring/i2C/i2c-wiring.md) | 54 | - When using separate power sources, there is potential for a ground loop. ==TODO== |
 | [docs/prepare-to-use/installer/platformio.md](../prepare-to-use/installer/platformio.md) | 5 | ==TODO== - provide setup help. |
 | snippets/configure/config-wifi-esp32-gui-options.md | 61 | ==TODO== VERY HIGH! - The WiFi change limitation has been broken in the latest CS version as anything can be changed via the in-built web server |
 | snippets/configure/config-wifi-esp32-gui-options.md | 69 | ==TODO== VERY HIGH! - Changing the WiFi Settings using the EX-CommandStation&#x27;s own Web Sever |
-| snippets/configure/config-wifi-esp32-gui-options.md | 115 | * In every case above, the **EX-CommandStation** will restart to apply the new settings. You will need to reconnect to the **EX-CommandStation** in the **EX-WebThrottle** interface. ==TODO== VERY HIGH! - The WiFi change limitation has been broken in the latest CS version as anything can be changed via the in-built web server |
+| snippets/configure/config-wifi-esp32-gui-options.md | 138 | * In every case above, the **EX-CommandStation** will restart to apply the new settings. You will need to reconnect to the **EX-CommandStation** in the **EX-WebThrottle** interface. ==TODO== VERY HIGH! - The WiFi change limitation has been broken in the latest CS version as anything can be changed via the in-built web server |
 | snippets/ex-installer/startup-logs.md | 1 | ==TODO== Instructions required here to obtain the startup logs from **EX-Installer**. |
 | snippets/use/connect-and-use-a-wifi-throttle.md | 3 | &lt;!-- ==TODO== need to include an iOS app instructions --&gt; |
 
 ## Medium priority TODOs
 
-Total medium priority TODO matches: 60
+Total medium priority TODO matches: 61
 
 | File | Line | Line text |
 | --- | ---: | --- |
@@ -78,6 +77,7 @@ Total medium priority TODO matches: 60
 | [docs/reference/serial-commands/serial-command-zz-and-z_not_in_nav.md](../reference/serial-commands/serial-command-zz-and-z_not_in_nav.md) | 87 | ==TODO== MEDIUM - Response |
 | [docs/reference/serial-commands/shell_serial-command-xyz_not_in_nav.md](../reference/serial-commands/shell_serial-command-xyz_not_in_nav.md) | 53 | ==TODO== MEDIUM - Responses |
 | [docs/reference/tools/index.md](../reference/tools/index.md) | 3 | ==TODO== MEDIUM - Tools overview |
+| [docs/reference/tools/serial-monitor.md](../reference/tools/serial-monitor.md) | 47 | ==TODO== MEDIUM - add Serial Monitor VSC/PIO section |
 | [docs/reference/trackmanager/dc-mode-frequency.md](../reference/trackmanager/dc-mode-frequency.md) | 82 | - ==TODO== MEDIUM - How to effectively use DC mode when using multiple frequencies. |
 | [docs/reference/microcontrollers/esp32/esp32-acebott.md](../reference/microcontrollers/esp32/esp32-acebott.md) | 99 | ==TODO== MEDIUM - Stacked EX8874 Checklist |
 | [docs/reference/microcontrollers/esp32/esp32-ex8874.md](../reference/microcontrollers/esp32/esp32-ex8874.md) | 110 | ==TODO== MEDIUM - Stacked EX8874 Checklist |
