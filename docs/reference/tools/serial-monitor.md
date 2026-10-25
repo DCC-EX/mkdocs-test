@@ -1,7 +1,5 @@
 # Using a Serial Monitor / Device Monitor
 
-<!-- ==TODO== change the references on this page/section from the Arduino IDE to VSC/PIO Or add a VSC/PIO section -->
-
 With a Serial Monitor you can:
 
 * Test your Command Station
@@ -41,6 +39,12 @@ For details, refer to [Testing with EX-Installer](../../prepare-to-use/installer
 Another simple way is to to use **EX-WEbThrottle's** Device Monitor to show the serial output of your device.
 
 For details, refer to [Issuing Direct Commands with EX-Installer](/products/ex-webthrottle/ex-webthrottle.md#issuing-direct-commands).
+
+----
+
+## Connect with the VSCode's Serial Monitor
+ 
+==TODO== MEDIUM - add Serial Monitor VSC/PIO section
 
 ----
 
