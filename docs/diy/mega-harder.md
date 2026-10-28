@@ -67,9 +67,9 @@ FAILURE TO DO THIS CAN DESTROY YOUR MEGA**</span>
 
     Recommended: If you have a multimeter, once cut, confirm that there is no conductivity between the two pads.
 
-    <span style="display: block; text-align: center;color:red;">**˄˄˄ WARNING - WARNING - WARNING ˄˄˄**</span>
-
     *Note: This is not required if you are using an **EX-MotorShield8874** motor shield ([covered here](mega-easy.md))*.
+
+    <span style="display: block; text-align: center;color:red;">**˄˄˄ WARNING - WARNING - WARNING ˄˄˄**</span>
 
 - Ensure shield pins are straight and correctly aligned.
 

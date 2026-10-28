@@ -142,6 +142,8 @@ plugins:
       redirect_maps:
         'about/news.md': 'news/index.md'
 
+        'diy/installer.md': 'prepare-to-use/index.md'
+
         'enhance/turnouts.md': 'enhance/exrail/exrail-objects-introduction.md#adding-turnoutspoints'
         'enhance/routes.md': 'enhance/exrail/exrail-sequences-introduction.md'
         
