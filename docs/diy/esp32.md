@@ -8,7 +8,7 @@ ESP32-WROOM-32 was selected as the microprocessor for the **EX-CSB1**. Although 
 
 ## Advantages and Disadvantages of the ESP32
 
-![ESPDuino-32](/_static/images/esp32/esp32-wroom32-mark.png){: style="width: 30%" align=right}
+![ESPDuino-32](../_static/images/esp32/esp32-wroom32-mark.png){ width=300px align=right}
 
 - ESP32-WROOM-32 advantages:
 
@@ -26,7 +26,7 @@ ESP32-WROOM-32 was selected as the microprocessor for the **EX-CSB1**. Although 
     - ADC input range begins at 0.15V
     - ESP32 Espressif boards package version 2.0.17 is required
 
-![ESPDuino-32](/_static/images/esp32/espduino-32.png){: style="width: 25%" align=right}
+![ESPDuino-32](../_static/images/esp32/espduino-32.png){ width=300px align=right}
 
 ## Known Working Boards
 
@@ -48,7 +48,7 @@ See the [ESP32 Reference pages](../reference/microcontrollers/esp32/esp32-ex8874
 
 ## ESP32-WROOM-32 Development boards
 
-![ESPDuino-32](/_static/images/esp32/esp32-dev-boards.png){: style="width: 30%" align=right}
+![ESPDuino-32](../_static/images/esp32/esp32-dev-boards.png){ width=300px align=right}
 
 There are several other ESP32-WROOM-32 boards with the Uno form factor which work. These require a custom motor define when there are differences in GPIO pin locations.
 

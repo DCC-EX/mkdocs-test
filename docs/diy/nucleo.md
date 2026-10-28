@@ -31,13 +31,14 @@ Reasons to consider the supported Nucleo-F4 boards
   F411RE  
   F446RE
 
-- Other notes  
-  \- The three Nucleo-144 boards' pin locations are quite consistent with each other.  
-  \- Nucleo-144 boards have the Zio headers installed - headers (top) and pins (bottom).  
+- Other notes
+
+    - The three Nucleo-144 boards' pin locations are quite consistent with each other.
+    - Nucleo-144 boards have the Zio headers installed - headers (top) and pins (bottom).  
   &nbsp; &nbsp; Morpho headers will require installation/soldering, if you want to use them.  
   &nbsp; &nbsp;
-  \- Nucleo-64 boards' pin locations are less consistent.  If you are aware, it should not be an issue.  
-  \- Nucleo-64 boards have Arduino headers (top) and Morpho pins (top and bottom) installed.
+    - Nucleo-64 boards' pin locations are less consistent.  If you are aware, it should not be an issue.  
+    - Nucleo-64 boards have Arduino headers (top) and Morpho pins (top and bottom) installed.
 
 ## Reference - Nucleo
 

@@ -1,8 +1,7 @@
 # Easy build - Arduino Mega + EX-MotorShield8874
 
-The instructions on this page are the steps required to use an **EX-MotorShield8874** motor shield to build an **EX-CommandStation**.
-
-To use the Standard Arduino Motor Shield, or other supported motor driver, refer to [this page](mega-harder.md).
+!!! note ""
+    The instructions on this page are the steps required to use an **EX-MotorShield8874** motor shield to build an **EX-CommandStation**. To use the Standard Arduino Motor Shield, or other supported motor driver, refer to the [harder build page](mega-harder.md).
 
 **DO NOT USE ANY OTHER SHIELD TYPE WITHOUT FIRST CHECKING OUR DETAILED INSTRUCTIONS FOR THAT SHIELD.**
 
@@ -42,15 +41,18 @@ To build a basic DIY **EX-CommandStation** with an **EX-MotorShield8874** in eas
 
 Check your work. Look under and through where the boards connect, make sure no pins missed the holes and got bent so that they run along the outside of the headers.
 
-![Mounted EX8874](../_static/images/mega/mega2.png)
-![Mounted EX8874](../_static/images/mega/mega3.png)
+![Mounted EX8874](../_static/images/mega/mega2.png){ width=400px }  
+![Mounted EX8874](../_static/images/mega/mega3.png){ width=400px }
 
 ### 3. Optionally Install WiFiShield - ***OPTIONAL***
 
-1. Prepare your **EX-WiFiShield8266** by removing the two jumpers, see picture. ![Wifi Jumpers](../_static/images/mega/mega4.png)
-2. Mount the Wi-Fi shield on the EX8874 noting the correct orientation in the pictures and there will be 2 pins on either side which are deliberately missing.![Wifi shield](../_static/images/mega/mega5.png)
+1. Prepare your **EX-WiFiShield8266** by removing the two jumpers, see picture.  
+![Wifi Jumpers](../_static/images/mega/mega4.png){ width=400px }
+2. Mount the Wi-Fi shield on the EX8874 noting the correct orientation in the pictures and there will be 2 pins on either side which are deliberately missing.  
+![Wifi shield](../_static/images/mega/mega5.png){ width=400px }
 3. Use a male-female Dupont wire (normally supplied with the shield) to connect to any one of the row of Tx pins on the Wi-Fi Board, and connect the other end to the Rx1 pin on the mega (pin 19). See photo below.
-4. Take a second jumper wire and connect it to any one of the row of Rx pins on the Wi-Fi Board and connect the other end to Tx1 on the mega (pin 18).![txrx](../_static/images/mega/mega6.png)
+4. Take a second jumper wire and connect it to any one of the row of Rx pins on the Wi-Fi Board and connect the other end to Tx1 on the mega (pin 18).  
+![txrx](../_static/images/mega/mega6.png){ width=400px }
 5. Use a small piece of sticky tape or similar to keep the Dupont wires firmly in place in the mega header sockets. They are easily knocked out.
 
 ### 4. Connect your power supply
@@ -69,7 +71,7 @@ The **EX-MotorShield8874** track connectors unplug for easy access.
  1. Your PROG track is wired to the green socket closest to the power barrel connector.
  2. The MAIN track is wired to the far connector.
 
-![CONNECTIONS](../_static/images/mega/mega7.png)
+![CONNECTIONS](../_static/images/mega/mega7.png){ width=400px }
 
 ### 7. Load the software
 
