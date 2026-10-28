@@ -1,6 +1,8 @@
 # Alternative build - Arduino Mega + Arduino Motor Shield
 
-The instructions on this page are the steps required to use an Arduino Motor Shield motor shield, or other supported motor driver, to build an **EX-CommandStation**.
+!!! note ""
+    The instructions on this page are the steps required to use an Arduino Motor Shield motor shield, or other supported motor driver, to build an **EX-CommandStation**.  
+    To use the **EX-MotorShield8874**, or other supported motor driver, refer to the [easy build page](mega-easy.md).
 
 These instructions assume a slightly more competent user who has made the decision to trade simplicity for price. It is assumed that you are comfortable modifying devices, maybe soldering etc. and are not going to make costly mistakes such as mixing up the power supplies or putting the processor board down on something that will short the underside of the pins.
 
@@ -38,13 +40,14 @@ To build a basic DIY **EX-CommandStation** you will need:
 
 ### 1. Prepare your Mega
 
-1. If you have an older Arduino Mega with the large USB-B type connector, use kapton tape, electrical tape, sticky tape or similar to cover the top of the USB connector on the mega. This prevents any accidental contact with the underside of the motor shield.
+![connectors](../_static/images/mega-hard/mega-with-usb-b-covered.png){ align=right width=300px }
 
-    ![connectors](../_static/images/mega-hard/mega-with-usb-b-covered.png){ width=400px }
-
+- If you have an older Arduino Mega with the large USB-B type connector, use kapton tape, electrical tape, sticky tape or similar to cover the top of the USB connector on the mega. This prevents any accidental contact with the underside of the motor shield.
     *Not required for later Megas that came wth MicroUSB or USB-C connectors.*
 
-2. Mount your Mega on a 3D printed tray, a piece of plastic card or wood to make sure that the underside solder points are insulated.
+<div style="clear: both;"></div>
+
+- Mount your Mega on a 3D printed tray, a piece of plastic card or wood to make sure that the underside solder points are insulated.
 
     This prevents damage to the boards from an electrical short, if you accidentally place your **EX-CommandStation** down on a tool, coin or even your track.
 
@@ -55,12 +58,12 @@ See the [Ethernet Install](ethernet.md) page for more information.
 
 ### 3. Prepare your motor shield
 
-![VIN trace](../_static/images/mega-hard/mega2.png){ align=right }
+![VIN trace](../_static/images/mega-hard/mega2.png){ align=right width=300px }
 
-<span style="display: block; text-align: center;color:red;">**˅˅˅ WARNING - WARNING - WARNING ˅˅˅<br/>  
+<span style="display: block; text-align: center;color:red;">**˅˅˅ WARNING - WARNING - WARNING ˅˅˅  
 FAILURE TO DO THIS CAN DESTROY YOUR MEGA**</span>
 
-1. You *MUST prevent the shield from feeding track voltage into your Mega*. This is done by cutting the VIN trace and/or removing the pin that feeds the Mega.
+- You *MUST prevent the shield from feeding track voltage into your Mega*. This is done by cutting the VIN trace and/or removing the pin that feeds the Mega.
 
     Recommended: If you have a multimeter, once cut, confirm that there is no conductivity between the two pads.
 
@@ -68,13 +71,13 @@ FAILURE TO DO THIS CAN DESTROY YOUR MEGA**</span>
 
     *Note: This is not required if you are using an **EX-MotorShield8874** motor shield ([covered here](mega-easy.md))*.
 
-2. Ensure shield pins are straight and correctly aligned.
+- Ensure shield pins are straight and correctly aligned.
 
 <div style="clear: both;"></div>
 
 ### 4. Mount the motor shield
 
-![Orientation](../_static/images/mega-hard/mega4.png){: style="width: 70%"  align=right }
+![Orientation](../_static/images/mega-hard/mega4.png){width=300px align=right }
 
 Align the motor shield so that the power connectors are at the same end as the Mega power/USB connectors. 
 
@@ -83,21 +86,21 @@ It is normal for you to see a few millimetres of the pins between the bottom of 
 <div style="clear: both;"></div>
 ### Connect your track
 
-![Orientation](../_static/images/mega-hard/mega5.png){ align=right }
+![Orientation](../_static/images/mega-hard/mega5.png){ align=right width=300px }
 Don't skip this step if you don't yet have any track because the WiFi shield will cover the connectors.
 
 It's best to create fly leads with a suitable pluggable connectors for later. It makes it much easier to detach your **EX-CommandStation** from your layout when you need to fiddle with it later.
 
 If you only have one piece of track for testing, wire it to the PROG track plug.
 
- 1. The MAIN track is wired to the A channel output.
- 2. Your PROG track is wired to the B channel output.
+- The MAIN track is wired to the A channel output.
+- Your PROG track is wired to the B channel output.
 
 <div style="clear: both;"></div>
 
 ### 5. Connect your track power supply
 
-![Power](../_static/images/mega-hard/mega6.png){ align=right width=400px }
+![Power](../_static/images/mega-hard/mega6.png){ align=right width=300px }
 Wire your track power supply to the input turrets of the motor shield, observing polarity. It is best to create short wire with a female barrel connector.
 
 <div style="clear: both;"></div>

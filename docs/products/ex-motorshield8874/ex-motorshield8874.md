@@ -9,7 +9,7 @@ Designed in conjunction with the **DCC-EX** development team, the **EX‑MotorSh
 
 This board is the new standard by which we compare other boards.
 
-Not *required* for the *EX-CSB1*, but can be optionally added to provide two additional 5amp outputs (to two provided by default).
+Not *required* for the [**EX-CSB1**](../ex-csb1/index.md), but can be optionally added to provide two additional 5amp outputs (in addition to the two provided by default).
 
 <br/>
 

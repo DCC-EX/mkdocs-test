@@ -5,11 +5,11 @@ hide:
 
 # Our Products
 
-![DCC-EX](../_static/images/logos/logo_with_border.png){ .off-glb align=right width=80px }
+![DCC-EX](../_static/images/logos/logo_with_border.png){ .off-glb align=right width=100px }
 
 The **DCC-EX** team has designed and released a number of open source, hardware and software, products aimed at making model trains accessible to more people.
 
-This page briefly outlines each of our products with links to more information, and categorised by the level of experience needed to use them:
+This page briefly outlines these with links to more information and are categorised by the level of experience needed to use them:
 
 - [Easy to use / Conductor Level](#easy-to-use-products-conductor-level)
 - [A bit more technical / Tinkerer Level](#a-bit-more-technical-products-tinkerer-level)

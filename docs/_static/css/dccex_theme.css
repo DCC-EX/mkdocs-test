@@ -742,3 +742,9 @@ a.external-link-icon::after {
         box-shadow: 0 0 0 8px rgba(0, 255, 136, 0);
     }
 }
+
+/* mkdocs-glightbox plugin */
+
+.gslide-image img {
+    background: #00353d !important;
+}

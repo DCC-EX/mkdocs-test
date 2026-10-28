@@ -6,14 +6,17 @@ If you intend to use an ESP-01 development board, please skip to [ESP01](#esp-01
 
 ## EX-WiFiShield8266
 
-![WiFiShield8266](/_static/images/wifi/makerfabs-esp8266-wifi-shield.png){ align=right width=400px}
+![WiFiShield8266](/_static/images/wifi/makerfabs-esp8266-wifi-shield.png){ align=right width=300px }
+
 We recommend you purchase an EX-WiFiShield8266 (a joint venture with Makerfabs) which has been designed to make the installation easy.
 
 You can find installation instructions here [WiFiShield8266 install](../diy/mega-easy.md#3-optionally-install-wifishield-optional)
 
 <div style="clear: both;"></div>
+
 ## Other shields
-![wangtongze](/_static/images/wifi/wangtongze_jumpered.png){ align=right width=400px}
+
+![wangtongze](/_static/images/wifi/wangtongze_jumpered.png){ align=right width=300px}
 
 Most other Arduino ESP8266 Wi-Fi shields, including the dodgy ones with "Shield" and "Arduino" spelling mistakes, will work well with a **DCC-EX EX-CommandStation** but must be modified slightly to bypass the useless design based on UNOs with one user and no USB connection. They are frequently shipped with firmware versions that do not work well with **DCC-EX** (latest is not always best!) and it's non-trivial to rectify this.
 
@@ -35,7 +38,7 @@ In addition, the shield size overlaps the standard Arduino motor-shield terminal
 
 ## ESP-01 or ESP-01S
 
-![ESP01](/_static/images/wifi/esp-01s_2.png){ align=right }
+![ESP01](/_static/images/wifi/esp-01s_2.png){ width=300px align=right }
 These devices are not recommended because there are power consumption issues that may cause random Command Station brown-out failure while attempting to connect in a low WiFi signal area.  They will probably NOT work without a non-trivial firmware update.
 
 The ESP-01 should be connected with dupont wires to the Command Station with wiring as follows:
