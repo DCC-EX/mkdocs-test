@@ -1,7 +1,7 @@
 # EX‑MotorShield8874
 
-![EX-MotorShield8874 Logo](../../_static/images/logos/product-logo-ex-motorshield8874-only-light.png){ .only-light width=400px align=right }
-![EX-MotorShield8874 Logo](../../_static/images/logos/product-logo-ex-motorshield8874-only-dark.png){ .only-dark width=400px align=right }
+![EX-MotorShield8874 Logo](../../_static/images/logos/product-logo-ex-motorshield8874-only-light.png){ .off-glb .only-light width=400px align=right }
+![EX-MotorShield8874 Logo](../../_static/images/logos/product-logo-ex-motorshield8874-only-dark.png){ .off-glb .only-dark width=400px align=right }
 
 Designed in conjunction with the **DCC-EX** development team, the **EX‑MotorShield8874** is extremely simple to use with all current and future generations of EX‑CommandStation hardware.
 

@@ -93,6 +93,9 @@ plugins:
   - search: # Material client-side search using Lunr.js
       separator: '[,;\$\|\-\.\s\[\]\(\)\{\}"]+'
   - macros
+  - glightbox:
+      auto_caption: true       # Tells the plugin to use the alt text as a caption
+      caption_position: bottom # Optional: Can be bottom, top, left, or right
   - git-revision-date-localized # Auto date each page from last Git commit
   - awesome-nav # Enable awesome-nav plugin to support dynamic page structure
   - blog: # Enable built-in blog

@@ -1,7 +1,7 @@
 # **EX-CSB1** <br/><small>EX-CommandStation/Booster 1 Express</small>
 
-![EX-CSB1 Logo](../../_static/images/logos/product-logo-ex-csb1-only-light.png){ .only-light width=400px align=right }
-![EX-CSB1 Logo](../../_static/images/logos/product-logo-ex-csb1-only-dark.png){ .only-dark width=400px align=right }
+![EX-CSB1 Logo](../../_static/images/logos/product-logo-ex-csb1-only-light.png){ .off-glb .only-light width=400px align=right }
+![EX-CSB1 Logo](../../_static/images/logos/product-logo-ex-csb1-only-dark.png){ .off-glb .only-dark width=400px align=right }
 
 The **EX-CommandStation/Booster 1 Express** (**EX-CSB1**) is our flagship, WiFi enabled, *ready-to-run* system and is available for [purchase now](../../purchasing/official-sellers.md).  
 With your phone, you could be running your trains in less than 5 minutes. *No computer required.*

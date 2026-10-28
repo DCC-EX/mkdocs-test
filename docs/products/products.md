@@ -5,7 +5,7 @@ hide:
 
 # Our Products
 
-![DCC-EX](../_static/images/logos/logo_with_border.png){ align=right width=80px }
+![DCC-EX](../_static/images/logos/logo_with_border.png){ .off-glb align=right width=80px }
 
 The **DCC-EX** team has designed and released a number of open source, hardware and software, products aimed at making model trains accessible to more people.
 
@@ -17,7 +17,7 @@ This page briefly outlines each of our products with links to more information, 
 
 ----
 
-![Conductor Icon](../_static/images/levels/conductor.png){ align=right }
+![Conductor Icon](../_static/images/levels/conductor.png){ .off-glb align=right }
 
 ## Easy to Use Products <small>Conductor Level</small>
 
@@ -59,8 +59,8 @@ See the [EX-WebThrottle documentation](/products/ex-webthrottle/ex-webthrottle.m
 
 ### EX-Toolbox
 
-[![EX-Toolbox Logo](../_static/images/logos/product-logo-ex-toolbox-only-light.png){ .only-light width=400px }
-![EX-Toolbox Logo](../_static/images/logos/product-logo-ex-toolbox-only-dark.png){ .only-dark width=400px }](/products/ex-toolbox/index.md)
+[![EX-Toolbox Logo](../_static/images/logos/product-logo-ex-toolbox-only-light.png){ .off-glb .only-light width=400px }
+![EX-Toolbox Logo](../_static/images/logos/product-logo-ex-toolbox-only-dark.png){ .off-glb .only-dark width=400px }](/products/ex-toolbox/index.md)
 
 ![app store](../_static/images/ex-toolbox/download.png){ width=150px align=right }
 
@@ -76,7 +76,7 @@ Refer to the [EX-Toolbox documentation](/products/ex-toolbox/index.md) for how t
 
 ----
 
-![Tinkerer Icon](../_static/images/levels/tinkerer.png){ align=right }
+![Tinkerer Icon](../_static/images/levels/tinkerer.png){ .off-glb align=right }
 
 ## A Bit More Technical Products <small>Tinkerer Level</small>
 
@@ -90,10 +90,10 @@ You will need to perform some assembly and configure and install some software t
 
 ### EX-CommandStation Recommended Self Build Option (DIY)
 
-[![EX-CommandStation Logo](../_static/images/logos/product-logo-ex-commandstation-only-light.png){ .only-light width=400px }
-![EX-CommandStation Logo](../_static/images/logos/product-logo-ex-commandstation-only-dark.png){ .only-dark width=400px }](/diy/mega-easy.md)
-[![CS DIY Logo](../_static/images/logos/product-logo-ex-cs-diy-only-light.png){ .only-light width=400px }
-![CS DIY Logo](../_static/images/logos/product-logo-ex-cs-diy-only-dark.png){ .only-dark width=400px }](/diy/mega-easy.md)
+[![EX-CommandStation Logo](../_static/images/logos/product-logo-ex-commandstation-only-light.png){ .off-glb .only-light width=400px }
+![EX-CommandStation Logo](../_static/images/logos/product-logo-ex-commandstation-only-dark.png){ .off-glb .only-dark width=400px }](/diy/mega-easy.md)
+[![CS DIY Logo](../_static/images/logos/product-logo-ex-cs-diy-only-light.png){ .off-glb .only-light width=400px }
+![CS DIY Logo](../_static/images/logos/product-logo-ex-cs-diy-only-dark.png){ .off-glb .only-dark width=400px }](/diy/mega-easy.md)
 
 A supported DIY stack for **EX-CommandStation** using an Arduino Mega + **EX-MotorShield8874** (or Arduino R3 Motor Shield) + **EX-WiFiShield8266** (optional).
 
@@ -107,8 +107,8 @@ Refer to the [Easy build Arduino Mega page](/diy/mega-easy.md) for information o
 
 ### EX-MotorShield8874
 
-[![EX-MotorShield8874 Logo](../_static/images/logos/product-logo-ex-motorshield8874-only-light.png){ .only-light width=400px }
-![EX-MotorShield8874 Logo](../_static/images/logos/product-logo-ex-motorshield8874-only-dark.png){ .only-dark width=400px }](/products/ex-motorshield8874/ex-motorshield8874.md)
+[![EX-MotorShield8874 Logo](../_static/images/logos/product-logo-ex-motorshield8874-only-light.png){ .off-glb .only-light width=400px }
+![EX-MotorShield8874 Logo](../_static/images/logos/product-logo-ex-motorshield8874-only-dark.png){ .off-glb .only-dark width=400px }](/products/ex-motorshield8874/ex-motorshield8874.md)
 
 A dual channel, 5 amp (per channel) motor shield designed specifically for **DCC-EX** in an Arduino shield format.
 
@@ -122,8 +122,8 @@ Refer to the [EX-MotorShield8874 page](/products/ex-motorshield8874/ex-motorshie
 
 ### EX-WiFiShield8266
 
-[![EX-8266 Logo](../_static/images/logos/product-logo-ex-wifishield8266-only-light.png){ .only-light width=400px }
-![EX-8266 Logo](../_static/images/logos/product-logo-ex-wifishield8266-only-dark.png){ .only-dark width=400px }](/products/ex-wifishield8266/ex-wifishield8266.md)
+[![EX-8266 Logo](../_static/images/logos/product-logo-ex-wifishield8266-only-light.png){ .off-glb .only-light width=400px }
+![EX-8266 Logo](../_static/images/logos/product-logo-ex-wifishield8266-only-dark.png){ .off-glb .only-dark width=400px }](/products/ex-wifishield8266/ex-wifishield8266.md)
 
 A WiFi shield designed specifically for **DCC-EX** in an Arduino shield format. (NOte required for an Espressif ESP32 based command station build.)
 
@@ -137,7 +137,7 @@ Refer to the [EX-WiFiShield8266 page](/products/ex-wifishield8266/ex-wifishield8
 
 ----
 
-![Engineer Icon](../_static/images/levels/engineer.png){ align=right }
+![Engineer Icon](../_static/images/levels/engineer.png){ .off-glb align=right }
 
 ## Advanced Technical Products <small>Engineer Level</small>
 
@@ -168,8 +168,8 @@ Refer to the [EX-CommandStation DIY Pages](/diy/diy.md) for information on what 
 
 ### EX-FastClock
 
-[![EX-FastClock Logo](../_static/images/logos/product-logo-ex-fastclock-only-light.png){ .only-light width=400px }
-![EX-FastClock Logo](../_static/images/logos/product-logo-ex-fastclock-only-dark.png){ .only-dark width=400px }](/products/ex-fastclock/index.md)
+[![EX-FastClock Logo](../_static/images/logos/product-logo-ex-fastclock-only-light.png){ .off-glb .only-light width=400px }
+![EX-FastClock Logo](../_static/images/logos/product-logo-ex-fastclock-only-dark.png){ .off-glb .only-dark width=400px }](/products/ex-fastclock/index.md)
 
 A Self Build (DIY) integrated fast clock for your layout.
 
@@ -181,8 +181,8 @@ Refer to the [EX-FastClock documentation](/products/ex-fastclock/index.md) for h
 
 ### EX-Turntable
 
-[![EX-Turntable Logo](../_static/images/logos/product-logo-ex-turntable-only-light.png){ .only-light width=400px }
-![EX-Turntable Logo](../_static/images/logos/product-logo-ex-turntable-only-dark.png){ .only-dark width=400px }](/products/ex-turntable/index.md)
+[![EX-Turntable Logo](../_static/images/logos/product-logo-ex-turntable-only-light.png){ .off-glb .only-light width=400px }
+![EX-Turntable Logo](../_static/images/logos/product-logo-ex-turntable-only-dark.png){ .off-glb .only-dark width=400px }](/products/ex-turntable/index.md)
 
 A Self Build (DIY) integrated turntable/traverser controller using a stepper motor.
 
@@ -194,8 +194,8 @@ Refer to the [EX-Turntable documentation](/products/ex-turntable/index.md) for w
 
 ### EX-DCCInspector
 
-[![EX-DCCInspector Logo](../_static/images/logos/product-logo-ex-dccinspector-only-light.png){ .only-light width=400px }
-![EX-DCCInspector Logo](../_static/images/logos/product-logo-ex-dccinspector-only-dark.png){ .only-dark width=400px }](ex-dccinspector/index.md)
+[![EX-DCCInspector Logo](../_static/images/logos/product-logo-ex-dccinspector-only-light.png){ .off-glb .only-light width=400px }
+![EX-DCCInspector Logo](../_static/images/logos/product-logo-ex-dccinspector-only-dark.png){ .off-glb .only-dark width=400px }](ex-dccinspector/index.md)
 
 A Self Build (DIY) diagnostic tool to inspect DCC packets.
 
@@ -207,8 +207,8 @@ Refer to the [EX-DCCInspector documentation](ex-dccinspector/index.md) for more 
 
 ### EX-IOExpander
 
-[![EX-IOExpander Logo](../_static/images/logos/product-logo-ex-ioexpander-only-light.png){ .only-light width=400px }
-![EX-IOExpander Logo](../_static/images/logos/product-logo-ex-ioexpander-only-dark.png){ .only-dark width=400px }](/products/ex-ioexpander/ex-ioexpander.md)
+[![EX-IOExpander Logo](../_static/images/logos/product-logo-ex-ioexpander-only-light.png){ .off-glb .only-light width=400px }
+![EX-IOExpander Logo](../_static/images/logos/product-logo-ex-ioexpander-only-dark.png){ .off-glb .only-dark width=400px }](/products/ex-ioexpander/ex-ioexpander.md)
 
 Driven by a shortage of I2C connected I/O expansion devices, **EX-IOExpander** is a Self Build (DIY) solution that allows you to use various Arduino devices to expand the I/O capabilities of your **EX-CommandStation**.
 
@@ -220,8 +220,8 @@ Refer to the [EX-IOExpander documentation](/products/ex-ioexpander/ex-ioexpander
 
 ### EX-SensorCAM
 
-[![EX-SensorCAM Light Logo](../_static/images/logos/product-logo-ex-sensorcam-only-light.png){ .only-light width=400px }
-![EX-SensorCAM Dark Logo](../_static/images/logos/product-logo-ex-sensorcam-only-dark.png){ .only-dark width=400px }](/products/ex-sensorcam/index.md)
+[![EX-SensorCAM Light Logo](../_static/images/logos/product-logo-ex-sensorcam-only-light.png){ .off-glb .only-light width=400px }
+![EX-SensorCAM Dark Logo](../_static/images/logos/product-logo-ex-sensorcam-only-dark.png){ .off-glb .only-dark width=400px }](/products/ex-sensorcam/index.md)
 
 **EX-SensorCAM** is a Self Build (DIY) solution that provides up to 80 sensors for your layout using an ESP32 based camera solution.
 

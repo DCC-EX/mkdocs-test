@@ -13,7 +13,7 @@ So.. RELATIVE HTML links are the only reliable way to work, otherwise your websi
 In ProperDocs,  the markdown to html generator  passes through RELATIVE links unchanged, this means that you can easily refer to images in the same directory as the current page by just giving the name, or get to any other directory with the appropriate number of ../ to go up the tree.
 
 When typing a link in VSCode, the intellisense dropdown will help you complete the link by following the path from the current folder.
-    
+
 If you enter `[your title](.` as soon as you type ``.`` VSC will show you a list of folder and .md files in the current folder to select from. If you type ``..`` or ``../`` or ``../..`` etc. you can navigate up and down the folder structure to find the document you need.  This embeds the relative link to the document.
 
 The technique above ensures that the link is valid.  However if you move the current page to another directory so the relative link is no longer going to find the image or page you want. This trade off is worth that risk.
