@@ -1,7 +1,7 @@
 # EX-IOExpander
 
-![EX-IOExpander Logo](../../_static/images/logos/product-logo-ex-ioexpander-only-light.png){ .only-light width=400px align=right }
-![EX-IOExpander Logo](../../_static/images/logos/product-logo-ex-ioexpander-only-dark.png){ .only-dark width=400px align=right }
+![EX-IOExpander Logo](../../_static/images/logos/product-logo-ex-ioexpander-only-light.png){ .off-glb .only-light width=400px align=right }
+![EX-IOExpander Logo](../../_static/images/logos/product-logo-ex-ioexpander-only-dark.png){ .off-glb .only-dark width=400px align=right }
 
 !!! important "Phased out"
     **EX-IOExpander** is soon to be phased out and replaced with a, *soon to be released,* more robust product from the **DCC-EX** team.

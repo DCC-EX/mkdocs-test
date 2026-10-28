@@ -1,7 +1,7 @@
 # EX-Turntable - Overview
 
-![EX-Turntable Logo](../../_static/images/logos/product-logo-ex-turntable-only-light.png){ .only-light width=400px align=right }
-![EX-Turntable Logo](../../_static/images/logos/product-logo-ex-turntable-only-dark.png){ .only-dark width=400px align=right }
+![EX-Turntable Logo](../../_static/images/logos/product-logo-ex-turntable-only-light.png){ .off-glb .only-light width=400px align=right }
+![EX-Turntable Logo](../../_static/images/logos/product-logo-ex-turntable-only-dark.png){ .off-glb .only-dark width=400px align=right }
 
 Welcome to the home of **EX-Turntable**, a Self Build (DIY), fully integrated turntable controller for **EX-CommandStation**.
 

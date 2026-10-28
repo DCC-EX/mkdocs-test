@@ -1,7 +1,7 @@
 # EX-WebThrottle - User Guide
 
-![EX-WebThrottle Logo](../../_static/images/logos/product-logo-ex-webthrottle-only-light.png){ .only-light width=400px align=right }
-![EX-WebThrottle Logo](../../_static/images/logos/product-logo-ex-webthrottle-only-dark.png){ .only-dark width=400px align=right }
+![EX-WebThrottle Logo](../../_static/images/logos/product-logo-ex-webthrottle-only-light.png){ .off-glb .only-light width=400px align=right }
+![EX-WebThrottle Logo](../../_static/images/logos/product-logo-ex-webthrottle-only-dark.png){ .off-glb .only-dark width=400px align=right }
 
 [Run EX&#8209;WebThrottle Now](https://dcc-ex.com/WebThrottle-EX/){ .md-button .md-button--primary }
 

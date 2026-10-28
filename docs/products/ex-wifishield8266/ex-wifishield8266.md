@@ -1,7 +1,7 @@
 # EX-WiFiShield 8266
 
-![EX-8266 Logo](../../_static/images/logos/product-logo-ex-wifishield8266-only-light.png){ .only-light width=400px align=right }
-![EX-8266 Logo](../../_static/images/logos/product-logo-ex-wifishield8266-only-dark.png){ .only-dark width=400px align=right }
+![EX-8266 Logo](../../_static/images/logos/product-logo-ex-wifishield8266-only-light.png){ .off-glb .only-light width=400px align=right }
+![EX-8266 Logo](../../_static/images/logos/product-logo-ex-wifishield8266-only-dark.png){ .off-glb .only-dark width=400px align=right }
 
 The v1.1 WiFi shield is a joint **DCC-EX** and Makerfabs project. It comes already flashed with **DCC-EX** **EX-CommandStation** compatible firmware.
 

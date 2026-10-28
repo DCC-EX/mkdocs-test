@@ -76,7 +76,7 @@ hide:
 
 <div class="paragraph-bg-box">
 
-<img alt="DCC-EX" src="./_static/images/logos/logo_with_border.png" width="200px" style="display:block; margin-left:auto; margin-right:auto;">
+<img alt="DCC-EX" src="./_static/images/logos/logo_with_border.png" width="200px" class="off-glb" style="display:block; margin-left:auto; margin-right:auto;">
 
 <span style="display:block; margin-left:10%; margin-right:10%; text-align:center; line-height: 240%; margin-top: 1em;">
 <span style="font-size: 250%; font-weight:900; text-align:center;">Free and open source control systems for DCC and DC model train enthusiasts</span>
@@ -132,7 +132,7 @@ hide:
 
 - ## :material-help-box-multiple-outline: What is DCC-EX
 
-    <span style="font-size: .75rem;">![DCC-EX](./_static/images/logos/logo_with_border.png){ align=right width=80px } **DCC-EX** is world-wide team of dedicated enthusiasts producing free and open source DCC and DC *software* and *hardware* solutions to run your model trains and layout.  
+    <span style="font-size: .75rem;">![DCC-EX](./_static/images/logos/logo_with_border.png){ .off-glb align=right width=80px } **DCC-EX** is world-wide team of dedicated enthusiasts producing free and open source DCC and DC *software* and *hardware* solutions to run your model trains and layout.  
     *Our mission* is to make model trains accessible and affordable to everyone.</span>
 
     <span style="font-size: .75rem;">Learn more on our [About Us](./about/about.md) page.</span>

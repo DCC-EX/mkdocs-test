@@ -172,6 +172,13 @@ For example, this logo will be 100px wide and only show in light mode (switch to
 
 ![Logo example](../../_static/images/logos/logo_with_border.png){ width=100px .only-light }
 
+Useful image attributes:
+
+- ``width=XXXpx`` or ``width=XXX`` specific size image, in pixels
+- ``width=XXX%`` relative size image
+- ``align=right``  float right
+- ``.off-glb`` disable click-to-enlarge
+
 ### Snippets
 
 To help us remove unnecessary duplication of content, we have enabled the ``pymdownx.snippets`` extension, which allows us to include content from a single file in other markdown files.
