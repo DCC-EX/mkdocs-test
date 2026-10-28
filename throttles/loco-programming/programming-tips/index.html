@@ -4176,10 +4176,33 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#general-programming-best-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        General Programming Best Practices
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#hornby-hm7000-decoders" class="md-nav__link">
     <span class="md-ellipsis">
       
         Hornby HM7000 decoders
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Hornby HM7000 decoders">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#additional-notes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Additional Notes
       
     </span>
   </a>
@@ -4194,6 +4217,11 @@
       
     </span>
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -12201,10 +12229,33 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#general-programming-best-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        General Programming Best Practices
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#hornby-hm7000-decoders" class="md-nav__link">
     <span class="md-ellipsis">
       
         Hornby HM7000 decoders
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Hornby HM7000 decoders">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#additional-notes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Additional Notes
       
     </span>
   </a>
@@ -12219,6 +12270,11 @@
       
     </span>
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -12316,11 +12372,33 @@
 <h1 id="cv-programming-tips"><abbr title="Configuration Variable (DCC Decoders)">CV</abbr> Programming Tips<a class="headerlink" href="#cv-programming-tips" title="Permanent link">&para;</a></h1>
 <p><mark>TODO</mark> LOW - Fill this page out.</p>
 <h2 id="hints-and-tips"><em>Hints and Tips</em><a class="headerlink" href="#hints-and-tips" title="Permanent link">&para;</a></h2>
+<h3 id="general-programming-best-practices">General Programming Best Practices<a class="headerlink" href="#general-programming-best-practices" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p><strong>Use a Dedicated Programming Track (<abbr title="Programming Track / Service Mode">PROG</abbr>):</strong>
+   Always test new or unknown decoders on the dedicated <code>PROG</code> track output of your EX-CommandStation rather than the main track (<code>MAIN</code>) to prevent unintended programming of other locomotives.</p>
+</li>
+<li>
+<p><strong>Verify Acknowledgement (ACK):</strong>
+   Decoder <abbr title="Configuration Variable (DCC Decoders)">CV</abbr> reading relies on current-sensing pulses (ACK). If <abbr title="Configuration Variable (DCC Decoders)">CV</abbr> reading fails or returns <code>-1</code> / errors, check physical track contact and wheel cleanliness.</p>
+</li>
+<li>
+<p><strong>Resetting to Factory Defaults:</strong>
+   Most, but not all, DCC decoders (including Hornby) can be reset to factory default settings by writing <code>8</code> to <strong>CV8</strong>. Power cycle the track after issuing a reset command.<br />
+   Refer to your decoder manual to confirm that this is to correct way to reset it.</p>
+</li>
+</ol>
 <hr />
-<h3 id="hornby-hm7000-decoders"><strong>Hornby HM7000 decoders</strong><a class="headerlink" href="#hornby-hm7000-decoders" title="Permanent link">&para;</a></h3>
+<h3 id="hornby-hm7000-decoders">Hornby HM7000 decoders<a class="headerlink" href="#hornby-hm7000-decoders" title="Permanent link">&para;</a></h3>
 <p>The HM7000's DCC implementation has a bug in that the ACK response to a DCC <abbr title="Configuration Variable (DCC Decoders)">CV</abbr> read from the decoder on the programming track is far, far too long. So much so, the <strong>DCC-EX</strong> developers added a feature to cater specifically for the HM7000.</p>
+<div class="admonition note">
+<p class="admonition-title">Dual-Mode Operation</p>
+<p>Hornby HM7000 decoders can operate in both <strong>Bluetooth (BLE)</strong> mode via the Hornby HM | DCC app and standard <strong>DCC mode</strong>. When connected active to Bluetooth, DCC programming commands from your EX-CommandStation may be ignored or rejected.</p>
+</div>
 <ul>
-<li>Make sure the loco is on the <abbr title="Programming Track / Service Mode">PROG</abbr> output which is typically channel B on the EX-CommandStation.</li>
+<li><strong>Unlink/Disconnect Bluetooth for DCC Programming:</strong><br />
+    To reliably read or write <abbr title="Configuration Variables (DCC Decoders)">CVs</abbr> over the DCC programming track (<abbr title="Programming Track / Service Mode">PROG</abbr>) or main track (<abbr title="Programming on Main / Ops Mode Programming">POM</abbr>) with EX-CommandStation, ensure the decoder is not actively connected to the Hornby HM | DCC app on your mobile device. Close the app or disconnect the locomotive in the app before attempting DCC <abbr title="Configuration Variable (DCC Decoders)">CV</abbr> programming.</li>
+<li>Make sure the loco is on the <code>PROG</code> output which is typically channel B on the <strong>EX-CommandStation</strong>.</li>
 <li>Bring up a serial console to the EX-CommandStation, or use the command entry features in EX-Toolbox, EX-WebThrottle or Engine Driver.</li>
 <li>Type and send <code>&lt;1 PROG&gt;</code> to force the <abbr title="Programming Track / Service Mode">PROG</abbr> track to power up early.</li>
 <li>Type and send <code>&lt;D ACK MAX 20000&gt;</code></li>
@@ -12328,8 +12406,29 @@
 <li>If this isn't working, then also add <code>&lt;D ACK MIN 150&gt;</code></li>
 </ul>
 <p>If this isn't working, then <code>&lt;D ACK ON&gt;</code> will enable diagnostic output from the <strong><abbr title="EX-CommandStation/Booster 1 Express">EX-CSB1</abbr></strong> to show what the <R> is doing.</p>
+<h4 id="additional-notes">Additional Notes<a class="headerlink" href="#additional-notes" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p><strong>Power Cycle After Programming:</strong></p>
+<p>After updating <abbr title="Configuration Variables (DCC Decoders)">CVs</abbr> on an HM7000 decoder via DCC, perform a full power cycle (turn track power off and back on via your throttle or <code>EX-WebThrottle</code>) to ensure the decoder reloads and applies the new <abbr title="Configuration Variable (DCC Decoders)">CV</abbr> settings properly.</p>
+</li>
+<li>
+<p><strong>ACK / Current Pulse Sensing:</strong></p>
+<p>HM7000 sound decoders can draw higher current bursts during startup or acknowledgment pulses. If you experience <code>ACK</code> read timeouts during <abbr title="Programming Track / Service Mode">PROG</abbr> track operations:</p>
+<ul>
+<li>Ensure the programming track rails and locomotive wheels are clean.</li>
+<li>Verify that track power limits on your EX-CommandStation <abbr title="Also referred to as a 'motor controller' or 'motor driver'">motor shield</abbr> are configured correctly for standard DCC acknowledgment pulses.</li>
+</ul>
+</li>
+<li>
 <p>You can also refer to the <a href="https://railsnail.uk/dcc-ex-and-hornby-tts-decoders-no-ack/?cn-reloaded=1">RailSnail -DCC-EX and Hornby TTS Decoders – (No ACK!)</a> article for more information.</p>
-<h3 id="making-the-changes-permanent">Making the changes permanent<a class="headerlink" href="#making-the-changes-permanent" title="Permanent link">&para;</a></h3>
+</li>
+</ul>
+<div class="admonition tip">
+<p class="admonition-title">Hornby Bluetooth Firmware Updates</p>
+<p>Always use the official <strong>Hornby HM | DCC app</strong> via Bluetooth to update the HM7000 decoder firmware to the latest release before configuring custom DCC <abbr title="Configuration Variable (DCC Decoders)">CV</abbr> settings.</p>
+</div>
+<h4 id="making-the-changes-permanent">Making the changes permanent<a class="headerlink" href="#making-the-changes-permanent" title="Permanent link">&para;</a></h4>
 <p>If you expect to be needing this often, you can add whatever commands you found worked for you, to your <code>myAutomation.h</code>.  e.g.</p>
 <div class="language-c++ highlight"><pre><span></span><code><span class="n">AUTOSTART</span>
 <span class="w">  </span><span class="n">PARSE</span><span class="p">(</span><span class="s">&quot;&lt;D ACK MAX 20000&gt;&quot;</span><span class="p">)</span>
@@ -12357,7 +12456,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="October 20, 2026 20:59:02 UTC">October 20, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="October 28, 2026 21:26:16 UTC">October 28, 2026</span>
   </span>
 
     
