@@ -51,4 +51,4 @@ This table shows the parallel resistance values with multiple I2C modules:
 
 - A separate power source for the VCC pin of the I2C bus avoids potential voltage spikes/sags and noise into the power circuit of the microprocessor, and should make the I2C accessory bus more resilient.
 - Additional/separate power source is required for the +5V servo power on the PCA9685 module.
-- When using separate power sources, there is potential for a ground loop. ==TODO==
+- When using separate power sources, there is potential for a ground loop. ( ==TODO== MEDIUM - What does that mean? What are the implications?)
