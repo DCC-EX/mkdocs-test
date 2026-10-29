@@ -21,6 +21,8 @@ Also, the [Big Picture](../enhance/exrail/cookbooks/big-picture/index.md) pages 
 
 For the decoder functions, you can provide a text description of the function. So rather than seeing F0..F31 you see a description of what the functions actually do.
 
+==TODO== VERY HIGH - need to add something here about the new way to add rosters and a link to the roster page in this folder.  Possibly remove the direct links to the EXRAIL in the section.
+
 This capability is part of **EXRAIL** and is built into your **EX-CommandStation**.  Read the following to explore this feature:
 
 * [EXRAIL Introduction](../enhance/exrail/exrail-objects-introduction.md)
