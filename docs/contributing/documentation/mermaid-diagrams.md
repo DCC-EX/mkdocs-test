@@ -87,3 +87,5 @@ stateDiagram-v2
     join_state --> State4
     State4 --> [*]
 ```
+
+--8<-- "snippets/abbr.md"

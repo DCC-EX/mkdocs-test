@@ -67,3 +67,5 @@ If sizing needs to be constrained, use an additional [attribute](/contributing/d
 ![EX-CommandStation Logo](/_static/images/logos/product-logo-ex-commandstation-only-dark.png){ .only-dark width=400px }
 
 All our product logos are generated with the same dimensions.
+
+--8<-- "snippets/abbr.md"

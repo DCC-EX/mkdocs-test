@@ -442,13 +442,13 @@ To discuss just one of those options, which will likely be the easiest to do if 
 
 ### USB Connection to JMRI
 
-==TODO== HIGH - USB Connection to JMRI
+==TODO== MEDIUM - USB Connection to JMRI for the EX-CSB1
 
 ## Connecting Optional Devices and Accessories
 
 ### Integrated displays
 
-==TODO== MEDIUM - Integrated displays
+==TODO== MEDIUM - Integrated displays for the EX-CSB1
 
 #### I2C Accessories
 

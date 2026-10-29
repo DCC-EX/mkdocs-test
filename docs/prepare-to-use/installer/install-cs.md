@@ -6,30 +6,30 @@ To proceed, click the Select your device button.
 
 ## Device Selection
 
-![device selection](/_static/images/ex-installer/select-device.png)
+![device selection](../../_static/images/ex-installer/select-device.png){ width=600px }
 
 A scan for devices will start automatically. Usually the installer is able to work out the details automatically.
 
-If you see No devices found it means that you either
+If you see No devices found it means that you either:
 
 - have not connected the device to the computer, connect it now then click the Scan for Devices button again
 - the device was not recognised by the computer, this may be a bad USB cable or a missing USB driver. Refer to the Diagnosing Basic Problems page for assistance.
 
-Next select the USB port (if several) and the type of device you wish to load the EX‑CommandStation software onto. EX‑Installer will attempt to work out both of these for you, but it may need assistance.
+Next select the USB port (if several) and the type of device you wish to load the **EX‑CommandStation** software onto. EX‑Installer will attempt to work out both of these for you, but it may need assistance.
 
 **NOTE:** For the EX‑CSB1 select 'DCC-EX EX-CSB1' from the drop-down list.
 
-Now press the Select Product To Install button and click on the EX‑CommandStation logo to proceed.
+Now press the Select Product To Install button and click on the **EX‑CommandStation** logo to proceed.
 
 ## Version Selection
 
-![select version](/_static/images/ex-installer/select-version.png)
+![select version](../../_static/images/ex-installer/select-version.png){ width=600px }
 
-Select which version of the EX‑CommandStation software to load onto your hardware. If you are unsure, or unless you have been otherwise directed by the support team, we recommend you select Latest Production.
+Select which version of the **EX‑CommandStation** software to load onto your hardware. If you are unsure, or unless you have been otherwise directed by the support team, we recommend you select Latest Production.
 
 ## Configuration
 
-![config](/_static/images/ex-installer/config.png)
+![config](../../_static/images/ex-installer/config.png){ width=600px }
 
 When loading for the first time, you should use Configure Options. Alternatively you may [reuse your previous files](#stored-configuration-files).
 
@@ -41,7 +41,7 @@ You must select the motor shield that you have installed. The installer can't de
 
 - For the EX‑CSB1 alone select 'EX-CSB1' or 'EXCSB1_WITH_EX8874' if you have added the optional [EX-MotorShield8874](../../products/ex-motorshield8874/ex-motorshield8874.md).
 
-![motor_driver](/_static/images/ex-installer/motor-driver.png)
+![motor_driver](../../_static/images/ex-installer/motor-driver.png){ width=600px }
 
 ## Other options
 
@@ -49,20 +49,20 @@ You should select "Disable EEPROM support" for most cases.
 
 ### Optional LCD or OLED display
 
-The EX‑CSB1 will generally be supplied with an OLED 128 X 64
+The **EX‑CSB1** will generally be supplied with an OLED 128 X 64
 
 If you have installed and optional OLED or LED display, enable [I have a display] option, which will present you with a drop-down list to select the type of display you have.
 
-![display-option](/_static/images/ex-installer/display-option.png)
+![display-option](../../_static/images/ex-installer/display-option.png){ width=600px }
 
 ### Optional Wi-fi
 
 If you are using an **EX-CSB1** or other board with integrated Wi-Fi, or have installed and optional Wi-Fi board you need to enable the `I have Wi-Fi`.
-This enables the "Wi-fi Options" button where you can configure the Wi-Fi.
+This enables the 'Wi-fi Options' button where you can configure the Wi-Fi.
 
 ### Wi-Fi Access Point mode
 
-![wifi AP](/_static/images/ex-installer/wifi-ap.png)
+![wifi AP](../../_static/images/ex-installer/wifi-ap.png){ width=600px }
 
 In Access Point mode, your **EX-CommandStation** runs a completely isolated Wi-Fi Network. This is most useful if your layout is away from the house, or you transport your layout frequently, or do not want to give guests access to your home Wi-Fi. Wi-Fi phones or tablets will need to connect their Wi-Fi to the Access Point and will lose access to your home Wi-Fi.
 Wi-Fi Password is optional.
@@ -74,7 +74,7 @@ Wi-Fi Channel can be any value from 1-11.
 
 #### Wi-Fi Station mode
 
-![wifi station](/_static/images/ex-installer/wifi-station.png)
+![wifi station](../../_static/images/ex-installer/wifi-station.png){ width=600px }
 
 In Station mode, the CommandStation connects to your existing home Wi-Fi Network or other router.
 Phone and Tablet throttles on your home network can find the CommandStation easily.
@@ -87,46 +87,46 @@ Additionally, if you choose, you may customise the Wi-Fi hostname, or leave it a
 
 ### Optional Ethernet
 
-If you have installed and Ethernet board, select this option.
+If you have installed and [Ethernet board](../../diy/ethernet.md), select this option.
 
 Note that it is not possible to have both Wi-Fi and Ethernet enabled at the same time.
 
 ### Start With Power On
 
-![power-on](/_static/images/ex-installer/power-on.png)
+![power-on](../../_static/images/ex-installer/power-on.png){ width=600px }
 
-The EX‑CSB1 will generally be supplied with this enabled.
+The **EX‑CSB1** will generally be supplied with this enabled.
 
 If you don't enable this, you will need to turn the track power with your controller, or with TrackManger automations.
 
 ### Override Current Limit (Advanced)
 
-Do not select without Engineer level knowledge.
+Do not select without Engineer level knowledge.  (==TODO== MEDIUM link to page explaining 'Override Current Limit')
 
 ### Set Track Modes (Advanced)
 
-![track manager](/_static/images/ex-installer/track-manager.png)
+![track manager](../../_static/images/ex-installer/track-manager.png){ width=600px }
 
-The default has Track A and DCC MAIN  and Track B as a PROG track.
+The default has Track A and DCC MAIN and Track B as a PROG track.
 This is an advanced option and should only be used do not need to alter this unless you are running multiple motor shields or wish to operate only in DC.
 
 ### Advanced Configuration (Optional)
 
 Skip this page when you first start. You will need it later once you start adding accessories or automations.
 
-Note there is an additional option Create myAutomation.h that allows a blank myAutomation.h file to be created, which you can edit on the following Advanced Config screen. Leaving this option disabled means a myAutomation.h file will not be generated if it is not required, which saves memory on your EX‑CommandStation device.
+Note there is an additional option Create myAutomation.h that allows a blank ``myAutomation.h`` file to be created, which you can edit on the following Advanced Config screen. Leaving this option disabled means a myAutomation.h file will not be generated if it is not required, which saves memory on your EX‑CommandStation device.
 
 ## Compile and Load
 
-![load](/_static/images/ex-installer/load.png)
+![load](../../_static/images/ex-installer/load.png){ width=600px }
 
 This proceeds to compile your configuration in with the base code and load it into the **EX-CommandStation** Arduino processor.
 
-There may be errors compiling (usually due to a mistake in the advanced configuration or myAutomation.h) and this will prevent the load stage from taking place.
+There may be errors compiling (usually due to a mistake in the advanced configuration or ``myAutomation.h``) and this will prevent the load stage from taking place.
 
-![loaded](/_static/images/ex-installer/loaded.png)
+![loaded](../../_static/images/ex-installer/loaded.png){ width=600px }
 
-Errors during the load stage are almost invariably caused by problems communicating with the Arduino, possibly by incorrect selection of the type or by having another program, such as JMRI or EX-Webthrottle still using the USB connection.
+Errors during the load stage are almost invariably caused by problems communicating with the Arduino, possibly by incorrect selection of the type or by having another program, such as JMRI or **EX-WebThrottle** still using the USB connection.
 
 ## Backup
 
@@ -135,11 +135,11 @@ You will be prompted to select a folder, and if the chosen folder already contai
 
 ## Device Monitor
 
-Once you have selected a device in EX‑Installer on the "Select your device" screen, or after successfully loading software onto your device, a View device monitor button will be available.
+Once you have selected a device in **EX‑Installer** on the "Select your device" screen, or after successfully loading software onto your device, a View device monitor button will be available.
 
 When clicking this button, the **EX-Installer** Device Monitor window will open, allowing you to interact with your device by sending commands and viewing the serial console output.
 
-![device monitor](/_static/images/ex-installer/device-monitor.png)
+![device monitor](../../_static/images/ex-installer/device-monitor.png){ width=600px }
 For further details on using **EX-Installer** Device Monitor, continue on to the next page with the 'Next' button, or go straight to Using the **EX-Installer** Device Monitor.
 
 Next Steps - Test your setup
@@ -148,16 +148,16 @@ Next Steps - Test your setup
 
     The programming track is for programming only. Make sure you are on the main track if you expect your loco to move or respond to light or sound commands.
 
-See the Testing your installation page or click the 'Next' button to learn how to test and use your EX‑CommandStation.
+See the Testing your installation page or click the 'Next' button to learn how to test and use your **EX‑CommandStation**.
 
 ## Stored Configuration Files
 
-Click the Browse button and navigate through your computer's folders and files to select any file in the folder containing your existing configuration.
+Click the ``Browse`` button and navigate through your computer's folders and files to select any file in the folder containing your existing configuration.
 
 On this screen you can edit the configuration files. If you have more than two files to edit, they will be separated into tabs as shown in the second figure above.
 
-**NOTE:** If you did not enable any options requiring myAutomation.h, and did not enable Create myAutomation.h, you will only be able to edit config.h on this screen.
+**NOTE:** If you did not enable any options requiring myAutomation.h, and did not enable Create ``myAutomation.h``, you will only be able to edit ``config.h`` on this screen.
 
-![stored_files](../../_static/images/ex-installer/stored-files.png)
+![stored_files](../../_static/images/ex-installer/stored-files.png){ width=600px }
 
 --8<-- "snippets/abbr.md"

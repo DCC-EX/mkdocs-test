@@ -1,5 +1,11 @@
 # List of valid authors for DCC-EX News articles
 authors:
+
+  dcc-ex:
+    name: DCC-EX 
+    description: DCC_EX Team
+    avatar: https://dcc-ex.com/mkdocs-test/_static/images/logos/logo_with_border.png
+
   peteGSX:
     name: peteGSX
     description: Motorcycle nut

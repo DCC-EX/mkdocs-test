@@ -20,33 +20,33 @@ The suppliers listed on this page work with the **DCC-EX** team to ensure these 
 
 ----
 
-## ![USA Flag](../_static/images/icons/flag_us_small.png) In the United States serving USA, Canada, & Mexico
+## ![USA Flag](../_static/images/icons/flag_us_small.png){ .off-glb } In the United States serving USA, Canada, & Mexico
 
 - [DCC-EX Store](https://store.dcc-ex.com/)
 - [Smart Hobby, LLC](https://www.smarthobbyllc.com/)
 
 ---
 
-## ![Canada Flag](../_static/images/icons/flag_canada_small.png) In Canada serving Canada and the United States
+## ![Canada Flag](../_static/images/icons/flag_canada_small.png){ .off-glb } In Canada serving Canada and the United States
 
 - [DCDCC Supply Canada](https://dccsc.ca/)
 
 ---
 
-## ![UK Flag](../_static/images/icons/flag_uk_small.png) In England serving the UK
+## ![UK Flag](../_static/images/icons/flag_uk_small.png){ .off-glb } In England serving the UK
 
 - [Chesterfield Model Making and Miniature Electronics](https://chesterfield-models.co.uk/product-category/dcc-ex/) (Chesterfield also sells cases for DIY builds)
 - [ACI Model Railways](https://acimodelrailways.co.uk/)
 
 ---
 
-## ![Austrian Flag](../_static/images/icons/flag_austria_small.png) In Austria serving the European Union (EU)
+## ![Austrian Flag](../_static/images/icons/flag_austria_small.png){ .off-glb } In Austria serving the European Union (EU)
 
 - [Model Railway Electronics powered by Semify](https://www.mrw-electronics.com/)
 
 ---
 
-## ![Australian Flag](../_static/images/icons/flag_australia_small.png) In Australia serving AU, NZ, and APAC
+## ![Australian Flag](../_static/images/icons/flag_australia_small.png){ .off-glb } In Australia serving AU, NZ, and APAC
 
 - [Millennium Engineering Pty Ltd](https://www.milleng.com.au/)
 - [Buckambool Model Trains](https://bmodeltrains.com/product-category/dcc-ex-command-stations/)

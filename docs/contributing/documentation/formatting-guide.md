@@ -20,6 +20,14 @@ Links to sections on the same page should just use the permalink section heading
 [Link to this section](#page-and-section-links)
 ```
 
+!!! note "Section Links"
+
+    When typing a link in VSCode, the intellisense dropdown will help you complete the link by following the path from the current folder.
+    
+    If you enter `[your title](#` as soon as you type ``#`` VSC will show you a list headings in the current document which you can select from.  This embeds the relative (#) link to the heading.
+
+    Note there is a bug in this process if the heading contains ` - ` (space dash space) VSC will show and allow you to select it as `---` (dash dash dash) but the real link will be a single `-` (dash). The problems does not appear till you build the site.
+
 Results in: [Link to this section](#page-and-section-links)
 
 ### Document Links
@@ -60,13 +68,13 @@ Results in [Link to Search heading on the same page](#search-links)
 
 Results in: [Link to heading on a different page](github.md#5-live-previews)
 
-!!! note "Relative Links"
+!!! note "In Page Links"
 
     When typing a link in VSCode, the intellisense dropdown will help you complete the link by following the path from the current folder.
 
     you enter `[your title](#` as soon as you type ``#`` VSC will show you a list of headings in the current document to choose from. 
     
-    You can use the technique above to locate a differnt document, then press`#` to show a list of headings in that document to choose from. 
+    You can use the technique above to locate a different document, then press`#` to show a list of headings in that document to choose from. 
 
     The technique above ensures that the link is valid.
 
@@ -134,6 +142,8 @@ Following are how to define the lower level headings with a demo of each.
 ##### Heading Level 5
 ```
 
+etcetera
+
 ## Glossary Terms and Linking
 
 Glossary plugins seem to be either very complicated to implement, or don't yield the results we're looking for. Instead, we have opted for a simple DIY glossary to define the terms, and provide a search link to enable users to find where they have been used in the documentation.
@@ -145,6 +155,30 @@ To add a term to the glossary, use the search URL syntax and a second level head
 
 This is a new term being added to the glossary.
 ```
+
+## Abbreviations
+
+By including the following on every page, common terms will be appear with a dashed underline, and will show an explanation as hover text.  e.g. Motor Shield
+
+\-\-8<\-\- "snippets/abbr.md"
+
+For consistency, include it at the end of the page.
+
+Additional abbreviations can be included on an individual page with the syntax:
+
+```markdown
+*[CLI]: Command Line Interface
+```
+
+## Macros
+
+Macros can be added by editing main.py and adding a python methods. At time of writing only 'new_in_v6' exists.
+
+To use it on a page:
+
+\{\{ new_in_v6() \}\}
+
+note: Macros do not work in snippets.
 
 ## Code blocks
 
@@ -292,3 +326,5 @@ int main() {
     return 0;
 }
 ```
+
+--8<-- "snippets/abbr.md"
