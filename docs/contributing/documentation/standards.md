@@ -148,3 +148,5 @@ If you need to create a page, but don't want in in any navigation (i.e. you only
 ### Managing Previous and Next Buttons
 
 Our custom [Scoped Nav](/contributing/documentation/mkdocs-features.md#dcc-ex-custom-scoped-nav-plugin-and-custom-footerhtml) plugin automatically adjusts previous/next links to ensure that the previous and next buttons don't prompt a user to navigate automatically into irrelevant content.
+
+--8<-- "snippets/abbr.md"

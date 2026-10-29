@@ -4,13 +4,15 @@ There are many way that you can contribute to the **DCC-EX** project.
 
 Apart from financial donations, the **DCC-EX** Team has several projects and sub teams where you can help donate your expertise. See the sections below for the project or projects you are interested in.
 
+---
+
 ## Financial Donations
 
 Your donations help to offset the cost of running some of the resources used to operate **DCC-EX** and bring you new software and hardware.  See the [Donations page](donations.md) for details on how you can donate and help keep the project running.
 
 ## Help with the Documentation
 
-This [documentation](./documentation/index.md) is written in a simple markdown syntax called *ProperDocs* so a knowledge of HTML, CSS or Javascript is not necessary for you help improve our documentation.
+This [documentation](./documentation/index.md) is written in a simple markdown syntax called *ProperDocs* (a derivitive of MKDocs) so a knowledge of HTML, CSS or Javascript is not necessary for you to help improve our documentation.
 
 ## Alpha and Beta Testing
 
@@ -28,7 +30,7 @@ We do our support mostly via [Discord](https://discord.gg/6KKVjRXKv3), although 
 
 If you are good at herding cats in multiple countries and time zones then we could always do with some help.
 
-----
+---
 
 ## Code of Conduct
 
