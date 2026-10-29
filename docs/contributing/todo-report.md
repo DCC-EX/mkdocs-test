@@ -20,10 +20,11 @@ Scanned roots: `C:\Users\akers\OneDrive\github\github_doco\mkdocs-test\docs`, `C
 
 ## High TODOs
 
-Total High TODO matches: 14
+Total High TODO matches: 15
 
 | File | Line | Line text |
 | --- | ---: | --- |
+| [docs/enhance/index.md](../enhance/index.md) | 24 | ==TODO== VERY HIGH - need to add something here about the new way to add rosters and a link to the roster page in this folder.  Possibly remove the direct links to the EXRAIL in the section. |
 | [docs/enhance/rosters.md](../enhance/rosters.md) | 30 | ==TODO== VERY HIGH! - needs detailed instructions for Roster Editing with a Web Browser. Needs to include screenshots! |
 | [docs/throttles/dcc-accessories.md](../throttles/dcc-accessories.md) | 3 | ==TODO== HIGH - how to control DCC Accessories. GUI options.  NOT serial commands! |
 | [docs/throttles/index.md](../throttles/index.md) | 45 | ==TODO== HIGH - Overview of DCC Accessory Operation |
