@@ -748,3 +748,15 @@ a.external-link-icon::after {
 .gslide-image img {
     background: #00353d !important;
 }
+
+.glightbox-clean .gdesc-inner {
+    padding-top: 6px !important;
+    padding-right: 20px !important;
+    padding-bottom: 6px !important;
+    padding-left: 20px !important;
+}
+
+.glightbox-clean .gslide-title {
+    font-weight: 700 !important;
+    margin-bottom: 6px !important;
+}
