@@ -20,7 +20,7 @@ This list appears in the order in in alphabetic order.
 
 Note: This list is easily, automatically, generated but the various links spread about the documentation take a lot of effort and will be built over time.
 
---8<-- "snippets/serial-commands/conventions.md"
+{% include "snippets/serial-commands/conventions.md" %}
 
 ---
 
