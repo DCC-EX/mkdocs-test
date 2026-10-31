@@ -49,7 +49,6 @@ NOTE:   The GPIO supplies the PWM signal only; power the servo from a suitable
 external supply, and connect the supply ground to ESP32 ground. Do not power
 the servo from an ESP32 GPIO.
 
-
 ## Use ServoESP from EXRAIL
 
 Define the `ServoESP` HAL in `myAutomation.h`, then use its VPINs with the
@@ -124,9 +123,6 @@ duration is converted to units of 100 ms (integer division), so a requested
 750 ms is sent as 700 ms. These direct commands do not change a servo's
 configured active/inactive positions.
 
-
 ## NOTE
 The GPIO supplies the PWM signal only; power the servo from a suitable external supply, 
 and connect the supply ground to ESP32 ground. DO NOT power the servo from an ESP32 GPIO.
-
-

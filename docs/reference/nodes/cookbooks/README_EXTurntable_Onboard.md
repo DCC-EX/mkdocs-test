@@ -15,7 +15,6 @@ RT_EX-Turntable board uses:
 Arduino Nano ESP32-S3 step/dir/enable pins A0/A1/A2, home sensor D5, limit sensor D8, relay D4, LED D6 and accessory D7.
 Additional inputs/outputs D9, D10, D11 and D12.
 
-
 # myPlatformio.ini file
 
 Add an environment to your myPlatformio.ini file.  If using other that arduino nano esp32 then modify 
@@ -61,17 +60,13 @@ monitor_dtr = 0
 monitor_rts = 0
 ```
 
-
-
 The onboard driver uses a TMC2209 stepper motor driver.  This is the recommended driver module and is
 included on an RT_EX-Turntable board.
 
  `waspinator/AccelStepper` is included as a PlatformIO dependency.
 
-
 Other boards use the non-ESP32 assignments from EX-Turntable.
 Although this is not really applicable for a DCC-EX node.
-
 
 Pins can be overridden in
 `config.h` with
@@ -102,8 +97,6 @@ The pins can be overridden by
 
 They need to be ESP32 gpio pins and there is no check to their validity.  The default pins assigned to these are safe to use.
 
-
-
 ## myAutomation file
 
 Add
@@ -122,8 +115,6 @@ Additional activity commands are
 15  -   Extra 3 off
 16  -   Extra 4 on
 17  -   Extra 4 off
-
-
 
 # First start up
 
@@ -147,7 +138,6 @@ Once calibration is completed the node will restart after 20 seconds to reload a
 # Subsequent start up
 
 The controller will move the turntable/traverser to the home position.
-
 
 ## NVS configuration
 
