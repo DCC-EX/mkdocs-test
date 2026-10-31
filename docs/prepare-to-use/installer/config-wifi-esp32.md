@@ -17,4 +17,4 @@ tags:
 
 {{new_in_v(6.0)}}
 
---8<-- "snippets/configure/config-wifi-esp32-gui-options.md"
+{% include "snippets/configure/config-wifi-esp32-gui-options.md" %}
