@@ -64,11 +64,9 @@ This is a security feature.  If you could change AP mode settings over WiFi, the
 
 ## Changing the WiFi Settings
 
-### Using the EX-CommandStation's own Web Sever
+### Using the EX-CommandStation's own Web Sever {{ new_in_v(6.0) }}
 
 ==TODO== VERY HIGH! - Changing the WiFi Settings using the EX-CommandStation's own Web Sever
-
-{{ new_in_v(6.0) }}
 
 If you have an OLED screen, it will tell you the IP address of the **EX-CommandStation**
 
