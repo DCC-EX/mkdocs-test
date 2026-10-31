@@ -981,6 +981,58 @@
          <lastmod>2026-10-31</lastmod>
     </url>
     <url>
+         <loc>https://dcc-ex.com/mkdocs-test/reference/nodes/</loc>
+         <lastmod>2026-10-31</lastmod>
+    </url>
+    <url>
+         <loc>https://dcc-ex.com/mkdocs-test/reference/nodes/compiling/</loc>
+         <lastmod>2026-10-31</lastmod>
+    </url>
+    <url>
+         <loc>https://dcc-ex.com/mkdocs-test/reference/nodes/cookbooks/</loc>
+         <lastmod>2026-10-31</lastmod>
+    </url>
+    <url>
+         <loc>https://dcc-ex.com/mkdocs-test/reference/nodes/cookbooks/README_EXTurntable_Onboard/</loc>
+         <lastmod>2026-10-31</lastmod>
+    </url>
+    <url>
+         <loc>https://dcc-ex.com/mkdocs-test/reference/nodes/cookbooks/README_IO_ServoESP/</loc>
+         <lastmod>2026-10-31</lastmod>
+    </url>
+    <url>
+         <loc>https://dcc-ex.com/mkdocs-test/reference/nodes/cookbooks/nodes_cookbook_mimic/</loc>
+         <lastmod>2026-10-31</lastmod>
+    </url>
+    <url>
+         <loc>https://dcc-ex.com/mkdocs-test/reference/nodes/cookbooks/nodes_cookbook_nvs/</loc>
+         <lastmod>2026-10-31</lastmod>
+    </url>
+    <url>
+         <loc>https://dcc-ex.com/mkdocs-test/reference/nodes/cookbooks/nodes_cookbook_sensors/</loc>
+         <lastmod>2026-10-31</lastmod>
+    </url>
+    <url>
+         <loc>https://dcc-ex.com/mkdocs-test/reference/nodes/cookbooks/nodes_cookbook_signals/</loc>
+         <lastmod>2026-10-31</lastmod>
+    </url>
+    <url>
+         <loc>https://dcc-ex.com/mkdocs-test/reference/nodes/cookbooks/nodes_cookbook_turnouts/</loc>
+         <lastmod>2026-10-31</lastmod>
+    </url>
+    <url>
+         <loc>https://dcc-ex.com/mkdocs-test/reference/nodes/cookbooks/nodes_cookbook_turntables/</loc>
+         <lastmod>2026-10-31</lastmod>
+    </url>
+    <url>
+         <loc>https://dcc-ex.com/mkdocs-test/reference/nodes/cookbooks/nodes_cookbook_waveshare/</loc>
+         <lastmod>2026-10-31</lastmod>
+    </url>
+    <url>
+         <loc>https://dcc-ex.com/mkdocs-test/reference/nodes/cookbooks/nodes_displays/</loc>
+         <lastmod>2026-10-31</lastmod>
+    </url>
+    <url>
          <loc>https://dcc-ex.com/mkdocs-test/reference/serial-commands/</loc>
          <lastmod>2026-10-31</lastmod>
     </url>
