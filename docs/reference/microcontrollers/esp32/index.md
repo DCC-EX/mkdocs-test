@@ -15,4 +15,4 @@ Also refer to [Complex Build - ESP32](../../../diy/esp32.md) for a general overv
 - [Keyestudio IOT ESP32 PLUS Development Board + EX8874](esp32-keyestudio.md)  This requires fewer hardware modifications than the WeMos D1 R32
 - [ESP32 + L298 Shields (Genuine Arduino R3)](esp32-l298-shield.md)
 
---8<-- "snippets/abbr.md"
+

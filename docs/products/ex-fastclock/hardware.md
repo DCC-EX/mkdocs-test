@@ -21,4 +21,4 @@ If using Serial communication no modification is required. Pins 0 & 1 (TX/RX) ar
 
 Now that you know what you need, click the "next" button see how you use  EX-FastClock.
 
---8<-- "snippets/abbr.md"
+

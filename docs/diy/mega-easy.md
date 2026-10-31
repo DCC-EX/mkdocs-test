@@ -78,5 +78,3 @@ The **EX-MotorShield8874** track connectors unplug for easy access.
 Congratulations, you have built a DIY **EX-CommandStation** the easy way. But you now must load the software to be able to use it.
 
 For simplicity, software loading is best done with the [EX-Installer](installer.md)
-
---8<-- "snippets/abbr.md"

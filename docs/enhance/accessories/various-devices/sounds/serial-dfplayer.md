@@ -19,5 +19,3 @@ Note that the ESP32/CSB1 does not by default have a configured Serial2 so it is 
 ```cpp
 HAL(DFPLayer,3500,Serial2,16,17)  // For an ESP32
 ```
-
---8<-- "snippets/abbr.md"

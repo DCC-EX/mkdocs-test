@@ -122,5 +122,3 @@ HAL(MCP23017, 196, 16, {I2CMux_0, SubBus_03, 0x20})
 !!! Note "Multiplexers"
 
     Note that any currently supported I2C device can be connected to any port of any multiplexer, provided they are declared in 'myAutomation.h' with the HAL() macro, with the correct addressing for multiplexer and sub-bus. It is probably easiest to connect all the I2C devices to your multiplexers and let EX‑CommandStation probe for the them and any devices off each sub-bus, so you can use the console output to guide you in creating the HAL() macro declarations for 'myAutomation.h'.
-
---8<-- "snippets/abbr.md"

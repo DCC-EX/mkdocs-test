@@ -31,4 +31,4 @@ If one is testing out a sequence using a timed command it can be done quickly wi
 
 Details are again on the [Clock Control Cookbook](/enhance/exrail/cookbooks/timecontrol.md).
 
---8<-- "snippets/abbr.md"
+

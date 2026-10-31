@@ -61,4 +61,4 @@ You MUST use a suitable, double insulated, power supply where it is not possible
 
 Should this happen, it could melt your electronics, locos or children.
 
---8<-- "snippets/abbr.md"
+

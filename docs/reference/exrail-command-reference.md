@@ -8,9 +8,8 @@ The following list is dynamically built from the **EXRAIL** code. It contains al
 
 --8<-- "snippets/exrail/exrail-intro.md"
 
---8<-- "snippets/EXRAIL2MacroBase.md"
+{% include "snippets/EXRAIL2MacroBase.md" %}
 
---8<-- "snippets/abbr.md"
 
 <!-- ---
 search:

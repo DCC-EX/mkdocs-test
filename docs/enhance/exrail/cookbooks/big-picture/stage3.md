@@ -180,4 +180,4 @@ You don't actually require anything to be configured when using blocks in a sequ
 
 Simply attempt to reserve a block with ``RESERVE(id)``, and when the train has exited the block, free it again with ``FREE(id)``.
 
---8<-- "snippets/abbr.md"
+

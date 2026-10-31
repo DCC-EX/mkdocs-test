@@ -522,4 +522,4 @@ You can and an **EX‑MotorShield8874** to provide an additional 2 outputs. You 
 - [EX-CSB1 Quick Setup Guide](ex-csb1-extended-guide.md)
 - [Purchasing](../../purchasing/official-sellers.md)
 
---8<-- "snippets/abbr.md"
+

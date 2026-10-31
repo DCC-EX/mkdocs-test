@@ -92,7 +92,7 @@ To monitor one or more Arduino pins for sensor triggers, first define/edit/delet
 
 * ==TODO== LOW - Example Responses
 
---8<-- "snippets/abbr.md"
+
 
 <style>
   .md-typeset h1 {

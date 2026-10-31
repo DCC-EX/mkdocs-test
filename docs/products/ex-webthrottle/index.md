@@ -11,4 +11,4 @@ Unlike [other throttle (controller) apps](../../throttles/throttles.md), **EX-We
 
 Read the [following pages](ex-webthrottle.md) on how to connect and use **EX-WebThrottle** to control your trains and accessories, plus read and write CVs to your DCC decoders.
 
---8<-- "snippets/abbr.md"
+

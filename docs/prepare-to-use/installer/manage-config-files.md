@@ -99,4 +99,4 @@ Any app that can edit plain text files can be used.
 
 If you had previously used the Arduino IDE or VSC to create custom config files, you can use these files, either from where you originally created them, or you can copy them to a separate folder. <span style="color:red;">As long as that folder IS NOT inside any of the folders created by the installer.</span>
 
---8<-- "snippets/abbr.md"
+

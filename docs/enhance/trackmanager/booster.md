@@ -64,4 +64,4 @@ If you are using an **EX-CSB1** as your Command Station, it is recommended that 
     - ``BOOST_INV`` - Booster mode inverted
     - ``BOOST_AUTO`` - Booster mode + Auto-reverser mode
 
---8<-- "snippets/abbr.md"
+

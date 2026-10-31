@@ -244,4 +244,4 @@ The **Settings page** allows you to manage aspects of the **EX-CommandStation** 
 
 * Install as an App
 
---8<-- "snippets/abbr.md"
+

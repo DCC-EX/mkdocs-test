@@ -10,4 +10,4 @@ These diagrams provide options on how logic gates could be used to provide input
 
  &nbsp; &nbsp; &nbsp; &nbsp; ![Logic gate circuits](/_static/images/trackmanager/logic-gate-circuitx3.png){: style="width: 70%"}
 
---8<-- "snippets/abbr.md"
+

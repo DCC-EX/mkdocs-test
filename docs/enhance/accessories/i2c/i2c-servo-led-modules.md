@@ -267,5 +267,3 @@ The example below simulates a camp fire by continuously varying the LED brightne
       FADE(101, 1500,10)   DELAYRANDOM( 50,250)
       FOLLOW(3)
 ```
-
---8<-- "snippets/abbr.md"

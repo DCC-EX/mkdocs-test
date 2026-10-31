@@ -6,9 +6,9 @@ The **DCC-EX** team has designed and released a number of open source, hardware 
 
 This page briefly outlines these with links to more information and are categorised by the level of experience needed to use them:
 
-- [Easy to use / Conductor Level](#easy-to-use-products-conductor-level)
-- [A bit more technical / Tinkerer Level](#a-bit-more-technical-products-tinkerer-level)
-- [Advanced technical / Engineer Level](#advanced-technical-products-engineer-level)
+- [Easy to use / Conductor Level](#easy-to-use-products)
+- [A bit more technical / Tinkerer Level](#a-bit-more-technical-products)
+- [Advanced technical / Engineer Level](#advanced-technical-products)
 
 ----
 
@@ -222,4 +222,4 @@ Refer to the [EX-IOExpander documentation](/products/ex-ioexpander/ex-ioexpander
 
 Refer to the [EX-SensorCAM documentation](/products/ex-sensorcam/index.md) for more information.
 
---8<-- "snippets/abbr.md"
+

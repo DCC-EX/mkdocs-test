@@ -62,7 +62,7 @@ See commands above.
 <* MCP23017 I2C:x21 Configured on Vpins:180-195 * >
 ```
 
---8<-- "snippets/abbr.md"
+
 
 <style>
   .md-typeset h1 {

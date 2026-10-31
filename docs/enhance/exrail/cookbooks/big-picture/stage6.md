@@ -627,4 +627,4 @@ The main things at this point that we'd like to call to your attention are:
 * [Full automation with pin based turnouts/points and signals on MCP23017 I/O expander Vpins](stage6-examples/example6_not_in_nav.md)
 * [Full automation with servo based turnouts/points and signals with a PCA9685 servo module](stage6-examples/example7_not_in_nav.md)
 
---8<-- "snippets/abbr.md"
+

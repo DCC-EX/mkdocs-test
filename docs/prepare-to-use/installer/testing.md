@@ -64,4 +64,4 @@ There are several other serial monitors available that can be used for testing:
 
 See [Serial Monitors](../../reference/tools/serial-monitor.md) for more information.
 
---8<-- "snippets/abbr.md"
+

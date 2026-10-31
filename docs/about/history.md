@@ -59,5 +59,3 @@ Click here for [The DCC-EX Team Credits](about.md#the-dcc-ex-team).
 
 Fred Decker
 October 2020
-
---8<-- "snippets/abbr.md"

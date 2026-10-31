@@ -172,4 +172,4 @@ Do not attempt to connect two insulated tracks together and drive a DCC engine b
 
 Some suggested precautions are to add 4 fuses on wires (-b +b, -a +a) to the **EX-CommandStation** connections. Use 2A fuses for the **EX-CSB1** or 5A fuses for the larger motor drivers.
 
---8<-- "snippets/abbr.md"
+

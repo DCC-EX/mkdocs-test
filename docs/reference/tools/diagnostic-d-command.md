@@ -37,4 +37,4 @@ to 250mA according to NMRA standards. Some loco decoders require more than this,
 temporarily removes this limit to allow the decoder more power. The normal limit will be re-imposed when the programming track
 is switched off with ``<0>`` or ``<0 PROG>``.
 
---8<-- "snippets/abbr.md"
+

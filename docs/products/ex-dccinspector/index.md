@@ -12,4 +12,4 @@ EX‑DCCInspector is a packet sniffing tool that can connect directly to the sig
 
 [EX-DCCInspector Github Repository](https://github.com/DCC-EX/DCCInspector-EX)
 
---8<-- "snippets/abbr.md"
+

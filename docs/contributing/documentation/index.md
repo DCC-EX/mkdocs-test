@@ -118,5 +118,3 @@ properdocs gh-deploy
 !!! note "Not normally needed"
 
     Generally you will not need to 'deploy' locally.
-
---8<-- "snippets/abbr.md"

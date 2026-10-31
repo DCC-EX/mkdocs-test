@@ -96,4 +96,3 @@ Note that if the new WiFi configuration commands are sent via a WiFi connection,
 Join the discussion on the discord server.  
 [https://dcc-ex.com/mkdocs-test/support/discord/](../../../support/discord.md)
 
---8<-- "snippets/abbr.md"

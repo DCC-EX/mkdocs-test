@@ -140,4 +140,4 @@ Every smart phone OS such as Android or iOS has a program or two that will work 
 * [Serial Monitor by CSA](https://play.google.com/store/apps/details?id=com.csa.serialmonitor)
 * [USB Serial Console by Felipe Herranz](https://play.google.com/store/apps/details?id=jp.sugnakys.usbserialconsole>)
 
---8<-- "snippets/abbr.md"
+

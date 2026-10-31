@@ -53,7 +53,7 @@ One of:
 
 N/A
 
---8<-- "snippets/abbr.md"
+
 
 <style>
   .md-typeset h1 {

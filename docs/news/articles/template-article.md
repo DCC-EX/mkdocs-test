@@ -59,4 +59,4 @@ Valid categories are defined in "properdocs.yml", and this is the current list:
 
 Set/remove the appropriate category in the directives at the start of this page, or multiple.
 
---8<-- "snippets/abbr.md"
+

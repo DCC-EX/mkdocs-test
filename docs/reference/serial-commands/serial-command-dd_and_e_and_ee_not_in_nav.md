@@ -53,7 +53,7 @@ Serial commands to Manage the EEPROM. (Arduino Mega Only. Not available on the *
 
 * ==TODO== LOW - Example Responses
 
---8<-- "snippets/abbr.md"
+
 
 <style>
   .md-typeset h1 {

@@ -34,4 +34,4 @@ Follow the simple assembly instructions, Mega and Nucleo installs are essentiall
 
 - [WiFiShield8266 install](../../diy/mega-easy.md#3-optionally-install-wifishield-optional)
 
---8<-- "snippets/abbr.md"
+

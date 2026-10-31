@@ -68,6 +68,8 @@ This is a security feature.  If you could change AP mode settings over WiFi, the
 
 ==TODO== VERY HIGH! - Changing the WiFi Settings using the EX-CommandStation's own Web Sever
 
+{{ new_in_v(6.0) }}
+
 If you have an OLED screen, it will tell you the IP address of the **EX-CommandStation**
 
 Enter the IP address of the **EX-CommandStation** into the address bar of you browser. e.g. ``192.168.1.4`` if you are using the default [Access Point](/prepare-to-use/installer/config-wifi-esp32.md#the-wifi-different-modes) mode. Or use the Web Page in Engine Driver, after you have connected to the **EX-CommandStation**.
@@ -75,7 +77,7 @@ Enter the IP address of the **EX-CommandStation** into the address bar of you br
 To find the IP address:
 
 * If you have an OLED screen, it will tell you the IP address of the **EX-CommandStation**
-* The Engine Driver app (and most other throttle apps) will tell you the IP address of the **EX-CommandStation** on the connection screeen
+* The Engine Driver app (and most other throttle apps) will tell you the IP address of the **EX-CommandStation** on the connection screen
 
 ![Engine driver](/_static/images/web-server/engine-driver-web1.png){ width=200px }
 
@@ -225,4 +227,4 @@ e.g. Sets the hostname to "DCCEX-MYCSB1":
 
 WiFi will revert to the internally generated ssid and password.
 
---8<-- "snippets/abbr.md"
+

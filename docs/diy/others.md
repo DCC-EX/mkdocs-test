@@ -41,5 +41,3 @@ The following devices are NOT supported:
 - [Motor shields](../reference/hardware/motorboards/index.md) other than those recommended.
 
 Many of these require modification or simply do not provide the features we need. Even the Arduino standard motor shield (which we do support) is not capable of the full range of the newer **DCC-EX** functions and requires physical modification to avoid melting your processor.
-
---8<-- "snippets/abbr.md"

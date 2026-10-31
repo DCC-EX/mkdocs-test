@@ -45,4 +45,4 @@ Methods involving downloading zip files have caused  support issues in the past,
 
 Use of the Arduino IDE is discouraged and not covered in this documentation as it has far less functionality than VSCode and has limitations with respect to compiler and library options.
 
---8<-- "snippets/abbr.md"
+

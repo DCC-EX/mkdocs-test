@@ -68,4 +68,4 @@ If you have a small to medium sized layout you could usually power your locos, t
 
 3. Bi-Directional Communication - The DCC standard provides no way for accessories or locos to talk back to the Command Station using the signal on the track. **EX‑CommandStation** does have this capability by using the GPIO pins as outputs to accessories and inputs from sensors instead of having decoders on your accessories. You can power your accessories with another power supply. There are also several bus structures and accessory control systems, like LCN, that allow not only a separate power system, but 2-way communication system with dedicated microcontrollers that handle turnouts, sensors, lights and other accessories. EX‑CommandStation can work directly with some of those systems with a simple software switch to hand off commands.
 
---8<-- "snippets/abbr.md"
+

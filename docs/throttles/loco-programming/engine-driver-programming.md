@@ -38,4 +38,4 @@ The best way to diagnose problems is to use a [serial monitor](../../reference//
 
 Also refer to the [Programming Tips](programming-tips.md) for additional thoughts.
 
---8<-- "snippets/abbr.md"
+

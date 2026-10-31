@@ -67,7 +67,7 @@ The following are not a direct response, but rather a broadcast that will be tri
 
 * TBA
 
---8<-- "snippets/abbr.md"
+
 
 <style>
   .md-typeset h1 {

@@ -7,8 +7,8 @@ def define_env(env):
     @env.macro
     def new_in_v(version):
         articles = {
-            "6.0": "/news/articles/20261021b.md",
-            "6.1": "/news/articles/20261021.md",
+            6.0: "/news/articles/20261021b.md",
+            6.1: "/news/articles/20261021.md",
         }
         try:
             article = articles[version]

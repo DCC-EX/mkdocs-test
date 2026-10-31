@@ -61,7 +61,7 @@ N/A See commands above
 
 ==TODO== LOW - Example Responses
 
---8<-- "snippets/abbr.md"
+
 
 <style>
   .md-typeset h1 {

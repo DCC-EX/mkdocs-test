@@ -21,4 +21,4 @@ When correctly supplied with track power, both green Power LEDs will light. If t
 
 The Wi-Fi LED will light once a Wi-Fi network is created (Access Point mode), or once connected to an existing Wi-Fi network (Station mode.)
 
---8<-- "snippets/abbr.md"
+

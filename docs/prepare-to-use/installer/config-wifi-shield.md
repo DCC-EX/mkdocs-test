@@ -62,4 +62,4 @@ In some environments you may want to hide the SSID from phones scanning for acce
 #define WIFI_HIDE_SSID
 ```
 
---8<-- "snippets/abbr.md"
+

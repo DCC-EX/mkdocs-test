@@ -78,5 +78,3 @@ In fact, TIME is the thing you will need most, and time spent building your **EX
 The following documentation pages can only take you through the basics and should you contact us for support it is well to remember that we do this for fun, we don't get paid, and we don't all have access to the same weird but cheap gizmo you found on the web with an instruction sheet in Klingon.
 
 Apart from that... it's great fun!
-
---8<-- "snippets/abbr.md"

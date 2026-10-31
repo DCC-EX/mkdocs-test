@@ -92,4 +92,4 @@ We've compiled this simple summary table to help with this:
 [^6]: The *Arduino Motor Shield R38* and the *Deek-Robot Motor Shield* are interchangeably referred to in this documentation as the *standard motor driver*.
 [^7]: Can be stacked, but it is complicated.
 
---8<-- "snippets/abbr.md"
+

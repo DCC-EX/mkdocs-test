@@ -143,5 +143,3 @@ These users already know enough and just want a quick way to get the latest vers
 graph LR
     A([Home]) --> B[Download page];
 ```
-
---8<-- "snippets/abbr.md"

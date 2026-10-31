@@ -15,4 +15,4 @@ Some of these commands are deliberately multi-stage requests to avoid timing and
 
 Broadcast replies are also designed so that a throttle can maintain loco speed and function states, turnout/point positions and route states.
 
---8<-- "snippets/abbr.md"
+

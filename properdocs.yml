@@ -92,7 +92,9 @@ extra:
 plugins:
   - search: # Material client-side search using Lunr.js
       separator: '[,;\$\|\-\.\s\[\]\(\)\{\}"]+'
-  - macros
+  - macros:
+      render_by_default: true
+      include_dir: .
   - glightbox:
       auto_caption: true       # Tells the plugin to use the alt text as a caption
       caption_position: bottom # Optional: Can be bottom, top, left, or right
@@ -217,7 +219,10 @@ markdown_extensions:
   - pymdownx.inlinehilite
   - pymdownx.keys
   - pymdownx.snippets:
+      base_path: ["."]  
       check_paths: true
+      auto_append:
+        - snippets/abbr.md  
   - pymdownx.highlight: # Syntax highlighting of code
       anchor_linenums: false
       pygments_lang_class: true

@@ -86,7 +86,7 @@ none
 
 Refer to the [Programming Hint and Tips](../../throttles/loco-programming/programming-tips.md) page for examples on using some of the commands above for problematic decoders.
 
---8<-- "snippets/abbr.md"
+
 
 <style>
   .md-typeset h1 {

@@ -59,7 +59,7 @@ Serial commands to provide the ability to set neopixels on or off or change the 
 
 * ==TODO== LOW - Example - Responses
 
---8<-- "snippets/abbr.md"
+
 
 <style>
   .md-typeset h1 {
