@@ -1,6 +1,6 @@
 ﻿<!-- # WiFi configuration <br/><small>(EX-CSB1 or ESP32 ONLY. v5.7.0+ ONLY)</small> -->
 
-{{ new_in_v6() }} This page is exclusively for users of **EX-CommandStation** version 5.7.0 and later. Version 5.7.x is currently in the experimental / development (DEVEL) phase and is not recommended for general users.
+{{ new_in_v("6.0") }} This page is exclusively for users of **EX-CommandStation** version 5.7.0 and later. Version 5.7.x is currently in the experimental / development (DEVEL) phase and is not recommended for general users.
 
 <span style="color:red;">The ``config.h`` options for WiFi configuration from EX-CommandStation versions prior to 5.7.0 are now ignored by the **EX-CSB1** or ESP32 **EX-CommandStation**.</span>
 

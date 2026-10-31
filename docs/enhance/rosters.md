@@ -23,7 +23,7 @@ There are three ways to create or manipulate a roster
 
 !!! note ""
 
-    {{new_in_v6()}} Available in version 5.9.13 and above of **EX-CommandStation** only.
+    {{new_in_v("6.0")}} Available in version 5.9.13 and above of **EX-CommandStation** only.
 
 When using a web browser dialog on the command station, the Config.. Roster Editor menu will show a roster editing dialog. This edits and saves roster entries in RAM.
 
@@ -79,7 +79,7 @@ See the [EXRAIL Rosters](../enhance/exrail/exrail-objects-introduction.md#adding
 
 !!! note ""
 
-    {{ new_in_v6() }} Available in version 5.9.13 and above of **EX-CommandStation** only.
+    {{ new_in_v("6.0") }} Available in version 5.9.13 and above of **EX-CommandStation** only.
 
 There are a selection of roster commands which are normally used by throttles to extract roster information from the command station.
 

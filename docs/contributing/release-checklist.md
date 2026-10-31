@@ -61,11 +61,11 @@ This is a list of to do items that will allow us to release this new documentati
 - [x] **EXRAIL** command reference from doxyGen
 - User journeys to guide users through the site:
 
-    - [ ] Brand new users no knowledge
-    - [ ] Just want to run trains
+    - [x] Brand new users no knowledge
+    - [x] Just want to run trains
     - [ ] Just want to run trains - DC only version
     - [ ] Wanting to add accessories
-    - [ ] Wanting to animate/automate
+    - [x] Wanting to animate/automate
     - [ ] Large club layout
     - [ ] Downloader
 
