@@ -47,7 +47,7 @@ Serial command to Direct current displays to LCS/OLED
 
 * ==TODO== LOW - Example Responses
 
---8<-- "snippets/abbr.md"
+
 
 <style>
   .md-typeset h1 {

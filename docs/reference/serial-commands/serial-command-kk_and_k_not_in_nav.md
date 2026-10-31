@@ -50,7 +50,7 @@ Serial command(s) to indicate a loco entering/leaving a block.
 
 * ==TODO== LOW - Example Responses
 
---8<-- "snippets/abbr.md"
+
 
 <style>
   .md-typeset h1 {

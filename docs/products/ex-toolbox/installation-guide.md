@@ -38,4 +38,4 @@ Follow the instructions on their [site](https://www.bluestacks.com/)  to install
 
 Follow the [Connecting Guide](connecting.md)
 
---8<-- "snippets/abbr.md"
+

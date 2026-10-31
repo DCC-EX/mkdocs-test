@@ -46,4 +46,4 @@ For further throttle and connection options, refer to the [Throttle List](thrott
 
 For further information, refer to the [DCC Accessory Operation](dcc-accessories.md) page.
 
---8<-- "snippets/abbr.md"
+

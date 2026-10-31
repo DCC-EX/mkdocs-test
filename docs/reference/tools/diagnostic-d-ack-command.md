@@ -113,4 +113,4 @@ When the programming track is switched on with ``<1>`` or ``<1 PROG>`` it will n
 
 To make these settings permanent, you can create a [Startup Configuration](../../enhance/exrail/exrail-startup-configuration.md) by adding or editing an existing *mySetup.h*. You simply add the appropriate commands in the correct format and upload the Command Station software again. Click on the link in this paragraph for detailed instructions.
 
---8<-- "snippets/abbr.md"
+

@@ -194,4 +194,4 @@ When starting up for the first time, you should see output in the serial console
 
 Now that you have enabled traverser mode in **EX-Turntable**, confirmed your HOME and LIMIT sensors are operating correctly, and calibration has completed, you can return to [test and tune](test-and-tune.md) as the tuning steps and control commands are the same in both turntable and traverser modes.
 
---8<-- "snippets/abbr.md"
+

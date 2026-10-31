@@ -14,4 +14,4 @@ It can be used to increase the number of available pins on your command station 
 
 Refer to the [legacy EX-IOExpander documentation](https://dcc-ex.com/legacy-docs/ex-ioexpander/index.html) for details.
 
---8<-- "snippets/abbr.md"
+

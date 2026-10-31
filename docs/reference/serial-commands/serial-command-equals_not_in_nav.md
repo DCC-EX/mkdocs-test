@@ -91,7 +91,7 @@ The following are not a direct response, but rather a broadcast that will be tri
 * Response/broadcast to setting track *A* to *DC* with address 10<BR/>``<= A 10>``<br/>``<= B PROG>``<br/>``<p1 A>``<br/>``<p0 B>``
 * ==TODO== LOW - Example Responses
 
---8<-- "snippets/abbr.md"
+
 
 <style>
   .md-typeset h1 {

@@ -54,7 +54,7 @@ Also see the [EXRAIL Time Control Cookbooks](../../enhance/exrail/cookbooks/time
 * Response to ``<JC 375 4>`` : ``<jC 375>``
 * Response to ``<JC>`` if the current time is 6:15 : ``<jC 375>``
 
---8<-- "snippets/abbr.md"
+
 
 <style>
   .md-typeset h1 {

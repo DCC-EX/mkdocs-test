@@ -123,5 +123,3 @@ There is no automatic polarity reversing for DC layouts, this must be programmed
 The separate track outputs supplied by the **EX-CommandStation** represent the number of separate throttle ids that may be operating. Like any large DC layout, the switching of throttle outputs to multiple other blocks can still take place using mechanical switches or relays which can be controlled by suitable **EXRAIL** sequences. Power routing turnouts/points operate as normal but may be awkward if you are building a new layout with tyhe intention of running DCC later.
 
 If you have several throttles operating the same locoid, they will automatically synchronise with each other.
-
---8<-- "snippets/abbr.md"

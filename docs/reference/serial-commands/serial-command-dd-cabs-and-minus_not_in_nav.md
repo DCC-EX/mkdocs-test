@@ -64,7 +64,7 @@ Once you send a throttle command to any loco, throttle commands to that loco wil
 
 * ==TODO== LOW - Example Responses
 
---8<-- "snippets/abbr.md"
+
 
 <style>
   .md-typeset h1 {

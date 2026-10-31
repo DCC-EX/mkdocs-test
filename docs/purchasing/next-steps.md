@@ -4,4 +4,4 @@ Once you have purchased and received your **EX-CSB1**, your next step should be 
 
 Follow the instructions on the [Prepare to use](../prepare-to-use/index.md) page to physically install your **EX-CSB1** and test it to confirm that it is working correctly.
 
---8<-- "snippets/abbr.md"
+

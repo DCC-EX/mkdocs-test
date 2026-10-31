@@ -368,4 +368,4 @@ Using POM only changes the loco you have selected, not all locos on the track.  
 
 For further information on programming on the main track, see [Ops Mode Programming](https://www.jmri.org/help/en/manual/DecoderPro3/Programmer_OpsMode.shtml) on the JMRI website.
 
---8<-- "snippets/abbr.md"
+

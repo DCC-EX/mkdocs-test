@@ -168,5 +168,3 @@ You can add sensors and have the turnouts/points controlled by the route you wan
 A simple but less easy method is to use a DPDT relay and a MCP23017 port expander board (dirt cheap and also connects to the I2C port) or our EX‑IOExpander software running on a cheap processor like an Uno or Nano or Elegoo Mega. Define each turnout as a PIN_TURNOUT. This wastes 15-20mA or more of current for each one all the time since the power never gets shut off. The way around that is to use a motor driver board to act as a solid state relay. Transistors on the board and an EXRAIL script control both the polarity switching and the duration of the voltage. We have those simple scripts, so you don't need to know C++ or electronics to throw a turnout/point. People have used all sorts of inexpensive boards for this, including Rosscoetrain's motor board which has 4 MOSFET transistors.
 
 Regardless of which method you use, take a look at the documentation for EX‑IOExpander since it has a lot built into it. And you can connect the Smart Hobby board and a lot of other things to it.
-
---8<-- "snippets/abbr.md"

@@ -398,4 +398,4 @@ Refer to the [DC Mode Frequencies](/reference/trackmanager/dc-mode-frequency.md)
 
 - You need to stop the loco (throttle to zero) before changing the frequency using the function buttons.
 
---8<-- "snippets/abbr.md"
+

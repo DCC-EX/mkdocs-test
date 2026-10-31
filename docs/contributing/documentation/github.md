@@ -187,5 +187,3 @@ Now, each time you commit and push to your fork or merge a pull request to it, i
 Building the pages and deploying takes time, every time you push any changes, but you will eventually be able to see your own version of the website at ``https://<your_account_name>.github.io/mkdocs-test/``.
 
 You can see the state of the processing of your changes by looking at the ``Actions`` page.  It will also tell you there if there are any errors.
-
---8<-- "snippets/abbr.md"

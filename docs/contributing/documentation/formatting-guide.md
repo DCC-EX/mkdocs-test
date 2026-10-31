@@ -172,11 +172,15 @@ Additional abbreviations can be included on an individual page with the syntax:
 
 ## Macros
 
-Macros can be added by editing main.py and adding a python methods. At time of writing only 'new_in_v6' exists.
+Macros can be added by editing main.py and adding a python method. The `new_in_v()` macro accepts a version and links to its configured news article.
 
 To use it on a page:
 
-\{\{ new_in_v6() \}\}
+\{\{ new_in_v(6.0) \}\}
+
+For version 6.1:
+
+\{\{ new_in_v(6.1) \}\}
 
 note: Macros do not work in snippets.
 
@@ -326,5 +330,3 @@ int main() {
     return 0;
 }
 ```
-
---8<-- "snippets/abbr.md"

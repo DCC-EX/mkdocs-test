@@ -44,5 +44,3 @@ For more information just check our code or read the [style guide](https://googl
 ## Pull Request Process
 
 1. Ensure any install or build dependencies are removed before the end of the layer when doing a build.
-
---8<-- "snippets/abbr.md"

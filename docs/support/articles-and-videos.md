@@ -74,4 +74,4 @@ an introduction to using the **EX‑Installer** and creating automation scripts 
 
 ~ Apr 2023 - [“DCC-EX Open Source Model Railroading” - Paul Antoine (Everything Open 2023)](https://youtu.be/YlGL9-v5OAQ)
 
---8<-- "snippets/abbr.md"
+

@@ -99,4 +99,4 @@ These include:
 
 Also refer to the [Programming Tips](programming-tips.md) for additional information.
 
---8<-- "snippets/abbr.md"
+

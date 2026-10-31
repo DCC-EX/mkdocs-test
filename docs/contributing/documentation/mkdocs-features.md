@@ -274,5 +274,3 @@ The first page in a directory will have no previous button, and the last no next
 **NOTE:** This is calculated based on the sorting order of the page file names within the directory, and therefore custom ordering of pages using .nav.yml will cause unexpected results.
 
 To enable this customised navigation, a custom "footer.html" template has been included and can be found in "overrides/partials/footer.html". This is required in order to show/hide the previous and next arrows as determined by the plugin.
-
---8<-- "snippets/abbr.md"

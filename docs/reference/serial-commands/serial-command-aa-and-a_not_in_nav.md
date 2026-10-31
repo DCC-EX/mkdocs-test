@@ -74,7 +74,7 @@ Here is a spreadsheet in .XLSX format to help you: [Stationary Decoder Address T
 
 * ==TODO== LOW - Example Responses
 
---8<-- "snippets/abbr.md"
+
 
 <style>
   .md-typeset h1 {

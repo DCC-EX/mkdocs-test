@@ -316,4 +316,4 @@ SERVO(1001,20,Instant)        // Set volume level to 20
 
 Note: As per the standard SERVO commands, the last parameter is the name of a servo profile, not a number.
 
---8<-- "snippets/abbr.md"
+

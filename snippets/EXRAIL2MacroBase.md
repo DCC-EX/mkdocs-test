@@ -12,6 +12,8 @@ Send DCC Accessory Activate packet (gate on then off)
 
 ## ACTIVATEL(linearaddr)
 
+{{ new_in_v(6.0) }}
+
 Send DCC Accessory Activate packet (gate on then off)
 
 - linearaddr DCC linear address of accessory

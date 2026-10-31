@@ -82,4 +82,4 @@ Case to hold Arduino Mega, motor shield, and .96" display for DCC-EX
 
 ![Nebbish Case 2](/_static/images/suppliers/nebbish_cs_case2.png){ width=300px }
 
---8<-- "snippets/abbr.md"
+

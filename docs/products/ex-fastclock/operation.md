@@ -15,4 +15,4 @@ In Serial Mode, at startup the initial clock time will be sent to the **EX-Comma
 
 In I2C mode the **EX-CommandStation** polls the FastClock at intervals.
 
---8<-- "snippets/abbr.md"
+

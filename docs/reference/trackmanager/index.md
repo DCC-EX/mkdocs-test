@@ -152,4 +152,4 @@ Each individual track is handled by an instance of MotorDriver created from the 
 
 Many functions formerly in the DCCWaveform code have been moved to TrackManager or MotorDriver, notably the power control and checking. This makes the code easier to follow.
 
---8<-- "snippets/abbr.md"
+

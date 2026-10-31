@@ -58,4 +58,4 @@ This can be complex but
 - Avoid running SCL/SD in parallel with the track power (or track)
 - Refer to [I2C Wiring](/reference/wiring/i2C/i2c-wiring.md)
 
---8<-- "snippets/abbr.md"
+

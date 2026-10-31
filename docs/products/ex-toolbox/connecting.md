@@ -53,4 +53,4 @@ There are three ways you can select an **EX‑CommandStation** to connect to:
 
 Follow the [User Guide](user-guide.md)
 
---8<-- "snippets/abbr.md"
+

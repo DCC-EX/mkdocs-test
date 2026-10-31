@@ -60,4 +60,4 @@ The **EX-CommandStation** needs the minimum following connections to be able to 
 
 ==TODO== LOW - physically connecting DIY EX-CS to a layout - Other Motor Shields
 
---8<-- "snippets/abbr.md"
+

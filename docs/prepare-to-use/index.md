@@ -40,4 +40,4 @@ You need to test with a locomotive equipped with a DCC decoder (either a standar
 
 Continue to the [testing](testing.md) page to find out how.
 
---8<-- "snippets/abbr.md"
+

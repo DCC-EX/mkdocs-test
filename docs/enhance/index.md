@@ -120,5 +120,3 @@ The **DCC-EX** team also provide a number of tools to support your **EX-CommandS
 * [EX-Toolbox](../products/ex-toolbox/index.md)
 * [EX-DCCInspector](../products/ex-dccinspector/index.md)
 * [Serial Monitors](../reference/tools/serial-monitor.md)
-
---8<-- "snippets/abbr.md"

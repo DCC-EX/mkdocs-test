@@ -191,5 +191,3 @@ In order to configure additional displays, you will need to add lines to myAutom
 ```
 
 As you can see from the comments in this code, both of these displays can now be written to from **EXRAIL** using the ``SCREEN()`` directive. See the **EXRAIL** [SCREEN command](?screen%20display%20row%20msg) for more information.
-
---8<-- "snippets/abbr.md"

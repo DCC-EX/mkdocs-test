@@ -160,4 +160,4 @@ void TransmitTime() {
 
 Now that you know how to connect your existing **EX-FastClock**, click the "next" button see how you use **EX-FastClock**.
 
---8<-- "snippets/abbr.md"
+

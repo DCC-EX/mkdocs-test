@@ -89,4 +89,4 @@ See [Programming with DecoderPro](../../throttles/loco-programming/decoderpro.md
 
 If you are having difficulties reading or writing CVs, refer to the [Programming Tips](programming-tips.md) for additional information.
 
---8<-- "snippets/abbr.md"
+

@@ -177,7 +177,7 @@ Example: This example defines an EX-Turntable device, with 3 positions:
 
 * ==TODO== LOW - Example Responses
 
---8<-- "snippets/abbr.md"
+
 
 <style>
   .md-typeset h1 {

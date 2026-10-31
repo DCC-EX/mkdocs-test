@@ -56,4 +56,4 @@ The voltage between the rails results in the engine's direction.
 
 Additional detail  -  [DC mode - Logic Gate Circuit](./dc-mode-logic.md)
 
---8<-- "snippets/abbr.md"
+

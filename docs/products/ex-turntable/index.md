@@ -170,4 +170,4 @@ If you have a layout that requires more control over when phase switching does a
 
 Now that you have a general overview of EX-Turntable's features and capabilities, click the 'Next' button see what is needed to create an **EX-Turntable**.
 
---8<-- "snippets/abbr.md"
+

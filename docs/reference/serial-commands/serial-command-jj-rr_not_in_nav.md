@@ -27,7 +27,7 @@ Serial command to request roster info, or add new roster entries and save them i
 * ``<J R>`` = Request the list of all roster ids
 * ``<J R «id»>`` = Request the detailed info on a specific roster id
 
-{{ new_in_v6() }} New Roster commands for v5.9.13 and above:
+{{new_in_v(6.0)}} New Roster commands for v5.9.13 and above:
 
 * ``<J R «id» "«name»" "«functions»">`` adds or replaces a roster in RAM
 * ``<J R «id» DELETE>`` removes a roster entry from ram
@@ -90,7 +90,7 @@ Serial command to request roster info, or add new roster entries and save them i
 * details of loco ``100`` from the roster: <br/>``<jR 100, "Class 37 Loram Livery", "Lights/WarmEngineStart/Brake/*Single-Horn/*Double-Horn/Light Engine Mode/Coasting/Speed Lock/Sound Fade OutIn/Flange Squeal//*Buffer Up/*Coupling/STATIONARY-Guard's Whistle MOVING-Detonators/Wagon Snatching & Buffering/High Intensity Light-On/Red Tail Lights On Both Ends Non di/Marker Lights On Both Ends Non di/Cab Light On-No.1 End Fan/Cab Light On-No.2 End non fan/No.1 End Dir Lights Off/No.2 End Dir Lights Off/Compressor/Windscreen Wipers/Engine Room">``
 * response if loco ``999`` is not in the roster: <br/> ``<jR 999 X>``
 
---8<-- "snippets/abbr.md"
+
 
 <style>
   .md-typeset h1 {

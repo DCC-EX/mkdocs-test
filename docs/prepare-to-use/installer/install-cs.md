@@ -160,4 +160,4 @@ On this screen you can edit the configuration files. If you have more than two f
 
 ![stored_files](../../_static/images/ex-installer/stored-files.png){ width=600px }
 
---8<-- "snippets/abbr.md"
+

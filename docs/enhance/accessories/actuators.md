@@ -32,5 +32,3 @@ PCA9554, TCA9554, PCA9555, TCA9555 devices operate in the same way as long as th
 
 - Define the MCP23017 (or other driver) connection and its address so that each output can be given a unique [VPIN](?VPIN) to control it.
 - Set or reset the pin output when appropriate
-
---8<-- "snippets/abbr.md"

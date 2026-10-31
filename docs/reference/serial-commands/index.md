@@ -14,4 +14,4 @@ The [Grouped DCC-EX Serial Command Reference](serial-commands.md) page contains 
 
 See the [WiThrottle Protocol VS DCC-EX Native/Serial Commands](../../throttles/withrottle-vs-native-protocol.md) page for general information.
 
---8<-- "snippets/abbr.md"
+

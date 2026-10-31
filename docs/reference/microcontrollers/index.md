@@ -125,4 +125,4 @@ You can still flash these boards with older versions of the **EX-CommandStation*
 
 **Arduino Giga** - Like the above Uno R4, this is not just an enhanced version of our recommended Arduino Mega2560 but rather an entirely new (and also very expensive) board that just happens to share the same footprint.
 
---8<-- "snippets/abbr.md"
+

@@ -48,4 +48,4 @@ FWD(10) // all 4 locos set off together
 
 **EXRAIL** can also break up a consist with the `BREAK_CONSIST` command which will break up any consist that includes the current loco.
 
---8<-- "snippets/abbr.md"
+

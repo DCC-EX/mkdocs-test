@@ -282,4 +282,4 @@ See the thread on the MRH blog here: [https://model-railroad-hobbyist.com/node/1
 
 ![Diode Phase Checker](../../_static/images/tools/dcc_phase_checker2.png){ width=400px }
 
---8<-- "snippets/abbr.md"
+

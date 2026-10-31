@@ -65,4 +65,4 @@ Here are the various locomotives you can find used throughout these examples:
 | 2 | RM2031 | Railcar | Early Modern | Queensland, Australia |
 | 3 | 2350 | Diesel Electric | Early Modern | Queensland, Australia |
 
---8<-- "snippets/abbr.md"
+

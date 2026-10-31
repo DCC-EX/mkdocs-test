@@ -1,8 +1,3 @@
----
-hide:
-  - toc
----
-
 # Our Products
 
 ![DCC-EX](../_static/images/logos/logo_with_border.png){ .off-glb align=right width=100px }
@@ -11,15 +6,15 @@ The **DCC-EX** team has designed and released a number of open source, hardware 
 
 This page briefly outlines these with links to more information and are categorised by the level of experience needed to use them:
 
-- [Easy to use / Conductor Level](#easy-to-use-products-conductor-level)
-- [A bit more technical / Tinkerer Level](#a-bit-more-technical-products-tinkerer-level)
-- [Advanced technical / Engineer Level](#advanced-technical-products-engineer-level)
+- [Easy to use / Conductor Level](#easy-to-use-products)
+- [A bit more technical / Tinkerer Level](#a-bit-more-technical-products)
+- [Advanced technical / Engineer Level](#advanced-technical-products)
 
 ----
 
 ![Conductor Icon](../_static/images/levels/conductor.png){ .off-glb align=right }
 
-## Easy to Use Products <small>Conductor Level</small>
+## Easy to Use Products
 
 These are our powerful, but easy to use, get up and running quickly type products. You don't need to pick up a soldering iron or write any software, just plug them in and go!
 
@@ -78,7 +73,7 @@ Refer to the [EX-Toolbox documentation](/products/ex-toolbox/index.md) for how t
 
 ![Tinkerer Icon](../_static/images/levels/tinkerer.png){ .off-glb align=right }
 
-## A Bit More Technical Products <small>Tinkerer Level</small>
+## A Bit More Technical Products
 
 These products are more involved to get up and running, and aren't just plug in and go.
 
@@ -139,7 +134,7 @@ Refer to the [EX-WiFiShield8266 page](/products/ex-wifishield8266/ex-wifishield8
 
 ![Engineer Icon](../_static/images/levels/engineer.png){ .off-glb align=right }
 
-## Advanced Technical Products <small>Engineer Level</small>
+## Advanced Technical Products
 
 These products are far more involved and complicated to get up and running.
 
@@ -227,4 +222,4 @@ Refer to the [EX-IOExpander documentation](/products/ex-ioexpander/ex-ioexpander
 
 Refer to the [EX-SensorCAM documentation](/products/ex-sensorcam/index.md) for more information.
 
---8<-- "snippets/abbr.md"
+

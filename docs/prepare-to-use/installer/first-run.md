@@ -34,4 +34,4 @@ If you already have the Arduino CLI installed, it is recommended that you refres
 
 Installing the CLI can take some time. Maybe grab a cup of tea or coffee, and watch magic happen!
 
---8<-- "snippets/abbr.md"
+

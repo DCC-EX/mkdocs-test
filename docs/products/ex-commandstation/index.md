@@ -44,4 +44,4 @@ To follow the basic setup process, see the [Quick Setup Guide](../ex-csb1/gettin
 
 - If you want to *build your own* **EX-CommandStation** and are prepared to learn about Arduinos, ESP32s (and other microcontrollers) see [Building your own EX-CommandStation](/diy/diy.md). But you are advised to read the basic guidance so you will have a better understanding of what you want to achieve, and what will be possible.
 
---8<-- "snippets/abbr.md"
+

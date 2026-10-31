@@ -82,5 +82,3 @@ Configure additional PCA9685 in myAutomation.h.
 ```
 
 Nucleo-144 boards do not have pre-defined PCA9685 due to pin conflicts, as pins thru 116 are reserved for the microprocessor.  All PCA9685 connected to Nucleo-144 boards require configuration in myAutomation.h.
-
---8<-- "snippets/abbr.md"

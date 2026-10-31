@@ -13,4 +13,4 @@ Depending on whether or not you purchased an **EX-CSB1** or you self-built your 
 
 If you plan to run DC trains rather than the default of DCC, there are other considerations. Refer to ==TODO== LOW DC page for more information.
 
---8<-- "snippets/abbr.md"
+

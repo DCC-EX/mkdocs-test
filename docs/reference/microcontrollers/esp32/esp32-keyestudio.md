@@ -154,4 +154,4 @@ See the [Stacking two motor shields on the EX8874 page](../../../products/ex-mot
  }
 </style>
 
---8<-- "snippets/abbr.md"
+

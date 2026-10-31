@@ -43,7 +43,7 @@ Serial command to Enable/Disable Railcom cutout.  Available on Arduino Mega base
 
 * ==TODO== LOW - Example Responses
 
---8<-- "snippets/abbr.md"
+
 
 <style>
   .md-typeset h1 {

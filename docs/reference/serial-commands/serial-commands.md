@@ -308,4 +308,4 @@ Reference guide for serial commands used by **EX-CommandStations**, shown in fun
 | [`<P ignore d0 d1 d2 d3 d4 d5>`](?_9P9_ignore_d0_d1[_d2_d3_d4_d5]) | Send up to 5 byte DCC packet on PROG track | `ignore`: Ignored, `d0-d5`: Hex bytes | Active |
 | [`<c>`](?_c) | Report main track current | None | ⚠️ Deprecated |
 
---8<-- "snippets/abbr.md"
+

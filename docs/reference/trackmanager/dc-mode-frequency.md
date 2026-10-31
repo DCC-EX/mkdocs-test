@@ -81,4 +81,4 @@ The functions will toggle the bits ON/OFF as shown in the table.
 
 - ==TODO== MEDIUM - How to effectively use DC mode when using multiple frequencies.
 
---8<-- "snippets/abbr.md"
+

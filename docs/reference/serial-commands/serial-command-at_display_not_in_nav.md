@@ -45,7 +45,7 @@ Serial command to display text on virtual LCD at specified row.
 
 * ==TODO== LOW - Example Responses
 
---8<-- "snippets/abbr.md"
+
 
 <style>
   .md-typeset h1 {
