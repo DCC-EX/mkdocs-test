@@ -7,6 +7,7 @@ nav:
   - ... by Function Group: serial-commands/serial-commands.md
   - ... Additional Info: serial-commands
   - <br/>Configuration Reference <small><small>(config.h)</small></small>: configuration
+  - Nodes: nodes
   - HAL Device Configuration: hardware/hal/hal-device-templates.md
   - <br/>TrackManager: trackmanager
   - <br/>Alternate Microcontrollers: microcontrollers
