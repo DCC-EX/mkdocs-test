@@ -108,7 +108,7 @@ Also see:
 
 * [EX-Turntable](../products/ex-turntable/index.md)
 * [EX-FastClock](../products/ex-fastclock/index.md)
-* [EX-IOExpander](../products/ex-ioexpander/ex-ioexpander.md)
+* [EX-IOExpander](../products/ex-ioexpander/ex-ioexpander.md) (Deprecated from V6 - See [Layout Nodes](#distributed-layout-nodes) instead)
 * [EX-SensorCAM](../products/ex-sensorcam/index.md)
 * [Use the EX-CSB1 as a DCC Booster](./trackmanager/booster.md)
 
@@ -116,7 +116,7 @@ Also see:
 
 ## Distributed Layout Nodes
 
-Layout **nodes** offer a simple way of distributing layout control (usually wirelessly) over a wide area using the same the **EX-CommandStation** software in each node, with a slight configuration change.
+Layout **Nodes** offer a simple way of distributing layout control (usually wirelessly) over a wide area using the same the **EX-CommandStation** software in each node, with just a slight configuration change.
 
 See the [Introduction to using distributed layout nodes](../reference/nodes/index.md) page for more information.
 
