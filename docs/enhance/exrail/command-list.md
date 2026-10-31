@@ -2,6 +2,4 @@
 
 --8<-- "snippets/exrail/exrail-intro.md"
 
---8<-- "snippets/EXRAIL2MacroBase.md"
-
-
+{% include "snippets/EXRAIL2MacroBase.md" %}
