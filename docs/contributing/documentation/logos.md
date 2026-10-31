@@ -8,7 +8,7 @@ The generated logos are exported in PNG format with a transparent background, an
 
 ## Light and Dark Theme
 
-Due to most logos using a transparent background, there are typically both a light and dark version of each logo available, and a CSS class is required to display the correct one using an [attribute](/contributing/documentation/mkdocs-features.md#attribute-lists).
+Due to most logos using a transparent background, there are typically both a light and dark version of each logo available, and a CSS class is required to display the correct one using an [attribute](./mkdocs-features.md#attribute-lists).
 
 If a logo has a solid background (for example our main **DCC-EX** logo), this is not required.
 

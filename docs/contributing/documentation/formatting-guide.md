@@ -158,11 +158,7 @@ This is a new term being added to the glossary.
 
 ## Abbreviations
 
-By including the following on every page, common terms will be appear with a dashed underline, and will show an explanation as hover text.  e.g. Motor Shield
-
-\-\-8<\-\- "snippets/abbr.md"
-
-For consistency, include it at the end of the page.
+A snippet (``abbr.md``) is automativally included on every page. Common terms will be appear with a dashed underline, and will show an explanation as hover text.  e.g. Motor Shield
 
 Additional abbreviations can be included on an individual page with the syntax:
 
@@ -174,15 +170,9 @@ Additional abbreviations can be included on an individual page with the syntax:
 
 Macros can be added by editing main.py and adding a python method. The `new_in_v()` macro accepts a version and links to its configured news article.
 
-To use it on a page:
+e.g. To use it on a page:  \{\{ new_in_v(6.0) \}\}
 
-\{\{ new_in_v(6.0) \}\}
-
-For version 6.1:
-
-\{\{ new_in_v(6.1) \}\}
-
-note: Macros do not work in snippets.
+To change the page that the generated text hyperlinks to, edit ``main.py``
 
 ## Code blocks
 

@@ -191,6 +191,14 @@ All files that are to be included as snippets must reside in the "snippets" dire
 `--8<-- "snippets/snippet-example/snippet-example.md"`
 ```
 
+or  
+
+```markdown
+`{% include "snippets/snippet-example/snippet-example.md" %}`
+```
+
+Note: The second format is required if you use macros in the snippet.
+
 The text below is included from this file:
 
 --8<-- "snippets/snippet-example/snippet-example.md"
