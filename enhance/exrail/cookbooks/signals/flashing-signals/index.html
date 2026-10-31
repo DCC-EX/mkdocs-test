@@ -12366,7 +12366,7 @@
 <p>Flashing is achieved with the command</p>
 <div class="language-cpp highlight"><pre><span></span><code><span class="n">BLINK</span><span class="p">(</span><span class="n">vpin</span><span class="p">,</span><span class="w"> </span><span class="n">onMs</span><span class="p">,</span><span class="w"> </span><span class="n">offMs</span><span class="p">)</span>
 </code></pre></div>
-<p>which will start a vpin blinking until such time as it is SET, RESET or set by a signal operation such as RED, AMBER, GREEN.</p>
+<p>which will start a <abbr title="an Arduino pin number that has been extended to include pins on external devices or expanders">vpin</abbr> blinking until such time as it is SET, RESET or set by a signal operation such as RED, AMBER, GREEN.</p>
 <p>BLINK returns immediately, the blinking is autonomous.</p>
 <h2 id="always-blink-amber">Always blink AMBER<a class="headerlink" href="#always-blink-amber" title="Permanent link">¶</a></h2>
 <p>A signal that always blinks amber could be done like this:</p>
@@ -12390,6 +12390,7 @@
 <span class="n">FLAMBER</span><span class="p">(</span><span class="mi">130</span><span class="p">)</span><span class="w"> </span><span class="c1">// set signal to flashing amber</span>
 </code></pre></div>
 <p>(Caution: this assumes that the amber pin is redpin+1 in the SIGNAL or SIGNALH definition)</p>
+<!-- These are case sensitive -->
 
 
 

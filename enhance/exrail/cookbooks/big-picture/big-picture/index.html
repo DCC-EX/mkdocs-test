@@ -12364,7 +12364,7 @@
 
 <h1 id="how-it-all-works-together">How it All Works Together<a class="headerlink" href="#how-it-all-works-together" title="Permanent link">¶</a></h1>
 <p>A common topic that arises in Discord conversations is the question "How does it all fit together?"</p>
-<p>We have a great core product (<strong>EX-CommandStation</strong>) with great features such as built-in automation (<strong>EXRAIL</strong>) along with many integration options (JMRI, ThrottleCard, Engine Driver, etc.), support for various different integrated hardware devices (IO expanders, sensors, audio) and now even an integrated turntable controller (<strong>EX-Turntable</strong>). However, how does one take all these bits and pieces and use them together cohesively to control and/or automate an entire layout?</p>
+<p>We have a great core product (<strong>EX-CommandStation</strong>) with great features such as built-in automation (<strong>EXRAIL</strong>) along with many integration options (<abbr title="Java Model Railroad Interface">JMRI</abbr>, ThrottleCard, Engine Driver, etc.), support for various different integrated hardware devices (IO expanders, sensors, audio) and now even an integrated turntable controller (<strong>EX-Turntable</strong>). However, how does one take all these bits and pieces and use them together cohesively to control and/or automate an entire layout?</p>
 <p>This section of our website is aimed to answer just that!</p>
 <p>Over time we will build this section out with diagrams, information, and <strong>EXRAIL</strong> examples to demonstrate how our fictional layout can be configured, controlled, and automated with <strong>EX-CommandStation</strong> and various other supported components and features.</p>
 <p>We call our demonstration layout "Railway Modeller's Fictional Trains" (or RMFT for short) as it is completely fictional, and will only exist on this website for instructional purposes. The layout isn't designed to be an engaging, fun operations layout, rather to simply cram as many features in as possible to a relatively small layout to demonstrate the capabilities of <strong>DCC-EX</strong> and how to make use of them in the context of a complete layout.</p>
@@ -12372,7 +12372,7 @@
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../_static/images/big-picture/rmft-complete.png" data-title="RMFT Complete" data-desc-position="bottom"><img alt="RMFT Complete" src="../../../../../_static/images/big-picture/rmft-complete.png" width="600px"></a></p>
 <p>These are the various concepts and components we will cover:</p>
 <ul>
-<li>Turnouts/points (including double turnouts)</li>
+<li>Turnouts/points (including double <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnouts</abbr>)</li>
 <li>Sensors</li>
 <li>Signals</li>
 <li>Virtual blocks</li>
@@ -12384,11 +12384,12 @@
 </ul>
 <h2 id="building-blocks-and-stages">Building blocks and stages<a class="headerlink" href="#building-blocks-and-stages" title="Permanent link">¶</a></h2>
 <p>We'll present this information by starting with some core functionality, moving on to a simple loop with a single siding and station, and then proceed to add extra features and complexity a step at a time until we reach the complete layout pictured above.</p>
-<p>At each stage, we will outline how to implement each variation of the objects in use (e.g. a servo based turnout/point, a pin based turnout/point, and a DCC controlled turnout/point) as well as outlining how the various objects can potentially interact with each other, and how to build an <strong>EXRAIL</strong> automation sequence to take advantage of the features.</p>
+<p>At each stage, we will outline how to implement each variation of the objects in use (e.g. a servo based <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnout</abbr>/point, a pin based <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnout</abbr>/point, and a DCC controlled <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnout</abbr>/point) as well as outlining how the various objects can potentially interact with each other, and how to build an <strong>EXRAIL</strong> automation sequence to take advantage of the features.</p>
 <h2 id="how-to-read-the-diagrams">How to read the diagrams<a class="headerlink" href="#how-to-read-the-diagrams" title="Permanent link">¶</a></h2>
 <p>Our diagrams will be created in such a way that you'll be able to click on the various items and be taken automatically to the correct page or section of the documentation that provides the software and hardware configuration of that element, along with various options depending on the supported hardware options available, and any <strong>EXRAIL</strong> automation examples.</p>
-<p>We will be using specific colour coded boxes and labels to identify track side buildings, sensors, signals, virtual blocks, and turnouts/points as outlined below:</p>
+<p>We will be using specific colour coded boxes and labels to identify track side buildings, sensors, signals, virtual blocks, and <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnouts</abbr>/points as outlined below:</p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../../_static/images/big-picture/rmft-legend.drawio.svg" data-title=" " data-desc-position="bottom"><img alt=" " src="../../../../../_static/images/big-picture/rmft-legend.drawio.svg"></a></p>
+<!-- These are case sensitive -->
 
 
 

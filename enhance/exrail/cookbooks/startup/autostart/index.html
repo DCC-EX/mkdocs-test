@@ -12343,10 +12343,10 @@
 <h1 id="things-that-happen-at-startup">Things that happen at startup<a class="headerlink" href="#things-that-happen-at-startup" title="Permanent link">¶</a></h1>
 <p>When the <strong>EX-CommandStation</strong> starts:</p>
 <ul>
-<li>Definitions of HAL drivers, Turnouts and Signals will take place first regardless of where they are found in the myAutomation.h file.</li>
-<li><strong>EXRAIL</strong> will run through all its sequences to detect any VPIN that has been used for input, perhaps by an AT, AFTER, ONBUTTON, ONSENSOR etc. These pins are then set to the Arduino INPUT_PULLUP mode. This is necessary so that <strong>EXRAIL</strong> can actually read the input pins.</li>
+<li>Definitions of <abbr title="Hardware Abstraction Layer. Allows the CS to discover and use the hardware through a simple abstract API, regardless of the type of underlying hardware.">HAL</abbr> drivers, Turnouts and Signals will take place first regardless of where they are found in the myAutomation.h file.</li>
+<li><strong>EXRAIL</strong> will run through all its sequences to detect any <abbr title="an Arduino pin number that has been extended to include pins on external devices or expanders">VPIN</abbr> that has been used for input, perhaps by an AT, AFTER, ONBUTTON, ONSENSOR etc. These pins are then set to the Arduino INPUT_PULLUP mode. This is necessary so that <strong>EXRAIL</strong> can actually read the input pins.</li>
 </ul>
-<p>Where VPINS are mapped to external expanders (such as an MCP23017), the HAL driver will pass on the relevant commands to the expander.</p>
+<p>Where VPINS are mapped to external expanders (such as an MCP23017), the <abbr title="Hardware Abstraction Layer. Allows the CS to discover and use the hardware through a simple abstract API, regardless of the type of underlying hardware.">HAL</abbr> driver will pass on the relevant commands to the expander.</p>
 <ul>
 <li><strong>EXRAIL</strong> will then automatically start tasks at any point in the myAutomation.h file where an AUTOSTART command is found. There may be several, they will all run simultaneously and in no particular priority.</li>
 </ul>
@@ -12359,6 +12359,7 @@
 <span class="w">  </span><span class="n">PRINT</span><span class="p">(</span><span class="s">"Ready to Rumble"</span><span class="p">)</span>
 <span class="w">  </span><span class="n">DONE</span>
 </code></pre></div>
+<!-- These are case sensitive -->
 
 
 

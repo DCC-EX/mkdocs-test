@@ -12391,11 +12391,11 @@
 
 
 <h1 id="emergency-stop-button">Emergency stop button<a class="headerlink" href="#emergency-stop-button" title="Permanent link">¶</a></h1>
-<p>An emergency stop is a way of stopping all locos immediately. DCC locos often have sustainers that are there to allow the loco to move over short sections of dirty track or insulated turnout/point frogs. Because of these sustainers, turning off the track power is not a reliable way of stopping trains, those with sustainers may continue moving for several metres/yards.</p>
+<p>An emergency stop is a way of stopping all locos immediately. DCC locos often have sustainers that are there to allow the loco to move over short sections of dirty track or insulated <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnout</abbr>/point frogs. Because of these sustainers, turning off the track power is not a reliable way of stopping trains, those with sustainers may continue moving for several metres/yards.</p>
 <p>To stop a loco immediately, the power must remain on and we must send it a particular DCC packet and the decoder will know to stop.</p>
 <h2 id="estopall">ESTOPALL<a class="headerlink" href="#estopall" title="Permanent link">¶</a></h2>
 <p>The ESTOPALL command will stop all locos and inform all throttles.
-In this example, ONBUTTON(173) will start a sequence at this point when a button on vpin 173 is pressed.
+In this example, ONBUTTON(173) will start a sequence at this point when a button on <abbr title="an Arduino pin number that has been extended to include pins on external devices or expanders">vpin</abbr> 173 is pressed.
 The DONE command completes/terminates the process started by ONBUTTON.</p>
 <div class="language-cpp highlight"><pre><span></span><code><span class="n">ONBUTTON</span><span class="p">(</span><span class="mi">173</span><span class="p">)</span><span class="w"> </span><span class="n">ESTOPALL</span><span class="w"> </span><span class="n">DONE</span>
 </code></pre></div>
@@ -12455,6 +12455,7 @@ The DONE command completes/terminates the process started by ONBUTTON.</p>
 <li><code>&lt;!R&gt;</code> equivalent to ESTOP_RESUME</li>
 <li><code>&lt;!Q&gt;</code> used by throttles to request the esop status (When a throttle starts up, it will not have seen any previous status broadcast messages)</li>
 </ul>
+<!-- These are case sensitive -->
 
 
 

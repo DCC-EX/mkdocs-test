@@ -12271,7 +12271,7 @@
 
 
 <h1 id="optionally-install-wifi">Optionally install Wifi<a class="headerlink" href="#optionally-install-wifi" title="Permanent link">¶</a></h1>
-<p>This page does not apply to <strong>EX-CSB1</strong> or other ESP32-based <strong>EX-CommandStation</strong>s which have Wi-Fi built in.</p>
+<p>This page does not apply to <strong><abbr title="EX-CommandStation/Booster 1 Express">EX-CSB1</abbr></strong> or other ESP32-based <strong>EX-CommandStation</strong>s which have Wi-Fi built in.</p>
 <p>If you intend to use an ESP-01 development board, please skip to <a href="#esp-01-or-esp-01s">ESP01</a></p>
 <h2 id="ex-wifishield8266">EX-WiFiShield8266<a class="headerlink" href="#ex-wifishield8266" title="Permanent link">¶</a></h2>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../_static/images/wifi/makerfabs-esp8266-wifi-shield.png" data-title="WiFiShield8266" data-desc-position="bottom"><img align="right" alt="WiFiShield8266" src="../../_static/images/wifi/makerfabs-esp8266-wifi-shield.png" width="300px"></a></p>
@@ -12288,7 +12288,7 @@
 <p>Ensure that the WiFi shield is physically modified to avoid it communicating over the standard Arduino Tx/Rx Serial pins, by removing pins 0 and 1. If it has any DIP switches, set them all off.</p>
 </li>
 <li>
-<p>Mount the shield above the <strong>EX-CommandStation</strong> motor shield making sure the tab end of the WiFi shield is away from the power connector end of the motor shield.</p>
+<p>Mount the shield above the <strong>EX-CommandStation</strong> <abbr title="Also referred to as a 'motor controller' or 'motor driver'">motor shield</abbr> making sure the tab end of the WiFi shield is away from the power connector end of the <abbr title="Also referred to as a 'motor controller' or 'motor driver'">motor shield</abbr>.</p>
 </li>
 <li>
 <p>Use two male-female Dupont wires to connect the WiFi Shield to your <strong>EX-CommandStation</strong>. (Pay Attention... we get a lot of support calls from users who have not noticed that the wires cross!)</p>
@@ -12312,6 +12312,7 @@ These devices are not recommended because there are power consumption issues tha
 -<span class="w"> </span>Rx1<span class="w">   </span>-----&gt;<span class="w"> </span>Tx
 </code></pre></div>
 <p>Incorrect wiring can destroy this device.</p>
+<!-- These are case sensitive -->
 
 
 

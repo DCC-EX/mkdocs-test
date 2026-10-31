@@ -12397,6 +12397,7 @@
 <p>The <code>RANDOM_FOLLOW(sequence1,sequence2.....)</code> command will randomly choose between sequences with equal probability. Since this will always <code>FOLLOW</code> one of the specified sequences, this will never return to the next command.</p>
 <p>The <code>RANDOM_CALL(sequence1,sequence2.....)</code> command will randomly choose between sequences with equal probability and since they are CALLed they should <code>RETURN</code> and processing continues at the statement after <code>RANDOM_CALL</code>.</p>
 <p>Up to 8 sequences can be passed to these commands. If you need more than 8 just let us know and it can be extended but it's not as simple as changing a single number because the C++ pre-processor does not have macro parameter enumeration.</p>
+<!-- These are case sensitive -->
 
 
 

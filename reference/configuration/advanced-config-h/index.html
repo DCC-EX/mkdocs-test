@@ -12595,11 +12595,11 @@
 <h1 id="advanced-configh-settings-for-ex-commandstation-build">Advanced config.h settings for EX-CommandStation build<a class="headerlink" href="#advanced-configh-settings-for-ex-commandstation-build" title="Permanent link">¶</a></h1>
 <!-- ==TODO== MEDIUM - change the references on this page/section from the Arduino IDE to VSC/PIO -->
 
-<p>The basic Motor Driver, WiFi and Ethernet settings are covered in detail in <a href="../">basic config.h</a></p>
+<p>The basic <abbr title="Also referred to as a 'motor controller' or 'motor shield'">Motor Driver</abbr>, WiFi and Ethernet settings are covered in detail in <a href="../">basic config.h</a></p>
 <p>The following additional settings are for special cases and are not normally created automatically by the <strong>EX-Installer</strong>.</p>
 <p>These options should be coded in the file <code>config.h</code> which will be automatically included in the compilation process.</p>
 <h2 id="non-standard-motor-shields">Non-standard Motor Shields<a class="headerlink" href="#non-standard-motor-shields" title="Permanent link">¶</a></h2>
-<p>See also:<a href="../#motor-shield-definition-mandatory">Motor Shield basic config.h</a></p>
+<p>See also:<a href="../#motor-shield-definition-mandatory"><abbr title="Also referred to as a 'motor controller' or 'motor driver'">Motor Shield</abbr> basic config.h</a></p>
 <p>Further pre-defined shield names can be found in the code file MotorDrivers.h although their presence there does not necessarily mean that we can provide support for issues.</p>
 <p>In extreme cases, it is possible to craft your own definition
 for example:</p>
@@ -12611,7 +12611,7 @@ for example:</p>
 <p>refer to MotorDrivers.h for details of parameter meanings. Do NOT attempt to alter MotorDrivers.h or you will face versioning difficulties.</p>
 <p>NOTE: Before connecting these boards and selecting one in this software check the quick install guides! Some of these boards require a voltage generating resistor on the current sense pin of the device. Failure to select the correct resistor could damage the sense pin on your Arduino or destroy the device.</p>
 <h3 id="motor-shield-max-current">Motor shield max current<a class="headerlink" href="#motor-shield-max-current" title="Permanent link">¶</a></h3>
-<p>If you want to restrict the maximum current LOWER than what your motor shield can provide, you can do that here. For example if you have a motor shield that can provide 5A and your power supply can only provide 2.5A then you should restrict the maximum current to 2.25A (90% of 2.5A) so that <strong>DCC-EX</strong> shuts off the track before your PS does shut <strong>DCC-EX</strong>. MAX_CURRENT is in mA so for this example it would be 2250, adjust the number according to your PS. If your PS has a higher rating than your motor shield you do not need this. You can use this as well if you are cautious and your trains do not need full current.</p>
+<p>If you want to restrict the maximum current LOWER than what your <abbr title="Also referred to as a 'motor controller' or 'motor driver'">motor shield</abbr> can provide, you can do that here. For example if you have a <abbr title="Also referred to as a 'motor controller' or 'motor driver'">motor shield</abbr> that can provide 5A and your power supply can only provide 2.5A then you should restrict the maximum current to 2.25A (90% of 2.5A) so that <strong>DCC-EX</strong> shuts off the track before your PS does shut <strong>DCC-EX</strong>. MAX_CURRENT is in mA so for this example it would be 2250, adjust the number according to your PS. If your PS has a higher rating than your <abbr title="Also referred to as a 'motor controller' or 'motor driver'">motor shield</abbr> you do not need this. You can use this as well if you are cautious and your trains do not need full current.</p>
 <div class="language-cpp highlight"><pre><span></span><code><span class="cp">#define MAX_CURRENT 2250</span>
 </code></pre></div>
 <h2 id="tcpip-advanced-settings">TCP/IP Advanced settings<a class="headerlink" href="#tcpip-advanced-settings" title="Permanent link">¶</a></h2>
@@ -12657,17 +12657,17 @@ such as TrackManager power states have requested additional rows aware
 of the warning that this will take extra RAM.  if you wish to include additional rows</p>
 <div class="language-cpp highlight"><pre><span></span><code><span class="cp">#define MAX_CHARACTER_ROWS 12</span>
 </code></pre></div>
-<h2 id="disable-eeprom">Disable EEPROM<a class="headerlink" href="#disable-eeprom" title="Permanent link">¶</a></h2>
-<p>The EEPROM feature is only there for backward support of deprecated methods of turnout/point, sensor and output creation inherited from DCC++.
+<h2 id="disable-eeprom">Disable <abbr title="Electrically Erasable Programmable Read-Only Memory. Available on the Arduino Mega ONLY">EEPROM</abbr><a class="headerlink" href="#disable-eeprom" title="Permanent link">¶</a></h2>
+<p>The <abbr title="Electrically Erasable Programmable Read-Only Memory. Available on the Arduino Mega ONLY">EEPROM</abbr> feature is only there for backward support of deprecated methods of <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnout</abbr>/point, sensor and output creation inherited from DCC++.
 You are advised to turn this off to save memory. It is automatically turned of on devices that do not support this.</p>
 <div class="language-cpp highlight"><pre><span></span><code><span class="w"> </span><span class="cp">#define DISABLE_EEPROM</span>
 </code></pre></div>
-<h2 id="disable-prog">Disable PROG<a class="headerlink" href="#disable-prog" title="Permanent link">¶</a></h2>
+<h2 id="disable-prog">Disable <abbr title="Programming Track / Service Mode">PROG</abbr><a class="headerlink" href="#disable-prog" title="Permanent link">¶</a></h2>
 <p>If you do not need programming capability, you can disable all program track related commands. You might want to do that if you are building a <strong>EX-CommandStation</strong> that drives multiple tracks and you do not have a spare track output for programming.</p>
 <div class="language-cpp highlight"><pre><span></span><code><span class="w"> </span><span class="cp">#define DISABLE_PROG</span>
 </code></pre></div>
 <h2 id="redefine-dcc-boundary-between-short-and-long-loco-addresses">Redefine DCC boundary between SHORT and LONG loco addresses<a class="headerlink" href="#redefine-dcc-boundary-between-short-and-long-loco-addresses" title="Permanent link">¶</a></h2>
-<p>According to NMRA the last short address is 127 and the first long address is 128. There are manufacturers which have another view. Lenz CS, for example, have considered addresses long from 100. If you want to change to that mode, do:</p>
+<p>According to <abbr title="National Model Railroad Association (USA)">NMRA</abbr> the last short address is 127 and the first long address is 128. There are manufacturers which have another view. Lenz CS, for example, have considered addresses long from 100. If you want to change to that mode, do:</p>
 <div class="language-cpp highlight"><pre><span></span><code><span class="cp">#define HIGHEST_SHORT_ADDR 99</span>
 </code></pre></div>
 <p>If you want to run all your locos addressed long format, you could even do</p>
@@ -12679,17 +12679,17 @@ You are advised to turn this off to save memory. It is automatically turned of o
 <div class="language-cpp highlight"><pre><span></span><code><span class="cp">#define MAX_LOCOS 100</span>
 </code></pre></div>
 <h2 id="define-turnouts-and-accessories-to-follow-norm-rcn-213">Define TURNOUTS and ACCESSORIES to follow norm RCN-213<a class="headerlink" href="#define-turnouts-and-accessories-to-follow-norm-rcn-213" title="Permanent link">¶</a></h2>
-<p>According to norm RCN-213 a DCC packet with a 1 is closed-straight and one with a 0 is thrown-diverging.  In DCC++ Classic, and in previous versions of DCC++EX, a turnout/point throw command was implemented in the packet as '1' and a close command as '0'. The #define below makes the states match with the norm.  But we don't want to cause havoc on existent layouts, so we define this only for new installations. If you don't want this, don't add it to your config.h.</p>
+<p>According to norm RCN-213 a DCC packet with a 1 is closed-straight and one with a 0 is thrown-diverging.  In DCC++ Classic, and in previous versions of <abbr title="Old/obsolete name for **DCC-EX**. Some references still remain for backward compatibility">DCC++EX</abbr>, a <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnout</abbr>/point throw command was implemented in the packet as '1' and a close command as '0'. The #define below makes the states match with the norm.  But we don't want to cause havoc on existent layouts, so we define this only for new installations. If you don't want this, don't add it to your config.h.</p>
 <div class="language-cpp highlight"><pre><span></span><code><span class="cp">#define DCC_TURNOUTS_RCN_213</span>
 </code></pre></div>
-<p>By default, the driver which defines a DCC accessory decoder does send out the same state change on the DCC packet as it receives. This means a VPIN state=1 sends D=1 (close turnout/point or signal green) in the DCC packet. This can be reversed if necessary.</p>
+<p>By default, the driver which defines a DCC accessory decoder does send out the same state change on the DCC packet as it receives. This means a <abbr title="an Arduino pin number that has been extended to include pins on external devices or expanders">VPIN</abbr> state=1 sends D=1 (close <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnout</abbr>/point or signal green) in the DCC packet. This can be reversed if necessary.</p>
 <div class="language-cpp highlight"><pre><span></span><code><span class="cp">#define HAL_ACCESSORY_COMMAND_REVERSE</span>
 </code></pre></div>
-<p>If you have issues with that the direction of the accessory commands is reversed (for example when converting from another CS to <strong>DCC-EX</strong>) then you can use this to reverse the sense of all accessory commands sent over <strong>DCC-EX</strong>. This #define likewise inverts the behaviour of the <code>&lt;a&gt;</code> command for triggering DCC Accessory Decoders, so that <code>&lt;a addr subaddr 0&gt;</code> generates a DCC packet with D=1 (close turnout/point) and <code>&lt;a addr subaddr 1&gt;</code> generates D=0 (throw turnout/point).</p>
+<p>If you have issues with that the direction of the accessory commands is reversed (for example when converting from another CS to <strong>DCC-EX</strong>) then you can use this to reverse the sense of all accessory commands sent over <strong>DCC-EX</strong>. This #define likewise inverts the behaviour of the <code>&lt;a&gt;</code> command for triggering DCC Accessory Decoders, so that <code>&lt;a addr subaddr 0&gt;</code> generates a DCC packet with D=1 (close <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnout</abbr>/point) and <code>&lt;a addr subaddr 1&gt;</code> generates D=0 (throw <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnout</abbr>/point).</p>
 <div class="language-cpp highlight"><pre><span></span><code><span class="cp">#define DCC_ACCESSORY_COMMAND_REVERSE</span>
 </code></pre></div>
 <h2 id="handling-multiple-serial-throttles">Handling multiple serial throttles<a class="headerlink" href="#handling-multiple-serial-throttles" title="Permanent link">¶</a></h2>
-<p>The <strong>EX-CommandStation</strong> always operates with the default Serial port. Diagnostics are only emitted on the default serial port and not broadcast. Other serial throttles may be added to the Serial1...Serial6 ports which may or may not exist on your CPU (Mega has 3, <strong>EX-CSB1</strong> has 1, and STM32 have up to 6.). To monitor a throttle on one or more serial ports, supply a #define for each serial port required.</p>
+<p>The <strong>EX-CommandStation</strong> always operates with the default Serial port. Diagnostics are only emitted on the default serial port and not broadcast. Other serial throttles may be added to the Serial1...Serial6 ports which may or may not exist on your CPU (Mega has 3, <strong><abbr title="EX-CommandStation/Booster 1 Express">EX-CSB1</abbr></strong> has 1, and STM32 have up to 6.). To monitor a throttle on one or more serial ports, supply a #define for each serial port required.</p>
 <p><strong>NOTE: DO NOT define here the WiFi shield serial port or your WiFi will not work.</strong></p>
 <div class="language-cpp highlight"><pre><span></span><code><span class="c1">// SERIAL1 in use by Wifi</span>
 <span class="cp">#define SERIAL2_COMMANDS</span>
@@ -12704,7 +12704,7 @@ You are advised to turn this off to save memory. It is automatically turned of o
 <p>If you enable this there are some implications:</p>
 <ol>
 <li>WiFi will sleep more (as WiFi and BT share the radio). So WiFi performance may suffer</li>
-<li>The app will be bigger that 1.2MB, so the default partition scheme will not work any more. You need to choose a partition scheme with 2MB (or bigger). For example "NO OTA (2MB APP, 2MB SPIFFS)" in the Arduino IDE.</li>
+<li>The app will be bigger that 1.2MB, so the default partition scheme will not work any more. You need to choose a partition scheme with 2MB (or bigger). For example "NO OTA (2MB APP, 2MB SPIFFS)" in the <abbr title="Not recommended. Use EX-Installer or, if experienced, Microsoft Visual Studio Code (VSC)">Arduino IDE</abbr>.</li>
 <li>There is no security (PIN) implemented. Everyone in radio range can pair with your <strong>EX-CommandStation</strong>.</li>
 </ol>
 <div class="language-cpp highlight"><pre><span></span><code><span class="cp">#define SERIAL_BT_COMMANDS</span>
@@ -12714,14 +12714,14 @@ You are advised to turn this off to save memory. It is automatically turned of o
 <p>Arduino pin D2 is GPIO 26 is Booster Input on ESPDuino-32</p>
 <div class="language-cpp highlight"><pre><span></span><code><span class="cp">#define BOOSTER_INPUT 26</span>
 </code></pre></div>
-<p>GPIO 32 is Booster Input on EX-CSB1</p>
+<p>GPIO 32 is Booster Input on <abbr title="EX-CommandStation/Booster 1 Express">EX-CSB1</abbr></p>
 <div class="language-cpp highlight"><pre><span></span><code><span class="cp">#define BOOSTER_INPUT 32</span>
 </code></pre></div>
 <h2 id="esp32-led-wifi-indicator">ESP32 LED WiFi Indicator<a class="headerlink" href="#esp32-led-wifi-indicator" title="Permanent link">¶</a></h2>
 <p>GPIO 2 on ESPDuino-32</p>
 <div class="language-cpp highlight"><pre><span></span><code><span class="cp">#define WIFI_LED 2</span>
 </code></pre></div>
-<p>GPIO 33 on EX-CSB1</p>
+<p>GPIO 33 on <abbr title="EX-CommandStation/Booster 1 Express">EX-CSB1</abbr></p>
 <div class="language-cpp highlight"><pre><span></span><code><span class="cp">#define WIFI_LED 33</span>
 </code></pre></div>
 <h2 id="sabertooth">SABERTOOTH<a class="headerlink" href="#sabertooth" title="Permanent link">¶</a></h2>
@@ -12736,6 +12736,7 @@ You are advised to turn this off to save memory. It is automatically turned of o
 <span class="cp">#define ENABLE_DIAG</span>
 <span class="cp">#define MAX_LOCOS 4</span>
 </code></pre></div>
+<!-- These are case sensitive -->
 
 
 

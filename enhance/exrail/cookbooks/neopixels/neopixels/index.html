@@ -12345,13 +12345,14 @@
 <h2 id="code">code<a class="headerlink" href="#code" title="Permanent link">¶</a></h2>
 <div class="language-cpp highlight"><pre><span></span><code><span class="n">NEOPIXEL</span><span class="p">([</span><span class="o">-</span><span class="p">]</span><span class="n">vpin</span><span class="p">,</span><span class="w"> </span><span class="n">red</span><span class="p">,</span><span class="w"> </span><span class="n">green</span><span class="p">,</span><span class="w"> </span><span class="n">blue</span><span class="w"> </span><span class="p">[,</span><span class="n">count</span><span class="p">])</span>
 </code></pre></div>
-<p>vpin = pin number of the individual pixel in the range defined by the <a href="../">HAL(NeoPixel...) command</a>.
+<p><abbr title="an Arduino pin number that has been extended to include pins on external devices or expanders">vpin</abbr> = pin number of the individual pixel in the range defined by the <a href="../"><abbr title="Hardware Abstraction Layer. Allows the CS to discover and use the hardware through a simple abstract API, regardless of the type of underlying hardware.">HAL</abbr>(NeoPixel...) command</a>.
 red = 0..255 intensity of the red channel
 green = 0..255 intensity of the green channel
 blue = 0..255 intensity of the blue channel
-count = numver of pixels to set, starting at vpin. Default =1.</p>
+count = numver of pixels to set, starting at <abbr title="an Arduino pin number that has been extended to include pins on external devices or expanders">vpin</abbr>. Default =1.</p>
 <p>Setting pixels on or off (without colour change) can be done with SET/RESET.</p>
 <p>Because the pixels obey SET/RESET, the BLINK command can also be used to control blinking a pixel.</p>
+<!-- These are case sensitive -->
 
 
 

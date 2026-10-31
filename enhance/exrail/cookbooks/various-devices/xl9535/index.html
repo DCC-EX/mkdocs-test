@@ -12343,10 +12343,11 @@
 <h1 id="xl9535-relay-board">XL9535 Relay Board<a class="headerlink" href="#xl9535-relay-board" title="Permanent link">¶</a></h1>
 <p>The XL9535 devices have varying numbers of relays and are easier to wire than having to have separate relays connected to an IO Expander (such as MCP23017 or PCA/TCA9555)</p>
 <h2 id="code">code<a class="headerlink" href="#code" title="Permanent link">¶</a></h2>
-<p>Driver definition is by a HAL command in myAutomation.h (or files it includes)</p>
+<p>Driver definition is by a <abbr title="Hardware Abstraction Layer. Allows the CS to discover and use the hardware through a simple abstract API, regardless of the type of underlying hardware.">HAL</abbr> command in myAutomation.h (or files it includes)</p>
 <div class="language-cpp highlight"><pre><span></span><code><span class="n">HAL</span><span class="p">(</span><span class="n">XL9535</span><span class="p">,</span><span class="w"> </span><span class="n">firstVpin</span><span class="p">,</span><span class="w"> </span><span class="n">NumberOfRelays</span><span class="p">,</span><span class="w"> </span><span class="n">i2cAddress</span><span class="p">)</span>
 </code></pre></div>
 <p>For devices behind multiplexors see <a href="../multiplexors/">multiplexors</a></p>
+<!-- These are case sensitive -->
 
 
 

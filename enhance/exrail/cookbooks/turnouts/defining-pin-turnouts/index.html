@@ -12343,15 +12343,16 @@
 <h1 id="defining-pin-turnoutspoints">Defining PIN Turnouts/Points<a class="headerlink" href="#defining-pin-turnoutspoints" title="Permanent link">¶</a></h1>
 <p>PIN Turnouts/Points operate by detecting the state of an output pin.</p>
 <h2 id="code">code<a class="headerlink" href="#code" title="Permanent link">¶</a></h2>
-<p>Define pin based turnouts/points using <strong>EXRAIL</strong>.</p>
+<p>Define pin based <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnouts</abbr>/points using <strong>EXRAIL</strong>.</p>
 <div class="language-cpp highlight"><pre><span></span><code><span class="n">PIN_TURNOUT</span><span class="p">(</span><span class="n">id</span><span class="p">,</span><span class="w"> </span><span class="n">vpin</span><span class="p">,</span><span class="w"> </span><span class="s">"description"</span><span class="p">)</span>
 </code></pre></div>
-<p>id = Unique turnout/point ID within the CommandStation. All other turnout/point commands will refer to this turnout/point by this id.</p>
-<p>vpin- the pin to be set HIGH for thrown and LOW for closed</p>
-<p>description = A human-friendly description of the turnout/point that will appear in WiThrottle apps and Engine Driver. Note that this must be enclosed in quotes "". In some cases the HIDDEN keyword can be used here to prevent the turnout/point being visible to the throttles.</p>
+<p>id = Unique <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnout</abbr>/point ID within the CommandStation. All other <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnout</abbr>/point commands will refer to this <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnout</abbr>/point by this id.</p>
+<p><abbr title="an Arduino pin number that has been extended to include pins on external devices or expanders">vpin</abbr>- the pin to be set HIGH for thrown and LOW for closed</p>
+<p>description = A human-friendly description of the <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnout</abbr>/point that will appear in <abbr title="Communication Protocol. Trademark + iOS app owned by Brett Hoffman">WiThrottle</abbr> apps and Engine Driver. Note that this must be enclosed in quotes "". In some cases the HIDDEN keyword can be used here to prevent the <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnout</abbr>/point being visible to the throttles.</p>
 <p>For example:</p>
 <div class="language-cpp highlight"><pre><span></span><code><span class="n">PIN_TURNOUT</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span><span class="mi">201</span><span class="p">,</span><span class="s">"Round the bend"</span><span class="p">)</span>
 </code></pre></div>
+<!-- These are case sensitive -->
 
 
 

@@ -12629,7 +12629,7 @@
 
 
 <h1 id="controlling-sounds-in-exrail">Controlling Sounds in EXRAIL<a class="headerlink" href="#controlling-sounds-in-exrail" title="Permanent link">¶</a></h1>
-<p>There are multiple <code>PLAY_</code> commands in <strong>EXRAIL</strong> is used to control sound. The first parameter is always the VPIN of the device, the meaning of the arguments depend on the command.</p>
+<p>There are multiple <code>PLAY_</code> commands in <strong>EXRAIL</strong> is used to control sound. The first parameter is always the <abbr title="an Arduino pin number that has been extended to include pins on external devices or expanders">VPIN</abbr> of the device, the meaning of the arguments depend on the command.</p>
 <p>Note: Timing and race conditions may occur with multiple <strong>EXRAIL</strong> tasks sending commands to the same DFPlayer/UDPAudio to the extent that commands could be overwritten before they are executed or not executed in the desired order, possibly leaving the sound module in an unknown state or causing a timeout.</p>
 <p>There are only minor differences between sound devices but the <strong>EXRAIL</strong> commands generally hide these.
 More details for <a href="?DFPLayer">DFPlayer</a> and <a href="?UDPAudio">UDPAudio</a></p>
@@ -12678,7 +12678,7 @@ More details for <a href="?DFPLayer">DFPlayer</a> and <a href="?UDPAudio">UDPAud
 <span class="n">PLAY_TRACK</span><span class="p">(</span><span class="n">STATION_SPEAKER</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="mi">20</span><span class="p">)</span><span class="w"> </span><span class="c1">// Plays after track 2 completes</span>
 </code></pre></div>
 <h2 id="example-exrail-routes">Example EXRAIL Routes<a class="headerlink" href="#example-exrail-routes" title="Permanent link">¶</a></h2>
-<p>The following assume that the sound player is on a VPIN created with an ALIAS..</p>
+<p>The following assume that the sound player is on a <abbr title="an Arduino pin number that has been extended to include pins on external devices or expanders">VPIN</abbr> created with an ALIAS..</p>
 <div class="language-cpp highlight"><pre><span></span><code><span class="n">ALIAS</span><span class="p">(</span><span class="n">STATION_SPEAKER</span><span class="p">,</span><span class="mi">1100</span><span class="p">)</span>
 </code></pre></div>
 <h3 id="basic-playback">Basic Playback<a class="headerlink" href="#basic-playback" title="Permanent link">¶</a></h3>
@@ -12722,6 +12722,7 @@ More details for <a href="?DFPLayer">DFPlayer</a> and <a href="?UDPAudio">UDPAud
 <span class="w">    </span><span class="n">PLAY_VOLUME</span><span class="p">(</span><span class="n">STATION_SPEAKER</span><span class="p">,</span><span class="w"> </span><span class="mi">24</span><span class="p">)</span><span class="w">    </span><span class="c1">// 24 on 0-30 scale \= 80%</span>
 <span class="n">DONE</span>
 </code></pre></div>
+<!-- These are case sensitive -->
 
 
 

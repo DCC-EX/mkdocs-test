@@ -12281,35 +12281,35 @@
 <h2 id="motor-shield-definition-mandatory">Motor shield definition (Mandatory)<a class="headerlink" href="#motor-shield-definition-mandatory" title="Permanent link">¶</a></h2>
 <div class="language-cpp highlight"><pre><span></span><code><span class="cp">#define MOTOR_SHIELD_TYPE typeName</span>
 </code></pre></div>
-<p>The motor shield definition tells the code how many tracks your <strong>EX-CommandStation</strong> has and which pins are used to talk to the motor shield(s).
+<p>The <abbr title="Also referred to as a 'motor controller' or 'motor driver'">motor shield</abbr> definition tells the code how many tracks your <strong>EX-CommandStation</strong> has and which pins are used to talk to the <abbr title="Also referred to as a 'motor controller' or 'motor driver'">motor shield</abbr>(s).
 It also describes the electrical characteristics of the current sensing and the current limits to be applied to each track.</p>
-<p>There are a number of pre-defined motor shield typeNames available of which the most common are:</p>
+<p>There are a number of pre-defined <abbr title="Also referred to as a 'motor controller' or 'motor driver'">motor shield</abbr> typeNames available of which the most common are:</p>
 <ul>
 <li>STANDARD_MOTOR_SHIELD : Arduino Motor shield Rev3 based on the L298 with 18V 2A per channel</li>
-<li>EX8874_SHIELD         : DCC-EX TI DRV8874 based motor shield</li>
+<li>EX8874_SHIELD         : DCC-EX TI DRV8874 based <abbr title="Also referred to as a 'motor controller' or 'motor driver'">motor shield</abbr></li>
 <li>EXCSB1                : DCC-EX EX-CSB-1 hardware</li>
 <li>EXCSB1_WITH_EX8874    : DCC-EX EX-CSB-1 hardware with DCC-EX TI DRV8874 shield</li>
-<li>NO_SHIELD             : CS without any motor shield (as an accessory only CS)</li>
+<li>NO_SHIELD             : CS without any <abbr title="Also referred to as a 'motor controller' or 'motor driver'">motor shield</abbr> (as an accessory only CS)</li>
 </ul>
 <p>Further pre-defined shield names can be found in the code file MotorDrivers.h although their presence there does not necessarily mean that we can provide support for issues.</p>
 <h2 id="wifi-settings">WiFi settings<a class="headerlink" href="#wifi-settings" title="Permanent link">¶</a></h2>
 <p>Ignore this if you do not have WiFi on your <strong>EX-CommandStation</strong> or choose to avoid it.</p>
-<p>The <strong>EX-CSB1</strong> and other ESP32-based <strong>EX-CommandStation</strong> use a completely different method to define WiFi settings. This is to allow WiFi configuration without having to reinstall the software.</p>
-<p><a href="../../prepare-to-use/installer/config-wifi-esp32/">WiFi setup for <strong>EX-CSB1</strong> or ESP32</a></p>
+<p>The <strong><abbr title="EX-CommandStation/Booster 1 Express">EX-CSB1</abbr></strong> and other ESP32-based <strong>EX-CommandStation</strong> use a completely different method to define WiFi settings. This is to allow WiFi configuration without having to reinstall the software.</p>
+<p><a href="../../prepare-to-use/installer/config-wifi-esp32/">WiFi setup for <strong><abbr title="EX-CommandStation/Booster 1 Express">EX-CSB1</abbr></strong> or ESP32</a></p>
 <p><a href="../../prepare-to-use/installer/config-wifi-shield/">WiFi setup for WiFi shield</a></p>
 <h2 id="ethernet-settings">Ethernet settings<a class="headerlink" href="#ethernet-settings" title="Permanent link">¶</a></h2>
 <p>It is not valid to enable Ethernet and WiFi at the same time.</p>
 <div class="language-cpp highlight"><pre><span></span><code><span class="cp">#define ENABLE_ETHERNET true</span>
 </code></pre></div>
 <h2 id="lcdoled-support">LCD/OLED support<a class="headerlink" href="#lcdoled-support" title="Permanent link">¶</a></h2>
-<p>The LCD feature requires an I2C enabled LCD screen using a Hitachi HD44780
-controller and a commonly available PCF8574 based I2C 'backpack'.
-To define LCD_DRIVER for I2C address 0x27, 16 cols, 2 rows</p>
+<p>The LCD feature requires an <abbr title="(Inter-Integrated Circuit, pronounced &quot;eye-squared-see&quot;) is a synchronous, multi-controller/multi-target serial communication protocol">I2C</abbr> enabled LCD screen using a Hitachi HD44780
+controller and a commonly available PCF8574 based <abbr title="(Inter-Integrated Circuit, pronounced &quot;eye-squared-see&quot;) is a synchronous, multi-controller/multi-target serial communication protocol">I2C</abbr> 'backpack'.
+To define LCD_DRIVER for <abbr title="(Inter-Integrated Circuit, pronounced &quot;eye-squared-see&quot;) is a synchronous, multi-controller/multi-target serial communication protocol">I2C</abbr> address 0x27, 16 cols, 2 rows</p>
 <div class="language-cpp highlight"><pre><span></span><code><span class="cp">#define LCD_DRIVER  0x27,16,2</span>
 </code></pre></div>
 <p>For an OLED display define OLED_DRIVER [address,]width,height in pixels (address auto detected if not supplied)</p>
-<p>128x32 or 128x64 I2C SSD1306-based devices are supported.
-Use 132,64 for a SH1106-based I2C device with a 132x64 display.</p>
+<p>128x32 or 128x64 <abbr title="(Inter-Integrated Circuit, pronounced &quot;eye-squared-see&quot;) is a synchronous, multi-controller/multi-target serial communication protocol">I2C</abbr> SSD1306-based devices are supported.
+Use 132,64 for a SH1106-based <abbr title="(Inter-Integrated Circuit, pronounced &quot;eye-squared-see&quot;) is a synchronous, multi-controller/multi-target serial communication protocol">I2C</abbr> device with a 132x64 display.</p>
 <p>For example</p>
 <div class="language-cpp highlight"><pre><span></span><code><span class="cp">#define OLED_DRIVER 132,64</span>
 </code></pre></div>
@@ -12328,16 +12328,17 @@ Use 132,64 for a SH1106-based I2C device with a 132x64 display.</p>
 <p>If you wish to include additional rows:</p>
 <div class="language-cpp highlight"><pre><span></span><code><span class="cp">#define MAX_CHARACTER_ROWS 12</span>
 </code></pre></div>
-<h2 id="disable-eeprom">Disable EEPROM<a class="headerlink" href="#disable-eeprom" title="Permanent link">¶</a></h2>
-<p>The EEPROM feature is only there for backward support of deprecated methods of turnout/point, sensor and output creation inherited from DCC++.</p>
+<h2 id="disable-eeprom">Disable <abbr title="Electrically Erasable Programmable Read-Only Memory. Available on the Arduino Mega ONLY">EEPROM</abbr><a class="headerlink" href="#disable-eeprom" title="Permanent link">¶</a></h2>
+<p>The <abbr title="Electrically Erasable Programmable Read-Only Memory. Available on the Arduino Mega ONLY">EEPROM</abbr> feature is only there for backward support of deprecated methods of <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnout</abbr>/point, sensor and output creation inherited from DCC++.</p>
 <p>You are advised to turn this off to save memory.</p>
 <div class="language-cpp highlight"><pre><span></span><code><span class="w"> </span><span class="cp">#define DISABLE_EEPROM</span>
 </code></pre></div>
 <h2 id="delayed-startup">Delayed startup<a class="headerlink" href="#delayed-startup" title="Permanent link">¶</a></h2>
-<p>Some newer 32bit microcontrollers boot very quickly, so powering on I2C and other peripheral devices at the same time may result in the CommandStation booting too quickly to detect them.</p>
+<p>Some newer 32bit <abbr title="ESP32, Nucleo, or Arduino Mega">microcontrollers</abbr> boot very quickly, so powering on <abbr title="(Inter-Integrated Circuit, pronounced &quot;eye-squared-see&quot;) is a synchronous, multi-controller/multi-target serial communication protocol">I2C</abbr> and other peripheral devices at the same time may result in the CommandStation booting too quickly to detect them.</p>
 <p>To work around this, set STARTUP_DELAY to a value in milliseconds that works for your environment.</p>
 <div class="language-cpp highlight"><pre><span></span><code><span class="w"> </span><span class="cp">#define STARTUP_DELAY 3000</span>
 </code></pre></div>
+<!-- These are case sensitive -->
 
 
 

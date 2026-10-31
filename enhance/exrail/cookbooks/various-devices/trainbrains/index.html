@@ -12385,18 +12385,18 @@
 
 
 <h1 id="trainbrains-devices">Trainbrains Devices<a class="headerlink" href="#trainbrains-devices" title="Permanent link">¶</a></h1>
-<p>These devices are available from <a href="https://trainbrains.eu">trainbrains.eu</a> and operate over I2C.</p>
-<p>They auto-detect the device type so it is only necessary to provide HAL statements in myAutomation.h to identify that the device on the given address is a Trainbrains device and the number of VPINs that will be reserved for it by <strong>DCC-EX</strong>.</p>
-<h2 id="turnoutpoint-drivers-solenoid-and-servo">Turnout/Point drivers (solenoid and servo)<a class="headerlink" href="#turnoutpoint-drivers-solenoid-and-servo" title="Permanent link">¶</a></h2>
-<p>Use the HAL statement to identify the device I2C address and create PIN_TURNOUT definitions so that <strong>DCC-EX</strong> sees the vpins as turnouts/points.</p>
+<p>These devices are available from <a href="https://trainbrains.eu">trainbrains.eu</a> and operate over <abbr title="(Inter-Integrated Circuit, pronounced &quot;eye-squared-see&quot;) is a synchronous, multi-controller/multi-target serial communication protocol">I2C</abbr>.</p>
+<p>They auto-detect the device type so it is only necessary to provide <abbr title="Hardware Abstraction Layer. Allows the CS to discover and use the hardware through a simple abstract API, regardless of the type of underlying hardware.">HAL</abbr> statements in myAutomation.h to identify that the device on the given address is a Trainbrains device and the number of VPINs that will be reserved for it by <strong>DCC-EX</strong>.</p>
+<h2 id="turnoutpoint-drivers-solenoid-and-servo"><abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">Turnout</abbr>/Point drivers (solenoid and servo)<a class="headerlink" href="#turnoutpoint-drivers-solenoid-and-servo" title="Permanent link">¶</a></h2>
+<p>Use the <abbr title="Hardware Abstraction Layer. Allows the CS to discover and use the hardware through a simple abstract API, regardless of the type of underlying hardware.">HAL</abbr> statement to identify the device <abbr title="(Inter-Integrated Circuit, pronounced &quot;eye-squared-see&quot;) is a synchronous, multi-controller/multi-target serial communication protocol">I2C</abbr> address and create PIN_TURNOUT definitions so that <strong>DCC-EX</strong> sees the vpins as <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnouts</abbr>/points.</p>
 <div class="language-cpp highlight"><pre><span></span><code><span class="n">HAL</span><span class="p">(</span><span class="n">Trainbrains</span><span class="p">,</span><span class="mi">700</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mh">0x14</span><span class="p">)</span>
 <span class="n">PIN_TURNOUT</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">700</span><span class="p">,</span><span class="s">"Coal yard exit"</span><span class="p">)</span>
 <span class="n">PIN_TURNOUT</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">701</span><span class="p">,</span><span class="s">"Oil yard exit"</span><span class="p">)</span>
 </code></pre></div>
-<p>This creates VPINS 700 and 701 as turnouts/points. All other turnout/point operations in <strong>DCC-EX</strong> operate as normal.
-This isn't going to work if the devivce at I2C address 0x15 is not a Trainbrains turnout/point controller.</p>
+<p>This creates VPINS 700 and 701 as <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnouts</abbr>/points. All other <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnout</abbr>/point operations in <strong>DCC-EX</strong> operate as normal.
+This isn't going to work if the devivce at <abbr title="(Inter-Integrated Circuit, pronounced &quot;eye-squared-see&quot;) is a synchronous, multi-controller/multi-target serial communication protocol">I2C</abbr> address 0x15 is not a Trainbrains <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnout</abbr>/point controller.</p>
 <h2 id="signal-controller">Signal controller<a class="headerlink" href="#signal-controller" title="Permanent link">¶</a></h2>
-<p>The signal controller only has one VPIN but may have hundreds of different combinations of lamps, blinking and state. This can be handled by pretending it is a NEOPIXEL signal and setting the Red channel to the lamp combination, the Blue channel to the blinking combination and the Green channel to the signal state. (Refer to Trainbrains documentation for details)</p>
+<p>The signal controller only has one <abbr title="an Arduino pin number that has been extended to include pins on external devices or expanders">VPIN</abbr> but may have hundreds of different combinations of lamps, blinking and state. This can be handled by pretending it is a NEOPIXEL signal and setting the Red channel to the lamp combination, the Blue channel to the blinking combination and the Green channel to the signal state. (Refer to Trainbrains documentation for details)</p>
 <p>For example: (This is taken from the NEOPIXEL definitions, we can replace this with a suitable alias. Just replace the colour values with the lamps,blink,state values. )</p>
 <div class="language-cpp highlight"><pre><span></span><code><span class="n">HAL</span><span class="p">(</span><span class="n">Trainbrains</span><span class="p">,</span><span class="mi">720</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mh">0x15</span><span class="p">)</span>
 
@@ -12431,6 +12431,7 @@ This isn't going to work if the devivce at I2C address 0x15 is not a Trainbrains
 </code></pre></div>
 <p>makes virtual pins 730..732 usable as sensors like any other in DCC-EX</p>
 <p>For devices behind multiplexors see <a href="../multiplexors/">multiplexors</a></p>
+<!-- These are case sensitive -->
 
 
 

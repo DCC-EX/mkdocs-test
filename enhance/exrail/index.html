@@ -12240,9 +12240,9 @@
 
 
 <h1 id="what-is-exrail">What is EXRAIL?<a class="headerlink" href="#what-is-exrail" title="Permanent link">¶</a></h1>
-<p><strong>EXRAIL</strong> is an "EXtended Railroad Automation Instruction Language" used to:</p>
+<p><strong>EXRAIL</strong> is an "EXtended <abbr title="North American term. Elsewhere referred to as a &quot;Railway&quot;">Railroad</abbr> Automation Instruction Language" used to:</p>
 <ul>
-<li>Describe your turnouts/points, signals etc.</li>
+<li>Describe your <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnouts</abbr>/points, signals etc.</li>
 <li>Configure your <strong>EX-CommandStation</strong> to understand the hardware and accessories you have attached.</li>
 <li>Handle what to do when things happen (e.g. a button is pressed)</li>
 <li>Create automated route settings through your layout</li>
@@ -12253,22 +12253,22 @@
 </ul>
 <h2 id="you-dont-need">You DON'T need<a class="headerlink" href="#you-dont-need" title="Permanent link">¶</a></h2>
 <ul>
-<li>JMRI, or any additional utilities</li>
-<li>Engine Driver, ThrottleCard, or any other apps and devices that support the WiThrottle protocol or Native Serial protocol</li>
+<li><abbr title="Java Model Railroad Interface">JMRI</abbr>, or any additional utilities</li>
+<li>Engine Driver, ThrottleCard, or any other apps and devices that support the <abbr title="Communication Protocol. Trademark + iOS app owned by Brett Hoffman">WiThrottle</abbr> protocol or Native Serial protocol</li>
 <li>A separate computer living under your layout</li>
 <li>Knowledge of C++ or Python/Jython programming</li>
 </ul>
 <p>Although <strong>EXRAIL</strong> has more than 100 individual commands available, it is generally easier to work from the how-to cookbook examples rather than attempt to understand every feature. It's important to understand a few principles first.</p>
 <h2 id="important-background-information">Important Background Information<a class="headerlink" href="#important-background-information" title="Permanent link">¶</a></h2>
 <ul>
-<li><strong>EXRAIL</strong> scripts are written into a file called myAutomation.h which you can edit with any suitable text editor. You don't need any extra tools installed on your PC that you don't already have in VSCode or the <strong>EX-Installer</strong>.</li>
+<li><strong>EXRAIL</strong> scripts are written into a file called myAutomation.h which you can edit with any suitable text editor. You don't need any extra tools installed on your PC that you don't already have in <abbr title="Microsoft Visual Studio Code. Recommended IDE if EX-Installer is insufficient for your needs.">VSCode</abbr> or the <strong>EX-Installer</strong>.</li>
 <li>When you upload the <strong>EX-CommandStation</strong> with the <strong>DCC-EX</strong> code, myAutomation.h is used by the compiler to configure the software and embed any sequences so that the <strong>EX-CommandStation</strong> can run without further assistance from your PC. If you change myAutomation.h then you must upload again.</li>
 <li><strong>EXRAIL</strong> can run multiple sequences simultaneously so it's great for annoying Arduino programmers who find that extremely complex to do in C++.</li>
 </ul>
 <h2 id="basic-building-blocks">Basic building blocks<a class="headerlink" href="#basic-building-blocks" title="Permanent link">¶</a></h2>
 <p>There are a few basic building blocks that will appear in the examples:</p>
 <ul>
-<li><code>SEQUENCE</code> - Simply a list of things to be done in order. These things might be to actually drive a train around, or merely to set some turnouts/points or flash some scene or panel lights. Actions can be made to wait for conditions to be met, like a sensor detecting a train, a button being pushed, or a period of time elapsing.
+<li><code>SEQUENCE</code> - Simply a list of things to be done in order. These things might be to actually drive a train around, or merely to set some <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnouts</abbr>/points or flash some scene or panel lights. Actions can be made to wait for conditions to be met, like a sensor detecting a train, a button being pushed, or a period of time elapsing.
 e.g.</li>
 </ul>
 <div class="language-cpp highlight"><pre><span></span><code><span class="w">  </span><span class="n">SEQUENCE</span><span class="p">(</span><span class="mi">27</span><span class="p">)</span><span class="w"> </span><span class="c1">// Close crossing gates</span>
@@ -12278,7 +12278,7 @@ e.g.</li>
 <span class="w">    </span><span class="n">DONE</span><span class="w">   </span><span class="c1">// sequence completed</span>
 </code></pre></div>
 <ul>
-<li><code>ROUTE</code> – A special type of SEQUENCE that is made visible to a throttle with a readable name so the user can press a button to get the sequence executed. This might be best used to set a series of turnouts/points and signals to create a route through the layout. For example</li>
+<li><code>ROUTE</code> – A special type of SEQUENCE that is made visible to a throttle with a readable name so the user can press a button to get the sequence executed. This might be best used to set a series of <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnouts</abbr>/points and signals to create a route through the layout. For example</li>
 </ul>
 <div class="language-cpp highlight"><pre><span></span><code><span class="w">  </span><span class="n">ROUTE</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="s">"Platform A to Mainline"</span><span class="p">)</span>
 <span class="w">    </span><span class="n">THROW</span><span class="p">(</span><span class="mi">27</span><span class="p">)</span><span class="w"> </span><span class="c1">// set turnouts/points</span>
@@ -12300,7 +12300,7 @@ e.g.</li>
 <span class="w">    </span><span class="n">DONE</span>
 </code></pre></div>
 <ul>
-<li>ON-[HANDLER] – a sequence that is automatically started when some event happens. For example when a button is pressed (ONBUTTON) or a turnout is changed (ONTHROW / ONCLOSE) so you can intercept turnout/point changes to automatically adjust signals or other turnouts.</li>
+<li>ON-[HANDLER] – a sequence that is automatically started when some event happens. For example when a button is pressed (ONBUTTON) or a <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnout</abbr> is changed (ONTHROW / ONCLOSE) so you can intercept <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnout</abbr>/point changes to automatically adjust signals or other <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnouts</abbr>.</li>
 </ul>
 <div class="language-cpp highlight"><pre><span></span><code><span class="n">ONBUTTON</span><span class="p">(</span><span class="mi">167</span><span class="p">)</span>
 <span class="w">  </span><span class="n">RED</span><span class="p">(</span><span class="mi">108</span><span class="p">)</span>
@@ -12309,7 +12309,7 @@ e.g.</li>
 <span class="w">  </span><span class="n">DONE</span>
 </code></pre></div>
 <h2 id="a-users-story">A users story<a class="headerlink" href="#a-users-story" title="Permanent link">¶</a></h2>
-<p>I have used C++ on Arduino's and Python/Jython on JMRI software to build Automation sequences. I now use <strong>EXRAIL</strong> instead because:</p>
+<p>I have used C++ on Arduino's and Python/Jython on <abbr title="Java Model Railroad Interface">JMRI</abbr> software to build Automation sequences. I now use <strong>EXRAIL</strong> instead because:</p>
 <ul>
 <li>
 <p>It's significantly easier and more flexible than the other two options.</p>
@@ -12318,12 +12318,13 @@ e.g.</li>
 <p>I reduce the number of Uno and Nano accessory boards needed to do the same tasks on the layout by using the <strong>DCC-EX EX-CommandStation</strong> and embedded <strong>EXRAIL</strong> instead.</p>
 </li>
 <li>
-<p>I can create Automations, Routes, &amp; Sequence scripts With <strong>EXRAIL</strong> on the <strong>EX-CommandStation</strong> and still access them from JMRI PanelPro and DecoderPro GUI buttons with a simple sendDCCmessage.py script pointer that passes them to the <strong>EXRAIL</strong> scripts on the <strong>EX-CommandStation</strong>, so I don't have to rewrite the script in Jython/Python.</p>
+<p>I can create Automations, Routes, &amp; Sequence scripts With <strong>EXRAIL</strong> on the <strong>EX-CommandStation</strong> and still access them from <abbr title="Java Model Railroad Interface">JMRI</abbr> PanelPro and DecoderPro GUI buttons with a simple sendDCCmessage.py script pointer that passes them to the <strong>EXRAIL</strong> scripts on the <strong>EX-CommandStation</strong>, so I don't have to rewrite the script in Jython/Python.</p>
 </li>
 <li>
 <p><strong>EXRAIL</strong> is ten times easier to learn and use and is more flexible than the other methods.</p>
 </li>
 </ul>
+<!-- These are case sensitive -->
 
 
 

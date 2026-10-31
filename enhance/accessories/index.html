@@ -12229,7 +12229,7 @@
 
 
 <h1 id="overview-what-are-accessories">Overview - What are Accessories?<a class="headerlink" href="#overview-what-are-accessories" title="Permanent link">¶</a></h1>
-<p>Once you go beyond just wanting to run trains, and want to control turnouts (points), signals, turntables, and potentially automate other parts of your layout, you will need to know how to connect accessories to your <strong>EX-CommandStation</strong>.</p>
+<p>Once you go beyond just wanting to run trains, and want to control <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnouts</abbr> (points), signals, turntables, and potentially automate other parts of your layout, you will need to know how to connect accessories to your <strong>EX-CommandStation</strong>.</p>
 <p>Within the <strong>DCC-EX</strong> ecosystem, an accessory is anything you can connect to or control from your <strong>EX-CommandStation</strong> which also includes our other products such as <strong>EX-FastClock</strong>, <strong>EX-IOExpander</strong>, <strong>EX-SensorCAM</strong>, and <strong>EX-Turntable</strong>.</p>
 <h2 id="accessory-types">Accessory Types<a class="headerlink" href="#accessory-types" title="Permanent link">¶</a></h2>
 <p>Accessories are broadly divided into two categories:</p>
@@ -12260,20 +12260,21 @@
 <h2 id="connecting-accessories">Connecting Accessories<a class="headerlink" href="#connecting-accessories" title="Permanent link">¶</a></h2>
 <p>There are generally three ways accessories can be connected to and controlled by your <strong>EX-CommandStation</strong>:</p>
 <ul>
-<li><a href="i2c/">I2C (i<sup>2</sup>C)</a></li>
+<li><a href="i2c/"><abbr title="(Inter-Integrated Circuit, pronounced &quot;eye-squared-see&quot;) is a synchronous, multi-controller/multi-target serial communication protocol">I2C</abbr> (i<sup>2</sup>C)</a></li>
 <li>Serial</li>
 <li>DCC accessories attached to a DCC main track output</li>
 </ul>
-<p>Throughout these pages, we will primarily be focusing on accessories connected via I2C.</p>
+<p>Throughout these pages, we will primarily be focusing on accessories connected via <abbr title="(Inter-Integrated Circuit, pronounced &quot;eye-squared-see&quot;) is a synchronous, multi-controller/multi-target serial communication protocol">I2C</abbr>.</p>
 <p>Most devices connected via Serial are typically throttles or controllers rather than accessories.</p>
 <p>When purchasing DCC accessories, you will have received a user manual for these, so follow that for instructions on how to connect them.</p>
 <h2 id="voltage-differences">Voltage Differences<a class="headerlink" href="#voltage-differences" title="Permanent link">¶</a></h2>
 <div class="admonition danger">
 <p class="admonition-title">Danger</p>
 <p>It is essential to be aware that hardware devices may operate at different voltage levels, meaning simply connecting an accessory to your <strong>EX-CommandStation</strong> may lead to damage or incorrect operation should this situation occur.</p>
-<p>This applies to any peripheral device connected directly to your <strong>EX-CommandStation</strong> via either serial or I2C interfaces.</p>
-<p>The most common issue is connecting an accessory designed for 5V operation to a <strong>EX-CommandStation</strong> that operates at 3.3V, such as our EX-CSB1. This will cause damage!</p>
+<p>This applies to any peripheral device connected directly to your <strong>EX-CommandStation</strong> via either serial or <abbr title="(Inter-Integrated Circuit, pronounced &quot;eye-squared-see&quot;) is a synchronous, multi-controller/multi-target serial communication protocol">I2C</abbr> interfaces.</p>
+<p>The most common issue is connecting an accessory designed for 5V operation to a <strong>EX-CommandStation</strong> that operates at 3.3V, such as our <abbr title="EX-CommandStation/Booster 1 Express">EX-CSB1</abbr>. This will cause damage!</p>
 </div>
+<!-- These are case sensitive -->
 
 
 

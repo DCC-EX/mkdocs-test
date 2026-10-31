@@ -12357,7 +12357,7 @@
 <span class="w">  </span><span class="n">RED</span><span class="p">(</span><span class="mi">1010</span><span class="p">)</span><span class="w">  </span><span class="c1">// force signal state otherwise all 3 lights will be on</span>
 <span class="w">  </span><span class="n">DONE</span>
 </code></pre></div>
-<p>For signals with 1 neopixel, the NEOPIXEL_SIGNAL macro will create a signal on one vpin with three separate colours</p>
+<p>For signals with 1 neopixel, the NEOPIXEL_SIGNAL macro will create a signal on one <abbr title="an Arduino pin number that has been extended to include pins on external devices or expanders">vpin</abbr> with three separate colours</p>
 <div class="language-cpp highlight"><pre><span></span><code><span class="n">NEOPIXEL_SIGNAL</span><span class="p">(</span><span class="n">vpin</span><span class="p">,</span><span class="n">redfx</span><span class="p">,</span><span class="n">amberfx</span><span class="p">,</span><span class="n">greenfx</span><span class="p">)</span>
 </code></pre></div>
 <p>redfx,amberfx,greenfx = colour values</p>
@@ -12377,6 +12377,7 @@ NeoRGB creates a single int32_t value so it can be used in several ways as conve
 <span class="c1">// Create 1-lamp signal with web type RGB colours</span>
 <span class="n">NEOPIXEL_SIGNAL</span><span class="p">(</span><span class="mi">1002</span><span class="p">,</span><span class="mh">0xFF0000</span><span class="p">,</span><span class="mh">0xFF6400</span><span class="p">,</span><span class="mh">0x00FF00</span><span class="p">)</span>
 </code></pre></div>
+<!-- These are case sensitive -->
 
 
 

@@ -12350,7 +12350,7 @@
 <span class="c1">// or</span>
 <span class="n">HAL</span><span class="p">(</span><span class="n">ADS1115</span><span class="p">,</span><span class="mi">300</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mh">0x48</span><span class="p">);</span><span class="w">  </span><span class="c1">// four-input ADS1115 on pins 300..303</span>
 </code></pre></div>
-<p>To monitor a vpin like this for a binary decision</p>
+<p>To monitor a <abbr title="an Arduino pin number that has been extended to include pins on external devices or expanders">vpin</abbr> like this for a binary decision</p>
 <div class="language-cpp highlight"><pre><span></span><code><span class="n">AUTOSTART</span><span class="w"> </span><span class="n">SEQUENCE</span><span class="p">(</span><span class="mi">99</span><span class="p">)</span>
 <span class="n">ATGTE</span><span class="p">(</span><span class="mi">300</span><span class="p">,</span><span class="mi">1000</span><span class="p">)</span><span class="w"> </span><span class="c1">// wait intil vpin 300 reaches 1000 or greater</span>
 <span class="p">...</span><span class="w"> </span><span class="k">do</span><span class="w"> </span><span class="n">something</span>
@@ -12358,6 +12358,7 @@
 <span class="p">..</span><span class="w"> </span><span class="k">do</span><span class="w"> </span><span class="n">something</span><span class="w"> </span><span class="k">else</span>
 <span class="n">FOLLOW</span><span class="p">(</span><span class="mi">99</span><span class="p">)</span><span class="w"> </span><span class="c1">// continue monitoring</span>
 </code></pre></div>
+<!-- These are case sensitive -->
 
 
 

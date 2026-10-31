@@ -12341,18 +12341,18 @@
 
 
 <h1 id="tca8418-keyboard-scanner">TCA8418 keyboard scanner<a class="headerlink" href="#tca8418-keyboard-scanner" title="Permanent link">¶</a></h1>
-<p>The TCA8418 IC from Texas Instruments is a low cost and very capable GPIO and keyboard scanner. Used as a keyboard scanner, it has 8 rows of 10 columns of IO pins which allow encoding of up to 80 buttons. The IC is available on an Adafruit board with Qwiic I2C interconnect called the <a href="https://www.adafruit.com/product/4918">Adafruit TCA8418 Keypad Matrix and GPIO Expander Breakout</a>.</p>
+<p>The TCA8418 IC from Texas Instruments is a low cost and very capable GPIO and keyboard scanner. Used as a keyboard scanner, it has 8 rows of 10 columns of IO pins which allow encoding of up to 80 buttons. The IC is available on an Adafruit board with Qwiic <abbr title="(Inter-Integrated Circuit, pronounced &quot;eye-squared-see&quot;) is a synchronous, multi-controller/multi-target serial communication protocol">I2C</abbr> interconnect called the <a href="https://www.adafruit.com/product/4918">Adafruit TCA8418 Keypad Matrix and GPIO Expander Breakout</a>.</p>
 <h2 id="details">Details<a class="headerlink" href="#details" title="Permanent link">¶</a></h2>
-<p>The great advantage of this IC is that the keyboard scanning is done continuously, and it has a 10-element event queue, so even if you don't get to the interrupt immediately, keypress and release events will be held for you. Since it's I2C its very easy to use with any <strong>DCC-EX EX-CommandStation</strong>.</p>
-<p>The TCA8418 driver presently configures the IC in the full 8x10 keyboard scanning mode, and then maps each key down/key up event to the state of a single vpin for extremely easy use from within EX-RAIL and JMRI as each key looks like an individual sensor.</p>
+<p>The great advantage of this IC is that the keyboard scanning is done continuously, and it has a 10-element event queue, so even if you don't get to the interrupt immediately, keypress and release events will be held for you. Since it's <abbr title="(Inter-Integrated Circuit, pronounced &quot;eye-squared-see&quot;) is a synchronous, multi-controller/multi-target serial communication protocol">I2C</abbr> its very easy to use with any <strong>DCC-EX EX-CommandStation</strong>.</p>
+<p>The TCA8418 driver presently configures the IC in the full 8x10 keyboard scanning mode, and then maps each key down/key up event to the state of a single <abbr title="an Arduino pin number that has been extended to include pins on external devices or expanders">vpin</abbr> for extremely easy use from within EX-RAIL and <abbr title="Java Model Railroad Interface">JMRI</abbr> as each key looks like an individual sensor.</p>
 <p>This is ideal for mimic panels where you may need a lot of buttons, but with this board you can use just 18 wires to handle as many as 80 buttons.</p>
-<p>By adding a simple HAL statement to myAutomation.h it creates between 1 and 80 buttons it will report back.</p>
+<p>By adding a simple <abbr title="Hardware Abstraction Layer. Allows the CS to discover and use the hardware through a simple abstract API, regardless of the type of underlying hardware.">HAL</abbr> statement to myAutomation.h it creates between 1 and 80 buttons it will report back.</p>
 <div class="language-cpp highlight"><pre><span></span><code><span class="n">HAL</span><span class="p">(</span><span class="n">TCA8418</span><span class="p">,</span><span class="w"> </span><span class="n">firstVpin</span><span class="p">,</span><span class="w"> </span><span class="n">numPins</span><span class="p">,</span><span class="w"> </span><span class="n">I2CAddress</span><span class="p">,</span><span class="w"> </span><span class="n">interruptPin</span><span class="p">)</span>
 </code></pre></div>
 <p>For example:</p>
 <div class="language-cpp highlight"><pre><span></span><code><span class="n">HAL</span><span class="p">(</span><span class="n">TCA8418</span><span class="p">,</span><span class="w"> </span><span class="mi">300</span><span class="p">,</span><span class="w"> </span><span class="mi">80</span><span class="p">,</span><span class="w"> </span><span class="mh">0x34</span><span class="p">)</span>
 </code></pre></div>
-<p>Creates VPINs 300-379 which you can monitor with EX-RAIL, JMRI sensors etc.</p>
+<p>Creates VPINs 300-379 which you can monitor with EX-RAIL, <abbr title="Java Model Railroad Interface">JMRI</abbr> sensors etc.</p>
 <p>With an 8x10 key event matrix, the events are numbered using the Rn row pins and Cn column pins as such:</p>
 <div class="language-console highlight"><pre><span></span><code><span class="go">     C0  C1  C2  C3  C4  C5  C6  C7  C8  C9</span>
 <span class="go">    ========================================</span>
@@ -12365,13 +12365,14 @@
 <span class="go"> R6| 60  61  62  63  64  65  66  67  68  69</span>
 <span class="go"> R7| 70  71  72  73  74  75  76  77  78  79</span>
 </code></pre></div>
-<p>So if you start with the first pin definition being VPIN 300, R0/C0 will be 300 + 0, and R7/C9 will be 300+79 or 379.</p>
+<p>So if you start with the first pin definition being <abbr title="an Arduino pin number that has been extended to include pins on external devices or expanders">VPIN</abbr> 300, R0/C0 will be 300 + 0, and R7/C9 will be 300+79 or 379.</p>
 <p>And if needing an Interrupt pin to speed up operations:</p>
 <div class="language-cpp highlight"><pre><span></span><code><span class="n">HAL</span><span class="p">(</span><span class="n">TCA8418</span><span class="p">,</span><span class="w"> </span><span class="mi">300</span><span class="p">,</span><span class="w"> </span><span class="mi">80</span><span class="p">,</span><span class="w"> </span><span class="mh">0x34</span><span class="p">,</span><span class="w"> </span><span class="mi">21</span><span class="p">)</span>
 </code></pre></div>
-<p><em>This is not for <strong>EX-CSB1</strong> which has no spare pins for interrupts.</em></p>
+<p><em>This is not for <strong><abbr title="EX-CommandStation/Booster 1 Express">EX-CSB1</abbr></strong> which has no spare pins for interrupts.</em></p>
 <p>Note that using an interrupt pin speeds up button press acquisition considerably (less than a millisecond vs 10-100), but even with interrupts enabled the code presently checks every 100ms in case the interrupt pin becomes disconnected. Use any available Arduino pin for interrupt monitoring.</p>
 <p>For devices behind multiplexors see <a href="../multiplexors/">multiplexors</a></p>
+<!-- These are case sensitive -->
 
 
 

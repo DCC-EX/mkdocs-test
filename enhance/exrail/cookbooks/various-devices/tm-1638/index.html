@@ -12389,13 +12389,13 @@
 <p>The TM1638 board provides a very cheap way of implementing 8 buttons, 8 leds and an 8 digit 7segment display in a package requiring just 5 Dupont wires (vcc, gnd + 3 GPIO pins) from the <strong>EX-CommandStation</strong> without soldering.</p>
 <p>This is ideal for prototyping and testing, simulating sensors and signals, displaying states etc. For a built layout, this could provide a control for things that are not particularly suited to throttle 'route' buttons, perhaps lineside automations or fiddle yard lane selection.</p>
 <h2 id="details">Details<a class="headerlink" href="#details" title="Permanent link">¶</a></h2>
-<p>The board is defined in <strong>EXRAIL</strong> using HAL(TM1638,firstVpin,clk,dio,stb)</p>
+<p>The board is defined in <strong>EXRAIL</strong> using <abbr title="Hardware Abstraction Layer. Allows the CS to discover and use the hardware through a simple abstract API, regardless of the type of underlying hardware.">HAL</abbr>(TM1638,firstVpin,clk,dio,stb)</p>
 <div class="language-cpp highlight"><pre><span></span><code><span class="n">HAL</span><span class="p">(</span><span class="n">TM1638</span><span class="p">,</span><span class="mi">500</span><span class="p">,</span><span class="mi">29</span><span class="p">,</span><span class="mi">31</span><span class="p">,</span><span class="mi">33</span><span class="p">)</span>
 </code></pre></div>
 <p>Creates VPINs 500-507 And describes the VPINs used to connect the clk,dio,stb pins on the TM1638 board.</p>
 <p>Setting each of the VPINs will control the associated LED (using for example SET, RESET or BLINK in <strong>EXRAIL</strong> or `<z 500=""> <z -501="">  from a command).</z></z></p>
 <p>Unlike most pins, you can also read the same pin number and get the button state, using <strong>EXRAIL</strong> IF/AT/ONBUTTON etc.</p>
-<p>All the following examples assume you are using VPIN 500 as the first, leftmost,  led/button on the TM1638 board.</p>
+<p>All the following examples assume you are using <abbr title="an Arduino pin number that has been extended to include pins on external devices or expanders">VPIN</abbr> 500 as the first, leftmost,  led/button on the TM1638 board.</p>
 <h2 id="using-buttons-and-leds">Using buttons and LEDs<a class="headerlink" href="#using-buttons-and-leds" title="Permanent link">¶</a></h2>
 <div class="language-cpp highlight"><pre><span></span><code><span class="n">ONBUTTON</span><span class="p">(</span><span class="mi">500</span><span class="p">)</span><span class="w">  </span><span class="c1">// when button 500 is pressed</span>
 <span class="w">  </span><span class="n">SET</span><span class="p">(</span><span class="mi">500</span><span class="p">)</span><span class="w">     </span><span class="c1">// light the first led</span>
@@ -12405,10 +12405,10 @@
 <span class="w">  </span><span class="n">DONE</span>
 </code></pre></div>
 <h2 id="using-the-7-segment-display">Using the 7 Segment display<a class="headerlink" href="#using-the-7-segment-display" title="Permanent link">¶</a></h2>
-<p>The 8 digit display can be treated as 8 separate digits (left most being the same VPIN as the leftmost button and led) or be written to in sections of any length. Writing uses the existing analogue interface to the common HAL but is awkward to use directly.  To make this easier from <strong>EXRAIL</strong>, a SEG7 macro provides a remapping to the <a href="?ANOUT">ANOUT</a> facility that makes more sense.</p>
+<p>The 8 digit display can be treated as 8 separate digits (left most being the same <abbr title="an Arduino pin number that has been extended to include pins on external devices or expanders">VPIN</abbr> as the leftmost button and led) or be written to in sections of any length. Writing uses the existing analogue interface to the common <abbr title="Hardware Abstraction Layer. Allows the CS to discover and use the hardware through a simple abstract API, regardless of the type of underlying hardware.">HAL</abbr> but is awkward to use directly.  To make this easier from <strong>EXRAIL</strong>, a SEG7 macro provides a remapping to the <a href="?ANOUT">ANOUT</a> facility that makes more sense.</p>
 <div class="language-cpp highlight"><pre><span></span><code><span class="n">SEG7</span><span class="p">(</span><span class="n">vpin</span><span class="p">,</span><span class="n">value</span><span class="p">,</span><span class="n">format</span><span class="p">)</span>
 </code></pre></div>
-<p>The vpin determines which digit to start writing at.
+<p>The <abbr title="an Arduino pin number that has been extended to include pins on external devices or expanders">vpin</abbr> determines which digit to start writing at.
 The value can be a 32bit unsigned integer but is interpreted differently according to the format.</p>
 <p>Format values:</p>
 <ul>
@@ -12430,13 +12430,14 @@ There is a <a href="https://jetpackacademy.com/wp-content/uploads/2018/06/TM1638
 <span class="w">    </span><span class="o">==</span><span class="w"> </span><span class="mi">3</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">7</span><span class="w">    </span><span class="p">(</span><span class="mi">7</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="n">decimal</span><span class="w"> </span><span class="n">point</span><span class="p">)</span>
 </code></pre></div>
 <p>Thus Letter A is segments  6 5 4 2 1 0, represented in binary (zero bit is on right) as 0b01110111 or 0x77.</p>
-<p>This is not easy to do my hand and thus a new string type suffix <code>_s7</code> has been introduced to make simple text messages. Note that the HAL interface only has width for 32 bits which is only 4 symbols so writing 8 digits requires two calls.</p>
+<p>This is not easy to do my hand and thus a new string type suffix <code>_s7</code> has been introduced to make simple text messages. Note that the <abbr title="Hardware Abstraction Layer. Allows the CS to discover and use the hardware through a simple abstract API, regardless of the type of underlying hardware.">HAL</abbr> interface only has width for 32 bits which is only 4 symbols so writing 8 digits requires two calls.</p>
 <div class="language-cpp highlight"><pre><span></span><code><span class="n">SEG7</span><span class="p">(</span><span class="mi">500</span><span class="p">,</span><span class="s">"Hell"</span><span class="n">_s7</span><span class="p">,</span><span class="mi">4</span><span class="n">R</span><span class="p">)</span><span class="w"> </span><span class="n">SEG7</span><span class="p">(</span><span class="mi">504</span><span class="p">,</span><span class="s">"o"</span><span class="n">_s7</span><span class="p">,</span><span class="mi">4</span><span class="n">R</span><span class="p">)</span>
 <span class="n">DELAY</span><span class="p">(</span><span class="mi">1000</span><span class="p">)</span>
 <span class="n">SEG7</span><span class="p">(</span><span class="mi">500</span><span class="p">,</span><span class="s">"Worl"</span><span class="n">_s7</span><span class="p">,</span><span class="mi">4</span><span class="n">R</span><span class="p">)</span><span class="w"> </span><span class="n">SEG7</span><span class="p">(</span><span class="mi">504</span><span class="p">,</span><span class="s">"d"</span><span class="n">_s7</span><span class="p">,</span><span class="mi">4</span><span class="n">R</span><span class="p">)</span>
 </code></pre></div>
 <p>Note that some letters like k,m,v,x do not have particularly readable 7-segment representation.</p>
 <p>Credit to <a href="https://github.com/dvarrel/TM1638">https://github.com/dvarrel/TM1638</a> for the basic formulae.</p>
+<!-- These are case sensitive -->
 
 
 

@@ -12341,17 +12341,17 @@
 
 
 <h1 id="animated-turnoutspoints">Animated Turnouts/Points<a class="headerlink" href="#animated-turnoutspoints" title="Permanent link">¶</a></h1>
-<p>Switching turnouts/points is easy, but sometimes you want to make it more realistic by introducing signals, delays and other automations.</p>
-<p>The combination of hidden and virtual turnouts/points makes this easy.</p>
+<p>Switching <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnouts</abbr>/points is easy, but sometimes you want to make it more realistic by introducing signals, delays and other automations.</p>
+<p>The combination of hidden and virtual <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnouts</abbr>/points makes this easy.</p>
 <h2 id="code">code<a class="headerlink" href="#code" title="Permanent link">¶</a></h2>
-<p>Lets suppose you have a turnout/point ID 100 and to make it look realistic you need to set some signal to stop, wait for the signalman to walk across the lever frame, throw the turnout/point, wait again and set another signal to green.</p>
-<p>First we need to hide the real turnout/point from the throttles. This is done by changing the description to the keyword HIDDEN and giving it a different id so we can refer to it later.</p>
+<p>Lets suppose you have a <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnout</abbr>/point ID 100 and to make it look realistic you need to set some signal to stop, wait for the signalman to walk across the lever frame, throw the <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnout</abbr>/point, wait again and set another signal to green.</p>
+<p>First we need to hide the real <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnout</abbr>/point from the throttles. This is done by changing the description to the keyword HIDDEN and giving it a different id so we can refer to it later.</p>
 <div class="language-cpp highlight"><pre><span></span><code><span class="w">  </span><span class="n">TURNOUTL</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="s">"Coal yard exit"</span><span class="p">)</span><span class="w">  </span><span class="c1">// for example</span>
 </code></pre></div>
 <p>is changed to</p>
 <div class="language-cpp highlight"><pre><span></span><code><span class="w">  </span><span class="n">TURNOUTL</span><span class="p">(</span><span class="mi">1001</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="n">HIDDEN</span><span class="p">)</span>
 </code></pre></div>
-<p>Now we can create a virtual turnout/point that will be seen by the throttles and specify what we want to happen when it is thrown or closed.</p>
+<p>Now we can create a virtual <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnout</abbr>/point that will be seen by the throttles and specify what we want to happen when it is thrown or closed.</p>
 <div class="language-cpp highlight"><pre><span></span><code><span class="w">   </span><span class="n">VIRTUAL_TURNOUT</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span><span class="s">"Coal yard exit"</span><span class="p">)</span>
 
 <span class="w">   </span><span class="n">ONCLOSE</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
@@ -12372,6 +12372,7 @@
 <span class="w">     </span><span class="n">GREEN</span><span class="p">(</span><span class="mi">505</span><span class="p">)</span><span class="w"> </span><span class="c1">// set approach signal</span>
 <span class="w">     </span><span class="n">DONE</span>
 </code></pre></div>
+<!-- These are case sensitive -->
 
 
 

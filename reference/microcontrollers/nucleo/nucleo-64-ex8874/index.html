@@ -12345,9 +12345,9 @@
 
 
 <h1 id="nucleo-64-ex8874">Nucleo 64 - EX8874<a class="headerlink" href="#nucleo-64-ex8874" title="Permanent link">¶</a></h1>
-<h2 id="one-ex8874-motor-shield">One EX8874 motor shield<a class="headerlink" href="#one-ex8874-motor-shield" title="Permanent link">¶</a></h2>
+<h2 id="one-ex8874-motor-shield">One EX8874 <abbr title="Also referred to as a 'motor controller' or 'motor driver'">motor shield</abbr><a class="headerlink" href="#one-ex8874-motor-shield" title="Permanent link">¶</a></h2>
 <ul>
-<li>Review of <strong>motor shield define</strong> from MotorDrivers.h for F411RE or F446RE</li>
+<li>Review of <strong><abbr title="Also referred to as a 'motor controller' or 'motor driver'">motor shield</abbr> define</strong> from MotorDrivers.h for F411RE or F446RE</li>
 </ul>
 <div class="language-cpp highlight"><pre><span></span><code><span class="w">  </span><span class="c1">// EX 8874 based shield connected to a 3V3 system with 12-bit (4096) ADC</span>
 <span class="w">  </span><span class="cp">#define EX8874_SHIELD F("EX8874"), \</span>
@@ -12355,7 +12355,7 @@
 <span class="cp">    new MotorDriver(11, 13, UNUSED_PIN, 8, A1, 1.27, 5000, A5)</span>
 </code></pre></div>
 <ul>
-<li>One EX8874 motor shield would use the standard motor define EX8874_SHIELD.  No modifications are needed.</li>
+<li>One EX8874 <abbr title="Also referred to as a 'motor controller' or 'motor driver'">motor shield</abbr> would use the standard motor define EX8874_SHIELD.  No modifications are needed.</li>
 </ul>
 <h3 id="stacked-ex8874-motor-shields-on-f411re-f446re">Stacked EX8874 motor shields on F411RE F446RE<a class="headerlink" href="#stacked-ex8874-motor-shields-on-f411re-f446re" title="Permanent link">¶</a></h3>
 <ul>
@@ -12383,6 +12383,7 @@
 <span class="cp">    new MotorDriver( 5,  4, UNUSED_PIN, 6, A3, 1.27, 5000, 29)</span>
 <span class="w">  </span><span class="cp">#define MOTOR_SHIELD_TYPE EX8874_SHIELDX2</span>
 </code></pre></div>
+<!-- These are case sensitive -->
 
 
 

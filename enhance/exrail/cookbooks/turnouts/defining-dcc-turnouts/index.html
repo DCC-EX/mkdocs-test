@@ -12342,23 +12342,24 @@
 
 <h1 id="defining-dcc-turnoutspoints">Defining DCC Turnouts/Points<a class="headerlink" href="#defining-dcc-turnoutspoints" title="Permanent link">¶</a></h1>
 <p>DCC Turnouts (or points) operate by listening to DCC messages sent along the track by the <strong>EX-CommandStation</strong>.
-Each turnout/point has a DCC address which may be specified as a pair of values (address,subaddress) or a single value linear address. Its generally easier to think in terms of the linear address but it makes no difference whatever to the kind of DCC message sent, other than the conversion from (address,subAddress) to linear is badly thought out and inconsistent between DCC implementations due to historically/hysterically ambiguous standards.</p>
+Each <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnout</abbr>/point has a DCC address which may be specified as a pair of values (address,subaddress) or a single value linear address. Its generally easier to think in terms of the linear address but it makes no difference whatever to the kind of DCC message sent, other than the conversion from (address,subAddress) to linear is badly thought out and inconsistent between DCC implementations due to historically/hysterically ambiguous standards.</p>
 <h2 id="code">code<a class="headerlink" href="#code" title="Permanent link">¶</a></h2>
-<p>Define DCC based turnouts/points using <strong>EXRAIL</strong>.</p>
+<p>Define DCC based <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnouts</abbr>/points using <strong>EXRAIL</strong>.</p>
 <div class="language-cpp highlight"><pre><span></span><code><span class="n">TURNOUTL</span><span class="p">(</span><span class="n">id</span><span class="p">,</span><span class="w"> </span><span class="n">address</span><span class="p">,</span><span class="w"> </span><span class="s">"description"</span><span class="p">)</span>
 
 <span class="n">TURNOUT</span><span class="p">(</span><span class="n">id</span><span class="p">,</span><span class="w"> </span><span class="n">shortAddress</span><span class="p">,</span><span class="w"> </span><span class="n">subAddress</span><span class="p">,</span><span class="w"> </span><span class="s">"description"</span><span class="p">)</span>
 </code></pre></div>
-<p>id = Unique turnout/point ID within the CommandStation. All other turnout/point commands will refer to this turnout/point by this id.</p>
-<p>address- the DCC address that the turnout/point decoder is listening to
+<p>id = Unique <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnout</abbr>/point ID within the CommandStation. All other <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnout</abbr>/point commands will refer to this <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnout</abbr>/point by this id.</p>
+<p>address- the DCC address that the <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnout</abbr>/point decoder is listening to
   or
 shortAddress,subAddress - the alternative form of the same address.</p>
-<p>description = A human-friendly description of the turnout/point that will appear in WiThrottle apps and Engine Driver. Note that this must be enclosed in quotes <code>""</code>. In some cases the HIDDEN keyword can be used here to prevent the turnout/point being visible to the throttles.</p>
+<p>description = A human-friendly description of the <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnout</abbr>/point that will appear in <abbr title="Communication Protocol. Trademark + iOS app owned by Brett Hoffman">WiThrottle</abbr> apps and Engine Driver. Note that this must be enclosed in quotes <code>""</code>. In some cases the HIDDEN keyword can be used here to prevent the <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnout</abbr>/point being visible to the throttles.</p>
 <p>For example:</p>
 <div class="language-cpp highlight"><pre><span></span><code><span class="n">TURNOUTL</span><span class="p">(</span><span class="mi">123</span><span class="p">,</span><span class="mi">55</span><span class="p">,</span><span class="s">"Up the junction"</span><span class="p">)</span>
 <span class="n">TURNOUT</span><span class="p">(</span><span class="mi">124</span><span class="p">,</span><span class="mi">12</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="s">"Down the mine"</span><span class="p">)</span>
 <span class="n">TURNOUTL</span><span class="p">(</span><span class="mi">125</span><span class="p">,</span><span class="mi">56</span><span class="p">,</span><span class="n">HIDDEN</span><span class="p">)</span><span class="w"> </span><span class="c1">// not visible to throttles</span>
 </code></pre></div>
+<!-- These are case sensitive -->
 
 
 

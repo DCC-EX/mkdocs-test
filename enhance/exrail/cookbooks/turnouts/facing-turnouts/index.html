@@ -12341,9 +12341,9 @@
 
 
 <h1 id="facing-turnoutspoints">Facing Turnouts/Points<a class="headerlink" href="#facing-turnoutspoints" title="Permanent link">¶</a></h1>
-<p>When you have turnouts that face each other, its awkward for the throttle user to have to manually switch both to match each other. By treating the crossover as a single turnout/point, control is simplified and incorrect combinations are prevented.</p>
-<p>To do this, we need to hide one of the turnouts/points from the user, and make sure that throwing/closing the visible turnout/point automatically throws/closes the other turnout/point.</p>
-<p>All turnout/point definitions in <strong>EXRAIL</strong> allow for a text description to be shown to the user throttle. The HIDDEN keyword, used instead of a turnout/point description prevents it being visible to the throttle or JMRI/iTrain etc.</p>
+<p>When you have <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnouts</abbr> that face each other, its awkward for the throttle user to have to manually switch both to match each other. By treating the crossover as a single <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnout</abbr>/point, control is simplified and incorrect combinations are prevented.</p>
+<p>To do this, we need to hide one of the <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnouts</abbr>/points from the user, and make sure that throwing/closing the visible <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnout</abbr>/point automatically throws/closes the other <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnout</abbr>/point.</p>
+<p>All <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnout</abbr>/point definitions in <strong>EXRAIL</strong> allow for a text description to be shown to the user throttle. The HIDDEN keyword, used instead of a <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnout</abbr>/point description prevents it being visible to the throttle or <abbr title="Java Model Railroad Interface">JMRI</abbr>/iTrain etc.</p>
 <h2 id="code">code<a class="headerlink" href="#code" title="Permanent link">¶</a></h2>
 <div class="language-cpp highlight"><pre><span></span><code><span class="n">TURNOUTL</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">101</span><span class="p">,</span><span class="s">"Cross inner to outer"</span><span class="p">)</span>
 <span class="n">TURNOUTL</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">102</span><span class="p">,</span><span class="n">HIDDEN</span><span class="p">)</span>
@@ -12351,6 +12351,7 @@
 <span class="n">ONTHROW</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="n">THROW</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="w"> </span><span class="n">DONE</span>
 <span class="n">ONCLOSE</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="n">CLOSE</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="w"> </span><span class="n">DONE</span>
 </code></pre></div>
+<!-- These are case sensitive -->
 
 
 

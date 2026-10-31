@@ -12363,15 +12363,15 @@
 
 
 <h1 id="mcp23017-pca955x-and-tca955x-devices">MCP23017, PCA955x and TCA955x devices<a class="headerlink" href="#mcp23017-pca955x-and-tca955x-devices" title="Permanent link">¶</a></h1>
-<p>These devices are functionally very similar and provide a variety of pins for digital input or output over an I2C address.</p>
+<p>These devices are functionally very similar and provide a variety of pins for digital input or output over an <abbr title="(Inter-Integrated Circuit, pronounced &quot;eye-squared-see&quot;) is a synchronous, multi-controller/multi-target serial communication protocol">I2C</abbr> address.</p>
 <p>Essentially, there is no automatic hardware type detection so it is necessary for the user to provide the information about:</p>
 <ul>
 <li>Hardware chip type</li>
-<li>I2C address (including path through a multiplexor if used)</li>
-<li><a href="?VPIN">VPIN</a> to number the first pin on the device</li>
+<li><abbr title="(Inter-Integrated Circuit, pronounced &quot;eye-squared-see&quot;) is a synchronous, multi-controller/multi-target serial communication protocol">I2C</abbr> address (including path through a multiplexor if used)</li>
+<li><a href="?VPIN"><abbr title="an Arduino pin number that has been extended to include pins on external devices or expanders">VPIN</abbr></a> to number the first pin on the device</li>
 <li>number of consecutive VPINS on this device</li>
 </ul>
-<p>Once the driver and its information have been correctly defined, the pins on the device are addressed purely by VPIN number in the same way as any other Arduino pin. This significantly simplifies any code that has to set or test the pins.</p>
+<p>Once the driver and its information have been correctly defined, the pins on the device are addressed purely by <abbr title="an Arduino pin number that has been extended to include pins on external devices or expanders">VPIN</abbr> number in the same way as any other Arduino pin. This significantly simplifies any code that has to set or test the pins.</p>
 <p>In addition, it is not necessary to define each pin as input or output as <strong>EXRAIL</strong> will work this out automatically and configure the device. However, youy can't use the same pin for output and input.</p>
 <h2 id="device-variations">Device variations<a class="headerlink" href="#device-variations" title="Permanent link">¶</a></h2>
 <ul>
@@ -12381,12 +12381,12 @@
 <li>The PCA and TCA models are identical but manufactured by different companies. You can use either driver name because its all the same code.</li>
 </ul>
 <h2 id="defining-devices">Defining devices<a class="headerlink" href="#defining-devices" title="Permanent link">¶</a></h2>
-<p>These devices are defined by using HAL statements in your <strong>EXRAIL</strong> script (myAutomation.h or its included files).</p>
-<p>First step is to run the <strong>EX-CommandStation</strong> software without the drivers and note what addresses the I2C scan comes up with.</p>
+<p>These devices are defined by using <abbr title="Hardware Abstraction Layer. Allows the CS to discover and use the hardware through a simple abstract API, regardless of the type of underlying hardware.">HAL</abbr> statements in your <strong>EXRAIL</strong> script (myAutomation.h or its included files).</p>
+<p>First step is to run the <strong>EX-CommandStation</strong> software without the drivers and note what addresses the <abbr title="(Inter-Integrated Circuit, pronounced &quot;eye-squared-see&quot;) is a synchronous, multi-controller/multi-target serial communication protocol">I2C</abbr> scan comes up with.</p>
 <div class="language-text highlight"><pre><span></span><code>&lt;* License GPLv3 fsf.org (c) dcc-ex.com &gt;
 &lt; I2C Device found at 0x20, GPIO Expander? &gt;
 </code></pre></div>
-<p>The driver is created with a HAL command:</p>
+<p>The driver is created with a <abbr title="Hardware Abstraction Layer. Allows the CS to discover and use the hardware through a simple abstract API, regardless of the type of underlying hardware.">HAL</abbr> command:</p>
 <div class="language-cpp highlight"><pre><span></span><code><span class="n">HAL</span><span class="p">(</span><span class="n">drivername</span><span class="p">,</span><span class="n">firstVpin</span><span class="p">,</span><span class="n">numberOfVpins</span><span class="p">,</span><span class="n">i2cAddress</span><span class="p">)</span>
 </code></pre></div>
 <p>Some examples:</p>
@@ -12397,6 +12397,7 @@
 <span class="n">HAL</span><span class="p">(</span><span class="n">PCA9555</span><span class="p">,</span><span class="mi">160</span><span class="p">,</span><span class="mi">16</span><span class="p">,</span><span class="mh">0x20</span><span class="p">)</span><span class="w"> </span><span class="c1">// easy isn't it...</span>
 </code></pre></div>
 <p>For devices behind multiplexors see <a href="../multiplexors/">multiplexors</a></p>
+<!-- These are case sensitive -->
 
 
 

@@ -12448,41 +12448,41 @@
   
 
 
-<h1 id="i2c-i2c-wiring-for-the-tinkerer">I2C (I<sup>2</sup>C) Wiring for the Tinkerer<a class="headerlink" href="#i2c-i2c-wiring-for-the-tinkerer" title="Permanent link">¶</a></h1>
-<p>I2C expansion modules provide accessory pins, but I2C wiring requires a lot of attention to detail.</p>
-<h2 id="i2c-concepts">I2C concepts<a class="headerlink" href="#i2c-concepts" title="Permanent link">¶</a></h2>
+<h1 id="i2c-i2c-wiring-for-the-tinkerer"><abbr title="(Inter-Integrated Circuit, pronounced &quot;eye-squared-see&quot;) is a synchronous, multi-controller/multi-target serial communication protocol">I2C</abbr> (I<sup>2</sup>C) Wiring for the Tinkerer<a class="headerlink" href="#i2c-i2c-wiring-for-the-tinkerer" title="Permanent link">¶</a></h1>
+<p><abbr title="(Inter-Integrated Circuit, pronounced &quot;eye-squared-see&quot;) is a synchronous, multi-controller/multi-target serial communication protocol">I2C</abbr> expansion modules provide accessory pins, but <abbr title="(Inter-Integrated Circuit, pronounced &quot;eye-squared-see&quot;) is a synchronous, multi-controller/multi-target serial communication protocol">I2C</abbr> wiring requires a lot of attention to detail.</p>
+<h2 id="i2c-concepts"><abbr title="(Inter-Integrated Circuit, pronounced &quot;eye-squared-see&quot;) is a synchronous, multi-controller/multi-target serial communication protocol">I2C</abbr> concepts<a class="headerlink" href="#i2c-concepts" title="Permanent link">¶</a></h2>
 <ul>
-<li>Keep I2C wiring short.</li>
+<li>Keep <abbr title="(Inter-Integrated Circuit, pronounced &quot;eye-squared-see&quot;) is a synchronous, multi-controller/multi-target serial communication protocol">I2C</abbr> wiring short.</li>
 <li>Use Qwiic cables.</li>
-<li>Know the combined resistance of connected I2C modules.</li>
-<li>Avoid using excess power from the microprocessor's power source.  Separate power sources can avoid degrading the I2C bus by low voltage spikes/sags or overloading the source.</li>
+<li>Know the combined resistance of connected <abbr title="(Inter-Integrated Circuit, pronounced &quot;eye-squared-see&quot;) is a synchronous, multi-controller/multi-target serial communication protocol">I2C</abbr> modules.</li>
+<li>Avoid using excess power from the microprocessor's power source.  Separate power sources can avoid degrading the <abbr title="(Inter-Integrated Circuit, pronounced &quot;eye-squared-see&quot;) is a synchronous, multi-controller/multi-target serial communication protocol">I2C</abbr> bus by low voltage spikes/sags or overloading the source.</li>
 </ul>
-<h2 id="i2c-bus-voltage">I2C bus voltage<a class="headerlink" href="#i2c-bus-voltage" title="Permanent link">¶</a></h2>
+<h2 id="i2c-bus-voltage"><abbr title="(Inter-Integrated Circuit, pronounced &quot;eye-squared-see&quot;) is a synchronous, multi-controller/multi-target serial communication protocol">I2C</abbr> bus voltage<a class="headerlink" href="#i2c-bus-voltage" title="Permanent link">¶</a></h2>
 <ul>
-<li>I2C bus voltage is determined by the voltage used for the pullups on the SDA and SCL pins, which should not exceed the voltage of the microprocessor.</li>
-<li>Mega 2560 is 5V; <strong>EX-CSB1</strong>, ESP32-WROOM, Nucleo-F4 are 3.3V.</li>
+<li><abbr title="(Inter-Integrated Circuit, pronounced &quot;eye-squared-see&quot;) is a synchronous, multi-controller/multi-target serial communication protocol">I2C</abbr> bus voltage is determined by the voltage used for the pullups on the SDA and SCL pins, which should not exceed the voltage of the microprocessor.</li>
+<li>Mega 2560 is 5V; <strong><abbr title="EX-CommandStation/Booster 1 Express">EX-CSB1</abbr></strong>, ESP32-WROOM, Nucleo-F4 are 3.3V.</li>
 </ul>
 <h2 id="qwiicstemma-qt">Qwiic/STEMMA QT<a class="headerlink" href="#qwiicstemma-qt" title="Permanent link">¶</a></h2>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../_static/images/i2c-devices/i2c-qwiic-wiring-pattern.png" data-title=" Qwiic " data-desc-position="bottom"><img align="right" alt=" Qwiic " src="../../../../_static/images/i2c-devices/i2c-qwiic-wiring-pattern.png" width="40%"></a></p>
 <ul>
 <li>Qwiic a.k.a. STEMMA QT - connectors and wiring are designed for 3.3V.</li>
-<li>When using a Mega:  the Qwiic connector on EX8874 the power pin is 3.3V, but the SDA SCL pins have pullups to 5V. For most cases, use the I2C headers on the EX8874 when using a Mega.</li>
+<li>When using a Mega:  the Qwiic connector on EX8874 the power pin is 3.3V, but the SDA SCL pins have pullups to 5V. For most cases, use the <abbr title="(Inter-Integrated Circuit, pronounced &quot;eye-squared-see&quot;) is a synchronous, multi-controller/multi-target serial communication protocol">I2C</abbr> headers on the EX8874 when using a Mega.</li>
 <li>Qwiic wiring pattern is used for the <a href="https://learn.adafruit.com/introducing-adafruit-stemma-qt/technical-specs#stemma-4-pin-i2c-both-standard-and-stemma-qt-3035230">Adafruit STEMMA QT / Qwiic connectors</a> - and is different from the <a href="#wiring-pattern-for-lower-capacitance">NXP pattern <em>below</em></a>.</li>
 </ul>
-<h2 id="i2c-wire-length">I2C wire length<a class="headerlink" href="#i2c-wire-length" title="Permanent link">¶</a></h2>
+<h2 id="i2c-wire-length"><abbr title="(Inter-Integrated Circuit, pronounced &quot;eye-squared-see&quot;) is a synchronous, multi-controller/multi-target serial communication protocol">I2C</abbr> wire length<a class="headerlink" href="#i2c-wire-length" title="Permanent link">¶</a></h2>
 <ul>
 <li>Length increases capacitance and reduces signal quality.</li>
-<li>Plan to include LTC4311 or other options when length exceeds 2 meters, for example the <a href="https://learn.adafruit.com/adafruit-ltc4311-i2c-extender-active-terminator">Adafruit LTC4311 I2C Extender/Active-terminator</a></li>
+<li>Plan to include LTC4311 or other options when length exceeds 2 meters, for example the <a href="https://learn.adafruit.com/adafruit-ltc4311-i2c-extender-active-terminator">Adafruit LTC4311 <abbr title="(Inter-Integrated Circuit, pronounced &quot;eye-squared-see&quot;) is a synchronous, multi-controller/multi-target serial communication protocol">I2C</abbr> Extender/Active-terminator</a></li>
 </ul>
 <h2 id="combined-parallel-resistance">Combined parallel resistance<a class="headerlink" href="#combined-parallel-resistance" title="Permanent link">¶</a></h2>
 <ul>
 <li>Lower resistance results in a stronger signal and helps offset higher capacitance.</li>
 <li>If resistance is too low, the uC will be unable to overcome it.</li>
 </ul>
-<p>This table shows the parallel resistance values with multiple I2C modules:</p>
+<p>This table shows the parallel resistance values with multiple <abbr title="(Inter-Integrated Circuit, pronounced &quot;eye-squared-see&quot;) is a synchronous, multi-controller/multi-target serial communication protocol">I2C</abbr> modules:</p>
 <ul>
-<li>Note that Mega has 10k onboard; <strong>EX-CSB1</strong> has 5.1k; others are weak or disabled.</li>
-<li>I2C modules, such as PCA9685 and MCP23017, will generally have 10k pullups. LCD and OLED displays may have 4.7k or 10k.</li>
+<li>Note that Mega has 10k onboard; <strong><abbr title="EX-CommandStation/Booster 1 Express">EX-CSB1</abbr></strong> has 5.1k; others are weak or disabled.</li>
+<li><abbr title="(Inter-Integrated Circuit, pronounced &quot;eye-squared-see&quot;) is a synchronous, multi-controller/multi-target serial communication protocol">I2C</abbr> modules, such as PCA9685 and MCP23017, will generally have 10k pullups. LCD and OLED displays may have 4.7k or 10k.</li>
 <li>Add/remove pullups to result in 2.5-3.0 mA.</li>
 <li>With LTC4311 the need to adjust resistance may be less important, unless resistance is too low.</li>
 </ul>
@@ -12492,10 +12492,11 @@
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../_static/images/i2c-devices/i2c-wiring-pattern.jpg" data-title="I2C Wiring Pattern" data-desc-position="bottom"><img alt="I2C Wiring Pattern" src="../../../../_static/images/i2c-devices/i2c-wiring-pattern.jpg" width="70%"></a></p>
 <h2 id="power-sources">Power sources<a class="headerlink" href="#power-sources" title="Permanent link">¶</a></h2>
 <ul>
-<li>A separate power source for the VCC pin of the I2C bus avoids potential voltage spikes/sags and noise into the power circuit of the microprocessor, and should make the I2C accessory bus more resilient.</li>
+<li>A separate power source for the VCC pin of the <abbr title="(Inter-Integrated Circuit, pronounced &quot;eye-squared-see&quot;) is a synchronous, multi-controller/multi-target serial communication protocol">I2C</abbr> bus avoids potential voltage spikes/sags and noise into the power circuit of the microprocessor, and should make the <abbr title="(Inter-Integrated Circuit, pronounced &quot;eye-squared-see&quot;) is a synchronous, multi-controller/multi-target serial communication protocol">I2C</abbr> accessory bus more resilient.</li>
 <li>Additional/separate power source is required for the +5V servo power on the PCA9685 module.</li>
 <li>When using separate power sources, there is potential for a ground loop. ( <mark>TODO</mark> MEDIUM - What does that mean? What are the implications?)</li>
 </ul>
+<!-- These are case sensitive -->
 
 
 

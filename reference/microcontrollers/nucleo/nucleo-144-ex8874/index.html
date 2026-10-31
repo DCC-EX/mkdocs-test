@@ -12333,7 +12333,7 @@
 
 
 <h1 id="nucleo-144-ex8874">Nucleo 144 - EX8874<a class="headerlink" href="#nucleo-144-ex8874" title="Permanent link">¶</a></h1>
-<p>Review of <strong>motor shield define</strong> from MotorDrivers.h for F429ZI or F439ZI</p>
+<p>Review of <strong><abbr title="Also referred to as a 'motor controller' or 'motor driver'">motor shield</abbr> define</strong> from MotorDrivers.h for F429ZI or F439ZI</p>
 <div class="language-cpp highlight"><pre><span></span><code><span class="w">  </span><span class="cp">#if defined(ARDUINO_NUCLEO_F429ZI) || defined(ARDUINO_NUCLEO_F439ZI) || defined(ARDUINO_NUCLEO_F4X9ZI)</span>
 <span class="w">  </span><span class="c1">// EX 8874 based shield connected to a 3V3 system with 12-bit (4096) ADC</span>
 <span class="w">  </span><span class="c1">// The Ethernet capable STM32 models cannot use Channel B BRAKE on D8, and must use the ALT pin of D6,</span>
@@ -12343,7 +12343,7 @@
 <span class="cp">    new MotorDriver( 5, 13, UNUSED_PIN, 6, A1, 1.27, 5000, A5)</span>
 </code></pre></div>
 <p>Alternate pins D5 and D6 are required for the Nucleo-144 boards with Ethernet.<br>
-One EX8874 motor shield would use the standard motor define EX8874_SHIELD, and update the solder pads to use D5 and D6.</p>
+One EX8874 <abbr title="Also referred to as a 'motor controller' or 'motor driver'">motor shield</abbr> would use the standard motor define EX8874_SHIELD, and update the solder pads to use D5 and D6.</p>
 <p>&nbsp; &nbsp; &nbsp; &nbsp; <a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../_static/images/nucleo/ex8874-nucleo-144.png" data-title="EX8874 Nucleo-144 pins" data-desc-position="bottom"><img alt="EX8874 Nucleo-144 pins" src="../../../../_static/images/nucleo/ex8874-nucleo-144.png" style="width: 70%"></a> &nbsp; &nbsp; &nbsp; &nbsp; <a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../_static/images/nucleo/ex8874-nucleo144-pins-track-b.png" data-title="EX8874 Nucleo-144 track B" data-desc-position="bottom"><img alt="EX8874 Nucleo-144 track B" src="../../../../_static/images/nucleo/ex8874-nucleo144-pins-track-b.png" style="width: 20%"></a></p>
 <h2 id="stacked-ex8874-motor-shields-on-f429zi-f439zi">Stacked EX8874 motor shields on F429ZI F439ZI<a class="headerlink" href="#stacked-ex8874-motor-shields-on-f429zi-f439zi" title="Permanent link">¶</a></h2>
 <ul>
@@ -12357,7 +12357,7 @@ One EX8874 motor shield would use the standard motor define EX8874_SHIELD, and u
 <p>&nbsp; &nbsp; &nbsp; &nbsp; <a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../_static/images/nucleo/ex8874-f439zi-stacked-pins.png" data-title="Stacked EX8874 Nucleo-144" data-desc-position="bottom"><img align="right" alt="Stacked EX8874 Nucleo-144" src="../../../../_static/images/nucleo/ex8874-f439zi-stacked-pins.png" style="width: 50%"></a></p>
 <ul>
 <li>Tracks A and B can use the same alternate pins D5 and D6 as they would if only one shield was used.
-  Pins were selected so that the stacked motor shield pins D11,D9,D8,A4,A5 can be bent out, and short jumpers added to connect pins D7,D28,D29,D64,D65.</li>
+  Pins were selected so that the stacked <abbr title="Also referred to as a 'motor controller' or 'motor driver'">motor shield</abbr> pins D11,D9,D8,A4,A5 can be bent out, and short jumpers added to connect pins D7,D28,D29,D64,D65.</li>
 </ul>
 <div style="clear: both;"></div>
 <ul>
@@ -12407,6 +12407,7 @@ Brake and Fault pin updates as shown for F429ZI F439ZI.</p>
 <span class="cp">    new MotorDriver( 5,  4, UNUSED_PIN, 29, A3, 1.27, 5000, 65)</span>
 <span class="w">  </span><span class="cp">#define MOTOR_SHIELD_TYPE EX8874_F413ZH_X2</span>
 </code></pre></div>
+<!-- These are case sensitive -->
 
 
 

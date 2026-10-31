@@ -12325,9 +12325,9 @@
 
 
 <h1 id="buttons-and-switches">Buttons and Switches<a class="headerlink" href="#buttons-and-switches" title="Permanent link">¶</a></h1>
-<p>Buttons and switches are connected to an input vpin, usually on an expander such as an <a href="?MCP23017">MCP23017</a> which provides a number of input or output pins.</p>
+<p>Buttons and switches are connected to an input <abbr title="an Arduino pin number that has been extended to include pins on external devices or expanders">vpin</abbr>, usually on an expander such as an <a href="?MCP23017">MCP23017</a> which provides a number of input or output pins.</p>
 <h2 id="detecting-a-button-press">Detecting a button press<a class="headerlink" href="#detecting-a-button-press" title="Permanent link">¶</a></h2>
-<p>The ONBUTTON(x) sequence is started when the vpin x is made HIGH by a button press or other sensor being triggered.</p>
+<p>The ONBUTTON(x) sequence is started when the <abbr title="an Arduino pin number that has been extended to include pins on external devices or expanders">vpin</abbr> x is made HIGH by a button press or other sensor being triggered.</p>
 <div class="language-cpp highlight"><pre><span></span><code><span class="n">ONBUTTON</span><span class="p">(</span><span class="mi">172</span><span class="p">)</span>
 <span class="w">  </span><span class="n">PRINT</span><span class="p">(</span><span class="s">"Moooving on"</span><span class="p">)</span>
 <span class="w">  </span><span class="n">SERVO</span><span class="p">(</span><span class="mi">135</span><span class="p">,</span><span class="mi">417</span><span class="p">)</span><span class="w"> </span><span class="c1">// move cow out of the way</span>
@@ -12338,7 +12338,7 @@
 </code></pre></div>
 <p>Repeated pressing of the button will be ignored until the DONE has completed.</p>
 <h2 id="detecting-a-switch-change">Detecting a switch change<a class="headerlink" href="#detecting-a-switch-change" title="Permanent link">¶</a></h2>
-<p>The ONSENSOR(x) sequence is started when an input vpin changes state between HIGH and LOW. You will probabaly need to check the state inside the sequence using an IF(x) command.</p>
+<p>The ONSENSOR(x) sequence is started when an input <abbr title="an Arduino pin number that has been extended to include pins on external devices or expanders">vpin</abbr> changes state between HIGH and LOW. You will probabaly need to check the state inside the sequence using an IF(x) command.</p>
 <div class="language-cpp highlight"><pre><span></span><code><span class="n">ONSENSOR</span><span class="p">(</span><span class="mi">176</span><span class="p">)</span>
 <span class="w">  </span><span class="n">IF</span><span class="p">(</span><span class="mi">176</span><span class="p">)</span>
 <span class="w">    </span><span class="n">PRINT</span><span class="p">(</span><span class="s">"Sensor 176 gone HIGH"</span><span class="p">)</span>
@@ -12349,14 +12349,15 @@
 <span class="w">  </span><span class="n">ENDIF</span>
 <span class="w">  </span><span class="n">DONE</span>
 </code></pre></div>
-<p>Note: Switches are not suitable for controlling turnouts/points because the <strong>EX-CommandStation</strong> can't reach out a finger and change the switch position when the turnout/point is changed from a throttle or some other <strong>EXRAIL</strong> script. (Unless of course, you are into animating a servo to do just that!)</p>
-<p>You can toggle a turnout/point with a single button</p>
+<p>Note: Switches are not suitable for controlling <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnouts</abbr>/points because the <strong>EX-CommandStation</strong> can't reach out a finger and change the switch position when the <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnout</abbr>/point is changed from a throttle or some other <strong>EXRAIL</strong> script. (Unless of course, you are into animating a servo to do just that!)</p>
+<p>You can toggle a <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnout</abbr>/point with a single button</p>
 <div class="language-cpp highlight"><pre><span></span><code><span class="n">ONBUTTON</span><span class="p">(</span><span class="mi">172</span><span class="p">)</span><span class="w"> </span><span class="n">TOGGLE_TURNOUT</span><span class="p">(</span><span class="mi">7</span><span class="p">)</span><span class="w"> </span><span class="n">DONE</span>
 </code></pre></div>
 <p>Or have 2 buttons</p>
 <div class="language-cpp highlight"><pre><span></span><code><span class="n">ONBUTTON</span><span class="p">(</span><span class="mi">172</span><span class="p">)</span><span class="w"> </span><span class="n">THROW</span><span class="p">(</span><span class="mi">7</span><span class="p">)</span><span class="w"> </span><span class="n">DONE</span>
 <span class="n">ONBUTTON</span><span class="p">(</span><span class="mi">173</span><span class="p">)</span><span class="w"> </span><span class="n">CLOSE</span><span class="p">(</span><span class="mi">7</span><span class="p">)</span><span class="w"> </span><span class="n">DONE</span>
 </code></pre></div>
+<!-- These are case sensitive -->
 
 
 

@@ -12351,7 +12351,7 @@
 <span class="cp">   BLINK(led+1,500,500)</span>
 </code></pre></div>
 <p>Notice that a C++ macro must be only one logical line long! So we must use the <code>\</code> character on the end of the line to indicate that this line is continued on the following.</p>
-<p>In the above example, the FLIPFLOP macro takes a LED <a href="?VPIN">VPIN</a> and starts flashing it, then half a second later it starts flashing the next pin in line. Since the delay and the on/off period are the same, the LEDs will flash alternately.</p>
+<p>In the above example, the FLIPFLOP macro takes a LED <a href="?VPIN"><abbr title="an Arduino pin number that has been extended to include pins on external devices or expanders">VPIN</abbr></a> and starts flashing it, then half a second later it starts flashing the next pin in line. Since the delay and the on/off period are the same, the LEDs will flash alternately.</p>
 <p>So you might use it in a sequence like this:</p>
 <div class="language-cpp highlight"><pre><span></span><code><span class="n">ONBUTTON</span><span class="p">(</span><span class="mi">30</span><span class="p">)</span>
 <span class="w">   </span><span class="n">FLIPFLOP</span><span class="p">(</span><span class="mi">32</span><span class="p">)</span><span class="w">  </span><span class="c1">// start flashing leds 32 and 33</span>
@@ -12370,6 +12370,7 @@
 </code></pre></div>
 <p>The servo positions above are of course dependent on your servos and how they are mounted. You must experiment first see <a href="?servo">Servos</a>.</p>
 <p>Macros like these are, obviously, more useful if you use the macro in more than one place.</p>
+<!-- These are case sensitive -->
 
 
 

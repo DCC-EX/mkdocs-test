@@ -12385,11 +12385,11 @@
 
 
 <h1 id="lews-duino-gear-boards">Lew's Duino Gear boards<a class="headerlink" href="#lews-duino-gear-boards" title="Permanent link">¶</a></h1>
-<p>CAUTION: these boards require several GPIO pins on the <strong>EX-CommandStation</strong> and are therefore unsuitable for use with a <strong>EX-CSB1</strong> which has all available pins essentially reserved for track management.</p>
+<p>CAUTION: these boards require several GPIO pins on the <strong>EX-CommandStation</strong> and are therefore unsuitable for use with a <strong><abbr title="EX-CommandStation/Booster 1 Express">EX-CSB1</abbr></strong> which has all available pins essentially reserved for track management.</p>
 <h2 id="dnin8-8-input-board">DNIN8 8 Input board<a class="headerlink" href="#dnin8-8-input-board" title="Permanent link">¶</a></h2>
 <p>This is a shift-register implementation of a digital input collector.
 Multiple DNIN8 may be connected in a chain sequence but it is IMPORTANT that the software configuration correctly represents the number of boards connected otherwise the results will be meaningless.</p>
-<p>Define boards in <strong>EXRAIL</strong> using HAL(IO_DNIN8, firstVpin, numPins, clockPin, latchPin, dataPin)</p>
+<p>Define boards in <strong>EXRAIL</strong> using <abbr title="Hardware Abstraction Layer. Allows the CS to discover and use the hardware through a simple abstract API, regardless of the type of underlying hardware.">HAL</abbr>(IO_DNIN8, firstVpin, numPins, clockPin, latchPin, dataPin)</p>
 <div class="language-cpp highlight"><pre><span></span><code><span class="w">   </span><span class="n">HAL</span><span class="p">(</span><span class="n">IO_DNIN8</span><span class="p">,</span><span class="w"> </span><span class="mi">400</span><span class="p">,</span><span class="w"> </span><span class="mi">16</span><span class="p">,</span><span class="w"> </span><span class="mi">40</span><span class="p">,</span><span class="w"> </span><span class="mi">42</span><span class="p">,</span><span class="w"> </span><span class="mi">44</span><span class="p">)</span>
 </code></pre></div>
 <p>This will create VPINs 400-415 using two DNIN8 boards connected in sequence.
@@ -12397,13 +12397,14 @@ VPINS 400-407 will be on the first board (closest to the CS) and 408-415 on the 
 <p>Note: 16 pins uses two boards. You may specify a non-multiple-of-8 pins but this will be rounded up to a multiple of 8 and you must connect ONLY the number of boards that this takes.</p>
 <p>This example used Arduino GPIO pins 40,42,44 as these are conveniently side-by-side on a Mega which is easier when you are using a 3 strand cable.</p>
 <h2 id="dnin8k-8-input-board">DNIN8K 8 Input board<a class="headerlink" href="#dnin8k-8-input-board" title="Permanent link">¶</a></h2>
-<p>This module works the same as DNIN8 but you must use DNIN8K in the HAL setup instead of DNIN8. You can't mix 8 and 8k versions in the same string of boards but you can create another string of boards.</p>
+<p>This module works the same as DNIN8 but you must use DNIN8K in the <abbr title="Hardware Abstraction Layer. Allows the CS to discover and use the hardware through a simple abstract API, regardless of the type of underlying hardware.">HAL</abbr> setup instead of DNIN8. You can't mix 8 and 8k versions in the same string of boards but you can create another string of boards.</p>
 <h2 id="dnou8-8-output-board">DNOU8 8 Output board<a class="headerlink" href="#dnou8-8-output-board" title="Permanent link">¶</a></h2>
 <p>DNOU8 works in a very similar fashion to the the DNIN boards and is defined in <strong>EXRAIL</strong> using
- HAL(IO_DNOU8, firstVpin, numPins, clockPin, latchPin, dataPin)</p>
+ <abbr title="Hardware Abstraction Layer. Allows the CS to discover and use the hardware through a simple abstract API, regardless of the type of underlying hardware.">HAL</abbr>(IO_DNOU8, firstVpin, numPins, clockPin, latchPin, dataPin)</p>
 <div class="language-cpp highlight"><pre><span></span><code><span class="n">HAL</span><span class="p">(</span><span class="n">IO_DNOU8</span><span class="p">,</span><span class="w"> </span><span class="mi">450</span><span class="p">,</span><span class="w"> </span><span class="mi">16</span><span class="p">,</span><span class="w"> </span><span class="mi">45</span><span class="p">,</span><span class="w"> </span><span class="mi">47</span><span class="p">,</span><span class="w"> </span><span class="mi">49</span><span class="p">)</span>
 </code></pre></div>
 <p>This creates a string of output VPINs 450-465 (and thus on 2 boards). Note the clock/latch/data pins must be different to any DNIN8 or DNIN8K pins.</p>
+<!-- These are case sensitive -->
 
 
 

@@ -12398,19 +12398,19 @@
 <p>Designed in conjunction with the <strong>DCC-EX</strong> development team, the <strong>EX‑MotorShield8874</strong> is extremely simple to use with all current and future generations of EX‑CommandStation hardware.</p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../_static/images/ex8874/ex_motorshield8874_purple_side-small.png" data-title="EX-CSB1" data-desc-position="bottom"><img align="right" alt="EX-CSB1" src="../../../_static/images/ex8874/ex_motorshield8874_purple_side-small.png"></a></p>
 <p>This board is the new standard by which we compare other boards.</p>
-<p>Not <em>required</em> for the <a href="../../ex-csb1/"><strong>EX-CSB1</strong></a>, but can be optionally added to provide two additional 5amp outputs (in addition to the two provided by default).</p>
+<p>Not <em>required</em> for the <a href="../../ex-csb1/"><strong><abbr title="EX-CommandStation/Booster 1 Express">EX-CSB1</abbr></strong></a>, but can be optionally added to provide two additional 5amp outputs (in addition to the two provided by default).</p>
 <p><br></p>
 <h2 id="features">Features<a class="headerlink" href="#features" title="Permanent link">¶</a></h2>
 <ul>
-<li>Pin compatible with the original Arduino Motor Shield Rev3 but provides significantly improved electrical performance for driving higher loads, and improved usability.</li>
+<li>Pin compatible with the original Arduino <abbr title="Also referred to as a 'motor controller' or 'motor driver'">Motor Shield</abbr> Rev3 but provides significantly improved electrical performance for driving higher loads, and improved usability.</li>
 <li>Rated for 5 Amps of continuous output current.</li>
-<li>No need to cut traces or bend out pins for stacking on the Arduino Mega based EX-CommandStations or the <strong>EX-CSB1</strong>.</li>
+<li>No need to cut traces or bend out pins for stacking on the Arduino Mega based EX-CommandStations or the <strong><abbr title="EX-CommandStation/Booster 1 Express">EX-CSB1</abbr></strong>.</li>
 <li>2 outputs (Main and Programming Track or 2 Mains).</li>
 <li>Single power supply input powers the shield, the Arduino, and the track (motor output). Powering of Arduino boards is possible due to the onboard DC/DC buck converter, supporting a wide input supply range from 9 to 30V. The reverse polarity protection prevents damage to the circuit and its components in case the power supply is accidentally connected backwards.</li>
 <li>Wide input voltage range from 9V to 30V DC.</li>
 <li>5V and 3.3V compatible.</li>
 <li>Virtually no voltage drop, even at high currents.</li>
-<li>I2C header and STEMMA Qwiic connector for accessories (displays, port expanders, servo boards, etc.).</li>
+<li><abbr title="(Inter-Integrated Circuit, pronounced &quot;eye-squared-see&quot;) is a synchronous, multi-controller/multi-target serial communication protocol">I2C</abbr> header and STEMMA Qwiic connector for accessories (displays, port expanders, servo boards, etc.).</li>
 <li>Reverse polarity protection.</li>
 <li>Fault detection in addition to overcurrent reporting for extra safety.</li>
 <li>Alternative power in and out solder pads for different connector types.</li>
@@ -12420,7 +12420,7 @@
 </ul>
 <p>The boards 5V and 3V friendly design makes it suitable for a broad range of Arduino compatible platforms, with an override that compensates for designs with incomplete support (such as an incorrect IORef voltage).</p>
 <h2 id="why-did-we-make-it">Why did we make it<a class="headerlink" href="#why-did-we-make-it" title="Permanent link">¶</a></h2>
-<p><strong>EX‑MotorShield8874</strong> is specifically designed for use with <strong>DCC-EX EX-CommandStation</strong>s for controlling model railroads/railways, but can also be used as generally better replacement for Arduino Motor Shield R3 in any device that needs to control a motor. We needed higher current capacity to power more motors/trains and have little to no voltage drop due to advanced MOSFET driver technology.</p>
+<p><strong>EX‑MotorShield8874</strong> is specifically designed for use with <strong>DCC-EX EX-CommandStation</strong>s for controlling model railroads/railways, but can also be used as generally better replacement for Arduino <abbr title="Also referred to as a 'motor controller' or 'motor driver'">Motor Shield</abbr> R3 in any device that needs to control a motor. We needed higher current capacity to power more motors/trains and have little to no voltage drop due to advanced MOSFET driver technology.</p>
 <h2 id="purchase">Purchase<a class="headerlink" href="#purchase" title="Permanent link">¶</a></h2>
 <p>The <strong>EX‑MotorShield8874</strong> is available from many <a href="../../../purchasing/official-sellers/">suppliers</a>.</p>
 <h2 id="licensing">Licensing<a class="headerlink" href="#licensing" title="Permanent link">¶</a></h2>
@@ -12428,7 +12428,7 @@
 <p>For quantities of 10 or less per annum, you may utilise a PCB manufacturing and assembly service such as JLCPCB without licensing fees. A donation to <strong>DCC-EX</strong> would be appreciated, so click the <a href="../../../contributing/contributing/">donate</a> button. The production files are available on the <strong>DCC-EX</strong> GitHub.</p>
 <p>Entrepreneurs wanting to use the design to offer commercial quantities to their local communities should contact Semify (service @ semify-eda.com) to arrange a bulk purchase or <strong>DCC-EX</strong> (support @ dcc-ex.com) for a license to manufacture. Licensing includes donating a royalty to <strong>DCC-EX</strong> per board sold.</p>
 <h2 id="assembly-with-ex-motorshield8874">Assembly with EX-MotorShield8874<a class="headerlink" href="#assembly-with-ex-motorshield8874" title="Permanent link">¶</a></h2>
-<p>The shield stacks onto an <strong>EX-CSB1</strong> without modification. The <strong>EX-CSB1</strong> firmware must be configured with the <strong>EX-Installer</strong> to recognise the additional two tracks.</p>
+<p>The shield stacks onto an <strong><abbr title="EX-CommandStation/Booster 1 Express">EX-CSB1</abbr></strong> without modification. The <strong><abbr title="EX-CommandStation/Booster 1 Express">EX-CSB1</abbr></strong> firmware must be configured with the <strong>EX-Installer</strong> to recognise the additional two tracks.</p>
 <p>For self-built <strong>EX-CommandStations</strong>, please consult the relevant build instructions.</p>
 <p><strong>DO NOT</strong> connect power to BOTH the EX-MotorShield8874 barrel jack and the underlying Arduino motherboard via its DC barrel jack as you may damage your Arduino and/or EX-MotorShield8874.</p>
 <h2 id="engineering-notes">Engineering notes<a class="headerlink" href="#engineering-notes" title="Permanent link">¶</a></h2>
@@ -12437,8 +12437,8 @@
 <p><strong>NOTE:</strong> The <strong>EX‑MotorShield8874</strong> can supply up to 5A of track power per channel, a power supply of more than 10A peak capacity is required to run both channels at full peak current and have power left for the <strong>EX-CommandStation</strong>. A power supply that is unable to provide the current at which the software detects a short-circuit will not be safe as the <strong>EX-CommandStation</strong> will not be able to detect the short.</p>
 <p>If the track power supply is not plugged in, the <strong>EX-CommandStation</strong> will report track faults.</p>
 <h2 id="stacking-two-motor-shields">Stacking two motor shields<a class="headerlink" href="#stacking-two-motor-shields" title="Permanent link">¶</a></h2>
-<p>Stacking an <strong>EX-MotorShield8874</strong> and another motor shield type is <strong>not recommended</strong>. There are complex pin conflicts and software configuration requirements.</p>
-<p>The <strong>EX-CSB1</strong> can only have a single <strong>EX-MotorShield8874</strong> stacked on it, unmodified. There are insufficient pins available on the internal ESP32 processor to handle more.</p>
+<p>Stacking an <strong>EX-MotorShield8874</strong> and another <abbr title="Also referred to as a 'motor controller' or 'motor driver'">motor shield</abbr> type is <strong>not recommended</strong>. There are complex pin conflicts and software configuration requirements.</p>
+<p>The <strong><abbr title="EX-CommandStation/Booster 1 Express">EX-CSB1</abbr></strong> can only have a single <strong>EX-MotorShield8874</strong> stacked on it, unmodified. There are insufficient pins available on the internal ESP32 processor to handle more.</p>
 <h3 id="steps-to-stack">Steps to Stack<a class="headerlink" href="#steps-to-stack" title="Permanent link">¶</a></h3>
 <ul>
 <li>Leave the first <strong>EX‑MotorShield8874</strong> in the stack entirely unmodified.</li>
@@ -12465,6 +12465,7 @@
 A6, A7 on Arduino Mega<br>
 PC2, PC3 on Nucleo-64</p>
 <p>After hardware installation, you will need to re-run the <a href="../../../prepare-to-use/installer/">EX-Installer</a> to configure the <strong>EX-CommandStation</strong> code to recognize the new board and allow you to control the third and fourth tracks.</p>
+<!-- These are case sensitive -->
 
 
 

@@ -12315,12 +12315,13 @@
 <p>So.. RELATIVE HTML links are the only reliable way to work, otherwise your website is borked if you install it in for example <code>http:://dcc-ex.com/newsite/</code></p>
 <h2 id="what-the-properdocs-author-sees">What the ProperDocs author sees<a class="headerlink" href="#what-the-properdocs-author-sees" title="Permanent link">¶</a></h2>
 <p>In ProperDocs,  the markdown to html generator  passes through RELATIVE links unchanged, this means that you can easily refer to images in the same directory as the current page by just giving the name, or get to any other directory with the appropriate number of ../ to go up the tree.</p>
-<p>When typing a link in VSCode, the intellisense dropdown will help you complete the link by following the path from the current folder.</p>
-<p>If you enter <code>[your title](.</code> as soon as you type <code>.</code> VSC will show you a list of folder and .md files in the current folder to select from. If you type <code>..</code> or <code>../</code> or <code>../..</code> etc. you can navigate up and down the folder structure to find the document you need.  This embeds the relative link to the document.</p>
+<p>When typing a link in <abbr title="Microsoft Visual Studio Code. Recommended IDE if EX-Installer is insufficient for your needs.">VSCode</abbr>, the intellisense dropdown will help you complete the link by following the path from the current folder.</p>
+<p>If you enter <code>[your title](.</code> as soon as you type <code>.</code> <abbr title="Microsoft Visual Studio Code. Recommended IDE if EX-Installer is insufficient for your needs.">VSC</abbr> will show you a list of folder and .md files in the current folder to select from. If you type <code>..</code> or <code>../</code> or <code>../..</code> etc. you can navigate up and down the folder structure to find the document you need.  This embeds the relative link to the document.</p>
 <p>The technique above ensures that the link is valid.  However if you move the current page to another directory so the relative link is no longer going to find the image or page you want. This trade off is worth that risk.</p>
-<p>Note that relative links are the only way to get images to preview in VSC.</p>
+<p>Note that relative links are the only way to get images to preview in <abbr title="Microsoft Visual Studio Code. Recommended IDE if EX-Installer is insufficient for your needs.">VSC</abbr>.</p>
 <h2 id="the-search-link">The search link<a class="headerlink" href="#the-search-link" title="Permanent link">¶</a></h2>
 <p>The search link like <code>?turnout</code> is passed through unchanged by ProperDocs but is intercepted in the browser by our own  <a href="../../../_static/scripts/search-helper.js">JavaSCript code</a></p>
+<!-- These are case sensitive -->
 
 
 

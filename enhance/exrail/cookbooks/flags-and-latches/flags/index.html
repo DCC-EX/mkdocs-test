@@ -12489,7 +12489,7 @@ Unlike sensors and leds, these VPINs are both INPUT and OUTPUT  These can be use
 and in <strong>EXRAIL</strong> <code>BITMAP_SET(vpin,value)</code> which is the same as <code>ANOUT(vpin,value,0,0)</code></p>
 <h2 id="use-as-binary-flag-groups-advanced">Use as binary flag groups (advanced)<a class="headerlink" href="#use-as-binary-flag-groups-advanced" title="Permanent link">¶</a></h2>
 <p>Virtual pins (and others that respond to an analog read in order to provide bit mapped digital data, such as SensorCam) can be set and tested with new special <strong>EXRAIL</strong> commands</p>
-<p><code>IFBITMAP_ALL(vpin,mask)</code>   Bitwise ANDs the  the vpin value with the mask value and is true if ALL the 1 bits in the mask are also 1 bits in the value.
+<p><code>IFBITMAP_ALL(vpin,mask)</code>   Bitwise ANDs the  the <abbr title="an Arduino pin number that has been extended to include pins on external devices or expanders">vpin</abbr> value with the mask value and is true if ALL the 1 bits in the mask are also 1 bits in the value.
     e.g.    <code>IFBITMAP_ALL(1013,0x0f)</code>  would be true if ALL the last 4 bits of the value are 1s.</p>
 <p><code>IFBITMAP_ANY(1013,0x0f)</code> would be true if ANY of the last 4 bits are 1s.</p>
 <h3 id="modifying-bitmap-values">Modifying bitmap values<a class="headerlink" href="#modifying-bitmap-values" title="Permanent link">¶</a></h3>
@@ -12497,6 +12497,7 @@ and in <strong>EXRAIL</strong> <code>BITMAP_SET(vpin,value)</code> which is the 
 <code>BITMAP_AND(vpin,mask)</code> performs a bitwise AND operation.
 <code>BITMAP_OR(vpin,mask)</code>  performs a bitwise OR operation
 <code>BITMAP_XOR(vpin,mask)</code> performs a bitwise EXCLUSIVE OR (which is basically a toggle).</p>
+<!-- These are case sensitive -->
 
 
 

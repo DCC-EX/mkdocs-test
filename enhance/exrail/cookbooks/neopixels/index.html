@@ -12283,10 +12283,10 @@
 
 
 <h1 id="neopixel-support">NeoPixel support<a class="headerlink" href="#neopixel-support" title="Permanent link">¶</a></h1>
-<p>The IO_NeoPixel.h driver supports the <a href="https://learn.adafruit.com/adafruit-neodriver-i2c-to-neopixel-driver">Adafruit NeoDriver - I2C to NeoPixel Driver</a></p>
-<p>The driver turns each pixel into an individual VPIN which can be given a colour and turned on or off using the the NEOPIXEL <strong>EXRAIL</strong> macro. <strong>EXRAIL</strong> SIGNALS can also drive a single pixel signal or multiple separate pixels <a href="../signals/neopixel-signals/">See Neopixel Signals</a>.</p>
+<p>The IO_NeoPixel.h driver supports the <a href="https://learn.adafruit.com/adafruit-neodriver-i2c-to-neopixel-driver">Adafruit NeoDriver - <abbr title="(Inter-Integrated Circuit, pronounced &quot;eye-squared-see&quot;) is a synchronous, multi-controller/multi-target serial communication protocol">I2C</abbr> to NeoPixel Driver</a></p>
+<p>The driver turns each pixel into an individual <abbr title="an Arduino pin number that has been extended to include pins on external devices or expanders">VPIN</abbr> which can be given a colour and turned on or off using the the NEOPIXEL <strong>EXRAIL</strong> macro. <strong>EXRAIL</strong> SIGNALS can also drive a single pixel signal or multiple separate pixels <a href="../signals/neopixel-signals/">See Neopixel Signals</a>.</p>
 <h2 id="defining-the-hardware-driver">Defining the hardware driver<a class="headerlink" href="#defining-the-hardware-driver" title="Permanent link">¶</a></h2>
-<p>Add a driver definition in myAutomation.h for each adafruit I2C driver.</p>
+<p>Add a driver definition in myAutomation.h for each adafruit <abbr title="(Inter-Integrated Circuit, pronounced &quot;eye-squared-see&quot;) is a synchronous, multi-controller/multi-target serial communication protocol">I2C</abbr> driver.</p>
 <div class="language-cpp highlight"><pre><span></span><code><span class="w">    </span><span class="n">HAL</span><span class="p">(</span><span class="n">neoPixel</span><span class="p">,</span><span class="w"> </span><span class="n">firstVpin</span><span class="p">,</span><span class="w"> </span><span class="n">numberOfPixels</span><span class="w"> </span><span class="p">[,</span><span class="w"> </span><span class="n">mode</span><span class="w"> </span><span class="p">[,</span><span class="w"> </span><span class="n">i2caddress</span><span class="p">])</span>
 </code></pre></div>
 <p>Where mode is selected from the various pixel string types which have varying colour order or refresh frequency. For MOST strings this mode will be NEO_GRB but for others refer to the comments in IO_NeoPixel.h</p>
@@ -12294,11 +12294,12 @@
 <p>For example:</p>
 <div class="language-cpp highlight"><pre><span></span><code><span class="w">    </span><span class="n">HAL</span><span class="p">(</span><span class="n">NeoPixel</span><span class="p">,</span><span class="mi">1000</span><span class="p">,</span><span class="mi">20</span><span class="p">)</span>
 </code></pre></div>
-<p>This is a NeoPixel driver defaulting to I2C aqddress 0x60 for a GRB pixel string. Pixels are given vpin numbers from 1000 to 1019.</p>
+<p>This is a NeoPixel driver defaulting to <abbr title="(Inter-Integrated Circuit, pronounced &quot;eye-squared-see&quot;) is a synchronous, multi-controller/multi-target serial communication protocol">I2C</abbr> aqddress 0x60 for a GRB pixel string. Pixels are given <abbr title="an Arduino pin number that has been extended to include pins on external devices or expanders">vpin</abbr> numbers from 1000 to 1019.</p>
 <div class="language-cpp highlight"><pre><span></span><code><span class="w">    </span><span class="n">HAL</span><span class="p">(</span><span class="n">NeoPixel</span><span class="p">,</span><span class="mi">1020</span><span class="p">,</span><span class="mi">20</span><span class="p">,</span><span class="n">NEO_GRB</span><span class="p">,</span><span class="mh">0x61</span><span class="p">)</span>
 </code></pre></div>
 <p>This is a NeoPixel driver on i2c address 0x61.</p>
 <p>For devices behind multiplexors see <a href="../various-devices/multiplexors/">multiplexors</a></p>
+<!-- These are case sensitive -->
 
 
 

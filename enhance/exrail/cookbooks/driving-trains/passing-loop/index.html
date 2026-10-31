@@ -12474,8 +12474,8 @@
 <span class="w">  </span><span class="n">FREE</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span><span class="w">    </span><span class="c1">// we are not in loop</span>
 <span class="w">  </span><span class="n">FOLLOW</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span><span class="w"> </span><span class="c1">// now follow the Dogbath-Catflap sequence</span>
 </code></pre></div>
-<p>Notice that you don't drive into an area of the track without first reserving the corresponding block, and you must remember to free it once you have safely left. Also the script above assumes that a train can cause the turnout/point to change quickly enough if it reaches a sensor in the loop and doesn't need to stop, this can be alleviated if you throw/close the turnout/point behind you as you reach your loop sensor so that the other train does not need to worry about any slow turnout/point movement.</p>
-<p>Please bear in mind that your turnout/point geometry may be different. The diagram is for two right-hand turnouts/points, you may have used a left/right pair so modify the THROW/CLOSE statements above to suit.</p>
+<p>Notice that you don't drive into an area of the track without first reserving the corresponding block, and you must remember to free it once you have safely left. Also the script above assumes that a train can cause the <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnout</abbr>/point to change quickly enough if it reaches a sensor in the loop and doesn't need to stop, this can be alleviated if you throw/close the <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnout</abbr>/point behind you as you reach your loop sensor so that the other train does not need to worry about any slow <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnout</abbr>/point movement.</p>
+<p>Please bear in mind that your <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnout</abbr>/point geometry may be different. The diagram is for two right-hand <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnouts</abbr>/points, you may have used a left/right pair so modify the THROW/CLOSE statements above to suit.</p>
 <h2 id="starting-the-shuttle">Starting the shuttle<a class="headerlink" href="#starting-the-shuttle" title="Permanent link">¶</a></h2>
 <p>We have the issue that one train is starting from the far end, and we have to establish the train positions, directions, initial reserved status and where in the sequence they must start.</p>
 <p>If we assume that:</p>
@@ -12511,6 +12511,7 @@
 <h2 id="advanced-extras">Advanced Extras<a class="headerlink" href="#advanced-extras" title="Permanent link">¶</a></h2>
 <p>Once you have this basic shuttle working, you can use the methods described in previous examples to add signals, sound effects or perhaps a level crossing with gates.</p>
 <p>You may consider having an intermediate station stop along one end of the line or extend the design to use three locos and two passing loops.</p>
+<!-- These are case sensitive -->
 
 
 
