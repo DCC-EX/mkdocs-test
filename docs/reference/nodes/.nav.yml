@@ -1,0 +1,4 @@
+nav:
+  - Overview: index.md
+  - Compiling: compiling.md
+  - Cookbooks: cookbooks
