@@ -10,6 +10,7 @@ Explore this page to see how **EX-CommandStation** can be expanded to enhance yo
 * [Automate trains or animate devices](#routes-and-automation-automating-your-layout)
 * [Controlling DC locomotives](#trackmanager-dc-and-dcc-operation)
 * [Adding Accessories](#accessories) e.g. Sensors, Turntables, DCC Boosters
+* [Adding Distributed Layout Nodes](#distributed-layout-nodes)
 
 Also, the [Big Picture](../enhance/exrail/cookbooks/big-picture/index.md) pages describe a theoretical journey from just controlling some trains, through using rosters, turnouts/points, turntables and on to automation of trains.
 
@@ -110,6 +111,14 @@ Also see:
 * [EX-IOExpander](../products/ex-ioexpander/ex-ioexpander.md)
 * [EX-SensorCAM](../products/ex-sensorcam/index.md)
 * [Use the EX-CSB1 as a DCC Booster](./trackmanager/booster.md)
+
+----
+
+## Distributed Layout Nodes
+
+Layout **nodes** offer a simple way of distributing layout control (usually wirelessly) over a wide area using the same the **EX-CommandStation** software in each node, with a slight configuration change.
+
+See the [Introduction to using distributed layout nodes](../reference/nodes/index.md) page for more information.
 
 ----
 
