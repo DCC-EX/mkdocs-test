@@ -1,6 +1,6 @@
 # Use of Non Volatile Storage
 
-Non Volatile Storage (NVS) exists to enable a command staton or node to be configured easily without involving a recompile or flash.
+Non Volatile Storage (NVS) exists to enable a command station or node to be configured easily without involving a recompile or flash.
 
 This is particularly useful for:
 
@@ -11,7 +11,7 @@ This is particularly useful for:
 
 ## NVS Storage
 
-The system provides for NVS values numbered 0..16000 Each of which defaults to 0/"" but may be configured as a nummber (-32760..+32760) or a string value.
+The system provides for NVS values numbered 0..16000 Each of which defaults to 0/"" but may be configured as a number (-32760..+32760) or a string value.
 
 These values are maintained over power down.
 
@@ -139,7 +139,7 @@ Altering the values with the C command will work even while the automation is ru
 
 The serial log browser inteface, which allows a user to monitor the serial log and issue commands from a web browser pointed at the hostname or ip-address of the CS or Node, contains an integrated configuration editor feature which allows a user (or factory) dialog to be attached.
 
-Dialogs can be extremly simple or staggeringly complicated, such is the world of HTML/CSS/JavaScript. However, simple dialogs can be created with a minimum of red-tape as is the philosophy behind EXRAIL.
+Dialogs can be extremely simple or staggeringly complicated, such is the world of HTML/CSS/JavaScript. However, simple dialogs can be created with a minimum of red-tape as is the philosophy behind EXRAIL.
 
 User dialogs can be created in my* files and referenced from EXRAIL so that no base code needs to be modified. Follow this example to create a simple dialog to configure the example sequence shown above.
 
@@ -187,6 +187,6 @@ When the Web Browser interface is opened on the command station, the "Configs" b
 
 The dialog will populate with the current values. The Save button will appear if you have changed any of them, or you can close without saving.
 
-## Configuring system settings (not ususally done by user dialogs)
+## Configuring system settings (not usually done by user dialogs)
 
 Configuration of system NVS settings like the wifi ssid and password can be done by user dialogs but the `nvs=` parameter of `<nvsinput` will refer to the setting by fixed names (search code for SystemPreferencesList.h)  

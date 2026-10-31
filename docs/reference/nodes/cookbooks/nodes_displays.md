@@ -10,7 +10,7 @@ A node may define an OLED screen in exactly the same way as the CS.
 
 More than one node may choose to render the same screen.
 
-it is not necessary to define the oled in the CS if it doesnt have one attached.
+it is not necessary to define the oled in the CS if it doesn't have one attached.
 
 ## Displaying
 

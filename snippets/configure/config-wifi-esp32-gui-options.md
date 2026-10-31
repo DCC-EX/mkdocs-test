@@ -64,7 +64,7 @@ This is a security feature.  If you could change AP mode settings over WiFi, the
 
 ## Changing the WiFi Settings
 
-### Using the EX-CommandStation's own Web Sever {{ new_in_v(6.0) }}
+### Using the EX-CommandStation's own Web Sever - {{ new_in_v(6) }}
 
 ==TODO== VERY HIGH! - Changing the WiFi Settings using the EX-CommandStation's own Web Sever
 

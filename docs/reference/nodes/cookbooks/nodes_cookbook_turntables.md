@@ -25,7 +25,7 @@ Notice that the turntable ID does not change but the vpin ???? may well change t
 
 The Command Station will automatically know that the turntable is defined elsewhere so does not need the turntable definition.
 
-This is particularly powerful if you are building a modular layout. If for eaxample a turntable is on a particular module handled by a node, then the throttles will automatically know if the module is present or absent and will not show turntables for the module unless it is powered up.
+This is particularly powerful if you are building a modular layout. If for example a turntable is on a particular module handled by a node, then the throttles will automatically know if the module is present or absent and will not show turntables for the module unless it is powered up.
 
 Notice that this is all you need to do... Any EXRAIL in the Command station that needs to handle the turntable can remain unchanged.
 

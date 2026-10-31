@@ -5,6 +5,7 @@ nav:
   - Adding Turnouts/Points: turnouts.md
   - Adding Routes and Automations: routes.md
   - Adding Other Accessories: accessories
+  - Adding Layout Nodes: nodes.md
   - <br/>TrackManager: trackmanager
   - Running a DC layout: dc-running.md
  
