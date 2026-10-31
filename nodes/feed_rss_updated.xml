@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    
+    <title>DCC-EX News</title>
+    <description>Latest news and updates from the DCC-EX team</description>
+    <link>https://dcc-ex.com/mkdocs-test/</link>
+    <atom:link href="https://dcc-ex.com/mkdocs-test/feed_rss_updated.xml" rel="self" type="application/rss+xml" />
+
+    
+    
+    <docs>https://github.com/DCC-EX/mkdocs-test</docs>
+    <language>en</language>
+
+    
+    <pubDate>Sat, 31 Oct 2026 12:26:11 -0000</pubDate>
+    <lastBuildDate>Sat, 31 Oct 2026 12:26:11 -0000</lastBuildDate>
+    <ttl>1440</ttl>
+
+    
+    <generator>MkDocs RSS plugin - v1.17.3</generator>
+
+    
+    
+    <image>
+      <url>_static/images/logos/favicon.ico</url>
+      <title>DCC-EX News</title>
+      <link>https://dcc-ex.com/mkdocs-test/</link>
+    </image>
+    
+
+    
+    
+    <item>
+      <title>New in Version 6.0</title>
+      
+      
+        
+      <author>DCC-EX</author>
+        
+      
+      
+      
+      <description>&lt;h1&gt;New in Version 6.0&lt;/h1&gt;
+&lt;p&gt;Updates for:&lt;/p&gt;
+&lt;p&gt;intro text goes here&lt;/p&gt;</description>
+      <link>https://dcc-ex.com/mkdocs-test/news/2026/10/new-in-version-60/</link>
+      <pubDate>Thu, 29 Oct 2026 05:48:53 +0000</pubDate>
+      <source url="https://dcc-ex.com/mkdocs-test/feed_rss_updated.xml">DCC-EX News</source>
+      
+      <guid isPermaLink="true">https://dcc-ex.com/mkdocs-test/news/2026/10/new-in-version-60/</guid>
+      
+    </item>
+    
+    <item>
+      <title>New Documentation Started</title>
+      
+      
+        
+      <author>peteGSX</author>
+        
+      
+      
+      
+      <description>&lt;h1&gt;New Documentation Started&lt;/h1&gt;
+&lt;p&gt;We have new documentation!&lt;/p&gt;</description>
+      <link>https://dcc-ex.com/mkdocs-test/news/2025/06/new-documentation-started/</link>
+      <pubDate>Wed, 21 Oct 2026 00:34:39 +0000</pubDate>
+      <source url="https://dcc-ex.com/mkdocs-test/feed_rss_updated.xml">DCC-EX News</source>
+      
+      <guid isPermaLink="true">https://dcc-ex.com/mkdocs-test/news/2025/06/new-documentation-started/</guid>
+      
+    </item>
+    
+    <item>
+      <title>Assorted new feature documentation</title>
+      
+      
+        
+      <author>flash62au</author>
+        
+      
+      
+      
+      <description>&lt;h1&gt;Assorted new feature documentation&lt;/h1&gt;
+&lt;p&gt;Updates for:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;New EXRAIL commands&lt;/li&gt;
+&lt;li&gt;Node Dialog Creation&lt;/li&gt;
+&lt;li&gt;Railcom&lt;/li&gt;
+&lt;/ul&gt;</description>
+      <link>https://dcc-ex.com/mkdocs-test/news/2026/10/assorted-new-feature-documentation/</link>
+      <pubDate>Wed, 21 Oct 2026 00:34:39 +0000</pubDate>
+      <source url="https://dcc-ex.com/mkdocs-test/feed_rss_updated.xml">DCC-EX News</source>
+      
+      <guid isPermaLink="true">https://dcc-ex.com/mkdocs-test/news/2026/10/assorted-new-feature-documentation/</guid>
+      
+    </item>
+    
+  </channel>
+</rss>
