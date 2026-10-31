@@ -11,6 +11,16 @@
     next
 }
 
+function replace_version_tags(text,    result, version) {
+    result = ""
+    while (match(text, /@V[0-9]+(\.[0-9]+)*/)) {
+        version = substr(text, RSTART + 2, RLENGTH - 2)
+        result = result substr(text, 1, RSTART - 1) "{{ new_in_v(" version ") }}"
+        text = substr(text, RSTART + RLENGTH)
+    }
+    return result text
+}
+
 function escape_markdown(text,    result, i, character) {
     result = ""
     for (i = 1; i <= length(text); i++) {
@@ -52,6 +62,7 @@ function url_encode(text,    result, i, character, code, printable) {
 /^[[:space:]]*\/\/\/brief/ {
     line = $0
     sub(/^[[:space:]]*\/\/\/brief[[:space:]]*/ , "" , line)
+    line = replace_version_tags(line)
     print line
     print ""
     next
@@ -60,6 +71,7 @@ function url_encode(text,    result, i, character, code, printable) {
 /^[[:space:]]*\/\/\/param/ {
     line = $0
     sub(/^[[:space:]]*\/\/\/param[[:space:]]*/ , "- " , line)
+    line = replace_version_tags(line)
     print line
     next
 }
@@ -69,8 +81,8 @@ function url_encode(text,    result, i, character, code, printable) {
 /^[[:space:]]*\/\/\// {
     line = $0
     sub(/^[[:space:]]*\/\/\/[[:space:]]*/ , "" , line)
+    line = replace_version_tags(line)
     print line
     print ""
     next
 }
-

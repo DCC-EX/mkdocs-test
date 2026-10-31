@@ -1,5 +1,15 @@
 #!/usr/bin/awk -f
 
+function replace_version_tags(text,    result, version) {
+    result = ""
+    while (match(text, /@V[0-9]+(\.[0-9]+)*/)) {
+        version = substr(text, RSTART + 2, RLENGTH - 2)
+        result = result substr(text, 1, RSTART - 1) "{{ new_in_v(" version ") }}"
+        text = substr(text, RSTART + RLENGTH)
+    }
+    return result text
+}
+
 function wrap_upper_parts(tag,    count, i, parts, out) {
     count = split(tag, parts, /_/)
     out = ""
@@ -33,7 +43,7 @@ function sort_blocks(    i, j, tmp_key, tmp_value) {
         # Extract "something" and "comments"
         match($0, /ZZ\(([^)]*)\)[[:space:]]*\/\/[[:space:]]*(.*)/, arr);
         something = arr[1];
-        comments = arr[2];
+        comments = replace_version_tags(arr[2]);
         # Replace commas in "something" with spaces
         gsub(/,/, " ", something);
         linktag=arr[1]
@@ -62,6 +72,7 @@ function sort_blocks(    i, j, tmp_key, tmp_value) {
 /^[[:space:]]*\/\/\// {
     line = $0
     sub(/^[[:space:]]*\/\/\/[[:space:]]*/ , "" , line)
+    line = replace_version_tags(line)
     if (current_block > 0) {
         block_content[current_block] = block_content[current_block] line "\n"
     } else {
