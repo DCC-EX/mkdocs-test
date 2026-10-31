@@ -6,6 +6,8 @@ Signal definitions are extracted from myAutomation during the compile process an
 
 Refer to the following cookbook entries for details of defining signals of various types.
 
+## code
+
 Once a signal has ben defined the following commands can be used:
 
 - ```RED(signal_id)```   ```GREEN(signal_id)```   ```AMBER(signal_id)```   change the signal state
