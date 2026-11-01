@@ -1,5 +1,6 @@
 # Handling turntables in a node
-????????????????????? INITIAL DRAFT CODE NOT YET IMPLEMENTED ?????????????
+
+==TODO== LOW - ????????????????????? INITIAL DRAFT CODE NOT YET IMPLEMENTED ?????????????
 This example shows how an existing turntable definition  can be moved to a node processor. This only applies to the second version of the turntable commands, where turntables have an id. 
 
 ## Existing EXRAIL for turntable connected to Command Station
@@ -33,8 +34,6 @@ You can have any number of turntables in a node or split them over several nodes
 
 In effect, turntable numbers are unique across all nodes so only one node should have the hardware-aware turntable definition.
 
-
 ## Local node processing
 
 Because the node has almost the full EXRAIL capability, its possible to use EXRAIL in the node to monitor ON??? events to perform local signals, switch lights, make sounds and so on.
-

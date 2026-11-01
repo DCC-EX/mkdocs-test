@@ -20,7 +20,7 @@ Additional inputs/outputs D9, D10, D11 and D12.
 Add an environment to your myPlatformio.ini file.  If using other that arduino nano esp32 then modify 
 sections as required.
 
-```
+```console
 [env:EX_Turntable_Onboard]
 platform = espressif32
 board = arduino_nano_esp32
@@ -34,7 +34,7 @@ board_build.flash_mode = dio
 board_build.partitions = default_16MB.csv
 
 lib_deps = 
-	waspinator/AccelStepper @ ^1.64.0
+    waspinator/AccelStepper @ ^1.64.0
 
 
 ; Build flags for PSRAM and partition support
@@ -43,12 +43,12 @@ build_flags =
     -DARDUINO_USB_MODE=1
     -DARDUINO_USB_CDC_ON_BOOT=1
     -DBOARD_HAS_PSRAM
-	-DDCCEX_NODE
+    -DDCCEX_NODE
     -DDCCEX_NODE_NANO_EXTURNTABLE
     -DEXTURNTABLE_ONBOARD
     -DNO_DISPLAY
-	-DI2C_SDA=11
-	-DI2C_SCL=10
+    -DI2C_SDA=11
+    -DI2C_SCL=10
     -mfix-esp32-psram-cache-issue
 
 ; Specify upload and monitor speed
@@ -116,7 +116,7 @@ Additional activity commands are
 16  -   Extra 4 on
 17  -   Extra 4 off
 
-# First start up
+## First start up
 
 The driver will attempt to move the turntable to home and then calibrate the full step count.
 
@@ -135,11 +135,11 @@ This will also occur any time a calibration is redone.
 
 Once calibration is completed the node will restart after 20 seconds to reload all the relevant NVS values and rehome the turntable.
 
-# Subsequent start up
+## Subsequent start up
 
 The controller will move the turntable/traverser to the home position.
 
-## NVS configuration
+### NVS configuration
 
 The onboard controller reads its configuration from the DCC-EX node NVS table
 when its IO device starts. NVS(0) contains the EX-Turntable's virtual pin
