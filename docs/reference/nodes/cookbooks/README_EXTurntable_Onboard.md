@@ -15,7 +15,7 @@ RT_EX-Turntable board uses:
 Arduino Nano ESP32-S3 step/dir/enable pins A0/A1/A2, home sensor D5, limit sensor D8, relay D4, LED D6 and accessory D7.
 Additional inputs/outputs D9, D10, D11 and D12.
 
-# myPlatformio.ini file
+## myPlatformio.ini file
 
 Add an environment to your myPlatformio.ini file.  If using other that arduino nano esp32 then modify 
 sections as required.

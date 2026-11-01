@@ -1,6 +1,6 @@
-# Introduction to using distributed layout nodes
+# Introduction to Using Distributed Layout Nodes
 
-Layout nodes offer a simple way of distributing layout control (usually wirelessly) over a wide area using the same **EX-CommandStation** software in each node.
+Layout **Nodes** offer a simple way of distributing layout control (usually wirelessly) over a wide area using the same **EX-CommandStation** software in each node.
 
 ## Basic Principles
 
@@ -20,11 +20,11 @@ In some cases, particularly large layouts,  it would be preferable to offload so
 
 By using the node system, the separate processors will automatically intercommunicate and will use the same DCC-EX code, including **EXRAIL** and HAL drivers in each node.
 
-For example, a node may be established to handle a group of turnouts/points on one area of your layout. The physical turnouts/points would be connected to the node using the usual hardware (MCP32017, PCA9685 etc) and usual EXRAIL definitions but there would not be any need to wire the node to the command station or deal with long i2c connections.
+For example, a node may be established to handle a group of turnouts/points on one area of your layout. The physical turnouts/points would be connected to the node using the usual hardware (MCP32017, PCA9685 etc) and usual EXRAIL definitions but there would not be any need to wire the node to the command station or deal with long I2C connections.
 
-The Command Station would automatically know about the turnouts/points, can still throw/close the turnout in the same way as normal and keep throttles informed, but the remote node would perform the physical movement.
+The Command Station would automatically know about the turnouts/points, can still throw/close the turnout/point in the same way as normal and keep throttles informed, but the remote node would perform the physical movement.
 
-## Shared objects
+## Shared Objects
 
 Object sharing is generally done for things that have an id that is separate from the VPIN associated with some particular hardware implementation.
 
@@ -39,13 +39,13 @@ Sensors (a sensor definition is actually a vpin monitoring task, not the actual 
 - Input (sensor) vpins can be monitored by any node
 - Output vpins can be set by any node... The implication of this is that most devices like DFPlayers, NeoPixels, Leds can be controlled by any node as long as the node with the real device has deliberately accepted the VPIN numbers using the SHARED_WRITE_VPINS macro.  
 
-## Node processors
+## Node Processors
 
-Because the nodes do not have to handle the creation of the DCC waveform, or the weird and wonderful assortment of throttle connections, a node can be created using a much cheaper processor than the Command Station and without the motor shield requirement.
+Because the nodes do not have to handle the creation of the DCC waveform, or the weird and wonderful assortment of throttle connections, a node can be created using a much cheaper processor than the Command Station and without the motor driver requirement.
 
 However, a CSB1 being used as a booster is effectively a node and can handle other devices as well.
 
-## Node configuration
+## Node Configuration
 
 Every effort has been made to minimise the configuration/scripting changes but this is best seen by viewing the cookbook entries that follow.
 
@@ -55,11 +55,11 @@ It is assumed that the reader intending to implement nodes is familiar with the 
 
 ## Flashing Nodes
 
-Each node will need its own myAutomation.h but otherwise operates exactly the same EX-CommandStation code. A definition (or possibly runtime switch) prevents the node from advertising itself to throttles or trying to generate a DCC waveform.
+Each node will need its own ``myAutomation.h`` but otherwise operates exactly the same **EX-CommandStation** code. A definition (or possibly runtime switch) prevents the node from advertising itself to throttles or trying to generate a DCC waveform.
 
 ( ==TODO== Installer assist in managing this?)
 
-## Node Wifi
+## Node WiFi
 
 The node must be able to identify the Wifi SSID/Password to get on to the same network as the other devices. Since we now have a CSB1 way of setting wifi from a command , the node can be configured over USB (or any other viable input such as a browser, throttle or toolbox connected to the nodes AP) with the `<C WIFI "ssid" "password">`  command and it will stick.
 (without the Node code, you would have had to code that manually somewhere.)

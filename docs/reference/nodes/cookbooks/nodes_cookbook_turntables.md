@@ -34,6 +34,6 @@ You can have any number of turntables in a node or split them over several nodes
 
 In effect, turntable numbers are unique across all nodes so only one node should have the hardware-aware turntable definition.
 
-## Local node processing
+## Local Node Processing
 
 Because the node has almost the full EXRAIL capability, its possible to use EXRAIL in the node to monitor ON??? events to perform local signals, switch lights, make sounds and so on.

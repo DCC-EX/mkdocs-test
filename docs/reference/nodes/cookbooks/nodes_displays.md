@@ -4,7 +4,7 @@ Any node may have one or more OLED displays defined in the same way as done now 
 
 All display traffic (from EXRAIL LCD or SCREEN or `<m screen row "txt">` commands) is relayed to all nodes an so any node that has a HAL definition for a display with the given screen number will automatically update its screen copy.
 
-## Defining an oled
+## Defining an oLED
 
 A node may define an OLED screen in exactly the same way as the CS.
 

@@ -1,4 +1,4 @@
-# Sensors and VPINs on nodes
+# Sensors and VPINs on Nodes
 
 COMPLETE REWRITE - FOR DISCUSSION AS SENSOR SHARING EVOLVES - NOT YET IMPLEMENTED  
 BEWARE... this is changing and may be different to what you had, or what you get!
@@ -7,7 +7,7 @@ Sharing sensors is an obvious use for nodes but is complicated by the use of vpi
 
 Remember, you don't have to do this for Turnouts/Points or Signals (and hopefully turntables when implemented) because they already have their own id ranges and can be synchronized automatically without the need for remapping.
 
-## What is a "sensor"
+## What is a "Sensor"
 
 In this case we are referring to a software process that polls a particular vpin, does debouncing etc and informs the system when it changes. We do not care what is on the far end of a vpin, it may be software or hardware. The polling process is the same for all kinds of uses, but there are differences in expectation when changes are detected.  
   
@@ -72,7 +72,6 @@ This construct creates a virtual vpin (Bitmap probably) that can be listened to 
  AT(9003) 
  and so on
  ```
-
 
 ## Worked example:
 
