@@ -124,5 +124,6 @@ duration is converted to units of 100 ms (integer division), so a requested
 configured active/inactive positions.
 
 ## NOTE
+
 The GPIO supplies the PWM signal only; power the servo from a suitable external supply, 
 and connect the supply ground to ESP32 ground. DO NOT power the servo from an ESP32 GPIO.

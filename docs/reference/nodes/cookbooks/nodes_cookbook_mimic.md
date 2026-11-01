@@ -1,4 +1,4 @@
-# Creating a Mimic Panel node
+# Creating a Mimic Panel Node
 
 A mimic panel is a great example of node which can operate entirely independently of the command station or other nodes.
 
@@ -12,11 +12,11 @@ Typically a Mimic panel would need to:
 
 All this can be built into a CS but it is easier to build this as a node which can stand alone and handle all the above in EXRAIL without any change to the existing CS or node logic.
 
-## Local accessories
+## Local Accessories
 
 Typically the Mimic panel may use a neopixel strip to provide lighting and  buttons to provide control. All these can be locally attached to the node and remain invisible to the remainder of the network. The HAL setup and commands are exactly as done on the Command Station so there is nothing extra to learn.
 
-## Monitoring turnouts/points
+## Monitoring Turnouts/Points
 
 The exrail script can monitor the original turnout id state with ONTHROW etc and use that to set pixels on the panel.
 
@@ -37,8 +37,8 @@ ONBUTTON(722) TOGGLE_TURNOUT(22) DONE
 
 In this way, the layout operates normally whether the mimic panel is there or not, and there is no wire between the mimic panel and the command station. And because all interacting nodes have the same address, you could build a second mimic panel with exactly the same software build and have multiple identical panels at either end of your magnificent layout.
 
-## Monitoring block occupancy
+## Monitoring Block Occupancy
 
 If the block occupancy hardware is hosted on the CS or another node, then that device must use SHARE_SENSOR to ensure that all nodes, including the CS, are given sensor change information. Once that is done, the mimic panel can use REMOTE_SENSOR to indicate the shared sensors that it is interested in.
 
-Refer to the node sensor cookbook.
+Refer to the [node sensor cookbook](nodes_cookbook_sensors.md).

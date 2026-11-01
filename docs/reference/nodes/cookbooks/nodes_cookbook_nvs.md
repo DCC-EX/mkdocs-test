@@ -45,7 +45,7 @@ PLAY_TRACK(7000, NVS(88) )
 
 In commands like these that are "executed" in sequences, NVS values will be extracted at execution time, so a change to the NVS(66) value will take effect next time that DELAY is executed.
 
-However EXRAIL macros that define things at startup, will only examine the NVS value at startup... For example:
+However **EXRAIL** macros that define things at startup, will only examine the NVS value at startup... For example:
 
 ```cpp
 SERVO_TURNOUT(1,100,NVS(21),NVS(22), Slow,"My turnout")

@@ -67,5 +67,6 @@
 
 *[Railroad]: North American term. Elsewhere referred to as a "Railway"
 
+*[i2c]: (Inter-Integrated Circuit, pronounced "eye-squared-see") is a synchronous, multi-controller/multi-target serial communication protocol
 *[I2C]: (Inter-Integrated Circuit, pronounced "eye-squared-see") is a synchronous, multi-controller/multi-target serial communication protocol
 *[I²C]: (Inter-Integrated Circuit, pronounced "eye-squared-see") is a synchronous, multi-controller/multi-target serial communication protocol
