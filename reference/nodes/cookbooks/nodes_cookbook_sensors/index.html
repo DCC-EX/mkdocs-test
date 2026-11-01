@@ -27,7 +27,7 @@
     
     
       
-        <title>Sensors and VPINs on nodes - DCC-EX Model Train Control, Animation &amp; Automation</title>
+        <title>Sensors and VPINs on Nodes - DCC-EX Model Train Control, Animation &amp; Automation</title>
       
     
     
@@ -125,7 +125,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Sensors and VPINs on nodes
+              Sensors and VPINs on Nodes
             
           </span>
         </div>
@@ -572,7 +572,7 @@
       <li class="md-breadcrumbs__item" style="display: flex; align-items: center; gap: 8px;">
         <span style="opacity: 0.35; color: var(--md-typeset-color);">|</span>
         <span class="md-breadcrumbs__link" style="color: var(--md-typeset-color); font-weight: 700;">
-          Sensors and VPINs on nodes
+          Sensors and VPINs on Nodes
         </span>
       </li>
     
@@ -9219,7 +9219,7 @@
   <span class="md-ellipsis">
     
   
-    Creating a Mimic Panel node
+    Creating a Mimic Panel Node
   
 
     
@@ -9284,7 +9284,7 @@
   <span class="md-ellipsis">
     
   
-    Sensors and VPINs on nodes
+    Sensors and VPINs on Nodes
   
 
     
@@ -9302,7 +9302,7 @@
   <span class="md-ellipsis">
     
   
-    Sensors and VPINs on nodes
+    Sensors and VPINs on Nodes
   
 
     
@@ -9331,7 +9331,7 @@
   <a href="#what-is-a-sensor" class="md-nav__link">
     <span class="md-ellipsis">
       
-        What is a "sensor"
+        What is a "Sensor"
       
     </span>
   </a>
@@ -12768,7 +12768,7 @@
   <a href="#what-is-a-sensor" class="md-nav__link">
     <span class="md-ellipsis">
       
-        What is a "sensor"
+        What is a "Sensor"
       
     </span>
   </a>
@@ -12916,12 +12916,12 @@
   
 
 
-<h1 id="sensors-and-vpins-on-nodes">Sensors and VPINs on nodes<a class="headerlink" href="#sensors-and-vpins-on-nodes" title="Permanent link">¶</a></h1>
+<h1 id="sensors-and-vpins-on-nodes">Sensors and VPINs on Nodes<a class="headerlink" href="#sensors-and-vpins-on-nodes" title="Permanent link">¶</a></h1>
 <p>COMPLETE REWRITE - FOR DISCUSSION AS SENSOR SHARING EVOLVES - NOT YET IMPLEMENTED<br>
 BEWARE... this is changing and may be different to what you had, or what you get!</p>
 <p>Sharing sensors is an obvious use for nodes but is complicated by the use of <abbr title="an Arduino pin number that has been extended to include pins on external devices or expanders">vpin</abbr> numbers which might overlap between nodes.</p>
 <p>Remember, you don't have to do this for Turnouts/Points or Signals (and hopefully turntables when implemented) because they already have their own id ranges and can be synchronized automatically without the need for remapping.</p>
-<h2 id="what-is-a-sensor">What is a "sensor"<a class="headerlink" href="#what-is-a-sensor" title="Permanent link">¶</a></h2>
+<h2 id="what-is-a-sensor">What is a "Sensor"<a class="headerlink" href="#what-is-a-sensor" title="Permanent link">¶</a></h2>
 <p>In this case we are referring to a software process that polls a particular <abbr title="an Arduino pin number that has been extended to include pins on external devices or expanders">vpin</abbr>, does debouncing etc and informs the system when it changes. We do not care what is on the far end of a <abbr title="an Arduino pin number that has been extended to include pins on external devices or expanders">vpin</abbr>, it may be software or hardware. The polling process is the same for all kinds of uses, but there are differences in expectation when changes are detected.  </p>
 <ul>
 <li>Something (perhaps <abbr title="Java Model Railroad Interface">JMRI</abbr> or similar PC program or a throttle app like Engine Driver or EXToolbox) may be expecting a '<q q="">' type indication over the throttle interface (USB serial, wifi sockets, UDB broadcast etc).</q></li>
@@ -12963,7 +12963,6 @@ e.g.</q></p>
 <span class="w"> </span><span class="n">AT</span><span class="p">(</span><span class="mi">9003</span><span class="p">)</span><span class="w"> </span>
 <span class="w"> </span><span class="k">and</span><span class="w"> </span><span class="n">so</span><span class="w"> </span><span class="n">on</span>
 <span class="w"> </span><span class="err">```</span>
-
 
 <span class="cp">## Worked example:</span>
 
@@ -13035,7 +13034,7 @@ e.g.</q></p>
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"></path></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="November 1, 2026 05:11:28 UTC">November 1, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="November 1, 2026 05:32:53 UTC">November 1, 2026</span>
   </span>
 
     

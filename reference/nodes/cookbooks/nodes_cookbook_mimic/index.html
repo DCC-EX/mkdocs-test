@@ -27,7 +27,7 @@
     
     
       
-        <title>Creating a Mimic Panel node - DCC-EX Model Train Control, Animation &amp; Automation</title>
+        <title>Creating a Mimic Panel Node - DCC-EX Model Train Control, Animation &amp; Automation</title>
       
     
     
@@ -125,7 +125,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Creating a Mimic Panel node
+              Creating a Mimic Panel Node
             
           </span>
         </div>
@@ -572,7 +572,7 @@
       <li class="md-breadcrumbs__item" style="display: flex; align-items: center; gap: 8px;">
         <span style="opacity: 0.35; color: var(--md-typeset-color);">|</span>
         <span class="md-breadcrumbs__link" style="color: var(--md-typeset-color); font-weight: 700;">
-          Creating a Mimic Panel node
+          Creating a Mimic Panel Node
         </span>
       </li>
     
@@ -9228,7 +9228,7 @@
   <span class="md-ellipsis">
     
   
-    Creating a Mimic Panel node
+    Creating a Mimic Panel Node
   
 
     
@@ -9246,7 +9246,7 @@
   <span class="md-ellipsis">
     
   
-    Creating a Mimic Panel node
+    Creating a Mimic Panel Node
   
 
     
@@ -9275,7 +9275,7 @@
   <a href="#local-accessories" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Local accessories
+        Local Accessories
       
     </span>
   </a>
@@ -9286,7 +9286,7 @@
   <a href="#monitoring-turnoutspoints" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Monitoring turnouts/points
+        Monitoring Turnouts/Points
       
     </span>
   </a>
@@ -9297,7 +9297,7 @@
   <a href="#monitoring-block-occupancy" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Monitoring block occupancy
+        Monitoring Block Occupancy
       
     </span>
   </a>
@@ -9355,7 +9355,7 @@
   <span class="md-ellipsis">
     
   
-    Sensors and VPINs on nodes
+    Sensors and VPINs on Nodes
   
 
     
@@ -12757,7 +12757,7 @@
   <a href="#local-accessories" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Local accessories
+        Local Accessories
       
     </span>
   </a>
@@ -12768,7 +12768,7 @@
   <a href="#monitoring-turnoutspoints" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Monitoring turnouts/points
+        Monitoring Turnouts/Points
       
     </span>
   </a>
@@ -12779,7 +12779,7 @@
   <a href="#monitoring-block-occupancy" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Monitoring block occupancy
+        Monitoring Block Occupancy
       
     </span>
   </a>
@@ -12894,7 +12894,7 @@
   
 
 
-<h1 id="creating-a-mimic-panel-node">Creating a Mimic Panel node<a class="headerlink" href="#creating-a-mimic-panel-node" title="Permanent link">¶</a></h1>
+<h1 id="creating-a-mimic-panel-node">Creating a Mimic Panel Node<a class="headerlink" href="#creating-a-mimic-panel-node" title="Permanent link">¶</a></h1>
 <p>A mimic panel is a great example of node which can operate entirely independently of the command station or other nodes.</p>
 <p>Typically a Mimic panel would need to:</p>
 <ul>
@@ -12905,9 +12905,9 @@
 <li>Display texts on an Oled screen</li>
 </ul>
 <p>All this can be built into a CS but it is easier to build this as a node which can stand alone and handle all the above in <abbr title="&quot;EXtended Railroad Automation Instruction Language&quot; DCC-EX's scripting Language">EXRAIL</abbr> without any change to the existing CS or node logic.</p>
-<h2 id="local-accessories">Local accessories<a class="headerlink" href="#local-accessories" title="Permanent link">¶</a></h2>
+<h2 id="local-accessories">Local Accessories<a class="headerlink" href="#local-accessories" title="Permanent link">¶</a></h2>
 <p>Typically the Mimic panel may use a neopixel strip to provide lighting and  buttons to provide control. All these can be locally attached to the node and remain invisible to the remainder of the network. The <abbr title="Hardware Abstraction Layer. Allows the CS to discover and use the hardware through a simple abstract API, regardless of the type of underlying hardware.">HAL</abbr> setup and commands are exactly as done on the Command Station so there is nothing extra to learn.</p>
-<h2 id="monitoring-turnoutspoints">Monitoring <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnouts</abbr>/points<a class="headerlink" href="#monitoring-turnoutspoints" title="Permanent link">¶</a></h2>
+<h2 id="monitoring-turnoutspoints">Monitoring Turnouts/Points<a class="headerlink" href="#monitoring-turnoutspoints" title="Permanent link">¶</a></h2>
 <p>The exrail script can monitor the original <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnout</abbr> id state with ONTHROW etc and use that to set pixels on the panel.</p>
 <p>e.g.</p>
 <div class="language-cpp highlight"><pre><span></span><code><span class="n">ONTHROW</span><span class="p">(</span><span class="mi">22</span><span class="p">)</span><span class="w"> </span><span class="n">SET</span><span class="p">(</span><span class="mi">622</span><span class="p">)</span><span class="w"> </span><span class="n">RESET</span><span class="p">(</span><span class="mi">522</span><span class="p">)</span><span class="w"> </span><span class="n">DONE</span>
@@ -12918,9 +12918,9 @@
 <div class="language-cpp highlight"><pre><span></span><code><span class="n">ONBUTTON</span><span class="p">(</span><span class="mi">722</span><span class="p">)</span><span class="w"> </span><span class="n">TOGGLE_TURNOUT</span><span class="p">(</span><span class="mi">22</span><span class="p">)</span><span class="w"> </span><span class="n">DONE</span>
 </code></pre></div>
 <p>In this way, the layout operates normally whether the mimic panel is there or not, and there is no wire between the mimic panel and the command station. And because all interacting nodes have the same address, you could build a second mimic panel with exactly the same software build and have multiple identical panels at either end of your magnificent layout.</p>
-<h2 id="monitoring-block-occupancy">Monitoring block occupancy<a class="headerlink" href="#monitoring-block-occupancy" title="Permanent link">¶</a></h2>
+<h2 id="monitoring-block-occupancy">Monitoring Block Occupancy<a class="headerlink" href="#monitoring-block-occupancy" title="Permanent link">¶</a></h2>
 <p>If the block occupancy hardware is hosted on the CS or another node, then that device must use SHARE_SENSOR to ensure that all nodes, including the CS, are given sensor change information. Once that is done, the mimic panel can use REMOTE_SENSOR to indicate the shared sensors that it is interested in.</p>
-<p>Refer to the node sensor cookbook.</p>
+<p>Refer to the <a href="../nodes_cookbook_sensors/">node sensor cookbook</a>.</p>
 <!-- These are case sensitive -->
 
 
@@ -12942,7 +12942,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"></path></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="November 1, 2026 05:11:28 UTC">November 1, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="November 1, 2026 05:32:53 UTC">November 1, 2026</span>
   </span>
 
     

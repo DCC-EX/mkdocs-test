@@ -9295,7 +9295,7 @@
   <span class="md-ellipsis">
     
   
-    Creating a Mimic Panel node
+    Creating a Mimic Panel Node
   
 
     
@@ -9351,7 +9351,7 @@
   <span class="md-ellipsis">
     
   
-    Sensors and VPINs on nodes
+    Sensors and VPINs on Nodes
   
 
     
@@ -12881,10 +12881,10 @@
 
 
 <h1 id="i2c-multiplexors"><abbr title="(Inter-Integrated Circuit, pronounced &quot;eye-squared-see&quot;) is a synchronous, multi-controller/multi-target serial communication protocol">I2C</abbr> Multiplexors<a class="headerlink" href="#i2c-multiplexors" title="Permanent link">¶</a></h1>
-<p>A Multiplexor allows for multiple i2c devices with the same address to be separately addressed so that messages pass through the multiplexor and it routes them to the correct channel to find the device you want.</p>
+<p>A Multiplexor allows for multiple <abbr title="(Inter-Integrated Circuit, pronounced &quot;eye-squared-see&quot;) is a synchronous, multi-controller/multi-target serial communication protocol">i2c</abbr> devices with the same address to be separately addressed so that messages pass through the multiplexor and it routes them to the correct channel to find the device you want.</p>
 <h2 id="details">Details<a class="headerlink" href="#details" title="Permanent link">¶</a></h2>
-<p>Multiplexors are handled automatically by <strong>DCC-EX</strong> and all drivers for i2c devices can take a multiplexed address when being defined.</p>
-<p>When the command station starts, it scans the i2c network for all devices it can find, including those behind one or more multiplexors. Although the list can only guess the device type (there is no automatic device recognition, nor rigid standards that associate addresses with device types) it will give the fully qualified <abbr title="(Inter-Integrated Circuit, pronounced &quot;eye-squared-see&quot;) is a synchronous, multi-controller/multi-target serial communication protocol">I2C</abbr> address of each device and it is this that must be copied to the <abbr title="Hardware Abstraction Layer. Allows the CS to discover and use the hardware through a simple abstract API, regardless of the type of underlying hardware.">HAL</abbr> device definition.</p>
+<p>Multiplexors are handled automatically by <strong>DCC-EX</strong> and all drivers for <abbr title="(Inter-Integrated Circuit, pronounced &quot;eye-squared-see&quot;) is a synchronous, multi-controller/multi-target serial communication protocol">i2c</abbr> devices can take a multiplexed address when being defined.</p>
+<p>When the command station starts, it scans the <abbr title="(Inter-Integrated Circuit, pronounced &quot;eye-squared-see&quot;) is a synchronous, multi-controller/multi-target serial communication protocol">i2c</abbr> network for all devices it can find, including those behind one or more multiplexors. Although the list can only guess the device type (there is no automatic device recognition, nor rigid standards that associate addresses with device types) it will give the fully qualified <abbr title="(Inter-Integrated Circuit, pronounced &quot;eye-squared-see&quot;) is a synchronous, multi-controller/multi-target serial communication protocol">I2C</abbr> address of each device and it is this that must be copied to the <abbr title="Hardware Abstraction Layer. Allows the CS to discover and use the hardware through a simple abstract API, regardless of the type of underlying hardware.">HAL</abbr> device definition.</p>
 <p>First step is to run the <strong>EX-CommandStation</strong> software without the drivers and note what addresses the <abbr title="(Inter-Integrated Circuit, pronounced &quot;eye-squared-see&quot;) is a synchronous, multi-controller/multi-target serial communication protocol">I2C</abbr> scan comes up with. This is especially important when using devices behind a multiplexor as the <abbr title="(Inter-Integrated Circuit, pronounced &quot;eye-squared-see&quot;) is a synchronous, multi-controller/multi-target serial communication protocol">I2C</abbr> address must include the multiplexor channel path.
 The scan will look something like this:</p>
 <div class="language-text highlight"><pre><span></span><code>&lt;* License GPLv3 fsf.org (c) dcc-ex.com &gt;
