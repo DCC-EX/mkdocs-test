@@ -7,16 +7,16 @@ Typically a Mimic panel would need to:
 - Show turnout states
 - Show signal states
 - Show track occupied
-- Have buttons to toggle tuirnouts
+- Have buttons to toggle turnouts/points
 - Display texts on an Oled screen
 
 All this can be built into a CS but it is easier to build this as a node which can stand alone and handle all the above in EXRAIL without any change to the existing CS or node logic.
 
 ## Local accessories
 
-Typically the Mimic panel may use a neopixel strip to provide lighting and  buttons to brovide control. All these can be locally attached to the node and remain invisible to the remainder of the network. The HAL setup and commands are exactly as done on the Command Station so there is nothing extra to learn.
+Typically the Mimic panel may use a neopixel strip to provide lighting and  buttons to provide control. All these can be locally attached to the node and remain invisible to the remainder of the network. The HAL setup and commands are exactly as done on the Command Station so there is nothing extra to learn.
 
-## Monitoring turnouts
+## Monitoring turnouts/points
 
 The exrail script can monitor the original turnout id state with ONTHROW etc and use that to set pixels on the panel.
 
@@ -39,7 +39,6 @@ In this way, the layout operates normally whether the mimic panel is there or no
 
 ## Monitoring block occupancy
 
-If the block occupancy hardware is hosted on the CS or another node, then that device must use SHARE_SENSOR to ensure that all nodes, includimg the CS, are given sensor change information. Once that is done, the mimic panel can use REMOTE_SENSOR to indicate the shared sensors that it is interested in. 
+If the block occupancy hardware is hosted on the CS or another node, then that device must use SHARE_SENSOR to ensure that all nodes, including the CS, are given sensor change information. Once that is done, the mimic panel can use REMOTE_SENSOR to indicate the shared sensors that it is interested in.
 
 Refer to the node sensor cookbook.
- 

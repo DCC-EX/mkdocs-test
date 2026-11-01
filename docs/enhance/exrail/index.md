@@ -23,8 +23,15 @@ Although **EXRAIL** has more than 100 individual commands available, it is gener
 ## Important Background Information
 
 - **EXRAIL** scripts are written into a file called myAutomation.h which you can edit with any suitable text editor. You don't need any extra tools installed on your PC that you don't already have in VSCode or the **EX-Installer**.
-- When you upload the **EX-CommandStation** with the **DCC-EX** code, myAutomation.h is used by the compiler to configure the software and embed any sequences so that the **EX-CommandStation** can run without further assistance from your PC. If you change myAutomation.h then you must upload again.
+- When you upload the **EX-CommandStation** with the **DCC-EX** code, ``myAutomation.h`` is used by the compiler to configure the software and embed any sequences so that the **EX-CommandStation** can run without further assistance from your PC. If you change ``myAutomation.h`` then you must upload again.
 - **EXRAIL** can run multiple sequences simultaneously so it's great for annoying Arduino programmers who find that extremely complex to do in C++.
+- **EXRAIL** can also run on distributed [Layout Nodes](../../reference/nodes/index.md), not just the **EX-CommandStation** itself.
+
+    Layout **Nodes** offer a simple way of distributing layout control (usually wirelessly) over a wide area using the same the **EX-CommandStation** software in each node, with just a slight configuration change.
+
+    See the [Introduction to using distributed layout nodes](../../reference/nodes/index.md) page for more information.
+
+----
 
 ## Basic building blocks
 

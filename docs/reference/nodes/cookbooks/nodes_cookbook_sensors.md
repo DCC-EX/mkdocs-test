@@ -5,7 +5,7 @@ BEWARE... this is changing and may be different to what you had, or what you get
 
 Sharing sensors is an obvious use for nodes but is complicated by the use of vpin numbers which might overlap between nodes.
 
-Remember, you dont have to do this for Turnouts or Signals (and hopefully turntables when implemented) because they already have their own id ranges and can be synchronized automatically without the need for remapping.
+Remember, you don't have to do this for Turnouts/Points or Signals (and hopefully turntables when implemented) because they already have their own id ranges and can be synchronized automatically without the need for remapping.
 
 ## What is a "sensor"
 
@@ -17,7 +17,7 @@ In this case we are referring to a software process that polls a particular vpin
 
 There are various sensor definition macros in EXRAIL for this.
 
-NEW: there are origin parameters 
+NEW: there are origin parameters
 
 `JMRI_SENSOR(vpin[,count[,newOrigin]])`
 
@@ -38,7 +38,6 @@ JMRI_SENSOR(400,9,9000)
 ```
 
 will detect a change on vpin 403 and send `<Q/q 9003>`.
-
 
 NEW: If JMRI_SENSOR is used in a node, the node will inform the command station and the CS will pass the change on to all `<>` protocol jmri/throttles (using the well loved `<Q/q vpin>`) as if it had been detected on the CS. The CS, and indeed other nodes, will also see this as a shared sensor so any node using REMOTE_SENSOR can pick this up and react.
 
@@ -113,7 +112,7 @@ SHARED_SENSOR(10, NVS(1)?0:8, NVS(2))
 
 where NVS(1) is a tick box for JMRI or just shared, and NVS(2) is the base id sent in the Q msgs. (a zero count means no sensors created)
 
- ## Sharing vpin writes with other nodes (STILL THINKING ABOUT THIS!)  
+## Sharing vpin writes with other nodes (STILL THINKING ABOUT THIS!)  
 
 Shared writing of vpins is a powerful technique because it allows features like PLAY_TRACK, or NEOPIXEL  to be invoked on one node but executed on another.
 
@@ -125,7 +124,7 @@ Shared writing of vpins is a powerful technique because it allows features like 
 
  describes a group of vpins which, when changed, will be notified to all other nodes but with a modified base number.
 
- ## Accepting vpin changes from other nodes
+## Accepting vpin changes from other nodes
 
  Although a node may be announcing its own sensor changes, it is not automatic that any individual node will accept that change 
 

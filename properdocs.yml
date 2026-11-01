@@ -149,6 +149,7 @@ plugins:
         'enhance/turnouts.md': 'enhance/exrail/exrail-objects-introduction.md#adding-turnoutspoints'
         'enhance/routes.md': 'enhance/exrail/exrail-sequences-introduction.md'
         'enhance/nodes.md': 'reference/nodes/index.md'
+        'enhance/exrail/cookbooks/nodes.md': 'reference/nodes/cookbooks/index.md'
         
         'prepare-to-use/next-steps.md': 'throttles/index.md'
         'prepare-to-use/installer/installer.md': 'prepare-to-use/installer/index.md'

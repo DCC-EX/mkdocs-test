@@ -9,7 +9,7 @@ SIGNALH(22,23,24,"Mountain pass")
 ```
 
 This is an awkward situation because the SIGNAL and SIGNALH macros assume that the signal id is the same as the red vpin. When we move the signal to the Node, we want to keep the signal id (to share between nodes) but use different vpins according to the HAL on the node.
-To make this easier and new LED_SIGNAL mcro has been added that separates the signal id from the vpins:
+To make this easier and new LED_SIGNAL macro has been added that separates the signal id from the vpins:
 
 ```cpp
 LED_SIGNAL(123,22,23,24,"Mountain pass")

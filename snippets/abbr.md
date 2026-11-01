@@ -3,6 +3,8 @@
 *[DCC++]: Old/obsolete name for **DCC-EX**. Some references still remain for backward compatibility
 *[DCC++EX]: Old/obsolete name for **DCC-EX**. Some references still remain for backward compatibility
 
+*[EXRAIL]: "EXtended Railroad Automation Instruction Language" DCC-EX's scripting Language
+
 *[WiThrottle]: Communication Protocol. Trademark + iOS app owned by Brett Hoffman
 *[API]: Application Programming Interface
 *[JMRI]: Java Model Railroad Interface

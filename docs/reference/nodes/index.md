@@ -1,6 +1,6 @@
 # Introduction to using distributed layout nodes
 
-Layout nodes offer a simple way of distributing layout control (usually wirelessly) over a wide area using the same DCC-EX software in each node.
+Layout nodes offer a simple way of distributing layout control (usually wirelessly) over a wide area using the same **EX-CommandStation** software in each node.
 
 ## Basic Principles
 
@@ -8,7 +8,7 @@ A layout may be controlled entirely by a single processor, known as the Command 
 
 - Communicating with throttles
 - Controlling and generating the track output
-- Running EXRAIL scripts
+- Running **EXRAIL** scripts
 - Handling accessories
 - Displaying on oleds
 - Lighting
@@ -18,11 +18,11 @@ A layout may be controlled entirely by a single processor, known as the Command 
 
 In some cases, particularly large layouts,  it would be preferable to offload some of these functions to separate processors, mostly for ease of wiring... performance is rarely an issue.
 
-By using the node system, the separate processors will automatically intercommunicate and will use the same DCC-EX code, including EXRAIL and HAL drivers in each node.
+By using the node system, the separate processors will automatically intercommunicate and will use the same DCC-EX code, including **EXRAIL** and HAL drivers in each node.
 
-For example, a node may be established to handle a group of turnouts on one area of your layout. The physical turnouts would be connected to the node using the usual hardware (MCP32017, PCA9685 etc) and usual EXRAIL definitions but there would not be any need to wire the node to the command station or deal with long i2c connections.
+For example, a node may be established to handle a group of turnouts/points on one area of your layout. The physical turnouts/points would be connected to the node using the usual hardware (MCP32017, PCA9685 etc) and usual EXRAIL definitions but there would not be any need to wire the node to the command station or deal with long i2c connections.
 
-The Command Station would automatically know about the turnouts, can still throw/close the turnout in the same way as normal and keep throttles informed, but the remote node would perform the physical movement.
+The Command Station would automatically know about the turnouts/points, can still throw/close the turnout in the same way as normal and keep throttles informed, but the remote node would perform the physical movement.
 
 ## Shared objects
 
@@ -30,9 +30,9 @@ Object sharing is generally done for things that have an id that is separate fro
 
 The following object types are shared amongst the nodes automatically
 
-- Turnouts can be thrown, closed or monitored from any node.
-- Signals can be set or monitored from any node 
-- Turntables (code pending) 
+- Turnouts/points can be thrown, closed or monitored from any node.
+- Signals can be set or monitored from any node
+- Turntables (code pending)
 
 Sensors (a sensor definition is actually a vpin monitoring task, not the actual sensor hardware) are only shared by consent. The node with the sensor hardware needs to share the sensor with a suitable unique id to avoid clashes with other nodes hardware.
 

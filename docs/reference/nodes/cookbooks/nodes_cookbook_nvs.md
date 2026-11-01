@@ -6,7 +6,7 @@ This is particularly useful for:
 
 - Wifi Settings
 - OLED type settings
-- Configuration of factory created nodes which provide standardised turnouts and signals but require individual configuration for things like a base address, descriptions, servo positions.
+- Configuration of factory created nodes which provide standardised turnouts/points and signals but require individual configuration for things like a base address, descriptions, servo positions.
 - Configuration of user or system provided EXRAIL scripts for things like power-on-at-boot etc.
 
 ## NVS Storage
@@ -55,7 +55,7 @@ will evaluate the values in NVS(21) and NVS(22) once only at startup.
 
 [Its accepted that this is not great for servo settings, it may be possible to modify servo handling as a special case to ree-valuate these at run time but wait and see. I need feedback on any others that make sense to handle as special cases.]
 
-This can be particularly tricky when using a turnout or signal id because the turnout definition, or ONTHROW/ONCLOSE  will be evaluated once at startup but a THROW, RED etc  will be re-evaluated each time it is executed.
+This can be particularly tricky when using a turnout/point or signal id because the turnout/point definition, or ONTHROW/ONCLOSE  will be evaluated once at startup but a THROW, RED etc  will be re-evaluated each time it is executed.
 
 Caution must be observed in IF() type macros because
 

@@ -32,5 +32,3 @@ DONE
 ## Neopixels
 
 The Waveshare device has 7 neopixels that can be driven by the EXRAIL NEOPIXEL command using the chosen HAL(Waveshare,vpin) on vpin+1 to vpin+7
-
-
