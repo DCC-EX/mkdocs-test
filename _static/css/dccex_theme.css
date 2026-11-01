@@ -672,6 +672,10 @@ a.external-link-icon::after {
     display: none !important;
 }
 
+.md-path {
+    display: none !important;
+}
+
 .admonition-title {
     background-color: #ff91008a !important;
 }
