@@ -20,7 +20,7 @@ Scanned roots: `C:\Users\akers\OneDrive\github\github_doco\mkdocs-test\docs`, `C
 
 ## High TODOs
 
-Total High TODO matches: 8
+Total High TODO matches: 9
 
 | File | Line | Line text |
 | --- | ---: | --- |
@@ -31,6 +31,7 @@ Total High TODO matches: 8
 | [docs/reference/nodes/index.md](../reference/nodes/index.md) | 60 | ( ==TODO== Installer assist in managing this?) |
 | [docs/reference/serial-commands/serial-command-ff_not_in_nav.md](../reference/serial-commands/serial-command-ff_not_in_nav.md) | 36 | * **«freqValue»** = one of: () ==TODO== What is the format/options for this parameter? ) |
 | [docs/prepare-to-use/installer/platformio.md](../prepare-to-use/installer/platformio.md) | 5 | ==TODO== - provide setup help for VSC/PlatformIO. |
+| [docs/news/articles/20261021b.md](../news/articles/20261021b.md) | 17 | ==TODO== VERY HIGH - New in Version 6.0 new article. Plus change date and file name |
 | snippets/use/connect-and-use-a-wifi-throttle.md | 3 | &lt;!-- ==TODO== need to include an iOS app instructions --&gt; |
 
 ## Medium priority TODOs
