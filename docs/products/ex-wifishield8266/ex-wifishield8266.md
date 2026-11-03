@@ -13,7 +13,7 @@ The **EX-WiFiShield 8266** is a cost-effective and highly integrated UART-WiFi m
 
     Not required for the **EX-CSB1** or ESP32 based **EX-CommandStations**.
 
-This WiFi Shield is based on the new version of the ESP-12F with the Wifi chip ESP8266.  With this Shield, you can connect your **EX-CommandStation** to your home Wifi network, or have it operate as a stand alone Access Point to connect directly from your phone, tablet, laptop, or WiFi hardware throttle.
+This WiFi Shield is based on the new version of the ESP-12F with the WiFi chip ESP8266.  With this Shield, you can connect your **EX-CommandStation** to your home WiFi network, or have it operate as a stand alone Access Point to connect directly from your phone, tablet, laptop, or WiFi hardware throttle.
 
 ## Features
 

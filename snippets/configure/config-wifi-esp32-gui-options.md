@@ -35,7 +35,7 @@ WiFi on the **EX-CommandStation** has two possible operating modes:
 
 * **Station (STA) mode** means the **EX-CommandStation** connects to your WiFi router and appears as a device on that network. If the WiFi is configured for STA mode, but fails to connect to your router, it will fall back to AP mode in much the same way as smart plugs, lights etc.
 
-There are some additional settings that are not modes but effect the wifi connection:
+There are some additional settings that are not modes but effect the WiFi connection:
 
 * **Channel**: If you need to use an alternate channel in Access Point mode (we recommend using only 1,6, or 11) you may change it.
 
@@ -47,28 +47,22 @@ This may be useful if visiting a location with a different WiFi network which yo
 
 * The **HOSTNAME** setting allows you to set the name that appears in your Throttle app, once you have connected to the appropriate network for the **EX-CommandStation**.
 
-----
+<!-- ---- -->
 
-## Configuring with USB vs WiFi - Limitations of WiFi
+<!-- ## Configuring with USB vs WiFi - Limitations of WiFi -->
 
-There are significant limitations to be aware of when configuring WiFi settings over WiFi compared to using a USB connection:
+<!-- There are significant limitations to be aware of when configuring WiFi settings over WiFi compared to using a USB connection: -->
 
-Only **Station (STA) mode** and the **HOSTNAME** can be changed over WiFi.
+<!-- Only **Station (STA) mode** and the **HOSTNAME** can be changed over WiFi. -->
 
-**Access Point (AP)** mode changes require a serial/USB connection.
-This is a security feature.  If you could change AP mode settings over WiFi, then anyone who could connect to the **EX-CommandStation**'s WiFi network could change the AP settings and potentially lock you out of your **EX-CommandStation**. By requiring a USB connection for AP mode changes, we ensure that only someone with physical access to the **EX-CommandStation** can modify these critical settings.
-
-==TODO== VERY HIGH! - The WiFi change limitation has been broken in the latest CS version as anything can be changed via the in-built web server
+<!-- **Access Point (AP)** mode changes require a serial/USB connection. -->
+<!-- This is a security feature.  If you could change AP mode settings over WiFi, then anyone who could connect to the **EX-CommandStation**'s WiFi network could change the AP settings and potentially lock you out of your **EX-CommandStation**. By requiring a USB connection for AP mode changes, we ensure that only someone with physical access to the **EX-CommandStation** can modify these critical settings. -->
 
 ----
 
 ## Changing the WiFi Settings
 
 ### Using the EX-CommandStation's own Web Sever - {{ new_in_v(6) }}
-
-==TODO== VERY HIGH! - Changing the WiFi Settings using the EX-CommandStation's own Web Sever
-
-If you have an OLED screen, it will tell you the IP address of the **EX-CommandStation**
 
 Enter the IP address of the **EX-CommandStation** into the address bar of you browser. e.g. ``192.168.1.4`` if you are using the default [Access Point](/prepare-to-use/installer/config-wifi-esp32.md#the-wifi-different-modes) mode. Or use the Web Page in Engine Driver, after you have connected to the **EX-CommandStation**.
 
@@ -93,7 +87,7 @@ Using Engine Driver's Web page
 
 * To set the **Access Point (AP) mode**, enter the SSID and password for the **EX-CommandStation**'s WiFi network and click the `Set Access Point` button. You can optional set a channel for the AP mode, but it is not required, and generally not recommended.
 
-    The **EX-CommandStation** will restart and create its own WiFi network with the specified SSID and password.
+    The **EX-CommandStation** will need to be restarted to create its own WiFi network with the specified SSID and password.
 
 * To set the **Station (STA) mode**, enter the SSID and password for your existing WiFi network (eg your home router) and click the `Set Station Mode` button. The **EX-CommandStation** will attempt to connect to the specified WiFi network. If the connection is successful, it will operate in Station mode. If the connection fails, it will revert to Access Point mode.
 
@@ -111,7 +105,7 @@ Using Engine Driver's Web page
 
 1. Connect your PC to the **EX-CommandStation** via USB. Open the **EX-WebThrottle** and select the appropriate COM port for your **EX-CommandStation**. You should see the current WiFi settings displayed in the interface.  See [EX-WebThrottle](/products/ex-webthrottle/ex-webthrottle.md) for more details.
 
-2. Go to the ``Wifi Setup`` page from the menu or the toolbar buttons.
+2. Go to the ``WiFi Setup`` page from the menu or the toolbar buttons.
 
    * To set the **Access Point (AP) mode**, enter the SSID and password for the **EX-CommandStation**'s WiFi network and click the `Set Access Point` button. You can optional set a channel for the AP mode, but it is not required, and generally not recommended.
 
@@ -135,7 +129,9 @@ The `Reset WiFi Settings` button on the WiFi Setup page will reset all WiFi sett
 
 #### Notes (EX-WebThrottle)
 
-* In every case above, the **EX-CommandStation** will restart to apply the new settings. You will need to reconnect to the **EX-CommandStation** in the **EX-WebThrottle** interface. ==TODO== VERY HIGH! - The WiFi change limitation has been broken in the latest CS version as anything can be changed via the in-built web server
+* You may need to restart the **EX-CommandStation**  for the new settings to take effect. In which case you will need to reconnect to the **EX-CommandStation** with whatever interface you are using.
+
+<!-- * In every case above, the **EX-CommandStation** will restart to apply the new settings. You will need to reconnect to the **EX-CommandStation** in the **EX-WebThrottle** interface. -->
 
 ----
 
@@ -143,7 +139,7 @@ The `Reset WiFi Settings` button on the WiFi Setup page will reset all WiFi sett
 
 **EX-Toolbox** provides a similar interface to the **EX-WebThrottle** for configuring WiFi settings, but it can be accessed either via USB or over WiFi. The process for changing WiFi settings in the **EX-Toolbox** is essentially the same as in the **EX-WebThrottle**, with the same options for AP mode, STA mode, Temporary STA mode and Hostname.
 
-1. Connect your PC to the **EX-Toolbox** via USB or Wifi.  See [EX-Toolbox](/products/ex-toolbox/index.md) for more details.
+1. Connect your PC to the **EX-Toolbox** via USB or WiFi.  See [EX-Toolbox](/products/ex-toolbox/index.md) for more details.
 
 2. Go to the ``WiFi Setup`` page from the menu or the toolbar buttons and follow the same steps as outlined for the **EX-WebThrottle** above.
 

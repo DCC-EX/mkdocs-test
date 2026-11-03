@@ -72,7 +72,7 @@ These are the most basic steps to get you up and running. If you need more help,
 
     An Android Phone or Tablet or Apple iOS Phone or Tablet can be used.
 
-    - Open the Wifi Settings in your smart device.
+    - Open the WiFi Settings in your smart device.
     - Select the WiFi network in your smart device WiFi settings named `DCCEX_xxxxxx`, and use the corresponding password `PASS_xxxxxx` (where **xxxxxx** is identical in each case) which is shown on your EX-CSB1's OLED display.
     - Tell your smart device not to worry about there being no Internet connection. [^4]
 
@@ -210,7 +210,7 @@ At startup of the **EX-CSB1** the OLED screen shows useful information.
 | 2 | Lic | The licence under which the EX-CommandStation code is published |
 | 3 | Power | Power State. ON / OFF / JOIN / etc. |
 | 4 | Free RAM | Available RAM |
-| 5 | Wifi: | The SSID / Network name |
+| 5 | WiFi: | The SSID / Network name |
 | 6 | PASS: | The password for the Network |
 | 7 | IP: | The IP Address of the WiThrottle / Native server |
 

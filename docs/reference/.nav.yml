@@ -1,13 +1,13 @@
 nav:
   - Table of Contents: toc.md
   - Glossary of Terms: glossary.md
-  - <br/>EXRAIL Commands <small><small>Full&nbsp;List</small></small>: exrail-command-reference.md
+  - <br/><b>EXRAIL</b> Commands <small><small>Full&nbsp;List</small></small>: exrail-command-reference.md
   - ... by Function Group: exrail-commands/exrail-commands.md
-  - Serial Commands <small><small>Full&nbsp;List</small></small>: serial-commands/serial-command-list.md
+  - <b>Serial</b> Commands <small><small>Full&nbsp;List</small></small>: serial-commands/serial-command-list.md
   - ... by Function Group: serial-commands/serial-commands.md
   - ... Additional Info: serial-commands
   - <br/>Configuration Reference <small><small>(config.h)</small></small>: configuration
-  - Nodes: nodes
+  - Distributed Layout <b>Nodes</b>: nodes
   - HAL Device Configuration: hardware/hal/hal-device-templates.md
   - <br/>TrackManager: trackmanager
   - <br/>Alternate Microcontrollers: microcontrollers

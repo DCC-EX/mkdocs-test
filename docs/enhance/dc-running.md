@@ -13,7 +13,7 @@ No additional hardware is required for DC (PWM) track assignments. A single **EX
 
 Using an **DCC-EX EX-CommandStation** to run a DC layout provides a number of advantages over conventional DC systems.
 
-- All Wifi and wired connected throttles will operate the same for DC and DCC locos using Cab road numbers 'loco addresses' from 1 to 10239.
+- All WiFi and wired connected throttles will operate the same for DC and DCC locos using Cab road numbers 'loco addresses' from 1 to 10239.
 - Using this range of Cab locoid addresses you can assign any DC district/track any locoid to run in that DC district, i.e # 2.
 - Multiple DC Districts (maximum four on **EX-CSB1** & maximum eight on Mega2560 system) can be independently controlled and reconfigured to allow crossing between districts and polarity reversal.
 - Any DC District can be further subdivided into smaller blocks and energized or powered via turnouts/points and or SPDT switches If desired, i.e. staging or fiddle yard..

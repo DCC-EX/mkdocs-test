@@ -4,7 +4,7 @@ Non Volatile Storage (NVS) exists to enable a command station or node to be conf
 
 This is particularly useful for:
 
-- Wifi Settings
+- WiFi Settings
 - OLED type settings
 - Configuration of factory created nodes which provide standardised turnouts/points and signals but require individual configuration for things like a base address, descriptions, servo positions.
 - Configuration of user or system provided EXRAIL scripts for things like power-on-at-boot etc.

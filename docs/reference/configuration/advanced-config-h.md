@@ -158,7 +158,7 @@ The **EX-CommandStation** always operates with the default Serial port. Diagnost
 **NOTE: DO NOT define here the WiFi shield serial port or your WiFi will not work.**
 
 ```cpp
-// SERIAL1 in use by Wifi
+// SERIAL1 in use by WiFi
 #define SERIAL2_COMMANDS
 #define SERIAL3_COMMANDS
 #define SERIAL4_COMMANDS

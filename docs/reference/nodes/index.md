@@ -1,10 +1,10 @@
 # Introduction to Using Distributed Layout Nodes
 
-Layout **Nodes** offer a simple way of distributing layout control (usually wirelessly) over a wide area using the same **EX-CommandStation** software in each node.
+Distributed Layout **Nodes** offer a simple way of physically distributing layout control (usually wirelessly) over a wide area, using additional microprocessors, running essentially the same **EX-CommandStation** software in each node.
 
 ## Basic Principles
 
-A layout may be controlled entirely by a single processor, known as the Command Station, which performs many tasks simultaneously:
+Traditionally, a layout is controlled entirely by a single microprocessor, known as the Command Station (**EX-CommandStation**), which performs many tasks simultaneously:
 
 - Communicating with throttles
 - Controlling and generating the track output
@@ -16,13 +16,13 @@ A layout may be controlled entirely by a single processor, known as the Command 
 - Turntable operations
 - Making coffee
 
-In some cases, particularly large layouts, it would be preferable to offload some of these functions to separate processors, mostly for ease of wiring... performance is rarely an issue.
+In some cases, particularly large layouts, it would be preferable to offload some of these functions to separate microprocessors, mostly for ease of wiring... performance is rarely an issue.
 
-By using the Layout **Node** system, the separate processors will automatically intercommunicate. They use essentially the same **EX-CommandStation** code, including **EXRAIL** and HAL drivers in each node.
+By using the Distributed Layout **Node** system, the separate microprocessors will automatically intercommunicate. They use essentially the same **EX-CommandStation** code, including **EXRAIL** and HAL drivers in each node.
 
-For example, a node may be established to handle a group of turnouts/points on one area of your layout. The physical turnouts/points would be connected to the node using the usual hardware (MCP32017, PCA9685 etc) and usual **EXRAIL** definitions but there would not be any need to wire the node to the command station or deal with long I2C connections.
+For example, in addition to the normal **EX-CommandStation**, a node may be established to handle a group of turnouts/points on one area of your layout. The physical turnouts/points would be connected to the node using the usual hardware (MCP32017, PCA9685 etc) and usual **EXRAIL** definitions but there would not be any need to wire the **Node** to the **EX-CommandStation** or deal with long I2C connections.
 
-The Command Station would automatically know about the turnouts/points, can still throw/close the turnout/point in the same way as normal and keep throttles informed, but the remote node would perform the physical movement.
+The **EX-CommandStation** would automatically know about the turnouts/points connected the other node, and can still throw/close the turnout/point in the same way as normal, and keep throttles informed, but the remote node would perform the physical movement.
 
 ## Shared Objects
 
@@ -41,7 +41,7 @@ Sensors (a sensor definition is actually a VPIN monitoring task, not the actual 
 
 ## Node Processors
 
-Because the nodes do not have to handle the creation of the DCC waveform, or the weird and wonderful assortment of throttle connections, a node can be created using a much cheaper processor than the Command Station and without the motor driver requirement.
+Because the nodes do not have to handle the creation of the DCC waveform (i.e. power track and drive trains), or deal with the weird and wonderful assortment of throttle connections, a node can be created using a much cheaper processor than the **EX-CommandStation** and without the motor driver requirement.
 
 However, a **EX-CSB1** being used as a booster is effectively a node and can handle other devices as well.
 
@@ -51,7 +51,7 @@ Every effort has been made to minimise the configuration/scripting changes but t
 
 In particular, there is no visible concept of a node id or targetting commands to a particular node.
 
-It is assumed that the reader intending to implement nodes is familiar with the Command Station way of defining and using devices with **EXRAIL**.
+It is assumed that the reader intending to implement nodes is familiar with the **EX-CommandStation** way of defining and using devices with **EXRAIL**.
 
 ## Flashing Nodes
 
@@ -61,7 +61,7 @@ Each node will need its own ``myAutomation.h`` but otherwise operates exactly th
 
 ## Node WiFi
 
-The node must be able to identify the WiFi SSID/Password to get on to the same network as the other devices. Since we now have a CSB1 way of setting WiFi from a command , the node can be configured over USB (or any other viable input such as a browser, throttle or toolbox connected to the nodes AP) with the `<C WIFI "ssid" "password">`  command and it will stick.
+The node must be able to identify the WiFi SSID/Password to get on to the same network as the other devices. Since we now have a **EX-CSB1** way of setting WiFi from a command , the node can be configured over USB (or any other viable input such as a browser, throttle or toolbox connected to the node's Access Point (AP)) with the `<C WIFI "ssid" "password">`  command and it will stick.
 (without the Node code, you would have had to code that manually somewhere.)
 
-- It is very convenient to use `<C WIFI HOSTNAME "nodename">` to set the nodes hostname so that you can easily open a browser to http://nodename/ and monitor the node as for the CS.
+- It is very convenient to use `<C WIFI HOSTNAME "nodename">` to set the nodes hostname so that you can easily open a browser to `http://nodename/` and monitor the node as for the **EX-CommandStation**.
