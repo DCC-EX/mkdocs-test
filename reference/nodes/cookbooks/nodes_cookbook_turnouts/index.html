@@ -541,7 +541,7 @@
 
             
               <a href="../../" class="md-breadcrumbs__link" style="color: var(--md-typeset-color); opacity: 0.7; text-decoration: none;">
-                Nodes
+                Distributed Layout <b>Nodes</b>
               </a>
             
           </li>
@@ -8685,7 +8685,7 @@
   <span class="md-ellipsis">
     
   
-    <br>EXRAIL Commands <small><small>Full&nbsp;List</small></small>
+    <br><b>EXRAIL</b> Commands <small><small>Full&nbsp;List</small></small>
   
 
     
@@ -8741,7 +8741,7 @@
   <span class="md-ellipsis">
     
   
-    Serial Commands <small><small>Full&nbsp;List</small></small>
+    <b>Serial</b> Commands <small><small>Full&nbsp;List</small></small>
   
 
     
@@ -9060,7 +9060,7 @@
   <span class="md-ellipsis">
     
   
-    Nodes
+    Distributed Layout <b>Nodes</b>
   
 
     
@@ -9082,7 +9082,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Nodes
+    Distributed Layout <b>Nodes</b>
   
 
           </label>
@@ -12874,7 +12874,7 @@
         <a href="../../" class="md-path__link">
           
   <span class="md-ellipsis">
-    Nodes
+    Distributed Layout <b>Nodes</b>
   </span>
 
         </a>
@@ -12916,8 +12916,8 @@
   
 
 
-<h1 id="handling-turnouts-in-a-node">Handling <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnouts</abbr> in a node<a class="headerlink" href="#handling-turnouts-in-a-node" title="Permanent link">¶</a></h1>
-<p>This example shows how an existing <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnout</abbr> definition  can be moved to a node processor.</p>
+<h1 id="handling-turnouts-in-a-node">Handling <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnouts</abbr> in a <abbr title="Distributed Layouts Nodes System">node</abbr><a class="headerlink" href="#handling-turnouts-in-a-node" title="Permanent link">¶</a></h1>
+<p>This example shows how an existing <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnout</abbr> definition  can be moved to a <abbr title="Distributed Layouts Nodes System">node</abbr> processor.</p>
 <h2 id="existing-exrail-for-turnout-connected-to-command-station">Existing <abbr title="&quot;EXtended Railroad Automation Instruction Language&quot; DCC-EX's scripting Language">EXRAIL</abbr> for <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnout</abbr> connected to Command Station<a class="headerlink" href="#existing-exrail-for-turnout-connected-to-command-station" title="Permanent link">¶</a></h2>
 <div class="language-cpp highlight"><pre><span></span><code><span class="n">SERVO_TURNOUT</span><span class="p">(</span><span class="mi">22</span><span class="p">,</span><span class="mi">400</span><span class="p">,</span><span class="mi">350</span><span class="p">,</span><span class="mi">120</span><span class="p">,</span><span class="n">Slow</span><span class="p">,</span><span class="s">"Mountain pass"</span><span class="p">)</span>
 </code></pre></div>
@@ -12926,22 +12926,22 @@
 <li>full <abbr title="&quot;EXtended Railroad Automation Instruction Language&quot; DCC-EX's scripting Language">EXRAIL</abbr> support for THROW/CLOSE ONTHROW/ONCLOSE IF etc</li>
 <li>Throttle support for <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnout</abbr>/point names</li>
 </ul>
-<h2 id="turnoutpoint-moved-to-remote-node"><abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnout</abbr>/point Moved to remote node<a class="headerlink" href="#turnoutpoint-moved-to-remote-node" title="Permanent link">¶</a></h2>
-<p>This involves moving the hardware-aspect of the <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnout</abbr>/point definition to the myAutomation.h in the node..</p>
+<h2 id="turnoutpoint-moved-to-remote-node"><abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnout</abbr>/point Moved to remote <abbr title="Distributed Layouts Nodes System">node</abbr><a class="headerlink" href="#turnoutpoint-moved-to-remote-node" title="Permanent link">¶</a></h2>
+<p>This involves moving the hardware-aspect of the <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnout</abbr>/point definition to the myAutomation.h in the <abbr title="Distributed Layouts Nodes System">node</abbr>..</p>
 <div class="language-cpp highlight"><pre><span></span><code><span class="c1">// turnout/point definition in node copy of myAutomation.h</span>
 <span class="n">SERVO_TURNOUT</span><span class="p">(</span><span class="mi">22</span><span class="p">,</span><span class="mi">400</span><span class="p">,</span><span class="mi">350</span><span class="p">,</span><span class="mi">120</span><span class="p">,</span><span class="n">Slow</span><span class="p">,</span><span class="s">"Mountain pass"</span><span class="p">)</span>
 </code></pre></div>
 <p>Notice that the <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnout</abbr>/point ID does not change but the <abbr title="an Arduino pin number that has been extended to include pins on external devices or expanders">vpin</abbr> 400 may well change to suit whatever <abbr title="Hardware Abstraction Layer. Allows the CS to discover and use the hardware through a simple abstract API, regardless of the type of underlying hardware.">HAL</abbr> device is driving the <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnout</abbr>/point.</p>
 <p>The Command Station will automatically know that the <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnout</abbr>/point is defined elsewhere so does not need the <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnout</abbr>/point definition.</p>
-<p>This is particularly powerful if you are building a modular layout. If for example a bunch of <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnouts</abbr>/points are on a particular module handled by a node, then the throttles will automatically know if the module is present or absent and will not show <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnouts</abbr>/points for the module unless it is powered up.</p>
+<p>This is particularly powerful if you are building a modular layout. If for example a bunch of <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnouts</abbr>/points are on a particular module handled by a <abbr title="Distributed Layouts Nodes System">node</abbr>, then the throttles will automatically know if the module is present or absent and will not show <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnouts</abbr>/points for the module unless it is powered up.</p>
 <p>Notice that this is all you need to do... Any <abbr title="&quot;EXtended Railroad Automation Instruction Language&quot; DCC-EX's scripting Language">EXRAIL</abbr> in the Command station that needs to handle the <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnout</abbr>/point can remain unchanged.</p>
-<p>You can have any number of <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnouts</abbr>/points in a node or split them over several nodes, and still manage some from the CS if needed..</p>
-<p>In effect, <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnout</abbr>/point numbers are unique across all nodes so only one node should have the hardware-aware <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnout</abbr>/point definition.</p>
+<p>You can have any number of <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnouts</abbr>/points in a <abbr title="Distributed Layouts Nodes System">node</abbr> or split them over several nodes, and still manage some from the CS if needed..</p>
+<p>In effect, <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnout</abbr>/point numbers are unique across all nodes so only one <abbr title="Distributed Layouts Nodes System">node</abbr> should have the hardware-aware <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnout</abbr>/point definition.</p>
 <h2 id="dcc-turnoutspoints">DCC <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnouts</abbr>/points<a class="headerlink" href="#dcc-turnoutspoints" title="Permanent link">¶</a></h2>
-<p>FOR THE TIME BEING a DCC <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnout</abbr>/point can't be moved to a node because its "wired" to the CS/Track.</p>
-<p>That doesn't stop a node throwing or closing it as the id is shared automatically between all nodes.</p>
-<h2 id="local-node-processing">Local node processing<a class="headerlink" href="#local-node-processing" title="Permanent link">¶</a></h2>
-<p>Because the node has almost the full <strong><abbr title="&quot;EXtended Railroad Automation Instruction Language&quot; DCC-EX's scripting Language">EXRAIL</abbr></strong> capability, its possible to use <abbr title="&quot;EXtended Railroad Automation Instruction Language&quot; DCC-EX's scripting Language">EXRAIL</abbr> in the node to monitor ONTHROW/ONCLOSE to perform local signals, switch lights, make sounds and so on.</p>
+<p>FOR THE TIME BEING a DCC <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnout</abbr>/point can't be moved to a <abbr title="Distributed Layouts Nodes System">node</abbr> because its "wired" to the CS/Track.</p>
+<p>That doesn't stop a <abbr title="Distributed Layouts Nodes System">node</abbr> throwing or closing it as the id is shared automatically between all nodes.</p>
+<h2 id="local-node-processing">Local <abbr title="Distributed Layouts Nodes System">node</abbr> processing<a class="headerlink" href="#local-node-processing" title="Permanent link">¶</a></h2>
+<p>Because the <abbr title="Distributed Layouts Nodes System">node</abbr> has almost the full <strong><abbr title="&quot;EXtended Railroad Automation Instruction Language&quot; DCC-EX's scripting Language">EXRAIL</abbr></strong> capability, its possible to use <abbr title="&quot;EXtended Railroad Automation Instruction Language&quot; DCC-EX's scripting Language">EXRAIL</abbr> in the <abbr title="Distributed Layouts Nodes System">node</abbr> to monitor ONTHROW/ONCLOSE to perform local signals, switch lights, make sounds and so on.</p>
 <!-- These are case sensitive -->
 
 

@@ -13,8 +13,8 @@
     <language>en</language>
 
     
-    <pubDate>Tue, 03 Nov 2026 10:48:45 -0000</pubDate>
-    <lastBuildDate>Tue, 03 Nov 2026 10:48:45 -0000</lastBuildDate>
+    <pubDate>Tue, 03 Nov 2026 22:19:01 -0000</pubDate>
+    <lastBuildDate>Tue, 03 Nov 2026 22:19:01 -0000</lastBuildDate>
     <ttl>1440</ttl>
 
     
@@ -68,6 +68,7 @@
       
       <description>&lt;h1&gt;New in Version 6.0&lt;/h1&gt;
 &lt;p&gt;Updates for:&lt;/p&gt;
+&lt;p&gt;==TODO== VERY HIGH - New in Version 6.0 new article. Plus change date and file name&lt;/p&gt;
 &lt;p&gt;intro text goes here&lt;/p&gt;</description>
       <link>https://dcc-ex.com/mkdocs-test/news/2026/10/new-in-version-60/</link>
       <pubDate>Sun, 11 Oct 2026 00:00:00 +0000</pubDate>

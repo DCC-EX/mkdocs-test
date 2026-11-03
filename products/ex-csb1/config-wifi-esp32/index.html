@@ -1002,17 +1002,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#configuring-with-usb-vs-wifi-limitations-of-wifi" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Configuring with USB vs WiFi - Limitations of WiFi
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#changing-the-wifi-settings" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -8919,7 +8908,7 @@
   <span class="md-ellipsis">
     
   
-    <br>EXRAIL Commands <small><small>Full&nbsp;List</small></small>
+    <br><b>EXRAIL</b> Commands <small><small>Full&nbsp;List</small></small>
   
 
     
@@ -8975,7 +8964,7 @@
   <span class="md-ellipsis">
     
   
-    Serial Commands <small><small>Full&nbsp;List</small></small>
+    <b>Serial</b> Commands <small><small>Full&nbsp;List</small></small>
   
 
     
@@ -9292,7 +9281,7 @@
   <span class="md-ellipsis">
     
   
-    Nodes
+    Distributed Layout <b>Nodes</b>
   
 
     
@@ -9314,7 +9303,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Nodes
+    Distributed Layout <b>Nodes</b>
   
 
           </label>
@@ -12924,17 +12913,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#configuring-with-usb-vs-wifi-limitations-of-wifi" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Configuring with USB vs WiFi - Limitations of WiFi
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#changing-the-wifi-settings" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -13223,7 +13201,7 @@
 <p><strong>Station (<abbr title="Station Mode. Joins an existing WiFi network">STA</abbr>) mode</strong> means the <strong>EX-CommandStation</strong> connects to your WiFi router and appears as a device on that network. If the WiFi is configured for <abbr title="Station Mode. Joins an existing WiFi network">STA</abbr> mode, but fails to connect to your router, it will fall back to <abbr title="Access Point Mode. Stand alone WiFi network">AP</abbr> mode in much the same way as smart plugs, lights etc.</p>
 </li>
 </ul>
-<p>There are some additional settings that are not modes but effect the wifi connection:</p>
+<p>There are some additional settings that are not modes but effect the WiFi connection:</p>
 <ul>
 <li>
 <p><strong>Channel</strong>: If you need to use an alternate channel in Access Point mode (we recommend using only 1,6, or 11) you may change it.</p>
@@ -13240,18 +13218,20 @@ This may be useful if visiting a location with a different WiFi network which yo
 <p>The <strong>HOSTNAME</strong> setting allows you to set the name that appears in your Throttle app, once you have connected to the appropriate network for the <strong>EX-CommandStation</strong>.</p>
 </li>
 </ul>
-<hr>
-<h2 id="configuring-with-usb-vs-wifi-limitations-of-wifi">Configuring with USB vs WiFi - Limitations of WiFi<a class="headerlink" href="#configuring-with-usb-vs-wifi-limitations-of-wifi" title="Permanent link">¶</a></h2>
-<p>There are significant limitations to be aware of when configuring WiFi settings over WiFi compared to using a USB connection:</p>
-<p>Only <strong>Station (<abbr title="Station Mode. Joins an existing WiFi network">STA</abbr>) mode</strong> and the <strong>HOSTNAME</strong> can be changed over WiFi.</p>
-<p><strong>Access Point (<abbr title="Access Point Mode. Stand alone WiFi network">AP</abbr>)</strong> mode changes require a serial/USB connection.
-This is a security feature.  If you could change <abbr title="Access Point Mode. Stand alone WiFi network">AP</abbr> mode settings over WiFi, then anyone who could connect to the <strong>EX-CommandStation</strong>'s WiFi network could change the <abbr title="Access Point Mode. Stand alone WiFi network">AP</abbr> settings and potentially lock you out of your <strong>EX-CommandStation</strong>. By requiring a USB connection for <abbr title="Access Point Mode. Stand alone WiFi network">AP</abbr> mode changes, we ensure that only someone with physical access to the <strong>EX-CommandStation</strong> can modify these critical settings.</p>
-<p><mark>TODO</mark> VERY HIGH! - The WiFi change limitation has been broken in the latest CS version as anything can be changed via the in-built web server</p>
+<!-- ---- -->
+
+<!-- ## Configuring with USB vs WiFi - Limitations of WiFi -->
+
+<!-- There are significant limitations to be aware of when configuring WiFi settings over WiFi compared to using a USB connection: -->
+
+<!-- Only **Station (STA) mode** and the **HOSTNAME** can be changed over WiFi. -->
+
+<!-- **Access Point (AP)** mode changes require a serial/USB connection. -->
+<!-- This is a security feature.  If you could change AP mode settings over WiFi, then anyone who could connect to the **EX-CommandStation**'s WiFi network could change the AP settings and potentially lock you out of your **EX-CommandStation**. By requiring a USB connection for AP mode changes, we ensure that only someone with physical access to the **EX-CommandStation** can modify these critical settings. -->
+
 <hr>
 <h2 id="changing-the-wifi-settings">Changing the WiFi Settings<a class="headerlink" href="#changing-the-wifi-settings" title="Permanent link">¶</a></h2>
 <h3 id="using-the-ex-commandstations-own-web-sever-new-in-v6">Using the EX-CommandStation's own Web Sever - <a href="../../../news/2026/10/new-in-version-60/"><span class="badge-new">New in v6</span></a><a class="headerlink" href="#using-the-ex-commandstations-own-web-sever-new-in-v6" title="Permanent link">¶</a></h3>
-<p><mark>TODO</mark> VERY HIGH! - Changing the WiFi Settings using the EX-CommandStation's own Web Sever</p>
-<p>If you have an <abbr title="Orgenic LED displays">OLED</abbr> screen, it will tell you the IP address of the <strong>EX-CommandStation</strong></p>
 <p>Enter the IP address of the <strong>EX-CommandStation</strong> into the address bar of you browser. e.g. <code>192.168.1.4</code> if you are using the default <a href="../../../prepare-to-use/installer/config-wifi-esp32/#the-wifi-different-modes">Access Point</a> mode. Or use the Web Page in Engine Driver, after you have connected to the <strong>EX-CommandStation</strong>.</p>
 <p>To find the IP address:</p>
 <ul>
@@ -13270,7 +13250,7 @@ This is a security feature.  If you could change <abbr title="Access Point Mode.
 </li>
 <li>
 <p>To set the <strong>Access Point (<abbr title="Access Point Mode. Stand alone WiFi network">AP</abbr>) mode</strong>, enter the <abbr title="Service Set Identifier. Technical term for the WiFi network's name">SSID</abbr> and password for the <strong>EX-CommandStation</strong>'s WiFi network and click the <code>Set Access Point</code> button. You can optional set a channel for the <abbr title="Access Point Mode. Stand alone WiFi network">AP</abbr> mode, but it is not required, and generally not recommended.</p>
-<p>The <strong>EX-CommandStation</strong> will restart and create its own WiFi network with the specified <abbr title="Service Set Identifier. Technical term for the WiFi network's name">SSID</abbr> and password.</p>
+<p>The <strong>EX-CommandStation</strong> will need to be restarted to create its own WiFi network with the specified <abbr title="Service Set Identifier. Technical term for the WiFi network's name">SSID</abbr> and password.</p>
 </li>
 <li>
 <p>To set the <strong>Station (<abbr title="Station Mode. Joins an existing WiFi network">STA</abbr>) mode</strong>, enter the <abbr title="Service Set Identifier. Technical term for the WiFi network's name">SSID</abbr> and password for your existing WiFi network (eg your home router) and click the <code>Set Station Mode</code> button. The <strong>EX-CommandStation</strong> will attempt to connect to the specified WiFi network. If the connection is successful, it will operate in Station mode. If the connection fails, it will revert to Access Point mode.</p>
@@ -13291,7 +13271,7 @@ This is a security feature.  If you could change <abbr title="Access Point Mode.
 <p>Connect your PC to the <strong>EX-CommandStation</strong> via USB. Open the <strong>EX-WebThrottle</strong> and select the appropriate COM port for your <strong>EX-CommandStation</strong>. You should see the current WiFi settings displayed in the interface.  See <a href="../../ex-webthrottle/ex-webthrottle/">EX-WebThrottle</a> for more details.</p>
 </li>
 <li>
-<p>Go to the <code>Wifi Setup</code> page from the menu or the toolbar buttons.</p>
+<p>Go to the <code>WiFi Setup</code> page from the menu or the toolbar buttons.</p>
 </li>
 </ol>
 <ul>
@@ -13316,14 +13296,16 @@ This is a security feature.  If you could change <abbr title="Access Point Mode.
 <p>The <code>Reset WiFi Settings</code> button on the WiFi Setup page will reset all WiFi settings to their default values. This will cause the <strong>EX-CommandStation</strong> to restart and create its own WiFi network in Access Point mode with the default <abbr title="Service Set Identifier. Technical term for the WiFi network's name">SSID</abbr> and password.</p>
 <h4 id="notes-ex-webthrottle">Notes (EX-WebThrottle)<a class="headerlink" href="#notes-ex-webthrottle" title="Permanent link">¶</a></h4>
 <ul>
-<li>In every case above, the <strong>EX-CommandStation</strong> will restart to apply the new settings. You will need to reconnect to the <strong>EX-CommandStation</strong> in the <strong>EX-WebThrottle</strong> interface. <mark>TODO</mark> VERY HIGH! - The WiFi change limitation has been broken in the latest CS version as anything can be changed via the in-built web server</li>
+<li>You may need to restart the <strong>EX-CommandStation</strong>  for the new settings to take effect. In which case you will need to reconnect to the <strong>EX-CommandStation</strong> with whatever interface you are using.</li>
 </ul>
+<!-- * In every case above, the **EX-CommandStation** will restart to apply the new settings. You will need to reconnect to the **EX-CommandStation** in the **EX-WebThrottle** interface. -->
+
 <hr>
 <h3 id="using-ex-toolbox">Using EX-Toolbox<a class="headerlink" href="#using-ex-toolbox" title="Permanent link">¶</a></h3>
 <p><strong>EX-Toolbox</strong> provides a similar interface to the <strong>EX-WebThrottle</strong> for configuring WiFi settings, but it can be accessed either via USB or over WiFi. The process for changing WiFi settings in the <strong>EX-Toolbox</strong> is essentially the same as in the <strong>EX-WebThrottle</strong>, with the same options for <abbr title="Access Point Mode. Stand alone WiFi network">AP</abbr> mode, <abbr title="Station Mode. Joins an existing WiFi network">STA</abbr> mode, Temporary <abbr title="Station Mode. Joins an existing WiFi network">STA</abbr> mode and Hostname.</p>
 <ol>
 <li>
-<p>Connect your PC to the <strong>EX-Toolbox</strong> via USB or Wifi.  See <a href="../../ex-toolbox/">EX-Toolbox</a> for more details.</p>
+<p>Connect your PC to the <strong>EX-Toolbox</strong> via USB or WiFi.  See <a href="../../ex-toolbox/">EX-Toolbox</a> for more details.</p>
 </li>
 <li>
 <p>Go to the <code>WiFi Setup</code> page from the menu or the toolbar buttons and follow the same steps as outlined for the <strong>EX-WebThrottle</strong> above.</p>

@@ -8667,7 +8667,7 @@
   <span class="md-ellipsis">
     
   
-    <br>EXRAIL Commands <small><small>Full&nbsp;List</small></small>
+    <br><b>EXRAIL</b> Commands <small><small>Full&nbsp;List</small></small>
   
 
     
@@ -8723,7 +8723,7 @@
   <span class="md-ellipsis">
     
   
-    Serial Commands <small><small>Full&nbsp;List</small></small>
+    <b>Serial</b> Commands <small><small>Full&nbsp;List</small></small>
   
 
     
@@ -9040,7 +9040,7 @@
   <span class="md-ellipsis">
     
   
-    Nodes
+    Distributed Layout <b>Nodes</b>
   
 
     
@@ -9062,7 +9062,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Nodes
+    Distributed Layout <b>Nodes</b>
   
 
           </label>
@@ -13462,7 +13462,7 @@
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../_static/images/tools/bunza_dcc_interface.jpg" data-title="Geoff Bunza DCC Interface Board" data-desc-position="bottom"><img width="400px" alt="Geoff Bunza DCC Interface Board" src="../../../_static/images/tools/bunza_dcc_interface.jpg"></a></p>
 <p>All you need to create your DCC Sniffer is to solder up this board and connect it to an Arduino. You can wire it to an Uno or Mega, but we like to use an Arduino Nano or ESP32 because you can connect the <abbr title="ESP32, Nucleo, or Arduino Mega">microcontroller</abbr> and interface both on another carrier board or mount them in a case. The Nano and ESP32 are powered from the USB connection to your computer running a serial monitor, and it, in turn, can send that power to the DCC Interface Board.</p>
 <p>Please check out Dr. Geoff's excellent blog on this board here:</p>
-<p><a href="https://model-railroad-hobbyist.com/node/41187">https://model-railroad-hobbyist.com/node/41187</a></p>
+<p><a href="https://model-railroad-hobbyist.com/node/41187">https://model-railroad-hobbyist.com/<abbr title="Distributed Layouts Nodes System">node</abbr>/41187</a></p>
 <p><mark>TODO</mark> LOW - add info on wiring and sketches here</p>
 <h5 id="optional-power-supply-circuit">Optional Power Supply Circuit<a class="headerlink" href="#optional-power-supply-circuit" title="Permanent link">¶</a></h5>
 <p>If you always intend to have your computer or laptop connected via the USB port to read the decoded DCC packets, then you can power everything from the 5V coming out of your USB port. But if you want something standalone, for example a sniffer with a display or that has wireless capability, then you are either going to have to power it from a 5V power supply (like a wall charger) or take your power from the track.</p>
@@ -13623,7 +13623,7 @@ for a "0". It then immediately switches and does the same thing on the other tra
 <p>Note that during construction, the red wire is actually attached to the green LED and the green wire is attached to the red LED. You need to connect it this way to get the correctly coloured LED to light.</p>
 <p><strong>Circuit Operation</strong> - The circuit works by only having a diode forward biased when the rail the probe end is attached to is out of phase with the corresponding rail on the known working block. With the red lead on Rail A of the known block and green lead on Rail B, when the probe is connected to Rail A on the opposite block, the red LED should light to indicate it is connected to the correct rail. The diode is reversed biased when the known Rail A is HIGH and the rail under test is LOW, so it blocks any current. But on the next half cycle when the known Rail A goes LOW and the test rail goes HIGH, the diode is forward biased and lights. In this way, the LEDs are only lit half the time, but do to our persistence of vision, and the approximately 8kHz frequency, we will just see a lit LED.</p>
 <p>The other LED won't light because it is always in phase with the known track Rail B. When they are both HIGH at the same time (full track voltage) or both LOW, there is no potential difference across the LED.</p>
-<p>See the thread on the MRH blog here: <a href="https://model-railroad-hobbyist.com/node/17215?page=2">https://model-railroad-hobbyist.com/node/17215?page=2</a></p>
+<p>See the thread on the MRH blog here: <a href="https://model-railroad-hobbyist.com/node/17215?page=2">https://model-railroad-hobbyist.com/<abbr title="Distributed Layouts Nodes System">node</abbr>/17215?page=2</a></p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../_static/images/tools/dcc_phase_checker1.png" data-title="2 Diode Phase Checker" data-desc-position="bottom"><img alt="2 Diode Phase Checker" src="../../../_static/images/tools/dcc_phase_checker1.png" width="400px"></a><br>
 <strong>Pros</strong> - Just 4 components, small, simple<br>
 <strong>Cons</strong> - ?</p>

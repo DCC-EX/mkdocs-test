@@ -541,7 +541,7 @@
 
             
               <a href="../../" class="md-breadcrumbs__link" style="color: var(--md-typeset-color); opacity: 0.7; text-decoration: none;">
-                Nodes
+                Distributed Layout <b>Nodes</b>
               </a>
             
           </li>
@@ -8685,7 +8685,7 @@
   <span class="md-ellipsis">
     
   
-    <br>EXRAIL Commands <small><small>Full&nbsp;List</small></small>
+    <br><b>EXRAIL</b> Commands <small><small>Full&nbsp;List</small></small>
   
 
     
@@ -8741,7 +8741,7 @@
   <span class="md-ellipsis">
     
   
-    Serial Commands <small><small>Full&nbsp;List</small></small>
+    <b>Serial</b> Commands <small><small>Full&nbsp;List</small></small>
   
 
     
@@ -9060,7 +9060,7 @@
   <span class="md-ellipsis">
     
   
-    Nodes
+    Distributed Layout <b>Nodes</b>
   
 
     
@@ -9082,7 +9082,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Nodes
+    Distributed Layout <b>Nodes</b>
   
 
           </label>
@@ -12908,7 +12908,7 @@
         <a href="../../" class="md-path__link">
           
   <span class="md-ellipsis">
-    Nodes
+    Distributed Layout <b>Nodes</b>
   </span>
 
         </a>
@@ -13004,7 +13004,7 @@ sections as required.</p>
 included on an RT_EX-Turntable board.</p>
 <p><code>waspinator/AccelStepper</code> is included as a <abbr title="Used with Microsoft Visual Studio Code. The recommended IDE if EX-Installer is insufficient for your needs.">PlatformIO</abbr> dependency.</p>
 <p>Other boards use the non-ESP32 assignments from EX-Turntable.
-Although this is not really applicable for a DCC-EX node.</p>
+Although this is not really applicable for a DCC-EX <abbr title="Distributed Layouts Nodes System">node</abbr>.</p>
 <p>Pins can be overridden in
 <code>config.h</code> with
 <code>EX_TURNTABLE_STEP_PIN</code>
@@ -13050,11 +13050,11 @@ position plus <code>NVS(15) / 48</code>, so NVS(40) is one interval and NVS(87) 
 These generated values replace any existing values in those slots.</p>
 <p>This is equivalent to a track angle of 7.5 degrees.</p>
 <p>This will also occur any time a calibration is redone.</p>
-<p>Once calibration is completed the node will restart after 20 seconds to reload all the relevant NVS values and rehome the turntable.</p>
+<p>Once calibration is completed the <abbr title="Distributed Layouts Nodes System">node</abbr> will restart after 20 seconds to reload all the relevant NVS values and rehome the turntable.</p>
 <h2 id="subsequent-start-up">Subsequent start up<a class="headerlink" href="#subsequent-start-up" title="Permanent link">¶</a></h2>
 <p>The controller will move the turntable/traverser to the home position.</p>
 <h3 id="nvs-configuration">NVS configuration<a class="headerlink" href="#nvs-configuration" title="Permanent link">¶</a></h3>
-<p>The onboard controller reads its configuration from the DCC-EX node NVS table
+<p>The onboard controller reads its configuration from the DCC-EX <abbr title="Distributed Layouts Nodes System">node</abbr> NVS table
 when its IO device starts. NVS(0) contains the EX-Turntable's virtual pin
 address. When this value is nonzero, the <abbr title="Hardware Abstraction Layer. Allows the CS to discover and use the hardware through a simple abstract API, regardless of the type of underlying hardware.">HAL</abbr> device is created at that <abbr title="an Arduino pin number that has been extended to include pins on external devices or expanders">vpin</abbr>;
 otherwise, the <abbr title="an Arduino pin number that has been extended to include pins on external devices or expanders">vpin</abbr> provided in the <code>HAL(EXTurntable, ...)</code> declaration is

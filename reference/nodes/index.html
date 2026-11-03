@@ -541,7 +541,7 @@
 
             
               <a href="./" class="md-breadcrumbs__link" style="color: var(--md-typeset-color); opacity: 0.7; text-decoration: none;">
-                Nodes
+                Distributed Layout <b>Nodes</b>
               </a>
             
           </li>
@@ -8667,7 +8667,7 @@
   <span class="md-ellipsis">
     
   
-    <br>EXRAIL Commands <small><small>Full&nbsp;List</small></small>
+    <br><b>EXRAIL</b> Commands <small><small>Full&nbsp;List</small></small>
   
 
     
@@ -8723,7 +8723,7 @@
   <span class="md-ellipsis">
     
   
-    Serial Commands <small><small>Full&nbsp;List</small></small>
+    <b>Serial</b> Commands <small><small>Full&nbsp;List</small></small>
   
 
     
@@ -9042,7 +9042,7 @@
   <span class="md-ellipsis">
     
   
-    Nodes
+    Distributed Layout <b>Nodes</b>
   
 
     
@@ -9064,7 +9064,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Nodes
+    Distributed Layout <b>Nodes</b>
   
 
           </label>
@@ -12785,7 +12785,7 @@
         <a href="./" class="md-path__link">
           
   <span class="md-ellipsis">
-    Nodes
+    Distributed Layout <b>Nodes</b>
   </span>
 
         </a>
@@ -12810,9 +12810,9 @@
 
 
 <h1 id="introduction-to-using-distributed-layout-nodes">Introduction to Using Distributed Layout Nodes<a class="headerlink" href="#introduction-to-using-distributed-layout-nodes" title="Permanent link">¶</a></h1>
-<p>Layout <strong>Nodes</strong> offer a simple way of distributing layout control (usually wirelessly) over a wide area using the same <strong>EX-CommandStation</strong> software in each node.</p>
+<p>Distributed Layout <strong>Nodes</strong> offer a simple way of physically distributing layout control (usually wirelessly) over a wide area, using additional microprocessors, running essentially the same <strong>EX-CommandStation</strong> software in each <abbr title="Distributed Layouts Nodes System">node</abbr>.</p>
 <h2 id="basic-principles">Basic Principles<a class="headerlink" href="#basic-principles" title="Permanent link">¶</a></h2>
-<p>A layout may be controlled entirely by a single processor, known as the Command Station, which performs many tasks simultaneously:</p>
+<p>Traditionally, a layout is controlled entirely by a single microprocessor, known as the Command Station (<strong>EX-CommandStation</strong>), which performs many tasks simultaneously:</p>
 <ul>
 <li>Communicating with throttles</li>
 <li>Controlling and generating the track output</li>
@@ -12824,38 +12824,38 @@
 <li>Turntable operations</li>
 <li>Making coffee</li>
 </ul>
-<p>In some cases, particularly large layouts, it would be preferable to offload some of these functions to separate processors, mostly for ease of wiring... performance is rarely an issue.</p>
-<p>By using the Layout <strong>Node</strong> system, the separate processors will automatically intercommunicate. They use essentially the same <strong>EX-CommandStation</strong> code, including <strong><abbr title="&quot;EXtended Railroad Automation Instruction Language&quot; DCC-EX's scripting Language">EXRAIL</abbr></strong> and <abbr title="Hardware Abstraction Layer. Allows the CS to discover and use the hardware through a simple abstract API, regardless of the type of underlying hardware.">HAL</abbr> drivers in each node.</p>
-<p>For example, a node may be established to handle a group of <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnouts</abbr>/points on one area of your layout. The physical <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnouts</abbr>/points would be connected to the node using the usual hardware (MCP32017, PCA9685 etc) and usual <strong><abbr title="&quot;EXtended Railroad Automation Instruction Language&quot; DCC-EX's scripting Language">EXRAIL</abbr></strong> definitions but there would not be any need to wire the node to the command station or deal with long <abbr title="(Inter-Integrated Circuit, pronounced &quot;eye-squared-see&quot;) is a synchronous, multi-controller/multi-target serial communication protocol">I2C</abbr> connections.</p>
-<p>The Command Station would automatically know about the <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnouts</abbr>/points, can still throw/close the <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnout</abbr>/point in the same way as normal and keep throttles informed, but the remote node would perform the physical movement.</p>
+<p>In some cases, particularly large layouts, it would be preferable to offload some of these functions to separate microprocessors, mostly for ease of wiring... performance is rarely an issue.</p>
+<p>By using the Distributed Layout <strong>Node</strong> system, the separate microprocessors will automatically intercommunicate. They use essentially the same <strong>EX-CommandStation</strong> code, including <strong><abbr title="&quot;EXtended Railroad Automation Instruction Language&quot; DCC-EX's scripting Language">EXRAIL</abbr></strong> and <abbr title="Hardware Abstraction Layer. Allows the CS to discover and use the hardware through a simple abstract API, regardless of the type of underlying hardware.">HAL</abbr> drivers in each <abbr title="Distributed Layouts Nodes System">node</abbr>.</p>
+<p>For example, in addition to the normal <strong>EX-CommandStation</strong>, a <abbr title="Distributed Layouts Nodes System">node</abbr> may be established to handle a group of <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnouts</abbr>/points on one area of your layout. The physical <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnouts</abbr>/points would be connected to the <abbr title="Distributed Layouts Nodes System">node</abbr> using the usual hardware (MCP32017, PCA9685 etc) and usual <strong><abbr title="&quot;EXtended Railroad Automation Instruction Language&quot; DCC-EX's scripting Language">EXRAIL</abbr></strong> definitions but there would not be any need to wire the <strong>Node</strong> to the <strong>EX-CommandStation</strong> or deal with long <abbr title="(Inter-Integrated Circuit, pronounced &quot;eye-squared-see&quot;) is a synchronous, multi-controller/multi-target serial communication protocol">I2C</abbr> connections.</p>
+<p>The <strong>EX-CommandStation</strong> would automatically know about the <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnouts</abbr>/points connected the other <abbr title="Distributed Layouts Nodes System">node</abbr>, and can still throw/close the <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnout</abbr>/point in the same way as normal, and keep throttles informed, but the remote <abbr title="Distributed Layouts Nodes System">node</abbr> would perform the physical movement.</p>
 <h2 id="shared-objects">Shared Objects<a class="headerlink" href="#shared-objects" title="Permanent link">¶</a></h2>
 <p>Object sharing is generally done for things that have an id that is separate from the <abbr title="an Arduino pin number that has been extended to include pins on external devices or expanders">VPIN</abbr> associated with some particular hardware implementation.</p>
 <p>The following object types are shared amongst the nodes automatically</p>
 <ul>
-<li>Turnouts/points can be thrown, closed or monitored from any node.</li>
-<li>Signals can be set or monitored from any node</li>
+<li>Turnouts/points can be thrown, closed or monitored from any <abbr title="Distributed Layouts Nodes System">node</abbr>.</li>
+<li>Signals can be set or monitored from any <abbr title="Distributed Layouts Nodes System">node</abbr></li>
 <li>Turntables (code pending)</li>
 </ul>
-<p>Sensors (a sensor definition is actually a <abbr title="an Arduino pin number that has been extended to include pins on external devices or expanders">VPIN</abbr> monitoring task, not the actual sensor hardware) are only shared by consent. The node with the sensor hardware needs to share the sensor with a suitable unique id to avoid clashes with other nodes hardware.</p>
+<p>Sensors (a sensor definition is actually a <abbr title="an Arduino pin number that has been extended to include pins on external devices or expanders">VPIN</abbr> monitoring task, not the actual sensor hardware) are only shared by consent. The <abbr title="Distributed Layouts Nodes System">node</abbr> with the sensor hardware needs to share the sensor with a suitable unique id to avoid clashes with other nodes hardware.</p>
 <ul>
-<li>Input (sensor) VPINs can be monitored by any node</li>
-<li>Output VPINSs can be set by any node... The implication of this is that most devices like DFPlayers, NeoPixels, Leds can be controlled by any node as long as the node with the real device has deliberately accepted the <abbr title="an Arduino pin number that has been extended to include pins on external devices or expanders">VPIN</abbr> numbers using the SHARED_WRITE_VPINS macro.  </li>
+<li>Input (sensor) VPINs can be monitored by any <abbr title="Distributed Layouts Nodes System">node</abbr></li>
+<li>Output VPINSs can be set by any <abbr title="Distributed Layouts Nodes System">node</abbr>... The implication of this is that most devices like DFPlayers, NeoPixels, Leds can be controlled by any <abbr title="Distributed Layouts Nodes System">node</abbr> as long as the <abbr title="Distributed Layouts Nodes System">node</abbr> with the real device has deliberately accepted the <abbr title="an Arduino pin number that has been extended to include pins on external devices or expanders">VPIN</abbr> numbers using the SHARED_WRITE_VPINS macro.  </li>
 </ul>
 <h2 id="node-processors">Node Processors<a class="headerlink" href="#node-processors" title="Permanent link">¶</a></h2>
-<p>Because the nodes do not have to handle the creation of the DCC waveform, or the weird and wonderful assortment of throttle connections, a node can be created using a much cheaper processor than the Command Station and without the <abbr title="Also referred to as a 'motor controller' or 'motor shield'">motor driver</abbr> requirement.</p>
-<p>However, a <strong><abbr title="EX-CommandStation/Booster 1 Express">EX-CSB1</abbr></strong> being used as a booster is effectively a node and can handle other devices as well.</p>
+<p>Because the nodes do not have to handle the creation of the DCC waveform (i.e. power track and drive trains), or deal with the weird and wonderful assortment of throttle connections, a <abbr title="Distributed Layouts Nodes System">node</abbr> can be created using a much cheaper processor than the <strong>EX-CommandStation</strong> and without the <abbr title="Also referred to as a 'motor controller' or 'motor shield'">motor driver</abbr> requirement.</p>
+<p>However, a <strong><abbr title="EX-CommandStation/Booster 1 Express">EX-CSB1</abbr></strong> being used as a booster is effectively a <abbr title="Distributed Layouts Nodes System">node</abbr> and can handle other devices as well.</p>
 <h2 id="node-configuration">Node Configuration<a class="headerlink" href="#node-configuration" title="Permanent link">¶</a></h2>
 <p>Every effort has been made to minimise the configuration/scripting changes but this is best seen by viewing the cookbook entries that follow.</p>
-<p>In particular, there is no visible concept of a node id or targetting commands to a particular node.</p>
-<p>It is assumed that the reader intending to implement nodes is familiar with the Command Station way of defining and using devices with <strong><abbr title="&quot;EXtended Railroad Automation Instruction Language&quot; DCC-EX's scripting Language">EXRAIL</abbr></strong>.</p>
+<p>In particular, there is no visible concept of a <abbr title="Distributed Layouts Nodes System">node</abbr> id or targetting commands to a particular <abbr title="Distributed Layouts Nodes System">node</abbr>.</p>
+<p>It is assumed that the reader intending to implement nodes is familiar with the <strong>EX-CommandStation</strong> way of defining and using devices with <strong><abbr title="&quot;EXtended Railroad Automation Instruction Language&quot; DCC-EX's scripting Language">EXRAIL</abbr></strong>.</p>
 <h2 id="flashing-nodes">Flashing Nodes<a class="headerlink" href="#flashing-nodes" title="Permanent link">¶</a></h2>
-<p>Each node will need its own <code>myAutomation.h</code> but otherwise operates exactly the same <strong>EX-CommandStation</strong> code. A definition (or possibly runtime switch) prevents the node from advertising itself to throttles or trying to generate a DCC waveform.</p>
+<p>Each <abbr title="Distributed Layouts Nodes System">node</abbr> will need its own <code>myAutomation.h</code> but otherwise operates exactly the same <strong>EX-CommandStation</strong> code. A definition (or possibly runtime switch) prevents the <abbr title="Distributed Layouts Nodes System">node</abbr> from advertising itself to throttles or trying to generate a DCC waveform.</p>
 <p>( <mark>TODO</mark> Installer assist in managing this?)</p>
 <h2 id="node-wifi">Node WiFi<a class="headerlink" href="#node-wifi" title="Permanent link">¶</a></h2>
-<p>The node must be able to identify the WiFi <abbr title="Service Set Identifier. Technical term for the WiFi network's name">SSID</abbr>/Password to get on to the same network as the other devices. Since we now have a CSB1 way of setting WiFi from a command , the node can be configured over USB (or any other viable input such as a browser, throttle or toolbox connected to the nodes <abbr title="Access Point Mode. Stand alone WiFi network">AP</abbr>) with the <code>&lt;C WIFI "ssid" "password"&gt;</code>  command and it will stick.
+<p>The <abbr title="Distributed Layouts Nodes System">node</abbr> must be able to identify the WiFi <abbr title="Service Set Identifier. Technical term for the WiFi network's name">SSID</abbr>/Password to get on to the same network as the other devices. Since we now have a <strong><abbr title="EX-CommandStation/Booster 1 Express">EX-CSB1</abbr></strong> way of setting WiFi from a command , the <abbr title="Distributed Layouts Nodes System">node</abbr> can be configured over USB (or any other viable input such as a browser, throttle or toolbox connected to the <abbr title="Distributed Layouts Nodes System">node</abbr>'s Access Point (<abbr title="Access Point Mode. Stand alone WiFi network">AP</abbr>)) with the <code>&lt;C WIFI "ssid" "password"&gt;</code>  command and it will stick.
 (without the Node code, you would have had to code that manually somewhere.)</p>
 <ul>
-<li>It is very convenient to use <code>&lt;C WIFI HOSTNAME "nodename"&gt;</code> to set the nodes hostname so that you can easily open a browser to http://nodename/ and monitor the node as for the CS.</li>
+<li>It is very convenient to use <code>&lt;C WIFI HOSTNAME "nodename"&gt;</code> to set the nodes hostname so that you can easily open a browser to <code>http://nodename/</code> and monitor the <abbr title="Distributed Layouts Nodes System">node</abbr> as for the <strong>EX-CommandStation</strong>.</li>
 </ul>
 <!-- These are case sensitive -->
 
@@ -12878,7 +12878,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"></path></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="November 3, 2026 10:40:21 UTC">November 3, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="November 3, 2026 21:39:22 UTC">November 3, 2026</span>
   </span>
 
     

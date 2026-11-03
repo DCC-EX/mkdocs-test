@@ -541,7 +541,7 @@
 
             
               <a href="../../" class="md-breadcrumbs__link" style="color: var(--md-typeset-color); opacity: 0.7; text-decoration: none;">
-                Nodes
+                Distributed Layout <b>Nodes</b>
               </a>
             
           </li>
@@ -8685,7 +8685,7 @@
   <span class="md-ellipsis">
     
   
-    <br>EXRAIL Commands <small><small>Full&nbsp;List</small></small>
+    <br><b>EXRAIL</b> Commands <small><small>Full&nbsp;List</small></small>
   
 
     
@@ -8741,7 +8741,7 @@
   <span class="md-ellipsis">
     
   
-    Serial Commands <small><small>Full&nbsp;List</small></small>
+    <b>Serial</b> Commands <small><small>Full&nbsp;List</small></small>
   
 
     
@@ -9060,7 +9060,7 @@
   <span class="md-ellipsis">
     
   
-    Nodes
+    Distributed Layout <b>Nodes</b>
   
 
     
@@ -9082,7 +9082,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Nodes
+    Distributed Layout <b>Nodes</b>
   
 
           </label>
@@ -12830,7 +12830,7 @@
         <a href="../../" class="md-path__link">
           
   <span class="md-ellipsis">
-    Nodes
+    Distributed Layout <b>Nodes</b>
   </span>
 
         </a>
@@ -12881,9 +12881,9 @@
 <div class="language-cpp highlight"><pre><span></span><code><span class="n">HAL</span><span class="p">(</span><span class="n">WaveShare</span><span class="p">,</span><span class="w"> </span><span class="mi">7777</span><span class="p">)</span>
 <span class="n">SHARED_WRITE_VPINS</span><span class="p">(</span><span class="mi">7777</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
 </code></pre></div>
-<p>This loads the WaveShare driver on <abbr title="an Arduino pin number that has been extended to include pins on external devices or expanders">VPIN</abbr> 7777 and tells the node system to accept incoming manipulations of the <abbr title="an Arduino pin number that has been extended to include pins on external devices or expanders">VPIN</abbr>.</p>
-<p>This means that ANY node in the system can use the <abbr title="&quot;EXtended Railroad Automation Instruction Language&quot; DCC-EX's scripting Language">EXRAIL</abbr> PLAY_* and <code>&lt;y</code> commands which normally drive a DFPlayer  and this node will operate in the same way.</p>
-<p>The node can also handle things like this.</p>
+<p>This loads the WaveShare driver on <abbr title="an Arduino pin number that has been extended to include pins on external devices or expanders">VPIN</abbr> 7777 and tells the <abbr title="Distributed Layouts Nodes System">node</abbr> system to accept incoming manipulations of the <abbr title="an Arduino pin number that has been extended to include pins on external devices or expanders">VPIN</abbr>.</p>
+<p>This means that ANY <abbr title="Distributed Layouts Nodes System">node</abbr> in the system can use the <abbr title="&quot;EXtended Railroad Automation Instruction Language&quot; DCC-EX's scripting Language">EXRAIL</abbr> PLAY_* and <code>&lt;y</code> commands which normally drive a DFPlayer  and this <abbr title="Distributed Layouts Nodes System">node</abbr> will operate in the same way.</p>
+<p>The <abbr title="Distributed Layouts Nodes System">node</abbr> can also handle things like this.</p>
 <div class="language-cpp highlight"><pre><span></span><code><span class="n">ONSENSOR</span><span class="p">(</span><span class="mi">7777</span><span class="p">)</span>
 <span class="w">  </span><span class="n">IF</span><span class="p">(</span><span class="mi">7777</span><span class="p">)</span><span class="w"> </span><span class="n">SCREEN</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="s">"Play started"</span><span class="p">)</span>
 <span class="w">  </span><span class="n">ELSE</span><span class="w">     </span><span class="n">SCREEN</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="s">"Play ended"</span><span class="p">)</span>

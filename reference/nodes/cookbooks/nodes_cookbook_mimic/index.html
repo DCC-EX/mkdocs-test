@@ -541,7 +541,7 @@
 
             
               <a href="../../" class="md-breadcrumbs__link" style="color: var(--md-typeset-color); opacity: 0.7; text-decoration: none;">
-                Nodes
+                Distributed Layout <b>Nodes</b>
               </a>
             
           </li>
@@ -8685,7 +8685,7 @@
   <span class="md-ellipsis">
     
   
-    <br>EXRAIL Commands <small><small>Full&nbsp;List</small></small>
+    <br><b>EXRAIL</b> Commands <small><small>Full&nbsp;List</small></small>
   
 
     
@@ -8741,7 +8741,7 @@
   <span class="md-ellipsis">
     
   
-    Serial Commands <small><small>Full&nbsp;List</small></small>
+    <b>Serial</b> Commands <small><small>Full&nbsp;List</small></small>
   
 
     
@@ -9060,7 +9060,7 @@
   <span class="md-ellipsis">
     
   
-    Nodes
+    Distributed Layout <b>Nodes</b>
   
 
     
@@ -9082,7 +9082,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Nodes
+    Distributed Layout <b>Nodes</b>
   
 
           </label>
@@ -12852,7 +12852,7 @@
         <a href="../../" class="md-path__link">
           
   <span class="md-ellipsis">
-    Nodes
+    Distributed Layout <b>Nodes</b>
   </span>
 
         </a>
@@ -12895,7 +12895,7 @@
 
 
 <h1 id="creating-a-mimic-panel-node">Creating a Mimic Panel Node<a class="headerlink" href="#creating-a-mimic-panel-node" title="Permanent link">¶</a></h1>
-<p>A mimic panel is a great example of node which can operate entirely independently of the command station or other nodes.</p>
+<p>A mimic panel is a great example of <abbr title="Distributed Layouts Nodes System">node</abbr> which can operate entirely independently of the command station or other nodes.</p>
 <p>Typically a Mimic panel would need to:</p>
 <ul>
 <li>Show <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnout</abbr> states</li>
@@ -12904,9 +12904,9 @@
 <li>Have buttons to toggle <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnouts</abbr>/points</li>
 <li>Display texts on an Oled screen</li>
 </ul>
-<p>All this can be built into a CS but it is easier to build this as a node which can stand alone and handle all the above in <abbr title="&quot;EXtended Railroad Automation Instruction Language&quot; DCC-EX's scripting Language">EXRAIL</abbr> without any change to the existing CS or node logic.</p>
+<p>All this can be built into a CS but it is easier to build this as a <abbr title="Distributed Layouts Nodes System">node</abbr> which can stand alone and handle all the above in <abbr title="&quot;EXtended Railroad Automation Instruction Language&quot; DCC-EX's scripting Language">EXRAIL</abbr> without any change to the existing CS or <abbr title="Distributed Layouts Nodes System">node</abbr> logic.</p>
 <h2 id="local-accessories">Local Accessories<a class="headerlink" href="#local-accessories" title="Permanent link">¶</a></h2>
-<p>Typically the Mimic panel may use a neopixel strip to provide lighting and  buttons to provide control. All these can be locally attached to the node and remain invisible to the remainder of the network. The <abbr title="Hardware Abstraction Layer. Allows the CS to discover and use the hardware through a simple abstract API, regardless of the type of underlying hardware.">HAL</abbr> setup and commands are exactly as done on the Command Station so there is nothing extra to learn.</p>
+<p>Typically the Mimic panel may use a neopixel strip to provide lighting and  buttons to provide control. All these can be locally attached to the <abbr title="Distributed Layouts Nodes System">node</abbr> and remain invisible to the remainder of the network. The <abbr title="Hardware Abstraction Layer. Allows the CS to discover and use the hardware through a simple abstract API, regardless of the type of underlying hardware.">HAL</abbr> setup and commands are exactly as done on the Command Station so there is nothing extra to learn.</p>
 <h2 id="monitoring-turnoutspoints">Monitoring Turnouts/Points<a class="headerlink" href="#monitoring-turnoutspoints" title="Permanent link">¶</a></h2>
 <p>The exrail script can monitor the original <abbr title="North American term. Device that allows a train to diverge from one track to another. Elsewhere referred to as a &quot;Point&quot;">turnout</abbr> id state with ONTHROW etc and use that to set pixels on the panel.</p>
 <p>e.g.</p>
@@ -12919,8 +12919,8 @@
 </code></pre></div>
 <p>In this way, the layout operates normally whether the mimic panel is there or not, and there is no wire between the mimic panel and the command station. And because all interacting nodes have the same address, you could build a second mimic panel with exactly the same software build and have multiple identical panels at either end of your magnificent layout.</p>
 <h2 id="monitoring-block-occupancy">Monitoring Block Occupancy<a class="headerlink" href="#monitoring-block-occupancy" title="Permanent link">¶</a></h2>
-<p>If the block occupancy hardware is hosted on the CS or another node, then that device must use SHARE_SENSOR to ensure that all nodes, including the CS, are given sensor change information. Once that is done, the mimic panel can use REMOTE_SENSOR to indicate the shared sensors that it is interested in.</p>
-<p>Refer to the <a href="../nodes_cookbook_sensors/">node sensor cookbook</a>.</p>
+<p>If the block occupancy hardware is hosted on the CS or another <abbr title="Distributed Layouts Nodes System">node</abbr>, then that device must use SHARE_SENSOR to ensure that all nodes, including the CS, are given sensor change information. Once that is done, the mimic panel can use REMOTE_SENSOR to indicate the shared sensors that it is interested in.</p>
+<p>Refer to the <a href="../nodes_cookbook_sensors/"><abbr title="Distributed Layouts Nodes System">node</abbr> sensor cookbook</a>.</p>
 <!-- These are case sensitive -->
 
 

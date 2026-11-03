@@ -541,7 +541,7 @@
 
             
               <a href="../../" class="md-breadcrumbs__link" style="color: var(--md-typeset-color); opacity: 0.7; text-decoration: none;">
-                Nodes
+                Distributed Layout <b>Nodes</b>
               </a>
             
           </li>
@@ -8685,7 +8685,7 @@
   <span class="md-ellipsis">
     
   
-    <br>EXRAIL Commands <small><small>Full&nbsp;List</small></small>
+    <br><b>EXRAIL</b> Commands <small><small>Full&nbsp;List</small></small>
   
 
     
@@ -8741,7 +8741,7 @@
   <span class="md-ellipsis">
     
   
-    Serial Commands <small><small>Full&nbsp;List</small></small>
+    <b>Serial</b> Commands <small><small>Full&nbsp;List</small></small>
   
 
     
@@ -9060,7 +9060,7 @@
   <span class="md-ellipsis">
     
   
-    Nodes
+    Distributed Layout <b>Nodes</b>
   
 
     
@@ -9082,7 +9082,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Nodes
+    Distributed Layout <b>Nodes</b>
   
 
           </label>
@@ -12874,7 +12874,7 @@
         <a href="../../" class="md-path__link">
           
   <span class="md-ellipsis">
-    Nodes
+    Distributed Layout <b>Nodes</b>
   </span>
 
         </a>
@@ -12942,16 +12942,16 @@ e.g.</q></p>
 <div class="language-cpp highlight"><pre><span></span><code><span class="n">JMRI_SENSOR</span><span class="p">(</span><span class="mi">400</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="mi">9000</span><span class="p">)</span>
 </code></pre></div>
 <p>will detect a change on <abbr title="an Arduino pin number that has been extended to include pins on external devices or expanders">vpin</abbr> 403 and send <code>&lt;Q/q 9003&gt;</code>.</p>
-<p>NEW: If JMRI_SENSOR is used in a node, the node will inform the command station and the CS will pass the change on to all <code>&lt;&gt;</code> protocol jmri/throttles (using the well loved <code>&lt;Q/q vpin&gt;</code>) as if it had been detected on the CS. The CS, and indeed other nodes, will also see this as a shared sensor so any node using REMOTE_SENSOR can pick this up and react.</p>
+<p>NEW: If JMRI_SENSOR is used in a <abbr title="Distributed Layouts Nodes System">node</abbr>, the <abbr title="Distributed Layouts Nodes System">node</abbr> will inform the command station and the CS will pass the change on to all <code>&lt;&gt;</code> protocol jmri/throttles (using the well loved <code>&lt;Q/q vpin&gt;</code>) as if it had been detected on the CS. The CS, and indeed other nodes, will also see this as a shared sensor so any <abbr title="Distributed Layouts Nodes System">node</abbr> using REMOTE_SENSOR can pick this up and react.</p>
 <h2 id="new-sensors-on-nodes">NEW: Sensors on nodes<a class="headerlink" href="#new-sensors-on-nodes" title="Permanent link">¶</a></h2>
-<p>In order for a Node or CS to monitor vpins which are to be listened for on other nodes or the CS (but not necessariliy passed on to throttles.) We must tell the node to broadcast a sensor change to other nodes.
+<p>In order for a Node or CS to monitor vpins which are to be listened for on other nodes or the CS (but not necessariliy passed on to throttles.) We must tell the <abbr title="Distributed Layouts Nodes System">node</abbr> to broadcast a sensor change to other nodes.
 [NOTE: this is the same as JMRI_SENSOR but the recipient does not automatically broadcast it to all throttles]</p>
 <p>It is generally better to use the newOrigin parameter to avoid trying to share vpins that are common to multiple hardware setups. </p>
 <div class="language-cpp highlight"><pre><span></span><code><span class="n">SHARED_SENSOR</span><span class="p">(</span><span class="mi">164</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">2000</span><span class="p">)</span>
 <span class="n">SHARED_SENSOR_NOPULLUP</span><span class="p">(</span><span class="w"> </span><span class="p">...</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="n">also</span><span class="w"> </span><span class="n">available</span><span class="w"> </span><span class="n">with</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">same</span><span class="w"> </span><span class="n">parameters</span><span class="w">  </span>
 </code></pre></div>
-<p>This sensor monitors vpins 164 to 171 and if they change, a notification is sent to ALL nodes (including the command station) but using the vpins 2000..2007.  Each node may be listening or not and it's important that nodes that are not listening for the change do not get confused by it.</p>
-<p>For a node or the CS to listen to NODE_SENSOR triggers it must create its own listening sensors:</p>
+<p>This sensor monitors vpins 164 to 171 and if they change, a notification is sent to ALL nodes (including the command station) but using the vpins 2000..2007.  Each <abbr title="Distributed Layouts Nodes System">node</abbr> may be listening or not and it's important that nodes that are not listening for the change do not get confused by it.</p>
+<p>For a <abbr title="Distributed Layouts Nodes System">node</abbr> or the CS to listen to NODE_SENSOR triggers it must create its own listening sensors:</p>
 <div class="language-cpp highlight"><pre><span></span><code><span class="n">REMOTE_SENSOR</span><span class="p">(</span><span class="mi">9000</span><span class="p">)</span><span class="w">  </span><span class="c1">// = REMOTE_SENSOR(9000,1)</span>
 <span class="n">REMOTE_SENSOR</span><span class="p">(</span><span class="mi">9000</span><span class="p">,</span><span class="mi">8</span><span class="p">)</span>
 </code></pre></div>
@@ -13001,18 +13001,18 @@ e.g.</q></p>
 </code></pre></div>
 <p>where NVS(1) is a tick box for <abbr title="Java Model Railroad Interface">JMRI</abbr> or just shared, and NVS(2) is the base id sent in the Q msgs. (a zero count means no sensors created)</p>
 <h2 id="sharing-vpin-writes-with-other-nodes-still-thinking-about-this">Sharing <abbr title="an Arduino pin number that has been extended to include pins on external devices or expanders">vpin</abbr> writes with other nodes (STILL THINKING ABOUT THIS!)<a class="headerlink" href="#sharing-vpin-writes-with-other-nodes-still-thinking-about-this" title="Permanent link">¶</a></h2>
-<p>Shared writing of vpins is a powerful technique because it allows features like PLAY_TRACK, or NEOPIXEL  to be invoked on one node but executed on another.</p>
+<p>Shared writing of vpins is a powerful technique because it allows features like PLAY_TRACK, or NEOPIXEL  to be invoked on one <abbr title="Distributed Layouts Nodes System">node</abbr> but executed on another.</p>
 <p>Whan a <abbr title="an Arduino pin number that has been extended to include pins on external devices or expanders">vpin</abbr> is written to by software, it may be echoed to the other nodes but only if it is flagged to do this.</p>
 <div class="language-cpp highlight"><pre><span></span><code><span class="n">SHARE_VPIN_WRITES</span><span class="p">(</span><span class="n">vpin</span><span class="p">,</span><span class="n">count</span><span class="p">,</span><span class="n">base</span><span class="p">)</span>
 </code></pre></div>
 <p>describes a group of vpins which, when changed, will be notified to all other nodes but with a modified base number.</p>
 <h2 id="accepting-vpin-changes-from-other-nodes">Accepting <abbr title="an Arduino pin number that has been extended to include pins on external devices or expanders">vpin</abbr> changes from other nodes<a class="headerlink" href="#accepting-vpin-changes-from-other-nodes" title="Permanent link">¶</a></h2>
-<p>Although a node may be announcing its own sensor changes, it is not automatic that any individual node will accept that change </p>
-<p>Firstly, a node must define the <abbr title="an Arduino pin number that has been extended to include pins on external devices or expanders">vpin</abbr> changes it is prepared to accept.</p>
+<p>Although a <abbr title="Distributed Layouts Nodes System">node</abbr> may be announcing its own sensor changes, it is not automatic that any individual <abbr title="Distributed Layouts Nodes System">node</abbr> will accept that change </p>
+<p>Firstly, a <abbr title="Distributed Layouts Nodes System">node</abbr> must define the <abbr title="an Arduino pin number that has been extended to include pins on external devices or expanders">vpin</abbr> changes it is prepared to accept.</p>
 <div class="language-cpp highlight"><pre><span></span><code><span class="n">ACCEPT_SHARED_WRITES</span><span class="p">(</span><span class="n">vpin</span><span class="p">,</span><span class="n">count</span><span class="p">)</span>
 </code></pre></div>
 <p>Means that an incoming sensor change (from a SHARED_SENSORS) or a software write to a SHARE_VPIN_WRITES pin will cause a local write to that particular <abbr title="an Arduino pin number that has been extended to include pins on external devices or expanders">vpin</abbr>. </p>
-<p>Any <abbr title="an Arduino pin number that has been extended to include pins on external devices or expanders">vpin</abbr> mentioned in ACCEPT_SHARED_WRITES must actually exist in the <abbr title="Hardware Abstraction Layer. Allows the CS to discover and use the hardware through a simple abstract API, regardless of the type of underlying hardware.">HAL</abbr>... but if it does not, a virtual <abbr title="an Arduino pin number that has been extended to include pins on external devices or expanders">vpin</abbr> will be created so that the receiving node can perform IF/WAITFOR/ONSENSOR etc on it.</p>
+<p>Any <abbr title="an Arduino pin number that has been extended to include pins on external devices or expanders">vpin</abbr> mentioned in ACCEPT_SHARED_WRITES must actually exist in the <abbr title="Hardware Abstraction Layer. Allows the CS to discover and use the hardware through a simple abstract API, regardless of the type of underlying hardware.">HAL</abbr>... but if it does not, a virtual <abbr title="an Arduino pin number that has been extended to include pins on external devices or expanders">vpin</abbr> will be created so that the receiving <abbr title="Distributed Layouts Nodes System">node</abbr> can perform IF/WAITFOR/ONSENSOR etc on it.</p>
 <!-- These are case sensitive -->
 
 

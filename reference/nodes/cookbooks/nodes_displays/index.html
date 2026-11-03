@@ -541,7 +541,7 @@
 
             
               <a href="../../" class="md-breadcrumbs__link" style="color: var(--md-typeset-color); opacity: 0.7; text-decoration: none;">
-                Nodes
+                Distributed Layout <b>Nodes</b>
               </a>
             
           </li>
@@ -8685,7 +8685,7 @@
   <span class="md-ellipsis">
     
   
-    <br>EXRAIL Commands <small><small>Full&nbsp;List</small></small>
+    <br><b>EXRAIL</b> Commands <small><small>Full&nbsp;List</small></small>
   
 
     
@@ -8741,7 +8741,7 @@
   <span class="md-ellipsis">
     
   
-    Serial Commands <small><small>Full&nbsp;List</small></small>
+    <b>Serial</b> Commands <small><small>Full&nbsp;List</small></small>
   
 
     
@@ -9060,7 +9060,7 @@
   <span class="md-ellipsis">
     
   
-    Nodes
+    Distributed Layout <b>Nodes</b>
   
 
     
@@ -9082,7 +9082,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Nodes
+    Distributed Layout <b>Nodes</b>
   
 
           </label>
@@ -12852,7 +12852,7 @@
         <a href="../../" class="md-path__link">
           
   <span class="md-ellipsis">
-    Nodes
+    Distributed Layout <b>Nodes</b>
   </span>
 
         </a>
@@ -12895,16 +12895,16 @@
 
 
 <h1 id="displays-in-nodes">Displays in nodes<a class="headerlink" href="#displays-in-nodes" title="Permanent link">¶</a></h1>
-<p>Any node may have one or more <abbr title="Orgenic LED displays">OLED</abbr> displays defined in the same way as done now in the command station.</p>
-<p>All display traffic (from <abbr title="&quot;EXtended Railroad Automation Instruction Language&quot; DCC-EX's scripting Language">EXRAIL</abbr> LCD or SCREEN or <code>&lt;m screen row "txt"&gt;</code> commands) is relayed to all nodes an so any node that has a <abbr title="Hardware Abstraction Layer. Allows the CS to discover and use the hardware through a simple abstract API, regardless of the type of underlying hardware.">HAL</abbr> definition for a display with the given screen number will automatically update its screen copy.</p>
+<p>Any <abbr title="Distributed Layouts Nodes System">node</abbr> may have one or more <abbr title="Orgenic LED displays">OLED</abbr> displays defined in the same way as done now in the command station.</p>
+<p>All display traffic (from <abbr title="&quot;EXtended Railroad Automation Instruction Language&quot; DCC-EX's scripting Language">EXRAIL</abbr> LCD or SCREEN or <code>&lt;m screen row "txt"&gt;</code> commands) is relayed to all nodes an so any <abbr title="Distributed Layouts Nodes System">node</abbr> that has a <abbr title="Hardware Abstraction Layer. Allows the CS to discover and use the hardware through a simple abstract API, regardless of the type of underlying hardware.">HAL</abbr> definition for a display with the given screen number will automatically update its screen copy.</p>
 <h2 id="defining-an-oled">Defining an <abbr title="Orgenic LED displays">oLED</abbr><a class="headerlink" href="#defining-an-oled" title="Permanent link">¶</a></h2>
-<p>A node may define an <abbr title="Orgenic LED displays">OLED</abbr> screen in exactly the same way as the CS.</p>
-<p>More than one node may choose to render the same screen.</p>
+<p>A <abbr title="Distributed Layouts Nodes System">node</abbr> may define an <abbr title="Orgenic LED displays">OLED</abbr> screen in exactly the same way as the CS.</p>
+<p>More than one <abbr title="Distributed Layouts Nodes System">node</abbr> may choose to render the same screen.</p>
 <p>it is not necessary to define the oled in the CS if it doesn't have one attached.</p>
 <h2 id="displaying">Displaying<a class="headerlink" href="#displaying" title="Permanent link">¶</a></h2>
-<p>The CS or any node may initiate a screen display without having to know where the screen is actually attached.</p>
+<p>The CS or any <abbr title="Distributed Layouts Nodes System">node</abbr> may initiate a screen display without having to know where the screen is actually attached.</p>
 <h2 id="jmri-and-others"><abbr title="Java Model Railroad Interface">JMRI</abbr> and others<a class="headerlink" href="#jmri-and-others" title="Permanent link">¶</a></h2>
-<p>A screen update by any node will be relayed to the throttle system by the CS so that <abbr title="Java Model Railroad Interface">JMRI</abbr> or other program can create screen displays.</p>
+<p>A screen update by any <abbr title="Distributed Layouts Nodes System">node</abbr> will be relayed to the throttle system by the CS so that <abbr title="Java Model Railroad Interface">JMRI</abbr> or other program can create screen displays.</p>
 <!-- These are case sensitive -->
 
 

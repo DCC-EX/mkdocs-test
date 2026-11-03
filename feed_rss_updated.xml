@@ -13,8 +13,8 @@
     <language>en</language>
 
     
-    <pubDate>Tue, 03 Nov 2026 10:48:45 -0000</pubDate>
-    <lastBuildDate>Tue, 03 Nov 2026 10:48:45 -0000</lastBuildDate>
+    <pubDate>Tue, 03 Nov 2026 22:19:01 -0000</pubDate>
+    <lastBuildDate>Tue, 03 Nov 2026 22:19:01 -0000</lastBuildDate>
     <ttl>1440</ttl>
 
     
@@ -30,6 +30,28 @@
     
 
     
+    
+    <item>
+      <title>New in Version 6.0</title>
+      
+      
+        
+      <author>DCC-EX</author>
+        
+      
+      
+      
+      <description>&lt;h1&gt;New in Version 6.0&lt;/h1&gt;
+&lt;p&gt;Updates for:&lt;/p&gt;
+&lt;p&gt;==TODO== VERY HIGH - New in Version 6.0 new article. Plus change date and file name&lt;/p&gt;
+&lt;p&gt;intro text goes here&lt;/p&gt;</description>
+      <link>https://dcc-ex.com/mkdocs-test/news/2026/10/new-in-version-60/</link>
+      <pubDate>Tue, 03 Nov 2026 22:14:52 +0000</pubDate>
+      <source url="https://dcc-ex.com/mkdocs-test/feed_rss_updated.xml">DCC-EX News</source>
+      
+      <guid isPermaLink="true">https://dcc-ex.com/mkdocs-test/news/2026/10/new-in-version-60/</guid>
+      
+    </item>
     
     <item>
       <title>Assorted new feature documentation</title>
@@ -53,27 +75,6 @@
       <source url="https://dcc-ex.com/mkdocs-test/feed_rss_updated.xml">DCC-EX News</source>
       
       <guid isPermaLink="true">https://dcc-ex.com/mkdocs-test/news/2026/10/assorted-new-feature-documentation/</guid>
-      
-    </item>
-    
-    <item>
-      <title>New in Version 6.0</title>
-      
-      
-        
-      <author>DCC-EX</author>
-        
-      
-      
-      
-      <description>&lt;h1&gt;New in Version 6.0&lt;/h1&gt;
-&lt;p&gt;Updates for:&lt;/p&gt;
-&lt;p&gt;intro text goes here&lt;/p&gt;</description>
-      <link>https://dcc-ex.com/mkdocs-test/news/2026/10/new-in-version-60/</link>
-      <pubDate>Sat, 31 Oct 2026 12:26:05 +0000</pubDate>
-      <source url="https://dcc-ex.com/mkdocs-test/feed_rss_updated.xml">DCC-EX News</source>
-      
-      <guid isPermaLink="true">https://dcc-ex.com/mkdocs-test/news/2026/10/new-in-version-60/</guid>
       
     </item>
     

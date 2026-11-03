@@ -541,7 +541,7 @@
 
             
               <a href="../../" class="md-breadcrumbs__link" style="color: var(--md-typeset-color); opacity: 0.7; text-decoration: none;">
-                Nodes
+                Distributed Layout <b>Nodes</b>
               </a>
             
           </li>
@@ -8685,7 +8685,7 @@
   <span class="md-ellipsis">
     
   
-    <br>EXRAIL Commands <small><small>Full&nbsp;List</small></small>
+    <br><b>EXRAIL</b> Commands <small><small>Full&nbsp;List</small></small>
   
 
     
@@ -8741,7 +8741,7 @@
   <span class="md-ellipsis">
     
   
-    Serial Commands <small><small>Full&nbsp;List</small></small>
+    <b>Serial</b> Commands <small><small>Full&nbsp;List</small></small>
   
 
     
@@ -9060,7 +9060,7 @@
   <span class="md-ellipsis">
     
   
-    Nodes
+    Distributed Layout <b>Nodes</b>
   
 
     
@@ -9082,7 +9082,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Nodes
+    Distributed Layout <b>Nodes</b>
   
 
           </label>
@@ -12852,7 +12852,7 @@
         <a href="../../" class="md-path__link">
           
   <span class="md-ellipsis">
-    Nodes
+    Distributed Layout <b>Nodes</b>
   </span>
 
         </a>
@@ -12894,9 +12894,9 @@
   
 
 
-<h1 id="handling-turntables-in-a-node">Handling turntables in a node<a class="headerlink" href="#handling-turntables-in-a-node" title="Permanent link">¶</a></h1>
+<h1 id="handling-turntables-in-a-node">Handling turntables in a <abbr title="Distributed Layouts Nodes System">node</abbr><a class="headerlink" href="#handling-turntables-in-a-node" title="Permanent link">¶</a></h1>
 <p><mark>TODO</mark> LOW - ????????????????????? INITIAL DRAFT CODE NOT YET IMPLEMENTED ?????????????
-This example shows how an existing turntable definition  can be moved to a node processor. This only applies to the second version of the turntable commands, where turntables have an id. </p>
+This example shows how an existing turntable definition  can be moved to a <abbr title="Distributed Layouts Nodes System">node</abbr> processor. This only applies to the second version of the turntable commands, where turntables have an id. </p>
 <h2 id="existing-exrail-for-turntable-connected-to-command-station">Existing <abbr title="&quot;EXtended Railroad Automation Instruction Language&quot; DCC-EX's scripting Language">EXRAIL</abbr> for turntable connected to Command Station<a class="headerlink" href="#existing-exrail-for-turntable-connected-to-command-station" title="Permanent link">¶</a></h2>
 <div class="language-cpp highlight"><pre><span></span><code><span class="n">HAL</span><span class="p">(</span><span class="n">turntable</span><span class="p">...</span><span class="o">????</span><span class="w"> </span><span class="p">,</span><span class="s">"Roundhouse"</span><span class="p">)</span>
 </code></pre></div>
@@ -12904,19 +12904,19 @@ This example shows how an existing turntable definition  can be moved to a node 
 <ul>
 <li>full <abbr title="&quot;EXtended Railroad Automation Instruction Language&quot; DCC-EX's scripting Language">EXRAIL</abbr> support for ?????  commands and turntable throttle controls.</li>
 </ul>
-<h2 id="turntable-moved-to-remote-node">Turntable Moved to remote node<a class="headerlink" href="#turntable-moved-to-remote-node" title="Permanent link">¶</a></h2>
-<p>This involves moving the hardware-aspect of the turntable definition to the myAutomation.h in the node. Unlike on the CS, the turntable driver can exist within the node so no extra processor is required. </p>
+<h2 id="turntable-moved-to-remote-node">Turntable Moved to remote <abbr title="Distributed Layouts Nodes System">node</abbr><a class="headerlink" href="#turntable-moved-to-remote-node" title="Permanent link">¶</a></h2>
+<p>This involves moving the hardware-aspect of the turntable definition to the myAutomation.h in the <abbr title="Distributed Layouts Nodes System">node</abbr>. Unlike on the CS, the turntable driver can exist within the <abbr title="Distributed Layouts Nodes System">node</abbr> so no extra processor is required. </p>
 <div class="language-cpp highlight"><pre><span></span><code><span class="c1">// turntable definition in node copy of myAutomation.h</span>
 <span class="n">HAL</span><span class="p">(</span><span class="n">EXTurntable_Onboard</span><span class="p">,</span><span class="w"> </span><span class="o">?????????</span><span class="p">)</span>
 </code></pre></div>
 <p>Notice that the turntable ID does not change but the <abbr title="an Arduino pin number that has been extended to include pins on external devices or expanders">vpin</abbr> ???? may well change to suit whatever <abbr title="Hardware Abstraction Layer. Allows the CS to discover and use the hardware through a simple abstract API, regardless of the type of underlying hardware.">HAL</abbr> device is driving the turntable.</p>
 <p>The Command Station will automatically know that the turntable is defined elsewhere so does not need the turntable definition.</p>
-<p>This is particularly powerful if you are building a modular layout. If for example a turntable is on a particular module handled by a node, then the throttles will automatically know if the module is present or absent and will not show turntables for the module unless it is powered up.</p>
+<p>This is particularly powerful if you are building a modular layout. If for example a turntable is on a particular module handled by a <abbr title="Distributed Layouts Nodes System">node</abbr>, then the throttles will automatically know if the module is present or absent and will not show turntables for the module unless it is powered up.</p>
 <p>Notice that this is all you need to do... Any <abbr title="&quot;EXtended Railroad Automation Instruction Language&quot; DCC-EX's scripting Language">EXRAIL</abbr> in the Command station that needs to handle the turntable can remain unchanged.</p>
-<p>You can have any number of turntables in a node or split them over several nodes (depending on hardware pin availability), and still manage some from the CS if needed..</p>
-<p>In effect, turntable numbers are unique across all nodes so only one node should have the hardware-aware turntable definition.</p>
+<p>You can have any number of turntables in a <abbr title="Distributed Layouts Nodes System">node</abbr> or split them over several nodes (depending on hardware pin availability), and still manage some from the CS if needed..</p>
+<p>In effect, turntable numbers are unique across all nodes so only one <abbr title="Distributed Layouts Nodes System">node</abbr> should have the hardware-aware turntable definition.</p>
 <h2 id="local-node-processing">Local Node Processing<a class="headerlink" href="#local-node-processing" title="Permanent link">¶</a></h2>
-<p>Because the node has almost the full <abbr title="&quot;EXtended Railroad Automation Instruction Language&quot; DCC-EX's scripting Language">EXRAIL</abbr> capability, its possible to use <abbr title="&quot;EXtended Railroad Automation Instruction Language&quot; DCC-EX's scripting Language">EXRAIL</abbr> in the node to monitor ON??? events to perform local signals, switch lights, make sounds and so on.</p>
+<p>Because the <abbr title="Distributed Layouts Nodes System">node</abbr> has almost the full <abbr title="&quot;EXtended Railroad Automation Instruction Language&quot; DCC-EX's scripting Language">EXRAIL</abbr> capability, its possible to use <abbr title="&quot;EXtended Railroad Automation Instruction Language&quot; DCC-EX's scripting Language">EXRAIL</abbr> in the <abbr title="Distributed Layouts Nodes System">node</abbr> to monitor ON??? events to perform local signals, switch lights, make sounds and so on.</p>
 <!-- These are case sensitive -->
 
 
