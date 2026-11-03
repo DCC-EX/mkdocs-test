@@ -13157,14 +13157,14 @@
 <p>Unlike AC, DCC is a square wave signal.  The voltage of the track power supply will be present on each rail 50% of the time and off for the other 50%.</p>
 <p><em><strong>Most multimeters cannot read the DCC voltage correctly on the 'AC' setting.</strong></em></p>
 <p>Use the 'DC' setting on the multimeter and connect one probe to one rail (or output of the <abbr title="Also referred to as a 'motor controller' or 'motor driver'">motor shield</abbr>) and the other to a ground GPIO on the <abbr title="Also referred to as a 'motor controller' or 'motor driver'">motor shield</abbr> or <abbr title="ESP32, Nucleo, or Arduino Mega">microcontroller</abbr> board.  Double whatever result you see to get the <em>actual voltage</em>.</p>
-<h2 id="oled">OLED<a class="headerlink" href="#oled" title="Permanent link">¶</a></h2>
-<p>Suppliers of the <strong><abbr title="EX-CommandStation/Booster 1 Express">EX-CSB1</abbr></strong> may ship it with one of a number of different types of oLED screen.</p>
+<h2 id="oled"><abbr title="Orgenic LED displays">OLED</abbr><a class="headerlink" href="#oled" title="Permanent link">¶</a></h2>
+<p>Suppliers of the <strong><abbr title="EX-CommandStation/Booster 1 Express">EX-CSB1</abbr></strong> may ship it with one of a number of different types of <abbr title="Orgenic LED displays">oLED</abbr> screen.</p>
 <p>You may not be able to tell which type it is by looking at it. So, if you are uncertain which it is, when installing the <strong>EX-CommandStation</strong> software, select one of the options (commmonly either the <code>128x64</code> or <code>132x64</code>).</p>
 <p>If one results in blank screen or image is shifted, try the other.</p>
 <p>Some <strong><abbr title="EX-CommandStation/Booster 1 Express">EX-CSB1</abbr></strong>s may have had the screen display customized to display track status.<br>
 <a href="../../../../enhance/exrail/cookbooks/advanced/display-track-status/">myTrackStatus.example.h</a></p>
-<h2 id="oled-power-status">OLED Power Status<a class="headerlink" href="#oled-power-status" title="Permanent link">¶</a></h2>
-<p>By default, the oLED will display the state of the power to the track/outputs.</p>
+<h2 id="oled-power-status"><abbr title="Orgenic LED displays">OLED</abbr> Power Status<a class="headerlink" href="#oled-power-status" title="Permanent link">¶</a></h2>
+<p>By default, the <abbr title="Orgenic LED displays">oLED</abbr> will display the state of the power to the track/outputs.</p>
 <p>Older versions of the <strong>EX-CommandStation</strong> software will display <code>Power On</code>, <code>Power Off</code>, <code>Power SC</code></p>
 <p><code>SC</code> refers to to 'Status Conflict' and simply means that one track/output is on and the other is off.  <em><strong>This completely normal</strong></em> and is <strong>not</strong> an error or fault.</p>
 <p>Later versions of the <strong>EX-CommandStation</strong> software will display <code>Power On</code>, <code>Power Off</code>, <code>Power Ab</code> or <code>Power bA</code>. Where the uppercase 'A' or 'B' means the power is on for that track. And the lowercase 'a' or 'b' means that the power is off for that track.</p>
@@ -13193,7 +13193,7 @@ Note that <code>&lt;C PROGBOOST&gt;</code> remains in effect until the <strong>E
 <h3 id="version-570-and-later">Version 5.7.0 and Later<a class="headerlink" href="#version-570-and-later" title="Permanent link">¶</a></h3>
 <p>WiFi configuration is different starting with version 5.7.0 and is done after the <strong>EX-CommandStation</strong> software is loaded (via <strong>EX-Installer</strong>).</p>
 <p>See <a href="../../../../prepare-to-use/installer/config-wifi-esp32/">5.7.0 WiFi Configuration</a> for more information.</p>
-<p>Note that if the new WiFi configuration commands are sent via a WiFi connection, your existing connection will drop.  Current connection info should be reported on the OLED.</p>
+<p>Note that if the new WiFi configuration commands are sent via a WiFi connection, your existing connection will drop.  Current connection info should be reported on the <abbr title="Orgenic LED displays">OLED</abbr>.</p>
 <hr>
 <h2 id="more">More<a class="headerlink" href="#more" title="Permanent link">¶</a></h2>
 <ul>
