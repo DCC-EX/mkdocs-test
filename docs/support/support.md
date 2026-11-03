@@ -34,7 +34,14 @@ This is the information typically required:
 
 ### Get startup logs
 
---8<-- "snippets/ex-installer/startup-logs.md"
+When interacting with the **DCC-EX** team for support, you will likely be asked to provide the "startup logs", or output from the serial console of your device.
+
+Startup Logs can be obtained from a Serial Monitor/Device Monitor in any of the following:
+
+- [**EX-Installer**](../prepare-to-use/installer/testing.md#saving-startup-or-serial-console-logs)
+- [**EX-WebThrottle**](../products/ex-webthrottle/ex-webthrottle.md#saving-startup-or-serial-console-logs)
+- **VS Code/PlatformIO**
+- Arduino IDE (Not recommended)
 
 ## Discord (recommended)
 

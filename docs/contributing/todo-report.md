@@ -20,24 +20,22 @@ Scanned roots: `C:\Users\akers\OneDrive\github\github_doco\mkdocs-test\docs`, `C
 
 ## High TODOs
 
-Total High TODO matches: 10
+Total High TODO matches: 8
 
 | File | Line | Line text |
 | --- | ---: | --- |
-| [docs/enhance/rosters.md](../enhance/rosters.md) | 45 | ==TODO== VERY HIGH! - needs detailed instructions for Roster Editing with a Web Browser. |
+| [docs/enhance/rosters.md](../enhance/rosters.md) | 44 | ==TODO== VERY HIGH! - needs detailed instructions for Roster Editing with a Web Browser. |
 | [docs/throttles/dcc-accessories.md](../throttles/dcc-accessories.md) | 3 | ==TODO== HIGH - how to control DCC Accessories. GUI options.  NOT serial commands! |
 | [docs/throttles/index.md](../throttles/index.md) | 45 | ==TODO== HIGH - Overview of DCC Accessory Operation |
 | [docs/reference/nodes/compiling.md](../reference/nodes/compiling.md) | 3 | ==TODO== HIGH - Compiling a Node page |
 | [docs/reference/nodes/index.md](../reference/nodes/index.md) | 60 | ( ==TODO== Installer assist in managing this?) |
 | [docs/reference/serial-commands/serial-command-ff_not_in_nav.md](../reference/serial-commands/serial-command-ff_not_in_nav.md) | 36 | * **«freqValue»** = one of: () ==TODO== What is the format/options for this parameter? ) |
 | [docs/prepare-to-use/installer/platformio.md](../prepare-to-use/installer/platformio.md) | 5 | ==TODO== - provide setup help for VSC/PlatformIO. |
-| snippets/configure/config-wifi-esp32-gui-options.md | 67 | ==TODO== VERY HIGH! - Instructions needed for changing the WiFi Settings using the EX-CommandStation&#x27;s own Web Sever |
-| snippets/ex-installer/startup-logs.md | 1 | ==TODO== Instructions required here to obtain the startup logs from **EX-Installer**. |
 | snippets/use/connect-and-use-a-wifi-throttle.md | 3 | &lt;!-- ==TODO== need to include an iOS app instructions --&gt; |
 
 ## Medium priority TODOs
 
-Total medium priority TODO matches: 63
+Total medium priority TODO matches: 64
 
 | File | Line | Line text |
 | --- | ---: | --- |
@@ -86,6 +84,7 @@ Total medium priority TODO matches: 63
 | [docs/products/ex-dccinspector/index.md](../products/ex-dccinspector/index.md) | 6 | ==TODO== MEDIUM - This page needs to be expanded |
 | [docs/products/ex-sensorcam/ex-sensor-manual-abridged.md](../products/ex-sensorcam/ex-sensor-manual-abridged.md) | 5 | &lt;!-- ==TODO== MEDIUM - change the references on this page from the Arduino IDE to VSC/PIO --&gt; |
 | [docs/products/ex-sensorcam/installation-guide.md](../products/ex-sensorcam/installation-guide.md) | 3 | &lt;!-- ==TODO== MEDIUM - change the references on this page from the Arduino IDE to VSC/PIO --&gt; |
+| [docs/products/ex-webthrottle/ex-webthrottle.md](../products/ex-webthrottle/ex-webthrottle.md) | 196 | ==TODO== MEDIUM - This needs to be expanded. |
 | [docs/prepare-to-use/connecting/connecting-diy.md](../prepare-to-use/connecting/connecting-diy.md) | 19 | &lt;!-- ==TODO== MEDIUM - This section could be improved. Physically connecting DIY EX-CS to a layout - EX8874 --&gt; |
 | [docs/prepare-to-use/connecting/connecting-diy.md](../prepare-to-use/connecting/connecting-diy.md) | 32 | &lt;!-- ==TODO== MEDIUM - This section could be improved. Physically connecting DIY EX-CS to a layout - Standard Arduino Motor Shield --&gt; |
 | [docs/prepare-to-use/connecting/connecting-ex-csb1.md](../prepare-to-use/connecting/connecting-ex-csb1.md) | 3 | &lt;!-- ==TODO== MEDIUM - this page needs to be expanded --&gt; |

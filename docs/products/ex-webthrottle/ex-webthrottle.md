@@ -185,6 +185,18 @@ Instead you can use the instructions on [this page](../../prepare-to-use/install
 
 ----
 
+### Saving Startup or Serial Console Logs
+
+When interacting with the **DCC-EX** team for support, you will likely be asked to provide the "startup logs", or output from the serial console of your device.
+
+The bottom section of the throttle page of **EX-WebThrottle** is the console log.
+
+Simple click the `Copy`` button and paste the contents in the [Discord](/support/discord.md) or a text file to be sent to the developers.
+
+==TODO== MEDIUM - This needs to be expanded.
+
+----
+
 ## Locomotives
 
 The **Locomotives** page allows you store a 'roster' of locomotives.  This is stored in the individual PC/computer, and cannot be accessed by any other computer, unless exported and imported into that computer.  The 'roster' cannot be accessed by any mobile device (phone app).
