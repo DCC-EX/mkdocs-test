@@ -35,7 +35,7 @@ The Command Station will automatically know that the signal is defined elsewhere
 
 This is particularly powerful if you are building a modular layout. If for example a bunch of signals are on a particular module handled by a node, then the throttles will automatically know if the module is present or absent and will not show signals for the module unless it is powered up.
 
-Notice that this is all you need to do... Any EXRAIL in the Command station that needs to handle the signal can remain unchanged.
+Notice that this is all you need to do... Any **EXRAIL** in the Command station that needs to handle the signal can remain unchanged.
 
 You can have any number of signals in a node or split them over several nodes, and still manage some from the CS if needed..
 
@@ -49,4 +49,4 @@ That doesn't stop a node throwing or closing it as the id is shared automaticall
 
 ## Local node processing
 
-Because the node has almost the full EXRAIL capability, its possible to use EXRAIL in the node to monitor ONRED etc to perform local signals, switch lights, make sounds and so on.
+Because the node has almost the full **EXRAIL** capability, its possible to use EXRAIL in the node to monitor ONRED etc to perform local signals, switch lights, make sounds and so on.

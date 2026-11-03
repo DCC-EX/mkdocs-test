@@ -53,9 +53,9 @@ SERVO_TURNOUT(1,100,NVS(21),NVS(22), Slow,"My turnout")
 
 will evaluate the values in NVS(21) and NVS(22) once only at startup.
 
-[Its accepted that this is not great for servo settings, it may be possible to modify servo handling as a special case to ree-valuate these at run time but wait and see. I need feedback on any others that make sense to handle as special cases.]
+[Its accepted that this is not great for servo settings, it may be possible to modify servo handling as a special case to re-evaluate these at run time but wait and see. I need feedback on any others that make sense to handle as special cases.]
 
-This can be particularly tricky when using a turnout/point or signal id because the turnout/point definition, or ONTHROW/ONCLOSE  will be evaluated once at startup but a THROW, RED etc  will be re-evaluated each time it is executed.
+This can be particularly tricky when using a turnout/point or signal id because the turnout/point definition, or ``ONTHROW``/``ONCLOSE``  will be evaluated once at startup but a ``THROW``, ``RED`` etc  will be re-evaluated each time it is executed.
 
 Caution must be observed in IF() type macros because
 
@@ -79,7 +79,7 @@ ENDIF
 
 ### Text values
 
-Accesing NVS text values uses the NVST macro which will generate a runtime tag inside a string, such that the string, when displayed will have the NVS value embedded. This means that NVST values will generally work immediately without the need to restart.
+Accessing NVS text values uses the NVST macro which will generate a runtime tag inside a string, such that the string, when displayed will have the NVS value embedded. This means that NVST values will generally work immediately without the need to restart.
 
 [Please report any strings that dont work, they can be fixed.]
 
@@ -137,7 +137,7 @@ Altering the values with the C command will work even while the automation is ru
 
 ## Creating browser dialogs to edit NVS values
 
-The serial log browser inteface, which allows a user to monitor the serial log and issue commands from a web browser pointed at the hostname or ip-address of the CS or Node, contains an integrated configuration editor feature which allows a user (or factory) dialog to be attached.
+The serial log browser interface, which allows a user to monitor the serial log and issue commands from a web browser pointed at the hostname or ip-address of the CS or Node, contains an integrated configuration editor feature which allows a user (or factory) dialog to be attached.
 
 Dialogs can be extremely simple or staggeringly complicated, such is the world of HTML/CSS/JavaScript. However, simple dialogs can be created with a minimum of red-tape as is the philosophy behind EXRAIL.
 
