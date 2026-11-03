@@ -47,18 +47,16 @@ This may be useful if visiting a location with a different WiFi network which yo
 
 * The **HOSTNAME** setting allows you to set the name that appears in your Throttle app, once you have connected to the appropriate network for the **EX-CommandStation**.
 
-----
+<!-- ---- -->
 
-## Configuring with USB vs WiFi - Limitations of WiFi
+<!-- ## Configuring with USB vs WiFi - Limitations of WiFi -->
 
-There are significant limitations to be aware of when configuring WiFi settings over WiFi compared to using a USB connection:
+<!-- There are significant limitations to be aware of when configuring WiFi settings over WiFi compared to using a USB connection: -->
 
-Only **Station (STA) mode** and the **HOSTNAME** can be changed over WiFi.
+<!-- Only **Station (STA) mode** and the **HOSTNAME** can be changed over WiFi. -->
 
-**Access Point (AP)** mode changes require a serial/USB connection.
-This is a security feature.  If you could change AP mode settings over WiFi, then anyone who could connect to the **EX-CommandStation**'s WiFi network could change the AP settings and potentially lock you out of your **EX-CommandStation**. By requiring a USB connection for AP mode changes, we ensure that only someone with physical access to the **EX-CommandStation** can modify these critical settings.
-
-==TODO== VERY HIGH! - The WiFi change limitation has been broken in the latest CS version as anything can be changed via the in-built web server
+<!-- **Access Point (AP)** mode changes require a serial/USB connection. -->
+<!-- This is a security feature.  If you could change AP mode settings over WiFi, then anyone who could connect to the **EX-CommandStation**'s WiFi network could change the AP settings and potentially lock you out of your **EX-CommandStation**. By requiring a USB connection for AP mode changes, we ensure that only someone with physical access to the **EX-CommandStation** can modify these critical settings. -->
 
 ----
 
@@ -66,7 +64,7 @@ This is a security feature.  If you could change AP mode settings over WiFi, the
 
 ### Using the EX-CommandStation's own Web Sever - {{ new_in_v(6) }}
 
-==TODO== VERY HIGH! - Changing the WiFi Settings using the EX-CommandStation's own Web Sever
+==TODO== VERY HIGH! - Instructions needed for changing the WiFi Settings using the EX-CommandStation's own Web Sever
 
 If you have an OLED screen, it will tell you the IP address of the **EX-CommandStation**
 
@@ -135,7 +133,9 @@ The `Reset WiFi Settings` button on the WiFi Setup page will reset all WiFi sett
 
 #### Notes (EX-WebThrottle)
 
-* In every case above, the **EX-CommandStation** will restart to apply the new settings. You will need to reconnect to the **EX-CommandStation** in the **EX-WebThrottle** interface. ==TODO== VERY HIGH! - The WiFi change limitation has been broken in the latest CS version as anything can be changed via the in-built web server
+* You may need to restart the **EX-CommandStation**  for the new settings to take effect. In which case you will need to reconnect to the **EX-CommandStation** with whatever interface you are using.
+
+<!-- * In every case above, the **EX-CommandStation** will restart to apply the new settings. You will need to reconnect to the **EX-CommandStation** in the **EX-WebThrottle** interface. -->
 
 ----
 

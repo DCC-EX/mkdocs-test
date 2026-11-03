@@ -20,36 +20,32 @@ Scanned roots: `C:\Users\akers\OneDrive\github\github_doco\mkdocs-test\docs`, `C
 
 ## High TODOs
 
-Total High TODO matches: 15
+Total High TODO matches: 10
 
 | File | Line | Line text |
 | --- | ---: | --- |
-| [docs/enhance/index.md](../enhance/index.md) | 24 | ==TODO== VERY HIGH - need to add something here about the new way to add rosters and a link to the roster page in this folder.  Possibly remove the direct links to the EXRAIL in the section. |
-| [docs/enhance/rosters.md](../enhance/rosters.md) | 30 | ==TODO== VERY HIGH! - needs detailed instructions for Roster Editing with a Web Browser. Needs to include screenshots! |
+| [docs/enhance/rosters.md](../enhance/rosters.md) | 45 | ==TODO== VERY HIGH! - needs detailed instructions for Roster Editing with a Web Browser. |
 | [docs/throttles/dcc-accessories.md](../throttles/dcc-accessories.md) | 3 | ==TODO== HIGH - how to control DCC Accessories. GUI options.  NOT serial commands! |
 | [docs/throttles/index.md](../throttles/index.md) | 45 | ==TODO== HIGH - Overview of DCC Accessory Operation |
-| [docs/support/ex-csb1/ex-csb1-full-guide.md](../support/ex-csb1/ex-csb1-full-guide.md) | 445 | ==TODO== HIGH - USB Connection to JMRI |
-| [docs/reference/serial-commands/serial-command-cc-wifi_not_in_nav.md](../reference/serial-commands/serial-command-cc-wifi_not_in_nav.md) | 68 | N/A. The **EX-CommandStation** will restart. ==TODO== VERY HIGH! - This is no longer true |
-| [docs/reference/serial-commands/serial-command-cc-wifi_not_in_nav.md](../reference/serial-commands/serial-command-cc-wifi_not_in_nav.md) | 74 | * In every case above, the **EX-CommandStation** will restart to apply the new settings. You will need to reconnect to the **EX-CommandStation** with whatever interface you are using. ==TODO== VERY HIGH! - This is no longer true |
-| [docs/reference/serial-commands/serial-command-ff_not_in_nav.md](../reference/serial-commands/serial-command-ff_not_in_nav.md) | 36 | * **«freqValue»** = one of: ==TODO== What is the format of the parameters? |
-| [docs/reference/wiring/i2C/i2c-wiring.md](../reference/wiring/i2C/i2c-wiring.md) | 54 | - When using separate power sources, there is potential for a ground loop. ==TODO== |
-| [docs/prepare-to-use/installer/platformio.md](../prepare-to-use/installer/platformio.md) | 5 | ==TODO== - provide setup help. |
-| snippets/configure/config-wifi-esp32-gui-options.md | 61 | ==TODO== VERY HIGH! - The WiFi change limitation has been broken in the latest CS version as anything can be changed via the in-built web server |
-| snippets/configure/config-wifi-esp32-gui-options.md | 69 | ==TODO== VERY HIGH! - Changing the WiFi Settings using the EX-CommandStation&#x27;s own Web Sever |
-| snippets/configure/config-wifi-esp32-gui-options.md | 138 | * In every case above, the **EX-CommandStation** will restart to apply the new settings. You will need to reconnect to the **EX-CommandStation** in the **EX-WebThrottle** interface. ==TODO== VERY HIGH! - The WiFi change limitation has been broken in the latest CS version as anything can be changed via the in-built web server |
+| [docs/reference/nodes/compiling.md](../reference/nodes/compiling.md) | 3 | ==TODO== HIGH - Compiling a Node page |
+| [docs/reference/nodes/index.md](../reference/nodes/index.md) | 60 | ( ==TODO== Installer assist in managing this?) |
+| [docs/reference/serial-commands/serial-command-ff_not_in_nav.md](../reference/serial-commands/serial-command-ff_not_in_nav.md) | 36 | * **«freqValue»** = one of: () ==TODO== What is the format/options for this parameter? ) |
+| [docs/prepare-to-use/installer/platformio.md](../prepare-to-use/installer/platformio.md) | 5 | ==TODO== - provide setup help for VSC/PlatformIO. |
+| snippets/configure/config-wifi-esp32-gui-options.md | 67 | ==TODO== VERY HIGH! - Instructions needed for changing the WiFi Settings using the EX-CommandStation&#x27;s own Web Sever |
 | snippets/ex-installer/startup-logs.md | 1 | ==TODO== Instructions required here to obtain the startup logs from **EX-Installer**. |
 | snippets/use/connect-and-use-a-wifi-throttle.md | 3 | &lt;!-- ==TODO== need to include an iOS app instructions --&gt; |
 
 ## Medium priority TODOs
 
-Total medium priority TODO matches: 61
+Total medium priority TODO matches: 63
 
 | File | Line | Line text |
 | --- | ---: | --- |
 | [docs/support/faq.md](../support/faq.md) | 9 | ==TODO== MEDIUM Rework this so that it includes GUI options (EX-WebThrottle, Engine Driver, etc.) |
 | [docs/support/faq.md](../support/faq.md) | 19 | ==TODO== MEDIUM Rework this so that it includes GUI options (EX-WebThrottle, Engine Driver, etc.) |
 | [docs/support/ex-csb1/ex-csb1-full-guide.md](../support/ex-csb1/ex-csb1-full-guide.md) | 325 | If you are having problems, look at our uploading troubleshooting guide.  ==TODO== MEDIUM - find link |
-| [docs/support/ex-csb1/ex-csb1-full-guide.md](../support/ex-csb1/ex-csb1-full-guide.md) | 451 | ==TODO== MEDIUM - Integrated displays |
+| [docs/support/ex-csb1/ex-csb1-full-guide.md](../support/ex-csb1/ex-csb1-full-guide.md) | 445 | ==TODO== MEDIUM - USB Connection to JMRI for the EX-CSB1 |
+| [docs/support/ex-csb1/ex-csb1-full-guide.md](../support/ex-csb1/ex-csb1-full-guide.md) | 451 | ==TODO== MEDIUM - Integrated displays for the EX-CSB1 |
 | [docs/reference/command-station-architecture/io-device-drivers.md](../reference/command-station-architecture/io-device-drivers.md) | 3 | &lt;!-- ==TODO== MEDIUM - change the references on this page from the Arduino IDE to VSC/PIO --&gt; |
 | [docs/reference/configuration/advanced-config-h.md](../reference/configuration/advanced-config-h.md) | 3 | &lt;!-- ==TODO== MEDIUM - change the references on this page/section from the Arduino IDE to VSC/PIO --&gt; |
 | [docs/reference/microcontrollers/index.md](../reference/microcontrollers/index.md) | 5 | &lt;!-- ==TODO== MEDIUM - change the references on this page/section from the Arduino IDE to VSC/PIO --&gt; |
@@ -80,6 +76,7 @@ Total medium priority TODO matches: 61
 | [docs/reference/tools/index.md](../reference/tools/index.md) | 3 | ==TODO== MEDIUM - Tools overview |
 | [docs/reference/tools/serial-monitor.md](../reference/tools/serial-monitor.md) | 47 | ==TODO== MEDIUM - add Serial Monitor VSC/PIO section |
 | [docs/reference/trackmanager/dc-mode-frequency.md](../reference/trackmanager/dc-mode-frequency.md) | 82 | - ==TODO== MEDIUM - How to effectively use DC mode when using multiple frequencies. |
+| [docs/reference/wiring/i2C/i2c-wiring.md](../reference/wiring/i2C/i2c-wiring.md) | 54 | - When using separate power sources, there is potential for a ground loop. ( ==TODO== MEDIUM - What does that mean? What are the implications?) |
 | [docs/reference/microcontrollers/esp32/esp32-acebott.md](../reference/microcontrollers/esp32/esp32-acebott.md) | 99 | ==TODO== MEDIUM - Stacked EX8874 Checklist |
 | [docs/reference/microcontrollers/esp32/esp32-ex8874.md](../reference/microcontrollers/esp32/esp32-ex8874.md) | 110 | ==TODO== MEDIUM - Stacked EX8874 Checklist |
 | [docs/reference/microcontrollers/nucleo/index.md](../reference/microcontrollers/nucleo/index.md) | 3 | ==TODO== MEDIUM - Nucleo - Overview page |
@@ -88,11 +85,11 @@ Total medium priority TODO matches: 61
 | [docs/reference/hardware/wifi-boards/index.md](../reference/hardware/wifi-boards/index.md) | 3 | ==TODO== MEDIUM - Move the legacy pages |
 | [docs/products/ex-dccinspector/index.md](../products/ex-dccinspector/index.md) | 6 | ==TODO== MEDIUM - This page needs to be expanded |
 | [docs/products/ex-sensorcam/ex-sensor-manual-abridged.md](../products/ex-sensorcam/ex-sensor-manual-abridged.md) | 5 | &lt;!-- ==TODO== MEDIUM - change the references on this page from the Arduino IDE to VSC/PIO --&gt; |
-| [docs/products/ex-sensorcam/index.md](../products/ex-sensorcam/index.md) | 8 | &lt;!-- ==TODO== MEDIUM - change the references on this page from the Arduino IDE to VSC/PIO --&gt; |
 | [docs/products/ex-sensorcam/installation-guide.md](../products/ex-sensorcam/installation-guide.md) | 3 | &lt;!-- ==TODO== MEDIUM - change the references on this page from the Arduino IDE to VSC/PIO --&gt; |
 | [docs/prepare-to-use/connecting/connecting-diy.md](../prepare-to-use/connecting/connecting-diy.md) | 19 | &lt;!-- ==TODO== MEDIUM - This section could be improved. Physically connecting DIY EX-CS to a layout - EX8874 --&gt; |
 | [docs/prepare-to-use/connecting/connecting-diy.md](../prepare-to-use/connecting/connecting-diy.md) | 32 | &lt;!-- ==TODO== MEDIUM - This section could be improved. Physically connecting DIY EX-CS to a layout - Standard Arduino Motor Shield --&gt; |
 | [docs/prepare-to-use/connecting/connecting-ex-csb1.md](../prepare-to-use/connecting/connecting-ex-csb1.md) | 3 | &lt;!-- ==TODO== MEDIUM - this page needs to be expanded --&gt; |
+| [docs/prepare-to-use/installer/install-cs.md](../prepare-to-use/installer/install-cs.md) | 104 | Do not select without Engineer level knowledge.  (==TODO== MEDIUM link to page explaining &#x27;Override Current Limit&#x27;) |
 | [docs/prepare-to-use/installer/download/download-linux.md](../prepare-to-use/installer/download/download-linux.md) | 7 | &lt;!-- ==TODO== MEDIUM - Download and install on Linux - Add screenshots --&gt; |
 | [docs/enhance/accessories/solenoid-turnouts.md](../enhance/accessories/solenoid-turnouts.md) | 103 | ==TODO== MEDIUM - Add CDU info |
 | [docs/enhance/exrail/exrail-objects-introduction.md](../enhance/exrail/exrail-objects-introduction.md) | 209 | ==TODO== MEDIUM - Add a diagram for the EX-CSB1 to a PCA9685 |
@@ -110,11 +107,11 @@ Total medium priority TODO matches: 61
 
 ## Low priority TODOs
 
-Total low priority TODO matches: 117
+Total low priority TODO matches: 118
 
 | File | Line | Line text |
 | --- | ---: | --- |
-| [docs/contributing/release-checklist.md](release-checklist.md) | 128 | - ==TODO== LOW - Need to change the &#x27;Withrottle&#x27; iOS app references to &#x27;ThrottleCard&#x27; |
+| [docs/contributing/release-checklist.md](release-checklist.md) | 128 | - ==TODO== LOW - Need to change the &#x27;WiThrottle&#x27; iOS app references to &#x27;ThrottleCard&#x27; |
 | [docs/news/index.md](../news/index.md) | 13 | ==TODO== LOW - Notes on how to get the RSS feed here when figured out. |
 | [docs/throttles/loco-programming/programming-tips.md](../throttles/loco-programming/programming-tips.md) | 13 | ==TODO== LOW - Fill this page out. |
 | [docs/reference/command-station-architecture/io-device-drivers.md](../reference/command-station-architecture/io-device-drivers.md) | 176 | This will need to be done in the ==TODO== LOW -  :doc:`Arduino-IDE &lt;/ex-commandstation/advanced-setup/installation-options/arduino-ide&gt;`, so first make sure you have followed these steps to load up the |Arduino IDE|. |
@@ -215,6 +212,7 @@ Total low priority TODO matches: 117
 | [docs/reference/tools/diagnostic-tools.md](../reference/tools/diagnostic-tools.md) | 5 | ==TODO== LOW - Work in Progress. More detail and pictures |
 | [docs/reference/tools/diagnostic-tools.md](../reference/tools/diagnostic-tools.md) | 47 | ==TODO== LOW - Wiring and more info goes here |
 | [docs/reference/tools/diagnostic-tools.md](../reference/tools/diagnostic-tools.md) | 93 | ==TODO== LOW - add info on wiring and sketches here |
+| [docs/reference/nodes/cookbooks/nodes_cookbook_turntables.md](../reference/nodes/cookbooks/nodes_cookbook_turntables.md) | 3 | ==TODO== LOW - ????????????????????? INITIAL DRAFT CODE NOT YET IMPLEMENTED ????????????? |
 | [docs/reference/hardware/bluetooth-devices/index.md](../reference/hardware/bluetooth-devices/index.md) | 3 | ==TODO== LOW - Move the legacy pages |
 | [docs/reference/hardware/hal/hal-config.md](../reference/hardware/hal/hal-config.md) | 3 | &lt;!-- ==TODO== LOW - change references in this document from the Arduino IDE to VSC/PIO --&gt; |
 | [docs/reference/hardware/hal/index.md](../reference/hardware/hal/index.md) | 3 | ==TODO== LOW need a HAL intro page |

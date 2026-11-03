@@ -18,16 +18,27 @@ Also, the [Big Picture](../enhance/exrail/cookbooks/big-picture/index.md) pages 
 
 ## Rosters
 
-**EX-CommandStation** has the ability to define all of your locomotives, each with their individual list of their defined decoder functions. That list is advertised to the various throttle apps.
+**EX-CommandStation** has the ability to define all of your locomotives, each with their individual list of their defined decoder functions. That list is advertised to the various throttle apps, so that when you select a loco in the throttle app, the app displays the correct function labels unique to that loco.
 
 For the decoder functions, you can provide a text description of the function. So rather than seeing F0..F31 you see a description of what the functions actually do.
 
-==TODO== VERY HIGH - need to add something here about the new way to add rosters and a link to the roster page in this folder.  Possibly remove the direct links to the EXRAIL in the section.
+The are two ways to add rosters to your **EX-CommandStation**:
+
+* By adding [EXRAIL](../enhance/exrail/exrail-objects-introduction.md#adding-a-roster) commands to your 'myAutomation.h`
+* {{new_in_v(6)}} By adding roster entries via the **EX-CommandStation**'s [web browser](rosters.md#roster-editing-with-a-web-browser).
+
+### Via EXRAIL
 
 This capability is part of **EXRAIL** and is built into your **EX-CommandStation**.  Read the following to explore this feature:
 
 * [EXRAIL Introduction](../enhance/exrail/exrail-objects-introduction.md)
 * [EXRAIL Adding a Roster](../enhance/exrail/exrail-objects-introduction.md#adding-a-roster)
+
+### Via the EX-CommandStation's Web Browser
+
+This capability is available to the **EX-CSB1** and DIY **EX-CommandStations** using ESP32 and NUCLEO microprocessors, running version 6.0, or later, **EX-CommandStation** software.  It is not available on the Arduino Mega.
+
+See the [roster entries via the web browser](rosters.md#roster-editing-with-a-web-browser) page for more information.
 
 ----
 
@@ -116,7 +127,7 @@ Also see:
 
 ## Distributed Layout Nodes
 
-Layout **Nodes** offer a simple way of distributing layout control (usually wirelessly) over a wide area using the same the **EX-CommandStation** software in each node, with just a slight configuration change.
+Distributed Layout **Nodes** offer a simple way of physically distributing layout control (usually wirelessly) over a wide area, using additional microprocessors, running essentially the same **EX-CommandStation** software (with just a slight configuration change) in each node.
 
 See the [Introduction to using distributed layout nodes](../reference/nodes/index.md) page for more information.
 
