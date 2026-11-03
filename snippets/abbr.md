@@ -70,3 +70,6 @@
 *[i2c]: (Inter-Integrated Circuit, pronounced "eye-squared-see") is a synchronous, multi-controller/multi-target serial communication protocol
 *[I2C]: (Inter-Integrated Circuit, pronounced "eye-squared-see") is a synchronous, multi-controller/multi-target serial communication protocol
 *[I²C]: (Inter-Integrated Circuit, pronounced "eye-squared-see") is a synchronous, multi-controller/multi-target serial communication protocol
+
+*[oLED]: Orgenic LED displays
+*[OLED]: Orgenic LED displays
