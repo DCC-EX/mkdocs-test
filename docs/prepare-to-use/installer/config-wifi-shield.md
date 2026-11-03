@@ -1,4 +1,4 @@
-# Wifi configuration <br/><small>(Excluding **EX-CSB1** or ESP32 v5.7.0+)</small>
+# WiFi configuration <br/><small>(Excluding **EX-CSB1** or ESP32 v5.7.0+)</small>
 
 !!! info inline end "EX-Installer"
 

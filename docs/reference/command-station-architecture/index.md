@@ -16,7 +16,7 @@ The **DCC-EX** **EX-CommandStation** code is layered to reduce overall complexit
     - handles all program track access and tuning
     - provides high level multi-cv functions
 
-- Serial/Wifi/Ethernet input and output (SerialManager.h, Wifi*.h, EthernetInterface.h)
+- Serial/WiFi/Ethernet input and output (SerialManager.h, Wifi*.h, EthernetInterface.h)
 
 - Command Distributor  (CommandDistributor.h)
     - Manages multiple simultaneous input streams and broadcasts status changes

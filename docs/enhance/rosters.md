@@ -27,7 +27,6 @@ There are three ways to create or manipulate a roster
 
 When using a web browser dialog on the command station, the Config.. Roster Editor menu will show a roster editing dialog. This edits and saves roster entries in RAM.
 
-
 Enter the IP address of the **EX-CommandStation** into the address bar of you browser. e.g. That will be ``192.168.1.4`` if you are using the default [Access Point](../prepare-to-use/installer/config-wifi-esp32.md#the-wifi-different-modes) mode.
 Or use the Web Page in Engine Driver, after you have connected to the **EX-CommandStation**.
 

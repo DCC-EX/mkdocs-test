@@ -47,9 +47,9 @@ Check your work. Look under and through where the boards connect, make sure no p
 ### 3. Optionally Install WiFiShield - ***OPTIONAL***
 
 1. Prepare your **EX-WiFiShield8266** by removing the two jumpers, see picture.  
-![Wifi Jumpers](../_static/images/mega/mega4.png){ width=400px }
+![WiFi Jumpers](../_static/images/mega/mega4.png){ width=400px }
 2. Mount the Wi-Fi shield on the EX8874 noting the correct orientation in the pictures and there will be 2 pins on either side which are deliberately missing.  
-![Wifi shield](../_static/images/mega/mega5.png){ width=400px }
+![WiFi shield](../_static/images/mega/mega5.png){ width=400px }
 3. Use a male-female Dupont wire (normally supplied with the shield) to connect to any one of the row of Tx pins on the Wi-Fi Board, and connect the other end to the Rx1 pin on the mega (pin 19). See photo below.
 4. Take a second jumper wire and connect it to any one of the row of Rx pins on the Wi-Fi Board and connect the other end to Tx1 on the mega (pin 18).  
 ![txrx](../_static/images/mega/mega6.png){ width=400px }

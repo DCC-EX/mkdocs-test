@@ -1,4 +1,4 @@
-# Optionally install Wifi
+# Optionally install WiFi
 
 This page does not apply to **EX-CSB1** or other ESP32-based **EX-CommandStation**s which have Wi-Fi built in.
 
