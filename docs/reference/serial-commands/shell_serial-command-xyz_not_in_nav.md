@@ -50,7 +50,7 @@ The following are not a direct response, but rather a broadcast that will be tri
         * ``option`` = explanation of option
         * ...
 
-==TODO== MEDIUM - Responses
+==TODO== LOW - Responses
 
 ----
 

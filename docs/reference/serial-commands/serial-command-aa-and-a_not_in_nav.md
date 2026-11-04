@@ -40,7 +40,7 @@ Serial commands to activate or deactivate accessory decoders.
 
 <!-- ### Response for ``<cmd>`` -->
 
-==TODO== MEDIUM - responses
+==TODO== LOW - responses
 
 ----
 

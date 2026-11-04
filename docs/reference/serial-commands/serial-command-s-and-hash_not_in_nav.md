@@ -51,7 +51,7 @@ none
 
 * Response for ``<J I>``
 
-    ==TODO== MEDIUM - Response for ``<J I>``
+    ==TODO== LOW - Response for ``<J I>``
 
 * Response for ``<c>``
     * ``<c "CurrentMAIN" current C "Milli" "0" max_ma "1" trip_ma>``

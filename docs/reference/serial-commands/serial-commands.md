@@ -310,16 +310,16 @@ Reference guide for serial commands used by **EX-CommandStations**, shown in fun
 
 ## Signal Commands
 
-==TODO== MEDIUM - Signal Commands
+==TODO== LOW - Signal Commands
 
 ## Reserve/Block Commands
 
-==TODO== MEDIUM - Reserve/Block Commands
+==TODO== LOW - Reserve/Block Commands
 
 ## Automation Commands
 
-==TODO== MEDIUM - Automation Commands
+==TODO== LOW - Automation Commands
 
 ## WiFI and Ethernet Commands
 
-==TODO== MEDIUM - WiFi and EthernetCommands
+==TODO== LOW - WiFi and EthernetCommands

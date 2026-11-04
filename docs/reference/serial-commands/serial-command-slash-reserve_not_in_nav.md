@@ -30,7 +30,7 @@ Serial commands to reserve or free sections.
 
 ## Response
 
-==TODO== MEDIUM - Responses
+==TODO== LOW - Responses
 
 ----
 

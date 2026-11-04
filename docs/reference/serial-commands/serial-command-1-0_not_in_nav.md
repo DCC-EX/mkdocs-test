@@ -43,9 +43,9 @@ The following is not a direct response, but rather a broadcast that will be trig
 
 * ``<p«onOFF» «track»>``
 
-    * ``p`` = the 'message identifer'
+    * ``p`` = the 'message identifier'
     * **onOff** = one of: ``1`` = On or ``0`` = off
-    * **track** = balnk = all tracks <br/> or one of ``A`` through ``H`` representing one of the outputs of the/a motor shield.
+    * **track** = blank = all tracks <br/> or one of ``A`` through ``H`` representing one of the outputs of the/a motor shield.
 
 ----
 
