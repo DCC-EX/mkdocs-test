@@ -96,6 +96,4 @@ hide:
 - [ ] Jumpers added for GPIO 2 and 4
 - [ ] Add the custom motor define - 6 lines in config.h
 
-==TODO== MEDIUM - Stacked EX8874 Checklist
-
-
+<!-- ==TODO== LOW - Stacked EX8874 Checklist. Why is this a TODO? -->

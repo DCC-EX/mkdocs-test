@@ -84,5 +84,3 @@ hide:
     ```
 
 ![L298 Keyestudio table](../../../_static/images/esp32/keyestudio-l298-x1b.png){: style="width: 80%"}
-
-

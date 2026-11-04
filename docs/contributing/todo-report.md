@@ -18,24 +18,31 @@ icon: material/reminder
 </style>
 Scanned roots: `C:\Users\akers\OneDrive\github\github_doco\mkdocs-test\docs`, `C:\Users\akers\OneDrive\github\github_doco\mkdocs-test\snippets`
 
-## High TODOs
+## Urgent TODOs
 
-Total High TODO matches: 8
+Total urgent TODO matches: 2
 
 | File | Line | Line text |
 | --- | ---: | --- |
-| [docs/enhance/rosters.md](../enhance/rosters.md) | 44 | ==TODO== VERY HIGH! - needs detailed instructions for Roster Editing with a Web Browser. |
+| [docs/enhance/rosters.md](../enhance/rosters.md) | 44 | ==TODO== URGENT - needs detailed instructions for Roster Editing with a Web Browser. |
+| [docs/news/articles/20261021b.md](../news/articles/20261021b.md) | 17 | ==TODO== URGENT! - New in Version 6.0 new article. Plus change the date and file name of this file |
+
+## High Priority TODOs
+
+Total high priority TODO matches: 6
+
+| File | Line | Line text |
+| --- | ---: | --- |
 | [docs/throttles/dcc-accessories.md](../throttles/dcc-accessories.md) | 3 | ==TODO== HIGH - how to control DCC Accessories. GUI options.  NOT serial commands! |
 | [docs/throttles/index.md](../throttles/index.md) | 45 | ==TODO== HIGH - Overview of DCC Accessory Operation |
 | [docs/reference/nodes/compiling.md](../reference/nodes/compiling.md) | 3 | ==TODO== HIGH - Compiling a Node page |
 | [docs/reference/nodes/index.md](../reference/nodes/index.md) | 60 | ( ==TODO== Installer assist in managing this?) |
 | [docs/prepare-to-use/installer/platformio.md](../prepare-to-use/installer/platformio.md) | 5 | ==TODO== - provide setup help for VSC/PlatformIO. |
-| [docs/news/articles/20261021b.md](../news/articles/20261021b.md) | 17 | ==TODO== URGENT! - New in Version 6.0 new article. Plus change the date and file name of this file |
 | snippets/use/connect-and-use-a-wifi-throttle.md | 3 | &lt;!-- ==TODO== need to include an iOS app instructions --&gt; |
 
 ## Medium priority TODOs
 
-Total medium priority TODO matches: 48
+Total medium priority TODO matches: 41
 
 | File | Line | Line text |
 | --- | ---: | --- |
@@ -44,8 +51,6 @@ Total medium priority TODO matches: 48
 | [docs/support/ex-csb1/ex-csb1-full-guide.md](../support/ex-csb1/ex-csb1-full-guide.md) | 325 | If you are having problems, look at our uploading troubleshooting guide.  ==TODO== MEDIUM - find link |
 | [docs/support/ex-csb1/ex-csb1-full-guide.md](../support/ex-csb1/ex-csb1-full-guide.md) | 445 | ==TODO== MEDIUM - USB Connection to JMRI for the EX-CSB1 |
 | [docs/support/ex-csb1/ex-csb1-full-guide.md](../support/ex-csb1/ex-csb1-full-guide.md) | 451 | ==TODO== MEDIUM - Integrated displays for the EX-CSB1 |
-| [docs/reference/configuration/advanced-config-h.md](../reference/configuration/advanced-config-h.md) | 3 | &lt;!-- ==TODO== MEDIUM - change the references on this page/section from the Arduino IDE to VSC/PIO --&gt; |
-| [docs/reference/microcontrollers/index.md](../reference/microcontrollers/index.md) | 5 | &lt;!-- ==TODO== MEDIUM - change the references on this page/section from the Arduino IDE to VSC/PIO --&gt; |
 | [docs/reference/serial-commands/serial-command-at_display_not_in_nav.md](../reference/serial-commands/serial-command-at_display_not_in_nav.md) | 20 | * **display**:  Display, to display the text on ==TODO== MEDIUM What Format is the parameter? |
 | [docs/reference/serial-commands/serial-command-jj-ll_not_in_nav.md](../reference/serial-commands/serial-command-jj-ll_not_in_nav.md) | 23 | * **display**: *==TODO== MEDIUM parameter description / explanation |
 | [docs/reference/serial-commands/serial-command-jj-ll_not_in_nav.md](../reference/serial-commands/serial-command-jj-ll_not_in_nav.md) | 24 | * **row**: ==TODO== MEDIUM parameter description / explanation |
@@ -56,18 +61,14 @@ Total medium priority TODO matches: 48
 | [docs/reference/serial-commands/serial-command-m_not_in_nav.md](../reference/serial-commands/serial-command-m_not_in_nav.md) | 33 | * **accelerating**: ==TODO== MEDIUM parameter description and range of values allowed |
 | [docs/reference/serial-commands/serial-command-m_not_in_nav.md](../reference/serial-commands/serial-command-m_not_in_nav.md) | 34 | * **braking**: ==TODO== MEDIUM parameter description and range of values allowed |
 | [docs/reference/serial-commands/serial-command-m_not_in_nav.md](../reference/serial-commands/serial-command-m_not_in_nav.md) | 35 | * **momentum**: ==TODO== MEDIUM parameter description and range of values allowed |
-| [docs/reference/serial-commands/serial-command-zz-and-z_not_in_nav.md](../reference/serial-commands/serial-command-zz-and-z_not_in_nav.md) | 87 | ==TODO== MEDIUM - Response |
 | [docs/reference/tools/index.md](../reference/tools/index.md) | 3 | ==TODO== MEDIUM - Tools overview |
 | [docs/reference/tools/serial-monitor.md](../reference/tools/serial-monitor.md) | 47 | ==TODO== MEDIUM - add Serial Monitor VSC/PIO section |
 | [docs/reference/trackmanager/dc-mode-frequency.md](../reference/trackmanager/dc-mode-frequency.md) | 82 | - ==TODO== MEDIUM - How to effectively use DC mode when using multiple frequencies. |
 | [docs/reference/wiring/i2C/i2c-wiring.md](../reference/wiring/i2C/i2c-wiring.md) | 54 | - When using separate power sources, there is potential for a ground loop. ( ==TODO== MEDIUM - What does that mean? What are the implications?) |
-| [docs/reference/microcontrollers/esp32/esp32-acebott.md](../reference/microcontrollers/esp32/esp32-acebott.md) | 99 | ==TODO== MEDIUM - Stacked EX8874 Checklist |
-| [docs/reference/microcontrollers/esp32/esp32-ex8874.md](../reference/microcontrollers/esp32/esp32-ex8874.md) | 110 | ==TODO== MEDIUM - Stacked EX8874 Checklist |
 | [docs/reference/microcontrollers/nucleo/index.md](../reference/microcontrollers/nucleo/index.md) | 3 | ==TODO== MEDIUM - Nucleo - Overview page |
 | [docs/reference/microcontrollers/nucleo/nucleo-144-ex8874.md](../reference/microcontrollers/nucleo/nucleo-144-ex8874.md) | 59 | ==TODO== MEDIUM - update MotorDrivers.h for D8 |
 | [docs/reference/hardware/ethernet-boards/index.md](../reference/hardware/ethernet-boards/index.md) | 3 | ==TODO== MEDIUM - Move the legacy pages |
 | [docs/reference/hardware/wifi-boards/index.md](../reference/hardware/wifi-boards/index.md) | 3 | ==TODO== MEDIUM - Move the legacy pages |
-| [docs/products/ex-dccinspector/index.md](../products/ex-dccinspector/index.md) | 6 | ==TODO== MEDIUM - This page needs to be expanded |
 | [docs/products/ex-webthrottle/ex-webthrottle.md](../products/ex-webthrottle/ex-webthrottle.md) | 196 | ==TODO== MEDIUM - This needs to be expanded. |
 | [docs/prepare-to-use/connecting/connecting-diy.md](../prepare-to-use/connecting/connecting-diy.md) | 19 | &lt;!-- ==TODO== MEDIUM - This section could be improved. Physically connecting DIY EX-CS to a layout - EX8874 --&gt; |
 | [docs/prepare-to-use/connecting/connecting-diy.md](../prepare-to-use/connecting/connecting-diy.md) | 32 | &lt;!-- ==TODO== MEDIUM - This section could be improved. Physically connecting DIY EX-CS to a layout - Standard Arduino Motor Shield --&gt; |
@@ -84,13 +85,12 @@ Total medium priority TODO matches: 48
 | [docs/enhance/accessories/i2c/i2c-displays.md](../enhance/accessories/i2c/i2c-displays.md) | 96 | ==TODO== MEDIUM - diagram for connecting the EX-CSB1 to an oLED via the headers |
 | [docs/enhance/accessories/i2c/i2c-displays.md](../enhance/accessories/i2c/i2c-displays.md) | 98 | ==TODO== MEDIUM - diagram for connecting the EX-CSB1 to an oLED via the QWIIC connector |
 | [docs/enhance/accessories/i2c/i2c-gpio-expanders.md](../enhance/accessories/i2c/i2c-gpio-expanders.md) | 41 | ==TODO== MEDIUM - diagram for connecting the EX-CSB1 to an GPIO Expander via the headers |
-| [docs/contributing/code/contributing-code.md](code/contributing-code.md) | 13 | &lt;!-- ==TODO== MEDIUM - change the references on this page/section from the Arduino IDE to VSC/PIO --&gt; |
 | snippets/testing/testing.md | 82 | ==TODO== MEDIUM - basic steps for initial testing with a Smart Device over WiFi. needs to be a cut down version of the /throttles/connecting-wifi.md page. |
 | snippets/testing/testing.md | 92 | ==TODO== MEDIUM - what to do if any of the initial testing steps fail |
 
 ## Low priority TODOs
 
-Total low priority TODO matches: 137
+Total low priority TODO matches: 144
 
 | File | Line | Line text |
 | --- | ---: | --- |
@@ -101,6 +101,8 @@ Total low priority TODO matches: 137
 | [docs/reference/command-station-architecture/io-device-drivers.md](../reference/command-station-architecture/io-device-drivers.md) | 176 | This will need to be done in the ==TODO== LOW -  :doc:`Arduino-IDE &lt;/ex-commandstation/advanced-setup/installation-options/arduino-ide&gt;`, so first make sure you have followed these steps to load up the |Arduino IDE|. |
 | [docs/reference/command-station-architecture/io-device-drivers.md](../reference/command-station-architecture/io-device-drivers.md) | 180 | First you will need to add a new file, just like the ==TODO== LOW - :ref:`config.h file &lt;ex-commandstation/advanced-setup/installation-options/arduino-ide:Copy the config.example.h file (or rename it)&gt;`. |
 | [docs/reference/command-station-architecture/io-device-drivers.md](../reference/command-station-architecture/io-device-drivers.md) | 250 | Finally, upload the code to the Arduino as you would do during the standard ==TODO== LOW - :ref:`Arduino IDE Setup &lt;ex-commandstation/advanced-setup/installation-options/arduino-ide:upload the software&gt;`. |
+| [docs/reference/configuration/advanced-config-h.md](../reference/configuration/advanced-config-h.md) | 3 | &lt;!-- ==TODO== LOW - change the references on this page/section from the Arduino IDE to VSC/PIO --&gt; |
+| [docs/reference/microcontrollers/index.md](../reference/microcontrollers/index.md) | 5 | &lt;!-- ==TODO== LOW - change the references on this page/section from the Arduino IDE to VSC/PIO --&gt; |
 | [docs/reference/serial-commands/serial-command-aa-and-a_not_in_nav.md](../reference/serial-commands/serial-command-aa-and-a_not_in_nav.md) | 43 | ==TODO== LOW - responses |
 | [docs/reference/serial-commands/serial-command-aa-and-a_not_in_nav.md](../reference/serial-commands/serial-command-aa-and-a_not_in_nav.md) | 71 | * ==TODO== LOW - Example Commands |
 | [docs/reference/serial-commands/serial-command-aa-and-a_not_in_nav.md](../reference/serial-commands/serial-command-aa-and-a_not_in_nav.md) | 75 | * ==TODO== LOW - Example Responses |
@@ -193,6 +195,7 @@ Total low priority TODO matches: 137
 | [docs/reference/serial-commands/serial-command-y_not_in_nav.md](../reference/serial-commands/serial-command-y_not_in_nav.md) | 61 | ==TODO== LOW - Responses |
 | [docs/reference/serial-commands/serial-command-y_not_in_nav.md](../reference/serial-commands/serial-command-y_not_in_nav.md) | 77 | * ==TODO== LOW - Example Commands |
 | [docs/reference/serial-commands/serial-command-y_not_in_nav.md](../reference/serial-commands/serial-command-y_not_in_nav.md) | 81 | * ==TODO== LOW - Example Responses |
+| [docs/reference/serial-commands/serial-command-zz-and-z_not_in_nav.md](../reference/serial-commands/serial-command-zz-and-z_not_in_nav.md) | 87 | ==TODO== LOW - Response |
 | [docs/reference/serial-commands/serial-command-zz-and-z_not_in_nav.md](../reference/serial-commands/serial-command-zz-and-z_not_in_nav.md) | 107 | * ==TODO== LOW - Example Commands |
 | [docs/reference/serial-commands/serial-command-zz-and-z_not_in_nav.md](../reference/serial-commands/serial-command-zz-and-z_not_in_nav.md) | 111 | * ==TODO== LOW - Example Responses |
 | [docs/reference/serial-commands/serial-commands.md](../reference/serial-commands/serial-commands.md) | 313 | ==TODO== LOW - Signal Commands |
@@ -213,9 +216,12 @@ Total low priority TODO matches: 137
 | [docs/reference/tools/diagnostic-tools.md](../reference/tools/diagnostic-tools.md) | 47 | ==TODO== LOW - Wiring and more info goes here |
 | [docs/reference/tools/diagnostic-tools.md](../reference/tools/diagnostic-tools.md) | 93 | ==TODO== LOW - add info on wiring and sketches here |
 | [docs/reference/nodes/cookbooks/nodes_cookbook_turntables.md](../reference/nodes/cookbooks/nodes_cookbook_turntables.md) | 3 | ==TODO== LOW - ????????????????????? INITIAL DRAFT CODE NOT YET IMPLEMENTED ????????????? |
+| [docs/reference/microcontrollers/esp32/esp32-acebott.md](../reference/microcontrollers/esp32/esp32-acebott.md) | 99 | ==TODO== LOW - Stacked EX8874 Checklist |
+| [docs/reference/microcontrollers/esp32/esp32-ex8874.md](../reference/microcontrollers/esp32/esp32-ex8874.md) | 110 | ==TODO== LOW - Stacked EX8874 Checklist |
 | [docs/reference/hardware/bluetooth-devices/index.md](../reference/hardware/bluetooth-devices/index.md) | 3 | ==TODO== LOW - Move the legacy pages |
 | [docs/reference/hardware/hal/hal-config.md](../reference/hardware/hal/hal-config.md) | 3 | &lt;!-- ==TODO== LOW - change references in this document from the Arduino IDE to VSC/PIO --&gt; |
 | [docs/reference/hardware/hal/index.md](../reference/hardware/hal/index.md) | 3 | ==TODO== LOW need a HAL intro page |
+| [docs/products/ex-dccinspector/index.md](../products/ex-dccinspector/index.md) | 6 | ==TODO== LOW - This page needs to be expanded |
 | [docs/products/ex-fastclock/installation.md](../products/ex-fastclock/installation.md) | 12 | &lt;!-- ==TODO== LOW - change the references on this page/section from the Arduino IDE to VSC/PIO --&gt; |
 | [docs/products/ex-sensorcam/ex-sensor-manual-abridged.md](../products/ex-sensorcam/ex-sensor-manual-abridged.md) | 5 | &lt;!-- ==TODO== LOW - change the references on this page from the Arduino IDE to VSC/PIO --&gt; |
 | [docs/products/ex-sensorcam/ex-sensor-manual.md](../products/ex-sensorcam/ex-sensor-manual.md) | 5 | &lt;!-- ==TODO== LOW - change the references on this page from the Arduino IDE to VSC/PIO --&gt; |
@@ -229,6 +235,7 @@ Total low priority TODO matches: 137
 | [docs/prepare-to-use/installer/install-ex-turntable.md](../prepare-to-use/installer/install-ex-turntable.md) | 3 | &lt;!-- ==TODO== LOW - EX-Installer EX-Turntable page could be improved/expanded --&gt; |
 | [docs/enhance/exrail/cookbooks/timecontrol.md](../enhance/exrail/cookbooks/timecontrol.md) | 92 | &lt;!-- NB:  ==TODO== LOW - See the following page for details on running sound files. No following page. Not sure where this is supposed to go --&gt; |
 | [docs/enhance/exrail/cookbooks/big-picture/stage2.md](../enhance/exrail/cookbooks/big-picture/stage2.md) | 115 | &lt;!-- ==TODO== LOW - change the references on this page/section from the Arduino IDE to VSC/PIO --&gt; |
+| [docs/contributing/code/contributing-code.md](code/contributing-code.md) | 13 | &lt;!-- ==TODO== LOW - change the references on this page/section from the Arduino IDE to VSC/PIO --&gt; |
 | [docs/contributing/documentation/github.md](documentation/github.md) | 95 | ==TODO== LOW - how to preview options |
 | snippets/testing/testing.md | 125 | ==TODO== LOW - pic - Check communication and version |
 
