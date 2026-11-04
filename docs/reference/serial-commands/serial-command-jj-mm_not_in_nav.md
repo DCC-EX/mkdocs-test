@@ -1,11 +1,11 @@
 ﻿---
 tags:
-  - _9J9_9M9
-  - _9J9_9M9_9CLEAR9_9ALL9
-  - _9J9_9M9_9CLEAR9_9ANY9_loco
-  - _9J9_9M9_9CLEAR9_stashId
-  - _9J9_9M9_stashId
-  - _9J9_9M9_stashId_loco
+  - _▪J▪_▪M▪
+  - _▪J▪_▪M▪_▪CLEAR▪_▪ALL▪
+  - _▪J▪_▪M▪_▪CLEAR▪_▪ANY▪_▫loco▫
+  - _▪J▪_▪M▪_▪CLEAR▪_▫stashId▫
+  - _▪J▪_▪M▪_▫stashId▫
+  - _▪J▪_▪M▪_▫stashId▫_▫loco▫
 
 search:
   boost: 3

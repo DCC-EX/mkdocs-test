@@ -1,9 +1,9 @@
 ﻿---
 tags:
-  - _9Q9
-  - _9S9
-  - _9S9_id_vpin_pullup
-  - _9S9_id
+  - _▪Q▪
+  - _▪S▪
+  - _▪S▪_▫id▫_▫vpin▫_▫pullup▫
+  - _▪S▪_▫id▫
 
 search:
   boost: 3

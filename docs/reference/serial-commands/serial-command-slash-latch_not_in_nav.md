@@ -1,7 +1,7 @@
 ---
 tags:
-  - _/_9LATCH9_latch
-  - _/_9UNLATCH9_latch
+  - _▫/▫_▪LATCH▪_▫latch▫
+  - _▫/▫_▪UNLATCH▪_▫latch▫
 
 search:
   boost: 3

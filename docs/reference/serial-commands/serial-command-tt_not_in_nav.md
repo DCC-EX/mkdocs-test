@@ -1,19 +1,19 @@
 ﻿---
 tags:
-  - _9T9_id_addr_subAddr
-  - _9T9_id_9DCC9_addr_subAddr
-  - _9T9_id_9DCC9_linearAddr
-  - _9T9_id_vpin_closedValue_thrownValue
-  - _9T9_id_9SERVO9_vpin_closedValue_thrownValue
-  - _9T9_id_9VPIN9_vpin
-  - _9T9_id
-  - _9T9
-  - _9T9_id_9X9
-  - _9T9_id_9C9
-  - _9T9_id_9T9
-  - _9T9_id_value
-  - _9J9_9T9
-  - _9J9_9T9_id
+  - _▪T▪_▫id▫_▫addr▫_▫subAddr▫
+  - _▪T▪_▫id▫_▪DCC▪_▫addr▫_▫subAddr▫
+  - _▪T▪_▫id▫_▪DCC▪_▫linearAddr▫
+  - _▪T▪_▫id▫_▫vpin▫_▫closedValue▫_▫thrownValue▫
+  - _▪T▪_▫id▫_▪SERVO▪_▫vpin▫_▫closedValue▫_▫thrownValue▫
+  - _▪T▪_▫id▫_▪VPIN▪_▫vpin▫
+  - _▪T▪_▫id▫
+  - _▪T▪
+  - _▪T▪_▫id▫_▪X▪
+  - _▪T▪_▫id▫_▪C▪
+  - _▪T▪_▫id▫_▪T▪
+  - _▪T▪_▫id▫_▫value▫
+  - _▪J▪_▪T▪
+  - _▪J▪_▪T▪_▫id▫
 
 search:
   boost: 3

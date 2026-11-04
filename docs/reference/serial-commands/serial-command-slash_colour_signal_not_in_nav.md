@@ -1,8 +1,8 @@
 ﻿---
 tags:
-  - _/_9RED9_signal
-  - _/_9AMBER9_signal
-  - _/_9GREEN9_signal
+  - _▫/▫_▪RED▪_▫signal▫
+  - _▫/▫_▪AMBER▪_▫signal▫
+  - _▫/▫_▪GREEN▪_▫signal▫
 
 search:
   boost: 3

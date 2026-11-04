@@ -1,12 +1,12 @@
 ﻿---
 tags:
-  - _s
-  - _9S9
-  - _8hash8
-  - _9C9_9RESET9
-  - _9D9_9RESET9
-  - _9J9_9I9
-  - _c
+  - _▫s▫
+  - _▪S▪
+  - _▫hash▫
+  - _▪C▪_▪RESET▪
+  - _▪D▪_▪RESET▪
+  - _▪J▪_▪I▪
+  - _▫c▫
 
 search:
   boost: 3

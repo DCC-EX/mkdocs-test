@@ -1,6 +1,6 @@
 ---
 tags:
-  - _9J9_9L9_display_row
+  - _▪J▪_▪L▪_▫display▫_▫row▫
 
 search:
   boost: 3

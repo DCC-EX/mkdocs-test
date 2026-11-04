@@ -1,16 +1,16 @@
 ﻿---
 tags:
-  - _9T9
-  - _9J9_9T9
-  - _9J9_9T9_id
-  - _9J9_9A9
-  - _9J9_9A9_id
-  - _9J9_9R9
-  - _9J9_9R9_id
-  - _m_9LINEAR9
-  - _m_loco_accelerating_braking
-  - _m_loco_momentum
-  - _m_9POWER9
+  - _▪T▪
+  - _▪J▪_▪T▪
+  - _▪J▪_▪T▪_▫id▫
+  - _▪J▪_▪A▪
+  - _▪J▪_▪A▪_▫id▫
+  - _▪J▪_▪R▪
+  - _▪J▪_▪R▪_▫id▫
+  - _▫m▫_▪LINEAR▪
+  - _▫m▫_▫loco▫_▫accelerating▫_▫braking▫
+  - _▫m▫_▫loco▫_▫momentum▫
+  - _▫m▫_▪POWER▪
 ---
 
 # Considerations for throttle developers

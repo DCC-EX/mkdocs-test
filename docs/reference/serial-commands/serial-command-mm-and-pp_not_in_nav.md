@@ -1,9 +1,9 @@
 ---
 tags:
-  - _9M9_ignore_d0_d1_d2_d3_d4_d5
-  - _9P9_ignore_d0_d1_d2_d3_d4_d5
-  - _9M9_ignore_d0_d1_d2_d3_d4
-  - _9P9_ignore_d0_d1_d2_d3_d4
+  - _▪M▪_▫ignore▫_▫d0▫_▫d1▫_▫d2▫_▫d3▫_▫d4▫_▫d5▫
+  - _▪P▪_▫ignore▫_▫d0▫_▫d1▫_▫d2▫_▫d3▫_▫d4▫_▫d5▫
+  - _▪M▪_▫ignore▫_▫d0▫_▫d1▫_▫d2▫_▫d3▫_▫d4▫
+  - _▪P▪_▫ignore▫_▫d0▫_▫d1▫_▫d2▫_▫d3▫_▫d4▫
 
 search:
   boost: 3

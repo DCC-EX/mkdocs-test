@@ -1,14 +1,14 @@
 ﻿---
 tags:
-  - _9J9_9A9_id
-  - _9J9_9A9
-  - _/
-  - _/_9START9_loco_route
-  - _/_9START9_route
-  - _/_9PAUSE9
-  - _/_9RESUME9
-  - _/_9KILL9_9ALL9
-  - _/_9KILL9_id
+  - _▪J▪_▪A▪_▫id▫
+  - _▪J▪_▪A▪
+  - _▫/▫
+  - _▫/▫_▪START▪_▫loco▫_▫route▫
+  - _▫/▫_▪START▪_▫route▫
+  - _▫/▫_▪PAUSE▪
+  - _▫/▫_▪RESUME▪
+  - _▫/▫_▪KILL▪_▪ALL▪
+  - _▫/▫_▪KILL▪_▫id▫
 
 search:
   boost: 3

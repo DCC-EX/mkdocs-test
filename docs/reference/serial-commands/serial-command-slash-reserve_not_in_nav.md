@@ -1,8 +1,8 @@
 ---
 tags:
-  - _/_9RESERVE9_section
-  - _/_9FREE9_section
-  - _/_9FREEALL9
+  - _▫/▫_▪RESERVE▪_▫section▫
+  - _▫/▫_▪FREE▪_▫section▫
+  - _▫/▫_▪FREEALL▪
 
 search:
   boost: 3

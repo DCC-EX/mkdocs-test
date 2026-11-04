@@ -1,6 +1,6 @@
 ---
 tags:
-  - _9J9_9G9
+  - _▪J▪_▪G▪
 
 search:
   boost: 3
