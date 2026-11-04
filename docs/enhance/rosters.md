@@ -41,7 +41,7 @@ To find the IP address:
 
 #### Accessing the Web Server
 
-==TODO== VERY HIGH! - needs detailed instructions for Roster Editing with a Web Browser.
+==TODO== URGENT - needs detailed instructions for Roster Editing with a Web Browser.
 
 Using a PC Web Browser:
 

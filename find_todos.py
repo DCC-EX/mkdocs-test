@@ -8,6 +8,7 @@ from pathlib import Path
 
 from click import style
 
+URGENT_TODO_PATTERN = re.compile(r"==TODO==\s*URGENT\b", re.IGNORECASE)
 TODO_MARKER_PATTERN = re.compile(r"==TODO==", re.IGNORECASE)
 MEDIUM_TODO_PATTERN = re.compile(r"==TODO==\s*MEDIUM\b", re.IGNORECASE)
 LOW_TODO_PATTERN = re.compile(r"==TODO==\s*LOW\b", re.IGNORECASE)
@@ -23,6 +24,10 @@ DEFAULT_IGNORE_FILES = {
     "toc.md",
 }
 DEFAULT_IGNORE_SUFFIXES = {
+    ".awk",
+    ".txt",
+    ".cfg",
+    ".css",
     ".py",
     ".pyc",
     ".yml",
@@ -63,6 +68,8 @@ def iter_text_files(scan_root: Path):
 def classify_todo_line(line: str) -> str | None:
     if not TODO_MARKER_PATTERN.search(line):
         return None
+    if URGENT_TODO_PATTERN.search(line):
+        return "urgent"
     if MEDIUM_TODO_PATTERN.search(line):
         return "medium"
     if LOW_TODO_PATTERN.search(line):
@@ -81,6 +88,7 @@ def build_report(root: Path, output_path: Path) -> int:
     scan_roots = [root / "docs", root / "snippets"]
     matches = []
     medium_matches = []
+    urgent_matches = []
     low_matches = []
     for scan_root in scan_roots:
         for path in iter_text_files(scan_root):
@@ -115,6 +123,8 @@ def build_report(root: Path, output_path: Path) -> int:
                     low_matches.append(entry)
                 elif category == "medium":
                     medium_matches.append(entry)
+                elif category == "urgent":
+                    urgent_matches.append(entry)
                 else:
                     matches.append(entry)
 
@@ -135,10 +145,24 @@ def build_report(root: Path, output_path: Path) -> int:
         " }\n"
         "</style>\n",
         f"Scanned roots: `{scan_roots[0]}`, `{scan_roots[1]}`\n\n",
-        "## High TODOs\n\n",
-        f"Total High TODO matches: {len(matches)}\n\n",
     ]
 
+    report_sections.append("## Urgent TODOs\n\n")
+    report_sections.append(f"Total urgent TODO matches: {len(urgent_matches)}\n\n")
+    if urgent_matches:
+        report_sections.append("| File | Line | Line text |\n")
+        report_sections.append("| --- | ---: | --- |\n")
+        report_sections.extend(
+            f"| {format_file_reference(item)} | {item['line_number']} | "
+            f"{html.escape(item['line'])} |\n"
+            for item in urgent_matches
+        )
+        report_sections.append("\n")
+    else:
+        report_sections.append("No urgent TODO entries found.\n")
+
+    report_sections.append("## High Priority TODOs\n\n")
+    report_sections.append(f"Total high priority TODO matches: {len(matches)}\n\n")
     if matches:
         report_sections.append("| File | Line | Line text |\n")
         report_sections.append("| --- | ---: | --- |\n")

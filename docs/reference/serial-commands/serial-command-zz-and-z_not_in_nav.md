@@ -84,7 +84,7 @@ Serial commands to >Manage pin/vpin outputs.
 
 * Response for `<z «vpin» «analogue» «profile» duration»>``, ``<z «vpin» «analogue» «profile»>``, ``<z «vpin» «analogue»>`
 
-    ==TODO== MEDIUM - Response
+    ==TODO== LOW - Response
 
 ----
 

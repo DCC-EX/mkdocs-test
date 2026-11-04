@@ -57,7 +57,7 @@ It is assumed that the reader intending to implement nodes is familiar with the 
 
 Each node will need its own ``myAutomation.h`` but otherwise operates exactly the same **EX-CommandStation** code. A definition (or possibly runtime switch) prevents the node from advertising itself to throttles or trying to generate a DCC waveform.
 
-( ==TODO== Installer assist in managing this?)
+( ==TODO== HIGH - Nodes - Installer assist in managing this?)
 
 ## Node WiFi
 
