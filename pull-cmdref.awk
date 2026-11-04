@@ -59,6 +59,8 @@ function sort_blocks(    i, j, tmp_key, tmp_value) {
         gsub(/\^/, "caret", linktag)
         # if linktag contains '-' change it to 'minus'
         gsub(/\-/, "minus", linktag)
+        # if linktag contains '/' change it to 'slash'
+        gsub(/\//, "slash", linktag)
         # surround uppercase underscore-delimited parts with '▫' or '▪'
         linktag = wrap_upper_parts(linktag)
         

@@ -2,13 +2,13 @@
 tags:
   - _▪J▪_▪A▪_▫id▫
   - _▪J▪_▪A▪
-  - _▫/▫
-  - _▫/▫_▪START▪_▫loco▫_▫route▫
-  - _▫/▫_▪START▪_▫route▫
-  - _▫/▫_▪PAUSE▪
-  - _▫/▫_▪RESUME▪
-  - _▫/▫_▪KILL▪_▪ALL▪
-  - _▫/▫_▪KILL▪_▫id▫
+  - _▫slash▫
+  - _▫slash▫_▪START▪_▫loco▫_▫route▫
+  - _▫slash▫_▪START▪_▫route▫
+  - _▫slash▫_▪PAUSE▪
+  - _▫slash▫_▪RESUME▪
+  - _▫slash▫_▪KILL▪_▪ALL▪
+  - _▫slash▫_▪KILL▪_▫id▫
 
 search:
   boost: 3

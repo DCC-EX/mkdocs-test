@@ -1,8 +1,8 @@
 ---
 tags:
-  - _▫/▫_▪RESERVE▪_▫section▫
-  - _▫/▫_▪FREE▪_▫section▫
-  - _▫/▫_▪FREEALL▪
+  - _▫slash▫_▪RESERVE▪_▫section▫
+  - _▫slash▫_▪FREE▪_▫section▫
+  - _▫slash▫_▪FREEALL▪
 
 search:
   boost: 3

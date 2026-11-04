@@ -1,8 +1,8 @@
 ﻿---
 tags:
-  - _▫/▫_▪RED▪_▫signal▫
-  - _▫/▫_▪AMBER▪_▫signal▫
-  - _▫/▫_▪GREEN▪_▫signal▫
+  - _▫slash▫_▪RED▪_▫signal▫
+  - _▫slash▫_▪AMBER▪_▫signal▫
+  - _▫slash▫_▪GREEN▪_▫signal▫
 
 search:
   boost: 3
