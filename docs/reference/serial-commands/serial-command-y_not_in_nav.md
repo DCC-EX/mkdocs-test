@@ -58,7 +58,7 @@ See the [Sounds page](/enhance/accessories/various-devices/sounds/index.md) for 
 
 ## Responses
 
-==TODO== MEDIUM - Responses
+==TODO== LOW - Responses
 
 ----
 

@@ -128,7 +128,7 @@ Common response parameters:
 
 * Response for ``<r «loco» «cv»>``
 
-    ==TODO== MEDIUM - Response for ``<r «loco» «cv»>``
+    ==TODO== LOW - Response for ``<r «loco» «cv»>``
 
 ### Writing CVs - Responses
 
@@ -140,11 +140,11 @@ Common response parameters:
 
 * Response for ``<W CONSIST «loco»>``
 
-    ==TODO== MEDIUM - Response for ``<W CONSIST «loco»>``
+    ==TODO== LOW - Response for ``<W CONSIST «loco»>``
 
 * Response for ``<W CONSIST «loco» REVERSE>``
 
-    ==TODO== MEDIUM - Response for ``<W CONSIST «loco» REVERSE>``
+    ==TODO== LOW - Response for ``<W CONSIST «loco» REVERSE>``
 
 * Response for ``<W «cv» «value»>``
     * ``<w «cv» «value»>``
@@ -154,7 +154,7 @@ Common response parameters:
 
 * Response for ``<W «cv» «bitValue» «bit»>``
 
-    ==TODO== MEDIUM - Response for ``<W «cv» «bitValue» «bit»>`
+    ==TODO== LOW - Response for ``<W «cv» «bitValue» «bit»>`
 
 * Response for ``<w «loco» «cv» «value»>``
 
@@ -168,7 +168,7 @@ Common response parameters:
 
 * Response for ``<b «loco» «cv» «bitValue» «bit»>``
 
-    ==TODO== MEDIUM - Response for ``<b «loco» «cv» «bitValue» «bit»>``
+    ==TODO== LOW - Response for ``<b «loco» «cv» «bitValue» «bit»>``
 
 ----
 

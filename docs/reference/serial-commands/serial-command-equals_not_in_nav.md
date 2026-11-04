@@ -2,6 +2,7 @@
 tags:
   - _=
   - _▫equals▫
+  - _▫equals▫_▫track▫_▫tracktype▫
   - _▫equals▫_▫track▫_▪MAIN▪
   - _▫equals▫_▫track▫_▪MAIN▪_▪INV▪
   - _▫equals▫_▫track▫_▪MAIN▪_▪AUTO▪

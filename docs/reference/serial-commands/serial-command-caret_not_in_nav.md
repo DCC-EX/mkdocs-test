@@ -2,7 +2,7 @@
 tags:
   - _▫caret▫
   - _▫caret▫_▫loco▫
-  - _▫caret▫_▫leadLoco▫_▫follower▫ [▫_▫follower2▫..7]▫
+  - _▫caret▫_▫ leadLoco▫_▫follower [▫_▫follower2..7]▫
 ---
 
 # Serial commands to: Manage EX-CommandStation Consists/MUs
