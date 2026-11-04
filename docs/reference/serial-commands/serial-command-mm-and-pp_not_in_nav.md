@@ -1,9 +1,11 @@
 ---
 tags:
+  - _▪M▪_▫ignore▫_▫d0▫_▫d1▫_▫[d2▫_▫d3▫_▫d4▫_▫d5]▫
+  - _▪P▪_▫ignore▫_▫d0▫_▫d1▫_▫[d2▫_▫d3▫_▫d4▫_▫d5]▫
   - _▪M▪_▫ignore▫_▫d0▫_▫d1▫_▫d2▫_▫d3▫_▫d4▫_▫d5▫
   - _▪P▪_▫ignore▫_▫d0▫_▫d1▫_▫d2▫_▫d3▫_▫d4▫_▫d5▫
-  - _▪M▪_▫ignore▫_▫d0▫_▫d1▫_▫d2▫_▫d3▫_▫d4▫
-  - _▪P▪_▫ignore▫_▫d0▫_▫d1▫_▫d2▫_▫d3▫_▫d4▫
+  - _▪M▪_▫ignore▫_▫d0▫_▫d1▫
+  - _▪P▪_▫ignore▫_▫d0▫_▫d1▫
 
 search:
   boost: 3
@@ -13,7 +15,7 @@ search:
 
 Serial commands to Send up to 6 byte DCC packet to MAIN or PROG.
 
-``<M «ignore» «d0» «d1» [«d2» [«d3» [«d4» [«d5»]]]]>``
+``<M «ignore» «d0» «d1» [«d2» [«d3» [«d4» [«d5»]]]]>``  
 ``<P «ignore» «d0» «d1» [«d2» [«d3» [«d4» [«d5»]]]]>``
 
 !!! warning "These commands can reprogram your decoders"
