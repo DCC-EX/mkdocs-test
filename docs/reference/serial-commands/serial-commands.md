@@ -307,3 +307,19 @@ Reference guide for serial commands used by **EX-CommandStations**, shown in fun
 | [`<M ignore d0 d1 d2 d3 d4 d5>`](?_▪M▪_▫ignore▫_▫d0▫_▫d1▫_▫[d2▫_▫d3▫_▫d4▫_▫d5]▫) | Send up to 5 byte DCC packet on MAIN track | `ignore`: Ignored, `d0-d5`: Hex bytes | Active |
 | [`<P ignore d0 d1 d2 d3 d4 d5>`](?_▪P▪_▫ignore▫_▫d0▫_▫d1▫_▫[d2▫_▫d3▫_▫d4▫_▫d5]▫) | Send up to 5 byte DCC packet on PROG track | `ignore`: Ignored, `d0-d5`: Hex bytes | Active |
 | [`<c>`](?_▫c▫) | Report main track current | None | ⚠️ Deprecated |
+
+## Signal Commands
+
+==TODO== MEDIUM - Signal Commands
+
+## Reserve/Block Commands
+
+==TODO== MEDIUM - Reserve/Block Commands
+
+## Automation Commands
+
+==TODO== MEDIUM - Automation Commands
+
+## WiFI and Ethernet Commands
+
+==TODO== MEDIUM - WiFi and EthernetCommands
