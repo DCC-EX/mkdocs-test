@@ -5,6 +5,7 @@ tags:
   - _▪T▪_▫id▫_▪DCC▪_▫linearAddr▫
   - _▪T▪_▫id▫_▫vpin▫_▫closedValue▫_▫thrownValue▫
   - _▪T▪_▫id▫_▪SERVO▪_▫vpin▫_▫closedValue▫_▫thrownValue▫
+  - _▪T▪_▫id▫_▪SERVO▪_▫vpin▫_▫closedValue▫_▫thrownValue▫_▫profile▫
   - _▪T▪_▫id▫_▪VPIN▪_▫vpin▫
   - _▪T▪_▫id▫
   - _▪T▪
@@ -25,6 +26,7 @@ Serial commands to define or manage Turnouts/Points.
 
 ``<T «id» DCC «addr» «subadd»>``
 ``<T «id» DCC «»>``
+``<T «id» SERVO «vpin» «closedValue» «thrownValue»>``
 ``<T «id» SERVO «vpin» «closedValue» «thrownValue» «profile»>``
 ``<T «id» VPIN «vpin»>``
 ``<T «id»>``
@@ -37,6 +39,7 @@ Serial commands to define or manage Turnouts/Points.
 
 * ``<T «id» DCC «addr» «subadd»>`` Create DCC turnout/point
 * ``<T «id» DCC «»>`` Create DCC turnout/point
+* ``<T «id» SERVO «vpin» «closedValue» «thrownValue»>`` Create Servo turnout/point
 * ``<T «id» SERVO «vpin» «closedValue» «thrownValue» «profile»>`` Create Servo turnout/point
 * ``<T «id» VPIN «vpin»>`` Create pin turnout/point
 * ``<T «id»>`` Delete turnout/point
