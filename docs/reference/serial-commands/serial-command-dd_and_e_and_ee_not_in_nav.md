@@ -1,8 +1,8 @@
 ---
 tags:
-  - _e
-  - _9E9
-  - _9D9_9EEPROM9
+  - _▫e▫
+  - _▪E▪
+  - _▪D▪_▪EEPROM▪
 ---
 
 # Serial commands to: Manage EEPROM <small>(Arduino Mega Only)</small>

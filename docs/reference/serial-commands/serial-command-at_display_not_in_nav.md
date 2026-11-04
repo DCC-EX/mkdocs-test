@@ -1,6 +1,6 @@
 ---
 tags:
-  - _@_display_row_text
+  - _▫@▫_▫display▫_▫row▫_▫text▫
 ---
 
 # Serial commands to: Display text on virtual LCD

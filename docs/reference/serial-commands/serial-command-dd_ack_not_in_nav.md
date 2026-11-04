@@ -1,13 +1,13 @@
 ﻿---
 tags:
-    - _9C9_9PROGBOOST9
-    - _9D9_9ACK9_9LIMIT9_value
-    - _9D9_9ACK9_9MAX9_value_9MS9
-    - _9D9_9ACK9_9MAX9_value
-    - _9D9_9ACK9_9MIN9_value_9MS9
-    - _9D9_9ACK9_9MIN9_value
-    - _9D9_9ACK9_onoff
-    - _9D9_9ACK9_9RETRY9_value
+    - _▪C▪_▪PROGBOOST▪
+    - _▪D▪_▪ACK▪_▪LIMIT▪_▫value▫
+    - _▪D▪_▪ACK▪_▪MAX▪_▫value_9MS9
+    - _▪D▪_▪ACK▪_▪MAX▪_▫value▫
+    - _▪D▪_▪ACK▪_▪MIN▪_▫value▫_9MS9
+    - _▪D▪_▪ACK▪_▪MIN▪_▫value▫
+    - _▪D▪_▪ACK▪_▫onoff▫
+    - _▪D▪_▪ACK▪_▪RETRY▪_▫value▫
 ---
 
 # Serial commands to: Modify System PROG track settings

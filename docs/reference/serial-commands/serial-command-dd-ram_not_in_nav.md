@@ -1,6 +1,6 @@
 ---
 tags:
-  - _9D9_9RAM9
+  - _▪D▪_▪RAM▪
 
 search:
   boost: 3

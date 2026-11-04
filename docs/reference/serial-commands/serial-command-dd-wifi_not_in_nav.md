@@ -1,7 +1,7 @@
 ﻿---
 tags:
-  - _9D9_9WIFI9_onoff
-  - _9D9_9WIFI9_9SHOW9
+  - _▪D▪_▪WIFI▪_▫onoff▫
+  - _▪D▪_▪WIFI▪_▪SHOW▪
 
 search:
   boost: 3

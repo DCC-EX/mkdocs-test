@@ -1,6 +1,6 @@
 ---
 tags:
-  - _9C9_9RAILCOM9_onoff
+  - _▪C▪_▪RAILCOM▪_▫onoff▫
 ---
 
 # Serial commands to: Enable/Disable Railcom Cutout

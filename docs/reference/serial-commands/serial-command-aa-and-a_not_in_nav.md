@@ -1,9 +1,9 @@
 ﻿---
 tags:
-    - _a_address_subAddr_activate
-    - _a_address_subAddr_activate_onoff
-    - _a_address_activate
-    - _9A9_address_value
+    - _▫a▫_▫address▫_▫subAddr▫_▫activate▫
+    - _▫a▫_▫address▫_▫subAddr▫_▫activate▫_▫onoff▫
+    - _▫a▫_▫address▫_▫activate▫
+    - _▪A▪_▫address▫_▫value▫
 ---
 
 # Serial commands to: Instruct Accessory Decoders

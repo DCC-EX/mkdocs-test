@@ -1,8 +1,8 @@
 ---
 tags:
-  - _9D9_9ANIN9_vpin
-  - _9D9_9ANOUT9_vpin_position
-  - _9D9_9ANOUT9_vpin_position_profile 
+  - _▪D▪_▪ANIN▪_▫vpin▫
+  - _▪D▪_▪ANOUT▪_▫vpin▫_▫position▫
+  - _▪D▪_▪ANOUT▪_▫vpin▫_▫position▫_▫profile▫
 ---
 
 # Serial commands to: Manage VPINs analogue values

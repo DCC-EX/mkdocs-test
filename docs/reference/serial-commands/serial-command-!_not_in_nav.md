@@ -1,10 +1,10 @@
 ﻿---
 tags:
-  - _!
-  - _!_▪P▪
-  - _!_▪R▪
-  - _!_▪Q▪
-  - _!_▪Q▪
+  - _▫!▫
+  - _▫!▫_▪P▪
+  - _▫!▫_▪R▪
+  - _▫!▫_▪Q▪
+  - _▫!▫_▪Q▪
 ---
 
 # Serial commands to: Emergency Stop (ESTOP) or Pause

@@ -1,12 +1,12 @@
 ---
 tags:
-    - _9D9_9CMD9_onoff
-    - _9D9_9EXRAIL9_onoff
-    - _9D9_9ETHERNET9_onoff
-    - _9D9_9WIT9_onoff
-    - _9D9_9WEBSOCKET9_onoff
-    - _9D9_9RAILCOM9_onoff
-    - _9D9_9LCN9_onoff
+    - _▪D▪_▪CMD▪_▫onoff▫
+    - _▪D▪_▪EXRAIL▪_▫onoff▫
+    - _▪D▪_▪ETHERNET▪_▫onoff▫
+    - _▪D▪_▪WIT▪_▫onoff▫
+    - _▪D▪_▪WEBSOCKET▪_▫onoff▫
+    - _▪D▪_▪RAILCOM▪_▫onoff▫
+    - _▪D▪_▪LCN▪_▫onoff▫
 ---
 
 # Serial commands to: Enable/Disable Various Diagnostic Messages

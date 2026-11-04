@@ -1,17 +1,17 @@
 ﻿---
 tags:
-    - _9I9
-    - _9I9_id_9ADD9_position_value_angle
-    - _9I9_id_9DCC9_home
-    - _9I9_id_9EXTT9_vpin_home
-    - _9I9_id_position_activity
-    - _9I9_id_position
-    - _9I9_id
-    - _9D9_9TT9_vpin_steps_activity
-    - _9D9_9TT9_vpin_steps
-    - _9J9_9O9_id
-    - _9J9_9O9
-    - _9J9_9P9_id
+    - _▪I▪
+    - _▪I▪_▫id▫_▪ADD▪_▫position▫_▫value▫_▫angle▫
+    - _▪I▪_▫id▫_▪DCC▪_▫home▫
+    - _▪I▪_▫id▫_▪EXTT▪_▫vpin▫_▫home▫
+    - _▪I▪_▫id▫_▫position▫_▫activity▫
+    - _▪I▪_▫id▫_▫position▫
+    - _▪I▪_▫id▫
+    - _▪D▪_▪TT▪_▫vpin▫_▫steps▫_▫activity▫
+    - _▪D▪_▪TT▪_▫vpin▫_▫steps▫
+    - _▪J▪_▪O▪_▫id▫
+    - _▪J▪_▪O▪
+    - _▪J▪_▪P▪_▫id▫
 
 search:
   boost: 3

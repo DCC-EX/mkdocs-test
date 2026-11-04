@@ -1,7 +1,7 @@
 ---
 tags:
-  - _9d9_9hal9_9show9
-  - _9d9_9hal9_9reset9
+  - _▪D▪_▪HAL▪_▪SHOW▪
+  - _▪D▪_▪HAL▪_▪RESET▪
 ---
 
 # Serial commands to: List or Reset the HAL Devices

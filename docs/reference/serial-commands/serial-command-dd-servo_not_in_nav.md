@@ -1,7 +1,7 @@
 ---
 tags:
-  - _9D9_9SERVO9_vpin_position_profile
-  - _9D9_9SERVO9_vpin_position
+  - _▪D▪_▪SERVO▪_▫vpin▫_▫position▫_▫profile▫
+  - _▪D▪_▪SERVO▪_▫vpin▫_▫position▫
 
 search:
   boost: 3

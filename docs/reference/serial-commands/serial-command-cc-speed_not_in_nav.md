@@ -1,7 +1,7 @@
 ---
 tags:
-  - _9C9_9SPEED289
-  - _9C9_9SPEED1289
+  - _▪C▪_▪SPEED289▪
+  - _▪C▪_▪SPEED1289▪
 ---
 
 # Serial commands to: Set DCC speed commands number of steps

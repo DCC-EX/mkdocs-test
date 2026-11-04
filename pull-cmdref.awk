@@ -51,14 +51,14 @@ function sort_blocks(    i, j, tmp_key, tmp_value) {
         linktag=arr[1]
         # Replace commas in "linktag" with underscores
         gsub(/,/, "_", linktag);
-        # if linktag starts with '#' change it to '8hash8'
-        gsub(/#/, "●hash●", linktag)
-        # if linktag starts with '=' change it to '8equals8'
-        gsub(/=/, "●equals●", linktag)
-        # if linktag contains '^' change it to '8caret8'
-        gsub(/\^/, "●caret●", linktag)
-        # if linktag contains '-' change it to '8minus8'
-        gsub(/\-/, "●minus●", linktag)
+        # if linktag starts with '#' change it to 'hash'
+        gsub(/#/, "hash", linktag)
+        # if linktag starts with '=' change it to 'equals'
+        gsub(/=/, "equals", linktag)
+        # if linktag contains '^' change it to 'caret'
+        gsub(/\^/, "caret", linktag)
+        # if linktag contains '-' change it to 'minus'
+        gsub(/\-/, "minus", linktag)
         # surround uppercase underscore-delimited parts with '▫' or '▪'
         linktag = wrap_upper_parts(linktag)
         

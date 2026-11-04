@@ -1,6 +1,6 @@
 ---
 tags:
-  - _@
+  - _▫@▫
 ---
 
 # Serial command to: Request all virtual msgs to this client
