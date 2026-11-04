@@ -1,8 +1,8 @@
 ﻿---
 tags:
-  - _equals_track_9DC9_loco
-  - _equals_track_9DC9_9INV9_loco
-  - _equals_track_9DC9_9X9_loco
+  - _▫equals▫_▫track▫_▪DC▪_▫loco▫
+  - _▫equals▫_▫track▫_▪DC▪_▪INV▪_▫loco▫
+  - _▫equals▫_▫track▫_▪DC▪_▪X▪_▫loco▫
 ---
 
 # Running a Legacy DC layout

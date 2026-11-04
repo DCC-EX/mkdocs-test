@@ -15,7 +15,9 @@ function wrap_upper_parts(tag,    count, i, parts, out) {
     out = ""
     for (i = 1; i <= count; i++) {
         if (parts[i] ~ /^[A-Z0-9]+$/ && parts[i] ~ /[A-Z]/) {
-            parts[i] = "9" parts[i] "9"
+            parts[i] = "▪" parts[i] "▪"
+        } else {
+            parts[i] = "▫" parts[i] "▫"
         }
         out = out (i == 1 ? "" : "_") parts[i]
     }
@@ -50,14 +52,14 @@ function sort_blocks(    i, j, tmp_key, tmp_value) {
         # Replace commas in "linktag" with underscores
         gsub(/,/, "_", linktag);
         # if linktag starts with '#' change it to '8hash8'
-        gsub(/#/, "8hash8", linktag)
+        gsub(/#/, "●hash●", linktag)
         # if linktag starts with '=' change it to '8equals8'
-        gsub(/=/, "8equals8", linktag)
+        gsub(/=/, "●equals●", linktag)
         # if linktag contains '^' change it to '8caret8'
-        gsub(/\^/, "8caret8", linktag)
+        gsub(/\^/, "●caret●", linktag)
         # if linktag contains '-' change it to '8minus8'
-        gsub(/\-/, "8minus8", linktag)
-        # surround uppercase underscore-delimited parts with '9'
+        gsub(/\-/, "●minus●", linktag)
+        # surround uppercase underscore-delimited parts with '▫' or '▪'
         linktag = wrap_upper_parts(linktag)
         
         block_count++

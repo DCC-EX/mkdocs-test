@@ -1,14 +1,14 @@
 ﻿---
 tags:
   - _1
-  - _1_9MAIN9
-  - _1_9PROG9
-  - _1_9JOIN9
-  - _1_track
+  - _1_▪MAIN▪
+  - _1_▪PROG▪
+  - _1_▪JOIN▪
+  - _1_▫track▫
   - _0
-  - _0_9MAIN9
-  - _0_9PROG9
-  - _0_track
+  - _0_▪MAIN▪
+  - _0_▪PROG▪
+  - _0_▫track▫
 ---
 
 # Serial commands to: Turn track power on or off

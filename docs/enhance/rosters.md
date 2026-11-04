@@ -1,8 +1,8 @@
 ---
 tags:
-  - _9J9_9R9_locoid_name_functionMap
-  - _9J9_9R9_9SAVE9
-  - _9J9_9R9_id_9DELETE9
+  - _▪J▪_▪R▪_▫locoid▫_▫name▫_▫functionMap▫
+  - _▪J▪_▪R▪_▪SAVE▪
+  - _▪J▪_▪R▪_▫id▫_▪DELETE▪
 ---
 
 # Roster

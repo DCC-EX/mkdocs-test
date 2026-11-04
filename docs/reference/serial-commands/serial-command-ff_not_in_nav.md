@@ -1,9 +1,9 @@
 ﻿---
 tags:
-  - _9F9_loco_9DCCFREQ9_freqValue
-  - _9F9_loco_function_onoff
-  - _f_loco_byte1
-  - _f_loco_group_byte2
+  - _▪F▪_▫loco▫_▪DCCFREQ▪_▫freqValue▫
+  - _▪F▪_▫loco▫_▫function▫_▫onoff▫
+  - _▫f▫_▫loco▫_▫byte1▫
+  - _▫f▫_▫loco▫_▫group▫_▫byte2▫
 
 search:
   boost: 3
@@ -33,10 +33,11 @@ Serial command to turn loco decoder functions ON or OFF or set the DC PWM freque
         * ``1`` = on
         * ``0`` = off
 * If **DCCFREQ** plus **«freqValue»** are supplied - to set the PWM frequency
-    * **«freqValue»** = one of: () ==TODO== What is the format/options for this parameter? )
-        * ??? = Mid frequency - 490Hz
-        * ??? = High frequency - 3400Hz
-        * ??? = Supersonic - 62500Hz
+    * **«freqValue»** = one of:
+        * ``0`` = Default
+        * ``1`` = Mid frequency - 490Hz
+        * ``2`` = High frequency - 3400Hz
+        * ``3`` = Supersonic - 62500Hz
 
 ## Response
 

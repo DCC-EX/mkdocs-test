@@ -10,3 +10,7 @@ Request number of simultaneously supported locos
 Socket connected apps use this as a heartbeat.
 
 UDP connected apps send this if they are unable to listen for multicast updates, the CS will send unicasts.
+
+### [`<F «loco» DCCFREQ «freqValue»>`](?_▪F▪_▫loco▫_▪DCCFREQ▪_▫freqValue▫)
+
+Set DC frequency for loco
