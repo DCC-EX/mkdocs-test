@@ -1,13 +1,13 @@
 ﻿---
 tags:
-    - _9Z9
-    - _9Z9_id_active
-    - _9Z9_id_pin_iFlag
-    - _9Z9_id
-    - _z_signedVpin
-    - _z_vpin_analogue_profile_duration
-    - _z_vpin_analogue_profile
-    - _z_vpin_analogue
+    - _▪Z▪
+    - _▪Z▪_▫id▫_▫active▫
+    - _▪Z▪_▫id▫_▫pin▫_▫iFlag▫
+    - _▪Z▪_▫id▫
+    - _▫z▫_▫signedVpin▫
+    - _▫z▫_▫vpin▫_▫analogue▫_▫profile▫_▫duration▫
+    - _▫z▫_▫vpin▫_▫analogue▫_▫profile▫
+    - _▫z▫_▫vpin▫_▫analogue▫
 
 search:
   boost: 3

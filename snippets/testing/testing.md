@@ -89,7 +89,7 @@ Refer to the [how to connect via WiFi](/throttles/connecting-wifi.md) page for h
 - acquire the loco in the throttle app (see appropriate page)
 - control the loco
 
-==TODO== MEDIUM - what to do if any of the initial testing steps fail -->
+==TODO== MEDIUM - what to do if any of the initial testing steps fail
 
 ----
 

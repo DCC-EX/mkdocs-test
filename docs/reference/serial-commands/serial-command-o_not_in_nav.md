@@ -1,9 +1,9 @@
 ﻿---
 tags:
-    - _o_vpin_count
-    - _o_vpin_r_g_b_count
-    - _o_vpin_r_g_b
-    - _o_vpin
+    - _▫o▫_▫vpin▫_▫count▫
+    - _▫o▫_▫vpin▫_▫r▫_▫g▫_▫b▫_▫count▫
+    - _▫o▫_▫vpin▫_▫r▫_▫g▫_▫b▫
+    - _▫o▫_▫vpin▫
 
 search:
   boost: 3

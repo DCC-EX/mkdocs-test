@@ -1,9 +1,9 @@
 ---
 tags:
-  - _m_9LINEAR9
-  - _m_loco_accelerating_braking
-  - _m_loco_momentum
-  - _m_9POWER9
+  - _▫m▫_▪LINEAR▪
+  - _▫m▫_▫loco▫_▫accelerating▫_▫braking▫
+  - _▫m▫_▫loco▫_▫momentum▫
+  - _▫m▫_▪POWER▪
 
 search:
   boost: 3

@@ -2,15 +2,15 @@
 hide:
   - tags
 tags:
-    - _9C9_9WIFI9_9AP9_ssid_password_channel
-    - _9C9_9WIFI9_9AP9_ssid_password
-    - _9C9_9WIFI9_9DEFAULT9
-    - _9C9_9WIFI9_9HIDDENAP9_ssid_password_channel
-    - _9C9_9WIFI9_9HIDDENAP9_ssid_password
-    - _9C9_9WIFI9_9HOSTNAME9_hostname
-    - _9C9_9WIFI9_onoff
-    - _9C9_9WIFI9_ssid_password
-    - _9C9_9WIFI9_9TEMP9_ssid_password
+    - _▪C▪_▪WIFI▪_▪AP▪_▫ssid▫_▫password▫_▫channel▫
+    - _▪C▪_▪WIFI▪_▪AP▪_▫ssid▫_▫password▫
+    - _▪C▪_▪WIFI▪_▪DEFAULT▪
+    - _▪C▪_▪WIFI▪_▪HIDDENAP▪_▫ssid▫_▫password▫_▫channel▫
+    - _▪C▪_▪WIFI▪_▪HIDDENAP▪_▫ssid▫_▫password▫
+    - _▪C▪_▪WIFI▪_▪HOSTNAME▪_▫hostname▫
+    - _▪C▪_▪WIFI▪_▫onoff▫
+    - _▪C▪_▪WIFI▪_▫ssid▫_▫password▫
+    - _▪C▪_▪WIFI▪_▪TEMP▪_▫ssid▫_▫password▫
 ---
 
 # WiFi Configuration for version 5.7.0+ <br/><small>Graphical User Interface Options</small>

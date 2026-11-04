@@ -1,8 +1,8 @@
 ﻿---
 tags:
-  - _t_loco
-  - _t_loco_tSpeed_direction
-  - _t_ignore_loco_tSpeed_direction
+  - _▫t▫_▫loco▫
+  - _▫t▫_▫loco▫_▫tSpeed▫_▫direction▫
+  - _▫t▫_▫ignore▫_▫loco▫_▫tSpeed▫_▫direction▫
 
 search:
   boost: 3

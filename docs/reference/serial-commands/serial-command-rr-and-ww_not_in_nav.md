@@ -1,20 +1,20 @@
 ﻿---
 tags:
-    - _9R9
-    - _9R9_cv
-    - _9R9_9LOCOID9
-    - _9R9_9CONSIST9
-    - _r_loco_cv
-    - _9V9_cv_bitPosition_bitvalue
-    - _9V9_cv_value
-    - _9W9_loco
-    - _9W9_9CONSIST9_loco
-    - _9W9_9CONSIST9_loco_9REVERSE9
-    - _9W9_cv_value
-    - _9W9_cv_bitPosition_bitValue
-    - _w_loco_cv_value
-    - _9B9_cv_bitPosition_bitValue
-    - _b_loco_cv_bitPosition_bitValue
+    - _▪R▪
+    - _▪R▪_▫cv▫
+    - _▪R▪_▪LOCOID▪
+    - _▪R▪_▪CONSIST▪
+    - _▫r▫_▫loco▫_▫cv▫
+    - _▪V▪_▫cv▫_▫bitPosition▫_▫bitvalue▫
+    - _▪V▪_▫cv▫_▫value▫
+    - _▪W▪_▫loco▫
+    - _▪W▪_▪CONSIST▪_▫loco▫
+    - _▪W▪_▪CONSIST▪_▫loco▫_▪REVERSE▪
+    - _▪W▪_▫cv▫_▫value▫
+    - _▪W▪_▫cv▫_▫bitPosition▫_▫bitValue▫
+    - _▫w▫_▫loco▫_▫cv▫_▫value▫
+    - _▪B▪_▫cv▫_▫bitPosition▫_▫bitValue▫
+    - _▫b▫_▫loco▫_▫cv▫_▫bitPosition▫_▫bitValue▫
 
 search:
   boost: 3

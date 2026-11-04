@@ -1,8 +1,8 @@
 ---
 tags:
-  - _8caret8
-  - _8caret8_loco
-  - _8caret8_leadLoco_follower [_follower2..7]
+  - _▫caret▫
+  - _▫caret▫_▫loco▫
+  - _▫caret▫_▫leadLoco▫_▫follower▫ [▫_▫follower2▫..7]▫
 ---
 
 # Serial commands to: Manage EX-CommandStation Consists/MUs

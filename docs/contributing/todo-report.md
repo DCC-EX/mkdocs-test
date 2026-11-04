@@ -20,7 +20,7 @@ Scanned roots: `C:\Users\akers\OneDrive\github\github_doco\mkdocs-test\docs`, `C
 
 ## High TODOs
 
-Total High TODO matches: 9
+Total High TODO matches: 8
 
 | File | Line | Line text |
 | --- | ---: | --- |
@@ -29,14 +29,13 @@ Total High TODO matches: 9
 | [docs/throttles/index.md](../throttles/index.md) | 45 | ==TODO== HIGH - Overview of DCC Accessory Operation |
 | [docs/reference/nodes/compiling.md](../reference/nodes/compiling.md) | 3 | ==TODO== HIGH - Compiling a Node page |
 | [docs/reference/nodes/index.md](../reference/nodes/index.md) | 60 | ( ==TODO== Installer assist in managing this?) |
-| [docs/reference/serial-commands/serial-command-ff_not_in_nav.md](../reference/serial-commands/serial-command-ff_not_in_nav.md) | 36 | * **«freqValue»** = one of: () ==TODO== What is the format/options for this parameter? ) |
 | [docs/prepare-to-use/installer/platformio.md](../prepare-to-use/installer/platformio.md) | 5 | ==TODO== - provide setup help for VSC/PlatformIO. |
 | [docs/news/articles/20261021b.md](../news/articles/20261021b.md) | 17 | ==TODO== VERY HIGH - New in Version 6.0 new article. Plus change date and file name |
 | snippets/use/connect-and-use-a-wifi-throttle.md | 3 | &lt;!-- ==TODO== need to include an iOS app instructions --&gt; |
 
 ## Medium priority TODOs
 
-Total medium priority TODO matches: 64
+Total medium priority TODO matches: 62
 
 | File | Line | Line text |
 | --- | ---: | --- |
@@ -83,8 +82,6 @@ Total medium priority TODO matches: 64
 | [docs/reference/hardware/ethernet-boards/index.md](../reference/hardware/ethernet-boards/index.md) | 3 | ==TODO== MEDIUM - Move the legacy pages |
 | [docs/reference/hardware/wifi-boards/index.md](../reference/hardware/wifi-boards/index.md) | 3 | ==TODO== MEDIUM - Move the legacy pages |
 | [docs/products/ex-dccinspector/index.md](../products/ex-dccinspector/index.md) | 6 | ==TODO== MEDIUM - This page needs to be expanded |
-| [docs/products/ex-sensorcam/ex-sensor-manual-abridged.md](../products/ex-sensorcam/ex-sensor-manual-abridged.md) | 5 | &lt;!-- ==TODO== MEDIUM - change the references on this page from the Arduino IDE to VSC/PIO --&gt; |
-| [docs/products/ex-sensorcam/installation-guide.md](../products/ex-sensorcam/installation-guide.md) | 3 | &lt;!-- ==TODO== MEDIUM - change the references on this page from the Arduino IDE to VSC/PIO --&gt; |
 | [docs/products/ex-webthrottle/ex-webthrottle.md](../products/ex-webthrottle/ex-webthrottle.md) | 196 | ==TODO== MEDIUM - This needs to be expanded. |
 | [docs/prepare-to-use/connecting/connecting-diy.md](../prepare-to-use/connecting/connecting-diy.md) | 19 | &lt;!-- ==TODO== MEDIUM - This section could be improved. Physically connecting DIY EX-CS to a layout - EX8874 --&gt; |
 | [docs/prepare-to-use/connecting/connecting-diy.md](../prepare-to-use/connecting/connecting-diy.md) | 32 | &lt;!-- ==TODO== MEDIUM - This section could be improved. Physically connecting DIY EX-CS to a layout - Standard Arduino Motor Shield --&gt; |
@@ -103,16 +100,16 @@ Total medium priority TODO matches: 64
 | [docs/enhance/accessories/i2c/i2c-gpio-expanders.md](../enhance/accessories/i2c/i2c-gpio-expanders.md) | 41 | ==TODO== MEDIUM - diagram for connecting the EX-CSB1 to an GPIO Expander via the headers |
 | [docs/contributing/code/contributing-code.md](code/contributing-code.md) | 13 | &lt;!-- ==TODO== MEDIUM - change the references on this page/section from the Arduino IDE to VSC/PIO --&gt; |
 | snippets/testing/testing.md | 82 | ==TODO== MEDIUM - basic steps for initial testing with a Smart Device over WiFi. needs to be a cut down version of the /throttles/connecting-wifi.md page. |
-| snippets/testing/testing.md | 92 | ==TODO== MEDIUM - what to do if any of the initial testing steps fail --&gt; |
+| snippets/testing/testing.md | 92 | ==TODO== MEDIUM - what to do if any of the initial testing steps fail |
 
 ## Low priority TODOs
 
-Total low priority TODO matches: 118
+Total low priority TODO matches: 119
 
 | File | Line | Line text |
 | --- | ---: | --- |
 | [docs/contributing/release-checklist.md](release-checklist.md) | 128 | - ==TODO== LOW - Need to change the &#x27;WiThrottle&#x27; iOS app references to &#x27;ThrottleCard&#x27; |
-| [docs/news/index.md](../news/index.md) | 13 | ==TODO== LOW - Notes on how to get the RSS feed here when figured out. |
+| [docs/news/index.md](../news/index.md) | 13 | &lt;!-- ==TODO== LOW - Notes on how to get the RSS feed here when figured out. --&gt; |
 | [docs/throttles/loco-programming/programming-tips.md](../throttles/loco-programming/programming-tips.md) | 13 | ==TODO== LOW - Fill this page out. |
 | [docs/reference/command-station-architecture/io-device-drivers.md](../reference/command-station-architecture/io-device-drivers.md) | 176 | This will need to be done in the ==TODO== LOW -  :doc:`Arduino-IDE &lt;/ex-commandstation/advanced-setup/installation-options/arduino-ide&gt;`, so first make sure you have followed these steps to load up the |Arduino IDE|. |
 | [docs/reference/command-station-architecture/io-device-drivers.md](../reference/command-station-architecture/io-device-drivers.md) | 180 | First you will need to add a new file, just like the ==TODO== LOW - :ref:`config.h file &lt;ex-commandstation/advanced-setup/installation-options/arduino-ide:Copy the config.example.h file (or rename it)&gt;`. |
@@ -152,7 +149,7 @@ Total low priority TODO matches: 118
 | [docs/reference/serial-commands/serial-command-dd_hal_not_in_nav.md](../reference/serial-commands/serial-command-dd_hal_not_in_nav.md) | 34 | ==TODO== LOW - Responses |
 | [docs/reference/serial-commands/serial-command-equals_not_in_nav.md](../reference/serial-commands/serial-command-equals_not_in_nav.md) | 86 | * ==TODO== LOW - Example Commands |
 | [docs/reference/serial-commands/serial-command-equals_not_in_nav.md](../reference/serial-commands/serial-command-equals_not_in_nav.md) | 92 | * ==TODO== LOW - Example Responses |
-| [docs/reference/serial-commands/serial-command-ff_not_in_nav.md](../reference/serial-commands/serial-command-ff_not_in_nav.md) | 72 | * ==TODO== LOW - Example Responses |
+| [docs/reference/serial-commands/serial-command-ff_not_in_nav.md](../reference/serial-commands/serial-command-ff_not_in_nav.md) | 74 | * ==TODO== LOW - Example Responses |
 | [docs/reference/serial-commands/serial-command-ii_not_in_nav.md](../reference/serial-commands/serial-command-ii_not_in_nav.md) | 151 | * ==TODO== LOW - Example Commands |
 | [docs/reference/serial-commands/serial-command-ii_not_in_nav.md](../reference/serial-commands/serial-command-ii_not_in_nav.md) | 178 | * ==TODO== LOW - Example Responses |
 | [docs/reference/serial-commands/serial-command-jj-aa-and-slash_not_in_nav.md](../reference/serial-commands/serial-command-jj-aa-and-slash_not_in_nav.md) | 82 | * ==TODO== LOW - Example Commands |
@@ -205,7 +202,6 @@ Total low priority TODO matches: 118
 | [docs/reference/throttle-writers/throttle-writers-guide.md](../reference/throttle-writers/throttle-writers-guide.md) | 140 | ==TODO== LOW DCC Accessory Control |
 | [docs/reference/throttle-writers/throttle-writers-guide.md](../reference/throttle-writers/throttle-writers-guide.md) | 166 | Routes and Automations can also have their current status and caption altered dynamically by **EXRAIL** (docs ==TODO== LOW) |
 | [docs/reference/throttle-writers/throttle-writers-guide.md](../reference/throttle-writers/throttle-writers-guide.md) | 170 | ==TODO== LOW Route Status |
-| [docs/reference/throttle-writers/throttle-writers-guide.md](../reference/throttle-writers/throttle-writers-guide.md) | 201 | ## COMMANDS TO AVOID ==TODO== LOW |
 | [docs/reference/throttle-writers/throttle-writers-guide.md](../reference/throttle-writers/throttle-writers-guide.md) | 217 | ==TODO== LOW Gauges |
 | [docs/reference/throttle-writers/throttle-writers-guide.md](../reference/throttle-writers/throttle-writers-guide.md) | 223 | ==TODO== LOW TCP VS UDP |
 | [docs/reference/tools/diagnostic-tools.md](../reference/tools/diagnostic-tools.md) | 3 | &lt;!-- ==TODO== LOW - change the references on this page/section from the Arduino IDE to VSC/PIO --&gt; |
@@ -217,10 +213,12 @@ Total low priority TODO matches: 118
 | [docs/reference/hardware/hal/hal-config.md](../reference/hardware/hal/hal-config.md) | 3 | &lt;!-- ==TODO== LOW - change references in this document from the Arduino IDE to VSC/PIO --&gt; |
 | [docs/reference/hardware/hal/index.md](../reference/hardware/hal/index.md) | 3 | ==TODO== LOW need a HAL intro page |
 | [docs/products/ex-fastclock/installation.md](../products/ex-fastclock/installation.md) | 12 | &lt;!-- ==TODO== LOW - change the references on this page/section from the Arduino IDE to VSC/PIO --&gt; |
+| [docs/products/ex-sensorcam/ex-sensor-manual-abridged.md](../products/ex-sensorcam/ex-sensor-manual-abridged.md) | 5 | &lt;!-- ==TODO== LOW - change the references on this page from the Arduino IDE to VSC/PIO --&gt; |
 | [docs/products/ex-sensorcam/ex-sensor-manual.md](../products/ex-sensorcam/ex-sensor-manual.md) | 5 | &lt;!-- ==TODO== LOW - change the references on this page from the Arduino IDE to VSC/PIO --&gt; |
+| [docs/products/ex-sensorcam/installation-guide.md](../products/ex-sensorcam/installation-guide.md) | 3 | &lt;!-- ==TODO== LOW - change the references on this page from the Arduino IDE to VSC/PIO --&gt; |
 | [docs/products/ex-turntable/assembly.md](../products/ex-turntable/assembly.md) | 3 | &lt;!-- ==TODO== LOW - change the references on this page from the Arduino IDE to VSC/PIO --&gt; |
 | [docs/products/ex-turntable/configure.md](../products/ex-turntable/configure.md) | 3 | &lt;!-- ==TODO== LOW - check the current version number of EX-Turntable and adjust the version notes on this page as needed --&gt; |
-| [docs/products/ex-turntable/ex-tt-troubleshooting.md](../products/ex-turntable/ex-tt-troubleshooting.md) | 7 | ==TODO== LOW - Frequently Asked Questions |
+| [docs/products/ex-turntable/ex-tt-troubleshooting.md](../products/ex-turntable/ex-tt-troubleshooting.md) | 7 | &lt;!-- ==TODO== LOW - Frequently Asked Questions --&gt; |
 | [docs/prepare-to-use/connecting/connecting-diy.md](../prepare-to-use/connecting/connecting-diy.md) | 61 | ==TODO== LOW - physically connecting DIY EX-CS to a layout - Other Motor Shields |
 | [docs/prepare-to-use/connecting/index.md](../prepare-to-use/connecting/index.md) | 14 | If you plan to run DC trains rather than the default of DCC, there are other considerations. Refer to ==TODO== LOW DC page for more information. |
 | [docs/prepare-to-use/installer/install-ex-ioexpander.md](../prepare-to-use/installer/install-ex-ioexpander.md) | 3 | ==TODO== LOW - complete EX-Installer EX-IOExpander page needed |

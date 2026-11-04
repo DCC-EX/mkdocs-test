@@ -1,6 +1,6 @@
 ---
 tags:
-  - _@_display_row_text
+  - _▫@▫_▫display▫_▫row▫_▫text▫
 ---
 
 # Serial commands to: Display text on virtual LCD
@@ -44,8 +44,6 @@ Serial command to display text on virtual LCD at specified row.
 ### *Example Responses:*
 
 * ==TODO== LOW - Example Responses
-
-
 
 <style>
   .md-typeset h1 {

@@ -1,10 +1,10 @@
 ﻿---
 tags:
-  - _9J9_9R9
-  - _9J9_9R9_locoid
-  - _9J9_9R9_locoid_name_functionMap
-  - _9J9_9R9_9SAVE9
-  - _9J9_9R9_locoid_9DELETE9
+  - _▪J▪_▪R▪
+  - _▪J▪_▪R▪_▫locoid▫
+  - _▪J▪_▪R▪_▫locoid▫_▫name▫_▫functionMap▫
+  - _▪J▪_▪R▪_▪SAVE▪
+  - _▪J▪_▪R▪_▫locoid▫_▪DELETE▪
 
 search:
   boost: 3

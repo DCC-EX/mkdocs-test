@@ -1,11 +1,11 @@
 ﻿---
 tags:
-  - _9J9_9M9
-  - _9J9_9M9_9CLEAR9_9ALL9
-  - _9J9_9M9_9CLEAR9_9ANY9_locoId
-  - _9J9_9M9_9CLEAR9_stash_id
-  - _9J9_9M9_stash_id
-  - _9J9_9M9_stashId_locoId
+  - _▪J▪_▪M▪
+  - _▪J▪_▪M▪_▪CLEAR▪_▪ALL▪
+  - _▪J▪_▪M▪_▪CLEAR▪_▪ANY▪_▫locoId▫
+  - _▪J▪_▪M▪_▪CLEAR▪_▫stash▫_▫id▫
+  - _▪J▪_▪M▪_stash_▫id▫
+  - _▪J▪_▪M▪_stashId_▫locoId▫
 ---
 # Using STASH to remember where locos are parked
 

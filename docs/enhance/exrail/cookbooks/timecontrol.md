@@ -1,7 +1,7 @@
 ---
 tags:
-  - _9J9_9C9
-  - _9J9_9C9_mmmm_nn
+  - _▪J▪_▪C▪
+  - _▪J▪_▪C▪_▫mmmm▫_▫nn▫
 ---
 
 # Time Control

@@ -1,16 +1,16 @@
 ﻿---
 tags:
-    - _y_vpin_9EQ9_eq
-    - _y_vpin_9FOLDER9_folder
-    - _y_vpin_9PAUSE9
-    - _y_vpin_9PLAY9_trackNumber_volume
-    - _y_vpin_9PLAY9_trackNumber
-    - _y_vpin_9REPEAT9_trackNumber_volume
-    - _y_vpin_9REPEAT9_trackNumber
-    - _y_vpin_9RESET9
-    - _y_vpin_9RESUME9
-    - _y_vpin_9STOP9
-    - _y_vpin_9VOL9_volume
+    - _▫y▫_▫vpin▫_▪EQ▪_▫eq▫
+    - _▫y▫_▫vpin▫_▪FOLDER▪_▫folder▫
+    - _▫y▫_▫vpin▫_▪PAUSE▪
+    - _▫y▫_▫vpin▫_▪PLAY▪_▫trackNumber▫_▫volume▫
+    - _▫y▫_▫vpin▫_▪PLAY▪_▫trackNumber▫
+    - _▫y▫_▫vpin▫_▪REPEAT▪_▫trackNumber▫_▫volume▫
+    - _▫y▫_▫vpin▫_▪REPEAT▪_▫trackNumber▫
+    - _▫y▫_▫vpin▫_▪RESET▪
+    - _▫y▫_▫vpin▫_▪RESUME▪
+    - _▫y▫_▫vpin▫_▪STOP▪
+    - _▫y▫_▫vpin▫_▪VOL▪_▫volume▫
 
 search:
   boost: 3

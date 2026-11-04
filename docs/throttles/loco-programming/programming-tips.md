@@ -2,11 +2,11 @@
 search:
     boost: 2
 tags:
-    - _9D9_9ACK9_9MAX9_value_9MS9
-    - _9D9_9ACK9_9MAX9_value
-    - _9D9_9ACK9_9MIN9_value_9MS9
-    - _9D9_9ACK9_9MIN9_value
-    - _9D9_9ACK9_onoff
+    - _▪D▪_▪ACK▪_▪MAX▪_▫value▫_▪MS▪
+    - _▪D▪_▪ACK▪_▪MAX▪_▫value▫
+    - _▪D▪_▪ACK▪_▪MIN▪_▫value▫_▪MS▪
+    - _▪D▪_▪ACK▪_▪MIN▪_▫value▫
+    - _▪D▪_▪ACK▪_▫onoff▫
 ---
 # CV Programming Tips
 

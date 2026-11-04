@@ -1,7 +1,7 @@
 ---
 tags:
-  - _9L9
-  - _9L9_eventId
+  - _▪L▪
+  - _▪L▪_▫eventId▫
 
 search:
   boost: 3

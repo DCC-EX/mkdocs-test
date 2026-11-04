@@ -1,8 +1,8 @@
 ﻿---
 tags:
-  - _9N9_
-  - _9N9_9Q9
-  - _9N9_cmd_value
+  - _▫N▪_
+  - _▫N▪_▪Q▪
+  - _▪N▪_▫cmd▫_▫value▫
 ---
 
 # Native EX-SensorCAM Command List

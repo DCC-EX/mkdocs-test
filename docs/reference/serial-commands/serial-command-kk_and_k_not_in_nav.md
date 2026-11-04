@@ -1,7 +1,7 @@
 ---
 tags:
-  - _9K9_blockId_loco
-  - _k_blockId_loco
+  - _▪K▪_▫blockId▫_▫loco▫
+  - _▫k▫_▫blockId▫_▫loco▫
 
 search:
   boost: 3

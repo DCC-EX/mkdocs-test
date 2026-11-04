@@ -1,19 +1,19 @@
 ﻿---
 tags:
   - _=
-  - _8equals8
-  - _8equals8_track_9MAIN9
-  - _8equals8_track_9MAIN9_9INV9
-  - _8equals8_track_9MAIN9_9AUTO9
-  - _8equals8_track_9PROG9
-  - _8equals8_track_9OFF9
-  - _8equals8_track_9NONE9
-  - _8equals8_track_9EXT9
-  - _8equals8_track_9AUTO9
-  - _8equals8_track_9INV9
-  - _8equals8_track_9DC9_loco
-  - _8equals8_track_9DC9_9INV9_loco
-  - _8equals8_track_9DC9_9X9_loco
+  - _▫equals▫
+  - _▫equals▫_▫track▫_▪MAIN▪
+  - _▫equals▫_▫track▫_▪MAIN▪_▪INV▪
+  - _▫equals▫_▫track▫_▪MAIN▪_▪AUTO▪
+  - _▫equals▫_▫track▫_▪PROG▪
+  - _▫equals▫_▫track▫_▪OFF▪
+  - _▫equals▫_▫track▫_▪NONE▪
+  - _▫equals▫_▫track▫_▪EXT▪
+  - _▫equals▫_▫track▫_▪AUTO▪
+  - _▫equals▫_▫track▫_▪INV▪
+  - _▫equals▫_▫track▫_▪DC▪_▫loco▫
+  - _▫equals▫_▫track▫_▪DC▪_▪INV▪_▫loco▫
+  - _▫equals▫_▫track▫_▪DC▪_▪X▪_▫loco▫
 
 search:
   boost: 3

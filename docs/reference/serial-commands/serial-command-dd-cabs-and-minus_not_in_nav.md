@@ -1,8 +1,8 @@
 ---
 tags:
-  - _9D9_9CABS9
-  - _8equals8
-  - _8equals8_loco
+  - _▪D▪_▪CABS▪
+  - _▫equals▫
+  - _▫equals▫_▫loco▫
 ---
 
 # Serial commands to: Loco state table commands
