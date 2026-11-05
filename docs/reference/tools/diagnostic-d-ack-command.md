@@ -23,20 +23,35 @@ When the ACK processing on the prog track does not work as expected, you may wan
 
 ```console
 <D ACK ON>
-<R 8 1 1>
-ACK-BASELINE 33/98mA
-V0 cv=8 bit=7 NO-ACK after 143mS max=12/35mA pulse=0uS
-V1 cv=8 bit=7 ACK-OK after 34mS max=646/1931mA pulse=6852uS
-V0 cv=8 bit=6 ACK-OK after 34mS max=583/1743mA pulse=6844uS
-V0 cv=8 bit=5 ACK-OK after 34mS max=646/1931mA pulse=6800uS
-V0 cv=8 bit=4 NO-ACK after 144mS max=12/35mA pulse=0uS
-V0 cv=8 bit=3 ACK-OK after 34mS max=563/1683mA pulse=6792uS
-V0 cv=8 bit=2 ACK-OK after 34mS max=647/1934mA pulse=6800uS
-V0 cv=8 bit=1 ACK-OK after 34mS max=573/1713mA pulse=6844uS
-V0 cv=8 bit=0 NO-ACK after 145mS max=14/41mA pulse=0uS
-VB cv=8 value=145 ACK-OK after 34mS max=639/1910mA pulse=6848uS
-Callback(145)
-<r1|1|8 145>
+<R 8>
+<* Auto Prog power on *>
+<* Track B sensOffset=21 *>
+<* ACK baseline=11/24mA Threshold=33/73mA Duration between 2000us and 20000us *>
+<* VB cv=8 value=0 *>
+<* NO-ACK after 137mS max=13/28mA pulse=0uS samples=80 gaps=0 *>
+<* V0 cv=8 bit=7 *>
+<* NO-ACK after 134mS max=13/28mA pulse=0uS samples=77 gaps=0 *>
+<* V1 cv=8 bit=7 *>
+<* ACK after 32mS max=65/144mA pulse=6042uS samples=77 gaps=0 *>
+<* V0 cv=8 bit=6 *>
+<* ACK after 33mS max=65/144mA pulse=5900uS samples=81 gaps=0 *>
+<* V0 cv=8 bit=5 *>
+<* ACK after 31mS max=63/140mA pulse=5090uS samples=78 gaps=0 *>
+<* V0 cv=8 bit=4 *>
+<* NO-ACK after 134mS max=14/31mA pulse=0uS samples=77 gaps=0 *>
+<* V0 cv=8 bit=3 *>
+<* ACK after 33mS max=65/144mA pulse=6760uS samples=80 gaps=0 *>
+<* V0 cv=8 bit=2 *>
+<* ACK after 31mS max=64/142mA pulse=6053uS samples=78 gaps=0 *>
+<* V0 cv=8 bit=1 *>
+<* ACK after 32mS max=65/144mA pulse=6741uS samples=81 gaps=0 *>
+<* V0 cv=8 bit=0 *>
+<* NO-ACK after 135mS max=14/31mA pulse=0uS samples=76 gaps=0 *>
+<* VB cv=8 value=145 *>
+<* ACK after 32mS max=65/144mA pulse=6092uS samples=79 gaps=0 *>
+<* Auto Prog power off *>
+<* Callback(145) *>
+<v 8 145>
 ```
 
 Your output may show different formatting with respect to linefeeds. Here the decoder reports that bits 7, 4 and 0 are **NOT** Zero. That gives the value of ``10010001 = 145`` which is the manufacturer ID for Zimo. That value is checked in the ``VB`` line. For a successful read, the result of the verify bit and verify byte commands have to match, otherwise the value can not be read. If you have problems reading decoders, you can compare the received values with the expected values. The format is:
