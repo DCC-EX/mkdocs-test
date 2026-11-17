@@ -8,7 +8,7 @@
 *[WiThrottle]: Communication Protocol. Trademark + iOS app owned by Brett Hoffman
 *[API]: Application Programming Interface
 *[JMRI]: Java Model Railroad Interface
-*[Arduino IDE]: Not recommended. Use EX-Installer or, if experienced, Microsoft Visual Studio Code (VSC)
+*[Arduino IDE]: Not recommended. Not Supported after v5.9. Use EX-Installer or Microsoft VScode/PIO
 *[VSC]: Microsoft Visual Studio Code. Recommended IDE if EX-Installer is insufficient for your needs.
 *[VSCode]: Microsoft Visual Studio Code. Recommended IDE if EX-Installer is insufficient for your needs.
 *[PlatformIO]: Used with Microsoft Visual Studio Code. The recommended IDE if EX-Installer is insufficient for your needs.

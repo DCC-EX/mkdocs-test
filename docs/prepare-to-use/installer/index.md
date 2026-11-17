@@ -10,16 +10,15 @@ The options to install the software include:
 
 - [EX-Installer](index.md) Recommended
 - [VSCode/PlatformIO](platformio.md)
-- Arduino IDE (not recommended)
+- Arduino IDE ***(Not recommended. Not supported after v5.9)***
 
 The recommended approach is to let the process be managed by **EX-Installer** which is responsible for obtaining the relevant software and libraries, merging your custom configurations and mind-bending automations, locating the USB connection to your device,  compiling and downloading the result and showing the serial log from your device if required.
 
 Since every layout is essentially a prototype, and there are a huge variety of hardware build combinations, it is not possible to download a pre-built firmware package from the web.
 
-
 ## Recommended Method
 
-We highly recommend using **EX-Installer** to configure and install **EX-CommandStation**, **EX-IOExpander**, and **EX-Turntable** in preference to using the Arduino IDE or VSCode for all but highly technical users. (See [alternates](#alternatives-to-the-ex-installer) below.)
+We highly recommend using **EX-Installer** to configure and install **EX-CommandStation**, **EX-IOExpander**, and **EX-Turntable** in preference to using the Arduino IDE or VSCode/PIO for all but highly technical users. (See [alternates](#alternatives-to-the-ex-installer) below.)
 
 **EX-Installer** is aimed to be easy to use, and also supports getting help and support by providing the mechanism to obtain log files and monitor your device which is necessary to provide sufficient information to get help.
 
@@ -44,5 +43,3 @@ Experienced programmers or those wishing to develop new features or products wil
 Methods involving downloading zip files have caused  support issues in the past, are troublesome and not recommended.
 
 Use of the Arduino IDE is discouraged and not covered in this documentation as it has far less functionality than VSCode and has limitations with respect to compiler and library options.
-
-

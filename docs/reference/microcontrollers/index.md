@@ -2,7 +2,7 @@
 
 ## Current list of Microcontrollers
 
-<!-- ==TODO== LOW - change the references on this page/section from the Arduino IDE to VSC/PIO -->
+<!-- ==TODO== HIGH - change the references on this page/section from the Arduino IDE to VSC/PIO as it will not be possible to compile with the IDE after v5.9-->
 
 **EX-CommandStation** currently is designed for Atmel AVR based Arduino and compatible microcontrollers, some ESP32 based boards and the STM32 Nucleo based boards. Out of the box, it is compatible with the following boards:
 

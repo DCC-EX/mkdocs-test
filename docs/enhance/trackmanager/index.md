@@ -132,7 +132,7 @@ There are several ways to temporarily change a Motor Driver Output to a differen
 
 #### Issuing a command (DCC)
 
-You can issue DCC-EX Native/Serial Commands to the **EX-CommandStation** to change the output modes with Engine Driver, **EX-Toolbox**, Device Monitor, **EX-WEbThrottle** or the Arduino IDE Serial Monitor.
+You can issue DCC-EX Native/Serial Commands to the **EX-CommandStation** to change the output modes with Engine Driver, **EX-Toolbox**, Device Monitor, **EX-WEbThrottle**, VSCode, or the Arduino IDE Serial Monitor.
 
 1. Open the Serial Monitor (or TrackManager page in Engine Driver or **EX-Toolbox**)
 

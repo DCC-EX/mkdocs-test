@@ -9,7 +9,7 @@ This repository currently contains two branches:
 
 ## Libraries
 
-<!-- ==TODO== LOW - change the references on this page/section from the Arduino IDE to VSC/PIO -->
+<!-- ==TODO== HIGH - change the references on this page/section from the Arduino IDE to VSC/PIO as it will not be possible to compile with the IDE after v5.9-->
 
 The project requires three libraries:
 
@@ -17,7 +17,7 @@ The project requires three libraries:
 - Adafruit_Touchscreen
 - MCUFRIEND_kbv
 
-All three can be installed from the Arduino IDE library manager or Platformio Library system as required however for compatibility where possible use the copies supplied in the repository folder.
+All three can be installed from the Arduino IDE library manager or VSCode/Platformio Library system as required however for compatibility where possible use the copies supplied in the repository folder.
 
 ### Platformio
 

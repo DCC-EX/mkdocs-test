@@ -112,9 +112,9 @@ More information on the config files can be found on the [Managing Config Files]
 
 #### Using the Arduino IDE
 
-<!-- ==TODO== LOW - change the references on this page/section from the Arduino IDE to VSC/PIO -->
+<!-- ==TODO== HIGH - change the references on this page/section from the Arduino IDE to VSC/PIO as it will not be possible to compile with the IDE after v5.9-->
 
-!!! IMPORTANT "Using the Arduino IDE is not recommended"
+!!! IMPORTANT "Using the Arduino IDE is not recommended and not supported aft v5.9"
    A word of caution on using the Arduino IDE to install the software:  
    While it is possible install the software using the Arduino IDE, we *seriously* **DO NOT RECOMMEND IT** for anyone but technically experienced users. It is an order of magnitude more complex, much slower, and with a very high probability of getting something wrong unless you really know what you are doing.
 

@@ -1,6 +1,6 @@
 # DCC Diagnostic Tools
 
-<!-- ==TODO== LOW - change the references on this page/section from the Arduino IDE to VSC/PIO -->
+<!-- ==TODO== HIGH - change the references on this page/section from the Arduino IDE to VSC/PIO as it will not be possible to compile with the IDE after v5.9-->
 
 ==TODO== LOW - Work in Progress. More detail and pictures
 
