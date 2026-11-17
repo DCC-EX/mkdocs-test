@@ -21,7 +21,7 @@ A number of different serial monitors/ device monitors are available:
 
 * [Connect with EX-Installer](#connect-with-ex-installers-device-monitor) (Recommended)
 * [Connect with EX-WebThrottle](#connect-with-ex-webthrottle)
-* [Connect with the Arduino IDE](#connect-with-the-arduino-ide-serial-monitor)
+* [Connect with the Arduino IDE](#connect-with-the-arduino-ide-serial-monitor) ***(Not recommended. Not supported after v5.9)***
 * [Connect with a Smart Device](#connect-with-a-smart-device)
 
 ----
@@ -43,14 +43,16 @@ For details, refer to [Issuing Direct Commands with EX-Installer](/products/ex-w
 ----
 
 ## Connect with the VSCode's Serial Monitor
- 
-==TODO== MEDIUM - add Serial Monitor VSC/PIO section
+
+==TODO== HIGH - add Serial Monitor VSC/PIO section
 
 ----
 
 ## Connect with the Arduino IDE Serial Monitor
 
-!!! important "The Arduino IDE is not recommended"
+<!-- ==TODO== HIGH - change the references on this page/section from the Arduino IDE to VSC/PIO as it will not be possible to compile with the IDE after v5.9-->
+
+!!! important "The Arduino IDE is not recommended and not supported after v5.9"
 
     While it is possible use the Arduino IDE, we *seriously* **DO NOT RECOMMEND IT** for anyone that is technically inexperienced. It is an order of magnitude more complex and much slower.
 

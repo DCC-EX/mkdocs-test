@@ -21,7 +21,7 @@ d
 
 Later, you may wish to reset the connection to use your home router as this avoids the need to reconnect your normal phone WiFi before using a throttle.
 
-WiFi configuration changes are made by running commands from the USB serial (IDE, PlatformIO, **EX-WebThrottle**) or from a connected WiFi throttle such as Engine Driver or EXToolbox.
+WiFi configuration changes are made by running commands from the USB serial (IDE, PlatformIO, **EX-WebThrottle**) or from a connected WiFi throttle such as Engine Driver or EX-Toolbox.
 
 The commands below are stored on the ESP32 (except for the TEMP command). Please be aware that if you issue a command to change the WiFi settings from a WiFi device, this will mean you lose connection and need to reconnect before continuing.
 

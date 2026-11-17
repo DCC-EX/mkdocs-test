@@ -10,11 +10,11 @@ If you reach out on discord, we have areas reserved for developers to discuss te
 
 ## Development Environment
 
-<!-- ==TODO== LOW - change the references on this page/section from the Arduino IDE to VSC/PIO -->
+<!-- ==TODO== HIGH - change the references on this page/section from the Arduino IDE to VSC/PIO as it will not be possible to compile with the IDE after v5.9-->
 
 We recommend using PlatformIO IDE for VSCode. If you haven't yet used it, it is an easy to learn and easy to use IDE that really shines for embedded development and the Arduino based hardware we use. For more information go to the [PlatformIO website](https://platformio.org/).
 
-* Download and install the latest version of the Arduino IDE
+* Download and install the latest version of the Arduino IDE ***(Not recommended. Not supported after v5.9)***
 * Download and install the latest version of Visual Studio Code from Microsoft
 * Run VSCode and click on the "extensions" icon on the left. Install "PlatformIO IDE for VSCode" and the "Arduino Framework" support
 

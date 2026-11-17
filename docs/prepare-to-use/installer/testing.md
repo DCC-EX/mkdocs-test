@@ -60,7 +60,7 @@ There are several other serial monitors available that can be used for testing:
 - Built in to the EX-WebThrottle
 - Built in to JMRI or other train control software.
 - Built in to VSCode is you are using that as an IDE.
-- Built in to the Arduino IDE (We do not recommend that for development)
+- Built in to the Arduino IDE ***(Not recommended. Not supported after v5.9)***
 
 See [Serial Monitors](../../reference/tools/serial-monitor.md) for more information.
 

@@ -41,7 +41,7 @@ Startup Logs can be obtained from a Serial Monitor/Device Monitor in any of the 
 - [**EX-Installer**](../prepare-to-use/installer/testing.md#saving-startup-or-serial-console-logs)
 - [**EX-WebThrottle**](../products/ex-webthrottle/ex-webthrottle.md#saving-startup-or-serial-console-logs)
 - **VS Code/PlatformIO**
-- Arduino IDE (Not recommended)
+- Arduino IDE ***(Not recommended. Not supported after v5.9)***
 
 ## Discord (recommended)
 

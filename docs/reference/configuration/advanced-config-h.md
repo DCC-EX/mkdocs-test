@@ -1,6 +1,6 @@
 # Advanced config.h settings for EX-CommandStation build
 
-<!-- ==TODO== LOW - change the references on this page/section from the Arduino IDE to VSC/PIO -->
+<!-- ==TODO== HIGH - change the references on this page/section from the Arduino IDE to VSC/PIO as it will not be possible to compile with the IDE after v5.9-->
 
 The basic Motor Driver, WiFi and Ethernet settings are covered in detail in [basic config.h](index.md)
 

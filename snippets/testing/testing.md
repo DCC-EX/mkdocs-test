@@ -103,7 +103,7 @@ There are several serial monitors available:
 - Built in to the [**EX-WebThrottle**](/products/ex-webthrottle/ex-webthrottle.md)
 - Built in to JMRI or other train control software
 - Built in to VSCode is you are using that as an IDE
-- Built in to the Arduino IDE (Not recommended)
+- Built in to the Arduino IDE ***(Not recommended. Not supported after v5.9)***
 - built into the [**EX-ToolBox**](/products/ex-toolbox/connecting.md) Android app
 
 See [Serial Monitors](/reference/tools/serial-monitor.md) for more information.

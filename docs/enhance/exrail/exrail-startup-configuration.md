@@ -11,7 +11,7 @@ How you method you use will depend on how you load the **EX‑CommandStation** s
 
 - By using [EX‑Installer](#if-you-are-using-ex-installer)
 - By using the [Visual Studio Code (VSC)](#if-you-are-using-visual-studio-code-vsc)
-- By using the [Arduino IDE](#if-you-are-using-the-arduino-ide-not-recommended) - ***Not recommended***
+- By using the [Arduino IDE](#if-you-are-using-the-arduino-ide-not-recommended) ***(Not recommended. Not supported after v5.9)***
 
 ----
 
@@ -23,15 +23,17 @@ How you method you use will depend on how you load the **EX‑CommandStation** s
 
 ## If you are using Visual Studio Code (VSC)
 
-==TODO== MEDIUM - Adding to your myAutomation.h in VSC
+==TODO== HIGH - Adding to your myAutomation.h in VSC/PIO
 
 ----
 
 ## If you are using the Arduino IDE (Not Recommended)
 
+<!-- ==TODO== HIGH - change the references on this page/section from the Arduino IDE to VSC/PIO as it will not be possible to compile with the IDE after v5.9-->
+
 This will need to be done in the Install using the Arduino IDE, so first make sure you have followed these steps to load up the Arduino IDE.
 
-!!! IMPORTANT "Arduino IDE is not recommended"
+!!! IMPORTANT "Arduino IDE is not recommended and not supported after v5.9"
     A word of caution on using the Arduino IDE to install the software:  
     While it is possible install the software using the Arduino IDE, we seriously ***DO NOT RECOMMEND IT*** for a novice users. It is an order of magnitude more complex, much slower, and with a very high probability of getting something wrong unless you really know what you are doing.  
     The **EX‑Installer** will meet 100% of the needs of a most users with considerably less effort.

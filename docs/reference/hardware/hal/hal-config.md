@@ -1,6 +1,6 @@
 # I/O Device Drivers and HAL
 
-<!-- ==TODO== LOW - change references in this document from the Arduino IDE to VSC/PIO -->
+<!-- ==TODO== HIGH - change the references on this page/section from the Arduino IDE to VSC/PIO as it will not be possible to compile with the IDE after v5.9-->
 
 The **EX-CommandStation**** has always had built-in support for turnout control, output control and input sensors attached to the Arduino pins.  However, you may outgrow the built-in capabilities and want to access more output pins than the Arduino has available.  Or you may wish to attach servos to the controller for turnout control or for animating a layout component, such as the doors to an engine shed.
 

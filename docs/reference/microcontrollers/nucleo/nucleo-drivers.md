@@ -5,6 +5,8 @@ hide:
 
 # Nucleo - USB Drivers
 
+<!-- ==TODO== HIGH - change the references on this page/section from the Arduino IDE to VSC/PIO as it will not be possible to compile with the IDE after v5.9-->
+
 ## Required for Windows
 
 When using any of the NUCLEO series microcontrollers with Microsoft Windows, you will need to install their STLink USB drivers in order to be able to upload software to them and use the [serial monitor](../../tools/serial-monitor.md) in either VSCode/PlatformIO or the Arduino IDE.
@@ -14,7 +16,7 @@ When using any of the NUCLEO series microcontrollers with Microsoft Windows, you
     You should install these drivers before plugging your NUCLEO device in for the first time.
     Linux and MacOS users don't need the drivers installed.
 
-- [Download stsw-link009.zip from st.com ](https://www.st.com/en/development-tools/stsw-link009.html)
+- [Download stsw-link009.zip from st.com](https://www.st.com/en/development-tools/stsw-link009.html)
 
 - Once you download and extract this zip file, you will need to install the STLink drivers located in the "stsw-link009" folder.
 
