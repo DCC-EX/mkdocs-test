@@ -1,3 +1,18 @@
+---
+tags:
+    - _▪D▪_▪SPEED28▪
+    - _▪D▪_▪SPEED128▪
+    - _▪D▪_▪CABS▪
+    - _▪D▪_▪RAM▪
+    - _▪D▪_▪ACK▪_▫onoff▫
+    - _▪D▪_▪CMD▪_▫onoff▫
+    - _▪D▪_▪WIFI▪_▫onoff▫
+    - _▪D▪_▪ETHERNET▪_▫onoff▫
+    - _▪D▪_▪WIT▪_▫onoff▫
+    - _▪D▪_▪HAL▪_▫onoff▫
+    - _▪C▪_▪PROGBOOST▪
+    - _▪D▪_▪PROGBOOST▪
+---
 # Diagnostics ``<D>`` Command
 
 These commands either enable diagnostics or allow settings to be changed. There are a number of diagnostic facilities under the  ``<D>`` command, most are harmless but caution is advised.
@@ -36,5 +51,3 @@ These commands can be entered directly via the USB serial console or through a W
 to 250mA according to NMRA standards. Some loco decoders require more than this, especially sound versions. ``<D PROGBOOST>``
 temporarily removes this limit to allow the decoder more power. The normal limit will be re-imposed when the programming track
 is switched off with ``<0>`` or ``<0 PROG>``.
-
-

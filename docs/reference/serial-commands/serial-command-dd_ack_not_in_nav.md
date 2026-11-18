@@ -1,6 +1,7 @@
 ﻿---
 tags:
     - _▪C▪_▪PROGBOOST▪
+    - _▪D▪_▪PROGBOOST▪
     - _▪D▪_▪ACK▪_▪LIMIT▪_▫value▫
     - _▪D▪_▪ACK▪_▪MAX▪_▫value_9MS9
     - _▪D▪_▪ACK▪_▪MAX▪_▫value▫
@@ -85,8 +86,6 @@ none
 ## *Hints and Tips*
 
 Refer to the [Programming Hint and Tips](../../throttles/loco-programming/programming-tips.md) page for examples on using some of the commands above for problematic decoders.
-
-
 
 <style>
   .md-typeset h1 {

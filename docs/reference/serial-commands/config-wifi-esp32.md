@@ -15,5 +15,7 @@ tags:
 
 # WiFi configuration <br/><small>(EX-CSB1 or ESP32 ONLY. v5.7.0+ ONLY)</small>
 
+{{new_in_v(6.0)}}
+
 --8<-- "snippets/configure/config-wifi-esp32.md"
 [text](config-wifi-esp32.md)
